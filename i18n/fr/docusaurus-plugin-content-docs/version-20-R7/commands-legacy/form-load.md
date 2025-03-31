@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM LOAD.Summary-->La commande **FORM LOAD** vous permet de charger le *formulaire* en mémoire dans le process courant avec formData (facultatif) afin d'imprimer des données ou d'analyser son contenu.<!-- END REF--> Il ne peut y avoir qu'un seul formulaire courant par process.
 
@@ -28,7 +28,7 @@ Dans le paramètre *formulaire*, vous pouvez passer soit :
 
 Lorsque la commande est exécutée à partir d'un composant, elle charge par défaut les formulaires du composant. Si vous passez le paramètre \*, la méthode charge les formulaires de la base de données de l'hôte.
 
-##### formData 
+### formData 
 
 En option, vous pouvez transmettre des paramètres au formuliare à l'aide de l'objet formData. Toutes les propriétés de l'objet formData seront alors disponibles dans le contexte du formulaire par l'intermédiaire de la commande [Form](form.md). Par exemple, si vous passez un objet contenant {"version", "12"} dans formData, vous pourrez obtenir ou définir la valeur de la propriété "version" dans le formulaire en appelant :
 
@@ -43,7 +43,7 @@ formData vous permet de passer en toute sécurité des paramètres à vos formul
 
 **Note :** Si vous ne passez pas le paramètre formData ou si vous passez un objet non défini, **\[#current\_titl**e\] crée automatiquement un nouvel objet vide lié au formulaire, disponible via la commande [Form](form.md).
 
-##### Impression de données 
+### Impression de données 
 
 Pour que cette commande puisse être exécutée, une tâche d'impression doit avoir été ouverte au préalable à l'aide de la commande [OPEN PRINTING JOB](open-printing-job.md). La commande [OPEN PRINTING JOB](open-printing-job.md) effectue un appel implicite à la commande [FORM UNLOAD](form-unload.md), il est donc nécessaire d’exécuter [FORM LOAD](form-load.md) dans ce contexte. Une fois chargé, le *formulaire* devient le formulaire d’impression courant. Toutes les commandes de gestion des objets, et en particulier la commande [Print object](print-object.md), travaillent avec ce formulaire.
 
@@ -57,7 +57,7 @@ Le formulaire d’impression courant est automatiquement refermé lorsque la com
 
 **Note de compatibilité :** Dans les versions de 4D antérieures à la v14, la commande **FORM LOAD** (nommée OUVRIR FORMULAIRE IMPRESSION) acceptait une chaîne vide dans le paramètre *formulaire* afin de refermer le formulaire projet courant. Cette syntaxe n’est désormais plus prise en charge et retourne une erreur. Vous devez désormais utiliser la commande [FORM UNLOAD](form-unload.md) ou la commande [CLOSE PRINTING JOB](close-printing-job.md) pour refermer le formulaire. 
 
-##### Analyse du contenu du formulaire 
+### Analyse du contenu du formulaire 
 
 Cette possibilité consiste à charger un formulaire hors-écran à des fins d’analyse. Pour effectuer cette action, il suffit d’appeler **FORM LOAD** en-dehors d’un contexte de tâche d’impression. Dans ce cas, les événements formulaire ne sont pas exécutés.
 
@@ -67,7 +67,7 @@ A noter que dans tous les cas, le formulaire à l’écran reste chargé (il n�
 
 **Rappel :** Dans le contexte du hors-écran, n'oubliez pas d'appeler [FORM UNLOAD](form-unload.md) afin d'éviter tout risque de saturation de la mémoire. 
 
-#### Exemple 1 
+## Exemple 1 
 
 Appel d’un formulaire projet en tâche d’impression :
 
@@ -77,7 +77,7 @@ Appel d’un formulaire projet en tâche d’impression :
      // exécution des événements et des méthodes objet
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Appel d’un formulaire table en tâche d’impression :
 
@@ -87,7 +87,7 @@ Appel d’un formulaire table en tâche d’impression :
      // exécution des événements et des méthodes objet
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Analyse du contenu d’un formulaire pour effectuer un traitement sur les zones de saisie de texte :
 
@@ -103,7 +103,7 @@ Analyse du contenu d’un formulaire pour effectuer un traitement sur les zones 
  FORM UNLOAD //ne pas oublier
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant retourne le nombre d'objets contenu dans un formulaire dynamique (JSON) :
 
@@ -122,7 +122,7 @@ Résultat :
 
 ![](../assets/en/commands/pict3688480.fr.png)
 
-#### Exemple 5 
+## Exemple 5 
 
 Vous souhaitez imprimer un formulaire contenant une list box. Lors de l'événement Sur chargement, vous souhaitez que le contenu de la list box soit modifié.
 
@@ -163,7 +163,7 @@ Vous souhaitez imprimer un formulaire contenant une list box. Lors de l'événem
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Current form name](current-form-name.md)  
 [FORM UNLOAD](form-unload.md)  
@@ -171,7 +171,7 @@ Vous souhaitez imprimer un formulaire contenant une list box. Lors de l'événem
 [OBJECT Get type](object-get-type.md)  
 [Print object](print-object.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

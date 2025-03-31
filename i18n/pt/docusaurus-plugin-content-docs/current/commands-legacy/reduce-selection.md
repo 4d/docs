@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 REDUCE SELECTION cria uma nova seleção de registros para *tabela*. O comando retorna o primeiro *numero* de registros da seleção atual de *tabela*. REDUCE SELECTION se aplica à seleção atual de tabela no processo atual. Ele modifica a seleção atual de *tabela* para o processo atual; o primeiro registro da nova seleção se torna o o registro atual.  
 
 **Nota**: se a instrução REDUCE SELECTION(tabela;0) for executada, não haverá mais seleção nem registro atual em *tabela*.
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo pesquisa as estatísticas corretas para uma concorrência mundial entre os distribuidores de mais de 20 países. Para cada país, os 3 melhores distribuidores que tenham vendido mais de $50.000 em produtos estão entre os 100 melhores distribuidores do mundo e recebem um prêmio. Com umas poucas linhas de código, esta petição complexa pode ser executada utilizando pesquisas indexadas:  
   
@@ -49,14 +49,14 @@ O seguinte exemplo pesquisa as estatísticas corretas para uma concorrência mun
  PRINT SELECTION([Distribuidores]) // Imprimir as cartas
 ```
 
-#### Ver também 
+## Ver também 
 
 *Conjuntos*  
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

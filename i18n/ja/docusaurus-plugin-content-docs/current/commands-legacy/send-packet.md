@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SEND PACKET.Summary-->SEND PACKET は、シリアルポートやドキュメントにパケットを送ります。<!-- END REF-->*docRef*を指定した場合、パケットは*docRef*で参照されるドキュメントに書き込まれます。*docRef*を指定しない場合、あらかじめ [SET CHANNEL](set-channel.md) コマンドで開かれたシリアルポートまたはドキュメントにパケットを書き込みます。 
 
@@ -29,7 +29,7 @@ SEND PACKETコマンドを使用する前に、 [SET CHANNEL](set-channel.md) �
 
 **Note:** このコマンドは [SET CHANNEL](set-channel.md) で開かれたドキュメントに対して有効です。一方で、 [Open document](open-document.md), [Create document](create-document.md) あるいは [Append document](append-document.md) で開かれたドキュメントに関しては、 [Get document position](get-document-position.md) や [SET DOCUMENT POSITION](set-document-position.md) コマンドを使用して、次の書き込み (SEND PACKET) や読み込み ([RECEIVE PACKET](receive-packet.md)) を行うドキュメント中の位置を取得したり設定したりできます。
 
-#### 例題 1 
+## 例題 1 
 
  以下の例は、フィールドのデータをドキュメントに書き込みます。この例では、固定長データとして書き込みます。固定長フィールドは常に決まった長さで す。フィールドが指定した長さよりも短い場合、その分のスペースを埋め込みます（つまり、指定された長さになるまでスペースを付け加えます）。固定長デー タの使用は、データ格納の合理的な方法とはいえませんが、一部のコンピュータシステムやアプリケーションでは、まだ使用されています: 
 
@@ -49,7 +49,7 @@ SEND PACKETコマンドを使用する前に、 [SET CHANNEL](set-channel.md) �
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
  この例題はBLOB経由でドキュメントの拡張文字を送信したり受信したりする方法を示します:   
 
@@ -75,13 +75,13 @@ SEND PACKETコマンドを使用する前に、 [SET CHANNEL](set-channel.md) �
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

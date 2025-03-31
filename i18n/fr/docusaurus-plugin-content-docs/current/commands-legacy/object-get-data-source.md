@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get data source.Summary-->La commande **OBJECT Get data source** retourne la source de données courante de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ La source de données d’un objet peut avoir été définie en mode Développem
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-#### Exemple 
+## Exemple 
 
 Soit un objet combo box défini dans un formulaire :
 
@@ -36,11 +36,11 @@ Vous exécutez le code suivant :
      //$vPtr contient ->vCombo
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.End selection.Summary-->**End selection** devuelve TRUE cuando el puntero del registro actual está más allá del último registro de la selección actual de *tabla*.<!-- END REF-->se utiliza generalmente para probar si la llamada al comando [NEXT RECORD](next-record.md) ha movido o no el puntero del registro actual detrás del último registro de la selección. Si la selección actual está vacía, **End selection** devuelve TRUE.
 
@@ -37,7 +37,7 @@ Para mover el puntero del registro actual dentro de la selección, utilice [FIRS
  End case
 ```
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método de formulario se utiliza durante la impresión de un informe. Se define la variable *vPie* a imprimir en el área de pie de página de la última página:
 
@@ -54,7 +54,7 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [Before selection](before-selection.md)  
 [Form event code](../commands/form-event-code.md)  
@@ -62,7 +62,7 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

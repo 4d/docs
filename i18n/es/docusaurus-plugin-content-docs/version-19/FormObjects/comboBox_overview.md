@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-A combo box is similar to a [drop-down list](dropdownList_Overview.md), except that it accepts text entered from the keyboard and has additional options.
+Un combo box es similar a una [lista desplegable](dropdownList_Overview.md), excepto que acepta texto introducido desde el teclado y tiene opciones adicionales.
 
 ![](../assets/en/FormObjects/combo_box.png)
 

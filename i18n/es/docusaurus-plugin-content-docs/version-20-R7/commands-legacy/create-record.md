@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** crea un nuevo registro vacío para *tabla,* pero no muestra el nuevo registro.<!-- END REF--> Utilice el comando [ADD RECORD](add-record.md) para crear un nuevo registro y mostrarlo en un formulario de entrada. 
 
@@ -23,7 +23,7 @@ El registro existe en memoria únicamente hasta que un comando [SAVE RECORD](sav
 
 **Nota:** este comando no requiere *tabla* para estar en modo lectura/escritura. Se puede utilizar incluso cuando la tabla está en modo de sólo lectura (ver *Record Locking*). 
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo archiva los registros que tienen más de 30 días. Esta operación se realiza para la creación de registros en una tabla de archivo. Una vez termina la operación, los registros archivados son eliminados de la tabla \[Cuentas\]:
 
@@ -41,13 +41,13 @@ El siguiente ejemplo archiva los registros que tienen más de 30 días. Esta ope
  DELETE SELECTION([Cuentas]) // Borrar los registros de cuenta
 ```
 
-#### Ver también 
+## Ver también 
 
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

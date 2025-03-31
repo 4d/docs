@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get 4D file.Summary-->La commande **Get 4D file** retourne le chemin d'accès au fichier de l'environnement 4D spécifié par le paramètre *fichier*.<!-- END REF--> Le chemin d'accès est retourné en utilisant la syntaxe système.
 
@@ -56,7 +56,7 @@ Lorsque la commande est appelée à partir d'un composant, passez le paramètre 
 
 Concernant User settings file for data et User settings file, un chemin d'accès est retourné si l'option de sécurité **Autoriser les propriétés utilisateur dans un fichier externe** est cochée dans la boîte de dialogue des Propriétés de la base (voir ). 
 
-#### Exemple 
+## Exemple 
 
 Vous voulez obtenir le chemin d'accès du fichier de sauvegarde le plus récent :
 
@@ -66,11 +66,11 @@ Vous voulez obtenir le chemin d'accès du fichier de sauvegarde le plus récent 
   // $path = "C:\Backups\Countries\Countries[0025].4BK" par exemple
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [File](../commands/file.md)    
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

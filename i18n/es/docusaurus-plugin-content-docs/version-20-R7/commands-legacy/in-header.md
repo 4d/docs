@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.In header.Summary-->**In header** devuelve True para el ciclo de ejecución In header.<!-- END REF--> 
 
@@ -21,12 +21,12 @@ Para que se genere el ciclo de ejecución **In header**, asegúrese de que la pr
 
 **Nota:** este comando es equivalente a utilizar [Form event code](../commands/form-event-code.md) y probar si devuelve el evento On Header.
 
-#### Ver también 
+## Ver también 
 
 [In break](in-break.md)  
 [In footer](in-footer.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->HIGHLIGHT RECORDS コマンドは、出力フォーム内で指定されたレコードをハイライトします。<!-- END REF-->この動作は、クリックまたは**Shift+クリック**、**Ctrl+クリック** (Windows) や**Command+クリック** (Mac OS) キーコンビネーションを使用し、リストモードでレコードを手動で選択する場合と同じです。カレントセレクションは変更されません。
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 **Note:** 組み込みサブフォームの場合、サブフォームの選択モードプロパティで**複数**が選択されていない場合、HIGHLIGHT RECORDS コマンドは何も行いません。この場合、行をハイライトするには[GOTO SELECTED RECORD](goto-selected-record.md "GOTO SELECTED RECORD") コマンドを使用します。 
 
-#### 例題 
+## 例題 
 
 [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION")コマンドによって表示される出力フォーム内で、カレントセレクションを変更することなく、ユーザが検索を実行できるようにしたいとします。これを実行するには、フォーム内に**検索**ボタンを置いて、押された時に下記のメソッドを実行します: 
 
@@ -43,12 +43,12 @@ displayed_sidebar: docs
 
 ユーザがボタンをクリックすると標準の検索ダイアログボックスが表示され、検索が実行された後、カレントセレクションを変更することなく、見つかったレコードを反転表示されます。
 
-#### 参照 
+## 参照 
 
 [GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

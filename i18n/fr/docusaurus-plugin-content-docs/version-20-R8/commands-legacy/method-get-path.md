@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD Get path.Summary-->La commande **METHOD Get path** retourne le chemin d’accès interne complet d’une méthode.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Passez des valeurs dans les paramètres *laTable*, *nomObjet* et *nomObjetForm* 
 
 Si la commande est exécutée depuis un composant, elle retourne par défaut les chemins des méthodes du composant. Si vous passez le paramètre *\**, le tableau contiendra les chemins des méthodes de la base hôte.
 
-#### Exemple 
+## Exemple 
 
 ```4d
   //Récupérer le chemin d’accès de la méthode base "Sur ouverture"
@@ -59,13 +59,13 @@ Si la commande est exécutée depuis un composant, elle retourne par défaut les
  $chemin:=METHOD Get path(Path table form;[Emp];"input";"OK")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Current method path](current-method-path.md)  
 [METHOD OPEN PATH](method-open-path.md)  
 [METHOD RESOLVE PATH](method-resolve-path.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

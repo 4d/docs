@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Selected list items.Summary-->**Selected list items** コマンドは、*list*引数に渡された参照番号またはオブジェクト名のリストにおいて、選択された項目の位置または参照番号を返します。<!-- END REF--> 
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 いずれの場合でも、選択された項目が存在しない場合、関数は0を返します。
 
-#### 例題 
+## 例題 
 
 次は、アプリケーションモードで表示された*hList*という名前のリストです:
 
@@ -81,12 +81,12 @@ displayed_sidebar: docs
   // $arrRefs{1} は 101, $arrRefs{2} は 203 (例えば)
 ```
 
-#### 参照 
+## 参照 
 
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

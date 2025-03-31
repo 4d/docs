@@ -12,23 +12,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SHOW MENU BAR.Summary-->SHOW MENU BARコマンドは、メニューバーを表示します。<!-- END REF-->
 
 既にメニューバーが表示さている場合は、このコマンドは何も行いません。
 
-#### 例題 
+## 例題 
 
 [HIDE MENU BAR](hide-menu-bar.md "HIDE MENU BAR")の例を参照してください。
 
-#### 参照 
+## 参照 
 
 [HIDE MENU BAR](hide-menu-bar.md)  
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

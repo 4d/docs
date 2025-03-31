@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB size.Summary-->**BLOB size** retourne la taille de *blob* exprimée en octets.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 La ligne de code suivante ajoute 100 octets au BLOB *monBlob* :
 
@@ -26,11 +26,11 @@ La ligne de code suivante ajoute 100 octets au BLOB *monBlob* :
  SET BLOB SIZE(monBlob;BLOB size(monBlob)+100)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET BLOB SIZE](set-blob-size.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->El comando FORM SET SIZE le permite cambiar el tamaño del formulario actual por programación.<!-- END REF--> El nuevo tamaño es definido por el proceso actual; no está almacenado con el formulario.
 
@@ -59,7 +59,7 @@ En este caso, debe pasar el ancho y la altura (en píxeles) del formulario en *h
 El comando FORM SET SIZE cambia el tamaño del formulario, pero también tiene en cuenta las propiedades de redimensionamiento. Por ejemplo, si el ancho mínimo de un formulario es 500 píxeles y si el comando define un ancho de 400 píxeles, el nuevo ancho del formulario será de 500 píxeles.   
 Igualmente note que este comando no cambia el tamaño de la ventana del formulario (puede redimensionar un formulario sin cambiar el tamaño de la ventana y viceversa). Para cambiar el tamaño de la ventana del formulario, consulte el comando [RESIZE FORM WINDOW](resize-form-window.md "RESIZE FORM WINDOW").
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo muestra cómo colocar una ventana de tipo Explorador. El siguiente formulario se crea en el entorno Diseño:
 
@@ -117,12 +117,12 @@ El método de objeto asociado con este botón es el siguiente:
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

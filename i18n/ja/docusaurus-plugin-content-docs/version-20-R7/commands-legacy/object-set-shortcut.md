@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET SHORTCUT.Summary-->**OBJECT SET SHORTCUT**コマンドは*object* と*\** で指定したオブジェクトのキーボードショートカットをカレントプロセスで動的に変更します。<!-- END REF-->
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 
 **注:** *modifiers* 引数を省略した場合、設定されたキーが押されるとそのオブジェクトが即座に有効になります。例えばボタンに"H"キーを関連付けた場合、Hキーを押すとボタンが押されたことになります。このような機能は特定のインターフェースに使用されます。
 
-#### 例題 
+## 例題 
 
 アプリケーションの言語に基づき、異なるショートカットを割り当てたいとします。On Loadフォームイベントで以下のコードを実行します:
 
@@ -84,11 +84,11 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

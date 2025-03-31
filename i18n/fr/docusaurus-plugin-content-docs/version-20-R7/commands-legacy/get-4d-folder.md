@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get 4D folder.Summary-->La commande **Get 4D folder** renvoie le chemin d'accès du dossier 4D actif de l'application courante, ou du dossier de l'environnement 4D spécifié par les paramètres *dossier* et *options*, s'ils sont passés.<!-- END REF-->  
 Cette commande vous permet d'obtenir avec certitude le chemin d'accès réel des dossiers utilisés par l'application. En utilisant cette commande, vous êtes certain que votre code fonctionnera correctement sur toute plate-forme, quelles que soient la langue du système et l'application 4D.
@@ -40,7 +40,7 @@ Le paramètre *options* vous permet de personnaliser le chemin du dossier de res
 
 **Note :** Si la commande **Get 4D folder** est appelée depuis un 4D distant, le chemin retourné est celui sur la machine distante, pas sur 4D Server.
 
-##### Dossier 4D actif 
+### Dossier 4D actif 
 
 Les applications de l'environnement 4D utilisent un dossier spécifique pour stocker les informations suivantes :
 
@@ -56,17 +56,17 @@ Le dossier 4D actif se trouve par défaut à l'emplacement suivant :
 * Sous macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
 
 
-##### Dossier Licenses 
+### Dossier Licenses 
 
 Dossier contenant les fichiers de licences de la machine.
 
 Note : Dans le cas d'une application fusionnée avec 4D Volume Desktop, le dossier des licences est inclus dans le package de l'application.
 
-##### Dossier données 
+### Dossier données 
 
 Dossier contenant le fichier de données courant. Le chemin du dossier est exprimé avec la syntaxe standard de la plate-forme courante. 
 
-##### Dossier base 4D Client 
+### Dossier base 4D Client 
 
 Dossier 4D créé automatiquement sur chaque machine 4D cliente pour stocker les fichiers et dossiers liés à la base de données (ressources, plug-ins, dossier Ressources, etc.). La commande peut retoruner :
 
@@ -102,23 +102,23 @@ Vous pouvez passer les propriétés suivantes dans l'objet *options* :
 
 **Note :** Le chemin retourné est exprimé à l'aide de la syntaxe système de la machine qui exécute la commande. 
 
-##### Dossier base 
+### Dossier base 
 
 Dossier contenant le fichier de structure de la base. Le chemin d’accès est exprimé avec la syntaxe standard de la plate-forme courante.   
 Avec l'application 4D Client, cette constante équivaut strictement à la constante précédente 4D Client database folder : la commande retourne le chemin d’accès du dossier créé en local.
 
-##### Dossier base syntaxe Unix 
+### Dossier base syntaxe Unix 
 
 Dossier contenant le fichier de structure de la base. Cette constante désigne le même dossier que la précédente, mais le chemin d’accès retourné est exprimé avec la syntaxe Unix (Posix), du type /Users/... Cette syntaxe est principalement utile lorsque vous utilisez la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sous macOS. 
 
-##### Dossier Resources courant 
+### Dossier Resources courant 
 
 Dossier Resources de la base. Ce dossier contient les éléments additionnels (images, textes) utilisés pour l'interface de la base. Un composant peut disposer de son propre dossier Resources. Le dossier Resources est situé à côté du fichier de structure de la base.  
 En mode client/serveur, ce dossier permet d'organiser le transfert de données personnalisées (images, fichiers, sous-dossiers...) entre le poste serveur et les postes clients. Le contenu de ce dossier est mis à jour automatiquement sur chaque client au moment de sa connexion. Tous les mécanismes de référencement associé au dossier Resources sont pris en charge en mode client/serveur (dossier .lproj, XLIFF, images...) . En outre, 4D fournit divers outils permettant de gérer et de mettre à jour dynamiquement ce dossier, notamment un Explorateur de ressources.
 
 **Note :** Si le dossier *Resources* n'existe pas pour la base, l'exécution de la commande **Get 4D folder** avec la constante Current resources folder provoque sa création. 
 
-##### Dossier Logs 
+### Dossier Logs 
 
 Dossier Logs de la base. Ce dossier centralise les fichiers d’historique de la base courante. Il est créé au même niveau que le fichier de structure. Le dossier Logs contient les fichiers d’historique suivants :
 
@@ -132,19 +132,19 @@ Dossier Logs de la base. Ce dossier centralise les fichiers d’historique de la
 
 **Note :** Si le dossier Logs n'existe pas pour la base, l'exécution de la commande **Get 4D folder** avec la constante Logs folder provoque sa création. 
 
-##### Dossier racine HTML 
+### Dossier racine HTML 
 
 Dossier racine HTML courant de la base. Le chemin d’accès retourné est exprimé avec la syntaxe standard de la plate-forme courante. Le dossier racine HTML est le dossier dans lequel le serveur Web de 4D va chercher les pages et fichiers Web demandés. Par défaut, il est nommé **DossierWeb** et est placé à côté de fichier de structure (ou de sa copie locale dans le cas de 4D en mode distant). Son emplacement peut être défini dans la page Web/Configuration des Propriétés de la base ou dynamiquement via la commande [WEB SET ROOT FOLDER](web-set-root-folder.md).
 
 Remarque : sous Windows, dans les projets clients fusionnés, l'emplacement de ce dossier est modifié si la clé BuildApp *ShareLocalResourcesOnWindowsClient* est utilisée.   
   
-##### Dossier MobileApps 
+### Dossier MobileApps 
 
 Dossier contenant tous les fichiers de session existants (.json) utilisés par l'application 4D pour référencer les sessions des utilisateurs d'applications mobiles (c'est-à-dire les sessions ouvertes par des apps 4D for iOS). Les fichiers de sessions sont groupés par sous-dossier d'applications et sont créés automatiquement. Pour plus d'informations, veuillez vous reporter à la [go mobile documentation](https://developer.4d.com/go-mobile/).
 
 Ce dossier est situé au même niveau que le fichier de données courant.
 
-##### 
+### 
 
 Le paramètre optionnel \* est utile dans le cas d'une architecture utilisant des composants : il peut être utilisé pour déterminer la base de données (hôte ou composant) pour laquelle vous souhaitez obtenir le chemin du dossier. Ce paramètre est uniquement valable pour les dossiers Database folder, Database folder UNIX syntax et Current resources folder. Il est ignoré dans tous les autres cas.
 
@@ -161,7 +161,7 @@ Le dossier de la base de données (Database folder et Database folder syntaxe UN
 
 Lorsque la commande est appelée depuis la base de données hôte, elle renvoie toujours le nom du chemin d'accès au dossier de la base de données hôte, que le paramètre \* soit passé ou non.
 
-#### Exemple 1 
+## Exemple 1 
 
 Pendant le démarrage d'une base mono-utilisateur, vous voulez charger (ou créer) vos propres paramètres et les stocker dans un dossier 4D. Pour cela, dans la [On Startup database method](on-startup-database-method.md), vous pouvez écrire les lignes de code similaires aux lignes suivantes :
 
@@ -181,7 +181,7 @@ Pendant le démarrage d'une base mono-utilisateur, vous voulez charger (ou crée
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple illustre l’emploi de la constante Database folder UNIX syntax sous Mac OS pour lister le contenu du dossier de la base :
 
@@ -196,11 +196,11 @@ Cet exemple illustre l’emploi de la constante Database folder UNIX syntax sous
 
 **Note :** Sous Mac OS, il est nécessaire d’encadrer les chemins d’accès avec des guillemets lorsqu’ils contiennent des noms de fichiers ou de dossiers comportant des espaces. La séquence d’échappement "\\" permet d’insérer le caractère guillemets dans la chaîne. Vous pouvez également utiliser l’instruction [Char](char.md)(Double quote). 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si le paramètre *dossier* est invalide ou si le chemin d'accès retourné est vide, la variable système OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [COMPONENT LIST](component-list.md)  
 [System folder](system-folder.md)  
@@ -208,7 +208,7 @@ Si le paramètre *dossier* est invalide ou si le chemin d'accès retourné est v
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

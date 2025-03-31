@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 上級者向け 
+## 上級者向け 
 
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Summary-->このコマンドは特定の用途のために用意されています。<!-- END REF-->データベースのパフォーマンスに影響するため、注意して使用しなければなりません。
 
-#### 説明 
+## 説明 
 
 **ADJUST BLOBS CACHE PRIORITY** コマンドはカレントプロセスにおいてキャッシュ内にある*aTable* 引数で指定されたテーブルに関連した"Blob"データに*priority* 引数で指定した特定の優先度を設定します。。このコマンドを呼び出すと、同じプロセス内において同じコマンドを使用して以前調整された優先度は置き換えられます。このコマンドは一時的に必要な場合、例えばクエリや読み込みの途中などの場合に使用します。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | Cache priority high      |                    |
 | Cache priority very high |                    |
 
-#### 例題 
+## 例題 
 
 データファイルに保存されている\[Docs\]テーブルのテキストフィールドのキャッシュ優先度を、シーケンシャル検索を実行時に一時的に変更したい場合を考えます:
 
@@ -48,12 +48,12 @@ displayed_sidebar: docs
  ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
-#### 参照 
+## 参照 
 
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

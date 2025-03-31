@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Summary-->El comando GET MISSING TABLE NAMES devuelve los nombres de todas las tablas faltantes de la base en el array *tabFalt*.<!-- END REF-->
 
@@ -30,11 +30,11 @@ Una vez haya identificado las tablas faltantes de la base, puede reactivarlas v�
 
 **Nota:** los datos de las tablas faltantes se borran cuando se compacta el archivo de datos (si las tablas no han sido regeneradas). 
 
-#### Ver también 
+## Ver también 
 
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

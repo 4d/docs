@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->O comando BOOLEAN ARRAY FROM SET  preenche um array de booleanos indicando se cada registro na tablea está ou não no *conjunto*.<!-- END REF--> 
 
@@ -29,11 +29,11 @@ Cada elemento do array é:
 
 Se você não passar o parâmetro *conjunto*, o comando utilizará UserSet no processo atual.
 
-#### Ver também 
+## Ver também 
 
 [CREATE SET FROM ARRAY](create-set-from-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

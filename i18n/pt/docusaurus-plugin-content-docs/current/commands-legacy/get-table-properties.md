@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET TABLE PROPERTIES.Summary-->O comando GET TABLE PROPERTIES retorna as propriedades da tabela passada por *pontTabela* ou *numTabela*.<!-- END REF--> Pode passar no primeiro parâmetro o número de tabela ou ponteiro da tabela.  
   
@@ -29,13 +29,13 @@ Una vez executado o comando:
 * O parâmetro *trigSalvarReg* retorna True se o trigger “On saving an existing record” for ativado para a tabela, do contrário False.
 * O parâmetro *trigApagarReg* retorna True se o trigger “On deleting a record” for ativado para esta tabela, do contrário False.
 
-#### Ver também 
+## Ver também 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

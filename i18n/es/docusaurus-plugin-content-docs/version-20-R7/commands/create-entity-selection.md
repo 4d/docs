@@ -4,7 +4,7 @@ title: Create entity selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create entity selection.Syntax-->***Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
+<!--REF #_command_.Create entity selection.Syntax-->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
 
 <!--REF #_command_.Create entity selection.Params-->
 
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 El comando `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->crea y devuelve una nueva entity selection [modificable](../ORDA/entities.md#shareable-or-alterable-entity-selections) relativa a la dataclass correspondiente con la *dsTable* dada, de acuerdo con la selección actual de esta tabla<!-- END REF-->.
 
@@ -30,7 +30,7 @@ En el parámetro opcional *settings*, puede pasar un objeto que contenga la sigu
 | --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | context   | Text | Etiqueta para el [contexto de optimización](../ORDA/client-server-optimization.md) aplicado a la selección de entidades. |
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 var $employees : cs.EmployeeSelection
@@ -40,15 +40,15 @@ $employees:=Create entity selection([Employee])
 // en todas las entidades relacionadas con la clase de datos Employee
 ```
 
-#### Ver también
+## Ver también
 
 [USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
 
-#### Propiedades
+## Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1512                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1512                        |
+| Hilo seguro       | &check; |
 
 

@@ -12,7 +12,7 @@ title: VP DELETE ROWS
 |---|---|---|---|
 |rangeObj| Object|->|Range object|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP DELETE ROWS` command <!-- REF #_method_.VP DELETE ROWS.Summary -->removes the rows  in the *rangeObj*<!-- END REF -->.
 
@@ -23,7 +23,7 @@ In *rangeObj*, pass an object containing a range of rows  to remove. If the pass
 
 >Rows are deleted from bottom to top.
 
-#### Example  
+## Example  
 
 To delete rows selected by the user (in the image below rows 1, 2, and 3):
 
@@ -36,7 +36,7 @@ use the following code:
  VP DELETE ROWS(VP Get selection("ViewProArea"))
 ```
 
-#### See also
+## See also
 
 [VP DELETE ROWS](vp-delete-columns.md)<br/>
 [VP INSERT COLUMNS](vp-insert-columns.md)<br/>

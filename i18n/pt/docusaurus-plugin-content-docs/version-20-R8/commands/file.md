@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the [`4D.File`](../API/FileClass.md) type<!-- END REF -->. O comando aceita duas sintaxes:
 
@@ -78,7 +78,7 @@ Se o alvo *fileConstant* não existir, um objecto nulo é devolvido. Não se lev
 
 If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Caso contrário, se omitir o parâmetro `*`, um objecto nulo é sempre devolvido.
 
-#### Veja também
+## Veja também
 
 [`4D.File` class](../API/FileClass.md)
 [Folder](folder.md)
@@ -86,7 +86,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |

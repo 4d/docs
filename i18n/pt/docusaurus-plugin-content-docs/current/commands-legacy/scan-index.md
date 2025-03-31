@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SCAN INDEX.Summary-->SCAN INDEX retorna uma seleção de *numero* de registros da *tabela*.<!-- END REF--> Se passa <, SCAN INDEX retorna o *numero* de registros a partir do final do índice (valores superiores). Se passa >, SCAN INDEX retorna *numero* de registros a partir do início do índice (valores inferiores). Este comando é muito eficiente porque utiliza o índice para realizar a operação.  
 
@@ -25,11 +25,11 @@ SCAN INDEX funciona unicamente com campos indexados. Este comando modifica a sel
   
 Se especifica um número de registros superior ao número de registros presentes na tabela, SCAN INDEX devolverá todos os registros.
 
-##### 
+### 
 
 **Nota:** Este comando não é compatível com campos tipo Objeto
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo envia cartas aos 50 piores clientes e aos 50 melhores clientes:  
 
@@ -46,13 +46,13 @@ O seguinte exemplo envia cartas aos 50 piores clientes e aos 50 melhores cliente
   
   
 
-#### Ver também 
+## Ver também 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

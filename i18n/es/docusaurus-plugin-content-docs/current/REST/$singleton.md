@@ -47,7 +47,7 @@ La función `SingletonClassFunction()` debe haber sido declarada con la palabra 
 
 :::
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/webServerConfig.md#use-preemptive-processes) es ignorado por el Servidor REST).
 
 :::info
 
@@ -77,7 +77,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-La clase `mySingleton` y la función `sayHello` se listan cuando se llama al comando [`$catalog`]($catalog.md#singleton).
+La clase `mySingleton` y la función `sayHello` se listan cuando se llama al comando [`$catalog`]($catalog.md#singletons).
 
 :::
 

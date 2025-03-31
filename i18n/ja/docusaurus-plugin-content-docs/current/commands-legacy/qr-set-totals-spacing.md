@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR SET TOTALS SPACING.Summary-->QR SET TOTALS SPACING コマンドを使用し、小計行の下部の行間を設定できます。<!-- END REF-->このコマンドはリストモードにのみ適用されます。 
 
@@ -34,11 +34,11 @@ displayed_sidebar: docs
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*subtotal*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR GET TOTALS SPACING](qr-get-totals-spacing.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

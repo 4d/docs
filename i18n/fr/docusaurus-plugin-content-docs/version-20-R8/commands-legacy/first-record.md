@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FIRST RECORD.Summary-->**FIRST RECORD** charge en mémoire le premier enregistrement de la sélection courante de *laTable* et en fait l'enregistrement courant.<!-- END REF--> Toutes les commandes de recherche, de sélection et de tri font également du premier enregistement l'enregistrement courant. Si la sélection courante est vide ou si l'enregistrement courant est déjà le premier enregistrement de la sélection, **FIRST RECORD** ne fait rien.
 
 Cette commande est principalement utilisée après un appel à [USE SET](use-set.md), pour débuter une boucle dans la sélection d'enregistrements à partir du premier enregistrement. Cependant, il est tout à fait envisageable de l'appeler depuis une sous-routine lorsque vous souhaitez vous assurer que l'enregistrement est bien le premier.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant charge le premier enregistrement de la table \[Clients\] :
 
@@ -27,7 +27,7 @@ L'exemple suivant charge le premier enregistrement de la table \[Clients\] :
  FIRST RECORD([Clients])
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -35,7 +35,7 @@ L'exemple suivant charge le premier enregistrement de la table \[Clients\] :
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

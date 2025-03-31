@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->La commande **SET LIST PROPERTIES** définit la hauteur de ligne et le fonctionnement de la liste hiérarchique dont la référence est passée dans le paramètre *liste*.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Si vous passez 0 ou omettez le paramètre *multiSélection*, le fonctionnement p
 Le paramètre facultatif *modifiable* permet d’indiquer si la liste sera modifiable par l’utilisateur lorsqu’elle sera affichée sous forme d’énumération associée à un champ ou une variable en saisie. Lorsque l’énumération est modifiable, un bouton **Modifier** est inséré dans la fenêtre d’énumération et l’utilisateur peut ajouter, supprimer et trier les valeurs via un éditeur spécifique.   
 Si vous passez 1 ou omettez le paramètre *modifiable*, l’énumération sera modifiable par l’utilisateur ; si vous passez 0, elle ne sera pas modifiable.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez interdire le déploiement/contraction sur double-clic. Vous pouvez écrire dans la méthode du formulaire :
 
@@ -54,13 +54,13 @@ Vous souhaitez interdire le déploiement/contraction sur double-clic. Vous pouve
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

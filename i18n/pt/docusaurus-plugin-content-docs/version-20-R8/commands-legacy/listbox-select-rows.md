@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->**O comandoLISTBOX SELECT ROWS** seleciona as alinhas de uma list box de seleção de entidades ou uma list box coleção que corresponde às entidades ou objetos contendo o parâmetro *seleção*.<!-- END REF--> 
 
@@ -50,7 +50,7 @@ Como padrão, se o parâmetro *ação* for omitido, o comando substitui as linha
 
 **Nota:** O comando assume que cada objeto ou entidade é exibida apenas uma vez na list box. 
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este código eprmite que selecione faturas em uma seleção de entidades usando apenas uma única petição de servidor:
 
@@ -66,7 +66,7 @@ Este código eprmite que selecione faturas em uma seleção de entidades usando 
  LISTBOX SELECT ROWS(*;"Invoices";$cash;lk replace selection)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Exemplo com a coleção de objetos:
 
@@ -80,11 +80,11 @@ Exemplo com a coleção de objetos:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [ LISTBOX SELECT ROW ](listbox-select-row.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

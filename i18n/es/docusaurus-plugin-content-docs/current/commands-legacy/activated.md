@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Activated.Summary-->El comando **Activated** (obsoleto) devuelve **True** en un método formulario cuando la ventana que contiene el formulario se convierte en la ventana del primer plano del proceso del primer plano.<!-- END REF-->
 
@@ -23,12 +23,12 @@ displayed_sidebar: docs
 
 **Nota:** para que el ciclo de ejecución **Activated** se genere, asegúrese de que la propiedad del evento On Activate del formulario se haya seleccionado en el entorno Diseño.
 
-#### Ver también 
+## Ver también 
 
 [Deactivated](deactivated.md)  
 [Form event code](../commands/form-event-code.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

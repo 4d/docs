@@ -21,7 +21,7 @@ Esse comando é mantido apenas por motivos de compatibilidade. Agora é recomend
 :::
 
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HTTP SET OPTION.Summary-->O comando **HTTP SET OPTION** permite definir diferentes opções utilizadas durante a próxima solicitação disparada pelos comandos [HTTP Get](http-get.md) ou [HTTP Request](http-request.md).<!-- END REF--> Você pode chamar este comando quantas vezes como opções a definir.  
   
@@ -41,12 +41,12 @@ Passe no parâmetro *opção* o número da opção a definir e no parâmetro *va
 
 Não importa a ordem das opções de chamada. Se a mesma opção é definida mais de uma vez, apenas uma é considera o valor da última chamada.
 
-#### Ver também 
+## Ver também 
 
 [HTTP AUTHENTICATE](http-authenticate.md)  
 [HTTP GET OPTION](http-get-option.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

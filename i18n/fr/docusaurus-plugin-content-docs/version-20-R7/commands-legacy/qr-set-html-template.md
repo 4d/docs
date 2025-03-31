@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->La commande **QR SET HTML TEMPLATE** permet de définir le *modèle* HTML à utiliser pour la zone d'état rapide référencée par *zone*.<!-- END REF--> Ce modèle sera utilisé lors de l'exécution des états au format HTML. 
 
@@ -22,7 +22,7 @@ Le modèle est construit à l'aide d'un ensemble de balises de traitement des do
 
 **Note :** Vous devez appeler au préalable [QR SET DESTINATION](qr-set-destination.md) pour définir le format HTML comme destination de sortie.
 
-#### Balises HTML 
+## Balises HTML 
 
 *<!--#4DQRheader--> ... <!--/#4DQRheader-->*  
 Les intitulés des colonnes seront insérés entre ces balises. Ces balises sont généralement utilisées pour définir la ligne de titre de l'état.
@@ -65,11 +65,11 @@ Ces balises seront remplacées respectivement par les données du pied de page g
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR Get HTML template](qr-get-html-template.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ title: VP Combine ranges
 | otherRangeObj | Object | ->                          | Objet plage                        |                  |
 | Résultat      | Object | <- | Objet contenant une plage combinée | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->retourne un nouvel objet de plage qui incorpore deux ou plusieurs objets de plage existants<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
 
@@ -25,7 +25,7 @@ Dans *otherRangeObj*, passez un ou plusieurs autres objets de plage à combiner 
 
 > La commande incorpore les objets *rangeObj* et *otherRangeObj* par référence.
 
-#### Exemple
+## Exemple
 
 Vous souhaitez combiner des plages de type cellule, colonne et ligne dans une nouvelle plage distincte :
 
@@ -37,7 +37,7 @@ Vous souhaitez combiner des plages de type cellule, colonne et ligne dans une no
  $combine:=VP Combine ranges($cell;$column;$row)
 ```
 
-#### Voir également
+## Voir également
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

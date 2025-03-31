@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Load list.Summary-->Load list は、*listName*で指定した名前のリストのコピーを作成し、そのリスト参照番号を返します。<!-- END REF--> 
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 **Tip:** プロパティリストの選択リストプロパティを使用して、リストをフォームオブジェクト (階層リスト、タブコントロール、階層ポップアップメニュー) に関連付ける場合、オブジェクトメソッドからLoad listや[CLEAR LIST](clear-list.md "CLEAR LIST")を呼び出す必要はありません。4Dはリストを自動的にロードして消去します。
 
-#### 例題 
+## 例題 
 
 国際市場に対応するデータベースを作成し、そのデータベースの使用中に異なる言語に切り替える必要があるとします。フォームで*hlList*という名前の、標準オプションのリストを示す階層リストを提供します。デザインモードでは、英語版の"Std Options US"、フランス語版の"Std Options FR"、日本語版の"Std Options JP"等、さまざまなリストを準備しました。これに加えて、*<>gsCurrentLanguage*という名前のインタープロセス変数を持ち、これに、英語版には"US"、フランス語版には"FR"、日本語版には"JP"というように2文字の言語コードを格納します。現在選択されている言語を使用してリストをロードするために、以下のように記述します:
 
@@ -44,13 +44,13 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

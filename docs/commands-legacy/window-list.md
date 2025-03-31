@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WINDOW LIST.Summary-->The WINDOW LIST command populates the array *windows* with the window reference numbers of the windows currently open in all running processes (kernel or user processes).<!-- END REF--> Only "visible" windows (i.e. windows that are not hidden) are returned. 
 
 If you do not pass the optional *\** parameter, floating windows are ignored.
 
-#### Example 
+## Example 
 
 The following project method tiles all the current open window, except floating windows and dialog boxes:
 
@@ -46,12 +46,12 @@ The following project method tiles all the current open window, except floating 
 
 **Note:** This method could be improved by adding tests on the size of the main window (on Windows) or the size and location of the screens (on Macintosh).
 
-#### See also 
+## See also 
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

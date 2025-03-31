@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->El comando SQL EXECUTE se utiliza para ejecutar un comando SQL y asociar el resultado a objetos 4D (arrays, variables o campos).<!-- END REF-->
 
@@ -38,7 +38,7 @@ En el caso de una variable 4D, se recupera un sólo registro a la vez. Los otros
 
 **Nota:** para mayor información sobre el referenciamiento de expresiones 4D en búsquedas SQL, consulte la sección *Presentación de los comandos del tema SQL*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En este ejemplo, obtendremos la columna ename de la tabla emp de la fuente de datos externos. El resultado se almacena en el campo 4D \[Empleados\]Nombre. Los registros 4D se crean automáticamente: 
 
@@ -48,7 +48,7 @@ En este ejemplo, obtendremos la columna ename de la tabla emp de la fuente de da
  SQL LOAD RECORD(SQL all records)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Para controlar la creación de registros, es posible incluir el código en una transacción y validarla únicamente si la operación prueba ser satisfactoria: 
 
@@ -64,7 +64,7 @@ Para controlar la creación de registros, es posible incluir el código en una t
  VALIDATE TRANSACTION //Validación de la transacción
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 En este ejemplo, queremos obtener la columna ename de la tabla emp de la fuente de datos externos. El resultado se almacenará en un array *aNombre*. Obtenemos los registros de 10 en 10\. 
 
@@ -77,7 +77,7 @@ En este ejemplo, queremos obtener la columna ename de la tabla emp de la fuente 
  End while
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 En este ejemplo, queremos obtener las columnas ename y job de la tabla emp para un ID especifico ID (cláusula WHERE) de la fuente de datos externa. El resultado se almacena en las variables 4D *vNombre* y *vJob*. Sólo se recupera el primer registro. 
 
@@ -87,7 +87,7 @@ En este ejemplo, queremos obtener las columnas ename y job de la tabla emp para 
  SQL LOAD RECORD
 ```
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 En este ejemplo, queremos obtener la columna Campo\_Blob de la tabla Test en la fuente de datos. El resultado se almacena en una variable BLOB cuyo valor se actualiza cada vez que se carga un registro.
 
@@ -101,7 +101,7 @@ En este ejemplo, queremos obtener la columna Campo\_Blob de la tabla Test en la 
   //El valor de MiBlob se actualiza en cada llamada
 ```
 
-#### Ejemplo 6 
+## Ejemplo 6 
 
 Usted quiere recuperar localmente los datos almacenados en una base 4D Server remota. Para hacerlo, deber utilizar arrays intermediarios:
 
@@ -150,15 +150,15 @@ Usted quiere recuperar localmente los datos almacenados en una base 4D Server re
  End if
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK devuelve 1, de lo contrario devuelve 0.
 
-#### Ver también 
+## Ver también 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

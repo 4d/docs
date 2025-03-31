@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DOCUMENT SIZE.Summary-->La commande **SET DOCUMENT SIZE** fixe la taille d'un document au nombre d'octets que vous avez passé dans *taille*.<!-- END REF--> 
 
@@ -22,13 +22,13 @@ Le document doit avoir été ouvert au préalable. Vous passez son numéro de r�
 
 Sous Mac OS, c'est la taille de la data fork du document qui est modifiée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get document position](get-document-position.md)  
 [Get document size](get-document-size.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

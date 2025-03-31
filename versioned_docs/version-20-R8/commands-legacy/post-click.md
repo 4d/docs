@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.POST CLICK.Summary-->The POST CLICK command simulates a mouse click.<!-- END REF--> Its effect as if the user actually clicked the mouse button.
 
@@ -24,12 +24,12 @@ You pass the horizontal and vertical coordinates of the click in *mouseX* and *m
 
 If you specify the *process* parameter, the click is sent to the process whose process number you pass in *process*. If you pass *0* (zero) or if you omit the parameter, the click is sent at the application level, and the 4D scheduler will dispatch it to the appropriate process.
 
-#### See also 
+## See also 
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

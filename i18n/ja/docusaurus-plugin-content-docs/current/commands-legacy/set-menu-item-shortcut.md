@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->**SET MENU ITEM SHORTCUT** コマンドは、あるメニュー項目に新しいショートカットを割り当てます。<!-- END REF-->
 
@@ -39,13 +39,13 @@ displayed_sidebar: docs
 
 **注:** *menu* 引数に[MenuRef](# "Unique ID (16-character alphanumeric) of a menu") を渡した場合、*process* 引数は何も動作せず、無視されます。
 
-##### 互換性に関する注意 
+### 互換性に関する注意 
 
 互換性上の理由から、このコマンドは*itemKey* 引数に文字コードを受け入れることもできます(旧シンタックス)。この場合、ショートカットは自動的に**Ctrl** (Windows) または **Cmd** (macOS) をモディファイヤーキーとして含み、*modifiers* 引数に渡された値は考慮されません。
 
 *itemKey* 引数に0(ゼロ) を渡した場合、すでにメニュー項目に割り当てられているショートカットが削除されます。
 
-#### 例題 1 
+## 例題 1 
 
 "下線"メニュー項目に Ctrl+Shift+U (Windows) と Cmd+Shift+U (Mac OS) ショートカットを定義します:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
  SET MENU ITEM SHORTCUT(menuRef;1;"U";Shift key mask)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 Ctrl+R (Windows) や Cmd+R (Mac OS) ショートカットを"再起動"メニュー項目に割り当てます:
 
@@ -63,7 +63,7 @@ Ctrl+R (Windows) や Cmd+R (Mac OS) ショートカットを"再起動"メニュ
  SET MENU ITEM SHORTCUT(FileMenu;-1;"R";Command key mask)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 "閉じる"メニュー項目にF4 のショートカットキーを定義します:
 
@@ -72,12 +72,12 @@ Ctrl+R (Windows) や Cmd+R (Mac OS) ショートカットを"再起動"メニュ
  SET MENU ITEM SHORTCUT(FileMenu;-1;"[F4]";0)
 ```
 
-#### 参照 
+## 参照 
 
 [Get menu item key](get-menu-item-key.md)  
 [Get menu item modifiers](get-menu-item-modifiers.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

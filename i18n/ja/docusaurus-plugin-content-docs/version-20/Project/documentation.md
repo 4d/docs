@@ -113,7 +113,7 @@ title: ドキュメンテーション
 
 :::note
 
-それ以外の場合には、[メソッドコードの先頭のコメントブロック](../code-editor/write-class-method.md#ヘルプtipを使用する) がコードエディターに表示されます。
+Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#help-tips).
 
 :::
 

@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OB GET ARRAY.Summary-->El comando **OB GET ARRAY** recupera en *array*, el array de valores almacenados en la *propiedad* del objeto de lenguaje designado por el parámetro *objeto*.<!-- END REF-->debe haber sido definido con el comando *C\_OBJECT* o designar un campo objeto 4D.  
   
 En el parámetro *propiedad*, pase la etiqueta de la propiedad a leer. Tenga en cuenta que el parámetro *propiedad* tiene en cuenta las mayúsculas y minúsculas.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Dado un objeto array definido en el ejemplo del comando [OB SET ARRAY](ob-set-array.md):
 
@@ -36,7 +36,7 @@ Queremos recuperar estos valores:
 
 ![](../assets/en/commands/pict1213151.es.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Queremos cambiar un valor en el primer elemento del array:  
   
@@ -47,12 +47,12 @@ Queremos cambiar un valor en el primer elemento del array:
  OB SET($refs{1};"age";25)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Conversiones de tipo entre las colecciones y los arrays 4D*  
 [OB SET ARRAY](ob-set-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

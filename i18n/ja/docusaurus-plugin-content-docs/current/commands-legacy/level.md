@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Level.Summary-->Levelは、現在のブレークまたはヘッダのレベルを調べるために使用します。<!-- END REF-->このコマンドは、On HeaderおよびOn Printing Breakイベント中でレベル数を返します。
 
 レベル0は、印刷される最後のレベルで、総合計を印刷するのに適しています。Levelは、最初のソートフィールドのブレークを印刷するときに1を返し、2番目ソートフィールドでブレークを印刷するときに2を返します。
 
-#### 例題 
+## 例題 
 
 以下の例はフォームメソッドのテンプレートです。集計レポートでフォームが出力フォームとして使用される際に、発生する可能性のあるイベントをすべて示しています。ヘッダやブレークがプリントされるときにLevelが呼び出されます:
 
@@ -60,14 +60,14 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

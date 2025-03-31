@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISTINCT VALUES.Summary-->The **DISTINCT VALUES** command creates and populates the array *array* with non-repeated (unique) values coming from the field *aField* for the current selection of the table to which the field belongs and, optionally, returns the number of occurrences of each value in the *countArray* parameter.<!-- END REF-->
 
@@ -40,11 +40,11 @@ The command accepts a *countArray* array as an optional parameter. When it is pa
 
 **4D Server:** The command is optimized for 4D Server. The array is created and the values are calculated on the server machine; the array is then sent, in its entirety, to the client.
 
-##### 
+### 
 
 **Note:** This command does not support Object type fields.
 
-#### Example 1 
+## Example 1 
 
 The following example creates a list of cities from the current selection and tells the user the number of cities in which the firm has stores: 
 
@@ -54,7 +54,7 @@ The following example creates a list of cities from the current selection and te
  ALERT("The firm has stores in "+String(Size of array(asCities))+" cities.")
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to get a complete list of keywords contained in the keyword index for the "Pictures" field: 
 
@@ -64,7 +64,7 @@ You want to get a complete list of keywords contained in the keyword index for t
  DISTINCT VALUES([PICTURES]Photos;<>_MyKeywords)
 ```
 
-#### Example 3 
+## Example 3 
 
 To compute statistics, you want to sort the number of distinct values in a field in descending order:
 
@@ -75,7 +75,7 @@ To compute statistics, you want to sort the number of distinct values in a field
  SORT ARRAY($_issue_type_instances;$_issue_type;<)
 ```
 
-#### See also 
+## See also 
 
   
 [GET TEXT KEYWORDS](get-text-keywords.md)  
@@ -83,7 +83,7 @@ To compute statistics, you want to sort the number of distinct values in a field
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

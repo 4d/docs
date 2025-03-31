@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.MESSAGES OFF.Summary-->MESSAGES OFF および [MESSAGES ON](messages-on.md) コマンドは、時間のかかる処理を行っている際に4Dが表示する進捗インジケータの表示/非表示を切り替えます。<!-- END REF-->デフォルトでは、メッセージは表示されます。
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 **4D Serverでの注意:** 進捗メッセージウィンドウは、それらのオペレーションが管理ウィンドウの *\_o\_PAGE SETUP* にて自動的に表示されるため、サーバー側では表示されません。これらの進捗ウィンドウを強制的に表示したい場合は、サーバー側で [MESSAGES ON](messages-on.md) を呼び出す必要があります。
 
-#### 例題 
+## 例題 
 
 以下の例は、並び替えを実行する前に進捗インジケータを非表示にし、処理が完了した時点で表示に戻します:
 
@@ -64,11 +64,11 @@ displayed_sidebar: docs
  MESSAGES ON
 ```
 
-#### 参照 
+## 参照 
 
 [MESSAGES ON](messages-on.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

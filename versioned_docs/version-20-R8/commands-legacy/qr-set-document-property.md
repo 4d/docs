@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->The QR SET DOCUMENT PROPERTY command displays the printing dialog or sets the unit used for the document.<!-- END REF-->
 
@@ -31,11 +31,11 @@ In *property*, you can pass the following constants, located in the *QR Document
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid value in the *property* or *value* parameter, the corresponding error (-9852 or -9853) is generated.
 
-#### See also 
+## See also 
 
 [QR Get document property](qr-get-document-property.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

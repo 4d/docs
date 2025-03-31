@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OPEN SECURITY CENTER.Summary-->OPEN SECURITY CENTER コマンドは、Maintenance and Security Center (MSC) ウィンドウを表示します。<!-- END REF-->詳細な情報については、*Maintenance & Security Center* のページを参照してください。 
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 * このコマンドは[DIALOG](../commands/dialog.md)コマンドに *\** 引数を渡したときと同じ原理で動作します。MSCはウィンドウに表示され、コマンドは即座にコントロールを4Dのコードに返します。カレントプロセスが終了すると、\[#cmd id="270"/\]をシミュレートし、ウィンドウは自動的に閉じられます。そのためウィンドウの表示を実行中のプロセスのコードを通して管理する必要があります。
 * このコマンドはリモートの4D アプリケーションでは実行することができません。
 
-#### 参照 
+## 参照 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->The MAXIMIZE WINDOW command triggers the expansion of the window whose reference number was passed in *window*.<!-- END REF--> If this parameter is omitted, the effect is the same but is applied to all the frontmost windows of the current process (Windows) or to the frontmost window of the current process (Mac OS). 
 
@@ -23,7 +23,7 @@ A later click on the zoom box or a call to the [MINIMIZE WINDOW](minimize-window
 
 If *window* is already maximized, the command does nothing.
 
-##### On Windows 
+### On Windows 
 
 The size of the window is increased to match the current size of the application window (MDI mode) or the screen (SDI mode). The maximized window is set to be the frontmost window. If you do not pass the *window* parameter, the command is applied to all the application windows. 
 
@@ -36,7 +36,7 @@ In cases where the command is applied to a window whose size is subject to const
 * If no size constraint is in conflict with the target size, the window is "maximized" (i.e., it is restored to the size of the application window (MDI mode) or the screen (SDI mode); its title bar and borders are hidden, and its control buttons - minimize, restore and close - are moved to the right of the application menu bar).
 * If at least one size constraint is in conflict (for example, if the width of the MDI window is 100 and the form window's maximum width is set to 80), the window is not "maximized", but only restored to its maximum allowed size. This size is defined either by the MDI window, or by the constraint. This way, the interface remains consistent when windows with constraints are resized.
 
-##### On Mac OS 
+### On Mac OS 
 
 The size of the window is increased to match the size of its contents. If you do not pass the *window* parameter, the command is applied to the frontmost window of the current process. 
 
@@ -47,7 +47,7 @@ Zoom box on Mac OS
 * The zoom is based on the contents of the window; so, the command must be called in a context where the contents of the window are defined, for example in a form method. Otherwise, the command does nothing.
 * The window is set to its "maximum" size. If the window is actually a form whose size was defined in the form properties, the window size is set to those values.
 
-#### Example 1 
+## Example 1 
 
 This example sets the window size of your form to full screen when it is opened. To achieve this, the following code is placed in the form method:
 
@@ -57,7 +57,7 @@ This example sets the window size of your form to full screen when it is opened.
  MAXIMIZE WINDOW
 ```
 
-#### Example 2 
+## Example 2 
 
 This example illustrates how size constraints are handled on Windows (MDI mode). The following form has a size constraint (maximum width=400):
 
@@ -77,13 +77,13 @@ In this context, when the user clicks on the button:
 
 ![](../assets/en/commands/pict1476363.en.png)
 
-#### See also 
+## See also 
 
 [Is window maximized](is-window-maximized.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

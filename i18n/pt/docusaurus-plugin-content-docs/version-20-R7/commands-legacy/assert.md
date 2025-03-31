@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ASSERT.Summary-->O comando **ASSERT** avalia a expressão *boolExpression* passa no parâmetro e, se retornar falso, para a execução do código com uma mensagem de erro .<!-- END REF-->O comando funciona em modo interpretado e compilado.
 
@@ -24,7 +24,7 @@ Opcionalmente, pode pasar um parâmetro *messageText* para exibir uma mensagem d
 
 Uma asserção é uma instrução inserida no código que é responsável por detectar qualquer anomalia durante sua execução. O princípio consiste em verificar que uma expressão seja verdadeira em um dado momento e, caso não seja verdadeira, causar uma exceção. Asserções são usadas principalmente para detectar casos que nunca deveriam acontecer, principalmente para detectar bugs de programação. É possível ativar ou desativar globalmente3 todas as asserções de um aplicativo (por exemplo de acordo com o tipo de versão) via o comando [SET ASSERT ENABLED](set-assert-enabled.md) . Para saber mais sobre asserções em programação, veja o artigo na Wikipedia: [http://en.wikipedia.org/wiki/Assertion\_(computing)](http://en.wikipedia.org/wiki/Assertion%5F%28computing%29)
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Antes de realizar operações em um registro, o desenvolvedor deseja ter certeza de que está carregado em modo leitura/escritura:
 
@@ -35,7 +35,7 @@ Antes de realizar operações em um registro, o desenvolvedor deseja ter certeza
   // dispara o erro -10518 se o registro está bloqueado
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Uma asserção permite provar os parâmetros passados a um método de projeto para detectar os valores aberrantes. Neste exemplo, é utilizado uma mensagem de alerta personalizado.
 
@@ -48,13 +48,13 @@ Uma asserção permite provar os parâmetros passados a um método de projeto pa
   // "Asserção falhou: pesquisa de um nome de cliente vazia"
 ```
 
-#### Ver também 
+## Ver também 
 
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

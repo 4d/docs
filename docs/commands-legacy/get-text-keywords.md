@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->The **GET TEXT KEYWORDS** command splits all the *text* into individual words and creates an item in the *arrKeywords* text array for each word.<!-- END REF-->
 
@@ -33,7 +33,7 @@ If you pass the optional *\** parameter, the command only stores each different 
 
 This command gives you a simple way to search records containing large amounts of text with the assurance of using the same keywords as 4D. For example, imagine you have a text containing "10,000 Jean-Pierre BC45". If this text is split into the keywords "10,000" + "Jean" + "Pierre" + "BC45", then the array contains 4 elements. Then it is easy to loop through this array by programming to find records containing one or more of these keywords using the % operator (see examples).
 
-#### Example 1 
+## Example 1 
 
 In a form with a search area, users can enter one or more word(s). When a user validates this form, we look for records where the *MyField* field contains at least one of the words entered by the user. 
 
@@ -51,7 +51,7 @@ In a form with a search area, users can enter one or more word(s). When a user v
  USE SET("Totalfound")
 ```
 
-#### Example 2 
+## Example 2 
 
 In the same form as before, we look for records where the *MyField* field contains all the words entered by the user.
 
@@ -68,7 +68,7 @@ In the same form as before, we look for records where the *MyField* field contai
  QUERY([MyTable]) //search
 ```
 
-#### Example 3 
+## Example 3 
 
 To count words in a text:
 
@@ -80,11 +80,11 @@ To count words in a text:
  ALERT("This text contains "+String($n)+" separate words among "+String($m))
 ```
 
-#### See also 
+## See also 
 
 [DISTINCT VALUES](distinct-values.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

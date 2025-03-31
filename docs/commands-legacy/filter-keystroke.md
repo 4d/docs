@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->**FILTER KEYSTROKE** enables you to replace the character entered by the user into a field or an enterable area with the first character of the string *filteredChar* you pass.<!-- END REF-->
 
@@ -31,7 +31,7 @@ You will use the command **FILTER KEYSTROKE** for:
 
 **WARNING:** If you call the command [Keystroke](keystroke.md) after calling **FILTER KEYSTROKE**, the character you pass to this command is returned instead of the character actually entered.
 
-#### Example 1 
+## Example 1 
 
 Using the following code:
 
@@ -49,7 +49,7 @@ Using the following code:
 
 All the digits entered in the area *myObject* are transformed into star characters.
 
-#### Example 2 
+## Example 2 
 
 This code implements the behavior of a Password enterable area in which all the entered characters are replaced (on the screen) by random characters:
 
@@ -69,7 +69,7 @@ This code implements the behavior of a Password enterable area in which all the 
 
 After the data entry is validated, you retrieve the actual password entered by the user in the variable *vsActualPassword*. Note: The method Handle keystroke is listed in the Example section for the command Keystroke. 
 
-#### Example 3 
+## Example 3 
 
 In your application, you have some text areas into which you can enter a few sentences. Your application also includes a dictionary table of terms commonly used throughout your database. While editing your text areas, you would like to be able to quickly retrieve and insert dictionary entries based on the selected characters in a text area. You have two ways to do this:  
  \- Provide some buttons with associated keys, or  
@@ -234,14 +234,14 @@ The Get highlighted text method is listed here:
  End if
 ```
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

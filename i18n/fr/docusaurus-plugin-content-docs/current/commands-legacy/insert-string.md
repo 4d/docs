@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Insert string.Summary-->**Insert string** insère la chaîne de caractères alphanumériques *insertion* dans la chaîne *source* à partir de *position* et retourne la chaîne de caractères résultante.<!-- END REF--> La chaîne *insertion* est placée avant le caractère désigné par *position*.
 
@@ -26,7 +26,7 @@ Si *position* est supérieur à la longueur de *source*, *insertion* est ajouté
 
 **Insert string** est différent de [Change string](change-string.md) puisque cette fonction insère des caractères au lieu de les remplacer.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant illustre l'utilisation de **Insert string**. Les résultats sont affectés à la variable *vRésultat*.
 
@@ -36,13 +36,13 @@ L'exemple suivant illustre l'utilisation de **Insert string**. Les résultats so
  vRésultat:=Insert string("Indention";"ta";6) // vRésultat est égal à "Indentation"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Change string](change-string.md)  
 [Delete string](delete-string.md)  
 [Replace string](replace-string.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -23,7 +23,7 @@ La propriété [`lockKindText`](../API/EntityClass.md#lock) est "Locked by sessi
 
 ### Description
 
-The locks triggered by the REST API are put at the [session](authUsers.md#sessions) level.
+Les verrouillages déclenchés par l'API REST sont placés au niveau de la [session](authUsers.md#sessions).
 
 Une entité verrouillée est considérée comme *verrouillée* (c'est-à-dire que les actions de verrouillage / déverrouillage / mise à jour / suppression ne sont pas possibles) par :
 

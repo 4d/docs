@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OB Class.Summary-->O comando **OB Class** devolve a classe de *objeto* passado no parâmetro.<!-- END REF--> Em 4D, todos os objetos são herdados do objeto classe. Se *objeto* não for um objeto existente, **OB Class** devolve null.
 
-#### Exemplo 
+## Exemplo 
 
 Imagine que criou umaa classe Polygon:
 
@@ -40,11 +40,11 @@ Depois, em um método, pode escrever:
   //$class contains Class: Polygon
 ```
 
-#### Ver também 
+## Ver também 
 
 [OB Instance of](ob-instance-of.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

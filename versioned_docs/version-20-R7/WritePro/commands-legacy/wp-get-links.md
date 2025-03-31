@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get links.Summary-->The **WP Get links** command returns the collection of all links defined in *targetObj*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ In the *targetObj* parameter, you can pass:
 | \[ \].bookmark  | Text           | Bookmark name for the link                               | bookmark links         |
 | \[ \].range     | Object         | Range of the link's label. See *Range handling commands* | all links              |
 
-#### Example 
+## Example 
 
 You want to change the color of all url link labels in a 4D Write Pro document:
 
@@ -53,7 +53,7 @@ You want to change the color of all url link labels in a 4D Write Pro document:
  End for each
 ```
 
-#### See also 
+## See also 
 
 [Blog: Links in 4D Write Pro documents](https://blog.4d.com/links-in-4d-write-pro-documents/)  
 [WP Get formulas](wp-get-formulas.md)  

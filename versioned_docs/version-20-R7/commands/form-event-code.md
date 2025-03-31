@@ -13,7 +13,7 @@ displayed_sidebar: docs
 <!-- END REF-->
 
 
-#### Description 
+## Description 
 
 **Form event code** returns a numeric value identifying the type of form event that has just occurred. Usually, you will use **Form event code** from within a form or object method.
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 For a description of events, please refer to the [**Form Events**](../Events/overview.md) section. 
 
 
-#### Example 1 
+## Example 1 
 
 This example shows the On Validate event being used to automatically assign (to a field) the date that the record is modified:
 
@@ -35,7 +35,7 @@ This example shows the On Validate event being used to automatically assign (to 
  End case
 ```
 
-#### Example 2 
+## Example 2 
 
 In this example, the complete handling of a drop-down list (initialization, user clicks, and object release) is encapsulated in the method of the object:
 
@@ -56,7 +56,7 @@ In this example, the complete handling of a drop-down list (initialization, user
  End case
 ```
 
-#### Example 3 
+## Example 3 
 
 This example is a template for a form method. It shows each of the possible events that can occur when a summary report uses a form as an output form:
 
@@ -97,7 +97,7 @@ This example is a template for a form method. It shows each of the possible even
  End case
 ```
 
-#### Example 4 
+## Example 4 
 
 This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](../commands-legacy/display-selection.md) or [MODIFY SELECTION](../commands-legacy/modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
 
@@ -136,11 +136,11 @@ This example shows the template of a form method that handles the events that ca
  SET WINDOW TITLE($vsTheEvent)
 ```
 
-#### Example 5 
+## Example 5 
 
 For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) and [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) commands.
 
-#### Example 6 
+## Example 6 
 
 This example shows how to treat clicks and double clicks in the same way in a scrollable area:
 
@@ -160,7 +160,7 @@ This example shows how to treat clicks and double clicks in the same way in a sc
  End case
 ```
 
-#### Example 7 
+## Example 7 
 
 This example shows how to treat clicks and double clicks using a different response. Note the use of the element zero for keeping track of the selected element:
 
@@ -191,7 +191,7 @@ This example shows how to treat clicks and double clicks using a different respo
  End case
 ```
 
-#### Example 8 
+## Example 8 
 
 This example shows how to maintain a status text information area from within a form method, using the [`On Getting Focus`](../Events/onGettingFocus.md) and [`On Losing Focus`](../Events/onLosingFocus.md) events:
 
@@ -219,7 +219,7 @@ This example shows how to maintain a status text information area from within a 
  End case
 ```
 
-#### Example 9 
+## Example 9 
 
 This example shows how to respond to a close window event with a form used for record data entry:
 
@@ -243,7 +243,7 @@ This example shows how to respond to a close window event with a form used for r
  End case
 ```
 
-#### Example 10
+## Example 10
 
 This example shows how to capitalize a text or alphanumeric field each time its data source value is modified:
 
@@ -258,7 +258,7 @@ This example shows how to capitalize a text or alphanumeric field each time its 
 ```
 
 
-#### Example 11
+## Example 11
 
 The following example illustrates how to manage a deletion action in a hierarchical list:
 
@@ -286,7 +286,7 @@ The following example illustrates how to manage a deletion action in a hierarchi
  End if
 ```
 
-#### Example 12
+## Example 12
 
 In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us to synchronize the display of two pictures in a form. The following code is added in the "satellite" object method (picture field or variable):
 
@@ -302,7 +302,7 @@ In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us t
 
 Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
-#### Example 13
+## Example 13
 
 You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
 
@@ -337,7 +337,7 @@ As a result, the red rectangle follows the scrolling of the list box:
 
 ![](../assets/en/commands/pict1900395.en.png)
 
-#### See also 
+## See also 
 
 [Form Events](../Events/overview.md)
 [CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container.md)  
@@ -349,7 +349,7 @@ As a result, the red rectangle follows the scrolling of the list box:
 [POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)  
 [SET TIMER](../commands-legacy/set-timer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

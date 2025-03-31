@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QR SET INFO COLUMN.Summary-->##### List mode 
+<!--REF #_command_.QR SET INFO COLUMN.Summary-->### List mode 
 
 The **QR SET INFO COLUMN** command sets the parameters of an existing column.<!-- END REF--> 
 
@@ -54,7 +54,7 @@ The following statement sets the title of column #1 to Title, sets the contents 
  QR SET INFO COLUMN(area;1;"Title";"[Table 1]Field2";0;150;0;"###,##")
 ```
 
-##### Cross-table mode 
+### Cross-table mode 
 
 The **QR SET INFO COLUMN** command allows you to set the same parameters but the reference of the areas to which it applies is different and varies depending on the parameter you want to set.   
 First of all, the *title*, *hide*, and *repeatedValue* parameters are not used when this command is used in cross-table mode. The value to use for *colNum* varies depending on whether you want to set the column size or the data source and display format.
@@ -101,13 +101,13 @@ This would be the resulting report area:
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *colNum* value, the error -9852 will be generated.
 
-#### See also 
+## See also 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR Get info row.Summary-->La commande **QR Get info row** indique si la ligne désignée par le paramètre *ligne* est affichée ou masquée dans la *zone*.<!-- END REF--> 
 
@@ -34,13 +34,13 @@ La valeur retournée par **QR Get info row** indique si le contenu de la ligne e
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *ligne* est incorrect, l’erreur -9852 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

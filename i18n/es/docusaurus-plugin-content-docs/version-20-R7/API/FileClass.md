@@ -513,8 +513,6 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 <!-- END REF -->
 
-<!-- REF file.setAppInfo().Desc -->
-
 ## .setAppInfo()
 
 <details><summary>Historia</summary>
@@ -630,7 +628,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descripción
 
-La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
+Lanzamiento Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
 #### Ejemplo
 

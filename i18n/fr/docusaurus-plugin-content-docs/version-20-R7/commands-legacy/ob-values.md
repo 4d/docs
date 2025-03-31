@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Values.Summary-->La commande **OB Values** retourne une collection de variants contenant toutes les valeurs des propriétés énumérables de l'*objet*.<!-- END REF--> 
 
 L'ordre des valeurs de la collection retournée suit l'ordre de définition des propriétés.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez une collection avec toutes les valeurs des propriétés d'un objet : 
 
@@ -40,12 +40,12 @@ Vous souhaitez une collection avec toutes les valeurs des propriétés d'un obje
   //$col[2]={"Mariey":12,"Marc":8}
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Entries](ob-entries.md)  
 [OB Keys](ob-keys.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

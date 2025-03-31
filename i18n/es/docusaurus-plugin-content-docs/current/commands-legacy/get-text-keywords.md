@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->El comando **GET TEXT KEYWORDS** divide todo el *texto* en palabras individuales y crea, para cada palabra obtenida, un elemento en el array texto *arrPalabrasClaves* para cada palabra.<!-- END REF-->  
   
@@ -33,7 +33,7 @@ Si pasa el parámetro opcional *\**, el comando sólo almacena cada palabra dife
   
 Este comando permite efectuar de manera simple las búsquedas entre los registros que contienen grandes cantidades de texto garantizando utilizar las mismas palabras claves que 4D. Por ejemplo, imagine que tiene un texto que contiene "10,000 Jean-Pierre BC45". Si este texto se divide en las palabras claves "10,000" + "Jean-Pierre" + "BC45", el array contendrá 4 elementos. Entonces es fácil hacer un bucle en este array para encontrar los registros que contienen una o más de estas palabras clave utilizando el operador % (ver ejemplos).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En un formulario que contiene un área de búsqueda, los usuarios pueden introducir una o más palabras. Cuando un usuario valida este formulario, buscamos los registros cuyo campo *Micampo* contenga al menos una de las palabras claves introducidas por el usuario.   
 
@@ -51,7 +51,7 @@ En un formulario que contiene un área de búsqueda, los usuarios pueden introdu
  USE SET("Totalfound")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En el mismo formulario que antes, buscamos los registros donde el campo *MiCampo* contenga todas las palabras claves introducidas por el usuario.
 
@@ -68,7 +68,7 @@ En el mismo formulario que antes, buscamos los registros donde el campo *MiCampo
  QUERY([MiTabla]) //búsqueda
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Para contar las palabras de un texto:
 
@@ -80,11 +80,11 @@ Para contar las palabras de un texto:
  ALERT("Este texto contiene "+String($n)+" palabras de "+String($m))
 ```
 
-#### Ver también 
+## Ver también 
 
 [DISTINCT VALUES](distinct-values.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

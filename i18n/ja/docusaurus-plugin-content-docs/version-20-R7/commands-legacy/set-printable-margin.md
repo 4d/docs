@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->SET PRINTABLE MARGIN コマンドを使用すると、[Print form](print-form.md)、[PRINT SELECTION](print-selection.md)または [PRINT RECORD](print-record.md) コマンドの使用時に、各種印刷マージンの値を設定することができます。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 デフォルトで、4Dはプリンタマージンに基づいて印刷を行います。SET PRINTABLE MARGINコマンドの実行後は、変更後のパラメータがセッション全体の同一プロセス内で維持されます。
 
-#### 例題 1 
+## 例題 1 
 
 次の例題により、デッドマージンのサイズを取得することができます:
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
   //$l, $t, $r and $b correspond to the dead margins of the sheet
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例題により、用紙サイズを取得することができます:
 
@@ -52,13 +52,13 @@ displayed_sidebar: docs
   //For size A4: $height=842 ; $width=595 pixels
 ```
 
-#### 参照 
+## 参照 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
 [Print form](print-form.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

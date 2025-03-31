@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Open form window.Summary-->O comando Open form window abre uma nova janela utilizando as propriedades de tamanho e de redimensionamentos do formulário *nomForm*.<!-- END REF-->
 
@@ -85,7 +85,7 @@ Estes parâmetros levam em consideração a presença da barra de ferramentes as
 
 Se pasasr o parâmetro opcional *\**, a posição atual e tamanho da janela são memorizadas quando fechadas. Quando a janela é reaberta novamente, sua posição prévia e tamanho são respeitados. Neste caso, os parâmetros *vPos* e *hPos* são usados apenas na primeira vez que a janela é aberta.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 A seguinte instrução abre uma janela padrão ou uma caixa fechar e se ajusta automaticamente ao tamanho do formulário de "Entrada". Como o formulário foi definido como redimensionáveis, a janela tem uma caixa de redimensionamento e uma caixa de zoom  
   
@@ -93,7 +93,7 @@ A seguinte instrução abre uma janela padrão ou uma caixa fechar e se ajusta a
  $winRef :=Open form window([Table1];"Enter")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 A instrução abre una palheta flutuante na parte superior esquerda da tela baseada em um formulário de projeto chamado "Ferramentas". Esta palheta utiliza a última posição em cada nova abertura: 
 
@@ -101,7 +101,7 @@ A instrução abre una palheta flutuante na parte superior esquerda da tela base
  $winRef :=Open form window("Ferramentas";Palette form window;On the left;At the top;*)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este código deve ser chamado em MacOS enquanto uma janela de documento é exibida, por exemplo de um botão formulário, para exibir uma janela planilha:
 
@@ -113,7 +113,7 @@ Este código deve ser chamado em MacOS enquanto uma janela de documento é exibi
   //do fundo da barra título
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo abaixo usa a rota a um formulário json para exibir os registros em uma lista de empregados: 
 
@@ -127,14 +127,14 @@ o que retorna:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### Ver também 
+## Ver também 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [Open window](open-window.md)  
 *Tipos de janelas*  
 *Tipos de Janelas*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

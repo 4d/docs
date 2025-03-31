@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Trunc.Summary-->**Trunc** returns *number* with its decimal part truncated to the number of decimal places specified by *places*.<!-- END REF-->always truncates toward negative infinity.
 
 If *places* is positive, *number* is truncated to *places* decimal places. If *places* is negative, number is truncated on the left of the decimal point.
 
-#### Example 
+## Example 
 
 The following example illustrates how Trunc works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
 
@@ -32,11 +32,11 @@ The following example illustrates how Trunc works with different arguments. Each
  vlResult:=Trunc(-216.897;-1) // vlResult gets –220
 ```
 
-#### See also 
+## See also 
 
 [Round](round.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

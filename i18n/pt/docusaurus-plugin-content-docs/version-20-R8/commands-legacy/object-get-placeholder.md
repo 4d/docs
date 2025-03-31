@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->O comando **OBJECT Get placeholder** devolve o texto de exemplo associado ao objeto ou aos objetos designado(s) pelos parâmetros *objeto* e *\**.<!-- END REF--> Se não há nenhum texto do marcador associado com o objeto, o comando devolve uma cadeia vazia.
 
@@ -25,7 +25,7 @@ Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome
 
 Se o marcador é uma referência xliff definida pela lista de propriedades, o comando devolve a referência original no formulário ":xliff:resname", e não a seu valor calculado.
 
-#### Exemplo 
+## Exemplo 
 
 Se quer receber o texto do marcador de campo:
 
@@ -33,11 +33,11 @@ Se quer receber o texto do marcador de campo:
  $txt:=OBJECT Get placeholder([People]LastName)
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET PLACEHOLDER](object-set-placeholder.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

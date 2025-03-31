@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->The **SET APPLICATION COLOR SCHEME** command defines the color scheme to use at the application level for the current session.<!-- END REF--> This scheme will be applied to forms that do not already declare a specific scheme (a color scheme defined at the form level takes priority over the application level).
 
@@ -25,19 +25,19 @@ In the *colorScheme* parameter, pass a color scheme to apply:
 * **"dark"** \- the application will use the Default Dark Theme
 * **"inherited"** \- the application will inherit from the higher priority level (i.e., in Settings)
 
-#### Example 
+## Example 
 
 ```4d
   // Force the current application in dark
  SET APPLICATION COLOR SCHEME("dark")
 ```
 
-#### See also 
+## See also 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [Get Application color scheme](get-application-color-scheme.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

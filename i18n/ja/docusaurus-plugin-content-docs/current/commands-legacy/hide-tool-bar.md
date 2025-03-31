@@ -12,13 +12,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HIDE TOOL BAR.Summary-->**HIDE TOOL BAR** コマンドは、カレントプロセスにおいて[Open form window](open-form-window.md) コマンドで作成されたカスタムのツールバーの表示を管理します。<!-- END REF-->
 
 [Open form window](open-form-window.md) コマンドにToolbar form window オプションを使用してツールバーウィンドウが作成されている場合、このコマンドはそのウィンドウを非表示にします。ツールバーウィンドウが既に非表示状態であるとき、またはこのタイプのウィンドウが作成されていない場合には、コマンドは何もしません。
 
-#### 例題 
+## 例題 
 
 macOS において、カスタムのツールバーとHas full screen mode Mac オプションを持つ標準のウィンドウを定義したとします。ツールバーが表示されている状態で標準のウィンドウがユーザーによって最大化された場合、最大化されたウィンドウとツールバーが被ってしまうのは避けたいところです。
 
@@ -36,11 +36,11 @@ macOS において、カスタムのツールバーとHas full screen mode Mac �
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [SHOW TOOL BAR](show-tool-bar.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

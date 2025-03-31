@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->O comando HIGHLIGHT RECORDS permite selecionar registros em um formulário listado.<!-- END REF--> Esta operação é idêntica à seleção de registros manual em modo listado utilizando o mouse ou as combinações de teclado **Shift+Clique** ou **Ctrl+Clique** (Windows) ou **comando+Clique** (Mac OS). A seleção atual não é modificada.  
   
@@ -30,7 +30,7 @@ Quando se passa o parâmetro \*, provoca a inativação da função de rolagem a
   
 **Nota**: no marco dos subformulários incluídos, o comando HIGHLIGHT RECORDS não faz nada se a propriedade de seleção **Várias linhas** não estiver selecionada para o formulário. Neste caso, para selecionar uma linha, deve utilizar o comando [GOTO SELECTED RECORD](goto-selected-record.md).
 
-#### Exemplo 
+## Exemplo 
 
 Em um formulário de saída mostrado pelo comando [MODIFY SELECTION](modify-selection.md), você deseja que o usuário possa realizar pesquisas sem que a seleção atual seja modificada. Para fazer isto, coloque um botão **Procurar** no formulário e associe-o com o seguinte método:
 
@@ -43,12 +43,12 @@ Em um formulário de saída mostrado pelo comando [MODIFY SELECTION](modify-sele
 
 Quando o usuário clicar no botão, aparece a caixa de diálogo padrão procurar. Quando confirmar a pesquisa, os registros encontrados serão selecionados sem que a seleção atual seja modificada.
 
-#### Ver também 
+## Ver também 
 
 [GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
 [OBJECT SET SCROLL POSITION ](object-set-scroll-position.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

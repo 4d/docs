@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP FREEZE FORMULAS.Summary-->The **WP FREEZE FORMULAS** command "freezes" the contents of the formulas in *targetObj*.<!-- END REF-->
 
@@ -42,7 +42,7 @@ By default, if *recompute* is omitted, expressions are recomputed.
 
 **Warning:** *Carry-over rows*, if any, are transformed as regular rows when you freeze the targetObj. As a result, if the page size or orientation is modified, or if the document is exported, they may be shifted in the resulting layout. 
 
-#### Example 
+## Example 
 
 To freeze the formulas in a document:
 
@@ -56,7 +56,7 @@ To freeze all formulas in the first section of a document without recomputing:
  WP FREEZE FORMULAS(WP Get section(WriteProArea;1);wk do not recompute expressions)
 ```
 
-#### See also 
+## See also 
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  

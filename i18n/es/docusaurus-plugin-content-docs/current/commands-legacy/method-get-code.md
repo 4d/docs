@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->El comando **METHOD GET CODE** devuelve en el parámetro *codigo*, el contenido de los métodos designados por el parámetro *ruta*.<!-- END REF--> Este comando puede devolver el código de todos los tipos de métodos: métodos base, definiciones de clases, triggers, métodos proyecto, métodos formulario y métodos objeto.  
   
@@ -68,11 +68,11 @@ El código exportado con sus tokens es independiente de todo cambio de nombre po
 Si el comando se ejecuta desde un componente, se aplica por defecto a los métodos del componente. Si pasa el parámetro *\**, accede a los métodos de la base local.
 
   
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Consulte el ejemplo del comando [METHOD SET CODE](method-set-code.md).
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo ilustra el efecto del parámetro *opcion*.  
   
@@ -117,12 +117,12 @@ El documento resultante contendrá:
   //%attributes = {"lang":"en"} comentario añadido y reservado por 4DCase of    : (Form event code:C388=On Load:K2:1)        ALL RECORDS:C47([Customer:1])End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [METHOD SET CODE](method-set-code.md)  
 *Utilizar tokens en fórmulas*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

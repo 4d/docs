@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TO COLLECTION.Summary-->The **ARRAY TO COLLECTION** command copies one or more *array*(s) into the elements or the *propertyName* values of *collection*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ This command can work with a *collection* that contains values or a *collection*
 * If you omit the *propertyName* parameter, the command copies all *array* elements to *collection*. If *collection* was not empty, existing elements are replaced and new elements are added if the size of *array* was larger than the *collection* length. After the command is executed, the *collection* length is identical to the size of *array*.
 * If you pass one or more *propertyName*(s) parameters, the command creates or replaces elements of *collection* as objects. Each object is filled with a property whose name is provided in the *propertyName* parameter, and whose value is the corresponding array element. If *collection* was not empty, existing elements are replaced and new elements are added if the size of *array* was larger than the collection. After the command is executed, the *collection* length is the same as the size of the largest *array*.
 
-#### Example 1 
+## Example 1 
 
 You want to copy a text array in a collection:
 
@@ -42,7 +42,7 @@ You want to copy a text array in a collection:
   //...
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to copy field values in a collection of objects through arrays:
 
@@ -59,7 +59,7 @@ You want to copy field values in a collection of objects through arrays:
   //...
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to copy a text array in a shared collection:
 
@@ -78,12 +78,12 @@ You want to copy a text array in a shared collection:
  End use
 ```
 
-#### See also 
+## See also 
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *Type conversions between collections and 4D arrays*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

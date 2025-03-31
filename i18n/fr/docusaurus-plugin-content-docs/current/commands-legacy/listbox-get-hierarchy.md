@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->La commande **LISTBOX GET HIERARCHY** vous permet de connaître les propriétés hiérarchiques de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -31,11 +31,11 @@ Si la list box est en mode hiérarchique, la commande remplit le tableau *hiéra
 
 **Note :** Si la list box est en mode non hiérarchique, la commande retourne dans le premier élément du tableau *hiérarchie* un pointeur vers le tableau de la première colonne de la list box.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SET HIERARCHY](listbox-set-hierarchy.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

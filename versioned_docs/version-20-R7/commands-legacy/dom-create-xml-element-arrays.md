@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Create XML element arrays.Summary-->The **DOM Create XML element arrays** command is used to add a new element in the *elementRef* XML element, as well as, optionally, attributes and their values in the form of arrays.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Optionally, this command can be used to pass several pairs of attributes and att
 
 The arrays must have been created beforehand and function by pairs. You can pass as many pairs of arrays and as many elements in each pair as you want. 
 
-#### Example 
+## Example 
 
 We want to create the following element:
 
@@ -58,11 +58,11 @@ For this, you can simply write:
  vElementRef:=DOM Create XML element arrays(vRootRef;vxPath;arrAttNames;arrAttValues)
 ```
 
-#### See also 
+## See also 
 
 [DOM Create XML element](dom-create-xml-element.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->QR ON COMMAND コマンドは、ユーザによるメニューコマンドの選択やボタンのクリックなどで、クイックレポートコマンドが起動されると、 *methodName* に渡された4Dメソッドを実行します。<!-- END REF-->*area*が0の場合、データベースが閉じられるか、QR ON COMMAND (0;"")という構文で QR ON COMMAND コマンドが呼び出されるまで、*methodName*が各クイックレポートエリアに適用されます。
 
@@ -34,13 +34,13 @@ displayed_sidebar: docs
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
-#### 参照 
+## 参照 
 
 *QR Commands*  
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR Get command status](qr-get-command-status.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

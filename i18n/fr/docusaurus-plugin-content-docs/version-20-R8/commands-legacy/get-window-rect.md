@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->La commande **GET WINDOW RECT** retourne les coordonnées globales de la fenêtre dont vous avez passé le numéro de référence dans le paramètre *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, les variables des paramètres sont inchangées.
 
@@ -27,16 +27,16 @@ Les coordonnées retournées sont exprimées relativement au coin supérieur gau
 
 **Note :** Sous Windows, si vous passez -1 dans *fenêtre*, **GET WINDOW RECT** retourne les coordonnées de la fenêtre d'application (fenêtre MDI) relativement à l'écran. Dans ce cas en mode SDI, **GET WINDOW RECT** retourne les coordonnées (0;0;0;0). 
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

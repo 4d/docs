@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM GET XML CHILD NODES.Summary-->O comando DOM GET XML CHILD NODES retorna os tipos e referências ou valores de todos os nodos filhos do elemento XML designado por *refElement*.<!-- END REF-->  
 
@@ -35,7 +35,7 @@ Para maior informação, consulte a descrição do comando [DOM Append XML child
   
 O array *arrRefsNodos* recebe os valores ou as referências dos elementos em função de sua natureza (conteúdos ou instruções).
 
-#### Exemplo 
+## Exemplo 
 
 Dada a seguinte estrutura XML:  
 
@@ -59,12 +59,12 @@ Depois da execução destas instruções:
 | $typeArr{4}=11 | $textArr{4} = "AEF1237897734568" (element reference <Br/>) |
 | $typeArr{5}=6  | $textArr{5} = "York"                                       |
 
-#### Ver também 
+## Ver também 
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

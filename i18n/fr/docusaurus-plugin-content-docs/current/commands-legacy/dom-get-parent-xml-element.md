@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get parent XML element.Summary-->La commande **DOM Get parent XML element** retourne une référence XML vers le “parent” de l’élément XML passé en référence dans *refElément*.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d’analyse XML.
 
@@ -25,17 +25,17 @@ Les paramètres *nomElémentPar* et *valeurElémentPar*, s’ils sont passés, r
 Si vous utilisez cette commande en passant un élément racine dans *refElément*, la commande retourne la référence "#document". Le noeud document est le parent d'un élément racine.   
 Si vous utilisez cette commande sur un noeud document, la commande retourne une référence nulle ("0000000000000000") et la variable OK prend la valeur 0\. 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 [DOM Get last child XML element](dom-get-last-child-xml-element.md)  
 [DOM Get root XML element](dom-get-root-xml-element.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

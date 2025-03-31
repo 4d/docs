@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->The QR INSERT COLUMN command inserts or creates a column at the specified position.<!-- END REF--> Columns located to the right of that position will be shifted accordingly.
 
@@ -27,7 +27,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 
 **Note:** This command cannot be used with a cross-table report.
 
-#### Example 
+## Example 
 
 The following statement inserts (or creates) a first column in a Quick Report area, inserts “Field1” as column title (default behavior) and populates the contents of the body with values from Field1.
 
@@ -35,11 +35,11 @@ The following statement inserts (or creates) a first column in a Quick Report ar
  QR INSERT COLUMN(MyArea;1;->[Table 1]Field1)
 ```
 
-#### See also 
+## See also 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

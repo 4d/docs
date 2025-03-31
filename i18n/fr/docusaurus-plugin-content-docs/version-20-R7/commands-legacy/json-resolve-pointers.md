@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Resolve pointers.Summary-->La commande **JSON Resolve pointers** résout tous les pointeurs JSON présents dans *objet*, en tenant compte des *options* définies (s'il y en a).<!-- END REF-->
 
@@ -55,7 +55,7 @@ Dans tous les cas, la commande retourne un objet contenant les propriétés suiv
 | errors\[\].referredPath | Chaîne             | Chemin complet de document                                                                                       |
 
   
-#### Définition des pointeurs JSON 
+## Définition des pointeurs JSON 
 
 *JSON Pointer* est un standard qui définit une syntaxe de chaîne qui peut être utilisée pour accéder à un champ ou une valeur de clé particulière dans la totalité du document JSON. Ce standard a été décrit dans la [RFC 6901](https://tools.ietf.org/html/rfc6901). 
 
@@ -69,7 +69,7 @@ Un pointeur JSON est, à proprement parler, une chaîne composée de parties sé
 
 **Note :** 4D ne prend pas en charge le caractère "-" en tant que référence d'éléments de tableau non existants. 
 
-##### Récursivité et résolution des chemins 
+### Récursivité et résolution des chemins 
 
 Les pointeurs JSON sont résolus récursivement, ce qui signifie que si un pointeur résolu contient lui-même des pointeurs, ils sont résolus et ainsi de suite jusqu'à ce que tous les pointeurs soient résolus. Dans ce contexte, tous les chemins de fichiers situés dans les URIs des pointeurs JSON peuvent être relatifs ou absolus. Ils doivent utiliser le "/" en tant que délimiteur de chemin et sont résolus selon les principes suivants :
 
@@ -81,7 +81,7 @@ Les pointeurs JSON sont résolus récursivement, ce qui signifie que si un point
 * La résolution de nom tient compte des majuscules/minuscules.
 * 4D ne résout pas les chemins vers des fichiers JSON situés sur le réseau (débutant par "http/https").
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple basique illustre comment un pointeur JSON peut être défini et remplacé dans un objet :
 
@@ -109,7 +109,7 @@ Cet exemple basique illustre comment un pointeur JSON peut être défini et remp
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez réutiliser l'adresse "billingAddress" comme adresse "shippingAddress" dans l'objet JSON suivant (nommé $oMyConfig):
 
@@ -154,7 +154,7 @@ Après l'exécution de ce code :
 }
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple illustre l'effet de l'option "merge". Vous souhaitez modifier les droits d'un utilisateur, basés sur un fichier par défaut.
 
@@ -228,11 +228,11 @@ Si vous exécutez :
 }
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

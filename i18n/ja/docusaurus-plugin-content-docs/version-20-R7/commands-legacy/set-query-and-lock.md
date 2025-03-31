@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET QUERY AND LOCK.Summary-->**SET QUERY AND LOCK** コマンドを使用して、カレントのトランザクション中でこのコマンドに引き続き呼び出されるすべてのクエリで見つかったレコードを自動的にロックできます。<!-- END REF-->つまりクエリを行ってから結果を処理するまで、他のプロセスはレコードを変更できなくなることを意味します。
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 これに対して**SET QUERY AND LOCK** は、[ALL RECORDS](all-records.md) や[RELATE MANY](relate-many.md) 等、テーブルのカレントセレクションを変更する他のコマンドには影響を与えません。
 
-#### 例題 
+## 例題 
 
 この例題では、CategoryがCに属する顧客は、[QUERY](query.md "QUERY")と[DELETE SELECTION](delete-selection.md "DELETE SELECTION")の間で、他のプロセスから変更や削除はできません。:
 
@@ -62,15 +62,15 @@ displayed_sidebar: docs
  VALIDATE TRANSACTION
 ```
 
-#### エラー管理 
+## エラー管理 
 
 コマンドがトランザクションのコンテキスト中で呼び出されなかった場合、エラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [QUERY](query.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

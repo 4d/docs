@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->La commande **SET PRINT MARKER** permet de définir la position d’un taquet au moment de l’impression.<!-- END REF--> Combinée aux commandes [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) ou [Print form](../commands/print-form.md), cette commande permet d’ajuster la taille des zones d’impression. 
 
@@ -66,7 +66,7 @@ Lorsque le paramètre \* est utilisé, il est donc possible de positionner le ma
 * Cette commande modifie la position des taquets existants uniquement. Elle ne permet pas d’ajouter des taquets. Si vous désignez un taquet qui n’existe pas dans le formulaire, la commande ne fait rien.
 * Le fonctionnement des taquets d’impression en mode Développement est conservé : un taquet ne peut pas aller plus haut que celui qui le précède ni plus bas que celui qui le suit (lorsque le paramètre \* n’est pas utilisé).
 
-#### Exemple 
+## Exemple 
 
 Cet exemple complet permet de générer l’impression d’un état sur trois colonnes, la hauteur de chaque ligne étant calculée à la volée en fonction du contenu des champs.   
 Le formulaire de sortie utilisé pour l’impression est le suivant :
@@ -170,7 +170,7 @@ La méthode du formulaire Print\_List3 est la suivante :
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get print marker](get-print-marker.md)  
 [OBJECT GET BEST SIZE](object-get-best-size.md)  
@@ -181,7 +181,7 @@ La méthode du formulaire Print\_List3 est la suivante :
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

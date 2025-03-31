@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB Validate digest.Summary-->The **WEB Validate digest** command checks the validity of the identifying information (name and password) provided by a user connecting to the Web server.<!-- END REF--> This command must be used in the *On Web Authentication Database Method* in the context of Web authentication in Digest mode (see the *Connection Security* section). 
 
@@ -27,7 +27,7 @@ You can use this mechanism to manage and maintain your own secure access system 
 
 **Note:** If the browser does not support Digest authentication, an error is returned (authentication error).
 
-#### Example 
+## Example 
 
 Example using *On Web Authentication Database Method* in Digest mode:
 
@@ -52,12 +52,12 @@ Example using *On Web Authentication Database Method* in Digest mode:
  End if
 ```
 
-#### See also 
+## See also 
 
 [Generate digest](generate-digest.md)  
 [Validate password](validate-password.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

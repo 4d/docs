@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get style sheet.Summary-->O comando **WP Get style sheet** devolve o objeto de folha de estilo designado por *nomeFolhaEstilo*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Em *wpDoc*, passe o documento 4D Write Pro que contém a folha de estilo.
 
 O parâmetro *nomeFolhaEstilo* lhe permite especificar o nome da folha de estilo a devolver. Se o nome da folha de estilo não existir em *wpDoc*, um objeto nulo é devolvido.
 
-#### Exemplo 
+## Exemplo 
 
 Para recuperar a folha de estilo "Main title":
 
@@ -36,7 +36,7 @@ Para recuperar a folha de estilo "Main title":
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 *Accessar texto e atributos de imagem por programação*  
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  

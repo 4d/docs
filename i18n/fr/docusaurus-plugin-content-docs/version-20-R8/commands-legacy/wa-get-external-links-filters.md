@@ -16,18 +16,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Summary-->La commande **WA GET EXTERNAL LINKS FILTERS** retourne dans les tableaux *tabFiltres* et *tabAutorisRefus* les filtres de liens externes de la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Si aucun filtre n’est actif, les tableaux sont retournés vides. 
 
 Les filtres sont installés par la commande [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md). Si les tableaux ont été réinitialisés au cours de la session, la commande **WA GET EXTERNAL LINKS FILTERS** vous permet de connaître le paramétrage courant.
 
-#### Voir aussi 
+## Voir aussi 
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

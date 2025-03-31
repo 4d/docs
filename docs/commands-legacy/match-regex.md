@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Match regex.Summary-->The **Match regex** command checks the conformity of a character string with respect to a set of synthesized rules by means of a meta-language called “regular expression” or “rational expression.<!-- END REF-->” The regex abbreviation is commonly used to indicate these types of notations.
 
@@ -47,7 +47,7 @@ For more information about regex, refer to the following address:
 For more information about the syntax of the regular expression passed in the *pattern* parameter, refer to the following address:  
 *https://unicode-org.github.io/icu/userguide/strings/regexp.html#regular-expressions*
 
-#### Example 1 
+## Example 1 
 
 Search for complete equality (simple syntax):  
 *vfound:=Match regex(pattern;mytext)*  
@@ -56,7 +56,7 @@ Search for complete equality (simple syntax):
  QUERY BY FORMULA([Employees];Match regex(".*smith.*";[Employees]name))
 ```
 
-#### Example 2 
+## Example 2 
 
 Search in text by position:  
 *vfound:=Match regex( pattern;mytext; start; pos\_found; length\_found)*  
@@ -73,7 +73,7 @@ Example to display all the $1 tags:
  Until(Not(vfound))
 ```
 
-#### Example 3 
+## Example 3 
 
 Search with support of “capture groups” via parentheses. ( ) are used to specify groups in the regexes:  
 *vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_array)*  
@@ -88,7 +88,7 @@ Search with support of “capture groups” via parentheses. ( ) are used to spe
  End if
 ```
 
-#### Example 4 
+## Example 4 
 
 Search limiting the comparison of the pattern to the position indicated:  
 Add a star to the end of one of the two previous syntaxes. 
@@ -104,12 +104,12 @@ Add a star to the end of one of the two previous syntaxes.
 
 **Note:** The positions and lengths returned are only meaningful in Unicode mode or if the text being worked with is of the 7-bit ASCII type.
 
-#### Error management 
+## Error management 
 
 In the event of an error, the command generates an error that you can intercept via a method installed by the [ON ERR CALL](on-err-call.md) command.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

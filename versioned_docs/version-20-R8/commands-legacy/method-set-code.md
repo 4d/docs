@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->The **METHOD SET CODE** command modifies the code of the method(s) designated by the *path* parameter with the contents passed in the *code* parameter.<!-- END REF--> 
 
@@ -62,7 +62,7 @@ Concerning the "folder" property of the metadata:
 
 You can execute this command from a component, but in this case, you must pass the *\** parameter because access to the component code is read-only. If you omit the *\** parameter in this context, the error -9763 is generated.
 
-#### Example 
+## Example 
 
 This example exports and imports all the project methods of an application:
 
@@ -94,11 +94,11 @@ This example exports and imports all the project methods of an application:
  SHOW ON DISK($root_t)
 ```
 
-#### See also 
+## See also 
 
 [METHOD GET CODE](method-get-code.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

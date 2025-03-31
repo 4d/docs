@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BLOB TO PICTURE.Summary-->El comando BLOB TO PICTURE inserta una imagen almacenada en un BLOB en un campo o variable imagen 4D, sin importar su formato original.<!-- END REF-->
 
@@ -42,17 +42,17 @@ La implementación de estos mecanismos permite, más específicamente, la creaci
 
 **Nota**: un BLOB creado por el comando [VARIABLE TO BLOB](variable-to-blob.md) se administra automáticamente; no es necesario pasar un codec para encapsularlo ya que el BLOB está "firmado". En este caso, para la operación contraria, deberá pasar ".4DVarBlog" como identificador de codec al comando [PICTURE TO BLOB](picture-to-blob.md). 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. Si la conversión ha fallado (QuickTime no está instalado, el BLOB no contiene una imagen legible, parámetro codec reconocido pero no validado por el BLOB , etc.), OK toma el valor 0 y el campo o variable imagen 4D se devuelve vacío.
 
-#### Ver también 
+## Ver también 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

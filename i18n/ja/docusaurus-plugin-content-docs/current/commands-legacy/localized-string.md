@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Localized string.Summary-->Localized stringコマンドは、*resName*の属性によって指定された、カレントランゲージの文字列を返します。<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 Note: XLIFFは大文字小文字を区別します。
 
-#### 例題 
+## 例題 
 
 以下は.xlfファイルの一部です:
 
@@ -48,15 +48,15 @@ Note: XLIFFは大文字小文字を区別します。
   
 ...カレントランゲージが日本語の場合、$JAvalueには、“ディスク上に表示”が返されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとOK変数に1が設定されます。*resName*が見つからない場合、コマンドは空の文字列を返しOK変数に0が設定されます。
 
-#### 参照 
+## 参照 
 
 [Get database localization](get-database-localization.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

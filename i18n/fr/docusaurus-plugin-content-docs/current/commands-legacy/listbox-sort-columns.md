@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->La commande **LISTBOX SORT COLUMNS** permet de trier (réordonner) toutes les lignes de la list box définie dans les paramètres *objet* et *\** sur la base des valeurs d’une ou plusieurs colonne(s).<!-- END REF-->
 
@@ -33,7 +33,7 @@ Conformément au principe de fonctionnement des list box, les colonnes sont sync
 **Note** : La commande **LISTBOX SORT COLUMNS** ne tient pas compte de la propriété *Sortable* de la listbox.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

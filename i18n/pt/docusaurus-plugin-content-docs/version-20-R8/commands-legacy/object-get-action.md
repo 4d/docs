@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT Get action.Summary-->O comando **OBJECT Get action** devolve o nome e (se for o caso) o parâmetro da ação padrão associada com o objeto designado pelos parâmetros *objeto e* *\**.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Pode estabelecer uma ação padrão para um objeto no Editor de formulários uti
 
 Para obter uma lista completa de ações padrão, consulte a seção *Ações padrões* no manual de *Desenho*. 
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser associar a ação "Cancelar" com todos os objetos no formulário que ainda não têm nenhuma ação associada:
 
@@ -40,11 +40,11 @@ Se quiser associar a ação "Cancelar" com todos os objetos no formulário que a
  End for
 ```
 
-#### Ver também 
+## Ver também 
 
 [OBJECT SET ACTION](object-set-action.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

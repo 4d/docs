@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.MOUSE POSITION.Summary-->O comando MOUSE POSITION retorna o estado atual do mouse.<!-- END REF-->  
 
@@ -27,11 +27,11 @@ O parâmetro *botaoMouse* retorna o estado dos botões, como foi descrito anteri
   
 **Nota**: os valores 2 e 3 podem ser retornados em macOS a partir da versão 10.2.5 apenas.
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo do comando [Pop up menu](pop-up-menu.md).
 
-#### Ver também 
+## Ver também 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -42,7 +42,7 @@ Ver o exemplo do comando [Pop up menu](pop-up-menu.md).
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

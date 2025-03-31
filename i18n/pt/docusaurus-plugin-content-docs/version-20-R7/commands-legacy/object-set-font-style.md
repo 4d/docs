@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET FONT STYLE.Summary-->OBJECT SET FONT STYLE atribui o estilo de fonte de *estilos* aos objetos de formulário especificados por *objeto*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Em estilos se passa uma das constantes predefinidas que define a seleção de es
 | Italic    | Inteiro longo | 2     |
 | Underline | Inteiro longo | 4     |
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo define o estilo de fonte para um botão chamado *bAdicionarNovo*. O estilo de fonte definido é negrito itálico: 
 
@@ -38,7 +38,7 @@ Este exemplo define o estilo de fonte para um botão chamado *bAdicionarNovo*. O
  OBJECT SET FONT STYLE(bAdicionarNovo;Bold+Italic)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo define o estilo de fonte Plain para todos os objetos de formulário que começam por “vt”: 
 
@@ -46,7 +46,7 @@ Este exemplo define o estilo de fonte Plain para todos os objetos de formulário
  OBJECT SET FONT STYLE(*;"vt@";Plain)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Interação de comandos genéricos com textos multi estilos*  
 [OBJECT Get font style](object-get-font-style.md)  
@@ -54,7 +54,7 @@ Este exemplo define o estilo de fonte Plain para todos os objetos de formulário
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

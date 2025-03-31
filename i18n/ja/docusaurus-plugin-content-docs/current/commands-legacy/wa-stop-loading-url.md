@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA STOP LOADING URL.Summary-->WA STOP LOADING URL コマンドは、*\** と *object* 引数で指定したWebエリアの現在のURL のリソース読み込みを停止します。<!-- END REF-->
 
-#### 参照 
+## 参照 
 
 [WA REFRESH CURRENT URL](wa-refresh-current-url.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

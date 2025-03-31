@@ -16,18 +16,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA GET URL FILTERS.Summary-->The **WA GET URL FILTERS** command returns, in the *filtersArr* and *allowDenyArr* arrays, the filters that are active in the Web area designated by the *\** and *object* parameters.<!-- END REF--> If no filter is active, the arrays are returned empty. 
 
 The filters are installed by the [WA SET URL FILTERS](wa-set-url-filters.md) command. If the arrays are reinitialized during the session, the **WA GET URL FILTERS** command can be used to find out the current settings
 
-#### See also 
+## See also 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

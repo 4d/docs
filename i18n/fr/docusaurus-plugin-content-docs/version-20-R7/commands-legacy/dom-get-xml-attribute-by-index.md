@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Summary-->La commande **DOM GET XML ATTRIBUTE BY INDEX** permet de connaître le nom ainsi que la valeur d’un attribut désigné par son numéro d’indice.<!-- END REF-->
 
@@ -26,20 +26,20 @@ Passez dans *refElément* la référence d’un élément XML et dans *indexAttr
 
 Si la valeur passée dans *indexAttribut* est supérieure au nombre d’attributs présents dans l’élément XML, une erreur est retournée.
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l’exemple de la commande [DOM Count XML attributes](dom-count-xml-attributes.md). 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

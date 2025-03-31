@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get 4D folder.Summary-->**Get 4D folder**コマンドは、カレントアプリケーションのアクティブな4Dフォルダー、または*folder* 引数と*options* 引数で指定された4D環境フォルダーへのパス名を返します。<!-- END REF-->このコマンドを使用して、4Dアプリケーションで使用されるフォルダーの実際のパス名を取得できます。このコマンドを使用すれば、記述したコードがローカライズされたどのシステムのプラットフォームでも動作することが保障されます。
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 **注意:** **Get 4D folder** コマンドがリモート4D から呼び出された場合、返されるパスはリモートマシンのパスであり、4D Server のパスではありません。
 
-##### Active 4D Folder 
+### Active 4D Folder 
 
 4D環境は、以下の情報を保存するために特定のフォルダーを使用します:
 
@@ -55,17 +55,17 @@ displayed_sidebar: docs
 * macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
 
 
-##### Licenses Folder 
+### Licenses Folder 
 
 マシンのライセンスファイルを含むフォルダーです。
 
 **注意:** 4D Volume Desktopとマージされたアプリケーションの場合、Licensesフォルダーはアプリケーションのパッケージに含まれます。
 
-##### Data Folder 
+### Data Folder 
 
 カレントのデータファイルを含んでいるフォルダへのパスです。パス名はカレントのプラットフォームでの標準のシンタックスを使用して表現されます。
 
-##### 4D Client Database Folder(クライアントマシン) 
+### 4D Client Database Folder(クライアントマシン) 
 
 データベースに関連したファイルやフォルダ(リソース、プラグイン、Resources フォルダ等)を保存するために4D リモートのマシンに自動的に作成された4D フォルダのパスです。コマンドは以下のどちらかを返します:
 
@@ -100,16 +100,16 @@ displayed_sidebar: docs
 
 **注意:** 返されるパスは、コマンドを実行しているマシンのシステムシンタックスを使用して表現されます。
 
-##### Database Folder 
+### Database Folder 
 
 データベースストラクチャファイルを含むフォルダーです。 パス名は、現在のプラットホームの標準のシンタックスを使用して表現されます。  
 4Dクライアントアプリケーションの場合、この定数は前述の4D Client Database Folder定数とまったく同じです。 コマンドはローカルに作成されたフォルダーのパス名を返します。
 
-##### Database Folder Unix Syntax 
+### Database Folder Unix Syntax 
 
 データベースストラクチャファイルを含むフォルダーです。 この定数は前述のフォルダーと同じものですが、パス名は/Users/...のようなUNIXシンタックス (POSIX) で表現されます。このシンタックスは主に、Mac OSで [LAUNCH EXTERNAL PROCESS](launch-external-process.md) コマンドを使用する場合に使用されます。
 
-##### Current Resources folder 
+### Current Resources folder 
 
 データベースのリソースフォルダー。このフォルダーにはデータベースのインタフェースで使用される、ピクチャーやテキストなどの追加の項目が置かれます。コンポーネントはそれぞれ独自のResourcesフォルダーを持つことができます。
 
@@ -120,7 +120,7 @@ displayed_sidebar: docs
 * データベースに対してフォルダが存在しない場合、Current resources folder 定数とGet 4D folder コマンドを使用することでこのフォルダが作成されます。
 * Windows 上では、組み込みクライアントプロジェクトにおいてはこのフォルダの位置は、*ShareLocalResourcesOnWindowsClient* BuildApp キーを使用していた場合、変更されます。
 
-##### Logs folder 
+### Logs folder 
 
 データベースのLogsフォルダーで、データファイルと同じ階層にあります。カレントデータベースの次のログがこのフォルダーに格納されます:
 
@@ -135,19 +135,19 @@ displayed_sidebar: docs
 * system user preferences フォルダー (Active 4D Folder) にも追加の Logs フォルダーがあり、圧縮・検証・修復などのメンテナンスログファイルを保存します。これらのログファイルにアクセスするには、コマンド [Get 4D file](get-4d-file.md)(Compacting log file) を使うことが推奨されます。通常の Logs フォルダーに書き込みできない場合にも、このLogs フォルダーが使用されます。
 * データベースにLogsフォルダーが存在しない場合、**Get 4D folder**コマンドにLogs folder定数を渡して実行すると、フォルダーが適切な場所に作成されます。
 
-##### HTML Root Folder 
+### HTML Root Folder 
 
 データベースのカレントの HTML ルートフォルダ。返されるパス名は、プラットフォームの標準シンタックスで表現されます。HTMLルートフォルダーは、リクエストされたページやファイルを4D Webサーバが探すフォルダーです。デフォルトで、このフォルダーの名前は**WebFolder**で、ストラクチャーファイルと同階層 (またはリモートモードの4Dの場合、そのローカルコピー) に置かれます。この場所はデータベース設定のWeb/設定ページ、または[WEB SET ROOT FOLDER](web-set-root-folder.md) コマンドで動的に変更できます。
 
 **注:** Windows上では、組み込みクライアントプロジェクトにおいてはこのフォルダの位置は、*ShareLocalResourcesOnWindowsClient* BuildApp キーを使用していた場合、変更されます。
 
-##### MobileApps Folder 
+### MobileApps Folder 
 
 モバイルアプリユーザーセッション(4D for iOS アプリまたは4D for Android のためのセッション)を参照するために4D アプリケーションによって使用される、全ての既存のセッションファイル(.json ファイル)を格納しているフォルダ。セッションファイルはアプリケーションサブフォルダごとにグループ分けされており、自動的に作成されます。詳細な情報については、 [go mobile ドキュメンテーション](https://developer.4d.com/go-mobile/) のドキュメントを参照してください。
 
 フォルダはカレントの4D データファイルと同じ階層に位置しています。
 
-##### 
+### 
 
 任意の *\** 引数は、コンポーネントを使用しているアーキテクチャーの場合には有用です。これを使用することで、フォルダのパス名を取得したいデータベースがどちらか(ホストまたはコンポーネント)を指定することができます。この引数はDatabase folder、Database folder UNIX syntax および Current resources folder フォルダに対してのみ有効です。それ以外の場合には全て無視されます。
 
@@ -161,7 +161,7 @@ displayed_sidebar: docs
    * エイリアスまたはショートカットの場合には、オリジナルのマトリックスデータベースを格納しているフォルダへのパス名を返します。返される結果は上記に説明されているように、このデータベースのフォーマット(.4dbase フォルダ/パーッケーじまたは .4db/.4dc ファイル)によって変わります。  
  コマンドがホストデータベースから呼び出されている場合、 *\** 引数の有無に関わらず、常にホストデータベースのパス名を返します。
 
-#### 例題 1 
+## 例題 1 
 
 シングルユーザの4Dで、起動時に、4Dフォルダにある設定ファイルを読み込み (または作成) したいとします。これを行うために、[On Startupデータベースメソッド](on-startup-database-method.md), に以下のように記述できます:
 
@@ -181,7 +181,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、Mac OS上でDatabase Folder Unix Syntax定数を使用し、データベースフォルダの内容を取り出します: 
 
@@ -196,11 +196,11 @@ displayed_sidebar: docs
 
 **Note:** Mac OSでは、スペースがファイルやフォルダ名に含まれる場合、パス名をクォートで括らなければなりません。文字列にクォートを挿入するために、エスケープ文字"\\"を使用できます。あるいはChar(Double quote)を使用することもできます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 *folder* 引数が無効または返されたパス名が空の場合、OKシステム変数は0に設定されます。
 
-#### 参照 
+## 参照 
 
 [COMPONENT LIST](component-list.md)  
 [System folder](system-folder.md)  
@@ -208,7 +208,7 @@ displayed_sidebar: docs
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

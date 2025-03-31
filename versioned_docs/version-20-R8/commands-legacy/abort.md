@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ABORT.Summary-->The **ABORT** command is used from within an error-handling project method installed using the command [ON ERR CALL](on-err-call.md).<!-- END REF--> 
 
@@ -28,15 +28,15 @@ If you use an error-handling project method to catch errors, 4D neither displays
 
 There are errors you can treat programmatically; for example, during an import operation, if you catch a database engine duplicated value error, you can “cover” the error and pursue the import. However, there are errors that you cannot process and errors that you should not “cover.” In these cases, you need to stop the execution by calling **ABORT** from within the error-handling project method.
 
-#### Historical Note 
+## Historical Note 
 
 Although the **ABORT** command is intended to be used only from within a error-handling project method, some members of the 4D community also use it to interrupt execution in other project methods. The fact that it works is only a side effect. We do not recommend the use of this command in methods other than error-handling methods.
 
-#### See also 
+## See also 
 
 [ON ERR CALL](on-err-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

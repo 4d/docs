@@ -21,9 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QR GET INFO COLUMN.Summary-->##### Etats en liste 
+<!--REF #_command_.QR GET INFO COLUMN.Summary-->### Etats en liste 
 
 La commande **QR GET INFO COLUMN** vous permet de récupérer les paramètres d'une colonne existante de l'état présent dans la *zone*.<!-- END REF--> 
 
@@ -51,7 +51,7 @@ Le paramètre *format* retourne le format d'affichage de la colonne. Vous pouvez
 
 Le paramètre optionnel *varRésultat*, lorsqu'il est passé, retourne le nom de la variable automatiquement affectée par l'éditeur d'états rapides à la colonne de formule (le cas échéant) : "C1" pour la première colonne de formule, "C2" pour la seconde, et ainsi de suite. 4D utilise cette variable pour stocker les résultats de la dernière exécution de la formule de colonne lors de la génération de l'état. 
 
-##### Etats tableaux croisés 
+### Etats tableaux croisés 
 
 Avec ce type d'état, la commande **QR GET INFO COLUMN** permet de récupérer globalement les mêmes paramètres que ceux décrits dans le paragraphe ci-dessus, toutefois les zones auxquelles ils s'appliquent sont différentes et varient en fonction du paramètre à lire.   
 En outre, les paramètres *titre*, *cachée* et *valeursRépétées* ne sont pas utilisés lorsque vous travaillez avec des états tableaux croisés, les valeurs retournées dans ces paramètres ne sont donc pas significatives.   
@@ -77,7 +77,7 @@ Dans ce cas, la numérotation des colonnes s'effectue de la manière suivante :
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 
-#### Exemple 
+## Exemple 
 
 Vous avez construit l'état suivant :
 
@@ -99,13 +99,13 @@ Vous pouvez écrire :
   //$vResultVar = "C1"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

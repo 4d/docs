@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Insert XML element.Summary-->The DOM Insert XML element command can be used to insert a new XML element among the child elements of the XML element whose reference is passed in the *targetElementRef* parameter.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ The *childIndex* parameter can be used to designate the child of the parent elem
 
 The command returns the reference of the XML element obtained.
 
-#### Example 
+## Example 
 
 In the following structure, we would like to invert the first and second book:
 
@@ -71,11 +71,11 @@ To do this, simply execute the following code:
  End if
 ```
 
-#### See also 
+## See also 
 
 [DOM Append XML element](dom-append-xml-element.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

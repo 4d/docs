@@ -15,7 +15,7 @@ title: VP Get sheet index
 | name       | Text    | ->                          | Nom de la feuille                       |                  |
 | Résultat   | Integer | <- | Numéro d'indice de la feuille           | <!-- END REF --> |
 
-#### Description
+## Description
 
 La commande `VP Get sheet index` <!-- REF #_method_.VP Get sheet index.Summary -->retourne l'index d'une feuille basé sur son nom dans *vpAreaName*.<!-- END REF -->
 
@@ -25,7 +25,7 @@ Dans *name*, passez le nom de la feuille dont l'index sera retourné. Si aucune 
 
 > La numérotation démarre à 0.
 
-#### Exemple
+## Exemple
 
 Dans le document suivant :
 
@@ -37,7 +37,7 @@ Lire l'index de la feuille appelée "Total premier trimester" :
 $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //retourne 2
 ```
 
-#### Voir également
+## Voir également
 
 [VP Get sheet count](vp-get-sheet-count.md)<br/>
 [VP Get sheet name](vp-get-sheet-name.md)

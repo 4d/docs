@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Localized string.Summary-->La commande **Localized string** retourne la valeur de la chaîne désignée par l’attribut *resName* pour la langue courante.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ Passez dans *resName* le nom de ressource de la chaîne dont vous voulez obtenir
 
 A noter que le XLIFF est diacritique.
 
-#### Exemple 
+## Exemple 
 
 Voici un extrait de fichier .xlf :
 
@@ -47,15 +47,15 @@ Après exécution de l’instruction suivante :
 
 ... si la langue courante est le français, $valeurFR contient “Montrer sur le disque”.
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable OK prend la valeur 1\. Si *resName* n’est pas trouvé, la commande retourne une chaîne vide et la variable OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get database localization](get-database-localization.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

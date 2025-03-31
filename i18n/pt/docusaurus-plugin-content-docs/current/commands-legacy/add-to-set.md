@@ -14,15 +14,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ADD TO SET.Summary-->ADD TO SET adiciona o registro atual de *tabela* a conjunto.<!-- END REF--> O conjunto já deve existir; se não, ocorre um erro. Se não houver um registro atual para *tabela*, ADD TO SET não tem nenhum efeito.  
 
-#### Ver também 
+## Ver também 
 
 [REMOVE FROM SET](remove-from-set.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

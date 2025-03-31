@@ -15,7 +15,7 @@ title: VP SET FORMULA
 |formula |Text|->|Formula or 4D method|
 |formatPattern |Text|->|Format of field|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
@@ -30,13 +30,13 @@ The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) 
 
 You remove the formula in *rangeObj* by replacing it with an empty string ("").
 
-#### Example 1
+## Example 1
 
 ```4d
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
 ```
 
-#### Example 2
+## Example 2
 
 To remove the formula:
 
@@ -44,13 +44,13 @@ To remove the formula:
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"")
 ```
 
-#### Example 3
+## Example 3
 
 ```4d
 VP SET FORMULA($range;"SUM(A1,B7,C11)") //"," to separate parameters
 ```
 
-#### See also
+## See also
 
 [Cell format](../configuring.md#cell-format)<br/>
 [VP Get Formula](vp-get-formula.md)<br/>

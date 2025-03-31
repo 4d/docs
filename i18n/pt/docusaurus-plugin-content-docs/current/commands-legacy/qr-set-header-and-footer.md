@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->O comando QR SET HEADER AND FOOTER permite definir o conteúdo e o tamanho do cabeçalho e o rodapé de *area*.<!-- END REF-->  
   
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *seletor* for incorreto, se gera o erro -9852.
 
-#### Exemplo 
+## Exemplo 
 
 A seguiete instrução coloca o título “Título do centro” no cabeçalho do relatório rápido em MinhaArea e define a altura do cabeçalho em 200 pontos:
 
@@ -52,11 +52,11 @@ A seguiete instrução coloca o título “Título do centro” no cabeçalho do
  QR SET HEADER AND FOOTER(MinhaArea;1;"";"Título do centro";"";200)
 ```
 
-#### Ver também 
+## Ver também 
 
 [QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

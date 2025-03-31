@@ -16,21 +16,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.XML GET ERROR.Summary-->O comando XML GET ERROR retorna no parâmetro *textoErro* a descrição do erro encontrado durante o processo do elemento XML designado pelo parâmetro *refElement*.<!-- END REF--> A informação retornada é fornecida pela biblioteca Xerces.DLL.  
 
 Os parâmetros opcionais *linha* e *coluna* indicam a localização do erro: eles recuperam respectivamente o número de linha e, nesta linha, a posição do primeiro caráctere da expressão na origem do erro.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente, a variável sistema OK assume o valor 1\. Se ocorrer um erro, assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [DOM Get XML information](dom-get-xml-information.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

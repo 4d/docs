@@ -685,7 +685,7 @@ title: Índice
 [`New collection`](new-collection.md)<br/>
 [`New data key`](../commands-legacy/new-data-key.md)<br/>
 [`New list`](../commands-legacy/new-list.md)<br/>
-[`New log file`](../commands-legacy/new-log-file.md)<br/>
+[`New log file`](new-log-file.md)<br/>
 [`New object`](../commands-legacy/new-object.md)<br/>
 [`New process`](../commands-legacy/new-process.md)<br/>
 [`New shared collection`](new-shared-collection.md)<br/>
@@ -1045,8 +1045,8 @@ title: Índice
 [`Select folder`](../commands-legacy/select-folder.md)<br/>
 [`SELECT LIST ITEMS BY POSITION`](../commands-legacy/select-list-items-by-position.md)<br/>
 [`SELECT LIST ITEMS BY REFERENCE`](../commands-legacy/select-list-items-by-reference.md)<br/>
-[`SELECT LOG FILE`](../commands-legacy/select-log-file.md)<br/>
-[`Select RGB color`](../commands-legacy/select-rgb-color.md)<br/>
+[`SELECT LOG FILE`](select-log-file.md)<br/>
+[`Select RGB Color`](../commands-legacy/select-rgb-color.md)<br/>
 [`Selected list items`](../commands-legacy/selected-list-items.md)<br/>
 [`Selected record number`](../commands-legacy/selected-record-number.md)<br/>
 [`SELECTION RANGE TO ARRAY`](../commands-legacy/selection-range-to-array.md)<br/>
@@ -1278,6 +1278,7 @@ title: Índice
 [`WA Evaluate JavaScript`](../commands-legacy/wa-evaluate-javascript.md)<br/>
 [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md)<br/>
 [`WA Forward URL available`](../commands-legacy/wa-forward-url-available.md)<br/>
+[`WA Get context`](../commands/wa-get-context.md) **new 4D 20 R9**<br/>
 [`WA Get current URL`](../commands-legacy/wa-get-current-url.md)<br/>
 [`WA GET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-get-external-links-filters.md)<br/>
 [`WA Get last filtered URL`](../commands-legacy/wa-get-last-filtered-url.md)<br/>
@@ -1293,6 +1294,7 @@ title: Índice
 [`WA OPEN WEB INSPECTOR`](../commands-legacy/wa-open-web-inspector.md)<br/>
 [`WA REFRESH CURRENT URL`](../commands-legacy/wa-refresh-current-url.md)<br/>
 [`WA Run offscreen area`](../commands-legacy/wa-run-offscreen-area.md)<br/>
+[`WA SET CONTEXT`](../commands/wa-set-context.md)  **new 4D 20 R9**<br/>
 [`WA SET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-set-external-links-filters.md)<br/>
 [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md)<br/>
 [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)<br/>

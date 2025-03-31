@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.USE NAMED SELECTION.Summary-->**USE NAMED SELECTION** uses the named selection *name* as the current selection for the table to which it belongs.<!-- END REF-->
 
@@ -24,13 +24,13 @@ When you create a named selection, the current record is “remembered” by the
 
 Remember that a named selection is a representation of a selection of records at the moment that the named selection is created. If the records represented by the named selection change, the named selection may no longer be accurate. Therefore, a named selection represents a group of records that does not change frequently. A number of things can invalidate a named selection: modifying a record of the named selection, deleting a record of the named selection, or changing the criterion that determined the named selection.
 
-#### See also 
+## See also 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

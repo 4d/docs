@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX ADD XML DOCTYPE.Summary-->The SAX ADD XML DOCTYPE command adds a DocType statement set by the *docType* parameter in the XML document referenced by *document*.<!-- END REF--> 
 
 The DocType statement lets you indicate the type of XML in which the document has been written and to specify the Document Type Declaration (DTD) used. A DocType statement generally takes the following form: .
 
-#### Example 
+## Example 
 
 The following statement:
 
@@ -35,19 +35,19 @@ The following statement:
  
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
 
-#### Error management 
+## Error management 
 
 In the event of an error, the the command returns an error which can be intercepted using an error-handling method.
 
-#### See also 
+## See also 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

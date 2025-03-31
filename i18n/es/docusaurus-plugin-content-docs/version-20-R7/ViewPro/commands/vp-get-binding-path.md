@@ -22,7 +22,7 @@ title: VP Get binding path
 | rangeObj   | Object | ->                          | Objeto rango                             |                  |
 | Resultado  | Text   | <- | Nombre del atributo vinculado a la celda | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->devuelve el nombre del atributo ligado a la celda especificada en *rangeObj*<!-- END REF -->.
 
@@ -31,7 +31,7 @@ En *rangeObj*, pase un objeto que es un rango de celdas o un rango combinado de 
 - Si *rangeObj* es un rango de varias celdas, el comando devuelve el nombre del atributo asociado a la primera celda del rango.
 - Si *rangeObj* contiene varios rangos de celdas, el comando devuelve el nombre del atributo asociado a la primera celda del primer rango.
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
 var $p; $options : Object
@@ -49,7 +49,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 ```
 
-#### Ver también
+## Ver también
 
 [VP SET BINDING PATH](vp-set-binding-path.md)<br/>
 [VP Get data context](vp-get-data-context.md)<br/>

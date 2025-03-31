@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidade 
+## Nota de compatibilidade 
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->Esse comando era chamado **CALL PROCESS** em lançamentos 4D anteriores.<!-- END REF--> 
 
-#### Descrição 
+## Descrição 
 
 POST OUTSIDE CALL chama ao formulário mostrado na janela do primeiro plano de *processo*.  
 
@@ -31,17 +31,17 @@ Para se comunicar entre processos que não mostram formulários, utilize os coma
 
 **Dica:** **POST OUTSIDE CALL** aceita a sintaxe alterna **POST OUTSIDE CALL**(-1). Para não tornar lenta a execução dos métodos, 4D não redesenha as variáveis interprocesso cada vez que são modificadas. Se passar -1 ao invés de um número de referência de processo no parâmetro *processo*, 4D não chama nenhum processo. Ao invés disso, redesenha todas as variáveis interprocesso mostradas atualmente em todas as janelas de todos os processos que executam na mesma máquina.
 
-#### Exemplo 
+## Exemplo 
 
 Ver o exemplo de [On Exit Database Method](metodo-banco-de-dados-on-exit.md "On Exit Database Method").
 
-#### Ver também 
+## Ver também 
 
 [Form event code](../commands/form-event-code.md)  
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

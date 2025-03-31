@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->**METHOD GET PATHS**コマンドはアプリケーションのうち、*methodType*引数で指定したタイプであるメソッドの内部的なパス名と名前を*arrPaths*配列に返します。<!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 コマンドが複製されたメソッド名を検知した場合、-9802エラー("オブジェクトパスが固有ではありません")が生成されます。この場合、MSCを使用してデータベースストラクチャーを検証することが望ましいと言えます。
 
-#### 例題 1 
+## 例題 1 
 
 "web"フォルダー内のプロジェクトメソッドを取得する:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
  METHOD GET PATHS("web";Path project method;arrPaths)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 データベースメソッドとトリガーを取得する:
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
  METHOD GET PATHS(Path trigger+Path database method;arrPaths)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 最新のバックアップ以降に更新されたプロジェクトメソッドを取得する:
 
@@ -76,16 +76,16 @@ displayed_sidebar: docs
  SAVE RECORD([Backups])
 ```
 
-#### 例題 4 
+## 例題 4 
 
 [METHOD SET CODE](method-set-code.md)コマンドの例題参照。
 
-#### 参照 
+## 参照 
 
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

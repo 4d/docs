@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Round.Summary-->**Round** retourne la valeur arrondie de *nombre* avec une précision égale à *nbDécimales*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ Si *nbDécimales* est positif, l'arrondi se fait sur la partie décimale de *nom
 
 Si le chiffre placé derrière le nombre de décimales défini par *nbDécimales* est compris entre 5 et 9, *nombre* est arrondi à la valeur supérieure s'il est positif et inférieure s'il est négatif. Si le chiffre placé derrière la dernière décimale est compris entre 0 et 4, la fonction arrondit *nombre* vers zéro.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant illustre la manière dont Arrondi fonctionne dans différents cas. A chaque ligne, une valeur est assignée à la variable *vRésultat*. Les commentaires décrivent le résultat :
 
@@ -34,11 +34,11 @@ L'exemple suivant illustre la manière dont Arrondi fonctionne dans différents 
  vRésultat:=Round(-1,5;0) // vRésultat vaut -2
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Trunc](trunc.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

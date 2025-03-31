@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get text.Summary-->**WP Get text** コマンドは*targetObj* 引数で指定した4D Write Pro ドキュメントのテキストのコンテンツを取得します。<!-- END REF-->
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 * *targetObj* 引数のオブジェクトにピクチャーが含まれる場合、そのピクチャーは無視され、スペース文字(" ")が返されます。
 * *targetObj* 引数のオブジェクトに表が含まれる場合、各セルのコンテンツが個別の段落として扱われ、タブ区切りされたテキストとして返されます。行はキャリッジリターンで分割されます。
 
-#### 例題 
+## 例題 
 
 以下のドキュメント内のテキストを取得したい場合を考えます:
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
  vText3:=WP Get text($range;wk expressions as space) // "Hello world! Today is:  ." を返す
 ```
 
-#### 参照 
+## 参照 
 
 [WP SET TEXT](wp-set-text.md)  
 *フォーミュラの管理*  

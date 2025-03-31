@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Match regex.Summary-->O comando **Match regex** permite provar a conformidade de uma cadeia de caracteres relativo a um conjunto de regras sintetizadas por meio de um metalinguagem chamado “expressão regular” ou “expressão racional.<!-- END REF-->” A abreviação regex é comumente empregada para indicar estes tipos de notações.
 
@@ -47,7 +47,7 @@ Para maior informação sobre regex, consulte o seguinte endereço:
 Para maior informação sobre a sintaxe das expressões regulares passadas no parâmetro *padrao*, consulte o seguinte endereço:  
 *https://unicode-org.github.io/icu/userguide/strings/regexp.html#regular-expressions*
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Pesquisa de igualdade completa: 
 
@@ -56,7 +56,7 @@ Pesquisa de igualdade completa:
  QUERY BY FORMULA([Empregados];Match regex(".*vargas.*";[Empregados]sobrenome))
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Pesquisa no texto por posição: 
 
@@ -77,7 +77,7 @@ Exemplo para mostrar todas as etiquetas de $1:
  Until(Not(vencont))
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Pesquisa compatível com “grupos capturados” através de parênteses. ( ) são utilizadas para especificar grupos nos regex:    
 *vencont:=Match regex(motivo;meutexto; inicio; pos\_encont; compr\_encont\_array)* 
@@ -92,7 +92,7 @@ Pesquisa compatível com “grupos capturados” através de parênteses. ( ) s�
  End if
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Pesquisa limitando a comparação do motivo a posição indicada:  
 Adicionar una estrela ao final de uma das duas sintaxes anteriores. 
@@ -108,12 +108,12 @@ Adicionar una estrela ao final de uma das duas sintaxes anteriores.
 
 **Nota:** as posições e comprimentos retornados são significativos apenas em modo Unicode ou se o texto manipulado for de tipo ASCII 7-bits.
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Em caso de erro, o comando gera um erro que pode interceptar através de um método instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

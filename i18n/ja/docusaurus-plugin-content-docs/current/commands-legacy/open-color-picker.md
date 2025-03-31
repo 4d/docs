@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->**OPEN COLOR PICKER**コマンドは、システムのカラーピッカーダイアログボックスを表示させます。<!-- END REF-->
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 色が変更されると、オブジェクトに対して On After Edit フォームイベントが生成されます。
 
-#### 参照 
+## 参照 
 
 [OPEN FONT PICKER](open-font-picker.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

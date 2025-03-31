@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is nil pointer.Summary-->O comando **Is nil pointer** devolve True se o ponteiro que você passa em *umPonteiro* é Nulo (*\->\[\]*).<!-- END REF--> Devolve False em todos os outros casos (ponteiro a um campo, tabela ou variável).
 
 Caso deseje conhecer o nome da variável apontada ou o número do campo, pode utilizar o comando [RESOLVE POINTER](resolve-pointer.md).
 
-#### Exemplo 
+## Exemplo 
 
 ```4d
  var $ptr : Pointer
@@ -32,12 +32,12 @@ Caso deseje conhecer o nome da variável apontada ou o número do campo, pode ut
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Is a variable](is-a-variable.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

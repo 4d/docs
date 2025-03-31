@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->El comando **WA Run offscreen area** crea un área web en memoria que se puede utilizar para cargar y analizar automáticamente las páginas web.<!-- END REF-->
 
@@ -61,7 +61,7 @@ Los siguientes comandos se pueden usar en el método de retrollamada:
 * [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
 * [WA STOP LOADING URL](wa-stop-loading-url.md)
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea crear y manejar un área web fuera de pantalla utilizando una función de su clase OffscreenArea:
 
@@ -87,17 +87,17 @@ En la **clase OffscreenArea**:
  End case
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable del sistema OK se define en 0 si se ha alcanzado el tiempo de espera o se ha llamado a [CANCEL](cancel.md) en *onEvent*, de lo contrario, se define en 1.
 
-#### Ver también 
+## Ver también 
 
 [FORM Event](../commands/form-event.md)  
 *Gestión programada de áreas web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

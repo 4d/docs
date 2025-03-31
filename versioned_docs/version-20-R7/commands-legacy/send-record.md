@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SEND RECORD.Summary-->**SEND RECORD** sends the current record of *aTable* to the serial port or document opened by the [SET CHANNEL](set-channel.md) command.<!-- END REF--> The record is sent with a special internal format that can be read only by [RECEIVE RECORD](receive-record.md). If no current record exists, SEND RECORD has no effect.
 
@@ -25,17 +25,17 @@ The complete record is sent. This means that pictures and BLOBs stored in or wit
 
 **Compatibility note:** Beginning with version 11 of 4D, this command no longer supports subtables.
 
-#### Example 
+## Example 
 
 See example for the [RECEIVE RECORD](receive-record.md) command.
 
-#### See also 
+## See also 
 
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

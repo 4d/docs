@@ -50,28 +50,28 @@ title: ユーザー設定
 
 **ユーザー設定** および **データファイル用のユーザー設定** ダイアログボックスに含まれる設定ページのリストと、標準設定との主な違いを以下の表にまとめます:
 
-| **ストラクチャー設定のページ**                                                      | **ユーザー設定のページ**       | **データファイル用のユーザー設定のページ** |
-| ---------------------------------------------------------------------- | -------------------- | ----------------------- |
-| [一般ページ](../settings/general.md)                                        | N/a                  | N/a                     |
-| [インターフェースページ](../settings/interface.md)                                | 標準設定と同じ              | 標準設定と同じ                 |
-| [コンパイラーページ](../settings/compiler.md)                                   | N/a                  | N/a                     |
-| [データベース/データストレージページ](../settings/database.md#データストレージページ)              | N/a                  | N/a                     |
-| [データベース/メモリページ](../settings/database.md#メモリページ)                        | 標準設定と同じ              | 標準設定と同じ                 |
-| [バックアップ/スケジューラーページ](../Backup/settings#スケジューラー)                        | N/a                  | 標準設定と同じ                 |
-| [バックアップ/設定ページ](../Backup/settings#設定)                                  | N/a                  | 標準設定と同じ                 |
-| [バックアップ/バックアップ＆復旧ページ](../Backup/settings#バックアップ復旧)                     | N/a                  | 標準設定と同じ                 |
-| [クライアント-サーバー/ネットワークオプションページ](../settings/client-server.md#ネットワークオプション) | 標準設定と同じ              | 標準設定と同じ                 |
-| [クライアント-サーバー/IP設定ページ](../settings/client-server.md#ip設定ページ)            | 標準設定と同じ              | 標準設定と同じ                 |
-| [Web/設定ページ](../settings/web.md#設定)                                     | 標準設定と同じ              | 標準設定と同じ                 |
-| [Web/オプション (I) ページ](../settings/web.md#オプション-i)     | 標準設定と同じ              | 標準設定と同じ                 |
-| [Web/オプション (II) ページ](../settings/web.md#オプション-ii)   | 標準設定と同じ              | 標準設定と同じ                 |
-| [Web/ログ (タイプ) ページ](../settings/web.md#ログ-タイプ)       | 標準設定と同じ              | 標準設定と同じ                 |
-| [Web/ログ (バックアップ) ページ](../settings/web.md#ログ-バックアップ) | 標準設定と同じ              | 標準設定と同じ                 |
-| [Web/Webサービスページ](../settings/web.md#webサービス)                           | メソッドプリフィクスオプションは使用不可 | メソッドプリフィクスオプションは使用不可    |
-| [SQL ページ](../settings/sql.md)                                          | 標準設定と同じ              | 標準設定と同じ                 |
-| [PHP ページ](../settings/php.md)                                          | 標準設定と同じ              | 標準設定と同じ                 |
-| [セキュリティページ](../settings/security.md)                                   | N/a                  | N/a                     |
-| [互換性ページ](../settings/compatibility.md)                                 | N/a                  | N/a                     |
+| **ストラクチャー設定のページ**                                                                                     | **ユーザー設定のページ**       | **データファイル用のユーザー設定のページ** |
+| ----------------------------------------------------------------------------------------------------- | -------------------- | ----------------------- |
+| [一般ページ](../settings/general.md)                                                                       | N/a                  | N/a                     |
+| [インターフェースページ](../settings/interface.md)                                                               | 標準設定と同じ              | 標準設定と同じ                 |
+| [コンパイラーページ](../settings/compiler.md)                                                                  | N/a                  | N/a                     |
+| [Database/Data storage page](../settings/database.md#data-storage-page)                               | N/a                  | N/a                     |
+| [Database/Memory page](../settings/database.md#memory-page)                                           | 標準設定と同じ              | 標準設定と同じ                 |
+| [Backup/Scheduler page](../settings/../Backup/settings.md#scheduler)                                  | N/a                  | 標準設定と同じ                 |
+| [Backup/Configuration page](../settings/../Backup/settings.md#configuration)                          | N/a                  | 標準設定と同じ                 |
+| [Backup/Backup & Restore page](../settings/../Backup/settings.md#backup--restore) | N/a                  | 標準設定と同じ                 |
+| [Client-server/Network options page](../settings/client-server.md#network-options-page)               | 標準設定と同じ              | 標準設定と同じ                 |
+| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration-page)             | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/設定ページ](../settings/web.md#設定)                                                                    | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/Options (I) page](../settings/web.md#options-i)                               | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/オプション (II) ページ](../settings/web.md#オプション-ii)                                  | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/Log (type) page](../settings/web.md#log-type)                                 | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/Log (backup) page](../settings/web.md#log-backup)                             | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/Webサービスページ](../settings/web.md#webサービス)                                                          | メソッドプリフィクスオプションは使用不可 | メソッドプリフィクスオプションは使用不可    |
+| [SQL ページ](../settings/sql.md)                                                                         | 標準設定と同じ              | 標準設定と同じ                 |
+| [PHP ページ](../settings/php.md)                                                                         | 標準設定と同じ              | 標準設定と同じ                 |
+| [セキュリティページ](../settings/security.md)                                                                  | N/a                  | N/a                     |
+| [互換性ページ](../settings/compatibility.md)                                                                | N/a                  | N/a                     |
 
 このダイアログボックスの設定を編集した場合、それらの変更は対応する *settings.4DSettings* ファイル (後述参照) または、*Backup.4DSettings* ファイル (詳細は [バックアップ設定](../Backup/settings.md) ページ参照) に自動的に保存されます。
 

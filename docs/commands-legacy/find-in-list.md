@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find in list.Summary-->The **Find in list** command returns the position or reference of the first item of the *list* that is equivalent to the string passed in *value*.<!-- END REF--> If several items are found, the function can also fill an *itemsArray* array with the position or reference of each item.
 
@@ -39,7 +39,7 @@ Positions are expressed in relation to the top item of the main list, while taki
 
 If no item corresponds to the *value* searched for, the function returns 0 and the *itemsArray* array is returned empty.
 
-#### Example 
+## Example 
 
 Given the following hierarchical list:
 
@@ -63,7 +63,7 @@ Given the following hierarchical list:
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

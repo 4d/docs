@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Table append row.Summary-->El comando **WP Table append row** agrega una fila a la tabla *refTabla*, la llena con *valor*(es) y devuelve el objeto de rango de fila correspondiente.<!-- END REF-->
 
@@ -29,7 +29,7 @@ El comando agrega tantas celdas en la fila como hay valores en el parámetro *va
 
 El comando devuelve la nueva fila como un objeto de rango de fila.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea crear una tabla vacía y agregar varias filas de diferentes tamaños. Puedes escribir:
 
@@ -44,7 +44,7 @@ Desea crear una tabla vacía y agregar varias filas de diferentes tamaños. Pued
 
 ![](../../assets/en/WritePro/commands/pict3306976.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En una aplicación de factura, usted desea crear una tabla llenada automáticamente con las líneas de factura relacionadas:
 
@@ -75,7 +75,7 @@ $wpRange:=WP Text range(4DWPArea;wk start text;wk end text)
 
 ![](../../assets/en/WritePro/commands/pict3369663.en.png)
 
-#### Ver también 
+## Ver también 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table get rows](wp-table-get-rows.md)  

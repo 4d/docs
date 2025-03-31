@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ABORT PROCESS BY ID.Summary-->**ABORT PROCESS BY ID** コマンドは4D Server 上の特定のプロセスを中止します。<!-- END REF-->引数には、サーバー上で実行中で中止したいプロセスの固有IDを渡します。プロセスIDは、[Process activity](../commands/process-activity.md) あるいは [Process info](../commands/process-info.md) コマンドを使用することで取得できます。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 * このコマンドは*ServerNet* ネットワークレイヤーでしか使用することができません。詳細は*新しい ServerNet ネットワークレイヤー(互換性)*を参照してください。
 * このコマンドはエラーの探索や管理目的のためだけに使用されるべきであり、通常のプロシージャとして使用されるべきではありません。
 
-#### 例題 
+## 例題 
 
 リストボックスに表示されたプロセスのコレクションから、選択したプロセスを中止したい場合を考えます:
 
@@ -37,11 +37,11 @@ displayed_sidebar: docs
  ABORT PROCESS BY ID($activity[curItemPosition].ID)
 ```
 
-#### 参照 
+## 参照 
 
 [PAUSE PROCESS](pause-process.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

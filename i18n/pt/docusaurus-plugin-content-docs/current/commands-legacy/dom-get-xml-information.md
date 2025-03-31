@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM Get XML information.Summary-->O comando DOM Get XML information permite recuperar diversas informações sobre o elemento XML designado por *refElemento*.<!-- END REF-->  
 
@@ -30,11 +30,11 @@ Em *xmlInfo*, passe um código indicando o tipo de informação a ser recuperado
 | SYSTEM ID    | Inteiro longo | 2     | Identificador de sistema                                                                                      |
 | Version      | Inteiro longo | 5     | Versão XML aceita                                                                                             |
 
-#### Ver também 
+## Ver também 
 
 [XML GET ERROR](xml-get-error.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

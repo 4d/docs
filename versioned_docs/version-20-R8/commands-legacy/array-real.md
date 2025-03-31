@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY REAL.Summary-->The ARRAY REAL command creates and/or resizes an array of [Real](# "Number between ±1.7e±308 (15 digits)") elements in memory.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ While applying ARRAY REAL to an existing array:
 * If you enlarge the array size, the existing elements are left unchanged, and the new elements are initialized to 0.
 * If you reduce the array size, the last elements deleted from the array are lost.
 
-#### Example 1 
+## Example 1 
 
 This example creates a process array of 100 Real elements:
 
@@ -36,7 +36,7 @@ This example creates a process array of 100 Real elements:
  ARRAY REAL(arValues;100)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example creates a local array of 100 rows of 50 Real elements:
 
@@ -44,7 +44,7 @@ This example creates a local array of 100 rows of 50 Real elements:
  ARRAY REAL($arValues;100;50)
 ```
 
-#### Example 3 
+## Example 3 
 
 This example creates an interprocess array of 50 Real elements and sets each element to its element number:
 
@@ -55,12 +55,12 @@ This example creates an interprocess array of 50 Real elements and sets each ele
  End for
 ```
 
-#### See also 
+## See also 
 
 [ARRAY INTEGER](array-integer.md)  
 [ARRAY LONGINT](array-longint.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

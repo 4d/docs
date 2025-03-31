@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** returns the next sequence number for *aTable*.<!-- END REF--> The sequence number is unique for each table. It is a non-repeating number that is incremented(\*) for each new record created for the table.
 
@@ -41,7 +41,7 @@ If the sequence number needs to start at a number other than 1, just add the dif
  [Table1]Seq Field :=Sequence number([Table1])+999
 ```
 
-#### Example 
+## Example 
 
 The following example is part of a form method. It tests to see if this is a new record; i.e., if the invoice number is an empty string. If it is a new record, the method assigns an invoice number. The invoice number is formed from two pieces of information: the sequence number, and the operator’s ID, which was entered when the database was opened. The sequence number is formatted as a 5-character string:
 
@@ -53,13 +53,13 @@ The following example is part of a form method. It tests to see if this is a new
  End if
 ```
 
-#### See also 
+## See also 
 
 *About Record Numbers*  
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

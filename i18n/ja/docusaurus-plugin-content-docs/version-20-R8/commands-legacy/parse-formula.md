@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Parse formula.Summary-->**Parse formula** ファンクションは、*formula* 引数で指定された4D フォーミュラを解析し、シンタックスをチェックし、正規化された形式で返します。<!-- END REF-->これにより、4D ランゲージあるいはストラクチャー要素(コマンド、定数、テーブル、フィールド、4D プラグインなど)の名前が変更された場合でも、フォーミュラが引き続き有効な状態を維持できます。
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
   
 任意の*errorMessage* 引数は、*formula* 引数のフォーミュラにシンタックスエラーがあった場合にエラーメッセージを受け取ります。エラーがなかった場合には、空の文字列が返されます。
 
-#### 例題 1 
+## 例題 1 
 
 ```4d
  ARRAY TEXT($t1;1)
@@ -79,7 +79,7 @@ displayed_sidebar: docs
   //結果は [Table_1]Champ_2
 ```
 
-#### 例題 2 
+## 例題 2 
 
 引き続き**例題 1**のテーブルを使用します:
 
@@ -98,14 +98,14 @@ displayed_sidebar: docs
  EXECUTE FORMULA([users_preferences]formula)
 ```
 
-#### 参照 
+## 参照 
 
 [Formula from string](../commands/formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *フォーミュラ内でのトークンの使用*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

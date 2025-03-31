@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Descrição
+## Descrição
 
 The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. O comando aceita duas sintaxes:
 
@@ -69,14 +69,14 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 > No Windows, em clientes mesclados, o local das pastas incorporadas é modificado se a chave `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) for usada.
 
-#### Veja também
+## Veja também
 
 [`4D.Folder` class](../API/FolderClass.md)
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
 
-#### Propriedades
+## Propriedades
 
 |                |                             |
 | -------------- | --------------------------- |

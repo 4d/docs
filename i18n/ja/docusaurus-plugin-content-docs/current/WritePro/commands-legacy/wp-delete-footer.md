@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP DELETE FOOTER.Summary-->**WP DELETE FOOTER** コマンドは、*wpSection* 引数で定義されたセクションあるいはサブセクションに割り当てられたフッター要素を削除します。<!-- END REF-->
 
 セクションあるいはサブセクションに対してフッター要素が存在しない場合、コマンドは何もしません。
 
-#### 例題 
+## 例題 
 
 あるセクションの左ページのフッターを削除したい場合を考えます:
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
  WP DELETE FOOTER($subsection)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get footer](wp-get-footer.md)  
 [WP New footer](wp-new-footer.md)  

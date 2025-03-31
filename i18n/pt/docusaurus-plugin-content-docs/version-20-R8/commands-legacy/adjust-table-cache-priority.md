@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Modo especialista 
+## Modo especialista 
 
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Summary-->Este comando está reservado para necessidades específicas.<!-- END REF--> Deve ser utilizado com cuidado, já que pode afetar o rendimento do banco de dados.
 
-#### Descrição 
+## Descrição 
 
 O comando **ADJUST TABLE CACHE PRIORITY** modifica o valor *prioridade* dos dados relacionados a *Tabela* em cache para o processo atual. Uma chamada para este comando substitui qualquer valor de prioridade anteriormente ajustado através do mesmo comando no mesmo processo. Este comando ajusta a prioridade para necessidades temporárias, por exemplo durante uma pesquisa ou importação. 
 
@@ -36,7 +36,7 @@ Passe em *prioridade* uma das constantes abaixo do tema "*Gestão de Cache*" :
 | Cache priority high      |                                                 |
 | Cache priority very high |                                                 |
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser mudar temporariamente a prioridade de cache para os campos escalares \[Docs\]:
 
@@ -46,12 +46,12 @@ Se quiser mudar temporariamente a prioridade de cache para os campos escalares \
  ADJUST TABLE CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

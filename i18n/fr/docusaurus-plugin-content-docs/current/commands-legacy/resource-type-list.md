@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->La commande **RESOURCE TYPE LIST** remplit le tableau *resTypes* avec les types des ressources présentes dans le(s) fichier(s) de resources ouvert(s).<!-- END REF-->
 
@@ -24,7 +24,7 @@ Si vous ne pré-déclarez pas le tableau *resTypes* avant d'appeler **RESOURCE T
 
 Après l'appel, vous pouvez tester le nombre de types de ressources différents qui ont été trouvés en appliquant la commande [Size of array](size-of-array.md) au tableau *resTypes*.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant remplit le tableau *atResType* avec les types de ressources présents dans tous les fichiers de ressource ouverts :
 
@@ -32,7 +32,7 @@ L'exemple suivant remplit le tableau *atResType* avec les types de ressources pr
  RESOURCE TYPE LIST(atResType)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant vous indique si le fichier de structure Mac OS que vous utilisez contient des plug-ins 4D "ancien modèle", qui devront être mis à jour si vous voulez exploiter la base sous Windows :
 
@@ -47,7 +47,7 @@ L'exemple suivant vous indique si le fichier de structure Mac OS que vous utilis
 
 **Note :** Le fichier de structure n'est pas le seul fichier dans lequel des plug-ins "ancien modèle" ont pu être installés. La base peut également être associée à un fichier "Routines Externes" ou "Proc.Ext".
 
-#### Exemple 3 
+## Exemple 3 
 
 La méthode projet suivante retourne le nombre de ressources présentes dans un fichier de ressources :
 
@@ -78,11 +78,11 @@ Une fois que cette méthode est implémentée dans votre base, vous pouvez écri
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [RESOURCE LIST](resource-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

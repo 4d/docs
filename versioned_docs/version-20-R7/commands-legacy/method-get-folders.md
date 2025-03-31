@@ -15,23 +15,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.METHOD GET FOLDERS.Summary-->The **METHOD GET FOLDERS** command returns, in the *arrNames* array, the names of folders created on the Home page of the 4D Explorer:
+<!--REF #_command_.METHOD GET FOLDERS.Summary-->The **METHOD GET FOLDERS** command returns, in the *arrNames* array, the names of folders created on the Home page of the 4D Explorer<!-- END REF-->:
 
 ![](../assets/en/commands/pict837666.en.png)
 
-Since folder names must be unique, the hierarchy is not returned in this array.<!-- END REF--> 
+Since folder names must be unique, the hierarchy is not returned in this array. 
 
 You can limit this list of folders by passing a comparison string in the *filter* parameter: in this case, only folders whose names match the filter are returned. You can use the @ character in order to specify "starts with", "ends with" or "contains" type filters. If you pass an empty string, the *filter* parameter is ignored. 
 
 If the command is executed from a component, it returns by default the paths of the component methods. If you pass the *\** parameter, the array contains the paths of the methods of the host database.
 
-#### See also 
+## See also 
 
 [METHOD GET PATHS](method-get-paths.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

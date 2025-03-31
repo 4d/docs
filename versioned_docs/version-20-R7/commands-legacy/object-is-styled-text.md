@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Is styled text.Summary-->The **OBJECT Is styled text** command returns **True** when the "Multi-style" option is checked for the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
@@ -27,7 +27,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 **Note:** The **OBJECT Is styled text** command returns **True** when it is applied to a 4D Write Pro area.
 
-#### Example 
+## Example 
 
 A form contains a field represented by two different objects; one of the objects has the "Multi-style" property checked, and the other one does not. You can write: 
 
@@ -39,11 +39,11 @@ A form contains a field represented by two different objects; one of the objects
   // returns False ("Multi-style" option is not checked)
 ```
 
-#### See also 
+## See also 
 
 *Styled Text*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

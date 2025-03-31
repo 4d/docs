@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->La commande **LISTBOX COLLAPSE** vous permet de provoquer la contraction des lignes de rupture de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -39,7 +39,7 @@ Le paramètre optionnel *sélecteur* vous permet de définir la portée de la co
 
 Si la sélection ou la list box ne contient pas de ligne de rupture, ou si toutes les lignes de rupture sont déjà contractées, la commande ne fait rien. 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple contracte le premier niveau de lignes de rupture de la sélection de la list box :
 
@@ -47,11 +47,11 @@ Cet exemple contracte le premier niveau de lignes de rupture de la sélection de
  LISTBOX COLLAPSE(*;"MaListbox";False;lk selection)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX EXPAND](listbox-expand.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

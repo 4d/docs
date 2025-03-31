@@ -13,16 +13,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Current method path.Summary-->**Current method path**コマンドは実行中のデータベースメソッド、トリガー、プロジェクトメソッド、フォームメソッド、またはオブジェクトメソッドの内部的なパス名を返します。<!-- END REF-->4Dマクロコマンドのコンテキストでは、*<method\_path>*タグが実行中のメソッドのフルパス名で置き換えられます。 
 
-#### 参照 
+## 参照 
 
 [METHOD Get path](method-get-path.md)  
 [METHOD GET PATHS](method-get-paths.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

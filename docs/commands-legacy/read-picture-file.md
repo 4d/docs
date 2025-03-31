@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.READ PICTURE FILE.Summary-->The **READ PICTURE FILE** command opens the picture saved in the *fileName* disk file and loads it in the *picture* 4D field or variable.<!-- END REF-->
 
@@ -30,18 +30,18 @@ You pass in *picture* the picture variable or field which will receive the pictu
 
 If you pass the optional *\** parameter, the command will accept any type of file. This means that you can work with pictures without necessarily having the suitable codecs (see the description of the [BLOB TO PICTURE](blob-to-picture.md) command).
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command is executed successfully, the system variable Document contains the full pathname to the open file and the system variable OK is set to 1\. Otherwise, OK is set to 0.
 
-#### See also 
+## See also 
 
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 *Pictures*  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

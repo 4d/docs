@@ -3,18 +3,19 @@ id: classFunctions
 title: クラス関数の呼び出し
 ---
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model and [singleton class functions]($singleton.md) through REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+REST リクエストを使って、ORDA データモデルに定義されている [データモデルクラス関数](ORDA/ordaClasses.md) または[シングルトンクラス関数]($singleton.md) を呼び出すことで、ターゲット 4D アプリケーションの公開 API を活用できます。
 
-Functions can be called in two ways:
+関数は以下の2つの方法で呼び出すことができます:
 
-- using **POST requests**, with data parameters passed in the body of the request.
-- using **GET requests**, with parameters directly passed in the URL.
+- **POST リクエスト** を使用する。この場合、データ引数はリクエストの本文内で渡します。
+- **GET リクエスト** を使用する。この場合、引数はURL 内に直接渡します。
 
-POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. However, GET requests can be more compliant with user experience, allowing to call functions by entering an URL in a browser (note: the developer must ensure no sensitive action is done in such functions).
+POST リクエストは、リンクをクリックするだけのようなシンプルなアクションでセンシティブなコードを実行するのを避けられるため、より優れたセキュリティレベルを提供します。 一方で、GET リクエストは、URL をブラウザに入れるだけで関数を呼び出すことができるため、
+よりユーザーエクスペリエンスに沿っていると言えます(注意: 開発者は、このような機能でセンシティブなアクションが実行されないようにしなければなりません)。
 
 ## 関数の呼び出し
 
-The following ORDA and singleton functions can be called in REST:
+以下のORDA 関数およびシングルトン関数は、REST 経由で呼び出すことが可能です:
 
 | クラス関数                                                          | シンタックス                                                                                                           |
 | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -33,23 +34,23 @@ The following ORDA and singleton functions can be called in REST:
 
 :::
 
-Functions are simply called on the appropriate ORDA interface or singleton class, without (). [Parameters](#parameters) are passed either in the body of the POST request (`POST` calls) or in the `params` collection in the URL (`GET` calls).
+関数は、適切なORDA インターフェース上、もしくはシングルトンクラス上において単に () 抜きで呼び出されます。 [引数](#引数)は POST リクエストの本文内(`POST` 呼び出しの場合)か、URL の `params` コレクション内(`GET` 呼び出しの場合)に渡します。
 
 たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
-#### POST request
+#### POST リクエスト
 
 `/rest/City/getCity`
 
 POST リクエストのボディに関数に渡す引数を含めます: `["Aguada"]`
 
-#### GET request
+#### GET リクエスト
 
 `/rest/City/getCity?$params='["Aguada"]'`
 
 :::note
 
-The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+`getCity()` 関数は、 `onHttpGet` キーワードを使用して宣言されている必要があります(以下の[関数の設定](#関数の設定) を参照して下さい)。
 
 :::
 
@@ -59,34 +60,34 @@ The `getCity()` function must have been declared with the `onHttpGet` keyword (s
 $city:=ds.City.getCity("Aguada")
 ```
 
-## Function configuration
+## 関数の設定
 
 ### `exposed`
 
-All functions allowed to be called directly from HTTP REST requests (`POST` or `GET`) must be declared with the `exposed` keyword. 例:
+HTTP REST リクエスト(`POST` または `GET`) から直接呼び出し可能にしたい関数は、全て `exposed` キーワードを使用して宣言されている必要があります。 例:
 
 ```4d
 exposed Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
-See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+詳細については[公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) の章を参照して下さい。
 
 ### `onHttpGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). 例:
+HTTP `GET` リクエストから呼び出すことのできる関数は、[`onHttpGet` キーワード](../ORDA/ordaClasses.md#onHttpGet-キーワード) も使用して明確に宣言されていなければなりません。 例:
 
 ```4d
-//allowing GET requests
+// GET リクエストを許可する
 exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
-### Thread-safe
+### スレッドセーフ
 
-All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
+プロジェクトがコンパイルモードで実行されている場合、REST リクエストから呼び出される4D コードは全て**スレッドセーフでなければなりません**。この場合、REST サーバーは常にプリエンプティブプロセスを使用するからです([*プリエンプティブプロセスを使用* の設定値](../WebServer/webServerConfig.md#プリエンプティブプロセスを使用) はREST サーバーは無視します)。
 
 :::info
 
-You can restrict calls to specific ORDA functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+[**roles.json**](../ORDA/privileges.md#rolesjson-ファイル) ファイル内に適切な権限を設定することで、特定のORDA 関数への呼び出しを制限することができます。
 
 :::
 
@@ -110,13 +111,13 @@ Scalar value parameter(s) must simply be enclosed in a collection. 引数とし�
 
 For example, with a  dataclass function `getCities()` receiving text parameters:
 
-#### POST request
+#### POST リクエスト
 
 `/rest/City/getCities`
 
 **ボディの引数:** ["Aguada","Paris"]
 
-#### GET request
+#### GET リクエスト
 
 `/rest/City/getCities?$params='["Aguada","Paris"]'`
 
@@ -134,11 +135,11 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 | __ENTITY    | Boolean                              | 必須 - true は引数がエンティティであることをサーバーに通知します |
 | __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- `__KEY` が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
+- `__KEY` が提供された場合、`__KEY` が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities with POST requests.
-See an example of [contents downloading using an entity](#using-an-entity-to-download-contents) with a GET request.
+See examples below for creating or updating entities with POST requests.
+See an example of contents downloading using an entity with a GET request.
 
 #### リレートエンティティ引数
 

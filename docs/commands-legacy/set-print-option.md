@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->The **SET PRINT OPTION** command is used to modify, by programming, the value of a print option.<!-- END REF--> Each option defined using this command is applied to the[ current 4D printing settings](../settings/compatibility.md) as long as no other command that modifies print parameters ([PRINT SETTINGS](print-settings.md), [PRINT SELECTION](print-selection.md) without the *\>* parameter, etc.) is called. If a print job has been opened (e.g. with [OPEN PRINTING JOB](open-printing-job.md)), the option is set for the job and cannot be modified as long as the job has not terminated (except for the Orientation option, see below).
 
-##### options and values 
+### options and values 
 
 The *option* parameter allows you to indicate the option to be modified. You can pass one of the predefined constants of the “*Print Options*” theme listed below. Pass the new value(s) of the specified *option* in the *value1* and (optionally) *value2* parameters. The number and nature of the values to be passed depend on the type of option specified. 
 
@@ -44,7 +44,7 @@ Once set using this command, a print option is kept throughout the duration of t
 * It is indispensable to use the optional *\>* parameter with the [PRINT SELECTION](print-selection.md), [PRINT RECORD](print-record.md) and [PAGE BREAK](page-break.md) commands in order to avoid resetting the print options that were set using the **SET PRINT OPTION** command.
 * The **SET PRINT OPTION** command mainly supports PostScript printers. You can use this command with other types of printers, such as PCL or Ink, but in this case, it is possible that some options may not be available.
 
-#### Example 
+## Example 
 
 The value of Orientation option can be modified within the same print job. Note that the option must have been set before the [PAGE BREAK](page-break.md) command:
 
@@ -63,15 +63,15 @@ The value of Orientation option can be modified within the same print job. Note 
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 The system variable OK is set to 1 if the command has been executed correctly; otherwise, it is set to 0.
 
-#### Error management 
+## Error management 
 
 If the value passed for an *option* is invalid or if it is not available on the printer, the command returns an error (that you can intercept using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command) and the current value of the option remains unchanged. 
 
-#### See also 
+## See also 
 
 [GET PRINT OPTION](get-print-option.md)  
 [Print form](../commands/print-form.md)  
@@ -79,7 +79,7 @@ If the value passed for an *option* is invalid or if it is not available on the 
 *Print Options*  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

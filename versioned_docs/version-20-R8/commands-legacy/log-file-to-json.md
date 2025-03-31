@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOG FILE TO JSON.Summary-->The **LOG FILE TO JSON** command saves the current log file, or any specified log file, in JSON format.<!-- END REF-->
 
@@ -51,7 +51,7 @@ Note: If you passed Field attribute with **name** in the *fieldAtt* parameter, t
 ...      "fields": {            "ID": 9,            "Field_2": "test value",            "Date_Field": "2003-03-03T00:00:00.000Z",            "Field_4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",            "Field_8": "BlobID: 2"       },...
 ```
 
-##### 
+### 
 
 The actual list of available properties depends on the operation type (i.e.: create record, delete record, modify record, create Blob, etc.). Here are the main properties:
 
@@ -74,7 +74,7 @@ In case of Blob or picture values, different information is provided based on th
 
 (\*) In project databases, the "user4d\_id" property is not returned.
 
-#### Example 
+## Example 
 
 You want to save the current log file in JSON:
 
@@ -88,16 +88,16 @@ You want to save a specific log file in JSON with field names:
  LOG FILE TO JSON("c:\\4Dv15\\ExportLogs";0;"c:\\4Dv15\\Backup\\old_myDB.journal";Field attribute with name)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 The **LOG FILE TO JSON** command modifies the value of the OK and Document variables: if the JSON file was correctly saved, OK is set to 1 and Document contains the pathname of the journal file. If you passed "" in the *logPath* parameter and the user canceled the file selection dialog box, OK is set to 0 and Document contains an empty string. If the user selected an invalid file, OK is set to 0 and Document contains the pathname of the invalid file.
 
-#### See also 
+## See also 
 
 [Download HDI database](http://download.4d.com/Demos/4D%5Fv15%5FR4/ExportLogToJSON%5FHDI.zip)  
 [INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

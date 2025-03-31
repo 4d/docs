@@ -12,21 +12,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.START SQL SERVER.Summary-->The START SQL SERVER command launches the integrated SQL server in the 4D application where it has been executed.<!-- END REF--> Once launched, the SQL server can respond to external SQL queries.
 
 **Note:** This command does not affect the internal functioning of the 4D SQL kernel. The SQL kernal is always available for internal queries.
 
-#### System variables and sets 
+## System variables and sets 
 
 If the SQL server has been launched correctly, the OK system variable is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [STOP SQL SERVER](stop-sql-server.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

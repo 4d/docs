@@ -13,7 +13,7 @@ title: VP ADD SPAN
 | ---------- | ------ | -- | ------------ | ---------------- |
 | rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP ADD SPAN` combina las celdas de *rangeObj* como un único tramo de celdas.
 
@@ -22,7 +22,7 @@ En *rangeObj*, pase un rango de celdas. Las celdas del rango se unen para crear 
 > - Sólo se muestran los datos de la celda superior izquierda. Los datos de las otras celdas combinadas se ocultan hasta que se elimina la fusión.
 > - Los datos ocultos en las celdas fusionadas son accesibles mediante fórmulas (empezando por la celda superior izquierda).
 
-#### Ejemplo
+## Ejemplo
 
 Para fusionar las celdas First quarter y Second quarter a través de las dos celdas al lado, y de fusionar la celda del área South a través de las dos líneas debajo de ella:
 
@@ -43,7 +43,7 @@ Para fusionar las celdas First quarter y Second quarter a través de las dos cel
 
 ![vp-add-span-result](../../assets/en/ViewPro/vp-add-span-2.png)
 
-#### Ver también
+## Ver también
 
 [4D View Pro Range Object Properties](../getting-started.md#using-range-objects)<br/>
 [VP Get spans](vp-get-spans.md)<br/>

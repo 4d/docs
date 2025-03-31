@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Compare strings.Summary-->The **Compare strings** command returns a negative, zero, or positive value depending on if *aString* is evaluated as lower, equal, or higher than *bString*.<!-- END REF--> 
 
@@ -49,7 +49,7 @@ The command returns the following longint values:
 | 0         | *aString* is equal to *bString*   |
 | 1         | *aString* is higher *bString*     |
 
-#### Example 1 
+## Example 1 
 
 You want to compare the following strings: 
 
@@ -66,7 +66,7 @@ You want to compare the following strings:
   // $result = 0
 ```
 
-#### Example 2 
+## Example 2 
 
 The following examples illustrate the specific impact of options in **Japanese data language context**:
 
@@ -102,11 +102,11 @@ The following examples illustrate the specific impact of options in **Japanese d
  $result:=Compare strings("ラーメン";&NBSP;"ﾗｰﾒﾝ") // not equal if setting is disabled
 ```
 
-#### See also 
+## See also 
 
 [Position](position.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

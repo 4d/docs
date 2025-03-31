@@ -18,17 +18,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->O comando ST SET ATTRIBUTES permite modificar um ou mais atributos de estilo no(s) objeto(s) de formulário designado(s) por *objeto*.<!-- END REF-->   
   
   
-##### 
+### 
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (cadeia). Durante a execução, se o objeto tem o foco, o comando só se aplica ao objeto que está sendo editado e não a sua fonte de dados (campo ou variável). As mudanças só se transferem a fonte (e a qualquer outro objeto com esta mesma fonte) quando o objeto que se está editando se valida, seja por perder o foco ou com a tecla **Intro**. Quando o objeto não tem o foco, o comando se aplica diretamente a fonte de dados e as mudanças são imediatamente transferidos a outros objetos com a mesma fonte.  
 Se omitido o parâmetro *\**, indica que o parâmetro *objeto* é um campo ou uma variável e se passa uma referencia de campo ou variável em vez de uma cadeia. O comando se aplica diretamente ao campo ou a variável e as mudanças são transferidas imediatamente a todos os objetos que utilizam esta fonte, incluindo o objeto com o foco.
 
-##### 
+### 
 
 **Nota**: Só pode utilizar os atributos de estilo com campos de tipo texto. Dado que os campos de tipo Alfa tem uma longitude pré-definida, a adição de etiquetas de estilo poderia produzir uma perda de dados.   
   
@@ -85,7 +85,7 @@ Se passa as constantes Attribute text color ou Attribute background em *nomAtrib
 | White                    | #FFFFFF               |
 | Yellow                   | #FFFF00               |
 
-#### Exemplo 
+## Exemplo 
 
 Neste exemplo, modificamos o tamanho e a cor do texto como também os atributos negrito e sublinhado dos caracteres 2 a 4 do campo:
 
@@ -93,18 +93,18 @@ Neste exemplo, modificamos o tamanho e a cor do texto como também os atributos 
  ST SET ATTRIBUTES([MyTable]MyField;2;5;Attribute font name;"Arial";Attribute text size;10;Attribute underline style;1;Attribute bold style;1;Attribute text color;"Blue")
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Depois de executar este comando, a variável OK toma o valor 1 se não é apresento nenhum erro; do contrário, toma o valor 0\. Este é o caso particularmente quando as etiquetas de estilo não são avaliados corretamente (etiquetas incorretas ou faltantes).   
 
 No caso de erro, não modifica a variável. Quando ocorre um erro em uma variável quando se está avaliando o texto, 4D transforma o texto em texto plano; como resultado, os caracteres <, > e & são convertidas em entidades HTML.
 
-#### Ver também 
+## Ver também 
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

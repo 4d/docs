@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->El comando *GET DATA SOURCE LIST* devuelve en los arrays *arrayNomsFuentes* y *arrayDrivers*, los nombres y drivers de las fuentes de datos de tipo *tipoFuente* definidas en el administrador ODBC del sistema operativo.<!-- END REF--> 
 
@@ -34,7 +34,7 @@ El comando llena y dimensiona los arrays *arrayNomsFuentes* y *arrayDrivers* con
 
 **Nota:** si quiere conectarse a una fuente de datos 4D externa vía ODBC, necesitará tener instalado 4D ODBC Driver en su equipo. Para mayor información, consulte el manual de instalación del driver 4D ODBC.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo utiliza una fuente de datos usuario:
 
@@ -44,17 +44,17 @@ Este ejemplo utiliza una fuente de datos usuario:
  GET DATA SOURCE LIST(User data source;arrDSN;arrDSNDrivers)
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0 y se genera un error.
 
-#### Ver también 
+## Ver también 
 
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

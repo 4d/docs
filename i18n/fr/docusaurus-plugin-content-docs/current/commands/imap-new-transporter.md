@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!-- END REF -->
 
-#### Description
+## Description
 
 La commande `IMAP New transporter`<!-- REF #_command_.IMAP New transporter.Summary -->configure une nouvelle connexion IMAP<!-- END REF --> en fonction du paramètre *server* et retourne un nouvel objet *transporter*. L'objet transporteur retourné sera alors utilisé pour la réception d'emails.
 
@@ -38,19 +38,19 @@ Dans le paramètre *server*, passez un objet contenant les propriétés suivante
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/IMAPTransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                   | 30                                                                               |
 | [<!-- INCLUDE #transporter.host.Syntax -->](../API/IMAPTransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | *obligatoire*                                                                    |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](../API/IMAPTransporterClass.md#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | aucun                                                                            |
-| .**password** : Text<br/>Mot de passe utilisateur pour l'authentification sur le serveur. Not returned in *[IMAP transporter](\(../API/IMAPTransporterClass.md#imap-transporter-object\))* object.                                                                                                                                                                                                                                                                                                                                       | aucun                                                                            |
+| .**password** : Text<br/>Mot de passe utilisateur pour l'authentification sur le serveur. Non retourné dans l'objet *[IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object)*.                                                                                                                                                                                                                                                                                                                                        | aucun                                                                            |
 | [<!-- INCLUDE #transporter.port.Syntax -->](../API/IMAPTransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | 993                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](../API/IMAPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | aucun                                                                            |
 
 > **Attention** : Assurez-vous que le timeout défini est inférieur au timeout du serveur, sinon le timeout du client sera inutile.
 
-#### Résultat
+## Résultat
 
 La fonction retourne un [**objet IMAP transporter**](../API/IMAPTransporterClass.md#imap-transporter-object). Toutes les propriétés retournées sont en **lecture seule**.
 
 > La connexion IMAP est automatiquement fermée lorsque l'objet transporteur est détruit.
 
-#### Exemple
+## Exemple
 
 ```4d
 $server:=New object
@@ -69,7 +69,7 @@ If(Not($status.success))
 End if
 ```
 
-#### Propriétés
+## Propriétés
 
 |                    |                             |
 | ------------------ | --------------------------- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->**SET WINDOW RECT**コマンドは*window*に渡した参照番号のウィンドウのグローバル座標を変更します。<!-- END REF-->ウィンドウが存在しない場合、コマンドはなにも行いません。
 
@@ -34,11 +34,11 @@ displayed_sidebar: docs
 
 このコマンドはフォームオブジェクトには影響しません。ウィンドウに表示されているフォーム中のフォームオブジェクトは、 (プロパティ設定にかかわらず) このコマンドにより移動やリサイズはされません。ウィンドウのみが更新されます。オブジェクトのリサイズプロパティを考慮に入れたフォームウィンドウのサイズ変更を行うには[RESIZE FORM WINDOW](resize-form-window.md)コマンドを使用します。
 
-#### 例題 1 
+## 例題 1 
 
 [WINDOW LIST](window-list.md)コマンドの例題参照
 
-#### 例題 2 
+## 例題 2 
 
 以下のウィンドウがあるとき:
 
@@ -54,14 +54,14 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict39569.ja.png)
 
-#### 参照 
+## 参照 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [DRAG WINDOW](drag-window.md)  
 [GET WINDOW RECT](get-window-rect.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

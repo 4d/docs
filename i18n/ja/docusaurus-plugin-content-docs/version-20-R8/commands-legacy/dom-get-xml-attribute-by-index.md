@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Summary-->**DOM GET XML ATTRIBUTE BY INDEX** コマンドは、属性のインデックスを使用して、属性名と値を取得するために使用します。<!-- END REF-->にはXML要素参照を、*attribIndex*には名前を知りたい要素のインデックス番号を渡します。名前が*attribName* 引数に、値が*attribValue* 引数に返されます。4Dは取得した値を引数として渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。
 
@@ -24,20 +24,20 @@ displayed_sidebar: docs
 
 *attribIndex* に渡された値がXML要素に定義された属性数より多い場合、エラーが返されます。
 
-#### 例題 
+## 例題 
 
 [DOM Count XML attributes](dom-count-xml-attributes.md "DOM Count XML attributes") コマンドの例題参照
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

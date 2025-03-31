@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COPY ARRAY.Summary-->The COPY ARRAY command creates or overwrites the destination array *destination* with the exact contents, size, and type of the source array *source*.<!-- END REF-->In case of numeric arrays of different types, the type of the *destination* array is kept.
 
@@ -25,7 +25,7 @@ The *source* and *destination* arrays can be local, process, or interprocess arr
 * In compiled mode, the *destination* array must be of the same type as the *source* array. Thus, it is recommended to always use arrays of the same type to have similar behavior in interpreted and compiled modes.
 * When you copy object arrays, only references to the objects that they contain are duplicated, and not objects themselves. It means that any modification done on an object in an array will be applied to all existing instances of the object in copied arrays. If you need to duplicate objects, you must use the [OB Copy](ob-copy.md) command.
 
-#### Example 
+## Example 
 
 The following example fills the array named C. It then creates a new array, named D, of the same size as C and with the same contents:
 
@@ -36,7 +36,7 @@ The following example fills the array named C. It then creates a new array, name
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

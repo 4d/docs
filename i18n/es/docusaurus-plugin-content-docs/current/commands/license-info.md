@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 <!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
 
@@ -56,7 +56,7 @@ El objeto devuelto contiene las siguientes propiedades:
 }
 ```
 
-| **Propiedad**       | **Type**              | **Description**                                                                                                                                                                                                                                                             | **Ejemplo**                                                                                                                                       |
+| **Propiedad**       | **Tipo**              | **Description**                                                                                                                                                                                                                                                             | **Ejemplo**                                                                                                                                       |
 | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name                | string                | Commercial name                                                                                                                                                                                                                                                             | "4D Developer Professional vXX"                                                                                                                   |
 | key                 | number                | ID of the installed product. A unique number is associated to a 4D application (such as 4D Server, 4D in local mode, 4D Desktop, etc.) installed on a machine. This number is encrypted. | 12356789                                                                                                                                          |
@@ -69,11 +69,11 @@ El objeto devuelto contiene las siguientes propiedades:
 | platforms           | collection of strings | License platform(s)                                                                                                                                                                                                                                      | \["macOS", "windows"\]                                                                      |
 | expirationDate      | object                | Date of expiration (optional)                                                                                                                                                                                                                            | {"day":2, "month":6, "year":2026}                                                                 |
 | renewalFailureCount | number                | Number of unsuccessful automatic renewal attempts for at least one of the product licenses (optional)                                                                                                                                                    | 3                                                                                                                                                 |
-| products            | collection of objects | Description of product license (one element per product license). See below.                                                                                                                                             |                                                                                                                                                   |
+| products            | collection of objects | Description of product license (one element per product license). Ver abajo.                                                                                                                                             |                                                                                                                                                   |
 
 Each object of the `products` collection can have the following properties:
 
-| **Propiedad** |                                                                                            | **Type**              | **Description**                                                             | **Ejemplo**                                                                                              |
+| **Propiedad** |                                                                                            | **Tipo**              | **Description**                                                             | **Ejemplo**                                                                                              |
 | ------------- | ------------------------------------------------------------------------------------------ | --------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | id            |                                                                                            | number                | License number                                                              | For available values, see the [Is license available](../commands-legacy/is-license-available.md) command |
 | name          |                                                                                            | string                | Nombre de la licencia                                                       | "4D Write - 4D Write Pro"                                                                                |
@@ -83,7 +83,7 @@ Each object of the `products` collection can have the following properties:
 |               | \[ \].count          | number                | Number of allowed connections                                               | 15 (32767 means unlimited)                                                            |
 |               | \[ \].expirationDate | object                | Date of expiration (optional, same format as above)      | {"day":1, "month":11, "year":2017}                       |
 
-#### Ejemplo
+## Ejemplo
 
 You want to get information on your current 4D Server license:
 
@@ -129,13 +129,13 @@ You want to get information on your current 4D Server license:
 }
 ```
 
-#### Ver también
+## Ver también
 
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
 
-#### Propiedades
+## Propiedades
 
 |                   |                             |
 | ----------------- | --------------------------- |

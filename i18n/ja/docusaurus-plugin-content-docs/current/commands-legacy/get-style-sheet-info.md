@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->**GET STYLE SHEET INFO**コマンドは、*styleSheetName*パラメーターで指定したスタイルシートの現在の構成を返します。<!-- END REF--> 
 
@@ -46,11 +46,11 @@ displayed_sidebar: docs
 
 このコマンドが正しく実行された場合には、 *OK* システム変数は 1 に変更されます。そうでない(例えば *styleSheetName* 引数で指定したスタイルシートが存在しないなどの)場合は、OK システム変数は 0 に設定されます。
 
-##### 互換性に関する注意 
+### 互換性に関する注意 
 
 **プロジェクトアーキテクチャー**においては、このコマンドがサポートするのは3つの自動スタイルシートだけです。
 
-#### 例題 
+## 例題 
 
 自動スタイルシートのカレント設定を調べたい場合:
 
@@ -60,12 +60,12 @@ displayed_sidebar: docs
  GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
 ```
 
-#### 参照 
+## 参照 
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Day number.Summary-->O comando Day number retorna um número que representa o dia da semana que corresponde a *data*.<!-- END REF-->Day Number retorna *2* para datas nulas. 
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **Nota:** Day number retorna um valor entre 1 e 7\. Para obter o número de dia no mês para uma data, utilize o comando [Day of](day-of.md "Day of").
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo é uma função que retorna o dia atual como uma string:
 
@@ -56,11 +56,11 @@ O seguinte exemplo é uma função que retorna o dia atual como uma string:
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [Day of](day-of.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -272,7 +272,6 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>History</summary>
@@ -375,7 +374,6 @@ You want to know the number of encrypted tables in the current data file:
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>History</summary>
@@ -454,7 +452,6 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>History</summary>
@@ -596,7 +593,7 @@ On a remote datastore:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>History</summary>
@@ -714,7 +711,7 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>History</summary>
@@ -899,7 +896,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>History</summary>
@@ -1242,7 +1239,7 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>History</summary>

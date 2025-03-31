@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->CHANGE LICENSES コマンドは、4Dライセンス管理ダイアログボックスを表示します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ CHANGE LICENSES は、顧客に配付されたコンパイル済みのシング�
 
 このダイアログボックスに関する詳細は、4Dインストールガイドの*インストールとアクティベーション* のセクションを参照してください。
 
-#### 例題 
+## 例題 
 
 カスタム設定または環境設定ダイアログボックス内に、以下のメソッドを持つボタンを設定します:
 
@@ -35,12 +35,12 @@ CHANGE LICENSES は、顧客に配付されたコンパイル済みのシング�
 
 この方法であれば、ユーアーはデータベースに手を加えることなくライセンスを有効化することができます。
 
-#### 参照 
+## 参照 
 
 [License info](../commands/license-info.md)  
 [Is license available](is-license-available.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

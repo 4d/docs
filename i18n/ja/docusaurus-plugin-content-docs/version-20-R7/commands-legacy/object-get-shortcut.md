@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->**OBJECT GET SHORTCUT**コマンドは*object*と*\**引数で指定されたオブジェクトに割り当てられたカレントプロセスのキーボードショートカットを返します。<!-- END REF-->
 
@@ -37,11 +37,11 @@ displayed_sidebar: docs
 
 **注:** *object* 引数がフォーム中の複数のオブジェクトに該当し、それらに異なる値が設定されている場合、*key* には空の文字列 ("") が、そして *modifiers* には0が返されます。 
 
-#### 参照 
+## 参照 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

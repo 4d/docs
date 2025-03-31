@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DISTINCT VALUES.Summary-->**DISTINCT VALUES**コマンドは、*aField*が属するテーブルのカレントセレクションの*aField*フィールドからの重複しない(ユニークな)値で構成される*array*配列を作成します。<!-- END REF-->また任意の引数*countArray*にそれぞれの値のオカレンス数を返す事もできます。
 
@@ -40,11 +40,11 @@ displayed_sidebar: docs
 
 **4D Server:** このコマンドは4D Server用に最適化されています。サーバ側で配列の作成と値の計算が行われ、その後全体がクライアントに送られます。
 
-##### 
+### 
 
 **注:** このコマンドはオブジェクト型フィールドをサポートしません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、カレントセレクションから都市のリストを作成します。そして、会社の店舗がある都市の数を求めます: 
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
  ALERT("会社は"+String(Size of array(asCities))+"都市に店舗を持ちます。")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "Pictures"フィールドに割り当てられたキーワードインデックスの完全なリストを取得します: 
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
  DISTINCT VALUES([PICTURES]Photos;<>_MyKeywords)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 統計を計算するために、フィールド内の固有の値を降順で並べ替えしたい場合を考えます:
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
  SORT ARRAY($_issue_type_instances;$_issue_type;<)
 ```
 
-#### 参照 
+## 参照 
 
   
 [GET TEXT KEYWORDS](get-text-keywords.md)  
@@ -83,7 +83,7 @@ displayed_sidebar: docs
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

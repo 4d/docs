@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->The **FORM SET OUTPUT**  command sets the current output form for *table* to *form*, or *userForm*.<!-- END REF--> The form must belong to *aTable*.
 
@@ -39,7 +39,7 @@ For more information about user forms, refer to the *Overview of user forms* sec
 
 Output forms are used by three groups of commands. One group displays a list of records on screen, another group generates reports, and the third group exports data. The [DISPLAY SELECTION](display-selection.md) and [MODIFY SELECTION](modify-selection.md) commands display a list of records using an output form. You use the output form when creating reports with the [PRINT LABEL](print-label.md) and [PRINT SELECTION](print-selection.md) commands. Each of the export commands ([EXPORT DIF](export-dif.md), [EXPORT SYLK](export-sylk.md) and [EXPORT TEXT](export-text.md)) also uses the output form.
 
-#### Example 1 
+## Example 1 
 
 The following example shows a typical use of **FORM SET OUTPUT**. Note that although the **FORM SET OUTPUT** command appears immediately before the output form is used, this is not required. In fact, the command may be executed in a completely different method, as long as it is executed prior to this method:
 
@@ -49,7 +49,7 @@ The following example shows a typical use of **FORM SET OUTPUT**. Note that alth
  MODIFY SELECTION([Parts]) //This command uses both forms
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example uses the path to a .json form to print the records in an employee list: 
 
@@ -59,7 +59,7 @@ The following example uses the path to a .json form to print the records in an e
  PRINT SELECTION([Personnel])
 ```
 
-#### See also 
+## See also 
 
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
@@ -70,7 +70,7 @@ The following example uses the path to a .json form to print the records in an e
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

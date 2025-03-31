@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.INTERSECTION.Summary-->INTERSECTION compara *conjunto1 e conjunto2* e seleciona unicamente os registros que estão em ambos conjuntos.<!-- END REF--> A seguinte tabela lista todos os resultados possíveis de uma operação de intersecção de conjuntos.
 
@@ -34,7 +34,7 @@ O *conjuntoResultado* é criado por INTERSECTION.. O *conjuntoResultado* substit
   
 **4D Server**: em modo cliente/Servidor, conjuntos são "visíveis" dependendo do seu tipo (interprocessos, processo e local) e onde foram criados (servidor ou cliente). INTERSECTION exige que os três conjuntos sejam visíveis na mesma máquina.  Para maior informação veja o parágrafo *4D Server, conjuntos e seleções temporais* no manual de referência de 4D Server.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir pesquisa os clientes que são atendidos por dois representantes de vendas, Pedro e Paulo. Cada representante de vendas tem um conjunto com seus clientes. Os clientes que estão em ambos conjuntos são os que estão em contacto com Pedro e Paulo:  
 
@@ -44,12 +44,12 @@ O exemplo a seguir pesquisa os clientes que são atendidos por dois representant
  DISPLAY SELECTION([Clientes]) // Mostra os clientes em contato com os dois representantes de vendas
 ```
 
-#### Ver também 
+## Ver também 
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 The `New collection` command <!--REF #_command_.New collection.Summary-->creates a new empty or prefilled collection and returns its reference.<!-- END REF--> Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md). 
 
@@ -42,7 +42,7 @@ You must pay attention to the following conversion issues:
 *	Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
 *	If you pass a time, it is stored as a number of milliseconds (Real).
 
-#### Example 1
+## Example 1
 
 
 
@@ -54,7 +54,7 @@ You want to create a new empty collection and assign it to a 4D collection varia
   //$myCol=[]
 ```
 
-#### Example 2
+## Example 2
 
 You want to create a prefilled collection:
 
@@ -64,7 +64,7 @@ You want to create a prefilled collection:
   //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
-#### Example 3
+## Example 3
 
 You create a new collection and then add a new element:
 
@@ -77,12 +77,12 @@ You create a new collection and then add a new element:
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
 
-#### See also 
+## See also 
 
 [New shared collection](new-shared-collection.md)  
 [Type](../commands-legacy/type.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

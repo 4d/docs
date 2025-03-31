@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Get XML information.Summary-->The DOM Get XML information command retrieves diverse information about the XML element designated by *elementRef*.<!-- END REF--> 
 
@@ -30,11 +30,11 @@ In *xmlInfo*, pass a code indicating the type of information to be retrieved. Yo
 | SYSTEM ID    | Integer | 2     | System identifier                                                                                             |
 | Version      | Integer | 5     | Accepted XML version                                                                                          |
 
-#### See also 
+## See also 
 
 [XML GET ERROR](xml-get-error.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

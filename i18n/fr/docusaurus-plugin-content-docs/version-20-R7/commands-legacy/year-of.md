@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Year of.Summary-->**Year of** retourne un nombre indiquant l'année de *laDate*.<!-- END REF-->
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant illustre l'utilisation de **Year of**. Les résultats sont assignés à la variable *Résultat* : 
 
@@ -30,16 +30,16 @@ L'exemple suivant illustre l'utilisation de **Year of**. Les résultats sont ass
  Résultat:=Year of(Current date) // Résultat prend comme valeur l'année de la date d'aujourd'hui
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Reportez-vous à l'exemple de la fonction [Current date](current-date.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

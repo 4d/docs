@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->DESCRIBE QUERY EXECUTION コマンドはカレントプロセスにおいて、クエリの分析を有効にしたり無効にしたりします。<!-- END REF-->このコマンドは、4Dランゲージの[QUERY](query.md)コマンドのようなクエリの文脈でのみ機能します。
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 *status* 引数に[False](false.md "False")を渡すとクエリの分析を停止します。クエリ分析モードはアプリケーションを遅くします。
 
-#### 例題 
+## 例題 
 
 以下の例題は、コマンドを使用して取得できる情報のタイプを示します:
 
@@ -63,12 +63,12 @@ $vResultPath :
    </QueryExecution>
 ```
 
-#### 参照 
+## 参照 
 
 [Last query path](last-query-path.md)  
 [Last query plan](last-query-plan.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

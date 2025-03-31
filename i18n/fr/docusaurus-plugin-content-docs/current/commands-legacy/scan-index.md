@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SCAN INDEX.Summary-->La commande **SCAN INDEX** retourne une sélection de *nombre* enregistrements de la table du champ *leChamp*.<!-- END REF--> Cette commande est extrêmement rapide car elle utilise l'index.  
 Si vous passez *<*, **SCAN INDEX** retourne *nombre* enregistrements à partir de la fin de l'index (valeurs supérieures). Si vous passez *\>*, **SCAN INDEX** retourne *nombre* enregistrements à partir du début de l'index (valeurs inférieures). Si vous ne passez pas le dernier paramètre, la commande retourne *nombre* enregistrements à partir du début de l'index (équivaut à passer *\>*).
@@ -26,11 +26,11 @@ Si vous passez *<*, **SCAN INDEX** retourne *nombre* enregistrements à partir d
 
 Si vous spécifiez un nombre d'enregistrements supérieur au nombre d'enregistrements présents dans la table, **SCAN INDEX** retourne tous les enregistrements.
 
-##### 
+### 
 
 **Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant envoie des lettres aux 50 plus mauvais clients puis aux 50 meilleurs clients : 
 
@@ -45,13 +45,13 @@ L'exemple suivant envoie des lettres aux 50 plus mauvais clients puis aux 50 mei
  PRINT SELECTION([Clients]) // Imprimer les lettres
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 [REDUCE SELECTION](reduce-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

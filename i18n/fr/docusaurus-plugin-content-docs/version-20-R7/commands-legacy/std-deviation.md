@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Std deviation.Summary-->**Std deviation** retourne l'écart type (c.-à-d. la racine carrée de la variance) de *séries*.<!-- END REF--> 
 
@@ -22,7 +22,7 @@ Si *séries* est un champ indexé, l'index sera utilisé pour le calcul.
 
 Vous pouvez passer dans *séries* un tableau (à une ou deux dimensions). Dans ce cas, le tableau doit être de type Entier, Entier long ou Réel.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant est la méthode objet d'une variable appelée EcartT. La méthode assigne l'écart type d'une série à EcartT :
 
@@ -43,7 +43,7 @@ La méthode suivante est appelée pour imprimer les enregistrements de la sélec
 
 **Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple vous permet d’obtenir l’écart type d’une série de valeurs placées dans un tableau : 
 
@@ -54,14 +54,14 @@ Cet exemple vous permet d’obtenir l’écart type d’une série de valeurs pl
  vEcartT:=Std deviation($TabNote)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Average](average.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

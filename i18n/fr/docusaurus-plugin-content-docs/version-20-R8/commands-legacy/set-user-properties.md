@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Set user properties.Summary-->**Set user properties** vous permet de modifier et de mettre à jour les propriétés d'un compte actif d'utilisateur existant dont le numéro de référence est passé dans le paramètre *réfUtilisateur*, ou d'ajouter un nouvel utilisateur.<!-- END REF-->
 
@@ -48,11 +48,11 @@ Si vous passez le paramètre optionnel *adhésions*, vous modifiez toutes les ad
 
 **Notes pour les bases binaires :** Les valeurs des références des groupes et des utilisateurs sont fonction de la personne qui les crée (Super Utilisateur, Administrateur, ou propriétaire du groupe affilié). Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*. Si vous voulez ajouter un nouvel utilisateur affilié au Super\_Utilisateur, passez -1 dans réfUtilisateur. Si vous voulez ajouter un nouvel utilisateur affilié à l'Administrateur, passez -2 dans réfUtilisateur. 
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si vous n'avez pas les privilèges d'accès pour appeler **Set user properties** ou si le système de mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [DELETE USER](delete-user.md)  
 [GET GROUP LIST](get-group-list.md)  
@@ -61,7 +61,7 @@ Si vous n'avez pas les privilèges d'accès pour appeler **Set user properties**
 [Is user deleted](is-user-deleted.md)  
 [Validate password](validate-password.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

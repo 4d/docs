@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** retourne le prochain numéro automatique de *laTable*.<!-- END REF--> Ce numéro est unique pour chaque table. C'est une valeur qui ne se répète pas et qui est incrémentée à chaque enregistrement nouvellement créé dans la table(\*). 
 
@@ -40,7 +40,7 @@ Si la numérotation doit débuter à une valeur différente de 1, ajoutez simple
  [Table1]NumAuto:=Sequence number([Table1])+999
 ```
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant fait partie d'une méthode formulaire. Ces lignes de code testent s'il s'agit d'un nouvel enregistrement (si le numéro de facture est égal à une chaîne vide). Si l'enregistrement est nouveau, un numéro est affecté à la facture. Ce numéro de facture est construit avec deux informations : le numéro unique et le numéro de référence de l'utilisateur, qui était saisi à l'ouverture de la base. Le numéro unique est formaté en tant que chaîne avec une longueur de cinq caractères :
 
@@ -51,13 +51,13 @@ L'exemple suivant fait partie d'une méthode formulaire. Ces lignes de code test
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *A propos des numéros d'enregistrements*  
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

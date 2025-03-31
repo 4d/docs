@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.START MONITORING ACTIVITY.Summary-->The **START MONITORING ACTIVITY** command records operations exceeding a specified *duration* in memory.<!-- END REF--> It can be called and executed on 4D remote, 4D Server, and 4D standalone applications (if *source* isn't from network activity). Recorded activity can be retrieved using the [Monitored activity](monitored-activity.md) command. Call [STOP MONITORING ACTIVITY](stop-monitoring-activity.md) when you want to stop tracking activity.
 
@@ -31,7 +31,7 @@ The optional *source* parameter defines the kind of activity to monitor. Possibl
 
 **Note**: If the debug logs have been stopped on the 4D Server [Administration window](../ServerWindow/overview.md), **START MONITORING ACTIVITY** with Activity network will restart the logs.
 
-#### Example 
+## Example 
 
 You want to start/stop monitoring and review 4D data and debug activities lasting longer than a millisecond:
 
@@ -88,12 +88,12 @@ You want to start/stop monitoring and review 4D data and debug activities lastin
  }  
 \]
 
-#### See also 
+## See also 
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

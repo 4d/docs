@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Load 4D View document.Summary-->El comando **Load 4D View document** permite convertir un documento 4D View en un objeto 4D.<!-- END REF--> 
 
@@ -32,7 +32,7 @@ Utilizando este comando, puede recuperar toda información almacenada en sus doc
 
 **Nota**: si necesita convertir documentos de 4D View a 4D View Pro, se recomienda utilizar el comando dedicado  que realiza una conversión directa y transparente.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea cargar y convertir un documento 4D View almacenado en el disco:
 
@@ -196,7 +196,7 @@ Obtendrá el siguiente resultado (objeto stringified):
 **Nota:** para más información sobre el formato del [objeto](# "Datos estructurados como forma de objeto nativo 4D"), devuelto, contacte los servicios técnicos de 4D.
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

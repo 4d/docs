@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ALERT.Summary-->The **ALERT** command displays an alert dialog box composed of a note icon, a message, and an OK button.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ By default, the title of the OK button is “OK.” To change the title of the O
 
 **Tip:** Do not call the **ALERT** command from the section of a form or object method that handles the On Activate or On Deactivate form events; this will cause an endless loop.
 
-#### Example 1 
+## Example 1 
 
 This example displays an alert showing information about a company. Note that the displayed string contains carriage returns, which cause the string to wrap to the next line:
 
@@ -38,7 +38,7 @@ This line of code displays the following alert box (on Windows):
 
 ![](../assets/en/commands/pict4224938.en.png)
 
-#### Example 2 
+## Example 2 
 
 The line:
 
@@ -50,7 +50,7 @@ displays the alert dialog box (on Windows) shown:
 
 ![](../assets/en/commands/pict4224959.en.png)
 
-#### Example 3 
+## Example 3 
 
 The line:
 
@@ -62,13 +62,13 @@ displays the alert dialog box (on Windows) shown:
 
 ![](../assets/en/commands/pict4224968.en.png)
 
-#### See also 
+## See also 
 
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

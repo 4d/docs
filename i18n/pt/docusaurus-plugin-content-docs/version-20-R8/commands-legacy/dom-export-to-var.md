@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM EXPORT TO VAR.Summary-->O comando DOM EXPORT TO VAR permite salvar um árvore XML em uma variável texto ou BLOB.<!-- END REF-->  
 
@@ -26,7 +26,7 @@ Lembre que se utilizar uma variável de tipo texto para armazenar o elemento *re
   
 Em modo Unicode, o código original se conserva na variável.
 
-##### Notas sobre o processamento de caracteres de fim de linha 
+### Notas sobre o processamento de caracteres de fim de linha 
 
 Em XML, os saltos de linha não são significativos, independentemente se encontram dentro ou entre os elementos XML. Internamente, XML utiliza caracteres estandarte LF como separadores de linhas. Durante as operações de importação e exportação, os caracteres de salto de linha se podem converter. Durante uma importação, o analisador XML substitui os caracteres CRLF (rupturas de linha estandarte em Windows) por caracteres de LF. Durante a exportação, os caracteres LF se substituem por caracteres CR em caracteres macOS e CRLF em Windows.
 
@@ -38,7 +38,7 @@ Pode controlar o final de linha de XML e gerenciamento BOM com o comando [XML SE
 
 **Nota de compatibilidade**: em bancos de dados/projetos criados com versões 4D anteriores a v19.x, como padrão 4D usava CR como caracteres de final de linha em macOS e BOM. Para ativar as novas configurações padrão, marque as configurações de compatibilidade (ver *Página Compatibilidade*) ou use o comando [XML SET OPTIONS](xml-set-options.md). 
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo salva a árvore vRefElem em uma variável texto: 
 
@@ -47,16 +47,16 @@ Este exemplo salva a árvore vRefElem em uma variável texto:
  DOM EXPORT TO VAR(vRefElem;vtMeuTexto)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente, a variável sistema OK assume o valor 1\. Do contrário, assume o valor 0 e um erro é gerado (por exemplo, se a referência do elemento não for válida).
 
-#### Ver também 
+## Ver também 
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

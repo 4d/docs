@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SOAP Get info.Summary-->The **SOAP Get info** command retrieves, in the form of a character string, the different types of information concerning a SOAP request.<!-- END REF--> 
 
@@ -29,12 +29,12 @@ Pass the number of the type of SOAP information you want to get in the *infoNum*
 
 **Note:** Also for security reasons, it is possible to set the maximum size for Web Services requests sent to 4D. This configuration is carried out using the [SET DATABASE PARAMETER](set-database-parameter.md) command.
 
-#### See also 
+## See also 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

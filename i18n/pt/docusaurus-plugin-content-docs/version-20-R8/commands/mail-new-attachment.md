@@ -16,23 +16,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MAIL New attachment.Params-->
 
-| Parâmetro   | Tipo                               |                                       | Descrição                                                                                         |
-| ----------- | ---------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Parâmetro   | Tipo                               |                                       | Descrição                                                                                         |
-| ***         | ***                                | :---: | ***                                                                                               |
-| file        | 4D. File           | &#8594;           | Parâmetros                                                                                        |
-| zipFile     | 4D. ZipFile        | &#8594;           | Arquivo zip                                                                                       |
-| blob        | 4D. Blob           | &#8594;           | Blob contendo o anexo                                                                             |
-| path        | Text                               | &#8594;           | Pode passar uma rota ou um Blob para definir o anexo.                             |
-| name        | Text                               | &#8594;           | Nome + extensão usado pelo cliente email para designar o anexo                                    |
-| cid         | Text                               | &#8594;           | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |
-| type        | Text                               | &#8594;           | Valor do cabeçalho content-type                                                                   |
-| disposition | Text                               | &#8594;           | Valor do cabeçalho content-disposition: "inline" ou "attachment". |
-| Resultados  | 4D. MailAttachment | &#8592;           | Objeto anexo                                                                                      |
+| Parâmetro   | Tipo                               |                             | Descrição                                                                                         |
+| ----------- | ---------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
+| file        | 4D. File           | &#8594; | Parâmetros                                                                                        |
+| zipFile     | 4D. ZipFile        | &#8594; | Arquivo zip                                                                                       |
+| blob        | 4D. Blob           | &#8594; | Blob contendo o anexo                                                                             |
+| path        | Text                               | &#8594; | Pode passar uma rota ou um Blob para definir o anexo.                             |
+| name        | Text                               | &#8594; | Nome + extensão usado pelo cliente email para designar o anexo                                    |
+| cid         | Text                               | &#8594; | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |
+| type        | Text                               | &#8594; | Valor do cabeçalho content-type                                                                   |
+| disposition | Text                               | &#8594; | Valor do cabeçalho content-disposition: "inline" ou "attachment". |
+| Resultados  | 4D. MailAttachment | &#8592; | Objeto anexo                                                                                      |
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
@@ -85,7 +83,7 @@ By default, if the *disposition* parameter is omitted:
 - if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
 - if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
 
-#### Exemplo 1
+## Exemplo 1
 
 Se quiser enviar um email com um arquivo selecionado pelo usuário como um anexo e uma imagem embebida no corpo HTML:
 
@@ -123,7 +121,7 @@ $transporter.send($email) //send mail
 End if
 ```
 
-#### Exemplo 2
+## Exemplo 2
 
 Se quiser enviar um email com uma área 4D Write pro como um anexo:
 
@@ -149,11 +147,11 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
-#### Propriedades
+## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1644                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1644                        |
+| Thread safe    | &check; |
 
 

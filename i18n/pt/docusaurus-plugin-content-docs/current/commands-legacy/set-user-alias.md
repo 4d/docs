@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET USER ALIAS.Summary-->O comando **SET USER ALIAS** define um nome personalizado alternativo para usar ao invés do nome da conta de usuário 4D atual para a sessão atual.<!-- END REF--> O nome alternativo se conserva na memória e se aplica apenas ao usuário atual.
 
@@ -27,7 +27,7 @@ Para eliminar o *alias* de usuário 4D atual, chame a **SET USER ALIAS**("").
 
 **Nota**: ao chamar ao comando [CHANGE CURRENT USER](change-current-user.md) se restabelece o nome de alias para o usuário atual.
 
-#### Exemplo 
+## Exemplo 
 
 Seus usuários se administran através de uma tabela personalizada e utilizam a mesma conta de usuário 4D. Em cada máquina cliente, pode executar:
 
@@ -35,13 +35,13 @@ Seus usuários se administran através de uma tabela personalizada e utilizam a 
  SET USER ALIAS([myUsers]userName)
 ```
 
-#### Ver também 
+## Ver também 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [Current user](current-user.md)  
 [SET GROUP ACCESS](set-group-access.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

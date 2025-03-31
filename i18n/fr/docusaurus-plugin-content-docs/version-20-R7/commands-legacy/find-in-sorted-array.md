@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Find in sorted array.Summary-->La commande **Find in sorted array** retourne **vrai** si au moins un élément du *tableau* trié correspond à *valeur*, et optionnellement retourne la position du ou des élément(s) trouvé(s).<!-- END REF--> A la différence de [Find in array](find-in-array.md), **Find in sorted array** travaille uniquement avec un *tableau* trié et fournit des informations sur la position des occurrences, ce qui permet d'insérer des éléments si nécessaire.
 
@@ -37,7 +37,7 @@ Lorsque la commande renvoie **Faux**, la *valeur* retournée dans le paramètre 
 
 La valeur retournée dans *posFin* peut être utilisée conjointement à celle retournée dans *posDébut* afin d'itérer sur chaque élément du tableau correspondant à la *valeur* (via une [ARRAY TO LIST](array-to-list.md)) ou pour trouver le nombre total d'occurrences (comme le ferait la commande [Count in array](count-in-array.md), mais plus rapidement).
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez insérer une valeur, si nécessaire, tout en conservant le tableau trié :
 
@@ -51,7 +51,7 @@ Vous souhaitez insérer une valeur, si nécessaire, tout en conservant le tablea
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez trouver le nombre d'occurrences de chaînes débutant par "test" et créer une chaîne qui concatène tous ces éléments : 
 
@@ -66,13 +66,13 @@ Vous souhaitez trouver le nombre d'occurrences de chaînes débutant par "test" 
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Count in array](count-in-array.md)  
 [Find in array](find-in-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

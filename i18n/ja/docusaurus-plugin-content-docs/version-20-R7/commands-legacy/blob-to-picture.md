@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.BLOB TO PICTURE.Summary-->BLOB TO PICTURE コマンドは、元のフォーマットに関わらず、BLOBに格納されたピクチャを4Dのピクチャ変数やフィールドに挿入します。<!-- END REF-->
 
@@ -42,17 +42,17 @@ displayed_sidebar: docs
 
 **Note:** [VARIABLE TO BLOB](variable-to-blob.md) コマンドで作成されたBLOBは自動で管理されます。BLOBは署名されるため、カプセル化するためにcodecを渡す必要はありません。この場合、反対の操作にはcodec IDとして".4DVarBlob"を [PICTURE TO BLOB](picture-to-blob.md) コマンドに渡します。  
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKは1に設定されます。変換に失敗 (QuickTimeがインストールされていない、Blobに読み取り可能なピクチャが格納されていない、codec引数を認識できたがBlobが有効でないなど) した場合、OKは0に設定され、4Dのピクチャ変数やフィールドは空になります。
 
-#### 参照 
+## 参照 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

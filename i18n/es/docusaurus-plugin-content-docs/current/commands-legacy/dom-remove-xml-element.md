@@ -13,22 +13,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Summary-->El comando DOM REMOVE XML ELEMENT  elimina el elemento designado por *elementRef*.<!-- END REF-->
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0 y se genera un error.  
   
 Un error se genera cuando la referencia del elemento no es válida.  
 
-#### Ver también 
+## Ver también 
 
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

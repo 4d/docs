@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->**OBJECT Get text orientation**コマンドは、引数 *object* と *\** で指定したオブジェクトのテキストに適用されたカレントの方向の値を返します。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 | Orientation 90° left  | 倍長整数 | 270 | テキストの方向を反時計回りに90°回転 |
 | Orientation 90° right | 倍長整数 | 90  | テキストの方向を時計回りに90°回転  |
 
-#### 例題 
+## 例題 
 
 以下の様な、フォームエディターで"90°反時計回り"が適用されているオブジェクトがあるとき:
 
@@ -52,11 +52,11 @@ displayed_sidebar: docs
  $vOrt:=OBJECT Get text orientation(*;"myText") //$vOrt=180
 ```
 
-#### 参照 
+## 参照 
 
 [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

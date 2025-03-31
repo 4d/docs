@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility 
+## Compatibility 
 
 <!--REF #_command_.WP Table range.Summary-->**WP Table range** was named **WP Create table range** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
 
-#### Description 
+## Description 
 
 The **WP Table range** command returns a range object that addresses only the tables that intersect with the *targetObj* you passed as parameter. It will return a range of the wk type table, even if the *targetObj* you passed as parameter does not contain a table. The table range object returned can be used by [WP GET ATTRIBUTES](wp-get-attributes.md) and [WP SET ATTRIBUTES](wp-set-attributes.md) to handle attributes that apply to tables and table contents. 
 
@@ -28,7 +28,7 @@ In the *targetObj* parameter, you can pass:
 * an element (body / header / footer / paragraph / section / subsection), or
 * a 4D Write Pro document
 
-#### Example 
+## Example 
 
 You want to modify the look of the tables contained in the table range: 
 
@@ -43,7 +43,7 @@ You want to modify the look of the tables contained in the table range:
  WP SET ATTRIBUTES(tableRange;wk font bold;wk true)
 ```
 
-#### See also 
+## See also 
 
 [WP Get elements](wp-get-elements.md)  
 [WP Text range](wp-text-range.md)  

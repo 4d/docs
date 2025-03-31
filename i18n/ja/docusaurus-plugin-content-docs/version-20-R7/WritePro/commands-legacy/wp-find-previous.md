@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Find previous.Summary-->**WP Find previous** コマンドは、コマンドは*targetObj* 引数のオブジェクト内の*searchBefore* 引数で指定したレンジの前の部分内を、*searchValue* 引数の値を、*searchCondition* 引数の検索条件に基づいて検索を行います。<!-- END REF--> また任意の引数を使用することで見つかった結果を置き換えることができます。
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 
 検索の結果何も見つからなかった場合には空のレンジが返されます。
 
-#### 例題 
+## 例題 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$previousRanges: object
@@ -96,7 +96,7 @@ displayed_sidebar: docs
  $previousRanges:=WP Find previous($target;"alpha";$options)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Find all](wp-find-all.md)  
 [WP Find next](wp-find-next.md)  

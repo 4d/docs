@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX Get array.Summary-->**Nota:** este comando sólo funciona con los list box de tipo array.<!-- END REF-->
 
@@ -42,7 +42,7 @@ El comando devuelve uno de los siguientes valores:
 * un puntero al array de la propiedad solicitada, definido por el usuario.
 * un puntero al array de la propiedad solicitada, definido dinámicamente cuando se llama al comando [LISTBOX SET ROW COLOR](listbox-set-row-color.md) o [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)
 
-#### Ejemplo 
+## Ejemplo 
 
 Ejemplos típicos de uso:
 
@@ -56,12 +56,12 @@ Ejemplos típicos de uso:
   // asociado a la columna de list box "Col4"
 ```
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

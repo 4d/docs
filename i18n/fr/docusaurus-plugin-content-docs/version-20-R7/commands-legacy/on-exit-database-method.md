@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Exit database method.Summary-->La méthode base **On Exit** est appelée une fois lorsque vous quittez la base.<!-- END REF-->
 
@@ -57,7 +57,7 @@ Lorsqu'on quitte 4D Server et que l'on accorde un délai aux utilisateurs (par e
 
 Pour stopper proprement les process en cours dans le cas où l'application est forcée de quitter, vous devez tester la commande [Process aborted](process-aborted.md) dans chaque boucle (Boucle, Tant que, Repeter) qui peut potentiellement durer plus d'une seconde. [Process aborted](process-aborted.md) retourne **vrai** si 4D (mode local, distant ou 4D Server) est sur le point de quitter, signifiant que les traitements vont stopper immédiatement. Dans ce cas, annulez tous les traitements ([CANCEL TRANSACTION](cancel-transaction.md), etc.) et quittez le plus vite possible. Alors que vous avez du temps si l'utilisateur quitte manuellement, vous n'en avez pas lorsque l'application est forcée de quitter.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant illustre un cas typique où vous lancez un ou plusieurs process d'arrière-plan pour réaliser des tâches régulières, fonctionnant sans fin, dans la Méthode base On startup (ou dans le Méthode base On server startup). Un marqueur dans l'objet `Storage` de l'application est utilisé pour leur indiquer de terminer la tâche - et pour s'assurer qu'ils ont terminé.
 
@@ -104,12 +104,12 @@ L'exemple suivant illustre un cas typique où vous lancez un ou plusieurs proces
     End while
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [On Startup database method](on-startup-database-method.md)  
 [QUIT 4D](quit-4d.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

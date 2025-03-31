@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Is defined.Summary-->The **OB Is defined** command returns True if *object* or *property* is defined, and False otherwise.<!-- END REF-->can be an object varialble or a 4D object field.
 
@@ -25,7 +25,7 @@ By default, if you omit the *property* parameter, the command checks whether the
 
 If you pass the *property* parameter, the command checks whether this property exists in *object*. Note that the *property* parameter is case sensitive. 
 
-#### Example 1 
+## Example 1 
 
 Syntax testing the initialization of an object:
 
@@ -38,7 +38,7 @@ Syntax testing the initialization of an object:
  $def2:=OB Is defined($object) // $def2=true since $object is empty {} but has been initialized
 ```
 
-#### Example 2 
+## Example 2 
 
 Test for existence of a property:
 
@@ -57,11 +57,11 @@ This test is equivalent to:
  If(OB Get type($Object;"name")#Is undefined)
 ```
 
-#### See also 
+## See also 
 
 [OB Is empty](ob-is-empty.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

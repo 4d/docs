@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->OBJECT SET SCROLLBARコマンドは、引数*object* と *\** で指定したオブジェクトの水平/垂直スクロールバーの表示/非表示を設定します。<!-- END REF--> 
 
@@ -38,14 +38,14 @@ displayed_sidebar: docs
 
 **注:** 自動モードについての詳細は、*スクロールバー* を参照して下さい。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get property](listbox-get-property.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

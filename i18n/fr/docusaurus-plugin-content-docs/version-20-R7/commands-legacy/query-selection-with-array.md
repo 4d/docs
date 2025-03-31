@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Summary-->La commande **QUERY SELECTION WITH ARRAY** recherche dans la sélection courante de la table du champ passé en premier paramètre les enregistrements pour lesquels la valeur de *champCible* est égale à au moins une des valeurs des éléments du *tableau*.<!-- END REF--> Les enregistrements trouvés constituent la nouvelle sélection courante.
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 Pour plus d’informations, reportez-vous à la description de la commande [QUERY WITH ARRAY](query-with-array.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY WITH ARRAY](query-with-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

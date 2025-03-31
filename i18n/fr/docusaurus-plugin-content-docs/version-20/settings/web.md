@@ -93,7 +93,7 @@ Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémenta
 
 -   [Process Web simultanés maxi](#maximum-concurrent-web-processes)
 -   [Réutilisation des contextes temporaires (4D en mode distant)](#reuse-temporary-contexts)
--   [Utiliser des process préemptifs](#use-preemptive-web-processes)
+-   [Utiliser des process préemptifs](#use-preemptive-processes)
 
 #### Anciennes sessions (sessions process uniques)
 

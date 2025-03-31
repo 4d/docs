@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Delete string.Summary-->Delete string deletes *numChars* from *source*, starting at *where*, and returns the resulting string.<!-- END REF-->
 
@@ -30,7 +30,7 @@ If *where* is less than one, the characters are deleted from the beginning of th
 
 If *where* plus *numChars* is equal to or greater than the length of *source*, the characters are deleted from *where* to the end of *source*.
 
-#### Example 
+## Example 
 
 The following example illustrates the use of Delete string. The results are assigned to the variable *vtResult*.
 
@@ -40,13 +40,13 @@ The following example illustrates the use of Delete string. The results are assi
  vtResult:=Delete string(vtOtherVar;3;32000) // vtResult gets the first two characters of vtOtherVar
 ```
 
-#### See also 
+## See also 
 
 [Change string](change-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

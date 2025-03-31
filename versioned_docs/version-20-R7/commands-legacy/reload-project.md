@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELOAD PROJECT.Summary-->The **RELOAD PROJECT** command reloads the source file definitions (methods, forms, etc.) from the disk for the running project in the current 4D environment.<!-- END REF--> It can only be used with 4D projects executed in **interpreted mode**. The command execution is asynchronous. 
 
@@ -31,11 +31,11 @@ When the command is called from:
 * a 4D Developer connected remotely to a 4D Server, it is executed on 4D Server only.
 * a 4D single-user or a 4D Server, it is executed locally.
 
-#### See also 
+## See also 
 
 *Developing a project*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

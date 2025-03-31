@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note 
+## Note 
 
 <!--REF #_command_.OPEN DATABASE.Summary-->The **OPEN DATABASE** command closes the current 4D database and opens on-the-fly the database defined by *filePath*.<!-- END REF--> This command is useful for automatic testing purposes, to reopen a database automatically after a compilation, or to allow a merged 4D remote application to select the a database server to connect.
 
@@ -36,13 +36,13 @@ The command is executed in an asynchronous manner: after its call, 4D continues 
 
 If the target database file is not found or is invalid, a standard file system error is returned and 4D does nothing.
 
-#### Example 1 
+## Example 1 
 
 ```4d
  OPEN DATABASE("C:\\databases\\Invoices\\Invoices.4db")
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to select a server at startup from a single-user application. You could execute this code from a process launched by the [On Startup database method](on-startup-database-method.md):
 
@@ -71,7 +71,7 @@ You want to select a server at startup from a single-user application. You could
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

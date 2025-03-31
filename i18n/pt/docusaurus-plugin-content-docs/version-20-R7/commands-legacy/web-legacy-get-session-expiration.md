@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidade 
+## Nota de compatibilidade 
 
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Summary-->Este comando só pode ser utilizao com **sessões web herdadas**, disponíveis em bancos convertidos a partir de versões anteriores a 4D v18 R6\.<!-- END REF--> Devolve valores nulos de data e hora quando se habilitar o modo **sessões web escalonáveis** (recomendado em 4D v18 R6 e superiores). Para saber mais, consulte *Web Sessions Management (Legacy)*.
 
-#### Descrição 
+## Descrição 
 
 O comando **WEB LEGACY GET SESSION EXPIRATION** devolve a informação relativa ao vencimento da cookie da sessão cujo UUID passou em *idSessao*.
 
@@ -33,13 +33,13 @@ O parâmetro *dataVenc* recebe a data de vencimento e o parâmetro *horaVenc* re
 *Terceira petição, terça-feira as 4:00: cookie vencida*  
  \-> envia uma cookie 4DSID aaabbb vence I+24h = quarta-feira 01:00
 
-#### Ver também 
+## Ver também 
 
 [WEB Get current session ID](web-get-current-session-id.md)  
 *Web Sessions Management (Legacy)*  
 [WEB SET OPTION](web-set-option.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

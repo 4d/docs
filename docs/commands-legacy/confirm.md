@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CONFIRM.Summary-->The CONFIRM command displays a confirm dialog box composed of a note icon, a message, an OK button, and a Cancel Button.<!-- END REF-->
 
@@ -27,7 +27,7 @@ The OK button has the [default button](../FormObjects/properties_Appearance.md#d
 
 **Tip:** Do not call the CONFIRM command from the section of a form or object method that handles the On Activate or On Deactivate form events; this will cause an endless loop.
 
-#### Example 1 
+## Example 1 
 
 The line:
 
@@ -45,7 +45,7 @@ will display the confirm dialog box (on Windows) shown here:
 
 ![](../assets/en/commands/pict4225029.en.png)
 
-#### Example 2 
+## Example 2 
 
 The line:
 
@@ -57,7 +57,7 @@ will display the confirm dialog box (on Windows) shown here:
 
 ![](../assets/en/commands/pict4225038.en.png)
 
-#### Example 3 
+## Example 3 
 
 You are writing a 4D application for the international market. You wrote your interface strings along with their target language translations in XLIFF files. In doing so, the code:
 
@@ -75,7 +75,7 @@ could display the French confirm dialog box (on Windows) shown here:
 
 **Note:** For more information on xliff database localization, please refer to the *Appendix B: XLIFF architecture* section. 
 
-#### Example 4 
+## Example 4 
 
 The line:
 
@@ -88,12 +88,12 @@ will display the confirm dialog box (on Windows) shown here:
 
 ![](../assets/en/commands/pict4225058.en.png)
 
-#### See also 
+## See also 
 
 [ALERT](alert.md)  
 [Request](request.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

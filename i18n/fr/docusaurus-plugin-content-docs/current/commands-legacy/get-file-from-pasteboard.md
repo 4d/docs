@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->La commande **Get file from pasteboard** retourne le chemin d’accès absolu d’un fichier inclus dans une opération de glisser-déposer.<!-- END REF--> Plusieurs fichiers pouvant être sélectionnés et déplacés simulanément, le paramètre *indiceN* permet de désigner un fichier parmi l’ensemble des fichiers sélectionnés.
 
 S’il n’y a pas de Nième fichier dans le conteneur de données, la commande retourne une chaîne vide.
 
-#### Exemple 
+## Exemple 
 
 L’exemple suivant permet de récupérer dans un tableau tous les chemins d’accès des fichiers inclus dans le glisser-déposer :
 
@@ -38,11 +38,11 @@ L’exemple suivant permet de récupérer dans un tableau tous les chemins d’a
  Until($vtfichier="")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -10,11 +10,11 @@ displayed_sidebar: docs
 
 A palavra-chave **cs** está descrita na [**Página Conceito para Classes**](../Concepts/classes.md#cs).
 
-#### Propriedades
+## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1710                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1710                        |
+| Thread safe    | &check; |
 
 

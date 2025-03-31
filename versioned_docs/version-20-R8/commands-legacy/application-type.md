@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Application type.Summary-->The Application type command returns a numeric value that denotes the type of 4D environment that you are running.<!-- END REF--> 4D provides the following predefined constants:  
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **Note:** *4D Desktop* incorporates certain deployment offers, such as, for example,"4D SQL Desktop".
 
-#### Example 
+## Example 
 
 Somewhere in your code, other than in the *On Server Startup Database Method*, you need to check if you are running 4D Server. You can write:
 
@@ -38,12 +38,12 @@ Somewhere in your code, other than in the *On Server Startup Database Method*, y
  End if
 ```
 
-#### See also 
+## See also 
 
 [Application version](application-version.md)  
 [Version type](version-type.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Log.Summary-->Log は*number*の自然対数を返します。<!-- END REF-->LogはExpの逆の演算を実行する関数です。
 
 **Note:** 4Dは定義済み定数e number (2.71828...) を提供しています。
 
-#### 例題 
+## 例題 
 
 以下の行は1を表示します:
 
@@ -28,11 +28,11 @@ displayed_sidebar: docs
  ALERT(String(Log(Exp(1)))
 ```
 
-#### 参照 
+## 参照 
 
 [Exp](exp.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

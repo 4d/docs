@@ -4,7 +4,7 @@ title: Texto e imagem
 ---
 
 
-## Rota de acesso ao Fundo
+## Rota de acesso ao fundo
 
 Define o caminho da imagem que será desenhada no fundo do objeto. Se o objeto utilizar um [ícone ](#picture-pathname) com [estados diferentes](#number-of-states), a imagem de fundo suportará automaticamente o mesmo número de estados.
 
@@ -181,7 +181,7 @@ Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
 ## Image hugs title
 
-Esta propriedade permite-lhe definir se o título e a imagem do botão devem ser visualmente adjacentes ou separados, conforme as propriedades [Posição do título/da imagem](#titlepicture-position) e [Alinhamento horizontal](#horizontal-alignment).
+Esta propriedade permite-lhe definir se o título e a imagem do botão devem ser visualmente adjacentes ou separados, conforme as propriedades [Posição do título/da imagem](#titlepicture-position) e [Alinhamento horizontal](properties_Text.md#horizontal-alignment).
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 

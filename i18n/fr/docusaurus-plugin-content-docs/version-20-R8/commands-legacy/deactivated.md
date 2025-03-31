@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Deactivated.Summary-->**Deactivated** retourne Vrai dans une méthode formulaire ou méthode objet lorsque la fenêtre appartenant au process du premier plan, contenant le formulaire, passe à l'arrière-plan.<!-- END REF-->
 
@@ -21,12 +21,12 @@ Si vous voulez que le cycle d'exécution **Deactivated** soit généré, vérifi
 
 **Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Deactivate.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Activated](activated.md)  
 [Form event code](../commands/form-event-code.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

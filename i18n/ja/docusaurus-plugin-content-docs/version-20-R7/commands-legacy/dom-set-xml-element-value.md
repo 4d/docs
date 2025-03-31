@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->**DOM SET XML ELEMENT VALUE** コマンドを使用して、*elementRef* で指定した要素の値を更新できます。<!-- END REF-->
 
@@ -41,11 +41,11 @@ displayed_sidebar: docs
 
 **注:** *elementRef* で指定された要素が**DOM SET XML ELEMENT VALUE** コマンドで処理されたBLOB の場合、それは自動でBase64 にエンコードされます。この場合[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) は自動で逆の処理を行います。
 
-##### 行末文字の処理についての注意 
+### 行末文字の処理についての注意 
 
 XML処理のルールに準拠するため、行末文字シークエンス(CRとCRLF)は全てLF文字に変換されます。
 
-#### 例題 1 
+## 例題 1 
 
 以下のXMLソースで: 
 
@@ -69,7 +69,7 @@ XML処理のルールに準拠するため、行末文字シークエンス(CR�
 </Book>
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下のXMLソースがあるとき:
 
@@ -108,16 +108,16 @@ XML処理のルールに準拠するため、行末文字シークエンス(CR�
 </Maths>
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、そうでなければ0が設定されてエラーが生成されます (例えば要素参照が無効な時など)。
 
-#### 参照 
+## 参照 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->The **OPEN COLOR PICKER** command displays the system color picker dialog box.<!-- END REF--> 
 
@@ -25,11 +25,11 @@ If you pass 0 in the *textOrBackground* parameter or omit this parameter, the se
 
 If the color was changed, the On After Edit form event is generated for the object. 
 
-#### See also 
+## See also 
 
 [OPEN FONT PICKER](open-font-picker.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

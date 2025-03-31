@@ -42,7 +42,7 @@ Si vous ne passez pas le paramètre *process*, **SET MENU ITEM SHORTCUT** est ap
 
 Si vous passez *0* (zéro) dans *touche*, l'équivalent clavier de la commande de menu est supprimé.
 
-##### Compatibilité 
+### Compatibilité 
 
 Pour des raisons de compatibilité, la commande accepte également un code de caractère dans le paramètre *touche* (ancienne syntaxe). Dans ce cas, le raccourci inclut automatiquement la touche **Ctrl** (Windows) ou **Cmd** (macOS) et le paramètre *modificateurs* n'est pas pris en compte.
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HIDE PROCESS.Summary-->HIDE PROCESSは*process*に属するすべてのウィンドウを非表示にします。<!-- END REF-->*process*のすべてのインタフェース要素は、次に[SHOW PROCESS](show-process.md "SHOW PROCESS")コマンドを実行するまで非表示となります。そのプロセスのメニューバーも非表示になります。したがって、プロセスが非表示になっているときにウィンドウを開いても画面が再描画されたり表示されません。プロセスが既に非表示になっている場合、このコマンドは何も実行しません。
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 プロセスを非表示にした場合でも、そのプロセスは実行し続けます。
 
-#### 例題 
+## 例題 
 
 次の例は、カレントプロセスのすべてのウインドウを非表示にします:
 
@@ -31,12 +31,12 @@ displayed_sidebar: docs
  HIDE PROCESS(Current process)
 ```
 
-#### 参照 
+## 参照 
 
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

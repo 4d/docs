@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY BLOB.Summary-->La commande **ARRAY BLOB** crée ou redimensionne un tableau d’éléments de type Blob en mémoire.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Lorsque vous appliquez la commande **ARRAY BLOB** à un tableau existant :
 * Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à un BLOB vide ([BLOB size](blob-size.md) \= 0).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple crée un tableau process contenant 100 éléments de type BLOB :
 
@@ -38,7 +38,7 @@ Cet exemple crée un tableau process contenant 100 éléments de type BLOB :
  ARRAY BLOB(tabBlob;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type BLOB :
 
@@ -46,7 +46,7 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  ARRAY BLOB($tabBlob;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type BLOB. La variable *$vByteValue* reçoit le 10e octet du BLOB placé dans la 7e colonne et la 5e ligne du tableau BLOB :
 
@@ -57,11 +57,11 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  $vByteValue:=$abValues{5}{7}{9}
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Créer des tableaux*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

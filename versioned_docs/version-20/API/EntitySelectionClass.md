@@ -1111,7 +1111,7 @@ The following generic code duplicates all entities of the entity selection:
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>History</summary>

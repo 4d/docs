@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP New header.Summary-->O comando **WP New header** cria e devolve um cabeçalho associado à seção ou subseção definida pelo parâmetro *wpSection*.<!-- END REF-->
 
 Se já tiver sido definido um elemento de cabeçalho para a seção ou subseção, um objeto *indefinido é devolvido e* um erro é gerado.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser criar um cabeçalho para as páginas corretas de uma seção:
 
@@ -37,7 +37,7 @@ Se quiser criar um cabeçalho para as páginas corretas de uma seção:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP DELETE HEADER ](wp-delete-header.md)  
 [WP Get header](wp-get-header.md)  

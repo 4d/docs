@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.REJECT.Summary-->REJECT tem duas sintaxes.<!-- END REF--> A primeira sintaxe não tem parâmetros. Neste caso, o comando rechaça a totalidade da entrada e obriga ao usuário a permanecer no formulário. A segunda sintaxe recusa somente o *campo* e obriga ao usuário a permanecer no campo. 
 
@@ -29,7 +29,7 @@ A segunda sintaxe de REJECT se executa com o parâmetro *campo*. O cursor perman
   
 Pode usar [HIGHLIGHT TEXT](highlight-text.md) para selecionar os dados no campo que está sendo rejeitado.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte exemplo é sobre um registro de transação bancária que ilustra a primeira sintaxe de REJECT utilizada no método de objeto de um botão Aceitar. A tecla Enter está definida como um equivalente do botão. Isto significa que inclusive se o usuário pressiona a tecla Enter para aceitar o registro, o método de objeto do botão será executado. Se a transação é um cheque, então deve haver um número de cheque. Se não houver um número de cheque, se recusa a validação: 
 
@@ -42,7 +42,7 @@ O seguinte exemplo é sobre um registro de transação bancária que ilustra a p
  End case
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O seguinte exemplo é parte de um método de objeto para um campo *\[Empregados\]Salario*. O método de objeto prova o campo *\[Empregados\]Salario* e recusa o campo se o valor for menor que $10.000\. Pode realizar a mesma operação especificando um valor mínimo para o campo no editor de formulários:   
   
@@ -56,13 +56,13 @@ O seguinte exemplo é parte de um método de objeto para um campo *\[Empregados\
  End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

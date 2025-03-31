@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FIRST PAGE.Summary-->FORM FIRST PAGE modifica a página atual do formulário pela primeira página do formulário.<!-- END REF--> Se não mostra nenhum formulário, ou carregado pelo comando [FORM LOAD](../commands/form-load.md), ou se a primeira página do formulário já se mostra, FIRST PAGE não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir é um método de uma linha, chamado por um comando de menu, o qual mostra a primeira página de um formulário.
 
@@ -24,7 +24,7 @@ O exemplo a seguir é um método de uma linha, chamado por um comando de menu, o
  FORM FIRST PAGE
 ```
 
-#### Ver também 
+## Ver também 
 
 [FORM Get current page](form-get-current-page.md)  
 [FORM GOTO PAGE](form-goto-page.md)  

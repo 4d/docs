@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.True.Summary-->True retorna o valor booleano Verdadeiro (True).<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir atribui a variável *vbOpcoes* a Verdadeiro :
 
@@ -25,12 +25,12 @@ O exemplo a seguir atribui a variável *vbOpcoes* a Verdadeiro :
  vbOpcoes:=True
 ```
 
-#### Ver também 
+## Ver também 
 
 [False](false.md)  
 [Not](not.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Summary-->La commande **SAX GET XML ELEMENT VALUE** permet de récupérer la *valeur* d’un élément XML existant dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML DATA. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
 Passez dans le paramètre *valeur* une variable de type Texte ou BLOB devant récupérer les données. Si vous passez un BLOB, la commande tentera automatiquement de le décoder en base64.
 
-#### Exemple 
+## Exemple 
 
 Considérons l’extrait de code XML suivant :
 
@@ -36,16 +36,16 @@ L’instruction suivante retournera “MonTexte” dans *vValeur* :
  SAX GET XML ELEMENT VALUE(RefDoc;vValeur)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET FIELD RELATION.Summary-->O comando SET FIELD RELATION permite definir separadamente o estado automático/manual de cada relação do banco para o processo atual, sem considerar seu estado inicial definido no ambiente Desenho na janela de propriedades das relações.<!-- END REF-->
 
@@ -33,7 +33,7 @@ Passe nos parâmetros *um* e *muitos*, os valores que indicam o cambio de estado
   
 **Note**: Se passar True ao comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md) durante a mesma sessão, as chamadas ao comando SET FIELD RELATION se ignoram, sem importar se estão localizadas antes ou depois de [SET AUTOMATIC RELATIONS](set-automatic-relations.md). Para "bloquear" o modo automático e ter em conta chamadas a SET FIELD RELATION, passe False a [SET AUTOMATIC RELATIONS](set-automatic-relations.md).
 
-#### Exemplo 
+## Exemplo 
 
 I código abaixo permite configurações úteis apenas no editor de Relatório Rápido:  
   
@@ -43,14 +43,14 @@ SET FIELD RELATION(\[Faturas\]ID\_Cliente;Automatic;Automatic)
 SET FIELD RELATION(\[Linha\_Fatura\]ID\_Fatura;Automatic;Automatic)  
 QR REPORT(\[Faturas\];Char(1))\[#/code4D\]
 
-#### Ver também 
+## Ver também 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

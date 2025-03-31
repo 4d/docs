@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP TABLE DELETE ROWS.Summary-->**WP TABLE DELETE ROWS** コマンドは、4D Write Proの表から一つまたは複数の行を削除します。<!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 全ての行を表から削除した場合、表全体が削除されます。
 
-#### 例題 
+## 例題 
 
 *Invoice* の表から行を一つ削除したい場合を考えます。以下のコードを実行すると:
 
@@ -50,6 +50,6 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict4680306.en.png)
 
-#### 参照 
+## 参照 
 
 [WP TABLE DELETE COLUMNS](wp-table-delete-columns.md)  

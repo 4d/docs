@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get 4D folder.Summary-->O comando **Get 4D folder** retorna o caminho para a pasta 4D ativa do aplicativo atual, ou para a pasta do ambiente 4D especificado pelo parâmetro *pasta*, se fornecido.<!-- END REF-->
 
@@ -41,7 +41,7 @@ O parâmetro opções permite personalizar la ruta de la carpeta de recursos loc
 
 Nota: se o comando Get 4D folder for chamado desde um 4D remoto, a rota devolvida é a da máquina remota, não a de 4D Server.
 
-##### Pasta 4D Ativa 
+### Pasta 4D Ativa 
 
 Aplicações em ambiente 4D usar a pasta específica para armazenar as seguintes informações:
 
@@ -57,17 +57,17 @@ Com as principais aplicações 4D (4D e 4D Server), a pasta 4D ativa chamada **4
 * macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
 
 
-##### Pasta Licenças 
+### Pasta Licenças 
 
 Pasta contendo os arquivos licença da máquina.
 
 **Nota:** No caso de uma aplicação fusionada com 4D Volume Desktop, a pasta licenças é incluída no pacote da aplicação.
 
-##### Pasta Data 
+### Pasta Data 
 
 Rota da pasta que contém o arquivo de dados atual. O caminho da rota é expresso usando a sintaxe normal da plataforma atual.
 
-##### Pasta 4D Client Database (máquinas cliente) 
+### Pasta 4D Client Database (máquinas cliente) 
 
 Rota da pasta 4D criada em máquinas remotas 4D para salvar arquivos e pastas relacionados com o banco de dados (recursos, plug-ins, pasta Resources, etc.). O comando pode devolver:
 
@@ -103,17 +103,17 @@ Pode passar as propriedades abaixo no objeto *opçoes*:
 
 **Nota:** a rota devolvida se expressa utilizando a sintaxe de sistema da máquina que executa o comando.
 
-##### Pasta Banco de Dados 
+### Pasta Banco de Dados 
 
 Pasta contendo o arquivo de estrutura de banco de dados. O caminho é expressado utilizando a sintaxe padrão da plataforma atual. 
 
 Com a aplicação 4D Client, essa constante é rigorosamente equivalente à constante anterior: o comando retorna o caminho da pasta criada localmente.
 
-##### Pasta base sintaxe Unix (Database Folder Unix Syntax) 
+### Pasta base sintaxe Unix (Database Folder Unix Syntax) 
 
 Pasta contendo o arquivo de estrutura de banco de dados. Esta constante designa a mesma pasta que o anterior, mas o caminho retornado é expressado utilizando a sintaxe UNIX (POSIX), de tipo /Users/ ... Esta sintaxe é usada principalmente quando você usa o comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sob macOS.
 
-##### Pasta Current Resources 
+### Pasta Current Resources 
 
 A pasta Recursos de banco de dados. Esta pasta contém os itens adicionais (fotos, textos) utilizados para a interface de banco de dados. Um componente pode ter a sua pasta de recursos próprios. A pasta de Recursos está localizado junto à estrutura do arquivo de banco de dados.
 
@@ -125,7 +125,7 @@ se a pasta de Recursos não existe para o banco de dados, executando o comando G
 
 Em Windows, em projetos cliente fusionados, a localização desta pasta é modificada se a chave *ShareLocalResourcesOnWindowsClient*  BuildApp for usada. 
 
-##### Pasta Logs 
+### Pasta Logs 
 
 A pasta Logs do banco de dados criada no mesmo nível da estrutura de arquivo. Esta pasta centraliza os seguintes arquivos de log do banco de dados atual:
 
@@ -140,19 +140,19 @@ A pasta Logs do banco de dados criada no mesmo nível da estrutura de arquivo. E
 * Uma pasta adicional Logs, que está na pasta de preferências de usuário de sistema (Active 4D Folder é usada para arquivos de histórico de manutenção (compactar, verificar, reparar). É recomendado chamar [Get 4D file](get-4d-file.md) (compactação de arquivo de log) por exemplo quando quiser acessar tais arquivos de log). Esta pasta Logs também é usada em casos onde a pasta Logs normal não pode ser escrita
 * Se a pasta Logs não existe para o banco de dados, executando o comando **Get 4D folder** com a constante Logs Folder irá criá-la.
 
-##### Pasta HTML Root 
+### Pasta HTML Root 
 
 Pasta HTML raiz do banco de dados. O caminho retornado é expressado com a sintaxe padrão da plataforma atual. A pasta raiz HTML é a pasta na qual o servidor Web 4D olha para as páginas Web e arquivos solicitados. Por padrão, ela é denominada **WebFolder** e é colocado ao lado da estrutura de arquivo (ou sua cópia local, no caso de 4D em modo remoto). Sua localização pode ser definida na página de Configuração das preferências ou dinamicamente através do comando [WEB SET ROOT FOLDER](web-set-root-folder.md).
 
 Note: Em Windows, em projetos cliente fusionados, a localização desta pasta é modificada se a chave *ShareLocalResourcesOnWindowsClient*  BuildApp for usada.
 
-##### Pasta MobileApps 
+### Pasta MobileApps 
 
 Pasta que contém todas os arquivos existentes de sessão (json) usados pelas aplicações 4D para referenciar sessões de usuário de app mobile (ou seja, sessões de 4D para apps iOS). Arquivos de sessão são agrupadas em subpastas de aplicação e são criadas automaticamente. Para saber mais, veja a [documentação go mobile](https://developer.4d.com/go-mobile/).
 
 Esta pasta está localizada no mesmo nível que o arquivo atual 4D data.
 
-##### 
+### 
 
 O parâmetro opcional *\** é útil no caso de uma arquitetura usando componentes: pode ser usado para determinar o banco de dados (host ou componente) para o qual quiser obter a rota de pasta. Esse parâmetro é apenas válido para as pastas Database folder, Database folder UNIX syntax e Current resources folder. É ignorado nos outros casos.
 
@@ -166,7 +166,7 @@ A pasta database (Database folder e Database folder UNIX syntax) retornada difer
    * no caso de um alias ou atalho, o comando retorna a rota da pasta contendo a matriz original da database. O resultado difere de acordo com o formato do banco de dados (pasta/pacote .4dbase ou arquivo .4db/.4dc ), como descrito acima.  
  Quando o comando for chamado da database host, sempre retorna a rota da pasta database host, independente de se o parâmetro *\** foi ou não passado.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Durante a inicialização de um banco de dados único, você deseja carregar (ou criar) as suas próprias configurações em um arquivo localizado na pasta 4D. Para fazer isso, em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md),, você pode escrever um código semelhante a este:
 
@@ -186,7 +186,7 @@ Durante a inicialização de um banco de dados único, você deseja carregar (ou
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo ilustra o uso da constante Database Folder Unix Syntax sob Mac OS para listar o conteúdo da pasta do banco:
 
@@ -201,11 +201,11 @@ Este exemplo ilustra o uso da constante Database Folder Unix Syntax sob Mac OS p
 
 **Nota:** sob Mac OS, é necessário colocar os endereços de acesso entre aspas quando contém os nomes de arquivos ou de pastas com espaços. A sequência de escape "\\" permite inserir o caractere aspas na string. Também é possível utiilzar a instrução Char(Double quote). 
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o parâmetro *pasta* não é válido ou se o endereço de acesso retornado é vazio, a variável sistema OK recebe o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [COMPONENT LIST](component-list.md)  
 [System folder](system-folder.md)  
@@ -213,7 +213,7 @@ Se o parâmetro *pasta* não é válido ou se o endereço de acesso retornado é
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

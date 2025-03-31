@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is a variable.Summary-->El comando Is a variable devuelve True si el puntero pasado en *unPuntero* referencia a una variable definida.<!-- END REF--> Devuelve False en todos los otros casos (puntero hacia un campo o tabla, puntero Nil, etc.).
 
 Si quiere conocer el nombre de la variable que está siendo apuntada o el número del campo, puede utilizar el comando [RESOLVE POINTER](resolve-pointer.md).
 
-#### Ver también 
+## Ver también 
 
 [Is nil pointer](is-nil-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

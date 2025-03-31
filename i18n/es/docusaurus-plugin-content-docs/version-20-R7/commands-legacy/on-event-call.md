@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ON EVENT CALL.Summary-->El comando **ON EVENT CALL** instala el método, cuyo nombre se pasa en *metodoEvento*, como método de gestión de eventos.<!-- END REF--> 
 
@@ -67,7 +67,7 @@ Puede utilizar una de las siguientes constantes, dependiendo de la tecla del mod
 
 **Importante:** las variables sistema MouseDown, KeyCode, Modifiers, MouseX, MouseY y MouseProc sólo contienen valores significativos en un método de gestión de eventos instalado con **ON EVENT CALL**.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo cancela la impresión si el usuario presiona las teclas Ctrl+punto. Primero, el método de gestión de eventos se instala. Luego aparece un mensaje, anunciando que el usuario puede cancelar la impresión. Si la variable interproceso *vbWeStop* es igual a True en el método de gestión de eventos, una caja de diálogo de alerta aparece para mostrar al usuario el número de registros que han sido impresos. Luego el método de gestión de eventos se desinstala:
 
@@ -108,14 +108,14 @@ Si se ha presionado la combinación Ctrl+punto, el método de gestión de evento
 Note que este ejemplo utiliza ON EVENT CALL porque realiza un informe especial de impresión utilizando los comandos *PAGE SETUP*, [Print form](print-form.md "Print form") y [PAGE BREAK](page-break.md "PAGE BREAK") en una estructura de tipo bucle *For...End for*.   
 Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SELECTION"), NO necesita administrar los eventos que permiten al usuario interrumpir la impresión; [PRINT SELECTION](print-selection.md "PRINT SELECTION") hace esto por usted.
 
-#### Ver también 
+## Ver también 
 
 [FILTER EVENT](filter-event.md)  
 [MOUSE POSITION](mouse-position.md)  
 [Method called on event](method-called-on-event.md)  
 [Shift down](shift-down.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

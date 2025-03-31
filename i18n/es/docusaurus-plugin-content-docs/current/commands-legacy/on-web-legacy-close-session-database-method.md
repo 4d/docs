@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Nota de compatibilidad 
+## Nota de compatibilidad 
 
 <!--REF #_command_.Metodo base On Web Legacy Close Session.Summary-->Este método base de datos sólo puede utilizarse con **sesiones web heredadas**, disponibles en bases de datos convertidas a partir de versiones anteriores a la 4D v18 R6\.<!-- END REF--> Nunca se llama cuando se habilita el modo de **sesiones web escalables** (recomendado en 4D v18 R6 y superiores). Para obtener más información, consulte la sección *Gestión de las sesiones web (heredado)*.
 
-#### 
+## 
 
 El **Método base On Web Legacy Close Session** es llamado por el servidor web de 4D cada vez que una sesión web se va a cerrar. Una sesión puede ser cerrarse en los siguientes casos:
 
@@ -30,7 +30,7 @@ Cuando se llama a este método base, el contexto de la sesión (variables y sele
   
 Un ejemplo de uso del **Método base On Web Legacy Close Session** se presenta en la sección *Gestión de las sesiones web (heredado)*.  
 
-#### Ver también 
+## Ver también 
 
 *Gestión de las sesiones web (heredado)*  
 [WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)  

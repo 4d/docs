@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description
+## Description
 
 The **WP DELETE SECTION** command <!--REF #_command_.WP DELETE SECTION.Summary-->deletes the passed *section* object, or deletes one or more sections starting at  *indexNumber* and depending on the *count* passed<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
 
@@ -32,7 +32,7 @@ If an image or textbox is anchored to a page (e.g., page 20) and this page no lo
 
 :::
 
-#### Exemples
+## Exemples
 
 To remove the first section of the document:
 
@@ -85,7 +85,7 @@ WP DELETE SECTION($section)
 
 ```
 
-#### Voir également
+## Voir également
 
 [WP Get section](../commands-legacy/wp-get-section.md)\
 [WP RESET ATTRIBUTES](wp-reset-attributes.md)

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->La commande **SPELL ADD TO USER DICTIONARY** permet d’ajouter un ou plusieurs mot(s) au dictionnaire utilisateur courant.<!-- END REF--> 
 
@@ -21,7 +21,7 @@ Le dictionnaire utilisateur est un dictionnaire contenant les mots ajoutés par 
 
 Vous pouvez passer dans *mots* une chaîne texte ou un tableau texte contenant le ou les mot(s) à ajouter dans le dictionnaire utilisateur. Si un mot est déjà présent dans le dictionnaire, il est ignoré par la commande. 
 
-#### Exemple 
+## Exemple 
 
 Ajout de noms propres au dictionnaire utilisateur :
 
@@ -33,11 +33,11 @@ Ajout de noms propres au dictionnaire utilisateur :
  SPELL ADD TO USER DICTIONARY($tTwords)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

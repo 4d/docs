@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->The **PRINT OPTION VALUES** command returns in *namesArray* a list of names available for the print *option* defined.<!-- END REF--> Optionally, you can retrieve additional information for each name in *info1Array* and *info2Array*. 
 
@@ -49,12 +49,12 @@ For more information on the different print options, refer to the description of
 
 All the information returned by these commands is supplied by the operating system. Refer to the documentation of your system for more details about specific options.
 
-#### See also 
+## See also 
 
 [GET PRINT OPTION](get-print-option.md)  
 [SET PRINT OPTION](set-print-option.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

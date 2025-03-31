@@ -120,7 +120,6 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>履歴</summary>
@@ -170,7 +169,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
  $allEmp:=ds.Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>履歴</summary>
@@ -223,7 +222,7 @@ $ds.Persons.clearRemoteCache()
 // Persons データクラスのキャッシュ = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -674,7 +673,7 @@ $number:=$ds.Persons.getCount()
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>履歴</summary>
@@ -1534,7 +1533,6 @@ softwares:{
 エンティティセレクションの [`.query()`](EntitySelectionClass.md#query)
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
 ## .setRemoteCacheSettings()
 
 <details><summary>履歴</summary>

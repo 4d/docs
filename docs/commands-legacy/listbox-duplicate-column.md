@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->The **LISTBOX DUPLICATE COLUMN** command duplicates the column designated by the *object* and *\** parameters by programming in the context of the form being executed (Application mode).<!-- END REF--> The original form, generated in the Design mode, is not modified. 
 
@@ -50,7 +50,7 @@ In the *headerName* and *headerVariable* parameters, pass the object name and va
 
 This command must be used in the context of displaying a form. It is usually called in the On Load form event or following a user action (On Clicked event).
 
-##### Dynamic duplication 
+### Dynamic duplication 
 
 You can duplicate list box columns dynamically and 4D will automatically handle the definition of the necessary variables (column, footer and header).
 
@@ -58,7 +58,7 @@ To do this, **LISTBOX DUPLICATE COLUMN** accepts a **Nil** (**\->\[\]**) pointer
 
 Note that header and footer variables are always created with a specific type (longint and text, respectively). Conversely, column variables cannot be typed when created because list boxes accept different types of arrays for these variables (text array, integer array, and so on). This means you have to set the array type manually (see example 2). It is important to perform this typing before calling commands such as [LISTBOX INSERT ROWS](listbox-insert-rows.md) to insert new elements in the array. Alternatively, you can use [APPEND TO ARRAY](append-to-array.md) both for setting the type of the array and inserting elements. 
 
-#### Example 1 
+## Example 1 
 
 In an array type list box, we want to duplicate the "First Name" column, ready for input:
 
@@ -77,7 +77,7 @@ When you click on the button, the list box appears as follows:
 
 ![](../assets/en/commands/pict1205359.en.png)
 
-#### Example 2 
+## Example 2 
 
 You want to duplicate a Boolean column and change its title:
 
@@ -90,11 +90,11 @@ You want to duplicate a Boolean column and change its title:
  OBJECT SET TITLE(headprt->;"New duplicated column")
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX MOVE COLUMN](listbox-move-column.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

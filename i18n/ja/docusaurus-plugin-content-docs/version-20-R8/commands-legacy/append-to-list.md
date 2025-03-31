@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->**APPEND TO LIST** コマンドは、*list*に渡した参照番号を持つ階層リストに新規項目を追加します。<!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 * リストに新規項目を挿入するには、 [INSERT IN LIST](insert-in-list.md)コマンドを使用します。既存の項目のテキストや、そのサブリスト、展開または縮小状態の変更を行うには、 [SET LIST ITEM](set-list-item.md)コマンドを使用します。
 * 新たに追加された項目のアピアランスを変更するには、[SET LIST ITEM PROPERTIES](set-list-item-properties.md)コマンドを使用します。
 
-#### 例題 
+## 例題 
 
 以下は、データベースストラクチャの一部です:
 
@@ -154,14 +154,14 @@ displayed_sidebar: docs
 
 **Note:** 上記の例は、比較的少ないレコードを扱う場合には、ユーザインターフェイスとして役立ちます。リストはメモリに置かれるので、何百万という項目を持つ階層リストでユーザインターフェイスを作成すべきではありません。
 
-#### 参照 
+## 参照 
 
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE RELATED ONE.Summary-->CREATE RELATED ONEには2つの機能があります。<!-- END REF-->関連するレコードが*aField* に対して存在しない場合 (つまり*aField* の現在の値に一致するものがない場合) 、CREATE RELATED ONEは新しくリレート先レコードを作成します。
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 リレート先レコードが存在する場合、CREATE RELATED ONEは[RELATE ONE](relate-one.md "RELATE ONE")コマンドと全く同じようにそのレコードをメモリにロードします。
 
-#### 参照 
+## 参照 
 
 [SAVE RELATED ONE](save-related-one.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

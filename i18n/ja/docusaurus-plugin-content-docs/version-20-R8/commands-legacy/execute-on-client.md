@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->EXECUTE ON CLIENT コマンドは、*clientName*という名前で登録されている4D Clientで、必要であれば*param1.<!-- END REF-->.. paramN*を引数とし、*methodName*メソッドを実行します。4D Clientの登録名は[REGISTER CLIENT](register-client.md "REGISTER CLIENT") コマンドで定義します。  
 このコマンドは、4D Clientまたは4D Serverのストアドプロシージャで呼び出すことができます。
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 OKシステム変数は、4D Serverがメソッドの実行要求を正しく受け取った場合、1になりますが、これはメソッドが4D Clientによって正しく実行されたということを保証するものではありません。
 
-#### 例題 1 
+## 例題 1 
 
 "GenerateNums"メソッドを、"Client1"クライアント上で実行したいと仮定します:
 
@@ -39,7 +39,7 @@ OKシステム変数は、4D Serverがメソッドの実行要求を正しく受
  EXECUTE ON CLIENT("Client1";"GenerateNums";12;$a;"Text")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 すべてのクライアントに"EmptyTemp"メソッドを実行させたい場合には:
 
@@ -47,22 +47,22 @@ OKシステム変数は、4D Serverがメソッドの実行要求を正しく受
  EXECUTE ON CLIENT("@";"EmptyTemp")
 ```
 
-#### 例題 3 
+## 例題 3 
 
 [REGISTER CLIENT](register-client.md "REGISTER CLIENT") コマンドの例題参照
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 4D Serverが正しく実行リクエストを受け取ると、OKシステム変数は1に設定されます。しかしこのことは4Dクライアント上でメソッドが正しく実行されることを保証するものではありません。
 
-#### 参照 
+## 参照 
 
 [Execute on server](execute-on-server.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

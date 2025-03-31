@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB GET VARIABLES.Summary-->El comando **WEB GET VARIABLES** llena los arrays texto *arrayNoms* y *arrayValores* con los nombres y los valores de las variables contenidas en el formulario web “enviado” al servidor web.<!-- END REF--> 
 
@@ -26,7 +26,7 @@ Este comando es valido sin importar el tipo de URL o de formulario (método POST
 
 Este comando puede llamarse, si es necesario, en el *Método de base On Web Connection* o en cualquier otro método 4D que resulte del envío de un formulario.
 
-##### Acerca de los formularios Web y sus acciones asociadas 
+### Acerca de los formularios Web y sus acciones asociadas 
 
 Un formulario contiene áreas de entrada (áreas de texto, botones, casillas de selección), cada una con un nombre.   
 Cuando un formulario se "envía" al servidor web (una petición se envía al servidor web), la petición contiene, entre otros, la lista de áreas de entrada y sus valores respectivos.   
@@ -35,7 +35,7 @@ Hay dos métodos para enviar un formulario (ambos pueden utilizarse indiferentem
 * POST, generalmente utilizado para añadir datos en el servidor web, a una base de datos,
 * GET, generalmente utilizado para la petición del servidor web, datos que provienen de una base de de datos.
 
-#### Ejemplo 
+## Ejemplo 
 
 Un formulario contiene dos campos, vNombre y vCiudad que reciben los valores “ROBERTO” y “PARIS”. La acción asociada al formulario es “/4DACTION/WEBFORM”.
 
@@ -61,11 +61,11 @@ El resultado será:
 
 La variable vNOMBRE contiene ROBERTO y vCIUDAD contiene PARIS.
 
-#### Ver también 
+## Ver también 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

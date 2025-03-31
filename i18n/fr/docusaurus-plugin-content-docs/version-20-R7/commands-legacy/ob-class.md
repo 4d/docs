@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Class.Summary-->La commande **OB Class** retourne la classe de l'*objet* passé en paramètre.<!-- END REF--> Dans 4D, tous les objets sont hérités de l'objet classe. Si *objet* est un objet inexistant, **OB Class** retourne null. 
 
-#### Exemple 
+## Exemple 
 
 Vous avez créé la classe Polygone :
 
@@ -37,11 +37,11 @@ Puis, dans une méthode, vous pouvez saisir :
  $class:=OB Class($poly) //$class contient Classe : Polygone
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OB Instance of](ob-instance-of.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Day of.Summary-->O comando Day of retorna o dia do mês de *data*.<!-- END REF-->Day of retorna um valor entre 1 e 31\. Para obter o dia da semana de uma data, utilize o comando [Day number](day-number.md "Day number").
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O seguinte exemplo mostra o uso de Day of. Os valores são atribuídos à variável *vResult*. Os comentários descrevem o valor em *vResult*: 
 
@@ -27,17 +27,17 @@ O seguinte exemplo mostra o uso de Day of. Os valores são atribuídos à variá
  vResult:=Day of(Current date) // vResult toma o valor do día da data atual
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Veja o exemplo para o comando [Current date](current-date.md "Current date"). 
 
-#### Ver também 
+## Ver também 
 
 [Day number](day-number.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

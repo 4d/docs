@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 O comando OPEN SETTINGS WINDOW abre a caixa de diálogo Preferências de 4D ou as configurações do banco de dados do aplicativo atual 4D e exibe os parâmetros ou a página correspondente à chave *seletor* fornecida.  
   
@@ -34,7 +34,7 @@ O parâmetro *tipoPropriedades* é tido em conta nos bancos configurados no modo
   
 Se você passar uma chave inválida, a primeira página da caixa de diálogo Configurações de Banco de Dados é exibida.
 
-##### Chaves de rotas (modo padrão) 
+### Chaves de rotas (modo padrão) 
 
 A seguir você vê uma lista de chaves que podem ser usadas no parâmetro *seletor,* quer dizer, com as "Propriedades de estrutura":  
   
@@ -103,7 +103,7 @@ A seguir você vê uma lista de chaves que podem ser usadas no parâmetro *selet
 
 **Nota de compatibilidade:** O comando continua a funcionar com as chaves definidas para as versões 4D 11, a correspondência é estabelecida automaticamente por 4D. No entanto, é recomendável substituir as chamadas anteriores pelas chaves descritas acima
 
-##### Chaves de rotas (modo Propriedades usuário) 
+### Chaves de rotas (modo Propriedades usuário) 
 
 Estas são as chaves que podem ser usadas no parâmetro *seletor* no modo "Propriedades usuário":
 
@@ -129,7 +129,7 @@ Chaves adicionais em modo "User settings for data":
 */Database/Backup/Scheduler* */Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Abra a página "Método" das preferências 4D:  
   
@@ -137,7 +137,7 @@ Abra a página "Método" das preferências 4D:
  OPEN SETTINGS WINDOW("/4D/Method editor")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Abra o parâmetro "Atalhos" nas configurações de banco de dados ao travar as outras configurações:   
 
@@ -145,7 +145,7 @@ Abra o parâmetro "Atalhos" nas configurações de banco de dados ao travar as o
  OPEN SETTINGS WINDOW("/Database/Interface/Shortcuts";True)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Open Database Settings, na primeira página:  
 
@@ -153,7 +153,7 @@ Open Database Settings, na primeira página:
  OPEN SETTINGS WINDOW("/")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Acceso à interface das Propriedades do banco no modo "Propriedades usuário":
 
@@ -161,12 +161,12 @@ Acceso à interface das Propriedades do banco no modo "Propriedades usuário":
  OPEN SETTINGS WINDOW("/Database/Interface";False;1)
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se a caixa de diálogo Preferências/Propriedades é validada, a variável sistema OK devolve 1; se for cancelada, OK devolve 0.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

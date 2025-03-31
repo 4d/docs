@@ -107,7 +107,7 @@ Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/docume
 
 :::note
 
-En caso contrario, el editor de código muestra [el comentario del bloque en la parte superior del código del método](../code-editor/write-class-method.md#using-help-tips).
+En caso contrario, el editor de código muestra [el comentario del bloque en la parte superior del código del método](../code-editor/write-class-method.md#help-tips).
 
 :::
 

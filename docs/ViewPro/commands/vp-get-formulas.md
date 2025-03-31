@@ -13,7 +13,7 @@ title: VP Get formulas
 |rangeObj  |Object|->|Range object|
 |Result  |Collection|<-|Collection of formula values|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get formulas` command <!-- REF #_method_.VP Get formulas.Summary -->retrieves the formulas from a designated *rangeObj*<!-- END REF -->.
 
@@ -24,7 +24,7 @@ The returned collection is two-dimensional:
 * The first-level collection contains subcollections of formulas. Each subcollection reprensents a row.
 * Each subcollection defines cell values for the row. Values are text elements containing the cell formulas.
 
-#### Example
+## Example
 
 You want to retrieve the formulas in the Sum and Average columns from this document:
 
@@ -39,7 +39,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[2]=[Sum(B4:D4),Average(C4:D4)]
 ```
 
-#### See also
+## See also
 
 [VP Get formula](vp-get-formula.md)<br/>
 [VP Get values](vp-get-values.md)<br/>

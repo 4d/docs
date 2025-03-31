@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get page count.Summary-->The **WP Get page count** command returns the total number of pages defined in the *targetObj* you passed in parameter.<!-- END REF-->
 
@@ -34,7 +34,7 @@ The same viewing settings as for the [WP PRINT](wp-print.md) command are used wi
 
 If *targetObj* is displayed in a 4D Write Pro form area, make sure that viewing settings of the area match the command viewing settings to get consistent information. Note also that if these settings are different in the area, 4D Write Pro will have to "clone" the document to calculate the layout at each call of the command, which can be time consuming. For performance reasons, it is recommended in this case to build the document offline and to copy it to the form object area only when the build is complete. 
 
-#### Example 
+## Example 
 
 You want to know the total number of 4D Write Pro document pages stored in the "Manual" field within the current selection of items. You can write:
 

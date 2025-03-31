@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB Get current session ID.Summary-->**WEB Get current session ID**コマンドはカレントのWebリクエストのセッションIDを返します。<!-- END REF-->このIDは4Dが自動で生成します。 
 
 このコマンドがWebセッション管理のコンテキストの外で呼び出されると、コマンドは空の文字列を返します。
 
-#### 参照 
+## 参照 
 
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
 *Webセッション管理(旧式)*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

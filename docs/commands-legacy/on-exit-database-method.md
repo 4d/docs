@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Exit database method.Summary-->The **On Exit database method** is called once when you quit a database.<!-- END REF-->
 
@@ -55,7 +55,7 @@ The **On Exit database method** is the perfect place to:
 **Note:** In a client/server environment, the **On Exit database method** behaves differently depending on whether the user quits manually (through the **Quit** menu command or a call to the [QUIT 4D](quit-4d.md) command) or 4D Server is shutdown, which forces all clients to quit.   
 When 4D Server shuts down and provides a cutoff time (*e.g.* 10 minutes), each connected client displays a warning message and if the user quits during the given time frame, the **On Exit database method** is executed normally. However, in other cases (*e.g.* the user does not respond in time, the server requests to quit immediately, or the client is manually disconnected by the Administrator), the **On Exit database method** is executed at the same time that the connection to the server is closed. As a result, the code in the **On Exit database method** can't launch another local or server process, and can't wait for other processes to be cancelled (nor can these processes continue to access the server). If it tries to do so, a network error is generated (such as 10001 or 10002) since the connection to the server is already closed.
 
-#### Note 
+## Note 
 
 The following example shows a typical case where you launch one or more background processes doing regular jobs, running endless, in the [On Startup database method](on-startup-database-method.md) (or in the [On Server Startup database method](on-server-startup-database-method.md)). A flag in the application's [Storage](storage.md) object is used to tell them to finish – and to check if they have finished.
 
@@ -101,12 +101,12 @@ The following example shows a typical case where you launch one or more backgrou
  End while
 ```
 
-#### See also 
+## See also 
 
 [On Startup database method](on-startup-database-method.md)  
 [QUIT 4D](quit-4d.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

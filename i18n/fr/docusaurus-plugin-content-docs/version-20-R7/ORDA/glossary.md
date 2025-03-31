@@ -150,7 +150,7 @@ Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que 
 
 ## Privilège
 
-La possibilité de lancer une ou plusieurs [actions](#actions) sur des [ressources](#resource). Plusieurs privilèges peuvent être regroupés dans un [rôle](#role) selon la logique métier.
+La possibilité de lancer une ou plusieurs [actions](#action) sur des [ressources](#resource). Plusieurs privilèges peuvent être regroupés dans un [rôle](#role) selon la logique métier.
 
 ## Propriété
 

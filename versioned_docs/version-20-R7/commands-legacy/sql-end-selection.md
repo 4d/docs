@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL End selection.Summary-->The SQL End selection command is used to determine if the boundaries of the result set have been reached.<!-- END REF--> 
 
-#### Example 
+## Example 
 
 The code below connects to an external data source (Oracle) using the following parameters:
 
@@ -39,7 +39,7 @@ The code below connects to an external data source (Oracle) using the following 
 This code will return in the 4D *vName* variable the emp names (ename) stored in the table named emp.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.In footer.Summary-->**In footer** はIn footer 実行サイクルに対してTrueを返します。<!-- END REF-->  
 
@@ -21,12 +21,12 @@ displayed_sidebar: docs
 
 **注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Printing footerイベントを返すかどうかをテストするのと同等と言えます。
 
-#### 参照 
+## 参照 
 
 [In break](in-break.md)  
 [In header](in-header.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

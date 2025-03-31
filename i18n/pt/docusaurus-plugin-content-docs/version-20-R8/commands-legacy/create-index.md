@@ -17,12 +17,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
-<!--REF #_command_.CREATE INDEX.Summary-->O comando **CREATE INDEX** permite criar: 
+O comando **CREATE INDEX** permite criar: 
 
-* Um índice padrão em um ou mais campos (índice composto) ou
-* Um índice de palavras chaves em um campo.<!-- END REF-->
+* Um <!--REF #_command_.CREATE INDEX.Summary-->índice padrão em um ou mais campos (índice composto)<!-- END REF--> ou
+* Um índice de palavras chaves em um campo.
 O índice é criado para a tabela *minhaTabela* utilizando um ou mais campos determinados pelo array de ponteiros *arrayCampos*. Este array contém apenas uma linha se quiser criar um índice simples e dois ou mais quando quiser criar um índice composto (exceto no caso de um índice de palavras chaves). No caso dos índices compostos, a ordem dos campos no array é importante durante a construção do índice.  
   
 O parâmetro *tipoIndice* permite definir o tipo de índice a criar. Pode passar uma das seguintes constantes, que se encontram no tema *Tipo de Índice*:  
@@ -45,11 +45,11 @@ Se o comando **CREATE INDEX** encontrar registros bloqueados, estes não serão 
   
 Se ocorrer um problema durante a execução do comando (campo não indexável, tentativa de criação de um índice de palavras chaves em mais de um campo, etc.), um erro é gerado. Este erro pode ser interceptado utilizando um método de gestão de erros.
 
-#### Nota para lançamento 
+## Nota para lançamento 
 
 Dado que este comando modifica a estrutura do banco de dados, não pode ser utilizado no contexto de uma aplicação empacotada de apenas leitura (arquivo .4dc instalado na pasta *Arquivos de programa* ou arquivo .4dz).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Criação de dois índices padrão nos campos “Sobrenome” e “Telefone” da tabela \[Clientes\]: 
 
@@ -61,7 +61,7 @@ Criação de dois índices padrão nos campos “Sobrenome” e “Telefone” d
  CREATE INDEX([Clientes];arrayPtrCampo;Standard BTree Index;"CustTelIdx")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Criação de um índice de palavras chaves no campo "Observações da tabela \[Clientes\]: 
 
@@ -71,7 +71,7 @@ Criação de um índice de palavras chaves no campo "Observações da tabela \[C
  CREATE INDEX([Clientes];arrayPtrCampo;Keywords Index;"CustObsIdx")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Criação de um índice composto nos campos “Cidade” e “CódigoPostal” da tabela \[Clientes\]:  
   
@@ -82,13 +82,13 @@ Criação de um índice composto nos campos “Cidade” e “CódigoPostal” d
  CREATE INDEX([Clientes];arrayPtrCampo;Standard BTree Index;"CidadeCEP")
 ```
 
-#### Ver também 
+## Ver também 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

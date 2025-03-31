@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.START MONITORING ACTIVITY.Summary-->La commande **START MONITORING ACTIVITY** enregistre les opérations qui dépassent une certaine *durée* dans la mémoire.<!-- END REF--> Elle peut être appelée et exécutée sur un 4D distant, 4D Server et sur des applications 4D autonomes (si *source* n'est pas issu d'une activité de réseau). Les activités enregistrées peuvent être récupérées à l'aide de la commande [Monitored activity](monitored-activity.md). Appelez [STOP MONITORING ACTIVITY](stop-monitoring-activity.md) lorsque vous souhaitez stopper le suivi.
 
@@ -31,7 +31,7 @@ Le paramètre optionnel *source* définit le type d'activité à suivre. Valeurs
 
 **Note** : Si le journal de débogage a été stoppé sur la [Administration window](../ServerWindow/overview.md) de 4D Server, la commande **START MONITORING ACTIVITY** relancera le journal avec Activity network.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez lancer/arrêter le suivi et revoir les activités de données 4D et de débogage ayant duré plus d'une milliseconde :
 
@@ -88,12 +88,12 @@ Vous souhaitez lancer/arrêter le suivi et revoir les activités de données 4D 
  }  
 \]
 
-#### Voir aussi 
+## Voir aussi 
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

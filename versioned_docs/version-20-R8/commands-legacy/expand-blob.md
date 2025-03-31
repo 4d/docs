@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPAND BLOB.Summary-->The **EXPAND BLOB** command expands the BLOB *blob* that was previously compressed using the [COMPRESS BLOB](compress-blob.md) command*.<!-- END REF-->*
 
@@ -24,7 +24,7 @@ In any other case (i.e. the BLOB has not been compressed or is damaged), the err
 
 To check if a BLOB has been compressed, use the [BLOB PROPERTIES](blob-properties.md) command.
 
-#### Example 1 
+## Example 1 
 
 This example tests if the BLOB *vxMyBlob* is compressed and, if so, expands it:
 
@@ -35,7 +35,7 @@ This example tests if the BLOB *vxMyBlob* is compressed and, if so, expands it:
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 This example allows you to select a document and then expand it, if it is compressed:
 
@@ -56,16 +56,16 @@ This example allows you to select a document and then expand it, if it is compre
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 The OK variable is set to 1 if the BLOB has been successfully expanded, otherwise it is set to 0.
 
-#### See also 
+## See also 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

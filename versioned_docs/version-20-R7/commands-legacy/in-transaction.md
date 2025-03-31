@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.In transaction.Summary-->The In transaction command returns **TRUE** if the current process is in a transaction, otherwise it returns **FALSE**.<!-- END REF-->
 
-#### Example 
+## Example 
 
 If you perform a multi-record operation (adding, modifying, or deleting records), you may encounter locked records. In this case, if you have to maintain data integrity, you must be in transaction so you can “roll-back” the whole operation and leave the database untouched.
 
 If you perform the operation from within a trigger or from a subroutine (that can be called while in transaction or not), you can use In transaction to check whether or not the current process method or the caller method started a transaction. If a transaction was not started, you do not even start the operation, because you already know that you will not be able to roll it back if it fails. 
 
-#### See also 
+## See also 
 
 [Active transaction](active-transaction.md)  
 [CANCEL TRANSACTION](cancel-transaction.md)  
@@ -31,7 +31,7 @@ If you perform the operation from within a trigger or from a subroutine (that ca
 *Triggers*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

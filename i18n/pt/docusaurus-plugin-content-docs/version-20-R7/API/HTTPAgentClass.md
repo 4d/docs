@@ -25,17 +25,15 @@ Os objetos HTTPAgent fornecem as seguintes propriedades e funções:
 
 |                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPAgentClass.options.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.options.Summary -->                            |
-| [<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestsCount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->          |
-| [<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freeSocketsCount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary --> |
+| [<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->                              |
+| [<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestscount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->          |
+| [<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freesocketscount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary --> |
 
 :::tip
 
 Como o HTTPAgent é um objeto compartilhável, você pode adicioná-lo a uma classe singleton para poder usar o mesmo agente em todas as solicitações ao mesmo servidor.
 
 :::
-
-<!-- REF #4D.HTTPAgent.new().Desc -->
 
 ## 4D.HTTPAgent.new()
 
@@ -113,15 +111,15 @@ Quando nenhum agente está associado a um HTTPRequest, é usado um agente global
 
 :::
 
-<!-- REF #HTTPAgentClass.options.Desc -->
+<!-- REF #HTTPAgentClass.params.Desc -->
 
-## .options
+## .params
 
-<!-- REF #HTTPAgentClass.options.Syntax -->**options** : Object<!-- END REF -->
+<!-- REF #HTTPAgentClass.params.Syntax -->**options** : Object<!-- END REF -->
 
 #### Descrição
 
-O objeto de propriedade `.options` contém <!-- REF #HTTPAgentClass.options.Summary -->as opções usadas atualmente do HTTPAgent<!-- END REF -->.
+The `.params` property object contains <!-- REF #HTTPAgentClass.params.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 

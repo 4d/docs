@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Records in set.Summary-->Records in setコマンドは、*set*に含まれるレコードの数を返します。<!-- END REF-->*set*が存在しない場合、または*set*にレコードがない場合には0を返します。
 
-#### 例題 
+## 例題 
 
 以下の例は、全顧客の中に占めるお得意様の割合をアラートボックスに表示します。
 
@@ -29,12 +29,12 @@ displayed_sidebar: docs
  ALERT(String($Percent;"##0%")+"がお得意様です。")
 ```
 
-#### 参照 
+## 参照 
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

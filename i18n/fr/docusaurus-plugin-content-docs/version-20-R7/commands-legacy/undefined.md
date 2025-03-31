@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Undefined.Summary-->La commande **Undefined** retourne Vrai si le résultat de l'évaluation d'*expression* n'est pas une valeur définie, sinon elle retourne Faux si *expression* a été définie.<!-- END REF-->retourne Faux pour toutes les variables.
 * Une propriété d'objet est indéfinie si elle n'existe pas dans l'objet.
@@ -35,7 +35,7 @@ Dans certains cas, il est possible que vous ne souhaitiez pas évaluer le param�
  $result:=(Type($ptr->)=Est une variable indéfinie) //vrai si la variable pointée n'existe pas (pas d'erreur)
 ```
 
-#### Exemple 
+## Exemple 
 
 Cet exemple compare les différents résultats de la commande [Undefined](undefined.md) et de la commande [Null](null.md) appliquées aux propriétés d'objets, en fonction du contexte :
 
@@ -55,11 +55,11 @@ Cet exemple compare les différents résultats de la commande [Undefined](undefi
  $null:=(vEmp.parent=Null) // Vrai
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CLEAR VARIABLE](clear-variable.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

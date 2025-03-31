@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Monitored activity.Summary-->The **Monitored activity** command returns a collection of objects describing operations recorded according to the specifications set by the [START MONITORING ACTIVITY](start-monitoring-activity.md) command.<!-- END REF--> It can be called and executed on 4D remote, 4D Server, and 4D standalone applications (if *source* isn't from network activity).
 
@@ -25,7 +25,7 @@ The objects in the returned collection have the following properties:
 | activityDuration | Real     | The duration of the activity expressed in seconds                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | activityData     | Object   | Object(s) containing specific properties depending on the type of recorded activity (*activityKind*). In some circumstances, several objects can be returned for the same operation. In this case, the objects will have the same UUID. The additional properties in these objects are described in the sections below.                                                                                                                                                                                                                                                                                                                                               |
 
-##### activityKind = Activity language (1) 
+### activityKind = Activity language (1) 
 
 **Note:** The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](set-database-parameter.md) command for the *4DDebugLog.txt (standard)* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Monitored activity** command will thus impact the returned results.
 
@@ -41,7 +41,7 @@ The objects in the returned collection have the following properties:
 | duration        | longint  | Length of time for operation (expressed in microseconds)                                                                                                                |
 | kind            | text     | The kind of operation logged. Possible values:<br/> "command" "method" "Message" "pluginMessage" "pluginCommand" "pluginCallback" "pluginEvent" "task" "member" |
 
-###### Additional properties 
+## Additional properties 
 
 The following additional properties are returned in the *activityData* object according to the *kind* of operation:
 
@@ -62,7 +62,7 @@ The following additional properties are returned in the *activityData* object ac
 | pluginMessageName   | text     | pluginMessage                                                                                                                        | Possible values: PackMsgServerDeInit PackMsgServerDisposeData PackMsgServerWriteData PackMsgServerReadData PackMsgServerKillClient PackMsgServerNewClient PackMsgServerInit PackMsgProcessDeInit PackMsgProcessInit PackMsgClientDeInit PackMsgClientInit |
 | pluginName          | text     | pluginCallback<br/>pluginCommand<br/>pluginEvent<br/>pluginMessage                                           | Name of the plug-in                                                                                                                                                                                                                                       |
 
-##### activityKind = Activity network (2) 
+### activityKind = Activity network (2) 
 
 **Notes:** 
 
@@ -87,7 +87,7 @@ The following additional properties are returned in the *activityData* object ac
 | taskKind         | text     | Preemptive or cooperative (respectively 'p' or 'c')                                                                                                                                                                                                                                                 |
 | rtt              | longint  | Time estimate in microseconds for the client to send the request and the server to acknowledge it. Only measured when using the ServerNet network layer, returns 0 when used with the legacy network layer.For Windows versions prior to Windows 10 or Windows Server 2016, the call will return 0. |
 
-##### activityKind = Activity operations (4) 
+### activityKind = Activity operations (4) 
 
 **Note:** The *activityData* object is similar to the one returned by the [ACTIVITY SNAPSHOT](activity-snapshot.md) command, except that it only thresholded and finished operations are returned.
 
@@ -131,16 +131,16 @@ The following additional properties are returned in the *activityData* object ac
 | |  \[ \].title         | text       | Additional information about the operation                                                                                                                                         |                                                                                                                                                                        |
 | |  \[ \].extraInfo     | object     | Additional SQL information (if any):<br/><br/> \[ \].extraInfo.SQL\_Query (text): The SQL query \[ \].extraInfo.SQL\_User (text): User authenticated on SQL server |                                                                                                                                                                        |
 
-#### Example 
+## Example 
 
 See example for **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
 
-#### See also 
+## See also 
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

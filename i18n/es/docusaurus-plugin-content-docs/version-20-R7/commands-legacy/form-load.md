@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM LOAD.Summary-->El comando **FORM LOAD** se utiliza para cargar el *formulario* en memoria en el proceso actual junto con *dataForm* (opcional) con el fin de imprimir sus datos o analizar sus contenidos.<!-- END REF--> Sólo puede haber un formulario actual por proceso.
 
@@ -28,7 +28,7 @@ En el parámetro *formulario*, puede pasar:
 
 Cuando el comando se ejecuta desde un componente, carga los formularios del componente por defecto. Si se pasa el parámetro *\**, el método carga los formularios de la base local.
 
-##### dataForm 
+### dataForm 
 
 Opcionalmente, puede pasar parámetros al *formulario* utilizando el objeto *dataForm*. Toda propiedad del objeto *dataForm* estará disponible desde el contexto del formulario a través del comando [Form](form.md). Por ejemplo, si pasa un objeto que contiene {"version", "12"} en *dataForm*, podrá obtener o definir el valor de la propiedad "version" en el formulario llamando:
 
@@ -43,7 +43,7 @@ El objeto *dataForm* está disponible en el evento formulario On Load.
 
 **Nota:** si no pasa el parámetro *dataForm* o si pasa un objeto indefinido, **FORM LOAD** crea automáticamente un nuevo objeto vacío vinculado al *formulario*, disponible a través del comando [Form](form.md).
 
-##### Impresión de datos 
+### Impresión de datos 
 
 Para que este comando pueda ejecutarse, una tarea de impresión debe haberse abierto de antemano usando el comando [OPEN PRINTING JOB](open-printing-job.md). El comando [OPEN PRINTING JOB](open-printing-job.md) hace un llamado implícito al comando [FORM UNLOAD](form-unload.md), por lo que en este contexto es necesario ejecutar [FORM LOAD](form-load.md). Una vez cargado, el *formulario* se convierte en el formulario de impresión actual. Todos los comandos de gestión de objetos, y en particular, el comando [Print object](print-object.md), trabajan con este formulario.  
   
@@ -55,7 +55,7 @@ Para mantener la coherencia gráfica de los formularios, se recomienda aplicar l
   
 El formulario de impresión actual se cierra automáticamente cuando se llama el comando [CLOSE PRINTING JOB](close-printing-job.md).
 
-##### Análisis del contenido del formulario 
+### Análisis del contenido del formulario 
 
 Esta posibilidad consiste en cargar un formulario fuera de pantalla para análisis. Para efectuar esta acción, basta con llamar a **FORM LOAD** fuera del contexto de un trabajo de impresión. En este caso, los eventos de formulario no se ejecutan.  
   
@@ -65,7 +65,7 @@ Tenga en cuenta que en todos los casos, el formulario en la pantalla permanece c
   
 **Recordatorio:** en el contexto fuera de pantalla, no olvide llamar [FORM UNLOAD](form-unload.md) para evitar todo riesgo de saturación de la memoria.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Llamar un formulario proyecto en un trabajo de impresión:
 
@@ -75,7 +75,7 @@ Llamar un formulario proyecto en un trabajo de impresión:
   // ejecución de eventos y métodos objeto
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Llamar un formulario tabla en un trabajo de impresión:
 
@@ -85,7 +85,7 @@ Llamar un formulario tabla en un trabajo de impresión:
   // ejecución de eventos y métodos de objeto
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Análisis del contenido de un formulario para efectuar un procesamiento en las áreas de entrada de texto:
 
@@ -101,7 +101,7 @@ Análisis del contenido de un formulario para efectuar un procesamiento en las �
  FORM UNLOAD //no olvidar descargar el formulario
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 El siguiente ejemplo devuelve el número de objetos de un formulario JSON:
 
@@ -120,7 +120,7 @@ el resultado mostrado es:
 
 ![](../assets/en/commands/pict3688480.en.png)
 
-#### Ejemplo 5 
+## Ejemplo 5 
 
 Desea imprimir un formulario que contiene un list box. Durante el evento *on load*, desea modificar el contenido del list box a modificar.  
   
@@ -164,7 +164,7 @@ var $over Boolean
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [Current form name](current-form-name.md)  
 [FORM UNLOAD](form-unload.md)  
@@ -172,7 +172,7 @@ var $over Boolean
 [OBJECT Get type](object-get-type.md)  
 [Print object](print-object.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

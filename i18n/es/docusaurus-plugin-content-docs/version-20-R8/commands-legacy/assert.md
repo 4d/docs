@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ASSERT.Summary-->El comando **ASSERT**evalúa la aserción *expresionBool* pasada en parámetro y, si se vuelve falsa, interrumpe la ejecución del código y muestra un error.<!-- END REF-->
 
@@ -28,7 +28,7 @@ Opcionalmente, puede pasar un parámetro *texto* *Mensaje* para mostrar un mensa
 
 Una aserción es un instrucción insertada en el código que es responsable de detectar posibles anomalías durante su ejecución. El principio consiste en verificar que una expresión es verdadera en un momento dado y en caso contrario, producir una excepción. Las aserciones se utilizan sobre todo para detectar casos que no deberían ocurrir nunca. Principalmente se utilizan para detectar bugs de programación. Es posible activar o desactivar globalmente todas las aserciones de una aplicación (por ejemplo de acuerdo al tipo de versión) vía el comando [SET ASSERT ENABLED](set-assert-enabled.md). Para más información acerca de las aserciones en programación, por favor consulte el artículo en Wikipedia: http://en.wikipedia.org/wiki/Assertion\_(computing)
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Antes de efectuar operaciones en un registro, el desarrollador quiere asegurarse de que está cargado en modo lectura/escritura:
 
@@ -39,7 +39,7 @@ Antes de efectuar operaciones en un registro, el desarrollador quiere asegurarse
   // dispara el error -10518 si el registro está bloqueado
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Una aserción permite probar los parámetros pasados a un método de proyecto para detectar los valores aberrantes. En este ejemplo, se utiliza un mensaje de alerta personalizado.
 
@@ -52,13 +52,13 @@ Una aserción permite probar los parámetros pasados a un método de proyecto pa
   // "Aserción fallida: búsqueda de un nombre de cliente vacía"
 ```
 
-#### Ver también 
+## Ver también 
 
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FORM Get current page.Summary-->El comando **FORM Get current page** devuelve el número de la página actual del formulario mostrada actualmente o del formulario actual cargado vía el comando [FORM LOAD](../commands/form-load.md).<!-- END REF--> 
 
 El parámetro *\** es útil cuando el comando se llama en el contexto de un subformulario en página que contiene varias páginas. En este caso, cuando pase este parámetro, el comando cambia la página del subformulario actual (la que llamó al comando). Por defecto, cuando se omite el parámetro *\**, el comando se aplica siempre al formulario padre. 
 
-#### Ejemplo 
+## Ejemplo 
 
 In a form, when you select a menu item from the menu bar or when the form receives a call from another process, you can perform different actions depending on the form page currently displayed. In this example, you write:
 
@@ -62,7 +62,7 @@ En un formulario, si selecciona un elemento de menú de la barra de menús o si 
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM GOTO PAGE](form-goto-page.md)  
@@ -70,7 +70,7 @@ En un formulario, si selecciona un elemento de menú de la barra de menús o si 
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

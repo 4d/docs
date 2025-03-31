@@ -4,7 +4,7 @@ title: Create entity selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create entity selection.Syntax-->***Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
+<!--REF #_command_.Create entity selection.Syntax-->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
 <!--REF #_command_.Create entity selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 <!-- END REF-->
 
 
-#### Description
+## Description
 
 The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
 
@@ -30,7 +30,7 @@ In the optional *settings* parameter, you can pass an object containing the foll
 |context|Text|Label for the [optimization context](../ORDA/client-server-optimization.md) applied to the entity selection.|
 
 
-#### Example
+## Example
 
 ```4d
 var $employees : cs.EmployeeSelection
@@ -40,11 +40,11 @@ $employees:=Create entity selection([Employee])
 // on all entities related to the Employee dataclass
 ```
 
-#### See also 
+## See also 
 
 [USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

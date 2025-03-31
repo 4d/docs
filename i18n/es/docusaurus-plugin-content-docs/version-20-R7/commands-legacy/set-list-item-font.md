@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET LIST ITEM FONT.Summary-->El comando SET LIST ITEM FONT modifica la fuente de caracteres del elemento especificado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista*.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Por último, puede pasar \* en *refElem*: en este caso, el comando se aplicará 
 
 En el parámetro *fuente*, pase el nombre o número de la fuente a utilizar. Para reaplicar la fuente por defecto de la lista jerárquica, pase una cadena vacía en *fuente*.
 
-#### Ejemplo 
+## Ejemplo 
 
 Aplicar la fuente Times al elemento actual de la lista:
 
@@ -36,14 +36,14 @@ Aplicar la fuente Times al elemento actual de la lista:
  SET LIST ITEM FONT(*;"Milista";*;"Times")
 ```
 
-#### Ver también 
+## Ver también 
 
 [Get list item font](get-list-item-font.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

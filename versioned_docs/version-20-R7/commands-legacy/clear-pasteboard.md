@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->The CLEAR PASTEBOARD command clears the pasteboard of all its contents.<!-- END REF--> If the pasteboard contains multiple instances of the same data, all instances are cleared. After a call to CLEAR PASTEBOARD, the pasteboard is empty.
 
@@ -22,7 +22,7 @@ Calling CLEAR PASTEBOARD once and then calling [APPEND DATA TO PASTEBOARD](appen
 
 On the other hand, the [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md) and [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md) commands automatically clear the pasteboard before appending the data to it.
 
-#### Example 1 
+## Example 1 
 
 The following code clears and then appends data to the pasteboard:
 
@@ -32,15 +32,15 @@ The following code clears and then appends data to the pasteboard:
  APPEND DATA TO PASTEBOARD("com.4d.private.text.rtf";$vxSylkData) // Add some RTF text
 ```
 
-#### Example 2 
+## Example 2 
 
 See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
 
-#### See also 
+## See also 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

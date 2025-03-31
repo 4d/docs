@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP GET ATTRIBUTES.Summary-->El comando **WP GET ATTRIBUTES** devuelve el valor de todo atributo en un rango, encabezado, cuerpo, pie, tabla o documento 4D Write Pro.<!-- END REF--> Este comando le permite acceder a todo tipo de atributos internos 4D Write Pro: carácter, párrafo, documento, tabla o imagen.
 
@@ -36,7 +36,7 @@ Si hay diferentes valores para el mismo atributo en el elemento pasado como par�
 
 **Nota**: si *rangoObj* contiene un párrafo y una hoja de estilo de caracteres, se devuelve el nombre de la hoja de estilo del párrafo.
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted quiere conseguir el color de fondo del área seleccionada:
 
@@ -45,7 +45,7 @@ Usted quiere conseguir el color de fondo del área seleccionada:
  WP GET ATTRIBUTES($range;wk background color;$bcol)
 ```
 
-#### Ver también 
+## Ver también 
 
 *Atributos 4D Write Pro*  
 *Constantes 4D Write Pro*  

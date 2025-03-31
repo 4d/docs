@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->**LISTBOX SET PROPERTY**コマンドは、引数*object*および *\** で指定されたリストボックスまたはカラムについて、*property* に *value* の値を設定します。<!-- END REF-->
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 
 **注:** *property* に存在しない定数または、指定のリストボックスおよびカラムに提供されていないプロパティの定数をを受け渡した場合 (例: lk font color expression を配列型リストボックスと一緒に指定した場合) には、**LISTBOX SET PROPERTY** コマンドはなにもせず、エラーも生成されません。
 
-#### 例題 1 
+## 例題 1 
 
 "MyLisbox" というリストボックスのカラムをすべてリサイズ可能に設定します:
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
  LISTBOX SET PROPERTY(*;"MyListbox";lk column resizable;lk yes) // "MyListbox" の全カラムがリサイズ可能に設定されます
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "ProductNumber" というカラムの幅の最大値を設定します:
 
@@ -79,13 +79,13 @@ displayed_sidebar: docs
  LISTBOX SET PROPERTY(*;"ProductNumber";lk column max width;200) // カラムの幅の最大値が 200 に設定されます
 ```
 
-#### 参照 
+## 参照 
 
   
 *List Box*  
 [LISTBOX Get property](listbox-get-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

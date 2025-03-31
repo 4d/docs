@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->La commande **LISTBOX Get property** retourne la valeur courante de la *propriété* de list box ou de colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -76,7 +76,7 @@ De plus, il n'est pas possible de retourner des valeurs pour plus d'une colonne 
 * Lorsque vous utilisez la constante \_o\_lk hor scrollbar position ou \_o\_lk ver scrollbar position, la commande retourne la position relative du curseur de défilement par rapport à son origine, c’est-à-dire la taille de la partie masquée de la fenêtre, exprimée en pixels. Par défaut, cette position correspond à 0\. Combinée par exemple aux informations relatives à la hauteur des lignes, cette valeur permet de connaître le contenu affiché dans la list box. Ces constantes sont désormais obsolètes et pourront être avantageusement remplacées par la commande [OBJECT GET SCROLL POSITION](object-get-scroll-position.md).
 * L'instruction **LISTBOX Get property**(vLB;\_o\_lk footer height) retourne la même valeur que la commande [LISTBOX Get footers height](listbox-get-footers-height.md) lorsque les pieds sont affichés. Dans le cas contraire, **LISTBOX Get property** retourne 0 alors que [LISTBOX Get footers height](listbox-get-footers-height.md) retourne toujours la hauteur, dans ce cas théorique, des pieds.
 
-#### Exemple 1 
+## Exemple 1 
 
 Soit une list box "MyListbox", si vous exécutez l’instruction suivante :
 
@@ -86,7 +86,7 @@ Soit une list box "MyListbox", si vous exécutez l’instruction suivante :
 
 *$selMode* vaut 0, 1 ou 2 suivant le mode de sélection courant de la list box. 
 
-#### Exemple 2 
+## Exemple 2 
 
 Soit une list box contenant des lignes d’une hauteur de 20 pixels chacune. Vous exécutez l’instruction suivante :
 
@@ -96,13 +96,13 @@ Soit une list box contenant des lignes d’une hauteur de 20 pixels chacune. Vou
 
 Si, par exemple, $déf retourne 200, vous pouvez en déduire que la 11e ligne est actuellement la première affichée dans la list box (200/20=10, donc 10 lignes sont masquées).
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

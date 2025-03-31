@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Change string.Summary-->**Change string** retourne une chaîne résultant du remplacement des caractères, dans la chaîne *source*, à partir de *positionDépart*, par la chaîne *nouveau*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Si *nouveau* est une chaîne vide (""), **Change string** retourne *source* inch
 
 La fonction **Change string** est différente de [Insert string](insert-string.md) car elle remplace des caractères au lieu de les insérer.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant illustre l'utilisation de **Change string**. Les résultats sont affectés à la variable *vRésultat*.
 
@@ -33,13 +33,13 @@ L'exemple suivant illustre l'utilisation de **Change string**. Les résultats so
  vRésultat:=Change string("novembre";"déc";1) // vRésultat est égal à "décembre"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Delete string](delete-string.md)  
 [Insert string](insert-string.md)  
 [Replace string](replace-string.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

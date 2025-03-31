@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get print preview.Summary-->O comando **Get print preview** devolve True se o comando [SET PRINT PREVIEW](set-print-preview.md) foi chamado com o valor **True** no processo atual.<!-- END REF-->
 
 Note que o usuário pode modificar esta opção antes de validar a caixa de diálogo. Para obter o modo final de impressão, deve utilizar o comando [Is in print preview](is-in-print-preview.md). 
 
-#### Ver também 
+## Ver também 
 
 [Is in print preview](is-in-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

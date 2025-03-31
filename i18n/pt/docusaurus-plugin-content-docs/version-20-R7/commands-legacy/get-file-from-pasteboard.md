@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->O comando Get file from pasteboard devolve a rota de acesso absoluto de um arquivo incluído em uma operação de arrastar e soltar.<!-- END REF--> Vários arquivos podem ser selecionados e movidos simultâneamente. O parâmetro *indiceN* são utilizados para designar um arquivo entre um conjunto de arquivos selecionados. 
 
 Se não houver arquivo N no porta-papéis, o comando devolve uma string vazia.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir pode ser utilizado para recuperar em um array todas as rotas de acesso aos arquivos incluídos na operação arrastar e soltar:
 
@@ -38,11 +38,11 @@ O exemplo a seguir pode ser utilizado para recuperar em um array todas as rotas 
  Until($vtarquivo="")
 ```
 
-#### Ver também 
+## Ver também 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

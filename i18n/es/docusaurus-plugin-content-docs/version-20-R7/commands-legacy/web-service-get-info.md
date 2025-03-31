@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB SERVICE Get info.Summary-->El comando **WEB SERVICE Get info** devuelve la información sobre todo error encontrado durante la ejecución de la última petición SOAP enviada a un servicio web remoto.<!-- END REF--> Generalmente, este comando debe llamarse dentro de un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md).
 
@@ -31,7 +31,7 @@ El parámetro *tipoInfo* le permite indicar el tipo de información que quiere o
 Se devuelve una cadena vacía cuando no hay información disponible, en particular si la última petición SOAP no generó errores. 
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

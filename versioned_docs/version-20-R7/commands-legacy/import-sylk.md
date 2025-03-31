@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT SYLK.Summary-->The **IMPORT SYLK** command reads data from *document*, a Windows or Macintosh SYLK document, into the table *aTable* by creating new records for that table.<!-- END REF-->
 
@@ -32,7 +32,7 @@ By default, the command uses the UTF-8 character set. Since SYLK format document
 
 When using **IMPORT SYLK**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13). You can modify these values by assigning new values to the two *System Variables* *FldDelimit* and *RecDelimit*. The user can change these default values in the export dialog box of the Design mode. Since Text fields can contain carriage returns, be careful if you use the carriage return as the field delimiter for fields to be exported.
 
-#### Example 
+## Example 
 
 The following example imports data from a SYLK document. The method first sets the input form so the data will be imported through the correct form, then performs the import:
 
@@ -41,18 +41,18 @@ The following example imports data from a SYLK document. The method first sets t
  IMPORT SYLK([People];"NewPeople.slk") // Import from “NewPeople.slk” document
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 OK is set to 1 if the import is successfully complete; otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [EXPORT SYLK](export-sylk.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

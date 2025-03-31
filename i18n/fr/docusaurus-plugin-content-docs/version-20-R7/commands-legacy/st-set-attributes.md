@@ -18,16 +18,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->La commande **ST SET ATTRIBUTES** permet de modifier un ou plusieurs attribut(s) de style dans le ou les objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 
 
-##### 
+### 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l'exécution, si l'objet a le focus, la commande s'applique uniquement à l'objet en cours d'édition et non à sa source de données (variable ou champ). Les modifications ne sont reportées dans la source (et donc dans les éventuels autres objets utilisant la même source) que lorsque l'objet en cours d'édition est validé via une perte de focus ou la touche **Entrée**. Si l'objet n'a pas le focus, la commande s'applique directement à la source de données et les modifications sont immédiatement répercutées aux éventuels autres objets utilisant la même source.   
 Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. La commande s'applique directement au champ ou à la variable et les modifications sont répercutées à tous les objets utilisant cette source, y compris l'objet ayant le focus. 
 
-##### 
+### 
 
 **Note :** Vous pouvez utiliser les attributs de style avec des champs de type Texte uniquement. Les champs de type Alpha ayant une longueur prédéfinie, l’ajout d’éventuelles balises de style entraînerait des pertes de données. 
 
@@ -82,7 +82,7 @@ Si vous passez la constante Attribute text color ou Attribute background color d
 | White                   | #FFFFFF                 |
 | Yellow                  | #FFFF00                 |
 
-#### Exemple 
+## Exemple 
 
 Dans cet exemple, nous modifions la taille, la couleur de texte ainsi que les attributs gras et souligné des caractères 2 à 4 du champ :
 
@@ -90,18 +90,18 @@ Dans cet exemple, nous modifions la taille, la couleur de texte ainsi que les at
  ST SET ATTRIBUTES([MaTable]MonChamp;2;5;Attribute font name;"Arial";Attribute text size;10;Attribute underline style;1;Attribute bold style;1;Attribute text color;"Blue")
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 A l’issue de l’exécution de cette commande, la variable OK prend la valeur 1 si aucune erreur n’a été rencontrée et 0 dans le cas contraire. C’est le cas notamment lorsque l’évaluation des balises de style échoue (balise incorrecte ou manquante). 
 
 A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une erreur se produit sur une variable lors de l’évaluation du texte, 4D transforme le texte en texte brut ; par conséquent, les caractères <, > et & seront convertis en entités HTML.
 
-#### Voir aussi 
+## Voir aussi 
 
 [FONT LIST](font-list.md)  
 [ST GET ATTRIBUTES](st-get-attributes.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

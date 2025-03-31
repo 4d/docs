@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Path to object.Summary-->**Path to object** コマンドは*path* 引数に渡したパスの特定のプロパティを含んだオブジェクトを返します。<!-- END REF-->引数を省略した場合、コマンドはデフォルトで*path* 引数にはシステムセパレータ(Windows では"\\"、macOS では":" )を含んだシステムパスが渡されたものとみなします。Posix セパレータを含んだPosixパスを*path* 引数に渡した場合、あるいはパスのタイプを指定したい場合には、以下の定数のどれか一つを*pathType* 引数に渡します:
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **Path to object** は、文字列を受け取るだけであるという点に注意してください。パスが指定されたパスタイプに対して有効であるかをチェックすることはしませんし、指定されたファイルあるいはフォルダが実際に存在するかどうかもチェックはしません。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例題では、ファイルパスに対する様々な結果を示しています:
 
@@ -129,7 +129,7 @@ displayed_sidebar: docs
   //$o.isFolder=false
 ```
 
-#### 例題 2 
+## 例題 2 
 
 このコマンドを[Object to path](object-to-path.md) コマンドと組み合わせることでパスの中のファイルの名前を変更することができます:
 
@@ -147,7 +147,7 @@ displayed_sidebar: docs
   //$path="C:\4D\resources\images\4DOld.jpg"
 ```
 
-#### 例題 3 
+## 例題 3 
 
 パス内に含まれるサブフォルダの数を知りたい場合を考えます:
 
@@ -164,7 +164,7 @@ displayed_sidebar: docs
  ALERT("The path depth is: "+String($count))
 ```
 
-#### 参照 
+## 参照 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -173,7 +173,7 @@ displayed_sidebar: docs
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Summary-->**LISTBOX SET FOOTER CALCULATION**コマンドは*object* と *\** 引数で指定したリストボックスのフッターに割り当てる自動計算を設定します。<!-- END REF-->
 
@@ -47,11 +47,11 @@ displayed_sidebar: docs
 
 **注**: フッターエリア変数の型は (コードで明示的に型宣言されていない場合)、プロパティリストで設定された計算に基づき自動で型付けされます (*リストボックスフッター特有のプロパティ*参照)。変数型が、**LISTBOX SET FOOTER CALCULATION**コマンドが期待する結果の型に対応しない場合、型エラーが生成されます。例えば列が日付を表示しているとき、フッターの計算式が '最大値' であれば、フッターエリアの変数は日付型になります。このとき **LISTBOX SET FOOTER CALCULATION**(footer;lk footer count) を実行すると、変数型日付に対して式の結果が倍長整数になるため、エラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

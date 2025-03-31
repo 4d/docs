@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get plugin access.Summary-->La commande **Get plugin access** retourne le nom du groupe d’utilisateurs autorisé à utiliser le plug-in dont le numéro a été passé dans le paramètre *plugIn*.<!-- END REF--> Si aucun groupe n’est associé au plug-in, la commande retourne une chaîne vide (""). 
 
@@ -29,12 +29,12 @@ Passez dans le paramètre *plugIn* le numéro du plug-in duquel vous souhaitez c
 | 4D View license        | Entier long | 808465207 |
 | 4D Write license       | Entier long | 808464697 |
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET GROUP ACCESS](set-group-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR BLOB TO REPORT.Summary-->QR BLOB TO REPORT コマンドは、*blob*に格納されたレポートを*area*に渡されたクイックレポートエリアに配置します。<!-- END REF--> 
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*blob*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 例題 1 
+## 例題 1 
 
 次のコードを使用し、データベースストラクチャと同じ階層にある“report.4qr”という名称のレポートファイルをMyAreaに表示することができます。このレポートファイルは4D 2003で作成されている必要はなく、以前のバージョンのものであっても構いません:
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
  QR BLOB TO REPORT(MyArea;$doc)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 次の例は、Field4に格納されたクイックレポートを取り出し、MyAreaに表示します:
 
@@ -40,11 +40,11 @@ displayed_sidebar: docs
  QR BLOB TO REPORT(MyArea;[Table 1]Field4)
 ```
 
-#### 参照 
+## 参照 
 
 [QR REPORT TO BLOB](qr-report-to-blob.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

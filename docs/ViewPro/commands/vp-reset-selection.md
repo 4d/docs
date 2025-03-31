@@ -14,7 +14,7 @@ title: VP RESET SELECTION
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |sheet    |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP RESET SELECTION` command <!-- REF #_method_.VP RESET SELECTION.Summary -->deselects all cells, resulting in no current selection or visible active cell<!-- END REF -->.
 
@@ -26,7 +26,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 
 * `vk current sheet`
   
-#### Example
+## Example
 
 You want to deselect all cells (the active cell and any selected cells):
 
@@ -34,7 +34,7 @@ You want to deselect all cells (the active cell and any selected cells):
 VP RESET SELECTION("myVPArea")
 ```
 
-#### See also
+## See also
 
 [VP ADD SELECTION](vp-add-selection.md)<br/>
 [VP Get active cell](vp-get-active-cell.md)<br/>

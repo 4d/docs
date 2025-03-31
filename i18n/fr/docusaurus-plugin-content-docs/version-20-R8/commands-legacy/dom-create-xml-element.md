@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Create XML element.Summary-->La commande **DOM Create XML element** permet de créer un nouvel élément dans l’élément XML *refElément*, à l’emplacement du noeud désigné par le paramètre *xPath*, et de lui ajouter éventuellement des attributs.<!-- END REF-->
 
@@ -53,7 +53,7 @@ Le paramètre *valeurAttribut* peut être de type texte ou d'un autre type (bool
 
 La commande retourne en résultat la référence XML de l’élément créé.
 
-#### Exemple 1 
+## Exemple 1 
 
 Nous souhaitons créer l’élément suivant : 
 
@@ -70,7 +70,7 @@ Pour cela, il suffit d’écrire :
  vRefElement:=DOM Create XML element(vRefRacine;vxPath)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Nous souhaitons créer l’élément suivant (comportant des attributs) : 
 
@@ -111,7 +111,7 @@ Vous obtenez alors :
                                                 
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Nous souhaitons créer et exporter la structure suivante : 
 
@@ -135,24 +135,24 @@ Nous souhaitons utiliser la syntaxe basée sur un nom d'élément simple. Pour c
  DOM CLOSE XML($root)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Une erreur est générée lorsque :
 
 * la référence de l’élément racine n’est pas valide
 * le nom de l’élément à créer n’est pas valide (par exemple, s’il débute par un chiffre).
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

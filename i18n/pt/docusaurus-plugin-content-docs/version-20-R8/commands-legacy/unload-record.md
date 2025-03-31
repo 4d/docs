@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.UNLOAD RECORD.Summary-->UNLOAD RECORD descarrega o registro atual de *tabela*.<!-- END REF-->
 
@@ -25,12 +25,12 @@ Se um registro tiver uma quantidade importante de dados, de campos de imagem, ou
   
 **Nota**: quando se utiliza em uma transação, o comando UNLOAD RECORD descarrega o registro atual unicamente para o processo que gera a transação. Para outros processos, o registro permanece bloqueado sempre que a transação não tiver sido confirmada (ou cancelada).
 
-#### Ver também 
+## Ver também 
 
 [LOAD RECORD](load-record.md)  
 *Record Locking*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BLOB TO PICTURE.Summary-->La commande **BLOB TO PICTURE** place dans un champ ou une variable image 4D une image stockée dans un BLOB, quel que soit son format initial.<!-- END REF--> 
 
@@ -39,17 +39,17 @@ La mise en oeuvre de ces mécanismes permet de notamment de créer des "tableaux
 
 **Note :** Un BLOB créé par la commande [VARIABLE TO BLOB](variable-to-blob.md) est géré automatiquement, il n’est pas nécessaire de passer le codec pour l’encapsuler, le BLOB étant "signé". Pour l’opération inverse dans ce cas, vous devez passer ".4DVarBlob" comme identifiant de codec à la commande [PICTURE TO BLOB](picture-to-blob.md).  
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été exécutée correctement, la variable système OK prend la valeur 1\. En cas d’échec (absence de QuickTime, format d’image inconnu, paramètre *codec* reconnu mais ne validant pas le BLOB...), OK prend la valeur 0 et le champ ou la variable image 4D est retourné(e) vide.
 
-#### Voir aussi 
+## Voir aussi 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [PICTURE TO BLOB](picture-to-blob.md)  
 [READ PICTURE FILE](read-picture-file.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

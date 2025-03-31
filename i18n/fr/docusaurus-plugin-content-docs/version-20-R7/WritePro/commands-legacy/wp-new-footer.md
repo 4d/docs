@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP New footer.Summary-->La commande **WP New footer** crée et retourne le pied associé à la section ou à la sous-section définie par le paramètre *wpSection* .<!-- END REF-->
 
 Si un élément pied est déjà défini pour la section ou la sous-section, un objet indéfini est retourné et une erreur est générée
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez créer un pied pour les pages de gauche d'une section :
 
@@ -37,7 +37,7 @@ Vous souhaitez créer un pied pour les pages de gauche d'une section :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP DELETE FOOTER](wp-delete-footer.md)  
 [WP Get footer](wp-get-footer.md)  

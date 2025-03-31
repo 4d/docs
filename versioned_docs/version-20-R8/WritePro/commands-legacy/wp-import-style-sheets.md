@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->The **WP IMPORT STYLE SHEETS** command imports all of the style sheets from the *sourceDoc* into the *targetDoc*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ In the *sourceDoc* parameter, pass the 4D Write Pro document containing the styl
 
 **Note**: If a style sheet from *sourceDoc* has the same name as a style sheet in *targetDoc*, the imported style sheet will overwrite (replace) the style sheet in the *targetDoc*.
 
-#### Example 
+## Example 
 
 You want to import a template style sheet and receive a notification with the number for each type of style sheet imported:
 
@@ -39,7 +39,7 @@ You want to import a template style sheet and receive a notification with the nu
  ALERT(String($nb1)+" paragraph style sheet(s) and "+string($nb2)+" character style sheet(s) imported))
 ```
 
-#### See also 
+## See also 
 
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheet](wp-get-style-sheet.md)  

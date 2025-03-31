@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->The **LISTBOX GET PRINT INFORMATION** command returns the current information relative to the printing of the list box object designated by the *object* and *\** parameters.<!-- END REF--> This command can be used to control the printing of the list box contents.
 
@@ -35,7 +35,7 @@ Pass a value indicating the information you want to find out in *selector* and a
 
 For more information about the principles of printing list boxes, please refer to *Printing list boxes*.
 
-#### Example 1 
+## Example 1 
 
 Printing until all the rows have been printed:
 
@@ -53,7 +53,7 @@ Printing until all the rows have been printed:
  CLOSE PRINTING JOB
 ```
 
-#### Example 2 
+## Example 2 
 
 Printing at least 500 rows of the list box, knowing that certain rows are hidden:
 
@@ -68,7 +68,7 @@ Printing at least 500 rows of the list box, knowing that certain rows are hidden
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

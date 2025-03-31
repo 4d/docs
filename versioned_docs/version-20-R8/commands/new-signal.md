@@ -23,7 +23,7 @@ displayed_sidebar: docs
 </details>
 
 
-#### Description 
+## Description 
 
 The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
 
@@ -41,7 +41,7 @@ Since the signal object is a shared object, it can also be used to maintain user
 
 A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
 
-#### Example
+## Example
 
 Here is a typical example of a worker that sets a signal:
 
@@ -74,7 +74,7 @@ The ***doSomething*** method could be like:
 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

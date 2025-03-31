@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `Process info` コマンドは、<!-- REF #_command_.Process info.Summary -->*processNumber* 引数にプロセス番号を渡したプロセスについての詳細な情報を提供するオブジェクトを返します<!-- END REF -->。  正しくないプロセス番号を渡した場合、コマンドはnull オブジェクトを返します。
 
@@ -143,7 +143,7 @@ displayed_sidebar: docs
 
 ```
 
-#### 例題
+## 例題
 
 プロセスがプリエンプティブかどうかを調べたい場合を考えます:
 
@@ -154,7 +154,7 @@ $preemptive:=Process info(Current process).preemptive
 
 ```
 
-#### 参照
+## 参照
 
 [Count tasks](../commands-legacy/count-tasks.md)\
 [Process activity](process-activity.md)\

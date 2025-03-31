@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP NEW BOOKMARK.Summary-->**WP NEW BOOKMARK**コマンドは、親ドキュメント内の *targetObj* 引数で指定された4D Write Proオブジェクトに基づいた、*bkName* 引数で指定された名前の新しいブックマークを作成します。<!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ブックマークは同一ドキュメント内において無制限に作成することができます。同一のレンジを使用した複数のブックマークを作成することもできます。作成したあとは、ブックマークは自動的に親ドキュメントに保存され、そのドキュメント自身と共に保存されます。
 
-#### 例題 1 
+## 例題 1 
 
 ドキュメント内で現在選択されているテキストを参照する新しいブックマークを作成したい場合を考えます。以下のように書く事ができます:
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
  WP NEW BOOKMARK($range;"my_bookmark")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 既存のブックマークの名前を変更したい場合を考えます。そのためには、同じレンジを使用した新しいブックマークを作成し、古い方を削除する必要があります:
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
   
 [WP Bookmark range](wp-bookmark-range.md)  

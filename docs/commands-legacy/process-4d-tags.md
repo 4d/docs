@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PROCESS 4D TAGS.Summary-->The **PROCESS 4D TAGS** command causes the processing of 4D transformation tags contained in the *inputTemplate* parameter while (optionally) inserting value(s) using the *param* parameters and returns the result in *outputResult*.<!-- END REF--> For a complete description of these tags, refer to the *4D Transformation Tags* section.
 
@@ -40,7 +40,7 @@ The *outputResult* parameter may be a field or a variable of the Text type.
 
 **Note:** This command never calls the [On Web Authentication database method](on-web-authentication-database-method.md).
 
-#### Example 1 
+## Example 1 
 
 This example loads a 'template' type document, processes the tags it contains and then stores it:
 
@@ -53,7 +53,7 @@ This example loads a 'template' type document, processes the tags it contains an
  TEXT TO DOCUMENT(File("/PACKAGE/myfile.txt").platformPath;$outputText_t)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example generates a text using data of the arrays:
 
@@ -69,11 +69,11 @@ This example generates a text using data of the arrays:
   // $output = "elements = hello world"
 ```
 
-#### See also 
+## See also 
 
 *4D Transformation Tags*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

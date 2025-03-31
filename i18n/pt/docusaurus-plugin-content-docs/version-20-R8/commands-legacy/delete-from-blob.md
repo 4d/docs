@@ -15,19 +15,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE FROM BLOB.Summary-->O comando DELETE FROM BLOB apaga o número de bytes especificado por *tamanho* do BLOB *blob* a partir da posição especificada por *offset* (expressada de modo relativo ao começo do BLOB).<!-- END REF--> O tamanho do BLOB é reduzido em *tamanho* de bytes.
 
-##### Nota 
+### Nota 
 
 **Nota de compatibilidade**: como este comando altera o blob passado como parâmetro, não é compatível com objetos blob (tipo 4D.Blob). Ver *Passing blobs and blob objects to 4D commands* em developer.4d.com
 
-#### Ver também 
+## Ver também 
 
 [INSERT IN BLOB](insert-in-blob.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

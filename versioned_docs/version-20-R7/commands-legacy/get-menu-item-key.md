@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get menu item key.Summary-->The **Get menu item key** command returns the code of the **Ctrl** (Windows) or **Command** (Macintosh) shortcut for the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
 
@@ -26,7 +26,7 @@ If you omit the *process* parameter, **Get menu item key** applies to the menu b
 
 If the menu item has no associated shortcut or if the *menuItem* parameter designates a hierarchical submenu, **Get menu item key** returns *0* (zero).
 
-#### Example 
+## Example 
 
 To obtain the shortcut associated with a menu item, it is useful to implement a programming structure of the following type:
 
@@ -44,12 +44,12 @@ To obtain the shortcut associated with a menu item, it is useful to implement a 
  End if
 ```
 
-#### See also 
+## See also 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

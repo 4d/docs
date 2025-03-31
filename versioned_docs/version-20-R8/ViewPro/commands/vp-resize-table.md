@@ -21,7 +21,7 @@ title: VP RESIZE TABLE
 |rangeObj|Object|->|New range for the table|
 |tableName|Text|->|Name of the table|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->changes the *tableName* size with regards to the *rangeObj*<!-- END REF -->.
 
@@ -36,7 +36,7 @@ The following rules apply:
 If *tableName* does not exist, nothing happens.
 
 
-#### Example
+## Example
 
 You create a table with a data context: 
 
@@ -66,7 +66,7 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 ![](../../assets/en/ViewPro/table-resize.png)
 
 
-#### See also
+## See also
 
 [VP CREATE TABLE](vp-create-table.md)<br/>
 [VP Get table range](vp-get-table-range.md)

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Date.Summary-->The Date command evaluates *expression* and returns a date.<!-- END REF-->
 
@@ -41,7 +41,7 @@ The following characters are valid date separators: slash (/), space, period (.)
 **Date type expression**  
 If *expression* is of date type, **Date** returns the date passed in the parameter 'as is'. This is particularly useful in the context of generic programming using pointers or object attributes.
 
-#### Example 1 
+## Example 1 
 
 The following example uses a request box to prompt the user for a date. The string entered by the user is converted to a date and stored in the *reqDate* variable:
 
@@ -52,7 +52,7 @@ The following example uses a request box to prompt the user for a date. The stri
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 The following examples show various cases:
 
@@ -66,7 +66,7 @@ The following examples show various cases:
  vdDate5:=Date($vobj.creationDate) //00/00/00
 ```
 
-#### Example 3 
+## Example 3 
 
 Date evaluation based on a date in ISO format:
 
@@ -76,7 +76,7 @@ Date evaluation based on a date in ISO format:
   //$vDate represents June 5th, 2013 regardless of the system language
 ```
 
-#### Example 4 
+## Example 4 
 
 You want to get a date from an object attribute, whatever the current attribute date storage option:
 
@@ -88,12 +88,12 @@ You want to get a date from an object attribute, whatever the current attribute 
  End if
 ```
 
-#### See also 
+## See also 
 
 [Bool](bool.md)  
 [String](string.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

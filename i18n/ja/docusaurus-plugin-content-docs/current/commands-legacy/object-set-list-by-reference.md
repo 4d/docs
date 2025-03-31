@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->**OBJECT SET LIST BY REFERENCE**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられたリストを、 *list* 引数で指定した階層リストで置き換えもしくは定義します。<!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 このコマンドは、変数またはフィールドに関連付けられたポップアップまたはコンボボックスに対して使用すると興味深い挙動をします( *Design Reference* マニュアルを参照して下さい)。この場合、関連付けは動的に行われ、リストの変更は全てフォームへと反映されます。オブジェクトが配列に関連付けられたとき、リストは配列へとコピーされ、リストへのいかなる変更も自動的に不可になります(例5を参照して下さい)。
 
-#### 例題 1 
+## 例題 1 
 
 単純な選択リスト(デフォルトのリスト型)をテキストフィールドへと関連付ける場合:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
  OBJECT SET LIST BY REFERENCE([Contact]Country;vCountriesList)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 "vColor" というリストを単純な選択リストとして "DoorColor" ポップアップリストに関連付けます:
 
@@ -67,7 +67,7 @@ displayed_sidebar: docs
  OBJECT SET LIST BY REFERENCE(*;"DoorColor";Choice list;vColor)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 更に、 "vColor" のリストを、 "WallColor" というコンボボックスに関連付けする場合を考えます。このコンボボックスは入力可能なので、 "black" "purple" と言った色が入力されないようにしたい場合、これらの色を "vReject" というリストに入れて除外します:
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;vReject)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 これらのリストの関連付けを解除する場合:
 
@@ -90,7 +90,7 @@ displayed_sidebar: docs
  OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;0)
 ```
 
-#### 例題 5 
+## 例題 5 
 
 この例では、このコマンドがテキスト配列に関連付けられたポップアップメニューに適用されたときと、テキスト変数に関連付けられたポップアップメニューに適用されたときの違いについて説明します。フォーム内に二つのポップアップメニューがあるとします:
 
@@ -123,12 +123,12 @@ displayed_sidebar: docs
 
 配列によって管理されたポップアップに関連付けられたリストを更新するためには、 **OBJECT SET LIST BY REFERENCE** コマンドを再度使用してリストの中身をコピーする必要があります。
 
-#### 参照 
+## 参照 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

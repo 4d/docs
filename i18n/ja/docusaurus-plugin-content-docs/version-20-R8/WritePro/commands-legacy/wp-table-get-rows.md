@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Table get rows.Summary-->**WP Table get rows** コマンドは、*targetObj* または(*startRow* および *numRows* 引数で定義された)*tableRef* で指定した表から、行のセレクションを格納した新しいレンジオブジェクトを返します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
     
 この場合、コマンドは繰り返されるヘッダー行を格納した行レンジを返します(この場合は渡されていたとしても*numRows* 変数は効力を持ちません)。ただし定義されたヘッダー行がない場合にはコマンドはNull を返します。
 
-#### 例題 1 
+## 例題 1 
 
 テーブルの最初の2行に対して特定の背景色を設定し、3行目の境界線を変更したい場合を考えます:
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 
 ![](../../assets/en/WritePro/commands/pict3307142.en.png)
 
-#### 例題 2 
+## 例題 2 
 
 10行目の行から最後の行までのレンジを取得したい場合を考えます:
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
  WP Table get rows(tableRef;10;MAXLONG)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 ユーザーが選択した行を取得した場合を考えます:
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
  $rows:=WP Table get rows($userSelection)
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下のサンプルコードは、以下の操作を行います:
 
@@ -110,7 +110,7 @@ displayed_sidebar: docs
  
 ```
 
-#### 参照 
+## 参照 
 
 [WP Insert table](wp-insert-table.md)  
 [WP Table append row](../commands/wp-table-append-row.md)  

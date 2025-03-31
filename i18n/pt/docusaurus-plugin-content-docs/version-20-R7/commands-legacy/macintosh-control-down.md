@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 Macintosh control down retorna TRUE se a tecla Control de Macintosh estiver pressionada.  
 
 **Nota**: quando é chamada em Windows, Macintosh control down sempre retorna FALSE. Esta tecla Macintosh não tem equivalente em Windows.
 
-#### Exemplo 
+## Exemplo 
 
 Ver exemplo do comando [Shift down](shift-down.md).
 
-#### Ver também 
+## Ver também 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -32,7 +32,7 @@ Ver exemplo do comando [Shift down](shift-down.md).
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Open form window.Summary-->Open form window コマンドはフォーム*formName*のサイズとリサイズプロパティを使用して、新しいウィンドウを開きます。<!-- END REF-->
 
@@ -90,7 +90,7 @@ Movable form dialog box 、Plain form window およびPalette form window タイ
 
 オプションの引数 *\** を渡すと、閉じられるときにその時点での位置とサイズが記憶されます。ウィンドウが再度開かれると、以前の位置とサイズが再現されます。この場合、*vPos* と *hPos* 引数はウィンドウが最初に開かれるときにのみ使用されます。
 
-#### 例題 1 
+## 例題 1 
 
  以下のコードはクローズボックス付きの標準のウィンドウを開き、自動で"Input"フォームのサイズに調整します。フォームウィンドウは"fixed"に設定されていないため、ウィンドウはグローとズームボックスを持ちます:
 
@@ -98,7 +98,7 @@ Movable form dialog box 、Plain form window およびPalette form window タイ
  $winRef :=Open form window([Table1];"Enter")
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下のコードはプロジェクトフォーム"Tools"に基づき、スクリーンの左上の位置にフローティングパレットを開きます。このパレットは閉じられた時の位置を記憶し、再度開かれるときにはその位置が使用されます:
 
@@ -106,7 +106,7 @@ Movable form dialog box 、Plain form window およびPalette form window タイ
  $winRef :=Open form window("Tools";Palette form window;On the left;At the top;*)
 ```
 
-#### 例題 3 
+## 例題 3 
 
 このコードはmacOS上で実行する必要があり、実行すると、(例えばフォームボタンから呼び出された)ドキュメントウィンドウが表示されている間、シートウィンドウが表示されます:
 
@@ -118,7 +118,7 @@ Movable form dialog box 、Plain form window およびPalette form window タイ
   //シートウィンドウはタイトルバーの下から"ドロップダウン"形式で表示されます。
 ```
 
-#### 例題 4 
+## 例題 4 
 
 以下の例では、.json フォームへのパスを使用して従業員リスト内のレコードを表示する場合を考えます:
 
@@ -132,14 +132,14 @@ Movable form dialog box 、Plain form window およびPalette form window タイ
 
 ![](../assets/en/commands/pict3687439.en.png)
 
-#### 参照 
+## 参照 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [Open window](open-window.md)  
 *Window Types*  
 *ウィンドウタイプ(互換性)*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

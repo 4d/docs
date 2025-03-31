@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET QUERY DESTINATION.Summary-->El comando **GET QUERY DESTINATION** devuelve el destino actual de los resultados de las búsquedas para el proceso en curso.<!-- END REF--> Por defecto, los resultados de las búsquedas modifican la selección actual, pero puede modificar este funcionamiento con la ayuda del comando [SET QUERY DESTINATION](set-query-destination.md).
 
@@ -39,7 +39,7 @@ El valor devuelto en el parámetro *destinoObjeto* depende del valor del paráme
 
  Cuando el destino de las búsquedas es una variable local (*destinoTipo* devuelve 3), 4D devuelve en el parámetro *destinoPunt* un puntero a esta variable.
 
-#### Ejemplo 
+## Ejemplo 
 
 Queremos modificar temporalmente el destino de búsqueda y restablecer los parámetros previos:
 
@@ -53,11 +53,11 @@ Queremos modificar temporalmente el destino de búsqueda y restablecer los pará
   //restablecimiento de los parámetros
 ```
 
-#### Ver también 
+## Ver también 
 
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

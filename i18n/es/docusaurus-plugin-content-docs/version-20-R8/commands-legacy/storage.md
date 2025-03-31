@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Storage.Summary-->El método **Storage** devuelve el catálogo de objetos compartidos o colecciones compartidas registrados registradas en el objeto *Storage* en la máquina o componente actual.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Como el catálogo devuelto por **Storage** es un o*bjeto compartido*, sigue las 
 * Cuando está rodeado por la estructura *Use...End use*, los atributos de primer nivel de **Storage** están bloqueados para otros procesos.
 * A diferencia de los objetos compartidos estándar, el objeto devuelto por **Storage** NO compartirá su *identificador de bloqueo* con objetos compartidos o colecciones agregadas como atributos (para más información, consulte la sección *Identificador de bloqueo*).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Una práctica común podría ser inicializar el objeto **Storage** en el : 
 
@@ -38,7 +38,7 @@ Una práctica común podría ser inicializar el objeto **Storage** en el :
  End use
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo muestra una forma estándar de establecer valores de **Almacenamiento**:
 
@@ -52,7 +52,7 @@ Este ejemplo muestra una forma estándar de establecer valores de **Almacenamien
  End use
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 **Storage** permite implementar un singleton con una *inicialización lenta*, como se muestra en el siguiente ejemplo.
 
@@ -79,11 +79,11 @@ Este ejemplo muestra una forma estándar de establecer valores de **Almacenamien
  $0:=$counterValue
 ```
 
-#### Ver también 
+## Ver también 
 
 *Objetos y colecciones compartidos*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

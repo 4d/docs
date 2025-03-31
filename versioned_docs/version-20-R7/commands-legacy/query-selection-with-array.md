@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Summary-->The **QUERY SELECTION WITH ARRAY** command searches the table of the field passed as first parameter for the records where the value of *targetField* is equal to at least one of the values of the elements in the *array*.<!-- END REF--> The records found will become the new current selection.
 
@@ -25,11 +25,11 @@ displayed_sidebar: docs
 
 For more information, please refer to the description of the [QUERY WITH ARRAY](query-with-array.md) command.
 
-#### See also 
+## See also 
 
 [QUERY WITH ARRAY](query-with-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

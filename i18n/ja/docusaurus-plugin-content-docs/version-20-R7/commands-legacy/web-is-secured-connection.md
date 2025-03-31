@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB Is secured connection.Summary-->**WEB Is secured connection**コマンドは、4DのWebサーバ接続が (リクエストが"http:"の代わりに"https:"で始まる) TLS/SSLを通して保護モードで実行されたかを示すブール値を返します 。<!-- END REF-->
 
@@ -24,11 +24,11 @@ displayed_sidebar: docs
 
 このコマンドを使用して、非保護モードで実行された接続を拒否することも可能です。
 
-#### 参照 
+## 参照 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

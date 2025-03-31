@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Position.Summary-->**Position** devuelve la posición de la primera ocurrencia de *buscar* en *laCadena*.<!-- END REF-->
 
@@ -68,7 +68,7 @@ Para información sobre la definición del lenguaje de datos, ver la sección en
   
 **Advertencia:** no puede utilizar el carácter arroba @ con **Position**. Por ejemplo, si pasa *"abc@"* en *buscar*, el comando buscará la cadena *"abc@"* y no "abc" seguido de otros caracteres.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo ilustra el uso de Position. Los resultados, descritos en los comentarios, se asignan a la variable *vlResult*.
 
@@ -81,7 +81,7 @@ Este ejemplo ilustra el uso de Position. Los resultados, descritos en los coment
  vlResult:=Position("œ";"Bœuf";1;$largo) // vlResult =2, $largo= 1
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 En el siguiente ejemplo, el parámetro *longEncont* permite buscar todas las ocurrencias de "aegis" en un texto, sin importar cómo está escrito:
 
@@ -93,7 +93,7 @@ En el siguiente ejemplo, el parámetro *longEncont* permite buscar todas las ocu
  Until(vlResult=0)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 En el siguiente ejemplo, usted quiere encontrar todas las instancias de una cadena y reemplazarla:
 
@@ -114,12 +114,12 @@ En el siguiente ejemplo, usted quiere encontrar todas las instancias de una cade
  Until($p<=0) //result: $string -> Hello Joëlle and Joël!
 ```
 
-#### Ver también 
+## Ver también 
 
 [Compare strings](compare-strings.md)  
 [Substring](substring.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

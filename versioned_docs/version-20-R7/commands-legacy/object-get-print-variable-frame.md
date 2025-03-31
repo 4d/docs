@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->The **OBJECT GET PRINT VARIABLE FRAME** command gets the current configuration of the variable frame print options for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -33,11 +33,11 @@ If the *object* is a subform and if variable frame printing is disabled (**False
 | Print Frame fixed with multiple records | Integer | 2     | The frame remains the same size, but 4D prints the form several times to include all the records.<br/>                                      |
 | Print Frame fixed with truncation       | Integer | 1     | 4D prints only the records that fit into the area of the subform. The form is printed only once and those records that are not printed are ignored. |
 
-#### See also 
+## See also 
 
 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

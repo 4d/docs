@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISPLAY RECORD.Summary-->**DISPLAY RECORD** affiche l'enregistrement courant de *laTable* dans le formulaire entrée courant.<!-- END REF--> L'enregistrement reste affiché jusqu'à ce qu'un événement provoque un redessinement de la fenêtre. Cet événement peut être l'exécution d'un [ADD RECORD](add-record.md), le retour au formulaire entrée ou à la barre de menus. **DISPLAY RECORD** ne fait rien s'il n'y a pas d'enregistrement courant.
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Si une méthode formulaire existe, un événement On Load est généré.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche une série d'enregistrements sous forme de slide show :
 
@@ -35,11 +35,11 @@ L'exemple suivant affiche une série d'enregistrements sous forme de slide show 
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [MESSAGE](message.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

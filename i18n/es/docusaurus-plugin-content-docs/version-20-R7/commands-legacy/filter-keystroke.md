@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->FILTER KEYSTROKE permite reemplazar el carácter introducido por el usuario en un campo o en un área editable por el primer carácter de la cadena *carFiltro*.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Utilice el comando FILTER KEYSTROKE para:
 
 **Advertencia:** si llama al comando [Keystroke](keystroke.md "Keystroke") después de llamar a FILTER KEYSTROKE, se devuelve el carácter que usted pasa a este comando en lugar del carácter introducido realmente.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Utilizando el siguiente código:
 
@@ -49,7 +49,7 @@ Utilizando el siguiente código:
 
 Todos los dígitos introducidos en el área *miObjeto* se transforman en asteriscos.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este código define el comportamiento de un área de entrada de contraseña, en la cual los caracteres introducidos son reemplazados (en la pantalla) por caracteres aleatorios:
 
@@ -70,7 +70,7 @@ Este código define el comportamiento de un área de entrada de contraseña, en 
 
 Una vez validada la entrada de datos, usted recupera la contraseña introducida en realidad por el usuario *vsContraseñaReal*. Nota: El método Manejo keystroke está listado en el ejemplo del comando Keystroke. 
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 En su aplicación, tiene algunas áreas de texto en las cuales puede introducir algunas frases. Su aplicación también incluye una tabla de diccionario de los términos utilizados con más frecuencia en su base. Durante la edición de sus áreas de texto, a usted le gustaría poder recuperar e insertar rápidamente entradas del diccionario basado en los caracteres seleccionados en un área de texto. Hay dos formas de hacer esto:   
  \- Ofrecer algunos botones con teclas asociadas o   
@@ -241,14 +241,14 @@ El método ObtenerTextoSeleccionado es el siguiente:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

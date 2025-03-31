@@ -22,17 +22,17 @@ The following properties are available:
 
 ||
 |---|
-|[<!-- INCLUDE #4D.TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #4D.TCPEvent.data.Summary -->|
-|[<!-- INCLUDE #4D.TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #4D.TCPEvent.type.Summary -->|
+|[<!-- INCLUDE #TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #TCPEvent.data.Summary -->|
+|[<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary -->|
 
-<!-- REF #4D.TCPEvent.data.Desc -->
+<!-- REF #TCPEvent.data.Desc -->
 ## .data
 
-<!-- REF #4D.TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
+<!-- REF #TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
 
 #### Description
 
-The `.data` property contains <!-- REF #4D.TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
+The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
 
 :::note
 
@@ -44,14 +44,14 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 
 
-<!-- REF #4D.TCPEvent.type.Desc -->
+<!-- REF #TCPEvent.type.Desc -->
 ## .type
 
-<!-- REF #4D.TCPEvent.type.Syntax -->**type** : Text<!-- END REF -->
+<!-- REF #TCPEvent.type.Syntax -->**type** : Text<!-- END REF -->
 
 #### Description
 
-The `.type` property contains <!-- REF #4D.TCPEvent.type.Summary -->the type of the event<!-- END REF -->. Possible values are:
+The `.type` property contains <!-- REF #TCPEvent.type.Summary -->the type of the event<!-- END REF -->. Possible values are:
 - `"connection"`: Indicates that a TCPConnection was successfully established.
 - `"data"`: Indicates that data has been received.
 - `"error"`: Indicates that an error occurred during the TCPConnection.

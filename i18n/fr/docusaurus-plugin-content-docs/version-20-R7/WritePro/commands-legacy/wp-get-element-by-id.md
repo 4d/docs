@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get element by ID.Summary-->La commande **WP Get element by ID** retourne un objet contenant l'élément de *docWP* passé dans le paramètre *ID*.<!-- END REF--> 
 
@@ -25,7 +25,7 @@ Passez l'attribut ID de l'élément à retrouver dans le paramètre *ID*. L'él�
 
 **Note :** La valeur du paramètre *ID* est sensible à la casse.
 
-#### Exemple 1 
+## Exemple 1 
 
 Pour obtenir l'image avec l'ID "img1" :
 
@@ -34,7 +34,7 @@ Pour obtenir l'image avec l'ID "img1" :
  obImage:=WP Get element by ID(myDoc;"img1")
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous souhaitez retrouver un élément tableau et le modifier en l'entourant d'une large bordure violette :
 
@@ -46,7 +46,7 @@ Vous souhaitez retrouver un élément tableau et le modifier en l'entourant d'un
  WP SET ATTRIBUTES($element;wk border color;"purple")
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Vous souhaitez retrouver un élément et modifier son ID :
 
@@ -59,6 +59,6 @@ Vous souhaitez retrouver un élément et modifier son ID :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get elements](wp-get-elements.md)  

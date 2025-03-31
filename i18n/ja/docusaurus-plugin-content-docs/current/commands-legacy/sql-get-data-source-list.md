@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->*GET DATA SOURCE LIST*コマンドは、オペレーションシステムのODBCマネージャで定義されている*sourceType* データソースのドライバと名前を*sourceNamesArr*と*driversArr*の配列に返します。<!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 **Note:** ODBC経由で外部4Dデータソースへ接続したい場合、お手持ちのマシーンに 4DのODBC Driverをインストールしなければなりません。詳細については、4D ODBC Driver Installationマニュアルを参照してください。
 
-#### 例題 
+## 例題 
 
 以下はユーザデータソースを使用する例です:
 
@@ -44,17 +44,17 @@ displayed_sidebar: docs
  GET DATA SOURCE LIST(User data source;arrDSN;arrDSNDrivers)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとOKシステム変数が1に設定されます。そうでなければ0が設定されエラーが生成されます。
 
-#### 参照 
+## 参照 
 
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

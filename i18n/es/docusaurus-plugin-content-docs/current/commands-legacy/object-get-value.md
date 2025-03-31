@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OBJECT Get value.Summary-->El comando **OBJECT Get value** devuelve el valor actual de la fuente de datos para los objetos de formulario designados por el parámetro *nomObjeto*.<!-- END REF-->
 
@@ -31,15 +31,15 @@ Valor actual de la fuente de datos del objeto de formulario.
 * Si la fuente de datos es un array, el comando devuelve el índice del array
 * Si la fuente de datos es una expresión, el comando devuelve el valor evaluado desde el último ciclo de ejecución
 
-#### Ejemplo 
+## Ejemplo 
 
 Ver el ejemplo para el comando [OBJECT SET VALUE](object-set-value.md). 
 
-#### Ver también 
+## Ver también 
 
 [OBJECT SET VALUE](object-set-value.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

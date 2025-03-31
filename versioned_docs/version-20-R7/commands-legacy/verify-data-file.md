@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->The VERIFY DATA FILE command carries out a structural check of the objects contained in the 4D data file designated by *structurePath* and *dataPath*.<!-- END REF-->For more information about checking data, please refer to the Design Reference manual. *structurePath* designates the structure file (compiled or not) associated with the data file to be checked. This can be the open structure file or any other structure file. You must pass a complete pathname, expressed with the syntax of the operating system. You can also pass an empty string, in this case a standard Open file dialog box appears so that the user can specify the structure file to be used.    
   
@@ -103,7 +103,7 @@ By default, the VERIFY DATA FILE command creates a log file in XML format (if yo
 If you have passed the Timestamp log file name option, the name of the log file includes the date and time of its creation in the form "YYYY-MM-DD HH-MM-SS", which gives us, for example: “myDB\_Verify\_Log\_2015-09-27 15-20-35.xml”. This means that each new log file does not replace the previous one, but it might require subsequent manual action to remove unnecessary files.   
 Regardless of the option selected, as soon as a log file is generated, its path is returned in the *Document* system variable after execution of the command.
 
-#### Example 1 
+## Example 1 
 
 Simple checking of data and indexes:
 
@@ -111,7 +111,7 @@ Simple checking of data and indexes:
  VERIFY DATA FILE($StructName;$DataName;Verify indexes+Verify records;Do not create log file;"")
 ```
 
-#### Example 2 
+## Example 2 
 
 Complete verification with log file:
 
@@ -119,7 +119,7 @@ Complete verification with log file:
  VERIFY DATA FILE($StructName;$DataName;Verify all;0;"")
 ```
 
-#### Example 3 
+## Example 3 
 
 Checking of records only:
 
@@ -127,7 +127,7 @@ Checking of records only:
  VERIFY DATA FILE($StructName;$DataName;Verify records;0;"")
 ```
 
-#### Example 4 
+## Example 4 
 
 Checking of records from tables 3 and 7 only:
 
@@ -138,7 +138,7 @@ Checking of records from tables 3 and 7 only:
  VERIFY DATA FILE($StructName;$DataName;Verify records;0;"FollowScan";$arrTableNums)
 ```
 
-#### Example 5 
+## Example 5 
 
 Checking of specific indexes (index of field 1 of table 4 and index of fields 2 and 3 of table 5):
 
@@ -153,7 +153,7 @@ Checking of specific indexes (index of field 1 of table 4 and index of fields 2 
  VERIFY DATA FILE($StructName;$DataName;Verify indexes;0;"FollowScan";$arrTableNums;$arrIndex)
 ```
 
-#### Example 6 
+## Example 6 
 
 Verify the data file, create and display the log file:
 
@@ -162,15 +162,15 @@ Verify the data file, create and display the log file:
  SHOW ON DISK(File(Verification log file).platformPath)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the callback method does not exist, the verification is not carried out, an error is generated and the system variable OK is set to 0\. If a log file was generated, its complete pathname is returned in the Document system variable. 
 
-#### See also 
+## See also 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

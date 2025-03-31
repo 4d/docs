@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->**METHOD SET ATTRIBUTES** コマンドは、*path* 引数で指定したメソッドの、*attributes* 引数で指定した値を設定することができます。<!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから実行された場合、デフォルトではコンポーネントメソッドに対して適用されます。*\** 引数を渡した場合、コマンドはホストデータベースのメソッドに適用されます。
 
-##### 
+### 
 
 サポートされる属性は以下の通りです:
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **注:** "published4DMobile" 属性については、4D v18 において廃止予定となりました。
 
-#### 例題 
+## 例題 
 
 属性を一つだけ設定したい場合を考えます:
 
@@ -47,12 +47,12 @@ displayed_sidebar: docs
  METHOD SET ATTRIBUTES("aMethod";$attributes) //"executedOnServer" 属性のみが変更されます
 ```
 
-#### 参照 
+## 参照 
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

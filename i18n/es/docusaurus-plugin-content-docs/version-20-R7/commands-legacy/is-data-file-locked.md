@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is data file locked.Summary-->El comando Is data file locked devuelve True si el archivo de datos de la base abierta o al menos uno de sus segmentos está bloquedo, es decir protegido contra escritura.<!-- END REF--> 
 
 Por ejemplo si se usa en el método de base de datos On Startup, este comando permite la prevención de cualquier riesgo de apertura accidental de un archivo de datos bloqueado. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método evitará la apertura de la base si el archivo de datos está bloqueado: 
 
@@ -31,7 +31,7 @@ Este método evitará la apertura de la base si el archivo de datos está bloque
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

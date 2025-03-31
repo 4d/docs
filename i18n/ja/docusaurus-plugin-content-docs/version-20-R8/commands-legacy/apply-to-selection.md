@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.APPLY TO SELECTION.Summary-->**APPLY TO SELECTION** は、*aTable*のカレントセレクションに対して*statement*を適用します。<!-- END REF-->は何も行いません。リレーションが自動であれば、*statement*はリレート先のテーブルのフィールドを含むことができます。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 **APPLY TO SELECTION** を実行している間、処理の進捗を表すサーモメータが表示されます。**APPLY TO SELECTION** を呼び出す前に、[MESSAGES OFF](messages-off.md) を使用してサーモメータの表示を取り消すことができます。サーモメータが表示されると、ユーザは処理をキャンセルすることができます。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例題はテーブル \[Employees\] 中のカレントセレクションのレコードを大文字に変更します:
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
  APPLY TO SELECTION([Employees];[Employees]Last Name:=Uppercase([Employees]Last Name))
 ```
 
-#### 例題 2 
+## 例題 2 
 
 APPLY TO SELECTION実行中にレコードを修正して、そのレコードがロックされていると、更新は保存されません。ロックされたレコードはLockedSetと呼ばれるセットに格納されます。APPLY TO SELECTION実行後、LockedSetをテストしてロックされたレコードがなかったか確認します。以下のループはすべてのレコードが更新されるまで処理を実行します:
 
@@ -45,7 +45,7 @@ APPLY TO SELECTION実行中にレコードを修正して、そのレコード�
  Until(Records in set("LockedSet")=0) // ロックされたレコードがなくなれば終了
 ```
 
-#### 例題 3 
+## 例題 3 
 
 この例題ではメソッドを使用します: 
 
@@ -54,16 +54,16 @@ APPLY TO SELECTION実行中にレコードを修正して、そのレコード�
  APPLY TO SELECTION([Employees];M_Cap)
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 ユーザが進捗サーモメータの停止ボタンをクリックすると、OKシステム変数に0が設定されます。そうでなければ1が設定されます。
 
-#### 参照 
+## 参照 
 
 [EDIT FORMULA](edit-formula.md)  
 *セット*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

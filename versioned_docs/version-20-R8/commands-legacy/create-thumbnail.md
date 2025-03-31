@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE THUMBNAIL.Summary-->The **CREATE THUMBNAIL** command returns a thumbnail from a given source picture.<!-- END REF--> Thumbnails are usually used for picture preview within multimedia software or Web sites.
 
@@ -55,7 +55,7 @@ Resulting thumbnails (48x48)
 The *depth* parameter is ignored and must be omitted. The command always uses the current screen depth (number of colors). 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

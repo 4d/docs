@@ -16,13 +16,13 @@ displayed_sidebar: docs
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP DELETE TEXT BOX.Summary-->O comando **WP DELETE TEXT BOX** apaga a text box definida no parâmetro *textBox* .<!-- END REF-->
 
 Se *textBox* não existir, o comando não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser apagar uma text box usando seu ID:
 
@@ -36,6 +36,6 @@ Se quiser apagar uma text box usando seu ID:
  WP DELETE TEXT BOX($myTextBox)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP New text box](wp-new-text-box.md)  

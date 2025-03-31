@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Begin SQL.Summary-->Begin SQL is a keyword used in the Method editor to indicate the beginning of a sequence of SQL commands that must be interpreted by the current data source of the process (the integrated SQL engine of 4D or any source specified via the [SQL LOGIN](sql-login.md) command).<!-- END REF--> 
 
@@ -40,13 +40,13 @@ or:
 
 Note that the 4D *Debugger* will evaluate the SQL code line by line. In certain cases, it may be preferable to use more than one line.
 
-#### See also 
+## See also 
 
 [End SQL](end-sql.md)  
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

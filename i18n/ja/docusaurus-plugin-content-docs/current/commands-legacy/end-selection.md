@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.End selection.Summary-->**End selection** は、カレントレコードポインタが*aTable*のカレントセレクションの後ろにある場合TRUEを返します。<!-- END REF-->一般に**End selection** は、[NEXT RECORD](next-record.md) コマンドで、カレントレコードポインタが最後のレコードの後に移動したかどうかをチェックするために使用します。カレントセレクションが空の場合、**End selection** はTRUEを返します。
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 例題 
+## 例題 
 
 以下のフォームメソッドはレポートの印刷中に使用します。*vFooter*変数を設定し、最終ページのフッタエリアに印刷します:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [Before selection](before-selection.md)  
 [Form event code](../commands/form-event-code.md)  
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

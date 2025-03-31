@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->El comando SET PRINTABLE MARGIN \[#descv\]permite asignar los valores de varias márgenes de impresión utilizando los comandos [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) y [PRINT RECORD](print-record.md).<!-- END REF--> 
 
@@ -32,7 +32,7 @@ Los valores de los parámetros *derecha* e *inferior* son relativos a los bordes
 
 Por defecto, 4D basa sus impresiones en las márgenes de la impresora. Una vez se ejecuta el comando SET PRINTABLE MARGIN, los parámetros modificados se conservarán en el mismo proceso para toda la sesión. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo le permite obtener el tamaño de la margen muerta:
 
@@ -42,7 +42,7 @@ El siguiente ejemplo le permite obtener el tamaño de la margen muerta:
   //$l, $t, $r y $b corresponden a las márgenes muertas de la hoja
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo le permite obtener el tamaño del papel:
 
@@ -52,13 +52,13 @@ El siguiente ejemplo le permite obtener el tamaño del papel:
   //Para A4: $alto=842 ; $largo=595 píxeles
 ```
 
-#### Ver también 
+## Ver también 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
 [Print form](../commands/print-form.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

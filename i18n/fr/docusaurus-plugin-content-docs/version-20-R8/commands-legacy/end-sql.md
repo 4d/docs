@@ -12,17 +12,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.End SQL.Summary-->**End SQL** est un mot-clé indiquant dans l'éditeur de méthodes la fin d'une séquence de commandes SQL.<!-- END REF--> 
 
 Une séquence d'instructions SQL doit être encadrée par les mot-clés [Begin SQL](begin-sql.md) et **End SQL**. Pour plus d'informations, reportez-vous à la description du mot-clé [Begin SQL](begin-sql.md). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Begin SQL](begin-sql.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

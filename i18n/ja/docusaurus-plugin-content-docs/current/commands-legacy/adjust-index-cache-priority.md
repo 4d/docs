@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 上級者向け 
+## 上級者向け 
 
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Summary-->このコマンドは特定の用途のために用意されています。<!-- END REF-->データベースのパフォーマンスに影響するため、注意して使用しなければなりません。
 
-#### 説明 
+## 説明 
 
 **ADJUST INDEX CACHE PRIORITY**コマンドはカレントプロセスにおいて、*aField* 引数で指定されたフィールドに関連したインデックスに対し*priority* 引数で指定した特定の優先度値を設定します。このコマンドを呼び出すと、同じプロセスにおいて同じコマンドを通して以前調整された優先度値を上書きします。このコマンドは読み込みやクエリなどの一時的な用途において優先度を調整するのに向いています。
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 | Cache priority high      |                    |
 | Cache priority very high |                    |
 
-#### 例題 
+## 例題 
 
 \[Docs\]Comments フィールドのインデックスのキャッシュ優先度を一時的に変更したい場合を考えます:
 
@@ -48,12 +48,12 @@ displayed_sidebar: docs
  ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority normal)
 ```
 
-#### 参照 
+## 参照 
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

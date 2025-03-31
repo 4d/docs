@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->O comando GET DOCUMENT PROPERTIES retorna informação sobre o documento cujo nome ou rota se passa em *documento*.<!-- END REF-->  
   
@@ -30,7 +30,7 @@ Depois da chamada:
 * *criado em* e *criado as* retornam a data ou hora de criação do documento.
 * *modificado em* e *modificado as* retornam a data ou hora da última modificação do documento.
 
-#### Exemplo 
+## Exemplo 
 
 Imagine que você tenha criado um banco de documentação e deseja exportar todos os registros criados no banco a um documento em disco. Como o banco é atualizado regularmente, você deseja escrever um algoritmo de exportação que cree ou recree cada documento no disco se o documento não existe ou se o registro correspondente ha sido modificado depois de que o documento fue grabado por última vez. Portanto, você deve comparar a data e a hora da modificação do documento (se houver) com seu registro correspondente. Para ilustrar este exemplo, utilizamos a seguinte tabela:
 
@@ -207,11 +207,11 @@ Quando esse método tiver sido implementado no banco de dados, nóste mos todo o
  ALERT("Número de documentos processados: "+String($vlNbRegistros)+Char(13)+"Numero de documentos atualizados: "+String($vlNbDocs)+Char(13)+"Numero de documentos apagados: "+String(Size of array($asDocumento)))
 ```
 
-#### Ver também 
+## Ver também 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

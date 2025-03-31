@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->SET PICTURE TO PASTEBOARD limpa a área de transferência e coloca uma cópia da imagem que passou em *imagem* na área de transferência.<!-- END REF--> 
 
@@ -23,7 +23,7 @@ A imagem se passa a seu formato nativo (jpeg, tif, png, etc)
 
 Depois de colocar a imagem na área de transferência, pode recuperá-la utilizando o comando [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md) ou chamando [GET PASTEBOARD DATA](get-pasteboard-data.md)("com.4d.private.picture.gif";...).
 
-#### Exemplo 
+## Exemplo 
 
 Em uma janela flutuante, você visualiza um formulário que contém o array *asEmpregadoNome*, o qual lista os nomes dos empregados de uma tabela \[Empregados\]. Cada vez que clicar em um nome, deseja copiar a imagem de um empregado na área de transferência. No método de objeto do Array, você escreve:
 
@@ -38,18 +38,18 @@ Em uma janela flutuante, você visualiza um formulário que contém o array *asE
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se uma cópia da imagem se coloca corretamente na área de transferência, a variável OK toma o valor 1.
 
 Se não houver suficiente memória para colocar uma cópia da imagem na área de transferência,a variável OK toma o valor 0, mas não é gerado um erro.
 
-#### Ver também 
+## Ver também 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

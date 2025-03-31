@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Generate password hash.Summary-->A função **Generate password hash** devolve um hash de *senha* seguro gerado por um algoritmo de hash criptográfico.<!-- END REF-->
 
@@ -30,7 +30,7 @@ No objeto *opções*, passe as propriedades que se utilizarão ao gerar o hash d
 
 **Nota**: se um valor no objeto de *opções* não for válido, se devolverá uma mensagem de erro e uma string vazia.
 
-##### Gestão de erros 
+### Gestão de erros 
 
 The following errors may be returned. You can review an error with the [Last errors](last-errors.md)  and [ON ERR CALL](on-err-call.md) commands.  
 
@@ -39,11 +39,11 @@ The following errors may be returned. You can review an error with the [Last err
 | 850        | Password-hash: Unsupported algorithm.                                                      |
 | 852        | Password-hash: Unavailable bcrypt cost parameter, please provide a value between 4 and 31. |
 
-##### About bcrypt 
+### About bcrypt 
 
 bcrypt is a password hashing function based on the Blowfish cipher. In addition to incorporating a salt to protect against rainbow table attacks, it's an adaptive function in which the iteration count can be increased to make it slower, so it remains resistant to brute-force attacks even with increasing computation power because it takes longer and becomes too time consuming and expensive.
 
-#### Exemplo 
+## Exemplo 
 
 Este exemplo gera um hash de senha utilizando bcrypt com um fator de custo 4.
 
@@ -62,13 +62,13 @@ Este exemplo gera um hash de senha utilizando bcrypt com um fator de custo 4.
 
 **Nota**: Múltiplas passadas da mesma senha resultará em diferentes strings hash. Esse é um comportamento normal para algoritmos como bcrypt, já que a melhor prática é criar um novo "sal" aleatório para cada hash. Veja a descrição [Verify password hash ](verify-password-hash.md) para um exemplo de como checar as senhas.
 
-#### Ver também 
+## Ver também 
 
   
 [Generate digest](generate-digest.md)  
 [Verify password hash ](verify-password-hash.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

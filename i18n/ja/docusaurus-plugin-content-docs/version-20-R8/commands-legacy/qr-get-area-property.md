@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR Get area property.Summary-->**QR Get area property** コマンドは、*property*に渡されたインタフェース要素（ツールバーまたはメニューバー）が表示されていなければ0を、表示されていれば1を返します。<!-- END REF-->
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 無効な*property*引数を渡した場合、エラー番号-9852が生成されます。
 
-#### 参照 
+## 参照 
 
 [QR SET AREA PROPERTY](qr-set-area-property.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

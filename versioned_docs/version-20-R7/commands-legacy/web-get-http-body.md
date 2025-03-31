@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB GET HTTP BODY.Summary-->The **WEB GET HTTP BODY** command returns the body of the HTTP request being processed.<!-- END REF--> The HTTP body is returned as is, without processing or parsing. 
 
@@ -23,7 +23,7 @@ In *body*, you can pass a variable or a field of the BLOB or Text type. The Text
 
 This command allows you, for example, to carry out queries in the body of requests. It also permits advanced users to set up a WebDAV server within a 4D database.
 
-#### Example 
+## Example 
 
 In this example, a simple request is sent to the 4D Web server and the contents of the HTTP body are displayed in the debugger. Here is the form sent to the 4D Web server, as well as the corresponding HTML code:
 
@@ -44,12 +44,12 @@ Here is the Test4D2004 method:
 
 When the form is submitted to the Web server, the $requestText variable receives the text of the HTTP request body.
 
-#### See also 
+## See also 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

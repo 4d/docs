@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is a list.Summary-->El comando Is a list devuelve TRUE si el valor pasado en *lista* es una referencia válida a una lista jerárquica.<!-- END REF--> De lo contrario, devuelve FALSE.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Ver el ejemplo del comando [CLEAR LIST](clear-list.md "CLEAR LIST").
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ver los ejemplos del comando DRAG AND DROP PROPERTIES.
 
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

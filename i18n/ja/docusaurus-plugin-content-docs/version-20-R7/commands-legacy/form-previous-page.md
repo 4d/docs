@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE コマンドは、現在表示されているフォームページから前のフォームページに移動します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](form-load.md) コマンドによってロードされてない場合や、すでに先頭のフォームページが表示されている場合、FORM PREVIOUS PAGE コマンドは何も行いません。
 
-#### 例題 
+## 例題 
 
 以下の例は、メニューから呼び出される1行のメソッドです。これは、前のフォームページを表示します:
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
  FORM PREVIOUS PAGE
 ```
 
-#### 参照 
+## 参照 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

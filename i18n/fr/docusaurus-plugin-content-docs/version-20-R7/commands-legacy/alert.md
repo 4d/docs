@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ALERT.Summary-->La commande **ALERT** affiche une boîte de dialogue d'alerte composée d'une icône, d'un message et d'un bouton OK.<!-- END REF-->
 
@@ -24,7 +24,7 @@ Par défaut, le libellé du bouton OK est “OK”. Si vous voulez changer ce li
 
 **Note :** N'appelez pas la commande **ALERT** dans une méthode formulaire ou une méthode objet qui gère l'événement formulaire On Activate ou On Deactivate , car cela provoquerait une boucle sans fin.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant appelle une boîte de dialogue d'alerte qui affiche des informations sur une société. Notez que le message contient des retours chariot ([Char](char.md)(13)) qui forcent le texte à passer sur la ligne suivante :
 
@@ -38,7 +38,7 @@ Voici la boîte de dialogue d'alerte affichée (sous Windows) par notre exemple 
 
 ![](../assets/en/commands/pict4224938.fr.png)
 
-#### Exemple 2 
+## Exemple 2 
 
 Voici un autre exemple :
 
@@ -50,7 +50,7 @@ Cette instruction affichera (sous Windows) la boîte de dialogue d'alerte suivan
 
 ![](../assets/en/commands/pict4224959.fr.png)
 
-#### Exemple 3 
+## Exemple 3 
 
 Voici un autre exemple :
 
@@ -62,13 +62,13 @@ Ce code affiche la boîte de dialogue d'alerte suivante :
 
 ![](../assets/en/commands/pict4224968.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

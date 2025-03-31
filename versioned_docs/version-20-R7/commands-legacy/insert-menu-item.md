@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->The **INSERT MENU ITEM** command inserts new menu items into the menu whose number or reference is passed in *menu* after the existing menu item whose number is passed in *afterItem*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ The optional *subMenu* parameter can be used to indicate a menu as the added ite
 
 **Important:** The new items do not have any associated methods or actions. These must be associated with the items using the [SET MENU ITEM PROPERTY](set-menu-item-property.md) or [SET MENU ITEM METHOD](set-menu-item-method.md) commands, or the items can also be managed from within a form method using the [Menu selected](menu-selected.md) command.
 
-#### Example 
+## Example 
 
 The following example creates a menu consisting of two commands to which it assigns a method:
 
@@ -50,12 +50,12 @@ The following example creates a menu consisting of two commands to which it assi
  SET MENU ITEM METHOD(menuRef;2;"ParaMgmtDial")
 ```
 
-#### See also 
+## See also 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

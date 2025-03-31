@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->La commande **SET REAL COMPARISON LEVEL** définit la valeur *epsilon* utilisée par 4D lors d'une comparaison d'égalité des valeurs et expressions de type Réel.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Modifier l'epsilon affecte seulement la comparaison d'égalité des réels. Cela
 **Note :** La commande **SET REAL COMPARISON LEVEL** n'a pas d'effet sur les recherches et les tris effectués avec les champs de type réel. Elle s'applique uniquement au langage de 4D.
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

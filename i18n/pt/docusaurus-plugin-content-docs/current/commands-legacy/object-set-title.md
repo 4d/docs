@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 O comando OBJECT SET TITLE modifica o título dos objetos especificados por *objeto* e o substitui pelo valor passado em *titulo.*  
 
@@ -33,7 +33,7 @@ OBJECT SET TITLE é aplicado para objetos simples que contenham uma etiqueta:
 Geralmente, este comando é aplicado a um objeto por vez. A área de título do objeto deve ser suficientemente grande para acomodar o texto; se não for, o texto é truncado.   
 Não utilize retornos de carro em *título*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir é o método de objeto de um botão de pesquisa localizado na área de rodapé de um formulário de saída mostrado pelo comando [MODIFY SELECTION](modify-selection.md "MODIFY SELECTION"). O método procura uma tabela; dependendo dos resultados de pesquisa, ativa ou desativa um botão *bEliminar* e muda seu título:
 
@@ -52,7 +52,7 @@ O exemplo a seguir é o método de objeto de um botão de pesquisa localizado na
  End case
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Você quer inserir os títulos em duas linhas:
 
@@ -63,11 +63,11 @@ Você quer inserir os títulos em duas linhas:
 
 ![](../assets/en/commands/pict1242273.en.png)
 
-#### Ver também 
+## Ver também 
 
 [OBJECT Get title](object-get-title.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

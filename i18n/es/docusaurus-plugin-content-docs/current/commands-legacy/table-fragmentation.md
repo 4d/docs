@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Table fragmentation.Summary-->El comando Table fragmentation devuelve el porcentaje de fragmentación lógica de los registros de la tabla designada pro el parámetro *laTabla*.<!-- END REF--> 
 
 La tasa de fragmentación de los registros indica si los registros se almacenan de manera ordenada en el archivo de datos. Una fragmentación muy alta, puede ralentizar considerablemente las ordenaciones y las búsquedas secuenciales en una tabla. Un porcentaje de fragmentación de 0 corresponde a una fragmentación nula. Una tasa de más del 20%, puede ser útil para compactar el archivo de datos. 
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método de mantenimiento permite solicitar la compactación del archivo de datos en caso de que haya una fragmentación considerable en al menos una tabla de la base:
 
@@ -38,11 +38,11 @@ Este método de mantenimiento permite solicitar la compactación del archivo de 
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Compact data file](compact-data-file.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

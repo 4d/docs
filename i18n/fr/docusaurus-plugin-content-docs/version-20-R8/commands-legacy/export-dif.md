@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPORT DIF.Summary-->La commande **EXPORT DIF** écrit dans *document* (document DIF Windows ou Mac OS) les données des enregistrements de la sélection courante de la table *laTable* du process courant.<!-- END REF-->
 
@@ -30,7 +30,7 @@ La commande utilise par défaut le jeu de caractères UTF-8\. Les documents au f
 
 Lors de l'utilisation de **EXPORT DIF**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrement est par défaut le retour chariot (code 13). Vous pouvez modifier ces valeurs en assignant de nouvelles valeurs aux deux *Variables système* *FldDelimit* et *RecDelimit*. L'utilisateur peut modifier ces valeurs par défaut dans le dialogue d'export du mode Développement. Comme les champs Texte peuvent contenir des retours chariot, soyez prudent si vous utilisez le retour chariot comme délimiteur entre les champs à exporter.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple exporte des données vers un document DIF. Cette méthode commence par le choix du formulaire sortie, puis effectue l'export :
 
@@ -39,18 +39,18 @@ Cet exemple exporte des données vers un document DIF. Cette méthode commence p
  EXPORT DIF([Personnes];"Nouvelles Personnes.dif") // Export vers le document "Nouvelles Personnes.dif"
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 OK prend la valeur 1 si l'export s'est correctement déroulé, sinon elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

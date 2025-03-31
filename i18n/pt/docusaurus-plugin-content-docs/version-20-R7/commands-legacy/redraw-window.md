@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.REDRAW WINDOW.Summary-->O comando REDRAW WINDOW provoca uma atualização do conteúdo da janela cujo número de referência é passado em janela.<!-- END REF-->  
 
@@ -21,11 +21,11 @@ Se omitir o parâmetro *janela*, REDRAW WINDOW aplica à janela do primeiro plan
   
 **Nota**: 4D administra automaticamente as atualizações gráficas das janelas cada vez que você mover, redimensionar ou passar ao primeiro plano uma janela, assim como quando você muda o formulário ou os valores mostrados na janela. Este comando se utiliza raramente.
 
-#### Ver também 
+## Ver também 
 
 [ERASE WINDOW](erase-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

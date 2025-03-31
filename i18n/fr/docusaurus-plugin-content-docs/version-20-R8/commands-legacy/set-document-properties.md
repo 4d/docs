@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Summary-->La commande **SET DOCUMENT PROPERTIES** modifie certaines informations du document dont vous avez passé le nom ou le chemin d'accès dans *document*.<!-- END REF-->
 
@@ -32,11 +32,11 @@ Avant l'appel :
 
 L'heure et la date de création et de dernière modification sont gérées par le gestionnaire de fichiers de votre système, à chaque fois que vous créez ou modifiez un document. Cette commande vous permet de modifier ces propriétés, dans des buts particuliers. Reportez-vous à l'exemple de la commande [GET DOCUMENT PROPERTIES](get-document-properties.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

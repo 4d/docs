@@ -17,7 +17,7 @@ title: VP Find
 | replaceValue    | Text   | ->                          | Valeur de remplacement                                              |                  |
 | Résultat        | Object | <- | Objet plage                                                         | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Find` command <!-- REF #_method_.VP Find.Summary -->searches the *rangeObj* for the *searchValue*<!-- END REF -->. Des paramètres facultatifs peuvent être utilisés pour affiner la recherche et/ou remplacer les résultats trouvés.
 
@@ -38,11 +38,11 @@ You can pass the optional *searchCondition* parameter to specify how the search 
 
 In the optional *replaceValue* parameter, you can pass text to take the place of any instance of the text in *searchValue* found in the *rangeObj*.
 
-#### Objet retourné
+## Objet retourné
 
 La fonction retourne un objet de plage décrivant chaque valeur de recherche trouvée ou remplacée. Un objet de plage vide est retourné si aucun résultat n'est trouvé.
 
-#### Exemple 1
+## Exemple 1
 
 Pour trouver la première cellule contenant le mot "Total" :
 
@@ -54,7 +54,7 @@ $range:=VP All("ViewProArea")
 $result:=VP Find($range;"Total")
 ```
 
-#### Exemple 2
+## Exemple 2
 
 Pour trouver "Total" et le remplacer par "Grand Total" :
 

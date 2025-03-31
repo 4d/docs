@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->O comando SVG GET ATTRIBUTE é utilizado para obter o valor atual do atributo *nomAtrib* em um objeto ou uma imagem SVG.<!-- END REF-->  
   
@@ -39,11 +39,11 @@ Para obter mais informação acerca dos atributos SVG, consulte a descripção d
   
 4D-enableD2Dleitura/escrituraSe 'false', desativa Direct2D para o motor de renderização SVG. Na verdade, os filtros SVG não são renderizados em Direct2D e sim em GDI/GDIPlus. Esta opção lhe permite se beneficiar dos filtros SVG inclusive se a base está em Direct2D. Note que esta opção só deve ter em conta quando uma imagem já foi carregada em *objetoImagem*. No entanto, como esta opção se aplica globalmente ao motor, só deve ser definida uma vez por sessão (por exemplo com um SVG simples carregado em memória desde uma variável texto ao início da base).\[#/table\]
 
-#### Ver também 
+## Ver também 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

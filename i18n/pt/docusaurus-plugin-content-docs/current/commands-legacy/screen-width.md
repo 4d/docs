@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Screen width.Summary-->Em Windows, Screen width devolve o largo da janela da aplicação 4D (janela MDI).<!-- END REF--> Se passado o parâmetro opcional *\**, Screen width devolve o largo da tela.  
 
 Em Macintosh, Screen width devolve o largo da tela principal, ou seja o largo da tela que contém a barra de menus. 
 
-#### Ver também 
+## Ver também 
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen height](screen-height.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

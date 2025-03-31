@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET PICTURE FILE NAME.Summary-->O comando **SET PICTURE FILE NAME** define ou modifica o nome do arquivo por defeito da imagem passada como parâmetro.<!-- END REF-->  
   
@@ -22,12 +22,12 @@ Este nome pode ser definido automaticamente a partir do nome de origem do arquiv
   
 O nome por defeito se utiliza como nome de arquivo quando a imagem se exporta em um arquivo disco. Caso o conteúdo do campo seja copiado em uma variável ou em outro campo, o nome por defeito também será copiado. Para maior informação, consulte o Manual de *Desenho*.
 
-#### Ver também 
+## Ver também 
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

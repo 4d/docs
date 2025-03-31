@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL GET LAST ERROR.Summary-->The SQL GET LAST ERROR command returns information related to the last error encountered during the execution of an ODBC command.<!-- END REF--> The error may come from the 4D application, the network, the ODBC source, etc. 
 
@@ -30,12 +30,12 @@ The last two parameters are only filled when the error comes from the ODBC sourc
 * The *errODBC* parameter returns the ODBC error code (SQL state).
 * The *errSQLServer* parameter returns the SQL server native error code.
 
-#### See also 
+## See also 
 
 [Last errors](last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

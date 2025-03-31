@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GOTO SELECTED RECORD.Summary-->GOTO SELECTED RECORD move o registro especificado na seleção atual de *tabela* o registro atual.<!-- END REF--> A seleção atual de tabela não muda. O parâmetro *registro* não é o mesmo do número retornado por [Record number](record-number.md); Este parâmetro representa a posição do registro na seleção atual. A posição do registro depende da maneira na qual a seleção tenha sido criada e ordenada.  
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 * *registro* já é o registro atual.
 Se passa 0 em *registro,* não haverá registro atual em *tabela*. Este mecanismo permite desmarcar todos os registros em uma lista, especialmente no caso dos subformulários incluídos, quando o modo de seleção é “único”.
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo carrega dados do campo \[Pessoas\]Sobrenome no array *atNomes*. Um array de inteiros longos, chamado NumReg, se preenche com os números que representarão aos registros selecionados. Depois os dois arrays são ordenados:
 
@@ -56,11 +56,11 @@ O seguinte método de objeto para *atNomes* seleciona o registro correto na sele
        &NBSP;End case
 ```
 
-#### Ver também 
+## Ver também 
 
 [Selected record number](selected-record-number.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

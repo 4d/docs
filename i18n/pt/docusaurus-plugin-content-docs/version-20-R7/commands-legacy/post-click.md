@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.POST CLICK.Summary-->O comando POST CLICK simula um clique do mouse.<!-- END REF--> Tem o mesmo efeito que quando o usuário clicar no botão do mouse 
 
@@ -24,12 +24,12 @@ Passe as coordenadas horizontal e vertical do clique em *mouseX* e *mouseY*. Se 
 
 Se especificar o parâmetro processo *processo*, o clique é enviado ao processo cujo número de processo é passado em *processo*. Se passar 0 (*zero*), ou se omitir o parâmetro, o clique é enviado ao nível da aplicação e o planejador 4D lhe enviará ao processo apropriado.
 
-#### Ver também 
+## Ver também 
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

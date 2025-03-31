@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Quand la Méthode base Sur ouverture connexion serveur est-elle appelée ? 
+## Quand la Méthode base Sur ouverture connexion serveur est-elle appelée ? 
 
 <!--REF #_command_.On Server Open Connection database method.Summary-->La **On Server Open Connection database method** est appelée une fois sur la machine serveur chaque fois qu’un poste 4D distant démarre un process de connexion.<!-- END REF--> La **On Server Open Connection database method** n’est appelée que par 4D Server, à l’exclusion de tout autre environnement 4D. 
 
@@ -44,7 +44,7 @@ Dans chaque cas, plusieurs process démarrent. Un sur la machine client, et un o
 
 **Important** **:** Lors du démarrage d’une procédure stockée, la **On Server Open Connection database method** n’est **pas** appelée. Les *Procédures stockées* sont des process serveur et non des process 4D Client. Elles exécutent du code sur la machine serveur mais ne répondent pas aux requêtes échangées par 4D Client (ou d’autres clients) et 4D Server.
 
-#### Comment la méthode base est-elle appelée ? 
+## Comment la méthode base est-elle appelée ? 
 
 La **On Server Open Connection database method** est exécutée sur le poste serveur dans le process 4D Client qui a provoqué l’appel de la méthode. 
 
@@ -74,7 +74,7 @@ Le tableau ci-dessous détaille les informations fournies par les trois paramèt
 
 Ces numéros de référence ne sont pas directement utilisables en tant que « sources d’information » à passer, par exemple, comme paramètres à une commande 4D. Ils vous fournissent un moyen d’identifier de manière unique un process 4D Client entre la **On Server Open Connection database method** et la [On Server Close Connection database method](on-server-close-connection-database-method.md). La combinaison de ces valeurs est unique à tout moment d’une session 4D Server. Si vous stockez cette information dans une table ou un tableau interprocess, les deux méthodes base peuvent échanger des informations. Dans l’exemple présenté à la fin de cette section, les deux méthodes base utilisent cette information pour stocker l’heure et la date du début et de la fin d’une connexion dans le même enregistrement d’une table.
 
-#### Exemple 1 
+## Exemple 1 
 
 L’exemple suivant montre comment maintenir un historique des connexions à la base de données en utilisant la **On Server Open Connection database method** et la [On Server Close Connection database method](on-server-close-connection-database-method.md). La table \[Server Log\] (ci-dessous) sert à garder la trace des process de connexion : 
 
@@ -120,7 +120,7 @@ Voici quelques entrées dans \[Server Log\] montrant plusieurs connexions distan
 
 **![](../assets/en/commands/pict69174.fr.png)**
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant interdit toute nouvelle connexion entre 2 et 4 heures du matin.
 
@@ -132,7 +132,7 @@ L’exemple suivant interdit toute nouvelle connexion entre 2 et 4 heures du mat
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

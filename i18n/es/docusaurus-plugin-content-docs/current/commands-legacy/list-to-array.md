@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->El comando LIST TO ARRAY crea o reemplaza el array a*rray* con los elementos del primer nivel de la lista o de la lista de selección designada por *lista*.<!-- END REF--> 
 
@@ -29,7 +29,7 @@ El parámetro opcional *refElements* (un array de tipo numérico) devuelve los n
 
 Puede utilizar LIST TO ARRAY para construir un array basado en los elementos de primer nivel de una lista. Sin embargo, este comando no le permite trabajar con los elementos de las sublistas. Para trabajar con listas jerárquicas, utilice los comandos de listas jerárquicas, en particular [Load list](load-list.md).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo copia los elementos de una lista llamada Regiones en el array llamado *atRegions*:
 
@@ -37,7 +37,7 @@ El siguiente ejemplo copia los elementos de una lista llamada Regiones en el arr
  LIST TO ARRAY("Regions";atRegions)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Dada una lista jerárquica creada como se ve a continuación:
 
@@ -79,13 +79,13 @@ Si ejecuta la siguiente instrucción:
  ...
 ```
 
-#### Ver también 
+## Ver también 
 
 [ARRAY TO LIST](array-to-list.md)  
 [Load list](load-list.md)  
 [SAVE LIST](save-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Get parent XML element.Summary-->**DOM Get parent XML element**コマンドは、*elementRef*に参照で渡したXML要素の親要素参照を返します。<!-- END REF-->この参照は他のXML解析コマンドで使用できます。
 
@@ -25,17 +25,17 @@ displayed_sidebar: docs
 *elementRef*にルート要素を渡した場合、コマンドは"#document"参照を返します。このdocumentノードはルート要素の親です。  
 documentノードにこのコマンドを適用すると、コマンドはヌル参照 ("0000000000000000") を返し、OKシステム変数が0に設定されます。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKに1が設定され、エラーが発生すると0が設定されます。
 
-#### 参照 
+## 参照 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 [DOM Get last child XML element](dom-get-last-child-xml-element.md)  
 [DOM Get root XML element](dom-get-root-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

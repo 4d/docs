@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Summary-->El comando DOM SET XML ATTRIBUTE  permite añadir uno o varios atributos al elemento XML cuya referencia se pasa en el parámetro *refElement*.<!-- END REF--> También permite definir el valor de cada atributo definido. 
 
@@ -31,7 +31,7 @@ El parámetro *valorAtrib* puede ser de tipo texto o de otro tipo (Booleano, ent
 | Fecha    | "2006-12-04T00:00:00Z" (estándar RFC 3339)    |
 | Hora     | "5233" (número de segundos)                   |
 
-#### Ejemplo 
+## Ejemplo 
 
 En la siguiente fuente XML: 
 
@@ -57,18 +57,18 @@ Obtenemos:
 </Book>
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\. Si no, toma el valor 0 y se genera un error.
 
-#### Ver también 
+## Ver también 
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

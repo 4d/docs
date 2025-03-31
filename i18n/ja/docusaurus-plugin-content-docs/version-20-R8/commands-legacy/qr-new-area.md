@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR NEW AREA.Summary-->**QR NEW AREA** コマンドは新しいクイックレポートエリアを作成し、その参照番号を倍長整数変数に保存します(変数は*ptr*ポインターによって参照されます)。<!-- END REF-->
 
-#### 参照 
+## 参照 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

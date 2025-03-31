@@ -18,7 +18,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 Hay varias formas de conseguir que el depurador se muestre:
 
 - Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
-- Using the [`TRACE`](../commands-legacy/trace.md) command
+- Utilizando el comando [`TRACE`](../commands-legacy/trace.md)
 - Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
 - Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
 
@@ -76,7 +76,7 @@ En la depuración remota, si el método se ejecuta en el servidor, se llama al m
 
 Cuando se ejecuta una línea que llama a otro método (subrutina o función), haga clic en este botón para mostrar el otro método y recorrerlo paso a paso.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada](#call-chain-pane) de la ventana del depurador.
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
@@ -118,7 +118,7 @@ The current state of the debugger window is automatically saved in the project. 
 - the size and position of the window,
 - the position of the division lines,
 - el [modo de visualización](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pin-an-expression) para mantenerla mostrada en todos los contextos.
+- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
@@ -311,7 +311,7 @@ El panel de control personalizado es útil para evaluar expresiones. Es similar 
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. Para mostrar el contenido de los BLOB, puede utilizar comandos BLOB, como [BLOB to text](../commands-legacy/blob-to-text.md).
 
 ### Display mode
 
@@ -322,7 +322,7 @@ El modo de visualización que se utilizará para todas las ventanas del depurado
 Las siguientes opciones están disponibles:
 
 - **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
-- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
+- **Expresiones de línea**: muestra y evalúa automáticamente el mismo contenido que el elemento [Expresiones de línea](#line-expressions) de la Lista de expresiones.
 - **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
@@ -333,7 +333,7 @@ Whatever the display mode, you can add custom expressions at any moment.
 
 ### Gestión de expresiones
 
-You can enter any expression to evaluate. Una expresión personalizada sólo se muestra en la ventana actual del depurador, excepto si la [fija](#pin-an-expression).
+You can enter any expression to evaluate. Una expresión personalizada sólo se muestra en la ventana actual del depurador, excepto si la [fija](#pinning-an-expression).
 
 Hay varias formas de añadir expresiones a la lista:
 
@@ -391,7 +391,7 @@ El panel de código fuente muestra el código fuente del método o de la funció
 
 Esta área también le permite añadir o eliminar [**puntos de ruptura**](breakpoints.md).
 
-### Prototype
+### Prototipo
 
 The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
 

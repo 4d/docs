@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SELECT LOG FILE.Summary-->The **SELECT LOG FILE** command creates, or closes the log file according to the value you pass in *logFile*.<!-- END REF-->
 
@@ -27,19 +27,19 @@ If you pass *"\*"* in *logFile*, **SELECT LOG FILE** closes the current log file
 
 If you use **SELECT LOG FILE** to create a log file when a full backup has not yet been performed and the data file already contains records, 4D then generates an error *\-4447,* which you can intercept with an [ON ERR CALL](on-err-call.md) method.
 
-#### System variables and sets 
+## System variables and sets 
 
 OK is set to 1 if the log file is correctly created, or closed.
 
-#### Error management 
+## Error management 
 
 An error -4447 is generated if the operation cannot be performed because the database needs to be backed up. You can intercept the error with an [ON ERR CALL](on-err-call.md) method. 
 
-#### See also 
+## See also 
 
 [ON ERR CALL](on-err-call.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

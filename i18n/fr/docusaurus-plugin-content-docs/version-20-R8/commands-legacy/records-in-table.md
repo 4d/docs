@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Records in table.Summary-->**Records in table** retourne le nombre total d'enregistrements que contient *laTable*.<!-- END REF--> Par opposition, [Records in selection](records-in-selection.md) retourne le nombre d'enregistrements de la sélection courante uniquement. Lorsque cette commande est utilisée dans une transaction, les enregistrements éventuellement créés pendant la transaction sont comptabilisés.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche une alerte indiquant le nombre d'enregistrements de la table :
 
@@ -26,11 +26,11 @@ L'exemple suivant affiche une alerte indiquant le nombre d'enregistrements de la
  ALERT("Il y a "+String(Enregistrements dans table([Personnes]))+" enregistrements dans la table.")
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Records in selection](records-in-selection.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

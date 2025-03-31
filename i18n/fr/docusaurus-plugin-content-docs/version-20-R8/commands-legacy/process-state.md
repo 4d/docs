@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Process state.Summary-->La commande **Process state** retourne le statut du process dont le numéro est passé dans *process*.<!-- END REF--> 
 
@@ -34,7 +34,7 @@ Le résultat de la fonction peut être l'une des valeurs des constantes prédéf
 
 Si le process n'existe pas (ce qui signifie le numéro que vous avez passé est hors de l'intervalle de 1 à [Count tasks](count-tasks.md)), **Process state** retourne Does not exist (-100).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant retourne le nom et le numéro de référence de chaque process dans les tableaux *asProcName* et *aiProcNum*. La méthode teste si le process a été détruit. Dans ce cas, le nom et le numéro du process ne sont pas ajoutés dans le tableau :
 
@@ -55,12 +55,12 @@ L'exemple suivant retourne le nom et le numéro de référence de chaque process
  ARRAY INTEGER(aiProcNum;$vlActualCount)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Count tasks](count-tasks.md)  
 [Process info](../commands/process-info.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP INSERT FORMULA.Summary-->O comando **WP INSERT FORMULA** insere uma *formula* em *alvoObj* de acordo com um *mode* de inserção especificado.<!-- END REF-->
 
@@ -48,7 +48,7 @@ Se não passar um parâmetro *atualizaRange*, por padrão a *formula* inserida e
 
 Nota: Lembre que quando chamado, o objeto formula é avaliado dentro do contexto do banco de dados ou componentes que o criaram
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Para substituir todas as fórmulas atuais de data com strings formatadas:
 
@@ -74,7 +74,7 @@ Para substituir todas as fórmulas atuais de data com strings formatadas:
  End for each
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser utilizar um nome de fórmula para o nome do cliente:
 
@@ -98,7 +98,7 @@ Resultado:
 
 ![](../../assets/en/WritePro/commands/pict6433508.en.png)
 
-#### Ver também 
+## Ver também 
 
 *Gestão de fórmulas*  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  

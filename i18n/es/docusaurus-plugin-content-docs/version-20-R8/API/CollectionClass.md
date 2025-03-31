@@ -35,7 +35,7 @@ Notas
 | [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<br/><!-- INCLUDE #collection.findIndex().Summary -->                  |
 | [<!-- INCLUDE #collection.first().Syntax -->](#first)<br/><!-- INCLUDE #collection.first().Summary -->                         |
 | [<!-- INCLUDE #collection.flat().Syntax -->](#flat)<br/><!-- INCLUDE #collection.flat().Summary -->                            |
-| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatmap)<br/><!-- INCLUDE #collection.flatMap().Summary -->                   |
 | [<!-- INCLUDE #collection.includes().Syntax -->](#includes)<br/><!-- INCLUDE #collection.includes().Summary -->                |
 | [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<br/><!-- INCLUDE #collection.indexOf().Summary -->                   |
 | [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<br/><!-- INCLUDE #collection.indices().Summary -->                   |
@@ -54,7 +54,7 @@ Notas
 | [<!-- INCLUDE #collection.push().Syntax -->](#push)<br/><!-- INCLUDE #collection.push().Summary -->                            |
 | [<!-- INCLUDE #collection.query().Syntax -->](#query)<br/><!-- INCLUDE #collection.query().Summary -->                         |
 | [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<br/><!-- INCLUDE #collection.reduce().Summary -->                      |
-| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceright)<br/><!-- INCLUDE #collection.reduceRight().Summary -->       |
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<br/><!-- INCLUDE #collection.remove().Summary -->                      |
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<br/><!-- INCLUDE #collection.resize().Summary -->                      |
 | [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<br/><!-- INCLUDE #collection.reverse().Summary -->                   |
@@ -1919,7 +1919,7 @@ Todas las colecciones *colsToSort* deben tener el mismo número de elementos, de
 
 :::
 
-Si desea ordenar las colecciones en algún otro orden que no sea ascendente, debe suministrar una *formula* ([objeto Formula](FunctionClass.md#formula)) que defina el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la fórmula si es necesario.
+Si desea ordenar las colecciones en algún otro orden que no sea ascendente, debe suministrar una *formula* ([objeto Formula](../commands/formula.md)) que defina el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la fórmula si es necesario.
 
 La fórmula recibe los siguientes parámetros:
 
@@ -2391,18 +2391,18 @@ donde:
 
 - **comparator**: símbolo que compara *propertyPath* y *value*. Se soportan los siguientes símbolos:
 
-| Comparación                           | Símbolo(s) | Comentario                                                                                                                                                                                                                                  |
-| ------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Igual a                               | =, ==                         | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.                                                                          |
-|                                       | ===, IS                       | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas                                                                                                 |
-| Diferente de                          | #, !=                         | Soporta el comodín (@). Equivale a "Condición no aplicada en una sentencia" ([ver más abajo](#not-equal-to-in-collections)).                             |
-|                                       | !==, IS NOT                   | Considera la @ como un caracter estándar                                                                                                                                                                                       |
-| Condición No aplicada a una sentencia | NOT                           | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores. Equivalente a "Not equal to" ([ver abajo](#not-equal-to-in-collections)). |
-| Menor que                             | <    |                                                                                                                                                                                                                                             |
-| Mayor que                             | >                             |                                                                                                                                                                                                                                             |
-| Menor o igual que                     | <=   |                                                                                                                                                                                                                                             |
-| Mayor o igual que                     | > =                           |                                                                                                                                                                                                                                             |
-| Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |
+| Comparación                           | Símbolo(s) | Comentario                                                                                                                                                                     |
+| ------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Igual a                               | =, ==                         | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.             |
+|                                       | ===, IS                       | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas                                    |
+| Diferente de                          | #, !=                         | Soporta el comodín (@). Equivalent to "Not condition applied on a statement" ).                                |
+|                                       | !==, IS NOT                   | Considera la @ como un caracter estándar                                                                                                                          |
+| Condición No aplicada a una sentencia | NOT                           | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores. Equivalent to "Not equal to" ). |
+| Menor que                             | <    |                                                                                                                                                                                |
+| Mayor que                             | >                             |                                                                                                                                                                                |
+| Menor o igual que                     | <=   |                                                                                                                                                                                |
+| Mayor o igual que                     | > =                           |                                                                                                                                                                                |
+| Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                   |
 
 - **valor**: valor a comparar con el valor actual de la propiedad de cada elemento de la colección. Puede ser cualquier valor de expresión constante que coincida con la propiedad del tipo de datos del elemento o un [**marcador de posición**](#using-placeholders).
  For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
@@ -2615,15 +2615,13 @@ Este ejemplo devuelve las personas cuyo nombre no empieza por una cadena de una 
 Este ejemplo devuelve las personas cuya edad no se conoce (propiedad definida como null o indefinida):
 
 ```4d
- $col:=$c.query("age=null") //placeholders not allowed with "null"
-  //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
+Ejemplo
 ```
 
 Este ejemplo devuelve las personas contratadas hace más de 90 días:
 
 ```4d
- $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018
+Comentario
 ```
 
 #### Ejemplo 3
@@ -2638,7 +2636,7 @@ $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 
 :::info
 
-More examples of queries can be found in the `dataClass.query()` page. Note however that formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
+Descripción Descripción Sin embargo, ten en cuenta que las fórmulas no están soportadas por la función `collection.query()`, ni en el parámetro *queryString* ni como parámetro objeto *formula*.
 
 :::
 
@@ -2661,13 +2659,13 @@ More examples of queries can be found in the `dataClass.query()` page. Note howe
 
 <!-- REF #collection.reduce().Params -->
 
-| Parámetros | Tipo                                            |                             | Descripción                                                                       |
-| ---------- | ----------------------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |              ->             | Objeto fórmula                                                                    |
-| methodName | Text                                            |              ->             | Nombre de un método                                                               |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expresión                                       |              ->             | Parámetro(s) a pasar                                           |
-| Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                                   |
+| Parámetros | Tipo                                            |                             | Descripción                                   |
+| ---------- | ----------------------------------------------- | :-------------------------: | --------------------------------------------- |
+| formula    | 4D.Function                     |              ->             | Objeto fórmula                                |
+| methodName | Text                                            |              ->             | Nombre de un método                           |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Colección que contiene los elementos añadidos |
+| param      | expresión                                       |              ->             | Parámetro(s) a pasar       |
+| Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | donde:                        |
 
 <!-- END REF -->
 
@@ -2682,20 +2680,20 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+Tipo
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
-- in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- La nueva colección
+- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
+- Esta función modifica la colección original.
 
 La retrollamada define los siguientes parámetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- Descripción
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
 
@@ -2719,7 +2717,7 @@ Este ejemplo permite reducir varios elementos de la colección a uno solo:
  $r:=$c.reduce(Formula(Flatten)) //$r=[0,1,2,3,4,5,6,7]
 ```
 
-With the following ***Flatten*** method:
+Con el siguiente método ***Flatten***:
 
 ```4d
  If($1.accumulator=Null)
@@ -2746,13 +2744,13 @@ With the following ***Flatten*** method:
 
 <!-- REF #collection.reduceRight().Params -->
 
-| Parámetros | Tipo                                            |                             | Descripción                                                                       |
-| ---------- | ----------------------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| formula    | 4D.Function                     |              ->             | Objeto fórmula                                                                    |
-| methodName | Text                                            |              ->             | Nombre de un método                                                               |
-| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expresión                                       |              ->             | Parámetro(s) a pasar                                           |
-| Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value                                                   |
+| Parámetros | Tipo                                            |                             | Descripción                                   |
+| ---------- | ----------------------------------------------- | :-------------------------: | --------------------------------------------- |
+| formula    | 4D.Function                     |              ->             | Objeto fórmula                                |
+| methodName | Text                                            |              ->             | Nombre de un método                           |
+| initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | Colección que contiene los elementos añadidos |
+| param      | expresión                                       |              ->             | Parámetro(s) a pasar       |
+| Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | donde:                        |
 
 <!-- END REF -->
 
@@ -2767,28 +2765,25 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+Tipo
 
-You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite, *$1.accumulator* empieza por *Undefined*.
 
 La retrollamada recibe los siguientes parámetros:
 
-- in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- La nueva colección
+- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
+- Esta función modifica la colección original.
 
 La retrollamada define los siguientes parámetros:
 
-- *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- Descripción
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 #### Ejemplo 1
 
 ```4d
-var $c : Collection
-$c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
-
+Tipo
 ```
 
 #### Ejemplo 2
@@ -2805,14 +2800,10 @@ Este ejemplo permite reducir varios elementos de la colección a uno solo:
  $r:=$c.reduceRight(Formula(Flatten)) //$r=[6,7,4,5,2,3,0,1]
 ```
 
-With the following ***Flatten*** method:
+Con el siguiente método ***Flatten***:
 
 ```4d
-	//Flatten project method
- If($1.accumulator=Null)
-    $1.accumulator:=New collection
- End if
- $1.accumulator.combine($1.value)
+Ejemplo 4
 ```
 
 <!-- END REF -->
@@ -2847,15 +2838,15 @@ La función `.remove()` <!-- REF #collection.remove().Summary -->elimina uno o m
 
 > Esta función modifica la colección original.
 
-In *index*, pass the position where you want the element to be removed from the collection.
+Lanzamiento
 
-> **Atención**: recuerde que los elementos de la colección están numerados desde 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Atención**: recuerde que los elementos de la colección están numerados desde 0. Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
 
 - Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
-- If the calculated value < 0, *index* is set to 0.
-- If the calculated value > the length of the collection, *index* is set to the length.
+- Lanzamiento
+- Ejemplo 1
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.
 
 Si se intenta eliminar un elemento de una colección vacía, el método no hace nada (no se genera ningún error).
 
@@ -2888,11 +2879,11 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 
 <!-- REF #collection.resize().Params -->
 
-| Parámetros   | Tipo                                            |                             | Descripción                                    |
-| ------------ | ----------------------------------------------- | :-------------------------: | ---------------------------------------------- |
-| size         | Integer                                         |              ->             | Nuevo tamaño de la colección                   |
-| defaultValue | Number, Text, Object, Collection, Date, Boolean |              ->             | Valor por defecto para llenar nuevos elementos |
-| Resultado    | Collection                                      | <- | Resized original collection                    |
+| Parámetros   | Tipo                                            |                             | Descripción                                                                                 |
+| ------------ | ----------------------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------- |
+| size         | Integer                                         |              ->             | Nuevo tamaño de la colección                                                                |
+| defaultValue | Number, Text, Object, Collection, Date, Boolean |              ->             | Valor por defecto para llenar nuevos elementos                                              |
+| Resultado    | Collection                                      | <- | o *methodName*, el nombre de un método proyecto (texto). |
 
 <!-- END REF -->
 
@@ -2902,10 +2893,10 @@ La función `.resize()` <!-- REF #collection.resize().Summary -->ajusta la longi
 
 > Esta función modifica la colección original.
 
-- If *size* < collection length, exceeding elements are removed from the collection.
-- If *size* > collection length, the collection length is increased to size.
+- Ejemplo 1
+- Ejemplo 1
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Por defecto, los nuevos elementos se llenan con valores **null**. Puede especificar el valor a llenar en los elementos añadidos utilizando el parámetro *defaultValue*.
 
 #### Ejemplo
 
@@ -2943,9 +2934,9 @@ By default, new elements are filled will **null** values. You can specify the va
 
 <!-- REF #collection.reverse().Params -->
 
-| Parámetros | Tipo       |                             | Descripción                     |
-| ---------- | ---------- | :-------------------------: | ------------------------------- |
-| Resultado  | Collection | <- | Inverted copy of the collection |
+| Parámetros | Tipo       |                             | Descripción                                                                                                                                                                                                                                         |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Resultado  | Collection | <- | (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si la evaluación del valor del elemento tiene éxito, **false** en caso contrario. |
 
 <!-- END REF -->
 
@@ -3024,26 +3015,26 @@ Si la colección está vacía, este método no hace nada.
 
 <!-- REF #collection.slice().Params -->
 
-| Parámetros | Tipo       |                             | Descripción                                                                 |
-| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------------------- |
-| startFrom  | Integer    |              ->             | Índice de inicio (incluido)                              |
-| end        | Integer    |              ->             | Índice final (no incluido)                               |
-| Resultado  | Collection | <- | New collection containing sliced elements (shallow copy) |
+| Parámetros | Tipo       |                             | Descripción                                    |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------- |
+| startFrom  | Integer    |              ->             | Índice de inicio (incluido) |
+| end        | Integer    |              ->             | Índice final (no incluido)  |
+| Resultado  | Collection | <- | Resultado                                      |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `.slice()` <!-- REF #collection.slice().Summary -->devuelve una parte de una colección en una nueva colección<!-- END REF -->, seleccionada de la posición *startFrom* a la posición *end* (no incluye *end*). This function returns a *shallow copy* of the collection. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.slice()` <!-- REF #collection.slice().Summary -->devuelve una parte de una colección en una nueva colección<!-- END REF -->, seleccionada de la posición *startFrom* a la posición *end* (no incluye *end*). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 
 > Esta función no modifica la colección original.
 
-The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
+La colección devuelta contiene el elemento especificado por *startFrom* y todos los elementos subsiguientes hasta, pero sin incluir, el elemento especificado por *end*. Si sólo se especifica el parámetro *startFrom*, la colección devuelta contiene todos los elementos desde *startFrom* hasta el último elemento de la colección original.
 
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección).
-- If the calculated value < 0, *startFrom* is set to 0.
+- Descripción
 - Si *end* < 0 , se recalcula como *end:=end+length*.
-- If *end < startFrom* (passed or calculated values), the method does nothing.
+- Este ejemplo permite reducir varios elementos de la colección a uno solo:
 
 #### Ejemplo
 
@@ -3078,17 +3069,17 @@ The returned collection contains the element specified by *startFrom* and all su
 | Parámetros | Tipo |     | Descripción |
 | ---------- | ---- | :-: | ----------- |
 
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |any |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+|startFrom |Integer |->|Índice para comenzar la prueba|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|param |any |->|Parámetro(s) a pasar|
+|Result|Boolean|<-|True si al menos un elemento pasa exitosamente la prueba|
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test implemented in the provided *formula* or *methodName* code<!-- END REF -->.
+Lanzamiento
 
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
@@ -3099,28 +3090,28 @@ La retrollamada se llama con los parámetros pasados en *param* (opcional). La r
 
 La retrollamada recibe los siguientes parámetros:
 
-- in *$1.value*: element value to be processed
-- in *$2: param*
-- in *$N...*: *paramN...*
+- La nueva colección
+- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
+- Esta función modifica la colección original.
 
 Puede definir los siguientes parámetros:
 
-- (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-- *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+- Expresión a buscar en la colección
+- *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
-In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
+Descripción
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar el índice de un elemento desde el cual iniciar la prueba en *startFrom*.
 
-- If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
+- Tipo
 
-- If *startFrom* < 0, it is considered as the offset from the end of the collection.
+- Añadidos
 
 - Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
 
-You want to know if at least one collection value is >0.
+Soporte de fórmula
 
 ```4d
  var $c : Collection
@@ -3167,11 +3158,11 @@ You want to know if at least one collection value is >0.
 
 #### Descripción
 
-The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
+La función `.sort()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original y además devuelve la colección ordenada<!-- END REF -->.
 
 > Esta función modifica la colección original.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
 1. null
 2. booleans
@@ -3181,7 +3172,7 @@ If `.sort()` is called with no parameters, only scalar values (number, text, dat
 6. collections
 7. dates
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la retrollamada si es necesario.
+Si quiere ordenar los elementos de la colección en algún otro orden o ordenar cualquier tipo de elemento, debe suministrar en *formula* ([objeto Formula](FunctionClass.md)) o *methodName* (Text) una retro llamada que define el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la retrollamada si es necesario.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -3190,9 +3181,9 @@ La retrollamada recibe los siguientes parámetros:
  - *$1.value2* (todo tipo): valor del segundo elemento a comparar
 - $2...$N (cualquier tipo): parámetros adicionales
 
-If you used a method, you must set the folllowing parameter:
+Resultado
 
-- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise.
+- Elemento a insertar en la colección
 
 #### Ejemplo 1
 
@@ -3214,10 +3205,7 @@ If you used a method, you must set the folllowing parameter:
 #### Ejemplo 3
 
 ```4d
-var $col; $col2; $col3 : Collection
-$col:=New collection(33;4;66;1111;222)
-$col2:=$col.sort() //numerical sort: [4,33,66,222,1111]
-$col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sort: [1111,222,33,4,66]
+Descripción
 ```
 
 <!-- END REF -->
@@ -3238,22 +3226,22 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sor
 
 <!-- REF #collection.sum().Params -->
 
-| Parámetros   | Tipo |                             | Descripción                                                      |
-| ------------ | ---- | :-------------------------: | ---------------------------------------------------------------- |
-| propertyPath | Text |              ->             | Ruta de la propiedad del objeto que se utilizará para el cálculo |
-| Resultado    | Real | <- | Sum of collection values                                         |
+| Parámetros   | Tipo |                             | Descripción                                                                                                                                                                           |
+| ------------ | ---- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| propertyPath | Text |              ->             | Ruta de la propiedad del objeto que se utilizará para el cálculo                                                                                                                      |
+| Resultado    | Real | <- | `.pop()`, utilizado junto con [`.push()`](#push), puede utilizarse para implementar una funcionalidad primera entrada última salida de tratamiento de datos apilados: |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
+La función `.sum()` <!-- REF #collection.sum().Summary --> devuelve la suma de todos los valores de la instancia de la colección<!-- END REF -->.
 
 Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran otros tipos de elementos).
 
 Si la colección contiene objetos, pasa el parámetro *propertyPath* para indicar la propiedad del objeto a tener en cuenta.
 
-`.sum()` returns 0 if:
+Esta función no modifica la colección original.
 
 - la colección está vacía,
 - la colección no contiene elementos numéricos,
@@ -3308,7 +3296,7 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 #### Descripción
 
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+La función `.unshift()` <!-- REF #collection.unshift().Summary -->inserta el *valor*(es) dado al principio de la colección <!-- END REF -->y devuelve la colección modificada.
 
 > Esta función modifica la colección original.
 

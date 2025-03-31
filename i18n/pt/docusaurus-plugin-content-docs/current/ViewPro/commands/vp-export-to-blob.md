@@ -14,7 +14,7 @@ title: VP EXPORT TO BLOB
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |                  |
 | paramObj   | Object | -> | Opções de exportação                       | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. A exportação e importação de áreas do 4D View Pro como blobs é rápida e eficiente em termos de memória.
 
@@ -30,7 +30,7 @@ Em *paramObj*, você pode passar várias propriedades:
 | includeFormulas         | Parâmetros                   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                                                                                                                                                                        |
 | includeStyles           | Parâmetros                   | Se deve incluir o estilo ao salvar, padrão=true.                                                                                                                                                                                                                |
 | includeUnusedNames      | Parâmetros                   | Se deve incluir o nome personalizado não utilizado ao salvar, padrão=true.                                                                                                                                                                                      |
-| saveAsView              | Parâmetros                   | Whether to apply the format string to exporting value when saving, default=false.                                                                                                                                                                               |
+| saveAsView              | Parâmetros                   | Se a string de formato deve ser aplicada ao valor de exportação ao ser salva, padrão = falso.                                                                                                                                                                   |
 
 Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
@@ -44,7 +44,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 |           | .errorCode    | integer                 | Código de erro.                                              |
 |           | .errorMessage | text                    | Mensagem de erro.                                            |
 
-#### Exemplo
+## Exemplo
 
 O comando `VP EXPORT TO BLOB` é assíncrono. Você deve criar um método de retorno de chamada (denominado *VPBlobCallback* em nosso exemplo) para usar os resultados da exportação.
 
@@ -67,7 +67,7 @@ End if
 
 ```
 
-#### Veja também
+## Veja também
 
 [VP IMPORT FROM BLOB](vp-import-from-blob.md)
 

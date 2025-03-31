@@ -13,13 +13,13 @@ title: VP NEW DOCUMENT
 | ---------- | ---- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text | -> | Nome de objeto formulário área 4D View Pro | <!-- END REF --> |
 
-#### Descrição
+## Descrição
 
 The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. O novo documento vazio substitui quaisquer dados já inseridos na área.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-#### Exemplo
+## Exemplo
 
 Se quiser exibir um documento vazio no formulário "myVPArea":
 
@@ -27,7 +27,7 @@ Se quiser exibir um documento vazio no formulário "myVPArea":
 VP NEW DOCUMENT("myVPArea")
 ```
 
-#### Veja também
+## Veja também
 
 [VP IMPORT DOCUMENT](vp-import-document.md)
 

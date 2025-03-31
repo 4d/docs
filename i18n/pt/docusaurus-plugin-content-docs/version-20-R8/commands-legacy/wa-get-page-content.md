@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WA Get page content.Summary-->O comando WA Get page content retorna o código HTML da página atual ou da página que vai ser mostrada na área web designada pelos parâmetros *\** e *objeto*.<!-- END REF-->  
 
 Este comando retorna uma string vazia se o conteúdo da página atual não estiver disponível.
 
-#### Ver também 
+## Ver também 
 
 [WA SET PAGE CONTENT](wa-set-page-content.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

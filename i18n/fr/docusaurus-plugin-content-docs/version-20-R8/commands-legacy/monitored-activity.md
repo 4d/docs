@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Monitored activity.Summary-->La commande **Monitored activity** retourne une collection d'objets décrivant les opérations enregistrées selon les spécifications définies par la commande [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Elle peut être appelée et exécutée sur un 4D distant, 4D Server ou des applications 4D autonomes (si *source* n'est pas issu de l'activité réseau).
 
@@ -25,7 +25,7 @@ Les objets de la collection retournée possèdent les propriétés suivantes :
 | activityDuration | Reée        | Durée de l'activité exprimée en secondes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | activityData     | Objet       | Objet(s) contenant des propriétés spécifiques selon le type d'activité enregistrée (*activityKind*). Dans certains cas, plusieurs objets peuvent être retournés pour la même opération. Dans ce cas, les objets auront le même UUID. Les propriétés supplémentaires de ces objets sont décrites dans les sections ci-dessous.                                                                                                                                                                                                                                                                                                                                                           |
 
-##### activityKind = langage de l'activité (1) 
+### activityKind = langage de l'activité (1) 
 
 **Note :** L'objet *activityData* utilise les informations définies par la commande [SET DATABASE PARAMETER](set-database-parameter.md) pour *4DDebugLog.txt (standard)* (le cas échéant), sinon, elle utilise un mode par défaut. Le lancement de l'enregistrement des requêtes durant l'exécution de la commande **Monitored activity** aura une incidence sur les résultats retournés.
 
@@ -41,7 +41,7 @@ Objet *activityData* :
 | duration        | entier long | Durée de l'opéation (exprimée en microsecondes)                                                                                                                              |
 | kind            | texte       | Le type d'opération enregistré. Valeurs possibles :<br/> "command" "method" "Message" "pluginMessage" "pluginCommand" "pluginCallback" "pluginEvent" "task" "member" |
 
-###### Propriétés supplémentaires 
+## Propriétés supplémentaires 
 
 Les propriétés supplémentaires suivantes sont retournées dans l'objet *activityData* selon le type d'opération :
 
@@ -62,7 +62,7 @@ Les propriétés supplémentaires suivantes sont retournées dans l'objet *activ
 | pluginMessageName   | texte       | pluginMessage                                                                                                                        | Valeurs possibles : PackMsgServerDeInit PackMsgServerDisposeData PackMsgServerWriteData PackMsgServerReadData PackMsgServerKillClient PackMsgServerNewClient PackMsgServerInit PackMsgProcessDeInit PackMsgProcessInit PackMsgClientDeInit PackMsgClientInit |
 | pluginName          | texte       | pluginCallback<br/>pluginCommand<br/>pluginEvent<br/>pluginMessage                                           | Nom du plug-in                                                                                                                                                                                                                                               |
 
-##### activityKind = activité réseau (2) 
+### activityKind = activité réseau (2) 
 
 **Notes :**
 
@@ -87,7 +87,7 @@ L'objet *activityData* :
 | taskKind         | texte       | Préemprtif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                                                                                                                                               |
 | rtt              | entier long | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. Mesuré uniquement lorsque la couche réseau ServerNet est utilisée, retourne 0 lorsque l'ancienne couche réseau est utilisée.Dans les versions antérieures à Windows 10 ou Windows Server 2016, l'appel retournera la valeur 0.<br/><br/><br/> |
 
-##### activityKind = opérations de l'activité (4) 
+### activityKind = opérations de l'activité (4) 
 
 **Note :** L'objet *activityData* et l'objet retourné par la commande [ACTIVITY SNAPSHOT](activity-snapshot.md) sont similaires, excepté que *activityData* est soumis à un seuil et que les opérations terminées sont retournées :
 
@@ -131,16 +131,16 @@ L'objet *activityData* :
 | |  \[ \].title         | text       | Informations supplémentaires sur l'opéraiton                                                                                                                                       |                                                                                                                                                                                                  |
 | |  \[ \].extraInfo     | object     | Informations SQL supplémentaires (le cas échéant) : \[ \].extraInfo.SQL\_Query (text): La requête SQL \[ \].extraInfo.SQL\_User (text): Utilisateur authentifié sur le serveur SQL |                                                                                                                                                                                                  |
 
-#### Exemple 
+## Exemple 
 
 Voir l'exemple de **[START MONITORING ACTIVITY](start-monitoring-activity.md).**
 
-#### Voir aussi 
+## Voir aussi 
 
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

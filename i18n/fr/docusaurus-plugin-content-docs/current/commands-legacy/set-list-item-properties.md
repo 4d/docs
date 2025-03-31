@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->La commande **SET LIST ITEM PROPERTIES** modifie l'élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF-->
 
@@ -59,11 +59,11 @@ Dans le paramètre *icône*, vous pouvez passer une image pour l'utiliser comme 
 
 Le paramètre *couleur* (facultatif) permet de modifier la couleur du texte de l’élément. La couleur doit être définie sous forme de couleur RVB, c’est-à-dire un entier long de 4 octets au format 0x00RRVVBB. Pour plus d’informations sur ce format, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Passez -1 dans le paramètre *couleur* pour rétablir la couleur d’origine de l’élément.
 
-#### Exemple 1 
+## Exemple 1 
 
 Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant passe le texte de l’élément courant de *liste* en gras et en rouge vif :
 
@@ -71,14 +71,14 @@ L’exemple suivant passe le texte de l’élément courant de *liste* en gras e
  SET LIST ITEM PROPERTIES(liste;*;True;Bold;0;0x00FF0000)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 *Listes hiérarchiques*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

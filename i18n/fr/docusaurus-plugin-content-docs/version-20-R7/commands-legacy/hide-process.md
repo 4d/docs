@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HIDE PROCESS.Summary-->**HIDE PROCESS** masque toutes les fenêtres appartenant au process dont le numéro est *process*.<!-- END REF--> Tous les éléments d'interface de *process* sont cachés jusqu'au [SHOW PROCESS](show-process.md) suivant. La barre de menus du process est aussi cachée. L'ouverture d'une fenêtre alors que le process est caché ne provoquera aucun redessinement d'écran. Si le process est déjà caché, cette commande ne fait rien.
 
@@ -25,7 +25,7 @@ Lorsqu'un process est caché, il est toujours en cours d'exécution.
 
 Si vous souhaitez ne cacher qu'une fenêtre du process, utilisez la commande [HIDE WINDOW](hide-window.md).
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant cachera toutes les fenêtres appartenant au process courant :
 
@@ -33,12 +33,12 @@ L'exemple suivant cachera toutes les fenêtres appartenant au process courant :
  HIDE PROCESS(Current process)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SQL End selection.Summary-->O comando SQL End selection é utiliza para determinar se os limites do resultado obtido foram alcançado.<!-- END REF-->
 
-#### Exemplo 
+## Exemplo 
 
 O código abaixo conecta-se a uma fonte de dados externos (Oracle) utilizando os seguintes parâmetros:
 
@@ -39,7 +39,7 @@ O código abaixo conecta-se a uma fonte de dados externos (Oracle) utilizando os
 Este código devolverá na variável 4D *vNome* os nomes (ename) armazenados na tabela emp.
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP FREEZE FORMULAS.Summary-->El comando **WP FREEZE FORMULAS** "congela" el contenido de las fórmulas en *objTarget*.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Por defecto, si se omite *recalcular*, las expresiones se recalculan.
 
 **Atención**: *Líneas de arrastre*, si los hay, se transforman como lìneas normales cuando se congela el *objTarget*. Como resultado, si se modifica el tamaño o la orientación de la página, o si se exporta el documento, es posible que se desplacen en la disposición resultante.
 
-#### Ejemplo 
+## Ejemplo 
 
 Para congelar las fórmulas en un documento sin recalcular:
 
@@ -56,7 +56,7 @@ Para congelar todas las fórmulas en la primera sección de un documento:
  WP FREEZE FORMULAS(WP Get section(WriteProArea;1);wk do not recompute expressions)
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get formulas](wp-get-formulas.md)  

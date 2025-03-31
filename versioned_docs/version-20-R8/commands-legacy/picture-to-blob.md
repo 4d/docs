@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PICTURE TO BLOB.Summary-->The **PICTURE TO BLOB** command converts a picture stored in a 4D variable or field to another format and places the resulting picture in a BLOB.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Once the command has been executed, the *pictureBlob* contains the picture in th
 
 If the conversion was successful, the system variable OK is set to 1\. If the conversion has failed (converter not available), OK is set to 0 and the generated BLOB is empty (0 byte).
 
-#### Example 
+## Example 
 
 You want to convert an image from a proprietary format to GIF format and display it on a static web page. You can use a code such as:
 
@@ -45,13 +45,13 @@ You want to convert an image from a proprietary format to GIF format and display
  WEB SEND BLOB($BLOB;"image/gif")
 ```
 
-#### See also 
+## See also 
 
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

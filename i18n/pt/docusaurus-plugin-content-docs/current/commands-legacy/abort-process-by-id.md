@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ABORT PROCESS BY ID.Summary-->O comando **ABORT PROCESS BY ID** detém um processo específico no servidor 4D.<!-- END REF-->
 
@@ -25,7 +25,7 @@ No parâmetro *IDunico*, passe o ID único do processo que se executa no servido
 * Este comando apenas pode ser usado com a capa de rede *ServerNet*. Ver *Nova capa de rede ServerNet (compatibilidade)*.
 * Este comando apenas deve serusado para buscar erros ou propósitos de administração, não como um procedimento ordinário.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser deter o processo selecionado da coleção de processos que são mostrados em um list box:
 
@@ -39,11 +39,11 @@ Se quiser deter o processo selecionado da coleção de processos que são mostra
  ABORT PROCESS BY ID($activity[curItemPosition].ID)
 ```
 
-#### Ver também 
+## Ver também 
 
 [PAUSE PROCESS](pause-process.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Euro converter.Summary-->La commande **Euro converter** vous permet d’effectuer tout type de conversion de valeurs entre les différentes monnaies des pays de la “zone euro” et l’Euro lui-même.<!-- END REF-->
 
@@ -103,7 +103,7 @@ La parité des différentes monnaies vis-à-vis de l’Euro est fixe. Les taux d
 | Peseta espagnole     | 166,386                |
 | Schilling autrichien | 13,7603                |
 
-#### Exemple 
+## Exemple 
 
 Voici différents types de conversion pouvant être obtenus à l’aide de cette commande :
 
@@ -116,7 +116,7 @@ Voici différents types de conversion pouvant être obtenus à l’aide de cette
 ```
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

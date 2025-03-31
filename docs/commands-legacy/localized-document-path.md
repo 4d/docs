@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Localized document path.Summary-->The **Localized document path** command returns the complete (absolute) pathname of a document designated by *relativePath* and located in a xxx.<!-- END REF-->lproj folder.
 
@@ -45,7 +45,7 @@ The absolute pathname returned by the command is always expressed in the system 
 
 If *relativePath* is not found in any of these locations, the command returns an empty string. 
 
-#### Example 
+## Example 
 
 For the purpose of transforming an XML or HTML file, you want to use a "log.xsl" transformation file. This file differs depending on the current language. You therefore want to know which "log.xsl" file path to use.   
 Here are the contents of the Resources folder:
@@ -63,11 +63,11 @@ If the current language is, for example, French Canadian (fr-ca), the command re
 * under Windows: C:\\users\\…\\…\\…\\resources\\fr\_ca.lproj\\xsl\\log.xsl
 * under Mac OS: "HardDisk:users:…:…:…:resources:fr\_ca.lproj:xsl:log.xsl"
 
-#### See also 
+## See also 
 
 [Get database localization](get-database-localization.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

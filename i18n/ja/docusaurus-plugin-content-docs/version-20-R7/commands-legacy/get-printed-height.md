@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Get printed height.Summary-->**Get printed height** コマンドは、 [Print form](print-form.md) コマンドを使って印刷された部分全体の高さ（ピクセル単位）を返します。<!-- END REF-->
 
@@ -25,13 +25,13 @@ displayed_sidebar: docs
 
 **注:** 印刷管理ならびに4D用語に関する詳細は、[GET PRINTABLE MARGIN](get-printable-margin.md) コマンドの説明を参照してください。
 
-#### 参照 
+## 参照 
 
 [GET PRINTABLE AREA](get-printable-area.md)  
 [Print form](print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

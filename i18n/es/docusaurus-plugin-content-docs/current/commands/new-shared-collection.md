@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción
+## Descripción
 
 El comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crea una nueva colección compartida vacía o precargada<!-- END REF --> y devuelve su referencia. Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
 
@@ -23,7 +23,7 @@ La adición de un elemento a esta colección utilizando el operador de asignaci�
 
 :::info
 
-For more information on shared collections, please refer to the [Shared objects and collections](../Concepts/shared.md) page.
+Para más información sobre las colecciones compartidas, por favor consulte la página [Objetos y colecciones compartidas](../Concepts/shared.md).
 
 :::
 
@@ -54,7 +54,7 @@ Esta función modifica la colección original.
 
 :::
 
-#### Ejemplo
+## Ejemplo
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -63,17 +63,17 @@ Esta función modifica la colección original.
  End use
 ```
 
-#### Ver también
+## Ver también
 
 [New collection](new-collection.md)\
 [New shared object](../commands-legacy/new-shared-object.md)\
 *Shared objects and shared collections*
 
-#### Propiedades
+## Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1527                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1527                        |
+| Hilo seguro       | &check; |
 
 

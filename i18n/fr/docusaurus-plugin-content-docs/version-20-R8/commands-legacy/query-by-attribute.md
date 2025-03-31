@@ -70,7 +70,7 @@ Voici la structure type d'une recherche par attribut :
 
 **Note :** La présence de l'attribut dans le champ objet est un critère implicite pour tous les opérateurs (hormis #). En revanche, pour l'opérateur #, il peut être indéfini (cf. ci-dessous). 
 
-##### Utilisation de l'opérateur # (prise en charge des valeurs Null) 
+### Utilisation de l'opérateur # (prise en charge des valeurs Null) 
 
 Lorsque vous effectuez une recherche par attribut à l'aide de l'opérateur #, vous devez prendre en considération les cas où un attribut n'est pas présent dans un enregistrement. Considérons par exemple ce qui suit :   
 
@@ -101,7 +101,7 @@ Ce principe s'applique également aux attributs tableaux. Par exemple, la recher
   
 **Note :** Pour obtenir spécifiquement les enregistrements dans lesquels l'attribut est indéfini, vous pouvez utiliser un objet vide (cf. exemple 2). A noter toutefois que la recherche de valeurs NULL dans les éléments de tableaux n'est prise en charge.
 
-##### Construire des recherches multiples 
+### Construire des recherches multiples 
 
 Voici les règles à observer pour la construction de recherche par attribut à lignes multiples :
 
@@ -118,7 +118,7 @@ Quelle que soit la manière dont la recherche a été définie :
 * Si l'exécution d'une recherche nécessite un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Ce type de message peut être désactivé à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton Stop pour interrompre l'opération. Si la recherche s'est correctement déroulée, la variable système OK prend la valeur 1\. Sinon, si la recherche est interrompue, OK prend la valeur 0 (zéro).
 * Si des champs objet indexés sont spécifiés, la recherche est optimisée à chaque fois que c'est possible (la recherche commence par les champs indexés), réduisant au maximum la durée de l'opération.
 
-##### Valeurs date dans l'objet 
+### Valeurs date dans l'objet 
 
 Les dates sont stockées dans les objets en fonction des paramètres de la base ; par défaut, la *timezone* est prise en compte (voir le sélecteur JSON use local time dans la commande [SET DATABASE PARAMETER](set-database-parameter.md)). 
 
@@ -145,11 +145,11 @@ Attention, la portée de ce paramètre est limitée au process. Si vous exécute
  QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;1976-11-27!)
 ```
 
-##### Utilisation de la propriété virtuelle length 
+### Utilisation de la propriété virtuelle length 
 
 Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cette propriété est automatiquement disponible pour tous les attributs de type tableau, et retourne la taille du tableau, c'est-à-dire le nombre d'éléments qu'il contient. Elle peut être utilisée dans le contexte de l'exécution de la commande **QUERY BY ATTRIBUTE** (cf. exemple 4).
 
-##### Lier les critères pour les recherches dans les éléments de tableau 
+### Lier les critères pour les recherches dans les éléments de tableau 
 
 (Nouveauté 4D v16 R2) Lorsque vous effectuez des recherches multiples combinées via l'opérateur "ET" parmi des éléments de tableaux, vous pouvez souhaiter que seuls les enregistrements dont au moins un élément de tableau répond à tous les critères soient trouvés, et non ceux répondant à tous les critères mais dans différents éléments. Pour cela, vous devez *lier* les critères de recherche afin que seuls les éléments individuels contenant tous les critères liés soient trouvés. 
 

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LAST RECORD.Summary-->**LAST RECORD** makes the last record of the current selection of *aTable* the current record and loads the record from disk.<!-- END REF--> If the current selection is empty or if the current record is already the last one in the selection, **LAST RECORD** has no effect.
 
-#### Example 
+## Example 
 
 The following example makes the last record of the \[People\] table the current record:
 
@@ -25,7 +25,7 @@ The following example makes the last record of the \[People\] table the current 
  LAST RECORD([People])
 ```
 
-#### See also 
+## See also 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -33,7 +33,7 @@ The following example makes the last record of the \[People\] table the current 
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

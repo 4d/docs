@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA OPEN BACK URL.Summary-->WA OPEN BACK URL コマンドは、*\** と *object* 引数で指定したWebエリアに開かれた一連のURL中、現在のURLのひとつ前のURLをロードします。<!-- END REF--> 
 
 前のURLがない場合、コマンドは何も行いません。前のURLが有効かどうかは、[WA Back URL available](wa-back-url-available.md "WA Back URL available") コマンドで知ることができます。 
 
-#### 参照 
+## 参照 
 
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 [WA OPEN URL](wa-open-url.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

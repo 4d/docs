@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ON ERR CALL.Summary-->The **ON ERR CALL** command installs the project method, whose name you pass in *errorMethod*, as the method for catching (trapping) errors for the defined execution context in the current project.<!-- END REF--> This method is called the **error-handling method** or **error-catching method**. 
 
@@ -53,7 +53,7 @@ The [ABORT](abort.md) command can be used to terminate processing. If you don’
 
 If an error occurs in the error-handling method itself, 4D takes over error handling. Therefore, you should make sure that the error-handling method cannot generate an error. Also, you cannot use **ON ERR CALL** inside the error-handling method.
 
-#### Example 1 
+## Example 1 
 
 You want to define a global error handler, for example in the **On Startup** database method:
 
@@ -61,7 +61,7 @@ You want to define a global error handler, for example in the **On Startup** dat
  ON ERR CALL("myGlobalErrorHandler";ek global)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following project method tries to create a document whose name is received as parameter. If the document cannot be created, the project metod returns 0 (zero) or the error code:  
 
@@ -98,7 +98,7 @@ Note the use of the *gError* process variable to get the error code result withi
  End if
 ```
 
-#### Example 3 
+## Example 3 
 
 While implementing a complex set of operations, you may end up with various subroutines that require different error-handling methods. You can have only one error-handling method per process at a time, so you have two choices:  
  \- Keep track of the current one each time you call **ON ERR CALL**, or   
@@ -161,7 +161,7 @@ Then, you can call it this way:
   // ...
 ```
 
-#### Example 4 
+## Example 4 
 
 The following error-handling method ignores the user interruptions and displays the error text:
 
@@ -172,7 +172,7 @@ The following error-handling method ignores the user interruptions and displays 
  End if
 ```
 
-#### See also 
+## See also 
 
 [ABORT](abort.md)  
 *Error Handler*  
@@ -181,7 +181,7 @@ The following error-handling method ignores the user interruptions and displays 
 [Method called on error](method-called-on-error.md)  
 *System Variables*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

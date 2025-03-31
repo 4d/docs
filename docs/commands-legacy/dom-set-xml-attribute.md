@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Summary-->The DOM SET XML ATTRIBUTE command adds one or more attributes to the XML element whose reference is passed in the *elementRef* parameter.<!-- END REF--> It also sets the value of each attribute defined.
 
@@ -30,7 +30,7 @@ The *attrValue* parameter can be of the text type or another type (Boolean, inte
 | Date     | "2006-12-04T00:00:00Z" (RFC 3339 standard)    |
 | Time     | "5233" (number of seconds)                    |
 
-#### Example 
+## Example 
 
 In the following XML source:
 
@@ -56,18 +56,18 @@ We get:
 </Book>
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
-#### See also 
+## See also 
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

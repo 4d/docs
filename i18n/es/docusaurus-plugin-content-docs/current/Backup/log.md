@@ -67,7 +67,7 @@ Debe crear otro archivo de historial si crea un nuevo archivo de datos. Debe est
 
 ## Parámetros del archivo de historial
 
-Los [parámetros del archivo de historial](settings.md#log-file-management) se basa en dos datos: un valor booleano y una ruta.
+Los [parámetros del archivo de historial](settings.md#log-management) se basa en dos datos: un valor booleano y una ruta.
 
 1. **Valor booleano**: indica si la funcionalidad "Utilizar archivo de registro" está activada o desactivada en la aplicación. Por defecto, el valor booleano se almacena en *catalog.4DCatalog*. Sin embargo, cuando se activan los [parámetros usuario](../Desktop/user-settings.md), la configuración del archivo *catalog.4DCatalog* se anula, y el valor booleano puede definirse tanto en el archivo *Backup.4DSettings* [junto al archivo de datos](../Project/architecture.md#settings-user-data) como en el archivo *Backup.4DSettings* [en la carpeta del proyecto](../Project/architecture.md#settings-user) (ver también la documentación de la llave de backup xml `JournalFileEnabled` en [doc.4d.com](https://doc.4d.com)).
 

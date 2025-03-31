@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Select folder.Summary-->O comando Select folder mostra uma caixa de diálogo que lhe permite selecionar manualmente uma pasta e depois recuperar a rota de acesso completa a essa pasta.<!-- END REF--> O parâmetro opcional *rotaPadrao* pode ser utilizado para designar a localização de uma pasta que inicialmente será mostrada na caixa de diálogo de seleção da pasta.  
 
@@ -66,7 +66,7 @@ Se o usuário validar a caixa de diálogo, a variável sistema OK toma o valor 1
   
 **Nota**: em Windows, se o usuário selecionar alguns elementos incorretos, tais como “Estação de trabalho", “Lixeira”, etc., a variável sistema OK toma o valor 0, mesmo se o usuário validar a caixa de diálogo.  
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo abaixo lhe permite selecionar a pasta na qual serão armazenadas as imagens da biblioteca de imagens:  
   
@@ -84,13 +84,13 @@ O exemplo abaixo lhe permite selecionar a pasta na qual serão armazenadas as im
 
 ```
 
-#### Ver também 
+## Ver também 
 
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -17,13 +17,13 @@ displayed_sidebar: docs
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get data context.Summary-->The **WP Get data context** command returns the data context of the wpDoc document.<!-- END REF--> Data contexts are defined using the [WP SET DATA CONTEXT](wp-set-data-context.md) command.
 
 In *wpDoc*, pass the 4D Write Pro document whose data context you want to get.
 
-#### Example 
+## Example 
 
 You can get a data context from a document and reuse it in another method within the same process.
 
@@ -58,7 +58,7 @@ method2 might look something like:
  ALERT(JSON Stringify($context)) // Displays {"firstName":"John","lastName":"Doe"}
 ```
 
-#### See also 
+## See also 
 
 [Blog post - ORDA and 4D Write Pro : The power couple!](https://blog.4d.com/orda-and-4d-write-pro-the-power-couple/)  
 [WP SET DATA CONTEXT](wp-set-data-context.md)  

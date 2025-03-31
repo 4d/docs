@@ -24,7 +24,7 @@ displayed_sidebar: docs
 :::
 
 
-#### Descrição 
+## Descrição 
 
 O comando **LAUNCH EXTERNAL PROCESS** permite iniciar um processo externo de 4D, em macOS e Windows.  
 Em macOS, este comando oferece acesso a todas as aplicações executáveis que possam ser iniciadas desde o Terminal.  
@@ -49,7 +49,7 @@ Estas variáveis são válidas no processo atual para a chamada abaixo a **LAUNC
   
 Quando for passado, o parâmetro *pid* (inteiro longo) devolve a ID única do processo criado para lançar o comando, independentemente do estado da opção *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*. Com esta informação, é mais fácil interagir com os processos externos criados pelo comando, por exemplo. para detê-lo. Se o lançamento do processo falha, não é devolvido o parâmetro *pid*.
 
-#### Exemplos em macOS 
+## Exemplos em macOS 
 
 Os exemplos abaixo utilizam o Terminal macOS, disponível na pasta Aplicações/Utilidades.
 
@@ -80,7 +80,7 @@ Os exemplos abaixo utilizam o Terminal macOS, disponível na pasta Aplicações/
  LAUNCH EXTERNAL PROCESS("open /Applications/Calculator.app")
 ```
 
-#### Exemplos em Windows 
+## Exemplos em Windows 
 
 5\. Para abrir NotePad:
 
@@ -128,16 +128,16 @@ Os exemplos abaixo utilizam o Terminal macOS, disponível na pasta Aplicações/
  End if
 ```
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 Se o comando for executado corretamente, a variável sistema OK assume o valor 1\. Do contrário (arquivo não encontrado, memória insuficiente, etc.), assume o valor 0.
 
-#### Ver também 
+## Ver também 
 
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

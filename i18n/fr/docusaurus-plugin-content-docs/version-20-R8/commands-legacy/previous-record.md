@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PREVIOUS RECORD.Summary-->**PREVIOUS RECORD** place le pointeur d'enregistrement courant sur l'enregistrement précédent dans la sélection courante de *laTable* pour le process courant.<!-- END REF--> Si la sélection courante est vide, ou si [Before selection](before-selection.md) ou [End selection](end-selection.md) renvoie Vrai, **PREVIOUS RECORD** ne fait rien.
 
 Si **PREVIOUS RECORD** place le pointeur d'enregistrement courant avant la sélection courante, [End selection](end-selection.md) retourne Vrai, et il n'y a plus d'enregistrement courant. Dans ce cas, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md) pour replacer le pointeur d'enregistrement courant dans la sélection courante.
 
-#### Voir aussi 
+## Voir aussi 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -27,7 +27,7 @@ Si **PREVIOUS RECORD** place le pointeur d'enregistrement courant avant la séle
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

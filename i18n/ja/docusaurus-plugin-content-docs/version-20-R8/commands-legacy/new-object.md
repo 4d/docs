@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.New object.Summary-->**New object** コマンドは新しい空の、あるいは事前に値が入れられたオブジェクトを作成し、その参照を返します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 * 日付はカレントの"date inside objects"データベース設定(*互換性ページ*参照)に応じて、"yyyy-mm-dd" という日付か "YYYY-MM-DDTHH:mm:ss.SSSZ"というフォーマットの文字列で保存されます。4D日付をオブジェクトに保存する前にテキストに変換した場合、プログラムはデフォルトでローカルのタイムゾーンを使用します。[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのDates inside objects セレクターを使用することで、この振る舞いを変更することができます。
 * 時間を渡した場合、ミリ秒の数(実数)として保存されます。
 
-#### 例題 1 
+## 例題 1 
 
 このコマンドは空の、あるいは値が入れられたオブジェクトを作成することができます:
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
   // $obj3 = {name:Smith,age:40}
 ```
 
-#### 例題 2 
+## 例題 2 
 
 オブジェクトを引数の値として渡して、新規のオブジェクトを作成する場合を考えます:
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
   // $Contact = {FirstName:Alan,LastName:Parker,age:30,Children:{Children:[Richard,Susan,James]}}
 ```
 
-#### 例題 3 
+## 例題 3 
 
 このコマンドはオブジェクトを引数として渡す際に便利です:
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
  $measures:=Database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
-#### 例題 4 
+## 例題 4 
 
 このコマンドを使用すると、オブジェクトをループ内で容易に管理できます:
 
@@ -102,12 +102,12 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 参照 
+## 参照 
 
   
 [New shared object](new-shared-object.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP Get body.Summary-->**WP Get body** コマンドは*wpDoc* 引数で指定した4D Write Pro ドキュメントのボディ(本文)を返します。<!-- END REF-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 * [WP Text range](wp-text-range.md) コマンドに渡してボディをレンジとして定義
 * [WP SET ATTRIBUTES](wp-set-attributes.md) と [WP GET ATTRIBUTES](wp-get-attributes.md) コマンドに渡してボディの属性を管理
 
-#### 例題 
+## 例題 
 
 ある4D Write Pro ドキュメントのボディを他の4D Write Pro ドキュメントにコピーする場合を考えます:
 
@@ -41,6 +41,6 @@ displayed_sidebar: docs
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Text range](wp-text-range.md)  

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL Get current data source.Summary-->The SQL Get current data source command returns the name of the current data source of the application.<!-- END REF--> The current data source receives the SQL queries executed within **Begin SQL/End SQL** structures.
 
@@ -21,7 +21,7 @@ When the current data source is the local 4D database, the command returns the s
 
 This command lets you check the current data source, generally before executing an SQL query.
 
-#### See also 
+## See also 
 
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
@@ -29,7 +29,7 @@ This command lets you check the current data source, generally before executing 
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

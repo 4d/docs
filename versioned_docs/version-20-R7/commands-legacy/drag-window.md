@@ -12,11 +12,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->The DRAG WINDOW command lets users drag the window on which they clicked following the movements of the mouse.<!-- END REF--> Usually you call this command from within an object method of an object that can respond instantaneously to mouse clicks (i.e., invisible buttons).
 
-#### Example 
+## Example 
 
 The following form, shown here in the Form editor, contains a colored frame, above which are four invisible buttons for each side:
 
@@ -42,12 +42,12 @@ You obtain a window similar to this:
 
 Then you can drag the window by clicking anywhere on the borders.
 
-#### See also 
+## See also 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

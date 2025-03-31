@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->TRUNCATE TABLE コマンドは*aTable*のすべてのレコードを素早く削除します。<!-- END REF-->*aTable*が既に空の場合、TRUNCATE TABLEは何も行いません。コマンドの呼出し後、カレントセレクションやカレントレコードはありません。
 
@@ -31,15 +31,15 @@ TRUNCATE TABLEコマンドは注意して使用しなければなりませんが
 
 **Note:** このコマンドのコンセプトと動作はSQL TRUNCATE (テーブル) コマンドと同じです。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKは1に、そうでなければ0に設定されます。
 
-#### 参照 
+## 参照 
 
 [DELETE SELECTION](delete-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

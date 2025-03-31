@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get group access.Summary-->La commande **Get group access** retourne l'adhésion du compte utilisateur 4D à la session courante.<!-- END REF--> Si l'utilisateur n'appartient à aucun groupe de la session, une collection vide est retournée.
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Collection de chaines : nom de groupe auxquels le compte utilisateur 4D appartient. 
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez vérifier si l'utilisateur courant appartient au groupe "plugins" :
 
@@ -32,11 +32,11 @@ Vous souhaitez vérifier si l'utilisateur courant appartient au groupe "plugins"
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [SET GROUP ACCESS](set-group-access.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

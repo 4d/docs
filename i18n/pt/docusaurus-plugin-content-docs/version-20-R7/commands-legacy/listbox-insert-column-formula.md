@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->O comando **LISTBOX INSERT COLUMN FORMULA** insere uma coluna no listbox designado pelos parâmetros *objeto* e *\**.<!-- END REF--> 
 
@@ -68,7 +68,7 @@ Nos parâmetros *nomRodape* e *varRodape*, você também pode passar o nome do o
 
 **Nota:** os nomes de objeto devem ser únicos em um formulário. Deve ter certeza de que os nomes passados nos parâmetros *nomCol* e *nomRodape* não tenham sido utilizados. Do contrário, a coluna no é criada e um erro é gerado.
 
-##### Inserção dinâmica 
+### Inserção dinâmica 
 
 A partir de 4D v14 R3, pode utilizar este comando para inserir colunas nos list box de forma dinâmica durante a execução do formulário. 4D será manipulado automaticamente a definição das variáveis necessárias (rodapé de página e cabeçalho).   
   
@@ -76,7 +76,7 @@ Para isso, LISTBOX INSERT COLUMN FORMULA aceita um ponteiro **Nil (->\[\])** com
   
 Note que as variáveis de cabeçalho e de rodapé de página sempre são criadas com um tipo específico (inteiro longo e texto, respectivamente).
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se queremos adicionar uma nova coluna à direita do listbox que conterá uma fórmula que calcula a idade de um empregado:  
 
@@ -86,7 +86,7 @@ Se queremos adicionar uma nova coluna à direita do listbox que conterá uma fó
  LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$ultima;"ColFormula";Is real;vIdade;"Idade";varTitulo)
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser anexar uma coluna a uma list box de tipo coleção :
 
@@ -115,11 +115,11 @@ A coluna é anexada à list box :
 
 ![](../assets/en/commands/pict3814850.en.png)
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

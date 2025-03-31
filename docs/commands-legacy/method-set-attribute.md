@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->The **METHOD SET ATTRIBUTE** command sets the value(s) of the *attribType* attribute(s) for the project method designated by the *path* parameter.<!-- END REF--> This command only works with project methods. If you pass an invalid *path*, an error is generated. 
 
@@ -42,11 +42,11 @@ You can pass multiple *attribType*;*attribValue* pairs in a single call.
 
 You can execute this command from a component, but in this case, you must pass the *\** parameter because access to the component code is read-only. If you omit the *\** parameter in this context, the error -9763 is generated.
 
-##### 
+### 
 
 This command cannot be executed in compiled mode. When it is called in this mode, it will generate the error -9762\. 
 
-#### Example 1 
+## Example 1 
 
 Selection of the "Shared by components and host database" property for the "Choose dialog" project method:
 
@@ -54,7 +54,7 @@ Selection of the "Shared by components and host database" property for the "Choo
  METHOD SET ATTRIBUTE("Choose dialog";Attribute shared;True)
 ```
 
-#### Example 2 
+## Example 2 
 
 Setting several attribute/value pairs:
 
@@ -62,13 +62,13 @@ Setting several attribute/value pairs:
  METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
 ```
 
-#### See also 
+## See also 
 
 *Design Object Access*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

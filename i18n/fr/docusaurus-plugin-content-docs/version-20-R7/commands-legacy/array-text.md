@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY TEXT.Summary-->La commande **ARRAY TEXT** crée et/ou redimensionne un tableau d'éléments de type [Texte](# "Une chaine de caractères jusqu'à 2 Go") en mémoire.<!-- END REF-->est le nom du tableau.
 * Le paramètre *taille* est le nombre d'éléments du tableau.
@@ -26,7 +26,7 @@ Lorsque vous appliquez la commande **ARRAY TEXT** à un tableau existant :
 * Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à "" (chaîne vide).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-#### Exemple 1 
+## Exemple 1 
 
 Cet exemple crée un tableau process contenant 100 éléments de type [Texte](# "Une chaine de caractères jusqu'à 2 Go") :
 
@@ -34,7 +34,7 @@ Cet exemple crée un tableau process contenant 100 éléments de type [Texte](# 
  ARRAY TEXT(tabTexte;100)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type [Texte](# "Une chaine de caractères jusqu'à 2 Go") : 
 
@@ -42,7 +42,7 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
  ARRAY TEXT($tabEntiersLongs;100;50)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple crée un tableau interprocess de 50 éléments de type [Texte](# "Une chaine de caractères jusqu'à 2 Go") et affecte à chaque élément la valeur "Elément No" suivie du numéro de l'élément :
 
@@ -55,7 +55,7 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Texte](# "Un
 
 
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

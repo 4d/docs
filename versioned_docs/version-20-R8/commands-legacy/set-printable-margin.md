@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET PRINTABLE MARGIN.Summary-->The **SET PRINTABLE MARGIN** command sets the values of various printing margins by using the [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.<!-- END REF-->
 
@@ -32,7 +32,7 @@ The values of the *right* and *bottom* parameters relate to the right and bottom
 
 By default, 4D bases its printouts on the printer margins. Once the **SET PRINTABLE MARGIN** command is executed, the modified parameters are retained in the same process for the entire session. 
 
-#### Example 1 
+## Example 1 
 
 The following example gets the size of the dead margin: 
 
@@ -42,7 +42,7 @@ The following example gets the size of the dead margin:
   //$l, $t, $r and $b correspond to the dead margins of the sheet
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example gets the paper size: 
 
@@ -52,13 +52,13 @@ The following example gets the paper size:
   //For size A4: $height=842 ; $width=595 pixels
 ```
 
-#### See also 
+## See also 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
 [Print form](../commands/print-form.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

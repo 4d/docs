@@ -23,7 +23,7 @@ displayed_sidebar: docs
 </details>
 
 
-#### Description 
+## Description 
 
 The `SET WINDOW DOCUMENT ICON` command <!--REF #_command_.SET WINDOW DOCUMENT ICON.Summary-->allows you to define an icon for windows in multi-window applications using either an *image* and/or *file* with the window reference *winRef*<!-- END REF-->. The icon will be visible within the window itself and on the windows taskbar to help users identify and navigate different windows. 
 
@@ -35,7 +35,7 @@ In the case of an MDI application on Windows, you can pass `-1` in *winRef* to s
 - If only *winRef* is passed or *image* is empty, the icon is removed on macOS and the default icon is displayed on Windows (application icon).
 
 
-#### Example
+## Example
 
 In this example, we want to create four windows:
 
@@ -77,6 +77,6 @@ In this example, we want to create four windows:
 
 
 
-#### See also 
+## See also 
 
 [Create entity selection](create-entity-selection.md)  

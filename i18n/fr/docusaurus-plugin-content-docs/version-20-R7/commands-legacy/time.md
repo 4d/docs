@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Time.Summary-->La fonction **Time** retourne, sous la forme d'une expression de type Heure, l'heure définie dans le paramètre *valHeure*.<!-- END REF-->
 
@@ -25,7 +25,7 @@ Le paramètre *valHeure* peut contenir soit :
 
 Note : Si l'évaluation de l'expression *valHeure* donne une valeur indéfinie, **Time** retourne une heure vide (00:00:00). Ce fonctionnement est utile lorsque le code attend toujours une heure alors que l'évaluation de *valHeure* peut parfois aboutir au type **indéfini** (cas par exemple des attributs d'objets).
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “1:00 P.M. = 13 heures 0 minute.” :
 
@@ -33,7 +33,7 @@ L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “1:0
  ALERT("1:00 P.M. = "+String(Heure("13:00:00");Heures Minutes))
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous pouvez exprimer toute valeur numérique sous forme d’heure :
 
@@ -44,7 +44,7 @@ Vous pouvez exprimer toute valeur numérique sous forme d’heure :
      //vHeure2 vaut 02:46:40
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ARRAY TIME](array-time.md)  
 [Bool](bool.md)  
@@ -52,7 +52,7 @@ Vous pouvez exprimer toute valeur numérique sous forme d’heure :
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WRITE PICTURE FILE.Summary-->The **WRITE PICTURE FILE** command saves the picture passed in the *picture* parameter in the defined *codec* to disk.<!-- END REF--> 
 
@@ -41,14 +41,14 @@ If the extension used does not correspond to any available codec, the file is no
 
 If the command is executed successfully, the system variable Document contains the full pathname to the file created and the system variable OK is set to 1\. Otherwise, OK is set to 0.
 
-#### See also 
+## See also 
 
 [PICTURE TO BLOB](picture-to-blob.md)  
 *Pictures*  
 [READ PICTURE FILE](read-picture-file.md)  
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

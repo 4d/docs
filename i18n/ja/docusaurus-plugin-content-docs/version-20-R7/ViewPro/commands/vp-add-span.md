@@ -13,7 +13,7 @@ title: VP ADD SPAN
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP ADD SPAN` コマンドは、*rangeObj* に渡したセルを単一のセルに結合します。
 
@@ -22,7 +22,7 @@ title: VP ADD SPAN
 > - 結合セルでは、左上端セルのデータのみが表示されます。 他のセルのデータは結合が解除されるまで非表示になります。
 > - 結合セル内の非表示データは、フォーミュラを使用することでアクセス可能です (フォーミュラは左上端セルから始まります)。
 
-#### 例題
+## 例題
 
 "First quarter" セルと "Second quarter" セルを、それぞれ右 2つのセルと結合し、"South area" セルは下 2つのセルと結合します:
 
@@ -43,7 +43,7 @@ title: VP ADD SPAN
 
 ![vp-add-span-result](../../assets/en/ViewPro/vp-add-span-2.png)
 
-#### 参照
+## 参照
 
 [4D View Pro レンジオブジェクトプロパティ](../getting-started.md#レンジオブジェクトの使い方)<br/>
 [VP Get spans](vp-get-spans.md)<br/>

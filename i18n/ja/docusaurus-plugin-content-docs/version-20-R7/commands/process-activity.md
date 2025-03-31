@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 <!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->**Process activity** コマンドは特定の時刻での、実行中のプロセスや接続ユーザーセッション (4D Server のみ) のスナップショットを返します。 このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。 
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 | -------- | ------ | ----------------------------------------------------------------------------------------------------- | - |
 | session  | Object | プロセスが実行中のセッションの [`.info`](../API/SessionClass.md#info) プロパティ。 `Processes only` 引数が渡されていた場合には未定義となります。 |   |
 
-#### 例題 1
+## 例題 1
 
 全てのユーザーセッションのコレクションを取得したい場合を考えます:
 
@@ -91,7 +91,7 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 例題 2
+## 例題 2
 
 カレントセッションに関連した全てのプロセスを取得した場合を考えます:
 
@@ -105,7 +105,7 @@ displayed_sidebar: docs
 
 ```
 
-#### 参照
+## 参照
 
 [Session storage](../commands-legacy/session-storage.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)

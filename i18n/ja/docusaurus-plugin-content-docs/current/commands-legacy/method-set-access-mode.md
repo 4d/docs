@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD SET ACCESS MODE.Summary-->**METHOD SET ACCESS MODE**コマンドは他のユーザーやプロセスによって更新のためにさきにロードされているオブジェクトに書き込みアクセスを行おうとした時の振る舞いを設定します。<!-- END REF-->このコマンドのスコープはカレントセッションです。
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 | On object locked retry   | 倍長整数 | 1 | オブジェクトがリリースされるまでオブジェクトのロードを試行します。                                           |
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

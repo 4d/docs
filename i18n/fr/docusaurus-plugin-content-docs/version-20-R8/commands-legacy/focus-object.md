@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note de compatibilité 
+## Note de compatibilité 
 
 <!--REF #_command_.Focus object.Summary-->Cette commande est conservée pour des raisons de compatibilité uniquement.<!-- END REF--> A compter de la version 12 de 4D, il est conseillé d'utiliser la commande [OBJECT Get pointer](object-get-pointer.md).
 
-#### Description 
+## Description 
 
 **Focus object** retourne un pointeur vers l’objet ayant le focus dans le formulaire courant. Si aucun objet n’a le focus, la commande retourne [Is nil pointer](is-nil-pointer.md). Vous pouvez utiliser **Focus object** pour effectuer une action dans un formulaire sans savoir quel objet est actuellement sélectionné. N'oubliez pas auparavant de tester si l'objet est du type voulu, à l'aide de la fonction [Type](type.md). 
 
@@ -27,7 +27,7 @@ Cette commande ne peut pas être utilisée sur les champs dans les sous-formulai
 
 **Note :** Cette commande n'a de sens qu'en cours de saisie. Son utilisation hors de ce contexte génère des messages d'erreur.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant est une méthode objet pour un bouton. Cette méthode passe les données de l'objet courant en majuscules. L'objet doit être de type Texte ou Alpha (type 0 ou 24) :
 
@@ -42,11 +42,11 @@ L'exemple suivant est une méthode objet pour un bouton. Cette méthode passe le
  End case
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

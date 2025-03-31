@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->QR DELETE COLUMNは、*area*にある*colNumber*に渡された番号のカラムを削除します。<!-- END REF-->このコマンドはクロステーブルレポートに対しては適用されません。
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  
 無効な*column*番号を渡した場合、エラー番号-9852が生成されます。 
 
-#### 例題 
+## 例題 
 
 次の例題は、レポートがリストレポートであることを確認し、3番目のカラムを削除します: 
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [QR INSERT COLUMN](qr-insert-column.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

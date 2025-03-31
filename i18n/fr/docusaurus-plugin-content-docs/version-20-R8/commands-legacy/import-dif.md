@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT DIF.Summary-->La commande **IMPORT DIF** lit les données de *document* (document DIF Windows ou Mac OS) et les écrit dans la table *laTable* en créant de nouveaux enregistrements.<!-- END REF-->
 
@@ -32,7 +32,7 @@ La commande utilise par défaut le jeu de caractères UTF-8\. Les documents au f
 
 Lors de l'utilisation de **IMPORT DIF**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrements par défaut est le retour chariot (code 13). Vous pouvez modifier ces valeurs par défaut en assignant de nouvelles valeurs aux variables système FldDelimit et RecDelimit. L'utilisateur peut modifier ces valeurs par défaut dans la boîte de dialogue d'import du mode Développement. Comme les champs Texte peuvent contenir des Retours chariot, soyez prudent si vous utilisez le Retour chariot comme délimiteur entre les champs à importer.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple importe des données d'un document DIF. Cette méthode commence par le choix du formulaire, puis effectue l'import :
 
@@ -41,18 +41,18 @@ Cet exemple importe des données d'un document DIF. Cette méthode commence par 
  IMPORT DIF([Personnes];"Nouvelles Personnes.dif") // Import du document “Nouvelles Personnes.dif”
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 OK prend la valeur 1 si l'import s'est correctement déroulé, sinon elle prend la valeur 0\. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [EXPORT DIF](export-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

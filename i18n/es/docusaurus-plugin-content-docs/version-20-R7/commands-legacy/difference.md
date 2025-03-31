@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DIFFERENCE.Summary-->DIFFERENCE fusiona *conjunto1* y *conjunto2* y excluye del conjunto *resultado* todos los registros de *conjunto2*.<!-- END REF--> En otras palabras, un registro se incluye en el *resultado* sólo si está en *conjunto1*, pero no en *conjunto2*. La siguiente tabla muestra todos los resultados posibles de una operación de diferencia de conjuntos. 
 
@@ -33,7 +33,7 @@ El conjunto *resultado* se crea por DIFFERENCE. El conjunto *resultado* reemplaz
 
 **4D Server:** en modo cliente/Servidor, los conjuntos interprocesos y procesos se conservan en el equipo servidor, mientras que los conjuntos locales se mantiene en los equipos cliente. DIFFERENCE requiere que los tres conjuntos estén en el mismo equipo. Por lo tanto, todos los conjuntos deben ser locales o ninguno de ellos debe ser local. Para mayor información consulte *4D Server and Sets* en el manual de referencia de 4D Server.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo excluye los registros seleccionados por el usuario. Los registros se muestran en la pantalla con la siguiente instrucción:
 
@@ -50,12 +50,12 @@ Al final de la lista de registros hay un botón con un método de objeto. El mé
  CLEAR SET("$Actual") // Borrar el conjunto
 ```
 
-#### Ver también 
+## Ver también 
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

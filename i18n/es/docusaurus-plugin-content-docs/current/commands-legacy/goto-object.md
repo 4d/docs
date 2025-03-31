@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->El comando GOTO OBJECT se utiliza para seleccionar el objeto editable *objeto* como el área activa del formulario.<!-- END REF--> Es equivalente de un clic del usuario en el área o de utilizar la tecla Tab para seleccionar el campo o la variable. 
 
@@ -24,7 +24,7 @@ Para eliminar todo foco en el formulario actual, llame al comando mientras pasa 
 
 El comando GOTO OBJECT puede utilizarse en el contexto de un subformulario. Cuando se llama desde un subformulario, busca primero el objeto en el subformulario, luego, si la búsqueda no encuentra nada allí, extiende la búsqueda a objetos del formulario padre.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El comando GOTO OBJECT puede utilizarse de dos maneras: 
 
@@ -33,7 +33,7 @@ El comando GOTO OBJECT puede utilizarse de dos maneras:
  GOTO OBJECT(*;"AreaEdad") // Nombre del objeto
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Si no quiere que ningún objeto del formulario tenga el foco. 
 
@@ -41,16 +41,16 @@ Si no quiere que ningún objeto del formulario tenga el foco.
  GOTO OBJECT(*;"")
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Ver el ejemplo del comando [REJECT](reject.md "REJECT").
 
-#### Ver también 
+## Ver también 
 
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

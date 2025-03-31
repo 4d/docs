@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->La commande **QR DELETE COLUMN** supprime de la *zone* la colonne dont le numéro a été passé dans *numColonne*.<!-- END REF--> Cette commande ne peut pas être utilisée avec les états en tableau croisé.
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple supprime la troisième colonne de l'état : 
 
@@ -31,11 +31,11 @@ Cet exemple supprime la troisième colonne de l'état :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR INSERT COLUMN](qr-insert-column.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SORT LIST.Summary-->SORT LIST コマンドは、*list*引数に渡された参照番号を持つリストをソートします。<!-- END REF-->
 
@@ -24,7 +24,7 @@ SORT LISTコマンドは、すべてのレベルのリストをソートしま�
 
 SORT LIST コマンドは、カレントリスト項目またはリストやサブリストの現在の展開または縮小状態を変更しません。ただし、カレント項目が並び替えによって移動されることがあるため、[Selected list items](selected-list-items.md "Selected list items")は並び替えの前と後で異なる位置を返す可能性があります。
 
-#### 例題 
+## 例題 
 
 リスト名を*hList*とし、アプリケーションモードで表示します（Windows形式）:
 
@@ -52,11 +52,11 @@ SORT LIST コマンドは、カレントリスト項目またはリストやサ�
 
 ![](../assets/en/commands/pict23039.en.png)
 
-#### 参照 
+## 参照 
 
 [Selected list items](selected-list-items.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

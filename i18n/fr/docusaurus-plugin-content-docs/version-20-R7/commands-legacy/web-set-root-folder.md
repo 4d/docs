@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB SET ROOT FOLDER.Summary-->La commande **WEB SET ROOT FOLDER** permet de modifier le dossier racine par défaut dans lequel 4D ira rechercher les fichiers HTML demandés au serveur Web.<!-- END REF-->
 
@@ -33,12 +33,12 @@ L'emplacement du dossier racine peut être exprimé soit en syntaxe HTML (type U
 
 Si vous passez un chemin d'accès invalide, une erreur liée à la gestion de fichiers du système d'exploitation est générée. Vous pouvez intercepter l'erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md). Si la méthode affiche une boîte de dialogue d'alerte ou de message, celle-ci apparaît sur l'écran du navigateur. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

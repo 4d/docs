@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE METADATA.Summary-->The **GET PICTURE METADATA** command can be used to read the contents of the metadata (or meta-tags) found in *picture* (4D picture field or variable).<!-- END REF--> For more information about metadata, please refer to the description of the [SET PICTURE METADATA](set-picture-metadata.md) command.
 
@@ -30,7 +30,7 @@ Pass the variable intended to receive the metadata in the *metaContents* paramet
 * If you passed a tag path in *metaName*, the *metaContents* parameter will directly contain the value to get. The value will be converted to the type of the variable (if the variable type is not defined, the Text type is used by default). Variables of the Text type will be formatted in XML (XMP standard). You can pass an array when the metadata contains more than one value (this is the case, more particularly, for the IPTC Keywords tags).
 * If you passed a block name or an empty string in *metaName*, the *metaContents* parameter must be a valid XML DOM element reference. In this case, the contents of the designated block (or all the blocks if you passed an empty string in *metaName*) is recopied into the element referenced.
 
-#### Example 1 
+## Example 1 
 
 Use of DOM tree structures
 
@@ -46,7 +46,7 @@ Use of DOM tree structures
  GET PICTURE METADATA(vPicture;"GPS";$_Xml_GPS)
 ```
 
-#### Example 2 
+## Example 2 
 
 Use of variables
 
@@ -63,7 +63,7 @@ Use of variables
  GET PICTURE METADATA(vPicture;IPTC urgency;$urgency)
 ```
 
-#### Example 3 
+## Example 3 
 
 Reception of tags with multiple values in arrays
 
@@ -79,7 +79,7 @@ After execution of the command, arrTkeywords contains for example:
  $arrTkeywords{2}="Europe"
 ```
 
-#### Example 4 
+## Example 4 
 
 Reception of tags with multiple values in a Text variable
 
@@ -90,18 +90,18 @@ Reception of tags with multiple values in a Text variable
 
 After execution of the command, *vTwords* contains for example "France;Europe".
 
-#### System variables and sets 
+## System variables and sets 
 
 The *OK* system variable returns 1 if the retrieval of the metadata has proceeded correctly and 0 if an error occurs or if at least one of the tags is not found. In all cases, the any values that can be read are returned.
 
-#### See also 
+## See also 
 
 [GET PICTURE KEYWORDS](get-picture-keywords.md)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DELETE MENU ITEM.Summary-->O comando DELETE MENU ITEM elimina a linha de menu cujo número ou referência de menu e número de elemento você passou em *menu* e *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu.*
 
@@ -29,12 +29,12 @@ Se omite o parâmetro *processo*, DELETE MENU ITEM é aplicado a barra de menus 
 
 **Nota:** por consistência na interface do usuário, não se conserva um menu que não tenha linhas.
 
-#### Ver também 
+## Ver também 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

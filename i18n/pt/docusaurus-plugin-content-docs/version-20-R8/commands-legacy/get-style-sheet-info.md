@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->O comando **GET STYLE SHEET INFO** devolve a configuração atual da folha de estilo *nomeFolhaEstilo* .<!-- END REF--> 
 
@@ -46,11 +46,11 @@ O comando devolve em *estilos*, um valor que corresponde ao estilo(s) associado(
 
 Se o comando se executa corretamente, a variável sistema OK toma o valor 1\. Caso contrário (por exemplo, se *nomeFolhaEstilo* não existe), toma o valor 0.
 
-##### Nota de compatibilidade 
+### Nota de compatibilidade 
 
 Em **arquitetura de projeto**, só as três folhas de estilo automáticas são compatíveis com esse comando  
   
-#### Exemplo 
+## Exemplo 
 
 Se quiser conhecer a configuração atual da folha de estilo "Automatic"
 
@@ -60,12 +60,12 @@ Se quiser conhecer a configuração atual da folha de estilo "Automatic"
  GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
 ```
 
-#### Ver também 
+## Ver também 
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

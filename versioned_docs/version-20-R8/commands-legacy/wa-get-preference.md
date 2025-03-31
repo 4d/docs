@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA GET PREFERENCE.Summary-->The WA GET PREFERENCE command gets the current value of the preference in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
 
@@ -30,11 +30,11 @@ Pass the preference whose value you want to get in the *selector* parameter. You
 
 In the *value* parameter, pass a variable that will receive the current value of the preference. The *value* variable is always a Boolean: it contains **True** if the preference is active and **False** otherwise.
 
-#### See also 
+## See also 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

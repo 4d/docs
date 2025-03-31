@@ -22,7 +22,7 @@ title: VP Find table
 | rangeObj   | Object | ->                          | Plage de cellule |                  |
 | Résultat   | Text   | <- | Nom de table     | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Find table` command <!-- REF #_method_.VP Find table.Summary -->returns the name of the table to which to the *rangeObj* cell belongs<!-- END REF -->.
 
@@ -30,7 +30,7 @@ In *rangeObj*, pass a cell range object. Si les cellules désignées n'appartien
 
 If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
 
-#### Exemple
+## Exemple
 
 ```4d
 If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
@@ -41,7 +41,7 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
 End if
 ```
 
-#### Voir également
+## Voir également
 
 [VP Get table range](vp-get-table-range.md)
 

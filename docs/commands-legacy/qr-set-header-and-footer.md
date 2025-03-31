@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->The QR SET HEADER AND FOOTER command sets the contents and size of the header or footer.<!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If you pass an invalid *selector* value, the error -9852 will be generated.
 
-#### Example 
+## Example 
 
 The following statement places the title “Center title” in the header for the Quick Report in MyArea and sets the header height to 200 points:
 
@@ -52,11 +52,11 @@ The following statement places the title “Center title” in the header for th
  QR SET HEADER AND FOOTER(MyArea;1;"";"Center title";"";200)
 ```
 
-#### See also 
+## See also 
 
 [QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

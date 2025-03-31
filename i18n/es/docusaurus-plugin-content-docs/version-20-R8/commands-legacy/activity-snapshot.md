@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ACTIVITY SNAPSHOT.Summary-->El comando **ACTIVITY SNAPSHOT** retorna un array o varios que describen las operaciones en progreso sobre los datos 4D.<!-- END REF--> Estas operaciones usualmente muestran una ventana de progreso.
 
@@ -34,7 +34,7 @@ El comando **ACTIVITY SNAPSHOT**  acepta dos sintaxis:
 * sintaxis usando solamente un array de objetos.
 * sintaxis utilizando varios arrays.
 
-##### Primera sintaxis: ACTIVITY SNAPSHOT ( {\* ;} arrActivities ) 
+### Primera sintaxis: ACTIVITY SNAPSHOT ( {\* ;} arrActivities ) 
 
 Con esta sintaxis, todas las operaciones se devuelven en un formulario estructurado en el array objetos 4D (*arrActividades*). Cada elemento del array es un objeto construido de la siguiente manera:
 
@@ -70,7 +70,7 @@ Esta es un descripción de cada propiedad devuelta:
    * ...
 * *subOperations* (array): array de objetos que contienen sub-operaciones de la operación actual (si existe). La estructura de cada sub-elemento es idéntica a la del objeto principal. Si la operación actual no tiene sub-operaciones, entonces subOperations está vacío.
 
-##### Segunda sintaxis: ACTIVITY SNAPSHOT ( {\* ;} arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} ) 
+### Segunda sintaxis: ACTIVITY SNAPSHOT ( {\* ;} arrUUID ; arrStart ; arrDuration ; arrInfo {;arrSubOp} ) 
 
 Con esta sintaxis, todas las operaciones se devuelven en varios arrays sincronizados (cada operación provoca que un elemento se añada a todos los arrays). Los siguientes arrays se devuelven:
 
@@ -83,7 +83,7 @@ Con esta sintaxis, todas las operaciones se devuelven en varios arrays sincroniz
    * *"dbOperationDetails"* (objeto): ver arriba  
    * "subOperaciones". El valor de esta propiedad es un array objeto que contiene todas las sub-operaciones de la operación actual. Si la operación actual no tiene sub-operaciones, el valor de la propiedad *suboperaciones* es un array vacío. (corresponde a la propiedad *subOperations* del objeto *arrActividades*).
 
-#### Ejemplo 
+## Ejemplo 
 
 Este método, ejecutado en un proceso separado en 4D o 4D Server, ofrece una instantánea de las operaciones que están en marcha:
 
@@ -106,7 +106,7 @@ Obtiene arrays del tipo:
 ![](../assets/en/commands/pict1213741.es.png)
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

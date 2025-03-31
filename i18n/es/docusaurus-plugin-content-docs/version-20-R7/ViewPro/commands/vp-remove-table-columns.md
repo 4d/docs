@@ -25,7 +25,7 @@ title: VP REMOVE TABLE COLUMNS
 | count      | Integer | -> | Número de columnas a eliminar (debe ser >0) |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->elimina una o *count* columna(s) en el *tableName* especificado en el índice *column* especificado<!-- END REF -->. El comando elimina valores y estilos.
 
@@ -33,7 +33,7 @@ El comando elimina las columnas de la tabla *tableName*, NO de la hoja. El núme
 
 Si *tableName* no existe, no pasa nada.
 
-#### Ejemplo
+## Ejemplo
 
 Para eliminar dos columnas de la tercera columna de la tabla "dataTable":
 
@@ -41,7 +41,7 @@ Para eliminar dos columnas de la tercera columna de la tabla "dataTable":
 VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 ```
 
-#### Ver también
+## Ver también
 
 [VP INSERT TABLE COLUMNS](vp-insert-table-columns.md)<br/>
 [VP REMOVE TABLE ROWS](vp-remove-table-rows.md)

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.On Web Authentication database method.Summary-->O On Web Authentication database method administra o acesso ao motor do servidor web.<!-- END REF--> É chamado automaticamente por 4D ou 4D Server quando uma petição de um navegador web pedir a execução de um método 4D no servidor (chamada de um método através um URL *4DACTION* ou uma etiqueta *4DSCRIPT*, etc.).  
 
@@ -94,7 +94,7 @@ On Web Authentication database method retorna um booleano em $0:
 * Não chame elementos de interface no On Web Authentication database method ([ALERT](alert.md), [DIALOG](dialog.md), etc.) porque do contrário sua execução será interrompida e a conexão será recusada. O mesmo acontece se for apresentado um erro durante seu processo.
 * É possível evitar a execução por *4DACTION* ou *4DSCRIPT* de cada método de projeto com a ajuda da opção “Disponível através das etiquetas HTML e URLs. Para mais informação, consulte *Conexões de Segurança*.
 
-#### On Web Authentication Database Method calls 
+## On Web Authentication Database Method calls 
 
 O On Web Authentication database method é chamada automaticamente, sem importar o modo, quando uma petição ou processo requisitar a execução de um método 4D. Também se chama quando o servidor web recebe uma URL estática inválida (por exemplo, se a página estática solicitada não existir).  
 
@@ -111,7 +111,7 @@ Portanto o On Web Authentication database method se chama nos seguintes casos:
 
 Note que o On Web Authentication database method NÃO se chama quando o servidor recebe uma URL solicitando uma página estática válida.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Exemplo do On Web Authentication database method*Licenses* em modo BASIC: 
 
@@ -161,7 +161,7 @@ Exemplo do On Web Authentication database method*Licenses* em modo BASIC:
  End if
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Exemplo do On Web Authentication database method em modo DIGEST:
 

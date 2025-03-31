@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SAX SET XML DECLARATION.Summary-->O comando **SAX SET XML DECLARATION** inicializa o documento XML referenciado por *documento* utilizando a codificação especificada.<!-- END REF--> Opcionalmente, pode estabelecer o atributo standalone/autônomo.
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
   
 Este comando deve ser chamado uma única vez por documento e antes do primeiro comando de escrita XML no documento; do contrário, se gerará uma mensagem de erro.
 
-#### Exemplo 
+## Exemplo 
 
 O código abaixo: 
 
@@ -41,11 +41,11 @@ O código abaixo:
  
 ```
 
-#### Ver também 
+## Ver também 
 
 [SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

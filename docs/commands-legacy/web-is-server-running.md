@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB Is server running.Summary-->The new **WEB Is server running** command returns **True** if the 4D built-in Web server is running, and **False** if the Web server is off.<!-- END REF-->
 
@@ -27,7 +27,7 @@ This command returns the running status of the Web Server where it is executed:
 | 4D remote mode (4D Server stored procedure)       | 4D Server Web server      |
 | 4D remote mode (other 4D remote stored procedure) | Remote 4D Web server      |
 
-#### Example 
+## Example 
 
 You want to check that the Web server is running:
 
@@ -38,7 +38,7 @@ You want to check that the Web server is running:
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->O comando SET MENU ITEM PROPERTY permite fixar o *valor* da *propriedade* para a linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Note: se o item menu corresponder ao título do submenu hierárquico, a ação p
 
 Proprierdade personalizada - Nesta propriedade pode passar qualquer texto personalizado e associar um valor do texto, núemro ou tipo Booleano. Este valor será armazenado com o item e pode ser recuperado usando o comando [GET MENU ITEM PROPERTY](get-menu-item-property.md). Pode usar qualquer string personalziada na propriedade parâmetro, simplesmente tenha certeza de não usar um título usado por 4D (por convenção, propriedades estabelecidas por 4D começam com “4D\_”).
 
-#### Exemplo
+## Exemplo
 
 ```4d
   // Ação padrão
@@ -58,12 +58,12 @@ Proprierdade personalizada - Nesta propriedade pode passar qualquer texto person
   SET MENU ITEM PROPERTY(myMenu; -1; Associated standard action; ak font style)
 ```
 
-#### Ver também 
+## Ver também 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [GET MENU ITEM PROPERTY](get-menu-item-property.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

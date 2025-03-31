@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->**SPELL ADD TO USER DICTIONARY**コマンドはカレントのユーザー辞書に単語を追加します。<!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 *words*には、ユーザー辞書に追加する単語を含む文字あるいは文字配列を渡します。すでに登録されている単語は無視されます。
 
-#### 例題 
+## 例題 
 
 ユーザー辞書に特定の名刺を追加する:
 
@@ -33,11 +33,11 @@ displayed_sidebar: docs
  SPELL ADD TO USER DICTIONARY($arrTwords)
 ```
 
-#### 参照 
+## 参照 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

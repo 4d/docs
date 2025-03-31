@@ -15,13 +15,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DELETE FROM ARRAY.Summary-->**DELETE FROM ARRAY** コマンドは1つまたは複数の要素を*array*から削除します。<!-- END REF-->*where*引数の示す位置から要素の削除を開始します。
 
 *howMany*引数は削除する要素数です。*howMany*が指定されない場合、1つの要素が削除されます。配列のサイズは*howMany*だけ小さくなります。
 
-#### 例題 1 
+## 例題 1 
 
 以下の例は、配列の5番目の要素から3つの要素を削除します:
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
  DELETE FROM ARRAY(anArray;5;3)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 以下の例は、配列の最後の要素を削除します:
 
@@ -40,12 +40,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

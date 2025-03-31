@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.DISTINCT VALUES.Summary-->El comando **DISTINCT VALUES** crea y llena el array *array* con todos valores distintos (únicos) del campo *campo* para la selección actual de la tabla del campo y, opcionalmente, devuelve en *contArray* el número de ocurrencias de cada valor.<!-- END REF-->
 
@@ -40,11 +40,11 @@ El comando acepta un array *contArray* como un parámetro opcional. Cuando se pa
 
 **4D Server:** este comando es optimizado por 4D Server. El array se crea y los valores son calculados en el servidor; luego el array se envía, en su totalidad, al cliente.
 
-##### 
+### 
 
 **Nota:** este comando no soporta campos de tipo Objeto.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo crea una lista de ciudades a partir de la selección actual e indica al usuario el número de ciudades en las cuales la empresa tiene almacenes: 
 
@@ -54,7 +54,7 @@ El siguiente ejemplo crea una lista de ciudades a partir de la selección actual
  ALERT("La empresa tiene almacenes en "+String(Size of array(asCiudades))+" ciudades.")
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere obtener la lista completa de palabras claves contenidas en el índice de palabras claves del campo "Fotos": 
 
@@ -64,7 +64,7 @@ Usted quiere obtener la lista completa de palabras claves contenidas en el índi
  DISTINCT VALUES([IMAGES]Fotos;<>_MyKeywords)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Para calcular las estadísticas, usted desea ordenar el número de valores distintos en un campo en orden descendente:
 
@@ -75,7 +75,7 @@ Para calcular las estadísticas, usted desea ordenar el número de valores disti
  SORT ARRAY($_issue_type_instances;$_issue_type;<)
 ```
 
-#### Ver también 
+## Ver también 
 
   
 [GET TEXT KEYWORDS](get-text-keywords.md)  
@@ -83,7 +83,7 @@ Para calcular las estadísticas, usted desea ordenar el número de valores disti
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Summary-->O comando **OBJECT SET RESIZING OPTIONS** permite definir ou modificar dinamicamente as opções de redimensionamento do objeto ou dos objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF--> Estas opções definem a visualização do objeto em caso de redimensionamento da janela do formulário.  
   
@@ -39,11 +39,11 @@ No parâmetro *vertical*, passe um valor que indique a opção de redimensioname
 | Resize vertical move | Inteiro longo | 2     | Se a janela cresce 100 pixeles de alto, o objeto cresce 100 pixeles para abaixo |
 | Resize vertical none | Inteiro longo | 0     | Se a janela cresce de altura, nem o largo nem a posição do objeto mudam         |
 
-#### Ver também 
+## Ver também 
 
 [OBJECT GET RESIZING OPTIONS](object-get-resizing-options.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -52,7 +52,7 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 |                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#dataType)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->        |
+| [<!-- INCLUDE #WebSocketClass.dataType.Syntax -->](#datatype)<br/><!-- INCLUDE #WebSocketClass.dataType.Summary -->        |
 | [<!-- INCLUDE #WebSocketClass.handler.Syntax -->](#handler)<br/><!-- INCLUDE #WebSocketClass.handler.Summary -->           |
 | [<!-- INCLUDE #WebSocketClass.id.Syntax -->](#id)<br/><!-- INCLUDE #WebSocketClass.id.Summary -->                          |
 | [<!-- INCLUDE #WebSocketClass.send().Syntax -->](#send)<br/><!-- INCLUDE #WebSocketClass.send().Summary -->                |
@@ -77,7 +77,7 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 | Paramètres                                        | Type                         |                             | Description                                 |
 | ------------------------------------------------- | ---------------------------- | :-------------------------: | ------------------------------------------- |
 | url                                               | Text                         |              ->             | URL à laquelle se connecter                 |
-| [connectionHandler](#connectionHandler-parameter) | Object                       |              ->             | Objet déclarant les callbacks WebSocket     |
+| [connectionHandler](#connectionhandler-parameter) | Object                       |              ->             | Objet déclarant les callbacks WebSocket     |
 | Résultat                                          | 4D.WebSocket | <- | Nouvel [objet WebSocket](#websocket-object) |
 
 <!-- END REF -->

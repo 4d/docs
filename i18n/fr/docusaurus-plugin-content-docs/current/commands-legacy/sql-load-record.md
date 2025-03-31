@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->La commande **SQL LOAD RECORD** récupère dans 4D un ou plusieurs enregistrement(s) provenant de la source de données ouverte dans la connexion courante.<!-- END REF-->
 
@@ -25,16 +25,16 @@ Le paramètre facultatif *nombreEnr* permet de définir le nombre d’enregistre
 
 **Note :** Ces deux derniers paramétrages n’ont de sens que si les données récupérées sont associées à des tableaux ou des champs 4D. 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [SQL CANCEL LOAD](sql-cancel-load.md)  
 [SQL EXECUTE](sql-execute.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

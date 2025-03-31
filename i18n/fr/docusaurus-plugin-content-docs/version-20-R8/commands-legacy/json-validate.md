@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.JSON Validate.Summary-->La commande **JSON Validate** vérifie la conformité des contenus JSON de *vJson* avec les règles définies dans le schéma JSON *vSchema*.<!-- END REF--> Si le JSON est invalide, la commande renvoie une description détaillée de l'erreur ou des erreurs.
 
@@ -47,7 +47,7 @@ Chaque objet Erreur de la collection *errors* contient les propriétés suivante
 | *offset*                | Nombre   | Décalage de la ligne de l'erreur dans le fichier JSON. Cette propriété est renseignée si le fichier JSON est analysé par la commande [JSON Parse](json-parse.md) avec le paramètre *\**. Sinon la propriété est omise |
 | *schemaPaths*           | Chaîne   | Chemin d'accès JSON dans le schéma qui cause l'erreur de validation                                                                                                                                                   |
 
-##### Gestion des erreurs 
+### Gestion des erreurs 
 
 Les erreurs suivantes peuvent être retournées :
 
@@ -77,7 +77,7 @@ Les erreurs suivantes peuvent être retournées :
 | 23       | not                  | Erreur à la validation d'une clé 'not'. Le JSON est invalide face au 'not'.                                                      |
 | 24       | format               | La chaîne ne correspond pas à ("{s1}")                                                                                           |
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez valider un objet JSON avec un schéma et obtenir la liste des erreurs de validation, s'il y en a. Vous stockez les lignes d'erreur et les messages dans une variable texte :
 
@@ -99,13 +99,13 @@ Vous souhaitez valider un objet JSON avec un schéma et obtenir la liste des err
 
 **Note :** Cet exemple requiert l'activation de la notation objet (voir *Page Compatibilité*). 
 
-#### Voir aussi 
+## Voir aussi 
 
   
   
 [JSON Parse](json-parse.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

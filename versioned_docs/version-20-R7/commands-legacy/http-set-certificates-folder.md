@@ -19,7 +19,7 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Summary-->The **HTTP SET CERTIFICATES FOLDER** command modifies the active client certificates folder for all processes of the current session.<!-- END REF--> 
 
@@ -36,11 +36,11 @@ Once this command has been executed, the new path is immediately taken into acco
 
 If the folder specified does not exist at the location defined, or if the pathname passed in *certificatesFolder* is not valid, an error is generated. You can intercept this error using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command. 
 
-#### About SSL certificates 
+## About SSL certificates 
 
 As described in [this page](https://developer.4d.com/docs/Admin/tls), SSL certificates managed by 4D must be in the **PEM format**. If your certificate provider (for example, [startssl](https://www.startssl.com/)) sends you a certificate that is in a binary format such as .crt, .pfx or .p12 (the format also depends on your browser), you have to convert it to PEM format in order to be able to use it. There are Web sites such as *sslshopper* where you can do this conversion on-line.
 
-#### Example 
+## Example 
 
 You want to change certificates folder temporarily:
 
@@ -52,12 +52,12 @@ You want to change certificates folder temporarily:
  HTTP SET CERTIFICATES FOLDER($certifFolder) //restore previous folder
 ```
 
-#### See also 
+## See also 
 
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 [HTTP Get certificates folder](http-get-certificates-folder.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

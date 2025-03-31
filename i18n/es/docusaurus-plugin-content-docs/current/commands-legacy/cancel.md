@@ -12,16 +12,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
-<!--REF #_command_.CANCEL.Summary-->El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una subrutina) para:
+El comando **CANCEL** se utiliza en métodos de objeto o de formulario (o en una subrutina) para:
 
-* cancelar un registro nuevo o modificado, para el cual la entrada de datos ha sido inicializada utilizando [ADD RECORD](add-record.md) o [MODIFY RECORD](modify-record.md).<!-- END REF-->
+* cancelar un registro nuevo o modificado, para el cual la entrada de datos ha sido inicializada utilizando [ADD RECORD](add-record.md) o [MODIFY RECORD](modify-record.md).
 * cancelar un formulario mostrado por intermedio del comando [DIALOG](../commands/dialog.md).
 * salir de un formulario que muestra una selección de registros, utilizando [DISPLAY SELECTION](display-selection.md) o [MODIFY SELECTION](modify-selection.md).
 * cancelar la impresión de un formulario que está a punto de ser impreso utilizando el comando [Print form](../commands/print-form.md) (ver a continuación).
 
-En el contexto de entrada de datos, **CANCEL** efectúa la misma acción que si el usuario hubiera presionado la tecla de cancelación (**Esc**).
+<!--REF #_command_.CANCEL.Summary-->En el contexto de entrada de datos, **CANCEL** efectúa la misma acción que si el usuario hubiera presionado la tecla de cancelación (**Esc**).<!-- END REF-->
 
 **CANCEL** se ejecuta con frecuencia como resultado de la selección de un comando de menú. **CANCEL** también se utiliza con frecuencia en el método de objeto de un botón “sin acción”.
 
@@ -33,25 +33,25 @@ Finalmente, este comando puede ser utilizado en el evento de formulario On Print
 
 **Nota:** esta operación es diferente de la del comando [PAGE BREAK](page-break.md)(\*) que cancela TODOS los formularios que están en espera de impresión.
 
-##### Modo sin interfaz 
+### Modo sin interfaz 
 
 El comando **CANCEL** se permite en modo sin interfaz, en el contexto de las áreas fuera de pantalla creadas por *VP Run offscreen area* o [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRINT MARKER"). 
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Cuando el comando CANCEL se ejecuta (anulación de formulario o de impresión), la variable sistema OK toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

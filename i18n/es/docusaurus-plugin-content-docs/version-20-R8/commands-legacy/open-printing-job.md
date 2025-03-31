@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->El comando **OPEN PRINTING JOB** abre una tarea de impresión y apila todas las órdenes de impresión ejecutadas hasta que se llame el comando [CLOSE PRINTING JOB](close-printing-job.md).<!-- END REF--> Este comando le permite controlar los trabajos de impresión y, más particularmente, asegurar que ninguna tarea de impresión inesperada pueda ser insertada en una secuencia de impresión.
 
@@ -26,18 +26,18 @@ Debe llamar al comando [CLOSE PRINTING JOB](close-printing-job.md) para determin
 
 **Nota de compatibilidad**: a partir de 4D v20 R4, los trabajos de impresión no se bloquean en los nuevos proyectos. Para más información, consulte la documentación de la [opción de impresión sin bloqueo](../settings/compatibility.md) en los parámetros de compatibilidad.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable sistema OK toma el valor 1 si el trabajo de impresión se ha abierto con éxito. De lo contrario, toma el valor 0, por ejemplo en los siguientes casos:
 
 * si el trabajo de impresión ha sido cancelado por el usuario
 * en Windows, el formato de vista previa de impresión seleccionado no está disponible
 
-#### Ver también 
+## Ver también 
 
 [CLOSE PRINTING JOB](close-printing-job.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

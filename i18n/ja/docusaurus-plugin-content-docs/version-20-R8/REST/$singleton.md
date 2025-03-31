@@ -31,13 +31,13 @@ Singleton functions can be called using REST **POST** or **GET** requests.
 
 シンタックスは次の通りです:
 
-#### POST request
+#### POST リクエスト
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
 with data in the body of the POST request: `["myparam"]`
 
-#### GET request
+#### GET リクエスト
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction?$params='["myparam"]'`
 
@@ -47,7 +47,7 @@ The `SingletonClassFunction()` function must have been declared with the `onHttp
 
 :::
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
+> プロジェクトがコンパイルモードで実行されている場合、REST リクエストから呼び出される4D コードは全て**スレッドセーフでなければなりません**。この場合、REST サーバーは常にプリエンプティブプロセスを使用するからです([*プリエンプティブプロセスを使用* の設定値](../WebServer/webServerConfig.md#プリエンプティブプロセスを使用) はREST サーバーは無視します)。
 
 :::info
 
@@ -77,7 +77,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-[`$catalog`]($catalog.md#シングルトン) コマンドを呼び出すと、`mySingleton` クラスと `sayHello` 関数がリストされます。
+The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singletons) command.
 
 :::
 

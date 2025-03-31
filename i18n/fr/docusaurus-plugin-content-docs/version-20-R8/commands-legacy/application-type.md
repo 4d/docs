@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Application type.Summary-->La fonction **Application type** renvoie une valeur numérique qui représente le type de l'environnement 4D que vous utilisez.<!-- END REF--> 4D vous fournit les constantes prédéfinies suivantes :
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 **Note :** *4D Desktop* intègre certaines offres de déploiement, comme par exemple "4D SQL Desktop".
 
-#### Exemple 
+## Exemple 
 
 Quelque part dans votre code, ailleurs que dans la *On Server Startup Database Method*, vous voulez vérifier si l'utilisateur a ouvert la base avec 4D Server. Pour cela, vous pouvez écrire les lignes de code suivantes :
 
@@ -38,12 +38,12 @@ Quelque part dans votre code, ailleurs que dans la *On Server Startup Database M
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Application version](application-version.md)  
 [Version type](version-type.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

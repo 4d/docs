@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Process state.Summary-->The **Process state** command returns the state of the process whose number you pass in *process*.<!-- END REF--> 
 
@@ -34,7 +34,7 @@ The function result can be one of the values provided by the following predefine
 
 If the process does not exist (which means you did not pass a number in the range 1 to [Count tasks](count-tasks.md)), **Process state** returns Does not exist (-100).
 
-#### Example 
+## Example 
 
 The following example puts the name and process reference number for each process into the *asProcName* and *aiProcNum* arrays. The method checks to see if the process has been aborted. In this case, the process name and number are not added to the arrays: 
 
@@ -55,12 +55,12 @@ The following example puts the name and process reference number for each proces
  ARRAY INTEGER(aiProcNum;$vlActualCount)
 ```
 
-#### See also 
+## See also 
 
 [Count tasks](count-tasks.md)  
 [Process info](../commands/process-info.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

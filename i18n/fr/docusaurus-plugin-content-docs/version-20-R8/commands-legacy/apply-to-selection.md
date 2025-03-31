@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.APPLY TO SELECTION.Summary-->La commande **APPLY TO SELECTION** applique *formule* à chaque enregistrement de la sélection courante de *laTable*.<!-- END REF--> La *formule* peut être une ligne d'instructions ou une méthode (dans ce cas, le nom de la méthode doit être saisi sans ""). Si *formule* entraîne la modification d'un enregistrement de *laTable*, l'enregistrement modifié est sauvegardé. Si *formule* ne modifie pas d'enregistrement, aucune sauvegarde n'est réalisée. Si la sélection courante est vide, **APPLY TO SELECTION** ne fait rien. La *formule* peut faire appel à un champ d'une table liée si le lien est automatique.
 
@@ -26,7 +26,7 @@ La commande **APPLY TO SELECTION** peut être utilisée pour récupérer et trai
 
 Un thermomètre de progression s'affiche pendant l'exécution d'un **APPLY TO SELECTION**. Un appel préalable à la commande [MESSAGES OFF](messages-off.md) permet de supprimer ce thermomètre. Lorsque le thermomètre de progression est affiché, l'utilisateur peut annuler l'opération.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant met en majuscule tous les noms de la table : 
 
@@ -34,7 +34,7 @@ L'exemple suivant met en majuscule tous les noms de la table :
  APPLY TO SELECTION([Emp];[Emp]Nom:=Uppercase([Emp]Nom))
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Lorsque **APPLY TO SELECTION** rencontre un enregistrement verrouillé et le modifie, celui-ci n'est pas sauvegardé. Tous les enregistrements verrouillés rencontrés par la commande sont placés dans un ensemble système appelé LockedSet. Après l'exécution d'un **APPLY TO SELECTION**, il est recommandé de tester l'ensemble LockedSet pour vérifier la présence d'enregistrements verrouillés. La boucle suivante s'exécute jusqu'à ce que tous les enregistrements aient été modifiés :
 
@@ -46,7 +46,7 @@ Lorsque **APPLY TO SELECTION** rencontre un enregistrement verrouillé et le mod
  Until(Records in set("LockedSet")=0)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Cet exemple utilise une méthode : 
 
@@ -55,16 +55,16 @@ Cet exemple utilise une méthode :
  APPLY TO SELECTION([Emp];Capitales)
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Si l'utilisateur clique sur le bouton Stop dans le thermomètre de progression, la variable système OK prend la valeur 0\. Sinon, elle prend la valeur 1.
 
-#### Voir aussi 
+## Voir aussi 
 
 [EDIT FORMULA](edit-formula.md)  
 *Présentation des ensembles*  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

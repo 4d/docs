@@ -15,7 +15,7 @@ title: VP SET PRINT INFO
 | printInfo  | Object  | -> | Objet contenant les attributs d'impression                                  |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP SET PRINT INFO` command <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->.
 
@@ -27,7 +27,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet to p
 
 - `vk current sheet`
 
-#### Exemple
+## Exemple
 
 Le code suivant imprimera une nouvelle zone 4D View Pro dans un document PDF :
 
@@ -70,7 +70,7 @@ Le PDF :
 
 ![](../../assets/en/ViewPro/cmd_vpSetPrintInfo.PNG)
 
-#### Voir également
+## Voir également
 
 [4D View Pro print attributes](../configuring.md#print-attributes)<br/>
 [VP Convert to picture](vp-convert-to-picture.md)<br/>

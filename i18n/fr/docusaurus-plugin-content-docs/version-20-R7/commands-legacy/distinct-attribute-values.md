@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->La commande **DISTINCT ATTRIBUTE VALUES** crée et remplit le tableau *tabValeurs* avec les valeurs uniques présentes dans l'attribut *cheminAttribut* du champ objet *champObjet* et ce, pour la sélection courante de la table à laquelle appartient le champ.<!-- END REF--> Notez que le champ *champObjet* doit être type Objet, sinon une erreur est retournée. La commande peut être utilisée avec des champs indexés ou non indexés. 
 
@@ -29,11 +29,11 @@ Après l'exécution de la commande, la taille du tableau *tabValeurs* est égale
 
 La commande ne modifie pas la sélection courante ni l'enregistrement courant. 
 
-##### Utilisation de la propriété virtuelle length 
+### Utilisation de la propriété virtuelle length 
 
 Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cette propriété est automatiquement disponible pour tous les attributs de type tableau, et retourne la taille du tableau, c'est-à-dire le nombre d'éléments qu'il contient. Elle est destinée à une utilisation avec la commande [QUERY BY ATTRIBUTE](query-by-attribute.md) mais est également disponible pour **DISTINCT ATTRIBUTE VALUES** afin d'obtenir les différentes tailles de tableaux pour un attribut.
 
-#### Exemple 
+## Exemple 
 
 Votre base de données comporte un champ objet \[Customer\]full\_Data avec 15 enregistrements :
 
@@ -91,12 +91,12 @@ Le tableau *aLChildNum* reçoit les éléments suivants :
 | 2           | 2          |
 | 3           | 3          |
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

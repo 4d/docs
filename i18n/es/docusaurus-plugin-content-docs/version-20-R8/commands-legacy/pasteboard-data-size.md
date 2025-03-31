@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Pasteboard data size.Summary-->El comando Pasteboard data size permite probar si hay datos del tipo *tipoDatos* en el portapapeles.<!-- END REF--> 
 
@@ -31,7 +31,7 @@ Después de verificar que el portapapeles contiene datos del tipo que quiere, pu
 * Si el contenedor contiene una ruta de acceso al archivo, puede extraerla utilizando el comando pasteboard, que devuelve la ruta de acceso del archivo.
 * Para cualquier otro tipo de datos, utilice el comando GET PASTEBOARD DATA, el cual devuelve los datos en un BLOB.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente código prueba si el portapapeles contiene una imagen y si es así, copia la imagen en una variable 4D:
 
@@ -43,7 +43,7 @@ El siguiente código prueba si el portapapeles contiene una imagen y si es así,
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Generalmente, las aplicaciones cortan y copian datos de tipo TEXT o PICT en el portapapeles, porque la mayoría de las aplicaciones reconocen estos dos tipos de datos estándar. Sin embargo, una aplicación puede colocar en el portapapeles varias instancias de los mismos datos en formatos diferentes. Por ejemplo, cada vez que corta o copia parte de una hoja de cálculo, la aplicación de la hoja de cálculo puede colocar los datos en un formato hipotético ‘SPSH’, como también en los formatos SYLK y TEXT. La instancia ‘SPSH’ contiene los datos estructurados en el formato utilizado por la aplicación. La copia SYLK contiene los mismos datos, pero en el formato SYLK, reconocido por la mayoría de los otros programas de hojas de cálculo. Por último, el formato TEXT contiene los mismos datos, sin la información extra incluída en el formato SYLK o en el formato hipotético ‘SPSH’. En este punto, cuando escriba rutinas de Cortar/Copiar/Pegar entre 4D y una aplicación de hoja de cálculo hipotética, asumiendo que conoce la descripción del formato ‘SPSH’ y que está listo para analizar los datos SYLK, puede escribir el siguiente código:
 
@@ -63,7 +63,7 @@ Generalmente, las aplicaciones cortan y copian datos de tipo TEXT o PICT en el p
 
 En otras palabras, usted trata de extraer del portapapeles la instancia de datos que tenga más información original.
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Usted desea arrastrar algunos datos privados de diferentes objetos en su formulario. Puedes escribir:
 
@@ -81,18 +81,18 @@ Usted desea arrastrar algunos datos privados de diferentes objetos en su formula
  End if
 ```
 
-#### Ejemplo 4 
+## Ejemplo 4 
 
 Ver el ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md "APPEND DATA TO PASTEBOARD").
 
-#### Ver también 
+## Ver también 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 *Portapapeles*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.EXECUTE METHOD.Summary-->El comando EXECUTE METHOD provoca la ejecución del método de proyecto *nomMetodo* pasando los parámetros en *param1.<!-- END REF-->..paramN*. Puede pasar el nombre de un método que puede ser llamado desde la base o el componente que ejecuta el comando.
 
@@ -25,15 +25,15 @@ El contexto de ejecución se conserva en el método llamado, lo que significa qu
 
 Si llama este comando desde un componente y pasa un nombre de método que pertenece a la base local en *nomMetodo* (o viceversa), el método debe estar compartido (opción “Compartido entre componente y base principal”, en las propiedades del método).
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si este comando se ejecuta correctamente, la variable sistema OK toma el valor 1; de lo contrario toma el valor 0.
 
-#### Ver también 
+## Ver también 
 
 [EXECUTE FORMULA](execute-formula.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

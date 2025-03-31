@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Add picture.Summary-->El comando **WP Add picture** ancla la *imagen* en una ubicación fija dentro de *wpDoc* y devuelve su referencia.<!-- END REF--> La referencia devuelta se puede pasar al comando [WP SET ATTRIBUTES](wp-set-attributes.md) para mover la *imagen* a cualquier ubicación en *wpDoc* (página, sección, encabezado, pie de página, etc.) con una capa, tamaño, etc. definidos.
 
@@ -41,7 +41,7 @@ La ubicación, la capa (en línea, delante/detrás del texto), la visibilidad y 
 
 **Nota:** el comando [WP Selection range](wp-selection-range.md) devuelve un objeto *referencia de imagen* si se selecciona una imagen anclada y un objeto de rango si se selecciona una imagen en línea. Puede verificar si un objeto seleccionado es un objeto de imagen con el atributo wk type. Si el valor = 2, entonces es un objeto imagen; de lo contrario, es un objeto rango (valor = 0).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea agregar una imagen con la configuración predeterminada utilizando un archivo de ruta.
 
@@ -54,7 +54,7 @@ El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea agregar una imagen redimensionada, centrada y anclada al encabezado:
 
@@ -71,7 +71,7 @@ El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3617351.en.png)  
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Usted desea utilizar una expresión campo para agregar una imagen anclada a un documento que muestre texto de la base:
 
@@ -85,7 +85,7 @@ Usted desea utilizar una expresión campo para agregar una imagen anclada a un d
 
 ![](../../assets/en/WritePro/commands/pict3841719.en.png)
 
-#### Ver también 
+## Ver también 
 
   
 *Gestión de imágenes*  

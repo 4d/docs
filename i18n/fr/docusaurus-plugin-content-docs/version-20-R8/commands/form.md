@@ -16,56 +16,52 @@ displayed_sidebar: docs
 
 <details><summary>Historique</summary>
 
-| Release | Modifications      |
-| ------- | ------------------ |
-| 20 R8   | Form class support |
+| Release | Modifications                      |
+| ------- | ---------------------------------- |
+| 20 R8   | Support des classes de formulaires |
 
 </details>
 
-#### Description
+## Description
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D associe automatiquement un objet à la forme courante dans les cas suivants :
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->La commande **Form** renvoie l'objet associé au formulaire en cours (instancié à partir du paramètre *formData* ou de la classe utilisateur assignée dans l'éditeur de formulaires). 4D associe automatiquement un objet au formulaire courant dans les cas suivants :
 
-- the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
-- the current form is a subform,
-- a table form is currently displayed on screen.
+- le formulaire courant a été chargé par l'une des commandes [`DIALOG`](dialog.md), [`Print form`](print-form.md), ou [`FORM LOAD`](form-load.md),
+- le formulaire courant est un sous-formulaire,
+- un formulaire table est actuellement affiché à l'écran.
 
-##### Commands (DIALOG...)
+### Commandes (DIALOG...)
 
-If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
+Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIALOG](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md), **Form** renvoie soit :
 
-- the *formData* object passed as parameter to this command, if any,
-- or, an instantiated object of the [user class associated to the form](../FormEditor/properties_FormProperties.md#form-class), if any,
-- or, an empty object.
+- l'objet *formData* passé en paramètre à cette commande, le cas échéant,
+- ou un objet instancié de la [classe utilisateur associée au formulaire](../FormEditor/properties_FormProperties.md#form-class), le cas échéant,
+- ou un objet vide.
 
-##### Sous-formulaire
+### Sous-formulaire
 
-If the current form is a subform, the returned object depends on the parent container variable:
+Si le formulaire courant est un sous-formulaire, l'objet renvoyé dépend de la variable du conteneur parent :
 
-- **Form** returns the object associated with the table form displayed on screen.\
- **Form** returns the object associated with the table form displayed on screen.\
- In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+- Si la variable associée au conteneur parent a été typée comme objet, **Form** renvoie la valeur de cette variable.\
+ Dans ce cas, l'objet renvoyé par **Form** est le même que celui renvoyé par l'expression suivante :
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
 ```
 
-- If the variable associated to the parent container has not been typed as an object, **Form** returns an empty object, maintained by 4D in the subform context.
+- Si la variable associée au conteneur parent n'a pas été typée en tant qu'objet, **Form** renvoie un objet vide, géré par 4D dans le contexte du sous-formulaire.
 
-For more information, please refer to the *Page subforms* section.
+Pour plus d'informations, veuillez vous référer à la section *Sous-formulaires en page*.
 
-##### Table form
+### Formulaire table
 
-**Form** returns the object associated with the table form displayed on screen.\
-**Form** returns the object associated with the table form displayed on screen.\
-In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: **Form** returns the object associated with the table form displayed on screen.\
-In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+**Form** retourne l'objet associé au formulaire table affiché à l'écran. Dans le contexte d'un formulaire de saisie affiché à partir d'un formulaire de sortie (c'est-à-dire après un double-clic sur un enregistrement), l'objet retourné contient la propriété suivante :
 
-| **Propriété** | **Type** | **Description**                           |
-| ------------- | -------- | ----------------------------------------- |
-| parentForm    | object   | **Form** object of the parent output form |
+| **Propriété** | **Type** | **Description**                               |
+| ------------- | -------- | --------------------------------------------- |
+| parentForm    | object   | Objet **Form** du formulaire de sortie parent |
 
-#### Exemple
+## Exemple
 
 Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un dialogue permettant de vérifier ou de modifier les noms et âges de ses enfants :
 
@@ -73,7 +69,7 @@ Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un
 
 **Note :** Le champ objet "enfants" est représenté uniquement dans cet exemple afin de faire apparaître sa structure.
 
-In the verification form, you have assigned some Form object properties to inputs:
+Dans le formulaire de vérification, vous avez attribué certaines propriétés de l'objet Form aux objets de saisie :
 
 ![](../assets/en/commands/pict3541682.en.png)
 
@@ -111,15 +107,15 @@ Le formulaire affiche des informations pour chaque enfant :
 
 Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le champ est mis à jour (bien entendu, l'enregistrement parent devra être sauvegardé par la suite).
 
-#### Voir également
+## Voir également
 
 [DIALOG](dialog.md)
 
-#### Propriétés
+## Propriétés
 
-|                    |                                 |
-| ------------------ | ------------------------------- |
-| Numéro de commande | 1466                            |
-| Thread safe        | &amp;cross; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1466                        |
+| Thread safe        | &cross; |
 
 

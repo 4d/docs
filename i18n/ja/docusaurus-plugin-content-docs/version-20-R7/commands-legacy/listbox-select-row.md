@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SELECT ROW.Summary-->**LISTBOX SELECT ROW** コマンドは、 *object* 引数および *\** で指定されたリストボックス内において、*position* に渡した番号の行を選択します。<!-- END REF--> 
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 * *position* に渡された数値が、リストボックス中で非表示の行に該当する場合、行は選択されますが表示されません。
 * リストボックスに対して**セレクションハイライトを非表示にする**オプションをチェックしていた場合、利用可能なインターフェースオプションを使用してリストボックスセレクションを可視化していおく必要があります。これのやり方についての詳細な情報については、*選択行の見た目をカスタマイズ* を参照してください。
 
-#### 参照 
+## 参照 
 
 [EDIT ITEM](edit-item.md)  
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 [LISTBOX SELECT ROWS](listbox-select-rows.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OB REMOVE.Summary-->**OB REMOVE**コマンドは、*object* 引数で指定したランゲージオブジェクトの、 *property* 引数で指定したプロパティを削除します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して定義されているか、4Dオブジェクトフィールドが指定されている必要があります。
 
 *property* 引数には、削除したいプロパティのラベルを渡します。  
 *property* 引数では、大文字と小文字は区別されることに注意して下さい。
 
-#### 例題 
+## 例題 
 
 オブジェクトから、 "age" のプロパティを削除する場合:
 
@@ -33,11 +33,11 @@ displayed_sidebar: docs
   // $Object={"name":"smith","client":true}
 ```
 
-#### 参照 
+## 参照 
 
 [OB SET](ob-set.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

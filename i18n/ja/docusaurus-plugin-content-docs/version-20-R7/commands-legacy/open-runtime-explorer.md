@@ -12,12 +12,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OPEN RUNTIME EXPLORER.Summary-->OPEN RUNTIME EXPLORER コマンドは、ランタイムエクスプローラーをフローティングウィンドウ内に表示します。<!-- END REF-->
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

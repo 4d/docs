@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### 説明
+## 説明
 
 `HTTP Parse message` コマンドは、<!--REF #_command_.HTTP Parse message.Summary-->multipart/form-*data* のテキストまたは Blob (HTTP "response" メッセージ) をパースし、コンテンツをオブジェクトに抽出します。 戻り値のオブジェクトの各プロパティは、マルチパートの各データに対応します<!-- END REF -->。
 
@@ -34,7 +34,7 @@ HTTP 自体はステートレスな通信プロトコルです。  このフレ�
 
 :::
 
-#### 例題
+## 例題
 
 次の例では、HTTPリクエストを格納するテキストファイルのデータを解析します。
 
@@ -80,7 +80,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 //}
 ```
 
-#### プロパティ
+## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |

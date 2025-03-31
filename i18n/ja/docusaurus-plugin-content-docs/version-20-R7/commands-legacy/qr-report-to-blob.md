@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.QR REPORT TO BLOB.Summary-->QR REPORT TO BLOB コマンドは、*area*に渡された参照番号のレポートをBLOB (変数またはフィールド) に格納します。<!-- END REF-->
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
-#### 例題 
+## 例題 
 
 次のコードは、MyAreaに格納されているクイックレポートをBLOBフィールドに代入します。
 
@@ -28,11 +28,11 @@ displayed_sidebar: docs
  QR REPORT TO BLOB(MyArea;[Table1]Field4)
 ```
 
-#### 参照 
+## 参照 
 
 [QR BLOB TO REPORT](qr-blob-to-report.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

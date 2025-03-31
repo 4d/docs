@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Summary-->La commande **SEND MESSAGE TO REMOTE USER** permet d'envoyer un message à tous les utilisateurs distants ou à un utilisateur distant spécifique.<!-- END REF--> 
 
@@ -24,7 +24,7 @@ Le paramètre optionnel *sessionUtilisateur* peut être utilisé pour désigner 
 
 **Note** : Cette commande ne peut être exécutée que sur 4D Server. Si la méthode appelant la commande est exécutée localement sur un 4D distant ou monoposte, **SEND MESSAGE TO REMOTE USER** ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez envoyer un message à tous les utilisateurs, puis à un utilisateur spécifique :
 
@@ -49,11 +49,11 @@ Vous souhaitez envoyer un message à tous les utilisateurs, puis à un utilisate
  End for each
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DROP REMOTE USER](drop-remote-user.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

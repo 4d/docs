@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Subtotal.Summary-->Subtotal devolve o subtotal de valores para o nível de quebra atual ou anterior.<!-- END REF--> Subtotal só funciona quando uma seleção ordenada é impressa com [PRINT SELECTION](print-selection.md) ou utilizando Imprimir no ambiente Desenho. O parâmetro *valores* deve ser de tipo real, inteiro, ou inteiro longo. Você deve atribuir o resultado da função Subtotal a uma variável localizada na área de quebra do formulário.  
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
   
 **Dica**: se executa Subtotal desde um formulário de saída mostrado em tela, um erro será gerado, disparando um loop infinito de atualizações entre o formulário e a janela de erro. Para sair deste loop, pressione Alt+Shift (Windows) ou Opção-Shift (Macintosh) e clique no botão Abortar na janela de erro (provavelmente terá que fazer isto várias vezes). Isso pará temporariamente as atualizações da janela do formulário. Selecione outro formulário de saída de maneira a que o erro não se repita. Regresse ao ambiente Desenho e isole a chamada a Subtotal para um teste Form event=On Printing Break,  se deseja utilizar o mesmo formulário de saída para a visualização e a impressão 
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir é um método de objeto numa área de quebra de um formulário (B0, a área localizada sobre o marcador B0). A variável *vSalario* está localizada na área de quebra. A variável toma o valor do subtotal do campo Salário para este nível de quebra. O tratamento de quebra deve ter sido ativado de antemão utilizando os comandos [BREAK LEVEL](break-level.md) e [ACCUMULATE](accumulate.md).
 
@@ -37,7 +37,7 @@ O exemplo a seguir é um método de objeto numa área de quebra de um formulári
 
 Para maior informação sobre design de formulário com áreas de cabeçalho e de quebra, consulte o manual de Desenho.
 
-#### Ativação de níveis de quebra nos formulários de relatórios 
+## Ativação de níveis de quebra nos formulários de relatórios 
 
 Para poder gerar relatórios com quebras, deve ativar o tratamento de quebras chamando os comandos [BREAK LEVEL](break-level.md) e [ACCUMULATE](accumulate.md).  
   
@@ -55,14 +55,14 @@ Quando utilize [BREAK LEVEL](break-level.md) e [ACCUMULATE](accumulate.md), o pr
   
 A função Subtotal é necessária para mostrar valores em um formulário.  
 
-#### Ver também 
+## Ver também 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level ](level.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

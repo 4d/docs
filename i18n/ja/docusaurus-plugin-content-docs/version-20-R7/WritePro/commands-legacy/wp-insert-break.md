@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP INSERT BREAK.Summary-->**WP INSERT BREAK** コマンドは*mode* 引数や*rangeUpdate* 引数で指定された形で、*targetObj* 引数で指定されたレンジ内に*breakType* 引数で指定された型の新しいブレークを挿入します。<!-- END REF-->
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 引数を渡さなかった場合、デフォルトでは挿入されたコンテンツは結果のレンジに含まれます。
 * *targetObj* がレンジでない場合、*rangeUpdate* 引数は無視されます。
 
-#### 例題 1 
+## 例題 1 
 
 請求書を作成する際、最後のページを除いてページブレーク(改ページ)を挿入したい場合を考えます:
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
  End for
 ```
 
-#### 例題 2 
+## 例題 2 
 
 同じページ内に連続したセクションブレークを単一カラムセクションと2カラムセクションとの間に挿入したい場合を考えます。
 
@@ -99,7 +99,7 @@ displayed_sidebar: docs
     
 ![](../../assets/en/WritePro/commands/pict5562058.en.png)
 
-#### 参照 
+## 参照 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP INSERT DOCUMENT](wp-insert-document.md)  

@@ -3,7 +3,7 @@ id: DataStoreClass
 title: DataStore
 ---
 
-Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fourni par ORDA pour référencer et accéder à une base de données. Les objets `Datastore` sont retournés par les commandes suivantes :
+Un [Datastore](ORDA/dsMapping.md#datastore) est un objet d'interface fourni par ORDA pour référencer et accéder à une base de données. Les objets `Datastore` sont retournés par les commandes suivantes :
 
 - [ds](../commands/ds.md) : un raccourci vers le datastore principal
 - [Open datastore](../commands/open-datastore.md) : pour ouvrir un datastore distant
@@ -16,7 +16,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->    |
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<br/><!-- INCLUDE DataStoreClass.dataclassName.Summary -->                                     |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<br/><!-- INCLUDE #DataStoreClass.encryptionStatus().Summary -->                      |
-| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushandlock)<br/><!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<br/><!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary -->          |
 | [<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)<br/><!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary -->                            |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<br/><!-- INCLUDE #DataStoreClass.getInfo().Summary -->                                                 |
@@ -33,8 +33,6 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 | [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)<br/><!-- INCLUDE #DataStoreClass.stopRequestLog().Summary -->                            |
 | [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)<br/><!-- INCLUDE #DataStoreClass.unlock().Summary -->                                                    |
 | [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)<br/><!-- INCLUDE #DataStoreClass.validateTransaction().Summary -->             |
-
-<!-- REF DataStoreClass.dataclassName.Desc -->
 
 ## *.dataclassName*
 
@@ -63,8 +61,6 @@ Chaque dataclass d'un datastore est disponible en tant que propriété de l'obje
   //vous poubez également saisir directement :
  $sel:=ds.Employee.all()
 ```
-
-<!-- END REF -->
 
 <!-- REF DataStoreClass.cancelTransaction().Desc -->
 
@@ -101,8 +97,6 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transact
 Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
-
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 
 ## .clearAllRemoteContexts()
 
@@ -210,8 +204,6 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
-
 ## .flushAndLock()
 
 <details><summary>Historique</summary>
@@ -288,8 +280,6 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
-
 ## .getAllRemoteContexts()
 
 <details><summary>Historique</summary>
@@ -318,7 +308,7 @@ La fonction `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Pour plus d'informations sur la façon dont les contextes peuvent être créés, voir [Optimisation client/serveur](../ORDA/client-server-optimization.md#optimization-context).
 
-Chaque objet de la collection renvoyée possède les propriétés énumérées dans la section [`.getRemoteContextInfo()`](#properties-of-the-returned-object).
+Chaque objet de la collection renvoyée possède les propriétés énumérées dans la section [`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Exemple
 
@@ -364,8 +354,6 @@ $info:=$ds.getAllRemoteContexts()
 #### Voir également
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
-
-<!-- REF DataClassClass.getGlobalStamp().Desc -->
 
 ## .getGlobalStamp()
 
@@ -487,8 +475,6 @@ Sur un datastore distant :
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
-
 ## .getRemoteContextInfo()
 
 <details><summary>Historique</summary>
@@ -522,12 +508,12 @@ Pour plus d'informations sur la façon dont les contextes peuvent être créés,
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété                                  | Type | Description                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------ | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| name                                       | Text | Nom du contexte                                                                                                                                                                                                                                                                                                                            |
-| main                                       | Text | Attribut(s) associé(s) au contexte (les noms d'attributs sont séparés par des virgules)                                                                                                                                                                                           |
-| dataclass                                  | Text | Nom de la dataclass                                                                                                                                                                                                                                                                                                                        |
-| currentItem (optionnel) | Text | Attributs du [mode page](../ORDA/remoteDatastores.md#listbox-basée-sur-une-sélection-dentités) si le contexte est lié à une list box. Retourn `Null` ou un élément de texte vide si le contexte n'est pas utilisé pour une list box, ou s'il n'y a pas de contexte pour l'élément courant (currentItem) |
+| Propriété                                  | Type | Description                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                                       | Text | Nom du contexte                                                                                                                                                                                                                                                                                                                                 |
+| main                                       | Text | Attribut(s) associé(s) au contexte (les noms d'attributs sont séparés par des virgules)                                                                                                                                                                                                |
+| dataclass                                  | Text | Nom de la dataclass                                                                                                                                                                                                                                                                                                                             |
+| currentItem (optionnel) | Text | Les attributs du [mode page](../ORDA/client-server-optimization.md#entity-selection-based-list-box) si le contexte est lié à une list box. Retourn `Null` ou un élément de texte vide si le contexte n'est pas utilisé pour une list box, ou s'il n'y a pas de contexte pour l'élément courant (currentItem) |
 
 Comme les contextes se comportent comme des filtres d'attributs, si *main* est retourné vide, cela signifie qu'aucun filtre n'est appliqué et que le serveur donc retourne tous les attributs de la dataclass.
 
@@ -613,8 +599,6 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.locked().Desc -->
-
 ## .locked()
 
 <details><summary>Historique</summary>
@@ -677,9 +661,9 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 
 La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->définit toutes les entity selections comme modifiables par défaut dans les datastores de l'application courante<!-- END REF --> (y compris les [datastores distants](ORDA/remoteDatastores.md)). Elle est destinée à être appelée une fois, par exemple dans la méthode base `On Startup`.
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
+Lorsque cette méthode n'est pas appelée, les nouvelles entity selection peuvent être partageables, selon la nature de leur "parent" ou la [façon dont elles ont été créées](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> Cette fonction ne modifie pas les entity selections créées par [`.copy()`](#copy) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
+> Cette fonction ne modifie pas les entity selections créées par [`.copy()`](./EntitySelectionClass.md#copy) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
 > **Compatibilité** : Cette fonction doit être utilisée uniquement dans des projets convertis à partir de versions de 4D antérieures à 4D v18 R5 et contenant des appels [.add()](EntitySelectionClass.md#add). Dans ce contexte, l'utilisation de `.makeSelectionsAlterable()` peut faire gagner du temps en restaurant instantanément le précédent comportement 4D dans les projets existants.
 > En revanche, l'utilisation de cette méthode dans les nouveaux projets créés dans 4D v18 R5 et les versions plus récentes **n'est pas recommandée**, car elle empêche le partage des entity selections, ce qui offre de meilleures performances et une plus gran
@@ -806,8 +790,6 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.setGlobalStamp().Desc -->
-
 ## .setGlobalStamp()
 
 <details><summary>Historique</summary>
@@ -863,8 +845,6 @@ ds.setGlobalStamp($newValue)
 
 [.getGlobalStamp()](#getglobalstamp)
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
-
 ## .setRemoteContextInfo()
 
 <details><summary>Historique</summary>
@@ -915,7 +895,7 @@ Si *attributes* est un texte vide, ou si *attributesColl* est une collection vid
 Vous pouvez passer un *contextType* pour spécifier si le contexte est standard ou s'il s'agit du contexte de l'élément courant de l'entity selection affichée dans une list box :
 
 - Si sa valeur est "main" (défaut), *contextName* désigne un contexte standard.
-- Si sa valeur est "currentItem", les attributs passés sont intégrés dans le contexte de l'élément courant.  Voir  [Listbox basée sur une sélection d'entités](../ORDA/remoteDatastores.md#listbox-basée-sur-une-sélection-dentités).
+- Si sa valeur est "currentItem", les attributs passés sont intégrés dans le contexte de l'élément courant.  Voir [Listbox basée sur une entity selection](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
 
 Dans *pageLength*, spécifiez le nombre d'entités de dataclass à demander au serveur.
 
@@ -1209,8 +1189,6 @@ Cette fonction ne fait rien si la journalisation des requêtes ORDA n'a pas ét�
 Voir les exemples pour [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
-
-<!-- REF DataClassClass.unlock().Desc -->
 
 ## .unlock()
 

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->O comando QR GET BORDERS permite recuperar o estilo do borda de uma célula determinada.<!-- END REF-->   
   
@@ -64,11 +64,11 @@ Se o parâmetro *coluna* é incorreto, se gera o erro -9852.
 Se o parâmetro *linha* é incorreto, se gera o erro -9853.  
 Se o parâmetro *borda* é incorreto, se gera o erro -9854.
 
-#### Ver também 
+## Ver também 
 
 [QR SET BORDERS](qr-set-borders.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ title: VP Font to object
 
 <!-- END REF -->
 
-#### Descripción
+## Descripción
 
 El comando utilitario `VP Font to object` <!-- REF #_method_.VP Font to object.Summary -->devuelve un objeto a partir de una cadena abreviada de fuentes<!-- END REF -->. Este objeto se puede utilizar para establecer u obtener la configuración de las propiedades de la fuente a través de la notación de objetos.
 
@@ -24,7 +24,7 @@ En el parámetro *font*, pase una cadena de fuente abreviada para especificar la
 
 El objeto devuelto contiene los atributos de fuente definidos como propiedades. Para obtener más información sobre las propiedades disponibles, consulte el comando [VP Object to font](vp-object-to-font.md).
 
-#### Ejemplo 1
+## Ejemplo 1
 
 Este código:
 
@@ -42,11 +42,11 @@ size:16pt
 }
 ```
 
-#### Ejemplo 2
+## Ejemplo 2
 
 Ver el ejemplo de [`VP Object to font`](vp-object-to-font.md).
 
-#### Ver también
+## Ver también
 
 [4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
 [VP Object to font](vp-object-to-font.md)<br/>

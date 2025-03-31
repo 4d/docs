@@ -14,18 +14,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WA OPEN BACK URL.Summary-->The **WA OPEN BACK URL** command loads the previous URL in the sequence of URLs opened into the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
 
 If there is no previous URL, the command does nothing. You can test whether a previous URL is available using the [WA Back URL available](wa-back-url-available.md) command.
 
-#### See also 
+## See also 
 
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 [WA OPEN URL](wa-open-url.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

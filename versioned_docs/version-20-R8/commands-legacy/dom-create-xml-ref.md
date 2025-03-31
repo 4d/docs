@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Create XML Ref.Summary-->The **DOM Create XML Ref** command creates an empty XML tree in memory and returns its reference.<!-- END REF-->  
   
@@ -32,7 +32,7 @@ You can declare one or more additional namespaces in the generated XML tree usin
 
 **Important:** Remember to call the [DOM CLOSE XML](dom-close-xml.md) command in order to free up the memory when you have finished using the XML tree.
 
-#### Example 1 
+## Example 1 
 
 Creating a single XML tree: 
 
@@ -48,7 +48,7 @@ This code produces the following result:
 <MyRoot/>
 ```
 
-#### Example 2 
+## Example 2 
 
 Creating an XML tree with a single namespace:   
 
@@ -65,7 +65,7 @@ This code produces the following result:
 <MyNameSpace:MyRoot xmlns:MyNameSpace="http://www.4D.com/tech/namespace"/>
 ```
 
-#### Example 3 
+## Example 3 
 
   
 Creating an XML tree with several namespaces: 
@@ -90,16 +90,16 @@ NSName1="http://www.4D.com/Prod/namespace"
 NSName2="http://www.4D.com/Mkt/namespace"/>
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command was executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
 
-#### See also 
+## See also 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

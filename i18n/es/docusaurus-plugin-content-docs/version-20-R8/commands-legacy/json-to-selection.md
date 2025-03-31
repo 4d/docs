@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.JSON TO SELECTION.Summary-->El comando **JSON TO SELECTION** copia el contenido del array de objetos JSON *jsonArray* en la selección de registros de *laTabla*.<!-- END REF--> 
 
@@ -32,7 +32,7 @@ Si una selección existe para *laTabla* en el momento de la llamada, los element
 
 Si un registro está bloqueado por otro proceso durante la ejecución del comando, no se modifica. Todos los registros bloqueados se ubican en el *Conjunto sistema LockedSet*. Después de la ejecución de **JSON TO SELECTION**, puede probar si el conjunto *LockedSet* contiene los registros que estaban bloqueados.
 
-#### Ejemplo 
+## Ejemplo 
 
 Uso del comando **JSON TO SELECTION** para añadir los registros a la tabla \[Company\]: 
 
@@ -65,11 +65,11 @@ Uso del comando **JSON TO SELECTION** para añadir los registros a la tabla \[Co
   //Nombres de empresa y ciudad
 ```
 
-#### Ver también 
+## Ver también 
 
 [Selection to JSON](selection-to-json.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

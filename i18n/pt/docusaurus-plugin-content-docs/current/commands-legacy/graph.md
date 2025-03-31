@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.GRAPH.Summary-->O comando **GRAPH** cria um gráfico em uma área de gráfico ou uma variável imagem localizada em um formulário a partir dos valores provenientes dos arrays.<!-- END REF-->
 
@@ -36,7 +36,7 @@ O parâmetro *xCategorias* define as etiquetas que serão utilizadas pelo eixo x
 
 Os dados especificados por *yValores* são os dados a graficar. Os dados devem ser de tipo numérico. Podem ser graficados até oito conjuntos de dados. Os gráficos por setores só representam os primeiros *yValores*.
 
-##### IDs automáticos 
+### IDs automáticos 
 
 Os IDs específicos agora são asignados automaticamente aos elementos presentes no gráfico SVG:
 
@@ -60,7 +60,7 @@ Os IDs específicos agora são asignados automaticamente aos elementos presentes
 | ID\_y\_grid                                  | Grade no eixo Y                                          |
 | ID\_y\_grid\_shadow                          | Sombra da grade no eixo Y                                |
 
-##### atributos grafParams 
+### atributos grafParams 
 
 Quando utilizar o parâmetro *grafParams*, deve passar um objeto que contenha as diferentes propriedades do gráfico a definir. Pode utilizar as seguintes constantes, que se encontram no tema de constantes "*Parâmetros de Gráficos*":
 
@@ -108,7 +108,7 @@ Quando utilizar o parâmetro *grafParams*, deve passar um objeto que contenha as
 | Graph yMax                        | Cadeia | yMax                       | **Valores** ****possíveis**: números<br/> Se faltar, 4D calcula automaticamente o valor yMax.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Graph yMin                        | Cadeia | yMin                       | **Valores possíveis**: números<br/> Se faltar, 4D calcula automaticamente o valor yMin.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Sintaxe com *grafNumber*: o seguinte exemplo mostra os diferentes tipos de gráficos que pode obter. O código deve ser inserido em um método formulário ou método objeto do formulário que contenha a variável imagem. Os dados representados são constantes, geralmente este não é o caso:
 
@@ -149,7 +149,7 @@ As seguinte imagens mostram o gráfico resultante.
 * Com *vType* igual a 8, obtém um gráfico em **Imagens**:  
 ![](../assets/en/commands/pict847124.fr.png)
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Sintaxe utilizando *grafParams*: no seguinte exemplo, um gráfico de linha simples é desenhado baseado nos valores de tempos:
 
@@ -184,7 +184,7 @@ Sintaxe utilizando *grafParams*: no seguinte exemplo, um gráfico de linha simpl
 
 ![](../assets/en/commands/pict2603210.en.png)
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Com os mesmos valores, pode agregar uma configuração personalizada para obter uma vista diferente:
 
@@ -225,7 +225,7 @@ Com os mesmos valores, pode agregar uma configuração personalizada para obter 
 
 ![](../assets/en/commands/pict2603212.en.png)
 
-#### Exemplo 4 
+## Exemplo 4 
 
 Neste exemplo, personalizamos alguns parâmetros:
 
@@ -274,14 +274,14 @@ Neste exemplo, personalizamos alguns parâmetros:
 
 ![](../assets/en/commands/pict2648517.en.png)
 
-#### Ver também 
+## Ver também 
 
   
 [GRAPH SETTINGS](graph-settings.md)  
 *Parâmetros de Gráficos*  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Average.Summary-->**Average** returns the arithmetic mean (average) of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the average.
 
@@ -26,7 +26,7 @@ Only numeric attribute values are computed. If there are values in the attribute
 
 If the command is correctly executed, the OK system variable is set to 1\. If it is interrupted (for example if the user clicks on the **Stop** button of the progress thermometer), the OK variable is set to 0.
 
-#### Example 1 
+## Example 1 
 
 The following example sets the variable *vAverage* that is in the B0 Break area of an output form. The line of code is the object method for *vAverage*. The object method is not executed until the level 0 break:
 
@@ -47,7 +47,7 @@ The following method is called to print the records in the selection and to acti
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
 
-#### Example 2 
+## Example 2 
 
 This example gets the average of the first 15 grades in the selection:
 
@@ -60,7 +60,7 @@ This example gets the average of the first 15 grades in the selection:
  vAverage:=Average($ArrGrades)
 ```
 
-#### Example 3 
+## Example 3 
 
 Your \[Customer\] table contains a "full\_Data" object field with the following data:
 
@@ -79,7 +79,7 @@ You can perform the following computations:
   //$vTot is 105
 ```
 
-#### See also 
+## See also 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
@@ -90,7 +90,7 @@ You can perform the following computations:
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

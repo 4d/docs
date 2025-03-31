@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->The **LISTBOX Get rows height** command returns the current row height for the list box object set using the *object* and *\** parameters.<!-- END REF--> 
 
@@ -31,13 +31,13 @@ By default, if you omit the *unit* parameter, the row height returned is express
 
 **Note:** For more information about calculating the height of rows, refer to the *Design Reference* manual.
 
-#### See also 
+## See also 
 
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->GENERATE ENCRYPTION KEYPAIR コマンドは新しく1対のRSA鍵を生成します。<!-- END REF-->4Dの非対称暗号化機能はこの鍵を元にしていて、一般的にこれはネットワーク越しに安全なデータ交換を行う際(例: 4D Web サーバーとTLSプロトコルを使用する)に必要となります。
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 **警告:** 秘密鍵は常に秘密にしなければなりません。
 
-#### RSA、秘密鍵、および公開鍵について 
+## RSA、秘密鍵、および公開鍵について 
 
 **GENERATE ENCRYPTION KEYPAIR** で使用するRSA暗号方 式は、秘密鍵と公開鍵という二重鍵暗号システムに基づいています。その名が示す通り、公開鍵は第三者に渡され、情報の復号に使用されます。公開鍵は情報の暗号化に使われるユニークな秘密鍵と一対です。このように、秘密鍵は暗号化に使用され、公開鍵は復号に使用されます (またはその逆)。一方の鍵を使って暗号化された情報は、もう一方の鍵を使用しなければ解読することはできません。
 
@@ -42,17 +42,17 @@ TLS/SSLプロトコルの暗号化機能はこの原理に基づいており、�
 この暗号化モードは、[ENCRYPT BLOB](encrypt-blob.md)および[DECRYPT BLOB](decrypt-blob.md)の1番目のシンタックスでも使用されています。このシンタックスで用いる公開鍵は極秘に発行してください。  
 特定の受信者を復号可能な唯一の人とし、かつ送信者が暗号化を行った人であることを保証するために、2人の公開鍵と秘密鍵を合わせて情報の暗号化を行うことができます。この原理は[ENCRYPT BLOB](encrypt-blob.md)および[DECRYPT BLOB](decrypt-blob.md)の2番目のシンタックスで示されています。
 
-#### 例題 
+## 例題 
 
 [ENCRYPT BLOB](encrypt-blob.md "ENCRYPT BLOB")の例題参照
 
-#### 参照 
+## 参照 
 
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

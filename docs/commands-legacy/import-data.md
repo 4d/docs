@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.IMPORT DATA.Summary-->The **IMPORT DATA** command imports the data located in the *fileName* file.<!-- END REF--> 4D can import the data in the following formats: Text, Fixed length text, XML, SYLK, DIF, DBF (dBase), and 4D. 
 
@@ -37,18 +37,18 @@ If the import was successful, the OK system variable is set to 1.
 
 **Note:** Refer to the [EXPORT DATA](export-data.md) command for an example concerning the definition of an empty project. 
 
-#### System variables and sets 
+## System variables and sets 
 
 If the user clicks **Cancel** in the standard save file dialog box or in the import dialog box, the OK system variable is set to 0\. If the import was successful, the OK system variable is set to 1.
 
-#### See also 
+## See also 
 
 [EXPORT DATA](export-data.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [IMPORT TEXT](import-text.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

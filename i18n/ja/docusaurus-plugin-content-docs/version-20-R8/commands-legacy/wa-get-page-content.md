@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA Get page content.Summary-->WA Get page content コマンドは、*\** と *object* 引数で指定したWebエリアの現在のページまたは表示されているページのHTMLコードを返します。<!-- END REF-->
 
 現在のページの内容を利用できない場合、このコマンドは空の文字列を返します。
 
-#### 参照 
+## 参照 
 
 [WA SET PAGE CONTENT](wa-set-page-content.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

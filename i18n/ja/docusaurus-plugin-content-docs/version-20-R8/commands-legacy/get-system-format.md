@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.GET SYSTEM FORMAT.Summary-->GET SYSTEM FORMATコマンドは、オペレーティングシステムで定義されている幾つかの領域のパラメタのカレント値を返します。<!-- END REF-->このコマンドを使用して、システムの環境設定に基づいた"自動" カスタムフォーマットを作成できます。
 
@@ -39,11 +39,11 @@ displayed_sidebar: docs
 | Thousand separator         | 倍長整数 | 1  | 千の位区切り文字 (例: “,”)                           |
 | Time separator             | 倍長整数 | 14 | 時間フォーマットの区切り文字 (例: “:”)                     |
 
-#### 参照 
+## 参照 
 
 [OBJECT SET FORMAT](object-set-format.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

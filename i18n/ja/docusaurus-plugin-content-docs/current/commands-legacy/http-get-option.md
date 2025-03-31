@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 :::
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.HTTP GET OPTION.Summary-->**HTTP GET OPTION**コマンドは ([HTTP Get](http-get.md)や[HTTP Request](http-request.md)コマンドで実行される次のリクエストでクライアントにより使用される) HTTPオプションの現在値を返します。<!-- END REF-->現在値はデフォルト設定あるいは[HTTP SET OPTION](http-set-option.md)コマンドで設定された値です。
 
@@ -40,11 +40,11 @@ displayed_sidebar: docs
 
 *value* 引数には現在の *option* 値を受け取る変数を渡します。
 
-#### 参照 
+## 参照 
 
 [HTTP SET OPTION](http-set-option.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

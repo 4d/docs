@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Application version.Summary-->El comando Application version devuelve una cadena codificada que expresa el número de versión del entorno 4D que está utilizando.<!-- END REF-->   
 
@@ -72,7 +72,7 @@ El comando Application version puede devolver información adicional en el pará
 
 **Nota:** en el caso de las aplicaciones compiladas y fusionadas con 4D Volume License, el número de build devuelto no es significativo. En este contexto, la información de versión es administrada por el desarrollador.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo muestra el número de versión del entorno 4D:
 
@@ -82,7 +82,7 @@ Este ejemplo muestra el número de versión del entorno 4D:
  $vs4Dversion[[3]]+"."+$vs4Dversion[[4]])
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo hace una prueba para verificar si usted está utilizando una versión final:
 
@@ -93,7 +93,7 @@ Este ejemplo hace una prueba para verificar si usted está utilizando una versi�
  End if
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Usted desea utilizar el valor de la versión corta de la aplicación devuelto por el comando para mostrar el nombre lanzamiento de la aplicación 4D. Puede escribir:
 
@@ -116,12 +116,12 @@ Usted desea utilizar el valor de la versión corta de la aplicación devuelto po
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RELATE MANY SELECTION.Summary-->The RELATE MANY SELECTION command generates a selection of records in the Many table, based on a selection of records in the One table, and loads the first record of the Many table as the current record.<!-- END REF-->RELATE MANY SELECTION changes the current record for the One table.
 
-#### Example 
+## Example 
 
 This example selects all invoices made to the customers whose credit is greater than or equal to $1,000\. The \[Invoices\] table field *\[Invoices\]Customer ID* relates to the \[Customer\] table field *\[Customers\]ID Number*. 
 
@@ -28,13 +28,13 @@ This example selects all invoices made to the customers whose credit is greater 
  RELATE MANY SELECTION([Invoices]Customer ID)
 ```
 
-#### See also 
+## See also 
 
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

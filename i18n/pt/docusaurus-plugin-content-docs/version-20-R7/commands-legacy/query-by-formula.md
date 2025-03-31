@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.QUERY BY FORMULA.Summary-->QUERY BY FORMULA procura registros em *tabela*.<!-- END REF--> QUERY BY FORMULA modifica a seleção atual de *tabela* para o processo atual e faz do primeiro registro o novo registro atual. 
 
@@ -50,7 +50,7 @@ Se existirem, em geral as relações entre as tabelas não são usadas. Entretan
 
 **Nota de compatibilidade**: até 4D Server v11, este comando se executava na máquina cliente Por compatibilidade, este funcionamento é conservado nos bancos de dados convertidos a versão 11\. Uma preferência de compatibilidade e um seletor do comando [SET DATABASE PARAMETER](set-database-parameter.md) permitem adotar o funcionamento da versão 11 (execução no servidor) nestes bancos de dados.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Este exemplo busca os registros para todas as faturas que sejam introduzidas em dezembro de qualquer ano. O princípio consiste em aplicar a função [Month of](month-of.md "Month of") a cada registro. Esta pesquisa não poderia ser realizada de outra forma sem criar um campo separado para o mês: 
 
@@ -58,7 +58,7 @@ Este exemplo busca os registros para todas as faturas que sejam introduzidas em 
  QUERY BY FORMULA([Faturas];Month of([Faturas]Entrada)=12) // Buscar as faturas entradas em dezembro
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo procura os registros das pessoas que tenham nomes com mais de 10 caracteres: 
 
@@ -66,7 +66,7 @@ Este exemplo procura os registros das pessoas que tenham nomes com mais de 10 ca
  QUERY BY FORMULA([Pessoas];Length([Pessoas]Nome)>10) // Pesquisar nomes de mais de dez caracteres
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Este exemplo utiliza uma união para buscar todas as linhas de faturas de cliente de "ACME" mesmo que as tabelas não estejam relacionadas:
 
@@ -74,14 +74,14 @@ Este exemplo utiliza uma união para buscar todas as linhas de faturas de client
  QUERY BY FORMULA([invoice_line];([invoice_line]invoice_id=[invoice]id&[invoice]client="ACME"))
 ```
 
-#### Ver também 
+## Ver também 
 
 [QUERY](query.md)  
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

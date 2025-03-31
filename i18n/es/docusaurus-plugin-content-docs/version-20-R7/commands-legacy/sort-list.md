@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SORT LIST.Summary-->El comando SORT LIST ordena la lista cuyo número de referencia se pasa en *lista*.<!-- END REF-->
 
@@ -24,7 +24,7 @@ SORT LIST ordena todos los niveles de la lista; primero ordena los elementos de 
 
 SORT LIST no cambia el estado actual de la lista y de las eventuales sublistas desplegado/contraído, ni del elemento actual. Sin embargo, como el elemento actual puede ser movido por la operación de ordenación, [Selected list items](selected-list-items.md "Selected list items") podría devolver una posición diferente antes y después de la ordenación.
 
-#### Ejemplo 
+## Ejemplo 
 
 Dada la lista llamada *hList,* mostrada aquí en el entorno Aplicación:
 
@@ -53,11 +53,11 @@ La lista se ve de esta forma:
 
 ![](../assets/en/commands/pict23039.es.png)
 
-#### Ver también 
+## Ver también 
 
 [Selected list items](selected-list-items.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

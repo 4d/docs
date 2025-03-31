@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.New shared object.Summary-->O comando **New shared object** cria um novo objeto compartido vazio ou pré-preenchido e devolve sua referência.<!-- END REF--> Para agregar ou editar uma propriedade a este objeto deve estar rodeado pela estrutura *Use...End use*, do contrário, se devolve um erro. Entretanto é possível ler uma propriedade fora de uma estrutura *Use...End use*. 
 
@@ -41,7 +41,7 @@ Opcionalmente, pode preencher o novo objeto passando um ou vários pares de *pro
     
 (\*) Quando agregar um objeto ou uma coleção compartido a um objeto compartido, compartem o mesmo identificador de bloqueio. Para saber mais sobre este ponto, consulte *Identificador de bloqueio (Locking identifier)*.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Se quiser criar um novo objeto compartido pré-preenchido:
 
@@ -50,7 +50,7 @@ Se quiser criar um novo objeto compartido pré-preenchido:
  $contact:=New shared object("name";"Smith";"firstname";"John")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser criar e modificar um objeto compartido. A estrutura deve ser chamada para este objeto:
 
@@ -62,13 +62,13 @@ Se quiser criar e modificar um objeto compartido. A estrutura deve ser chamada p
  End use
 ```
 
-#### Ver também 
+## Ver também 
 
 [New object](new-object.md)  
 [New shared collection](../commands/new-shared-collection.md)  
 *Objetos compartidos e Coleções compartidas*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

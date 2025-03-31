@@ -15,17 +15,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibilidade 
+## Compatibilidade 
 
 <!--REF #_command_.WP Bookmark range.Summary-->**WP Bookmark range** era chamada **WP Get bookmark range** em versões anteriores de 4D Write Pro.<!-- END REF--> Foi renomeada por claridade. 
 
-#### Descrição 
+## Descrição 
 
 O comando **WP Bookmark range** devolve um objeto de tipo faixa de texto (objFaixa) que contém a faixa para o marcador com o nome *nombk* em *docWP*.
 
 Se o marcador *nombk* não existir em *wpDoc*, um objeto objFaixa é devolvido.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser mostrar a faixa do marcador "MyBookmark" em seu documento:
 
@@ -35,7 +35,7 @@ Se quiser mostrar a faixa do marcador "MyBookmark" em seu documento:
  WP SELECT(WParea;$wpRange)
 ```
 
-#### Ver também 
+## Ver também 
 
 [WP DELETE BOOKMARK](wp-delete-bookmark.md)  
 [WP GET BOOKMARKS](wp-get-bookmarks.md)  

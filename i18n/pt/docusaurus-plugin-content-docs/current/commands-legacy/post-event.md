@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.POST EVENT.Summary-->O comando POST EVENT simula um evento de teclado ou de mouse.<!-- END REF--> Tem o mesmo efeito que quando o usuário atua através do teclado ou do mouse.  
   
@@ -67,12 +67,12 @@ Por exemplo, para simular a tecla Shift, passe Shift key bit.
   
 Se passa o parâmetro *processo,* o evento é enviado através do processo cujo número se passa em *processo*. Se passa 0 (*zero*) ou se omite este parâmetro, o evento é enviado ao nível da aplicação e o agendador de tarefas (scheduler) de 4D o enviará ao processo apropriado.  
 
-#### Ver também 
+## Ver também 
 
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

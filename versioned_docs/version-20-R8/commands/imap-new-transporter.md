@@ -23,7 +23,7 @@ displayed_sidebar: docs
 <!-- END REF -->
 
 
-#### Description
+## Description
 
 The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
@@ -44,13 +44,13 @@ In the *server* parameter, pass an object containing the following properties:
 
 >**Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 
-#### Result
+## Result
 
 The function returns an [**IMAP transporter object**](../API/IMAPTransporterClass.md#imap-transporter-object). All returned properties are **read-only**.
 
 >The IMAP connection is automatically closed when the transporter object is destroyed.
 
-#### Example
+## Example
 
 ```4d
 $server:=New object
@@ -71,7 +71,7 @@ End if
 
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

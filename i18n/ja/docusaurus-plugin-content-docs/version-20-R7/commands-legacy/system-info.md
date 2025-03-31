@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.System info.Summary-->**System info** コマンドは、そのコマンドが実行されたOS とマシンのシステムのハードウェア/ソフトウェア両面の特性に関する情報を格納したオブジェクトを返します。<!-- END REF-->
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 **注**: バーチャルマシンの場合、返される情報はバーチャルマシンのものとなります。
 
-#### 例題 
+## 例題 
 
 Windows マシン上で以下のコードを実行した場合:
 
@@ -140,13 +140,13 @@ Windows マシン上で以下のコードを実行した場合:
 }
 ```
 
-#### 参照 
+## 参照 
 
 [Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

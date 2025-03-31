@@ -15,7 +15,7 @@ title: VP SET DATE VALUE
 | dateValue     | Date   | -> | Valeur date à fixer |                  |
 | formatPattern | Text   | -> | Format de la valeur | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP SET DATE VALUE` command <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
 
@@ -34,7 +34,7 @@ The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pa
 
 For information on patterns and formatting characters, please refer to the [Date and time formats](../configuring.md#date-and-time-formats) section.
 
-#### Exemple
+## Exemple
 
 ```4d
 //Set the cell value to the current date
@@ -45,7 +45,7 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;4);Date("12/25/94");"d/m/yy ")
 VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 ```
 
-#### Voir également
+## Voir également
 
 [4D View Pro cell format](../configuring.md#cell-format)<br/>
 [VP SET DATE TIME VALUE](vp-set-date-time-value.md)<br/>

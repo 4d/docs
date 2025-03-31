@@ -357,11 +357,11 @@ Le style Disclosure est nommé "roundedDisclosure" dans la [grammaire JSON du st
 
 Le style de case à cocher personnalisé accepte une image d'arrière-plan personnalisée et permet de gérer des propriétés spécifiques :
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname)
+- [Chemin d'accès à l'arrière-plan](properties_TextAndPicture.md#background-pathname)
 - [Décalage de l'icône](properties_TextAndPicture.md#icon-offset)
-- [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) and [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) et [Marge verticale](properties_TextAndPicture.md#vertical-margin)
 
-It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states), that can be used in conjunction with a [4-state](properties_TextAndPicture.md#number-of-states) [background picture](properties_TextAndPicture.md#background-pathname).
+Il est généralement associé à une [image à 4 états](properties_TextAndPicture.md#number-of-states), qui peut être utilisée en conjonction avec une [image d'arrière-plan à 4 états](properties_TextAndPicture.md#background-pathname).
 
 #### Exemple JSON :
 
@@ -392,7 +392,7 @@ Toutes les cases à cocher partagent une même série de propriétés de base :
 > (1) Non pris en charge par les styles [Regular](#regular) et [Flat](#flat).<br/>
 > (2) Non pris en charge par les styles [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) et [Collapse/Expand](#collapseexpand).
 
-Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#button-styles) :
+Additional specific properties are available, depending on the [button style](#check-box-button-styles):
 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular: [Trois états](properties_Display.md#three-states)

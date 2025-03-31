@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Compatibility 
+## Compatibility 
 
 <!--REF #_command_.ADD RECORD.Summary-->*This command was implemented in 4D's early releases and is still useful for prototyping or basic developments.<!-- END REF--> However, to build customized and modern interfaces, it is now recommended to use generic forms based upon the [DIALOG](dialog.md) command which provide advanced features and better control over the data flow.*
 
-#### Description 
+## Description 
 
 The **ADD RECORD** command lets the user add a new record to the database for the table *aTable* or for the default table, if you omit the *aTable* parameter. 
 
@@ -44,7 +44,7 @@ After a call to **ADD RECORD**, OK is set to 1 if the record is accepted, to 0 i
 
 **Note:** Even when canceled, the record remains in memory and can be saved if [SAVE RECORD](save-record.md) is executed before the current record pointer is changed. 
 
-#### Example 1 
+## Example 1 
 
 The following example is a loop commonly used to add new records to a database: 
 
@@ -55,7 +55,7 @@ The following example is a loop commonly used to add new records to a database:
  Until(OK=0) // Until the user cancels
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example queries the database for a customer. Depending on the results of the search, one of two things may happen. If no customer is found, then the user is allowed to add a new customer with **ADD RECORD**. If at least one customer is found, the user is presented with the first record found, which can be modified with [MODIFY RECORD](modify-record.md): 
 
@@ -78,11 +78,11 @@ The following example queries the database for a customer. Depending on the resu
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 Accepting the record sets the OK system variable to 1; canceling it sets the OK system variable to 0\. The OK system variable is set only after the record is accepted or canceled.
 
-#### See also 
+## See also 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
@@ -90,7 +90,7 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

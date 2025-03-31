@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.CREATE THUMBNAIL.Summary-->**CREATE THUMBNAIL**コマンドは、指定した元のピクチャのサムネールを返します。<!-- END REF-->通常、サムネールはマルチメディアソフトウェアやWebサイトにおいてピクチャプレビューのために使用されます。
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 *depth* 引数は無視され、省略されなければなりません。コマンドは常に現在のスクリーン深度 (色数) を使用します。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

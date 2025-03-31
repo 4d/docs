@@ -15,11 +15,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary-->SAX GET XML PROCESSING INSTRUCTION コマンドは、*document* 引数で参照されるXMLドキュメント中で処理されるXML命令の名前と値を*name*と*value*に返します。<!-- END REF-->このコマンドはXML Processing Instructionイベントで呼び出されなければなりません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md "SAX Get XML node") コマンドの説明を参照してください。
 
-#### 例題 
+## 例題 
 
 以下のXMLコードがあります:
 
@@ -36,12 +36,12 @@ displayed_sidebar: docs
  SAX GET XML PROCESSING INSTRUCTION($DocRef;vName;vValue)
 ```
 
-#### 参照 
+## 参照 
 
 [SAX ADD PROCESSING INSTRUCTION](sax-add-processing-instruction.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB GET BODY PART.Summary-->**WEB GET BODY PART**コマンドはWebプロセスのコンテキストで使用され、マルチパートリクエストのボディ部を解析します。<!-- END REF-->引数には解析対象のパート番号を渡します。総パート数は[WEB Get body part count](web-get-body-part-count.md)コマンドで取得できます。
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **警告:** *mimeType* と *fileName* 引数に返される情報は、Webサーバーに送信されたHTTPリクエストに基づくもので、ファイルの内容は検証されません。それらの情報が正当であるかどうかの検証は開発者が行わなければなりません。
 
-#### 例題 
+## 例題 
 
 この例題ではWebフォームからHTTPサーバーに画像を何枚かアップロードし、それらを返されたWebページ上に表示します。Webフォームは以下のように表示されます:
 
@@ -88,13 +88,13 @@ GetFileのコードは以下の通りです:
  WEB SEND HTTP REDIRECT("/")
 ```
 
-#### 参照 
+## 参照 
 
 [WEB Get body part count](web-get-body-part-count.md)  
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET VARIABLES](web-get-variables.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

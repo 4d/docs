@@ -12,17 +12,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB STOP SERVER.Summary-->La commande **WEB STOP SERVER** stoppe le serveur Web de l'application 4D sur laquelle elle a été exécutée (4D ou 4D Server).<!-- END REF-->  
 Si le serveur Web était lancé, toutes les connexions Web sont interrompues et tous les process Web sont arrêtés.   
 Si le serveur Web n'était pas lancé, la commande ne fait rien.
 
-#### Voir aussi 
+## Voir aussi 
 
 [WEB START SERVER](web-start-server.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

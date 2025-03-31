@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.COPY NAMED SELECTION.Summary-->COPY NAMED SELECTION copia a seleção atual de *tabela* em uma seleção temporária *nome*.<!-- END REF--> A tabela comum do processo é utilizada se o parâmetro opcional *tabela* não são especificadas. O parâmetro *nome* contém uma cópia da seleção. A seleção atual e o registro atual de *tabela* para o processo não mudam.
 
@@ -22,7 +22,7 @@ Uma seleção temporária não contém em realidade registros, mas uma lista ord
 
 Utilize o comando [CLEAR NAMED SELECTION](clear-named-selection.md "CLEAR NAMED SELECTION") para liberar a memória utilizada por *nome*.
 
-#### Exemplo 
+## Exemplo 
 
 O seguinte exemplo permite verificar se há outras faturas vencidas na tabela *\[Pessoas*\]. A seleção é ordenada e depois é guardada. Nós pesquisamos todos os registros onde as faturas estão vencidas. Depois são reutilizadas a seleção e apagar a seleção temporária em memória. Apagar a seleção temporária em memória é opcional, em caso que o desenhista do banco queira conservar a seleção ordenada para uso futuro:
 
@@ -45,13 +45,13 @@ O seguinte exemplo permite verificar se há outras faturas vencidas na tabela *\
  CLEAR NAMED SELECTION("OrdemUsuario")
 ```
 
-#### Ver também 
+## Ver também 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

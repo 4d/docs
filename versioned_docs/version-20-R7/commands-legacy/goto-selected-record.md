@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GOTO SELECTED RECORD.Summary-->**GOTO SELECTED RECORD** moves to the specified record in the current selection of *aTable* and makes that record the current record.<!-- END REF--> The current selection does not change. The *record* parameter is not the same as the number returned by [Record number](record-number.md); it represents the record’s position in the current selection. The record’s position depends on how the selection is made and whether or not the selection is sorted.
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 If you pass 0 in *record*, there will no longer be a current record in *aTable*. When the “single” selection mode is chosen, this allows you to deselect all the records in a list, in particular in the case of included subforms.
 
-#### Example 
+## Example 
 
 The following example loads data from the field \[People\]Last Name into the *atNames* array. An array of long integers, called *alRecNum*, is filled with numbers that will represent the selected record numbers. Both arrays are then sorted:
 
@@ -58,11 +58,11 @@ The following object method for *atNames* selects the correct record in the \[Pe
  End case
 ```
 
-#### See also 
+## See also 
 
 [Selected record number](selected-record-number.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

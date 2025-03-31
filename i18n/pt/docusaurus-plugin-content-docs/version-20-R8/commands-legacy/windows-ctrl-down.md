@@ -13,17 +13,17 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 Windows Ctrl down retorna TRUE se a tecla Ctrl Windows estiver pressionada.  
 
 **Nota**: quando for chamada em uma plataforma Macintosh, Windows Ctrl down retorna TRUE se a tecla Macintosh Comando estiver pressionada.
 
-#### Exemplo 
+## Exemplo 
 
 Ver exemplo do comando [Shift down](shift-down.md).
 
-#### Ver também 
+## Ver também 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -32,7 +32,7 @@ Ver exemplo do comando [Shift down](shift-down.md).
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET DOCUMENT POSITION.Summary-->Este comando funciona únicamente en un documento abierto cuyo número de referencia se pasa en *docRef*.<!-- END REF--> 
 
@@ -25,13 +25,13 @@ Si omite el parámetro opcional *ancla*, la posición es relativa al inicio del 
 
 Dependiendo del ancla puede pasar valores positivos o negativos en *offset*.
 
-#### Ver también 
+## Ver también 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

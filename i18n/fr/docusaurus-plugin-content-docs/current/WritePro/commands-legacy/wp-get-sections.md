@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get sections.Summary-->La commande **WP Get sections** retourne une collection de toutes les sections définies dans le paramètre *objCible*.<!-- END REF-->
 
@@ -34,7 +34,7 @@ Pour les zones de texte et les images ancrées, **WP Get sections** retourne :
 
 Pour plus d'informations sur les sections, voir le paragraphe *Gestion des en-têtes, pieds de pages et sections*.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez modifier un attribut de la dernière section de la zone 4D Write Pro :
 
@@ -44,6 +44,6 @@ Vous souhaitez modifier un attribut de la dernière section de la zone 4D Write 
  WP SET ATTRIBUTES($colSections[$colSections.length-1];wk column count;3)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP Get section](wp-get-section.md)  

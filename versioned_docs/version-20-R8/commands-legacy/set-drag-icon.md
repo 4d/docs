@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->The **SET DRAG ICON** command associates the icon picture with the cursor during drag and drop operations that are managed by programming.<!-- END REF-->
 
@@ -30,7 +30,7 @@ In *horOffset* and *vertOffset*, you can pass offset values in pixels:
 
 If you omit this parameter, the cursor is placed at the center of the icon.
 
-#### Example 
+## Example 
 
 In a form, a user can generate a label by dragging and dropping a row. In the object method of the list box, you can write:
 
@@ -54,11 +54,11 @@ Note that you can modify the position of the cursor with respect to the picture:
 
 ![](../assets/en/commands/pict1204052.fr.png)
 
-#### See also 
+## See also 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

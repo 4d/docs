@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->can be an object varialble or a 4D object field.
 
@@ -53,7 +53,7 @@ The command returns the value of the *property*. Several types of data are suppo
 * (*4D Write Pro*) In versions prior to v16 R6, when *property* defined a 4D Write Pro image attribute (such as wk image), a text value containing a data URI was always returned. Starting with 4D v16 R6, 4D Write Pro image attributes are always returned as picture values. You must use a specific *property* like wk image url to get a data URI.
 * In versions prior to v16 R4, when *property* contains a null value and if the *type* parameter is not used, 4D returns an empty string. For 4D v16 R4 and higher versions, the Is null constant is returned in this case. To preserve compatibilty, this change takes effect only if the "Use object notation to access objects properties (Unicode required)" option is enabled in the database (see the *Compatibility page*).
 
-#### Example 1 
+## Example 1 
 
 Retrieving a text type value:
 
@@ -64,7 +64,7 @@ Retrieving a text type value:
  $FirstName:=OB Get($ref;"FirstName") // $FirstName = "Harry" (text)
 ```
 
-#### Example 2 
+## Example 2 
 
 Retrieving a real number value converted into a longint:
 
@@ -74,7 +74,7 @@ Retrieving a real number value converted into a longint:
  $age:=OB Get($ref ;"age";Is longint) // $age is a longint
 ```
 
-#### Example 3 
+## Example 3 
 
 Retrieving the values of an object:
 
@@ -86,7 +86,7 @@ Retrieving the values of an object:
  $sonsName:=OB Get($son ;"name") // $sonsName="john" (text)
 ```
 
-#### Example 4 
+## Example 4 
 
 Modifying the age of an employee twice:
 
@@ -107,7 +107,7 @@ Modifying the age of an employee twice:
  End for
 ```
 
-#### Example 5 
+## Example 5 
 
 When retrieving a date, the resulting value depends on the current database date settings.
 
@@ -133,7 +133,7 @@ When retrieving a date, the resulting value depends on the current database date
 
 **Note:** For more information on this setting, please refer to the *Compatibility page*.
 
-#### Example 6 
+## Example 6 
 
 Using nested objects:
 
@@ -152,7 +152,7 @@ Using nested objects:
   // $childName = "Monroe" (text)
 ```
 
-#### Example 7 
+## Example 7 
 
 Recovery in 4D of a time stored in an object:
 
@@ -168,7 +168,7 @@ Recovery in 4D of a time stored in an object:
   // $get_h = ?01:00:01?
 ```
 
-#### Example 8 
+## Example 8 
 
 Examples of working with 4D object fields:
 
@@ -182,7 +182,7 @@ Examples of working with 4D object fields:
  $lastName:=OB Get([People]Identity_OB;"Last name")
 ```
 
-#### Example 9 
+## Example 9 
 
 In the method of a form containing a 4D Write Pro area, you can write:
 
@@ -199,7 +199,7 @@ You can also read custom attributes of the documents:
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-#### Example 10 
+## Example 10 
 
 You want to know the size of a picture stored in an object attribute:
 
@@ -215,13 +215,13 @@ You want to know the size of a picture stored in an object attribute:
  $vPict:=OB Get($object;"photo") //"is picture" is useless in this case
 ```
 
-#### See also 
+## See also 
 
 *Field and Variable Types*  
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

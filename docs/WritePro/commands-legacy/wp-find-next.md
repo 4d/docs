@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Find next.Summary-->The **WP Find next** command searches the *targetObj*, after the *searchAfter* range, for the *searchValue* based on the *searchCondition*.<!-- END REF--> An optional parameter can be used to replace any results found. 
 
@@ -79,7 +79,7 @@ If *targetObj* is a 4D Write Pro document, found values are returned in the foll
 
 An empty range is returned if no results are found.
 
-#### Example 
+## Example 
 
 ```4d
  var $userSel ;$target ;$alphaRanges ;$nextRange : object
@@ -98,7 +98,7 @@ An empty range is returned if no results are found.
  $nextRange:=WP Find next($target;$userSel;"alpha";$options)
 ```
 
-#### See also 
+## See also 
 
 [WP Find all](wp-find-all.md)  
 [WP Find previous](wp-find-previous.md)  

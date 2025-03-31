@@ -12,7 +12,7 @@ displayed_sidebar: docs
 The **cs** keyword is described in the [**Concept page for Classes**](../Concepts/classes.md#cs).  
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

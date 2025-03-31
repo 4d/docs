@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Max.Summary-->**Max** retorna o valor máximo em *series*.<!-- END REF--> Se *series* é um campo indexado, o índice é utiliizado para buscar o máximo valor.  
   
@@ -29,7 +29,7 @@ Apenas valores de atributo numérico são computados. Se houver valores na rota 
 
 Se o comando for executado corretamente, a variável sistema OK toma o valor 1\. Se for interrompida (por exemplo se o usuário clicar no botão Deter o termômetro de progresso), a variável OK toma o valor 0.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir é um método de objeto da variável *vMax* localizada na área de quebra 0 do formulário. A variável é impressa ao final do relatório. O método de objeto atribui o valor máximo de campo à variável, o qual é impresso na última quebra do relatório.
 
@@ -52,7 +52,7 @@ O método a seguir é chamada para imprimir os registros da seleção e ativar o
 
 **Nota:** o parâmetro do comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre quebras, consulte os comandos do tema *Imprimir*.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este exemplo permite obter o valor mais elevado de um array:
 
@@ -63,15 +63,15 @@ Este exemplo permite obter o valor mais elevado de um array:
  vMax:=Max($ArrGrades)
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descrição do comando [Average](average.md).
 
-#### Ver também 
+## Ver também 
 
 [Min](min.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

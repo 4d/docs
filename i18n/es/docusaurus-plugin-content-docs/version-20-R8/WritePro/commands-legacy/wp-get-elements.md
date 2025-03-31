@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP Get elements.Summary-->El comando **WP Get elements** devuelve una colección de objetos que contienen párrafos, imágenes, tablas y/o líneas.<!-- END REF-->
 
@@ -49,7 +49,7 @@ Opcionalmente, puede pasar el parámetro *tipoElemento* para especificar los tip
 * Si un rango pasado en *targetObj* contiene un elemento que no está completamente contenido dentro del rango, el elemento completo se incluirá en los resultados. Por ejemplo, si el rango incluye parte de una tabla (pero no de toda la tabla), se devuelve la referencia para todo el elemento de la tabla, sin embargo, solo se incluyen las referencias de celda (párrafo) dentro del rango.
 * Si pasa wk type text box en el parámetro *tipoElemento*, *targetObj* puede contener un documento 4D Write Pro. Se devuelve un error si se pasa cualquier cosa que no sea un objeto documento en *targetObj* en este caso.
 
-##### Cómo se ordenan los elementos 
+### Cómo se ordenan los elementos 
 
 Los elementos en la colección devuelta se ordenan de forma diferente en función del contenido de *objRango*:
 
@@ -58,7 +58,7 @@ Los elementos en la colección devuelta se ordenan de forma diferente en funció
 
 Si quiere, por ejemplo, alternar el color de fondo para los párrafos en la parte del cuerpo de un documento, debe pasar el elemento del cuerpo en *objRango* y no el documento, para asegurarse de que el orden del elemento en la colección corresponde al orden del párrafo del documento.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea devolver una colección de todos los párrafos en un documento:
 
@@ -68,7 +68,7 @@ Desea devolver una colección de todos los párrafos en un documento:
   //devuelve una colección que contiene solo elementos de párrafo
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted desea alternar la alineación y el color de los párrafos en un documento: 
 
@@ -103,7 +103,7 @@ Usted desea alternar la alineación y el color de los párrafos en un documento:
  End for
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP Get element by ID](wp-get-element-by-id.md)  

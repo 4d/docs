@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT DUPLICATE.Summary-->The **OBJECT DUPLICATE** command is used to create a copy of the object designated by the *object* parameter in the context of the form being executed (Application mode).<!-- END REF--> The source form, generated in Design mode, is not modified. 
 
@@ -82,7 +82,7 @@ When the command is called in a context that is not supported,the object is not 
 
 If the command was executed correctly, the *OK* variable is set to 1\. Otherwise, it is set to 0\. 
 
-#### Example 1 
+## Example 1 
 
 Creation of a new button named "CancelButton" on top of the existing "OKButton" object and association with the *vCancel* variable:
 
@@ -90,7 +90,7 @@ Creation of a new button named "CancelButton" on top of the existing "OKButton" 
  OBJECT DUPLICATE(*;"OKButton";"CancelButton";vCancel)
 ```
 
-#### Example 2 
+## Example 2 
 
 Creation of a new radio button "bRadio6" based on the existing radio button "bRadio5". This button will be associated with the variable <>r6, integrated with the group of the "bRadio5" button and placed 20 pixels above it:
 
@@ -98,13 +98,13 @@ Creation of a new radio button "bRadio6" based on the existing radio button "bRa
  OBJECT DUPLICATE(*;"bRadio5";"bRadio6";<>r6;"bRadio5";0;20)
 ```
 
-#### See also 
+## See also 
 
 *Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

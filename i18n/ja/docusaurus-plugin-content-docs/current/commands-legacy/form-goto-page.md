@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE**コマンドは、現在表示されているフォームページを*pageNumber*で指定したフォームページに変更します。<!-- END REF--> 
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 *\** 引数は、複数のページを含むサブフォームタイプのページのコンテキストでコマンドが呼び出される場合に使用します。この場合、この引数を渡すと、コマンドは (コマンドを呼び出した) カレントサブフォームのページを変更します。*\** が省略された場合、デフォルトでコマンドは常に親フォームに適用されます。
 
-##### フォームページ管理コマンドについて 
+### フォームページ管理コマンドについて 
 
 標準アクションボタンは[FORM FIRST PAGE](form-first-page.md)、[FORM LAST PAGE](form-last-page.md)、[FORM NEXT PAGE](form-next-page.md)、[FORM PREVIOUS PAGE](form-previous-page.md)そして**FORM GOTO PAGE**と同じ動作を行い、タブコントロールやドロップダウンリストなどのオブジェクトに割り当てることができます。可能な限り、コマンドの代わりに標準アクションボタンを使用してください。 
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **注:** フォームのデザインは１ページからXページについて、また0ページ（0ページに配置されたオブジェクトはすべてのページに表示される）について作業を行うことができます。フォームを使用してページコマンドを呼び出した場合、1ページからXページについての作業を行うことになります。0ページ目は自動的に表示されているページと組み合わされます。
 
-#### 例題 
+## 例題 
 
 以下の例はボタンのオブジェクトメソッドです。これは指定したフォームページ3を表示します: 
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
  FORM GOTO PAGE(3)
 ```
 
-#### 参照 
+## 参照 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

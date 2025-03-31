@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->The NOTIFY RESOURCES FOLDER MODIFICATION command "forces" 4D Server to send a notification to all the connected 4D machines indicating that the Resources folder of the database has been modified so that they can synchronize their local Resources folder.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ Current settings are set either:
 * at the overall database level using the parameter of the Database settings. In this case, it applies to all the remote machines;
 * locally, using the [SET DATABASE PARAMETER](set-database-parameter.md) command executed on the remote machine (Auto synchro resources folder selector). In this case, it "overrides" the database setting and applies only to the remote machine for the duration of the session.
 
-#### See also 
+## See also 
 
 [Get 4D folder](get-4d-folder.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

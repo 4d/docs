@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->La commande **PRINT SELECTION** imprime la sélection courante de *laTable*.<!-- END REF--> Les enregistrements sont imprimés dans le formulaire sortie courant de la table du process en cours. **PRINT SELECTION** a le même effet que la commande **Imprimer...** du mode Développement. Si la sélection courante est vide, **PRINT SELECTION** ne fait rien.  
   
@@ -47,7 +47,7 @@ Après un appel à **PRINT SELECTION**, la variable OK prend la valeur 1 si l'im
 * Veillez à ce qu’aucune boîte de dialogue n’apparaisse sur le poste serveur (sauf besoin spécifique). Pour cela, il est nécessaire d’appeler la commande avec le paramètre *\** ou *\>*.
 * En cas de problème sur l’imprimante (plus de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant sélectionne la totalité des enregistrements de la table \[Personnes\]. La commande [DISPLAY SELECTION](display-selection.md) est alors appelée pour afficher les enregistrements et permettre à l'utilisateur de sélectionner ceux qu'il souhaite imprimer. Enfin, les enregistrements choisis sont récupérés à l'aide de la commande [USE SET](use-set.md) et imprimés par **PRINT SELECTION** :
 
@@ -58,14 +58,14 @@ L'exemple suivant sélectionne la totalité des enregistrements de la table \[Pe
  PRINT SELECTION([Personnes]) // Imprimer les enregistrements sélectionnés
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

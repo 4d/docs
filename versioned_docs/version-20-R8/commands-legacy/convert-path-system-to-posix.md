@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Convert path system to POSIX.Summary-->The Convert path system to POSIX command converts a pathname expressed with the system syntax as a pathname expressed with the POSIX (Unix) syntax.<!-- END REF-->
 
@@ -25,7 +25,7 @@ The command returns the complete pathname of the file or folder expressed in the
 
 The optional *\** parameter can be used to specify the encoding of the POSIX path. By default, Convert path system to POSIX does not encode the special characters of the POSIX path. If you pass the \* parameter, the special characters are translated (for example, "My folder" becomes "My%20folder").
 
-#### Example 1 
+## Example 1 
 
 Examples under macOS
 
@@ -44,7 +44,7 @@ Examples under macOS
   //returns "/resources/images"
 ```
 
-#### Example 2 
+## Example 2 
 
 Example under Windows
 
@@ -55,14 +55,14 @@ Example under Windows
   //returns "//srv/tempo/file.txt"
 ```
 
-#### See also 
+## See also 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

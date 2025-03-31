@@ -19,7 +19,7 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP SET FRAME.Summary-->**WP SET FRAME** コマンドは*wpArea* 引数で指定した4D Write Pro エリア内の、*frameSelector* 引数で指定したフレーム内、または *textBoxID* 引数で指定したテキストボックス内にカーソルを設定します。<!-- END REF-->
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 *frameSelector* \# wk text box の場合には、*textBoxID* 引数は渡しても無視されます。
 
-#### 例題 
+## 例題 
 
 カレントセレクションの左のフッターにカーソルを設定したい場合を考えます:
 
@@ -60,6 +60,6 @@ displayed_sidebar: docs
  WP SET FRAME(*;"WPArea";wk current section left footer)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get frame](wp-get-frame.md)  

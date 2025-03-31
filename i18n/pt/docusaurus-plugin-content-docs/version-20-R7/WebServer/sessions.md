@@ -38,7 +38,7 @@ Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no s
 
 ## Session implementation
 
-Cuando [se habilitan las sesiones](#enabling-sessions), se implementan mecanismos automáticos, basados en una cookie privada establecida por el propio 4D: "4DSID__AppName_", donde *AppName* es el nombre del proyecto de la aplicación. Este cookie faz referência à sessão web atual da aplicação.
+When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where *AppName* is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
 
 :::info
 

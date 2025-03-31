@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->The **LISTBOX SET PROPERTY** command sets the *value* for the *property* of the list box or list box column specified using the *object* and *\** parameters.<!-- END REF-->
 
@@ -63,7 +63,7 @@ In the *property* and *value* parameters, you indicate, respectively, the proper
 
 **Note:** If you pass a *property* that does not exist, or that is not available for the specified list box or column, for example lk font style expression in the case of an array type list box, the command does nothing and no error is triggered.
 
-#### Example 1 
+## Example 1 
 
 You want to make all columns of the "MyListbox" list box resizable:
 
@@ -71,7 +71,7 @@ You want to make all columns of the "MyListbox" list box resizable:
  LISTBOX SET PROPERTY(*;"MyListbox";lk column resizable;lk yes) //All columns of the "MyListbox" list box are set as resizable
 ```
 
-#### Example 2 
+## Example 2 
 
 You want to set a maximum width for the column whose name is "ProductNumber":
 
@@ -79,13 +79,13 @@ You want to set a maximum width for the column whose name is "ProductNumber":
  LISTBOX SET PROPERTY(*;"ProductNumber";lk column max width;200) //This column will have a maximum width of 200
 ```
 
-#### See also 
+## See also 
 
   
 *List Box*  
 [LISTBOX Get property](listbox-get-property.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

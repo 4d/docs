@@ -15,7 +15,7 @@ title: VP SET FIELD
 |field |Pointer|->|Reference to field in virtual structure|
 |formatPattern |Text|->|Format of field|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET FIELD` command <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->.
 
@@ -25,13 +25,13 @@ The *field* parameter specifies a 4D database [virtual field](../formulas.md#ref
 
 The optional *formatPattern* defines a pattern for the *field* parameter. You can pass any valid [custom format](../configuring.md#cell-format).
 
-#### Example
+## Example
 
 ```4d
 VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 ```
 
-#### See also
+## See also
 
 [VP SET VALUE](vp-set-value.md)
 

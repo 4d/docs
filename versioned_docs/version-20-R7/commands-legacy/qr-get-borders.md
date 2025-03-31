@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR GET BORDERS.Summary-->The **QR GET BORDERS** command allows you to retrieve the border style for a border of a given cell.<!-- END REF-->
 
@@ -65,11 +65,11 @@ If you pass an invalid *column* number, the error -9852 will be generated.
 If you pass an invalid *row* number, the error -9853 will be generated.  
 If you pass an invalid *border* parameter, the error -9854 will be generated.
 
-#### See also 
+## See also 
 
 [QR SET BORDERS](qr-set-borders.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

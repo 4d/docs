@@ -5,7 +5,7 @@ slug: /commands/variable-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* ; *BLOB* {; offset | *} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* ; *blob* {; offset } )<br/>**VARIABLE TO BLOB** ( *variable* ; *blob* {; *} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.VARIABLE TO BLOB.Summary-->El comando VARIABLE TO BLOB almacena la variable *variable* en el BLOB *blob*.<!-- END REF-->
 
@@ -46,15 +46,15 @@ Después del llamar al comando, si la variable ha sido almacenada con éxito, la
 
 **Nota sobre la independencia de la plataforma:** VARIABLE TO BLOB y [BLOB TO VARIABLE](blob-to-variable.md) utilizan un formato interno de 4D para administrar las variables almacenadas en los BLOBs. La ventaja es que usted no tiene que preocuparse por la conversión de bytes (byte swapping) entre plataformas mientras utiliza estos dos comandos. En otras palabras, un BLOB creado en Windows utilizando cualquiera de estos dos comandos puede ser reutilizado en Macintosh y viceversa.
 
-##### Nota 
+### Nota 
 
 **Nota de compatibilidad**: como este comando altera el blob pasado como parámetro, no soporta objetos blob (tipo 4D.Blob). Ver *Pasar blobs y objetos blob a comandos 4D* en developer.4d.com.
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 La variable OK toma el valor 1 si la variable ha sido almacenada correctamente, de lo contrario toma el valor 0.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Los dos métodos de proyecto siguientes permiten almacenar y recuperar rápidamente las variables en un BLOB:
 
@@ -91,7 +91,7 @@ Después de escribir estos métodos en su aplicación, puede escribir:
  RECUPERAR VARIABLES DEL BLOB(->vxBLOB;->vgImagen;->comoUnArray;->alOtroArray)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Los siguientes métodos de proyecto le permiten almacenar y recuperar rápidamente los arrays en los documentos en disco:  
   
@@ -133,13 +133,13 @@ Después de añadir estos métodos a su aplicación, puede escribir:
 
   
 
-#### Ver también 
+## Ver también 
 
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

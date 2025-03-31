@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Path to object.Summary-->El comando **Path to object**  devuelve un objeto que contiene las propiedades específicas de la *ruta* que pasó en el parámetro.<!-- END REF--> 
 
@@ -40,7 +40,7 @@ La extensión, si no está vacía, se devuelve independientemente de si la ruta 
   
 Tenga en cuenta que **Path to object**  solo maneja cadenas. Tampoco comprueba si la ruta es válida con respecto al tipo de ruta, ni a la existencia real de ningún archivo o carpeta. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Los siguientes ejemplos muestran varios resultados con rutas de archivos:
 
@@ -131,7 +131,7 @@ Si la última parte de la ruta es ".something", se considera como un nombre de a
   //$o.isFolder=false
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Puede combinar este comando con [Object to path](object-to-path.md) para cambiar el nombre de un archivo en una ruta:
 
@@ -149,7 +149,7 @@ Puede combinar este comando con [Object to path](object-to-path.md) para cambiar
   //$path="C:\4D\resources\images\4DOld.jpg"
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea saber la cantidad de subcarpetas en una ruta:
 
@@ -166,7 +166,7 @@ Desea saber la cantidad de subcarpetas en una ruta:
  ALERT("The path depth is: "+String($count))
 ```
 
-#### Ver también 
+## Ver también 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -175,7 +175,7 @@ Desea saber la cantidad de subcarpetas en una ruta:
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

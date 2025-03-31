@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 
+## 
 
 <!--REF #_command_.On Drop database method.Summary-->The **On Drop database method** is available in local or remote 4D applications.<!-- END REF-->
 
@@ -28,7 +28,7 @@ This database method is automatically executed in the case of objects being drop
 
 On Mac, you need to hold down the **Option**+**Command** keys during the drop in order for the database method to be called. 
 
-#### Example 
+## Example 
 
 This example can be used to open a 4D Write document that is dropped outside of any form:
 
@@ -41,6 +41,6 @@ This example can be used to open a 4D Write document that is dropped outside of 
  End if
 ```
 
-#### See also 
+## See also 
 
 *Drag and Drop*  

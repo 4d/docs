@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->La commande **METHOD GET PATHS** remplit le tableau *tabChemins* avec les chemins d’accès internes et les noms des méthodes de l’application du type défini par le paramètre *typeMéthode*.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Si la commande est exécutée depuis un composant, elle retourne par défaut les
 
 Si la commande détecte un nom de méthode dupliqué, l'erreur -9802 est générée ("Chemin d'objet non unique"). Il est recommandé dans ce cas d'utiliser le CSM afin de vérifier la structure de la base de données.
 
-#### Exemple 1 
+## Exemple 1 
 
 Récupération des méthodes projet placée dans un dossier "web" :
 
@@ -54,7 +54,7 @@ Récupération des méthodes projet placée dans un dossier "web" :
  METHOD GET PATHS("web";Path project method;tabChemins)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Récupération des méthodes base et des triggers :
 
@@ -62,7 +62,7 @@ Récupération des méthodes base et des triggers :
  METHOD GET PATHS(Path trigger+Path database method;tabChemins)
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Récupération des méthodes projet modifiées depuis le dernier backup :
 
@@ -76,16 +76,16 @@ Récupération des méthodes projet modifiées depuis le dernier backup :
  SAVE RECORD([Backups])
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Reportez-vous à l'exemple de la commande [METHOD SET CODE](method-set-code.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Current method path](current-method-path.md)  
 [METHOD GET FOLDERS](method-get-folders.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET ARRAY.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
@@ -38,7 +38,7 @@ Passez dans *typeTab* le type de tableau à associer à la list box ou à la col
 
 Passez dans le paramètre *ptrTab* un pointeur vers le tableau à utiliser pour prendre en charge le type de propriété.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez réutiliser le tableau de couleurs de police de la colonne 4 pour la colonne 10 :
 
@@ -52,7 +52,7 @@ Vous souhaitez réutiliser le tableau de couleurs de police de la colonne 4 pour
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez associer un tableau de hauteurs de ligne à une list box :
 
@@ -62,12 +62,12 @@ Vous voulez associer un tableau de hauteurs de ligne à une list box :
 
 **Note** : La propriété de list box **Tableau hauteurs lignes** nécessite la licence 4D View Pro. Pour plus d'informations, veuillez vous reporter à la section *4D View Pro*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

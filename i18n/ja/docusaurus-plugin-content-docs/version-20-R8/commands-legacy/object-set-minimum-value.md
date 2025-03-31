@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Summary-->**OBJECT SET MINIMUM VALUE**コマンドは、引数 *object* と *\** で指定したオブジェクトの最小値を、カレントプロセスにおいて変更します。<!-- END REF-->
 
@@ -25,12 +25,12 @@ displayed_sidebar: docs
 
 *minValue* 引数には、カレントプロセスにおいてオブジェクトに対して適用したい最小値を渡します。このとき、渡す最小値はオブジェクトの型と対応している必要があります。そうでない場合にはエラー18"フィールドタイプが対応していません。"が返されます。
 
-#### 参照 
+## 参照 
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

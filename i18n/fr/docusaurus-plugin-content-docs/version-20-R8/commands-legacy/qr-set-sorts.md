@@ -26,7 +26,7 @@ displayed_sidebar: docs
 * Si *tabTris{$i}* vaut 1, le tri est croissant.
 * Si *tabTris{$i}* vaut -1, le tri est décroissant.
 
-##### Etats tableaux croisés 
+### Etats tableaux croisés 
 
 Avec ce type d'état, le tableau ne peut pas comporter plus de deux éléments. Vous pouvez uniquement trier les colonnes (1) et les lignes (2). Les données (situées à l'intersection des colonnes et des lignes) ne peuvent pas être triées via cette commande. 
 

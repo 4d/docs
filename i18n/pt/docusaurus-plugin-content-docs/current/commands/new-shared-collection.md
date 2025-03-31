@@ -15,15 +15,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição
+## Descrição
 
 O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova coleção compartilhada vazia ou pré-preenchida<!-- END REF --> e retorna sua referência. Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
 
-Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](../Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](../API/CollectionClass.md#push) or [`map()`](../API/CollectionClass.md#map) because they automatically trigger an internal *Use...End use*). A leitura de um elemento sem um *Use... End use* estrutura é, no entanto, possível.
+A adição de um elemento a esta coleção utilizando o operador de atribuição deve ser rodeada pela estrutura [`Use...End use`](../Concepts/shared.md#useend-use), caso contrário é gerado um erro (isto não é necessário ao adicionar elementos utilizando funções como [`push()`](../API/CollectionClass.md#push) ou [`map()`](../API/CollectionClass.md#map) porque estes ativam automaticamente uma estrutura interna *Use...End use*). A leitura de um elemento sem um *Use... End use* estrutura é, no entanto, possível.
 
 :::info
 
-For more information on shared collections, please refer to the [Shared objects and collections](../Concepts/shared.md) page.
+Para obter mais informações sobre coleções compartilhadas, consulte a página [Objetos e coleções compartilhadas](../Concepts/shared.md).
 
 :::
 
@@ -54,7 +54,7 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 :::
 
-#### Exemplo
+## Exemplo
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -63,17 +63,17 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
  End use
 ```
 
-#### Veja também
+## Veja também
 
 [New collection](new-collection.md)\
 [New shared object](../commands-legacy/new-shared-object.md)\
 *Shared objects and shared collections*
 
-#### Propriedades
+## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1527                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1527                        |
+| Thread safe    | &check; |
 
 

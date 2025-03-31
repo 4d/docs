@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Archivo de historial
 ---
 
-Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
+Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los registros generalmente se inician o detienen utilizando los selectores de los comandos [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md) o [HTTP SET OPTION](../commands-legacy/http-set-option.md) y se almacenan en la [carpeta de registros](../Project/architecture.md#logs) del proyecto.
 
 La información histórica debe ser analizada para detectar y solucionar los problemas. Esta sección ofrece una descripción completa de los siguientes archivos de registro:
 
@@ -480,18 +480,18 @@ Como iniciar este historial:
 
 Los siguientes campos se registran para cada evento:
 
-| Nombre del campo | Tipo      | Descripción                                                                                |
-| ---------------- | --------- | ------------------------------------------------------------------------------------------ |
-| time             | Date/Time | Date and time of the event in ISO 8601 format                                              |
-| localPort        | Number    | Local port used for the connection                                                         |
-| peerAddress      | Text      | IP address of the remote peer                                                              |
-| peerPort         | Number    | Port of the remote peer                                                                    |
-| protocol         | Text      | Indicates whether the event is related to `TCP`                                            |
-| evento           | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
-| size             | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
-| excerpt          | Number    | First 10 bytes of data in hexadecimal format                                               |
-| textExcerpt      | Text      | First 10 bytes of data in text format                                                      |
-| comment          | Text      | Additional information about the event, such as error details or encryption status         |
+| Nombre del campo | Tipo       | Descripción                                                                                |
+| ---------------- | ---------- | ------------------------------------------------------------------------------------------ |
+| time             | Fecha/Hora | Date and time of the event in ISO 8601 format                                              |
+| localPort        | Number     | Local port used for the connection                                                         |
+| peerAddress      | Text       | IP address of the remote peer                                                              |
+| peerPort         | Number     | Port of the remote peer                                                                    |
+| protocol         | Text       | Indicates whether the event is related to `TCP`                                            |
+| evento           | Text       | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
+| size             | Number     | The amount of data sent or received (in bytes), 0 if not applicable     |
+| excerpt          | Number     | First 10 bytes of data in hexadecimal format                                               |
+| textExcerpt      | Text       | First 10 bytes of data in text format                                                      |
+| comment          | Text       | Additional information about the event, such as error details or encryption status         |
 
 ## Utilización de un archivo de configuración de log
 
@@ -502,7 +502,7 @@ Puede utilizar un **archivo de configuración de log** para gestionar fácilment
 Hay varias maneras de activar el archivo de configuración de registro, dependiendo de su configuración:
 
 - **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
-- **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la [carpeta de Configuración](../Project/architecture.md#settings-1) del proyecto (situada al mismo nivel que la [carpeta `Proyecto`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
+- **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la [carpeta de Configuración](../Project/architecture.md#settings-user) del proyecto (situada al mismo nivel que la [carpeta `Proyecto`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
 - **una aplicación construida**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
  - Windows: `Users\[userName]\AppData\Roaming\[application]`
  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`

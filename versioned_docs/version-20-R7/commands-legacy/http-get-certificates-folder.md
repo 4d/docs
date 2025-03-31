@@ -19,13 +19,13 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 :::
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HTTP Get certificates folder.Summary-->The **HTTP Get certificates folder** command returns the complete pathname of the active client certificates folder.<!-- END REF-->
 
 By default, 4D uses the "ClientCertificatesFolder" folder that is created next to the structure file (folder only created if necessary). However, you can create a custom folder for the current process using the [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md) command.
 
-#### Example 
+## Example 
 
 You want to change certificates folder temporarily:
 
@@ -37,11 +37,11 @@ You want to change certificates folder temporarily:
  HTTP SET CERTIFICATES FOLDER($certifFolder) //restore previous folder
 ```
 
-#### See also 
+## See also 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

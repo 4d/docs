@@ -14,19 +14,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Get document position.Summary-->Este comando sólo funciona en un documento abierto cuyo número de referencia se pasa en el parámetro *docRef*.<!-- END REF--> 
 
 Get document position devuelve la posición, a partir del inicio del documento, donde ocurrirá la próxima lectura ([RECEIVE PACKET](receive-packet.md "RECEIVE PACKET")) o escritura ([SEND PACKET](send-packet.md "SEND PACKET")).
 
-#### Ver también 
+## Ver también 
 
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

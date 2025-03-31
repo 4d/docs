@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ARRAY TO COLLECTION.Summary-->O comando **ARRAY TO COLLECTION**  \[#descv\]copia um ou mais *array*(s) nos elementos ou os valores de *nomeProp* da *coleção*\[#/descv\].<!-- END REF-->  
   
@@ -24,7 +24,7 @@ Este comando pode funcionar com uma *coleção* que contém valores ou uma *cole
 * Se omitir o parâmetro *nomeProp*, o comando copia todos os elementos de *array* a *coleção*. Se a *coleção* não estiver vazia, os elementos existentes são substituídos e são agregados novos elementos se o tamanho de *array* for maior que a longitude da *coleção*. Depois de que se executa o comando, a longitude da *coleção for* idêntica ao tamanho de *array*.
 * Se passar um ou mais parâmetros *nomeProp*, o comando cria ou substitui objetos como elementos de *coleção*. Cada objeto se completa com uma propriedade cujo nomee se oferece no parâmetro *nomeProp*, e cujo valor é o elemento de array correspondente. Se a *coleção* não estava vazia, os elementos existentes são substituidos e se agregam novos elementos se o tamanho do *array* for maior que a coleção. Depois de que se executar o comando, a longitude da *coleção for* a mesma que o tamanho do maior array.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Deseja copiar um array de texto em uma coleção:
 
@@ -42,7 +42,7 @@ Deseja copiar um array de texto em uma coleção:
   //...
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Se quiser copiar valores de campo em uma coleção de objetos por meio de arrays:
 
@@ -59,7 +59,7 @@ Se quiser copiar valores de campo em uma coleção de objetos por meio de arrays
   //...
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Se quiser copiar um array de texto em uma coleção compartilhada:
 
@@ -78,12 +78,12 @@ Se quiser copiar um array de texto em uma coleção compartilhada:
  End use
 ```
 
-#### Ver também 
+## Ver também 
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *Conversões de Tipo entre coleções e arrays 4D*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

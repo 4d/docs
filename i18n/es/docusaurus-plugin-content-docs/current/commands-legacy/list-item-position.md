@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.List item position.Summary-->El comando List item position devuelve la posición del elemento cuyo número de referencia o nombre de objeto se pasa en *refElem*, en la lista cuyo número de referencia se pasa en *lista*.<!-- END REF--> 
 
@@ -34,12 +34,12 @@ Si el elemento no es visible porque está ubicado en una lista contraída, List 
 
 Si el elemento no existe, List item position devuelve 0.
 
-#### Ver también 
+## Ver también 
 
 [Count list items](count-list-items.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

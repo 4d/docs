@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->The LISTBOX SORT COLUMNS command applies a standard sort to the rows of the list box defined by the *object* and *\** parameters on the basis of one or more column value(s).<!-- END REF-->
 
@@ -35,7 +35,7 @@ In conformity with the principle of list box operation, the columns are synchron
 **Note:** The **LISTBOX SORT COLUMNS** command does not take the *Sortable* listbox property into account.
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->The **FORM Get color scheme** command returns the name of the actual color scheme of the currently displayed form.<!-- END REF--> If there is no current form, the command returns an empty string.
 
@@ -28,7 +28,7 @@ The actual color scheme of a form is defined by:
 
 Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command for details about color scheme names. 
 
-#### Example 
+## Example 
 
 You want to load a picture depending on the form current scheme:
 
@@ -39,12 +39,12 @@ You want to load a picture depending on the form current scheme:
 
 **Note:** It is recommended to use *css* to adapt form objects design to the current scheme. 
 
-#### See also 
+## See also 
 
 [Get Application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->OBJECT GET COORDINATES コマンドは、引数 *\** および*object*によって指定された、現在のフォームのオブジェクトの*left*, *top*, *right* および *bottom*の座標 (ポイント) を返します。<!-- END REF-->
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 1枚目の画像のように、カラムはリストボックスより大きいので、その座標はフッターを含めてリストボックスの下限を越えています。2枚目の画像では、リストボックスはスクロールしており、カラムはヘッダーエリアと*Language* カラムの"下"へと移動しています。どの場合においても、実際に表示されている部分(緑の部分)を計算するためには、赤の領域の部分を差し引く必要があります。
 
-#### 例題 1 
+## 例題 1 
 
 "button"で始まるすべてのオブジェクトによって形成される長方形の座標を得たい場合を仮定します:
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
  OBJECT GET COORDINATES(*;"button@";vLeft;vTop;vRight;vBottom)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 インターフェースのために、クリックされたエリアを赤い四角で囲いたい場合を考えます:
 
@@ -78,14 +78,14 @@ displayed_sidebar: docs
 
 ![](../assets/en/commands/pict1740929.en.png)
 
-#### 参照 
+## 参照 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

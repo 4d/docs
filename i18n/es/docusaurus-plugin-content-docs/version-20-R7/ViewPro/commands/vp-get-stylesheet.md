@@ -16,7 +16,7 @@ title: VP Get stylesheet
 | sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
 | Resultado  | Object  | <- | Objeto hoja de estilo                                          | <!-- END REF --> |
 
-#### Descripción
+## Descripción
 
 El comando `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet.Summary -->devuelve el objeto de hoja de estilo *styleName* que contiene los valores de las propiedades que se han definido<!-- END REF -->.
 
@@ -29,7 +29,7 @@ Puede definir dónde obtener la hoja de estilo en el parámetro opcional *sheet*
 - `vk current sheet`
 - `vk workbook`
 
-#### Ejemplo
+## Ejemplo
 
 El código siguiente:
 
@@ -49,7 +49,7 @@ borderTop:{color:green,style:10}
 }
 ```
 
-#### Ver también
+## Ver también
 
 [4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
 [VP ADD STYLESHEET](vp-add-stylesheet.md)<br/>

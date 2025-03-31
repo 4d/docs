@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Note de compatibilité 
+## Note de compatibilité 
 
 <!--REF #_command_.Self.Summary-->Cette commande est conservée pour des raisons de compatibilité uniquement.<!-- END REF--> A compter de la version 12 de 4D, il est conseillé d'utiliser la commande [OBJECT Get pointer](object-get-pointer.md).
 
-#### Description 
+## Description 
 
 **Self** retourne un pointeur vers l'objet du formulaire dont la méthode objet est en cours d'exécution. 
 
@@ -29,17 +29,17 @@ Si **Self** est appelée en-dehors de ce contexte, elle retourne un pointeur [Is
 
 **Note :** Lorsqu’elle est utilisée avec une list box, la fonction **Self** retourne un pointeur vers la list box ou la colonne de la list box en fonction du contexte. Pour plus d'informations, reportez-vous à la section *Gestion programmée des objets de type List box*.
 
-#### Exemple 
+## Exemple 
 
 Référez-vous à l'exemple de la commande [RESOLVE POINTER](resolve-pointer.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 [This](../commands/this.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

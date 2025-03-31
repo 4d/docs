@@ -15,7 +15,7 @@ title: VP SET TIME VALUE
 |timeValue |Time|->|Time value to set|
 |formatPattern |Text|->|Format of value|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP SET TIME VALUE` command <!-- REF #_method_.VP SET TIME VALUE.Summary -->assigns a specified time value to a designated cell range<!-- END REF -->.
 
@@ -26,7 +26,7 @@ The *timeValue* parameter specifies a time expressed in seconds to be assigned t
 The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *timeValue* parameter.
 
 
-#### Example
+## Example
 
 ```4d
 //Set the value to the current time
@@ -36,7 +36,7 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);Current time)
 VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 ```
 
-#### See also
+## See also
 
 [Cell Format](../configuring.md#cell-format)<br/>
 [VP SET DATE TIME VALUE](vp-set-date-time-value.md)<br/>

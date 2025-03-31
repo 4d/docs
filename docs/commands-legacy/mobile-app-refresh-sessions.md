@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->The **MOBILE APP REFRESH SESSIONS** command checks all mobile application session files located in the MobileApps folder of the server, and updates existing session contents in memory for any edited files.<!-- END REF-->
 
@@ -31,7 +31,7 @@ The command can return one of the following errors, that can be handled through 
 | mobi               | 3              | The json file does not validate the json schema                |
 | mobi               | 4              | Connection token is not compliant with the current information |
 
-#### Example 
+## Example 
 
 You want to reset all current sessions for all mobile applications:
 
@@ -42,11 +42,11 @@ You want to reset all current sessions for all mobile applications:
  MOBILE APP REFRESH SESSIONS
 ```
 
-#### See also 
+## See also 
 
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

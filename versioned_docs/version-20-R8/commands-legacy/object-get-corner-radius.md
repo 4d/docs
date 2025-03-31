@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the *Corner radius property* or for the current process using the [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) command.
 
@@ -31,7 +31,7 @@ This command returns the radius of rounded corners in pixels.
 
 **Note:** The command returns 0 when applied to an object that does not support the corner radius property.
 
-#### Example 
+## Example 
 
 The following code could be added to a button method:
 
@@ -43,11 +43,11 @@ The following code could be added to a button method:
   // when reached, the button no longer has any effect
 ```
 
-#### See also 
+## See also 
 
 [OBJECT SET CORNER RADIUS](object-set-corner-radius.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Summary-->O comando **REJECT NEW REMOTE CONNECTIONS** especifica se o servidor de aplicações aceita ou não as novas conexões de usuários remotos.<!-- END REF--> 
 
@@ -21,7 +21,7 @@ Em *rejectStatus*, passe **true** para rejeitar novas conexões remotas. Ao pass
 
 **Nota**: este comando só pode ser executado em 4D Server. Se o método for utilizado localmente ou de forma remota em um único cliente, **REJECT NEW REMOTE CONNECTIONS** não faz nada.
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser rejeitar ou aceitar as novas conexões de clientes:
 
@@ -34,13 +34,13 @@ Se quiser rejeitar ou aceitar as novas conexões de clientes:
  REJECT NEW REMOTE CONNECTIONS(False)
 ```
 
-#### Ver também 
+## Ver também 
 
 [DROP REMOTE USER](drop-remote-user.md)  
 [Application info](application-info.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

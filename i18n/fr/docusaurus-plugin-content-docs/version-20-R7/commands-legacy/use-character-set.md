@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.USE CHARACTER SET.Summary-->La commande **USE CHARACTER SET** permet de modifier le jeu de caractères utilisé par 4D pour toutes les opérations de transfert entre la base et un document ou un port série pour le process courant.<!-- END REF--> Cela inclut les données transférées par les commandes d'import/export Texte, SYLK et DIF, ainsi que celles envoyées par les commandes [SEND PACKET](send-packet.md) et [RECEIVE PACKET](receive-packet.md) (paquets de type texte) et [RECEIVE BUFFER](receive-buffer.md). Les filtres n'ont pas d'effet sur les données transférées par les commandes [SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), et [RECEIVE PACKET](receive-packet.md) (paquets de type BLOB) et [RECEIVE VARIABLE](receive-variable.md).
 
@@ -24,7 +24,7 @@ Si *typeFiltre* est égal à 0, le filtre est défini pour l'exportation. Si *ty
 
 Lorsque le paramètre *\** est passé, le jeu de caractères par défaut est rétabli (filtre d'importation ou d'exportation, en fonction de la valeur de *typeFiltre*. Dans 4D, le jeu de caractères par défaut est UTF-8\. 
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant (mode Unicode) utilise le jeu de caractères UTF-16 pour exporter un texte, puis le jeu de caractères par défaut est rétabli :
 
@@ -34,11 +34,11 @@ L'exemple suivant (mode Unicode) utilise le jeu de caractères UTF-16 pour expor
  USE CHARACTER SET(*;0) // Rétablir le jeu par défaut
 ```
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 La variable système OK prend la valeur 1 si le filtre est correctement chargé, sinon elle prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
@@ -50,7 +50,7 @@ La variable système OK prend la valeur 1 si le filtre est correctement chargé,
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

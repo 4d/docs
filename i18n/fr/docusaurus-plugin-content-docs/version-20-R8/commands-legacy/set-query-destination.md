@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET QUERY DESTINATION.Summary-->La commande **SET QUERY DESTINATION** vous permet d'indiquer à 4D où placer les résultats de toutes les recherches qui suivent l'appel de cette commande dans le process courant.<!-- END REF-->
 
@@ -101,7 +101,7 @@ Le **nombre** d'enregistrements trouvés par la recherche sera placé dans la va
 
 En revanche, **SET QUERY DESTINATION** n'affecte pas les autres commandes qui modifient la sélection courante telles que [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md) , etc.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous créez un formulaire qui affiche les enregistrements de la table *\[Annuaire\]*. Vous créez un objet de type onglet nommé *asRolodex* (avec un onglet pour chaque lettre de l'alphabet) et un sous-formulaire qui affiche les enregistrements de la table *\[Annuaire\]*. En choisissant un onglet, vous affichez les enregistrements qui correspondent à cette lettre. Puisque, dans cet exemple, la table *\[Annuaire\]* contient des données statiques, vous ne voulez pas effectuer une recherche chaque fois que vous cliquez sur un onglet et donc vous dépensez moins de temps précieux à exécuter ces recherches. Pour faire ceci, vous pouvez placer vos recherches dans les sélections temporaires pour les réutiliser quand il le faut. Vous écrivez la méthode objet de l'onglet *asRolodex* comme indiquée ci-dessous :
 
@@ -156,7 +156,7 @@ Vous créez un formulaire qui affiche les enregistrements de la table *\[Annuair
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 La méthode ValeursUniques suivante vérifie si les valeurs sont uniques pour des champs dans une table de votre choix. L'enregistrement courant peut déjà exister ou vient d'être créé. 
 
@@ -240,7 +240,7 @@ Lorsque cette méthode est implémentée dans votre application, vous pouvez éc
   // ...
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET QUERY DESTINATION](get-query-destination.md)  
 [QUERY](query.md)  
@@ -252,7 +252,7 @@ Lorsque cette méthode est implémentée dans votre application, vous pouvez éc
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY LIMIT](set-query-limit.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

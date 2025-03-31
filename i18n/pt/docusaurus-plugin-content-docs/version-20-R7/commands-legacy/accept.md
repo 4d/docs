@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.ACCEPT.Summary-->O comando ACCEPT é utilizado em métodos de objeto ou de formulário (ou em subrotinas) para:
 
@@ -28,15 +28,15 @@ Este comando também pode ser utilizado no método de caixa de fechamento opcion
 
 Não é possível concatenar vários ACCEPT. A execução consecutiva de dois comandos ACCEPT em um método terá o mesmo resultado que a execução de um só comando. 
 
-##### Modo Headless 
+### Modo Headless 
 
 **O comando ACCEPT** é permitido no modo headless (computador sem periféricos), no contexto de áreas offscreen criadas por *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Ver também 
+## Ver também 
 
 [CANCEL](cancel.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

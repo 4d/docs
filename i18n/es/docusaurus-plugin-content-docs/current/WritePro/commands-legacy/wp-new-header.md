@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WP New header.Summary-->El comando **WP New header** crea y devuelve el encabezado asociado a la sección o subsección definida por el parámetro *wpSection*.<!-- END REF-->
 
 Si ya se ha definido un elemento de encabezado para la sección o subsección, se devuelve un objeto *indefinido* y se genera un error.
 
-#### Ejemplo 
+## Ejemplo 
 
 Desea crear un encabezado para las páginas correctas de una sección:
 
@@ -37,7 +37,7 @@ Desea crear un encabezado para las páginas correctas de una sección:
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [WP DELETE HEADER ](wp-delete-header.md)  
 [WP Get header](wp-get-header.md)  

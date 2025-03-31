@@ -13,13 +13,13 @@ title: VP COLUMN AUTOFIT
 | -------- | ------ | -- | --------- | ---------------- |
 | rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP COLUMN AUTOFIT` コマンドは、<!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->*rangeObj* 引数のレンジ内にあるカラムを、そのコンテンツに応じて自動的にリサイズします<!-- END REF -->。
 
 *rangeObj* 引数として、サイズを自動調整したいカラムを格納しているレンジオブジェクトを渡します。
 
-#### 例題
+## 例題
 
 以下のカラムはすべて同じサイズで、一部のテキストが表示しきれていません:
 
@@ -35,7 +35,7 @@ title: VP COLUMN AUTOFIT
 
 ![](../../assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
-#### 参照
+## 参照
 
 [VP ROW AUTOFIT](vp-row-autofit.md)
 

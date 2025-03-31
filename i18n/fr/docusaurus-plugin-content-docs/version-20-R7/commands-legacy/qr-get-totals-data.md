@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QR GET TOTALS DATA.Summary-->##### Etat en liste 
+<!--REF #_command_.QR GET TOTALS DATA.Summary-->### Etat en liste 
 
 La commande **QR GET TOTALS DATA** permet de récupérer le contenu d'une ligne de rupture spécifique (sous-total ou total général).<!-- END REF--> 
 
@@ -45,7 +45,7 @@ Si *opérateur* retourne 0, la cellule ne contient aucun opérateur.
 
 **Note :** Les paramètres *opérateur* et *texte* sont mutuellement exclusifs ; en fonction du contenu de la cellule, seul l'un des deux paramètres retournera une valeur.
 
-##### Etat tableau croisé 
+### Etat tableau croisé 
 
 La commande **QR GET TOTALS DATA** vous permet de recupérer le contenu d'une cellule spécifique.
 
@@ -65,11 +65,11 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.  
 Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

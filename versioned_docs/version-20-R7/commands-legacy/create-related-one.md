@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CREATE RELATED ONE.Summary-->**CREATE RELATED ONE** performs two actions.<!-- END REF--> If a related record does not exist for *aField* (that is, if a match is not found for the current value of *field*), **CREATE RELATED ONE** creates a new related record. 
 
@@ -21,11 +21,11 @@ To save a value in the appropriate field, assign values to the One field from th
 
 If a related record exists, **CREATE RELATED ONE** acts just like [RELATE ONE](relate-one.md) and loads the related record into memory.
 
-#### See also 
+## See also 
 
 [SAVE RELATED ONE](save-related-one.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

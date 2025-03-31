@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->El comando **GET MENU ITEM PROPERTY** devuelve, en el parámetro *valor*, el valor actual de la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF--> 
 
@@ -29,11 +29,11 @@ En el parámetro *propiedad*, pase la propiedad para la cual quiere obtener el v
 
 **Nota de compatibilidad**: por defecto, si la variable *valor* no se escribe o declara explícitamente como texto, el comando devolverá un nombre *Acción estándar*. Si desea obtener un valor numérico tal como se define en el tema de la constante *Valores para acción estándar asociada* (obsoleto), debe declarar la variable *valor* como entero largo.
 
-#### Ver también 
+## Ver también 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

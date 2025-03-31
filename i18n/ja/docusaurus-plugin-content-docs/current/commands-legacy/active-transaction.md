@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Active transaction.Summary-->**Active transaction**コマンドは、カレントプロセスがトランザクション中であり、かつそのトランザクションが停止されていない場合に**True**を返します。<!-- END REF-->カレントトランザクションがない場合、あるいはカレントトランザクションが停止されている場合には**False**を返します。トランザクションは [SUSPEND TRANSACTION](suspend-transaction.md) コマンドによって一時停止することができます。
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 詳細については、*トランザクションの停止*を参照ください。
 
-#### 説明 
+## 説明 
 
 カレントトランザクションのステータスを調べます:
 
@@ -37,14 +37,14 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [In transaction](in-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
 *トランザクションの停止*  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

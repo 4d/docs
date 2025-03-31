@@ -360,11 +360,11 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// Dans une méthode projet
-// Vous pouvez instancier un objet
+// In a project method
+// You can instantiate an object
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name" : "HelloWorld" ; "age":42}
+// $o = {"name":"John";"age":42}
 ```
 
 ### `propriété`
@@ -511,7 +511,7 @@ Dans le fichier de définition de la classe, les déclarations de propriétés c
 
 Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété.
 
-Si la fonction est déclarée dans une [classe partagée](#shared-classes), vous pouvez utiliser le mot-clé `shared` pour que la fonction puisse être appelée sans [structure `Use. .End use`](shared.md#useend-use). Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
+If the functions are declared in a [shared class](#shared-classes), you can use the `shared` keyword with them so that they could be called without [`Use...End use` structure](shared.md#useend-use). Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
 
 Le type de la propriété calculée est défini par la déclaration de type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
 
@@ -733,11 +733,11 @@ Les classes Singleton ne sont pas prises en charge par [les classes ORDA](../ORD
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton créé sur | Scope of process singleton                                                                                           | Scope of shared singleton | Scope of session singleton                                            |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
-| **4D single-user** | Process                                                                                                              | Application               | Application or Web/REST session                                       |
-| **4D Server**      | Process                                                                                                              | Machine 4D Server         | Client/server session or Web/REST session or Stored procedure session |
-| **4D remote mode** | Process (*note*: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant        | 4D remote machine or Web/REST session                                 |
+| Singleton créé sur      | Scope of process singleton                                                                                           | Scope of shared singleton | Scope of session singleton                                            |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------- |
+| **4D mono-utilisateur** | Process                                                                                                              | Application               | Application or Web/REST session                                       |
+| **4D Server**           | Process                                                                                                              | Machine 4D Server         | Client/server session or Web/REST session or Stored procedure session |
+| **4D mode distant**     | Process (*note*: les singletons ne sont pas synchronisés sur les process jumeaux) | Machine 4D distant        | 4D remote machine or Web/REST session                                 |
 
 Une fois instanciée, une classe singleton (et son singleton) existe aussi longtemps qu'une référence à cette classe existe quelque part dans l'application sur le poste.
 

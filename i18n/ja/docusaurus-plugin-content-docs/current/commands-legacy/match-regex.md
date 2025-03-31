@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Match regex.Summary-->Match regexコマンドを使用して、 "正規表現" と呼ばれるメタ言語で合成された規則のセットと文字列が一致しているかを確認します。<!-- END REF-->
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 *pattern*引数に渡す正規表現の構文についての詳細は、次のアドレスを参照してください:  
 *https://unicode-org.github.io/icu/userguide/strings/regexp.html#regular-expressions*
 
-#### 例題 1 
+## 例題 1 
 
 完全に対等なものを検索する(単純なシンタックス):  
 *vfound:=Match regex(pattern;mytext)*  
@@ -56,7 +56,7 @@ displayed_sidebar: docs
  QUERY BY FORMULA([Employees];Match regex(".*smith.*";[Employees]name))
 ```
 
-#### 例題 2 
+## 例題 2 
 
 位置を用いてテキストで検索する  
 vfound:=Match regex( pattern;mytext; start; pos\_found; length\_found)  
@@ -73,7 +73,7 @@ vfound:=Match regex( pattern;mytext; start; pos\_found; length\_found)
  Until(Not(vfound))
 ```
 
-#### 例題 3 
+## 例題 3 
 
 括弧を使用したグループキャプチャのサポートを用いて検索する。正規表現では ( ) を使用してグループを定義する。  
 vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_array)  
@@ -88,7 +88,7 @@ vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_ar
  End if
 ```
 
-#### 例題 4 
+## 例題 4 
 
 示されている位置のパターンの類似を制限しながら検索する  
 以前の2つの構文のうち１つの最後にスターを追加します。  
@@ -105,12 +105,12 @@ vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_ar
   
 **注**: 返された位置と長さはUnicodeモードまたはテキストが7ビットASCIIタイプの場合のみその意味を持ちます。
 
-#### エラー管理 
+## エラー管理 
 
 エラーのイベントでは、コマンドはエラーを生成しますが、[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドを用いてインストールされたメソッドで、これを検知することができます。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

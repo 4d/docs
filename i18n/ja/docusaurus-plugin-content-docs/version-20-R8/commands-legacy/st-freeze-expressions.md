@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->**ST FREEZE EXPRESSIONS**コマンドは、*object* 引数で指定されたマルチスタイルテキストあるいは4D Write Proのフィールドまたは変数内の4D 式の内容を固定化します。<!-- END REF-->これにより、ダイナミックな4D式はスタティックなテキストあるいは画像(4D Write Pro エリアのみ)へと変換され、*object* に関連付けられた参照は解除されます。
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 **注:** **ST FREEZE EXPRESSIONS** は*$wp\_pageNumber* または *$wp\_pageCount* を含んでいる4D Write Pro 式の固定化は行いません。より詳細な情報については、*フォーミュラの管理* の章を参照してください。
 
-#### 例題 
+## 例題 
 
 テキストの冒頭にカレントの時刻を挿入し、レコードに保存する前に固定化する場合を考えます:
 
@@ -61,12 +61,12 @@ displayed_sidebar: docs
  ST FREEZE EXPRESSIONS(*;"StyledText_t";1)
 ```
 
-#### 参照 
+## 参照 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

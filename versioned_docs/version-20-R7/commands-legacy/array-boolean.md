@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ARRAY BOOLEAN.Summary-->The ARRAY BOOLEAN command creates and/or resizes an array of [Boolean](# "Can be either TRUE or FALSE") elements in memory.<!-- END REF-->
 
@@ -32,7 +32,7 @@ While applying ARRAY BOOLEAN to an existing array:
 
 **Tip:** In some contexts, an alternative to using Boolean arrays is using an Integer array where each element “means true” if different from zero and “means false” if equal to zero.
 
-#### Example 1 
+## Example 1 
 
 This example creates a process array of 100 Boolean elements: 
 
@@ -40,7 +40,7 @@ This example creates a process array of 100 Boolean elements:
  ARRAY BOOLEAN(abValues;100)
 ```
 
-#### Example 2 
+## Example 2 
 
 This example creates a local array of 100 rows of 50 Boolean elements: 
 
@@ -48,7 +48,7 @@ This example creates a local array of 100 rows of 50 Boolean elements:
  ARRAY BOOLEAN($abValues;100;50)
 ```
 
-#### Example 3 
+## Example 3 
 
 This example creates an interprocess array of 50 Boolean elements and sets each even element to True: 
 
@@ -59,11 +59,11 @@ This example creates an interprocess array of 50 Boolean elements and sets each 
  End for
 ```
 
-#### See also 
+## See also 
 
 [ARRAY INTEGER](array-integer.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

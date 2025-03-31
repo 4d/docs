@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get 4D folder.Summary-->The **Get 4D folder** command returns the pathname to the active 4D folder of the current application, or to the 4D environment folder specified by the *folder* and *options* parameters, if passed.<!-- END REF--> This command allows you to get the actual pathname of the folders used by the 4D application. By using this command, you ensure that your code will work on any platform running any localized system.
 
@@ -39,7 +39,7 @@ The *options* parameter allows you to customize the local resources folder path.
 
 **Note:** If the **Get 4D folder** command is called from a remote 4D, the path returned is that of the remote machine, not that of 4D Server.
 
-##### Active 4D Folder 
+### Active 4D Folder 
 
 The 4D environment uses a specific folder to store the following information:
 
@@ -54,17 +54,17 @@ The active 4D folder is created by default at the following location:
 * On Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
 * On macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
 
-##### Licenses Folder 
+### Licenses Folder 
 
 Folder containing the Licenses files of the machine.
 
 **Note:** In the case of an application merged with 4D Volume Desktop, the licenses folder is included in the package of the application.
 
-##### Data Folder 
+### Data Folder 
 
 Path of the folder containing the current data file. The pathname is expressed using the standard syntax of the current platform. 
 
-##### 4D Client Database Folder 
+### 4D Client Database Folder 
 
 Path of the 4D folder automatically created on 4D remote machines for storing files and folders related to the database (resources, plug-ins, Resources folder, etc.). The command can return:
 
@@ -100,16 +100,16 @@ You can pass the following properties in the *options* object:
 
 **Note:** The returned path is expressed using the system syntax of the machine running the command. 
 
-##### Database Folder 
+### Database Folder 
 
 Folder containing the database structure file. The pathname is expressed using the standard syntax of the current platform.   
 With the 4D Client application, this constant is strictly equivalent to the previous 4D Client database folder constant: the command returns the pathname of the folder created locally.
 
-##### Database Folder Unix Syntax 
+### Database Folder Unix Syntax 
 
 Folder containing the database structure file. This constant designates the same folder as the previous one but the pathname returned is expressed using the Unix syntax (Posix), of the type /Users/... This syntax is mainly used when you use the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command under macOS.
 
-##### Current Resources folder 
+### Current Resources folder 
 
 Resources folder of the database. This folder contains the additional items (pictures, texts) used for the database interface. A component can have its own Resources folder. 
 
@@ -120,7 +120,7 @@ In client/server mode, this folder can be used to organize the transfer of custo
 * If the Resources folder does not exist for the database, executing the Get 4D folder command with the Current resources folder constant will create it.
 * On Windows, in merged client projects, the location of this folder is modified if the *ShareLocalResourcesOnWindowsClient* BuildApp key is used.
 
-##### Logs Folder 
+### Logs Folder 
 
 The Logs folder of the database, located at the same level as the data file. This folder centralizes the following log files of the current database:
 
@@ -135,19 +135,19 @@ The Logs folder of the database, located at the same level as the data file. Thi
 * An additional Logs folder, located in the system user preferences folder (Active 4D Folder), is used for maintenance log files (compact, verify, repair). It recommended to call [Get 4D file](get-4d-file.md)(Compacting log file) for example when you want to access such log files. This Logs folder is also used in cases where regular Logs folder cannot be written.
 * If the Logs folder does not exist for the database, executing the **Get 4D folder** command with the Logs folder constant will create it in the appropriate location.
 
-##### HTML Root Folder 
+### HTML Root Folder 
 
 Current HTML root folder of the database. The pathname returned is expressed with the standard syntax of the current platform. The HTML root folder is the folder in which the 4D Web server looks for the requested Web pages and files. By default, it is named **WebFolder** and is placed next to the structure file (or its local copy in the case of 4D in remote mode). Its location can be set on the Web/Configuration page of the Preferences or dynamically via the [WEB SET ROOT FOLDER](web-set-root-folder.md) command.
 
 **Note:** On Windows, in merged client projects, the location of this folder is modified if the *ShareLocalResourcesOnWindowsClient* BuildApp key is used. 
 
-##### MobileApps Folder 
+### MobileApps Folder 
 
 Folder containing all existing session files (.json) used by the 4D application to reference mobile app user sessions (i.e. sessions from 4D for iOS or 4D for Android apps). Session files are grouped in application subfolders and are automatically created. For more information, please refer to the [go mobile documentation](https://developer.4d.com/go-mobile/).
 
 This folder is located at the same level as the current 4D data file.
 
-##### 
+### 
 
 The optional *\** parameter is useful in the case of an architecture using components: it can be used to determine the database (host or component) for which you want to get the folder pathname. This parameter is only valid for Database folder, Database folder UNIX syntax and Current resources folder folders. It is ignored in all other cases.
 
@@ -161,7 +161,7 @@ The database folder (Database folder and Database folder UNIX syntax) returned d
    * In the case of an alias or shortcut, the command returns the pathname of the folder containing the original matrix database. The result differs according to the format of this database (.4dbase folder/package or .4db/.4dc file), as described above.  
  When the command is called from the host database, it always returns the pathname of the host database folder, regardless of whether or not the *\** parameter is passed.
 
-#### Example 1 
+## Example 1 
 
 During the startup of a single-user database, you want to load (or create) your own settings in a file located in the 4D folder. To do so, in the [On Startup database method](on-startup-database-method.md), you can write code similar to this:
 
@@ -181,7 +181,7 @@ During the startup of a single-user database, you want to load (or create) your 
  End if
 ```
 
-#### Example 2 
+## Example 2 
 
 This example illustrates the use of the Database folder UNIX syntax constant under Mac OS to list the contents of the database folder:
 
@@ -196,11 +196,11 @@ This example illustrates the use of the Database folder UNIX syntax constant und
 
 **Note:** Under Mac OS, it is necessary to put pathnames in quotes when they contain the names of files or folders with spaces in them. The escape sequence "\\" can be used to insert the quotation mark character into the string. You can also use the statement Char(Double quote). 
 
-#### System variables and sets 
+## System variables and sets 
 
 If the *folder* parameter is invalid or if the pathname returned is empty, the OK system variable is set to 0.
 
-#### See also 
+## See also 
 
 [COMPONENT LIST](component-list.md)  
 [System folder](system-folder.md)  
@@ -208,7 +208,7 @@ If the *folder* parameter is invalid or if the pathname returned is empty, the O
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

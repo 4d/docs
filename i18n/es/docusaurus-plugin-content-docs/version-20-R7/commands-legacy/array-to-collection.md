@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ARRAY TO COLLECTION.Summary-->El comando **ARRAY TO COLLECTION**  copia uno o más *array*(s) en los elementos o los valores de *nombreProp* de la *coleccion*.<!-- END REF-->  
   
@@ -24,7 +24,7 @@ Este comando puede funcionar con una *coleccion* que contiene valores o una *col
 * Si omite el parámetro *nombreProp*, tel comando copia todos los elementos del *array* a la *coleccion*. Si la *coleccion* no estaba vacía, los elementos existentes se reemplazan y se agregan nuevos elementos si el tamaño del *array* es mayor que la longitud de la *coleccion*. Después de que se ejecuta el comando, la longitud de la *coleccion* es idéntica al tamaño del *array*.
 * Si pasa uno o más parámetros *nombreProp*, el comando crea o reemplaza objetos como elementos de *coleccion*. Cada objeto se completa con una propiedad cuyo nombre se ofrece en el parámetro *nombreProp*, y cuyo valor es el elemento de array correspondiente. Si la *coleccion* no estaba vacía, los elementos existentes se reemplazan y se agregan nuevos elementos si el tamaño del *array* es mayor que la colección. Después de que se ejecuta el comando, la longitud de la *coleccion* es la misma que el tamaño del array más grande.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Desea copiar un array de texto en una colección:
 
@@ -42,7 +42,7 @@ Desea copiar un array de texto en una colección:
   //...
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea copiar valores de campo en una colección de objetos por medio de arrays:
 
@@ -59,7 +59,7 @@ Desea copiar valores de campo en una colección de objetos por medio de arrays:
   //...
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Desea copiar una array texto en una colección compartida:
 
@@ -78,12 +78,12 @@ Desea copiar una array texto en una colección compartida:
  End use
 ```
 
-#### Ver también 
+## Ver también 
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
 *Conversiones de tipo entre las colecciones y los arrays 4D*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

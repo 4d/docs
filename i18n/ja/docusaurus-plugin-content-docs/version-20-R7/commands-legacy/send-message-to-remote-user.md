@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Summary-->**SEND MESSAGE TO REMOTE USER** コマンドは、全てのリモートユーザー、あるいは特定のリモートユーザーに対して、メッセージを送信します。<!-- END REF-->引数には、表示されるメッセージのテキストを渡します。これはセッションユーザーのスクリーン上に、アラート画面あるいは通知として表示されます。
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **注**: このコマンドは4D Server 上でのみ実行可能です。コマンドを呼び出しているメソッドが、リモートクライアントでローカルに実行されていた場合、あるいはシングルユーザー版4D で実行されていた場合、**SEND MESSAGE TO REMOTE USER** は何もしません。
 
-#### 例題 
+## 例題 
 
 全ユーザーにメッセージを送信した後に、特定のユーザーに別のメッセージを送信したい場合を考えます:
 
@@ -47,11 +47,11 @@ displayed_sidebar: docs
  End for each
 ```
 
-#### 参照 
+## 参照 
 
 [DROP REMOTE USER](drop-remote-user.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get position.Summary-->La commande **WP Get position** retourne un objet décrivant la position courante de *objCible*.<!-- END REF-->
 
@@ -65,7 +65,7 @@ Si *presentation* est omis, la présentation 4D Write Pro (0) est utilisée par 
    Si *objCible* est affiché dans une zone formulaire 4D Write Pro, assurez-vous que les paramètres d'affichage de la zone correspondent aux paramètres d'affichage de la commande afin d'obtenir des informations cohérentes. Notez également que si ces paramètres sont différents dans la zone, 4D Write Pro devra "cloner" le document pour calculer la présentation à chaque appel de la commande, ce qui peut prendre un certain temps. Pour des raisons de performances, il est recommandé dans ce cas de créer le document hors ligne et de le copier dans la zone sur le formulaire uniquement lorsque la génération est terminée.
 * Cette commande ne doit pas être appelée dans des événements fréquemment générés (tels que On After Edit), étant donné que, par exemple, *result.rangeHeight* peut nécessiter de coûteux calculs de rendu à chaque appel d'événement.
 
-#### Exemple 1 
+## Exemple 1 
 
 Vous souhaitez connaître le numéro de page d'une plage :
 
@@ -76,7 +76,7 @@ Vous souhaitez connaître le numéro de page d'une plage :
  ALERT("Votre sélection se trouve en page  "+String($rangePosition.page))
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Vous voulez appliquer la couleur bleue pour le texte de la première et de la dernière page d'un document :
 
@@ -98,7 +98,7 @@ Vous voulez appliquer la couleur bleue pour le texte de la première et de la de
  End for each
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 Lors de la création d'un document, vous souhaitez éviter les fractionnements de paragraphes :
 
@@ -132,7 +132,7 @@ Lors de la création d'un document, vous souhaitez éviter les fractionnements d
     End for each
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 Les exemples suivants illustrent les coordonnées retournées du rectangle englobant, en fonction de *objCible*.
 
@@ -153,6 +153,6 @@ Les exemples suivants illustrent les coordonnées retournées du rectangle englo
 
 ![](../../assets/en/WritePro/commands/pict4096411.en.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [WP PRINT](wp-print.md)  

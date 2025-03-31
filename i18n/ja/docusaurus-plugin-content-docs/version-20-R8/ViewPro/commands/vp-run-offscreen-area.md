@@ -14,7 +14,7 @@ title: VP Run offscreen area
 | parameters | Object | ->                          | オフスクリーンエリアの属性を格納するオブジェクト                              |                  |
 | 戻り値        | 複合     | <- | `.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Run offscreen area` コマンドは、<!-- REF #_method_.VP Run offscreen area.Summary -->メモリ内にオフスクリーンエリアを作成し、これを利用して 4D View Pro エリアのコマンドやファンクションを処理することができます<!-- END REF -->。
 
@@ -45,7 +45,7 @@ title: VP Run offscreen area
 - `WA Evaluate JavaScript`
 - `WA EXECUTE JAVASCRIPT FUNCTION`
 
-#### 例題 1
+## 例題 1
 
 オフスクリーンの 4D View Pro エリアを作成し、そこからセルの値を取得します:
 
@@ -72,7 +72,7 @@ $o:=cs.OffscreenArea.new()
 $result:=VP Run offscreen area($o)
 ```
 
-#### 例題 2
+## 例題 2
 
 大きなドキュメントをオフスクリーンで読み込み、計算の評価が完了するのを待ってドキュメントを PDF として書き出します:
 
@@ -127,6 +127,6 @@ $o:=cs.OffscreenArea.new()
 $result:=VP Run offscreen area($o)
 ```
 
-#### 参照
+## 参照
 
 [ブログ記事: 4D View Pro:ドキュメントの読み込み終了](https://blog.4d.com/ja/4d-view-pro-end-of-document-loading/)

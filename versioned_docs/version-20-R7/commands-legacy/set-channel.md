@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CHANNEL.Summary-->The **SET CHANNEL** command opens a serial port or a document.<!-- END REF--> You can open only one serial port or one document at a time with this command. To close an opened serial port, pass SET CHANNEL (11).
 
@@ -28,7 +28,7 @@ The description of SET CHANNEL is composed of two sections:
 * Working with Serial Ports
 * Working with Documents
 
-#### Working with Serial Ports: SET CHANNEL (port;settings) 
+## Working with Serial Ports: SET CHANNEL (port;settings) 
 
 The first form of the **SET CHANNEL** command opens a serial port, setting the protocol and other port information. Data can be sent with [SEND PACKET](send-packet.md), [SEND RECORD](send-record.md) or [SEND VARIABLE](send-variable.md), and received with [RECEIVE BUFFER](receive-buffer.md), [RECEIVE PACKET](receive-packet.md), [RECEIVE VARIABLE](receive-variable.md) or [RECEIVE RECORD](receive-record.md).
 
@@ -49,14 +49,14 @@ The following table lists the values for *port*:
 
 **Important:** The value you pass in *port* must refer to an existing serial COM port recognized by the operating system. For example, in order to be able to use the values 101, 103 and 125, the serial ports COM1, COM3 and COM25 must have been set up correctly.
 
-##### Note on serial ports 
+### Note on serial ports 
 
 In a standard configuration Mac OS and Windows support two serial ports: on Mac OS, the modem port and the printer port; on Windows, the COM1 and COM2 ports. However, additional serial ports can be added by the use of extension boards. Originally, 4D only adressed two standard serial ports and it was only later that the support of additional ports was implemented. For compatibility reasons, both addressing systems were kept.  
 
 * If you want to address a standard serial port (printer/COM2 or modem/COM1), you can either pass in the *port* parameter one of the following values 0, 1, 20, 21, 30 and 31 (that corresponds to the old addressing method), or a value greater than 100 (please see the following explanation).
 * If you want to address additional serial ports, you need to pass the value N+100 (where N is the value of the port to address). You may also consider adding 100 or 200 to the value mentioned above (N+100), if you want to select respectively a software or a hardware protocol.
 
-##### Example 1 
+### Example 1 
 
 If you want to use the printer/COM2 port with no protocol, you can use one of the following syntaxes:
 
@@ -70,7 +70,7 @@ or
  SET CHANNEL(102;param)
 ```
 
-##### Example 2 
+### Example 2 
 
 If you want to use the modem/COM1 port with the XON/XOFF protocol, you can use one of the following syntaxes:
 
@@ -84,7 +84,7 @@ or
  SET CHANNEL(201;param)
 ```
 
-##### Example 3 
+### Example 3 
 
 If you want to use the COM 25 port with the RTS/CTS protocol, you need to use the following syntax: 
 
@@ -125,7 +125,7 @@ The *settings* parameter sets the speed, number of data bits, number of stop bit
 
 **Tip:** The various numeric values to be accumulated and passed in *port* and *settings* (but not including the values for COM1...COM99) are available as predefined constants in the theme *Communications* within the Design environment Explorer windows. For COM1...COM99, use numeric literals.
 
-#### Working with Documents on Disk: SET CHANNEL(operation;document) 
+## Working with Documents on Disk: SET CHANNEL(operation;document) 
 
 The second form of the **SET CHANNEL** command allows you to create, open, and close a document. Unlike the *System Documents* commands, it can open only one document at a time. The document can be read from or written to.
 
@@ -147,11 +147,11 @@ For example, to display an Open File dialog box to open a text file, you would u
 
 All of the operations in this table set the Document system variable if appropriate. They also set the OK system variable to 1 if the operation was successful. Otherwise, the OK system variable is set to 0.
 
-##### Example 4 
+### Example 4 
 
 See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) and [RECEIVE RECORD](receive-record.md) commands.
 
-#### See also 
+## See also 
 
 [Append document](append-document.md)  
 [Communications](/category/commands/Communications)  
@@ -167,7 +167,7 @@ See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-time
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

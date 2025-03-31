@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->O comando PRINTERS LIST preenche os arrays passados como parâmetros com os nomes e opcionalmente com a localização os nomes personalizados e os modelos de impressão disponíveis para a máquina.<!-- END REF-->
 
@@ -36,16 +36,16 @@ Em Windows, o nome de una impressora pode ser modificado manualmente ao nível d
   
 Em Mac OS, esta verificação pode ser realizada a cabo utilizando o nome da impressora (nome do servidor de impressão), que é o mesmo para cada máquina que estiver conectada.
 
-#### Variáveis e conjuntos do sistema 
+## Variáveis e conjuntos do sistema 
 
 A variável sistema OK toma o valor 1 se o comando tiver sido executado corretamente; do contrário, toma o valor 0 e os arrays se devolvem vazios. 
 
-#### Ver também 
+## Ver também 
 
 [Get current printer](get-current-printer.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

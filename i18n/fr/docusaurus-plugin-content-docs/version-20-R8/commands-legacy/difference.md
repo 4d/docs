@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DIFFERENCE.Summary-->**DIFFERENCE** fusionne *ensemble1* et *ensemble2* et exclut de l'ensemble *résultat* tous les enregistrements se trouvant dans *ensemble2*.<!-- END REF--> Autrement dit, un enregistrement est inclus dans l'ensemble *résultat* s'il appartient à *ensemble1* mais n'appartient pas à *ensemble2*. Le tableau suivant liste les résultats possibles d'une opération de différence d'ensembles.
 
@@ -34,7 +34,7 @@ L'ensemble *résultat* est créé par **DIFFERENCE**. Il remplace tout ensemble 
 
 **4D Server :** En mode client/serveur, les ensembles sont "visibles" en fonction de leur type (interprocess, process et local) et de leur lieu de création (serveur ou client). **DIFFERENCE** requiert que les trois ensembles soient visibles sur la même machine. Pour plus d'informations sur ce point, reportez-vous au paragraphe *4D Server, ensembles et sélections* dans le manuel de référence de 4D Server.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant exclut les enregistrements sélectionnés par l'utilisateur. Les enregistrements sont affichés à l'écran par l'instruction suivante :
 
@@ -51,12 +51,12 @@ Un bouton associé à une méthode objet est placé en bas de la liste. La méth
  CLEAR SET("$Courant") // Effacement de l'ensemble
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

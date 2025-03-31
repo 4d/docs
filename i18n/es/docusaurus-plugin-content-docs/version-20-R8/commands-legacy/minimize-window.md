@@ -13,13 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.MINIMIZE WINDOW.Summary-->El comando MINIMIZE WINDOW define el tamaño de la ventana, cuyo número se pasó en *ventana*, del tamaño que tenía antes de ser maximizada.<!-- END REF--> Si se omite *ventana*, el comando aplica a cada ventana de la aplicación (Windows) o a la ventana del primer plano del proceso actual (en Mac OS). 
 
 Este comando tiene el mismo efecto que un clic en la casilla de reducción de la aplicación 4D: 
 
-##### En Windows 
+### En Windows 
 
 La ventana vuelve a su tamaño inicial, es decir, su tamaño antes de ser maximizada. Si se omite el parámetro *ventana*, todas las ventanas de la aplicación son redimensionadas a su tamaño inicial. 
 
@@ -28,7 +28,7 @@ La ventana vuelve a su tamaño inicial, es decir, su tamaño antes de ser maximi
   
 Casilla de reducción en Windows
 
-##### Bajo Mac OS 
+### Bajo Mac OS 
 
 El tamaño de la ventana se reduce a su tamaño inicial (su tamaño antes de ser maximizada). Si el parámetro ventana se omite, la ventana del primer plano del proceso actual retorna a su tamaño inicial. 
 
@@ -47,12 +47,12 @@ Windows
 ![](../assets/en/commands/pict39372.es.png)  
 Mac OS
 
-#### Ver también 
+## Ver también 
 
 [MAXIMIZE WINDOW](maximize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

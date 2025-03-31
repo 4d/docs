@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QUERY BY EXAMPLE.Summary-->**QUERY BY EXAMPLE** performs the same action as the Query by Example menu command in the Design environment.<!-- END REF--> It displays the current input form as a query window. **QUERY BY EXAMPLE** queries *aTable* for the data that the user enters into the query window. The form must contain the fields that you want the user to be able to query. The query is optimized; indexed fields are automatically used to optimize the query.
 
 See the 4D Design Reference manual for information about using the Query by Example menu command in the Design environment.
 
-#### Example 
+## Example 
 
 The method in this example displays the MyQuery form to the user. If the user accepts the form and performs the query (that is, if the OK system variable is set to 1), the records that meet the query criteria are displayed:
 
@@ -32,16 +32,16 @@ The method in this example displays the MyQuery form to the user. If the user ac
  End if
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the user clicks the Accept button or presses the Enter key, the OK system variable is set to 1 and the query is performed. If the user clicks the Cancel button or presses the “cancel” key combination, the OK system variable is set to 0 and the query is canceled.
 
-#### See also 
+## See also 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

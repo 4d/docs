@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Is field value Null.Summary-->O comando Is field value Null retorna **True** se o campo determinado pelo parâmetro *Campo* contem o valor NULL e **False** do contrário.<!-- END REF-->  
 
@@ -24,12 +24,12 @@ O valor retornado por esse comando só tem significado se a opção *Mapear valo
 
 **Nota:** este comando não pode ser utilizado com objetos e propriedades de objetos. Os valores nulos nos campos objeto são manejados através do comando [Null](null.md), 
 
-#### Ver também 
+## Ver também 
 
 [Null](null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

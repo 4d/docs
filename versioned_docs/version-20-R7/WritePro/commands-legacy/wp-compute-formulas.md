@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP COMPUTE FORMULAS.Summary-->The **WP COMPUTE FORMULAS** command evaluates the formulas in *targetObj*.<!-- END REF-->
 
@@ -27,7 +27,7 @@ In the *targetObj* parameter, you can pass:
 
 **Note:** When you pass a section in *targetObj*, only image formulas or formulas in text boxes anchored to this section or all sections are computed. If anchored to a page or to the embedded view, their formulas are not computed. Pass the document in *targetObj* to compute all anchored element formulas. 
 
-#### Example 
+## Example 
 
 To update the formulas in a document:
 
@@ -41,7 +41,7 @@ To update all formulas in the first section of a document:
  WP COMPUTE FORMULAS(WP Get section(WriteProArea;1))
 ```
 
-#### See also 
+## See also 
 
 *Managing formulas*  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  

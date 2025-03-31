@@ -23,7 +23,7 @@ title: VP REMOVE TABLE
 |options|Integer|->|Additional options|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](vp-create-table.md).
 
@@ -41,7 +41,7 @@ In *options*, you can specify additional behavior. Possible values are:
 
 Table names are defined at sheet level. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
 
-#### Example
+## Example
 
 To remove the "people" table in the second sheet and keep the data in the cells:
 
@@ -49,6 +49,6 @@ To remove the "people" table in the second sheet and keep the data in the cells:
 VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 ```
 
-#### See also
+## See also
 
 [VP CREATE TABLE](vp-create-table.md)

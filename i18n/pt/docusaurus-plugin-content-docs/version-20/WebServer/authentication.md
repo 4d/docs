@@ -25,7 +25,7 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ### Personalizado (padrão)
 
-Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
+Basicamente, nesse modo, cabe ao desenvolvedor definir como autenticar os usuários. 4D só avalia solicitações HTTP [que requerem uma autenticação](#database-method-calls).
 
 Este modo de autenticação é o mais flexível porque permite que você:
 
@@ -115,7 +115,7 @@ Estes parâmetros devem ser declarados da seguinte forma:
 //Código do método
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md) syntax:
+Como alternativa, você pode usar a sintaxe de [parâmetros temporais](Concepts/parameters.md):
 
 ```4d
 // Método de banco de dados de autenticação na Web
@@ -125,7 +125,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md) syntax
   -> $RequestAccepted : Boolean
 
 ```
-> Todos os parâmetros do método de banco de dados `On Web Authentication` não são necessariamente preenchidos. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
+> Todos os parâmetros do método de banco de dados `On Web Authentication` não são necessariamente preenchidos. As informações recebidas pelo método de banco de dados dependem do [modo de autenticação](#authentication-modes) selecionado).
 
 
 #### $1 - URL

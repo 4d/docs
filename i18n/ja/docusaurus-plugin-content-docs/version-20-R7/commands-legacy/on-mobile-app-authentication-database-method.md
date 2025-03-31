@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.On Mobile App Authentication database method.Summary-->**ドキュメンテーションは移動しました**
 
 このデータベースメソッドについてのドキュメンテーションはアップデートされ、 [developer.<!-- END REF-->4d.com/go-mobile](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) へと移されました。
 
-#### 参照 
+## 参照 
 
   
 [MOBILE APP REFRESH SESSIONS](mobile-app-refresh-sessions.md)  

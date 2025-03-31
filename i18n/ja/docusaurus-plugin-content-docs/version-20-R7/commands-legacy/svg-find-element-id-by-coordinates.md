@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SVG Find element ID by coordinates.Summary-->SVG Find element ID by coordinatesコマンドは、 *pictureObject*引数で指定されたSVGピクチャ内で、*x*, *y*座標により設定された場所で見つかるXML要素のID ("id" または "xml:id" 属性) を返します。<!-- END REF--> このコマンドは特に、SVGオブジェクトを使用してインタラクティブなインタフェースを作成する際に使用します。
 
@@ -44,15 +44,15 @@ displayed_sidebar: docs
 * ID属性値が空の文字列の場合。
 **Note:** このコマンドはopacity値 ("fill-opacity" 属性) が0.01より小さいのオブジェクトを検知することはできません。
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 *pictureObject*が有効なSVGピクチャを含んでいない場合、コマンドは空の文字列を返しOKシステム変数に0が設定されます。コマンドが正しく実行されればOKシステム変数に1が設定されます。 
 
-#### 参照 
+## 参照 
 
 [SVG Find element IDs by rect](svg-find-element-ids-by-rect.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

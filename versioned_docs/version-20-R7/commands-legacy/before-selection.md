@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Before selection.Summary-->**Before selection** returns TRUE when the current record pointer is before the first record of the current selection of *table*.<!-- END REF-->is commonly used to check whether or not [PREVIOUS RECORD](previous-record.md) has moved the current record pointer before the first record. If the current selection is empty, **Before selection** returns TRUE.
 
@@ -37,7 +37,7 @@ To move the current record pointer back into the selection, use [FIRST RECORD](f
  End case
 ```
 
-#### Example 
+## Example 
 
 This form method is used during the printing of a report. It sets a variable, *vTitle*, to print in the Header area on the first page:
 
@@ -55,7 +55,7 @@ This form method is used during the printing of a report. It sets a variable, *v
  End case
 ```
 
-#### See also 
+## See also 
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
@@ -63,7 +63,7 @@ This form method is used during the printing of a report. It sets a variable, *v
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

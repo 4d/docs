@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.New data key.Summary-->La commande **New data key** génère une clé de chiffrement des données binaires à partir du texte passé dans le paramètre *phraseSecrète*.<!-- END REF-->
 
@@ -32,7 +32,7 @@ L'objet retourné contient la propriété suivante :
 
 Si une chaîne vide est passée dans *phraseSecrète*, la commande retourne *null*.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez sauvegarder une clé de chiffrement dans un fichier .4DKeyChain :
 
@@ -47,7 +47,7 @@ Vous souhaitez sauvegarder une clé de chiffrement dans un fichier .4DKeyChain :
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [Decrypt data BLOB](decrypt-data-blob.md)  
@@ -56,7 +56,7 @@ Vous souhaitez sauvegarder une clé de chiffrement dans un fichier .4DKeyChain :
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

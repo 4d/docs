@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 </details>
 
-#### Description 
+## Description 
 
 The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new [POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) object. The returned transporter object will then usually be used to receive emails.
 
@@ -40,13 +40,13 @@ In the *server* parameter, pass an object containing the following properties:
 |[<!-- INCLUDE #transporter.port.Syntax -->](../API/POP3TransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->|995|
 |[<!-- INCLUDE #transporter.user.Syntax -->](../API/POP3TransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->|none|
 
-#### Result
+## Result
 
 The function returns a [**POP3 transporter object**](../API/POP3TransporterClass.md#pop3-transporter-object). All returned properties are **read-only**.
 
 >The POP3 connection is automatically closed when the transporter object is destroyed.
 
-#### Example
+## Example
 
 ```4d
  var $server : Object
@@ -67,7 +67,7 @@ The function returns a [**POP3 transporter object**](../API/POP3TransporterClass
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

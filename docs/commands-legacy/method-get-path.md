@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD Get path.Summary-->The **METHOD Get path** command returns the full internal pathname of a method.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Pass values in the *aTable*, *objectName* and *formObjectName* parameters accord
 
 If the command is executed from a component, it returns by default the paths of the component methods. If you pass the *\** parameter, the array contains the paths of the methods of the host database.
 
-#### Example 
+## Example 
 
 ```4d
   //Retrieval of the pathname of the "On Startup" database method:
@@ -59,13 +59,13 @@ If the command is executed from a component, it returns by default the paths of 
  $path:=METHOD Get path(Path table form;[Employees];"input";"OK")
 ```
 
-#### See also 
+## See also 
 
 [Current method path](current-method-path.md)  
 [METHOD OPEN PATH](method-open-path.md)  
 [METHOD RESOLVE PATH](method-resolve-path.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

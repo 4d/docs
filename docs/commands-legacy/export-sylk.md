@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXPORT SYLK.Summary-->The EXPORT SYLK command writes data from the records of the current selection of *aTable* in the current process.<!-- END REF--> The data is written to *document*, a Windows or Macintosh Sylk document on the disk.
 
@@ -30,7 +30,7 @@ By default, the command uses the UTF-8 character set. Since SYLK format document
 
 When using **EXPORT SYLK**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13) under macOS and the carriage return+line feed (code 13 + code 10) under Windows. You can modify these values by assigning new values to the two *System Variables* *FldDelimit* and *RecDelimit*. The user can change these default values in the export dialog box of the Design mode. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
 
-#### Example 
+## Example 
 
 The following example exports data to a SYLK document. The method first sets the output form so that the data will be exported through the correct form, then performs the export:
 
@@ -39,18 +39,18 @@ The following example exports data to a SYLK document. The method first sets the
  EXPORT SYLK([People];"NewPeople.slk") // Export to the "NewPeople.slk" document
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 OK is set to 1 if the export is successfully completed; otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

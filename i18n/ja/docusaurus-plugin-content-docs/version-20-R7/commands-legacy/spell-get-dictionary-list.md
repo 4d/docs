@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->**SPELL GET DICTIONARY LIST**コマンドはマシンにインストールされたハンスペル辞書ファイルのID、ファイル名、言語名をそれぞれ*langID*、*langFiles*そして*langNames*配列に返します。<!-- END REF-->
 
@@ -25,7 +25,7 @@ IDは固有であり、ファイル名に基づいているという点に注意
 * *langFiles* にはマシンにインストールされた辞書ファイルの名前(拡張子なし)が返されます。
 * *langNames* にはカレントのアプリケーション言語内で指定された言語の名前が返されます。例えば、フランス語の辞書に関してはフランス語を使用するマシンにおいては "français (France)" という値が返され、英語を使用するマシンにおいては "French (France)" と返されます。この言語名の後には "- Hunspell" と続きます。このフィールドは4Dにとって既知のファイルに対してのみ有効です。未知のファイル(例えばカスタムのファイル)に対しては、 "N/A - Hunspell" という名前が返されます。(ファイルが有効である限り) これによって辞書の使用が妨げられることはなく、返されたIDは[SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md) コマンドへと渡す事ができます。
 
-#### 例題 
+## 例題 
 
 Hunspell辞書に"fr-classic+reform1990.aff"、"fr-classic+reform1990.dic"、"fr-dentist.aff"および"fr-dentist.dic"を配置したとします:
 
@@ -46,11 +46,11 @@ Hunspell辞書に"fr-classic+reform1990.aff"、"fr-classic+reform1990.dic"、"fr
 | 1074036166  | fr-classic+reform1990 | フランス語 (フランス) - Hunspell   |
 | 1073901273  | fr-dentist            | No description - Hunspell |
 
-#### 参照 
+## 参照 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

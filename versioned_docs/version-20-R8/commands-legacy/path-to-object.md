@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Path to object.Summary-->The **Path to object** command returns an object containing the specific properties of the *path* you passed in parameter.<!-- END REF--> 
 
@@ -40,7 +40,7 @@ The extension, if not empty, is returned regardless of whether the path represen
 
 Note that **Path to object** only handles strings. It neither checks if the path is valid with regards to the path type, nor the actual existence of any file or folder. 
 
-#### Example 1 
+## Example 1 
 
 The following examples show various results with file paths:
 
@@ -131,7 +131,7 @@ If the last portion of the path is ".something", it is considered as a file name
   //$o.isFolder=false
 ```
 
-#### Example 2 
+## Example 2 
 
 You can combine this command with the [Object to path](object-to-path.md) to rename a file in a path:
 
@@ -149,7 +149,7 @@ You can combine this command with the [Object to path](object-to-path.md) to ren
   //$path="C:\4D\resources\images\4DOld.jpg"
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to know the number of subfolders contained in a path:
 
@@ -166,7 +166,7 @@ You want to know the number of subfolders contained in a path:
  ALERT("The path depth is: "+String($count))
 ```
 
-#### See also 
+## See also 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
@@ -175,7 +175,7 @@ You want to know the number of subfolders contained in a path:
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

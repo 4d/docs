@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Old.Summary-->The **Old** command returns the value held in *aField* before the field was programmatically assigned a value or modified in data entry.<!-- END REF-->
 
@@ -37,11 +37,11 @@ To restore the original value of a field, assign it the value returned by **Old*
  $size :=BLOB size($oldBLOB) //CORRECT
 ```
 
-#### See also 
+## See also 
 
 [Modified](modified.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

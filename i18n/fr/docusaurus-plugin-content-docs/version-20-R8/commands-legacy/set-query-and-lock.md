@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET QUERY AND LOCK.Summary-->La commande **SET QUERY AND LOCK** vous permet de demander le verrouillage automatique des enregistrements trouvés par toutes les recherches qui suivent son appel dans la transaction courante.<!-- END REF--> Ce mécanisme permet de s’assurer que les enregistrements ne puissent pas être modifiés par un process autre que le process courant entre une recherche et la manipulation des résultats.
 
@@ -48,7 +48,7 @@ Appelez **SET QUERY AND LOCK(Faux)** afin de désactiver le mécanisme après us
 
 En revanche, **SET QUERY AND LOCK** n'affecte pas les autres commandes qui modifient la sélection courante telles que [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), etc.
 
-#### Exemple 
+## Exemple 
 
 Dans cet exemple, il n’est pas possible de supprimer un client qui aurait été passé de la catégorie “C” à la catégorie “A” par un autre process entre le [QUERY](query.md) et le [DELETE SELECTION](delete-selection.md) : 
 
@@ -62,15 +62,15 @@ Dans cet exemple, il n’est pas possible de supprimer un client qui aurait ét�
  VALIDATE TRANSACTION
 ```
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si la commande est appelée hors du contexte d’une transaction, une erreur est générée. 
 
-#### Voir aussi 
+## Voir aussi 
 
 [QUERY](query.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

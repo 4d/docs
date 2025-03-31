@@ -13,18 +13,18 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Menu bar screen.Summary-->Menu bar screen returns the number of the screen where the menu bar is located.<!-- END REF-->
 
 **Windows note:** On Windows, Menu bar screen always returns 1.
 
-#### See also 
+## See also 
 
 [Count screens](count-screens.md)  
 [Menu bar height](menu-bar-height.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

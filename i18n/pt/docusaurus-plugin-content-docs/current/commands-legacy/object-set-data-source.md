@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->O comando **OBJECT SET DATA SOURCE** modifica a fonte de dados dos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
@@ -35,7 +35,7 @@ En el caso de los list box, se deben tener en cuenta los siguientes puntos:
 
 Si este comando se aplica a una fuente de datos que no se puede editar, no hace nada.
 
-#### Exemplo 
+## Exemplo 
 
 Mudança da fonte de dados para uma área de entrada:
 
@@ -45,12 +45,12 @@ Mudança da fonte de dados para uma área de entrada:
  OBJECT SET DATA SOURCE(*;"Input";$ptrField)
 ```
 
-#### Ver também 
+## Ver também 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

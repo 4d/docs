@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.DOM SET XML DECLARATION.Summary-->O comando DOM SET XML DECLARATION permite definir diferentes opções que são úteis na criação da árvore XML designado por *elementRef*.<!-- END REF--> Estas opções fazem referência à codificação e à propriedade autônoma da árvore:  
 
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 * autônomo: indica se a árvore é autônoma (True) ou se necesita outros arquivos ou recursos externos para seu funcionamento (False). Como padrão (se o comando não for chamado ou se for omitido o parâmetro), a árvore não é autônoma.
 **Nota de compatibilidade**: O parâmetro indentação se conserva por razões de compatibilidade com as versões anteriores de 4D mas seu uso não é recomendado em 4D v12\. De agora em diante, para especificar a indentação do documento, se recomenda utilizar o comando [XML SET OPTIONS](xml-set-options.md)
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo define a codificação a utilizar e a opção autônoma do elemento *elementRef*: 
 
@@ -33,12 +33,12 @@ O exemplo define a codificação a utilizar e a opção autônoma do elemento *e
  DOM SET XML DECLARATION(elementRef;"UTF-16";True)
 ```
 
-#### Ver também 
+## Ver também 
 
 [DOM Create XML Ref](dom-create-xml-ref.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

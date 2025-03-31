@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Is in set.Summary-->Is in set prueba si el registro actual de la tabla está en *conjunto*.<!-- END REF--> La función Is in set devuelve TRUE si el registro actual de la tabla está en *conjunto*, y FALSE si el registro actual de la tabla no está en *conjunto*.
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo es un método de objeto de un botón que prueba si el registro actual está en el conjunto de los mejores clientes:
 
@@ -30,12 +30,12 @@ El siguiente ejemplo es un método de objeto de un botón que prueba si el regis
  End if
 ```
 
-#### Ver también 
+## Ver también 
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

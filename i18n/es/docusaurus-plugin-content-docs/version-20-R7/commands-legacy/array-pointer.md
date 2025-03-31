@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ARRAY POINTER.Summary-->El comando ARRAY POINTER crea o redimensiona un array de elementos de tipo [Puntero](# "A reference to another variable (including arrays and array elements), table, or field") en memoria.<!-- END REF-->es el nombre del array.
 * El parámetro *tamaño* es el número de elementos en el array.
@@ -26,7 +26,7 @@ Cuando aplica ARRAY POINTER a un array existente:
 * Si agranda el tamaño del array, los elementos existentes no son modificados, y los nuevos elementos se inicializan en un *puntero* nulo. Esto significa queal aplicar Nil a uno de estos elementos devuelve Verdadero.
 * Si reduce el tamaño del array, se pierden los últimos elementos borrados del array.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo crea un array de proceso de 100 elementos de tipo [Puntero](# "A reference to another variable (including arrays and array elements), table, or field"):
 
@@ -34,7 +34,7 @@ Este ejemplo crea un array de proceso de 100 elementos de tipo [Puntero](# "A re
  ARRAY POINTER(apValores;100)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Este ejemplo crea un array local de 100 filas de 50 elementos de tipo [Puntero](# "A reference to another variable (including arrays and array elements), table, or field"):
 
@@ -42,7 +42,7 @@ Este ejemplo crea un array local de 100 filas de 50 elementos de tipo [Puntero](
  ARRAY POINTER($apValores;100;50)
 ```
 
-#### Ejemplo 3 
+## Ejemplo 3 
 
 Este ejemplo crea un array interproceso de elementos de tipo [Puntero](# "A reference to another variable (including arrays and array elements), table, or field") y asigna a cada elemento al que apunta a la tabla cuyo número es el mismo del elemento. El tamaño del array es igual al número de tablas en la base de datos. En el caso de suprimir una tabla, la linea devolverá Nil
 
@@ -56,7 +56,7 @@ Este ejemplo crea un array interproceso de elementos de tipo [Puntero](# "A refe
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

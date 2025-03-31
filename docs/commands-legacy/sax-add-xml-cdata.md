@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SAX ADD XML CDATA.Summary-->In the XML document referenced by *document*, the SAX ADD XML CDATA command adds *data* of the text or BLOB type.<!-- END REF--> This *data* will be automatically framed between the *<!\[CDATA\[* and *\]\]> tags.*
 
@@ -24,7 +24,7 @@ If you want to encode the contents of data, you must use the [BASE64 ENCODE](bas
 
 In order for this command to operate correctly, an element must be open. Otherwise, an error will be generated. 
 
-#### Example 
+## Example 
 
 You want to insert the following lines in your XML document:
 
@@ -68,15 +68,15 @@ else
 ]]>
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
 
-#### See also 
+## See also 
 
 [SAX GET XML CDATA](sax-get-xml-cdata.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

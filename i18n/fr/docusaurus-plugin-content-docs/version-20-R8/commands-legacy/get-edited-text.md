@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get edited text.Summary-->La commande **Get edited text** retourne le texte en cours de saisie dans un objet de formulaire.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Ces deux événements ne sont générés que dans les méthodes des objets conce
 
 Dans un contexte autre que la saisie dans un formulaire, cette fonction retourne une chaîne vide.
 
-#### Exemple 1 
+## Exemple 1 
 
 Dans un formulaire entrée, vous souhaitez que les caractères saisis soient automatiquement mis en majuscules : 
 
@@ -38,7 +38,7 @@ Dans un formulaire entrée, vous souhaitez que les caractères saisis soient aut
  End if
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Voici un exemple de traitement à la volée des caractères saisis dans un champ texte. Le principe consiste à placer dans un autre champ texte (appelé “Mots”) la décomposition en mots de la phrase en cours de saisie. Pour cela, écrivez dans la méthode objet du champ de saisie :
 
@@ -62,12 +62,12 @@ Voici un exemple de traitement à la volée des caractères saisis dans un champ
 
 **Note :** Cet exemple n’est pas exhaustif puisque l’on considère que les mots sont séparés par des espaces uniquement ([Char](char.md)(32)). La mise au point d’un système complet nécessiterait l’ajout d’autres filtres afin de repérer tous les mots (point-virgules, virgules, apostrophes, etc...).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Form event code](../commands/form-event-code.md)  
 [Is editing text](is-editing-text.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

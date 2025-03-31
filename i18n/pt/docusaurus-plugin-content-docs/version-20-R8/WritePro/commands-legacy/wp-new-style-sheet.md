@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP New style sheet.Summary-->O comando **WP New style sheet** cria um novo objeto de folha de estilo (vazio) para o *wpDoc* designado.<!-- END REF-->
 
@@ -42,7 +42,7 @@ Pode especificar os atributos da folha de estilo utilizando o comando [WP SET AT
 * Uma folha de estilo só modifica a visualização de um caractere ou parágrafo, não como se armazena no documento. Se uma folha de estilo for eliminada, o texto voltará ao estilo predeterminado.
 * Todo atributo de estilo não definido na nova folha de estilo utilizará automaticamente o estilo Normal. Para saber mais, consulte *Comandos folha de estilo*.
 
-#### Exemplo 
+## Exemplo 
 
 O código abaixo cria e define uma folha de estilo de parágrafo:
 
@@ -64,7 +64,7 @@ O código abaixo cria e define uma folha de estilo de parágrafo:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 *Accessar texto e atributos de imagem por programação*  
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  

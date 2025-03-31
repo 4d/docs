@@ -88,7 +88,7 @@ La commande `File` <!-- REF #_command_.File.Summary -->crée et renvoie un nouve
 
 **File ( path { ; pathType } { ; \* })**
 
-Dans le paramètre *path*, passez un chemin de fichier. You can use a custom string or a [filesystem](../Concepts/paths.md##filesystem-pathnames) (e.g., "/DATA/myfile.txt").
+Dans le paramètre *path*, passez un chemin de fichier. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
 
 > Seuls les noms de chemin absolus sont pris en charge par la commande `File`.
 
@@ -581,7 +581,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 ```
 <!-- END REF -->
 
-<!-- REF file.setAppInfo().Desc -->
+
 ## .setAppInfo()
 
 <details><summary>Historique</summary>

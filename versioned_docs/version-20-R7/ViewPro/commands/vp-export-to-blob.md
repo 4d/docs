@@ -14,7 +14,7 @@ title: VP EXPORT TO BLOB
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |paramObj   |Object|->|Export options|<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. Exporting and importing 4D View Pro areas as blobs is fast and memory-efficient.
 
@@ -46,7 +46,7 @@ The following parameters can be used in the callback method:
 | |.errorMessage|text|Error message.
 
 
-#### Example
+## Example
 
 The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
 
@@ -69,7 +69,7 @@ End if
 
 ```
 
-#### See also
+## See also
 
 [VP IMPORT FROM BLOB](vp-import-from-blob.md)
 

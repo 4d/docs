@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Parse formula.Summary-->La función **Parse formula** analiza la *formula* 4D, verifica su sintaxis y devuelve su formula normalizada.<!-- END REF--> Esto permite que la fórmula siga siendo válida en el caso de que se cambie el nombre de un lenguaje 4D o elemento de estructura (comando, constante, tabla, campo o Plugin 4D).
 
@@ -50,7 +50,7 @@ El parámetro opcional *opciones* le permite especificar cómo se expresa y/o se
 
 El parámetro opcional *mensajeE* *rror* recibirá un mensaje de error si hay un error de sintaxis en *formula*. Si no hay ningún error, se devolverá una cadena vacía.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 ```4d
  ARRAY TEXT($t1;1)
@@ -80,7 +80,7 @@ El parámetro opcional *mensajeE* *rror* recibirá un mensaje de error si hay un
  
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Utilizando las tablas del **Ejemplo 1**:
 
@@ -99,14 +99,14 @@ Utilizando las tablas del **Ejemplo 1**:
  EXECUTE FORMULA([users_preferences]formula)
 ```
 
-#### Ver también 
+## Ver también 
 
 [Formula from string](../commands/formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 *Utilizar tokens en fórmulas*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

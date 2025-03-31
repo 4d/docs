@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->RECEIVE BUFFER lê a porta serial que foi aberta anteriormente com [SET CHANNEL](set-channel.md).<!-- END REF--> A porta serial tem um buffer que preenche com caracteres até que um comando lê a partir do buffer. RECEIVE BUFFER recebe os caracteres do buffer serial, colocá-os em *receiveVar* e limpa o buffer. Se não houver caracteres no buffer, então *receiveVar* não conterá nada.
 
@@ -28,7 +28,7 @@ RECEIVE BUFFER é diferente de [RECEIVE PACKET](receive-packet.md), ele leva o q
 
 Durante a execução do RECEIVE BUFFER, o usuário pode interromper a recepção pressionando **Ctrl-Alt-Shift** (Windows) ou **Command** \+ **Option** \+ **Shift** (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](on-err-call.md). 
 
-#### Exemplo 
+## Exemplo 
 
 O método de projeto LISTEN TO SERIAL PORT usa RECEIVE BUFFER para obter o texto da porta serial e acumulá-lo em uma variável interprocesso:
 
@@ -57,7 +57,7 @@ Para parar de ouvir a porta serial, basta executar:
 
 Note que o acesso à variável interprocesso *vtBuffer* deve ser protegida por um semáforo, de modo que os processos não causarão conflito. Veja o comando [Semaphore](semaphore.md) para obter mais informações.
 
-#### Ver também 
+## Ver também 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE PACKET](receive-packet.md)  
@@ -65,7 +65,7 @@ Note que o acesso à variável interprocesso *vtBuffer* deve ser protegida por u
 [SET CHANNEL](set-channel.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

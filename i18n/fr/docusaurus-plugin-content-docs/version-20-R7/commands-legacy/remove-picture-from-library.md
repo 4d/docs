@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->La commande **REMOVE PICTURE FROM LIBRARY** supprime de la bibliothèque d’images l’image dont vous avez passé le numéro de référence dans *refImage* ou le nom dans *nomImage*.<!-- END REF-->  
 Si ce numéro de référence ou ce nom ne correspond à aucune image, la commande ne fait rien.
@@ -22,7 +22,7 @@ Si ce numéro de référence ou ce nom ne correspond à aucune image, la command
 
 **Attention :** Les objets de structure (éléments de liste hiérarchique, lignes de menu, etc.) peuvent se référer à une image de la bibliothèque. Soyez prudent lorsque vous supprimez par programmation une image de la bibliothèque d’images.
 
-#### Exemple 1 
+## Exemple 1 
 
 L’exemple suivant supprime l’image n°4444 de la bibliothèque d’images :
 
@@ -30,7 +30,7 @@ L’exemple suivant supprime l’image n°4444 de la bibliothèque d’images :
  REMOVE PICTURE FROM LIBRARY(4444)
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L’exemple suivant supprime de la bibliothèque d’images celles dont le nom commence par le symbole dollar ($) : 
 
@@ -43,13 +43,13 @@ L’exemple suivant supprime de la bibliothèque d’images celles dont le nom c
  End for
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

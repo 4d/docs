@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->SET TABLE TITLES permite ocultar, renombrar y reordenar las tablas de su base cuando aparecen en las cajas de diálogo estándar de 4D en el entorno Aplicación(es decir, cuando el modo de inicio es **Aplicación**, o después de seleccionar **Probar aplicación** en el menú **Ejecutar**).<!-- END REF--> Por ejemplo, este comando puede modificar la visualización de tablas en el editor búsquedas en modo Aplicación.
 
@@ -47,7 +47,7 @@ Utilice el comando **SET TABLE TITLES** para:
 
 Ejecutar **SET TABLE TITLES** sin parámetros reiniciará toda la estructura virtual de la base para la sesión (tabla personalizada y nombres de campos).
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 * Usted desarrolla una aplicación 4D que piensa vender internacionalmente. Por lo tanto, usted debe tener en cuenta las necesidades de traducción. Para los editores estándar de 4D que aparecen en modo Aplicación y sus formularios que utilizan nombres dinámicos, puede utilizar una tabla *\[Traducciones\]* y algunos métodos de proyecto para crear y utilizar las traducciones para cada idioma.
 * En su base, cree la siguiente tabla:
@@ -167,7 +167,7 @@ con el método de proyecto TABLAS\_Y\_CAMPOS\_LOCALIZADOS:
   
 * Note que las nuevas localizaciones pueden añadirse a la base sin modificar el código o recompilarlo.
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Desea eliminar todos los nombres de tablas y campos personalizados definidos:
 
@@ -175,7 +175,7 @@ Desea eliminar todos los nombres de tablas y campos personalizados definidos:
  SET TABLE TITLES //elimina todos los nombres personalizados
 ```
 
-#### Ver también 
+## Ver también 
 
 [Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
@@ -183,7 +183,7 @@ Desea eliminar todos los nombres de tablas y campos personalizados definidos:
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** **DEFAULT TABLE**の使用やテーブル名の省略により、ステートメントを読みやすくすることが できるかもしれません。<!-- END REF-->しかし多くのプログラマーは、このコマンドが実際の価値よりも多くの問題と混乱の原因となるとみなしています。特にテーブルフォー ムとプロジェクトフォームで同じ名前のフォームが存在する場合、**DEFAULT TABLE**が使用されていると、例えば[DIALOG](dialog.md)コマンドなどでテーブルフォームのほうが使用されてしまいます。
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 4Dでは、すべてのテーブルは"開かれて" おり、使用する準備ができています。しかし**DEFAULT TABLE**はテーブルを"開いたり" 、カレントテーブルを設定、あるいは入出力のためにテーブルを準備することはありません。**DEFAULT TABLE**はプログラミングの労力の節約とステートメントを読みやすくするための便宜を図るだけです。
 
-#### 例題 
+## 例題 
 
 以下の例は、最初に**DEFAULT TABLE**コマンドを使用しないステートメントを示しています。この後で**DEFAULT TABLE**コマンドを使用した同じステートメントを示します。このステートメントは、新しいレコードをデータベースに追加するのによく使用されるループです。[FORM SET INPUT](form-set-input.md "FORM SET INPUT")コマンドと[ADD RECORD](add-record.md "ADD RECORD")コマンドは、1番目の引数としてテーブルを必要とします。
 
@@ -70,12 +70,12 @@ displayed_sidebar: docs
  Until(OK=0)
 ```
 
-#### 参照 
+## 参照 
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -19,20 +19,20 @@ title: TCPEvent
 
 次のプロパティを利用することができます:
 
-|                                                                                                   |
-| ------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #4D.TCPEvent.data.Summary --> |
-| [<!-- INCLUDE #4D.TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #4D.TCPEvent.type.Summary --> |
+|                                                                                             |
+| ------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #TCPEvent.data.Summary --> |
+| [<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary --> |
 
-<!-- REF #4D.TCPEvent.data.Desc -->
+<!-- REF #TCPEvent.data.Desc -->
 
 ## .data
 
-<!-- REF #4D.TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
+<!-- REF #TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
 
 #### 説明
 
-`.data` プロパティには、<!-- REF #4D.TCPEvent.data.Summary -->イベントに関連づけられたデータ<!-- END REF -->が格納されています。 これは`"data"` 型のイベントにおいてのみ有効です。 これは`"data"` 型のイベントにおいてのみ有効です。
+The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. これは`"data"` 型のイベントにおいてのみ有効です。
 
 :::note
 
@@ -42,15 +42,15 @@ title: TCPEvent
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPEvent.type.Desc -->
+<!-- REF #TCPEvent.type.Desc -->
 
 ## .type
 
-<!-- REF #4D.TCPEvent.type.Syntax -->**type** : Text<!-- END REF -->
+<!-- REF #TCPEvent.type.Syntax -->**type** : Text<!-- END REF -->
 
 #### 説明
 
-`.type` プロパティには、<!-- REF #4D.TCPEvent.type.Summary -->イベントのタイプ<!-- END REF --> が格納されます。 とりうる値: とりうる値:
+The `.type` property contains <!-- REF #TCPEvent.type.Summary -->the type of the event<!-- END REF -->. とりうる値:
 
 - `"connection"`: TCPConnection が正常に確立されたことを表します。
 - `"data"`: データが受信されたことを表します。

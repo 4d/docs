@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Current form table.Summary-->Current form tableコマンドは、カレントプロセスで表示または印刷されているフォームが属するテーブルのポインタを返します。<!-- END REF-->
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 * サブフォームがテーブルを表示している場合、サブフォームエリアに表示されたそのテーブルへのポインタ
 * サブフォームエリアがサブテーブルを表示している場合には、重要な意味を持たないポインタ
 
-#### 例題 
+## 例題 
 
 アプリケーション全体を通して、レコードを表示する際には、以下の表示方法に従います。フォーム内に変数*vsCurrentRecord* がある場合、ユーザーが新しいレコードを処理していれば、"New Record" と表示します。ユーザが5200レコードから成るセレクションの56番目のレコードを処理していれば、56/5200と表示します。
 
@@ -56,14 +56,14 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [DIALOG](dialog.md)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RESOLVE POINTER.Summary-->The RESOLVE POINTER command retrieves the information of the object referenced by the pointer expression *aPointer* and returns it into the parameters *varName*, *tableNum,* and *fieldNum*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ Depending on the nature of the referenced object, RESOLVE POINTER returns the fo
 * If the value you pass in *pointer* is not a pointer expression, a syntax error occurs.
 * The RESOLVE POINTER command does not work with pointers to local variables. In fact, by definition several local variables with the same name could exist in different locations, so it is not possible for the command to find the correct variable.
 
-#### Example 1 
+## Example 1 
 
 Within a form, you create a group of 100 enterable variables called v1, v2... v100\. To do so, you perform the following steps:
 
@@ -64,7 +64,7 @@ e. Within the DoSomething method, if you need to know the index of the variable 
 
 Note that by constructing your form in this way, you write the methods for the 100 variables only once; you do not need to write DoSomething (1), DoSomething (2)...,DoSomething (100).
 
-#### Example 2 
+## Example 2 
 
 For debugging purposes, you need to verify that the second parameter ($2) to a method is a pointer to a table. At the beginning of this method, you write: // ...  
   
@@ -79,11 +79,11 @@ For debugging purposes, you need to verify that the second parameter ($2) to a m
   // ...
 ```
 
-#### Example 3 
+## Example 3 
 
 See example for the *\_o\_DRAG AND DROP PROPERTIES* command.
 
-#### Example 4 
+## Example 4 
 
 Here is an example of a 2D array pointer:
 
@@ -101,7 +101,7 @@ Here is an example of a 2D array pointer:
   //$colNum="5"
 ```
 
-#### See also 
+## See also 
 
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
@@ -109,7 +109,7 @@ Here is an example of a 2D array pointer:
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

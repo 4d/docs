@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->The **CLOSE RESOURCE FILE** command closes the resource file whose reference number is passed in *resFile*.<!-- END REF-->
 
@@ -25,11 +25,11 @@ If you pass an invalid resource file reference number, the command does nothing.
 
 Remember to eventually call **CLOSE RESOURCE FILE** for a resource file that you have opened using [Open resource file](open-resource-file.md). Note that when you quit the application (or open another database), 4D automatically closes all the resource files you opened.
 
-#### See also 
+## See also 
 
 [Open resource file](open-resource-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

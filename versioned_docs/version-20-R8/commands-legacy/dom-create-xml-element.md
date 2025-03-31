@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Create XML element.Summary-->The **DOM Create XML element** command creates a new element in the XML element *elementRef* in the path set by the *xPath* parameter and adds attributes to it if necessary.<!-- END REF--> 
 
@@ -53,7 +53,7 @@ The *attrValue* parameter can be of the text type or another type (Boolean, inte
 
 The command returns the XML reference of the element created as a result.
 
-#### Example 1 
+## Example 1 
 
 We want to create the following element: 
 
@@ -78,7 +78,7 @@ To do so, simply write:
  vElemRef:=DOM Create XML element(vRootRef;vxPath)
 ```
 
-#### Example 2 
+## Example 2 
 
 We want to create the following element (containing attributes): 
 
@@ -137,7 +137,7 @@ You have then:
                                            
 ```
 
-#### Example 3 
+## Example 3 
 
 We want to create and export the following structure: 
 
@@ -161,24 +161,24 @@ We want to use the syntax based on a simple item name. To do this, simply write:
  DOM CLOSE XML($root)
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command was executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
 
-#### Error management 
+## Error management 
 
 An error is generated when:
 
 * The root element reference is invalid.
 * The name of the element to create is invalid (for example, if it starts with a number).
 
-#### See also 
+## See also 
 
 [DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

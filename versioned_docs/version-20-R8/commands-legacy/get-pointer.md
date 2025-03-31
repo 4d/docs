@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get pointer.Summary-->The **Get pointer** command returns a pointer to the process or interprocess variable whose name you pass in *varName*.<!-- END REF-->
 
@@ -23,7 +23,7 @@ To get a pointer to a field, use [Field](field.md). To get a pointer to a table,
 **Note:** You can pass expressions such as, for example, *ArrName+"{3}"*, as well as 2D array elements (*ArrName+"{3}{5}"*) to **Get pointer**.  
 However, you cannot pass variable elements (*ArrName+"{myVar}"*). 
 
-#### Example 1 
+## Example 1 
 
 In a form, you build a 5 x 10 grid of enterable variables named v1, v2... v50\. To initialize all of these variables, you write:
 
@@ -35,7 +35,7 @@ In a form, you build a 5 x 10 grid of enterable variables named v1, v2... v50\. 
  End for
 ```
 
-#### Example 2 
+## Example 2 
 
 Using pointers to elements of two-dimensional arrays:
 
@@ -46,12 +46,12 @@ Using pointers to elements of two-dimensional arrays:
   //$pt2=->atCities{2}{6}
 ```
 
-#### See also 
+## See also 
 
 [Field](field.md)  
 [Table](table.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

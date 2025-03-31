@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->The **DESCRIBE QUERY EXECUTION** command enables or disables the query analysis mode for the current process.<!-- END REF--> The command only works in the context of 4D language query commands such as [QUERY](query.md). 
 
@@ -28,7 +28,7 @@ Usually, the description of the query plan and its path are the same, but they m
 
 Pass **False** in the *status* parameter when you no longer need to analyze queries. The query analysis mode can slow down the application.
 
-#### Example 
+## Example 
 
 The following example illustrates the type of information obtained using these commands:
 
@@ -63,12 +63,12 @@ $vResultPath :
    </QueryExecution>
 ```
 
-#### See also 
+## See also 
 
 [Last query path](last-query-path.md)  
 [Last query plan](last-query-plan.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

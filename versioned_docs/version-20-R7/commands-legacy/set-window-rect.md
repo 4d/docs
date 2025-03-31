@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->The SET WINDOW RECT command changes the global coordinates of the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, the command does nothing.
 
@@ -34,11 +34,11 @@ By default, executing this command automatically moves the window designated by 
 
 This command does not affect form objects. If the window contains a form, the form objects are not moved or resized by the command (regardless of their properties). Only the window is modified. In order to modify a form window while taking the resizing properties and the objects it contains into account, you must use the [RESIZE FORM WINDOW](resize-form-window.md) command.
 
-#### Example 1 
+## Example 1 
 
 See example for the [WINDOW LIST](window-list.md) command.
 
-#### Example 2 
+## Example 2 
 
 Given the following window:
 
@@ -54,14 +54,14 @@ The window appears as follows:
 
 ![](../assets/en/commands/pict39569.en.png)
 
-#### See also 
+## See also 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [DRAG WINDOW](drag-window.md)  
 [GET WINDOW RECT](get-window-rect.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

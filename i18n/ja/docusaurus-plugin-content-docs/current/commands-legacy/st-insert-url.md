@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ST INSERT URL.Summary-->**ST INSERT URL**コマンドは、*object* 引数で指定したスタイル付テキストフィールドまたはテキスト変数内に、 URL のリンクを挿入します。<!-- END REF-->
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 リンクは挿入されれば既に有効になっています。ラベルを、 Windows では **Ctrl+クリック**、 macOS では**Command+クリック** することによって既定のブラウザで*urlAddress* で指定したページを開くことができます。
 
-#### 例題 
+## 例題 
 
 オブジェクト内で選択されたテキストを、4D のウェブサイトへのリンクで置き換えたい場合を考えます:
 
@@ -59,12 +59,12 @@ displayed_sidebar: docs
  ST INSERT URL(*;"myText";vTitle;vURL;ST Start highlight;ST End highlight)
 ```
 
-#### 参照 
+## 参照 
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->El comando LISTBOX DELETE ROWS borra una o varias líneas a partir de *posicion* (visible o no) del list box definido por los parámetros *objeto* y \*.<!-- END REF-->
 
@@ -31,12 +31,12 @@ Si el parámetro *posicion* es superior al número de líneas del array del list
 
 **Nota**: este comando no tiene en cuenta los posibles estados ocultos/visibles de las líneas del list box.
 
-#### Ver también 
+## Ver también 
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

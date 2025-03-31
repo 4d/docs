@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.HIGHLIGHT TEXT.Summary-->The HIGHLIGHT TEXT command highlights a section of the text in *object*.<!-- END REF-->
 
@@ -30,7 +30,7 @@ If *object* is not the object currently being edited, it gets the focus.
 
 If *lastSel* is greater than the number of characters in *object*, then all characters between *startSel* and the end of the text are highlighted.
 
-#### Example 1 
+## Example 1 
 
 The following example selects all the characters of the enterable field *\[Products\]Comments*:
 
@@ -38,7 +38,7 @@ The following example selects all the characters of the enterable field *\[Produ
  HIGHLIGHT TEXT([Products]Comments;1;Length([Products]Comments)+1)
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example moves the insertion point to the beginning of the enterable field *\[Products\]Comments*:
 
@@ -46,7 +46,7 @@ The following example moves the insertion point to the beginning of the enterabl
  HIGHLIGHT TEXT([Products]Comments;1;1)
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example moves the insertion point to the end of the enterable field *\[Products\]Comments*:
 
@@ -55,15 +55,15 @@ The following example moves the insertion point to the end of the enterable fiel
  HIGHLIGHT TEXT([Products]Comments;$vLen;$vLen)
 ```
 
-#### Example 4 
+## Example 4 
 
 See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
 
-#### See also 
+## See also 
 
 [GET HIGHLIGHT](get-highlight.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

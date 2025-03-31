@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CLEAR SEMAPHORE.Summary-->**CLEAR SEMAPHORE** permet d'effacer le *sémaphore* précédemment créé par la fonction [Semaphore](semaphore.md).<!-- END REF-->
 
@@ -22,17 +22,17 @@ Un process ne peut effacer que les sémaphores qu'il a créés. Si vous tentez d
 
 **Note :** Attention, 4D tient compte de la casse des caractères en ce qui concerne les noms de sémaphores (le programme considère par exemple que "MonSémaphore" est différent de "monsémaphore"). 
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la fonction [Semaphore](semaphore.md "Semaphore").
 
-#### Voir aussi 
+## Voir aussi 
 
 [Semaphore](semaphore.md)  
 *Sémaphores et signaux*  
 [Test semaphore](test-semaphore.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

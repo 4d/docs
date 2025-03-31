@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.SET CHANNEL.Summary-->La commande **SET CHANNEL** permet d'ouvrir un port série ou un document.<!-- END REF--> Vous ne pouvez ouvrir qu'un port série ou un document à la fois avec cette commande.
 
@@ -30,7 +30,7 @@ La description de la commande **SET CHANNEL** se compose de deux sections :
 * Travailler avec les ports série
 * Travailler avec des documents
 
-#### Travailler avec les ports série : REGLER SERIE(port;param) 
+## Travailler avec les ports série : REGLER SERIE(port;param) 
 
 La première syntaxe de **SET CHANNEL** ouvre un port série et définit le protocole de communication ainsi que des informations supplémentaires. Les données peuvent être envoyées par les commandes [SEND PACKET](send-packet.md), [SEND RECORD](send-record.md) ou [SEND VARIABLE](send-variable.md), et reçues par les commandes [RECEIVE BUFFER](receive-buffer.md), [RECEIVE PACKET](receive-packet.md), [RECEIVE VARIABLE](receive-variable.md) ou [RECEIVE RECORD](receive-record.md).
 
@@ -51,14 +51,14 @@ Le tableau suivant liste les valeurs possibles du paramètre *port* :
 
 **Important :** La valeur que vous passez dans *port* doit désigner un port série "logique" reconnu par votre système d'exploitation. Par exemple, pour que vous puissiez utiliser les valeurs 101, 203 et 325, les ports série COM1, COM3 et COM25 doivent avoir été correctement configurés. 
 
-##### Note sur les ports série 
+### Note sur les ports série 
 
 En standard, les systèmes Mac OS et Windows reconnaissent deux ports série logiques : sous Mac OS, le port modem et le port imprimante ; sous Windows, les ports COM1 et COM2\. Toutefois, des ports série supplémentaires peuvent être ajoutés, par l'intermédiaire de cartes d'extension. 4D n’adressait à l'origine que les deux ports série standard, et a intégré par la suite la gestion des ports série supplémentaires. Pour des raisons de compatibilité, les deux systèmes d’adressage ont été conservés.  
 
 * Si vous souhaitez adresser uniquement un port série standard (imprimante/COM2 ou modem/COM1), vous pouvez passer dans le paramètre *port* soit une des valeurs 0, 1, 20, 21, 30 et 31 (correspondant à l’ancien mode de fonctionnement de 4D), soit une valeur > 100 (cf. ci-dessous).
 * Si vous souhaitez adresser des ports série "étendus", vous devez passer dans *port* (pour adresser le Nième port série) la valeur N+100, augmentée éventuellement de 100 ou de 200, si vous voulez utiliser respectivement un protocole logiciel ou matériel.
 
-##### Exemple 1 
+### Exemple 1 
 
 Vous souhaitez utiliser le port imprimante/COM2 sans protocole, vous pouvez utiliser l'une des syntaxes suivantes :
 
@@ -72,7 +72,7 @@ ou
  SET CHANNEL(102;param)
 ```
 
-##### Exemple 2 
+### Exemple 2 
 
 Vous souhaitez utiliser le port modem/COM1 avec le protocole XON/XOFF, vous pouvez utiliser l'une des syntaxes suivantes :
 
@@ -86,7 +86,7 @@ ou
  SET CHANNEL(201;param)
 ```
 
-##### Exemple 3 
+### Exemple 3 
 
 Vous souhaitez utiliser le port COM25 avec le protocole RTS/CTS, vous devez utiliser la syntaxe suivante : 
 
@@ -131,7 +131,7 @@ Lorsque vous n'avez plus besoin d'un port série, vous devez le refermer. Pour c
  SET CHANNEL(11) //Referme un port série préalablement ouvert
 ```
 
-#### Travailler avec des documents : REGLER SERIE(opération;document) 
+## Travailler avec des documents : REGLER SERIE(opération;document) 
 
 La seconde syntaxe de la commande **SET CHANNEL** vous permet de créer, ouvrir ou fermer un document. A la différence des commandes du thème *Documents système*, **SET CHANNEL** ne permet d'ouvrir qu'un document à la fois. Le document peut être "lu à partir de" ou "écrit dans". Reportez-vous à la section *Présentation des documents système* pour plus d'informations sur ce point. 
 
@@ -152,11 +152,11 @@ La première colonne fournit les valeurs possibles du paramètre *opération*. L
 
 Toutes les opérations décrites dans ce tableau modifient la variable système Document en conséquence. De plus, la variable système OK prend la valeur 1 si l'opération s'est déroulée correctement, 0 sinon.
 
-##### Exemple 4 
+### Exemple 4 
 
 Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) et [RECEIVE RECORD](receive-record.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [Append document](append-document.md)  
 *Communications*  
@@ -172,7 +172,7 @@ Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [S
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

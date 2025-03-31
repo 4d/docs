@@ -1,6 +1,6 @@
 ---
 id: labels
-title: Labels
+title: Libellés
 ---
 
 4D’s Label editor provides a convenient way to print a wide variety of labels. With it, you can do the following:
@@ -100,7 +100,7 @@ The left-hand side of the tool bar includes commands for selecting and inserting
 
 | Icône                                     | Tool name          | Description                                                                                                                                                                                                        |
 | ----------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/Desktop/label-tool1.png) | Selection          | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
+| ![](../assets/en/Desktop/label-tool1.png) | Sélections         | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
 | ![](../assets/en/Desktop/label-tool2.png) | Line creation      |                                                                                                                                                                                                                    |
 | ![](../assets/en/Desktop/label-tool3.png) | Rectangle creation | For Rectangle or Rounded rectangle.                                                                                                                                                                |
 | ![](../assets/en/Desktop/label-tool4.png) | Circle creation    |                                                                                                                                                                                                                    |

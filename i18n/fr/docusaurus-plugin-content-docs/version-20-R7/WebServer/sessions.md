@@ -38,7 +38,7 @@ Dans tous les cas, ce paramètre est local à la machine ; il peut donc être di
 
 ## Implémentation des sessions
 
-Lorsque [les sessions sont activées](#activation-des-sessions), des mécanismes automatiques sont mis en place, basés sur un cookie privé défini par 4D lui-même : "4DSID_*NomApp*", où *NomApp* est le nom du projet d'application. Ce cookie référence la session web courante pour l'application.
+When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where *AppName* is the name of the application project. Ce cookie référence la session web courante pour l'application.
 
 :::info
 
@@ -61,7 +61,7 @@ La création d'une session web pour une requête REST peut nécessiter qu'une li
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
+L'objet `Session` de la session en cours peut ensuite être manipulé via la commande [`Session`](commands/session.md) dans le code de n'importe quel process web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -86,7 +86,7 @@ La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signi
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
-When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
+Lorsqu'une session web est fermée, si la commande [`Session`](commands/session.md) est appelée par la suite :
 
 - l'objet `Session` ne contient pas de privilèges (c'est une session Guest)
 - la propriété [`storage`](API/SessionClass.md#storage) est vide

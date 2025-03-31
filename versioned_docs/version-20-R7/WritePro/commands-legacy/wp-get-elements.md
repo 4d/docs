@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get elements.Summary-->The **WP Get elements** command returns a collection of objects containing paragraphs, images, tables and/or rows.<!-- END REF-->
 
@@ -49,7 +49,7 @@ Optionally, you can pass the *elementType* parameter to specify the types of ele
 * If a range passed in *targetObj* contains an element that is not fully contained within the range, the entire element will be included in the results. For example, if the range includes part of a table (but not the entire table), the reference for the entire table element is returned, however only the cell (paragraph) references within the range are included.
 * If you pass wk type text box in the *elementType* parameter, *targetObj* can only contain a 4D Write Pro document. An error is returned if you pass anything but a document object in *targetObj* in this case.
 
-##### How elements are sorted 
+### How elements are sorted 
 
 The elements in the returned collection are ordered differently depending on the *targetObj* contents:
 
@@ -58,7 +58,7 @@ The elements in the returned collection are ordered differently depending on the
 
 If you want for example to alternate background color for paragraphs in the body part of a document, you need to pass the body element in *targetObj* and not the document, to make sure the element order in the collection corresponds to the document paragraph order.
 
-#### Example 1 
+## Example 1 
 
 You want to return a collection of all the paragraphs in a document:
 
@@ -68,7 +68,7 @@ You want to return a collection of all the paragraphs in a document:
   //returns a collection containing only paragraph elements
 ```
 
-#### Example 2 
+## Example 2 
 
  You want to alternate the alignment and color of the paragraphs in a document: 
 
@@ -103,7 +103,7 @@ You want to return a collection of all the paragraphs in a document:
  End for
 ```
 
-#### See also 
+## See also 
 
 [WP Get breaks](wp-get-breaks.md)  
 [WP Get element by ID](wp-get-element-by-id.md)  

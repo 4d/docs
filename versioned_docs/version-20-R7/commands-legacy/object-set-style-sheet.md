@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->The **OBJECT SET STYLE SHEET** command modifies, for the current process, the style sheet associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> A style sheet modifies the font, font size and (except for automatic style sheets) font style.
 
@@ -37,18 +37,18 @@ If a style sheet was already associated with the object in Design mode, calling 
 
 During the session, if you use the [ST SET ATTRIBUTES](st-set-attributes.md), [ST SET TEXT](st-set-text.md), [OBJECT SET FONT](object-set-font.md) or [OBJECT SET FONT SIZE](object-set-font-size.md) commands on the *object* in order to modify its font or font size, the reference to the style sheet is automatically deleted from the object -- even if you assign the same attributes as those of the style sheet. However, if you modify the style (bold, italic, etc.), for example using the [ST SET ATTRIBUTES](st-set-attributes.md) or [OBJECT SET FONT STYLE](object-set-font-style.md) commands, these new properties are added to the style sheet for the duration of the session.
 
-##### Compatibility Note 
+### Compatibility Note 
 
 In **project architecture**, only the three automatic style sheets are supported by this command. 
 
-#### See also 
+## See also 
 
 *Font Styles*  
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT Get style sheet](object-get-style-sheet.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

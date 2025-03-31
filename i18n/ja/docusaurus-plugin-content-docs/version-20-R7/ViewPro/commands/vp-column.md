@@ -17,7 +17,7 @@ title: VP Column
 | sheet       | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値         | Object  | <- | 複数セルのレンジオブジェクト                                 | <!-- END REF --> |
 
-#### 説明
+## 説明
 
 `VP Column` コマンドは、<!-- REF #_method_.VP Column.Summary -->特定のカラム、あるいは複数のカラムを参照する新しいレンジオブジェクトを返します<!-- END REF -->。
 
@@ -29,7 +29,7 @@ title: VP Column
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
-#### 例題
+## 例題
 
 以下に表示されている (カレントスプレッドシートの) カラムに対するレンジオブジェクトを定義します:
 
@@ -41,7 +41,7 @@ title: VP Column
  $column:=VP Column("ViewProArea";3) // カラム D
 ```
 
-#### 参照
+## 参照
 
 [VP All](vp-all.md)<br/>
 [VP Cells](vp-cells.md)<br/>

@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Database measures.Summary-->The **Database measures** command allows you to get detailed information about 4D database engine events.<!-- END REF--> Returned information includes data read/write access from/to the disk or the memory cache, as well as the use of database indexes, queries and sorts. 
 
 **Database measures** returns a single object that contains all the relevant measures. The *options* object parameter allows you to set options for the returned information. 
 
-##### Overview of the returned object 
+### Overview of the returned object 
 
 The returned object contains a single property named "DB" that has the following basic structure:
 
@@ -32,7 +32,7 @@ This object is made up of eight properties that contain basic measures ("diskRea
 
 **Note:** A property is only present inside the object if it receives contents. Properties that do not have any contents are not included in the object. For example, if the database has been opened in read-only mode and indexes have not been used, the returned object will not contain "diskWriteBytes", "diskWriteCount", "indexSegment" or "indexes".
 
-##### Elementary properties 
+### Elementary properties 
 
 Elementary properties can be found at different levels in the DB object. They return the same information but at different scopes. Here is a description of the elementary properties:
 
@@ -70,7 +70,7 @@ The eight elementary properties all have the same object structure, for example:
    This example can be represented in the following diagram:  
    ![](../assets/en/commands/pict1510781.en.png)
 
-##### dataSegment1 and indexSegment 
+### dataSegment1 and indexSegment 
 
 The "dataSegment1" and "indexSegment" properties contain up to four elementary properties (when available): 
 
@@ -120,7 +120,7 @@ You can figure out how it works by adding up the returned values:
 *diskReadCount.value = dataSegment1.diskReadCount.value + indexSegment.diskReadCount.value* 
 *diskWriteCount.value = dataSegment1.diskWriteCount.value + indexSegment.diskWriteCount.value* 
 
-##### tables 
+### tables 
 
 The "tables" property contains as many properties as there are tables that have been accessed either in read or write mode since the opening of the database. The name of each property is the name of the table involved. For example: 
 
@@ -215,7 +215,7 @@ Each table objects contains up to 12 properties:
          
    **Note:** The "queries" attribute is created when at least one query has been performed on the table.
 
-##### indexes 
+### indexes 
 
 This is the most complex object. All tables that have been accessed using one or more of their indexes are stored as properties and, inside the properties, the names of the indexes used are also included as properties. Keyword indexes appear separately and their names are followed by "*(Keyword)*". Finally, each index name property object contains the eight elementary properties related to this index as well as up to four sub-objects depending on index use in the database since it was launched (each sub-object only exists if their corresponding operation has been performed at some point since the launch of the database).
 
@@ -259,7 +259,7 @@ Example: Since the moment the database was launched, several indexes of the \[Em
 }
 ```
 
-##### options parameter 
+### options parameter 
 
 The *options* parameter allows you to customize the actual information returned by the command. In *options*, you pass an object that can contain up to three properties: "withHistory", "historyLength", and "path".
 
@@ -273,7 +273,7 @@ The *options* parameter allows you to customize the actual information returned 
 
 Example: The database has just been started 20 seconds ago and the request history is 60 seconds. The returned values between 0 and -20 will be set with values or zeros, and the other ones will be set with -1\. When a "-1" value is returned, this means that either the request time is too old or the value is no longer in the internal history array (i.e., the 200-item limit has been reached and older values have been removed).
 
-##### About client/server and components 
+### About client/server and components 
 
 This command returns information about database usage. This means that it will return a valid object with relevant values only when called:
 
@@ -284,7 +284,7 @@ If the command is called from a remote 4D, then the object will be left empty.
 In this context, if you need to get information about the database on the server, the simplest way to perform this action is to create a method with the "Execute on server" option enabled.   
 This principle will also work for a component: if the component is used in a 4D local context, it will return information about the host database; in a 4D remote context, it will return information about the server database. 
 
-#### Example 1 
+## Example 1 
 
 You want to have the history logged in the returned object:
 
@@ -295,7 +295,7 @@ You want to have the history logged in the returned object:
  $measures:=Database measures($param)
 ```
 
-#### Example 2 
+## Example 2 
 
 We only want to know the global number of bytes read in the cache ("cacheReadBytes"):
 
@@ -318,7 +318,7 @@ The object returned contains, for example:
 }
 ```
 
-#### Example 3 
+## Example 3 
 
 We want to request measures for cache bytes read within the last two minutes:
 
@@ -332,7 +332,7 @@ We want to request measures for cache bytes read within the last two minutes:
 ```
 
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

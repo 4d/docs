@@ -21,9 +21,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.QR GET INFO COLUMN.Summary-->##### List mode 
+<!--REF #_command_.QR GET INFO COLUMN.Summary-->### List mode 
 
 The **QR GET INFO COLUMN** command retrieves the parameters of an existing column.<!-- END REF-->
 
@@ -53,7 +53,7 @@ The **QR GET INFO COLUMN** command retrieves the parameters of an existing colum
 
 When passed, the optional *resultVar* parameter returns the name of the variable automatically assigned by the Quick Report editor to the formula column (if any): "C1" for the first formula column, "C2" for the second, and so on. 4D uses this variable to store the results from the last execution of the column's formula when generating the report. 
 
-##### Cross-table mode 
+### Cross-table mode 
 
 The QR GET INFO COLUMN command retrieves the same parameters but the reference of the areas to which it applies is different and varies depending on the parameter you want to set. First of all, the *title*, *hide*, and *repeatedValue* parameters are meaningless when this command is used in cross-table mode. The value to use for *colNum* varies depending on whether you want to retrieve the column size or the data source and display format.
 
@@ -81,7 +81,7 @@ In this case, the numbering of columns operates as depicted below:
 If you pass an invalid area number, the error -9850 will be generated.  
 If you pass an invalid ColNum value, the error -9852 will be generated.
 
-#### Example 
+## Example 
 
 You have designed the following report:
 
@@ -102,13 +102,13 @@ You can write:
   //$vResultVar = "C1"
 ```
 
-#### See also 
+## See also 
 
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

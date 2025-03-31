@@ -23,7 +23,7 @@ La [propiedad `lockKindText`](../API/EntityClass.md#lock) es "Locked by session"
 
 ### Descripción
 
-Los bloqueos activados por la API REST se colocan al nivel de la [sesión](authUsers.md#opening-sessions).
+Los bloqueos activados por la API REST se colocan al nivel de la [sesión](authUsers.md#sessions).
 
 Una entidad bloqueada se ve como *bloqueada* (es decir, las acciones de bloqueo / desbloqueo / actualización / eliminación no son posibles) por:
 
@@ -63,7 +63,7 @@ El objeto "__STATUS" devuelto tiene las siguientes propiedades:
 |              | host                                | text    | URL que bloqueó la entidad (por ejemplo, "127.0.0.1:8043")                                                                                                                                                                                                                                         |
 |              | IPAddr                              | text    | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                                                                                                                                                                |
 |              | recordNumber                        | number  | Número del registro bloqueado                                                                                                                                                                                                                                                                                                                                                         |
-|              | userAgent                           | text    | userAgent del origin del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+|              | userAgent                           | text    | userAgent del origen del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 Los siguientes valores pueden ser devueltos en las propiedade *status* y *statusText* del objeto *__STATUS* en caso de error:
 

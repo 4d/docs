@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.SAVE RECORD.Summary-->SAVE RECORD guarda o registro atual de *tabela* no processo atual.<!-- END REF--> Se não houver registro atual, o comando SAVE RECORDD é ignorado.  
   
@@ -32,7 +32,7 @@ Não deve executar SAVE RECORD no evento de formulário On Validate de um regist
 
 Nota: guardar um registro que contenha campos objeto editados geralmente exige que notifique explicitamente a 4D antes de chamar a SAVE RECORD. Para saber mais, consulte a seção *Salvar campos Objeto*. 
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo a seguir é parte de um método que lê registros de um documento. Nessa parte do código, é recebido um registro, e depois, se receber corretamente, o registro é guardado:
 
@@ -43,13 +43,13 @@ O exemplo a seguir é parte de um método que lê registros de um documento. Nes
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
 *Triggers*  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

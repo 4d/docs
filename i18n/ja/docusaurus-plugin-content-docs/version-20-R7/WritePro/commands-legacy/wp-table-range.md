@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 互換性に関する注意 
+## 互換性に関する注意 
 
 <!--REF #_command_.WP Table range.Summary-->**WP Table range** was named **WP Create table range** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
 
-#### 説明 
+## 説明 
 
 **WP Table range** コマンドは、*targetObj* 引数内のオブジェクトと交差する表のみを指定するレンジオブジェクトを返します。渡した*targetObj* 引数に表が含まれていなかったとしても、wk type tableのレンジが返されます。返されたレンジオブジェクトは[WP GET ATTRIBUTES](wp-get-attributes.md) および [WP SET ATTRIBUTES](wp-set-attributes.md) で使用することで、表及び表の中身に適用される属性を管理することができます。
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 * 要素 (本文 / ヘッダー / フッター / 段落 / セクション / サブセクション)
 * 4D Write Pro ドキュメント
 
-#### 例題 
+## 例題 
 
 テーブルレンジ内に格納されている表の外見を変更したい場合を考えます:
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
  WP SET ATTRIBUTES(tableRange;wk font bold;wk true)
 ```
 
-#### 参照 
+## 参照 
 
 [WP Get elements](wp-get-elements.md)  
 [WP Text range](wp-text-range.md)  

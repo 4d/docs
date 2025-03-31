@@ -12,16 +12,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
-<!--REF #_command_.CANCEL.Summary-->La commande **CANCEL** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour : 
+La commande **CANCEL** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour : 
 
-* annuler la création ou la modification d'un enregistrement ou un sous-enregistrement — dont les données ont été saisies à la suite d'un [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), *\_o\_ADD SUBRECORD* ou *\_o\_MODIFY SUBRECORD*.<!-- END REF-->
+* annuler la création ou la modification d'un enregistrement ou un sous-enregistrement — dont les données ont été saisies à la suite d'un [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), *\_o\_ADD SUBRECORD* ou *\_o\_MODIFY SUBRECORD*.
 * annuler un formulaire affiché par l'intermédiaire de la commande [DIALOG](../commands/dialog.md).
 * quitter un formulaire affichant une sélection d'enregistrements — à l'aide de [DISPLAY SELECTION](display-selection.md) ou [MODIFY SELECTION](modify-selection.md).
 * annuler l'impression d'une ligne sur le point d’être imprimée à l'aide de la commande [Print form](../commands/print-form.md) (voir ci-dessous).
 
-Dans le contexte de la saisie, **CANCEL** effectue la même action que lorsque l'utilisateur utilise la touche d'annulation (**Esc**).   
+<!--REF #_command_.CANCEL.Summary-->Dans le contexte de la saisie, **CANCEL** effectue la même action que lorsque l'utilisateur utilise la touche d'annulation (**Esc**).<!-- END REF-->   
 **CANCEL** est fréquemment exécutée à la suite de la sélection d'une commande de menu. **CANCEL** est également souvent appelée dans la méthode objet d'un bouton auquel la propriété "Pas d'action" a été associée.
 
 Cette commande peut également être placée dans la méthode de la case de fermeture (optionnelle) d'une fenêtre créée par la commande [Open window](open-window.md). Si la fenêtre comporte une case de menu Système, **CANCEL** et [ACCEPT](accept.md) peuvent être appelées dans la méthode à exécuter lorsque l'utilisateur double-clique sur la case du menu Système ou sélectionne la commande de menu **Fermeture**.  
@@ -31,25 +31,25 @@ Enfin, cette commande peut être utilisée dans l’événement formulaire On Pr
 
 **Note :** Ce fonctionnement est différent de celui de l’instruction [PAGE BREAK](page-break.md)(\*) qui provoque l’annulation de TOUTES les lignes en attente d’impression. 
 
-##### Mode headless 
+### Mode headless 
 
 La commande **CANCEL** est autorisée en mode headless, dans le contexte des zones hors écran créées par *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-#### Exemple 
+## Exemple 
 
 Reportez-vous à l'exemple de la commande [SET PRINT MARKER](set-print-marker.md). 
 
-#### Variables et ensembles système 
+## Variables et ensembles système 
 
 Lorsque la commande [CANCEL](cancel.md) est exécutée (formulaire annulé ou annulation d'impression), la variable système OK prend la valeur 0.
 
-#### Voir aussi 
+## Voir aussi 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
 [Print form](../commands/print-form.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

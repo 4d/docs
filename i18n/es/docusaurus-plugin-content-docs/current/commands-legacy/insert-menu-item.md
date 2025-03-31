@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->El comando **INSERT MENU ITEM** inserta nuevas líneas en el menú cuyo número o referencia se pasa en *menu* y las ubica después de la línea de menú cuyo número se pasa en *despuesItem*.<!-- END REF-->
 
@@ -38,7 +38,7 @@ El parámetro opcional *submenu* permite designar un menú como línea insertada
 
 **Importante:** las nuevas líneas no tienen métodos o acciones asociados. Deben asociarse utilizando los comandos [SET MENU ITEM PROPERTY](set-menu-item-property.md) o [SET MENU ITEM METHOD](set-menu-item-method.md), o los elementos también pueden ser administrados desde un método de formulario utilizando el comando [Menu selected](menu-selected.md).
 
-#### Ejemplo 
+## Ejemplo 
 
 El siguiente ejemplo crea un menú que consiste en dos comandos los cuales asignan un método:
 
@@ -50,12 +50,12 @@ El siguiente ejemplo crea un menú que consiste en dos comandos los cuales asign
  SET MENU ITEM METHOD(MenuRef;2;"ParaMgmtDial")
 ```
 
-#### Ver también 
+## Ver también 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

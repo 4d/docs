@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST Get expression.Summary-->El comando **ST Get expression** devuelve la primera expresión que se encuentra en la selección actual del campo o de la variable de texto con estilo designada por el parámetro *objeto*.<!-- END REF--> 
 
@@ -49,7 +49,7 @@ Los parámetros opcionales *inicioSel* y *finSel* designan una selección de tex
 
 Si no se encuentra una expresión en la selección, el comando devuelve una cadena vacía.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Cuando hay un evento doble clic, usted comprueba que existe una expresión, y si es así, se muestra un diálogo en el que han recuperado sus valores para que el usuario puede modificarlos:
 
@@ -69,7 +69,7 @@ Cuando hay un evento doble clic, usted comprueba que existe una expresión, y si
  End case
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted quiere ejecutar un método 4D cuando se hace clic en un enlace de usuario:
 
@@ -88,11 +88,11 @@ Usted quiere ejecutar un método 4D cuando se hace clic en un enlace de usuario:
  End case
 ```
 
-#### Ver también 
+## Ver también 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

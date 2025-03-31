@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX Get XML node.Summary-->SAX Get XML node コマンドは、*document* で参照されるXMLドキュメントが解析されている間、SAXイベントのタイプを示す倍長整数値を返します。<!-- END REF-->
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 | XML Start Document         | 倍長整数 | 1 |
 | XML Start Element          | 倍長整数 | 4 |
 
-#### 例題 
+## 例題 
 
 以下の例題でイベントの処理方法を示します:   
   
@@ -52,12 +52,12 @@ displayed_sidebar: docs
  End if
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 コマンドが正しく実行されるとシステム変数OKには1が、そうでなければ0が設定されエラーが生成されます。
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

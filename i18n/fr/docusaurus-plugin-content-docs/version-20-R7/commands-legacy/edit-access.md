@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->**EDIT ACCESS** permet de modifier le système de mots de passe.<!-- END REF--> Lorsque cette commande est exécutée, la fenêtre de la boîte à outils de 4D contenant les pages Utilisateurs et Groupes est appelée pour modifier les privilèges.
 
@@ -22,7 +22,7 @@ Les groupes peuvent être modifiés par le Super\_Utilisateur et l'Administrateu
 
 Le Super\_Utilisateur et l'Administrateur peuvent créer des utilisateurs et les placer dans des groupes.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche la fenêtre de gestion des utilisateur et des groupes :
 
@@ -30,12 +30,12 @@ L'exemple suivant affiche la fenêtre de gestion des utilisateur et des groupes 
  EDIT ACCESS
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

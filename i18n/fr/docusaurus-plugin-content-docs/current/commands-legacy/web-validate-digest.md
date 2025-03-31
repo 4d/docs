@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WEB Validate digest.Summary-->La commande **WEB Validate digest** permet de vérifier la validité des identifiants (nom et mot de passe) fournis par un utilisateur se connectant au serveur Web.<!-- END REF--> Cette commande doit être utilisée dans la *Méthode base Sur authentification Web* dans le cadre d’une authentification Web en mode Digest (cf. section *Sécurité des connexions*). 
 
@@ -27,7 +27,7 @@ Ce mécanisme vous permet de gérer et de maintenir par programmation votre prop
 
 **Note :** Si le navigateur ne prend pas en charge l’authentification Digest, une erreur est retournée (erreur d’authentification).
 
-#### Exemple 
+## Exemple 
 
 Exemple de *Méthode base Sur authentification Web* en mode Digest 
 
@@ -52,12 +52,12 @@ Exemple de *Méthode base Sur authentification Web* en mode Digest
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Generate digest](generate-digest.md)  
 [Validate password](validate-password.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

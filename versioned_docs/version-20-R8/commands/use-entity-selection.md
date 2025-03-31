@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summary-->updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection<!-- END REF-->.
 
@@ -31,7 +31,7 @@ After a call to `USE ENTITY SELECTION`, the first record of the updated current 
 
 :::
 
-#### Example
+## Example
 
 ```4d
 var $entitySel : cs.EmployeeSelection
@@ -43,11 +43,11 @@ USE ENTITY SELECTION($entitySel) //The current selection of the Employee table i
 
 
 
-#### See also 
+## See also 
 
 [Create entity selection](create-entity-selection.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

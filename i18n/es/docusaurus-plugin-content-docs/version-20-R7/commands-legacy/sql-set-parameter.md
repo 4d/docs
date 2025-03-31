@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->El comando SQL SET PARAMETER permite el uso del valor de una variable, array o campo 4D en las peticiones SQL.<!-- END REF-->
 
@@ -32,7 +32,7 @@ El valor del objeto 4D reemplaza al carácter *?* en la petición SQL (sintaxis 
 
 **Atención:** este comando se utiliza para manejar los *parámetros* pasados a la petición SQL. No es posible utilizar el tipo SQL param out para asociar un objeto 4D al resultado de una petición SQL. El resultado de una petición SQL se recupera, por ejemplo, utilizando el parámetro *objAsoc* del comando [SQL EXECUTE](sql-execute.md) (ver *Presentación de los comandos del tema SQL*). El comando **SQL SET PARAMETER** se utiliza por lo general para definir los parámetros pasados a la petición (SQL param in); los tipos SQL param out y SQL param in out están reservados para ser utilizados en el contexto de los procedimientos almacenados SQL que pueden devolver parámetros. 
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Este ejemplo se utiliza para ejecutar una petición SQL la cual llama directamente a las variables 4D asociadas:
 
@@ -51,7 +51,7 @@ Este ejemplo se utiliza para ejecutar una petición SQL la cual llama directamen
  SQL LOGOUT
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El mismo ejemplo anterior, pero utilizando el comando SQL SET PARAMETER: 
 
@@ -72,12 +72,12 @@ El mismo ejemplo anterior, pero utilizando el comando SQL SET PARAMETER:
  SQL LOGOUT
 ```
 
-#### Variables y conjuntos del sistema 
+## Variables y conjuntos del sistema 
 
 Si el comando se ha ejecutado correctamente, la variable sistema OK devuelve 1\. De lo contrario, devuelve 0.
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

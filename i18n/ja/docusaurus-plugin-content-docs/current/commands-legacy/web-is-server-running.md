@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WEB Is server running.Summary-->新しい**WEB Is server running** コマンド("*Webサーバ*"テーマ)は、4DがビルトインされているWebサーバーが動作中である場合にはTrueを、Webサーバーがオフである場合にはFalseを返します。<!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 | 4D リモートモード(4D Server ストアドプロシージャ―) | 4D Server Web サーバー |
 | 4D リモートモード(他の4D のリモートストアドプロシージャ―) | リモート4D Web サーバー    |
 
-#### 例題 
+## 例題 
 
 Webサーバーが実行中かどうかをチェックしたい場合:
 
@@ -38,7 +38,7 @@ Webサーバーが実行中かどうかをチェックしたい場合:
 ```
 
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ title: VP Get default style
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Object|<-|Default style settings |<!-- END REF -->
 
-#### Description
+## Description
 
 The `VP Get default style` command <!-- REF #_method_.VP Get default style.Summary -->returns a default style object for a sheet<!-- END REF -->. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](vp-set-default-style.md) method. For more information about style properties, see [Style Objects & Style Sheets](../configuring.md#style-objects--style-sheets).
 
@@ -23,7 +23,7 @@ In *vpAreaName*, pass the name property of the 4D View Pro area. If you pass a n
 
 You can define where to get the column count in the optional *sheet* parameter using the sheet index (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used.
 
-#### Example
+## Example
 
 To get the details about the default style for this document:
 
@@ -46,7 +46,7 @@ will return this information in the *$defaultStyle* object:
 }
 ```
 
-#### See also
+## See also
 
 [VP Get cell style](vp-get-cell-style.md)<br/>
 [VP SET DEFAULT STYLE](vp-set-default-style.md)

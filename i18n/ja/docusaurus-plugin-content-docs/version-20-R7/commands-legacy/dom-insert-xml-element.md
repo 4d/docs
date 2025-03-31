@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.DOM Insert XML element.Summary-->DOM Insert XML element コマンドを使用して*targetElementRef*引数に渡された参照を持つXML要素の子要素の間に、新しいXML要素を挿入できます。<!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 コマンドは取得したXML要素の参照を返します。
 
-#### 例題 
+## 例題 
 
 以下のXML構造で、1番目と2番目の本を入れ替えます:
 
@@ -71,11 +71,11 @@ displayed_sidebar: docs
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [DOM Append XML element](dom-append-xml-element.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

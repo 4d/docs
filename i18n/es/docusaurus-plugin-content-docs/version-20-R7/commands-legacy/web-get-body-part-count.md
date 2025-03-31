@@ -13,19 +13,19 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.WEB Get body part count.Summary-->El comando **WEB Get body part count** devuelve el número de partes que compone el cuerpo recibido.<!-- END REF-->
 
-#### Ejemplo 
+## Ejemplo 
 
 Consulte el ejemplo del comando [WEB GET BODY PART](web-get-body-part.md). 
 
-#### Ver también 
+## Ver también 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

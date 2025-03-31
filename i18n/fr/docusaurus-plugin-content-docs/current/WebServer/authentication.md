@@ -23,7 +23,7 @@ Le schéma suivant résume le système d'accès au serveur web 4D :
 
 ### Authentification personnalisée (par défaut)
 
-Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
+Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D évalue uniquement les requêtes HTTP [qui nécessitent une authentification](#database-method-calls).
 
 Ce mode d'authentification est le plus flexible car il permet de :
 
@@ -83,7 +83,7 @@ La méthode base `On Web Authentication` est donc appelée :
 La méthode base `On Web Authentication` n'est PAS appelée :
 
 - lorsque le serveur web reçoit une URL demandant une page statique valide.
-- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
+- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the `On REST Authentication` database method or Structure settings.
 - when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md).
 
 ### Syntaxe

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WA Get current URL.Summary-->WA Get current URL コマンドは、*\** と *object* 引数で指定したWebエリアに現在表示されているページのURLアドレスを返します。<!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Webページが完全にロードされると、この関数から返される値はWebエリアに関連付けられたURL変数の値と同じです。ページがロード中の場合、2つの値は異なります。関数は完全にロードされたURLを返し、変数にはロード中のURLが格納されています。
 
-#### 例題 
+## 例題 
 
 "www.apple.com"のページが表示されていて"www.4d.com"ページをロード中の場合:
 
@@ -32,11 +32,11 @@ Webページが完全にロードされると、この関数から返される�
   //関連付けられたURL変数は "http://www.4d.com"
 ```
 
-#### 参照 
+## 参照 
 
 [WA OPEN URL](wa-open-url.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

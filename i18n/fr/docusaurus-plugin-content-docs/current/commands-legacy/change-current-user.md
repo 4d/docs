@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CHANGE CURRENT USER.Summary-->**CHANGE CURRENT USER** permet de changer l'identité de l'utilisateur courant dans la base, sans devoir la quitter.<!-- END REF--> Le changement d'identité peut être effectué par l'utilisateur lui-même via la boîte de dialogue de connexion à la base (lorsque la commande est appelée sans paramètres) ou directement par la commande. Lorsqu'il change d'identité, l'utilisateur abandonne ses anciens privilèges au profit de ceux de l'utilisateur choisi.
 
@@ -37,7 +37,7 @@ La commande est à présent temporisée afin d’éviter des attaques par “for
 
 **Note :** Lorsque le groupe de l'utilisateur actuel donne accès à une fonctionnalité "sérialisée" (par exemple, un plug-in), une licence correspondante est utilisée et restera attachée au compte utilisateur 4D jusqu'à la fin de la session, même si **CHANGE CURRENT USER** est appelé et que le groupe du nouvel utilisateur ne fournit pas d'accès à la fonctionnalité.
 
-##### Proposer une boîte de dialogue de gestion d’accès personnalisée 
+### Proposer une boîte de dialogue de gestion d’accès personnalisée 
 
 La commande **CHANGE CURRENT USER** permet de mettre en place des boîtes de dialogue personnalisées pour la saisie du nom et du mot de passe (avec règles de saisie et d'expiration) tout en bénéficiant des avantages du système intégré de contrôle des accès de 4D.   
 Le principe est le suivant : 
@@ -52,7 +52,7 @@ Le principe est le suivant :
 
 **3.** Lorsque la saisie est validée, les informations requises (nom d’utilisateur et mot de passe) sont passées à la commande **CHANGE CURRENT USER** afin d’ouvrir la base avec les privilèges du compte utilisateur.
 
-#### Exemple 
+## Exemple 
 
 L'exemple suivant affiche simplement la boîte de dialogue de connexion :
 
@@ -62,12 +62,12 @@ L'exemple suivant affiche simplement la boîte de dialogue de connexion :
 
 **Note :** Ce code ne fait rien dans une base projet monoposte.
 
-#### Voir aussi 
+## Voir aussi 
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.EXECUTE FORMULA.Summary-->**EXECUTE FORMULA** executes *statement* as a line of code.<!-- END REF--> This command is designed to be used when you need to evaluate expressions that can be built or modified by the user. 
 
@@ -36,7 +36,7 @@ The formula can include process variables and interprocess variables. However, t
 
 To ensure that the *statement* will be evaluated correctly regardless of the 4D language or version used, we recommend using the *token* syntax for elements whose name might vary between different versions (commands, tables, fields, constants). For example, to insert the [Current time](current-time.md) command, enter '**Current time:C178**'. For more information about this, refer to *Using tokens in formulas*. 
 
-##### Cache for formulas in compiled mode 
+### Cache for formulas in compiled mode 
 
 For optimization purposes, each formula executed by **EXECUTE FORMULA** in compiled mode can be stored in a dedicated cache in memory. The formula is cached in tokenized form. Once it is placed in the cache, its subsequent executions are highly optimized since the tokenization step is bypassed. 
 
@@ -49,7 +49,7 @@ The cache size is zero by default (no cache); it needs to be created or adjusted
 
 The **EXECUTE FORMULA** command uses the cache only when called from a compiled database or component.
 
-#### Example 
+## Example 
 
 You want to execute a formula including calls to 4D commands and tables. Since these elements could potentially be renamed, you can ensure correct execution in future versions of your application by using the token syntax as shown here:
 
@@ -57,13 +57,13 @@ You want to execute a formula including calls to 4D commands and tables. Since t
  EXECUTE FORMULA("Year of:C25 ([Products:5]Creation_Date:2])+$add")
 ```
 
-#### See also 
+## See also 
 
 [Command name](command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

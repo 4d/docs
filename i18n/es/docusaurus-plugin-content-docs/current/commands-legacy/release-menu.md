@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RELEASE MENU.Summary-->El comando RELEASE MENU borra de la memoria el menú cuya referencia se pasa en *menu*.<!-- END REF-->. La regla es la siguiente: a cada [Create menu](create-menu.md) debe corresponder un [RELEASE MENU](release-menu.md). 
 
@@ -23,7 +23,7 @@ Este comando puede utilizarse con menús usados como barras de menús.
 
 Los submenús utilizados por *menu* no se borran si fueron creados utilizando el comando [Create menu](create-menu.md). En este caso, debe eliminarlos individualmente (ver la regla mencionada anteriormente). Sin embargo, si los submenús vienen de la duplicación de un menú existente, no llame [RELEASE MENU](release-menu.md) con sus instancias porque 4D las borrará automáticamente.
 
-#### Ejemplo 
+## Ejemplo 
 
 Este ejemplo muestra las diferentes formas de utilizar este comando:
 
@@ -51,11 +51,11 @@ Este ejemplo muestra las diferentes formas de utilizar este comando:
   //La regla a seguir es: cada Create menu debe tener un RELEASE MENU correspondiente
 ```
 
-#### Ver también 
+## Ver también 
 
 [Create menu](create-menu.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

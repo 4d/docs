@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->O comando **REDUCE RESTORE WINDOW** reduz/expande a janela cujo número de referência foi passado em *janela d*esde a barra de tarefas em Windows ou no dock em macOS.<!-- END REF-->   
   
@@ -24,13 +24,13 @@ O comando muda o estado da janela:
 
 **Nota:** em macOS, o comando é assíncrono.
 
-#### Ver também 
+## Ver também 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

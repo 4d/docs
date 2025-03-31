@@ -16,23 +16,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MAIL New attachment.Params-->
 
-| 引数          | 型                                 |                                       | 説明                                                                                     |
-| ----------- | --------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------- |
-| 引数          | 型                                 |                                       | 説明                                                                                     |
-| ***         | ***                               | :---: | ***                                                                                    |
-| file        | 4D.File           | &#8594;           | 添付ファイル                                                                                 |
-| zipFile     | 4D.ZipFile        | &#8594;           | 添付 Zipファイル                                                                             |
-| blob        | 4D.Blob           | &#8594;           | 添付を格納した BLOB                                                                           |
-| path        | Text                              | &#8594;           | 添付ファイルのパス                                                                              |
-| name        | Text                              | &#8594;           | メールクライアントが添付を指定するのに使用する名前 + 拡張子                                                        |
-| cid         | Text                              | &#8594;           | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列) |
-| type        | Text                              | &#8594;           | content-type ヘッダーの値                                                                    |
-| disposition | Text                              | &#8594;           | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
-| 戻り値         | 4D.MailAttachment | &#8592;           | Attachment オブジェクト                                                                      |
+| 引数          | 型                                 |                             | 説明                                                                                     |
+| ----------- | --------------------------------- | --------------------------- | -------------------------------------------------------------------------------------- |
+| file        | 4D.File           | &#8594; | 添付ファイル                                                                                 |
+| zipFile     | 4D.ZipFile        | &#8594; | 添付 Zipファイル                                                                             |
+| blob        | 4D.Blob           | &#8594; | 添付を格納した BLOB                                                                           |
+| path        | Text                              | &#8594; | 添付ファイルのパス                                                                              |
+| name        | Text                              | &#8594; | メールクライアントが添付を指定するのに使用する名前 + 拡張子                                                        |
+| cid         | Text                              | &#8594; | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列) |
+| type        | Text                              | &#8594; | content-type ヘッダーの値                                                                    |
+| disposition | Text                              | &#8594; | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
+| 戻り値         | 4D.MailAttachment | &#8592; | Attachment オブジェクト                                                                      |
 
 <!-- END REF-->
 
-#### 説明
+## 説明
 
 `MAIL New attachment` コマンドは、<!-- REF #_command_.MAIL New attachment.Summary -->[Email オブジェクト](../API/EmailObjectClass.md#email-オブジェクト) に追加することができる添付オブジェクトを作成します<!-- END REF -->。
 
@@ -85,7 +83,7 @@ displayed_sidebar: docs
 - *cid* 引数が使われていた場合、`Content-disposition` ヘッダーは "inline" に設定されます。
 - *cid* 引数が渡されていない、あるいは空の文字列が渡されていた場合、`Content-disposition` ヘッダーは "attachment" に設定されます。
 
-#### 例題 1
+## 例題 1
 
 ユーザーが選択したファイルを添付し、HTML 本文に画像を埋め込んだメールを送信します:
 
@@ -123,7 +121,7 @@ $transporter.send($email) // メールを送信します
 End if
 ```
 
-#### 例題 2
+## 例題 2
 
 4D Write Pro エリアを添付したメールを送信します:
 
@@ -149,11 +147,11 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 $transporter.send($email)
 ```
 
-#### プロパティ
+## プロパティ
 
-|         |                                 |
-| ------- | ------------------------------- |
-| コマンド番号  | 1644                            |
-| スレッドセーフ | &amp;check; |
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1644                        |
+| スレッドセーフ | &check; |
 
 

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.QR SET BORDERS.Summary-->La commande **QR SET BORDERS** permet de définir le style d'encadrement d'une cellule spécifique.<!-- END REF--> 
 
@@ -72,11 +72,11 @@ Si le paramètre *ligne* est incorrect, l’erreur -9853 est générée.
 Si le paramètre *encadrement* est incorrect, l’erreur -9854 est générée.  
 Si le paramètre *épaisseur* est incorrect, l’erreur -9855 est générée.
 
-#### Voir aussi 
+## Voir aussi 
 
 [QR GET BORDERS](qr-get-borders.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

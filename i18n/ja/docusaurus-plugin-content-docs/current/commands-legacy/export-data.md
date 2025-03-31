@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.EXPORT DATA.Summary-->**EXPORT DATA**コマンドは、データを*fileName*ファイルに書き出します。<!-- END REF-->4Dからは以下のフォーマットでデータの書き出しを行えます: テキスト、固定長テキスト、XML、SYLK、DIF、DBF（dBase）および4Dフォーマット
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 データ書き出しが正常に終了すると、システム変数OKは1になります。
 
-#### 例題 1 
+## 例題 1 
 
 この例題ではバイナリーフォーマットでデータを書き出すために**EXPORT DATA**コマンドを使用する方法を示します。
 
@@ -78,7 +78,7 @@ displayed_sidebar: docs
  DOM CLOSE XML($ref)
 ```
 
-#### 例題 2 
+## 例題 2 
 
 この例題は、空のプロジェクトを作成し、ユーザが書き出しダイアログボックスで設定した各パラメターを保存します: 
 
@@ -87,18 +87,18 @@ displayed_sidebar: docs
  EXPORT DATA("DocExport.txt";$exportParams;*) // 書き出しダイアログボックスを表示する
 ```
 
-#### システム変数およびセット 
+## システム変数およびセット 
 
 標準のファイルを開くまたは書き出しダイアログボックスでユーザがキャンセルをクリックするとOKシステム変数は0に設定されます。書き出しが行われると1に設定されます。
 
-#### 参照 
+## 参照 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DATA](import-data.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

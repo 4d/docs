@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->**PAUSE INDEXES**コマンドは、*aTable* のインデックスを、プライマリーキーのインデックスを除き一時的に無効にします。<!-- END REF-->.
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドは4Dリモートからは実行することができません。
 
-#### 例題 
+## 例題 
 
 大量のデータをインポートするメソッド例:
 
@@ -42,12 +42,12 @@ displayed_sidebar: docs
  RESUME INDEXES([Articles])
 ```
 
-#### 参照 
+## 参照 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

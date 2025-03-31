@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM Find XML element.Summary-->The DOM Find XML element command looks for specific XML elements in an XML structure.<!-- END REF--> The search starts at the element designated by the *elementRef* parameter. 
 
@@ -51,7 +51,7 @@ The XML node to seek is set expressed in XPath notation using the *xPath* parame
 
 The command returns the XML reference of the element(s) found. When the *arrElementRefs* string array is passed, the command fills it with the list of XML references found. In this case, the command returns the first element of the *arrElementRefs* array as the result. This parameter is useful when several elements with the same name exist at the location specified by the *xPath* parameter.
 
-#### Example 1 
+## Example 1 
 
 Give the following XML structure:
 
@@ -78,7 +78,7 @@ The same search can also be done as follows:
  ALERT("The value of the element is: \""+value+"\"") //Learning XML
 ```
 
-#### Example 2 
+## Example 2 
 
 Given the following XML structure: 
 
@@ -94,7 +94,7 @@ The following code can be used to retrieve the reference of each Elem2 element i
  vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to select all "rect" elements with a "class" attributes that contains the "bgcontainer" string:
 
@@ -102,23 +102,23 @@ You want to select all "rect" elements with a "class" attributes that contains t
  $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
 ```
 
-#### System variables and sets 
+## System variables and sets 
 
 If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
 
-#### Error management 
+## Error management 
 
 An error is generated when:
 
 * The element reference is invalid
 * The specified xPath path is invalid.
 
-#### See also 
+## See also 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

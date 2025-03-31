@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** vous permet d'imprimer des étiquettes à partir des données de la sélection de *laTable*.<!-- END REF-->
 
@@ -46,7 +46,7 @@ Si vous spécifiez le paramètre *nomFichier*, les étiquettes sont imprimées a
 * La syntaxe faisant apparaître l‘éditeur d’étiquettes ne fonctionne pas avec 4D Server, dans ce cas, la variable système OK prend la valeur 0.
 * En cas de problème sur l’imprimante (plus de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
-#### Exemple 1 
+## Exemple 1 
 
 L'exemple suivant imprime des étiquettes à l'aide du formulaire de sortie de la table. L'exemple s'appuie sur deux méthodes. La première est une méthode projet qui désigne le formulaire sortie à utiliser puis imprime les étiquettes : 
 
@@ -72,7 +72,7 @@ La seconde méthode est la méthode du formulaire "ImprimEtiq". Le formulaire co
  End case
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table \[Employés\], et d'imprimer automatiquement les étiquettes “Mes Etiquettes” :
 
@@ -83,7 +83,7 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table
  End if
 ```
 
-#### Exemple 3 
+## Exemple 3 
 
 L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table \[Employés\], puis de choisir les étiquettes qui doivent être imprimées :
 
@@ -94,7 +94,7 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table
  End if
 ```
 
-#### Exemple 4 
+## Exemple 4 
 
 L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table \[Employés\], puis affiche l'assistant de création d'étiquettes afin que l'utilisateur puisse concevoir, sauvegarder, charger et imprimer tout type d'étiquettes :
 
@@ -105,12 +105,12 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

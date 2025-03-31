@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.OB SET ARRAY.Summary-->The **OB SET ARRAY** command defines the *array* to be associated with the *property* in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
 
@@ -29,7 +29,7 @@ In the *array* parameter, pass the array that must be passed as the property val
 * Simple variables are supported in the *array* parameter, in which case a single-value array is created and associated to the *property*.
 * It is not possible to use two-dimensional arrays.
 
-#### Example 1 
+## Example 1 
 
 Using a text array:
 
@@ -44,7 +44,7 @@ Using a text array:
   // Value of $Children = {"Children":["Richard","Susan","James"]}
 ```
 
-#### Example 2 
+## Example 2 
 
 Adding an element to an array:
 
@@ -61,7 +61,7 @@ Adding an element to an array:
   // $Employees = {"Employees":["Smith","White","Brown"]}
 ```
 
-#### Example 3 
+## Example 3 
 
 Using a text array with selection of an element:
 
@@ -71,7 +71,7 @@ Using a text array with selection of an element:
   // $Employees = {"Employees":["Smith","White","Brown"],"Manager":["Smith"]}
 ```
 
-#### Example 4 
+## Example 4 
 
 Using an object array:
 
@@ -100,7 +100,7 @@ Here is how the object appears in the debugger:
 
 ![](../assets/en/commands/pict1211436.en.png)
 
-#### Example 5 
+## Example 5 
 
 Using an Object field:
 
@@ -114,7 +114,7 @@ Using an Object field:
 
 ![](../assets/en/commands/pict1899097.en.png)
 
-#### Example 6 
+## Example 6 
 
 Using a picture array:
 
@@ -127,13 +127,13 @@ Using a picture array:
  OB SET ARRAY([Cities]Places;"Photoset";$arrPhotos)
 ```
 
-#### See also 
+## See also 
 
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
 *Type conversions between collections and 4D arrays*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

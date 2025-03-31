@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get text.Summary-->The **WP Get text** command retrieves text contents from a 4D Write Pro document within the specified *targetObj*.<!-- END REF-->
 
@@ -47,7 +47,7 @@ The optional *expressions* parameter provides instructions for the evaluation of
 * If *targetObj* contains pictures, the pictures are ignored and returned as space characters (" ").
 * If *targetObj* contains tables, the content of each cell is treated as individual paragraphs and returned as text separated by tabs. Rows are separated by carriage returns.
 
-#### Example 
+## Example 
 
 To retrieve the text in this document:
 
@@ -62,7 +62,7 @@ you can write:
  vText3:=WP Get text($range;wk expressions as space) //returns "Hello world! Today is:  ."
 ```
 
-#### See also 
+## See also 
 
 *Managing formulas*  
 [WP SET TEXT](wp-set-text.md)  

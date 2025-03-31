@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.DOM SET XML DECLARATION.Summary-->La commande **DOM SET XML DECLARATION** permet de définir diverses options qui seront utilisée pour la création de l’arbre XML désigné par *refElément*.<!-- END REF--> Ces options concernent l’encodage et l’attribut autonome (standalone) de l’arbre :
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 **Note de compatibilité :** Le paramètre *indentation* est conservé pour des raisons de compatibilité avec les versions précédentes de 4D mais son usage est déconseillé à compter de 4D v12\. Désormais, pour définir l’indentation du document, il est recommandé d’utiliser la commande [XML SET OPTIONS](xml-set-options.md). 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple définit l’encodage et l’option standalone de l’élément *refElément* : 
 
@@ -34,12 +34,12 @@ Cet exemple définit l’encodage et l’option standalone de l’élément *ref
  DOM SET XML DECLARATION(refElément;"UTF-16";True)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [DOM Create XML Ref](dom-create-xml-ref.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

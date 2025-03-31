@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Printing page.Summary-->Printing pageは、印刷中のページ番号を返します。<!-- END REF-->このコマンドは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドまたはデザインモードのプリント...メニューの選択によって印刷する場合にのみ使用することができます。
 
-#### 例題 
+## 例題 
 
 以下の例は、両面印刷フォーマットのレポートにページ番号を設定します。ページ番号の位置を変更するために、フォームはページ番号を表示する変数を2つ持っています。変数 (*vLeftPageNum*) は、偶数のページ番号を印刷します。変数 (*vRightPageNum*) は、奇数のページ番号を印刷します。この例は、偶数ページを判定し適切な変数に値を代入します:
 
@@ -34,11 +34,11 @@ displayed_sidebar: docs
  End case
 ```
 
-#### 参照 
+## 参照 
 
 [PRINT SELECTION](print-selection.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

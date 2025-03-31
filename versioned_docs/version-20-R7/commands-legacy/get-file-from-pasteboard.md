@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->The Get file from pasteboard command returns the absolute pathname of a file included in a drag and drop operation.<!-- END REF--> Several files can be selected and moved simultaneously. The *xIndex* parameter is used to designate a file from among the set of files selected.
 
 If there is no Xth file in the pasteboard, the command returns an empty string.
 
-#### Example 
+## Example 
 
 The following example can be used to retrieve in an array all the pathnames of the files included in a drag and drop operation:
 
@@ -38,11 +38,11 @@ The following example can be used to retrieve in an array all the pathnames of t
  Until($vfileArray="")
 ```
 
-#### See also 
+## See also 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

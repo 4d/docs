@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->**LISTBOX SET COLUMN WIDTH** コマンドを使用し、 *object*引数および *\** で指定されたオブジェクト（リストボックス、列、またはヘッダ）の任意の列の幅、またはすべての列の幅をプログラムから変更することができます。<!-- END REF-->
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
   
 オプションの*minWidth*と*maxWidth*引数を使用して、列の手動によるサイズ変更の制限を設定できます。*minWidth*と*maxWidth*引数にそれぞれピクセル単位で最小および最大幅を渡すことができます。ユーザにサイズ変更をさせたくない場合は、*width*、*minWidth*および*maxWidth*に同じ値を渡します。
 
-#### 参照 
+## 参照 
 
 [LISTBOX Get column width](listbox-get-column-width.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

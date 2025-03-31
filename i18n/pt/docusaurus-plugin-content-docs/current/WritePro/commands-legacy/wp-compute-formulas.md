@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP COMPUTE FORMULAS.Summary-->O comando **WP COMPUTE FORMULAS** avalia as fórmulas em *objTarget*.<!-- END REF-->
 
@@ -27,7 +27,7 @@ No parâmetro *objTarget*, pode passar:
 
 **Nota**: quando se passa uma seção em targetObj, só são calculadas as fórmulas das imagens ou as fórmulas das caixas de texto ancoradas a esta seção ou a todas as seções. Se estiverem ancoradas a uma página ou a vista aninhada, suas fórmulas não são calculadas. Passe o documento em targetObj para calcular todas as fórmulas dos elementos ancorados.
 
-#### Exemplo 
+## Exemplo 
 
 Para atualizar as fórmulas em um documento:
 
@@ -41,7 +41,7 @@ Para atualizar todas as fórmulas na primeira seção de um documento:
  WP COMPUTE FORMULAS(WP Get section(WriteProArea;1))
 ```
 
-#### Ver também 
+## Ver também 
 
 *Gestão de fórmulas*  
 [WP FREEZE FORMULAS](wp-freeze-formulas.md)  

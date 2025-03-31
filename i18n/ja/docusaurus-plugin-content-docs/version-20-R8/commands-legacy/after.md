@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.After.Summary-->**After** はAfter 実行サイクルでTrue を返します。<!-- END REF-->
 
@@ -21,11 +21,11 @@ displayed_sidebar: docs
 
 **注:** このコマンドは、[Form event code](../commands/form-event-code.md) コマンドを用いてOn Validate イベントを返すかどうかをテストするのと同等と言えます。
 
-#### 参照 
+## 参照 
 
 [Form event code](../commands/form-event-code.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

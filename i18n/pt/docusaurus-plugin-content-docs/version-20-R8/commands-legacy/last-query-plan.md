@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Last query plan.Summary-->O comando Last query plan devolve a descrição interna do plano de execução da última pesquisa realizada nos dados.<!-- END REF--> Para maior informação sobre as descrições de pesquisas, por favor consulte a documentação do comando [DESCRIBE QUERY EXECUTION](describe-query-execution.md "DESCRIBE QUERY EXECUTION"). .  
 
@@ -30,12 +30,12 @@ Este comando devolve um valor significativo se o comando [DESCRIBE QUERY EXECUTI
   
 A descrição do plano da última pesquisa pode ser comparada com a descrição da rota real da última pesquisa (obtido com a ajuda do comando [Last query path](last-query-path.md "Last query path")) com propósitos de otimização.
 
-#### Ver também 
+## Ver também 
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query path](last-query-path.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

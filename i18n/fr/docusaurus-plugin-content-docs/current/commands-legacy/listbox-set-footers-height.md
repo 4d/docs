@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Summary-->La commande **LISTBOX SET FOOTERS HEIGHT** permet de modifier par programmation la hauteur de la ligne de pied de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
@@ -31,11 +31,11 @@ Passez dans le paramètre *hauteur* la hauteur à définir. Par défaut, si vous
 
 **Note :** Pour plus d’informations sur le calcul des hauteurs de lignes, reportez-vous au manuel *Mode Développement*.
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX Get footers height](listbox-get-footers-height.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

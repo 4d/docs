@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Convert path system to POSIX.Summary-->La commande **Convert path system to POSIX** convertit un chemin d’accès exprimé avec la syntaxe système en chemin d’accès exprimé avec la syntaxe POSIX (Unix).<!-- END REF--> 
 
@@ -25,7 +25,7 @@ La commande retourne le chemin d’accès complet du fichier ou du dossier expri
 
 Le paramètre optionnel *\** permet de définir l’encodage du chemin POSIX. Par défaut, **Convert path system to POSIX** n’encode pas les caractères spéciaux du chemin POSIX. Si vous passez le paramètre *\**, les caractères seront traduits (par exemple, "Mon dossier" devient "Mon%20dossier").
 
-#### Exemple 1 
+## Exemple 1 
 
 Exemples sous macOS
 
@@ -44,7 +44,7 @@ Exemples sous macOS
      //retourne "/resources/images"
 ```
 
-#### Exemple 2 
+## Exemple 2 
 
 Exemple sous Windows
 
@@ -55,14 +55,14 @@ Exemple sous Windows
      //retourne "//srv/tempo/file.txt"
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.ENCRYPT BLOB.Summary-->La commande **ENCRYPT BLOB** permet de crypter le contenu du BLOB *aCrypter* à l’aide de la clé privée de l’émetteur *cléPrivEmetteur* ainsi que, optionnellement, de la clé publique du récepteur *cléPubRécepteur*.<!-- END REF--> Pour obtenir une paire de clés de cryptage (clé publique et clé privée), utilisez la routine [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md), placée dans le thème “Protocole sécurisé”.
 
@@ -35,7 +35,7 @@ Après l’exécution de la commande, le BLOB *aCrypter* contient les données c
 
 **Note :** L’algorithme de cryptage comporte une fonction de vérification d’intégrité (checksum), afin d’empêcher toute modification malveillante ou accidentelle du contenu du BLOB. Par conséquent, un BLOB crypté ne doit pas être modifié, sous peine de ne pas pouvoir être décrypté.
 
-##### Optimisation des commandes de cryptage 
+### Optimisation des commandes de cryptage 
 
 Le cryptage des données ralentit l’exécution de l’application, en particulier si une paire de clés est utilisée. Deux types d’optimisations sont toutefois possibles : 
 
@@ -44,7 +44,7 @@ Le mode asynchrone est plus rapide, car il ne bloque pas les autres process. Ce 
 Dans le cas contraire, pour des raisons de sécurité, le mode synchrone est utilisé. Ce mode est plus lent car les autres process sont bloqués.
 * Dans le cas de BLOBs volumineux, l’astuce consiste à crypter uniquement une partie déterminée et sensible du BLOB, afin de réduire la taille des données à traiter et donc le temps d’exécution.
 
-#### Exemple 
+## Exemple 
 
 **• Utilisation d’une seule clé**
 
@@ -183,14 +183,14 @@ Dans le cas contraire, pour des raisons de sécurité, le mode synchrone est uti
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [DECRYPT BLOB](decrypt-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

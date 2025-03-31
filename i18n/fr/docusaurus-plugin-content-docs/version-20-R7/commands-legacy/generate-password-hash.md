@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Generate password hash.Summary-->La commande **Generate password hash** retourne un *hash* de *motDePasse*, généré par un algorithme de hachage cryptographique.<!-- END REF-->
 
@@ -30,7 +30,7 @@ Dans l'objet *options*, passez les propriétés à utiliser lors de la générat
 
 **Note** : Si l'une des valeurs de l'objet *options* est invalide, une erreur est générée et la commande retourne une chaîne vide.
 
-##### Gestion des erreurs 
+### Gestion des erreurs 
 
 Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](last-errors.md)  et [ON ERR CALL](on-err-call.md).  
 
@@ -39,11 +39,11 @@ Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et anal
 | 850        | Password-hash: Algorithme inconnu.                                                         |
 | 852        | Password-hash: bcrypt admet un coût qui va de 4 à 31 inclus, le paramètre est hors limite. |
 
-##### A propos de bcrypt 
+### A propos de bcrypt 
 
 bcrypt est une fonction de hachage de mot de passe basée sur l'algorithme de chiffrement Blowfish. Elle incorpore un salage protégeant contre les attaques par "rainbow table" et est adaptative : il est possible d'augmenter le nombre d'itérations afin de la rendre plus lente et donc plus résistante aux attaques par force brute. 
 
-#### Exemple 
+## Exemple 
 
 Cet exemple génère un hash de mot de passe à l'aide de bcrypt avec un coût de facteur 4.
 
@@ -62,13 +62,13 @@ Cet exemple génère un hash de mot de passe à l'aide de bcrypt avec un coût d
 
 **Rappel** : Un hash différent est généré à chaque appel de la commande avec le même mot de passe. Ce fonctionnement est standard pour les algorithmes tels que bcrypt, puisque les bonnes pratiques consistent à créer un nouveau salage aléatoire pour chaque hash. Reportez-vous à la description de la commande [Verify password hash](verify-password-hash.md) pour un exemple de vérification des mots de passe.
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [Generate digest](generate-digest.md)  
 [Verify password hash](verify-password-hash.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

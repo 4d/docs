@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.WP Get header.Summary-->O comando **WP Get header** devolve um cabeçalho associado a faixa *objFaixa* ou ao *indiceSecao* do documento *wpDoc*.<!-- END REF--> Se não encontrar nenhum cabeçalho com respeito aos parâmetros, o comando devovle Null.
 
@@ -33,7 +33,7 @@ Se for passada o parâmetro *tipoSubSecao*, o comando devolve o cabeçalho assoc
     
 Se não for especificado o *tipoSubSecao*, se devolverá o cabeçalho da seção principal. Nesse caso, se uma subseção estiver activa, o objeto de cabeçalho da seção principal está *indefinido* (o cabeçalho da seção principal só está disponível se não tiver nenhuma subseção wk first page ou wk left page ativa).
 
-#### Exemplo 
+## Exemplo 
 
 Se quiser copiar o cabeçalho da primeira página de um documento 4D Write Pro aos cabeçalhos de todas as páginas de outro documento 4D Write Pro:
 
@@ -50,7 +50,7 @@ Se quiser copiar o cabeçalho da primeira página de um documento 4D Write Pro a
  WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
-#### Ver também 
+## Ver também 
 
 *Utilizar uma área 4D Write Pro*  
 [WP DELETE HEADER ](wp-delete-header.md)  

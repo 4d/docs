@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->La commande **BOOLEAN ARRAY FROM SET** remplit un tableau de booléens indiquant si chaque enregistrement de la table à laquelle appartient *ensemble* fait ou non partie de l’ensemble.<!-- END REF-->
 
@@ -29,11 +29,11 @@ Attention, le nombre total d’éléments du tableau *tabBooléen* n’est pas s
 
 Si vous ne passez pas le paramètre *ensemble*, la commande utilisera l’ensemble système UserSet du process courant.
 
-#### Voir aussi 
+## Voir aussi 
 
 [CREATE SET FROM ARRAY](create-set-from-array.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

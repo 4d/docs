@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ST Get content type.Summary-->El comando **ST Get content type** devuelve el tipo de contenido encontrado en el campo o la variable de texto multiestilo designada por el parámetro *objeto* .<!-- END REF--> 
 
@@ -58,7 +58,7 @@ El comando devuelve un valor que designa el tipo de contenido identificado. Pued
 | ST URL type         | Entero largo | 1     | La selección contiene sólo una referencia de URL                      |
 | ST User type        | Entero largo | 5     | La selección contiene sólo una referencia personalizada               |
 
-#### Ejemplo 
+## Ejemplo 
 
 Usted desea mostrar los comandos de un menú contextual basado en el tipo de contenido seleccionado en el área.
 
@@ -101,7 +101,7 @@ Usted desea mostrar los comandos de un menú contextual basado en el tipo de con
 ```
 
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

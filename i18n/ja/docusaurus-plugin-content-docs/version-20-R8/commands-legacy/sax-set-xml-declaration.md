@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SAX SET XML DECLARATION.Summary-->**SAX SET XML DECLARATION** コマンドは*document* で参照されるXMLドキュメントを、引数のエンコーディングを使用して初期化します。<!-- END REF-->オプションとして、*standalone* 引数を使用してスタンドアロン属性を設定することができます。
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 このコマンドはドキュメントごとに一回、最初のXML設定コマンドの前に、呼び出さなければなりません。そうでなければエラーが生成されます。
 
-#### 例題 
+## 例題 
 
 以下のコードを実行すると: 
 
@@ -41,11 +41,11 @@ displayed_sidebar: docs
 <?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 ```
 
-#### 参照 
+## 参照 
 
 [SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

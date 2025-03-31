@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->**SET MENU ITEM ICON** コマンドは、*menu*と*menuItem*引数で指定されたメニュー項目に関連付けるアイコンを変更するために使用します。<!-- END REF-->  
 *menuItem*に-1を渡して*menu*に最後に追加された項目を指定することができます。
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **注:** ピクチャーライブラリは プロジェクトモードのデータベースではサポートされないため、ピクチャーファイル参照を使った方法が推奨されます。また、*file:<relativePathname>* という記述法も廃止予定なため、*path:<filesystem>* の記述法で指定することが推奨されます。
 
-#### 例題 
+## 例題 
 
 データベースのResourcesフォルダーにあるピクチャーを使用する:
 
@@ -43,11 +43,11 @@ displayed_sidebar: docs
  SET MENU ITEM ICON($MenuRef;2;"Path:/RESOURCES/english.lproj/spot.png")
 ```
 
-#### 参照 
+## 参照 
 
 [GET MENU ITEM ICON](get-menu-item-icon.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

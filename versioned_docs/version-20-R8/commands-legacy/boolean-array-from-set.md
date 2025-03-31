@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->The BOOLEAN ARRAY FROM SET command fills an array of Booleans indicating if each record in the table is or is not in *set*.<!-- END REF--> 
 
@@ -29,11 +29,11 @@ Each element of the array is:
 
 If you don’t pass the *set* parameter, the command will use UserSet in the current process.
 
-#### See also 
+## See also 
 
 [CREATE SET FROM ARRAY](create-set-from-array.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

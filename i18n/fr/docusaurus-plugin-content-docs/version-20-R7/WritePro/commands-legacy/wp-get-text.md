@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get text.Summary-->La commande **WP Get text** récupère le contenu textuel d'un document 4D Write Pro dans l'*objCible* spécifié.<!-- END REF-->
 
@@ -47,7 +47,7 @@ Le paramètre optionnel *expressions* fournit des instructions pour l'évaluatio
 * Si *objCible* contient des images, elles sont ignorées et renvoyées sous forme de caractères espaces (" ").
 * Si *objCible* contient des tableaux, le contenu de chaque cellule est traité comme des paragraphes individuels et renvoyé en tant que texte séparé par des tabulations. Les lignes sont séparées par des retours chariot.
 
-#### Exemple 
+## Exemple 
 
 Pour retrouver le texte dans ce document :
 
@@ -62,7 +62,7 @@ Vous pouvez écrire :
  vText3:=WP Get text($range;wk expressions as space) //retourne "Hello world! Today is:  ."
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *Gérer des formules*  
 [WP SET TEXT](wp-set-text.md)  

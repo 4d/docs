@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->The **LISTBOX INSERT COLUMN** command inserts a column in the list box set by the *object* and *\** parameters.<!-- END REF--> 
 
@@ -47,7 +47,7 @@ In the *footerName* and *footerVar* parameters, you can also pass the object nam
 
 **Note:** Object names must be unique in a form. You must be sure that the names passed in the *colName*, *headerName*  and *footerName* parameters are not already used. Otherwise, the column is not created and an error is generated.
 
-##### Dynamic insertion 
+### Dynamic insertion 
 
 You can use this command to insert columns into list boxes dynamically when the form is executed. 4D will automatically handle the definition of the necessary variables (column, footer and header).
 
@@ -55,7 +55,7 @@ To do this, **LISTBOX INSERT COLUMN** accepts a **Nil** (**\->\[\]**) pointer as
 
 Note that header and footer variables are always created with a specific type (longint and text, respectively). Conversely, column variables cannot be typed when created because list boxes accept different types of arrays for these variables (text array, integer array, and so on). This means you have to set the array type manually (see example 3). It is important to perform this typing before calling commands such as [LISTBOX INSERT ROWS](listbox-insert-rows.md) to insert new elements in the array. Alternatively, you can use [APPEND TO ARRAY](append-to-array.md) both for setting the type of the array and inserting elements. 
 
-#### Example 1 
+## Example 1 
 
 We would like to add a column at the end of the list box: 
 
@@ -69,7 +69,7 @@ We would like to add a column at the end of the list box:
  LISTBOX INSERT COLUMN(*;"ListBox1";$Last;"ColumnPicture";Picture;"HeaderPicture";HeaderVarName)
 ```
 
-#### Example 2 
+## Example 2 
 
 We would like to add a column to the right of the list box and associate the values of the \[Transport\]Fees field with it: 
 
@@ -78,7 +78,7 @@ We would like to add a column to the right of the list box and associate the val
  LISTBOX INSERT COLUMN(*;"ListBox1";$last;"FieldCol";[Transport]Fees;"HeaderName";HeaderVar)
 ```
 
-#### Example 3 
+## Example 3 
 
 You want to insert a column dynamically into an array type list box and define its header:
 
@@ -92,12 +92,12 @@ You want to insert a column dynamically into an array type list box and define i
  OBJECT SET TITLE(headprt->;"Inserted header")
 ```
 
-#### See also 
+## See also 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

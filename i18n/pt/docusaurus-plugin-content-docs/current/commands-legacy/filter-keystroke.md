@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->FILTER KEYSTROKE permite substituir ou caractere introduzido pelo usuário em um campo ou em uma área editável pelo primeiro caractere da string *carFiltro*.<!-- END REF-->
 
@@ -31,7 +31,7 @@ Utilize o comando FILTER KEYSTROKE para:
 
 **Advertência:** se chamar ao comando [Keystroke](keystroke.md "Keystroke") depois de chamar a FILTER KEYSTROKE, é devolvido o caractere que você passa a este comando em lugar do caractere introduzido realmente.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 Utilizando o seguinte código: 
 
@@ -49,7 +49,7 @@ Utilizando o seguinte código:
 
 Todos os dígitos introduzidos na área *meuObjeto* se transformam em asteriscos.
 
-#### Exemplo 2 
+## Exemplo 2 
 
 Este código define o comportamento de uma área de entrada de senha, na qual os caracteres introduzidos são substituídos (na tela) por caracteres aleatórios: 
 
@@ -70,7 +70,7 @@ Este código define o comportamento de uma área de entrada de senha, na qual os
 
 Logo que tiver confirmado a entrada de dados, você recupera a senha introduzida em realidade pelo usuário *vsSenhaReal*. Nota: O método Manejo Handle keystroke está listado no exemplo do comando [Keystroke](keystroke.md "Keystroke"). 
 
-#### Exemplo 3 
+## Exemplo 3 
 
 Em sua aplicação, tem algumas áreas de texto nas quais pode introduzir algumas frases. Sua aplicação também inclui uma tabela de dicionário dos termos utilizados com mais frequência em seu banco. Durante a edição de suas áreas de texto, é útil poder recuperar e inserir rapidamente entradas do dicionário baseado nos caracteres selecionados na área de texto. Há duas formas de fazer isto:   
  \- Oferecer alguns botões com teclas associadas ou   
@@ -234,7 +234,7 @@ O método ObterTextoSelecionado é o seguinte:
  End if
 ```
 
-#### Ver também 
+## Ver também 
 
 [Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
@@ -242,7 +242,7 @@ O método ObterTextoSelecionado é o seguinte:
 [Keystroke](keystroke.md)  
 
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

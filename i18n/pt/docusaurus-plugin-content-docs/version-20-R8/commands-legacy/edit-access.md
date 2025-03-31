@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.EDIT ACCESS.Summary-->EDIT ACCESS permite modificar o sistema de senhas.<!-- END REF--> Quando se executa este comando, a janela da caixa de ferramentas que contiver as páginas Usuários e Grupos é mostrada.  
 
@@ -22,7 +22,7 @@ Os grupos podem ser modificados pelo Desenhador, o Administrador e pelos proprie
   
 O Desenhador e o Administrador podem adicionar novos usuários, como também atribuir usuários a grupos.
 
-#### Exemplo 
+## Exemplo 
 
 O exemplo abaixo mostra ao usuário a janela de gestão de usuários e grupos: 
 
@@ -30,12 +30,12 @@ O exemplo abaixo mostra ao usuário a janela de gestão de usuários e grupos:
  EDIT ACCESS
 ```
 
-#### Ver também 
+## Ver também 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

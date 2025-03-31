@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.Metodo base On Web Authentication.Summary-->El Método base On Web Authenticationestá a cargo de administrar el acceso al motor del servidor web.<!-- END REF--> Es llamado automáticamente por 4D o 4D Server cuando una petición de un navegador web requiere la ejecución de un método 4D en el servidor (llamada de un método vía un URL *4DACTION* o  una etiqueta *4DSCRIPT*, etc.). 
 
@@ -97,7 +97,7 @@ El [Método base On Web Connection](metodo-base-on-web-connection.md) sólo se e
 * No llame elementos de interfaz en el Método base On Web Authentication ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) porque de lo contrario su ejecución se interrumpirá y la conexión será rechazada. Lo mismo sucede si se presenta un error durante su proceso.
 * Es posible evitar la ejecución por *4DACTION* o *4DSCRIPT* de cada método de proyecto con la ayuda de la opción “Disponible vía las etiquetas HTML y URLs (4DACTION...) en la caja de diálogo de las Propiedades de los métodos. Para mayor información sobre este punto, consulte la sección *Seguridad de las conexiones*.
 
-#### Llamadas del método base On Web Authentication 
+## Llamadas del método base On Web Authentication 
 
 El Método base On Web Authentication se llama automáticamente, sin importar el modo, cuando una petición o proceso requiere la ejecución de un método 4D. También se llama cuando el servidor web recibe un URL estático inválido (por ejemplo, si la página estática solicitada no existe). 
 
@@ -114,7 +114,7 @@ Por lo tanto el Método base On Web Authentication se llama en los siguientes ca
 
 Note que el Método base On Web Authentication NO se llama cuando el servidor recibe un URL solicitando una página estática válida.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 Ejemplo del *Método de base On Web Authentication* en modo BASIC: 
 
@@ -164,7 +164,7 @@ Ejemplo del *Método de base On Web Authentication* en modo BASIC:
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Ejemplo del  en modo DIGEST:
 

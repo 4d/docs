@@ -21,7 +21,7 @@ displayed_sidebar: docs
 *このコマンドはスレッドセーフではないため、プリエンプティブなコードには使えません。*
 
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.WP TABLE SPLIT CELLS.Summary-->**WP TABLE SPLIT CELLS** コマンドは、*targetObj* または(startColumn、*startRow*、columnCount、および rowCount によって定義される)tableRef 内のセルのセレクションの結合を解除します。<!-- END REF-->セルは、それが縦方向/横方向/その両方向に既に結合されていた場合にのみ結合を解除され分割されます。そうでない場合は、セルは変更されません。
 
@@ -45,7 +45,7 @@ rowCount 引数が省略された場合は、1 を渡したのと同等の扱い
 
 If startColumn 引数と ColumnCount 引数の和、または *startRow* 引数と rowCount 引数の和が *tableRef* 引数で指定した表の列/行数を超える場合、またはstartColumn 引数または *startRow* 引数が *tableRef* 引数で指定した表の列/行数より大きい場合、返されるレンジには最大限大きい列/行数を格納したレンジが返されますので、これはつまり表全体の中の全てのセルが結合を解除されることになります(ただし既に結合されていた場合)。
 
-#### 例題 
+## 例題 
 
 (既に結合されているセルを格納している)複数のセルのレンジを指定して、それの結合を解除したい場合を考えます:
 
@@ -64,7 +64,7 @@ If startColumn 引数と ColumnCount 引数の和、または *startRow* 引数�
 
 詳細な情報については、*セルの結合と結合解除* の章を参照して下さい。
 
-#### 参照 
+## 参照 
 
 [WP TABLE MERGE CELLS](wp-table-merge-cells.md)  
 *表の管理*  

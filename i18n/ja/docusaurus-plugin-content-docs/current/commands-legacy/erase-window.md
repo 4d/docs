@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.ERASE WINDOW.Summary-->ERASE WINDOW コマンドは*window*で指定されたウィンドウの内容をクリアします。<!-- END REF-->
 
@@ -23,12 +23,12 @@ displayed_sidebar: docs
 
 ERASE WINDOWはウィンドウの内容をクリアします。スクリーンからウィンドウを取り除く[CLOSE WINDOW](close-window.md "CLOSE WINDOW")と混同しないようにしてください。
 
-#### 参照 
+## 参照 
 
 [GOTO XY](goto-xy.md)  
 [MESSAGE](message.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

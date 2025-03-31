@@ -3,7 +3,7 @@ id: debugLogFiles
 title: ログファイル
 ---
 
-4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
+4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常、 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html)、 [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html)、 あるいは [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) コマンドのセレクターを使用して開始/停止し、プロジェクトの[Logs フォルダー](../Project/architecture.md#logs) 内に保存されています。
 
 記録された情報は、問題の検知と修正のためには分析する必要があります。 この章では、以下のログファイルの詳細を説明します:
 
@@ -464,7 +464,7 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 環境に応じて、ログ設定ファイルを有効化する方法はいくつかあります:
 
 - **インターフェース付きの 4D Server**: メンテナンスページを開き、[ログ設定ファイルを読み込む](ServerWindow/maintenance.md#ログ設定ファイルを読み込む) ボタンをクリックしてファイルを選択します。  この場合、設定ファイルには任意の名前を使用することができます。 ファイルは、サーバー上で即座に有効化されます。
-- **インタープリターモード、またはコンパイル済みのプロジェクト**: ファイルは `logConfig.json` という名称で、プロジェクトの [`Project` フォルダー](../Project/architecture.md#project-フォルダー) と同じ階層にある [Settings フォルダー](../Project/architecture.md#settings-1) に置く必要があります。  このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
+- **インタープリタまたはコンパイル済みプロジェクト**: ファイルの名前は `logConfig.json` でプロジェクトの [Settings フォルダ](../Project/architecture.md#settings-user) 内にコピーする必要があります(このフォルダは [`Project` フォルダ](../Project/architecture.md#project-folder) と同階層に位置しています)。 このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
 - **ビルドしたアプリケーション**: ファイルは `logConfig.json` という名称で次のフォルダーに置く必要があります:
  - Windows: `Users\[userName]\AppData\Roaming\[application]`
  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`

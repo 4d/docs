@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LOCKED BY.Summary-->LOCKED BY returns information about the user and process that have locked a record.<!-- END REF--> The process number(\*), the user name in the 4D application and in the system as well as the process name are returned in the *process*, *4Duser*, *sessionUser*, and *processName* variables. You can use this information in a custom dialog box to warn the user when a record is locked.
 
@@ -36,12 +36,12 @@ If the record has been locked by a *$lock REST request*:
 * *sessionUser* returns ""
 * *processName* returns the IP address of the locker, e.g. "127.0.0.1"
 
-#### See also 
+## See also 
 
 [Locked](locked.md)  
 *Record Locking*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
 
@@ -82,7 +82,7 @@ Each object of the `products` collection can have the following properties:
 ||\[ \].expirationDate | object                | Date of expiration (optional, same format as above)                                                   | {"day":1, "month":11, "year":2017}                                                    |
 
 
-#### Example 
+## Example 
 
 You want to get information on your current 4D Server license:
 
@@ -128,13 +128,13 @@ You want to get information on your current 4D Server license:
 }
 ```
 
-#### See also 
+## See also 
 
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)  
 [Is license available](../commands-legacy/is-license-available.md)  
 [WEB Get server info](../commands-legacy/web-get-server-info.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

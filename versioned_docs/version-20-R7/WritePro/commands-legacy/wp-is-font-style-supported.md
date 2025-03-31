@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Is font style supported.Summary-->The **WP Is font style supported** command returns True if the *wpFontStyle* style is supported by any part of the text in *rangeObj*.<!-- END REF--> 
 

@@ -13,15 +13,15 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Caps lock down.Summary-->Caps lock down はCaps Lock キーが押されていると[True](true.md "True")を返します。<!-- END REF-->
 
-#### 例題 
+## 例題 
 
 [Shift down](shift-down.md "Shift down") コマンドの例を参照してください。
 
-#### 参照 
+## 参照 
 
 [Macintosh command down](macintosh-command-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

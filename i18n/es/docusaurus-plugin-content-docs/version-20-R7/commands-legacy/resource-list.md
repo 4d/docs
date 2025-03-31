@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->El comando RESOURCE LIST llena los arrays *resNums* y *resNoms* con los números y los nombres de los recursos cuyo tipo se pasa en *resTipo*.<!-- END REF--> 
 
@@ -28,7 +28,7 @@ Si predeclara los arrays antes de llamar a RESOURCE LIST, debe predeclarar *resN
 
 Después de la llamada, puede probar el número de recursos encontrados aplicando el comando [Size of Array](size-of-array.md "Size of Array") al array *resNums* o *resNoms*.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 El siguiente ejemplo llena los arrays *$alResNum* y *$atResNom* con los números y los nombres de recursos de tipo lista de cadenas presentes en el archivo de estructura de la base:
 
@@ -43,7 +43,7 @@ El siguiente ejemplo llena los arrays *$alResNum* y *$atResNom* con los números
  End if
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 El siguiente ejemplo copia los recursos imagen presentes en todos los archivos de recursos abiertos en la librería de imágenes de la base:
 
@@ -66,11 +66,11 @@ El siguiente ejemplo copia los recursos imagen presentes en todos los archivos d
  CLOSE WINDOW
 ```
 
-#### Ver también 
+## Ver también 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

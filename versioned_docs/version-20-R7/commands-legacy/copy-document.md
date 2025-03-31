@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.COPY DOCUMENT.Summary-->The **COPY DOCUMENT** command copies the file or folder specified by *sourceName* to the location specified by *destinationName* and, optionally, renames it.<!-- END REF--> 
 In this case, the *sourceName* parameter can contain:  
@@ -36,7 +36,7 @@ Note that you can pass a file in the *sourceName* parameter and a folder in the 
 
 The optional *newName* parameter, when it is passed, renames the document copied to its destination location (file or folder). When it is passed in the context of copying a file, this parameter replaces the name (if any) passed in the *destinationName* parameter.
 
-#### Example 1 
+## Example 1 
 
 The following example duplicates a document in its own folder:
 
@@ -44,7 +44,7 @@ The following example duplicates a document in its own folder:
  COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2")
 ```
 
-#### Example 2 
+## Example 2 
 
 The following example copies a document to the database folder (provided C:\\\\FOLDER is not the database folder):
 
@@ -52,7 +52,7 @@ The following example copies a document to the database folder (provided C:\\\\F
  COPY DOCUMENT("C:\\FOLDER\\DocName";"DocName")
 ```
 
-#### Example 3 
+## Example 3 
 
 The following example copies a document from one volume to another one:
 
@@ -60,7 +60,7 @@ The following example copies a document from one volume to another one:
  COPY DOCUMENT("C:\\FOLDER\\DocName";"F:\\Archives\\DocName.OLD")
 ```
 
-#### Example 4 
+## Example 4 
 
 The following example duplicates a document in its own folder overriding an already existing copy:
 
@@ -68,7 +68,7 @@ The following example duplicates a document in its own folder overriding an alre
  COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2";*)
 ```
 
-#### Example 5 
+## Example 5 
 
 Copying a file into a specific folder while keeping the same name:
 
@@ -76,7 +76,7 @@ Copying a file into a specific folder while keeping the same name:
  COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\")
 ```
 
-#### Example 6 
+## Example 6 
 
 Copying a file into a specific folder while keeping the same name and overriding the existing document:
 
@@ -84,7 +84,7 @@ Copying a file into a specific folder while keeping the same name and overriding
  COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\"; *)
 ```
 
-#### Example 7 
+## Example 7 
 
 Copying a folder into another folder (both folders must already be present on the disk):
 
@@ -92,7 +92,7 @@ Copying a folder into another folder (both folders must already be present on th
  COPY DOCUMENT("C:\\Projects\\";"C\\Archives\\2011\\")
 ```
 
-#### Example 8 
+## Example 8 
 
 The following examples create different files and folders in the database folder (examples under Windows). In each case, the "folder2" folder must exist:
 
@@ -116,12 +116,12 @@ The following examples create different files and folders in the database folder
   //creates the "folder2/new/" folder
 ```
 
-#### See also 
+## See also 
 
 [MOVE DOCUMENT](move-document.md)  
 *System Documents*  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

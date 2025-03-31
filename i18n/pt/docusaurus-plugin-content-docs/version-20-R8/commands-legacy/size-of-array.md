@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Size of array.Summary-->O comando Size of Array retorna o número de elementos no *array*.<!-- END REF-->
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo a seguir retorna o tamanho do array *anArray*:
 
@@ -26,7 +26,7 @@ O exemplo a seguir retorna o tamanho do array *anArray*:
  vlTalla:=Size of array(anArray) // vlTamanho recebe o tamanho de anArray
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo a seguir retorna o número de filas em um array bidimensional:
 
@@ -34,7 +34,7 @@ O exemplo a seguir retorna o número de filas em um array bidimensional:
  vlFilas:=Size of array(a2DArray) // vlFilas recebe o tamanho de a2DArray
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo a seguir retorna o número de colunas em um array bidimensional:
 
@@ -42,12 +42,12 @@ O exemplo a seguir retorna o número de colunas em um array bidimensional:
  vlColunas:=Size of array(a2DArray{10}) // vlColunas recebe o tamanho de a2DArray{10}
 ```
 
-#### Ver também 
+## Ver também 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.CALL WORKER.Summary-->La commande **CALL WORKER** crée ou appelle le process worker dont vous avez passé le nom ou le numéro dans *process* et demande l’exécution du code désigné par la *formule* dans son contexte avec le ou les paramètre(s) optionnel(s) spécifié(s) dans *param*.<!-- END REF-->
 
@@ -44,7 +44,7 @@ Vous pouvez aussi passer des paramètres à la formule en utilisant un ou plusie
 
 Un process worker reste actif jusqu’à la fermeture de l'application ou jusqu'à ce que la commande [KILL WORKER](kill-worker.md) soit appelée explicitement pour ce process. Pensez à appeler cette commande une fois que le process worker n'est plus utile afin de libérer l'espace mémoire. 
 
-#### Exemple 
+## Exemple 
 
 Dans un formulaire, un bouton démarre un calcul, par exemple des statistiques pour l'année sélectionnée. Ce bouton crée ou appelle un process worker qui effectue le calcul des données tandis que l'utilisateur peut continuer à travailler dans le formulaire.
 
@@ -70,14 +70,14 @@ Voici le code de *méthodeWorker* :
  CALL FORM($fenetre;Formula(affichageStats);vRésultatStatistiques)
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 *A propos des workers*  
 [CALL FORM](call-form.md)  
 [Current process name](current-process-name.md)  
 [KILL WORKER](kill-worker.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

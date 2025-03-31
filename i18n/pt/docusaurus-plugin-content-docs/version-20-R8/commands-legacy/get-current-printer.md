@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.Get current printer.Summary-->O comando Get current printer devolve o nome da impressora atual definida na aplicação 4D.<!-- END REF--> Como padrão, ao iniciar 4D, a impressora atual é a impressora definida no sistema.
 
@@ -23,16 +23,16 @@ Para obter a lista de impressoras disponíveis assim como informação adicional
 
 **Nota:** Quando a constante Generic PDF driver for usada com [SET CURRENT PRINTER](set-current-printer.md), [Get current printer](get-current-printer.md) retorna "\_4d\_pdf\_printer" ou o nome do PDF driver
 
-#### Gestão de erros 
+## Gestão de erros 
 
 Se não tiver uma impressora instalada, um erro é gerado
 
-#### Ver também 
+## Ver também 
 
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

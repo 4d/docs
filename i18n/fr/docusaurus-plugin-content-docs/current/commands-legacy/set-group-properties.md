@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Set group properties.Summary-->**Set group properties** vous permet de modifier et de mettre à jour les propriétés d'un groupe existant dont vous passez le numéro de référence unique dans *réfGroupe*, ou d'ajouter un nouveau groupe.<!-- END REF-->
 
@@ -47,17 +47,17 @@ Si vous voulez enlever tous les membres d'un groupe, passez un tableau vide dans
 * Les valeurs des références des groupes et des utilisateurs sont fonction de la personne qui les crée (Super Utilisateur, Administrateur, ou propriétaire du groupe affilié). Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*. Si vous voulez ajouter un groupe affilié au Super\_Utilisateur, il faut passer -1 à réfGroupe. Si vous voulez ajouter un groupe affilié à l'Administrateur, il faut passer -2 à réfGroupe.
 * Le propriétaire d'un groupe n'est pas automatiquement défini comme membre du groupe qu'il possède. C'est à vous de l'y inclure explicitement, à l'aide du paramètre *membres*.
 
-#### Gestion des erreurs 
+## Gestion des erreurs 
 
 Si vous n'avez pas les privilèges d'accès pour appeler la commande **Set group properties** ou si le système de mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

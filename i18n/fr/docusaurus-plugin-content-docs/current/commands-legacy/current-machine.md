@@ -13,11 +13,11 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Current machine.Summary-->La commande   **Current machine** retourne le nom de la machine tel qu'il a été défini dans les paramètres réseau du système d'exploitation.<!-- END REF-->
 
-#### Exemple 
+## Exemple 
 
 Même si vous n'utilisez pas la version client/serveur de 4D, votre application peut comprendre des services réseaux qui nécessitent que votre machine soit correctement configurée. Dans la de votre application, vous pouvez écrire :
 
@@ -27,11 +27,11 @@ Même si vous n'utilisez pas la version client/serveur de 4D, votre application 
  End if
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [Current system user](current-system-user.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

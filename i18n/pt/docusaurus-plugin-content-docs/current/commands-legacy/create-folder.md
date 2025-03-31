@@ -14,13 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descrição 
+## Descrição 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->O comando CREATE FOLDER cria uma pasta de acordo com a rota de acesso que é passada em *rotaPasta*.<!-- END REF-->  
 
 Se passar um nome, a pasta é criada na pasta do banco. Se passar uma rota de acesso completa, deve ser uma rota válida ao nome da pasta que você deseja criar, a partir da raiz de um volume ou ao nível da pasta do banco.
 
-#### Exemplo 1 
+## Exemplo 1 
 
 O exemplo abaixo cria a pasta “Arquivos” na pasta do banco: 
 
@@ -28,7 +28,7 @@ O exemplo abaixo cria a pasta “Arquivos” na pasta do banco:
  CREATE FOLDER("Arquivos")
 ```
 
-#### Exemplo 2 
+## Exemplo 2 
 
 O exemplo abaixo cria a pasta Arquivos na pasta do banco, depois cria as subpastas “Janeiro” e “Fevereiro”: 
 
@@ -38,7 +38,7 @@ O exemplo abaixo cria a pasta Arquivos na pasta do banco, depois cria as subpast
  CREATE FOLDER("Arquivos\\Fevereiro")
 ```
 
-#### Exemplo 3 
+## Exemplo 3 
 
 O exemplo abaixo cria a pasta “Arquivos” na raiz do volume C: 
 
@@ -46,7 +46,7 @@ O exemplo abaixo cria a pasta “Arquivos” na raiz do volume C:
  CREATE FOLDER("C:\\Arquivos")
 ```
 
-#### Exemplo 4 
+## Exemplo 4 
 
 O exemplo falhará se não houver uma pasta “Novidades” na raiz do volume C: 
 
@@ -54,7 +54,7 @@ O exemplo falhará se não houver uma pasta “Novidades” na raiz do volume C:
  CREATE FOLDER("C:\\Novidades\\Imagens") // INCORRETO, não é possível criar dois níveis de pastas em uma chamada
 ```
 
-#### Exemplo 5 
+## Exemplo 5 
 
 Criação da subpasta "\\Fevereiro\\" na atual pasta "C:\\Arquivos\\": 
 
@@ -63,12 +63,12 @@ Criação da subpasta "\\Fevereiro\\" na atual pasta "C:\\Arquivos\\":
   // O arquivo "Doc.txt" é ignorado
 ```
 
-#### Ver também 
+## Ver também 
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
 
-#### Propriedades
+## Propriedades
 
 |  |  |
 | --- | --- |

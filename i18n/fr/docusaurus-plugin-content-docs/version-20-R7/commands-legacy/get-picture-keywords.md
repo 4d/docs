@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.GET PICTURE KEYWORDS.Summary-->La commande **GET PICTURE KEYWORDS** retourne dans le tableau *tabMotsclés* la liste des mots-clés associés à l’image passée en paramètre.<!-- END REF--> 
 
@@ -29,12 +29,12 @@ Si l’image ne contient pas de mots-clés ou de métadonnées IPTC/Keywords, la
 
 **Note :** Les résultats retournés par cette commande peuvent différer en fonction de la valeur courante de la propriété de la base "N’utiliser que les caractères non alphanumériques pour les mots clés" (cf. paragraphe [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)). 
 
-#### Voir aussi 
+## Voir aussi 
 
 [GET PICTURE METADATA](get-picture-metadata.md)  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

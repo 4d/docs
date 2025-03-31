@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.LISTBOX EXPAND.Summary-->La commande **LISTBOX EXPAND** vous permet de provoquer le déploiement des lignes de rupture de l’objet list box affiché en mode hiérarchique désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
@@ -41,7 +41,7 @@ La commande ne sélectionne pas les lignes de rupture.
 
 Si la sélection ou la list box ne contient pas de ligne de rupture, ou si toutes les lignes de rupture sont déjà déployées, la commande ne fait rien.
 
-#### Exemple 
+## Exemple 
 
 Cet exemple illustre différents modes d’utilisation de la commande. Soient les tableaux suivants représentés dans une list box :
 
@@ -76,11 +76,11 @@ Cet exemple illustre différents modes d’utilisation de la commande. Soient le
 
 ![](../assets/en/commands/pict175855.fr.png)
 
-#### Voir aussi 
+## Voir aussi 
 
 [LISTBOX COLLAPSE](listbox-collapse.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

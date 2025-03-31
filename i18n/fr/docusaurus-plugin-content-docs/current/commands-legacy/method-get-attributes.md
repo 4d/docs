@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.METHOD GET ATTRIBUTES.Summary-->La commande **METHOD GET ATTRIBUTES** retourne, dans le paramètre *attributs*, la valeur courante de tous les attributs de la ou des méthode(s) spécifiée(s) dans le paramètre *chemin*.<!-- END REF-->
 
@@ -29,7 +29,7 @@ Si la commande est exécutée depuis un composant, elle s’applique par défaut
 
 **Note de compatibilité :** La propriété *published4DMobile* est obsolète à partir de 4D v18.
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez connaître les attributs de la méthode projet *sendMail*. Vous pouvez écrire :
 
@@ -57,11 +57,11 @@ A l'issue de l'exécution, $att contient, par exemple :
 }
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

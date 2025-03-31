@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->**METHOD RESOLVE PATH**コマンドは*path*引数に渡された内部パス名を解決し、*methodType*、*ptrTable*、*objectName*、そして *formObjectName*引数にそれぞれ情報を返します。<!-- END REF-->
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから実行された場合、デフォルトではコンポーネントメソッドに関する情報を返します。*\** 引数を渡すと、ホストデータベースメソッドに関する情報を返します。
 
-#### 例題 1 
+## 例題 1 
 
 データベースメソッドパスの解決:
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
   // $formObjectName: ""
 ```
 
-#### 例題 2 
+## 例題 2 
 
 テーブルフォームのオブジェクトメソッドのパス解決:
 
@@ -79,11 +79,11 @@ displayed_sidebar: docs
   // $formObjectName: "Btn*1"
 ```
 
-#### 参照 
+## 参照 
 
 [METHOD Get path](method-get-path.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

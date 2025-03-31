@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.BLOB to text.Summary-->El comando BLOB to text devuelve un valor de tipo Texto leído del BLOB *blob*.<!-- END REF-->
 
@@ -50,7 +50,7 @@ Si especifica la variable del parámetro opcional *offset*, el valor del texto s
 
 Después de la ejecución del comando, la variable se incrementa en el número de bytes leídos. Por lo tanto, puede reutilizar la misma variable con otro comando de lectura de BLOBs para leer otro valor. 
 
-#### Ver también 
+## Ver también 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -61,7 +61,7 @@ Después de la ejecución del comando, la variable se incrementa en el número d
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |

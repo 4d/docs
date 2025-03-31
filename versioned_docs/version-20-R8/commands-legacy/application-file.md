@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.Application file.Summary-->The Application file command returns the long name of the 4D executable file or application you are running.<!-- END REF--> 
 If, for example, you are running 4D located at \\PROGRAMS\\4D on the volume E, the command returns E:\\PROGRAMS\\4D\\4D.EXE.
@@ -21,7 +21,7 @@ If, for example, you are running 4D located at \\PROGRAMS\\4D on the volume E, t
 *On Macintosh*  
 If, for example, you are running 4D in the Programs folder on the disk Macintosh HD, the command returns Macintosh HD:Programs:4D.app.
 
-#### Example 
+## Example 
 
 At startup on Windows, you need to check if a DLL Library is correctly located at the same level as the 4D executable file. In the of your application you can write:
 
@@ -35,12 +35,12 @@ At startup on Windows, you need to check if a DLL Library is correctly located a
  End if
 ```
 
-#### See also 
+## See also 
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
 
-#### Properties
+## Properties
 
 |  |  |
 | --- | --- |

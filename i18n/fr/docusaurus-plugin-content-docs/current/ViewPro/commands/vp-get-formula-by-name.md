@@ -16,7 +16,7 @@ title: VP Get formula by name
 | scope      | Integer | ->                          | "Scope" cible (par défaut=feuille courante) |                  |
 | Résultat   | Object  | <- | Définition de la formule nommée ou de la plage nommée          | <!-- END REF --> |
 
-#### Description
+## Description
 
 The `VP Get formula by name` command <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the *name* parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
 
@@ -29,7 +29,7 @@ You can define where to get the formula in *scope* using either the sheet index 
 - `vk current sheet`
 - `vk workbook`
 
-##### Objet retourné
+### Objet retourné
 
 L'objet retourné contient les propriétés suivantes :
 
@@ -38,7 +38,7 @@ L'objet retourné contient les propriétés suivantes :
 | formula   | Text | Texte de la formule correspondant à la formule nommée ou à la plage nommée. Pour les plages nommées, la formule est une séquence de coordonnées absolues. |
 | comment   | Text | Commentaire correspondant à la formule nommée ou à la plage nommée                                                                                                                        |
 
-#### Exemple
+## Exemple
 
 ```4d
 $range:=VP Cell("ViewProArea";0;0)
@@ -51,7 +51,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
   //$formula=null (if not existing)
 ```
 
-#### Voir également
+## Voir également
 
 [VP ADD FORMULA NAME](vp-add-formula-name.md)<br/>
 [VP Get names](vp-get-names.md)

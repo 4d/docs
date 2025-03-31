@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.WP Get links.Summary-->La commande **WP Get links** retourne la collection de tous les liens définis dans le paramètre *objCible*.<!-- END REF-->
 
@@ -36,7 +36,7 @@ Dans le paramètre *objCible*, vous pouvez passer :
 | \[ \].bookmark  | Texte              | Nom de signet contenu dans le lien                  | Liens de signet                   |
 | \[ \].range     | Objet              | Plage du libellé du lien. Voir *Gestion des plages* | Tous les liens                    |
 
-#### Exemple 
+## Exemple 
 
 Vous souhaitez modifier la couleur de tous les libellés des liens URL dans un document 4D Write Pro :
 
@@ -53,7 +53,7 @@ Vous souhaitez modifier la couleur de tous les libellés des liens URL dans un d
  End for each
 ```
 
-#### Voir aussi 
+## Voir aussi 
 
   
 [WP Get formulas](wp-get-formulas.md)  

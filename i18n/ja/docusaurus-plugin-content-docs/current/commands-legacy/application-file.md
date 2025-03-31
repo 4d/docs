@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### 説明 
+## 説明 
 
 <!--REF #_command_.Application file.Summary-->Application fileコマンドは、 現在使用している4D実行形式のファイルまたはアプリケーションのパス名を返します。<!-- END REF-->
 
@@ -23,7 +23,7 @@ Windows
 Macintosh  
 例えば、Macintosh HDディスク上のProgramsフォルダの中にある4Dを使用している場合、この関数は、Macintosh HD:Programs:4D.appを返します。
 
-#### 例題 
+## 例題 
 
 Windows上で、4Dの起動時に、DLLライブラリが4D実行形式のファイルと同じ階層に配置されているかどうかをチェックする必要があるとします。に次のコードを記述します:
 
@@ -37,12 +37,12 @@ Windows上で、4Dの起動時に、DLLライブラリが4D実行形式のファ
  End if
 ```
 
-#### 参照 
+## 参照 
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
 
-#### プロパティ
+## プロパティ
 
 |  |  |
 | --- | --- |

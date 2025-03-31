@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Description 
+## Description 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->La commande **RECEIVE BUFFER** lit les données du port série préalablement ouvert par la commande [SET CHANNEL](set-channel.md).<!-- END REF--> Le port série comporte un buffer qui se remplit de caractères jusqu'à ce qu'une commande les charge. **RECEIVE BUFFER** récupère les caractères présents dans le buffer, les place dans la variable *varRéception* puis vide le buffer. S'il n'y a pas de caractères dans le buffer, la variable *varRéception* est vide. 
 
@@ -27,7 +27,7 @@ La commande **RECEIVE BUFFER** est différente de [RECEIVE PACKET](receive-packe
 
 Pendant l'exécution d'un **RECEIVE BUFFER**, l'utilisateur peut interrompre l'opération en appuyant sur les touches **Ctrl**+**Alt**+**Maj** (sous Windows) ou **Commande**+**Option**+**Maj** (sous Mac OS). Cette interruption génère une erreur -9994 que vous pouvez intercepter à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-#### Exemple 
+## Exemple 
 
 La méthode projet ECOUTER PORT SÉRIE utilise **RECEIVE BUFFER** pour récupérer du texte depuis le port série et l'accumuler dans une variable interprocess : 
 
@@ -57,7 +57,7 @@ Pour cesser d'écouter le port série, exécutez simplement la méthode suivante
   
 Notez que l'accès à la variable interprocess *◊vtBuffer* doit être protégé par un sémaphore, de manière à ce que les process n'entrent pas en conflit (reportez-vous à la description de la fonction [Semaphore](semaphore.md) pour plus d'informations).
 
-#### Voir aussi 
+## Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE PACKET](receive-packet.md)  
@@ -65,7 +65,7 @@ Notez que l'accès à la variable interprocess *◊vtBuffer* doit être protég�
 [SET CHANNEL](set-channel.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-#### Propriétés
+## Propriétés
 
 |  |  |
 | --- | --- |

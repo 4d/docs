@@ -93,7 +93,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### 対象オブジェクト
 
-[階層リスト](list_overview.md) - [サブフォーム](subform_overview.md#overview) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
+[階層リスト](list_overview.md) - [サブフォーム](subform_overview.md) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 #### 参照
 
@@ -365,7 +365,7 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 #### 対象オブジェクト
 
-[階層リスト](list_overview.md) - [サブフォーム](subform_overview.md#overview) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
+[階層リスト](list_overview.md) - [サブフォーム](subform_overview.md) - [リストボックス](listbox_overview.md) - [入力](input_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 #### 参照
 

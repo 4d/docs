@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-#### Descripción 
+## Descripción 
 
 <!--REF #_command_.ARRAY TO SELECTION.Summary-->El comando **ARRAY TO SELECTION** copia uno o más arrays en una selección de registros.<!-- END REF--> Todos los campos listados deben pertenecer a la misma tabla.
 
@@ -36,7 +36,7 @@ Como para el comando [QUERY](query.md), este principio permite romper una instru
 
 **4D Server:** el comando es optimizado por 4D Server. Los arrays son enviados por el equipo cliente al servidor, y los registros son modificados o creados en el equipo servidor. Como tal solicitud es manejada de modo sincrónico, el equipo cliente debe esperar a que la operación se complete con éxito. En los entornos multiusuario o multiproceso, ningún registro bloqueado será sobrescrito.
 
-#### Ejemplo 1 
+## Ejemplo 1 
 
 En el siguiente ejemplo, los arrays *asApellidos* y *asEmpresas* escriben datos en la tabla *\[Personas\]*. Los valores del array *asApellidos* se ubican en el campo *\[Personas\]Apellido* y los valores del array *asEmpresas* se ubican en el campo *\[Personas\]Empresa*:
 
@@ -44,7 +44,7 @@ En el siguiente ejemplo, los arrays *asApellidos* y *asEmpresas* escriben datos 
  ARRAY TO SELECTION(asApellidos;[Personas]Apellido;asEmpresas;[Personas]Empresa)
 ```
 
-#### Ejemplo 2 
+## Ejemplo 2 
 
 Usted desea copiar una selección de registros a una tabla archivo seleccionando los campos de acuerdo con el valor de opción:
 
@@ -76,12 +76,12 @@ Usted desea copiar una selección de registros a una tabla archivo seleccionando
  ARRAY TO SELECTION
 ```
 
-#### Ver también 
+## Ver también 
 
 [SELECTION TO ARRAY](selection-to-array.md)  
 *Variables sistema*  
 
-#### Propiedades
+## Propiedades
 
 |  |  |
 | --- | --- |
