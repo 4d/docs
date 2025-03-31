@@ -45,3 +45,12 @@ USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレ�
 #### 参照
 
 [Create entity selection](create-entity-selection.md)
+
+#### プロパティ
+
+|                           |                                                                 |
+| ------------------------- | --------------------------------------------------------------- |
+| コマンド番号                    | 1513                                                            |
+| スレッドセーフ                   | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Changes current record    |                                                                 |
+| Changes current selection |                                                                 |

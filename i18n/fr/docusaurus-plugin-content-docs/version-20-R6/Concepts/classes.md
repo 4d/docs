@@ -27,7 +27,7 @@ Function sayHello() -> $welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```4d
 var $person : cs.Person //objet de classe Person
@@ -183,7 +183,7 @@ Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de 
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
 
 :::
 
@@ -323,7 +323,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
 
 :::
 
@@ -399,8 +399,8 @@ Le type de propriété peut être l'un des suivants :
 | `Collection`                 | Valeur collection                                                         |
 | `Variant`                    | Valeur variant                                                            |
 | `Object`                     | Objet de classe par défaut (4D.Object) |
-| `4D.<className>`             | Object de la classe 4D className                                          |
-| `cs.<className>`             | Object de la classe utilisateur className                                 |
+| `4D.<className>`             | Objet de la classe 4D className                                           |
+| `cs.<className>`             | Objet de la classe utilisateur className                                  |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>`                  |
 
 Si vous omettez le type dans la ligne de déclaration, la propriété est créée en tant que variant.

@@ -28,7 +28,7 @@ O evento `On Before Keystroke` não é gerado:
 
 ### Objectos não enterráveis
 
-O evento `On Before Keystroke` pode ser gerado em objetos não inseríveis, por exemplo, em uma caixa de seleção mesmo se as células da caixa de seleção não forem inseríveis, ou as linhas não forem selecionáveis. This allows you to build interfaces where the user can scroll dynamically to a specific row in a list box by entering the first letters of a value. No caso em que as células da caixa de listagem são editáveis, você pode usar o comando `Is editing text` para saber se o usuário está realmente digitando texto em uma célula ou está usando o recurso de preenchimento automático e, em seguida, executar o código apropriado.
+O evento `On Before Keystroke` pode ser gerado em objetos não inseríveis, por exemplo, em uma caixa de seleção mesmo se as células da caixa de seleção não forem inseríveis, ou as linhas não forem selecionáveis. Isso permite que você construa interfaces onde o usuário pode rolar dinamicamente para uma linha específica em um list box, digitando as primeiras letras de um valor. No caso em que as células da caixa de listagem são editáveis, você pode usar o comando `Is editing text` para saber se o usuário está realmente digitando texto em uma célula ou está usando o recurso de preenchimento automático e, em seguida, executar o código apropriado.
 
 ### Sequência de teclas
 

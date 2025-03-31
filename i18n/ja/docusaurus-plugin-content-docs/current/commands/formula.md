@@ -137,3 +137,10 @@ displayed_sidebar: docs
 [4D Blog - フォーミュラ: 既成概念にとらわれない発想](https://blog.4d.com/ja/new-formula-think-outside-the-box/)\
 [4D Blog - 独自のメソッドをオブジェクトにカプセル化する](https://blog.4d.com/ja/write-your-own-methods-for-objects/)\
 [Formula from string](formula-from-string.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1597                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

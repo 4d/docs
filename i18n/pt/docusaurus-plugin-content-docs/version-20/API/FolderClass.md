@@ -157,9 +157,9 @@ A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolv
 
 
 <!--REF #FolderClass.create().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                    |
-| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | Verdadeiro se a pasta foi criada com sucesso, falso caso contrário<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                              |
+| ---------- | ---------- | -- | -------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se a pasta foi criada com sucesso, false caso contrário<!-- END REF -->
 
 
 |

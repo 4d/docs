@@ -8,7 +8,7 @@ If more than one person uses an application, which is usually the case in client
 4D access control strategy depends on your deployment configuration:
 
 - in multi-user applications, you can rely on 4D users and groups,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
+- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
 
 > For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
@@ -32,11 +32,11 @@ To disable the password access system, you just need to remove the Designer pass
 
 
 
-Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume License. In single-user applications all users opening the application are [Designers](handling_users_groups.md#designer-and-administrator), they have all privileges and their name is "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
+Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume Desktop. In single-user applications all users opening the application are [Designers](handling_users_groups.md#designer-and-administrator), they have all privileges and their name is "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
 
 ### User identification
 
-To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Thus user authentication is delegated to the OS level.
+To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](../commands-legacy/current-system-user.md) command, which returns the user who opened the system session. Thus user authentication is delegated to the OS level.
 
 You can then allow or deny access within your application by using code such as:
 
@@ -46,7 +46,7 @@ If(Current system user = $user) //you can store users in a database table
 End if
 ```
 
-If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:
+If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command, for example:
 
 ```4d
 SET USER ALIAS(Current system user)

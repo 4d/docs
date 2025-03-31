@@ -57,7 +57,7 @@ Les objets attributs retournés contiennent les propriétés suivantes :
 | obligatoire      | Boolean | Vrai si la saisie d'une valeur null est rejetée pour l'attribut. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities". Attention : Cette propriété correspond à la propriété du champ "Reject NULL value input" au niveau de la base de données 4D. Elle n'est pas liée à la propriété "Mandatory" existante qui est une option de contrôle de la saisie de données pour une table. |
 | name             | Text    | Nom de l'attribut sous forme de chaîne                                                                                                                                                                                                                                                                                                                                                        |
 | relatedDataClass | Text    | Nom de la dataclass liée à l'attribut. Renvoyé uniquement lorsque `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                             |
-| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>if `.kind` = "storage": "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types.</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la classe de données liée + suffixe "Selection"</li>                                                                                                                                                                                |
+| type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "bool", "date", "image", "number", "object", ou "string". "number" est retourné pour tous les types numériques, y compris duration ; "string" est retourné pour les types d'attributs uuid, alpha et text.</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la classe de données liée + suffixe "Selection"</li>                                                                                                                                                                                |
 | unique           | Boolean | Vrai si la valeur de l'attribut doit être unique. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                             |
 
 :::tip
@@ -138,7 +138,7 @@ Considérant les propriétés de table suivantes :
 
 #### Description
 
-The `.all( )` function <!-- REF #DataClassClass.all().Summary -->interroge le datastore pour trouver toutes les entités de la dataclass et les renvoie en tant qu'entity selection<!-- END REF -->.
+La fonction `.all()` <!-- REF #DataClassClass.all().Summary -->interroge le datastore pour trouver toutes les entités de la dataclass et les renvoie en tant qu'entity selection<!-- END REF -->.
 
 Les entités sont renvoyées dans l'ordre par défaut, qui est initialement l'ordre dans lequel elles ont été créées. Notez cependant que, si des entités ont été supprimées et que de nouvelles entités ont été ajoutées, l'ordre par défaut ne reflète plus l'ordre de création.
 
@@ -459,7 +459,7 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 #### Description
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->retourne le datastore de la dataclass<!-- END REF -->.
+La fonction `.getDataStore()` <!-- REF #DataClassClass.getDataStore().Summary -->retourne le datastore de la dataclass<!-- END REF -->.
 
 Le datastore peut être :
 
@@ -516,7 +516,7 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 #### Description
 
-The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->retourne un objet qui fournit des informations sur la dataclass<!-- END REF -->. Cette fonction est utile pour l'écriture de code générique.
+La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne un objet qui fournit des informations sur la dataclass<!-- END REF -->. Cette fonction est utile pour l'écriture de code générique.
 
 **Objet retourné**
 
@@ -587,7 +587,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->retourn
 
 #### Description
 
-The `.new( )` function <!-- REF #DataClassClass.new().Summary -->crée en mémoire et renvoie une nouvelle entité vide pour la dataclass<!-- END REF -->.
+La fonction `.new()` <!-- REF #DataClassClass.new().Summary -->crée en mémoire et renvoie une nouvelle entité vide pour la dataclass<!-- END REF -->.
 
 L'objet entité est créé en mémoire et n'est pas sauvegardé dans la base de données tant que la fonction [`.save( )`](EntityClass.md#save) n'est pas appelée. Si l'entité est supprimée avant d'être sauvegardée, elle ne peut pas être récupérée.
 
@@ -630,7 +630,7 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 #### Description
 
-The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->crée en mémoire une entity selection vide, non partageable, liée à la dataclass<!-- END REF -->.
+La fonction `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crée en mémoire une entity selection vide, non partageable, liée à la dataclass<!-- END REF -->.
 
 > Pour plus d'informations sur les entity selections non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -677,7 +677,7 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 
 #### Description
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->recherche les entités répondant aux critères de recherche spécifiés dans *queryString* ou *formula* et (optionnellement) dans *value*(s)<!-- END REF -->, pour toutes les entités de la dataclass, et retourne un nouvel objet de type `EntitySelection` contenant toutes les entités trouvées. Le mode lazy loading est appliqué.
+La fonction `.query()` <!-- REF #DataClassClass.query().Summary -->recherche les entités répondant aux critères de recherche spécifiés dans *queryString* ou *formula* et (optionnellement) dans *value*(s)<!-- END REF -->, pour toutes les entités de la dataclass, et retourne un nouvel objet de type `EntitySelection` contenant toutes les entités trouvées. Le mode lazy loading est appliqué.
 
 Si aucune entité correspondante n'est trouvée, une `EntitySelection` vide est retournée.
 
@@ -723,7 +723,7 @@ où :
  | Condition Not appliquée à une assertion | NOT         | Les parenthèses sont obligatoires lorsque NOT est utilisé devant une assertion contenant plusieurs opérateurs                                  |
  | Contient mot-clé                        | %           | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                  |
 
-* **value** : valeur à comparer à la valeur courante de l'attribut de chaque entité de la sélection ou élément de la collection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the **value** type to the attribute data type whenever possible, for an easier handling of values coming from the Internet. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20. Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+* **value** : valeur à comparer à la valeur courante de l'attribut de chaque entité de la sélection ou élément de la collection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20. Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   * Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   * Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
   * Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.' Valeurs constantes de type date: format "YYYY-MM-DD"
@@ -814,18 +814,18 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
 
-#### Not equal to null or undefined values
+#### Différent des valeurs null ou undefined
 
-The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+Le comparateur "différent de *value*" (`#` ou `!`) ne renvoie pas d'attributs dont la valeur est null ou undefined. Par exemple, la requête suivante ne renverra que les personnes dont le statut "info.married" est `false` et pas les personnes dont la propriété "info.married" est "null" ou manquante :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
 ```
 
-If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+Si vous voulez trouver des personnes dont le statut "info.married" est `false`, null ou indéfini, vous devez écrire :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
 ```
 
 
@@ -976,7 +976,7 @@ Dans le paramètre *querySettings* vous pouvez passer un objet contenant des opt
 | attributes    | Object  | **Placeholders nommés pour les chemins d'attributs** utilisés dans *queryString* ou *formula*. Les attributs sont exprimés sous forme de paires propriété / valeur, où propriété est le nom du placeholder inséré pour un chemin d'attribut dans *queryString* or *formula* (":placeholder"), et où valeur peut être une chaine ou une collection de chaines. Chaque valeur est un chemin qui peut désigner soit un attribut scalaire ou relatif de la dataclass soit une propriété d'un champ objet de la dataclass<table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath exprimé à l'aide de la notation à point, ex : "name" ou "user.address.zipCode"</td></tr><tr><td>Collection de chaînes</td><td>Chaque chaine de la collection représente un niveau d'attributePath, ex : \["name"] ou \["user","address","zipCode"]. L'utilisation d'une collection permet de rechercher des attributs dont les noms ne sont pas conformes à la notation à point, ex : ["4Dv17.1","en/fr"]</td></tr></table>Vous pouvez combiner les valeurs des placeholders indexés (valeurs passées directement dans les paramètres *value*) et les valeurs des placeholders nommés dans la même recherche. |
 | args          | Object  | Paramètre(s) à passer aux formules, le cas échéant. L'objet **args** sera reçu dans $1 à l'intérieur des formules et donc ses valeurs seront disponibles via la propriété *$1.property* (cf. exemple 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | allowFormulas | Boolean | Vrai pour autoriser les appels de formules dans la query (défaut). Passez faux pour interdire l'exécution de formules. Si la `query()` contient une formule alors que cette propriété est à Faux, une erreur est retournée (1278 - Formule non autorisée).                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| context       | Text    | Nom du contexte d'optimisation automatique appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. This feature is designed for client/server processing; for more information, please refer to the [**Client/server optimization**](https://doc.4d.com/4Dv19/4D/19/Entity-selections.300-5416640.en.html#4461913) page.                                                                                                                                                                                                                                                                                                                       |
+| context       | Text    | Nom du contexte d'optimisation automatique appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est conçue pour le traitement client/serveur; pour plus d'informations, veuillez vous référer à la page [**Optimisation Client/Serveur**](https://doc.4d.com/4Dv19/4D/19/Entity-selections.300-5416640.en.html#4461913).                                                                                                                                                                                                                                                                                               |
 | queryPlan     | Boolean | Dans l'entity selection résultante, retourne ou ne retourne la description détaillée de la recherche juste avant d'être exécutée, i.e. La propriété retournée est un objet qui inclut chaque recherche et sous-recherche programmée (dans le cas d'une recherche complexe). Cette option est utile durant la phase de développement d'une application. Elle est utilisée conjointement à queryPath. Par défaut, si elle est omise : faux. **Note** : Cette propriété est prise en charge uniquement par les fonctions `entitySelection.query()` et `dataClass.query()`.                                                                                                                                                          |
 | queryPath     | Boolean | Dans l'entity selection résultante, retourne ou ne retourne pas la description détaillée de la recherche telle qu'elle est effectuée. La propriété retournée est un objet qui contient le chemin utilisé pour la recherche (généralement identique à celui de queryPlan, mais il peut être différent si le moteur parvient à optimiser la recherche), la durée du traitement et le nombre d'enregistrements trouvés. Cette option est utile durant la phase de développement d'une application. Par défaut, si elle est omise : faux. **Note** : Cette propriété est prise en charge uniquement par les fonctions `entitySelection.query()` et `dataClass.query()`.                                                              |
 

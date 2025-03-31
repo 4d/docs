@@ -17,8 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Esse comando não é thread-safe, não pode ser usado em código preventivo.*
-
 <details><summary>História</summary>
 
 | Release | Mudanças                                 |
@@ -192,3 +190,10 @@ var $result:=Compile project($options)
 #### Veja também
 
 [BUILD APPLICATION](../commands-legacy/build-application.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1760                            |
+| Thread safe    | &amp;cross; |

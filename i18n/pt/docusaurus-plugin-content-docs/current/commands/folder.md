@@ -74,3 +74,10 @@ If the command is called from a component, pass the optional `*` parameter to ge
 [File](file.md)\
 [Object to path](../commands-legacy/object-to-path.md)\
 [Path to object](../commands-legacy/path-to-object.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1567                            |
+| Thread safe    | &amp;check; |

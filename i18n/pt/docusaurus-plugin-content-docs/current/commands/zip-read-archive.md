@@ -84,3 +84,10 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1637                            |
+| Thread safe    | &amp;check; |

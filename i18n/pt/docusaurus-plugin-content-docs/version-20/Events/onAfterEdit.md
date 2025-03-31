@@ -11,14 +11,14 @@ title: On After Edit
 
 ### Caso geral
 
-This event can be used filter the data entry in keyboard enterable objects at the lowest level.
+Este evento pode ser usado para filtrar a entrada de dados nos objetos digitáveis do teclado no nível mais baixo.
 
-When it is used, this event is generated after each change made to the contents of an enterable object, regardless of the action that caused the change, *i.e.*:
+Quando é usado, este evento é gerado após cada alteração feita no conteúdo de um objeto inserível, independentemente da ação que causou a alteração, * ou seja*:
 
-- Standard editing actions which modify content like paste, cut, delete or cancel;
+- Ações de edição padrão que modificam conteúdo como colar, cortar, excluir ou cancelar;
 - Eliminar um valor (ação semelhante a colar);
-- Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
-- Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
+- Qualquer entrada de teclado feita pelo usuário; neste caso, o evento `On After Edit` é gerado após os eventos [`On Before Keystroke`](onBeforeKeystroke.md) e [`On After Keystroke`](onAfterKeystroke.md) se forem utilizadas.
+- Qualquer modificação feita usando um comando de linguagem que simula uma ação do usuário (ou seja, `POST KEY`).
 
 No evento `On After Edit`, os dados texto introduzidos são devolvidos pelo comando [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html).
 
@@ -65,7 +65,7 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 | Propriedade | Tipo   | Descrição                                |
 | ----------- | ------ | ---------------------------------------- |
 | fillRange   | object | Intervalo utilizado para o preenchimento |
- autoFillType|longint|Valor utilizado para o enchimento.<li>0: as células são preenchidas com todos os dados (valores, formatação e fórmulas)</li><li>1: as células são preenchidas com dados automáticos sequenciais</li><li>2: As células são preenchidas apenas com formatação</li><li>3: as células são preenchidas com valores, mas não com formatação</li><li>4: Os valores são removidos das células</li><li>5: As células são preenchidas automaticamente</li>| |fillDirection|longint|Direction of the fill.<li>0: As células à esquerda são preenchidas</li><li>1: As células à direita estão preenchidas</li><li>2: As células acima estão preenchidas</li><li>3: As células abaixo estão preenchidas</li>|
+ autoFillType|longint|Valor utilizado para o enchimento.<li>0: as células são preenchidas com todos os dados (valores, formatação e fórmulas)</li><li>1: as células são preenchidas com dados automáticos sequenciais</li><li>2: As células são preenchidas apenas com formatação</li><li>3: as células são preenchidas com valores, mas não com formatação</li><li>4: Os valores são removidos das células</li><li>5: As células são preenchidas automaticamente</li>| |fillDirection|longint|Direction do preenchimento.<li>0: As células à esquerda são preenchidas</li><li>1: As células à direita estão preenchidas</li><li>2: As células acima estão preenchidas</li><li>3: As células abaixo estão preenchidas</li>|
 
 #### action = formulaChanged
 

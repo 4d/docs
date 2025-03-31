@@ -66,3 +66,10 @@ displayed_sidebar: docs
     ALERT("メール受信中にエラーが発生しました: "+$status.statusText)
  End if
 ```
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1697                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

@@ -78,7 +78,7 @@ text, input {
 
 ### Nom d'objet
 
-Le nom de l'objet correspond au **sélecteur d'ID** CSS et définit un objet spécifique à styler, puisque que ce nom est unique dans le formulaire.
+Le nom de l'objet correspond au **ID selector** CSS et définit un objet spécifique à styler, puisque que ce nom est unique dans le formulaire.
 
 Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -93,9 +93,9 @@ Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affic
 
 ### Class
 
-Class correspond au **sélecteur class** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
+Class correspond au **class selector** CSS et définit un objet le style de tous les objets formulaires de l'attribut `class`.
 
-Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarez le(s) style(s) à appliquer.
+Vous pouvez spécifier les classes à utiliser avec un caractère "." suivi du nom de la classe et, entre accolades, déclarer le(s) style(s) à appliquer.
 
 Dans l'exemple suivant, le texte de tous les objets de la classe `okButtons` sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels, alignée au centre :
 
@@ -124,7 +124,7 @@ class: "okButtons important"
 
 ### Tous les objets
 
-Le caractère "*" correspond au **sélecteur universel** CSS et indique que le style qui suit sera appliqué à tous les objets du formulaire.
+Le caractère "*" correspond au **universal selector** CSS et indique que le style qui suit sera appliqué à tous les objets du formulaire.
 
 Indiquez qu'un style doit s'appliquer à tous les objets de formulaire avec le caractère "*", puis, entre accolades, déclarez le(s) style(s) à appliquer.
 
@@ -196,9 +196,9 @@ text[text|=Hello]
 
 ### Media Queries
 
-Les requêtes de média sont utilisées pour appliquer des schémas de couleurs à une application.
+Les Media queries sont utilisées pour appliquer des schémas de couleurs à une application.
 
-A media query is composed of a media feature and a value (e.g., `\&#060;media feature&#062;:\&#060;value&#062;` ).
+Une media query est composée d'une fonctionnalité média et d'une valeur (par ex. `\&#060;fonctionnalité média&#062;:\&#060;value&#062;`).
 
 Fonctionnalités média disponibles :
 
@@ -206,8 +206,8 @@ Fonctionnalités média disponibles :
 
 Expressions de fonctionnalité média disponibles :
 
-* **light**<br/>For using a light scheme
-* **dark**<br/>For using a dark scheme
+* **light**<br/>Pour utiliser un schéma de couleur clair
+* **dark**<br/>Pour utiliser un schéma de couleur sombre
 
 > Les schémas de couleurs sont pris en charge sur macOS uniquement.
 
@@ -258,7 +258,7 @@ Les attributs répertoriés ci-dessous peuvent accepter le nom 4D ou le nom CSS.
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
-> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
+> Les valeurs spécifiques à 4D (par exemple `sunken`) ne sont pas prises en charge lors de l'utilisation de noms d'attribut CSS.
 
 #### Valeurs d'attributs spécifiques
 

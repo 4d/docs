@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ds.Params-->
 
-| Parâmetro  | Tipo      |   | Descrição                                       |
-| ---------- | --------- | - | ----------------------------------------------- |
-| localID    | Text      | → | ID local del armazém de dados remoto a devolver |
-| Resultados | DataStore | ← | Referencia ao armazém de dados                  |
+| Parâmetro  | Tipo                          |   | Descrição                                       |
+| ---------- | ----------------------------- | - | ----------------------------------------------- |
+| localID    | Text                          | → | ID local del armazém de dados remoto a devolver |
+| Resultados | cs. DataStore | ← | Referencia ao armazém de dados                  |
 
 <!-- END REF-->
 
@@ -67,3 +67,10 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 #### Veja também
 
 [Open datastore](open-datastore.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1482                            |
+| Thread safe    | &amp;check; |

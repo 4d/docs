@@ -29,7 +29,7 @@ title: テキスト、ピクチャー
 
 |   名称  | データタイプ | とりうる値                                                                                                                                                              |
 | :---: | :----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |  text  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |  テキスト  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 #### 対象オブジェクト
 
@@ -189,9 +189,9 @@ title: テキスト、ピクチャー
 
 #### JSON 文法
 
-| 名称             | データタイプ  | とりうる値                                  |
-| -------------- | ------- | -------------------------------------- |
-| imageHugsTitle | boolean | true (デフォルト), false |
+| 名称             | データタイプ | とりうる値                                  |
+| -------------- | ------ | -------------------------------------- |
+| imageHugsTitle | ブール    | true (デフォルト), false |
 
 #### 対象オブジェクト
 

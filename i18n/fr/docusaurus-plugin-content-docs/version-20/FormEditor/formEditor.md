@@ -571,9 +571,9 @@ Il existe trois façons d'accéder à la palette de vues :
 
 - **Barre d'outils** : cliquez sur l'icône de Vues dans la barre d'outils de l'éditeur de formulaires. (Cette icône apparaît en gris lorsqu'au moins un objet appartient à une vue autre que la vue par défaut.)
 
- |                Vue par défaut uniquement                |             Avec des vues supplémentaires             |
- |:-------------------------------------------------------:|:-----------------------------------------------------:|
- | ![](../assets/en/FormEditor/icon.png "No views in use") | ![](../assets/en/FormEditor/icon2.png "Views in use") |
+ |                         Vue par défaut uniquement                         |                    Avec des vues supplémentaires                     |
+ |:-------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
+ | ![](../assets/en/FormEditor/icon.png "Aucune vue en cours d'utilisation") | ![](../assets/en/FormEditor/icon2.png "Vues en cours d'utilisation") |
 
 - **Menu contextuel** (formulaire ou objet) : faites un clic droit n'importe où dans l'éditeur de formulaires ou sur un objet, puis sélectionnez **Vue courante**
 

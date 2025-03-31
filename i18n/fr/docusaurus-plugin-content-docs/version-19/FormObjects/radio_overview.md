@@ -135,5 +135,5 @@ Tous les boutons radio partagent une même série de propriétés de base :
 
 Des propriétés spécifiques supplémentaires sont disponibles en fonction du [style de bouton](#button-styles) :
 
-- [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin) (Custom)
-- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
+- [Chemin d'accès arrière-plan](properties_TextAndPicture.md#background-pathname) - [Marge horizontale](properties_TextAndPicture.md#horizontal-margin) - [Décalage icône](properties_TextAndPicture.md#icon-offset) - [Marge verticale](properties_TextAndPicture.md#vertical-margin) (Personnalisé)
+- [Nombre d'Etats](properties_TextAndPicture.md#number-of-states) - [Chemin d'accès image](properties_TextAndPicture.md#picture-pathname) - [Position Titre/Image](properties_TextAndPicture.md#titlepicture-position) (Bouton barre outils, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)

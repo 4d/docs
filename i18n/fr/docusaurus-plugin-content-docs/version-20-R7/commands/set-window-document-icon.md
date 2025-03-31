@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
 
-| Paramètres | Type                                               |   | Description              |
-| ---------- | -------------------------------------------------- | - | ------------------------ |
-| winRef     | Integer                                            | → | Window reference number  |
-| image      | Picture                                            | → | Custom icon              |
-| file       | 4D.File, 4D.Folder | → | File path or folder path |
+| Paramètres | Type                                               |   | Description                             |
+| ---------- | -------------------------------------------------- | - | --------------------------------------- |
+| winRef     | Integer                                            | → | Numéro de référence de la fenêtre       |
+| image      | Picture                                            | → | Icône personnalisée                     |
+| file       | 4D.File, 4D.Folder | → | Chemin d'accès du fichier ou du dossier |
 
 <!-- END REF-->
 
@@ -37,12 +37,12 @@ In the case of an MDI application on Windows, you can pass `-1` in *winRef* to s
 
 #### Exemple
 
-In this example, we want to create four windows:
+Dans cet exemple, nous voulons créer quatre fenêtres :
 
-1. Use the application icon on Windows and no icon on macOS (default state when no *image* or *file* is used).
-2. Use a "user" icon.
-3. Associate a document with the window (this uses its file type icon).
-4. Customize the icon associated with the document.
+1. Utilisez l'icône de l'application sous Windows et aucune icône sur macOS (état par défaut quand aucune *image* ou *file* n'est utilisée).
+2. Utilisez une icône "user".
+3. Associer un document à la fenêtre ( cela utilise l'icône du type de fichier correspondant).
+4. Personnaliser l'icône associée au document.
 
 ```4d
  var $winRef : Integer

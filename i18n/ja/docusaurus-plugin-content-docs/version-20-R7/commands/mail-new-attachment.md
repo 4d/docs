@@ -148,3 +148,10 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 
 $transporter.send($email)
 ```
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1644                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

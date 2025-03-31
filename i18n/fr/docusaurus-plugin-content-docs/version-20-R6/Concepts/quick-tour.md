@@ -4,7 +4,7 @@ title: Tour d'horizon
 sidebar_label: Tour d'horizon
 ---
 
-En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
+En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode projet :
 
 ```4d
 ALERT("Hello, World!")
@@ -273,13 +273,13 @@ Pour parler simplement, les expressions retournent une valeur. En fait, lorsque 
 
 Les expressions peuvent être constituées de presque tous les éléments du langage : commandes, opérateurs, variables, champs, propriétés d'objets et éléments de collection. Vous utilisez des expressions pour écrire des lignes de code, qui sont à leur tour utilisées pour construire des méthodes. Des expressions sont employées à chaque fois que le langage 4D a besoin de connaître la valeur d’une donnée.
 
-Les expressions sont rarement «autonomes». Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Cela inclut :
+Les expressions sont rarement «autonomes». Il existe plusieurs endroits dans 4D où une expression peut être utilisée seule. Cela inclut :
 
-- Editeur de formule (apply formula, query with formula, order by formula)
+- L'éditeur de formule (apply formula, query with formula, order by formula)
 - La commande `EXECUTE FORMULA`
 - La liste de propriétés, où une expression peut être utilisée en tant que source de données pour la plupart des widgets
-- Dans la fenêtre du Débogueur où la valeur des expressions peut être évaluée
-- Dans l’éditeur d’états semi-automatiques en tant que formule dans une colonne
+- La fenêtre du Débogueur où la valeur des expressions peut être évaluée
+- L'éditeur d’états semi-automatiques en tant que formule dans une colonne
 
 ### Types d’expressions
 

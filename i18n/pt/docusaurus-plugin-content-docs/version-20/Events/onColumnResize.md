@@ -12,13 +12,13 @@ title: On Column Resize
 
 ### List Box
 
-Este evento é gerado quando a largura de uma coluna na caixa de listagem é modificada por um utilizador. The event is triggered "live", *i.e.*, sent continuously during the event, for as long as the list box or column concerned is being resized. This resizing is performed manually by a user, or may occur as a result of the list box and its column(s) being resized along with the form window itself (whether the form is resized manually or using the `RESIZE FORM WINDOW` command).
+Este evento é gerado quando a largura de uma coluna na caixa de listagem é modificada por um utilizador. O evento é acionado “ao vivo”, *ou seja, *, ele é enviado continuamente durante o evento, enquanto o list box ou a coluna em questão está sendo redimensionado. Este redimensionamiento es realizado manualmente por un usuario, o puede ocurrir como resultado de que el list box y su(s) columna(s) sean redimensionados junto con la propia ventana del formulario (ya sea que el formulario sea redimensionado manualmente ou usando o comando `RESIZE FORMATO WINDOW`).
 
 > O evento `On Column Resize` não é acionado quando um evento [falso coluna](../FormObjects/properties_ResizingOptions.md#about-the-fake-blank-column) é redimensionado.
 
 ### 4D View Pro
 
-This event is generated when the width of a column is modified by a user. Neste contexto, o  [objeto de evento](overview.md#event-object) retornado pelo comando `FORM Event` contém:
+Este evento é gerado quando a largura de uma coluna é modificada por um usuário. Neste contexto, o  [objeto de evento](overview.md#event-object) retornado pelo comando `FORM Event` contém:
 
 | Propriedade | Tipo          | Descrição                                                                                |
 | ----------- | ------------- | ---------------------------------------------------------------------------------------- |

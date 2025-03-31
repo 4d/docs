@@ -445,9 +445,9 @@ Customized time formats can be built using several patterns described in the [**
 
 #### JSON 文法
 
-| 名称      | データタイプ  | とりうる値       |
-| ------- | ------- | ----------- |
-| display | boolean | true, false |
+| 名称      | データタイプ | とりうる値       |
+| ------- | ------ | ----------- |
+| display | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -475,9 +475,9 @@ Customized time formats can be built using several patterns described in the [**
 
 #### JSON 文法
 
-| 名称         | データタイプ  | とりうる値       |
-| ---------- | ------- | ----------- |
-| threeState | boolean | true, false |
+| 名称         | データタイプ | とりうる値       |
+| ---------- | ------ | ----------- |
+| threeState | ブール    | true, false |
 
 #### 対象オブジェクト
 

@@ -45,3 +45,12 @@ USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee e
 #### Voir également
 
 [Create entity selection](create-entity-selection.md)
+
+#### Propriétés
+
+|                           |                                                                 |
+| ------------------------- | --------------------------------------------------------------- |
+| Numéro de commande        | 1513                                                            |
+| Thread safe               | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Changes current record    |                                                                 |
+| Changes current selection |                                                                 |

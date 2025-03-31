@@ -191,7 +191,7 @@ Voir [**Release Notes pour 4D 20.x LTS**](../../versioned_docs/version-20/Notes/
 | Bibliothèque | Version courante                       | Mise à jour dans 4D | Commentaire                                                                                                                                        |
 | ------------ | -------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BoringSSL    | 0aa300b                                | 20 R6               | Utilisé pour QUIC                                                                                                                                  |
-| CEF          | 121                                    | 20 R5               | Chromium 6167                                                                                                                                      |
+| CEF          | 131                                    | **20 R8**           | Chromium 6778                                                                                                                                      |
 | Hunspell     | 1.7.2  | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                                                                |
 | ICU          | 73.2                   | 20                  | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets.                      |
 | libldap      | 2.6.7  | 20 R6               |                                                                                                                                                    |
@@ -199,9 +199,9 @@ Voir [**Release Notes pour 4D 20.x LTS**](../../versioned_docs/version-20/Notes/
 | Libuv        | 1.48                   | 20 R6               | Utilisé pour QUIC                                                                                                                                  |
 | libZip       | 1.9.2  | 20                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                         |
 | LZMA         | 5.4.1  | 20                  |                                                                                                                                                    |
-| OpenSSL      | 3.3.2  | **20 R7**           | Le niveau de sécurité TLS/SSL par défaut a été relevé. Voir [Changements de comportement](#behavior-changes) pour la version 20 R4 |
+| OpenSSL      | 3.3.2  | 20 R7               | Le niveau de sécurité TLS/SSL par défaut a été relevé. Voir [Changements de comportement](#behavior-changes) pour la version 20 R4 |
 | PDFWriter    | 4.3                    | 20                  | FreeType dependency dans 12.2.1                                                                                    |
 | PHP          | 8.2.4  | 20                  |                                                                                                                                                    |
-| SpreadJS     | 17.1.0 | **20 R7**           | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) pour un aperçu des nouvelles fonctionnalités.          |
+| SpreadJS     | 17.1.0 | 20 R7               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) pour un aperçu des nouvelles fonctionnalités.          |
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                    |
 | Zlib         | 1.2.13 | 20                  |                                                                                                                                                    |

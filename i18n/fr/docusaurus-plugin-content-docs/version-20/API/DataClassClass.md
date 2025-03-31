@@ -927,7 +927,7 @@ où :
  | Inclus parmi                            | IN          | Retourne les données égales à au moins une des valeurs d'une collection ou d'un ensemble de valeurs, prend en charge le joker de recherche (@)                                                 |
  | Contient mot-clé                        | %           | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                  |
 
-* **value** : valeur à comparer à la valeur courante de l'attribut de chaque entité de la sélection ou élément de la collection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the **value** type to the attribute data type whenever possible, for an easier handling of values coming from the Internet. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20. Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+* **value** : valeur à comparer à la valeur courante de l'attribut de chaque entité de la sélection ou élément de la collection. Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20. Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   * Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   * Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
   * Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
@@ -1018,18 +1018,18 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
 
-#### Not equal to null or undefined values
+#### Différent des valeurs null ou undefined
 
-The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+Le comparateur "différent de *value*" (`#` ou `!`) ne renvoie pas d'attributs dont la valeur est null ou undefined. Par exemple, la requête suivante ne renverra que les personnes dont le statut "info.married" est `false` et pas les personnes dont la propriété "info.married" est "null" ou manquante :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true") //finds persons with attribute value is false
+$notMarried:=ds.Person.query("info.married#true") //trouve des personnes dont la valeur d'attribut est false
 ```
 
-If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+Si vous voulez trouver des personnes dont le statut "info.married" est `false`, null ou indéfini, vous devez écrire :
 
 ```4d
-$notMarried:=ds.Person.query("info.married#true | info.married=null") //finds false, null and undefined attributes
+$notMarried:=ds.Person.query("info.married#true | info.married=null") //trouve les attributs false, null et undefined
 ```
 
 

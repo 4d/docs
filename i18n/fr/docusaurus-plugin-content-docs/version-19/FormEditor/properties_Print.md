@@ -1,6 +1,6 @@
 ---
 id: print
-title: Imprimer
+title: Impression
 ---
 
 
@@ -8,30 +8,30 @@ title: Imprimer
 
 Permet de définir des paramètres d'impression spécifiques pour le formulaire. Cette fonctionnalité est utile pour afficher les limites de pages d'impression dans l'éditeur de formulaire.
 
-> **Compatibilité** : Même si ces paramètres sont pris en compte lors de l'impression du formulaire en mode Application, il est déconseillé de s'appuyer sur cette fonctionnalité pour stocker les paramètres d'impression du formulaire, en raison des limitations liées à la plateforme et au pilote. It is highly recommended to use the 4D commands `Print settings to BLOB`/`BLOB to print settings` which are more powerful.
+> **Compatibilité** : Même si ces paramètres sont pris en compte lors de l'impression du formulaire en mode Application, il est déconseillé de s'appuyer sur cette fonctionnalité pour stocker les paramètres d'impression du formulaire, en raison des limitations liées à la plateforme et au pilote. Il est fortement recommandé d'utiliser les commandes 4D `Print settings to BLOB`/`BLOB to print settings` qui sont plus puissantes.
 
-You can modify the following print settings:
+Vous pouvez modifier les paramètres d'impression suivants :
 
-*   Paper format
-*   Paper orientation
-*   Page scaling
+*   Format du papier
+*   Orientation du papier
+*   Mise à l'échelle de la page
 
 
-> Available options depend on the system configuration.
+> Les options disponibles dépendent de la configuration du système.
 
 
 
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                                    |
-| ----------- | --------------- | ------------------------------------------------------------------------------------ |
-| pageFormat  | object          | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
-| paperName   | string          | "A4", "US Letter"...                                                                 |
-| paperWidth  | string          | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| paperHeight | string          | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| orientation | string          | "landscape" (default is "portrait")                                                  |
-| scale       | number          | minimum : 0                                                                          |
+| Nom         | Type de données | Valeurs possibles                                                                                       |
+| ----------- | --------------- | ------------------------------------------------------------------------------------------------------- |
+| pageFormat  | object          | Propriétés d'impression disponibles : paperName, paperWidth, paperHeight, orientation, scale            |
+| paperName   | string          | "A4", "US Letter"...                                                                                    |
+| paperWidth  | string          | Utilisé si un papier nommé paperName n'a pas été trouvé. Nécessite un suffixe d'unité : pt, in, mm, cm. |
+| paperHeight | string          | Utilisé si un papier nommé paperName n'a pas été trouvé. Nécessite un suffixe d'unité : pt, in, mm, cm. |
+| orientation | string          | "landscape" (par défaut "portrait")                                                                     |
+| scale       | number          | minimum : 0                                                                                             |
 
 
 ---

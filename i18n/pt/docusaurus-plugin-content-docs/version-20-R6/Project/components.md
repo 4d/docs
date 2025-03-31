@@ -13,7 +13,7 @@ Ao desenvolver em 4D, os arquivos de componentes podem ser armazenados de forma 
 
 Componentes podem ser interpretados ou [compiled](../Desktop/building.md). A pasta do pacote de um componente pode conter:
 
-- ou uma pasta de projeto (componente interpretado)
+- either a [Project folder](../Project/architecture.md) named with a **.4dbase** suffix (interpreted component)
 - ou um arquivo .4DZ (componente compilado)
 
 Um projeto 4D em modo interpretado pode usar componentes interpretados ou compilados. Um projeto 4D em execução no modo compilado não pode usar componentes interpretados. Por isso não pode ser usado em um componente.
@@ -193,7 +193,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 
 Ao criar uma versão no GitHub, você especifica uma **etiqueta** e uma **versão**.
 
-- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
+- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependencyjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
 ```json
 {

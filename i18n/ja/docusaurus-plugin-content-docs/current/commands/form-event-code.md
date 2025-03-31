@@ -15,8 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
-
 #### 説明
 
 **Form event code** コマンドは、現在生成中のフォームイベントタイプを示す数値を返します。 通常フォームメソッドやオブジェクトメソッド内で**Form event code** を使用します。
@@ -350,3 +348,10 @@ displayed_sidebar: docs
 [Keystroke](../commands-legacy/keystroke.md)\
 [POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
 [SET TIMER](../commands-legacy/set-timer.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 388                                                             |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

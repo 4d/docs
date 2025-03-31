@@ -134,3 +134,10 @@ displayed_sidebar: docs
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1489                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

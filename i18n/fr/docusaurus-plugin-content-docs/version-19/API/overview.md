@@ -19,7 +19,7 @@ Les conventions suivantes sont utilisées dans la syntaxe de la fonction :
 
 ### Voir également
 
-[Classes in the 4D Language](../Concepts/classes.md).
+[Classes](../Concepts/classes.md).
 
 
 ## Commandes classiques
@@ -233,7 +233,7 @@ En plus des fonctions de classe intégrées, le langage 4D contient des centaine
 | [`DISPLAY NOTIFICATION`](https://doc.4d.com/4dv19/help/command/en/page910.html)                    | 910    |
 | [`DISPLAY RECORD`](https://doc.4d.com/4dv19/help/command/en/page105.html)                          | 105    |
 | [`DISPLAY SELECTION`](https://doc.4d.com/4dv19/help/command/en/page59.html)                        | 59     |
-| [`Numéro de ligne affiché`](https://doc.4d.com/4dv19/help/command/en/page897.html)                 | 897    |
+| [`Displayed line number`](https://doc.4d.com/4dv19/help/command/en/page897.html)                   | 897    |
 | [`DISTINCT ATTRIBUTE PATHS`](https://doc.4d.com/4dv19/help/command/en/page1395.html)               | 1395   |
 | [`DISTINCT ATTRIBUTE VALUES`](https://doc.4d.com/4dv19/help/command/en/page1397.html)              | 1397   |
 | [`DISTINCT VALUES`](https://doc.4d.com/4dv19/help/command/en/page339.html)                         | 339    |

@@ -36,13 +36,13 @@ title: VP IMPORT FROM BLOB
 
 | 引数     |                               | 型                       | 説明                                |
 | :----- | :---------------------------- | :---------------------- | :-------------------------------- |
-| param1 |                               | text                    | 4D View Pro エリアのオブジェクト名           |
+| param1 |                               | テキスト                    | 4D View Pro エリアのオブジェクト名           |
 | param2 |                               | 4D.Blob | インポートされた Blob                     |
 | param3 |                               | object                  | コマンドの *paramObj* 引数への参照           |
 | param4 |                               | object                  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
-|        | .success      | boolean                 | 読み込みに成功した場合は true 、それ以外の場合は false |
+|        | .success      | ブール                     | 読み込みに成功した場合は true 、それ以外の場合は false |
 |        | .errorCode    | integer                 | エラーコード。                           |
-|        | .errorMessage | text                    | エラーメッセージ。                         |
+|        | .errorMessage | テキスト                    | エラーメッセージ。                         |
 
 #### 例題
 

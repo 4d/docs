@@ -14,8 +14,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 #### Description
 
 **Form event code** retourne une valeur numérique qui identifie le type d'événement formulaire qui vient de se produire. Habituellement, vous utiliserez **Form event code** dans une méthode formulaire ou une méthode objet.
@@ -350,3 +348,10 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 [Keystroke](../commands-legacy/keystroke.md)\
 [POST OUTSIDE CALL](../commands-legacy/post-outside-call.md)\
 [SET TIMER](../commands-legacy/set-timer.md)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 388                             |
+| Thread safe        | &amp;cross; |

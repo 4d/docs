@@ -143,3 +143,11 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac√
 #### Ver tambi√©n
 
 [ds](ds.md)
+
+#### Propiedades
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Command number     | 1452                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Modifies variables | error                                                           |

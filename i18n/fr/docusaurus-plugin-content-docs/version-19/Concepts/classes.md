@@ -24,7 +24,7 @@ Function sayHello()->$welcome : Text
  $welcome:="Hello "+This.firstName+" "+This.lastName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```
 var $person : cs.Person //object of Person class  
@@ -172,7 +172,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. There is no ending keyword for function code.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de la classe.
 
 :::
 
@@ -283,7 +283,7 @@ Class Constructor({$parameterName : type; ...})
 
 :::note
 
-There is no ending keyword for class constructor function code. There is no ending keyword for function code.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de la classe.
 
 :::
 

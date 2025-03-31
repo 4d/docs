@@ -45,3 +45,12 @@ USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla
 #### Ver también
 
 [Create entity selection](create-entity-selection.md)
+
+#### Propiedades
+
+|                           |                                                                 |
+| ------------------------- | --------------------------------------------------------------- |
+| Command number            | 1513                                                            |
+| Thread safe               | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+| Changes current record    |                                                                 |
+| Changes current selection |                                                                 |

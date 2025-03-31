@@ -804,7 +804,7 @@ Aquí los títulos de las columnas serían `LastName` y `FirstName`.
 Para crear una tabla utilizando un contexto de datos:
 
 ```4d
-// Define un contexto de datos
+// Set a data context
 var $data : Object
 
 $data:=New object()
@@ -815,16 +815,16 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// Define las columnas de la tabla
+// Define the columns for the table
 var $options : cs.ViewPro.TableOptions
 
 $options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Email"; "dataField"; "email"))
 
-// Crea una tabla de la colección "people"
+// Create a table from the "people" collection
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 

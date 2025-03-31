@@ -39,3 +39,10 @@ Si el comando se ejecuta con el parámetro \* desde un proceso en la máquina se
 [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
 [Process state](../commands-legacy/process-state.md)\
 [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 372                                                             |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

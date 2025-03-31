@@ -19,11 +19,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 #### Description
 
-<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
 
 Dans le paramètre *form*, vous pouvez passer soit:
 
@@ -184,3 +182,10 @@ The code that calls the dialog then prints its body:
 [PAGE BREAK](../commands-legacy/page-break.md)\
 [PRINT SETTINGS](../commands-legacy/print-settings.md)\
 [SET PRINT OPTION](../commands-legacy/set-print-option.md)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 5                               |
+| Thread safe        | &amp;cross; |

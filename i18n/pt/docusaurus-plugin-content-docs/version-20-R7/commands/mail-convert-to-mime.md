@@ -84,3 +84,10 @@ $mime:=MAIL Convert to MIME($mail)
 // <html><body>HTML format email</body></html>
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1604                            |
+| Thread safe    | &amp;check; |

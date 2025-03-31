@@ -95,3 +95,10 @@ IP:port/4DACTION/action_Session
 [Session storage](../commands-legacy/session-storage.md)\
 [Session API](../API/SessionClass.md)\
 [Web server user sessions](../WebServer/sessions.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1714                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

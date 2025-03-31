@@ -758,7 +758,7 @@ $status:=$transporter.expunge()
 | ------- | -------------------- |
 | 18 R5   | *name* est optionnel |
 
-|18 R4|Added|
+|18 R4|Ajouté|
 
 </details>
 
@@ -1139,8 +1139,8 @@ Le paramètre optionnel *updateSeen* vous permet d'indiquer si le message est ma
 * **Vrai** - pour marquer le message comme "seen" (indiquant que le message a été lu)
 * **Faux** - pour ne pas modifier le statut "seen" du message
 > * La fonction retourne un BLOB vide si *msgNumber* ou msgID désigne un message inexistant,
-> * var $pw : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) // rename mailbox $status:=$transporter.renameBox("Invoices"; "Bills") If ($status.success) ALERT("Mailbox renaming successful!") Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if
-> * var $pw; $name : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp" $status:=$transporter.unsubscribe($name) If ($status.success) ALERT("Mailbox unsubscription successful!") Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if
+> * Si aucune boite de réception n'est sélectionnée avec la fonction [`.selectBox()`](#selectbox), une erreur est générée,
+> * S'il n'y a pas de connexion ouverte,`.getMIMEAsBlob()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de `.selectBox()`.
 
 #### Résultat
 
@@ -1601,7 +1601,7 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 * **Valeurs de type date** : Les valeurs de type date sont placées dans des chaînes formatées de la manière suivante : *date-day+"-"+date-month+"-"+date-year* où date-day indique la date du jour dans le mois (2 caractères maxi), date-month indique le mois (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) et date-year indique l’année sur 4 chiffres. Exemple : `searchCriteria = SENTBEFORE 1-Feb-2020` (il n’est généralement pas nécessaire de mettre une date entre guillemets puisqu’elle ne contient pas de caractères spéciaux)
 
-* **Valeurs de type chaîne ** : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée. Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. La recherche ne tient pas compte de la casse des caractères.
+* **Valeurs de type chaîne ** : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée. Exemple: `searchCriteria = FROM "SMITH"` Pour toutes les clés de recherche qui utilisent des chaînes, un message correspond à la clé si la chaîne est une sous-chaîne du champ. La recherche ne tient pas compte de la casse des caractères.
 
 * **Noms de champs** : Les valeurs de type nom de champ contiennent le nom d’un champ d’en-tête. Exemple : `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 

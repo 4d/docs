@@ -5,7 +5,7 @@ title: Composants
 
 A 4D component is a set of 4D code and/or 4D forms representing one or more functionalities that you can add and use in your projects. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\\\\\\&type=Repositories).
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component\\\\\\\&type=Repositories).
 
 When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
 
@@ -20,7 +20,7 @@ Components can be interpreted or [compiled](../Desktop/building.md).
 
 The package folder of a component (_MyComponent.4dbase_ folder) can contain:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md)
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
 - for **compiled components**:
   - either a "Contents" folder containing a .4DZ file, a _Resources_ folder, an _Info.plist_ file (recommended architecture)
   - or directly a .4DZ file with other folders such as _Resources_.
@@ -46,7 +46,7 @@ This page describes how to work with components in the **4D** and **4D Server** 
 
 To load a component in your 4D project, you can either:
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components),
+- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
 - or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
 
 Components declared in the **dependencies.json** file can be stored at different locations:

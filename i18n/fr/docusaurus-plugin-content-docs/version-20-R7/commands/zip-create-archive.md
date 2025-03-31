@@ -163,3 +163,10 @@ $err:=ZIP Create archive($zip; $destination)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1640                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

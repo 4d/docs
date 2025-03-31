@@ -84,3 +84,10 @@ Pour extraire à partir du dossier root :
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 1637                                                            |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

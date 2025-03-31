@@ -80,3 +80,10 @@ displayed_sidebar: docs
 
 [New shared collection](new-shared-collection.md)\
 [Type](../commands-legacy/type.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1472                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

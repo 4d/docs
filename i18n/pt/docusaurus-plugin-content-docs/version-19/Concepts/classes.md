@@ -8,7 +8,7 @@ title: Classes
 
 A linguagem 4D é compatível com o conceito de **classes**. Numa linguagem de programação, a utilização de uma classe permite definir um comportamento do objecto com propriedades e funções associadas.
 
-Uma vez definida uma classe de usuário, pode **instanciar** objectos desta classe em qualquer parte do seu código. Cada objecto é uma instância da sua classe. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
+Uma vez definida uma classe de usuário, pode **instanciar** objectos desta classe em qualquer parte do seu código. Cada objecto é uma instância da sua classe. Uma classe pode [`estender`](#class-extends-classname) outra classe, e então herda de suas funções [](#function).
 
 > O modelo de classe em 4D é semelhante às classes em JavaScript, e baseado numa cadeia de protótipos.
 
@@ -35,7 +35,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 ### Definição de classe
 
-A user class in 4D is defined by a specific method file (.4dm), stored in the `/Project/Sources/Classes/` folder. O nome do arquivo é o nome da classe.
+Uma classe usuário em 4D é definida por um arquivo de método específico (.4dm), armazenada na pasta `/Project/Sources/Classes/`. O nome do arquivo é o nome da classe.
 
 Ao nomear classes, deve ter em mente as seguintes regras:
 
@@ -169,7 +169,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Não existe uma palavra-chave final para o código de uma função. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
@@ -195,7 +195,7 @@ Function setFullname($firstname : Text; $lastname : Text)
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
+Para uma função de classe, o comando `Current method name` retorna: `<ClassName>.<FunctionName>`, por exemplo, "MyClass.myMethod".
 
 No código da aplicação, as funções de classe são chamadas como métodos membros das instâncias do objeto e podem receber [parâmetros](#class-function-parameters) se existirem. As seguintes sintaxes são suportadas:
 
@@ -218,13 +218,13 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 > Se o tipo não for indicado, o parâmetro será definido como `Variant`.
 
-You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list. Por exemplo:
+Você declara o parâmetro de retorno (opcional) adicionando uma seta (`->`) e a definição do parâmetro de retorno após a lista do(s) parâmetro(s) de entrada. Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. Por exemplo:
+Você também pode declarar o parâmetro de retorno apenas adicionando `: type`, neste caso ele estará automaticamente disponível através de $0. Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -277,16 +277,16 @@ $area:=$rect.getArea() //5000
 
 :::note
 
-There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file.
+Não existe uma palavra-chave final para o código de função class constructor. A linguagem 4D detecta automaticamente o fim do código de uma função pela próxima palavra-chave `Function` ou pelo fim do arquivo de classe.
 
 :::
 
 
 Uma função class constructor, que pode aceitar [parâmetros](#parameters), pode ser usada para definir uma classe usuário.
 
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+Nesse caso, quando você chama a função [`new()`](API/ClassClass.md#new), o class constructor é chamado com os parâmetros opcionalmente passados para a função `new()`.
 
-For a class constructor function, the `Current method name` command returns:  `<ClassName>:constructor`, for example "MyClass:constructor".
+Para uma função class constructor, o comando `Current method name` retorna: `<ClassName>:constructor`, por exemplo, "MyClass:constructor".
 
 #### Exemplo
 
@@ -298,8 +298,8 @@ Class Constructor ($name : Text)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Em um método projeto
+// Você pode instanciar um objeto
 var $o : cs.MyClass
 $o:=cs.MyClass.new("HelloWorld")  
 // $o = {"name":"HelloWorld"}

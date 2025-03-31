@@ -111,9 +111,9 @@ When using 4D’s language, you can refer to an active form object by its object
 
 #### JSON 文法
 
-| 名称            | データタイプ  | とりうる値       |
-| ------------- | ------- | ----------- |
-| memorizeValue | boolean | true, false |
+| 名称            | データタイプ | とりうる値       |
+| ------------- | ------ | ----------- |
+| memorizeValue | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -397,15 +397,15 @@ When using 4D’s language, you can refer to an active form object by its object
 
 | 計算タイプ                                    | Num | Text | Date | Time | Bool | ピクチャー | フッター変数の型 |
 | ---------------------------------------- | --- | ---- | ---- | ---- | ---- | ----- | -------- |
-| 最小                                       | ○   | ○    | ○    | ○    | ○    |       | 列の型と同じ   |
-| 最大                                       | ○   | ○    | ○    | ○    | ○    |       | 列の型と同じ   |
-| 合計                                       | ○   |      |      | ○    | ○    |       | 列の型と同じ   |
-| カウント                                     | ○   | ○    | ○    | ○    | ○    | ○     | Integer  |
-| 平均                                       | ○   |      |      | ○    |      |       | Real     |
-| 標準偏差(\*)              | ○   |      |      | ○    |      |       | Real     |
-| 分散(\*)                | ○   |      |      | ○    |      |       | Real     |
-| 平方和(\*)               | ○   |      |      | ○    |      |       | Real     |
-| カスタム (JSON では "none") | ○   | ○    | ○    | ○    | ○    | ○     | 制限なし     |
+| 最小                                       | X   | X    | X    | X    | X    |       | 列の型と同じ   |
+| 最大                                       | X   | X    | X    | X    | X    |       | 列の型と同じ   |
+| 合計                                       | X   |      |      | X    | X    |       | 列の型と同じ   |
+| カウント                                     | X   | X    | X    | X    | X    | X     | Integer  |
+| 平均                                       | X   |      |      | X    |      |       | Real     |
+| 標準偏差(\*)              | X   |      |      | X    |      |       | Real     |
+| 分散(\*)                | X   |      |      | X    |      |       | Real     |
+| 平方和(\*)               | X   |      |      | X    |      |       | Real     |
+| カスタム (JSON では "none") | X   | X    | X    | X    | X    | X     | 制限なし     |
 
 (\*) 配列型のリストボックスのみ
 

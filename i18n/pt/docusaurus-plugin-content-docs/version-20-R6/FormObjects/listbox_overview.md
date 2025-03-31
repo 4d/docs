@@ -401,7 +401,7 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
 
 - **Caixa de listagem de seleção de coleção/entidade**: As seleções são gerenciadas por meio de propriedades dedicadas da caixa de listagem:
   - [Current item](properties_DataSource.md#current-item) é um objeto que receberá o elemento/entidade selecionado
-  - [Selected Items](properties_DataSource.md#selected-items) is a collection/entity selection object of selected items
+  - [Itens selecionados](properties_DataSource.md#selected-items) é um objeto de seleção de coleção/entidade dos itens selecionados
   - [Current item position](properties_DataSource.md#current-item-position) retorna a posição do elemento ou da entidade selecionada.
 
 - **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.

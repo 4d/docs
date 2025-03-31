@@ -3,46 +3,46 @@ id: dropdownListOverview
 title: Liste déroulante
 ---
 
-Drop-down lists are form objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an object, an array, a choice list, or a standard action.
+Les listes déroulantes sont des objets de formulaire qui permettent à l'utilisateur de sélectionner un élément dans une liste. Vous gérez les éléments qui apparaissent dans les listes déroulantes à l’aide d'un objet, d'un tableau, d’une énumération ou d'une action standard.
 
 Sous macOS, les listes déroulantes sont aussi parfois appelées "pop-up menu". Les deux noms font référence aux mêmes objets. Comme le montre l'exemple suivant, l'apparence de ces objets peut différer légèrement selon la plateforme :
 
 ![](../assets/en/FormObjects/popupDropdown_appearance.png)
 
-## Drop-down list types
+## Types de listes déroulantes
 
-You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
+Vous pouvez créer différents types de listes déroulantes avec différentes fonctionnalités. Pour définir un type, sélectionnez les valeurs **Type d'expression** et **Type de données** dans la liste des Propriétés, ou utilisez leur équivalent JSON.
 
-| Type                           | Fonctionnalités                                  | Expression Type | Type de données              | JSON definition                                                                                                                                               |
-| ------------------------------ | ------------------------------------------------ | --------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object                         | Built upon a collection                          | Object          | Numeric, Text, Date, or Time | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
-| Tableau                        | Built upon an array                              | Tableau         | Numeric, Text, Date, or Time | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
-| Choice list saved as value     | Built upon a choice list (standard)              | List            | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
-| Choice list saved as reference | Built upon a choice list. Item position is saved | List            | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
-| Hierarchical choice list       | Can display hierarchical contents                | List            | List reference               | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Action standard                | Automatically built by the action                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Type                                          | Fonctionnalités                                                            | Type d’expression | Type de données                               | Définition JSON                                                                                                                                               |
+| --------------------------------------------- | -------------------------------------------------------------------------- | ----------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objet                                         | Construit sur une collection                                               | Objet             | Numérique, texte, date ou heure               | `dataSourceTypeHint: object` + `numberFormat: <format>` ou `textFormat: <format>` ou `dateFormat: <format>` ou `timeFormat: <format>` |
+| Tableau                                       | Construit sur un tableau                                                   | Tableau           | Numérique, texte, date ou heure               | `dataSourceTypeHint: arrayNumber` ou `arrayText` or `arrayDate` ou `arrayTime`                                                                                |
+| Enumération enregistrée en tant que valeur    | Construit sur une liste de choix (standard)                                | Liste             | Valeur de l'élément sélectionné               | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
+| Enumération enregistrée en tant que référence | Construit sur une liste de choix. La position de l'élément est sauvegardée | Liste             | Référence de l'élément sélectionné            | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
+| Enumération hiérarchique                      | Peut afficher un contenu hiérarchique                                      | Liste             | Référence de liste                            | `dataSourceTypeHint: integer`                                                                                                                                 |
+| Action standard                               | Construit automatiquement par l'action                                     | *any*             | *tous à l'exception de la référence de liste* | toute définition + `action : <action>` (+ `focusable: false` pour les actions s'appliquant à d'autres zones)                                            |
 
-## Handling drop-down lists
+## Gestion des listes déroulantes
 
-### Utilisation d'un objet
+### Utiliser un objet
 
 > Cette fonctionnalité n'est disponible que dans les projets 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. Cet objet doit avoir les propriétés suivantes :
+Un [objet](Concepts/dt_object.md) encapsulant une [collection ](Concepts/dt_collection) peut être utilisé comme source de données d'une liste déroulante. Cet objet doit avoir les propriétés suivantes :
 
 | Propriété      | Type                   | Description                                                                                                                                                                                                                                                                 |
 | -------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection             | Obligatoire - Collection de valeurs scalaires. Toutes les valeurs doivent être du même type. Types pris en charge :<li>chaînes</li><li>nombres</li><li>dates</li><li>heures</li>If empty or not defined, the drop-down list is empty |
-| `index`        | number                 | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                                        |
-| `currentValue` | identique à Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                                          |
+| `values`       | Collection             | Obligatoire - Collection de valeurs scalaires. Toutes les valeurs doivent être du même type. Types pris en charge :<li>chaînes</li><li>nombres</li><li>dates</li><li>heures</li>Si vide ou non définie, la liste déroulante est vide |
+| `index`        | number                 | Indice de l'élément sélectionné (valeur comprise entre 0 et `collection.length-1`). Si vous passez -1, `currentValue` est affiché sous la forme d'un texte exemple                                                                                                          |
+| `currentValue` | identique à Collection | Élément actuellement sélectionné (utilisé comme texte exemple si passé par code)                                                                                                                                                                                            |
 
 Si l'objet contient d'autres propriétés, elles sont ignorées.
 
-To initialize the object associated to the drop-down list, you can:
+Pour initialiser l'objet associé à la liste déroulante, vous pouvez :
 
-* Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an object automatically.
+* Entrer une liste de valeurs par défaut dans les propriétés de l'objet en sélectionnant `\&#060; Static List&#062;` dans le thème [Source de données](properties_DataSource.md) de la liste des propriétés. Les valeurs par défaut sont chargées automatiquement dans un objet.
 
-* Execute code that creates the object and its properties. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
+* Exécuter le code qui crée l'objet et ses propriétés. Par exemple, si "myList" est la [variable](properties_Object.md#variable-or-expression) associée à la liste déroulante, vous pouvez écrire dans l'événement formulaire [On Load](Events/onLoad.md):
 
 ```4d
 // Form.myDrop is the datasource of the form object
@@ -53,11 +53,11 @@ Form.myDrop.index:=-1  //currentValue is a placeholder
 Form.myDrop.currentValue:="Select a fruit" 
 ```
 
-The drop-down list is displayed with the placeholder string:
+La liste déroulante est affichée avec le texte d'exemple :
 
 ![](../assets/en/FormObjects/fruits2.png)
 
-After the user selects a value:
+Après que l'utilisateur sélectionne une valeur :
 
 ![](../assets/en/FormObjects/fruits3.png)
 
@@ -69,11 +69,11 @@ Form.myDrop.index //3
 
 ### Utiliser un tableau
 
-Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. A drop-down list can display an array as a list of values when you click on it.
+Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. Une liste déroulante peut afficher un tableau comme une liste de valeurs lorsque vous cliquez dessus.
 
-To initialize the array associated to the drop-down list, you can:
+Pour initialiser le tableau associé à la liste déroulante, vous pouvez :
 
-* Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.
+* Entrer une liste de valeurs par défaut dans les propriétés de l'objet en sélectionnant `\&#060; Static List&#062;` dans le thème [Source de données](properties_DataSource.md) de la liste des propriétés. Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.
 
 * Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau. Par exemple :
 
@@ -87,7 +87,7 @@ To initialize the array associated to the drop-down list, you can:
   aCities{6}:="Green Bay" 
 ```
 
-In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
+Dans ce cas, le nom de la [variable](properties_Object.md#variable-or-expression) associée à l'objet dans le formulaire doit être `aCities`. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
 
 * Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html). Par exemple :
 
@@ -95,7 +95,7 @@ In this case, the name of the [variable](properties_Object.md#variable-or-expres
    LIST TO ARRAY("Cities";aCities)
 ```
 
-In this case also, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Ce code peut être exécuté à la place de celui proposé plus haut.
+Dans ce cas également, le nom de la [variable](properties_Object.md#variable-or-expression) associée à l'objet dans le formulaire doit être `aCities`. Ce code peut être exécuté à la place de celui proposé plus haut.
 
 Si vous voulez stocker dans un champ le choix de l’utilisateur, il est nécessaire d’écrire du code pour affecter les valeurs et de l’exécuter après la validation de l’enregistrement. Ce code pourrait être le suivant :
 
@@ -117,49 +117,49 @@ Si vous voulez stocker dans un champ le choix de l’utilisateur, il est nécess
  End case
 ```
 
-You must select each event that you test for in your Case statement. Les tableaux contiennent toujours un nombre fini d’éléments. La liste des éléments est dynamique et peut être modifiée par programmation. Les éléments d’un tableau peuvent être modifiés et triés.
+Vous devez sélectionner chaque événement que vous testez dans votre Au cas où. Les tableaux contiennent toujours un nombre fini d’éléments. La liste des éléments est dynamique et peut être modifiée par programmation. Les éléments d’un tableau peuvent être modifiés et triés.
 
 ### Utiliser une énumération
 
-If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). Cette possibilité facilite la gestion des champs/variables énuméré(e) s.
+Si vous voulez utiliser une liste déroulante pour gérer les valeurs d'une zone de saisie (champ ou variable), 4D vous permet de référencer le champ ou la variable directement comme [source de données](properties_Object.md#variable-or-expression) de la liste déroulante. Cette possibilité facilite la gestion des champs/variables énuméré(e) s.
 
-For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
-> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. If you use a hierarchical list, only the first level is displayed and can be selected.
+Par exemple, dans le cas d'un champ "Couleur" qui ne peut contenir que les valeurs "Blanc", "Bleu", "Vert" ou "Rouge", il est possible de créer une liste contenant ces valeurs et de l'associer à une liste déroulante qui fait référence au champ "Couleur" 4D. 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
+> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. Si vous voulez afficher le contenu de la hiérarchie, vous devez utiliser une [liste hiérarchique](#using-a-hierarchical-choice-list).
 
-To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
-> It is not possible to use this feature with an object or an array drop-down list. If you enter a field name in the "Variable or Expression" area, then you must use a choice list.
+Pour associer une liste déroulante avec un champ ou une variable, entrez le nom du champ ou de la variable directement comme champ [Variable ou Expression](properties_Object.md#variable-or-expression) de la liste déroulante de la Liste des Propriétés.
+> Il n'est pas possible d'utiliser cette fonctionnalité avec un objet ou une liste déroulante de tableaux. Si vous entrez un nom de champ dans la zone "Variable ou Expression", vous devez utiliser une énumération.
 
-When the form is executed, 4D automatically manages the drop-down list during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the drop-down list when the form is displayed:
+Lorsque le formulaire est exécuté, 4D gère automatiquement la liste déroulante lors de la saisie ou de l'affichage : lorsque l'utilisateur choisit une valeur, celle-ci est enregistrée dans le champ ; cette valeur de champ est affichée dans la liste déroulante lors de l'affichage du formulaire :
 
 ![](../assets/en/FormObjects/popupDropdown_choiceList.png)
 
-#### Selected item value or Selected item reference
+#### Valeur de l'élément sélectionné ou Référence de l'élément sélectionné
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. Cette option permet d'optimiser la taille des données stockées.
+Lorsque vous avez associé une liste déroulante avec une liste déroulante et avec un champ ou une variable, vous pouvez configurer la propriété [**Type de données**](properties_DataSource.md#data-type) sur **Valeur de l'élément sélectionné** ou **Référence de l'élément sélectionné**. Cette option permet d'optimiser la taille des données stockées.
 
-### Using a hierarchical choice list
+### Utiliser une énumération hiérarchique
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Here is an example of a hierarchical drop-down list:
+Une liste déroulante hiérarchique a une sous-liste associée à chaque élément de la liste. Voici un exemple de liste déroulante hiérarchique :
 
 ![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
-> In forms, hierarchical drop-down lists are limited to two levels.
+> Dans les formulaires, les listes déroulantes hiérarchiques sont limitées à deux niveaux.
 
-You can assign the hierarchical choice list to the drop-down list object using the [Choice List](properties_DataSource.md#choice-list) field of the Property List.
+Vous pouvez assigner l'énumération hiérarchique à l'objet liste déroulante en utilisant le champ [Enumération](properties_DataSource.md#choice-list) de la Liste des propriétés.
 
-You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
+Vous gérez les listes déroulantes hiérarchiques en utilisant les commandes **Listes hiérarchiques** du langage 4D. Toutes les commandes qui prennent en charge la syntaxe `(*; "name")` peuvent être utilisées avec les listes déroulantes hiérarchiques, comme [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
 
 ### Utiliser une action standard
 
-You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). This feature is supported in the following contexts:
+Vous pouvez créer automatiquement une liste déroulante à l'aide d'une [action standard](properties_Action.md#standard-action). Cette fonctionnalité est prise en charge dans les contextes suivants :
 
-* Use of the `gotoPage` standard action. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).
+* Utilisation de l'action standard `gotoPage`. Dans ce cas, 4D affichera automatiquement la [page du formulaire](FormEditor/forms.md#form-pages) qui correspond au numéro de l'élément sélectionné. Par exemple, si l’utilisateur clique sur le 3e élément, 4D affichera la page 3 du formulaire courant (si elle existe). Au moment de l'exécution, la liste déroulante affiche par défaut les numéros de page (1, 2...).
 
-* Use of a standard action that displays a sublist of items, for example `backgroundColor`. This feature requires that:
-  * a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
-  * the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list. At runtime the drop-down list will display an automatic list of values, e.g. background colors. You can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
+* Utilisation d'une action standard qui affiche une sous-liste d'éléments, par exemple `backgroundColor`. Cette fonctionnalité nécessite que :
+  * une zone de texte stylée ([zone 4D Write Pro](writeProArea_overview.md) ou [zone de saisie](input_overview.md) avec propriété [multistyle](properties_Text.md#multi-style) ) est présente dans le formulaire comme cible de l'action standard.
+  * la propriété [focusable](properties_Entry.md#focusable) n'est pas définie pour la liste déroulante. Lors de l'exécution, la liste déroulante affichera une liste automatique de valeurs, par exemple les couleurs d'arrière-plan. Vous pouvez remplacer cette liste automatique par une liste personnalisée en associant à l'objet une énumération dans laquelle chaque élément a lui-même été assigné à une action standard.
 
-> This feature cannot be used with a hierarchical drop-down list.
+> Cette fonctionnalité ne peut pas être utilisée avec une liste déroulante hiérarchique.
 
 ## Propriétés prises en charge
 

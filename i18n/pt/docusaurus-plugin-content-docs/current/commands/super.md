@@ -109,3 +109,10 @@ Parâmetros
 #### Veja também
 
 [**Página conceito para classes**](../Concepts/classes.md).
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1706                            |
+| Thread safe    | &amp;check; |

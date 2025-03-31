@@ -66,3 +66,10 @@ La función devuelve un [**objeto POP3 transporter**](../API/POP3TransporterClas
     ALERT("An error occurred receiving the mail: "+$status.statusText)
  End if
 ```
+
+#### Propiedades
+
+|                |                                                                 |
+| -------------- | --------------------------------------------------------------- |
+| Command number | 1697                                                            |
+| Thread safe    | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

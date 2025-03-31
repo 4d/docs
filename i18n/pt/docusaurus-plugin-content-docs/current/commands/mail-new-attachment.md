@@ -148,3 +148,10 @@ $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx
 
 $transporter.send($email)
 ```
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1644                            |
+| Thread safe    | &amp;check; |

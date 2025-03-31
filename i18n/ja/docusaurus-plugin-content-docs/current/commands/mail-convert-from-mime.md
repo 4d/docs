@@ -90,3 +90,10 @@ $status:=$transporter.send($email)
 
 \| mime | BLOB, Text | →  | MIME形式のEメール |
 \| Function result | Object | ← | Eメールオブジェクト |
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1681                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

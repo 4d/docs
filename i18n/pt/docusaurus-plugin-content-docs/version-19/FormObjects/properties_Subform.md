@@ -33,9 +33,9 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                                                                                                   |
-| ---------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | string        | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nome       | Tipo de dados | Valores possíveis                                                                                                                                              |
+| ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | string        | Nome (string) da tabela ou formulário projeto, um caminho POSIX (string) para um arquivo .json descrevendo o formulário, ou um objeto descrevendo o formulário |
 
 #### Objectos suportados
 
@@ -44,7 +44,7 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 ---
 ## Duplo clique numa linha vazia
 
-Action to perform in case of a double-click on an empty line of a list subform. As opções abaixo estão disponíveis:
+Ação a ser executada no caso de um clique duplo em uma linha vazia de um subformulário lista. As opções abaixo estão disponíveis:
 - Não fazer nada: Ignora o duplo clique.
 - Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
 
@@ -120,9 +120,9 @@ List subforms can be used for data entry in two ways: the user can enter data di
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                                                                                                                   |
-| -------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | string        | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nome     | Tipo de dados | Valores possíveis                                                                                                                                              |
+| -------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| listForm | string        | Nome (string) da tabela ou formulário projeto, um caminho POSIX (string) para um arquivo .json descrevendo o formulário, ou um objeto descrevendo o formulário |
 
 #### Objectos suportados
 

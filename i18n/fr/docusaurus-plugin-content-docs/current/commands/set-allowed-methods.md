@@ -15,8 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
-
 #### Description
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
@@ -59,3 +57,10 @@ This example authorizes all methods starting with “formula” and the “Total
 
 [EDIT FORMULA](../commands-legacy/edit-formula.md)\
 [GET ALLOWED METHODS](../commands-legacy/get-allowed-methods.md)
+
+#### Propriétés
+
+|                    |                                 |
+| ------------------ | ------------------------------- |
+| Numéro de commande | 805                             |
+| Thread safe        | &amp;cross; |

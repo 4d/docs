@@ -27,7 +27,7 @@ Function sayHello()->$welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
-Dans une méthode, créons une "Personne" :
+Dans une méthode, créons une "Person" :
 
 ```4d
 var $person : cs.Person //objet de classe Person
@@ -182,7 +182,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-There is no ending keyword for function code. There is no ending keyword for function code.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de la classe.
 
 :::
 
@@ -308,7 +308,7 @@ Class Constructor({$parameterName : type; ...})
 
 :::note
 
-There is no ending keyword for class constructor function code. There is no ending keyword for function code.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de la classe.
 
 :::
 
@@ -372,8 +372,8 @@ Le type de propriété peut être l'un des suivants :
 | `Collection`                             | Valeur collection                                              |
 | `Variant`                                | Valeur variant                                                 |
 | `Object`                                 | Objet de classe par défaut (4D.Object)                         |
-| `4D.<className>`                   | Object de la classe 4D className                               |
-| `cs.<className>`                   | Object de la classe utilisateur className                      |
+| `4D.<className>`                   | Objet de la classe 4D className                                |
+| `cs.<className>`                   | Objet de la classe utilisateur className                       |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>` |
 
 :::info

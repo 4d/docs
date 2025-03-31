@@ -10,7 +10,7 @@ Esta classe está disponível na loja de classes de `4D`.
 
 :::info Ver também
 
-For a comprehensive overview of this class, please refer to the [**CryptoKey: encrypt, decrypt, sign, and verify!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/) blog post.
+Para obter uma apresentação completa dessa classe, recomendamos que você leia a postagem do blog [**CryptoKey: criptografar, descriptografar, assinar e verificar!**](https://blog.4d.com/cryptokey-encrypt-decrypt-sign-and-verify/).
 
 :::
 
@@ -42,13 +42,13 @@ For a comprehensive overview of this class, please refer to the [**CryptoKey: en
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parâmetro  | Tipo         |    | Descrição                                         |
-| ---------- | ------------ | -- | ------------------------------------------------- |
-| settings   | Object       | -> | Settings to generate or load a key pair           |
-| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
+| Parâmetro  | Tipo         |    | Descrição                                          |
+| ---------- | ------------ | -- | -------------------------------------------------- |
+| settings   | Object       | -> | Parâmetros para gerar ou carregar um par de chaves |
+| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
 <!-- END REF -->
 
-The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um objeto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objeto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
 
 #### *settings*
 
@@ -62,7 +62,7 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 
 #### *CryptoKey*
 
-The returned `CryptoKey` object encapsulates an encryption key pair. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um objeto compartido, portanto, pode ser utilizado por vários processos 4D simultaneamente.
 
 #### Exemplo 1
 
@@ -91,18 +91,18 @@ Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 - O lado Alice:
 
 ```4d
-// Get message, public key & signature
+// Obter mensagem, chave pública e assinatura
 $message:=Folder(fk desktop folder).file("message.txt").getText()
 $publicKey:=Folder(fk desktop folder).file("public.pem").getText()
 $signature:=Folder(fk desktop folder).file("signature").getText()
 
-// Create a key
-$type:=New object("type";"PEM";"pem";$publicKey)
+// Criar uma chave
+$type:=New object("type"; "PEM"; "pem";$publicKey)
 $key:=4D.CryptoKey.new($type)
 
-// Verify signature
+// Verificar assinatura
 If ($key.verify($message;$signature;$type).success)
-// The signature is valid
+// A assinatura é válida
 
 End if
 ```
@@ -208,7 +208,7 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------- |
 | message    | Text   | -> | String de mensagens a codificar utilizando `options.encodingDecrypted` e encriptar |
 | options    | Object | -> | Opções de decodificação                                                            |
-| Resultados | Text   | <- | Message encrypted and encoded using the `options.encodingEncrypted`                |
+| Resultados | Text   | <- | Mensagem criptografada e codificada utilizando `options.encodingEncrypted`         |
 <!-- END REF -->
 
 A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta o parâmetro *mensagem* utilizando a chave **public**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.

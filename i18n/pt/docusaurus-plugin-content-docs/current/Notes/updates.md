@@ -155,7 +155,7 @@ Leia [**O que há de novo no 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d
 
 #### Mudanças de comportamento
 
-- Some errors were catchable by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: _Indice out of range_, _Type incompatible_, and _Dereferencing a Null pointer_. However, for such errors on Intel processors, the procedure is still interrupted as before, whereas on Apple Silicon processors the procedure is only interrupted if you call the [`ABORT`](https://doc.4d.com/4dv20/help/command/en/page156.html) command.
+- Alguns erros foram capturados pelo seu [método de tratamento de erros](../Concepts/error-handling.md) somente no modo interpretado. A fix has been done, so that the following errors will now be caught also in compiled mode: _Indice out of range_, _Type incompatible_, and _Dereferencing a Null pointer_. However, for such errors on Intel processors, the procedure is still interrupted as before, whereas on Apple Silicon processors the procedure is only interrupted if you call the [`ABORT`](https://doc.4d.com/4dv20/help/command/en/page156.html) command.
 - 4D não inclui mais um interpretador PHP interno. You need to [set up and run your own PHP interpreter](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) to use PHP commands.
 
 ## 4D 20 R2
@@ -191,7 +191,7 @@ Veja [**Notas de lançamento para 4D 20.x LTS**](../../versioned_docs/version-20
 | Biblioteca | Versão atual                           | Atualizado em 4D | Comentário                                                                                                                                |
 | ---------- | -------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | BoringSSL  | 0aa300b                                | 20 R6            | Usado para QUIC                                                                                                                           |
-| CEF        | 121                                    | 20 R5            | Chromium 6167                                                                                                                             |
+| CEF        | 131                                    | **20 R8**        | Chromium 6778                                                                                                                             |
 | Hunspell   | 7.3.27 | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                       |
 | ICU        | 73.2                   | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.               |
 | libldap    | 2.6.7  | 20 R6            |                                                                                                                                           |
@@ -199,9 +199,9 @@ Veja [**Notas de lançamento para 4D 20.x LTS**](../../versioned_docs/version-20
 | Libuv      | 1.48                   | 20 R6            | Usado para QUIC                                                                                                                           |
 | libZip     | 19.5                   | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                      |
 | LZMA       | 5.4.1  | 20               |                                                                                                                                           |
-| OpenSSL    | 3.3.2  | **20 R7**        | O nível de segurança TLS/SSL padrão foi atualizado. Veja [mudanças de comportamento](#behavior-changes) para versão 20 R4 |
+| OpenSSL    | 3.3.2  | 20 R7            | O nível de segurança TLS/SSL padrão foi atualizado. Veja [mudanças de comportamento](#behavior-changes) para versão 20 R4 |
 | PDFWriter  | 4.3                    | 20               | Dependência FreeType na 12.2.1                                                                            |
 | PHP        | 8.2.4  | 20               |                                                                                                                                           |
-| SpreadJS   | 17.1.0 | **20 R7**        | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para uma visão geral dos novos recursos                  |
+| SpreadJS   | 17.1.0 | 20 R7            | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para uma visão geral dos novos recursos                  |
 | webKit     | WKWebView                              | 19               |                                                                                                                                           |
 | Zlib       | 14.1.6 | 20               |                                                                                                                                           |

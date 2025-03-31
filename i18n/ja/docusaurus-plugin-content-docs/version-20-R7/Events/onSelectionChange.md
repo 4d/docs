@@ -18,9 +18,9 @@ title: On Selection Change
 | プロパティ         | 型       | 説明                    |
 | ------------- | ------- | --------------------- |
 | code          | longint | 31                    |
-| description   | text    | "On Selection Change" |
-| objectName    | text    | 4D View Pro エリア名      |
-| sheetName     | text    | イベントが発生したシート名         |
+| description   | テキスト    | "On Selection Change" |
+| objectName    | テキスト    | 4D View Pro エリア名      |
+| sheetName     | テキスト    | イベントが発生したシート名         |
 | oldSelections | object  | 変更前のセルレンジ             |
 | newSelections | object  | 変更後のセルレンジ             |
 

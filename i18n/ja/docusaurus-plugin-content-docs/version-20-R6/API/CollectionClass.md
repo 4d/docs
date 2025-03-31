@@ -159,10 +159,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 <!-- REF #_command_.New shared collection.Params -->
 
-| 引数    | 型                                                                   |                             | 説明          |
-| ----- | ------------------------------------------------------------------- | :-------------------------: | ----------- |
-| value | Number, Text, Date, Time, Boolean, Shared object, Shared collection |              ->             | 共有コレクションの値  |
-| 戻り値   | Collection                                                          | <- | 新規の共有コレクション |
+| 引数    | 型                                                     |                             | 説明          |
+| ----- | ----------------------------------------------------- | :-------------------------: | ----------- |
+| value | Number, Text, Date, Time, Boolean, Object, Collection |              ->             | 共有コレクションの値  |
+| 戻り値   | Collection                                            | <- | 新規の共有コレクション |
 
 <!-- END REF -->
 

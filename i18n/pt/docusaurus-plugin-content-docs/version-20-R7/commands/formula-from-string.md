@@ -65,3 +65,10 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 [Formula](formula.md)\
 [Parse formula](../commands-legacy/parse-formula.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1601                            |
+| Thread safe    | &amp;check; |

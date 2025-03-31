@@ -744,7 +744,7 @@
     "description": "The label for category System Environment in sidebar docs"
   },
   "sidebar.docs.category.Table": {
-    "message": "テーブル",
+    "message": "Table",
     "description": "The label for category Table in sidebar docs"
   },
   "sidebar.docs.category.Tools": {

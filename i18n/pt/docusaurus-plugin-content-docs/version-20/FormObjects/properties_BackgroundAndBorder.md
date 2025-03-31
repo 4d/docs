@@ -141,7 +141,7 @@ Você também pode definir essa propriedade usando o comando [`OBJECT SET RGB CO
 
 #### Objectos suportados
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Linha](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle)
 
 ---
 
@@ -157,7 +157,7 @@ Designa a espessura de uma linha.
 
 #### Objectos suportados
 
-[Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+[Linha](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle)
 
 ---
 
@@ -173,7 +173,7 @@ Por exemplo, dada uma caixa de listagem em que as linhas têm uma cor alternada 
 
 ```4d
  <>_BgndColors{$i}:=0x00FFD0B0 // laranja
- <>_BgndColors{$i}:=-255 // valor por defeito
+ <>_BgndColors{$i}:=-255 // valor por padrão
 ```
 
 ![](../assets/en/FormObjects/listbox_styles1.png)

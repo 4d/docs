@@ -17,8 +17,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
-
 <details><summary>履歴</summary>
 
 | リリース  | 内容                               |
@@ -193,3 +191,10 @@ var $result:=Compile project($options)
 #### 参照
 
 [BUILD APPLICATION](../commands-legacy/build-application.md)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1760                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

@@ -153,10 +153,10 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 
 <!-- REF #_command_.New shared collection.Params -->
-| Paramètres | Type                                                                |    | Description                                                |
-| ---------- | ------------------------------------------------------------------- |:--:| ---------------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée                        |
-| Résultat   | Collection                                                          | <- | La nouvelle collection partagée|<!-- END REF --> |
+| Paramètres | Type                                                  |    | Description                                                |
+| ---------- | ----------------------------------------------------- |:--:| ---------------------------------------------------------- |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection | -> | Valeur(s) de la collection partagée                        |
+| Résultat   | Collection                                            | <- | La nouvelle collection partagée|<!-- END REF --> |
 
 #### Description
 
@@ -992,7 +992,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 La fonction `.filter()` <!-- REF #collection.filter().Summary -->The `.filter()` function<!-- END REF -->. Cette fonction retourne une ***shallow copy*** (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Cette méthode reçoit un `Object` dans le premier paramètre ($1) et doit définir *$1.result* à **true** pour chaque élément remplissant la condition et donc, à pousser dans la nouvelle collection.
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1084,7 +1084,7 @@ Le code de ***TypeLookUp*** est :
 La fonction `find()` <!-- REF #collection.find().Summary -->renvoie la première valeur de la collection pour laquelle *methodName*, appliquée à chaque élément, renvoie **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Cette méthode reçoit un `Object` dans le premier paramètre ($1) et doit définir *$1.result* à **true** pour le premier élément remplissant la condition.
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1545,10 +1545,10 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 
 #### Description
 
-La fonction `.map()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionnellement, vous pouvez passer des paramètres à *methodName* via le paramètre *param*. `.map()` renvoie toujours une collection de la même taille que la collection originale, sauf si *$1.stop* a été utilisé (voir ci-dessous).
+La fonction `.map()` <!-- REF #collection.map().Summary -->crée une nouvelle collection basée sur le résultat de l'exécution de la méthode *methodName* sur chaque élément de la collection d'origine<!-- END REF -->. Optionnellement, vous pouvez passer des paramètres à *methodName* via le paramètre *param*. `.map()` renvoie toujours une collection de la même taille que la collection originale, sauf si *$1.stop* a été utilisé (voir ci-dessous).
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer n'importe quelle opération, avec ou sans paramètre(s).
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1733,7 +1733,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
  | ck ascending  | Integer | 0      | Les éléments sont triés par ordre croissant (défaut) |
  | ck descending | Integer | 1      | Les éléments sont triés par ordre décroissant        |
 
- This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
+ Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés avec un ordre interne).
 
 Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
@@ -2465,9 +2465,9 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 #### Description
 
-La fonction `some()` <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
+La fonction `some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Cette méthode reçoit un `Object` comme premier paramètre ($1) et doit définir *$1.result* à **True** pour chaque élément réussissant le test.
 
 *methodName* reçoit les paramètres suivants :
 
@@ -2540,7 +2540,7 @@ Avec la méthode *NumberGreaterThan0* suivante :
 
 #### Description
 
-La fonction `.sort()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
+La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments de la collection d'origine<!-- END REF --> et retourne aussi la collection triée.
 > Cette fonction modifie la collection d'origine.
 
 Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
@@ -2563,7 +2563,7 @@ Si vous souhaitez trier les éléments de la collection dans un autre ordre ou t
 
 *methodName* doit fixer le paramètre suivant :
 
-* *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
+* *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** sinon
 
 #### Exemple 1
 

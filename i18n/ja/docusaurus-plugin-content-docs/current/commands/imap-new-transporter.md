@@ -68,3 +68,10 @@ If(Not($status.success))
    ALERT("エラーが発生しました: "+$status.statusText)
 End if
 ```
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1723                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

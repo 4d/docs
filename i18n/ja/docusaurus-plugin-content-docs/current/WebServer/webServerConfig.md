@@ -173,21 +173,21 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 ## HTTPを有効化
 
-| 設定できる場所          | 名称                                                 | コメント    |
-| ---------------- | -------------------------------------------------- | ------- |
-| webServer オブジェクト | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean |
-| `WEB SET OPTION` | `Web HTTP enabled`                                 |         |
-| 設定ダイアログボックス      | [設定ページ / HTTPを有効化](../settings/web.md#httpを有効化)    |         |
+| 設定できる場所          | 名称                                                 | コメント |
+| ---------------- | -------------------------------------------------- | ---- |
+| webServer オブジェクト | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | ブール  |
+| `WEB SET OPTION` | `Web HTTP enabled`                                 |      |
+| 設定ダイアログボックス      | [設定ページ / HTTPを有効化](../settings/web.md#httpを有効化)    |      |
 
 安全でない接続を Webサーバーが受け入れるかどうかを示します。
 
 ## HTTPSを有効にする
 
-| 設定できる場所          | 名称                                                   | コメント    |
-| ---------------- | ---------------------------------------------------- | ------- |
-| webServer オブジェクト | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean |
-| `WEB SET OPTION` | `Web HTTPS enabled`                                  |         |
-| 設定ダイアログボックス      | 設定ページ / HTTPSを有効にする                                  |         |
+| 設定できる場所          | 名称                                                   | コメント |
+| ---------------- | ---------------------------------------------------- | ---- |
+| webServer オブジェクト | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | ブール  |
+| `WEB SET OPTION` | `Web HTTPS enabled`                                  |      |
+| 設定ダイアログボックス      | 設定ページ / HTTPSを有効にする                                  |      |
 
 Webサーバーがセキュアな接続を受け入れるか受け入れないかを指定します。 このオプションは [TLSプロトコル](Admin/tls.md) で説明しています。
 

@@ -15,8 +15,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-*このコマンドはスレッドセーフではないので、プリエンプティブなコードでは使用できません。*
-
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                           |
@@ -57,3 +55,10 @@ displayed_sidebar: docs
 
 [WEB Server list](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1674                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | 引数       | 型                                  |   | 説明                                            |
 | -------- | ---------------------------------- | - | --------------------------------------------- |
-| dsTable  | テーブル                               | → | エンティティセレクションの元となるカレントセレクションが属する 4Dデータベースのテーブル |
+| dsTable  | Table                              | → | エンティティセレクションの元となるカレントセレクションが属する 4Dデータベースのテーブル |
 | settings | Object                             | → | ビルドオプション: context             |
 | 戻り値      | 4D.EntitySelection | ← | 指定したテーブルに対応するデータクラスのエンティティセレクション              |
 
@@ -43,3 +43,10 @@ $employees:=Create entity selection([Employee])
 #### 参照
 
 [USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1512                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

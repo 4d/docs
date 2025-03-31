@@ -11,9 +11,9 @@ title: 入力
 
 #### JSON 文法
 
-| 名称         | データタイプ  | とりうる値       |
-| ---------- | ------- | ----------- |
-| spellcheck | boolean | true, false |
+| 名称         | データタイプ | とりうる値       |
+| ---------- | ------ | ----------- |
+| spellcheck | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -57,9 +57,9 @@ title: 入力
 
 #### JSON 文法
 
-| 名称        | データタイプ  | とりうる値       |
-| --------- | ------- | ----------- |
-| enterable | boolean | true, false |
+| 名称        | データタイプ | とりうる値       |
+| --------- | ------ | ----------- |
+| enterable | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -137,9 +137,9 @@ title: 入力
 
 #### JSON 文法
 
-| 名称        | データタイプ  | とりうる値       |
-| --------- | ------- | ----------- |
-| focusable | boolean | true, false |
+| 名称        | データタイプ | とりうる値       |
+| --------- | ------ | ----------- |
+| focusable | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -243,9 +243,9 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### JSON 文法
 
-| 名称            | データタイプ  | とりうる値       |
-| ------------- | ------- | ----------- |
-| showSelection | boolean | true, false |
+| 名称            | データタイプ | とりうる値       |
+| ------------- | ------ | ----------- |
+| showSelection | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -266,15 +266,15 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### JSON 文法
 
-| 名称              | データタイプ  | とりうる値                                              |
-| --------------- | ------- | -------------------------------------------------- |
-| shortcutAccel   | boolean | true, false (Windows: Ctrl/macOS: Command)         |
-| shortcutAlt     | boolean | true, false                                        |
-| shortcutCommand | boolean | true, false                                        |
-| shortcutControl | boolean | true, false (macOS: Control)                       |
-| shortcutShift   | boolean | true, false                                        |
-|                 |         |                                                    |
-| shortcutKey     | string  | <li>任意の文字キー: "a", "b"...</li><li>"[F1]" - "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| 名称              | データタイプ | とりうる値                                              |
+| --------------- | ------ | -------------------------------------------------- |
+| shortcutAccel   | ブール    | true, false (Windows: Ctrl/macOS: Command)         |
+| shortcutAlt     | ブール    | true, false                                        |
+| shortcutCommand | ブール    | true, false                                        |
+| shortcutControl | ブール    | true, false (macOS: Control)                       |
+| shortcutShift   | ブール    | true, false                                        |
+|                 |        |                                                    |
+| shortcutKey     | string | <li>任意の文字キー: "a", "b"...</li><li>"[F1]" - "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### 対象オブジェクト
 
@@ -292,9 +292,9 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### JSON 文法
 
-| 名称              | データタイプ  | とりうる値       |
-| --------------- | ------- | ----------- |
-| singleClickEdit | boolean | true, false |
+| 名称              | データタイプ | とりうる値       |
+| --------------- | ------ | ----------- |
+| singleClickEdit | ブール    | true, false |
 
 #### 対象オブジェクト
 

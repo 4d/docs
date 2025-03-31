@@ -39,9 +39,9 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### JSON 文法
 
-| 名称            | データタイプ  | とりうる値       |
-| ------------- | ------- | ----------- |
-| hideFocusRing | boolean | true, false |
+| 名称            | データタイプ | とりうる値       |
+| ------------- | ------ | ----------- |
+| hideFocusRing | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -61,9 +61,9 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### JSON 文法
 
-| 名称                  | データタイプ  | とりうる値       |
-| ------------------- | ------- | ----------- |
-| hideSystemHighlight | boolean | true, false |
+| 名称                  | データタイプ | とりうる値       |
+| ------------------- | ------ | ----------- |
+| hideSystemHighlight | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -89,7 +89,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 | 名称                  | データタイプ | とりうる値                            |
 | ------------------- | ------ | -------------------------------- |
-| scrollbarHorizontal | text   | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | テキスト   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 
@@ -361,7 +361,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 | 名称                | データタイプ | とりうる値                            |
 | ----------------- | ------ | -------------------------------- |
-| scrollbarVertical | text   | "visible", "hidden", "automatic" |
+| scrollbarVertical | テキスト   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 

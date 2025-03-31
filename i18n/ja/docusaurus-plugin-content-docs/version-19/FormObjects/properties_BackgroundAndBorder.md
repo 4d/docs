@@ -71,7 +71,7 @@ title: 背景色と境界線
 
 | 名称          | データタイプ | とりうる値                                                             |
 | ----------- | ------ | ----------------------------------------------------------------- |
-| borderStyle | text   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | テキスト   | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### 対象オブジェクト
 
@@ -107,9 +107,9 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称                 | データタイプ  | とりうる値       |
-| ------------------ | ------- | ----------- |
-| hideExtraBlankRows | boolean | true, false |
+| 名称                 | データタイプ | とりうる値       |
+| ------------------ | ------ | ----------- |
+| hideExtraBlankRows | ブール    | true, false |
 
 #### 対象オブジェクト
 
@@ -207,7 +207,7 @@ title: 背景色と境界線
 
 | 名称   | データタイプ | とりうる値         |
 | ---- | ------ | ------------- |
-| fill | text   | "transparent" |
+| fill | テキスト   | "transparent" |
 
 #### 対象オブジェクト
 

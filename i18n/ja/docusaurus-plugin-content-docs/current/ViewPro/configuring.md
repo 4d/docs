@@ -39,13 +39,13 @@ title: 4D View Pro エリアの設定
 
 | タブ       | アクション           | リボン型インターフェース | ツールバー型インターフェース |
 | -------- | --------------- | :----------: | :------------: |
-| File     | ファイル操作          |       ○      |                |
-| ホーム      | テキストの書式など       |       ○      |        ○       |
-| 挿入       | アイテムの追加         |       ○      |        ○       |
-| フォーミュラ   | フォーミュラの計算とライブラリ |       ○      |        ○       |
-| データ      | データ操作           |       ○      |        ○       |
-| 表示       | 表示の設定           |       ○      |        ○       |
-| Settings | スプレッドシートの設定     |       ○      |                |
+| File     | ファイル操作          |       X      |                |
+| ホーム      | テキストの書式など       |       X      |        X       |
+| 挿入       | アイテムの追加         |       X      |        X       |
+| フォーミュラ   | フォーミュラの計算とライブラリ |       X      |        X       |
+| データ      | データ操作           |       X      |        X       |
+| 表示       | 表示の設定           |       X      |        X       |
+| Settings | スプレッドシートの設定     |       X      |                |
 
 ## フォームイベント
 
@@ -76,16 +76,16 @@ title: 4D View Pro エリアの設定
 
 | プロパティ                |                        | 型       | 説明                                                                                                                                                                                                                                                                                                    |
 | -------------------- | ---------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| allowCellOverflow    |                        | boolean | セルに収まらないデータを隣の空のセルにはみ出し表示するかどうかを指定します                                                                                                                                                                                                                                                                 |
+| allowCellOverflow    |                        | ブール     | セルに収まらないデータを隣の空のセルにはみ出し表示するかどうかを指定します                                                                                                                                                                                                                                                                 |
 | sheetTabColor        |                        | string  | シートタブの色を指定するカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                               |
 | frozenlineColor      |                        | string  | 固定化された線の色を指定するカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                             |
 | clipBoardOptions     |                        | longint | クリップボードオプション。 利用可能な値: `vk clipboard paste options all`, `vk clipboard paste options formatting`, `vk clipboard paste options formulas`, `vk clipboard paste options formulas and formatting`, `vk clipboard paste options values`, `vk clipboard paste options values and formatting` |
 | gridline             |                        | object  | 枠線のオプション                                                                                                                                                                                                                                                                                              |
 |                      | color                  | string  | 枠線の色を表すカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")                                                                                                                                                                                    |
-|                      | showVerticalGridline   | boolean | 垂直の枠線を表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
-|                      | showHorizontalGridline | boolean | 水平の枠線を表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
-| rowHeaderVisible     |                        | boolean | 行ヘッダーを表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
-| colHeaderVisible     |                        | boolean | 列ヘッダーを表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
+|                      | showVerticalGridline   | ブール     | 垂直の枠線を表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
+|                      | showHorizontalGridline | ブール     | 水平の枠線を表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
+| rowHeaderVisible     |                        | ブール     | 行ヘッダーを表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
+| colHeaderVisible     |                        | ブール     | 列ヘッダーを表示するかどうかを指定します。                                                                                                                                                                                                                                                                                 |
 | rowHeaderAutoText    |                        | longint | 行ヘッダーが文字を表示するか、数字を表示するか、あるいは空かを指定します。 利用可能な値: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                                               |
 | colHeaderAutoText    |                        | longint | 列ヘッダーが文字を表示するか、数字を表示するか、あるいは空かを指定します。 利用可能な値: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                                               |
 | selectionBackColor   |                        | string  | シートにおける選択範囲の背景色。 (RGBAフォーマット推奨)                                                                                                                                                                                                                                                    |
@@ -100,23 +100,23 @@ title: 4D View Pro エリアの設定
 
 シート全体をロック (保護) するには、_isProtected_ プロパティを **true** に設定するだけです。 その上で、[locked](#レイアウト) セルスタイルプロパティを個別に設定することで、特定のセルをロック解除することができます。
 
-| プロパティ             |                          | 型       | 説明                                                                        |
-| ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------- |
-| isProtected       |                          | boolean | シート上で保護状態とされているセルが編集可能かどうかを指定します。                                         |
-| protectionOptions |                          | object  | ユーザーにより編集可能な要素を指定します。 null の場合、protectionOptions パラメーターはリセットされます。         |
-|                   | allowSelectLockedCells   | boolean | ロックされたセルをユーザーが選択できるかどうかを指定します (任意)。 デフォルトは true。       |
-|                   | allowSelectUnlockedCells | boolean | ロック解除されたセルをユーザーが選択できるかどうかを指定します (任意)。 デフォルトは true。     |
-|                   | allowSort                | boolean | ユーザーによるレンジの並べ替えが可能かどうかを指定します (任意)。 デフォルトは false。       |
-|                   | allowFilter              | boolean | ユーザーによるレンジのフィルタリングが可能かどうかを指定します (任意)。 デフォルトは false。    |
-|                   | allowEditObjects         | boolean | フローティングオブジェクトをユーザーが編集できるかどうかを指定します (任意)。 デフォルトは false。 |
-|                   | allowResizeRows          | boolean | ユーザーが行をリサイズできるかどうかを指定します (任意)。 デフォルトは false。           |
-|                   | allowResizeColumns       | boolean | ユーザーが列をリサイズできるかどうかを指定します (任意)。 デフォルトは false。           |
-|                   | allowDragInsertRows      | boolean | ユーザーがドラッグ操作で行を挿入できるかどうかを指定します (任意)。 デフォルトは false。      |
-|                   | allowDragInsertColumns   | boolean | ユーザーがドラッグ操作で列を挿入できるかどうかを指定します (任意)。 デフォルトは false。      |
-|                   | allowInsertRows          | boolean | ユーザーが行を挿入できるかどうかを指定します (任意)。 デフォルトは false。             |
-|                   | allowInsertColumns       | boolean | ユーザーが列を挿入できるかどうかを指定します (任意)。 デフォルトは false。             |
-|                   | allowDeleteRows          | boolean | ユーザーが行を削除できるかどうかを指定します (任意)。 デフォルトは false。             |
-|                   | allowDeleteColumns       | boolean | ユーザーが列を削除できるかどうかを指定します (任意)。 デフォルトは false。             |
+| プロパティ             |                          | 型      | 説明                                                                        |
+| ----------------- | ------------------------ | ------ | ------------------------------------------------------------------------- |
+| isProtected       |                          | ブール    | シート上で保護状態とされているセルが編集可能かどうかを指定します。                                         |
+| protectionOptions |                          | object | ユーザーにより編集可能な要素を指定します。 null の場合、protectionOptions パラメーターはリセットされます。         |
+|                   | allowSelectLockedCells   | ブール    | ロックされたセルをユーザーが選択できるかどうかを指定します (任意)。 デフォルトは true。       |
+|                   | allowSelectUnlockedCells | ブール    | ロック解除されたセルをユーザーが選択できるかどうかを指定します (任意)。 デフォルトは true。     |
+|                   | allowSort                | ブール    | ユーザーによるレンジの並べ替えが可能かどうかを指定します (任意)。 デフォルトは false。       |
+|                   | allowFilter              | ブール    | ユーザーによるレンジのフィルタリングが可能かどうかを指定します (任意)。 デフォルトは false。    |
+|                   | allowEditObjects         | ブール    | フローティングオブジェクトをユーザーが編集できるかどうかを指定します (任意)。 デフォルトは false。 |
+|                   | allowResizeRows          | ブール    | ユーザーが行をリサイズできるかどうかを指定します (任意)。 デフォルトは false。           |
+|                   | allowResizeColumns       | ブール    | ユーザーが列をリサイズできるかどうかを指定します (任意)。 デフォルトは false。           |
+|                   | allowDragInsertRows      | ブール    | ユーザーがドラッグ操作で行を挿入できるかどうかを指定します (任意)。 デフォルトは false。      |
+|                   | allowDragInsertColumns   | ブール    | ユーザーがドラッグ操作で列を挿入できるかどうかを指定します (任意)。 デフォルトは false。      |
+|                   | allowInsertRows          | ブール    | ユーザーが行を挿入できるかどうかを指定します (任意)。 デフォルトは false。             |
+|                   | allowInsertColumns       | ブール    | ユーザーが列を挿入できるかどうかを指定します (任意)。 デフォルトは false。             |
+|                   | allowDeleteRows          | ブール    | ユーザーが行を削除できるかどうかを指定します (任意)。 デフォルトは false。             |
+|                   | allowDeleteColumns       | ブール    | ユーザーが列を削除できるかどうかを指定します (任意)。 デフォルトは false。             |
 
 > いずれのプロパティも任意です。
 
@@ -334,13 +334,13 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 | プロパティ           | 型       | 説明                                                                                                                                                                                                      |
 | --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean | 白黒で印刷します。 <p>デフォルト値 = false</p><p>**注**: PDF はこの属性に影響されません。 PDF のカラーはそのままです。</p>                                                                                                        |
+| blackAndWhite   | ブール     | 白黒で印刷します。 <p>デフォルト値 = false</p><p>**注**: PDF はこの属性に影響されません。 PDF のカラーはそのままです。</p>                                                                                                        |
 | centering       | longint | 印刷ページ上でコンテンツをどのように中央揃えするかを指定します。 とりうる値: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (デフォルト), `vk print centering vertical` |
 | firstPageNumber | longint | 最初のページに印刷するページ番号。デフォルト値 = 1                                                                                                                                                                             |
 | pageOrder       | longint | ページの印刷順。 とりうる値: `vk print page order auto` (デフォルト), `vk print page order down then over`, `vk print page order over then down`.                      |
 | pageRange       | text    | 印刷されるページの範囲                                                                                                                                                                                             |
 | qualityFactor   | longint | 印刷の品質指定 (1 - 8)。  高ければ印刷の質は高くなりますが、印刷のパフォーマンスに影響する可能性があります。<p>デフォルト値 = 2</p>                                                                                                         |
-| useMax          | boolean | データのあるカラムと行のみが印刷されます。<p>デフォルト値 = true</p>                                                                                                                                                               |
+| useMax          | ブール     | データのあるカラムと行のみが印刷されます。<p>デフォルト値 = true</p>                                                                                                                                                               |
 | zoomFactor      | Real    | 印刷ページの拡大/縮小率。<p>デフォルト値 = 1</p>                                                                                                                                                                          |
 
 ### 用紙サイズ
@@ -370,8 +370,8 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 | プロパティ          | 型       | 説明                                                            |
 | -------------- | ------- | ------------------------------------------------------------- |
-| bestFitColumns | boolean | 印刷時、カラムの幅はテキストの最大幅に合うように調整されます。 デフォルト値 = false                |
-| bestFitRows    | boolean | 印刷時、行の高さはテキストの最大高さに合うように調整されます。 デフォルト値 = false                |
+| bestFitColumns | ブール     | 印刷時、カラムの幅はテキストの最大幅に合うように調整されます。 デフォルト値 = false                |
+| bestFitRows    | ブール     | 印刷時、行の高さはテキストの最大高さに合うように調整されます。 デフォルト値 = false                |
 | fitPagesTall   | longint | 最適化印刷時、チェックする垂直方向 (縦向き) のページ数。 デフォルト値 = -1 |
 | fitPagesWide   | longint | 最適化印刷時、チェックする水平方向 (横向き) のページ数。 デフォルト値 = -1 |
 
@@ -381,9 +381,9 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 | プロパティ            | 型       | 説明                                                                                                                                                                                     |
 | ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean | 外枠の境界線を印刷します。デフォルト値 = true                                                                                                                                                             |
+| showBorder       | ブール     | 外枠の境界線を印刷します。デフォルト値 = true                                                                                                                                                             |
 | showColumnHeader | longint | カラムヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (デフォルト), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean | 枠線を印刷します。 デフォルト値 = false                                                                                                                                                               |
+| showGridLine     | ブール     | 枠線を印刷します。 デフォルト値 = false                                                                                                                                                               |
 | showRowHeader    | longint | 行ヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (デフォルト), `vk print visibility show`, `vk print visibility show once`   |
 
 ### ウォーターマーク
@@ -453,7 +453,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 | --------------- | ---------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | font            |            | text    | フォントの特徴を CSS の fontショートハンドで指定します ("font-style font-variant font-weight font-size/line-height font-family")。 例: "14pt Century Gothic"。 フォントサイズ (font-size) とフォントファミリー (font-family) の値は必須です。 その他の値が省略された場合には、そのデフォルト値が使用されます。 注: フォント名にスペースが含まれる場合、その名前は引用符 ("") で括られる必要があります。 | CSS fontショートハンド。 4D ではフォントの特徴をオブジェクトとして管理するためのユーティリティコマンドを提供しています: [`VP Font to object`](commands/vp-font-to-object.md) および [`VP Object to font`](commands/vp-object-to-font.md)        |
 | formatter       |            | text    | 値や日時に対するパターン                                                                                                                                                                                                                                                                                                                                                                              | 数値/テキスト/日付/時間フォーマット、特殊文字など。 [セルフォーマット](#セルフォーマット) 参照。                                                                                                                                                   |
-| isVerticalText  |            | boolean | テキストの向きを指定します。                                                                                                                                                                                                                                                                                                                                                                            | true = 縦方向のテキスト, false = 横方向のテキスト                                                                                                                                                                       |
+| isVerticalText  |            | ブール     | テキストの向きを指定します。                                                                                                                                                                                                                                                                                                                                                                            | true = 縦方向のテキスト, false = 横方向のテキスト                                                                                                                                                                       |
 | labelOptions    |            | object  | セルラベルのオプションを定義します (ウォーターマークオプション)                                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                         |
 |                 | alignment  | longint | セルラベルの位置を指定します。 任意プロパティです。                                                                                                                                                                                                                                                                                                                                                                | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right` |
 |                 | visibility | longint | セルラベルの表示状態を指定します。 任意プロパティです。                                                                                                                                                                                                                                                                                                                                                              | `vk label visibility auto`, `vk label visibility hidden`, `vk label visibility visible`                                                                                                                 |
@@ -463,7 +463,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 | textIndent      |            | longint | テキストのインデントを定義します。 1 = 8ピクセル                                                                                                                                                                                                                                                                                                                                                               |                                                                                                                                                                                                         |
 | textOrientation |            | longint | セル内のテキストの回転角度を定義します。 -90 から 90 の数値                                                                                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                                         |
 | watermark       |            | text    | ウォーターマーク (セルラベル) のコンテンツを定義します。                                                                                                                                                                                                                                                                                                                                         |                                                                                                                                                                                                         |
-| wordWrap        |            | boolean | テキストを折り返すかどうかを指定します。                                                                                                                                                                                                                                                                                                                                                                      | true = テキストを折り返す、false = テキストを折り返さない                                                                                                                                                                    |
+| wordWrap        |            | ブール     | テキストを折り返すかどうかを指定します。                                                                                                                                                                                                                                                                                                                                                                      | true = テキストを折り返す、false = テキストを折り返さない                                                                                                                                                                    |
 
 #### レイアウト
 
@@ -471,9 +471,9 @@ VP SET DEFAULT STYLE("myDoc";$style)
 | ----------- | ------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | cellPadding | text    | セルのパッディングを定義します                                                       |                                                                                                                      |
 | hAlign      | longint | セルコンテンツの水平方向の揃え方を定義します                                                | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
-| locked      | boolean | セルの保護状態を指定します。 ただし、[シートの保護](#シートの保護) が有効化されている場合にのみ利用可能である点に注意してください。 | true = ロックされている、false = ロック解除                                                                                        |
-| shrinkToFit | boolean | セルのコンテンツが縮小されるかどうかを指定します。                                             | true = コンテンツ縮小、false = 縮小なし                                                                                          |
-| tabStop     | boolean | Tabキーを使用してセルにフォーカスできるかどうかを指定します。                                      | true = Tabキーでフォーカス可、false = Tabキーでフォーカス不可                                                                            |
+| locked      | ブール     | セルの保護状態を指定します。 ただし、[シートの保護](#シートの保護) が有効化されている場合にのみ利用可能である点に注意してください。 | true = ロックされている、false = ロック解除                                                                                        |
+| shrinkToFit | ブール     | セルのコンテンツが縮小されるかどうかを指定します。                                             | true = コンテンツ縮小、false = 縮小なし                                                                                          |
+| tabStop     | ブール     | Tabキーを使用してセルにフォーカスできるかどうかを指定します。                                      | true = Tabキーでフォーカス可、false = Tabキーでフォーカス不可                                                                            |
 | vAlign      | longint | セルコンテンツの垂直方向の揃え方を定義します                                                | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
 
 #### スタイル情報

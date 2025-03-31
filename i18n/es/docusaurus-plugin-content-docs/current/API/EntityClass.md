@@ -100,7 +100,7 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en la memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->.
 
-This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+Esta función permite actualizar las entidades por separado. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
 
 > Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save()`](#save).
 

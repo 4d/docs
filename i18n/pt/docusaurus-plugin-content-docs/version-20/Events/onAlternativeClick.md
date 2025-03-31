@@ -5,7 +5,7 @@ title: On Alternative Click
 
 | Code | Pode ser chamado por                                                                                                                                           | Definição                                          |
 | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 38   | [Botão](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Botões: A área da "seta" de um botão é clicada</li><li>Listas de caixas: Em uma coluna de um array de objetos, um botão de elipses (atributo "alternateButton") é clicado</li> |
+| 38   | [Botão](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Botões: a área da "seta" de um botão é clicada</li><li>List boxes: em uma coluna de um array de objetos, um botão de elipses (atributo "alternateButton") é clicado</li> |
 
 ## Descrição
 

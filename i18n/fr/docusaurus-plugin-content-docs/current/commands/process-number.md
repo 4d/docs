@@ -39,3 +39,10 @@ If the command is executed with the \* parameter from a process on the server ma
 [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
 [Process state](../commands-legacy/process-state.md)\
 [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
+
+#### Propriétés
+
+|                    |                                                                 |
+| ------------------ | --------------------------------------------------------------- |
+| Numéro de commande | 372                                                             |
+| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

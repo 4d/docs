@@ -54,3 +54,10 @@ Webサーバオブジェクトの [.name](../API/WebServerClass.md#name) プロ�
 
 [WEB Server](web-server.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
+
+#### プロパティ
+
+|         |                                                                 |
+| ------- | --------------------------------------------------------------- |
+| コマンド番号  | 1716                                                            |
+| スレッドセーフ | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |

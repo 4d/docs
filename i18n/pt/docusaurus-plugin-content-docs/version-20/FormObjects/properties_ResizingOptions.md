@@ -93,7 +93,7 @@ Estão disponíveis três opções:
 
 ## Pusher
 
-When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
+Quando um objeto splitter tem essa propriedade, os outros objetos à sua direita (splitter vertical) ou abaixo dele (splitter horizontal) são empurrados ao mesmo tempo que o divisor, sem parada.
 
 Here is the result of a “pusher” splitter being moved: ![](../assets/en/FormObjects/splitter_pusher1.png)
 

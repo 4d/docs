@@ -134,3 +134,10 @@ You want to get information on your current 4D Server license:
 [CHANGE LICENSES](../commands-legacy/change-licenses.md)\
 [Is license available](../commands-legacy/is-license-available.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)
+
+#### Propriedades
+
+|                |                                 |
+| -------------- | ------------------------------- |
+| Command number | 1489                            |
+| Thread safe    | &amp;check; |
