@@ -148,6 +148,8 @@ Descrição:** Constante obsoleto (mantido apenas para compatibilidade). Agora n
 
 ### 4D Server log recording (28)
 
+**Thread-safe** : Yes
+
 **Alcance**: 4D Server, 4D remoto*
 
 * Se conserva entre duas **sessões**: não
@@ -183,6 +185,8 @@ O funcionamento deste seletor é idêntico ao do seletor 29; entretanto, aplica 
 
 
 ### Debug log recording (34)
+
+**Thread-safe** : Yes
 
 **Alcance**: Aplicação 4D
 
@@ -554,6 +558,8 @@ Direct2D Software (3) (modo pré-determinado): a partir de Windows 7, utilize o 
 
 ### Diagnostic log recording (79)
 
+**Thread-safe** : Yes
+
 **Alcance**: Aplicação 4D
 
 **Se conserva entre duas sessões**: Não
@@ -624,6 +630,8 @@ Este funcionamento pode ser uma fonte de erros se deseja enviar valores de data 
 
 ### Diagnostic log level (86)
 
+**Thread-safe** : Yes
+
 **Alcance**: Aplicação 4D
 
 **Se conserva entre duas sessões**: Não
@@ -670,6 +678,8 @@ Deverá reiniciar a aplicação para que este parâmetro seja levado em conta. N
 
 ### Circular log limitation (90)
 
+**Thread-safe** : Yes
+
 **Alcance**: 4D local, 4D Server.
 
 **É conservado entre duas sessões**: não
@@ -705,6 +715,9 @@ Deverá reiniciar a aplicação para que este parâmetro seja levado em conta. N
 
 
 ### Cache flush periodicity (95)
+
+**Thread-safe** : Yes
+
 
 **Alcance**: 4D local, 4D Server
 
@@ -814,6 +827,8 @@ Em versões anteriores, valores de tempo eram convertidos e armazenados como nú
 
 ### SMTP Log (110)
 
+**Thread-safe** : Yes
+
 **Escopo**: 4D local, 4D Server*
 
 * **Mantido entre sessões**: Não
@@ -886,6 +901,8 @@ Para saber mais sobre este formato e o uso de arquivo *4DDebugLog*, veja *Descri
 
 ### POP3 Log (116)
 
+**Thread-safe** : Yes
+
 **Alcance:** 4D local, 4D Server
 
 **Se conserva entre duas sessões**: não
@@ -910,6 +927,8 @@ Para mais informação sobre os arquivos 4DPOP3Log\_X.txt, consulte a seção *D
 
 ### IMAP Log (119)
 
+**Thread-safe** : Yes
+
 **Alcance**: 4D local, 4D Server
 
 **Mantido entre sessões**: Não
@@ -932,6 +951,8 @@ Para mais informação sobre os arquivos 4DPOP3Log\_X.txt, consulte a seção *D
 
 ### Pause logging (121)
 
+**Thread-safe** : Yes
+
 **Escopo**: aplicação 4D
 
 **Mantido entre duas sessões**: Não
@@ -948,16 +969,17 @@ Esse seletor permite suspender/retomar todas as operações de histórico inicia
 
 O comando **Get database parameter** pode ser usado em processos preemptivos ao chamar os seletores abaixo:
 
-* 4D Server log recording
-* Debug log recording
-* Diagnostic log recording
-* Diagnostic log level
-* Circular log limitation
-* Cache flush periodicity
-* SMTP Log
-* POP3 Log
-* IMAP Log
-* Pause logging
+* [4D Server log recording](#4d-server-log-recording-28)
+* [Debug log recording](#debug-log-recording-34)
+* [Diagnostic log recording](#diagnostic-log-recording-79)
+* [Diagnostic log level](#diagnostic-log-level-86)
+* [Circular log limitation](#circular-log-limitation-90)
+* [Cache flush periodicity](#cache-flush-periodicity-95)
+* [SMTP Log](#smtp-log-110)
+* [POP3 Log](#pop3-log-116)
+* [IMAP Log](#imap-log-119)
+* [Pause logging](#pause-logging-121)
+
 
 ## Exemplo 
 

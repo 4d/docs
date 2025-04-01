@@ -131,6 +131,8 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 ### 4D Server log recording (28)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D Server, 4D remote*
 
 * **Kept between two sessions**: No
@@ -173,9 +175,11 @@ By default, this unique number is set by 4D and corresponds to the order of reco
 
 ### Debug log recording (34)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D application
 
-Kept between two **sessions**: No
+**Kept between two sessions**: No
 
 **Description**: Starts or stops the sequential recording of events occurring at the 4D programming level in the *4DDebugLog\[\_n\].txt* file or *4DDebugLogServer\[\_n\].txt* (where \_n is the segment number of the file and *Server* is added to the file name when generated on the server). Two modes are available:
 
@@ -227,9 +231,9 @@ For any type of interpreted or compiled 4D application (4D all modes, 4D Server,
 
 **Scope**:Database 
 
- **Kept between two** **sessions**: Yes
+**Kept between two** **sessions**: Yes
 
- **Possible values**: 0 to 65535
+**Possible values**: 0 to 65535
 
 **Description**: TCP port number where the 4D Server publishes the database (bound for 4D remote machines). By default, the value is 19813\. 
 
@@ -245,7 +249,7 @@ When you modify this value, it is necessary to restart the server machine in ord
 
 **Scope**:4D local, 4D Server
 
- Kept between two **sessions**: Yes
+**Kept between two sessions**: Yes
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
 
@@ -255,9 +259,9 @@ When you modify this value, it is necessary to restart the server machine in ord
 
 **Scope**:All 4D remote machines
 
- **Kept between two** **sessions**: Yes
+**Kept between two** **sessions**: Yes
 
- **Possible values**: 0 to 65535
+**Possible values**: 0 to 65535
 
 **Description**: TCP port number used by the Web servers of the client machines for secure connections via SSL (HTTPS protocol). By default, the value is 443 (standard value).
 
@@ -271,9 +275,9 @@ This selector operates exactly the same way as selector 39; however, it applies 
 
 **Scope**:Database
 
- **Kept between two** **sessions**: Yes
+**Kept between two** **sessions**: Yes
 
- **Possible values**: 0 (deactivation) or 1 (activation)
+**Possible values**: 0 (deactivation) or 1 (activation)
 
 **Description**: Activation or deactivation of the SQL auto-commit mode. By default, the value is 0 (deactivated mode)
 
@@ -285,7 +289,7 @@ This selector operates exactly the same way as selector 39; however, it applies 
 
 **Scope**: Database
 
-Kept between two **sessions**: Yes
+**Kept between two sessions**: Yes
 
 **Possible values**: 0 (case not taken into account) or 1 (case-sensitive)
 
@@ -301,7 +305,7 @@ By default, the value is 1 (case-sensitive): the SQL engine differentiates betwe
 
 **Scope**: Remote 4D machine 
 
-Kept between two **sessions**: No
+**Kept between two sessions**: No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, attached to file name). 
 
@@ -317,9 +321,9 @@ These text files store various information concerning each request in a simple t
 
 **Scope**: Current table and process
 
- **Kept between two sessions**: No
+**Kept between two sessions**: No
 
- **Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
+**Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
 
 **Description**: Execution location of [QUERY BY FORMULA](query-by-formula.md) and [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) commands for the *table* passed in the parameter. 
 
@@ -339,9 +343,9 @@ Refer to example 2.
 
 **Scope**:Current table and process
 
- **Kept between two** **sessions**: No
+**Kept between two** **sessions**: No
 
- **Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
+**Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
 
 **Description** : Execution location of [ORDER BY FORMULA](order-by-formula.md) command for the table passed in the parameter. 
 
@@ -355,9 +359,9 @@ When using a database in client-server mode, this command can be executed either
 
 **Scope**:4D remote machine
 
- **Kept between two** **sessions**: No
+**Kept between two** **sessions**: No
 
- **Possible values**: 0 (no synchronization), 1 (auto synchronization) or 2 (ask).
+**Possible values**: 0 (no synchronization), 1 (auto synchronization) or 2 (ask).
 
 **Description**: Dynamic synchronization mode for *Resources* folder of 4D client machine that executed the command with that of the server. 
 
@@ -373,9 +377,9 @@ Three synchronization modes are then possible on the client side. The Auto Synch
 
 **Scope**:Current process
 
- **Kept between two** **sessions**: No
+**Kept between two** **sessions**: No
 
- **Possible values**: 0 (use database configuration), 1 (always use automatic relations) or 2 (use SQL joins if possible).
+**Possible values**: 0 (use database configuration), 1 (always use automatic relations) or 2 (use SQL joins if possible).
 
 **Description**: Operating mode of the [QUERY BY FORMULA](query-by-formula.md) and [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) commands relating to the use of "SQL joins."
 
@@ -391,7 +395,7 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 **Scope**:4D application
 
- Kept between two **sessions**: No
+**Kept between two sessions**: No
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
 
@@ -401,7 +405,7 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 **Scope**:4D application
 
- **Kept between two** **sessions**: No
+**Kept between two** **sessions**: No
 
 **Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
 
@@ -411,9 +415,9 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 **Scope**: 4D Server
 
- Kept between two **sessions**: No
+**Kept between two sessions**: No
 
- **Possible values**: Positive longint.
+**Possible values**: Positive longint.
 
 **Description**: Size of the stack allocated to each preemptive system process on the server, expressed in bytes. The default size is determined by the system.
 
@@ -429,7 +433,7 @@ In order to be taken into account, this parameter must be executed on the server
 
 **Scope**:4D application unless value is negative
 
-**Kept between two** **sessions**: No
+**Kept between two sessions**: No
 
 **Possible values**: Whole value expressing a duration in seconds. The value can be positive (new connections) or negative (existing connections). By default, the value is 20.
 
@@ -447,7 +451,7 @@ This parameter must be set on the client side. Usually, you do not need to chang
 
 **Scope**:4D application
 
- Kept between two   **sessions**: No
+**Kept between two sessions**: No
 
 **Values**: Formatted string of the IPv4 type (for example "127.0.0.1") or IPv6 type (for example "2001:0db8:0000:0000:0000:ff00:0042:8329")
 
@@ -461,7 +465,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope**:4D application
 
- **Kept between two** **sessions**: No
+**Kept between two sessions**: No
 
 **Values**: Positive long integer type value. By default, the value is 8002\. 
 
@@ -473,7 +477,7 @@ For more information about the PHP interpreter, please refer to the *Design Refe
 
 **Scope**: 4D application
 
-Kept between two **sessions**: No
+**Kept between two sessions**: No
 
 **Possible values**: Sequence of strings separated by colons.
 
@@ -547,9 +551,11 @@ For example, if you execute:
 
 ### Diagnostic log recording (79)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D application
 
-Kept between two **sessions**: No
+**Kept between two sessions**: No
 
 Possible values: 0 or 1 (0 = do not record, 1 = record)
 
@@ -565,9 +571,9 @@ Note that you can include custom information in this file using the [LOG EVENT](
 
 **Scope**: 4D application
 
-Kept between two **sessions**: No
+**Kept between two sessions**: No
 
-Possible values: String containing a list of 4D command numbers to record (separated by semi-colons) or "all" to record all the commands or "" (empty string) to record none of them or prefixed by "-" to exclude specific commands. 
+**Possible values**: String containing a list of 4D command numbers to record (separated by semi-colons) or "all" to record all the commands or "" (empty string) to record none of them or prefixed by "-" to exclude specific commands. 
 
 **Description**: List of 4D commands to record in or exclude from the debugging file (see selector 34, Debug Log Recording). By default, all 4D commands are recorded.
 
@@ -591,9 +597,9 @@ This selector restricts the quantity of information saved in the debugging file 
 
 ### Dates inside objects (85)
 
-Scope: Current process
+**Scope:** Current process
 
- Kept between two **sessions**: No
+**Kept between two sessions**: No
 
  **Possible values**: String type without time zone (0), String type with time zone (1), Date type (2) (default)
 
@@ -606,6 +612,8 @@ Passing String type with time zone in this selector will convert 4D dates into I
 
 
 ### Diagnostic log level (86)
+
+**Thread-safe** : Yes
 
 **Scope:** 4D application 
 
@@ -649,6 +657,8 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 ### Circular log limitation (90)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D local, 4D Server.
 
 **Kept between two sessions**: No
@@ -677,13 +687,16 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 **Scope**: all 4D machines*
 
-* **Kept between two sessions**: No
+**Kept between two sessions**: No
 
 **Description**: Returns the version number of the OpenSSL library in use on the machine. (Read only)
 
 
 
 ### Cache flush periodicity (95)
+
+**Thread-safe** : Yes
+
 
 **Scope**: 4D local, 4D Server
 
@@ -781,11 +794,11 @@ When used with [SET DATABASE PARAMETER](set-database-parameter.md), defines a ne
 
 ### Times inside objects (109)
 
-Scope: 4D local, 4D Server (all processes)
+**Scope:** 4D local, 4D Server (all processes)
 
- Kept between two **sessions**: No
+**Kept between two sessions**: No
 
- **Possible values**: Times in seconds (0) (default), Times in milliseconds (1) 
+**Possible values**: Times in seconds (0) (default), Times in milliseconds (1) 
 
 **Description**: Defines the way time values are converted and stored within object properties and collection elements, as well as how they will be imported/exported in JSON and in Web areas. By default, starting with 4D v17, times are converted and stored as number of seconds in objects. 
 
@@ -797,11 +810,13 @@ In previous releases, time values were converted and stored as number of millise
 
 ### SMTP Log (110)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D local, 4D Server*
 
-* **Kept between two sessions**: No
+**Kept between two sessions**: No
 
- **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, added to the file name). By default, the value is 0 (SMTP exchanges not recorded).
+**Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, added to the file name). By default, the value is 0 (SMTP exchanges not recorded).
 
 **Description**: Starts or stops the recording of exchanges between 4D and the SMTP server, when a *transporter* object is processed through *transporter.send( )* or *SMTP\_transporter.checkConnection( )*. By default, the value is 0 (exchanges not recorded). When this mechanism is enabled, a log file is created in the Logs folder of the database. It is named 4DSMTPLog\_X.txt, where *X* is the sequential number of the log. Once the file 4DSMTPLog has reached a size of 10 MB, it is closed and a new one is generated, with an incremented sequential number. If a file of the same name already exists, it is replaced directly. You can set the starting number of the sequence using the *value* parameter. By default, all files are kept, but you can control the number of files to keep using the Circular log limitation parameter. 
 
@@ -865,6 +880,8 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 ### POP3 Log (116)
 
+**Thread-safe** : Yes
+
 **Scope:** 4D local, 4D Server
 
 **Kept between two sessions:** No
@@ -889,6 +906,8 @@ For more information on the 4DPOP3Log\_X.txt files, please refer to the *Descrip
 
 ### IMAP Log (119)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D local, 4D Server
 
 **Kept between two sessions**: No
@@ -912,6 +931,8 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 
 ### Pause logging (121)
+
+**Thread-safe** : Yes
 
 **Scope**: 4D application
 
@@ -957,16 +978,16 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 The **SET DATABASE PARAMETER** command can be used in preemptive processes when calling the following selectors:
 
-* 4D Server log recording
-* Debug log recording
-* Diagnostic log recording
-* Diagnostic log level
-* Circular log limitation
-* Cache flush periodicity
-* SMTP Log
-* POP3 Log
-* IMAP Log
-* Pause logging
+* [4D Server log recording](#4d-server-log-recording-28)
+* [Debug log recording](#debug-log-recording-34)
+* [Diagnostic log recording](#diagnostic-log-recording-79)
+* [Diagnostic log level](#diagnostic-log-level-86)
+* [Circular log limitation](#circular-log-limitation-90)
+* [Cache flush periodicity](#cache-flush-periodicity-95)
+* [SMTP Log](#smtp-log-110)
+* [POP3 Log](#pop3-log-116)
+* [IMAP Log](#imap-log-119)
+* [Pause logging](#pause-logging-121)
 
 ## Example 1 
 

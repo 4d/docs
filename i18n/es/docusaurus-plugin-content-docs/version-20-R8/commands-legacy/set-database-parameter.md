@@ -145,6 +145,8 @@ Se conserva entre dos **sesiones**: sí
 
 ### 4D Server log recording (28)
 
+**Thread-safe** : Yes
+
 **Alcance**: 4D Server, 4D remoto*
 
 * Se conserva entre dos **sesiones**: no
@@ -192,6 +194,8 @@ Por defecto, este número único es definido por 4D y corresponde al orden de cr
 
 
 ### Debug log recording (34)
+
+**Thread-safe** : Yes
 
 **Alcance**: Aplicación 4D
 
@@ -573,6 +577,8 @@ Por ejemplo, si ejecuta:
 
 ### Diagnostic log recording (79)
 
+**Thread-safe** : Yes
+
 **Alcance**: Aplicación 4D
 
 **Se conserva entre dos sesiones**: No
@@ -633,6 +639,8 @@ Si pasa String type with time zone en este selector, convertirá las fechas 4D e
 
 ### Diagnostic log level (86)
 
+**Thread-safe** : Yes
+
 **Alcance**: Aplicación 4D
 
 **Se conserva entre dos sesiones**: No
@@ -679,6 +687,8 @@ Deberá reiniciar la aplicación para que este parámetro sea tenido en cuenta. 
 
 ### Circular log limitation (90)
 
+**Thread-safe** : Yes
+
 **Alcance**: 4D local, 4D Server.
 
 **Se conserva entre dos sesiones:** no
@@ -714,6 +724,9 @@ Deberá reiniciar la aplicación para que este parámetro sea tenido en cuenta. 
 
 
 ### Cache flush periodicity (95)
+
+**Thread-safe** : Yes
+
 
 **Alcance**: 4D local, 4D Server
 
@@ -833,6 +846,8 @@ En versiones anteriores, los valores de tiempo se convertían y almacenaban como
 
 ### SMTP Log (110)
 
+**Thread-safe** : Yes
+
 **Alcance**: 4D local, 4D Server*
 
 * **Se conserva entre dos sesiones**: No
@@ -897,6 +912,8 @@ Para obtener más información sobre los archivos 4DSMTPLog\_X.txt, consulte la 
 
 ### POP3 Log (116)
 
+**Thread-safe** : Yes
+
 **Alcance:** 4D local, 4D Server
 
 **Se conserva entre dos sesiones**: no
@@ -920,6 +937,8 @@ Para más información sobre los archivos 4DPOP3Log\_X.txt, consulte la sección
 
 
 ### IMAP Log (119)
+
+**Thread-safe** : Yes
 
 **Alcance**: 4D local, 4D Server
 
@@ -945,6 +964,8 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 
 ### Pause logging (121)
 
+**Thread-safe** : Yes
+
 **Alcance**: aplicación 4D
 
 **Se mantiene entre dos sesiones**: no
@@ -966,16 +987,17 @@ Si no se mantiene una configuración constante entre sesiones, pero desea asegur
 
 El comando **SET DATABASE PARAMETER** puede utilizarse en procesos apropiativos al llamar a los siguientes selectores:
 
-* 4D Server log recording
-* Debug log recording
-* Diagnostic log recording
-* Diagnostic log level
-* Circular log limitation
-* Cache flush periodicity
-* SMTP Log
-* POP3 Log
-* IMAP Log
-* Pause logging
+* [4D Server log recording](#4d-server-log-recording-28)
+* [Debug log recording](#debug-log-recording-34)
+* [Diagnostic log recording](#diagnostic-log-recording-79)
+* [Diagnostic log level](#diagnostic-log-level-86)
+* [Circular log limitation](#circular-log-limitation-90)
+* [Cache flush periodicity](#cache-flush-periodicity-95)
+* [SMTP Log](#smtp-log-110)
+* [POP3 Log](#pop3-log-116)
+* [IMAP Log](#imap-log-119)
+* [Pause logging](#pause-logging-121)
+
 
 ## Ejemplo 1 
 

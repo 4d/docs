@@ -124,6 +124,8 @@ Port IDセレクタは、コンパイルして4D Desktopを組み込んだ4D Web
 
 ### 4D Server log recording (28)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D Server, 4D リモート
 
 **2セッション間で設定を保持**: No**
@@ -169,6 +171,8 @@ Port IDセレクタは、コンパイルして4D Desktopを組み込んだ4D Web
 
 
 ### Debug log recording (34)
+
+**Thread-safe** : Yes
 
 **スコープ**: 4Dアプリケーション 2セッション間で設定を保持: No**
 
@@ -540,6 +544,8 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 ### Diagnostic log recording (79)
 
+**Thread-safe** : Yes
+
 **スコープ**: 4Dアプリケーション
 
 2セッション間で設定を保持: No
@@ -600,6 +606,8 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 ### Diagnostic log level (86)
 
+**Thread-safe** : Yes
+
 **スコープ:** 4D アプリケーション**
 
 ** **異なるセッション間で設定を保持:** No**
@@ -644,6 +652,8 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 ### Circular log limitation (90)
 
+**Thread-safe** : Yes
+
 **スコープ**: 4Dローカル、4D Server **異なるセッション間で値を保持**: No**
 
 取りうる値**: 任意の整数値、0 = 全てのログを保持**
@@ -677,6 +687,9 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 
 ### Cache flush periodicity (95)
+
+**Thread-safe** : Yes
+
 
 **スコープ**: 4Dローカル、4D Server
 
@@ -788,6 +801,8 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 ### SMTP Log (110)
 
+**Thread-safe** : Yes
+
 **スコープ**: 4D ローカル、4D Server
 
 **異なるセッション間で値を保持**: しない**
@@ -856,6 +871,8 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 ### POP3 Log (116)
 
+**Thread-safe** : Yes
+
 **スコープ:** 4D ローカル、4D Server
 
 **2セッション間で設定を保持:** No
@@ -879,6 +896,8 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 
 ### IMAP Log (119)
+
+**Thread-safe** : Yes
 
 **スコープ**: 4D ローカル、4D Server
 
@@ -904,6 +923,8 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 ### Pause logging (121)
 
+**Thread-safe** : Yes
+
 **スコープ**: 4D アプリケーション**
 
 異なるセッション間で値を設定を保持**: No**
@@ -920,16 +941,17 @@ PHPインタプリタに関する詳細は*Design Reference*マニュアルを�
 
 **Get database parameter** コマンドは、以下のセレクターを使用する場合にはプリエンプティブプロセスで使用することができます:
 
-* 4D Server log recording
-* Debug log recording
-* Diagnostic log recording
-* Diagnostic log level
-* Circular log limitation
-* Cache flush periodicity
-* SMTP Log
-* POP3 Log
-* IMAP Log
-* Pause logging
+* [4D Server log recording](#4d-server-log-recording-28)
+* [Debug log recording](#debug-log-recording-34)
+* [Diagnostic log recording](#diagnostic-log-recording-79)
+* [Diagnostic log level](#diagnostic-log-level-86)
+* [Circular log limitation](#circular-log-limitation-90)
+* [Cache flush periodicity](#cache-flush-periodicity-95)
+* [SMTP Log](#smtp-log-110)
+* [POP3 Log](#pop3-log-116)
+* [IMAP Log](#imap-log-119)
+* [Pause logging](#pause-logging-121)
+
 
 ## 例題 
 
