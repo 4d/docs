@@ -501,7 +501,7 @@ Lorsque la méthode, la classe ou la fonction est validée, 4D vérifie les él�
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> Si vous cliquez sur un caractère englobant dans le code, 4D indique sa correspondance avec des rectangles gris par défaut. Vous pouvez modifier la façon dont 4D indique la correspondance des caractères englobants ou désactiver cette fonction dans **Préférences** > **Méthodes** > **Options** > **Correspondance [](){}**.
+> Si vous cliquez sur un caractère englobant dans le code, 4D indique sa correspondance avec des rectangles gris par défaut. Vous pouvez modifier la façon dont 4D indique la correspondance des caractères englobants ou désactiver cette fonction dans **Préférences** > **Méthodes** > **Options** > **Correspondance `[](){}`**.
 
 L'éditeur de code ne peut vérifier que les erreurs de syntaxe évidentes (fautes d'orthographe, etc.). Il ne vérifie pas les erreurs qui ne se produisent que pendant l'exécution. Les erreurs d'exécution sont détectées par 4D lorsque le code est exécuté.
 
