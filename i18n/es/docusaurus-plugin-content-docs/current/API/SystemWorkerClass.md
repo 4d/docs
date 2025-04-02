@@ -548,10 +548,10 @@ Esta propiedad es de **solo lectura**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Parámetros | Tipo                            |                             | Descripción                  |
-| ---------- | ------------------------------- | :-------------------------: | ---------------------------- |
-| timeout    | Real                            |              ->             | Maximum wait time in seconds |
-| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker          |
+| Parámetros | Tipo                            |                             | Descripción                         |
+| ---------- | ------------------------------- | :-------------------------: | ----------------------------------- |
+| timeout    | Real                            |              ->             | Tiempo máximo de espera en segundos |
+| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker                 |
 
 <!-- END REF -->
 
