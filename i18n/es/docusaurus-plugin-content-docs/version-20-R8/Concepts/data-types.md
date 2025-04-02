@@ -31,6 +31,13 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 (2) Variant no es en realidad un tipo *data* sino un tipo *variable* que puede contener un valor de cualquier otro tipo de datos.
 
+## Comandos
+
+You can always know the type of a field or variable using the following commands:
+
+- [`Type`](../commands-legacy/type.md) for fields and scalar variables
+- [`Value type`](../commands-legacy/value-type.md) for expressions
+
 ## Valores por defecto
 
 Cuando las [variables](variables.md) o los [parámetros](parameters.md) se tipifican mediante una [declaración explícita](variables.md#declaring-variables), reciben un valor por defecto, que mantendrán durante la sesión mientras no hayan sido asignados.
