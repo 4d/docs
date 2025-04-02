@@ -51,7 +51,7 @@ Vous pouvez passer un objet 4D.File, 4D.Folder, ou une structure Zip en tant que
 
 Dans le paramètre *destinationFile*, passez un objet `4D.File` décrivant l'archive ZIP à créer (nom, emplacement, etc.). Il est conseillé d'utiliser l'extension ".zip" si vous souhaitez que l'archive ZIP soit traitée automatiquement par un logiciel.
 
-Once an archive is created, you can use the [ZIP Read archive](zip-read-archive.md) command to access it.
+Une fois que l'archive est créée, vous pouvez utiliser la commande [ZIP Read archive](zip-read-archive.md) pour y accéder.
 
 **Status object**
 

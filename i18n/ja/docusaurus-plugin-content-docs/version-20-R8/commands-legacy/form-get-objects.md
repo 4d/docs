@@ -5,7 +5,7 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* {; *variablesArray* {; *pagesArray*}} {; formPageOption | *} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* {; *variablesArray* {; *pagesArray*}} {; *formPageOption*} )<br/>**FORM GET OBJECTS** ( *objectsArray* {; *variablesArray* {; *pagesArray*}} {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( manyTable | Field {; *choiceField*} )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* {; *choiceField*} )<br/>**RELATE ONE** ( *field* {; *choiceField*} )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

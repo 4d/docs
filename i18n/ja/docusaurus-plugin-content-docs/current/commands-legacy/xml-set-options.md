@@ -5,7 +5,7 @@ slug: /commands/xml-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( elementRef | document  ; *selector* ; *value* {; *selector2* ; *value2* ; ... ; *selectorN* ; *valueN*} )<!-- END REF-->
+<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( *elementRef*  ; *selector* ; *value* {; *selector2* ; *value2* ; ... ; *selectorN* ; *valueN*} )<br/>**XML SET OPTIONS** ( *document*  ; *selector* ; *value* {; *selector2* ; *value2* ; ... ; *selectorN* ; *valueN*} )<!-- END REF-->
 <!--REF #_command_.XML SET OPTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -1,21 +1,53 @@
 ---
 id: licenses
-title: 4D ライセンスの管理
+title: ライセンスリスト
 ---
 
-ディスクへのインストール終了後、4D 製品を利用するためにはアクティベーションをおこないます。 [4D アカウントでサインイン](GettingStarted/Installation.md) した場合、アクティベーションは自動的におこなわれます。
+## 4D Licenses Overview
+
+To use 4D products and features, you need to install appropriate licenses on your computer. 4D provides two categories of licenses:
+
+- **Development licenses**, required for working with 4D and 4D Server IDE.
+- **Deployment licenses**, required for deploying your custom applications built with 4D.
+
+### Development licenses
+
+Development licenses are required to access the 4D Design environment and features. For example, *4D Developer Pro* is a single-user development license. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
+
+### Deployment licenses
+
+Deployment licenses can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+
+| 運用ライセンス                  | 説明                                              | 入力する場所                                                                                                                                              |
+| ------------------------ | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*         | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog                                                                    |
+| *4D Unlimited Desktop*   | **販売終了** - 埋め込まれたカスタムのライセンス                     | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Desktop*             | ユーザーごとのライセンスで、スタンドアロンの4D アプリケーションを使用するのに必要です。   | [First activation](#first-activation) dialog box on the user's machine                                                                              |
+| *4D Server OEM*          | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses         | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Server*              | 各ユーザーごとに必要なライセンスで、4D Server とクライアントを使用するのに必要です。 | [First activation](#first-activation) dialog box on the user's machine                                                                              |
+
+### Expiration
+
+Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard.
+
+In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box.
+
+## Activating licenses
+
+ディスクへのインストール終了後、4D 製品を利用するためにはアクティベーションをおこないます。 Usually, **the activation is automatic** when you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
 
 しかし、場合によってはライセンスを手動でアクティベーションする必要があります。たとえば:
 
 - 自動アクティベーションが可能でない場合
-- 追加のライセンスを購入した場合
+- you have purchased additional development licenses.
 
 以下の利用モードの場合には、アクティベーションは必要はありません:
 
 - リモートモードで利用される 4D (4D Serverへの接続)
 - インタープリターモードのアプリケーションプロジェクトを開く場合で、デザインモードへはアクセスしないローカルモードの4D
 
-## 初回のアクティベーション
+### 初回のアクティベーション
 
 4D でおこなう場合は、**ヘルプ** メニューから **ライセンスマネージャー...** を選択します。 4D Server でおこなう場合は、4D Server アプリケーションを起動します。 アクティベーションモードを選択するダイアログボックスが表示されます。
 
@@ -68,9 +100,14 @@ title: 4D ライセンスの管理
 
 このモードは、特別に一時的な4Dのアクティベーションをおこなうために使用します。このアクティベーションを行うと、4Dインターネットサイトに接続せずに、最大5日間4Dを利用できます。 このアクティベーションは一回のみ使用することができます。
 
-## ライセンスの追加
+## Refresh
 
-アプリケーションの拡張ライセンスは、いつでも追加することができます。
+Licenses are usually automatically updated at startup of your 4D application.
+
+**更新** ボタンは、以下のような場合に使用します:
+
+- 追加のエクスパンションを購入したとき、またはそれをアクティベートしたいとき。
+- When you need to update an expired number (Partners or evolutions).
 
 4D または 4D Server アプリケーションの **ヘルプ** メニューから **ライセンスマネージャー...** を選択し、**更新** ボタンをクリックしてください:
 
@@ -80,11 +117,6 @@ title: 4D ライセンスの管理
 
 - 4D Server に追加のエクスパンションを購入した場合、ライセンス番号は一切入力する必要がありません。**更新** ボタンをクリックすれば、すべて完了します。
 - 4D Server の初回アクティベーション時のみ、サーバーのライセンス番号を入力すれば、購入した他のエクスパンションもすべて自動的に有効化されます。
-
-**更新** ボタンは、以下のような場合に使用します:
-
-- 追加のエクスパンションを購入したとき、またはそれをアクティベートしたいとき。
-- パートナーなどの失効した有限ライセンスを更新するとき。
 
 ## 4D オンラインストア
 

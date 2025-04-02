@@ -5,7 +5,7 @@ slug: /commands/table-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table name.Syntax-->**Table name** ( numTabela|pontTabela ) : Text<!-- END REF-->
+<!--REF #_command_.Table name.Syntax-->**Table name** ( *numTabela* ) : Text<br/>**Table name** ( *pontTabela* ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

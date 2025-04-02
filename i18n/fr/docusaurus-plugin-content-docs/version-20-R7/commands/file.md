@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the [`4D.File`](../API/FileClass.md) type<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `File` <!-- REF #_command_.File.Summary -->crée et retourne un nouvel objet de type [`4D.File`](../API/FileClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
 
 **File ( path { ; pathType } { ; \* })**
 

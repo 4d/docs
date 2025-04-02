@@ -61,7 +61,7 @@ For more information, please refer to the *Page subforms* section.
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: **Form** returns the object associated with the table form displayed on screen.\
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
-| **Propiedad** | **Type** | **Description**                           |
+| **Propiedad** | **Tipo** | **Description**                           |
 | ------------- | -------- | ----------------------------------------- |
 | parentForm    | object   | **Form** object of the parent output form |
 
@@ -117,9 +117,9 @@ If values are edited and the OK button is clicked, the field is updated (the par
 
 ## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1466                                                                |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1466                        |
+| Hilo seguro       | &cross; |
 
 

@@ -16,19 +16,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.MAIL New attachment.Params-->
 
-| Parâmetro   | Tipo                               |                                       | Descrição                                                                                         |
-| ----------- | ---------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Parâmetro   | Tipo                               |                                       | Descrição                                                                                         |
-| ***         | ***                                | :---: | ***                                                                                               |
-| file        | 4D. File           | &#8594;           | Parâmetros                                                                                        |
-| zipFile     | 4D. ZipFile        | &#8594;           | Arquivo zip                                                                                       |
-| blob        | 4D. Blob           | &#8594;           | Blob contendo o anexo                                                                             |
-| path        | Text                               | &#8594;           | Pode passar uma rota ou um Blob para definir o anexo.                             |
-| name        | Text                               | &#8594;           | Nome + extensão usado pelo cliente email para designar o anexo                                    |
-| cid         | Text                               | &#8594;           | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |
-| type        | Text                               | &#8594;           | Valor do cabeçalho content-type                                                                   |
-| disposition | Text                               | &#8594;           | Valor do cabeçalho content-disposition: "inline" ou "attachment". |
-| Resultados  | 4D. MailAttachment | &#8592;           | Objeto anexo                                                                                      |
+| Parâmetro   | Tipo                               |                             | Descrição                                                                                         |
+| ----------- | ---------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
+| file        | 4D. File           | &#8594; | Parâmetros                                                                                        |
+| zipFile     | 4D. ZipFile        | &#8594; | Arquivo zip                                                                                       |
+| blob        | 4D. Blob           | &#8594; | Blob contendo o anexo                                                                             |
+| path        | Text                               | &#8594; | Pode passar uma rota ou um Blob para definir o anexo.                             |
+| name        | Text                               | &#8594; | Nome + extensão usado pelo cliente email para designar o anexo                                    |
+| cid         | Text                               | &#8594; | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |
+| type        | Text                               | &#8594; | Valor do cabeçalho content-type                                                                   |
+| disposition | Text                               | &#8594; | Valor do cabeçalho content-disposition: "inline" ou "attachment". |
+| Resultados  | 4D. MailAttachment | &#8592; | Objeto anexo                                                                                      |
 
 <!-- END REF-->
 
@@ -151,9 +149,9 @@ $transporter.send($email)
 
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1644                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1644                        |
+| Thread safe    | &check; |
 
 

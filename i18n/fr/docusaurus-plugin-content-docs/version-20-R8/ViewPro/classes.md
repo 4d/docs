@@ -149,7 +149,7 @@ La propriété `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDown
 
 **.backColor** : Text<!-- END REF -->
 
-The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->.
+La propriété `.backColor` est la <!-- REF #TableStyle.backColor.Summary -->[couleur de fond](configuring.md#background--foreground) de la table<!-- END REF -->.
 
 ### .forecolor
 
@@ -157,7 +157,7 @@ The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[back
 
 **.forecolor** : Text<!-- END REF -->
 
-The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
+La propriété `.forecolor` est la <!-- REF #TableStyle.forecolor.Summary -->[couleur de premier plan](configuring.md#background--foreground) de la table<!-- END REF -->.
 
 ### .police
 
@@ -165,7 +165,7 @@ The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[fore
 
 **.font** : Text<!-- END REF -->
 
-The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->.
+La propriété `.font` est le <!-- REF #TableStyle.font.Summary -->nom de la police (voir [**Polices et texte**](configuring.md#fonts-and-text)) de la table<!-- END REF -->.
 
 ### .textDecoration
 
@@ -173,7 +173,7 @@ The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see 
 
 **.textDecoration** : Integer<!-- END REF -->
 
-The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md#fonts-and-text))<!-- END REF -->.
+La propriété `.textDecoration` est la <!-- REF #TableStyle.textDecoration.Summary -->décoration du texte de la table (voir [**Polices et texte**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 ### .borderLeft
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Last update log path.Summary-->**Get last update log path**コマンドは、呼び出されたマシン内の最近のアップデートログファイルへの完全なパスを返します。<!-- END REF-->
+<!--REF #_command_.Get last update log path.Summary-->**Get last update log path**コマンドは、呼び出されたマシン内の最近のアップデートログファイルへの完全なパスを返します。<!-- END REF-->
 
 アップデートログは自動アップデートプロセスの際に4Dによって生成されます。ログには実行されたアップデートについての情報のほか、起きたエラーの情報も記録されます。
 

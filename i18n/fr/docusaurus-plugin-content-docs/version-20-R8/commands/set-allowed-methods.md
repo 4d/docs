@@ -60,9 +60,9 @@ This example authorizes all methods starting with “formula” and the “Total
 
 ## Propriétés
 
-|                    |                                 |
-| ------------------ | ------------------------------- |
-| Numéro de commande | 805                             |
-| Thread safe        | &amp;cross; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 805                         |
+| Thread safe        | &cross; |
 
 

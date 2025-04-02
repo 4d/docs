@@ -61,13 +61,13 @@ This method modifies the value of a "settings" property stored in the storage ob
 ## Voir également
 
 [Process activity](process-activity.md)\
-[Session](session.md)
+[Session](./session.md)
 
 ## Propriétés
 
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1839                        |
-| Thread safe        | &cross; |
+| Thread safe        | &check; |
 
 

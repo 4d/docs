@@ -1,6 +1,7 @@
 ---
-id: Language
+id: Language_theme
 title: Language
+slug: /commands/theme/Language
 ---
 
 

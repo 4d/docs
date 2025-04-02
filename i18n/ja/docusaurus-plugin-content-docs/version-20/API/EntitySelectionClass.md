@@ -1135,7 +1135,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
+
 ## .getRemoteContextAttributes()
 
 <details><summary>履歴</summary>

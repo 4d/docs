@@ -241,7 +241,7 @@ $emp:=ds.Employee.get(2) // プライマリーキーが 2 の Employee エンテ
 
 - [データクラス](API/DataClassClass.md#query) または [既存のエンティティセレクション](API/EntitySelectionClass.md#query) のエンティティに対してクエリを実行する;
 - [`.all()`](API/DataClassClass.md#all) DataClassクラス関数を使用して、データクラス内の全エンティティを選択する;
-- Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+- [`Create entity selection`](../commands/create-entity-selection.md) コマンドあるいは [`.newSelection()`](API/DataClassClass.md#newselection) DataClassクラス関数を使用して空のエンティティコレクションオブジェクトを作成する;
 - [`.copy()`](API/EntitySelectionClass.md#copy) EntitySelectionクラス関数を使用して、既存のエンティティセレクションを複製する;
 - [EntitySelectionクラス](API/EntitySelectionClass.md) の様々な関数の中から、[`.or()`](API/EntitySelectionClass.md#or) のように新しいエンティティセレクションを返すものを使用する;
 - "リレートエンティティズ" 型のリレーション属性を使用する (以下参照)
@@ -451,7 +451,7 @@ ORDAでは、あらゆるデータクラスにおいて、エンティティへ�
 
 ### 制限フィルターの定義
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass) of the dataclass. すると、フィルターは自動的に有効になります。
+データクラスのフィルターを作成するには、データクラスの [**DataClass クラス**](dsMapping.md#dataclass) 内に `event restrict` 関数を定義します。 すると、フィルターは自動的に有効になります。
 
 ### `Function event restrict`
 

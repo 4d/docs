@@ -277,7 +277,6 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>履歴</summary>
@@ -383,7 +382,6 @@ user / password / timeout / tls を指定してリモートデータストアに
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>履歴</summary>
@@ -465,7 +463,6 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>履歴</summary>
@@ -611,7 +608,7 @@ $info:=$ds.getAllRemoteContexts()
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>履歴</summary>
@@ -735,7 +732,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>履歴</summary>
@@ -927,7 +924,7 @@ When this function is not called, new entity selections can be shareable, depend
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>履歴</summary>
@@ -1276,7 +1273,7 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>履歴</summary>

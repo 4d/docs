@@ -1,6 +1,7 @@
 ---
-id: Web_Services_Client
+id: Web_Services_Client_theme
 title: Web Services (Client)
+slug: /commands/theme/Web-Services-Client
 ---
 
 

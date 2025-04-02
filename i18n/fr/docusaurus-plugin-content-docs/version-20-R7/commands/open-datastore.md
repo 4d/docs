@@ -39,7 +39,7 @@ Les datastores distants suivants sont pris en charge par la commande :
 
 :::note
 
-Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion sur un 4D Server distant. Refer to the [user login mode section](../REST/authUsers.md#force-login-mode) to know how to configure the authentication depending on the selected current user login mode.
+Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion sur un 4D Server distant. Référez-vous à la section [User login mode](../REST/authUsers.md#force-login-mode) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
 
 :::
 

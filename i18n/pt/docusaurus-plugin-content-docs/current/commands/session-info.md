@@ -30,18 +30,18 @@ The `Session info` command <!-- REF #_command_.Session info.Summary -->returns a
 
 O objeto retornado contém as propriedades abaixo:
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                               |
-| ---------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                 |
-| userName         | Text          | Nome de usuário 4D (o mesmo valor de [`Session.userName`](../API/SessionClass.md#username))                                                                                                          |
-| machineName      | Text          | Sessões remotas: nome da máquina remota. Stored procedures session: name of the server machine. Standalone session: name of the machine |
-| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                                                                                    |
-| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                                                                                           |
-| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                        |
-| creationDateTime | Date ISO 8601 | Date and time of session creation. Standalone session: date and time of application startup                                                                                             |
-| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                        |
-| ID               | Text          | UUID da sessão (o mesmo valor de [`Session.id`](../API/SessionClass.md#id))                                                                                                                          |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                          |
+| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Session type: "remote", "storedProcedure", "standalone"                                                                                                                                                            |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor de [`Session.userName`](../API/SessionClass.md#username))                                                                                                                     |
+| machineName      | Text          | Sessões remotas: nome da máquina remota. Sessão de procedimentos armazenados: nome da máquina do servidor. Standalone session: name of the machine |
+| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                                                                                               |
+| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                                                                                                      |
+| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                                   |
+| creationDateTime | Date ISO 8601 | Data e hora de criação da sessão. Standalone session: date and time of application startup                                                                                                         |
+| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                                   |
+| ID               | Text          | UUID da sessão (o mesmo valor de [`Session.id`](../API/SessionClass.md#id))                                                                                                                                     |
+| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                           |
 
 :::note
 
@@ -84,3 +84,10 @@ Here is an example of output object:
 [Session](session.md)
 [Session storage](session-storage.md)\
 [Process info](process-info.md)
+
+## Propriedades
+
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1844                        |
+| Thread safe    | &check; |

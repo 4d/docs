@@ -12,9 +12,9 @@ Le mot-clé **cs** est décrit dans la [**Page de concepts pour les classes**](.
 
 ## Propriétés
 
-|                    |                                                                 |
-| ------------------ | --------------------------------------------------------------- |
-| Numéro de commande | 1710                                                            |
-| Thread safe        | &amp;amp;amp;amp;amp;amp;amp;amp;amp;check; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1710                        |
+| Thread safe        | &check; |
 
 

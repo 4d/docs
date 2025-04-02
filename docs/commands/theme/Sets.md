@@ -1,6 +1,7 @@
 ---
-id: Sets
+id: Sets_theme
 title: Sets
+slug: /commands/theme/Sets
 ---
 
 

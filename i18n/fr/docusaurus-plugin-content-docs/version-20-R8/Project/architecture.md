@@ -124,7 +124,7 @@ Le dossier Trash contient des méthodes et des formulaires qui ont été supprim
 - `Formulaires`
 - `TableForms`
 
-Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources-folder) folder.
+Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". L'organisation du dossier est identique à celle du dossier [Sources](#sources-folder).
 
 ### `DerivedData`
 

@@ -87,9 +87,9 @@ Para extraer desde la carpeta root:
 
 ## Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1637                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1637                        |
+| Hilo seguro       | &check; |
 
 

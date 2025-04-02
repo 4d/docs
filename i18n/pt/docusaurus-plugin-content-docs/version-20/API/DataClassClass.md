@@ -65,7 +65,7 @@ Os objetos atributos retornados contêm as seguintes propriedades:
 | path             | Text       | Caminho de [um atributo de alias](../ORDA/ordaClasses.md#alias-attributes-1) com base em uma relação                                                                                                                                                                                                                                                                                       |
 | readOnly         | Parâmetros | True se o atributo for apenas de leitura. Por exemplo, os atributos computados sem função [`set`](../ORDA/ordaClasses.md#function-set-attributename) são apenas de leitura.                                                                                                                                                                                                                |
 | relatedDataClass | Text       | Nome dadataclass relacionada ao atributo. Retornado somente quando `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                         |
-| type             | Text       | Tipo conceitual do valor do atributo, útil para programação genérica. Depende do atributo `kind`. Valores possíveis: <li>se `.kind` = "storage": "blob", "bool", "date", "image", "number", "object" ou "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity": nome da dataClass relacionada</li><li>se `.kind` = "relatedEntities": nome da dataClass relacionada + sufixo "Selection"</li><li>se `.kind` = "calculated" ou "alias": o mesmo que acima, dependendo do resultado</li>                                                                                                                                                               |
+| type             | Text       | Tipo conceitual do valor do atributo, útil para programação genérica. Depende do atributo `kind`. Valores possíveis: <li>se `.kind` = "storage": "blob", "bool", "date", "image", "number", "object" ou "string". "number" é retornado para qualquer tipo numérico, inclusive duração; "string" é retornado para os tipos de atributo uuid, alfa e texto; os atributos "blob" são [objetos blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity": nome da dataClass relacionada</li><li>se `.kind` = "relatedEntities": nome da dataClass relacionada + sufixo "Selection"</li><li>se `.kind` = "calculated" ou "alias": o mesmo que acima, dependendo do resultado</li>                                                                                                                                                               |
 | unique           | Parâmetros | True se o valor do atributo tiver que ser único. Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                          |
 
 :::tip
@@ -120,7 +120,6 @@ Considerando as propriedades de tabela abaixo:
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>Histórico</summary>
@@ -170,7 +169,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
  $allEmp:=ds. Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>Histórico</summary>
@@ -221,7 +220,7 @@ $ds. Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -465,7 +464,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/remoteDatastores.md#orda-cache) is not used). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
+Quando você chama a função `.get()` **sem o parâmetro** *settings*, uma solicitação para valores de atributo é enviada diretamente para o servidor (a [cache ORDA](../ORDA/remoteDatastores.md#orda-cache) não é usada). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
 
 :::
 
@@ -670,7 +669,7 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>Histórico</summary>
@@ -1526,7 +1525,6 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 [`.query()`](EntitySelectionClass.md#query) para seleções de entidades
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
 ## .setRemoteCacheSettings()
 
 <details><summary>Histórico</summary>

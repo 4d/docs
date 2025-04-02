@@ -1,21 +1,53 @@
 ---
 id: licenses
-title: Gestion des licences 4D
+title: Licences
 ---
 
-Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Habituellement, l'activation est automatique si vous [vous connectez à l'aide de votre compte 4D](GettingStarted/Installation.md) dans l'assistant de bienvenue.
+## 4D Licenses Overview
+
+To use 4D products and features, you need to install appropriate licenses on your computer. 4D provides two categories of licenses:
+
+- **Development licenses**, required for working with 4D and 4D Server IDE.
+- **Deployment licenses**, required for deploying your custom applications built with 4D.
+
+### Development licenses
+
+Development licenses are required to access the 4D Design environment and features. For example, *4D Developer Pro* is a single-user development license. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
+
+### Deployment licenses
+
+Deployment licenses can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+
+| Deployment license       | Description                                                        | Where to enter it                                                                                                                                   |
+| ------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*         | Embedded custom license, contact 4D Sales for information          | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog                                                                    |
+| *4D Unlimited Desktop*   | **Discontinued** - Embedded custom license                         | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Desktop*             | Per-user license, allowing them to use stand-alone 4D applications | [First activation](#first-activation) dialog box on the user's machine                                                                              |
+| *4D Server OEM*          | Embedded custom license, contact 4D Sales for information          | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses                            | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Server*              | Per-user license, allowing them to use 4D Server and clients       | [First activation](#first-activation) dialog box on the user's machine                                                                              |
+
+### Expiration
+
+Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard.
+
+In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box.
+
+## Activating licenses
+
+Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Usually, **the activation is automatic** when you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
 
 Cependant, dans des cas spécifiques, vous pourriez avoir besoin d'activer vos licences manuellement, si par exemple :
 
 - votre configuration ne permet pas l'activation automatique,
-- vous avez acheté des licences supplémentaires.
+- you have purchased additional development licenses.
 
 Aucune activation n’est requise pour les usages suivants :
 
 - 4D utilisé en mode distant (connexion à un 4D Server)
 - 4D utilisé en mode local avec un projet d'application interprété sans accès au mode Développement.
 
-## Première activation
+### Première activation
 
 Pour activer 4D, sélectionnez la commande **Gestionnaire de licences...** du menu **Aide**. Pour activer 4D Server, lancez l'application 4D Server. La boîte de dialogue de choix du mode d'activation apparaît.
 
@@ -68,9 +100,14 @@ Votre application 4D est désormais activée.
 
 Ce mode permet l’activation exceptionnelle et temporaire de l’application 4D (5 jours maximum) sans connexion au site Internet de 4D. Cette activation ne peut être utilisée qu’une seule fois.
 
-## Ajouter des licences
+## Refresh
 
-Vous pouvez à tout moment ajouter de nouvelles licences, par exemple pour étendre les capacités de votre application.
+Licenses are usually automatically updated at startup of your 4D application.
+
+Vous pouvez utiliser le bouton **Actualiser** dans les contextes suivants :
+
+- Lorsque vous avez acquis une expansion supplémentaire et souhaitez l'activer,
+- When you need to update an expired number (Partners or evolutions).
 
 Choisissez la commande **Gestionnaire de licences...** dans le menu **Aide** de l’application 4D ou 4D Server puis cliquez sur le bouton **Actualiser** :
 
@@ -80,11 +117,6 @@ Ce bouton vous connecte à notre base clients et active automatiquement toutes l
 
 - Si vous avez acheté des expansions supplémentaires pour un 4D Server, vous n'avez pas besoin de saisir de numéro -- cliquez simplement sur **Actualiser**.
 - A la première activation d'un 4D Server, vous devez uniquement saisir le numéro du serveur et toutes les licences d'expansion associées sont automatiquement affectées.
-
-Vous pouvez utiliser le bouton **Actualiser** dans les contextes suivants :
-
-- Lorsque vous avez acquis une expansion supplémentaire et souhaitez l'activer,
-- Lorsque vous voulez mettre à jour un numéro de licence temporaire ayant expiré (Partenaires ou évolutions).
 
 ## 4D Online Store
 

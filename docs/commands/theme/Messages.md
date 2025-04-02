@@ -1,6 +1,7 @@
 ---
-id: Messages
+id: Messages_theme
 title: Messages
+slug: /commands/theme/Messages
 ---
 
 

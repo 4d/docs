@@ -23,7 +23,7 @@ La adición de un elemento a esta colección utilizando el operador de asignaci�
 
 :::info
 
-For more information on shared collections, please refer to the [Shared objects and collections](../Concepts/shared.md) page.
+Para más información sobre las colecciones compartidas, por favor consulte la página [Objetos y colecciones compartidas](../Concepts/shared.md).
 
 :::
 
@@ -71,9 +71,9 @@ Esta función modifica la colección original.
 
 ## Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1527                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1527                        |
+| Hilo seguro       | &check; |
 
 

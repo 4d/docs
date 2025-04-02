@@ -401,7 +401,7 @@ This property is **read-only**.
 
 <!-- REF #directory.copyTo().Params -->
 |Parameter|Type||Description|
-|---------|--- |:---:|------|
+|---------|---|---|------|
 |destinationFolder |4D.Folder |->|Destination folder|
 |newName|Text|->|Name for the copy|
 |overwrite|Integer|->|`fk overwrite` to replace existing elements|
@@ -418,9 +418,11 @@ By default, the folder is copied with the name of the original folder. If you wa
 
 If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
+
 |Constant|Value|Comment|
 |---|---|---|
 |`fk overwrite`|4|Overwrite existing elements, if any|
+
 
 **Returned value**
 

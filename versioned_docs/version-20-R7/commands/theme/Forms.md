@@ -1,6 +1,7 @@
 ---
-id: Forms
+id: Forms_theme
 title: Forms
+slug: /commands/theme/Forms
 ---
 
 

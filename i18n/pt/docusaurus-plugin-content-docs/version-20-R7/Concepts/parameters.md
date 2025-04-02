@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### Tipos de datos compatíveis
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. Por exemplo:
+Com parâmetros nomeados, você pode usar os mesmos tipos de dados que são [suportados pela palavra-chave `var`] (variables.md), incluindo objetos de classe. Por exemplo:
 
 ```4d
 Function saveToFile($entity : cs. ShapesEntity; $file : 4D. File)
@@ -439,7 +439,7 @@ APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;
 
 :::tip
 
-When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+Quando parâmetros opcionais são necessários em seus métodos, você também pode considerar o uso de [propriedades do objeto como parâmetros com nome](#using-object-properties-as-named-parameters), que fornecem uma maneira flexível de lidar com um número variável de parâmetros.
 
 :::
 
@@ -490,7 +490,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Therefore, 
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". This is described in the [Returning values](#returned-value) paragraph.
+This second technique of returning a value by a subroutine is called "using a function". Isso é descrito no parágrafo [Returning values](#returned-value).
 
 ### Casos particulares: objetos e coleções
 

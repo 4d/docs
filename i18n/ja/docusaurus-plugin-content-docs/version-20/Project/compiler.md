@@ -123,11 +123,11 @@ title: コンパイル
 
 #### Symbolファイルを生成
 
-Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。 The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。 Symbolファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `ProjectName_symbols.txt` という名前で作成されます。
 
 #### エラーファイルを生成
 
-シンタックスチェック時にエラーファイルを生成するのに使用します ([エラーファイル](#エラーファイル) 参照)。 The error file is created in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+シンタックスチェック時にエラーファイルを生成するのに使用します ([エラーファイル](#エラーファイル) 参照)。 エラーファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `ProjectName_error.xml` という名前で作成されます。
 
 
 #### コンパイルパス
@@ -234,7 +234,7 @@ If you check the [**Generate the symbol file**](#symbol-file) option in the comp
 
 ### エラーファイル
 
-コンパイラー設定の [**エラーファイルを生成**](#エラーファイルを生成) オプションを使用して、コンパイル時にエラーファイルを生成するかどうかを選択することができます The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs) of the project.
+コンパイラー設定の [**エラーファイルを生成**](#エラーファイルを生成) オプションを使用して、コンパイル時にエラーファイルを生成するかどうかを選択することができます エラーファイルは、プロジェクトの [Logsフォルダー](../Project/architecture.md#logs)内に `ProjectName_errors.txt` という名前で作成されます。
 
 [コンパイラーウインドウ](#コンパイラーウインドウ) からエラーに直接アクセスすることができますが、マシンからマシンへ送信できるエラーファイルがあると便利な場合があります。 エラーファイルは、その内容を自動的に解析しやすいように XMLフォーマットで生成されます。 これを利用して、エラー表示用に独自のインターフェースを作成することもできます。
 
@@ -305,14 +305,14 @@ If you check the [**Generate the symbol file**](#symbol-file) option in the comp
 
 マシンの OS に関わらず、クラシックコンパイラーは Intel/AMDプロセッサー向けのネイティブコンパイルコードを生成します。 特別な設定は必要ありません。
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
+結果のコンパイルコードはプロジェクトの [DerivedData](architecture.md#deriveddata) フォルダーに保存されます。
 
 
 ### Apple Silicon用コンパイラー
 
 Apple Silicon用コンパイラーは *Apple M1* などの Apple Silicon プロセッサー向けのネイティブコンパイルコードを生成します。
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+結果のコンパイルコードはプロジェクトの [Libraries](architecture.md#libraries) フォルダーに保存されます。
 
 
 #### 要件

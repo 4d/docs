@@ -152,10 +152,10 @@ $txt:="Hello world!"
 - A etiqueta de tabela é suportada:
 
 ```
-| Parameter | Type   | Description  |
+| Parâmetro | Tipo | Descrição |
 | --------- | ------ | ------------ |
-| wpArea    | Text |Write pro area|
-| toolbar   | Text |Toolbar name  |
+| wpArea | Text |Área Write pro|
+| toolbar | Text |Nome da barra de ferramentas |
 ```
 
 - A etiqueta de ligação é suportada:

@@ -13,7 +13,7 @@ Lorsqu'ils sont exécutés en mode *coopératif*, tous les process sont gérés 
 
 En conséquence, en mode préemptif, les performances globales de l'application sont améliorées, notamment sur les machines multicœurs, car plusieurs process peuvent réellement s'exécuter simultanément. Cependant, les gains réels dépendent des opérations en cours d'exécution. En contrepartie, étant donné qu'en mode préemptif chaque process est indépendant des autres et n'est pas géré directement par l'application, il y a des contraintes spécifiques appliquées au code que vous souhaitez rendre compatible avec une utilisation en préemptif. De plus, l'exécution en préemptif n'est disponible que dans certains contextes.
 
-## Disponibilité du mode préemptif
+## Availability of preemptive mode {#availability-of-preemptive-mode}
 
 L'utilisation du mode préemptif est prise en charge dans les contextes d'exécution suivants :
 
@@ -179,7 +179,7 @@ Il est possible de [désactiver localement la vérification de la thread-safety]
 
 :::
 
-The [symbol file](../Project/compiler.md#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
+Le [fichier de symboles](../Project/compiler.md#complete-list-of-methods), s'il est activé, contient également le statut de thread safety pour chaque méthode.
 
 ### Interface utilisateur
 

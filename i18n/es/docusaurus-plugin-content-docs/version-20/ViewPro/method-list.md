@@ -5236,7 +5236,7 @@ En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 
 El parámetro *formula* indica un nombre de fórmula o de método 4D a asignar a *rangeObj*.
 
-> Si *formula * es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
+> Si *formula * es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros. Si se utiliza un método 4D, debe permitirse con el comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
 
 El parámetro opcional *formatPattern* define un [modelo](configuring.md#cell-format) para la *formula*.
 
@@ -5291,7 +5291,7 @@ El parámetro *formulasCol* es una colección bidimensional:
 * La colección de primer nivel contiene subcolecciones de fórmulas. Cada subcolección define una línea.
 * Cada subcolección define los valores de las celdas para la línea. Los valores deben ser elementos textuales que contengan las fórmulas a asignar a las celdas.
 
-> Si la fórmula es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
+> Si la fórmula es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros. Si se utiliza un método 4D, debe permitirse con el comando [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods).
 
 Las fórmulas de *rangeObj* se eliminan sustituyéndolas por una cadena vacía ("").
 

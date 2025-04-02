@@ -91,7 +91,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 
@@ -349,7 +349,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 

@@ -29,7 +29,7 @@ The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Sessio
 
 Dependendo do processo a partir do qual o comando é chamado, a sessão atual do usuário pode ser:
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
+- uma sessão web (quando [sessões escaláveis são ativadas](WebServer/sessions.md#enabling-web-sessions)),
 - uma sessão de cliente remoto,
 - a sessão de procedimentos armazenados.
 

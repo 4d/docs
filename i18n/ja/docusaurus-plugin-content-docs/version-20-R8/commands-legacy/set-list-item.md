@@ -5,7 +5,7 @@ slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* ; itemRef | * ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* ; *itemRef* ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<br/>**SET LIST ITEM** ( * ; *list* ; * ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

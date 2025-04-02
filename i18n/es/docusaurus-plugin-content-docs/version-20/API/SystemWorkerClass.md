@@ -311,7 +311,7 @@ $output:=$worker.response
 
 #### Descripción
 
-La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 

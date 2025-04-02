@@ -5,7 +5,7 @@ slug: /commands/delete-from-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( {* ;} *list* ; itemRef | * {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( {* ;} *list* ; *itemRef* {; *} )<br/>**DELETE FROM LIST** ( * ; *list* ; * {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

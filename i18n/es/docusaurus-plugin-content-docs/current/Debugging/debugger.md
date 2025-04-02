@@ -1,6 +1,6 @@
 ---
 id: debugger
-title: Debugger
+title: Depurador
 ---
 
 The 4D debugger is useful when you need to spot errors or monitor the execution of methods. Le permite recorrer su código lentamente y examinar la información. Este proceso se llama "rastreo".
@@ -18,7 +18,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 Hay varias formas de conseguir que el depurador se muestre:
 
 - Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
-- Using the [`TRACE`](../commands-legacy/trace.md) command
+- Utilizando el comando [`TRACE`](../commands-legacy/trace.md)
 - Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
 - Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
 
@@ -62,33 +62,33 @@ Default shortcuts can be customized in the [Shortcuts Page](../Preferences/short
 
 Detener el modo Seguimiento y reanudar el curso normal de la ejecución del método.
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
+> **Mayús** + **F5** o **Mayús** + clic en el botón **No Trace** retoma la ejecución. También desactiva todas las llamadas a TRACE posteriores en el proceso actual.
 
 #### Pasar por encima
 
 Ejecuta la línea de método actual, indicada por el contador del programa (la flecha amarilla). El depurador pasa a la siguiente línea.
 
-El botón Ejecutar no entra en las subrutinas y las funciones, sino que se queda al nivel del método que está rastreando en ese momento. If you want to also trace subroutines and functions calls, use the **Step Into** button.
+El botón Ejecutar no entra en las subrutinas y las funciones, sino que se queda al nivel del método que está rastreando en ese momento. Si desea también rastrear las llamadas a las subrutinas y a las funciones, utilice el botón **Paso a paso detallado**.
 
-En la depuración remota, si el método se ejecuta en el servidor, se llama al método padre después de que se ejecute la última línea del método hijo. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+En la depuración remota, si el método se ejecuta en el servidor, se llama al método padre después de que se ejecute la última línea del método hijo. Si el método padre se ejecuta en el lado remoto, el botón **Step Over** tiene el mismo efecto que el botón **No Trace**.
 
 #### Paso a paso detallado
 
 Cuando se ejecuta una línea que llama a otro método (subrutina o función), haga clic en este botón para mostrar el otro método y recorrerlo paso a paso.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+El nuevo método se convierte en el método actual (superior) en la [Ventana cadena de llamada](#call-chain-pane) de la ventana del depurador.
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+Cuando se ejecuta una línea que no llama a otro método, este botón tiene el mismo efecto que el botón **Ejectuar paso a paso**.
 
-#### Step Out
+#### Ejecutar y salir
 
-If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+Si está rastreando subrutinas y funciones, al hacer clic en este botón podrá ejecutar todo el método que se está rastreando en ese momento y retroceder hasta el método llamante. La ventana del depurador vuelve al método anterior de la cadena de llamada. Si el método actual es el último método de la cadena de llamada, se cierra la ventana del depurador.
 
-In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+En la depuración remota, al ejecutarse la última línea del método, si el método se ejecuta en el servidor, se llama al método padre. Si el método padre se ejecuta en el lado remoto, el botón actúa de la misma manera que el botón Reanudar.
 
-#### Step Into Process
+#### Paso a paso del nuevo proceso
 
-On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+Al ejecutar una línea que crea un nuevo proceso (es decir, al llamar al comando New process), este botón abre una nueva ventana del depurador que permite rastrear el método de gestión del proceso recién creado. En la ejecución de una línea que no crea un nuevo proceso, este botón actúa de la misma manera que el botón Ejecutar paso a paso.
 
 #### Abortar
 
@@ -99,9 +99,9 @@ Detiene la ejecución del método y vuelve al estado anterior al inicio de la ej
 
 #### Detener y editar
 
-The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+El método que se está ejecutando cuando se presiona el botón **Abortar y Editar** se abre en el Editor de Código.
 
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Una vez haya terminado con los cambios, vuelva a ejecutar el método.
+> **Consejo**: utilice este botón cuando sepa qué cambios son necesarios en su código, y el momento en que deben ser efectuados para proseguir con las pruebas de sus métodos. Una vez haya terminado con los cambios, vuelva a ejecutar el método.
 
 #### Acción de edición
 
@@ -109,7 +109,7 @@ El método que se está ejecutando en el momento de presionar el botón Editar s
 
 Si utiliza este botón para modificar un método, las modificaciones sólo serán efectivas la próxima vez que se ejecute.
 
-> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
+> **Consejo:** utilice este botón cuando sepa qué cambios son necesarios en su código y cuando no interfieran con el resto del código a ejecutar o rastrear.
 
 ## Auto-saving
 
@@ -311,7 +311,7 @@ El panel de control personalizado es útil para evaluar expresiones. Es similar 
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. Para mostrar el contenido de los BLOB, puede utilizar comandos BLOB, como [BLOB to text](../commands-legacy/blob-to-text.md).
 
 ### Display mode
 
@@ -391,7 +391,7 @@ El panel de código fuente muestra el código fuente del método o de la funció
 
 Esta área también le permite añadir o eliminar [**puntos de ruptura**](breakpoints.md).
 
-### Prototype
+### Prototipo
 
 The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
 

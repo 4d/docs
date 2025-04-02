@@ -1,180 +1,180 @@
 ---
 id: labels
-title: Labels
+title: ラベル
 ---
 
-4D’s Label editor provides a convenient way to print a wide variety of labels. With it, you can do the following:
+4Dのラベルエディターにより、さまざまなラベルを容易に印刷することができます。 ラベルエディターを使用し、次の操作を行うことができます:
 
-- Design labels for mailings, file folders and file cards, and for many other needs,
-- Create and insert decorative items in label templates,
-- Specify the font, font size, and style to be used for the labels,
-- Specify the number of labels across and down on each page,
-- Specify how many labels to print per record,
-- Specify the label page margins,
-- Designate a method to execute when printing each label or record,
-- Create a preview and print the labels.
+- 宛名やファイルフォルダー、ファイルカードなど、その他数々のニーズに対応するラベルをデザインする。
+- 装飾用のオブジェクトを作成し、ラベルテンプレートに挿入する。
+- ラベルに使用するフォント、フォントサイズ、書体を指定する。
+- 各ページの縦と横に印刷するラベル数を指定する。
+- 各レコードにつき印刷するラベル数を指定する。
+- ラベルページのマージンを指定する。
+- 各ラベルまたは各レコードを印刷する際に実行するメソッドを指定する。
+- プレビューを作成し、ラベルを印刷する。
 
 :::note
 
-Labels can also be created using the [Form editor](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+ラベルは、[フォームエディター](../FormEditor/formEditor.md) を使用して作成することもできます。 変数を含むラベルや、フォームエディターの描画用ツールを利用する特殊なラベルを作成しそれらをラベルエディターや [`PRINT LABEL`](../commands-legacy/print-label.md) コマンドを使用して印刷したい場合には、フォームエディターを使用してください。
 
 :::
 
-You use the Label editor to create, format, and print labels. The Label editor contains settings for designing labels and positioning the labels on label paper. For example, when producing mailing labels, you might want a label design that includes the person’s first and last name on the first line, the street address on the second line, and so on. As part of the design, the Label editor enables you to specify the number of labels on the page and the margins of the label paper so that the label text is centered within the labels.
-When you create a satisfactory label design, you can save it to disk so that you can reuse it.
+ラベルエディターを使用して、ラベルの作成やフォーマット、印刷を行います。 ラベルエディター には、ラベルを設計したり、ラベル用紙上でのラベル位置を決めるための各種設定が用意されています。 例えば、宛名ラベルを作成する場合、1行目に相手先の 名字と名前、2行目にその人の住所を納めたラベルを設計することができます。 ラベルエディターでは、ページ上のラベル数を指定したり、ラベル用紙のマージ ンを指定することで、ラベルテキストがラベルの中央に配置されるようデザインを調整することができます。
+ラベルデザインが完成したら、いつでも再利用できるようにディスクに保存することができます。
 
-To open the Label editor:
+ラベルエディターは、次のように開きます:
 
-- In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
- OR
-- In an application, call the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+- デザインモードでは、**ツール**メニュー、あるいは4Dツールバーにあるツールボタンのメニューから\*\*ラベル...\*\*を選択します。
+ または
+- アプリケーションモードでは、 [`PRINT LABEL`](../commands-legacy/print-label.md) コマンドを使用します。
 
 ![](../assets/en/Desktop/label-wizard.png)
 
-You use the Label page to specify the contents of the label and the Layout page to define the size and position of the labels on the page.
+ラベルページはラベルの内容を指定するために使用し、レイアウトページはページ上のラベルサイズや位置を指定するために使用します。
 
 ![](../assets/en/Desktop/label-buttons.png)
 
-## Label Page
+## ラベルページ
 
-The Label page contains several areas with settings for designing and formatting labels.
+ラベルページには、ラベルのデザインやフォーマットを行うための設定があります。
 
-### List of Fields
+### フィールドのリスト
 
-Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. The fields in the related table are indented. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
+カレントテーブルのフィールド名が階層リスト形式で表示されます。 そのテーブルが別のテーブルにリレートしている場合は、外部キーフィー ルドにプラス記号 (Windows) または矢印 (Macintosh) が表示されます。 リレートフィールドを展開すると、リレートテーブルのフィールドを表示することができます。 リレートテーブルのフィールドはインデント (字下げ) されます。 リストから右のラベルプレビューエリアにドラッグすると、フィールドをラベルテンプレートに追加できます。
 
 :::note 注記
 
-- Only tables and fields which are visible appear in the Label editor.
-- [Object type](../Concepts/dt_object.md) fields are not supported by the Label editor.
+- クイックレポートエディターのフィールドリストには、非表示属性が設定されていないテーブルとフィールドだけが表示されます。
+- [オブジェクト型](../Concepts/dt_object.md) のフィールドは、ラベルエディターではサポートされていません。
 
 :::
 
-The search area allows you to narrow the list of fields displayed to those containing the entered string:
+この検索エリアでは入力した文字列を含むフィールドのみに表示を限定することができます:
 
 ![](../assets/en/Desktop/label-filter.png)
 
-### Label preview
+### ラベルプレビューエリア
 
-You use this area to design your label zone by placing and positioning all the items that you want to include in your label. The white rectangle represents a single label (its size is configured on the [Layout page](#layout-page)).
+このエリアを使用して、ラベルに表示させるすべてのオブジェクトの配置を調整し、ラベルを設計します。 白い長方形は一つのラベルを表します(ラベルの大きさは [レイアウトページ](#レイアウトページ)) を指定できます)。ラベルにはフィールドをドラッグすることができます。
 
-- You can drag fields onto the label.
-- You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
+- ラベルにはフィールドをドラッグすることができます。
+- 一つ目のフィールドの上に他のフィールをドロップする事で二つのフィールドを結合する事もできます。 これらは自動的にスペースで区切られます。<br/>
  ![](../assets/en/Desktop/label-concat.png)<br/>
- If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
-- You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
+ **Shift** キーを押しながらドロップすると、改行で区切られます。 これによって、住所などの複数のフィールドにまたがるラベル(住所1、住所2など)を、住所が一行で済む場合にも無駄な余白行を作らずに作成する事ができることができます。
+- **フォーミュラ** ツール ![](../assets/en/Desktop/label-tool6.png) (あるいはコンテキストメニュー内の **ツール>フォーミュラ**) を選択しながらエリアを描画することで、ラベルにフォーミュラを追加することができます。 すると **フォーミュラエディター** が表示されます:
  ![](../assets/en/Desktop/label-formula1.png)<br/>
- For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:<br/>
+ 例えば、 [`String`](../commands-legacy/string.md) コマンドを使用してフィールドにフォーマットを適用することができます:<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
 :::note
 
-Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command.
+フォーミュラエディター内では、データベースにおいて"許可された"メソッドしか入力できないという点に注意して下さい。 許可されたメソッドは [プロジェクト設定](../settings/security.md#オプション) と [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) コマンドによります。
 
 :::
 
-- You can drag and drop picture files as well as label files (".4lbp" files) from the desktop of the OS.
+- OS のデスクトップからピクチャーファイル、またはラベルファイル(".4lbp" ファイル) をドラッグ&ドロップすることができます。
 
-- To modify the area, double-click on the contents in order to switch to editing mode. When you double-click on fields or formulas, the **Formula editor** is displayed, allowing you to remove or modify items:
+- エリアを変更するには、中身をダブルクリックして編集モードにスイッチして下さい。 フィールドやフォーミュラをダブルクリックすると、 **フォーミュラエディター** が表示され、これにより項目を削除や変更することができます:
  ![](../assets/en/Desktop/label-formula.png)
 
-### Form to use
+### 使用するフォーム
 
-This drop-down list allows you to define a table form as a label template. The form chosen must be specially adapted to the creation of labels.
-In this case, the label editor is partially disabled: only functions of the [Layout page](#layout-page) can be used — to allow you to configure the page based on the form. The image of the form selected is displayed in the label preview area.
-When you use a form, 4D executes any form or object methods associated with it. When using this option, you can also designate a project method to execute for each record or label and then assignate variables (see [this example](#printing-labels-using-forms-and-methods-example) below). If you want to create your labels using the editor itself, you need to choose the **No Form** option.
+このドロップダウンリストを使用すると選択したテーブルフォームをラベルテンプレートとして定義できるようになります。 選択されたフォームはラベルの作成に特化している必要があります。
+この場合、ラベルエディターは部分的に無効化される事になります：[レイアウトページ](#layout-page) の機能のみが使用可能です。これによりフォームに基づいたページの設定が可能です。 選択されたフォームのイメージは、ラベルプレビューエリアに表示されます。
+フォームを使用する場合、4Dはそれに関連づけられたあらゆるフォームメソッド・オブジェクトメソッドを実行します。 このオプションを使用する場合、各レコードあるいは各ラベルに対して実行するプロジェクトメソッドを指定し、変数を割り当てることができます(以下の [この例題](#フォームとメソッドを使用してラベルを印刷する) を参照して下さい)。 エディター自身を使用してラベルを作成したい場合、**フォームなし** オプションを選ぶ必要があります。
 
 :::note 注記
 
-- You can restrict the forms listed in this menu by means of a [specific JSON file](#controlling-available-forms-and-methods).
-- If the database does not contain any table forms, this menu is not displayed.
+- このメニューに表示されるフォームは、[特定のJSON ファイル](#controlling-available-forms-and-methods) を使用する事によって制限する事ができます。
+- データベースにテーブルフォームが何も含まれていない場合には、このメニューは表示されません。
 
 :::
 
-### Graphic area commands
+### グラフィックエリアコマンド
 
-The graphic area of the editor includes both a tool bar and a context menu that you can use to design your label template.
+エディターのグラフィックエリアではツールバーとコンテキストメニューの両方が使え、これを使ってラベリテンプレートをデザインするすることができます。
 
-The left-hand side of the tool bar includes commands for selecting and inserting objects. You can also access these tools by means of the **Tool>** command in the area's context menu.
+ツールバーの左側にはオブジェクトの選択と挿入のためのコマンドを含めるためのツールバーがあります。 これらのツールはエリアのコンテキストメニュー内の**ツール >** コマンドによってもアクセスする事ができます。
 
-| アイコン                                      | Tool name          | 説明                                                                                                                                                                                                                 |
-| ----------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/Desktop/label-tool1.png) | セレクション             | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
-| ![](../assets/en/Desktop/label-tool2.png) | Line creation      |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool3.png) | Rectangle creation | For Rectangle or Rounded rectangle.                                                                                                                                                                |
-| ![](../assets/en/Desktop/label-tool4.png) | Circle creation    |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool5.png) | Text insertion     | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
-| ![](../assets/en/Desktop/label-tool6.png) | Formula insertion  | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
+| アイコン                                      | ツール名        | 説明                                                                                                                       |
+| ----------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
+| ![](../assets/en/Desktop/label-tool1.png) | セレクション      | 選択ツール。単一のオブジェクトをクリックするか、複数のオブジェクトを指定する選択範囲を選んでください。 隣り合っていない複数のオブジェクトを選択するためには、 **Shift** キーを押しながら選択したオブジェクトを一つずつ選んで下さい。 |
+| ![](../assets/en/Desktop/label-tool2.png) | 線作成ツール      |                                                                                                                          |
+| ![](../assets/en/Desktop/label-tool3.png) | 四角作成ツール     | 四角または角の丸い四角を作成できます。                                                                                                      |
+| ![](../assets/en/Desktop/label-tool4.png) | 円作成ツール      |                                                                                                                          |
+| ![](../assets/en/Desktop/label-tool5.png) | テキスト挿入ツール   | 四角形を描画して内部にテキストを入力して下さい。 テキストエリアであればどのようなものでも編集可能です。フィールド参照を含んでいるものも編集可能で、これらに対してはダブルクリックして下さい。                          |
+| ![](../assets/en/Desktop/label-tool6.png) | フォーミュラ挿入ツール | 四角形を描画して **フォーミュラエディター** を表示して下さい。これを使用して動的なラベルコンテンツ(フィールドやフォーミュラ)を定義することができます。                       |
 
-There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
+以下のショートカットを使用する事で、キーボードの矢印キーを使用してより細かくオブジェクトを移動・リサイズすることができます:
 
-- Keyboard arrow keys move the selection of objects 1 pixel at a time.
-- **Shift** + arrow keys move the selection of objects 10 pixels at a time.
-- **Ctrl** + arrow keys enlarge or reduce the selection of objects by 1 pixel.
-- **Ctrl** + **Maj** + arrow keys enlarge or reduce the selection of objects by 10 pixels.
+- キーボードの矢印キーを押すと、選択されたオブジェクトを1ピクセルずつ移動させます。
+- **Shift** + 矢印キーは、選択されたオブジェクトを10ピクセルずつ移動させます。
+- **Ctrl** + 矢印キーは、オブジェクトの選択範囲を1ピクセルずつ拡大または縮小させます。
+- **Ctrl** + **Shift** + 矢印キーは、オブジェクトの選択範囲を10ピクセルずつ拡大または縮小します。
 
-The right-hand side of the tool bar contains commands used to modify items of the label template:
+右側のツールバーにはラベルテンプレートの項目を変更するのに使用するコマンドが含まれます:
 
-| アイコン                                       | Tool name                  | 説明                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------ | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Desktop/label-tool7.png)  | Fill Color                 | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
-| ![](../assets/en/Desktop/label-tool8.png)  | 線カラー                       |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool9.png)  | Lineweight                 |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool10.png) | Font menu                  | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
-| ![](../assets/en/Desktop/label-tool11.png) | Alignment and distribution | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
-| ![](../assets/en/Desktop/label-tool12.png) | Object level               | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
+| アイコン                                       | ツール名      | 説明                                                                                                                                                          |
+| ------------------------------------------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Desktop/label-tool7.png)  | 塗りカラー     | 全てのカラーアイコンは選択されたカラーを表示します                                                                                                                                   |
+| ![](../assets/en/Desktop/label-tool8.png)  | 線カラー      |                                                                                                                                                             |
+| ![](../assets/en/Desktop/label-tool9.png)  | 線の太さ      |                                                                                                                                                             |
+| ![](../assets/en/Desktop/label-tool10.png) | フォントメニュー  | フォントとそのサイズに加え、テキストスタイル、選択されたテキストのブロックのカラーと行揃えを設定します。                                                                                                        |
+| ![](../assets/en/Desktop/label-tool11.png) | 揃えと間隔ツール  | 揃えオプションを利用するためには二つ以上のオブジェクトを選択する必要があります。 "間隔"ツールは三つ以上のオブジェクトに対して水平あるいは垂直方向の間隔を自動的に同じ幅に揃えることを意味します。 最終的な間隔は選択範囲内にある既存の幅(または高さ)全ての平均になります。 |
+| ![](../assets/en/Desktop/label-tool12.png) | オブジェクトレベル | オブジェクトを最前面に、あるいは複数のオブジェクトを一つレベルを上げるか下げるかします。                                                                                                                |
 
-## Layout Page
+## レイアウトページ
 
-The Layout page contains controls for printing labels based on the requirements of your current print settings.
+レイアウトページには、現在の印刷条件に基づいたラベル印刷用の各種設定が用意されています。
 
 ![](../assets/en/Desktop/label-layout.png)
 
-- **Labels Order**: Specifies whether labels should be printed in the direction of the rows or the columns.
-- **Rows** and **Columns**: Set the number of labels to be printed by "row" and by "column" on each sheet. These settings determine the label size when the "Automatic resizing" option is enabled.
-- **Labels per record**: Sets the number of copies to print for each label (copies are printed consecutively).
-- **Print Setup...**: Sets the format of the page on which the sheet of labels will be printed. When you click this button, the setup dialog box for the printer selected in your system appears. By default, the sheet of labels is generated based on an A4 page in portrait mode.
- **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
-- **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
-- **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
-- **Width** and **Height**: Sets the height and width of each label manually. They cannot be edited when the **Automatic resizing** option is checked.
-- **Margins** (Top, Right, Left, Bottom): Sets the margins of your sheet. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
-- **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
-- **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
- To be eligible for label processing, a project method must comply with the following settings:
- - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
- - it must have the [Shared by components and host database](../Project/code-overview.md#shared-by-components-and-host-database) option.
-  See also [this example](#printing-labels-using-forms-and-methods-example) below.
+- **ラベル順**: ラベルが行ごとに印刷されるべきかあるいは列ごとに印刷されるべきかを指定します。
+- **ラベル列数** と**ラベル行数** : ラベル用紙に印刷されるラベル"列数"と"行数"を指定します。 "自動サイズ調整"オプションが有効化されている場合、この設定を使用してラベルのサイズが決定されます。
+- **ラベル数／レコード**: レコード毎に印刷するラベルの枚数を指定することができます(指定された数だけ連続して印刷されます)。
+- **印刷設定...**: ラベルが印刷される用紙のページ設定を設定します。 このボタンをクリックすると、システムで選択されているプリンターの設定ダイアログボックスが表示されます。 デフォルトでは、ラベルの用紙はA4 サイズの縦向きモードをベースに生成されています。
+ **注意:** エディターを使用して作成された用紙はプリンターの理論上のページサイズに基づいています。つまり物理的なページサイズ(例: A4など)と比べて、使用不可なマージンの分だけサイズが(両面とも)小さくなります。 ページの物理的なマージンは、プレビューエリア内にて青い線で表示されます。
+- **単位**: ラベルとラベルページのサイズ指定に使用する単位を変更することができます。 ピクセル、ミリメートル、センチメートル、またはインチを使用することができます。
+- **自動サイズ調整**: このオプションを設定すると、他のパラメーターを変更する度にラベルのサイズ(幅および高さパラメーター)の値が4D によって自動的に計算されます。 このオプションがチェックされていると、ページのパラメーターを変更するたびにラベルのサイズが調整されます。 幅と高さのパラメーターは手動で設定することはできなくなります。
+- **幅** および **高さ**: それぞれのラベルの高さと幅を手動で設定します。 これらは、**自動サイズ調整** オプションがチェックされている場合には変更することはできません。
+- **マージン** (上、右、左、下): 用紙のマージンを設定します。 これらのマージンはプレビューエリア内にて青い線で表示されています。 **プリンターのマージンを使用** をクリックすると、選択されたプリンターから提供されたマージン情報がプレビューエリアに再現されます(これらの値は変更可能です)。
+- **間隔**: ラベルの行と列の間の垂直方向/水平方向の間隔の量を設定します。
+- **メソッド**: 印刷時に実行されるメソッドを選択することができます。 例えば、各ラベルが印刷された日付と時間をポストするメソッドを実行することができます。 この機能は専用のテーブルフォームを使用してラベルを印刷するときにも有用です。この場合にはメソッドからの変数を使用することもできます。
+ ラベル処理に適用するためにはプロジェクトメソッドは以下の設定に適合している必要があります:
+ - メソッドはデータベース内において"許可されている"必要があります(許可されているメソッドは[プロジェクト設定](../settings/security.md#オプション) および [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) コマンドによります)。許可されていない場合には**メソッド**メニュー内には表示されません。
+ - [コンポーネントとホストデータベース間で共有](../Project/code-overview.md#コンポーネントとホストプロジェクト間で共有) オプションがチェックされている必要があります。
+  以下の [こちらの例題](#フォームとメソッドを使用したラベルの印刷-例題) も参照して下さい。
 
 :::note
 
-For advanced needs, you can restrict the list of methods available using a [specific json file](#controlling-available-forms-and-methods).
-The **For each: Record or Label** options are used to specify whether to run the method once per label or once per record. This control has meaning only if you are printing more than one copy of each label and you are also executing a method at print time.
+高度な使用法として、 [特定のjson ファイル](#利用可能なフォームとメソッドを管理する) を使用して利用可能なメソッドの一覧を制限することができます。
+**実行頻度: レコードあるいはラベル** オプションを使用すると、メソッドの実行をラベル毎またはレコード毎のいずれに行うかを指定します。 この項目は、各ラベルを複数印刷し、かつ印刷時にメソッドを実行する場合にのみ意味があります。
 
 :::
 
-- **Layout preview**: Provides a reduced view of how an entire page of labels will look, based on the dimensions you enter in the Label editor. The page preview also reflects the paper size selected in the Print Setup dialog box. You can also use this area to designate the first label on the page to be printed (this option only affects the first sheet in the case of multi-page printing). This can be useful, for example, when you want to print on a sheet of adhesive labels, part of which has already been used. You can also select the first label on the page to be printed by clicking on it:
+- **レイアウトプレビューエリア**: このエリアには、ラベルエディターで入力したサイズに基づき、ラベルページ全体の状態が縮小表示されます。 また、ページのプレビューでは、用紙設定ダイア ログボックスで選択した用紙サイズが反映されます。 ページ上で最初に印刷されるラベルを選択することも可能です(このオプションは複数ページの印刷の場合には最初のページにのみ影響します)。 これは、例えば一部が使用済みのラベルシールに印刷したいような場合に有用です。 またラベルをクリックすることでページ上で印刷される最初のラベルを選択することもできます:
 
 ![](../assets/en/Desktop/label-start.png)
 
-## Printing labels using forms and methods (example)
+## フォームとメソッドを使用したラベルの印刷(例題)
 
-You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
+専用のテーブルフォームとプロジェクトメソッドを使用することで、計算された変数を含むラベルを印刷することができます。 この単純な例題では、異なる要素の設定の仕方を紹介していきます。
 
-1. In a dedicated table form, add your label field(s) and variable(s).
- Here, in a table form named "label", we added the *myVar* variable:
+1. 専用のテーブルフォームの中に、自分のラベルフィールドや変数を追加していきます。
+ ここでは、"label" という名前のテーブルフォームに、 *myVar* という名前の変数を追加します:
  ![](../assets/en/Desktop/label-example1.png)
 
-2. Create a `setMyVar` project method with the following code:
+2. 以下のコードを持つ `setMyVar` という名前のプロジェクトメソッドを作成します:
 
 ```4d
  var myVar+=1
 ```
 
-3. Set the project method as ["Shared by components and host database"](../Project/code-overview.md#shared-by-components-and-host-database).
+3. プロジェクトメソッドに対して["コンポーネントとホストデータベース間で共有"](../Project/code-overview.md#コンポーネントとホストデータベース間で共有) オプションを設定します。
 
-4. Before displaying the Label editor, make sure the project method is allowed by executing this code:
+4. ラベルエディターを表示する前に、以下のコードを実行してプロジェクトメソッドが確実に許可されているようにします:
 
 ```4d
  ARRAY TEXT($methods;1)
@@ -182,26 +182,26 @@ You can use dedicated table forms and project methods to print labels with calcu
  SET ALLOWED METHODS($methods)
 ```
 
-5. Open the Label editor and use your form:
+5. ラベルエディターを開き、使用したいフォームを使用します:
  ![](../assets/en/Desktop/label-example2.png)
 
-6. In the Layout page, select the method:
+6. レイアウトページにて、実行するメソッドを選択します:
  ![](../assets/en/Desktop/label-example3.png)
 
-Then you can print your labels:
+そしてラベルを印刷します:
 ![](../assets/en/Desktop/label-example4.png)
 
-## Controlling available forms and methods
+## 利用可能なフォームとメソッドを管理する
 
-The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
+ラベルエディターでは、ダイアログボックスで選択可能なフォームとメソッドを("許可されたメソッド"の中から)制限する高度な機能が含まれます:
 
-- in the **Form to use** menu on the "Label" page and/or
-- in the **Apply (method)** menu on the "Layout" page.
+- "ラベル" ページの **使用するフォーム** メニュー、または
+- "レイアウト" ページの **適用(メソッド)** メニュー
 
-1. Create a JSON file named **labels.json** and put it in the [Resources folder](../Project/architecture.md#resources) of the project.
-2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
+1. **labels.json** という名前の JSON ファイルを作成し、プロジェクトの [Resources フォルダー](../Project/architecture.md#resources) 内におきます。
+2. このファイル内に、ラベルエディターのメニュー内にて選択可能にしたいフォームまたはメソッド名を追加します。
 
-The contents of the **labels.json** file should be similar to:
+**labels.json** ファイルの中身は、以下のようにしてください:
 
 ```json
 [ 
@@ -210,38 +210,38 @@ The contents of the **labels.json** file should be similar to:
 ]
 ```
 
-If no **labels.json** file has been defined, then no filtering is applied.
+**labels.json** ファイルを設定しない場合には、メニューの選択項目は制限されません。
 
-## Managing label files
+## ラベルファイルの管理
 
-4D allows you to save each label design in a file that you can open subsequently from within the wizard. By saving your label designs, you can build a label library adapted to your specific needs. Each label design stores the settings defined on the Label and Layout pages.
+4D のラベルデザインはそれぞれファイルとして保存することができ、保存したデザインはウィザード内で呼び出すことができます。 ラベルデザインを保存すれば、必要に応じたラベルライブラリを作ることができます。 各ラベルデザインにはラベルおよびレイアウトページで定義された設定が格納されます。
 
-You can drag and drop label files from your desktop onto the label design area.
+なお、ラベルファイルはデスクトップ上からラベルデザインエリアにドラッグ & ドロップすることもできます。
 
-Label designs are managed using the **Load** and **Save** buttons of the tool bar.
+ラベルデザインは、ツールバーの **読み込み** および **保存** ボタンを使って管理します:
 
-- To load a label design, click on the **Load** button and designate the design you want to load by means of the File Open dialog box (if a label design is already present in the wizard, 4D replaces it by the one you have loaded).
-- To save a label design, click on the **Save** button and indicate the name and location of the design to be created.
+- ラベルデザインを呼び出すには、 **読み込み** ボタンをクリックし、ファイル選択ダイアログを使って任意のラベルファイルを指定します(ウィザード内で別のラベルデザインが開かれている場合、そのデザインは読み込まれたデザインで置き換えられます)。
+- ラベルデザインを保存するには、 **保存** ボタンをクリックし、ファイル名と保存先を指定します。
 
-### File format
+### ファイル形式
 
-The file extension of 4D labels saved by the wizard is ".4lbp". Note that this format is open since it is written internally in XML.
+ウィザードが保存する 4D ラベルファイルの拡張子は ".4lbp" です。 このファイルは内部的には XML で書かれているため、編集することができます。
 
-### Preloading label files
+### ラベルファイルのプリロード
 
-The Label Wizard allows you to store label files within your application, so that label designs can be selected and opened by the user directly using the **Load** button.
+ラベルウィザードではラベルファイルをアプリケーション内に保存することができるため、ユーザーは **読み込み** ボタンを使って直接ラベルデザインを選択し開くことができます。
 
-To do this, you just need to create a folder named `Labels` within the [Resources folder](../Project/architecture.md#resources) of the project and then copy your label files into it:
+このためには、プロジェクトの [Resources フォルダー](../Project/architecture.md#resources) 内に `Labels` フォルダーを作成し、そこにラベルファイルをコピーするだけです:
 
 ![](../assets/en/Desktop/label-resources.png)
 
 :::note
 
-Both standard ".4lbp" files and files generated by the former wizard (".4lb") files are supported.
+標準の ".4lbp" ファイルと旧式のウィザードから生成されたファイル(".4lb") の両方がサポートされます。
 
 :::
 
-When the Label Wizard starts, if this folder is detected and contains valid label files, a pop-up icon is added to the **Load** button. Label designs can then be selected through a menu line:
+ラベルウィザードが起動するとこのフォルダーが検知され、中に有効なラベルファイルがあった場合には、**読み込み** ボタンにポップアップアイコンが追加されます。 このポップアップメニューの行からラベルデザインを選択することが可能になります:
 
 ![](../assets/en/Desktop/label-resources2.png)
 

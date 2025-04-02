@@ -1,6 +1,7 @@
 ---
-id: Mail
+id: Mail_theme
 title: Mail
+slug: /commands/theme/Mail
 ---
 
 
