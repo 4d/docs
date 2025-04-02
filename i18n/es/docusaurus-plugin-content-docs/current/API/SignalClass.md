@@ -178,10 +178,10 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                        |
-| ---------- | ------- | --------------------------- | ---------------------------------- |
-| timeout    | Real    | ->                          | Maximum wait time in seconds       |
-| Resultado  | Boolean | <- | Estado de la propiedad `.signaled` |
+| Parámetros | Tipo    |                             | Descripción                         |
+| ---------- | ------- | --------------------------- | ----------------------------------- |
+| timeout    | Real    | ->                          | Tiempo máximo de espera en segundos |
+| Resultado  | Boolean | <- | Estado de la propiedad `.signaled`  |
 
 <!-- END REF -->
 
@@ -189,7 +189,7 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 
 La función `.wait( )` <!-- REF #SignalClass.wait().Summary -->hace que el proceso actual espere hasta que la propiedad `.signaled` del objeto signal se convierta en **true** o que el *timeout* opcional expire<!-- END REF -->.
 
-Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro *timeout* (se aceptan decimales). Decimals are accepted.
+Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro *timeout* (se aceptan decimales). Se aceptan decimales.
 
 If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
 
