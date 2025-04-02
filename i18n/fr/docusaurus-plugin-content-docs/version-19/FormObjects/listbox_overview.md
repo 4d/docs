@@ -297,7 +297,7 @@ Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. 
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the list box column object method.
+Au moment de l'exécution, les événements qui se produisent dans un en-tête sont générés dans la méthode objet de la colonne de list box.
 
 Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un en-tête, elle est appliquée à tous les en-têtes, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "header3";False)` masquera tous les en-têtes de l'objet list box auquel *header3* appartient et pas simplement cet en-tête.
 
@@ -316,7 +316,7 @@ Lorsque les pieds sont affichés, vous pouvez sélectionner un pied de list box 
 
 Vous pouvez définir, pour chaque pied de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box. Vous pouvez également accéder à des propriétés spécifiques pour les pieds de page. En particulier, vous pouvez insérer un [calcul personnalisé ou automatique](properties_Object.md#variable-calculation).
 
-At runtime, events that occur in a footer are generated in the list box column object method.
+Au moment de l'exécution, les événements qui se produisent dans un pied de page sont générés dans la méthode objet de la colonne de list box.
 
 Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un pied de page, elle est appliquée à tous les pieds de page, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "footer3";False)` masquera tous les pieds de page de l'objet list box auquel *footer3* appartient et pas simplement ce pied de page.
 
