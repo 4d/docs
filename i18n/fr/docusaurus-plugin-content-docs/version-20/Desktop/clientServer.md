@@ -52,7 +52,7 @@ Si le projet publié n'est pas affiché dans la liste **Disponible**, sélection
   - Si deux serveurs sont exécutés simultanément sur la même machine, l'adresse IP doit être suivie de deux points et d'un numéro de port, par exemple : `192.168.92.104:19814`.
   - Par défaut, le port de publication d'un 4D Server est 19813. Ce numéro peut être modifié dans les paramètres du projet.
 
-> The **Activate development mode** option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D (compatibility option).
+> L'option **Activer le mode développement** ouvre la connexion à distance dans un mode spécial de lecture/écriture et nécessite d'accéder au dossier du projet à partir du 4D distant (option de compatibilité).
 
 Une fois que cette page attribue un serveur, cliquez sur le bouton **OK** pour vous connecter au serveur.
 
@@ -74,7 +74,7 @@ Lorsqu'une version .4dz mise à jour du projet a été produite sur 4D Server, l
 
 Lorsque 4D se connecte à un 4D Server sur la même machine, l'application se comporte comme 4D en mode monoposte et l'environnement de développement permet d'éditer les fichiers du projet. Cette fonctionnalité vous permet de développer une application client/serveur dans le même contexte que le contexte de déploiement.
 
-> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [opening option](#opening-a-remote-project) status.
+> Lorsque 4D se connecte à un serveur 4D sur la même machine, le **mode développement** est automatiquement activé, quel que soit le statut de l'[option d'ouverture](#opening-a-remote-project).
 
 A chaque fois que 4D effectue une action **Enregistrer tout** depuis l'environnement de développement (explicitement depuis le menu **Fichier** ou implicitement en passant en mode application par exemple), 4D Server recharge de manière synchrone les fichiers du projet. 4D attend que 4D Server termine le rechargement des fichiers du projet avant de continuer.
 
