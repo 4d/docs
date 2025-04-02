@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Description des fichiers journaux
 ---
 
-Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](../Project/architecture.md#logs) of the project.
+Les applications 4D peuvent générer divers fichiers journaux (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement démarrés ou arrêtés à l'aide des sélecteurs des commandes [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) ou [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) et sont stockés dans le [dossier Logs](../Project/architecture.md#logs) du projet.
 
 Les informations stockées dans les journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
@@ -161,7 +161,7 @@ Pour lancer ce journal :
 ```4d
 
 HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
-//other values are available
+//d'autres valeurs sont disponibles
 ```
 
 Les champs suivants sont enregistrés pour Requête et Réponse :
@@ -300,9 +300,9 @@ Les fichiers peuvent être générés en deux versions :
  Pour démarrer ce journal :
 
  ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
- SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+ SET DATABASE PARAMETER(SMTP Log;1) //démarrer le journal SMTP 
+ SET DATABASE PARAMETER(POP3 Log;1) //démarrer le journal POP3 
+ SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
  ```
 
 > 4D Server : Cliquez sur le bouton **Démarrer les journaux de requêtes et de débogage** dans la [Page Maintenance](ServerWindow/maintenance.md) de la fenêtre d'administration de 4D Server.
@@ -358,10 +358,10 @@ Le journal ORDA côté client enregistre chaque requête ORDA envoyée depuis un
 Pour lancer ce journal :
 
 ```4d
-    //on a remote machine
+    //sur une machine distante
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
-    //can be also sent to memory
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+    //peut également être envoyé en mémoire
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
@@ -408,10 +408,10 @@ Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le s
 Pour lancer ce journal :
 
 ```4d
-    //on the server
+    //sur le serveur
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
-    //srl... parameter is optional
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
+    //srl... parametre optionnel 
 SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
@@ -468,7 +468,7 @@ Vous pouvez utiliser un **fichier de configuration de log** pour gérer facileme
 Il existe plusieurs façons d'activer le fichier de configuration du journal, en fonction de votre configuration :
 
 - **4D Server avec interface** : vous pouvez ouvrir la page Maintenance et cliquer sur le bouton [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file), puis sélectionner le fichier. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
-- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-user) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
+- **un projet interprété ou compilé** : le fichier doit être nommé `logConfig.json` et copié dans le dossier [Settings](../Project/architecture.md#settings-user) du projet (situé au même niveau que le dossier [`Project`](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
 - **une application générée** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
     * Windows : `Users\[userName]\AppData\Roaming\[application]`
     * macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
