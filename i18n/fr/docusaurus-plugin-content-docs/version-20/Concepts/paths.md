@@ -118,10 +118,9 @@ Les fonctions des objets dossier telles que [`folder.file()`](../API/FolderClass
 ```4d
 var $userImages : 4D.Folder
 var $ok : Boolean
-
-  //to reference a "Picture" folder within the user documents folder
+  //pour référencer un dossier "Picture" dans le dossier des documents de l'utilisateur
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //pour créer un dossier sur le bureau
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
