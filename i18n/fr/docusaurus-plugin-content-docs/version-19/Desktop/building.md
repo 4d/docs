@@ -153,7 +153,7 @@ Si vous avez nommé votre application "MyProject", vous trouverez les fichiers s
 * *Windows*
   * MonAppli.exe qui est votre exécutable et MonAppli.Rsr qui contient les ressources de l’application
   * Les dossiers 4D Extensions et Resources ainsi que les diverses librairies (DLL), le dossier Native Components et SAS Plugins -fichiers nécessaires au fonctionnement de l’application
-  * Un dossier Database contenant notamment un dossier Resources et un fichier MyProject.4DZ. Ils constituent la structure compilée du projet et son dossier Resources. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
+  * Un dossier Database contenant notamment un dossier Resources et un fichier MyProject.4DZ. Ils constituent la structure compilée du projet et son dossier Resources. **Note** : Ce dossier contient également le dossier *Default Data*, s'il a été défini (cf. [Gestion du fichier de données dans les applications finales](#management-of-data-files)).
   * (Facultatif) Un dossier Components et/ou un dossier Plugins contenant les fichiers des composants et/ou des plug-ins éventuellement inclus dans le projet. Pour plus d’informations sur ce point, reportez-vous à la section [Plugins et composants](#plugins--components-page).
   * Un dossier Licences contenant, sous forme de fichier XML, la liste des numéros de licence ayant été intégrés dans l’application. Pour plus d’informations sur ce point, reportez-vous à la section [Page Licences & Certificat](#licenses--certificate-page).
   * Les éléments supplémentaires éventuellement ajoutés dans le dossier 4D Volume Desktop (cf. paragraphe [Personnaliser le dossier 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
@@ -453,11 +453,11 @@ Vous pouvez désigner autant de fichiers valides que vous voulez. Lors de la gé
 
 A l’issue de la génération, un nouveau fichier de licence de déploiement est automatiquement inclus dans un dossier Licences placé à côté de l’application exécutable (Windows) ou dans le progiciel (macOS).
 
-### macOS signing certificate
+### Certificat de signature macOS
 
 Le Générateur d’application permet de signer les applications 4D fusionnées sous macOS (applications monoposte, 4D Server et parties clientes sous macOS). Signer une application permet d’autoriser son exécution par la fonctionnalité Gatekeeper de macOS lorsque l’option "Mac App Store et Développeurs identifiés" est sélectionnée (cf. "A propos de Gatekeeper" ci-dessous).
 
-* Cochez l'option **Signer l'application** pour inclure la certification dans la procédure de génération d'application pour macOS. 4D will check the availability of elements required for certification when the build occurs:
+* Cochez l'option **Signer l'application** pour inclure la certification dans la procédure de génération d'application pour macOS. 4D vérifiera la disponibilité des éléments nécessaires à la certification au moment de la génération :
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
@@ -476,7 +476,7 @@ Pour obtenir un certificat de développeur auprès d’Apple, Inc., vous pouvez 
 
 #### A propos de Gatekeeper
 
-Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
+Gatekeeper est une fonction de sécurité de macOS qui contrôle l'exécution des applications téléchargées sur Internet. Si une application téléchargée ne provient pas de l’Apple Store ou n’est pas signée, elle est rejetée et ne peut être lancée.
 
 L'option **Signer l'application** du Générateur d’application de 4D permet de générer des applications compatibles avec cette option par défaut.
 
