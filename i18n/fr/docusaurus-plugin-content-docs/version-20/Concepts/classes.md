@@ -105,9 +105,9 @@ Les classes disponibles sont accessibles depuis leurs class stores. Il existe de
 <!-- REF #_command_.cs.Syntax -->**cs** : Object <!-- END REF -->
 
 <!-- REF #_command_.cs.Params -->
-| Paramètres | Type   |    | Description                                                                                    |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------- |
-| classStore | Object | <- | Class store utilisateur utilisateurs pour le projet ou le composant|<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                       |
+| ---------- | ------ | -- | --------------------------------------------------------------------------------- |
+| classStore | Object | <- | Class store utilisateur pour le projet ou le composant|<!-- END REF -->
 
 |
 
@@ -334,11 +334,11 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Dans une méthode projet
+// Vous pouvez instancier un objet
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"John";"age":42}
+// $o = {"name" : "John" ; "age":42}
 ```
 
 
@@ -505,17 +505,17 @@ Cet exemple crée une classe nommée `Square` à partir d'une classe nommée `Po
 ```4d
 //Class: Square
 
-//path: Classes/Square.4dm
+//path: Classes/Square.4dm 
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Polygon's width and height
+ // Appelle le constructeur de la classe parente avec les tailles
+ // fournies pour la largeur et la hauteur du Polygone
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // Dans les classes dérivées, Super doit être appelé
+ // avant que vous puissiez utiliser 'This'
  This.name:="Square"
 
 

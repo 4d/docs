@@ -68,6 +68,6 @@ This method modifies the value of a "settings" property stored in the storage ob
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1839                        |
-| Hilo seguro       | &cross; |
+| Hilo seguro       | &check; |
 
 

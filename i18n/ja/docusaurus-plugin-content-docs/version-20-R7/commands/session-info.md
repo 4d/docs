@@ -81,3 +81,10 @@ displayed_sidebar: docs
 
 [Session](../API/SessionClass.md)
 [Process info](process-info.md)
+
+## プロパティ
+
+|         |                             |
+| ------- | --------------------------- |
+| コマンド番号  | 1844                        |
+| スレッドセーフ | &check; |

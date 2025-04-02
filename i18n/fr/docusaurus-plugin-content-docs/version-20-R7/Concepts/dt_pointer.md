@@ -172,12 +172,12 @@ Les pointeurs vers des variables locales permettent dans de nombreux cas d’éc
 ...
 ```
 
-The debugger will display $param as follows:
+Le débogueur affichera $param comme suit :
 
 | $param | ->$MaVar (Méthode1) |
 | ------ | -------------------------------------- |
 
-You can expand $param and its value will be:
+Vous pouvez étendre $param et sa valeur sera :
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |

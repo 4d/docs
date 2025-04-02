@@ -84,3 +84,10 @@ He aquí un ejemplo de objeto de salida:
 [Session](session.md)
 [Session storage](session-storage.md)\
 [Process info](process-info.md)
+
+## Propiedades
+
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1844                        |
+| Hilo seguro       | &check; |

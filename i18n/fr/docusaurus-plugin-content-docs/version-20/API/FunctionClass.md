@@ -50,7 +50,7 @@ Vous pouvez également exécuter une fonction à l'aide des fonctions [`apply()`
 
 #### Passer des paramètres
 
-You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. Par exemple, vous pouvez écrire :
+Vous pouvez passer des paramètres à vos formules en utilisant la syntaxe séquentielle des paramètres basée sur $1, $2...$n. Par exemple, vous pouvez écrire :
 
 ```4d
  var $f : Object
@@ -138,7 +138,7 @@ Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que par
 La formule retournée peut être appelée avec :
 
 *   les méthodes [`.call()`](#call) ou [`.apply()`](#apply), ou
-*   object notation syntax (see [formula objects](#formula-objects)).
+*   la syntaxe de notation objet (voir objets formule[](#formula-objects)).
 
 ```4d
  var $f : 4D.Function
