@@ -401,10 +401,10 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parámetros | Tipo                           |                             | Descripción                  |
-| ---------- | ------------------------------ | :-------------------------: | ---------------------------- |
-| timeout    | Real                           |              ->             | Maximum wait time in seconds |
-| Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest           |
+| Parámetros | Tipo                           |                             | Descripción                         |
+| ---------- | ------------------------------ | :-------------------------: | ----------------------------------- |
+| timeout    | Real                           |              ->             | Tiempo máximo de espera en segundos |
+| Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest                  |
 
 <!-- END REF -->
 
@@ -414,13 +414,13 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 La función `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->espera una respuesta del servidor o hasta que se alcance el `timeout` especificado<!-- END REF -->.
 
-If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
+Si se pasa un *timeout*, la función espera la duración especificada en este parámetro. Se aceptan decimales.
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
 :::note
 
-During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
+Durante la ejecución de .wait(), se ejecutan las funciones de retrollamada de los workers, tanto si proceden de otras instancias `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md), como de otras llamadas [`CALL WORKER`](../commands-legacy/call-worker.md).  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
 
 :::
 
