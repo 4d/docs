@@ -81,3 +81,10 @@ Voici un exemple d'objet de sortie :
 
 [Session](../API/SessionClass.md)
 [Process info](process-info.md)
+
+## Propriétés
+
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 1844                        |
+| Thread safe        | &check; |
