@@ -22,7 +22,7 @@ Si la méthode base `On REST Authentication` n'a pas été définie, une session
 
 Sur 4D Server, les requêtes REST sont automatiquement traitées par des process préemptifs, **même en mode interprété**. Vous devez vous assurer que votre code est [conforme à l'exécution préemptive](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). Les process Web passent alors en mode coopératif et le code du serveur Web peut être débogué.
+> Pour déboguer le code web interprété sur la machine serveur, assurez-vous que le débogueur est [attaché au serveur](../Debugging/debugging-remote.md) ou [à une machine distante](../Debugging/debugging-remote.md). Les process Web passent alors en mode coopératif et le code du serveur Web peut être débogué.
 
 Avec 4D monoposte, le code interprété s'exécute toujours en mode coopératif.
 
@@ -88,7 +88,7 @@ var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
-    //A '/rest' URL has been called with headers username-4D and password-4D
+ //Un url '/rest' a été appelé avec les en-têtes username-4D et password-4D
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)
