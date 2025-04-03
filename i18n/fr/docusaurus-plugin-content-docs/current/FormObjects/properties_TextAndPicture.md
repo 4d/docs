@@ -100,18 +100,18 @@ Le titre du bouton sera décalé vers la droite et vers le bas pour le nombre de
 
 This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
 
-The picture can contain from 2 to 6 states.
+L'image peut contenir de 2 à 6 états.
 
-- 2 states: false, true
-- 3 states: false, true, rollover,
-- 4 states: false, true, rollover, disabled,
-- 5 states (check box and radio button only): false, true, false rollover, true rollover, disabled
-- 6 states (check box and radio button only): false, true, false rollover, true rollover, false disabled, true disable.
+- 2 états : faux, vrai
+- 3 états : faux, vrai, rollover,
+- 4 états : faux, vrai, rollover, désactivé,
+- 5 états (case à cocher et bouton radio seulement) : faux, vrai, faux rollover, vrai rollover, désactivé
+- 6 états (case à cocher et bouton radio seulement) : faux, vrai, faux rollover, vrai rollover, faux désactivé, vrai désactivé.
 
 :::note
 
-- "false" means button not clicked/not selected or check box unchecked (variable value=0)
-- "true" means button clicked/selected or check box checked (variable value=1)
+- "faux" signifie que le bouton n'a pas été cliqué/n'a pas été sélectionné ou que la case à cocher n'a pas été cochée (valeur de la variable = 0).
+- "vrai" signifie que le bouton a été cliqué/sélectionné ou que la case a été cochée (valeur de la variable = 1).
 
 :::
 
@@ -121,9 +121,9 @@ Chaque état est représenté par une image différente. Dans l'image source, le
 
 #### Grammaire JSON
 
-| Nom        | Type de données | Valeurs possibles                                                                |
-| ---------- | --------------- | -------------------------------------------------------------------------------- |
-| iconFrames | number          | Number of states in the icon picture. Minimum: 1 |
+| Nom        | Type de données | Valeurs possibles                                                                  |
+| ---------- | --------------- | ---------------------------------------------------------------------------------- |
+| iconFrames | number          | Nombre d'états dans l'image de l'icône. Minimum: 1 |
 
 #### Objets pris en charge
 
@@ -177,21 +177,21 @@ Voici le résultat des différentes options de cette propriété :
 
 ---
 
-## Image hugs title
+## Image collée au titre
 
 This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](properties_Text.md#horizontal-alignment) properties.
 
 Cette propriété n’a pas d’effet lorsque le bouton contient uniquement un titre (pas d’image associée) ou une image (pas de titre).
 
-By default, when a button contains a title and a picture, the elements are joined. The following graphic shows the effect of the `imageHugsTitle` property (true when property is enabled) with different button alignments:
+Par défaut, lorsqu'un bouton contient un titre et une image, les éléments sont joints. The following graphic shows the effect of the `imageHugsTitle` property (true when property is enabled) with different button alignments:
 
 ![](../assets/en/FormObjects/hugs.png)
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles                        |
-| -------------- | --------------- | ---------------------------------------- |
-| imageHugsTitle | boolean         | true (default), false |
+| Nom            | Type de données | Valeurs possibles                           |
+| -------------- | --------------- | ------------------------------------------- |
+| imageHugsTitle | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 

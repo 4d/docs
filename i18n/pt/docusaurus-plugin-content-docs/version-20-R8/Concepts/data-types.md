@@ -31,6 +31,13 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 (2) Na verdade, a variante não é um tipo de *dado*, mas um tipo de *variável* que pode conter um valor de qualquer outro tipo de dado.
 
+## Comandos
+
+You can always know the type of a field or variable using the following commands:
+
+- [`Type`](../commands-legacy/type.md) for fields and scalar variables
+- [`Value type`](../commands-legacy/value-type.md) for expressions
+
 ## Valor padrão
 
 Quando as [variáveis](variables.md) ou os [parâmetros](parameters.md) são digitados por meio de uma [declaração explícita](variables.md#declaring-variables), eles recebem um valor padrão, que manterão durante a sessão, desde que não tenham sido atribuídos.

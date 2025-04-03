@@ -286,9 +286,9 @@ La función `shutdown()`<!-- REF #TCPConnection.shutdown().Summary -->cierra el 
 
 <!-- REF #TCPConnection.wait().params -->
 
-| Parámetros | Tipo |     | Descripción                  |
-| ---------- | ---- | :-: | ---------------------------- |
-| timeout    | Real |  -> | Maximum wait time in seconds |
+| Parámetros | Tipo |     | Descripción                         |
+| ---------- | ---- | :-: | ----------------------------------- |
+| timeout    | Real |  -> | Tiempo máximo de espera en segundos |
 
 <!-- END REF -->
 

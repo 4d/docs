@@ -3,20 +3,20 @@ id: licenses
 title: Licencias
 ---
 
-## 4D Licenses Overview
+## Visión general de las licencias 4D
 
-To use 4D products and features, you need to install appropriate licenses on your computer. 4D provides two categories of licenses:
+Para utilizar los productos y funcionalidades 4D, necesita instalar las licencias apropiadas en su ordenador. 4D ofrece dos categorías de licencias:
 
-- **Development licenses**, required for working with 4D and 4D Server IDE.
-- **Deployment licenses**, required for deploying your custom applications built with 4D.
+- **Licencias de desarrollo**, necesarias para trabajar con 4D y 4D Server IDE.
+- **Licencias de despliegue**, necesarias para desplegar sus aplicaciones personalizadas creadas con 4D.
 
-### Development licenses
+### Licencias de desarrollo
 
-Development licenses are required to access the 4D Design environment and features. For example, *4D Developer Pro* is a single-user development license. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
+Las licencias de desarrollo son necesarias para acceder al entorno Diseño 4D y a las funcionalidades. Por ejemplo, *4D Developer Pro* es una licencia de desarrollo monopuesto. Las licencias de desarrollo registradas se instalan automáticamente [al iniciar sesión](GettingStarted/Installation.md) en el Asistente de bienvenida, o puede añadirlas utilizando el diálogo [Activación instantánea](#instant-activation).
 
-### Deployment licenses
+### Licencias de despliegue
 
-Deployment licenses can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+Las licencias de despliegue pueden ser anidadas en el paso de creación por el desarrollador o introducido en el primer lanzamiento por el usuario final, como se describe en la siguiente tabla:
 
 | Deployment license       | Descripción                                                        | Where to enter it                                                                                                                                   |
 | ------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |

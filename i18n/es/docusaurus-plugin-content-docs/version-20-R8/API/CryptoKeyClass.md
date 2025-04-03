@@ -321,10 +321,10 @@ El valor devuelto es la llave pública.
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones             |
-| ----------- | -------------------------- |
-| 20 R8       | Support of message as Blob |
-| 18 R4       | Añadidos                   |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 20 R8       | Soporte de mensajes como Blob |
+| 18 R4       | Añadidos                      |
 
 </details>
 
@@ -334,7 +334,7 @@ El valor devuelto es la llave pública.
 
 | Parámetros | Tipo         |                             | Descripción                                                           |
 | ---------- | ------------ | --------------------------- | --------------------------------------------------------------------- |
-| message    | Texto O Blob | ->                          | Message to sign                                                       |
+| message    | Texto O Blob | ->                          | Mensaje a firmar                                                      |
 | options    | Object       | ->                          | Opciones de firma                                                     |
 | Resultado  | Text         | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
 
@@ -405,10 +405,10 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones             |
-| ----------- | -------------------------- |
-| 20 R8       | Support of message as Blob |
-| 18 R4       | Añadidos                   |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 20 R8       | Soporte de mensajes como Blob |
+| 18 R4       | Añadidos                      |
 
 </details>
 
@@ -418,7 +418,7 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 | Parámetros | Tipo         |                             | Descripción                                                                                   |
 | ---------- | ------------ | --------------------------- | --------------------------------------------------------------------------------------------- |
-| message    | Texto O Blob | ->                          | Message that was used to produce the signature                                                |
+| message    | Texto O Blob | ->                          | Mensaje utilizado para producir la firma                                                      |
 | signature  | Text         | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
 | options    | Object       | ->                          | Opciones de firma                                                                             |
 | Resultado  | Object       | <- | Estado de la verificación                                                                     |

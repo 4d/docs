@@ -59,19 +59,19 @@ También se recogen algunos datos a intervalos regulares.
 
 ### Collected at new web session creation
 
-| Datos                                               | Tipo   | Notas                                                                                |
-| --------------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
-| databases.webMaxLicensedSessions    | Number | Maximum number of non-REST web sessions on the server that use the webserver license |
-| databases.restMaxLicensedSessions   | Number | Maximum number of REST web sessions on the server that use the REST license          |
-| databases.webMaxUnlicensedSessions  | Number | Maximum number of other non-REST web sessions on the server                          |
-| databases.restMaxUnlicensedSessions | Number | Maximum number of other REST web sessions on the server                              |
+| Datos                                               | Tipo   | Notas                                                                                          |
+| --------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------- |
+| databases.webMaxLicensedSessions    | Number | Número máximo de sesiones web no REST en el servidor que utilizan la licencia del servidor web |
+| databases.restMaxLicensedSessions   | Number | Número máximo de sesiones web REST en el servidor que utilizan la licencia REST                |
+| databases.webMaxUnlicensedSessions  | Number | Número máximo de otras sesiones web no REST en el servidor                                     |
+| databases.restMaxUnlicensedSessions | Number | Número máximo de otras sesiones web REST en el servidor                                        |
 
 ### Collected at datastore opening
 
-| Datos                                             | Tipo   | Notas                                                         |
-| ------------------------------------------------- | ------ | ------------------------------------------------------------- |
-| databases.externalDatastoreOpened | Number | Number of calls to `Open datastore`                           |
-| databases.internalDatastoreOpened | Number | Number of times the datastore is opened by an external server |
+| Datos                                             | Tipo   | Notas                                                            |
+| ------------------------------------------------- | ------ | ---------------------------------------------------------------- |
+| databases.externalDatastoreOpened | Number | Número de llamadas a `Open datastore`                            |
+| databases.internalDatastoreOpened | Number | Número de veces que un servidor externo abre el almacén de datos |
 
 ### Recogidas a intervalos regulares
 
@@ -98,8 +98,8 @@ También se recogen algunos datos a intervalos regulares.
 | indexSegment.diskWriteBytes    | Number  | Número de bytes escritos en el archivo índice                                            |
 | indexSegment.diskReadCount     | Number  | Número de lecturas en el archivo índice                                                  |
 | indexSegment.diskWriteCount    | Number  | Número de escrituras en el archivo índice                                                |
-| databases.webScalableSessions  | Boolean | True if scalable sessions are activated                                                  |
-| databases.webIPAddressesNumber | Number  | Number of different IP addresses that made a request to 4D Server                        |
+| databases.webScalableSessions  | Boolean | True si las sesiones escalables están activadas                                          |
+| databases.webIPAddressesNumber | Number  | Número de direcciones IP diferentes que hicieron una petición a 4D Server                |
 
 ### Recolección al cierre de la base y envío de los datos
 
@@ -115,9 +115,9 @@ También se recogen algunos datos a intervalos regulares.
 
 | Datos                                                       | Tipo   | Notas                                                         |
 | ----------------------------------------------------------- | ------ | ------------------------------------------------------------- |
-| databases.remoteDebugger4DRemoteAttachments | Number | Number of attachments to the remote debugger from a remote 4D |
-| databases.remoteDebuggerQodlyAttachments    | Number | Number of attachments to the remote debugger from Qodly       |
-| databases.remoteDebuggerVSCodeAttachments   | Number | Number of attachments to the remote debugger from VS Code     |
+| databases.remoteDebugger4DRemoteAttachments | Number | Número de adjuntos al depurador remoto desde un 4D remoto     |
+| databases.remoteDebuggerQodlyAttachments    | Number | Número de archivos adjuntos al depurador remoto de Qodly      |
+| databases.remoteDebuggerVSCodeAttachments   | Number | Número de archivos adjuntos al depurador remoto desde VS Code |
 
 ### Recolección cada vez que se llama a PHP execute
 
