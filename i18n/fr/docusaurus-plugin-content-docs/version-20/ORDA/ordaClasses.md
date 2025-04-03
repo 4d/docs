@@ -232,15 +232,15 @@ Les classes Entity vous permettent de définir des **attributs calculés** à l'
 - `Function query` *attributeName*
 - `Function orderBy` *attributeName*
 
-For information, please refer to the [Computed attributes](#computed-attributes-1) section.
+Pour plus d'informations, veuillez vous référer à la section [Attributs calculés](#computed-attributes-1).
 
 #### Attributs de type alias
 
-Entity classes allow you to define **alias attributes**, usually over related attributes, using the `Alias` keyword:
+Les classes d'entités vous permettent de définir des **attributs alias**, généralement au-dessus d'attributs liés, à l'aide du mot-clé `Alias`:
 
 `Alias` *attributeName* *targetPath*
 
-For information, please refer to the [Alias attributes](#alias-attributes-1) section.
+Pour plus d'informations, veuillez consulter la section [Attributs de type alias](#alias-attributes-1).
 
 
 #### Exemple
@@ -302,26 +302,26 @@ Si votre projet est conçu de façon à être exécuté en client/serveur, assur
 
 ### Vue d’ensemble
 
-Un champ calculé est un attribut de dataclass avec un type de données qui masque un calcul. [Les classes 4D standard](Concepts/classes.md) implémentent le concept de propriétés calculées avec des [fonctions d'accès](Concepts/classes.md#function-get-and-function-set) telles que `get` (*getter*) et `set` (*setter*). Les attributs de dataclass ORDA bénéficient de cette fonctionnalité et l'étendent avec deux fonctions supplémentaires : `query` et `orderBy`.
+Un attribut calculé est un attribut de dataclass avec un type de données qui masque un calcul. [Les classes 4D standard](Concepts/classes.md) implémentent le concept de propriétés calculées avec des [fonctions d'accès](Concepts/classes.md#function-get-and-function-set) telles que `get` (*getter*) et `set` (*setter*). Les attributs de dataclass ORDA bénéficient de cette fonctionnalité et l'étendent avec deux fonctions supplémentaires : `query` et `orderBy`.
 
-Un champ calculé nécessite au minimum une fonction `get` qui décrit comment sa valeur sera calculée. Lorsqu'une fonction *getter* est fournie à un attribut, 4D ne crée pas l'espace de stockage sous-jacent dans le datastore mais substitue le code de la fonction chaque fois que l'attribut est accédé. Si l'attribut n'est pas consulté, le code ne s'exécute jamais.
+Un attribut calculé nécessite au minimum une fonction `get` qui décrit comment sa valeur sera calculée. Lorsqu'une fonction *getter* est fournie à un attribut, 4D ne crée pas l'espace de stockage sous-jacent dans le datastore mais substitue le code de la fonction chaque fois que l'attribut est accédé. Si l'attribut n'est pas consulté, le code ne s'exécute jamais.
 
-Un champ calculé peut également mettre en œuvre une fonction `set`, qui s'exécute chaque fois qu'une valeur est attribuée à l'attribut. La fonction *setter* décrit ce qui est à faire avec la valeur attribuée, généralement en la redirigeant vers un ou plusieurs attributs de stockage ou, dans certains cas, vers d'autres entités.
+Un attribut calculé peut également mettre en œuvre une fonction `set`, qui s'exécute chaque fois qu'une valeur est assignée à l'attribut. La fonction *setter* décrit ce qui est à faire avec la valeur attribuée, généralement en la redirigeant vers un ou plusieurs attributs de stockage ou, dans certains cas, vers d'autres entités.
 
-Tout comme les champs de stockage, les champs calculés peuvent être inclus dans les **requêtes**. Par défaut, lorsqu'un champ calculé est utilisé dans une requête ORDA, il est calculé une fois par entité examinée. Dans certains cas, cela est suffisant. . Cependant, pour de meilleures performances, notamment en client/serveur, les champs calculés peuvent implémenter une fonction de requête `query` qui s'appuie sur les attributs des dataclass et qui bénéficie de leurs index.
+Tout comme les champs de stockage, les attribut calculés peuvent être inclus dans les **requêtes**. Par défaut, lorsqu'un attribut calculé est utilisé dans une requête ORDA, il est calculé une fois par entité examinée. Dans certains cas, cela est suffisant. Cependant, pour de meilleures performances, notamment en client/serveur, les attributs calculés peuvent implémenter une fonction de requête `query` qui s'appuie sur les attributs des dataclass et qui bénéficie de leurs index.
 
-De même, les champs calculés peuvent être inclus dans des **tris**. Lorsqu'un champ calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Tout comme dans les requêtes, les champs calculés peuvent mettre en œuvre une fonction `orderBy` qui substitue d'autres attributs pendant le tri, améliorant ainsi les performances.
+De même, les attributs calculés peuvent être inclus dans des **tris**. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Tout comme dans les requêtes, les attributs calculés peuvent mettre en œuvre une fonction `orderBy` qui substitue d'autres attributs pendant le tri, améliorant ainsi les performances.
 
 
 ### Comment définir les attributs calculés
 
-Créez un champ calculé en définissant un accesseur `get` dans la [**classe entity**](#entity-class) de la dataclass. L'attribut calculé sera automatiquement disponible dans les attributs de la dataclass et dans les attributs de l'entité.
+Vous créez un attribut calculé en définissant un accesseur `get` dans la [**classe entity**](#entity-class) de la dataclass. L'attribut calculé sera automatiquement disponible dans les attributs de la dataclass et dans les attributs de l'entité.
 
-D'autres fonctions de champs calculés (`set`, `query` et `orderBy`) peuvent également être définies dans la classe entity. Elles sont facultatives.
+D'autres fonctions d'attributs calculés (`set`, `query` et `orderBy`) peuvent également être définies dans la classe entity. Elles sont facultatives.
 
-Dans les fonctions de champs calculés, [`This`](Concepts/classes.md#this) désigne l'entité. Les attributs calculés peuvent être utilisés et traités comme n'importe quel attribut de dataclass, c'est-à-dire qu'ils seront traités par les fonctions de [classe entity](API/EntityClass.md) ou de [classe entity selection](API/EntitySelectionClass.md).
+Dans les fonctions d'attributs calculés, [`This`](Concepts/classes.md#this) désigne l'entité. Les attributs calculés peuvent être utilisés et traités comme n'importe quel attribut de dataclass, c'est-à-dire qu'ils seront traités par les fonctions de [classe entity](API/EntityClass.md) ou de [classe entity selection](API/EntitySelectionClass.md).
 
-> Les attributs calculés d'ORDA ne sont pas exposés ([**exposed**](#exposed-vs-non-exposed-functions)) par défaut. Exposez un champ calculé en ajoutant le mot-clé `exposed` lors de la définition de la fonction **get**.
+> Les attributs calculés d'ORDA ne sont pas exposés ([**exposed**](#exposed-vs-non-exposed-functions)) par défaut. Vous exposez un attribut calculé en ajoutant le mot-clé `exposed` lors de la définition de la fonction **get**.
 
 > **Les fonctions get et set** peuvent avoir la propriété [**local**](#local-functions) pour optimiser le traitement client/serveur.
 
@@ -334,7 +334,7 @@ Dans les fonctions de champs calculés, [`This`](Concepts/classes.md#this) dési
 {local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
 // code
 ```
-La fonction *getter* est obligatoire pour déclarer le champ calculé *attributeName*. Chaque fois que l'on accède à l'*attributeName*, 4D évalue le code de la fonction `getter` et retourne la valeur *$result*.
+La fonction *getter* est obligatoire pour déclarer l'attribut calculé *attributeName*. Chaque fois que l'on accède à l'*attributeName*, 4D évalue le code de la fonction `getter` et retourne la valeur *$result*.
 
 > Un attribut calculé peut utiliser la valeur d'un ou plusieurs autres attributs calculés. Les appels récursifs génèrent des erreurs.
 
@@ -653,7 +653,7 @@ Les attributs Alias sont particulièrement utiles pour gérer les relations N ve
 
 ### Comment définir des attributs alias
 
-You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass.
+Vous créez un attribut alias dans une classe de données en utilisant le mot-clé `Alias` dans la [**classe d'entité**](#entity-class) de la dataclass.
 
 
 ### `Alias <attributeName> <targetPath>`
@@ -665,15 +665,15 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-*attributeName* must comply with [standard rules for property names](../Concepts/identifiers.md#object-properties).
+*attributeName* doit respecter les [règles standard pour les noms de propriétés](../Concepts/identifiers.md#object-properties).
 
-*targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name.
+*targetPath* est un chemin d'attribut contenant un ou plusieurs niveaux, tel que "employee.company.name". Si l'attribut cible appartient à la même dataclass, *targetPath* est le nom de l'attribut.
 
 Un alias peut être utilisé comme partie d'un chemin d'un autre alias.
 
-A [computed attribute](#computed-attributes-1) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. Par exemple, si "fullName" est un attribut calculé, un alias avec le chemin "employee.fullName" est valide.
+Un [attribut calculé](#computed-attributes-1) peut être utilisé dans un chemin d'alias, mais uniquement en tant que dernier niveau du chemin, sinon une erreur est renvoyée. Par exemple, si "fullName" est un attribut calculé, un alias avec le chemin "employee.fullName" est valide.
 
-> ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
+> Les attributs alias ORDA **ne sont pas exposés** par défaut. Vous devez ajouter le mot-clé [`exposed`](#exposed-vs-non-exposed-functions) avant le mot-clé `Alias` si vous voulez que l'alias soit disponible pour les requêtes distantes.
 
 
 ### Utiliser les attributs alias
@@ -701,14 +701,14 @@ Les attributs alias sont en lecture seule (sauf lorsqu'ils sont basés sur un at
 
 ### Propriétés des alias
 
-Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
+L'attribut d'alias [`kind`](../API/DataClassClass.md#attributename) est "alias".
 
-An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
+Un attribut alias hérite son [`type`](../API/DataClassClass.md#attributename) de l'attribut cible :
 
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+- si le [`kind`](../API/DataClassClass.md#attributename) l'attribut cible est "storage", le type de données de l'alias est du même type,
+- si le [`kind`](../API/DataClassClass.md#attributename) de l'attribut cible est "relatedEntity" ou "relatedEntities", le type de données de l'alias est `4D.Entity` ou `4D.EntitySelection` (*"classnameEntity*" ou*"classnameSelection*").
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).
+Les attributs alias basés sur des relations ont un [`path`](../API/DataClassClass.md#attributename) spécifique, contenant le chemin de leurs attributs cibles. Les attributs alias basés sur des attributs de la même dataclass ont les mêmes propriétés que leurs attributs cibles (et aucune propriété de `path` ).
 
 
 ### Exemples
@@ -795,9 +795,9 @@ $arch.save() //courseName et name sont "Archaeology II"
 
 ## Fonctions exposées et non exposées
 
-For security reasons, all of your data model class functions and alias attributes are **not exposed** (i.e., private) by default to remote requests.
+Pour des raisons de sécurité, toutes les fonctions des classes de votre modèle de données et les attributs alias **ne sont pas exposés** par défaut (i.e. ils sont privés) pour les requêtes distantes.
 
-Les requêtes à distance incluent :
+Les requêtes distantes incluent :
 
 - Les requêtes envoyées par des applications 4D distantes connectées via `Open datastore`
 - Les requêtes REST
@@ -971,7 +971,7 @@ Une fois qu'une classe est définie, son nom n'est plus grisé dans l'Explorateu
 
 ### Modifier des classes
 
-To open a defined ORDA class in the 4D Code Editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
+Pour ouvrir une classe ORDA définie dans l'éditeur de code 4D, sélectionnez ou double-cliquez sur le nom d'une classe ORDA et choisissez **Editer...** dans le menu contextuel/le menu d'options de l'Explorateur :
 
 ![](../assets/en/ORDA/classORDA4.png)
 
