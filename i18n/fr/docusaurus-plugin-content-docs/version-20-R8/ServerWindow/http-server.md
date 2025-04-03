@@ -34,7 +34,7 @@ Cette zone fournit des informations spécifiques relatives au serveur Web de 4D 
 
 ## Informations SOAP
 
-This area provides specific information about the SOAP server of 4D Server and includes a control button.
+Cette zone fournit des informations spécifiques sur le serveur SOAP de 4D Server et comprend un bouton de contrôle.
 
 - **Requêtes SOAP**: Acceptées ou Refusées. Cette information indique si le serveur SOAP est actif. Pour que les requêtes SOAP soient acceptées, le serveur HTTP doit être démarré et le serveur SOAP doit explicitement accepter les requêtes (cf. bouton Accepter/Refuser).
 - **Connexions maximum** : Nombre maximum de connexions SOAP autorisées. Cette valeur dépend de la licence installée sur le poste serveur.

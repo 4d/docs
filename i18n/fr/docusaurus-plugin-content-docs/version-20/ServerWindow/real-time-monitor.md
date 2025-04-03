@@ -22,7 +22,7 @@ Les informations suivantes sont fournies pour chaque ligne :
     + **Sous-opérations** (le cas échéant) : affiche les opérations dépendantes de l'opération sélectionnée (par exemple, suppression des enregistrements liés avant suppression de l'enregistrement parent).
     + **Détails du process** : fournit des informations supplémentaires concernant la table, le champ, le process ou le client, en fonction du type d'opération
 
-> La page d’observation en temps réel utilise en interne la commande [`LIRE APERCU ACTIVITE`](https://doc.4d.com/4dv19/help/command/en/page1277.html). More information can be found in this command description.
+> La page d’observation en temps réel utilise en interne la commande [`LIRE APERCU ACTIVITE`](https://doc.4d.com/4dv19/help/command/en/page1277.html). Vous trouverez des informations supplémentaires dans la description de cette commande.
 
 La page est active et mise à jour en permanence dès qu’elle est affichée. Il est à noter que son fonctionnement peut ralentir sensiblement l’exécution de l’application. Il est possible de suspendre la mise à jour de la page d’une des manières suivantes :
 
