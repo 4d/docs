@@ -249,7 +249,7 @@ Lors de la création ou de la modification de classes de modèles de données, v
 
 Pour des raisons de sécurité, toutes vos fonctions de classe de modèle de données sont non-exposées (**not exposed**) par défaut aux requêtes distantes (c'est-à-dire qu'elles sont privées).
 
-Les requêtes à distance incluent :
+Les requêtes distantes incluent :
 
 - Les requêtes envoyées par des applications 4D distantes connectées via `Open datastore`
 - Les requêtes REST
