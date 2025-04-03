@@ -44,7 +44,7 @@ The following parameters can be used in the callback method:
 | Parameter |  | Type | Description |
 |-----------|----|------|-------------|
 | param1    |  | Text | The name of the 4D View Pro area object |
-| param2    |  | Text | The file path of the exported 4D View Pro object |
+| param2    |  | Text | Reserved for compatibility, this parameter is always empty |
 | param3    |  | Object | A reference to the command's *paramObj* parameter |
 | param4    |  | Object | An object returned by the method with a status message |
 |           | .success | Boolean | `True` if import was successful, `False` otherwise |
