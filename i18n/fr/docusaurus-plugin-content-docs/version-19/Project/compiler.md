@@ -59,7 +59,7 @@ Le contrôle syntaxique peut également être lancé directement à l'aide de la
 
 ### Générer le typage
 
-Le bouton **Générer le typage** crée ou met à jour les méthodes de compilation du typage. Les méthodes de compilation sont des méthodes projet qui regroupent toutes les déclarations de typage des variables et des tableaux (process et interprocess), ainsi que les paramètres des méthodes. Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet d'accélérer les durées de compilation.
+Le bouton **Générer le typage** crée ou met à jour les méthodes de typage du compilateur. Les méthodes de compilation sont des méthodes projet qui regroupent toutes les déclarations de typage des variables et des tableaux (process et interprocess), ainsi que les paramètres des méthodes. Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet de réduire les durées de compilation.
 
 Le nom de ces méthodes doit commencer par `Compiler_`. Vous pouvez définir le nom par défaut de chacune des 5 méthodes du compilateur dans [la fenêtre des paramètres du compilateur](#compiler-methods-for). Les méthodes de compilation qui sont générées et gérées par 4D ont automatiquement l'attribut `Invisible` :
 
@@ -175,7 +175,7 @@ Jusqu'à 5 méthodes de compilateur peuvent être générées ; une méthode de 
 - **Tableaux interprocess** : Regroupe les déclarations de tableaux interprocess ;
 - **Méthodes** : Regroupe les déclarations de paramètres de méthodes (par exemple, `C_LONGINT(mymethod;$1;$2)`).
 
-Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées de l'étiquette `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
+Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées du libellé `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
 
 ## Outils de compilation
 
