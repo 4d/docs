@@ -46,7 +46,7 @@ Dans la boîte de dialogue des Préférences de 4D, l'option **Fenêtre à ongle
 Trois options sont disponibles :
 
 *   **Selon les préférences système** (défaut) : les fenêtres de 4D se comporteront comme elles ont été définies dans les Préférences Système de macOS (En plein écran uniquement, Toujours ou Manuellement).
-*   **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
+*   **Jamais**: L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de code 4D entraîne toujours la création d'une nouvelle fenêtre (les onglets ne sont jamais créés).
 *   **Toujours** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera l'ajout d'un onglet.
 
 ### Apparence (macOS uniquement)
@@ -138,7 +138,7 @@ Lors de la création d’un nouveau fichier de données, 4D utilise la langue d�
 
 Cette zone permet de configurer l'accès à la documentation HTML de 4D qui s'affiche dans votre navigateur courant :
 
-*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
+*   Lorsque vous appuyez sur la touche **F1** alors que le curseur est inséré dans le nom d'une fonction de classe ou d'une commande 4D dans l'éditeur de code ;
 *   Lorsque l'utilisateur double-clique sur une commande dans la **page des commandes** de l'Explorateur .
 
 
