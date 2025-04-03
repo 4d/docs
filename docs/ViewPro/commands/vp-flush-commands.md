@@ -29,9 +29,9 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 In order to increase performance and reduce the number of requests sent, the 4D View Pro commands called by the developer are stored in a command buffer. When called, `VP FLUSH COMMANDS` executes the commands as a batch when leaving the method and empties the contents of the command buffer.
 
-If a `callback` function is provided, it is only executed after all stored commands and 4D custom functions have finished processing. This ensures that any follow-up actions, such as saving or printing the document, are only performed after all calculations have completed.
+If a *callback* function is provided, it is only executed after all stored commands and 4D custom functions have finished processing. This ensures that any follow-up actions, such as saving or printing the document, are only performed after all calculations have completed.
 
-The following parameters can be used in the callback method:
+The following parameters can be used in the callback function:
 
 | Parameter |  | Type | Description |
 |-----------|----|------|-------------|
@@ -56,7 +56,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
 VP FLUSH COMMANDS("ViewProArea1")
 ```
 ## Example 2
-You want to execute commands and empty the command buffer; and trigger a callback function after all commands and 4D custom function calculations have been completed:
+You want to execute commands, empty the command buffer and trigger a callback function:
 
 ```4d
 // Set text values in specific cells
