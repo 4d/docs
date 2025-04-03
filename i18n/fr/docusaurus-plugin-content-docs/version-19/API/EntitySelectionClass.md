@@ -6,7 +6,7 @@ title: EntitySelection
 
 Une entity selection est un objet contenant une ou plusieurs référence(s) à des [entités](ORDA/dsMapping.md#entity) appartenant à la même [Dataclass](ORDA/dsMapping.md#dataclass). Une entity selection peut contenir 0, 1 ou X entités de la dataclass - où X peut représenter le nombre total d'entités contenues dans la dataclass.
 
-Les entity selections peuvent être créées à partir de sélections existantes à l'aide de diverses fonctions de la classe [`DataClass`](DataClassClass.md) telles que [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou de la classe `EntityClass` elle-même, telles que [`.and()`](#and) ou [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](#create-entity-selection) command.
+Les entity selections peuvent être créées à partir de sélections existantes à l'aide de diverses fonctions de la classe [`DataClass`](DataClassClass.md) telles que [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou de la classe `EntityClass` elle-même, telles que [`.and()`](#and) ou [`orderBy()`](#orderby). Vous pouvez également créer des entity selections vierges à l'aide de la fonction [`dataClass.newSelection()`](DataClassClass.md#newselection) ou la commande [`Create entity selection`](#create-entity-selection).
 
 ### Sommaire
 
@@ -67,9 +67,9 @@ Si la table *dsTable* n'est pas exposée dans [`ds`](API/DataStoreClass.md#ds), 
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant la propriété suivante :
 
-| Propriété | Type | Description                                                                                                          |
-| --------- | ---- | -------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Label for the [optimization context](../ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
+| Propriété | Type | Description                                                                                                    |
+| --------- | ---- | -------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du [contexte d'optimisation](../ORDA/entities.md#clientserver-optimization) appliqué à l'entity selection. |
 
 #### Exemple
 

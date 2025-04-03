@@ -35,7 +35,7 @@ Double-cliquez sur chaque erreur détectée pour ouvrir la méthode ou la classe
 
 Utilisez les commandes **Erreur précédente** / **Erreur suivante** du menu **Méthode** pour naviguer d'une erreur à l'autre.
 
-Le nombre d'erreurs trouvées lors de vos premières compilations peut être déconcertant, mais ne vous laissez pas décourager. Vous découvrirez rapidement qu'elles proviennent souvent de la même source, à savoir la non-conformité avec certaines conventions du projet. The compiler always provides a [precise diagnosis](#error-file) of the errors in order to help you correct them.
+Le nombre d'erreurs trouvées lors de vos premières compilations peut être déconcertant, mais ne vous laissez pas décourager. Vous découvrirez rapidement qu'elles proviennent souvent de la même source, à savoir la non-conformité avec certaines conventions du projet. Le compilateur fournit toujours un [diagnostic précis](#error-file) des erreurs afin de vous aider à les corriger.
 
 > La compilation nécessite une licence appropriée. Sans cette licence, il n'est pas possible d'effectuer une compilation (les boutons sont désactivés). Néanmoins, il est toujours possible de vérifier la syntaxe et de générer des méthodes de typage.
 
@@ -59,7 +59,7 @@ Le contrôle syntaxique peut également être lancé directement à l'aide de la
 
 ### Générer le typage
 
-Le bouton **Générer le typage** crée ou met à jour les méthodes de compilation du typage. Les méthodes de compilation sont des méthodes projet qui regroupent toutes les déclarations de typage des variables et des tableaux (process et interprocess), ainsi que les paramètres des méthodes. Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet d'accélérer les durées de compilation.
+Le bouton **Générer le typage** crée ou met à jour les méthodes de typage du compilateur. Les méthodes de compilation sont des méthodes projet qui regroupent toutes les déclarations de typage des variables et des tableaux (process et interprocess), ainsi que les paramètres des méthodes. Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet de réduire les durées de compilation.
 
 Le nom de ces méthodes doit commencer par `Compiler_`. Vous pouvez définir le nom par défaut de chacune des 5 méthodes du compilateur dans [la fenêtre des paramètres du compilateur](#compiler-methods-for). Les méthodes de compilation qui sont générées et gérées par 4D ont automatiquement l'attribut `Invisible` :
 
@@ -107,7 +107,7 @@ Seuls les warnings comportant un numéro peuvent être désactivés. Les numéro
 
 ## Paramètres du compilateur
 
-La page "Compilateur" de la boîte de dialogue de Propriétés vous permet de définir les paramètres liés à la compilation du projet. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
+La page "Compilateur" de la boîte de dialogue de Propriétés vous permet de définir les paramètres liés à la compilation du projet. Vous pouvez ouvrir directement cette page à partir de la [fenêtre du compilateur](#compiler-window-features) en cliquant sur le bouton **Paramètres du compilateur** :
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -117,11 +117,11 @@ Cette zone regroupe les options génériques utilisées lors du processus de com
 
 #### Générer le fichier de symboles
 
-Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_symbols.txt`.
+Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Le fichier de symboles est créé dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet et est nommé `ProjectName_symbols.xml`.
 
 #### Générer le fichier d'erreurs
 
-Utilisé pour générer le fichier d'erreurs (voir [fichier d'erreurs](#error-file)) au moment du contrôle syntaxique. The error file is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project with the name `ProjectName_errors.xml`.
+Utilisé pour générer le fichier d'erreurs (voir [fichier d'erreurs](#error-file)) au moment du contrôle syntaxique. Le fichier d'erreur est créé dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet et est nommé `ProjectName_errors.xml`.
 
 #### Chemin de compilation
 
@@ -175,13 +175,13 @@ Jusqu'à 5 méthodes de compilateur peuvent être générées ; une méthode de 
 - **Tableaux interprocess** : Regroupe les déclarations de tableaux interprocess ;
 - **Méthodes** : Regroupe les déclarations de paramètres de méthodes (par exemple, `C_LONGINT(mymethod;$1;$2)`).
 
-Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées de l'étiquette `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
+Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées du libellé `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
 
 ## Outils de compilation
 
 ### Fichier de symboles
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs-folder) of the project during compilation. Il est divisé en plusieurs parties :
+Si vous cochez l'option [**Générer le fichier de symboles**](#symbol-file) dans les paramètres du compilateur, un fichier de symboles appelé `ProjectName_symbols.txt` est créé dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet pendant la compilation. Il est divisé en plusieurs parties :
 
 #### Liste des variables process et interprocess
 
@@ -228,7 +228,7 @@ type résultat, nombre d'appels, Thread Safe ou Thread Unsafe
 
 ### Fichier d’erreurs
 
-Vous pouvez générer ou non un fichier d’erreurs lors de la compilation grâce l'option [**Générer le fichier d'erreurs**](#generer-le-fichier-derreur) des propriétés du compilateur. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs-folder) of the project.
+Vous pouvez générer ou non un fichier d’erreurs lors de la compilation grâce l'option [**Générer le fichier d'erreurs**](#generer-le-fichier-derreur) des propriétés du compilateur. Le fichier d'erreur est automatiquement nommé `projectName_errors.xml` et est placé dans le [dossier Logs](../Project/architecture.md#logs-folder) du projet.
 
 Bien que les erreurs soient directement accessibles via la [fenêtre de compilation](#compilation), il peut être intéressant de disposer d’un fichier d’erreurs qu’il est alors possible de transmettre d’un poste à l’autre. Le fichier d’erreurs est généré au format XML afin de faciliter l’analyse automatique de son contenu. Il permet également la création d’interfaces personnalisées de présentation des erreurs.
 
@@ -290,13 +290,13 @@ Les deux compilateurs sont intégrés dans 4D. Le compilateur adéquat est autom
 
 Le compilateur classique génère du code compilé natif pour les processeurs Intel/AMD sur n'importe quelle machine. Il ne nécessite aucune configuration particulière.
 
-Resulting compiled code is stored in the [DerivedData](./architecture.md#deriveddata-folder) folder of the project.
+Le code compilé qui en résulte est stocké dans le dossier [DerivedData](./architecture.md#deriveddata-folder) du projet.
 
 ### Compilateur Silicon
 
 Le compilateur Silicon génère du code compilé natif pour les processeurs Apple Silicon tels que le *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](./architecture.md#libraries-folder) folder of the project.
+Le code compilé qui en résulte est stocké dans le dossier [Libraries](./architecture.md#libraries-folder) du projet.
 
 #### Conditions requises
 

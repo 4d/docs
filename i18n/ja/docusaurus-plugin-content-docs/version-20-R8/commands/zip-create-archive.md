@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 *destinationFile* には、作成する ZIPアーカイブ (名前や位置など) を記述する `4D.File` オブジェクトを渡します。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。
 
-Once an archive is created, you can use the [ZIP Read archive](zip-read-archive.md) command to access it.
+アーカイブが作成されると、[ZIP Read archive](zip-read-archive.md) を使用してアクセスすることができます。
 
 **ステータスオブジェクト**
 

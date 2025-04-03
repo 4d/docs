@@ -231,7 +231,7 @@ Cuando se pasa `Delete with contents`:
 
 - La carpeta, junto con todo su contenido, se elimina.
  **Advertencia**: incluso esta carpeta y/o su contenido estén bloqueados o definidos como de sólo lectura, si el usuario actual tiene los derechos de acceso adecuados, la carpeta (y su contenido) aún se elimina.
-- Si esta carpeta, o cualquiera de los archivos que contiene, no puede ser eliminada, la eliminación se interrumpe tan pronto como se detecta el primer elemento inaccesible y se devuelve un error(\*). En este caso, la carpeta puede ser eliminada sólo parcialmente. When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
+- Si esta carpeta, o cualquiera de los archivos que contiene, no puede ser eliminada, la eliminación se interrumpe tan pronto como se detecta el primer elemento inaccesible y se devuelve un error(\*). En este caso, la carpeta puede ser eliminada sólo parcialmente. Cuando se interrumpe la eliminación, puede utilizar el comando `Last errors` para recuperar el nombre y la ruta del archivo infractor.
 - Si la carpeta no existe, el comando no hace nada y no devuelve ningún error.
  (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 

@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Each returned object includes the following main properties:
 
-| **Propiedad** | **Type** | **Description**                                                                                                                                                                               |
+| **Propiedad** | **Tipo** | **Description**                                                                                                                                                                               |
 | ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName    | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                         |
 | code          | integer  | Valor numérico del evento de formulario.                                                                                                                                      |
@@ -37,8 +37,8 @@ For example, in the case of a click on a button, the object contains the followi
 
 The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
 
-- List box or list box column objects, see the *list box documentation on developer.4d.com*.
-- 4D View Pro areas, see *On VP Ready form event*.
+- List box or list box column objects, see [this section](../FormObjects/listbox_overview.md#additional-properties).
+- 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
 
 **Note:** If there is no current event, **FORM Event** returns a null object.
 
@@ -103,9 +103,9 @@ The resulting list box when rows are selected:
 
 ## Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 1606                            |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1606                        |
+| Hilo seguro       | &check; |
 
 

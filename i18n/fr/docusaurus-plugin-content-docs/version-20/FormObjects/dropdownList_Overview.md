@@ -135,7 +135,7 @@ Lorsque le formulaire est exécuté, 4D gère automatiquement la liste déroulan
 
 #### Valeur de l'élément sélectionné ou Référence de l'élément sélectionné
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Cette option permet d'optimiser la taille des données stockées.
+Lorsque vous avez associé une liste déroulante avec une énumération et avec un champ ou une variable, vous pouvez configurer la propriété [**Type de données**](properties_DataSource.md#data-type-list) sur **Valeur de l'élément sélectionné** ou **Référence de l'élément sélectionné**. Cette option permet d'optimiser la taille des données stockées.
 
 ### Utiliser une énumération hiérarchique
 

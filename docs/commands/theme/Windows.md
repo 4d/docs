@@ -1,6 +1,7 @@
 ---
-id: Windows
+id: Windows_theme
 title: Windows
+slug: /commands/theme/Windows
 ---
 
 

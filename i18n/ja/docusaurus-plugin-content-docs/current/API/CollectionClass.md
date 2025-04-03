@@ -1961,7 +1961,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 :::
 
-If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula.md) that defines the sort order. 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をフォーミュラに渡せます。
+昇順以外の方法でコレクションをソートしたい場合には、ソート順を定義する *formula* ([Formula オブジェクト](../commands/formula.md)) を指定する必要があります。 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をフォーミュラに渡せます。
 
 フォーミュラは以下の引数を受け取ります:
 
@@ -2510,7 +2510,7 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-*queryString* には、すべての種類の引数 を混ぜて渡すことができます。 *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます:
+*queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます:
 
 - 定数値 (プレースホルダーを使用しない)
 - インデックスプレースホルダーや命名プレースホルダー
@@ -3123,13 +3123,13 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 <!-- REF #collection.some().Params -->
 
-| 引数         | 型                           |                             | 説明                                                        |
-| ---------- | --------------------------- | :-------------------------: | --------------------------------------------------------- |
-| startFrom  | Integer                     |              ->             | テストを開始するインデックス                                            |
-| formula    | 4D.Function |              ->             | フォーミュラオブジェクト                                              |
-| methodName | Text                        |              ->             | メソッド名                                                     |
-| param      | any                         |              ->             | 渡す引数                                                      |
-| 戻り値        | Boolean                     | <- | True if at least one element successfully passed the test |
+| 引数         | 型                           |                             | 説明                        |
+| ---------- | --------------------------- | :-------------------------: | ------------------------- |
+| startFrom  | Integer                     |              ->             | テストを開始するインデックス            |
+| formula    | 4D.Function |              ->             | フォーミュラオブジェクト              |
+| methodName | Text                        |              ->             | メソッド名                     |
+| param      | any                         |              ->             | 渡す引数                      |
+| 戻り値        | Boolean                     | <- | 少なくとも一つの要素がテストをパスすれば true |
 
 <!-- END REF -->
 

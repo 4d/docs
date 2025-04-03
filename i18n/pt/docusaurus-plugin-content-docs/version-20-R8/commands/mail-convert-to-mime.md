@@ -87,9 +87,9 @@ $mime:=MAIL Convert to MIME($mail)
 
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1604                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1604                        |
+| Thread safe    | &check; |
 
 

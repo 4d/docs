@@ -17,11 +17,11 @@ Lorsque vous travaillez avec un datastore distant référencé par des appels à
 
 Une session est créée sur le datastore distant pour gérer la connexion. Cette session est identifiée à l'aide d'un ID de session interne, associé au `localID` de l'application 4D. Cette session gère automatiquement l'accès aux données, aux entity selections et aux entités.
 
-Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie :
+Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie que :
 
-*   Que si d'autres process de la même application doivent accéder au même datastore distant, ils peuvent utiliser le même `localID` et partager alors la même session.
-*   Que si un autre process de la même application ouvre le même datastore distant, mais avec un autre `localID`, il créera une nouvelle session sur le datastore distant.
-*   Que si un autre poste se connecte au même datastore distant avec le même `localID`, il créera une autre session avec un autre cookie.
+*   si d'autres process de la même application doivent accéder au même datastore distant, ils peuvent utiliser le même `localID` et partager alors la même session.
+*   si un autre process de la même application ouvre le même datastore distant, mais avec un autre `localID`, il créera une nouvelle session sur le datastore distant.
+*   si un autre poste se connecte au même datastore distant avec le même `localID`, il créera une autre session avec un autre cookie.
 
 Ces principes sont illustrés dans les graphiques suivants :
 
@@ -91,9 +91,9 @@ Le contexte d'optimisation est fondé sur ce qui suit :
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
-:::warning Compatibility Note
+:::warning Note de compatibilité
 
-Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D v20.x remote application can only use contexts of a 4D Server v20.x datastore.
+Les contextes gérés dans les connexions établies via [`Open datastore`](../API/DataStoreClass.md#open-datastore) ne peuvent être utilisés qu'entre les versions principales similaires de 4D. Par exemple, une application distante 4D 20.x ne peut utiliser que des contextes d'un datastore 4D Server 20.x.
 
 :::
 
@@ -116,7 +116,7 @@ Grâce à l'optimisation, cette requête récupérera uniquement les données de
 Vous pouvez tirer un meilleur parti de l'optimisation en utilisant la propriété **context**. Cette propriété référence un contexte d'optimisation "appris" pour une entity selection. Elle peut être passée comme paramètre aux fonctions ORDA qui retournent de nouvelles entity selections, afin que les entity selections demandent directement au serveur les attributs utilisés, sans passer par la phase d'apprentissage.
 > Vous pouvez également créer des contextes à l'aide de la fonction [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
-Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. The same optimization context property can be passed to unlimited number of entity selections on the same dataclass. Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
+Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Toutes les fonctions ORDA qui gèrent les entity selections prennent en charge la propriété **context** (par exemple [`dataClass.query()`](../API/DataClassClass.md#query) ou [`dataClass.all()`](../API/DataClassClass.md#all)). Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
 > Un mécanisme similaire est mis en œuvre pour les entités chargées, de sorte que seuls les attributs utilisés sont demandés (voir la fonction [`dataClass.get()`](../API/DataClassClass.md#get)).
 
 **Exemple avec `dataClass.query()`:**

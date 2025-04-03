@@ -42,9 +42,9 @@ Si el comando se ejecuta con el parámetro \* desde un proceso en la máquina se
 
 ## Propiedades
 
-|                   |                                 |
-| ----------------- | ------------------------------- |
-| Número de comando | 372                             |
-| Hilo seguro       | &amp;check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 372                         |
+| Hilo seguro       | &check; |
 
 

@@ -5,12 +5,14 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( tableNum | aPtr ) : any<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( *tableNum* ) : Pointer<br/>**Table** ( *tablePtr* ) : Integer<br/>**Table** ( *fieldPtr* ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum &#124; aPtr | Integer, Pointer | &#8594;  | Table number, or Table pointer, or Field pointer |
-| Function result | Integer, Pointer | &#8592; | Table pointer, if a Table number is passedTable number, if a Table pointer is passedTable number, if a Field pointer is passed |
+| tableNum | Integer | &#8594;  | Table number |
+| tablePtr | Pointer | &#8594;  | Table pointer |
+| fieldPtr | Pointer | &#8594;  | Field pointer |
+| Function result | any | &#8592; | Table pointer, if a Table number is passed<br/>Table number if a Table pointer or a Field pointer is passed |
 
 <!-- END REF-->
 

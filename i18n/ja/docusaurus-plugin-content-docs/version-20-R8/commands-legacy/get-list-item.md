@@ -5,7 +5,7 @@ slug: /commands/get-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *list* ; itemPos | * ; *itemRef* ; *itemText* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *list* ; *itemPos* ; *itemRef* ; *itemText* {; *sublist* ; *expanded*} )<br/>**GET LIST ITEM** ( {* ;} *list* ; * ; *itemRef* ; *itemText* {; *sublist* ; *expanded*} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

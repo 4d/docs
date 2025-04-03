@@ -3,7 +3,7 @@ id: overview
 title: Préférences
 ---
 
-User preferences specify various settings affecting your working environment, e.g. default options, display themes, Code Editor features, shortcuts, etc. Elles sont appliquées à tous les projets ouverts avec votre application 4D ou 4D Server.
+Les préférences utilisateur spécifient divers paramètres associés à votre environnement de travail, tels que les options par défaut, les thèmes d'affichage, les fonctionnalités de l'éditeur de code, les raccourcis, etc. Elles sont appliquées à tous les projets ouverts avec votre application 4D ou 4D Server.
 
 **4D Server** : Le verrouillage des objets se produit lorsque deux utilisateurs ou plus tentent de modifier les paramètres de la boîte de dialogue Préférences en même temps. Un seul utilisateur à la fois peut utiliser la boîte de dialogue Préférences.
 

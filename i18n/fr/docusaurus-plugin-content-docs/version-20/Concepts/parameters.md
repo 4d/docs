@@ -264,16 +264,16 @@ La commande ci-dessus signifie que tous les paramètres à partir du quatrième 
 
 ## Méthode `Compiler`
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
+Même si ce n'est pas obligatoire en [mode interprété](interpreted.md), vous devez déclarer chaque paramètre dans les méthodes appelées dès que vous avez l'intention de compiler votre projet.
 
-When using the `#DECLARE` keyword, parameters are automatically declared. Par exemple :
+Lors de l'utilisation du mot-clé `#DECLARE`, les paramètres sont automatiquement déclarés. Par exemple :
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // all parameters are declared with their type
+	// tous les paramètres de la méthode sont déclarés avec leur type
 ```
 
-However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
+Cependant, une fonctionnalité du compilateur 4D vous permet de déclarer tous vos paramètres dans une méthode spécifique à l'aide d'une syntaxe spéciale :
 
 - vous pouvez regrouper tous les paramètres des variables locales des méthodes projet dans une ou plusieurs méthode(s) projet
 - le nom de la ou des méthode(s) doit commencer par "**Compiler**", par exemple "Compiler_MyParameters".
@@ -292,11 +292,11 @@ Cette syntaxe n'est pas exécutable en mode interprété.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Vous pouvez créer et remplir automatiquement une méthode `Compiler` contenant tous vos paramètres en utilisant le bouton [**Méthodes Compilateur pour...**](../Project/compiler.md#compiler-methods-for) **Méthodes** dans la boîte de dialogue des Propriétés du compilateur.
 
 :::info
 
-Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
+Certains contextes ne prennent pas en charge la déclaration dans une méthode "Compiler", ils sont donc gérés de manière spécifique :
 
 - Méthodes base - Par exemple, la méthode base `On Web Connection` reçoit six paramètres de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
@@ -306,7 +306,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ```
 
-- Functions - Function parameters are automatically declared for compilation in the function prototype. Par exemple :
+- Fonctions - Les paramètres des fonctions sont automatiquement déclarés pour la compilation dans le prototype de la fonction. Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
@@ -350,7 +350,7 @@ Ce cas est traité par 4D en fonction du contexte :
 
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
-    + if the parameter was declared using the [standard named syntax](#declaring-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
+    + si le paramètre a été déclaré en utilisant [la syntaxe standard par nom](#named-parameters) (`#DECLARE` ou `Function`), une erreur est générée lorsque la méthode est appelée.
     + si le paramètre a été déclaré à l'aide de (`C_XXX`), aucune erreur n'est générée, la méthode appelée reçoit une valeur vide du type attendu.
 
 
@@ -473,7 +473,7 @@ APPEND TEXT(vtSomeText;$path) //Affiche le message et l'annexe au document dans 
 APPEND TEXT(vtSomeText;"";$wpArea) //Affiche le message et l'écrit dans $wpArea
 ```
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-object-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> Lorsque des paramètres facultatifs sont nécessaires dans vos méthodes, vous pouvez également envisager d'utiliser des [propriétés d'objet en tant que paramètres nommés](#using-object-properties-as-named-parameters), ce qui constitue un moyen souple de gérer un nombre variable de paramètres.
 
 
 
@@ -521,7 +521,7 @@ Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ.
  ALERT($0)
 ```
 
-Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". This is described in the [Returning values](#returned-value) paragraph.
+Cette deuxième technique de renvoi d'une valeur par une sous-routine s'appelle "utiliser une fonction". Ceci est décrit dans le paragraphe [Valeurs retournées](#returned-value).
 
 
 ### Cas particuliers : objets et collections

@@ -38,7 +38,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 **戻り値**
 
-A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
+新規の [`4D.Signal` オブジェクト](../API/SignalClass.md#signal-object)。
 
 ## 例題
 

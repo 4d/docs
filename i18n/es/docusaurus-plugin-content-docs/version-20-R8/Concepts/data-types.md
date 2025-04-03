@@ -7,7 +7,7 @@ En 4D, los datos se manejan según su tipo en dos lugares: los campos de la base
 
 Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no están disponibles directamente en el lenguaje y se convierten automáticamente. Por el contrario, algunos tipos de datos sólo pueden manejarse a través del lenguaje. La siguiente tabla lista todos los tipos de datos disponibles y cómo se soportan/declaran:
 
-| Tipos de datos                                          | Soporte para la base (1) | Soporte para el lenguaje   | [`var` declaration](variables.md) | [Declaración ARRAY\`](arrays.md) |
+| Tipos de datos                                          | Soporte para la base (1) | Soporte para el lenguaje   | [declaración `var`](variables.md) | [Declaración ARRAY\`](arrays.md) |
 | ------------------------------------------------------- | ------------------------------------------- | -------------------------- | --------------------------------- | -------------------------------- |
 | [Alfanumérico](dt_string.md)                            | Sí                                          | Convertido en texto        | -                                 | -                                |
 | [Text](Concepts/dt_string.md)                           | Sí                                          | Sí                         | `Text`                            | `ARRAY TEXT`                     |
@@ -30,6 +30,13 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 (1) Tenga en cuenta que ORDA maneja los campos de la base a través de objetos (entidades) y por lo tanto, sólo soporta los tipos de datos disponibles para estos objetos. Para más información, consulte la descripción del tipo de datos [Objeto](Concepts/dt_object.md).
 
 (2) Variant no es en realidad un tipo *data* sino un tipo *variable* que puede contener un valor de cualquier otro tipo de datos.
+
+## Comandos
+
+You can always know the type of a field or variable using the following commands:
+
+- [`Type`](../commands-legacy/type.md) for fields and scalar variables
+- [`Value type`](../commands-legacy/value-type.md) for expressions
 
 ## Valores por defecto
 

@@ -5,7 +5,7 @@ slug: /commands/field-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field name.Syntax-->**Field name** ( pontCampo|numTabela {; *numCampo*} ) : Text<!-- END REF-->
+<!--REF #_command_.Field name.Syntax-->**Field name** ( *pontCampo* ) : Text<br/>**Field name** ( *numTabela* ; *numCampo* ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

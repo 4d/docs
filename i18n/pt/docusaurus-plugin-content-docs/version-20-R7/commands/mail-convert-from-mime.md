@@ -87,14 +87,11 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($email)
 ```
 
-\| mime | BLOB, Text | &#8594;  | Email in MIME |
-\| Function result | Object | &#8592; | Email object |
-
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1681                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1681                        |
+| Thread safe    | &check; |
 
 

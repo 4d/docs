@@ -20,7 +20,7 @@ O comando <!-- REF #_method_.VP SET ATUALIZADOR DO SHEET.Summary --> define a fo
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-Em *sheet*, passe o índice da planilha a ser definida como planilha atual. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.
+Em *sheet*, passe o índice da planilha a ser definida como planilha atual. Se o índice passado for inferior a 0 ou exceder o número de folhas, o comando não fará nada.
 
 > A indexação começa em 0.
 

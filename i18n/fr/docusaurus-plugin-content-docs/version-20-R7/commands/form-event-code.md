@@ -351,9 +351,9 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 
 ## Propriétés
 
-|                    |                                 |
-| ------------------ | ------------------------------- |
-| Numéro de commande | 388                             |
-| Thread safe        | &amp;cross; |
+|                    |                             |
+| ------------------ | --------------------------- |
+| Numéro de commande | 388                         |
+| Thread safe        | &cross; |
 
 

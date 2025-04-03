@@ -89,33 +89,33 @@ As fórmulas referem-se frequentemente a outras células através de endereços 
 
 Essa fórmula se refere às células C6 e C7. Ou seja, 4D View Pro é instruído a consultar essas outras células para obter os valores a serem usados na fórmula.
 
-When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
+Quando você copia ou move essas fórmulas para novos locais, o endereço de cada célula dessa fórmula muda ou permanece o mesmo, dependendo de como foi digitado.
 
 - Uma referência que muda é chamada uma **referência relativa** e se refere a uma célula conforme a distância à esquerda/direita e acima/abaixo da célula com a fórmula.
 - Uma referência que aponta sempre para uma célula específica é chamada de **referência absoluta**.
-- You can also create a mixed reference which always points to a fixed row or column.
+- Pode também criar uma referência mista que sempre aponta para uma linha fixa ou coluna.
 
 ### Notação de referências
 
 If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. You may make the reference an absolute reference by putting a dollar sign in front of the letter and the number, as in `$C$5`.
 
-You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
+You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. Uma referência mista permite que você especifique a linha ou a coluna como absoluta, enquanto permite que a outra parte do endereço consulte relativamente.
 
-A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Uma referência a uma célula nomeada é sempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](commands/vp-add-range-name.md) command.
+Uma conveniente, maneira rápida e precisa de especificar uma referência absoluta é nomear a célula e usar esse nome no lugar do endereço da célula. Uma referência a uma célula nomeada é sempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](commands/vp-add-range-name.md) command.
 
 A tabela seguinte mostra o efeito das diferentes notações:
 
 | Exemplo        | Tipo de referência | Descrição                                                                                                                                                                          |
 | -------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                                                       |
+| C5             | Relativo           | A referência é a localização relativa da célula C5, dependendo da localização da célula na qual a referência é usada pela primeira vez                                             |
 | $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                           |
-| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.                               |
-| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                                                |
+| $C5            | Mixed              | A referência é sempre à coluna C, mas a referência de linha é relativa à localização da célula na qual a referência é usada pela primeira vez.                     |
+| C$5            | Mixed              | Referência é sempre a linha 5, mas a referência da coluna é relativa à localização da célula na qual a referência é usada pela primeira vez                                        |
 | Nome da célula | Absoluto           | A referência é absoluta. Siempre se referirá a la [celda o rango nombrado](commands/vp-add-range-name.md) sin importar donde se use la referencia. |
 
 ## Funções incorporadas
 
-Spreadsheet functions are preset formulas used to calculate cell values. When you type the first letter of the function to enter, a pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+Funções da planilha são fórmulas pré-definidas usadas para calcular valores de célula. Quando você digita a primeira letra da função a ser inserida, um menu pop-up que lista as funções e referências disponíveis é exibido, permitindo que você selecione os elementos desejados:
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
@@ -123,9 +123,9 @@ Veja [**A lista ampliada de funções de SpreadJS**](https://developer.mescius.c
 
 ## Funções 4D
 
-O 4D View Pro permite que você defina e chame **funções personalizadas 4D**, que executam [fórmulas 4D](API/FunctionClass.md). Using 4D custom functions extends the possibilities of your 4D View Pro documents and allows powerful interactions with the 4D database.
+O 4D View Pro permite que você defina e chame **funções personalizadas 4D**, que executam [fórmulas 4D](API/FunctionClass.md). O uso de funções personalizadas 4D amplia as possibilidades de seus documentos 4D View Pro e permite interações poderosas com o banco de dados 4D.
 
-4D custom functions provide access, from within your 4D View Pro formulas, to:
+Funções personalizadas 4D fornecem acesso, de dentro de suas fórmulas 4D View Pro, para:
 
 - Variáveis processo 4D,
 - campos,
@@ -165,7 +165,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 ### Exemplo Hello World
 
-We want to print "Hello World" in a 4D View Pro area cell using a 4D project method:
+Queremos imprimir "Hello World" em uma célula de área do 4D View Pro usando um método de projeto 4D:
 
 1. Crie um método projeto "myMethod" com o seguinte código:
 
@@ -175,7 +175,7 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 
 ```
 
-2. Execute the following code before opening any form that contains a 4D View Pro area:
+2. Execute o código a seguir antes de abrir qualquer formulário que contenha uma área 4D View Pro:
 
 ```4d
   Case of
@@ -199,7 +199,7 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 
 ### Parâmetros
 
-Parameters can be passed to 4D functions that call project methods using the following syntax:
+Os parâmetros podem ser passados para funções 4D que chamam métodos de projeto usando a seguinte sintaxe:
 
 ```
 =METHODNAME(param1,param2,...,paramN)
@@ -236,7 +236,7 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
 
 ### Valores retornados
 
-4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
+Métodos de projeto 4D também podem retornar valores na fórmula da célula 4D View Pro através de $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
 - [text](Aceitar/dt_string.md) (convertido em string em 4D View Pro)
 - [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido em número no 4D View Pro)
@@ -251,12 +251,12 @@ Os parâmetros Date e Object são tratados da seguinte maneira:
  | value       | Date | Valor data        |
  | time        | Real | Tempo em segundos |
 
-If the 4D method returns nothing, an empty string is automatically returned.
+Se o método 4D não retornar nada, uma string vazia será automaticamente retornada.
 
 É devolvido um erro na célula 4D View Pro se:
 
 - o método 4D retorna outro tipo além do listado acima
-- an error occurred during 4D method execution (when user clicks on "abort" button).
+- um erro ocorreu durante a execução do método 4D (quando o usuário clica no botão "abortar").
 
 #### Exemplo
 
@@ -276,7 +276,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 
 ## Compatibidade
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. No entanto, é recomendável usar o comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md).
+Soluções alternativas estão disponíveis para declarar campos ou métodos como funções em suas áreas do 4D View Pro. Essas soluções são mantidas por motivos de compatibilidade e podem ser usadas em casos específicos. No entanto, é recomendável usar o comando [`VP SET CUSTOM FUNCTIONS`](commands/vp-set-custom-functions.md).
 
 ### Referência a campos utilizando a estrutura virtual
 
@@ -290,17 +290,17 @@ Alternate solutions are available to declare fields or methods as functions in y
 - Os nomes da tabela e dos campos devem estar em conformidade com ECMA (consulte [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 - O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
-An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
+Um erro será retornado na célula do 4D View Pro se a fórmula chamar um campo que não esteja em conformidade.
 
 #### Chamar um campo virtual numa fórmula
 
-To insert a reference to a virtual field in a formula, enter the field with the following syntax:
+Para inserir uma referência a um campo virtual em uma fórmula, insira o campo com a seguinte sintaxe:
 
 ```
 TABLENAME_FIELDNAME()
 ```
 
-For example, if you declared the "Name" field of the "People" table in the virtual structure, you can call the following functions:
+Por exemplo, se você declarou o campo "Name" da tabela "People" na estrutura virtual, poderá chamar as seguintes funções:
 
 ```
 =PEOPLE_NAME()
@@ -311,7 +311,7 @@ For example, if you declared the "Name" field of the "People" table in the virtu
 
 #### Exemplo
 
-We want to print the name of a person in a 4D View Pro area cell using a 4D virtual field:
+Queremos imprimir o nome de uma pessoa em uma célula de área do 4D View Pro usando um campo virtual 4D:
 
 1. Criar uma tabela "Employee" com um campo "L_Name":
 
@@ -349,7 +349,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 
 ### Declaração dos métodos permitidos
 
-You can call directly 4D project methods from within your 4D View Pro formulas. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+Você pode chamar diretamente os métodos do projeto 4D a partir de suas fórmulas do 4D View Pro. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
 
 #### Requisitos
 

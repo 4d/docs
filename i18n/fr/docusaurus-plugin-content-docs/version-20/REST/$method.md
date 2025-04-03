@@ -7,13 +7,13 @@ Ce paramètre vous permet de définir l'opération à exécuter avec l'entité o
 
 ## Syntaxe
 
-| Syntaxe                                         | Exemple                                                                                         | Description                                                                                                  |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Supprime l'entité, la collection d'entités ou la sélection d'entité courante                                 |
-| [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Crée un entity set dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Affiche un entity set existant stocké dans le cache de 4D Server                                             |
-| [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Crée un entity set basé sur la collection d'entités liées définies dans la requête REST                      |
-| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Met à jour et/ou crée une ou plusieurs entités                                                               |
+| Syntaxe                                         | Exemple                                                                                         | Description                                                                                                                       |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Supprime l'entité, la collection d'entités ou la sélection d'entité courante                                                      |
+| [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Crée un entity set (ensemble d'entités) dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST |
+| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Affiche un entity set existant stocké dans le cache de 4D Server                                                                  |
+| [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Crée un entity set basé sur la collection d'entités liées définies dans la requête REST                                           |
+| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Met à jour et/ou crée une ou plusieurs entités                                                                                    |
 
 
 
@@ -26,7 +26,7 @@ Supprime l'entité, la collection d'entités ou l'entity selection courante (cr�
 
 ### Description
 
-Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
+Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'entités entière. Vous pouvez définir la collection d'entités en utilisant, par exemple, [`$filter`]($filter.md) ou en spécifiant directement une entité à l'aide de [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) (*par exemple*, /Employee(22)).
 
 Vous pouvez également supprimer les entités d'un ensemble d'entités en appelant [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -56,7 +56,7 @@ Réponse :
 
 ## $method=entityset
 
-Crée un entity set dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST
+Crée un entity set (ensemble d'entités) dans le cache de 4D Server basé sur la collection d'entités définies dans la requête REST
 
 ### Description
 

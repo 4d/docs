@@ -15,11 +15,11 @@ Lorsque vous travaillez avec un datastore distant référencé par des appels à
 
 Lorsqu'une application 4D (c'est-à-dire un process) ouvre un datastore externe à l'aide de la commande `Open datastore`, une session est créée sur le datastore distant pour gérer la connexion. Cette session est identifiée à l'aide d'un ID de session interne, associé au `localID` de l'application 4D. Cette session gère automatiquement l'accès aux données, aux entity selections et aux entités.
 
-Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie :
+Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie que :
 
-- Que si d'autres process de la même application doivent accéder au même datastore distant, ils peuvent utiliser le même `localID` et partager alors la même session.
-- Que si un autre process de la même application ouvre le même datastore distant, mais avec un autre `localID`, il créera une nouvelle session sur le datastore distant.
-- Que si un autre poste se connecte au même datastore distant avec le même `localID`, il créera une autre session avec un autre cookie.
+- si d'autres process de la même application doivent accéder au même datastore distant, ils peuvent utiliser le même `localID` et partager alors la même session.
+- si un autre process de la même application ouvre le même datastore distant, mais avec un autre `localID`, il créera une nouvelle session sur le datastore distant.
+- si un autre poste se connecte au même datastore distant avec le même `localID`, il créera une autre session avec un autre cookie.
 
 Ces principes sont illustrés dans les graphiques suivants :
 

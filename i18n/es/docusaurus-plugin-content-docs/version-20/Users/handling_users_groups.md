@@ -39,7 +39,7 @@ El administrador no puede:
 - modificar el usuario Diseñador
 - por defecto, el acceso a las partes protegidas de la aplicación. En particular, el administrador no puede acceder al modo Diseño si está restringido. En particular, el administrador no puede acceder al modo Diseño si está restringido. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
-Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
+Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la caja de diálogo de gestión de usuarios, los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
 - Icono Diseñador: ![](../assets/en/Users/iconDesigner.png)
 - Icono del Administrador: ![](../assets/en/Users/iconAdmin.png)
@@ -194,7 +194,7 @@ Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archiv
 Este archivo puede ser almacenado en las siguientes ubicaciones, dependiendo de sus necesidades:
 
 - Si desea utilizar el mismo directorio para todos los archivos de datos (o si utiliza un único archivo de datos), almacene el archivo **directory.json** en la carpeta de configuración del usuario, es decir, en la carpeta "Settings" en el [mismo nivel que la carpeta "Project"](Project/architecture.md#project-folder) (ubicación predeterminada).
-- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta configuración personalizada/local de los usuarios y de los grupos no se verá afectada por una actualización de la aplicación.
+- Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta["Settings" de la carpeta "Data"](../Project/architecture.md#settings-user-data). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta configuración personalizada/local de los usuarios y de los grupos no se verá afectada por una actualización de la aplicación.
 
 > Para permitir cambios seguros de contraseñas y pertenencias a grupos en un entorno desplegado, puede incluir su archivo **directory.json** en la aplicación del servidor durante la creación, utilizando la opción [correspondiente a la aplicación de creación](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 

@@ -87,7 +87,7 @@ Veillez cependant aux différences de comportement suivantes, comparées à [l'a
 
 ## Sessions utilisateur distant
 
-On the server, the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
+Sur le serveur, la commande [`Session`](../commands/session.md) renvoie un objet `session` décrivant la session utilisateur courante. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
 
 ### Utilisation
 

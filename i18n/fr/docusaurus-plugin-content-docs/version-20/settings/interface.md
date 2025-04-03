@@ -35,7 +35,7 @@ Vous pouvez définir la [fréquence d'écriture du cache](database.md#memory-pag
 
 -   **Progression de l'impression** : permet, lors de l'impression, d'activer ou de désactiver l'affichage de la boîte de dialogue de progression de l'impression.
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
+-   **Utiliser le mode SDI sur Windows** : Lorsque cette option est cochée, 4D active automatiquement le [mode SDI (Single-Document Interface)](../Menus/sdi.md) dans votre application lorsqu'il est exécuté dans un [contexte pris en charge](../Menus/sdi.md#sdi-mode-availability). Lorsque vous sélectionnez cette option, sur Windows le menu **Exécuter** de la barre de menus 4D vous permet de sélectionner le mode dans lequel vous souhaitez tester l'application :
 
     ![](../assets/en/settings/sdi-mdi.png)
 

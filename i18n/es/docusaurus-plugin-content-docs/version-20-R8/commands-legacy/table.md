@@ -5,7 +5,7 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( numTabla | unPtr ) : any<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( *numTabla* ) : Pointer<br/>**Table** ( *ptrTabla* ) : Integer<br/>**Table** ( *ptrCampo* ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

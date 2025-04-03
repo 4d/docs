@@ -35,8 +35,8 @@ For example, in the case of a click on a button, the object contains the followi
 
 The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
 
-* List box or list box column objects, see the *list box documentation on developer.4d.com*.
-* 4D View Pro areas, see *On VP Ready form event*.
+* List box or list box column objects, see [this section](../FormObjects/listbox_overview.md#additional-properties).
+* 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
 
 **Note:** If there is no current event, **FORM Event** returns a null object.
 

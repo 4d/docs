@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### 説明
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+`.commandLine` プロパティは、<!-- REF #SystemWorkerClass.commandLine.Summary -->[`new()`](#4dsystemworkernew) 関数に引数として渡したコマンドライン<!-- END REF -->を格納します。
 
 このプロパティは **読み取り専用** です。
 
@@ -557,13 +557,13 @@ The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->c
 
 #### 説明
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+`.wait()` 関数は、<!-- REF #SystemWorkerClass.wait().Summary -->`SystemWorker` の実行終了まで、または *timeout* で指定した時間が経過するまで待機します<!-- END REF -->。
 
-In *timeout*, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
+*timeout* には、秒単位の値を渡します。 `SystemWorker` スクリプトは、*timeout* に指定された時間だけ、外部プロセスを待ちます。 *timeout* を省略した場合、スクリプトの実行は無期限に待機します。
 
-Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. タイムアウトに達した場合、`SystemWorker` はキルされません。
+実際には、`.wait()` はタイムアウトに達した場合を除き、`onTerminate` フォーミュラのプロセス終了まで待ちます。 タイムアウトに達した場合、`SystemWorker` はキルされません。
 
-During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+`.wait()` の実行中、コールバック関数、とくに他のイベントや他の `SystemWorker` インスタンスからのコールバックは実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 この関数は、SystemWorker オブジェクトを返します。
 

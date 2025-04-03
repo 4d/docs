@@ -68,6 +68,6 @@ This method modifies the value of a "settings" property stored in the storage ob
 |  |  |
 | --- | --- |
 | Command number | 1839 |
-| Thread safe | &cross; |
+| Thread safe | &check; |
 
 

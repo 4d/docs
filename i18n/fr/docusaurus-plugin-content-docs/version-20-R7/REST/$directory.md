@@ -18,12 +18,12 @@ Tous les paramètres doivent être passés dans les **en-têtes** d'une méthode
 | Clé de l'en-tête  | Valeur de l'en-tête                                                                                                                   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | username-4D       | Utilisateur - Non obligatoire                                                                                                         |
-| password-4D       | Password in plain text - Not mandatory                                                                                                |
+| password-4D       | Mot de passe en texte clair - Non obligatoire                                                                                         |
 | session-4D-length | Timeout d'inactivité de la session (en minutes). Ne peut pas être inférieur à 60 - Non obligatoire |
 
 :::caution
 
-Since the password is transmitted in plain text, it is strongly recommended to use a secured https connection for the login request.
+Le mot de passe étant transmis en texte clair, il est fortement recommandé d'utiliser une connexion sécurisée https pour la requête de connexion.
 
 :::
 

@@ -5,7 +5,7 @@ slug: /commands/web-set-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( header|fieldArray {; *valueArray*} )<!-- END REF-->
+<!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( *header* )<br/>**WEB SET HTTP HEADER** ( *fieldArray* ; *valueArray* )<!-- END REF-->
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

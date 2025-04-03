@@ -26,7 +26,7 @@ Em qualquer outro contexto, o comando retorna **Null**.
 
 ## Função de classe
 
-When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+Quando uma função [construtor de classe](../Concepts/classes.md#class-constructor) é usada (com a [`new()`](API/ClassClass.md#new)), sua `This` estará ligada ao novo objeto que está sendo construído.
 
 ```4d
 //Class: ob

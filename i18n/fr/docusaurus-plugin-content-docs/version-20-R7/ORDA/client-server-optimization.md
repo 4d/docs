@@ -12,8 +12,8 @@ title: Optimisation client/serveur
 
 Les architectures client/serveur de l'ORDA qui prennent en charge l'optimisation sont :
 
-- Server datastores accessed by 4D remote desktop applications through [**`ds`**](../commands/ds.md),
-- [Remote datastores](remoteDatastores.md), accessed via [**`Open datastore`**](../commands/open-datastore.md) (client REST requests).
+- Les datastores serveur auxquels accèdent les applications 4D distantes via [**`ds`**](../commands/ds.md),
+- Les [datastores distants](remoteDatastores.md), ouverts via la commande [**`Open datastore`**](../commands/open-datastore.md) (requêtes clientes REST).
 
 ## Contexte d'optimisation
 
@@ -43,7 +43,7 @@ Le contexte d'optimisation est fondé sur ce qui suit :
 
 :::note Note de compatibilité
 
-Contexts handled in connections established through [`Open datastore`](../commands/open-datastore.md) can only be used between similar main versions of 4D. Par exemple, une application distante 4D 20.x ne peut utiliser que les contextes d'un datastore 4D Server 20.x.
+Les contextes gérés dans les connexions établies via [`Open datastore`](../commands/open-datastore.md) peuvent uniquement être utilisés entre des versions principales similaires de 4D. Par exemple, une application distante 4D 20.x ne peut utiliser que les contextes d'un datastore 4D Server 20.x.
 
 :::
 

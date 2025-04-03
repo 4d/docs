@@ -1,6 +1,7 @@
 ---
-id: Table
+id: Table_theme
 title: Table
+slug: /commands/theme/Table
 ---
 
 

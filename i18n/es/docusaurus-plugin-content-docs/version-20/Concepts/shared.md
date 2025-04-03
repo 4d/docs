@@ -110,7 +110,7 @@ Los objetos compartidos y las colecciones compartidas están diseñados para per
 
 :::note
 
-[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. También en el caso de los comandos `ARRAY TO COLLECTION` y `OB REMOVE`.
+Las [funciones de colección](../API/CollectionClass.md) que modifican colecciones compartidas activan automáticamente un **Use** interno para esta colección compartida mientras se ejecuta la función, haciendo innecesaria una llamada explícita a la estructura. También en el caso de los comandos `ARRAY TO COLLECTION` y `OB REMOVE`.
 
 :::
 

@@ -513,8 +513,6 @@ $fhandle:=$f.open("read")
 
 <!-- END REF -->
 
-<!-- REF file.setAppInfo().Desc -->
-
 ## .setAppInfo()
 
 <details><summary>履歴</summary>

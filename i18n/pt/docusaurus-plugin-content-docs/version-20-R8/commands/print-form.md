@@ -185,9 +185,9 @@ The code that calls the dialog then prints its body:
 
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 5                               |
-| Thread safe    | &amp;cross; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 5                           |
+| Thread safe    | &cross; |
 
 

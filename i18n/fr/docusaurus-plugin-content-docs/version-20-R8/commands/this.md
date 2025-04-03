@@ -26,7 +26,7 @@ Dans tout autre contexte, la commande renvoie **Null**.
 
 ## Fonction de classe
 
-When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+Quand un [constructeur de classe](../Concepts/classes.md#class-constructor) est utilisé (avec la fonction [`new()`](API/ClassClass.md#new)), son `This` est lié au nouvel objet en cours de construction.
 
 ```4d
 //Class: ob
@@ -44,7 +44,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](super.md) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Voir [cet exemple](super.md#example-1).
+> En cas d'appel de la superclasse du constructeur depuis le constructeur en utilisant le mot-clé [Super](super.md), n'oubliez pas que `This` ne doit pas être appelé avant le constructeur de la superclasse, sinon une erreur est générée. Voir [cet exemple](super.md#example-1).
 
 Dans tous les cas, `This` se réfère à l'objet sur lequel la fonction a été appelée, comme s'il s'agissait d'une fonction de l'objet.
 

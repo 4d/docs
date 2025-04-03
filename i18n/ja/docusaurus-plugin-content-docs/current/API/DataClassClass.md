@@ -120,8 +120,6 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
-
 ## .all()
 
 <details><summary>履歴</summary>
@@ -170,8 +168,6 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
  var $allEmp : cs.EmployeeSelection
  $allEmp:=ds.Employee.all()
 ```
-
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
 
 ## .clearRemoteCache()
 
@@ -226,8 +222,6 @@ $ds.Persons.clearRemoteCache()
 #### 参照
 
 [`entitySelection.refresh()`](EntitySelectionClass.md#refresh)
-
-<!-- END REF -->
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 
@@ -684,8 +678,6 @@ $number:=$ds.Persons.getCount()
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
-
 ## .getRemoteCache()
 
 <details><summary>履歴</summary>
@@ -925,7 +917,7 @@ attributePath|formula 比較演算子 値
 クエリに使用するフォーミュラは $1 に引数を受け取ることができます。 詳細については後述の **フォーミュラ引数** を参照ください。
 
 > - フォーミュラが複雑な場合など、`queryString` パラメーターを使わずに、 `formula` パラメーターにオブジェクトを直接渡すこともできます。 後述の **フォーミュラ引数** を参照ください。
-> - セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 `querySettings` パラメーターの説明を参照ください。
+> - セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。 `querySettings` パラメーターの説明を参照ください。
 
 - **比較演算子**: *attributePath* 引数と*value* 引数の比較に使用する記号。 以下の記号がサポートされます:
 
@@ -991,7 +983,7 @@ attributePath|formula 比較演算子 値
 | 定義 | *queryString* に `:paramIndex` (例 :1, :2...) という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 最大で 128個の *value* 引数を渡すことができます。 | `:paramName` (例: myparam など) という形でパラメーターが挿入され、その値は *querySettings* 引数の attributes または parameters オブジェクトで提供されます。 |
 | 例題 | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                        | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`               |
 
-*queryString* には、すべての種類の引数 を混ぜて渡すことができます。 *queryString* 引数は、*attributePath* と *formula* と*値* に以下のものを含めることができます:
+*queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* 引数は、*attributePath* と *formula* と*値* に以下のものを含めることができます:
 
 - 定数値 (プレースホルダーを使用しない)
 - インデックスプレースホルダーや命名プレースホルダー
@@ -1196,7 +1188,7 @@ The formula must have been created using the [`Formula`](../commands/formula.md)
 - 処理中のエンティティはフォーミュラ内において `This` で参照されます。
 - `Formula` オブジェクトが **null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です") が生成されます。
 
-> セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。
+> セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。 *querySettings* パラメーターの説明を参照ください。
 
 #### フォーミュラに引数を渡す
 
@@ -1542,8 +1534,6 @@ softwares:{
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
-
 ## .setRemoteCacheSettings()
 
 <details><summary>履歴</summary>
@@ -1583,11 +1573,11 @@ softwares:{
 - 次にそのデータが必要になったときには、サーバーに要求します
 - エンティティの最大数に達すると、4D は期限切れのデータを自動的に削除します
 
-`timeout` プロパティを設定すると、すでにキャッシュに存在するエンティティに新しいタイムアウトが設定されます。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。
+`timeout` プロパティを設定すると、すでにキャッシュに存在するエンティティに新しいタイムアウトが設定されます。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。
 
-`maxEntries` は、ORDAキャッシュ内のエンティティの最大数を設定します。 デフォルトは 30,000 です。
+`maxEntries` は、ORDAキャッシュ内のエンティティの最大数を設定します。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。
 
-最小エントリー数は 300 のため、`maxEntries` の値は 300以上でなくてはなりません。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。
+最小エントリー数は 300 のため、`maxEntries` の値は 300以上でなくてはなりません。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。
 
 `timeout` および `maxEntries` として有効なプロパティが渡されない場合、キャッシュはデフォルト値または以前に設定された値のまま変更されません。
 

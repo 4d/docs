@@ -492,7 +492,6 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
 <!-- END REF -->
 
-<!-- REF file.setAppInfo().Desc -->
 ## .setAppInfo()
 
 <details><summary>履歴</summary>

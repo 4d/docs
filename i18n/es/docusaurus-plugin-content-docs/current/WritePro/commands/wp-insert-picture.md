@@ -25,7 +25,7 @@ The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary-->
 
 In *targetObj*, you can pass:
 
-- A range
+- Un rango
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
 - A 4D Write Pro document
 

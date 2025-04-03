@@ -5,7 +5,7 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( aField | aTable ; *array* {; *aField* ; *array* {; *aField2* ; *array2* ; ... ; *aFieldN* ; *arrayN*}}{; *})}<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( *aField* ; *array* {; *aField2* ; *array2* ; ... ; *aFieldN* ; *arrayN*}{; *})<br/>**SELECTION TO ARRAY** {( *aTable* ; *array* {; *aField* ; *array* {; *aField2* ; *array2* ; ... ; *aFieldN* ; *arrayN*}}{; *})}<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -48,7 +48,7 @@ Debe declarar estos parámetros de la siguiente manera:
 //Código para el métodod
 ```
 
-Alternatively, you can use the [named parameters](../Concepts/parameters.md) syntax:
+También puede utilizar la sintaxis de [parámetros temporales](../Concepts/parameters.md):
 
 ```4d
 // Método base On Web Connection
@@ -185,7 +185,7 @@ Aquí está el código HTML que corresponde a esta página:
 </FORM>
 ```
 
-Durante la entrada de datos, escriba "ABCD" en el área de entrada de datos, marque la opción "Whole word" y valídela haciendo clic en el botón **Search**. En la solicitud enviada al servidor web:
+Durante la entrada de datos, escriba "ABCD" en el área de entrada de datos, marque la opción "Whole word" y valídela haciendo clic en el botón **Buscar**. En la solicitud enviada al servidor web:
 
 ```
 vName="ABCD"

@@ -31,7 +31,7 @@ Les modifications suivantes peuvent être effectuées sur les objets partagés e
 - ajout ou suppression de propriétés d'objets,
 - ajout ou modification de valeurs (prises en charge par les objets/collections partagé(e) s), y compris d'autres objets et collections partagé(s) (ce qui crée un groupe partagé, cf. ci-dessous).
 
-All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#useend-use) block, otherwise an error is generated.
+Toutes les instructions de modification d'un objet ou d'une collection partagé(e) doivent être protégées à l'intérieur d'un bloc [`Use...End use`](#useend-use) sinon une erreur est générée.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -108,7 +108,7 @@ Les objets partagés et les collections partagées permettent d'établir des com
 
 :::note
 
-[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. It's also the case for `ARRAY TO COLLECTION` and `OB REMOVE` commands.
+Les [fonctions de Collection](../API/CollectionClass.md) qui modifient les collections partagées déclenchent automatiquement un **Use** interne pour cette collection partagée pendant l'exécution de la fonction, ce qui rend inutile un appel explicite à la structure. C'est également le cas pour les commandes `ARRAY TO COLLECTION` et `OB REMOVE`.
 
 :::
 

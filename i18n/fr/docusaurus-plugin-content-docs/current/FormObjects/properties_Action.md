@@ -28,7 +28,7 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 
 #### Objets pris en charge
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
+[Zones 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md) - [Liste hiérarchique](list_overview.md) - [List Box](listbox_overview.md) - [Zone de plug-in](pluginArea_overview.md)
 
 #### Voir également
 

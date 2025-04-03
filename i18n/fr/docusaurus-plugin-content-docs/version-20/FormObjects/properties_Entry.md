@@ -25,7 +25,7 @@ La propriété Correction orthographique active la vérification orthographique 
 
 Permet à l'utilisateur d'accéder à un menu contextuel standard dans l'objet lorsque le formulaire est exécuté.
 
-Pour une [zone de saisie](input_overview.md) image, en plus des commandes d'édition standard (Couper, Copier, Coller et Effacer), le menu contient la commande **Omporter...** qui peut être utilisée pour importer une image stockée dans un fichier, ainsi que la commande **Enregistrer sous...** , qui peut être utilisée pour enregistrer l'image sur le disque. Le menu peut également être utilisé pour modifier le format d"affichage de l'image : les options **Tronquée non centrée**, **Non tronquée** et **Proportionnelle centrée** sont proposées. The modification of the [display format](properties_Display.md#picture-format) using this menu is temporary; it is not saved with the record.
+Pour une [zone de saisie](input_overview.md) image, en plus des commandes d'édition standard (Couper, Copier, Coller et Effacer), le menu contient la commande **Omporter...** qui peut être utilisée pour importer une image stockée dans un fichier, ainsi que la commande **Enregistrer sous...** , qui peut être utilisée pour enregistrer l'image sur le disque. Le menu peut également être utilisé pour modifier le format d"affichage de l'image : les options **Tronquée non centrée**, **Non tronquée** et **Proportionnelle centrée** sont proposées. La modification du [format d'affichage](properties_Display.md#picture-format) à l'aide de ce menu est temporaire ; elle n'est pas sauvegardée avec l'enregistrement.
 
 Pour une [zone de saisie](input_overview.md) de type texte et [multi-style](properties_Text.md#multi-style), en plus des commandes d'édition standard, le menu contextuel fournit les commandes suivantes :
 
@@ -33,7 +33,7 @@ Pour une [zone de saisie](input_overview.md) de type texte et [multi-style](prop
 - **Polices récentes**: affiche les noms des polices récentes sélectionnées pendant la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan. Lorsque l'utilisateur modifie un attribut de style via ce menu contextuel, 4D génère l'événement formulaire `On After Edit`.
 
-Pour une [Zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
+Pour une [Zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. Il est possible de contrôler l'accès au menu contextuel via la commande `WA SET PREFERENCE`.
 
 #### Grammaire JSON
 
@@ -115,7 +115,7 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 
 | Nom         | Type de données | Valeurs possibles                                    |
 | ----------- | --------------- | ---------------------------------------------------- |
-| entryFilter | string          | <li>Entry filter code</li> ou <li>Nom du filtre de saisie (les noms des filtres commencent par &#124;)</li> |
+| entryFilter | string          | <li>Code de filtre de saisie</li> ou <li>Nom du filtre de saisie (les noms des filtres commencent par &#124;)</li> |
 
 #### Objets pris en charge
 
@@ -219,7 +219,7 @@ Vous pouvez utiliser une référence XLIFF sous la forme ":xliff:resname" en tan
  :xliff:PH_Lastname
 
 Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pas possible de combiner une référence avec du texte statique.
-> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
+> Vous pouvez également définir et obtenir le texte du placeholder par programmation à l'aide des commandes `OBJECT SET PLACEHOLDER` et `OBJECT Get placeholder`.
 
 #### Grammaire JSON
 
@@ -260,9 +260,9 @@ Cette propriété permet d'associer des touches (raccourcis clavier) aux [bouton
 Vous pouvez configurer cette option en cliquant sur le bouton [...] de la propriété Equivalent clavier de la Liste des propriétés.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> Vous pouvez également assigner un raccourci à une commande de menu personnalisée. S'il y a un conflit entre deux raccourcis, l'objet actif a la priorité. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
+> Vous pouvez également assigner un raccourci à une commande de menu personnalisée. S'il y a un conflit entre deux raccourcis, l'objet actif a la priorité. Pour plus d'informations sur l'association de raccourcis aux menus, reportez-vous à la section [Définition des propriétés des menus](../Menus/properties.md).
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
+Pour afficher une liste de tous les raccourcis utilisés dans l'environnement de développement de 4D, consultez la page [Raccourcis](../Preferences/shortcuts.md) dans la boîte de dialogue Préférences.
 
 #### Grammaire JSON
 

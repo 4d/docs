@@ -60,14 +60,14 @@ displayed_sidebar: docs
 
 ## 参照
 
-[Process activity](process-activity.md)\
-[Session](session.md)
+[Process activity](process-activity.md)
+[Session](./session.md)
 
 ## プロパティ
 
 |         |                             |
 | ------- | --------------------------- |
 | コマンド番号  | 1839                        |
-| スレッドセーフ | &cross; |
+| スレッドセーフ | &check; |
 
 

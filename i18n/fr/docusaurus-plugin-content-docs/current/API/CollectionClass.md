@@ -1958,7 +1958,7 @@ Toutes les collections *colsToSort* doivent avoir le même nombre d'éléments, 
 
 :::
 
-If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula.md) that defines the sort order. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
+Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](../commands/formula.md)) qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
 
 La formule reçoit les paramètres suivants :
 
@@ -2440,9 +2440,9 @@ où :
 | --------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Egal à                                  | =, ==                         | Retourne les données correspondantes, prend en charge le joker de recherche (@), ne tient pas compte de la casse et est non diacritique. |
 |                                         | ===, IS                       | Retourne les données correspondantes, considère le @ comme un caractère standard, ne tient pas compte de la casse et est non diacritique                                    |
-| Différent de                            | #, !=                         | Prend en charge le joker de recherche (@). Equivalent to "Not condition applied on a statement" ).                       |
+| Différent de                            | #, !=                         | Prend en charge le joker de recherche (@). Équivalent à "Condition Not appliquée à une assertion").                      |
 |                                         | !==, IS NOT                   | Considère le @ comme un caractère standard                                                                                                                                  |
-| Condition Not appliquée à une assertion | NOT                           | Les parenthèses sont obligatoires lorsque NOT est utilisé avant une déclaration contenant plusieurs opérateurs. Equivalent to "Not equal to" ).          |
+| Condition Not appliquée à une assertion | NOT                           | Les parenthèses sont obligatoires lorsque NOT est utilisé avant une déclaration contenant plusieurs opérateurs. Équivalent à "Non égal à" ).             |
 | Inférieur à                             | <    |                                                                                                                                                                                          |
 | Supérieur à                             | >                             |                                                                                                                                                                                          |
 | Inférieur ou égal à                     | <=   |                                                                                                                                                                                          |
@@ -3120,13 +3120,13 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 <!-- REF #collection.some().Params -->
 
-| Paramètres | Type                        |                             | Description                                               |
-| ---------- | --------------------------- | :-------------------------: | --------------------------------------------------------- |
-| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter l'évaluation              |
-| formula    | 4D.Function |              ->             | Objet formule                                             |
-| methodName | Text                        |              ->             | Nom de méthode                                            |
-| param      | any                         |              ->             | Paramètre(s) à passer                  |
-| Résultat   | Boolean                     | <- | True if at least one element successfully passed the test |
+| Paramètres | Type                        |                             | Description                                  |
+| ---------- | --------------------------- | :-------------------------: | -------------------------------------------- |
+| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter l'évaluation |
+| formula    | 4D.Function |              ->             | Objet formule                                |
+| methodName | Text                        |              ->             | Nom de méthode                               |
+| param      | any                         |              ->             | Paramètre(s) à passer     |
+| Résultat   | Boolean                     | <- | Vrai si au moins un élément a réussi le test |
 
 <!-- END REF -->
 

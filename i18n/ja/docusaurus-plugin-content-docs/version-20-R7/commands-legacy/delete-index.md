@@ -5,7 +5,7 @@ slug: /commands/delete-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( fieldPtr | indexName {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *fieldPtr* {; *} )<br/>**DELETE INDEX** ( *indexName* {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

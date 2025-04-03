@@ -1,6 +1,7 @@
 ---
-id: PHP
+id: PHP_theme
 title: PHP
+slug: /commands/theme/PHP
 ---
 
 

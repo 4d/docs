@@ -113,7 +113,7 @@ Se um arquivo chamado `\&#060;MethodName&#062;. d` existe na pasta `\&#060;packa
 
 :::note
 
-Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#help-tips).
+Caso contrário, o editor de código exibe [o comentário do bloco na parte superior do código do método](../code-editor/write-class-method.md#help-tips).
 
 :::
 
@@ -166,10 +166,10 @@ _italic_
 - A etiqueta de tabela é suportada:
 
 ```md
-| Parameter | Type   | Description  |
+| Parâmetro | Tipo | Descrição |
 | --------- | ------ | ------------ |
-| wpArea    | Text |Write pro area|
-| toolbar   | Text |Toolbar name  |
+| wpArea | Text |Área Write pro|
+| toolbar | Text |Nome da barra de ferramentas |
 ```
 
 

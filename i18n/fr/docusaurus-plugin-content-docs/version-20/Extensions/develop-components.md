@@ -31,13 +31,13 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 Hormis les [Commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) or [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) command that use the context of the method specified by the command. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
+Lorsque des commandes sont appelées à partir d'un composant, elles sont exécutées dans le contexte du composant, à l'exception des commandes [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) et [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) qui utilisent le contexte de la méthode spécifiée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
-The [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands are an exception: their scope is global to the application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
+Les commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) et [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) sont une exception : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
 
 Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Structure file` et `Get 4D folder` lorsqu’elles sont utilisées dans le cadre des composants.
 
-The [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/en/page1001.html) command can be used to obtain the list of components that are loaded by the host project.
+La commande [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/en/page1001.html) peut être utilisée pour obtenir la liste des composants qui sont chargés par le projet hôte.
 
 
 ### Commandes non utilisables
@@ -83,7 +83,7 @@ A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut 
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) or [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) command. Par exemple :
+Une fois que les méthodes projet des projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode hôte depuis un composant en utilisant la commande [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) ou [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html). Par exemple :
 
 ```4d
 // Méthode hôte
@@ -107,7 +107,7 @@ Par défaut, les classes et fonctions des composants ne peuvent pas être appel�
 
 ### Déclaration du namespace
 
-Pour permettre aux classes et aux fonctions de votre composant d'être exposées dans les projets hôtes, saisissez une valeur dans [**Component namespace in the class store** dans la page Général](../settings/general.md#component-namespace-in-the-class-store) des Propriétés du projet utilisé comme matrice. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
+Pour permettre aux classes et aux fonctions de votre composant d'être exposées dans les projets hôtes, saisissez une valeur dans [**Namespace du componsant dans le class store** dans la page Général](../settings/general.md#component-namespace-in-the-class-store) des Propriétés du projet utilisé comme matrice. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -337,7 +337,7 @@ Lecture dans une base de données externe :
 
 > Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant du projet hôte sera affiché, dans le contexte du projet hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
 
-- You can [publish component forms as subforms](../FormEditor/properties_FormProperties.md#published-as-subform) in the host projects. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants.
+- Vous pouvez [publier des formulaires de composants en tant que sous-formulaires](../FormEditor/properties_FormProperties.md#published-as-subform) dans les projets hôtes. Avec ce principe, vous pouvez notamment développer des composants proposant des objets graphiques. Par exemple, les Widgets proposés par 4D sont basés sur l’emploi de sous-formulaires en composants.
 
 > Dans le contexte d'un composant, tout formulaire projet référencé doit appartenir au composant. Par exemple, à l'intérieur d'un composant, le fait de référencer un formulaire projet hôte à l'aide de `DIALOG` ou de `Open form window` déclenchera une erreur.
 
@@ -357,7 +357,7 @@ Un composant peut exécuter automatiquement du code 4D lors de l'ouverture ou de
 
 L'exécution du code d'initialisation ou de fermeture se fait au moyen de la méthode base `On Host Database Event`.
 
-> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'[option**Exécuter la méthode "Sur événement base hôte" des composants**](../settings/security.md#options) dans la page Sécurité des Propriétés.
+> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'[option **Exécuter la méthode "Sur événement base hôte" des composants**](../settings/security.md#options) dans la page Sécurité des Propriétés.
 
 
 ## Protection des composants : la compilation

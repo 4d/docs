@@ -27,13 +27,13 @@ title: コンポーネントの開発
 
 [使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
 
-コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。ただし [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/ja/page1007.html) および [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/ja/page63.html) コマンドは除きます。これらのコマンドは、パラメーターにて指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
+When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
 
-[`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) と [`Get database parameter`](https://doc.4d.com/4dv20/help/command/ja/page643.html) コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
+The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
 
 さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
 
-[`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/ja/page1001.html) コマンドを使用して、ホストプロジェクトにロードされたコンポーネントのリストを取得できます。
+The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used to obtain the list of components that are loaded by the host project.
 
 ### 使用できないコマンド
 
@@ -76,7 +76,7 @@ title: コンポーネントの開発
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-ホストプロジェクトのプロジェクトメソッドがコンポーネントから利用可能になっていれば、[`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/ja/page63.html) または [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/ja/page1007.html) コマンドを使用して、コンポーネント側からホストのメソッドを実行することができます。 例:
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command. 例:
 
 ```4d
 // ホストメソッド
@@ -140,6 +140,24 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
 > 非表示のクラス内の、非表示でない関数は、そのクラスを [継承](../Concepts/classes.md#継承) するクラスでコード補完を使用すると提案されます。 たとえば、あるコンポーネントに `_Person` クラスを継承した `Teacher` クラスがある場合、`Teacher` のコード補完では `_Person` の非表示でない関数が提案されます。
+
+## Editing components from the host
+
+To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
+
+- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
+- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+
+In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
+
+In the Explorer, a specific icon indicates that the component code is editable:<br/>
+![](../assets/en/Develop/editable-component.png)
+
+:::warning
+
+Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+
+:::
 
 ## コンパイル済みコンポーネントのコード補完
 

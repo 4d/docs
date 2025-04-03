@@ -140,7 +140,7 @@ Retourne toutes les données d'une dataclass spécifique.
 
 ## \{dataClass\}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22]` or `Company[IT0911AB2200]`
+Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass, par exemple `Company[22]` ou `Company[IT0911AB2200]`.
 
 ### Description
 
