@@ -1,6 +1,6 @@
 ---
 id: Date_and_Time_theme
-title: Date and Time
+title: Fechas y horas
 slug: /commands/theme/Date-and-Time
 ---
 
