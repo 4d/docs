@@ -1,6 +1,6 @@
 ---
 id: Transactions_theme
-title: Transactions
+title: Transacciones
 slug: /commands/theme/Transactions
 ---
 
