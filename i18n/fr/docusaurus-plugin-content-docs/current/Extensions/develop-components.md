@@ -370,6 +370,55 @@ L'exécution du code d'initialisation ou de fermeture se fait au moyen de la mé
 
 > Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'option [**Exécuter la méthode "Sur événement base hôte" des composants**](../settings/security.md#options) dans la page Sécurité des Propriétés du projet.
 
+## Info.plist
+
+Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
+
+:::note
+
+This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+
+:::
+
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+
+The folling keys can be defined:
+
+| key                                                        | Description                                                                                                                                                         |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CFBundleName                                               | Component name (internal)                                                                                                                        |
+| CFBundleDisplayName                                        | Component name to display                                                                                                                                           |
+| NSHumanReadableCopyright                                   | Copyright to display                                                                                                                                                |
+| CFBundleVersion                                            | Version of the component                                                                                                                                            |
+| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
+| com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+
+Here is an example of `Info.plist` file:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<plist>
+  <dict>
+    <key>CFBundleName</key>
+    <string>UI</string>
+    <key>CFBundleDisplayName</key>
+    <string>UI</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>©vdl 2025</string>
+    <key>CFBundleVersion</key>
+    <string></string>
+    <key>com.4d.minSupportedVersion</key>
+    <string>20R10</string>
+  </dict>
+</plist>
+```
+
+On macOS, information is available from the finder:
+
+![](../assets/en/Develop/infoplist-component.png)
+
 ## Protection des composants : la compilation
 
 Par défaut, tout le code d’un projet utilisé comme matrice installé comme composant est virtuellement visible depuis le projet hôte. En particulier :
@@ -383,6 +432,6 @@ Pour assurer la protection du code d'un composant, [compilez et générerez](Des
 - Les méthodes projet, classes et fonctions partagées peuvent être appelées dans les méthodes du projet hôte et sont également visibles dans la page Méthodes de l'explorateur. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent jamais.
 
-## Partage des composants
+## Sharing your components on GitHub
 
 Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos composants, de préférence sur la [plateforme GitHub](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.
