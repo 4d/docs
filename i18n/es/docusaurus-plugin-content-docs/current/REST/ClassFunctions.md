@@ -37,7 +37,7 @@ Las funciones se llaman simplemente en la interfaz ORDA o clase singleton apropi
 
 Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
 
-#### POST request
+#### Petición POST
 
 `/rest/City/getCity`
 
@@ -110,7 +110,7 @@ Scalar value parameter(s) must simply be enclosed in a collection. Todos los tip
 
 For example, with a  dataclass function `getCities()` receiving text parameters:
 
-#### POST request
+#### Petición POST
 
 `/rest/City/getCities`
 
