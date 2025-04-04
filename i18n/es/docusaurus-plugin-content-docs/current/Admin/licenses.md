@@ -27,7 +27,7 @@ Las licencias de despliegue pueden ser anidadas en el paso de creación por el d
 | *4D XML Keys Activation* | Used to activate 4D Server OEM licenses                            | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
 | *4D Server*              | Per-user license, allowing them to use 4D Server and clients       | Diálogo [Primera activación](#first-activation) en la máquina usuario                                                                               |
 
-### Expiration
+### Vencimiento
 
 Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard.
 
