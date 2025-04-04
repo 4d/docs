@@ -357,7 +357,7 @@ En utilisant la balise `<!--#4DELSEIF-->`, vous pouvez tester un nombre illimit√
 
 Les deux codes suivants sont √©quivalents.
 
-Code using `4DELSE` only:
+Code utilisant seulement `4DELSE` :
 
 ```html
 <!--#4DIF Condition1-->

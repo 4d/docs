@@ -54,7 +54,7 @@ If the current form is a subform, the returned object depends on the parent cont
 
 For more information, please refer to the *Page subforms* section.
 
-### Table form
+### Formulario tabla
 
 **Form** returns the object associated with the table form displayed on screen.\
 **Form** returns the object associated with the table form displayed on screen.\

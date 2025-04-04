@@ -3,7 +3,7 @@ id: classes
 title: Classes
 ---
 
-The following classes can be used in 4D View Pro.
+Les classes suivantes peuvent être utilisées dans 4D View Pro.
 
 ## LineBorder
 
@@ -13,7 +13,7 @@ The following classes can be used in 4D View Pro.
 
 **.color** : Text<!-- END REF -->
 
-La propriété `.color` est la <!-- REF #LineBorder.color.Summary -->[couleur](configuring.md#borders) de la bordure<!-- END REF -->. Default = black.
+La propriété `.color` est la <!-- REF #LineBorder.color.Summary -->[couleur](configuring.md#borders) de la bordure<!-- END REF -->. Par défaut = black.
 
 ### .style
 
@@ -21,7 +21,7 @@ La propriété `.color` est la <!-- REF #LineBorder.color.Summary -->[couleur](c
 
 **.style** : Integer<!-- END REF -->
 
-La propriété `.style` est le <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) de la bordure<!-- END REF -->. Default = empty.
+La propriété `.style` est le <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) de la bordure<!-- END REF -->. Par défaut = vide.
 
 ## TableColumn
 
@@ -57,7 +57,7 @@ La propriété `.name` <!-- REF #TableColumn.name.Summary -->contient le nom de 
 
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-La propriété `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indique si les colonnes ou les lignes du tableau doivent être étendues lorsque des valeurs sont ajoutées dans des cellules vides adjacentes<!-- END REF -->. Default = True
+La propriété `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indique si les colonnes ou les lignes du tableau doivent être étendues lorsque des valeurs sont ajoutées dans des cellules vides adjacentes<!-- END REF -->. Par défaut = True
 
 ### .bandColumns
 
@@ -65,7 +65,7 @@ La propriété `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. Default = False
+La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. Défaut = Faux
 
 ### .bandRows
 
@@ -73,7 +73,7 @@ La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indi
 
 **.bandRows** : Boolean<!-- END REF -->
 
-La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'il faut afficher un style de ligne alternée<!-- END REF -->. Default = True
+La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'il faut afficher un style de ligne alternée<!-- END REF -->. Par défaut = True
 
 ### .highlightLastColumn
 
@@ -81,7 +81,7 @@ La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'
 
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-La propriété `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indique s'il faut mettre en surbrillance la dernière colonne<!-- END REF -->. Default = False
+La propriété `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indique s'il faut mettre en surbrillance la dernière colonne<!-- END REF -->. Défaut = Faux
 
 ### .highlightFirstColumn
 
@@ -89,7 +89,7 @@ La propriété `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-La propriété `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indique s'il faut mettre en surbrillance la première colonne<!-- END REF -->. Default = False
+La propriété `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indique s'il faut mettre en surbrillance la première colonne<!-- END REF -->. Défaut = Faux
 
 ### .showFooter
 
@@ -97,7 +97,7 @@ La propriété `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColu
 
 **.showFooter** : Boolean<!-- END REF -->
 
-La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indique s'il faut afficher un pied de page<!-- END REF -->. Default = False
+La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indique s'il faut afficher un pied de page<!-- END REF -->. Défaut = Faux
 
 ### .showHeader
 
@@ -105,7 +105,7 @@ La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indiqu
 
 **.showHeader** : Boolean<!-- END REF -->
 
-La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indique s'il faut afficher un en-tête<!-- END REF -->. Default = True
+La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indique s'il faut afficher un en-tête<!-- END REF -->. Par défaut = True
 
 ### .showResizeHandle
 
@@ -113,7 +113,7 @@ La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indiqu
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-La propriété `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indique s'il faut afficher la poignée de redimensionnement pour les tables qui n'ont pas de *source*<!-- END REF -->. Default = False
+La propriété `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indique s'il faut afficher la poignée de redimensionnement pour les tables qui n'ont pas de *source*<!-- END REF -->. Défaut = Faux
 
 ### .tableColumns
 
@@ -139,7 +139,7 @@ Voir les [thèmes natifs de SpreadJS](https://developer.mescius.com/spreadjs/api
 
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-La propriété `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indique si une liste déroulante doit être utilisée dans les cellules du pied de page qui calculent la valeur totale d'une colonne<!-- END REF -->. Default = False
+La propriété `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indique si une liste déroulante doit être utilisée dans les cellules du pied de page qui calculent la valeur totale d'une colonne<!-- END REF -->. Défaut = Faux
 
 ## TableStyle
 
@@ -159,7 +159,7 @@ La propriété `.backColor` est la <!-- REF #TableStyle.backColor.Summary -->[co
 
 La propriété `.forecolor` est la <!-- REF #TableStyle.forecolor.Summary -->[couleur de premier plan](configuring.md#background--foreground) de la table<!-- END REF -->.
 
-### .police
+### .font
 
 <!-- REF #TableStyle.font.Syntax -->
 
@@ -199,7 +199,7 @@ La propriété `.borderRight` est la <!-- REF #TableStyle.borderRight.Summary --
 
 La propriété `.borderBottom` est la <!-- REF #TableStyle.borderBottom.Summary -->ligne de bordure inférieure de la table<!-- END REF -->.
 
-### .borderHorizontal
+### .borderhorizontale
 
 <!-- REF #TableStyle.borderHorizontal.Syntax -->
 
@@ -215,7 +215,7 @@ La propriété `.borderHorizontal` est la <!-- REF #TableStyle.borderHorizontal.
 
 La propriété `.borderVertical` est la <!-- REF #TableStyle.borderVertical.Summary -->ligne de bordure verticale de la table<!-- END REF -->.
 
-## TableTheme
+## Thème Tableau
 
 ### .bandRows
 
@@ -282,7 +282,7 @@ La propriété `.firstColumnStripStyle` est le <!-- REF #TableThemeOptions.first
 
 **.firstFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.firstFooterCellStyle` est le <!-- REF #TableThemeOptions.firstFooterCellStyle.Summary -->style de la première cellule de pied de page<!-- END REF -->. "highlightFirstColumn" must be true.
+La propriété `.firstFooterCellStyle` est le <!-- REF #TableThemeOptions.firstFooterCellStyle.Summary -->style de la première cellule de pied de page<!-- END REF -->. "highlightFirstColumn" doit être true.
 
 ### .firstHeaderCellStyle
 
@@ -290,7 +290,7 @@ La propriété `.firstFooterCellStyle` est le <!-- REF #TableThemeOptions.firstF
 
 **.firstHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.firstHeaderCellStyle` est le <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->style de la première cellule de l'en-tête<!-- END REF -->. "highlightFirstColumn" must be true.
+La propriété `.firstHeaderCellStyle` est le <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->style de la première cellule de l'en-tête<!-- END REF -->. "highlightFirstColumn" doit être true.
 
 ### .firstRowStripSize
 
@@ -330,7 +330,7 @@ La propriété `.headerRowStyle` est le <!-- REF #TableThemeOptions.headerRowSty
 
 **.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.highlightFirstColumnStyle` est le <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->style de la première colonne<!-- END REF -->. "highlightFirstColumn" must be true.
+La propriété `.highlightFirstColumnStyle` est le <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->style de la première colonne<!-- END REF -->. "highlightFirstColumn" doit être true.
 
 ### .highlightLastColumnStyle
 
@@ -338,7 +338,7 @@ La propriété `.highlightFirstColumnStyle` est le <!-- REF #TableThemeOptions.h
 
 **.highlightLastColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.highlightLastColumnStyle` est le <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->style de la dernière colonne<!-- END REF -->. "highlightLastColumn" must be true.
+La propriété `.highlightLastColumnStyle` est le <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->style de la dernière colonne<!-- END REF -->. "highlightLastColumn" doit être true.
 
 ### .lastFooterCellStyle
 
@@ -346,7 +346,7 @@ La propriété `.highlightLastColumnStyle` est le <!-- REF #TableThemeOptions.hi
 
 **.lastFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.lastFooterCellStyle` est le <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->style de la dernière cellule du pied de page<!-- END REF -->. "highlightLastColumn" must be true.
+La propriété `.lastFooterCellStyle` est le <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->style de la dernière cellule du pied de page<!-- END REF -->. "highlightLastColumn" doit être true.
 
 ### .lastHeaderCellStyle
 
@@ -354,7 +354,7 @@ La propriété `.lastFooterCellStyle` est le <!-- REF #TableThemeOptions.lastFoo
 
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-La propriété `.lastHeaderCellStyle` est le <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->style de la dernière cellule d'en-tête<!-- END REF -->. "highlightLastColumn" must be true.
+La propriété `.lastHeaderCellStyle` est le <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->style de la dernière cellule d'en-tête<!-- END REF -->. "highlightLastColumn" doit être true.
 
 ### .name
 

@@ -134,23 +134,23 @@ A noter que lorsque vous créez vos propres modèles, seul l'affichage des donn�
 
 Les formats numériques s'appliquent à tous les types de chiffres (ex : nombres positifs, négatifs, les zéros).
 
-| Caractère | Description                                                                                                                                                                                                                | Exemple                                                                                                                    |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 0         | Placeholder qui affiche des zéros.                                                                                                                                                                                         | #.00 affichera 1.10 au lieu de 1.1                                                                                         |
-| .         | Displays a decimal point                                                                                                                                                                                                   | 0.00 affichera 1999.00 au lieu de 1999                                                                                     |
-| ,         | Displays the thousands separator in a number. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000. | #,0 affichera 12200000 au lieu de 12,200,000                                                                               |
-| \_      | Skips the width of the next character.                                                                                                                                                                                     | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                     |
-| @         | Formatter for text. Applies the format to all text in the cell                                                                                                                                                             | "\[Red]@" applies the red font color for text values.                                                                     |
-| *         | Repeats the next character to fill the column width.                                                                                                                                                                       | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
-| " "       | Displays the text within the quotes without interpreting it.                                                                                                                                                               | "8%" sera affiché comme suit : 8%                                                                                          |
-| %         | Displays numbers as a percentage of 100.                                                                                                                                                                                   | 8% sera affiché comme suit : .08                                                                                           |
-| \#      | Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                        | #.# affichera 1.5 au lieu de 1.54                                                                                          |
-| ?         | Digit placeholder that leaves space for extra zeros, but does not display them. Typically used to align numbers by decimal point.                                                                                          | $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                               |
-| \        | Displays the character following it.                                                                                                                                                                                       | #.00\? affichera 123.00? au lieu de 123                                                                                   |
-| /         | When used with numbers, displays them as fractions. When used with text, date or time codes, displayed "as-is".                                                                                                            | #/# affichera 3/4 au lieu de .75                                                                                           |
-| \[ ]     | Creates conditional formats.                                                                                                                                                                                               | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                        |
-| E         | Scientific notation format.                                                                                                                                                                                                | #E+# - affichera 2E+6 au lieu de 1,500,500                                                                                 |
-| \[color] | Formats the text or number in the color specified                                                                                                                                                                          | \[Green]###.##\[Red]-###.###                                                                                             |
+| Caractère | Description                                                                                                                                                                                                                                                                 | Exemple                                                                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0         | Placeholder qui affiche des zéros.                                                                                                                                                                                                                                          | #.00 affichera 1.10 au lieu de 1.1                                                                                                          |
+| .         | Affiche un point décimal                                                                                                                                                                                                                                                    | 0.00 affichera 1999.00 au lieu de 1999                                                                                                      |
+| ,         | Affiche le séparateur de milliers dans un nombre. Les milliers sont séparés par des virgules si le format contient une virgule entourée par des chiffres "#" ou par des zéros. Une virgule suivant un caractère de remplacement d'un chiffre multiplie le nombre par 1 000. | #,0 affichera 12200000 au lieu de 12,200,000                                                                                                |
+| \_      | Saute la largeur du caractère suivant.                                                                                                                                                                                                                                      | Habituellement utilisé en combinaison avec des parenthèses pour ajouter respectivement les indentations gauche et droite, \_( et _).      |
+| @         | Formats pour le texte. Applique le format à tous les textes de la cellule                                                                                                                                                                                                   | "\[Red]@" applique la couleur de police rouge pour les valeurs texte.                                                                      |
+| *         | Répéte le caractère suivant pour remplir la largeur de la colonne.                                                                                                                                                                                                          | 0*- inclura suffisamment de tirets après un nombre pour remplir la cellule, tandis que *0 avant tout format inclura les zéros précédents. |
+| " "       | Affiche le texte entre les guillemets sans l'interpréter.                                                                                                                                                                                                                   | "8%" sera affiché comme suit : 8%                                                                                                           |
+| %         | Affiche les nombres en pourcentage de 100.                                                                                                                                                                                                                                  | 8% sera affiché comme suit : .08                                                                                                            |
+| \#      | Caractère de remplacement de chiffres qui n'affiche pas de zéros supplémentaires. Si un nombre a plus de chiffres à droite de la virgule qu'il y a de placeholders, le nombre est arrondi.                                                                                  | #.# affichera 1.5 au lieu de 1.54                                                                                                           |
+| ?         | Caractère de remplacement de chiffres qui affiche des espaces pour les zéros supplémentaires, mais ne les affiche pas. Généralement utilisé pour aligner les nombres sur le point décimal.                                                                                  | $?? affiche un maximum de 2 décimales et les aligne les symboles ollars pour des montants variables.                                        |
+| \        | Affiche le caractère qui le suit.                                                                                                                                                                                                                                           | #.00\? affichera 123.00? au lieu de 123                                                                                                    |
+| /         | Lorsqu'il est utilisé avec des nombres, les affiche comme des fractions. Lorsqu'il est utilisé avec des textes, dates ou heures, les affiche "tels quels".                                                                                                                  | #/# affichera 3/4 au lieu de .75                                                                                                            |
+| \[ ]     | Crée des formats conditionnels.                                                                                                                                                                                                                                             | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                                         |
+| E         | Format de notation scientifique.                                                                                                                                                                                                                                            | #E+# - affichera 2E+6 au lieu de 1,500,500                                                                                                  |
+| \[color] | Formate le texte ou le nombre dans la couleur spécifiée                                                                                                                                                                                                                     | \[Green]###.##\[Red]-###.###                                                                                                              |
 
 #### Exemple
 
@@ -163,17 +163,17 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 
 4D View Pro fournit les constantes suivantes pour les modèles de date et heure au format ISO 8601 :
 
-| Constante                                 | Valeur                               | Commentaire                                                                                                                                                           |
-| ----------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `vk pattern full date time`               | "*fullDateTimePattern*"              | ISO 8601 format for the full date and time in current localization.USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
-| `vk pattern long date`                    | "*longDatePattern*"                  | ISO 8601 format for the full date in current localization.USA default pattern: "dddd, dd MMMM yyyy"                                                                   |
-| `vk pattern long time`                    | "*longTimePattern*"                  | ISO 8601 format for the time in current localization.USA default pattern: "HH:mm:ss"                                                                                  |
-| `vk pattern month day`                    | "*monthDayPattern*"                  | ISO 8601 format for the month and day in current localization.USA default pattern: "MMMM dd"                                                                          |
-| `vk pattern short date`                   | "*shortDatePattern*"                 | Abbreviated ISO 8601 format for the date in current localization.USA default pattern: "MM/dd/yyyy"                                                                    |
-| `vk pattern short time`                   | "*shortTimePattern*"                 | Abbreviated ISO 8601 format for the time in current localization.USA default pattern: "HH:mm"                                                                         |
-| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | ISO 8601 format for the date and time in current localization which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"            |
-| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | ISO 8601 format for the date and time in current localization using UTC which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
-| `vk pattern year month`                   | "*yearMonthPattern*"                 | ISO 8601 format for the month and year in current localization.USA default pattern: "yyyy MMMM"                                                                       |
+| Constante                                 | Valeur                               | Commentaire                                                                                                                                                                               |
+| ----------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `vk pattern full date time`               | "*fullDateTimePattern*"              | Format ISO 8601 pour la date et l'heure complète dans la localisation actuelle. Modèle par défaut des USA : "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
+| `vk pattern long date`                    | "*longDatePattern*"                  | Format ISO 8601 pour la date complète dans la localisation courante. Modèle par défaut USA : "dddd, dd MMMM yyyy"                                                                         |
+| `vk pattern long time`                    | "*longTimePattern*"                  | Format ISO 8601 pour l'heure dans la localisation courante. Modèle par défaut des USA : "HH:mm:ss"                                                                                        |
+| `vk pattern month day`                    | "*monthDayPattern*"                  | Format ISO 8601 pour le mois et le jour dans la localisation courante. Modèle par défaut des USA : "MMMM dd"                                                                              |
+| `vk pattern short date`                   | "*shortDatePattern*"                 | Format ISO 8601 abrégé pour la date dans la localisation courante. Modèle par défaut des USA : "MM/jj/aaaa"                                                                               |
+| `vk pattern short time`                   | "*shortTimePattern*"                 | Format ISO 8601 abrégé pour l'heure dans la localisation actuelle. Modèle par défaut des USA : "HH:mm"                                                                                    |
+| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | Format ISO 8601 pour la date et l'heure de la localisation actuelle qui peut être triée. Modèle par défaut des USA : "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"                  |
+| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | Format ISO 8601 pour la date et l'heure de la localisation en cours en utilisant UTC qui peut être trié. Modèle par défaut des USA : "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
+| `vk pattern year month`                   | "*yearMonthPattern*"                 | Format ISO 8601 pour le mois et l'année dans la localisation courante. Modèle par défaut des USA : "MMMMMM"                                                                               |
 
 #### Exemple
 
@@ -184,7 +184,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 ### Formats date et heure personnalisés
 
-To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
+Pour créer vos propres modèles de date et d'heure, dans votre localisation actuelle, vous pouvez utiliser les combinaisons des codes suivants :
 
 |      | Code<br/>(non sensible à la casse) | Description                                                                          | Exemple                       |
 | ---- | ---------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------- |
@@ -210,36 +210,36 @@ To create your own date and time patterns, in your current localization, you can
 |      | \[mm]                                   | Temps écoulé en minutes                                                              | 843                           |
 |      | \[ss]                                   | Temps écoulé en secondes                                                             | 50585                         |
 |      | AM/PM                                    | Périodes de la journée. S'il est omis, c'est le format de 24 heures qui est utilisé. | PM                            |
-> The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
+> Le code 'm' est interprété en fonction de sa position dans le motif. Si c'est immédiatement après 'h' ou 'hh' ou juste avant 's' ou 'ss', il sera interprété comme des minutes, sinon il sera interprété comme des mois.
 
 ### Symboles supplémentaires
 
-In addition to the special characters and codes described in the previous sections, there are additional characters and symbols that can be used in your format patterns. These additional characters and symbols do not require a \ or "" and do not impact the interpretation of the format pattern. They appear "as-is" within the pattern.
+En plus des caractères spéciaux et des codes décrits dans les sections précédentes, des caractères et des symboles supplémentaires peuvent être utilisés dans vos modèles de format. Ces caractères et symboles supplémentaires ne nécessitent pas de \ ou "" et n'affectent pas l'interprétation du modèle de format. Ils apparaissent "tels quels" dans le modèle.
 
-| Caractère   | Description                                                        | Exemple              |
-| ----------- | ------------------------------------------------------------------ | -------------------- |
-| + et -      | Plus and minus signs                                               | ### + ### = ###,### |
-| ( )         | Left and right parenthesis                                         | (-###.##)            |
-| :           | Colon                                                              | hh:mm:ss             |
-| ^           | Caret                                                              | #\^#                |
-| '           | Apostrophe                                                         | '######              |
-| { }         | Curly brackets                                                     | {###,###,###}        |
-| `< >` | Less-than and greater than signs                                   | `## >##`          |
-| =           | Equal sign                                                         | #+#=##               |
-| /           | Forward slash. When used with numbers, displays them as fractions. | mm/dd/yyyy           |
-| !           | Exclamation point                                                  | $###.00!             |
-| &           | Ampersand                                                          | "Hello" & "Welcome"  |
-| ~           | Tilde                                                              | ~##                  |
-|             | Space character                                                    |                      |
-| €           | Euro                                                               | €###.00              |
-| £           | British Pound                                                      | £###.00              |
-| ¥           | Japanese Yen                                                       | ¥###.00              |
-| $           | Dollar sign                                                        | $###.00              |
-| ¢           | Cent sign                                                          | .00¢                 |
+| Caractère   | Description                                                                                | Exemple              |
+| ----------- | ------------------------------------------------------------------------------------------ | -------------------- |
+| + et -      | Signes en plus et moins                                                                    | ### + ### = ###,### |
+| ( )         | Parenthèse gauche et droite                                                                | (-###.##)            |
+| :           | Deux-points                                                                                | hh:mm:ss             |
+| ^           | Caret                                                                                      | #\^#                |
+| '           | Apostrophe                                                                                 | '######              |
+| { }         | Accolades                                                                                  | {###,###,###}        |
+| `< >` | Inférieur et supérieur à                                                                   | `## >##`          |
+| =           | Signe égal                                                                                 | #+#=##               |
+| /           | Barre oblique. Lorsqu'elle est utilisée avec des nombres, les affiche comme des fractions. | mm/dd/yyyy           |
+| !           | Point d'exclamation                                                                        | $###.00!             |
+| &           | Esperluette                                                                                | "Hello" & "Welcome"  |
+| ~           | Tilde                                                                                      | ~##                  |
+|             | Caractère espace                                                                           |                      |
+| €           | Euro                                                                                       | €###.00              |
+| £           | Livre Sterling                                                                             | £###.00              |
+| ¥           | Yen japonais                                                                               | ¥###.00              |
+| $           | Symbole Dollar                                                                             | $###.00              |
+| ¢           | Symbole Cent                                                                               | .00¢                 |
 
 ## Attributs d'impression
 
-4D View Pro print attributes allow you to control all aspects of printing 4D View Pro areas. These attributes are handled by the following commands:
+Les attributs d'impression 4D View Pro vous permettent de contrôler tous les aspects de l'impression des zones 4D View Pro. Ces attributs sont gérés par les commandes suivantes :
 
 * [VP SET PRINT INFO](method-list.md#vp-set-print-info)
 * [VP Get print info](method-list.md#vp-get-print-info)
@@ -248,170 +248,170 @@ In addition to the special characters and codes described in the previous sectio
 
 Les attributs de ligne et de colonne sont utilisés pour identifier le début, la fin et la répétition des lignes et colonnes.
 
-| Propriété         | Type        | Description                                                                                                |
-| ----------------- | ----------- | ---------------------------------------------------------------------------------------------------------- |
-| columnEnd         | entier long | The last column to print in a cell range. Default value = -1 (all columns)                                 |
-| columnStart       | entier long | The first column to print in a cell range. Default value = -1 (all columns)                                |
-| repeatColumnEnd   | entier long | The last column of a range of columns to print on the left of each page. Default value = -1 (all columns)  |
-| repeatColumnStart | entier long | The first column of a range of columns to print on the left of each page. Default value = -1 (all columns) |
-| repeatRowEnd      | entier long | The last row of a range of rows to print on the top of each page. Default value = -1 (all rows)            |
-| repeatRowStart    | entier long | The first row of a range of rows to print at the top of each page. Default value = -1 (all rows)           |
-| rowEnd            | entier long | The last row to print in a cell range. Default value = -1 (all rows)                                       |
-| rowStart          | entier long | The first row to print in a cell range. Default value = -1 (all rows)                                      |
+| Propriété         | Type        | Description                                                                                                                  |
+| ----------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| columnEnd         | entier long | La dernière colonne à imprimer dans une plage de cellules. Valeur par défaut = -1 (toutes les colonnes)                      |
+| columnStart       | entier long | La première colonne à imprimer dans une plage de cellules. Valeur par défaut = -1 (toutes les colonnes)                      |
+| repeatColumnEnd   | entier long | La dernière colonne d'une plage de colonnes à imprimer à gauche de chaque page. Valeur par défaut = -1 (toutes les colonnes) |
+| repeatColumnStart | entier long | La première colonne d'une plage de colonnes à imprimer à gauche de chaque page. Valeur par défaut = -1 (toutes les colonnes) |
+| repeatRowEnd      | entier long | La dernière ligne d'une plage de lignes à afficher en haut de chaque page. Valeur par défaut = -1 (toutes les lignes)        |
+| repeatRowStart    | entier long | La première ligne d'une plage de lignes à afficher en haut de chaque page. Valeur par défaut = -1 (toutes les lignes)        |
+| rowEnd            | entier long | La dernière ligne à imprimer dans une plage de cellules. Valeur par défaut = -1 (toutes les lignes)                          |
+| rowStart          | entier long | La première ligne à imprimer dans une plage de cellules. Valeur par défaut = -1 (toutes les lignes)                          |
 
-### Headers / Footers
+### En-têtes / Pied de page
 
-Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
+Les attributs d'en-tête et de pied de page sont utilisés pour spécifier du texte ou des images dans les sections de gauche, de droite et du centre entête/pied de page.
 
-| Propriété         | Type                 | Description                                                |
-| ----------------- | -------------------- | ---------------------------------------------------------- |
-| footerCenter      | text                 | The text and format of the center footer on printed pages. |
-| footerCenterImage | picture &#124; text* | The image for the center section of the footer.            |
-| footerLeft        | text                 | The text and format of the left footer on printed pages.   |
-| footerLeftImage   | picture &#124; text* | The image for the left section of the footer.              |
-| footerRight       | text                 | The text and format of the right footer on printed pages.  |
-| footerRightImage  | picture &#124; text* | The image for the right section of the footer.             |
-| headerCenter      | text                 | The text and format of the center header on printed pages. |
-| headerCenterImage | picture &#124; text* | The image for the center section of the header.            |
-| headerLeft        | text                 | The text and format of the left header on printed pages.   |
-| headerLeftImage   | picture &#124; text* | The image for the left section of the header.              |
-| headerRight       | text                 | The text and format of the right header on printed pages.  |
-| headerRightImage  | picture &#124; text* | The image for the right section of the header.             |
+| Propriété         | Type                 | Description                                                            |
+| ----------------- | -------------------- | ---------------------------------------------------------------------- |
+| footerCenter      | text                 | Le texte et le format du pied de page central sur les pages imprimées. |
+| footerCenterImage | picture &#124; text* | L'image de la section centrale du pied de page.                        |
+| footerLeft        | text                 | Le texte et le format du pied de page gauche sur les pages imprimées.  |
+| footerLeftImage   | picture &#124; text* | L'image de la section gauche du pied de page.                          |
+| footerRight       | text                 | Le texte et le format du pied de page droit sur les pages imprimées.   |
+| footerRightImage  | picture &#124; text* | L'image de la section droite du pied de page.                          |
+| headerCenter      | text                 | Le texte et le format de l'en-tête central sur les pages imprimées.    |
+| headerCenterImage | picture &#124; text* | L'image pour la section centrale de l'en-tête.                         |
+| headerLeft        | text                 | Le texte et le format de l'en-tête de gauche sur les pages imprimées.  |
+| headerLeftImage   | picture &#124; text* | L'image de la section gauche de l'en-tête.                             |
+| headerRight       | text                 | Le texte et le format de l'en-tête de droite sur les pages imprimées.  |
+| headerRightImage  | picture &#124; text* | L'image de la section droite de l'en-tête.                             |
 
-\* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
+\* Si vous utilisez un type texte, passez le chemin d'accès (absolu ou relatif) de l'image. Si vous passez un chemin relatif, le fichier doit être situé à côté du fichier de structure de la base de données. Sous Windows, l'extension de fichier doit être indiquée. Quel que soit le type utilisé pour définir une image, l'image elle-même (pas une référence) est stockée dans la zone 4D View Pro et est retournée par [VP Get print info](method-list.md#vp-get-print-info).
 
 ### Caractères spéciaux
 
-The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.
+Les caractères spéciaux suivants permettent l'ajout ou la mise en forme automatique d'informations dans l'en-tête et le pied de page lors de l'impression de la zone 4D View Pro.
 
-| Caractère | Description                      | Exemple                                                                | Résultat                                             |
-| --------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| &         | Escape character                 | (see examples below)                                                   |                                                      |
-| P         | Current page                     | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
-| N         | Page count                       | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
-| D         | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
-| T         | Heure courante                   | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
-| G         | Image                            | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
-| S         | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
-| U         | Souligné                         | printInfo.headerLeft:="&UThis is text."                                | This is text. (Underlined)                           |
-| B         | Souligné                         | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
-| I         | Italique                         | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
-| "         | Font prefix                      | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
-| K         | Text Color prefix                | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (in red).                               |
-| F         | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
-| A         | Spreadsheet name                 | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
+| Caractère | Description                       | Exemple                                                                | Résultat                                             |
+| --------- | --------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
+| &         | Caractère d'échappement           | (voir les exemples ci-dessous)                                         |                                                      |
+| P         | Page courante                     | printInfo.headerLeft:="Ceci est la page &P."                           | Ceci est la page 5.|                                 |
+| N         | Nombre de pages                   | printInfo.headerLeft:="Il y a &N pages."                               | Il y a 10 pages.                                     |
+| D         | Date courante (format yyyy/mm/jj) | printInfo.headerLeft:="Nous sommes le &D."                             | Nous sommes le 2025/6/19.                            |
+| T         | Heure courante                    | printInfo.headerLeft:="Il est &T."                                     | Il est 16:30:36.                                     |
+| G         | Image                             | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
+| S         | Barré                             | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
+| U         | Souligné                          | printInfo.headerLeft:="&UThis is text."                                | This is text. (Souligné)                             |
+| B         | Souligné                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
+| I         | Italique                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
+| "         | Préfixe de police                 | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
+| K         | Préfixe de couleur du texte       | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (en rouge).                             |
+| F         | Nom du classeur                   | printInfo.headerLeft:="&F"                                             | Revenus mensuels 2025                                |
+| A         | Nom du tableur                    | printInfo.headerLeft:="&A"                                             | Prévision des revenus 2026                           |
 
 ### Margins
 
-Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.
+Les attributs de marge sont utilisés pour spécifier les marges de zone 4D View Pro pour l'impression. Exprimé en centièmes de pouce.
 
-| Propriété |        | Type        | Description                                                 |
-| --------- | ------ | ----------- | ----------------------------------------------------------- |
-| margin    |        | object      | The print margins                                           |
-|           | top    | entier long | Top margin, in hundredths of an inch. Default value = 75    |
-|           | bottom | entier long | Bottom margin, in hundredths of an inch. Default value = 75 |
-|           | left   | entier long | Left margin, in hundredths of an inch. Default value = 70   |
-|           | right  | entier long | Right margin, in hundredths of an inch. Default value = 70  |
-|           | header | entier long | Header offset, in hundredths of an inch. Default value = 30 |
-|           | footer | entier long | Footer offset, in hundredths of an inch. Default value = 30 |
+| Propriété |        | Type        | Description                                                             |
+| --------- | ------ | ----------- | ----------------------------------------------------------------------- |
+| margin    |        | object      | Les marges d'impression                                                 |
+|           | top    | entier long | Marge supérieure, en centièmes de pouce. Valeur par défaut = 75         |
+|           | bottom | entier long | Marge inférieure, en centièmes de pouce. Valeur par défaut = 75         |
+|           | left   | entier long | Marge gauche, en centièmes de pouce. Valeur par défaut = 70             |
+|           | right  | entier long | Marge droite, en centièmes de pouce. Valeur par défaut = 70             |
+|           | header | entier long | Décalage de l'en-tête, en centièmes de pouce. Valeur par défaut = 30    |
+|           | footer | entier long | Décalage du pied de page, en centièmes de pouce. Valeur par défaut = 30 |
 
 ### Orientation
 
-Orientation attributes are used to specify the direction the printed page layout.
-> This attribute defines rendering information only.
+Les attributs d'orientation sont utilisés pour spécifier la direction de la mise en page imprimée.
+> Cet attribut définit uniquement les informations de rendu.
 
-| Propriété   | Type        | Description                                                                                                               |
-| ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------- |
-| orientation | entier long | Page orientation. Available values: `vk print page orientation landscape`, `vk print page orientation portrait` (default) |
+| Propriété   | Type        | Description                                                                                                                         |
+| ----------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| orientation | entier long | Orientation de la page. Valeurs disponibles: `vk print page orientation paysage`, `vk print page orientation portrait` (par défaut) |
 
 ### Page
 
-Page attributes are used to specify general document print settings.
+Les attributs de page sont utilisés pour spécifier les paramètres généraux d'impression du document.
 
-| Propriété       | Type        | Description                                                                                                                                                                                         |
-| --------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean     | Printing in black and white only. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                 |
-| centering       | entier long | How the contents are centered on the printed page. Available values: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (default), `vk print centering vertical` |
-| firstPageNumber | entier long | The page number to print on the first page.Default value = 1                                                                                                                                        |
-| pageOrder       | entier long | The order pages are printed. Available values: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                    |
-| pageRange       | text        | The range of pages for printing                                                                                                                                                                     |
-| qualityFactor   | entier long | The quality factor for printing (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                    |
-| useMax          | boolean     | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                               |
-| zoomFactor      | réel        | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                          |
+| Propriété       | Type        | Description                                                                                                                                                                                                               |
+| --------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blackAndWhite   | boolean     | Impression en noir et blanc seulement. <p>Valeur par défaut = false</p><p>**Note** : les PDFs ne sont pas affectés par cet attribut. Les couleurs en PDF restent.</p>                                                                                                                                  |
+| centering       | entier long | Comment le contenu est centré sur la page imprimée. Valeurs disponibles: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (par défaut), `vk print centering vertical`                |
+| firstPageNumber | entier long | Le numéro de page à imprimer sur la première page. Valeur par défaut = 1                                                                                                                                                  |
+| pageOrder       | entier long | L'ordre d'impression des pages. Valeurs disponibles: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                                    |
+| pageRange       | text        | La plage de pages pour l'impression                                                                                                                                                                                       |
+| qualityFactor   | entier long | Le facteur de qualité pour l'impression (1 - 8).  Plus le facteur de qualité est élevé, plus la qualité d'impression est élevée, cependant les performances d'impression peuvent être affectées.<p>Valeur par défaut = 2</p> |
+| useMax          | boolean     | Seules les colonnes et les lignes avec des données sont imprimées.<p>Valeur par défaut = true</p>                                                                                                                               |
+| zoomFactor      | réel        | Le montant pour agrandir ou réduire la page imprimée.<p>Valeur par défaut = 1</p>                                                                                                                                            |
 
-### Paper Size
+### Taille du papier
 
-Paper size attributes are used to specify the dimensions or model of paper to use for printing. There are two ways to define paper size:
+Les attributs de taille de papier sont utilisés pour spécifier les dimensions ou le modèle de papier à utiliser pour l'impression. Il y a deux façons de définir la taille du papier :
 
-* Custom size - height and width attributes
-* Standard size - kind attribute
+* Taille personnalisée - attributs height et width
+* Taille standard - attribut kind
 
-| Propriété |        | Type        | Description                                                                                                      |
-| --------- | ------ | ----------- | ---------------------------------------------------------------------------------------------------------------- |
-| paperSize |        | object      | Paper dimensions (height, width) or specific format (kind) for printing.                                         |
-|           | height | entier long | Height of the paper, in hundredths of an inch.                                                                   |
-|           | width  | entier long | Width of the paper, in hundredths of an inch.                                                                    |
-|           | kind   | text        | Name of standard paper size (e.g., A2, A4, legal, etc.) returned by `Get Print Option`. Default value = "letter" |
+| Propriété |        | Type        | Description                                                                                                                      |
+| --------- | ------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| paperSize |        | object      | Dimensions papier (height, width) ou format spécifique (kind) pour impression.                                                   |
+|           | height | entier long | Hauteur du papier, en centièmes de pouce.                                                                                        |
+|           | width  | entier long | Largeur du papier, en centièmes de pouce.                                                                                        |
+|           | kind   | text        | Nom du format de papier standard (par exemple, A2, A4, légal, etc.) renvoyé par `Get Print Option`. Valeur par défaut = "letter" |
 
-* If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./method-list.md#vp-get-print-info) returns a paper size with `custom` as value for `kind`.
+* Si la taille du papier est spécifiée en utilisant les propriétés `height` et `width` ,  [`VP Get print info`](./method-list.md#vp-get-print-info) renvoie une taille de papier avec `custom` comme valeur pour `kind`.
 
-* If you set the paper size using the `kind` property, you can use either:
-  * one of the formats in the [SpreadJS format list](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
-  * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command. In that case, [`VP Get print info`](./method-list.md#vp-get-print-info) returns the corresponding format with the height and width.
+* Si vous définissez le format de papier en utilisant la propriété `kind` , vous pouvez utiliser soit :
+  * l'un des formats de la[liste de formats SpreadJS](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
+  * l'un des formats retournés par la commande [`PRINT OPTION VALEURS`](https://doc.4d.com/4dv19/help/command/en/page785.html). Dans ce cas, [`VP Get print infon`](./method-list.md#vp-get-print-info) renvoie le format correspondant avec la hauteur et la largeur.
 
 ### Graduation
 
-Scale attributes are used to specify printing optimization and adjustments.
+Les attributs d'échelle sont utilisés pour spécifier l'optimisation d'impression et les ajustements.
 
-| Propriété      | Type        | Description                                                                                                  |
-| -------------- | ----------- | ------------------------------------------------------------------------------------------------------------ |
-| bestFitColumns | boolean     | Column width is adjusted to fit the largest text width for printing. Default value = "false"                 |
-| bestFitRows    | boolean     | Row height is adjusted to fit the tallest text height for printing. Default value = "false"                  |
-| fitPagesTall   | entier long | The number of vertical pages (portrait orientation) to check when optimizing printing. Default value = -1    |
-| fitPagesWide   | entier long | The number of horizontal pages (landscape orientation) to check when optimizing printing. Default value = -1 |
+| Propriété      | Type        | Description                                                                                                                            |
+| -------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| bestFitColumns | boolean     | La largeur des colonnes est ajustée pour correspondre à la plus grande largeur de texte pour l'impression. Valeur par défaut = "false" |
+| bestFitRows    | boolean     | La hauteur de la ligne est ajustée pour s'adapter à la hauteur de texte la plus haute pour l'impression. Valeur par défaut = "false"   |
+| fitPagesTall   | entier long | Le nombre de pages verticales (orientation portrait) à vérifier lors de l'optimisation de l'impression. Valeur par défaut = -1         |
+| fitPagesWide   | entier long | Le nombre de pages horizontales (orientation paysage) à vérifier lors de l'optimisation de l'impression. Valeur par défaut = -1        |
 
-### Show / Hide
+### Montrer / Cacher
 
-Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
+Les attributs Montrer/Cacher sont utilisés pour spécifier la visibilité (impression) des éléments de la zone 4D View Pro.
 
-| Propriété        | Type        | Description                                                                                                                                                                      |
-| ---------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean     | Prints the outline border.Default value = "true"                                                                                                                                 |
-| showColumnHeader | entier long | Column header print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean     | Prints the gridlines. Default value = "false"                                                                                                                                    |
-| showRowHeader    | entier long | Row headers print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`   |
+| Propriété        | Type        | Description                                                                                                                                                                                                          |
+| ---------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showBorder       | boolean     | Affiche la bordure du contour. Valeur par défaut = "true"                                                                                                                                                            |
+| showColumnHeader | entier long | Paramètres d'impression des en-têtes des colonnes. Valeurs disponibles : `vk print visibility hide`, `vk print visibility inherit` (par défaut), `vk print visibility show`, `vk print visibility show once` |
+| showGridLine     | boolean     | Affiche les lignes de grille. Valeur par défaut = "false"                                                                                                                                                            |
+| showRowHeader    | entier long | Paramètres d'impression des en-têtes des lignes. Valeurs disponibles : `vk print visibility hide`, `vk print visibility inherit` (par défaut), `vk print visibility show`, `vk print visibility show once`   |
 
 ### Watermark
 
-Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
+Les attributs du filigrane sont utilisés pour superposer du texte ou une image dans la zone 4D View Pro.
 
-| Propriété |                | Type                 | Description                                                                                                                                            |
-| --------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| watermark |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
-|           | \[ ].height   | entier long          | The height of the watermark text / image.                                                                                                              |
-|           | \[ ].imageSrc | picture &#124; text* | The watermark text / image.                                                                                                                            |
-|           | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
-|           | \[ ].width    | entier long          | The width of the watermark text / image.                                                                                                               |
-|           | \[ ].x        | entier long          | The horizontal coordinate of the top left point of the watermark text / image.                                                                         |
-|           | \[ ].y        | entier long          | The vertical coordinate of the top left point of the watermark text / image.                                                                           |
+| Propriété |                | Type                 | Description                                                                                                                                                                            |
+| --------- | -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| watermark |                | collection           | Collection des paramètres du filigrane.  Valeur par défaut: non définie                                                                                                                |
+|           | \[ ].height   | entier long          | La hauteur du texte / image du filigrane.                                                                                                                                              |
+|           | \[ ].imageSrc | picture &#124; text* | Le texte / image du filigrane.                                                                                                                                                         |
+|           | \[ ].page     | text                 | La ou les pages où le filigrane est imprimé. Pour toutes les pages : "all". Pour des pages spécifiques : numéros de page ou plages de pages séparées par des virgules. Ex.: "1,3,5-12" |
+|           | \[ ].width    | entier long          | La largeur du texte / image du filigrane.                                                                                                                                              |
+|           | \[ ].x        | entier long          | La position horizontale du point supérieur gauche du texte / image du filigrane.                                                                                                       |
+|           | \[ ].y        | entier long          | La position verticale du point supérieur gauche du texte / image du filigrane.                                                                                                         |
 
-\* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
+\* Si vous utilisez un type texte, passez le chemin d'accès (absolu ou relatif) de l'image. Si vous passez un chemin relatif, le fichier doit être situé à côté du fichier de structure de la base de données. Sous Windows, l'extension de fichier doit être indiquée. Quel que soit le type utilisé pour définir une image, l'image elle-même (pas une référence) est stockée dans la zone 4D View Pro et est retournée par [VP Get print info](method-list.md#vp-get-print-info).
 
-## Style Objects
+## Objets de style
 
-4D View Pro style objects and style sheets allow you to control the graphical aspects and the look of your 4D View Pro documents.
+Les objets et les feuilles de style 4D View Pro vous permettent de contrôler les aspects graphiques et l'apparence de vos documents 4D View Pro.
 
-### Style objects & Style sheets
+### Objets de style & Feuilles de style
 
-Style objects contain the style settings. They can be used either in a style sheet or on their own. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](method-list.md#vp-set-cell-style) and [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](method-list.md#vp-set-table-theme) or [VP CREATE TABLE](method-list.md#vp-create-table) commands.
+Les objets de style contiennent les paramètres de style. Ils peuvent être utilisés dans une feuille de style ou par eux-mêmes. Les objets de style peuvent également être utilisés en plus d'une feuille de style afin que différents paramètres puissent être spécifiés pour chaque plage de cellules sans affecter le reste du document. Vous pouvez utiliser des objets de style directement avec les commandes [VP SET CELL STYLE](method-list.md#vp-set-cell-style) et [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style). Vous pouvez également utiliser des objets de style lors de la définition de thèmes de table personnalisés en utilisant les commandes [VP SET TABLE THEME](method-list.md#vp-set-table-theme) ou [VP CREATE TABLE](method-list.md#vp-create-table).
 
-A **style sheet** groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
+Une **feuille de style** regroupe une combinaison de propriétés dans un objet de style pour spécifier l'apparence de toutes les cellules dans vos documents 4D View Pro. Les feuilles de style enregistrées avec le document peuvent être utilisées pour définir les propriétés d'une seule feuille, de plusieurs feuilles ou d'un classeur entier. Une fois créée, une feuille de style 4D View Pro reçoit un nom qui est sauvegardé dans la feuille de style dans la propriété "name". Cela permet d'utiliser facilement une feuille de style et, si elle est soigneusement sélectionnée, peut faciliter son identification et son but (par exemple, Letterhead\_internal, Letterhead_external).
 
-Style sheets are created with the [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) command and applied with the the [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) or [VP SET CELL STYLE](method-list.md#vp-set-cell-style) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet) command.
+Les feuilles de style sont créées avec la commande [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) et appliquées avec les commandes [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) ou [VP SET CELL STYLE](method-list.md#vp-set-cell-style). Vous pouvez supprimer une feuille de style avec la commande [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet).
 
-The [VP Get stylesheet](method-list.md#vp-get-stylesheet) command can be used to return the style object of a single style sheet or you can use the [VP Get stylesheets](method-list.md#vp-get-stylesheets) command to retrieve a collection of style objects for multiple style sheets.
+La commande [VP Get stylesheet](method-list.md#vp-get-stylesheet) peut être utilisée pour retourner l'objet de style d'une seule feuille de style ou vous pouvez utiliser la commande [VP Get stylesheets](method-list.md#vp-get-stylesheets) pour récupérer une collection d'objets de style pour plusieurs feuilles de style.
 
-### Style object properties
+### Propriétés d'objet de style
 
 Voici un exemple :
 
@@ -424,22 +424,22 @@ Voici un exemple :
  VP SET DEFAULT STYLE("myDoc";$style)
 ```
 
-#### Background & Foreground
+#### Arrière-plan & Premier plan
 
-| Propriété             | Type          | Description                                  | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                         |
-| --------------------- | ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| backColor             | text          | Defines the color of the background.         | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                        |
-| backgroundImage       | picture, text | Specifies a background image.                | Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Note for Windows: File extension must be included. |
-| backgroundImageLayout | entier long   | Defines the layout for the background image. | `vk image layout center`, `vk image layout none`, `vk image layout stretch`, `vk image layout zoom`                                                                                                                                                                                                                                                                       |
-| foreColor             | text          | Defines the color of the foreground.         | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                        |
+| Propriété             | Type          | Description                                  | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------------- | ------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| backColor             | text          | Définit la couleur de l'arrière-plan.        | Couleur CSS syntaxe "#rrggbb" (syntaxe préférée), couleur CSS syntaxe "rgb(r,g,b)" (syntaxe alternative), nom de couleur CSS (syntaxe alternative)                                                                                                                                                                                                                                                                                                  |
+| backgroundImage       | picture, text | Spécifie une image de fond.                  | Peut être spécifié directement ou via le chemin de l'image (chemin complet ou nom de fichier uniquement). Si seul le nom de fichier est utilisé, le fichier doit être situé à côté du fichier de structure de la base de données. Quelle que soit la configuration (image ou texte), une image est enregistrée avec le document. This could impact the size of a document if the image is large. Note for Windows: File extension must be included. |
+| backgroundImageLayout | entier long   | Defines the layout for the background image. | `vk image layout center`, `vk image layout none`, `vk image layout stretch`, `vk image layout zoom`                                                                                                                                                                                                                                                                                                                                                 |
+| foreColor             | text          | Defines the color of the foreground.         | Couleur CSS syntaxe "#rrggbb" (syntaxe préférée), couleur CSS syntaxe "rgb(r,g,b)" (syntaxe alternative), nom de couleur CSS (syntaxe alternative)                                                                                                                                                                                                                                                                                                  |
 
 #### Bordures
 
-| Propriété                                                                  |       | Type        | Description                                                                    | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------- | ----- | ----------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object      | Defines the corresponding border line                                          |                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                            | color | text        | Defines the color of the border. Default = black.                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
-|                                                                            | style | entier long | Defines the style of the border. Default = empty. Cannot be null or undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
+| Propriété                                                                  |       | Type        | Description                                                                      | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------- | ----- | ----------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object      | Defines the corresponding border line                                            |                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                            | color | text        | Defines the color of the border. Par défaut = black.                             | Couleur CSS syntaxe "#rrggbb" (syntaxe préférée), couleur CSS syntaxe "rgb(r,g,b)" (syntaxe alternative), nom de couleur CSS (syntaxe alternative)                                                                                                                                                                                                               |
+|                                                                            | style | entier long | Defines the style of the border. Par défaut = vide. Cannot be null or undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
 #### Polices et texte
 
@@ -451,7 +451,7 @@ Voici un exemple :
 | labelOptions    |            | object      | Defines cell label options (watermark options).                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                                   |
 |                 | alignment  | entier long | Specifies the position of the cell label. Optional property.                                                                                                                                                                                                                                                                                                         | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`           |
 |                 | visibility | entier long | Specifies the visibility of the cell label. Optional property.                                                                                                                                                                                                                                                                                                       | `vk label visibility auto`, `vk label visibility hidden`, `vk label visibility visible`                                                                                                                           |
-|                 | foreColor  | text        | Defines the color of the foreground. Optional property.                                                                                                                                                                                                                                                                                                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                |
+|                 | foreColor  | text        | Defines the color of the foreground. Optional property.                                                                                                                                                                                                                                                                                                              | Couleur CSS syntaxe "#rrggbb" (syntaxe préférée), couleur CSS syntaxe "rgb(r,g,b)" (syntaxe alternative), nom de couleur CSS (syntaxe alternative)                                                                |
 |                 | font       | text        | Specifies the font characteristics with CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). The font-size and font-family values are mandatory.                                                                                                                                                                            |                                                                                                                                                                                                                   |
 | textDecoration  |            | entier long | Specifies the decoration added to text.                                                                                                                                                                                                                                                                                                                              | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                                |
 | textIndent      |            | entier long | Defines the unit of text indention. 1 = 8 pixels                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                   |

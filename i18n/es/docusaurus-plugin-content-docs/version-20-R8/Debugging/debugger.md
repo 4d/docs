@@ -313,7 +313,7 @@ El panel de control personalizado es útil para evaluar expresiones. Es similar 
 
 Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. Para mostrar el contenido de los BLOB, puede utilizar comandos BLOB, como [BLOB to text](../commands-legacy/blob-to-text.md).
 
-### Display mode
+### Modo de visualización
 
 El modo de visualización que se utilizará para todas las ventanas del depurador se selecciona mediante la opción **Visualización** del [menú contextual](#contextual-menu) del panel de vigilancia personalizado.
 
@@ -368,11 +368,11 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
 - **Mostrar**: selecciona el [modo de visualización](#display-mode) para todas las ventanas de depuración.
-- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
+- **Nueva Expresión...**: inserta una nueva expresión y muestra el editor de Fórmula 4D.
  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
- For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
+ Para obtener más información sobre el Editor de Fórmulas, consulte el [manual de Diseño 4D](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **Insertar comando...**: muestra un menú que permite insertar un comando 4D como una nueva expresión.
 * **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 

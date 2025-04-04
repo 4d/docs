@@ -185,7 +185,7 @@ Dans une entité, la valeur d'un attribut de relation peut être une entité ou 
 
 Une entité associée peut être considérée comme l'instance d'un attribut de relation dans une dataclass.
 
-Les sélections d'entités peuvent faire référence à des entités relatives selon les attributs de relation définis dans les dataclasses correspondantes.
+Les entity selections (sélections d'entités) peuvent faire référence à des entités relatives selon les attributs de relation définis dans les dataclasses correspondantes.
 
 ## Remote datastore
 
