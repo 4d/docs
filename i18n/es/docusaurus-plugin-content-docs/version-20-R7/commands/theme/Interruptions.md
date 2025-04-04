@@ -1,6 +1,6 @@
 ---
 id: Interruptions_theme
-title: Interruptions
+title: Interrupciones
 slug: /commands/theme/Interruptions
 ---
 
