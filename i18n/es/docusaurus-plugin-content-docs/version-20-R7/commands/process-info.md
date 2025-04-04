@@ -38,7 +38,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | name             | Text                                    | Nombre del proceso                                                                        |
 | number           | Integer                                 | Process number                                                                            |
 | apropiativo      | Boolean                                 | True si se ejecuta de forma apropiativa, false en caso contrario                          |
-| sessionID        | Text                                    | Session UUID                                                                              |
+| sessionID        | Text                                    | UUID de la sesión                                                                         |
 | state            | Integer                                 | Estado actual. Valores posibles: ver abajo                |
 | systemID         | Text                                    | ID del proceso de usuario, proceso 4D o proceso de reserva                                |
 | type             | Integer                                 | Tipo de proceso en ejecución. Valores posibles: ver abajo |
