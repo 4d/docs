@@ -35,7 +35,7 @@ You use the Label page to specify the contents of the label and the Layout page 
 
 ![](../assets/en/Desktop/label-buttons.png)
 
-## Label Page
+## Página Etiqueta
 
 The Label page contains several areas with settings for designing and formatting labels.
 
@@ -54,7 +54,7 @@ The search area allows you to narrow the list of fields displayed to those conta
 
 ![](../assets/en/Desktop/label-filter.png)
 
-### Label preview
+### Vista previa de etiqueta
 
 You use this area to design your label zone by placing and positioning all the items that you want to include in your label. El rectángulo blanco representa una sola etiqueta (su tamaño se configura en la página [Diseño](#layout-page)).
 
@@ -98,14 +98,14 @@ The graphic area of the editor includes both a tool bar and a context menu that 
 
 The left-hand side of the tool bar includes commands for selecting and inserting objects. You can also access these tools by means of the **Tool>** command in the area's context menu.
 
-| Icono                                     | Tool name          | Descripción                                                                                                                                                                                                        |
-| ----------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/Desktop/label-tool1.png) | Selección          | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
-| ![](../assets/en/Desktop/label-tool2.png) | Line creation      |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool3.png) | Rectangle creation | For Rectangle or Rounded rectangle.                                                                                                                                                                |
-| ![](../assets/en/Desktop/label-tool4.png) | Circle creation    |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool5.png) | Text insertion     | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
-| ![](../assets/en/Desktop/label-tool6.png) | Formula insertion  | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
+| Icono                                     | Nombre de la herramienta | Descripción                                                                                                                                                                                                        |
+| ----------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](../assets/en/Desktop/label-tool1.png) | Selección                | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
+| ![](../assets/en/Desktop/label-tool2.png) | Line creation            |                                                                                                                                                                                                                    |
+| ![](../assets/en/Desktop/label-tool3.png) | Rectangle creation       | For Rectangle or Rounded rectangle.                                                                                                                                                                |
+| ![](../assets/en/Desktop/label-tool4.png) | Creación de círculo      |                                                                                                                                                                                                                    |
+| ![](../assets/en/Desktop/label-tool5.png) | Text insertion           | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
+| ![](../assets/en/Desktop/label-tool6.png) | Formula insertion        | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
 
 There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
 
@@ -116,9 +116,9 @@ There are shortcuts available to move or resize objects more precisely using the
 
 The right-hand side of the tool bar contains commands used to modify items of the label template:
 
-| Icono                                      | Tool name                  | Descripción                                                                                                                                                                                                                                                                                                                                                      |
+| Icono                                      | Nombre de la herramienta   | Descripción                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------------------ | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Desktop/label-tool7.png)  | Fill Color                 | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
+| ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno           | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
 | ![](../assets/en/Desktop/label-tool8.png)  | Color de línea             |                                                                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Desktop/label-tool9.png)  | Lineweight                 |                                                                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Desktop/label-tool10.png) | Font menu                  | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
