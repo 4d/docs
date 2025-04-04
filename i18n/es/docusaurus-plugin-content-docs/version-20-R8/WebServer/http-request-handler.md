@@ -68,7 +68,7 @@ A handler is defined by:
 
 The handler identifier is the couple [pattern + a verb among the verbs list].
 
-### URL patterns
+### Patrones de la URL
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
