@@ -226,6 +226,12 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
+:::note
+
+If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).
+
+:::
+
 - **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependenciesjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば: たとえば: たとえば: たとえば: たとえば: たとえば: たとえば:
 
 ```json
@@ -271,6 +277,20 @@ When a release is created in GitHub, it is associated to a **tag** and a **versi
 タグやバージョンを指定しない場合、4D は自動的に "latest" バージョンを取得します。
 
 The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range).
+
+#### Naming conventions for 4D version tags
+
+If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases on the Github repository must comply with specific conventions.
+
+- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *x.y* LTS version, the Dependency Manager will resolve it as "the latest version x.\*" if available or "version below x". If no such version exists, the user will be notified. For example, "20.4" will be resolved by the Dependency manager as "the latest component version 20.\* or version below 20".
+
+- **R-Release versions**: `xRy.p` pattern, where `x` and `y` correspond to the main 4D R-release version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *xRy* version, the Dependency Manager will resolve it to the "latest version below xR(y+1)" if available. If no such version exists, the user will be notified. For example, "20R9" will be resolved by the Dependency manager as "the latest component version below 20R10".
+
+:::note
+
+The component developer can define a minimum 4D version in the component's [`info.plist`](../Extensions/develop-components.md#infoplist) file.
+
+:::
 
 #### プライベートリポジトリ
 
@@ -445,6 +465,7 @@ Define the [dependency version range](#tags-and-versions) to use for this projec
 - **次のメジャーバージョンまで上げる**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンまでに制限します。
 - **次のマイナーバージョンまで上げる**: 上と同様に、更新を次のマイナーバージョンまでに制限します。
 - **バージョンを指定 (Tag)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
+- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. You can use this dependency rule only if the component release tags follow the appropriate [naming convention](#naming-conventions-for-4d-version-tags).
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 
