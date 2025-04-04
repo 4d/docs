@@ -31,7 +31,7 @@ In *targetObj*, you can pass:
 
 For the second parameter, you can pass either:
 
-- In *picture*:
+- En *picture*:
  - A picture field or variable
  - A string containing a path to a picture file stored on disk, in the system syntax.
   If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
