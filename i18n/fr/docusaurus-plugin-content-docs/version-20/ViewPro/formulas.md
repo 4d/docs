@@ -237,8 +237,8 @@ Les méthodes projet 4D peuvent également retourner des valeurs dans la formule
 
 * [text](Concepts/dt_string.md) (converti en chaîne de caractères dans 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converti en numérique dans 4D View Pro)
-* [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
-* [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
+* [date](Concepts/dt_date.md) (converti en type JS Date dans 4D View Pro - heure, minute, seconde = 0)
+* [time](Concepts/dt_time.md) (converti en type JS Date dans 4D View Pro - date en date de base, c'est-à-dire 30/12/1899)
 * [boolean](Concepts/dt_boolean.md) (converti en bool dans 4D View Pro)
 * [image](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg autres types convertis en png) crée un URI (data:image/png;base64,xxxx) et ensuite utilisé comme fond dans 4D View Pro dans la cellule où la formule est exécutée
 * [objet](Concepts/dt_object.md) avec les deux propriétés suivantes (permettant de passer une date et une heure) :
@@ -361,7 +361,7 @@ Vous pouvez appeler directement des méthodes du projet 4D à partir de vos form
 Pour être appelée dans une formule 4D View Pro, une méthode projet doit être :
 
 *   **Autorisée :** elle a été déclarée explicitement avec la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
-*   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Extensions/develop-components.md#sharing-of-project-methods)).
+*   **Exécutable :** elle appartient au projet hôte ou à un composant chargé dont l'option "Partagé par les composants et le projet hôte" est activée (voir [Partage des méthodes projet](../Extensions/develop-components.md#sharing-of-project-methods)).
 *   **Pas de conflit** avec une fonction de tableur 4D View Pro existante : si vous appelez une méthode projet portant le même nom qu'une fonction intégrée 4D View Pro, la fonction est appelée.
 > Si ni la méthode [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) ni la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) n'ont été exécutées pendant la session, les fonctions personnalisées de 4D View Pro reposent sur les méthodes autorisées définies par la commande générique `SET ALLOWED METHODS` de 4D. Dans ce cas, les noms des méthodes projet doivent être conformes à la grammaire d'identification JavaScript (voir la [norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). L'option de filtrage global de la boîte de dialogue Paramètres (voir *Accès aux données*) est ignorée dans tous les cas.
 
