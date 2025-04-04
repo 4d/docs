@@ -31,7 +31,7 @@ Singleton functions can be called using REST **POST** or **GET** requests.
 
 La sintaxis formal es:
 
-#### POST request
+#### Petición POST
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
