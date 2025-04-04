@@ -805,7 +805,7 @@ Here is the list of tags and their mode of use:
 | `<user_4D/>` | Tag replaced by the name of the current 4D user. |
 | `<user_os/>` | Tag replaced by the current system user name. |
 | `<method_name/>` | Tag replaced by the current method name. |
-| `<method_path/>` | Tag replaced by path syntax (as returned by [`METHOD Get path`](https://doc.4d.com/4dv19R/help/command/en/page1164.html) of the current method. |
+| `<method_path/>` | Tag replaced by path syntax (as returned by [`METHOD Get path`](../commands-legacy/method-get-path.md) of the current method. |
 | `<date/>` | Tag replaced by the current date. |
 |  |*Attribute*: |
 |  | - format: 4D format used to display the date. If no format is set, the default format is used. Values = number of 4D format (0 to 8). |
@@ -877,7 +877,7 @@ Macro support can change from one version of 4D to another. In order to keep the
 
 #### Text selection variables for methods  
 
-It is recommended to manage text selections using the [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) and [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) and [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html) commands are used. This attribute must be declared as follows:
+It is recommended to manage text selections using the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands are used. This attribute must be declared as follows:
 
 `<macro name="MyMacro" version="2">`<br/>
 `--- Text of the macro ---`<br/>

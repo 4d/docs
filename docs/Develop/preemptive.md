@@ -161,10 +161,10 @@ To be thread-safe, a method must respect the following rules:
 - It must not use any interprocess variables(1)
 - It must not call interface objects(2) (there are exceptions however, see below).
 
-(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) catalog.
+(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](../commands-legacy/storage.md) catalog.
 [Worker processes](processes.md#worker-processes) also allow you to exchange messages between any processes, including preemptive processes.
 
-(2) The [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) command provides an elegant solution to call interface objects from a preemptive process.
+(2) The [`CALL FORM`](../commands-legacy/call-form.md) command provides an elegant solution to call interface objects from a preemptive process.
 
 :::note Notes
 

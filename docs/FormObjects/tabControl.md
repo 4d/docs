@@ -11,7 +11,7 @@ The following multi-page form uses a tab control object:
 
 To navigate from screen to screen, the user simply clicks the desired tab. 
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab. 
+The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) command or the `gotoPage` standard action would be used when a user clicks a tab. 
 
 Another use of the tab control is to control the data that is displayed in a subform. For example, a Rolodex could be implemented using a tab control. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
 
@@ -85,14 +85,14 @@ You can create a Text array that contains the names of each page of the form. Th
  arrPages{3}:="Notes"  
 ```
 
->You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
+>You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](../commands-legacy/list-to-array.md) command to load the values into the array.
 
 
 ## Goto page features  
 
 ### FORM GOTO PAGE command
 
-You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command in the tab control’s method:
+You can use the [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) command in the tab control’s method:
 
 ```4d
 FORM GOTO PAGE(arrPages)

@@ -35,7 +35,7 @@ In 4D, all errors can be caught and handled by specific project methods, named *
 
 Once installed, error handlers are automatically called in interpreted or compiled mode in case of error in the 4D application or one of its components. A different error handler can be called depending on the execution context (see below).  
 
-To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) command with the project method name and (optionnally) scope as parameters. For example:
+To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command with the project method name and (optionnally) scope as parameters. For example:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Installs a local error-handling method
@@ -47,7 +47,7 @@ To stop catching errors for an execution context and give back hand, call `ON ER
 ON ERR CALL("";ek local) //gives back control for the local process
 ```
 
-The  [`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) command allows you to know the name of the method installed by `ON ERR CALL` for the current process. It is particularly useful in the context of generic code because it enables you to temporarily change and then restore the error-catching method:
+The  [`Method called on error`](../commands-legacy/method-called-on-error.md) command allows you to know the name of the method installed by `ON ERR CALL` for the current process. It is particularly useful in the context of generic code because it enables you to temporarily change and then restore the error-catching method:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -158,7 +158,7 @@ Try (expression) : any | Undefined
 
 If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. If *expression* returns a value, `Try()` returns the last evaluated value, otherwise it returns `Undefined`. 
 
-You can handle the error(s) using the [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack). 
+You can handle the error(s) using the [`Last errors`](../commands-legacy/last-errors.md) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack). 
  
 :::note
 
@@ -250,12 +250,12 @@ If a *deferred* error is thrown outside of the `Try` block, the code execution c
 
 :::info
 
-For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) command description.
+For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](../commands-legacy/throw.md) command description.
 
 :::
 
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](../commands-legacy/last-errors.md) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
 
 :::note
 

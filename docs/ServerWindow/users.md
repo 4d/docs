@@ -20,7 +20,7 @@ You can also sort the list of column values by clicking on its header. Click sev
 For each user connected to the server, the list provides the following information:
 
 - System of the client machine (macOS or Windows) as an icon.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
+- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
 - **Machine name**: Name of the remote machine.
 - **Session name**: Name of the session opened on the remote machine.
 - **IP Address**: IP address of the remote machine.
@@ -38,7 +38,7 @@ This status frees up resources on the server. In addition, the 4D remote applica
 
 The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. The machine switches to sleep mode. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.
 
-> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector. 
+> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command with the `Remote connection sleep timeout` selector. 
 
 
 ## Search/filtering Area
@@ -60,7 +60,7 @@ This button can be used to send a message to the 4D users selected in the window
 
 The message will be displayed as an alert on the remote machines.
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
+> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](../commands-legacy/send-message-to-remote-user.md) command.
 
 
 ### Watch Processes
@@ -71,5 +71,5 @@ This button can be used to directly show the processes of the user(s) selected o
 
 This button can be used to force the selected user(s) to disconnect. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
 
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> You can perfom the same action for remote users with the [`DROP REMOTE USER`](../commands-legacy/drop-remote-user.md) command.
 

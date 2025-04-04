@@ -8,7 +8,7 @@ title: Background and Border
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
 
 #### JSON Grammar
 
@@ -28,7 +28,7 @@ Defines the background color of an object.
 
 In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
 
 #### JSON Grammar
 
@@ -50,9 +50,9 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 `Selection and collection type list boxes`
 
-An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command in the *4D Language Reference manual*.
+An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command in the *4D Language Reference manual*.
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) command with `lk background color expression` constant.
+You can also set this property using the [`LISTBOX SET PROPERTY`](../commands-legacy/listbox-set-property.md) command with `lk background color expression` constant.
 
 >With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -131,7 +131,7 @@ The color can be specified by:
 * a HEX value - like "#ff0000"
 * an RGB value - like "rgb(255,0,0)"
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) command.
+You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
 
 #### JSON Grammar
 
@@ -191,7 +191,7 @@ Next you want to color the cells with negative values in dark orange. To do this
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) and [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html) commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
+You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) and [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
 
 #### JSON Grammar
 

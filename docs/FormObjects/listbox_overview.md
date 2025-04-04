@@ -568,11 +568,11 @@ Standard sort support depends on the list box type:
 
 ### Custom sort
 
-The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
 Custom sorts allow you to:
 
-- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
+- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command,
 - use functions such as [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Example
@@ -614,7 +614,7 @@ The value of the [column header variable](properties_Object.md#variable-or-expre
 
 You can set the value of the variable (for example, Header2:=2) in order to "force" the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
 
-> The [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+> The [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 
 ## Managing row colors, styles, and display

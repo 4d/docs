@@ -362,7 +362,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 
 * If you set the paper size using the `kind` property, you can use either:
   * one of the formats in the [SpreadJS format list](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command.
+  * one of the formats returned by the [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md) command.
     In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
 
 ### Scale
