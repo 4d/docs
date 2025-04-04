@@ -70,7 +70,7 @@ Définit la taille du cache. Voir [Cache](../WebServer/webServerConfig.md#cache)
 
 #### Vider le cache
 
-À tout moment, vous pouvez vider le cache des pages et des images qu'il contient (si, par exemple, vous avez modifié une page statique et que vous souhaitez la recharger dans le cache). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). Le cache est alors immédiatement effacé.
+À tout moment, vous pouvez vider le cache des pages et des images qu'il contient (si, par exemple, vous avez modifié une page statique et que vous souhaitez la recharger dans le cache). Pour ce faire, il vous suffit de cliquer sur le bouton **Vider le cache**. Le cache est alors immédiatement effacé.
 
 > Vous pouvez également utiliser l'URL spécifique [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
@@ -122,7 +122,7 @@ Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
 Active les process web préemptifs dans vos applications compilées. Lorsque l'option **Utiliser des processus préemptifs** est sélectionnée, l'éligibilité de votre code lié au Web (y compris les balises 4D et les méthodes base Web) à l'exécution préemptive sera évaluée pendant la compilation. Pour plus d'informations, voir [Utiliser des processus Web préemptifs](../WebServer/preemptiveWeb.md).
 
-> Cette option ne s'applique pas aux sessions extensibles, aux process REST (mode compilé), ni aux process Web service (serveur et client).  See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
+> Cette option ne s'applique pas aux sessions extensibles, aux process REST (mode compilé), ni aux process Web service (serveur et client).  Voir [Activation du mode préemptif pour le serveur web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 
 #### Conservation des process inactifs
@@ -137,7 +137,7 @@ Permet de définir le délai maximum avant fermeture (timeout) des process Web i
 
 Définit le système d'authentification que vous souhaitez utiliser pour le serveur Web. Trois options sont proposées :
 
-Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
+Authentification personnalisée (défaut) Mots de passe protocole BASIC Mots de passe protocole DIGEST
 
 Il est recommandé d'utiliser l'authentification **personnalisée**. Voir le chapitre [**Authentification**](../WebServer/authentication.md) dans la section *Développement Web*.
 
@@ -184,9 +184,9 @@ Le menu de format du journal propose les options suivantes :
 
 -   **Pas de journal** : Lorsque cette option est sélectionnée, 4D ne génère pas d’historique des requêtes.
 
--   **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. With the CLF format, each line of the file represents a request, such as:\
+-   **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Avec le format CLF, chaque ligne du fichier représente une requête, comme : \
   host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+  Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
 
     -   hôte : adresse IP du client (ex. 192.100.100.10)
     -   rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
@@ -199,7 +199,7 @@ Le menu de format du journal propose les options suivantes :
 -   statut : réponse donnée par le serveur.
 -   longueur : taille des données renvoyées (hors en-tête HTTP) ou 0.
 
-> **Note :** Pour des raisons de performances, les opération sont stockées dans une mémoire tampon par paquets de 1 Ko avant d'être écrites sur disque. Les opérations sont également écrites sur disque si aucune requête n'a été envoyée au bout de 5 secondes. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
+> **Note :** Pour des raisons de performances, les opération sont stockées dans une mémoire tampon par paquets de 1 Ko avant d'être écrites sur disque. Les opérations sont également écrites sur disque si aucune requête n'a été envoyée au bout de 5 secondes. Les valeurs possibles de statut sont : 200: OK 204: Pas de contenu 302: Redirection 304: Non modifiée 400: Mauvaise requête 401: Authentification requise 404: Non trouvé 500: Erreur interne Le format CLF ne peut pas être personnalisé.
 
 -   **DLF (Combined Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format DLF. Le format DLF est semblable au format CLF dont il reprend exactement la structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent.
 
