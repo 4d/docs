@@ -92,7 +92,7 @@ In the *options* parameter, pass an object that can contain the following proper
 |onTerminate|Formula|undefined|Callback when the external process is terminated. It receives two objects as parameters (see below)|
 |timeout|Number|undefined|Time in seconds before the process is killed if it is still alive|
 |dataType|Text|"text"|Type of the response body content. Possible values: "text" (default), "blob".|
-|encoding|Text|"UTF-8"|Only if `dataType="text"`. Encoding of the response body content. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description|
+|encoding|Text|"UTF-8"|Only if `dataType="text"`. Encoding of the response body content. For the list of available values, see the [`CONVERT FROM TEXT`](../commands-legacy/convert-from-text.md) command description|
 |variables|Object||Sets custom environment variables for the system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Values are converted into strings when possible. The value cannot contain a '='. If not defined, the system worker inherits from the 4D environment.|
 |currentDirectory|Folder||Working directory in which the process is executed|
 |hideWindow|Boolean|true|(Windows) Hide the application window (if possible) or the Windows console|
@@ -115,7 +115,7 @@ Here is the sequence of callback calls:
 
 :::info
 
-For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NOT [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](../commands-legacy/call-worker.md), NOT [`New process`](../commands-legacy/new-process.md).
 
 :::
 

@@ -94,7 +94,7 @@ Certificate files include:
 Both **key.pem** and **cert.pem** files must be located:
 
 - with 4D Server or 4D in local mode, next to the [project folder](Project/architecture.md#project-folder)
-- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv20/help/command/en/page485.html) command). You must copy these files manually on the remote machine.
+- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](../commands-legacy/get-4d-folder.md) command). You must copy these files manually on the remote machine.
 
 ### Enabling TLS
 

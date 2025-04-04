@@ -209,7 +209,7 @@ The following contents are sent depending on the *message* type:
 |---|---|
 |Text|Text in UTF-8|
 |Blob|Binary data|
-|Object|Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html))|
+|Object|Text in JSON UTF-8 (same result as with [`JSON Stringify`](../commands-legacy/json-stringify.md))|
 
 
 <!-- END REF -->

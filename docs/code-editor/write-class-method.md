@@ -805,7 +805,7 @@ Here is the list of tags and their mode of use:
 | `<user_4D/>` | Tag replaced by the name of the current 4D user. |
 | `<user_os/>` | Tag replaced by the current system user name. |
 | `<method_name/>` | Tag replaced by the current method name. |
-| `<method_path/>` | Tag replaced by path syntax (as returned by [`METHOD Get path`](https://doc.4d.com/4dv19R/help/command/en/page1164.html) of the current method. |
+| `<method_path/>` | Tag replaced by path syntax (as returned by [`METHOD Get path`](../commands-legacy/method-get-path.md) of the current method. |
 | `<date/>` | Tag replaced by the current date. |
 |  |*Attribute*: |
 |  | - format: 4D format used to display the date. If no format is set, the default format is used. Values = number of 4D format (0 to 8). |

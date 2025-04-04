@@ -20,7 +20,7 @@ When it is used, this event is generated after each change made to the contents 
 - Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
 - Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
 
-Within the `On After Edit` event, text data being entered is returned by the [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html) command.  
+Within the `On After Edit` event, text data being entered is returned by the [`Get edited text`](../commands-legacy/get-edited-text.md) command.  
 
 ### 4D View Pro
 
