@@ -3,16 +3,27 @@ id: vp-import-from-object
 title: VP IMPORT FROM OBJECT
 ---
 
+<details><summary>Historique</summary>
+
+| Release | Modifications                   |
+| ------- | ------------------------------- |
+| 20 R9   | Support of *paramObj* parameter |
+
+</details>
+
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Syntax -->
 
-**VP IMPORT FROM OBJECT** ( *vpAreaName* : Text  { ; *viewPro* : Object} ) <!-- END REF -->
+**VP IMPORT FROM OBJECT** ( *vpAreaName* : Text  { ; *viewPro* : Object { ; *paramObj* : Object} } ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 
-| Paramètres | Type   |    | Description                             |                  |
-| ---------- | ------ | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| viewPro    | Object | -> | Objet 4D View Pro                       | <!-- END REF --> |
+| Paramètres | Type   |    | Description                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro      |
+| viewPro    | Object | -> | Objet 4D View Pro                            |
+| paramObj   | Object | -> | (Optional) import options |
+
+<!-- END REF -->
 
 ## Description
 
@@ -24,13 +35,44 @@ Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été c
 
 Une erreur est retournée si l'objet *viewPro* est invalide.
 
+In *paramObj*, you can pass the following property:
+
+| Propriété | Type                        | Description                                                                                                                                                                                                                                                                                 |
+| --------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula   | 4D.Function | (Optional) Callback function to be executed when the object is loaded and all 4D custom functions have responded. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
+
+Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
+
+| Paramètres |                               | Type    | Description                                                |
+| ---------- | ----------------------------- | ------- | ---------------------------------------------------------- |
+| param1     |                               | Text    | Nom de l'objet 4D View Pro                                 |
+| param2     |                               | Text    | Reserved for compatibility, this parameter is always empty |
+| param3     |                               | Object  | Une référence au paramètre *paramObj* de la commande       |
+| param4     |                               | Object  | Objet retourné par la méthode avec un message de statut    |
+|            | .success      | Boolean | `True` if import was successful, `False` otherwise         |
+|            | .errorCode    | Integer | Code d'erreur                                              |
+|            | .errorMessage | Text    | Message d'erreur                                           |
+
+:::note
+
+The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+
+:::
+
 ## Exemple
 
-Vous souhaitez importer une feuille de calcul précédemment stockée dans un champ objet :
+You want to import a spreadsheet that was previously saved in an object field, and trigger a callback function after all 4D custom functions have responded:
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
-VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
+
+VP IMPORT FROM OBJECT("ViewProArea1"; [VPWorkBooks]SPBook; {formula: Formula(onImportComplete)})
+```
+
+```4d
+// Method 'onImportComplete'
+#DECLARE($name : Text; $path : Text; $paramObj : Object; $status : Object)
+   ALERT("The document has been imported, and all custom functions have finished processing.")
 ```
 
 ## Voir également
