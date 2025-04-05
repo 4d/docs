@@ -80,11 +80,11 @@ A função `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envia 
 
 Os conteúdos seguintes são enviados em função do tipo de *message*:
 
-| Tipo   | Conteúdo                                                                                                                                       |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texto em UTF-8                                                                                                                                 |
-| Blob   | Dados binários                                                                                                                                 |
-| Object | Texto em JSON UTF-8 (o mesmo resultado que com [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| Tipo   | Conteúdo                                                                                                                    |
+| ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texto em UTF-8                                                                                                              |
+| Blob   | Dados binários                                                                                                              |
+| Object | Texto em JSON UTF-8 (o mesmo resultado que com [`JSON Stringify`](../commands-legacy/json-stringify.md)) |
 
 <!-- END REF -->
 
