@@ -21,7 +21,7 @@ La propriété `.color` est la <!-- REF #LineBorder.color.Summary -->[couleur](c
 
 **.style** : Integer<!-- END REF -->
 
-La propriété `.style` est le <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) de la bordure<!-- END REF -->. Par défaut = vide.
+La propriété `.style` est le <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) de la bordure<!-- END REF -->. Par défaut = empty.
 
 ## TableColumn
 
