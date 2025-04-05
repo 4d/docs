@@ -20,10 +20,10 @@ Vous pouvez configurer les paramètres du serveur web 4D, en fonction de la port
 
 ## Cache
 
-| Peut être configuré via          | Nom                                                                              | Commentaires |
-| -------------------------------- | -------------------------------------------------------------------------------- | ------------ |
-| Boîte de dialogue des Propriétés | [Options (I) page/Use the 4D Web cache](../settings/web.md#use-the-4d-web-cache) |              |
-| Boîte de dialogue des Propriétés | [Options (I) page/Page Cache Size](../settings/web.md#pages-cache-size)          |              |
+| Peut être configuré via          | Nom                                                                                     | Commentaires |
+| -------------------------------- | --------------------------------------------------------------------------------------- | ------------ |
+| Boîte de dialogue des Propriétés | [Options (I) page/Utiliser le cache Web de 4D](../settings/web.md#use-the-4d-web-cache) |              |
+| Boîte de dialogue des Propriétés | [Options (I) page/Taille du cache des pages](../settings/web.md#pages-cache-size)       |              |
 
 Active et configure le cache des pages web.
 
@@ -124,7 +124,7 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 | objet webServer         | `debugLog`      | number       |
 | `WEB SET OPTION`        | `Web debug log` | number       |
 
-Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque requête et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
+État du fichier journal des requêtes HTTP du serveur web ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stocké dans le dossier "Logs" de l'application -- nn est le numéro du fichier). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque requête et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
 
 | Valeur | Constante                      | Description                                                                                                  |
 | ------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
@@ -211,7 +211,7 @@ Lorsque [HTTPS est activé](#enable-https), n'oubliez pas que si [HTTP est égal
 
 HSTS permet au serveur web 4D de déclarer que les navigateurs ne doivent interagir avec lui que par des connexions HTTPS sécurisées. Une fois activé, le serveur Web 4D ajoutera automatiquement des informations relatives au HSTS à tous les en-têtes des réponses. Les navigateurs enregistreront les informations HSTS la première fois qu'ils recevront une réponse du serveur web 4D, puis toutes les futures demandes HTTP seront automatiquement transformées en demandes HTTPS. La durée de stockage de ces informations par le navigateur est spécifiée avec le paramètre Web **HSTS max age**.
 
-> HSTS requires that [HTTPS is enabled](#enable-https) on the server. [Le HTTP](#enable-http) doit également être activé pour permettre les connexions initiales du client.
+> HSTS exige que [HTTPS soit activé](#enable-https) sur le serveur. [Le HTTP](#enable-http) doit également être activé pour permettre les connexions initiales du client.
 
 > Vous pouvez vérifier le mode de connexion utilisé en utilisant la commande `WEB Is secured connection`.
 
@@ -303,7 +303,7 @@ Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par d�
 | `WEB SET OPTION`                 | `Web inactive process timeout`                                                                 |              |
 | Boîte de dialogue des Propriétés | [Options (I) > Conservation des Process inactifs](../settings/web.md#inactive-process-timeout) | Curseur      |
 
-Durée de vie (en minutes) des process inactifs associés aux anciennes sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
+Durée de vie (en minutes) des process inactifs associés aux anciennes sessions. À la fin du timeout, le processus est tué sur le serveur, la méthode de la base de données `On Web Legacy Close Session` est appelée, puis le contexte de la session est détruit.
 
 Valeur par défaut : 480 minutes (passez 0 pour restaurer la valeur par défaut)
 
@@ -425,7 +425,7 @@ Valeurs possibles: 500 000 - 2147483648.
 | objet webServer         | [`maxSessions`](API/WebServerClass.md#maxsessions) |              |
 | `WEB SET OPTION`        | `Web max sessions`                                 |              |
 
-Nombre maximal d'anciennes sessions simultanées. When you reach the limit set, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the Web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Nombre maximal d'anciennes sessions simultanées. Lorsque vous atteignez la limite fixée, la session legacy la plus ancienne est fermée (et la méthode de base de données `On Web Legacy Close Session` est appelée) si le serveur Web a besoin d'en créer une nouvelle. Le nombre de sessions legacy simultanées ne peut pas dépasser le [nombre maximum de processus Web](#maximum-concurrent-web-processes) (100 par défaut).
 
 Valeur par défaut : 100 (passez 0 pour restaurer la valeur par défaut).
 
@@ -479,9 +479,9 @@ Vrai si le PFS est disponible sur le serveur web (voir la section [TLS](Admin/tl
 
 ## Réutilisation des contextes temporaires (en mode distant)
 
-| Peut être configuré via          | Nom                                                                                      | Commentaires |
-| -------------------------------- | ---------------------------------------------------------------------------------------- | ------------ |
-| Boîte de dialogue des Propriétés | [Options (I) page/Reuse Temporary Contexts](../settings/web.md#reuse-temporary-contexts) |              |
+| Peut être configuré via          | Nom                                                                                                      | Commentaires |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------ |
+| Boîte de dialogue des Propriétés | [Options (I) page/ Réutilisation des contextes temporaires](../settings/web.md#reuse-temporary-contexts) |              |
 
 > Cette option n'est disponible que lorsque l'option **No sessions** est cochée.
 
@@ -565,7 +565,7 @@ Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web
 | `WEB SET OPTION`                 | `Web scalable session`                                                                                                       |              |
 | Boîte de dialogue des Propriétés | [Options (I) page/Sessions extensibles (sessions multiprocess)](../settings/web.md#scalable-sessions-multi-process-sessions) |              |
 
-Activation des sessions extensibles le serveur web 4D. Web server sessions are detailed in the [Web sessions](sessions.md) page.
+Activation des sessions extensibles le serveur web 4D. Les sessions du serveur web sont détaillées dans la page [Sessions web](sessions.md).
 
 
 
@@ -622,9 +622,9 @@ La valeur de l'attribut `Secure` du cookie de session est automatiquement défin
 
 ## Utiliser des process préemptifs
 
-| Peut être configuré via          | Nom                                                                                      | Commentaires |
-| -------------------------------- | ---------------------------------------------------------------------------------------- | ------------ |
-| Boîte de dialogue des Propriétés | [Options (I) page/Use Preemptive Processes](../settings/web.md#use-preemptive-processes) |              |
+| Peut être configuré via          | Nom                                                                                             | Commentaires |
+| -------------------------------- | ----------------------------------------------------------------------------------------------- | ------------ |
+| Boîte de dialogue des Propriétés | [Options (I) page/Utiliser les process préemptifs](../settings/web.md#use-preemptive-processes) |              |
 
 Cette option active le mode préemptif pour le code du serveur web de votre application lorsque l'option **No sessions** est sélectionnée (le mode préemptif est toujours activé avec les **sessions extensibles**). Lorsque cette option est cochée dans ce contexte, le compilateur 4D évalue automatiquement la propriété thread-safety de chaque élément du code [lié au web](preemptiveWeb.md#thread-safety-of-4d-web-code) et renvoie des erreurs en cas d'incompatibilité.
 
