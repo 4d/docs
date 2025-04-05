@@ -155,10 +155,10 @@ Para ser hilo seguro, un método debe respetar las siguientes reglas:
 - No debe utilizar ninguna variable interproceso(1)
 - No debe llamar a objetos de interfaz(2) (sin embargo, hay excepciones, ver más abajo).
 
-(1) Para intercambiar datos entre procesos apropiativos (y entre todos los procesos), puede pasar [colecciones compartidas u objetos compartidos](../Concepts/shared.md) como parámetros a los procesos, y/o utilizar el catálogo [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
+(1) Para intercambiar datos entre procesos apropiativos (y entre todos los procesos), puede pasar [colecciones compartidas u objetos compartidos](../Concepts/shared.md) como parámetros a los procesos, y/o utilizar el catálogo [`Storage`](../commands-legacy/storage.md).
 Los [procesos Worker](processes.md#worker-processes) también permiten intercambiar mensajes entre cualquier proceso, incluidos los procesos apropiativos.
 
-(2) El comando [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) ofrece una solución elegante para llamar a objetos de interfaz desde un proceso en espera.
+(2) El comando [`CALL FORM`](../commands-legacy/call-form.md) ofrece una solución elegante para llamar a objetos de interfaz desde un proceso en espera.
 
 :::note Notas
 
