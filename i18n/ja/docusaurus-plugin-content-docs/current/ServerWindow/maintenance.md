@@ -82,4 +82,4 @@ title: メンテナンスページ
 
 ログが停止されると、ボタンのタイトルが **ログを再開する** に変わり、これを押すことでログの記録を再開することができます。
 
-> ログの停止や再開は、[SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドでおこなうこともできます。
+> You can pause and resume logging using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.
