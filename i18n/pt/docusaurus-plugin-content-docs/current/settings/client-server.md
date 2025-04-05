@@ -68,13 +68,13 @@ Quando o Single Sign On (SSO) estiver ativado (veja acima), você deverá preenc
 
 This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
 
-- **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
+- **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. Essa camada de rede também pode ser ativada por programação usando o comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
 - **ServerNet** (por padrão): ativa a camada de rede ServerNet no servidor (disponível desde 4D v15).
 - **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
 
     **Notas**:
 
-    - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
+    - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
     - You can know if a 4D application is running with a QUIC network layer using the [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
     - Como o QUIC usa o protocolo UDP, certifique-se de que o UDP seja permitido em suas configurações de segurança de rede.
     - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
