@@ -162,7 +162,7 @@ CORSサービスで許可されたホストとメソッドの一覧。 [CORS設�
 
 4D Web サーバーが受け取るリクエストのログを開始/停止します。ログは、*logweb.txt* ファイルに記録され、そのフォーマットを指定することができます。 [ログの記録](../WebServer/webServerConfig.md#ログの記録) 参照。
 
-> リクエストのログファイルの有効/無効は [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/ja/page1210.html) コマンドを使用したプログラミングでも切り替えられます。
+> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](../commands-legacy/web-set-option.md) command.
 
 ログフォーマットメニューでは、次のオプションを提供します。
 
