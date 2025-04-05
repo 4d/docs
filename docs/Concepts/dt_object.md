@@ -48,7 +48,7 @@ Object instantiation can be done in one of the following ways:
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-measures.301-5945423.en.html) or [`File`](../commands/file.md). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
+Several 4D commands and functions return objects, for example [`Database measures`](../commands-legacy/database-measures.md) or [`File`](../commands/file.md). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
 
 :::
 

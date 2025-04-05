@@ -720,7 +720,7 @@ To specify a hierarchical list box, there are several possibilities:
 
 *	Manually configure hierarchical elements using the Property list of the form editor (or edit the JSON form).
 *	Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
-*	Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the *4D Language Reference* manual.
+*	Use the [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-hierarchy.md) and [LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md) commands, described in the *4D Language Reference* manual.
 
 
 #### Hierarchical List Box property
@@ -918,7 +918,7 @@ The following list box was designed using an object array:
 
 ### Configuring an object array column  
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html) command, like with any array-based column. In the Property list, you can now select Object as a "Expression Type" for the column:
+To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md) command, like with any array-based column. In the Property list, you can now select Object as a "Expression Type" for the column:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 

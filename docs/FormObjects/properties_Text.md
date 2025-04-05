@@ -164,7 +164,7 @@ The color can be specified by:
 - a HEX value - like "#ff0000"
 - an RGB value - like "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+You can also set this property using the [**OBJECT SET RGB COLORS**](../commands-legacy/object-set-rgb-colors.md) command.
 
 #### JSON Grammar
 
@@ -271,7 +271,7 @@ The **Default** option (`automatic` JSON value) sets the alignment according to 
 - `bottom` for all data (except pictures) and
 - `top` for picture type data.
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
+This property can also be handled by the [OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) and [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md) commands.
 
 #### JSON Grammar
 

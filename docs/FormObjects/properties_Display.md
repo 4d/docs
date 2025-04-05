@@ -560,7 +560,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 #### JSON Grammar
 
