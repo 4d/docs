@@ -532,11 +532,11 @@ La prise en charge du tri standard dépend du type de list box :
 
 ### Tri personnalisé
 
-The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
 Les tris personnalisés vous permettent de :
 
-- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
+- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command,
 - use functions such as [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Exemple
@@ -578,7 +578,7 @@ La valeur de la variable [variable associée à l’en-tête d’une colonne](pr
 
 Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de "forcer" l'affichage de la flèche de tri. Le tri de la colonne lui-même n'est pas modifié dans ce cas ; c'est au développeur de s'en charger.
 
-> The [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+> The [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 ## Gestion des styles et des couleurs
 
