@@ -33,7 +33,7 @@ title: アプリケーションサーバーページ
 - 接続ダイアログにプロジェクト名が表示されなくなります。
 - すでに接続済みのクライアントは接続解除されず、通常通りに操作が可能です。
 
-> [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/ja/page1635.html) コマンドを使用することでも、同じアクションを実行することができます。
+> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](../commands-legacy/reject-new-remote-connections.md) command.
 
 - **新規接続を許可** ボタンをクリックすると、アプリケーションサーバーはデフォルトに戻ります。
 
