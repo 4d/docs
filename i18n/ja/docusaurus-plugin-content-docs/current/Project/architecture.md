@@ -182,7 +182,7 @@ Logs フォルダーには、プロジェクトが使用するすべてのログ
 - コマンドデバッグ
 - 4D Serverリクエスト (クライアントマシンおよびサーバー上で生成)
 
-> データフォルダーが読み取り専用モードの場合やメンテナンスログファイルの保存には、システムのユーザー設定フォルダー (Active 4D Folder のこと、詳しくは [Get 4D folder](https://doc.4d.com/4dv19R/help/command/ja/page485.html) コマンド参照) 内にある Logs フォルダーが利用されます。
+> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](../commands-legacy/get-4d-folder.md) command) for maintenance log files and in cases where data folder is read-only.
 
 ## `Settings` (ユーザー)
 
