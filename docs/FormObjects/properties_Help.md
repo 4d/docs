@@ -34,13 +34,13 @@ You can either:
 You can also associate help messages with form objects in two other ways:
 
 - at the level of the database structure (fields only). In this case, the help tip of the field is displayed in every form where it appears. For more information, refer to “Help Tips” in [Field properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
-- using the **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command, for the current process.
+- using the **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** command, for the current process.
 
 When different tips are associated with the same object in several locations, the following priority order is applied:
 
 1. structure level (lowest priority)
 2. form editor level
-3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
+3. **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** command (highest priority)
 
 #### See also
 
