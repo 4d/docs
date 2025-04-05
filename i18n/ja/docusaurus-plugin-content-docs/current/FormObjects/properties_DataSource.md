@@ -36,7 +36,7 @@ title: データソース
 
 選択リストをフォームオブジェクトに関連づけます。 指定できるのは選択リスト名 (リストの参照) またはデフォルト値のコレクションです。
 
-選択リストをオブジェクトに紐づけるには、[OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/ja/page237.html) または [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/ja/page1266.html) コマンドを使ってもおこなえます。
+You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) or [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) commands.
 
 #### JSON 文法
 
@@ -145,7 +145,7 @@ title: データソース
 
 - **リスト参照**: ドロップダウンリストが階層型であることを宣言します。 このドロップダウンリストは最大で 2つの階層レベルを表示することができ、その内容は **Hierarchical Lists** テーマの4Dランゲージコマンドで管理することができます。
 - **選択された項目値** (デフォルト): ドロップダウンリストは階層型でなく、ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
-- **選択された項目参照**: ドロップダウンリストは階層型でなく、選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/ja/page376.html) または [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/ja/page385.html) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。 このオプションにより、メモリーを節約することができます。 フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。 同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
+- **選択された項目参照**: ドロップダウンリストは階層型でなく、選択リスト項目の参照がオブジェクトに保存されます。 This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](../commands-legacy/append-to-list.md) or [`SET LIST ITEM`](../commands-legacy/set-list-item.md) commands, or in the list editor. このオプションにより、メモリーを節約することができます。 フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。 同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
 **選択された項目参照** オプションの使用の際には、以下の点に注意する必要があります:
 
@@ -266,7 +266,7 @@ title: データソース
 このプロパティは、選択リストに関連付けされたフィールドまたは変数において、フィールドに保存する内容の型を指定します:
 
 - **リスト項目の値** (デフォルトのオプション): ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
-- **リスト項目の参照番号**: 選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/ja/page376.html) または [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/ja/page385.html) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。
+- **リスト項目の参照番号**: 選択リスト項目の参照がオブジェクトに保存されます。 This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](../commands-legacy/append-to-list.md) or [`SET LIST ITEM`](../commands-legacy/set-list-item.md) commands, or in the list editor.
 
 このオプションにより、メモリーを節約することができます。 フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。 同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
