@@ -43,7 +43,7 @@ Webプロセスをプリエンプティモードで実行するには、Webサ�
 
 - `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
 
-- Webコンテキストにおいて [`PROCESS 4D TAGS`](https://doc.4d.com/4dv19R/help/command/en/page816.html) コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
+- Webコンテキストにおいて [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
 
 - "公開オプション: 4DタグとURL (`4DACTION`)..." 属性が有効なプロジェクトメソッド。
 
