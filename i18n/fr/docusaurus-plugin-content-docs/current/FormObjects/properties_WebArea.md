@@ -54,12 +54,12 @@ Schématiquement, cette variable fonctionne comme la zone d’adresse d’un nav
 
 ### Variable URL et commande WA OUVRIR URL
 
-La variable URL produit les mêmes effets que la commande [WA OUVRIR URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html). Les différences suivantes sont toutefois à noter :
+The URL variable produces the same effects as the [WA OPEN URL](../commands-legacy/wa-open-url.md) command. Les différences suivantes sont toutefois à noter :
 
-- Pour les accès aux documents, la variable accepte uniquement des URLs conformes aux RFC ("file://c:/Mon%20Doc") et non les chemins d’accès système ("c:\MonDoc"). La commande [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) accepte les deux notations.
-- Si la variable URL contient une chaîne vide, la zone Web ne tente pas de charger l’URL. La commande [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) génère une erreur dans ce cas.
-- Si la variable URL ne contient pas de protocole (http, mailto, file, etc.), la zone Web ajoute "http://", ce qui n’est pas le cas pour la commande [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html).
-- Lorsque la zone Web n'est pas affichée dans le formulaire (lorsqu'elle se trouve sur une autre page du formulaire), l'exécution de la commande [WA OPEN URL](https://doc.4d.com/4dv20/help/command/fr/page1020.html) est sans effet, tandis que l'assignation d'une valeur à la variable URL permet de mettre à jour l'URL courant.
+- Pour les accès aux documents, la variable accepte uniquement des URLs conformes aux RFC ("file://c:/Mon%20Doc") et non les chemins d’accès système ("c:\MonDoc"). The [WA OPEN URL](../commands-legacy/wa-open-url.md) command accepts both notations.
+- Si la variable URL contient une chaîne vide, la zone Web ne tente pas de charger l’URL. The [WA OPEN URL](../commands-legacy/wa-open-url.md) command generates an error in this case.
+- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](../commands-legacy/wa-open-url.md) command.
+- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](../commands-legacy/wa-open-url.md) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
 #### Grammaire JSON
 
@@ -85,8 +85,8 @@ Cette option vous permet de choisir entre deux moteurs de rendus pour la zone We
 
 Le moteur CEF a les limitations suivantes :
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv20/help/command/fr/page1037.html): l'utilisation de cette commande nécessite qu'au moins une page soit déjà chargée dans la zone (par un appel à [`WA OPEN URL`](https://doc.4d.com/4dv20/help/command/fr/page1020.html) ou une affectation à la variable URL associée à la zone).
-- Lorsque les dépôts d'URL sont activés via le sélecteur `WA enable URL drop` de [WA SET PREFERENCE](https://doc.4d.com/4dv20/help/command/fr/page1041.html), le premier dépôt doit être précédé par au moins un appel à [WA OPEN URL](https://doc.4d.com/4dv20/help/command/fr/page1020.html) ou une affectation à la variable URL associée à la zone.
+- [WA SET PAGE CONTENT](../commands-legacy/wa-set-page-content.md): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or an assignment to the URL variable associated to the area).
+- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md) command, the first drop must be preceded by at least one call to [WA OPEN URL](../commands-legacy/wa-open-url.md) or one assignment to the URL variable associated to the area.
 
 :::note
 
