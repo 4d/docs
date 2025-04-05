@@ -96,7 +96,7 @@ Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Nouvelle [API `$singleton`](../REST/$singleton.md) pour appeler les fonctions singleton exposées depuis REST et nouveaux [privilèges associés](../ORDA/privileges.md).
 - Un [nouveau bouton de paramètre](../settings/web.md#activer-la-validation-dauthentification-rest-avec-la-fonction-dsauthentify) vous aide à mettre à niveau votre projet pour utiliser le mode REST "connexion forcée" (la méthode base `On REST Authentication` est maintenant obsolète).
 - Un [nouvel onglet de paramètres](../Project/compiler.md#warnings) vous permet de définir la génération de warnings de manière globale.
-- Plusieurs commandes, principalement du thème "Environnement 4D", sont maintenant thread-safe ([voir la liste complète](https://doc.4d.com/4Dv20R/4D/Preemptive_6957385.999-2878208.en.html)), ainsi que certains sélecteurs des commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20R/help/command/fe/page642.html)/[`Get database parameter`](https://doc.4d.com/4dv20R/help/command/fe/page643.html).
+- Several commands, mainly from the "4D Environment" theme, are now thread-safe ([see the full list](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.en.html)), as well as some selectors of the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) commands.
 - Nouveau [composant 4D-QPDF](https://github.com/4d/4D-QPDF) qui fournit la commande `PDF Get attachments` pour extraire les pièces jointes d'un document PDF/A3.
 - Commandes du langage 4D : [Liste des nouveautés](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.fe.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20R/4D/20-R6/What-s-new.901-6993921.fe.html) sur doc.4d.com.
@@ -179,7 +179,7 @@ Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v
 
 #### Changements de comportement
 
-- Certaines erreurs ne pouvaient être interceptées par votre [méthode de gestion des erreurs](../Concepts/error-handling.md) qu'en mode interprété. Une correction a été apportée, de sorte que les erreurs suivantes seront désormais également détectées en mode compilé : *Indice hors de l'intervalle*, *Type incompatible*, et *Déréférencement d'un pointeur Null*. Cependant, pour de telles erreurs sur les processeurs Intel, la procédure est toujours interrompue comme auparavant, alors que sur les processeurs Apple Silicon, la procédure n'est interrompue que si vous appelez la commande [`ABORT`](https://doc.4d.com/4dv20/help/command/en/page156.html).
+- Certaines erreurs ne pouvaient être interceptées par votre [méthode de gestion des erreurs](../Concepts/error-handling.md) qu'en mode interprété. Une correction a été apportée, de sorte que les erreurs suivantes seront désormais également détectées en mode compilé : *Indice hors de l'intervalle*, *Type incompatible*, et *Déréférencement d'un pointeur Null*. Cependant, pour de telles erreurs sur les processeurs Intel, la procédure est toujours interrompue comme auparavant, alors que sur les processeurs Apple Silicon, la procédure n'est interrompue que si vous appelez la commande [`ABORT`](../commands-legacy/abort.md).
 - 4D n'inclut plus d'interpréteur PHP interne. Vous devez [configurer et exécuter votre propre interpréteur PHP](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) pour utiliser les commandes PHP.
 
 ## 4D 20 R2
