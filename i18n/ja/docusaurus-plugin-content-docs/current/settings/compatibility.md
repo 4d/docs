@@ -17,11 +17,11 @@ title: 互換性ページ
     - 暗示的なカレントノードはなし - カレントノードは XPath 式の中に含められていなければなりません。
     - 繰り返された構造内の再帰的な検索は不可 - 最初の要素のみが解析されます。
 
-    標準的なものでなくとも、コードが以前と同じように動くように以前の機能を保ちたい場合もあるかもしれません。その場合、この *チェックを外して* ください。 その一方で、これらの非標準の実装をコード内で使用しておらず、拡張された XPath 機能 ([DOM Find XML element](https://doc.4d.com/4dv19R/help/command/ja/page864.html) コマンドの説明参照) をデータベース内で利用したい場合、この **標準のXPathを使用** オプションが *チェックされている* ことを確認してください。
+    標準的なものでなくとも、コードが以前と同じように動くように以前の機能を保ちたい場合もあるかもしれません。その場合、この *チェックを外して* ください。 On the other hand, if your code does not rely on the non-standard implementation and if you want to benefit from the extended XPath features in your databases (as described in the [`DOM Find XML element`](../commands-legacy/dom-find-xml-element.md) command), make sure the **Use standard XPath** option is *checked*.
 
-- **macOSにて改行コードとしてLFを使用する:** 4D v19 R2 以降 (XMLファイルについては 4D v19 R3 以降) の新規プロジェクトにおいて、4D は macOS でデフォルトの改行コード (EOL) として CR (xml SAX では CRLF) ではなくラインフィード (LF) をテキストファイルに書き込みます。 以前の 4D のバージョンから変換されたデータベースにおいてこの新しい振る舞いを利用したい場合には、このオプションをチェックしてください。 詳細については [`TEXT TO DOCUMENT`](https://doc.4d.com/4dv19R/help/command/ja/page1237.html)、[`Document to text`](https://doc.4d.com/4dv19R/help/command/ja/page1236.html) および [`XML SET OPTIONS`](https://doc.4d.com/4dv19R/help/command/ja/page1090.html) を参照ください。
+- **macOSにて改行コードとしてLFを使用する:** 4D v19 R2 以降 (XMLファイルについては 4D v19 R3 以降) の新規プロジェクトにおいて、4D は macOS でデフォルトの改行コード (EOL) として CR (xml SAX では CRLF) ではなくラインフィード (LF) をテキストファイルに書き込みます。 以前の 4D のバージョンから変換されたデータベースにおいてこの新しい振る舞いを利用したい場合には、このオプションをチェックしてください。 See [`TEXT TO DOCUMENT`](https://doc.4d.com/4dv20/help/command/en/page1237.html), [`Document to text`](../commands-legacy/document-to-text.md), and [XML SET OPTIONS](../commands-legacy/xml-set-options.md).
 
-- **Unicodeテキストファイルに書き込んでいる際にデフォルトでBOMを追加しない:** 4D v19 R2 以降 (XMLファイルについては 4D v19 R3 以降)、4D はデフォルトでバイトオーダーマーク (BOM) なしでテキストファイルに書き込みます。 以前のバージョンでは、テキストファイルはデフォルトでBOM 付きで書き込まれていました。 変換されたプロジェクトでこの新しい振る舞いを有効化するには、このオプションを選択します。 詳細については [`TEXT TO DOCUMENT`](https://doc.4d.com/4dv19R/help/command/ja/page1237.html)、[`Document to text`](https://doc.4d.com/4dv19R/help/command/ja/page1236.html) および [`XML SET OPTIONS`](https://doc.4d.com/4dv19R/help/command/ja/page1090.html) を参照ください。
+- **Unicodeテキストファイルに書き込んでいる際にデフォルトでBOMを追加しない:** 4D v19 R2 以降 (XMLファイルについては 4D v19 R3 以降)、4D はデフォルトでバイトオーダーマーク (BOM) なしでテキストファイルに書き込みます。 以前のバージョンでは、テキストファイルはデフォルトでBOM 付きで書き込まれていました。 変換されたプロジェクトでこの新しい振る舞いを有効化するには、このオプションを選択します。 See [`TEXT TO DOCUMENT`](https://doc.4d.com/4dv20/help/command/en/page1237.html), [`Document to text`](../commands-legacy/document-to-text.md), and [XML SET OPTIONS](../commands-legacy/xml-set-options.md).
 
 - **フィールド作成時にデフォルトで"ヌル値を空値にマップ"オプションのチェックを外す:** ORDA の仕様により合致するために、4D v19 R4 以降で作成されたデータベースにおいては、フィールド作成時に **ヌル値を空値にマップ** フィールドプロパティがデフォルトでチェックされなくなります。 このオプションにチェックを入れることで、変換されたデータベースにおいてもこのデフォルトの振る舞いを適用することができます ([ORDA](../ORDA/overview.md) で NULL値がサポートされるようになったため、今後は空値ではなく NULL値の使用が推奨されます)。
 
