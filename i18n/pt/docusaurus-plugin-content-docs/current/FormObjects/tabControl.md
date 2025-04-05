@@ -11,7 +11,7 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
-As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. Se o controle de guias é usado como uma ferramenta de navegação de página, então o [`FORM GOTO PAGE`](https://doc.4d.comando/4dv19/help/command/en/page247.html) ou a ação padrão `gotoPage` seria usada quando um usuário clica em uma aba.
+As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. If the tab control is used as a page navigation tool, then the [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) command or the `gotoPage` standard action would be used when a user clicks a tab.
 
 Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. As guias mostrariam as letras do alfabeto e a ação do controle do guia seria carregar os dados correspondentes à letra que o usuário clicou.
 
@@ -80,13 +80,13 @@ Você pode criar um array Text que contenha os nomes de cada página do formulá
  arrPages{3}:="Notes"  
 ```
 
-> Você também pode armazenar os nomes das páginas em uma lista hierárquica e usar o comando [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) para carregar os valores no array.
+> Você também pode armazenar os nomes das páginas em uma lista hierárquica e usar o comando [LIST TO ARRAY](../commands-legacy/list-to-array.md) para carregar os valores no array.
 
 ## Funcionalidades do Goto page
 
 ### Comando FORM GOTO PAGE
 
-Você pode usar o comando [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) no método do controle de aba:
+Você pode usar o comando [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) no método do controle de aba:
 
 ```4d
 FORM GOTO PAGE(arrPages)
