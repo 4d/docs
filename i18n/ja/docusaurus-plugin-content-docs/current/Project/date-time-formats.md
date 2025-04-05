@@ -7,8 +7,8 @@ title: 日付と時間のフォーマット
 
 4Dには、デフォルトの形式に加えて、カスタマイズされた日付と時間のフォーマットを作成および適用するために使用できる包括的なパターンのリストが含まれています。 カスタマイズされたフォーマットパターンは、以下の機能でサポートされています:
 
-- [`String`](https://doc.4d.com/4dv20R/help/command/ja/page10.html) コマンド
-- [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/ja/page236.html) および [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/ja/page894.html) コマンド
+- the [`String`](../commands-legacy/string.md) command,
+- the [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) and [`OBJECT Get format`](../commands-legacy/object-get-format.md) commands,
 - プロパティリストまたは [`dateFormat`](../FormObjects/properties_Display.md/#日付フォーマット) および [`timeFormat`](../FormObjects/properties_Display.md/#時間フォーマット) のJSONプロパティから利用可能な、フォームオブジェクトの "日付/時間フォーマット" プロパティ
 
 ## パターンリスト
