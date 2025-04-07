@@ -1381,7 +1381,7 @@ Le code suivant récupèrera les coordonnées de la cellule active :
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
 
-  //returns a range object containing:
+  //retourne un objet de plage contenant :
   //$activeCell.ranges[0].column=3
   //$activeCell.ranges[0].row=4
   //$activeCell.ranges[0].sheet=0
@@ -1644,7 +1644,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 #### Description
 
-La commande `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->retourne le data context courant d'une feuille de calcul<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
+La commande `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->retourne le data context courant d'une feuille de calcul<!-- END REF -->. Le contexte retourné inclut toutes les modifications apportées au contenu du contexte de données.
 
 In *sheet*, pass the index of the sheet to get the data context from. If no index is passed, the command returns the data context of the current worksheet. If there is no context for the worksheet, the command returns `Null`.
 
@@ -1673,11 +1673,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Paramètres | Type    |    | Description                                              |
-| ---------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
-| Résultat   | Object  | <- | Default style settings |<!-- END REF -->
+| Paramètres | Type    |    | Description                                                |
+| ---------- | ------- | -- | ---------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                    |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)   |
+| Résultat   | Object  | <- | Paramètres de style par défaut |<!-- END REF -->
 
 |
 
