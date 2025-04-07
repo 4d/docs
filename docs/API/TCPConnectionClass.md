@@ -281,7 +281,7 @@ The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whet
 
 #### Description
 
-The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine)<!-- END REF -->. This property is **read-only**.
+The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine<!-- END REF -->. This property is **read-only**.
 
 
 

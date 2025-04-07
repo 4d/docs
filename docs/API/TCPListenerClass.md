@@ -19,7 +19,70 @@ All `TCPListener` class functions are thread-safe.
 </details>
 
 ### Example
-***
+
+```4d
+
+property listener : 4D.TCPListener
+
+Class constructor($port : Integer)
+	
+	This.listener:=4D.TCPListener.new($port; This)
+		
+Function terminate()
+	
+	This.listener.terminate()
+	
+Function onConnection($connection : 4D.TCPListener; $event : 4D.TCPEvent)->$result
+    //when connected, start a server to handle the communication
+	$result:=cs.HouseDeviceServerConnection.new(This)
+	
+Function onError($connection : 4D.TCPListener; $event : 4D.TCPEvent)
+	
+Function onTerminate($connection : 4D.TCPListener; $event : 4D.TCPEvent)
+
+```
+
+The `HouseDeviceServerConnection` user class handles TCP connection:
+
+```4d
+property listener : cs.HouseDeviceServerConnection
+
+Class constructor($server)
+	
+	This.listener:=$server
+	
+	//Callback called when the connection is successfully established
+Function onConnection($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
+	
+	//Callback called when the connection is properly closed
+Function onShutdown($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
+	
+	//Callback called when receiving data. The simple servers always send 
+    //a sentence to show to the user
+Function onData($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
+	
+	$text:=BLOB to text($event.data; UTF8 text without length)
+	
+	//Warning: There's no guarantee you'll receive all the data you need in a single network packet
+	
+	If ($text="Information")
+		var $blob : Blob
+		TEXT TO BLOB(This.listener.information(); $blob; UTF8 text without length)
+		$connection.send($blob)
+	Else 
+		If ($text="Activate")
+			This.listener.activate()
+		End if 
+	End if 
+	
+	//Callback called when the connection is closed unexpectedly
+Function onError($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
+	
+	//Callback called after onShutdown/onError just before the TCPConnection object is released
+Function onTerminate($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
+
+
+```
 
 ### TCPListener Object
 
