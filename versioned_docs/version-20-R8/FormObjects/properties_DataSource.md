@@ -36,7 +36,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
 
-You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html) commands.
+You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) or [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) commands.
 
 #### JSON Grammar
 
