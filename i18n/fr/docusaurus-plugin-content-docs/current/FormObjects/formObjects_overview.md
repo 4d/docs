@@ -18,7 +18,7 @@ Vous pouvez ajouter des objets dans un formulaire de nombreuses manières :
 
 - **[Éditeur de formulaire](FormEditor/formEditor.md) :** en glissant un objet de la barre d'outils de l'éditeur de formulaire vers le formulaire. Utilisez ensuite la liste de propriétés pour indiquer les propriétés de l'objet.
 
-- **4D language**: Commands from the `Objects (Forms)` theme such as [`OBJECT DUPLICATE`](https://doc.4d.com/4dv20/help/command/en/page1111.html) or [`OBJECT SET FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page166.html) allow to create and define form objects.
+- **4D language**: Commands from the `Objects (Forms)` theme such as [`OBJECT DUPLICATE`](../commands-legacy/object-duplicate.md) or [`OBJECT SET FONT STYLE`](../commands-legacy/object-set-font-style.md) allow to create and define form objects.
 
 - **Code JSON dans les formulaires dynamiques :** Définissez les propriétés à l'aide du JSON. Utilisez la propriété [type](properties_Object.md#type) pour définir le type d'objet puis indiquez ses [propriétés disponibles](properties_Reference.md).
     Exemple d'un objet bouton :

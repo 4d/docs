@@ -193,11 +193,11 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 *メッセージ* の型によって、以下の内容が送信されます:
 
-| 型      | 内容                                                                                                                      |
-| ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Text   | UTF-8 のテキスト                                                                                                             |
-| BLOB   | バイナリデータ                                                                                                                 |
-| Object | JSON UTF-8 のテキスト ([`JSON Stringify`](https://doc.4d.com/4dv20/help/command/ja/page1217.html) と同じ結果)。 |
+| 型      | 内容                                                                                                                   |
+| ------ | -------------------------------------------------------------------------------------------------------------------- |
+| Text   | UTF-8 のテキスト                                                                                                          |
+| BLOB   | バイナリデータ                                                                                                              |
+| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](../commands-legacy/json-stringify.md)) |
 
 <!-- END REF -->
 

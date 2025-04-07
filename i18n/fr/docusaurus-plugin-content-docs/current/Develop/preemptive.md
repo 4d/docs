@@ -155,10 +155,10 @@ Pour être thread-safe, une méthode doit respecter les règles suivantes :
 - Elle ne doit pas utiliser de variables interprocess(1)
 - Elle ne doit pas appeler d'objets d'interface (2) (il y a cependant des exceptions, voir ci-dessous).
 
-(1) Pour échanger des données entre des process préemptifs (et entre tous les process), vous pouvez transmettre des [collections partagées ou des objets partagés](../Concepts/shared.md) en tant que paramètres aux process, et/ou utiliser le catalogue [`Storage`](https://doc.4d.com/4dv20/help/command/fr/page1525.html).
+(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](../commands-legacy/storage.md) catalog.
 Les [process Worker](processes.md#worker-processes) vous permettent également d'échanger des messages entre tous les process, y compris les process préemptifs.
 
-(2) La commande [`CALL FORM`](https://doc.4d.com/4dv20/help/command/fe/page1391.html) fournit une solution élégante pour appeler des objets d'interface à partir d'un process préemptif.
+(2) The [`CALL FORM`](../commands-legacy/call-form.md) command provides an elegant solution to call interface objects from a preemptive process.
 
 :::note Notes
 

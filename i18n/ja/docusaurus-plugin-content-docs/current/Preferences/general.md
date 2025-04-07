@@ -100,7 +100,7 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 
 > このオプションは、プロジェクトにのみ適用できます (バイナリデータベースでは常にトークンが含まれます)。
 
-> *option* パラメーターに 1 を指定して [METHOD GET CODE](https://doc.4d.com/4dv19R/help/command/ja/page1190.html) を呼び出すと、 トークンを含むコードをいつでも取得することができます。
+> You can always get the code with tokens by calling [`METHOD GET CODE`](../commands-legacy/method-get-code.md) with 1 in the *option* parameter.
 
 #### 既存プロジェクトからトークンを除外する
 

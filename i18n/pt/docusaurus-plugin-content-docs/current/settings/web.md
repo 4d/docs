@@ -160,7 +160,7 @@ Lista de hosts e métodos permitidos para o serviço CORS. Ver [Parámetros CORS
 
 Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
-> A ativação e desativação do arquivo de log de solicitações também pode ser realizada pela programação usando o comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
+> A ativação e desativação do arquivo de log de solicitações também pode ser realizada pela programação usando o comando [WEB SET OPTION](../commands-legacy/web-set-option.md).
 
 O menu de formato do histórico oferece as seguintes opções:
 

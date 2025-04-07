@@ -82,4 +82,4 @@ Ce bouton suspend toutes les opérations de log actuellement lancées sur le ser
 
 When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 
-> You can pause and resume logging using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command.
+> You can pause and resume logging using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.

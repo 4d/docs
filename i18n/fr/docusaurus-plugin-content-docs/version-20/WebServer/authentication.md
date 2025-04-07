@@ -183,7 +183,7 @@ La méthode base `On Web Connection` est exécutée seulement si la connexion a 
 Exemple de méthode base `On Web Authentication` en mode [DIGEST](#digest-protocol) :
 
 ```4d
- // On Web Authentication Database Method
+ // Sur Web Authentication Database Method
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
     $user : Text; $pw : Text) -> $valid : Boolean
 
@@ -191,9 +191,9 @@ Exemple de méthode base `On Web Authentication` en mode [DIGEST](#digest-protoc
  $valid:=False
 
  $found:=ds.WebUser.query("User === :1";$user)
- If($found.length=1) // User is found
+ If($found.length=1) // L'utilisateur est trouvé
     $valid:=WEB Validate digest($user;[WebUser]password)
  Else
-    $valid:=False // User does not exist
+    $valid:=False // L'utilisateur n'existe pas
  End if
 ```

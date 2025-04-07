@@ -7,7 +7,7 @@ title: Fundo e margem
 
 Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por padrão, *Automático* está selecionado: a coluna usa a cor de fundo alternativa definida no nível da caixa de listagem.
 
-Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 
@@ -27,7 +27,7 @@ Define a cor de fundo de um objeto.
 
 No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a coluna usa a cor de fundo definida no nível da caixa de listagem.
 
-Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 
@@ -49,9 +49,9 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 `List box de tipo coleção e seleção de entidades`
 
-Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. Para mais informações, consulte a descrição do comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) no *Manual de Linguagem 4D*.
+Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. Para mais informações, consulte a descrição do comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) no *Manual de Linguagem 4D*.
 
-Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) com a constante `lk color expression`.
+Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](../commands-legacy/listbox-set-property.md) com a constante `lk color expression`.
 
 > Com os list box de tipo coleção ou seleção de entidades, esta propriedade também pode ser definida usando uma [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -130,7 +130,7 @@ A cor pode ser especificada por:
 - um valor HEX - como "#ff0000"
 - um valor RGB - como "rgb(255,0,0)"
 
-Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 
@@ -190,7 +190,7 @@ De seguida, deve colorir as células com valores negativos a laranja-escuro. Par
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET ROW STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) e [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html). Eles têm a vantagem de permitir que você não precise predefinir matrizes de estilo/cor para as colunas: em vez disso, elas são criadas dinamicamente pelos comandos.
+Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET ROW STYLE`](../commands-legacy/listbox-set-row-font-style.md) e [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md). Eles têm a vantagem de permitir que você não precise predefinir matrizes de estilo/cor para as colunas: em vez disso, elas são criadas dinamicamente pelos comandos.
 
 #### Gramática JSON
 

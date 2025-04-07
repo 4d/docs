@@ -175,7 +175,7 @@ Esta es la secuencia de llamadas de retorno:
 
 :::info
 
-Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](../commands-legacy/call-worker.md), NO [`New process`](../commands-legacy/new-process.md).
 
 :::
 

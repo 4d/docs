@@ -9,8 +9,8 @@ Essa propriedade permite associar mensagens de ajuda a objetos ativos em seus fo
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - O atraso de exibição e a duração máxima das dicas de ajuda podem ser controlados usando os seletores `Tips delay` e `Tips duration` do comando **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)**.
-> - As dicas de ajuda podem ser globalmente desativadas ou ativadas para a aplicação usando o seletor do comando [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html).
+> - O atraso de exibição e a duração máxima das dicas de ajuda podem ser controlados usando os seletores `Tips delay` e `Tips duration` do comando **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md)**.
+> - As dicas de ajuda podem ser globalmente desativadas ou ativadas para a aplicação usando o seletor do comando [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter.md).
 
 Você também pode:
 

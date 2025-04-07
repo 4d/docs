@@ -39,7 +39,7 @@ La actividad del proceso es el porcentaje de tiempo que 4D Server ha dedicado a 
     - Proceso usuario - Nombre del usuario 4D,
     - Proceso web - ruta URL,
 - Nombre del proceso,
-- Número del proceso (devuelto por el comando [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) por ejemplo). El número de proceso es el número asignado en el servidor. En el caso de un proceso global, este número puede ser diferente del asignado en la máquina cliente.
+- Número del proceso (devuelto por el comando [`New process`](../commands-legacy/new-process.md) por ejemplo). El número de proceso es el número asignado en el servidor. En el caso de un proceso global, este número puede ser diferente del asignado en la máquina cliente.
 - Estado actual del proceso,
 - Tiempo de ejecución (en segundos) del proceso desde su creación,
 - Porcentaje de tiempo que 4D Server ha dedicado a este proceso (ratio).
@@ -85,7 +85,7 @@ La página también tiene cinco botones de control que actúan sobre el proceso 
 
 - **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación.
 
-> También puede abortar directamente el proceso o procesos seleccionados sin que aparezca la caja de diálogo de confirmación, manteniendo pulsada la tecla **Alt** mientras hace clic en este botón, o utilizando el comando [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html).
+> También puede abortar directamente el proceso o procesos seleccionados sin que aparezca la caja de diálogo de confirmación, manteniendo pulsada la tecla **Alt** mientras hace clic en este botón, o utilizando el comando [`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id.md).
 
 - **Pausar proceso**: permite pausar los procesos seleccionados.
 - **Activar proceso**: permite reactivar los procesos seleccionados. Los procesos deben haberse pausado previamente (utilizando el botón anterior o por programación); de lo contrario, este botón no tiene ningún efecto.

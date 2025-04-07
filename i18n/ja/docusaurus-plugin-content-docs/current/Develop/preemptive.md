@@ -155,10 +155,10 @@ title: プリエンプティブプロセス
 - インタープロセス変数を使用していない(1)
 - インターフェースオブジェクトを呼び出していない(2) (例外あり、以下参照)
 
-(1) プリエンティブプロセス間 (およびすべてのプロセス間) でデータを交換するためには、[共有コレクションあるいは共有オブジェクト](../Concepts/shared.md) を引数としてプロセスに渡すか、[Storage](https://doc.4d.com/4dv20/help/command/ja/page1525.html) カタログを使用することができます。
+(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](../commands-legacy/storage.md) catalog.
 [ワーカープロセス](processes.md#ワーカープロセス) という新種のプロセスによって、プリエンプティブプロセスを含むあらゆるプロセス間でデータの交換ができるようになります。
 
-[`CALL FORM`](https://doc.4d.com/4dv20/help/command/ja/page1391.html) コマンドを使用すると、プリエンプティブプロセスからインターフェースオブジェクトを呼び出せるというスマートなソリューションが可能になります。
+(2) The [`CALL FORM`](../commands-legacy/call-form.md) command provides an elegant solution to call interface objects from a preemptive process.
 
 :::note 注記
 

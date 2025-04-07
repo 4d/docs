@@ -18,7 +18,7 @@ title: ユーザーページ
 サーバーに接続したユーザーごとに、以下の情報がリストに表示されます:
 
 - システム: クライアントマシンのシステム (macOS/Windows)。
-- **4Dユーザー**: 4Dユーザー名、またはユーザーマシン上で [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/ja/page1666.html) コマンドで設定されていればエイリアス。 パスワードシステムが有効になっていない場合、かつエイリアスも設定されていなければ、すべてのユーザーは "Designer" となります。
+- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command on the user machine. パスワードシステムが有効になっていない場合、かつエイリアスも設定されていなければ、すべてのユーザーは "Designer" となります。
 - **マシン名**: リモートマシンの名前。
 - **セッション名**: リモートマシン上で開かれたセッション名。
 - **IP アドレス**: リモートマシンの IPアドレス。
@@ -36,7 +36,7 @@ title: ユーザーページ
 
 サポートされるシナリオは、以下の様なものです: たとえばお昼休みなどでリモートユーザーが作業を中断するも、サーバーとの接続は開いたままにしたとします。 マシンはスリープモードへと切り替わります。 ユーザーが戻ってきてマシンをスリープから復帰させると、4Dリモートアプリケーションは自動的にサーバーへの接続を復元するとともにセッションコンテキストも復元します。
 
-> スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 このデフォルトのタイムアウトを変更するには、[`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドの `Remote connection sleep timeout` セレクターを使用します。
+> スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 You can modify this default timeout using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command with the `Remote connection sleep timeout` selector.
 
 ## 検索/フィルターエリア
 
@@ -56,7 +56,7 @@ title: ユーザーページ
 
 クライアントマシン上でこのメッセージは警告メッセージとして表示されます。
 
-> [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/ja/page1632.html) コマンドを使用することでも、リモートユーザーに対して同じアクションを実行することができます。
+> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](../commands-legacy/send-message-to-remote-user.md) command.
 
 ### プロセス監視
 
@@ -66,5 +66,5 @@ title: ユーザーページ
 
 このボタンは、選択したユーザーの接続を強制的に解除するために使用します。 このボタンをクリックすると警告ダイアログが表示され、接続解除を実行するかキャンセルするか選択できます。確認ダイアログなしに選択ユーザーの接続を解除するには、**Alt**キーを押しながら、**ユーザーをドロップ** ボタンをクリックします。
 
-> [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/ja/page1633.html) コマンドを使用することでも、リモートユーザーに対して同じアクションを実行することができます。
+> You can perfom the same action for remote users with the [`DROP REMOTE USER`](../commands-legacy/drop-remote-user.md) command.
 

@@ -282,13 +282,13 @@ Existen soluciones alternativas para declarar campos o métodos como funciones e
 
 ### Referenciación de campos mediante la estructura virtual
 
-4D View Pro permite referenciar campos 4D utilizando la estructura virtual de la base de datos, es decir, declarada a través de los comandos [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) y/o [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) con el parámetro \*. Esta solución alternativa podría ser útil si su aplicación ya depende de una estructura virtual (de lo contrario, se recomienda [utilizar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+4D View Pro permite referenciar campos 4D utilizando la estructura virtual de la base de datos, es decir, declarada a través de los comandos [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) y/o [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) con el parámetro \*. Esta solución alternativa podría ser útil si su aplicación ya depende de una estructura virtual (de lo contrario, se recomienda [utilizar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATENCIÓN:** no puede utilizar la estructura virtual y `VP SET CUSTOM FUNCTIONS` simultáneamente. En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, las funciones basadas en los comandos `SET TABLE TITLES` y `SET FIELD TITLES` son ignoradas en el área 4D View Pro.
 
 #### Requisitos
 
-- El campo debe pertenecer a la estructura virtual de la base de datos, es decir, debe declararse a través de los comandos [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) y/o [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) con el parámetro \* (ver el ejemplo),
+- El campo debe pertenecer a la estructura virtual de la base de datos, es decir, debe declararse a través de los comandos [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) y/o [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) con el parámetro \* (ver el ejemplo),
 - Los nombres de las tablas y los campos deben cumplir la norma ECMA (ver [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 - El tipo de campo debe ser soportado por 4D View Pro (ver arriba).
 

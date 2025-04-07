@@ -154,7 +154,7 @@ title: リストボックス
 
 リストボックスに表示される列の数を指定します。
 
-> [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/ja/page829.html) や [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/ja/page830.html) などのコマンドを使うことで、プログラミングによって列数を動的に変更 (列の追加・削除) することができます。
+> You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) or [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md).
 
 #### JSON 文法
 

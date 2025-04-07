@@ -63,7 +63,7 @@ Les palettes suivants sont disponibles :
 
 La palette d'application principale sera appliquée aux formulaires par défaut. Toutefois, elle peut être remplacée :
 
-- par la commande [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) au niveau de la session de travail ;
+- par la commande [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) au niveau de la session de travail ;
 - en utilisant la propriété de formulaire [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) à chaque niveau de formulaire (niveau de priorité le plus élevé). **Note** : à l'impression, les formulaires utilisent toujours la palette "Light".
 
 ## Raccourcis
