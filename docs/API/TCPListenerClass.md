@@ -33,11 +33,11 @@ Function terminate()
 	This.listener.terminate()
 	
 Function onConnection($listener : 4D.TCPListener; $event : 4D.TCPEvent)->$result
-    //when connected, start a server to handle the communication
-	If($event.address # "192.168.@") //in some cases you can reject the connection
-		$result:=Null
+    	//when connected, start a server to handle the communication
+	If($event.address # "192.168.@") 
+		$result:=Null //in some cases you can reject the connection
 	Else
-		$result:=cs.myTCPConnection.new(This)
+		$result:=cs.MyAsyncTCPConnection.new(This) //see TCPConnection class
 	End if
 	
 Function onError($listener : 4D.TCPListener; $event : 4D.TCPEvent)
@@ -45,8 +45,12 @@ Function onError($listener : 4D.TCPListener; $event : 4D.TCPEvent)
 Function onTerminate($listener : 4D.TCPListener; $event : 4D.TCPEvent)
 
 ```
-Lien vers exemple TCPConnection 
 
+:::note
+
+See [example in TCPConnection class](./TCPConnectionClass.md#asynchronous-example) for a description of the MyAsyncTCPConnection user class.
+
+:::
 
 ### TCPListener Object
 
