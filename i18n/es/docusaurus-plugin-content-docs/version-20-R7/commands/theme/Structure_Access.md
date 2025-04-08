@@ -1,6 +1,6 @@
 ---
 id: Structure_Access_theme
-title: Structure Access
+title: Definición estructura
 slug: /commands/theme/Structure-Access
 ---
 
