@@ -8,95 +8,95 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
-| Parâmetro | Tipo    |                             | Descrição                                                                              |
-| --------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
-| sessionID | Text    | &#8594; | ID da sessão                                                                           |
-| options   | Integer | &#8594; | Return options                                                                         |
-| Resultado | Object  | &#8592; | Snapshot of running processes and/or (4D Server only) user sessions |
+| Parâmetro | Tipo    |                             | Descrição                                                                                |
+| --------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------- |
+| sessionID | Text    | &#8594; | ID da sessão                                                                             |
+| options   | Integer | &#8594; | Opções de retorno                                                                        |
+| Resultado | Object  | &#8592; | Snapshot de sessões de usuários em execução e/ou (apenas 4D Servidor) |
 
 <!-- END REF-->
 
 <details><summary>História</summary>
 
-| Release | Mudanças                       |
-| ------- | ------------------------------ |
-| 20 R7   | Support of sessionID parameter |
+| Release | Mudanças                               |
+| ------- | -------------------------------------- |
+| 20 R7   | Compatibilidade do parâmetro sessionID |
 
 </details>
 
 ## Descrição
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time. This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
+<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->O comando **Atividade de Processo** retorna um snapshot dos processos em execução e/ou (4D Server apenas) sessões de usuário conectadas em um dado momento. Este comando retorna todos os processos, incluindo processos internos que não são alcançáveis pelo comando [Informações do processo](process-info.md). 
 
-By default when used without any parameters, **Process activity** returns an object containing the following properties:
+Por padrão quando usado sem quaisquer parâmetros, a **atividade de processo** retorna um objeto que contém as seguintes propriedades:
 
-- "processes", a collection of all processes
-- "sessions" (4D Server only), a collection of all sessions
+- "processos", uma coleção de todos os processos
+- "sessões" (apenas 4D Servidor), uma coleção de todas as sessões
 
-On 4D Server, you can filter information to be returned using the optional *sessionID* and *options* parameters:
+No Servidor 4D, você pode filtrar informações para serem retornadas usando os parâmetros opcionais *sessionID* e *opções*:
 
-- If you pass a user session ID in the *sessionID* parameter, the command only returns information related to this session. By default if the *options* parameter is omitted, the returned object contains a collection with all processes related to the session and a collection with a single object describing the session. If you pass an invalid session ID, a **null** object is returned.
-- You can select the collection(s) to return by passing one of the following constants in the *options* parameter:
+- Se você passar um ID de sessão de usuário no parâmetro *sessionID*, o comando retorna somente informações relacionadas a esta sessão. Por padrão se o parâmetro *options* for omitido, o objeto retornado contém uma coleção com todos os processos relacionados à sessão e uma coleção com um único objeto descrevendo a sessão. Se você passar um ID de sessão inválido, um objeto **null** será retornado.
+- Você pode selecionar a(s) coleção(ões) a retornar passando uma das seguintes constantes no parâmetro *opções*:
 
-| Parâmetros             | Valor | Comentário                                                                       |
-| ---------------------- | ----- | -------------------------------------------------------------------------------- |
-| Processes and sessions | 0     | Returns both "processes" and "sessions" lists (default value) |
-| Processes only         | 1     | Returns only the "processes" list                                                |
-| Somente sessões        | 2     | Returns only the "sessions" list                                                 |
+| Parâmetros             | Valor | Comentário                                                                  |
+| ---------------------- | ----- | --------------------------------------------------------------------------- |
+| Processes and sessions | 0     | Retorna as listas "processos" e "sessões" (valor padrão) |
+| Processes only         | 1     | Retorna apenas a lista de "processos"                                       |
+| Sessions only          | 2     | Retorna apenas a lista de "sessões"                                         |
 
 :::note
 
-When executed on 4D in remote or local mode, `Process activity` always returns the list of running processes (*sessionID* and *options* parameters are ignored).
+Quando executado em 4D em modo remoto ou local, `Processar atividade` sempre retorna a lista de processos em execução (*sessionID* e parâmetros de *opções* são ignorados).
 
 :::
 
-**Sessions**
+**Sessões**
 
-The "sessions" property contains a collection of objects describing all running sessions on the server. Para obter uma descrição das propriedades do objeto de sessão, consulte o comando [`Session info`](session-info.md).
+A propriedade "sessões" contém uma coleção de objetos descrevendo todas as sessões em execução no servidor. Para obter uma descrição das propriedades do objeto de sessão, consulte o comando [`Session info`](session-info.md).
 
 :::note Notes
 
 - Você pode obter o objeto de uma sessão usando o comando [Session](session.md).
-- `Process activity` returns remote client sessions, stored procedure session and rest sessions but not Web sessions (limitation).
+- 'Process ativity' retorna sessões de cliente remoto, sessão de procedimento armazenado e sessões repouso, mas não sessões Web (limitação).
 
 :::
 
-**Processes**
+**Processos**
 
-The "processes" property contains a collection of process objects describing all running processes. Para obter uma descrição das propriedades do objeto de processo, consulte o comando [`Process info`](process-info.md).
+A propriedade "processes" contém uma coleção de objetos de processo descrevendo todos os processos em execução. Para obter uma descrição das propriedades do objeto de processo, consulte o comando [`Process info`](process-info.md).
 
-On the server, the `Process activity` command returns an additional "session" property:
+No servidor, o comando `Process activity` retorna uma propriedade adicional de "session":
 
-| Additional property | Tipo   | Descrição                                                                                                                                                                                   |   |
-| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
-| session             | Object | A propriedade [`.info`](../API/SessionClass.md#info) da sessão onde o processo está sendo executado. Undefined if the `Processes only` parameter is passed. |   |
+| Propriedade adicional | Tipo   | Descrição                                                                                                                                                                                    |   |
+| --------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| session               | Object | A propriedade [`.info`](../API/SessionClass.md#info) da sessão onde o processo está sendo executado. Indefinido se o parâmetro `Processes only` for passado. |   |
 
 ## Exemplo 1
 
-You want to get the collection of all user sessions:
+Se quiser obter a coleção de todas as sessões de usuários:
 
 ```4d
-  //To be executed on the server
+  //Para ser executado no servidor
  
  var $o : Object
  var $i : Integer
  vat $processName;$userName : Text
 
  
- $o:=Process activity //Get process & session info
- For($i;0;($o.processes.length)-1) //Iterate over the "processes" collection
+ $o:=Process activity //obter informação de processo e sessão
+ For($i;0;($o.processes.length)-1) //Iterar sobre a coleção "processes" 
     $processName:=$o.processes[$i].name
-    $userName:=String($o.processes[$i].session.userName) // Easy access to userName
-  //use String because session object might be undefined
+    $userName:=String($o.processes[$i].session.userName) // Acesso fácil a  userName
+  //use String porque o objeto de sessão pode ser indefinido
  End for
 ```
 
 ## Exemplo 2
 
-You want to get all processes related to the current session:
+Se quiser obter todos os processos relacionados à sessão atual:
 
 ```4d
-  // to be executed on the server
+  //a ser executado no servidor
  
  var $sessionID : Text:=Session.id
  var $o : Object
