@@ -36,7 +36,7 @@ title: ユーザーページ
 
 サポートされるシナリオは、以下の様なものです: たとえばお昼休みなどでリモートユーザーが作業を中断するも、サーバーとの接続は開いたままにしたとします。 マシンはスリープモードへと切り替わります。 ユーザーが戻ってきてマシンをスリープから復帰させると、4Dリモートアプリケーションは自動的にサーバーへの接続を復元するとともにセッションコンテキストも復元します。
 
-> スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 このデフォルトのタイムアウトを変更するには、[`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドの `Remote connection sleep timeout` セレクターを使用します。
+> スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 You can modify this default timeout using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command with the `Remote connection sleep timeout` selector.
 
 ## 検索/フィルターエリア
 
