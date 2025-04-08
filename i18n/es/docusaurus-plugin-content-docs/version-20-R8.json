@@ -128,11 +128,11 @@
     "description": "The generated-index page title for category Collections in sidebar docs"
   },
   "sidebar.docs.category.Communications": {
-    "message": "Communications",
+    "message": "Comunicaciones",
     "description": "The label for category Communications in sidebar docs"
   },
   "sidebar.docs.category.Communications.link.generated-index.title": {
-    "message": "Communications",
+    "message": "Comunicaciones",
     "description": "The generated-index page title for category Communications in sidebar docs"
   },
   "sidebar.docs.category.Compiler": {
@@ -176,11 +176,11 @@
     "description": "The generated-index page title for category Date and Time in sidebar docs"
   },
   "sidebar.docs.category.Design Object Access": {
-    "message": "Design Object Access",
+    "message": "Acceso objetos diseño",
     "description": "The label for category Design Object Access in sidebar docs"
   },
   "sidebar.docs.category.Design Object Access.link.generated-index.title": {
-    "message": "Design Object Access",
+    "message": "Acceso objetos diseño",
     "description": "The generated-index page title for category Design Object Access in sidebar docs"
   },
   "sidebar.docs.category.Drag and Drop": {
@@ -444,11 +444,11 @@
     "description": "The generated-index page title for category Quick Report in sidebar docs"
   },
   "sidebar.docs.category.Record Locking": {
-    "message": "Record Locking",
+    "message": "Bloqueo de registros",
     "description": "The label for category Record Locking in sidebar docs"
   },
   "sidebar.docs.category.Record Locking.link.generated-index.title": {
-    "message": "Record Locking",
+    "message": "Bloqueo de registros",
     "description": "The generated-index page title for category Record Locking in sidebar docs"
   },
   "sidebar.docs.category.Records": {
@@ -532,11 +532,11 @@
     "description": "The generated-index page title for category String in sidebar docs"
   },
   "sidebar.docs.category.Structure Access": {
-    "message": "Structure Access",
+    "message": "Definición estructura",
     "description": "The label for category Structure Access in sidebar docs"
   },
   "sidebar.docs.category.Structure Access.link.generated-index.title": {
-    "message": "Structure Access",
+    "message": "Definición estructura",
     "description": "The generated-index page title for category Structure Access in sidebar docs"
   },
   "sidebar.docs.category.Styled Text": {
@@ -556,11 +556,11 @@
     "description": "The generated-index page title for category Subrecords in sidebar docs"
   },
   "sidebar.docs.category.System Documents": {
-    "message": "System Documents",
+    "message": "Documentos sistema",
     "description": "The label for category System Documents in sidebar docs"
   },
   "sidebar.docs.category.System Documents.link.generated-index.title": {
-    "message": "System Documents",
+    "message": "Documentos sistema",
     "description": "The generated-index page title for category System Documents in sidebar docs"
   },
   "sidebar.docs.category.System Environment": {
