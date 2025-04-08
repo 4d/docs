@@ -36,7 +36,7 @@ Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" qu
 
 Associa uma lista de opções a um objeto. Pode ser um nome da lista de opções (uma referência da lista) ou uma coleção de valores padrão.
 
-Você também pode associar listas de escolha a objetos usando os comandos [OBJECT SET LIST SET BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html).
+Você também pode associar listas de escolha a objetos usando os comandos [OBJECT SET LIST SET BY NAME](../commands-legacy/object-set-list-by-name.md) ou [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md).
 
 #### Gramática JSON
 

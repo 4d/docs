@@ -39,7 +39,7 @@ You use the Label page to specify the contents of the label and the Layout page 
 
 The Label page contains several areas with settings for designing and formatting labels.
 
-### List of Fields
+### Lista de campos
 
 Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. The fields in the related table are indented. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
 
@@ -79,7 +79,7 @@ Keep in mind that you can only enter methods that are "allowed" for the database
 - To modify the area, double-click on the contents in order to switch to editing mode. When you double-click on fields or formulas, the **Formula editor** is displayed, allowing you to remove or modify items:
  ![](../assets/en/Desktop/label-formula.png)
 
-### Form to use
+### Formulario a utilizar
 
 This drop-down list allows you to define a table form as a label template. The form chosen must be specially adapted to the creation of labels.
 In this case, the label editor is partially disabled: only functions of the [Layout page](#layout-page) can be used — to allow you to configure the page based on the form. The image of the form selected is displayed in the label preview area.
@@ -102,9 +102,9 @@ The left-hand side of the tool bar includes commands for selecting and inserting
 | ----------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![](../assets/en/Desktop/label-tool1.png) | Selección                | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
 | ![](../assets/en/Desktop/label-tool2.png) | Line creation            |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool3.png) | Rectangle creation       | For Rectangle or Rounded rectangle.                                                                                                                                                                |
+| ![](../assets/en/Desktop/label-tool3.png) | Creación rectangular     | For Rectangle or Rounded rectangle.                                                                                                                                                                |
 | ![](../assets/en/Desktop/label-tool4.png) | Creación de círculo      |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool5.png) | Text insertion           | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
+| ![](../assets/en/Desktop/label-tool5.png) | Inserción de texto       | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
 | ![](../assets/en/Desktop/label-tool6.png) | Formula insertion        | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
 
 There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:

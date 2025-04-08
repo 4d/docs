@@ -201,7 +201,7 @@ For more examples, please refer to the [Scalable sessions for advanced web appli
 
 :::
 
-## Session Token (OTP)
+## Token de sesión (OTP)
 
 The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
 
@@ -262,7 +262,7 @@ Verifying if the received OTP token is valid depends on how it was handled:
 - Si utilizó un `$4DSID`, puede almacenar una propiedad de estado personalizada en el [almacenamiento de sesión](../API/SessionClass.md#storage) en el momento de la creación de tokens, y compruebe este estado una vez que el token OTP fue recibido para ver si es el mismo valor (ver ejemplo).
 - Si uso la función [`Session.restore()`](../API/SessionClass.md#restore), devuelve true si la sesión se restauró correctamente.
 
-### Scenario with $4DSID
+### Escenario con $4DSID
 
 The scenario using the `$4DSID` key is illustrated in the following diagram:
 
@@ -308,7 +308,7 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+La clase singleton:
 
 ```4d
 //Class OperationsHandler
@@ -367,7 +367,7 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+La clase singleton:
 
 ```4d
 //Class OperationsHandler

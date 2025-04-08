@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | targetObj      | Object                  | &#8594; | Range or element or 4D Write Pro document                  |
 | picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk |
 | pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
-| mode           | Integer                 | &#8594; | Insertion mode                                             |
+| mode           | Integer                 | &#8594; | Modo de inserción                                          |
 | rangeUpdate    | Integer                 | &#8594; | Range update mode                                          |
 | Resultado      | Object                  | &#8592; | Object referencing the picture                             |
 

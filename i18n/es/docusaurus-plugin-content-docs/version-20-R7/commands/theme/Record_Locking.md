@@ -1,6 +1,6 @@
 ---
 id: Record_Locking_theme
-title: Record Locking
+title: Bloqueo de registros
 slug: /commands/theme/Record-Locking
 ---
 

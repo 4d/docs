@@ -1,6 +1,6 @@
 ---
 id: Design_Object_Access_theme
-title: Design Object Access
+title: Acesso a objetos de desenvolvimento
 slug: /commands/theme/Design-Object-Access
 ---
 

@@ -38,7 +38,7 @@ Você pode acessar essas caixas de diálogo usando o menu **Design > Configuraç
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-Você também pode acessar essas caixas de diálogo usando o comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) com o seletor *settingsType* apropriado.
+Você também pode acessar essas caixas de diálogo usando o comando [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window.md) com o seletor *settingsType* apropriado.
 
 A caixa de diálogo Configurações da estrutura é idêntica às Configurações standard e dá acesso a todas as suas propriedades (que podem ser substituídas por configurações do utilizador).
 
@@ -77,9 +77,9 @@ Quando você editar as configurações nesta caixa de diálogo, elas são automa
 
 ## `SET DATABASE PARAMETER` e configurações de usuário
 
-Algumas das configurações do usuário também estão disponíveis através do comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html). As definições do utilizador são parâmetros com a propriedade **Kept between two sessions** definida para **Yes**.
+Algumas das configurações do usuário também estão disponíveis através do comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md). As definições do utilizador são parâmetros com a propriedade **Kept between two sessions** definida para **Yes**.
 
-Quando a função **Configurações do Usuário** é ativada, as configurações do usuário editadas pelo [SET DATABASE PARAMETER](https://doc.4d. O comando om/4dv19R/help/command/en/page642.html) é salvo automaticamente nas configurações do usuário do arquivo de dados.
+When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command are automatically saved in the user settings for the data file.
 
 > 'Número de seqüência de tabela' é uma exceção; esse valor de configuração é sempre salvo no próprio arquivo de dados.
 

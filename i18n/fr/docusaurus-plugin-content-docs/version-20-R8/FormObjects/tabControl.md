@@ -11,7 +11,7 @@ Le formulaire multi-pages suivant utilise un onglet :
 
 Pour passer d’un écran à l’autre, l’utilisateur clique simplement sur l’onglet correspondant.
 
-Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. If the tab control is used as a page navigation tool, then the [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. If the tab control is used as a page navigation tool, then the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
 
 Un onglet peut aussi être utilisé pour contrôler les données qui sont affichées dans un sous-formulaire. On peut, par exemple, implémenter un rolodex à l’aide d’un onglet. Chaque onglet afficherait alors une des lettres de l’alphabet et l’action de l’onglet serait de charger les informations correspondantes à la lettre sur lequel l’utilisateur a cliqué.
 
@@ -81,7 +81,7 @@ Vous pouvez créer un tableau Texte qui contient les noms de chaque page du form
  arrPages{3}:="Notes"  
 ```
 
-> Vous pouvez également stocker les noms des pages dans une liste hiérarchique et utiliser la commande [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) pour charger les valeurs dans le tableau.
+> Vous pouvez également stocker les noms des pages dans une liste hiérarchique et utiliser la commande [LIST TO ARRAY](../commands-legacy/list-to-array.md) pour charger les valeurs dans le tableau.
 
 ## Fonctionnalités de Goto page
 

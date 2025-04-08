@@ -623,9 +623,9 @@ $students que incluía al estudiante añadido por el cliente
 $ageAverage:=$students.getAgeAverage()
 ```
 
-## GET request examples
+## Ejemplos de peticiones GET
 
-### Returning a document
+### Devolviendo un documento
 
 You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 

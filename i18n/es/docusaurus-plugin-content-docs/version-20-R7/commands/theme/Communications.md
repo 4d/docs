@@ -1,6 +1,6 @@
 ---
 id: Communications_theme
-title: Communications
+title: Comunicaciones
 slug: /commands/theme/Communications
 ---
 

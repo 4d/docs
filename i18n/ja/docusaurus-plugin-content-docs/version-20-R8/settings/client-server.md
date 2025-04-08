@@ -66,13 +66,13 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 
 ここでは、ドロップダウンメニューにて 3つのネットワークオプションから選択できます: **Legacy**、**ServerNet** 、**QUIC** (プロジェクトモードのみ)。ネットワークレイヤーは、4D Server とリモートの 4Dマシン (クライアント) 間の通信を管理するのに使用されます。
 
-- **旧式**: v15以前に作成されたデータベースとの互換性を確保するため、この旧式ネットワークレイヤーは引き続きサポートされています。 旧式ネットワークレイヤーは、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/ja/page642.html) コマンドを使用してプログラミングによって有効にすることもできます。
+- **旧式**: v15以前に作成されたデータベースとの互換性を確保するため、この旧式ネットワークレイヤーは引き続きサポートされています。 This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.
 - **ServerNet** (デフォルト): サーバーの ServerNet ネットワークレイヤーを有効にします (4D 15 以降で利用可能)。
 - **QUIC** (プロジェクトモードでのみ利用可能): サーバー上で QUICネットワークレイヤーを有効にします。
 
     **注**:
 
-    - このオプションを設定すると、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/ja/page642.html) コマンドにより "旧式ネットワークレイヤーを使用する" オプションが設定されていても無視されます。
+    - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.
     - You can know if a 4D application is running with a QUIC network layer using the [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
     - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
     - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。

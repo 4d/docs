@@ -58,7 +58,7 @@ L'éditeur des utilisateurs se trouve dans la boîte à outils de 4D.
 
 ![](../assets/en/Users/editor.png)
 
-> L'éditeur des utilisateurs et des groupes peut être affiché au moment de l'exécution à l'aide de la commande [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html).
+> L'éditeur des utilisateurs et des groupes peut être affiché au moment de l'exécution à l'aide de la commande [EDIT ACCESS](../commands-legacy/edit-access.md).
 > Toute la configuration des utilisateurs et des groupes peut également être modifiée pendant l'exécution de l'application à l'aide des commandes du langage 4D du thème `Utilisateurs et groupes`.
 
 ### Ajouter et modifier des utilisateurs

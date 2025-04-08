@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 In the *form* parameter, you can pass:
 
-- the name of a form, or
+- el nombre de un formulario, o
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use, or
 - an object containing a description of the form.
 
@@ -109,7 +109,7 @@ The following example returns the number of objects on a JSON form:
  ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
 ```
 
-the result shown is:
+el resultado mostrado es:
 
 ![](../assets/en/commands/pict3688480.en.png)
 

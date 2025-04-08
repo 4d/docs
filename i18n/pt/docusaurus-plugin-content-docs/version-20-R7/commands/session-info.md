@@ -84,7 +84,7 @@ Here is an example of output object:
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1844                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1844                        |
+| Thread safe       | &check; |

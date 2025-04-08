@@ -1,6 +1,6 @@
 ---
 id: Compiler_theme
-title: Compiler
+title: Compilador
 slug: /commands/theme/Compiler
 ---
 

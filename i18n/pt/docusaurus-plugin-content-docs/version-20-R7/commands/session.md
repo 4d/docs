@@ -77,7 +77,7 @@ IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //action_Session method
+  //Método action_Session
  Case of
     :(Session#Null)
        If(Session.hasPrivilege("WebAdmin")) //calling the hasPrivilege function
@@ -98,9 +98,9 @@ IP:port/4DACTION/action_Session
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1714                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1714                        |
+| Thread safe       | &check; |
 
 
