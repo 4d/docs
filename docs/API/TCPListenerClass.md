@@ -60,7 +60,9 @@ TCPListener objects provide the following properties and functions:
 
 ||
 |---|
-|[<!-- INCLUDE #TCPListener.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #TCPConnection.terminate().Summary -->|
+|[<!-- INCLUDE #TCPListener.errors.Syntax -->](#errors)<br/><!-- INCLUDE #TCPListener.errors.Summary -->|
+|[<!-- INCLUDE #TCPListener.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPListener.port.Summary -->|
+|[<!-- INCLUDE #TCPListener.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #TCPListener.terminate().Summary -->|
 
 
 <!-- REF #4D.TCPListener.new().Desc -->
@@ -106,14 +108,48 @@ Callback functions receive up to two parameters:
 
 **Sequence of Callback Calls:**
 
-1. `onConnection` is triggered when the connection is established.
+1. `onConnection` is triggered each time a connection is established.
 2. `onError` is triggered if an error occurs.
-3. `onTerminate` is always triggered just before the `TCPConnection` is released (connection is closed or an error occured).
+3. `onTerminate` is always triggered just before a connection is terminated.
 
 
 #### TCPEvent object
 
 A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#callback-functions) is called.
+
+<!-- END REF -->
+
+
+<!-- REF #TCPListener.errors.Desc -->
+## .errors
+
+<!-- REF #TCPListener.errors.Syntax -->**errors** : Collection<!-- END REF -->
+
+#### Description
+
+The `.errors` property contains <!-- REF #TCPListener.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+
+|Property||Type|Description|
+|---|---|---|---|
+|errors||Collection|4D error stack in case of error|
+||[].errCode|Number|4D error code|
+||[].message|Text|Description of the 4D error|
+||[].componentSignature|Text|Signature of the internal component which returned the error|
+
+
+<!-- END REF -->
+
+
+<!-- REF #TCPListener.port.Desc -->
+## .port
+
+<!-- REF #TCPListener.port.Syntax -->**port** : Number<!-- END REF -->
+
+#### Description
+
+The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port number of the machine<!-- END REF -->. This property is **read-only**.
+
+
 
 <!-- END REF -->
 
