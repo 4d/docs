@@ -42,7 +42,7 @@ By default, the added picture is:
 
 - Embedded behind the text
 - Displayed at the top left corner of the paper box
-- Shown on all pages
+- Mostrar en todas las páginas
 
 The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
 
