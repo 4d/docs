@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones     |
-| ----------- | ------------------ |
-| 20 R8       | Form class support |
+| Lanzamiento | Modificaciones                       |
+| ----------- | ------------------------------------ |
+| 20 R8       | Soporte de las clases de formularios |
 
 </details>
 
