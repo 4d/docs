@@ -61,7 +61,7 @@ title: インターフェースページ
 
 メインアプリケーションスキームはデフォルトでフォームに適用されます。 その一方で、それを以下の方法で上書きすることもできます:
 
-- ワーキングセッションレベルでは [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/ja/page1762.html) コマンドを使用できます。
+- by the [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) command at the working session level;
 - 各フォームレベル (最優先レベル) では、[カラースキーム](../FormEditor/propertiesForm.html#カラースキーム) プロパティを使用できます。 **注記**: 印刷時には、フォームは常に "ライト" スキームを使用します。
 
 ## ショートカット
