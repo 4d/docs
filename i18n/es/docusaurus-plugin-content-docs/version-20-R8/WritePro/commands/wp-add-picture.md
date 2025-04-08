@@ -60,7 +60,7 @@ You want to add a picture with default settings using a filepath.
  $obPict:=WP Add picture(myDoc;"/PACKAGE/Pictures/Saved Pictures/Sunrise.jpg")
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
@@ -80,7 +80,7 @@ You want to add a resized picture, centered and anchored to the header:
  WP SET ATTRIBUTES($obImage;wk width;"650px";wk height;"120px")
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3617351.en.png)
 
