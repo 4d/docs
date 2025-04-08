@@ -70,7 +70,7 @@ Todos los procesos de procedimientos almacenados comparten la misma sesión virt
 
 Para obtener información sobre la sesión de usuario virtual de los procedimientos almacenados, consulte la página [4D Server y lenguaje 4D](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html).
 
-## Standalone session
+## Sesión independiente
 
 The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
 
