@@ -81,3 +81,10 @@ Here is an example of output object:
 
 [Session](../API/SessionClass.md)
 [Process info](process-info.md)
+
+## Propriedades
+
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1844                        |
+| Thread safe       | &check; |

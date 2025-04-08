@@ -1,7 +1,10 @@
 ---
-id: HTTP
+id: HTTP_theme
 title: HTTP
+slug: /commands/theme/HTTP
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.HTTP AUTHENTICATE.Syntax -->](../../commands-legacy/http-authenticate.md)<br/>|

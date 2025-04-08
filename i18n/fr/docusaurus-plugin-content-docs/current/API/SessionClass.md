@@ -9,9 +9,9 @@ Les objets de session sont retournés par la commande [`Session`](../commands/se
 
 Les types de sessions suivants sont pris en charge par cette classe :
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-web-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
+- [**Session utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-web-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
 - [**Session utilisateur client distant**](../Desktop/clientServer.md#remote-user-sessions) : Dans les applications client/serveur, les utilisateurs distants ont leurs propres sessions gérées sur le serveur.
-- [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html): All stored procedures executed on the server share the same virtual user session.
+- [**Session des procédures stockées**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) : Toutes les procédures stockées exécutées sur le serveur partagent la même session utilisateur virtuelle.
 - [**Session autonome**](../Project/overview.md#development) : objet session local retourné dans une application mono-utilisateur (utile dans les phases de développement et de test des applications client/serveur).
 
 :::note
@@ -68,7 +68,13 @@ Cette fonction ne fait rien et retourne toujours **True** avec les sessions clie
 
 :::
 
-La fonction `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->supprime tous les privilèges associés à la session et retourne **True** si l'exécution a réussi<!-- END REF -->. En résultat, la session devient automatiquement une session Guest.
+La fonction `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->supprime tous les privilèges associés à la session et retourne **True** si l'exécution a réussi<!-- END REF -->. Unless in ["forceLogin" mode](../REST/authUsers.md#force-login-mode), the session automatically becomes a Guest session.
+
+:::note
+
+In "forceLogin" mode, `.clearPrivileges()` does not transform the session to a Guest session, it only clears the session's privileges.
+
+:::
 
 #### Exemple
 
@@ -99,10 +105,10 @@ $isGuest:=Session.isGuest() //$isGuest est True
 
 <!-- REF #SessionClass.createOTP().Params -->
 
-| Paramètres | Type    |                             | Description                       |
-| ---------- | ------- | :-------------------------: | --------------------------------- |
-| lifespan   | Integer |              ->             | Session token lifespan in seconds |
-| Résultat   | Text    | <- | UUID of the session               |
+| Paramètres | Type    |                             | Description                                  |
+| ---------- | ------- | :-------------------------: | -------------------------------------------- |
+| lifespan   | Integer |              ->             | Durée de vie du token de session en secondes |
+| Résultat   | Text    | <- | UUID de la session                           |
 
 <!-- END REF -->
 
@@ -110,23 +116,23 @@ $isGuest:=Session.isGuest() //$isGuest est True
 
 :::note
 
-This function is only available with web user sessions. It returns an empty string in other contexts.
+Cette fonction est uniquement disponible avec les sessions utilisateur web. Elle retourne une chaîne vide dans les autres contextes.
 
 :::
 
-The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns its token UUID<!-- END REF -->. This token is unique to the session in which it was generated.
+La fonction `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->crée un nouvel OTP (One Time Passcode) pour la session et renvoie son UUID de token<!-- END REF -->. Ce token est propre à la session au cours de laquelle il a été généré.
 
-For more information about the OTP tokens, please refer to [this section](../WebServer/sessions.md#session-token-otp).
+Pour plus d'informations sur les tokens OTP, veuillez consulter [cette section](../WebServer/sessions.md#session-token-otp).
 
-By default, if the *lifespan* parameter is omitted, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. You can set a custom timeout by passing a value in seconds in *lifespan* (the minimum value is 10 seconds, *lifespan* is reset to 10 if a smaller value is passed). If an expired token is used to restore a web user session, it is ignored.
+Par défaut, si le paramètre *lifespan* est omis, le token est créé avec la même durée de vie que le [`.idleTimeOut`](#idletimeout) de la session. Vous pouvez définir un délai personnalisé en passant une valeur en secondes dans *lifespan* (la valeur minimale est de 10 secondes, *lifespan* est réinitialisé à 10 si une valeur inférieure est passée). Si un token expiré est utilisé pour restaurer la session d'un utilisateur web, il est ignoré.
 
-The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application.
+Le token retourné peut ensuite être utilisé lors d'échanges avec des applications tierces ou des sites Web pour identifier la session de manière sécurisée. Par exemple, le token OTP de session peut être utilisé avec une application de paiement.
 
 #### Exemple
 
 ```4d
 var $token : Text
-$token := Session.createOTP( 60 ) //the token is valid for 1 mn
+$token := Session.createOTP( 60 ) //le token est valable pendant 1 mn
 ```
 
 <!-- END REF -->
@@ -493,10 +499,10 @@ End if
 
 <!-- REF #SessionClass.restore().Params -->
 
-| Paramètres | Type    |                             | Description                                                                        |
-| ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------------- |
-| token      | Text    |              ->             | Session token UUID                                                                 |
-| Résultat   | Boolean | <- | True if the current session has been successfully replaced by the session in token |
+| Paramètres | Type    |                             | Description                                                                     |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------- |
+| token      | Text    |              ->             | UUID du token de session                                                        |
+| Résultat   | Boolean | <- | True si la session courante a été remplacée avec succès par la session du token |
 
 <!-- END REF -->
 
@@ -504,26 +510,26 @@ End if
 
 :::note
 
-This function is only available with web user sessions. It returns False in other contexts.
+Cette fonction est uniquement disponible avec les sessions utilisateur web. Elle renvoie False dans les autres contextes.
 
 :::
 
-The `.restore()` function <!-- REF #SessionClass.restore().Summary -->replaces the current web user session with their original session corresponding to the *token* UUID<!-- END REF -->. Session's storage and privileges are restored.
+La fonction `.restore()` <!-- REF #SessionClass.restore().Summary -->remplace la session courante de l'utilisateur Web par sa session originale correspondant à l'UUID *token*<!-- END REF -->. Le storage et les privilèges de la session sont restaurés.
 
-If the original user session has been correctly restored, the function returns `true`.
+Si la session originale de l'utilisateur a été correctement restaurée, la fonction renvoie `true`.
 
-The function returns `false` if:
+La fonction renvoie `false` si :
 
-- the session token has already been used,
-- the session token has expired,
-- the session token does not exist,
-- the original session itself has expired.
+- le token de session a déjà été utilisé,
+- le token de session a expiré,
+- le token de session n'existe pas,
+- la session d'origine elle-même a expiré.
 
-In this case, the current web user session is left untouched (no session is restored).
+Dans ce cas, la session courante de l'utilisateur web est laissée intacte (aucune session n'est restaurée).
 
 #### Exemple
 
-In a singleton called by a custom HTTP Request handler:
+Dans un singleton appelé par un HTTP request handler personnalisé :
 
 ```4d
 shared singleton Class constructor()

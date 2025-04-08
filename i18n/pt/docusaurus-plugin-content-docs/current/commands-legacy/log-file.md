@@ -1,12 +1,12 @@
 ---
 id: log-file
-title: Log File
+title: Log file
 slug: /commands/log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log File.Syntax-->**Log File**  : Text<!-- END REF-->
-<!--REF #_command_.Log File.Params-->
+<!--REF #_command_.Log file.Syntax-->**Log file**  : Text<!-- END REF-->
+<!--REF #_command_.Log file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | Resultado | Text | &#8592; | Nome completo do arquivo de log do banco de dados |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Log File.Summary-->O comando Log File retorna o nome longo (ou seja, a rota de acesso completa do arquivo, incluindo seu nome) do arquivo de histórico atual do banco de dados aberto.<!-- END REF--> 
+<!--REF #_command_.Log file.Summary-->O comando Log file retorna o nome longo (ou seja, a rota de acesso completa do arquivo, incluindo seu nome) do arquivo de histórico atual do banco de dados aberto.<!-- END REF--> 
 
 Se o banco de dados funciona sem um arquivo de histórico, o comando retorna uma cadeia vazia e a variável de sistema OK toma o valor 0\. 
 

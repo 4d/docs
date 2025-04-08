@@ -1,7 +1,10 @@
 ---
-id: Objects_Forms
+id: Objects_Forms_theme
 title: Objects (Forms)
+slug: /commands/theme/Objects-Forms
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.GET STYLE SHEET INFO.Syntax -->](../../commands-legacy/get-style-sheet-info.md)<br/>|

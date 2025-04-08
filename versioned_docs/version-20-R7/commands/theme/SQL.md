@@ -1,7 +1,10 @@
 ---
-id: SQL
+id: SQL_theme
 title: SQL
+slug: /commands/theme/SQL
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Begin SQL.Syntax -->](../../commands-legacy/begin-sql.md)<br/>|

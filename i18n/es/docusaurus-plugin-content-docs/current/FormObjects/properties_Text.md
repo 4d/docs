@@ -7,7 +7,7 @@ title: Text
 
 ## Autorizar selector fuente/color
 
-Cuando esta propiedad está activada, los comandos [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) y [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) pueden ser invocados para mostrar las ventanas de selección de fuente y color del sistema. A través de estas ventanas, los usuarios pueden cambiar la fuente o el color de un objeto formulario que tenga el foco directamente haciendo clic. Cuando esta propiedad está desactivada (por defecto), los comandos del selector abierto no tienen efecto.
+Cuando esta propiedad está activada, los comandos [OPEN FONT PICKER](../commands-legacy/open-font-picker.md) y [OPEN COLOR PICKER](../commands-legacy/open-color-picker.md) pueden ser invocados para mostrar las ventanas de selección de fuente y color del sistema. A través de estas ventanas, los usuarios pueden cambiar la fuente o el color de un objeto formulario que tenga el foco directamente haciendo clic. Cuando esta propiedad está desactivada (por defecto), los comandos del selector abierto no tienen efecto.
 
 #### Gramática JSON
 
@@ -157,7 +157,7 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 Designa el color de la fuente.
 
-> This property also sets the color of object's border (if any) when "plain" or "dotted" style is used.
+> Esta propiedad también define el color del borde del objeto (si existe) cuando se utiliza el estilo "plano" o "punteado".
 
 El color puede ser especificado por:
 
@@ -183,7 +183,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 `List box de tipo colección/selección de entidades`
 
-Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) en el manual Lenguaje de 4D.
+Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) en el manual Lenguaje de 4D.
 
 Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
 

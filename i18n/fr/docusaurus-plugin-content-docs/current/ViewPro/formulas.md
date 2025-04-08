@@ -35,7 +35,7 @@ Toutes les formules ont des opérandes et des opérateurs :
 - **Les opérandes** comprennent plusieurs catégories:
  - [valeurs](#values-and-operators) (5 types de données sont pris en charge)
  - [Les références à d'autres cellules](#cell-references) (relatives, absolues, mixtes ou par nom)
- - [standard spreadsheet functions](#built-in-functions)
+ - [fonctions de feuille de calcul standard](#built-in-functions)
  - [Fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
 
 ## Valeurs et opérateurs
@@ -282,13 +282,13 @@ Des solutions alternatives sont disponibles pour déclarer des champs ou des mé
 
 ### Référencement de champs à l'aide de la structure virtuelle
 
-4D View Pro vous permet de référencer des champs 4D en utilisant la structure virtuelle de la base de données, c'est-à-dire déclarée à travers les commandes [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/fr/page601.html) et/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/fr/page602.html) avec le paramètre \*. Cette solution alternative peut être utile si votre application s'appuie déjà sur une structure virtuelle (sinon, [il est recommandé d'utiliser `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter. Cette solution alternative peut être utile si votre application s'appuie déjà sur une structure virtuelle (sinon, [il est recommandé d'utiliser `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 #### Conditions requises
 
-- Le champ doit appartenir à la structure virtuelle de la base de données, c'est-à-dire qu'il doit être déclaré par les commandes [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/fr/page601.html) et/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/fr/page602.html) avec le paramètre \* (voir exemple),
+- The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter (see example),
 - Les noms de table et de champ doivent être conformes à ECMA (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 - Le type de champ doit être pris en charge par 4D View Pro (voir ci-dessus).
 
@@ -358,7 +358,7 @@ Vous pouvez appeler directement des méthodes du projet 4D à partir de vos form
 Pour être appelée dans une formule 4D View Pro, une méthode projet doit être :
 
 - **Autorisée** : elle a été déclarée explicitement avec la commande [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
-- **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Extensions/develop-components.md#sharing-of-project-methods)).
+- **Exécutable** : elle appartient au projet hôte ou à un composant chargé dont l'option "Partagé par les composants et le projet hôte" est activée (voir [Partage des méthodes projet](../Extensions/develop-components.md#sharing-of-project-methods)).
 - **Pas de conflit** avec une fonction de tableur 4D View Pro existante : si vous appelez une méthode projet portant le même nom qu'une fonction intégrée 4D View Pro, la fonction est appelée.
 
 > Si ni la commande [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) ni la commande [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) n'ont été exécutées pendant la session, les fonctions personnalisées de 4D View Pro s'appuient sur les méthodes autorisées définies par la commande générique `SET ALLOWED METHODS` de 4D. Dans ce cas, les noms de méthode du projet doivent être conformes à la grammaire des identifiants JavaScript (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). L'option de filtrage global dans la boîte de dialogue Paramètres (voir *Accès aux données*) est ignorée dans tous les cas.

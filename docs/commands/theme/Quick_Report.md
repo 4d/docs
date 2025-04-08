@@ -1,7 +1,10 @@
 ---
-id: Quick_Report
+id: Quick_Report_theme
 title: Quick Report
+slug: /commands/theme/Quick-Report
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.QR BLOB TO REPORT.Syntax -->](../../commands-legacy/qr-blob-to-report.md)<br/>|

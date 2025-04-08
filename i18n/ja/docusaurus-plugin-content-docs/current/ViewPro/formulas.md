@@ -282,13 +282,13 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ### 仮想ストラクチャーを使ったフィールド参照
 
-4D View Pro では、データベースの仮想ストラクチャーを使用して 4Dフィールドを参照することができます。つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されている場合です。 この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
+4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter. この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
 
 > **警告**: 仮想ストラクチャーと `VP SET CUSTOM FUNCTIONS` を同時に使用することはできません。 `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
 
 #### 要件
 
-- フィールドは、データベースの仮想ストラクチャーに属していること。つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されていなくてはなりません。
+- The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter (see example),
 - テーブルとフィールド名は ECMA 準拠であること ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。
 - フィールドの型が 4D View Pro でサポートされていること (前述参照)。
 

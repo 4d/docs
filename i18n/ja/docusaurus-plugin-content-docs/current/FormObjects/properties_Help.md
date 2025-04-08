@@ -9,8 +9,8 @@ title: ヘルプ
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv18/4D/18/SET-DATABASE-PARAMETER.301-4505363.ja.html)** コマンドの `Tips delay` および `Tips duration` セレクターを使用することで、Tips の表示遅延や最大表示時間を指定することができます。
-> - **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv18/4D/18/SET-DATABASE-PARAMETER.301-4505363.ja.html)** コマンドの `Tips enabled` セレクターを使用することで、アプリケーション全体に対してヘルプTipsを有効化あるいは無効化することができます。
+> - The display delay and maximum duration of help tips can be controlled using the `Tips delay` and `Tips duration` selectors of the **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md)** command.
+> - Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter.md) command.
 
 これには、次の二つの方法があります:
 

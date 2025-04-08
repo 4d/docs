@@ -1,7 +1,10 @@
 ---
-id: Pictures
+id: Pictures_theme
 title: Pictures
+slug: /commands/theme/Pictures
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.BLOB TO PICTURE.Syntax -->](../../commands-legacy/blob-to-picture.md)<br/>|

@@ -310,7 +310,7 @@ Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. 
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the list box column object method.
+Au moment de l'exécution, les événements qui se produisent dans un en-tête sont générés dans la méthode objet de la colonne de list box.
 
 Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un en-tête, elle est appliquée à tous les en-têtes, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "header3";False)` masquera tous les en-têtes de l'objet list box auquel *header3* appartient et pas simplement cet en-tête.
 
@@ -330,7 +330,7 @@ Lorsque les pieds sont affichés, vous pouvez sélectionner un pied de list box 
 
 Vous pouvez définir, pour chaque pied de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box. Vous pouvez également accéder à des propriétés spécifiques pour les pieds de page. En particulier, vous pouvez insérer un [calcul personnalisé ou automatique](properties_Object.md#variable-calculation).
 
-At runtime, events that occur in a footer are generated in the list box column object method.
+Au moment de l'exécution, les événements qui se produisent dans un pied de page sont générés dans la méthode objet de la colonne de list box.
 
 Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un pied de page, elle est appliquée à tous les pieds de page, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "footer3";False)` masquera tous les pieds de page de l'objet list box auquel *footer3* appartient et pas simplement ce pied de page.
 
@@ -532,11 +532,11 @@ La prise en charge du tri standard dépend du type de list box :
 
 ### Tri personnalisé
 
-The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
 Les tris personnalisés vous permettent de :
 
-- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
+- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command,
 - use functions such as [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Exemple
@@ -578,7 +578,7 @@ La valeur de la variable [variable associée à l’en-tête d’une colonne](pr
 
 Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de "forcer" l'affichage de la flèche de tri. Le tri de la colonne lui-même n'est pas modifié dans ce cas ; c'est au développeur de s'en charger.
 
-> The [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+> The [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 ## Gestion des styles et des couleurs
 

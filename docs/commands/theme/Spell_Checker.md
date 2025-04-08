@@ -1,7 +1,10 @@
 ---
-id: Spell_Checker
+id: Spell_Checker_theme
 title: Spell Checker
+slug: /commands/theme/Spell-Checker
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.SPELL ADD TO USER DICTIONARY.Syntax -->](../../commands-legacy/spell-add-to-user-dictionary.md)<br/>|

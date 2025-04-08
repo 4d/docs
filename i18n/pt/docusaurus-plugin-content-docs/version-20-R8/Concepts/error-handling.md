@@ -95,7 +95,7 @@ Within the custom error method, you have access to several pieces of information
 4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
 :::
 
-- o comando [`Últimos erros`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. Você também pode usar o comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) que retorna as mesmas informações que os arrays.
+- o comando [`Últimos erros`](../commands-legacy/last-errors.md) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. Você também pode usar o comando [`Last errors`](../commands-legacy/last-errors.md) que retorna as mesmas informações que os arrays.
 - the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### Exemplo

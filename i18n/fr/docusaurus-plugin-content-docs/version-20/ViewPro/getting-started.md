@@ -91,7 +91,7 @@ Les zones 4D View Pro bénéficient d'un menu contextuel automatique qui offre d
 
 ## Utilisation des méthodes 4D View Pro
 
-4D View Pro methods can be used in the 4D Code Editor, just like 4D language commands.
+Les méthodes 4D View Pro peuvent être utilisées dans l'éditeur de code 4D, tout comme les commandes du langage 4D.
 
 4D View Pro étant un composant 4D intégré, vous pouvez accéder à sa liste de méthodes à partir de l'Explorateur, dans la section **Méthodes composants** :
 
@@ -147,9 +147,9 @@ Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 |           | \[ ].name        | text       | Nom de plage                                                                               | name                                                           |
 |           | \[ ].sheet       | number     | Indice de la feuille (par défaut, indice de la feuille courante) (le comptage démarre à 0) | cellule, cellules, ligne, lignes, colonne, colonnes, tout, nom |
 |           | \[ ].row         | number     | Indice de la ligne (le comptage démarre à 0)                                               | cellule, cellules, ligne, lignes                               |
-|           | \[ ].rowCount    | number     | Row count                                                                                  | cellule, lignes                                                |
+|           | \[ ].rowCount    | number     | Nombre de lignes                                                                           | cellule, lignes                                                |
 |           | \[ ].column      | number     | Indice de la colonne (le comptage démarre à 0)                                             | cellule, cellules, colonne, colonnes                           |
-|           | \[ ].columnCount | number     | Column count                                                                               | cellules, colonnes                                             |
+|           | \[ ].columnCount | number     | Nombre de colonnes                                                                         | cellules, colonnes                                             |
 
 
 

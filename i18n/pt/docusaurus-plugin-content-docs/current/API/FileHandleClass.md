@@ -275,7 +275,7 @@ Essa propriedade é **leitura/escrita**.
 
 :::caution
 
-Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. No entanto, a unidade de medida do deslocamento difere conforme a função de leitura: com [`readBlob()`](#readblob), `.offset` é um número de bytes, enquanto com [`readText()`](#readtext)/[`readLine()`](#readline) ele é um número de caracteres. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Por exemplo:
+Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. No entanto, a unidade de medida do deslocamento difere conforme a função de leitura: com [`readBlob()`](#readblob), `.offset` é um número de bytes, enquanto com [`readText()`](#readtext)/[`readLine()`](#readline) ele é um número de caracteres. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
 
 ```4d
   // Open a european text file using utf-16 encoding (two bytes per character)

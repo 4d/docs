@@ -36,7 +36,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 Associe une énumération à un objet. Il peut s'agir d'un nom d'énumération (une référence de liste) ou d'une collection de valeurs par défaut.
 
-Vous pouvez également associer des listes de choix à des objets à l'aide des commandes [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv20/help/command/en/page237.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv20/help/command/en/page1266.htm
+You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) or [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) commands.
 
 #### Grammaire JSON
 
@@ -47,8 +47,7 @@ Vous pouvez également associer des listes de choix à des objets à l'aide des 
 
 #### Objets pris en charge
 
-[Drop-down List](dropdownList_Overview.md) -
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -144,7 +143,7 @@ Trois options sont disponibles :
 
 - **Référence de liste**: déclare que la liste déroulante est hiérarchique. Cela signifie que la liste déroulante peut afficher jusqu'à deux niveaux hiérarchiques et que son contenu peut être géré par les commandes du langage 4D du thème **Listes hiérarchiques**.
 - **Valeur de l'élément sélectionné** (par défaut) : la liste déroulante n'est pas hiérarchique et la valeur de l'élément choisi dans la liste par l'utilisateur est enregistrée directement. Par exemple, si l'utilisateur choisit la valeur "Bleu", cette valeur est enregistrée dans le champ.
-- **Référence de l'élément sélectionné**: la liste déroulante n'est pas hiérarchique et la référence de l'élément de la liste de choix est enregistrée dans l'objet. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor. Cette option permet d'optimiser l'utilisation de la mémoire : le stockage de valeurs numériques dans les champs occupe moins d'espace que le stockage de chaînes de caractères. Il facilite également la traduction des applications : il suffit de créer plusieurs listes dans différentes langues mais avec les mêmes références d'éléments, puis de charger la liste en fonction de la langue de l'application.
+- **Référence de l'élément sélectionné**: la liste déroulante n'est pas hiérarchique et la référence de l'élément de la liste de choix est enregistrée dans l'objet. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](../commands-legacy/append-to-list.md) or [`SET LIST ITEM`](../commands-legacy/set-list-item.md) commands, or in the list editor. Cette option permet d'optimiser l'utilisation de la mémoire : le stockage de valeurs numériques dans les champs occupe moins d'espace que le stockage de chaînes de caractères. Il facilite également la traduction des applications : il suffit de créer plusieurs listes dans différentes langues mais avec les mêmes références d'éléments, puis de charger la liste en fonction de la langue de l'application.
 
 L'utilisation de l'option de **Référence élément sélectionné** nécessite le respect des principes suivants :
 
@@ -170,7 +169,7 @@ L'utilisation de l'option de **Référence élément sélectionné** nécessite 
 
 Liste des valeurs qui seront utilisées comme valeurs par défaut pour la colonne de la list box (type tableau uniquement). Ces valeurs seront automatiquement accessibles dans la [variable tableau](properties_Object.md#variable-or-expression) associée à la colonne lors de l’exécution du formulaire. En utilisant le langage, vous pouvez gérer l'objet en vous référant à ce tableau.
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-value)" property that allows to define a field value in new records.
+> Ne pas confondre cette propriété avec la propriété["default value](properties_RangeOfValues.md#default-value)" qui permet de définir la valeur d'un champ dans les nouveaux enregistrements.
 
 Vous devez saisir une liste de valeurs. Dans l'éditeur de formulaires, une boîte de dialogue spécifique vous permet de saisir des valeurs séparées par des retours à la ligne :
 
@@ -269,7 +268,7 @@ Cette propriété est disponible dans les conditions suivantes :
 Cette propriété spécifie, dans le contexte d'un champ ou d'une variable associée à une liste de valeurs, le type de contenu à sauvegarder :
 
 - **Enregistrer comme valeur** (option par défaut) : la valeur de l'élément choisi dans la liste par l'utilisateur est enregistrée directement. Par exemple, si l'utilisateur choisit la valeur "Bleu", cette valeur est enregistrée dans le champ.
-- **Enregistrer comme référence** : la référence de l'élément de l'énumération est enregistrée dans l'objet. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor.
+- **Enregistrer comme référence** : la référence de l'élément de l'énumération est enregistrée dans l'objet. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](../commands-legacy/append-to-list.md) or [`SET LIST ITEM`](../commands-legacy/set-list-item.md) commands, or in the list editor.
 
 Cette option permet d'optimiser l'utilisation de la mémoire : le stockage de valeurs numériques dans les champs occupe moins d'espace que le stockage de chaînes de caractères. Il facilite également la traduction des applications : il suffit de créer plusieurs listes dans différentes langues mais avec les mêmes références d'éléments, puis de charger la liste en fonction de la langue de l'application.
 

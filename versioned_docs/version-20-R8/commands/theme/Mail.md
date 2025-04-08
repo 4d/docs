@@ -1,7 +1,10 @@
 ---
-id: Mail
+id: Mail_theme
 title: Mail
+slug: /commands/theme/Mail
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.IMAP New transporter.Syntax -->](../../commands/imap-new-transporter.md)<br/>|

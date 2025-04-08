@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## クラス関数
 
-When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+[クラスコンストラクター](../Concepts/classes.md#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
 // クラス: ob
@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](super.md) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. こちらの [例題](super.md#例題-1) を参照ください。
+> コンストラクター内で [Super](super.md) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクター を呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](super.md#例題-1) を参照ください。
 
 いずれの場合においても、`This` はメソッドの呼び出し元のオブジェクトを指します。
 

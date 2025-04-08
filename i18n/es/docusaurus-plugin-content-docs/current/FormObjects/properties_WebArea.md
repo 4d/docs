@@ -7,11 +7,11 @@ title: Área Web
 
 ## Acceder a los métodos 4D
 
-Puede llamar a los métodos 4D desde el código JavaScript ejecutado en un área web y recibir valores a cambio. Para poder llamar a los métodos 4D desde un área Web, debe activar la propiedad de accesibilidad de los métodos 4D ("todos").
+You can call 4D methods and class functions from the JavaScript code executed in a Web area and get values in return. Para poder llamar a los métodos 4D desde un área Web, debe activar la propiedad de accesibilidad de los métodos 4D ("todos").
 
 > Esta propiedad sólo está disponible si el área web [utiliza el motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-Cuando esta propiedad está activada, se instancia un objeto JavaScript especial llamado `$4d`en el área web, que puede [utilizar para gestionar las llamadas a los métodos proyecto de 4D](webArea_overview.md#4d-object).
+When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods and functions](webArea_overview.md#4d-object).
 
 #### Gramática JSON
 
@@ -54,12 +54,12 @@ Esquemáticamente, esta variable funciona como el área de direcciones de un nav
 
 ### Variable URL y comando WA OPEN URL
 
-La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html). No obstante, hay que señalar las siguientes diferencias:
+The URL variable produces the same effects as the [WA OPEN URL](../commands-legacy/wa-open-url.md) command. No obstante, hay que señalar las siguientes diferencias:
 
-- Para el acceso a los documentos, esta variable sólo acepta URLs que cumplan con el RFC ("file://c:/My%20Doc") y no los nombres de ruta del sistema ("c:\MyDoc"). El comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) acepta ambas notaciones.
-- Si la variable URL contiene una cadena vacía, el área web no intenta cargar la URL. El comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) genera un error en este caso.
-- Si la variable URL no contiene un protocolo (http, mailto, archivo, etc.), el área web añade "http://", lo que no ocurre con el comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html).
-- Cuando el área Web no se muestra en el formulario (cuando se encuentra en otra página del formulario), la ejecución del comando [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) no tiene ningún efecto, mientras que la asignación de un valor a la variable URL puede utilizarse para actualizar la URL actual.
+- Para el acceso a los documentos, esta variable sólo acepta URLs que cumplan con el RFC ("file://c:/My%20Doc") y no los nombres de ruta del sistema ("c:\MyDoc"). The [WA OPEN URL](../commands-legacy/wa-open-url.md) command accepts both notations.
+- Si la variable URL contiene una cadena vacía, el área web no intenta cargar la URL. The [WA OPEN URL](../commands-legacy/wa-open-url.md) command generates an error in this case.
+- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](../commands-legacy/wa-open-url.md) command.
+- Cuando el área Web no se muestra en el formulario (cuando se encuentra en otra página del formulario), la ejecución del comando [WA OPEN URL](../commands-legacy/wa-open-url.md) no tiene ningún efecto, mientras que la asignación de un valor a la variable URL puede utilizarse para actualizar la URL actual.
 
 #### Gramática JSON
 
@@ -85,8 +85,8 @@ Esta opción permite elegir entre dos motores de renderizado para el área web, 
 
 El motor CEF tiene las siguientes limitaciones:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): el uso de este comando requiere que al menos una página ya esté cargada en el área (mediante una llamada a [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) o una asignación a la variable URL asociada al área).
-- Cuando se habilita soltar URL mediante el selector `WA enable URL drop` del comando [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html), la primera caída debe ir precedida de al menos una llamada a [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) o una asignación a la variable URL asociada al área.
+- [WA SET PAGE CONTENT](../commands-legacy/wa-set-page-content.md): el uso de este comando requiere que al menos una página ya esté cargada en el área (mediante una llamada a [`WA OPEN URL`](../commands-legacy/wa-open-url.md) o una asignación a la variable URL asociada al área).
+- Cuando se habilita soltar URL mediante el selector `WA enable URL drop` del comando [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md), la primera caída debe ir precedida de al menos una llamada a [WA OPEN URL](../commands-legacy/wa-open-url.md) o una asignación a la variable URL asociada al área.
 
 :::note
 

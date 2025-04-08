@@ -1,6 +1,6 @@
 ---
 id: labels
-title: Labels
+title: Etiquetas
 ---
 
 4D’s Label editor provides a convenient way to print a wide variety of labels. With it, you can do the following:
@@ -35,11 +35,11 @@ You use the Label page to specify the contents of the label and the Layout page 
 
 ![](../assets/en/Desktop/label-buttons.png)
 
-## Label Page
+## Página Etiqueta
 
 The Label page contains several areas with settings for designing and formatting labels.
 
-### List of Fields
+### Lista de campos
 
 Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. The fields in the related table are indented. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
 
@@ -54,9 +54,9 @@ The search area allows you to narrow the list of fields displayed to those conta
 
 ![](../assets/en/Desktop/label-filter.png)
 
-### Label preview
+### Vista previa de etiqueta
 
-You use this area to design your label zone by placing and positioning all the items that you want to include in your label. The white rectangle represents a single label (its size is configured on the [Layout page](#layout-page)).
+You use this area to design your label zone by placing and positioning all the items that you want to include in your label. El rectángulo blanco representa una sola etiqueta (su tamaño se configura en la página [Diseño](#layout-page)).
 
 - You can drag fields onto the label.
 - You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
@@ -70,7 +70,7 @@ You use this area to design your label zone by placing and positioning all the i
 
 :::note
 
-Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command.
+Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y del comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md).
 
 :::
 
@@ -79,7 +79,7 @@ Keep in mind that you can only enter methods that are "allowed" for the database
 - To modify the area, double-click on the contents in order to switch to editing mode. When you double-click on fields or formulas, the **Formula editor** is displayed, allowing you to remove or modify items:
  ![](../assets/en/Desktop/label-formula.png)
 
-### Form to use
+### Formulario a utilizar
 
 This drop-down list allows you to define a table form as a label template. The form chosen must be specially adapted to the creation of labels.
 In this case, the label editor is partially disabled: only functions of the [Layout page](#layout-page) can be used — to allow you to configure the page based on the form. The image of the form selected is displayed in the label preview area.
@@ -98,14 +98,14 @@ The graphic area of the editor includes both a tool bar and a context menu that 
 
 The left-hand side of the tool bar includes commands for selecting and inserting objects. You can also access these tools by means of the **Tool>** command in the area's context menu.
 
-| Icono                                     | Tool name          | Descripción                                                                                                                                                                                                        |
-| ----------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/Desktop/label-tool1.png) | Selección          | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
-| ![](../assets/en/Desktop/label-tool2.png) | Line creation      |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool3.png) | Rectangle creation | For Rectangle or Rounded rectangle.                                                                                                                                                                |
-| ![](../assets/en/Desktop/label-tool4.png) | Circle creation    |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool5.png) | Text insertion     | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
-| ![](../assets/en/Desktop/label-tool6.png) | Formula insertion  | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
+| Icono                                     | Nombre de la herramienta | Descripción                                                                                                                                                                                                        |
+| ----------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](../assets/en/Desktop/label-tool1.png) | Selección                | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
+| ![](../assets/en/Desktop/label-tool2.png) | Line creation            |                                                                                                                                                                                                                    |
+| ![](../assets/en/Desktop/label-tool3.png) | Creación rectangular     | For Rectangle or Rounded rectangle.                                                                                                                                                                |
+| ![](../assets/en/Desktop/label-tool4.png) | Creación de círculo      |                                                                                                                                                                                                                    |
+| ![](../assets/en/Desktop/label-tool5.png) | Inserción de texto       | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
+| ![](../assets/en/Desktop/label-tool6.png) | Formula insertion        | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
 
 There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
 
@@ -116,9 +116,9 @@ There are shortcuts available to move or resize objects more precisely using the
 
 The right-hand side of the tool bar contains commands used to modify items of the label template:
 
-| Icono                                      | Tool name                  | Descripción                                                                                                                                                                                                                                                                                                                                                      |
+| Icono                                      | Nombre de la herramienta   | Descripción                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------------------ | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Desktop/label-tool7.png)  | Fill Color                 | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
+| ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno           | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
 | ![](../assets/en/Desktop/label-tool8.png)  | Color de línea             |                                                                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Desktop/label-tool9.png)  | Lineweight                 |                                                                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Desktop/label-tool10.png) | Font menu                  | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
@@ -145,11 +145,11 @@ The Layout page contains controls for printing labels based on the requirements 
  To be eligible for label processing, a project method must comply with the following settings:
  - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
  - it must have the [Shared by components and host database](../Project/code-overview.md#shared-by-components-and-host-database) option.
-  See also [this example](#printing-labels-using-forms-and-methods-example) below.
+  Ver también [este ejemplo](#printing-labels-using-forms-and-methods-example) a continuación.
 
 :::note
 
-For advanced needs, you can restrict the list of methods available using a [specific json file](#controlling-available-forms-and-methods).
+Para necesidades avanzadas, puede restringir la lista de métodos disponibles utilizando un [archivo json específico](#controlling-available-forms-and-methods).
 The **For each: Record or Label** options are used to specify whether to run the method once per label or once per record. This control has meaning only if you are printing more than one copy of each label and you are also executing a method at print time.
 
 :::
@@ -172,7 +172,7 @@ You can use dedicated table forms and project methods to print labels with calcu
  var myVar+=1
 ```
 
-3. Set the project method as ["Shared by components and host database"](../Project/code-overview.md#shared-by-components-and-host-database).
+3. Defina el método proyecto como ["Compartido por los componentes y la base de datos local"](../Project/code-overview.md#shared-by-components-and-host-database).
 
 4. Before displaying the Label editor, make sure the project method is allowed by executing this code:
 

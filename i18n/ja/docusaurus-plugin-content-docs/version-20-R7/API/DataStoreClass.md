@@ -34,8 +34,6 @@ title: DataStore
 | [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)<br/><!-- INCLUDE #DataStoreClass.unlock().Summary -->                                                    |
 | [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)<br/><!-- INCLUDE #DataStoreClass.validateTransaction().Summary -->             |
 
-<!-- REF DataStoreClass.dataclassName.Desc -->
-
 ## *.dataclassName*
 
 <details><summary>履歴</summary>
@@ -63,8 +61,6 @@ title: DataStore
   // あるいは以下のように直接書くことも可能です:
  $sel:=ds.Employee.all()
 ```
-
-<!-- END REF -->
 
 <!-- REF DataStoreClass.cancelTransaction().Desc -->
 
@@ -94,15 +90,13 @@ title: DataStore
 
 `.cancelTransaction()` 関数は、トランザクション中におこなわれたデータ変更をすべてキャンセルします。
 
-複数のトランザクションをネストすること (サブトランザクション) が可能です。 If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransaction) function.
+複数のトランザクションをネストすること (サブトランザクション) が可能です。 メイントランザクションがキャンセルされると、サブトランザクションも (たとえ個々に[`.validateTransaction()`](#validatetransaction) 関数で承認されていても) すべてキャンセルされます。
 
 #### 例題
 
 [`.startTransaction()`](#starttransaction) 関数の例題を参照ください。
 
 <!-- END REF -->
-
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 
 ## .clearAllRemoteContexts()
 
@@ -210,8 +204,6 @@ title: DataStore
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
-
 ## .flushAndLock()
 
 <details><summary>履歴</summary>
@@ -289,8 +281,6 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
-
 ## .getAllRemoteContexts()
 
 <details><summary>履歴</summary>
@@ -365,8 +355,6 @@ $info:=$ds.getAllRemoteContexts()
 #### 参照
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
-
-<!-- REF DataClassClass.getGlobalStamp().Desc -->
 
 ## .getGlobalStamp()
 
@@ -487,8 +475,6 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 ```
 
 <!-- END REF -->
-
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
 
 ## .getRemoteContextInfo()
 
@@ -614,8 +600,6 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.locked().Desc -->
-
 ## .locked()
 
 <details><summary>履歴</summary>
@@ -680,7 +664,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
-> This function does not modify entity selections created by [`.copy()`](./EntitySelectionClass.md#copy) or `OB Copy` when the explicit `ck shared` option is used.
+> この関数は、`OB Copy` または [`.copy()`](./EntitySelectionClass.md#copy) に `ck shared` オプションを明示的に使用して作成されたエンティティセレクションには適用されません。
 
 > **互換性に関する注記**: このメソッドは4D v18 R5 より前のバージョンから変換されたプロジェクトで、[.add()](EntitySelectionClass.md#add) の呼び出しを使用しているものにおいてのみ使用してください。 このコンテキストにおいては、`.makeSelectionsAlterable()` を使用することで、既存プロジェクト内で以前の 4D のふるまいを再現し、時間を節約できます。
 > 逆に、4D v18 R5 以降のバージョンで作成された新規プロジェクトにおいては、この関数の使用は **推奨されていません**。エンティティセレクションを共有可能にできないため、パフォーマンスとスケーラビリティの観点で妨げになるからです。
@@ -807,8 +791,6 @@ When this function is not called, new entity selections can be shareable, depend
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.setGlobalStamp().Desc -->
-
 ## .setGlobalStamp()
 
 <details><summary>履歴</summary>
@@ -863,8 +845,6 @@ ds.setGlobalStamp($newValue)
 #### 参照
 
 [.getGlobalStamp()](#getglobalstamp)
-
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
 
 ## .setRemoteContextInfo()
 
@@ -1012,11 +992,11 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 
-| 引数      | 型                       |    | 説明                                             |
-| ------- | ----------------------- | -- | ---------------------------------------------- |
-| file    | 4D.File | -> | File オブジェクト                                    |
-| options | Integer                 | -> | ログレスポンスオプション (サーバーのみ)       |
-| reqNum  | Integer                 | -> | メモリ内に保管するリクエストの数 (クライアントのみ) |
+| 引数      | 型                       |    | 説明                                                                    |
+| ------- | ----------------------- | -- | --------------------------------------------------------------------- |
+| file    | 4D.File | -> | File オブジェクト                                                           |
+| options | Integer                 | -> | ログレスポンスオプション (サーバーのみ)                              |
+| reqNum  | Integer                 | -> | Number of requests to keep in memory (client only) |
 
 <!-- END REF -->
 
@@ -1209,8 +1189,6 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 [`.startRequestLog()`](#startrequestlog) の例題を参照ください。
 
 <!-- END REF -->
-
-<!-- REF DataClassClass.unlock().Desc -->
 
 ## .unlock()
 

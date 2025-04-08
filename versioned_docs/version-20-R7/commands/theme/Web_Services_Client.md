@@ -1,7 +1,10 @@
 ---
-id: Web_Services_Client
+id: Web_Services_Client_theme
 title: Web Services (Client)
+slug: /commands/theme/Web-Services-Client
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.WEB SERVICE AUTHENTICATE.Syntax -->](../../commands-legacy/web-service-authenticate.md)<br/>|

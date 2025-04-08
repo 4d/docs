@@ -1,7 +1,10 @@
 ---
-id: XML
+id: XML_theme
 title: XML
+slug: /commands/theme/XML
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.XML DECODE.Syntax -->](../../commands-legacy/xml-decode.md)<br/>|

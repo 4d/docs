@@ -1,7 +1,10 @@
 ---
-id: List_Box
+id: List_Box_theme
 title: List Box
+slug: /commands/theme/List-Box
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.LISTBOX COLLAPSE.Syntax -->](../../commands-legacy/listbox-collapse.md)<br/>|

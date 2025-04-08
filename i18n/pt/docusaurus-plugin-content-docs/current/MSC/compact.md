@@ -79,6 +79,6 @@ Tenga en cuenta que esta opción ralentiza sustancialmente la compactación e in
 - A compactação tem em conta os registos das tabelas que foram colocadas no Lixo. Se houver um grande número de registos no Lixo, este pode ser um fator adicional que pode tornar a operação mais lenta.
 - A utilização desta opção torna a tabela de endereços e, consequentemente, a base de dados, incompatível com o arquivo de diário atual (se existir). Será salvado automaticamente e um novo arquivo de histórico será criado na próxima vez que o banco for lançado.
 - Puede decidir si la tabla de direcciones necesita ser compactada comparando el número total de registros y el tamaño de la tabla de direcciones en la página [Información](information.md) del CSM.
-- The [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) command automatically resets the address table for the specified table.
+- The [`TRUNCATE TABLE`](../commands-legacy/truncate-table.md) command automatically resets the address table for the specified table.
 
 :::

@@ -175,7 +175,7 @@ Voici la séquence des appels de callbacks :
 
 :::info
 
-Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), et NON [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](../commands-legacy/call-worker.md), et NON [`New process`](../commands-legacy/new-process.md).
 
 :::
 
@@ -414,7 +414,7 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 La fonction `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->attend la réponse du serveur<!-- END REF -->.
 
-Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini. Decimals are accepted.
+Si un paramètre *time* est passé, la fonction attendra au maximum le nombre de secondes défini. Les décimales sont acceptées.
 
 Si la réponse du serveur est déjà arrivée, la fonction rend la main immédiatement.
 

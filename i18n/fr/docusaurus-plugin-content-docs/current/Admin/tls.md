@@ -90,7 +90,7 @@ Les fichiers de certificat incluent:
 Les deux fichiers **key.pem** et **cert.pem** doivent être localisés :
 
 - avec 4D Server ou 4D en mode local, à côté du dossier du projet [](Project/architecture.md#project-folder)
-- avec 4D en mode distant, dans le dossier de la base de données client sur la machine distante (pour plus d'informations sur l'emplacement de ce dossier, voir la commande [`Get 4D folder`](https://doc.4d.com/4dv20/help/command/en/page485.html)). Vous devez copier ces fichiers manuellement sur la machine distante.
+- avec 4D en mode distant, dans le dossier de la base de données client sur la machine distante (pour plus d'informations sur l'emplacement de ce dossier, voir la commande [`Get 4D folder`](../commands-legacy/get-4d-folder.md)). Vous devez copier ces fichiers manuellement sur la machine distante.
 
 ### Activation du TLS
 
@@ -108,7 +108,7 @@ Le [PFS](https://en.wikipedia.org/wiki/Forward_secrecy) ajoute une couche de sé
 
 Lorsque TLS est activé sur le serveur Web de 4D Web, PFS est automatiquement activé. Si le fichier *dhparams.pem* (document contenant la clé DH privée du serveur) n'existe pas déjà, 4D le génère automatiquement avec une taille de clé de 2048. La génération initiale de ce fichier peut prendre plusieurs minutes. Le fichier est placé avec les fichiers [*key.pem* et *cert.pem*](#installing-certificate-files).
 
-If you use a [custom cipher list](WebServer/webServerConfig.md#cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
+Si vous utilisez une [liste de chiffrement personnalisée](WebServer/webServerConfig.md#cipher-list) et souhaitez activer PFS, vérifiez que votre liste contient des entrées avec des algorithmes DH ou ECDH (courbes elliptiques de Diffie–Hellman).
 
 ## Activation de TLS avec les autres serveurs
 

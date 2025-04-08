@@ -59,7 +59,7 @@ Vous voulez exécuter une formule incluant des appels à des commandes et des ta
 
 ## Voir aussi 
 
-[Command name](command-name.md)  
+[Command name](../commands/command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 

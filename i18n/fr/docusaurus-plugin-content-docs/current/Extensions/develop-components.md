@@ -11,13 +11,13 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 - **Projet utilisé comme matrice** : Projet 4D utilisé pour le développement du composant. C'est un projet standard, sans attribut spécifique. Il constitue un seul composant.
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.
+- **Composant** : Projet de matrice qui peut être compilé et [construit](Desktop/building.md#build-component), [installé dans l'application hôte](../Project/components.md) et dont le contenu est utilisé dans l'application hôte.
 
 ## Principes de base
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
-- To use a component, you simply need to [install it in your application](../Project/components.md).
+- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md).
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
 - Un composant peut appeler la plupart des éléments 4D : des classes, des fonctions, des méthodes projet, des formulaires projet, des barres de menus, des listes à choix multiples, etc. Il ne peut pas appeler des méthodes base et des triggers.
 - Il n’est pas possible d’exploiter le datastore, des tables standard ou des fichiers de données dans les composants 4D. En revanche, un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données via les mécanismes des bases externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
@@ -27,13 +27,13 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 Hormis les [commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-Lorsqu'elles sont appelées depuis un composant, elles sont exécutées dans le contexte du composant, à l'exception de la commande [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/fr/page1007.html) et de la commande [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/fr/page63.html) qui utilisent le contexte de la méthode spécifiée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
+When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
-Les commandes [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/fe/page7836.html) et [`Get database parameter`](https://doc.4d.com/4dv20/help/command/fe/page7837.html) sont une exception : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
+The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
 
 Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Structure file` et `Get 4D folder` lorsqu’elles sont utilisées dans le cadre des composants.
 
-La commande [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/fr/page1001.html) permet de connaître la liste des composants chargés par le projet hôte.
+The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used to obtain the list of components that are loaded by the host project.
 
 ### Commandes non utilisables
 
@@ -76,7 +76,7 @@ A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut 
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Une fois que les méthodes projet des projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode du projet hôte à partir d'un composant en utilisant la commande [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) ou la commande [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html). Par exemple :
+Une fois que les méthodes projet des projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode du projet hôte à partir d'un composant en utilisant la commande [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) ou la commande [`EXECUTE METHOD`](../commands-legacy/execute-method.md). Par exemple :
 
 ```4d
 // Méthode hôte
@@ -140,6 +140,24 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
 > Les fonctions non cachées à l'intérieur d'une classe cachée apparaissent comme des suggestions lorsque vous utilisez la complétion de code avec une classe qui en [hérite](../Concepts/classes.md#inheritance). Par exemple, si un composant possède une classe `Teacher` qui hérite d'une classe `_Person`, la complétion de code pour `Teacher` suggère des fonctions non cachées de `_Person`.
+
+## Editing components from the host
+
+To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
+
+- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
+- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+
+In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
+
+In the Explorer, a specific icon indicates that the component code is editable:<br/>
+![](../assets/en/Develop/editable-component.png)
+
+:::warning
+
+Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+
+:::
 
 ## Complétion de code pour les composants compilés
 
@@ -352,6 +370,55 @@ L'exécution du code d'initialisation ou de fermeture se fait au moyen de la mé
 
 > Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'option [**Exécuter la méthode "Sur événement base hôte" des composants**](../settings/security.md#options) dans la page Sécurité des Propriétés du projet.
 
+## Info.plist
+
+Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
+
+:::note
+
+This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+
+:::
+
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+
+The folling keys can be defined:
+
+| key                                                        | Description                                                                                                                                                         |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CFBundleName                                               | Component name (internal)                                                                                                                        |
+| CFBundleDisplayName                                        | Component name to display                                                                                                                                           |
+| NSHumanReadableCopyright                                   | Copyright to display                                                                                                                                                |
+| CFBundleVersion                                            | Version of the component                                                                                                                                            |
+| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
+| com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+
+Here is an example of `Info.plist` file:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<plist>
+  <dict>
+    <key>CFBundleName</key>
+    <string>UI</string>
+    <key>CFBundleDisplayName</key>
+    <string>UI</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>©vdl 2025</string>
+    <key>CFBundleVersion</key>
+    <string></string>
+    <key>com.4d.minSupportedVersion</key>
+    <string>20R10</string>
+  </dict>
+</plist>
+```
+
+On macOS, information is available from the finder:
+
+![](../assets/en/Develop/infoplist-component.png)
+
 ## Protection des composants : la compilation
 
 Par défaut, tout le code d’un projet utilisé comme matrice installé comme composant est virtuellement visible depuis le projet hôte. En particulier :
@@ -365,6 +432,6 @@ Pour assurer la protection du code d'un composant, [compilez et générerez](Des
 - Les méthodes projet, classes et fonctions partagées peuvent être appelées dans les méthodes du projet hôte et sont également visibles dans la page Méthodes de l'explorateur. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent jamais.
 
-## Partage des composants
+## Sharing your components on GitHub
 
 Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos composants, de préférence sur la [plateforme GitHub](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.

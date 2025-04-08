@@ -42,7 +42,7 @@ Os objetos devem ter sido inicializados, por exemplo utilizando o comando <code>
 
 Com a notação de objetos, pode acessar às propriedades dos objetos de duas maneiras:
 
-- usando o comando [`New object`] (https://doc.4d.com/4dv19R/help/command/en/page1471.html),
+- usando o comando [`New object`] (../commands-legacy/new-object.md),
 - usando o operador '{}'.
 
 :::info
@@ -53,7 +53,7 @@ Several 4D commands and functions return objects, for example [`Database measure
 
 ### Comando `New object`
 
-O comando [`New object`] (https://doc.4d.com/4dv19R/help/command/en/page1471.html) cria um objeto vazio ou pré-preenchido e retorna sua referência.
+O comando [`New object`] (../commands-legacy/new-object.md) cria um objeto vazio ou pré-preenchido e retorna sua referência.
 
 Exemplos:
 
@@ -110,8 +110,8 @@ $col:=$o.col[5] //6
 
 Pode criar dois tipos de objetos:
 
-- objetos regulares (não compartilhados), usando o comando [`New object`] (https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- objetos compartilhados, usando o comando [`New shared object`] (https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
+- objetos regulares (não compartilhados), usando o comando [`New object`] (../commands-legacy/new-object.md) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
+- objetos compartilhados, usando o comando [`New shared object`] (../commands-legacy/new-shared-object.md). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
  Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
 
 ## Propriedades

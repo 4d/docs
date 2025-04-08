@@ -297,13 +297,13 @@ Alternate solutions are available to declare fields or methods as functions in y
 ### Referencing fields using the virtual structure 
   
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
+4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
 
 > **WARNING:** You cannot use the virtual structure and `VP SET CUSTOM FUNCTIONS` simultaneously. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 #### Requirements  
 
-*	The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
+*	The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter (see example),
 *	Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 *	The field type must be supported by 4D View Pro (see above).
 

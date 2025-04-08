@@ -1,7 +1,10 @@
 ---
-id: File_and_Folder
+id: File_and_Folder_theme
 title: File and Folder
+slug: /commands/theme/File-and-Folder
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.File.Syntax -->](../../commands/file.md)<br/>|

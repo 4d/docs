@@ -48,7 +48,7 @@ title: コマンド
 
 [VP Find](commands/vp-find.md)</br>
 [VP Find table](commands/vp-find-table.md)</br>
-[VP FLUSH COMMANDS](commands/vp-flush-commands.md)</br>
+[VP FLUSH COMMANDS](commands/vp-flush-commands.md) ***Modified 4D 20 R9***</br>
 [VP Font to object](commands/vp-font-to-object.md)
 
 <a id="G"><b>G</b></a>
@@ -90,9 +90,9 @@ title: コマンド
 
 <a id="I"><b>I</b></a>
 
-[VP IMPORT DOCUMENT](commands/vp-import-document.md) ***Modified 4D 20 R8***</br>
-[VP IMPORT FROM BLOB](commands/vp-import-from-blob.md)</br>
-[VP IMPORT FROM OBJECT](commands/vp-import-from-object.md)</br>
+[VP IMPORT DOCUMENT](commands/vp-import-document.md) ***Modified 4D 20 R9***</br>
+[VP IMPORT FROM BLOB](commands/vp-import-from-blob.md) ***Modified 4D 20 R9***</br>
+[VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) ***Modified 4D 20 R9***</br>
 [VP INSERT COLUMNS](commands/vp-insert-columns.md)</br>
 [VP INSERT ROWS](commands/vp-insert-rows.md)</br>
 [VP INSERT TABLE COLUMNS](commands/vp-insert-table-columns.md)</br>

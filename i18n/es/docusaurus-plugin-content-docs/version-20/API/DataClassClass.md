@@ -65,7 +65,7 @@ Los objetos de atributo devueltos contienen las siguientes propiedades:
 | path             | Text    | Ruta de [un atributo alias](../ORDA/ordaClasses.md#alias-attributes-1) basado en una relación                                                                                                                                                                                                                                                                                        |
 | readOnly         | Boolean | True si el atributo es de sólo lectura. Por ejemplo, los atributos calculados sin función [`set`](../ORDA/ordaClasses.md#function-set-attributename) son solo lectura.                                                                                                                                                                                                               |
 | relatedDataClass | Text    | Nombre del dataclass relacionado con el atributo. Se devuelve sólo cuando `.kind` = "relatedEntity" o "relatedEntities".                                                                                                                                                                                                                                                             |
-| type             | Text    | Tipo de valor conceptual del atributo, útil para la programación genérica. Depende del atributo `kind`. Valores posibles: <li>si `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", o "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity": nombre de la dataClass relacionada</li><li>si `.kind` = "relatedEntities": nombre de la dataClass relacionada + sufijo "Selection"</li><li>si `.kind` = "calculated" o "alias": igual que arriba, dependiendo del resultado</li>                                                                                                                                                    |
+| type             | Text    | Tipo de valor conceptual del atributo, útil para la programación genérica. Depende del atributo `kind`. Valores posibles: <li>si `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", o "string". "number" se devuelve para todo tipo numérico, incluida la duración; "string" se devuelve para los tipos de atributo uuid, alpha y text; los atributos "blob" son [objetos blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity": nombre de la dataClass relacionada</li><li>si `.kind` = "relatedEntities": nombre de la dataClass relacionada + sufijo "Selection"</li><li>si `.kind` = "calculated" o "alias": igual que arriba, dependiendo del resultado</li>                                                                                                                                                    |
 | unique           | Boolean | True si el valor del atributo debe ser único. No se devuelve si `.kind` = "relatedEntity" o "relatedEntities".                                                                                                                                                                                                                                                                       |
 
 :::tip
@@ -120,7 +120,6 @@ Considerando las propiedades de tabla siguientes:
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>Histórico</summary>
@@ -157,9 +156,9 @@ Se aplica carga diferida.
 
 En el parámetro opcional *settings* se puede pasar un objeto que contenga opciones adicionales. Se soporta la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                          |
-| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| context   | Text | Etiqueta para el contexto de optimización aplicado a la selección de entidades. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
+| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                            |
+| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context   | Text | Etiqueta para el contexto de optimización aplicado a la selección de entidades. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. Esta funcionalidad está [diseñada para el procesamiento cliente/servidor ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 > Para conocer el número total de entidades de una clase de datos, se recomienda utilizar la función [`getCount()`](#getcount) más optimizada que la expresión `ds.myClass.all().length`.
 
@@ -170,7 +169,7 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
  $allEmp:=ds.Employee.all()
 ```
 
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+
 ## .clearRemoteCache()
 
 <details><summary>Histórico</summary>
@@ -223,7 +222,7 @@ $ds.Persons.clearRemoteCache()
 // Caché de la dataclass Persons  = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
-<!-- END REF -->
+
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
@@ -286,9 +285,9 @@ Si se da un atributo \_\_STAMP, se realiza una comprobación con el sello en el 
 
 En el parámetro opcional *settings* se puede pasar un objeto que contenga opciones adicionales. Se soporta la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                          |
-| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| context   | Text | Etiqueta para el contexto de optimización aplicado a la selección de entidades. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
+| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                            |
+| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context   | Text | Etiqueta para el contexto de optimización aplicado a la selección de entidades. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. Esta funcionalidad está [diseñada para el procesamiento cliente/servidor ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 #### Ejemplo 1
 
@@ -461,13 +460,13 @@ Se aplica la carga diferida, lo que significa que los datos relacionados se carg
 
 En el parámetro opcional *settings* se puede pasar un objeto que contenga opciones adicionales. Se soporta la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                |
-| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el contexto de optimización automática aplicado a la entidad. Este contexto será utilizado por el código siguiente que carga la entidad para que pueda beneficiarse de la optimización. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
+| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                  |
+| --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Etiqueta para el contexto de optimización automática aplicado a la entidad. Este contexto será utilizado por el código siguiente que carga la entidad para que pueda beneficiarse de la optimización. Esta funcionalidad está [diseñada para el procesamiento cliente/servidor ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 :::info
 
-When you call the `.get()` function **without** *settings* parameter, a request for attribute values is directly sent to the server (the [ORDA cache](../ORDA/remoteDatastores.md#orda-cache) is not used). Por otro lado, cuando se llama a la función `.get()` **con** un `contexto` pasado en el parámetro *settings*, los valores de los atributos se recuperan de la caché ORDA correspondiente al contexto. En este caso, puede ser aconsejable llamar a [`reload()`](EntityClass.md#reload) para asegurarse de recuperar los datos más recientes del servidor.
+Cuando se llama a la función `.get()` **sin** parámetro de *configuración*, se envía directamente al servidor una petición de valores de atributos (no se utiliza la [caché ORDA](../ORDA/remoteDatastores.md#orda-cache)). Por otro lado, cuando se llama a la función `.get()` **con** un `contexto` pasado en el parámetro *settings*, los valores de los atributos se recuperan de la caché ORDA correspondiente al contexto. En este caso, puede ser aconsejable llamar a [`reload()`](EntityClass.md#reload) para asegurarse de recuperar los datos más recientes del servidor.
 
 :::
 
@@ -674,7 +673,7 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
+
 ## .getRemoteCache()
 
 <details><summary>Histórico</summary>
@@ -1020,7 +1019,7 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
  $vSingles:=ds.Person.query("spouse = null") // Sintaxis correcta
 ```
 
-#### Not equal to null or undefined values
+#### Diferente a valores null o undefined
 
 El comparador "not equal to *value*" (`#` o `!`) no devuelve atributos cuyo valor es null o indefinido. Por ejemplo, la siguiente consulta solo devolverá personas cuyo estado "info.married" es `false` y no personas cuya propiedad "info.married" es "null" o falta:
 
@@ -1534,7 +1533,6 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 [`.query()`](EntitySelectionClass.md#query) para selecciones de entidades
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
 ## .setRemoteCacheSettings()
 
 <details><summary>Histórico</summary>

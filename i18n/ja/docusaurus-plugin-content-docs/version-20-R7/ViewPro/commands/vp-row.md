@@ -15,7 +15,7 @@ title: VP Row
 | row        | Integer | ->                          | 行のインデックス                                       |                  |
 | rowCount   | Integer | ->                          | 行数                                             |                  |
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
-| 戻り値        | Object  | <- | Range object of row(s)      | <!-- END REF --> |
+| 戻り値        | Object  | <- | 行のレンジオブジェクト                                    | <!-- END REF --> |
 
 ## 説明
 

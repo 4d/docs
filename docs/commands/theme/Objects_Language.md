@@ -1,7 +1,10 @@
 ---
-id: Objects_Language
+id: Objects_Language_theme
 title: Objects (Language)
+slug: /commands/theme/Objects-Language
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.New object.Syntax -->](../../commands-legacy/new-object.md)<br/>|

@@ -33,7 +33,7 @@ If you click on the **Reject new connections** button:
 - The project name no longer appears in the remote connection dialog box.
 - Desktop clients that are already connected are not disconnected and can continue to work normally.
 
-> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html) command.
+> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](../commands-legacy/reject-new-remote-connections.md) command.
 
 - If you click on the **Accept new connections button**, the application server returns to its default state.
 

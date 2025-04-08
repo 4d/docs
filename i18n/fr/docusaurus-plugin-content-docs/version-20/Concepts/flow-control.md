@@ -664,7 +664,7 @@ Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity
 
 **Note :** Si l'entity selection contient une entity qui a été supprimée entre-temps par un autre process, elle est automatiquement ignorée durant la boucle.
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save()`.
+N'oubliez pas que toute modification effectuée sur l'entité courante doit être explicitement sauvegardée (si nécessaire) avec la fonction`entity.save()`.
 
 #### Exemple
 

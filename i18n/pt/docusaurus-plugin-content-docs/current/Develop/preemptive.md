@@ -13,7 +13,7 @@ Quando for executado em modo *cooperativo*, todos os processos serão gestionado
 
 Como resultado, no modo apropriativo, o rendimento global da aplicação é incrementado, especialmente em máquinas multi-núcleo, já que múltiplos processos (threads ou fios) podem ser executados simultaneamente. Entretanto, os ganhos reais dependem das operações executadas. Por outro lado, já que no modo apropriativo cada fio é independente dos demais e não é gestionado diretamente pela aplicação, limitações específicas se aplicam aos métodos que queira que sejam compatíveis com o modo apropriativo. Além disso, a execução apropriativa está disponível só em alguns contextos específicos.
 
-## Disponibilidade de modo preemptivo
+## Availability of preemptive mode {#availability-of-preemptive-mode}
 
 O uso do modo preemptivo está disponível nos seguintes contextos de execução:
 
@@ -156,10 +156,10 @@ Para ser thread seguro, um método deve respeitar as seguintes regras:
 - não deve usar nenhuma variável de interprocesso(1)
 - não deve chamar objetos de interface (2) (existem, no entanto, exceções, veja abaixo).
 
-(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
+(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](../commands-legacy/storage.md).
 [Os processos worker](processes.md#worker-processes) também permitem que você troque mensagens entre quaisquer processos, inclusive processos preemptivos.
 
-(2) O comando [`CALL FORM`] (https://doc.4d.com/4dv20/help/command/en/page1391.html) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
+(2) O comando [`CALL FORM`] (../commands-legacy/call-form.md) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
 
 :::note Notas
 

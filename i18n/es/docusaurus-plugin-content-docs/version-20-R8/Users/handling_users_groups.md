@@ -43,7 +43,7 @@ El administrador no puede:
 - modificar el usuario Diseñador
 - por defecto, el acceso a las partes protegidas de la aplicación. En particular, el administrador no puede acceder al modo Diseño si está restringido. En particular, el administrador no puede acceder al modo Diseño si está restringido. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
-Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
+Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la caja de diálogo de gestión de usuarios, los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
 - Icono Diseñador: ![](../assets/en/Users/iconDesigner.png)
 - Icono Administrador: ![](../assets/en/Users/iconAdmin.png)
@@ -58,7 +58,7 @@ El editor de usuarios se encuentran en la caja de herramientas de 4D.
 
 ![](../assets/en/Users/editor.png)
 
-> El editor de usuarios y grupos se puede mostrar en tiempo de ejecución utilizando el comando [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html).
+> El editor de usuarios y grupos se puede mostrar en tiempo de ejecución utilizando el comando [EDIT ACCESS](../commands-legacy/edit-access.md).
 > Toda la configuración de usuarios y grupos también puede editarse durante la ejecución de la aplicación utilizando los comandos del lenguaje 4D del tema `Usuarios y Grupos`.
 
 ### Añadir y modificar usuarios

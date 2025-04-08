@@ -106,7 +106,7 @@ Para más información sobre esta opción, consulte [Atributo Ejecutar en el ser
 
 ### Modo Execução
 
-Esta opção permite-lhe declarar o método elegível para execução em modo preemptivo. It is described in the [Preemptive processes section](../Develop/preemptive.md).
+Esta opção permite-lhe declarar o método elegível para execução em modo preemptivo. Se describe en la [sección Procesos apropiativos](../Develop/preemptive.md).
 
 ### Disponível através de
 
@@ -138,7 +138,7 @@ Por razões de segurança, esta opção está desmarcada por padrão. Cada méto
 
 Quando está marcada, esta opção permite que o método do projeto seja executado pelo motor SQL de 4D. Por padrão, não está selecionado, o que significa que, a menos que explicitamente autorizado, os métodos do projeto 4D são protegidos e não podem ser chamados pelo motor SQL de 4D.
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  tags or the [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html) command.
+This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md)  tags or the [QUERY BY SQL](../commands-legacy/query-by-sql.md) command.
 
 **Notas:**
 

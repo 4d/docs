@@ -1,7 +1,10 @@
 ---
-id: User_Interface
+id: User_Interface_theme
 title: User Interface
+slug: /commands/theme/User-Interface
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.BEEP.Syntax -->](../../commands-legacy/beep.md)<br/>|

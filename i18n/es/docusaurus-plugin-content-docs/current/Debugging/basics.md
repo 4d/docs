@@ -72,29 +72,29 @@ La ventana de error de sintaxis propone varias opciones:
 
 :::tip
 
-To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
+To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Mantenga presionada la tecla **Alt** (Windows) u **Opción** (macOS) y haga clic en el botón **Continuar** la primera vez que aparece. La etiqueta del botón cambia a **Ignorar** si el diálogo es llamado de nuevo por el mismo error.
 
 :::
 
-- **Abort**: Stops method execution and returns to the state before the method started executing:
+- **Abandonar**: detiene la ejecución del método y devuelve al estado antes del inicio de la ejecución del método:
 
     - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
     - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
 
-- **Copy**: Copies the debugging information into the clipboard. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
+- **Copiar**: copia la información de depuración en el portapapeles. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
 
-- **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
+- **Guardar...**: guarda el contenido de la ventana de error de sintaxis y la cadena de llamadas en un archivo `.txt`.
 
-## Debugger
+## Depurador
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. ¡No lo haga! You will save plenty of time and energy by always using the [**Debugger**](debugger.md).
+Un error común de los principiantes al tratar con la detección de errores es hacer clic en **Abandonar** en la ventana de error de sintaxis, volver al editor de código, y tratar de averiguar lo que está pasando mirando el código. ¡No lo haga! You will save plenty of time and energy by always using the [**Debugger**](debugger.md).
 
 El depurador le permite pasar lentamente por los métodos. Muestra toda la información que necesita para entender por qué ha ocurrido un error. Una vez que tiene esta información, usted sabe cómo arreglar el error.
 
-Otra razón para usar el Depurador es el desarrollo del código. A veces se puede escribir un algoritmo que es más complejo de lo habitual. A pesar de todos los sentimientos de cumplimiento, no puede estar totalmente seguro de que su codificación sea 100% correcta. Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
+Otra razón para usar el Depurador es el desarrollo del código. A veces se puede escribir un algoritmo que es más complejo de lo habitual. A pesar de todos los sentimientos de cumplimiento, no puede estar totalmente seguro de que su codificación sea 100% correcta. En lugar de ejecutarlo "ciego", puede utilizar el comando `TRACE` al comienzo de su código, luego ejecutarlo paso a paso para mantener un ojo en lo que sucede.
 
 ## Rupturas
 
 En el proceso de depuración, puede que necesite saltar el seguimiento de algunas partes del código hasta una línea determinada. Or, you may want to trace the code when a given expression has a certain value (e.g. `$myVar > 1000`), or every time a specific 4D command is called.
 
-These needs are covered by **breakpoints** and **command catching** features. Pueden configurarse desde el editor de código, el depurador o el explorador de ejecución.
+Estas necesidades están cubiertas por **puntos de interrupción** y las funciones de **captura de comando**. Pueden configurarse desde el editor de código, el depurador o el explorador de ejecución.

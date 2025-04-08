@@ -38,18 +38,28 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 :::
 
-### $4d object
+## $4d Object
 
+The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 
-The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
-
-For example, to call the `HelloWorld` 4D method, you just execute the following statement:
+For example, calling the `HelloWorld` method in 4D:
 
 ```js
 $4d.HelloWorld();
 ```
 
->JavaScript is case sensitive so it is important to note that the object is named **$4d** (with a lowercase "d").
+> **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
+
+### Controlling $4d Access
+
+With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+
+To check the currently defined context, use [`WA Get context object`](../commands/wa-get-context-object.md).
+
+For more information, please refer to [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md).
+
+
+### Calling 4D Methods from JavaScript
 
 The syntax of calls to 4D methods is as follows:
 
@@ -66,15 +76,15 @@ These parameters can be of any type supported by JavaScript (string, number, arr
 > By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding:
 `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
-#### Example 1  
+#### Example 1 
 
 Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
 4D code of `today` method:
 
 ```4d
- #DECLARE : Text
- return String(Current date;System date long)
+#DECLARE -> $result : Text
+$result := String(Current date;System date long)
 ```
 
 In the web area, the 4D method can be called with the following syntax:
@@ -106,19 +116,29 @@ $4d.today(function(result)
 
 #### Example 2  
 
-The 4D project method `calcSum` receives parameters and returns their sum:
+Instead of using a standalone method, we can also define a **class** to handle the calculation. 
 
-4D code of `calcSum` method:
+Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
 
 ```4d
- #DECLARE (... : Real) -> $sum : Real 
-  // receives n Real type parameters
-  // and returns a Real
- var $i; $n : Integer
- $n:=Count parameters
- For($i;1;$n)
-    $0:=$0+${$i}
- End for
+// SumCalculator user class
+
+Function calcSum(... : Real) -> $sum : Real
+   // receives n Real type parameters
+   // and returns a Real
+  var $i; $n : Integer
+  $n := Count parameters
+
+  For ($i; 1; $n)
+    $sum += ${$i}
+  End for
+```
+
+In another method, we create an instance and assign it to $4d
+
+```4d
+var $myCalculator := cs.SumCalculator.new()
+WA SET CONTEXT OBJECT(*; "myWebArea"; $myCalculator)
 ```
 
 The JavaScript code run in the web area is:
@@ -129,7 +149,6 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
         var result = theSum // result is 262.5
     });
 ```
-
 
 ## Standard actions  
 

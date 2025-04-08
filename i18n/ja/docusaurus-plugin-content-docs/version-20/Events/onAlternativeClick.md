@@ -22,7 +22,7 @@ title: On Alternative Click
 
 ### リストボックス
 
-This event is generated in columns of [object array type list boxes](FormObjects/listbox_overview.md#object-arrays-in-columns), when the user clicks on a widget ellipsis button ("alternateButton" attribute).
+このイベントは [オブジェクト配列型のリストボックス](FormObjects/listbox_overview.md#object-arrays-in-columns) のカラムにおいて、ユーザーがウィジェットのエリプシスボタン ("alternateButton" 属性) をクリックしたときに生成されます。
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 

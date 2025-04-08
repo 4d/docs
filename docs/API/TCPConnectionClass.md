@@ -288,6 +288,7 @@ The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port n
 <!-- END REF -->
 
 
+
 <!-- REF #TCPConnection.send().Desc -->
 ## .send()
 
@@ -328,7 +329,7 @@ The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes t
 
 <!-- REF #TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->
 
-<!-- REF #TCPConnection..wait().params -->
+<!-- REF #TCPConnection.wait().params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Real|->|Maximum wait time in seconds|

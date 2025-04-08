@@ -90,7 +90,7 @@ Os arquivos de certificado incluem:
 Os arquivos **key.pem** e **cert.pem** devem estar localizados:
 
 - com 4D Server ou 4D no modo local, ao lado da [pasta do projeto](Project/architecture.md#project-folder)
-- com 4D em modo remoto, na pasta do banco de dados cliente na máquina remota (para obter mais informações sobre a localização dessa pasta, consulte o comando [`Get 4D folder`](https://doc.4d.com/4dv20/help/command/en/page485.html)). Deve copiar esses arquivos manualmente na máquina remota.
+- com 4D em modo remoto, na pasta do banco de dados cliente na máquina remota (para obter mais informações sobre a localização dessa pasta, consulte o comando [`Get 4D folder`](../commands-legacy/get-4d-folder.md)). Deve copiar esses arquivos manualmente na máquina remota.
 
 ### Ativar TLS
 
@@ -108,7 +108,7 @@ O servidor 4D web é compatível com a opção HSTS para prevenir um navegador d
 
 Quando TLS estiver ativado no servidor, PFS é ativado automaticamente. Se o arquivo *dhparams.pem* (documento que contém a chave privada DH do servidor) ainda não existir, 4D vai gerar o arquivo automaticamente com um tamanho de chave de  2048. A geração inicial deste arquivo pode levar vários minutos. O arquivo é colocado com os arquivos [*key.pem* e *cert.pem*](#instalando-arquivos-de-certificado).
 
-If you use a [custom cipher list](WebServer/webServerConfig.md#cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
+Se utilizar uma [lista de cifrado personalizada](WebServer/webServerConfig.md#cipher-list) e quiser habilitar o PFS, deve comprovar que contenha entradas com algoritmos DH ou ECDH (Elliptic-curve Diffie-Hellman).
 
 ## Ativando TLS com os outros servidores
 

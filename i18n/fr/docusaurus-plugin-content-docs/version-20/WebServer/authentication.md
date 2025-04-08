@@ -25,7 +25,7 @@ Le schéma suivant résume le système d'accès au serveur web 4D :
 
 ### Authentification personnalisée (par défaut)
 
-Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
+Dans ce mode, c'est au développeur de définir comment authentifier les utilisateurs. 4D évalue uniquement les requêtes HTTP [qui nécessitent une authentification](#database-method-calls).
 
 Ce mode d'authentification est le plus flexible car il permet de :
 
@@ -115,7 +115,7 @@ Vous devez déclarer ces paramètres de la manière suivante :
 //Code de la méthode base
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md) syntax:
+Alternativement, vous pouvez utiliser la syntaxe [paramètres nommés](Concepts/parameters.md) :
 
 ```4d
 // On Web Authentication database method
@@ -125,7 +125,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md) syntax
   -> $RequestAccepted : Boolean
 
 ```
-> Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
+> Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. Les informations reçues par la méthode base dépendent du [mode d'authentification](#authentication-modes) sélectionné).
 
 
 #### $1 - URL
@@ -183,7 +183,7 @@ La méthode base `On Web Connection` est exécutée seulement si la connexion a 
 Exemple de méthode base `On Web Authentication` en mode [DIGEST](#digest-protocol) :
 
 ```4d
- // On Web Authentication Database Method
+ // Sur Web Authentication Database Method
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
     $user : Text; $pw : Text) -> $valid : Boolean
 
@@ -191,9 +191,9 @@ Exemple de méthode base `On Web Authentication` en mode [DIGEST](#digest-protoc
  $valid:=False
 
  $found:=ds.WebUser.query("User === :1";$user)
- If($found.length=1) // User is found
+ If($found.length=1) // L'utilisateur est trouvé
     $valid:=WEB Validate digest($user;[WebUser]password)
  Else
-    $valid:=False // User does not exist
+    $valid:=False // L'utilisateur n'existe pas
  End if
 ```

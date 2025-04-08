@@ -1,7 +1,10 @@
 ---
-id: LDAP
+id: LDAP_theme
 title: LDAP
+slug: /commands/theme/LDAP
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.LDAP LOGIN.Syntax -->](../../commands-legacy/ldap-login.md)<br/>|

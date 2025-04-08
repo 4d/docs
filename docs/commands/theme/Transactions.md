@@ -1,7 +1,10 @@
 ---
-id: Transactions
+id: Transactions_theme
 title: Transactions
+slug: /commands/theme/Transactions
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Active transaction.Syntax -->](../../commands-legacy/active-transaction.md)<br/>|

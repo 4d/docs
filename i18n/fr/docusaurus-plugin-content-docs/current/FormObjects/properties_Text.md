@@ -7,7 +7,7 @@ title: Text
 
 ## Autoriser sélecteur police/couleur
 
-When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. A l'aide de ces fenêtres, les utilisateurs peuvent modifier la police ou la couleur d'un objet formulaire dont le focus est accessible directement au clic. Lorsque cette propriété est désactivée (par défaut), les commandes d'ouverture du sélecteur ne produisent aucun effet.
+When this property is enabled, the [OPEN FONT PICKER](../commands-legacy/open-font-picker.md) and [OPEN COLOR PICKER](../commands-legacy/open-color-picker.md) commands can be called to display the system font and color picker windows. A l'aide de ces fenêtres, les utilisateurs peuvent modifier la police ou la couleur d'un objet formulaire dont le focus est accessible directement au clic. Lorsque cette propriété est désactivée (par défaut), les commandes d'ouverture du sélecteur ne produisent aucun effet.
 
 #### Grammaire JSON
 
@@ -157,7 +157,7 @@ Permet de définir en points la taille de police de l'objet.
 
 Désigne la couleur de la police.
 
-> This property also sets the color of object's border (if any) when "plain" or "dotted" style is used.
+> Cette propriété définit également la couleur de bordure (le cas échéant) de l'objet lorsque le style "plain" ou "dotted" est utilisé.
 
 La couleur peut être spécifiée par :
 
@@ -183,7 +183,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 `Selection and collection/entity selection type list boxes`
 
-Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) command in the 4D Language Reference manual.
+Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) command in the 4D Language Reference manual.
 
 Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou la variable sera évaluée pour chaque ligne affichée. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
 

@@ -6,11 +6,11 @@ title: Web Area
 ---
 ## Access 4D methods
 
-You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all"). 
+You can call 4D methods and class functions from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all"). 
 
 > This property is only available if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object). 
+When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods and functions](webArea_overview.md#4d-object). 
 
 
 
@@ -57,11 +57,11 @@ Schematically, this variable functions like the address area of a Web browser. Y
 
 ### URL Variable and WA OPEN URL command
 
-The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command. The following differences should nevertheless be noted:
-- For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). The [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command accepts both notations.
-- If the URL variable contains an empty string, the Web area does not attempt to load the URL. The [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+The URL variable produces the same effects as the [WA OPEN URL](../commands-legacy/wa-open-url.md) command. The following differences should nevertheless be noted:
+- For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). The [WA OPEN URL](../commands-legacy/wa-open-url.md) command accepts both notations.
+- If the URL variable contains an empty string, the Web area does not attempt to load the URL. The [WA OPEN URL](../commands-legacy/wa-open-url.md) command generates an error in this case.
+- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](../commands-legacy/wa-open-url.md) command.
+- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](../commands-legacy/wa-open-url.md) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
 #### JSON Grammar
 
@@ -91,8 +91,8 @@ This option allows choosing between two rendering engines for the Web area, depe
 
 The CEF engine has the following limitations:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](../commands-legacy/wa-set-page-content.md): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or an assignment to the URL variable associated to the area).
+- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md) command, the first drop must be preceded by at least one call to [WA OPEN URL](../commands-legacy/wa-open-url.md) or one assignment to the URL variable associated to the area.
 
 :::note
 

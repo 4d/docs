@@ -38,7 +38,7 @@ title: ユーザー設定
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-これらのダイアログボックスは、[OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/ja/page903.html) コマンドに適切な *settingsType* セレクターを渡して使用することでもアクセスできます。
+You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window.md) command with the appropriate *settingsType* selector.
 
 ストラクチャー設定ダイアログボックスは、標準の設定ダイアログと同じで、そのすべてのプロパティにアクセスできます (これらの設定はユーザー設定によってオーバーライドできます)。
 
@@ -77,9 +77,9 @@ title: ユーザー設定
 
 ## `SET DATABASE PARAMETER` とユーザー設定
 
-ユーザー設定の一部は [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/ja/page642.html) コマンドでも利用可能です。 ユーザー設定は、**2セッション間で設定を保持** プロパティが **Yes** になっているパラメーターです。
+Some of the user settings are also available through the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command. ユーザー設定は、**2セッション間で設定を保持** プロパティが **Yes** になっているパラメーターです。
 
-**ユーザー設定** 機能が有効化されている場合、[SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/ja/page642.html) コマンドで編集されたユーザー設定はデータファイル用のユーザー設定に自動的に保存されます。
+When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command are automatically saved in the user settings for the data file.
 
 > `Table sequence number` は例外です。この設定値は常にデータファイル自身に保存されます。
 

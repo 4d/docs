@@ -44,6 +44,12 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 |            | .errorCode    | integer                 | Código de error.                                                          |
 |            | .errorMessage | text                    | Mensaje de error.                                                         |
 
+:::note
+
+The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+
+::::
+
 ## Ejemplo
 
 Desea importar al "ViewProArea" un documento 4D View Pro previamente guardado como Blob en la primera entidad de la dataclass Table.

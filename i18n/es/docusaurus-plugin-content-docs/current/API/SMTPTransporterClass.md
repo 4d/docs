@@ -135,7 +135,7 @@ La función `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envía el
 
 > El objeto `transporter` debe haber sido creado con el comando `SMTP New transporter`.
 
-El método crea la conexión SMTP si no está ya activa. Si la propiedad `.keepAlive` del objeto `transporter` es **false**, la conexión SMTP se cierra automáticamente después de la ejecución de `. end()`, de lo contrario permanece viva hasta que el objeto `transporter` sea destruido. For more information, please refer to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command description.
+El método crea la conexión SMTP si no está ya activa. Si la propiedad `.keepAlive` del objeto `transporter` es **false**, la conexión SMTP se cierra automáticamente después de la ejecución de `. end()`, de lo contrario permanece viva hasta que el objeto `transporter` sea destruido. Para más información, consulte la descripción del comando [`SMTP New transporter`](../commands/smtp-new-transporter.md).
 
 En *mail*, pase un [objeto `Email`](EmailObjectClass.md#email-object) válido para enviar. Las propiedades origen (de dónde viene el correo electrónico) y destino (uno o varios destinatarios) deben incluirse, el resto de propiedades son opcionales.
 
@@ -149,7 +149,7 @@ La función devuelve un objeto que describe el estado SMTP de la operación. Est
 | status     | number  | Código de estado devuelto por el servidor SMTP (0 en caso de un problema no relacionado con el procesamiento del correo) |
 | statusText | text    | Mensaje de estado devuelto por el servidor SMTP                                                                                             |
 
-En caso de un problema no relacionado con el procesamiento SMTP (por ejemplo, si falta una propiedad obligatoria en el correo), 4D genera un error que puede interceptar utilizando un método instalado por el comando `ON ERR CALL`. Use the `Last errors` command for information about the error.
+En caso de un problema no relacionado con el procesamiento SMTP (por ejemplo, si falta una propiedad obligatoria en el correo), 4D genera un error que puede interceptar utilizando un método instalado por el comando `ON ERR CALL`. Utilice el comando `Últimos errores` para obtener información sobre el error.
 
 En este caso, el objeto estado resultante contiene los siguientes valores:
 

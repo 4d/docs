@@ -189,7 +189,7 @@ title: オブジェクト
 
 ## 式の型/式タイプ
 
-> This property is called [**Data Type**](properties_DataSource.md#data-type-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
+> [セレクション型](listbox_overview.md#セレクションリストボックス) および [コレクション型](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) のリストボックス列や、[オブジェクト](FormObjects/dropdownList_Overview.md#オブジェクトの使用) や [配列](FormObjects/dropdownList_Overview.md#配列の使用) に関連付けられた[ドロップダウンリスト](dropdownList_Overview.md) のプロパティリストでは、このプロパティは、[**データタイプ**](properties_DataSource.md#データタイプ-式の型) と呼ばれています。
 
 オブジェクトに関連付けられた式または変数のデータ型を指定します。 この設定の主な目的は、プロパティリスト内で提供されるテーマとオプションが、データの型と対応するようにするためです。 つまり、実際に変数の型そのものを決めるわけではありません。 プロジェクトをコンパイルするには、[変数を宣言](Concepts/variables.md#変数の宣言) する必要があります。
 
@@ -351,7 +351,7 @@ title: オブジェクト
 
 このプロパティは、[リストボックスフッター](listbox_overview.md#リストボックスフッター) エリアに適用される計算タイプを設定します。
 
-> リストボックスのフッターに割り当てる自動計算は [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/ja/page1140.html) 4Dコマンドを使用しても設定できます。
+> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md) 4D command.
 
 様々な自動計算が利用可能です。 以下の表は、列のデータ型に応じて使用することのできる計算と、(コードで明示的に宣言されていないとき) 4D によってフッター変数に自動で割り当てられる型を示しています:
 

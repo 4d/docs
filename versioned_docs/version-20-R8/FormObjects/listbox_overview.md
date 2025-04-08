@@ -214,7 +214,7 @@ Supported properties depend on the list box type.
 ### Supported Form Events
 
 
-|Form event|Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)| Comments|
+|Form event|Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)| Comments|
 |---|---|---|
 |On After Edit|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
 |On After Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
@@ -295,7 +295,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ### Supported Form Events
 
-|Form event|Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)| Comments|
+|Form event|Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)| Comments|
 |---|---|---|
 |On After Edit|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
 |On After Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||

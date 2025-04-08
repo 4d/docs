@@ -36,7 +36,7 @@ Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**]
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -55,7 +55,7 @@ Você também pode definir essa propriedade por meio do comando [**OBJECT SET FO
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -71,7 +71,7 @@ Define o texto para ter uma linha por baixo.
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -107,7 +107,7 @@ Estão disponíveis três temas de tipos de letra:
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ### Família de letras
 
@@ -127,7 +127,7 @@ Pode ser definido utilizando o comando [**OBJECT SET FONT**](https://doc.4d.com/
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -143,7 +143,7 @@ Permite definir o tamanho da fonte do objeto em pontos.
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -151,7 +151,7 @@ Permite definir o tamanho da fonte do objeto em pontos.
 
 Designa a cor do tipo de letra.
 
-> This property also sets the color of object's border (if any) when "plain" or "dotted" style is used.
+> Esta propriedade também define a cor da borda do objeto (se houver) quando o estilo "plaino" ou "pontilhado" é usado.
 
 A cor pode ser especificada por:
 
@@ -169,7 +169,7 @@ Você também pode definir esta propriedade usando o comando [**OBJECT SET RGB C
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Progress Indicators](progressIndicator.md) - [Ruler](ruler.md) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapie de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Indicadores de progresso](progressIndicator.md) - [Régua](ruler.md) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
 
 ---
 
@@ -301,7 +301,7 @@ A propriedade especial "célula" permite-lhe aplicar um conjunto de propriedades
 |                     | *columnName* |                                                                                                    | object | Pass in `\<columnName>` the object name of the list box column.                                                                                                                                                                          |
 |                     |              | *Esta propriedade só está disponível quando não estiver selecionado [tema de fonte](#font-theme).* | string | as propriedades "stroke", "fill", "fontStyle", "fontWeight" ou "textDecoration" (ver acima). **Nota**: as propriedades "unselectable" e "disabled" só podem ser definidas ao nível da linha. São ignorados se forem passados no objeto "célula" |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](./properties_BackgroundAndBorder.md#background-color-expression)).
+> As configurações de estilo feitas com essa propriedade serão ignoradas se outras configurações de estilo já estiverem definidas por expressões*(ou seja,*, [Expressão de estilo](#style-expression), [Expressão de cor da fonte](#font-color-expression), [Expressão de cor de fundo](./properties_BackgroundAndBorder.md#background-color-expression)).
 
 **Exemplos**
 

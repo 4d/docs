@@ -1,7 +1,10 @@
 ---
-id: Collections
+id: Collections_theme
 title: Collections
+slug: /commands/theme/Collections
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ARRAY TO COLLECTION.Syntax -->](../../commands-legacy/array-to-collection.md)<br/>|

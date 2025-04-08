@@ -193,11 +193,11 @@ La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->envoie *message
 
 Les contenus suivants sont envoyés en fonction du type de *message* :
 
-| Type   | Contenu                                                                                                                                   |
-| ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texte en UTF-8                                                                                                                            |
-| Blob   | Données binaires                                                                                                                          |
-| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
+| Type   | Contenu                                                                                                                 |
+| ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texte en UTF-8                                                                                                          |
+| Blob   | Données binaires                                                                                                        |
+| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](../commands-legacy/json-stringify.md)) |
 
 <!-- END REF -->
 

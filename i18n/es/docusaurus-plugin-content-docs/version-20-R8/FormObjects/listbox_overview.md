@@ -197,7 +197,7 @@ Las propiedades soportadas dependen del tipo de list box.
 
 ### Eventos formulario soportados
 
-| Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) para las propiedades principales)                                 | Comentarios                                                                                                                                                           |
+| Evento formulario    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                            | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
 | On After Keystroke   | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
@@ -272,7 +272,7 @@ Vertical - [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-paddin
 
 ### Eventos formulario soportados
 
-| Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) para las propiedades principales)                                 | Comentarios                                                                                                                                                           |
+| Evento formulario    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                            | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
 | On After Keystroke   | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
@@ -311,7 +311,7 @@ Además, tiene acceso a las propiedades específicas de los encabezados. En part
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the list box column object method.
+Al momento de la ejecución, los eventos que se producen en un encabezado se generan en el método objeto de la columna de list box.
 
 Cuando el comando `OBJECT SET VISIBLE` se utiliza con un encabezado, se aplica a todos los encabezados, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "header3";False)` ocultará todos los encabezados del objeto list box al que pertenece *header3* y no simplemente este encabezado.
 
@@ -331,7 +331,7 @@ Cuando se muestran los pies, puede hacer clic para seleccionar un pie de list bo
 
 Para cada pie de columna de list box, puede definir propiedades de texto estándar: en este caso, estas propiedades tienen prioridad sobre las de la columna o del list box. También puede acceder a propiedades específicas para los pies de página. En particular, puede insertar un [cálculo personalizado o automático](properties_Object.md#variable-calculation).
 
-At runtime, events that occur in a footer are generated in the list box column object method.
+Al momento de la ejecución, los eventos que se producen en un pie de página se generan en el método objeto de la columna de list box.
 
 Cuando el comando `OBJECT SET VISIBLE` se utiliza con un pie de página, se aplica a todos los pies, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "footer3";False)` ocultará todos los pies de página del objeto list box al que pertenece *footer3* y no simplemente este pie de página.
 

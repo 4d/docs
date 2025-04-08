@@ -68,7 +68,13 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 :::
 
-`.clearPrivileges()` 関数は、<!-- REF #SessionClass.clearPrivileges().Summary -->対象セッションに紐づいているアクセス権をすべて削除し、実行が成功した場合に **true** を返します<!-- END REF -->。 結果的に、当該セッションは自動的にゲストセッションになります。 結果的に、当該セッションは自動的にゲストセッションになります。
+`.clearPrivileges()` 関数は、<!-- REF #SessionClass.clearPrivileges().Summary -->対象セッションに紐づいているアクセス権をすべて削除し、実行が成功した場合に **true** を返します<!-- END REF -->。 結果的に、当該セッションは自動的にゲストセッションになります。 Unless in ["forceLogin" mode](../REST/authUsers.md#force-login-mode), the session automatically becomes a Guest session.
+
+:::note
+
+In "forceLogin" mode, `.clearPrivileges()` does not transform the session to a Guest session, it only clears the session's privileges.
+
+:::
 
 #### 例題
 

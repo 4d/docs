@@ -1,7 +1,10 @@
 ---
-id: System_Documents
+id: System_Documents_theme
 title: System Documents
+slug: /commands/theme/System-Documents
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Append document.Syntax -->](../../commands-legacy/append-document.md)<br/>|

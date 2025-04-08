@@ -57,7 +57,7 @@ Pour chacune de ces méthodes ou parties de code, le compilateur vérifiera si l
 
 La plupart des commandes, fonctions, méthodes base et URLs 4D sont thread-safe et peuvent être utilisées en mode préemptif.
 
-### 4D commands and database methods
+### Commandes 4D et méthodes base
 
 Toutes les commandes 4D relatives au Web sont thread-safe, à savoir :
 

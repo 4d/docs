@@ -63,7 +63,7 @@ Los siguientes esquemas están disponibles:
 
 El esquema de aplicación principal se aplicará a los formularios por defecto. Sin embargo, se puede remplazar:
 
-- por el comando [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) a nivel de la sesión de trabajo;
+- por el comando [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) a nivel de la sesión de trabajo;
 - utilizando la propiedad de formulario [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) en cada nivel de formulario (nivel de prioridad más alto). **Nota:** cuando se imprimen, los formularios utilizan siempre la paleta "Light".
 
 ## Atajos

@@ -1,7 +1,10 @@
 ---
-id: Sets
+id: Sets_theme
 title: Sets
+slug: /commands/theme/Sets
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ADD TO SET.Syntax -->](../../commands-legacy/add-to-set.md)<br/>|

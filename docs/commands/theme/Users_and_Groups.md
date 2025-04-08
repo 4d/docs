@@ -1,7 +1,10 @@
 ---
-id: Users_and_Groups
+id: Users_and_Groups_theme
 title: Users and Groups
+slug: /commands/theme/Users-and-Groups
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.BLOB TO USERS.Syntax -->](../../commands-legacy/blob-to-users.md)<br/>|

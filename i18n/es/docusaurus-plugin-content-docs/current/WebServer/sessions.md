@@ -61,13 +61,13 @@ La creación de una sesión web para una petición REST puede requerir que una l
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
+Se puede acceder al objeto `Session` de la sesión actual a través del comando [`Session`](commands/session.md) en el código de todo proceso web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
 :::info
 
-Los procesos web no suelen terminar, sino que se reciclan en un fondo común para ser más eficientes. Cuando un proceso termina de ejecutar una petición, se devuelve al pool y queda disponible para la siguiente petición. Dado que un proceso web puede ser reutilizado por cualquier sesión, las [variables proceso](Concepts/variables.md#process-variables) deben ser borradas por su código al final de su ejecución (utilizando [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) por ejemplo). Esta limpieza es necesaria para cualquier información relacionada con el proceso, como una referencia a un archivo abierto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
+Los procesos web no suelen terminar, sino que se reciclan en un fondo común para ser más eficientes. Cuando un proceso termina de ejecutar una petición, se devuelve al pool y queda disponible para la siguiente petición. Dado que un proceso web puede ser reutilizado por cualquier sesión, las [variables proceso](Concepts/variables.md#process-variables) deben ser borradas por su código al final de su ejecución (utilizando [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) por ejemplo). Esta limpieza es necesaria para cualquier información relacionada con el proceso, como una referencia a un archivo abierto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
 
 :::
 
@@ -86,7 +86,7 @@ La vida útil de una cookie inactiva es de 60 minutos por defecto, lo que signif
 
 Este tiempo de espera puede establecerse utilizando la propiedad [`.idleTimeout`](API/SessionClass.md#idletimeout) del objeto `Session` (el tiempo de espera no puede ser inferior a 60 minutos) o el parámetro *connectionInfo* del comando [`Open datastore`](../commands/open-datastore.md).
 
-When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
+Cuando se cierra una sesión web, si después se llama al comando [`Session`](commands/session.md):
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - la propiedad [`.storage`](API/SessionClass.md#storage) está vacía
@@ -201,7 +201,7 @@ For more examples, please refer to the [Scalable sessions for advanced web appli
 
 :::
 
-## Session Token (OTP)
+## Token de sesión (OTP)
 
 The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
 
@@ -262,7 +262,7 @@ Verifying if the received OTP token is valid depends on how it was handled:
 - Si utilizó un `$4DSID`, puede almacenar una propiedad de estado personalizada en el [almacenamiento de sesión](../API/SessionClass.md#storage) en el momento de la creación de tokens, y compruebe este estado una vez que el token OTP fue recibido para ver si es el mismo valor (ver ejemplo).
 - Si uso la función [`Session.restore()`](../API/SessionClass.md#restore), devuelve true si la sesión se restauró correctamente.
 
-### Scenario with $4DSID
+### Escenario con $4DSID
 
 The scenario using the `$4DSID` key is illustrated in the following diagram:
 
@@ -308,7 +308,7 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+La clase singleton:
 
 ```4d
 //Class OperationsHandler
@@ -367,7 +367,7 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+La clase singleton:
 
 ```4d
 //Class OperationsHandler

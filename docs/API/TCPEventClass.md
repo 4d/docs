@@ -31,7 +31,8 @@ The following properties are available:
 <!-- REF #TCPEvent.data.Desc -->
 ## .data
 
-<!-- REF #TCPEvent.ip.Syntax -->**data** : Blob<!-- END REF -->
+
+<!-- REF #TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
 
 #### Description
 
@@ -65,10 +66,11 @@ The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of t
 
 #### Description
 
-The `.port` property contains <!-- REF #TCPEvent.ip.Summary -->the port number of the remote machine<!-- END REF -->.
+The `.port` property contains <!-- REF #TCPEvent.port.Summary -->the port number of the remote machine<!-- END REF -->.
 
 
 <!-- END REF -->
+
 
 
 <!-- REF #TCPEvent.type.Desc -->

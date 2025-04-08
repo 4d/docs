@@ -79,6 +79,6 @@ sidebar_label: 圧縮ページ
 - 圧縮は、ゴミ箱に入れられたテーブルのレコードも対象とします。 ゴミ箱に大量のレコードがある場合、処理が遅くなる原因となります。
 - このオプションを使用すると、アドレステーブルは (それに伴ってデータベースそのものも) カレントログファイルとの互換性を失います。 ログファイルは自動で保存され、次回アプリケーションを起動した際に新しいログファイルが作成されなければなりません。
 - アドレステーブルの圧縮が必要かどうかは、総レコード数と MSC の [情報](information.md) ページ内にあるアドレステーブルサイズを比較することで判断することができます。
-- [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/ja/page1051.html) コマンドは、指定したテーブルのアドレステーブルを自動的にリセットします。
+- The [`TRUNCATE TABLE`](../commands-legacy/truncate-table.md) command automatically resets the address table for the specified table.
 
 :::

@@ -250,7 +250,7 @@ $comp2:=$lowSal.employer //$comp2 est modifiable parce que $lowSal est modifiabl
 
 :::note Entity selections renvoyées par le serveur
 
-Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si \[`copy()`\](../API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter \[`copy()`\](../API/EntitySelectionClass.md#copy) côté client. Voici un exemple :
+Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si [`copy()`](API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter [`copy()`](API/EntitySelectionClass.md#copy) côté client. Voici un exemple :
 
 ```4d
     //une fonction est toujours exécutée sur le serveur

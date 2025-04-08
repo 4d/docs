@@ -1,7 +1,10 @@
 ---
-id: Web_Area
+id: Web_Area_theme
 title: Web Area
+slug: /commands/theme/Web-Area
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.WA Back URL available.Syntax -->](../../commands-legacy/wa-back-url-available.md)<br/>|

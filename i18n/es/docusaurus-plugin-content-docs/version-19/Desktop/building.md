@@ -21,7 +21,7 @@ El generador de aplicaciones le permite:
 Generar un paquete de proyecto puede realizarse utilizando:
 
 * el comando [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html),
-* or the **Build Application** window.
+* o la ventana **Generado de aplicaciones**.
 
 Para mostrar la caja de diálogo Generar la aplicación, seleccione **Diseño** > **Generar la aplicación...** en la barra de menús.
 
@@ -219,7 +219,7 @@ Haga clic en el botón **[...]** y utilice la caja de diálogo *Navegar carpeta*
 
 #### Versión actual
 
-Se utiliza para indicar el número de versión actual de la aplicación generada. A continuación, podrá aceptar o rechazar las conexiones de las aplicaciones cliente en función de su número de versión. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings).
+Se utiliza para indicar el número de versión actual de la aplicación generada. A continuación, podrá aceptar o rechazar las conexiones de las aplicaciones cliente en función de su número de versión. El intervalo de compatibilidad de las aplicaciones cliente y servidor se define utilizando las [llaves XML](#build-application-settings) específicas.
 
 #### Modo de enlace de datos
 
@@ -231,7 +231,7 @@ Esta opción permite elegir el modo de enlace entre la aplicación fusionada y e
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#last-data-file-opened).
 
-### Construir la aplicación cliente
+### Crear aplicación cliente
 
 Marque esta opción para generar la parte cliente de su aplicación durante la fase de construcción.
 
@@ -458,7 +458,7 @@ Una vez generada la aplicación, se incluye automáticamente un nuevo archivo de
 
 El generador de aplicaciones puede firmar aplicaciones 4D fusionadas bajo macOS (aplicaciones monopuesto, 4D Server y partes cliente bajo macOS). La firma de una aplicación autoriza su ejecución por la funcionalidad Gatekeeper de macOS cuando se selecciona la opción "Mac App Store y desarrolladores identificados" (ver "Acerca de Gatekeeper" más adelante).
 
-* Check the **Sign application** option to include certification in the application builder procedure for macOS. 4D will check the availability of elements required for certification when the build occurs:
+* Marque la opción **Firmar la aplicación** para incluir la certificación en el procedimiento de generación de aplicaciones para macOS. 4D will check the availability of elements required for certification when the build occurs:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 

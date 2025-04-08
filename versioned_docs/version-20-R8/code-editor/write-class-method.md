@@ -737,7 +737,7 @@ Macros are stored in one or more XML format (text) file(s). They can be placed i
 The "Macros v2" folder can be located:
 
 - In the active 4D folder of the machine. Macros are then shared for all the databases.
-    **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) command in the 4D *Language Reference* manual.
+    **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](../commands-legacy/get-4d-folder.md) command in the 4D *Language Reference* manual.
 - Next to the database structure file. Macros are only loaded for this structure.
 - For components: in the **Components** folder of the database. Macros are then only loaded if the component is installed.
 
@@ -877,7 +877,7 @@ Macro support can change from one version of 4D to another. In order to keep the
 
 #### Text selection variables for methods  
 
-It is recommended to manage text selections using the [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) and [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) and [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html) commands are used. This attribute must be declared as follows:
+It is recommended to manage text selections using the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands are used. This attribute must be declared as follows:
 
 `<macro name="MyMacro" version="2">`<br/>
 `--- Text of the macro ---`<br/>

@@ -74,7 +74,7 @@ Esta área le permite configurar cómo el servidor web manejará las sesiones us
 
 #### Sesiones extensibles (sesiones multiproceso)
 
-Cuando selecciona esta opción (recomendado), una sesión usuario se gestiona a través de un objeto **Session**. See the [User sessions page](../WebServer/sessions.md#enabling-web-sessions).
+Cuando selecciona esta opción (recomendado), una sesión usuario se gestiona a través de un objeto **Session**. Ver la [página Sesiones usuario](../WebServer/sessions.md#enabling-web-sessions).
 
 #### Sin sesiones
 
@@ -84,7 +84,7 @@ En este modo, puede configurar los parámetros del servidor web adicionales:
 
 - [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
 - [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
-- [Use preemptive processes](#use-preemptive-processes)
+- [Usar procesos apropiativos](#use-preemptive-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
 
@@ -112,7 +112,7 @@ No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
 Activa los procesos web apropiativos en sus aplicaciones compiladas. Cuando se selecciona **Utilizar los procesos apropiativos**, la elegibilidad de su código relacionado con la web (incluyendo las etiquetas 4D y los métodos base Web) para la ejecución apropiativa será evaluada durante la compilación. Para más información, consulte [Utilizar los procesos web apropiativos](../WebServer/preemptiveWeb.md).
 
-> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente).  See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
+> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente).  Ver [Activar el modo apropiativo para el servidor web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Tiempo de espera del proceso inactivo
 
@@ -160,7 +160,7 @@ Lista de hosts y métodos permitidos para el servicio CORS. Ver [Parámetros COR
 
 Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
-> La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
+> La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](../commands-legacy/web-set-option.md).
 
 El menú de formato de registro ofrece las siguientes opciones:
 

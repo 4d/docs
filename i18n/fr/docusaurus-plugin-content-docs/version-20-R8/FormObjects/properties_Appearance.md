@@ -91,7 +91,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 
@@ -121,9 +121,9 @@ Affiche/masque les images d'arrière-plan et la couleur d'arrière-plan.
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles                        |
-| -------------- | --------------- | ---------------------------------------- |
-| showBackground | boolean         | true (default), false |
+| Nom            | Type de données | Valeurs possibles                           |
+| -------------- | --------------- | ------------------------------------------- |
+| showBackground | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
@@ -137,9 +137,9 @@ Affiche/masque les pieds de page lorsque le [mode d'affichage de la page](#view-
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                        |
-| ----------- | --------------- | ---------------------------------------- |
-| showFooters | boolean         | true (default), false |
+| Nom         | Type de données | Valeurs possibles                           |
+| ----------- | --------------- | ------------------------------------------- |
+| showFooters | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
@@ -155,9 +155,9 @@ Lorsqu'elle est activée, la barre de formule est visible sous l'interface de la
 
 #### Grammaire JSON
 
-| Nom            | Type de données | Valeurs possibles                        |
-| -------------- | --------------- | ---------------------------------------- |
-| withFormulaBar | boolean         | true (default), false |
+| Nom            | Type de données | Valeurs possibles                           |
+| -------------- | --------------- | ------------------------------------------- |
+| withFormulaBar | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
@@ -171,9 +171,9 @@ Affiche/masque les en-têtes de la page lorsque le [mode d'affichage de la page]
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                        |
-| ----------- | --------------- | ---------------------------------------- |
-| showHeaders | boolean         | true (default), false |
+| Nom         | Type de données | Valeurs possibles                           |
+| ----------- | --------------- | ------------------------------------------- |
+| showHeaders | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
@@ -187,9 +187,9 @@ Affiche/masque les caractères visibles
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles                        |
-| --------------- | --------------- | ---------------------------------------- |
-| showHiddenChars | boolean         | true (default), false |
+| Nom             | Type de données | Valeurs possibles                           |
+| --------------- | --------------- | ------------------------------------------- |
+| showHiddenChars | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
@@ -203,9 +203,9 @@ Affiche/masque la règle horizontale lorsque la vue du document est en mode [Pag
 
 #### Grammaire JSON
 
-| Nom                 | Type de données | Valeurs possibles                        |
-| ------------------- | --------------- | ---------------------------------------- |
-| showHorizontalRuler | boolean         | true (default), false |
+| Nom                 | Type de données | Valeurs possibles                           |
+| ------------------- | --------------- | ------------------------------------------- |
+| showHorizontalRuler | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
@@ -277,9 +277,9 @@ Affiche/masque la règle verticale lorsque la vue du document est en mode [Page]
 
 #### Grammaire JSON
 
-| Nom               | Type de données | Valeurs possibles                        |
-| ----------------- | --------------- | ---------------------------------------- |
-| showVerticalRuler | boolean         | true (default), false |
+| Nom               | Type de données | Valeurs possibles                           |
+| ----------------- | --------------- | ------------------------------------------- |
+| showVerticalRuler | boolean         | true (par défaut), false |
 
 #### Objets pris en charge
 
@@ -349,7 +349,7 @@ Valeurs disponibles :
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
 #### Voir également
 

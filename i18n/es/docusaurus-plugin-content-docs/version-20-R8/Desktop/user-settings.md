@@ -38,7 +38,7 @@ Puede acceder a estas cajas de diálogo utilizando el menú **Diseño > Propieda
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) con el selector *settingsType* apropiado.
+También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window.md) con el selector *settingsType* apropiado.
 
 La caja de diálogo Propiedades de estructura es idéntica a la caja de diálogo Propiedades estándar, y permite acceder a todas sus propiedades (que pueden ser anuladas por las propiedades usuario).
 
@@ -77,9 +77,9 @@ Al editar los parámetros en esta caja de diálogo, se almacenan automáticament
 
 ## `SET DATABASE PARAMETER` y propiedades usuario
 
-Algunas propiedades de los usuarios también están disponibles a través del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html). Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
+Algunas propiedades de los usuarios también están disponibles a través del comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md). Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
 
-Cuando la funcionalidad **Propiedades usuario** está activada, las propiedades usuario editadas por el comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) se guardan automáticamente en las Propiedades usuario para el a
+Cuando la funcionalidad **Propiedades usuario** está activada, las propiedades usuario editadas por el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) se guardan automáticamente en las Propiedades usuario para el a
 
 > `Table sequence number` es una excepción; este valor de ajuste siempre se guarda en el propio archivo de datos.
 

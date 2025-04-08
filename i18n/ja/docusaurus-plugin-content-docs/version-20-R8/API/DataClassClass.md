@@ -55,7 +55,7 @@ title: DataClass
 | autoFilled       | Boolean | 属性値が 4D によって自動生成される場合に true です。 このプロパティは次の 4Dフィールドプロパティに対応しています: 数値型フィールドの "自動インクリメント" および UUID (文字型)フィールドの "自動UUID"。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | exposed          | Boolean | 属性が REST で公開されている場合に trueです                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | fieldNumber      | integer | 属性の内部的な 4Dフィールド番号。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| fieldType        | Integer | 属性の 4Dデータベースフィールドタイプ。 これは属性の種類 (`kind`) によります。 とりうる値:<li>`.kind` = "storage" の場合は、対応する 4Dフィールドタイプ ([`Value type`](https://doc.4d.com/4dv20/help/command/ja/page1509.html) 参照)</li><li>`.kind` = "relatedEntity" の場合: 38 (`is object`)</li><li>`.kind` = "relatedEntities" の場合: 42 (`is collection`)</li><li>`.kind` = "calculated" または "alias" の場合: 結果の値 (フィールドタイプ、relatedEntity または relatedEntities) に応じて、上に同じ</li>                                                                                                                                                |
+| fieldType        | Integer | 属性の 4Dデータベースフィールドタイプ。 これは属性の種類 (`kind`) によります。 Possible values: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](../commands-legacy/value-type.md)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li><li>if `.kind` = "calculated" or "alias" = same as above, depending on the resulting value (field type, relatedEntity or relatedEntities)</li>                                                                                                                                   |
 | indexed          | Boolean | 属性に対して B-tree もしくは クラスターB-Tree インデックスが設定されている場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | inverseName      | Text    | リレーション先の属性名。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | keywordIndexed   | Boolean | 属性にキーワードインデックスが存在すれば true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -120,8 +120,6 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.all().Desc -->
-
 ## .all()
 
 <details><summary>履歴</summary>
@@ -170,8 +168,6 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
  var $allEmp : cs.EmployeeSelection
  $allEmp:=ds.Employee.all()
 ```
-
-<!-- REF #DataClassClass.clearRemoteCache().Desc -->
 
 ## .clearRemoteCache()
 
@@ -226,8 +222,6 @@ $ds.Persons.clearRemoteCache()
 #### 参照
 
 [`entitySelection.refresh()`](EntitySelectionClass.md#refresh)
-
-<!-- END REF -->
 
 <!-- REF DataClassClass.fromCollection().Desc -->
 
@@ -684,8 +678,6 @@ $number:=$ds.Persons.getCount()
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.getRemoteCache().Desc -->
-
 ## .getRemoteCache()
 
 <details><summary>履歴</summary>
@@ -925,7 +917,7 @@ attributePath|formula 比較演算子 値
 クエリに使用するフォーミュラは $1 に引数を受け取ることができます。 詳細については後述の **フォーミュラ引数** を参照ください。
 
 > - フォーミュラが複雑な場合など、`queryString` パラメーターを使わずに、 `formula` パラメーターにオブジェクトを直接渡すこともできます。 後述の **フォーミュラ引数** を参照ください。
-> - セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 `querySettings` パラメーターの説明を参照ください。
+> - セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。 `querySettings` パラメーターの説明を参照ください。
 
 - **比較演算子**: *attributePath* 引数と*value* 引数の比較に使用する記号。 以下の記号がサポートされます:
 
@@ -991,7 +983,7 @@ attributePath|formula 比較演算子 値
 | 定義 | *queryString* に `:paramIndex` (例 :1, :2...) という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 最大で 128個の *value* 引数を渡すことができます。 | `:paramName` (例: myparam など) という形でパラメーターが挿入され、その値は *querySettings* 引数の attributes または parameters オブジェクトで提供されます。 |
 | 例題 | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                        | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`               |
 
-*queryString* には、すべての種類の引数 を混ぜて渡すことができます。 *queryString* 引数は、*attributePath* と *formula* と*値* に以下のものを含めることができます:
+*queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* 引数は、*attributePath* と *formula* と*値* に以下のものを含めることができます:
 
 - 定数値 (プレースホルダーを使用しない)
 - インデックスプレースホルダーや命名プレースホルダー
@@ -1196,7 +1188,7 @@ The formula must have been created using the [`Formula`](../commands/formula.md)
 - 処理中のエンティティはフォーミュラ内において `This` で参照されます。
 - `Formula` オブジェクトが **null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です") が生成されます。
 
-> セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。
+> セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。 *querySettings* パラメーターの説明を参照ください。
 
 #### フォーミュラに引数を渡す
 
@@ -1542,8 +1534,6 @@ softwares:{
 
 <!-- END REF -->
 
-<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
-
 ## .setRemoteCacheSettings()
 
 <details><summary>履歴</summary>
@@ -1583,11 +1573,11 @@ softwares:{
 - 次にそのデータが必要になったときには、サーバーに要求します
 - エンティティの最大数に達すると、4D は期限切れのデータを自動的に削除します
 
-`timeout` プロパティを設定すると、すでにキャッシュに存在するエンティティに新しいタイムアウトが設定されます。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。
+`timeout` プロパティを設定すると、すでにキャッシュに存在するエンティティに新しいタイムアウトが設定されます。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。
 
-`maxEntries` は、ORDAキャッシュ内のエンティティの最大数を設定します。 デフォルトは 30,000 です。
+`maxEntries` は、ORDAキャッシュ内のエンティティの最大数を設定します。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。
 
-最小エントリー数は 300 のため、`maxEntries` の値は 300以上でなくてはなりません。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。
+最小エントリー数は 300 のため、`maxEntries` の値は 300以上でなくてはなりません。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。
 
 `timeout` および `maxEntries` として有効なプロパティが渡されない場合、キャッシュはデフォルト値または以前に設定された値のまま変更されません。
 

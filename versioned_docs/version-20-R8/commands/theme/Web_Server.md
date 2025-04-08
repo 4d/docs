@@ -1,7 +1,10 @@
 ---
-id: Web_Server
+id: Web_Server_theme
 title: Web Server
+slug: /commands/theme/Web-Server
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.WEB GET BODY PART.Syntax -->](../../commands-legacy/web-get-body-part.md)<br/>|

@@ -94,7 +94,7 @@ In the *options* parameter, pass an object that can contain the following proper
 | onTerminate      | Formula    | indefinido | Chamada de retorno quando o processo externo é terminado. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                                                                |
 | timeout          | Number     | indefinido | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                                                                                                                     |
 | dataType         | Text       | "text"     | Tipo de conteúdo do corpo da resposta. Valores possíveis: "text" (predefinição), "blob".                                                                                                                                                                                                                                                   |
-| encoding         | Text       | "UTF-8"    | Somente se `dataType="text"`. Codificação do conteúdo do corpo da resposta. Para obter a lista de valores disponíveis, consulte a descrição do comando [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html)                                                                                                                                         |
+| encoding         | Text       | "UTF-8"    | Somente se `dataType="text"`. Codificação do conteúdo do corpo da resposta. Para obter a lista de valores disponíveis, consulte a descrição do comando [`CONVERT FROM TEXT`](../commands-legacy/convert-from-text.md)                                                                                                                                                         |
 | variables        | Object     |            | Define variáveis de ambiente personalizadas para o system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o system worker herda do ambiente 4D. |
 | currentDirectory | Folder     |            | Directório de trabalho no qual o processo é executado                                                                                                                                                                                                                                                                                                                                                         |
 | hideWindow       | Parâmetros | true       | (Windows) Esconder a janela de aplicação (se possível) ou a consola Windows                                                                                                                                                                                                                                                                                             |
@@ -116,7 +116,7 @@ Aqui está a sequência de chamadas de retorno:
 
 :::info
 
-Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NÃO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](../commands-legacy/call-worker.md), NÃO [`New process`](../commands-legacy/new-process.md).
 
 :::
 
@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### Descrição
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+A propriedade `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contém a linha de comando passada como parâmetro para a função [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -382,7 +382,7 @@ Cada elemento da coleção é um objeto com as seguintes propriedades:
 | [].message             | text   | Descrição do erro 4D                                 |
 | [ ].componentSignature | text   | Assinatura da componente interna que devolveu o erro |
 
-If no error occured, `.errors` is undefined.
+Se não ocorrer nenhum erro, `.errors` será undefined.
 
 <!-- END REF -->
 
@@ -394,7 +394,7 @@ If no error occured, `.errors` is undefined.
 
 #### Descrição
 
-A propriedade `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contém o código de saída retornado pelo processo externo<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
+A propriedade `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contém o código de saída retornado pelo processo externo<!-- END REF -->. Parâmetro Parâmetro Parâmetro Se o processo não tiver terminado normalmente, `exitCode` é *undefined*.
 
 Essa propriedade é **somente leitura**.
 
@@ -439,13 +439,13 @@ Essa propriedade é **somente leitura**.
 | Parâmetro   | Tipo |     | Descrição                                                                              |
 | ----------- | ---- | :-: | -------------------------------------------------------------------------------------- |
 | message     | Text |  -> | Texto para escrever no fluxo de entrada (stdin) do processo externo |
-| messageBLOB | Blob |  -> | Bytes write on the input stream                                                        |
+| messageBLOB | Blob |  -> | Bytes escritos no fluxo de entrada                                                     |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
+A função `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite que você escreva no fluxo de entrada (stdin) do processo externo<!-- END REF -->. No parâmetro *message*, passe o texto a ser escrito em *stdin*.
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
@@ -511,7 +511,7 @@ Esta função envia a instrução para terminar e devolver o controlo ao guião 
 
 #### Descrição
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+A propriedade `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contém **true** se o processo externo for encerrado<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -551,7 +551,7 @@ Essa propriedade é **somente leitura**.
 | Parâmetro  | Tipo                            |                             | Descrição                    |
 | ---------- | ------------------------------- | :-------------------------: | ---------------------------- |
 | timeout    | Real                            |              ->             | Maximum wait time in seconds |
-| Resultados | 4D.SystemWorker | <- | SystemWorker object          |
+| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker         |
 
 <!-- END REF -->
 

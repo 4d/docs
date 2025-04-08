@@ -1,7 +1,10 @@
 ---
-id: Records
+id: Records_theme
 title: Records
+slug: /commands/theme/Records
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CREATE RECORD.Syntax -->](../../commands-legacy/create-record.md)<br/>|

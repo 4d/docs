@@ -1,7 +1,10 @@
 ---
-id: Styled_Text
+id: Styled_Text_theme
 title: Styled Text
+slug: /commands/theme/Styled-Text
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ST COMPUTE EXPRESSIONS.Syntax -->](../../commands-legacy/st-compute-expressions.md)<br/>|

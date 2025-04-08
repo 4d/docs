@@ -574,11 +574,11 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 ### カスタムソート
 
-開発者は、[`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/ja/page916.html) コマンドを使用したり、[`On Header Click`](../Events/onHeaderClick) と [`On After Sort`](../Events/onHeaderClick) フォームイベントを 4Dコマンドと組み合わせて、独自のソートを設定することができます。
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
 カスタムソートを以下のことが可能です:
 
-- [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/ja/page916.html) コマンドを使って、複数カラムを対象に複数レベルのソートをおこなう
+- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command,
 - [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) や [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) などの関数を使って、複雑な条件のソートをおこなう
 
 #### 例題
@@ -622,7 +622,7 @@ End if
 
 変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
 
-> [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/ja/page236.html) コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
+> The [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 ## スタイルとカラー、表示の管理
 

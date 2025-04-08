@@ -150,7 +150,7 @@ Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que 
 
 ## Privilège
 
-The ability to run one or more [actions](#action) on [resources](#resource). Plusieurs privilèges peuvent être regroupés dans un [rôle](#role) selon la logique métier.
+La possibilité de lancer une ou plusieurs [actions](#action) sur des [ressources](#resource). Plusieurs privilèges peuvent être regroupés dans un [rôle](#role) selon la logique métier.
 
 ## Propriété
 
@@ -185,7 +185,7 @@ Dans une entité, la valeur d'un attribut de relation peut être une entité ou 
 
 Une entité associée peut être considérée comme l'instance d'un attribut de relation dans une dataclass.
 
-Les sélections d'entités peuvent faire référence à des entités relatives selon les attributs de relation définis dans les dataclasses correspondantes.
+Les entity selections (sélections d'entités) peuvent faire référence à des entités relatives selon les attributs de relation définis dans les dataclasses correspondantes.
 
 ## Remote datastore
 

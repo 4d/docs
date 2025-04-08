@@ -1,7 +1,10 @@
 ---
-id: Process_User_Interface
+id: Process_User_Interface_theme
 title: Process (User Interface)
+slug: /commands/theme/Process-User-Interface
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.BRING TO FRONT.Syntax -->](../../commands-legacy/bring-to-front.md)<br/>|

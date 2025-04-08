@@ -88,7 +88,7 @@ You want to set a background image for the document:
  WP SET ATTRIBUTES(WParea;wk background image;$picture)
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
@@ -108,7 +108,7 @@ You want to set a background image that covers the whole printable area. All att
  WP SET ATTRIBUTES(WParea;$myAttributes)
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3514233.en.png)
 
@@ -142,7 +142,7 @@ You want to set tabs at varying intervals and designate a character as the leadi
  WP SET ATTRIBUTES(wpArea;wk tabs;$_tabs)
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
 

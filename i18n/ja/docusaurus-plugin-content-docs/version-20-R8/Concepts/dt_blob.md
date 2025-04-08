@@ -34,8 +34,8 @@ BLOB に演算子を適用することはできません。
 
 ## 変数がスカラーBLOB と `4D.Blob` のどちらを格納しているかの確認
 
-値が BLOB型またはオブジェクト型であるかどうかを確認するには、[Value type](https://doc.4d.com/4dv20/help/command/ja/page1509.html) コマンドを使用します。
-特定のオブジェクトが BLOBオブジェクト (`4D.Blob`) であることを確認するには、[OB instance of](https://doc.4d.com/4dv20/help/command/ja/page1731.html) を使用します。
+Use the [Value type](../commands-legacy/value-type.md) command to determine if a value is of type Blob or Object.
+To check that an object is a blob object (`4D.Blob`), use [OB instance of](../commands-legacy/ob-instance-of.md):
 
 ```4d
 var $myBlob: Blob
@@ -62,17 +62,17 @@ $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 
 4Dコマンドの中には、元の BLOB を変更するものがあり、これらは `4D.Blob` タイプをサポートしていません:
 
-- [DELETE FROM BLOB](https://doc.4d.com/4dv19/help/command/ja/page560.html)
-- [INSERT IN BLOB](https://doc.4d.com/4dv19/help/command/ja/page559.html)
-- [INTEGER TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page548.html)
-- [LONGINT TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page550.html)
-- [REAL TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page552.html)
-- [SET BLOB SIZE](https://doc.4d.com/4dv19/help/command/ja/page606.html)
-- [TEXT TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page554.html)
-- [VARIABLE TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page532.html)
-- [LIST TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page556.html)
-- [SOAP DECLARATION](https://doc.4d.com/4dv19/help/command/ja/page782.html)
-- [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page777.html)
+- [DELETE FROM BLOB](../commands-legacy/delete-from-blob.md)
+- [INSERT IN BLOB](../commands-legacy/insert-in-blob.md)
+- [INTEGER TO BLOB](../commands-legacy/integer-to-blob.md)
+- [LONGINT TO BLOB](../commands-legacy/longint-to-blob.md)
+- [REAL TO BLOB](../commands-legacy/real-to-blob.md)
+- [SET BLOB SIZE](../commands-legacy/set-blob-size.md)
+- [TEXT TO BLOB](../commands-legacy/text-to-blob.md)
+- [VARIABLE TO BLOB](../commands-legacy/variable-to-blob.md)
+- [LIST TO BLOB](../commands-legacy/list-to-blob.md)
+- [SOAP DECLARATION](../commands-legacy/soap-declaration.md)
+- [WEB SERVICE SET PARAMETER](../commands-legacy/web-service-set-parameter.md)
 
 ### BLOB および BLOBオブジェクトのメソッドへの受け渡し
 

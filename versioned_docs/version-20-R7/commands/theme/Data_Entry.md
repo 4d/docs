@@ -1,7 +1,10 @@
 ---
-id: Data_Entry
+id: Data_Entry_theme
 title: Data Entry
+slug: /commands/theme/Data-Entry
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ACCEPT.Syntax -->](../../commands-legacy/accept.md)<br/>|

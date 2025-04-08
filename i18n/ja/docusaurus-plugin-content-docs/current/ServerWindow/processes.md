@@ -39,7 +39,7 @@ title: プロセスページ
     - ユーザープロセス - 4Dユーザー名
     - Webプロセス - URLパス
 - プロセス名
-- プロセス番号 (たとえば [`New process`](https://doc.4d.com/4dv19/help/command/ja/page317.html) コマンドで返される値)。 プロセス番号はサーバー上で割り当てられる番号です。 グローバルプロセスの場合、この番号はクライアントマシン上で割り当てられた番号と異なる場合があります。
+- Number of the process (as returned by the [`New process`](../commands-legacy/new-process.md) command for example). プロセス番号はサーバー上で割り当てられる番号です。 グローバルプロセスの場合、この番号はクライアントマシン上で割り当てられた番号と異なる場合があります。
 - プロセスの現在の状況
 - 作成されてからのプロセスの実行時間 (秒)
 - 4D Server がこのプロセスに使用した時間のパーセンテージ
@@ -85,7 +85,7 @@ title: プロセスページ
 
 - **プロセスを中断**: 選択したプロセスをアボートします。 このボタンをクリックすると警告ダイアログが表示され、操作を続行またはキャンセルできます。
 
-> 確認ダイアログなしに選択したプロセスをアボートするには、**Alt**\*キーを押しながらこのボタンをクリックするか、[`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/ja/page1634.html) コマンドを使用します。
+> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id.md) command.
 
 - **プロセスを一時停止**: 選択したプロセスを一時停止します。
 - **ユーザーを表示**: 選択されたプロセスのユーザーを管理ウィンドウの [ユーザーページ](users.md) に直接表示させることができます。 1つ以上のユーザープロセスが選択されている場合にこのボタンは有効になります。

@@ -169,7 +169,7 @@ Aqui está a sequência de chamadas de retorno:
 
 :::info
 
-Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NÃO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](../commands-legacy/call-worker.md), NÃO [`New process`](../commands-legacy/new-process.md).
 
 :::
 

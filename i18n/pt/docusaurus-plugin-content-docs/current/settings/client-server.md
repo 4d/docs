@@ -24,7 +24,7 @@ Se você modificar esse parâmetro, deverá reiniciar o banco de dados do servid
 
 #### Nome da publicação
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer.md#opening-a-remote-project) paragraph). Por padrão, 4D Server usa o nome do arquivo de projeto. Pode introduzir qualquer nome personalizado que pretenda.
+Essa opção permite alterar o nome de publicação de um banco de dados do 4D Server, *ou seja*, o nome exibido na guia dinâmica **Disponível** da caixa de diálogo de conexão (consulte o parágrafo [Abrindo um projeto remoto](../Desktop/clientServer.md#opening-a-remote-project)). Por padrão, 4D Server usa o nome do arquivo de projeto. Pode introduzir qualquer nome personalizado que pretenda.
 
 :::note
 
@@ -68,20 +68,20 @@ Quando o Single Sign On (SSO) estiver ativado (veja acima), você deverá preenc
 
 This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
 
-- **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
+- **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. Essa camada de rede também pode ser ativada por programação usando o comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
 - **ServerNet** (por padrão): ativa a camada de rede ServerNet no servidor (disponível desde 4D v15).
 - **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
 
     **Notas**:
 
-    - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
+    - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
     - You can know if a 4D application is running with a QUIC network layer using the [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
     - Como o QUIC usa o protocolo UDP, certifique-se de que o UDP seja permitido em suas configurações de segurança de rede.
     - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
     - Quando a opção de camada QUIC é selecionada:
         - Uma mensagem beta e um ícone de alerta são exibidos perto do seletor.
-        - [Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
-        - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
+        - [As configurações de tempo limite das conexões cliente-servidor](#client-server-connections-timeout) estão ocultas
+        - A caixa de seleção [Criptografar a comunicação entre cliente e servidor](#encrypt-client-server-communications) está oculta (as comunicações QUIC são sempre em TLS, seja qual for o seu modo de segurança).
     - **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
 
 :::note

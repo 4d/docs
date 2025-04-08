@@ -17,7 +17,7 @@ Este botón permite lanzar directamente la operación de verificación, sin inte
 
 Se verifican todos los registros y todos los índices de la base de datos. Si desea poder orientar la verificación o disponer de opciones adicionales, deberá utilizar el [Centro de mantenimiento y seguridad](MSC/overview.md) (CSM).
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs) folder. El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
+Tras la verificación, se genera un archivo de informe en formato XML en el servidor, en la carpeta [maintenance Logs](../Project/architecture.md#logs). El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
 
 ### Compactar los datos...
 
@@ -31,7 +31,7 @@ Una vez finalizada la compactación, 4D Server relanza automáticamente la aplic
 
 > Si la solicitud de compactación se realizó desde una máquina remota 4D, esta máquina es reconectada automáticamente por 4D Server.
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs) folder. El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
+Tras la verificación, se genera un archivo de informe en formato XML en el servidor, en la carpeta [maintenance Logs](../Project/architecture.md#logs). El botón **Ver informe** (llamado **Descargar informe** si la operación se ha realizado desde una máquina remota) le permite visualizar el archivo en su navegador.
 
 ## Tiempo de funcionamiento
 
@@ -82,4 +82,4 @@ Este botón suspende todas las operaciones de registro iniciadas en el servidor.
 
 Cuando los registros se han puesto en pausa, el título del botón cambia a **Reanudar registro**, para que pueda reanudar las operaciones de registro.
 
-> Puede pausar y reanudar el registro utilizando el comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html).
+> Puede pausar y reanudar el registro utilizando el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).

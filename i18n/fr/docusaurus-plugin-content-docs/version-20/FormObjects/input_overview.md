@@ -4,7 +4,7 @@ title: Zone de saisie
 ---
 
 
-Inputs allow you to add enterable or non-enterable expressions such as database fields and [variables](Concepts/variables.md) to your forms. Les zone de saisie peuvent gérer des données basées sur des caractères (texte, dates, numériques, etc.) ou des images :
+Les zones de saisie vous permettent d'ajouter des expressions saisissables ou non saisissables telles que des [champs et des variables](Concepts/variables.md) dans vos formulaires. Les zone de saisie peuvent gérer des données basées sur des caractères (texte, dates, numériques, etc.) ou des images :
 
 ![](../assets/en/FormObjects/input.png)
 

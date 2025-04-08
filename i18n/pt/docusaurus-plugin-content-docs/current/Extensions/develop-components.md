@@ -17,7 +17,7 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 
 Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
-- To use a component, you simply need to [install it in your application](../Project/components.md).
+- Para usar um componente, basta [instalá-lo em seu aplicação](../Project/components.md).
 - Um projeto pode ser tanto uma matriz quanto um host, em outras palavras, um projeto de matriz pode usar um ou mais componentes. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
 - Um componente pode chamar a maioria dos elementos 4D: classes, funções, métodos de projeto, formulários de projeto, barras de menu, listas de opções e assim por diante. Não pode chamar métodos de bancos de dados e triggers.
 - Não é possível usar o datastore, as tabelas padrão ou os arquivos de dados nos componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
@@ -27,13 +27,13 @@ Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
 A excepción de los [comandos no utilizables](#comandos-inutilizables), un componente puede utilizar cualquier comando del lenguaje 4D.
 
-Quando os comandos são chamados a partir de um componente, eles são executados no contexto do componente, com exceção dos comandos [`EXECUTE METHOD`] (https://doc.4d.com/4dv20/help/command/en/page1007.html) ou [`EXECUTE FORMULA`] (https://doc.4d.com/4dv20/help/command/en/page63.html), que usam o contexto do método especificado pelo comando. Observe também que os comandos de leitura do tema "Usuários e grupos" podem ser usados a partir de um componente, mas lerão os usuários e grupos do projeto host (um componente não tem seus próprios usuários e grupos).
+When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. Observe também que os comandos de leitura do tema "Usuários e grupos" podem ser usados a partir de um componente, mas lerão os usuários e grupos do projeto host (um componente não tem seus próprios usuários e grupos).
 
-Os comandos [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/pt-BR/page642.html) e [`Get database parameter`](https://doc.4d.com/4dv20/help/command/pt-BR/page643.html) são uma exceção: seu escopo é global para a aplicação. Quando esses comandos forem chamados de um componente, são aplicados ao projecto de aplicação local.
+The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. Quando esses comandos forem chamados de um componente, são aplicados ao projecto de aplicação local.
 
 Além disso, medidas especificas foram criadas para os comandos `Structure file` e `Get 4D folder` quando utilizados no marco dos componentes.
 
-O comando [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/en/page1001.html) pode ser usado para obter a lista de componentes carregados pelo projeto host.
+O comando [`COMPONENT LIST`](../commands-legacy/component-list.md) pode ser usado para obter a lista de componentes carregados pelo projeto host.
 
 ### Comandos não utilizáveis
 
@@ -76,7 +76,7 @@ Por outro lado, por motivos de segurança, por padrão, um componente não pode 
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Quando os métodos projeto dos projetos host estiverem disponíveis para os componentes, você poderá executar um método do projeto host de dentro de um componente usando o comando [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) ou [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html). Por exemplo:
+Quando os métodos projeto dos projetos host estiverem disponíveis para os componentes, você poderá executar um método do projeto host de dentro de um componente usando o comando [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) ou [`EXECUTE METHOD`](../commands-legacy/execute-method.md). Por exemplo:
 
 ```4d
 // Método host
@@ -140,6 +140,24 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
 > As funções não ocultas dentro de uma classe oculta aparecem como sugestões quando você usa a funcionalidade autocompletar código com uma classe que [herda](../Concepts/classes.md#inheritance) dela. Por exemplo, se um componente tiver uma classe `Teacher` que herda de uma classe `_Person`, o recurso autocompletar código para `Teacher` sugere funções não ocultas de `_Person`.
+
+## Editing components from the host
+
+To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
+
+- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
+- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+
+In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
+
+In the Explorer, a specific icon indicates that the component code is editable:<br/>
+![](../assets/en/Develop/editable-component.png)
+
+:::warning
+
+Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+
+:::
 
 ## Completar o código dos componentes compilados
 
@@ -352,6 +370,55 @@ A execução do código de inicialização ou fechamento é feita por meio do m�
 
 > Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. Para fazer isso, você deve marcar a opção [**Executar o método "On Host Database Event" dos componentes**](../settings/security.md#options) na página Segurança das Configurações.
 
+## Info.plist
+
+Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
+
+:::note
+
+This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+
+:::
+
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+
+The folling keys can be defined:
+
+| \|                                                         | description                                                                                                                                                         |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CFBundleName                                               | Component name (internal)                                                                                                                        |
+| CFBundleDisplayName                                        | Component name to display                                                                                                                                           |
+| NSHumanReadableCopyright                                   | Copyright to display                                                                                                                                                |
+| CFBundleVersion                                            | Version of the component                                                                                                                                            |
+| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
+| com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+
+Here is an example of `Info.plist` file:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<plist>
+  <dict>
+    <key>CFBundleName</key>
+    <string>UI</string>
+    <key>CFBundleDisplayName</key>
+    <string>UI</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>©vdl 2025</string>
+    <key>CFBundleVersion</key>
+    <string></string>
+    <key>com.4d.minSupportedVersion</key>
+    <string>20R10</string>
+  </dict>
+</plist>
+```
+
+On macOS, information is available from the finder:
+
+![](../assets/en/Develop/infoplist-component.png)
+
 ## Proteção dos componentes: compilação
 
 Por padrão, todo o código de um projeto de matriz instalado como um componente é potencialmente visível no projeto host. Em particular:
@@ -365,6 +432,6 @@ Para proteger o código de um componente de forma eficaz, basta [compilar e cons
 - Os métodos, as classes e as funções do projeto compartilhado podem ser chamados nos métodos do projeto host e também ficam visíveis na página Métodos do Explorer. No entanto, seu conteúdo não aparecerá na área de visualização e no depurador.
 - Os outros métodos projeto do projeto matriz nunca aparecerão.
 
-## Partilha de componentes
+## Sharing your components on GitHub
 
 Nós encorajamos você a apoiar a comunidade de desenvolvedores 4D compartilhando seus componentes, de preferência na [plataforma GitHub](https://github.com/topics/4d-component). Recomendamos que você use o tópico **`4d-component`** para ser referenciado corretamente.

@@ -34,14 +34,16 @@ async function run(inFolder, sidebarObject) {
         if (!category.items) {
             continue;
         }
-        const overview_id = category.label.replaceAll(" ", "_")
-            .replace("(", "")
-            .replace(")", "");
-        const overview_file_name = overview_id + ".md";
+        const overview_name = category.label.replaceAll(" ", "_")
+        .replace("(", "")
+        .replace(")", "")
+        const overview_id = overview_name + "_theme";
+        const overview_file_name = overview_name + ".md";
         let overview = "---\n" +
             `id: ${overview_id}\n` +
             `title: ${category.label}\n` +
-            "---\n"
+            `slug: /commands/theme/${overview_name.replaceAll("_", "-")}\n` +
+            "---\n\n\n";
         overview += "||\n|---|\n";
         for (const command of category.items) {
             const fileName = command.split("/").at(-1) + ".md";

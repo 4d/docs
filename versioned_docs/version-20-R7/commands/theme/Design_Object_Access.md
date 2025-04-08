@@ -1,7 +1,10 @@
 ---
-id: Design_Object_Access
+id: Design_Object_Access_theme
 title: Design Object Access
+slug: /commands/theme/Design-Object-Access
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Current method path.Syntax -->](../../commands-legacy/current-method-path.md)<br/>|

@@ -1,7 +1,10 @@
 ---
-id: Printing
+id: Printing_theme
 title: Printing
+slug: /commands/theme/Printing
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ACCUMULATE.Syntax -->](../../commands-legacy/accumulate.md)<br/>|

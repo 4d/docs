@@ -13,26 +13,26 @@ The `TCPEvent` class provides information about events occurring during the life
 
 </details>
 
-### TCPEvent Object
+### Objeto TCPEvent
 
 A `TCPEvent` object is immutable and non-streamable.
 
 Las siguientes propiedades están disponibles:
 
-|                                                                                                   |
-| ------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #4D.TCPEvent.data.Summary --> |
-| [<!-- INCLUDE #4D.TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #4D.TCPEvent.type.Summary --> |
+|                                                                                             |
+| ------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #TCPEvent.data.Summary --> |
+| [<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary --> |
 
-<!-- REF #4D.TCPEvent.data.Desc -->
+<!-- REF #TCPEvent.data.Desc -->
 
 ## .data
 
-<!-- REF #4D.TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
+<!-- REF #TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
 
 #### Descripción
 
-La propiedad `.data` contiene <!-- REF #4D.TCPEvent.data.Summary -->los datos asociados con el evento<!-- END REF -->. It is only valid for events of type `"data"`.
+La propiedad `.data` contiene <!-- REF #TCPEvent.data.Summary -->los datos asociados al evento<!-- END REF -->. It is only valid for events of type `"data"`.
 
 :::note
 
@@ -42,15 +42,15 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 <!-- END REF -->
 
-<!-- REF #4D.TCPEvent.type.Desc -->
+<!-- REF #TCPEvent.type.Desc -->
 
 ## .type
 
-<!-- REF #4D.TCPEvent.type.Syntax -->**type** : Text<!-- END REF -->
+<!-- REF #TCPEvent.type.Syntax -->**type** : Text<!-- END REF -->
 
 #### Descripción
 
-La propiedad `.type` contiene <!-- REF #4D.TCPEvent.type.Summary -->el tipo del evento<!-- END REF -->. Los valores posibles son:
+La propiedad `.type` contiene <!-- REF #TCPEvent.type.Summary -->el tipo del evento<!-- END REF -->. Los valores posibles son:
 
 - `"connection"`: Indicates that a TCPConnection was successfully established.
 - `"data"`: Indicates that data has been received.

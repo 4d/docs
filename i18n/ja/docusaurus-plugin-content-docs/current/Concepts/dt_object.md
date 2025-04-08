@@ -42,7 +42,7 @@ title: Object
 
 オブジェクトのインスタンス化は、以下のいずれかの方法でおこなうことができます:
 
-- [`New object`](https://doc.4d.com/4dv20/help/command/ja/page1471.html) コマンドを使用する。
+- using the [`New object`](../commands-legacy/new-object.md) command,
 - `{}` 演算子を使用する。
 
 :::info
@@ -53,7 +53,7 @@ title: Object
 
 ### `New object` コマンド
 
-[`New object`](https://doc.4d.com/4dv20/help/command/ja/page1471.html) コマンドは、新しい空の、またはプロパティが格納されたオブジェクトを作成し、その参照を返します。
+The [`New object`](../commands-legacy/new-object.md) command creates a new empty or prefilled object and returns its reference.
 
 例:
 
@@ -110,8 +110,8 @@ $col:=$o.col[5] // 6
 
 二種類のオブジェクトを作成することができます:
 
-- [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.ja.html) コマンド、またはオブジェクトリテラルのシンタックス `{}` 使用して作成する通常 (非共有) オブジェクト。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.ja.html) コマンド、またはオブジェクトリテラルのシンタックス `{}` 使用して作成する通常 (非共有) オブジェクト。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
+- regular (non-shared) objects, using the [`New object`](../commands-legacy/new-object.md) command or object literal syntax (`{}`). 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- shared objects, using the [`New shared object`](../commands-legacy/new-shared-object.md) command. 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
  詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
 ## プロパティ

@@ -45,7 +45,7 @@ Lorsque vous sélectionnez cette commande, la page d'accueil du site Web publié
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-Cette commande vous permet de vérifier que le serveur web, l'affichage de la page d'accueil, etc. fonctionnent correctement. La page est appelée en utilisant l'URL *localhost*, qui est le raccourci standard désignant l'adresse IP de la machine sur laquelle le navigateur web est exécuté. The command takes into account the [TCP publication port](./webServerConfig.md#http-port) number specified in the settings.
+Cette commande vous permet de vérifier que le serveur web, l'affichage de la page d'accueil, etc. fonctionnent correctement. La page est appelée en utilisant l'URL *localhost*, qui est le raccourci standard désignant l'adresse IP de la machine sur laquelle le navigateur web est exécuté. Cette commande prend en compte le numéro du [port de publication TCP](./webServerConfig.md#http-port) spécifié dans les paramètres.
 
 ## Vider le cache
 
@@ -58,7 +58,7 @@ Pour ce faire, vous pouvez :
 
 Le cache est alors immédiatement effacé.
 
-> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
+> Vous pouvez aussi utiliser l'url [/4DCACHECLEAR](#4dcacheclear).
 
 ## Explorateur d'exécution
 
@@ -230,7 +230,7 @@ D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
     - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 
-- **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
+- **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez effectuer une sauvegarde quotidienne. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
 
 - **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
 

@@ -30,7 +30,7 @@ title: ヘッダー
  - この計算にはピクチャーのサイズや、フォントに適用されるスタイルは考慮されません。
  - macOS 環境下では、選択されたフォントで使用できない文字をユーザーが入力した場合、行の高さが正しくなくなる可能性があります。 この場合には代理フォントが使用され、その結果サイズにばらつきが出る可能性があります。
 
-> ヘッダーの高さは [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-HEADERS-HEIGHT.301-4505200.ja.html) コマンドを使用して設定することもできます。
+> This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](../commands-legacy/listbox-set-headers-height.md) command.
 
 単位の変換: 単位を変更した場合、4D は自動で値を再計算し、結果をプロパティリストに表示します。 たとえば、使用されるフォントが "Lucida grande 24" で高さが "1 行" に設定されていれば "30 ピクセル" に、高さが "60 ピクセル" なら "2 行" になります。
 

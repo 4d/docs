@@ -140,7 +140,7 @@ As propriedades personalizadas, quando usadas, são passadas para a função [co
 
 Cada macro que você deseja instanciar em seu projeto ou componente deve ser declarada como uma [classe 4D] (Concepts/classes.md).
 
-The class name must match the name defined using the [class](#declaring-macros) attribute of the `formMacros.json` file.
+O nome da classe deve corresponder ao nome definido usando o atributo [class](#declaring-macros) do arquivo `formMacros.json`.
 
 As macros são instanciadas no arranque da aplicação. Consequentemente, se você modificar a estrutura da classe de macro (adicionar uma função, modificar um parâmetro...) ou o [constructor](#class-constructor), você terá que reiniciar o aplicativo para aplicar as alterações.
 

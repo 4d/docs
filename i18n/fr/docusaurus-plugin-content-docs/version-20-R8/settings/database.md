@@ -103,7 +103,7 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
     La taille de mémoire cache que vous saisissez sera réservée pour la base 4D, quel que soit l’état des ressources de la machine. Ce paramétrage peut être utilisé dans certaines configurations spécifiques, ou lorsque la base est destinée à fonctionner sur des systèmes disparates en termes de mémoire. Dans la plupart des cas, le cache adaptatif est plus performant.
 
 - **Ecriture cache toutes les… Minutes/secondes** : spécifie la fréquence de sauvegarde automatique du cache de données, c’est-à-dire son écriture sur le disque.
-    4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. Vous pouve aussi appeler la commande [FLUSH CACHE](https://doc.4d.com/4dv19/help/command/en/page297.html) pour déclencher l'écriture du cache à tout moment.
+    4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. You can also call the [FLUSH CACHE](../commands-legacy/flush-cache.md) command to trigger the flush at any moment.
 
     Quand vous prévoyez de saisir beaucoup de données, il est souhaitable de fixer un intervalle court. En effet, en cas de coupure de courant, vous ne perdriez que les données saisies depuis la dernière écriture (si la base fonctionne sans fichier d’historique).
 

@@ -138,9 +138,9 @@ Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 |           | \[ ].name        | text       | Nom de plage                                                                                                                     | name                                                           |
 |           | \[ ].sheet       | number     | Indice de la feuille (par défaut, indice de la feuille courante) (le comptage démarre à 0) | cellule, cellules, ligne, lignes, colonne, colonnes, tout, nom |
 |           | \[ ].row         | number     | Indice de la ligne (le comptage démarre à 0)                                                                  | cellule, cellules, ligne, lignes                               |
-|           | \[ ].rowCount    | number     | Row count                                                                                                                        | cellule, lignes                                                |
+|           | \[ ].rowCount    | number     | Nombre de lignes                                                                                                                 | cellule, lignes                                                |
 |           | \[ ].column      | number     | Indice de la colonne (le comptage démarre à 0)                                                                | cellule, cellules, colonne, colonnes                           |
-|           | \[ ].columnCount | number     | Column count                                                                                                                     | cellules, colonnes                                             |
+|           | \[ ].columnCount | number     | Nombre de colonnes                                                                                                               | cellules, colonnes                                             |
 
 ## Import et export de documents
 

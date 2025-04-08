@@ -28,7 +28,7 @@ Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. 
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection.md) can be used as the data source of a drop-down list. O objeto deve conter as seguintes propriedades:
+Um [objeto](Concepts/dt_object.md) que encapsula uma [coleção](Concepts/dt_collection.md) pode ser usado como a fonte de dados de uma lista suspensa. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                               |
 | -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -148,7 +148,7 @@ Uma lista suspensa hierárquica tem uma sub-lista associada a cada item da lista
 
 Você pode atribuir a lista de opções hierárquicas ao objeto de lista suspensa usando o campo [Choice List](properties_DataSource.md#choice-list) da Lista de propriedades.
 
-Pode gerenciar as listas suspensas hierárquicas usando os comandos **listas hierárquicas** do idioma 4D. Todos os comandos compatíveis com a sintaxe `(*; "name")` podem ser usados com listas suspensas hierárquicas, por exemplo, [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
+Pode gerenciar as listas suspensas hierárquicas usando os comandos **listas hierárquicas** do idioma 4D. Todos os comandos compatíveis com a sintaxe `(*; "name")` podem ser usados com listas suspensas hierárquicas, por exemplo, [`List item parent`](../commands-legacy/list-item-parent.md).
 
 ### Usar uma ação padrão
 

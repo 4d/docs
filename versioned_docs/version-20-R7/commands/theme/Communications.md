@@ -1,7 +1,10 @@
 ---
-id: Communications
+id: Communications_theme
 title: Communications
+slug: /commands/theme/Communications
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.GET SERIAL PORT MAPPING.Syntax -->](../../commands-legacy/get-serial-port-mapping.md)<br/>|

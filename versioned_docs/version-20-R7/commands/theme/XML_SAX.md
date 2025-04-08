@@ -1,7 +1,10 @@
 ---
-id: XML_SAX
+id: XML_SAX_theme
 title: XML SAX
+slug: /commands/theme/XML-SAX
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax -->](../../commands-legacy/sax-add-processing-instruction.md)<br/>|

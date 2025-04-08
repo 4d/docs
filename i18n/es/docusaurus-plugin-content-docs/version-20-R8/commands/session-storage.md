@@ -65,9 +65,9 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 ## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 1839                                                                |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1839                        |
+| Hilo seguro       | &check; |
 
 

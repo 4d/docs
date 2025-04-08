@@ -35,10 +35,6 @@
         ],
         "include_escape_list": [
             {
-                "from": "|",
-                "to": "&#124;"
-            },
-            {
                 "from": "<br/>\n",
                 "to": "<br/>"
             }

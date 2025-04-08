@@ -1,7 +1,10 @@
 ---
-id: Processes
+id: Processes_theme
 title: Processes
+slug: /commands/theme/Processes
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ABORT PROCESS BY ID.Syntax -->](../../commands-legacy/abort-process-by-id.md)<br/>|

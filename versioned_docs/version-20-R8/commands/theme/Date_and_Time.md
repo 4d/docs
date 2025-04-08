@@ -1,7 +1,10 @@
 ---
-id: Date_and_Time
+id: Date_and_Time_theme
 title: Date and Time
+slug: /commands/theme/Date-and-Time
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Add to date.Syntax -->](../../commands-legacy/add-to-date.md)<br/>|

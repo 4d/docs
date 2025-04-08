@@ -141,7 +141,7 @@ With [text areas](text.md) and [inputs](input_overview.md):
 
 :::
 
-You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) commands.
+You can also set this property using the [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) and [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md) commands.
 
 #### JSON Grammar
 

@@ -146,7 +146,7 @@ OBJECT SET FONT($FieldPtr->;"Arial")
 
 Lorsque vous utilisez des pointeurs vers des variables locales ou des variables process, vous devez veiller à ce que la variable pointée soit bien définie au moment de l’utilisation du pointeur. Rappelons que les variables locales sont supprimées à la fin de l’exécution de la méthode qui les a créées et les variables process à la fin du process dans lequel elles ont été créées. L’appel d’un pointeur vers une variable qui n’existe plus provoque une erreur de syntaxe en mode interprété (variable indéfinie) mais peut générer une erreur plus conséquente en mode compilé.
 
-Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. For example, if you write in *Method1*:
+Les pointeurs vers des variables locales permettent dans de nombreux cas d’économiser des variables process. Les pointeurs vers des variables locales peuvent être utilisés uniquement à l’intérieur d’un même process. Dans le débogueur, lorsque vous affichez un pointeur vers une variable locale déclarée dans une autre méthode, le nom de la méthode d’origine est indiquée entre parenthèses, derrière le pointeur. Par exemple, si vous écrivez dans *Method1* :
 
 ```4d
  $MyVar:="Hello world"
@@ -158,13 +158,13 @@ Les pointeurs vers des variables locales permettent dans de nombreux cas d’éc
 #DECLARE($param : Pointer)
 ...
 ```
-The debugger will display $param as follows:
+Le débogueur affichera $param comme suit :
 
 | $param | ->$MyVar (Method1) |
 | ------ | ------------------ |
 |        |                    |
 
-You can expand $param and its value will be:
+Vous pouvez étendre $param et sa valeur sera :
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |
@@ -201,8 +201,9 @@ Si vous devez vous référer au quatrième élément du tableau à l’aide du p
 Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. Par exemple, la méthode suivante, `takeTwo`, reçoit deux paramètres qui sont des pointeurs. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules.
 
 ```4d
-  //$changeLow – Pointer to a string field or variable. Passe la chaîne en majuscules.
-  Passe la chaîne en minuscules. Passe la chaîne en minuscules.
+  // Méthode projet takeTwo
+  // $changeUp – Pointeur vers un champ ou une variable de type Chaîne. Passe la chaîne en majuscules.
+  // $changeLow – Pointeur vers un champ ou une variable de type Chaîne. Passe la chaîne en minuscules.
  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)

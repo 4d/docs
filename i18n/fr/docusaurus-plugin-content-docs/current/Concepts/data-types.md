@@ -31,6 +31,13 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 (2) Variant n'est pas un type de *données* à proprement parler mais un type de *variable* qui peut contenir une valeur de n'importe quel autre type de données.
 
+## Commandes
+
+You can always know the type of a field or variable using the following commands:
+
+- [`Type`](../commands-legacy/type.md) for fields and scalar variables
+- [`Value type`](../commands-legacy/value-type.md) for expressions
+
 ## Valeurs par défaut
 
 Lorsque les [variables](variables.md) ou les [paramètres](parameters.md) sont typés au moyen d'une [déclaration explicite](variables.md#déclaration-des-variables), ils reçoivent une valeur par défaut, qu'ils conserveront au cours de la session tant qu'ils n'auront pas été assignés.

@@ -69,8 +69,8 @@ O arquivo **dependencies.json** faz referência a todos os componentes necessár
 
 Pode conter:
 
-- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
-- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
+- nomes de componentes [armazenado localmente](#local-components) (caminho ou caminho padrão definido em um arquivo **environment4d.json**),
+- nomes de componentes [armazenados nos repositórios do GitHub](#components-stored-on-github) (seus caminhos podem ser definidos neste arquivo ou em um arquivo **environment4d.json**).
 
 #### environment4d.json
 
@@ -111,7 +111,7 @@ When a component cannot be loaded because of another instance of the same compon
 
 ### Componentes locais
 
-You declare a local component in the [**dependencies.json** file](#dependenciesjson) in the following way:
+Você declara um componente local no arquivo [**dependencies.json**](#dependenciesjson) da seguinte maneira:
 
 ```json
 {
@@ -159,7 +159,7 @@ Exemplos:
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
+Se um caminho do componente for declarado no **ambiente4d. arquivo son** não é encontrado quando o projeto é iniciado, o componente não é carregado e obtém o *Não encontrado* [status](#dependency-status), mesmo que uma versão do componente exista ao lado da pasta do pacote do projeto.
 
 :::
 
@@ -195,7 +195,7 @@ These steps can easily be automated, with 4D code or using GitHub Actions, for e
 
 #### Declarando caminhos
 
-You declare a component stored on GitHub in the [**dependencies.json** file](#dependenciesjson) in the following way:
+Você declara um componente armazenado no GitHub no arquivo [**dependencies.json**](#dependenciesjson) da seguinte maneira:
 
 ```json
 {
@@ -226,7 +226,13 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
-- **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
+:::note
+
+If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).
+
+:::
+
+- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
 ```json
 {
@@ -271,6 +277,20 @@ Eis alguns exemplos:
 If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
 
 The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range).
+
+#### Naming conventions for 4D version tags
+
+If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases on the Github repository must comply with specific conventions.
+
+- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *x.y* LTS version, the Dependency Manager will resolve it as "the latest version x.\*" if available or "version below x". If no such version exists, the user will be notified. For example, "20.4" will be resolved by the Dependency manager as "the latest component version 20.\* or version below 20".
+
+- **R-Release versions**: `xRy.p` pattern, where `x` and `y` correspond to the main 4D R-release version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *xRy* version, the Dependency Manager will resolve it to the "latest version below xR(y+1)" if available. If no such version exists, the user will be notified. For example, "20R9" will be resolved by the Dependency manager as "the latest component version below 20R10".
+
+:::note
+
+The component developer can define a minimum 4D version in the component's [`info.plist`](../Extensions/develop-components.md#infoplist) file.
+
+:::
 
 #### Repositórios privados
 
@@ -390,7 +410,7 @@ To add a local dependency, click on the **+** button in the footer area of the p
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. You can select a [**.4DZ**](../Desktop/building.md#build-component) or a [**.4DProject**](architecture.md#applicationname4dproject-file) file.
+Certifique-se de que a aba **Local** esteja selecionada e clique no botão **...**. A standard Open file dialog box is displayed, allowing you to select the component to add. Você pode selecionar um arquivo [**.4DZ**](../Desktop/building.md#build-component) ou um arquivo [**.4DProject**](architecture.md#applicationname4dproject-file).
 
 If the selected item is valid, its name and location are displayed in the dialog box.
 
@@ -445,6 +465,7 @@ Você pode definir a opção [tag ou versão](#tags-and-versions) para uma depen
 - **Até a próxima versão major**: defina um [intervalo de versão semântica](#tags-and-versions) para restringir as atualizações para a próxima versão principal.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
 - **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
+- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. You can use this dependency rule only if the component release tags follow the appropriate [naming convention](#naming-conventions-for-4d-version-tags).
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 

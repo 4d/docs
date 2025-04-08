@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document |
 | breakType   | Integer | &#8594; | Type of break to insert                   |
-| mode        | Integer | &#8594; | Insertion mode                            |
+| mode        | Integer | &#8594; | Modo de inserción                         |
 | rangeUpdate | Integer | &#8594; | Range update mode                         |
 | Resultado   | Object  | &#8592; | Text range of the break character         |
 
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **WP Insert break** command <!--REF #_command_.WP Insert break.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
+El comando **WP Insert break** <!--REF #_command_.WP Insert break.Summary-->inserta una nueva ruptura de tipo *breakType* en el *targetObj* de acuerdo con los parámetros de inserción *mode*  y *rangeUpdate* especificados, y devuelve el rango de texto del caracter de ruptura<!-- END REF-->
 
 En *targetObj*, pase:
 

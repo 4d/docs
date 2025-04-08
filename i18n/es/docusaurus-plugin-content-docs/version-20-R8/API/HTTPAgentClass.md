@@ -25,7 +25,7 @@ Los objetos HTTPAgent ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPAgentClass.options.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.options.Summary -->                            |
+| [<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->                              |
 | [<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestscount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->          |
 | [<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freesocketscount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary --> |
 
@@ -34,8 +34,6 @@ Los objetos HTTPAgent ofrecen las siguientes propiedades y funciones:
 Dado que HTTPAgent es un objeto compartible, puede añadir uno a una clase singleton para poder utilizar el mismo agente para todas sus peticiones al mismo servidor.
 
 :::
-
-<!-- REF #4D.HTTPAgent.new().Desc -->
 
 ## 4D.HTTPAgent.new()
 
@@ -79,7 +77,7 @@ Las opciones de HTTPAgent se fusionarán con [opciones HTTPRequest](HTTPRequestC
 
 :::note
 
-Puede solicitar múltiples servidores utilizando el mismo agente. En ese caso, cada servidor tendrá su propio grupo de conexiones utilizando las mismas opciones de agente.
+Lanzamiento En ese caso, cada servidor tendrá su propio grupo de conexiones utilizando las mismas opciones de agente.
 
 :::
 
@@ -113,15 +111,15 @@ Cuando no hay ningún agente asociado a una HTTPRequest, se utiliza un agente gl
 
 :::
 
-<!-- REF #HTTPAgentClass.options.Desc -->
+<!-- REF #HTTPAgentClass.params.Desc -->
 
-## .options
+## .params
 
-<!-- REF #HTTPAgentClass.options.Syntax -->**options** : Object<!-- END REF -->
+<!-- REF #HTTPAgentClass.params.Syntax -->**options** : Object<!-- END REF -->
 
 #### Descripción
 
-El objeto de propiedad `.options` contiene <!-- REF #HTTPAgentClass.options.Summary -->las opciones utilizadas actualmente del HTTPAgent<!-- END REF -->.
+El objeto de propiedad `.params` contiene <!-- REF #HTTPAgentClass.params.Summary -->las opciones utilizadas actualmente del HTTPAgent<!-- END REF -->.
 
 <!-- END REF -->
 

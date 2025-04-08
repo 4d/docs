@@ -83,7 +83,7 @@ Un double-clic sur un warning ouvre la méthode correspondante.
 
 ## Paramètres du compilateur
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
+The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Vous pouvez ouvrir directement cette page à partir de la [fenêtre du compilateur](#compiler-window-features) en cliquant sur le bouton **Paramètres du compilateur** :
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -93,11 +93,11 @@ Cette zone regroupe les options génériques utilisées lors du processus de com
 
 #### Générer le fichier de symboles
 
-Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). The symbol file is created in the in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Le fichier de symboles est créé dans le [dossier Logs](../Project/architecture.md#logs) du projet et est nommé `ProjectName_symbols.xml`.
 
 #### Générer le fichier d'erreurs
 
-Permet de générer le fichier d'erreurs (voir [fichier d'erreurs](#fichier-derreurs)) au moment du contrôle syntaxique. The error file is created in the [Logs folder](../Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Permet de générer le fichier d'erreurs (voir [fichier d'erreurs](#fichier-derreurs)) au moment du contrôle syntaxique. Le fichier d'erreur est créé dans le [dossier Logs](../Project/architecture.md#logs) du projet et est nommé `ProjectName_errors.xml`.
 
 #### Cible de compilation
 
@@ -127,9 +127,9 @@ Deux options de cible sont proposées. Le résultat dépend du processeur de la 
 
 In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 
-- **Compilation Path**
-- **Default typing**
-- **Compiler Methods for...**
+- **Chemin de compilation**
+- **Typage par défaut**
+- **Méthodes Compilateur pour...**
 
 These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](../Project/compiler.md#compiler-settings).
 
@@ -269,7 +269,7 @@ type résultat, nombre d'appels, Thread Safe ou Thread Unsafe
 
 ### Fichier d’erreurs
 
-Vous pouvez choisir de générer ou non un fichier d'erreurs lors de la compilation en utilisant l'option [**Générer le fichier d'erreur**](#generate-error-file) dans les paramètres du compilateur. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](../Project/architecture.md#logs) of the project.
+Vous pouvez choisir de générer ou non un fichier d'erreurs lors de la compilation en utilisant l'option [**Générer le fichier d'erreur**](#generate-error-file) dans les paramètres du compilateur. Le fichier d'erreur est automatiquement nommé `projectName_errors.xml` et est placé dans le [dossier Logs](../Project/architecture.md#logs) du projet.
 
 Bien que les erreurs soient directement accessibles via la [fenêtre de compilation](#compilation), il peut être intéressant de disposer d’un fichier d’erreurs qu’il est alors possible de transmettre d’un poste à l’autre. Le fichier d’erreurs est généré au format XML afin de faciliter l’analyse automatique de son contenu. Il permet également la création d’interfaces personnalisées de présentation des erreurs.
 
@@ -334,13 +334,13 @@ Les deux compilateurs sont intégrés dans 4D. Le compilateur adéquat est autom
 
 Le compilateur classique génère du code compilé natif pour les processeurs Intel/AMD sur n'importe quelle machine. Il ne nécessite aucune configuration particulière.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
+Le code compilé qui en résulte est stocké dans le dossier [DerivedData](architecture.md#deriveddata) du projet.
 
 ### Compilateur Silicon
 
 Le compilateur Silicon génère du code compilé natif pour les processeurs Apple Silicon tels que le *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+Le code compilé qui en résulte est stocké dans le dossier [Libraries](architecture.md#libraries) du projet.
 
 #### Conditions requises
 

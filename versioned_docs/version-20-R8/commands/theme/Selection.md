@@ -1,7 +1,10 @@
 ---
-id: Selection
+id: Selection_theme
 title: Selection
+slug: /commands/theme/Selection
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ALL RECORDS.Syntax -->](../../commands-legacy/all-records.md)<br/>|

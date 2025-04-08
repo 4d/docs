@@ -26,7 +26,7 @@ Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Langage 4D :
     - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
     - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the *message* parameter.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R8): list of all bugs that have been fixed in 4D 20 R8.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R8) : liste de tous les bugs qui ont été corrigés dans 4D 20 R8.
 
 #### Changements de comportement
 

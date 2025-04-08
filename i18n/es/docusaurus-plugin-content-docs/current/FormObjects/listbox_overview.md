@@ -311,7 +311,7 @@ Además, tiene acceso a las propiedades específicas de los encabezados. En part
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the list box column object method.
+Al momento de la ejecución, los eventos que se producen en un encabezado se generan en el método objeto de la columna de list box.
 
 Cuando el comando `OBJECT SET VISIBLE` se utiliza con un encabezado, se aplica a todos los encabezados, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "header3";False)` ocultará todos los encabezados del objeto list box al que pertenece *header3* y no simplemente este encabezado.
 
@@ -331,7 +331,7 @@ Cuando se muestran los pies, puede hacer clic para seleccionar un pie de list bo
 
 Para cada pie de columna de list box, puede definir propiedades de texto estándar: en este caso, estas propiedades tienen prioridad sobre las de la columna o del list box. También puede acceder a propiedades específicas para los pies de página. En particular, puede insertar un [cálculo personalizado o automático](properties_Object.md#variable-calculation).
 
-At runtime, events that occur in a footer are generated in the list box column object method.
+Al momento de la ejecución, los eventos que se producen en un pie de página se generan en el método objeto de la columna de list box.
 
 Cuando el comando `OBJECT SET VISIBLE` se utiliza con un pie de página, se aplica a todos los pies, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "footer3";False)` ocultará todos los pies de página del objeto list box al que pertenece *footer3* y no simplemente este pie de página.
 
@@ -533,11 +533,11 @@ El soporte de ordenación estándar depende del tipo de list box:
 
 ### Ordenación personalizada
 
-El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utilizando el comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) y/o combinando los eventos de formulario [`On Header Click`](../Events/onHeaderClick) y [`On After Sort`](../Events/onAfterSort) y los comandos 4D relevantes.
+El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utilizando el comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) y/o combinando los eventos de formulario [`On Header Click`](../Events/onHeaderClick) y [`On After Sort`](../Events/onAfterSort) y los comandos 4D relevantes.
 
 Los ordenamientos personalizados le permiten:
 
-- realizar ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
+- realizar ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md),
 - utilizar funciones como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) o [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para ordenar columnas según criterios complejos.
 
 #### Ejemplo
@@ -579,7 +579,7 @@ El valor de la [variable asociada al encabezado de una columna](properties_Objec
 
 Puede definir el valor de la variable (por ejemplo, Header2:=2) para "forzar" la visualización de la flecha de ordenación. En este caso no se modifica la ordenación por columnas en sí, sino que es el desarrollador quien debe encargarse de ello.
 
-> El comando [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) ofrece soporte específico para iconos en los encabezados de los list box, lo que puede ser útil cuando se desea trabajar con un icono de ordenación personalizado.
+> El comando [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) ofrece soporte específico para iconos en los encabezados de los list box, lo que puede ser útil cuando se desea trabajar con un icono de ordenación personalizado.
 
 ## Gestión de los colores, estilos y visualización de las líneas
 

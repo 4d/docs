@@ -26,7 +26,7 @@ Em *targetObj*, passe:
 
 - Um intervalo, ou
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
-- a 4D Write Pro document.
+- um documento 4D Write Pro.
 
 The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
 

@@ -31,13 +31,13 @@ Creating and installing 4D components is carried out directly from 4D:
 
 Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language.
 
-When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) or [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) command that use the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups).
+When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups).
 
-The [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project.
+The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project.
 
 Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
 
-The [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/en/page1001.html) command can be used to obtain the list of components that are loaded by the host project.
+The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used to obtain the list of components that are loaded by the host project.
 
 
 ### Unusable commands
@@ -83,7 +83,7 @@ Conversely, for security reasons, by default a component cannot execute project 
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) or [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) command. For example:
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command. For example:
 
 ```4d
 // Host Method
@@ -149,6 +149,27 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
 > Non-hidden functions inside a hidden class appear as suggestions when you use code completion with a class that [inherits](../Concepts/classes.md#inheritance) from it. For example, if a component has a `Teacher` class that inherits from a `_Person` class, code completion for `Teacher` suggests non-hidden functions from `_Person`.
+
+
+## Editing components from the host
+
+To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
+
+- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
+- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+
+In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account. 
+
+In the Explorer, a specific icon indicates that the component code is editable:<br/>
+![](../assets/en/Develop/editable-component.png)
+
+:::warning
+
+Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+
+:::
+
+
 
 
 ## Code completion for compiled components
@@ -366,6 +387,59 @@ Executing initialization or closing code is done by means of the `On Host Databa
 > For security reasons, you must explicitly authorize the execution of the `On Host Database Event` database method in the host database in order to be able to call it. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
 
 
+## Info.plist
+
+Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components). 
+
+:::note
+
+This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+
+:::
+
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+
+The folling keys can be defined:
+
+|key|description|
+|---|---|
+|CFBundleName  |Component name (internal)|
+|CFBundleDisplayName |Component name to display|
+|NSHumanReadableCopyright |Copyright to display|
+|CFBundleVersion  |Version of the component|
+|CFBundleShortVersionString  |Version of the component to display|
+|com.4d.minSupportedVersion |Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags)|
+
+
+
+Here is an example of `Info.plist` file:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<plist>
+  <dict>
+    <key>CFBundleName</key>
+    <string>UI</string>
+    <key>CFBundleDisplayName</key>
+    <string>UI</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>©vdl 2025</string>
+    <key>CFBundleVersion</key>
+    <string></string>
+    <key>com.4d.minSupportedVersion</key>
+    <string>20R10</string>
+  </dict>
+</plist>
+```
+
+On macOS, information is available from the finder:
+
+![](../assets/en/Develop/infoplist-component.png)
+
+
+
 ## Protection of components: compilation  
 
 By default, all the code of a matrix project installed as a component is potentially visible from the host project. In particular:
@@ -380,6 +454,6 @@ To protect the code of a component effectively, simply [compile and build](Deskt
 - The other project methods of the matrix project will never appear.
 
 
-## Sharing components
+## Sharing your components on GitHub
 
 We encourage you to support the 4D developer community by sharing your components, preferably on the [GitHub platform](https://github.com/topics/4d-component). We recommend that you use the **`4d-component`** topic to be correctly referenced.  

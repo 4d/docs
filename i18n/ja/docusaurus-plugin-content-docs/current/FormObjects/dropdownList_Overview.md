@@ -149,7 +149,7 @@ Form.myDrop.index //3
 
 階層型選択リストをドロップダウンリストオブジェクトに割り当てるには、プロパティリストの [選択リスト](properties_DataSource.md#choice-list) 欄を使います。
 
-階層型ドロップダウンリストの管理には、4Dランゲージの **階層リスト** コマンドを使用します。 階層型ドロップダウンリストの管理には、4Dランゲージの **階層リスト** コマンドを使用します。 階層型ドロップダウンリストの管理には、4Dランゲージの **階層リスト** コマンドを使用します。 `(*; "name")` シンタックスをサポートするすべてのコマンドを、階層型ドロップダウンリストに使用できます (例: [`List item parent`](https://doc.4d.com/4dv19/help/command/ja/page633.html))。
+階層型ドロップダウンリストの管理には、4Dランゲージの **階層リスト** コマンドを使用します。 All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](../commands-legacy/list-item-parent.md).
 
 ### 標準アクションの使用
 

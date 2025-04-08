@@ -1,7 +1,10 @@
 ---
-id: Windows
+id: Windows_theme
 title: Windows
+slug: /commands/theme/Windows
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CLOSE WINDOW.Syntax -->](../../commands-legacy/close-window.md)<br/>|

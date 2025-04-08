@@ -90,7 +90,7 @@ ECDSA形式は、4D の [Legacyネットワークレイヤー](../settings/clien
 **key.pem** と **cert.pem** は次の場所に保存する必要があります:
 
 - 4D Server およびローカルモードの 4D では、[Project フォルダー](Project/architecture.md#project-フォルダー) と同階層。
-- 4D のリモートモードでは、これらのファイルはリモートマシンの 4D Client Database フォルダーに置かれなければなりません。 このフォルダーの場所に関する情報は、[`Get 4D Folder`](https://doc.4d.com/4dv20/help/command/ja/page485.html) コマンドの説明を参照ください。 これらのファイルはリモートマシンに手動でコピーする必要があります。 これらのファイルはリモートマシンに手動でコピーする必要があります。
+- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](../commands-legacy/get-4d-folder.md) command). これらのファイルはリモートマシンに手動でコピーする必要があります。
 
 ### TLSを有効にする
 

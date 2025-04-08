@@ -7,7 +7,7 @@ ORDA significa **Object Relational Data Access**. Se trata de una tecnología av
 
 Las relaciones se incluyen de forma transparente en el concepto, en combinación con el principio del [lazy loading](glossary.md#lazy-loading), para eliminar todas las molestias típicas de la selección o la transferencia de datos del desarrollador.
 
-Con ORDA, se accede a los datos a través de una capa de abstracción, el [datastore](dsMapping.md#datastore). Un datastore es un objeto que ofrece una interfaz al modelo de base de datos y a los datos a través de objetos y de clases. For example, a table is mapped to a [dataclass](dsMapping.md#dataclass) object, a field is an [attribute](dsMapping.md#attribute) of a dataclass, and records are accessed through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection).
+Con ORDA, se accede a los datos a través de una capa de abstracción, el [datastore](dsMapping.md#datastore). Un datastore es un objeto que ofrece una interfaz al modelo de base de datos y a los datos a través de objetos y de clases. Por ejemplo, una tabla se asigna a un objeto de [clase](dsMapping.md#dataclass) de datos, un campo es un [atributo](dsMapping.md#attribute) de una clase de datos y se accede a los registros a través de [entidades](dsMapping.md#entity) y de [selecciones de entidades](dsMapping.md#entity-selection).
 
 
 ## ¿Por qué utilizar ORDA?

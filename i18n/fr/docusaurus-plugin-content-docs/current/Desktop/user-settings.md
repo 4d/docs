@@ -38,7 +38,7 @@ Vous pouvez accéder à ces boîtes de dialogue en utilisant le menu **Développ
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-Vous pouvez également accéder à ces boîtes de dialogue à l'aide de la commande [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) avec le sélecteur *settingsType* approprié.
+Vous pouvez également accéder à ces boîtes de dialogue à l'aide de la commande [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window.md) avec le sélecteur *settingsType* approprié.
 
 La boîte de dialogue Propriétés de structure est identique à la boîte de dialogue Propriétés standard et permet d'accéder à toutes ses propriétés (qui peuvent être écrasées par des propriétés utilisateur).
 
@@ -50,36 +50,36 @@ Les boîtes de dialogue **Propriétés utilisateur** et **Propriétés utilisate
 
 Le tableau suivant répertorie les pages de paramètres des boîtes de dialogue **Propriétés utilisateur** et **Propriétés utilisateur pour le fichier de données** et décrit leurs principales différences par rapport aux paramètres standard :
 
-| **Page des Propriétés structure**                                                                     | **Page des Propriétés utilisateur**             | **Page des Propriétés utilisateur pour fichier de données** |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
-| [Page Général](../settings/general.md)                                                                | N/a                                             | N/a                                                         |
-| [Page Interface](../settings/interface.md)                                                            | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Compilateur](../settings/compiler.md)                                                           | N/a                                             | N/a                                                         |
-| [Database/Data storage page](../settings/database.md#data-storage-page)                               | N/a                                             | N/a                                                         |
-| [Database/Memory page](../settings/database.md#memory-page)                                           | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Backup/Scheduler page](../settings/../Backup/settings.md#scheduler)                                  | N/a                                             | Identique aux Propriétés structure                          |
-| [Backup/Configuration page](../settings/../Backup/settings.md#configuration)                          | N/a                                             | Identique aux Propriétés structure                          |
-| [Backup/Backup & Restore page](../settings/../Backup/settings.md#backup--restore) | N/a                                             | Identique aux Propriétés structure                          |
-| [Client-server/Network options page](../settings/client-server.md#network-options-page)               | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration-page)             | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Configuration](../settings/web.md#configuration)                                            | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Web/Options (I) page](../settings/web.md#options-i)                               | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Options (II)](../settings/web.md#options-ii)                             | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Web/Log (type) page](../settings/web.md#log-type)                                 | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Web/Log (backup) page](../settings/web.md#log-backup)                             | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Web/Services Web](../settings/web.md#web-services)                                              | Option de préfixage des méthodes non disponible | Option de préfixage des méthodes non disponible             |
-| [Page SQL](../settings/sql.md)                                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page PHP](../settings/php.md)                                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page Sécurité](../settings/security.md)                                                              | N/a                                             | N/a                                                         |
-| [Page Compatibilité](../settings/compatibility.md)                                                    | N/a                                             | N/a                                                         |
+| **Page des Propriétés structure**                                                                                 | **Page des Propriétés utilisateur**             | **Page des Propriétés utilisateur pour fichier de données** |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
+| [Page Général](../settings/general.md)                                                                            | N/a                                             | N/a                                                         |
+| [Page Interface](../settings/interface.md)                                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Compilateur](../settings/compiler.md)                                                                       | N/a                                             | N/a                                                         |
+| [Page Base de données/Stockage des données](../settings/database.md#data-storage-page)                            | N/a                                             | N/a                                                         |
+| [Page Base de données/Mémoire](../settings/database.md#memory-page)                                               | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Sauvegarde/Périodicité](../settings/../Backup/settings.md#scheduler)                                        | N/a                                             | Identique aux Propriétés structure                          |
+| [Page Sauvegarde/Configuration](../settings/../Backup/settings.md#configuration)                                  | N/a                                             | Identique aux Propriétés structure                          |
+| [Page Sauvegarde/Sauvegarde & Restitution](../settings/../Backup/settings.md#backup--restore) | N/a                                             | Identique aux Propriétés structure                          |
+| [Page Client-serveur/Réseau](../settings/client-server.md#network-options-page)                                   | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Client-serveur/Configuration IP](../settings/client-server.md#ip-configuration-page)                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Configuration](../settings/web.md#configuration)                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Options (I)](../settings/web.md#options-i)                                           | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Options (II)](../settings/web.md#options-ii)                                         | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Journal (format)](../settings/web.md#log-type)                                       | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Journal (sauvegarde)](../settings/web.md#log-backup)                                 | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Services Web](../settings/web.md#web-services)                                                          | Option de préfixage des méthodes non disponible | Option de préfixage des méthodes non disponible             |
+| [Page SQL](../settings/sql.md)                                                                                    | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page PHP](../settings/php.md)                                                                                    | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Sécurité](../settings/security.md)                                                                          | N/a                                             | N/a                                                         |
+| [Page Compatibilité](../settings/compatibility.md)                                                                | N/a                                             | N/a                                                         |
 
 Lorsque vous modifiez les paramètres dans cette boîte de dialogue, ils sont automatiquement enregistrés dans le fichier correspondant *settings.4DSettings* (voir ci-dessous) ou le fichier *Backup.4DSettings* (consultez la page [Paramètres de sauvegarde](../Backup/settings.md) pour plus d'informations).
 
 ## `SET DATABASE PARAMETER` et propriétés utilisateur
 
-Certaines propriétés utilisateur sont aussi disponibles via la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html). Pour les propriétés utilisateur, la propriété **Conservé entre deux sessions** est fixée à **Oui**.
+Certaines propriétés utilisateur sont aussi disponibles via la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md). Pour les propriétés utilisateur, la propriété **Conservé entre deux sessions** est fixée à **Oui**.
 
-Lorsque la fonctionnalité **Propriétés utilisateur** est activée, les propriétés utilisateur modifiées par la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) sont automatiquement stockées dans les Propriétés utilisateurs pour le fichier de données.
+Lorsque la fonctionnalité **Propriétés utilisateur** est activée, les propriétés utilisateur modifiées par la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) sont automatiquement stockées dans les Propriétés utilisateurs pour le fichier de données.
 
 > `Table sequence number` est une exception ; cette valeur de paramètre est toujours stockée dans le fichier de données lui-même.
 

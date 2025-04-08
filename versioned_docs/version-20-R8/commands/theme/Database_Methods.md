@@ -1,7 +1,10 @@
 ---
-id: Database_Methods
+id: Database_Methods_theme
 title: Database Methods
+slug: /commands/theme/Database-Methods
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.On Backup Shutdown database method.Syntax -->](../../commands-legacy/on-backup-shutdown-database-method.md)<br/>|

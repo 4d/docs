@@ -1,7 +1,10 @@
 ---
-id: JSON
+id: JSON_theme
 title: JSON
+slug: /commands/theme/JSON
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.JSON Parse.Syntax -->](../../commands-legacy/json-parse.md)<br/>|

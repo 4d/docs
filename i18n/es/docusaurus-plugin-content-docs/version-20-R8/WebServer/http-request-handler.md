@@ -28,7 +28,7 @@ Custom HTTP Request handlers are supported:
 
 :::
 
-## HTTPHandlers.json File
+## Archivo HTTPHandlers.json
 
 Define sus manejadores de petición HTTP personalizados en un archivo de configuración llamado **HTTPHandlers.json** almacenado en la carpeta [`Project/Sources`](../Project/architecture.md#sources).
 
@@ -68,7 +68,7 @@ A handler is defined by:
 
 The handler identifier is the couple [pattern + a verb among the verbs list].
 
-### URL patterns
+### Patrones de la URL
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 

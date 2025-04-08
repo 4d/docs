@@ -11,7 +11,7 @@ title: Glossaire
 
 ## Action
 
-Every action that can be done on a [resource](#resource). Les actions disponibles sont : create, read, update, drop, execute, promote, et describe.
+Toute action pouvant être effectuée sur une [ressource](#resource). Les actions disponibles sont : create, read, update, drop, execute, promote, et describe.
 
 ## Attribut
 
@@ -159,7 +159,7 @@ Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que 
 
 ## Privilège
 
-The ability to run one or more [actions](#action) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+La possibilité d'exécuter une ou plusieurs [actions](#action) sur des [ressources](#resource). Plusieurs privilèges peuvent être regroupés dans un [rôle](#role) en fonction de la logique métier.
 
 ## Propriété
 
@@ -193,7 +193,7 @@ Dans une entité, la valeur d'un attribut de relation peut être une entité ou 
 
 Une entité associée peut être considérée comme l'instance d'un attribut de relation dans une dataclass.
 
-Les sélections d'entités peuvent faire référence à des entités relatives selon les attributs de relation définis dans les dataclasses correspondantes.
+Les entity selections (sélections d'entités) peuvent faire référence à des entités relatives selon les attributs de relation définis dans les dataclasses correspondantes.
 
 ## Remote datastore
 
@@ -202,12 +202,12 @@ Une base de données 4D ouverte sur 4D ou 4D Server (disponible via HTTP) et exp
 
 ## Ressource
 
-An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Les ressources disponibles sont : le datastore, une dataclass, un attribut de dataclass, une fonction de modèle de données ORDA, ou une méthode projet.
+Un élément ORDA sur lequel toute [action](#action) peut être autorisée ou non en fonction d'un [privilège](#privilege). Les ressources disponibles sont : le datastore, une dataclass, un attribut de dataclass, une fonction de modèle de données ORDA, ou une méthode projet.
 
 
 ## Rôle
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. Il peut contenir un ou plusieurs privilèges.
+Un rôle est un [privilège](#privilege) publié destiné à être utilisé par un administrateur. Il peut contenir un ou plusieurs privilèges.
 
 
 ## Session

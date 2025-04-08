@@ -1,7 +1,10 @@
 ---
-id: Math
+id: Math_theme
 title: Math
+slug: /commands/theme/Math
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Abs.Syntax -->](../../commands-legacy/abs.md)<br/>|

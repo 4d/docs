@@ -7,11 +7,11 @@ title: Área Web
 
 ## Acessar métodos 4D
 
-Você pode chamar métodos 4D a partir do código JavaScript executado em uma área Web e obter valores em retorno. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
+You can call 4D methods and class functions from the JavaScript code executed in a Web area and get values in return. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
 
 > Esta propriedade só está disponível se a área Web [usar o mecanismo de renderização Web incorporado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object).
+When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods and functions](webArea_overview.md#4d-object).
 
 #### Gramática JSON
 
@@ -54,12 +54,12 @@ Esquematicamente, essa variável funciona como a área de endereço de um navega
 
 ### Variável URL e comando WA OPEN URL
 
-La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html). No entanto, há que assinalar as seguintes diferenças:
+The URL variable produces the same effects as the [WA OPEN URL](../commands-legacy/wa-open-url.md) command. No entanto, há que assinalar as seguintes diferenças:
 
-- Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). O comando [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) aceita ambas as notações.
-- Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. O comando [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) gera um erro nesse caso.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). O comando [WA OPEN URL](../commands-legacy/wa-open-url.md) aceita ambas as notações.
+- Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. O comando [WA OPEN URL](../commands-legacy/wa-open-url.md) gera um erro nesse caso.
+- Se a variável URL não contiver um protocolo (http, mailto, arquivo, etc.), a área Web adicionará "http://", o que não é o caso do comando [WA OPEN URL](../commands-legacy/wa-open-url.md).
+- Quando a área Web não for exibida no formulário (quando estiver localizada em outra página do formulário), executando o comando [WA OPEN URL](../commands-legacy/wa-open-url.md) não tem efeito, Enquanto atribuir um valor à variável URL pode ser usado para atualizar a URL atual.
 
 #### Gramática JSON
 
@@ -85,8 +85,8 @@ Essa opção permite escolher entre dois mecanismos de renderização para a ár
 
 The Blink engine has the following limitations:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) or one assignment to the URL variable associated to the area.
+- [CONTEÚDO DA SEGURANÇA PÁ](../commands-legacy/wa-set-page-content.md): o uso deste comando requer que pelo menos uma página já esteja carregada na área (por meio de uma chamada para [`URL ABERTO ABERTO`](../commands-legacy/wa-open-url.md) ou uma atribuição à variável de URL associada à área).
+- Quando os drops de URL forem ativados pelo seletor `WA enable URL drop` do comando [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md), o primeiro drop deve ser precedido por pelo menos uma chamada a [WA OPEN URL](../commands-legacy/wa-open-url.md) ou uma atribuição à variável de URL associada à área.
 
 :::note
 

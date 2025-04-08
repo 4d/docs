@@ -17,7 +17,7 @@ Ce bouton permet de lancer directement l’opération de vérification, sans int
 
 Tous les enregistrements et tous les index de la base sont vérifiés. Si vous souhaitez disposer d’options supplémentaires, vous devez utiliser le [Centre de sécurité et de maintenance (CSM)](MSC/overview.md).
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs) folder. Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
+A l’issue de la vérification, un fichier de compte-rendu est généré au format XML sur le serveur, dans le dossier [maintenance Logs](../Project/architecture.md#logs). Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
 
 ### Compacter les données...
 
@@ -31,7 +31,7 @@ Une fois le compactage terminé, 4D Server relance automatiquement l'application
 
 > Si la demande de compactage a été effectuée depuis un client 4D distant, ce poste est automatiquement reconnecté par 4D Server.
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](../Project/architecture.md#logs) folder. Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
+A l’issue de la vérification, un fichier de compte-rendu est généré au format XML sur le serveur, dans le dossier [maintenance Logs](../Project/architecture.md#logs). Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
 
 ## Durée de fonctionnement
 
@@ -60,7 +60,7 @@ Cette zone indique la durée d’enregistrement des fichiers d'historique (lorsq
 
 Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
 
-### Start/Stop Request and Debug Logs
+### Démarrer/Arrêter les journaux des requêtes et de débogage
 
 Le bouton **Démarrer les journaux des requêtes et de débogage** permet de démarrer les fichiers de compte-rendu. Ce mode pouvant dégrader sensiblement les performances du serveur, il est à réserver à la phase de mise au point de l’application.
 
@@ -72,14 +72,14 @@ Une fois l’enregistrement des requêtes activé, le libellé du bouton devient
 
 Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un client distant) permet d’ouvrir une fenêtre système affichant le fichier journal.
 
-### Load logs configuration file
+### Charger un fichier de configuration des logs
 
-Ce bouton vous permet de charger un [fichier de configuration de log](Debugging/debugLogFiles.md#using-a-log-configuration-file) (fichier `.json`) pour un serveur spécifique. Such a file can be provided by 4D technical services to monitor and study specific cases.
+Ce bouton vous permet de charger un [fichier de configuration de log](Debugging/debugLogFiles.md#using-a-log-configuration-file) (fichier `.json`) pour un serveur spécifique. Un tel fichier peut être fourni par les services techniques de 4D pour surveiller et étudier des cas particuliers.
 
-### Pause logging
+### Mettre en pause l'enregistrement des logs
 
-This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
+Ce bouton suspend toutes les opérations de log actuellement lancées sur le serveur. Cette fonctionnalité peut être utile pour alléger temporairement les tâches du serveur.
 
 When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 
-> You can pause and resume logging using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command.
+> You can pause and resume logging using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.

@@ -1,7 +1,10 @@
 ---
-id: Variables
+id: Variables_theme
 title: Variables
+slug: /commands/theme/Variables
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.CLEAR VARIABLE.Syntax -->](../../commands-legacy/clear-variable.md)<br/>|

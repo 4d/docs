@@ -175,7 +175,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 :::info
 
-[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/ja/page1389.html) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](https://doc.4d.com/4dv20/help/command/ja/page317.html) は使えません)。
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](../commands-legacy/call-worker.md), NOT [`New process`](../commands-legacy/new-process.md).
 
 :::
 

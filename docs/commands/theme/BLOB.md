@@ -1,7 +1,10 @@
 ---
-id: BLOB
+id: BLOB_theme
 title: BLOB
+slug: /commands/theme/BLOB
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.BLOB PROPERTIES.Syntax -->](../../commands-legacy/blob-properties.md)<br/>|

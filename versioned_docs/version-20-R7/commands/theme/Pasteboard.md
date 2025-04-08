@@ -1,7 +1,10 @@
 ---
-id: Pasteboard
+id: Pasteboard_theme
 title: Pasteboard
+slug: /commands/theme/Pasteboard
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.APPEND DATA TO PASTEBOARD.Syntax -->](../../commands-legacy/append-data-to-pasteboard.md)<br/>|

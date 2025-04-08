@@ -5,8 +5,8 @@ slug: /commands/get-last-update-log-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get last update log path.Syntax-->**Get last update log path** : Text<!-- END REF-->
-<!--REF #_command_.Get last update log path.Params-->
+<!--REF #_command_.Last update log path.Syntax-->**Get last update log path** : Text<!-- END REF-->
+<!--REF #_command_.Last update log path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 戻り値 | Text | &#8592; | 直近のアップデートログへのパス名 |

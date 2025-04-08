@@ -37,17 +37,27 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 
 :::
 
-### $4dオブジェクトの使用
+## $4d Object
 
-[4D の埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) は、 $4d という JavaScriptオブジェクトをエリアに提供します。 $4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
+The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 
-たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
+For example, calling the `HelloWorld` method in 4D:
 
 ```js
 $4d.HelloWorld();
 ```
 
-> JavaScript は大文字小文字を区別するため、オブジェクトの名前は **$4d** (dは小文字) であることに注意が必要です。
+> **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
+
+### Controlling $4d Access
+
+With [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+
+To check the currently defined context, use [`WA Get context object`](../commands/wa-get-context-object.md).
+
+For more information, please refer to [`WA SET CONTEXT OBJECT`](../commands/wa-set-context-object.md).
+
+### Calling 4D Methods from JavaScript
 
 4Dメソッドへの呼び出しのシンタックスは以下のようになります:
 
@@ -72,8 +82,8 @@ $4d.4DMethodName(param1,paramN,function(result){})
 `today` メソッドの 4Dコードです:
 
 ```4d
- #DECLARE : Text
- return String(Current date;System date long)
+#DECLARE -> $result : Text
+$result := String(Current date;System date long)
 ```
 
 Webエリアでは、 4Dメソッドは以下のシンタックスで呼び出し可能です:
@@ -105,19 +115,29 @@ $4d.today(function(result)
 
 #### 例題 2
 
-`calcSum` という 4Dプロジェクトメソッドがあり、そのメソッドが引数を受け取り、その合計を返すという場合について考えます:
+Instead of using a standalone method, we can also define a **class** to handle the calculation.
 
-`calcSum` メソッドの4Dコード:
+Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
 
 ```4d
- #DECLARE (... : Real) -> $sum : Real 
-  // 不定数の実数型の引数を受け取り
-  // 実数の結果を返します
- var $i; $n : Integer
- $n:=Count parameters
- For($i;1;$n)
-    $0:=$0+${$i}
- End for
+// SumCalculator user class
+
+Function calcSum(... : Real) -> $sum : Real
+   // receives n Real type parameters
+   // and returns a Real
+  var $i; $n : Integer
+  $n := Count parameters
+
+  For ($i; 1; $n)
+    $sum += ${$i}
+  End for
+```
+
+In another method, we create an instance and assign it to $4d
+
+```4d
+var $myCalculator := cs.SumCalculator.new()
+WA SET CONTEXT OBJECT(*; "myWebArea"; $myCalculator)
 ```
 
 Webエリア内で実行される JavaScript コードです:

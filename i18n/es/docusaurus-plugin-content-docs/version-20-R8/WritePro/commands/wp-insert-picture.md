@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | targetObj      | Object                  | &#8594; | Range or element or 4D Write Pro document                  |
 | picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk |
 | pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
-| mode           | Integer                 | &#8594; | Insertion mode                                             |
+| mode           | Integer                 | &#8594; | Modo de inserción                                          |
 | rangeUpdate    | Integer                 | &#8594; | Range update mode                                          |
 | Resultado      | Object                  | &#8592; | Object referencing the picture                             |
 
@@ -25,13 +25,13 @@ The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary-->
 
 In *targetObj*, you can pass:
 
-- A range
+- Un rango
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
 - A 4D Write Pro document
 
 For the second parameter, you can pass either:
 
-- In *picture*:
+- En *picture*:
  - A picture field or variable
  - A string containing a path to a picture file stored on disk, in the system syntax.
   If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.

@@ -21,7 +21,7 @@ title: アプリケーションビルド
 プロジェクトパッケージをビルドするには次の方法があります:
 
 - [`BUILD APPLICATION`](../commands-legacy/build-application.md) コマンドを使う
-- or the [Build Application dialog](#build-application-dialog).
+- [アプリケーションビルド](#build-application-dialog) ダイアログを使う
 
 :::tip
 
@@ -43,7 +43,7 @@ title: アプリケーションビルド
 
 ### buildApp.4DSettings
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-user).
+アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、`buildApp.4DSettings` という名称のアプリケーションプロジェクトファイルに保存されます。この XML ファイルはプロジェクトの [`Settings` フォルダー](../Project/architecture.md#settings-user) に配置されます。
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じプロジェクト内に他に複数のXML 設定を定義することができ、[`BUILD APPLICATION`](../commands-legacy/build-application.md) コマンドを使用してどれを使用するかを選択することができます。
 
@@ -87,7 +87,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (<strong>注:</strong> バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは4D Server、4D Volume Desktop(組み込みアプリ)、および4D において使用できます。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
-> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#buildapp4dsettings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) manual).
+> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 この標準フォーマットを使用したくない場合、[`buildApp.4DSettings`](#buildapp4dsettings) 内において`UseStandardZipFormat` XML キーを値`False` で追加して下さい(より詳細な情報については、[4D XML キーBuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) マニュアルを参照して下さい)。
 
 #### 関連するフォルダーを含む
 
@@ -97,7 +97,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 ストラクチャーからコンパイル済みコンポーネントをビルドします。
 
-[コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 Once the component has been configured and [installed in another 4D project](../Project/components.md) (the host application project), its functionalities are accessible from the host project.
+[コンポーネント](../Extensions/develop-components.md) は特定の機能を実装した標準の 4D プロジェクトです。 ビルドされたコンポーネントを [他の4Dプロジェクト (ホストアプリケーションプロジェクト) にインストール](../Project/components.md) すると、ホストプロジェクトはその機能を利用できるようになります。
 
 アプリケーションに *MyComponent* という名前をつけていた場合、4D は以下の構造を持 *Components* フォルダを自動的に作成します:
 
@@ -109,7 +109,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 - *MyComponent.4DZ* ファイル - [コンパイルされたストラクチャー](#コンパイル済みストラクチャーをビルド)
 - *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。  コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
-- *Info.plist* ファイル - このファイルはmacOS 用に[公証可能でステープル可能な](#ノータリゼーション (公証) について) コンポーネントをビルドするためには必須です(Windows においては無視されます)。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています: 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています:
+- *Info.plist* ファイル - このファイルはmacOS 用に[公証可能でステープル可能な](#ノータリゼーション (公証) について) コンポーネントをビルドするためには必須です(Windows においては無視されます)。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています: If an *Info.plist* file already [exists at the root of the component](../Extensions/develop-components.md#infoplist) it is merged, otherwise a default file is created. 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています:
  - アプリケーション名用に`CFBundleDisplayName` および `CFBundleName`
  - `NSHumanReadableCopyright` は[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html) 可能です。
  - アプリケーションバージョン用に `CFBundleShortVersionString` および `CFBundleVersion` (x.x.x フォーマット、例: 1.0.5)は、[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html) 可能です。
@@ -127,7 +127,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 この処理はコンパイル済みストラクチャーファイルと**4D Volume Desktop** (4D データベースエンジン)を統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
 - デフォルトのデータファイルを定義することも、ユーザーに [独自のデータファイルを作成して使用](#データファイルの管理) してもらうこともできます。
-- 運用ライセンスを埋め込むか、初回起動時にエンドユーザー自身にライセンスを入力させるかを選択することができます([**ライセンスについて**](#ライセンスについて) の段落を参照して下さい)。
+- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**Deployment Licenses**](../Admin/licenses.md#deployment-licenses) section).
 
 :::note
 
@@ -226,6 +226,12 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 - クライアント側を [ネットワーク越しに自動更新](#サーバーアプリケーション内部のクライアントアプリケーションのコピー) するようにクライアント/サーバーアプリケーションを設定することも可能です。 クライアントアプリケーションは最初のバージョンのみビルドして配布する必要があります。以降のアップデートは、自動アップデート機構を利用することで管理します。
 - また、ランゲージコマンド ([SET UPDATE FOLDER](../commands-legacy/set-update-folder.md) および [RESTART 4D](../commands-legacy/restart-4d.md)) を使用して、サーバーアプリケーションの更新を自動化することも可能です。
 
+:::note
+
+If you want client/server connections to be made in [TLS](../Admin/tls.md), simply check the [appropriate setting](../settings/client-server.md#encrypt-client-server-communications). If you wish to use a custom certificate, please consider using the [`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.en.html).
+
+:::
+
 ### サーバーアプリケーションをビルド
 
 アプリケーションのサーバー部分をビルドするにはこのオプションを選択します。 ビルドに使用する 4D Server アプリケーションの場所を選択する必要があります。 この 4D Server はビルドをおこなうプラットフォームに対応していなければなりません (たとえば、Windows 用のサーバーアプリケーションをビルドするには Windows 上でビルドを実行する必要があり、Windows 版の 4D Server アプリケーションを指定する必要があります)。
@@ -242,11 +248,11 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 **注記**: ここでは、以下の用語を使用します:
 
-| 名称                  | 定義                                                                                                                                                                                            |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| プロジェクトのディレクトリファイル   | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project         |
-| アプリケーションのディレクトリファイル | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the built 4D Server |
-| データのディレクトリファイル      | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings-user-data)                    |
+| 名称                  | 定義                                                                                                                                                                              |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| プロジェクトのディレクトリファイル   | プロジェクトの [Settings フォルダー](../Project/architecture.md#settings-user) に置かれた [directory.json](../Users/handling_users_groups.md#directoryjson-file) ファイル            |
+| アプリケーションのディレクトリファイル | ビルドされた 4D Server の [Settings フォルダー](../Project/architecture.md#settings-user) に置かれた [directory.json](../Users/handling_users_groups.md#directoryjson-file) ファイル |
+| データのディレクトリファイル      | [Data ＞ Settings フォルダー](../Project/architecture.md#settings-user-data) に置かれた [directory.json](../Users/handling_users_groups.md#directoryjson-ファイル) ファイル        |
 
 このオプションをチェックすると、ビルド時にプロジェクトのディレクトリファイルがアプリケーションのディレクトリファイルとしてコピーされます。
 
@@ -496,32 +502,14 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-- [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したいライセンスを指定します。
+- designate the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
 
-### ライセンスについて
-
-ビルドされた4D アプリケーションには運用ライセンスが必要となります。 これは開発者によってビルドの段階で埋め込むか、以下の表で説明されているように、初回起動時にエンドユーザーによって入力される必要があります:
-
-| 運用ライセンス                | 説明                                              | 入力する場所                                                               |
-| ---------------------- | ----------------------------------------------- | -------------------------------------------------------------------- |
-| *4D OEM Desktop*       | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                  |
-| *4D Unlimited Desktop* | **販売終了** - 埋め込まれたカスタムのライセンス                     | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                  |
-| *4D Desktop*           | ユーザーごとのライセンスで、スタンドアロンの4D アプリケーションを使用するのに必要です。   | ユーザーマシン上での[初回起動時](../Admin/licenses.md#初回のアクティベーション) に表示されるダイアログボックス |
-| *4D Server OEM*        | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                  |
-| *4D Server*            | 各ユーザーごとに必要なライセンスで、4D Server とクライアントを使用するのに必要です。 | ユーザーマシン上での[初回起動時](../Admin/licenses.md#初回のアクティベーション) に表示されるダイアログボックス |
-
-:::note
-
-この他に [評価版アプリケーション](#評価版アプリケーションをビルド) をビルドすることもできます。この場合、起動時に期間限定の配布ライセンスが自動的にユーザーに提供されます。
-
-:::
-
 ### ライセンスリスト
 
-このタブには[評価版アプリケーションをビルドする](#評価版アプリケーションをビルドする) オプションが表示される他、アプリケーション(スタンドアロン版またはクライアントサーバー版)に[埋め込み可能な配布ライセンス](#ライセンスについて) としてい利用可能なライセンス一覧が表示されます。 デフォルトでリストは空です。
+This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](../Admin/licenses.md#deployment-licenses) into your application (stand-alone or client-server). デフォルトでリストは空です。
 
 このタブを使用して以下のようなものをビルドできます:
 
@@ -555,13 +543,13 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 埋め込み配布ライセンス抜きのアプリケーションをビルドするには、ライセンスの一覧リストを空にし、"評価版アプリケーションをビルドする"が**チェックされていない**ことを確認して下さい。
 
-この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細については、[**ライセンスについて**](#ライセンスについて) の段落を参照ください。
+この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 For more information, see the [**Deployment licenses**](../Admin/licenses.md#deployment-licenses) section.
 
 #### 埋め込みライセンス付きのアプリケーションをビルドする
 
 このオプションを使用すると、必要なライセンスがすでに埋め込まれている、すぐに使用可能なアプリケーションをビルドすることができます。
 
-配布ライセンスを格納しているファイルを指定する必要があります。 これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
+You must designate the files that contain your [deployment licenses](../Admin/licenses.md#deployment-licenses). これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については [Get 4D folder](../commands-legacy/get-4d-folder.md) コマンドの説明を参照してください。
 
@@ -608,7 +596,7 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 
 Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
-> On Apple Silicon machines, 4D [components](../Project/components.md) need to be actually signed. 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")
+> Apple Silicon マシンでは、4D [コンポーネント](../Project/components.md) は実際に署名されている必要があります。 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")
 
 アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションと互換性のあるアプリケーションやコンポーネントをデフォルトで生成することができます。
 

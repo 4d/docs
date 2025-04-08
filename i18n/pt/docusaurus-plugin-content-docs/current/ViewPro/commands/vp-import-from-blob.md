@@ -44,6 +44,12 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 |           | .errorCode    | integer                  | Código de erro.                                              |
 |           | .errorMessage | text                     | Mensagem de erro.                                            |
 
+:::note
+
+The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+
+::::
+
 ## Exemplo
 
 Você deseja importar para a "ViewProArea" um documento 4D View Pro salvo anteriormente como Blob na primeira entidade da classe de dados Table.

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.QR GET SORTS.Summary-->O comando QR GET SORTS preenche dois arrays<!-- END REF-:  
+<!--REF #_command_.QR GET SORTS.Summary-->O comando QR GET SORTS preenche dois arrays<!-- END REF-->:  
   
 * *aColunas* Este array inclui todas as colunas que tenham um sentido de ordenação.->
 * *aOrdem* Cada elemento deste array contém o sentido de ordenação da coluna correspondente.

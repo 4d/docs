@@ -61,13 +61,13 @@ La création d'une session web pour une requête REST peut nécessiter qu'une li
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
+L'objet `Session` de la session en cours peut ensuite être manipulé via la commande [`Session`](commands/session.md) dans le code de n'importe quel process web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
 :::info
 
-Les process Web ne se terminent généralement pas, ils sont recyclés dans un pool pour des raisons d'optimisation. Lorsqu'un process termine l'exécution d'une requête, il est replacé dans le pool et rendu disponible pour la requête suivante. Puisqu'un process web peut être réutilisé par n'importe quelle session, les [variables process](Concepts/variables.md#process-variables) doivent être effacées par votre code à la fin de son exécution (en utilisant [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/fe/page89.html) par exemple). Ce nettoyage est nécessaire pour toute information liée au process, comme une référence à un fichier ouvert. C'est la raison pour laquelle **il est recommandé** d'utiliser l'objet [Session](API/SessionClass.md) lorsque vous souhaitez conserver les informations relatives à la session.
+Les process Web ne se terminent généralement pas, ils sont recyclés dans un pool pour des raisons d'optimisation. Lorsqu'un process termine l'exécution d'une requête, il est replacé dans le pool et rendu disponible pour la requête suivante. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) for example). Ce nettoyage est nécessaire pour toute information liée au process, comme une référence à un fichier ouvert. C'est la raison pour laquelle **il est recommandé** d'utiliser l'objet [Session](API/SessionClass.md) lorsque vous souhaitez conserver les informations relatives à la session.
 
 :::
 
@@ -86,7 +86,7 @@ La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signi
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command.
 
-When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
+Lorsqu'une session web est fermée, si la commande [`Session`](commands/session.md) est appelée par la suite :
 
 - l'objet `Session` ne contient pas de privilèges (c'est une session Guest)
 - la propriété [`storage`](API/SessionClass.md#storage) est vide
@@ -250,10 +250,10 @@ In both cases, you need to extract the token from the custom parameter and to ca
 
 The OTP token is considered invalid if:
 
-- the session token has already been used,
-- the session token has expired,
-- the session token does not exist,
-- the original session itself has expired.
+- le token de session a déjà été utilisé,
+- le token de session a expiré,
+- le token de session n'existe pas,
+- la session d'origine elle-même a expiré.
 
 In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session.
 

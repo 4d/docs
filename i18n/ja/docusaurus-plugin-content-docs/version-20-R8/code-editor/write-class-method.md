@@ -698,7 +698,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 "Macros v2" フォルダーは以下の場所に配置できます:
 
 - マシンのアクティブ4Dフォルダー。 この場合、マクロはすべてのデータベースで共有されます。
-  **注:** アクティブ4Dフォルダーの位置は OS により異なります。 詳細については、*4Dランゲージリファレンス* マニュアルの [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.ja.html) コマンドの説明を参照ください。
+  **注:** アクティブ4Dフォルダーの位置は OS により異なります。 For more information, refer to the description of the [Get 4D folder](../commands-legacy/get-4d-folder.md) command in the 4D *Language Reference* manual.
 - データベースストラクチャーファイルと同階層。 マクロは、このストラクチャーにのみ読み込まれます。
 - コンポーネントの場合: データベースの **Components** フォルダーと同階層。 この場合マクロは、コンポーネントがインストールされている場合のみ利用できます。
 
@@ -834,7 +834,7 @@ XML仕様に準拠し、いくつかのタグは属性を含むことがあり�
 
 #### method の選択テキスト変数
 
-選択されたテキストは [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page997.html) と [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page998.html) コマンドを使用して管理することが推奨されます。 これらのコマンドを使用すると、ホストプロジェクトとコンポーネント間でテキストを相互に交換することができ、マクロの管理専用のコンポーネントを作成することができます。 マクロでこのモードを有効にするには、macro 要素内で version 属性に値 2 を指定しなければなりません。 この場合、4D は旧式の _textSel, _textReplace 等の定義済み変数を管理しなくなり、[GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page997.html) と [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page998.html) が利用可能になります。 属性は以下のように定義します:
+It is recommended to manage text selections using the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands. これらのコマンドを使用すると、ホストプロジェクトとコンポーネント間でテキストを相互に交換することができ、マクロの管理専用のコンポーネントを作成することができます。 マクロでこのモードを有効にするには、macro 要素内で version 属性に値 2 を指定しなければなりません。 In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands are used. 属性は以下のように定義します:
 
 `<macro name="MyMacro" version="2">`<br/>
 `--- マクロテキスト ---`<br/>

@@ -36,7 +36,7 @@ title: データソース
 
 選択リストをフォームオブジェクトに関連づけます。 指定できるのは選択リスト名 (リストの参照) またはデフォルト値のコレクションです。
 
-選択リストをオブジェクトに紐づけるには、[OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/ja/page237.html) または [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/ja/page1266.html) コマンドを使ってもおこなえます。
+You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) or [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) commands.
 
 #### JSON 文法
 

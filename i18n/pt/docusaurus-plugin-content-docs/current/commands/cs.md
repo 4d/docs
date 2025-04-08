@@ -12,9 +12,9 @@ A palavra-chave **cs** está descrita na [**Página Conceito para Classes**](../
 
 ## Propriedades
 
-|                |                                 |
-| -------------- | ------------------------------- |
-| Command number | 1710                            |
-| Thread safe    | &amp;check; |
+|                |                             |
+| -------------- | --------------------------- |
+| Command number | 1710                        |
+| Thread safe    | &check; |
 
 

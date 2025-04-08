@@ -39,7 +39,7 @@ A atividade do processo é a percentagem de tempo que 4D Server dedicou a este p
     - Processo usuário - nome do usuário 4D,
     - Processo web - caminho URL,
 - Nome do processo,
-- Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). O número do processo é o número atribuído no servidor. No caso de um processo global, este número pode ser diferente do atribuído na máquina cliente.
+- Número do processo (como retornado pelo comando [`New process`](../commands-legacy/new-process.md), por exemplo). O número do processo é o número atribuído no servidor. No caso de um processo global, este número pode ser diferente do atribuído na máquina cliente.
 - Estado atual do processo,
 - Tempo de execução (em segundos) do processo desde a sua criação,
 - Percentagem de tempo que 4D Server dedicou a este processo (rácio).
@@ -85,7 +85,7 @@ A página também tem cinco botões de controle que atuam nos processos selecion
 
 - **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Quando clicar neste botão, aparece uma caixa de diálogo de aviso para que se possa confirmar ou cancelar a operação.
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
+> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id.md) command.
 
 - **Pause Process**: can be used to pause the selected process(es).
 - **Activar proceso**: permite reactivar los procesos seleccionados. Os processos devem ter sido colocados em pausa anteriormente (utilizando o botão acima ou por programação); caso contrário, este botão não tem qualquer efeito.

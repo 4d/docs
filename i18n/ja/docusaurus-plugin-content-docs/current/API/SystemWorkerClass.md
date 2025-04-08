@@ -94,7 +94,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | onTerminate      | Formula | undefined | 外部プロセスが終了されたときのコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                  |
 | timeout          | Number  | undefined | プロセスが生きている場合、キルされるまでの秒数。                                                                                                                                                                        |
 | dataType         | Text    | "text"    | レスポンス本文のデータ型。 可能な値: "text" (デフォルト), "blob"。                                                                                                                  |
-| encoding         | Text    | "UTF-8"   | `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 利用可能な値については、[`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/ja/page1011.html) コマンドの説明を参照ください。                                           |
+| encoding         | Text    | "UTF-8"   | `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 For the list of available values, see the [`CONVERT FROM TEXT`](../commands-legacy/convert-from-text.md) command description                         |
 | variables        | Object  |           | システムワーカー用のカスタム環境変数を設定します。 シンタックス: `variables.key=value` (`key` は変数名、`value` はその値)。 値は、可能な限り文字列に変換されます。 値に '=' を含めることはできません。 定義されていない場合、システムワーカーは 4D環境を継承します。 |
 | currentDirectory | Folder  |           | プロセスが実行される作業ディレクトリ                                                                                                                                                                              |
 | hideWindow       | Boolean | true      | (Windows) アプリケーションウィンドウを隠す (可能な場合)、または Windowsコンソールを隠す                                                                                                    |
@@ -116,7 +116,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 :::info
 
-[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/ja/page1389.html) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](https://doc.4d.com/4dv20/help/command/ja/page317.html) は使えません)。
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](../commands-legacy/call-worker.md), NOT [`New process`](../commands-legacy/new-process.md).
 
 :::
 
@@ -318,7 +318,7 @@ $output:=$worker.response
 
 #### 説明
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+`.commandLine` プロパティは、<!-- REF #SystemWorkerClass.commandLine.Summary -->[`new()`](#4dsystemworkernew) 関数に引数として渡したコマンドライン<!-- END REF -->を格納します。
 
 このプロパティは **読み取り専用** です。
 

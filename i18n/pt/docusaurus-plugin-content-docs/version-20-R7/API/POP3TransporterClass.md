@@ -215,7 +215,7 @@ O método retorna Null se:
 - *msgNumber* determina uma mensagem não existente,
 - a mensagem foi marcada para exclusão usando [`.delete()`](#delete).
 
-**Objeto devolvido**
+**Returned object**
 
 `.getMail()` retorna um [`objeto email`](EmailObjectClass.md#email-object).
 

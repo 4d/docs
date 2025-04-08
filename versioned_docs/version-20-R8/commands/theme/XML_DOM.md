@@ -1,7 +1,10 @@
 ---
-id: XML_DOM
+id: XML_DOM_theme
 title: XML DOM
+slug: /commands/theme/XML-DOM
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.DOM Append XML child node.Syntax -->](../../commands-legacy/dom-append-xml-child-node.md)<br/>|

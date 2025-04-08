@@ -52,7 +52,7 @@ A associação de uma classe ao formulário oferece os seguintes benefícios:
 
 - Você também pode se beneficiar de [recursos de preenchimento automático](../code-editor/write-class-method.md#autocomplete-functions) no editor de código.
 
-- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form.md). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto *formData* como parâmetro para os comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md) ou [`FORM LOAD`](../commands/form-load.md).
+- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form.md). Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a *formData* object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), [`FORM LOAD`](../commands/form-load.md), and [`PRINT SELECTION`](../commands-legacy/print-selection.md) commands.
 
 :::note
 
@@ -74,7 +74,7 @@ Essa propriedade é o nome do próprio formulário sendo usada para fazer refer�
 
 #### Gramática JSON
 
-O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. See [project architecture](Project/architecture#sources) for more information.
+O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture#sources) para obter mais informações.
 
 ---
 

@@ -17,8 +17,6 @@ displayed_sidebar: docs
 <!--REF #_command_.MAIL New attachment.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
 |file|4D.File|&#8594; |Attachment file|
 |zipFile|4D.ZipFile|&#8594; |Attachment Zipfile|
 |blob|4D.Blob|&#8594; |BLOB containing the attachment|

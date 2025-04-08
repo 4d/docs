@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 In the *form* parameter, you can pass:
 
-- the name of a form, or
+- el nombre de un formulario, o
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
 - an object containing a description of the form.
 
@@ -43,7 +43,7 @@ Sintaxis:
 
 In this case, **Print form** only prints the Detail area (the area between the Header line and the Detail line) of the form.
 
-- **Form area printing**
+- **Impresión de área de formulario**
 
 Sintaxis:
 
@@ -79,7 +79,7 @@ In this case, the command will print the section designated by the *marker*. Pas
 | Form header8  | Integer | 208   |
 | Form header9  | Integer | 209   |
 
-- **Section printing**
+- **Impresión de sección**
 
 Sintaxis:
 
@@ -185,9 +185,9 @@ The code that calls the dialog then prints its body:
 
 ## Propiedades
 
-|                   |                                                                     |
-| ----------------- | ------------------------------------------------------------------- |
-| Número de comando | 5                                                                   |
-| Hilo seguro       | &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 5                           |
+| Hilo seguro       | &cross; |
 
 

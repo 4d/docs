@@ -1,7 +1,10 @@
 ---
-id: PHP
+id: PHP_theme
 title: PHP
+slug: /commands/theme/PHP
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.PHP Execute.Syntax -->](../../commands-legacy/php-execute.md)<br/>|

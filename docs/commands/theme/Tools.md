@@ -1,7 +1,10 @@
 ---
-id: Tools
+id: Tools_theme
 title: Tools
+slug: /commands/theme/Tools
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.ACTIVITY SNAPSHOT.Syntax -->](../../commands-legacy/activity-snapshot.md)<br/>|

@@ -277,7 +277,6 @@ Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
 ## .clearAllRemoteContexts()
 
 <details><summary>Histórico</summary>
@@ -389,7 +388,6 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.flushAndLock().Desc -->
 ## .flushAndLock()
 
 <details><summary>Histórico</summary>
@@ -471,7 +469,6 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 [.locked()](#locked)<br/>[.unlock()](#unlock)
 
 
-<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
 <details><summary>Histórico</summary>
@@ -621,7 +618,7 @@ Em um armazém de dados remoto:
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+
 ## .getRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -745,7 +742,7 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.locked().Desc -->
+
 ## .locked()
 
 <details><summary>Histórico</summary>
@@ -811,7 +808,7 @@ A função também retornará `True` se a datastore foi bloqueada por outra func
 
 A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->estabelece todas as seleções de entidade como editável como padrão nas datastore de aplicação atuais.<!-- END REF --> (incluindo [remote datastores](ORDA/remoteDatastores.md)). Está pensado para ser utilizado uma vez, por exemplo no método base `On Startup`.
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
+Quando nesta função não for chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai", ou de [como foram criadas](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Esta função não modifica as seleções de entidades criadas por [`.copy()`](./EntitySelectionClass.md#copy) ou `OB Copy` quando se utilizar a opção explícita `ck shared`.
 
@@ -937,7 +934,7 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 
 <!-- END REF -->
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+
 ## .setRemoteContextInfo()
 
 <details><summary>Histórico</summary>
@@ -1282,7 +1279,7 @@ Ver exemplos [`.startRequestLog()`](#startrequestlog).
 <!-- END REF -->
 
 
-<!-- REF DataClassClass.unlock().Desc -->
+
 ## .unlock()
 
 <details><summary>Histórico</summary>

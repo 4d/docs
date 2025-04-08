@@ -37,7 +37,7 @@ Las funciones se llaman simplemente en la interfaz ORDA o clase singleton apropi
 
 Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
 
-#### POST request
+#### Petición POST
 
 `/rest/City/getCity`
 
@@ -82,7 +82,7 @@ exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
 
 ### Hilo seguro
 
-All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
+Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/webServerConfig.md#use-preemptive-processes) es ignorado por el Servidor REST).
 
 :::info
 
@@ -98,7 +98,7 @@ Se aplican las siguientes reglas:
 
 - In functions called through POST requests, parameters must be passed **in the body of the POST request**.
 - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Parameters must be enclosed within a collection (JSON format).
+- Los parámetros deben estar incluidos en una colección (formato JSON).
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
 - La selección de entidades y la entidad se pueden pasar como parámetros. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
@@ -110,7 +110,7 @@ Scalar value parameter(s) must simply be enclosed in a collection. Todos los tip
 
 For example, with a  dataclass function `getCities()` receiving text parameters:
 
-#### POST request
+#### Petición POST
 
 `/rest/City/getCities`
 
@@ -134,8 +134,8 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 | __ENTITY    | Boolean                                                     | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY       | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
-- If `__KEY` is not provided, a new entity is created on the server with the given attributes.
-- If `__KEY` is provided, the entity corresponding to `__KEY` is loaded on the server with the given attributes
+- Si no se proporciona `__KEY`, se crea una nueva entidad en el servidor con los atributos dados.
+- Si `__KEY` es suministrado, la entidad correspondiente a `__KEY` se carga en el servidor con los atributos dados
 
 See examples below for creating or updating entities with POST requests.
 See an example of contents downloading using an entity with a GET request.
@@ -623,9 +623,9 @@ $students que incluía al estudiante añadido por el cliente
 $ageAverage:=$students.getAgeAverage()
 ```
 
-## GET request examples
+## Ejemplos de peticiones GET
 
-### Returning a document
+### Devolviendo un documento
 
 You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 

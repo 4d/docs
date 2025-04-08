@@ -1,7 +1,10 @@
 ---
-id: System_Environment
+id: System_Environment_theme
 title: System Environment
+slug: /commands/theme/System-Environment
 ---
+
+
 ||
 |---|
 |[<!-- INCLUDE #_command_.Count screens.Syntax -->](../../commands-legacy/count-screens.md)<br/>|
