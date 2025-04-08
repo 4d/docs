@@ -181,7 +181,7 @@ A pasta Logs contém todos os arquivos de registo utilizados pelo projeto. Os ar
 - depuração de comandos,
 - 4D Pedidos do servidor (gerados em máquinas clientes e no servidor).
 
-> Una carpeta Logs adicional está disponible en la carpeta de preferencias del usuario del sistema (carpeta 4D activa, ver el comando [Get 4D folder](https://doc.4d.com/4dv19R/help/command/en/page485.html)) para los archivos de registro de mantenimiento y e
+> Una carpeta Logs adicional está disponible en la carpeta de preferencias del usuario del sistema (carpeta 4D activa, ver el comando [Get 4D folder](../commands-legacy/get-4d-folder.md)) para los archivos de registro de mantenimiento y e
 
 ## `Settings` (usuario)
 
