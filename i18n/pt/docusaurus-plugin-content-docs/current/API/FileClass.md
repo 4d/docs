@@ -249,9 +249,10 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 19      | Adicionado |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 20 R9   | Read UUIDs in macOS executables |
+| 19      | Adicionado                      |
 
 </details>
 
@@ -259,23 +260,29 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                                                                                                 |
-| ---------- | ------ | --------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Resultados | Object | <- | Conteúdo do arquivo de versão recurso .exe/.dll ou .plist |
+| Parâmetro  | Tipo   |                             | Descrição                    |
+| ---------- | ------ | --------------------------- | ---------------------------- |
+| Resultados | Object | <- | Application file information |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna o conteúdo de um arquivo **.exe**, **.dll** ou **.plist** como um objeto<!-- END REF -->.
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
 
-A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o arquivo não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função devolve um objecto vazio (não é gerado nenhum erro).
+The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
-> A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
+**Returned object with a .plist file (all platforms)**
 
-**Objeto devolvido com um arquivo .exe ou .dll**
+O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é retornado como um objeto JSON e o `.plist array` é retornado como um array JSON.
 
-> A leitura de um .exe ou .dll só é possível no Windows.
+:::note
+
+A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
+
+:::
+
+**Returned object with a .exe or .dll file (Windows only)**
 
 Todos os valores de propriedades são Texto.
 
@@ -290,26 +297,70 @@ Todos os valores de propriedades são Texto.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Objeto devolvido com um arquivo .split**
+**Returned object with a macOS executable file (macOS only)**
 
-O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é retornado como um objeto JSON e o `.plist array` é retornado como um array JSON.
+:::note
 
-#### Exemplo
+A macOS executable file is located within a package (e.g. myApp.app/Contents/MacOS/myApp).
+
+:::
+
+The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
+
+| Propriedade | Tipo   | Descrição                                                                          |
+| ----------- | ------ | ---------------------------------------------------------------------------------- |
+| name        | Text   | Name of architecture ("arm64" or "x86_64") |
+| type        | Number | Numerical identifier of the architecture                                           |
+| uuid        | Text   | Textual representation of the executable uuid                                      |
+
+#### Exemplo 1
 
 ```4d
- // exibir informações de direitos autorais do arquivo .exe do aplicativo (Windows)
-var $exeFile : 4D.File
-var $info : Object
-$exeFile:=File(Application file; fk platform path)
-$info:=$exeFile.getAppInfo()
-ALERT($info.LegalCopyright)
-
-  // exibe informações de copyright de um info.plist (qualquer plataforma)
+  // display copyright info of an info.plist (any platform)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=$infoPlistFile.getAppInfo()
 ALERT($info.Copyright)
+```
+
+#### Exemplo 2
+
+```4d
+ // display copyright info of application .exe file (windows)
+var $exeFile : 4D.File
+var $info : Object
+$exeFile:=File(Application file; fk platform path)
+$info:=$exeFile.getAppInfo()
+ALERT($info.LegalCopyright)
+```
+
+#### Exemplo 3
+
+```4d
+ // Get uuids of an application (macOS)
+var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
+var $info:=$app.getAppInfo()
+```
+
+Result in *$info*:
+
+```json
+{
+  "archs":
+  [
+      {
+        "name":"x86_64",
+        "type":16777223,
+        "uuid":"3840983CDA32392DA4D1D32F08AB3212"
+      },
+      {
+        "name":"arm64",
+        "type":16777228,
+        "uuid":"E49F6BA275B931DDA183C0B0CDF0ADAF"
+      }
+  ]
+}
 ```
 
 #### Veja também
@@ -517,10 +568,11 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <details><summary>História</summary>
 
-| Release | Mudanças           |
-| ------- | ------------------ |
-| 20      | Suporte de WinIcon |
-| 19      | Adicionado         |
+| Release | Mudanças                        |
+| ------- | ------------------------------- |
+| 20 R9   | Read UUIDs in macOS executables |
+| 20      | Suporte de WinIcon              |
+| 19      | Adicionado                      |
 
 </details>
 
@@ -528,23 +580,37 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                                                                                                             |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll |
+| Parâmetro | Tipo   |    | Descrição                                              |
+| --------- | ------ | -- | ------------------------------------------------------ |
+| info      | Object | -> | Properties to write in an application file information |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como o conteúdo da informação de um arquivo **.exe**, **.dll** ou **.plist** <!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
 
-A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o ficheiro não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função não faz nada (não é gerado qualquer erro).
+The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
 
-> A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
+***info* parameter object with a .plist file (all platforms)**
 
-\***Parâmetro *info* com um arquivo .exe ou .dll**
+:::note
 
-> A escrita de um arquivo .exe ou .dll só é possível no Windows.
+A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
+
+:::
+
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
+
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Outras chaves existentes no arquivo .plist são deixadas intocadas.
+
+:::note
+
+Para definir um valor de tipo de data, o formato a utilizar é uma string de carimbo temporal json formada em ISO UTC sem milissegundos ("2003-02-01T01:02:03Z") como no editor plist de Xcode.
+
+:::
+
+***info* parameter object with a .exe or .dll file (Windows only)**
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
@@ -564,15 +630,32 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-\***Parâmetro *info* com um arquivo .plist**
+***info* parameter object with a macOS executable file (macOS only)**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
+*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Outras chaves existentes no arquivo .plist são deixadas intocadas.
+Every object in the *info*.archs collection must contain the following properties:
 
-> Para definir um valor de tipo de data, o formato a utilizar é uma string de carimbo temporal json formada em ISO UTC sem milissegundos ("2003-02-01T01:02:03Z") como no editor plist de Xcode.
+| Propriedade | Tipo   | Descrição                                          |
+| ----------- | ------ | -------------------------------------------------- |
+| type        | Number | Numerical identifier of the architecture to modify |
+| uuid        | Text   | Textual representation of the new executable uuid  |
 
-#### Exemplo
+#### Exemplo 1
+
+```4d
+  // set some keys in an info.plist file (all platforms)
+var $infoPlistFile : 4D. File
+var $info : Object
+$infoPlistFile:=File("/RESOURCES/info.plist")
+$info:=New object
+$info. Copyright:="Copyright 4D 2021" //text
+$info. ProductVersion:=12 //integer
+$info. ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
+$infoPlistFile.setAppInfo($info)
+```
+
+#### Exemplo 2
 
 ```4d
   // set copyright and version of a .exe file (Windows)
@@ -585,16 +668,22 @@ $info. ProductVersion:="1.0.0"
 $exeFile.setAppInfo($info)
 ```
 
+#### Exemplo 3
+
 ```4d
-  // set some keys in an info.plist file (all platforms)
-var $infoPlistFile : 4D. File
-var $info : Object
-$infoPlistFile:=File("/RESOURCES/info.plist")
-$info:=New object
-$info. Copyright:="Copyright 4D 2021" //text
-$info. ProductVersion:=12 //integer
-$info. ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
-$infoPlistFile.setAppInfo($info)
+// regenerate uuids of an application (macOS)
+
+// read myApp uuids 
+var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
+var $info:=$app.getAppInfo()
+
+// regenerate uuids for all architectures
+For each ($i; $info.archs)
+	$i.uuid:=Generate UUID
+End for each 
+
+// update the app with the new uuids
+$app.setAppInfo($info)
 ```
 
 #### Veja também
