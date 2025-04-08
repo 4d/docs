@@ -16,39 +16,39 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                     |
-| ---------- | ------- | :-------------------------: | ----------------------------- |
-| sessionID  | Integer | &#8594; | ID da sessão                  |
-| Resultados | Object  | &#8592; | Information about the session |
+| Parâmetro  | Tipo    |                             | Descrição                  |
+| ---------- | ------- | :-------------------------: | -------------------------- |
+| sessionID  | Integer | &#8594; | ID da sessão               |
+| Resultados | Object  | &#8592; | Informações sobre a sessão |
 
 <!-- END REF -->
 
 ## Descrição
 
-The `Session info` command <!-- REF #_command_.Session info.Summary -->returns an object describing the session whose ID you pass in the *sessionID* parameter.<!-- END REF -->. If you pass an invalid *sessionID*, the command returns a null object.
+O comando `Session info` <!-- REF #_command_.Session info.Summary -->retorna um objeto que descreve o ID da sessão no parâmetro *sessionID*.<!-- END REF -->. Se você passar um *sessionID* inválido, o comando retorna um objeto nulo.
 
 O objeto retornado contém as propriedades abaixo:
 
-| Nome da propriedade | Tipo                                    | Descrição                                                                                          |
-| ------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| type                | Text (enum)          | Session type. Possible values: "remote", "storedProcedure", "rest" |
-| userName            | Text                                    | Nome de usuario                                                                                    |
-| machineName         | Text                                    | Name of the remote machine                                                                         |
-| systemUserName      | Text                                    | Name of the system session opened on the remote machine                                            |
-| IPAddress           | Text                                    | Endereço IP da máquina remota                                                                      |
-| hostType            | Text (enum)          | Tipo de host. Possible values: "windows", "mac", "browser"         |
-| creationDateTime    | Text (Date ISO 8601) | Date and time of connection of the remote machine                                                  |
-| state               | Text (enum)          | Session state. Possible values: "active", "postponed", "sleeping"  |
-| ID                  | Text                                    | Session UUID                                                                                       |
-| persistentID        | Text                                    | ID persistente da sessão                                                                           |
+| Nome da propriedade | Tipo                                    | Descrição                                                                                    |
+| ------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| type                | Text (enum)          | Tipo de sessão Valores possíveis: "remote", "storedProcedure", "rest"        |
+| userName            | Text                                    | Nome de usuario                                                                              |
+| machineName         | Text                                    | Nome da máquina remota                                                                       |
+| systemUserName      | Text                                    | Nome da sessão do sistema aberta na máquina remota                                           |
+| IPAddress           | Text                                    | Endereço IP da máquina remota                                                                |
+| hostType            | Text (enum)          | Tipo de host. Valores possíveis: "windows", "mac", "browser" |
+| creationDateTime    | Text (Date ISO 8601) | Data e hora da conexão da máquina remota                                                     |
+| state               | Text (enum)          | Estado da sessão Valores possíveis: "active", "postponed", "sleeping"        |
+| ID                  | Text                                    | UUID da sessão                                                                               |
+| persistentID        | Text                                    | ID persistente da sessão                                                                     |
 
 :::note
 
-Este comando retorna a propriedade [`.info`](../API/SessionClass.md#info) da sessão *sessionID*. To get information about the current session, you can directly call `Session.info`.
+Este comando retorna a propriedade [`.info`](../API/SessionClass.md#info) da sessão *sessionID*. Para obter informações sobre a sessão atual, você pode chamar diretamente `Session.info`.
 
 :::
 
-Here is an example of output object:
+Aqui está um exemplo de objeto de saída:
 
 ```json
 
