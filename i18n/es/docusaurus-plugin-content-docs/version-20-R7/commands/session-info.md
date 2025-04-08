@@ -29,18 +29,18 @@ El comando `Session info` <!-- REF #_command_.Session info.Summary -->devuelve u
 
 El objeto devuelto contiene las siguientes propiedades:
 
-| Nombre de propiedad | Tipo                                    | Descripción                                                                                          |
-| ------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| type                | Text (enum)          | Tipo de sesión. Possible values: "remote", "storedProcedure", "rest" |
-| userName            | Text                                    | Nombre de usuario                                                                                    |
-| machineName         | Text                                    | Name of the remote machine                                                                           |
-| systemUserName      | Text                                    | Name of the system session opened on the remote machine                                              |
-| IPAddress           | Text                                    | Dirección IP de la máquina remota                                                                    |
-| hostType            | Text (enum)          | Tipo de host. Possible values: "windows", "mac", "browser"           |
-| creationDateTime    | Text (Date ISO 8601) | Date and time of connection of the remote machine                                                    |
-| state               | Text (enum)          | Session state. Possible values: "active", "postponed", "sleeping"    |
-| ID                  | Text                                    | UUID de la sesión                                                                                    |
-| persistentID        | Text                                    | ID persistente de la sesión                                                                          |
+| Nombre de propiedad | Tipo                                    | Descripción                                                                                             |
+| ------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| type                | Text (enum)          | Tipo de sesión. Possible values: "remote", "storedProcedure", "rest"    |
+| userName            | Text                                    | Nombre de usuario                                                                                       |
+| machineName         | Text                                    | Name of the remote machine                                                                              |
+| systemUserName      | Text                                    | Name of the system session opened on the remote machine                                                 |
+| IPAddress           | Text                                    | Dirección IP de la máquina remota                                                                       |
+| hostType            | Text (enum)          | Tipo de host. Possible values: "windows", "mac", "browser"              |
+| creationDateTime    | Text (Date ISO 8601) | Date and time of connection of the remote machine                                                       |
+| state               | Text (enum)          | Estado de la sesión. Possible values: "active", "postponed", "sleeping" |
+| ID                  | Text                                    | UUID de la sesión                                                                                       |
+| persistentID        | Text                                    | ID persistente de la sesión                                                                             |
 
 :::note
 
