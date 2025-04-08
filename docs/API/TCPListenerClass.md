@@ -32,57 +32,21 @@ Function terminate()
 	
 	This.listener.terminate()
 	
-Function onConnection($connection : 4D.TCPListener; $event : 4D.TCPEvent)->$result
+Function onConnection($listener : 4D.TCPListener; $event : 4D.TCPEvent)->$result
     //when connected, start a server to handle the communication
-	$result:=cs.HouseDeviceServerConnection.new(This)
+	If($event.address # "192.168.@") //in some cases you can reject the connection
+		$result:=Null
+	Else
+		$result:=cs.myTCPConnection.new(This)
+	End if
 	
-Function onError($connection : 4D.TCPListener; $event : 4D.TCPEvent)
+Function onError($listener : 4D.TCPListener; $event : 4D.TCPEvent)
 	
-Function onTerminate($connection : 4D.TCPListener; $event : 4D.TCPEvent)
+Function onTerminate($listener : 4D.TCPListener; $event : 4D.TCPEvent)
 
 ```
+Lien vers exemple TCPConnection 
 
-The `HouseDeviceServerConnection` user class handles TCP connection:
-
-```4d
-property listener : cs.HouseDeviceServerConnection
-
-Class constructor($server)
-	
-	This.listener:=$server
-	
-	//Callback called when the connection is successfully established
-Function onConnection($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
-	
-	//Callback called when the connection is properly closed
-Function onShutdown($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
-	
-	//Callback called when receiving data. The simple servers always send 
-    //a sentence to show to the user
-Function onData($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
-	
-	$text:=BLOB to text($event.data; UTF8 text without length)
-	
-	//Warning: There's no guarantee you'll receive all the data you need in a single network packet
-	
-	If ($text="Information")
-		var $blob : Blob
-		TEXT TO BLOB(This.listener.information(); $blob; UTF8 text without length)
-		$connection.send($blob)
-	Else 
-		If ($text="Activate")
-			This.listener.activate()
-		End if 
-	End if 
-	
-	//Callback called when the connection is closed unexpectedly
-Function onError($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
-	
-	//Callback called after onShutdown/onError just before the TCPConnection object is released
-Function onTerminate($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
-
-
-```
 
 ### TCPListener Object
 
