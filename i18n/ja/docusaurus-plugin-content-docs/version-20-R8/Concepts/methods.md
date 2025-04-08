@@ -206,7 +206,7 @@ $o:=$f.message // $o にはフォーミュラオブジェクトが返されま�
 **4D Serverに関する注記**:
 
 - クライアントではなくサーバー上でメソッドを実行したい場合、実行モードメニューで **4D Server** を選択します。 この場合 *ストアドプロシージャー* と呼ばれるプロセスが新規にサーバー上で作成され、メソッドが実行されます。 このオプションを使用して、ネットワークトラフィックを減らしたり、4D Serverの動作を最適化したりできます (特にディスクに格納されたデータにアクセスする場合など)。 すべてのタイプのメソッドをサーバー上や他のクライアント上で実行できますが、ユーザーインターフェースを変更するものは例外です。 この場合、ストアドプロシージャーは効果がありません。
-- 他のクライアントマシン上でメソッドを実行するよう選択することもできます。 他のクライアントマシンは、事前に登録されていなければメニューに表示されません (詳細は [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/ja/page648.html) の説明を参照ください)。
+- 他のクライアントマシン上でメソッドを実行するよう選択することもできます。 Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](../commands-legacy/register-client.md).
 
 デフォルトでは、**ローカル** オプションが選択されています。 4D シングルユーザーの場合、このオプションしか選択できません。
 
