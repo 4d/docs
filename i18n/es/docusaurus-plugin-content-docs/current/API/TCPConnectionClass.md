@@ -25,7 +25,7 @@ TCPConnection objects are released when no more references to them exist in memo
 
 The following examples demonstrate how to use the 4D.TCPConnection and 4D.TCPEvent classes to manage a TCP client connection, handle events, send data, and properly close the connection. Both synchronous and asynchronous examples are provided.
 
-#### Synchronous Example
+#### Ejemplo sincrónico
 
 This example shows how to establish a connection, send data, and shut it down using a simple object for configuration:
 
