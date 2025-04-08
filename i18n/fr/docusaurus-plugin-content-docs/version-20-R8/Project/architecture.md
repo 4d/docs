@@ -181,7 +181,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 - débogage de commandes,
 - Requêtes 4D Server (générées sur les postes clients et sur le serveur).
 
-> Un dossier Logs supplémentaire est disponible dans le dossier des préférences système de l'utilisateur (dossier 4D actif, voir commande [Get 4D folder](https://doc.4d.com/4dv19R/help/command/en/page485.html)) pour les fichiers journaux de maintenance et d
+> Un dossier Logs supplémentaire est disponible dans le dossier des préférences système de l'utilisateur (dossier 4D actif, voir commande [Get 4D folder](../commands-legacy/get-4d-folder.md)) pour les fichiers journaux de maintenance et d
 
 ## `Settings` (user)
 
