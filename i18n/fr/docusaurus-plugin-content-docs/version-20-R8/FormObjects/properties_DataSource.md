@@ -36,7 +36,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 Associe une énumération à un objet. Il peut s'agir d'un nom d'énumération (une référence de liste) ou d'une collection de valeurs par défaut.
 
-Vous pouvez également associer des listes de choix à des objets à l'aide des commandes [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv20/help/command/en/page237.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv20/help/command/en/page1266.htm
+You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) or [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) commands.
 
 #### Grammaire JSON
 
