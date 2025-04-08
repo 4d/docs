@@ -33,7 +33,7 @@ Some 4D licenses have an expiry date, after which they must be renewed. When the
 
 In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box.
 
-## Activating licenses
+## Activación de licencias
 
 Una vez instalados en su disco, debe activar sus productos 4D para poder utilizarlos. Usually, **the activation is automatic** when you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
 
