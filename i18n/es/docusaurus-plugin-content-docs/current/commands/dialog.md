@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | aTable     | Tabla        | &#8594; | Table owning the form or If omitted: default table or use of project form                                                                                                    |
 | form       | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, or an object describing the form |
 | formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                                |
-| \*         | Operador     | &#8594; | Use the same process                                                                                                                                                                         |
+| \*         | Operador     | &#8594; | Usar el mismo proceso                                                                                                                                                                        |
 
 <!-- END REF-->
 
