@@ -36,7 +36,7 @@ If the current form is being displayed or loaded by a call to the [DIALOG](dialo
 
 - the *formData* object passed as parameter to this command, if any,
 - o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
-- or, an empty object.
+- o, un objeto vacío.
 
 ### Subformulario
 
