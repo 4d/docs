@@ -79,11 +79,11 @@ RB-1762-1
 
 *(1)* "June" は "Jun"、”July” は "Jul" に省略されます。
 
-*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/ja/page392.html) コマンドで変更することができます。
+*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 This is by default but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
 
 *(3)* `ISO Date Time` フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
 
-> 表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/ja/page392.html) コマンドで変更することができます。
+> 表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 This is the default setting but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
 
 ### カスタムフォーマット
 
