@@ -1,6 +1,6 @@
 ---
 id: Objects_Language_theme
-title: Objects (Language)
+title: Objetos (Lenguaje)
 slug: /commands/theme/Objects-Language
 ---
 
