@@ -34,14 +34,13 @@ title: ヘルプ
 オブジェクトにヘルプTip を関連付ける方法は他にも 2通りあります:
 
 - データベースストラクチャーレベルにおいて設定することができます (フィールドのみ)。 この場合、当該フィールドが表示されるすべてのフォームにおいて、このヘルプTip が表示されます。 詳細については [フィールドプロパティ](https://doc.4d.com/4Dv18/4D/18/Field-properties.300-4575567.ja.html#3367486) のヘルプTip の章を参照してください)。
-- **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンドを使って、カレントプロセス内で動的に設定します。
+- using the **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** command, for the current process.
 
 同じオブジェクトに対して複数の Tip が関連づけられている場合には、次の優先順位に従って表示されます:
 
 1. ストラクチャーレベル (最低優先度)
 2. フォームエディターレベル
-3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンド
-  (最高優先度)
+3. **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** command (highest priority)
 
 #### 参照
 
