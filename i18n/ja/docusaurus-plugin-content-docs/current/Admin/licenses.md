@@ -3,44 +3,44 @@ id: licenses
 title: ライセンスリスト
 ---
 
-## 4D Licenses Overview
+## 4Dライセンスの概要
 
-To use 4D products and features, you need to install appropriate licenses on your computer. 4D provides two categories of licenses:
+4D の製品と機能を使用するには、コンピューターに適切なライセンスをインストールする必要があります。 4D は2種類のライセンスを提供します:
 
-- **Development licenses**, required for working with 4D and 4D Server IDE.
-- **Deployment licenses**, required for deploying your custom applications built with 4D.
+- **開発ライセンス** は、4D および4D Server のIDE (統合開発環境)で作業するために必要です。
+- **運用ライセンス** は、4D でビルドしたあなたのカスタムアプリケーションを配布・運用するために必要です。
 
-### Development licenses
+### 開発ライセンス
 
-Development licenses are required to access the 4D Design environment and features. For example, *4D Developer Pro* is a single-user development license. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
+開発ライセンスは、4D のデザインモードや機能にアクセスするために必要です。 例えば、*4D Developer Pro* はシングルユーザー向け開発ライセンスです。 登録された開発ライセンスはウェルカムウィザードから[ログイン](GettingStarted/Installation.md) すれば自動的にインストールされます。またそれ以外にも[オンラインアクティベーション](#オンラインアクティベーション) ダイアログボックスを使用して追加することもできます。
 
-### Deployment licenses
+### 運用ライセンス
 
-Deployment licenses can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+運用ライセンスは、以下の表で説明されているように、開発者によって開発段階で埋め込むか、あるいは初回起動時にエンドユーザーによって入力される必要があります:
 
-| 運用ライセンス                  | 説明                                              | 入力する場所                                                                                                                                              |
-| ------------------------ | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *4D OEM Desktop*         | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog                                                                    |
-| *4D Unlimited Desktop*   | **販売終了** - 埋め込まれたカスタムのライセンス                     | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D Desktop*             | ユーザーごとのライセンスで、スタンドアロンの4D アプリケーションを使用するのに必要です。   | [First activation](#first-activation) dialog box on the user's machine                                                                              |
-| *4D Server OEM*          | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses         | [Licenses page][Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D Server*              | 各ユーザーごとに必要なライセンスで、4D Server とクライアントを使用するのに必要です。 | [First activation](#first-activation) dialog box on the user's machine                                                                              |
+| 運用ライセンス                  | 説明                                              | 入力する場所                                                    |
+| ------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
+| *4D OEM Desktop*         | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | ビルドアプリケーションダイアログの[ライセンスページ](../Desktop/building.md#ライセンス) |
+| *4D Unlimited Desktop*   | **販売終了** - 埋め込まれたカスタムのライセンス                     | ビルドアプリケーションダイアログの[ライセンスページ](../Desktop/building.md#ライセンス) |
+| *4D Desktop*             | ユーザーごとのライセンスで、スタンドアロンの4D アプリケーションを使用するのに必要です。   | ユーザーマシン上での[初回起動時](#初回のアクティベーション) のダイアログボックス               |
+| *4D Server OEM*          | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | ビルドアプリケーションダイアログの[ライセンスページ](../Desktop/building.md#ライセンス) |
+| *4D XML Keys Activation* | 4D Server OEM ライセンスの有効化に使用                      | ビルドアプリケーションダイアログの[ライセンスページ](../Desktop/building.md#ライセンス) |
+| *4D Server*              | 各ユーザーごとに必要なライセンスで、4D Server とクライアントを使用するのに必要です。 | ユーザーマシン上での[初回起動時](#初回のアクティベーション) のダイアログボックス               |
 
-### Expiration
+### 期限切れ
 
-Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard.
+一部の4D ライセンスには有効期限があり、それを過ぎた場合には更新する必要があります。 ライセンスのサブスクリプションが4D ストア上で更新されると、ウェルカムウィザードから[ログイン](GettingStarted/Installation.md)すると、お使いの4D アプリケーション内のライセンスは自動的に更新されます。
 
-In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box.
+一部のケースにおいては、ライセンスマネージャダイアログボックス内の[**更新** ボタン](#更新) をクリックする必要があるものもあります。
 
-## Activating licenses
+## ライセンスの有効化
 
-ディスクへのインストール終了後、4D 製品を利用するためにはアクティベーションをおこないます。 Usually, **the activation is automatic** when you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
+ディスクへのインストール終了後、4D 製品を利用するためにはアクティベーションをおこないます。 通常、[4D アカウントでサインイン](GettingStarted/Installation.md) した場合、アクティベーションは自動的におこなわれます。
 
 しかし、場合によってはライセンスを手動でアクティベーションする必要があります。たとえば:
 
 - 自動アクティベーションが可能でない場合
-- you have purchased additional development licenses.
+- 追加の開発ライセンスを購入した場合
 
 以下の利用モードの場合には、アクティベーションは必要はありません:
 
@@ -100,14 +100,14 @@ In some cases, the license update may require that you click on the [**Refresh**
 
 このモードは、特別に一時的な4Dのアクティベーションをおこなうために使用します。このアクティベーションを行うと、4Dインターネットサイトに接続せずに、最大5日間4Dを利用できます。 このアクティベーションは一回のみ使用することができます。
 
-## Refresh
+## 更新
 
-Licenses are usually automatically updated at startup of your 4D application.
+ライセンスは通常、4d アプリケーションの起動時に自動的に更新されます。
 
 **更新** ボタンは、以下のような場合に使用します:
 
 - 追加のエクスパンションを購入したとき、またはそれをアクティベートしたいとき。
-- When you need to update an expired number (Partners or evolutions).
+- パートナーなどの失効した番号を更新する必要があるとき。
 
 4D または 4D Server アプリケーションの **ヘルプ** メニューから **ライセンスマネージャー...** を選択し、**更新** ボタンをクリックしてください:
 

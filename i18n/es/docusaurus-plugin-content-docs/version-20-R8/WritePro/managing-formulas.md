@@ -1,6 +1,6 @@
 ---
 id: managing-formulas
-title: Managing formulas
+title: Gestión de fórmulas
 ---
 
 ## Generalidades
@@ -17,7 +17,7 @@ Formulas are evaluated:
 - when they are "frozen" using the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (if not already computed)
 - before printing (if not already computed)
 - before exporting to .docx (if the formula can't be mapped with MS Word formulas)
-- when the standard actions to freeze, print, export, or compute formulas are called. See *Standard actions*
+- when the standard actions to freeze, print, export, or compute formulas are called. Ver *Acciones estándar*
 
 Formulas are not evaluated when a document is loaded (using [**WP New**](commands-legacy/wp-new.md), [**WP Insert document body**](commands/wp-insert-document-body.md), or `wpArea:=[table]field`):
 
@@ -142,7 +142,7 @@ To display formulas as references, you can:
 
 Formula references can be displayed as:
 
-- source texts (default)
+- textos fuente (por defecto)
 - symbols
 - names
 

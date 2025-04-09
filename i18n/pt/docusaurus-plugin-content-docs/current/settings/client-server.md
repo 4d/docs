@@ -75,7 +75,7 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
     **Notas**:
 
     - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
-    - You can know if a 4D application is running with a QUIC network layer using the [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
+    - You can know if a 4D application is running with a QUIC network layer using the [Application info](../commands-legacy/application-info.md) command.
     - Como o QUIC usa o protocolo UDP, certifique-se de que o UDP seja permitido em suas configurações de segurança de rede.
     - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
     - Quando a opção de camada QUIC é selecionada:

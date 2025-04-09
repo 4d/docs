@@ -90,7 +90,7 @@ ECDSA形式は、4D の [Legacyネットワークレイヤー](../settings/clien
 **key.pem** と **cert.pem** は次の場所に保存する必要があります:
 
 - 4D Server およびローカルモードの 4D では、[Project フォルダー](Project/architecture.md#project-フォルダー) と同階層。
-- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](../commands-legacy/get-4d-folder.md) command). これらのファイルはリモートマシンに手動でコピーする必要があります。
+- 4D のリモートモードでは、これらのファイルはリモートマシンの 4D Client Database フォルダーに置かれなければなりません。 このフォルダーの場所に関する情報は、[`Get 4D Folder`](../commands-legacy/get-4d-folder.md) コマンドの説明を参照ください。 これらのファイルはリモートマシンに手動でコピーする必要があります。
 
 ### TLSを有効にする
 
@@ -108,7 +108,7 @@ HTTPサーバーで TLS接続を受け入れるには、HTTPS を有効化しな
 
 サーバー上で TLS が有効化されているとき、PFS は自動的に有効されます。 *dhparams.pem* ファイル (サーバーの DH非公開鍵を含むドキュメント) がまだ存在していない場合、4D は 2048 の鍵サイズで自動的にそれを生成します。 このファイルの生成には数分間かかる可能性があります。 このファイルは、[*key.pem* および *cert.pem* ファイル](#証明書ファイルのインストール)と同じ場所に置きます。
 
-If you use a [custom cipher list](WebServer/webServerConfig.md#cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
+[カスタムの暗号リスト](WebServer/webServerConfig.md#暗号リスト) を使用していて、PFS を有効化したい場合、DH あるいは ECDH (Elliptic-curve Diffie–Hellman) アルゴリズムのエントリーがそのリストに含まれている必要があります。
 
 ## 他のサーバーで TLS を有効にする
 

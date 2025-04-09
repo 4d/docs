@@ -30,7 +30,7 @@ Esta propiedad se utiliza para definir la altura de línea de un pie de list box
  - Este cálculo no tiene en cuenta el tamaño de las imágenes ni los estilos aplicados a las fuentes.
  - En macOS, la altura de línea puede ser incorrecta si el usuario introduce caracteres que no están disponibles en la fuente seleccionada. Cuando esto ocurre, se utiliza un tipo de letra sustituto, lo que puede provocar variaciones en el tamaño.
 
-> Esta propiedad también puede definirse dinámicamente mediante el comando [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/List-box-footer-specific-properties.300-4354808.en.html).
+> Esta propiedad también puede definirse dinámicamente mediante el comando [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md).
 
 Conversión de unidades: cuando se pasa de una unidad a otra, 4D las convierte automáticamente y muestra el resultado en la Lista de propiedades. Por ejemplo, si la fuente utilizada es "Lucida grande 24", una altura de "1 línea" se convierte en "30 píxeles" y una altura de "60 píxeles" se convierte en "2 líneas".
 

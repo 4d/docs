@@ -294,7 +294,7 @@ Para exibir o tipo de parâmetro, verifique a opção **Mostrar tipos** no menu 
 
 Depois de implementar a lista de parâmetros, você pode arrastar e soltar parâmetros e resultados de funções para o [Painel de Observação Personalizado](#custom-watch-pane).
 
-You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+You can also use the [Call chain](../commands-legacy/call-chain.md) command to retrieve the call chain programmatically.
 
 ## Painel de Observação Personalizado
 

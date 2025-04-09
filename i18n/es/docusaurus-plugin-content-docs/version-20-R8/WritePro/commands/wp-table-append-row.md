@@ -33,8 +33,8 @@ The command supports two syntaxes:
 
 The default cell alignment will depend on the value type:
 
-- text: left aligned
-- pictures: centered
+- texto: alineación izquierda
+- imágenes: centrado
 - other types (numbers, date, and time): right aligned
 
 :::note Notas

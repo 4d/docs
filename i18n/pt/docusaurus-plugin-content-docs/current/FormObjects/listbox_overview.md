@@ -197,7 +197,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 ### Eventos formulário suportados
 
-| Evento formulário    | Propiedades adicionales devueltas (ver [Evento formulario](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) para las propiedades principales)                                    | Comentários                                                                                                                                                                                                     |
+| Evento formulário    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                               | Comentários                                                                                                                                                                                                     |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                                                                 |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                                                                 |
@@ -271,7 +271,7 @@ Você pode definir propriedades padrão (texto, cor de fundo, etc.) para cada co
 
 ### Eventos formulário suportados
 
-| Evento formulário    | Propiedades adicionales devueltas (ver [Evento formulario](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) para las propiedades principales)                                    | Comentários                                                                                                                                                         |
+| Evento formulário    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                               | Comentários                                                                                                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                     |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                     |
@@ -675,7 +675,7 @@ Para definir uma list box hierárquica há várias possibilidades:
 
 - Configurar manualmente os elementos hierárquicos usando a lista Propriedade no editor de formulário (ou editar o formulário JSON).
 - Gerar visualmente a hierarquia usando o menu emergente de gestão de list box no editor de formulários.
-- Use os comandos [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) e [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html), descritos no manual *Linguagem 4D*.
+- Use os comandos [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-hierarchy.md) e [LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md), descritos no manual *Linguagem 4D*.
 
 #### Propriedades de List Box hierárquico
 
@@ -867,7 +867,7 @@ A seguinte caixa de listagem foi concebida utilizando uma matriz de objectos:
 
 ### Configuração de uma coluna de matriz de objectos
 
-Para atribuir um arrayz de objetos a uma coluna list box, basta definir o nome do array de objetos na lista de propriedades (campo "Variable Name") ou usar o comando [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html), como em qualquer coluna baseada em arrays. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
+Para atribuir um arrayz de objetos a uma coluna list box, basta definir o nome do array de objetos na lista de propriedades (campo "Variable Name") ou usar o comando [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md), como em qualquer coluna baseada em arrays. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 

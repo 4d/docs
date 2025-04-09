@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
 
-| Parámetros | Tipo |                             | Descripción                |
-| ---------- | ---- | --------------------------- | -------------------------- |
-| logFile    | Text | &#8594; | Name of the log file       |
-| \*         |      | &#8594; | Close the current log file |
+| Parámetros | Tipo |                             | Descripción                    |
+| ---------- | ---- | --------------------------- | ------------------------------ |
+| logFile    | Text | &#8594; | Nombre del archivo de registro |
+| \*         |      | &#8594; | Close the current log file     |
 
 <!-- END REF-->
 
@@ -38,9 +38,9 @@ OK is set to 1 if the log file is correctly created, or closed.
 
 ## Propiedades
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Número de comando  | 345                         |
-| Hilo seguro        | &cross; |
-| Modifies variables | OK, error                   |
+|                        |                             |
+| ---------------------- | --------------------------- |
+| Número de comando      | 345                         |
+| Hilo seguro            | &cross; |
+| Modifica las variables | OK, error                   |
 

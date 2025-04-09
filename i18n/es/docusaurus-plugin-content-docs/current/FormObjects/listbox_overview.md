@@ -197,7 +197,7 @@ Las propiedades soportadas dependen del tipo de list box.
 
 ### Eventos formulario soportados
 
-| Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) para las propiedades principales)                                 | Comentarios                                                                                                                                                           |
+| Evento formulario    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                            | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
 | On After Keystroke   | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
@@ -272,7 +272,7 @@ Vertical - [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-paddin
 
 ### Eventos formulario soportados
 
-| Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) para las propiedades principales)                                 | Comentarios                                                                                                                                                           |
+| Evento formulario    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                            | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
 | On After Keystroke   | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
@@ -674,7 +674,7 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 - Configurar manualmente los elementos jerárquicos utilizando la lista de propiedades del editor de formularios (o editar el formulario JSON).
 - Generar visualmente la jerarquía utilizando el menú emergente de gestión de list box, en el editor de formularios.
-- Utilice los comandos [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) y [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html), descritos en el manual de *Referencia del Lenguaje 4D*.
+- Utilice los comandos [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-hierarchy.md) y [LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md), descritos en el manual de *Referencia del Lenguaje 4D*.
 
 #### Propiedades del List Box jerárquico
 
@@ -866,7 +866,7 @@ El siguiente list box fue diseñado utilizando un array de objetos:
 
 ### Configurar una columna array de objetos
 
-Para asignar un array de objetos a una columna list box, basta con definir el nombre del array de objetos en la lista de propiedades (campo "Nombre de variable"), o utilizando el comando [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html), como para toda columna basada en arrays. En la lista de propiedades, ahora puede seleccionar Objeto como "Tipo de expresión" para la columna:
+Para asignar un array de objetos a una columna list box, basta con definir el nombre del array de objetos en la lista de propiedades (campo "Nombre de variable"), o utilizando el comando [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md), como para toda columna basada en arrays. En la lista de propiedades, ahora puede seleccionar Objeto como "Tipo de expresión" para la columna:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 

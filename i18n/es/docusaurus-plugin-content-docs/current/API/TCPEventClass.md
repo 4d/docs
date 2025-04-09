@@ -7,9 +7,10 @@ The `TCPEvent` class provides information about events occurring during the life
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R8       | Clase añadida  |
+| Lanzamiento | Modificaciones                  |
+| ----------- | ------------------------------- |
+| 20 R9       | New `ip`, and `port` attributes |
+| 20 R8       | Clase añadida                   |
 
 </details>
 
@@ -22,6 +23,8 @@ Las siguientes propiedades están disponibles:
 |                                                                                             |
 | ------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #TCPEvent.data.Summary --> |
+| [<!-- INCLUDE #TCPEvent.ip.Syntax -->](#ip)<br/><!-- INCLUDE #TCPEvent.ip.Summary -->       |
+| [<!-- INCLUDE #TCPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPEvent.port.Summary --> |
 | [<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary --> |
 
 <!-- REF #TCPEvent.data.Desc -->
@@ -39,6 +42,30 @@ La propiedad `.data` contiene <!-- REF #TCPEvent.data.Summary -->los datos asoci
 When working with low-level TCP/IP connections, keep in mind there is no guarantee that all data will arrive in a single packet. Data arrives in order but may be fragmented across multiple packets.
 
 :::
+
+<!-- END REF -->
+
+<!-- REF #TCPEvent.ip.Desc -->
+
+## .ip
+
+<!-- REF #TCPEvent.ip.Syntax -->**ip** : Text<!-- END REF -->
+
+#### Descripción
+
+The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
+
+<!-- END REF -->
+
+<!-- REF #TCPEvent.port.Desc -->
+
+## .port
+
+<!-- REF #TCPEvent.port.Syntax -->**port** : Number<!-- END REF -->
+
+#### Descripción
+
+The `.port` property contains <!-- REF #TCPEvent.port.Summary -->the port number of the remote machine<!-- END REF -->.
 
 <!-- END REF -->
 

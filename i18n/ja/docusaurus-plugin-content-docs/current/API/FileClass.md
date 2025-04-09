@@ -249,9 +249,10 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <details><summary>履歴</summary>
 
-| リリース | 内容 |
-| ---- | -- |
-| 19   | 追加 |
+| リリース  | 内容                              |
+| ----- | ------------------------------- |
+| 20 R9 | Read UUIDs in macOS executables |
+| 19    | 追加                              |
 
 </details>
 
@@ -259,23 +260,29 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| 引数  | 型      |                             | 説明                                                                                   |
-| --- | ------ | --------------------------- | ------------------------------------------------------------------------------------ |
-| 戻り値 | Object | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身 |
+| 引数  | 型      |                             | 説明                           |
+| --- | ------ | --------------------------- | ---------------------------- |
+| 戻り値 | Object | <- | Application file information |
 
 <!-- END REF -->
 
 #### 説明
 
-`.getAppInfo()` 関数は、<!-- REF #FileClass.getAppInfo().Summary -->**.exe** や **.dll**、**.plist** ファイルの情報をオブジェクトとして返します<!-- END REF -->。
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
 
-この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は空のオブジェクトを返します (エラーは生成されません)。
+The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
-> この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
+**Returned object with a .plist file (all platforms)**
 
-**.exe または .dll ファイルの場合に返されるオブジェクト**
+xml ファイルの中身は解析され、オブジェクトのプロパティとしてキーが返されます。 キーの型 (テキスト、ブール、数値) は維持されます。 `.plist dict` は JSON オブジェクトとして返されます。 また、`.plist array` は JSON 配列として返されます。
 
-> .exe および .dll ファイルの読み取りは Windows上でのみ可能です。
+:::note
+
+この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
+
+:::
+
+**Returned object with a .exe or .dll file (Windows only)**
 
 プロパティ値はすべてテキストです。
 
@@ -290,26 +297,70 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**.plist ファイルの場合に返されるオブジェクト**
+**Returned object with a macOS executable file (macOS only)**
 
-xml ファイルの中身は解析され、オブジェクトのプロパティとしてキーが返されます。 キーの型 (テキスト、ブール、数値) は維持されます。 `.plist dict` は JSON オブジェクトとして返されます。 また、`.plist array` は JSON 配列として返されます。
+:::note
 
-#### 例題
+A macOS executable file is located within a package (e.g. myApp.app/Contents/MacOS/myApp).
+
+:::
+
+The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
+
+| プロパティ | 型      | 説明                                                                                 |
+| ----- | ------ | ---------------------------------------------------------------------------------- |
+| name  | Text   | Name of architecture ("arm64" or "x86_64") |
+| type  | Number | Numerical identifier of the architecture                                           |
+| uuid  | Text   | Textual representation of the executable uuid                                      |
+
+#### 例題 1
 
 ```4d
- // アプリケーションの .exe ファイルの著作権情報を表示します (Windows)
-var $exeFile : 4D.File
-var $info : Object
-$exeFile:=File(Application file; fk platform path)
-$info:=$exeFile.getAppInfo()
-ALERT($info.LegalCopyright)
-
-  // info.plistの著作権情報を表示します (Windows および macOS)
+  // display copyright info of an info.plist (any platform)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=$infoPlistFile.getAppInfo()
 ALERT($info.Copyright)
+```
+
+#### 例題 2
+
+```4d
+ // display copyright info of application .exe file (windows)
+var $exeFile : 4D.File
+var $info : Object
+$exeFile:=File(Application file; fk platform path)
+$info:=$exeFile.getAppInfo()
+ALERT($info.LegalCopyright)
+```
+
+#### 例題 3
+
+```4d
+ // Get uuids of an application (macOS)
+var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
+var $info:=$app.getAppInfo()
+```
+
+Result in *$info*:
+
+```json
+{
+  "archs":
+  [
+      {
+        "name":"x86_64",
+        "type":16777223,
+        "uuid":"3840983CDA32392DA4D1D32F08AB3212"
+      },
+      {
+        "name":"arm64",
+        "type":16777228,
+        "uuid":"E49F6BA275B931DDA183C0B0CDF0ADAF"
+      }
+  ]
+}
 ```
 
 #### 参照
@@ -517,10 +568,11 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| リリース | 内容            |
-| ---- | ------------- |
-| 20   | WinIcon をサポート |
-| 19   | 追加            |
+| リリース  | 内容                              |
+| ----- | ------------------------------- |
+| 20 R9 | Read UUIDs in macOS executables |
+| 20    | WinIcon をサポート                   |
+| 19    | 追加                              |
 
 </details>
 
@@ -528,23 +580,37 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| 引数   | 型      |    | 説明                                                                                          |
-| ---- | ------ | -- | ------------------------------------------------------------------------------------------- |
-| info | Object | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ |
+| 引数   | 型      |    | 説明                                                     |
+| ---- | ------ | -- | ------------------------------------------------------ |
+| info | Object | -> | Properties to write in an application file information |
 
 <!-- END REF -->
 
 #### 説明
 
-`.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary -->*info* に渡したプロパティを **.exe** や **.dll**、**.plist** ファイルの情報として書き込みます<!-- END REF -->。
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
 
-この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は何もしません (エラーは生成されません)。
+The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
 
-> この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
+***info* parameter object with a .plist file (all platforms)**
 
-**.exe または .dll ファイル用の *info* オブジェクト**
+:::note
 
-> .exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。
+この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
+
+:::
+
+*info* オブジェクトに設定された各プロパティは .plist ファイルにキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
+
+*info* に設定されたキーが .plist ファイル内ですでに定義されている場合は、その値が更新され、元の型が維持されます。 .plist ファイルに既存のそのほかのキーはそのまま維持されます。
+
+:::note
+
+日付型の値を定義するには、Xcode plist エディターのようにミリ秒を除いた ISO UTC 形式の JSONタイムスタンプ文字列 (例: "2003-02-01T01:02:03Z") を使用します。
+
+:::
+
+***info* parameter object with a .exe or .dll file (Windows only)**
 
 *info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
@@ -564,15 +630,33 @@ $fhandle:=$f.open("read")
 
 `WinIcon` プロパティにおいては、アイコンファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
 
-**.plist ファイル用の *info* オブジェクト**
+***info* parameter object with a macOS executable file (macOS only)**
 
-*info* オブジェクトに設定された各プロパティは .plist ファイルにキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
+*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
-*info* に設定されたキーが .plist ファイル内ですでに定義されている場合は、その値が更新され、元の型が維持されます。 .plist ファイルに既存のそのほかのキーはそのまま維持されます。
+Every object in the *info*.archs collection must contain the following properties:
 
-> 日付型の値を定義するには、Xcode plist エディターのようにミリ秒を除いた ISO UTC 形式の JSONタイムスタンプ文字列 (例: "2003-02-01T01:02:03Z") を使用します。
+| プロパティ | 型      | 説明                                                 |
+| ----- | ------ | -------------------------------------------------- |
+| type  | Number | Numerical identifier of the architecture to modify |
+| uuid  | Text   | Textual representation of the new executable uuid  |
 
-#### 例題
+#### 例題 1
+
+```4d
+  // info.plist ファイルのキーをいくつか設定します (すべてのプラットフォーム)
+var $infoPlistFile : 4D.File
+var $info : Object
+$infoPlistFile:=File("/RESOURCES/info.plist")
+$info:=New object
+$info.Copyright:="Copyright 4D 2023" // テキスト
+$info.ProductVersion:=12 // 整数
+$info.ShipmentDate:="2023-04-22T06:00:00Z" // タイムスタンプ
+$info.CFBundleIconFile:="myApp.icns" // macOS 用
+$infoPlistFile.setAppInfo($info)
+```
+
+#### 例題 2
 
 ```4d
   // .exe ファイルの著作権、バージョン、およびアイコン情報を設定します (Windows)
@@ -587,17 +671,22 @@ $info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
+#### 例題 3
+
 ```4d
-  // info.plist ファイルのキーをいくつか設定します (すべてのプラットフォーム)
-var $infoPlistFile : 4D.File
-var $info : Object
-$infoPlistFile:=File("/RESOURCES/info.plist")
-$info:=New object
-$info.Copyright:="Copyright 4D 2023" // テキスト
-$info.ProductVersion:=12 // 整数
-$info.ShipmentDate:="2023-04-22T06:00:00Z" // タイムスタンプ
-$info.CFBundleIconFile:="myApp.icns" // macOS 用
-$infoPlistFile.setAppInfo($info)
+// regenerate uuids of an application (macOS)
+
+// read myApp uuids 
+var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
+var $info:=$app.getAppInfo()
+
+// regenerate uuids for all architectures
+For each ($i; $info.archs)
+	$i.uuid:=Generate UUID
+End for each 
+
+// update the app with the new uuids
+$app.setAppInfo($info)
 ```
 
 #### 参照

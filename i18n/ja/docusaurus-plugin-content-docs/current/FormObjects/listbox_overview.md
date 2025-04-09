@@ -198,7 +198,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ### フォームイベント
 
-| フォームイベント             | 取得される追加プロパティ (メインプロパティについては[Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.ja.html) 参照)            | コメント                                                                                                                         |
+| フォームイベント             | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                      | コメント                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On After Keystroke   | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
@@ -273,7 +273,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ### フォームイベント
 
-| フォームイベント             | 取得される追加プロパティ (メインプロパティについては[Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.ja.html) 参照)            | コメント                                                                                                                         |
+| フォームイベント             | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                      | コメント                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
 | On After Keystroke   | <li>[column](#追加プロパティ)</li><li>[columnName](#追加プロパティ)</li><li>[row](#追加プロパティ)</li>                                                       |                                                                                                                              |
@@ -718,7 +718,7 @@ End if
 
 - フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
 - フォームエディターのリストボックス管理メニューを使用して階層を生成する。
-- [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-SET-HIERARCHY.301-4505193.ja.html) や [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv18/4D/18/LISTBOX-GET-HIERARCHY.301-4505194.ja.html) コマンドを使用する (*4D ランゲージリファレンス* 参照)。
+- Use the [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-hierarchy.md) and [LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md) commands, described in the *4D Language Reference* manual.
 
 #### "階層リストボックス" プロパティによる階層化
 
@@ -910,7 +910,7 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 ### オブジェクト配列カラムの設定
 
-オブジェクト配列をリストボックスのカラムに割り当てるには、プロパティリスト (の "変数名" 欄) にオブジェクト配列名を設定するか、配列型のカラムのように [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.ja.html) コマンドを使用します。 プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます: プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
+To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md) command, like with any array-based column. プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
