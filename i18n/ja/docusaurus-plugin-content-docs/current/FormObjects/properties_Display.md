@@ -560,7 +560,7 @@ Customized time formats can be built using several patterns described in the [**
 
 ![](../assets/en/FormObjects/select-row.png)
 
-オブジェクトが [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/ja/page603.html) コマンドで非表示にされた場合、4D はこのプロパティを無視します。 つまり、レコードの選択状態にかかわらず、当該オブジェクトは非表示のままになります。
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 #### JSON 文法
 
