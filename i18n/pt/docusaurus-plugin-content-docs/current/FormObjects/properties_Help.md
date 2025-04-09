@@ -34,13 +34,13 @@ Você também pode:
 Você também pode associar mensagens de ajuda a objetos de formulário de duas outras maneiras:
 
 - ao nível da estrutura da base de dados (apenas campos). Neste caso, a dica de ajuda do campo é apresentada em todos os formulários em que aparece. Para obter mais informações, consulte "Dicas de ajuda" em [Propriedades dos campos](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
-- usando o comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)**, para o processo atual.
+- usando o comando **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)**, para o processo atual.
 
 Quando diferentes dicas são associadas ao mesmo objeto em vários locais, a seguinte ordem de prioridade é aplicada:
 
 1. nível de estrutura (prioridade mais baixa)
 2. nível do editor de formulários
-3. Comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** (prioridade mais alta)
+3. Comando **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** (prioridade mais alta)
 
 #### Veja também
 
