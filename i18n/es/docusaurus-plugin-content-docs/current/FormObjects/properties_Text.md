@@ -25,7 +25,7 @@ Cuando esta propiedad está activada, los comandos [OPEN FONT PICKER](../command
 
 Ajusta el texto seleccionado para que aparezca más oscuro y pesado.
 
-Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
+Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
 > Esto es texto normal.<br/>
 > **Esto es texto en negrita.**
@@ -46,7 +46,7 @@ Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](h
 
 Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 
-También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html).
+También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
 > Esto es texto normal.<br/>
 > *Este es texto en cursiva.*
@@ -165,7 +165,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVB - como "rgb (255,0,0)"
 
-También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
+También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 
@@ -272,7 +272,7 @@ La opción **Predeterminado** (`automático` valor JSON) define la alineación s
 - `abajo` para todos los datos (excepto las imágenes) y
 - `arriba` para los datos del tipo imagen.
 
-Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) y [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html).
+Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) y [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md).
 
 #### Gramática JSON
 
