@@ -343,7 +343,7 @@ var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 ```
 
-Result in *$info*:
+Resultado en *$info*:
 
 ```json
 {
