@@ -2845,10 +2845,6 @@ module.exports =
             {
               type: "category",
               label: "Classes",
-              link: {
-                type: "generated-index",
-                title: "aikit Classes"
-              },
               items: [
                 "aikit/classes/openai",
                 "aikit/classes/openaiapiresource",
