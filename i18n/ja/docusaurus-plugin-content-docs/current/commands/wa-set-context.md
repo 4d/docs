@@ -7,11 +7,11 @@ title: WA SET CONTEXT
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 
-| 引数         | 型          |                             | 説明                                                                                                                                        |
-| ---------- | ---------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | 演算子        | &#8594; | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
-| object     | フォームオブジェクト | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted).                    |
-| contextObj | Object     | &#8594; | Object containing the functions that can be called with `$4d`.                                                            |
+| 引数         | 型          |                             | 説明                                                                    |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------- |
+| \*         | 演算子        | &#8594; | 指定時、*object* はオブジェクト名(文字列)。 省略時、*object* は変数。      |
+| object     | フォームオブジェクト | &#8594; | オブジェクト名 (\* 指定時) または変数 (\* 省略時) |
+| contextObj | Object     | &#8594; | `$4d` を使用して呼び出せる関数を格納したオブジェクト                                         |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ The `WA SET CONTEXT` command <!--REF #_command_.WA SET CONTEXT.Summary--> define
 
 :::note
 
-The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
+このコマンドは、[**埋め込みWebレンダリングエンジンを使用**](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) および **4Dメソッドコールを許可** が `true` になっている埋め込みWeb エリアにおいてのみ使用可能です。
 
 :::
 
