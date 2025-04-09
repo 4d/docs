@@ -17,7 +17,7 @@ title: WA SET CONTEXT
 
 ### 説明
 
-The `WA SET CONTEXT` command <!--REF #_command_.WA SET CONTEXT.Summary--> defines a context object *contextObj* for `$4d` in the Web area designated by the \* and *object* parameters. When this command is used, `$4d` can only access contents declared within the provided *contextObj*. When no context object is set, `$4d` has access to all 4D methods and can not access user classes.<!-- END REF-->
+`WA SET CONTEXT` コマンドは、<!--REF #_command_.WA SET CONTEXT.Summary--> \* および *object* 引数で指定されたWeb エリア内の `$4d` に対して *contextObj* 引数で指定したコンテキストオブジェクトを定義します。 このコマンドが使用されると、 `$4d` は提供された *contextObj* 内で宣言されたコンテンツのみにアクセスできます。 コンテキストオブジェクトが何も設定されていない場合、 `$4d` はすべての4D メソッドにアクセスできますが、ユーザークラスにはアクセスできません。<!-- END REF-->
 
 :::note
 
@@ -25,14 +25,14 @@ The `WA SET CONTEXT` command <!--REF #_command_.WA SET CONTEXT.Summary--> define
 
 :::
 
-Pass in *contextObj* user class instances or formulas to be allowed in `$4d` as objects. Class functions that begin with `_` are considered hidden and cannot be used with `$4d`.
+*contextObj* 引数には、 `$4d` で許可したいユーザークラスインスタンスまたはフォーミュラをオブジェクトとして渡します。 ただし `_` で始まるクラス関数は非表示とみなされるため、 `$4d` から使用することはできません。
 
-- If *contextObj* is null, `$4d` has access to all 4D methods.
-- If *contextObj* is empty, `$4d` has no access.
+- *contextObj* が null の場合、`$4d` はすべての4D メソッドにアクセスできます。
+- *contextObj* が空の場合、`$4d` はメソッドに対しアクセスができません。
 
 ### 例題 1
 
-Allow `$4d` to specific methods
+`$4d` に特定のメソッドを許可する
 
 ```4d
  var $context:={}
@@ -42,17 +42,17 @@ Allow `$4d` to specific methods
  WA SET CONTEXT(*; "myWebArea"; $context)
 ```
 
-**In JavaScript:**
+**JavaScript 側:**
 
 ```js
-$4d.myMethod(); // Allowed
-$4d.myMethod2(); // Allowed
-$4d.someOtherMethod(); // Not accessible
+$4d.myMethod(); // 許可されている
+$4d.myMethod2(); // 許可されている
+$4d.someOtherMethod(); // アクセス不可
 ```
 
 ### 例題 2
 
-Using a Class Object
+クラスオブジェクトを使用する場合を考えます
 
 ```4d
  var $myWAObject:=cs.WAFunctions.new()
@@ -60,11 +60,11 @@ Using a Class Object
  WA SET CONTEXT(*; "MyWA"; $myWAObject)
 ```
 
-**In JavaScript:**
+**JavaScript 側:**
 
 ```js
-$4d.myWAFunction(); // Allowed
-$4d._myPrivateFunction(); // Will do nothing because function is private
+$4d.myWAFunction(); // 許可されている
+$4d._myPrivateFunction(); // 関数が非公開扱いになっているため何もしません
 ```
 
 ### 参照
