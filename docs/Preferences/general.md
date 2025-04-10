@@ -80,7 +80,7 @@ If you check this option, two items are added in the **File > New** menu and the
 
 ![](../assets/en/Preferences/general5.png)
 
-These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments. 
+These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-new-database.300-6750129.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments. 
 
 ## When creating a new project 
  
@@ -96,7 +96,7 @@ Thanks to this principle, under macOS the database folders appear as packages ha
 
 ### Include tokens in project source files
 
-When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html)).
 
 If you intend to use VCS or external code editors with your new projects, you might want to uncheck this option for a better readability of the code with these tools. 
 

@@ -94,6 +94,6 @@ Although it is transparently handled by 4D, the SDI mode introduces small variat
 
 :::info
 
-You can use the [**Application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+You can use the [**Application info**](../commands-legacy/application-info.md) command to know the current running mode on Windows.
 
 :::

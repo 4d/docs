@@ -150,7 +150,7 @@ The main process created by 4D when opening a database for user and application 
 
 ### Identifying Worker processes
 
-All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html) command.
+All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`Process info`](../commands/process-info.md) command.
 
 [Specific icons](../ServerWindow/processes#process-type) identify worker processes.
 

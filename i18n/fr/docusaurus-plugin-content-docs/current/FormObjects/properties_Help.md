@@ -34,13 +34,13 @@ Vous pouvez soit :
 Vous pouvez aussi associer des messages d'aides aux objets formulaire de deux autres façons :
 
 - au niveau de la structure de la base (champs uniquement). Dans ce cas, le message d'aide du champ apparaîtra sur les autres formulaires. Pour plus d'informations, référez-vous à la section [Propriétés des champs](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
-- en utilisant la commande **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)**, pour le process courant.
+- en utilisant la commande **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)**, pour le process courant.
 
 Lorsque différentes astuces sont associées au même objet à plusieurs emplacements, l'ordre de priorité suivant est appliqué :
 
 1. structure (priorité la plus faible)
 2. éditeur de formulaire
-3. Commande **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** (haute priorité)
+3. Commande **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** (haute priorité)
 
 #### Voir également
 

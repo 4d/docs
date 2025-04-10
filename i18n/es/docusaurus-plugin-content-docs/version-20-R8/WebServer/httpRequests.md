@@ -62,7 +62,7 @@ El primer parámetro ($url) es la URL introducida por los usuarios en el área d
 
 Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
 
-| URL introducida en el navegador web                                                                                                               | Value of parameter $url                                                               |
+| URL introducida en el navegador web                                                                                                               | Valor del parámetro $url                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.4.567.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |

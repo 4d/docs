@@ -74,7 +74,7 @@ The verb is: GET
 There are 2 url parts - Url parts are: start - example
 ```
 
-### IncomingMessage Object
+### Objeto IncomingMessage
 
 4D.IncomingMessage objects provide the following properties and functions:
 
@@ -129,7 +129,7 @@ If the body has not been given as a binary content, the function tries to conver
 
 | Parámetros | Tipo |                             | Descripción                          |
 | ---------- | ---- | --------------------------- | ------------------------------------ |
-| key        | Text | ->                          | Header property to get               |
+| key        | Text | ->                          | Propiedad de encabezado a obtener    |
 | Resultado  | Text | <- | Valor de la propiedad del encabezado |
 
 <!-- END REF -->

@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
 
-| Parámetros | Tipo                                               |                             | Descripción              |
-| ---------- | -------------------------------------------------- | --------------------------- | ------------------------ |
-| winRef     | Integer                                            | &#8594; | Window reference number  |
-| image      | Picture                                            | &#8594; | Custom icon              |
-| file       | 4D.File, 4D.Folder | &#8594; | File path or folder path |
+| Parámetros | Tipo                                               |                             | Descripción                        |
+| ---------- | -------------------------------------------------- | --------------------------- | ---------------------------------- |
+| winRef     | Integer                                            | &#8594; | Número de referencia de la ventana |
+| image      | Picture                                            | &#8594; | Custom icon                        |
+| file       | 4D.File, 4D.Folder | &#8594; | File path or folder path           |
 
 <!-- END REF-->
 
@@ -40,7 +40,7 @@ In the case of an MDI application on Windows, you can pass `-1` in *winRef* to s
 In this example, we want to create four windows:
 
 1. Use the application icon on Windows and no icon on macOS (default state when no *image* or *file* is used).
-2. Use a "user" icon.
+2. Utilice un icono "user".
 3. Associate a document with the window (this uses its file type icon).
 4. Customize the icon associated with the document.
 

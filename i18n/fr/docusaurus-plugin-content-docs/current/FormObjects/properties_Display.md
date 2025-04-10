@@ -553,7 +553,7 @@ Cette propriété est utilisée uniquement lors du dessin d'objets situés dans 
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D ne tient pas compte de cette propriété si l'objet était masqué à l'aide de la commande [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/fr/page603.html); dans ce cas, l'objet reste invisible indépendamment de la sélection de l'enregistrement.
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 #### Grammaire JSON
 

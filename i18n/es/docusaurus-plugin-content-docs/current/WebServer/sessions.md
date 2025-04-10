@@ -458,7 +458,7 @@ Since the `$4DSID` parameter contains a valid OTP corresponding to the original 
 
 A new user is created, and some information is stored in the session, especially the current step of the user account creation process (Waiting for validation email) and the user ID.
 
-### Supported contexts
+### Contextos soportados
 
 - Both HTTP and HTTPS schemas are supported.
 - Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.

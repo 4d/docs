@@ -52,7 +52,7 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
 The following form events are available in the Property List for 4D View Pro areas.
 
-Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
+Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](../commands/form-event.md) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
 
 |Standard 4D events|Specific and extended 4D View Pro events|
 |---|---|
@@ -228,7 +228,7 @@ In addition to the special characters and codes described in the previous sectio
 |^ |Caret| #\^#|
 |' |Apostrophe| '######|
 |{ } |Curly brackets| {###,###,###}|
-|`< >` |Less-than and greater than signs| `## >##`|
+|`< >` |Less-than and greater than signs| ``## >##``|
 |= |Equal sign| #+#=##|
 |/ |Forward slash. When used with numbers, displays them as fractions.| mm/dd/yyyy|
 |! |Exclamation point| $###.00!|
@@ -362,7 +362,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 
 * If you set the paper size using the `kind` property, you can use either:
   * one of the formats in the [SpreadJS format list](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command.
+  * one of the formats returned by the [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md) command.
     In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
 
 ### Scale

@@ -25,7 +25,7 @@ When this property is enabled, the [OPEN FONT PICKER](../commands-legacy/open-fo
 
 Le texte sélectionné est plus foncé et plus épais.
 
-You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+You can set this property using the [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) command.
 
 > This is normal text.<br/>
 > **This is bold text.**
@@ -46,7 +46,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 Fait pencher le texte sélectionné légèrement vers la droite.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
+You can also set this property via the [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) command.
 
 > This is normal text.<br/>
 > *This is text in italics.*
@@ -165,7 +165,7 @@ La couleur peut être spécifiée par :
 - une valeur HEX - comme "# ff0000"
 - une valeur RVB - comme "rgb (255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+You can also set this property using the [**OBJECT SET RGB COLORS**](../commands-legacy/object-set-rgb-colors.md) command.
 
 #### Grammaire JSON
 
@@ -272,7 +272,7 @@ L'option **Default** (valeur JSON `automatique`) définit l'alignement en foncti
 - `bas` pour toutes les données (sauf les images) et
 - `haut` pour les données de type image.
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
+This property can also be handled by the [OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) and [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md) commands.
 
 #### Grammaire JSON
 

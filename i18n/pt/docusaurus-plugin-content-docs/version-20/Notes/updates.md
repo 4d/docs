@@ -303,7 +303,7 @@ ALERT($param1+" "+$param2)
 ```
 Para obter informações pormenorizadas, consulte [esta publicação do blogue](https://blog.4d.com/stop-press-accessing-parameters-not-being-passed-is-possible). Para beneficiar desta simplificação global, é necessário recompilar tanto os métodos chamados como os que são chamados; assim, os componentes devem ser recompilados.
 - A depuração das sessões do servidor web [é mais fácil no 4D Server](../WebServer/sessions.md).
-- O novo componente [4D NetKit](https://github.com/4d/4D-NetKit) permite que você se conecte a APIs de terceiros, como o Microsoft Graph.
+- O novo componente [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x) permite que você se conecte a APIs de terceiros, como o Microsoft Graph.
 - Esse novo algoritmo é usado automaticamente quando uma senha é alterada usando a Caixa de ferramentas, o comando `CHANGE PASSWORD` ou o comando `Set user properties` . 4D 19 R3 usa um algoritmo hash mais forte para senhas de usuários 4D: Bcrypt. Depois que a senha for modificada, abrir o banco de dados com uma versão anterior ao 4D 19 R3 causará uma recusa de autenticação para essa conta. Se você usa senhas 4D, é altamente recomendável fazer backup do arquivo .4db (bancos de dados binários) ou do arquivo directory.json (projetos) antes de atualizar para o 4D 19 R3 ou posterior.
 - Para fins de precisão, a constante `4D digest` foi renomeada para `4D REST digest`.
 

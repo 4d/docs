@@ -697,7 +697,7 @@ Las macros 4D están escritas en formato XML. Puede utilizar el archivo de macro
 La carpeta "Macros v2" puede ser ubicada:
 
 - En la carpeta 4D activa de la máquina. Las macros son compartidas para todas las bases.
-  **Nota:** la ubicación de la carpeta 4D activa varía según el sistema operativo utilizado. Para más información, consulta la descripción del comando [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) en el manual *Lenguaje* 4D.
+  **Nota:** la ubicación de la carpeta 4D activa varía según el sistema operativo utilizado. Para más información, consulta la descripción del comando [Get 4D folder](../commands-legacy/get-4d-folder.md) en el manual *Lenguaje* 4D.
 - Junto al archivo de estructura de la base. Las macros sólo se cargan para esta estructura.
 - Para los componentes: en la carpeta **Components** de la base. Las macros sólo se cargan si el componente está instalado.
 

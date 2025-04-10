@@ -52,7 +52,7 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
 The following form events are available in the Property List for 4D View Pro areas.
 
-Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
+Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](../commands/form-event.md) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
 
 |Standard 4D events|Specific and extended 4D View Pro events|
 |---|---|

@@ -28,7 +28,7 @@ Specifies the form to use for modifying or displaying individual records of the 
 
 The specified form is displayed:
 
-*	when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.en.html)),
+*	when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html)),
 *	when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
 
 #### JSON Grammar

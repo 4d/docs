@@ -294,7 +294,7 @@ $c:=$a+$b
 
 メソッドの引数リストが展開されていれば、引数や戻り値を [カスタムウォッチエリア](#カスタムウォッチエリア) にドラッグ＆ドロップすることができます。
 
-呼び出しチェーンは [Call chain](https://doc.4d.com/4dv19/help/command/ja/page1662.html) コマンドを使って取得することもできます。
+You can also use the [Call chain](../commands-legacy/call-chain.md) command to retrieve the call chain programmatically.
 
 ## カスタムウォッチエリア
 

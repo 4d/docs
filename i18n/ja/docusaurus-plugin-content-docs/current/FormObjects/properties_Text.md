@@ -25,7 +25,7 @@ When this property is enabled, the [OPEN FONT PICKER](../commands-legacy/open-fo
 
 選択テキストの線を太くし、濃く見えるようにします。
 
-このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
+You can set this property using the [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) command.
 
 > これは通常のテキストです。<br/>
 > **これは太字のテキストです。**
@@ -46,7 +46,7 @@ When this property is enabled, the [OPEN FONT PICKER](../commands-legacy/open-fo
 
 選択テキストの線を右斜めに傾けます。
 
-このプロパティは [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT-STYLE.301-4505468.ja.html) コマンドによって設定することができます。
+You can also set this property via the [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) command.
 
 > これは通常のテキストです。<br/>
 > *これはイタリックのテキストです。*
@@ -165,7 +165,7 @@ When this property is enabled, the [OPEN FONT PICKER](../commands-legacy/open-fo
 - 16進数値 - 例: "#ff0000"
 - RGB値 - 例: "rgb(255,0,0)"
 
-このプロパティは [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.ja.html) コマンドによって設定することができます。
+You can also set this property using the [**OBJECT SET RGB COLORS**](../commands-legacy/object-set-rgb-colors.md) command.
 
 #### JSON 文法
 
@@ -272,7 +272,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 - ピクチャーを除き、すべて `下` です。
 - ピクチャーは `上` です。
 
-このプロパティは、[OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/ja/page1188.html) と [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/ja/page1187.html) コマンドを使用して設定することもできます。
+This property can also be handled by the [OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) and [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md) commands.
 
 #### JSON 文法
 

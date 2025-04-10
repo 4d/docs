@@ -120,7 +120,7 @@ There are two types of font family names:
 - *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
 - *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.  
+You can set this using the [`OBJECT SET FONT`](../commands-legacy/object-set-font.md) command.  
 
 #### JSON Grammar
 
@@ -164,7 +164,7 @@ The color can be specified by:
 - a HEX value - like "#ff0000"
 - an RGB value - like "rgb(255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+You can also set this property using the [**OBJECT SET RGB COLORS**](../commands-legacy/object-set-rgb-colors.md) command.
 
 #### JSON Grammar
 
@@ -184,7 +184,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) command in the 4D Language Reference manual.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
 
 You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
 
@@ -215,7 +215,7 @@ Foreground color;Dark shadow color)
 
 Used to apply a custom character style to each row of the list box or each cell of the column.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) command.
 
 Example:
 
@@ -271,7 +271,7 @@ The **Default** option (`automatic` JSON value) sets the alignment according to 
 - `bottom` for all data (except pictures) and
 - `top` for picture type data.
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
+This property can also be handled by the [OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) and [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md) commands.
 
 #### JSON Grammar
 
@@ -420,7 +420,7 @@ In addition to [static text areas](text.md), [input](input_overview.md) text obj
 
 Allows setting a custom font color to each row of the list box or cell of the column.
 
-The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 
 #### JSON Grammar
 
@@ -440,7 +440,7 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 Allows setting a custom font style to each row of the list box or each cell of the column.
 
-The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
+The name of a Longint array must be used. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. To fill the array (using a method), use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) command. You can add constants together to combine styles. If you want the cell to inherit the style defined at the higher level, pass the value -255 to the corresponding array element.
 
 #### JSON Grammar
 

@@ -501,7 +501,7 @@ End if
 
 | Parámetros | Tipo    |                             | Descripción                                                                        |
 | ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------------- |
-| token      | Text    |              ->             | Session token UUID                                                                 |
+| token      | Text    |              ->             | UUID del token de sesión                                                           |
 | Resultado  | Boolean | <- | True if the current session has been successfully replaced by the session in token |
 
 <!-- END REF -->

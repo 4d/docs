@@ -26,7 +26,7 @@ In *targetObj*, you can pass:
 
 - un rango, o
 - un elemento (encabezado / pie de página / cuerpo / tabla / párrafo / imagen anclada / sección / subsección / hoja de estilo), o
-- a 4D Write Pro document
+- un documento 4D Write Pro
 
 In *attribName*, pass the name of the attribute you want to retrieve.
 

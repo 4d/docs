@@ -96,7 +96,7 @@ The following table indicates the *option* available per export *format*:
 
 **Nota de compatibilidad:** pasar un valor *largo* en *longint* es compatible por razones de compatibilidad, pero se recomienda usar un parámetro [objeto](# "Datos estructurados como un objeto nativo 4D").
 
-### wk files collection
+### colección wk files
 
 The wk files property allows you to [export a PDF with attachments](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures). This property must contain a collection of objects describing the files to be embedded in the final document. Each object of the collection can contain the following properties:
 
@@ -117,14 +117,14 @@ PDF attachments are only supported by the PDF/A-3 version. When you pass the wk 
 
 :::
 
-### wk factur x object
+### Objeto wk factur x
 
 The wk factur x property is an object that can contains up to two properties:
 
 | **Propiedad** | **Tipo** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | profile       | Text     | Opcional. If omitted, *profile* is determined from the provided xml file or text (which must use a standard profile). If passed, it can be a non-standard profile name (for using other profiles - for instance RECHNUNG). **Note:* Standard profile names are: MINIMUM, BASIC WL, BASIC, EN 16931 (aka COMFORT which is an alias), EXTENDED.* |
-| version       | Text     | Opcional. Default value is "1.0"                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| version       | Text     | Opcional. El valor por defecto es "1.0"                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ### About Factur-X / ZUGFeRD PDF documents
 

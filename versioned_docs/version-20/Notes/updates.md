@@ -302,7 +302,7 @@ ALERT($param1+" "+$param2)
 ```
 For detailed information, please refer to [this blog post](https://blog.4d.com/stop-press-accessing-parameters-not-being-passed-is-possible). To benefit from this overall simplification, you need to recompile both calling and called methods; thus components must be recompiled.
 - Debugging web server sessions [is easier on 4D Server](../WebServer/sessions.md).
-- The new [4D NetKit](https://github.com/4d/4D-NetKit) component allows you to connect to third-party APIs such as Microsoft Graph.
+- The new [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x) component allows you to connect to third-party APIs such as Microsoft Graph.
 - 4D 19 R3 uses a stronger hashing algorithm for 4D user passwords: Bcrypt. This new algorithm is automatically used when a password is changed using the Tool Box, the `CHANGE PASSWORD` command, or the `Set user properties` command. Once a password is modified, opening the database with a version prior to 4D 19 R3 will cause an authentication denial for this account. If you use 4D passwords, it is highly recommended to backup the .4db file (binary databases) or directory.json file (projects) before upgrading to 4D 19 R3 or later.
 - For accuracy, the `4D digest` constant has been renamed `4D REST digest`.
 

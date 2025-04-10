@@ -42,7 +42,7 @@ Allow `$4d` to specific methods
  WA SET CONTEXT(*; "myWebArea"; $context)
 ```
 
-**In JavaScript:**
+**En JavaScript:**
 
 ```js
 $4d.myMethod(); // Allowed
@@ -60,7 +60,7 @@ Using a Class Object
  WA SET CONTEXT(*; "MyWA"; $myWAObject)
 ```
 
-**In JavaScript:**
+**En JavaScript:**
 
 ```js
 $4d.myWAFunction(); // Allowed

@@ -698,7 +698,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 "Macros v2" フォルダーは以下の場所に配置できます:
 
 - マシンのアクティブ4Dフォルダー。 この場合、マクロはすべてのデータベースで共有されます。
-  **注:** アクティブ4Dフォルダーの位置は OS により異なります。 詳細については、*4Dランゲージリファレンス* マニュアルの [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.ja.html) コマンドの説明を参照ください。
+  **注:** アクティブ4Dフォルダーの位置は OS により異なります。 For more information, refer to the description of the [Get 4D folder](../commands-legacy/get-4d-folder.md) command in the 4D *Language Reference* manual.
 - データベースストラクチャーファイルと同階層。 マクロは、このストラクチャーにのみ読み込まれます。
 - コンポーネントの場合: データベースの **Components** フォルダーと同階層。 この場合マクロは、コンポーネントがインストールされている場合のみ利用できます。
 

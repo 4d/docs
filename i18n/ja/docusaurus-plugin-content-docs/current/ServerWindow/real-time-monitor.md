@@ -22,7 +22,7 @@ title: リアルタイムモニターページ
     - **サブオペレーション** (あれば): 選択したオペレーションに従属するオペレーションを表示します (例:親レコードの前にリレートレコードを削除する)
     - **プロセス詳細**: テーブル、フィールド、プロセスやクライアントに関する追加情報が表示されます。
 
-> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. 詳細については、コマンドの説明を参照ください。
+> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](../commands-legacy/activity-snapshot.md) command internally. 詳細については、コマンドの説明を参照ください。
 
 このページは表示後すぐにアクティブになり、恒久的に更新され続けます。 ただし、この処理によって、アプリケーションの実行を極端に遅くさせる可能性があることに注意してください。 以下の方法を用いて更新を一時的に停止させることが可能です:
 
