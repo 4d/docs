@@ -5,7 +5,7 @@ title: ストラクチャーページ
 
 ## プライマリーキー
 
-環境設定内のこれらのオプションによって、新しくテーブルが追加されたとき、または [プライマリーキー管理](https://doc.4d.com/4Dv19/4D/19/Primary-key-manager.300-5416826.ja.html) 機能の使用によって 4D が自動的に追加するプライマリーキーのデフォルトの名前と型を変更することができます。
+These options in the preferences modify the default name and type of the primary key fields that are added automatically by 4D when new tables are created or by means of the [Primary key manager](https://doc.4d.com/4Dv20/4D/20.2/Primary-key-manager.300-6750292.en.html)).
 
 次のオプションから選択することができます:
 
@@ -18,9 +18,9 @@ title: ストラクチャーページ
 
 ### ストラクチャーの描画クォリティ
 
-このオプションで、ストラクチャーエディターの描画レベルを変更できます。 デフォルトで品質は **高** に設定されています。 標準品質を選択して、表示速度を優先させることができます。 この設定の効果は主にズーム機能を使用する際に実感することができます ([ストラクチャーエディター](https://doc.4d.com/4Dv19/4D/19/Structure-editor.300-5416818.ja.html) のズーム参照)。
+このオプションで、ストラクチャーエディターの描画レベルを変更できます。 デフォルトで品質は **高** に設定されています。 標準品質を選択して、表示速度を優先させることができます。 The effect of this setting is mainly perceptible when using the zoom function (see the "Zoom" paragraph in [Structure editor](https://doc.4d.com/4Dv20/4D/20.2/Structure-editor.300-6750284.en.html#105667)).
 
 ### フォルダーが表示対象外のとき
 
-このオプションは、ストラクチャーエディターでフォルダーによって選択する際の、テーブルが表示対象外のときのアピアランスを設定できます ([フォルダーごとにテーブルをハイライト/薄暗くする](https://doc.4d.com/4Dv19/4D/19/Structure-editor.300-5416818.ja.html#4592928) 参照)。 薄暗く表示 (テーブルイメージの代わりに影が表示される) または非表示 (テーブルは完全に見えなくなる) が選択できます。
+This option sets the appearance of dimmed tables in the Structure editor, when you carry out selections by folder (see [Highlight/dim tables by folder](https://doc.4d.com/4Dv20/4D/20.2/Structure-editor.300-6750284.en.html#4592928)). 薄暗く表示 (テーブルイメージの代わりに影が表示される) または非表示 (テーブルは完全に見えなくなる) が選択できます。
 
