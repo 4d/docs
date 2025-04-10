@@ -18,9 +18,9 @@ A aplicação 4D cria processos para suas próprias necessidades, por exemplo, o
 Existem várias maneiras de criar um processo:
 
 - Execute um método no ambiente de Design após marcar a caixa de seleção **Novo Processo** na caixa de diálogo "Executar Método". O método escolhido na caixa de diálogo Executar Método é o método do processo.
-- Use o comando [`New process`] (https://doc.4d.com/4dv20/help/command/en/page317.html). O método passado como parâmetro para o comando `Novo processo` é o método de processo.
-- Use o comando [`Execute on server`] (https://doc.4d.com/4dv20/help/command/en/page373.html) para criar um procedimento armazenado no servidor. O método passado como parâmetro do comando é o método processo.
-- Use o comando [`CALL WORKER`] (https://doc.4d.com/4dv20/help/command/en/page1389.html). Se o processo worker ainda não existir, será criado.
+- Use o comando [`New process`] (../commands-legacy/new-process.md). O método passado como parâmetro para o comando `Novo processo` é o método de processo.
+- Use o comando [`Execute on server`] (../commands-legacy/execute-on-server.md) para criar um procedimento armazenado no servidor. O método passado como parâmetro do comando é o método processo.
+- Use o comando [`CALL WORKER`] (../commands-legacy/call-worker.md). Se o processo worker ainda não existir, será criado.
 
 :::note
 
@@ -33,7 +33,7 @@ Um processo pode ser liberado sob as seguintes condições (as primeiras duas co
 - Quando o método processo termina de ser executado
 - Quando o usuário sai da aplicação
 - Se você parar o processo procedimentalmente ou usar o botão **Abortar** no Depurador ou no Explorador de Tempo de Execução
-- Se você chamar o comando [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html) (para excluir apenas um processo de trabalhador).
+- Se você chamar o comando [`KILL WORKER`](../commands-legacy/kill-worker.md) (para excluir apenas um processo de trabalhador).
 
 Um processo pode criar outro processo. Os processos não são organizados hierarquicamente—todos os processos são iguais, independentemente do processo do qual foram criados. Uma vez que o processo "pai" cria um processo "filho", o processo filho continuará independentemente de o processo pai ainda estar em execução.
 
@@ -94,11 +94,11 @@ Quando você cria um processo global no cliente, um processo "gêmeo" é criado 
 
 Usar um processo de trabalho é uma maneira simples e poderosa de trocar informações entre processos. Esta funcionalidade é baseada em um sistema de mensagens assíncrono que permite que processos e formulários sejam chamados e solicitados a executar métodos com parâmetros em seu próprio contexto.
 
-Um trabalhador pode ser "contratado" por qualquer processo (usando o comando [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html)) para executar métodos do projeto com parâmetros em seu próprio contexto, permitindo assim o acesso a informações compartilhadas.
+Um trabalhador pode ser "contratado" por qualquer processo (usando o comando [`CALL WORKER`](../commands-legacy/call-worker.md)) para executar métodos do projeto com parâmetros em seu próprio contexto, permitindo assim o acesso a informações compartilhadas.
 
 :::info
 
-No aplicativo Desktop, um método de projeto também pode ser executado com parâmetros no contexto de qualquer forma usando o comando [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html).
+No aplicativo Desktop, um método de projeto também pode ser executado com parâmetros no contexto de qualquer forma usando o comando [`CALL FORM`](../commands-legacy/call-form.md).
 
 :::
 
@@ -136,7 +136,7 @@ Não é possível usar `CALL WORKER` para executar um método em um processo cri
 
 Os processos trabalhadores podem ser criados no 4D Server por meio de procedimentos armazenados: por exemplo, você pode usar o comando `Executar no servidor` para executar um método que chama o comando `CALL WORKER`.
 
-Um processo de trabalho é encerrado por meio de uma chamada ao comando [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html), que esvazia a caixa de mensagens do trabalhador e solicita ao processo associado que pare de processar mensagens e termine sua execução atual assim que a tarefa atual for concluída.
+Um processo de trabalho é encerrado por meio de uma chamada ao comando [`KILL WORKER`](../commands-legacy/kill-worker.md), que esvazia a caixa de mensagens do trabalhador e solicita ao processo associado que pare de processar mensagens e termine sua execução atual assim que a tarefa atual for concluída.
 
 O método de inicialização de um worker é o método usado para criar o trabalhador (na primeira utilização). Se `CALL WORKER` for chamado com um parâmetro *method* vazio, então o método de inicialização é automaticamente reutilizado como método para executar.
 
@@ -144,7 +144,7 @@ O processo principal criado pelo 4D ao abrir um banco de dados para os modos de 
 
 ### Identificação dos processos Worker
 
-Todos os processos trabalhadores, exceto o processo principal, têm o tipo de processo `processo trabalhador` (5) retornado pelo comando [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html).
+All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`Process info`](../commands/process-info.md) command.
 
 [Ícones específicos](../ServerWindow/processes#process-type) identificam os processos worker.
 
