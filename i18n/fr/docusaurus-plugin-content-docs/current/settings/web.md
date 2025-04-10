@@ -3,7 +3,7 @@ id: web
 title: Page Web
 ---
 
-Les onglets de la page **Web** permettent de paramétrer les multiples aspects du serveur Web intégré de 4D (sécurité, démarrage, connexions, services Web, etc.). Pour plus d’informations sur le fonctionnement du serveur Web de 4D, reportez-vous au chapitre [Serveur Web](../WebServer/webServer.md). Pour plus d'informations sur la prise en charge des Services Web dans 4D, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19R4/4D/19-R4/Publication-et-utilisation-de-Services-Web.200-5736722.fr.html).
+Les onglets de la page **Web** permettent de paramétrer les multiples aspects du serveur Web intégré de 4D (sécurité, démarrage, connexions, services Web, etc.). Pour plus d’informations sur le fonctionnement du serveur Web de 4D, reportez-vous au chapitre [Serveur Web](../WebServer/webServer.md). Pour plus d’informations sur les services Web de 4D, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html).
 
 ## Configuration
 
@@ -90,7 +90,7 @@ Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémenta
 
 *Note de compatibilité :* Cette option est disponible uniquement dans les bases/projets créé(e) s avec une version 4D antérieure à 4D v18 R6.
 
-Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Voir [Keep Session](../WebServer/webServerConfig.md#keep-session).
+Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Voir [Keep Session](../WebServer/webServerConfig.md#keep-session).
 
 L'option [Réutilisation des contextes temporaires (4D en mode distant)](#reuse-temporary-contexts) est automatiquement cochée (et verrouillée).
 
@@ -257,7 +257,7 @@ Paramètres d’archivage automatique du journal des requêtes. D'abord, vous de
 
 Les options de cette page permettent d'activer et de configurer les services Web au sein de la base 4D, aussi bien en publication (serveur) qu'en souscription (client) .
 
-Pour plus d'informations sur la prise en charge des Services Web dans 4D, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19R4/4D/19-R4/Publication-et-utilisation-de-Services-Web.200-5736722.fr.html).
+For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter.
 
 ### Serveur
 
