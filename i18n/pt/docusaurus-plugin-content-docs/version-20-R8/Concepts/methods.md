@@ -199,7 +199,7 @@ Esta caixa de diálogo lista todos os métodos de projecto da base de dados, inc
 
 Para executar um método projeto, basta selecionar o seu nome na lista e clicar em **Executar**. Para executar um método passo a passo no modo Debug, clique em **Debug**. Para mais informações sobre o depurador 4D, consulte a seção [Depuração](../Debugging/basics.md).
 
-Se você marcar a caixa de seleção de **Novo Processo**, o método que você selecionou é executado em outro processo. Se o método estiver executando uma tarefa demorada, como a impressão de um grande conjunto de registos, pode continuar trabalhando com a base de dados, adicionando registos a uma tabela, criando um gráfico para apresentar dados, etc. Para mais informações sobre processos, consulte [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) o manual 4D *Referência de Idioma*.
+Se você marcar a caixa de seleção de **Novo Processo**, o método que você selecionou é executado em outro processo. Se o método estiver executando uma tarefa demorada, como a impressão de um grande conjunto de registos, pode continuar trabalhando com a base de dados, adicionando registos a uma tabela, criando um gráfico para apresentar dados, etc. For more information about processes, refer to [Processes](../Develop/processes.md).
 
 **Notas Servidor 4D**:
 
