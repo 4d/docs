@@ -112,7 +112,7 @@ Vous permet de choisir d'afficher ou non les multiples presse-papiers dans l'éd
 
 ![](../assets/en/Preferences/show-clipboards.png)
 
-Les [raccourcis du presse-papiers](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) correspondants demeurent actifs lorsque ces presse-papiers sont masqués.
+Les [raccourcis du presse-papiers](../code-editor/write-class-method.md#clipboards) correspondants demeurent actifs lorsque ces presse-papiers sont masqués.
 
 #### Surbrillance des blocs logiques
 
