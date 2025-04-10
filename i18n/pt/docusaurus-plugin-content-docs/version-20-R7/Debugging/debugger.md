@@ -35,8 +35,8 @@ A janela do depurador é normalmente apresentada na máquina onde o código é e
 
 :::note Notas
 
-- Se o servidor estiver a funcionar sem interface, não pode ser apresentada qualquer janela do depurador no servidor, pelo ser necessário utilizar o depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
-- You can also [attach the Qodly Studio debugger to a 4D Server application](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
+- Se o servidor estiver a funcionar sem interface, não pode ser apresentada qualquer janela do depurador no servidor, pelo ser necessário utilizar o depurador remoto. Ver [Depuração de máquinas remotas](./debugging-remote.md).
+- Você também pode [anexar o depurador do Qodly Studio a um aplicativo do Servidor 4D](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) se você precisar depurar páginas Qodly em um ambiente implantado.
 
 :::
 
@@ -52,33 +52,33 @@ A barra de ferramentas do depurador inclui vários botões, associados a atalhos
 
 Interrompe o modo de rastreamento e retoma o curso normal da execução do método.
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. Também desativa todas as chamadas TRACE subsequentes para o processo atual.
+> **Shift** + **F5** ou **Shift** + clicar no botão **No Trace** (Sem Rastreamento) que retoma a execução. Também desativa todas as chamadas TRACE subsequentes para o processo atual.
 
 #### Executar passo a passo
 
 Executa a linha de método atual, indicada pelo contador de programa (a seta amarela). O depurador passa para a linha seguinte.
 
-O botão Executar não entra em sub-rotinas e funções, mantém-se ao nível do método que rastreia atualmente. If you want to also trace subroutines and functions calls, use the **Step Into** button.
+O botão Executar não entra em sub-rotinas e funções, mantém-se ao nível do método que rastreia atualmente. Se pretender rastrear também as chamadas de sub-rotinas e funções, utilize o botão Passo a Passo detalhado.
 
-Na depuração remota, se o método for executado no servidor, o método principal é chamado após a execução da última linha do método secundário. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+Na depuração remota, se o método for executado no servidor, o método principal é chamado após a execução da última linha do método secundário. Se o método pai for executado no lado remoto, o botão **Step Over** terá o mesmo efeito que o botão **No Trace**.
 
 #### Passo a passo detalhado
 
 Quando uma linha que chama outro método (sub-rotina ou função) é executada, clique neste botão para exibir o outro método e percorrê-lo.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+O novo método torna-se o atual (topo) método no [Chame Chain Pane](#call-chain-pane) da janela de depuração.
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+Ao executar uma linha que não chama outro método, esse botão tem o mesmo efeito que o botão **Step Over**.
 
 #### Step Out
 
-If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+Se estiver rastreando sub-rotinas e funções, clicar nesse botão permite executar todo o método que está sendo rastreado no momento e voltar ao método chamador. A janela do Depurador é trazida de volta ao método anterior na cadeia de chamadas. Se o método atual for o último método na cadeia de chamadas, a janela do Debugger é fechada.
 
-In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+Na depuração remota, na execução da última linha do método, se o método for executado no servidor, o método pai será chamado. Se o método pai for executado no lado remoto, o botão **Step Over** terá o mesmo efeito que o botão **No Trace**.
 
 #### Step Into Process
 
-On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+Na execução de uma linha que cria um novo processo (ou seja, ao chamar o comando Novo processo), este botão abre uma nova janela do Depurador que permite rastrear o método do processo do processo recém-criado. Na execução de uma linha que não cria um novo processo, esse botão atua da mesma forma que o botão Step Over.
 
 #### Abortar
 
@@ -89,9 +89,9 @@ Interrompe a execução do método e regressa ao estado anterior ao início da e
 
 #### Abortar e editar
 
-The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+O método que está sendo executado quando você clica no botão **Abortar e editar** é aberto no Editor de código.
 
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Quando terminar as alterações, volte a executar o método.
+> **Sugestão**: Utilize este botão quando você sabe quais alterações são necessárias no seu código e quando essas alterações são necessárias para prosseguir com o teste dos seus métodos. Quando terminar as alterações, volte a executar o método.
 
 #### Editar
 
@@ -99,7 +99,7 @@ O método executado no momento em que se clica no botão Editar abre-se no Edito
 
 Se utilizar este botão para modificar um método, as modificações só entram em vigor na próxima vez que este for executado.
 
-> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
+> **Dica:** Use este botão quando você souber quais alterações são necessárias no seu código e quando eles não interferem com o resto do código a ser executado ou rastreado.
 
 #### Botão Salvar parâmetros
 
