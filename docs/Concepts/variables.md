@@ -258,7 +258,7 @@ System variables are used by [4D commands](../commands/command-index.md). Refer 
 |System variable name|Type|Description|
 |---|---|---|
 |`OK`|Integer|Usually set to 1 after a command has displayed a dialog box and the user clicked the **OK** button, and 0 if they clicked **Cancel**. Some commands also modify the value of the `OK` system variable when a operation is successfully executed.
-|`Document`|Text|Contains the "long name" (full path+name) of the last file opened or created using commands such as [Open document](../commands-legacy/open-document.md) or [SELECT LOG FILE](https://doc.4d.com/4dv20/help/command/en/page345.html).|
+|`Document`|Text|Contains the "long name" (full path+name) of the last file opened or created using commands such as [Open document](../commands-legacy/open-document.md) or [SELECT LOG FILE](../commands/select-log-file.md).|
 |`FldDelimit`, `RecDelimit`|Text|Contain the character codes that will be used respectively as a field separator (default is **Tab** (9)) and record separator (default is **carriage return** (13)) when importing or exporting text. To use a different separator, assign a new value to the system variable.|
 |`Error`, `Error method`, `Error line`, `Error formula`|Text, Longint|Used in an error-catching method installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command. See [Handling errors within the method](../Concepts/error-handling.md#handling-errors-within-the-method).|
 |`MouseDown`|Integer|Used in a method installed by the [`ON EVENT CALL`](../commands-legacy/on-event-call.md) command. Set to 1 when the mouse button is pushed, otherwise set to 0. |

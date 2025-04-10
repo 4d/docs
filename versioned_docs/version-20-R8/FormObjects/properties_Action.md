@@ -18,7 +18,7 @@ In custom mode, basically the whole drag-and-drop operation is handled by the pr
 ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
 In this mode, the `On Begin Drag` form event is NOT generated. If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action. This option is not available for pictures.
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
+For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) in the *4D Language Reference* manual.
 
 #### JSON Grammar
 
@@ -49,7 +49,7 @@ Two drop modes are available:
 In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme. 
 - **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated. 
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
+For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) in the *4D Language Reference* manual.
 
 
 #### JSON Grammar
@@ -187,7 +187,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 ---
 ## Standard action
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
+Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) section of the *Design Reference*.
 
 You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed. 
 
@@ -197,7 +197,7 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|action|string |The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html).|
+|action|string |The name of a [valid standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html).|
 
 #### Objects Supported
 

@@ -33,7 +33,7 @@ The object is then added to the form.
 
 This library is read-only. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below). 
 
-All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+All objects proposed in the standard object library are described on [this section](../FormEditor/objectLibrary.md).
 
 
 ## Creating and using custom object libraries

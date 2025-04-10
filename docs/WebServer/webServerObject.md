@@ -16,7 +16,7 @@ Other than memory, there is no limit to the number of components and thus, of we
 
 Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below). 
+> The legacy [WEB commands](../commands/theme/Web_Server.md) of the 4D language are supported but cannot select the web server to which they apply (see below). 
 
 Each web server (host application or component) can be used in its own separate context, including:
 - `On Web Authentication` and `On Web Connection` database method calls
@@ -104,7 +104,7 @@ These properties are defined:
 
 ## Scope of the 4D Web commands
 
-The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate. 
+The 4D Language contains [several commands](../commands/theme/Web_Server.md) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate. 
 
 |Command|Scope|
 |---|---|

@@ -23,7 +23,7 @@ Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` comman
 
 The form returned for each format will depend on the way the Codec is recorded at the operating system level. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
 
-Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command.
+Most of the [4D picture management commands](../commands/theme/Pictures.md) can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command.
 Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command.
 
 

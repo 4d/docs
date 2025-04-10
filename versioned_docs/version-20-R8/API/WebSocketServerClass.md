@@ -39,7 +39,7 @@ In addition, you will have to create two user classes that will contain callback
 - a user class to handle server connections,
 - a user class to handle messages.
 
-You must [create the WebSocket server](#4dwebsocketservernew) within a [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) to keep the connection alive.
+You must [create the WebSocket server](#4dwebsocketservernew) within a [worker](../Develop/processes.md#worker-processes) to keep the connection alive.
 
 The [4D Web Server](WebServerClass.md) must be started.
 
