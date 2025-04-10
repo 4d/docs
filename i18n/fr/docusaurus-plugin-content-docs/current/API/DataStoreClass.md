@@ -557,7 +557,7 @@ Cette fonction doit être appelée sur un client 4D distant, sinon elle retourne
 
 Collection d'objets requête empilés. La requête la plus récente porte l'indice 0.
 
-Pour une description du format du journal des requêtes ORDA, veuillez vous référer à la section [**Requêtes des clients ORDA**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.fr.html#4385373).
+Pour une description du format du journal des requêtes ORDA, veuillez vous référer à la section [**Requêtes ORDA**](../Debugging/debugLogFiles.md#orda-requests).
 
 #### Exemple
 
