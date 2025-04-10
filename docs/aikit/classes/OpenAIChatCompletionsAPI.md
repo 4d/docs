@@ -11,16 +11,19 @@ https://platform.openai.com/docs/api-reference/chat
 
 ## Functions
 
-### create
+### create()
 
-https://platform.openai.com/docs/api-reference/chat/create
+**create**(*messages* : Collection of [OpenAIMessage](OpenAIMessage.md) ; *parameters* : [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)) : Object
+
+| Parameter         | Type                                      | Description                               |
+|-------------------|-------------------------------------------|-------------------------------------------|
+| *messages*        | Collection of [OpenAIMessage](OpenAIMessage.md) | The chat messages to include in the request. |
+| *parameters*      | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | The parameters for the chat completion request. |
+| Function result   | Object                                    | The result of the chat completion request. |
 
 Creates a model response for the given chat conversation.
 
-| Argument     | Type                                      | Description                               |
-|--------------|-------------------------------------------|-------------------------------------------|
-| `$messages`  | Collection of [OpenAIMessage](OpenAIMessage.md)   | The chat messages to include in the request. |
-| `$parameters`| [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)            | The parameters for the chat completion request. |
+https://platform.openai.com/docs/api-reference/chat/create
 
 #### Example Usage
 
@@ -44,46 +47,58 @@ Append assistant response for next completion request
 $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" }
 ```
 
-### retrieve
+### retrieve()
 
-https://platform.openai.com/docs/api-reference/chat/get
+**retrieve**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
+
+| Parameter         | Type                                      | Description                               |
+|-------------------|-------------------------------------------|-------------------------------------------|
+| *completionID*    | Text                                      | The ID of the chat completion to retrieve. |
+| *parameters*      | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.    |
+| Function result   | Object                                    | The retrieved chat completion object.     |
 
 Get a stored chat completion.
 
-| Argument         | Type   | Description                               |
-|------------------|--------|-------------------------------------------|
-| `$completionID`  | Text   | The ID of the chat completion to retrieve. |
-| `$parameters`    | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.    |
+https://platform.openai.com/docs/api-reference/chat/get
 
-### update
+### update()
 
-https://platform.openai.com/docs/api-reference/chat/update
+**update**(*completionID* : Text; *metadata* : Object, *parameters* : OpenAIParameters) : Object
+
+| Parameter         | Type                                      | Description                               |
+|-------------------|-------------------------------------------|-------------------------------------------|
+| *completionID*    | Text                                      | The ID of the chat completion to update. |
+| *metadata*        | Object                                    | Metadata to update the completion with.   |
+| *parameters*      | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.    |
+| Function result   | Object                                    | The updated chat completion object.       |
 
 Modify a stored chat completion.
 
-| Argument         | Type   | Description                               |
-|------------------|--------|-------------------------------------------|
-| `$completionID`  | Text   | The ID of the chat completion to update. |
-| `$metadata`      | Object | Metadata to update the completion with.   |
-| `$parameters`    | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.    |
+https://platform.openai.com/docs/api-reference/chat/update
 
-### delete
+### delete()
+
+**delete**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
+
+| Parameter         | Type                                      | Description                               |
+|-------------------|-------------------------------------------|-------------------------------------------|
+| *completionID*    | Text                                      | The ID of the chat completion to delete.  |
+| *parameters*      | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.    |
+| Function result   | Boolean                                   | Whether the deletion was successful.      |
+
+Delete a stored chat compltions.
 
 https://platform.openai.com/docs/api-reference/chat/delete
 
-Delete a stored chat completion.
+### list()
 
-| Argument         | Type   | Description                               |
-|------------------|--------|-------------------------------------------|
-| `$completionID`  | Text   | The ID of the chat completion to delete.  |
-| `$parameters`    | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.    |
+**list**(*parameters* : OpenAIChatCompletionsListParameters) : Collection
 
-### list
-
-https://platform.openai.com/docs/api-reference/chat/list
+| Parameter         | Type                                      | Description                               |
+|-------------------|-------------------------------------------|-------------------------------------------|
+| *parameters*      | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | Parameters for listing chat completions.  |
+| Function result   | Collection                                | A collection of stored chat completions.  |
 
 List stored chat completions.
 
-| Argument         | Type                                      | Description                               |
-|------------------|-------------------------------------------|-------------------------------------------|
-| `$parameters`    | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md)       | Parameters for listing chat completions.  |
+https://platform.openai.com/docs/api-reference/chat/list

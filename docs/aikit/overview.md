@@ -5,7 +5,6 @@ title: 4D-AIKit
 
 # 4D-AIKit
 
-[![language][code-shield]][code-url]
 
 ## Overview
 
@@ -13,7 +12,7 @@ title: 4D-AIKit
 
 ## OpenAI
 
-The [`OpenAI`](Documentation/Classes/OpenAI.md) class allows you to make requests to the [OpenAI API](https://platform.openai.com/docs/api-reference/).
+The [`OpenAI`](Classes/OpenAI.md) class allows you to make requests to the [OpenAI API](https://platform.openai.com/docs/api-reference/).
 
 ### Configuration
 
@@ -23,7 +22,7 @@ First of all, initialize the OpenAI client using your API key
 var $client:=cs.AIKit.OpenAI.new("your api key")
 ```
 
-For a [compatible provider](Documentation/CompatibleOpenAI.md) API, you can configure the server URL by setting the `baseURL` parameter.
+For a [compatible provider](compatible-openai.md) API, you can configure the server URL by setting the `baseURL` parameter.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://your.server.ai"})
@@ -43,7 +42,7 @@ $client.baseURL:="https://your.server.ai"
 var $result:=$client.<resource>.<function>(<parameters...>)
 ```
 
-The `$result` contains the `HTTPRequest`, a `success` status, a collection of `errors` and more. See [OpenAIResult](Documentation/Classes/OpenAIResult.md)
+The `$result` contains the `HTTPRequest`, a `success` status, a collection of `errors` and more. See [OpenAIResult](Classes/OpenAIResult.md)
 
 See some examples bellow.
 
@@ -117,15 +116,8 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 If you do not want to wait for the OpenAPI response when sending a request to its API, you need to use asynchronous code. The result object will be received in a callback function.
 
-See [detailed documentation for examples](Documentation/AsynchronousCall.md)
+See [detailed documentation for examples](asynchronous-call.md)
 
-## License
-
-See the [LICENSE][license-url] file for details
-
-## Contributing
-
-See [CONTRIBUTING][contributing-url] guide.
 
 ## Copyright
 
@@ -133,9 +125,3 @@ See [CONTRIBUTING][contributing-url] guide.
 - "OpenAI" and any related marks are trademarks or registered trademarks of OpenAI, LLC. All rights related to OpenAI's services, APIs, and technologies remain the property of OpenAI.
 - This project simply provides an interface to OpenAI’s services and does not claim any ownership over their technology, branding, or intellectual property.
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[code-shield]: https://img.shields.io/static/v1?label=language&message=4d&color=blue
-[code-url]: https://developer.4d.com/
-[contributing-url]: .github/CONTRIBUTING.md
-[license-url]: LICENSE.md

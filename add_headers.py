@@ -1,7 +1,7 @@
 import os
 
 # Chemin du dossier contenant les fichiers Markdown
-folder_path = r"c:\Github\docs\docs\aikit\classes"
+folder_path = r"c:\Github\docs\docs\aikit"
 
 def generate_header(file_name, title):
     # Génère le header avec id et title

@@ -5,6 +5,8 @@ title: OpenAIModel
 
 # OpenAIModel
 
+A model description.
+
 https://platform.openai.com/docs/api-reference/models/object
 
 ## Properties

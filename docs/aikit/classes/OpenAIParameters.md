@@ -42,4 +42,3 @@ Several classes inherit from `OpenAIParameters` to extend its functionality for 
 - [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)
 - [OpenAIChatCompletionsMessagesParameters](OpenAIChatCompletionsMessagesParameters.md)
 - [OpenAIImageParameters](OpenAIImageParameters.md)
-- [OpenAIModerationParameters](OpenAIModerationParameters.md)

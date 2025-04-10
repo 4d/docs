@@ -11,11 +11,16 @@ The `OpenAIChatAPI` class provides an interface to interact with OpenAI's chat b
 
 | Property      | Type                               | Description                                             |
 |---------------|------------------------------------|--------------------------------------------------------|
-| `completions`   | [OpenAIChatCompletionsAPI](OpenAIChatCompletions.md)    | An instance that handles chat completions requests.    |
+| `completions`   | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md)    | An instance that handles chat completions requests.    |
 | `vision`        | [OpenAIVision](OpenAIVision.md)             | An helper instance that handles vision-related requests.       |
 
 ## Function
 
-### create($systemPrompt: Text): OpenAIChatHelper
+### create()
 
-Create a [OpenAIChatHelper](OpenAIChatHelper.md)
+**create**(*systemPrompt* : Text) : OpenAIChatHelper
+
+| Parameter        | Type  | Description                                |
+|------------------|-------|--------------------------------------------|
+| *systemPrompt*   | Text  | The system prompt to initialize the chat.  |
+| Function result | [OpenAIChatHelper](OpenAIChatHelper.md) | A helper instance for managing chat interactions. |

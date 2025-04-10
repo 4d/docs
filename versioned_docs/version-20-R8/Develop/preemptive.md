@@ -43,7 +43,7 @@ Since a thread is handled independently starting from the parent process method,
 
 The "thread safety" property of each element depends on the element itself:
 
-- 4D commands: thread safety is an internal property. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands/command-name.md) command to know if a command is thread-safe. A large part of 4D commands can run in preemptive mode.
+- 4D commands: thread safety is an internal property. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands-legacy/command-name.md) command to know if a command is thread-safe. A large part of 4D commands can run in preemptive mode.
 - Project methods: conditions for being thread-safe are listed in [this paragraph](#writing-a-thread-safe-method).
 
 Basically, code to be run in preemptive threads cannot call parts with external interactions, such as plug-in code or interprocess variables. Accessing data, however, is allowed since the 4D data server and ORDA support preemptive execution.

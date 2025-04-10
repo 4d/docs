@@ -11,20 +11,21 @@ https://platform.openai.com/docs/api-reference/images
 
 ## Functions
 
-### generate
+### generate()
 
-https://platform.openai.com/docs/api-reference/images/create
+**generate**(*prompt* : Text; *parameters* : OpenAIImageParameters) : OpenAIImagesResult
+
+| Parameter        | Type                                           | Description                                          |
+|------------------|------------------------------------------------|------------------------------------------------------|
+| *prompt*         | Text                                         | The prompt to use for image generation.              |
+| *parameters*     | [OpenAIImageParameters](OpenAIImageParameters.md) | Parameters for image generation.                     |
+| Function result| [OpenAIImagesResult](OpenAIImagesResult.md)       | The result containing the generated image(s).        |
 
 Creates an image given a prompt.
 
-| Argument     | Type                                           | Description                                          |
-|--------------|------------------------------------------------|------------------------------------------------------|
-| `$prompt`    | `Text`                                         | The prompt to use for image generation.              |
-| `$parameters`| [OpenAIImageParameters](OpenAIImageParameters.md) | Parameters for image generation.                     |
+https://platform.openai.com/docs/api-reference/images/create
 
-#### Returns: [OpenAIImagesResult](OpenAIImagesResult.md)
-
-## Example Usage
+## Example
 
 ```4d
 var $result:=$client.image.generate("A futuristic city skyline at sunset"; {size: "1024x1024"})

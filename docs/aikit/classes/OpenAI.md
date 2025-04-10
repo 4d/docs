@@ -31,7 +31,7 @@ Create an instance of the OpenAI client class.
 
 | Argument Name | Type     | Description                                           |
 |---------------|----------|-------------------------------------------------------|
-| `...`         | Text or Object  | apiKey if Text as first argument and the second can be an Object of parameters. |
+| *apiKey*         | Text or Object  | apiKey if Text as first argument and the second can be an Object of parameters. |
 
 #### API key
 
@@ -44,7 +44,7 @@ var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"})
 
 #### Server URL
 
-For a [compatible provider](../CompatibleOpenAI.md) API, you can configure the server URL.
+For a [compatible provider](../compatible-openai.md) API, you can configure the server URL.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://server.ai"})

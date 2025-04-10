@@ -19,25 +19,43 @@ https://platform.openai.com/docs/api-reference/images/object
 
 ## Functions
 
-### Method: `asBlob()`
+### asBlob()
 
-#### Returns: `4D.Blob`
+**asBlob**() : 4D.Blob
 
-Converts the generated image to a blob format based on its URL or base64-encoded JSON.
+| Function result| 4D.Blob | Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
 
-### Method: `asPicture()`
+#### Example Usage
 
-#### Returns: `Picture`
+```4d
+var $blob:=$image.asBlob()
+```
 
-Creates a picture object from the blob converted image.
+### asPicture()
 
-### Method: `saveToDisk($file : 4D.File)`
+**asPicture**() : Picture
 
-#### Arguments:
-| Argument   | Type            | Description                                             |
-|------------|----------------|---------------------------------------------------------|
-| `$file`    | 4D.File  | The file object where the image will be saved.        |
+| Function result| Picture | Creates a picture object from the blob converted image. |
 
-#### Returns: `Boolean`
+#### Example Usage
 
-Saves the image to disk, attempting to download it first if it is a URL. Returns `false` if it could not retrieve the image data.
+```4d
+var $picture:=$image.asPicture()
+```
+
+### saveToDisk()
+
+**saveToDisk**(*file* : 4D.File) : Boolean
+
+| Parameter        | Type    | Description                                             |
+|------------------|---------|---------------------------------------------------------|
+| *file*           | 4D.File | The file object where the image will be saved.          |
+| Function result| Boolean | Returns `True` if the image is successfully saved.       |
+
+Saves the image to disk, attempting to download it first if it is a URL. Returns `False` if it could not retrieve the image data.
+
+#### Example Usage
+
+```4d
+var $success:=$image.saveToDisk(Folder(fk desktop folder).file("image.png"))
+```

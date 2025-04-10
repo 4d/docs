@@ -13,32 +13,18 @@ title: OpenAIChatCompletionsStreamResult
 
 | Property  | Type                         | Description                                      |
 |-----------|------------------------------|--------------------------------------------------|
-| data      | Object                       | Contains the stream data sent by the server.    |
+| `data`      | Object                     | Contains the stream data sent by the server.    |
 
-## Computed properties
+## Computed Properties
 
-### choice
-
-**Description**: Return a choice data, with a `delta` message.
-
-**Returns**: [OpenAIChoice](OpenAIChoice.md) or Null
-
----
-
-### choices
-
-**Description**: Return choices data, with `delta` messages.
-
-**Returns**: Collection of [OpenAIChoice](OpenAIChoice.md)
-
----
+| Property   | Type                                   | Description                                                         |
+|------------|----------------------------------------|---------------------------------------------------------------------|
+| `choice`   | [OpenAIChoice](OpenAIChoice.md) | Returns a choice data, with a `delta` message.                             |
+| `choices`  | Collection  | Returns a collection of [OpenAIChoice](OpenAIChoice.md) data, with `delta` messages.           |
 
 ### Overrided properties
 
-#### `success`
-
-**Description**: Returns `True` if the streaming data was successfully decoded as an object.
-
-#### `terminated` 
-
-**Description**: A Boolean indicating whether the HTTP request was terminated. ie `onTerminate` called.
+| Property     | Type                                   | Description                                                         |
+|--------------|----------------------------------------|---------------------------------------------------------------------|
+| `success`    | [OpenAIChoice](OpenAIChoice.md) | Returns `True` if the streaming data was successfully decoded as an object. |
+| `terminated` | Boolean  | A Boolean indicating whether the HTTP request was terminated. ie `onTerminate` called.          |

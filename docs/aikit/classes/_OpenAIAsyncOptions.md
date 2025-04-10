@@ -13,26 +13,26 @@ The `_OpenAIAsyncOptions` internal class provides function to handle asynchronou
 
 | Property    | Type    |
 |-------------|---------|
-| method      | Text    |
-| headers     | Object  |
-| dataType    | Text    |
-| body        | Variant |
-| timeout     | Integer  |
+| `method`      | Text    |
+| `headers`     | Object  |
+| `dataType`    | Text    |
+| `body`        | Variant |
+| `timeout     | Integer  |
 
 ### Class instances Properties
 
 | Property    | Type    |
 |-------------|---------|
-| client      | [OpenAI](OpenAI.md) |
-| parameters  | [OpenAIChatCompletionsParameters](OpenAIChatCompletionParameters.md) |
-| result      | [OpenAIResult](OpenAIResult.md) |
+| `client`      | [OpenAI](OpenAI.md) |
+| `parameters`  | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) |
+| `result`      | [OpenAIResult](OpenAIResult.md) |
 
 ## Functions
 
-### onTerminate
+### onTerminate()
 
 On terminate send [OpenAIResult](OpenAIResult.md) to the callback "formula".
 
-### onData
+### onData()
 
 On data receive send [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md) to the callback "formula".
