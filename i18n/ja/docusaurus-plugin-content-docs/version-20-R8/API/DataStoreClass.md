@@ -558,7 +558,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 スタックされたリクエストオブジェクトのコレクションが返されます。 直近のリクエストにはインデックス 0 が振られています。
 
-ORDAリクエストログのフォーマットの詳細は、[**ORDAクライアントリクエスト**](https://doc.4d.com/4Dv18R6/4D/18-R6/Description-of-log-files.300-5217819.ja.html#4385373) の章を参照ください。
+ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエスト**](../Debugging/debugLogFiles.md#ordaリクエスト) の章を参照ください。
 
 #### 例題
 
