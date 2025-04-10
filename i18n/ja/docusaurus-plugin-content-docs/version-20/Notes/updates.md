@@ -303,7 +303,7 @@ ALERT($param1+" "+$param2)
 ```
 詳細については、こちらの [ブログ記事](https://blog.4d.com/ja/stop-press-accessing-parameters-not-being-passed-is-possible) を参照ください。 この全体的な変更を利点を活かすため、呼び出し先メソッドと呼び出し元メソッドの両方を再コンパイルする必要があります。 そのため、コンポーネントの再コンパイルが必要になります。
 - Debugging web server sessions [is easier on 4D Server](../WebServer/sessions.md).
-- 新しい [4D NetKit](https://github.com/4d/4D-NetKit) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
+- 新しい [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
 - ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。 4D 19 R3 では、4Dユーザーパスワードに対して、bcrypt というより強力なハッシュ化アルゴリズムを使用しています。 パスワードが一度変更されると、4D 19 R3 より前のバージョンで同じデータベースを開いた際には、そのアカウントの認証が拒否されます (ログインできません)。 そのため、4Dパスワードを使用している場合には、4D 19 R3 以降のバージョンにアップグレードする前に .4db ファイル (バイナリデータベース) または directory.json ファイル (プロジェクトデータベース) をバックアップしておくことが強く推奨されます。
 - 正確性のため、`4D digest` 定数は、`4D REST digest` へと名称が改められました。
 
