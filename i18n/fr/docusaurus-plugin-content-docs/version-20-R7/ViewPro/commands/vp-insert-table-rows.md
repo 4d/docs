@@ -21,7 +21,7 @@ title: VP INSERT TABLE ROWS
 | ----------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
 | vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | tableName   | Text    | -> | Nom de table                                                                |                  |
-| row         | Integer | -> | Index in the table of the starting row to insert                            |                  |
+| row         | Integer | -> | Indice dans la table de la ligne de départ à insérer                        |                  |
 | count       | Integer | -> | Number of rows to add (must be >0)                       |                  |
 | insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *row*                   |                  |
 | sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
@@ -37,7 +37,7 @@ In the *insertAfter* parameter, you can pass one of the following constants to i
 | `vk table insert before` | 0      | Insert row(s) before the *row* (default if omitted) |
 | `vk table insert after`  | 1      | Insert row(s) after the *row*                                          |
 
-This command inserts some rows in the *tableName* table, NOT in the sheet. The total number of rows of the sheet is not impacted by the command. Data present below the table (if any) are automatically moved down according to the number of added rows.
+This command inserts some rows in the *tableName* table, NOT in the sheet. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Les données présentes sous la table (le cas échéant) sont automatiquement déplacées vers le bas en fonction du nombre de lignes ajoutées.
 
 If the *tableName* table is bound to a [data context](vp-set-data-context.md), the command inserts new, empty element(s) in the collection.
 
@@ -63,7 +63,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 
 ![](../../assets/en/ViewPro/table-base.png)
 
-You want to insert two rows and two columns in the table, you can write:
+Vous voulez insérer deux lignes et deux colonnes dans la table, vous pouvez écrire :
 
 ```4d
 VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
