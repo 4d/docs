@@ -31,7 +31,7 @@ A janela tem as seguintes características principais:
 
 Esta biblioteca é só de leitura. Se quiser editar objetos padrão ou criar sua própria biblioteca de objetos pré-configurados ou formulários projetos, você precisará criar uma biblioteca de objetos personalizada (veja abaixo).
 
-Todos los objetos propuestos en la librería de objetos estándar se describen en [esta sección en doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+All objects proposed in the standard object library are described on [this section](../FormEditor/objectLibrary.md).
 
 ## Utilização da biblioteca de objetos padrão
 
