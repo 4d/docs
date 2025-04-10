@@ -37,13 +37,13 @@ Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécif
 
 La commande retourne un objet décrivant les attributs courants de la *column*:
 
-| Propriété           | Type    | Description                                                                                                                                     |
-| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Nom de la propriété de la colonne de la table dans le contexte de données. Not returned if the table is displayed automatically |
-| name                | text    | Nom de la colonne de la table.                                                                                                  |
-| footerText          | text    | Valeur du pied de colonne.                                                                                                      |
-| footerFormula       | text    | Formule de pied de colonne.                                                                                                     |
-| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                                         |
+| Propriété           | Type    | Description                                                                                                                                      |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dataField           | text    | Nom de la propriété de la colonne de la table dans le contexte de données. Non retourné si la table est affichée automatiquement |
+| name                | text    | Nom de la colonne de la table.                                                                                                   |
+| footerText          | text    | Valeur du pied de colonne.                                                                                                       |
+| footerFormula       | text    | Formule de pied de colonne.                                                                                                      |
+| filterButtonVisible | boolean | True si le bouton de filtre de la colonne de la table est affiché, False sinon.                                                  |
 
 Si *tableName* n'est pas trouvé ou si l'index *column* est supérieur au nombre de colonnes, la commande retourne **null**.
 
