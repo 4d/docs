@@ -41,7 +41,7 @@ Dado que un hilo se maneja de forma independiente a partir del método del proce
 
 La propiedad "seguridad de hilo" de cada elemento depende del elemento en sí:
 
-- Comandos 4D: hilo seguro es una propiedad interna. En el [Manual de Referencia del Lenguaje 4D](https://doc.4d.com/4Dv20/4D/20.1/4D-Language-Reference.100-6479538.en.html), los comandos hilo seguro se identifican por el icono ![](../assets/en/Develop/thread-safe.png). También puede utilizar el comando [`Nombre del comando`](https://doc.4d.com/4dv20/help/command/en/page538.html) para saber si un comando es hilo seguro. Gran parte de los comandos 4D pueden ejecutarse en modo apropiativo.
+- Comandos 4D: hilo seguro es una propiedad interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. También puede utilizar el comando [`Nombre del comando`](../commands/command-name.md) para saber si un comando es hilo seguro. Gran parte de los comandos 4D pueden ejecutarse en modo apropiativo.
 - Métodos de proyecto: las condiciones para seguridad de hilo se listan en [este párrafo](#writing-a-thread-safe-method).
 
 Básicamente, el código que se ejecuta en hilos apropiativos no puede llamar a las partes con las interacciones externas, tal como el código plug-in o las variables interproceso. Los accesos a los datos, sin embargo, son permitidos desde el servidor de datos 4D que soporta la ejecución apropiativa.
@@ -141,7 +141,7 @@ La ejecución de un método en modo apropiativo dependerá de su propiedad "ejec
 
 4D permite identificar el modo de ejecución de los procesos en modo compilado:
 
-- El comando [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html) permite averiguar si un proceso se ejecuta en modo apropiativo o cooperativo.
+- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
 - El Explorador de ejecución y la [ventana de administración de 4D Server](../ServerWindow/processes.md#process-type) muestran iconos específicos para los procesos apropiativos.
 
 ## Escribir un método hilo seguro
@@ -193,7 +193,7 @@ Los únicos accesos posibles a la interfaz de usuario desde un hilo apropiativo 
 
 ### Triggers
 
-When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
 ```4d
  SAVE RECORD([Table_1]) //activar en Table_1, si existe, debe ser hilo seguro
@@ -216,7 +216,7 @@ En este caso, se evalúan todos los triggers. Si se detecta un comando que no se
 
 :::note
 
-En [aplicaciones client/servidor](../Desktop/clientServer.md), los triggers pueden ser ejecutados en modo cooperativo, incluso si su código es hilo seguro. Esto ocurre cuando se activa un trigger desde un proceso remoto: en este caso, el trigger se ejecuta en el ["proceso gemelo" del proceso cliente](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) en la máquina del servidor. Dado que este proceso se utiliza para todas las llamadas del cliente, siempre se ejecuta en modo cooperativo.
+En [aplicaciones client/servidor](../Desktop/clientServer.md), los triggers pueden ser ejecutados en modo cooperativo, incluso si su código es hilo seguro. Esto ocurre cuando se activa un trigger desde un proceso remoto: en este caso, el trigger se ejecuta en el ["proceso gemelo" del proceso cliente](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) en la máquina del servidor. Dado que este proceso se utiliza para todas las llamadas del cliente, siempre se ejecuta en modo cooperativo.
 
 :::
 
