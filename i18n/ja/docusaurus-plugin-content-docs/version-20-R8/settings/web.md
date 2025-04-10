@@ -3,7 +3,7 @@ id: web
 title: Web ページ
 ---
 
-**Web** ページのタブを使用して、4D に統合された Webサーバーの様々な設定 (セキュリティ、開始オプション、接続、Webサービス等) にアクセスできます。 4D Webサーバーの動作に関する詳細は [Web サーバー](../WebServer/webServer.md) を参照ください。 また、Webサービスに関する詳細は [Web サービスの公開と使用](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.ja.html) を参照ください。
+**Web** ページのタブを使用して、4D に統合された Webサーバーの様々な設定 (セキュリティ、開始オプション、接続、Webサービス等) にアクセスできます。 4D Webサーバーの動作に関する詳細は [Web サーバー](../WebServer/webServer.md) を参照ください。 For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter.
 
 ## 設定
 
@@ -90,7 +90,7 @@ Webページキャッシュを有効化します。 [キャッシュ](../WebServ
 
 *互換性に関する注記*: このオプションは 4D v18 R6 以前のバージョンで作成されたデータベース/プロジェクトでのみ利用可能です。
 
-このオプションは 4D HTTP サーバーの旧式ユーザーセッションの管理を有効化します。 この機構は [Webセッション管理(旧式)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.ja.html) にて詳細に説明されています。 [旧式セッション (自動セッション管理)](../WebServer/webServerConfig.md#旧式セッション-自動セッション管理) 参照。
+このオプションは 4D HTTP サーバーの旧式ユーザーセッションの管理を有効化します。 This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html) section. [旧式セッション (自動セッション管理)](../WebServer/webServerConfig.md#旧式セッション-自動セッション管理) 参照。
 
 このオプションが選択されていると、[一時的なコンテキストを再利用する (リモートモード)](#一時的なコンテキストを再利用する) オプションも自動で選択され、ロックされます。
 
@@ -248,7 +248,7 @@ ELF (Extended Log Format) または WLF (WebStar Log Format) を選択すると�
 
 このページのオプションを使用して 4Dプロジェクトの Webサービスを有効にし、(サーバーおよびクライアントの) 設定をすることができます。
 
-4Dにおける Webサービスサポートについては [Web サービスの公開と使用](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.ja.html) を参照ください。
+For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter.
 
 ### サーバー側設定
 
