@@ -41,7 +41,7 @@ Le code 4D ne peut être exécuté dans un process préemptif que lorsque certai
 
 La propriété "thread safety" de chaque élément dépend de l'élément lui-même :
 
-- Commandes 4D : la propriété thread-safe est une propriété interne. Dans le manuel Langage de 4D, les commandes thread-safe sont identifiées par l'icône ![](../assets/en/Develop/thread-safe.png). Vous pouvez également utiliser la commande [`Command name`](https://doc.4d.com/4dv20/help/command/fe/page538.html) pour savoir si une commande peut être utilisée de manière thread-safe. Une grande partie des commandes 4D peut s'exécuter en mode préemptif.
+- Commandes 4D : la propriété thread-safe est une propriété interne. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands/command-name.md) command to know if a command is thread-safe. Une grande partie des commandes 4D peut s'exécuter en mode préemptif.
 - Méthodes projet : les conditions pour être thread-safe sont répertoriées dans [ce paragraphe](#writing-a-thread-safe-method).
 
 Fondamentalement, le code à exécuter dans des threads préemptifs ne peut pas appeler des parties avec des interactions externes, telles que du code de plug-in ou des variables interprocess. Cependant, l'accès aux données est autorisé car le serveur de données 4D et ORDA prennent en charge l'exécution préemptive.
@@ -141,7 +141,7 @@ Exécuter une méthode en mode préemptif dépendra de sa propriété "execution
 
 4D vous permet d'identifier le mode d'exécution des process en mode compilé :
 
-- La commande [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/fr/page336.html) vous permet de savoir si un process est exécuté en mode préemptif ou coopératif.
+- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
 - L'Explorateur d'exécution et la [fenêtre d'administration de 4D Server](../ServerWindow/processes.md#process-type) affichent des icônes spécifiques pour les process préemptifs.
 
 ## Ecrire une méthode thread-safe
@@ -193,7 +193,7 @@ Les seuls accès possibles à l'interface utilisateur depuis un thread préempti
 
 ### Triggers
 
-When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
 ```4d
  SAVE RECORD([Table_1]) //trigger sur Table_1, s'il existe, doit être thread-safe
@@ -216,7 +216,7 @@ Dans ce cas, tous les triggers sont évalués. Si une commande thread-unsafe est
 
 :::note
 
-In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
 
 :::
 
