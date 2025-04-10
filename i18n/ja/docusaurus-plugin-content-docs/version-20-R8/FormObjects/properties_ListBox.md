@@ -31,7 +31,7 @@ title: リストボックス
 
 指定されたフォームは以下のタイミングで表示されます:
 
-- リストボックスに関連付けられている `addSubrecord` (サブレコード追加)、または `editSubrecord` (サブレコード編集) の標準アクションを使用したとき ([標準アクションの使用](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.ja.html) を参照してください)。
+- when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html)),
 - [行をダブルクリック](#行をダブルクリック) プロパティが「レコード編集」か「レコード表示」に設定されている場合に行をダブルクリックしたとき。
 
 #### JSON 文法
@@ -154,7 +154,7 @@ title: リストボックス
 
 リストボックスに表示される列の数を指定します。
 
-> [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/ja/page829.html) や [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/ja/page830.html) などのコマンドを使うことで、プログラミングによって列数を動的に変更 (列の追加・削除) することができます。
+> You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) or [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md).
 
 #### JSON 文法
 
