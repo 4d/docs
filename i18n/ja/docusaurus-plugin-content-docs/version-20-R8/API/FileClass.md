@@ -694,7 +694,7 @@ $infoPlistFile.setAppInfo($info)
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
-> **互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 doc.4d.com の[互換性ページ](https://doc.4d.com/4dv19R/help/title/ja/page3239.html) を参照ください。
+**互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
 
 #### 例題
 
