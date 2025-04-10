@@ -758,7 +758,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### Description
 
-La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. Un tableau contient généralement des données liées dans des lignes et des colonnes, et tire parti d'un [contexte de données](#vp-set-data-context).
+La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. Une table contient généralement des données liées dans des lignes et des colonnes, et tire parti d'un [contexte de données](#vp-set-data-context).
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
@@ -770,34 +770,34 @@ Dans *tableName*, passez un nom pour la table. Le nom doit :
 * inclure au moins 5 caractères
 * ne pas inclure d'espaces ou commencer par un nombre
 
-In *source*, you can pass a property name of a [data context](#vp-set-data-context) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row.
+Dans *source*, vous pouvez passer le nom d'une propriété de [contexte de données](#vp-set-data-context) dont vous souhaitez afficher les données dans la table. Cela relie la table au contexte de données. Lorsque le contexte de données est mis à jour, les données affichées dans la table sont mises à jour en conséquence. La propriété *source* doit contenir une collection d'objets et chaque élément représente une ligne.
 
-  * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*.
-  * If the specified *source* cannot be fully displayed in the document, no table is created.
+  * Si vous ne spécifiez pas de *source*, la commande crée une table vide avec la taille définie dans *rangeObj*.
+  * Si la *source* spécifiée ne peut pas être entièrement affichée dans le document, aucune table n'est créée.
 
-In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](classes.md#tableoptions) that contains the table properties to set.
+Dans le paramètre *options*, passez un objet de la classe [`cs.ViewPro.TableOptions`](classes.md#tableoptions) qui contient les propriétés de la table à définir.
 
 *columnCount* doit être supérieur à 0. Passez le nombre total de colonnes dans le paramètre *columnCount*.
 
-  * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
-  * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
+  * Lorsque le nombre de colonnes dans *rangeObj* dépasse le nombre de colonnes dans *tableColumns*, la table est remplie avec des colonnes vides supplémentaires.
+  * Lorsque le nombre de colonnes dans *rangeObj* est inférieur au nombre de *tableColumns*, la table affiche le nombre de colonnes qui correspondent au nombre de colonnes de la plage.
 
-If you pass a *source* but no *tableColumn* option, the command generates columns automatically. In this case, *rangeObj* must be a cell range. Otherwise, the first cell of the range is used. When generating columns automatically, the following rules apply:
+Si vous passez une *source* mais pas de *tableColumn* la commande génère automatiquement des colonnes. Dans ce cas, *rangeObj* doit être une plage de cellules. Sinon, la première cellule de la plage est utilisée. Lors de la génération automatique de colonnes, les règles suivantes s'appliquent :
 
-* If the data passed to the command is a collection of objects, the property names are used as column titles. Par exemple :
+* Si les données passées à la commande sont une collection d'objets, les noms de propriétés sont utilisés comme titres de colonnes. Par exemple :
 
 ```4d
 ([{ LastName: \"Freehafer\", FirstName: \"Nancy\"},{ LastName: \"John\", FirstName: \"Doe\"})
 ```
-Here the titles of the columns would be `LastName` and `FirstName`.
+Ici les titres des colonnes seraient `LastName` et `FirstName`.
 
-* If the data passed to the command is a collection of scalar values, it must contain a collection of subcollections:
+* Si les données passées à la commande sont une collection de valeurs scalaires, elle doit contenir une collection de sous-collections :
 
-  * La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Passez une collection vide pour sauter une ligne. The number of values in the first subcollection determines how many columns are created.
-  * The subcollections' indices are used as column titles.
-  * Chaque sous-collection définit les valeurs des cellules de la ligne. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](#vp-set-value).
+  * La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Passez une collection vide pour sauter une ligne. Le nombre de valeurs dans la première sous-collection détermine le nombre de colonnes créées.
+  * Les indices des sous-collections sont utilisés comme titres de colonnes.
+  * Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs peuvent être de type `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` ou `Picture`. Une valeur `Time` doit être un objet contenant un attribut time, tel que décrit dans [VP SET VALUE](#vp-set-value).
 
-> This only works when generating columns automatically. You cannot use a collection of scalar data with the *tableColumns* option.
+> Cela ne fonctionne que lors de la génération automatique de colonnes. Vous ne pouvez pas utiliser une collection de données scalaires avec l'option *tableColumns*.
 
 
 #### Exemple
@@ -805,7 +805,7 @@ Here the titles of the columns would be `LastName` and `FirstName`.
 Pour créer une table en utilisant un contexte de données :
 
 ```4d
-// Set a data context
+// Définition du contexte de données
 var $data : Object
 
 $data:=New object()
@@ -816,7 +816,7 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// Define the columns for the table
+// Définitions des colonnes de la table
 var $options : cs.ViewPro.TableOptions
 
 $options:=cs.ViewPro.TableOptions.new()
@@ -825,7 +825,7 @@ $options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "First name"; "dat
 $options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Last name"; "dataField"; "lastName"))
 $options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Email"; "dataField"; "email"))
 
-// Create a table from the "people" collection
+// Création d'une table à partir de la collection "people"
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
@@ -1203,7 +1203,6 @@ $condition.target:=vk find target text
 $condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
 
-  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 $result:=VP Find($range;"Total";$condition;"Grand Total")
 
   // Check for empty range object
@@ -1646,13 +1645,13 @@ $index:=VP Get current sheet("ViewProArea")
 
 La commande `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->retourne le data context courant d'une feuille de calcul<!-- END REF -->. Le contexte retourné inclut toutes les modifications apportées au contenu du contexte de données.
 
-In *sheet*, pass the index of the sheet to get the data context from. Si aucun index n'est passé, la commande retourne le contexte de données de la feuille de travail courante. If there is no context for the worksheet, the command returns `Null`.
+Dans *sheet*, passez l'index de la feuille dans laquelle récupérer le contexte des données. Si aucun index n'est passé, la commande retourne le contexte de données de la feuille de travail courante. S'il n'y a pas de contexte pour la feuille de travail, la commande retourne `Null`.
 
-The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](#vp-set-data-context).
+La fonction retourne un objet ou une collection en fonction du type de contexte de données défini avec [VP SET DATA CONTEXT](#vp-set-data-context).
 
 #### Exemple
 
-To get the data context bound to the following cells:
+Pour obtenir le contexte de données lié aux cellules suivantes :
 
 ![](../assets/en/ViewPro/vp-set-data-context-bind.png)
 
@@ -2215,7 +2214,7 @@ Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode re
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-In *index*, pass the index of the sheet to remove. If the passed *index* does not exist, the command does nothing.
+Dans *name*, passez le nom de la feuille dont l'index sera retourné. Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode retourne -1.
 > La numérotation démarre à 0.
 
 #### Exemple
@@ -2224,7 +2223,7 @@ Dans le document suivant :
 
 ![](../assets/en/ViewPro/vp-sheet-index-name.png)
 
-Lire l'index de la feuille appelée "Total premier trimester" :
+Lire l'index de la feuille appelée "Total premier trimestre" :
 
 ```4d
 $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //retourne 2
@@ -2333,7 +2332,7 @@ $options:=VP Get sheet options("ViewProArea")
 
 #### Description
 
-retourne `True` si les lignes de prévisualisation d'impression sont visibles et `False` si elles sont masquées. <!-- REF #_method_.VP Get show print lines.Summary -->La commande `VP Get show print lines`<!-- END REF -->
+La commande `VP Get show print lines` <!-- REF #_method_.VP Get show print lines.Summary -->retourne `True` si les lignes de prévisualisation d'impression sont visibles et `False` si elles sont masquées.<!-- END REF -->
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
@@ -2382,10 +2381,10 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans
+// Rechercher toutes les cellules fusionnées 
 $range:=VP Get spans(VP All("ViewProArea"))
-
-//center text
+ 
+//centrer le texte
 $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```
@@ -2541,17 +2540,17 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
-The command returns an object describing the current attributes of the *column*:
+La commande retourne un objet décrivant les attributs courants de *column* :
 
-| Propriété           | Type    | Description                                                                                                                     |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Nom de la propriété de la colonne de la table dans le contexte de données. Not returned if the table is displayed automatically |
-| name                | text    | Nom de la colonne de la table.                                                                                                  |
-| footerText          | text    | Valeur du pied de colonne.                                                                                                      |
-| footerFormula       | text    | Formule de pied de colonne.                                                                                                     |
-| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                                         |
+| Propriété           | Type    | Description                                                                                                                      |
+| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| dataField           | text    | Nom de la propriété de la colonne de la table dans le contexte de données. Non retourné si la table est affichée automatiquement |
+| name                | text    | Nom de la colonne de la table.                                                                                                   |
+| footerText          | text    | Valeur du pied de colonne.                                                                                                       |
+| footerFormula       | text    | Formule de pied de colonne.                                                                                                      |
+| filterButtonVisible | boolean | True si le bouton de filtre de la colonne de la table est affiché, False sinon.                                                  |
 
-If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
+Si *tableName* n'est pas trouvé ou si l'index de *column* est supérieur au nombre de colonnes, la commande retourne **null**.
 
 #### Exemple
 
@@ -2599,7 +2598,7 @@ La commande `VP Get table column index` <!-- REF #_method_.VP Get table column i
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-In *columnName*, pass the name of the table column for which you want to get the index.
+Dans *columnName*, passez le nom de la colonne de la table de laquelle vous souhaitez obtenir l'index.
 
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
@@ -2637,13 +2636,13 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Paramètres | Type       |    | Description                                                                                       |
-| ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                                                           |
-| tableName  | Text       | -> | Nom de table                                                                                      |
-| reset      | Boolean    | -> | True to clear the dirty status from the current table, False to keep it untouched. Default=True   |
-| sheet      | Integer    | -> | Numéro d'indice de la feuille (feuille courante si omis)                                          |
-| Résultat   | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                                                                        |
+| ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------ |
+| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                                                                            |
+| tableName  | Text       | -> | Nom de table                                                                                                       |
+| reset      | Boolean    | -> | True pour effacer le statut dirty de la table courante, False pour ne pas le modifier. Par défaut = True           |
+| sheet      | Integer    | -> | Numéro d'indice de la feuille (feuille courante si omis)                                                           |
+| Résultat   | Collection | <- | Collection d'objets avec tous les éléments modifiés depuis la dernière réinitialisation|<!-- END REF -->
 
 
 |
@@ -2651,19 +2650,19 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 #### Description
 
-The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
+La commande `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->retourne une collection d'objets *dirty row*, contenant les éléments qui ont été modifiés depuis la dernière réinitialisation dans la *tableName* spécifiée<!-- END REF -->.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-In *tableName*, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](#vp-set-data-context) will be taken into account.
+Dans *tableName*, passez le nom de la table de laquelle vous voulez récupérer les dirty rows. Seules les colonnes modifiées liées à un [contexte de données](#vp-set-data-context) seront prises en compte.
 
-By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
+Par défaut, appeler la commande effacera le statut *dirty* de la table courante. Pour ne pas modifier ce statut, passez `False` dans le paramètre *reset*.
 
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
-Each *dirty row* object in the returned collection contains the following properties:
+Chaque objet *dirty row* dans la collection retournée contient les propriétés suivantes :
 
 | Propriété    | Type    | Description                        |
 | ------------ | ------- | ---------------------------------- |
@@ -2720,12 +2719,12 @@ La commande `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-In the *onlyData* parameter, you can pass one of the following constants to indicate if you want to get the data only:
+Dans le paramètre *onlyData*, vous pouvez passer une des constantes suivantes pour indiquer si vous voulez obtenir les données uniquement :
 
-| Constante             | Valeur | Description                                                                       |
-| --------------------- | ------ | --------------------------------------------------------------------------------- |
-| `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1      | Get the cell range for the table data area only                                   |
+| Constante             | Valeur | Description                                                                                               |
+| --------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| `vk table full range` | 0      | Récupérer la plage de cellules pour la zone de la table avec pied de page et en-tête (par défaut si omis) |
+| `vk table data range` | 1      | Récupérer la plage de cellules uniquement pour la zone de données de la table                             |
 
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 > La numérotation démarre à 0.
@@ -2973,9 +2972,9 @@ retourne un objet contenant les options du workbook dans *vpAreaName*<!-- END RE
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-The returned object contains all the workbook options (default and modified ones), in the workbook.
+L'objet retourné contient toutes les options du classeur (par défaut et modifiées) dans le classeur.
 
-The list of workbook options is referenced in [`VP SET WORKBOOK OPTIONS`'s description](#vp-set-workbook-options).
+La liste des options du workbook est référencée dans la description de [`VP SET WORKBOOK OPTIONS`](#vp-set-workbook-options).
 
 #### Exemple
 
