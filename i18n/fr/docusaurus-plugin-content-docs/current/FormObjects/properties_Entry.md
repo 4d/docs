@@ -85,8 +85,6 @@ La plupart du temps, les [filtres intégrés](#default-entry-filters) de 4D rép
 - vous pouvez directement entrer une chaîne de définition de filtre
 - ou vous pouvez entrer le nom d'un filtre de saisie créé dans l'éditeur de filtres de la Boîte à outils. Les noms des filtres personnalisés que vous créez commencent par une barre verticale (|).
 
-For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
-
 ### Filtres par défaut
 
 Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de saisie :
