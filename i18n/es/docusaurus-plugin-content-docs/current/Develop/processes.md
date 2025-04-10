@@ -144,7 +144,7 @@ El proceso principal creado por 4D al abrir una base de datos para los modos usu
 
 ### Identificación de los procesos workers
 
-Todos los procesos worker, excepto el proceso principal, tienen el tipo de proceso `Worker process` (5) devuelto por el comando [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html).
+All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`Process info`](../commands/process-info.md) command.
 
 [Iconos específicos](../ServerWindow/processes#process-type) identifican los procesos worker.
 
