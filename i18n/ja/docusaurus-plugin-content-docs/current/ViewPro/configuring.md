@@ -51,7 +51,7 @@ title: 4D View Pro エリアの設定
 
 4D View Pro エリアのプロパティリスト内では、以下のフォームイベントが利用可能です。
 
-一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。 また一部の標準フォームイベントは、4D View Pro エリアにおいて生成された場合、[`FORM Event`](https://doc.4d.com/4dv19/help/command/ja/page1606.html) コマンドが返すオブジェクトに追加の情報を提供します。 以下の表は標準イベントと、4D View Pro 専用または追加情報を提供するイベントの一覧です:
+一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。 Some standard form events provide extended information in the object returned by the [`FORM Event`](../commands/form-event.md) command when they are generated for 4D View Pro areas. 以下の表は標準イベントと、4D View Pro 専用または追加情報を提供するイベントの一覧です:
 
 | 標準の 4Dイベント                                      | 4D View Pro 専用、または追加情報を返すイベント                         |
 | ----------------------------------------------- | ----------------------------------------------------- |
