@@ -15,9 +15,9 @@ title: セキュリティページ
 
     注:
 
-    - デザインモードへのアクセスグループを設定すると、データ読み込みダイアログの **テーブルを作成** オプションが無効となります。 このダイアログボックスに関する詳細は [ファイルからデータを読み込む](https://doc.4d.com/4Dv19/4D/19/Importing-data-from-files.300-5416859.ja.html) を参照ください。
+    - デザインモードへのアクセスグループを設定すると、データ読み込みダイアログの **テーブルを作成** オプションが無効となります。 For more information about this dialog box, refer to [Importing data from files](https://doc.4d.com/4Dv20/4D/20.2/Importing-data-from-files.300-6750325.en.html).
 
-    - Designer とAdministrator は常にデザインモードとランタイムエクスプローラーにアクセスできます。設定されるアクセスグループのメンバーに含められる必要はありません。ユーザーおよびグループに関する詳細は [ユーザー＆グループ](https://doc.4d.com/4Dv19/4D/19/Users-and-groups.200-5416628.ja.html) を参照ください。
+    - The Designer and Administrator always have access to the Design environment and Runtime Explorer, even if they are not explicitly part of the specified access group.For more information about users and user groups, refer to the [Users and groups](../Users/handling_users_groups.md) chapter.
 
 - **デフォルトユーザー**: デフォルトユーザーが設定されると、データベースを開く、あるいはデータベースにログインするすべてのユーザーは、このデフォルトユーザーに定義されたアクセス権と同じ制限を持つことになります。 ユーザー名の入力が不要になるだけでなく、 デフォルトユーザーにパスワードを割り当てていない場合、パスワードダイアログボックスは表示されず、データベースが直接開かれます。
     このオプションを使用することで、完全なデータコントロールシステムを維持しつつ、データベースへのアクセスをシンプルにすることができます。
@@ -25,11 +25,11 @@ title: セキュリティページ
     - デフォルトユーザーにパスワードを割り当てた場合、データベースが開かれるときにダイアログが表示され、パスワードの入力を求められます。
     - デフォルトユーザーにパスワードを割り当てない場合、上記のダイアログは表示されません。<br/> **注:** "デフォルトユーザー" モードが有効になっているときでも、強制的にユーザー認証ダイアログを表示させることができます。これはたとえば Administrator や Designer としてログインするために必要となります。 これには、データベースを開いたり接続したりする際に **Shift**キーを押したままにします。
 
-- **パスワードダイアログにユーザーリストを表示する**: このオプションが選択されていると、ユーザー認証ダイアログにユーザーリストが表示され、ユーザーはその中から名前を選択し、パスワードを入力することになります。 オプションが選択されていない場合、ユーザーは名前とパスワードの両方を入力します。 パスワードダイアログボックスの 2つのバージョンに関する詳細は [アクセスシステムの概要](https://doc.4d.com/4Dv19/4D/19/Access-system-overview.300-5416896.ja.html) を参照ください。
+- **パスワードダイアログにユーザーリストを表示する**: このオプションが選択されていると、ユーザー認証ダイアログにユーザーリストが表示され、ユーザーはその中から名前を選択し、パスワードを入力することになります。 オプションが選択されていない場合、ユーザーは名前とパスワードの両方を入力します。 For more information about the two versions of the password dialog box, see the section "Access system overview" in [Access system overview](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html).
 
     - **ユーザーリストをABC順で表示する** (上記オプションが選択されているときのみ有効です): このオプションが選択されていると、ユーザー認証ダイアログボックスのユーザーリストは名前の ABC順に表示されます。
 
-- **ユーザーは自分のパスワードを変更可能**: このオプションが選択されていると、ユーザー認証ダイアログに **変更** ボタンが表示されます。 このボタンを使用すると、パスワードを変更するためのダイアログボックスが表示されます (このダイアログに関する詳細は [パスワードアクセスシステムの保守](https://doc.4d.com/4Dv19/4D/19/Ensuring-system-maintenance.300-5416895.ja.html) の "ユーザーによるパスワードの変更" を参照ください)。 必要であれば **変更** ボタンを非表示にし、パスワードの変更を禁止することができます。 それには、このオプションの選択を外します。
+- **ユーザーは自分のパスワードを変更可能**: このオプションが選択されていると、ユーザー認証ダイアログに **変更** ボタンが表示されます。 This button lets the user access a dialog box that can be used to change their password (for more information about this dialog box, refer to the "Modification of password by user" in [Ensuring system maintenance](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). 必要であれば **変更** ボタンを非表示にし、パスワードの変更を禁止することができます。 それには、このオプションの選択を外します。
 
 ## オプション
 
