@@ -112,7 +112,7 @@ title: メソッドページ
 
 ![](../assets/en/Preferences/show-clipboards.png)
 
-これらのクリップボードが非表示の場合でも、対応する [クリップボードショーカット](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.ja.html#3977166) は有効です。
+The corresponding [clipboard shorcuts](../code-editor/write-class-method.md#clipboards) are still active when these clipboards are hidden.
 
 #### 論理ブロックを強調
 

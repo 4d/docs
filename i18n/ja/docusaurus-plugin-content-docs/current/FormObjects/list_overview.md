@@ -16,7 +16,7 @@ title: 階層リスト
 - 既存の [選択リスト](properties_DataSource.md#選択リスト) を関連づけます。 選択リストはあらかじめデザインモードにてリストエディターを使って定義します。
 - 階層リスト参照を直接 [変数あるいは式](properties_Object.md#変数あるいは式) に設定します。
 
-ランタイムにおいては、4D ランゲージの [階層リスト](https://doc.4d.com/4Dv18/4D/18/Hierarchical-Lists.201-4504360.ja.html) コマンドを使って階層リストを管理しますが、その際には対象となるリストの *ListRef* 参照を用います。
+In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](../commands/theme/Hierarchical_Lists.md) commands in the 4D language.
 
 ## ListRef とオブジェクト名
 
@@ -144,7 +144,7 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 - データソースに関わらず、階層リストフォームオブジェクト全体を [入力可](properties_Entry.md#入力可) プロパティで管理することができます。
 
-- また、リストエディターで作成したリストを用いて階層リストを生成する場合は、リストエディターの **編集可能項目** オプションを使用して、階層リストの項目の修正が可能かどうかを管理することができます。 詳細については [リストプロパティの設定](https://doc.4d.com/4Dv18/4D/18/Setting-list-properties.300-4575487.ja.html) を参照してください。
+- また、リストエディターで作成したリストを用いて階層リストを生成する場合は、リストエディターの **編集可能項目** オプションを使用して、階層リストの項目の修正が可能かどうかを管理することができます。 For more information, see [Setting list properties](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
 
 ## プロパティ一覧
 

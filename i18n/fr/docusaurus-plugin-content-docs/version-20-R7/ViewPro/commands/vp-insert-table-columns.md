@@ -39,7 +39,7 @@ Dans le paramètre *insertAfter*, vous pouvez passer une des constantes suivante
 | `vk table insert before` | 0      | Insérer la(les) colonne(s) avant la *column* (par défaut si omis) |
 | `vk table insert after`  | 1      | Insérer la(les) colonne(s) après la *column*                                         |
 
-Cette commande insère certaines colonnes dans la table *tableName*, PAS dans la feuille. The total number of columns of the sheet is not impacted by the command. Data present at the right of the table (if any) are automatically moved right according to the number of added columns.
+Cette commande insère certaines colonnes dans la table *tableName*, PAS dans la feuille. Le nombre total de colonnes de la feuille n'est pas impacté par la commande. Les données présentes à droite de la table (le cas échéant) sont automatiquement déplacées à droite en fonction du nombre de colonnes ajoutées.
 
 Si *tableName* n'existe pas ou s'il n'y a pas assez d'espace dans la feuille, rien ne se passe.
 

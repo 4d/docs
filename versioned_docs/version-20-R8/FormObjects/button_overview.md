@@ -15,7 +15,7 @@ The actions assigned to buttons can originate from predefined [standard actions]
 
 Buttons with standard actions are dimmed when appropriate during form execution. For example, if the first record of a table is displayed, a button with the `firstRecord` standard action would appear dimmed. 
 
-If you want a button to perform an action that's not available as a standard action, leave the standard action field empty and write an object method to specify the button’s action. For more information about object methods and how to create and associate them, see [Using object methods](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html).
+If you want a button to perform an action that's not available as a standard action, leave the standard action field empty and write an [object method to specify the button’s action](../FormObjects/properties_Action.md#method).
 Normally, you would activate the `On Clicked` event and the method would run only when the button is clicked. You can associate a method with any button.
 
 The [variable](properties_Object.md#variable-or-expression) associated with a button is automatically set to **0** when the form is executed for the first time in Design or Application mode. When the user clicks a button, its variable is set to **1**. 

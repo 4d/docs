@@ -85,8 +85,6 @@ La mayoría de las veces, puede utilizar uno de los [filtros integrados](#defaul
 - pode introduzir diretamente uma cadeia de definição de filtro
 - ou você pode digitar o nome de um filtro de entrada criado no editor de filtros na caixa de ferramentas. Os nomes dos filtros personalizados que criar começam com uma barra vertical (|).
 
-Para obtener información sobre la creación de filtros de entrada, consulte [Códigos de filtro y formato](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
-
 ### Filtros de entrada predefinidos
 
 Aqui está uma tabela que explica cada uma das opções de filtro de entrada na lista suspensa Filtro de entrada:

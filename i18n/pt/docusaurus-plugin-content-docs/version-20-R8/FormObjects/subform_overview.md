@@ -35,13 +35,13 @@ Os subformulários de página podem exibir os dados do subregistro atual ou qual
 
 O subformulário na página utiliza o formulário de entrada indicado pela propriedade [Formulário detalhado](properties_Subform.md#detail-form). Ao contrário de um subformulário de lista, o formulário usado pode vir da mesma tabela que o formulário pai. Também é possível usar um formulário de projeto. Quando executado, um subformulário de página tem as mesmas características de exibição padrão de um formulário de entrada.
 
-> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. Eles são descritos em detalhes em um manual separado, [Widgets 4D](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html).
+> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. Eles são descritos em detalhes em um manual separado, [Widgets 4D](https://doc.4d.com/4Dv20/4D/20/4D-Widgets.100-6343453.en.html).
 
 ### Utilizar a variável ou expressão ligada
 
 Você pode vincular [uma variável ou uma expressão](properties_Object.md#variable-or-expression) a um objeto de contêiner de subformulação. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários. Isso é muito útil para sincronizar valores do formulário principal e de seus subformulários.
 
-Por padrão, 4D cria uma variável ou expressão de [tipo de objeto](properties_Object.md#expression-type) para um contêiner de subformulário, que lhe permite compartilhar valores no contexto do subformulário usando o comando `Form` ([veja abaixo](#using-the-subform-bound-object)). No entanto, você pode usar uma variável ou expressão de qualquer tipo escalar (tempo, inteiro, etc.) especialmente se você só precisa compartilhar um único valor:
+By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command. No entanto, você pode usar uma variável ou expressão de qualquer tipo escalar (tempo, inteiro, etc.) especialmente se você só precisa compartilhar um único valor:
 
 - Defina uma variável vinculada ou expressão de um tipo escalar e chame os comandos `OBJECT Get subform container value` e `OBJETO SET SUBFORM CONTAINADOR VALUE` para trocar valores quando ocorreram eventos os eventos [On Bound Variable Change](../Events/onBoundVariableChange.md) ou [On Data Change](../Events/onDataChange.md). Esta solução é recomendada para sincronizar um único valor.
 - Defina una variable o expresión vinculada del tipo **objecto** y utilice el comando `Form` para acceder a sus propiedades desde el subformulario. Esta solução é recomendada para sincronizar vários valores.

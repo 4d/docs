@@ -7,7 +7,7 @@ title: グループボックス
 
 ![](../assets/en/FormObjects/groupBox.png)
 
-> グループボックスの名前はスタティックテキストです。 これは他の 4D ラベルと同様にローカライズすることができます (4D デザインリファレンスの [スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.ja.html) および *付録 B: XLIFF アーキテクチャー* の章を参照ください)。
+> The name of a group box is static text; you can use a “localizable” reference as with any 4D label (see [Using references in static text](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html) and *XLIFF Architecture* section in 4D Design Reference.
 
 #### JSON 例:
 

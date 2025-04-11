@@ -240,7 +240,7 @@ The `.headers` property contains <!-- REF #IncomingMessageClass.headers.Summary 
 
 A propriedade `.headers` é somente leitura.
 
-Header names (keys) are lowercased. Note header names are case sensitive.
+Nomes de cabeçalho (chaves) são menores. Note header names are case sensitive.
 
 <!-- END REF -->
 

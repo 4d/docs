@@ -584,7 +584,7 @@
     "description": "The label for category Formulas in sidebar docs"
   },
   "sidebar.docs.category.Graphs": {
-    "message": "Graphs",
+    "message": "Gráficos",
     "description": "The label for category Graphs in sidebar docs"
   },
   "sidebar.docs.category.HTTP": {
@@ -596,7 +596,7 @@
     "description": "The label for category Hierarchical Lists in sidebar docs"
   },
   "sidebar.docs.category.Import and Export": {
-    "message": "Import and Export",
+    "message": "Import-Export",
     "description": "The label for category Import and Export in sidebar docs"
   },
   "sidebar.docs.category.Interruptions": {
@@ -640,11 +640,11 @@
     "description": "The label for category Objects (Forms) in sidebar docs"
   },
   "sidebar.docs.category.Objects (Language)": {
-    "message": "Objects (Language)",
+    "message": "Objetos (Lenguaje)",
     "description": "The label for category Objects (Language) in sidebar docs"
   },
   "sidebar.docs.category.On a Series": {
-    "message": "On a Series",
+    "message": "Funciones estadísticas",
     "description": "The label for category On a Series in sidebar docs"
   },
   "sidebar.docs.category.PHP": {
@@ -728,7 +728,7 @@
     "description": "The label for category Structure Access in sidebar docs"
   },
   "sidebar.docs.category.Styled Text": {
-    "message": "Styled Text",
+    "message": "Texto multiestilo",
     "description": "The label for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords": {
@@ -740,7 +740,7 @@
     "description": "The label for category System Documents in sidebar docs"
   },
   "sidebar.docs.category.System Environment": {
-    "message": "System Environment",
+    "message": "Entorno sistema",
     "description": "The label for category System Environment in sidebar docs"
   },
   "sidebar.docs.category.Table": {
@@ -748,7 +748,7 @@
     "description": "The label for category Table in sidebar docs"
   },
   "sidebar.docs.category.Tools": {
-    "message": "Tools",
+    "message": "Herramientas",
     "description": "The label for category Tools in sidebar docs"
   },
   "sidebar.docs.category.Transactions": {
@@ -896,7 +896,7 @@
     "description": "The generated-index page title for category Formulas in sidebar docs"
   },
   "sidebar.docs.category.Graphs.link.generated-index.title": {
-    "message": "Graphs",
+    "message": "Gráficos",
     "description": "The generated-index page title for category Graphs in sidebar docs"
   },
   "sidebar.docs.category.HTTP.link.generated-index.title": {
@@ -908,7 +908,7 @@
     "description": "The generated-index page title for category Hierarchical Lists in sidebar docs"
   },
   "sidebar.docs.category.Import and Export.link.generated-index.title": {
-    "message": "Import and Export",
+    "message": "Import-Export",
     "description": "The generated-index page title for category Import and Export in sidebar docs"
   },
   "sidebar.docs.category.Interruptions.link.generated-index.title": {
@@ -960,11 +960,11 @@
     "description": "The generated-index page title for category Objects (Forms) in sidebar docs"
   },
   "sidebar.docs.category.Objects (Language).link.generated-index.title": {
-    "message": "Objects (Language)",
+    "message": "Objetos (Lenguaje)",
     "description": "The generated-index page title for category Objects (Language) in sidebar docs"
   },
   "sidebar.docs.category.On a Series.link.generated-index.title": {
-    "message": "On a Series",
+    "message": "Funciones estadísticas",
     "description": "The generated-index page title for category On a Series in sidebar docs"
   },
   "sidebar.docs.category.PHP.link.generated-index.title": {
@@ -1052,7 +1052,7 @@
     "description": "The generated-index page title for category Structure Access in sidebar docs"
   },
   "sidebar.docs.category.Styled Text.link.generated-index.title": {
-    "message": "Styled Text",
+    "message": "Texto multiestilo",
     "description": "The generated-index page title for category Styled Text in sidebar docs"
   },
   "sidebar.docs.category.Subrecords.link.generated-index.title": {
@@ -1064,7 +1064,7 @@
     "description": "The generated-index page title for category System Documents in sidebar docs"
   },
   "sidebar.docs.category.System Environment.link.generated-index.title": {
-    "message": "System Environment",
+    "message": "Entorno sistema",
     "description": "The generated-index page title for category System Environment in sidebar docs"
   },
   "sidebar.docs.category.Table.link.generated-index.title": {
@@ -1072,7 +1072,7 @@
     "description": "The generated-index page title for category Table in sidebar docs"
   },
   "sidebar.docs.category.Tools.link.generated-index.title": {
-    "message": "Tools",
+    "message": "Herramientas",
     "description": "The generated-index page title for category Tools in sidebar docs"
   },
   "sidebar.docs.category.Transactions.link.generated-index.title": {

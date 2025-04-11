@@ -31,7 +31,7 @@ Especifica o formulário a ser usado para modificar ou exibir registros individu
 
 O formulário especificado é apresentado:
 
-- ao usar as ações padrão `Add Subrecord` e `Edit Subrecord` aplicadas à list box (consulte [Usando ações padrão](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.en.html)),
+- ao usar as ações padrão `Add Subrecord` e `Edit Subrecord` aplicadas à list box (consulte [Usando ações padrão](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html)),
 - quando uma linha for clicada duas vezes e a propriedade [Double-click on Row] (#double-click-on-row) é definida como "Edit Record" (Editar registro) ou "Display Record" (Exibir registro).
 
 #### Gramática JSON
@@ -154,7 +154,7 @@ Número de colunas que não podem ser movidas durante a execução.
 
 Define o número de colunas do list box.
 
-> Você pode adicionar ou remover colunas dinamicamente por meio de programação, usando comandos como [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) ou [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
+> Você pode adicionar ou remover colunas dinamicamente por meio de programação, usando comandos como [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) ou [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md).
 
 #### Gramática JSON
 

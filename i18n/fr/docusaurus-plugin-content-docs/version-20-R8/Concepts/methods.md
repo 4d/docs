@@ -201,7 +201,7 @@ Cette boîte de dialogue répertorie toutes les méthodes projet de la base, y c
 
 Pour exécuter une méthode de projet, il suffit de sélectionner son nom dans la liste et de cliquer sur **Exécuter**. Pour exécuter une méthode étape par étape en mode Debug, cliquez sur **Debug**. Pour plus d'informations sur le débogueur 4D, reportez-vous à la section [Debugging](../Debugging/basics.md) .
 
-Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectionnée s'exécute dans un autre process. Si la méthode effectue une tâche qui prend du temps, comme l'impression d'un grand nombre d'enregistrements, vous pouvez continuer à travailler avec votre base, en ajoutant des enregistrements à une table, en créant un graphe pour afficher les données, etc. Pour plus d'informations sur les process, reportez-vous à la section [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) dans le *manuel de référence du langage 4D*.
+Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectionnée s'exécute dans un autre process. Si la méthode effectue une tâche qui prend du temps, comme l'impression d'un grand nombre d'enregistrements, vous pouvez continuer à travailler avec votre base, en ajoutant des enregistrements à une table, en créant un graphe pour afficher les données, etc. For more information about processes, refer to [Processes](../Develop/processes.md).
 
 **Notes 4D Server**:
 

@@ -9,7 +9,7 @@ title: Área 4D Write Pro
 
 ## Utilizar las áreas 4D Write Pro
 
-Las áreas 4D Write Pro están documentadas en el manual [4D Write Pro](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Write-Pro.100-4433851.fe.html).
+Las áreas 4D Write Pro están documentadas en el manual [4D Write Pro](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.en.html).
 
 ## Propiedades soportadas
 

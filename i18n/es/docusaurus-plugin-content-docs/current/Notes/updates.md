@@ -11,6 +11,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 - Soporte de [token de sesión](../WebServer/sessions.md#session-token-otp) manejado con las nuevas funciones [`Session.createOTP()`](../API/SessionClass.md#createotp) y [`Session.restore()`](../API/SessionClass.md#restore).
 - El asistente de etiqueta ahora utiliza el editor de Fórmula para añadir o editar fórmulas en el [área de diseño de etiquetas](../Desktop/labels.md#label-preview).
+- New [`TCPListener`](../API/TCPListenerClass.md) class to create TCP server connections; new properties in related classes: `address`, `listener` and `port` in [`TCPConnection`] class, `ip` and `port` in [`TCPEvent`] class.
 - Deprecated commands and constants now generate specific warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors). You can know if a command is deprecated using the [`Command name`](../commands/command-name.md) command.
 - Nuevos comandos [WA SET CONTEXT OBJECT](../commands/wa-set-context-object.md) y [WA Get context object](../commands/wa-get-context-object.md) para controlar los contenidos [$4d](../FormObjects/webArea_overview.md#4d-object) en áreas web.
 - New [`RDP optimization` database parameter](../commands-legacy/set-database-parameter.md#rdp-optimization-133) to optimize for instance shared clipboard when using Remote Desktop Protocol with 4D.

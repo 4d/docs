@@ -24,7 +24,7 @@ Se nenhum elemento for seleccionado, o valor é 0
 
 ### Ir para página
 
-Você pode atribuir a [ação padrão](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) `gotoPage` a uma grade de botões. Quando esta ação é selecionada, 4D mostrará automaticamente a página do formulário que corresponde ao número do botão selecionado na grelha de botões. Por exemplo, se o usuário seleciona o décimo botão da grade, 4D mostrará a décima página do formulário atual (se existir).
+You can assign the `gotoPage` [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) to a button grid. Quando esta ação é selecionada, 4D mostrará automaticamente a página do formulário que corresponde ao número do botão selecionado na grelha de botões. Por exemplo, se o usuário seleciona o décimo botão da grade, 4D mostrará a décima página do formulário atual (se existir).
 
 ## Propriedades compatíveis
 

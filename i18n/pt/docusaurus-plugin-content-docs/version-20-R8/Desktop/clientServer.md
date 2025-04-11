@@ -106,7 +106,7 @@ O objeto `session` do usuário remoto está disponível em:
 
 :::info
 
-Todos os procedimentos armazenados no servidor compartilham a mesma sessão do usuário virtual. Para obter mais informações, consulte [esta página em doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+Todos os procedimentos armazenados no servidor compartilham a mesma sessão do usuário virtual. Para obter mais informações, consulte [esta página em doc.4d.com](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html).
 
 :::
 

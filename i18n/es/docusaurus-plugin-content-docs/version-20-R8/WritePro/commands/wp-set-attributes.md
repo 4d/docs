@@ -25,7 +25,7 @@ In *targetObj*, you can pass :
 
 - un rango, o
 - an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
-- a 4D Write Pro document
+- un documento 4D Write Pro
 
 You can specify attributes to set for *targetObj* in one of two ways:
 

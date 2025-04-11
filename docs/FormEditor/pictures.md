@@ -60,7 +60,7 @@ While 4D automatically prioritizes the highest resolution,  there are, however, 
 |Operation |Behavior|
 |---|---|
 |Drop or Paste|If the picture has:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li></ul>|
-|[Automatic Size](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (Form Editor context menu)|If the picture's display format  is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul>|
+|[Automatic Size](https://doc.4d.com/4Dv20/4D/20.2/Setting-object-display-properties.300-6750143.en.html#148057) (Form Editor context menu)|If the picture's display format is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul>|
 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
@@ -73,7 +73,7 @@ A dark mode picture is defined in the following way:
 * dark mode picture has the same name as the standard (light scheme) version with the suffix "`_dark`"
 * dark mode picture is stored next to the standard version.
 
-At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](https://doc.4d.com/4dv19/help/command/en/1761.html).  
+At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](../FormEditor/properties_FormProperties.md#color-scheme).  
 
 ![](../assets/en/FormEditor/darkicon.png)
 

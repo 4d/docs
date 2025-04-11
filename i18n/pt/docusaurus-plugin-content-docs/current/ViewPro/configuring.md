@@ -51,7 +51,7 @@ Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramenta
 
 Os seguintes eventos de formulário estão disponíveis na lista de propriedades para as áreas 4D View Pro.
 
-Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
+Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Some standard form events provide extended information in the object returned by the [`FORM Event`](../commands/form-event.md) command when they are generated for 4D View Pro areas. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
 
 | Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |

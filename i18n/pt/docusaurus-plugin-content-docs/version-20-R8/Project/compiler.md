@@ -111,7 +111,7 @@ Used to generate the error file (see [error file](#error-file)) at the time of s
 
 Este parâmetro permite selecionar a família de processadores para a qual seu projeto 4D deve ser compilado nativamente. O compilador 4D pode criar código nativo para duas famílias de processadores:
 
-- **Intel/AMD** processors (all machines),
+- \*\*Os processadores Intel/AMD (todas as máquinas),
 - los procesadores **Apple Silicon**.
 
 Duas opções de alvo estão disponíveis. O resultado depende do processador da máquina em que 4D está em execução.
@@ -123,7 +123,7 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 > El objetivo de compilación Apple Silicon requiere que la aplicación **Clang** esté instalada en su máquina. Clang vem com a versão mais recente do Xcode. Ver los [requisitos del compilador Silicon](#requirements) para más información.
 
-### Additional options (Compatibility)
+### Opções adicionais (Compatibilidade)
 
 In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
 

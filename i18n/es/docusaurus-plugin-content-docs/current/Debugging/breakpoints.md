@@ -51,7 +51,7 @@ La lista de puntos de interrupción del servidor se restablece automáticamente 
 
 ### Lista de rupturas
 
-La lista de puntos de ruptura es una página del Explorador de ejecución que le permite gestionar los puntos de ruptura creados en la ventana del depurador o en el editor de código. Para más información sobre el Explorador de ejecución, consulte su página dedicada en [el manual de Diseño](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+La lista de puntos de ruptura es una página del Explorador de ejecución que le permite gestionar los puntos de ruptura creados en la ventana del depurador o en el editor de código. Para más información sobre el Explorador de ejecución, consulte su página dedicada en [el manual de Diseño](https://doc.4d.com/4Dv20/4D/20.2/Runtime-Explorer.200-6750093.en.html).
 
 Para abrir la página de la lista de puntos de ruptura:
 

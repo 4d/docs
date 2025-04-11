@@ -45,7 +45,7 @@ You can omit the *format* parameter, in which case you need to specify the exten
 
 - "4D specific tags" means 4D XHTML with a 4D namespace and 4D CSS styles.
 - Para más información sobre el formato de documento 4D Write Pro, consulte el [formato del documento .4wp](https://doc.4d.com/4Dv20/4D/20/Using-a-4D-Write-Pro-area.200-6229460.en.html#2895813).
-- To view a list of known differences or incompatibility when using the .docx format, see [Importing and Exporting in .docx format](https://doc.4d.com/4Dv20R8/4D/20-R8/Importing-and-Exporting-in-docx-format.200-7477969.en.html).
+- To view a list of known differences or incompatibility when using the .docx format, see [Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html).
 - For more information on exporting to SVG format, see [Exporting to SVG format](https://doc.4d.com/4Dv20/4D/20/Exporting-to-SVG-format.200-6229468.en.html).
 
 ### Parámetro option
@@ -96,7 +96,7 @@ The following table indicates the *option* available per export *format*:
 
 **Nota de compatibilidad:** pasar un valor *largo* en *longint* es compatible por razones de compatibilidad, pero se recomienda usar un parámetro [objeto](# "Datos estructurados como un objeto nativo 4D").
 
-### wk files collection
+### colección wk files
 
 The wk files property allows you to [export a PDF with attachments](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures). This property must contain a collection of objects describing the files to be embedded in the final document. Each object of the collection can contain the following properties:
 
@@ -117,14 +117,14 @@ PDF attachments are only supported by the PDF/A-3 version. When you pass the wk 
 
 :::
 
-### wk factur x object
+### Objeto wk factur x
 
 The wk factur x property is an object that can contains up to two properties:
 
 | **Propiedad** | **Tipo** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | profile       | Text     | Opcional. If omitted, *profile* is determined from the provided xml file or text (which must use a standard profile). If passed, it can be a non-standard profile name (for using other profiles - for instance RECHNUNG). **Note:* Standard profile names are: MINIMUM, BASIC WL, BASIC, EN 16931 (aka COMFORT which is an alias), EXTENDED.* |
-| version       | Text     | Opcional. Default value is "1.0"                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| version       | Text     | Opcional. El valor por defecto es "1.0"                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ### About Factur-X / ZUGFeRD PDF documents
 
@@ -268,8 +268,8 @@ WP EXPORT DOCUMENT(WParea; $file; wk docx; $options)
 ## Ver también
 
 [4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)</br>
-[Exporting to HTML and MIME HTML formats](https://doc.4d.com/4Dv20R8/4D/20-R8/Exporting-to-HTML-and-MIME-HTML-formats.200-7477968.en.html)<br/>
-[Importing and Exporting in .docx format](https://doc.4d.com/4Dv20R8/4D/20-R8/Importing-and-Exporting-in-docx-format.200-7477969.en.html)<br/>
+[Exporting to HTML and MIME HTML formats](https://doc.4d.com/4Dv20/4D/20/Exporting-to-HTML-and-MIME-HTML-formats.200-6229467.en.html)<br/>
+[Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html)<br/>
 [Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)</br>
 [Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)</br>
 [WP EXPORT VARIABLE](wp-export-variable.md)</br>

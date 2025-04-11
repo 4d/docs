@@ -51,7 +51,7 @@ A lista de pontos de paragem do servidor é automaticamente restaurada se voltar
 
 ### Lista de pausas
 
-A lista de interrupções é uma página do explorador do tempo de execução que lhe permite gerir os pontos de interrupção criados na janela do depurador ou no editor de código. Para más información sobre el Explorador de ejecución, consulte su página dedicada en [el manual de Diseño](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+A lista de interrupções é uma página do explorador do tempo de execução que lhe permite gerir os pontos de interrupção criados na janela do depurador ou no editor de código. Para más información sobre el Explorador de ejecución, consulte su página dedicada en [el manual de Diseño](https://doc.4d.com/4Dv20/4D/20.2/Runtime-Explorer.200-6750093.en.html).
 
 Para abrir a página da lista de pontos de interrupção:
 

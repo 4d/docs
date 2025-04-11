@@ -294,7 +294,7 @@ Pour afficher le type de paramètre, cochez l'option **Afficher les types** dans
 
 Après avoir déployé la liste des paramètres, vous pouvez faire glisser et déposer les paramètres et les résultats de la fonction dans la [fenêtre d'évaluation](#fenetre-devaluation).
 
-You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+You can also use the [Call chain](../commands-legacy/call-chain.md) command to retrieve the call chain programmatically.
 
 ## Fenêtre d'évaluation
 

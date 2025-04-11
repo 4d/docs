@@ -23,7 +23,7 @@ La valeur par défaut ne peut être utilisée que si le [type de source de donn�
 | #H    | Heure courante     |
 | #N    | Numéro de séquence |
 
-Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour chaque enregistrement de la table dans le fichier de données courant. Un numéro de séquence est un entier qui est généré pour chaque nouvel enregistrement. Les numéros commencent à un (1) et s'incrémentent de un (1). Un numéro de séquence n'est jamais répété, même si l'enregistrement auquel il est attribué est supprimé de la table. Chaque table possède son propre compteur interne de numéros de séquence. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph.
+Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour chaque enregistrement de la table dans le fichier de données courant. Un numéro de séquence est un entier qui est généré pour chaque nouvel enregistrement. Les numéros commencent à un (1) et s'incrémentent de un (1). Un numéro de séquence n'est jamais répété, même si l'enregistrement auquel il est attribué est supprimé de la table. Chaque table possède son propre compteur interne de numéros de séquence. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#976029) paragraph.
 
 > Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
 

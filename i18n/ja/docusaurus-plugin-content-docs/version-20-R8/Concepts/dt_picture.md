@@ -27,8 +27,7 @@ WIC および ImageIO はピクチャー内のメタデータの書き込みを�
 
 それぞれのピクチャーフォーマットに対して返される形式は、当該 Codec が OS レベルで記録されている方法に基づきます。 エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。
 
-多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
-4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
+Most of the [4D picture management commands](../commands/theme/Pictures.md) can receive a Codec ID as a parameter. したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
 多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
 4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。
 4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。  これは以下の形式で返されます:

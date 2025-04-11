@@ -201,7 +201,7 @@ Esta caja de diálogo lista todos los métodos proyecto de la base de datos, inc
 
 Para ejecutar un método proyecto, basta con seleccionar su nombre en la lista y hacer clic en **Ejecutar**. Para ejecutar un método paso a paso en modo Depuración, haga clic en **Depuración**. Para más información sobre el depurador de 4D, consulte la sección [Depuración](../Debugging/basics.md).
 
-Si marca la casilla **Nuevo proceso**, el método seleccionado se ejecuta en otro proceso. Si el método está realizando una tarea que requiere mucho tiempo, como la impresión de un gran conjunto de registros, puede seguir trabajando con su base de datos, añadiendo registros a una tabla, creando un gráfico para mostrar los datos, etc. Para más información sobre los procesos, consulte [Procesos](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) en el manual *Lenguaje* 4D.
+Si marca la casilla **Nuevo proceso**, el método seleccionado se ejecuta en otro proceso. Si el método está realizando una tarea que requiere mucho tiempo, como la impresión de un gran conjunto de registros, puede seguir trabajando con su base de datos, añadiendo registros a una tabla, creando un gráfico para mostrar los datos, etc. For more information about processes, refer to [Processes](../Develop/processes.md).
 
 **Notas Servidor 4D**:
 

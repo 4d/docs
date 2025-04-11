@@ -15,7 +15,7 @@ Além da memória, não há limite para o número de componentes e, assim, de se
 
 Cada servidor web 4D, incluido el servidor web de la aplicación principal, se expone como un **objeto** de la clase `4D.WebServer`. Una vez instanciado, un objeto servidor web puede ser manejado desde la aplicación actual o desde cualquier componente utilizando un [gran número de propiedades y funciones](API/WebServerClass.md).
 
-> Los [comandos WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) heredados del lenguaje 4D son soportados, pero no se puede seleccionar el servidor web al que se aplican (ver más abajo).
+> Los [comandos WEB](../commands/theme/Web_Server.md) heredados del lenguaje 4D son soportados, pero no se puede seleccionar el servidor web al que se aplican (ver más abajo).
 
 Cada servidor web (aplicação host ou componente) pode ser usado em seu próprio contexto separado, incluindo:
 
@@ -101,7 +101,7 @@ Estas propriedades são definidas:
 
 ## Âmbito dos comandos 4D Web
 
-El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permitiendo controlar el servido Web. No entanto, esses comandos são projetados para funcionar com um único servidor web (padrão). Ao usar esses comandos no contexto de objetos do servidor web, certifique-se de que seu escopo é apropriado.
+El lenguaje 4D contiene [varios comandos](../commands/theme/Web_Server.md) permitiendo controlar el servido Web. No entanto, esses comandos são projetados para funcionar com um único servidor web (padrão). Ao usar esses comandos no contexto de objetos do servidor web, certifique-se de que seu escopo é apropriado.
 
 | Comando                         | Âmbito                            |
 | ------------------------------- | --------------------------------- |

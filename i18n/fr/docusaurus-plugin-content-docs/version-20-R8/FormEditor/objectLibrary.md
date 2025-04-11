@@ -30,7 +30,7 @@ La fenêtre présente les caractéristiques principales suivantes :
 
 Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
-Tous les objets proposés dans la bibliothèque d'objets standard sont décrits dans [cette section sur doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+All objects proposed in the standard object library are described on [this section](../FormEditor/objectLibrary.md).
 
 ## Créer et utiliser des bibliothèques d'objets personnalisées
 

@@ -81,7 +81,7 @@ The project method called by the three thermometers is:
  End if
 ```
 
-Note the use of the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) for calculating the color value from the thermometer values.
+Note the use of the [bitwise operators](../Concepts/dt_number.md#bitwise-operators) for calculating the color value from the thermometer values.
 
 When executed, the form looks like this:
 

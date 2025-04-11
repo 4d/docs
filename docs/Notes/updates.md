@@ -20,6 +20,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 - Interpreted components can now be [edited from the host project](../Extensions/develop-components.md#editing-components-from-the-host). 
 - [Licenses](../Admin/licenses.md) are now automatically refreshed at startup. 
 - The following VP command callbacks now wait for all 4D custom functions to complete their calculations: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-form-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md), and [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
+- New [4D Netkit](https://developer.4d.com/4D-NetKit/) features to manage Google and Microsoft 365 calendars; ability to use the host web server for OAuth 2.0 authentication. 
 
 ## 4D 20 R8
 

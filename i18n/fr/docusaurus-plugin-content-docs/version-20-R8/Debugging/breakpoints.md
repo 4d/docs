@@ -51,7 +51,7 @@ La liste de points d'arrêt du serveur est automatiquement restaurée s'il redev
 
 ### Liste des points d'arrêt
 
-La liste des points d'arrêt est une page de l'Explorateur d'exécution qui vous permet de gérer les points d'arrêt créés dans la fenêtre du débogueur ou dans l'éditeur de code. Pour plus d'informations sur l'Explorateur d'exécution, voir sa page dédiée dans [le manuel de Développement](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+La liste des points d'arrêt est une page de l'Explorateur d'exécution qui vous permet de gérer les points d'arrêt créés dans la fenêtre du débogueur ou dans l'éditeur de code. Pour plus d'informations sur l'Explorateur d'exécution, voir sa page dédiée dans [le manuel de Développement](https://doc.4d.com/4Dv20/4D/20.2/Runtime-Explorer.200-6750093.en.html).
 
 Pour ouvrir la page de la liste des points d'arrêt :
 

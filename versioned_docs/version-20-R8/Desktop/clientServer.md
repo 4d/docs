@@ -110,7 +110,7 @@ The remote user `session` object is available from:
 
 :::info
 
-All stored procedures on the server share the same virtual user session. For more information, see [this page on doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+All stored procedures on the server share the same virtual user session. For more information, see [this page on doc.4d.com](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html).
 
 :::
 

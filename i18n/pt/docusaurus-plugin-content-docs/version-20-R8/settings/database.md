@@ -31,25 +31,25 @@ A localização atual desta pasta é exibida na área "Atual:". Você pode clica
 
 São oferecidos três opções de localização:
 
-- **Sistema**: cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta situada en la ubicación especificada por Windows y/o macOS. You can find out the current location defined by your system using the [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D command. Os arquivos são colocados em uma subpasta cujo nome consiste no nome do banco de dados e em um identificador exclusivo.
+- **Sistema**: cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta situada en la ubicación especificada por Windows y/o macOS. You can find out the current location defined by your system using the [`Temporary folder`](../commands-legacy/temporary-folder.md) 4D command. Os arquivos são colocados em uma subpasta cujo nome consiste no nome do banco de dados e em um identificador exclusivo.
 - **Carpeta de archivos de datos** (opción por defecto): cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta llamada "archivos temporales" situada en el mismo nivel que el archivo de datos de la base de datos.
 - **Definido por el usuario**: esta opción se utiliza para definir una ubicación personalizada. Se a opção local for modificada, será necessário reiniciar a base de dados para que a nova opção seja tida em conta. 4D verifica se a pasta selecionada pode ser acessada por gravação. Se não for esse o caso, o aplicativo tenta outras opções até que uma pasta válida seja encontrada.
 
-> This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
+> This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv20/4D/20.2/Exporting-and-importing-structure-definitions.300-6750295.en.html)).
 
 ### Comparação de textos
 
 > Se você alterar uma dessas opções, é preciso sair e reabrir o banco de dados para tornar a alteração eficaz. Quando a base de dados for reaberta, todos os índices da base de dados são automaticamente reindexados.
 
 - **Considere @ como comodín sólo cuando se encuentre al principio o al final de patrones de texto**: permite definir como se interpretará la arroba "@" cuando se utilice en una búsqueda o en una comparación de cadenas de caracteres, cuando se encuentre en
-    Cuando esta opción no está marcada (valor por defecto), la arroba se utiliza como carácter comodín, es decir, sustituye a cualquier caracter (ver [Caracter comodín (@)](https://doc.4d.com/4Dv19/4D/19/Query-editor.300-5416813.en.html#463876)).
+    Cuando esta opción no está marcada (valor por defecto), la arroba se utiliza como carácter comodín, es decir, sustituye a cualquier caracter (ver [Caracter comodín (@)](https://doc.4d.com/4Dv20/4D/20.2/Query-editor.300-6750279.en.html#463876)).
 
     Quando a opção estiver marcada, o sinal de arroba é considerado um caractere simples se estiver localizado em uma palavra. Essa configuração é especialmente útil quando se procura por endereços de e-mail, onde o sinal @ é usado internamente. Esta opção tem influência em pesquisas, ordenações, comparações de string, bem como em dados armazenados em tabelas e dados encontrados na memória, como arrays. Campos e variáveis do alfa (indexado ou não) e tipo de texto estão preocupados com a forma como o caractere @ é interpretado em pesquisas e tipos de caracteres.
 
     **Notas:**
 
     - Para pesquisas, se os critérios de pesquisa iniciam ou terminam com @, o caractere "@" será tratado como um caractere curinga. Somente se o caractere "@" for colocado no meio de uma palavra (por exemplo: bill@cgi.com) é tratado por 4D de maneira diferente.
-    - Esta opción también puede influir en el comportamiento de los comandos del tema [Objetos (Formularios)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.en.html) que aceptan el caracter comodín ("@") en el parámetro objeto.
+    - Esta opción también puede influir en el comportamiento de los comandos del tema [Objetos (Formularios)](../commands/theme/Objects_Forms.md) que aceptan el caracter comodín ("@") en el parámetro objeto.
     - Por razões de segurança, apenas o Administrador ou Designer da base de dados podem modificar este parâmetro.
 
 - **Lenguaje del archivo de datos actual:** permite configurar el lenguaje utilizado para el procesamiento y la comparación de cadenas de caracteres. A escolha do idioma influencia diretamente a classificação e a pesquisa de texto, bem como as letras maiúsculas e minúsculas, mas não afeta a tradução de textos nem os formatos de data, hora ou moeda, que permanecem no idioma do sistema. Por padrão, 4D usa a linguagem do sistema.
