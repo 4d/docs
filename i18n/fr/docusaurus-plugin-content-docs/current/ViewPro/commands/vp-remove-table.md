@@ -34,17 +34,17 @@ In *tableName*, pass the name of the table to remove.
 
 In *options*, you can specify additional behavior. Valeurs possibles :
 
-| Constante             | Valeur | Description                         |
-| --------------------- | ------ | ----------------------------------- |
-| vk table remove all   | 0      | Remove all including style and data |
-| vk table remove style | 1      | Remove style but keep data          |
-| vk table remove data  | 2      | Remove data but keep style          |
+| Constante             | Valeur | Description                                      |
+| --------------------- | ------ | ------------------------------------------------ |
+| vk table remove all   | 0      | Tput supprimer y compris le style et les données |
+| vk table remove style | 1      | Supprimer le style mais conserver les données    |
+| vk table remove data  | 2      | Supprimer les données mais conserver le style    |
 
-Table names are defined at sheet level. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
+Les noms des tables sont définis au niveau de la feuille. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
 
 ## Exemple
 
-To remove the "people" table in the second sheet and keep the data in the cells:
+Pour supprimer la table "people" dans la deuxième feuille et conserver les données dans les cellules :
 
 ```4d
 VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)

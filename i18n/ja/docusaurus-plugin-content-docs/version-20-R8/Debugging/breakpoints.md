@@ -51,7 +51,7 @@ title: ブレークポイントとキャッチコマンド
 
 ### ブレークリスト
 
-ブレークリストは、デバッガーウィンドウ又はコードエディターで作成したブレークポイントを管理することが出来るランタイムエクスプローラのページです。 ランタイムエクスプローラーの詳細については、[デザインリファレンスマニュアル](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.ja.html) を参照ください。
+ブレークリストは、デバッガーウィンドウ又はコードエディターで作成したブレークポイントを管理することが出来るランタイムエクスプローラのページです。 For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv20/4D/20.2/Runtime-Explorer.200-6750093.en.html).
 
 ブレークリストのページを開くには:
 

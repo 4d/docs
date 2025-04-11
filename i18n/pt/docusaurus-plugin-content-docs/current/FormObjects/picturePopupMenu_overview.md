@@ -17,7 +17,7 @@ Pode gerir os menus pop-up de imagens utilizando métodos. Como as [grades dos b
 
 ### Ir para página
 
-Você pode atribuir a [ação padrão](https://doc.4d.com/4Dv19R4/4D/19-R4/Standard-actions.300-5736871.en.html) `gotoPage` a um menu pop-up imagem. Quando essa ação for selecionada, 4D exibirá automaticamente a página do formulário que corresponde à posição da imagem selecionada na array de imagens. Os elementos são numerados da esquerda para a direita e de cima para baixo, começando pelo canto superior esquerdo.
+You can assign the `gotoPage` [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) to a picture pop-up menu. Quando essa ação for selecionada, 4D exibirá automaticamente a página do formulário que corresponde à posição da imagem selecionada na array de imagens. Os elementos são numerados da esquerda para a direita e de cima para baixo, começando pelo canto superior esquerdo.
 
 Por exemplo, se o usuário selecionar o terceiro elemento, 4D exibirá a terceira página do formulário atual (se existir).
 Si desea gestionar usted mismo el efecto de un clic, seleccione `Sin acción`.

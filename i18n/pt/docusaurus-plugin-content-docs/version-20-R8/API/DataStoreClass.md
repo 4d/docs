@@ -553,7 +553,7 @@ Esta função deve ser chamada em um 4D remoto, do contrário devolve uma coleç
 
 Coleção de objetos de petição empilhados. A petição mais recente tem indice 0.
 
-Para obter uma descrição do formato do log de solicitações do ORDA, consulte a seção [**ORDA client requests**] (https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373).
+Para uma descrição do formato de log do pedido ORDA, por favor, consulte a seção [**solicitações ORDA**](../Depuring/debugLogFiles.md#orda-requests).
 
 #### Exemplo
 

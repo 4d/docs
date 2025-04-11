@@ -51,7 +51,7 @@ Les interfaces de Ruban et de Barre d'outils regroupent les fonctionnalités qui
 
 Les événements formulaire suivants sont disponibles dans la Liste de propriétés des zones 4D View Pro.
 
-Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
+Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains événements formulaire standard fournissent des informations étendues dans l'objet retourné par la commande [`FORM Event`](../commands/form-event.md) lorsqu'ils sont générés pour les zones 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
 
 | Événements 4D standard                          | Événements 4D View Pro spécifiques et étendus         |
 | ----------------------------------------------- | ----------------------------------------------------- |

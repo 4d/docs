@@ -57,9 +57,9 @@ Webエリアで実行される JavaScript コードから 4Dメソッドおよ�
 URL 変数は[WA OPEN URL](../commands-legacy/wa-open-url.md) と同じ効果を生み出します。 しかしながら、以下の違いに注意してください。
 
 - ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドは両方の記法を受け入れます。
-- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 The [WA OPEN URL](../commands-legacy/wa-open-url.md) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](../commands-legacy/wa-open-url.md) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](../commands-legacy/wa-open-url.md) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドは、この場合にはエラーを生成します。
+- URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加しますが、[WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドはこれを付加しません。
+- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドを実行しても効果はありません。 一方、URL変数に値を代入すると、カレントURL が更新されます。
 
 #### JSON 文法
 
@@ -85,8 +85,8 @@ URL 変数は[WA OPEN URL](../commands-legacy/wa-open-url.md) と同じ効果を
 
 CEFエンジンには以下のような制約があります:
 
-- [WA SET PAGE CONTENT](../commands-legacy/wa-set-page-content.md): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md) command, the first drop must be preceded by at least one call to [WA OPEN URL](../commands-legacy/wa-open-url.md) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](../commands-legacy/wa-set-page-content.md): このコマンドを使用する場合、([`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
+- [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md) コマンドの `WA enable URL drop` セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は [WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドを呼び出すか、またはエリアに割り当てられている URL 変数に URL が渡されている必要があります。
 
 :::note
 

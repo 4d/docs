@@ -23,7 +23,7 @@ O valor padrão só poderá ser usado se o [tipo de fonte de dados](properties_O
 | #H    | Hora actual         |
 | #N    | Número de sequência |
 
-É possível usar um número de sequência para criar um número exclusivo para cada registro na tabela do arquivo de dados atual. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). Um número de sequência nunca é repetido, mesmo que o registro ao qual foi atribuído seja excluído da tabela. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
+É possível usar um número de sequência para criar um número exclusivo para cada registro na tabela do arquivo de dados atual. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). Um número de sequência nunca é repetido, mesmo que o registro ao qual foi atribuído seja excluído da tabela. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#976029).
 
 > Não faça confusão entre esta propriedade e a propriedade "[valores padrão](properties_DataSource.md#default-list-of-values)" que permite preencher uma coluna list box com valores estáticos.
 

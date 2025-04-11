@@ -41,7 +41,7 @@ title: プリエンプティブプロセス
 
 要素毎の "スレッドセーフティ" プロパティは、その要素自身によります:
 
-- 4Dコマンド: スレッドセーフティは内部プロパティです。 [4Dランゲージリファレンス](https://doc.4d.com/4Dv20/4D/20.1/4D-Language-Reference.100-6479538.ja.html) 内では、スレッドセーフなコマンドは ![](../assets/en/Develop/thread-safe.png) のアイコンで識別されています。 [`Command name`](https://doc.4d.com/4dv20/help/command/ja/page538.html) コマンドを使用して、コマンドがスレッドセーフであるかどうかを知ることもできます。 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
+- 4Dコマンド: スレッドセーフティは内部プロパティです。 In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands/command-name.md) command to know if a command is thread-safe. 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
 - プロジェクトメソッド: スレッドセーフであるための条件は [こちらの段落](#スレッドセーフなメソッドの書き方) にまとめられています。
 
 原則として、プリエンプティブスレッド内で実行されるコードは外部との相互作用する部分、たとえばプラグインコードやインタープロセス変数などを呼び出すことはできません。 しかしながら、4Dデータサーバーと ORDA はプリエンプティブ実行をサポートしていることから、データアクセスは可能です。
@@ -141,7 +141,7 @@ title: プリエンプティブプロセス
 
 4Dではプロセスに対してコオペラティブ実行かプリエンプティブ実行かを識別する機能を提供しています:
 
-- [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/ja/page336.html) コマンドを使用するとプロセスがプリエンプティブモードあるいはコオペラティブモードで実行されているかを調べる事ができます。
+- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
 - ランタイムエクスプローラーと [4D Server管理ウィンドウ](../ServerWindow/processes.md#プロセスタイプ) は、どちらもプリエンプティブプロセスに対して新しい特定のアイコンを表示するようになりました:
 
 ## スレッドセーフなメソッドの書き方
@@ -193,7 +193,7 @@ title: プリエンプティブプロセス
 
 ### Triggers
 
-[トリガー](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.ja.html) を呼び出すことのあるコマンドをメソッドが使用している場合、4Dコンパイラーはメソッドがスレッドセーフであるかどうかをチェックするために、トリガーがスレッドセーフかどうかを評価します:
+When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
 ```4d
  SAVE RECORD([Table_1]) // Table_1 にトリガーが存在する場合、トリガーはスレッドセーフでなければなりません
@@ -216,7 +216,7 @@ title: プリエンプティブプロセス
 
 :::note
 
-[クライアント/サーバーアプリケーション](../Desktop/clientServer.md)では、トリガーのコードがスレッドセーフである場合でも、実行はコオペラティブモードでおこなわれることがあります。 これは、リモートプロセスからトリガーが呼び出された場合に発生します: この場合、トリガーはサーバーマシン上の [クライアントプロセスの "双子" プロセス](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.ja.html#68966) で実行されます。 このプロセスは、クライアントからのすべての呼び出しに使用されるため、常にコオペラティブモードで実行されます。
+[クライアント/サーバーアプリケーション](../Desktop/clientServer.md)では、トリガーのコードがスレッドセーフである場合でも、実行はコオペラティブモードでおこなわれることがあります。 This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine. このプロセスは、クライアントからのすべての呼び出しに使用されるため、常にコオペラティブモードで実行されます。
 
 :::
 

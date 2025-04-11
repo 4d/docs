@@ -37,7 +37,7 @@ Além disso, terá de criar duas classes de utilizador que conterão funções d
 - uma classe de usuário para tratar as ligações ao servidor,
 - uma classe de usuário para tratar as mensagens.
 
-Você deve [criar o servidor WebSocket] (#4dwebsocketservernew) em um [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) para manter a conexão ativa.
+Você deve [criar o servidor WebSocket] (#4dwebsocketservernew) em um [worker](../Develop/processes.md#worker-processes) para manter a conexão ativa.
 
 O [4D Web Server] (WebServerClass.md) deve ser iniciado.
 

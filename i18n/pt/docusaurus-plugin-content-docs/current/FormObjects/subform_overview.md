@@ -35,7 +35,7 @@ Os subformulários de página podem exibir os dados do subregistro atual ou qual
 
 O subformulário na página utiliza o formulário de entrada indicado pela propriedade [Formulário detalhado](properties_Subform.md#detail-form). Ao contrário de um subformulário de lista, o formulário usado pode vir da mesma tabela que o formulário pai. Também é possível usar um formulário de projeto. Quando executado, um subformulário de página tem as mesmas características de exibição padrão de um formulário de entrada.
 
-> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. Eles são descritos em detalhes em um manual separado, [Widgets 4D](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html).
+> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. Eles são descritos em detalhes em um manual separado, [Widgets 4D](https://doc.4d.com/4Dv20/4D/20/4D-Widgets.100-6343453.en.html).
 
 ### Utilizar a variável ou expressão ligada
 

@@ -23,7 +23,7 @@ Los formatos de imágenes reconocidos por 4D son devueltos por el comando `PICTU
 
 O formulário retornado para cada formato dependerá da forma como o Codec é gravado no nível do sistema operacional. Note que a lista de codecs disponíveis para leitura e escrita pode ser diferente desde que a codificação de codecs pode exigir licenças específicas.
 
-La mayoría de los comandos de gestión de imágenes [4D](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) pueden recibir un Codec ID como parámetro. Por lo tanto, es imperativo utilizar el ID del sistema devuelto por el comando `PICTURE CODEC LIST`.
+La mayoría de los comandos de gestión de imágenes [4D](../commands/theme/Pictures.md) pueden recibir un Codec ID como parámetro. Por lo tanto, es imperativo utilizar el ID del sistema devuelto por el comando `PICTURE CODEC LIST`.
 Los formatos de imágenes reconocidos por 4D son devueltos por el comando `PICTURE CODEC LIST`.
 
 ## Operadores de imagem

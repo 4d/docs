@@ -15,7 +15,7 @@ title: Webサーバーオブジェクト
 
 メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/WebServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。
 
-> 4Dランゲージの従来の [WEBコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.ja.html) はサポートされていますが、その対象となる Webサーバーを選択することはできません (後述参照)。
+> The legacy [WEB commands](../commands/theme/Web_Server.md) of the 4D language are supported but cannot select the web server to which they apply (see below).
 
 各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。これには、以下が含まれます:
 
@@ -104,7 +104,7 @@ A web server object contains [various properties](API/WebServerClass.md../comman
 
 ## 4D Webコマンドのスコープ
 
-4Dランゲージには、Webサーバーの制御に使用できる [いくつかのコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.ja.html) があります。 ただし、これらのコマンドは 1つの (デフォルト) Webサーバーで動作するように設計されています。 これらのコマンドを Webサーバーオブジェクトのコンテキストで使用する場合は、そのスコープが適切であることを確認してください。
+The 4D Language contains [several commands](../commands/theme/Web_Server.md) that can be used to control the web server. ただし、これらのコマンドは 1つの (デフォルト) Webサーバーで動作するように設計されています。 これらのコマンドを Webサーバーオブジェクトのコンテキストで使用する場合は、そのスコープが適切であることを確認してください。
 
 | コマンド                            | スコープ                |
 | ------------------------------- | ------------------- |
@@ -112,7 +112,7 @@ A web server object contains [various properties](API/WebServerClass.md../comman
 | `WEB CLOSE SESSION`             | リクエストを受け取った Webサーバー |
 | `WEB GET BODY PART`             | リクエストを受け取った Webサーバー |
 | `WEB Get body part count`       | リクエストを受け取った Webサーバー |
-| `WEB Get Current Session ID`    | リクエストを受け取った Webサーバー |
+| `WEB Get current session ID`    | リクエストを受け取った Webサーバー |
 | `WEB GET HTTP BODY`             | リクエストを受け取った Webサーバー |
 | `WEB GET HTTP HEADER`           | リクエストを受け取った Webサーバー |
 | `WEB GET OPTION`                | ホストアプリケーション Webサーバー |

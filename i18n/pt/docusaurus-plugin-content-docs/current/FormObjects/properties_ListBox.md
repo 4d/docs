@@ -31,7 +31,7 @@ Especifica o formulário a ser usado para modificar ou exibir registros individu
 
 O formulário especificado é apresentado:
 
-- ao usar as ações padrão `Add Subrecord` e `Edit Subrecord` aplicadas à list box (consulte [Usando ações padrão](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.en.html)),
+- ao usar as ações padrão `Add Subrecord` e `Edit Subrecord` aplicadas à list box (consulte [Usando ações padrão](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html)),
 - quando uma linha for clicada duas vezes e a propriedade [Double-click on Row] (#double-click-on-row) é definida como "Edit Record" (Editar registro) ou "Display Record" (Exibir registro).
 
 #### Gramática JSON

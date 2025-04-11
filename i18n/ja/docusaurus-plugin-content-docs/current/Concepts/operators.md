@@ -282,7 +282,7 @@ $name:=$person.maidenName || $person.name
 
 `条件 ? truthy時の式 : falsy時の式`
 
-> [トークンシンタックス](https://doc.4d.com/4Dv19/4D/19.5/Using-tokens-in-formulas.300-6136716.ja.html) にはコロンが使われているため、競合を避けるには、コロン `:` の後にスペースを入れる、または、トークンは括弧でくくることが推奨されます。
+> Since the [token syntax](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
 
 ### 例題
 

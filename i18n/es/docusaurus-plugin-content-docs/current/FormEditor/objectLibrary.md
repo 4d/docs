@@ -30,7 +30,7 @@ La ventana tiene las siguientes características principales:
 
 Esta librería es de sólo lectura. Si desea editar objetos por defecto o crear su propia librería de objetos preconfigurados o formularios proyecto, deberá crear una librería de objetos personalizada (ver abajo).
 
-Todos los objetos propuestos en la librería de objetos estándar se describen en [esta sección en doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
+All objects proposed in the standard object library are described on [this section](../FormEditor/objectLibrary.md).
 
 ## Crear y utilizar librerías de objetos personalizadas
 

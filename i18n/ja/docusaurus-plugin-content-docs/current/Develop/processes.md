@@ -144,7 +144,7 @@ A worker process is closed by a call to the [`KILL WORKER`](../commands-legacy/k
 
 ### ワーカープロセスの識別
 
-[`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/ja/page336.html) コマンドを使った場合、メインプロセス以外のすべてのワーカープロセスは `Worker process` (5) をプロセスの種別として返します。
+All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`Process info`](../commands/process-info.md) command.
 
 [専用アイコン](../ServerWindow/processes#プロセスタイプ) からもワーカープロセスを識別することができます。
 
