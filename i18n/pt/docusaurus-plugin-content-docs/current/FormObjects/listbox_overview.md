@@ -59,7 +59,7 @@ Há vários tipos de list boxes com seus próprios comportamentos e propriedades
 
 Pode configurar completamente um objeto list box através de suas propriedades e também pode gerenciar dinamicamente por programação.
 
-A linguagem 4D inclui um tema "List Box" dedicado para comandos de list box, mas também podem ser usados comandos de vários outros temas, como comandos "Propriedades dos objetos" ou comandos `EDIT ITEM`, `Displayed line number`. Consulte a página [List Box Commands Summary] (https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) da *Referência da linguagem 4D* para obter mais informações.
+A linguagem 4D inclui um tema "List Box" dedicado para comandos de list box, mas também podem ser usados comandos de vários outros temas, como comandos "Propriedades dos objetos" ou comandos `EDIT ITEM`, `Displayed line number`. Consulte a página [List Box Commands Summary] (https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) da *Referência da linguagem 4D* para obter mais informações.
 
 ## Objetos tipo list box
 
@@ -1140,7 +1140,7 @@ Você deseja exibir uma caixa de combinação com base em uma lista de "cores" d
 Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 - "unitsList": um array que contém os elementos x usados para definir as unidades disponíveis (por exemplo: "cm", "polegadas", "km", "milhas" etc.). Utilize este atributo para definir unidades no interior do objeto.
-- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis.
+- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use this attribute to define units with a 4D list created with the [`New list`](../commands-legacy/new-list.md) command.
 - "unitsListName": um nome de uma lista 4D baseada em design que contém unidades disponíveis. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Independentemente da forma como a lista de unidades é definida, ela pode ser associada ao seguinte atributo:

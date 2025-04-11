@@ -51,7 +51,7 @@ Tanto la interfaz de la cinta de opciones como la de la barra de herramientas ag
 
 Los siguientes eventos formulario están disponibles en la Lista de propiedades de las áreas 4D View Pro.
 
-Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. La siguiente tabla indica los eventos estándar y los eventos específicos o los que ofrecen información adicional a las áreas 4D View Pro:
+Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. Algunos eventos de formulario estándar ofrecen información ampliada en el objeto devuelto por el comando [`FORM Event`](../commands/form-event.md) cuando se generan para áreas 4D View Pro. La siguiente tabla indica los eventos estándar y los eventos específicos o los que ofrecen información adicional a las áreas 4D View Pro:
 
 | Evento 4D estándar                              | Eventos 4D View Pro específicos y extendidos          |
 | ----------------------------------------------- | ----------------------------------------------------- |

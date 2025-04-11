@@ -78,7 +78,7 @@ Si marca esta opción, se añaden dos elementos en el menú **Archivo > Nuevo** 
 
 ![](../assets/en/Preferences/general5.png)
 
-Estos elementos permiten crear bases de datos binarias (ver la sección [Crear una nueva base](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html)). Ya no se proponen por defecto porque 4D recomienda utilizar la arquitectura basada en proyectos para los nuevos desarrollos.
+Estos elementos permiten crear bases de datos binarias (ver la sección [Crear una nueva base](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-new-database.300-6750129.en.html)). Ya no se proponen por defecto porque 4D recomienda utilizar la arquitectura basada en proyectos para los nuevos desarrollos.
 
 ## Al crear un nuevo proyecto
 
@@ -94,7 +94,7 @@ Gracias a este principio, en macOS las carpetas de las bases aparecen como paque
 
 ### Incluir los tokens en los archivos fuente del proyecto
 
-Cuando esta opción está marcada, los [archivos fuente de los métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos 4D contendrán los **tokens** para los objetos clásicos del lenguaje y de la base (constantes, comandos, tablas y ca Los tokens son caracteres adicionales tales como `:C10` o `:5` insertados en los archivos de código fuente, que permiten renombrar las tablas y los campos e identificar elementos sea cual sea la versión 4D (ver [Utilización de tokens en las fórmulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+Cuando esta opción está marcada, los [archivos fuente de los métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos 4D contendrán los **tokens** para los objetos clásicos del lenguaje y de la base (constantes, comandos, tablas y ca Los tokens son caracteres adicionales tales como `:C10` o `:5` insertados en los archivos de código fuente, que permiten renombrar las tablas y los campos e identificar elementos sea cual sea la versión 4D (ver [Utilización de tokens en las fórmulas](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html)).
 
 Si tiene intención de utilizar VCS o los editores de código externos con sus nuevos proyectos, es posible que desee desmarcar esta opción para una mejor legibilidad del código con estas herramientas.
 

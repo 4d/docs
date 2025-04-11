@@ -4023,7 +4023,6 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |row|Integer|->|Row index|
 |rowCount  |Integer|->|Number of rows|
-
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 

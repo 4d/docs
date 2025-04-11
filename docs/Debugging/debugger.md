@@ -298,7 +298,7 @@ To display the parameter type, check the **Show types** option in the contextual
 
 After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
 
-You can also use the [Call chain](../commands-legacy/call-chain.md) command to retrieve the call chain programmatically.
+You can also use the [Call chain](../commands/call-chain.md) command to retrieve the call chain programmatically.
 
 ## Custom Watch Pane
 

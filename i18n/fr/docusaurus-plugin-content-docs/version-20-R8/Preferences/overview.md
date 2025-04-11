@@ -21,7 +21,7 @@ Vous pouvez également afficher la boîte de dialogue Préférences en mode Appl
 
 ## Storage
 
-Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](https://doc.4d.com/4Dv18R6/4D/18-R6/Get-4D-folder.301-5198423.en.html) command:
+Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](../commands-legacy/get-4d-folder.md) command:
 
 - Windows: `{disk}\Users\\{username\}\AppData\Roaming\4D`
 - macOS: `{disk}:Users:\{username\}:Library:Application Support:4D`

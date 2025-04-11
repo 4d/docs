@@ -31,7 +31,7 @@ Dans le document suivant :
 
 ![](../../assets/en/ViewPro/vp-sheet-index-name.png)
 
-Lire l'index de la feuille appelée "Total premier trimester" :
+Lire l'index de la feuille appelée "Total premier trimestre" :
 
 ```4d
 $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //retourne 2

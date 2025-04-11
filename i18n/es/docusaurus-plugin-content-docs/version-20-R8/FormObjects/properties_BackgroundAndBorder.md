@@ -7,7 +7,7 @@ title: Fondo y borde
 
 Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Permite definir un color de fondo diferente para las líneas o columnas impares de un list box.
 
-También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 
@@ -27,7 +27,7 @@ Define el color de fondo de un objeto.
 
 En el caso de un list box, por defecto se selecciona *Automático*: la columna utiliza el color de fondo definido al nivel del list box.
 
-También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 
@@ -49,9 +49,9 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 `List box de tipo colección y de tipo selección de entidades`
 
-Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) en el *Manual de Referencia del Lenguaje 4D*.
+Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) en el *Manual de Referencia del Lenguaje 4D*.
 
-También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) con la constante `lk background color expression`.
+También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](../commands-legacy/listbox-set-property.md) con la constante `lk background color expression`.
 
 > Con los list box de tipo colección o selección de entidades, esta propiedad también puede definirse utilizando una [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -130,7 +130,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVB - como "rgb (255,0,0)"
 
-También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 
@@ -168,7 +168,7 @@ Designa el grosor de una línea.
 
 El nombre de un array para aplicar un color de fondo personalizado a cada línea o columna del list box.
 
-Debe introducirse el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html). Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+Debe introducirse el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command. Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 
 Por ejemplo, dado un list box en el que las líneas tienen un color gris/gris claro alternado, definido en las propiedades del list box. También se ha definido para el list box un array de color de fondo con el fin de cambiar a naranja claro el color de las líneas en las que al menos un valor es negativo:
 
@@ -190,7 +190,7 @@ A continuación, quiere colorear las celdas con valores negativos en naranja osc
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page1268.html) y [`LISTBOX SET ROW COLOR`](https://doc.4d.com/4dv20/help/command/en/page1270.html). Tienen la ventaja de permitirle omitir el tener que predefinir arrays de estilo/color para las columnas: en su lugar son creadas dinámicamente por los comandos.
+Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) y [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md). Tienen la ventaja de permitirle omitir el tener que predefinir arrays de estilo/color para las columnas: en su lugar son creadas dinámicamente por los comandos.
 
 #### Gramática JSON
 

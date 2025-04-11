@@ -217,7 +217,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
  - Boolean
 
 コレクション/エンティティセレクション型リストボックスにおいては、Null あるいはサポートされない型は空の文字列として表示されます。\
-コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、`This.\<propertyPath>` (ここでの `\<propertyPath>` はコレクションのプロパティパス、あるいはエンティティ属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。
+When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](../commands/this.md). この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、`This.\<propertyPath>` (ここでの `\<propertyPath>` はコレクションのプロパティパス、あるいはエンティティ属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。
 スカラー値のコレクションを使用した場合、4D は各コレクション要素に対して、単一のプロパティ (名前は "value") を持つオブジェクトを作成し、それに要素の値を格納します。 この場合、`This.value` を式として使用します。
 
 [代入不可な式](Concepts/quick-tour.md#式) (例: `[Person]FirstName+" "+[Person]LastName` など) を使用した場合、[入力可](properties_Entry.md#入力か) オプションが選択されていても、その列に値を入力することはできません。

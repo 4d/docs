@@ -4147,8 +4147,10 @@ Ver el ejemplo en [VP SUSPEND COMPUTING](#vp-suspend-computing).
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
 | row        | Integer | -> | Índice de la línea                           |
 | rowCount   | Integer | -> | Número de líneas                             |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Object  | <- | Rango de línea(s)|<!-- END REF -->
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
+|
 
 #### Descripción
 

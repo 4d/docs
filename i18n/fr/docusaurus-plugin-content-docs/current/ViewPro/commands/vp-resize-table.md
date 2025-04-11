@@ -28,11 +28,11 @@ La commande `VP RESIZE TABLE` <!-- REF #_method_.VP RESIZE TABLE.Summary -->modi
 
 Les règles suivantes s'appliquent :
 
-- Headers must remain in the same row and the resulting table range must overlap the original table range.
+- Les en-têtes doivent rester dans la même ligne et la plage de table résultante doit chevaucher la plage de table originale.
 - If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](vp-set-data-context.md), otherwise they are deleted.
-- If the table expands on cells containing data:
-    - if rows are added, data is deleted,
-    - if columns are added, data are kept and are displayed in new columns.
+- Si la table se développe sur des cellules contenant des données :
+    - si des lignes sont ajoutées, les données sont supprimées,
+    - si des colonnes sont ajoutées, les données sont conservées et affichées dans de nouvelles colonnes.
 
 If *tableName* does not exist, nothing happens.
 
@@ -56,7 +56,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 
 ![](../../assets/en/ViewPro/table-base.png)
 
-You want to add one column before and after the table as well as two empty rows. Vous pouvez écrire :
+Vous voulez ajouter une colonne avant et après la table ainsi que deux lignes vides. Vous pouvez écrire :
 
 ```4d
 VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")

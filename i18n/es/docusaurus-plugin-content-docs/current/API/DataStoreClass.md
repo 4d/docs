@@ -557,7 +557,7 @@ Esta función debe ser llamada en un 4D remoto, de lo contrario devuelve una col
 
 Colección de objetos de petición apilados. La solicitud más reciente tiene el índice 0.
 
-Para una descripción del formato del registro de peticiones ORDA, consulte la sección [**Peticiones de cliente ORDA**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373).
+Para una descripción del formato del registro de peticiones ORDA, por favor consulte la sección [**Peticiones ORDA**](../Debugging/debugLogFiles.md#orda-requests).
 
 #### Ejemplo
 

@@ -78,7 +78,7 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 
 ![](../assets/en/Preferences/general5.png)
 
-この項目を使用するとバイナリーデータベースを作成することができるようになります([新しいデータベースを作成する](https://doc.4d.com/4Dv19/4D/19/Creating-a-new-database.300-5416694.ja.html) の章を参照)。 これらの項目はデフォルトでは表示されません。今後 4D は、新規の開発にはプロジェクトベースのアーキテクチャーを使用することを推奨するからです。
+These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-new-database.300-6750129.en.html) section). これらの項目はデフォルトでは表示されません。今後 4D は、新規の開発にはプロジェクトベースのアーキテクチャーを使用することを推奨するからです。
 
 ## 新規プロジェクト作成時
 
@@ -94,7 +94,7 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 
 ### Project ソースファイルにトークンを含める
 
-このオプションを有効にすると、新規の 4Dプロジェクトで保存された [メソッドのソースファイル](../Project/architecture.md#sources) には、クラシックランゲージおよびデータベースオブジェクト (定数、コマンド、テーブル、フィールド) 用の **トークン** が含まれます。 トークンとは、ソースコードファイルに挿入される `:C10` や `:5` などの追加文字で、テーブルやフィールドの名前を変更したり、4Dバージョンに関係なく要素を識別したりすることを可能にします ([フォーミュラ内でのトークンの使用](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.ja.html) を参照ください）。
+このオプションを有効にすると、新規の 4Dプロジェクトで保存された [メソッドのソースファイル](../Project/architecture.md#sources) には、クラシックランゲージおよびデータベースオブジェクト (定数、コマンド、テーブル、フィールド) 用の **トークン** が含まれます。 Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html)).
 
 バージョン管理システムや外部のコードエディターを新規プロジェクトで使用したい場合、これらのツールでのコードの可読性のために、このオプションのチェックを外すことができます。
 

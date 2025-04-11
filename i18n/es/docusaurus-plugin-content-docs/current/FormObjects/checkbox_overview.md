@@ -9,7 +9,7 @@ Una casilla de selección es un tipo de botón utilizado para introducir o mostr
 
 Las casillas de selección se controlan por métodos o [acciones estándar](#using-a-standard-action). El método asociado a ella se ejecuta cuando se selecciona la casilla de selección. Como todos los botones, la variable de la casilla de selección se pone en 0 cuando se abre el formulario por primera vez.
 
-Una casilla de selección muestra el texto junto a un pequeño cuadrado. Este texto se define en el área [Título](properties_Object.md#title) del tema "Objetos" de la Lista de propiedades. Para introducir en esta área un título en forma de referencia XLIFF (ver [Anexo B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Una casilla de selección muestra el texto junto a un pequeño cuadrado. Este texto se define en el área [Título](properties_Object.md#title) del tema "Objetos" de la Lista de propiedades. Para introducir en esta área un título en forma de referencia XLIFF (ver [Anexo B: arquitectura XLIFF](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html)).
 
 ## Utilizar casillas de selección
 

@@ -9,7 +9,7 @@ Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dado
 
 As caixas de seleção são controladas por métodos ou [ações padrão](#using-a-standard-action). O método associado com ela é executado quando selecionar a caixa de seleção. Como todos os botões, uma variável da caixa de seleção é estabelecida em 0 quando o formulário é aberto pela primeira vez.
 
-Uma caixa de seleção mostra o teto do lado de um pequeno quadrado. Esse texto é definido na propriedade [Título](properties_Object.md#title) da caixa de seleção. Você pode inserir um título na forma de uma referência XLIFF nessa área (consulte [Apêndice B: Arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+Uma caixa de seleção mostra o teto do lado de um pequeno quadrado. Esse texto é definido na propriedade [Título](properties_Object.md#title) da caixa de seleção. Você pode inserir um título na forma de uma referência XLIFF nessa área (consulte [Apêndice B: Arquitetura XLIFF](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html)).
 
 ## Utilizar caixas de seleção
 

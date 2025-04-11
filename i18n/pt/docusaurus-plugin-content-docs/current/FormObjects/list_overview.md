@@ -16,7 +16,7 @@ O conteúdo de um objeto formulário lista hierárquica pode ser inicializado de
 - Associar uma [lista de opções](properties_DataSource.md#choice-list) existente ao objeto. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
 - Atribuir diretamente uma referência de lista hierárquica à [variável ou expressão](properties_Object.md#variable-or-expression) associada ao objeto formulário.
 
-Em ambos os casos, você gerencia uma lista hierárquica em tempo de execução através de sua referência *ListRef*, usando os comandos de [lista hierárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) na linguagem 4D.
+Em ambos os casos, você gerencia uma lista hierárquica em tempo de execução através de sua referência *ListRef*, usando os comandos de [lista hierárquica](../commands/theme/Hierarchical_Lists.md) na linguagem 4D.
 
 ## RefList e nome de objeto
 
@@ -144,7 +144,7 @@ Pode controlar se os itens da lista hierárquica podem ser modificados pelo usu�
 
 - Independentemente da fonte de dados da lista hierárquica, você pode controlar todo o objeto com a propriedade [Entrável](properties_Entry.md#enterable).
 
-- Além disso, se você preencher a lista hierárquica usando uma lista criada no editor de Listas, poderá controlar se um item em uma lista hierárquica é modificável usando a opção **Elemento modificável** no editor de Listas. Para obter mais informações, consulte [Definir as propriedades das listas](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
+- Além disso, se você preencher a lista hierárquica usando uma lista criada no editor de Listas, poderá controlar se um item em uma lista hierárquica é modificável usando a opção **Elemento modificável** no editor de Listas. Para obter mais informações, consulte [Definir as propriedades das listas](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
 
 ## Propriedades compatíveis
 

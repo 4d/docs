@@ -31,25 +31,25 @@ title: データベースページ
 
 3つのオプションから選択できます:
 
-- **システム**: このオプションが選択されると、4D のテンポラリファイルは Windows または macOS が指定する場所に配置されたフォルダーに作成されます。 システムが指定する場所は [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/ja/page486.html) コマンドで知ることができます。 ファイルは、データベース名とユニークな識別子からなるサブフォルダーに置かれます。
+- **システム**: このオプションが選択されると、4D のテンポラリファイルは Windows または macOS が指定する場所に配置されたフォルダーに作成されます。 You can find out the current location defined by your system using the [`Temporary folder`](../commands-legacy/temporary-folder.md) 4D command. ファイルは、データベース名とユニークな識別子からなるサブフォルダーに置かれます。
 - **データファイルフォルダー** (デフォルト): このオプションが選択されると、4D のテンポラリファイルはデータベースのデータファイルと同階層に配置される "temporary files" フォルダーに作成されます。
 - **ユーザー指定**: このオプションは、場所をカスタマイズするのに使用します。 場所のオプションを変更した場合、新しい設定を反映するにはデータベースを再起動する必要があります。 4D は選択されたフォルダーに書き込みアクセス権があるかを確認します。 アクセス権がなければ、使用できるフォルダーが見つかるまで 4D は他のオプションを試します。
 
-> このオプションは、ストラクチャー定義がXML形式で書き出されたとき、ストラクチャーの "extra properties" に格納されます ([ストラクチャー定義の書き出しと読み込み](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.ja.html) 参照)。
+> This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv20/4D/20.2/Exporting-and-importing-structure-definitions.300-6750295.en.html)).
 
 ### テキスト比較
 
 > これらのオプションのいずれかを変更した場合、新しい設定を反映するにはアプリケーションを終了し、再起動しなければなりません。 データベースが再び開かれると、すべてのインデックスが自動で再作成されます。
 
 - **文字列の途中に含まれる＠はワイルドカードとして扱わない**: クエリ条件や文字列比較の際に "@" をどのように解釈するかを設定します。
-    このオプションが選択されていない場合 (デフォルト設定)、"@" はワイルドカードとして扱われ、あらゆる文字の代わりとみなされます ([ワイルドカード記号 (@)](https://doc.4d.com/4Dv19/4D/19/Query-editor.300-5416813.ja.html#463876) 参照)。
+    When this option is not checked (default value), the at sign is used as the wildcard character, in other words, it replaces any character (see [Wildcard character (@)](https://doc.4d.com/4Dv20/4D/20.2/Query-editor.300-6750279.en.html#463876)).
 
     このオプションが選択されている場合、単語内にある "@" は普通の文字として扱われます。 この設定は、"@" が文字列内で使用される電子メールアドレスの検索などに有効です。 このオプションは検索、並び替え、文字列比較、およびテーブルに格納されるデータや配列などメモリ中のデータに影響を与えます。 (インデックス付きか否かにかかわらず) 文字型やテキスト型のフィールドおよび変数が、検索や並び替え時に "@" 文字がどのように解釈されるかの影響を受けます。
 
     **注:**
 
     - 検索において、"@" が検索条件の先頭か最後にある場合、"@" はワイルドカードとして扱われます。 単語の中に "@" 文字がある場合のみ (例: bill@cgi.com)、4D は異なった扱いをします。
-    - このオプションは object引数に "@" ワイルドキャラクターを受け入れる [オブジェクト(フォーム)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.ja.html) テーマのコマンドの動作にも影響を与えます。
+    - This option can also have an influence on the behavior of the commands in the [Objects (Forms)](../commands/theme/Objects_Forms.md) theme that accept the wildcard character ("@") in the object parameter.
     - セキュリティの理由で、データベースの Administrator または Designer のみがこのパラメーターを変更できます。
 
 - **現在のデータ言語**: 文字列の処理と比較に使用する言語を設定します。 言語の選択は、テキストの並べ替えや検索、文字の大小などの比較ルール等に直接影響を与えます。ただし、テキストの翻訳や日付・時刻・通貨のフォーマットはシステムの言語設定が使用され、この設定には影響されません。 デフォルトで 4D はシステム言語を使用します。

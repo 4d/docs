@@ -15,7 +15,7 @@ Alguns estilos de botão podem ser [vinculados a um menu pop-up](FormObjects/pro
 
 4D permite gestionar este tipo de botones utilizando el evento `On Alternative Click`. Este evento é gerado quando o usuário clica no triângulo (assim que o botão do mouse é pressionado):
 
-- Se o menu pop-up estiver **separado**, o evento só será gerado quando ocorrer um clique na parte do botão com a seta. Observe que a [ação padrão](https://doc.4d.com/4Dv19R7/4D/19-R7/Standard-actions.300-6013479.en.html) atribuída ao botão (se houver) não é executada neste caso.
+- Se o menu pop-up estiver **separado**, o evento só será gerado quando ocorrer um clique na parte do botão com a seta. Observe que a [ação padrão](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) atribuída ao botão (se houver) não é executada neste caso.
 - Se o menu pop-up estiver **vinculado**, o evento é gerado quando ocorre um clique em qualquer parte do botão. Observe que o evento [`No Long Click`](onLongClick.md) não pode ser gerado com este tipo de botão.
 
 ![](../assets/en/Events/clickevents.png)

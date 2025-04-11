@@ -59,7 +59,7 @@ title: リストボックス
 
 リストボックスオブジェクトはプロパティによってあらかじめ設定可能なほか、プログラムにより動的に管理することもできます。
 
-4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや `EDIT ITEM`、`Displayed line number` コマンドなど、ほかのテーマのコマンドも利用することができます。 詳細については *4D ランゲージリファレンスマニュアル* の[リストボックスコマンド一覧](https://doc.4d.com/4Dv18/4D/18/List-Box-Commands-Summary.300-4505230.ja.html)を参照してください。
+4D ランゲージにはリストボックス関連のコマンドをまとめた "リストボックス" テーマが専用に設けられていますが、"オブジェクトプロパティ" コマンドや `EDIT ITEM`、`Displayed line number` コマンドなど、ほかのテーマのコマンドも利用することができます。 Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) page of the *4D Language reference* for more information.
 
 ## リストボックスオブジェクト
 
@@ -1184,7 +1184,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します: 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
 - "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
-- "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [New list](https://doc.4d.com/4Dv18/4D/18/New-list.301-4505738.ja.html) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
+- "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 Use this attribute to define units with a 4D list created with the [`New list`](../commands-legacy/new-list.md) command.
 - "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
 
 単位リストが定義された方法に関わらず、以下の属性を関連付けることができます:

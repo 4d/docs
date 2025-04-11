@@ -31,7 +31,7 @@ title: リストボックス
 
 指定されたフォームは以下のタイミングで表示されます:
 
-- リストボックスに関連付けられている `addSubrecord` (サブレコード追加)、または `editSubrecord` (サブレコード編集) の標準アクションを使用したとき ([標準アクションの使用](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.ja.html) を参照してください)。
+- when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html)),
 - [行をダブルクリック](#行をダブルクリック) プロパティが「レコード編集」か「レコード表示」に設定されている場合に行をダブルクリックしたとき。
 
 #### JSON 文法

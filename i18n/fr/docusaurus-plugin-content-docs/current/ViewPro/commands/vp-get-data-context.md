@@ -33,7 +33,7 @@ The function returns an object or a collection depending on the type of data con
 
 ## Exemple
 
-To get the data context bound to the following cells:
+Pour obtenir le contexte de données lié aux cellules suivantes :
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 

@@ -121,7 +121,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](../commands-l
 - *フォントファミリー:* "times", "courier", "arial" などのフォントファミリーの名称。
 - *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
 
-このプロパティは [**OBJECT SET FONT**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT.301-4505454.ja.html) コマンドによって設定することができます。
+You can set this using the [`OBJECT SET FONT`](../commands-legacy/object-set-font.md) command.
 
 #### JSON 文法
 
@@ -185,7 +185,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](../commands
 
 リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。 For more information about this, refer to the description of the [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) command in the 4D Language Reference manual.
 
-式または変数 (配列を除く) を入力します。 表示される行ごとに式や変数は評価されます。 ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。
+式または変数 (配列を除く) を入力します。 表示される行ごとに式や変数は評価されます。 You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
 
 また、このプロパティは `LISTBOX SET PROPERTY` コマンドに `lk font color expression` 定数を指定して設定することもできます。
 
@@ -216,7 +216,7 @@ Foreground color;Dark shadow color)
 
 リストボックスの各行にカスタマイズされた文字スタイルを適用するために使用します。
 
-式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 ここでは [Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます。
+式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 You can use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) command.
 
 例:
 
@@ -420,7 +420,7 @@ End if
 
 リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command. もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 
@@ -440,7 +440,7 @@ End if
 
 リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 配列へは、[Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます (メソッドを使用しての入力も可能)。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 To fill the array (using a method), use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) command. 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 

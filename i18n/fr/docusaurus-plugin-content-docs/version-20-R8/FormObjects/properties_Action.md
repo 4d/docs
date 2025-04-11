@@ -18,7 +18,7 @@ Deux modes de glisser-déposer sont proposés dans 4D :
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
   In this mode, the `On Begin Drag` form event is NOT generated. Si vous souhaitez "forcer" l'utilisation du glissement personnalisé alors que le glissement automatique est activé, maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée pendant l'action. Cette option n'est pas disponible pour les images.
 
-Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) dans le manuel *Langage 4D*.
+Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) dans le manuel *Langage 4D*.
 
 #### Grammaire JSON
 
@@ -46,7 +46,7 @@ Deux modes de glisser-déposer sont proposés dans 4D :
   You then manage the drag action using a method. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
 - Un mode **automatique**, dans lequel 4D gère automatiquement — si possible — l’insertion des données glissées de type texte ou image et déposées sur l’objet (les données sont collées dans l’objet). Les événements `Sur glisser` et `Sur déposer` ne sont pas générés. En revanche, les événements `Sur après modification` (lors du déposer) et `Sur données modifiées` (lorsque l'objet perd le focus) sont générés.
 
-Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) dans le manuel *Langage 4D*.
+Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) dans le manuel *Langage 4D*.
 
 #### Grammaire JSON
 
@@ -169,7 +169,7 @@ Dans d'autres cas (list box basées sur des sélections nommées, colonnes assoc
 
 ## Action standard
 
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. Elles sont décrites en détail dans la section [Actions standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) du *manuel de développement*.
+Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. Elles sont décrites en détail dans la section [Actions standard](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) du *manuel de développement*.
 
 Vous pouvez associer à la fois une action standard et la méthode projet d'un objet. Dans ce cas, l'action standard est généralement exécutée après la méthode et 4D utilise cette action pour activer/désactiver l'objet en fonction du contexte courant. Lorsqu’un objet est désactivé, la méthode projet associée ne peut être exécutée.
 
@@ -177,9 +177,9 @@ Vous pouvez également définir cette propriété à l'aide de la commande `OBJE
 
 #### Grammaire JSON
 
-| Nom    | Type de données | Valeurs possibles                                                                                                                |
-| ------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| action | string          | Le nom d'une [action standard valide](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| Nom    | Type de données | Valeurs possibles                                                                                                             |
+| ------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| action | string          | Le nom d'une [action standard valide](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html). |
 
 #### Objets pris en charge
 

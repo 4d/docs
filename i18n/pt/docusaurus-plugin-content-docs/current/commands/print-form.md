@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | form      | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
 | formData  | Object       | &#8594; | Data to associate to the form                                                                                                                                                            |
 | areaStart | Integer      | &#8594; | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
-| areaEnd   | Integer      | &#8594; | Ending area (if areaStart specified)                                                                                                                                  |
+| areaEnd   | Integer      | &#8594; | Área final (se for especificado pela areaStart)                                                                                                                       |
 | Resultado | Integer      | &#8592; | Height of printed section                                                                                                                                                                |
 
 <!-- END REF-->
