@@ -2827,6 +2827,60 @@ module.exports =
           ]
         },
         {
+          type: "category",
+          label: "4D AIKit",
+          link: {
+            type: "generated-index",
+            title: "4D AIKit",
+            slug: "/category/4d-aikit",
+            keywords: [
+              "4D AIKit"
+            ],
+            image: "/img/docusaurus.png"
+          },
+          items: [
+            "aikit/overview",
+            "aikit/asynchronous-call",
+            "aikit/compatible-openai",
+            {
+              type: "category",
+              label: "Classes",
+              items: [
+                "aikit/Classes/openai",
+                "aikit/Classes/openaiapiresource",
+                "aikit/Classes/openaichatapi",
+                "aikit/Classes/openaichatcompletionsapi",
+                "aikit/Classes/openaichatcompletionslistparameters",
+                "aikit/Classes/openaichatcompletionsmessagesapi",
+                "aikit/Classes/openaichatcompletionsmessagesparameters",
+                "aikit/Classes/openaichatcompletionsparameters",
+                "aikit/Classes/openaichatcompletionsresult",
+                "aikit/Classes/openaichatcompletionsstreamresult",
+                "aikit/Classes/openaichathelper",
+                "aikit/Classes/openaichoice",
+                "aikit/Classes/openaierror",
+                "aikit/Classes/openaiimage",
+                "aikit/Classes/openaiimageparameters",
+                "aikit/Classes/openaiimagesapi",
+                "aikit/Classes/openaiimagesresult",
+                "aikit/Classes/openaimessage",
+                "aikit/Classes/openaimodel",
+                "aikit/Classes/openaimodellistresult",
+                "aikit/Classes/openaimodelresult",
+                "aikit/Classes/openaimodelsapi",
+                "aikit/Classes/openaimoderation",
+                "aikit/Classes/openaimoderationitem",
+                "aikit/Classes/openaimoderationresult",
+                "aikit/Classes/openaimoderationsapi",
+                "aikit/Classes/openaiparameters",
+                "aikit/Classes/openairesult",
+                "aikit/Classes/openaivision",
+                "aikit/Classes/openaivisionhelper"
+              ]
+            }
+          ]
+        },
+        {
           type: "link",
           label: "4D Mobile App Server",
           href: "https://github.com/4d-go-mobile/4D-Mobile-App-Server"
