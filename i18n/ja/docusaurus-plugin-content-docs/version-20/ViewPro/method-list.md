@@ -4143,13 +4143,15 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 <!-- REF #_method_.VP Row.Params -->
 
-| 引数         | 型       |    | 説明                      |
-| ---------- | ------- | -- | ----------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |
-| row        | Integer | -> | 行のインデックス                |
-| rowCount   | Integer | -> | 行数                      |
+| 引数         | 型       |    | 説明                                     |
+| ---------- | ------- | -- | -------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                |
+| row        | Integer | -> | 行のインデックス                               |
+| rowCount   | Integer | -> | 行数                                     |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)            |
+| 戻り値        | Object  | <- | 行のレンジオブジェクト|<!-- END REF -->
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
+|
 
 #### 説明
 
