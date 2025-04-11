@@ -17,7 +17,7 @@ slug: /commands/theme/Structure-Access
 | [<!-- INCLUDE #_command_.GET MISSING TABLE NAMES.Syntax -->](../../commands-legacy/get-missing-table-names.md)<br/>       |
 | [<!-- INCLUDE #_command_.GET RELATION PROPERTIES.Syntax -->](../../commands-legacy/get-relation-properties.md)<br/>       |
 | [<!-- INCLUDE #_command_.GET TABLE PROPERTIES.Syntax -->](../../commands-legacy/get-table-properties.md)<br/>             |
-| [<!-- INCLUDE #_command_.IMPORT STRUCTURE.Syntax -->](../../commands-legacy/import-structure.md)<br/>                     |
+| [<!-- INCLUDE #_command_.MODIFY SELECTION.Syntax -->](../../commands-legacy/modify-selection.md)<br/>                     |
 | [<!-- INCLUDE #_command_.Is field number valid.Syntax -->](../../commands-legacy/is-field-number-valid.md)<br/>           |
 | [<!-- INCLUDE #_command_.Is table number valid.Syntax -->](../../commands-legacy/is-table-number-valid.md)<br/>           |
 | [<!-- INCLUDE #_command_.Last field number.Syntax -->](../../commands-legacy/last-field-number.md)<br/>                   |
