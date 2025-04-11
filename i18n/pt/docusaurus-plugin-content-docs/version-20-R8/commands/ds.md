@@ -43,7 +43,7 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
 
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
 
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
