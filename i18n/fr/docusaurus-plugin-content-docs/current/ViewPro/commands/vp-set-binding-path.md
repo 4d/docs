@@ -33,7 +33,7 @@ In *rangeObj*, pass an object that is either a cell range or a combined range of
 
 In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
 
-> Attributes of type collection are not supported. When you pass the name of a collection attribute, the command does nothing.
+> Les attributs de type collection ne sont pas pris en charge. Lorsque vous passez le nom d'un attribut de collection, la commande ne fait rien.
 
 ## Exemple
 
