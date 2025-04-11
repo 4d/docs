@@ -3020,20 +3020,20 @@ Dans *filePath*, passez le chemin et le nom du document à importer. Les formats
 
 Si l'extension du document n'est pas une extension reconnue, telle que `.4vp` ou `.xslx`, le document est considéré comme un document texte. Vous devez passer un chemin d'accès complet, sauf si le document est situé au même niveau que le dossier Project, auquel cas vous pouvez simplement passer son nom.
 
-> When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+> Lors de l'importation d'un fichier au format Microsoft Excel dans un document 4D View Pro, certains paramètres peuvent être perdus. Vous pouvez vérifier vos paramètres avec [cette liste de GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
 
 Une erreur est retournée si le paramètre `filePath` est invalide, ou si le fichier est manquant ou mal-formé.
 
 Le paramètre optionnel *paramObj* vous permet de définir les propriétés du document importé :
 
-| Paramètres |                 | Type   | Description                                                                                                                                                                                                                                                                                             |
-| ---------- | --------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                 | object | Nom d'une méthode callback (ou méthode rétro-rappel) à lancer lorsque l'import est terminé. La méthode doit utiliser la commande [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html). The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command. |
-| password   |                 | text   | Microsoft Excel uniquement (optionnel) - Mot de passe utilisé pour protéger un document Microsoft Excel.                                                                                                                                                                                                |
-| csvOptions |                 | object | options d'import csv                                                                                                                                                                                                                                                                                    |
-|            | range           | object | Plage de cellules contenant la première cellule dans laquelle les données seront saisies. Si la plage spécifiée n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.                                                                                                    |
-|            | rowDelimiter    | text   | Délimiteur de ligne. S'il n'est pas défini, le délimiteur est automatiquement déterminé par 4D.                                                                                                                                                                                                         |
-|            | columnDelimiter | text   | Délimiteur de colonne. Par défaut : ","                                                                                                                                                                                                                                                                 |
+| Paramètres |                 | Type   | Description                                                                                                                                                                                                                                                                             |
+| ---------- | --------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula    |                 | object | Nom d'une méthode callback (ou méthode rétro-rappel) à lancer lorsque l'import est terminé. La méthode doit utiliser la commande [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html). Voir [Passer une méthode callback (formula)](#passing-a-callback-method-formula). |
+| password   |                 | text   | Microsoft Excel uniquement (optionnel) - Mot de passe utilisé pour protéger un document Microsoft Excel.                                                                                                                                                                                |
+| csvOptions |                 | object | options d'import csv                                                                                                                                                                                                                                                                    |
+|            | range           | object | Plage de cellules contenant la première cellule dans laquelle les données seront saisies. Si la plage spécifiée n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.                                                                                    |
+|            | rowDelimiter    | text   | Délimiteur de ligne. S'il n'est pas défini, le délimiteur est automatiquement déterminé par 4D.                                                                                                                                                                                         |
+|            | columnDelimiter | text   | Délimiteur de colonne. Par défaut : ","                                                                                                                                                                                                                                                 |
 
 > Pour plus d'informations sur le format CSV et les valeurs séparées par un délimiteur en général, voir [cet article sur Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
@@ -3084,7 +3084,7 @@ $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
 
-Here's the result: ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
+Voici le résultat :![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### Voir également
 
@@ -3111,7 +3111,7 @@ La commande `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
+Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. Pour plus d'informations sur les objets 4D View Pro, veuillez vous référer à la section [objet 4D View Pro](configuring.md#4d-view-pro-object).
 
 Une erreur est retournée si l'objet *viewPro* est invalide.
 
@@ -3229,20 +3229,20 @@ Le résultat est le suivant :
 
 #### Description
 
-La commande `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
+La commande `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->insère une ou *count* colonne(s) vide(s) dans la table *tableName* à l'indice de colonne *column*<!-- END REF -->.
 
-When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command.
+Lorsqu'une colonne a été insérée avec cette commande, vous modifiez généralement son contenu en utilisant la commande [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes).
 
-In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
+Dans le paramètre *insertAfter*, vous pouvez passer une des constantes suivantes pour indiquer si la ou les colonne(s) doi(ven)t être insérée(s) avant ou après l'indice *column* :
 
-| Constante                | Valeur | Description                                               |
-| ------------------------ | ------ | --------------------------------------------------------- |
-| `vk table insert before` | 0      | Insert column(s) before the *column* (default if omitted) |
-| `vk table insert after`  | 1      | Insert column(s) after the *column*                       |
+| Constante                | Valeur | Description                                                               |
+| ------------------------ | ------ | ------------------------------------------------------------------------- |
+| `vk table insert before` | 0      | Insérer la(les) colonne(s) avant la colonne *column* (par défaut si omis) |
+| `vk table insert after`  | 1      | Insérer la(les) colonne(s) après la colonne *column*                      |
 
-This command inserts some columns in the *tableName* table, NOT in the sheet. The total number of columns of the sheet is not impacted by the command. Data present at the right of the table (if any) are automatically moved right according to the number of added columns.
+Cette commande insère des colonnes dans la table *tableName*, PAS dans la feuille. Le nombre total de colonnes de la feuille n'est pas impacté par la commande. Les données présentes à droite de la table (le cas échéant) sont automatiquement déplacées à droite en fonction du nombre de colonnes ajoutées.
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+Si *tableName* n'existe pas ou s'il n'y a pas assez d'espace dans la feuille, rien ne se passe.
 
 
 #### Exemple
@@ -3274,29 +3274,29 @@ Voir les exemples pour [VP INSERT TABLE ROWS](#vp-insert-table-rows) et [VP SET 
 | ----------- | ------- | -- | -------------------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                    |
 | tableName   | Text    | -> | Nom de table                                                               |
-| row         | Integer | -> | Index in the table of the starting row to insert                           |
-| count       | Text    | -> | Number of rows to add (must be >0)                                         |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *row*                  |
+| row         | Integer | -> | Indice dans la table de la ligne de départ à insérer                       |
+| count       | Text    | -> | Nombre de lignes à ajouter (doit être >0)                                  |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*                  |
 | sheet       | Integer | -> | Indice de la feuille (feuille courante si omis)|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or *count* empty row(s) in the specified *tableName* at the specified *row* index<!-- END REF -->.
+La commande `VP INSERT TABLE ROWS` <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->insère une ou *count* ligne(s) vide(s) dans la table *tableName* à l'indice de ligne *row*<!-- END REF -->.
 
-In the *insertAfter* parameter, you can pass one of the following constants to indicate if the row(s) must be inserted before or after the *row* index:
+Dans le paramètre *insertAfter* , vous pouvez passer une des constantes suivantes pour indiquer si la ou les ligne(s) doi(ven)t être insérée(s) avant ou après l'indice *ligne*:
 
-| Constante                | Valeur | Description                                         |
-| ------------------------ | ------ | --------------------------------------------------- |
-| `vk table insert before` | 0      | Insert row(s) before the *row* (default if omitted) |
-| `vk table insert after`  | 1      | Insert row(s) after the *row*                       |
+| Constante                | Valeur | Description                                                        |
+| ------------------------ | ------ | ------------------------------------------------------------------ |
+| `vk table insert before` | 0      | Insérer la(les) ligne(s) avant la ligne *row* (par défaut si omis) |
+| `vk table insert after`  | 1      | Insérer la(les) ligne(s) après la ligne *row*                      |
 
-This command inserts some rows in the *tableName* table, NOT in the sheet. The total number of rows of the sheet is not impacted by the command. Data present below the table (if any) are automatically moved down according to the number of added rows.
+Cette commande insère des lignes dans la table *tableName*, PAS dans la feuille. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Les données présentes sous la table (le cas échéant) sont automatiquement déplacées vers le bas en fonction du nombre de lignes ajoutées.
 
-If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection.
+Si la table *tableName* est liée à un [contexte de données](#vp-set-data-context), la commande insère de nouveaux éléments vides dans la collection.
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+Si *tableName* n'existe pas ou s'il n'y a pas assez d'espace dans la feuille, rien ne se passe.
 
 
 #### Exemple
@@ -3319,7 +3319,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 
 ![](../assets/en/ViewPro/table-base.png)
 
-You want to insert two rows and two columns in the table, you can write:
+Vous voulez insérer deux lignes et deux colonnes dans la table, vous pouvez écrire :
 
 ```4d
 VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
@@ -3355,30 +3355,30 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <!-- REF #_method_.VP MOVE CELLS.Params -->
 
-| Paramètres  | Type   |    | Description                                          |
-| ----------- | ------ | -- | ---------------------------------------------------- |
-| originRange | Object | -> | Cell range to copy from                              |
-| targetRange | Object | -> | Target range for the values, formatting and formulas |
+| Paramètres  | Type   |    | Description                                                |
+| ----------- | ------ | -- | ---------------------------------------------------------- |
+| originRange | Object | -> | Plage de cellules à copier                                 |
+| targetRange | Object | -> | Plage cible pour les valeurs, le formatage et les formules |
 | options     | Object | -> | Options supplémentaires|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP MOVE CELLS` command <!-- REF #_method_.VP MOVE CELLS.Summary -->moves or copies the values, style and formulas from *originRange* to *targetRange*<!-- END REF -->.
+La commande `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->déplace ou copie les valeurs, le style et les formules de *originRange* vers *targetRange*<!-- END REF -->.
 
-*originRange* and *targetRange* can refer to different View Pro areas.
+Les plages *originRange* et *targetRange* peuvent se référer à différentes zones 4D View Pro.
 
-In *originRange*, pass a range object containing the values, style, and formula cells to copy or move. If *originRange* is a combined range, only the first one is used.
+Dans *originRange*, passez un objet range contenant les cellules avec les valeurs, le style et les formules à copier ou à déplacer. Si *originRange* est une plage combinée, seule la première est utilisée.
 
-In *targetRange*, pass the range of cells where the cell values, style, and formulas will be copied or moved.
+Dans *targetRange*, passez la plage de cellules où les valeurs, le style et les formules des cellules seront copiées ou déplacées.
 
-The *options* parameter has several properties:
+Le paramètre *options* a plusieurs propriétés :
 
-| Propriété    | Type    | Description                                                                                                                                       |
-| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| copy         | Boolean | Determines if the values, formatting and formulas of the cells in *originRange* are removed after the command executes:<ul><li>*False* (default) to remove them</li><li>*True* to keep them</li></ul> |
-| pasteOptions | Integer | Specifies what is pasted. Valeurs possibles : <p><table><tr><th>Valeur</th><th>Description</th></tr><tr><td>`vk clipboard options all` (par défaut)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>                                                                           |
+| Propriété    | Type    | Description                                                                                                                                                        |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| copy         | Boolean | Détermine si les valeurs, le formatage et les formules des cellules dans *originRange* sont supprimés après l'exécution de la commande :<ul><li>*False* (par défaut) pour les supprimer</li><li>*True* pour les conserver</li></ul> |
+| pasteOptions | Integer | Spécifie ce qui est collé. Valeurs possibles : <p><table><tr><th>Valeur</th><th>Description</th></tr><tr><td>`vk clipboard options all` (par défaut)</td><td>Colle tous les objets de données, y compris les valeurs, le formatage et les formules.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Colle uniquement le formatage.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Colle uniquement les formules.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Colle les formules et le formatage.</td></tr><tr><td>`vk clipboard options values`</td><td>Colle uniquement les valeurs.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Colle les valeurs et le formatage.</td></tr></table></p>                                                                                           |
 
 
 Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
@@ -3431,7 +3431,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Le paramètre *rangeName* indique une plage de cellule nommée existante.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou l'intégralité du classeur (workbook) à l'aide des constantes suivantes :
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle est défini *rangeName*. Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou l'intégralité du classeur (workbook) à l'aide des constantes suivantes :
 
 * `vk current sheet`
 * `vk workbook`
@@ -3441,10 +3441,10 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 Vous souhaitez assigner une valeur à une plage nommée "Total".
 
 ```4d
-// name the B5 cell as Total
-VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";"Total")
-VP SET NUM VALUE($name;285;"$#,###.00")
+// nommer la cellule B5 Total
+ VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
+ $name:=VP Name("ViewProArea";" Total")
+ VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
 #### Voir également
@@ -3502,7 +3502,7 @@ VP NEW DOCUMENT("myVPArea")
 
 #### Description
 
-La commande `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from *fontObj*<!-- END REF -->.
+La commande `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->retourne une chaîne de police raccourcie depuis *fontObj*<!-- END REF -->.
 
 Dans *fontObj*, passez un objet contenant les propriétés de police. Les propriétés suivantes sont prises en charge :
 
@@ -3553,36 +3553,36 @@ $cellStyle.font:=VP Object to font($font)
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
-| Paramètres | Type    |    | Description                                         |
-| ---------- | ------- | -- | --------------------------------------------------- |
-| rangeObj   | Object  | -> | Objet plage de cellules                             |
-| dataObject | Object  | -> | Object containing the data to be pasted             |
-| options    | Integer | -> | Specifies what is pasted|<!-- END REF -->
+| Paramètres | Type    |    | Description                                          |
+| ---------- | ------- | -- | ---------------------------------------------------- |
+| rangeObj   | Object  | -> | Objet plage de cellules                              |
+| dataObject | Object  | -> | Objet contenant les données à coller                 |
+| options    | Integer | -> | Spécifie ce qui est collé|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
+La commande `VP PASTE FROM OBJECT` <!-- REF #_method_.PASTE FROM OBJECT.Summary -->colle le contenus, le style et les formules stockés dans *dataObject* dans l'objet *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass the cell range object where the values, formatting, and/or formula cells will be pasted. If *rangeObj* refers to more than one cell, only the first one is used.
+Dans *rangeObj*, passez l'objet plage de cellules où les valeurs, le formatage et/ou les formules de cellules seront collés. Si *rangeObj* fait référence à plus d'une cellule, seule la première est utilisée.
 
-In *dataObject*, pass the object that contains the cell data, formatting, and formulas to be pasted.
+Dans *dataObject*, passez l'objet qui contient les données cellulaires, le formatage et les formules à coller.
 
-In the optional *options* parameter, you can specify what to paste in the cell range. Valeurs possibles :
+Dans le paramètre facultatif *options*, vous pouvez spécifier ce qu'il faut coller dans la plage de cellules. Valeurs possibles :
 
-| Constante                                      | Description                                                          |
-| ---------------------------------------------- | -------------------------------------------------------------------- |
-| `vk clipboard options all`                     | Pastes all data objects, including values, formatting, and formulas. |
-| `vk clipboard options formatting`              | Pastes only the formatting.                                          |
-| `vk clipboard options formulas`                | Pastes only the formulas.                                            |
-| `vk clipboard options formulas and formatting` | Pastes formulas and formatting.                                      |
-| `vk clipboard options values`                  | Pastes only values.                                                  |
-| `vk clipboard options value and formatting`    | Pastes values and formatting.                                        |
+| Constante                                      | Description                                                                            |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `vk clipboard options all`                     | Colle tous les objets de données, y compris les valeurs, le formatage et les formules. |
+| `vk clipboard options formatting`              | Colle uniquement le formatage.                                                         |
+| `vk clipboard options formulas`                | Colle uniquement les formules.                                                         |
+| `vk clipboard options formulas and formatting` | Colle les formules et le formatage.                                                    |
+| `vk clipboard options values`                  | Colle uniquement les valeurs.                                                          |
+| `vk clipboard options value and formatting`    | Colle les valeurs et le formatage.                                                     |
 
 Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
 
-Collection de données à charger dans le contexte de données
+Si les *options* font référence à une option de collage qui n'est pas présente dans l'objet copié (par exemple, les formules), la commande ne fait rien.
 
 #### Exemple
 
@@ -3608,19 +3608,19 @@ Voir l'exemple de [VP Copy to object](#vp-copy-to-object)
 
 #### Description
 
-The `VP PRINT` command <!-- REF #_method_.VP PRINT.Summary -->opens a print dialog window to print *vpAreaName*<!-- END REF -->.
+La commande `VP PRINT` <!-- REF #_method_.VP PRINT.Summary -->ouvre une fenêtre de dialogue d'impression pour imprimer *vpAreaName*<!-- END REF -->.
 
 Passez la zone 4D View Pro à imprimer dans le paramètre *vpAreaName*. La commande ouvrira la fenêtre de dialogue d'impression permettant de définir l'imprimante et les propriétés de la page.
-> The properties defined in the print dialog window are for the printer paper, they are not the printing properties for the 4D View Pro area. Printing properties for 4D View Pro areas are defined using the [VP SET PRINT INFO](#vp-set-print-info) command. It is highly recommended that the properties for both the printer and the 4D View Pro area match, otherwise the printed document may not correspond to your expectations.
+> Les propriétés définies dans la fenêtre de dialogue d'impression concernent le papier de l'imprimante, ce ne sont pas les propriétés d'impression de la zone 4D View Pro. Les propriétés d'impression pour les zones 4D View Pro sont définies à l'aide de la commande [VP SET PRINT INFO](#vp-set-print-info). Il est fortement recommandé que les propriétés de l'imprimante et de la zone 4D View Pro correspondent, sinon le document imprimé pourrait ne pas correspondre à vos attentes.
 
 Dans le paramètre optionnel *sheet*, vous pouvez définir une feuille (sheet) spécifique à imprimer (la numérotation démarre à zéro). S'il est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou le workbook entier à l'aide des constantes suivantes :
 
 * `vk current sheet`
 * `vk workbook`
 
-> * 4D View Pro areas can only be printed with the `VP PRINT` command.
-> * Commands from the 4D **Printing** language theme are not supported by `VP PRINT`.
-> * This command is intended for individual printing by the final end user. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](#vp-export-document) method.
+> * Les zones 4D View Pro ne peuvent être imprimées qu'avec la commande `VP PRINT`.
+> * Les commandes du thème de langage 4D **Impressions** ne sont pas prises en charge par `VP PRINT`.
+> * Cette commande est destinée à l'impression individuelle par l'utilisateur final. Pour les tâches d'impression automatisées, il est conseillé d'exporter la zone 4D View Pro en format PDF avec la méthode [VP EXPORT DOCUMENT](#vp-export-document).
 
 #### Exemple
 
@@ -3725,10 +3725,10 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 
 <!-- REF #_method_.VP REMOVE SHEET.Params -->
 
-| Paramètres | Type    |    | Description                                             |
-| ---------- | ------- | -- | ------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                 |
-| index      | Integer | -> | Index of the sheet to remove|<!-- END REF -->
+| Paramètres | Type    |    | Description                                                 |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                     |
+| index      | Integer | -> | Indice de la feuille à supprimer|<!-- END REF -->
 
 |
 
@@ -3738,7 +3738,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 
 #### Description
 
-The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->removes the sheet with the specified *index* from the document loaded in *vpAreaName*<!-- END REF -->.
+La commande `VP REMOVE SHEET` <!-- REF #_method_.VP REMOVE SHEET.Summary -->supprime la feuille avec le numéro*index* du document chargé dans *vpAreaName*<!-- END REF -->.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
@@ -3772,7 +3772,7 @@ VP REMOVE SHEET("ViewProArea";2)
 |
 #### Description
 
-La commande `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
+La commande `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->supprime le span des cellules dans *rangeObj*<!-- END REF -->.
 
 Dans *rangeObj*, passez un objet plage de la fusion. Les cellules fusionnées de la plage sont divisées en cellules individuelles.
 
@@ -3863,25 +3863,25 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 #### Description
 
-The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](#vp-create-table).
+La commande `VP REMOVE TABLE` <!-- REF #_method_.VP REMOVE TABLE.Summary -->supprime une table<!-- END REF --> que vous avez créée avec [VP CREATE TABLE](#vp-create-table).
 
-In *vpAreaName*, pass the name of the area where the table to remove is located.
+Dans *vpAreaName*, passez le nom de la zone contenant la table à supprimer.
 
-In *tableName*, pass the name of the table to remove.
+Dans *tableName*, passez le nom de la table à supprimer.
 
-In *options*, you can specify additional behavior. Valeurs possibles :
+Dans *options *, vous pouvez spécifier un comportement supplémentaire. Valeurs possibles :
 
-| Constante             | Valeur | Description                         |
-| --------------------- | ------ | ----------------------------------- |
-| vk table remove all   | 0      | Remove all including style and data |
-| vk table remove style | 1      | Remove style but keep data          |
-| vk table remove data  | 2      | Remove data but keep style          |
+| Constante             | Valeur | Description                                      |
+| --------------------- | ------ | ------------------------------------------------ |
+| vk table remove all   | 0      | Tput supprimer y compris le style et les données |
+| vk table remove style | 1      | Supprimer le style mais conserver les données    |
+| vk table remove data  | 2      | Supprimer les données mais conserver le style    |
 
-Table names are defined at sheet level. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
+Les noms des tables sont définis au niveau de la feuille. Vous pouvez spécifier où se trouve la table en utilisant le paramètre facultatif *sheet* (la numérotation commence à 0).
 
 #### Exemple
 
-To remove the "people" table in the second sheet and keep the data in the cells:
+Pour supprimer la table "people" dans la deuxième feuille et conserver les données dans les cellules :
 
 ```4d
 VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
@@ -3910,25 +3910,25 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 | ---------- | ------- | -- | -------------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                    |
 | tableName  | Text    | -> | Nom de table                                                               |
-| column     | Integer | -> | Index in the table of the starting column to remove                        |
-| count      | Text    | -> | Number of columns to remove (must be >0)                                   |
+| column     | Integer | -> | Indice dans la table de la colonne de départ à supprimer                   |
+| count      | Text    | -> | Nombre de colonnes à supprimer (doit être >0)                              |
 | sheet      | Integer | -> | Indice de la feuille (feuille courante si omis)|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. The command removes values and styles.
+La commande `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->supprime une ou *count* colonne(s) de la table *tableName* à partir de la colonne d'indice *column*<!-- END REF -->. La commande supprime les valeurs et les styles.
 
-The command removes columns from the *tableName* table, NOT from the sheet. The total number of columns of the sheet is not impacted by the command. The total number of columns of the sheet is not impacted by the command.
+La commande supprime les colonnes de la table *tableName*, PAS de la feuille. Le nombre total de colonnes de la feuille n'est pas impacté par la commande. Les données présentes à droite de la table (le cas échéant) sont automatiquement déplacées à gauche en fonction du nombre de colonnes supprimées.
 
-If *tableName* does not exist, nothing happens.
+Si *tableName* n'existe pas, la commande ne fait rien.
 
 
 
 #### Exemple
 
-To remove two columns from 3rd column of the "dataTable" table:
+Pour supprimer deux colonnes à partir de la 3ème colonne de la table "dataTable" :
 
 ```4d
 VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
@@ -3958,26 +3958,26 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 | ---------- | ------- | -- | -------------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                    |
 | tableName  | Text    | -> | Nom de table                                                               |
-| row        | Integer | -> | Index in the table of the starting row to remove                           |
-| count      | Text    | -> | Number of rows to remove (must be >0)                                      |
+| row        | Integer | -> | Indice dans la table de la ligne de départ à supprimer                     |
+| count      | Text    | -> | Nombre de lignes à supprimer (doit être >0)                                |
 | sheet      | Integer | -> | Indice de la feuille (feuille courante si omis)|<!-- END REF -->
 
 |
 
 #### Description
 
-La commande `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->The `VP REMOVE TABLE ROWS` command<!-- END REF -->. The command removes values and styles.
+La commande `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->supprime une ou *count* ligne(s) de la table *tableName* à partir de la ligne d'indice *row*<!-- END REF -->. La commande supprime les valeurs et les styles.
 
-This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. The total number of rows of the sheet is not impacted by the command.
+Cette commande supprime les lignes de la table *tableName*, PAS de la feuille. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Les données présentes sous la table (le cas échéant) sont automatiquement déplacées vers le haut en fonction du nombre de lignes supprimées.
 
-If the *tableName* table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection.
+Si la table *tableName* est liée à un [contexte de données](#vp-set-data-context), la commande supprime le(s) élément(s) de la collection.
 
-If *tableName* does not exist, nothing happens.
+Si *tableName* n'existe pas, la commande ne fait rien.
 
 
 #### Exemple
 
-To remove two rows from 3rd row of the "dataTable" table:
+Pour supprimer deux lignes à partir de la 3e ligne de la table "dataTable" :
 
 ```4d
 VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
@@ -4056,13 +4056,13 @@ La commande `VP RESIZE TABLE` <!-- REF #_method_.VP RESIZE TABLE.Summary -->modi
 
 Les règles suivantes s'appliquent :
 
-- Headers must remain in the same row and the resulting table range must overlap the original table range.
-- If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](#vp-set-data-context), otherwise they are deleted.
-- If the table expands on cells containing data:
-    - if rows are added, data is deleted,
-    - if columns are added, data are kept and are displayed in new columns.
+- Les en-têtes doivent rester dans la même ligne et la plage de table résultante doit chevaucher la plage de table originale.
+- Si le nombre de lignes de la table redimensionnée est inférieur au nombre de lignes initiales, les valeurs à l'intérieur des lignes ou colonnes recadrées sont conservées si elles n'étaient pas liées à un [contexte de données](#vp-set-data-context), sinon elles sont supprimées.
+- Si la table se développe sur des cellules contenant des données :
+    - si des lignes sont ajoutées, les données sont supprimées,
+    - si des colonnes sont ajoutées, les données sont conservées et affichées dans de nouvelles colonnes.
 
-If *tableName* does not exist, nothing happens.
+Si *tableName* n'existe pas, la commande ne fait rien.
 
 
 #### Exemple
@@ -4086,7 +4086,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 ![](../assets/en/ViewPro/table-base.png)
 
 
-You want to add one column before and after the table as well as two empty rows. Vous pouvez écrire :
+Vous voulez ajouter une colonne avant et après la table ainsi que deux lignes vides. Vous pouvez écrire :
 
 ```4d
 VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
@@ -4139,13 +4139,15 @@ Voir l'exemple dans [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 <!-- REF #_method_.VP Row.Params -->
 
-| Paramètres | Type    |    | Description                             |
-| ---------- | ------- | -- | --------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
-| row        | Integer | -> | Indice de la ligne                      |
-| rowCount   | Integer | -> | Nombre de lignes                        |
+| Paramètres | Type    |    | Description                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| row        | Integer | -> | Indice de la ligne                                       |
+| rowCount   | Integer | -> | Nombre de lignes                                         |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Plage de ligne(s)|<!-- END REF -->
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
+|
 
 #### Description
 
