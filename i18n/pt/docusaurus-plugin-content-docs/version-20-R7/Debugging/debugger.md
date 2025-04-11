@@ -253,7 +253,7 @@ O menu contextual da janela de expressão oferece opções adicionais.
 - **Mostrar Ícones**: Cada objeto é precedido por um ícone que indica seu tipo. Você pode desativar essa opção para acelerar a exibição, ou apenas porque você prefere usar apenas a opção **Mostrar Tipos**.
 - **Tabelas e Campos classificados**: classifica as tabelas e os campos em ordem alfabética em suas respectivas listas.
 - **Mostrar números inteiros em hexadecimal**: Os números são normalmente apresentados em notação decimal. Esta opção apresenta-os em notação hexadecimal. Nota: para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
-- **Activar el seguimiento de la actividad**: activa el seguimiento de la actividad (control avanzado de la actividad interna de la aplicación) y muestra la información obtenida en los temas adicionales: **Programador**, **Web** y **Red**.
+- **Ativa o monitoramento da atividade**: ativa o monitoramento da atividade (verificação avançada da atividade interna do aplicativo) e exibe as informações recuperadas nos temas adicionais: **Programador**, **Web** e **Rede**.
 
 ## Painel da cadeia de chamadas
 
@@ -282,7 +282,7 @@ Para exibir o tipo de parâmetro, verifique a opção **Mostrar tipos** no menu 
 
 Depois de implementar a lista de parâmetros, você pode arrastar e soltar parâmetros e resultados de funções para o [Painel de Observação Personalizado](#custom-watch-pane).
 
-You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+Você também pode usar o comando [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) para recuperar a cadeia de chamadas programaticamente.
 
 ## Painel de Observação Personalizado
 
@@ -326,7 +326,7 @@ O menu de contexto do Custom Watch Pane lhe dá acesso ao editor de fórmulas 4D
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
+Para obter mais informações sobre o Editor de Fórmula, consulte o [manual de Referência de Design 4D](https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html).
 
 - **Inserir comando**: Atalho para inserir um comando 4D como uma nova expressão.
 - **Excluir tudo**: Remove todas as expressões do Painel de Vigia Personalizado.
