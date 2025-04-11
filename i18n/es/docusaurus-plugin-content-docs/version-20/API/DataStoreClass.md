@@ -80,7 +80,7 @@ Utilizando el almacén de datos principal de la base 4D:
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
 
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
 
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
@@ -112,21 +112,21 @@ Utilizando el almacén de datos principal de la base 4D:
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation <!-- END REF -->
 
 
 <!-- REF #_command_.Open datastore.Params -->
-| Parámetros     | Tipo         |    | Descripción                                                                      |
-| -------------- | ------------ | -- | -------------------------------------------------------------------------------- |
-| connectionInfo | Object       | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto      |
-| localID        | Text         | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Resultado      | cs.DataStore | <- | Objeto del almacén de datos|<!-- END REF -->
+| Parámetros     | Tipo                       |    | Descripción                                                                      |
+| -------------- | -------------------------- | -- | -------------------------------------------------------------------------------- |
+| connectionInfo | Object                     | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto      |
+| localID        | Text                       | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
+| Resultado      | 4D.DataStoreImplementation | <- | Objeto del almacén de datos|<!-- END REF -->
 
 |
 
 #### Descripción
 
-El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` coincidente asociado al alias local *localID*.
+El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 La base de datos *connectionInfo* 4D debe estar disponible como almacén de datos remoto, es decir:
 
@@ -138,7 +138,7 @@ Si no se encuentra ninguna base de datos coincidente, `Open datastore` devuelve 
 
 *localID* es un alias local para la sesión abierta en el almacén de datos remoto. Si *localID* ya existe en la aplicación, se utiliza. En caso contrario, se crea una nueva sesión *localID* cuando se utiliza el objeto datastore.
 
-Objetos disponibles en `cs.Datastore` se mapean desde la base de datos de destino con respecto a las [reglas generales ORDA](ORDA/dsMapping.md#general-rules).
+Objects available in the `4D.DataStoreImplementation` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
 Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelven una referencia sobre el mismo objeto datastore:
 
@@ -172,7 +172,7 @@ Conexión a un almacén de datos remoto sin usuario/contraseña:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -184,7 +184,7 @@ Conexión a un almacén de datos remoto con usuario/contraseña/ timeout / tls:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -197,7 +197,7 @@ Trabajar con varios almacenes de datos remotos:
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
@@ -596,7 +596,7 @@ La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->The `.get
 En un almacén de datos remoto:
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -1209,7 +1209,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 
