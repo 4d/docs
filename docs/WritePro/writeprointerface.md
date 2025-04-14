@@ -9,7 +9,10 @@ A 4D developer can easily implement these palettes in their application. Thus, e
 
 The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
 
-You will find below the Table Wizard configuration documentation.
+You will find below: 
+
+- the Table Wizard configuration documentation.
+- the integrated A.I. documentation (*developer preview*)
 
 ## Table Wizard
 
@@ -296,3 +299,106 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 #### See also
 
 [4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+
+
+## Integrated AI
+
+:::warning Developer Preview
+
+This feature is still in development phase and is proposed as a **Developer Preview**. It is therefore not recommended to use it in your deployments. 
+
+:::
+
+You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application. 
+
+Once you have enabled the AI feature, you can display a chat box over your 4D Write Pro document and interact with *chatGPT* to modify the contents of the the selected text or the document itself. 
+
+### Limitations (Developer Preview)
+
+In the current implementation, the feature has the following limitations:
+
+- use of a predefined AI provider and necessity to pass your OpenAI key
+- call of the AI dialog box through a button
+- basic chatting features
+- no image handling
+- non-configurable predefined action commands
+- translations English/French and French/English only
+
+
+
+### Enabling the AI feature
+
+The AI dialog box is available by clicking on a button in the 4D Write Pro interface. This button is **hidden by default**, you need to enable it explicitely.
+
+To display the AI dialog box button, you need to:
+
+1. Get an API key from the [OpenAI website](https://openai.com/api/). 
+2. Execute the following 4D code:
+
+```4d
+
+WP SetAIKey ("<Your OpenAI Key>") //
+
+```
+
+:::note
+
+No checking is done on the OpenAI key validity. If it is invalid, the *chatGPT* box will stay empty. 
+
+:::
+
+
+The A.I. button is then displayed: 
+
+![ai button](../assets/en/WritePro/ai-button.png)
+
+- in the 4D Write Pro Toolbar, in the **Import Export** tab, 
+- in the 4D Write Pro Widget, in the **Font Style** tab.
+
+Click on the button to display the AI dialog box. 
+
+### AI dialog box
+
+The 4D Write Pro AI dialog box allows a straightforward interaction between the chat area and the 4D Write Pro document.
+
+#### Prompt area
+
+At the bottom of the window, the **prompt area** allows you to enter any question to send to the AI. 
+
+To send your question to the AI, click on the Send button:
+
+![ai send](../assets/en/WritePro/ai-send.png)
+
+
+The button icon changes when the same request is sent again:
+
+![ai resend](../assets/en/WritePro/ai-resend.png)
+
+On the left side of this area, a pop up menu provides examples of common actions that can be usually delegated to the AI. Selecting an action writes a corresponding question to the prompt, you still need to click on the Send button afterwards:
+
+![ai menu](../assets/en/WritePro/ai-menu.png)
+
+#### Copy buttons
+
+These buttons show how the chat area can interact with the underlying 4D Write Pro document:
+
+![ai interaction](../assets/en/WritePro/ai-interaction.png)
+
+- **Return raw text**/**Return styled text**: these buttons copy the latest response or the selected response from the AI to the 4D Write Pro document at the current selection point. 
+- **Copy raw text**/**Copy styled text**: these buttons copy the latest response or the selected response from the AI in the clipboard. 
+
+In both cases, if the response was provided with styles (bold, italic, titles), you can decide to copy the text with or without styles. 
+
+#### Chat area
+
+The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want. 
+
+To empty this area, you can click on the Erase button of the History area (resets the window and all interactions). 
+
+
+#### History
+
+The History area lists all your prompts sent to the AI. You can hide/show this area using the button on the top right corner of the Chat area. 
+
+The Erase button allows you to reset the whole window and erase all interactions. It is equivalent to close/reopen the AI dialog box. 
+
