@@ -80,7 +80,7 @@ Usar a datastore principal do banco de dados 4D:
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
 
- var $frenchStudents; $foreignStudents : cs. DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
 
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
@@ -112,21 +112,21 @@ Usar a datastore principal do banco de dados 4D:
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs. DataStore <!-- END REF -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation <!-- END REF -->
 
 
 <!-- REF #_command_.Open datastore.Params -->
-| Parâmetro      | Tipo          |    | Descrição                                                                    |
-| -------------- | ------------- | -- | ---------------------------------------------------------------------------- |
-| connectionInfo | Object        | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto   |
-| localID        | Text          | -> | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
-| Resultados     | cs. DataStore | <- | Objeto do armazém de dados|<!-- END REF -->
+| Parâmetro      | Tipo                       |    | Descrição                                                                    |
+| -------------- | -------------------------- | -- | ---------------------------------------------------------------------------- |
+| connectionInfo | Object                     | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto   |
+| localID        | Text                       | -> | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
+| Resultados     | 4D.DataStoreImplementation | <- | Objeto do armazém de dados|<!-- END REF -->
 
 |
 
 #### Descrição
 
-*localID* is a local alias for the session opened on remote datastore. <!-- REF #_command_.Open datastore.Summary -->If *localID* already exists on the application, it is used.<!-- END REF --> Otherwise, a new *localID* session is created when the datastore object is used.
+*localID* is a local alias for the session opened on remote datastore. <!-- REF #_command_.Open datastore.Summary -->If *localID* already exists on the application, it is used.<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 O banco de dados *connectionInfo* 4D deve estar disponível como armazém de dados remoto, ou seja:
 
@@ -138,7 +138,7 @@ Se não se encontrar nenhum banco de dados coincidente, `Open datastore` devolve
 
 *localID* é um alias local para a sessão aberta no armazém de dados remoto. Se *localID* já existir na aplicação, se utiliza. Em caso contrário, se cria uma nova sessão *localID* quando se utiliza o objeto datastore.
 
-Os objectos disponíveis no site `cs. Datastore` são mapeados a partir da base de dados alvo no que respeita às regras gerais da [ORDA](ORDA/dsMapping.md#general-rules).
+Objects available in the `4D.DataStoreImplementation` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
 Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma referência sobre o mesmo objeto datastore:
 
@@ -172,10 +172,10 @@ Conexão a uma datastore remota com usuário/ senha/ timetou/ tls
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs. DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS. Students.all().length)+" students")
+ ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 #### Exemplo 2
@@ -184,11 +184,11 @@ Conexão a uma datastore remota sem usuário ou senha:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs. DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS. Students.all().length)+" students")
+ ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 #### Exemplo 3
@@ -197,13 +197,13 @@ Trabalhando com várias datastores remotas:
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs. DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
  $foreignStudents:=Open datastore($connectTo;"foreign")
- ALERT("They are "+String($frenchStudents. Students.all().length)+" French students")
- ALERT("They are "+String($foreignStudents. Students.all().length)+" foreign students")
+ ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
+ ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
 #### Gestão de erros
@@ -595,25 +595,17 @@ A função `.getInfo( )` <!-- REF #DataStoreClass.getInfo().Summary -->devolve u
 Em um armazém de dados remoto:
 
 ```4d
-  var $status : Object
+  var $remoteDS : 4D.DataStoreImplementation
+  var $info; $connectTo : Object
 
- $status:=dataStore.encryptionStatus()
+ $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
+ $remoteDS:=Open datastore($connectTo;"students")
+ $info:=$remoteDS.getInfo()
 
- If($status.isEncrypted) //the database is encrypted
-    C_LONGINT($vcount)
-    C_TEXT($tabName)
-    For each($tabName;$status.tables)
-       If($status.tables[$tabName].isEncrypted)
-          $vcount:=$vcount+1
-       End if
-    End for each
-    ALERT(String($vcount)+" encrypted table(s) in this datastore.")
- Else
-    ALERT("This database is not encrypted.")
- End if
- Else
-    ALERT("This database is not encrypted.")
- End if
+  //{"type":"4D Server",
+  //"localID":"students",
+  //"networked":true,
+  //"connection":{hostname:"111.222.33.44:8044","tls":false,"idleTimeout":2880,"user":"marie"}}
 ```
 
 <!-- END REF -->
@@ -1211,8 +1203,8 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 ```4d
  var $connect; $status : Object
- var $person : cs. PersonsEntity
- var $ds : cs. DataStore
+ var $person : cs.PersonsEntity
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 
@@ -1225,7 +1217,7 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
  End case
 
  $ds.startTransaction()
- $person:=$ds. Persons.query("lastname=:1";"Peters").first()
+ $person:=$ds.Persons.query("lastname=:1";"Peters").first()
 
  If($person#Null)
     $person.lastname:="Smith"

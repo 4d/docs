@@ -14,22 +14,21 @@ displayed_sidebar: docs
 
 </details>
 
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore<!-- END REF-->
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
 
 <!--REF #_command_.Open datastore.Params-->
 
-| 引数             | 型                            |                             | 説明                                                            |
-| -------------- | ---------------------------- | --------------------------- | ------------------------------------------------------------- |
-| connectionInfo | Object                       | &#8594; | リモートデータストアへの接続に使用する接続プロパティ                                    |
-| localID        | Text                         | &#8594; | ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須) |
-| 戻り値            | cs.DataStore | &#8592; | データストアオブジェクト                                                  |
+| 引数             | 型                                          |                             | 説明                                                            |
+| -------------- | ------------------------------------------ | --------------------------- | ------------------------------------------------------------- |
+| connectionInfo | Object                                     | &#8594; | リモートデータストアへの接続に使用する接続プロパティ                                    |
+| localID        | Text                                       | &#8594; | ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須) |
+| 戻り値            | 4D.DataStoreImplementation | &#8592; | データストアオブジェクト                                                  |
 
 <!-- END REF-->
 
 ## 説明
 
-`Open datastore` コマンドは、<!-- REF #_command_.Open datastore.Summary -->
-*connectionInfo* 引数が指定するリモートデータストアにアプリケーションを接続します<!-- END REF -->。戻り値は、*localID* ローカルエイリアスに紐づけられた `cs.DataStore` オブジェクトです。
+The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 以下のリモートデータストアが、このコマンドでサポートされています:
 
@@ -72,7 +71,7 @@ displayed_sidebar: docs
   //$myds と $myds2 は同一のものです
 ```
 
-`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいてマッピングされます。
+Objects available in the `4D.DataStoreImplementation` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
 合致するデータストアが見つからない場合、`Open datastore` は **Null** を返します。
 
@@ -82,10 +81,10 @@ user / password を指定せずにリモートデータストアに接続しま�
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
+ ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 ## 例題 2
@@ -94,11 +93,11 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
+ ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 ## 例題 3
@@ -107,13 +106,13 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
  $foreignStudents:=Open datastore($connectTo;"foreign")
- ALERT("フランスの生徒は "+String($frenchStudents.Students.all().length)+" 名です")
- ALERT("外国の生徒は "+String($foreignStudents.Students.all().length)+" 名です")
+ ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
+ ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
 ## 例題 4

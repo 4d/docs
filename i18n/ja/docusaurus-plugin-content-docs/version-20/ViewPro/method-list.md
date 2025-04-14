@@ -5222,11 +5222,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| 引数 | 型 |  | 説明 |
-| -- | - |  | -- |
-|    |   |  |    |
+| 引数            | 型      |    | 説明                                      |
+| ------------- | ------ | -- | --------------------------------------- |
+| rangeObj      | Object | -> | レンジオブジェクト                               |
+| formula       | Text   | -> | フォーミュラまたは 4Dメソッド                        |
+| formatPattern | Text   | -> | フィールドのフォーマット|<!-- END REF -->
 
-|rangeObj |Object|->|レンジオブジェクト| |formula |Text|->|フォーミュラまたは 4Dメソッド| |formatPattern |Text|->|フィールドのフォーマット|<!-- END REF -->
+|
 
 #### 説明
 
