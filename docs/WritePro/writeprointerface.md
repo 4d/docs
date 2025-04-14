@@ -380,7 +380,7 @@ On the left side of this area, a pop up menu provides examples of common actions
 
 #### Copy buttons
 
-These buttons show how the chat area can interact with the underlying 4D Write Pro document:
+These buttons propose basic interactions between the chat area, the underlying 4D Write Pro document, and the clipboard:
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
