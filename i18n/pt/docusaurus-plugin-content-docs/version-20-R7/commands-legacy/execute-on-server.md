@@ -74,8 +74,8 @@ Executa o método com informação local como parâmetros em uma máquina remota
 O método WriteLog será executado no servidor. Contém, por exemplo:
 
 ```4d
- var $1;$2;$3 : Text
- TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
+ #DECLARE ($user : Text; $date : Text ; $time : Text)
+ TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$user+".txt";$date+" "+$time)
 ```
 
 ## Exemplo 2 

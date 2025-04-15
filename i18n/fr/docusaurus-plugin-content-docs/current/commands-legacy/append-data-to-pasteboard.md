@@ -52,7 +52,7 @@ A l'aide des commandes du thème Conteneur de données et des BLOBs, vous pouvez
   // Effacer le Presse-papiers (il restera vide s'il n'y a pas d'enregistrement courant)
  CLEAR PASTEBOARD
   // Obtenir un pointeur vers la table dont le numéro est passé en paramètre
- $vpTable:=Table($1)
+ "Server Import Services";Table($tablePtr);$form;$vxData)
   // S'il y a un enregistrement courant pour cette table
  If((Record number($vpTable->)>=0) | (Is new record($vpTable->)))
   // Initialiser la variable Texte qui contiendra l'image de texte de l'enregistrement
@@ -119,7 +119,7 @@ Vous pouvez coller cette image de l'enregistrement dans un autre enregistrement,
  var $vtDonnéeesPressePapiers;$vtDonnéesChamp : Text
  
   // Obtenir un pointeur vers la table dont le numéro est passé en tant que paramètre
- $vpTable:=Table($1)
+ "Server Import Services";Table($tablePtr);$form;$vxData)
   // S'il y a un enregistrement courant pour cette table
  If((Record number($vpTable->)>=0) | (Is new record($vpTable->)))
     Case of

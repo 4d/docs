@@ -30,7 +30,7 @@ displayed_sidebar: docs
   // Find volume for space ( 必要なサイズ ) -> ボリューム名または空の文字列
  
  C_STRING(31;$0)
- C_STRING(255;$vsDocName)
+ var $vsDocName : Text
  var $vlNbVolumes;$vlVolume : Integer
  var $1;$vlSize;$vlUsed;$vlFree : Real
  var $vhDocRef : Time

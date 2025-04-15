@@ -43,26 +43,27 @@ displayed_sidebar: docs
   // SET RECORD TO PASTEBOARD ( 数値 )
   // SET RECORD TO PASTEBOARD ( テーブル 数値 )
  
- var $1;$vlField;$vlFieldType : Integer
+ #DECLARE ($tabNum : Integer)
+ var $vlField;$vlFieldType : Integer
  var $vpTable;$vpField : Pointer
- C_STRING(255;$vsDocName)
+ var $vsDocName : Text
  var $vtRecordData;$vtFieldData : Text
  var $vxRecordData : Blob
  
   // ペーストボードをクリア (カレントレコードがない場合には空のままとなる)
  CLEAR PASTEBOARD
   // 引数で渡されたテーブル番号のテーブルポインタを得る
- $vpTable:=Table($1)
+ "Server Import Services";Table($tablePtr);$form;$vxData)
   // テーブルのカレントレコードがあれば
  If((Record number($vpTable->)>=0)|(Is new record($vpTable->)))
   // レコードのテキストイメージを保持するテキスト変数を初期化
     $vtRecordData:=""
   // レコードのフィールドごとに
-    For($vlField;1;Last field number($1))
+    For($vlField;1;Last field number($tabNum))
   // フィールドの型を取得
-       GET FIELD PROPERTIES($1;$vlField;$vlFieldType)
+       GET FIELD PROPERTIES($tabNum;$vlField;$vlFieldType)
   // フィールドのポインタを取得
-       $vpField:=Field($1;$vlField)
+       $vpField:=Field($tabNum;$vlField)
   // フィールド型に基づき、適切な方法でデータをコピー
        Case of
           :(($vlFieldType=Is alpha field)|($vlFieldType=Is text))
@@ -77,7 +78,7 @@ displayed_sidebar: docs
              $vtFieldData:=""
        End case
   // レコードのテキストイメージを保持するテキスト変数にフィールドデータを追加
-       $vtRecordData:=$vtRecordData+Field name($1;$vlField)+":"+Char(9)+$vtFieldData+CR
+       $vtRecordData:=$vtRecordData+Field name($tabNum;$vlField)+":"+Char(9)+$vtFieldData+CR
   // Note: CRメソッドは、Mac OS上ではChar(13)を、Windows上ではChar(13)+Char(10)を返す
     End for
   // テキストイメージをペーストボードに置く
@@ -120,14 +121,15 @@ GET RECORD FROM PASTEBOARDメソッドを使用して、このレコードイメ
   // GET RECORD FROM PASTEBOARDメソッド
   // GET RECORD FROM PASTEBOARD( 数値 )
   // GET RECORD FROM PASTEBOARD( テーブル 数値 )
- var $1;$vlField;$vlFieldType;$vlPosCR;$vlPosColon : Integer
+ #DECLARE ($tabNum : Integer)
+ var $vlField;$vlFieldType;$vlPosCR;$vlPosColon : Integer
  var $vpTable;$vpField : Pointer
- C_STRING(255;$vsDocName)
+ var $vsDocName : Text
  var $vxPasteboardData : Blob
  var $vtPasteboardData;$vtFieldData : Text
  
   // 引数として渡されたテーブル番号のテーブルポインタを得る
- $vpTable:=Table($1)
+ "Server Import Services";Table($tablePtr);$form;$vxData)
   // カレントレコードがあれば
  If((Record number($vpTable->)>=0)|(Is new record($vpTable->)))
     Case of
@@ -172,9 +174,9 @@ GET RECORD FROM PASTEBOARDメソッドを使用して、このレコードイメ
   // ペーストボードには必要以上のデータが含まれていることがある...
                 If($vlField<=Last field number($vpTable))
   // フィールドタイプを取得
-                   GET FIELD PROPERTIES($1;$vlField;$vlFieldType)
+                   GET FIELD PROPERTIES($tabNum;$vlField;$vlFieldType)
   // フィールドへのポインタを取得
-                   $vpField:=Field($1;$vlField)
+                   $vpField:=Field($tabNum;$vlField)
   // フィールドのデータ型に基づき、適切な方法でデータをコピー
                    Case of
                       :(($vlFieldType=Is alpha field)|($vlFieldType=Is text))

@@ -30,7 +30,7 @@ Your application includes some batch operations running the night or the week-en
   // Find volume for space ( Space needed in bytes ) -> Volume name or Empty string
  
  C_STRING(31;$0)
- C_STRING(255;$vsDocName)
+ var $vsDocName : Text
  var $vlNbVolumes;$vlVolume : Integer
  var $1;$vlSize;$vlUsed;$vlFree : Real
  var $vhDocRef : Time
