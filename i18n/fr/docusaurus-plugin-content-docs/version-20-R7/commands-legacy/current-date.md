@@ -37,8 +37,9 @@ La méthode projet suivante vous permet de traiter cette question :
   // Format date système -> Chaine
   // Format date système -> Format de données 4D par défaut
  
- C_STRING(31;$0;$vsDate;$vsMJA;$vsMois;$vsJour;$vsAnnée)
- var $1;$vlPos : Integer
+ #DECLARE -> $format : Text
+ var $vsDate;$vsMJA;$vsMois;$vsJour;$vsAnnée : Text
+ var $vlPos : Integer
  var $vdDate : Date
  
   // Récupérer une date dans laquelle les valeurs de mois, de jour et d'année sont toutes différentes
@@ -54,41 +55,41 @@ La méthode projet suivante vous permet de traiter cette question :
        OK:=1
     End if
  Until(OK=1)
- $0:=""   // Initialisation du résultat de la fonction
+ $format:=""   // Initialisation du résultat de la fonction
  $vsDate:=String($vdDate)
  $vlPos:=Position("/";$vsDate)   // Trouver le premier séparateur / dans la chaîne ../../..
  $vsMJA:=Substring($vsDate;1;$vlPos-1)   // Extraire les premiers chiffres de la date
  $vsDate:=Substring($vsDate;$vlPos+1)   // Eliminer les premiers chiffres et le premier séparateur /
  Case of
     :($vsMJA=$vsMois)   // Les chiffres expriment le mois
-       $0:="MM"
+       $format:="MM"
     :($vsMJA=$vsJour)   // Les chiffres expriment le jour
-       $0:="JJ"
+       $format:="JJ"
     :($vsMJA=$vsAnnée)   // Les chiffres expriment l'année
-       $0:="AAAA"
+       $format:="AAAA"
  End case
- $0:=$0+"/"   // Commencer à construire le résultat de la fonction
+ $format:=$format+"/"   // Commencer à construire le résultat de la fonction
  $vlPos:=Position("/";$vsDate)   // Trouver le deuxième séparateur dans la chaîne ../..
  $vsMJA:=Substring($vsDate;1;$vlPos-1)   // Extraire les chiffres suivants de la date
  $vsDate:=Substring($vsDate;$vlPos+1)   // Réduire la chaîne aux derniers chiffres de la date
  Case of
     :($vsMJA=$vsMois)   // Les chiffres expriment le mois
-       $0:=$0+"MM"
+       $format:=$format+"MM"
     :($vsMJA=$vsJour)   // Les chiffres expriment le jour
-       $0:=$0+"JJ"
+       $format:=$format+"JJ"
     :($vsMJA=$vsAnnée)   // Les chiffres expriment l'année
-       $0:=$0+"AAAA"
+       $format:=$format+"AAAA"
  End case
- $0:=$0+"/"   // Poursuivre la construction du résultat de la fonction
+ $format:=$format+"/"   // Poursuivre la construction du résultat de la fonction
  Case of
     :($vsDate=$vsMois)   // Les chiffres expriment le mois
-       $0:=$0+"MM"
+       $format:=$format+"MM"
     :($vsDate=$vsJour)   // Les chiffres expriment le jour
-       $0:=$0+"DD"
+       $format:=$format+"DD"
     :($vsDate=$vsAnnée)   // Les chiffres expriment l'année
-       $0:=$0+"AAAA"
+       $format:=$format+"AAAA"
  End case
-  // A ce moment, $0 vaut soit MM/JJ/AAAA soit JJ/MM/AAAA, ou encore...
+  // A ce moment, $format vaut soit MM/JJ/AAAA soit JJ/MM/AAAA, ou encore...
 ```
 
 ## Voir aussi 

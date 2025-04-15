@@ -44,19 +44,19 @@ Depois que um BLOB foi comprimido, o método de projeto obtém a porcentagem de 
   // Espaço economizado pela compressão (Ponteiro {; Ponteiro } ) -> Inteiro Longo
   // Espaço economizado pela compressão ( -> BLOB {; -> bytesEconomizados } ) -> Porcentagem
  
- var $1;$2 : Pointer
- var $0;$vlComprimido;$vlDescompTam;$vlTamanhoAtual : Integer
+ #DECLARE ($blob : Pointer ; $saved : Pointer ) -> $percent : Integer
+ var $vlComprimido;$vlDescompTam;$vlTamanhoAtual : Integer
  
- BLOB PROPERTIES($1->;$vlComprimido;$vlDescompTam;$vlTamanhoAtual)
+ BLOB PROPERTIES($blob->;$vlComprimido;$vlDescompTam;$vlTamanhoAtual)
  If($vlDescompTam=0)
-    $0:=0
+    $percent:=0
     If(Count parameters>=2)
-       $2->:=0
+       $saved->:=0
     End if
  Else
-    $0:=100-(($vlTamanhoAtual/$vlDescompTam)*100)
+    $percent:=100-(($vlTamanhoAtual/$vlDescompTam)*100)
     If(Count parameters>=2)
-       $2->:=$vlDescompTam-$vlTamanhoAtual
+       $saved->:=$vlDescompTam-$vlTamanhoAtual
     End if
  End if
 ```

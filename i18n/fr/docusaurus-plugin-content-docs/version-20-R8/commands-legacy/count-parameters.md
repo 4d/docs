@@ -36,16 +36,14 @@ Si vous utilisez Nombre de parametres dans maMéthode, vous pouvez détecter le 
   // AJOUTER TEXTE ( Texte { ; Entier long { ; Heure } } )
   // AJOUTER TEXTE ( Texte { ; zone 4D Write { ; RéfDoc } } )
  
- var $1 : Text
- var $2 : Time
- var $3 : Integer
+ #DECLARE ($text : Text ; $4dwp : Object ; $doc : Time)
  
- MESSAGE($1)
+ MESSAGE($text)
  If(Count parameters>=3)
-    SEND PACKET($3;$1)
+    SEND PACKET($doc;$text)
  Else
     If(Count parameters>=2)
-       wr_INSERER TEXTE($2;$1)
+       WP SET TEXT($4dwp;$text;wk prepend)
     End if
  End if
 ```

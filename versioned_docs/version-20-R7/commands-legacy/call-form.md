@@ -75,12 +75,12 @@ In the main form, a button opens the two dialogs:
 The *doAddMessage* method only adds a row in the list box in the "FormMessage" form:
 
 ```4d
- var $1 : Text //Caller name
- var $2 : Text //Message to display
-  //Receive message from $2 and log the message in the list box
+ #DECLARE ($caller : Text ; $message : Text) //Caller name
+  //Message to display
+  //Receive message from $message and log the message in the list box
  $p:=OBJECT Get pointer(Object named;"Column1")
  INSERT IN ARRAY($p->;1)
- $p->{1}:=$1+" sends "+$2
+ $p->{1}:=$caller+" sends "+$message
 ```
 
 At runtime, you get the following result:

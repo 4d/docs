@@ -119,8 +119,8 @@ To compress a ZIP archive structure with a password and progress bar:
 `myFormulaCompressingMethod`:
 
 ```4d
- var $1 : Integer
- Progress SET PROGRESS(progID;Num($1/100))
+ #DECLARE ($current : Integer)
+ Progress SET PROGRESS(progID;Num($current /100))
 ```
 
 ## Example 4

@@ -39,9 +39,9 @@ Avant d’effectuer des opérations sur un enregistrement, le développeur souha
 Une assertion peut permettre de tester les paramètres passés à une méthode projet pour détecter des valeurs aberrantes. Dans cet exemple, un message d’alerte personnalisé est utilisé.
 
 ```4d
-  // Méthode qui retourne le numéro d'un client en fonction de son nom passé dans  $1
- var $1 : Text // Nom du client
- ASSERT($1#"";"Recherche d’un nom de client vide")
+  // Méthode qui retourne le numéro d'un client en fonction de son nom passé dans  $name
+ var $name : Text // Nom du client
+ ASSERT($name#"";"Recherche d’un nom de client vide")
      // Un nom vide dans ce cas est une valeur aberrante
      // Si assertion fausse, affichera dans la boîte de dialogue d'erreur :
      // "Fausse assertion : Recherche d’un nom de client vide"
