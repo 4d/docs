@@ -7,35 +7,35 @@ title: WA Get context
 
 <!--REF #_command_.WA Get context.Params-->
 
-| 引数         | 型          |                             | 説明                                                                                                                                        |
-| ---------- | ---------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | 演算子        | &#8594; | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
-| object     | フォームオブジェクト | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted).                    |
-| contextObj | Object     | &#8592; | Context object if previously defined, otherwise `null`.                                                                   |
+| 引数         | 型          |                             | 説明                                                                    |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------- |
+| \*         | 演算子        | &#8594; | 指定時、*object* はオブジェクト名(文字列)。 省略時、*object* は変数。      |
+| object     | フォームオブジェクト | &#8594; | オブジェクト名 (\* 指定時) または変数 (\* 省略時) |
+| contextObj | Object     | &#8592; | 事前に定義されていればコンテキストオブジェクト、それ以外の場合には `null`                              |
 
 <!-- END REF-->
 
 ### 説明
 
-The `WA Get context` command<!--REF #_command_.WA Get context.Summary--> retrieves the context object defined for `$4d` in the Web area designated by the \* and *object* parameters using [`WA SET CONTEXT`](./wa-set-context-object.md).<!-- END REF--> If `WA SET CONTEXT` was not called for the web area the command returns `null`.
+`WA Get context` コマンドは、<!--REF #_command_.WA Get context.Summary--> \* および *object* 引数で指定された Web エリア内の `$4d` に対して [`WA SET CONTEXT`](./wa-set-context-object.md) を使用して定義されたコンテキストオブジェクトを取得します。<!-- END REF--> このWeb エリアに対して `WA SET CONTEXT` が呼ばれていなかった場合、コマンドは `null` を返します。
 
 :::note
 
-The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
+このコマンドは、[**埋め込みWebレンダリングエンジンを使用**](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) および **4Dメソッドコールを許可** が `true` になっている埋め込みWeb エリアにおいてのみ使用可能です。
 
 :::
 
 ### 例題
 
-Checking if a context exists:
+コンテキストが存在するかどうかをチェックする場合を考えます:
 
 ```4d
  var $contextObj:=WA Get context(*; "myWebArea")
 
  If ($contextObj=Null)
-	ALERT("No context set for this web area.")
+	ALERT("このWebエリアにはコンテキストが設定されていません。")
  Else 
-	ALERT("Context is defined!")
+	ALERT("コンテキストが定義されています！")
  End if
 ```
 

@@ -3,7 +3,7 @@ id: TCPConnectionClass
 title: TCPConnection
 ---
 
-`TCPConnection` クラスを使用すると、サーバーへのTransmission Control Protocol (TCP) クライアント接続を管理でき、これによってデータの送受信と、コールバックを使用した接続ライフサイクルイベントの管理が可能になります。
+The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a [server](./TCPListenerClass.md), enabling you to send and receive data, and handle connection lifecycle events using callbacks.
 
 `TCPConnection` クラスは`4D` クラスストアにて提供されています。  TCP 接続は、[TCPConnection オブジェクト](#tcpconnection-オブジェクト) を返す[4D.TCPConnection.new()](#4dtcpconnectionnew) 関数を使用して作成できます。
 
@@ -15,9 +15,10 @@ TCPConnection オブジェクトはメモリ内にそれへの参照が存在し
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容     |
-| ----- | ------ |
-| 20 R8 | クラスを追加 |
+| リリース  | 内容                                               |
+| ----- | ------------------------------------------------ |
+| 20 R9 | New `listener`, `address`, and `port` attributes |
+| 20 R8 | クラスを追加                                           |
 
 </details>
 
@@ -130,9 +131,12 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 |                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #TCPConnection.address.Syntax -->](#address)<br/><!-- INCLUDE #TCPConnection.address.Summary -->        |
 | [<!-- INCLUDE #TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #TCPConnection.closed.Summary -->           |
 | [<!-- INCLUDE #TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #TCPConnection.errors.Summary -->           |
+| [<!-- INCLUDE #TCPConnection.listener.Syntax -->](#listener)<br/><!-- INCLUDE #TCPConnection.listener.Summary -->     |
 | [<!-- INCLUDE #TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #TCPConnection.noDelay.Summary -->        |
+| [<!-- INCLUDE #TCPConnection.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPConnection.port.Summary -->                 |
 | [<!-- INCLUDE #TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #TCPConnection.send().Summary -->             |
 | [<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary --> |
 | [<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->             |
@@ -195,6 +199,18 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
+<!-- REF #TCPConnection.address.Desc -->
+
+## .address
+
+<!-- REF #TCPConnection.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### 説明
+
+The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->.
+
+<!-- END REF -->
+
 <!-- REF #TCPConnection.closed.Desc -->
 
 ## .closed
@@ -226,6 +242,18 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 
 <!-- END REF -->
 
+<!-- REF #TCPConnection.listener.Desc -->
+
+## .listener
+
+<!-- REF #TCPConnection.listener.Syntax -->**listener** : Object<!-- END REF -->
+
+#### 説明
+
+The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->the [`TCPListener`](./TCPListenerClass.md) object that created the `TCPConnection`, if any<!-- END REF -->. このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
+
 <!-- REF #TCPConnection.noDelay.Desc -->
 
 ## .noDelay
@@ -235,6 +263,18 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 #### 説明
 
 The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
+
+<!-- REF #TCPConnection.port.Desc -->
+
+## .port
+
+<!-- REF #TCPConnection.port.Syntax -->**port** : Number<!-- END REF -->
+
+#### 説明
+
+The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine<!-- END REF -->. このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 

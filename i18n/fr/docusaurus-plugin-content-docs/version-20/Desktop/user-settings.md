@@ -7,13 +7,13 @@ title: Propriétés utilisateur
 
 *   Mode **standard** : tous les [paramètres](../settings/overview.md) sont stockés dans le fichier [*settings.4DSettings* au niveau du projet](../Project/architecture.md#sources) et sont appliqués dans tous les cas. C'est le mode par défaut, adapté à la phase de développement (toutes les applications).
 
-*  **User settings** mode: part of the custom settings are stored in a *settings.4DSettings* file [in the Settings folder](../Project/architecture.md#settings-user) (for all data files) or [in the Data folder](../Project/architecture.md#settings-user-data) (for this data file) and are used instead of the structure settings. Ce mode convient à la phase de déploiement pour les applications Desktop. Activez ce mode à l'aide d'une option située sur la [page Sécurité](../settings/security.md) des Propriétés.
+*  Mode **propriétés utilisateur** : une partie des paramètres personnalisés sont stockés dans un fichier *settings.4DSettings* [dans le dossier Settings](../Project/architecture.md#settings-user) (pour tous les fichiers de données) ou [dans le dossier Data](../Project/architecture.md#settings-user-data) (pour ce fichier de données) et sont utilisés à la place des paramètres de structure. Ce mode convient à la phase de déploiement pour les applications Desktop. Activez ce mode à l'aide d'une option située sur la [page Sécurité](../settings/security.md) des Propriétés.
 
 En définissant des propriétés utilisateur, vous pouvez conserver des paramètres personnalisés entre les mises à jour de vos applications 4D, ou gérer des paramètres différents pour une même application 4D déployée sur plusieurs sites différents. Cela permet également d'utiliser la programmation pour gérer les fichiers de paramètres à l'aide de XML.
 
 4D peut générer et utiliser deux types de propriétés utilisateur :
 
--   **User Settings**: They are used instead of structure settings for any data file opened with the application.
+-   **Propriétés utilisateur (standard)** : elles sont utilisées à la place des propriétés de structure pour tout fichier de données ouvert avec l'application.
 -   **Propriétés utilisateur pour le fichier de données** : elles peuvent être définies spécifiquement pour chaque fichier de données utilisé avec votre application, en configurant par exemple l'ID du port ou le cache du serveur.
 
 Avec cette option, vous pouvez facilement déployer et mettre à jour plusieurs copies de la même application Desktop avec plusieurs fichiers de données, chacun contenant des propriétés différentes.

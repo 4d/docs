@@ -33,10 +33,10 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 Dans le paramètre *onlyData*, vous pouvez passer l'une des constantes suivantes pour indiquer si vous souhaitez obtenir uniquement les données :
 
-| Constante             | Valeur | Description                                                                                          |
-| --------------------- | ------ | ---------------------------------------------------------------------------------------------------- |
-| `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1      | Get the cell range for the table data area only                                                      |
+| Constante             | Valeur | Description                                                                                                                  |
+| --------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `vk table full range` | 0      | Récupérer la plage de cellules pour la zone de la table avec pied de page et en-tête (par défaut si omis) |
+| `vk table data range` | 1      | Récupérer la plage de cellules uniquement pour la zone de données de la table                                                |
 
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 

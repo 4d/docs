@@ -121,7 +121,7 @@ Usar a datastore principal do banco de dados 4D:
 
 #### Descrição
 
-*localID* is a local alias for the session opened on remote datastore. <!-- REF #_command_.Open datastore.Summary -->If *localID* already exists on the application, it is used.<!-- END REF --> Otherwise, a new *localID* session is created when the datastore object is used.
+*localID* is a local alias for the session opened on remote datastore. <!-- REF #_command_.Open datastore.Summary -->If *localID* already exists on the application, it is used.<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 O banco de dados *connectionInfo* 4D deve estar disponível como armazém de dados remoto, ou seja:
 

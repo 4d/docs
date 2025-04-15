@@ -131,9 +131,11 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 ### 4D Server log recording (28)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D Server, 4D remote*
 
-* **Kept between two sessions**: No
+**Kept between two sessions**: No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, added to the file name).
 
@@ -172,6 +174,8 @@ By default, this unique number is set by 4D and corresponds to the order of reco
 
 
 ### Debug log recording (34)
+
+**Thread-safe** : Yes
 
 **Scope**: 4D application
 
@@ -301,7 +305,7 @@ By default, the value is 1 (case-sensitive): the SQL engine differentiates betwe
 
 **Scope**: Remote 4D machine 
 
-Kept between two **sessions**: No
+**Kept between two sessions**: No
 
 **Possible values**: 0 or from 1 to X (0 = do not record, 1 to X = sequential number, attached to file name). 
 
@@ -547,6 +551,8 @@ For example, if you execute:
 
 ### Diagnostic log recording (79)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D application
 
 Kept between two **sessions**: No
@@ -607,6 +613,8 @@ Passing String type with time zone in this selector will convert 4D dates into I
 
 ### Diagnostic log level (86)
 
+**Thread-safe** : Yes
+
 **Scope:** 4D application 
 
 **Kept between two sessions:** No
@@ -649,6 +657,8 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 ### Circular log limitation (90)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D local, 4D Server.
 
 **Kept between two sessions**: No
@@ -684,6 +694,9 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 
 ### Cache flush periodicity (95)
+
+**Thread-safe** : Yes
+
 
 **Scope**: 4D local, 4D Server
 
@@ -797,6 +810,8 @@ In previous releases, time values were converted and stored as number of millise
 
 ### SMTP Log (110)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D local, 4D Server*
 
 * **Kept between two sessions**: No
@@ -865,6 +880,8 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 ### POP3 Log (116)
 
+**Thread-safe** : Yes
+
 **Scope:** 4D local, 4D Server
 
 **Kept between two sessions:** No
@@ -889,6 +906,8 @@ For more information on the 4DPOP3Log\_X.txt files, please refer to the *Descrip
 
 ### IMAP Log (119)
 
+**Thread-safe** : Yes
+
 **Scope**: 4D local, 4D Server
 
 **Kept between two sessions**: No
@@ -912,6 +931,8 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 
 ### Pause logging (121)
+
+**Thread-safe** : Yes
 
 **Scope**: 4D application
 
@@ -946,16 +967,17 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 The **SET DATABASE PARAMETER** command can be used in preemptive processes when calling the following selectors:
 
-* 4D Server log recording
-* Debug log recording
-* Diagnostic log recording
-* Diagnostic log level
-* Circular log limitation
-* Cache flush periodicity
-* SMTP Log
-* POP3 Log
-* IMAP Log
-* Pause logging
+* [4D Server log recording](#4d-server-log-recording-28)
+* [Debug log recording](#debug-log-recording-34)
+* [Diagnostic log recording](#diagnostic-log-recording-79)
+* [Diagnostic log level](#diagnostic-log-level-86)
+* [Circular log limitation](#circular-log-limitation-90)
+* [Cache flush periodicity](#cache-flush-periodicity-95)
+* [SMTP Log](#smtp-log-110)
+* [POP3 Log](#pop3-log-116)
+* [IMAP Log](#imap-log-119)
+* [Pause logging](#pause-logging-121)
+
 
 ## Example 1 
 

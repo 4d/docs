@@ -694,7 +694,7 @@ Dans le paramètre *breakMode*, vous pouvez passer une valeur numérique indiqua
 
 Par défaut, lorsque vous omettez le paramètre *breakMode* les retours à la ligne sont traités en mode natif (1).
 
-> **Note de compatibilité** : Des options de compatibilité sont disponibles pour la gestion des fins de ligne et des BOM. Voir la [page Compatibilité](https://doc.4d.com/4dv19R/help/title/en/page3239.html) sur doc.4d.com.
+**Note de compatibilité** : Des options de compatibilité sont disponibles pour la gestion des fins de ligne et des BOM. Voir la [page Compatibilité](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) sur doc.4d.com.
 
 #### Exemple
 

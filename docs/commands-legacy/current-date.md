@@ -37,8 +37,9 @@ The following project method allows you to do so:
   // Sys date format -> String
   // Sys date format -> Default 4D data format
  
- C_STRING(31;$0;$vsDate;$vsMDY;$vsMonth;$vsDay;$vsYear)
- var $1;$vlPos : Integer
+ #DECLARE -> $format : Text
+ var $vsDate;$vsMDY;$vsMonth;$vsDay;$vsYear : Text
+ var $vlPos : Integer
  var $vdDate : Date
  
   // Get a Date value where the month, day and year values are all different
@@ -54,41 +55,41 @@ The following project method allows you to do so:
        vOK:=1
     End if
  Until(vOK=1)
- $0:="" // Initialize function result
+ $format:="" // Initialize function result
  $vsDate:=String($vdDate)
  $vlPos:=Position("/";$vsDate) // Find the first / separator in the string ../../..
  $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the first digits from the date
  $vsDate:=Substring($vsDate;$vlPos+1) // Eliminate the first digits as well as the first / separator
  Case of
     :($vsMDY=$vsMonth) // The digits express the month
-       $0:="MM"
+       $format:="MM"
     :($vsMDY=$vsDay) // The digits express the day
-       $0:="DD"
+       $format:="DD"
     :($vsMDY=$vsYear) // The digits express the year
-       $0:="YYYY"
+       $format:="YYYY"
  End case
- $0:=$0+"/" // Start building the function result
+ $format:=$format+"/" // Start building the function result
  $vlPos:=Position("/";$vsDate) // Find the second separator in the string ../..
  $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the next digits from the date
  $vsDate:=Substring($vsDate;$vlPos+1) // Reduce the string to the last digits from the date
  Case of
     :($vsMDY=$vsMonth) // The digits express the month
-       $0:=$0+"MM"
+       $format:=$format+"MM"
     :($vsMDY=$vsDay) // The digits express the day
-       $0:=$0+"DD"
+       $format:=$format+"DD"
     :($vsMDY=$vsYear) // The digits express the year
-       $0:=$0+"YYYY"
+       $format:=$format+"YYYY"
  End case
- $0:=$0+"/" // Pursue building the function result
+ $format:=$format+"/" // Pursue building the function result
  Case of
     :($vsDate=$vsMonth) // The digits express the month
-       $0:=$0+"MM"
+       $format:=$format+"MM"
     :($vsDate=$vsDay) // The digits express the day
-       $0:=$0+"DD"
+       $format:=$format+"DD"
     :($vsDate=$vsYear) // The digits express the year
-       $0:=$0+"YYYY"
+       $format:=$format+"YYYY"
  End case
-  // At this point $0 is equal to MM/DD/YYYY or DD/MM/YYYY or...
+  // At this point $format is equal to MM/DD/YYYY or DD/MM/YYYY or...
 ```
 
 ## See also 

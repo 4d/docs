@@ -17,13 +17,13 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Paramètres | Type       |                             | Description                                                                                                     |                  |
-| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro                                                                         |                  |
-| tableName  | Text       | ->                          | Nom de table                                                                                                    |                  |
-| reset      | Boolean    | ->                          | True to clear the dirty status from the current table, False to keep it untouched. Default=True |                  |
-| sheet      | Integer    | ->                          | Numéro d'indice de la feuille (feuille courante si omis)                                     |                  |
-| Résultat   | Collection | <- | Collection d'objets avec tous les éléments modifiés depuis la dernière réinitialisation                         | <!-- END REF --> |
+| Paramètres | Type       |                             | Description                                                                                                              |                  |
+| ---------- | ---------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro                                                                                  |                  |
+| tableName  | Text       | ->                          | Nom de table                                                                                                             |                  |
+| reset      | Boolean    | ->                          | True pour effacer le statut dirty de la table courante, False pour ne pas le modifier. Par défaut = True |                  |
+| sheet      | Integer    | ->                          | Numéro d'indice de la feuille (feuille courante si omis)                                              |                  |
+| Résultat   | Collection | <- | Collection d'objets avec tous les éléments modifiés depuis la dernière réinitialisation                                  | <!-- END REF --> |
 
 ## Description
 

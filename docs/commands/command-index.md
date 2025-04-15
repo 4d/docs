@@ -90,7 +90,7 @@ title: Index
 <a id="C"><b>C</b></a>
 
 [`Cache info`](../commands-legacy/cache-info.md)<br/>
-[`Call chain`](../commands-legacy/call-chain.md)<br/>
+[`Call chain`](call-chain.md)<br/>
 [`CALL FORM`](../commands-legacy/call-form.md)<br/>
 [`CALL SUBFORM CONTAINER`](../commands-legacy/call-subform-container.md)<br/>
 [`CALL WORKER`](../commands-legacy/call-worker.md)<br/>
@@ -118,7 +118,7 @@ title: Index
 [`CLOSE WINDOW`](../commands-legacy/close-window.md)<br/>
 [`COLLECTION TO ARRAY`](../commands-legacy/collection-to-array.md)<br/>
 [`COMBINE PICTURES`](../commands-legacy/combine-pictures.md)<br/>
-[`Command name`](../commands-legacy/command-name.md)<br/>
+[`Command name`](command-name.md)<br/>
 [`Compact data file`](../commands-legacy/compact-data-file.md)<br/>
 [`Compare strings`](../commands-legacy/compare-strings.md)<br/>
 [`Compile project`](compile-project.md)<br/>

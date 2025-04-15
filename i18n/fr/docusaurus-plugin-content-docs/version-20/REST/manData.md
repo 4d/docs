@@ -3,7 +3,7 @@ id: manData
 title: Manipulation des données
 ---
 
-Tous [les attributs, dataclasses exposés](configuration.md#exposing-tables-and-fields) et toutes les [fonctions](ClassFunctions.md) sont accessibles via REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse; contrairement aux données des requêtes.
+Tous [les attributs et dataclasses exposé(e)s](configuration.md#exposing-tables-and-fields) ainsi que toutes les [fonctions](ClassFunctions.md) sont accessibles via REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse; contrairement aux données des requêtes.
 
 ## Rechercher des données
 
@@ -20,7 +20,7 @@ Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souh
 
 Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Outre la récupération d'une seule entité dans une dataclass à l'aide de [{dataClass\}({key})](dataClass.md#dataclasskey), vous pouvez également écrire une [fonction de classe](ClassFunctions.md#function-calls) qui renvoie une entity selection (ou une collection).
 
 Avant de retourner la sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
@@ -242,7 +242,7 @@ Si vous souhaitez enregistrer un BLOB stocké dans votre dataclass, vous pouvez 
 
 ## Récupérer une seule entité
 
-C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. Vous pouvez utiliser la syntaxe[`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) lorsque vous souhaitez récupérer une seule entité. Par exemple, vous pouvez écrire :
+Vous pouvez utiliser la syntaxe[`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) lorsque vous souhaitez récupérer une seule entité. C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. Par exemple, vous pouvez écrire :
 
  `GET  /rest/Company:companyCode("Acme001")`
  

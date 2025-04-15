@@ -39,7 +39,7 @@ L’activité du process est le pourcentage du temps que 4D Server a consacré �
     - Process utilisateur - nom de l'utilisateur 4D,
     - Process web - chemin URL,
 - Nom du process,
-- Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). Le numéro du process est le numéro attribué sur le serveur. Dans le cas d’un process global, ce numéro peut être différent de celui attribué sur le poste client.
+- Number of the process (as returned by the [`New process`](../commands-legacy/new-process.md) command for example). Le numéro du process est le numéro attribué sur le serveur. Dans le cas d’un process global, ce numéro peut être différent de celui attribué sur le poste client.
 - Etat courant du process,
 - Temps (en secondes) d'exécution du process depuis sa création,
 - Pourcentage du temps que 4D Server a consacré à ce process (ratio).
@@ -85,7 +85,7 @@ La page comporte cinq boutons de commande permettant d’agir sur le ou les proc
 
 - **Tuer process** : permet de tuer le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération.
 
-> Vous pouvez également interrompre le(s) processus sélectionné(s) directement sans afficher la boîte de dialogue de confirmation en maintenant la touche **Alt** enfoncée tout en cliquant sur ce bouton, ou en utilisant la commande [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/fr/page6315.html).
+> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id.md) command.
 
 - **Endormir process** : permet d’endormir le ou les process sélectionné(s).
 - **Réactiver process** : permet de réactiver le ou les process sélectionné(s). Les process doivent avoir été auparavant endormis (via le bouton précédent ou par programmation) sinon le bouton est sans effet.

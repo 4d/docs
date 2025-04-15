@@ -79,7 +79,7 @@ Using the main datastore on the 4D database:
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
 
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
 
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
@@ -111,7 +111,7 @@ Using the main datastore on the 4D database:
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation <!-- END REF -->
 
 
 <!-- REF #_command_.Open datastore.Params -->
@@ -119,11 +119,11 @@ Using the main datastore on the 4D database:
 |---|---|---|---|
 |connectionInfo|Object|->|Connection properties used to reach the remote datastore|
 |localID |Text|->|Id to assign to the opened datastore on the local application (mandatory)|
-|Result |cs.DataStore|<-|Datastore object|<!-- END REF -->
+|Result |4D.DataStoreImplementation|<-|Datastore object|<!-- END REF -->
 
 #### Description
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the 4D database identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
+The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the 4D database identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 The *connectionInfo* 4D database must be available as a remote datastore, i.e.:
 
@@ -135,7 +135,7 @@ If no matching database is found, `Open datastore` returns **Null**.
 
 *localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Objects available in the `4D.DataStoreImplementation` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
 Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:
 
@@ -169,7 +169,7 @@ Connection to a remote datastore without user / password:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -181,7 +181,7 @@ Connection to a remote datastore with user / password / timeout / tls:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -194,7 +194,7 @@ Working with several remote datastores:
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
@@ -578,7 +578,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 On a remote datastore:
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -1174,7 +1174,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

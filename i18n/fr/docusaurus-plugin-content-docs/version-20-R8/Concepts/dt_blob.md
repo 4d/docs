@@ -34,8 +34,8 @@ Vous ne pouvez pas utiliser d'opérateurs sur les blobs.
 
 ## Vérifier si une variable contient un blob scalaire ou un `4D.Blob`
 
-La commande [Value type](https://doc.4d.com/4dv20/help/command/en/page1509.html) permet de déterminer si une valeur est de type Blob ou Objet.
-Pour vérifier qu'un objet est un objet blob (`4D.Blob`), utilisez [OB instance of](https://doc.4d.com/4dv20/help/command/en/page1731.html) :
+La commande [Value type](../commands-legacy/value-type.md) permet de déterminer si une valeur est de type Blob ou Objet.
+Pour vérifier qu'un objet est un objet blob (`4D.Blob`), utilisez [OB instance of](../commands-legacy/ob-instance-of.md) :
 
 ```4d
 var $myBlob: Blob
@@ -62,17 +62,17 @@ $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 
 Certaines commandes 4D modifient le blob d'origine et ne prennent donc pas en charge le type `4D.Blob` :
 
-- [DELETE FROM BLOB](https://doc.4d.com/4dv19/help/command/en/page560.html)
-- [INSERT IN BLOB](https://doc.4d.com/4dv19/help/command/en/page559.html)
-- [INTEGER TO BLOB](https://doc.4d.com/4dv19/help/command/en/page548.html)
-- [LONGINT TO BLOB](https://doc.4d.com/4dv19/help/command/en/page550.html)
-- [REAL TO BLOB](https://doc.4d.com/4dv19/help/command/en/page552.html)
-- [SET BLOB SIZE](https://doc.4d.com/4dv19/help/command/en/page606.html)
-- [TEXT TO BLOB](https://doc.4d.com/4dv19/help/command/en/page554.html)
-- [VARIABLE TO BLOB](https://doc.4d.com/4dv19/help/command/en/page532.html)
-- [LIST TO BLOB](https://doc.4d.com/4dv19/help/command/en/page556.html)
-- [SOAP DECLARATION](https://doc.4d.com/4dv19/help/command/en/page782.html)
-- [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19/help/command/en/page777.html)
+- [DELETE FROM BLOB](../commands-legacy/delete-from-blob.md)
+- [INSERT IN BLOB](../commands-legacy/insert-in-blob.md)
+- [INTEGER TO BLOB](../commands-legacy/integer-to-blob.md)
+- [LONGINT TO BLOB](../commands-legacy/longint-to-blob.md)
+- [REAL TO BLOB](../commands-legacy/real-to-blob.md)
+- [SET BLOB SIZE](../commands-legacy/set-blob-size.md)
+- [TEXT TO BLOB](../commands-legacy/text-to-blob.md)
+- [VARIABLE TO BLOB](../commands-legacy/variable-to-blob.md)
+- [LIST TO BLOB](../commands-legacy/list-to-blob.md)
+- [SOAP DECLARATION](../commands-legacy/soap-declaration.md)
+- [WEB SERVICE SET PARAMETER](../commands-legacy/web-service-set-parameter.md)
 
 ### Passer des blobs et des objets blob aux méthodes
 

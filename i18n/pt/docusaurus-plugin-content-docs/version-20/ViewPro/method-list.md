@@ -4119,13 +4119,15 @@ Ver exemplo em [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 <!-- REF #_method_.VP Row.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                  |
-| ---------- | ------- | -- | ------------------------------------------ |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |
-| row        | Integer | -> | Índice de linha                            |
-| rowCount   | Integer | -> | Número de linhas                           |
+| Parâmetro  | Tipo    |    | Descrição                                               |
+| ---------- | ------- | -- | ------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro              |
+| row        | Integer | -> | Índice de linha                                         |
+| rowCount   | Integer | -> | Número de linhas                                        |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)                |
+| Resultados | Object  | <- | Objeto intervalo de linha(s)|<!-- END REF -->
 
-|sheet  |Integer|->|Sheet index (folha atual, se omitida)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
+|
 
 #### Descrição
 
@@ -5172,11 +5174,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parâmetro | Tipo |  | Descrição |
-| --------- | ---- |  | --------- |
-|           |      |  |           |
+| Parâmetro     | Tipo   |    | Descrição                                   |
+| ------------- | ------ | -- | ------------------------------------------- |
+| rangeObj      | Object | -> | Objeto intervalo                            |
+| formula       | Text   | -> | Fórmula ou método 4D                        |
+| formatPattern | Text   | -> | Formato do campo|<!-- END REF -->
 
-|rangeObj |Object|->|Range object| |formula |Text|->|Formula or 4D method| |formatPattern |Text|->|Format of field|<!-- END REF -->
+|
 
 #### Descrição
 

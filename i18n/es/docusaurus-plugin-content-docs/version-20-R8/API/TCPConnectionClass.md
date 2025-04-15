@@ -25,7 +25,7 @@ TCPConnection objects are released when no more references to them exist in memo
 
 The following examples demonstrate how to use the 4D.TCPConnection and 4D.TCPEvent classes to manage a TCP client connection, handle events, send data, and properly close the connection. Both synchronous and asynchronous examples are provided.
 
-#### Synchronous Example
+#### Ejemplo sincrónico
 
 This example shows how to establish a connection, send data, and shut it down using a simple object for configuration:
 
@@ -102,7 +102,7 @@ Function onTerminate($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
 
 ```
 
-##### Usage example
+##### Ejemplo de uso
 
 Create a new method named AsyncTCP, to initialize and manage the TCP connection:
 
@@ -189,7 +189,7 @@ All callback functions receive two parameters:
    - `onError` is triggered if an error occurs.
 4. `onTerminate` is always triggered just before the TCPConnection is released (connection is closed or an error occured).
 
-#### TCPEvent object
+#### Objeto TCPEvent
 
 Un objeto [`TCPEvent`](TCPEventClass.md) es devuelto cuando se llama una [función de retrollamada](#callback-functions).
 
@@ -203,7 +203,7 @@ Un objeto [`TCPEvent`](TCPEventClass.md) es devuelto cuando se llama una [funci�
 
 #### Descripción
 
-The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+La propiedad `.closed` contiene <!-- REF #TCPConnection.closed.Summary -->si la conexión está cerrada<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
 
 <!-- END REF -->
 
@@ -215,7 +215,7 @@ The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whethe
 
 #### Descripción
 
-The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+La propiedad `.errors` contiene <!-- REF #TCPConnection.errors.Summary -->una colección de objetos de error asociados a la conexión<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 | Propiedad |                                                                                           | Tipo       | Descripción                                           |
 | --------- | ----------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------- |
@@ -234,7 +234,7 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 
 #### Descripción
 
-The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.noDelay` contiene <!-- REF #TCPConnection.noDelay.Summary -->si el algoritmo de Nagle está desactivado (`true`) o activado (`false`)<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -246,15 +246,15 @@ The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whet
 
 <!-- REF #TCPConnection.send().params -->
 
-| Parámetros | Tipo |    | Descripción     |
-| ---------- | ---- | -- | --------------- |
-| data       | Blob | -> | Data to be sent |
+| Parámetros | Tipo |    | Descripción    |
+| ---------- | ---- | -- | -------------- |
+| data       | Blob | -> | Datos a enviar |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
+La función `send()` <!-- REF #TCPConnection.send().Summary -->envía datos al servidor<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
 
 <!-- END REF -->
 
@@ -286,9 +286,9 @@ La función `shutdown()`<!-- REF #TCPConnection.shutdown().Summary -->cierra el 
 
 <!-- REF #TCPConnection.wait().params -->
 
-| Parámetros | Tipo |     | Descripción                  |
-| ---------- | ---- | :-: | ---------------------------- |
-| timeout    | Real |  -> | Maximum wait time in seconds |
+| Parámetros | Tipo |     | Descripción                         |
+| ---------- | ---- | :-: | ----------------------------------- |
+| timeout    | Real |  -> | Tiempo máximo de espera en segundos |
 
 <!-- END REF -->
 

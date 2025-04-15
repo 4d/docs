@@ -3,7 +3,7 @@ id: TCPConnectionClass
 title: TCPConnection
 ---
 
-The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a server, enabling you to send and receive data, and handle connection lifecycle events using callbacks.
+The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a [server](./TCPListenerClass.md), enabling you to send and receive data, and handle connection lifecycle events using callbacks.
 
 The `TCPConnection` class is available from the `4D` class store. Puede crear una conexión TCP utilizando la función [4D.TCPConnection.new()](#4dtcpconnectionnew) que devuelve un [TCPConnection object](#tcpconnection-object).
 
@@ -15,9 +15,10 @@ TCPConnection objects are released when no more references to them exist in memo
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R8       | Clase añadida  |
+| Lanzamiento | Modificaciones                                   |
+| ----------- | ------------------------------------------------ |
+| 20 R9       | New `listener`, `address`, and `port` attributes |
+| 20 R8       | Clase añadida                                    |
 
 </details>
 
@@ -25,7 +26,7 @@ TCPConnection objects are released when no more references to them exist in memo
 
 The following examples demonstrate how to use the 4D.TCPConnection and 4D.TCPEvent classes to manage a TCP client connection, handle events, send data, and properly close the connection. Both synchronous and asynchronous examples are provided.
 
-#### Synchronous Example
+#### Ejemplo sincrónico
 
 This example shows how to establish a connection, send data, and shut it down using a simple object for configuration:
 
@@ -102,7 +103,7 @@ Function onTerminate($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
 
 ```
 
-##### Usage example
+##### Ejemplo de uso
 
 Create a new method named AsyncTCP, to initialize and manage the TCP connection:
 
@@ -130,9 +131,12 @@ TCPConnection objects provide the following properties and functions:
 
 |                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #TCPConnection.address.Syntax -->](#address)<br/><!-- INCLUDE #TCPConnection.address.Summary -->        |
 | [<!-- INCLUDE #TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #TCPConnection.closed.Summary -->           |
 | [<!-- INCLUDE #TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #TCPConnection.errors.Summary -->           |
+| [<!-- INCLUDE #TCPConnection.listener.Syntax -->](#listener)<br/><!-- INCLUDE #TCPConnection.listener.Summary -->     |
 | [<!-- INCLUDE #TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #TCPConnection.noDelay.Summary -->        |
+| [<!-- INCLUDE #TCPConnection.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPConnection.port.Summary -->                 |
 | [<!-- INCLUDE #TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #TCPConnection.send().Summary -->             |
 | [<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary --> |
 | [<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->             |
@@ -189,9 +193,21 @@ All callback functions receive two parameters:
    - `onError` is triggered if an error occurs.
 4. `onTerminate` is always triggered just before the TCPConnection is released (connection is closed or an error occured).
 
-#### TCPEvent object
+#### Objeto TCPEvent
 
 Un objeto [`TCPEvent`](TCPEventClass.md) es devuelto cuando se llama una [función de retrollamada](#callback-functions).
+
+<!-- END REF -->
+
+<!-- REF #TCPConnection.address.Desc -->
+
+## .dirección
+
+<!-- REF #TCPConnection.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### Descripción
+
+The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -203,7 +219,7 @@ Un objeto [`TCPEvent`](TCPEventClass.md) es devuelto cuando se llama una [funci�
 
 #### Descripción
 
-The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+La propiedad `.closed` contiene <!-- REF #TCPConnection.closed.Summary -->si la conexión está cerrada<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
 
 <!-- END REF -->
 
@@ -215,7 +231,7 @@ The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whethe
 
 #### Descripción
 
-The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+La propiedad `.errors` contiene <!-- REF #TCPConnection.errors.Summary -->una colección de objetos de error asociados a la conexión<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 | Propiedad |                                                                                           | Tipo       | Descripción                                           |
 | --------- | ----------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------- |
@@ -223,6 +239,18 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 |           | [].errCode            | Number     | Código de error 4D                                    |
 |           | [].message            | Text       | Descripción del error 4D                              |
 |           | [].componentSignature | Text       | Firma del componente interno que ha devuelto el error |
+
+<!-- END REF -->
+
+<!-- REF #TCPConnection.listener.Desc -->
+
+## .listener
+
+<!-- REF #TCPConnection.listener.Syntax -->**listener** : Object<!-- END REF -->
+
+#### Descripción
+
+The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->the [`TCPListener`](./TCPListenerClass.md) object that created the `TCPConnection`, if any<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -234,7 +262,19 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 
 #### Descripción
 
-The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.noDelay` contiene <!-- REF #TCPConnection.noDelay.Summary -->si el algoritmo de Nagle está desactivado (`true`) o activado (`false`)<!-- END REF -->. Esta propiedad es de **solo lectura**.
+
+<!-- END REF -->
+
+<!-- REF #TCPConnection.port.Desc -->
+
+## .port
+
+<!-- REF #TCPConnection.port.Syntax -->**port** : Number<!-- END REF -->
+
+#### Descripción
+
+The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -246,15 +286,15 @@ The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whet
 
 <!-- REF #TCPConnection.send().params -->
 
-| Parámetros | Tipo |    | Descripción     |
-| ---------- | ---- | -- | --------------- |
-| data       | Blob | -> | Data to be sent |
+| Parámetros | Tipo |    | Descripción    |
+| ---------- | ---- | -- | -------------- |
+| data       | Blob | -> | Datos a enviar |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
+La función `send()` <!-- REF #TCPConnection.send().Summary -->envía datos al servidor<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
 
 <!-- END REF -->
 
@@ -286,9 +326,9 @@ La función `shutdown()`<!-- REF #TCPConnection.shutdown().Summary -->cierra el 
 
 <!-- REF #TCPConnection.wait().params -->
 
-| Parámetros | Tipo |     | Descripción                  |
-| ---------- | ---- | :-: | ---------------------------- |
-| timeout    | Real |  -> | Maximum wait time in seconds |
+| Parámetros | Tipo |     | Descripción                         |
+| ---------- | ---- | :-: | ----------------------------------- |
+| timeout    | Real |  -> | Tiempo máximo de espera en segundos |
 
 <!-- END REF -->
 

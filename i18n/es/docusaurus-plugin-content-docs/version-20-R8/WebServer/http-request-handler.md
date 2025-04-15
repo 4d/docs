@@ -28,7 +28,7 @@ Custom HTTP Request handlers are supported:
 
 :::
 
-## HTTPHandlers.json File
+## Archivo HTTPHandlers.json
 
 Define sus manejadores de petición HTTP personalizados en un archivo de configuración llamado **HTTPHandlers.json** almacenado en la carpeta [`Project/Sources`](../Project/architecture.md#sources).
 
@@ -68,7 +68,7 @@ A handler is defined by:
 
 The handler identifier is the couple [pattern + a verb among the verbs list].
 
-### URL patterns
+### Patrones de la URL
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
@@ -113,7 +113,7 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 ```
 
-#### Forbidden patterns
+#### Patrones prohibidos
 
 URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
 
@@ -141,7 +141,7 @@ Ex: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. All names can be used.
+No control is done on verb names. Se pueden utilizar todos los nombres.
 
 :::
 

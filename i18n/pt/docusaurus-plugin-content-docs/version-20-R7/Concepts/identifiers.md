@@ -29,7 +29,7 @@ Nomes de função devem estar em conformidade com as regras normais de nomeaçã
 
 O nome de uma propriedade de objeto (também chamada de *atributo* de objeto) pode conter até 255 caracteres.
 
-As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#properties)**:
+As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. Seja qual for a sua natureza, os nomes de propriedades de objetos devem seguir as seguintes regras **se você quiser usar a [notação de ponto](dt_object.md#properties)**:
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
@@ -124,28 +124,28 @@ QUERY([Clients];[Clients]Name="Smith")
 
 O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos  .
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables) (deprecated).
+- Um nome de variável deve começar com uma letra, um sublinhado, ou um dólar ("$") para [parameters](parameters.md) e [variáveis locais](variables.md#local-variables), ou `<>` para [variáveis interprocesso](variables.md#interprocess-variables) (obsoleto).
 - A partir daí, o nome pode incluir qualquer letra ou dígito e o carácter de sublinhado ("_").
-- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), system variable names (`OK`, `document`...), or constant names (`Euro`, `Black`, `Friday`, etc.).
+- Não use nomes reservados, por exemplo, nomes de comandos 4D (`Date`, `Time`, etc), palavras-chave (`If`, `for`, etc. , nomes de variáveis de sistema (`OK`, `documento`...), ou nomes constantes (`Euro`, `Black`, `, `Friday\`, etc.).
 - O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos <code>&lt;&gt;</code> .
 
 Exemplos:
 
 ```4d
-For($vlRecord;1;100) //local variable
-$vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales
-If(bValidate=1) //process variable
-<>vlProcessID:=Current process() //interprocess variable
+For($vlRecord;1;100) //variável local
+$vsMyString:="Olá" //local variável
+var $vName; $vJob : Texto //variável local
+If(bValidate=1) //variável de processo
+<>vlProcessID:=Process() //variável interprocesso
 ```
 
 ### Compatibidade
 
-Some naming practices were previously allowed but are no longer supported when the [direct typing mode is enabled](../Project/compiler.md#enabling-direct-typing) (introduced in 4D 20 R7). Enabling this mode will produce syntax errors if:
+Algumas práticas de nomeação eram permitidas anteriormente, mas não são mais suportadas quando o [modo de digitação direta está habilitado](../Project/compiler.md#enabling-direct-typing) (introduzido em 4D 20 R7). Ativar este modo irá produzir erros de sintaxe se:
 
-- a variable name has a digit as first character,
-- a variable name contains space characters,
-- you declared variables named $0, $1, etc.
+- o nome de uma variável tiver um dígito como primeiro caractere,
+- um nome de variável contiver caracteres de espaço,
+- tiver declarado variáveis chamadas $0, $1, etc.
 
 ## Outros nomes
 

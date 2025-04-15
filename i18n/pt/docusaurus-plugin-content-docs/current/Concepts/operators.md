@@ -282,7 +282,7 @@ A sintaxe é a seguinte:
 
 `condition ? exprIfTruthy : exprIfFalsy`
 
-> Como a [sintaxe de token](https://doc.4d.com/4Dv19/4D/19.5/Using-tokens-in-formulas.300-6136716.en.html) usa dois pontos, recomendamos inserir um espaço após os dois pontos `:` ou colocar os tokens entre parênteses para evitar conflitos.
+> Como a [sintaxe de token](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html) usa dois pontos, recomendamos inserir um espaço após os dois pontos `:` ou colocar os tokens entre parênteses para evitar conflitos.
 
 ### Exemplos
 

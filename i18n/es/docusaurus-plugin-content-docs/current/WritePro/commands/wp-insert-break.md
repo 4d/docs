@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document |
 | breakType   | Integer | &#8594; | Type of break to insert                   |
-| mode        | Integer | &#8594; | Insertion mode                            |
+| mode        | Integer | &#8594; | Modo de inserción                         |
 | rangeUpdate | Integer | &#8594; | Range update mode                         |
 | Resultado   | Object  | &#8592; | Text range of the break character         |
 
@@ -26,7 +26,7 @@ En *targetObj*, pase:
 
 - un rango, o
 - an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
-- a 4D Write Pro document
+- un documento 4D Write Pro
 
 In *breakType*, pass one of the following constants from the *4D Write Pro Constants* theme to define the type of break to insert:
 

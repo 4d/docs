@@ -360,11 +360,11 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Dans une méthode projet
+// Vous pouvez instancier un objet
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"John";"age":42}
+// $o = {"name" : "John" ; "age":42}
 ```
 
 ### `propriété`

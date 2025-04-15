@@ -140,7 +140,7 @@ title: 座標とサイズ
 
 :::
 
-このプロパティは、[OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/ja/page1323.html) と [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/ja/page1324.html) コマンドを使用して設定することもできます。
+You can also set this property using the [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) and [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md) commands.
 
 #### JSON 文法
 

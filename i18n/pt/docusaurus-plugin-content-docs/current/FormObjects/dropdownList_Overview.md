@@ -148,7 +148,7 @@ Uma lista suspensa hierárquica tem uma sub-lista associada a cada item da lista
 
 Você pode atribuir a lista de opções hierárquicas ao objeto de lista suspensa usando o campo [Choice List](properties_DataSource.md#choice-list) da Lista de propriedades.
 
-Pode gerenciar as listas suspensas hierárquicas usando os comandos **listas hierárquicas** do idioma 4D. Todos os comandos compatíveis com a sintaxe `(*; "name")` podem ser usados com listas suspensas hierárquicas, por exemplo, [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
+Pode gerenciar as listas suspensas hierárquicas usando os comandos **listas hierárquicas** do idioma 4D. Todos os comandos compatíveis com a sintaxe `(*; "name")` podem ser usados com listas suspensas hierárquicas, por exemplo, [`List item parent`](../commands-legacy/list-item-parent.md).
 
 ### Usar uma ação padrão
 

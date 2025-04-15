@@ -15,7 +15,7 @@ En dehors de la mémoire, il n'y a pas de limite au nombre de composants et donc
 
 Chaque serveur web 4D, y compris le serveur web de l'application principale, est exposé comme un **objet** spécifique de la classe `4D.WebServer`. Une fois instancié, un objet serveur Web peut être géré depuis l'application courante ou depuis n'importe quel composant à l'aide d'un [grand nombre de propriétés et de fonctions](API/WebServerClass.md).
 
-> Les [commandes WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) héritées du langage 4D sont prises en charge mais ne peuvent pas sélectionner le serveur Web auquel elles s'appliquent (voir ci-dessous).
+> Les [commandes WEB](../commands/theme/Web_Server.md) héritées du langage 4D sont prises en charge mais ne peuvent pas sélectionner le serveur Web auquel elles s'appliquent (voir ci-dessous).
 
 Chaque serveur web (application hôte ou composant) peut être utilisé dans son propre contexte, notamment :
 
@@ -101,7 +101,7 @@ Ces propriétés sont définies :
 
 ## Portée des commandes 4D Web
 
-Portée Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.
+Le langage 4D contient [plusieurs commandes](../commands/theme/Web_Server.md) permettant de contrôler le serveur Web. Cependant, ces commandes sont destinées à fonctionner avec un seul serveur Web (par défaut). Lorsque vous utilisez ces commandes dans le contexte d'objets serveur Web, assurez-vous que leur portée est appropriée.
 
 | Command                         | Portée                            |
 | ------------------------------- | --------------------------------- |
@@ -109,7 +109,7 @@ Portée Cependant, ces commandes sont destinées à fonctionner avec un seul ser
 | `WEB CLOSE SESSION`             | Serveur Web ayant reçu la requête |
 | `WEB GET BODY PART`             | Serveur Web ayant reçu la requête |
 | `WEB Get body part count`       | Serveur Web ayant reçu la requête |
-| `WEB Get Current Session ID`    | Serveur Web ayant reçu la requête |
+| `WEB Get current session ID`    | Serveur Web ayant reçu la requête |
 | `WEB GET HTTP BODY`             | Serveur Web ayant reçu la requête |
 | `WEB GET HTTP HEADER`           | Serveur Web ayant reçu la requête |
 | `WEB GET OPTION`                | Application hôte du serveur web   |

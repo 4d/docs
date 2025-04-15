@@ -3,7 +3,7 @@ id: web
 title: Web page
 ---
 
-Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html) chapter.
+Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter.
 
 ## Configuration
 
@@ -102,7 +102,7 @@ In this mode, you can configure additional web server setttings:
 
 *Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
 
-This option enables the handling of legacy user sessions by the 4D HTTP server. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html) section. See [Keep Session](../WebServer/webServerConfig.md#keep-session).
+This option enables the handling of legacy user sessions by the 4D HTTP server. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html) section. See [Keep Session](../WebServer/webServerConfig.md#keep-session).
 
 When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts) option is automatically checked (and locked).
 
@@ -182,7 +182,7 @@ List of allowed hosts and methods for the CORS service. See [CORS Settings](../W
 
 Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. See [Log Recording](../WebServer/webServerConfig.md#log-recording).
 
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html) command.
+> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](../commands-legacy/web-set-option.md) command.
 
 
 The log format menu provides the following options:
@@ -280,7 +280,7 @@ Configure the automatic backup parameters for the request log. First you must ch
 
 You use the options on this tab to activate and configure Web services for the 4D project, both for their publishing (server side) and their subscription (client side).
 
-For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html) chapter.
+For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter.
 
 ### Server Side  
 

@@ -43,12 +43,12 @@ Objects must have been instantiated, otherwise trying to read or modify their pr
 
 Object instantiation can be done in one of the following ways:
 
-- using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
+- using the [`New object`](../commands-legacy/new-object.md) command,
 - using the `{}` operator.
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/database-measures.301-5945423.en.html) or [`File`](../commands/file.md). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
+Several 4D commands and functions return objects, for example [`Database measures`](../commands-legacy/database-measures.md) or [`File`](../commands/file.md). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
 
 :::
 
@@ -56,7 +56,7 @@ Several 4D commands and functions return objects, for example [`Database measure
 
 ### `New object` command
 
-The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference. 
+The [`New object`](../commands-legacy/new-object.md) command creates a new empty or prefilled object and returns its reference. 
 
 Examples:
 
@@ -117,8 +117,8 @@ $col:=$o.col[5] //6
 
 You can create two types of objects:
 
-- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). These objects can be edited without any specific access control but cannot be shared between processes. 
-- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
+- regular (non-shared) objects, using the [`New object`](../commands-legacy/new-object.md) command or object literal syntax (`{}`). These objects can be edited without any specific access control but cannot be shared between processes. 
+- shared objects, using the [`New shared object`](../commands-legacy/new-shared-object.md) command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
 For more information, refer to the [Shared objects and collections](shared.md) section.
 
 

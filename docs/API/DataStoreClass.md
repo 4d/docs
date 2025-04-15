@@ -561,7 +561,7 @@ This function must be called on a remote 4D, otherwise it returns an empty colle
 
 Collection of stacked request objects. The most recent request has index 0.
 
-For a description of the ORDA request log format, please refer to the [**ORDA client requests**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373) section.
+For a description of the ORDA request log format, please refer to the [**ORDA requests**](../Debugging/debugLogFiles.md#orda-requests) section.
 
 #### Example
 

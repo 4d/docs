@@ -4147,8 +4147,10 @@ Ver el ejemplo en [VP SUSPEND COMPUTING](#vp-suspend-computing).
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
 | row        | Integer | -> | Índice de la línea                           |
 | rowCount   | Integer | -> | Número de líneas                             |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Object  | <- | Rango de línea(s)|<!-- END REF -->
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5221,11 +5223,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Parámetros    | Tipo   |    | Descripción                                  |
+| ------------- | ------ | -- | -------------------------------------------- |
+| rangeObj      | Object | -> | Objeto rango                                 |
+| formula       | Text   | -> | Fórmula o método 4D                          |
+| formatPattern | Text   | -> | Formato del campo|<!-- END REF -->
 
-|rangeObj |Object|->|Objeto de rango| |formula |Text|->|Formula o método 4D| |formatPattern |Text|->|Formato de campo|<!-- END REF -->
+|
 
 #### Descripción
 

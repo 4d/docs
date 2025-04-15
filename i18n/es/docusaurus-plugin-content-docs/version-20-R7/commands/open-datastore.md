@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 </details>
 
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore<!-- END REF-->
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
 
 <!--REF #_command_.Open datastore.Params-->
 
-| Parámetros     | Tipo                         |                             | Descripción                                                                                         |
-| -------------- | ---------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                       | &#8594; | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
-| localID        | Text                         | &#8594; | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Resultado      | cs.DataStore | &#8592; | Objeto del almacén de datos                                                                         |
+| Parámetros     | Tipo                                       |                             | Descripción                                                                                         |
+| -------------- | ------------------------------------------ | --------------------------- | --------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                                     | &#8594; | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
+| localID        | Text                                       | &#8594; | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
+| Resultado      | 4D.DataStoreImplementation | &#8592; | Objeto del almacén de datos                                                                         |
 
 <!-- END REF-->
 
 ## Descripción
 
-El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos remota identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` asociado al alias local *localID*.
+The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 El comando admite los siguientes almacenes de datos remotos:
 
@@ -81,7 +81,7 @@ Conexión a un almacén de datos remoto sin usuario/contraseña:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -93,7 +93,7 @@ Conexión a un almacén de datos remoto con usuario/contraseña/ timeout / tls:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -106,7 +106,7 @@ Trabajar con varios almacenes de datos remotos:
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
@@ -146,10 +146,10 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac�
 
 ## Propiedades
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Número de comando  | 1452                        |
-| Hilo seguro        | &check; |
-| Modifies variables | error                       |
+|                        |                             |
+| ---------------------- | --------------------------- |
+| Número de comando      | 1452                        |
+| Hilo seguro            | &check; |
+| Modifica las variables | error                       |
 
 

@@ -74,8 +74,8 @@ You execute the method with local information as parameters on a remote machine:
 The WriteLog method will be executed on the server. It contains, for example:
 
 ```4d
- var $1;$2;$3 : Text
- TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
+ #DECLARE ($user : Text; $date : Text ; $time : Text)
+ TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$user+".txt";$date+" "+$time)
 ```
 
 ## Example 2 
@@ -102,8 +102,7 @@ With the regular import data, 4D Client performs the parsing of the text file, t
   // CLIENT IMPORT ( Pointer ; String )
   // CLIENT IMPORT ( -> [Table] ; Input form )
  
- var $1 : Pointer
- var $2 : Text
+ #DECLARE ($tablePtr : Pointer ; $form : Text)
  var $vhDocRef : Time
  var $vxData : Blob
  var spErrCode : Integer
@@ -120,7 +119,7 @@ With the regular import data, 4D Client performs the parsing of the text file, t
   // If the document could be loaded in the BLOB,
   // Start the stored procedure that will import the data on the server machine
        $spProcessID:=Execute on server("SERVER IMPORT";0;
-       "Server Import Services";Table($1);$2;$vxData)
+       "Server Import Services";Table($tablePtr);$form;$vxData)
   // At this point, we no longer need the BLOB in this process
        CLEAR VARIABLE($vxData)
   // Wait for the completion of the operation performed by the stored procedure
@@ -151,18 +150,17 @@ Here is the SERVER IMPORT project method executed as a stored procedure:
   // SERVER IMPORT ( Long ; String ; BLOB )
   // SERVER IMPORT ( Table Number ; Input form ; Import Data )
  
- var $1 : Integer
- var $2 : Text
- var $3 : Blob
+#DECLARE ($tabNum : Integer ; $form : Text ; $data : Blob)
+
  var spErrCode : Integer
  
   // Operation is not finished yet, set spErrCode to 1
  spErrCode:=1
- $vpTable:=Table($1)
- FORM SET INPUT($vpTable->;$2)
+ $vpTable:=Table($tabNum)
+ FORM SET INPUT($vpTable->;$form)
  $vsDocName:="Import File "+String(1+Random)
  DELETE DOCUMENT($vsDocName)
- BLOB TO DOCUMENT($vsDocName;$3)
+ BLOB TO DOCUMENT($vsDocName;$data)
  IMPORT TEXT($vpTable->;$vsDocName)
  DELETE DOCUMENT($vsDocName)
   // Operation is finished, set spErrCode to 0

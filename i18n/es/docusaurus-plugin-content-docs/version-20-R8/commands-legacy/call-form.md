@@ -75,12 +75,12 @@ En el formulario principal, un botón abre los dos diálogos:
 El método *doAddMessage* sólo añade una línea en un list box en el formulario "FormMessage":
 
 ```4d
- var $1 : Text // nombre del llamador
- var $2 : Text // mensaje a mostrar
-  // recibir mensaje desde $2 y log el mensaje en list box
+ #DECLARE ($caller : Text ; $message : Text) // nombre del llamador
+  // mensaje a mostrar
+  // recibir mensaje desde $message y log el mensaje en list box
  $p:=OBJECT Get pointer(Object named;"Column1")
  INSERT IN ARRAY($p->;1)
- $p->{1}:=$1+" sends "+$2
+ $p->{1}:=$caller+" sends "+$message
 ```
 
 En ejecución, obtiene el siguiente resultado:

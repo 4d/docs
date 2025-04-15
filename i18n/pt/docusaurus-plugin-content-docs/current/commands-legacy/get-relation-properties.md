@@ -5,14 +5,14 @@ slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( pontCampo|numTabela {; *numCampo*}; *Tabela* ; *Campo* {; *discriminante* {; *autoUm* {; *autoMuitos*}}} )<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *pontCampo* ; *tabelaUm* ; *numCampo* {; *discriminante* {; *autoUm* {; *autoMuitos*}}} )<br/>**GET RELATION PROPERTIES** ( *numTabela* ; *numCampo* ; *tabelaUm* ; *campoUmo* {; *discriminante* {; *autoUm* {; *autoMuitos*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594;  | Ponteiro de campo ou número da tabela |
 | numCampo | Integer | &#8594;  | Número de campo se o número da tabela for passado como primeiro parâmetro |
-| Tabela | Integer | &#8592; | Nº de tabela ou 0 se nenhuma relação tiver sido definido para o campo |
-| Campo | Integer | &#8592; | Número de campo ou 0 se nenhuma relação for definida para o campo. |
+| tabelaUm | Integer | &#8592; | Nº de tabela ou 0 se nenhuma relação tiver sido definido para o campo |
+| campoUmo | Integer | &#8592; | Número de campo ou 0 se nenhuma relação for definida para o campo. |
 | discriminante | Integer | &#8592; | Número de campo discriminante ou 0 se nenhum campo |
 | autoUm | Boolean | &#8592; | True = relação Um automática, False = Relação Um manual |
 | autoMuitos | Boolean | &#8592; | True = relação Um para Muitos automática, False = Relação Um para Muitos manual |

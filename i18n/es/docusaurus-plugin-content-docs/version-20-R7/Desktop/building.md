@@ -142,7 +142,7 @@ Para seleccionar la carpeta 4D Volume Desktop, haga clic en el botón **[...]**.
 
 Una vez seleccionada la carpeta, se muestra su ruta completa y, si realmente contiene 4D Volume Desktop, se activa la opción de generación de una aplicación ejecutable.
 
-> El número de versión de 4D Volume Desktop debe coincidir con el número de versión de 4D Developer Edition. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
+> El número de versión de 4D Volume Desktop debe coincidir con el número de versión de 4D Developer Edition. Por ejemplo, si utiliza 4D 20, debe seleccionar un 4D Volume Desktop 20.
 
 #### Modo de enlace de datos
 
@@ -163,10 +163,10 @@ Si ha especificado "MyProject" como nombre de la aplicación, encontrará los si
 - *Windows*
  - MyProject.exe - Su ejecutable y un MyProject.rsr (los recursos de la aplicación)
  - Las carpetas 4D Extensions y Resources, varias librerías (DLL), la carpeta Native Components y SASL Plugins - Archivos necesarios para el funcionamiento de la aplicación
- - Database folder - Includes a Resources folder and  MyProject.4DZ file. Constituyen la estructura compilada del proyecto, así como también la carpeta Resources.
+ - Una carpeta Database - Incluye una carpeta Resources y un archivo MyProject.4DZ. Constituyen la estructura compilada del proyecto, así como también la carpeta Resources.
   **Nota**: esta carpeta también contiene la carpeta *Default Data*, si se ha definido (ver [Gestión de archivos de datos en las aplicaciones finales](#management-of-data-files).
  - (Opcional) Carpeta de componentes y/o carpeta Plugins - Contiene todos los componentes y/o archivos de plugins incluidos en el proyecto. Para más información sobre este punto, consulte la sección [Plugins y componentes](#plugins--components-page).
- - (Optional) Licenses folder - An XML file of license numbers integrated into the application, if any. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses--certificate-page).
+ - (Opcional) Carpeta Licencias - Un archivo XML con los números de licencia integrados en la aplicación, si los hubiera. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses--certificate-page).
  - Elementos adicionales añadidos a la carpeta 4D Volume Desktop, si los hay (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
 Todos estos elementos deben estar en la misma carpeta para que el ejecutable funcione.
@@ -289,7 +289,7 @@ Esta opción permite elegir el modo de enlace entre la aplicación fusionada y e
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#last-data-file-opened).
 
-### Build client application
+### Crear aplicación cliente
 
 Marque esta opción para generar la parte cliente de su aplicación durante la fase de construcción.
 
@@ -302,7 +302,7 @@ Puede marcar esta opción:
 
 Designa la ubicación en su disco de la aplicación 4D Volume Desktop que se utilizará para construir la parte cliente de su aplicación.
 
-> El número de versión de 4D Volume Desktop debe coincidir con el número de versión de 4D Developer Edition. For example, if you use 4D 20, you must select a 4D Volume Desktop 20.
+> El número de versión de 4D Volume Desktop debe coincidir con el número de versión de 4D Developer Edition. Por ejemplo, si utiliza 4D 20, debe seleccionar un 4D Volume Desktop 20.
 
 El 4D Volume Desktop debe corresponder a la plataforma actual (que será también la plataforma de la aplicación cliente). Si desea generar una aplicación cliente para la plataforma "concurrente", debe realizar una operación adicional utilizando una aplicación 4D que se ejecute en dicha plataforma.
 

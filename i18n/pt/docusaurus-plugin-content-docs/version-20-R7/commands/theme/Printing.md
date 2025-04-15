@@ -1,6 +1,6 @@
 ---
 id: Printing_theme
-title: Printing
+title: Impressões
 slug: /commands/theme/Printing
 ---
 

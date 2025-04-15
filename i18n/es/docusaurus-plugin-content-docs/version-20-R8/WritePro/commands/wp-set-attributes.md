@@ -25,7 +25,7 @@ In *targetObj*, you can pass :
 
 - un rango, o
 - an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
-- a 4D Write Pro document
+- un documento 4D Write Pro
 
 You can specify attributes to set for *targetObj* in one of two ways:
 
@@ -88,7 +88,7 @@ You want to set a background image for the document:
  WP SET ATTRIBUTES(WParea;wk background image;$picture)
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
@@ -108,7 +108,7 @@ You want to set a background image that covers the whole printable area. All att
  WP SET ATTRIBUTES(WParea;$myAttributes)
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3514233.en.png)
 
@@ -142,7 +142,7 @@ You want to set tabs at varying intervals and designate a character as the leadi
  WP SET ATTRIBUTES(wpArea;wk tabs;$_tabs)
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
 

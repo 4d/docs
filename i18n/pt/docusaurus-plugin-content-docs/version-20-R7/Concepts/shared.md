@@ -114,7 +114,7 @@ The following features automatically trigger an internal **Use/End use**, making
 
 - [funções de coleção](../API/CollectionClass.md) que modificam as coleções compartilhadas,
 - [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
-- [`OB REMOVE`](../commands-legacy/ob-remove.md) command,
+- comando [`OB REMOVE`](../commands-legacy/ob-remove.md),
 - [funções compartilhadas](classes.md#shared-functions) (definida em [classes compartilhadas](classes.md#shared-classes)).
 
 ## Exemplo 1

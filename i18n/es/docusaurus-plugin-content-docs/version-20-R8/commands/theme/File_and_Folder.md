@@ -1,6 +1,6 @@
 ---
 id: File_and_Folder_theme
-title: File and Folder
+title: Archivo y carpeta
 slug: /commands/theme/File-and-Folder
 ---
 

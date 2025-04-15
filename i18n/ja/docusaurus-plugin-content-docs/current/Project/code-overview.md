@@ -70,7 +70,7 @@ title: メソッドとクラス
 
 :::caution
 
-プロジェクトメソッドの名前を変更すると、そのメソッドを旧名称で呼び出している他のメソッドやフォーミュラなど、アプリケーションの機能が無効になるリスクがあります。 このため、この変更を手動ではなく、[名称変更](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.ja.html) で説明されているプロジェクトメソッド名の名称変更機能によりおこなうことが強く推奨されます。 この機能を使用すれば、デザイン環境における当該メソッドの呼び出し箇所がすべて自動的に更新されます (ただし EXECUTE METHOD など、文字列としてメソッド名が参照されている個所を除きます)。
+プロジェクトメソッドの名前を変更すると、そのメソッドを旧名称で呼び出している他のメソッドやフォーミュラなど、アプリケーションの機能が無効になるリスクがあります。 You can rename the method manually but it is strongly recommended to use the renaming function for project methods, described in [Renaming](https://doc.4d.com/4Dv20/4D/20.2/Renaming.300-6750165.en.html). この機能を使用すれば、デザイン環境における当該メソッドの呼び出し箇所がすべて自動的に更新されます (ただし EXECUTE METHOD など、文字列としてメソッド名が参照されている個所を除きます)。
 
 4D Server の場合、名称変更は変更終了後にサーバーに反映されます。 複数のユーザーが同時に名称を変更しようとすると、最後におこなわれた名称変更が適用されます。 メソッドのオーナーを指定すれば特定のユーザー以外はメソッド名を変更できないようにできます。
 
@@ -102,7 +102,7 @@ title: メソッドとクラス
 
 この属性は、クライアント/サーバーモードの 4Dアプリケーションでのみ考慮されます。 このオプションが選択されていると、そのプロジェクトメソッドは呼び出し方に関わらず常にサーバー上で実行されます。
 
-このオプションに関する詳細は、4D Serverリファレンスマニュアルの [サーバー上で実行属性](https://doc.4d.com/4Dv19R6/4D/19-R6/Execute-on-Server-attribute.300-5941841.ja.html) を参照ください。
+For more information on this option, refer to [Execute on Server attribute](https://doc.4d.com/4Dv20/4D/20/Execute-on-Server-attribute.300-6330555.en.html).
 
 ### 実行モード
 
@@ -114,23 +114,23 @@ title: メソッドとクラス
 
 #### Webサービス
 
-この属性を使用して、SOAPリクエストでアクセス可能な Webサービスとして当該メソッドを公開することができます。 詳細は [Web サービスの公開と使用](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.ja.html) を参照ください。 このオプションを選択すると、**WSDL を公開** オプションを選択できるようになります。
+この属性を使用して、SOAPリクエストでアクセス可能な Webサービスとして当該メソッドを公開することができます。 For more information, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter. このオプションを選択すると、**WSDL を公開** オプションを選択できるようになります。
 
-エクスプローラーでは、Webサービスとして提供されるプロジェクトメソッドには専用のアイコンが表示されます ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png)。
+In the Explorer, project methods that are offered as a Web Service are given a specific icon.
 
 **注:** メソッド名が XML の命名規則に準拠しない文字 (たとえばスペース) を含む場合、そのメソッドは Webサービスとして公開できません。 この場合、設定は保存できません。
 
 #### WSDL を公開
 
-この属性は "Webサービス" 属性が設定されている場合にのみ利用可能です。 この属性を設定すると、当該メソッドが 4Dアプリケーションの WSDLに 含まれます。 詳細については [WSDL ファイルを生成する](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.ja.html#502689) を参照ください。
+この属性は "Webサービス" 属性が設定されている場合にのみ利用可能です。 この属性を設定すると、当該メソッドが 4Dアプリケーションの WSDLに 含まれます。 For more information about this, refer to [Generation of the WSDL](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html#502689).
 
-エクスプローラーでは、Webサービスとして提供され、WSDLで公開されたプロジェクトメソッドには専用のアイコンが表示されます ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png)。
+In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon.
 
 #### 4D タグと URL(4DACTION...)
 
 このオプションは、4D Webサーバーのセキュリティを強化するために使用されます。このオプションが選択されていない場合、[4DACTION URL](../WebServer/httpRequests.md#4daction) を使用した HTTPリクエスト、および [4DSCRIPT、4DTEXT、4DHTML タグ](../Tags/transformation-tags.md) から当該メソッドを直接呼び出すことができません。
 
-エクスプローラーでは、この属性が設定されたプロジェクトメソッドには専用のアイコンが表示されます ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png)。
+In the Explorer, project methods with this attribute are given a specific icon.
 
 セキュリティのため、このオプションはデフォルトで選択されていません。 Web機能から直接呼び出されるメソッドには、このオプションを明示的に選択しなければなりません。
 
@@ -138,14 +138,14 @@ title: メソッドとクラス
 
 この属性が選択されていると、当該プロジェクトメソッドは 4D の SQLエンジンから実行可能となります。 デフォルトでは選択されておらず、明示的に許可されない限り 4Dメソッドは保護されており、4D SQLエンジンから呼び出すことはできません。
 
-このプロパティはすべての内部および外部SQLクエリ (ODBCドライバー経由、[Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.ja.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.ja.html) タグ内の SQLコード、または [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.ja.html) からの呼び出し) に適用されます。
+This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md)  tags or the [QUERY BY SQL](../commands-legacy/query-by-sql.md) command.
 
 **注:**
 
 - メソッドに "SQL" 属性が設定されていても、メソッドの実行時にはデータベース設定およびメソッドプロパティに設定されたアクセス権が考慮されます。
 - ODBC の **SQLProcedure** 関数は "SQL" 属性が設定されているプロジェクトメソッド名のみを返します。
 
-詳細については、SQLマニュアルの [4Dと4D SQLエンジン統合の原則](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.ja.html) を参照ください。
+For more information, refer to [4D SQL engine implementation](https://doc.4d.com/4Dv20/4D/20/4D-SQL-engine-implementation.300-6342089.en.html) in the 4D SQL manual.
 
 #### REST サーバー
 
@@ -157,7 +157,7 @@ title: メソッドとクラス
 
 メソッド属性の一括設定をおこなうには:
 
-1. エクスプローラーの [メソッドページ](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.ja.html) からオプションメニューを展開し、**属性の一括設定...** コマンドを選択します。 "メソッド属性" ダイアログボックスが表示されます:
+1. On the [Methods Page](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.en.html) of the 4D Explorer, expand the options menu, then choose the **Batch setting of attributes...** command. "メソッド属性" ダイアログボックスが表示されます:
 
 2. "一致するメソッド名" エリアに属性を一括設定するメソッドを指定するための名前条件を入力します。
   入力した文字列を使用してメソッド名が検索されます。

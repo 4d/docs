@@ -80,7 +80,7 @@ Utilisation du datastore principal de la base 4D :
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
 
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
 
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
@@ -105,28 +105,28 @@ Utilisation du datastore principal de la base 4D :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                    |
-| ------- | -------------------------------- |
-| 20.3    | New *passwordAlgorithm* property |
-| 18      | Ajout                            |
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 20.3    | Nouvelle propriété *passwordAlgorithm* |
+| 18      | Ajout                                  |
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation <!-- END REF -->
 
 
 <!-- REF #_command_.Open datastore.Params -->
-| Paramètres     | Type         |    | Description                                                                       |
-| -------------- | ------------ | -- | --------------------------------------------------------------------------------- |
-| connectionInfo | Object       | -> | Propriétés de connexion utilisées pour joindre le datastore distant               |
-| localID        | Text         | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Résultat       | cs.DataStore | <- | Objet datastore|<!-- END REF -->
+| Paramètres     | Type                       |    | Description                                                                       |
+| -------------- | -------------------------- | -- | --------------------------------------------------------------------------------- |
+| connectionInfo | Object                     | -> | Propriétés de connexion utilisées pour joindre le datastore distant               |
+| localID        | Text                       | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| Résultat       | 4D.DataStoreImplementation | <- | Objet datastore|<!-- END REF -->
 
 |
 
 #### Description
 
-La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application à la base de données 4D identifiée par le paramètre *connectionInfo*<!-- END REF --> et retourne un objet `cs.DataStore` associé à l'alias local *localID*.
+La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application à la base de données 4D identifiée par le paramètre *connectionInfo*<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 La base de données *connectionInfo* 4D doit être disponible en tant que datastore distant, c'est-à-dire :
 
@@ -138,7 +138,7 @@ Si aucune base de données correspondante n'est trouvée, `Open datastore` retou
 
 *localID* est un alias local de la session ouverte sur le datastore distant. Si *localID* existe déjà dans l'application, il est utilisé. Sinon, une nouvelle session *localID* est créée lors de l’utilisation de l’objet datastore.
 
-Les objets disponibles dans le `cs.Datastore` sont créés à partir de la base de données cible en fonction des [règles générales](ORDA/dsMapping.md#règles-générales) de correspondance d'ORDA.
+Les objets disponibles dans le datastore sont créés à partir de la base de données cible en fonction des [règles générales](ORDA/dsMapping.md#règles-générales) de correspondance d'ORDA.
 
 Une fois la session ouverte, les instructions suivantes deviennent équivalentes et renvoient une référence sur le même objet datastore :
 
@@ -154,10 +154,10 @@ Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vou
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hostname          | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
 | user              | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
-| password          | Text    | Mot de passe de l'utilisateur. By default, the password is sent in clear form, therefore it is **strongly recommended** to use encrypted communications by passing `true` in the `tls` property.                                                                                                                                                 |
+| password          | Text    | Mot de passe de l'utilisateur. Par défaut, le mot de passe est envoyé en clair, il est donc **fortement recommandé** d'utiliser des communications chiffrées en passant `true` dans la propriété `tls`.                                                                                                                                          |
 | idleTimeout       | Integer | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
 | tls               | Boolean | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
-| passwordAlgorithm | Text    | Pass "4d-rest-digest" if the server validates the password using the [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) command with the *digest* parameter set to `true`.                                                                                                                                             |
+| passwordAlgorithm | Text    | Passez "4d-rest-digest" si le serveur valide le mot de passe à l'aide de la fonction [`Validate password`](https://doc.4d.com/4dv20/help/command/en/page638.html) avec le paramètre *digest* à `true`.                                                                                                                                           |
 | type              | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
 
 (*) Si tls est vrai, le protocole HTTPS est utilisé si :
@@ -172,7 +172,7 @@ Connexion à un datastore distant sans utilisateur/mot de passe :
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -184,7 +184,7 @@ Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -197,7 +197,7 @@ Travailler avec plusieurs datastores distants :
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
@@ -491,7 +491,7 @@ La fonction `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteConte
 
 > Pour plus d'informations sur la création des contextes, voir [Optimisation client/serveur](../ORDA/remoteDatastores.md#optimisation-clientserveur).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+Chaque objet de la collection retournée contient les propriétés listées dans la section [`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Exemple
 
@@ -593,7 +593,7 @@ La fonction `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->retourne 
 Sur un datastore distant :
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -798,7 +798,7 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 
 La fonction `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->définit toutes les nouvelles sélections d'entités comme altérables par défaut dans tous les datastores de l'application<!-- END REF --> (y compris les [datastores distants](ORDA/remoteDatastores.md)). Elle est destinée à être appelée une fois, par exemple dans la méthode base `On Startup`.
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
+Lorsque cette fonction n'est pas appelée, les nouvelles entity selections peuvent être partageables, selon la nature de leur "parent" ou de [la manière dont elles sont créées](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Cette fonction ne modifie pas les sélections d'entités créées par [`.copy(`](./EntitySelectionClass.md#copy)) ou `OB Copy` lorsque l'option explicite `ck shared` est utilisée.
 
@@ -1207,7 +1207,7 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 
@@ -1242,10 +1242,10 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 <details><summary>Historique</summary>
 
-| Release | Modifications       |
-| ------- | ------------------- |
-| 20      | Server side support |
-| 17 R6   | Ajout               |
+| Release | Modifications                |
+| ------- | ---------------------------- |
+| 20      | Prise en charge côté serveur |
+| 17 R6   | Ajout                        |
 
 </details>
 
@@ -1261,7 +1261,7 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 #### Description
 
-La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
+La fonction `stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stoppe toute journalisation des requêtes ORDA sur la machine d'appel (client ou serveur)<!-- END REF -->.
 
 Cela ferme en fait le document ouvert sur le disque. Côté client, si le journal a été démarré en mémoire, il est arrêté.
 

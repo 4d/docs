@@ -4023,7 +4023,6 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |row|Integer|->|Row index|
 |rowCount  |Integer|->|Number of rows|
-
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
@@ -5069,7 +5068,6 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-
 |rangeObj |Object|->|Range object|
 |formula |Text|->|Formula or 4D method|
 |formatPattern |Text|->|Format of field|<!-- END REF -->
@@ -6163,7 +6161,7 @@ The following table lists the available workbook options:
 | showDragFillTip | boolean | Display the drag-fill tip. |
 | showHorizontalScrollbar | boolean | Display the horizontal scroll bar. |
 | showResizeTip | number | How to display the resize tip. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>|
-| showScrollTip | number | How to display the scroll tip. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table> |
+| showScrollTip | number | How to display the scroll tip. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td>0</td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table> |
 | showVerticalScrollbar | boolean | Display the vertical scroll bar. |
 | tabEditable | boolean | The sheet tab strip can be edited. |
 | tabNavigationVisible | boolean | Display the sheet tab navigation. |

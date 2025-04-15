@@ -56,24 +56,24 @@ TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリ�
 
 #### ドメインサーバーによるユーザーの認証
 
-このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.ja.html) を参照ください。
+このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.en.html) section.
 
 #### サービスプリンシパル名 (SPN)
 
-Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.ja.html) を参照ください。
+Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv20/4D/20/Single-Sign-On-SSO-on-Windows.300-6330537.en.html) section.
 
 #### ネットワークレイヤー
 
 ここでは、ドロップダウンメニューにて 3つのネットワークオプションから選択できます: **Legacy**、**ServerNet** 、**QUIC** (プロジェクトモードのみ)。ネットワークレイヤーは、4D Server とリモートの 4Dマシン (クライアント) 間の通信を管理するのに使用されます。
 
-- **旧式**: v15以前に作成されたデータベースとの互換性を確保するため、この旧式ネットワークレイヤーは引き続きサポートされています。 旧式ネットワークレイヤーは、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/ja/page642.html) コマンドを使用してプログラミングによって有効にすることもできます。
+- **旧式**: v15以前に作成されたデータベースとの互換性を確保するため、この旧式ネットワークレイヤーは引き続きサポートされています。 This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.
 - **ServerNet** (デフォルト): サーバーの ServerNet ネットワークレイヤーを有効にします (4D 15 以降で利用可能)。
 - **QUIC** (プロジェクトモードでのみ利用可能): サーバー上で QUICネットワークレイヤーを有効にします。
 
     **注**:
 
-    - このオプションを設定すると、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/ja/page642.html) コマンドにより "旧式ネットワークレイヤーを使用する" オプションが設定されていても無視されます。
-    - You can know if a 4D application is running with a QUIC network layer using the [Application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
+    - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.
+    - You can know if a 4D application is running with a QUIC network layer using the [Application info](../commands-legacy/application-info.md) command.
     - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
     - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。
     - QUICレイヤーオプションを選択すると:
@@ -98,19 +98,19 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 
 #### Execute On Clientのために起動時にクライアント登録
 
-このオプションが選択されていると、データベースに接続するすべての 4Dリモートマシン上でメソッドをリモート実行できます。 このメカニズムについては [クライアントマシン上でのストアドプロシージャ](https://doc.4d.com/4Dv19/4D/19/Stored-procedures-on-client-machines.300-5422461.ja.html) で説明しています。
+このオプションが選択されていると、データベースに接続するすべての 4Dリモートマシン上でメソッドをリモート実行できます。 This mechanism is detailed in the section [Stored procedures on client machines](https://doc.4d.com/4Dv20/4D/20/Stored-procedures-on-client-machines.300-6330550.en.html).
 
 #### クライアント-サーバー通信の暗号化
 
-このオプションを使用して、サーバーマシンと 4Dリモートマシン間通信の保護モードを有効にできます。 このオプションについては [クライアント/サーバー接続の暗号化](https://doc.4d.com/4Dv19/4D/19/Encrypting-ClientServer-Connections.300-5422465.ja.html) で説明しています。
+このオプションを使用して、サーバーマシンと 4Dリモートマシン間通信の保護モードを有効にできます。 This option is detailed in the [Encrypting Client/Server Connections](https://doc.4d.com/4Dv20/4D/20/Encrypting-ClientServer-Connections.300-6330533.en.html) section.
 
 #### セッション中に "Resources" フォルダーを更新
 
 この設定は、データベースの **Resources** フォルダーがセッション中に更新された場合について、接続中のクライアントマシンにおける同フォルダーのローカルインスタンスの更新モードを包括的に指定します (**Resources** フォルダーは、セッションが開かれるたびにリモートマシン上で自動的に同期されます)。 3つの選択肢があります:
 
-- **しない**: ローカルの **Resources** フォルダーはセッション中に更新されません。 サーバーから送信される通知は無視されます。 **ローカルリソースを更新** アクションメニューコマンド [(リソースエクスプローラーを使用する](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.ja.html) 参照) を使用すれば、ローカルの **Resources**フォルダーを手動で更新することができます。
+- **しない**: ローカルの **Resources** フォルダーはセッション中に更新されません。 サーバーから送信される通知は無視されます。 The local **Resources** folder may be updated manually using the **Update Local Resources** action menu command (see [Using the Resources explorer](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 - **常に**: セッション中にサーバーから通知が送信されると、ローカルの **Resources** フォルダーは自動で同期されます。
-- **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 ユーザーはローカルの **Resources** フォルダーの同期を受け入れ、あるいは拒否できます。\ **Resources** フォルダーは、データベースインタフェースで使用されるカスタムファイルを格納しています (翻訳ファイルやピクチャーなど)。 このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 詳細については、[リソースフォルダの管理](https://doc.4d.com/4Dv19/4D/19/Managing-the-Resources-folder.300-5422466.ja.html) を参照ください。
+- **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 ユーザーはローカルの **Resources** フォルダーの同期を受け入れ、あるいは拒否できます。\ **Resources** フォルダーは、データベースインタフェースで使用されるカスタムファイルを格納しています (翻訳ファイルやピクチャーなど)。 このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 For more information, please refer to the [Managing the Resources folder](https://doc.4d.com/4Dv20/4D/20/Managing-the-Resources-folder.300-6330534.en.html) section.
 
 ## IP設定ページ
 

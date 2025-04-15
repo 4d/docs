@@ -1,6 +1,6 @@
 ---
 id: Styled_Text_theme
-title: Styled Text
+title: Texto multiestilo
 slug: /commands/theme/Styled-Text
 ---
 

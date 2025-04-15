@@ -37,16 +37,14 @@ Utilizando Count parameters desde MiMetodo, puede detectar el número de paráme
   // AGREGAR TEXTO ( Texto { ; Entero largo { ; Hora } } )
   // AGREGAR TEXT ( Texto { ; Área 4D Write { ; RefDoc } } )
  
- var $1 : Text
- var $2 : Time
- var $3 : Integer
+ #DECLARE ($text : Text ; $4dwp : Object ; $doc : Time)
  
- MESSAGE($1)
+ MESSAGE($text)
  If(Count parameters>=3)
-    SEND PACKET($3;$1)
+    SEND PACKET($doc;$text)
  Else
     If(Count parameters>=2)
-       WR INSERT TEXT($2;$1)
+       WP SET TEXT($4dwp;$text;wk prepend)
     End if
  End if
 ```

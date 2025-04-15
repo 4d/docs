@@ -38,7 +38,7 @@ You can access these dialog boxes using the **Design > Settings...** menu or the
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) command with the appropriate *settingsType* selector.
+You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window.md) command with the appropriate *settingsType* selector.
 
 The Structure Settings dialog box is identical to the standard Settings, and provides access to all its properties (which can be overriden by user settings). 
 
@@ -77,9 +77,9 @@ When you edit settings in this dialog box, they are automatically stored in the 
 
 ## `SET DATABASE PARAMETER` and user settings  
 
-Some of the user settings are also available through the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
+Some of the user settings are also available through the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
 
-When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command are automatically saved in the user settings for the data file.
+When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command are automatically saved in the user settings for the data file.
 
 > `Table sequence number` is an exception; this setting value is always saved in the data file itself.
 

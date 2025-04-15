@@ -9,13 +9,13 @@ title: ヘルプ
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv18/4D/18/SET-DATABASE-PARAMETER.301-4505363.ja.html)** コマンドの `Tips delay` および `Tips duration` セレクターを使用することで、Tips の表示遅延や最大表示時間を指定することができます。
-> - **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv18/4D/18/SET-DATABASE-PARAMETER.301-4505363.ja.html)** コマンドの `Tips enabled` セレクターを使用することで、アプリケーション全体に対してヘルプTipsを有効化あるいは無効化することができます。
+> - The display delay and maximum duration of help tips can be controlled using the `Tips delay` and `Tips duration` selectors of the **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md)** command.
+> - Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter.md) command.
 
 これには、次の二つの方法があります:
 
-- 4D の [ヘルプTipエディター](https://doc.4d.com/4Dv18/4D/18/Help-tips.200-4575424.ja.html) であらかじめ作成したヘルプTip を指定します。
-- または、プロパティリストに直接 Tip を文字列として入力します。 この方法では、XLIFF アーキテクチャーを利用することができます。 XLIFF参照を指定することで、アプリケーションの言語に応じたメッセージを表示させることができます (XLIFF についての詳細は [付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) を参照ください)。 また、4D 参照を使用することもできます ([スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv18/4D/18/Using-references-in-static-text.300-4575714.ja.html) 参照)。
+- designate an existing help tip, previously specified in the [Help tips](https://doc.4d.com/4Dv20/4D/20.2/Help-tips.200-6750100.en.html) editor of 4D.
+- または、プロパティリストに直接 Tip を文字列として入力します。 この方法では、XLIFF アーキテクチャーを利用することができます。 You can enter an XLIFF reference here in order to display a message in the application language (for more information about XLIFF, refer to [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html). You can also use 4D references ([see Using references in static text](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html)).
 
 > macOS においては、Pop up window (32) 型のウィンドウはヘルプTips の表示ができません。
 
@@ -33,15 +33,14 @@ title: ヘルプ
 
 オブジェクトにヘルプTip を関連付ける方法は他にも 2通りあります:
 
-- データベースストラクチャーレベルにおいて設定することができます (フィールドのみ)。 この場合、当該フィールドが表示されるすべてのフォームにおいて、このヘルプTip が表示されます。 詳細については [フィールドプロパティ](https://doc.4d.com/4Dv18/4D/18/Field-properties.300-4575567.ja.html#3367486) のヘルプTip の章を参照してください)。
-- **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンドを使って、カレントプロセス内で動的に設定します。
+- データベースストラクチャーレベルにおいて設定することができます (フィールドのみ)。 この場合、当該フィールドが表示されるすべてのフォームにおいて、このヘルプTip が表示されます。 For more information, refer to “Help Tips” in [Field properties](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#3367486).
+- using the **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** command, for the current process.
 
 同じオブジェクトに対して複数の Tip が関連づけられている場合には、次の優先順位に従って表示されます:
 
 1. ストラクチャーレベル (最低優先度)
 2. フォームエディターレベル
-3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-HELP-TIP.301-4505445.ja.html)** コマンド
-  (最高優先度)
+3. **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** command (highest priority)
 
 #### 参照
 

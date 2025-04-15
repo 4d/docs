@@ -267,7 +267,7 @@ Le menu contextuel de la fenêtre d’expression vous propose des options suppl�
 - **Afficher les entiers en hexadécimal** : Les nombres s’affichent en notation décimale. Sélectionnez cette option pour les afficher en hexadécimal. Note : Pour exprimer une valeur numérique en hexadécimal, saisissez 0x (zéro + "x") puis les caractères hexadécimaux.
 - **Activer le suivi d'activité** : Active le suivi d'activité (contrôle avancé de l'activité interne de l'application) et affiche les informations collectées dans des thèmes supplémentaires : **Séquenceur**, **Web** et **Réseau**.
 
-## Chaîne d'appel
+## Fenêtre chaîne d'appel
 
 Une méthode peut appeler d'autres méthodes ou fonctions de classe, qui peuvent à leur tour appeler d'autres méthodes ou fonctions. Le volet Chaîne d'appels vous permet de suivre cette hiérarchie.
 
@@ -294,7 +294,7 @@ Pour afficher le type de paramètre, cochez l'option **Afficher les types** dans
 
 Après avoir déployé la liste des paramètres, vous pouvez faire glisser et déposer les paramètres et les résultats de la fonction dans la [fenêtre d'évaluation](#fenetre-devaluation).
 
-You can also use the [Call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+You can also use the [Call chain](../commands-legacy/call-chain.md) command to retrieve the call chain programmatically.
 
 ## Fenêtre d'évaluation
 

@@ -7,31 +7,31 @@ Null et Undefined sont des types de données qui gèrent les cas où la valeur d
 
 ## Null
 
-Null est un type de données particulier avec une seule valeur possible : **null**. Cette valeur est retournée par une expression qui ne contient aucune valeur. Trying to read a property of a **null** value returns an error.
+Null est un type de données particulier avec une seule valeur possible : **null**. Cette valeur est retournée par une expression qui ne contient aucune valeur. Essayer de lire une propriété d'une valeur **null** retourne une erreur.
 
 Dans le langage de 4D et pour les attributs des champs objets, les valeurs null sont gérées via la commande `Null`. Cette commande peut être utilisée avec les expressions suivantes pour fixer ou comparer la valeur null :
 
 - attributs d'objets
 - éléments de collections
-- variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
+- les variables de type objet, collection, pointeur, image ou variant (voir aussi [Null comme valeur par défaut](data-types.md#null-as-default-value)).
 
 ## Undefined
 
-Undefined (Indéfinie) n'est pas véritablement un type de données. Il indique une variable n'ayant pas encore été définie. L'évaluation d'une propriété d'objet peut également produire une valeur undefined. Reading a property of an undefined value returns **undefined**.
+Undefined (Indéfinie) n'est pas véritablement un type de données. Il indique une variable n'ayant pas encore été définie. L'évaluation d'une propriété d'objet peut également produire une valeur undefined. La lecture d'une propriété dont la valeur est indéfinie renvoie un résultat **undefined**.
 
-A variant variable has **undefined** as [default value](data-types.md#default-values).
+La [valeur par défaut](data-types.md#default-values) d'une variable variant est **undefined**.
 
 Un champ ne peut pas être indéfini (la commande `Indefinie` retourne toujours Faux pour un champ).
 
 En règle générale, lorsque le code tente de lire ou d'assigner des expressions indéfinies, 4D générera des erreurs, excepté dans les cas suivants :
 
-- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) with them:
+- Attribuer une valeur indéfinie aux variables (hors tableaux) a le même effet que l'appel à [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) avec elles :
 
 ```4d
      var $o : Object
      var $val : Integer
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+     $val:=$o.a //$o.a est undefined (pas d'erreur), assigner cette valeur efface la variable
       //$val=0
 ```
 
@@ -57,11 +57,11 @@ En règle générale, lorsque le code tente de lire ou d'assigner des expression
 
 ```4d
      var $o : Object
-     mymethod($o.a) //pass an undefined parameter
-
-      //In mymethod method
-     #Declare ($myText : Text) //parameter type is text
-      // $myText contains ""
+     mymethod($o.a) //passage d'un paramètre undefined
+     
+      //Dans la méthode mymethod
+     #Declare ($myText : Text) //Paramètre de type texte
+      // $myText contient ""
 ```
 
 - Une expression de condition est automatiquement convertie à Faux lorsqu'elle est évaluée undefined avec les mots-clés If et Case of :
@@ -136,7 +136,7 @@ Les comparaisons avec les opérateurs Supérieur à (`>`), Inférieur à (`<`), 
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Les comparaisons de valeurs Undefined avec des pointeurs, des images, des Blobs, des objets, des collections, d'autres valeurs Undefined ou Null à l'aide des opérateurs Supérieur à (`>`), Inférieur à (`<`), Supérieur ou égal à (`>=`) et Inférieur ou égal à (`<=`) ne sont pas prises en charge et renvoient une erreur.
 
 :::
 

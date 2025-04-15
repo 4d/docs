@@ -202,7 +202,7 @@ Function getValue -> $v : Integer
 
 ## Parameter indirection (${N})
 
-4D methods and functions accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression.
+4D methods and functions accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](../commands-legacy/count-parameters.md) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression.
 
 
 ### Using variadic parameters
@@ -227,7 +227,7 @@ The method's parameters must be passed in the correct order, first the format an
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Note that even if you declared 0, 1, or more parameters, you can always pass the number of parameters that you want. Parameters are all available within the called code through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using the [variadic notation](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. For example:
+Note that even if you declared 0, 1, or more parameters, you can always pass the number of parameters that you want. Parameters are all available within the called code through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using the [variadic notation](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](../commands-legacy/count-parameters.md) command. For example:
 
 ```4d
 //foo method

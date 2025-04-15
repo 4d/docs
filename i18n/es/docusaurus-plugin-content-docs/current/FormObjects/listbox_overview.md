@@ -59,7 +59,7 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 
 Se puede configurar completamente un objeto list box a través de sus propiedades, y también se puede gestionar dinámicamente por programación.
 
-El lenguaje 4D incluye un tema "List Box" dedicado a los comandos de list box, pero los comandos de otros temas, tales como "Propiedades de los objetos" o los comandos `EDIT ITEM` y `Displayed line number` también pueden ser utilizados. Para mayor información consulte la página [List Box Commands Summary](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) del manual *Lenguaje 4D*.
+El lenguaje 4D incluye un tema "List Box" dedicado a los comandos de list box, pero los comandos de otros temas, tales como "Propiedades de los objetos" o los comandos `EDIT ITEM` y `Displayed line number` también pueden ser utilizados. Para mayor información consulte la página [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) del manual *Lenguaje 4D*.
 
 ## Objetos tipo List box
 
@@ -197,7 +197,7 @@ Las propiedades soportadas dependen del tipo de list box.
 
 ### Eventos formulario soportados
 
-| Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) para las propiedades principales)                                 | Comentarios                                                                                                                                                           |
+| Evento formulario    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                            | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
 | On After Keystroke   | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
@@ -272,7 +272,7 @@ Vertical - [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-paddin
 
 ### Eventos formulario soportados
 
-| Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) para las propiedades principales)                                 | Comentarios                                                                                                                                                           |
+| Evento formulario    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                            | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
 | On After Keystroke   | <li>[columna](#additional-properties)</li><li>[nombreColumna](#additional-properties)</li><li>[línea](#additional-properties)</li>                                                                             |                                                                                                                                                                       |
@@ -533,11 +533,11 @@ El soporte de ordenación estándar depende del tipo de list box:
 
 ### Ordenación personalizada
 
-El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utilizando el comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) y/o combinando los eventos de formulario [`On Header Click`](../Events/onHeaderClick) y [`On After Sort`](../Events/onAfterSort) y los comandos 4D relevantes.
+El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utilizando el comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) y/o combinando los eventos de formulario [`On Header Click`](../Events/onHeaderClick) y [`On After Sort`](../Events/onAfterSort) y los comandos 4D relevantes.
 
 Los ordenamientos personalizados le permiten:
 
-- realizar ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
+- realizar ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md),
 - utilizar funciones como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) o [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para ordenar columnas según criterios complejos.
 
 #### Ejemplo
@@ -579,7 +579,7 @@ El valor de la [variable asociada al encabezado de una columna](properties_Objec
 
 Puede definir el valor de la variable (por ejemplo, Header2:=2) para "forzar" la visualización de la flecha de ordenación. En este caso no se modifica la ordenación por columnas en sí, sino que es el desarrollador quien debe encargarse de ello.
 
-> El comando [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) ofrece soporte específico para iconos en los encabezados de los list box, lo que puede ser útil cuando se desea trabajar con un icono de ordenación personalizado.
+> El comando [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) ofrece soporte específico para iconos en los encabezados de los list box, lo que puede ser útil cuando se desea trabajar con un icono de ordenación personalizado.
 
 ## Gestión de los colores, estilos y visualización de las líneas
 
@@ -674,7 +674,7 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 - Configurar manualmente los elementos jerárquicos utilizando la lista de propiedades del editor de formularios (o editar el formulario JSON).
 - Generar visualmente la jerarquía utilizando el menú emergente de gestión de list box, en el editor de formularios.
-- Utilice los comandos [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) y [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html), descritos en el manual de *Referencia del Lenguaje 4D*.
+- Utilice los comandos [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-hierarchy.md) y [LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md), descritos en el manual de *Referencia del Lenguaje 4D*.
 
 #### Propiedades del List Box jerárquico
 
@@ -866,7 +866,7 @@ El siguiente list box fue diseñado utilizando un array de objetos:
 
 ### Configurar una columna array de objetos
 
-Para asignar un array de objetos a una columna list box, basta con definir el nombre del array de objetos en la lista de propiedades (campo "Nombre de variable"), o utilizando el comando [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html), como para toda columna basada en arrays. En la lista de propiedades, ahora puede seleccionar Objeto como "Tipo de expresión" para la columna:
+Para asignar un array de objetos a una columna list box, basta con definir el nombre del array de objetos en la lista de propiedades (campo "Nombre de variable"), o utilizando el comando [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md), como para toda columna basada en arrays. En la lista de propiedades, ahora puede seleccionar Objeto como "Tipo de expresión" para la columna:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -1137,7 +1137,7 @@ Ejemplo:
 Puede utilizar atributos específicos para añadir unidades asociadas a los valores de las celdas (\*por ejemplo, \*: "10 cm", "20 píxeles", etc.). Para definir la lista de unidades, puede utilizar uno de los siguientes atributos:
 
 - "unitsList": un array que contiene los elementos x utilizados para definir las unidades disponibles (por ejemplo: "cm", "pulgadas", "km", "millas", etc.). Utilice este atributo para definir las unidades dentro del objeto.
-- "unitsListReference": una referencia a una lista 4D que contiene las unidades disponibles. "unitsListReference": una referencia a una lista 4D que contiene las unidades disponibles.
+- "unitsListReference": una referencia a una lista 4D que contiene las unidades disponibles. Use this attribute to define units with a 4D list created with the [`New list`](../commands-legacy/new-list.md) command.
 - "unitsListName": un nombre de una lista 4D basada en el diseño que contiene unidades disponibles. Utilice este atributo para definir las unidades con una lista 4D creada en la caja de herramientas.
 
 Independientemente de la forma en que se defina la lista de unidades, puede asociarse con el siguiente atributo:

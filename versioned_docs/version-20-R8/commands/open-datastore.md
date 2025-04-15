@@ -15,20 +15,20 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore<!-- END REF-->
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
 
 <!--REF #_command_.Open datastore.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | connectionInfo | Object | &#8594;  | Connection properties used to reach the remote datastore |
 | localID | Text | &#8594;  | Id to assign to the opened datastore on the local application (mandatory) |
-| Function result | cs.DataStore | &#8592; | Datastore object |
+| Function result | 4D.DataStoreImplementation | &#8592; | Datastore object |
 
 <!-- END REF-->
 
 ## Description
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
+The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 The following remote datastores are supported by the command:
 
@@ -85,7 +85,7 @@ Connection to a remote datastore without user / password:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -97,7 +97,7 @@ Connection to a remote datastore with user / password / timeout / tls:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -110,7 +110,7 @@ Working with several remote datastores:
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"

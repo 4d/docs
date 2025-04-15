@@ -14,21 +14,21 @@ displayed_sidebar: docs
 
 </details>
 
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore<!-- END REF-->
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
 
 <!--REF #_command_.Open datastore.Params-->
 
-| Paramètres     | Type                         |                             | Description                                                                                          |
-| -------------- | ---------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                       | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
-| localID        | Text                         | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Résultat       | cs.DataStore | &#8592; | Objet datastore                                                                                      |
+| Paramètres     | Type                                       |                             | Description                                                                                          |
+| -------------- | ------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                                     | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
+| localID        | Text                                       | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| Résultat       | 4D.DataStoreImplementation | &#8592; | Objet datastore                                                                                      |
 
 <!-- END REF-->
 
 ## Description
 
-La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application au datastore distant identifié par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `cs.DataStore` correspondant associé à l'alias local *localID*.
+The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
 Les datastores distants suivants sont pris en charge par la commande :
 
@@ -71,7 +71,7 @@ Une fois la session ouverte, les instructions suivantes deviennent équivalentes
   //$myds et $myds2 sont équivalents
 ```
 
-Les objets disponibles dans le `cs.Datastore` sont mappés conformément aux [règles générales ORDA] (ORDA/dsMapping.md#general-rules).
+Objects available in the `4D.DataStoreImplementation` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
 Si aucun datastore correspondant n'est trouvé, `Open datastore` retourne **Null**.
 
@@ -81,7 +81,7 @@ Connexion à un datastore distant sans utilisateur/mot de passe :
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -93,7 +93,7 @@ Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -106,7 +106,7 @@ Travailler avec plusieurs datastores distants :
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"

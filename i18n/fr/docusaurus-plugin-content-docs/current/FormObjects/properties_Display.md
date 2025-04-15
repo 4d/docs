@@ -77,11 +77,11 @@ Le tableau ci-dessous montre les choix disponibles :
 
 *(1)* Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
 
-*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. Ceci est par défaut mais cela peut être modifié en utilisant la commande [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/fr/page392.html).
+*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. This is by default but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
 
 *(3)* Le format `ISO Date Time` correspond à la norme XML de représentation de la date et de l'heure (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
 
-> Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). Ceci est le paramètre par défaut mais il peut être modifié en utilisant la commande [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/fr/page392.html).
+> Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
 
 ### Formats personnalisés
 
@@ -540,7 +540,7 @@ La propriété Tronquer avec ellipse peut être appliquée aux colonnes de type 
 
 Cette propriété permet de masquer l'objet dans l'environnement Application.
 
-Vous pouvez gérer la propriété Visibilité pour la plupart des objets de formulaire. Cette propriété est principalement utilisée pour simplifier le développement d'interface dynamique. Dans ce contexte, il est souvent nécessaire de masquer les objets de manière programmée lors de l'événement `On load` du formulaire, puis d'afficher certains objets par la suite. La propriété Visibilité permet d'inverser cette logique en rendant certains objets invisibles par défaut. Le développeur peut ensuite programmer son affichage en utilisant la commande [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/fr/page603.html) lorsque nécessaire.
+Vous pouvez gérer la propriété Visibilité pour la plupart des objets de formulaire. Cette propriété est principalement utilisée pour simplifier le développement d'interface dynamique. Dans ce contexte, il est souvent nécessaire de masquer les objets de manière programmée lors de l'événement `On load` du formulaire, puis d'afficher certains objets par la suite. La propriété Visibilité permet d'inverser cette logique en rendant certains objets invisibles par défaut. The developer can then program their display using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command when needed.
 
 #### Visibilité automatique dans les formulaires liste
 
@@ -553,7 +553,7 @@ Cette propriété est utilisée uniquement lors du dessin d'objets situés dans 
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D ne tient pas compte de cette propriété si l'objet était masqué à l'aide de la commande [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/fr/page603.html); dans ce cas, l'objet reste invisible indépendamment de la sélection de l'enregistrement.
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 #### Grammaire JSON
 

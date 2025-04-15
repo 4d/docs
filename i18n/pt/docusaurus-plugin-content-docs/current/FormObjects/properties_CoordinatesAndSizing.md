@@ -140,7 +140,7 @@ Com as [áreas de texto](text.md) e [entradas](input_overview.md):
 
 :::
 
-Você também pode definir essa propriedade usando os comandos [OBJECT Get corner radius] (https://doc.4d.com/4dv19/help/command/en/page1323.html) e [OBJECT SET CORNER RADIUS] (https://doc.4d.com/4dv19/help/command/en/page1324.html).
+Você também pode definir essa propriedade usando os comandos [OBJECT Get corner radius] (../commands-legacy/object-get-corner-radius.md) e [OBJECT SET CORNER RADIUS] (../commands-legacy/object-set-corner-radius.md).
 
 #### Gramática JSON
 

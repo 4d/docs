@@ -47,19 +47,19 @@ After a BLOB has been compressed, the following project method obtains the perce
   // Space saved by compression (Pointer {; Pointer } ) -> Long integer
   // Space saved by compression ( -> BLOB {; -> savedBytes } ) -> Percentage
  
- var $1;$2 : Pointer
- var $0;$vlCompressed;$vlExpandedSize;$vlCurrentSize : Integer
+#DECLARE ($blob : Pointer ; $saved : Pointer ) -> $percent : Integer
+ var $vlCompressed;$vlExpandedSize;$vlCurrentSize : Integer
  
- BLOB PROPERTIES($1->;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
+ BLOB PROPERTIES($blob->;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
  If($vlExpandedSize=0)
-    $0:=0
+    $percent:=0
     If(Count parameters>=2)
-       $2->:=0
+       $saved->:=0
     End if
  Else
-    $0:=100-(($vlCurrentSize/$vlExpandedSize)*100)
+    $percent:=100-(($vlCurrentSize/$vlExpandedSize)*100)
     If(Count parameters>=2)
-       $2->:=$vlExpandedSize-$vlCurrentSize
+       $saved->:=$vlExpandedSize-$vlCurrentSize
     End if
  End if
 ```

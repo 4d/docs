@@ -57,7 +57,7 @@ The server break point list is automatically restored if it becomes again the at
 
 ### Break List 
 
-The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Code Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Code Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv20/4D/20.2/Runtime-Explorer.200-6750093.en.html).
 
 To open the Break list page:
 

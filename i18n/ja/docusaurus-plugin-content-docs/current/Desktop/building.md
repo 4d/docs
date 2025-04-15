@@ -109,7 +109,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 - *MyComponent.4DZ* ファイル - [コンパイルされたストラクチャー](#コンパイル済みストラクチャーをビルド)
 - *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。  コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
-- *Info.plist* ファイル - このファイルはmacOS 用に[公証可能でステープル可能な](#ノータリゼーション (公証) について) コンポーネントをビルドするためには必須です(Windows においては無視されます)。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています: 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています:
+- *Info.plist* ファイル - このファイルはmacOS 用に[公証可能でステープル可能な](#ノータリゼーション (公証) について) コンポーネントをビルドするためには必須です(Windows においては無視されます)。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています: If an *Info.plist* file already [exists at the root of the component](../Extensions/develop-components.md#infoplist) it is merged, otherwise a default file is created. 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています:
  - アプリケーション名用に`CFBundleDisplayName` および `CFBundleName`
  - `NSHumanReadableCopyright` は[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html) 可能です。
  - アプリケーションバージョン用に `CFBundleShortVersionString` および `CFBundleVersion` (x.x.x フォーマット、例: 1.0.5)は、[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html) 可能です。
@@ -127,7 +127,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 この処理はコンパイル済みストラクチャーファイルと**4D Volume Desktop** (4D データベースエンジン)を統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
 - デフォルトのデータファイルを定義することも、ユーザーに [独自のデータファイルを作成して使用](#データファイルの管理) してもらうこともできます。
-- 運用ライセンスを埋め込むか、初回起動時にエンドユーザー自身にライセンスを入力させるかを選択することができます([**ライセンスについて**](#ライセンスについて) の段落を参照して下さい)。
+- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**Deployment Licenses**](../Admin/licenses.md#deployment-licenses) section).
 
 :::note
 
@@ -225,6 +225,12 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
  サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
 - クライアント側を [ネットワーク越しに自動更新](#サーバーアプリケーション内部のクライアントアプリケーションのコピー) するようにクライアント/サーバーアプリケーションを設定することも可能です。 クライアントアプリケーションは最初のバージョンのみビルドして配布する必要があります。以降のアップデートは、自動アップデート機構を利用することで管理します。
 - また、ランゲージコマンド ([SET UPDATE FOLDER](../commands-legacy/set-update-folder.md) および [RESTART 4D](../commands-legacy/restart-4d.md)) を使用して、サーバーアプリケーションの更新を自動化することも可能です。
+
+:::note
+
+If you want client/server connections to be made in [TLS](../Admin/tls.md), simply check the [appropriate setting](../settings/client-server.md#encrypt-client-server-communications). If you wish to use a custom certificate, please consider using the [`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.en.html).
+
+:::
 
 ### サーバーアプリケーションをビルド
 
@@ -496,32 +502,14 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-- [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したいライセンスを指定します。
+- designate the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
 
-### ライセンスについて
-
-ビルドされた4D アプリケーションには運用ライセンスが必要となります。 これは開発者によってビルドの段階で埋め込むか、以下の表で説明されているように、初回起動時にエンドユーザーによって入力される必要があります:
-
-| 運用ライセンス                | 説明                                              | 入力する場所                                                               |
-| ---------------------- | ----------------------------------------------- | -------------------------------------------------------------------- |
-| *4D OEM Desktop*       | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                  |
-| *4D Unlimited Desktop* | **販売終了** - 埋め込まれたカスタムのライセンス                     | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                  |
-| *4D Desktop*           | ユーザーごとのライセンスで、スタンドアロンの4D アプリケーションを使用するのに必要です。   | ユーザーマシン上での[初回起動時](../Admin/licenses.md#初回のアクティベーション) に表示されるダイアログボックス |
-| *4D Server OEM*        | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。          | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                  |
-| *4D Server*            | 各ユーザーごとに必要なライセンスで、4D Server とクライアントを使用するのに必要です。 | ユーザーマシン上での[初回起動時](../Admin/licenses.md#初回のアクティベーション) に表示されるダイアログボックス |
-
-:::note
-
-この他に [評価版アプリケーション](#評価版アプリケーションをビルド) をビルドすることもできます。この場合、起動時に期間限定の配布ライセンスが自動的にユーザーに提供されます。
-
-:::
-
 ### ライセンスリスト
 
-このタブには[評価版アプリケーションをビルドする](#評価版アプリケーションをビルドする) オプションが表示される他、アプリケーション(スタンドアロン版またはクライアントサーバー版)に[埋め込み可能な配布ライセンス](#ライセンスについて) としてい利用可能なライセンス一覧が表示されます。 デフォルトでリストは空です。
+This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](../Admin/licenses.md#deployment-licenses) into your application (stand-alone or client-server). デフォルトでリストは空です。
 
 このタブを使用して以下のようなものをビルドできます:
 
@@ -555,13 +543,13 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 埋め込み配布ライセンス抜きのアプリケーションをビルドするには、ライセンスの一覧リストを空にし、"評価版アプリケーションをビルドする"が**チェックされていない**ことを確認して下さい。
 
-この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細については、[**ライセンスについて**](#ライセンスについて) の段落を参照ください。
+この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 For more information, see the [**Deployment licenses**](../Admin/licenses.md#deployment-licenses) section.
 
 #### 埋め込みライセンス付きのアプリケーションをビルドする
 
 このオプションを使用すると、必要なライセンスがすでに埋め込まれている、すぐに使用可能なアプリケーションをビルドすることができます。
 
-配布ライセンスを格納しているファイルを指定する必要があります。 これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
+You must designate the files that contain your [deployment licenses](../Admin/licenses.md#deployment-licenses). これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については [Get 4D folder](../commands-legacy/get-4d-folder.md) コマンドの説明を参照してください。
 

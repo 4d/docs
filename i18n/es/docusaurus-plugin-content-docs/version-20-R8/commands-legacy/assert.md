@@ -44,9 +44,9 @@ Antes de efectuar operaciones en un registro, el desarrollador quiere asegurarse
 Una aserción permite probar los parámetros pasados a un método de proyecto para detectar los valores aberrantes. En este ejemplo, se utiliza un mensaje de alerta personalizado.
 
 ```4d
-  // Método que devuelve el número de un cliente en función de su nombre pasado en $1
- var $1 : Text // Nombre del cliente
- ASSERT($1#"";"Búsqueda de un nombre de cliente vacío")
+  // Método que devuelve el número de un cliente en función de su nombre pasado en $name
+ var $name : Text // Nombre del cliente
+ ASSERT($name#"";"Búsqueda de un nombre de cliente vacío")
   // Un nombre vacío en este caso es un valor aberrante
   // Si la aserción es falsa, se mostrará en la caja de diálogo el error:
   // "Aserción fallida: búsqueda de un nombre de cliente vacía"

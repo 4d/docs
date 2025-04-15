@@ -25,15 +25,15 @@ title: VP Get data context
 
 ## Description
 
-The `VP Get data context` command <!-- REF #_method_.VP Get data context.Summary -->returns the current data context of a worksheet<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
+The `VP Get data context` command <!-- REF #_method_.VP Get data context.Summary -->returns the current data context of a worksheet<!-- END REF -->. Le contexte retourné inclut toutes les modifications apportées au contenu du contexte de données.
 
-In *sheet*, pass the index of the sheet to get the data context from. If no index is passed, the command returns the data context of the current worksheet. If no index is passed, the command returns the data context of the current worksheet.
+In *sheet*, pass the index of the sheet to get the data context from. Si aucun index n'est passé, la commande retourne le contexte de données de la feuille de travail courante. If no index is passed, the command returns the data context of the current worksheet.
 
 The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](vp-set-data-context.md).
 
 ## Exemple
 
-To get the data context bound to the following cells:
+Pour obtenir le contexte de données lié aux cellules suivantes :
 
 ![](../../assets/en/ViewPro/vp-set-data-context-bind.png)
 

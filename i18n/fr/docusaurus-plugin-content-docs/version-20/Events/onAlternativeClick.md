@@ -15,14 +15,14 @@ Certains styles de boutons peuvent être [liés à un menu contextuel](FormObjec
 
 4D vous permet de gérer ce type de bouton à l'aide de l'événement `On Alternative Click`. Cet événement est généré lorsque l'utilisateur clique sur le triangle (dès que le bouton de la souris est maintenu enfoncé) :
 
-- If the pop-up menu is **separated**, the event is only generated when a click occurs on the portion of the button with the arrow. Note that the [standard action](https://doc.4d.com/4Dv19R7/4D/19-R7/Standard-actions.300-6013479.en.html) assigned to the button (if any) is not executed in this case.
+- Si le menu pop-up est **séparé**, l'événement n'est généré que lorsqu'un clic se produit sur la partie du bouton avec la flèche. Notez que l'[action standard](https://doc.4d.com/4Dv19R7/4D/19-R7/Standard-actions.300-6013479.en.html) assoxiée au bouton (le cas échéant) n'est pas exécutée dans ce cas.
 - Si le pop-up menu est **lié**, l'événement est généré lorsqu'un clic se produit sur n'importe quelle partie du bouton. A noter que l'événement [`On Long Click`](onLongClick.md) ne peut pas être généré avec ce type de bouton.
 
 ![](../assets/en/Events/clickevents.png)
 
 ### List box
 
-This event is generated in columns of [object array type list boxes](FormObjects/listbox_overview.md#object-arrays-in-columns), when the user clicks on a widget ellipsis button ("alternateButton" attribute).
+Cet événement est généré dans les colonnes de [list box de type tableau objets](FormObjects/listbox_overview.md#object-arrays-in-columns), lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 

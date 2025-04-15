@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo    |                             | Descripción                                                                            |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
-| sessionID  | Text    | &#8594; | Session ID                                                                             |
-| options    | Integer | &#8594; | Return options                                                                         |
+| sessionID  | Text    | &#8594; | ID de sesión                                                                           |
+| options    | Integer | &#8594; | Opciones de retorno                                                                    |
 | Resultado  | Object  | &#8592; | Snapshot of running processes and/or (4D Server only) user sessions |
 
 <!-- END REF-->
@@ -67,7 +67,7 @@ The "processes" property contains a collection of process objects describing all
 
 On the server, the `Process activity` command returns an additional "session" property:
 
-| Additional property | Tipo   | Descripción                                                                                                                                                                                      |   |
+| Propiedad adicional | Tipo   | Descripción                                                                                                                                                                                      |   |
 | ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
 | session             | Object | La propiedad [`.info`](../API/SessionClass.md#info) de la sesión en la que se está ejecutando el proceso. Undefined if the `Processes only` parameter is passed. |   |
 

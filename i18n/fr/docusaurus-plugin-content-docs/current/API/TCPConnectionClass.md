@@ -3,9 +3,9 @@ id: TCPConnectionClass
 title: TCPConnection
 ---
 
-The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a server, enabling you to send and receive data, and handle connection lifecycle events using callbacks.
+La classe `TCPConnection` vous permet de gérer des connexions TCP (Transmission Control Protocol) clientes à un [serveur](./TCPListenerClass.md) pour l'envoi et la réception des données ainsi que la gestion des événements du cycle de vie de la connexion via des rétroappels.
 
-The `TCPConnection` class is available from the `4D` class store. You can create a TCP connection using the [4D.TCPConnection.new()](#4dtcpconnectionnew) function, which returns a [TCPConnection object](#tcpconnection-object).
+La classe `TCPConnection` est disponible dans le class store `4D`. You can create a TCP connection using the [4D.TCPConnection.new()](#4dtcpconnectionnew) function, which returns a [TCPConnection object](#tcpconnection-object).
 
 All `TCPConnection` class functions are thread-safe.
 
@@ -15,9 +15,10 @@ TCPConnection objects are released when no more references to them exist in memo
 
 <details><summary>Historique</summary>
 
-| Release | Modifications  |
-| ------- | -------------- |
-| 20 R8   | Classe ajoutée |
+| Release | Modifications                                    |
+| ------- | ------------------------------------------------ |
+| 20 R9   | New `listener`, `address`, and `port` attributes |
+| 20 R8   | Classe ajoutée                                   |
 
 </details>
 
@@ -130,9 +131,12 @@ TCPConnection objects provide the following properties and functions:
 
 |                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #TCPConnection.address.Syntax -->](#address)<br/><!-- INCLUDE #TCPConnection.address.Summary -->        |
 | [<!-- INCLUDE #TCPConnection.closed.Syntax -->](#closed)<br/><!-- INCLUDE #TCPConnection.closed.Summary -->           |
 | [<!-- INCLUDE #TCPConnection.errors.Syntax -->](#errors)<br/><!-- INCLUDE #TCPConnection.errors.Summary -->           |
+| [<!-- INCLUDE #TCPConnection.listener.Syntax -->](#listener)<br/><!-- INCLUDE #TCPConnection.listener.Summary -->     |
 | [<!-- INCLUDE #TCPConnection.noDelay.Syntax -->](#nodelay)<br/><!-- INCLUDE #TCPConnection.noDelay.Summary -->        |
+| [<!-- INCLUDE #TCPConnection.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPConnection.port.Summary -->                 |
 | [<!-- INCLUDE #TCPConnection.send().Syntax -->](#send)<br/><!-- INCLUDE #TCPConnection.send().Summary -->             |
 | [<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary --> |
 | [<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->             |
@@ -195,6 +199,18 @@ A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#
 
 <!-- END REF -->
 
+<!-- REF #TCPConnection.address.Desc -->
+
+## .adresse
+
+<!-- REF #TCPConnection.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### Description
+
+The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->.
+
+<!-- END REF -->
+
 <!-- REF #TCPConnection.closed.Desc -->
 
 ## .closed
@@ -226,6 +242,18 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 
 <!-- END REF -->
 
+<!-- REF #TCPConnection.listener.Desc -->
+
+## .listener
+
+<!-- REF #TCPConnection.listener.Syntax -->**listener** : Object<!-- END REF -->
+
+#### Description
+
+The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->the [`TCPListener`](./TCPListenerClass.md) object that created the `TCPConnection`, if any<!-- END REF -->. Cette propriété est en **lecture seule**.
+
+<!-- END REF -->
+
 <!-- REF #TCPConnection.noDelay.Desc -->
 
 ## .noDelay
@@ -235,6 +263,18 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 #### Description
 
 The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. Cette propriété est en **lecture seule**.
+
+<!-- END REF -->
+
+<!-- REF #TCPConnection.port.Desc -->
+
+## .port
+
+<!-- REF #TCPConnection.port.Syntax -->**port** : Number<!-- END REF -->
+
+#### Description
+
+The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine<!-- END REF -->. Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 

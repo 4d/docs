@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
 | wpDoc          | Object                  | &#8594; | Documento 4D Write Pro                                     |
 | picture        | Picture                 | &#8594; | Imagen 4D                                                  |
-| picturePath    | Text                    | &#8594; | Picture path                                               |
+| picturePath    | Text                    | &#8594; | Ruta de la imagen                                          |
 | pictureFileObj | 4D.File | &#8594; | 4D.File object representing a picture file |
 | Resultado      | Object                  | &#8592; | Object referencing the picture                             |
 
@@ -42,7 +42,7 @@ By default, the added picture is:
 
 - Embedded behind the text
 - Displayed at the top left corner of the paper box
-- Shown on all pages
+- Mostrar en todas las páginas
 
 The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
 
@@ -60,7 +60,7 @@ You want to add a picture with default settings using a filepath.
  $obPict:=WP Add picture(myDoc;"/PACKAGE/Pictures/Saved Pictures/Sunrise.jpg")
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3617325.en.png)
 
@@ -80,7 +80,7 @@ You want to add a resized picture, centered and anchored to the header:
  WP SET ATTRIBUTES($obImage;wk width;"650px";wk height;"120px")
 ```
 
-The result is:
+El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3617351.en.png)
 

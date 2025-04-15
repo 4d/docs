@@ -51,7 +51,7 @@ Pass a pointer to the variable to be associated with the new object in *newVar*.
 * It is usually possible to dynamically transform a variable into a field and vice versa.  
 On the other hand, graphic objects (buttons, check boxes, and so on) cannot be transformed into other types of controls.
 
-If the variable type is not compatible with the object, the command does nothing and the *OK* variable is set to 0\. If you omit this parameter, the variable is created dynamically by 4D (see the paragraph ). If you duplicate a static object (lines, rectangle, static picture, etc.), this parameter is ignored. Pass a Nil (->\[\]) pointer if you want to be able to use the other parameters. 
+If the variable type is not compatible with the object, the command does nothing and the *OK* variable is set to 0\. If you omit this parameter, the variable is [created dynamically](../FormObjects/properties_Object.md#dynamic-variables) by 4D. If you duplicate a static object (lines, rectangle, static picture, etc.), this parameter is ignored. Pass a Nil (->\[\]) pointer if you want to be able to use the other parameters. 
 
 You use the *boundTo* parameter in two cases:
 

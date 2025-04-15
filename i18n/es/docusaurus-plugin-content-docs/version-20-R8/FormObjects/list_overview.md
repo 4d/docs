@@ -16,7 +16,7 @@ El contenido de un objeto formulario lista jerárquica se puede inicializar de u
 - Asociar una [lista de opciones](properties_DataSource.md#choice-list) existente al objeto. La lista de elección debe haber sido definida en el editor de listas en modo Diseño.
 - Asigne directamente una referencia de lista jerárquica a la [variable o expresión](properties_Object.md#variable-or-expression) asociada al objeto formulario.
 
-En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a través de su referencia *ListRef*, utilizando los comandos [lista jerárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) del lenguaje 4D.
+En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a través de su referencia *ListRef*, utilizando los comandos [lista jerárquica](../commands/theme/Hierarchical_Lists.md) del lenguaje 4D.
 
 ## RefList y nombre de objeto
 
@@ -144,7 +144,7 @@ Puede controlar si los elementos de la lista jerárquica pueden ser modificados 
 
 - Sea cual sea la fuente de datos de la lista jerárquica, puede controlar todo el objeto con la propiedad [Editable](properties_Entry.md#enterable).
 
-- Además, si llena la lista jerárquica utilizando una lista creada en el editor de listas, puede controlar si un elemento de una lista jerárquica es modificable mediante la opción **Elemento modificable** del editor de listas. Para más información, consulte [Definir las propiedades de la lista](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
+- Además, si llena la lista jerárquica utilizando una lista creada en el editor de listas, puede controlar si un elemento de una lista jerárquica es modificable mediante la opción **Elemento modificable** del editor de listas. Para más información, consulte [Definir las propiedades de la lista](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
 
 ## Propiedades soportadas
 

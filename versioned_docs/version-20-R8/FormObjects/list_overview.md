@@ -18,7 +18,7 @@ The contents of a hierarchical list form object can be initialized in one of the
 - Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode. 
 - Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object. 
 
-In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language. 
+In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](../commands/theme/Hierarchical_Lists.md) commands in the 4D language. 
 
 
 ## ListRef and object name
@@ -151,7 +151,7 @@ You can control whether hierarchical list items can be modified by the user by u
 
 - Whatever the hierarchical list data source, you can control the whole object with the [Enterable](properties_Entry.md#enterable) property. 
 
-- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. For more information, see [Setting list properties](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
+- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. For more information, see [Setting list properties](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
 
 
 ## Supported Properties

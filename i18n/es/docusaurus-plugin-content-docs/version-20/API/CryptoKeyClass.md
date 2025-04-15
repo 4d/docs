@@ -304,10 +304,10 @@ El valor devuelto es la llave pública.
 
 <details><summary>Histórico</summary>
 
-| Lanzamiento | Modificaciones             |
-| ----------- | -------------------------- |
-| 20 R8       | Support of message as Blob |
-| 18 R4       | Añadidos                   |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 20 R8       | Soporte de mensajes como Blob |
+| 18 R4       | Añadidos                      |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<br/>.**sign** (*message* : Blob ; *options* : Object) : Text<!-- END REF -->
@@ -316,12 +316,12 @@ El valor devuelto es la llave pública.
 <!-- REF #CryptoKey.sign().Params -->
 | Parámetros | Tipo         |    | Descripción                                                           |
 | ---------- | ------------ | -- | --------------------------------------------------------------------- |
-| message    | Texto O Blob | -> | Message to sign                                                       |
+| message    | Texto O Blob | -> | Mensaje a firmar                                                      |
 | options    | Object       | -> | Opciones de firma                                                     |
 | Resultado  | Text         | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
 <!-- END REF -->
 
-La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que haya pasado.
+La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena o de un Blob *message*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que haya pasado.
 
 `CryptoKey` debe contener una llave válida **privada**.
 
@@ -336,7 +336,7 @@ La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repre
 
 #### *Resultado*
 
-The utf8 representation of the *message*.
+La representación utf8 de *message*.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -383,10 +383,10 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 <details><summary>Histórico</summary>
 
-| Lanzamiento | Modificaciones             |
-| ----------- | -------------------------- |
-| 20 R8       | Support of message as Blob |
-| 18 R4       | Añadidos                   |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 20 R8       | Soporte de mensajes como Blob |
+| 18 R4       | Añadidos                      |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>*.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
@@ -395,7 +395,7 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 <!-- REF #CryptoKey.verify().Params -->
 | Parámetros | Tipo         |    | Descripción                                                                                          |
 | ---------- | ------------ | -- | ---------------------------------------------------------------------------------------------------- |
-| message    | Texto O Blob | -> | Message that was used to produce the signature                                                       |
+| message    | Texto O Blob | -> | Mensaje utilizado para producir la firma                                                             |
 | signature  | Text         | -> | Firma a verificar, en representación Base64 o Base64URL, dependiendo del valor de `options.encoding` |
 | options    | Object       | -> | Opciones de firma                                                                                    |
 | Resultado  | Object       | <- | Estado de la verificación                                                                            |

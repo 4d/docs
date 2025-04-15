@@ -1,6 +1,6 @@
 ---
 id: Spell_Checker_theme
-title: Spell Checker
+title: Corrector ortográfico
 slug: /commands/theme/Spell-Checker
 ---
 

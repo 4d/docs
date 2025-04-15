@@ -41,7 +41,7 @@ The activity of the process is the percentage of time that 4D Server has devoted
 	- User process - 4D user name,
 	- Web process - URL path,
 - Name of the process,
-- Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). The process number is the number assigned on the server. In the case of a global process, this number may be different from that assigned on the client machine.
+- Number of the process (as returned by the [`New process`](../commands-legacy/new-process.md) command for example). The process number is the number assigned on the server. In the case of a global process, this number may be different from that assigned on the client machine.
 - Current state of the process,
 - Running time (in seconds) of the process since its creation,
 - Percentage of time that 4D Server has devoted to this process (ratio).
@@ -88,7 +88,7 @@ The page also has five control buttons that act on the selected process(es). Not
 
 - **Abort Process**: can be used to abort the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation.
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
+> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id.md) command.
 
 - **Pause Process**: can be used to pause the selected process(es).
 - **Activate Process**: can be used to reactivate the selected process(es). The processes must have been paused previously (using the button above or by programming); otherwise, this button has no effect.

@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN PRINTING JOB.Summary-->**OPEN PRINTING JOB** コマンドはプリントジョブを開き、[CLOSE PRINTING JOB](close-printing-job.md) コマンドが呼ばれるまで、続くすべてのプリント命令をスタックします。<!-- END REF-->このコマンドはプリントジョブのコントロールを可能にし、特に印刷中に他のプリントジョブが予期せず挿入されないようにします。
 
-**OPEN PRINTING JOB** コマンドはすべての4D印刷コマンド、クイックレポート、4D Write Pro や4D View Pro の印刷コマンドで使用できます。
+**OPEN PRINTING JOB** は、すべての 4D 印刷コマンド、クイックレポート、および 4D Write Pro 印刷コマンドで使用できます。
 
 印刷ジョブはプロセスに対しローカルであり、各プロセスは独自の印刷設定(印刷オプション、カレントプリンター、など)を持ちます。複数の印刷ジョブを同時に4D 内で開くことができます。
 

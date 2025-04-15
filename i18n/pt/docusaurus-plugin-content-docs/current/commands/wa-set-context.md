@@ -45,9 +45,9 @@ Allow `$4d` to specific methods
 **In JavaScript:**
 
 ```js
-$4d.myMethod(); // Allowed
-$4d.myMethod2(); // Allowed
-$4d.someOtherMethod(); // Not accessible
+$4d.myMethod(); // Permitiu
+$4d.myMethod2(); // Permitiu
+$4d.someOtherMethod(); // Não acessível
 ```
 
 ### Exemplo 2

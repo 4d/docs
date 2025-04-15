@@ -199,12 +199,12 @@ Esta caixa de diálogo lista todos os métodos de projecto da base de dados, inc
 
 Para executar um método projeto, basta selecionar o seu nome na lista e clicar em **Executar**. Para executar um método passo a passo no modo Debug, clique em **Debug**. Para mais informações sobre o depurador 4D, consulte a seção [Depuração](../Debugging/basics.md).
 
-Se você marcar a caixa de seleção de **Novo Processo**, o método que você selecionou é executado em outro processo. Se o método estiver executando uma tarefa demorada, como a impressão de um grande conjunto de registos, pode continuar trabalhando com a base de dados, adicionando registos a uma tabela, criando um gráfico para apresentar dados, etc. Para mais informações sobre processos, consulte [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) o manual 4D *Referência de Idioma*.
+Se você marcar a caixa de seleção de **Novo Processo**, o método que você selecionou é executado em outro processo. Se o método estiver executando uma tarefa demorada, como a impressão de um grande conjunto de registos, pode continuar trabalhando com a base de dados, adicionando registos a uma tabela, criando um gráfico para apresentar dados, etc. For more information about processes, refer to [Processes](../Develop/processes.md).
 
 **Notas Servidor 4D**:
 
 - Se quiser que o método seja executado na máquina do servidor e não na máquina do cliente, selecione a opção On 4D Server no menu To be executed. Neste caso, é criado um novo processo, chamado stored procedure, na máquina do servidor para executar o método. Essa opção pode ser usada para reduzir o tráfego de rede e otimizar o funcionamento do 4D Server, em particular para métodos que chamam dados armazenados no disco. Todos os tipos de métodos podem ser executados na máquina servidor ou noutra máquina cliente, excepto os que modificam a interface do utilizador. Neste caso, os procedimentos armazenados são ineficazes.
-- Também pode optar por executar o método noutra estação de trabalho cliente. Outras estações de trabalho do cliente não aparecerão no menu, a menos que tenham sido previamente "registradas" (para mais informações, consulte a descrição do [CLIENTO REGISTAR](https://doc. d.com/4dv19/help/command/en/page648.html).
+- Também pode optar por executar o método noutra estação de trabalho cliente. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](../commands-legacy/register-client.md).
 
 Por padrão, a opção **local** está selecionada. Com a versão 4D para um único utilizador, esta é a única opção disponível.
 

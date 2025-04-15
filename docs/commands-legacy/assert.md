@@ -40,9 +40,9 @@ Before carrying out operations on a record, the developer wants to make sure tha
 An assertion can allow parameters passed to a project method to be tested in order to detect aberrant values. In this example, a custom warning message is used.
 
 ```4d
-  // Method that returns the number of a client according to its name passed in $1
- var $1 : Text // Name of client
- ASSERT($1#"";"Search for a blank client name")
+  // Method that returns the number of a client according to its name passed in $name
+ var $name : Text // Name of client
+ ASSERT($name#"";"Search for a blank client name")
   // A blank name in this case is an aberrant value
   // If the assertion is false, the following will be displayed in the error dialog box:
   // "Assert failed: Search for a blank client name"

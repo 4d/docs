@@ -33,7 +33,7 @@ Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](inpu
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
 - comandos para las modificaciones de estilo soportados: fuente, tamaño, estilo, color y color de fondo. Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
-Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. It is possible to control access to the context menu via the `WA SET PREFERENCE` command.
+Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. Es posible controlar el acceso al menú contextual mediante el comando `WA SET PREFERENCE`.
 
 #### Gramática JSON
 
@@ -219,7 +219,7 @@ Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador d
  :xliff:PH_Lastname
 
 Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
-> You can also set and get the placeholder text by programming using the `OBJECT SET PLACEHOLDER` and `OBJECT Get placeholder` commands.
+> También puede definir y obtener el texto del marcador de posición por programación utilizando los comandos `OBJECT SET PLACEHOLDER` y `OBJECT Get placeholder`.
 
 #### Gramática JSON
 
@@ -260,9 +260,9 @@ Esta propiedad permite definir teclas de significado especial (atajos de teclado
 Puede configurar esta opción haciendo clic en el botón [...] de la propiedad Accesos directos de la Lista de propiedades.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
+> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. Para obtener más información sobre cómo asociar accesos directos a los menús, consulte [Definición de las propiedades de los menús](../Menus/properties.md).
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
+Para ver una lista de todos los atajos utilizados en el entorno de desarrollo de 4D, consulte la página [Atajos](../Preferences/shortcuts.md) en la caja de diálogo Preferencias.
 
 #### Gramática JSON
 

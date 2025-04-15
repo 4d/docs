@@ -106,7 +106,7 @@ L'objet `session` de l'utilisateur distant est disponible depuis :
 
 :::info
 
-Toutes les procédures stockées sur le serveur partagent la même session utilisateur virtuelle. Pour plus d'informations, consultez [cette page sur doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+Toutes les procédures stockées sur le serveur partagent la même session utilisateur virtuelle. Pour plus d'informations, consultez [cette page sur doc.4d.com](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html).
 
 :::
 

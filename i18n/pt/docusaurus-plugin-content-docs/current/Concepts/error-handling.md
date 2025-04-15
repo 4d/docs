@@ -33,7 +33,7 @@ Em 4D, todos os erros podem ser capturados e tratados por métodos específicos 
 
 Uma vez instalados, os manipuladores de erros são automaticamente chamados em modo interpretado ou compilado em caso de erro na aplicação 4D ou num dos seus componentes. Um manipulador de erros diferente pode ser chamado em função do contexto de execução (ver abaixo).
 
-Para *instalar* um método de projeto de manipulação de erros, você só precisa chamar o [`LIGA DE ERRO CALL`](https://doc.4d. comando/4dv19/help/command/en/page155.html) com o nome do método do projeto e (opcionnalmente) escopo como parâmetros. Por exemplo:
+To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command with the project method name and (optionnally) scope as parameters. Por exemplo:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Instala o método de gestão de erros
@@ -45,7 +45,7 @@ Para deixar de detectar erros para um contexto de execução e devolver o contro
 ON ERR CALL("";ek local) // dá o controle para o processo local
 ```
 
-O comando [`Método chamado erro`](https://doc.4d.com/4dv20/help/command/en/page704.html) permite que você saiba o nome do método instalado por `ON ERR CALL` para o processo atual. É particularmente útil no contexto dos componentes porque permite mudar temporariamente e depois restaurar o método de captura de erros do banco de dados local:
+O comando [`Método chamado erro`](../commands-legacy/method-called-on-error.md) permite que você saiba o nome do método instalado por `ON ERR CALL` para o processo atual. É particularmente útil no contexto dos componentes porque permite mudar temporariamente e depois restaurar o método de captura de erros do banco de dados local:
 
 ```4d
  $methCurrent:=Método chamado em caso de erro(ek local)
@@ -95,7 +95,7 @@ Within the custom error method, you have access to several pieces of information
 4D mantém automaticamente um número de variáveis chamadas [**variáveis sistema**](variables.md#system-variables), indo ao encontro de necessidades diferentes.
 :::
 
-- o comando [`Últimos erros`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. Você também pode usar o comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) que retorna as mesmas informações que os arrays.
+- o comando [`Últimos erros`](../commands-legacy/last-errors.md) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D. Você também pode usar o comando [`Last errors`](../commands-legacy/last-errors.md) que retorna as mesmas informações que os arrays.
 - the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### Exemplo
@@ -151,7 +151,7 @@ Try (expression) : any | Undefined
 
 Se ocorrer um erro durante sua execução, ele será interceptado e nenhuma caixa de diálogo de erro será exibida, independentemente de um [método de tratamento de erros] (#installing-an-error-handling-method) ter sido instalado ou não antes da chamada para `Try()`. Se *expressão* retorna um valor, `Try()` retorna o último valor avaliado, caso contrário, ele retorna `Undefined`.
 
-Você pode lidar com o(s) erro(s) usando o comando [`Últimos erros`](https://doc.4d.com/4dv20/help/command/en/page1799.html). Se a *expressão* lançar um erro em uma pilha de chamadas `Try()`, o fluxo de execução será interrompido e retornará ao último `Try()` executado (o primeiro encontrado na pilha de chamadas).
+Você pode lidar com o(s) erro(s) usando o comando [`Últimos erros`](../commands-legacy/last-errors.md). Se a *expressão* lançar um erro em uma pilha de chamadas `Try()`, o fluxo de execução será interrompido e retornará ao último `Try()` executado (o primeiro encontrado na pilha de chamadas).
 
 :::note
 
@@ -237,11 +237,11 @@ Se um erro *deferred* for lançado fora do bloco `Try`, a execução do código 
 
 :::info
 
-Para obter mais informações sobre erros *deferred* e *non-deferred*, consulte a descrição do comando [`throw`](https://doc.4d.com/4dv20R/help/command/pt/page1805.html).
+For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](../commands-legacy/throw.md) command description.
 
 :::
 
-No bloco de código `Catch`, você pode lidar com o(s) erro(s) usando comandos padrão de tratamento de erros. A função [`Últimos Erros`](https://doc.4d.com/4dv20/help/command/en/page1799.html) contém a última coleção de erros. Você pode [declarar um método de tratamento de erros](#installing-an-error-handling-method) neste bloco de código, caso em que ele é chamado em caso de erro (caso contrário, a caixa de diálogo de erro do 4D é exibida).
+No bloco de código `Catch`, você pode lidar com o(s) erro(s) usando comandos padrão de tratamento de erros. A função [`Últimos Erros`](../commands-legacy/last-errors.md) contém a última coleção de erros. Você pode [declarar um método de tratamento de erros](#installing-an-error-handling-method) neste bloco de código, caso em que ele é chamado em caso de erro (caso contrário, a caixa de diálogo de erro do 4D é exibida).
 
 :::note
 

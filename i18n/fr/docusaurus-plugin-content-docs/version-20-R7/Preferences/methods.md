@@ -3,11 +3,11 @@ id: methods
 title: Page Méthodes
 ---
 
-This page contains parameters defining the Code Editor interface and its default display as well as options concerning its operation. Elle est divisée en deux parties, accessibles via les onglets Thèmes et Options.
+Cette page contient des paramètres définissant l'interface de l'éditeur de code et son affichage par défaut, ainsi que des options concernant son fonctionnement. Elle est divisée en deux parties, accessibles via les onglets Thèmes et Options.
 
 ## Thèmes
 
-This page allows selecting, creating, or configuring Code Editor themes. Un thème définit la police, la taille de la police, les couleurs et les styles des éléments de l'éditeur de code.
+Cette page permet de sélectionner, de créer ou de configurer les thèmes de l'éditeur de code. Un thème définit la police, la taille de la police, les couleurs et les styles des éléments de l'éditeur de code.
 
 ![](../assets/en/Preferences/themes.png)
 
@@ -53,13 +53,13 @@ Vous pouvez définir différents styles et couleurs de police (couleur de police
 
 ### Autres styles
 
-These options configure the various colors used in the Code Editor and debugger interfaces.
+Ces options permettent de configurer les différentes couleurs utilisées dans l'interface de l'éditeur de code et du débogueur.
 
 ![](../assets/en/Preferences/categories.png)
 
 |                                                                | Description                                                                                                                                                                                                                   |
 | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Couleur de la police**                                       | Background color of Code Editor window.                                                                                                                                                                       |
+| **Couleur de la police**                                       | Couleur d'arrière-plan de la fenêtre de l'éditeur de code.                                                                                                                                                    |
 | **Bordure de la ligne en cours d'exécution dans le débogueur** | Couleur de la bordure entourant la ligne en cours d'exécution dans le débogueur lorsque l'option "Surligner la ligne en cours d'exécution" est activée dans la page [Options](#options).                      |
 | **Couleur de fond de la ligne du curseur**                     | Couleur de fond de la ligne contenant le curseur.                                                                                                                                                             |
 | **Couleur de fond de la ligne en cours d'exécution**           | Couleur de fond de la ligne en cours d'exécution dans le débogueur.                                                                                                                                           |
@@ -69,11 +69,11 @@ These options configure the various colors used in the Code Editor and debugger 
 | **Mise en évidence de la même variable ou du même champ**      | Couleur de mise en évidence pour les autres occurrences de la même variable ou du même texte de champ lorsque l'option "Mise en évidence des variables et du texte" est activée dans les [Options](#options). |
 | **Mise en évidence de la ligne courante dans le débogueur**    | Couleur de mise en évidence de la ligne courante dans le débogueur lorsque l'option "Surlignage de la ligne en cours" est activée dans les [Options](#options).                                               |
 | **Couleur de fond de la sélection**                            | Couleur de fond de la sélection.                                                                                                                                                                              |
-| **Texte suggéré**                                              | Color of autocomplete text suggested by the Code Editor.                                                                                                                                                      |
+| **Texte suggéré**                                              | Couleur du texte d'autocomplétion suggéré par l'éditeur de code.                                                                                                                                              |
 
 ## Options
 
-This page configures Code Editor display options.
+Cette page configure les options d'affichage de l'éditeur de code.
 
 ![](../assets/en/Preferences/options.png)
 
@@ -90,7 +90,7 @@ Permet de désactiver/activer les paramètres du code "international" pour l'app
 
 #### Indentation
 
-Changes the indentation value for the 4D code in the Code Editor. La largeur doit être définie en points (10 par défaut).
+Modifie la valeur d'indentation du code 4D dans l'éditeur de code. La largeur doit être définie en points (10 par défaut).
 
 Le code 4D est automatiquement indenté afin de faire apparaître sa structure :
 
@@ -100,11 +100,11 @@ Modifier cette valeur par défaut peut être utile si vos méthodes contiennent 
 
 #### Afficher les numéros de ligne
 
-Lets you display the line numbers by default in each window of the Code Editor. You can also show/hide line numbers for the current window directly from the Code Editor.
+Vous permet d'afficher les numéros de ligne par défaut dans chaque fenêtre de l'éditeur de code. Vous pouvez également afficher/masquer les numéros de ligne pour la fenêtre courante directement depuis l'éditeur de code.
 
 #### Afficher les listes
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. You can also show or hide each list directly from the Code Editor.
+Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. Vous pouvez également afficher ou masquer chaque liste directement à partir de l'éditeur de code.
 
 #### Afficher les presse-papiers
 
@@ -178,7 +178,7 @@ Si vous désélectionnez cette option, seule la flèche jaune est affichée.
 
 ### Suggestions
 
-This area lets you configure autocomplete mechanisms in the Code Editor to adapt it to your own work habits.
+Cette zone vous permet de configurer les mécanismes d'autocomplétion de l'éditeur de code afin de l'adapter à vos propres habitudes de travail.
 
 |                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

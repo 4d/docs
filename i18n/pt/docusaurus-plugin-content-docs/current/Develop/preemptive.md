@@ -41,7 +41,7 @@ Dado que um thread se maneja de forma independente a partir do método processo 
 
 A propriedade "segurança de fio" de cada elemento depende do elemento em si:
 
-- Comandos 4D: thread seguro é uma propriedade interna. Na [referência da linguagem 4D](https://doc.4d.com/4Dv20/4D/20.1/4D-Language-Reference.100-6479538.en.html), os comandos thread seguro se identificam pelo ícone ![](../assets/en/Develop/thread-safe.png). Você também pode usar o comando [`Command name`](https://doc.4d.com/4dv20/help/command/en/page538.html) para saber se um comando é thread-safe. Grande parte dos comandos 4D podem ser executados em modo apropriativo.
+- Comandos 4D: thread seguro é uma propriedade interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. Você também pode usar o comando [`Command name`](../commands/command-name.md) para saber se um comando é thread-safe. Grande parte dos comandos 4D podem ser executados em modo apropriativo.
 - Métodos de projeto: as condições para segurança de thread se listam no [este parágrafo](#writing-a-thread-safe-method).
 
 Basicamente, o código que se executa em thread apropriativos não podem ser chamados as partes com as interações externas, tal como o código plug-in ou as variáveis interprocesso. Os acessos aos dados, entretanto, são permitidos desde o servidor de dados 4D que suporta a execução apropriativa.
@@ -141,7 +141,7 @@ A execução de un método no modo preemptivo dependerá de que a propriedade "e
 
 4D permite que você identifique o modo de execução dos processos no modo compilado:
 
-- O comando [`PROCESS PROPERTIES`] (https://doc.4d.com/4dv20/help/command/en/page336.html) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
+- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
 - O Explorador de execução e a [janela de administração de 4D Server] (../ServerWindow/processes.md#process-type)
  mostram ícones específicos para os processos preemptivos.
 
@@ -156,10 +156,10 @@ Para ser thread seguro, um método deve respeitar as seguintes regras:
 - não deve usar nenhuma variável de interprocesso(1)
 - não deve chamar objetos de interface (2) (existem, no entanto, exceções, veja abaixo).
 
-(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
+(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](../commands-legacy/storage.md).
 [Os processos worker](processes.md#worker-processes) também permitem que você troque mensagens entre quaisquer processos, inclusive processos preemptivos.
 
-(2) O comando [`CALL FORM`] (https://doc.4d.com/4dv20/help/command/en/page1391.html) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
+(2) O comando [`CALL FORM`] (../commands-legacy/call-form.md) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
 
 :::note Notas
 
@@ -194,7 +194,7 @@ Os únicos acessos possíveis à interface do usuário de um thread preemptivo s
 
 ### Triggers
 
-When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20R6/4D/20-R6/Triggers.300-6958353.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
 ```4d
  SALVAR RECORD([Table_1]) //trigger na Table_1, se ele existir, deve ser seguro por thread-safe
@@ -217,7 +217,7 @@ Nesse caso, todos os triggers são avaliados. Se um comando thread-unsafe for de
 
 :::note
 
-In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20R6/4D/20-R6/4D-Server-and-the-4D-Language.300-7182872.en.html#68966) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
 
 :::
 

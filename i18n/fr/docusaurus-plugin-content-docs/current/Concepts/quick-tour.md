@@ -48,13 +48,13 @@ var myPerson : cs.Person
 //variable de la classe utilisateur Person
 ```
 
-Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
+Même si cela est généralement déconseillé, vous pouvez créer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and change of type dynamically. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
+La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable créée par affectation est interprétée comme étant sans type, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes et changer de type dynamiquement. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
 
 ## Commandes
 

@@ -74,9 +74,8 @@ Vous exécutez la méthode avec des informations locales en tant que paramètres
 La méthode WriteLog sera exécutée sur le serveur. Elle contient, par exemple :
 
 ```4d
- var $1;$2;$3 : Text
- TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
-```
+ #DECLARE ($user : Text; $date : Text ; $time : Text)
+ TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$user+".txt";$date+" "+$time)```
 
 ## Exemple 2 
 
@@ -102,8 +101,7 @@ Avec l'import de données classique, 4D Client analyse le fichier ASCII puis, po
   // CLIENT IMPORT ( Pointeur ; Alpha )
   // CLIENT IMPORT ( -> [Table] ; Formulaire entrée )
  
- var $1 : Pointer
- var $2 : Text
+ #DECLARE ($tablePtr : Pointer ; $form : Text)
  var $vhDocRef : Time
  var $vxData : Blob
  var spErrCode : Integer
@@ -150,18 +148,17 @@ Voici la méthode projet SERVER IMPORT exécutée en tant que procédure stocké
   // SERVER IMPORT ( Entier long ; Alpha ; BLOB )
   // SERVER IMPORT ( Numéro de table ; Formulaire entrée ; Données importées )
  
- var $1 : Integer
- var $2 : Text
- var $3 : Blob
+#DECLARE ($tabNum : Integer ; $form : Text ; $data : Blob)
+
  var spErrCode : Integer
  
   // L'opération n'est pas encore terminée, affectons 1 à spErrCode
  spErrCode:=1
- $vpTable:=Table($1)
- FORM SET INPUT($vpTable->;$2)
+ $vpTable:=Table($tabNum)
+ FORM SET INPUT($vpTable->;$form)
  $vsDocName:="Fichier Import "+String(1+Random)
  DELETE DOCUMENT($vsDocName)
- BLOB TO DOCUMENT($vsDocName;$3)
+ BLOB TO DOCUMENT($vsDocName;$data)
  IMPORT TEXT($vpTable->;$vsDocName)
  DELETE DOCUMENT($vsDocName)
   // L'opération est terminée, affectons 0 à spErrCode

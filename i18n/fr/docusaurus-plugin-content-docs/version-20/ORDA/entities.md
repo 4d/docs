@@ -244,18 +244,18 @@ Une nouvelle entity selection **hérite** de la nature de l'entity selection ori
 Exemples :
 
 ```4d
-$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
-    //$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+$highSal:=ds.Employee.query("salary >= :1" ; 1000000)   
+ //$highSal est partageable à cause de la requête sur dataClass
+$comp:=$highSal.employer //$comp est partageable parce que $highSal est partageable
 
-$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
-    //$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+$lowSal:=ds.Employee.query("salary <= :1" ; 10000).copy() 
+ //$lowSal est modifiable à cause du copy()
+$comp2:=$lowSal.employer //$comp2 est modifiable parce que $lowSal est modifiable
 ```
 
 :::note Entity selections renvoyées par le serveur
 
-Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si \[`copy()`\](../API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter \[`copy()`\](../API/EntitySelectionClass.md#copy) côté client. Voici un exemple :
+Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si [`copy()`](API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter [`copy()`](API/EntitySelectionClass.md#copy) côté client. Voici un exemple :
 
 ```4d
     //une fonction est toujours exécutée sur le serveur
@@ -282,13 +282,13 @@ Vous travaillez avec deux entity selections que vous souhaitez transmettre à un
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+//Nous obtenons les entity selections pour les factures payées et non payées
 
-$paid:=ds.Invoices.query("status=:1"; "Paid")
-$unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
+$paid:=ds.Invoices.query("status=:1" ; "Paid")
+$unpaid:=ds.Invoices.query("status=:1" ; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
-CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
+//Nous passons les références des entity selection comme paramètres au worker
+CALL WORKER("mailing" ; "sendMails" ; $paid; $unpaid)
 
 ```
 
@@ -399,7 +399,7 @@ Lorsque cette situation se produit, vous pouvez, par exemple, recharger l'entit�
 
 Vous pouvez verrouiller et déverrouiller des entités à la demande lorsque vous accédez aux données. Lorsqu'une entité est verrouillée par un process, elle est chargée en lecture/écriture dans ce process mais elle est verrouillée pour tous les autres process. L'entité peut être chargée uniquement en mode lecture seule dans ces process; ses valeurs ne peuvent pas être modifiées ou enregistrées.
 
-This feature is based upon two methods of the `Entity` class:
+Cette fonctionnalité est basée sur deux fonctions de la classe `Entity` :
 
 *   [`entity.lock()`](../API/EntityClass.md#lock)
 *   [`entity.unlock()`](../API/EntityClass.md#unlock)

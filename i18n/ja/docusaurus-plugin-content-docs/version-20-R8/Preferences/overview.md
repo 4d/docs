@@ -21,7 +21,7 @@ title: 環境設定
 
 ## ストレージ
 
-環境設定ダイアログに保存された設定は XMLフォーマットで **4D Preferences vXX.4DPreferences** という名称のファイルに保存されます。 このファイルは、[Get 4D folder](https://doc.4d.com/4Dv19/4D/19/Get-4D-folder.301-5392528.ja.html) が返す、カレントユーザーの Active 4D Folder に保存されます:
+Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](../commands-legacy/get-4d-folder.md) command:
 
 - Windows: `\{disk\}\Users\\{username\}\AppData\Roaming\4D`
 - macOS: `\{disk\}:Users:\{username\}:Library:Application Support:4D`

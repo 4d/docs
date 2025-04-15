@@ -34,10 +34,10 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 Vous souhaitez assigner une valeur à une plage nommée "Total".
 
 ```4d
-// name the B5 cell as Total
-VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";"Total")
-VP SET NUM VALUE($name;285;"$#,###.00")
+// nommer la cellule B5 Total
+ VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
+ $name:=VP Name("ViewProArea";" Total")
+ VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
 ## Voir également

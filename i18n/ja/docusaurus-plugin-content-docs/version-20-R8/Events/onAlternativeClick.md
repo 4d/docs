@@ -15,7 +15,7 @@ title: On Alternative Click
 
 4D では `On Alternative Click` イベントを使用してこの動作を管理できます。 このイベントは、ユーザーが矢印をクリックすると、マウスボタンが押されてすぐに生成されます:
 
-- ポップアップメニューが **分離** されている場合、このイベントはボタン中で矢印のあるエリアがクリックされた場合のみ生成されます。 ボタンに適用されている [標準アクション](https://doc.4d.com/4Dv19R7/4D/19-R7/Standard-actions.300-6013479.ja.html) があったとしても、この場合には実行されないことに留意してください。
+- ポップアップメニューが **分離** されている場合、このイベントはボタン中で矢印のあるエリアがクリックされた場合のみ生成されます。 Note that the [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) assigned to the button (if any) is not executed in this case.
 - ポップアップメニューが **リンク** されている場合、このイベントはボタン上どこをクリックしても生成されます。 このタイプのボタンでは [`On Long Click`](onLongClick.md) イベントが生成されないことに注意してください。
 
 ![](../assets/en/Events/clickevents.png)

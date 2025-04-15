@@ -16,9 +16,9 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones     |
-| ----------- | ------------------ |
-| 20 R8       | Form class support |
+| Lanzamiento | Modificaciones                       |
+| ----------- | ------------------------------------ |
+| 20 R8       | Soporte de las clases de formularios |
 
 </details>
 
@@ -36,7 +36,7 @@ If the current form is being displayed or loaded by a call to the [DIALOG](dialo
 
 - the *formData* object passed as parameter to this command, if any,
 - o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
-- or, an empty object.
+- o, un objeto vacío.
 
 ### Subformulario
 
@@ -54,7 +54,7 @@ If the current form is a subform, the returned object depends on the parent cont
 
 For more information, please refer to the *Page subforms* section.
 
-### Table form
+### Formulario tabla
 
 **Form** returns the object associated with the table form displayed on screen.\
 **Form** returns the object associated with the table form displayed on screen.\

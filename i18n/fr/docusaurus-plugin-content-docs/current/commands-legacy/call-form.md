@@ -75,12 +75,12 @@ Dans le formulaire principal, un bouton ouvre les deux dialogues :
 La méthode *doAddMessage* ajoute simplement une ligne dans la list box du formulaire "FormMessage" :
 
 ```4d
- var $1 : Text //Origine du message
- var $2 : Text //Message à afficher
-  //Récupère le message contenu dans $2 et l'envoie dans la list box
+ #DECLARE ($caller : Text ; $message : Text) //Origine du message
+  //Message à afficher
+  //Récupère le message contenu dans $message et l'envoie dans la list box
  $p:=OBJECT Get pointer(Object named;"Column1")
  INSERT IN ARRAY($p->;1)
- $p->{1}:=$1+" sends "+$2
+ $p->{1}:=$caller+" sends "+$message
 ```
 
 A l'utilisation, vous obtenez le résultat suivant :

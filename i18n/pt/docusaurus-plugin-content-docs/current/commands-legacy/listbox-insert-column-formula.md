@@ -47,7 +47,7 @@ O parâmetro *fórmula* pode conter qualquer expressão válida:
 
 No momento da chamada do comando, a *formula* é analizada e depois é executada.
 
-**Nota:** utilize o comando [Command name](command-name.md) para definir as fórmulas independentes da linguagem da aplicação (quando chamam a comandos 4D).
+**Nota:** utilize o comando [Command name](../commands/command-name.md) para definir as fórmulas independentes da linguagem da aplicação (quando chamam a comandos 4D).
 
 O parâmetro *tipoDados* pode ser utilizado para designar o tipo de dados resultantes da execução da *formula*. Deve passar neste parâmetro uma das seguintes constantes do tema *Tipos de campos e variáveis*:
 

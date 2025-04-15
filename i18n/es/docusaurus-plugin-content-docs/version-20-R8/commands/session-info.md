@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo    |                             | Descripción                   |
 | ---------- | ------- | :-------------------------: | ----------------------------- |
-| sessionID  | Integer | &#8594; | Session ID                    |
+| sessionID  | Integer | &#8594; | ID de sesión                  |
 | Resultado  | Object  | &#8592; | Information about the session |
 
 <!-- END REF -->
@@ -84,3 +84,10 @@ He aquí un ejemplo de objeto de salida:
 [Session](session.md)
 [Session storage](session-storage.md)\
 [Process info](process-info.md)
+
+## Propiedades
+
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1844                        |
+| Hilo seguro       | &check; |

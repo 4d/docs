@@ -11,7 +11,7 @@ Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de form
 
 ## Componentes interpretados y compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md).
+Los componentes pueden ser interpretados o [compilados](../Desktop/building.md).
 
 - Un proyecto 4D que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados.
 - Un proyecto 4D que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
@@ -226,6 +226,12 @@ Declare un componente almacenado en GitHub en el archivo [**dependencies.json**]
 
 Cuando se crea una versión en GitHub, se le asocia una **etiqueta** y una **versión**. El gestor de dependencias utiliza esta información para gestionar la disponibilidad automática de los componentes.
 
+:::note
+
+If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).
+
+:::
+
 - **Etiquetas** son textos que hacen referencia única a una versión. En los archivos [**dependencies.json**](#dependenciesjson) y [**environment4d.json**](#environment4djson), puede indicar la etiqueta de versión que desea utilizar en su proyecto. Por ejemplo:
 
 ```json
@@ -272,6 +278,20 @@ Si no especifica una etiqueta o una versión, 4D recupera automáticamente la "�
 
 El gestor de dependencias comprueba periódicamente si hay actualizaciones de componentes disponibles en Github. Si hay una nueva versión disponible para un componente, se muestra un indicador de actualización para el componente en la lista de dependencias, [dependiendo de su configuración](#defining-a-github-dependency-version-range).
 
+#### Naming conventions for 4D version tags
+
+If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases on the Github repository must comply with specific conventions.
+
+- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *x.y* LTS version, the Dependency Manager will resolve it as "the latest version x.\*" if available or "version below x". If no such version exists, the user will be notified. For example, "20.4" will be resolved by the Dependency manager as "the latest component version 20.\* or version below 20".
+
+- **R-Release versions**: `xRy.p` pattern, where `x` and `y` correspond to the main 4D R-release version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *xRy* version, the Dependency Manager will resolve it to the "latest version below xR(y+1)" if available. If no such version exists, the user will be notified. For example, "20R9" will be resolved by the Dependency manager as "the latest component version below 20R10".
+
+:::note
+
+The component developer can define a minimum 4D version in the component's [`info.plist`](../Extensions/develop-components.md#infoplist) file.
+
+:::
+
 #### Repositorios privados
 
 Si quiere integrar un componente ubicado en un repositorio privado, necesita decirle a 4D que utilice un token de conexión para acceder a él.
@@ -317,7 +337,7 @@ A continuación, se muestra el panel Dependencias. Las dependencias se ordenan p
 
 ![dependency](../assets/en/Project/dependency.png)
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
+La interfaz del panel Dependencias le permite gestionar las dependencias (en 4D monousuario y 4D Server).
 
 ### Filtrado de dependencias
 
@@ -445,6 +465,7 @@ Puede definir la opción [etiqueta o versión](#tags-and-versions) para una depe
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
+- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. You can use this dependency rule only if the component release tags follow the appropriate [naming convention](#naming-conventions-for-4d-version-tags).
 
 La versión actual de la dependencia de GitHub se muestra a la derecha del elemento de la dependencia:
 

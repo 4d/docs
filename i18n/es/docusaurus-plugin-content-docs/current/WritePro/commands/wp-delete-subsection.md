@@ -11,9 +11,9 @@ displayed_sidebar: docs
 
 | Parámetros     | Tipo    |                             | Descripción                                                                        |
 | -------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | &#8594; | 4D Write Pro section                                                               |
+| wpSection      | Object  | &#8594; | Sección 4D Write Pro                                                               |
 | subSectionType | Integer | &#8594; | Subsection type (wk first page, wk left page, or wk right page) |
-| subSection     | Object  | &#8594; | 4D Write Pro subsection                                                            |
+| subSection     | Object  | &#8594; | Subsección 4D Write Pro                                                            |
 
 <!-- END REF-->
 

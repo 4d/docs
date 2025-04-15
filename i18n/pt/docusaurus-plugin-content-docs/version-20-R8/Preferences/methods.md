@@ -112,7 +112,7 @@ Permite-lhe escolher se quer ou não mostrar as várias pranchetas no editor de 
 
 ![](../assets/en/Preferences/show-clipboards.png)
 
-Los correspondientes [atajos al portapapeles](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) siguen activos cuando estos portapapeles están ocultos.
+Los correspondientes [atajos al portapapeles](../code-editor/write-class-method.md#clipboards) siguen activos cuando estos portapapeles están ocultos.
 
 #### Destacar os blocos lógicos
 

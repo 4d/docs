@@ -33,7 +33,7 @@ title: エラー処理
 
 インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。 実行コンテキストに応じて、異なるエラーハンドラーを呼び出すこともできます (後述参照)。
 
-エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/ja/page155.html) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例: 例:
+To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command with the project method name and (optionnally) scope as parameters. 例:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッドを実装します
@@ -45,7 +45,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-[`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます: このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](../commands-legacy/method-called-on-error.md) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます: このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -98,7 +98,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 :::
 :::
 
-- [`Last errors`](https://doc.4d.com/4dv19/help/command/ja/page1799.html) コマンドは、4Dアプリケーションのカレントエラースタックに関する情報をコレクションとして返します。 また同じ情報を配列として返す[`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1015.html) コマンドを使用することもできます。
+- the [`Last errors`](../commands-legacy/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application. また同じ情報を配列として返す[`Last errors`](../commands-legacy/last-errors.md) コマンドを使用することもできます。
 - `Call chain` コマンドは、カレントプロセス内におけるメソッド呼び出しチェーンの各ステップを説明するオブジェクトのコレクションを返します。
 
 #### 例題
@@ -154,7 +154,7 @@ Try (expression) : any | Undefined
 
 実行中にエラーが発生した場合、`Try()` の呼び出し前に [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされたかどうかに関係なく、エラーダイアログは表示されず、エラーはキャッチされます。 *expression* が値を返す場合、`Try()` は最後に評価された値を返します。値が返されない場合、`Try()` は `Undefined` を返します。
 
-エラーは、[`Last errors`](https://doc.4d.com/4dv20/help/command/ja/page1799.html) コマンドを使用することで処理できます。 *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
+You can handle the error(s) using the [`Last errors`](../commands-legacy/last-errors.md) command. *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
 
 :::note
 
@@ -241,11 +241,11 @@ End try
 
 :::info
 
-*遅延* エラーと *non-deferred* エラーの詳細については、[`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) コマンドの説明を参照してください。
+*遅延* エラーと *non-deferred* エラーの詳細については、[`throw`](../commands-legacy/throw.md) コマンドの説明を参照してください。
 
 :::
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) 関数は最後のエラーに関するコレクションを格納しています。 このコードブロック内で[エラー処理メソッドを宣言する](#エラー処理メソッドの実装) こともできます。この場合エラー発生時にはそれが呼び出されます(宣言しない場合には、4Dエラーダイアログが表示されます)。
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. [`Last errors`](../commands-legacy/last-errors.md) 関数は最後のエラーに関するコレクションを格納しています。 このコードブロック内で[エラー処理メソッドを宣言する](#エラー処理メソッドの実装) こともできます。この場合エラー発生時にはそれが呼び出されます(宣言しない場合には、4Dエラーダイアログが表示されます)。
 
 :::note
 

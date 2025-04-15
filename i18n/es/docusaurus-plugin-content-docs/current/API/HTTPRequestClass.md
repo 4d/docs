@@ -175,7 +175,7 @@ Esta es la secuencia de llamadas de retorno:
 
 :::info
 
-Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html), NO [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html).
+Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](../commands-legacy/call-worker.md), NO [`New process`](../commands-legacy/new-process.md).
 
 :::
 
@@ -401,10 +401,10 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parámetros | Tipo                           |                             | Descripción                  |
-| ---------- | ------------------------------ | :-------------------------: | ---------------------------- |
-| timeout    | Real                           |              ->             | Maximum wait time in seconds |
-| Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest           |
+| Parámetros | Tipo                           |                             | Descripción                         |
+| ---------- | ------------------------------ | :-------------------------: | ----------------------------------- |
+| timeout    | Real                           |              ->             | Tiempo máximo de espera en segundos |
+| Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest                  |
 
 <!-- END REF -->
 
@@ -414,13 +414,13 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 La función `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->espera una respuesta del servidor o hasta que se alcance el `timeout` especificado<!-- END REF -->.
 
-If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
+Si se pasa un *timeout*, la función espera la duración especificada en este parámetro. Se aceptan decimales.
 
 Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
 :::note
 
-During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
+Durante la ejecución de .wait(), se ejecutan las funciones de retrollamada de los workers, tanto si proceden de otras instancias `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md), como de otras llamadas [`CALL WORKER`](../commands-legacy/call-worker.md).  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
 
 :::
 

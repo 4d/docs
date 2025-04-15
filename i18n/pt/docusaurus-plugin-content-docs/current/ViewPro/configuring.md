@@ -51,7 +51,7 @@ Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramenta
 
 Os seguintes eventos de formulário estão disponíveis na lista de propriedades para as áreas 4D View Pro.
 
-Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
+Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Some standard form events provide extended information in the object returned by the [`FORM Event`](../commands/form-event.md) command when they are generated for 4D View Pro areas. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
 
 | Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -359,7 +359,7 @@ Atributos do tamanho do papel são usados para especificar as dimensões ou mode
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
  - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
- - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html).
+ - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
   In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
 
 ### Escala

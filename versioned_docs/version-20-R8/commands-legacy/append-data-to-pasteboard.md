@@ -43,26 +43,27 @@ Using Pasteboard commands and BLOBs, you can build sophisticated Cut/Copy/Paste 
   // SET RECORD TO PASTEBOARD ( Number )
   // SET RECORD TO PASTEBOARD ( Table number )
  
- var $1;$vlField;$vlFieldType : Integer
+ #DECLARE ($tabNum : Integer)
+ var $vlField;$vlFieldType : Integer
  var $vpTable;$vpField : Pointer
- C_STRING(255;$vsDocName)
+ var $vsDocName : Text
  var $vtRecordData;$vtFieldData : Text
  var $vxRecordData : Blob
  
   // Clear the pasteboard (it will stay empty if there is no current record)
  CLEAR PASTEBOARD
   // Get a pointer to the table whose number is passed as parameter
- $vpTable:=Table($1)
+ "Server Import Services";Table($tablePtr);$form;$vxData)
   // If there is a current record for that table
  If((Record number($vpTable->)>=0)|(Is new record($vpTable->)))
   //Initialize the text variable that will hold the text image of the record
     $vtRecordData:=""
   // For each field of the record:
-    For($vlField;1;Last field number($1))
+    For($vlField;1;Last field number($tabNum))
   //Get the type of the field
-       GET FIELD PROPERTIES($1;$vlField;$vlFieldType)
+       GET FIELD PROPERTIES($tabNum;$vlField;$vlFieldType)
   // Get a pointer to the field
-       $vpField:=Field($1;$vlField)
+       $vpField:=Field($tabNum;$vlField)
   // Depending on the type of the field, copy (or not) its data in the appropriate manner
        Case of
           :(($vlFieldType=Is alpha field)|($vlFieldType=Is text))
@@ -76,7 +77,7 @@ Using Pasteboard commands and BLOBs, you can build sophisticated Cut/Copy/Paste 
              $vtFieldData:=""
        End case
   // Accumulate the field data into the text variable holding the text image of the record
-       $vtRecordData:=$vtRecordData+Field name($1;$vlField)+":"+Char(9)+$vtFieldData+CR
+       $vtRecordData:=$vtRecordData+Field name($tabNum;$vlField)+":"+Char(9)+$vtFieldData+CR
   // Note: The method CR returns Char(13) on Macintosh and Char(13)+Char(10) on Windows
     End for
   // Put the text image of the record into the pasteboard
@@ -118,14 +119,15 @@ You can paste this image of the record to another record, using the method GET R
   // GET RECORD FROM PASTEBOARD method
   // GET RECORD FROM PASTEBOARD( Number )
   // GET RECORD FROM PASTEBOARD( Table number )
- var $1;$vlField;$vlFieldType;$vlPosCR;$vlPosColon : Integer
+ #DECLARE ($tabNum : Integer)
+ var $vlField;$vlFieldType;$vlPosCR;$vlPosColon : Integer
  var $vpTable;$vpField : Pointer
- C_STRING(255;$vsDocName)
+ var $vsDocName : Text
  var $vxPasteboardData : Blob
  var $vtPasteboardData;$vtFieldData : Text
  
   // Get a pointer to the table whose number is passed as parameter
- $vpTable:=Table($1)
+ "Server Import Services";Table($tablePtr);$form;$vxData)
   // If there is a current record
  If((Record number($vpTable->)>=0)|(Is new record($vpTable->)))
     Case of
@@ -170,9 +172,9 @@ You can paste this image of the record to another record, using the method GET R
   // Pasteboard may contain more data than we need...
                 If($vlField<=Last field number($vpTable))
   // Get the type of the field
-                   GET FIELD PROPERTIES($1;$vlField;$vlFieldType)
+                   GET FIELD PROPERTIES($tabNum;$vlField;$vlFieldType)
   // Get a pointer to the field
-                   $vpField:=Field($1;$vlField)
+                   $vpField:=Field($tabNum;$vlField)
   // Depending on the type of the field, copy (or not) the text in the appropriate manner
                    Case of
                       :(($vlFieldType=Is alpha field)|($vlFieldType=Is text))

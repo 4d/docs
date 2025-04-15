@@ -39,7 +39,7 @@ Vous pouvez configurer les accès REST de l'une des manières suivantes :
 
 ### Utilisation des Paramètres de la Structure
 
-The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
+Le menu **Lecture/Écriture** de la page "**Web** > **Web Features**" des paramètres de la structure désigne un groupe d'utilisateurs 4D autorisé à établir le lien vers l'application 4D en utilisant des requêtes REST.
 
 Par défaut, le menu affiche `&#060;Anyone&#062`; ce qui signifie que les accès REST sont ouverts à tous les utilisateurs. Une fois que vous avez spécifié un groupe, seul un compte utilisateur 4D appartenant à ce groupe peut être utilisé pour [accéder à 4D via une requête REST](authUsers.md). Si un compte utilisé n'appartient pas à ce groupe, 4D renvoie une erreur d'authentification à l'expéditeur de la requête.
 
@@ -74,7 +74,7 @@ Pour supprimer l'exposition REST d'une table :
 
 1. Affichez l'Inspecteur de table dans l'Editeur de structure et sélectionnez la table à modifier.
 
-2. Uncheck the **Expose as REST resource** option: ![alt-text](../assets/en/REST/table.png) Do this for each table whose exposure needs to be modified.
+2. Décochez l'option **Exposer en tant que ressource REST** : ![alt-text](../assets/en/REST/table.png) Procédez ainsi pour chaque table dont l'exposition doit être modifiée.
 
 
 ### Exposer des champs

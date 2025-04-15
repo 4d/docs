@@ -43,7 +43,7 @@ You can omit the *format* parameter, in which case you need to specify the exten
 
 * "4D specific tags" means 4D XHTML with a 4D namespace and 4D CSS styles.
 * For more information about the 4D Write Pro document format, refer to [.4wp document format](https://doc.4d.com/4Dv20/4D/20/Using-a-4D-Write-Pro-area.200-6229460.en.html#2895813).
-* To view a list of known differences or incompatibility when using the .docx format, see [Importing and Exporting in .docx format](https://doc.4d.com/4Dv20R8/4D/20-R8/Importing-and-Exporting-in-docx-format.200-7477969.en.html).
+* To view a list of known differences or incompatibility when using the .docx format, see [Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html).
 * For more information on exporting to SVG format, see [Exporting to SVG format](https://doc.4d.com/4Dv20/4D/20/Exporting-to-SVG-format.200-6229468.en.html).
 
 
@@ -177,7 +177,6 @@ You want to export the contents of the *myArea* 4D Write Pro object in .4wp form
 
 ```4d
  var $path : Text
- var $docRef : Integer
 
  Case of
     :(Form event code=On Clicked)
@@ -268,8 +267,8 @@ WP EXPORT DOCUMENT(WParea; $file; wk docx; $options)
 ## See also
 
 [4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)</br>
-[Exporting to HTML and MIME HTML formats](https://doc.4d.com/4Dv20R8/4D/20-R8/Exporting-to-HTML-and-MIME-HTML-formats.200-7477968.en.html)<br/>
-[Importing and Exporting in .docx format](https://doc.4d.com/4Dv20R8/4D/20-R8/Importing-and-Exporting-in-docx-format.200-7477969.en.html)<br/>
+[Exporting to HTML and MIME HTML formats](https://doc.4d.com/4Dv20/4D/20/Exporting-to-HTML-and-MIME-HTML-formats.200-6229467.en.html)<br/>
+[Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html)<br/>
 [Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)</br>
 [Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)</br>
 [WP EXPORT VARIABLE](wp-export-variable.md)</br>

@@ -135,6 +135,8 @@ Le sélecteur Port ID est utile dans le cadre de serveurs Web 4D compilés et fu
 
 ### 4D Server log recording (28)
 
+**Thread-safe** : Yes
+
 **Portée** : 
 
  **Conservé** **entre deux sessions** : Non
@@ -178,6 +180,8 @@ Pour des informations supplémentaires, reportez-vous à la documentation de la 
 
 
 ### Debug log recording (34)
+
+**Thread-safe** : Yes
 
 **Portée** : Application 4D
 
@@ -545,6 +549,8 @@ Par exemple, si vous exécutez :
 
 ### Diagnostic log recording (79)
 
+**Thread-safe** : Yes
+
 **Portée** : Application 4D
 
 **Conservé** **entre deux sessions** : Non
@@ -601,6 +607,8 @@ Si vous passez String type with time zone dans ce sélecteur, les dates 4D seron
 
 ### Diagnostic log level (86)
 
+**Thread-safe** : Yes
+
 **Portée :** Application 4D 
 
 **Conservé entre deux sessions :** Non
@@ -645,6 +653,8 @@ Il est nécessaire de redémarrer l'application pour que ce paramètre soit pris
 
 ### Circular log limitation (90)
 
+**Thread-safe** : Yes
+
 **Portée** : 4D local, 4D Server.
 
 **Conservé entre deux sessions** : Non
@@ -680,6 +690,9 @@ Il est nécessaire de redémarrer l'application pour que ce paramètre soit pris
 
 
 ### Cache flush periodicity (95)
+
+**Thread-safe** : Yes
+
 
 Portée : 4D local, 4D Server
 
@@ -791,6 +804,8 @@ Dans les versions précédentes, les heures étaient converties et stockées en 
 
 ### SMTP Log (110)
 
+**Thread-safe** : Yes
+
 Portée : 4D local, 4D Server*
 
 * **Conservé entre deux sessions** : Non
@@ -857,6 +872,8 @@ Pour plus d'informations sur les fichiers 4DSMTPLog\_X.txt, veuillez consulter l
 
 ### POP3 Log (116)
 
+**Thread-safe** : Yes
+
 Portée : 4D local, 4D Server
 
 **Conservé entre deux sessions** : Non
@@ -878,6 +895,8 @@ Portée : 4D local, 4D Server
 
 
 ### IMAP Log (119)
+
+**Thread-safe** : Yes
 
 **Portée** : 4D local, 4D Server
 
@@ -903,6 +922,8 @@ Pour plus d'informations sur les fichiers 4DIMAPLog\_N.txt, reportez-vous à la 
 
 ### Pause logging (121)
 
+**Thread-safe** : Yes
+
 **Portée :** Application 4D
 
 **Conservé entre deux sessions :** Non
@@ -924,16 +945,17 @@ Ce sélecteur permet de suspendre/reprendre toutes les opérations de journalisa
 
 La commande **SET DATABASE PARAMETER** peut être utilisée dans des processus préemptifs lors de l'appel des sélecteurs suivants :
 
-* 4D Server log recording
-* Debug log recording
-* Diagnostic log recording
-* Diagnostic log level
-* Circular log limitation
-* Cache flush periodicity
-* SMTP Log
-* POP3 Log
-* IMAP Log
-* Pause logging
+* [4D Server log recording](#4d-server-log-recording-28)
+* [Debug log recording](#debug-log-recording-34)
+* [Diagnostic log recording](#diagnostic-log-recording-79)
+* [Diagnostic log level](#diagnostic-log-level-86)
+* [Circular log limitation](#circular-log-limitation-90)
+* [Cache flush periodicity](#cache-flush-periodicity-95)
+* [SMTP Log](#smtp-log-110)
+* [POP3 Log](#pop3-log-116)
+* [IMAP Log](#imap-log-119)
+* [Pause logging](#pause-logging-121)
+
 
 #### Exemple 1 
 

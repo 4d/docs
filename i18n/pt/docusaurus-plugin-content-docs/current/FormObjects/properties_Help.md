@@ -9,13 +9,13 @@ Essa propriedade permite associar mensagens de ajuda a objetos ativos em seus fo
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - O atraso de exibição e a duração máxima das dicas de ajuda podem ser controlados usando os seletores `Tips delay` e `Tips duration` do comando **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)**.
-> - As dicas de ajuda podem ser globalmente desativadas ou ativadas para a aplicação usando o seletor do comando [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html).
+> - O atraso de exibição e a duração máxima das dicas de ajuda podem ser controlados usando os seletores `Tips delay` e `Tips duration` do comando **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md)**.
+> - As dicas de ajuda podem ser globalmente desativadas ou ativadas para a aplicação usando o seletor do comando [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter.md).
 
 Você também pode:
 
-- designe uma dica de ajuda existente, previamente especificada no editor de [dicas de ajuda](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) de 4D.
-- ou introduzir a mensagem de ajuda diretamente como uma cadeia de caracteres. Isto permite-lhe tirar partido da arquitetura XLIFF. Você pode inserir uma referência XLIFF aqui para exibir uma mensagem no idioma da aplicação (para obter mais informações sobre XLIFF, consulte [Apêndice B: Arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). También puede utilizar referencias 4D ([ver Uso de referencias en texto estático](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
+- designe uma dica de ajuda existente, previamente especificada no editor de [dicas de ajuda](https://doc.4d.com/4Dv20/4D/20.2/Help-tips.200-6750100.en.html) de 4D.
+- ou introduzir a mensagem de ajuda diretamente como uma cadeia de caracteres. Isto permite-lhe tirar partido da arquitetura XLIFF. Você pode inserir uma referência XLIFF aqui para exibir uma mensagem no idioma da aplicação (para obter mais informações sobre XLIFF, consulte [Apêndice B: Arquitetura XLIFF](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html). También puede utilizar referencias 4D ([ver Uso de referencias en texto estático](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html)).
 
 > &#062; &#062; In macOS, displaying help tips is not supported in pop-up type windows.
 
@@ -33,14 +33,14 @@ Você também pode:
 
 Você também pode associar mensagens de ajuda a objetos de formulário de duas outras maneiras:
 
-- ao nível da estrutura da base de dados (apenas campos). Neste caso, a dica de ajuda do campo é apresentada em todos os formulários em que aparece. Para obter mais informações, consulte "Dicas de ajuda" em [Propriedades dos campos](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
-- usando o comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)**, para o processo atual.
+- ao nível da estrutura da base de dados (apenas campos). Neste caso, a dica de ajuda do campo é apresentada em todos os formulários em que aparece. Para obter mais informações, consulte "Dicas de ajuda" em [Propriedades dos campos](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#3367486).
+- usando o comando **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)**, para o processo atual.
 
 Quando diferentes dicas são associadas ao mesmo objeto em vários locais, a seguinte ordem de prioridade é aplicada:
 
 1. nível de estrutura (prioridade mais baixa)
 2. nível do editor de formulários
-3. Comando **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** (prioridade mais alta)
+3. Comando **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** (prioridade mais alta)
 
 #### Veja também
 

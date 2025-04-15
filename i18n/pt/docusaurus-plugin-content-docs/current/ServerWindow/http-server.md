@@ -38,7 +38,7 @@ Esta área fornece informações específicas sobre o servidor SOAP do 4D Server
 
 - **Peticiones SOAP**: aceptadas o rechazadas. Esta informação indica se o servidor SOAP está ativado. Para que as solicitações SOAP sejam aceitas, o servidor HTTP deve ser iniciado e o servidor SOAP deve aceitar explicitamente as solicitações (consulte o botão Aceitar/Rejeitar).
 - **Conexiones máximas**: número máximo de conexiones SOAP permitidas. Este valor depende da licença instalada na máquina do servidor.
-- Botón **Aceptar/rechazar las peticiones SOAP**: este botón se alterna y puede utilizarse para controlar la activación del servidor SOAP de 4D Server. Este botón modifica el valor de la opción **Autorizar peticiones de servicios web** en la página "Servicios web" de las Propiedades de la base (y viceversa). You can also use the [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
+- Botón **Aceptar/rechazar las peticiones SOAP**: este botón se alterna y puede utilizarse para controlar la activación del servidor SOAP de 4D Server. Este botón modifica el valor de la opción **Autorizar peticiones de servicios web** en la página "Servicios web" de las Propiedades de la base (y viceversa). You can also use the [`SOAP REJECT NEW REQUESTS`](../commands-legacy/soap-reject-new-requests.md) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
 
 Si presiona el botón **Aceptar las peticiones SOAP** y el servidor HTTP está detenido, 4D lo inicia automáticamente.
 
