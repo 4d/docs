@@ -2280,10 +2280,9 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 La méthode ***sortCollection*** :
 
 ```4d
-var $1 : Object
-var $2: Integer // option de tri
+#DECLARE ($toSort : Object ; $option : Integer)
 
-$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+$toSort.result:=(Compare strings($toSort.value;$toSort.value2;$option2)<0)
 ```
 
 <!-- END REF -->
@@ -3120,14 +3119,13 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 <!-- REF #collection.some().Params -->
 
-| Paramètres | Type |     | Description |
-| ---------- | ---- | :-: | ----------- |
-
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |any |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+| Paramètres | Type                        |                             | Description                                  |
+| ---------- | --------------------------- | :-------------------------: | -------------------------------------------- |
+| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter l'évaluation |
+| formula    | 4D.Function |              ->             | Objet formule                                |
+| methodName | Text                        |              ->             | Nom de méthode                               |
+| param      | any                         |              ->             | Paramètre(s) à passer     |
+| Résultat   | Boolean                     | <- | Vrai si au moins un élément a réussi le test |
 
 <!-- END REF -->
 
