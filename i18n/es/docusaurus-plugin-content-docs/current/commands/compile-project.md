@@ -101,7 +101,7 @@ The object returned by **Compile project** has up to three properties:
 
 Para obtener más información, consulte [Herramientas de compilación](../Project/compiler.md#compilation-tools).
 
-## variable objects
+## Objetos variables
 
 `interprocessVariables.variables` and `processVariables.variables` contain objects with the following structure:
 
