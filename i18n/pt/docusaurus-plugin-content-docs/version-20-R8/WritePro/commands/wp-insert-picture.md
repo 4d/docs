@@ -27,7 +27,7 @@ In *targetObj*, you can pass:
 
 - A range
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
-- Um docUmento 4D Write Pro
+- Um documento 4D Write Pro
 
 For the second parameter, you can pass either:
 
