@@ -137,7 +137,7 @@ You can use the "verbs" property in the handler definition to declare HTTP verbs
 
 You can declare several verbs, separated by a comma. Verb names are not case sensitive.
 
-Ex: `"verbs" : "PUT, POST"`
+Ej: `"verbs" : "PUT, POST"`
 
 :::note
 
@@ -265,7 +265,7 @@ La [clase 4D.IncomingMessage](../API/IncomingMessageClass.md) ofrece funciones p
 
 Here is a simple example to upload a file on the server.
 
-The **HTTPHandlers.json** file:
+El archivo **HTTPHandlers.json**:
 
 ```json
 [
