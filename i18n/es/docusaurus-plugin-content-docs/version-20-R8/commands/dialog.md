@@ -29,7 +29,7 @@ This command is typically called along with the [Open form window](../commands-l
 
 The **DIALOG** command can also be used instead of [ALERT](../commands-legacy/alert.md), [CONFIRM](../commands-legacy/confirm.md) or [Request](../commands-legacy/request.md) when the information to be presented or gathered is more complex than those commands can manage.
 
-In the *form* parameter, you can pass:
+En el parámetro *form*, puede pasar:
 
 - the name of a form (project form or table form) to use;
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use;
@@ -164,7 +164,7 @@ The altered form is displayed with the title, logo and border modified:
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-## System variables and sets
+## Variables y conjuntos sistema
 
 After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is canceled, OK is set to 0.
 
