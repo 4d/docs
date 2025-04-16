@@ -158,7 +158,7 @@ When you display formulas as references, the **source** of the formula is displa
 
 ![](../assets/en/WritePro/wp-formulas2.png)
 
-### References as symbols
+### Referencias como símbolos
 
 When formula source texts are displayed in a document, the design could be confusing if you work on sophisticated templates using tables for example, and when formulas are complex:
 
