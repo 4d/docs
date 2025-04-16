@@ -2241,10 +2241,9 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 Con el siguiente método ***Flatten***:
 
 ```4d
-var $1 : Object
-var $2: Integer // opción de ordenación
+#DECLARE ($toSort : Object ; $option : Integer)
 
-$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+$toSort.result:=(Compare strings($toSort.value;$toSort.value2;$option2)<0)
 ```
 
 <!-- END REF -->
