@@ -296,7 +296,7 @@ The `.urlQuery` property is read-only.
 
 Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
 
-#### Direct parameters
+#### Parámetros directos
 
 Example: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
 
