@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
 
-In the *form* parameter, you can pass:
+En el parámetro *form*, puede pasar:
 
 - el nombre de un formulario, o
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use, or
@@ -60,7 +60,7 @@ Note that in all cases, the form on screen remains loaded (it is not affected by
 
 ## Ejemplo 1
 
-Calling a project form in a print job:
+Llamada a un formulario proyecto en un trabajo de impresión:
 
 ```4d
  OPEN PRINTING JOB
@@ -117,7 +117,7 @@ el resultado mostrado es:
 
 You want to print a form containing a list box. During the *on load* event, you want the contents of the list box to be modified.
 
-1\. In the printing method, you write:
+1\. En el método de impresión, usted escribe:
 
 ```4d
  var $formData : Object
