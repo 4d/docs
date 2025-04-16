@@ -151,8 +151,8 @@ Para comprimir una estructura de archivo ZIP con una contraseña y una barra de 
 `myFormulaCompressingMethod`:
 
 ```4d
- var $1 : Integer
- Progress SET PROGRESS(progID;Num($1/100))
+ #DECLARE ($current : Integer)
+ Progress SET PROGRESS(progID;Num($current /100))
 ```
 
 #### Ejemplo 4
