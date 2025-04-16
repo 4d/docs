@@ -51,7 +51,7 @@ See [example in TCPConnection class](./TCPConnectionClass.md#asynchronous-exampl
 
 :::
 
-### TCPListener Object
+### Objeto TCPListener
 
 A TCPListener object is a shared object.
 
@@ -73,7 +73,7 @@ TCPListener objects provide the following properties and functions:
 
 | Parámetros | Tipo                           |                             | Descripción                                                  |
 | ---------- | ------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| port       | Number                         | ->                          | TCP port to listen                                           |
+| port       | Number                         | ->                          | Puerto TCP de escucha                                        |
 | options    | Object                         | ->                          | Configuration [options](#options-parameter) for the listener |
 | Resultado  | 4D.TCPListener | <- | New TCPListener object                                       |
 
