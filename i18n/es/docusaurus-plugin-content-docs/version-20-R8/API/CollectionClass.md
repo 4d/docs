@@ -2241,10 +2241,9 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 Con el siguiente método ***Flatten***:
 
 ```4d
-var $1 : Object
-var $2: Integer // opción de ordenación
+#DECLARE ($toSort : Object ; $option : Integer)
 
-$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+$toSort.result:=(Compare strings($toSort.value;$toSort.value2;$option2)<0)
 ```
 
 <!-- END REF -->
@@ -3066,14 +3065,13 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 <!-- REF #collection.some().Params -->
 
-| Parámetros | Tipo |     | Descripción |
-| ---------- | ---- | :-: | ----------- |
-
-|startFrom |Integer |->|Índice para comenzar la prueba|
-|formula|4D.Function|->|Objeto fórmula|
-|methodName|Text|->|Nombre de un método|
-|param |any |->|Parámetro(s) a pasar|
-|Result|Boolean|<-|True si al menos un elemento pasa exitosamente la prueba|
+| Parámetros | Tipo                        |                             | Descripción                                                  |
+| ---------- | --------------------------- | :-------------------------: | ------------------------------------------------------------ |
+| startFrom  | Integer                     |              ->             | Índice para iniciar la prueba en                             |
+| formula    | 4D.Function |              ->             | Objeto fórmula                                               |
+| methodName | Text                        |              ->             | Nombre de un método                                          |
+| param      | any                         |              ->             | Parámetro(s) a pasar                      |
+| Resultado  | Boolean                     | <- | True si al menos un elemento ha superado la prueba con éxito |
 
 <!-- END REF -->
 
