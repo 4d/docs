@@ -97,8 +97,8 @@ En el siguiente ejemplo, vamos a crear un sistema de mensajería pequeño que pe
 5) Este es el método Mostrar\_Mensaje:
 
 ```4d
- var $1 : Text
- ALERT($1)
+ #DECLARE($message : Text)
+ ALERT($message)
 ```
 
 6) Finalmente, este método permite a un puesto cliente no ser visible para los otros clientes 4D y no recibir más mensajes:

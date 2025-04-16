@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 Se a área de transferência está vazio ou não contém dados de tipo especifico, o comando devolve um erro -102 (ver a tabela de constantes predefinidas). Se a área de transferência contém dados do tipo especificado, o comando devolve o tamanho em bytes destes dados. 
 
-Passe em *tipodados* um valor que defina o tipo de dados a extrair. Pode passar uma firma 4D, um tipo UTI (Mac OS), um nome/número de formato (Windows), ou um tipo de 4 caracteres (compatibilidade). Para maior informação sobre estes tipos, consulte a seção *Gerenciar área de transferência*
+Passe em *tipodados* um valor que defina o tipo de dados a extrair. Pode passar uma firma 4D, um tipo UTI (macOS), um nome/número de formato (Windows), ou um tipo de 4 caracteres (compatibilidade). Para maior informação sobre estes tipos, consulte a seção *Gerenciar área de transferência*
 
 Depois de verificar que a área de transferência contém dados do tipo que desejar, pode extrair essa informação da área de transferência utilizando um dos seguintes comandos:
 

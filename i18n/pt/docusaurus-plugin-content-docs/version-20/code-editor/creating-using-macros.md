@@ -124,7 +124,7 @@ A etiqueta `<method>` permite-lhe gerar e utilizar macro-comandos que executam m
 
 O código de um método chamado é executado num novo processo. Este processo é encerrado quando o método é executado.
 
-> O processo da estrutura permanece congelado até que a execução do método chamado seja concluída. Deve certificar-se de que a execução é rápida e que não há risco de bloquear a aplicação. Se isso ocorrer, use o comando **Ctrl+F8** (Windows) ou **Command+F8** (Mac OS) para "matar" o processo.
+> O processo da estrutura permanece congelado até que a execução do método chamado seja concluída. Deve certificar-se de que a execução é rápida e que não há risco de bloquear a aplicação. Se isso ocorrer, use o comando **Ctrl+F8** (Windows) ou **Command+F8** (macOS) para "matar" o processo.
 
 ## Chamada de macros
 

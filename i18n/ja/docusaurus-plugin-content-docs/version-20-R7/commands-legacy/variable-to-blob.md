@@ -62,7 +62,7 @@ displayed_sidebar: docs
   // STORE VARIABLES INTO BLOB project method
   // STORE VARIABLES INTO BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
   // STORE VARIABLES INTO BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam : Integer
  
  SET BLOB SIZE($1->;0)
@@ -74,7 +74,7 @@ displayed_sidebar: docs
   // RETRIEVE VARIABLES FROM BLOB project method
   // RETRIEVE VARIABLES FROM BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
   // RETRIEVE VARIABLES FROM BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam;$vlOffset : Integer
  
  $vlOffset:=0
@@ -99,22 +99,20 @@ displayed_sidebar: docs
   // SAVE ARRAY プロジェクトメソッド
   // SAVE ARRAY ( 文字列 ; ポインター )
   // SAVE ARRAY ( ドキュメント ; -> 配列 )
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxArrayData : Blob
- VARIABLE TO BLOB($2->;$vxArrayData) // 配列をBLOBに保存
+ VARIABLE TO BLOB($ptrArray->;$vxArrayData) // 配列をBLOBに保存
  COMPRESS BLOB($vxArrayData) // BLOBを圧縮
- BLOB TO DOCUMENT($1;$vxArrayData) // BLOB をディスクに保存
+ BLOB TO DOCUMENT($doc;$vxArrayData) // BLOB をディスクに保存
  
   // LOAD ARRAY プロジェクトメソッド
   // LOAD ARRAY ( 文字列 ; ポインター )
   // LOAD ARRAY ( ドキュメント ; -> 配列 )
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxArrayData : Blob
- DOCUMENT TO BLOB($1;$vxArrayData) // BLOB ディスクから読み出し
+ DOCUMENT TO BLOB($doc;$vxArrayData) // BLOB ディスクから読み出し
  EXPAND BLOB($vxArrayData) // BLOBを展開
- BLOB TO VARIABLE($vxArrayData;$2->) // 配列をBLOBから取得する
+ BLOB TO VARIABLE($vxArrayData;$ptrArray->) // 配列をBLOBから取得する
 ```
 
 上記のメソッドをアプリケーションに追加すれば、以下のように記述することができます:

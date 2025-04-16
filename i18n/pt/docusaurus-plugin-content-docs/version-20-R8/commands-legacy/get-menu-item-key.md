@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Get menu item key.Summary-->O comando Get menu item key devolve o código do atalho **Ctrl** (Windows) ou **Comando** (Mac OS) para o comando de menu cujo número ou referência de menu se passa em *menu* e cujo número de comando se passa em *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu.*
+<!--REF #_command_.Get menu item key.Summary-->O comando Get menu item key devolve o código do atalho **Ctrl** (Windows) ou **Comando** (macOS) para o comando de menu cujo número ou referência de menu se passa em *menu* e cujo número de comando se passa em *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu.*
 
 Se omite o parâmetro *processo*, Get menu item key é aplicado a barra de menus do processo atual. Do contrario, Get menu item key é aplicado a barra de menus do processo atual cujo número de referência é passado em *processo*. 
 

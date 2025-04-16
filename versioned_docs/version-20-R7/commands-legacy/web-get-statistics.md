@@ -44,7 +44,6 @@ Let’s assume that you want to generate a semi-dynamic page that displays the s
 In the project method STATS, you write the following code:
 
 ```4d
- var $1 : Text
  var vPages : Text
  ARRAY TEXT(pages;0)
  ARRAY LONGINT(hits;0)

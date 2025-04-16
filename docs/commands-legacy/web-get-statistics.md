@@ -27,7 +27,7 @@ The command fills the pages Text array with the names of the most consulted page
 
 Let’s assume that you want to generate a semi-dynamic page that displays the statistics of the Web cache. For this, in a static HTML page named “stats.shtm” (pages suffixed .shtm are automatically parsed by the Web server), you place the tag *<!––#4DSCRIPT/STATS––>* as well as references to the *vPages* and *vUsage* variables, for example: 
 
-```HTML
+```html
 <html>
 <head><title>4D Web Stats</title></head>
 <!--#4DSCRIPT/STATS-->
@@ -44,7 +44,6 @@ Let’s assume that you want to generate a semi-dynamic page that displays the s
 In the project method STATS, you write the following code:
 
 ```4d
- var $1 : Text
  var vPages : Text
  ARRAY TEXT(pages;0)
  ARRAY LONGINT(hits;0)

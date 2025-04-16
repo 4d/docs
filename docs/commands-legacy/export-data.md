@@ -57,23 +57,21 @@ This example illustrates the use of the EXPORT DATA command to export data in bi
 * Here is the code for the ExportBinary method:
 
 ```4d
- var $1 : Pointer //table
- var $2 : Text //path of destination file
- var $3 : Boolean //export all records
+#DECLARE ($tablePtr : Pointer ; $path : Text ; $all : Boolean)
  var $i : Integer
  var $ref : Text
  $ref:=DOM Create XML Ref("settings-import-export")
-  // Export the table "$1" in '4D' binary format, all the records or only the current selection
- DOM SET XML ATTRIBUTE($ref;"table_no";Table($1);"format";"4D";"all_records";$3)
+  // Export the table "$tablePtr" in '4D' binary format, all the records or only the current selection
+ DOM SET XML ATTRIBUTE($ref;"table_no";Table($tablePtr);"format";"4D";"all_records";$all)
   // Definition of fields to export
- For($i;1;Last field number($1))
-    If(Is field number valid($1;$i))
-       $elt:=DOM Create XML element($ref;"field";"table_no";Table($1);"field_no";$i)
+ For($i;1;Last field number($tablePtr))
+    If(Is field number valid($tablePtr;$i))
+       $elt:=DOM Create XML element($ref;"field";"table_no";Table($tablePtr);"field_no";$i)
     End if
  End for
- EXPORT DATA($2;$ref)
+ EXPORT DATA($path;$ref)
  If(Ok=0)
-    ALERT("Error during export of table "+Table name($1))
+    ALERT("Error during export of table "+Table name($tablePtr))
  End if
  DOM CLOSE XML($ref)
 ```

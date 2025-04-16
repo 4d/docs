@@ -5,11 +5,11 @@ slug: /commands/on-host-database-event-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Host Database Event database method.Syntax-->$1 -> On Host Database Event database method<!-- END REF-->
+<!--REF #_command_.On Host Database Event database method.Syntax-->On Host Database Event (*$event* : Integer)<!-- END REF-->
 <!--REF #_command_.On Host Database Event database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | Event code |
+| $event | Integer | &#8592; | Event code |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 The **On Host Database Event database method** is executed automatically only in databases used as components of host databases (when it is authorized in the Settings of the host database). It is called when events related to the opening and closing of the host database occur. 
 
-To process an event, you must test the value of the *$1* parameter inside the method, and compare it with one of the following constants, available in the "*Database Events*" theme:
+To process an event, you must test the value of the *$event* parameter inside the method, and compare it with one of the following constants, available in the "*Database Events*" theme:
 
 | Constant                        | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,18 +38,18 @@ Example of typical structure of an On Host Database Event database method:
 
 ```4d
   // On Host Database Event database method
- var $1 : Integer
+ #DECLARE($event : Integer)
  Case of
-    :($1=On before host database startup)
+    :($event=On before host database startup)
   // put code here that you want to execute before the "On Startup" database method
   // of the host database
-    :($1=On after host database startup)
+    :($event=On after host database startup)
   // put code here that you want to execute after the "On Startup"
   // database method of the host database
-    :($1=On before host database exit)
+    :($event=On before host database exit)
   // put code here that you want to execute before the "On Exit"
   // database method of the host database
-    :($1=On after host database exit)
+    :($event=On after host database exit)
   // put code here that you want to execute after the "On Exit"
   // database method of the host database
  End case

@@ -90,13 +90,12 @@ Depende de você formatar o BLOB inicial como um elemento XML válido. Este BLOB
 Exemplo
 
 ```4d
- var $1 : Blob
- var $0 : Boolean
- 
- SET WEB SERVICE PARAMETER("MeuXMLBlob";$1)
+ #DECLARE($param : Blob) -> $result : Boolean 
+
+ SET WEB SERVICE PARAMETER("MeuXMLBlob";$param)
  CALL WEB SERVICE("http://meu.dominio.com/meu_servico";"MinhaActionSoap";"meuMetodo";
  "http://meu.nomespaco.com/";Web Service manual in)
- GET WEB SERVICE RESULT($0;"MinhaVarSaida";*)
+ GET WEB SERVICE RESULT($result;"MinhaVarSaida";*)
 ```
 
 ### modo RPC, entrada simples e saída complexa 
@@ -106,13 +105,11 @@ Neste caso, o parâmetro t*ipoComplexo* contém a constante Web Service Manual O
 **Exemplo** 
   
 ```4d
- var $0 : Blob
- var $1 : Boolean
- 
- SET WEB SERVICE PARAMETER("MinhaVarEntrada";$1)
+ #DECLARE($param : Blob) -> $result : Blob 
+ SET WEB SERVICE PARAMETER("MinhaVarEntrada";$param)
  CALL WEB SERVICE("http://meu.dominio.com/meu_serviço";"MinhaAcaoSoap";"meuMetodo";
  "http://meu.nomespaco.com/";Web Service manual out)
- GET WEB SERVICE RESULT($0;"MeuXMLSaida";*)
+ GET WEB SERVICE RESULT($result;"MeuXMLSaida";*)
 ```
 
 ### modo RPC, entrada e saída complexas 
@@ -122,13 +119,12 @@ Neste caso, o parâmetro *tipoComplexo* contém as constantes Web Service Manual
 * **Exemplo**
 
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- SET WEB SERVICE PARAMETER("MeuBlobXMLEntrada";$1)
+ SET WEB SERVICE PARAMETER("MeuBlobXMLEntrada";$param)
  CALL WEB SERVICE("http://meu.dominio.com/meu_servico";"MinhaAccionSoap";"meuMetodo";
  "http://meu.nomespaco.com/";Web Service manual)
- GET WEB SERVICE RESULT($0;"MeuXMLSaida";*)
+ GET WEB SERVICE RESULT($result;"MeuXMLSaida";*)
 ```
 
 ### modo DOC 
@@ -140,13 +136,12 @@ A única diferença entre estas duas configurações é o nivel do conteúdo XML
 * Exemplo
 
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- SET WEB SERVICE PARAMETER("MeuXMLEntrada";$1)
+ SET WEB SERVICE PARAMETER("MeuXMLEntrada";$param)
  CALL WEB SERVICE("http://meu.dominio.com/meu_servico";"MinhaActionSoap";"meuMetodo";
  "http://meu.nomespaco.com/";Web Service manual)
- GET WEB SERVICE RESULT($0;"MeuXMLSaida";*)
+ GET WEB SERVICE RESULT($result;"MeuXMLSaida";*)
 ```
 
 **Nota**: no caso dos serviços web DOC, o valor das strings (“MeuXMLEntrada” e “MeuXMLSaída”) passadas como parâmetros não importa, é possível inclusive passar strings vazias"". De fato, estes valores não são utilizados na petição SOAP contida no documento XML. É obrigatório passar estes parâmetros.  

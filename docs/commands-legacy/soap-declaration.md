@@ -38,7 +38,6 @@ In *variable*, pass the 4D variable to be referred to when calling the Web Servi
 
 **Warning:** You can only refer to process variables or 4D method arguments (*$0* to *$n*). Local and interprocess variables cannot be used.
 
-By default, because only Text type arguments can be used, the SOAP server responses are limited to 32 KB in databases that are in non-Unicode mode. However, it is possible to return SOAP arguments with a size greater than 32 KB, using BLOBs. To exceed this limit, you simply need to declare the arguments as BLOBs before calling the SOAP DECLARATION command (see example 4).
 
 **Notes:** 
 
@@ -143,19 +142,8 @@ This example refers to two return values without specifying an argument name:
  SOAP DECLARATION(ret2;Is longint;SOAP output)
 ```
 
+
 ## Example 4 
-
-This example allows the 4D SOAP server to return an argument with a size greater than 32 KB in databases in non-Unicode mode: 
-
-```4d
- var $0 : Blob
- SOAP DECLARATION($0;Is text;SOAP output)
-```
-
-  
-Note the type Is text (and not Is BLOB). This allows the argument to be correctly processed. 
-
-## Example 5 
 
 This example illustrates the results of different types of declarations: 
 

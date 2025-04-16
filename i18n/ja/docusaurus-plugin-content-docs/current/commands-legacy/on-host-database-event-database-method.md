@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **On Host Database Event データベースメソッド** は、ホストデータベースのコンポーネントとして使用されているデータベースの中でのみ自動的に実行されます(ホストデータベースの設定で有効にされている必要があります)。このメソッドはホストデータベースの開閉に関するイベントが発生したときに呼び出されます。
 
-イベントを扱うためには、 *$1* 引数の値をメソッド内で調べて、 "*Database Events*" テーマ内にある、以下の定数と比較する必要があります:
+イベントを扱うためには、 *$event* 引数の値をメソッド内で調べて、 "*Database Events*" テーマ内にある、以下の定数と比較する必要があります:
 
 | 定数                              | 型    | 値 | コメント                                                                                                                                                                                                                                                                       |
 | ------------------------------- | ---- | - | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,15 +38,15 @@ On Host Database Event の典型例を紹介します:
 
 ```4d
   // On Host Database Event データベースメソッド
- var $1 : Integer
+ #DECLARE($event : Integer)
  Case of
-    :($1=On before host database startup)
+    :($event=On before host database startup)
   // この部分にホストデータベースの "On Startup" データベースメソッドの前に実行したいコードを記述します
-    :($1=On after host database startup)
+    :($event=On after host database startup)
   // この部分にホストデータベースの "On Startup" データベースメソッドの後に実行したいコードを記述します
-    :($1=On before host database exit)
+    :($event=On before host database exit)
   // この部分にホストデータベースの "On Exit" データベースメソッドの前に実行したいコードを記述します
-    :($1=On after host database exit)
+    :($event=On after host database exit)
   // この部分にホストデータベースの "On Exit" データベースメソッドの後に実行したいコードを記述します
  End case
 ```

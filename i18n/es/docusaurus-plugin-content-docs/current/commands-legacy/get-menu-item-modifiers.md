@@ -20,14 +20,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item modifiers.Summary-->El comando Get menu item modifiers devuelve los modificadores adicionales asociados a los atajos de teclado estándar de la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF-->
 
-El atajo estándar está compuesto por la tecla **Comando** (Mac OS) o **Ctrl** (Windows) y de una tecla personalizada. El atajo estándar se administra utilizando los comandos [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md "SET MENU ITEM SHORTCUT") y [Get menu item key](get-menu-item-key.md "Get menu item key").
+El atajo estándar está compuesto por la tecla **Comando** (macOS) o **Ctrl** (Windows) y de una tecla personalizada. El atajo estándar se administra utilizando los comandos [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md "SET MENU ITEM SHORTCUT") y [Get menu item key](get-menu-item-key.md "Get menu item key").
 
-Los modificadores adicionales son la tecla **Mayús**  y la tecla Opción (Mac OS) /Alt (Windows). Estos modificadores sólo pueden utilizarse cuando un atajo estándar ha sido definido de antemano.
+Los modificadores adicionales son la tecla **Mayús**  y la tecla Opción (macOS) /Alt (Windows). Estos modificadores sólo pueden utilizarse cuando un atajo estándar ha sido definido de antemano.
 
 El valor del número devuelto por el comando corresponde al código de las teclas de modificación adicionales. Los códigos de las teclas son los siguientes:
 
 * **Mayús** \= 512
-* **Opción** (Mac OS) o **Alt** (Windows) = 2048
+* **Opción** (macOS) o **Alt** (Windows) = 2048
 
 Si se utilizan ambas teclas, sus valores se combinan.
 

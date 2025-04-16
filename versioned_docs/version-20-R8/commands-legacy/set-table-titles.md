@@ -62,10 +62,9 @@ In your database, add the following table:
   //TRANSLATE TABLES AND FIELDS (Text)
   //TRANSLATE TABLES AND FIELDS (LanguageCode)
  
- var $1 : Text //language code
+ #DECLARE($Language : Text) //language code
  var $vlTable;$vlField : Integer
- var $Language : Text
- $Language:=$1
+ 
  
  For($vlTable;1;Last table number) //Pass through each table
     If($vlTable#(Table(->[Translations]))) //Do not translate table of translations
@@ -141,11 +140,11 @@ with the project method LOCALIZED TABLES AND FIELDS:
   //LOCALIZED TABLES AND FIELDS (Text)
   //LOCALIZED TABLES AND FIELDS (LanguageCode)
  
- var $1 : Text //Language code
+ #DECLARE($Language : Text) //Language code
  var $vlTable;$vlField : Integer
- var $Language : Text
+ 
  var $vlTableNum;$vlFieldNum : Integer
- $Language:=$1
+ 
  
   //Updating table names
  ARRAY TEXT($asNames;0) //Initialize arrays for SET TABLE TITLES and SET FIELD TITLES

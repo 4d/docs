@@ -23,7 +23,7 @@ Vous passez le nom ou le chemin d'accès complet du nouveau document dans *docum
 
 Si vous passez une chaîne vide dans *document*, une boîte de dialogue standard d'enregistrement de fichiers apparaît et l'utilisateur peut spécifier le nom du document. Si dans ce cas l'utilisateur clique sur le bouton **Annuler**, **Create document** retourne une référence de document nulle, et la variable OK prend la valeur 0.
 
-**Create document** crée par défaut un document de type TEXT (Mac OS) ou .TXT (Windows). Pour créer un autre type de document, passez un type dans le paramètre optionnel *typeFichier*.
+**Create document** crée par défaut un document de type TEXT (macOS) ou .TXT (Windows). Pour créer un autre type de document, passez un type dans le paramètre optionnel *typeFichier*.
 
 Si vous utilisez la boîte de dialogue standard d'enregistrement de fichiers, vous pouvez passer dans le paramètre *typeFichier* un ou plusieurs type(s) de fichier(s) afin de configurer la liste des types autorisés dans la boîte de dialogue. Vous pouvez passer une liste de plusieurs types séparés par un ; (point virgule). Pour chaque type défini, une ligne sera ajoutée dans le menu de choix de type de la boîte de dialogue.   
 Sous Mac OS, vous pouvez passer soit type Mac OS classique (TEXT, APPL, etc.), soit un type UTI (Uniform Type Identifier). Les types UTIs ont été définis par Apple afin de répondre aux besoins d'uniformisation des types de fichiers. Par exemple, "public.text" est le type UTI des fichiers de type texte. Pour plus d'informations sur les UTIs, reportez-vous à l'adresse *https://developer.apple.com/library/mac/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html* (documentation en anglais).   

@@ -21,12 +21,12 @@ displayed_sidebar: docs
 <!--REF #_command_.Get menu item modifiers.Summary-->Get menu item modifiers コマンドは、*menu*と*menuItem*引数で指定したメニュー項目の、標準ショートカットに割り当てられた追加のモディファイアキーを返します。<!-- END REF-->  
 標準ショートカットはCtrl (Windows) または Command (Macintosh) とカスタムキーの組み合わせで構成されます。標準ショートカットは[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md "SET MENU ITEM SHORTCUT") と [Get menu item key](get-menu-item-key.md "Get menu item key")コマンドを使用して管理されます。
 
-追加のモディファイアキーはShift キーおよびOption (Mac OS) /Alt (Windows) キーです。これらのモディファイアは、すでに標準ショートカットが指定されているときにのみ使用されます。
+追加のモディファイアキーはShift キーおよびOption (macOS) /Alt (Windows) キーです。これらのモディファイアは、すでに標準ショートカットが指定されているときにのみ使用されます。
 
 このコマンドから返される番号は、追加のモディファイアキーのコードに対応します。キーのコードは以下のとおりです:
 
 * **Shift**\= 512
-* **Option** (Mac OS) または **Alt** (Windows) = 2048
+* **Option** (macOS) または **Alt** (Windows) = 2048
 
 両方のキーが使用されているとき、これらの値は加算されます。
 

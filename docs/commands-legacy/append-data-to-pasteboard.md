@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard. 
 
-In *dataType*, pass a value specifying the type of data to be added. You can pass a 4D signature, a UTI type (Mac OS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
+In *dataType*, pass a value specifying the type of data to be added. You can pass a 4D signature, a UTI type (macOS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
 
 **Note for Windows users:** When the command is used with Text type data (*dataType* is "TEXT", com.4d.private.text.native or com.4d.private.text.utf16), the string contained in the BLOB parameter *data* must end with the NULL character under Windows. 
 

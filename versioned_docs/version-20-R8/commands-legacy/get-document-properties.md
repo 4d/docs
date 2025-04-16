@@ -47,18 +47,14 @@ The Time stamp project method listed below calculates the time stamp for a speci
   // Time stamp { ( date ; Time ) } -> Long
   // Time stamp { ( date ; Time ) } -> Number of seconds since Jan, 1st 1995
  
- var $1;$vdDate : Date
- var $2;$vhTime : Time
- var $0 : Integer
+ #DECLARE ($vdDate : Date ; $vhTime : Time) : Integer
  
  If(Count parameters=0)
     $vdDate:=Current date
     $vhTime:=Current time
- Else
-    $vdDate:=$1
-    $vhTime:=$2
  End if
- $0:=(($vdDate-!01/01/95!)*86400)+$vhTime
+ return (($vdDate-!01/01/95!)*86400)+$vhTime
+
 ```
 
 **Note:** Using this method, you can encode dates and times from the *01/01/95* at *00:00:00* to the *01/19/2063* at *03:14:07* which cover the long integer range *0* to *2^31* minus one.
@@ -70,19 +66,17 @@ Conversely, the Time stamp to date and Time stamp to time project methods listed
   // Time stamp to date ( Long ) -> Date
   // Time stamp to date ( Time stamp ) -> Extracted date
  
- var $0 : Date
- var $1 : Integer
- 
- $0:=!01/01/95!+($1\86400)
+#DECLARE ($timeStamp : Integer) : Date
+
+return !01/01/95!+($timeStamp\86400)
  
   // Time stamp to time Project Method
   // Time stamp to time ( Long ) -> Date
   // Time stamp to time ( Time stamp ) -> Extracted time
  
- var $0 : Time
- var $1 : Integer
- 
- $0:=Time(Time string(†00:00:00†+($1%86400)))
+#DECLARE ($timeStamp : Integer) : Time
+
+return Time(Time string(?00:00:00?+($timeStamp %86400)))
 ```
 
 For ensuring that the records have their time stamps correctly updated no matter the way they are created or modified, we just need to enforce that rule using the trigger of the table *\[Documents\]*:
@@ -103,7 +97,7 @@ Once this is implemented in the database, we have all we need to write the proje
 ```4d
   // CREATE DOCUMENTATION Project Method
  
- C_STRING(255;$vsPath;$vsDocPathName;$vsDocName)
+ C_TEXT($vsPath;$vsDocPathName;$vsDocName)
  var $vlDoc : Integer
  var $vbOnWindows;$vbDoIt;$vbLocked;$vbInvisible : Boolean
  var $vhDocRef;$vhCreatedAt;$vhModifiedAt : Time

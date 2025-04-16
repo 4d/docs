@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
 | objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | url | Text | &#8592; | URL al origen del error |
-| descripcion | Text | &#8592; | Descripción del error (Mac OS) |
+| descripcion | Text | &#8592; | Descripción del error (macOS) |
 | codigoError | Integer | &#8592; | Código de error |
 
 <!-- END REF-->
@@ -31,7 +31,7 @@ Esta información se devuelve en tres variables:
 
 *http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.htm*l
 
-\- De lo contrario, es un error devuelto por el WebKit (Mac OS) o ActiveX (Windows).
+\- De lo contrario, es un error devuelto por el WebKit (macOS) o ActiveX (Windows).
 
 Es recomendable llamar este comando dentro del marco del evento de formulario On URL Loading Error con el fin de conocer la causa del error que acaba de ocurrir.
 

@@ -5,11 +5,11 @@ slug: /commands/on-host-database-event-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Host Database Event database method.Syntax-->$1 -> On Host Database Event database method<!-- END REF-->
+<!--REF #_command_.On Host Database Event database method.Syntax-->On Host Database Event (*$event* : Integer)<!-- END REF-->
 <!--REF #_command_.On Host Database Event database method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | Code d'événement |
+| $event | Integer | &#8592; | Code d'événement |
 
 <!-- END REF-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 La **On Host Database Event database method** est exécutée uniquement dans les bases utilisées en tant que composants de bases hôtes (lorsqu’elle est autorisée dans les Propriétés de la base hôte). Elle est appelée lorsque des événements liés à l’ouverture et la fermeture de la base hôte se produisent. 
 
-Pour traiter un événement, vous devez tester la valeur du paramètre *$1* à l’intérieur de la méthode, et la comparer à l’une des constantes suivantes, placées dans le thème *Evénements de la base* :
+Pour traiter un événement, vous devez tester la valeur du paramètre *$event* à l’intérieur de la méthode, et la comparer à l’une des constantes suivantes, placées dans le thème *Evénements de la base* :
 
 | Constante                       | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,18 +38,18 @@ Exemple de structure type d’une méthode base sur événement base hôte :
 
 ```4d
      // Méthode base sur événement base hôte
- var $1 : Integer
+ #DECLARE($event : Integer)
  Case of
-          :($1=On before host database startup)
+          :($event=On before host database startup)
               // placer ici le code à exécuter avant le "Sur ouverture" de la base hôte
  
-          :($1=On after host database startup)
+          :($event=On after host database startup)
               // placer ici le code à exécuter après le "Sur ouverture" de la base hôte
  
-          :($1=On before host database exit)
+          :($event=On before host database exit)
               // placer ici le code à exécuter avant le "Sur fermeture" de la base hôte
  
-          :($1=On after host database exit)
+          :($event=On after host database exit)
               // placer ici le code à exécuter après le "Sur fermeture" de la base hôte
  End case
 ```

@@ -44,13 +44,13 @@ Quando processa um evento On Before Keystroke, você está administrando a ediç
   // Manejar teclagem ( Ponteiro ; Ponteiro ) -> Booleano
   // Manejar teclagem ( -> srcArea ; -> curValor ) -> É um novo valor
  
- var $1;$2 : Pointer
+ #DECLARE ($srcArea : Pointer ; $curValue : Pointer) -> $newValue : Boolean
  var $vtNovoValor : Text
  
   // Obter o texto selecionado na área editável
- GET HIGHLIGHT($1->;$vlInicio;$vlFim)
+ GET HIGHLIGHT($srcArea->;$vlInicio;$vlFim)
   // Começar a trabalhar com o valor atual
- $vtNovoValor:=$2->
+ $vtNovoValor:=$curValue->
   // Dependendo da tecla pressionada ou do caractere introduzido,
   // Realizar as ações apropriadas
  Case of
@@ -105,9 +105,9 @@ Else
 FILTER KEYSTROKE("")
 End case
   // O valor é diferente agora?
-$0:=($vtNovoValor#$2->)
+$newValue:=($vtNovoValor#$curValue->)
   // Devolver o valor para a gestão do próximo keystroke
-$2->:=$vtNovoValor
+$curValue->:=$vtNovoValor
 ```
 
 Uma vez este método de projeto é adicionada à sua aplicação, pode ser utilizado da seguinte forma: 

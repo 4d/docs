@@ -47,7 +47,6 @@ Assumamos que deseja gerar uma página semidinâmica que mostre as estatísticas
 No método de projeto STATS, escreva o código abaixo:
 
 ```4d
- var $1 : Text
  var vPages : Text
  ARRAY TEXT(paginas;0)
  ARRAY LONGINT(hits;0)

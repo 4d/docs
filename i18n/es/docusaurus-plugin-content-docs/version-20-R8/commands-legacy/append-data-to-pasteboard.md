@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Nota:** en el caso de operaciones copiar/pegar, el contenedor de datos corresponde al Portapapeles. 
 
-Pase en *tipoDatos* un valor definiendo el tipo de datos a añadir. Puede pasar una firma 4D, un tipo UTI (Mac OS), un nombre/número de formato (Windows), o un tipo de 4 caracteres (compatibilidad). Para mayor información sobre estos tipos, consulte la sección . 
+Pase en *tipoDatos* un valor definiendo el tipo de datos a añadir. Puede pasar una firma 4D, un tipo UTI (macOS), un nombre/número de formato (Windows), o un tipo de 4 caracteres (compatibilidad). Para mayor información sobre estos tipos, consulte la sección . 
 
 **Nota para los usuarios Windows**: cuando el comando se utiliza con datos de tipo texto (*tipoDatos* *dataType* rs "TEXT", com.4d.private.text.native o com.4d.private.text.utf16), la cadena contenida en el parámetro BLOB *datos* debe terminar con el carácter NULL en Windows.
 

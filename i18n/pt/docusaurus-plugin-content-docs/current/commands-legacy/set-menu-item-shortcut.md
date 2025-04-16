@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->O comando  SET MENU ITEM SHORTCUT  modifica o atalho Ctrl (Windows) ou comando (Macintosh) para o comando de menu cujos números de menu e de elemento são passados em *menu* e *menuItem,* pelo caracter cujo caractere de código ou texto se passa em *itemKey*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado ao menu. Esta tecla se combinará automaticamente com a tecla **Ctrl** (Windows) ou **Comando** (Macintosh) para definir o novo atalho de teclado.
 
-Pode passar diretamente o nome da tecla como texto (uma letra) no parâmetro *itemKey*, por exemplo "U" para especificar o atalho **Ctrl+U** (Windows) ou **Comando+U** (Mac OS). Quando utilize esta sintaxe, também pode passar o parâmetro opcional modificadores para associar os modificadores adicionais ao atalho. Desta forma pode definir os atalhos de tipo **Ctrl+Alt+Shift+Z** (Windows) ou **Cmd+Opção+Shift+Z** (Mac OS).
+Pode passar diretamente o nome da tecla como texto (uma letra) no parâmetro *itemKey*, por exemplo "U" para especificar o atalho **Ctrl+U** (Windows) ou **Comando+U** (macOS). Quando utilize esta sintaxe, também pode passar o parâmetro opcional modificadores para associar os modificadores adicionais ao atalho. Desta forma pode definir os atalhos de tipo **Ctrl+Alt+Shift+Z** (Windows) ou **Cmd+Opção+Shift+Z** (macOS).
 
 Nota: Pode designar uma tecla F passando "\[Fx\]" ao itemChave, por exemplo "\[F4\]". Nesse caso, o padrão é nenhum modificador ser adicionado.
 
@@ -29,9 +29,9 @@ Em modificadores, pode passar modificadores adicionais ao atalho, tais como a te
 
 Para fazer isto, passe em modificadores os seguintes valores:
 
-* Command key mask para a tecla **Comando** (Mac OS) ou **Ctrl** (Windows)
+* Command key mask para a tecla **Comando** (macOS) ou **Ctrl** (Windows)
 * Shift key mask para a tecla **Shift**
-* Option key mask para a tecla **Opção** (Mac OS) ou **Alt** (Windows)
+* Option key mask para a tecla **Opção** (macOS) ou **Alt** (Windows)
 
 Para estabelecer um atalho para vários modificadores, apenas combine as constantes acima.
 
@@ -47,7 +47,7 @@ Se passar 0 (zero) em *itemKey*, qualquer atalho é removido do item menu.
 
 ## Exemplo 1 
 
-Definição do atalho Ctrl+Shift+U (Windows) e Cmd+Shift+U (Mac OS) para a linha "Sublinhado": 
+Definição do atalho Ctrl+Shift+U (Windows) e Cmd+Shift+U (macOS) para a linha "Sublinhado": 
 
 ```4d
  SET MENU ITEM(MenuRef;1;"Sublinhado")
@@ -56,7 +56,7 @@ Definição do atalho Ctrl+Shift+U (Windows) e Cmd+Shift+U (Mac OS) para a linha
 
 ## Exemplo 2 
 
-Definição do atalho Ctrl+R (Windows) e Cmd+R (Mac OS) para o elemento de menu "Reiniciar":
+Definição do atalho Ctrl+R (Windows) e Cmd+R (macOS) para o elemento de menu "Reiniciar":
 
 ```4d
  INSERT MENU ITEM(FileMenu;-1;"Reiniciar")

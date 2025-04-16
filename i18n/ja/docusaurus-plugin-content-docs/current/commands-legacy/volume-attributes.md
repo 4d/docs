@@ -29,14 +29,14 @@ displayed_sidebar: docs
   // Find volume for space ( 実数 ) -> 文字列
   // Find volume for space ( 必要なサイズ ) -> ボリューム名または空の文字列
  
- C_STRING(31;$0)
+ #DECLARE($space : Real) -> $result : Text
  var $vsDocName : Text
  var $vlNbVolumes;$vlVolume : Integer
- var $1;$vlSize;$vlUsed;$vlFree : Real
+ var $vlSize;$vlUsed;$vlFree : Real
  var $vhDocRef : Time
  
   //戻り値を初期化する
- $0:=""
+ $result:=""
   //エラー阻止メソッドを使用して、すべてのI/O処理を保護する
  ON ERR CALL("ERROR METHOD")
   //ボリュームのリストを取得する
@@ -63,7 +63,7 @@ displayed_sidebar: docs
        VOLUME ATTRIBUTES($asVolumes{$vlVolume};$vlSize;$vlUsed;$vlFree)
        If(gError=0)
   //空きサイズは十分にありますか(必要なサイズに32KBを加えたサイズ) ?
-          If($vlFree>=($1+32768))
+          If($vlFree>=($space+32768))
   //もし十分であれば、ボリュームがアンロックされているかどうかをチェック...
              $vsDocName:=$asVolumes{$vlVolume}+Char(Directory symbol)+"XYZ"+String(Random)+".TXT"
              $vhDocRef:=Create document($vsDocName)
@@ -71,7 +71,7 @@ displayed_sidebar: docs
                 CLOSE DOCUMENT($vhDocRef)
                 DELETE DOCUMENT($vsDocName)
   //すべて問題がなければ、ボリュームの名前を返す
-                $0:=$asVolumes{$vlVolume}
+                $result:=$asVolumes{$vlVolume}
                 $vlVolume:=$vlNbVolumes+1
              End if
           End if

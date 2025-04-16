@@ -5,14 +5,14 @@ slug: /commands/on-server-open-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Server Open Connection database method.Syntax-->$1, $2, $3 -> On Server Open Connection database method -> $0<!-- END REF-->
+<!--REF #_command_.On Server Open Connection database method.Syntax-->On Server Open Connection($user : Integer ; $id : Integer ; $toIgnore : Integer) -> $status : Boolean<!-- END REF-->
 <!--REF #_command_.On Server Open Connection database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | Número de usuário utilizado internamente por 4D Server para identificar os usuários |
-| $2 | Integer | &#8592; | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
-| $3 | Integer | &#8592; | Obsoleto: devolve sempre 0 (mas deve ser declarado) |
-| $0 | Integer | &#8592; | 0 se omitido = conexão aceita; outro valor = conexão rejeitada |
+| $user | Integer | &#8592; | Número de usuário utilizado internamente por 4D Server para identificar os usuários |
+| $id | Integer | &#8592; | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
+| $toIgnore | Integer | &#8592; | Obsoleto: devolve sempre 0 (mas deve ser declarado) |
+| $status | Integer | &#8592; | 0 se omitido = conexão aceita; outro valor = conexão rejeitada |
 
 <!-- END REF-->
 
@@ -52,18 +52,18 @@ Quando o On Server Open Connection database method acede a uma variável process
 4D Server passa três parâmetros de tipo Inteiro longo ao On Server Open Connection database method e espera um resultado Inteiro longo. O método deve portanto ser declarado explicitamente com três parâmetros Inteiro longo assim também como com um resultado de função Inteiro longo:
 
 ```4d
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
 ```
 
-Se não devolve um valor em *$0*, por conseguinte deixa a variável indefinida ou inicializada em zero, 4D Server considera que o método base aceita a conexão. Se não é aceitada a conexão, devolve um valor não nulo em *$0*.
+Se não devolve um valor em *$result*, por conseguinte deixa a variável indefinida ou inicializada em zero, 4D Server considera que o método base aceita a conexão. Se não é aceitada a conexão, devolve um valor não nulo em *$result*.
 
 Esta tabela detalha a informação oferecida pelos três parâmetros passados no método base:
 
 | **Parâmetro** | **Descrição**                                                              |
 | ------------- | -------------------------------------------------------------------------- |
-| $1            | Número de usuário utilizado internamente por 4D Server para identificá-los |
-| $2            | Número de conexão utilizado internamente por 4D Server para identificá-la  |
-| $3            | Obsoleto: sempre devolve 0 mas deve ser declarado                          |
+| $user            | Número de usuário utilizado internamente por 4D Server para identificá-los |
+| $id            | Número de conexão utilizado internamente por 4D Server para identificá-la  |
+| $toIgnore            | Obsoleto: sempre devolve 0 mas deve ser declarado                          |
 
 Estes números de referencia não são utilizados diretamente como fontes de informação a passar, por exemplo, como parâmetros a um comando 4D. No entanto, oferecem uma maneira particular de identificar um processo 4D Client entre o On Server Open Connection database method e o [On Server Close Connection database method](on-server-close-connection-database-method.md). A combinação destes valores é único no momento de uma seção 4D Server. Ao guardar esta informação em uma tabela ou em um array entre processos, os dois métodos base podem trocar informações. No exemplo ao final desta sessão, os dois métodos base utilizam esta informação para armazenar a data e hora de inicio e fim de uma conexão no mesmo registro de uma tabela.
 
@@ -78,7 +78,7 @@ A informação armazenada nesta tabela é administrada pelo On Server Open Conne
 ```4d
   // Método base On Server Open Connection
  
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
   // Criar um registro [Server Log]
  CREATE RECORD([Server Log])
  [Server Log]Log ID:=Sequence number([Server Log])
@@ -86,17 +86,17 @@ A informação armazenada nesta tabela é administrada pelo On Server Open Conne
  [Server Log]Log Date:=Current date
  [Server Log]Log Time:=Current time
   // Guarda a informação de conexão
- [Server Log]User ID:=$1
- [Server Log]Connection ID:=$2
+ [Server Log]User ID:=$user
+ [Server Log]Connection ID:=$id
  SAVE RECORD([Server Log])
   // Não devolve erro de maneira que a conexão pode continuar
- $0:=0
+ $result:=0
  
   // Método base On Server Close Connection
- var $1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer)
   // Recuperar o registro [Server Log]
- QUERY([Server Log];[Server Log]User ID=$1;*)
- QUERY([Server Log];&;[Server Log]Connection ID=$2;*)
+ QUERY([Server Log];[Server Log]User ID=$user;*)
+ QUERY([Server Log];&;[Server Log]Connection ID=$id;*)
  QUERY([Server Log];&;[Server Log]Process ID=0)
   // Guardar data e hora de desconexão
  [Server Log]Exit Date:=Current date
@@ -118,7 +118,7 @@ O seguinte exemplo evita uma nova conexão entre as 2 e 4 A.M.
 
 ```4d
   // Método base On Server Open Connection
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
  
  If((?02:00:00?<=Current time)&(Current time
 ```

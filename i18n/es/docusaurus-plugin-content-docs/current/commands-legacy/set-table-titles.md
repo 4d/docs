@@ -61,43 +61,42 @@ Ejecutar **SET TABLE TITLES** sin parámetros reiniciará toda la estructura vir
   // TRADUCIR_TABLAS_Y_CAMPOS (Text)
   // TRADUCIR_TABLAS_Y_CAMPOS (LanguageCode)
  
- var $1 : Text //código del idioma
+ #DECLARE($Language : Text) //código del idioma
  var $vlTabla;$vlCampo : Integer
- var $Idioma : Text
- $Idioma:=$1
+
  
  For($vlTabla;1;Last table number) //Pasar por cada tabla
     If($vlTabla#(Table(->[Traducciones]))) //No traducir la tabla de traducciones
   //Verificar si existe una traducción de nombre de la tabla para el idioma especificado
-       QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Idioma;*) //idioma deseado
+       QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Language;*) //idioma deseado
        QUERY([Traducciones];&;[Traducciones]Tabla_ID=$vlTabla;*) //Número de tabla
        QUERY([Traducciones];&;[Traducciones]Campo_ID=0) //número de campo = 0 significa que es un nombre de tabla
        If(Is table number valid($vlTabla)) //verificar que la tabla aún existe
           If(Records in selection([Traducciones])=0)
   //De lo contrario, crear el registro
              CREATE RECORD([Traducciones])
-             [Traducciones]Codigo_Idioma:=$Idioma
+             [Traducciones]Codigo_Idioma:=$Language
              [Traducciones]Tabla_ID:=$vlTabla
              [Traducciones]Campo_ID:=0
   //El nombre de la tabla traducida deberá introducirse
-             [Traducciones]Traduccion:=Table name($vlTabla)+" en "+$Idioma
+             [Traducciones]Traduccion:=Table name($vlTabla)+" en "+$Language
              SAVE RECORD([Traducciones])
           End if
  
           For($vlCampo;1;Obtener número del último campo($vlTabla))
   //Verificar si exise una traducción para el nombre del campo en el idioma especificado
-             QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Idioma;*) //idioma deseado
+             QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Language;*) //idioma deseado
              QUERY([Traducciones];&;[Traducciones]Tabla_ID=$vlTabla;*) //número de tabla
              QUERY([Traducciones];&;[Traducciones]Campo_ID=$vlCampo) //número de campo
              If(Is field number valid($vlTabla;$vlCampo))
                 If(Records in selection([Traducciones])=0)
   //De lo contrario, crear el registro
                    CREATE RECORD([Traducciones])
-                   [Traducciones]Codigo_Idioma:=$Idioma
+                   [Traducciones]Codigo_Idioma:=$Language
                    [Traducciones]Tabla_ID:=$vlTabla
                    [Traducciones]Campo_ID:=$vlCampo
   //El nombre del campo traducido debe introducirse
-                   [Traducciones]Traduccion:=Field name($vlTabla;$vlCampo)+"en "+$Idioma
+                   [Traducciones]Traduccion:=Field name($vlTabla;$vlCampo)+"en "+$Language
                    SAVE RECORD([Traducciones])
                 End if
              Else
@@ -137,16 +136,14 @@ con el método de proyecto TABLAS\_Y\_CAMPOS\_LOCALIZADOS:
   // TABLAS_Y_CAMPOS_LOCALIZADOS (Text)
   // TABLAS_Y_CAMPOS_LOCALIZADOS (LanguageCode)
  
- var $1 : Text //Código del idioma
+ #DECLARE($Language : Text) //Código del idioma
  var $vlTabla;$vlCampo : Integer
- var $Idioma : Text
  var $vlNumTabla;$vlNumCampo : Integer
- $Idioma:=$1
  
   //Actualización de los nombres de tablas
  ARRAY TEXT($asNombres;0) //Inicializar los arrays para SET TABLE TITLES y SET FIELD TITLES
  ARRAY INTEGER($aiNumeros;0)
- QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Idioma;*)
+ QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Language;*)
  QUERY([Traducciones];&;[Traducciones]Campo_ID=0) //nombres de tablas
  SELECTION TO ARRAY([Traducciones]Traduccion;$asNombres;[Traducciones]Tabla_ID;$aiNumeros)
  SET TABLE TITLES($asNombres;$aiNumeros)
@@ -155,7 +152,7 @@ con el método de proyecto TABLAS\_Y\_CAMPOS\_LOCALIZADOS:
  $vlNumTabla:=Last table number //Obtener el número de tablas en la base
  For($vlTabla;1;$vlNumTabla) //Pasar por cada tabla
     If(Is table number valid($vlTabla))
-       QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Idioma;*)
+       QUERY([Traducciones];[Traducciones]Codigo_Idioma=$Language;*)
        QUERY([Traducciones];&;[Traducciones]Tabla_ID=$vlTabla;*)
        QUERY([Traducciones];&;[Traducciones]Campo_ID#0) //evite que el cero sea nombre de tabla
        SELECTION TO ARRAY([Traducciones]Traduccion;$asNombres;[Traducciones]Campo_ID;$aiNumeros)

@@ -47,12 +47,12 @@ The DEBUG project method is listed here:
   // DEBUG (Text)
   // DEBUG (Optional Debug Information)
  
- var $1 : Text
+ #DECLARE($debugInfo : Text)
  
- If(◊vbDebugOn) // Interprocess variable set in the On Startup Method
+ If(<>vbDebugOn) // Interprocess variable set in the On Startup Method
     If(Is compiled mode)
        If(Count parameters>=1)
-          ALERT($1+Char(13)+"Call Designer at x911")
+          ALERT($debugInfo+Char(13)+"Call Designer at x911")
        End if
     Else
        TRACE

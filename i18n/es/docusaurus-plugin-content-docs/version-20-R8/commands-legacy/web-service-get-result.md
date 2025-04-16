@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Summary-->El comando **WEB SERVICE GET RESULT** permite recuperar un valor enviado por el servicio web como resultado del proceso realizado.<!-- END REF-->este comando debe utilizarse únicamente después del comando [WEB SERVICE CALL](web-service-call.md). 
 
-El parámetro *valorDevuelto* recibe el valor reenviado por el servicio web. Pase en este parámetro una variable 4D. Esta variable es generalmente $0, que corresponde al valor devuelto por el método proxy. Sin embargo, es posible utilizar variables intermediarias (debe utilizar las variables de proceso únicamente). 
+El parámetro *valorDevuelto* recibe el valor reenviado por el servicio web. Pase en este parámetro una variable 4D. Esta variable es generalmente $result, que corresponde al valor devuelto por el método proxy. Sin embargo, es posible utilizar variables intermediarias (debe utilizar las variables de proceso únicamente). 
 
 **Nota:** cada variable 4D o array utilizado debe ser declarado previamente utilizando los comandos de los temas “Compilador” y “Arrays”.
 
@@ -32,16 +32,14 @@ El parámetro opcional *\*,* indica al programa que libere la memoria dedicada a
 Imagine un servicio web que devuelve la hora actual en cualquier ciudad del mundo. Los parámetros recibidos por el servicio web son el nombre de la ciudad y el código del país. El servicio web devuelve la correspondiente. El método proxy de llamada puede ser de la siguiente forma:
 
 ```4d
- var $1 : Text
- var $2 : Text
- var $0 : Time
- WEB SERVICE SET PARAMETER("ciudad";$1)
- WEB SERVICE SET PARAMETER("codigo_pais";$2)
+ #DECLARE($param1 : Text ; $param2 : Text) -> $result : Time
+ WEB SERVICE SET PARAMETER("ciudad";$param1)
+ WEB SERVICE SET PARAMETER("codigo_pais";$param2)
  
  WEB SERVICE CALL("http://www.ciudadesdelmundo.com/WS";"WSTime#City_time";"City_time";"http://www.ciudadesdelmundo.com/namespace/default")
  
  If(OK=1)
-    WEB SERVICE GET RESULT($0;"devolver";*)
+    WEB SERVICE GET RESULT($result;"devolver";*)
  End if
 ```
 

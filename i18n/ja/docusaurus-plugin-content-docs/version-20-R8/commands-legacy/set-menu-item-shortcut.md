@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 例題 1 
 
-"下線"メニュー項目に Ctrl+Shift+U (Windows) と Cmd+Shift+U (Mac OS) ショートカットを定義します:
+"下線"メニュー項目に Ctrl+Shift+U (Windows) と Cmd+Shift+U (macOS) ショートカットを定義します:
 
 ```4d
  SET MENU ITEM(menuRef;1;"Underline")
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 ## 例題 2 
 
-Ctrl+R (Windows) や Cmd+R (Mac OS) ショートカットを"再起動"メニュー項目に割り当てます:
+Ctrl+R (Windows) や Cmd+R (macOS) ショートカットを"再起動"メニュー項目に割り当てます:
 
 ```4d
  INSERT MENU ITEM(FileMenu;-1;"Restart")

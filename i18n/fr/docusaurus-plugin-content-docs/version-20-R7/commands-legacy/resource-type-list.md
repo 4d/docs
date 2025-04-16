@@ -56,14 +56,12 @@ La méthode projet suivante retourne le nombre de ressources présentes dans un 
   // Compter ressources ( Heure ) -> Entier long
   // Compter ressources ( DocRef ) -> Nombre de ressources
  
- var $0 : Integer
- var $1 : Time
- 
- $0:=0
- RESOURCE TYPE LIST($atResType;$1)
+ #DECLARE($doc : Time) -> $result : Integer
+ $result:=0
+ RESOURCE TYPE LIST($atResType;$doc)
  For($vlElem;1;Size of array($atResType))
-    RESOURCE LIST($atResType{$vlElem};$alResID;$atResName;$1)
-    $0:=$0+Size of array($alResID)
+    RESOURCE LIST($atResType{$vlElem};$alResID;$atResName;$doc)
+    $result:=$result+Size of array($alResID)
  End for
 ```
 

@@ -34,15 +34,15 @@ displayed_sidebar: docs
 
 | **引数** | **型** | **詳細**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $1     | 倍長整数  | エリア参照                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| $2     | 倍長整数  | 選択されたコマンドの数。*QR Commands* テーマの以下の定数と比較することができます(ここにあるイベントのみがサポートされます): <table> <thead> <tr> <td>定数</td> <td>値</td> <td>コメント</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>[QR RUN](qr-run.md) コマンドの使用が推奨されます</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
+| $area     | 倍長整数  | エリア参照                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| $command     | 倍長整数  | 選択されたコマンドの数。*QR Commands* テーマの以下の定数と比較することができます(ここにあるイベントのみがサポートされます): <table> <thead> <tr> <td>定数</td> <td>値</td> <td>コメント</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>[QR RUN](qr-run.md) コマンドの使用が推奨されます</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
 
-**注:** データベースをコンパイルする場合、たとえ使用しなかったとしても$1 と$2 引数を明示的に倍長整数として宣言する必要があります。
+**注:** データベースをコンパイルする場合、たとえ使用しなかったとしても$area と$command 引数を明示的に倍長整数として宣言する必要があります。
 
 ユーザーによって最初に選択されたコマンドを実行したい場合、引数の*methodName* メソッド内において、以下の宣言を使用してください:
 
 ```4d
- QR EXECUTE COMMAND($1;$2)
+ QR EXECUTE COMMAND($area;$command)
 ```
 
 *methodName* 引数が空の文字列("") である、または省略された場合、メソッドは何も呼ばれず、**QR REPORT** の標準の操作が適用されます。
@@ -105,13 +105,13 @@ displayed_sidebar: docs
 レポートが生成される際、 myCallbackMeth メソッドによってレポートを変換します:
 
 ```4d
- var $1;$2 : Integer
- If($2=qr cmd generate) //レポートが生成されたとき
+ #DECLARE($area : Integer ; $command : Integer)
+ If($command=qr cmd generate) //レポートが生成されたとき
     var $myblob : Blob
     var $path;$text : Text
     var $type : Integer
-    QR EXECUTE COMMAND($1;$2) //コマンドの実行
-    QR GET DESTINATION($1;$type;$path) //型の取得
+    QR EXECUTE COMMAND($area;$command) //コマンドの実行
+    QR GET DESTINATION($area;$type;$path) //型の取得
     If(($type=qr HTML file)|($type=qr text file))
        DOCUMENT TO BLOB($path;$myblob)
   //UTF-8を使用してテキストへと変更
@@ -122,7 +122,7 @@ displayed_sidebar: docs
        BLOB TO DOCUMENT($path;$myblob)
     End if
  Else //そうでなければ、コマンドを実行
-    QR EXECUTE COMMAND($1;$2)
+    QR EXECUTE COMMAND($area;$command)
  End if
 ```
 

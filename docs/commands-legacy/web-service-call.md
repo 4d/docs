@@ -61,9 +61,9 @@ The following table shows all the possible configurations as well as the corresp
 | --------------------- | ---------------------- | --------------------- |
 | **Output parameters** | **Simple**             | **Complex**           |
 | **Simple**            | Web Service dynamic    | Web Service manual in |
-| | (RPC mode)          | (RPC mode)             |                       |
+| | (RPC mode)          | (RPC mode)             |
 | **Complex**           | Web Service manual out | Web Service manual    |
-| (RPC mode)            | (RPC or DOC mode)      |                       |
+| | (RPC mode)            | (RPC or DOC mode)      |  
 
 The five configurations described below can therefore be implemented. In all cases, 4D will handle the formatting of the SOAP request to be sent to the Web Service as well as its envelope. It is up to you to format the contents of this request according to the configuration used. 
 
@@ -86,12 +86,11 @@ It is up to you to format the initial BLOB as a valid XML element. As its first 
 **Example**  
 
 ```4d
- var $1 : Blob
- var $0 : Boolean
- 
- WEB SERVICE SET PARAMETER("MyXMLBlob";$1)
+ #DECLARE($param : Blob) -> $result : Boolean 
+
+ WEB SERVICE SET PARAMETER("MyXMLBlob";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual in)
- WEB SERVICE GET RESULT($0;"MyOutputVar";*)
+ WEB SERVICE GET RESULT($result;"MyOutputVar";*)
 ```
 
 ### RPC mode, simple input and complex output 
@@ -101,12 +100,10 @@ In this case, the *complexType* parameter contains the Web Service manual out co
 **Example**  
 
 ```4d
- var $0 : Blob
- var $1 : Boolean
- 
- WEB SERVICE SET PARAMETER("MyInputVar";$1)
+ #DECLARE($param : Blob) -> $result : Blob 
+ WEB SERVICE SET PARAMETER("MyInputVar";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual out)
- WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
+ WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
 ```
 
 ### RPC mode, complex input and output 
@@ -116,12 +113,11 @@ In this case, the *complexType* parameter contains the Web Service manual consta
 **Example**  
 
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MyXMLInputBlob";$1)
+ WEB SERVICE SET PARAMETER("MyXMLInputBlob";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual)
- WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
+ WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
 ```
 
 ### DOC mode 
@@ -133,12 +129,11 @@ The only difference between these two configurations lies at the level of the XM
 **Example**  
 
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MyXMLInput";$1)
+ WEB SERVICE SET PARAMETER("MyXMLInput";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual)
- WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
+ WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
 ```
 
 **Note:** In the case of DOC Web Services, the value of the strings (“MyXMLInput” and “MyXMLOutput” above) passed as parameters is of no importance; it is even possible to pass empty strings "". In fact, these values are not used in the SOAP request containing the XML document. It is, nevertheless, mandatory to pass these parameters. 

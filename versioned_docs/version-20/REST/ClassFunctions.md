@@ -460,17 +460,13 @@ In this example, we associate an existing school to a Students entity. The `Stud
 
 Class extends Entity
 
-exposed Function putToSchool()
-	var $1, $school , $0, $status : Object
+exposed Function putToSchool($school : Object) -> $status : Object
 
-		//$1 is a Schools entity
-	$school:=$1
+		//$school is a Schools entity
 		//Associate the related entity school to the current Students entity
 	This.school:=$school
 
 	$status:=This.save()
-
-	$0:=$status
 ```
 
 You run this request, called on a Students entity : 

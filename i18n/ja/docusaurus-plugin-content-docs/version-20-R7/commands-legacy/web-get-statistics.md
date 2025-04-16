@@ -44,7 +44,6 @@ Webキャッシュの統計を表示するセミダイナミックなページ�
 STATSプロジェクトメソッドには以下のコードを書きます:
 
 ```4d
- var $1 : Text
  var vPages : Text
  ARRAY TEXT(pages;0)
  ARRAY LONGINT(hits;0)

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Nota**: este comando deve ser utilizado apenas depois do comando [WEB SERVICE CALL](web-service-call.md).  
   
-O parâmetro *valorRetornado* recebe o valor reenviado pelo serviço web. Passe neste parâmetro uma variável 4D. Esta variável é geralmente $0, que corresponde ao valor retornado pelo método proxy. Entretanto, é possível utilizar variáveis intermediárias (deve utilizar as variáveis de processo apenas).  
+O parâmetro *valorRetornado* recebe o valor reenviado pelo serviço web. Passe neste parâmetro uma variável 4D. Esta variável é geralmente $result, que corresponde ao valor retornado pelo método proxy. Entretanto, é possível utilizar variáveis intermediárias (deve utilizar as variáveis de processo apenas).  
   
 **Nota**: cada variável 4D ou array utilizado deve ser declarado previamente utilizando os comandos dos temas “*Compilador* e *Arrays*”   
   
@@ -34,18 +34,16 @@ O parâmetro opcional \*, indica ao programa que libere a memória dedicada ao p
 Imagine um serviço web que devolve a hora atual em qualquer cidade do mundo. Os parâmetros recebidos pelo serviço web são o nome da cidade e o código do país. O serviço web devolve a hora correspondente. O método proxy de chamada pode ser da seguinte forma:  
   
 ```4d
- var $1 : Text
- var $2 : Text
- var $0 : Time
+ #DECLARE($param1 : Text ; $param2 : Text) -> $result : Time
  
- SET WEB SERVICE PARAMETER("cidade";$1)
- SET WEB SERVICE PARAMETER("codigo_pais";$2)
+ SET WEB SERVICE PARAMETER("cidade";$param1)
+ SET WEB SERVICE PARAMETER("codigo_pais";$param2)
  
  CALL WEB SERVICE("http://www.cidadesdomundo.com/WS";"WSHoras#Hora_cidade";"Hora_cidade";
  "http://www.cidadesdomundo.com/namespace/default")
  
  If(OK=1)
-    GET WEB SERVICE RESULT($0;"devolve";*)
+    GET WEB SERVICE RESULT($result;"devolve";*)
  End if
 ```
 

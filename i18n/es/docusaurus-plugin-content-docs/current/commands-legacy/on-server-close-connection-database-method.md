@@ -24,16 +24,16 @@ Como para el [Método base On Server Open Connection](metodo-base-on-server-open
 El método debe contener la declaración explícita de tres parámetros Entero largo:
 
 ```4d
- var $1;$2;$3 : Integer
+ #DECLARE($user : Integer ; $id : Integer ; $toIgnore : Integer)
 ```
 
 Esta tabla detalla la información ofrecida por los tres parámetros pasados al método base:
 
 | **Parámetro** | **Descripción**                                                                        |
 | ------------- | -------------------------------------------------------------------------------------- |
-| $1            | Número de usuario utilizado internamente por 4D Server para identificar usuarios       |
-| $2            | Número de conexión utilizado internamente por 4D Server para identificar una conexiónn |
-| $3            | Obsoleto: devuelve siempre 0 pero debe declararse                                      |
+| $user            | Número de usuario utilizado internamente por 4D Server para identificar usuarios       |
+| $id            | Número de conexión utilizado internamente por 4D Server para identificar una conexiónn |
+| $toIgnore            | Obsoleto: devuelve siempre 0 pero debe declararse                                      |
 
 El **Método base On Server Close Connection** es el inverso exacto del [Método base On Server Open Connection](metodo-base-on-server-open-connection.md). Para mayor información y una descripción de este método base, así como para la descripción de los **procesos 4D Client**, ver la descripción de este método base.
 

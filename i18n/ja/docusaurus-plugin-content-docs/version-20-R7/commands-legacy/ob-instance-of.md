@@ -25,9 +25,8 @@ Polygon というクラスを作成した場合を考えます:
 
 ```4d
   //Class: Polygon
- Class constructor
- var $1;$2 : Integer
- This.area:=$1*$2
+ Class constructor($width : Integer; $height : Integer)
+ This.area:=$width*$height
 ```
 
 その後、メソッド内において、以下のように書くことができます:

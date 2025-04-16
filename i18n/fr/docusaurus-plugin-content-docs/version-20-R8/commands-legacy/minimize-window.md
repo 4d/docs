@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre Si omis = Toutes les fenêtres (Windows) ou Fenêtre de premier plan du process courant (Mac OS) |
+| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre Si omis = Toutes les fenêtres (Windows) ou Fenêtre de premier plan du process courant (macOS) |
 
 <!-- END REF-->
 
@@ -36,7 +36,7 @@ Case de zoom/réduction sous Mac OS
 
 Si la ou les fenêtres concernées n'ont pas été préalablement maximisées (manuellement ou à l'aide de [MAXIMIZE WINDOW](maximize-window.md)), la commande ne fait rien. De même, si le type de *fenêtre* ne comporte pas de case de zoom, la commande ne fait rien (pour plus d'informations sur ce point, reportez-vous à la section *Types de fenêtres (compatibilité)*). 
 
-**Note :** Ne confondez pas cette fonction avec la réduction de la fenêtre sous forme d'icône (Windows) ou dans le Dock (Mac OS), accessible par l'intermédiaire du bouton suivant :  
+**Note :** Ne confondez pas cette fonction avec la réduction de la fenêtre sous forme d'icône (Windows) ou dans le Dock (macOS), accessible par l'intermédiaire du bouton suivant :  
 ![](../assets/en/commands/pict39371.fr.png)  
 Windows
 

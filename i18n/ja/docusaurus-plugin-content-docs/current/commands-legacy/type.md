@@ -55,12 +55,12 @@ displayed_sidebar: docs
 | Text array         | 倍長整数 | 18  |
 | Time array         | 倍長整数 | 32  |
 
-Type ファンクションはフィールド、インタープロセス変数、プロセス変数、ローカル変数、そしてこれらのタイプのオブジェクトの逆参照されているポインターに対して適用可能です。**Type** は、プロジェクトメソッドの引数*($1, $2 ... ${...})*、あるいは関数の戻り値*($0)*に対しても適用可能です。
+Type ファンクションはフィールド、インタープロセス変数、プロセス変数、ローカル変数、そしてこれらのタイプのオブジェクトの逆参照されているポインターに対して適用可能です。**Type** は、プロジェクトメソッドの引数*($ptrTable, $flags ... ${...})*、あるいは関数の戻り値*($0)*に対しても適用可能です。
 
 **注:** 
 
 * **Type** ファンクションは、オブジェクトプロパティ*(emp.name)* やコレクション要素(*myColl\[5\]*) などのスカラー式に対して適用することができません。これには、[Value type](value-type.md) コマンドを使用する必要があります。
-* コンパイル済みモードでは、*C\_VARIANT* として宣言されたメソッド引数($0, $1...) に対して**Type** を呼び出した場合、Is variant は返されず、実際のデータ型が返されます([Value type](value-type.md) を呼んだ場合と同じ)
+* コンパイル済みモードでは、*C\_VARIANT* として宣言されたメソッド引数($0, $ptrTable...) に対して**Type** を呼び出した場合、Is variant は返されず、実際のデータ型が返されます([Value type](value-type.md) を呼んだ場合と同じ)
 
 ## 例題 1 
 
@@ -71,16 +71,16 @@ Type ファンクションはフィールド、インタープロセス変数、
   // EMPTY RECORD ( Pointer {; Long } )
   // EMPTY RECORD ( -> [table] { ; type Flags } )
  
- var $1 : Pointer
- var $2;$vlTypeFlags : Integer
+ #DECLARE($ptrTable : Pointer ; $flags : Integer)
+ var $vlTypeFlags : Integer
  
  If(Count parameters>=2)
-    $vlTypeFlags:=$2
+    $vlTypeFlags:=$flags
  Else
     $vlTypeFlags:=0xFFFFFFFF
  End if
- For($vlField;1;Last field number($1))
-    $vpField:=Field(Table($1);$vlField)
+ For($vlField;1;Last field number($ptrTable))
+    $vpField:=Field(Table($ptrTable);$vlField)
     $vlFieldType:=Type($vpField->)
     If($vlTypeFlags ??$vlFieldType )
        Case of

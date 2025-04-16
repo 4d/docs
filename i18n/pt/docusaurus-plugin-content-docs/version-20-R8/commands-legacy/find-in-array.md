@@ -37,11 +37,11 @@ O método de projeto a seguir deleta todos os elementos apagados do string ou ar
   // LIMPAR ARRAY ( Ponteiro )
   // LIMPAR ARRAY ( -> Array de Texto ou Alfa )
  
- var $1 : Pointer
+ #DECLARE ($arrPtr : Pointer) : Pointer
  Repeat
-    $vlElem:=Find in array($1->;"")
+    $vlElem:=Find in array($arrPtr->;"")
     If($vlElem>0)
-       DELETE FROM ARRAY($1->;$vlElem)
+       DELETE FROM ARRAY($arrPtr->;$vlElem)
     End if
  Until($vlElem<0)
 ```
@@ -66,9 +66,10 @@ O método de projeto a seguir selecionar o primeiro elemento de um array cujo po
   // SELECIONAR ELEMENTO( Ponteiro ; Ponteiro)
   //SELECIONAR ELEMENTO ( -> Array Texto ou Alfa ; -> Campo ou variável de tipo Texto ou Alfa )
  
- $1->:=Find in array($1->;$2->)
- If($1->=-1)
-    $1->:=0 // Se um elemento não é encontrado, fixar o array em um elemento não selecionado
+ #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
+$arrPtr->:=Find in array($arrPtr->; $varPtr->)
+ If($tabPtr->=-1)
+    $tabPtr->:=0 // Se um elemento não é encontrado, fixar o array em um elemento não selecionado
  End if
 ```
 

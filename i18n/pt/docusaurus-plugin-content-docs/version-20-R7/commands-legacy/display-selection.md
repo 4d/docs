@@ -50,7 +50,7 @@ Algumas regras relacionadas com o parâmetro opcional \*:
 \- Se o primeiro parâmetro opcional *\** for especificado, o registro único será mostrado no formulário de saída.  
 \- Se o primeiro parâmetro opcional *\** for especificado e o usuário mostrar o registro no formulário de entrada fazendo duplo clique sobre ele, as barras de rolagem do formulário serão ocultadas. Para anular este efeito, passe o segundo parâmetro opcional *\**.  
   
-Pode colocar botões personalizados na área de cabeçalho ou de rodapé do formulário de saída para terminar a execução do comando DISPLAY SELECTION. Pode utilizar os botões automáticos Aceitar ou Cancelar para sair, ou utilizar um método de objeto que chame aos comandos [ACCEPT](accept.md) ou [CANCEL](cancel.md). Quando um formulário de saída chamado pelo comando DISPLAY SELECTION não tem botões, apenas a tecla **Escape** (Windows) ou **Esc** (Mac OS) permitem sair da lista.  
+Pode colocar botões personalizados na área de cabeçalho ou de rodapé do formulário de saída para terminar a execução do comando DISPLAY SELECTION. Pode utilizar os botões automáticos Aceitar ou Cancelar para sair, ou utilizar um método de objeto que chame aos comandos [ACCEPT](accept.md) ou [CANCEL](cancel.md). Quando um formulário de saída chamado pelo comando DISPLAY SELECTION não tem botões, apenas a tecla **Escape** (Windows) ou **Esc** (macOS) permitem sair da lista.  
   
 Durante e depois da execução de DISPLAY SELECTION, os registros que o usuário selecionar serão conservados em um conjunto chamado UserSet. UserSet está disponível através de DISPLAY SELECTION aos métodos de objeto dos botões, aos métodos chamados pelos comandos de menu, assim como para o método de projeto que chamou DISPLAY SELECTION.
 

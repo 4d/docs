@@ -40,7 +40,7 @@ O parâmetro opcional *multiSeleçao* lhe permite indicar se a lista deve aceita
   
 Automaticamente, como em versões anteriores de 4D, você não pode selecionar vários elementos de uma lista hierárquica simultaneamente. Se deseja que esta função esteja disponível para a lista, passe o valor 1 no parâmetro *multiSeleçao*. Nesse caso, as seleções múltiplas podem ser realizadas:
 
-\- manualmente, utilizando a combinação de teclas **Shift**+**clique** para una seleção continua ou **Ctrl**+**clique** (Windows) / **comando**+**clique** (Mac OS) para uma seleção descontinúa,  
+\- manualmente, utilizando a combinação de teclas **Shift**+**clique** para una seleção continua ou **Ctrl**+**clique** (Windows) / **comando**+**clique** (macOS) para uma seleção descontinúa,  
 \- por programação, utilizando os comandos [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) e [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md).  
 Se passa 0 e omite o parâmetro *multiSeleçao*, se aplicará o comportamento padrão. 
 

@@ -172,18 +172,18 @@ Chaque bouton appelle la méthode projet MULTITRIS en passant un pointeur sur le
   // MULTITRIS (Pointeur)
   // MULTITRIS (->[Table]Champ)
  
- var $1 : Pointer
+ #DECLARE($field : Pointer) : Pointer
  var $nbCrit : Integer
  
   //Construction des critères
  If(Not(Shift down)) //Si le tri est simple
     ARRAY POINTER(tPtrTriChp;1) //Créons un tableau à 1 élément
-    tPtrTriChp{1}:=$1 //Champ sur lequel l'utilisateur a cliqué
+    tPtrTriChp{1}:=$field //Champ sur lequel l'utilisateur a cliqué
  Else //Si la touche Maj était enfoncée (tri multicritère)
-    $nbCrit:=Find in array(tPtrTriChp;$1)   //Vérifions que le critère n'est pas déjà présent
+    $nbCrit:=Find in array(tPtrTriChp;$field)   //Vérifions que le critère n'est pas déjà présent
     If($nbCrit<0)   //Critère inexistant
        INSERT IN ARRAY(tPtrTriChp;Size of array(tPtrTriChp)+1;1) //Remplissons le tableau
-       tPtrTriChp{Size of array(tPtrTriChp)}:=$1
+       tPtrTriChp{Size of array(tPtrTriChp)}:=$field
     End if
  End if
   //Exécution du tri

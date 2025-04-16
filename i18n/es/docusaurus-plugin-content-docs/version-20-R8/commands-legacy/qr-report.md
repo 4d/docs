@@ -33,15 +33,15 @@ El parámetro *nomMetodo* designa un método de proyecto 4D que se ejecuta cada 
 
 | **Parámetro** | **Tipo**     | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $1            | Entero largo | Referencia del área                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| $2            | Entero largo | Número del comando seleccionado (entero largo). Puede comparar este valor con las constantes del tema *QR Comandos* (solo son soportados los eventos listados): <table> <thead> <tr> <td>Constante</td> <td>Valor</td> <td>Comentario</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Compatible editor 64 bits (uso del comando [QR RUN](qr-run.md) recomendado)</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td>Compatible editor 64 bits</td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td>Compatible editor 64 bits</td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
+| $area            | Entero largo | Referencia del área                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| $command            | Entero largo | Número del comando seleccionado (entero largo). Puede comparar este valor con las constantes del tema *QR Comandos* (solo son soportados los eventos listados): <table> <thead> <tr> <td>Constante</td> <td>Valor</td> <td>Comentario</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Compatible editor 64 bits (uso del comando [QR RUN](qr-run.md) recomendado)</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td>Compatible editor 64 bits</td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td>Compatible editor 64 bits</td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
 
-**Nota:** si desea compilar su base, debe declarar los parámetros $1 y $2 explícitamente como enteros largos, incluso si no los utiliza.
+**Nota:** si desea compilar su base, debe declarar los parámetros $area y $command explícitamente como enteros largos, incluso si no los utiliza.
 
 Si desea ejecutar el comando inicial elegido por el usuario, utilice la siguiente instrucción en el método *nomMetodo*:
 
 ```4d
- QR EXECUTE COMMAND($1;$2)
+ QR EXECUTE COMMAND($area;$command)
 ```
 
 Si el parámetro *nomMetodo* es una cadena vacía ( "") o se omite, ningún método se llama y se aplica la operación estándar de **QR REPORT**.
@@ -104,13 +104,13 @@ Usted desea convertir el conjunto de caracteres utilizado en un informe rápido 
 El método myCallbackMeth convierte el informe cuando se genera:
 
 ```4d
- var $1;$2 : Integer
- If($2=qr cmd generate) //si generamos un informe
+ #DECLARE($area : Integer ; $command : Integer)
+ If($command=qr cmd generate) //si generamos un informe
     var $myblob : Blob
     var $path;$text : Text
     var $type : Integer
-    QR EXECUTE COMMAND($1;$2) //ejecución del comando
-    QR GET DESTINATION($1;$type;$path) //recuperación del destino
+    QR EXECUTE COMMAND($area;$command) //ejecución del comando
+    QR GET DESTINATION($area;$type;$path) //recuperación del destino
     If(($type=qr HTML file)|($type=qr text file))
        DOCUMENT TO BLOB($path;$myblob)
   //conversión del texto utilizando UTF-8
@@ -121,7 +121,7 @@ El método myCallbackMeth convierte el informe cuando se genera:
        BLOB TO DOCUMENT($path;$myblob)
     End if
  Else //de lo contrario, ejecución del comando
-    QR EXECUTE COMMAND($1;$2)
+    QR EXECUTE COMMAND($area;$command)
  End if
 ```
 

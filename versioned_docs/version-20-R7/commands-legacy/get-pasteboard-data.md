@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Note:** In the context of copy/paste operations, the pasteboard corresponds to the clipboard. 
 
-In *dataType*, pass a value specifying the type of data to be retrieved. You can pass a 4D signature, a UTI type (Mac OS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
+In *dataType*, pass a value specifying the type of data to be retrieved. You can pass a 4D signature, a UTI type (macOS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
 
 **Note:** You cannot read file type data with this command; in order to do this, you have to use the [Get file from pasteboard](get-file-from-pasteboard.md) command. 
 

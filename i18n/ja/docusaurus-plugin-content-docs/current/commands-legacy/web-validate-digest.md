@@ -33,21 +33,19 @@ displayed_sidebar: docs
 
 ```4d
   // On Web Authentication Database Method
- var $1;$2;$5;$6;$3;$4 : Text
- var $user : Text
- var $0 : Boolean
- $0:=False
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+ $result:=False
  $user:=$5
   //セキュリティに関する理由のため、@を含む名前を拒否する
  If(WithWildcard($user))
-    $0:=False
+    $result:=False
   //WithWildカードメソッドは、"On Web Authentication データベースメソッド" の節に記述されています
  Else
     QUERY([WebUsers];[WebUsers]User=$user)
     If(OK=1)
-       $0:=WEB Validate digest($user;[WebUsers]password)
+       $result:=WEB Validate digest($user;[WebUsers]password)
     Else
-       $0:=False //ユーザーが存在しません
+       $result:=False //ユーザーが存在しません
     End if
  End if
 ```

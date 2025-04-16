@@ -55,12 +55,12 @@ displayed_sidebar: docs
 | Text array         | Inteiro longo | 18    |
 | Time array         | Inteiro longo | 32    |
 
-Se pode aplicar a função Type a campos, variáveis interprocesso, variáveis processo, variáveis locais e ponteiros sem referência para esses tipos de objetos. Pode aplicar **Type** aos parâmetros *($1, $2 ... ${...})* de um método de projeto ou ao resultado da função *($0)*.
+Se pode aplicar a função Type a campos, variáveis interprocesso, variáveis processo, variáveis locais e ponteiros sem referência para esses tipos de objetos. Pode aplicar **Type** aos parâmetros *($ptrTable, $flags ... ${...})* de um método de projeto ou ao resultado da função *($0)*.
 
 **Nota:** 
 
 * Não se pode aplicar a função **Type** a expressões escalares tais como propriedades de objeto (*emp.name*) ou itens coleção (*myColl\[5\]*). Para fazer isso, deve usar o comando [Value type](value-type.md)
-* Em modo compilado, chamar **Type** em um parâmetro método ($0, $1...) declarado como *C\_VARIANT* não retorna Is variante sim o tipo de dados (mesma coisa que chamar [Value type](value-type.md))
+* Em modo compilado, chamar **Type** em um parâmetro método ($0, $ptrTable...) declarado como *C\_VARIANT* não retorna Is variante sim o tipo de dados (mesma coisa que chamar [Value type](value-type.md))
 
 ## Exemplo 1 
 
@@ -70,15 +70,15 @@ O método de projeto a seguir apaga uma parte ou a totalidade dos campos do regi
   // Método de projeto APAGAR REGISTRO
   // APAGAR REGISTRO ( Ponteiro {; Inteiro longo } )
   // APAGAR REGISTRO ( -> [Tabela] { ; Tipo de valores } )
- var $1 : Pointer
- var $2;$vlTipoVal : Integer
+ #DECLARE($ptrTable : Pointer ; $flags : Integer)
+ var $vlTipoVal : Integer
  If(Count parameters>=2)
-    $vlTipoVal:=$2
+    $vlTipoVal:=$flags
  Else
     $vlTipoVal:=0xFFFFFFFF
  End if
- For($vlCampo;1;Count fields($1))
-    $vpCampo:=Field(Table($1);$vlCampo)
+ For($vlCampo;1;Count fields($ptrTable))
+    $vpCampo:=Field(Table($ptrTable);$vlCampo)
     $vlTipoCampo:=Type($vpCampo->)
     If($vlTipoVal??$vlTipoCampo )
        Case of

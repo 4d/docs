@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência da janela ou se for omitido, todos os processos atuais de janela de primeiro plano; ou processo atual da janela de primeiro plano (Mac OS) |
+| janela | Integer | &#8594;  | Número de referência da janela ou se for omitido, todos os processos atuais de janela de primeiro plano; ou processo atual da janela de primeiro plano (macOS) |
 
 <!-- END REF-->
 
 ## Descrição 
 
-<!--REF #_command_.MAXIMIZE WINDOW.Summary-->O comando MAXIMIZE WINDOW provoca a expansão da janela cujo número de referência se passa em *janela*.<!-- END REF--> Se for omitido este parâmetro, o efeito é o mesmo mas é aplicado a todas as janelas da aplicação (Windows) ou a janela do primeiro plano do processo atual (Mac OS).  
+<!--REF #_command_.MAXIMIZE WINDOW.Summary-->O comando MAXIMIZE WINDOW provoca a expansão da janela cujo número de referência se passa em *janela*.<!-- END REF--> Se for omitido este parâmetro, o efeito é o mesmo mas é aplicado a todas as janelas da aplicação (Windows) ou a janela do primeiro plano do processo atual (macOS).  
 
 Este comando tem o mesmo efeito que um clique no zoom de uma janela da aplicação 4D. Em Windows, a janela que deseja maximizar deve ter um quadro de zoom. Se o tipo de *janela* não têm um quadro de zoom, o comando não faz nada (para mais informação sobre este ponto, consulte a seção *Tipos de Janelas*).
 

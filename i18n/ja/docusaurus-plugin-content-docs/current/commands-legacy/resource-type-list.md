@@ -56,14 +56,12 @@ RESOURCE TYPE LISTを呼び出す前に、*resTypes*配列を文字列配列ま�
   // Count resources ( 時間 ) -> 倍長整数
   // Count resources ( DocRef ) -> リソース数
  
- var $0 : Integer
- var $1 : Time
- 
- $0:=0
- RESOURCE TYPE LIST($atResType;$1)
+ #DECLARE($doc : Time) -> $result : Integer
+ $result:=0
+ RESOURCE TYPE LIST($atResType;$doc)
  For($vlElem;1;Size of array($atResType))
-    RESOURCE LIST($atResType{$vlElem};$alResID;$atResName;$1)
-    $0:=$0+Size of array($alResID)
+    RESOURCE LIST($atResType{$vlElem};$alResID;$atResName;$doc)
+    $result:=$result+Size of array($alResID)
  End for
 ```
 

@@ -29,14 +29,14 @@ Your application includes some batch operations running the night or the week-en
   // Find volume for space ( Real ) -> String
   // Find volume for space ( Space needed in bytes ) -> Volume name or Empty string
  
- C_STRING(31;$0)
+ #DECLARE($space : Real) -> $result : Text
  var $vsDocName : Text
  var $vlNbVolumes;$vlVolume : Integer
- var $1;$vlSize;$vlUsed;$vlFree : Real
+ var $vlSize;$vlUsed;$vlFree : Real
  var $vhDocRef : Time
  
   // Initialize function result
- $0:=""
+ $result:=""
   // Protect all I/O operations with an error interruption method
  ON ERR CALL("ERROR METHOD")
   // Get the list of the volumes
@@ -63,7 +63,7 @@ Your application includes some batch operations running the night or the week-en
        VOLUME ATTRIBUTES($asVolumes{$vlVolume};$vlSize;$vlUsed;$vlFree)
        If(gError=0)
   // Is the free space large enough (plus an extra 32K) ?
-          If($vlFree>=($1+32768))
+          If($vlFree>=($space+32768))
   // If so, check if the volume is unlocked...
              $vsDocName:=$asVolumes{$vlVolume}+Char(Directory symbol)+"XYZ"+String(Random)+".TXT"
              $vhDocRef:=Create document($vsDocName)
@@ -71,7 +71,7 @@ Your application includes some batch operations running the night or the week-en
                 CLOSE DOCUMENT($vhDocRef)
                 DELETE DOCUMENT($vsDocName)
   // If everything's fine, return the name of the volume
-                $0:=$asVolumes{$vlVolume}
+                $result:=$asVolumes{$vlVolume}
                 $vlVolume:=$vlNbVolumes+1
              End if
           End if

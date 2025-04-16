@@ -522,17 +522,13 @@ In this example, we associate an existing school to a Students entity. The `Stud
 
 Class extends Entity
 
-exposed Function putToSchool()
-	var $1, $school , $0, $status : Object
+exposed Function putToSchool($school : Object) -> $status : Object
 
-		//$1 is a Schools entity
-	$school:=$1
+		//$school is a Schools entity
 		//Associate the related entity school to the current Students entity
 	This.school:=$school
 
 	$status:=This.save()
-
-	$0:=$status
 ```
 
 You run this request, called on a Students entity :
@@ -566,18 +562,12 @@ In the `Students` Dataclass class, the `setFinalExam()` function updates a recei
 
 Class extends DataClass
 
-exposed Function setFinalExam()
+exposed Function setFinalExam($es : Object ; $examResult : Text) -> $keys : Collection
 
 
-    var $1, $es, $student, $status : Object
-    var $2, $examResult : Text
+    var $student, $status : Object
 
-    var $keys, $0 : Collection
-
-      //Entity selection
-    $es:=$1
-
-    $examResult:=$2
+      //$es is an Entity selection
 
     $keys:=New collection()
 
@@ -589,8 +579,6 @@ exposed Function setFinalExam()
             $keys.push($student.ID)
         End if
     End for each
-
-    $0:=$keys
 ```
 
 An entity set is first created with this request:   

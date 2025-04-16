@@ -47,7 +47,7 @@ If you pass 0 (zero) in *itemKey*, any shortcut is removed from the menu item.
 
 ## Example 1 
 
-Definition of the Ctrl+Shift+U (Windows) and Cmd+Shift+U (Mac OS) shortcut for the “Underline” menu item:
+Definition of the Ctrl+Shift+U (Windows) and Cmd+Shift+U (macOS) shortcut for the “Underline” menu item:
 
 ```4d
  SET MENU ITEM(menuRef;1;"Underline")
@@ -56,7 +56,7 @@ Definition of the Ctrl+Shift+U (Windows) and Cmd+Shift+U (Mac OS) shortcut for t
 
 ## Example 2 
 
-Definition of the Ctrl+R (Windows) and Cmd+R (Mac OS) shortcut for the "Restart" menu item:
+Definition of the Ctrl+R (Windows) and Cmd+R (macOS) shortcut for the "Restart" menu item:
 
 ```4d
  INSERT MENU ITEM(FileMenu;-1;"Restart")

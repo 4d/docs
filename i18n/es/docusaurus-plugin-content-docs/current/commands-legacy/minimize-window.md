@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana o si se omite todas las ventanas del primer plano del proceso actual (Windows) o ventana del primer plano del proceso actual (Mac OS) |
+| ventana | Integer | &#8594;  | Número de referencia de la ventana o si se omite todas las ventanas del primer plano del proceso actual (Windows) o ventana del primer plano del proceso actual (macOS) |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ Casilla de zoom/reducción bajo Mac OS
 
 Si las ventanas a las cuales se aplica este comando no fueron maximizadas previamente (manualmente o utilizando [MAXIMIZE WINDOW](maximize-window.md "MAXIMIZE WINDOW")), o si el tipo de ventana no incluye una casilla de zoom, el comando no tiene efecto. Para mayor información sobre tipos de ventanas, consulte la sección . 
 
-**Nota:** esta función no debe confundirse con la reducción de una ventana a un botón (Windows) o en el Dock (Mac OS), la cual se genera por medio de un clic en el siguiente botón:
+**Nota:** esta función no debe confundirse con la reducción de una ventana a un botón (Windows) o en el Dock (macOS), la cual se genera por medio de un clic en el siguiente botón:
 
 ![](../assets/en/commands/pict39371.es.png)  
 Windows

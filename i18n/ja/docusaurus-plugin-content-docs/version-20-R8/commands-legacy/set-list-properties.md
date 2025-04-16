@@ -36,7 +36,7 @@ displayed_sidebar: docs
 オプションの*multiSelections*引数を使用し、リストが複数項目の選択を受け入れるかどうかを指示することができます。  
 デフォルトでは以前のバージョンの4Dと同様、階層リストの項目を複数同時に選択することはできません。リストに対してこの機能を利用可能にしたい場合は、*multiSelections*引数に1を渡します。その場合、次の方法で複数選択機能を使用することができます:
 
-* 手動の場合、連続した項目の選択には**Shift**+**クリック**、連続していない項目の選択には**Ctrl+クリック(**Windows)または**Command+クリック**(Mac OS)を使用します。
+* 手動の場合、連続した項目の選択には**Shift**+**クリック**、連続していない項目の選択には**Ctrl+クリック(**Windows)または**Command+クリック**(macOS)を使用します。
 * プログラムを使用する場合、[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) および[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) コマンドを使用します。  
 *multiSelections*引数に0を渡すか省略した場合、デフォルトの動作が適用されます。
 

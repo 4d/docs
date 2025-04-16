@@ -38,12 +38,12 @@ Dans la méthode du process worker (*leWorker*), vous ajoutez du code pour gére
 
 ```4d
   //méthode leWorker
- var $1 : Text //paramètre
+ #DECLARE ($action : Text) //paramètre
  
  Case of
-    :($1="appel") //on appelle le worker
+    :($action="appel") //on appelle le worker
        ... //faire quelque chose
-    :($1="fin") //on demande au worker de terminer son exécution
+    :($action="fin") //on demande au worker de terminer son exécution
        KILL WORKER
  End case
 ```

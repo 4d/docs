@@ -55,7 +55,7 @@ displayed_sidebar: docs
 | Text array         | Integer | 18    |
 | Time array         | Integer | 32    |
 
-You can apply the Type function to fields, interprocess variables, process variables, local variables, and dereferenced pointers for these types of objects. You can apply **Type** to the parameters *($1, $2 ... ${...})* of a project method or to the result of a function *($0)*.
+You can apply the Type function to fields, interprocess variables, process variables, local variables, and dereferenced pointers for these types of objects. You can apply **Type** to the parameters *($ptrTable, $flags ... ${...})* of a project method or to the result of a function *($0)*.
 
 **Notes:** 
 
@@ -71,16 +71,16 @@ The following project method empties some or all of the fields for the current r
   // EMPTY RECORD ( Pointer {; Long } )
   // EMPTY RECORD ( -> [Table] { ; Type Flags } )
  
- var $1 : Pointer
- var $2;$vlTypeFlags : Integer
+ #DECLARE($ptrTable : Pointer ; $flags : Integer)
+ var $vlTypeFlags : Integer
  
  If(Count parameters>=2)
-    $vlTypeFlags:=$2
+    $vlTypeFlags:=$flags
  Else
     $vlTypeFlags:=0xFFFFFFFF
  End if
- For($vlField;1;Last field number($1))
-    $vpField:=Field(Table($1);$vlField)
+ For($vlField;1;Last field number($ptrTable))
+    $vpField:=Field(Table($ptrTable);$vlField)
     $vlFieldType:=Type($vpField->)
     If($vlTypeFlags ??$vlFieldType )
        Case of

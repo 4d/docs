@@ -23,7 +23,7 @@ HTMLシンタックス (URLタイプ) 、またはシステムシンタックス
 
 * HTMLシンタックス: 使用しているプラットフォームに関係なく、フォルダの名前をスラッシュ ("/") で区切ります。
 * システムシンタックス: 現在のプラットフォームのシンタックスを考慮した絶対パス名 ("ロングネーム") 。  
-   * (Mac OS) Disk:Applications:myserv:folder  
+   * (macOS) Disk:Applications:myserv:folder  
    * (Windows) C:\\Applications\\myserv\\folder
 
 **Notes:**

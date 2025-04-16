@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | ウィンドウ参照番号、または省略時は すべてのカレントプロセス最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (Mac OS) |
+| window | Integer | &#8594;  | ウィンドウ参照番号、または省略時は すべてのカレントプロセス最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (macOS) |
 
 <!-- END REF-->
 
 ## 説明 
 
-<!--REF #_command_.MAXIMIZE WINDOW.Summary-->MAXIMIZE WINDOW コマンドは、*window*に渡された参照番号のウィンドウを最大化します。<!-- END REF-->この引数が省略されると、同じ効果がカレントプロセスのすべての最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (Mac OS) に適用されます。 
+<!--REF #_command_.MAXIMIZE WINDOW.Summary-->MAXIMIZE WINDOW コマンドは、*window*に渡された参照番号のウィンドウを最大化します。<!-- END REF-->この引数が省略されると、同じ効果がカレントプロセスのすべての最前面ウィンドウ (Windows) またはカレントプロセスの最前面ウィンドウ (macOS) に適用されます。 
 
 このコマンドは4Dアプリケーションウィンドウのズームボックスをクリックするのと同じ効果があります。 最大化したいウィンドウにはズームボックスがある必要があります。*window* で指定したウィンドウにズームボックスがない場合、コマンドは何もしません。
 

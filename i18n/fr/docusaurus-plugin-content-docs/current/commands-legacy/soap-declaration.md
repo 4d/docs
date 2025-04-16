@@ -38,7 +38,6 @@ Passez dans *variable* la variable 4D à référencer dans l’appel du Web Serv
 
 **Attention**, vous pouvez référencer uniquement des variables process ou les arguments des méthodes 4D (*$0* à *$n*). Les variables locales et interprocess ne peuvent pas être utilisées.
 
-Par défaut, seuls des arguments de type Texte pouvant être utilisés, les réponses du serveur SOAP sont en principe limitées à 32 Ko dans les bases de données en mode non Unicode. Il est toutefois possible de retourner des arguments SOAP d’une taille supérieure à 32 Ko, en utilisant des BLOBs. Pour cela, il suffit de déclarer les arguments en type BLOB avant d’appeler la commande **SOAP DECLARATION** (cf. exemple 4).
 
 **Notes :** 
 
@@ -141,17 +140,6 @@ Cet exemple permet de référencer deux valeurs de retour sans spécifier de nom
 ```
 
 ## Exemple 4 
-
-Cet exemple permet au serveur SOAP de 4D de retourner un argument d'une taille supérieure à 32 Ko dans les bases de données en mode non Unicode : 
-
-```4d
- var $0 : Blob
- SOAP DECLARATION($0;Is text;SOAP output)
-```
-
-Notez le type Is text (et non Is BLOB). Cette astuce permet un formatage correct de l’argument. 
-
-## Exemple 5 
 
 Cet exemple illustre l'effet des différents types de déclarations : 
 

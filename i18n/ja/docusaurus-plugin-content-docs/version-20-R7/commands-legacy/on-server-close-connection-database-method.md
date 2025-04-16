@@ -24,7 +24,7 @@ displayed_sidebar: docs
 したがって、このメソッドでは3つの引数を倍長整数として明示的に宣言しなくてはなりません:
 
 ```4d
- var $1;$2;$3 : Integer
+ #DECLARE($user : Integer ; $id : Integer ; $toIgnore : Integer)
 ```
 
 次の表は、このデータベースメソッドに渡される3つの引数が示す情報を表わしています:

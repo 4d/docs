@@ -70,19 +70,17 @@ Por outro lado, os métodos de projeto Marcador data e Marcador hora permitem ex
   // Marcador data ( Long ) -> Data
   // Marcador data ( Time stamp ) -> data extraída
  
- var $0 : Date
- var $1 : Integer
- 
- $0:=!01/01/95!+($1\86400)
+#DECLARE ($timeStamp : Integer) : Date
+
+return !01/01/95!+($timeStamp\86400)
  
   // Time stamp to time Project Method
   // Time stamp to time ( Long ) -> Date
   // Time stamp to time ( Time stamp ) -> Extracted time
  
- var $0 : Time
- var $1 : Integer
- 
- $0:=Time(Time string(†00:00:00†+($1%86400)))
+#DECLARE ($timeStamp : Integer) : Time
+
+return Time(Time string(?00:00:00?+($timeStamp %86400)))
 ```
 
 Para garantir que os marcadores dos registros sejam atualizados corretamente, sem importar a maneira em que são criados ou modificados, devemos aplicar esta regra utilizando o trigger da tabela \[*Documentos*\]:

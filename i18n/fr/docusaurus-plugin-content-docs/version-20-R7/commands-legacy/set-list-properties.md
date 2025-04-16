@@ -35,7 +35,7 @@ Si vous passez 0 ou omettez ce paramètre, le fonctionnement par défaut est app
 
 Le paramètre facultatif *multiSélection* permet d’indiquer si la liste doit accepter les sélections multiples.   
 Par défaut, il n’est pas possible de sélectionner simultanément plusieurs éléments d’une liste hiérarchique. Si vous souhaitez que cette fonction soit disponible pour la liste, passez la valeur 1 dans le paramètre *multiSélection*. Dans ce cas, les sélections multiples peuvent être effectuées :  
-\- manuellement, à l’aide des combinaisons de touches **Maj**+**clic** pour une sélection continue ou **Ctrl**+**clic** (Windows) / **Commande**+**clic** (Mac OS) pour une sélection discontinue,  
+\- manuellement, à l’aide des combinaisons de touches **Maj**+**clic** pour une sélection continue ou **Ctrl**+**clic** (Windows) / **Commande**+**clic** (macOS) pour une sélection discontinue,  
 \- par programmation, à l’aide des commandes [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) et [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md).  
 Si vous passez 0 ou omettez le paramètre *multiSélection*, le fonctionnement par défaut est appliqué. 
 

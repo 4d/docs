@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Nota:** No contexto de operações copiar/colar, o espaço de copiar corresponde ao clipboard. 
 
-Passe em *tipoDados* um valor que defina o tipo de dados a extrair. Pode passar uma assinatura 4D, um tipo UTI (Mac OS), um nome/número de formato (Windows), ou um tipo de 4 caracteres (compatibilidade). Para maior informação sobre estes tipos, consulte a seção *Gerenciar área de transferência*.
+Passe em *tipoDados* um valor que defina o tipo de dados a extrair. Pode passar uma assinatura 4D, um tipo UTI (macOS), um nome/número de formato (Windows), ou um tipo de 4 caracteres (compatibilidade). Para maior informação sobre estes tipos, consulte a seção *Gerenciar área de transferência*.
 
 **Nota:** Não pode ler arquivos de tipo dados com este comando, para fazer isso deve usar o comando [Get file from pasteboard](get-file-from-pasteboard.md). 
 

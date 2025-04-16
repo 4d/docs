@@ -36,16 +36,16 @@ O parâmetro *methodName* atribui um método 4D project que será executado cada
 
 | Parameter | Type    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $1        | Integer | Referência área                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| $2        | Integer | Número do comando selecionado. Para comparar com as constantes abaixo do tema *QR Comandos* (apenas eventos listados são compatíveis): <table> <thead> <tr> <td>Constante</td> <td>Valor</td> <td>Comentário</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>uso do comando [QR RUN](qr-run.md) recomendado</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
+| $area        | Integer | Referência área                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| $command        | Integer | Número do comando selecionado. Para comparar com as constantes abaixo do tema *QR Comandos* (apenas eventos listados são compatíveis): <table> <thead> <tr> <td>Constante</td> <td>Valor</td> <td>Comentário</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>uso do comando [QR RUN](qr-run.md) recomendado</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
   
   
-Nota: Se quiser compilar seu banco de dados, deve declarar os parâmetros $1 e $2 explicitamente como inteiros longos, mesmo se não os usar.  
+Nota: Se quiser compilar seu banco de dados, deve declarar os parâmetros $area e $command explicitamente como inteiros longos, mesmo se não os usar.  
   
 Se quiser executar o comando inicial escolhido pelo usuário, utilise a declaração abaixo no método *nomeMetodo*:  
   
 ```4d
- QR EXECUTE COMMAND($1;$2)
+ QR EXECUTE COMMAND($area;$command)
 ```
   
   
@@ -109,13 +109,13 @@ Você deseja converter o conjunto de caracteres utilizado em um relatório rápi
 O método myCallbackMeth converte o relatório quando é gerado:
 
 ```4d
- var $1;$2 : Integer
- If($2=qr cmd generate) //Se geramos um relatório
+ #DECLARE($area : Integer ; $command : Integer)
+ If($command=qr cmd generate) //Se geramos um relatório
     var $myblob : Blob
     var $path;$text : Text
     var $type : Integer
-    QR EXECUTE COMMAND($1;$2) //execução do comando
-    QR GET DESTINATION($1;$type;$path) //recuperação do destino
+    QR EXECUTE COMMAND($area;$command) //execução do comando
+    QR GET DESTINATION($area;$type;$path) //recuperação do destino
     If(($type=qr HTML file)|($type=qr text file))
        DOCUMENT TO BLOB($path;$myblob)&NBSP; //conversão do texto utilizando UTF-8
        $text:=Convert to text($myblob;"UTF-8")
@@ -125,7 +125,7 @@ O método myCallbackMeth converte o relatório quando é gerado:
        BLOB TO DOCUMENT($path;$myblob)
     End if
  Else //caso contrário, execução do comando
-    QR EXECUTE COMMAND($1;$2)
+    QR EXECUTE COMMAND($area;$command)
  End if
 ```
 

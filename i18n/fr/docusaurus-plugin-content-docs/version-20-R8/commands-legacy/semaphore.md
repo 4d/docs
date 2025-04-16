@@ -80,11 +80,11 @@ Voici la méthode utilisée pour ajouter des éléments à la "liste des choses 
   // AJOUTER LISTE A FAIRE (Texte)
   // AJOUTER LISTE A FAIRE (Elément la liste à faire)
  
- var $1 : Text // Paramètre passé à la commande
+ #DECLARE($item : Text) // Paramètre passé à la commande
  If(Not(Semaphore("$AccèsListe";300))) // Attendre 5 secondes si un sémaphore existe déjà
     $vlElem:=Size of array(<>ListeAFaire)+1
     INSERT IN ARRAY(<>ListeAFaire;$vlElem)
-    <>ListeAFaire{$vlElem}:=$1
+    <>ListeAFaire{$vlElem}:=$item
     CLEAR SEMAPHORE("$AccèsListe") // Effacer le sémaphore
  End if
 ```
@@ -103,8 +103,8 @@ Syntaxe :
 
 ```4d
   // Structure de protection par sémaphore
- var $0 : Integer
- var $1 : Pointer // message d'erreur
+ #DECLARE($errorPtr : Pointer) -> $result : Integer
+ // message d'erreur
  
    // Début de la méthode
  var $L_MyError : Integer
@@ -139,8 +139,8 @@ Syntaxe :
     $T_Message:="OK"
  End if
  
- $0:=$L_MyError
- $1->:=$T_Message  // la méthode d'appel reçoit un code d'erreur et une explication en clair
+ $result:=$L_MyError
+ $errorPtr->:=$T_Message  // la méthode d'appel reçoit un code d'erreur et une explication en clair
 ```
 
 ## Voir aussi 

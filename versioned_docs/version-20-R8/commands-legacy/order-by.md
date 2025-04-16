@@ -171,18 +171,18 @@ Each button calls the MULTILEVEL project method with a pointer to the correspond
   // MULTILEVEL (Pointer)
   // MULTILEVEL (->[Table]Field)
  
- var $1)   //Sort level (field : Pointer
+ #DECLARE($field : Pointer)   //Sort level
  var $lLevelNb : Integer
  
   //Getting sorting levels
  If(Not(Shift down)) //Simple sort (one-level)
     ARRAY POINTER(aPtrSortField;1)
-    aPtrSortField{1}:=$1
+    aPtrSortField{1}:=$field
  Else
-    $lLevelNb:=Find in array(aPtrSortField;$1) //Is this field already sorted?
+    $lLevelNb:=Find in array(aPtrSortField;$field) //Is this field already sorted?
     If($lLevelNb<0) //If not
        INSERT IN ARRAY(aPtrSortField;Size of array(aPtrSortField)+1;1)
-       aPtrSortField{Size of array(aPtrSortField)}:=$1
+       aPtrSortField{Size of array(aPtrSortField)}:=$field
     End if
  End if
   //Performing the sort

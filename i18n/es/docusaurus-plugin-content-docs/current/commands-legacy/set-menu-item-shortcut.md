@@ -31,7 +31,7 @@ En *modificadores*, puede pasar modificadores adicionales al atajo, como la tecl
 
 * Command key mask para la tecla **Command** (macOS) o **Ctrl** (Windows)
 * Shift key mask para la tecla **Mayús**
-* Option key mask para la tecla **Opción** (Mac OS) o **Alt** (Windows)
+* Option key mask para la tecla **Opción** (macOS) o **Alt** (Windows)
 
 Para definir un acceso directo con varios modificadores, basta con combinar las constantes anteriores.
 
@@ -48,7 +48,7 @@ Si se pasa 0 (cero) en *itemKey*, se elimina cualquier acceso directo del elemen
 
 ## Ejemplo 1 
 
-Definición del atajo Ctrl+Mayús+U (Windows) y Cmd+Mayús+U (Mac OS) para la línea "Subrayado": 
+Definición del atajo Ctrl+Mayús+U (Windows) y Cmd+Mayús+U (macOS) para la línea "Subrayado": 
 
 ```4d
  SET MENU ITEM(MenuRef;1;"Subrayado")
@@ -57,7 +57,7 @@ Definición del atajo Ctrl+Mayús+U (Windows) y Cmd+Mayús+U (Mac OS) para la l�
 
 ## Ejemplo 2 
 
-Definición del atajo Ctrl+R (Windows) y Cmd+R (Mac OS) para el elemento de menú "Reiniciar":
+Definición del atajo Ctrl+R (Windows) y Cmd+R (macOS) para el elemento de menú "Reiniciar":
 
 ```4d
  INSERT MENU ITEM(FileMenu;-1;"Reiniciar")

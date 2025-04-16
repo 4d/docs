@@ -98,8 +98,8 @@ Les méthodes suivantes permettent de réaliser une petite messagerie entre les 
 
 ```4d
   // Méthode Afficher_Message
- var $1 : Text
- ALERT($1)
+ #DECLARE($message : Text)
+ ALERT($message)
 ```
 
 6\. Enfin, cette méthode permet à un poste client de n’être plus visible par les autres clients 4D et ne plus recevoir de message :

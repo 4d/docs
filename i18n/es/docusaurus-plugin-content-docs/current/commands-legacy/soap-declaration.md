@@ -38,7 +38,6 @@ En *variable*, pase la variable 4D a referenciar cuando llame al servicio web.
 
 **Advertencia:** puede referenciar únicamente las variables proceso o los argumentos de los métodos 4D (*$0* a *$n*). Las variables locales e interproceso no pueden utilizarse.
 
-Por defecto, como sólo pueden utilizarse los argumento de tipo texto, las respuestas del servidor SOAP están limitadas a 32 KB. Sin embargo, es posible devolver argumentos SOAP con un tamaño mayor a 32 KB, utilizando BLOBs. Para exceder este límite, simplemente necesita declarar los argumentos como BLOBs antes de llamar al comando SOAP DECLARATION (ver ejemplo 4).
 
 **Notas:** 
 
@@ -147,19 +146,8 @@ Este ejemplo se utiliza para referenciar dos valores devueltos sin especificar u
  SOAP DECLARATION(ret2;Is longint;SOAP output)
 ```
 
+##
 #### Ejemplo 4 
-
-Este ejemplo permite al servidor 4D SOAP devolver un argumento de un tamaño mayor a 32 KB: 
-
-```4d
- var $0 : Blob
- SOAP DECLARATION($0;Is text;SOAP output)
-```
-
-  
-Note el tipo Is Text (y no Is BLOB). Esto permite que el argumento sea procesado correctamente.
-
-#### Ejemplo 5 
 
 Este ejemplo illustra los resultados de los diferentes tipos de declaraciones: 
 

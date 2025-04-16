@@ -82,12 +82,12 @@ To Doリストに項目を追加するメソッドを次に示します:
   // ADD TO DO LIST project method
   // ADD TO DO LIST ( Text )
   // ADD TO DO LIST ( To do list item )
- var $1 : Text
+ #DECLARE($item : Text)
  If(Not(Semaphore("$AccessToDoList";300)))
   // Wait 5 seconds if the semaphore already exists
     $vlElem:=Size of array(<>ToDoList)+1
     INSERT IN ARAY(<>ToDoList;$vlElem)
-    <>ToDoList{$vlElem}:=$1
+    <>ToDoList{$vlElem}:=$item
     CLEAR SEMAPHORE("$AccessToDoList") // Clear the semaphore
  End if
 ```
@@ -106,8 +106,10 @@ To Doリストに項目を追加するメソッドを次に示します:
 
 ```4d
   // セマフォーを使用した保護構造
- var $0;$L_MyError : Integer
- var $1 : Pointer // エラーメッセージ
+ #DECLARE($errorPtr : Pointer) -> $result : Integer
+ var $L_MyError : Integer
+  // エラーメッセージ
+
 
 var $T_Sema_local;$T_Message : Text
  
@@ -139,8 +141,8 @@ var $T_Sema_local;$T_Message : Text
     $T_Message:="OK"
  End if
  
- $0:=$L_MyError
- $1->:=$T_Message  // 呼び出し元メソッドはエラーコードとメッセージテキストを受け取る
+ $result:=$L_MyError
+ $errorPtr->:=$T_Message  // 呼び出し元メソッドはエラーコードとメッセージテキストを受け取る
 
 
 ```

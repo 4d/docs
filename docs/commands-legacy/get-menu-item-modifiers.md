@@ -20,14 +20,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item modifiers.Summary-->The **Get menu item modifiers** command returns any additional modifier(s) associated with the standard shortcut of the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
-The standard shortcut is composed of the Command (Mac OS) or Ctrl (Windows) key plus a custom key. The standard shortcut is managed using the [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) and [Get menu item key](get-menu-item-key.md) commands.
+The standard shortcut is composed of the Command (macOS) or Ctrl (Windows) key plus a custom key. The standard shortcut is managed using the [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) and [Get menu item key](get-menu-item-key.md) commands.
 
-The additional modifiers are the Shift key and the Option (Mac OS) /Alt (Windows) key. These modifiers can only be used when a standard shortcut has been specified beforehand.
+The additional modifiers are the Shift key and the Option (macOS) /Alt (Windows) key. These modifiers can only be used when a standard shortcut has been specified beforehand.
 
 The number value returned by the command corresponds to the codeof the additional modifier key(s). The key codes are as follows:
 
 * **Shift**\= 512
-* **Option** (Mac OS) or **Alt** (Windows) = 2048  
+* **Option** (macOS) or **Alt** (Windows) = 2048  
 If both keys are used, their values are combined.
 
 **Note:** You can evaluate the value returned using the Shift key mask and Option key mask constants of the “*Events (Modifiers)*” theme.

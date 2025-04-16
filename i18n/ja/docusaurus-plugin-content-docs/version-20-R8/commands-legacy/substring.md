@@ -45,21 +45,19 @@ Substringコマンドの使用例を次に示します。結果を変数 vsResul
   // EXTRACT PARAGRAPHS ( text ; Pointer )
   // EXTRACT PARAGRAPHS ( Text to parse ; -> 文字列配列 )
  
- var $1 : Text
- var $2 : Pointer
- 
- $vlElem:=Size of array($2->)
+#DECLARE($text : Text ; $arrParaPtr : Pointer) 
+ $vlElem:=Size of array($arrParaPtr->)
  Repeat
     $vlElem:=$vlElem+1
-    INSERT IN ARRAY($2->;$vlElem)
-    $vlPos:=Position(Char(Carriage return);$1)
+    INSERT IN ARRAY($arrParaPtr->;$vlElem)
+    $vlPos:=Position(Char(Carriage return);$text)
     If($vlPos>0)
-       $2->{$vlElem}:=Substring($1;1;$vlPos-1)
-       $1:=Substring($1;$vlPos+1)
+       $arrParaPtr->{$vlElem}:=Substring($text;1;$vlPos-1)
+       $text:=Substring($text;$vlPos+1)
     Else
-       $2->{$vlElem}:=$1
+       $arrParaPtr->{$vlElem}:=$text
     End if
- Until($1="")
+ Until($text="")
 ```
 
 ## 参照 

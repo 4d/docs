@@ -93,8 +93,8 @@ No seguinte exemplo, vamos a criar um sistema de mensagens pequeno que permita a
 5) Este é o método Display\_Message:
 
 ```4d
- var $1 : Text
- ALERT($1)
+ #DECLARE($message : Text)
+ ALERT($message)
 ```
 
 6) Finalmente, este método permite a uma estação de trabalho de cliente não ser visível para outros clientes 4D e não receber mais mensagens:

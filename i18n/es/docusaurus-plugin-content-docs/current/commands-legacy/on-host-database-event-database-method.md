@@ -38,18 +38,18 @@ Ejemplo de estructura tipo de un método base On Host Database Event:
 
 ```4d
   // Método base On Host Database Event
- var $1 : Integer
+ #DECLARE($event : Integer)
  Case of
-    :($1=On before host database startup)
+    :($event=On before host database startup)
   // poner aquí el código a ejecutar antes del método base "On Startup"
   // de la base local
-    :($1=On after host database startup)
+    :($event=On after host database startup)
   // poner aquí el código a ejecutar después del método base "On Startup"
   // de la base local
-    :($1=On before host database exit)
+    :($event=On before host database exit)
   // poner aquí el código a ejecutar antes del método base "On Exit"
   // de la base local
-    :($1=On after host database exit)
+    :($event=On after host database exit)
   // poner aquí el código a ejecutar después del método base "On Exit"
   // de la base local
  End case

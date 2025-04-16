@@ -72,7 +72,7 @@ The following example uses a local semaphore. In a database with several process
 The interprocess array is initialized in the Startup method:
 
 ```4d
- ARRAY TEXT(◊ToDoList;0) // The To Do list is initially empty
+ ARRAY TEXT(<>ToDoList;0) // The To Do list is initially empty
 ```
 
 Here is the method used for adding items to the To Do list:
@@ -81,12 +81,12 @@ Here is the method used for adding items to the To Do list:
   // ADD TO DO LIST project method
   // ADD TO DO LIST ( Text )
   // ADD TO DO LIST ( To do list item )
- var $1 : Text
+ #DECLARE($item : Text)
  If(Not(Semaphore("$AccessToDoList";300)))
   // Wait 5 seconds if the semaphore already exists
-    $vlElem:=Size of array(◊ToDoList)+1
-    INSERT IN ARAY(◊ToDoList;$vlElem)
-    ◊ToDoList{$vlElem}:=$1
+    $vlElem:=Size of array(<>ToDoList)+1
+    INSERT IN ARAY(<>ToDoList;$vlElem)
+    <>ToDoList{$vlElem}:=$item
     CLEAR SEMAPHORE("$AccessToDoList") // Clear the semaphore
  End if
 ```
@@ -105,8 +105,8 @@ Syntax:
 
 ```4d
   // Protective structure using semaphores
- var $0 : Integer
- var $1 : Pointer // error message
+ #DECLARE($errorPtr : Pointer) -> $result : Integer
+ // error message
  
   // Start of method
  var $L_MyError : Integer
@@ -141,8 +141,8 @@ Syntax:
     $T_Message:="OK"
  End if
  
- $0:=$L_MyError
- $1->:=$T_Message  // The calling method receives an error code and an explanation in plain text
+ $result:=$L_MyError
+ $errorPtr->:=$T_Message  // The calling method receives an error code and an explanation in plain text
 ```
 
 ## See also 

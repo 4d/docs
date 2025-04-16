@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Nota:** en el contexto de las operaciones de copiar/pegar, el contenedor corresponde al portapapeles.
 
-Pase *tipoDatos*, pase un valor que defina el tipo de datos a extraer. Puede pasar una firma 4D, un tipo UTI (Mac OS), un nombre/número de formato (Windows), o un tipo de 4 caracteres (compatibilidad). Para mayor información sobre estos tipos, consulte la sección *Gestión de portapapeles*.
+Pase *tipoDatos*, pase un valor que defina el tipo de datos a extraer. Puede pasar una firma 4D, un tipo UTI (macOS), un nombre/número de formato (Windows), o un tipo de 4 caracteres (compatibilidad). Para mayor información sobre estos tipos, consulte la sección *Gestión de portapapeles*.
 
 **Nota:** no puede leer datos de tipo archivo con este comando; para hacer esto, debe utilizar el comando [Get file from pasteboard](get-file-from-pasteboard.md).
 

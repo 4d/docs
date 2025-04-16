@@ -803,7 +803,7 @@ La etiqueta `<method>` permite generar y utilizar macrocomandos que ejecutan mé
 
 El código de un método llamado se ejecuta en un nuevo proceso. Este proceso se cierra una vez se ejecuta el método.
 
-> <strong x-id="1">Note:</strong> The structure process remains frozen until the called method execution is completed. Debe asegurarse de que la ejecución es rápida y de que no hay riesgo de que bloquee la aplicación. Si esto ocurre, utilice el comando **Ctrl+F8** (Windows) o **Comando+F8** (Mac OS) para "matar" el proceso.
+> <strong x-id="1">Note:</strong> The structure process remains frozen until the called method execution is completed. Debe asegurarse de que la ejecución es rápida y de que no hay riesgo de que bloquee la aplicación. Si esto ocurre, utilice el comando **Ctrl+F8** (Windows) o **Comando+F8** (macOS) para "matar" el proceso.
 
 ### Llamando macros
 
