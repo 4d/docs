@@ -114,7 +114,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 **Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
 
-**4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. In this context:
+**4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. En este contexto:
 
 - Make sure that no dialog box appears on the server machine (except for a specific requirement).
 - In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
