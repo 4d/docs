@@ -385,8 +385,8 @@ The folling keys can be defined:
 
 | key                                                        | description                                                                                                                                                         |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | Component name (internal)                                                                                                                        |
-| CFBundleDisplayName                                        | Component name to display                                                                                                                                           |
+| CFBundleName                                               | Nombre del componente (interno)                                                                                                                  |
+| CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                     |
 | NSHumanReadableCopyright                                   | Copyright a mostrar                                                                                                                                                 |
 | CFBundleVersion                                            | Version of the component                                                                                                                                            |
 | CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
