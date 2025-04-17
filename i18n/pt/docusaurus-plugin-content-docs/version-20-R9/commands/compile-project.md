@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-**Compile project**<!--REF #_command_.Comile project.Summary--> permite que você compile o projeto host atual ou o projeto especificado no parâmetro *projectFile*.<!-- END REF--> Para obter mais informações sobre a compilação, verifique a [página de compilação](../Project/compiler.md).
+**Compile project**<!--REF #_command_.Compile project.Summary--> allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, check the [Compilation page](../Project/compiler.md).
 
 Por padrão, o comando usa as opções do compilador definidas nas Configurações da estrutura. Você pode substituí-los passando um parâmetro *options*. As seguintes sintaxes são suportadas:
 
