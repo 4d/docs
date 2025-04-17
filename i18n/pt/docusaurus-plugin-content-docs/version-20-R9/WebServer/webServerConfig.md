@@ -627,5 +627,5 @@ Duas opções permitem que você defina como funcionam as conexões persistentes
    The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
 - **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Once this period is over, the server closes the connection.<p>
-   If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o usuário.</p>
+   Se o navegador da web enviar um pedido depois que a conexão for fechada, uma nova conexão TCP será criada automaticamente. Esta operação não é visível para o usuário.</p>
 
