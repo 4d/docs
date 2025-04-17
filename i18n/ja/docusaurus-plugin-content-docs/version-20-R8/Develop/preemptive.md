@@ -41,7 +41,7 @@ title: プリエンプティブプロセス
 
 要素毎の "スレッドセーフティ" プロパティは、その要素自身によります:
 
-- 4Dコマンド: スレッドセーフティは内部プロパティです。 In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands/command-name.md) command to know if a command is thread-safe. 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
+- 4Dコマンド: スレッドセーフティは内部プロパティです。 In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands-legacy/command-name.md) command to know if a command is thread-safe. 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
 - プロジェクトメソッド: スレッドセーフであるための条件は [こちらの段落](#スレッドセーフなメソッドの書き方) にまとめられています。
 
 原則として、プリエンプティブスレッド内で実行されるコードは外部との相互作用する部分、たとえばプラグインコードやインタープロセス変数などを呼び出すことはできません。 しかしながら、4Dデータサーバーと ORDA はプリエンプティブ実行をサポートしていることから、データアクセスは可能です。
