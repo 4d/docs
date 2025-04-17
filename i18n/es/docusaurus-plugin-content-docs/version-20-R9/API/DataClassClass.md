@@ -992,18 +992,18 @@ El uso de marcadores de posición en las búsquedas **se recomienda** por las si
 
 1. Evita la inserción de código malicioso: si utiliza directamente variables completadas por el usuario dentro de la cadena de búsqueda, un usuario podría modificar las condiciones de búsqueda introduciendo argumentos de búsqueda adicionales. Por ejemplo, imagine una cadena de búsqueda como:
 
-```4d
- $vquery:="status = 'public' & name = "+myname //el usuario introduce su nombre
- $result:=$col.query($vquery)
-```
+ ```4d
+  $vquery:="status = 'public' & name = "+myname //el usuario introduce su nombre
+  $result:=$col.query($vquery)
+ ```
 
 Esta búsqueda parece segura ya que se filtran los datos no públicos. Sin embargo, si el usuario introduce en el área *myname* algo como *"smith OR status='private'*, la cadena de consulta se modificaría en el paso de interpretación y podría devolver datos privados.
 
 Cuando se utilizan marcadores de posición, no es posible anular las condiciones de seguridad:
 
-```4d
- $result:=$col.query("status='public' & name=:1";myname)
-```
+ ```4d
+  $result:=$col.query("status='public' & name=:1";myname)
+ ```
 
 En este caso, si el usuario introduce *smith OR status='private'* en el área *myname*, no se interpretará en la cadena de búsqueda, sino que sólo se pasará como valor. La búsqueda de una persona llamada "smith OR status='private'" simplemente fallará.
 
@@ -1011,10 +1011,10 @@ En este caso, si el usuario introduce *smith OR status='private'* en el área *m
 
 3. Permite el uso de variables o expresiones en los argumentos de búsqueda. Ejemplos:
 
-```4d
-$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
-$result2:=$col.query("company.name = :1";"John's Pizzas")
-```
+ ```4d
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result2:=$col.query("company.name = :1";"John's Pizzas")
+ ```
 
 #### Búsqueda de valores null
 
