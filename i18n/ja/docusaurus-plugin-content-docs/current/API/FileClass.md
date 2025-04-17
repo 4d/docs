@@ -249,10 +249,10 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                              |
-| ----- | ------------------------------- |
-| 20 R9 | Read UUIDs in macOS executables |
-| 19    | 追加                              |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 20 R9 | macOS 実行ファイル内のUUID を読む |
+| 19    | 追加                     |
 
 </details>
 
@@ -260,19 +260,19 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| 引数  | 型      |                             | 説明                           |
-| --- | ------ | --------------------------- | ---------------------------- |
-| 戻り値 | Object | <- | Application file information |
+| 引数  | 型      |                             | 説明             |
+| --- | ------ | --------------------------- | -------------- |
+| 戻り値 | Object | <- | アプリケーションファイル情報 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
+`.getAppInfo()` 関数は、<!-- REF #FileClass.getAppInfo().Summary -->アプリケーションファイル情報のコンテンツをオブジェクトとして返します<!-- END REF -->。
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
+この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 ファイルがディスク上に存在しない場合、またはサポートされていないファイルの場合は、関数は空のオブジェクトを生成します(エラーは生成されません)。
 
-**Returned object with a .plist file (all platforms)**
+**.plist ファイルの場合に返されるオブジェクト(全プラットフォーム)**
 
 xml ファイルの中身は解析され、オブジェクトのプロパティとしてキーが返されます。 キーの型 (テキスト、ブール、数値) は維持されます。 `.plist dict` は JSON オブジェクトとして返されます。 また、`.plist array` は JSON 配列として返されます。
 
@@ -282,7 +282,7 @@ xml ファイルの中身は解析され、オブジェクトのプロパティ�
 
 :::
 
-**Returned object with a .exe or .dll file (Windows only)**
+**.exe または .dll ファイルの場合に返されるオブジェクト(Windows のみ)**
 
 プロパティ値はすべてテキストです。
 
@@ -297,26 +297,26 @@ xml ファイルの中身は解析され、オブジェクトのプロパティ�
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Returned object with a macOS executable file (macOS only)**
+**macOS 実行可能ファイルの場合に返されるオブジェクト(macOS のみ)**
 
 :::note
 
-A macOS executable file is located within a package (e.g. myApp.app/Contents/MacOS/myApp).
+macOS実行可能ファイルはパッケージ内部にあります(例: myApp.app/Contents/MacOS/myApp)。
 
 :::
 
-The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
+この関数は、実行ファイル内で見つかったそれぞれのアーキテクチャーを表すオブジェクトのコレクションを格納した、 `archs` オブジェクトを返します(ファットな実行ファイルには複数のアーキテクチャーを埋め込むことができます)。 コレクション内のそれぞれのオブジェクトは以下のプロパティを格納しています:
 
-| プロパティ | 型      | 説明                                                                                 |
-| ----- | ------ | ---------------------------------------------------------------------------------- |
-| name  | Text   | Name of architecture ("arm64" or "x86_64") |
-| type  | Number | Numerical identifier of the architecture                                           |
-| uuid  | Text   | Textual representation of the executable uuid                                      |
+| プロパティ | 型      | 説明                                                                       |
+| ----- | ------ | ------------------------------------------------------------------------ |
+| name  | Text   | アーキテクチャー名("arm64" あるいは "x86_64") |
+| type  | Number | アーキテクチャーの数値識別子                                                           |
+| uuid  | Text   | 実行ファイルUUIDのテキスト表現                                                        |
 
 #### 例題 1
 
 ```4d
-  // display copyright info of an info.plist (any platform)
+  // info.plist の著作権情報を表示する(あらゆるプラットフォームで可能)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
@@ -327,7 +327,7 @@ ALERT($info.Copyright)
 #### 例題 2
 
 ```4d
- // display copyright info of application .exe file (windows)
+ // アプリケーションの .exe ファイルの著作権情報を表示(windows)
 var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -338,12 +338,12 @@ ALERT($info.LegalCopyright)
 #### 例題 3
 
 ```4d
- // Get uuids of an application (macOS)
+ // アプリケーションのUUIDを取得(macOS)
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 ```
 
-Result in *$info*:
+*$info* 内の戻り値:
 
 ```json
 {
@@ -568,11 +568,11 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                              |
-| ----- | ------------------------------- |
-| 20 R9 | Read UUIDs in macOS executables |
-| 20    | WinIcon をサポート                   |
-| 19    | 追加                              |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 20 R9 | macOS 実行ファイル内のUUID を読む |
+| 20    | WinIcon をサポート          |
+| 19    | 追加                     |
 
 </details>
 
@@ -580,19 +580,19 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| 引数   | 型      |    | 説明                                                     |
-| ---- | ------ | -- | ------------------------------------------------------ |
-| info | Object | -> | Properties to write in an application file information |
+| 引数   | 型      |    | 説明                        |
+| ---- | ------ | -- | ------------------------- |
+| info | Object | -> | アプリケーションファイル情報内に書き込むプロパティ |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
+`.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
+この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 ファイルがディスク上に存在しない、または、サポートされているファイルでない場合、この関数は何もしません (エラーは生成されません)。
 
-***info* parameter object with a .plist file (all platforms)**
+**.plist ファイル用の*info* オブジェクト (全プラットフォーム)**
 
 :::note
 
@@ -610,7 +610,7 @@ The function must be used with an existing, supported file: **.plist** (all plat
 
 :::
 
-***info* parameter object with a .exe or .dll file (Windows only)**
+**.exe または .dll ファイル用の *info* パラメーター(Windowsのみ)**
 
 *info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
@@ -630,16 +630,16 @@ The function must be used with an existing, supported file: **.plist** (all plat
 
 `WinIcon` プロパティにおいては、アイコンファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
 
-***info* parameter object with a macOS executable file (macOS only)**
+**macOS 実行ファイル用の *info* パラメーター(macOSのみ)**
 
-*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*info* オブジェクトは、[`getAppInfo()`](#getappinfo) から返されるフォーマットのオブジェクトのコレクションである、`archs` という単一のプロパティのみを持つ構造でなければなりません。 各オブジェクトは少なくとも`type` および `uuid` プロパティを格納していなければなりません(`name` は使用されません)。
 
-Every object in the *info*.archs collection must contain the following properties:
+つまり、*info*.archs コレクション内のすべてのオブジェクトは、以下のプロパティを持っている必要があります:
 
-| プロパティ | 型      | 説明                                                 |
-| ----- | ------ | -------------------------------------------------- |
-| type  | Number | Numerical identifier of the architecture to modify |
-| uuid  | Text   | Textual representation of the new executable uuid  |
+| プロパティ | 型      | 説明                   |
+| ----- | ------ | -------------------- |
+| type  | Number | 編集したいアーキテクチャーの数値識別子  |
+| uuid  | Text   | 新しい実行ファイルUUIDのテキスト表現 |
 
 #### 例題 1
 
@@ -674,18 +674,18 @@ $exeFile.setAppInfo($info)
 #### 例題 3
 
 ```4d
-// regenerate uuids of an application (macOS)
+// アプリケーションのUUIDを再生成する(macOS)
 
-// read myApp uuids 
+// myApp のUUIDを読み出す
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 
-// regenerate uuids for all architectures
+// すべてのアーキテクチャー用にUUIDを再生成
 For each ($i; $info.archs)
 	$i.uuid:=Generate UUID
 End for each 
 
-// update the app with the new uuids
+// アプリを新しいUUIDに更新する
 $app.setAppInfo($info)
 ```
 
@@ -783,7 +783,7 @@ $app.setAppInfo($info)
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
-> **互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
+> **互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 詳細はdoc.4d.com 上の[互換性ページ](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.ja.html) を参照してください。
 
 #### 例題
 

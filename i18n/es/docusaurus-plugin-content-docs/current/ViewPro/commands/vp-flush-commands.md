@@ -5,9 +5,9 @@ title: VP FLUSH COMMANDS
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                  |
-| ----------- | ------------------------------- |
-| 20 R9       | Support of *callback* parameter |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 20 R9       | Soporte del parámetro *callback* |
 
 </details>
 

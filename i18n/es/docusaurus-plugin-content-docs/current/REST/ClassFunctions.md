@@ -5,7 +5,7 @@ title: Llamando a funciones de clase
 
 Puede llamar a [funciones clase modelo de datos](ORDA/ordaClasses.md) definidas para el modelo de datos ORDA y [funciones clase singleton]($singleton.md) a través de peticiones REST, para que pueda beneficiarse de la API expuesta de la aplicación 4D seleccionada.
 
-Functions can be called in two ways:
+Las funciones pueden llamarse de dos maneras:
 
 - using **POST requests**, with data parameters passed in the body of the request.
 - using **GET requests**, with parameters directly passed in the URL.

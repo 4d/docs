@@ -149,8 +149,8 @@ Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:
 `myFormulaCompressingMethod`:
 
 ```4d
- var $1 : Integer
- Progress SET PROGRESS(progID;Num($1/100))
+ #DECLARE ($current : Integer)
+ Progress SET PROGRESS(progID;Num($current /100))
 ```
 
 #### Exemplo

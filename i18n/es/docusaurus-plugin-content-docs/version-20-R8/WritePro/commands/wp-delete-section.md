@@ -44,7 +44,7 @@ WP DELETE SECTION(wpDoc ; 1)
 
 ```
 
-To remove section 5 of the document:
+Eliminar la sección 5 del documento:
 
 ```4d
 

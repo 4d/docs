@@ -2255,10 +2255,9 @@ var $fruits; $c2 : Collection
 O método ***sortCollection***:
 
 ```4d
-var$1Object
-var$2Integer // sort option
+#DECLARE ($toSort : Object ; $option : Integer)
 
-$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+$toSort.result:=(Compare strings($toSort.value;$toSort.value2;$option2)<0)
 ```
 
 <!-- END REF -->
