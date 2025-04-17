@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->La commande **FORM LOAD** est utilisée pour charger le formulaire *form* en mémoire dans le process courant avec *formData* (facultatif) afin d'imprimer ses données ou d'analyser son contenu. Il ne peut y avoir qu'un seul formulaire courant par process.
+<!--REF #_command_.FORM LOAD.Summary-->La commande **FORM LOAD** est utilisée pour charger le formulaire *form* en mémoire dans le process courant avec *formData* (facultatif) afin d'imprimer ses données ou d'analyser son contenu.<!-- END REF--> Il ne peut y avoir qu'un seul formulaire courant par process.
 
 Dans le paramètre *form*, vous pouvez passer soit :
 
