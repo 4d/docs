@@ -294,7 +294,7 @@ Para exibir o tipo de parâmetro, verifique a opção **Mostrar tipos** no menu 
 
 Depois de implementar a lista de parâmetros, você pode arrastar e soltar parâmetros e resultados de funções para o [Painel de Observação Personalizado](#custom-watch-pane).
 
-You can also use the [Call chain](../commands-legacy/call-chain.md) command to retrieve the call chain programmatically.
+Você também pode usar o comando [Call chain](../commands/call-chain.md) para recuperar a cadeia de chamadas programaticamente.
 
 ## Painel de Observação Personalizado
 
