@@ -223,7 +223,7 @@ By definition, an OTP token can only be used once. In this scenario, if a web re
 
 Callbacks from third-party applications that include the OTP token can be processed in different ways in your 4D application, depending on your development and the third-party API. Basically, you have two possibilities to handle the token: through the **`$4DSID`** parameter for an automatic processing, or through a custom parameter that you need to process.
 
-#### Using `$4DSID` in the URL
+#### Uso de `$4DSID` en la URL
 
 Using the `$4DSID` parameter is the most simple way to process a callback from the third-party application:
 
