@@ -498,17 +498,13 @@ Dans cet exemple, nous associons une école existante à l'entité Students. La 
 
 Class extends Entity
 
-exposed Function putToSchool()
-	var $1, $school , $0, $status : Object
+exposed Function putToSchool($school : Object) -> $status : Object
 
-		//$1 est une entité school
-	$school:=$1
-		//associer l'entité liée school à l'entité courante students
+		//$school is a Schools entity
+		//Associate the related entity school to the current Students entity
 	This.school:=$school
 
 	$status:=This.save()
-
-	$0:=$status
 ```
 
 Vous exécutez cette requête, appelée sur une entité Students :
@@ -542,18 +538,12 @@ Dans la classe de Dataclass `Students`, la fonction `setFinalExam()` met à jour
 
 Class extends DataClass
 
-exposed Function setFinalExam()
+exposed Function setFinalExam($es : Object ; $examResult : Text) -> $keys : Collection
 
 
-    var $1, $es, $student, $status : Object
-    var $2, $examResult : Text
+    var $student, $status : Object
 
-    var $keys, $0 : Collection
-
-      //Entity selection
-    $es:=$1
-
-    $examResult:=$2
+      //$es is an Entity selection
 
     $keys:=New collection()
 
@@ -565,8 +555,6 @@ exposed Function setFinalExam()
             $keys.push($student.ID)
         End if
     End for each
-
-    $0:=$keys
 ```
 
 Un ensemble d'entité est d'abord créé avec cette requête :
