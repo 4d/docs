@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
 | content | Text | &#8594;  | HTML source code |
-| baseURL | Text | &#8594;  | URL for relative references (Mac OS) |
+| baseURL | Text | &#8594;  | URL for relative references (macOS) |
 
 <!-- END REF-->
 

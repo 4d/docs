@@ -29,14 +29,14 @@ Su aplicación incluye algunas operaciones por lotes que se ejecutan en la noche
   // Buscar volumen para espacio ( Real ) -> Alfa
   // Buscar volumen para espacio ( Espacio necesario en bytes ) -> Nombre del volumen o cadena vacía
  
- C_STRING(31;$0)
+ #DECLARE($space : Real) -> $result : Text
  C_STRING(255;$vsDocNombre)
  var $vlNbVolumenes;$vlVolumenes : Integer
- var $1;$vlTamaño;$vlUtilizado;$vlLibre : Real
+ var $vlTamaño;$vlUtilizado;$vlLibre : Real
  var $vhDocRef : Time
  
   // Inicializar el resultado de la función
- $0:=""
+ $result:=""
   // Proteger todas las operaciones de entrada/salida con un método de interrupción de errores
  ON ERR CALL("ERROR METHOD")
   // Obtener la lista de los volúmenes
@@ -63,7 +63,7 @@ Su aplicación incluye algunas operaciones por lotes que se ejecutan en la noche
        VOLUME ATTRIBUTES($asVolumenes{$vlVolumen};$vlTamaño;$vlUtilizado;$vlLibre)
        If(gError=0)
   // ¿El espacio libre es suficiente (más de 32K extra) ?
-          If($vlLibre>=($1+32768))
+          If($vlLibre>=($space+32768))
   // Si es así, verificar si el volumen no está bloqueado..
              $vsDocNombre:=$asVolumenes{$vlVolumen}+Char(Directory symbol)+"XYZ"+String(Random)+".TXT"
              $vhDocRef:=Create document($vsDocNombre)
@@ -71,7 +71,7 @@ Su aplicación incluye algunas operaciones por lotes que se ejecutan en la noche
                 CLOSE DOCUMENT($vhDocRef)
                 DELETE DOCUMENT($vsDocNombre)
   // Si todo está bien, devolver el nombre del volumen
-                $0:=$asVolumenes{$vlVolumen}
+                $result:=$asVolumenes{$vlVolumen}
                 $vlVolumen:=$vlNbVolumenes+1
              End if
           End if

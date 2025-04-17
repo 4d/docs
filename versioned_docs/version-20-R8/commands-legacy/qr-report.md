@@ -34,15 +34,15 @@ The *methodName* parameter designates a 4D project method that will be executed 
 
 | **Parameter** | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $1            | Integer  | Area reference                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| $2            | Integer  | Number of the command selected. To compare with the following constants of the *QR Commands* theme (only listed events are supported): <table> <thead> <tr> <td>Constant</td> <td>Value</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Use of command [QR RUN](qr-run.md) recommended</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
+| $area            | Integer  | Area reference                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| $command            | Integer  | Number of the command selected. To compare with the following constants of the *QR Commands* theme (only listed events are supported): <table> <thead> <tr> <td>Constant</td> <td>Value</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Use of command [QR RUN](qr-run.md) recommended</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
 
-**Note:** If you want to compile your database, you must declare the $1 et $2 parameters explicitly as longints, even if you do not use them.
+**Note:** If you want to compile your database, you must declare the $area et $command parameters explicitly as longints, even if you do not use them.
 
 If you want to execute the initial command chosen by the user, use the following statement in the *methodName* method:
 
 ```4d
- QR EXECUTE COMMAND($1;$2)
+ QR EXECUTE COMMAND($area;$command)
 ```
 
 If the *methodName* parameter is an empty string ("") or is omitted, no method is called and the standard operation of **QR REPORT** is applied.
@@ -105,13 +105,13 @@ You want to convert the character set used in a quick report called using **QR R
 The myCallbackMeth method converts the report when it is generated:
 
 ```4d
- var $1;$2 : Integer
- If($2=qr cmd generate) //if we generated a report
+ #DECLARE($area : Integer ; $command : Integer)
+ If($command=qr cmd generate) //if we generated a report
     var $myblob : Blob
     var $path;$text : Text
     var $type : Integer
-    QR EXECUTE COMMAND($1;$2) //execution of command
-    QR GET DESTINATION($1;$type;$path) //retrieval of destination
+    QR EXECUTE COMMAND($area;$command) //execution of command
+    QR GET DESTINATION($area;$type;$path) //retrieval of destination
     If(($type=qr HTML file)|($type=qr text file))
        DOCUMENT TO BLOB($path;$myblob)
   //conversion to text using UTF-8
@@ -122,7 +122,7 @@ The myCallbackMeth method converts the report when it is generated:
        BLOB TO DOCUMENT($path;$myblob)
     End if
  Else //otherwise, execution of the command
-    QR EXECUTE COMMAND($1;$2)
+    QR EXECUTE COMMAND($area;$command)
  End if
 ```
 

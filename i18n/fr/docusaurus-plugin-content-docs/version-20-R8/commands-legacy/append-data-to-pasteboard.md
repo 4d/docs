@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-Passez dans *typeDonnées* une valeur définissant le type de données à ajouter. Vous pouvez passer une signature 4D, un type UTI (Mac OS), un nom/numéro de format (Windows), ou un type de 4 caractères (compatibilité). Pour plus d'informations sur ces types, reportez-vous à la section *Gestion du conteneur de données*. 
+Passez dans *typeDonnées* une valeur définissant le type de données à ajouter. Vous pouvez passer une signature 4D, un type UTI (macOS), un nom/numéro de format (Windows), ou un type de 4 caractères (compatibilité). Pour plus d'informations sur ces types, reportez-vous à la section *Gestion du conteneur de données*. 
 
 **Note pour les utilisateurs Windows :** Lorsque la commande est utilisée avec des données de type texte (*typeDonnées* vaut "TEXT", com.4d.private.text.native ou com.4d.private.text.utf16), la chaîne contenue dans le paramètre BLOB *données* doit se terminer par le caractère NULL sous Windows. 
 

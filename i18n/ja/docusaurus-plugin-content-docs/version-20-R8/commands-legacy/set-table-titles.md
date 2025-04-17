@@ -66,10 +66,9 @@ displayed_sidebar: docs
   // TRANSLATE TABLES AND FIELDS (Text)
   // TRANSLATE TABLES AND FIELDS (LanguageCode)
  
- var $1 : Text //ランゲージコード
+ #DECLARE($Language : Text) //ランゲージコード
  var $vlTable;$vlField : Integer
- var $Language : Text
- $Language:=$1
+ 
  
  For($vlTable;1;Last table number) //各テーブルを渡す
     If($vlTable#((->[Translations]))) //翻訳テーブルを翻訳しない
@@ -143,11 +142,11 @@ displayed_sidebar: docs
   // LOCALIZED TABLES AND FIELDS (Text)
   // LOCALIZED TABLES AND FIELDS (LanguageCode)
  
- var $1 : Text //ランゲージコード
+ #DECLARE($Language : Text) //ランゲージコード
  var $vlTable;$vlField : Integer
- var $Language : Text
+ 
  var $vlTableNum;$vlFieldNum : Integer
- $Language:=$1
+ 
  
   //テーブル名を更新する
  ARRAY TEXT($asNames;0) //SET TABLE TITLES と SET FIELD TITLESを初期化する

@@ -19,14 +19,14 @@ displayed_sidebar: docs
 ## Description 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->La commande **Get menu item modifiers** retourne le ou les modificateur(s) additionnel(s) associé(s) au raccourci standard de la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->   
-Le raccourci standard est composé de la touche **Commande** (Mac OS) ou **Ctrl** (Windows) et d’une touche personnalisée. Le raccourci standard est géré via les commandes [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) et [Get menu item key](get-menu-item-key.md).
+Le raccourci standard est composé de la touche **Commande** (macOS) ou **Ctrl** (Windows) et d’une touche personnalisée. Le raccourci standard est géré via les commandes [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) et [Get menu item key](get-menu-item-key.md).
 
-Les modificateurs additionnels sont la touche **Majuscule** et la touche **Option** (Mac OS) / **Alt** (Windows). Ces modificateurs ne sont utilisables que si un raccourci standard a été défini au préalable. 
+Les modificateurs additionnels sont la touche **Majuscule** et la touche **Option** (macOS) / **Alt** (Windows). Ces modificateurs ne sont utilisables que si un raccourci standard a été défini au préalable. 
 
 La valeur numérique retournée par la commande correspond au code de la ou des touche(s) de modification additionnelles. Les codes des touches sont les suivants :
 
 * **Majuscule** \= 512
-* **Option** (Mac OS) ou **Alt** (Windows) = 2048  
+* **Option** (macOS) ou **Alt** (Windows) = 2048  
 Si les deux touches sont utilisées, leur valeur est cumulée.
 
 **Note :** Vous pouvez évaluer la valeur retournée à l’aide des constantes Shift key mask et Option key mask du thème “*Evénements (Modifiers)*”.

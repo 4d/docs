@@ -140,7 +140,7 @@ La función `.getHeader()` <!-- REF #IncomingMessageClass.getHeader().Summary --
 
 :::note
 
-The *key* parameter is not case sensitive.
+El parámetro *key* no distingue entre mayúsculas y minúsculas.
 
 :::
 
@@ -214,9 +214,9 @@ If the body is not received as a valid picture, the function returns null.
 
 <!-- REF #IncomingMessageClass.getText().Params -->
 
-| Parámetros | Tipo |                             | Descripción                 |
-| ---------- | ---- | --------------------------- | --------------------------- |
-| Resultado  | Text | <- | Body of the request as text |
+| Parámetros | Tipo |                             | Descripción                      |
+| ---------- | ---- | --------------------------- | -------------------------------- |
+| Resultado  | Text | <- | Cuerpo de la petición como texto |
 
 <!-- END REF -->
 
@@ -256,7 +256,7 @@ La propiedad `.url` contiene <!-- REF #IncomingMessageClass.url.Summary -->la UR
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
 
-The `.url` property is read-only.
+La propiedad `.url` es de sólo lectura.
 
 :::note
 
@@ -292,11 +292,11 @@ The `.urlPath` property is read-only.
 
 La propiedad `.urlQuery` contiene <!-- REF #IncomingMessageClass.urlQuery.Summary -->los parámetros de la petición cuando se han dado en la URL como pares llave/valor<!-- END REF -->.
 
-The `.urlQuery` property is read-only.
+La propiedad `.urlQuery` es de sólo lectura.
 
 Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
 
-#### Direct parameters
+#### Parámetros directos
 
 Example: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
 

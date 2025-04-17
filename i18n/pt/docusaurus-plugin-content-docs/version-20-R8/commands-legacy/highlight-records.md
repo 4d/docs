@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Summary-->O comando HIGHLIGHT RECORDS permite selecionar registros em um formulário listado.<!-- END REF--> Esta operação é idêntica à seleção de registros manual em modo listado utilizando o mouse ou as combinações de teclado **Shift+Clique** ou **Ctrl+Clique** (Windows) ou **comando+Clique** (Mac OS). A seleção atual não é modificada.  
+<!--REF #_command_.HIGHLIGHT RECORDS.Summary-->O comando HIGHLIGHT RECORDS permite selecionar registros em um formulário listado.<!-- END REF--> Esta operação é idêntica à seleção de registros manual em modo listado utilizando o mouse ou as combinações de teclado **Shift+Clique** ou **Ctrl+Clique** (Windows) ou **comando+Clique** (macOS). A seleção atual não é modificada.  
   
 **Nota**: o conjunto de registros selecionados é atualizado depois de redesenhar os registros; ou seja, depois da execução de todo o método de chamada e não apenas imediatamente depois da execução de HIGHLIGHT RECORDS.  
   

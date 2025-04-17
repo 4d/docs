@@ -27,9 +27,8 @@ You created the Polygon class:
 
 ```4d
   //Class: Polygon
- Class constructor
- var $1;$2 : Integer
- This.area:=$1*$2
+ Class constructor($width : Integer; $height : Integer)
+ This.area:=$width*$height
 ```
 
 Then, in a method, you can write:

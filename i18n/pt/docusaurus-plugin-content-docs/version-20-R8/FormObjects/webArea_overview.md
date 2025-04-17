@@ -47,7 +47,7 @@ Por exemplo, para chamar o método `HelloWorld` 4D, basta executar a seguinte in
 $4d. HelloWorld();
 ```
 
-> JavaScript is case sensitive so it is important to note that the object is named **$4d** (with a lowercase "d").
+> JavaScript é sensível a maiúsculas e minúsculas, portanto é importante notar que o objeto tem o nome **$4d** (com uma letra minúscula "d").
 
 A sintaxe das chamadas aos métodos 4D é a seguinte:
 
@@ -125,8 +125,8 @@ O código JavaScript que roda na área web é:
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
     {
-        var result = theSum // result is 262.5
-    });
+        var result = theSum // o resultado é 262.5
+});
 ```
 
 ## Ações padrão

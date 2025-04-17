@@ -5,14 +5,14 @@ slug: /commands/on-server-open-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Server Open Connection database method.Syntax-->$1, $2, $3 -> On Server Open Connection database method -> $0<!-- END REF-->
+<!--REF #_command_.On Server Open Connection database method.Syntax-->On Server Open Connection($user : Integer ; $id : Integer ; $toIgnore : Integer) -> $status : Boolean<!-- END REF-->
 <!--REF #_command_.On Server Open Connection database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | User ID number used internally by 4D Server to identify users |
-| $2 | Integer | &#8592; | Connection ID number used internally by 4D Server to identify a connection |
-| $3 | Integer | &#8592; | Obsolete: Always returns 0 (but must be declared) |
-| $0 | Integer | &#8592; | 0 or omitted = connection accepted; other value = connection refused |
+| $user | Integer | &#8592; | User ID number used internally by 4D Server to identify users |
+| $id | Integer | &#8592; | Connection ID number used internally by 4D Server to identify a connection |
+| $toIgnore | Integer | &#8592; | Obsolete: Always returns 0 (but must be declared) |
+| $status | Integer | &#8592; | 0 or omitted = connection accepted; other value = connection refused |
 
 <!-- END REF-->
 
@@ -58,18 +58,18 @@ When the **On Server Open Connection database method** accesses a process variab
 4D Server passes three Long Integer parameters to the **On Server Open Connection database method** and expects a Long Integer result. The method must therefore be explicitly declared with three Long Integer parameters as well as a Long Integer function result:
 
 ```4d
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
 ```
 
-If you do not return a value in *$0*, thereby leaving the variable undefined or initialized to zero, 4D Server assumes that the database method accepts the connection. If you do not accept the connection, you return a non-null value in *$0*.
+If you do not return a value in *$result*, thereby leaving the variable undefined or initialized to zero, 4D Server assumes that the database method accepts the connection. If you do not accept the connection, you return a non-null value in *$result*.
 
 This table details the information provided by the three parameters passed to the database method:
 
 | **Parameter** | **Description**                                                            |
 | ------------- | -------------------------------------------------------------------------- |
-| $1            | User ID number used internally by 4D Server to identify users              |
-| $2            | Connection ID number used internally by 4D Server to identify a connection |
-| $3            | Obsolete: Always returns 0 but must be declared                            |
+| $user            | User ID number used internally by 4D Server to identify users              |
+| $id            | Connection ID number used internally by 4D Server to identify a connection |
+| $toIgnore            | Obsolete: Always returns 0 but must be declared                            |
 
 These ID numbers are not directly usable as sources of information to be passed as, for example, parameters to a 4D command. However, they provide a way to uniquely identify a 4D Client process between the **On Server Open Connection database method** and the [On Server Close Connection database method](on-server-close-connection-database-method.md). At any moment of a 4D Server session, the combination of these values is unique. By storing this information in an interprocess array or a table, the two database methods can exchange information. In the example at the end of this section, the two database methods use this information to store the date and time of the beginning and end of a connection in the same record of a table.
 
@@ -83,7 +83,7 @@ The information stored in this table is managed by the **On Server Open Connecti
 
 ```4d
   // On Server Open Connection Database Method
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
   // Create a [Server Log] record
  CREATE RECORD([Server Log])
  [Server Log]Log ID:=Sequence number([Server Log])
@@ -91,17 +91,17 @@ The information stored in this table is managed by the **On Server Open Connecti
  [Server Log]Log Date:=Current date
  [Server Log]Log Time:=Current time
   // Save the connection information
- [Server Log]User ID:=$1
- [Server Log]Connection ID:=$2
+ [Server Log]User ID:=$user
+ [Server Log]Connection ID:=$id
  SAVE RECORD([Server Log])
   // Returns no error so that the connection can continue
- $0:=0
+ $result:=0
  
   // On Server Close Connection Database Method
- var $1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer)
   // Retrieve the [Server Log] record
- QUERY([Server Log];[Server Log]User ID=$1;*)
- QUERY([Server Log]; & ;[Server Log]Connection ID=$2;*)
+ QUERY([Server Log];[Server Log]User ID=$user;*)
+ QUERY([Server Log]; & ;[Server Log]Connection ID=$id;*)
  QUERY([Server Log]; & ;[Server Log]Process ID=0)
   // Save the Exit date and time
  [Server Log]Exit Date:=Current date
@@ -123,7 +123,7 @@ The following example prevents any new connection from 2 to 4 A.M.
 
 ```4d
   // On Server Open Connection Database Method
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
  
  If((?02:00:00?<=Current time)&(Current time
 ```

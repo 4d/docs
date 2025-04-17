@@ -29,5 +29,5 @@ displayed_sidebar: docs
 **注**: データベースメソッドで$1 引数 (倍長整数) を宣言しなければなりません:
 
 ```4d
- var $1 : Integer
+ #DECLARE( $status : Integer)
 ```

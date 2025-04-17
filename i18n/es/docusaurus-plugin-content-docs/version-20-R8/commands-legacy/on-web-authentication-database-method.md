@@ -5,16 +5,16 @@ slug: /commands/on-web-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Web Authentication.Syntax-->$1, $2, $3, $4, $5, $6 -> Método base On Web Authentication : Boolean<!-- END REF-->
+<!--REF #_command_.Metodo base On Web Authentication.Syntax-->$url, $http, $ipBrowser, $ipServer, $user, $pw -> Método base On Web Authentication : Boolean<!-- END REF-->
 <!--REF #_command_.Metodo base On Web Authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| $1 | Texto | &#8592; | URL |
-| $2 | Texto | &#8592; | Encabezado HTTP + Cuerpo HTTP |
-| $3 | Texto | &#8592; | Dirección IP del navegador |
-| $4 | Texto | &#8592; | Dirección IP del servidor |
-| $5 | Texto | &#8592; | Nombre de usuario |
-| $6 | Texto | &#8592; | Contraseña |
+| $url | Texto | &#8592; | URL |
+| $http | Texto | &#8592; | Encabezado HTTP + Cuerpo HTTP |
+| $ipBrowser | Texto | &#8592; | Dirección IP del navegador |
+| $ipServer | Texto | &#8592; | Dirección IP del servidor |
+| $user | Texto | &#8592; | Nombre de usuario |
+| $pw | Texto | &#8592; | Contraseña |
 | Resultado | Boolean | &#8592; | True = petición aceptada, False = petición rechazada |
 
 <!-- END REF-->
@@ -23,25 +23,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Metodo base On Web Authentication.Summary-->El Método base On Web Authenticationestá a cargo de administrar el acceso al motor del servidor web.<!-- END REF--> Es llamado automáticamente por 4D o 4D Server cuando una petición de un navegador web requiere la ejecución de un método 4D en el servidor (llamada de un método vía un URL *4DACTION* o  una etiqueta *4DSCRIPT*, etc.). 
 
-Este método recibe seis parámetros de tipo Texto, pasados por 4D: $1, $2, $3, $4, $5, y $6 y devuelve un booleano, $0\. La descripción de estos parámetros es la siguiente:
+Este método recibe seis parámetros de tipo Texto, pasados por 4D: $url, $http, $ipBrowser, $ipServer, $user, y $pw y devuelve un booleano, $result\. La descripción de estos parámetros es la siguiente:
 
 | **Parámetros** | **Tipo** | **Descripción**                                      |
 | -------------- | -------- | ---------------------------------------------------- |
-| $1             | Texto    | URL                                                  |
-| $2             | Texto    | Encabezado + Cuerpo HTTP (32 KB máximo)              |
-| $3             | Texto    | Dirección IP del navegador                           |
-| $4             | Texto    | Dirección IP que llama al servidor                   |
-| $5             | Texto    | Nombre del usuario                                   |
-| $6             | Texto    | Contraseña                                           |
-| $0             | Booleano | True = petición aceptada, False = petición rechazada |
+| $url             | Texto    | URL                                                  |
+| $http             | Texto    | Encabezado + Cuerpo HTTP (32 KB máximo)              |
+| $ipBrowser             | Texto    | Dirección IP del navegador                           |
+| $ipServer             | Texto    | Dirección IP que llama al servidor                   |
+| $user             | Texto    | Nombre del usuario                                   |
+| $pw             | Texto    | Contraseña                                           |
+| $result             | Booleano | True = petición aceptada, False = petición rechazada |
 
 Debe declarar estos parámetros de esta forma:
 
 ```4d
   // Método de base On Web Authentication
  
- var $1;$2;$3;$4;$5;$6 : Text
- var $0 : Boolean
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  
   // Código para el método
 ```
@@ -50,11 +49,11 @@ Debe declarar estos parámetros de esta forma:
 
 * **URL**
 
- El primer parámetro (*$1*) es el URL introducido por el usuario en el área ubicación de su navegador web, menos la dirección local.
+ El primer parámetro (*$url*) es el URL introducido por el usuario en el área ubicación de su navegador web, menos la dirección local.
 
- Tomemos el ejemplo de una conexión de Intranet. Supongamos que la dirección IP de su equipo servidor web 4D es *123.45.67.89*. La siguiente tabla muestra los valores de *$1* dependiendo del URL introducido en el navegador web:
+ Tomemos el ejemplo de una conexión de Intranet. Supongamos que la dirección IP de su equipo servidor web 4D es *123.45.67.89*. La siguiente tabla muestra los valores de *$url* dependiendo del URL introducido en el navegador web:
 
-| **URL introducido en el navegador web**    | **Valor del parámetro $1**     |
+| **URL introducido en el navegador web**    | **Valor del parámetro $url**     |
 | ------------------------------------------ | ------------------------------ |
 | 123.45.67.89                               | /                              |
 | http://123.45.67.89                        | /                              |
@@ -65,32 +64,32 @@ Debe declarar estos parámetros de esta forma:
 
 * **Encabezado y cuerpo de la petición HTTP**
 
- El segundo parámetro (*$2*) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Note que esta información se pasa al Método base On Web Authentication tal como está. El contenido varía en función del tipo de navegador web que esté intentando la conexión. Si su aplicación manipula esta información, es su decisión si analiza el encabezado y el cuerpo.
+ El segundo parámetro (*$http*) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Note que esta información se pasa al Método base On Web Authentication tal como está. El contenido varía en función del tipo de navegador web que esté intentando la conexión. Si su aplicación manipula esta información, es su decisión si analiza el encabezado y el cuerpo.
 
 **Notas:**
 
-* Por razones de rendimiento, el tamaño de los datos que transita vía el parámetro $2 no debe superar los 32 KB. De lo contrario serán truncados por el servidor HTTP de 4D.
+* Por razones de rendimiento, el tamaño de los datos que transita vía el parámetro $http no debe superar los 32 KB. De lo contrario serán truncados por el servidor HTTP de 4D.
 * Para mayor información sobre este parámetro, consulte la descripción del [Método base On Web Connection](metodo-base-on-web-connection.md).
 * **Dirección IP del navegador**  
-El tercer parámetro $3 recibe la dirección IP del equipo navegador. Esta información permite distinguir entre las conexiones de Intranet e Internet.  
+El tercer parámetro $ipBrowser recibe la dirección IP del equipo navegador. Esta información permite distinguir entre las conexiones de Intranet e Internet.  
 **Nota:** 4D devuelve las direcciones IPv4 en un formato híbrido IPv6 escritos con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34\. Para mayor información, consulte la sección *Soporte de IP v6*.
 * **Dirección IP para llamar al servidor**  
-El cuarto parámetro $4 recibe la dirección IP utilizada para llamar al servidor Web. 4D a partir de la versión 6.5 autoriza el multi-homing, permitiendo explotar equipos con más de una dirección IP. Para mayor información, consulte la sección [QR DELETE COLUMN](qr-delete-column.md).
+El cuarto parámetro $ipServer recibe la dirección IP utilizada para llamar al servidor Web. 4D a partir de la versión 6.5 autoriza el multi-homing, permitiendo explotar equipos con más de una dirección IP. Para mayor información, consulte la sección [QR DELETE COLUMN](qr-delete-column.md).
 * **Nombre del usuario y contraseña**  
-Los parámetros $5 y $6 reciben el nombre de usuario y contraseña introducidos por el usuario en la caja de diálogo estándar de identificación mostrada por el navegador. Esta caja de diálogo aparece para cada conexión, si una opción de gestión de contraseñas ha sido seleccionada en las Propiedades de la base (ver la sección *Seguridad de las conexiones*).
+Los parámetros $user y $pw reciben el nombre de usuario y contraseña introducidos por el usuario en la caja de diálogo estándar de identificación mostrada por el navegador. Esta caja de diálogo aparece para cada conexión, si una opción de gestión de contraseñas ha sido seleccionada en las Propiedades de la base (ver la sección *Seguridad de las conexiones*).
 
-**Nota:** si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $6 (la contraseña del usuario) no se devuelve por razones de seguridad.
+**Nota:** si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $pw (la contraseña del usuario) no se devuelve por razones de seguridad.
 
-**• Parámetro $0**  
+**• Parámetro $result**  
   
- El Método base On Web Authentication devuelve un booleano en $0:
+ El Método base On Web Authentication devuelve un booleano en $result:
 
-   * Si $0 es [True](true.md "True"), la conexión es aceptada.
-   * Si $0 es [False](false.md "False"), la conexión es rechazada.
+   * Si $result es [True](true.md "True"), la conexión es aceptada.
+   * Si $result es [False](false.md "False"), la conexión es rechazada.
 
 El [Método base On Web Connection](metodo-base-on-web-connection.md) sólo se ejecuta si la conexión ha sido aceptada por **On Web Authentication**.
 
-**Advertencia:** si no se pasa ningún valor en *$0* o si *$0* no se define en el Método base On Web Authentication, la conexión se considerará como aceptada y se ejecuta el [Método base On Web Connection](metodo-base-on-web-connection.md)*Licenses*.
+**Advertencia:** si no se pasa ningún valor en *$result* o si *$result* no se define en el Método base On Web Authentication, la conexión se considerará como aceptada y se ejecuta el [Método base On Web Connection](metodo-base-on-web-connection.md)*Licenses*.
 
 **Notas:**
 
@@ -120,24 +119,23 @@ Ejemplo del *Método de base On Web Authentication* en modo BASIC:
 
 ```4d
   //Método de base On Web Authentication
- var $5;$6;$3;$4 : Text
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  var $usuario;$contraseña;$IPNavegador;$IPServidor : Text
- var $4Dusuario : Boolean
+ var $ipServerDusuario : Boolean
  ARRAY TEXT($usuarios;0)
  ARRAY LONGINT($nums;0)
  var $upos : Integer
- var $0 : Boolean
  
- $0:=False
+ $result:=False
  
- $usuario:=$5
- $contraseña:=$6
- $IPNavegador:=$3
- $IPServidor:=$4
+ $usuario:=$user
+ $contraseña:=$pw
+ $IPNavegador:=$ipBrowser
+ $IPServidor:=$ipServer
  
   //Por razones de seguridad, rechazar nombres que contengan @
  If(WithWildcard($usuario)|WithWildcard($contraseña))
-    $0:=False
+    $result:=False
   //El método WithWildcard se describe a continuación
  Else
   //Verificar para ver si es un usuario 4D
@@ -153,14 +151,14 @@ Ejemplo del *Método de base On Web Authentication* en modo BASIC:
   //No es un usuario definido en 4D, buscar en la tabla de usuarios Web
        QUERY([UsuariosWeb];[UsuariosWeb]usuario=$usuario;*)
        QUERY([UsuariosWeb]; & [UsuariosWeb]contraseña=$contraseña)
-       $0:=(Records in selection([UsuariosWeb])=1)
+       $result:=(Records in selection([UsuariosWeb])=1)
     Else
-       $0:=True
+       $result:=True
     End if
  End if
   //¿Esta es una conexión de intranet?
  If(Substring($IPNavegador;1;7)#"192.100.")
-    $0:=False
+    $result:=False
  End if
 ```
 
@@ -170,21 +168,20 @@ Ejemplo del  en modo DIGEST:
 
 ```4d
   //Método de base On Web Authentication
- var $1;$2;$5;$6;$3;$4 : Text
+ #DECLARE($url : Text ; $http : Text ; $BrowserIP : Text ;\ $ServerIP : Text ; $user : Text ; $password: Text) -> $result : Boolean
  var $usuario : Text
- var $0 : Boolean
- $0:=False
- $usuario:=$5
+ $result:=False
+ $usuario:=$user
   //Por razones de seguridad, rechazar los nombres que contengan @
  If(WithWildcard($usuario))
-    $0:=False
+    $result:=False
   //El método WithWildcard se describe a continuación
  Else
     QUERY([UsuariosWeb];[UsuariosWeb]usuario=$usuario)
     If(OK=1)
-       $0:=WEB Validate digest($usuario;[UsuariosWeb]contraseña)
+       $result:=WEB Validate digest($usuario;[UsuariosWeb]contraseña)
     Else
-       $0:=False //Usuario inexistente
+       $result:=False //Usuario inexistente
     End if
  End if
  
@@ -196,14 +193,13 @@ Ejemplo del  en modo DIGEST:
   //WithWildcard ( Cadena) -> Booleano
   //WithWildcard ( Nombre ) -> Contiene un carácter arroba
  
- C_INTEGER($i)
- var $0 : Boolean
- var $1 : Text
+#DECLARE($name : Text) -> $result : Boolean
+var $i : Integer
  
- $0:=False
- For($i;1;Length($1))
-    If(Character code(Substring($1;$i;1))=Character code("@"))
-       $0:=True
+ $result:=False
+ For($i;1;Length($name))
+    If(Character code(Substring($name;$i;1))=Character code("@"))
+       $result:=True
     End if
  End for
 ```

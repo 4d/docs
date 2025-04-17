@@ -171,18 +171,18 @@ Cada botón llama al método de proyecto MULTINIVEL con un puntero al campo de l
   // MULTILEVEL (Pointer)
   // MULTILEVEL (->[Table]Field)
  
- var $1)   //Nivel de ordenación (campo : Pointer
+ #DECLARE($field : Pointer)   //Nivel de ordenación (campo : Pointer
  var $lLevelNb : Integer
  
   //Construcción de criterios
  If(Not(Shift down)) //Ordenación simple (un nivel)
     ARRAY POINTER(aPtrSortField;1)
-    aPtrSortField{1}:=$1
+    aPtrSortField{1}:=$field
  Else
-    $lLevelNb:=Find in array(aPtrSortField;$1) //¿Ya está ordenado este campo?
+    $lLevelNb:=Find in array(aPtrSortField;$field) //¿Ya está ordenado este campo?
     If($lLevelNb<0) //Si no
        INSERT IN ARRAY(aPtrSortField;Size of array(aPtrSortField)+1;1)
-       aPtrSortField{Size of array(aPtrSortField)}:=$1
+       aPtrSortField{Size of array(aPtrSortField)}:=$field
     End if
  End if
   //Ejecución de la ordenación

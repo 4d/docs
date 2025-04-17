@@ -174,18 +174,18 @@ Cada botão chama ao método de projeto MULTINIVEL passando um ponteiro ao campo
   // MULTINIVEL(Ponteiro)
   // MULTINIVEL(->[Tabela]Campo)
  
- var $1)   //Nível de ordenação (campo : Pointer
+ #DECLARE($field : Pointer)   //Nível de ordenação (campo : Pointer
  var $lNivelNb : Integer
  
   //Construção de critérios
  If(Not(Shift down))&NBSP;&NBSP; //Ordenação simples (um nível)
     ARRAY POINTER(aPtrCampoOrdem;1)
-    aPtrCampoOrdem{1}:=$1
+    aPtrCampoOrdem{1}:=$field
  Else
-    $lNivelNb:=Find in array(aPtrCampoOrdem;$1)&NBSP;&NBSP; //Já está ordenado este campo?
+    $lNivelNb:=Find in array(aPtrCampoOrdem;$field)&NBSP;&NBSP; //Já está ordenado este campo?
     If($lNivelNb<0)&NBSP;&NBSP; //Sim não
        INSERT IN ARRAY(aPtrCampoOrdem;Size of array(aPtrCampoOrdem)+1;1)
-       aPtrCampoOrdem{Size of array(aPtrCampoOrdem)}:=$1
+       aPtrCampoOrdem{Size of array(aPtrCampoOrdem)}:=$field
     End if
  End if
   //Execução da ordenação

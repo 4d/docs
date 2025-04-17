@@ -48,12 +48,12 @@ La méthode projet DEBUG est listée ci-dessous :
   // DEBUG (Texte)
   // DEBUG (Informations supplémentaires de débogage)
  
- var $1 : Text
+ #DECLARE($debugInfo : Text)
  
- If(◊vbDebugOn) // Variable interprocess définie dans la méthode base Sur ouverture
+ If(<>vbDebugOn) // Variable interprocess définie dans la méthode base Sur ouverture
     If(Is compiled mode)
        If(Count parameters>=1)
-          ALERT($1+Char(13)+"Appelez le concepteur au 05 05 05 05")
+          ALERT($debugInfo+Char(13)+"Appelez le concepteur au 05 05 05 05")
        End if
     Else
        TRACE

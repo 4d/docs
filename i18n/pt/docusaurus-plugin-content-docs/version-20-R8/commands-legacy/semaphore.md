@@ -74,7 +74,7 @@ O exemplo a seguir utiliza um semáforo local. Em um banco de dados com vários 
 O array interprocesso se inicializa no método Startup:
 
 ```4d
- ARRAY TEXT(◊ListaFazer;0) // A lista de coisas a fazer está inicialmente vazia
+ ARRAY TEXT(<>ListaFazer;0) // A lista de coisas a fazer está inicialmente vazia
 ```
 
 Este é o método utilizado para adicionar elementos à lista de coisas por fazer:
@@ -83,12 +83,12 @@ Este é o método utilizado para adicionar elementos à lista de coisas por faze
   // Método de projeto AGREGAR A LISTA DE COISAS A FAZER
   // AGREGAR A LISTA DE COISAS A FAZER ( Texto )
   // AGREGAR A LISTA DE COISAS A FAZER ( Elemento da lista de coisas a fazer)
- var $1 : Text
+ #DECLARE($item : Text)
  If(Not(Semaphore("$AcessoLista";300)))
   // Espera 5 segundos se o semáforo já existe
-    $vlElem:=Size of array(◊ListaFazer)+1
-    INSERT IN ARRAY(◊ListaFazer;$vlElem)
-    ◊ListaFazer{$vlElem}:=$1
+    $vlElem:=Size of array(<>ListaFazer)+1
+    INSERT IN ARRAY(<>ListaFazer;$vlElem)
+    <>ListaFazer{$vlElem}:=$item
     CLEAR SEMAPHORE("$AcessoLista") // Apagar o semáforo
  End if
 ```
@@ -109,8 +109,8 @@ Sintaxe:
 
 ```4d
   // Estrutura de proteção por semáforo
- var $0 : Integer
- var $1 : Pointer // mensagem de erro
+ #DECLARE($errorPtr : Pointer) -> $result : Integer
+ // mensagem de erro
  
   // Inicio do método
  var $L_MyError : Integer
@@ -145,8 +145,8 @@ Sintaxe:
     $T_Message:="OK"
  End if
  
- $0:=$L_MyError
- $1->:=$T_Message  // O método chamado recebe um código de erro e uma explicação em texto plano
+ $result:=$L_MyError
+ $errorPtr->:=$T_Message  // O método chamado recebe um código de erro e uma explicação em texto plano
 ```
 
 ## Ver também 

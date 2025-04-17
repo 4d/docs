@@ -44,7 +44,6 @@ Vous souhaitez générer une page semi-dynamique affichant les statistiques d’
 Dans la méthode projet STATS, écrivez le code suivant :
 
 ```4d
- var $1 : Text
  var vPages : Text
  ARRAY TEXT(pages;0)
  ARRAY LONGINT(hits;0)

@@ -252,9 +252,9 @@ You want to check if the "WebAdmin" privilege is associated to the web user sess
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-	//Access is granted, do nothing
+	//Acesso é concedido, não faça nada
 Else
-	//Display an authentication page
+	//Exibe uma página de autenticação
 
 End if
 ```
@@ -469,7 +469,7 @@ This function does nothing and always returns **False** with remote client, stor
 
 A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associa os privilégios e/ou papéis definidos no parâmetro para a sessão e retorna **True** se a execução foi bem sucedida <!-- END REF -->.
 
-- In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
+- No parâmetro *privilege*, passe uma cadeia de caracteres contendo um nome de privilégio (ou vários nomes de privilégio separados por vírgula).
 
 - In the *privileges* parameter, pass a collection of strings containing privilege names.
 

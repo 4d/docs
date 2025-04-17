@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência de janela ou se for omitido, todos os processos atuais e janelas de primeiro plano (Windows) ou processo atual de primeiro plano (Mac OS) |
+| janela | Integer | &#8594;  | Número de referência de janela ou se for omitido, todos os processos atuais e janelas de primeiro plano (Windows) ou processo atual de primeiro plano (macOS) |
 
 <!-- END REF-->
 
@@ -37,7 +37,7 @@ Caixa de zoom/redução em Mac OS
   
 Se as janelas às quais forem aplicados este comando não forem maximizadas previamente (manualmente ou utilizando [MAXIMIZE WINDOW](maximize-window.md)), ou se o tipo de janela não incluir uma caixa de zoom, o comando não tem efeito. Para maior informação sobre tipos de janelas, consulte a seção *Tipos de Janelas*.  
   
-**Nota**: esta função não deve se confundir com a redução de uma janela a um botão (Windows) ou no Dock (Mac OS), a qual é gerada através de um clique no botão abaixo:
+**Nota**: esta função não deve se confundir com a redução de uma janela a um botão (Windows) ou no Dock (macOS), a qual é gerada através de um clique no botão abaixo:
 
 ![](../assets/en/commands/pict39371.en.png)  
 
