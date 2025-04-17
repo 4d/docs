@@ -462,7 +462,7 @@ A new user is created, and some information is stored in the session, especially
 
 - Both HTTP and HTTPS schemas are supported.
 - Apenas [sessões escaláveis](#enabling-web-sessions) podem ser reutilizadas com tokens.
-- Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
+- Somente as sessões do banco de dados do host podem ser reutilizadas (as sessões criadas em servidores Web de componentes não podem ser restauradas).
 - Tokens are not supported with client/server sessions or single-user sessions.
 
 ### Lifespan
