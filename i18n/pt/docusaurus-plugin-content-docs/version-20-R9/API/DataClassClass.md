@@ -687,7 +687,7 @@ A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retorna um
 
 </details>
 
-<!-- REF #DataClassClass.getRemoteCache().Syntax -->**.getRemoteCache**() : Object <!-- END REF -->
+<!-- REF #DataClassClass.getRemoteCache().Syntax -->**.getRemoteCache**() : Objeto <!-- END REF -->
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 
@@ -989,18 +989,18 @@ O uso de placeholders em consultas **é recomendado** pelos seguintes motivos:
 
 1. Evita a inserção de código malicioso: se user diretamente variáveis preenchidas com uma string de pesquisa, um usuário poderia modificar as condições de pesquisa entrando argumentos adicionais. Por exemplo, imagine uma string de pesquisa como:
 
-```4d
- $vquery:="status = 'público' & nome = "+meunome //usuário entra em seu nome
- $result:=$col.query($vquery)
-```
+ ```4d
+  $vquery:="status = 'público' & nome = "+meunome //usuário entra em seu nome
+  $result:=$col.query($vquery)
+ ```
 
 Essa consulta parece segura, pois os dados não públicos são filtrados. No entanto, se o usuário inserir na área *myname* algo como *"smith OR status='private'*,\* a string de consulta será modificada na etapa de interpretação e poderá retornar dados privados.
 
 Ao usar placeholders, não é possível substituir as condições de segurança:
 
-```4d
- $result:=$col.query("status='public' & name=:1";myname)
-```
+ ```4d
+  $result:=$col.query("status='public' & name=:1";myname)
+ ```
 
 Neste caso, se o usuário digitar *smith OR status='private'* na área *myname*, isso não será interpretado na string de consulta, mas apenas passado como um valor. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
 
@@ -1008,10 +1008,10 @@ Neste caso, se o usuário digitar *smith OR status='private'* na área *myname*,
 
 3. Permite o uso de variáveis ou expressões nos argumentos de pesquisa. Exemplos:
 
-```4d
-$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
-$result2:=$col.query("company.name = :1";"John's Pizzas")
-```
+ ```4d
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result2:=$col.query("company.name = :1";"John's Pizzas")
+ ```
 
 #### Pesquisa de valores null
 
