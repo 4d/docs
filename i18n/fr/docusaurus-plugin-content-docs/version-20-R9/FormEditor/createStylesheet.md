@@ -312,27 +312,27 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 - un fichier pour les deux plates-formes :
 
-```
-"css": "<path>" 
-```
+ ```
+ "css": "<path>" 
+ ```
 
 - ou une liste de fichiers pour les deux plates-formes :
 
-```
-"css": [
-     "<path1>",
-     "<path2>" 
-      ],
-```
+ ```
+ "css": [
+      "<path1>",
+      "<path2>" 
+       ],
+ ```
 
 - ou une liste de fichiers par plate-forme :
 
-```
- "css": [
-        {"path": "<path>", "media": "mac"},
-        {"path": "<path>", "media": "windows"},
-    ],
-```
+ ```
+  "css": [
+         {"path": "<path>", "media": "mac"},
+         {"path": "<path>", "media": "windows"},
+     ],
+ ```
 
 > Les chemins de fichiers peuvent être relatifs ou absolus.
 >
