@@ -5,9 +5,9 @@ title: VP IMPORT FROM OBJECT
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                  |
-| ----------- | ------------------------------- |
-| 20 R9       | Support of *paramObj* parameter |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 20 R9       | Soporte del parámetro *paramObj* |
 
 </details>
 
