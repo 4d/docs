@@ -2894,17 +2894,17 @@ module.exports =
         {
           type: "link",
           label: "4D Progress",
-          href: "https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Progress.100-7476284.en.html"
+          href: "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Progress.100-7545461.en.html"
         },
         {
           type: "link",
           label: "4D SVG",
-          href: "https://doc.4d.com/4Dv20R8/4D/20-R8/4D-SVG-Component.100-7477155.en.html"
+          href: "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-SVG-Component.100-7546332.en.html"
         },
         {
           type: "link",
           label: "4D Widgets",
-          href: "https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Widgets.100-7477804.en.html"
+          href: "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Widgets.100-7546981.en.html"
         },
         "Extensions/develop-components",
         "Extensions/develop-plug-ins"
