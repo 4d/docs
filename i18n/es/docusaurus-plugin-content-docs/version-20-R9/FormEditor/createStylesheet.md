@@ -312,27 +312,27 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 - un archivo para ambas plataformas:
 
-```
-"css": "<path>" 
-```
+ ```
+ "css": "<path>" 
+ ```
 
 - o una lista de archivos para ambas plataformas:
 
-```
-"css": [
-     "<path1>",
-     "<path2>" 
-      ],
-```
+ ```
+ "css": [
+      "<path1>",
+      "<path2>" 
+       ],
+ ```
 
 - o una lista de archivos por plataforma:
 
-```
- "css": [
-        {"path": "<path>", "media": "mac"},
-        {"path": "<path>", "media": "windows"},
-    ],
-```
+ ```
+  "css": [
+         {"path": "<path>", "media": "mac"},
+         {"path": "<path>", "media": "windows"},
+     ],
+ ```
 
 > Las rutas de los archivos pueden ser relativas o absolutas.
 >
