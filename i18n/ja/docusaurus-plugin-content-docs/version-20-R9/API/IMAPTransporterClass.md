@@ -652,7 +652,7 @@ End if
 
 #### 説明
 
-`.expunge()` 関数は、<!-- REF #IMAPTransporterClass.expunge().Summary -->"deleted" フラグがつけられたメッセージをすべて IMAP メールサーバーから削除します<!-- END REF -->。"deleted" フラグは、[`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。
+The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
 
 **返されるオブジェクト**
 
