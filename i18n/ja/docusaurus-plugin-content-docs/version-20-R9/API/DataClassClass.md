@@ -992,18 +992,18 @@ attributePath|formula 比較演算子 値
 
 1. 悪意あるコードの挿入を防ぎます: ユーザーによって値が代入された変数をクエリ文字列として直接使用した場合、余計なクエリ引数を入力することでユーザーがクエリ条件を変更する可能性があります。 たとえば、以下のようなクエリ文字列を考えます:
 
-```4d
- $vquery:="status = 'public' & name = "+myname // ユーザーが自分の名前を入力します
- $result:=$col.query($vquery)
-```
+ ```4d
+  $vquery:="status = 'public' & name = "+myname // ユーザーが自分の名前を入力します
+  $result:=$col.query($vquery)
+ ```
 
 非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 しかしながら、もしユーザーが *myname* に *smith OR status='private'* のような入力をした場合、クエリ文字列は解釈時に変更され、非公開データも返してしまう可能性があります。
 
 プレースホルダーを使用した場合、セキュリティ条件を上書きすることは不可能です:
 
-```4d
- $result:=$col.query("status='public' & name=:1";myname)
-```
+ ```4d
+  $result:=$col.query("status='public' & name=:1";myname)
+ ```
 
 この場合、ユーザーが *myname* エリアに *smith OR status='private'* と入力した場合でも、それはクエリ文字列 とはみなされず、値として渡されるだけです。 "smith OR status='private' " という名前の人物を検索したところで、結果は失敗に終わるだけです。
 
@@ -1011,10 +1011,10 @@ attributePath|formula 比較演算子 値
 
 3. クエリに変数や式を使用することができます。 例:
 
-```4d
-$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
-$result2:=$col.query("company.name = :1";"John's Pizzas")
-```
+ ```4d
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result2:=$col.query("company.name = :1";"John's Pizzas")
+ ```
 
 #### null値を検索する
 
