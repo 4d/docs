@@ -89,7 +89,7 @@ title: Índice
 <a id="C"><b>C</b></a>
 
 [`Cache info`](../commands-legacy/cache-info.md)<br/>
-[`Call chain`](../commands-legacy/call-chain.md)<br/>
+[`Call chain`](call-chain.md)<br/>
 [`CALL FORM`](../commands-legacy/call-form.md)<br/>
 [`CALL SUBFORM CONTAINER`](../commands-legacy/call-subform-container.md)<br/>
 [`CALL WORKER`](../commands-legacy/call-worker.md)<br/>
