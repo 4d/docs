@@ -13,7 +13,7 @@ Custom HTTP request handlers meet various needs, including:
 
 - using a given URL as a resource provider or a file-uploading box (to download or upload various files),
 - redirecting on specific pages according to a context (user authenticated, privileges granted...),
-- handle an authentication via oAuth 2.0.
+- gestionar una autenticación a través de oAuth 2.0.
 
 ## Requisitos
 
