@@ -26,7 +26,7 @@ title: ラベル
 ラベルエディターは、次のように開きます:
 
 - デザインモードでは、**ツール**メニュー、あるいは4Dツールバーにあるツールボタンのメニューから\*\*ラベル...\*\*を選択します。
- または
+ OR
 - アプリケーションモードでは、 [`PRINT LABEL`](../commands-legacy/print-label.md) コマンドを使用します。
 
 ![](../assets/en/Desktop/label-wizard.png)
