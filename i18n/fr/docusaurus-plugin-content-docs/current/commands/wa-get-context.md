@@ -17,7 +17,7 @@ title: WA Get context
 
 ### Description
 
-The `WA Get context` command<!--REF #_command_.WA Get context.Summary--> retrieves the context object defined for `$4d` in the Web area designated by the \* and *object* parameters using [`WA SET CONTEXT`](./wa-set-context-object.md).<!-- END REF--> If `WA SET CONTEXT` was not called for the web area the command returns `null`.
+The `WA Get context` command<!--REF #_command_.WA Get context.Summary--> retrieves the context object defined for `$4d` in the Web area designated by the \* and *object* parameters using [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> If `WA SET CONTEXT` was not called for the web area the command returns `null`.
 
 :::note
 
