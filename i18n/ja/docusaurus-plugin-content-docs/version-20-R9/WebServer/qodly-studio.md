@@ -139,8 +139,8 @@ Qodlyページを利用した Webアプリケーションを開発するには�
 | デバッガー                                                                         | 4D IDE デバッガー<br/>*4D Serverのみ*: Qodly Studio デバッガー ([この段落](#4d-server-で-qodlyデバッガーを使用する) を参照ください)                                                                  | Qodly Studio デバッガー                                                                              |
 | REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                                                                                                                        | Qodly Studio ロールとアクセス権エディター                                                                     |
 
-(1) Qodly Studioでは **Model** 項目は無効化されています。<br/>
-(2) 4D Serverでは、Qodly Studio のコードエディターで 4Dコードを開くことができます (**テストおよびデバッグ目的のみ**。[この段落](#開発と運用) を参照ください) 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
+(1) The **Model** item is disabled in Qodly Studio.<br/>
+(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
 
 ### ランゲージ
 
@@ -236,7 +236,7 @@ Qodly Studio デバッガーを実行中の 4D Server アプリケーション�
 
 :::
 
-2. Qodly Studio のツールバーで、**Debug** ボタンをクリックします。<br/>
+2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
     ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 デバッグセッションが正常に開始されると、ボタンラベルに緑色の丸が表示され [qodly-debug](../assets/en/WebServer/debug2.png)、Qodly Studio デバッガーを使用できるようになります。
