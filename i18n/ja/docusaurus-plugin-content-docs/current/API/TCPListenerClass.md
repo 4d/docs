@@ -106,7 +106,7 @@ TCPListener オブジェクトは以下のプロパティや関数を提供し�
 
 1. `onConnection` は接続が確立したときに毎回トリガーされます。
 2. `onError` はエラーが発生した場合にトリガーされます。
-3. `onTerminate` is always triggered just before a connection is terminated.
+3. `onTerminate` は接続が終了する直前に必ずトリガーされます。
 
 #### TCPEvent オブジェクト
 
@@ -122,7 +122,7 @@ TCPListener オブジェクトは以下のプロパティや関数を提供し�
 
 #### 説明
 
-The `.errors` property contains <!-- REF #TCPListener.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
+`.errors` プロパティには<!-- REF #TCPListener.errors.Summary -->接続に関連したエラーオブジェクトのコレクションが格納されています<!-- END REF -->。 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
 
 | プロパティ  |                                                                                           | 型          | 説明                  |
 | ------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------- |
@@ -141,7 +141,7 @@ The `.errors` property contains <!-- REF #TCPListener.errors.Summary -->a collec
 
 #### 説明
 
-The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port number of the machine<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.port` プロパティは、<!-- REF #TCPListener.port.Summary -->マシンのポート番号<!-- END REF -->を格納します。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -161,7 +161,7 @@ The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port num
 
 #### 説明
 
-The `terminate()` function <!-- REF #TCPListener.terminate().Summary -->closes the listener and releases the port<!-- END REF -->.
+`terminate()` 関数は<!-- REF #TCPListener.terminate().Summary -->リスナーを閉じ、ポートを閉じます<!-- END REF -->。
 
 <!-- END REF -->
 
