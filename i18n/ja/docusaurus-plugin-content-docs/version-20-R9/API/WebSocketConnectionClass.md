@@ -76,7 +76,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.send()` 関数は、<!-- REF #WebSocketConnectionClass.send().Summary -->クライアントに *message* を送信します。
+`.send()` 関数は、<!-- REF #WebSocketConnectionClass.send().Summary -->クライアントに *message* を送信します。<!-- END REF -->
 
 *メッセージ* の型によって、以下の内容が送信されます:
 
