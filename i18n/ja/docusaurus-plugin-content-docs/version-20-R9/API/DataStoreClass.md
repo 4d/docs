@@ -309,7 +309,7 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 > コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/client-server-optimization.md#最適化コンテキスト) を参照ください。
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+返されたコレクション内の各オブジェクトは、[`.getRemoteContextInfo()`](#getremotecontextinfo) セクションに記載されているプロパティを持ちます。
 
 #### 例題
 
@@ -509,12 +509,12 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ                               | 型    | 説明                                                                                                                                                                                                                                                           |
-| ----------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| name                                | Text | コンテキストの名称                                                                                                                                                                                                                                                    |
-| main                                | Text | コンテキストに関連する属性 (複数の場合はカンマ区切り)                                                                                                                                                                                                              |
-| dataclass                           | Text | データクラスの名称                                                                                                                                                                                                                                                    |
-| currentItem (任意) | Text | The attributes of the [page mode](../ORDA/client-server-optimization.md#entity-selection-based-list-box) if the context is linked to a list box. コンテキスト名がリストボックスに使用されていない場合、または currentItem に対応するコンテキストが存在しない場合は、`Null` または空のテキスト要素として返されます。 |
+| プロパティ                               | 型    | 説明                                                                                                                                                                                              |
+| ----------------------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                                | Text | コンテキストの名称                                                                                                                                                                                       |
+| main                                | Text | コンテキストに関連する属性 (複数の場合はカンマ区切り)                                                                                                                                                 |
+| dataclass                           | Text | データクラスの名称                                                                                                                                                                                       |
+| currentItem (任意) | Text | コンテキストがリストボックスとリンクしている場合の [ページモード](../ORDA/client-server-optimization.md#エンティティセレクション型リストボックス) の属性。 コンテキスト名がリストボックスに使用されていない場合、または currentItem に対応するコンテキストが存在しない場合は、`Null` または空のテキスト要素として返されます。 |
 
 コンテキストは属性に対するフィルターとして動作するため、*main* が空で返された場合、それはフィルターが適用されておらず、サーバーがすべてのデータクラス属性を返すことを意味します。
 
@@ -662,7 +662,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 `.makeSelectionsAlterable()` 関数は、 <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->カレントアプリケーションのデータストアにおいて、すべての新規エンティティセレクションをデフォルトで追加可能に設定します<!-- END REF --> ([リモートデータストア](../ORDA/remoteDatastores.md) を含む)。 これはたとえば `On Startup` データベースメソッドなどで、一度だけ使用することが想定されています。
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
+このメソッドが呼ばれてない場合、新規エンティティセレクションはそれぞれの "親" の性質や作成方法に応じて、共有可能に設定される場合もあります ([共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) 参照)。
 
 > この関数は、`OB Copy` または [`.copy()`](./EntitySelectionClass.md#copy) に `ck shared` オプションを明示的に使用して作成されたエンティティセレクションには適用されません。
 
@@ -896,7 +896,7 @@ ORDAクラスの関数にコンテキストを渡すと、RESTリクエストの
 *contextType* を渡して、コンテキストが標準コンテキストか、リストボックスに表示されているカレントエンティティセレクション項目のコンテキストかを指定することができます。
 
 - "main" (デフォルト) を渡すと、*contextName* は標準コンテキストを指定します。
-- "currentItem" の場合には、渡された属性はカレント項目のコンテキストに置かれます。  See  [Entity selection-based list box](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
+- "currentItem" の場合には、渡された属性はカレント項目のコンテキストに置かれます。  [エンティティセレクション型リストボックス](../ORDA/client-server-optimization.md#エンティティセレクション型リストボックス) を参照ください。
 
 *pageLength* には、サーバーに要求するデータクラスエンティティの数を指定します。
 
@@ -992,11 +992,11 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 
-| 引数      | 型                       |    | 説明                                                                    |
-| ------- | ----------------------- | -- | --------------------------------------------------------------------- |
-| file    | 4D.File | -> | File オブジェクト                                                           |
-| options | Integer                 | -> | ログレスポンスオプション (サーバーのみ)                              |
-| reqNum  | Integer                 | -> | Number of requests to keep in memory (client only) |
+| 引数      | 型                       |    | 説明                                             |
+| ------- | ----------------------- | -- | ---------------------------------------------- |
+| file    | 4D.File | -> | File オブジェクト                                    |
+| options | Integer                 | -> | ログレスポンスオプション (サーバーのみ)       |
+| reqNum  | Integer                 | -> | メモリ内に保管するリクエストの数 (クライアントのみ) |
 
 <!-- END REF -->
 
