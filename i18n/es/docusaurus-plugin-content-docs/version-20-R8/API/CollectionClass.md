@@ -1798,7 +1798,7 @@ Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final d
 
 > Esta función no modifica la colección original.
 
-La función `.max()` <!-- REF #collection.max().Summary -->devuelve el elemento con el valor más alto de la colección<! - END REF --> (el último elemento de la colección, ya que sería ordenado en orden ascendente usando el [`.sort()`](#sort) función).
+La función `.max()` <!-- REF #collection.max().Summary -->devuelve el elemento con el valor más alto de la colección <!-- END REF --> (el último elemento de la colección, ya que sería ordenado en orden ascendente usando el [`.sort()`](#sort) función).
 
 Lanzamiento
 
