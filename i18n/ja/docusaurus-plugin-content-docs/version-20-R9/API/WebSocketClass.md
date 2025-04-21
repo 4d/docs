@@ -74,11 +74,11 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 <!-- REF #4D.WebSocket.new().Params -->
 
-| 引数                                                | 型                            |                             | 説明                                        |
-| ------------------------------------------------- | ---------------------------- | :-------------------------: | ----------------------------------------- |
-| url                                               | Text                         |              ->             | 接続先の URL                                  |
-| [connectionHandler](#connectionhandler-parameter) | Object                       |              ->             | WebSocket用コールバックを宣言しているオブジェクト             |
-| 戻り値                                               | 4D.WebSocket | <- | 新しい [WebSocket オブジェクト](#websocket-オブジェクト) |
+| 引数                                             | 型                            |                             | 説明                                        |
+| ---------------------------------------------- | ---------------------------- | :-------------------------: | ----------------------------------------- |
+| url                                            | Text                         |              ->             | 接続先の URL                                  |
+| [connectionHandler](#connectionhandler-パラメーター) | Object                       |              ->             | WebSocket用コールバックを宣言しているオブジェクト             |
+| 戻り値                                            | 4D.WebSocket | <- | 新しい [WebSocket オブジェクト](#websocket-オブジェクト) |
 
 <!-- END REF -->
 
@@ -193,11 +193,11 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 *メッセージ* の型によって、以下の内容が送信されます:
 
-| 型      | 内容                                                                                                                   |
-| ------ | -------------------------------------------------------------------------------------------------------------------- |
-| Text   | UTF-8 のテキスト                                                                                                          |
-| BLOB   | バイナリデータ                                                                                                              |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](../commands-legacy/json-stringify.md)) |
+| 型      | 内容                                                                                                         |
+| ------ | ---------------------------------------------------------------------------------------------------------- |
+| Text   | UTF-8 のテキスト                                                                                                |
+| BLOB   | バイナリデータ                                                                                                    |
+| Object | JSON UTF-8 形式のテキスト([`JSON Stringify`](../commands-legacy/json-stringify.md) と同じ結果になります) |
 
 <!-- END REF -->
 
