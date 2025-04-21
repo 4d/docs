@@ -9,7 +9,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 このクラスは以下の種類のセッションをサポートしています:
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-web-sessions). これらは Web および REST 接続に使用され、権限を割り当てることができます。
+- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは Web および REST 接続に使用され、権限を割り当てることができます。
 - [**リモートクライアントユーザー セッション**](../Desktop/clientServer.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、サーバー上で管理される独自のセッションを持ちます。
 - [**ストアドプロシージャーセッション**](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html): サーバ上で実行されるすべてのストアドプロシージャーは、同じ仮想ユーザーセッションを共有します。
 - [**スタンドアロンセッション**](../Project/overview.md#development): シングルユーザーアプリケーションで返されるローカルのセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
@@ -66,11 +66,11 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 :::
 
-`.clearPrivileges()` 関数は、<!-- REF #SessionClass.clearPrivileges().Summary -->対象セッションに紐づいているアクセス権をすべて削除し、実行が成功した場合に **true** を返します<!-- END REF -->。 結果的に、当該セッションは自動的にゲストセッションになります。 Unless in ["forceLogin" mode](../REST/authUsers.md#force-login-mode), the session automatically becomes a Guest session.
+`.clearPrivileges()` 関数は、<!-- REF #SessionClass.clearPrivileges().Summary -->対象セッションに紐づいているアクセス権をすべて削除し、実行が成功した場合に **true** を返します<!-- END REF -->。 ["強制ログイン" モード](../REST/authUsers.md#force-login-mode) でない限り、セッションは自動的にゲストセッションとなります。
 
 :::note
 
-In "forceLogin" mode, `.clearPrivileges()` does not transform the session to a Guest session, it only clears the session's privileges.
+"強制ログイン" モードでは、`.clearPrivileges()` はセッションをゲストセッションへと変換するのではなく、セッションの権限を消去するだけです。
 
 :::
 
