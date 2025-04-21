@@ -9,50 +9,50 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Call chain.Params-->
 
-| 引数  | 型          |                             | 説明                                                               |
-| --- | ---------- | --------------------------- | ---------------------------------------------------------------- |
-| 戻り値 | Collection | &#8592; | Collection of objects describing the call chain within a process |
+| 引数  | 型          |                             | 説明                                |
+| --- | ---------- | --------------------------- | --------------------------------- |
+| 戻り値 | Collection | &#8592; | プロセス内での呼び出しチェーンを記述したオブジェクトのコレクション |
 
 <!-- END REF-->
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                            |
-| ----- | ----------------------------- |
-| 20 R9 | Support of `formula` property |
+| リリース  | 内容                   |
+| ----- | -------------------- |
+| 20 R9 | `formula` プロパティをサポート |
 
 </details>
 
 ## 説明
 
-<!--REF #_command_.Call chain.Summary-->The **Call chain** command returns a collection of objects describing each step of the method call chain within the current process.<!-- END REF--> It provides the same information as the Debugger window. It has the added benefit of being able to be executed from any 4D environment, including compiled mode.
+<!--REF #_command_.Call chain.Summary-->**Call chain** コマンドは、カレントプロセス内におけるメソッド呼び出しチェーンの各ステップを説明するオブジェクトのコレクションを返します。<!-- END REF--> これはデバッガウィンドウと同じ情報を提供します。 こちらの方が、コンパイルモードを含めてあらゆる4D 環境から実行可能であるという利点があります。
 
-The command facilitates debugging by enabling the identification of the method or formula called, the component that called it, and the line number where the call was made. Each object in the returned collection contains the following properties:
+このコマンドを使用すると呼び出されたメソッドまたはフォーミュラ、呼び出したコンポーネント、そして呼び出しが行われた行番号などを特定することが可能なため、デバッグが容易になります。 返されたコレクション内のそれぞれのオブジェクトには以下のプロパティが格納されています:
 
-| **プロパティ** | **型**                            | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | **Example**                              |
-| --------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| database  | Text                             | Name of the database calling the method (to distinguish host methods and component methods)                                                                                                                                                                                                                                                                                                                                                                                                                | "database":"contactInfo" |
-| formula   | Text (if any) | Contents of the current line of code at the current level of the call chain (raw text). Corresponds to the contents of the line referenced by the `line` property in the source file indicated by method. If the source code is not available, `formula` property is omitted (Undefined).                                                                                                                                               | "var $stack:=Call chain" |
-| 行         | Integer                          | Line number of call to the method                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | "line":6                 |
-| name      | Ttext                            | Name of the called method                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | "name":"On Load"         |
-| type      | Text                             | Type of the method: <li>"projectMethod"</li><li>"formObjectMethod"</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (when calling a project method with the *Execute on Server attribute*)</li><li> "executeFormula" (when executing a formula via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) or the evaluation of a formula in a 4D Write Pro document)</li><li>"classFunction"</li><li>"formMethod"</li> | "type":"formMethod"      |
+| **プロパティ** | **型**                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                              | **Example**                              |
+| --------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| database  | Text                          | メソッドを呼び出しているデータベース名(ホストメソッドとコンポーネントメソッドを識別するため)                                                                                                                                                                                                                                                                                                                                                                           | "database":"contactInfo" |
+| formula   | Text (あれば) | 呼び出しチェーンのカレントレベルにおけるコードの現在の行のコンテンツ(平文テキスト)。 メソッドで示されているソースファイル内の `line` プロパティによって参照される行のコンテンツに対応します。 ソースコードが利用できない場合、 `formula` プロパティは省略されます(未定義)。                                                                                                                                                                                                                                                     | "var $stack:=Call chain" |
+| 行         | Integer                       | メソッド呼び出しの行番号                                                                                                                                                                                                                                                                                                                                                                                                                                 | "line":6                 |
+| name      | Text                          | 呼び出されたメソッドの名前                                                                                                                                                                                                                                                                                                                                                                                                                                | "name":"On Load"         |
+| type      | Text                          | メソッドのタイプ: <li>"projectMethod"</li><li>"formObjectMethod"</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (*サーバー上で実行属性*つきのプロジェクトメソッドを呼び出した場合)</li><li> "executeFormula" ([PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) あるいは4D Write Pro ドキュメント内のフォーミュラの評価経由でフォーミュラを実行した場合)</li><li>"classFunction"</li><li>"formMethod"</li> | "type":"formMethod"      |
 
 :::note
 
-For this command to be able to operate in compiled mode, the [Range checking](../Project/compiler.md#range-checking) must not be disabled.
+このコマンドがコンパイルモードで動作するためには、[範囲チェック](../Project/compiler.md#範囲チェック) が無効化されている必要があります。
 
 :::
 
 ## 例題
 
-The following code returns a collection of objects containing information about the method call chain:
+以下のコードは、メソッドの呼び出しチェーンに関する情報を格納したオブジェクトのコレクションを返します:
 
 ```4d
 var $currentCallChain : Collection
 $currentCallChain:=Call chain
 ```
 
-If a project method is executed, the call chain could contain (for example):
+プロジェクトメソッドが実行されていた場合には、Call chain には(一例として)以下のようなものが格納されています:
 
 ```json
 [
@@ -65,7 +65,7 @@ If a project method is executed, the call chain could contain (for example):
 ]
 ```
 
-If a form object method is executed, the call chain could contain (for example):
+フォームオブジェクトメソッドが実行された場合には、Call chain には(一例として)以下のようなものが格納されています:
 
 ```json
 [
