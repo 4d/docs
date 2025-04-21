@@ -1,6 +1,6 @@
 ---
 id: text
-title: Text
+title: テキスト
 ---
 
 テキストオブジェクトを使って、指示・タイトル・ラベルなどの静的 (スタティック) なテキストを フォーム上に表示することができます。 これらのテキストは、参照を含むことで動的にもなります。 For more information, refer to [Using references in static text](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html).

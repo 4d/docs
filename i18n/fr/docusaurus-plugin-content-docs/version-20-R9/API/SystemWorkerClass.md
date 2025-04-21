@@ -328,8 +328,7 @@ Cette propriété est en **lecture seule**.
 
 ## .currentDirectory
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
-
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->    
 #### Description
 
 La propriété `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contient le répertoire de travail dans lequel le process externe est exécuté<!-- END REF -->.

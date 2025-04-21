@@ -3,11 +3,11 @@ id: TCPListenerClass
 title: TCPListener
 ---
 
-The `TCPListener` class allows you to create and configure a TCP server in 4D. Once the TCP listener is instantiated, you can receive client TCP connections and communicate using any protocol supporting TCP.
+`TCPListener` クラスを使用すると、4D で TCP サーバーを作成および設定することができます。 TCP リスナーがインスタンス化されると、クライアントからのTCP 接続を受信し、TCP をサポートしているあらゆるプロトコルを使用して通信することができるようになります。
 
-The `TCPListener` class is available from the `4D` class store. You can create a TCP server using the [4D.TCPListener.new()](#4dtcplistenernew) function, which returns a [TCPListener object](#tcplistener-object).
+`TCPListener` クラスは `4D` クラスストアにて提供されています。 TCP サーバーは、[TCPListener オブジェクト](#tcplistener-オブジェクト) を返す [4D.TCPListener.new()](#4dtcplistenernew) 関数を使用して作成できます。
 
-All `TCPListener` class functions are thread-safe.
+全ての`TCPListener` クラス関数はスレッドセーフです。
 
 <details><summary>履歴</summary>
 
@@ -32,11 +32,11 @@ Function terminate()
 	This.listener.terminate()
 	
 Function onConnection($listener : 4D.TCPListener; $event : 4D.TCPEvent)->$result
-    	//when connected, start a server to handle the communication
+    	// 接続したら、通信を管理するサーバーを開始する
 	If($event.address # "192.168.@") 
-		$result:=Null //in some cases you can reject the connection
+		$result:=Null // 特定の場合には接続を拒否します
 	Else
-		$result:=cs.MyAsyncTCPConnection.new(This) //see TCPConnection class
+		$result:=cs.MyAsyncTCPConnection.new(This) // 詳細はTCPConnection クラスを参照のこと
 	End if
 	
 Function onError($listener : 4D.TCPListener; $event : 4D.TCPEvent)
@@ -47,15 +47,15 @@ Function onTerminate($listener : 4D.TCPListener; $event : 4D.TCPEvent)
 
 :::note
 
-See [example in TCPConnection class](./TCPConnectionClass.md#asynchronous-example) for a description of the MyAsyncTCPConnection user class.
+MyAsyncTCPConnection ユーザークラスの詳細については、[TCPConnection クラスの例題](./TCPConnectionClass.md#asynchronous-example) を参照して下さい。
 
 :::
 
-### TCPListener Object
+### TCPListener オブジェクト
 
-A TCPListener object is a shared object.
+TCPListener オブジェクトは共有オブジェクトです。
 
-TCPListener objects provide the following properties and functions:
+TCPListener オブジェクトは以下のプロパティや関数を提供します:
 
 |                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------- |
@@ -71,42 +71,42 @@ TCPListener objects provide the following properties and functions:
 
 <!-- REF #4D.TCPListener.new().params -->
 
-| 引数      | 型                              |                             | 説明                                                           |
-| ------- | ------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| port    | Number                         | ->                          | TCP port to listen                                           |
-| options | Object                         | ->                          | Configuration [options](#options-parameter) for the listener |
-| 戻り値     | 4D.TCPListener | <- | New TCPListener object                                       |
+| 引数      | 型                              |                             | 説明                          |
+| ------- | ------------------------------ | --------------------------- | --------------------------- |
+| port    | Number                         | ->                          | リッスンするTCP ポート番号             |
+| options | Object                         | ->                          | リスナーの設定[オプション](#options-引数) |
+| 戻り値     | 4D.TCPListener | <- | 新規TCPListener オブジェクト        |
 
 <!-- END REF -->
 
 #### 説明
 
-The `4D.TCPListener.new()` function <!-- REF #4D.TCPListener.new().Summary -->creates a new TCP server listening to the specified *port* using the defined *options*, and returns a `4D.TCPListener` object<!-- END REF -->.
+`4D.TCPListener.new()` 関数は、<!-- REF #4D.TCPListener.new().Summary -->*port* 引数で指定したポートをリッスンする新規のサーバーを、*options* 引数で定義されたオプションを使用して作成し、`4D.TCPListener` オブジェクトを返します<!-- END REF -->。
 
 #### `options` 引数
 
-In the *options* parameter, pass an object to configure the listener and all the `TCPConnections` it creates:
+*options* 引数には、リスナーとそれが作成する全ての`TCPConnections` を設定するオブジェクトを渡します:
 
-| プロパティ        | 型       | 説明                                                                                                                                                                                                                                                                                                                                            | デフォルト |
-| ------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| onConnection | Formula | Callback when a new connection is established. The Formula receives two parameters (*$listener* and *$event*, see below) and must return either null/undefined to prevent the connection or an *option* object that will be used to create the [`TCPConnection`](./TCPConnectionClass.md). | 未定義   |
-| onError      | Formula | エラーの場合にトリガーされるコールバック. The Formula receives the `TCPListener` object in *$listener*                                                                                                                                                                                                                                            | 未定義   |
-| onTerminate  | Formula | Callback triggered just before the TCPListener is closed. The Formula receives the `TCPListener` object in *$listener*                                                                                                                                                                                                        | 未定義   |
+| プロパティ        | 型       | 説明                                                                                                                                                                                                                      | デフォルト |
+| ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| onConnection | Formula | 新規接続が確立した時にトリガーされるコールバック。 このフォーミュラは2つの引数(*$listener* および *$event*、以下参照)を受け取り、接続を阻止するためにnull/undefined か、または[`TCPConnection`](./TCPConnectionClass.md) を作成するのに使用される *option* オブジェクトのいずれかを返さなかればなりません。 | 未定義   |
+| onError      | Formula | エラーの場合にトリガーされるコールバック. このフォーミュラは\*$listener\* に `TCPListener` オブジェクトを受け取ります。                                                                                                                             | 未定義   |
+| onTerminate  | Formula | TCPListener が閉じられる直前にトリガーされるコールバック。 このフォーミュラは\*$listener\* に `TCPListener` オブジェクトを受け取ります。                                                                                                                               | 未定義   |
 
 #### コールバック関数
 
-Callback functions receive up to two parameters:
+コールバック関数は、最大2つの引数を受け取ります:
 
-| 引数        | 型                                           | 説明                                                 |
-| --------- | ------------------------------------------- | -------------------------------------------------- |
-| $listener | [`TCPListener` object](#tcplistener-object) | The current TCP listener instance. |
-| $event    | [`TCPEvent` オブジェクト](#tcpevent-オブジェクト)       | イベントに関する情報が含まれているオブジェクト                            |
+| 引数        | 型                                           | 説明                      |
+| --------- | ------------------------------------------- | ----------------------- |
+| $listener | [`TCPListener` オブジェクト](#tcplistener-オブジェクト) | カレントのTCP リスナーインスタンス     |
+| $event    | [`TCPEvent` オブジェクト](#tcpevent-オブジェクト)       | イベントに関する情報が含まれているオブジェクト |
 
 **コールバックの呼び出しの順番:**
 
-1. `onConnection` is triggered each time a connection is established.
+1. `onConnection` は接続が確立したときに毎回トリガーされます。
 2. `onError` はエラーが発生した場合にトリガーされます。
-3. `onTerminate` is always triggered just before a connection is terminated.
+3. `onTerminate` は接続が終了する直前に必ずトリガーされます。
 
 #### TCPEvent オブジェクト
 
@@ -122,7 +122,7 @@ Callback functions receive up to two parameters:
 
 #### 説明
 
-The `.errors` property contains <!-- REF #TCPListener.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
+`.errors` プロパティには<!-- REF #TCPListener.errors.Summary -->接続に関連したエラーオブジェクトのコレクションが格納されています<!-- END REF -->。 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
 
 | プロパティ  |                                                                                           | 型          | 説明                  |
 | ------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------- |
@@ -141,7 +141,7 @@ The `.errors` property contains <!-- REF #TCPListener.errors.Summary -->a collec
 
 #### 説明
 
-The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port number of the machine<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.port` プロパティは、<!-- REF #TCPListener.port.Summary -->マシンのポート番号<!-- END REF -->を格納します。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -161,7 +161,7 @@ The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port num
 
 #### 説明
 
-The `terminate()` function <!-- REF #TCPListener.terminate().Summary -->closes the listener and releases the port<!-- END REF -->.
+`terminate()` 関数は<!-- REF #TCPListener.terminate().Summary -->リスナーを閉じ、ポートを閉じます<!-- END REF -->。
 
 <!-- END REF -->
 

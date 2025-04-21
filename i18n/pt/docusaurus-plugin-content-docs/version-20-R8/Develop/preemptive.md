@@ -41,7 +41,7 @@ Dado que um thread se maneja de forma independente a partir do método processo 
 
 A propriedade "segurança de fio" de cada elemento depende do elemento em si:
 
-- Comandos 4D: thread seguro é uma propriedade interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. Você também pode usar o comando [`Command name`](../commands/command-name.md) para saber se um comando é thread-safe. Grande parte dos comandos 4D podem ser executados em modo apropriativo.
+- Comandos 4D: thread seguro é uma propriedade interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. Você também pode usar o comando [`Command name`](../commands-legacy/command-name.md) para saber se um comando é thread-safe. Grande parte dos comandos 4D podem ser executados em modo apropriativo.
 - Métodos de projeto: as condições para segurança de thread se listam no [este parágrafo](#writing-a-thread-safe-method).
 
 Basicamente, o código que se executa em thread apropriativos não podem ser chamados as partes com as interações externas, tal como o código plug-in ou as variáveis interprocesso. Os acessos aos dados, entretanto, são permitidos desde o servidor de dados 4D que suporta a execução apropriativa.

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->**FORM LOAD** コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて *formData* 引数のデータ(オプション)とともにメモリーにロードします。  1つのプロセスにつきカレントフォームは1つしか指定できません。
+<!--REF #_command_.FORM LOAD.Summary-->**FORM LOAD** コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて *formData* 引数のデータ(オプション)とともにメモリーにロードします。 <!-- END REF--> There can only be one current form per process.
 
 *form* 引数には、以下のいづれかを渡すことができます:
 

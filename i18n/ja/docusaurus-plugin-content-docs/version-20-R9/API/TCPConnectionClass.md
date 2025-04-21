@@ -3,7 +3,7 @@ id: TCPConnectionClass
 title: TCPConnection
 ---
 
-The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a [server](./TCPListenerClass.md), enabling you to send and receive data, and handle connection lifecycle events using callbacks.
+`TCPConnection` クラスを使用すると、[サーバー](./TCPListenerClass.md) へのTransmission Control Protocol (TCP) クライアント接続を管理でき、これによってデータの送受信と、コールバックを使用した接続ライフサイクルイベントの管理が可能になります。
 
 `TCPConnection` クラスは`4D` クラスストアにて提供されています。  TCP 接続は、[TCPConnection オブジェクト](#tcpconnection-オブジェクト) を返す[4D.TCPConnection.new()](#4dtcpconnectionnew) 関数を使用して作成できます。
 
@@ -15,10 +15,10 @@ TCPConnection オブジェクトはメモリ内にそれへの参照が存在し
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                               |
-| ----- | ------------------------------------------------ |
-| 20 R9 | New `listener`, `address`, and `port` attributes |
-| 20 R8 | クラスを追加                                           |
+| リリース  | 内容                                     |
+| ----- | -------------------------------------- |
+| 20 R9 | 新しい `listener`、`address`、および `port` 属性 |
+| 20 R8 | クラスを追加                                 |
 
 </details>
 
@@ -207,7 +207,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 #### 説明
 
-The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->.
+`.address` プロパティには<!-- REF #TCPConnection.address.Summary -->リモートマシンのIP アドレスまたはドメイン名<!-- END REF -->が格納されています。
 
 <!-- END REF -->
 
@@ -219,7 +219,7 @@ The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the 
 
 #### 説明
 
-The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. エラーによって、あるいは`shutdown()` を呼び出したから、あるいはサーバーが閉じられたなどの理由で接続が閉じられている場合には`true` を返します。
+`.closed` プロパティには、<!-- REF #TCPConnection.closed.Summary -->接続が閉じられているかどうかの情報が格納されています<!-- END REF -->。 エラーによって、あるいは`shutdown()` を呼び出したから、あるいはサーバーが閉じられたなどの理由で接続が閉じられている場合には`true` を返します。
 
 <!-- END REF -->
 
@@ -231,7 +231,7 @@ The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whethe
 
 #### 説明
 
-The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
+`.errors` プロパティには<!-- REF #TCPConnection.errors.Summary -->接続に関連したエラーオブジェクトのコレクションが格納されています<!-- END REF -->。 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
 
 | プロパティ  |                                                                                           | 型          | 説明                  |
 | ------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------- |
@@ -250,7 +250,7 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 
 #### 説明
 
-The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->the [`TCPListener`](./TCPListenerClass.md) object that created the `TCPConnection`, if any<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.listener` プロパティには<!-- REF #TCPConnection.listener.Summary -->`TCPConnection` を作成した[`TCPListener`](./TCPListenerClass.md) オブジェクト(あれば)<!-- END REF -->が格納されています。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -262,7 +262,7 @@ The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->th
 
 #### 説明
 
-The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.noDelay` プロパティには<!-- REF #TCPConnection.noDelay.Summary -->Nagle のアルゴリズムが無効化されている(`true`) か有効かされている(`false`) かの情報が格納されています<!-- END REF -->。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -274,7 +274,7 @@ The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whet
 
 #### 説明
 
-The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.port` プロパティには、<!-- REF #TCPConnection.port.Summary -->リモートマシンのポート番号<!-- END REF -->が格納されています。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -294,7 +294,7 @@ The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port n
 
 #### 説明
 
-The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. 接続がまだ確立されていない場合には、データは接続が確立されたあとに送信されます。
+`send()` 関数は、<!-- REF #TCPConnection.send().Summary -->データをサーバーに送信します<!-- END REF -->。 接続がまだ確立されていない場合には、データは接続が確立されたあとに送信されます。
 
 <!-- END REF -->
 
@@ -314,7 +314,7 @@ The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to th
 
 #### 説明
 
-The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
+`shutdown()` 関数は<!-- REF #TCPConnection.shutdown().Summary -->接続の*write* チャンネル(クライアントからサーバーへのストリーム)を閉じます<!-- END REF -->。その一方で、*read* チャンネル(サーバーからクライアントへのストリーム)は開かれたままとなります。これによって、接続がサーバーによって完全に閉じられるか、エラーが発生するまでは、データを受信し続けることができます。
 
 <!-- END REF -->
 
@@ -334,11 +334,11 @@ The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes t
 
 #### 説明
 
-The `wait()` function <!-- REF #TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
+The `wait()` function <!-- REF #TCPConnection.wait().Summary -->TCP 接続が閉じられるか、あるいは`timeout` 引数で指定した秒数に達するまで待ちます<!-- END REF -->。
 
 :::note
 
-`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。  コールバックから[`shutdown()`](#shutdown) を呼び出すことで、`.wait()` を終了することができます。
+`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。 コールバックから[`shutdown()`](#shutdown) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 

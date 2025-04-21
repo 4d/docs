@@ -344,7 +344,7 @@ Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessio
 
 <!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Integer<!-- END REF -->
 
-O <!-- REF #WebServerClass.logRecording.Summary --> modo de registro do log das solicitações (logweb.txt)<!-- FIM REF -->.
+O <!-- REF #WebServerClass.logRecording.Summary --> modo de registro do log das solicitações (logweb.txt)<!-- END REF -->.
 
 - 0 = Não registrar (padrão)
 - 1 = Guardar no formato CLF
@@ -517,7 +517,7 @@ O <!-- REF #WebServerClass.sessionCookiePath.Summary -->campo "path" do cookie d
 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
-O <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valor "SameSite" do cookie de sessão<!-- FIM REF -->. Possíveis valores (usando constantes):
+O <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valor "SameSite" do cookie de sessão<!-- END REF -->. Possíveis valores (usando constantes):
 
 | Parâmetros          | Valor    | Descrição                                                                                                                                                                                   |
 | ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

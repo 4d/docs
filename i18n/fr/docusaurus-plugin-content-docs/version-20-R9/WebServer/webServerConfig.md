@@ -626,9 +626,9 @@ Dans certains cas, d'autres fonctions internes optimisées peuvent être appelé
 
 Deux options permettent de définir le mode de fonctionnement des connexions persistantes :
 
-- **Nombre de demandes par connexion** : Permet de définir le nombre maximal de requêtes et de réponses capables d'être transmises sur une connexion persistante. Limiter le nombre de demandes par connexion permet d'éviter le server flooding, provoqué par un trop grand nombre de requêtes entrantes (technique utilisée par les pirates informatiques).<p>
-   La valeur par défaut (100) peut être augmentée ou diminuée en fonction des ressources de la machine hébergeant le Serveur Web 4D.</p>
+- **Nombre de demandes par connexion** : Permet de définir le nombre maximal de requêtes et de réponses capables d'être transmises sur une connexion persistante. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
+   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
-- **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web. Une fois cette période terminée, le serveur ferme la connexion.<p>
+- **Délai avant déconnexion** : Cette valeur définit l'attente maximale (en secondes) pour le maintien d'une connexion TCP sans réception d'une requête de la part du navigateur web. Once this period is over, the server closes the connection.<p>
    Si le navigateur Web envoie une requête après la fermeture de la connexion, une nouvelle connexion TCP est automatiquement créée. Cette opération est invisible pour l'utilisateur.</p>
 

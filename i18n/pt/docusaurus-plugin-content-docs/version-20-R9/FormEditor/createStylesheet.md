@@ -310,27 +310,27 @@ Durante a execução, 4D prioriza automaticamente as folhas de estilo na seguint
 
 - ou uma lista de arquivos por plataforma:
 
-```
-"css": "<path>" 
-```
+ ```
+ "css": "<path>" 
+ ```
 
 - um arquivo para ambas plataformas:
 
-```
-"css": [
-     "<path1>",
-     "<path2>" 
-      ],
-```
+ ```
+ "css": [
+      "<path1>",
+      "<path2>" 
+       ],
+ ```
 
 - ou uma lista de arquivos para ambas plataformas:
 
-```
- "css": [
-        {"path": "<path>", "media": "mac"},
-        {"path": "<path>", "media": "windows"},
-    ],
-```
+ ```
+  "css": [
+         {"path": "<path>", "media": "mac"},
+         {"path": "<path>", "media": "windows"},
+     ],
+ ```
 
 > As rotas dos arquivos pedem ser relativas ou absolutas.
 >

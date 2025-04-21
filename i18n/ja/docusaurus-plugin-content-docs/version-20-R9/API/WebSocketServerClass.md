@@ -37,7 +37,7 @@ WebSocketプロトコルは、WebSocketサーバーとクライアント (Webブ
 - サーバー接続を処理するためのユーザークラス
 - メッセージを処理するためのユーザークラス
 
-You must [create the WebSocket server](#4dwebsocketservernew) within a [worker](../Develop/processes.md#worker-processes) to keep the connection alive.
+接続を維持するため、[WebSocketサーバーの作成](#4dwebsocketservernew) は [ワーカー](../Develop/processes.md#worker-プロセス) 内にて行う必要があります。
 
 [4D Webサーバー](WebServerClass.md) を起動しておく必要があります。
 

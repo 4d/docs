@@ -76,15 +76,15 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.send()` 関数は、<!-- REF #WebSocketConnectionClass.send().Summary -->クライアントに *message* を送信します。
+`.send()` 関数は、<!-- REF #WebSocketConnectionClass.send().Summary -->クライアントに *message* を送信します<!-- END REF -->。
 
 *メッセージ* の型によって、以下の内容が送信されます:
 
-| 型      | 内容                                                                                                                   |
-| ------ | -------------------------------------------------------------------------------------------------------------------- |
-| Text   | UTF-8 のテキスト                                                                                                          |
-| BLOB   | バイナリデータ                                                                                                              |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](../commands-legacy/json-stringify.md)) |
+| 型      | 内容                                                                                                         |
+| ------ | ---------------------------------------------------------------------------------------------------------- |
+| Text   | UTF-8 のテキスト                                                                                                |
+| BLOB   | バイナリデータ                                                                                                    |
+| Object | JSON UTF-8 形式のテキスト([`JSON Stringify`](../commands-legacy/json-stringify.md) と同じ結果になります) |
 
 <!-- END REF -->
 

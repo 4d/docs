@@ -450,7 +450,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 #### Descrição
 
-A função `.get()` <!-- REF #DataClassClass.get().Summary -->consulta o dataclass para recuperar a entidade que corresponde ao parâmetro *primaryKey*<!-- FIM REF -->.
+A função `.get()` <!-- REF #DataClassClass.get().Summary -->consulta o dataclass para recuperar a entidade que corresponde ao parâmetro *primaryKey* <!-- END REF -->.
 
 Em *primaryKey*, passe a chave primária da entidade para recuperar. Em <em x-id="3">primaryKey</em>, passe o valor da chave primária da entidade a recuperar Em <em x-id="3">primaryKey</em>, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). Você também pode ter certeza de que o valor da chave primária é sempre retornado como Texto usando o [`. etKey()`](EntityClass.md#getkey) com a função `dk key como parâmetro`.
 

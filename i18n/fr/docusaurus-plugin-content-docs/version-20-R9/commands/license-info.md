@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
+<!--REF #_command_.License info.Summary-->La commande **License info** renvoie un objet fournissant des informations détaillées sur la licence active.<!-- END REF-->
 
 Si la commande est exécutée sur une application 4D qui n'utilise pas de licence localement (par exemple 4D remote), la commande renvoie un objet Null.
 

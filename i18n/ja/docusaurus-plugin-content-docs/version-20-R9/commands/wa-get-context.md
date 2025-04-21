@@ -17,7 +17,7 @@ title: WA Get context
 
 ### 説明
 
-`WA Get context` コマンドは、<!--REF #_command_.WA Get context.Summary--> \* および *object* 引数で指定された Web エリア内の `$4d` に対して [`WA SET CONTEXT`](./wa-set-context-object.md) を使用して定義されたコンテキストオブジェクトを取得します。<!-- END REF--> このWeb エリアに対して `WA SET CONTEXT` が呼ばれていなかった場合、コマンドは `null` を返します。
+`WA Get context` コマンドは、<!--REF #_command_.WA Get context.Summary--> \* および *object* 引数で指定された Web エリア内の `$4d` に対して [`WA SET CONTEXT`](./wa-set-context.md) を使用して定義されたコンテキストオブジェクトを取得します。<!-- END REF--> このWeb エリアに対して `WA SET CONTEXT` が呼ばれていなかった場合、コマンドは `null` を返します。
 
 :::note
 

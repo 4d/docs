@@ -130,15 +130,15 @@ Until(OK=0) //end of existing commands
 
 ## Ver también
 
-[EXECUTE FORMULA](execute-formula.md)\
+[EXECUTE FORMULA](../commands-legacy/execute-formula.md)\
 [Preemptive Processes](../Develop/preemptive.md)
 
 ## Propiedades
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Número de comando  | 538                         |
-| Hilo seguro        | &check; |
-| Modifies variables | OK                          |
+|                        |                             |
+| ---------------------- | --------------------------- |
+| Número de comando      | 538                         |
+| Hilo seguro            | &check; |
+| Modifica las variables | OK                          |
 
 
