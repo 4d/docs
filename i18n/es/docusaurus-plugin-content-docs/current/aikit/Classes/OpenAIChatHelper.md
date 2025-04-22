@@ -9,13 +9,13 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 ## Propiedades
 
-| Property Name      | Tipo                                                                  | Default Value                                          | Descripción                                                                           |
-| ------------------ | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| `chat`             | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | The chat API instance used for communication with OpenAI.             |
-| `systemPrompt`     | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | The system prompt message that guides the chat assistant's responses. |
-| `numberOfMessages` | Integer                                                               | 5                                                      | The maximum number of messages to retain in the chat history.         |
-| `parámetros`       | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | The parameters for the OpenAI chat completion request.                |
-| `messages`         | Collection of [OpenAIMessage](OpenAIMessage.md)                       | [] | The collection of messages exchanged in the chat session.             |
+| Nombre de la propiedad | Tipo                                                                  | Default Value                                          | Descripción                                                                           |
+| ---------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | The chat API instance used for communication with OpenAI.             |
+| `systemPrompt`         | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | The system prompt message that guides the chat assistant's responses. |
+| `numberOfMessages`     | Integer                                                               | 5                                                      | The maximum number of messages to retain in the chat history.         |
+| `parámetros`           | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | The parameters for the OpenAI chat completion request.                |
+| `messages`             | Colección de [OpenAIMessage](OpenAIMessage.md)                        | [] | The collection of messages exchanged in the chat session.             |
 
 ## Funciones
 
@@ -30,7 +30,7 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 Sends a user prompt to the chat and returns the corresponding completion result.
 
-#### Example Usage
+#### Ejemplo de Uso
 
 ```4D
 var $chatHelper:=$client.chat.create("You are a helpful assistant.")
