@@ -7,21 +7,21 @@ title: 4D-AIKit
 
 ## Generalidades
 
-4D AIKit is a built-in 4D component that enables interaction with third-party AI APIs.
+4D AIKit es un componente 4D integrado que permite la interacción con APIs de IA de terceros.
 
 ## OpenAI
 
-The [`OpenAI`](Classes/OpenAI.md) class allows you to make requests to the [OpenAI API](https://platform.openai.com/docs/api-reference/).
+La clase [`OpenAI`](Classes/OpenAI.md) permite realizar peticiones a la [API OpenAI](https://platform.openai.com/docs/api-reference/).
 
 ### Configuración
 
-First of all, initialize the OpenAI client using your API key
+En primer lugar, inicialice el cliente OpenAI utilizando su llave API
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new("your api key")
 ```
 
-For a [compatible provider](compatible-openai.md) API, you can configure the server URL by setting the `baseURL` parameter.
+Para una API de [proveedor compatible](compatible-openai.md), puede configurar la URL del servidor definiendo el parámetro `baseURL`.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://your.server.ai"})
@@ -33,17 +33,17 @@ o
 $client.baseURL:="https://your.server.ai"
 ```
 
-### Making requests
+### Realizar peticiones
 
-`OpenAI` provides different endpoints called resources, each offering various functions.
+`OpenAI` ofrece diferentes puntos finales denominados recursos, cada uno de los cuales ofrece diversas funciones.
 
 ```4d
 var $result:=$client.<resource>.<function>(<parameters...>)
 ```
 
-The `$result` contains the `HTTPRequest`, a `success` status, a collection of `errors` and more. See [OpenAIResult](Classes/OpenAIResult.md)
+El `$result` contiene el `HTTPRequest`, un estado `success`, una colección de `errors` y más. Ver [OpenAIResult](Classes/OpenAIResult.md)
 
-See some examples bellow.
+Vea algunos ejemplos a continuación.
 
 #### Chat
 
@@ -57,7 +57,7 @@ https://platform.openai.com/docs/api-reference/chat/create
 var $messages:=[{role: "system"; content: "You are a helpful assistant."}]
 $messages.push({role: "user"; content: "Could you explain me why 42 is a special number"})
 var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini"})
-// result in $result.choice
+// resultado en $result.choice
 ```
 
 ##### Chat helper
@@ -111,7 +111,7 @@ https://platform.openai.com/docs/api-reference/moderations
 var $moderation:=$client.moderations.create("This text contains inappropriate language and offensive behavior.").moderation
 ```
 
-#### Asynchronous code
+#### Código asíncrono
 
 If you do not want to wait for the OpenAPI response when sending a request to its API, you need to use asynchronous code. The result object will be received in a callback function.
 
