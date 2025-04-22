@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                              |
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| aTable     | Tabla        | &#8594; | Table form to load (if omitted, load a project form)                                                                                                                                                  |
+| aTable     | Tabla        | &#8594; | Formulario tabla a cargar (si se omite, carga un formulario proyecto)                                                                                                                                 |
 | form       | Text, Object | &#8594; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
 | formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                                                            |
 | \*         | Operador     | &#8594; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
