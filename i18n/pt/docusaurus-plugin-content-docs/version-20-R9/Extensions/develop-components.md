@@ -386,7 +386,7 @@ The folling keys can be defined:
 
 | \|                                                         | description                                                                                                                                                         |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | Component name (internal)                                                                                                                        |
+| CFBundleName                                               | Nome do componente (interno)                                                                                                                     |
 | CFBundleDisplayName                                        | Component name to display                                                                                                                                           |
 | NSHumanReadableCopyright                                   | Copyright to display                                                                                                                                                |
 | CFBundleVersion                                            | Version of the component                                                                                                                                            |
