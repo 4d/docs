@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**WP Insert picture** コマンドは、<!--REF #_command_.WP Insert picture.Summary-->指定した挿入モード*mode* とレンジ更新モード*rangeUpdate* に従って、*picture* または*pictureFileObj* のピクチャーを*targetObj* で指定したレンジに挿入し、ピクチャー要素への参照を返します。<!-- END REF-->ピクチャーは文字として*targetObj* に挿入されます。
+The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary--> inserts a *picture* or a *pictureFileObj* in the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and returns a reference to the picture element.<!-- END REF--> The picture will be inserted as a character in the *targetObj*.
 
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 

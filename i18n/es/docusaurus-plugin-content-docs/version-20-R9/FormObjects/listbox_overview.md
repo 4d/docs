@@ -1002,9 +1002,9 @@ Estos atributos pueden utilizarse para controlar el rango de valores de entrada.
 
 El atributo behavior ofrece variaciones a la representación estándar de los valores. En 4D v15, se ofrece una única variación:
 
-| Atributo | Valor(es) disponible(s) | valueType(s) | Descripción                                                                                                                                                                                                                                                      |
-| -------- | ------------------------------------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates                                                   | integer                         | Representa un valor numérico como una casilla de selección de tres estados.<br/> 2=intermediario, 1=seleccionado, 0=no seleccionado, -1=invisible, -2=no seleccionado desactivado, -3=seleccionado desactivado, -4=semi seleccionado desactivado |
+| Atributo | Valor(es) disponible(s) | valueType(s) | Descripción                                                                                                                                                                                             |
+| -------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates                                                   | integer                         | Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
 ```4d
  C_OBJECT($ob3)
@@ -1103,9 +1103,9 @@ Ejemplos:
 	OB SET($ob;"requiredListReference";<>List)
 ```
 
-```
-![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
-```
+ ```
+ ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
+ ```
 
 #### choiceListName y choiceListReference
 

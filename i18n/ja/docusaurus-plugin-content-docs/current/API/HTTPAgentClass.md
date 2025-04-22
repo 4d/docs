@@ -119,7 +119,7 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 
 #### 説明
 
-The `.params` property object contains <!-- REF #HTTPAgentClass.params.Summary -->the current used options of the HTTPAgent<!-- END REF -->.
+`.params` プロパティオブジェクトは、<!-- REF #HTTPAgentClass.params.Summary -->HTTPAgent が現在使用しているオプション<!-- END REF -->を格納します。
 
 <!-- END REF -->
 

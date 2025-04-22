@@ -32,11 +32,11 @@ title: TCPEvent
 
 #### 説明
 
-The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. これは`"data"` 型のイベントにおいてのみ有効です。
+`.data` プロパティには、<!-- REF #TCPEvent.data.Summary -->イベントに関連づけられたデータ<!-- END REF -->が格納されています。 これは`"data"` 型のイベントにおいてのみ有効です。
 
 :::note
 
-ローレベルな TCP/IP 接続を扱っている場合、全てのデータが単一のパケットで到着するという保証はない、という点に留意して下さい。 データは順番通りに届きますが、複数のパケットに断片化されて届く可能性があります。 データは順番通りに届きますが、複数のパケットに断片化されて届く可能性があります。
+ローレベルな TCP/IP 接続を扱っている場合、全てのデータが単一のパケットで到着するという保証はない、という点に留意して下さい。 データは順番通りに届きますが、複数のパケットに断片化されて届く可能性があります。
 
 :::
 
@@ -50,7 +50,7 @@ The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associ
 
 #### 説明
 
-The `.type` property contains <!-- REF #TCPEvent.type.Summary -->the type of the event<!-- END REF -->. とりうる値:
+`.type` プロパティには、<!-- REF #TCPEvent.type.Summary -->イベントのタイプ<!-- END REF --> が格納されます。 とりうる値:
 
 - `"connection"`: TCPConnection が正常に確立されたことを表します。
 - `"data"`: データが受信されたことを表します。

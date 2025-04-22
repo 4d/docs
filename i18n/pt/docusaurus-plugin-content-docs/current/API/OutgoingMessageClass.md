@@ -3,11 +3,11 @@ id: OutgoingMessageClass
 title: OutgoingMessage
 ---
 
-The `4D.OutgoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutgoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
+A classe `4D.OutgoingMessage` permite que você crie mensagens a serem retornadas pelas funções do seu aplicativo em resposta a [solicitações REST] (../REST/REST_requests.md). Se a resposta for do tipo `4D.OutgoingMessage`, o servidor REST não retornará um objeto, mas a instância do objeto da classe `OutgoingMessage`.
 
-Typically, this class can be used in custom [HTTP request handler functions](../WebServer/http-request-handler.md#function-configuration) or in functions declared with the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser.
+Typically, this class can be used in custom [HTTP request handler functions](../WebServer/http-request-handler.md#function-configuration) or in functions declared with the [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. Tais solicitações são usadas, por exemplo, para implementar recursos como arquivo de download, Gerar e baixar imagens, bem como receber qualquer tipo de conteúdo por um navegador.
 
-An instance of this class is built on 4D Server and can be sent to the browser by the [4D REST Server](../REST/gettingStarted.md) only. This class allows to use other technologies than HTTP (e.g. mobile).
+Uma instância desta classe é construída no Servidor 4D e pode ser enviada para o navegador pelo [4D Servidor REST](../REST/gettingStarted.md) apenas. Essa classe permite usar tecnologias diferentes do HTTP (por exemplo, mobile).
 
 <details><summary>História</summary>
 
@@ -19,7 +19,7 @@ An instance of this class is built on 4D Server and can be sent to the browser b
 
 ### Exemplo
 
-In this example, a `getFile()` function is implemented in the [Datastore class](../ORDA/ordaClasses.md#datastore-class) and [can be called](../ORDA/ordaClasses.md#onhttpget-keyword) by a REST request. The purpose is to return a **testFile.pdf** file as a response to the request:
+Neste exemplo, uma função `getFile()` está implementada na [classe Datastore ](../ORDA/ordaClasses.md#datastore-class) e [pode ser chamada](../ORDA/ordaClasses.md#onhttpget-keyword) por uma solicitação REST. O objetivo é retornar um arquivo **testFile.pdf** como resposta à solicitação:
 
 ```4d
 Class extends DataStoreImplementation
@@ -36,7 +36,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 ### Objeto OutgoingMessage
 
-4D.OutgoingMessage objects provide the following properties and functions:
+Os objetos 4D.OutgoingMessage fornecem as seguintes propriedades e funções:
 
 |                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -61,14 +61,14 @@ Um objeto 4D.OutgoingMessage é um objeto [não compartilhável](../Concepts/sha
 
 #### Descrição
 
-The `.body` property contains <!-- REF #OutgoingMessageClass.body.Summary -->the outgoing message body<!-- END REF -->. The following data types are supported in the `.body` property:
+A propriedade `.body` contém <!-- REF #OutgoingMessageClass.body.Resumo --> o corpo da mensagem enviada<!-- END REF -->. Os seguintes tipos de dados são suportados na propriedade `.body`:
 
 - text
 - blob
 - object
 - image
 
-The `.body` property is read-write.
+A propriedade `.body` é de leitura e gravação.
 
 Você também pode definir a propriedade `.body` usando a função [`setBody()`](#setbody), caso em que o cabeçalho `content-type` é automaticamente definido.
 
@@ -82,9 +82,9 @@ Você também pode definir a propriedade `.body` usando a função [`setBody()`]
 
 #### Descrição
 
-The `.headers` property contains <!-- REF #OutgoingMessageClass.headers.Summary -->the current headers of the outgoing message as key/value pairs<!-- END REF -->.
+A propriedade `.headers` contém <!-- REF #OutgoingMessageClass.headers.Resumo --> os cabeçalhos atuais da mensagem de saída como pares chave/valor <!-- END REF -->.
 
-The `.headers` property is read-only. Para definir um cabeçalho, use a função [`setHeader()`](#setheader).
+A propriedade `.headers` é somente leitura. Para definir um cabeçalho, use a função [`setHeader()`](#setheader).
 
 <!-- END REF -->
 
@@ -96,9 +96,9 @@ The `.headers` property is read-only. Para definir um cabeçalho, use a função
 
 <!-- REF #OutgoingMessageClass.setBody().Params -->
 
-| Parâmetro | Tipo |    | Descrição                    |
-| --------- | ---- | -- | ---------------------------- |
-| body      | any  | -> | Body of the outgoing message |
+| Parâmetro | Tipo |    | Descrição                  |
+| --------- | ---- | -- | -------------------------- |
+| body      | any  | -> | Corpo da mensagem de saída |
 
 <!-- END REF -->
 
@@ -106,21 +106,21 @@ The `.headers` property is read-only. Para definir um cabeçalho, use a função
 
 A função `.setBody()` <!-- REF #OutgoingMessageClass.setBody().Summary -->define a mensagem de saída *body*<!-- END REF -->.
 
-The following data types are supported in the *body*:
+Os seguintes tipos de dados são suportados no *corpo*:
 
 - Text
 - Blob
 - Object
 - Imagem
 
-When this function is used, the content-type header is automatically set depending on the *body* type:
+Quando essa função é usada, o cabeçalho do tipo de conteúdo é definido automaticamente dependendo do tipo *corpo*:
 
-- Content-Type:text/plain if the body is a Text
-- Content-Type:application/octet-stream if body is a Blob
-- Content-Type:application/json if body is an Object
-- Content-Type:image/jpeg, image/gif... if body is an Image
+- Content-Type:text/plain se o corpo é um Texto
+- Content-Type:application/octet-stream se o corpo é um Blob
+- Content-Type:application/json se o corpo é um objeto
+- Conteúdo-Tipo:image/jpeg, imagem/gif... se o corpo for uma imagem
 
-If *body* is not of a supported value type, an error is returned.
+Se *body* não for de um tipo de valor suportado, um erro é retornado.
 
 <!-- END REF -->
 
@@ -135,19 +135,19 @@ If *body* is not of a supported value type, an error is returned.
 | Parâmetro | Tipo |    | Descrição                             |
 | --------- | ---- | -- | ------------------------------------- |
 | \|        | Text | -> | Propriedade de cabeçalho para definir |
-| value     | Text | -> | Value of the header property          |
+| value     | Text | -> | Valor da propriedade do cabeçalho     |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.setHeader()` function <!-- REF #OutgoingMessageClass.setHeader().Summary -->sets the outgoing message header *key* with the provided *value*<!-- END REF -->. If both parameters are not Text values, an error is raised.
+A função `.setHeader()` <!-- REF #OutgoingMessageClass.setHeader().Summary -->define o cabeçalho de mensagem de saída *chave* com o *valor*<!-- END REF -->. Se ambos os parâmetros não são valores de texto, um erro é gerado.
 
-When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `WASID4D=...` and `4DSID__ProjectName_=....`).
+Ao retornar uma instância de objeto 4D.OutgoingMessage, 4D automaticamente define alguns cabeçalhos (por exemplo, `Set-Cookie` com `WASID4D=...` e `4DSID__ProjectName_=....`).
 
 :::note
 
-If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation.
+Se você definir um *valor* para o cabeçalho "Content-Type" *chave*, certifique-se de chamar esta função depois da chamada para [`setBody()`](#setbody), porque `setBody()` preenche automaticamente este cabeçalho. Para obter uma lista de valores de cabeçalho "Content-Type", por favor, consulte a [documentação do `WEB SEND BLOB`](../commands-legacy/web-send-blob.md).
 
 :::
 
@@ -169,11 +169,11 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 #### Descrição
 
-The `.setStatus()` function <!-- REF #OutgoingMessageClass.setStatus().Summary -->sets the `status` property with the given *status*<!-- END REF -->.
+A função `.setStatus()` <!-- REF #OutgoingMessageClass.setStatus().Summary -->define a propriedade `status` com o *status* <!-- END REF -->.
 
-If *status* is not an integer value, an error is raised.
+Se *status* não for um valor inteiro, um erro é gerado.
 
-For a list of HTTP status codes, please refer the [HTTP status code list on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+Para obter uma lista de códigos de status HTTP, por favor, consulte a [lista de código de status HTTP na Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
 <!-- END REF -->
 

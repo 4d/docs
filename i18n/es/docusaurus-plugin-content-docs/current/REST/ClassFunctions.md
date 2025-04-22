@@ -494,21 +494,17 @@ Cuerpo de la petición:
 En este ejemplo, asociamos una escuela existente a una entidad Students. La clase `StudentsEntity` tiene una API:
 
 ```
-// Clase StudentsEntity
+// StudentsEntity class
 
 Class extends Entity
 
-exposed Function putToSchool()
-	var $1, $school , $0, $status : Object
+exposed Function putToSchool($school : Object) -> $status : Object
 
-		//$1 es una entidad Schools
-	$school:=$1
-		//Asocia la entidad relacionada school a la entidad actual Students
+		//$school is a Schools entity
+		//Associate the related entity school to the current Students entity
 	This.school:=$school
 
 	$status:=This.save()
-
-	$0:=$status
 ```
 
 You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
@@ -540,18 +536,12 @@ En la clase de Dataclass `Students`, la función `setFinalExam()` actualiza una 
 
 Class extends DataClass
 
-exposed Function setFinalExam()
+exposed Function setFinalExam($es : Object ; $examResult : Text) -> $keys : Collection
 
 
-    var $1, $es, $student, $status : Object
-    var $2, $examResult : Text
+    var $student, $status : Object
 
-    var $keys, $0 : Collection
-
-      //Entity selection
-    $es:=$1
-
-    $examResult:=$2
+      //$es is an Entity selection
 
     $keys:=New collection()
 
@@ -563,8 +553,6 @@ exposed Function setFinalExam()
             $keys.push($student.ID)
         End if
     End for each
-
-    $0:=$keys
 ```
 
 Un conjunto de entidades se crea primero con esta petición:

@@ -125,16 +125,16 @@ Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor 
 
 An expression that uses a bitwise operator returns a Long value, except for the Bit Test operator, where the expression returns a Boolean value. La siguiente tabla lista los operadores a nivel de bits y su sintaxis:
 
-| Operación                        | Operador                                             | Sintaxis                                                        | Devuelve                                |
-| -------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------- |
-| Y                                | &                                | Long & Long                                 | Long                                    |
-| O (inclusive) | &#124                            | Long &#124; Long                            | Long                                    |
-| O (exclusivo) | ^ &#124                          | Long &#094; &#124; Long | Long                                    |
-| Left Bit Shift                   | << | Long << Long  | Long (ver nota 1)    |
-| Right Bit Shift                  | > >                                                  | Long >> Long                                                    | Long (ver nota 1)    |
-| Bit Set                          | ?+                                                   | Long ?+ Long                                                    | Long (ver nota 2)    |
-| Poner el bit en 0                | ?-                                                   | Long ?- Long                                                    | Long (ver nota 2)    |
-| Probar bit                       | ??                                                   | Long ?? Long Long                                               | Boolean (ver nota 2) |
+| Operación                        | Operador                                              | Sintaxis                                                        | Devuelve                                |
+| -------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------- |
+| Y                                | &                                 | Long & Long                                 | Long                                    |
+| O (inclusive) | &#124;                            | Long &#124; Long                            | Long                                    |
+| O (exclusivo) | &#094; &#124; | Long &#094; &#124; Long | Long                                    |
+| Left Bit Shift                   | <<  | Long << Long  | Long (ver nota 1)    |
+| Right Bit Shift                  | > >                                                   | Long >> Long                                                    | Long (ver nota 1)    |
+| Bit Set                          | ?+                                                    | Long ?+ Long                                                    | Long (ver nota 2)    |
+| Poner el bit en 0                | ?-                                                    | Long ?- Long                                                    | Long (ver nota 2)    |
+| Probar bit                       | ??                                                    | Long ?? Long Long                                               | Boolean (ver nota 2) |
 
 #### Notas
 

@@ -11,7 +11,7 @@ title: Function
 
 ### フォーミュラオブジェクト
 
-The [Formula](../commands/formula.md) and [Formula from string](../commands/formula-from-string.md) commands allow you to create [`4D.Function` objects](#formula-objects) to execute any 4D expression or code expressed as text.
+[Formula](../commands/formula.md) あるいは [Formula from string](../commands/formula-from-string.md) コマンドを使用すると、[`4D.Function`オブジェクト](#formula-objects) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 
 Formulaオブジェクトは、オブジェクトプロパティに格納することができます。
 

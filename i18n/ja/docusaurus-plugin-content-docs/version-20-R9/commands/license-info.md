@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
+<!--REF #_command_.License info.Summary-->**License info** コマンドは、アクティブなライセンスについての詳細な情報を提供するオブジェクトを返します。<!-- END REF-->
 
 コマンドが、ローカルではライセンスを使用しない4D アプリケーション上で実行された場合(例: 4D リモートなど)、コマンドはNull オブジェクトを返します。
 

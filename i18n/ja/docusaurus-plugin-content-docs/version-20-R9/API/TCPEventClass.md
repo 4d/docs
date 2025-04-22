@@ -7,10 +7,10 @@ title: TCPEvent
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                              |
-| ----- | ------------------------------- |
-| 20 R9 | New `ip`, and `port` attributes |
-| 20 R8 | クラスを追加                          |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 20 R9 | 新しい `ip` および `port` 属性 |
+| 20 R8 | クラスを追加                 |
 
 </details>
 
@@ -35,11 +35,11 @@ title: TCPEvent
 
 #### 説明
 
-The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. これは`"data"` 型のイベントにおいてのみ有効です。
+`.data` プロパティには、<!-- REF #TCPEvent.data.Summary -->イベントに関連づけられたデータ<!-- END REF -->が格納されています。 これは`"data"` 型のイベントにおいてのみ有効です。
 
 :::note
 
-ローレベルな TCP/IP 接続を扱っている場合、全てのデータが単一のパケットで到着するという保証はない、という点に留意して下さい。 データは順番通りに届きますが、複数のパケットに断片化されて届く可能性があります。 データは順番通りに届きますが、複数のパケットに断片化されて届く可能性があります。
+ローレベルな TCP/IP 接続を扱っている場合、全てのデータが単一のパケットで到着するという保証はない、という点に留意して下さい。 データは順番通りに届きますが、複数のパケットに断片化されて届く可能性があります。
 
 :::
 
@@ -53,7 +53,7 @@ The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associ
 
 #### 説明
 
-The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
+`.ip` プロパティには、<!-- REF #TCPConnection.port.Summary -->リモートマシンのIP アドレス<!-- END REF -->が格納されています。
 
 <!-- END REF -->
 
@@ -65,7 +65,7 @@ The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of t
 
 #### 説明
 
-The `.port` property contains <!-- REF #TCPEvent.port.Summary -->the port number of the remote machine<!-- END REF -->.
+`.port` プロパティには、<!-- REF #TCPEvent.port.Summary --> リモートマシンのポート番号<!-- END REF -->が格納されています。
 
 <!-- END REF -->
 
@@ -77,7 +77,7 @@ The `.port` property contains <!-- REF #TCPEvent.port.Summary -->the port number
 
 #### 説明
 
-The `.type` property contains <!-- REF #TCPEvent.type.Summary -->the type of the event<!-- END REF -->. とりうる値:
+`.type` プロパティには、<!-- REF #TCPEvent.type.Summary -->イベントのタイプ<!-- END REF --> が格納されます。 とりうる値:
 
 - `"connection"`: TCPConnection が正常に確立されたことを表します。
 - `"data"`: データが受信されたことを表します。

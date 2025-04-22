@@ -339,7 +339,7 @@ A propriedade `.size` contém o tamanho <!-- REF #EmailObjectClass.size.Summary 
 
 ## .subject
 
-<!-- REF #EmailObjectClass.subject.Syntax -->**.subject** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.subject.Syntax -->**.subject** : Texto<!-- END REF -->
 
 #### Descrição
 

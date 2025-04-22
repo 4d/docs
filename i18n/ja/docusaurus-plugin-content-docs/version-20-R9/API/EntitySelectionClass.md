@@ -130,7 +130,7 @@ $result:=$sel[0].lock() //動作しません
 - *attributeName* で指定した属性がリレートエンティティズ型の場合:
  `.attributeName` は *attributeName* と同じ型のリレート値の新規エンティティセレクション を返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 
-エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクション です。
+エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションです。
 
 属性がエンティティセレクション内に存在しない場合、エラーが返されます。
 
@@ -677,7 +677,7 @@ $sel2:=$sel.clean()
 
 `.distinct()` 関数は、<!-- REF #EntitySelectionClass.distinct().Summary -->*attributePath* に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します<!-- END REF -->。
 
-返されたコレクションは自動的に並べ替えられています。 **Null** 値 は返されません。
+返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
 *attributePath* 引数として、固有の値を取得したいエンティティ属性を渡します。 スカラー値 (テキスト、数値、ブール、あるいは日付) のみが可能です。 *attributePath* のパスが異なる型の値を格納しているオブジェクトプロパティ であった場合、まず最初に型ごとにグループ分けされ、そのあとで並べ替えされます。 型は以下の順番で返されます:
 
@@ -1087,7 +1087,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 `.getRemoteContextAttributes()` 関数は、<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->エンティティセレクションによって使われている最適化コンテキストの情報を返します<!-- END REF -->。
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
+エンティティセレクションについて [最適化コンテキスト](../ORDA/client-server-optimization.md) が存在しない場合、関数は空のテキストを返します。
 
 #### 例題
 

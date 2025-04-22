@@ -365,7 +365,7 @@ $info:=$ds.getAllRemoteContexts()
 
 </details>
 
-<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Real<!-- END REF -->
+<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Réel<!-- END REF -->
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 

@@ -1003,9 +1003,9 @@ Esses atributos podem ser usados para controlar o intervalo de valores de entrad
 
 O atributo behavior fornece variações para a representação regular de valores. Em 4D v15, uma única variação é proposta:
 
-| Atributo | Valor(es) disponível(eis) | valueType(s) | Descrição                                                                                                                                                                                                                             |
-| -------- | --------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates                                                     | integer                         | Representa um valor numérico como uma caixa de seleção de três estados.<br/> 2=semi-marcado, 1=marcado, 0=desmarcado, -1=invisível, -2=desmarcado desabilitado, -3=marcado desabilitado, -4=semi-marcado desabilitado |
+| Atributo | Valor(es) disponível(eis) | valueType(s) | Descrição                                                                                                                                                                                               |
+| -------- | --------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates                                                     | integer                         | Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
 ```4d
  C_OBJECT($ob3)
@@ -1106,9 +1106,9 @@ Exemplos:
 	OB SET($ob;"requiredListReference";<>List)
 ```
 
-```
-../assets/en/FormObjects/listbox_column_objectArray_cities.png
-```
+ ```
+ ../assets/en/FormObjects/listbox_column_objectArray_cities.png
+ ```
 
 #### choiceListName e choiceListReference
 

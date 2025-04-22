@@ -986,18 +986,18 @@ L'utilisation de placeholders dans les recherches **est recommandée** pour les 
 
 1. Cela empêche l'injection de code malveillant : si vous utilisez dans la chaîne de recherche des variables dont le contenu provient directement de la saisie de l'utilisateur, celui-ci pourrait modifier les conditions de recherche en saisissant des arguments de recherche supplémentaires. Par exemple, imaginez une chaîne de recherche du type :
 
-```4d
- $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
- $result:=$col.query($vquery)
-```
+ ```4d
+  $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
+  $result:=$col.query($vquery)
+ ```
 
 Cette recherche semble sécurisée puisque les données non publiques sont filtrées. Cependant, si l'utilisateur saisit dans la zone *myname* une chaîne du type *"smith OR status='private'*, la chaîne de recherche sera modifiée à l'étape de l'interprétation et pourra retourner des données privées.
 
 Lorsque vous utilisez des placeholders, le contournement des options de sécurité n'est pas possible :
 
-```4d
- $result:=$col.query("status='public' & name=:1";myname)
-```
+ ```4d
+  $result:=$col.query("status='public' & name=:1";myname)
+ ```
 
 Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *myname*, cela ne sera pas interprété dans la chaîne de recherche, mais uniquement passé en tant que valeur. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
 
@@ -1005,10 +1005,10 @@ Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *m
 
 3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemples :
 
-```4d
-$result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
-$result2:=$col.query("company.name = :1";"John's Pizzas")
-```
+ ```4d
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result2:=$col.query("company.name = :1";"John's Pizzas")
+ ```
 
 #### Recherche de valeurs null
 

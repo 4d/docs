@@ -316,21 +316,21 @@ Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
 Pour démarrer ce journal :
 
-```4d
-$server:=New object
-...
-//SMTP
-$server.logFile:="MySMTPAuthLog.txt"
-$transporter:=SMTP New transporter($server)
-
-// POP3
-$server.logFile:="MyPOP3AuthLog.txt"
-$transporter:=POP3 New transporter($server)
-
-//IMAP
-$server.logFile:="MyIMAPAuthLog.txt"
-$transporter:=IMAP New transporter($server)
-```
+ ```4d
+ $server:=New object
+ ...
+ //SMTP
+ $server.logFile:="MySMTPAuthLog.txt"
+ $transporter:=SMTP New transporter($server)
+ 
+ // POP3
+ $server.logFile:="MyPOP3AuthLog.txt"
+ $transporter:=POP3 New transporter($server)
+ 
+ //IMAP
+ $server.logFile:="MyIMAPAuthLog.txt"
+ $transporter:=IMAP New transporter($server)
+ ```
 
 #### Contenu
 
