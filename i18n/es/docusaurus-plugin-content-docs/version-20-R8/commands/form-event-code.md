@@ -59,7 +59,7 @@ In this example, the complete handling of a drop-down list (initialization, user
 
 ## Ejemplo 3
 
-This example is a template for a form method. It shows each of the possible events that can occur when a summary report uses a form as an output form:
+Este ejemplo es un método formulario genérico. It shows each of the possible events that can occur when a summary report uses a form as an output form:
 
 ```4d
   //Method of a form being used as output form for a summary report
@@ -304,7 +304,7 @@ Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
 ## Ejemplo 13
 
-You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
+You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. En el método objeto del list box, puedes escribir:
 
 ```4d
  Case of
