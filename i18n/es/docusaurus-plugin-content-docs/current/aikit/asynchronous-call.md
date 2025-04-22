@@ -13,7 +13,7 @@ The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/do
 
 > ⚠️ If your process ends at the conclusion of the current method (e.g., using New process, or playing in the method editor), the callback formula might not be called asynchronously. In such cases, consider using `CALL WORKER` or `CALL FORM`.
 
-## Examples of Usage
+## Ejemplos de uso
 
 ### model list
 
