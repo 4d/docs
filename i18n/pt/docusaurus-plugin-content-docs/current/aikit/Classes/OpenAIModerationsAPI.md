@@ -15,12 +15,12 @@ https://platform.openai.com/docs/api-reference/moderations
 
 **create**(*input* : Variant; *model* : Text; *parameters* : OpenAIParameters) : OpenAIModerationResult
 
-| Parâmetro    | Tipo                                                | Descrição                                                                                                                                |
-| ------------ | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| *entrada*    | Diferente de                                        | Input (or inputs) to classify. Can be a single text or a collection of OpenAIMessage. |
-| *model*      | Text                                                | The content moderation model you would like to use.                                                                      |
-| *parâmetros* | [OpenAIParameters](OpenAIParameters.md)             | Additional parameters for the request.                                                                                   |
-| Resultado    | [OpenAIModerationResult](OpenAIModerationResult.md) | The result of the moderation, indicating potential harm.                                                                 |
+| Parâmetro    | Tipo                                                | Descrição                                                                                                                                        |
+| ------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| *entrada*    | Diferente de                                        | Insira (ou entradas) para classificar. Can be a single text or a collection of OpenAIMessage. |
+| *model*      | Text                                                | The content moderation model you would like to use.                                                                              |
+| *parâmetros* | [OpenAIParameters](OpenAIParameters.md)             | Additional parameters for the request.                                                                                           |
+| Resultado    | [OpenAIModerationResult](OpenAIModerationResult.md) | The result of the moderation, indicating potential harm.                                                                         |
 
 Classifies whether the input is potentially harmful.
 
