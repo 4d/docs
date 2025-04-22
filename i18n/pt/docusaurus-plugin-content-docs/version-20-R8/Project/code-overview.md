@@ -153,7 +153,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 #### Definição de lotes para atributos de métodos
 
-Using the "Attributes for methods" dialog box, you can modify an attribute (Invisible, Offered as a Web Service, etc.) for all or part of the database project methods in a single operation. Esta caraterística é especialmente útil para modificar os atributos de um grande número de métodos de projeto. Também pode ser utilizado durante o desenvolvimento para aplicar rapidamente atributos comuns a grupos de métodos semelhantes.
+Usando a caixa de diálogo "Atributos para métodos", você pode modificar um atributo (Invisível, oferecido como um serviço Web, etc.) for all or part of the database project methods in a single operation. Esta caraterística é especialmente útil para modificar os atributos de um grande número de métodos de projeto. Também pode ser utilizado durante o desenvolvimento para aplicar rapidamente atributos comuns a grupos de métodos semelhantes.
 
 Para a definição em lote dos atributos do método:
 
