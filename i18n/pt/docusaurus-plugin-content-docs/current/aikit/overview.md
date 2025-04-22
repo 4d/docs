@@ -94,7 +94,7 @@ https://platform.openai.com/docs/api-reference/models
 Get full list of models
 
 ```4d
-var $models:=$client.models.list().models // you can then extract the `id`
+var $models:=$client.models.list().models // você pode então extrair o `id`
 ```
 
 Get one model information by id
