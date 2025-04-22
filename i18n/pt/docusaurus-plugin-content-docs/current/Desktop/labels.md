@@ -158,7 +158,7 @@ The **For each: Record or Label** options are used to specify whether to run the
 
 ![](../assets/en/Desktop/label-start.png)
 
-## Printing labels using forms and methods (example)
+## Impressão de etiquetas usando formulários e métodos (exemplo)
 
 You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
 
