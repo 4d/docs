@@ -307,11 +307,11 @@ A macOS executable file is located within a package (e.g. myApp.app/Contents/Mac
 
 The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
 
-| Propiedad | Tipo   | Descripción                                                                        |
-| --------- | ------ | ---------------------------------------------------------------------------------- |
-| name      | Text   | Name of architecture ("arm64" or "x86_64") |
-| type      | Number | Numerical identifier of the architecture                                           |
-| uuid      | Text   | Textual representation of the executable uuid                                      |
+| Propiedad | Tipo   | Descripción                                                                            |
+| --------- | ------ | -------------------------------------------------------------------------------------- |
+| name      | Text   | Nombre de la arquitectura ("arm64" o "x86_64") |
+| type      | Number | Numerical identifier of the architecture                                               |
+| uuid      | Text   | Textual representation of the executable uuid                                          |
 
 #### Ejemplo 1
 
