@@ -482,7 +482,7 @@ Los siguientes campos se registran para cada evento:
 
 | Nombre del campo | Tipo       | Descripción                                                                               |
 | ---------------- | ---------- | ----------------------------------------------------------------------------------------- |
-| time             | Fecha/Hora | Date and time of the event in ISO 8601 format                                             |
+| time             | Fecha/Hora | Fecha y hora del evento en formato ISO 8601                                               |
 | localPort        | Number     | Local port used for the connection                                                        |
 | peerAddress      | Text       | IP address of the remote peer                                                             |
 | peerPort         | Number     | Port of the remote peer                                                                   |
