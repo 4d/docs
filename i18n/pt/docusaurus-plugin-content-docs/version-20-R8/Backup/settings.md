@@ -51,12 +51,12 @@ Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copi
 - **Dados**: Arquivo de dados do aplicativo. Quando esta opção for marcada, o arquivo de histórico do banco de dados, se existir, recebe um backup na mesma hora que os dados.
     - o arquivo de histórico atual da aplicação (se houver),
     - a pasta completa `Settings` localizada [ao lado do arquivo de dados](Project/architecture.md#settings-user-data) (se existir), ou seja, os *parâmetros usuário para os dados*.
-- **Estrutura**: Pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. When this option is checked, the full `Settings` folder located [at the same level as the Project folder](Project/architecture.md#settings-user-1), i.e. the *user settings*, is automatically backed up.
+- **Estrutura**: pastas e arquivos do projeto da aplicação. No caso de bancos de dados compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa Settings situada [no mesmo nível que a pasta Project](Project/architecture.md#settings-user-1), ou seja, *os parâmetros usuário*, é backup automaticamente.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: Esta área permite especificar um conjunto de arquivos e/ou pastas para serem copiados em backup ao mesmo tempo que o aplicativo. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
     - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
-    - **Adicionar pasta...**: Mostra uma caixa de diálogo que permite selecionar uma pasta para adicionar à cópia de segurança. No caso de uma restauração, a pasta vai recuperar sua estrutura interna. Pode selecionar toda pasta ou volume conectado à máquina, exceto a pasta que conter os arquivos do banco de dados.
-    - **Adicionar pasta...**: Mostra uma caixa de diálogo que permite selecionar um arquivo para adicionar à cópia de segurança.
+    - **Adicionar pasta...**: mostra uma caixa de diálogo que permite selecionar uma pasta para adicionar à cópia de segurança. No caso de uma restauração, a pasta vai recuperar sua estrutura interna. Pode selecionar toda pasta ou volume conectado à máquina, exceto a pasta que conter os arquivos do banco de dados.
+    - **Adicionar pasta...**: mostra uma caixa de diálogo que permite selecionar um arquivo para adicionar à cópia de segurança.
 
 ### Pasta de destino de arquivo de cópia de segurança
 
@@ -125,15 +125,15 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 #### Restaurar o último backup se o banco de dados estiver danificado
 
-When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the application, if an anomaly is detected (corrupted file, for example) during application launch. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
+Quando essa opção estiver marcada, o programa inicia automaticamente a restauração do arquivo de dados do último backup válido da aplicação, se for detectada uma anomalia (arquivo corrompido, por exemplo) durante a inicialização da aplicação. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-#### Integrate the latest logs if the database is incomplete
+#### Integrar os últimos logs se o banco de dados estiver incompleto
 
-When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. Se existir uma sequência válida de ficheiros .journal no mesmo repositório, o programa integra previamente todos os ficheiros .journal necessários, do mais antigo ao mais actual. Esta situação surge, por exemplo, se ocorrer uma falha de energia quando existem operações na cache de dados que ainda não foram escritas no disco, ou depois de ter sido detectada uma anomalia ao abrir o ficheiro de dados e ter ocorrido um restauro.
+Quando essa opção estiver marcada, o programa integra automaticamente o arquivo de registro atual se ele contiver operações que não estejam presentes no arquivo de dados. Se existir uma sequência válida de ficheiros .journal no mesmo repositório, o programa integra previamente todos os ficheiros .journal necessários, do mais antigo ao mais actual. Esta situação surge, por exemplo, se ocorrer uma falha de energia quando existem operações na cache de dados que ainda não foram escritas no disco, ou depois de ter sido detectada uma anomalia ao abrir o ficheiro de dados e ter ocorrido um restauro.
 
 :::note
 
-Esta funcionalidade implica que o programa analise todos os ficheiros de registo na pasta de ficheiros de registo actual no arranque. Por conseguinte, por razões de desempenho, certifique-se de que não são armazenados arquivos de registo inúteis na pasta.
+Esta funcionalidade implica que o programa analise todos os arquivos de registo na pasta de arquivos de registo actual no arranque. Por conseguinte, por razões de desempenho, certifique-se de que não são armazenados arquivos de registo inúteis na pasta.
 
 :::
 
