@@ -1073,7 +1073,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 | formula    | 4D.Function |              ->             | Objeto fórmula                                                        |
 | methodName | Text                        |              ->             | Nombre de un método                                                   |
 | param      | any                         |              ->             | Parámetro(s) a pasar a la *formula* o *methodName* |
-| Resultado  | Integer                     | <- | Conjunción                                                            |
+| Resultado  | Integer                     | <- | Índice del primer valor encontrado, o -1 si no se encuentra           |
 
 <!-- END REF -->
 
@@ -1527,7 +1527,7 @@ En *index*, pase la posición donde quiere insertar el elemento en la colección
 
 > **Atención**: recuerde que los elementos de la colección están numerados desde 0.
 
-- Ejemplo 1
+- Si *index* la longitud de la colección, el índice inicial real se fijará en la longitud de la colección.
 - Si *index* <0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
 - Si el valor calculado es negativo, index toma el valor 0.
 
@@ -1665,17 +1665,24 @@ En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 
 *toSearch* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad del tipo de datos).
 
-Ejemplo 2
+Opcionalmente, puede pasar el índice de la colección desde el cual iniciar una búsqueda en reversa en *startFrom*.
 
 - Si *startFrom* >= la longitud de la colección menos uno (coll.length-1), se busca en toda la colección (por defecto).
 - Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección). Si el valor calculado es negativo, se devuelve -1 (no se busca en la colección).
  **Nota:** incluso si *startFrom* es negativo, la colección se sigue buscando de derecha a izquierda.
-- Descripción
+- Si *startFrom* = 0, se devuelve -1 lo que significa que la colección no se busca.
 
 #### Ejemplo
 
 ```4d
-Tipo
+ var $col : Collection
+ var $pos1;$pos2;$pos3;$pos4;$pos5 : Integer 
+ $col:=Split string("a,b,c,d,e,f,g,h,i,j,e,k,e";",") //$col.length=13
+ $pos1:=$col.lastIndexOf("e") //devuelve 12
+ $pos2:=$col.lastIndexOf("e";6) //devuelve 4
+ $pos3:=$col.lastIndexOf("e";15) //devuelve 12
+ $pos4:=$col.lastIndexOf("e";-2) //devuelve 10
+ $pos5:=$col.lastIndexOf("x") //devuelve -1
 ```
 
 <!-- END REF -->
@@ -1794,13 +1801,13 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 #### Descripción
 
-Diferente de Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
+La función `.max()` <!-- REF #collection.max().Summary -->devuelve el elemento con el valor más alto de la colección<!-- END REF --> (el último elemento de la colección tal y como se ordenaría en orden ascendente utilizando la función [`.sort()`](#sort)).
 
 > Esta función no modifica la colección original.
 
-La función `.max()` <!-- REF #collection.max().Summary -->devuelve el elemento con el valor más alto de la colección <!-- END REF --> (el último elemento de la colección, ya que sería ordenado en orden ascendente usando el [`.sort()`](#sort) función).
+Si la colección contiene diferentes tipos de valores, la función `.max()` devolverá el valor máximo dentro del último tipo de elemento en el orden de la lista de tipos (ver la descripción de [`.sort()`](#sort)).
 
-Lanzamiento
+Si la colección contiene objetos, pase el parámetro *propertyPath* para indicar la propiedad del objeto cuyo valor máximo desea obtener.
 
 Si la colección está vacía, `.max()` devuelve *Undefined*.
 
