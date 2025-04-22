@@ -663,7 +663,7 @@ exposed onHTTPGet Function getUserManual($product : cs.ProductEntity) : 4D.Outgo
 	return $response
 ```
 
-You can call the function using this request:
+Puede llamar a la función usando esta petición:
 
 **GET** `http://127.0.0.1:8044/rest/Product/getUserManual?$params='[{"__DATACLASS":"Product","__ENTITY":true,"__KEY":41}]'`
 
@@ -693,6 +693,6 @@ exposed onHTTPGet Function buildShoppingList($products : cs.ProductSelection) : 
 	return $response
 ```
 
-You can call the function using this request:
+Puede llamar a la función usando esta petición:
 
 **GET** `http://127.0.0.1:8044/rest/$singleton/Shopping/buildShoppingList?$params='[{"__DATASET":"8DB0556854HDK52FR5974F","__ENTITIES":true}]'`
