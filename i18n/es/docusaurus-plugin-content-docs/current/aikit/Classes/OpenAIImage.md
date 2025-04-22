@@ -25,7 +25,7 @@ https://platform.openai.com/docs/api-reference/images/object
 
 \| Function result| 4D.Blob | Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
 
-#### Example Usage
+#### Ejemplo de Uso
 
 ```4d
 var $blob:=$image.asBlob()
@@ -37,7 +37,7 @@ var $blob:=$image.asBlob()
 
 \| Function result| Picture | Creates a picture object from the blob converted image. |
 
-#### Example Usage
+#### Ejemplo de Uso
 
 ```4d
 var $picture:=$image.asPicture()
@@ -54,7 +54,7 @@ var $picture:=$image.asPicture()
 
 Saves the image to disk, attempting to download it first if it is a URL. Returns `False` if it could not retrieve the image data.
 
-#### Example Usage
+#### Ejemplo de Uso
 
 ```4d
 var $success:=$image.saveToDisk(Folder(fk desktop folder).file("image.png"))
