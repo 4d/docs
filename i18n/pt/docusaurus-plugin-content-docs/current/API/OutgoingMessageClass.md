@@ -82,7 +82,7 @@ Você também pode definir a propriedade `.body` usando a função [`setBody()`]
 
 #### Descrição
 
-A propriedade `.headers` contém <!-- REF #OutgoingMessageClass.headers.Resumo --> os cabeçalhos atuais da mensagem de saída como pares chave/valor <!-- END REF -->.
+A propriedade `.headers` contém <!-- REF #OutgoingMessageClass.headers.Resumo --> os cabeçalhos atuais da mensagem de saída como pares chave/valor<!-- FIM REF -->.
 
 A propriedade `.headers` é somente leitura. Para definir um cabeçalho, use a função [`setHeader()`](#setheader).
 
@@ -169,7 +169,7 @@ Se você definir um *valor* para o cabeçalho "Content-Type" *chave*, certifique
 
 #### Descrição
 
-A função `.setStatus()` <!-- REF #OutgoingMessageClass.setStatus().Summary -->define a propriedade `status` com o *status* <!-- END REF -->.
+A função `.setStatus()` <!-- REF #OutgoingMessageClass.setStatus().Summary -->define a propriedade `status` com o *status*<!-- FIM REF -->.
 
 Se *status* não for um valor inteiro, um erro é gerado.
 
