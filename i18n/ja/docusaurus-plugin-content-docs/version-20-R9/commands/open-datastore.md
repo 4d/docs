@@ -28,7 +28,8 @@ displayed_sidebar: docs
 
 ## 説明
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
+`Open datastore` コマンドは、<!-- REF #_command_.Open datastore.Summary -->
+*connectionInfo* 引数が指定するリモートデータストアにアプリケーションを接続します<!-- END REF -->。戻り値は、*localID* ローカルエイリアスに紐づけられた `4D.DataStoreImplementation` オブジェクトです。
 
 以下のリモートデータストアが、このコマンドでサポートされています:
 
@@ -39,7 +40,7 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
 
 :::note
 
-`Open datastore` のリクエストは 4D REST API に依存し、リモートの 4D Server 上で接続を開くにあたって、4D クライアントライセンスが必要な場合があります。 Refer to the [user login mode section](../REST/authUsers.md#force-login-mode) to know how to configure the authentication depending on the selected current user login mode.
+`Open datastore` のリクエストは 4D REST API に依存し、リモートの 4D Server 上で接続を開くにあたって、4D クライアントライセンスが必要な場合があります。 選択したカレントユーザーログインモードに応じて認証を構成する方法については、[ユーザーログインモードのセクション](../REST/authUsers.md#強制ログインモード) を参照ください。
 
 :::
 
@@ -71,7 +72,7 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
   //$myds と $myds2 は同一のものです
 ```
 
-Objects available in the `4D.DataStoreImplementation` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+`4D.DataStoreImplementation` が提供するオブジェクトは、[ORDAマッピングルール](ORDA/dsMapping.md#変換のルール) に基づいてマッピングされます。
 
 合致するデータストアが見つからない場合、`Open datastore` は **Null** を返します。
 
@@ -84,7 +85,7 @@ user / password を指定せずにリモートデータストアに接続しま�
  var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+ ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
 ```
 
 ## 例題 2
@@ -97,7 +98,7 @@ user / password / timeout / tls を指定してリモートデータストアに
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+ ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
 ```
 
 ## 例題 3
@@ -111,8 +112,8 @@ user / password / timeout / tls を指定してリモートデータストアに
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
  $foreignStudents:=Open datastore($connectTo;"foreign")
- ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
- ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
+ ALERT("フランスの生徒は "+String($frenchStudents.Students.all().length)+" 名です")
+ ALERT("外国の生徒は "+String($foreignStudents.Students.all().length)+" 名です")
 ```
 
 ## 例題 4
