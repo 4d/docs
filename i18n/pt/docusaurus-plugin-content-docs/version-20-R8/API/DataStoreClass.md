@@ -982,11 +982,11 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 
-| Parâmetro | Tipo                     |    | Descrição                                                             |
-| --------- | ------------------------ | -- | --------------------------------------------------------------------- |
-| file      | 4D. File | -> | Objeto File                                                           |
-| options   | Integer                  | -> | Opção de registo de resposta (apenas servidor)     |
-| reqNum    | Integer                  | -> | Number of requests to keep in memory (client only) |
+| Parâmetro | Tipo                     |    | Descrição                                                                               |
+| --------- | ------------------------ | -- | --------------------------------------------------------------------------------------- |
+| file      | 4D. File | -> | Objeto File                                                                             |
+| options   | Integer                  | -> | Opção de registo de resposta (apenas servidor)                       |
+| reqNum    | Integer                  | -> | Número de solicitações a serem mantidas na memória (somente cliente) |
 
 <!-- END REF -->
 
