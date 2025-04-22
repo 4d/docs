@@ -17,7 +17,7 @@ https://platform.openai.com/docs/api-reference/chat
 
 | Parâmetro    | Tipo                                                                  | Descrição                                                       |
 | ------------ | --------------------------------------------------------------------- | --------------------------------------------------------------- |
-| *messages*   | Collection of [OpenAIMessage](OpenAIMessage.md)                       | The chat messages to include in the request.    |
+| *messages*   | Coleção de [OpenAIMessage](OpenAIMessage.md)                          | The chat messages to include in the request.    |
 | *parâmetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | The parameters for the chat completion request. |
 | Resultado    | Object                                                                | The result of the chat completion request.      |
 
@@ -52,7 +52,7 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 ### retrieve()
 
-**retrieve**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
+**retrieve**(*completionID* : Text; *parameters* : OpenAIParameters): Object
 
 | Parâmetro      | Tipo                                    | Descrição                                                  |
 | -------------- | --------------------------------------- | ---------------------------------------------------------- |
@@ -81,7 +81,7 @@ https://platform.openai.com/docs/api-reference/chat/update
 
 ### delete()
 
-**delete**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
+**delete**(*completionID* : Text; *parameters* : OpenAIParameters): Object
 
 | Parâmetro      | Tipo                                    | Descrição                                                |
 | -------------- | --------------------------------------- | -------------------------------------------------------- |
