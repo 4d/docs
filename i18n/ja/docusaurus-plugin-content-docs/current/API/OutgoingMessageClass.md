@@ -63,7 +63,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 `.body` プロパティには<!-- REF #OutgoingMessageClass.body.Summary -->送信されるメッセージ本文<!-- END REF -->が格納されています。 `.body` プロパティでは以下のデータ型がサポートされます:
 
-- テキスト
+- text
 - blob
 - object
 - image
