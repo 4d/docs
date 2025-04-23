@@ -168,7 +168,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
  - MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
  - 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
  - Databaseフォルダー - Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。
-  **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
+  **注**: このフォルダーには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
  - (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
  - (オプション) Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが(あれば)含まれます。 この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
  - 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
@@ -228,7 +228,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 :::note
 
-If you want client/server connections to be made in [TLS](../Admin/tls.md), simply check the [appropriate setting](../settings/client-server.md#encrypt-client-server-communications). If you wish to use a custom certificate, please consider using the [`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.en.html).
+クライアント/サーバー接続を[TLS](../Admin/tls.md) で行いたい場合は、[適切な設定](../settings/client-server.md#クライアント-サーバー通信の暗号化) にチェックを入れるだけです。 カスタムの証明書を使用したい場合は、[`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.ja.html) の使用を検討してください。
 
 :::
 
