@@ -2692,9 +2692,9 @@ Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite,
 
 La retrollamada recibe los siguientes parámetros:
 
-- La nueva colección
-- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
-- Esta función modifica la colección original.
+- en *$1.value*: valor del elemento a procesar
+- en *$2: param*
+- en *$N...*: *paramN...*
 
 La retrollamada define los siguientes parámetros:
 
@@ -2777,9 +2777,9 @@ Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite,
 
 La retrollamada recibe los siguientes parámetros:
 
-- La nueva colección
-- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
-- Esta función modifica la colección original.
+- en *$1.value*: valor del elemento a procesar
+- en *$2: param*
+- en *$N...*: *paramN...*
 
 La retrollamada define los siguientes parámetros:
 
@@ -3084,7 +3084,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 #### Descripción
 
-Lanzamiento
+La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si al menos un elemento de la colección ha pasado con éxito una prueba implementada en el código *formula* o *methodName* suministrado<!-- END REF -->.
 
 Se designa el código 4D de retrollamada (callback) a ejecutar para evaluar los elementos de la colección utilizando:
 
@@ -3095,16 +3095,16 @@ La retrollamada se llama con los parámetros pasados en *param* (opcional). La r
 
 La retrollamada recibe los siguientes parámetros:
 
-- La nueva colección
-- Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
-- Esta función modifica la colección original.
+- en *$1.value*: valor del elemento a procesar
+- en *$2: param*
+- en *$N...*: *paramN...*
 
 Puede definir los siguientes parámetros:
 
 - Expresión a buscar en la colección
 - *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
-Descripción
+En todo caso, en el momento en que la función `.some()` encuentra el primer elemento de la colección que devuelve true, deja de llamar a la llamada de retorno y devuelve **true**.
 
 Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar el índice de un elemento desde el cual iniciar la prueba en *startFrom*.
 
@@ -3186,7 +3186,7 @@ La retrollamada recibe los siguientes parámetros:
  - *$1.value2* (todo tipo): valor del segundo elemento a comparar
 - $2...$N (cualquier tipo): parámetros adicionales
 
-Resultado
+If you used a method, you must set the folllowing parameter:
 
 - Elemento a insertar en la colección
 
@@ -3210,7 +3210,10 @@ Resultado
 #### Ejemplo 3
 
 ```4d
-Descripción
+var $col; $col2; $col3 : Collection
+$col:=New collection(33;4;66;1111;222)
+$col2:=$col.sort() //numerical sort: [4,33,66,222,1111]
+$col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sort: [1111,222,33,4,66]
 ```
 
 <!-- END REF -->
@@ -3246,7 +3249,7 @@ Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran 
 
 Si la colección contiene objetos, pasa el parámetro *propertyPath* para indicar la propiedad del objeto a tener en cuenta.
 
-Esta función no modifica la colección original.
+`.sum()` devuelve 0 si:
 
 - la colección está vacía,
 - la colección no contiene elementos numéricos,
