@@ -35,7 +35,7 @@ The default cell alignment will depend on the value type:
 
 - texto: alineación izquierda
 - imágenes: centrado
-- other types (numbers, date, and time): right aligned
+- otros tipos (números, fecha y hora): alineados a la derecha
 
 :::note Notas
 
