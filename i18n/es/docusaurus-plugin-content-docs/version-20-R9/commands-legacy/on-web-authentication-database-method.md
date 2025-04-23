@@ -5,8 +5,8 @@ slug: /commands/on-web-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Web Authentication.Syntax-->$url, $http, $ipBrowser, $ipServer, $user, $pw -> Método base On Web Authentication : Boolean<!-- END REF-->
-<!--REF #_command_.Metodo base On Web Authentication.Params-->
+<!--REF #_command_.On Web Authentication database method.Syntax-->$url, $http, $ipBrowser, $ipServer, $user, $pw -> Método base On Web Authentication : Boolean<!-- END REF-->
+<!--REF #_command_.On Web Authentication database method.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $url | Texto | &#8592; | URL |
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Metodo base On Web Authentication.Summary-->El Método base On Web Authenticationestá a cargo de administrar el acceso al motor del servidor web.<!-- END REF--> Es llamado automáticamente por 4D o 4D Server cuando una petición de un navegador web requiere la ejecución de un método 4D en el servidor (llamada de un método vía un URL *4DACTION* o  una etiqueta *4DSCRIPT*, etc.). 
+<!--REF #_command_.On Web Authentication database method.Summary-->El Método base On Web Authenticationestá a cargo de administrar el acceso al motor del servidor web.<!-- END REF--> Es llamado automáticamente por 4D o 4D Server cuando una petición de un navegador web requiere la ejecución de un método 4D en el servidor (llamada de un método vía un URL *4DACTION* o  una etiqueta *4DSCRIPT*, etc.). 
 
 Este método recibe seis parámetros de tipo Texto, pasados por 4D: $url, $http, $ipBrowser, $ipServer, $user, y $pw y devuelve un booleano, $result\. La descripción de estos parámetros es la siguiente:
 

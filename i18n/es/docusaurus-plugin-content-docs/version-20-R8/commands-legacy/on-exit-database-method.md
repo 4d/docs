@@ -5,8 +5,8 @@ slug: /commands/on-exit-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Exit.Syntax-->**Método base On Exit**<!-- END REF-->
-<!--REF #_command_.Metodo base On Exit.Params-->
+<!--REF #_command_.On Exit database method.Syntax-->**Método base On Exit**<!-- END REF-->
+<!--REF #_command_.On Exit database method.Params-->
 | Este comando no requiere parámetros |  |
 | --- | --- |
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo base On Exit.Summary-->El Método base On Exit se llama una vez cuando sale de la base.<!-- END REF-->
+<!--REF #_command_.On Exit database method.Summary-->El Método base On Exit se llama una vez cuando sale de la base.<!-- END REF-->
 
 Este método se utiliza en los siguientes entornos 4D:
 

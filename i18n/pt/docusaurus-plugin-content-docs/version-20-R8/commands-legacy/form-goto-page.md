@@ -24,7 +24,7 @@ O parâmetro *\** é útil quando o comando é chamado no contexto de um subform
 
 ### Sobre os comandos de gestão de páginas de formulário 
 
-Os botões de ação automática realizam as mesmas tarefas que os comandos [FIRST PAGE](first-page.md), [LAST PAGE](last-page.md), [NEXT PAGE](next-page.md), [PREVIOUS PAGE](previous-page.md) e **FORM GOTO PAGE** que você pode aplicar a objetos tais como abas, list box drop downs, etc. Sempre que seja possível, utilize botões de ação automática ao invés dos comandos. 
+Os botões de ação automática realizam as mesmas tarefas que os comandos [FORM FIRST PAGE](form-first-page.md), [FORM LAST PAGE](form-last-page.md), [FORM NEXT PAGE](form-next-page.md), [FORM PREVIOUS PAGE](form-previous-page.md) e **FORM GOTO PAGE** que você pode aplicar a objetos tais como abas, list box drop downs, etc. Sempre que seja possível, utilize botões de ação automática ao invés dos comandos. 
 
 Os comandos de página podem ser utilizadas com formulários de entrada ou com formulários de saída em diálogos.Os formulários de saída utilizam apenas a primeira página. Um formulário sempre tem ao menos uma página, a primeira página. Lembre que sem importar o número de páginas que um formulário tenha, só existe um método de formulário para cada formulário. 
 
@@ -43,11 +43,11 @@ O exemplo a seguir é um método de objeto para um botão que mostra uma página
 
 ## Ver também 
 
-[FIRST PAGE](first-page.md)  
+[FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
-[LAST PAGE](last-page.md)  
-[NEXT PAGE](next-page.md)  
-[PREVIOUS PAGE](previous-page.md)  
+[FORM LAST PAGE](form-last-page.md)  
+[FORM NEXT PAGE](form-next-page.md)  
+[FORM PREVIOUS PAGE](form-previous-page.md)  
 
 ## Propriedades
 

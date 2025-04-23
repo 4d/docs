@@ -5,8 +5,8 @@ slug: /commands/on-server-shutdown-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Server Shutdown.Syntax-->**Método base On Server Shutdown**<!-- END REF-->
-<!--REF #_command_.Metodo base On Server Shutdown.Params-->
+<!--REF #_command_.On Server Shutdown database method.Syntax-->**Método base On Server Shutdown**<!-- END REF-->
+<!--REF #_command_.On Server Shutdown database method.Params-->
 | Este comando no requiere parámetros |  |
 | --- | --- |
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo base On Server Shutdown.Summary-->El Método base On Server Shutdown se llama una vez en el equipo servidor cuando la base actual se cierra en 4D Server.<!-- END REF--> El Método base On Server Shutdown NO es llamado por otro entorno 4D diferente de 4D Server.
+<!--REF #_command_.On Server Shutdown database method.Summary-->El Método base On Server Shutdown se llama una vez en el equipo servidor cuando la base actual se cierra en 4D Server.<!-- END REF--> El Método base On Server Shutdown NO es llamado por otro entorno 4D diferente de 4D Server.
 
 Para cerrar la base actual en el servidor, puede seleccionar el comando de menú **Cerrar la base...** en el servidor. También puede elegir el comando **Salir** o llamar al comando [QUIT 4D](quit-4d.md) dentro de un procedimiento almacenado ejecutado en el servidor.
 

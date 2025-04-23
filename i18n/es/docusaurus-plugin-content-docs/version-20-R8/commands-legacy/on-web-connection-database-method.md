@@ -5,8 +5,8 @@ slug: /commands/on-web-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Web Connection.Syntax-->$url, $http, $ipBrowser, $ipServer, $user, $pw -> Método base On Web Connection<!-- END REF-->
-<!--REF #_command_.Metodo base On Web Connection.Params-->
+<!--REF #_command_.On Web Connection database method.Syntax-->$url, $http, $ipBrowser, $ipServer, $user, $pw -> Método base On Web Connection<!-- END REF-->
+<!--REF #_command_.On Web Connection database method.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $url | Texto | &#8592; | URL |
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo base On Web Connection.Summary-->El Método base On Web Connection puede llamarse en los siguientes casos: 
+<!--REF #_command_.On Web Connection database method.Summary-->El Método base On Web Connection puede llamarse en los siguientes casos: 
 
 * el servidor web recibe una petición que comienza por el URL *4DCGI*.<!-- END REF-->
 * el servidor web recibe una petición inválida.

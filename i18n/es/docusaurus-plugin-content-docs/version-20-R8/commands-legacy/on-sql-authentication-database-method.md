@@ -5,8 +5,8 @@ slug: /commands/on-sql-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On SQL Authentication.Syntax-->$user, $pw, $ip -> Método base On SQL Authentication : Boolean<!-- END REF-->
-<!--REF #_command_.Metodo base On SQL Authentication.Params-->
+<!--REF #_command_.On SQL Authentication database method.Syntax-->$user, $pw, $ip -> Método base On SQL Authentication : Boolean<!-- END REF-->
+<!--REF #_command_.On SQL Authentication database method.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $user | Texto | &#8592; | Nombre de usuario |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo base On SQL Authentication.Summary-->El Método base On SQL Authentication puede utilizarse para filtrar las peticiones enviadas al servidor SQL integrado de 4D.<!-- END REF--> Este filtro puede estar basado en el nombre y contraseña como también de manera opcional en la dirección IP del usuario. El desarrollador puede utilizar su propia tabla de usuarios o la de los usuarios 4D para evaluar los identificadores de conexión. Una vez validada la conexión, el comando [CHANGE CURRENT USER](change-current-user.md) puede utilizarse para controlar el acceso de las peticiones dentro de la base 4D. 
+<!--REF #_command_.On SQL Authentication database method.Summary-->El Método base On SQL Authentication puede utilizarse para filtrar las peticiones enviadas al servidor SQL integrado de 4D.<!-- END REF--> Este filtro puede estar basado en el nombre y contraseña como también de manera opcional en la dirección IP del usuario. El desarrollador puede utilizar su propia tabla de usuarios o la de los usuarios 4D para evaluar los identificadores de conexión. Una vez validada la conexión, el comando [CHANGE CURRENT USER](change-current-user.md) puede utilizarse para controlar el acceso de las peticiones dentro de la base 4D. 
 
 Cuando existe, el Método base On SQL Authentication es llamado automáticamente por 4D o 4D Server en cada conexión externa al servidor SQL. Por lo tanto el sistema interno de gestión de los usuarios de 4D no está activado. La conexión se acepta sólo si el método de base devuelve [True](true.md "True") en $result y si el comando [CHANGE CURRENT USER](change-current-user.md) se ha ejecutado con éxito. Si una de estas condiciones no se cumple, la petición se rechaza.
 

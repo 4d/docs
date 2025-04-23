@@ -5,8 +5,8 @@ slug: /commands/on-startup-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Startup.Syntax-->**Método base On Startup**<!-- END REF-->
-<!--REF #_command_.Metodo base On Startup.Params-->
+<!--REF #_command_.On Startup database method.Syntax-->**Método base On Startup**<!-- END REF-->
+<!--REF #_command_.On Startup database method.Params-->
 | Este comando no requiere parámetros |  |
 | --- | --- |
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo base On Startup.Summary-->El Método base On Startup se ejecuta una sola vez, al momento de la apertura de la base.<!-- END REF-->
+<!--REF #_command_.On Startup database method.Summary-->El Método base On Startup se ejecuta una sola vez, al momento de la apertura de la base.<!-- END REF-->
 
 Esto ocurre en los siguientes entornos 4D:
 
