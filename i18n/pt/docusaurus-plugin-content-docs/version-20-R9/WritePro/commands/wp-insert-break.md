@@ -4,7 +4,7 @@ title: WP Insert break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert break.Syntax-->**WP Insert break** ( *targetObj* ; *breakType* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert break.Syntax-->**WP Insert break** ( *targetObj* ; *breakType* ; *mode* {; *rangeUpdate*} ): Object<!-- END REF-->
 
 <!--REF #_command_.WP Insert break.Params-->
 
