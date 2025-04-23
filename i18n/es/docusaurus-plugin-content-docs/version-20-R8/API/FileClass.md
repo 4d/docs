@@ -628,7 +628,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descripción
 
-Lanzamiento Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
+La función .setContent( ) <!-- REF #FileClass.setContent().Summary --> reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOBcontent<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
 #### Ejemplo
 
