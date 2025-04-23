@@ -52,7 +52,7 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 ### retrieve()
 
-**retrieve**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
+**retrieve**(*completionID* : Text; *parameters* : OpenAIParameters): Object
 
 | Parámetros     | Tipo                                    | Descripción                                                |
 | -------------- | --------------------------------------- | ---------------------------------------------------------- |
