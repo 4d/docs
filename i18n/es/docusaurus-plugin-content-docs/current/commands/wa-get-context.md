@@ -10,7 +10,7 @@ title: WA Get context
 | Parámetros | Tipo                  |                             | Descripción                                                                                                                                           |
 | ---------- | --------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Operador              | &#8594; | Si se especifica, *object* es un nombre de objeto (cadena). Si se omite, *object* es una variable. |
-| object     | Objetos de formulario | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted).                                |
+| object     | Objetos de formulario | &#8594; | Nombre del objeto (si se especifica \*) o Variable (si se omite \*).                            |
 | contextObj | Object                | &#8592; | Context object if previously defined, otherwise `null`.                                                                               |
 
 <!-- END REF-->
