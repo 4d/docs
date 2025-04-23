@@ -9,11 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 
-| Parámetros     | Tipo    |                             | Descripción                                                                        |
-| -------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | &#8594; | Sección 4D Write Pro                                                               |
-| subSectionType | Integer | &#8594; | Subsection type (wk first page, wk left page, or wk right page) |
-| subSection     | Object  | &#8594; | Subsección 4D Write Pro                                                            |
+| Parámetros     | Tipo    |                             | Descripción                                                                          |
+| -------------- | ------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| wpSection      | Object  | &#8594; | Sección 4D Write Pro                                                                 |
+| subSectionType | Integer | &#8594; | Tipo de subsección (wk first page, wk left page, o wk right page) |
+| subSection     | Object  | &#8594; | Subsección 4D Write Pro                                                              |
 
 <!-- END REF-->
 
