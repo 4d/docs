@@ -63,8 +63,8 @@ Using a Class Object
 **En JavaScript:**
 
 ```js
-$4d.myWAFunction(); // Allowed
-$4d._myPrivateFunction(); // Will do nothing because function is private
+$4d.myWAFunction(); // Permitido
+$4d._myPrivateFunction(); // No hará nada porque la función es privada
 ```
 
 ### Ver también
