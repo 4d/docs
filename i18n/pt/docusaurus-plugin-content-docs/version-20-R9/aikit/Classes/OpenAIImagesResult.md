@@ -20,7 +20,7 @@ title: OpenAIImagesResult
 
 ### saveImagesToDisk()
 
-**saveImagesToDisk**(*folder* : 4D.Folder; *prefix* : Text) : Boolean
+**saveImagesToDisk**(*folder* : 4D.Folder; *prefix* : Text): Boolean
 
 | Parâmetro | Tipo                       | Descrição                                                            |
 | --------- | -------------------------- | -------------------------------------------------------------------- |
