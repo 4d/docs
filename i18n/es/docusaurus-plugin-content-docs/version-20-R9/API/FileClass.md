@@ -282,7 +282,7 @@ La función sólo admite archivos .plist en formato xml (basados en texto). Se d
 
 :::
 
-**Returned object with a .exe or .dll file (Windows only)**
+**Objeto devuelto con un archivo .exe o .dll (sólo Windows)**
 
 Todos los valores de propiedades son de tipo Texto.
 
@@ -297,7 +297,7 @@ Todos los valores de propiedades son de tipo Texto.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Returned object with a macOS executable file (macOS only)**
+**Objeto devuelto con un archivo ejecutable macOS (solo macOS)**
 
 :::note
 
