@@ -34,7 +34,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](../commands-lega
 
 | プロパティ      | データタイプ | とりうる値            |
 | ---------- | ------ | ---------------- |
-| fontWeight | テキスト   | "normal", "bold" |
+| fontWeight | text   | "normal", "bold" |
 
 #### 対象オブジェクト
 
