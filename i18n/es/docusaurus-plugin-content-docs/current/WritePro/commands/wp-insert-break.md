@@ -34,7 +34,7 @@ In *breakType*, pass one of the following constants from the *4D Write Pro Const
 | --------------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | wk column break             | Integer | 3     | Column break: inserts a column break                                                                                            |
 | wk continuous section break | Integer | 5     | Defines a continuous section break (often used to change the number of columns without starting a new page). |
-| wk line break               | Integer | 0     | Line break (in the same paragraph)                                                                                           |
+| wk line break               | Integer | 0     | Salto de línea (en el mismo párrafo)                                                                                         |
 | wk page break               | Integer | 2     | Page break: defines a new page                                                                                                  |
 | wk paragraph break          | Integer | 4     | Paragraph break: defines a new paragraph                                                                                        |
 | wk section break            | Integer | 1     | Section break: defines a new section                                                                                            |
