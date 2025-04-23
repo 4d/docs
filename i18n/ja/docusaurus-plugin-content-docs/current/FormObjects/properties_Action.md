@@ -24,7 +24,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/
 
 | 名称       | データタイプ | とりうる値                                                                                    |
 | -------- | ------ | ---------------------------------------------------------------------------------------- |
-| dragging | テキスト   | "none" (デフォルト), "custom", "automatic" (リストボックスを除く) |
+| dragging | text   | "none" (デフォルト), "custom", "automatic" (リストボックスを除く) |
 
 #### 対象オブジェクト
 
@@ -52,7 +52,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/
 
 | 名称       | データタイプ | とりうる値                                                                                    |
 | -------- | ------ | ---------------------------------------------------------------------------------------- |
-| dropping | テキスト   | "none" (デフォルト), "custom", "automatic" (リストボックスを除く) |
+| dropping | text   | "none" (デフォルト), "custom", "automatic" (リストボックスを除く) |
 
 #### 対象オブジェクト
 
@@ -102,7 +102,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/
 
 | 名称     | データタイプ | とりうる値                                      |
 | ------ | ------ | ------------------------------------------ |
-| method | テキスト   | オブジェクトメソッドの標準またはカスタムのファイルパス、またはプロジェクトメソッド名 |
+| method | text   | オブジェクトメソッドの標準またはカスタムのファイルパス、またはプロジェクトメソッド名 |
 
 #### 対象オブジェクト
 
@@ -136,7 +136,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/
 
 | 名称            | データタイプ | とりうる値                        |
 | ------------- | ------ | ---------------------------- |
-| selectionMode | テキスト   | "multiple", "single", "none" |
+| selectionMode | text   | "multiple", "single", "none" |
 
 #### 対象オブジェクト
 
