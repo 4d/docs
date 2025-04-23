@@ -81,7 +81,7 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/),
 
 - La documentación del [Lenguaje 4D](../commands/command-index.md) y del [Lenguaje 4D Write Pro](../WritePro/commands/command-index.md) ya está disponible en developer.4d.com. Descubra todas las novedades y cambios relativos a estas documentaciones en esta nota de la versión.
 - El comando [`File`](../commands/file.md) (así como [`4D.File.new()`](../API/FileClass.md#4dfilenew)) es más estricto a la hora de comprobar la sintaxis de *path* suministrada como parámetro.
-- La acción de [permission](../ORDA/privileges.md#permission-actions) ha sido eliminada de las acciones disponibles. Access to [`/rest/$catalog`](../REST/$catalog.md) urls is no longer controlled. Session *describe* privileges are now ignored.
+- La acción de [permission](../ORDA/privileges.md#permission-actions) ha sido eliminada de las acciones disponibles. El acceso a las urls [`/rest/$catalog`](../REST/$catalog.md) ya no está controlado. Session *describe* privileges are now ignored.
 
 ## 4D 20 R6
 
