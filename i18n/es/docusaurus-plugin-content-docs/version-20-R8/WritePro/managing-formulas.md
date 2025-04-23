@@ -146,7 +146,7 @@ Formula references can be displayed as:
 - symbols
 - names
 
-### References as source texts (default)
+### Referencias como textos fuente (por defecto)
 
 When formulas are displayed as references, by default the source text of the formula appear in your document, with a default gray background (can be customized using the `wk formula highlight` selector).
 
