@@ -208,7 +208,7 @@ firstname = "Marie Sophie" AND manager.lastname = "@th"
 
 次のスカラー属性値が編集できます:
 
-- テキスト
+- text
 - boolean
 - numeric
 - date
