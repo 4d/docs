@@ -32,7 +32,7 @@ displayed_sidebar: docs
 By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. Se soportan las siguientes sintaxis:
 
 - **Compile project**(): compiles the opened project using the options defined in the Structure Settings
-- **Compile project**(*options*): compiles the opened project. The *options* defined override the Structure Settings
+- **Compile project**(*options*): compila el proyecto abierto. The *options* defined override the Structure Settings
 - **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
 - **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
 
@@ -96,7 +96,7 @@ The object returned by **Compile project** has up to three properties:
 | symbols.methods                                                                                        | Colección de objetos | Lista de métodos                                                                                                                         |
 | symbols.methods\[\].code         | Object               | [objeto código](#code-object)                                                                                                            |
 | symbols.methods\[\].callCount    | Number               | Número de veces que se ha llamado a este método                                                                                          |
-| symbols.methods\[\].params       | Collection           | Collection of parameter types (Value type numerical codes)                                                            |
+| symbols.methods\[\].params       | Collection           | Colección de tipos de parámetros (Códigos numéricos de tipos de valores)                                              |
 | symbols.methods\[\]. threadSafe  | Boolean              | Indica si este método es hilo seguro                                                                                                     |
 
 Para obtener más información, consulte [Herramientas de compilación](../Project/compiler.md#compilation-tools).
