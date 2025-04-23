@@ -53,7 +53,7 @@ title: TCPEvent
 
 #### 説明
 
-`.ip` プロパティには、<!-- REF #TCPConnection.port.Summary -->リモートマシンのIP アドレス<!-- END REF -->が格納されています。
+`.ip` プロパティには、<!-- REF #TCPEvent.ip.Summary -->リモートマシンのIP アドレス<!-- END REF -->が格納されています。
 
 <!-- END REF -->
 
