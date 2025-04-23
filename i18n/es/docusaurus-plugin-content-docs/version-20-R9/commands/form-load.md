@@ -63,9 +63,9 @@ Note that in all cases, the form on screen remains loaded (it is not affected by
 Llamada a un formulario proyecto en un trabajo de impresión:
 
 ```4d
- OPEN PRINTING JOB
- FORM LOAD("print_form")
-  // execution of events and object methods
+OPEN PRINTING JOB
+ FORM LOAD("print_form")
+// ejecución de eventos y de métodos objeto
 ```
 
 ## Ejemplo 2
