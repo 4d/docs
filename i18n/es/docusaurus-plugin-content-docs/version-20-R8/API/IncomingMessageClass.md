@@ -5,7 +5,7 @@ title: IncomingMessage
 
 The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
 
-The HTTP request handler can return any value (or nothing). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
+El gestor de peticiones HTTP puede devolver cualquier valor (o nada). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
 
 All properties of this class are read-only. They are automatically filled by the request handler.
 
@@ -240,7 +240,7 @@ La propiedad `.headers` contiene <!-- REF #IncomingMessageClass.headers.Summary 
 
 La propiedad `.headers` es de sólo lectura.
 
-Header names (keys) are lowercased. Note header names are case sensitive.
+Los nombres de los encabezados (llaves) se escriben en minúsculas. Note header names are case sensitive.
 
 <!-- END REF -->
 
