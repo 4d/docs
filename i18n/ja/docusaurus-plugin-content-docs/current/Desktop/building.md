@@ -509,7 +509,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ### ライセンスリスト
 
-This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](../Admin/licenses.md#deployment-licenses) into your application (stand-alone or client-server). デフォルトでリストは空です。
+このタブには[評価版アプリケーションをビルドする](#評価版アプリケーションをビルドする) オプションが表示される他、アプリケーション(スタンドアロン版またはクライアントサーバー版)に[埋め込み可能な運用ライセンス](../Admin/licenses.md#運用ライセンス) として利用可能なライセンス一覧が表示されます。 デフォルトでリストは空です。
 
 このタブを使用して以下のようなものをビルドできます:
 
@@ -534,8 +534,8 @@ This tab displays the [Build an evaluation application](#build-an-evaluation-app
 :::note 注記
 
 - [`License info`](../commands/license-info.md) コマンドを使用するとアプリケーションライセンスのタイプ (*.attributes* コレクション) およびそれらの有効期限 (*.expirationDate* オブジェクト) を知ることができます。
-- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) xml key allows you to manage evaluation versions.
-- The [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
+- BuildApplication の[`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.ja.html) xml キーを使用すると、評価版を管理することができます。
+- [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) コマンドは、評価版から呼び出された場合には何もしません。
 
 :::
 
