@@ -176,7 +176,7 @@ In the *options* parameter, pass an object that can contain the following proper
 |onError|Formula|Callback triggered in case of an error|Undefined|
 |onTerminate|Formula|Callback triggered just before the TCPConnection is released|Undefined|
 |noDelay|Boolean|**Read-only** Disables Nagle's algorithm if `true`|False|
-|connectionTimeout|Real| Maximum time (in seconds) to establish the connection. If exceeded, the connection attempt is aborted and may trigger errors such as "DNS server unreachable or unknown domain name ", "DNS connection timeout" and "Connection timeout". | 30 |
+|connectionTimeout|Real| Maximum time (in seconds) to establish the connection. If exceeded, the connection attempt is aborted| 30 |
 
 
 #### Callback functions
