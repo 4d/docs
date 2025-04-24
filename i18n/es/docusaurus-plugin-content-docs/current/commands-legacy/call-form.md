@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Gestión de errores 
+## Descripción
 
 <!--REF #_command_.CALL FORM.Summary-->El comando **CALL FORM** ejecuta el código designado en *formula* con el(los) *param*(s) opcional(es) en el contexto de un formulario que se muestra en una *ventana*, independientemente del proceso al que pertenece la ventana.<!-- END REF-->
 
