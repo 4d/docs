@@ -18,9 +18,9 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 | `onError`                  | Function | A function to be called asynchronously when the request finishes with errors. Ensure that the current process does not terminate.  |
 | `throw`                    | Boolean  | If true, throws an error if one occurs. Only if no formula callback defined.                                                       |
 
-See [documentation about asynchronous code](../asynchronous-call.md)
+Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 
-### Network properties
+### Propiedades de la red
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                              |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ See [documentation about asynchronous code](../asynchronous-call.md)
 | `maxRetries`   | Integer   | The maximum number of retries for the request. (Only if code not asynchrone ie. no function provided) |
 | `extraHeaders` | Object    | Extra headers to send with the request.                                                                                                  |
 
-### OpenAPI properties
+### Propiedades OpenAPI
 
 | Propiedad | Tipo | Descripción                                                                                                 |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------- |
