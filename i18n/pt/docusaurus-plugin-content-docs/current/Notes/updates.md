@@ -5,7 +5,7 @@ title: Notas de lançamento
 
 ## 4D 20 R9
 
-Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R9/), the blog post that lists all new features and enhancements in 4D 20 R9.
+Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-20-R9/), the blog post that lists all new features and enhancements in 4D 20 R9.
 
 #### Destaques
 
@@ -24,7 +24,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-v20-R
 
 ## 4D 20 R8
 
-Leia [**O que há de novo no 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-v20-R8/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R8.
+Leia [**O que há de novo no 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-20-R8/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R8.
 
 #### Destaques
 
@@ -54,7 +54,7 @@ Leia [**O que há de novo no 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-
 
 ## 4D 20 R7
 
-Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-v20-R7/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R7.
+Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-20-R7/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R7.
 
 #### Destaques
 
