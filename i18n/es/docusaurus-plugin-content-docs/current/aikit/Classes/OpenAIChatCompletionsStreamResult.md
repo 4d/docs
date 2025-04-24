@@ -15,7 +15,7 @@ title: OpenAIChatCompletionsStreamResult
 | --------- | ------ | ------------------------------------------------------------ |
 | `data`    | Object | Contains the stream data sent by the server. |
 
-## Computed Properties
+## Propiedades calculadas
 
 | Propiedad | Tipo                            | Descripción                                                                                          |
 | --------- | ------------------------------- | ---------------------------------------------------------------------------------------------------- |
