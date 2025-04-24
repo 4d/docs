@@ -326,7 +326,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 ```4d
 // Class: MyClass
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
-// code
+// código
 ```
 
 :::note
