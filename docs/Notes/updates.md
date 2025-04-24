@@ -6,11 +6,11 @@ title: Release Notes
 
 ## 4D 20 R10
 
-Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-v20-R10/), the blog post that lists all new features and enhancements in 4D 20 R10.
+Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R10/), the blog post that lists all new features and enhancements in 4D 20 R10.
 
 #### Highlights
 
- - New **`connectionTimeout`** option in the [`options`](../API/TCPConnectionClass.md#options-parameter) parameter of the [`TCPConnection`](../API/TCPConnectionClass.md) class.
+- New `connectionTimeout` option in the [`options`](../API/TCPConnectionClass.md#options-parameter) parameter of the [`4D.TCPConnection.new()`](API/TCPConnectionClass.md#4dtcpconnectionnew) function.
 
 ## 4D 20 R9
 
