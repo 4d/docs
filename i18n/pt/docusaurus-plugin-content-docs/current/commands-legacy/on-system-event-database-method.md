@@ -5,8 +5,8 @@ slug: /commands/on-system-event-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base de dados On System Event.Syntax-->$event -> Método base de dados On System Event<!-- END REF-->
-<!--REF #_command_.Metodo base de dados On System Event.Params-->
+<!--REF #_command_.On System Event database method.Syntax.Syntax-->$event -> Método base de dados On System Event<!-- END REF-->
+<!--REF #_command_.On System Event database method.Syntax.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | $event | Integer | &#8592; | Código do evento |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Metodo base de dados On System Event.Summary-->O método **Método base de dados On System Event** é chamado toda vez que ocorre um evento sistema.<!-- END REF--> Isto é para todos os ambientes 4D: 4D (todos os modos) e 4D Server, assim como as aplicações 4D compiladas e fusionadas com 4D Volume Desktop.
+<!--REF #_command_.On System Event database method.Syntax.Summary-->O método **Método base de dados On System Event** é chamado toda vez que ocorre um evento sistema.<!-- END REF--> Isto é para todos os ambientes 4D: 4D (todos os modos) e 4D Server, assim como as aplicações 4D compiladas e fusionadas com 4D Volume Desktop.
 
 Para processar um evento, deve provar o valor do parâmetro $event no interior do método e compará-lo com una das seguintes constantes do tema *Eventos da base de dados*:
 

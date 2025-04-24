@@ -5,8 +5,8 @@ slug: /commands/on-exit-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo banco de dados On Exit.Syntax-->**Método banco de dados On Exit**<!-- END REF-->
-<!--REF #_command_.Metodo banco de dados On Exit.Params-->
+<!--REF #_command_.On Exit database method.Syntax-->**Método banco de dados On Exit**<!-- END REF-->
+<!--REF #_command_.On Exit database method.Params-->
 | Este comando não requer parâmetros |  |
 | --- | --- |
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo banco de dados On Exit.Summary-->O Método banco de dados On Exit é chamado quando se sai do banco.<!-- END REF-->
+<!--REF #_command_.On Exit database method.Summary-->O Método banco de dados On Exit é chamado quando se sai do banco.<!-- END REF-->
 
 Este método é utilizado nos seguintes ambientes 4D:
 
