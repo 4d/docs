@@ -23,11 +23,11 @@ displayed_sidebar: docs
 
 Each returned object includes the following main properties:
 
-| **Propiedad** | **Tipo** | **Description**                                                                                                                                                                               |
-| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName    | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                         |
-| code          | integer  | Valor numérico del evento de formulario.                                                                                                                                      |
-| description   | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section. |
+| **Propiedad** | **Tipo** | **Description**                                                                                                                                                                           |
+| ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName    | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                     |
+| code          | integer  | Valor numérico del evento de formulario.                                                                                                                                  |
+| description   | text     | Nombre del evento de formulario (*por ejemplo*, "On After Edit"). Consulte la sección [**Eventos formulario**](../Events/overview.md). |
 
 For example, in the case of a click on a button, the object contains the following properties:
 
@@ -38,7 +38,7 @@ For example, in the case of a click on a button, the object contains the followi
 The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
 
 - List box or list box column objects, see [this section](../FormObjects/listbox_overview.md#additional-properties).
-- 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
+- áreas 4D View Pro, ver [On VP Ready form event](../Events/onVpReady.md).
 
 **Note:** If there is no current event, **FORM Event** returns a null object.
 

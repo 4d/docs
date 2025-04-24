@@ -2416,7 +2416,7 @@ onde:
 |                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                        |
 | Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalent to "Not condition applied on a statement" ).                     |
 |                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                 |
-| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalent to "Not equal to" ). |
+| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Não igual a" ).  |
 | Menor que                                | <  |                                                                                                                                                                    |
 | Maior que                                | >                           |                                                                                                                                                                    |
 | Menor que ou igual a                     | <= |                                                                                                                                                                    |

@@ -17,7 +17,7 @@ https://platform.openai.com/docs/api-reference/chat
 
 | Parámetros   | Tipo                                                                  | Descripción                                                     |
 | ------------ | --------------------------------------------------------------------- | --------------------------------------------------------------- |
-| *messages*   | Collection of [OpenAIMessage](OpenAIMessage.md)                       | The chat messages to include in the request.    |
+| *messages*   | Colección de [OpenAIMessage](OpenAIMessage.md)                        | The chat messages to include in the request.    |
 | *parámetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | The parameters for the chat completion request. |
 | Resultado    | Object                                                                | The result of the chat completion request.      |
 
@@ -25,7 +25,7 @@ Creates a model response for the given chat conversation.
 
 https://platform.openai.com/docs/api-reference/chat/create
 
-#### Example Usage
+#### Ejemplo de Uso
 
 Provide the full messages list
 
@@ -52,7 +52,7 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 ### retrieve()
 
-**retrieve**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
+**retrieve**(*completionID* : Text; *parameters* : OpenAIParameters): Object
 
 | Parámetros     | Tipo                                    | Descripción                                                |
 | -------------- | --------------------------------------- | ---------------------------------------------------------- |

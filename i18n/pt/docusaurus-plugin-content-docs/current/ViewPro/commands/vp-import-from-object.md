@@ -17,11 +17,11 @@ title: VP IMPORT FROM OBJECT
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                    |
-| ---------- | ------ | -- | -------------------------------------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro   |
-| viewPro    | Object | -> | Objecto 4D View Pro                          |
-| paramObj   | Object | -> | (Optional) import options |
+| Parâmetro  | Tipo   |    | Descrição                                          |
+| ---------- | ------ | -- | -------------------------------------------------- |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro         |
+| viewPro    | Object | -> | Objecto 4D View Pro                                |
+| paramObj   | Object | -> | (Opcional) opções de importação |
 
 <!-- END REF -->
 

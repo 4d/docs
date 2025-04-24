@@ -238,7 +238,7 @@ Los siguientes campos se registran para cada evento:
 
 ## 4DDiagnosticLog.txt
 
-Este archivo de historial registra muchos eventos relacionados con el funcionamiento interno de la aplicación y es legible para las personas. You can include custom information in this file using the [LOG EVENT](../commands-legacy/log-event.md) command.
+Este archivo de historial registra muchos eventos relacionados con el funcionamiento interno de la aplicación y es legible para las personas. Puede incluir información personalizada en este archivo utilizando el comando [LOG EVENT](../commands-legacy/log-event.md).
 
 Como iniciar este historial:
 
@@ -482,7 +482,7 @@ Los siguientes campos se registran para cada evento:
 
 | Nombre del campo | Tipo       | Descripción                                                                               |
 | ---------------- | ---------- | ----------------------------------------------------------------------------------------- |
-| time             | Fecha/Hora | Date and time of the event in ISO 8601 format                                             |
+| time             | Fecha/Hora | Fecha y hora del evento en formato ISO 8601                                               |
 | localPort        | Number     | Local port used for the connection                                                        |
 | peerAddress      | Text       | IP address of the remote peer                                                             |
 | peerPort         | Number     | Port of the remote peer                                                                   |

@@ -149,12 +149,12 @@ TCPConnection objects provide the following properties and functions:
 
 <!-- REF #4D.TCPConnection.new().params -->
 
-| Parámetros    | Tipo          |                             | Descripción                                                    |
-| ------------- | ------------- | --------------------------- | -------------------------------------------------------------- |
-| serverAddress | Text          | ->                          | Domain name or IP address of the server                        |
-| serverPort    | Integer       | ->                          | Número de puerto del servidor                                  |
-| options       | Object        | ->                          | Configuration [options](#options-parameter) for the connection |
-| Resultado     | TCPConnection | <- | New TCPConnection object                                       |
+| Parámetros    | Tipo          |                             | Descripción                                                   |
+| ------------- | ------------- | --------------------------- | ------------------------------------------------------------- |
+| serverAddress | Text          | ->                          | Domain name or IP address of the server                       |
+| serverPort    | Integer       | ->                          | Número de puerto del servidor                                 |
+| options       | Object        | ->                          | Configuración [opciones](#options-parameter) para la conexión |
+| Resultado     | TCPConnection | <- | New TCPConnection object                                      |
 
 <!-- END REF -->
 

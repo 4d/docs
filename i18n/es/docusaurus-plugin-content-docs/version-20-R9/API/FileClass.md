@@ -282,7 +282,7 @@ La función sólo admite archivos .plist en formato xml (basados en texto). Se d
 
 :::
 
-**Returned object with a .exe or .dll file (Windows only)**
+**Objeto devuelto con un archivo .exe o .dll (sólo Windows)**
 
 Todos los valores de propiedades son de tipo Texto.
 
@@ -297,7 +297,7 @@ Todos los valores de propiedades son de tipo Texto.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Returned object with a macOS executable file (macOS only)**
+**Objeto devuelto con un archivo ejecutable macOS (solo macOS)**
 
 :::note
 
@@ -307,11 +307,11 @@ A macOS executable file is located within a package (e.g. myApp.app/Contents/Mac
 
 The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
 
-| Propiedad | Tipo   | Descripción                                                                        |
-| --------- | ------ | ---------------------------------------------------------------------------------- |
-| name      | Text   | Name of architecture ("arm64" or "x86_64") |
-| type      | Number | Numerical identifier of the architecture                                           |
-| uuid      | Text   | Textual representation of the executable uuid                                      |
+| Propiedad | Tipo   | Descripción                                                                            |
+| --------- | ------ | -------------------------------------------------------------------------------------- |
+| name      | Text   | Nombre de la arquitectura ("arm64" o "x86_64") |
+| type      | Number | Numerical identifier of the architecture                                               |
+| uuid      | Text   | Textual representation of the executable uuid                                          |
 
 #### Ejemplo 1
 
@@ -717,7 +717,7 @@ $app.setAppInfo($info)
 
 #### Descripción
 
-Lanzamiento Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
+La función .setContent( ) <!-- REF #FileClass.setContent().Summary --> reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOBcontent<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
 #### Ejemplo
 

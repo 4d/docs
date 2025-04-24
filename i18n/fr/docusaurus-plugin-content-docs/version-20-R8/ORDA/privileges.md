@@ -197,6 +197,51 @@ La syntaxe du fichier `roles.json` est la suivante:
 
 :::
 
+#### Assigning permissions to ORDA class functions
+
+When configuring permissions, ORDA class functions are declared in the `applyTo` element using the following syntax:
+
+```json
+<DataclassName>.<functionName>
+```
+
+For example, if you want to apply a permission to the following function:
+
+```4d
+// cs.CityEntity class
+Class extends Entity
+  Function getPopulation() : Integer
+   ...
+```
+
+... you have to write:
+
+```json
+"applyTo":"City.getPopulation"
+```
+
+It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. For example, if you have created a "drop" function in both `cs.CityEntity` and `cs.CitySelection` classes, you need to give them different names such as `dropEntity()` and `dropSelection()`. You can then write in the "roles.json" file:
+
+```json
+	"permissions": {
+		"allowed": [
+			{
+				"applyTo": "City.dropEntity",
+				"type": "method",
+				"promote": [
+					"name"
+				]
+			},
+			{
+				"applyTo": "City.dropSelection",
+				"type": "method",
+				"promote": [
+					"name"
+				]
+			}
+    ]
+```
+
 ### `Roles_Errors.json`
 
 Le fichier `roles.json` est analysé par 4D au démarrage. Vous devez redémarrer l'application pour que les modifications dans ce fichier soient prises en compte.

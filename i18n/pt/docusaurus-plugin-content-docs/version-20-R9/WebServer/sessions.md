@@ -201,7 +201,7 @@ For more examples, please refer to the [Scalable sessions for advanced web appli
 
 :::
 
-## Session Token (OTP)
+## Token de sessão (OTP)
 
 The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
 

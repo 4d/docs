@@ -18,7 +18,7 @@ title: リリースノート
 - インタープリタ版のコンポーネントは[ホストプロジェクトから編集する](../Extensions/develop-components.md#コンポーネントをホストから編集する) ことが可能になりました。
 - [ライセンス](../Admin/licenses.md) は起動時に自動的に更新されるようになりました。
 - 新しい[4D AIKit コンポーネント](../aikit/overview.md) を使用することでサードパーティAI のAPI とやり取りをすることが可能になります。
-- 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-form-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
+- 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
 - Google およびMicrosoft 365 カレンダーを管理するための新しい[4D Netkit](https://developer.4d.com/4D-NetKit/) 機能。OAuth 2.0 認証のためのホストWeb サーバーを使用する機能。
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R9): list of all bugs that have been fixed in 4D 20 R9.
 
@@ -213,7 +213,7 @@ title: リリースノート
 
 ## 4D 20.x LTS
 
-[**4D 20.x LTS のリリースノート**](../../versioned_docs/version-20/Notes/updates.md) を参照して下さい。
+[**4D 20.x LTS のリリースノート**](../../version-20/Notes/updates.md) 参照。
 
 ## ライブラリの一覧
 

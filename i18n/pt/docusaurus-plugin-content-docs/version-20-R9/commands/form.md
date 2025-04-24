@@ -30,7 +30,7 @@ displayed_sidebar: docs
 - the current form is a subform,
 - a table form is currently displayed on screen.
 
-### Commands (DIALOG...)
+### Comandos (DIALOG...)
 
 If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
 

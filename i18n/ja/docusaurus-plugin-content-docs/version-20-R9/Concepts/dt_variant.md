@@ -16,7 +16,7 @@ title: Variant
 - picture
 - pointer
 - real
-- テキスト
+- text
 - time
 - null
 - undefined
