@@ -9,7 +9,7 @@ title: OpenAIImagesResult
 
 - [OpenAIResult](OpenAIResult.md)
 
-## Computed properties
+## Propiedades calculadas
 
 | Propiedad | Tipo                                       | Descripción                                                        |
 | --------- | ------------------------------------------ | ------------------------------------------------------------------ |
