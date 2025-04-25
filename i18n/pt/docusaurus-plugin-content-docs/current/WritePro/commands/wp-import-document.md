@@ -30,7 +30,7 @@ You can pass either a *filePath* or *fileObj*:
 The following types of documents are supported:
 
 - former 4D Write documents (.4w7 or .4wt). For a detailed list of 4D Write features that are currently supported in 4D Write Pro objects, please refer to the *Importing 4D Write documents* section.
-- 4D Write Pro (.4wp) format documents. For more information about the 4D Write Pro document format, refer to *.4wp document format*.
+- Documentos no formato 4D Write Pro (.4wp). For more information about the 4D Write Pro document format, refer to *.4wp document format*.
 - documents in .docx format. For more information about, refer to *Importing and Exporting in .docx format*.
 
 **Note:** If you want to import a document stored in a 4D BLOB field, you can also consider using the [WP New](../commands-legacy/wp-new.md) command.
