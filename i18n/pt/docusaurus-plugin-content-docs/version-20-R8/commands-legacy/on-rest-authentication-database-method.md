@@ -5,7 +5,7 @@ slug: /commands/on-rest-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF  #_command_.On REST Authentication database method.Syntax-->$1, $2, $3, $4 -> On REST Authentication database method : Boolean<!-- END REF-->
+<!--REF #_command_.On REST Authentication database method.Syntax-->$1, $2, $3, $4 -> On REST Authentication database method : Boolean<!-- END REF-->
 <!--REF #_command_.On REST Authentication database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -19,6 +19,6 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF  #_command_.On REST Authentication database method.Summary-->**On REST Authentication database method** está obsoleto em projetos desde 4D 20 R6.<!-- END REF-->
+<!--REF #_command_.On REST Authentication database method.Summary-->**On REST Authentication database method** está obsoleto em projetos desde 4D 20 R6.<!-- END REF-->
 
 A [Force login authentication](../REST/authUsers.md) é recomendada em seu lugar. Em projetos convertidos, pode atualizar sua configuração clicando no botão das configurações [**Activate REST authentication through ds.authentify() function**](../settings/web.md#access) Veja também [este artigo](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/) para saber como migrar seu código se necessário.
