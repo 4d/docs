@@ -231,7 +231,7 @@ Examples of URLs triggering the handlers:
 `IP:port//docs/invoices/details/` with a GET verb, calls *handleDetails* function (*InvoicesHandling* class)
 `IP:port//docs/invoices/details/theInvoice/xxxxxx` with a GET verb, calls *handleTheInvoice* function (*InvoiceslHandling* class)
 
-## Request handler code
+## Código del gestor de peticiones
 
 ### Function configuration
 

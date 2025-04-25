@@ -106,7 +106,7 @@ title: クライアント/サーバー管理
 
 :::info
 
-サーバー上のすべてのストアドプロシージャーは、同じ仮想ユーザーセッションを共有します。 For more information, see [this page on doc.4d.com](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html).
+サーバー上のすべてのストアドプロシージャーは、同じ仮想ユーザーセッションを共有します。 詳細については、[doc.4d.com のこのページ](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.ja.html) を参照ください。
 
 :::
 

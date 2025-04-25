@@ -132,7 +132,7 @@ The returned token can then be used in exchanges with third-party applications o
 
 ```4d
 var $token : Text
-$token := Session.createOTP( 60 ) //the token is valid for 1 mn
+$token := Session.createOTP( 60 ) //el token es válido durante 1 mn
 ```
 
 <!-- END REF -->

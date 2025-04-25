@@ -136,9 +136,9 @@ The `code` property in `methods.code` and `errors.code` is an object with the fo
 To perform a syntax check only, pass an empty collection to the targets parameter:
 
 ```4d
- var $status : Object
+ var $status : Objeto
  var $options:={}
- $options.targets:=New collection //Empty collection for syntax checking
+ $options.targets:=New collection //Colección vacía para verificación de sintaxis
  $status:=Compile project($options)
 ```
 

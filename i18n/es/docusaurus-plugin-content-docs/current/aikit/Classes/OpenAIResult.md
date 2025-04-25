@@ -13,7 +13,7 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 | --------- | ------------------------------------------------------------------------------------ | ---------------- |
 | `request` | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | La petición HTTP |
 
-## Computed properties
+## Propiedades calculadas
 
 | Propiedad     | Tipo       | Descripción                                                                                                                 |
 | ------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------- |

@@ -128,7 +128,7 @@ Lea [**Novedades en 4D 20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/),
 - Los parámetros de métodos declarados en prototipos `#DECLARE` [ya no son necesarios en métodos "Compiler_"](../Concepts/parameters.md).
 - Soporte de [formatos personalizados de fecha y hora](../Project/date-time-formats.md)
 - Nueva [palabra clave `Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de error simples.
-- New [`HTTP Parse message`](../commands/http-parse-message.md) command.
+- Nuevo comando [`HTTP Parse message`](../commands/http-parse-message.md).
 - Nueva opción de compatibilidad [Impresión no bloqueante](../settings/compatibility.md).
 - Nuevo [modo de edición](../Admin/dataExplorer.md#editing-data) en el Explorador de datos.
 - Comandos del lenguaje 4D: [Página de novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) en doc.4d.com.

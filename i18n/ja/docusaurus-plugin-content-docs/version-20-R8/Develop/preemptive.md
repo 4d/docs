@@ -13,7 +13,7 @@ title: プリエンプティブプロセス
 
 結果として、プリエンプティブモードでは、アプリケーションの全体的なパフォーマンスは向上します。マルチコアのマシン上では複数のプロセス (スレッド) が真実同時実行可能であるため、パフォーマンスの向上はさらに顕著になります。 (ただし、実際のパフォーマンスの差は、実行される処理に依存します。) その一方で、プリエンプティブモードではそれぞれのスレッドが他から独立しており、アプリケーションによって直接管理されている訳ではないため、プリエンプティブに準拠させるにあたってはメソッドに特定の制約が課されます。 それに加え、プリエンプティブ実行は特定のコンテキストでのみ使用可能です。
 
-## Availability of preemptive mode {#availability-of-preemptive-mode}
+## プリエンプティブモードの利用可否について{#availability-of-preemptive-mode}
 
 プリエンプティブモードの使用は、以下の実行コンテキストでサポートされています:
 
@@ -41,7 +41,7 @@ title: プリエンプティブプロセス
 
 要素毎の "スレッドセーフティ" プロパティは、その要素自身によります:
 
-- 4Dコマンド: スレッドセーフティは内部プロパティです。 In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands-legacy/command-name.md) command to know if a command is thread-safe. 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
+- 4Dコマンド: スレッドセーフティは内部プロパティです。 4D ドキュメンテーション内においては、スレッドセーフなコマンドには ![](../assets/en/Develop/thread-safe.png) アイコンが表示されています。 You can also use the [`Command name`](../commands-legacy/command-name.md) command to know if a command is thread-safe. 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
 - プロジェクトメソッド: スレッドセーフであるための条件は [こちらの段落](#スレッドセーフなメソッドの書き方) にまとめられています。
 
 原則として、プリエンプティブスレッド内で実行されるコードは外部との相互作用する部分、たとえばプラグインコードやインタープロセス変数などを呼び出すことはできません。 しかしながら、4Dデータサーバーと ORDA はプリエンプティブ実行をサポートしていることから、データアクセスは可能です。
@@ -141,7 +141,7 @@ title: プリエンプティブプロセス
 
 4Dではプロセスに対してコオペラティブ実行かプリエンプティブ実行かを識別する機能を提供しています:
 
-- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
+- [`Process info`](../commands/process-info.md) コマンドを使用すると、プロセスがプリエンプティブモードで実行されているいるのか小オペラティブモードで実行されているのか調べることができます。
 - ランタイムエクスプローラーと [4D Server管理ウィンドウ](../ServerWindow/processes.md#プロセスタイプ) は、どちらもプリエンプティブプロセスに対して新しい特定のアイコンを表示するようになりました:
 
 ## スレッドセーフなメソッドの書き方

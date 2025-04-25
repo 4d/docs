@@ -73,9 +73,9 @@ OPEN PRINTING JOB
 Calling a table form in a print job:
 
 ```4d
- OPEN PRINTING JOB
- FORM LOAD([People];"print_form")
-  // execution of events and object methods
+OPEN PRINTING JOB
+ FORM LOAD([People];"print_form")
+ // ejecución de eventos y de métodos objeto
 ```
 
 ## Ejemplo 3
