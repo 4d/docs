@@ -1,12 +1,12 @@
 ---
-id: events
-title: Events
+id: data-events
+title: Data Events
 ---
 
 
-ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+Data events are ORDA functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
 
-You cannot directly trigger event function code execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
+You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
 Events can prevent "illegal" operations on the entities. They can also trigger business logic before, during, or after executing actions on data such as instantiating, saving, or dropping entities. For example, the `validateSave()` event can check the validity of data entered in the entity.
 
@@ -27,19 +27,18 @@ ORDA events in the datastore are equivalent to triggers in the 4D database. Howe
 
 A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class). 
 
-It can be defined for the **entity** level and/or the **attribute** level (including [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes) and [**aliases**](../ORDA/ordaClasses.md#alias-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the defined attribute. For the same event, you can define different functions for different attributes entities. 
+It can be defined at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes) and [**aliases**](../ORDA/ordaClasses.md#alias-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute. For the same event, you can define different functions for different attributes. 
 
 You can also define the same event at both attribute and entity levels. The attribute event is called first and then the entity event.
 
-Events on en
 
 ### Stopping operation
 
 Some events can stop the undergoing action by returning an error. Other events can return errors but do not stop the action. 
 
-### Execution location (C/S and REST)
+### Execution location in remote configurations
 
-In client/server configuration, most event functions are executed server-side, with the following exceptions:
+In client/server configuration, most event functions are executed **server-side**, with the following exceptions:
 
 - `constructor()` is always executed on the client
 - `touched()` can be executed on the client, depending on the use of [`local`](../ORDA/ordaClasses.md#local-functions) keyword. Note that `touched()` is the only event function that supports the `local` keyword. 
@@ -53,26 +52,26 @@ The following table lists all available ORDA events along with their rules.
 
 | Event  | Level    | Function name   | Can stop action by returning an error|  (C/S) Executed on |
 | :--------------- |:--------------- | :----- | :-----: | :-----: |
-| Instantiate entity  | Entity      |   constructor() | No |   client | 
-| Attribute touched  | Attribute    |    touched *attrName*() | No | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
-| Attribute touched  | Entity   |    touched()  | No | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
-| Before saving an entity | Attribute          |    validateSave *attrName*() | Yes | server | 
-| Before saving an entity | Entity          |    validateSave()  | Yes | server | 
-| When saving an entity | Attribute          |    saving *attrName*()| Yes |  server | 
-| When saving an entity | Entity          |    saving()  | Yes | server | 
-| After saving an entity | Entity          |    afterSave()  | No |  server | 
-| Before dropping an entity | Attribute          |    validateDrop *attrName*()| Yes |  server | 
-| Before dropping an entity | Entity          |    validateDrop()  | Yes |  server |
-| When dropping an entity | Attribute          |    dropping *attrName*()| Yes | server | 
-| When dropping an entity | Entity          |    dropping()  | Yes | server |
-| After dropping an entity | Entity          |    afterDrop()  | No | server | 
+| Instantiate entity  | Entity      |   `constructor()` | No |   client | 
+| Attribute touched  | Attribute    |    `event touched <attrName>()` | No | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
+|   | Entity   |   `event touched()`  | No | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
+| Before saving an entity | Attribute          |    `event validateSave <attrName>()` | Yes | server | 
+|  | Entity          |    `event validateSave()`  | Yes | server | 
+| When saving an entity | Attribute          |    `event saving <attrName>()`| Yes |  server | 
+|  | Entity          |    `event saving()`  | Yes | server | 
+| After saving an entity | Entity          |    `event afterSave()`  | No |  server | 
+| Before dropping an entity | Attribute          |    `event validateDrop <attrName>()`| Yes |  server | 
+|  | Entity          |    `event validateDrop()`  | Yes |  server |
+| When dropping an entity | Attribute          |    `event dropping <attrName>()`| Yes | server | 
+|  | Entity          |    `event dropping()`  | Yes | server |
+| After dropping an entity | Entity          |    `event afterDrop()`  | No | server | 
 
 
 ## *event* parameter
 
 Event functions (except `constructor()`) accept a single *event* object as parameter. When the function is called, the parameter is filled with several properties:
 
-| Attribute name  | Provided context  | Type        | Description        | 
+| Attribute name  | Availability  | Type        | Description        | 
 | :--------------- |:---------------  |:--------------- | :--------------- | 
 | `kind`  | Always   |    String  | Event name ("touched" / "validateSave" / "saving" / "afterSave" / "validateDrop" / "dropping" / "afterDrop")          |    
 | *attributeName*  | Only for events involving an attribute (touched, validateSave, saving, validateDrop, dropping)  |    String  |  Attribute name (*e.g.* "firstname")          |      
@@ -123,7 +122,7 @@ constructor ()
 #### Syntax
 
 ```4d
-Function event touched(*event* : Object)<br/>Function event touched <attributeName>(*event* : Object)
+Function event touched($event : Object)<br/>Function event touched <attributeName>($event : Object)
 // code
 ```
 
@@ -132,12 +131,13 @@ This event is triggered each time a value is modified in the entity.
 - if you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity. 
 - if you defined the function at the attribute level (second syntax), it is triggered for modifications on this attribute only.
 
-This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to:
+This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
 
-- the user sets a value on a 4D Form (4D single-user)
-- some 4D code makes an assignment with the `:=` operator (4D single-user). The event is triggered in case of self-assignment (`$attributevalue:=$attributevalue`).
-- the value is received on the REST server with a [REST request](../REST/$method.md) (`$method=update`)
-- the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter) with Qodly - Remote datastore - C/S
+- in 4D single-user:
+    - the user sets a value on a 4D form
+    - the 4D code makes an assignment with the `:=` operator (4D single-user). The event is also triggered in case of self-assignment (`$attributevalue:=$attributevalue`).
+- in client/server, remote datastore, Qodly: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter)
+- with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md) (`$method=update`)
 
 The function receives an [*event* object](#event-parameter) as parameter. 
 
@@ -148,11 +148,49 @@ This event is not triggered when attributes are assigned in the [`constructor()`
 
 :::
 
+#### Example 1
+
+You want to log in a journal when any attribute in the entity is touched.
+
+```4d
+Function event touched($event : Object) 
+
+// Update a journal file
+//
+```
+
+#### Example 2
+
+The "touched" event is useful with computed attributes, when you want to store a state depending on a comparison on the current value of underlying attributes. For example:
+
+```4d
+exposed Function get sameDay(): Boolean
+    return (This.departureDate = This.arrivalDate) ? True : False
+```
+
+This code can lead to time-consuming queries because the search is sequential due to the nature of the computed attribute. Using a non-computed *sameDay* attribute updated when other attributes are touched will save time:
+
+```4d
+    //BookingEntity class
+
+Function event touched departureDate ($event : Object) 
+
+    This.sameDay:=(This.departureDate = This. arrivalDate) ? True : False
+//
+//
+Function event touched arrivalDate ($event : Object) 
+
+    This.sameDay:=(This.departureDate = This. arrivalDate) ? True : False
+
+```
+
+
 
 
 
 ## Examples
 
+### Dynamic code
 
 ```4d
 
@@ -179,3 +217,23 @@ Case of
         End if
 End case
 ```
+
+
+### afterSave event
+
+```4d
+
+ //cs.BookingEntity class
+Function event afterSave ($event : Object)
+ 
+// The save action failed   
+If ($event.saveStatus = "failed")
+
+        // The status attribute was to be saved with a new "confirmed" value
+    If ($event.savedAttributes.indexOf("status") = -1)
+        // Send a mail to the Admin to check the booking
+        //...
+    End if
+
+End if
+

@@ -100,6 +100,7 @@ module.exports =
           items: [
             "ORDA/dsmapping",
             "ORDA/ordaClasses",
+            "ORDA/data-events",
             "ORDA/entities",
             "ORDA/global-stamp",
             "ORDA/datastores",
