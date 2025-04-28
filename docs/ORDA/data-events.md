@@ -141,6 +141,7 @@ This event is triggered as soon as the 4D Server / 4D engine can detect a modifi
 
 The function receives an [*event* object](#event-parameter) as parameter. 
 
+If this event [throws](../commands-legacy/throw.md) an error, it will not stop the undergoing action. 
 
 :::note
 
