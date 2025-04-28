@@ -3,115 +3,115 @@ id: components
 title: Composants
 ---
 
-A 4D component is a set of 4D code and/or 4D forms representing one or more functionalities that you can add and use in your projects. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+Un composant 4D est un ensemble de code 4D et de formulaires représentant une ou plusieurs fonctionnalité(s) que vous pouvez installer et utiliser dans vos projets. Par exemple, le composant [4D SVG](https://github.com/4d/4D-SVG) ajoute des commandes avancées et un moteur de rendu intégré qui peut être utilisé pour afficher des fichiers SVG.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that can be found on GitHub.
+Vous pouvez [développer](../Extensions/develop-components.md) et [construire](../Desktop/building.md) vos propres composants 4D, ou télécharger des composants publics partagés par la communauté 4D qui se trouvent sur GitHub.
 
-When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
+Lorsque vous développez dans 4D, les fichiers de composants peuvent être stockés de manière transparente sur votre ordinateur ou sur un dépôt Github.
 
-## Interpreted and compiled components
+## Composants interprétés et compilés
 
-Components can be interpreted or [compiled](../Desktop/building.md).
+Les composants peuvent être interprétés ou [compilés](../Desktop/building.md).
 
-- A 4D project running in interpreted mode can use either interpreted or compiled components.
-- A 4D project running in compiled mode cannot use interpreted components. Dans ce cas, seuls les composants compilés peuvent être utilisés.
+- Un projet 4D fonctionnant en mode interprété peut utiliser des composants interprétés ou compilés.
+- Un projet 4D exécuté en mode compilé ne peut pas utiliser de composants interprétés. Dans ce cas, seuls les composants compilés peuvent être utilisés.
 
-### Package folder
+### Dossier racine (package)
 
-The package folder of a component (*MyComponent.4dbase* folder) can contain:
+Le dossier racine d'un composant (dossier *MyComponent.4dbase*) peut contenir :
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
-- for **compiled components**:
- - either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
- - or directly a .4DZ file with other folders such as *Resources*.
+- pour les **composants interprétés** : un [dossier project](../Project/architecture.md) standard. Le nom du dossier du dossier racine doit être suffixé **.4dbase** si vous voulez l'installer dans le dossier [**Components**](architecture.md#components) de votre projet.
+- pour les **composants compilés** :
+ - soit un dossier "Contents" contenant un fichier .4DZ, un dossier *Resources*, un fichier *Info.plist* (architecture recommandée)
+ - soit directement un fichier .4DZ avec d'autres dossiers tels que *Resources*.
 
 :::note
 
-The "Contents" folder architecture is recommended for components if you want to [notarize](../Desktop/building.md#about-notarization) your applications on macOS.
+L'architecture de dossier "Contents" est recommandée pour les composants si vous voulez [notariser](../Desktop/building.md#about-notarization) vos applications sur macOS.
 
 :::
 
-## Loading components
+## Chargement des composants
 
 :::note
 
-This page describes how to work with components in the **4D** and **4D Server** environments. In other environments, components are managed differently:
+Cette page décrit comment travailler avec les composants dans les environnements **4D** et **4D Server**. Dans les autres environnements, les composants sont gérés différemment :
 
-- in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
-- in merged applications, components are [included at the build step](../Desktop/building.md#plugins--components-page).
+- dans [4D en mode distant](../Desktop/clientServer.md), les composants sont chargés par le serveur et envoyés à l'application distante.
+- dans les applications fusionnées, les composants sont [inclus à l'étape de construction](../Desktop/building.md#plugins--components-page).
 
 :::
 
 ### Vue d’ensemble
 
-To load a component in your 4D project, you can either:
+Pour charger un composant dans votre projet 4D, vous pouvez soit :
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
+- copier les fichiers des composants dans le [dossier **Components** de votre projet](architecture.md#components) (les dossiers des composants interprétés doivent être suffixés avec ".4dbase", voir ci-dessus),
+- ou déclarer le composant dans le fichier **dependencies.json** de votre projet ; ceci est fait automatiquement pour les fichiers locaux lorsque vous [**ajoutez une dépendance en utilisant l'interface du Gestionnaire de dépendances**](#adding-a-github-dependency).
 
-Components declared in the **dependencies.json** file can be stored at different locations:
+Les composants déclarés dans le fichier **dependencies.json** peuvent être stockés à différents endroits :
 
-- at the same level as your 4D project's package folder: this is the default location,
-- anywhere on your machine: the component path must be declared in the **environment4d.json** file
-- on a GitHub repository: the component path can be declared in the **dependencies.json** file or in the **environment4d.json** file, or in both files.
+- au même niveau que le dossier racine de votre projet 4D : c'est l'emplacement par défaut,
+- n'importe où sur votre machine : le chemin du composant doit être déclaré dans le fichier **environment4d.json**
+- sur un dépôt GitHub : le chemin du composant peut être déclaré dans le fichier **dependencies.json** ou dans le fichier **environment4d.json**, ou dans les deux.
 
-If the same component is installed at different locations, a [priority order](#priority) is applied.
+Si le même composant est installé à différents endroits, un [ordre de priorité](#priority) est appliqué.
 
-### dependencies.json and environment4d.json
+### dependencies.json et environment4d.json
 
 #### dependencies.json
 
-The **dependencies.json** file references all components required in your 4D project. This file must be located in the **Sources** folder of the 4D project folder, e.g.:
+Le fichier **dependencies.json** référence tous les composants nécessaires à votre projet 4D. Ce fichier doit être placé dans le dossier **Sources** du dossier du projet 4D, par exemple :
 
 ```
 	/MyProjectRoot/Project/Sources/dependencies.json
 ```
 
-It can contain:
+Il peut contenir :
 
-- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
-- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
+- les noms des composants [stockés localement](#local-components) (chemin par défaut ou chemin défini dans un fichier **environment4d.json**),
+- les noms des composants [stockés sur des dépôts GitHub](#components-stored-on-github) (leur chemin peut être défini dans ce fichier ou dans un fichier **environment4d.json**).
 
 #### environment4d.json
 
-The **environment4d.json** file is optional. It allows you to define **custom paths** for some or all components declared in the **dependencies.json** file. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
+Le fichier **environment4d.json** est facultatif. Il vous permet de définir des **chemins personnalisés** pour certains ou tous les composants déclarés dans le fichier **dependencies.json**. Ce fichier peut être stocké dans le dossier racine de votre projet ou dans l'un de ses dossiers parents, à n'importe quel niveau (jusqu'à la racine).
 
-The main benefits of this architecture are the following:
+Les principaux avantages de cette architecture sont les suivants :
 
-- you can store the **environment4d.json** file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
-- if you want to use the same GitHub repository for several of your projects, you can reference it in the **environment4d.json** file and declare it in the **dependencies.json** file.
+- vous pouvez stocker le fichier **environment4d.json** dans un dossier parent de vos projets et décider de ne pas le livrer (*commit*), ce qui vous permet d'avoir une organisation locale pour vos composants.
+- si vous souhaitez utiliser le même dépôt GitHub pour plusieurs de vos projets, vous pouvez le référencer dans le fichier **environment4d.json** et le déclarer dans le fichier **dependencies.json**.
 
-### Priority
+### Priorité
 
-Since components can be installed in different ways, a priority order is applied when the same component is referenced at several locations:
+Puisque les composants peuvent être installés de différentes manières, un ordre de priorité est appliqué lorsque le même composant est référencé à plusieurs endroits :
 
-**Higest priority**
+**Priorité la plus élevée**
 
-1. Components stored in the [**Components** folder of the project](architecture.md#components).
-2. Components declared in the **dependencies.json** file (the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
-3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
+1. Composants stockés dans le [dossier **Components** du projet](architecture.md#components).
+2. Composants déclarés dans le fichier **dependencies.json** (le chemin déclaré dans **environment4d.json** remplace le chemin **dependencies.json** pour configurer un environnement local).
+3. Composants utilisateurs 4D internes (par exemple 4D NetKit, 4D SVG...)
 
-**Lowest priority**
+**Priorité la plus basse**
 
 ```mermaid
-flowchart TB
-    id1("1<br/>Components from project's Components folder")
+organigramme TB
+    id1("1<br/>Composants du dossier Components du projet")
 	~~~
-    id2("2<br/>Components listed in dependencies.json")
-	~~~
-    id2 -- environment4d.json gives path --> id4("Load component based on path declared in environment4d.json")
+    id2("2<br/>Composants listés dans dependencies.json")
+	~~
+    id2 -- environment4d.json donne le chemin --> id4("Charger le composant basé sur le chemin déclaré dans environment4d.json")
     ~~~
-    id3("3<br/>User 4D components")
-    id2 -- environment4d.json doesn't give path --> id5("Load component next to package folder")
+    id3("3<br/>Composants utilisateurs 4D internes")
+    id2 -- environment4d.json ne donne pas de chemin --> id5("Charger le composant à côté du dossier raciner")
     ~~~
-    id3("3<br/>User 4D components")
+    id3("3<br/>Composants utilisateurs 4D internes")
 ```
 
-When a component cannot be loaded because of another instance of the same component located at a higher priority level, both get a specific [status](#dependency-status): the non-loaded component is given the *Overloaded* status, while the loaded component has the *Overloading* status.
+Lorsqu'un composant ne peut pas être chargé à cause d'une autre instance du même composant située à un niveau de priorité plus élevé, les deux obtiennent un [statut](#dependency-status) spécifique : le composant non chargé reçoit le statut *Overloaded*, tandis que le composant chargé a le statut *Overloading*.
 
-### Local components
+### Composants locaux
 
-You declare a local component in the [**dependencies.json** file](#dependenciesjson) in the following way:
+Vous déclarez un composant local dans le fichier [**dependencies.json** ](#dependenciesjson) de la manière suivante :
 
 ```json
 {
@@ -122,28 +122,28 @@ You declare a local component in the [**dependencies.json** file](#dependenciesj
 }
 ```
 
-... where "myComponent1" and "myComponent2" are the name of the components to be loaded.
+... où "myComponent1" et "myComponent2" sont les noms des composants à charger.
 
-By default, if "myComponent1" and "myComponent2" are not declared in an [**environment4d.json**](#environment4djson) file, 4D will look for the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+Par défaut, si "myComponent1" et "myComponent2" ne sont pas déclarés dans un fichier [**environment4d.json**](#environment4djson), 4D cherchera le dossier package du composant (c'est-à-dire le dossier racine du projet du composant) au même niveau que le dossier du package de votre projet 4D, par exemple :
 
 ```
 	/MyProjectRoot/
 	/MyProjectComponentRoot/
 ```
 
-Thanks to this architecture, you can simply copy all your components at the same level as your projects and reference them in your **dependencies.json** files.
+Grâce à cette architecture, vous pouvez simplement copier tous vos composants au même niveau que vos projets et les référencer dans vos fichiers **dependencies.json**.
 
 :::note
 
-If you do not want to use the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
+Si vous ne souhaitez pas utiliser l'architecture **dependencies.json**, vous pouvez installer des composants locaux en copiant leurs fichiers dans le [dossier **Components** de votre projet](architecture.md#components).
 
 :::
 
-#### Customizing component paths
+#### Personnalisation des chemins des composants
 
-If you want to customize the location of local components, you declare the paths for the dependencies that are not stored at the same level as the project folder in the [**environment4d.json**](#environment4djson) file.
+Si vous souhaitez personnaliser l'emplacement des composants locaux, vous devez déclarer dans le fichier [**environment4d.json**](#environment4djson) les chemins des dépendances qui ne sont pas stockées au même niveau que le dossier projet.
 
-You can use **relative** or **absolute** paths (see below).
+Vous pouvez utiliser des chemins **relatifs** ou **absolus** (voir ci-dessous).
 
 Exemples :
 
@@ -159,43 +159,43 @@ Exemples :
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
+Si un chemin de composant déclaré dans le fichier **environment4d.json** n'est pas trouvé lorsque le projet est démarré, le composant n'est pas chargé et récupère le [statut](#dependency-status) *Not found*, même si une version du composant existe à côté du dossier racine du projet.
 
 :::
 
-#### Relative paths vs absolute paths
+#### Chemins relatifs vs chemins absolus
 
-Paths are expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax).
+Les chemins sont exprimés en syntaxe POSIX comme décrit dans [ce paragraphe](../Concepts/paths#posix-syntax).
 
-Relative paths are relative to the [`environment4d.json`](#environment4djson) file. Absolute paths are linked to the user's machine.
+Les chemins relatifs sont relatifs au fichier [`environment4d.json`](#environment4djson). Les chemins absolus sont liés à la machine de l'utilisateur.
 
-Using relative paths is **recommended** in most cases, since they provide flexibility and portability of the components architecture, especially if the project is hosted in a source control tool.
+L'utilisation de chemins relatifs est **recommandée** dans la plupart des cas, puisqu'ils fournissent flexibilité et portabilité de l'architecture des composants, surtout si le projet est hébergé dans un outil de contrôle de source.
 
-Absolute paths should only be used for components that are specific to one machine and one user.
+Les chemins absolus ne doivent être utilisés que pour les composants spécifiques à une machine et à un utilisateur.
 
-### Components stored on GitHub
+### Composants stockés sur GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
+Des composants 4D disponibles en tant que releases GitHub peuvent être référencés et automatiquement chargés et mis à jour dans vos projets 4D.
 
 :::note
 
-Regarding components stored on GitHub, both [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files support the same contents.
+En ce qui concerne les composants stockés sur GitHub, les fichiers [**dependencies.json**](#dependenciesjson) et [**environment4d.json**](#environment4djson) prennent en charge le même contenu.
 
 :::
 
-#### Configuring the GitHub repository
+#### Configuration du dépôt GitHub
 
-To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
+Pour pouvoir référencer et utiliser directement un composant 4D stocké sur GitHub, vous devez configurer le dépôt du composant GitHub :
 
-- Compress the component files in ZIP format.
-- Name this archive with the same name as the GitHub repository.
-- Integrate the archive into a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) of the repository.
+- Compressez les fichiers des composants au format ZIP.
+- Nommez cette archive avec le même nom que le dépôt GitHub.
+- Intégrez l'archive dans une [release GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) du dépôt.
 
-These steps can easily be automated, with 4D code or using GitHub Actions, for example.
+Ces étapes peuvent être facilement automatisées, avec du code 4D ou en utilisant des actions GitHub, par exemple.
 
-#### Declaring paths
+#### Déclaration des chemins
 
-You declare a component stored on GitHub in the [**dependencies.json** file](#dependenciesjson) in the following way:
+Vous déclarez un composant stocké sur GitHub dans le fichier [**dependencies.json** ](#dependenciesjson) de la manière suivante :
 
 ```json
 {
@@ -208,7 +208,7 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. You need to declare it in the [**environment4d.json**](#environment4djson) file:
+... où "myGitHubComponent1" est référencé et déclaré pour le projet, tandis que "myGitHubComponent2" est seulement référencé. Vous devez le déclarer dans le fichier [**environment4d.json**](#environment4djson) :
 
 ```json
 {
@@ -220,11 +220,11 @@ You declare a component stored on GitHub in the [**dependencies.json** file](#de
 }
 ```
 
-"myGitHubComponent2" can be used by several projects.
+"myGitHubComponent2" peut être utilisé par plusieurs projets.
 
-#### Tags and versions
+#### Tags et versions
 
-When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
+Lorsqu'une release est créée dans GitHub, elle est associée à un **tag** et à une **version**. Le gestionnaire de dépendances utilise ces informations pour gérer la disponibilité automatique des composants.
 
 :::note
 
