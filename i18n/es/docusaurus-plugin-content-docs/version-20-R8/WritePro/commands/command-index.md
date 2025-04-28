@@ -30,7 +30,7 @@ title: Comandos 4D Write Pro
 
 <a id="E"><b>E</b></a>
 
-[`WP EXPORT DOCUMENT`](wp-export-document.md) ***Modified 4D 20 R8***<br/>
+[`WP EXPORT DOCUMENT`](wp-export-document.md) ***Modificado 4D 20 R8***<br/>
 [`WP EXPORT VARIABLE`](../commands-legacy/wp-export-variable.md)
 
 <a id="F"><b>F</b></a>
