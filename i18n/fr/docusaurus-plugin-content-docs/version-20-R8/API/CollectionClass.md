@@ -82,10 +82,10 @@ Une collection est initialisée avec les commandes [`New collection`](../command
 
 <!-- REF #collection.at().Params -->
 
-| Paramètres | Type    |                             | Description                   |
-| ---------- | ------- | :-------------------------: | ----------------------------- |
-| index      | Integer |              ->             | Index de l'élément à renvoyer |
-| Résultat   | any     | <- | L'élément à cet index         |
+| Paramètres | Type    |                             | Description                    |
+| ---------- | ------- | :-------------------------: | ------------------------------ |
+| index      | Integer |              ->             | Indice de l'élément à renvoyer |
+| Résultat   | any     | <- | L'élément à cet indice         |
 
 <!-- END REF -->
 
