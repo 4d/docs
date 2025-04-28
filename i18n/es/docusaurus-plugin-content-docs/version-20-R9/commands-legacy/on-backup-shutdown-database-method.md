@@ -5,8 +5,8 @@ slug: /commands/on-backup-shutdown-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Backup Shutdown.Syntax-->$1 -> Método base On Backup Shutdown<!-- END REF-->
-<!--REF #_command_.Metodo base On Backup Shutdown.Params-->
+<!--REF #_command_.On Backup Shutdown database method.Syntax-->$1 -> Método base On Backup Shutdown<!-- END REF-->
+<!--REF #_command_.On Backup Shutdown database method.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $1 | Entero largo | &#8592; | 0 = backup ejecutado correctamente; otro valor = error, interrumpido por el usuario o código devuelto por On Backup Startup |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo base On Backup Shutdown.Summary-->El Método base On Backup Shutdown se llama cada vez que termina un backup de la base.<!-- END REF--> Las razones para detener un backup pueden ser el fin de la copia, la interrupción por parte del usuario o un error.  
+<!--REF #_command_.On Backup Shutdown database method.Summary-->El Método base On Backup Shutdown se llama cada vez que termina un backup de la base.<!-- END REF--> Las razones para detener un backup pueden ser el fin de la copia, la interrupción por parte del usuario o un error.  
 Esto concierne a todos los entornos 4D (todos los modos), 4D Server así como las aplicaciones 4D compiladas y fusionadas con 4D Volume Desktop. 
 
 El Método base On Backup Shutdown permite verificar que el backup fue ejecutado correctamente. El método recibe, en el parámetro *$status*, un valor indicando el estado del backup una vez terminado:

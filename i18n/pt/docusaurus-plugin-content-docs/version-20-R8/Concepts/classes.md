@@ -99,7 +99,7 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
 - [`cs`](../commands/cs.md) for user class store
-- [`4D`](../commands/4d.md) for built-in class store
+- [`4D`](../commands/4d.md) para o class store integrado
 
 ### `cs`
 
@@ -326,7 +326,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 ```4d
 // Class: MyClass
 {shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
-// code
+// código
 ```
 
 :::note

@@ -12,8 +12,6 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | ソートする配列 |
 | sort | * | &#8594;  | ">" : 昇順ソート, または "<" : 降順ソート, または 省略した場合、ソートしない |
-| MULTI SORT ARRAY ( ptrArrayName ; sortArrayName ) |
-| 引数 | 型 | 説明 |
 | ptrArrayName | Pointer array | &#8594;  | 配列ポインタの配列 |
 | sortArrayName | Integer array | &#8594;  | ソート順配列 (1 = 昇順にソート、-1 = 降順にソート、0 = 前のソートに同期) |
 

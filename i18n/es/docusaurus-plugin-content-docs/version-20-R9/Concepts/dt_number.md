@@ -115,7 +115,7 @@ Los paréntesis pueden anidarse dentro de otros conjuntos de paréntesis. Asegú
 
 ## Operadores de bits
 
-The bitwise operators operates on (Long) Integers expressions or values.
+Los operadores bitwise operan sobre expresiones o valores Enteros (largos).
 
 > If you pass a (Short) Integer or a Real value to a bitwise operator, 4D evaluates the value as a Long value before calculating the expression that uses the bitwise operator.
 

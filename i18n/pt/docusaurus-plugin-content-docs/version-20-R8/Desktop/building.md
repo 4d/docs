@@ -534,7 +534,7 @@ You can use this tab to build:
 
 - an evaluation application,
 - a licensed application without embedded license (the user has to have a per-user license),
-- a licensed application with embedded license(s).
+- uma aplicação licenciada com licença(s) incorporada(s).
 
 #### Build an evaluation application
 

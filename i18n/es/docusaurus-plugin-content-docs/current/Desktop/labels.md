@@ -139,7 +139,7 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
 - **Width** and **Height**: Sets the height and width of each label manually. They cannot be edited when the **Automatic resizing** option is checked.
-- **Margins** (Top, Right, Left, Bottom): Sets the margins of your sheet. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
+- **Márgenes** (Superior, Derecho, Izquierdo, Inferior): define los márgenes de su hoja. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
 - **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
  To be eligible for label processing, a project method must comply with the following settings:
@@ -158,7 +158,7 @@ The **For each: Record or Label** options are used to specify whether to run the
 
 ![](../assets/en/Desktop/label-start.png)
 
-## Printing labels using forms and methods (example)
+## Impresión de etiquetas mediante formularios y métodos (ejemplo)
 
 You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
 
@@ -223,7 +223,7 @@ Label designs are managed using the **Load** and **Save** buttons of the tool ba
 - To load a label design, click on the **Load** button and designate the design you want to load by means of the File Open dialog box (if a label design is already present in the wizard, 4D replaces it by the one you have loaded).
 - To save a label design, click on the **Save** button and indicate the name and location of the design to be created.
 
-### File format
+### Formato del archivo
 
 The file extension of 4D labels saved by the wizard is ".4lbp". Note that this format is open since it is written internally in XML.
 

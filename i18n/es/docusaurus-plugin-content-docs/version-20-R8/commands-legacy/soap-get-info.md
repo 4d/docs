@@ -5,8 +5,8 @@ slug: /commands/soap-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP get info.Syntax-->**SOAP get info** ( *numInfo* ) : Text<!-- END REF-->
-<!--REF #_command_.SOAP get info.Params-->
+<!--REF #_command_.SOAP Get info.Syntax-->**SOAP get info** ( *numInfo* ) : Text<!-- END REF-->
+<!--REF #_command_.SOAP Get info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | numInfo | Integer | &#8594;  | Número de tipo de información SOAP a obtener |
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.SOAP get info.Summary-->El comando **SOAP get info** permite recuperar bajo la forma de cadena de caracteres diferentes tipos de información relacionada con una petición SOAP.<!-- END REF--> 
+<!--REF #_command_.SOAP Get info.Summary-->El comando **SOAP get info** permite recuperar bajo la forma de cadena de caracteres diferentes tipos de información relacionada con una petición SOAP.<!-- END REF--> 
 
 Cuando procesa una petición SOAP, puede ser útil obtener información adicional, diferente a los valores de los parámetros RPC, sobre la petición. Por ejemplo, por razones de seguridad, puede utilizar este comando en el *Método base On Web Authentication* para conocer el nombre del método Web service solicitado. 
 

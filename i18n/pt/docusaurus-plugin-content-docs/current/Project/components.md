@@ -74,7 +74,7 @@ Pode conter:
 
 #### environment4d.json
 
-O arquivo **environment4d.json** é opcional. Ele permite que você defina **caminhos personalizados** para alguns ou todos os componentes declarados no arquivo **dependencies.json**. This file can be stored in your project package folder or in one of its parent folders, at any level (up to the root).
+O arquivo **environment4d.json** é opcional. Ele permite que você defina **caminhos personalizados** para alguns ou todos os componentes declarados no arquivo **dependencies.json**. Este arquivo pode ser armazenado na pasta pacote de projeto ou em uma das pastas pais, a qualquer nível (superior à raiz).
 
 The main benefits of this architecture are the following:
 

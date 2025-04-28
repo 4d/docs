@@ -3,9 +3,17 @@ id: updates
 title: リリースノート
 ---
 
+## 4D 20 R10
+
+Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R10/), the blog post that lists all new features and enhancements in 4D 20 R10.
+
+#### ハイライト
+
+- New `connectionTimeout` option in the [`options`](../API/TCPConnectionClass.md#options-parameter) parameter of the [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) function.
+
 ## 4D 20 R9
 
-[**4D 20 R9 の新機能**](https://blog.4d.com/en-whats-new-in-4d-v20-R9/): 4D 20 R9 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+[**4D 20 R9 の新機能**](https://blog.4d.com/en-whats-new-in-4d-20-R9/): 4D 20 R9 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
@@ -18,13 +26,13 @@ title: リリースノート
 - インタープリタ版のコンポーネントは[ホストプロジェクトから編集する](../Extensions/develop-components.md#コンポーネントをホストから編集する) ことが可能になりました。
 - [ライセンス](../Admin/licenses.md) は起動時に自動的に更新されるようになりました。
 - 新しい[4D AIKit コンポーネント](../aikit/overview.md) を使用することでサードパーティAI のAPI とやり取りをすることが可能になります。
-- 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-form-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
+- 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
 - Google およびMicrosoft 365 カレンダーを管理するための新しい[4D Netkit](https://developer.4d.com/4D-NetKit/) 機能。OAuth 2.0 認証のためのホストWeb サーバーを使用する機能。
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R9): list of all bugs that have been fixed in 4D 20 R9.
 
 ## 4D 20 R8
 
-[**4D 20 R8 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R8/): 4D 20 R8 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-20-R8/), the blog post that lists all new features and enhancements in 4D 20 R8.
 
 #### ハイライト
 
@@ -54,7 +62,7 @@ title: リリースノート
 
 ## 4D 20 R7
 
-[**4D 20 R7 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R7/): 4D 20 R7 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-20-R7/), the blog post that lists all new features and enhancements in 4D 20 R7.
 
 #### ハイライト
 

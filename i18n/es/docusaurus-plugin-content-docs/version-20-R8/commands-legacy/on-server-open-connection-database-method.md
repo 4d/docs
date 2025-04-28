@@ -5,8 +5,8 @@ slug: /commands/on-server-open-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Server Open Connection.Syntax-->$1, $2, $3 -> Método base On Server Open Connection -> $0<!-- END REF-->
-<!--REF #_command_.Metodo base On Server Open Connection.Params-->
+<!--REF #_command_.On Server Open Connection database method.Syntax-->$1, $2, $3 -> Método base On Server Open Connection -> $0<!-- END REF-->
+<!--REF #_command_.On Server Open Connection database method.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $user | Entero largo | &#8592; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## ¿Cuándo se llama el método base On Server Open Connection? 
 
-<!--REF #_command_.Metodo base On Server Open Connection.Summary-->El **Método base On Server Open Connection** se llama una vez en el equipo servidor cada vez que un equipo 4D remoto inicia un proceso de conexión.<!-- END REF--> El **Método base On Server Open Connection** NO se invoca por otro entorno 4D diferente de 4D Server.
+<!--REF #_command_.On Server Open Connection database method.Summary-->El **Método base On Server Open Connection** se llama una vez en el equipo servidor cada vez que un equipo 4D remoto inicia un proceso de conexión.<!-- END REF--> El **Método base On Server Open Connection** NO se invoca por otro entorno 4D diferente de 4D Server.
 
 El **Método base On Server Open Connection** se llama cada vez que:
 

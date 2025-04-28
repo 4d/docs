@@ -5,8 +5,8 @@ slug: /commands/on-startup-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo banco de dados On Startup.Syntax-->**Método banco de dados On Startup**<!-- END REF-->
-<!--REF #_command_.Metodo banco de dados On Startup.Params-->
+<!--REF #_command_.On Startup database method.Syntax-->**Método banco de dados On Startup**<!-- END REF-->
+<!--REF #_command_.On Startup database method.Params-->
 | Este comando não requer parâmetros |  |
 | --- | --- |
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo banco de dados On Startup.Summary-->O Método banco de dados On Startup é chamada uma vez que se abra um banco.<!-- END REF-->
+<!--REF #_command_.On Startup database method.Summary-->O Método banco de dados On Startup é chamada uma vez que se abra um banco.<!-- END REF-->
 
 Isso ocorre nos seguintes ambientes 4D:
 

@@ -355,20 +355,20 @@ vCompareResult1 (すべての差異が返されています):
 | success       |                     | boolean             | ドロップが成功した場合には true、それ以外は false                                           |
 |               |                     |                     | ***エラーの場合にのみ利用可能:***                                                     |
 | status(*)     |                     | number              | エラーコード、以下参照                                                              |
-| statusText(*) |                     | テキスト                | エラーの詳細、以下参照                                                              |
+| statusText(*) |                     | text                | エラーの詳細、以下参照                                                              |
 |               |                     |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                         |
-| lockKindText  |                     | テキスト                | "Locked by record"                                                       |
+| lockKindText  |                     | text                | "Locked by record"                                                       |
 | lockInfo      |                     | object              | ロック元についての情報                                                              |
 |               | task_id             | number              | プロセスID                                                                   |
-|               | user_name           | テキスト                | マシン上でのセッションユーザー名                                                         |
-|               | user4d_alias        | テキスト                | `SET USER ALIAS` で設定されていればユーザーエイリアス。 それ以外は 4Dディレクトリのユーザー名                |
-|               | host_name           | テキスト                | マシン名                                                                     |
-|               | task_name           | テキスト                | プロセス名                                                                    |
-|               | client_version      | テキスト                |                                                                          |
+|               | user_name           | text                | マシン上でのセッションユーザー名                                                         |
+|               | user4d_alias        | text                | `SET USER ALIAS` で設定されていればユーザーエイリアス。 それ以外は 4Dディレクトリのユーザー名                |
+|               | host_name           | text                | マシン名                                                                     |
+|               | task_name           | text                | プロセス名                                                                    |
+|               | client_version      | text                |                                                                          |
 |               |                     |                     | ***深刻なエラーの場合にのみ利用可能 (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):*** |
 | errors        |                     | Object の Collection |                                                                          |
-|               | message             | テキスト                | エラーメッセージ                                                                 |
-|               | component signature | テキスト                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|               | message             | text                | エラーメッセージ                                                                 |
+|               | component signature | text                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
 |               | errCode             | number              | エラーコード                                                                   |
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
@@ -893,21 +893,21 @@ vCompareResult1 (すべての差異が返されています):
 | **wasReloaded**  |                     | boolean             | エンティティがリロードされ、かつリロードに成功した場合には true、それ以外は false                           |
 |                  |                     |                     | ***エラーの場合にのみ利用可能:***                                                     |
 | status(\*)     |                     | number              | エラーコード、以下参照                                                              |
-| statusText(\*) |                     | テキスト                | エラーの詳細、以下参照                                                              |
+| statusText(\*) |                     | text                | エラーの詳細、以下参照                                                              |
 |                  |                     |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                         |
-| lockKindText     |                     | テキスト                | "Locked by record"                                                       |
+| lockKindText     |                     | text                | "Locked by record"                                                       |
 | lockInfo         |                     | object              | ロック元についての情報                                                              |
 |                  | task_id             | number              | プロセスID                                                                   |
-|                  | user_name           | テキスト                | マシン上でのセッションユーザー名                                                         |
-|                  | user4d_alias        | テキスト                | 4D ユーザーの名前またはエイリアス                                                       |
+|                  | user_name           | text                | マシン上でのセッションユーザー名                                                         |
+|                  | user4d_alias        | text                | 4D ユーザーの名前またはエイリアス                                                       |
 |                  | user4d_id           | number              | 4DデータベースディレクトリでのユーザーID                                                   |
-|                  | host_name           | テキスト                | マシン名                                                                     |
-|                  | task_name           | テキスト                | プロセス名                                                                    |
-|                  | client_version      | テキスト                |                                                                          |
+|                  | host_name           | text                | マシン名                                                                     |
+|                  | task_name           | text                | プロセス名                                                                    |
+|                  | client_version      | text                |                                                                          |
 |                  |                     |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです): |
 | errors           |                     | Object の Collection |                                                                          |
-|                  | message             | テキスト                | エラーメッセージ                                                                 |
-|                  | component signature | テキスト                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|                  | message             | text                | エラーメッセージ                                                                 |
+|                  | component signature | text                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
 |                  | errCode             | number              | エラーコード                                                                   |
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
@@ -1071,7 +1071,7 @@ vCompareResult1 (すべての差異が返されています):
 | ---------------- | ------- | ---------------------------------------------------------------- |
 | success          | boolean | リロードが成功した場合には true、それ以外は false。 <br />***エラーの場合にのみ利用可能***: |
 | status(\*)     | number  | エラーコード、以下参照                                                      |
-| statusText(\*) | テキスト    | エラーの詳細、以下参照                                                      |
+| statusText(\*) | text    | エラーの詳細、以下参照                                                      |
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
 
@@ -1147,20 +1147,20 @@ vCompareResult1 (すべての差異が返されています):
 | autoMerged   |                    | boolean             | 自動マージが実行された場合には true、それ以外は false                                         |
 |              |                    |                     | ***エラーの場合にのみ利用可能***:                                                     |
 | status       |                    | number              | エラーコード、[以下参照](#status-と-statustext)                                      |
-| statusText   |                    | テキスト                | エラーの詳細、[以下参照](#status-と-statustext)                                      |
+| statusText   |                    | text                | エラーの詳細、[以下参照](#status-と-statustext)                                      |
 |              |                    |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能***:                                         |
-| lockKindText |                    | テキスト                | "Locked by record"                                                       |
+| lockKindText |                    | text                | "Locked by record"                                                       |
 | lockInfo     |                    | object              | ロック元についての情報                                                              |
 |              | task_id            | number              | プロセスID                                                                   |
-|              | user_name          | テキスト                | マシン上でのセッションユーザー名                                                         |
-|              | user4d_alias       | テキスト                | `SET USER ALIAS` で設定されていればユーザーエイリアス。 それ以外は 4Dディレクトリのユーザー名                |
-|              | host_name          | テキスト                | マシン名                                                                     |
-|              | task_name          | テキスト                | プロセス名                                                                    |
-|              | client_version     | テキスト                |                                                                          |
+|              | user_name          | text                | マシン上でのセッションユーザー名                                                         |
+|              | user4d_alias       | text                | `SET USER ALIAS` で設定されていればユーザーエイリアス。 それ以外は 4Dディレクトリのユーザー名                |
+|              | host_name          | text                | マシン名                                                                     |
+|              | task_name          | text                | プロセス名                                                                    |
+|              | client_version     | text                |                                                                          |
 |              |                    |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです): |
 | errors       |                    | Object の Collection |                                                                          |
-|              | message            | テキスト                | エラーメッセージ                                                                 |
-|              | componentSignature | テキスト                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
+|              | message            | text                | エラーメッセージ                                                                 |
+|              | componentSignature | text                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                               |
 |              | errCode            | number              | エラーコード                                                                   |
 
 ##### status と statusText

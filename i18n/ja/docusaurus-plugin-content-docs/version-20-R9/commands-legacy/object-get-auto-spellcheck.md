@@ -19,6 +19,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->**OBJECT Get auto spellcheck**コマンドは*object*と*\** 引数で指定したオブジェクトのカレントプロセスの自動スペルチェックオプションに関する設定値を返します。<!-- END REF-->
 
+このコマンドはテキスト・タイプのオブジェクトをサポートする：
+
+- [input](../FormObjects/input_overview.md)のテキスト・タイプのオブジェクトにのみ対応しています、
+- [4D Write Pro エリア](../FormObjects/writeProArea_overview.md)。
+
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
 このコマンドは自動スペルチェックが*object*に対し有効になっていれば**True**、そうでなければ**False**を返します。

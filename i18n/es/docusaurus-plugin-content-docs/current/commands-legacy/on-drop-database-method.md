@@ -5,8 +5,8 @@ slug: /commands/on-drop-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Drop.Syntax-->**Método base On Drop**<!-- END REF-->
-<!--REF #_command_.Metodo base On Drop.Params-->
+<!--REF #_command_.On Drop database method.Syntax-->**Método base On Drop**<!-- END REF-->
+<!--REF #_command_.On Drop database method.Params-->
 | Este comando no requiere parámetros |  |
 | --- | --- |
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo base On Drop.Summary-->El Método base On Drop está disponible en aplicaciones 4D locales o remotas.<!-- END REF-->
+<!--REF #_command_.On Drop database method.Summary-->El Método base On Drop está disponible en aplicaciones 4D locales o remotas.<!-- END REF-->
 
 Este método de base se ejecuta automáticamente en el caso de soltar objetos en la aplicación 4D fuera de un contexto formulario o dialogo. Dependiendo de la plataforma y del tipo de aplicación, se soportan diferentes tipos de soltar:
 

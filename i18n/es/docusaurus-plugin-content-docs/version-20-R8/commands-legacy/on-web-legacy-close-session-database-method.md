@@ -5,8 +5,8 @@ slug: /commands/on-web-legacy-close-session-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Web Legacy Close Session.Syntax-->**Método base On Web Legacy Close Session**<!-- END REF-->
-<!--REF #_command_.Metodo base On Web Legacy Close Session.Params-->
+<!--REF #_command_.On Web Legacy Close Session database method.Syntax-->**Método base On Web Legacy Close Session**<!-- END REF-->
+<!--REF #_command_.On Web Legacy Close Session database method.Params-->
 | Este comando no requiere parámetros |  |
 | --- | --- |
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 ## Nota de compatibilidad 
 
-<!--REF #_command_.Metodo base On Web Legacy Close Session.Summary-->Este método base de datos sólo puede utilizarse con **sesiones web heredadas**, disponibles en bases de datos convertidas a partir de versiones anteriores a la 4D v18 R6\.<!-- END REF--> Nunca se llama cuando se habilita el modo de **sesiones web escalables** (recomendado en 4D v18 R6 y superiores). Para obtener más información, consulte la sección *Gestión de las sesiones web (heredado)*.
+<!--REF #_command_.On Web Legacy Close Session database method.Summary-->Este método base de datos sólo puede utilizarse con **sesiones web heredadas**, disponibles en bases de datos convertidas a partir de versiones anteriores a la 4D v18 R6\.<!-- END REF--> Nunca se llama cuando se habilita el modo de **sesiones web escalables** (recomendado en 4D v18 R6 y superiores). Para obtener más información, consulte la sección *Gestión de las sesiones web (heredado)*.
 
 ## 
 

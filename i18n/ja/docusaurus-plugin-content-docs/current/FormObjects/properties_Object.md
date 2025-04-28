@@ -339,7 +339,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 | 名称   | データタイプ | とりうる値     |
 | ---- | ------ | --------- |
-| テキスト | string | なんらかのテキスト |
+| text | string | なんらかのテキスト |
 
 #### 対象オブジェクト
 

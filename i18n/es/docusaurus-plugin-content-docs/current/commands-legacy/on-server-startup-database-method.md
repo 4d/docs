@@ -5,8 +5,8 @@ slug: /commands/on-server-startup-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Server Startup.Syntax-->**Método base On Server Startup**<!-- END REF-->
-<!--REF #_command_.Metodo base On Server Startup.Params-->
+<!--REF #_command_.On Server Startup database method.Syntax-->**Método base On Server Startup**<!-- END REF-->
+<!--REF #_command_.On Server Startup database method.Params-->
 | Este comando no requiere parámetros |  |
 | --- | --- |
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.Metodo base On Server Startup.Summary-->El Método base On Server Startup se llama una vez en el equipo servidor cuando abre una base con 4D Server.<!-- END REF--> El Método base On Server Startup NO se ejecuta en un entorno diferente a 4D Server.
+<!--REF #_command_.On Server Startup database method.Summary-->El Método base On Server Startup se llama una vez en el equipo servidor cuando abre una base con 4D Server.<!-- END REF--> El Método base On Server Startup NO se ejecuta en un entorno diferente a 4D Server.
 
 El Método base On Server Startup es la ubicación ideal para:
 

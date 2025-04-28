@@ -5,8 +5,8 @@ slug: /commands/on-host-database-event-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Host Database Event.Syntax-->$1 -> Método base On Host Database Event<!-- END REF-->
-<!--REF #_command_.Metodo base On Host Database Event.Params-->
+<!--REF #_command_.On Host Database Event database method.Syntax-->$1 -> Método base On Host Database Event<!-- END REF-->
+<!--REF #_command_.On Host Database Event database method.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $1 | Entero largo | &#8592; | Código del evento |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Metodo base On Host Database Event.Summary-->El **Método base On Host Database Event** permite a los componentes 4D ejecutar código cuando se abre y cierra la base local.<!-- END REF-->  
+<!--REF #_command_.On Host Database Event database method.Summary-->El **Método base On Host Database Event** permite a los componentes 4D ejecutar código cuando se abre y cierra la base local.<!-- END REF-->  
   
 **Nota**: por razones de seguridad, la ejecución de este método base debe ser autorizada explícitamente en la base local. Para obtener más información sobre este punto, consulte el manual de *Diseño*.  
   

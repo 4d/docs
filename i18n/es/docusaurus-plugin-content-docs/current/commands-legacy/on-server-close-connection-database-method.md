@@ -5,8 +5,8 @@ slug: /commands/on-server-close-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Metodo base On Server Close Connection.Syntax-->$1, $2, $3 -> Método base On Server Close Connection<!-- END REF-->
-<!--REF #_command_.Metodo base On Server Close Connection.Params-->
+<!--REF #_command_.On Server Close Connection database method.Syntax-->$1, $2, $3 -> Método base On Server Close Connection<!-- END REF-->
+<!--REF #_command_.On Server Close Connection database method.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | $1 | Entero largo | &#8592; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Metodo base On Server Close Connection.Summary-->El **Método base On Server Close Connection** se llama en el equipo servidor cada vez que termina un proceso 4D Client.<!-- END REF--> 
+<!--REF #_command_.On Server Close Connection database method.Summary-->El **Método base On Server Close Connection** se llama en el equipo servidor cada vez que termina un proceso 4D Client.<!-- END REF--> 
 
 Como para el [Método base On Server Open Connection](metodo-base-on-server-open-connection.md), 4D Server pasa tres parámetros de tipo entero largo al **Método base On Server Close Connection**. Por otra parte, 4D Server no espera un resultado en retorno.
 

@@ -38,11 +38,11 @@ On 4D Server, you can filter information to be returned using the optional *sess
 - If you pass a user session ID in the *sessionID* parameter, the command only returns information related to this session. By default if the *options* parameter is omitted, the returned object contains a collection with all processes related to the session and a collection with a single object describing the session. If you pass an invalid session ID, a **null** object is returned.
 - You can select the collection(s) to return by passing one of the following constants in the *options* parameter:
 
-| Constante              | Valor | Comentario                                                                       |
-| ---------------------- | ----- | -------------------------------------------------------------------------------- |
-| Processes and sessions | 0     | Returns both "processes" and "sessions" lists (default value) |
-| Processes only         | 1     | Returns only the "processes" list                                                |
-| Sólo sesiones          | 2     | Returns only the "sessions" list                                                 |
+| Constante              | Valor | Comentario                                                                          |
+| ---------------------- | ----- | ----------------------------------------------------------------------------------- |
+| Processes and sessions | 0     | Devuelve las listas "processes" y "sessions" (valor por defecto) |
+| Processes only         | 1     | Returns only the "processes" list                                                   |
+| Sólo sesiones          | 2     | Returns only the "sessions" list                                                    |
 
 :::note
 

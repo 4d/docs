@@ -109,7 +109,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 - *MyComponent.4DZ* ファイル - [コンパイルされたストラクチャー](#コンパイル済みストラクチャーをビルド)
 - *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。  コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
-- *Info.plist* ファイル - このファイルはmacOS 用に[公証可能でステープル可能な](#ノータリゼーション (公証) について) コンポーネントをビルドするためには必須です(Windows においては無視されます)。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています: If an *Info.plist* file already [exists at the root of the component](../Extensions/develop-components.md#infoplist) it is merged, otherwise a default file is created. 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています:
+- *Info.plist* ファイル - このファイルはmacOS 用に[公証可能でステープル可能な](#ノータリゼーション (公証) について) コンポーネントをビルドするためには必須です(Windows においては無視されます)。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています: *Info.plist* ファイルが、既に[コンポーネントのroot に存在する場合](../Extensions/develop-components.md#infoplist) 、そのファイルはマージされ、そうでない場合はデフォルトのファイルが作成されます。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています:
  - アプリケーション名用に`CFBundleDisplayName` および `CFBundleName`
  - `NSHumanReadableCopyright` は[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html) 可能です。
  - アプリケーションバージョン用に `CFBundleShortVersionString` および `CFBundleVersion` (x.x.x フォーマット、例: 1.0.5)は、[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html) 可能です。
@@ -127,7 +127,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 この処理はコンパイル済みストラクチャーファイルと**4D Volume Desktop** (4D データベースエンジン)を統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
 - デフォルトのデータファイルを定義することも、ユーザーに [独自のデータファイルを作成して使用](#データファイルの管理) してもらうこともできます。
-- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**Deployment Licenses**](../Admin/licenses.md#deployment-licenses) section).
+- 運用ライセンスを埋め込むか、初回起動時にエンドユーザー自身にライセンスを入力させるかを選択することができます([**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の段落を参照して下さい)。
 
 :::note
 
@@ -168,7 +168,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
  - MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
  - 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
  - Databaseフォルダー - Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。
-  **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
+  **注**: このフォルダーには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
  - (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
  - (オプション) Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが(あれば)含まれます。 この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
  - 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
@@ -228,7 +228,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 :::note
 
-If you want client/server connections to be made in [TLS](../Admin/tls.md), simply check the [appropriate setting](../settings/client-server.md#encrypt-client-server-communications). If you wish to use a custom certificate, please consider using the [`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.en.html).
+クライアント/サーバー接続を[TLS](../Admin/tls.md) で行いたい場合は、[適切な設定](../settings/client-server.md#クライアント-サーバー通信の暗号化) にチェックを入れるだけです。 カスタムの証明書を使用したい場合は、[`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.ja.html) の使用を検討してください。
 
 :::
 
@@ -502,14 +502,14 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-- designate the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
+- [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したい[運用ライセンス](../Admin/licenses.md#運用ライセンス) を指定します。
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### ライセンスリスト
 
-This tab displays the [Build an evaluation application](#build-an-evaluation-application) option and the list of available [deployment licenses that you can embed](../Admin/licenses.md#deployment-licenses) into your application (stand-alone or client-server). デフォルトでリストは空です。
+このタブには[評価版アプリケーションをビルドする](#評価版アプリケーションをビルドする) オプションが表示される他、アプリケーション(スタンドアロン版またはクライアントサーバー版)に[埋め込み可能な運用ライセンス](../Admin/licenses.md#運用ライセンス) として利用可能なライセンス一覧が表示されます。 デフォルトでリストは空です。
 
 このタブを使用して以下のようなものをビルドできます:
 
@@ -534,8 +534,8 @@ This tab displays the [Build an evaluation application](#build-an-evaluation-app
 :::note 注記
 
 - [`License info`](../commands/license-info.md) コマンドを使用するとアプリケーションライセンスのタイプ (*.attributes* コレクション) およびそれらの有効期限 (*.expirationDate* オブジェクト) を知ることができます。
-- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) xml key allows you to manage evaluation versions.
-- The [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
+- BuildApplication の[`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.ja.html) xml キーを使用すると、評価版を管理することができます。
+- [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) コマンドは、評価版から呼び出された場合には何もしません。
 
 :::
 
@@ -543,13 +543,13 @@ This tab displays the [Build an evaluation application](#build-an-evaluation-app
 
 埋め込み配布ライセンス抜きのアプリケーションをビルドするには、ライセンスの一覧リストを空にし、"評価版アプリケーションをビルドする"が**チェックされていない**ことを確認して下さい。
 
-この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 For more information, see the [**Deployment licenses**](../Admin/licenses.md#deployment-licenses) section.
+この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細な情報については、[**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の章を参照して下さい。
 
 #### 埋め込みライセンス付きのアプリケーションをビルドする
 
 このオプションを使用すると、必要なライセンスがすでに埋め込まれている、すぐに使用可能なアプリケーションをビルドすることができます。
 
-You must designate the files that contain your [deployment licenses](../Admin/licenses.md#deployment-licenses). これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
+[運用ライセンス](../Admin/licenses.md#運用ライセンス) を含んだファイルを指定する必要があります。 これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については [Get 4D folder](../commands-legacy/get-4d-folder.md) コマンドの説明を参照してください。
 

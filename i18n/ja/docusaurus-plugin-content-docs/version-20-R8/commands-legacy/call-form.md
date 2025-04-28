@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## エラー管理 
+## 説明
 
 <!--REF #_command_.CALL FORM.Summary-->**CALL FORM** コマンドは、*window* に指定したウィンドウに表示されているフォームのコンテキストにおいて、*formula* 引数のフォーミュラで指定された4D コードを、任意の *param* パラメーターを使って実行します。<!-- END REF-->どのプロセスがそのフォームを持っているかは、問題になりません。
 

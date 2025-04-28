@@ -97,9 +97,9 @@ Con:
 Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por ejemplo:
 
 ```4d
-var $p : Pointer // non initialized pointer (Nil value)
-$v:=$p-> // error
-$p->:=$v // error
+var $p : Pointer // Puntero no inicializado (Valor Nil)
+$v:=$p- // error
+$p-:=$v // error
 ```
 
 Para evitar estos errores, puede escribir:

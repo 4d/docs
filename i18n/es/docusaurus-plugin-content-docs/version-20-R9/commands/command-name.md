@@ -105,7 +105,7 @@ Then, for the "SAVE RECORD" command (53) for example, you can write:
 
 ```4d
  $isSafe:=Is_Thread_Safe(53)
-  // returns True
+  // devuelve True
 ```
 
 ## Ejemplo 4

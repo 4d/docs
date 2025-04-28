@@ -231,7 +231,7 @@ Examples of URLs triggering the handlers:
 `IP:port//docs/invoices/details/` with a GET verb, calls *handleDetails* function (*InvoicesHandling* class)
 `IP:port//docs/invoices/details/theInvoice/xxxxxx` with a GET verb, calls *handleTheInvoice* function (*InvoiceslHandling* class)
 
-## Request handler code
+## Código del gestor de peticiones
 
 ### Function configuration
 
@@ -280,7 +280,7 @@ El archivo **HTTPHandlers.json**:
 
 The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
+The binary content of the file is put in the body of the request and a POST verb is used. El nombre del archivo se da como parámetro (*fileName*) en la URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
 
 ```4d
     //UploadFile class

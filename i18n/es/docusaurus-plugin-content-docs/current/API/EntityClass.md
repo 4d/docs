@@ -866,7 +866,7 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 #### Descripción
 
-True si la entidad acaba de ser creada y aún no se ha guardado. .
+La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore<!-- END REF -->. .
 
 #### Ejemplo
 

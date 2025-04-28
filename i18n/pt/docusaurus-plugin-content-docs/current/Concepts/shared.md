@@ -113,7 +113,7 @@ Objetos compartilhados e coleções compartilhadas são projetados para permitir
 The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
 
 - [funções de coleção](../API/CollectionClass.md) que modificam as coleções compartilhadas,
-- [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
+- comando [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md),
 - comando [`OB REMOVE`](../commands-legacy/ob-remove.md),
 - [funções compartilhadas](classes.md#shared-functions) (definida em [classes compartilhadas](classes.md#shared-classes)).
 

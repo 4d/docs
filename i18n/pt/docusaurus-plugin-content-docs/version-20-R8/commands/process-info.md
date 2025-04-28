@@ -31,7 +31,7 @@ O objeto retornado contém as propriedades abaixo:
 
 | Propriedade      | Tipo                                    | Descrição                                                                        |
 | ---------------- | --------------------------------------- | -------------------------------------------------------------------------------- |
-| cpuTime          | Real                                    | Running time (seconds)                                        |
+| cpuTime          | Real                                    | Tempo de execução (segundos)                                  |
 | cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
 | creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
 | ID               | Integer                                 | Process unique ID                                                                |
