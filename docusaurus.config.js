@@ -131,6 +131,12 @@ module.exports = {
       appId: 'OJ04C0M3CU',
       indexName: '4d',
       //contextualSearch: false
+      //added for command search
+      searchParameters: {
+        queryType: 'prefixNone', // Priorise la chaine entiere
+        removeWordsIfNoResults: 'allOptional', // Recherche les elements individuels si aucun resultat
+      },
+      // end
     },
     docs: {
       sidebar: {
