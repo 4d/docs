@@ -322,7 +322,7 @@ In the current implementation, the feature has the following limitations:
 - basic chatting features
 - no image handling
 - non-configurable predefined action commands
-- translations English/French and French/English only
+- predefined translations English/French and French/English only
 
 
 
