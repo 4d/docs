@@ -249,10 +249,10 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                   |
-| ------- | ------------------------------- |
-| 20 R9   | Read UUIDs in macOS executables |
-| 19      | Ajout                           |
+| Release | Modifications                                |
+| ------- | -------------------------------------------- |
+| 20 R9   | Lecture des UUIDs dans les exécutables macOS |
+| 19      | Ajout                                        |
 
 </details>
 
@@ -260,19 +260,19 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| Paramètres | Type   |                             | Description                  |
-| ---------- | ------ | --------------------------- | ---------------------------- |
-| Résultat   | Object | <- | Application file information |
+| Paramètres | Type   |                             | Description                                  |
+| ---------- | ------ | --------------------------- | -------------------------------------------- |
+| Résultat   | Object | <- | Informations sur le fichier de l'application |
 
 <!-- END REF -->
 
 #### Description
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
+La fonction `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->renvoie le contenu des informations d'un fichier d'application sous la forme d'un objet<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
+La fonction doit être utilisée avec un fichier existant et pris en charge : **.plist** (toutes les plateformes), **.exe**/**.dll** (Windows), ou **exécutable macOS**. Si le fichier n'existe pas sur le disque ou n'est pas un fichier pris en charge, la fonction renvoie un objet vide (aucune erreur n'est générée).
 
-**Returned object with a .plist file (all platforms)**
+**Objet retourné avec un fichier .plist (toutes les plateformes)**
 
 Le contenu du fichier xml est analysé et les clés sont renvoyées en tant que propriétés de l'objet, en préservant leur type (texte, booléen, numérique). `.plist dict` est renvoyé sous forme d'objet JSON et `.plist array` est renvoyé sous forme de tableau JSON.
 
@@ -282,7 +282,7 @@ Cette fonction ne prend en charge que les fichiers .plist au format xml (texte).
 
 :::
 
-**Returned object with a .exe or .dll file (Windows only)**
+**Objet retourné avec un fichier .exe ou .dll (Windows uniquement)**
 
 Toutes les valeurs de propriétés sont de type Texte.
 
@@ -297,11 +297,11 @@ Toutes les valeurs de propriétés sont de type Texte.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Returned object with a macOS executable file (macOS only)**
+**Objet retourné avec un fichier exécutable macOS (macOS uniquement)**
 
 :::note
 
-A macOS executable file is located within a package (e.g. myApp.app/Contents/MacOS/myApp).
+Un fichier exécutable macOS est situé dans un package (par exemple, myApp.app/Contents/MacOS/myApp).
 
 :::
 
@@ -568,11 +568,11 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                   |
-| ------- | ------------------------------- |
-| 20 R9   | Read UUIDs in macOS executables |
-| 20      | Prise en charge de WinIcon      |
-| 19      | Ajout                           |
+| Release | Modifications                                |
+| ------- | -------------------------------------------- |
+| 20 R9   | Lecture des UUIDs dans les exécutables macOS |
+| 20      | Prise en charge de WinIcon                   |
+| 19      | Ajout                                        |
 
 </details>
 
@@ -590,7 +590,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
+La fonction doit être utilisée avec un fichier existant et pris en charge : **.plist** (toutes les plateformes), **.exe**/**.dll** (Windows), ou **exécutable macOS**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
 
 ***info* parameter object with a .plist file (all platforms)**
 
