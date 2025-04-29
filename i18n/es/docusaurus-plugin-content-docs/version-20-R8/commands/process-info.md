@@ -57,7 +57,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | Waiting for internal flag | 4     |
 | Paused                    | 5     |
 
-- Possible values for "type":
+- Valores posibles para "type":
 
 | Constante                     | Valor |
 | ----------------------------- | ----- |

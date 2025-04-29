@@ -454,21 +454,17 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
 既存の Schools エンティティを既存の Studentsエンティティに紐付けます。 `StudentsEntity` クラスは次の API を提供しています:
 
 ```
-// cs.StudentsEntity クラス
+// StudentsEntity class
 
 Class extends Entity
 
-exposed Function putToSchool()
-    var $1, $school , $0, $status : Object
+exposed Function putToSchool($school : Object) -> $status : Object
 
-        // $1 は Schools エンティティ
-    $school:=$1
-        // Schools リレートエンティティをカレントの Students エンティティに紐付けます
-    This.school:=$school // このとき、school は N対1リレーション名です
+        //$school is a Schools entity
+        //Associate the related entity school to the current Students entity
+    This.school:=$school
 
     $status:=This.save()
-
-    $0:=$status
 ```
 
 Studentsエンティティを対象に次のリクエストを実行します: <br /> **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool`<br/> リクエストのボディ:

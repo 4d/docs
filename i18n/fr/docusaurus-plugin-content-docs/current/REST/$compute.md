@@ -36,7 +36,7 @@ Si vous souhaitez obtenir tous les calculs pour un attribut de type Numérique, 
 
 **Réponse** :
 
-```
+```js
 {
     "salary": {
         "count": 4,
@@ -54,7 +54,7 @@ Si vous souhaitez obtenir tous les calculs pour un attribut de type Chaîne, vou
 
 **Réponse** :
 
-```
+```js
 {
     "salary": {
         "count": 4,
@@ -70,7 +70,7 @@ Si vous souhaitez obtenir un calcul avec un attribut, vous pouvez écrire ce qui
 
 **Réponse** :
 
-`235000`
+`335000`
 
 Si vous souhaitez effectuer un calcul avec un attribut Objet, vous pouvez saisir ce qui suit :
 

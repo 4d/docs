@@ -23,7 +23,7 @@ The location of the root folder can be expression either in HTML syntax (URL typ
 
 * HTML syntax: folder names are separated by a slash ("/"), regardless of the platform you use.
 * System syntax: absolute pathname (“long name”) respecting the syntax of the current platform, for example:  
-   * (Mac OS) Disk:Applications:myserv:folder  
+   * (macOS) Disk:Applications:myserv:folder  
    * (Windows) C:\\Applications\\myserv\\folder
 
 **Notes:**

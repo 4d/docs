@@ -45,12 +45,12 @@ DEBUG プロジェクトメソッドを次に示します:
   // DEBUG (Text)
   // DEBUG (Optional Debug Information)
  
- var $1 : Text
+ #DECLARE($debugInfo : Text)
  
  If(<>vbDebugOn) // インタープロセス変数はOn Startupメソッドで設定される
     If(Is compiled mode)
        If(Count parameters>=1)
-          ALERT($1+Char(13)+"Call Designer at x911")
+          ALERT($debugInfo+Char(13)+"Call Designer at x911")
        End if
     Else
        TRACE

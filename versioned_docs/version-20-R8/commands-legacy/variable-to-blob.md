@@ -60,7 +60,7 @@ The two following project methods allow you to quickly store and retrieve any se
   //STORE VARIABLES INTO BLOB project method
   //STORE VARIABLES INTO BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
   //STORE VARIABLES INTO BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam : Integer
  
  SET BLOB SIZE($1->;0)
@@ -72,7 +72,7 @@ The two following project methods allow you to quickly store and retrieve any se
   //RETRIEVE VARIABLES FROM BLOB project method
   //RETRIEVE VARIABLES FROM BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
   //RETRIEVE VARIABLES FROM BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam;$vlOffset : Integer
  
  $vlOffset:=0
@@ -97,24 +97,22 @@ The two following project methods allow you to quickly store and retrieve arrays
   // SAVE ARRAY project method
   // SAVE ARRAY (Text ; Pointer)
   // SAVE ARRAY (Document ; -> Array)
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxArrayData : Blob
- VARIABLE TO BLOB($2->;$vxArrayData) // Store the array in the BLOB
+ VARIABLE TO BLOB($ptrArray->;$vxArrayData) // Store the array in the BLOB
  COMPRESS BLOB($vxArrayData) // Compress the BLOB
- BLOB TO DOCUMENT($1;$vxArrayData) // Save the BLOB on disk
+ BLOB TO DOCUMENT($doc;$vxArrayData) // Save the BLOB on disk
 ```
 
 ```4d
   // LOAD ARRAY project method
   // LOAD ARRAY (Text ; Pointer)
   // LOAD ARRAY (Document ; -> Array)
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxArrayData : Blob
- DOCUMENT TO BLOB($1;$vxArrayData) // Load the BLOB from the disk
+ DOCUMENT TO BLOB($doc;$vxArrayData) // Load the BLOB from the disk
  EXPAND BLOB($vxArrayData) // Expand the BLOB
- BLOB TO VARIABLE($vxArrayData;$2->) // Retrieve the array from the BLOB
+ BLOB TO VARIABLE($vxArrayData;$ptrArray->) // Retrieve the array from the BLOB
 ```
 
 After these methods have been added to your application, you can write:

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 If the pasteboard is empty or does not contain any data of the specified type, the command returns an error -102\. If the pasteboard contains data of the specified type, the command returns the size of this data, expressed in bytes.
 
-In *dataType*, pass a value specifying the type of data to be checked for. You can pass a 4D signature, a UTI type (Mac OS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
+In *dataType*, pass a value specifying the type of data to be checked for. You can pass a 4D signature, a UTI type (macOS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
 
 After you have detected that the pasteboard contains data of the type in which you are interested, you can extract that data from the pasteboard using one the following commands:
 

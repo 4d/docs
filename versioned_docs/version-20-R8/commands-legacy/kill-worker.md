@@ -38,12 +38,12 @@ In the worker method (*theWorker*), you add some code to handle this situation:
 
 ```4d
   //theWorker method
- var $1 : Text //param
+ #DECLARE ($action : Text) //param
  
  Case of
-    :($1="call") //the worker is called
+    :($action="call") //the worker is called
        ... //do something
-    :($1="end") //the worker is asked to kill itself
+    :($action="end") //the worker is asked to kill itself
        KILL WORKER
  End case
 ```

@@ -172,18 +172,18 @@ displayed_sidebar: docs
   // MULTILEVEL (Pointer)
   // MULTILEVEL (->[テーブル]フィールド)
  
- var $1) //ソートレベル (フィールド : Pointer
+ #DECLARE($field : Pointer) //ソートレベル (フィールド : Pointer
  var $lLevelNb : Integer
  
   //ソートレベルを取得
  If(Not(Shift down)) //1レベルのソート
     ARRAY POINTER(aPtrSortField;1)
-    aPtrSortField{1}:=$1
+    aPtrSortField{1}:=$field
  Else
-    $lLevelNb:=Find in array(aPtrSortField;$1) //このフィールドは既にソートされているか?
+    $lLevelNb:=Find in array(aPtrSortField;$field) //このフィールドは既にソートされているか?
     If($lLevelNb<0) //されていなければ
        INSERT IN ARRAY(aPtrSortField;Size of array(aPtrSortField)+1;1)
-       aPtrSortField{Size of array(aPtrSortField)}:=$1
+       aPtrSortField{Size of array(aPtrSortField)}:=$field
     End if
  End if
   //ソートを実行

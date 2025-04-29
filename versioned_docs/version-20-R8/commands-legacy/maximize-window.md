@@ -9,13 +9,13 @@ displayed_sidebar: docs
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number or if omitted, all current process frontmost windows (Windows) or current process frontmost window (Mac OS) |
+| window | Integer | &#8594;  | Window reference number or if omitted, all current process frontmost windows (Windows) or current process frontmost window (macOS) |
 
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.MAXIMIZE WINDOW.Summary-->The MAXIMIZE WINDOW command triggers the expansion of the window whose reference number was passed in *window*.<!-- END REF--> If this parameter is omitted, the effect is the same but is applied to all the frontmost windows of the current process (Windows) or to the frontmost window of the current process (Mac OS). 
+<!--REF #_command_.MAXIMIZE WINDOW.Summary-->The MAXIMIZE WINDOW command triggers the expansion of the window whose reference number was passed in *window*.<!-- END REF--> If this parameter is omitted, the effect is the same but is applied to all the frontmost windows of the current process (Windows) or to the frontmost window of the current process (macOS). 
 
 This command has the same effect as a click on the zoom box of a 4D application window. Windows you want to maximize must have a zoom box. If the *window* type does not have a zoom box, the command does nothing.
 

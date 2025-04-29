@@ -23,7 +23,7 @@ A localização da pasta raiz pode ser expressa em sintaxe HTML (tipo URL), ou e
 
 * Sintaxe HTML: os nomes de pastas são separados por uma barra oblíqua ("/"), sem importar a plataforma utilizada.
 * Sintaxe sistema: rota de acesso absoluta (“nome longo”) respeitando a sintaxe da plataforma atual, por exemplo:  
-\- (Mac OS) Disco:Aplicações:miserv:pasta  
+\- (macOS) Disco:Aplicações:miserv:pasta  
 \- (Windows) C:\\Aplicações\\miserv\\pasta
 
 Notas:

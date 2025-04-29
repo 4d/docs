@@ -44,13 +44,13 @@ On Before Keystroke イベントを処理する際、(カーソルがある) 現
   // Handle keystroke ( Pointer ; Pointer ) -> Boolean
   // Handle keystroke ( -> srcArea ; -> curValue ) -> Is new value
  
- var $1;$2 : Pointer
+ #DECLARE ($srcArea : Pointer ; $curValue : Pointer) -> $newValue : Boolean
  var $vtNewValue : Text
  
   // 入力エリアで現在選択されている範囲を取得
- GET HIGHLIGHT($1->;$vlStart;$vlEnd)
+ GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
   // 現在の値を処理する
- $vtNewValue:=$2->
+ $vtNewValue:=$curValue->
   // 押されたキーや入力された文字に基づき、
   // 適切な動作を行う
  Case of
@@ -97,9 +97,9 @@ Else
  FILTER KEYSTROKE("")
 End case
   // 値が異なっているか?
-$0:=($vtNewValue#$2->)
+$newValue:=($vtNewValue#$curValue->)
   // 次回のキーストローク処理のために値を返す
-$2->:=$vtNewValue
+$curValue->:=$vtNewValue
 ```
 
 このプロジェクトメソッドがプロジェクトに追加されたら、以下のように使用できます:

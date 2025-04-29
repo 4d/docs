@@ -5,13 +5,13 @@ slug: /commands/on-server-close-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Server Close Connection database method.Syntax-->$1, $2, $3 -> On Server Close Connection database method<!-- END REF-->
+<!--REF #_command_.On Server Close Connection database method.Syntax-->On Server Close Connection ($user : Integer ; $id : Integer ; $toIgnore : Integer)<!-- END REF-->
 <!--REF #_command_.On Server Close Connection database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | Número de usuário utilizado internamente por 4D Server para identificar usuários |
-| $2 | Integer | &#8592; | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
-| $3 | Integer | &#8592; | Obsoleto: devolve sempre 0 mas deve ser declarado |
+| $user | Integer | &#8592; | Número de usuário utilizado internamente por 4D Server para identificar usuários |
+| $id | Integer | &#8592; | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
+| $toIgnore | Integer | &#8592; | Obsoleto: devolve sempre 0 mas deve ser declarado |
 
 <!-- END REF-->
 
@@ -24,16 +24,16 @@ Como para o [On Server Open Connection database method](on-server-open-connectio
 O método deve conter a declaração explícita de três parâmetros Inteiro longo:
 
 ```4d
- var $1;$2;$3 : Integer
+ #DECLARE($user : Integer ; $id : Integer ; $toIgnore : Integer)
 ```
 
 Esta tabela detalha a informação oferecida pelos três parâmetros passados ao método base:
 
 | **Parâmetro** | **Descrição**                                                                       |
 | ------------- | ----------------------------------------------------------------------------------- |
-| $1            | Número de usuário utilizado internamente por 4D Server para identificar usuários    |
-| $2            | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
-| $3            | Obsoleto: devolve sempre 0 mas deve ser declarado                                   |
+| $user            | Número de usuário utilizado internamente por 4D Server para identificar usuários    |
+| $id            | Número de conexão utilizado internamente por 4D Server para identificar uma conexão |
+| $toIgnore            | Obsoleto: devolve sempre 0 mas deve ser declarado                                   |
 
 O **On Server Close Connection database method** é o inverso exato do [On Server Open Connection database method](on-server-open-connection-database-method.md). Para maior informação e uma descrição deste método base, assim como para a descrição dos **processos 4D Client**, ver a descrição deste método base.
 

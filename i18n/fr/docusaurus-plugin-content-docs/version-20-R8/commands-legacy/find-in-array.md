@@ -35,11 +35,11 @@ La méthode projet suivante efface tous les éléments vides du tableau alpha ou
   // NETTOYER TABLEAU ( Pointeur )
   // NETTOYER TABLEAU ( -> Tableau Texte ou Alpha )
  
- var $1 : Pointer
+ #DECLARE ($arrPtr : Pointer) : Pointer
  Repeat
-    $vlElem:=Find in array($1->;"")
+    $vlElem:=Find in array($arrPtr->;"")
     If($vlElem>0)
-       DELETE FROM ARRAY($1->;$vlElem)
+       DELETE FROM ARRAY($arrPtr->;$vlElem)
     End if
  Until($vlElem<0)
 ```
@@ -64,9 +64,10 @@ La méthode projet suivante sélectionne le premier élément d'un tableau dont 
   // SELECTIONNER ELEMENT ( Pointeur ; Pointeur)
   // SELECTIONNER ELEMENT ( -> Tableau Texte ou Alpha ; -> Champ ou variable de type Texte ou Alpha )
  
- $1->:=Find in array($1->;$2->)
- If($1->=-1)
-    $1->:=0 // Si aucun élément n'est trouvé, fixer le tableau à aucun élément sélectionné
+ #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
+$arrPtr->:=Find in array($arrPtr->; $varPtr->)
+ If($tabPtr->=-1)
+    $tabPtr->:=0 // Si aucun élément n'est trouvé, fixer le tableau à aucun élément sélectionné
  End if
 ```
 

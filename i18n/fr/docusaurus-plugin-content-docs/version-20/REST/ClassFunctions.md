@@ -458,17 +458,13 @@ Dans cet exemple, nous associons une école existante à l'entité Students. La 
 
 Class extends Entity
 
-exposed Function putToSchool()
-    var $1, $school , $0, $status : Object
+exposed Function putToSchool($school : Object) -> $status : Object
 
-        //$1 is a Schools entity
-    $school:=$1
-        //Associe l'entité reliée "school" à l'entité courante "Students"
+        //$school is a Schools entity
+        //Associate the related entity school to the current Students entity
     This.school:=$school
 
     $status:=This.save()
-
-    $0:=$status
 ```
 
 You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:

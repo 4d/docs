@@ -491,7 +491,7 @@ Il contient les propriétés suivantes :
 | Propriété    | Value type | Description                              |
 | ------------ | ---------- | ---------------------------------------- |
 | version      | Integer    | Version interne du composant             |
-| dateCreation | Timestamp  | Date de création                         |
+| dateCreation | Timestamp  | Date de création                         |
 | dateModified | Timestamp  | Date de dernière modification            |
 | meta         | Object     | Contenu libre, réservé au développeur 4D |
 | spreadJS     | Object     | Réservé pour le composant 4D View Pro    |

@@ -47,19 +47,19 @@ BLOBが圧縮された後、以下のプロジェクトメソッドは圧縮で�
   // Space saved by compression (Pointer {; Pointer } ) -> Long
   // Space saved by compression ( -> BLOB {; -> savedBytes } ) -> Percentage
  
- var $1;$2 : Pointer
- var $0;$vlCompressed;$vlExpandedSize;$vlCurrentSize : Integer
+#DECLARE ($blob : Pointer ; $saved : Pointer ) -> $percent : Integer
+ var $vlCompressed;$vlExpandedSize;$vlCurrentSize : Integer
  
- BLOB PROPERTIES($1->;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
+ BLOB PROPERTIES($blob->;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
  If($vlExpandedSize=0)
-    $0:=0
+    $percent:=0
     If(Count parameters>=2)
-       $2->:=0
+       $saved->:=0
     End if
  Else
-    $0:=100-(($vlCurrentSize/$vlExpandedSize)*100)
+    $percent:=100-(($vlCurrentSize/$vlExpandedSize)*100)
     If(Count parameters>=2)
-       $2->:=$vlExpandedSize-$vlCurrentSize
+       $saved->:=$vlExpandedSize-$vlCurrentSize
     End if
  End if
 ```

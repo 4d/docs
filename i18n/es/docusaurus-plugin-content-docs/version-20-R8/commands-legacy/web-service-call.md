@@ -88,12 +88,11 @@ Depende de usted formatear el BLOB inicial como un elemento XML válido. Este BL
 **Ejemplo**  
   
 ```4d
- var $1 : Blob
- var $0 : Boolean
- 
- WEB SERVICE SET PARAMETER("MyXMLBlob";$1)
+ #DECLARE($param : Blob) -> $result : Boolean 
+
+ WEB SERVICE SET PARAMETER("MyXMLBlob";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MiAccionSoap";"ElMetodo";"http://mi.nombrespacio.com/";Web Service manual in)
- WEB SERVICE GET RESULT($0;"MiVarSalida";*)
+ WEB SERVICE GET RESULT($result;"MiVarSalida";*)
 ```
 
   
@@ -104,12 +103,10 @@ En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Ma
 **Ejemplo**  
   
 ```4d
- var $0 : Blob
- var $1 : Boolean
- 
- WEB SERVICE SET PARAMETER("MiVarEntrada";$1)
+ #DECLARE($param : Blob) -> $result : Blob 
+ WEB SERVICE SET PARAMETER("MiVarEntrada";$param)
  WEB SERVICE CALL("http://mi.dominio.com/mi_servicio";"MiAccionSoap";"ElMetodo";"http://mi.nombrespacio.com/";Web Service manual out)
- WEB SERVICE GET RESULT($0;"MiXMLSalida";*)
+ WEB SERVICE GET RESULT($result;"MiXMLSalida";*)
 ```
 
 ### Modo RPC, entrada y salida compuestas 
@@ -119,12 +116,11 @@ En este caso, el parámetro *tipoCompuesto* contiene la constantes Web Service M
 **Ejemplo**  
   
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MiBlobXMLEntrada";$1)
+ WEB SERVICE SET PARAMETER("MiBlobXMLEntrada";$param)
  WEB SERVICE CALL("http://mi.dominio.com/mi_servicio";"MiAccionSoap";"ElMetodo";"http://mi.nombrespacio.com/";Web Service manual)
- WEB SERVICE GET RESULT($0;"MiXMLSalida";*)
+ WEB SERVICE GET RESULT($result;"MiXMLSalida";*)
 ```
 
 ### Modo DOC 
@@ -136,12 +132,11 @@ La única diferencia entre estas dos configuraciones es el nivel del contenido X
 **Ejemplo**  
   
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MiXMLEntrada";$1)
+ WEB SERVICE SET PARAMETER("MiXMLEntrada";$param)
  WEB SERVICE CALL("http://mi.dominio.com/mi_servicio";"MiAccionSoap";"ElMetodo";"http://mi.nombrespacio.com/";Web Service manual)
- WEB SERVICE GET RESULT($0;"MiXMLSalida";*)
+ WEB SERVICE GET RESULT($result;"MiXMLSalida";*)
 ```
 
   

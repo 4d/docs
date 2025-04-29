@@ -1087,7 +1087,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 `.getRemoteContextAttributes()` 関数は、<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->エンティティセレクションによって使われている最適化コンテキストの情報を返します<!-- END REF -->。
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
+エンティティセレクションについて [最適化コンテキスト](../ORDA/client-server-optimization.md) が存在しない場合、関数は空のテキストを返します。
 
 #### 例題
 

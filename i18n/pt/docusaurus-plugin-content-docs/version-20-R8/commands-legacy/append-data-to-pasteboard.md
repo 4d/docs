@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 **Nota:** no caso de operações copiar/colar, o contendor de dados corresponde a área de transferência. 
 
-Passe em *tipoDados* um valor definindo o tipo de dados a adicionar. Pode passar uma assinatura 4D, um tipo UTI (Mac OS), um nome/número de formato (Windows), ou um tipo de 4 caracteres (compatibilidade). Para maior informação sobre estes tipos, consulte a seção *Gerenciar área de transferência*
+Passe em *tipoDados* um valor definindo o tipo de dados a adicionar. Pode passar uma assinatura 4D, um tipo UTI (macOS), um nome/número de formato (Windows), ou um tipo de 4 caracteres (compatibilidade). Para maior informação sobre estes tipos, consulte a seção *Gerenciar área de transferência*
 
 **Nota para os usuários Windows**: quando o comando se utiliza com dados de tipo texto (*tipoDados* *dataType é* "TEXT", com.4d.private.text.native ou com.4d.private.text.utf16), a string contida no parâmetro BLOB *dados* deve terminar com o caractere NULL em Windows.
 

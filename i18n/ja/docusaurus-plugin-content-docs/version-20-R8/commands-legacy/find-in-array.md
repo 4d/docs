@@ -37,11 +37,11 @@ Find in array コマンドは、タイプがテキスト、数値、日付、ポ
   // CLEAN UP ARRAY (ポインタ)
   // CLEAN UP ARRAY (->テキストまたは文字配列)
  
- var $1 : Pointer
+ #DECLARE ($arrPtr : Pointer) : Pointer
  REPEAT
-    $vlElem:=Find in array($1->;"")
+    $vlElem:=Find in array($arrPtr->;"")
     If($vlElem>0)
-       DELETE FROM ARRAY($1->;$vlElem)
+       DELETE FROM ARRAY($arrPtr->;$vlElem)
     End if
  Until($vlElem<0)
 ```
@@ -66,9 +66,10 @@ Find in array コマンドは、タイプがテキスト、数値、日付、ポ
   // SELECT ELEMENT (ポインタ; ポインタ)
   // SELECT ELEMENT ( ->テキストまたは文字配列; -> テキストまたは文字変数またはフィールド)
  
- $1->:=Find in array($1->;$2->)
- If($1->=-1)
-    $1->:=0 // 値が要素中に見つからない場合、要素を選択しない
+ #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
+$arrPtr->:=Find in array($arrPtr->; $varPtr->)
+ If($tabPtr->=-1)
+    $tabPtr->:=0 // 値が要素中に見つからない場合、要素を選択しない
  End if
 ```
 

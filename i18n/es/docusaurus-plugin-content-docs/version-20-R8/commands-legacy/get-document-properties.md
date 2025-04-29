@@ -47,18 +47,14 @@ El método de proyecto TimeStamp calcula el marcador de tiempo para una fecha y 
   // TimeStamp { ( date ; Time ) } -> Entero largo
   // TimeStamp { ( date ; Time ) } -> Número de segundos desde el 1 de enero de 1995
  
- var $1;$vdDate : Date
- var $2;$vhTime : Time
- var $0 : Integer
+ #DECLARE ($vdDate : Date ; $vhTime : Time) : Integer
  
  If(Count parameters=0)
     $vdDate:=Current date
     $vhTime:=Current time
- Else
-    $vdDate:=$1
-    $vhTime:=$2
  End if
- $0:=(($vdDate-!01/01/95!)*86400)+$vhTime
+ return (($vdDate-!01/01/95!)*86400)+$vhTime
+
 ```
 
 **Nota:** utilizando este método, puede codificar todas las fechas y las horas desde *01/01/95* a las *00:00:00* a *01/19/2063* a las *03:14:07* lo que cubre el intervalo de enteros largos de *0* a *2^31* menos uno.
@@ -70,19 +66,17 @@ Por el contrario, los métodos de proyecto Time stamp to date y Time stamp to ti
   // Time stamp to date ( Long ) -> Date
   // Time stamp to date ( Time stamp ) -> Extracted date
  
- var $0 : Date
- var $1 : Integer
- 
- $0:=!01/01/95!+($1\86400)
+#DECLARE ($timeStamp : Integer) : Date
+
+return !01/01/95!+($timeStamp\86400)
  
   // Método de proyecto Time stamp to time
   // Time stamp to time ( Entero largo) -> Fecha
   // Time stamp to time ( Time stamp ) -> Fecha extraída
  
- var $0 : Time
- var $1 : Integer
- 
- $0:=Time(Time string(†00:00:00†+($1%86400)))
+#DECLARE ($timeStamp : Integer) : Time
+
+return Time(Time string(?00:00:00?+($timeStamp %86400)))
 ```
 
 Para asegurar que los marcadores de los registros se actualicen correctamente, sin importar la manera en que son creados o modificados, debemos aplicar esta regla utilizando el trigger de la tabla *\[Documentos\]*:

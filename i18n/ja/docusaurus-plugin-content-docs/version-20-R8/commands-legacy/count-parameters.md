@@ -37,16 +37,14 @@ MyMethod内でCount parametersを使用し、実際の引数の数を取得し�
   // APPEND TEXT ( Text { ; Long { ; Time } } )
   // APPEND TEXT ( Text { ; 4D Write Area { ; DocRef } } )
  
- var $1 : Text
- var $2 : Time
- var $3 : Integer
+ #DECLARE ($text : Text ; $4dwp : Object ; $doc : Time)
  
- MESSAGE($1)
+ MESSAGE($text)
  If(Count parameters>=3)
-    SEND PACKET($3;$1)
+    SEND PACKET($doc;$text)
  Else
     If(Count parameters>=2)
-       WR INSERT TEXT($2;$1)
+       WP SET TEXT($4dwp;$text;wk prepend)
     End if
  End if
 ```

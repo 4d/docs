@@ -96,7 +96,7 @@ $v:=$p-> // error
 $p->:=$v // error
 ```
 
-To prevent such errors, you can write:
+Para evitar estos errores, puede escribir:
 
 ```4d
 If ($p#Null)

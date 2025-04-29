@@ -56,23 +56,23 @@ Este ejemplo presenta el uso del comando EXPORT DATA para exportar datos en form
 * Este es el código del método ExportBinary:
 
 ```4d
- var $1 : Pointer //tabla
- var $2 : Text //ruta del archivo de destino
- var $3 : Boolean //exportar todos los registros
+ #DECLARE ($tablePtr : Pointer ; $path : Text ; $all : Boolean) //tabla
+  //ruta del archivo de destino
+ //exportar todos los registros
  var $i : Integer
  var $ref : Text
  $ref:=DOM Create XML Ref("settings-import-export")
   // Exportar la tabla "$1" en formato binario '4D', todos los registros o únicamente la selección actual
- DOM SET XML ATTRIBUTE($ref;"table_no";Table($1);"format";"4D";"all_records";$3)
+ DOM SET XML ATTRIBUTE($ref;"table_no";Table($tablePtr);"format";"4D";"all_records";$all)
   // Definición de los campos a exportar
- For($i;1;Last field number($1))
-    If(Is field number valid($1;$i))
-       $elt:=DOM Create XML element($ref;"field";"table_no";Table($1);"field_no";$i)
+ For($i;1;Last field number($tablePtr))
+    If(Is field number valid($tablePtr;$i))
+       $elt:=DOM Create XML element($ref;"field";"table_no";Table($tablePtr);"field_no";$i)
     End if
  End for
- EXPORT DATA($2;$ref)
+ EXPORT DATA($path;$ref)
  If(Ok=0)
-    ALERT("Error durante la exportación de la tabla "+Table name($1))
+    ALERT("Error durante la exportación de la tabla "+Table name($tablePtr))
  End if
  DOM CLOSE XML($ref)
 ```

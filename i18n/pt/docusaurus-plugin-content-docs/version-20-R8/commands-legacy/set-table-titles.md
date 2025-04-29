@@ -61,43 +61,42 @@ Depois, crie o método de projeto TRADUZIR\_TABELAS\_E\_CAMPOS. Este método ana
   // TRADUZIR_TABELAS_E_CAMPOS (Text)
   // TRADUZIR_TABELAS_E_CAMPOS (LanguageCode)
  
- var $1 : Text //código do idioma
+ #DECLARE($Language : Text) //código do idioma
  var $vlTabela;$vlCampo : Integer
- var $Idioma : Text
- $Idioma:=$1
+
  
  For($vlTabela;1;Last table number) //Passar por cada tabela
     If($vlTabela#(Table(->[Traduçoes]))) //Não traduzir a tabela de traduções
   //Verificar se existe uma tradução de nome da tabela para o idioma especificado
-       QUERY([Traduçoes];[Traduçoes]Codigo_Idioma=$Idioma;*) //idioma desejado
+       QUERY([Traduçoes];[Traduçoes]Codigo_Idioma=$Language;*) //idioma desejado
        QUERY([Traduçoes];&;[Traduçoes]Tabela_ID=$vlTabela;*) //Número de tabela
        QUERY([Traduçoes];&;[Traduçoes]Campo_ID=0) //número de campo = 0 significa que é um nome de tabela
        If(Is table number valid($vlTabela)) //verificar que a tabela ainda existe
           If(Records in selection([Traduçoes])=0)
   //Do contrário, criar o registro
              CREATE RECORD([Traduçoes])
-             [Traduçoes]Codigo_Idioma:=$Idioma
+             [Traduçoes]Codigo_Idioma:=$Language
              [Traduçoes]Tabela_ID:=$vlTabela
              [Traduçoes]Campo_ID:=0
   //O nome da tabela traduzida deverá ser introduzido
-             [Traduçoes]Tradução:=Table name($vlTabela)+" em "+$Idioma
+             [Traduçoes]Tradução:=Table name($vlTabela)+" em "+$Language
              SAVE RECORD([Traduções])
           End if
  
           For($vlCampo;1;Obter número do último campo($vlTabela))
   //Verificar se existe uma tradução para o nome do campo no idioma especificado
-             QUERY([Traduçoes];[Traduçoes]Codigo_Idioma=$Idioma;*) //idioma desejado
+             QUERY([Traduçoes];[Traduçoes]Codigo_Idioma=$Language;*) //idioma desejado
              QUERY([Traduçoes];&;[Traduçoes]Tabela_ID=$vlTabela;*) //número de tabela
              QUERY([Traduçoes];&;[Traduçoes]Campo_ID=$vlCampo) //número de campo
              If(Is field number valid($vlTabela;$vlCampo))
                 If(Records in selection([Traduçoes])=0)
   //Do contrário, criar o registro
                    CREATE RECORD([Traduçoes])
-                   [Traduçoes]Codigo_Idioma:=$Idioma
+                   [Traduçoes]Codigo_Idioma:=$Language
                    [Traduçoes]Tabela_ID:=$vlTabela
                    [Traduçoes]Campo_ID:=$vlCampo
   //O nome do campo traduzido deve ser introduzido
-                   [Traduçoes]Tradução:=Field name($vlTabela;$vlCampo)+"em "+$Idioma
+                   [Traduçoes]Tradução:=Field name($vlTabela;$vlCampo)+"em "+$Language
                    SAVE RECORD([Traduçoes])
                 End if
              Else
@@ -137,16 +136,14 @@ com o método de projeto TABELAS\_E\_CAMPOS\_LOCALIZADOS:
   // TABELAS_E_CAMPOS_LOCALIZADOS (Text)
   // TABELAS_E_CAMPOS_LOCALIZADOS (LanguageCode)
  
- var $1 : Text //Código do idioma
+ #DECLARE($Language : Text) //Código do idioma
  var $vlTabela;$vlCampo : Integer
- var $Idioma : Text
  var $vlNumTabela;$vlNumCampo : Integer
- $Idioma:=$1
  
   //Atualização dos nomes de tabelas
  ARRAY TEXT($asNomes;0) //Inicializar os arrays para SET TABLE TITLES e SET FIELD TITLES
  ARRAY INTEGER($aiNumeros;0)
- QUERY([Traduções];[Traduçoes]Codigo_Idioma=$Idioma;*)
+ QUERY([Traduções];[Traduçoes]Codigo_Idioma=$Language;*)
  QUERY([Traduções];&;[Traduçoes]Campo_ID=0) //nomes de tabelas
  SELECTION TO ARRAY([Traduçoes]Tradução;$asNomes;[Traduçoes]Tabela_ID;$aiNumeros)
  SET TABLE TITLES($asNomes;$aiNumeros)
@@ -155,7 +152,7 @@ com o método de projeto TABELAS\_E\_CAMPOS\_LOCALIZADOS:
  $vlNumTabela:=Last table number //Obter o número de tabelas no banco
  For($vlTabela;1;$vlNumTabela) //Passar por cada tabela
     If(Is table number valid($vlTabela))
-       QUERY([Traduçoes];[Traduçoes]Codigo_Idioma=$Idioma;*)
+       QUERY([Traduçoes];[Traduçoes]Codigo_Idioma=$Language;*)
        QUERY([Traduçoes];&;[Traduçoes]Tabela_ID=$vlTabela;*)
        QUERY([Traduçoes];&;[Traduçoes]Campo_ID#0) //evite que o zero seja nome de tabela
        SELECTION TO ARRAY([Traduçoes]Tradução;$asNomes;[Traduçoes]Campo_ID;$aiNumeros)

@@ -24,7 +24,7 @@ displayed_sidebar: docs
 既存の[OPEN URL](open-url.md)コマンドのように、**WA OPEN URL**はファイルを指定するための複数のシンタックスを*url* 引数に受け入れます:
 
 * POSIXシンタックス: "file:///c:/My%20File"
-* システムシンタックス: "c:\\MyFolder\\MyFile" (Windows) または "MyDisk:MyFolder:MyFile" (Mac OS).
+* システムシンタックス: "c:\\MyFolder\\MyFile" (Windows) または "MyDisk:MyFolder:MyFile" (macOS).
 
 **注:** 互換性のため (2つのスラッシュを使用する) "file://" シンタックスを4Dは受け入れますが、これはRFCに準拠していません。RFCに準拠した"file:///"シンタックス (3つのスラッシュ "/") 利用を推奨します。
 

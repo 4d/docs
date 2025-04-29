@@ -24,7 +24,7 @@ La ubicación de la carpeta raíz puede expresarse en sintaxis HTML (tipo URL), 
 * Sintaxis HTML: los nombres de carpetas se separan por una barra oblicua ("/"), sin importar la plataforma utilizada.
 * Sintaxis sistema: ruta de acceso absoluta (“nombre largo”) respetando la sintaxis de la plataforma actual, por ejemplo:
 
-\- (Mac OS) Disco:Aplicaciones:miserv:carpeta  
+\- (macOS) Disco:Aplicaciones:miserv:carpeta  
 \- (Windows) C:\\Aplicaciones\\miserv\\carpeta
 
 **Notas:**

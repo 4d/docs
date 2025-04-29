@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Summary-->HIGHLIGHT RECORDS コマンドは、出力フォーム内で指定されたレコードをハイライトします。<!-- END REF-->この動作は、クリックまたは**Shift+クリック**、**Ctrl+クリック** (Windows) や**Command+クリック** (Mac OS) キーコンビネーションを使用し、リストモードでレコードを手動で選択する場合と同じです。カレントセレクションは変更されません。
+<!--REF #_command_.HIGHLIGHT RECORDS.Summary-->HIGHLIGHT RECORDS コマンドは、出力フォーム内で指定されたレコードをハイライトします。<!-- END REF-->この動作は、クリックまたは**Shift+クリック**、**Ctrl+クリック** (Windows) や**Command+クリック** (macOS) キーコンビネーションを使用し、リストモードでレコードを手動で選択する場合と同じです。カレントセレクションは変更されません。
 
 **Note:** "選択"されたレコードのセットは、再描画後に更新されます。つまりメソッド全体が実行終了した後であり、HIGHLIGHT RECORDSを実行した直後ではありません。
 

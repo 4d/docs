@@ -80,14 +80,14 @@ Vous souhaitez créer une méthode qui retourne **Vrai** si la commande dont le 
   //Méthode projet Is_Thread_Safe
   //Is_Thread_Safe(numCom) -> Booléen
  
- var $1;$threadsafe : Integer
+ #DECLARE($numCom : Integer) -> $result : Boolean
+ var $threadsafe : Integer
  var $name : Text
- var $0 : Boolean
- $name:=Command name($1;$threadsafe;$theme)
+ $name:=Command name($numCom;$threadsafe;$theme)
  If($threadsafe ?? 0) //si le premier bit est à 1
-    $0:=True
+    $result:=True
  Else
-    $0:=False
+    $result:=False
  End if
 ```
 

@@ -151,8 +151,8 @@ Pour compresser une structure d'archive ZIP avec un mot de passe et une barre de
 `myFormulaCompressingMethod`:
 
 ```4d
- var $1 : Integer
- Progress SET PROGRESS(progID;Num($1/100))
+ #DECLARE ($current : Integer)
+ Progress SET PROGRESS(progID;Num($current /100))
 ```
 
 #### Exemple 4

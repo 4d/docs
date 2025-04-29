@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## エラー管理 
+## 説明
 
 <!--REF #_command_.CALL FORM.Summary-->**CALL FORM** コマンドは、*window* に指定したウィンドウに表示されているフォームのコンテキストにおいて、*formula* 引数のフォーミュラで指定された4D コードを、任意の *param* パラメーターを使って実行します。<!-- END REF-->どのプロセスがそのフォームを持っているかは、問題になりません。
 
@@ -75,12 +75,12 @@ displayed_sidebar: docs
 *doAddMessage* メソッドは "FormMessage" フォームのリストボックスに行を追加します:
 
 ```4d
- var $1 : Text // コール元のプロセス名
- var $2 : Text // 表示するメッセージ
-  // $2 からメッセージを取得し、リストボックスにメッセージを記録します
+ #DECLARE ($caller : Text ; $message : Text) // コール元のプロセス名
+  // 表示するメッセージ
+  // $message からメッセージを取得し、リストボックスにメッセージを記録します
  $p:=OBJECT Get pointer(Object named;"Column1")
  INSERT IN ARRAY($p->;1)
- $p->{1}:=$1+" sends "+$2
+ $p->{1}:=$caller+" sends "+$message
 ```
 
 ランタイムでは次のような結果になります:

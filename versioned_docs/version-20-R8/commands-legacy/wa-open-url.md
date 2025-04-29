@@ -24,7 +24,7 @@ If an empty string is passed in *url*, the command does nothing and no error is 
 Like the existing [OPEN URL](open-url.md) command, **WA OPEN URL** accepts several types of syntaxes in the *url* parameter to designate the files:
 
 * posix syntax: "file:///c:/My%20File"
-* system syntax: "c:\\MyFolder\\MyFile" (Windows) or "MyDisk:MyFolder:MyFile" (Mac OS).
+* system syntax: "c:\\MyFolder\\MyFile" (Windows) or "MyDisk:MyFolder:MyFile" (macOS).
 
 **Note:** For compatibility, the "file://" syntax (using two "/") is accepted in 4D but it does not conform to RFC. We recommend using the "file:///" syntax (with three "/") that complies with RFC.
 

@@ -37,11 +37,11 @@ El siguiente método de proyecto borra todos los elementos vacíos del array alf
   // LIMPIAR ARRAY ( Puntero )
   // LIMPIAR ARRAY ( -> Array Texto o Alfa )
  
- var $1 : Pointer
+ #DECLARE ($arrPtr : Pointer) : Pointer
  Repeat
-    $vlElem:=Find in array($1->;"")
+    $vlElem:=Find in array($arrPtr->;"")
     If($vlElem>0)
-       DELETE FROM ARRAY($1->;$vlElem)
+       DELETE FROM ARRAY($arrPtr->;$vlElem)
     End if
  Until($vlElem<0)
 ```
@@ -66,9 +66,10 @@ El siguiente método de proyecto selecciona el primer elemento de un array cuyo 
   // SELECT ELEMENT ( Pointer ; Pointer)
   // SELECT ELEMENT ( -> Text or String array ; -> Text or String variable or field )
  
- $1->:=Find in array($1->;$2->)
- If($1->=-1)
-    $1->:=0 // Si no se encuentra un elemento, fijar el array en un elemento no seleccionado
+ #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
+$arrPtr->:=Find in array($arrPtr->; $varPtr->)
+ If($tabPtr->=-1)
+    $tabPtr->:=0 // Si no se encuentra un elemento, fijar el array en un elemento no seleccionado
  End if
 ```
 

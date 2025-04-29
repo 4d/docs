@@ -33,21 +33,22 @@ Exemple de *Méthode base Sur authentification Web* en mode Digest
 
 ```4d
   // Méthode base Sur authentification Web
- var $1;$2;$5;$6;$3;$4 : Text
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+
  var $utilisateur : Text
  var $0 : Boolean
- $0:=False
+ $result:=False
  $utilisateur:=$5
      //Pour des raisons de sécurité, refuser les noms qui contiennent @
  If(AvecJoker($utilisateur))
-       $0:=False
+       $result:=False
            //La méthode AvecJoker est décrite dans la section "Méthode base Sur authentification Web"
  Else
        QUERY([WebUsers];[WebUsers]User=$utilisateur)
        If(OK=1)
-          $0:=WEB Validate digest($utilisateur;[WebUsers]Mdp)
+          $result:=WEB Validate digest($utilisateur;[WebUsers]Mdp)
        Else
-          $0:=False //Utilisateur inexistant
+          $result:=False //Utilisateur inexistant
        End if
  End if
 ```

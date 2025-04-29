@@ -31,14 +31,14 @@ Votre application comprend des opérations par lots qui sont exécutées la nuit
   // Chercher volume pour place ( Reel ) -> Alpha
   // Chercher volume pour place ( Place nécessaire en octets ) -> Nom du volume ou chaîne vide
  
- C_STRING(31;$0)
+ #DECLARE($space : Real) -> $result : Text
  C_STRING(255;$vaNomDoc)
  var $vlNbVolumes;$vlVolume : Integer
- var $1;$vlTaille;$vlUtilisé;$vlLibre : Real
+ var $vlTaille;$vlUtilisé;$vlLibre : Real
  var $vhDocRef : Time
  
   // Initialiser le résultat de la fonction
- $0:=""
+ $result:=""
   // Protéger toutes les opérations d'entrée/sortie par une méthode d'interruption d'erreur
  ON ERR CALL("METHODE ERREUR")
   // Obtenir la liste des volumes
@@ -65,7 +65,7 @@ Votre application comprend des opérations par lots qui sont exécutées la nuit
        VOLUME ATTRIBUTES($taVolumes{$vlVolume};$vlTaille;$vlUtilisé;$vlLibre)
        If(gErreur=0)
   // Est-ce que la place libre est suffisante (plus 32K) ?
-          If($vlLibre>=($1+32768))
+          If($vlLibre>=($space+32768))
   // Si oui, vérifier que le volume n'est pas verrouillé...
              $vaNomDoc:=$taVolumes{$vlVolume}+Char(Symbole séparateur)+"XYZ"+String(Hasard)+".TXT"
              $vhDocRef:=Create document($vaNomDoc)
@@ -73,7 +73,7 @@ Votre application comprend des opérations par lots qui sont exécutées la nuit
                 CLOSE DOCUMENT($vhDocRef)
                 DELETE DOCUMENT($vaNomDoc)
   // Si tout est ok, retourner le nom du volume
-                $0:=$taVolumes{$vlVolume}
+                $result:=$taVolumes{$vlVolume}
                 $vlVolume:=$vlNbVolumes+1
              End if
           End if

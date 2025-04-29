@@ -142,17 +142,14 @@ La classe `City Class` fournit une API :
 
 Class extends DataClass
 
-Function getCityName()
-	var $1; $zipcode : Integer
+Function getCityName($zipcode : Integer) -> $cityName : Text
 	var $zip : 4D.Entity
-	var $0 : Text
 
-	$zipcode:=$1
 	$zip:=ds.ZipCode.get($zipcode)
-	$0:=""
+	$cityName:=""
 
 	If ($zip#Null)
-		$0:=$zip.city.name
+		$cityName:=$zip.city.name
 	End if
 ```
 

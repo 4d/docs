@@ -94,8 +94,8 @@ In the following example, we are going to create a small messaging system that a
 5) Here is the Display\_Message method:
 
 ```4d
- var $1 : Text
- ALERT($1)
+ #DECLARE($message : Text)
+ ALERT($message)
 ```
 
 6) Finally, this method allows a client station to no longer be visible by the other 4D clients and to no longer receive messages:

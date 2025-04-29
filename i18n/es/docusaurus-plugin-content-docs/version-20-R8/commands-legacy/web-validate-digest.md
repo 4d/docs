@@ -33,21 +33,22 @@ Ejemplo de método de base On Web Authentication en modo Digest:
 
 ```4d
   // Método de base On Web Authentication
- var $1;$2;$5;$6;$3;$4 : Text
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+
  var $usuario : Text
  var $0 : Boolean
- $0:=False
+ $result:=False
  $usuario:=$5
   //Por razones de seguridad, rechazar los nombres que contengan @
  If(WithWildcard($usuario))
-    $0:=False
+    $result:=False
   //El método WithWildcard se describe en la sección "Método de base On Web Authentication"
  Else
     QUERY([WebUsers];[WebUsers]Usuario=$usuario)
     If(OK=1)
-       $0:=Validate Digest Web Password($usuario;[WebUsers]contraseña)
+       $result:=Validate Digest Web Password($usuario;[WebUsers]contraseña)
     Else
-       $0:=False //Usuario inexistente
+       $result:=False //Usuario inexistente
     End if
  End if
 ```

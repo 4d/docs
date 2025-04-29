@@ -60,7 +60,7 @@ Os dois métodos de projeto a seguir permitem armazenar e recuperar rapidamente 
   // Método de projeto GUARDAR VARIABLES EN BLOB
   // GUARDAR VARIABLES EN BLOB ( Ponteiro{ ; Ponteiro... { ; Ponteiro} } )
   // GUARDAR VARIABLES EN BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam : Integer
  
  SET BLOB SIZE($1->;0)
@@ -72,7 +72,7 @@ Os dois métodos de projeto a seguir permitem armazenar e recuperar rapidamente 
   // Método de projeto RECUPERAR VARIAVEIS DO BLOB
   // RECUPERAR VARIAVEIS DO BLOB ( Ponteiro{ ; Ponteiro... { ; Ponteiro} } )
   // RECUPERAR VARIAVEIS DO BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam;$vlOffset : Integer
  
  $vlOffset:=0
@@ -98,12 +98,11 @@ Os dois métodos de projeto a seguir permitem armazenar e recuperar rapidamente 
  
  // SAVE ARRAY (Text ; Pointer)
   // SAVE ARRAY (Document ; -> Array)
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxArrayData : Blob
- VARIABLE TO BLOB($2->;$vxArrayData) //Armazena o array em BLOB
+ VARIABLE TO BLOB($ptrArray->;$vxArrayData) //Armazena o array em BLOB
  COMPRESS BLOB($vxArrayData) // Comprime o BLOB
- BLOB TO DOCUMENT($1;$vxArrayData) // Salva o BLOB em disco
+ BLOB TO DOCUMENT($doc;$vxArrayData) // Salva o BLOB em disco
 
 
 ```
@@ -112,12 +111,11 @@ Os dois métodos de projeto a seguir permitem armazenar e recuperar rapidamente 
   // LOAD ARRAY project method
   // LOAD ARRAY (Text ; Pointer)
   // LOAD ARRAY (Document ; -> Array)
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxArrayData : Blob
- DOCUMENT TO BLOB($1;$vxArrayData) // Carrega o BLOB a partir do disco
+ DOCUMENT TO BLOB($doc;$vxArrayData) // Carrega o BLOB a partir do disco
  EXPAND BLOB($vxArrayData) // Expande o BLOB
- BLOB TO VARIABLE($vxArrayData;$2->) // Busca o array do BLOB
+ BLOB TO VARIABLE($vxArrayData;$ptrArray->) // Busca o array do BLOB
 ```
 
 Depois que esses métodos foram adicionados a sua aplicação, pode escrever:

@@ -138,7 +138,7 @@ $myClass.query("name = smith")
 このドキュメントでは、データクラス属性に保存可能な値の様々な型を指定するために、"ミックス" データ型が使用されます。 :
 
 *   number
-*   テキスト
+*   text
 *   null
 *   boolean
 *   date

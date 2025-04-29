@@ -78,12 +78,11 @@ Il vous appartient de formater le BLOB initial sous forme d’élément xml vali
 * Exemple
 
 ```4d
- var $1 : Blob
- var $0 : Boolean
- 
- WEB SERVICE SET PARAMETER("MonBlobXML";$1)
+ #DECLARE($param : Blob) -> $result : Boolean 
+
+ WEB SERVICE SET PARAMETER("MonBlobXML";$param)
  WEB SERVICE CALL("http://my.domain.com/mon_service";"MonSoapAction";"LaMethode";"http://my.namespace.com/";Web Service manual in)
- WEB SERVICE GET RESULT($0;"MaVarSortie";*)
+ WEB SERVICE GET RESULT($result;"MaVarSortie";*)
 ```
 
 ### Mode RPC, entrée simple et sortie composée 
@@ -93,12 +92,10 @@ Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manu
 * Exemple
 
 ```4d
- var $0 : Blob
- var $1 : Boolean
- 
- WEB SERVICE SET PARAMETER("MaVarEntree";$1)
+ #DECLARE($param : Blob) -> $result : Blob 
+ WEB SERVICE SET PARAMETER("MaVarEntree";$param)
  WEB SERVICE CALL("http://my.domain.com/mon_service";"MonSoapAction";"LaMethode";"http://my.namespace.com/";Web Service manual out)
- WEB SERVICE GET RESULT($0;"MonXMLSortie";*)
+ WEB SERVICE GET RESULT($result;"MonXMLSortie";*)
 ```
 
 ### Mode RPC, entrée et sortie composées 
@@ -108,12 +105,11 @@ Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manu
 * Exemple
 
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MonBlobXMLEntree";$1)
+ WEB SERVICE SET PARAMETER("MonBlobXMLEntree";$param)
  WEB SERVICE CALL("http://my.domain.com/mon_service";"MonSoapAction";"LaMethode";"http://my.namespace.com/";Web Service manual)
- WEB SERVICE GET RESULT($0;"MonXMLSortie";*)
+ WEB SERVICE GET RESULT($result;"MonXMLSortie";*)
 ```
 
 ### Mode DOC 
@@ -124,12 +120,11 @@ La seule différence entre ces deux configurations se situe au niveau du contenu
 * Exemple
 
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MonXMLEntree";$1)
+ WEB SERVICE SET PARAMETER("MonXMLEntree";$param)
  WEB SERVICE CALL("http://my.domain.com/mon_service";"MonSoapAction";"LaMethode";"http://my.namespace.com/";Web Service manual)
- WEB SERVICE GET RESULT($0;"MonXMLSortie";*)
+ WEB SERVICE GET RESULT($result;"MonXMLSortie";*)
 ```
 
 **Note :** Dans le cas des Web Services DOC, la valeur des chaînes (ci-dessus “MonXMLEntree” et “MonXMLSortie”) passées en paramètres n’a pas d’importance ; il est même possible de passer des chaînes vides (""). En effet, ces valeurs ne sont pas utilisées dans la requête SOAP contenant le document xml. Il est toutefois obligatoire de passer ces paramètres. 

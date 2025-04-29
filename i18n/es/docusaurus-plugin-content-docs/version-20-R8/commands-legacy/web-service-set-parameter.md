@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Pase en *nombre* el nombre del parámetro tal como aparece en la petición SOAP.
 
-En *valor*, pase la variable 4D que contiene el valor del parámetro. En el caso de los métodos proxy, esta variable es generalmente *$1*, *$2*, *$3*, etc., correspondiente a un parámetro 4D pasado al método proxy durante su llamada. Sin embargo, es posible utilizar variables intermediarias.
+En *valor*, pase la variable 4D que contiene el valor del parámetro. En el caso de los métodos proxy, esta variable es generalmente *$param1*, *$param2*, *$param3*, etc., correspondiente a un parámetro 4D pasado al método proxy durante su llamada. Sin embargo, es posible utilizar variables intermediarias.
 
 **Nota:** cada variable o array 4D utilizado debe declararse previamente utilizando los comandos de los temas *Compilador* y *Arrays*.
 
@@ -63,10 +63,9 @@ Sin embargo, podría “forzar” la definición del tipo SOAP de un parámetro.
 Este ejemplo define dos parámetros: 
 
 ```4d
- var $1 : Text
- var $2 : Text
- WEB SERVICE SET PARAMETER("ciudad";$1)
- WEB SERVICE SET PARAMETER("país";$2)
+ #DECLARE($param1 : Text ; $param2 : Text)
+ WEB SERVICE SET PARAMETER("ciudad";$param1)
+ WEB SERVICE SET PARAMETER("país";$param2)
 ```
 
 ## Ver también 

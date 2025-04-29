@@ -2255,10 +2255,9 @@ var $fruits; $c2 : Collection
 O método ***sortCollection***:
 
 ```4d
-var$1Object
-var$2Integer // sort option
+#DECLARE ($toSort : Object ; $option : Integer)
 
-$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+$toSort.result:=(Compare strings($toSort.value;$toSort.value2;$option2)<0)
 ```
 
 <!-- END REF -->
@@ -2417,7 +2416,7 @@ onde:
 |                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                        |
 | Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalent to "Not condition applied on a statement" ).                     |
 |                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                 |
-| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalent to "Not equal to" ). |
+| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Não igual a" ).  |
 | Menor que                                | <  |                                                                                                                                                                    |
 | Maior que                                | >                           |                                                                                                                                                                    |
 | Menor que ou igual a                     | <= |                                                                                                                                                                    |
@@ -3096,14 +3095,13 @@ A coleção devolvida contém o elemento especificado por *startFrom* e todos os
 
 <!-- REF #collection.some().Params -->
 
-| Parâmetro | Tipo |     | Descrição |
-| --------- | ---- | :-: | --------- |
-
-|startFrom |Integer |->|Índice para iniciar o teste em|
-|formula|4D.Function|->|Objeto de fórmula|
-|methodName|Text|->|Nome de um método|
-|param |any |->|Parâmetro(s) a ser(em) passado(s)|
-|Result|Boolean|<-|True se pelo menos um elemento tiver sido aprovado no teste|
+| Parâmetro  | Tipo                         |                             | Descrição                                                             |
+| ---------- | ---------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| startFrom  | Integer                      |              ->             | Índice para início do teste em                                        |
+| formula    | 4D. Function |              ->             | Objecto fórmula                                                       |
+| methodName | Text                         |              ->             | Nome da função a qual se chama para processar os elementos da coleção |
+| param      | any                          |              ->             | Parâmetro(s) a transmitir                          |
+| Resultados | Parâmetros                   | <- | True se todos os elementos passarem o teste com sucesso               |
 
 <!-- END REF -->
 

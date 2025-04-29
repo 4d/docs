@@ -29,14 +29,14 @@ Sua aplicação inclui algumas operações por lotes que são executadas na noit
   // Buscar volume para espaço ( Real ) -> Alfa
   // Buscar volume para espaço ( Espaço necessário em bytes ) -> Nome do volume ou string vazia
  
- C_STRING(31;$0)
+ #DECLARE($space : Real) -> $result : Text
  C_STRING(255;$vsDocNome)
  var $vlNbVolumens;$vlVolumens : Integer
- var $1;$vlTamanho;$vlUtilizado;$vlLivre : Real
+ var $vlTamanho;$vlUtilizado;$vlLivre : Real
  var $vhDocRef : Time
  
   // Inicializar o resultado da função
- $0:=""
+ $result:=""
   // Proteger todas as operações de entrada/saida com um método de interrupção de erros
  ON ERR CALL("ERROR METHOD")
   // Obter a lista dos volumens
@@ -63,7 +63,7 @@ Sua aplicação inclui algumas operações por lotes que são executadas na noit
        VOLUME ATTRIBUTES($asVolumes{$vlVolume};$vlTamanho;$vlUtilizado;$vlLivre)
        If(gError=0)
   // O espaço livre é suficiente (mais de 32K extra) ?
-          If($vlLivre>=($1+32768))
+          If($vlLivre>=($space+32768))
   // Se for assim, verificar se o volume não está bloqueado..
              $vsDocNome:=$asVolumes{$vlVolume}+Char(Directory symbol)+"XYZ"+String(Random)+".TXT"
              $vhDocRef:=Create document($vsDocNome)
@@ -71,7 +71,7 @@ Sua aplicação inclui algumas operações por lotes que são executadas na noit
                 CLOSE DOCUMENT($vhDocRef)
                 DELETE DOCUMENT($vsDocNome)
   // Se tudo estiver bem, devolver o nome do volume
-                $0:=$asVolumes{$vlVolume}
+                $result:=$asVolumes{$vlVolume}
                 $vlVolume:=$vlNbVolumes+1
              End if
           End if

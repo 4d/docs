@@ -41,7 +41,7 @@ All other REST requests (handling data or executing a function) will only be pro
 
 ### Solicitações REST descritivas
 
-Descriptive REST requests can be processed in web user sessions that do not require licenses ("guest" sessions). Essas solicitações são:
+As solicitações REST descritivas podem ser processadas em sessões de usuário Web que não exigem licenças (sessões "guest"). Essas solicitações são:
 
 - Solicitações [`/rest/$catalog`]($catalog.md) (por exemplo, `/rest/$catalog/$all`) - acesso às dataclasses disponíveis
 - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario

@@ -98,8 +98,8 @@ displayed_sidebar: docs
 5) 以下は、Display\_Messageメソッドです:   
 
 ```4d
- var $1 : Text
- ALERT($1)
+ #DECLARE($message : Text)
+ ALERT($message)
  
 ```
 

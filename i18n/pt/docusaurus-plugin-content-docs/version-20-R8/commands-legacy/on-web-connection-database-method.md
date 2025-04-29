@@ -5,16 +5,16 @@ slug: /commands/on-web-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Web Connection database method.Syntax-->$1, $2, $3, $4, $5, $6 -> On Web Connection database method<!-- END REF-->
+<!--REF #_command_.On Web Connection database method.Syntax-->On Web Connection($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean<!-- END REF-->
 <!--REF #_command_.On Web Connection database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Texto | &#8592; | URL |
-| $2 | Texto | &#8592; | cabeçalho HTTP + corpo HTTP |
-| $3 | Texto | &#8592; | Endereço IP do navegador |
-| $4 | Texto | &#8592; | Endereço IP do servidor |
-| $5 | Texto | &#8592; | Nome de usuário |
-| $6 | Texto | &#8592; | Senha |
+| $url | Texto | &#8592; | URL |
+| $http | Texto | &#8592; | cabeçalho HTTP + corpo HTTP |
+| $ipBrowser | Texto | &#8592; | Endereço IP do navegador |
+| $ipServer | Texto | &#8592; | Endereço IP do servidor |
+| $user | Texto | &#8592; | Nome de usuário |
+| $pw | Texto | &#8592; | Senha |
 
 <!-- END REF-->
 
@@ -31,32 +31,32 @@ Para maior informação, consulte a continuação o parágrafo “Chamadas ao M�
   
 A petição deve ter sido aceita previamente pelo [On Web Authentication database method](on-web-authentication-database-method.md) (se existir) e o servidor web deve ser lançado.  
   
-O método de banco On Web Connection database method recebe seis parâmetros de tipo texto, passados por 4D ($1, $2, $3, $4, $5 e $6). Os conteúdos desses parâmetros são os seguintes:
+O método de banco On Web Connection database method recebe seis parâmetros de tipo texto, passados por 4D ($url, $http, $ipBrowser, $ipServer, $user e $pw). Os conteúdos desses parâmetros são os seguintes:
 
 | **Parâmetros** | **Tipo** | **Descrição**                                       |
 | -------------- | -------- | --------------------------------------------------- |
-| $1             | Texto    | URL                                                 |
-| $2             | Texto    | Cabeçalho HTTP + corpo HTTP (até o limite de 32 kb) |
-| $3             | Texto    | endereço IP do Web client (browser)                 |
-| $4             | Texto    | endereço IP do servidor                             |
-| $5             | Texto    | nome de usuário                                     |
-| $6             | Texto    | Senha                                               |
+| $url             | Texto    | URL                                                 |
+| $http             | Texto    | Cabeçalho HTTP + corpo HTTP (até o limite de 32 kb) |
+| $ipBrowser             | Texto    | endereço IP do Web client (browser)                 |
+| $ipServer             | Texto    | endereço IP do servidor                             |
+| $user             | Texto    | nome de usuário                                     |
+| $pw             | Texto    | Senha                                               |
 
 Você deve declarar esses parâmetros da seguinte maneira: 
 
 ```4d
   // On Web Connection Database Method
  
- var $1;$2;$3;$4;$5;$6 : Text
+#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
  
   // Código para o método
 ```
 
 * **Dados extra da URL**  
-O primeiro parâmetro (*$1*) é a URL introduzida pelo usuário na área de localização de seu navegador web, menos a direção local.  
-Usemos o exemplo de uma conexão de Intranet. Suponhamos que o endereço IP de sua máquina servidor web 4D é *123.45.67.89*. A tabela seguinte mostra os valores de *$1* dependendo da URL introduzida no navegador web:  
+O primeiro parâmetro (*$url*) é a URL introduzida pelo usuário na área de localização de seu navegador web, menos a direção local.  
+Usemos o exemplo de uma conexão de Intranet. Suponhamos que o endereço IP de sua máquina servidor web 4D é *123.45.67.89*. A tabela seguinte mostra os valores de *$url* dependendo da URL introduzida no navegador web:  
     
-| **URL introduzida no navegador**            | **Valor do parâmetro $1**       |  
+| **URL introduzida no navegador**            | **Valor do parâmetro $url**       |  
 | ------------------------------------------- | ------------------------------- |  
 | 123.45.67.89                                | /                               |  
 | http://123.45.67.89                         | /                               |  
@@ -71,7 +71,7 @@ Note que você é livre para usar este parâmetro quando quiser. 4D simplesmente
 **Advertência**: para evitar que um usuário acesse diretamente a um banco com um marcador criado durante uma sessão anterior, 4D intercepta toda URL que corresponda a uma das URLs padrão de 4D.
 
 * **Cabeçalho de petição de HTTP seguida por corpo HTTP**  
- O segundo parâmetro (*$2*) é o cabeçalho e o corpo da petição HTTP enviada pelo navegador web. Note que esta informação se passa a seu **On Web Connection database method** tal como está. O conteúdo varia em função do tipo de navegador web que estiver tentando a conexão.  
+ O segundo parâmetro (*$http*) é o cabeçalho e o corpo da petição HTTP enviada pelo navegador web. Note que esta informação se passa a seu **On Web Connection database method** tal como está. O conteúdo varia em função do tipo de navegador web que estiver tentando a conexão.  
     
 Com Safari rodando em Mac OS, pode receber um cabeçalho similar a este:  
 ```RAW  
@@ -84,13 +84,13 @@ GET / HTTP/1.1Accept: image/jpeg, application/x-ms-application,  image/gif, appl
 Se sua aplicação manipula esta informação, é sua decisão analizar o cabeçalho e o corpo.  
 **Nota**: por razões de rendimento, o tamanho desses dados não pode ser maior que 32 KB. Se o tamanho for maior, os dados são truncados pelo servidor 4D HTTP.
 * **Endereço IP do Web client**  
-O parâmetro *$3* recebe o endereço IP da máqina de navegador. Esta informação pode permitir que diferencie entre conexões Internet e Intranet.
+O parâmetro *$ipBrowser* recebe o endereço IP da máqina de navegador. Esta informação pode permitir que diferencie entre conexões Internet e Intranet.
 * **Endereço IP do servidor**  
-O parâmetro *$4* recebe o endereço IP para o qual a petição HTTP foi enviada. 4D permite para multi-homing, o que permite explorar máquinas com mais de um endereço IP. Para maior informação, consulte *Web Server Settings*.
+O parâmetro *$ipServer* recebe o endereço IP para o qual a petição HTTP foi enviada. 4D permite para multi-homing, o que permite explorar máquinas com mais de um endereço IP. Para maior informação, consulte *Web Server Settings*.
 * **Nome de usuário e Senha**  
-Os parâmetros *$5* e *$6* recebem o nome de usuário e senha inseridos pelo usuário na caixa de diálogo de identificação exibida pelo navegador. Essa caixa de diálogo aparece para qualquer conexão, se a opção Usar Senhas tiver sido selecionada na caixa de diálogo Preferências de Banco, ver *Conexões de Segurança*).
+Os parâmetros *$user* e *$pw* recebem o nome de usuário e senha inseridos pelo usuário na caixa de diálogo de identificação exibida pelo navegador. Essa caixa de diálogo aparece para qualquer conexão, se a opção Usar Senhas tiver sido selecionada na caixa de diálogo Preferências de Banco, ver *Conexões de Segurança*).
 
-**Nota:** se o nome de usuário enviado pelo navegador existir em 4D, o parâmetro *$6* (a senha do usuário) não é retornado por razões de segurança.
+**Nota:** se o nome de usuário enviado pelo navegador existir em 4D, o parâmetro *$pw* (a senha do usuário) não é retornado por razões de segurança.
 
 ## On Web Connection Database Method Calls 
 
@@ -100,6 +100,6 @@ O On Web Connection database method pode ser utilizado como ponto de entrada par
   
 O On Web Connection database method é chamado nos seguintes casos:
 
-* Quando 4D recebe a *URL /4DCGI*. O método banco se chama com a URL */4DCGI/* em *$1*.
+* Quando 4D recebe a *URL /4DCGI*. O método banco se chama com a URL */4DCGI/* em *$url*.
 * Quando uma página web chamada com uma URL de tipo *<rota>/<arquivo>* não for encontrada. O método de banco se chama com a URL (\*).
 * Quando uma página web for chama com uma URL do tipo <file>/ e nenhuma página tiver sido definida como padrão. O método de banco se chama com a URL

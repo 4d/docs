@@ -47,12 +47,12 @@ El método de proyecto DEBUG se lista aquí:
   // DEBUG (Texto)
   // DEBUG (Información opcional de depuración)
  
- var $1 : Text
+ #DECLARE($debugInfo : Text)
  
- If(◊vbDebugOn) // Variable interproceso definida en el Método On Startup
+ If(<>vbDebugOn) // Variable interproceso definida en el Método On Startup
     If(Compiled application)
        If(Count parameters>=1)
-          ALERT($1+Char(13)+"Llamar al diseñador al x911")
+          ALERT($debugInfo+Char(13)+"Llamar al diseñador al x911")
        End if
     Else
        TRACE

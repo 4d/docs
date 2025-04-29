@@ -50,7 +50,7 @@ Passez dans *nouvVar* un pointeur vers la variable à associer au nouvel objet. 
 * Il est généralement possible de transformer dynamiquement une variable en champ et inversement.  
 En revanche, les objets graphiques (boutons, cases à cocher...) ne peuvent pas être tranformés en d’autres types de contrôles.
 
-Si le type de la variable est incompatible avec l’objet, la commande ne fait rien et la variable *OK* prend la valeur 0\. Si vous omettez ce paramètre, la variable est créée dynamiquement par 4D (cf. paragraphe “Variables dynamiques” dans la section [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)). Si vous dupliquez un objet statique (ligne, rectangle, image statique...) ce paramètre est ignoré. Passez un pointeur Nil (->\[\]) si vous souhaitez pouvoir utiliser les autres paramètres. 
+Si le type de la variable est incompatible avec l’objet, la commande ne fait rien et la variable *OK* prend la valeur 0\. Si vous omettez ce paramètre, la [variable est créée dynamiquement par 4D](../FormObjects/properties_Object.md#variables-dynamiques) Si vous dupliquez un objet statique (ligne, rectangle, image statique...) ce paramètre est ignoré. Passez un pointeur Nil (->\[\]) si vous souhaitez pouvoir utiliser les autres paramètres. 
 
 Vous utilisez le paramètre *reliéA* dans deux cas :
 

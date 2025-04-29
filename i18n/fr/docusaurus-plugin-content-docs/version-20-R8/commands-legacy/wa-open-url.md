@@ -24,7 +24,7 @@ Si une chaîne vide est passée dans *url*, la commande **WA OPEN URL** ne fait 
 Comme la commande [OPEN URL](open-url.md), **WA OPEN URL** accepte plusieurs types de syntaxes dans le paramètre *url* pour désigner les fichiers :
 
 * syntaxe posix : "file:///c:/Mon%20Fichier"
-* syntaxe système : "c:\\MonDossier\\MonFichier" (Windows) ou "MonDisque:MonDossier:MonFichier" (Mac OS).
+* syntaxe système : "c:\\MonDossier\\MonFichier" (Windows) ou "MonDisque:MonDossier:MonFichier" (macOS).
 
 **Note :** Par compatibilité, la syntaxe "file://" (utilisation de deux "/") est acceptée dans 4D mais elle n'est pas conforme aux RFC. Il est conseillé d'utiliser la syntaxe "file:///" (trois "/") qui est conforme aux RFC.
 

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 *name*には、SOAPリクエストに現れる引数の名前を渡します。
 
-*value*には、引数に渡す値を格納した4D変数を渡します。プロクシメソッドの場合、この変数は通常、プロクシメソッドが呼び出されるときに渡される引数*$1*, *$2*, *$3*, 等です。しかし中間変数を使用することもできます。
+*value*には、引数に渡す値を格納した4D変数を渡します。プロクシメソッドの場合、この変数は通常、プロクシメソッドが呼び出されるときに渡される引数*$param1*, *$param2*, *$param3*, 等です。しかし中間変数を使用することもできます。
 
 **Note:** それぞれの4D変数や配列は*コンパイラ*や*配列*テーマのコマンドで事前に宣言しなければなりません。
 
@@ -62,10 +62,9 @@ displayed_sidebar: docs
 この例題は2つの引数を定義します: 
 
 ```4d
- var $1 : Text
- var $2 : Text
- WEB SERVICE SET PARAMETER("city";$1)
- WEB SERVICE SET PARAMETER("country";$2)
+ #DECLARE($param1 : Text ; $param2 : Text)
+ WEB SERVICE SET PARAMETER("city";$param1)
+ WEB SERVICE SET PARAMETER("country";$param2)
 ```
 
 ## 参照 

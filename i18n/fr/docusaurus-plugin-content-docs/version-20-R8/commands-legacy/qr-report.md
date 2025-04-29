@@ -33,15 +33,15 @@ Le paramètre *nomMéthode* désigne une méthode projet 4D qui sera exécutée 
 
 | **Paramètre** | **Type**    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $1            | Entier long | Référence de la zone                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| $2            | Entier long | Numéro de la commande sélectionnée. À comparer avec les constantes suivantes du thème *QR Commandes* (seuls les événements listés sont pris en charge) : <table> <thead> <tr> <td>Constante</td> <td>Valeur</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Utilisation de la commande [QR RUN](qr-run.md) conseillée</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
+| $area            | Entier long | Référence de la zone                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| $command            | Entier long | Numéro de la commande sélectionnée. À comparer avec les constantes suivantes du thème *QR Commandes* (seuls les événements listés sont pris en charge) : <table> <thead> <tr> <td>Constante</td> <td>Valeur</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Utilisation de la commande [QR RUN](qr-run.md) conseillée</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
 
-**Note :** Si vous souhaitez compiler votre base de données, vous devez déclarer explicitement les paramètres $1 et $2 comme entiers longs, même si vous ne les utilisez pas.
+**Note :** Si vous souhaitez compiler votre base de données, vous devez déclarer explicitement les paramètres $area et $command comme entiers longs, même si vous ne les utilisez pas.
 
 Si vous souhaitez exécuter la commande initiale choisie par l'utilisateur, saisissez l'instruction suivante dans la méthode *nomMéthode* :
 
 ```4d
- QR EXECUTE COMMAND($1;$2)
+ QR EXECUTE COMMAND($area;$command)
 ```
 
 Si le paramètre *nomMéthode* est une chaîne vide ("") ou est omis, aucune méthode n'est appelée et l'opération standard de **QR REPORT** est appliquée.
@@ -104,13 +104,13 @@ Vous souhaitez convertir le jeu de caractères utilisé dans un état rapide app
 La méthode maCallbackMeth convertit l’état lorsqu’il est généré :
 
 ```4d
- var $1;$2 : Integer
- If($2=qr cmd generate) //si on a généré un état
+ #DECLARE($area : Integer ; $command : Integer)
+ If($command=qr cmd generate) //si on a généré un état
     var $myblob : Blob
     var $path;$text : Text
     var $type : Integer
-    QR EXECUTE COMMAND($1;$2) //exécution de la commande
-    QR GET DESTINATION($1;$type;$path) //récupération de la destination
+    QR EXECUTE COMMAND($area;$command) //exécution de la commande
+    QR GET DESTINATION($area;$type;$path) //récupération de la destination
     If(($type=qr HTML file)|$type=qr text file))
        DOCUMENT TO BLOB($path;$myblob)
   //conversion vers un texte en utilisant UTF-8
@@ -121,7 +121,7 @@ La méthode maCallbackMeth convertit l’état lorsqu’il est généré :
        BLOB TO DOCUMENT($path;$myblob)
     End if
  Else //sinon exécution de la commande
-    QR EXECUTE COMMAND($1;$2)
+    QR EXECUTE COMMAND($area;$command)
  End if
 ```
 

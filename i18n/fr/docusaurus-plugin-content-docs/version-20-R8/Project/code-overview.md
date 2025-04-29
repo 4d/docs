@@ -1,26 +1,26 @@
 ---
 id: code-overview
-title: Methods and classes
+title: Méthodes et classes
 ---
 
-The 4D code used across your project is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md).
+Le code 4D utilisé dans votre projet est écrit dans des [méthodes](../Concepts/methods.md) et des [classes](../Concepts/classes.md).
 
-L'IDE de 4D vous offre diverses fonctionnalités pour créer, modifier, exporter ou supprimer votre code. You will usually use the included 4D [code editor](../code-editor/write-class-method.md) to work with your code. You can also use other editors such as **VS Code**, for which the [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode) is available.
+L'IDE de 4D vous offre diverses fonctionnalités pour créer, modifier, exporter ou supprimer votre code. Vous utiliserez généralement l'[éditeur intégré de code 4D](../code-editor/write-class-method.md) pour travailler avec votre code. Vous pouvez également utiliser d'autres éditeurs tels que **VS Code**, pour lesquels l'extension [4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode) est disponible.
 
 ## Créer des méthodes
 
-A method in 4D is stored in a **.4dm** file located in the appropriate folder of the [`/Project/Sources/`](../Project/architecture.md#sources) folder.
+Une méthode dans 4D est stockée dans un fichier **.4dm** situé dans le dossier approprié du dossier [`/Project/Sources/`](../Project/architecture.md#sources).
 
 Vous pouvez créer [plusieurs types de méthodes](../Concepts/methods.md) :
 
-- Tous les types de méthodes peuvent être créés ou ouverts à partir de la fenêtre de l'**Explorateur** (à l'exception des méthodes Objet qui sont gérées à partir de l'[éditeur de formulaires](../FormEditor/formEditor.md)).
-- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](../code-editor/write-class-method.md#shortcuts).
+- Tous les types de méthodes peuvent être créés ou ouverts à partir de la fenêtre de l'**Explorateur** (à l'exception des méthodes objet qui sont gérées à partir de l'[éditeur de formulaires](../FormEditor/formEditor.md)).
+- Les méthodes projet peuvent également être créées ou ouvertes à partir du menu **Fichier** ou de la barre d'outils (**Nouveau/Méthode...** ou **Ouvrir/Méthode...**) ou à l'aide de raccourcis dans la [fenêtre de l'éditeur de code](../code-editor/write-class-method.md#shortcuts).
 - Les triggers peuvent également être créés ou ouverts à partir de l'éditeur de Structure.
 - Les méthodes formulaire peuvent également être créées ou ouvertes à partir de l'[éditeur de formulaires](../FormEditor/formEditor.md).
 
 ## Créer des classes
 
-A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. Le nom du fichier est le nom de la classe.
+Une classe utilisateur dans 4D est définie par un fichier de méthode spécifique (**.4dm**), stocké dans le dossier [`/Project/Sources/Classes/`](../Project/architecture.md#sources). Le nom du fichier est le nom de la classe.
 
 Vous pouvez créer un fichier de classe à partir du menu ou de la barre d'outils **Fichier** (**Nouveau/Classe...**) ou dans la page **Méthodes** de la fenêtre de l'**Explorateur** .
 
@@ -31,13 +31,13 @@ Pour plus d'informations, reportez-vous à la section [Classes](../Concepts/clas
 Pour supprimer une méthode ou une classe existante, vous pouvez :
 
 - sur votre disque, supprimer le fichier *.4dm* du dossier "Sources",
-- in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+- dans l'explorateur de 4D, sélectionnez la méthode ou la classe et cliquez sur ![](../assets/en/Users/MinussNew.png) ou choisissez **Déplacer vers la corbeille** dans le menu contextuel.
 
 > Pour supprimer une méthode objet, choisissez **Supprimer la méthode objet** dans l'[éditeur de formulaires](../FormEditor/formEditor.md) (menu **Objet** ou menu contextuel).
 
 ## Importer et exporter le code
 
-Vous pouvez importer et exporter une méthode ou le code d'une classe sous la forme d'un fichier. These commands are found in the **Method** menu of the [Code editor](../code-editor/write-class-method.md).
+Vous pouvez importer et exporter une méthode ou le code d'une classe sous la forme d'un fichier. Ces commandes se trouvent dans le menu **Méthode** de l'[éditeur de code](../code-editor/write-class-method.md).
 
 - Lorsque vous sélectionnez la commande **Exporter la méthode...** , une boîte de dialogue standard d'enregistrement de fichier apparaît, vous permettant de choisir le nom, l'emplacement et le format du fichier d'export (voir ci-dessous). Comme pour l'impression, l'export ne tient pas compte de l'état contracté des structures de code et le code entier est exporté.
 - Lorsque vous sélectionnez la commande **Importer la méthode...**, une boîte de dialogue standard d'ouverture de fichier standard apparaît, vous permettant de désigner le fichier à importer. L'importation remplace le texte sélectionné dans la méthode. Pour remplacer une méthode existante par une méthode importée, il suffit de sélectionner l’ensemble du contenu de la méthode avant d’effectuer l’importation.
@@ -57,8 +57,8 @@ Les autres types de méthodes n'ont pas de propriétés spécifiques. Leurs prop
 
 Pour afficher la boîte de dialogue **Propriétés de la méthode** pour une méthode projet, vous pouvez soit :
 
-- in the [Code Editor](../code-editor/write-class-method.md), select the **Method Properties...** command in the **Method** menu,
-- ou dans la page **Méthodes** de l'Explorateur, **clic droit** sur la méthode projet et sélectionner **Propriétés de la méthode.** dans le menu contextuel ou dans le menu d'options.
+- dans l'[éditeur de code](../code-editor/write-class-method.md), sélectionnez la commande **Propriétés de la méthode...** dans le menu **Méthode**,
+- ou dans la page **Méthodes** de l'Explorateur, **clic droit** sur la méthode projet et sélectionner **Modifier les propriétés** dans le menu contextuel ou dans le menu d'options.
 
 > Une fonction de paramétrage global vous permet de modifier une propriété pour tout ou partie des méthodes projet en une seule opération (voir [Modifier attributs globalement](#modifier-attributs-globalement)).
 
@@ -106,7 +106,7 @@ Pour plus d'informations sur cette option, reportez-vous à [Attribut Exécuter 
 
 ### Mode d’exécution
 
-Cette option vous permet de déclarer la méthode éligible à l'exécution en mode préemptif. It is described in the [Preemptive processes section](../Develop/preemptive.md).
+Cette option vous permet de déclarer la méthode éligible à l'exécution en mode préemptif. Elle est décrite dans la section [Process préemptifs](../Develop/preemptive.md).
 
 ### Disponibilité
 
@@ -116,7 +116,7 @@ Les attributs de disponibilité précisent les services externes autorisés à a
 
 Cet attribut vous permet de publier la méthode courante comme service Web accessible via des requêtes SOAP. Pour plus d’informations, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html). Lorsque cette option est cochée, l’option **Publié dans WSDL** est active.
 
-In the Explorer, project methods that are offered as a Web Service are given a specific icon.
+Dans l'explorateur, les méthodes projet qui sont proposées en tant que service Web sont dotées d'une icône spécifique.
 
 **Note :** Il n'est pas possible de publier en tant que Web service une méthode dont le nom comporte des caractères non conformes à la nomenclature XML (par exemple des espaces). Si le nom de la méthode n'est pas conforme, 4D refuse l'affectation de la propriété.
 
@@ -124,13 +124,13 @@ In the Explorer, project methods that are offered as a Web Service are given a s
 
 Cet attribut est actif uniquement si l'attribut "Web service" est coché. Il permet d’inclure la méthode courante dans le fichier WSDL de l’application 4D. Pour plus d’informations sur ce point, reportez-vous au paragraphe [Génération du WSDL](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html#502689).
 
-In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon.
+Dans l'explorateur, les méthodes projet proposées en tant que service Web et publiées dans le WSDL sont dotées d'une icône spécifique.
 
 #### Balises HTML et URLs 4D (4DACTION...)
 
-This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/transformation-tags.md).
+Cette option permet de renforcer la sécurité du serveur Web 4D : lorsqu'elle n'est pas cochée, la méthode projet ne peut pas être exécutée via une requête HTTP contenant l'URL spéciale [4DACTION](../WebServer/httpRequests.md#4daction) utilisée pour appeler les méthodes 4D, ni les balises spéciales [4DSCRIPT, 4DTEXT et 4DHTML](../Tags/transformation-tags.md).
 
-In the Explorer, project methods with this attribute are given a specific icon.
+Dans l'explorateur, les méthodes projet ayant cet attribut sont dotées d'une icône spécifique.
 
 Pour des raisons de sécurité, cette option est désélectionnée par défaut. Vous devez désigner individuellement chaque méthode pouvant être exécutée via les URLs et les balises spéciales.
 
@@ -138,7 +138,7 @@ Pour des raisons de sécurité, cette option est désélectionnée par défaut. 
 
 Lorsqu’elle est cochée, cette option autorise l’exécution de la méthode projet par le moteur SQL de 4D. Elle est désélectionnée par défaut, ce qui signifie que, sauf autorisation explicite, les méthodes projet de 4D sont protégées et ne peuvent pas être appelées par le moteur SQL de 4D.
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md)  tags or the [QUERY BY SQL](../commands-legacy/query-by-sql.md) command.
+Cette propriété s'applique à toutes les requêtes SQL internes et externes --- exécutées via le driver ODBC, le code SQL inséré entre les balises [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md) ou la commande [`QUERY BY SQL`](../commands-legacy/query-by-sql.md).
 
 **Notes :**
 
@@ -149,15 +149,15 @@ Pour plus d’informations, reportez-vous à la section [Implémentations du mot
 
 #### Serveur REST
 
-*Cette option est obsolète. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
+_Cette option est obsolète. L'appel de code par le biais d'appels REST n'est possible qu'avec les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md).\*
 
 #### Modifier attributs globalement
 
-Using the "Attributes for methods" dialog box, you can modify an attribute (Invisible, Offered as a Web Service, etc.) for all or part of the database project methods in a single operation. Cette fonction est très utile pour modifier les attributs d’un grand nombre de méthodes projet. Elle peut également être utilisée en cours de développement pour appliquer rapidement des attributs communs à des groupes homogènes de méthodes.
+La boîte de dialogue "Attributs des méthodes" permet de modifier un attribut (Invisible, Disponible via Web Services etc.) pour tout ou partie des méthodes projet de la base de données en une seule opération. Cette fonction est très utile pour modifier les attributs d’un grand nombre de méthodes projet. Elle peut également être utilisée en cours de développement pour appliquer rapidement des attributs communs à des groupes homogènes de méthodes.
 
 Pour modifier globalement les attributs des méthodes :
 
-1. On the [Methods Page](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.en.html) of the 4D Explorer, expand the options menu, then choose the **Batch setting of attributes...** command. La boîte de dialogue **Attributs des méthodes** apparaît.
+1. Dans la [Page Méthodes](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.en.html) de l'explorateur 4D, développez le menu des options, puis choisissez la commande **Modifier attributs globalement...**. La boîte de dialogue **Attributs des méthodes** apparaît.
 
 2. Dans la zone “Méthodes à modifier”, saisissez une chaîne de caractères permettant de désigner les méthodes que vous souhaitez modifier globalement.
   La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
@@ -166,7 +166,7 @@ Utilisez le caractère générique @ pour vous aider à définir des groupes de 
 
 - pour désigner les méthodes dont le nom débute par..., saisissez @ en fin de chaîne. Par exemple : `web@`
 - pour désigner les méthodes dont le nom contient..., saisissez @ en milieu de chaîne. Par exemple : `web@write`
-- pour désigner les méthodes dont le nom se termine par..., saisissez @ en début de chaîne. Par exemple : `web@write`
+- pour désigner les méthodes dont le nom se termine par..., saisissez @ en début de chaîne. Par exemple : `@write`
 - Pour désigner toutes les méthodes, il suffit de taper @ dans la zone.
 
 **Notes :**

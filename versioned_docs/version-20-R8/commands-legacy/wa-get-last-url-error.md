@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
 | url | Text | &#8592; | URL at origin of error |
-| description | Text | &#8592; | Description of error (Mac OS) |
+| description | Text | &#8592; | Description of error (macOS) |
 | errorCode | Integer | &#8592; | Error code |
 
 <!-- END REF-->
@@ -28,7 +28,7 @@ This information is returned in three variables:
 * *errorCode*: The error code.  
    * If the code is >=400, it is an error related to the HTTP protocol. For more information about this type of error, refer to the following address:  
    *http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html*  
-   * Otherwise, it is an error returned by the WebKit (Mac OS) or ActiveX (Windows).
+   * Otherwise, it is an error returned by the WebKit (macOS) or ActiveX (Windows).
 
 It is recommended to call this command within the framework of the On URL Loading Error form event to find out the cause of the error that just occurred. 
 

@@ -79,14 +79,14 @@ Desea crear un método que devuelva **True** si el comando, cuyo número se pasa
   //Método proyecto Is_Thread_Safe
   //Is_Thread_Safe(numCom) -> Booleano
  
- var $1;$threadsafe : Integer
+ #DECLARE($numCom : Integer) -> $result : Boolean
+ var $threadsafe : Integer
  var $name : Text
- var $0 : Boolean
- $name:=Command name($1;$threadsafe;$theme)
+ $name:=Command name($numCom;$threadsafe;$theme)
  If($threadsafe ?? 0) //si el primer bit se define en 1
-    $0:=True
+    $result:=True
  Else
-    $0:=False
+    $result:=False
  End if
 ```
 

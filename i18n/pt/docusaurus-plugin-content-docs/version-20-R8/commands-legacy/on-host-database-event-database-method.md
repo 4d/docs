@@ -5,11 +5,11 @@ slug: /commands/on-host-database-event-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Host Database Event database method.Syntax-->$1 -> On Host Database Event database method<!-- END REF-->
+<!--REF #_command_.On Host Database Event database method.Syntax-->On Host Database Event (*$event* : Integer)<!-- END REF-->
 <!--REF #_command_.On Host Database Event database method.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| $1 | Integer | &#8592; | Código do evento |
+| $event | Integer | &#8592; | Código do evento |
 
 <!-- END REF-->
 
@@ -38,18 +38,18 @@ Exemplo de estrutura tipo de um método base On Host Database Event:
 
 ```4d
   // Método base On Host Database Event
- var $1 : Integer
+ #DECLARE($event : Integer)
  Case of
-    :($1=On before host database startup)
+    :($event=On before host database startup)
   // colocar aqui o código a executar antes do método base "On Startup"
   // da base local
-    :($1=On after host database startup)
+    :($event=On after host database startup)
   // colocar aqui o código a executar antes do método base "On Startup"
   // da base local
-    :($1=On before host database exit)
+    :($event=On before host database exit)
   // colocar aqui o código a executar antes do método base "On Exit"
   // da base local
-    :($1=On after host database exit)
+    :($event=On after host database exit)
   // colocar aqui o código a executar antes do método base "On Exit"
   // da base local
  End case

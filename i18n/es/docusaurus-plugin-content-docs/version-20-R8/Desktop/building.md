@@ -533,7 +533,7 @@ You can use this tab to build:
 
 - an evaluation application,
 - a licensed application without embedded license (the user has to have a per-user license),
-- a licensed application with embedded license(s).
+- una aplicación licenciada con licencias anidadas.
 
 #### Build an evaluation application
 
@@ -552,7 +552,7 @@ As soon as the "Build an evaluation application" option is enabled, deployment l
 :::note Notas
 
 - The [`License info`](../commands/license-info.md) command allows you to know the application license type (*.attributes* collection) and its expiration date (*.expirationDate* object).
-- The BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) xml key allows you to manage evaluation versions.
+- La llave xml BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) permite gestionar las versiones de evaluación.
 - The [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
 
 :::
@@ -586,7 +586,7 @@ Puede designar tantos archivos válidos como desee. Al generar una aplicación e
 
 After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
 
-### macOS signing certificate
+### certificado de firma macOS
 
 El generador de aplicaciones puede firmar aplicaciones 4D fusionadas bajo macOS (aplicaciones monopuesto, componentes, 4D Server y partes cliente bajo macOS). La firma de una aplicación autoriza su ejecución por la funcionalidad Gatekeeper de macOS cuando se selecciona la opción "Mac App Store y desarrolladores identificados" (ver "Acerca de Gatekeeper" más adelante).
 

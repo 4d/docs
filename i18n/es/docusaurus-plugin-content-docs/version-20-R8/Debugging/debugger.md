@@ -115,7 +115,7 @@ Si utiliza este botón para modificar un método, las modificaciones sólo será
 
 The current state of the debugger window is automatically saved in the project. Esto incluye:
 
-- the size and position of the window,
+- el tamaño y la posición de la ventana,
 - the position of the division lines,
 - el [modo de visualización](#display-mode),
 - the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.

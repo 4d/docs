@@ -38,12 +38,12 @@ displayed_sidebar: docs
 
 ```4d
   //theWorker メソッド
- var $1 : Text //パラメーター
+ #DECLARE ($action : Text) //パラメーター
  
  Case of
-    :($1="call") // ワーカーをコールした場合
+    :($action="call") // ワーカーをコールした場合
        ... // 処理用のコード
-    :($1="end") // ワーカーの終了を指示した場合
+    :($action="end") // ワーカーの終了を指示した場合
        KILL WORKER
  End case
 ```

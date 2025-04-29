@@ -39,7 +39,7 @@ If you want to get all the computations for an attribute of type Number, you can
 
 **Response**:
 
-````
+```js
 {
     "salary": {
         "count": 4,
@@ -57,7 +57,7 @@ If you want to get all the computations for an attribute of type String, you can
 
 **Response**:
 
-````
+```js
 {
     "salary": {
         "count": 4,
@@ -73,7 +73,7 @@ If you want to just get one calculation on an attribute, you can write the follo
 
 **Response**:
 
-`235000`
+`335000`
 
 
 If you want to perform a calculation on an Object attribute, you can write the following:

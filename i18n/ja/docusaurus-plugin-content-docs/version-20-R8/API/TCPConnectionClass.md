@@ -203,7 +203,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 #### 説明
 
-The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. エラーによって、あるいは`shutdown()` を呼び出したから、あるいはサーバーが閉じられたなどの理由で接続が閉じられている場合には`true` を返します。
+`.closed` プロパティには、<!-- REF #TCPConnection.closed.Summary -->接続が閉じられているかどうかの情報が格納されています<!-- END REF -->。 エラーによって、あるいは`shutdown()` を呼び出したから、あるいはサーバーが閉じられたなどの理由で接続が閉じられている場合には`true` を返します。
 
 <!-- END REF -->
 
@@ -215,7 +215,7 @@ The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whethe
 
 #### 説明
 
-The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
+`.errors` プロパティには<!-- REF #TCPConnection.errors.Summary -->接続に関連したエラーオブジェクトのコレクションが格納されています<!-- END REF -->。 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
 
 | プロパティ  |                                                                                           | 型          | 説明                  |
 | ------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------- |
@@ -234,7 +234,7 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 
 #### 説明
 
-The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.noDelay` プロパティには<!-- REF #TCPConnection.noDelay.Summary -->Nagle のアルゴリズムが無効化されている(`true`) か有効かされている(`false`) かの情報が格納されています<!-- END REF -->。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
@@ -254,7 +254,7 @@ The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whet
 
 #### 説明
 
-The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. 接続がまだ確立されていない場合には、データは接続が確立されたあとに送信されます。
+`send()` 関数は、<!-- REF #TCPConnection.send().Summary -->データをサーバーに送信します<!-- END REF -->。 接続がまだ確立されていない場合には、データは接続が確立されたあとに送信されます。
 
 <!-- END REF -->
 
@@ -274,7 +274,7 @@ The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to th
 
 #### 説明
 
-The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
+`shutdown()` 関数は<!-- REF #TCPConnection.shutdown().Summary -->接続の*write* チャンネル(クライアントからサーバーへのストリーム)を閉じます<!-- END REF -->。その一方で、*read* チャンネル(サーバーからクライアントへのストリーム)は開かれたままとなります。これによって、接続がサーバーによって完全に閉じられるか、エラーが発生するまでは、データを受信し続けることができます。
 
 <!-- END REF -->
 
@@ -294,7 +294,7 @@ The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes t
 
 #### 説明
 
-The `wait()` function <!-- REF #TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
+The `wait()` function <!-- REF #TCPConnection.wait().Summary -->TCP 接続が閉じられるか、あるいは`timeout` 引数で指定した秒数に達するまで待ちます<!-- END REF -->。
 
 :::note
 

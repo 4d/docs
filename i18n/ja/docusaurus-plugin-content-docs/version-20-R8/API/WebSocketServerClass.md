@@ -37,7 +37,7 @@ WebSocketプロトコルは、WebSocketサーバーとクライアント (Webブ
 - サーバー接続を処理するためのユーザークラス
 - メッセージを処理するためのユーザークラス
 
-You must [create the WebSocket server](#4dwebsocketservernew) within a [worker](../Develop/processes.md#worker-processes) to keep the connection alive.
+接続を維持するため、[WebSocketサーバーの作成](#4dwebsocketservernew) は [ワーカー](../Develop/processes.md#worker-プロセス) 内にて行う必要があります。
 
 [4D Webサーバー](WebServerClass.md) を起動しておく必要があります。
 
@@ -309,7 +309,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 | プロパティ    | 型    | 説明                                                                                                                                                                                                                                                                                                        | デフォルト     |
 | -------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | path     | Text | WebSocketサーバーにアクセスするためのパス。 パスが定義されていない場合、WebSocketサーバーはすべての接続を管理します                                                                                                                                                                                                                                       | undefined |
-| dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | テキスト      |
+| dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | text      |
 
 <!-- REF #WebSocketServerClass.connections.Desc -->
 

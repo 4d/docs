@@ -57,21 +57,21 @@ displayed_sidebar: docs
 * ExportBinary メソッドのコードは以下の通りです:
 
 ```4d
- var $1 : Pointer //テーブルポインター
- var $2 : Text //書き出し先ファイルのパス名
- var $3 : Boolean //True: すべてのレコードを書き出し
+ #DECLARE ($tablePtr : Pointer ; $path : Text ; $all : Boolean) //テーブルポインター
+  //書き出し先ファイルのパス名
+ //True: すべてのレコードを書き出し
  var $i : Integer
  var $ref : Text
  $ref:=DOM Create XML Ref("settings-import-export")
   // "$1"テーブルの全レコードまたはカレントセレクションを'4D'バイナリーフォーマットで書き出す。
- DOM SET XML ATTRIBUTE($ref;"table_no";Table($1);"format";"4D";"all_records";$3)
+ DOM SET XML ATTRIBUTE($ref;"table_no";Table($tablePtr);"format";"4D";"all_records";$all)
   // 書き出すフィールドの指定
- For($i;1;Last field number($1))
-    If(Is field number valid($1;$i))
-       $elt:=DOM Create XML element($ref;"field";"table_no";Table($1);"field_no";$i)
+ For($i;1;Last field number($tablePtr))
+    If(Is field number valid($tablePtr;$i))
+       $elt:=DOM Create XML element($ref;"field";"table_no";Table($tablePtr);"field_no";$i)
     End if
  End for
- EXPORT DATA($2;$ref)
+ EXPORT DATA($path;$ref)
  If(OK=0)
     ALERT(Table name($1)+"テーブルを書き出し中にエラーが発生しました。")
  End if

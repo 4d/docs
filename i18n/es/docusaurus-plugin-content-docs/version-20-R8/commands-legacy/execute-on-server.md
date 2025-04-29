@@ -74,8 +74,8 @@ Ejecuta el método con información local como parámetros en una máquina remot
 El método WriteLog se ejecutará en el servidor. Contiene, por ejemplo:
 
 ```4d
- var $1;$2;$3 : Text
- TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$1+".txt";$2+" "+$3)
+ #DECLARE ($user : Text; $date : Text ; $time : Text)
+ TEXT TO DOCUMENT(Get 4D folder(Logs folder)+"Log"+$user+".txt";$date+" "+$time)
 ```
 
 ## Ejemplo 2 
@@ -102,8 +102,7 @@ Con la importación de datos clásica, 4D Client analiza el archivo ASCII, luego
   // CLIENTE IMPORTAR ( Puntero ; Alfa )
   // CLIENTE IMPORTAR ( -> [Tabla] ; Formulario de entrada )
  
- var $1 : Pointer
- var $2 : Text
+ #DECLARE ($tablePtr : Pointer ; $form : Text)
  var $vhDocRef : Time
  var $vxData : Blob
  var spErrCode : Integer
@@ -150,9 +149,8 @@ He aquí el método de proyecto SERVIDOR IMPORTAR ejecutado como procedimiento a
   // SERVIDOR IMPORTAR ( Entero largo ; Alfa ; BLOB )
   // SERVIDOR IMPORTAR ( Número de tabla ; Formulario de entrada ; Datos importados )
  
- var $1 : Integer
- var $2 : Text
- var $3 : Blob
+#DECLARE ($tabNum : Integer ; $form : Text ; $data : Blob)
+
  var spErrCode : Integer
  
   // La operación no ha terminado aún, asignemos 1 a spErrCode

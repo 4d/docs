@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | -------------------------------------------------- | --------------------------- | ---------------------------------- |
 | winRef     | Integer                                            | &#8594; | Número de referencia de la ventana |
 | image      | Picture                                            | &#8594; | Custom icon                        |
-| file       | 4D.File, 4D.Folder | &#8594; | File path or folder path           |
+| file       | 4D.File, 4D.Folder | &#8594; | Ruta del archivo o de la carpeta   |
 
 <!-- END REF-->
 

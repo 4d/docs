@@ -62,7 +62,7 @@ Los dos métodos de proyecto siguientes permiten almacenar y recuperar rápidame
   // Método de proyecto GUARDAR VARIABLES EN BLOB
   // GUARDAR VARIABLES EN BLOB ( Puntero{ ; Puntero... { ; Puntero} } )
   // GUARDAR VARIABLES EN BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam : Integer
  
  SET BLOB SIZE($1->;0)
@@ -74,7 +74,7 @@ Los dos métodos de proyecto siguientes permiten almacenar y recuperar rápidame
   // Método de proyecto RECUPERAR VARIABLES DEL BLOB
   // RECUPERAR VARIABLES DEL BLOB ( Puntero{ ; Puntero... { ; Puntero} } )
   // RECUPERAR VARIABLES DEL BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam;$vlOffset : Integer
  
  $vlOffset:=0
@@ -99,12 +99,11 @@ Los siguientes métodos de proyecto le permiten almacenar y recuperar rápidamen
   // Método de proyecto SAVE ARRAY
   // SAVE ARRAY (Text ; Pointer)
   // SAVE ARRAY (Document ; -> Array)
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxArrayData : Blob
- VARIABLE TO BLOB($2->;$vxArrayData) // Almacenar el array en el BLOB
+ VARIABLE TO BLOB($ptrArray->;$vxArrayData) // Almacenar el array en el BLOB
  COMPRESS BLOB($vxArrayData) // Comprimir el BLOB
- BLOB TO DOCUMENT($1;$vxArrayData) // Guardar el BLOB en disco
+ BLOB TO DOCUMENT($doc;$vxArrayData) // Guardar el BLOB en disco
 ```
   
   
@@ -112,12 +111,11 @@ Los siguientes métodos de proyecto le permiten almacenar y recuperar rápidamen
   // Método proyecto LOAD ARRAY
   // LOAD ARRAY (Text ; Pointer)
   // LOAD ARRAY (Document ; -> Array)
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxArrayData : Blob
- DOCUMENT TO BLOB($1;$vxArrayData) // Cargar el BLOB del disco
+ DOCUMENT TO BLOB($doc;$vxArrayData) // Cargar el BLOB del disco
  EXPAND BLOB($vxArrayData) // Expandir el BLOB
- BLOB TO VARIABLE($vxArrayData;$2->) // Recuperar el array del BLOB
+ BLOB TO VARIABLE($vxArrayData;$ptrArray->) // Recuperar el array del BLOB
 ```
   
   

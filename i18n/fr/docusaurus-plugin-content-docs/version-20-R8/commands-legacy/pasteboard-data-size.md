@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Si le conteneur de données est vide ou ne contient pas de données du type spécifié, la fonction retourne une erreur -102\. Si le conteneur contient des données du type spécifié, la fonction retourne la taille des données exprimée en octets. 
 
-Passez dans *typeDonnées* une valeur définissant le type de données à tester. Vous pouvez passer une signature 4D, un type UTI (Mac OS), un nom/numéro de format (Windows), ou un type de 4 caractères (compatibilité). Pour plus d'informations sur ces types, reportez-vous à la section *Gestion du conteneur de données*. 
+Passez dans *typeDonnées* une valeur définissant le type de données à tester. Vous pouvez passer une signature 4D, un type UTI (macOS), un nom/numéro de format (Windows), ou un type de 4 caractères (compatibilité). Pour plus d'informations sur ces types, reportez-vous à la section *Gestion du conteneur de données*. 
 
 Après avoir vérifié que le conteneur contient bien des données du type que vous voulez, vous pouvez les récupérer à l'aide d'une des commandes suivantes :
 

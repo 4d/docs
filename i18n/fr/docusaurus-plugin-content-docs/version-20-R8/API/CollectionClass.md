@@ -82,10 +82,10 @@ Une collection est initialisée avec les commandes [`New collection`](../command
 
 <!-- REF #collection.at().Params -->
 
-| Paramètres | Type    |                             | Description                   |
-| ---------- | ------- | :-------------------------: | ----------------------------- |
-| index      | Integer |              ->             | Index de l'élément à renvoyer |
-| Résultat   | any     | <- | L'élément à cet index         |
+| Paramètres | Type    |                             | Description                    |
+| ---------- | ------- | :-------------------------: | ------------------------------ |
+| index      | Integer |              ->             | Indice de l'élément à renvoyer |
+| Résultat   | any     | <- | L'élément à cet indice         |
 
 <!-- END REF -->
 
@@ -1002,7 +1002,7 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 
 | Paramètres | Type                        |                             | Description                                                           |
 | ---------- | --------------------------- | :-------------------------: | --------------------------------------------------------------------- |
-| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter la recherche                          |
+| startFrom  | Integer                     |              ->             | Indice d'élément à partir duquel débuter la recherche                 |
 | formula    | 4D.Function |              ->             | Objet formule                                                         |
 | methodName | Text                        |              ->             | Nom de méthode                                                        |
 | param      | any                         |              ->             | Paramètre(s) à passer à *formula* ou *methodName*  |
@@ -1090,7 +1090,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 | Paramètres | Type                        |                             | Description                                                            |
 | ---------- | --------------------------- | :-------------------------: | ---------------------------------------------------------------------- |
-| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter la recherche                           |
+| startFrom  | Integer                     |              ->             | Indice d'élément à partir duquel débuter la recherche                  |
 | formula    | 4D.Function |              ->             | Objet formule                                                          |
 | methodName | Text                        |              ->             | Nom de méthode                                                         |
 | param      | any                         |              ->             | Paramètre(s) à passer à *formula* ou *methodName*   |
@@ -1354,11 +1354,11 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <!-- REF #collection.includes().Params -->
 
-| Paramètres | Type       |                             | Description                                      |
-| ---------- | ---------- | :-------------------------: | ------------------------------------------------ |
-| toSearch   | expression |              ->             | Expression à rechercher dans la collection       |
-| startFrom  | Integer    |              ->             | Elément à partir duquel débuter la recherche     |
-| Résultat   | Boolean    | <- | True si *toSearch* est trouvé dans la collection |
+| Paramètres | Type       |                             | Description                                           |
+| ---------- | ---------- | :-------------------------: | ----------------------------------------------------- |
+| toSearch   | expression |              ->             | Expression à rechercher dans la collection            |
+| startFrom  | Integer    |              ->             | Indice d'élément à partir duquel débuter la recherche |
+| Résultat   | Boolean    | <- | True si *toSearch* est trouvé dans la collection      |
 
 <!-- END REF -->
 
@@ -1419,8 +1419,8 @@ Optionnellement, vous pouvez passer l'indice de la collection à partir duquel d
 | Paramètres | Type       |                             | Description                                                                        |
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------- |
 | toSearch   | expression |              ->             | Expression à rechercher dans la collection                                         |
-| startFrom  | Integer    |              ->             | Elément à partir duquel débuter la recherche                                       |
-| Résultat   | Integer    | <- | Numéro de la première occurrence de toSearch dans la collection, -1 si non trouvée |
+| startFrom  | Integer    |              ->             | Indice d'élément à partir duquel débuter la recherche                              |
+| Résultat   | Integer    | <- | Indice de la première occurrence de toSearch dans la collection, -1 si non trouvée |
 
 <!-- END REF -->
 
@@ -1479,7 +1479,7 @@ Optionnellement, vous pouvez passer l'indice de la collection à partir duquel d
 | ----------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------- |
 | queryString | Text       |              ->             | Critère(s) de recherche                                                                          |
 | value       | any        |              ->             | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne     |
-| Résultat    | Collection | <- | Numéro(s) d'élément(s) de la collection répondant aux critères de queryString |
+| Résultat    | Collection | <- | Indice(s) d'élément(s) de la collection répondant aux critères de queryString |
 
 <!-- END REF -->
 
@@ -1675,7 +1675,7 @@ $last:=$emptyCol.last() // retourne Undefined
 | Paramètres | Type       |                             | Description                                                                       |
 | ---------- | ---------- | :-------------------------: | --------------------------------------------------------------------------------- |
 | toSearch   | expression |              ->             | Elément à chercher dans la collection                                             |
-| startFrom  | Integer    |              ->             | Elément à partir duquel débuter la recherche                                      |
+| startFrom  | Integer    |              ->             | Indice d'élément à partir duquel débuter la recherche                             |
 | Résultat   | Integer    | <- | Numéro de la dernière occurrence de toSearch dans la collection, -1 si non trouvé |
 
 <!-- END REF -->
@@ -2280,10 +2280,9 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 La méthode ***sortCollection*** :
 
 ```4d
-var $1 : Object
-var $2: Integer // option de tri
+#DECLARE ($toSort : Object ; $option : Integer)
 
-$1.result:=(Compare strings($1.value;$1.value2;$2)<0)
+$toSort.result:=(Compare strings($toSort.value;$toSort.value2;$option2)<0)
 ```
 
 <!-- END REF -->
@@ -3120,14 +3119,13 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 <!-- REF #collection.some().Params -->
 
-| Paramètres | Type |     | Description |
-| ---------- | ---- | :-: | ----------- |
-
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |any |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+| Paramètres | Type                        |                             | Description                                  |
+| ---------- | --------------------------- | :-------------------------: | -------------------------------------------- |
+| startFrom  | Integer                     |              ->             | Elément à partir duquel débuter l'évaluation |
+| formula    | 4D.Function |              ->             | Objet formule                                |
+| methodName | Text                        |              ->             | Nom de méthode                               |
+| param      | any                         |              ->             | Paramètre(s) à passer     |
+| Résultat   | Boolean                     | <- | Vrai si au moins un élément a réussi le test |
 
 <!-- END REF -->
 

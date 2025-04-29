@@ -87,11 +87,10 @@ displayed_sidebar: docs
 例題  
 
 ```4d
- var $1 : Blob
- var $0 : Boolean
- WEB SERVICE SET PARAMETER("MyXMLBlob";$1)
+ #DECLARE($param : Blob) -> $result : Boolean 
+WEB SERVICE SET PARAMETER("MyXMLBlob";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual in)
- WEB SERVICE GET RESULT($0;"MyOutputVar";*)
+ WEB SERVICE GET RESULT($result;"MyOutputVar";*)
 ```
 
 ### RPCモード、シンプルinputと複合output 
@@ -101,13 +100,11 @@ displayed_sidebar: docs
 例題  
   
 ```4d
- var $0 : Blob
- var $1 : Boolean
- 
- WEB SERVICE SET PARAMETER("MyInputVar";$1)
+ #DECLARE($param : Blob) -> $result : Blob 
+ WEB SERVICE SET PARAMETER("MyInputVar";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual out)
  
- WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
+ WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
 ```
 
 ### RPCモード、複合inputとoutput 
@@ -115,12 +112,11 @@ displayed_sidebar: docs
 この場合、*complexType* 引数にはWeb Service Manual定数を指定します。それぞれのinputとoutput引数は、先に説明した2つの設定に従い、XML要素の形でBLOBに格納しなければなりません。 例題  
   
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MyXMLInputBlob";$1)
+ WEB SERVICE SET PARAMETER("MyXMLInputBlob";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual)
- WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
+ WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
 ```
 
 ### DOCモード 
@@ -131,12 +127,11 @@ DOC Webサービスのプロクシ呼び出しメソッドは、複合型INPUT O
 例題  
   
 ```4d
- var $0 : Blob
- var $1 : Blob
+ #DECLARE($param : Blob) -> $result : Blob
  
- SET WEB SERVICE PARAMETER("MyXMLInput";$1)
+ SET WEB SERVICE PARAMETER("MyXMLInput";$param)
  WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual)
- WEB SERVICE GET RESULT($0;"MyXMLOutput";*)
+ WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
 ```
 
 **注:** DOC Webサービスの場合、引数として渡される文字列の値 (上記の“MyXMLInput” と “MyXMLOutput”) は重要ではありません。空の文字列を渡すことさえできます。実際、これらの値はXMLドキュメントを含むSOAPリクエストでは使用されません。にもかか わらずこれらの引数は必須です。

@@ -47,19 +47,19 @@ Lorsqu'un BLOB est compressé, la méthode projet suivante vous permet de conna�
   // Place gagnée par compression (Pointeur {; Pointeur } ) -> Entier long
   // Place gagnée par compression ( -> BLOB {; -> octetsGagnés } ) -> Pourcentage
  
- var $1;$2 : Pointer
- var $0;$vlCompressé;$vlTailleDécompressée;$vlTailleCourante : Integer
+ #DECLARE ($blob : Pointer ; $saved : Pointer ) -> $percent : Integer
+ var $vlCompressé;$vlTailleDécompressée;$vlTailleCourante : Integer
  
- BLOB PROPERTIES($1->;$vlCompressé;$vlTailleDécompressée;$vlTailleCourante)
+ BLOB PROPERTIES($blob->;$vlCompressé;$vlTailleDécompressée;$vlTailleCourante)
  If($vlTailleDécompressée=0)
-    $0:=0
+    $percent:=0
     If(Count parameters>=2)
-       $2->:=0
+       $saved->:=0
     End if
  Else
-    $0:=100-(($vlTailleCourante/$vlTailleDécompressée)*100)
+    $percent:=100-(($vlTailleCourante/$vlTailleDécompressée)*100)
     If(Count parameters>=2)
-       $2->:=$vlTailleDécompressée-$vlTailleCourante
+       $saved->:=$vlTailleDécompressée-$vlTailleCourante
     End if
  End if
 ```

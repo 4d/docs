@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.VOLUME LIST.Summary-->O comando VOLUME LIST preenche o array *volumes*, tipo de texto, com os nomes dos volumes definidos (Windows) ou montados (Mac OS) em sua máquina.<!-- END REF-->  
+<!--REF #_command_.VOLUME LIST.Summary-->O comando VOLUME LIST preenche o array *volumes*, tipo de texto, com os nomes dos volumes definidos (Windows) ou montados (macOS) em sua máquina.<!-- END REF-->  
 
 * Em Macintosh, retorna a lista de volumes visíveis ao nível do Finder. Somente são devolvidos os nomes dos volumes (por exemplo "MacHD", "BootCamp", etc.).
 * Em Windows, retorna a lista dos volumes atualmente definidos sem importar se o volume está presente fisicamente (por exemplo o volume E:\\ será devolvido sem importar ou não se há um CD ou DVD no drive). Os nomes dos volumes estão seguidos pelo caracter separador de pastas ("C:\\").

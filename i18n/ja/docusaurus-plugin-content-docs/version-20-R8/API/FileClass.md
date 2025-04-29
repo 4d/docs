@@ -658,7 +658,7 @@ $infoPlistFile.setAppInfo($info)
 
 | 引数          | 型       |    | 説明            |
 | ----------- | ------- | -- | ------------- |
-| テキスト        | Text    | -> | ファイルに保存するテキスト |
+| text        | Text    | -> | ファイルに保存するテキスト |
 | charSetName | Text    | -> | 文字セットの名前      |
 | charSetNum  | Integer | -> | 文字セットの番号      |
 | breakMode   | Integer | -> | 改行の処理モード      |
@@ -694,7 +694,7 @@ $infoPlistFile.setAppInfo($info)
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
-**互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
+**互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 詳細はdoc.4d.com 上の[互換性ページ](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.ja.html) を参照してください。
 
 #### 例題
 

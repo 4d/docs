@@ -29,13 +29,13 @@ This command is typically called along with the [Open form window](../commands-l
 
 The **DIALOG** command can also be used instead of [ALERT](../commands-legacy/alert.md), [CONFIRM](../commands-legacy/confirm.md) or [Request](../commands-legacy/request.md) when the information to be presented or gathered is more complex than those commands can manage.
 
-In the *form* parameter, you can pass:
+En el parámetro *form*, puede pasar:
 
 - the name of a form (project form or table form) to use;
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use;
 - an object containing a description of the form to use.
 
-Optionally, you can pass parameter(s) to the *form* using a "form data" object. Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. For example, if you use a form data object containing {"version";"12"}, you will be able to get or set the value of the "version" property in the form by calling:
+Opcionalmente, puede pasar uno o varios parámetros al *form* utilizando un objeto "form data". Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. For example, if you use a form data object containing {"version";"12"}, you will be able to get or set the value of the "version" property in the form by calling:
 
 ```4d
  $v:=Form.version //"12"
@@ -46,7 +46,7 @@ To fill the "form data" object, you have two possibilities:
 
 - use the *formData* parameter. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
 
-- [asociar una clase usuario al formulario](../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. The object properties and functions will be automatically available through the object returned by [Form](form.md). You could write for example `Form.myFunction()`.
+- [asociar una clase usuario al formulario](../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. The object properties and functions will be automatically available through the object returned by [Form](form.md). Puede escribir por ejemplo `Form.myFunction()`.
 
 :::note
 
@@ -164,7 +164,7 @@ The altered form is displayed with the title, logo and border modified:
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-## System variables and sets
+## Variables y conjuntos sistema
 
 After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is canceled, OK is set to 0.
 

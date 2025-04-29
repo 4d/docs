@@ -47,18 +47,14 @@ La méthode projet marqueurTemps suivante calcule le marqueur de temps par rappo
   // marqueurTemps { ( Date ; Heure ) } -> Entier long
   // marqueurTemps { ( Date ; Heure ) } -> Nombre de secondes depuis le 1er janvier 1995
  
- var $1;$vdDate : Date
- var $2;$vhTime : Time
- var $0 : Integer
+ #DECLARE ($vdDate : Date ; $vhTime : Time) : Integer
  
  If(Count parameters=0)
     $vdDate:=Current date
     $vhTime:=Current time
- Else
-    $vdDate:=$1
-    $vhTime:=$2
  End if
- $0:=(($vdDate-!01/01/95!)*86400)+$vhTime
+ return (($vdDate-!01/01/95!)*86400)+$vhTime
+
 ```
 
 **Note :** Avec cette méthode, vous pouvez encoder toutes les dates et les heures situées entre le *01/01/95* à *00:00:00* et le *19/01/2063* à *03:14:07*, ce qui représente l'intervalle de données exploitables par un entier long (de *0* à *2^31* moins 1).
@@ -70,19 +66,17 @@ A l'inverse, les méthodes projet Marqueur vers date et Marqueur vers heure vous
   // Marqueur vers date ( Entier long ) -> Date
   // Marqueur vers date ( Marqueur ) -> Date extraite
  
- var $0 : Date
- var $1 : Integer
- 
- $0:=!01/01/95!+($1\86400)
+#DECLARE ($timeStamp : Integer) : Date
+
+return !01/01/95!+($timeStamp\86400)
  
   // Méthode projet Marqueur vers heure
   // Marqueur vers heure ( Entier long ) -> Heure
   // Marqueur vers heure ( Marqueur ) -> Heure extraite
  
- var $0 : Time
- var $1 : Integer
- 
- $0:=Time(Time string(†00:00:00†+($1%86400)))
+#DECLARE ($timeStamp : Integer) : Time
+
+return Time(Time string(?00:00:00?+($timeStamp %86400)))
 ```
 
 Pour vous assurer que les marqueurs des enregistrements sont correctement mis à jour, quelle que soit la manière dont ils sont créés ou modifiés, il suffit de faire appliquer cette règle par le trigger de la table *\[Documents\]*:
@@ -104,7 +98,7 @@ Une fois que cela est implémenté dans votre base, il suffit d'écrire la méth
 ```4d
   //Méthode projet CREER DOCUMENTATION
  
- C_STRING(255;$vsPath;$vsDocPathName;$vsDocName)
+ C_TEXT($vsPath;$vsDocPathName;$vsDocName)
  var $vlDoc : Integer
  var $vbOnWindows;$vbDoIt;$vbLocked;$vbInvisible : Boolean
  var $vhDocRef;$vhCreatedAt;$vhModifiedAt : Time

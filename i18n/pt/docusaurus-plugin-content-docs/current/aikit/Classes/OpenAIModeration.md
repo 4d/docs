@@ -1,0 +1,19 @@
+---
+id: openaimoderation
+title: OpenAIModeration
+---
+
+# OpenAIModeration
+
+The `OpenAIModeration` class is designed to handle moderation results from the OpenAI API. It contains properties for storing the moderation ID, model used, and the results of the moderation.
+
+https://platform.openai.com/docs/api-reference/moderations/object
+
+## Propriedades
+
+| Propriedade | Tipo                                            | Descrição                                                      |
+| ----------- | ----------------------------------------------- | -------------------------------------------------------------- |
+| `id`        | Text                                            | The ID associated with the moderation request. |
+| `model`     | Text                                            | The moderation model used for processing.      |
+| `results`   | Collection                                      | A collection of moderation results.            |
+| `elemento`  | [OpenAIModerationItem](OpenAIModerationItem.md) | The first item from the results.               |

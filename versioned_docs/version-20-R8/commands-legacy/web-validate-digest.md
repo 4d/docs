@@ -33,21 +33,19 @@ Example using *On Web Authentication Database Method* in Digest mode:
 
 ```4d
   // On Web Authentication Database Method
- var $1;$2;$5;$6;$3;$4 : Text
- var $user : Text
- var $0 : Boolean
- $0:=False
+ #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+ $result:=False
  $user:=$5
   //For security reasons, refuse names containing @
  If(WithWildcard($user))
-    $0:=False
+    $result:=False
   //The WithWildcard method is described in the "On Web Authentication Database Method" section
  Else
     QUERY([WebUsers];[WebUsers]User=$user)
     If(OK=1)
-       $0:=WEB Validate digest($user;[WebUsers]password)
+       $result:=WEB Validate digest($user;[WebUsers]password)
     Else
-       $0:=False //User does not exist
+       $result:=False //User does not exist
     End if
  End if
 ```

@@ -19,7 +19,7 @@ As ligações cliente WebSocket são úteis, por exemplo, para receber dados fin
 
 Neste exemplo, criamos um cliente WebSocket muito básico.
 
-1. Create the `WSConnectionHandler` user class containing callback function(s) used to handle WebSocket event callbacks:
+1. Criar a classe usuário `WSConnectionHandler` que contém as funções de retorno de chamada utilizadas para tratar os retornos de chamada de eventos WebSocket:
 
 ```4d
 // WSConnectionHandler class

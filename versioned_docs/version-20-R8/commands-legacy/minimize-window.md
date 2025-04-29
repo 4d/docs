@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number or if omitted, all the current process frontmost windows (Windows) or current process frontmost window (Mac OS) |
+| window | Integer | &#8594;  | Window reference number or if omitted, all the current process frontmost windows (Windows) or current process frontmost window (macOS) |
 
 <!-- END REF-->
 
@@ -35,7 +35,7 @@ Reduction/zoom box on Mac OS
 
 If the windows to which the command is applied were not previously maximized (manually or using [MAXIMIZE WINDOW](maximize-window.md)), or if the window type does not include a zoom box, the command has no effect. For more information on window types, refer to the *Window Types (compatibility)* section. 
 
-**Note:** This function is not to be confused with minimizing a window to a button (Windows) or in the Dock (Mac OS), which is triggered by a click on the button shown:
+**Note:** This function is not to be confused with minimizing a window to a button (Windows) or in the Dock (macOS), which is triggered by a click on the button shown:
 
 ![](../assets/en/commands/pict39371.en.png)  
 Windows

@@ -1,6 +1,6 @@
 ---
 id: Math_theme
-title: Math
+title: Funções matemáticas
 slug: /commands/theme/Math
 ---
 

@@ -38,12 +38,12 @@ En el método (*theWorker*), se añade código para manejar esta situación:
 
 ```4d
   //método theWorker
- var $1 : Text //param
+ #DECLARE ($action : Text) //param
  
  Case of
-    :($1="call") //se llama al worker
+    :($action="call") //se llama al worker
        ... //do something
-    :($1="end") //se le pide al worker suicidarse
+    :($action="end") //se le pide al worker suicidarse
        KILL WORKER
  End case
 ```

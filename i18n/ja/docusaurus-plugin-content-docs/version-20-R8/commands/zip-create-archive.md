@@ -118,8 +118,8 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 `myFormulaCompressingMethod`:
 
 ```4d
- var $1 : Integer
- Progress SET PROGRESS(progID;Num($1/100))
+ #DECLARE ($current : Integer)
+ Progress SET PROGRESS(progID;Num($current /100))
 ```
 
 ## 例題 4

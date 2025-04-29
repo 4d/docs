@@ -47,18 +47,14 @@ displayed_sidebar: docs
   //Time stamp { ( 日付 ; 時間 ) } -> 倍長整数
   //Time stamp { ( 日付 ; 時間 ) } -> 1995年1月1日から経過した数秒
  
- var $1;$vdDate : Date
- var $2;$vhTime : Time
- var $0 : Integer
+ #DECLARE ($vdDate : Date ; $vhTime : Time) : Integer
  
  If(Count parameters=0)
     $vdDate:=Current date
     $vhTime:=Current time
- Else
-    $vdDate:=$1
-    $vhTime:=$2
  End if
- $0:=(($vdDate-!01/01/95!)*86400)+$vhTime
+ return (($vdDate-!01/01/95!)*86400)+$vhTime
+
 ```
 
 **注:** このメソッドを使用すると、日付と時間を1995/01/01 00:00:00から2063/01/19 03:14:07の間でコード化できるため、倍長整数の0から2^31 -1の範囲に対応できます。
@@ -70,10 +66,9 @@ displayed_sidebar: docs
   //Time stamp to date ( 倍長整数 ) -> 日付
   //Time stamp to date ( Time stamp ) -> 抽出する日付
  
- var $0 : Date
- var $1 : Integer
- 
- $0:=!01/01/95!+($1\86400)
+#DECLARE ($timeStamp : Integer) : Date
+
+return !01/01/95!+($timeStamp\86400)
 ```
   
   
@@ -107,7 +102,7 @@ displayed_sidebar: docs
 ```4d
   //CREATE DOCUMENTATIONプロジェクトメソッド
  
- C_STRING(255;$vsPath;$vsDocPathName;$vsDocName)
+ C_TEXT($vsPath;$vsDocPathName;$vsDocName)
  var $vlDoc : Integer
  var $vbOnWindows;$vbDoIt;$vbLocked;$vbInvisible : Boolean
  var $vhDocRef;$vhCreatedAt;$vhModifiedAt : Time

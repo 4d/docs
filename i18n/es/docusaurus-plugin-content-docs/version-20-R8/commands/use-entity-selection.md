@@ -48,11 +48,11 @@ USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla
 
 ## Propiedades
 
-|                           |                             |
-| ------------------------- | --------------------------- |
-| Número de comando         | 1513                        |
-| Hilo seguro               | &check; |
-| Changes current record    |                             |
-| Changes current selection |                             |
+|                            |                             |
+| -------------------------- | --------------------------- |
+| Número de comando          | 1513                        |
+| Hilo seguro                | &check; |
+| Changes current record     |                             |
+| Cambia la selección actual |                             |
 
 

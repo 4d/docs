@@ -60,7 +60,7 @@ Les deux méthodes projet suivantes vous permettent de stocker et de récupérer
   // Méthode projet STOCKER VARIABLES DANS BLOB
   // STOCKER VARIABLES DANS BLOB ( Pointeur { ; Pointeur ... { ; Pointeur } } )
   // STOCKER VARIABLES DANS BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam : Integer
  
  SET BLOB SIZE($1->;0)
@@ -72,7 +72,7 @@ Les deux méthodes projet suivantes vous permettent de stocker et de récupérer
   // Méthode projet RECUPERER VARIABLES DANS BLOB
   // RECUPERER VARIABLES DANS BLOB ( Pointeur { ; Pointeur ... { ; Pointeur } } )
   // RECUPERER VARIABLES DANS BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
- var ${1} : Pointer
+ #DECLARE(... : Pointer)
  var $vlParam;$vlOffset : Integer
  
  $vlOffset:=0
@@ -97,24 +97,22 @@ Les méthodes projet suivantes vous permettent de stocker et de récupérer rapi
   // Méthode projet STOCKER VARIABLES
   // STOCKER VARIABLES ( Texte ; Pointeur )
   // STOCKER VARIABLES ( Document ; -> Tableau )
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxDonnéesTableau : Blob
- VARIABLE TO BLOB($2->;$vxDonnéesTableau) // Stocker le tableau dans le BLOB
+ VARIABLE TO BLOB($ptrArray->;$vxDonnéesTableau) // Stocker le tableau dans le BLOB
  COMPRESS BLOB($vxDonnéesTableau) // Compresser le BLOB
- BLOB TO DOCUMENT($1;$vxDonnéesTableau) // Enregistrer le BLOB sur disque
+ BLOB TO DOCUMENT($doc;$vxDonnéesTableau) // Enregistrer le BLOB sur disque
 ```
 
 ```4d
   // Méthode projet CHARGER VARIABLES
   // CHARGER VARIABLES ( Texte ; Pointeur )
   // CHARGER VARIABLES ( Document ; -> Tableau )
- var $1 : Text
- var $2 : Pointer
+ #DECLARE($doc : Text ; $ptrArray : Pointer)
  var $vxDonnéesTableau : Blob
- DOCUMENT TO BLOB($1;$vxDonnéesTableau) // Charger le BLOB du disque
+ DOCUMENT TO BLOB($doc;$vxDonnéesTableau) // Charger le BLOB du disque
  EXPAND BLOB($vxDonnéesTableau) // Décompresser le BLOB
- BLOB TO VARIABLE($vxDonnéesTableau;$2->) // Récupérer le tableau du BLOB
+ BLOB TO VARIABLE($vxDonnéesTableau;$ptrArray->) // Récupérer le tableau du BLOB
 ```
 
 Lorsque ces méthodes ont été ajoutées à votre application, vous pouvez écrire :

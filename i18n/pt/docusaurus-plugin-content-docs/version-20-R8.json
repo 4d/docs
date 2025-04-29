@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "20 R8 BETA",
+    "message": "20 R8",
     "description": "The label for version 20-R8"
   },
   "sidebar.docs.category.Getting Started": {
@@ -320,11 +320,11 @@
     "description": "The generated-index page title for category Mail in sidebar docs"
   },
   "sidebar.docs.category.Math": {
-    "message": "Math",
+    "message": "Funções matemáticas",
     "description": "The label for category Math in sidebar docs"
   },
   "sidebar.docs.category.Math.link.generated-index.title": {
-    "message": "Math",
+    "message": "Funções matemáticas",
     "description": "The generated-index page title for category Math in sidebar docs"
   },
   "sidebar.docs.category.Menus": {

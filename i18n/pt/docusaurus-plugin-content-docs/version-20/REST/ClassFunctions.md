@@ -439,19 +439,17 @@ Corpo do pedido:
 Neste exemplo, associamos uma escola existente a uma entidade Students. A classe `StudentEntity` tem um API:
 
 ```
-// StudentsEntity class Class extends Entity
+// StudentsEntity class
 
-exposed Function putToSchool()
- var $1, $school , $0, $status : Object
+Class extends Entity
 
-  //$1 is a Schools entity
- $school:=$1
-  //Associate the related entity school to the current Students entity
- This.school:=$school
+exposed Function putToSchool($school : Object) -> $status : Object
 
- $status:=This.save()
+        //$school is a Schools entity
+        //Associate the related entity school to the current Students entity
+    This.school:=$school
 
- $0:=$status
+    $status:=This.save()
 ```
 
 You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:

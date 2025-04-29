@@ -36,7 +36,7 @@ By default when used without any parameters, **Process activity** returns an obj
 On 4D Server, you can filter information to be returned using the optional *sessionID* and *options* parameters:
 
 - If you pass a user session ID in the *sessionID* parameter, the command only returns information related to this session. By default if the *options* parameter is omitted, the returned object contains a collection with all processes related to the session and a collection with a single object describing the session. If you pass an invalid session ID, a **null** object is returned.
-- You can select the collection(s) to return by passing one of the following constants in the *options* parameter:
+- Você pode selecionar a(s) coleção(ões) a retornar passando uma das seguintes constantes no parâmetro *options*:
 
 | Parâmetros             | Valor | Comentário                                                                       |
 | ---------------------- | ----- | -------------------------------------------------------------------------------- |

@@ -41,7 +41,7 @@ Dado que un hilo se maneja de forma independiente a partir del método del proce
 
 La propiedad "seguridad de hilo" de cada elemento depende del elemento en sí:
 
-- Comandos 4D: hilo seguro es una propiedad interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. También puede utilizar el comando [`Nombre del comando`](../commands/command-name.md) para saber si un comando es hilo seguro. Gran parte de los comandos 4D pueden ejecutarse en modo apropiativo.
+- Comandos 4D: hilo seguro es una propiedad interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. También puede utilizar el comando [`Nombre del comando`](../commands-legacy/command-name.md) para saber si un comando es hilo seguro. Gran parte de los comandos 4D pueden ejecutarse en modo apropiativo.
 - Métodos de proyecto: las condiciones para seguridad de hilo se listan en [este párrafo](#writing-a-thread-safe-method).
 
 Básicamente, el código que se ejecuta en hilos apropiativos no puede llamar a las partes con las interacciones externas, tal como el código plug-in o las variables interproceso. Los accesos a los datos, sin embargo, son permitidos desde el servidor de datos 4D que soporta la ejecución apropiativa.

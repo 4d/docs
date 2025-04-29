@@ -32,7 +32,7 @@ displayed_sidebar: docs
 By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. Se soportan las siguientes sintaxis:
 
 - **Compile project**(): compiles the opened project using the options defined in the Structure Settings
-- **Compile project**(*options*): compiles the opened project. The *options* defined override the Structure Settings
+- **Compile project**(*options*): compila el proyecto abierto. The *options* defined override the Structure Settings
 - **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
 - **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
 
@@ -81,7 +81,7 @@ The object returned by **Compile project** has up to three properties:
 | \[\].isError                                     | Boolean              | Error if True, warning otherwise                                                                                                         |
 | \[\].message                                     | Text                 | Mensaje de error                                                                                                                         |
 | \[\].code                                        | Object               | [objeto código](#code-object)                                                                                                            |
-| \[\].line                                        | Number               | Line number of error in the code. For class methods, line number in the function                                         |
+| \[\].line                                        | Number               | Número de línea del error en el código. For class methods, line number in the function                                   |
 | \[\].lineInFile                                  | Number               | Line number in the file (different from "line" for class methods, and takes into account the %attributes prefix line) |
 | symbols                                                                                                                | Object               | **Available only if generateSymbols option is set to True:**                                                             |
 | symbols.interprocessVariables                                                                          | Object               | List of all interprocess variables                                                                                                       |
@@ -95,20 +95,20 @@ The object returned by **Compile project** has up to three properties:
 | symbols.localVariables[].variables | Collection           | Colección de [objetos variables](#variable-objects)                                                                                      |
 | symbols.methods                                                                                        | Colección de objetos | Lista de métodos                                                                                                                         |
 | symbols.methods\[\].code         | Object               | [objeto código](#code-object)                                                                                                            |
-| symbols.methods\[\].callCount    | Number               | Number of times this method has been called                                                                                              |
-| symbols.methods\[\].params       | Collection           | Collection of parameter types (Value type numerical codes)                                                            |
-| symbols.methods\[\]. threadSafe  | Boolean              | Indicates if this method is thread safe                                                                                                  |
+| symbols.methods\[\].callCount    | Number               | Número de veces que se ha llamado a este método                                                                                          |
+| symbols.methods\[\].params       | Collection           | Colección de tipos de parámetros (Códigos numéricos de tipos de valores)                                              |
+| symbols.methods\[\]. threadSafe  | Boolean              | Indica si este método es hilo seguro                                                                                                     |
 
 Para obtener más información, consulte [Herramientas de compilación](../Project/compiler.md#compilation-tools).
 
-## variable objects
+## Objetos variables
 
 `interprocessVariables.variables` and `processVariables.variables` contain objects with the following structure:
 
 | **Propiedad**  | **Tipo** | **Description**                                                                                           |
 | -------------- | -------- | --------------------------------------------------------------------------------------------------------- |
 | name           | Text     | Nombre de la variable                                                                                     |
-| type           | number   | Type of the variable (like Value type command)                                         |
+| type           | number   | Tipo de la variable (como el comando Value type)                                       |
 | arrayDimension | number   | For arrays only: 1 for mono dimension arrays, 2 for two-dimension arrays                  |
 | code           | Object   | For process and interprocess variables: descriptor of where the variable has been defined |
 
@@ -124,8 +124,8 @@ The `code` property in `methods.code` and `errors.code` is an object with the fo
 |                |                         | **Returned depending on the value of the `type` property:**                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | methodName     | Text                    | Métodos proyecto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | tabla          | Number                  | Number of the table (returned for a trigger, a table form method or a table form object method)                                                                                                                                                                                                                                                                                                                                                                                                        |
-| formName       | Text                    | Form name (returned for a form method)                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| objectName     | Text                    | Form object name (returned for an object method)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| formName       | Text                    | Nombre del formulario (devuelto para un método de formulario)                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| objectName     | Text                    | Nombre del objeto del formulario (devuelto para un método objeto)                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | propertyName   | Text                    | Form object property name (returned for a form object expression)                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | className      | Text                    | Nombre de la clase                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | functionName   | Text                    | Nombre de la función de clase                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -136,9 +136,9 @@ The `code` property in `methods.code` and `errors.code` is an object with the fo
 To perform a syntax check only, pass an empty collection to the targets parameter:
 
 ```4d
- var $status : Object
+ var $status : Objeto
  var $options:={}
- $options.targets:=New collection //Empty collection for syntax checking
+ $options.targets:=New collection //Colección vacía para verificación de sintaxis
  $status:=Compile project($options)
 ```
 

@@ -499,22 +499,17 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
 既存の Schools エンティティを既存の Studentsエンティティに紐付けます。 `StudentsEntity` クラスは次の API を提供しています:
 
 ```
-// cs.StudentsEntity クラス
+// StudentsEntity class
 
 Class extends Entity
 
-exposed Function putToSchool()
-    var $1, $school , $0, $status : Object
+exposed Function putToSchool($school : Object) -> $status : Object
 
-        // $1 は Schools エンティティ
-    $school:=$1
-        // Schools リレートエンティティをカレントの Students エンティティに紐付けます
-    This.school:=$school // このとき、school は N対1リレーション名です
+		//$school is a Schools entity
+		//Associate the related entity school to the current Students entity
+	This.school:=$school
 
-    $status:=This.save()
-
-    $0:=$status
-
+	$status:=This.save()
 ```
 
 You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
@@ -542,26 +537,20 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 `Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
-// Students クラス
+// Students class
 
 Class extends DataClass
 
-exposed Function setFinalExam()
+exposed Function setFinalExam($es : Object ; $examResult : Text) -> $keys : Collection
 
 
-    var $1, $es, $student, $status : Object
-    var $2, $examResult : Text
+    var $student, $status : Object
 
-    var $keys, $0 : Collection
-
-      // エンティティセレクション
-    $es:=$1
-
-    $examResult:=$2
+      //$es is an Entity selection
 
     $keys:=New collection()
 
-      // エンティティセレクション内をループ
+      //Loop on the entity selection
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
@@ -569,8 +558,6 @@ exposed Function setFinalExam()
             $keys.push($student.ID)
         End if
     End for each
-
-    $0:=$keys
 ```
 
 次のようなリクエストでエンティティセットをあらかじめ作成します:

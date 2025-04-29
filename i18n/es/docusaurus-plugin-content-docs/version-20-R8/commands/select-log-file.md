@@ -27,7 +27,7 @@ If you pass an empty string in *logFile*, **SELECT LOG FILE** presents an Save F
 
 If you pass *\** in *logFile*, **SELECT LOG FILE** closes the current log file for the database. The OK variable is set to 1 when the log file is closed.
 
-## System variables and sets
+## Variables y conjuntos sistema
 
 OK is set to 1 if the log file is correctly created, or closed.
 

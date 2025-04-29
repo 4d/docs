@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Si el portapapeles está vacío o no contiene datos de tipo especifico, el comando devuelve un error -102 (ver la tabla de constantes predefinidas). Si el portapapeles contiene datos del tipo especificado, el comando devuelve el tamaño en bytes de estos datos. 
 
-Pase en *tipodatos* un valor que defina el tipo de datos a extraer. Puede pasar una firma 4D, un tipo UTI (Mac OS), un nombre/número de formato (Windows), o un tipo de 4 caracteres (compatibilidad). Para mayor información sobre estos tipos, consulte la sección *Gestión de portapapeles*.
+Pase en *tipodatos* un valor que defina el tipo de datos a extraer. Puede pasar una firma 4D, un tipo UTI (macOS), un nombre/número de formato (Windows), o un tipo de 4 caracteres (compatibilidad). Para mayor información sobre estos tipos, consulte la sección *Gestión de portapapeles*.
 
 Después de verificar que el portapapeles contiene datos del tipo que quiere, puede extraer esa información del portapapeles utilizando uno de los siguientes comandos:
 

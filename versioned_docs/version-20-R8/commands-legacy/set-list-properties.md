@@ -36,7 +36,7 @@ If you omit the *doubleClick* parameter or pass 0, default behavior will be appl
 The optional *multiSelections* parameter lets you indicate whether the list must accept multiple selections.   
 By default, as in previous versions of 4D, you cannot simultaneously select several items of a hierarchical list. If you would like this function to be available for the list, pass the value 1 in the *multiSelections* parameter. In that case, multiple selections can be used:
 
-* manually, using the **Shift**+**click** key combination for a continuous selection or **Ctrl**+**click** (Windows) / **Command**+**click** (Mac OS) for a discontinuous selection,
+* manually, using the **Shift**+**click** key combination for a continuous selection or **Ctrl**+**click** (Windows) / **Command**+**click** (macOS) for a discontinuous selection,
 * by programming, using the [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) and [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) commands.  
 If you pass 0 or omit the *multiSelections* parameter, the default behavior will be applied.
 

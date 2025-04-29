@@ -13,7 +13,7 @@ Custom HTTP request handlers meet various needs, including:
 
 - using a given URL as a resource provider or a file-uploading box (to download or upload various files),
 - redirecting on specific pages according to a context (user authenticated, privileges granted...),
-- handle an authentication via oAuth 2.0.
+- gestionar una autenticación a través de oAuth 2.0.
 
 ## Requisitos
 
@@ -137,7 +137,7 @@ You can use the "verbs" property in the handler definition to declare HTTP verbs
 
 You can declare several verbs, separated by a comma. Verb names are not case sensitive.
 
-Ex: `"verbs" : "PUT, POST"`
+Ej: `"verbs" : "PUT, POST"`
 
 :::note
 
@@ -231,7 +231,7 @@ Examples of URLs triggering the handlers:
 `IP:port//docs/invoices/details/` with a GET verb, calls *handleDetails* function (*InvoicesHandling* class)
 `IP:port//docs/invoices/details/theInvoice/xxxxxx` with a GET verb, calls *handleTheInvoice* function (*InvoiceslHandling* class)
 
-## Request handler code
+## Código del gestor de peticiones
 
 ### Function configuration
 
@@ -265,7 +265,7 @@ La [clase 4D.IncomingMessage](../API/IncomingMessageClass.md) ofrece funciones p
 
 Here is a simple example to upload a file on the server.
 
-The **HTTPHandlers.json** file:
+El archivo **HTTPHandlers.json**:
 
 ```json
 [
@@ -280,7 +280,7 @@ The **HTTPHandlers.json** file:
 
 The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
+The binary content of the file is put in the body of the request and a POST verb is used. El nombre del archivo se da como parámetro (*fileName*) en la URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
 
 ```4d
     //UploadFile class

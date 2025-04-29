@@ -166,14 +166,15 @@ The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -
 
 Dans le paramètre *options*, passez un objet qui peut contenir les propriétés suivantes :
 
-| Propriété    | Type    | Description                                                            | Par défaut |
-| ------------ | ------- | ---------------------------------------------------------------------- | ---------- |
-| onConnection | Formula | Callback triggered when the connection is established. | Undefined  |
-| onData       | Formula | Callback triggered when data is received                               | Undefined  |
-| onShutdown   | Formula | Callback triggered when the connection is properly closed              | Undefined  |
-| onError      | Formula | Callback triggered in case of an error                                 | Undefined  |
-| onTerminate  | Formula | Callback triggered just before the TCPConnection is released           | Undefined  |
-| noDelay      | Boolean | **Read-only** Disables Nagle's algorithm if `true`                     | False      |
+| Propriété         | Type    | Description                                                                                                                              | Par défaut                     |
+| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| onConnection      | Formula | Callback triggered when the connection is established.                                                                   | Undefined                      |
+| onData            | Formula | Callback triggered when data is received                                                                                                 | Undefined                      |
+| onShutdown        | Formula | Callback triggered when the connection is properly closed                                                                                | Undefined                      |
+| onError           | Formula | Callback triggered in case of an error                                                                                                   | Undefined                      |
+| onTerminate       | Formula | Callback triggered just before the TCPConnection is released                                                                             | Undefined                      |
+| noDelay           | Boolean | **Read-only** Disables Nagle's algorithm if `true`                                                                                       | False                          |
+| connectionTimeout | Real    | Maximum time (in seconds) to establish the connection. If exceeded, the connection attempt is aborted | System-defined, generally ≥ 30 |
 
 #### Fonctions de callback
 

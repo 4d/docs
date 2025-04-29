@@ -79,14 +79,14 @@ You want to create a method that returns **True** if the command, whose number i
   //Is_Thread_Safe project method
   //Is_Thread_Safe(numCom) -> Boolean
  
- var $1;$threadsafe : Integer
+ #DECLARE($numCom : Integer) -> $result : Boolean
+ var $threadsafe : Integer
  var $name : Text
- var $0 : Boolean
- $name:=Command name($1;$threadsafe;$theme)
+ $name:=Command name($numCom;$threadsafe;$theme)
  If($threadsafe ?? 0) //if the first bit is set to 1
-    $0:=True
+    $result:=True
  Else
-    $0:=False
+    $result:=False
  End if
 ```
 

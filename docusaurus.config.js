@@ -63,12 +63,12 @@ module.exports = {
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
-            '20-R8': {
-              label: '20 R8 BETA',
+            '20-R9': {
+              label: '20 R9 BETA',
               banner: 'none',
             },
-            '20-R7': {
-              label: '20 R7',
+            '20-R8': {
+              label: '20 R8',
               banner: 'none',
             },
             '20': {
@@ -131,6 +131,12 @@ module.exports = {
       appId: 'OJ04C0M3CU',
       indexName: '4d',
       //contextualSearch: false
+      //added for command search
+      searchParameters: {
+        queryType: 'prefixNone', // Priorise la chaine entiere
+        removeWordsIfNoResults: 'allOptional', // Recherche les elements individuels si aucun resultat
+      },
+      // end
     },
     docs: {
       sidebar: {

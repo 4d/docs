@@ -15,7 +15,7 @@ Formulas are evaluated:
 - when the 4D Write Pro object is loaded in a form object which displays computed values
 - when the [**WP COMPUTE FORMULAS**](commands-legacy/wp-compute-formulas.md) command is called
 - when they are "frozen" using the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (if not already computed)
-- before printing (if not already computed)
+- antes de imprimir (si no se ha calculado ya)
 - before exporting to .docx (if the formula can't be mapped with MS Word formulas)
 - when the standard actions to freeze, print, export, or compute formulas are called. Ver *Acciones estándar*
 
@@ -53,7 +53,7 @@ You can insert special expressions related to document attributes in any documen
 | [This](../commands/this.md).author                             | Text   | Author defined in wk author attribute                                                                                                                                                                                                                                                                                                                             |
 | [This](../commands/this.md).subject                            | Text   | Subject defined in wk subject attribute                                                                                                                                                                                                                                                                                                                           |
 | [This](../commands/this.md).company                            | Text   | Company defined in wk company attribute                                                                                                                                                                                                                                                                                                                           |
-| [This](../commands/this.md).notes                              | Text   | Notes defined in wk notes attribute                                                                                                                                                                                                                                                                                                                               |
+| [This](../commands/this.md).notes                              | Text   | Notas definidas en el atributo wk notes                                                                                                                                                                                                                                                                                                                           |
 | [This](../commands/this.md).dateCreation                       | Fecha  | Date creation defined in wk date creation attribute                                                                                                                                                                                                                                                                                                               |
 | [This](../commands/this.md).dateModified                       | Fecha  | Date modified defined in wk date modified attribute                                                                                                                                                                                                                                                                                                               |
 | [This](../commands/this.md).pageNumber (\*) | Number | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command. |
@@ -72,7 +72,7 @@ Additional context properties are available when you work with tables. See *Hand
 
 (\*) **Important**: **This.pageNumber**, **This.pageIndex** and **This.pageCount** must be used only directly in a 4D Write Pro formula (they must be present in the *formula.source* string). They will return incorrect values if they are used by the 4D language within a method called by the formula. However, they can be passed as parameters to a method called directly by the formula:
 
-- This will work: « *formatNumber(This.pageNumber)* »
+- Esto funcionará: " *formatNumber(This.pageNumber)* "
 - This will NOT work: « *formatNumber* » with *formatNumber* method processing *This.pageNumber*.
 
 For example, to insert the page number in the footer area:
@@ -146,7 +146,7 @@ Formula references can be displayed as:
 - symbols
 - names
 
-### References as source texts (default)
+### Referencias como textos fuente (por defecto)
 
 When formulas are displayed as references, by default the source text of the formula appear in your document, with a default gray background (can be customized using the `wk formula highlight` selector).
 
@@ -158,7 +158,7 @@ When you display formulas as references, the **source** of the formula is displa
 
 ![](../assets/en/WritePro/wp-formulas2.png)
 
-### References as symbols
+### Referencias como símbolos
 
 When formula source texts are displayed in a document, the design could be confusing if you work on sophisticated templates using tables for example, and when formulas are complex:
 

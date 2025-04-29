@@ -17,9 +17,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->The **OBJECT SET AUTO SPELLCHECK** command sets or dynamically modifies the status of the **Auto spellcheck** option for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> This option enables or disables the automatic spellcheck when data is entered for the object (Text type objects only).
+<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->The **OBJECT SET AUTO SPELLCHECK** command sets or dynamically modifies the status of the **Auto spellcheck** option for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> This option enables or disables the automatic spellcheck when data is entered for the object.
+
+This command supports objects of the following types:
+
+- Text-based [inputs](../FormObjects/input_overview.md)
+- [4D Write Pro areas](../FormObjects/writeProArea_overview.md).
+
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable or a field. In this case, you pass a reference instead of a name.
+
 
 Pass **True** in *autoSpellcheck* to enable this function for the object, and **False** to disable it.
 

@@ -44,13 +44,13 @@ When you process an On Before Keystroke event, you are dealing with the editing 
   // Handle keystroke ( Pointer ; Pointer ) -> Boolean
   // Handle keystroke ( -> srcArea ; -> curValue ) -> Is new value
  
- var $1;$2 : Pointer
+ #DECLARE ($srcArea : Pointer ; $curValue : Pointer) -> $newValue : Boolean
  var $vtNewValue : Text
  
   // Get the text selection range within the enterable area
- GET HIGHLIGHT($1->;$vlStart;$vlEnd)
+ GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
   // Start working with the current value
- $vtNewValue:=$2->
+ $vtNewValue:=$curValue->
   // Depending on the key pressed or the character entered,
   // Perform the appropriate actions
  Case of
@@ -97,9 +97,9 @@ When you process an On Before Keystroke event, you are dealing with the editing 
        FILTER KEYSTROKE("")
  End case
   // Is the value now different?
- $0:=($vtNewValue#$2->)
+ $newValue:=($vtNewValue#$curValue->)
   // Return the value for the next keystroke handling
- $2->:=$vtNewValue
+ $curValue->:=$vtNewValue
 ```
 
 After this project method is added to your application, you can use it as follows:

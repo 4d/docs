@@ -9,10 +9,10 @@ displayed_sidebar: docs
 <!--REF #_command_.On Server Open Connection database method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| $1 | 倍長整数 | &#8592; | ユーザーを識別するために4D Serverが内部的に使用するユーザーID |
-| $2 | 倍長整数 | &#8592; | 接続を識別するために4D Serverが内部的に使用する接続ID |
-| $3 | 倍長整数 | &#8592; | 廃止: 常に0が返されますが、宣言はしなくてはなりません。 |
-| $0 | 倍長整数 | &#8592; | 0または省略時 = 接続を受け入れる、0以外 = 接続を拒否する |
+| $user | 倍長整数 | &#8592; | ユーザーを識別するために4D Serverが内部的に使用するユーザーID |
+| $id | 倍長整数 | &#8592; | 接続を識別するために4D Serverが内部的に使用する接続ID |
+| $toIgnore | 倍長整数 | &#8592; | 廃止: 常に0が返されますが、宣言はしなくてはなりません。 |
+| $status | 倍長整数 | &#8592; | 0または省略時 = 接続を受け入れる、0以外 = 接続を拒否する |
 
 <!-- END REF-->
 
@@ -59,10 +59,10 @@ displayed_sidebar: docs
 4D Serverは **On Server Open Connectionデータベースメソッド** に3つの倍長整数タイプの引数を渡し、倍長整数タイプの結果を求めます。したがってこのメソッドでは3つの引数と戻り値を倍長整数として明示的に宣言しなくてはなりません:
 
 ```4d
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
 ```
 
-*$0*に値を返さず、その結果変数を未定義のままにするかまたはゼロに初期化した場合、4D Server はデータベースメソッドが接続を受け付けたものとみなします。接続を受け付けない場合、*$0*にヌルではない値を返します。
+*$result*に値を返さず、その結果変数を未定義のままにするかまたはゼロに初期化した場合、4D Server はデータベースメソッドが接続を受け付けたものとみなします。接続を受け付けない場合、*$result*にヌルではない値を返します。
 
 次の表はこのデータベースメソッドに渡される3つの引数が示す情報を表わしています:
 
@@ -84,7 +84,7 @@ displayed_sidebar: docs
 
 ```4d
   // On Server Open Connection データベースメソッド
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
   // [Server Log] レコード作成
  CREATE RECORD([Server Log])
  [Server Log]Log ID:=Sequence number([Server Log])
@@ -92,19 +92,19 @@ displayed_sidebar: docs
  [Server Log]Log Date:=Current date
  [Server Log]Log Time:=Current time
   // 接続情報を保存
- [Server Log]User ID:=$1
- [Server Log]Connection ID:=$2
+ [Server Log]User ID:=$user
+ [Server Log]Connection ID:=$id
  SAVE RECORD([Server Log])
   // エラーなしを返すと接続が続行される
 ```
   
   
 ```4d
- $0:=0 // On Server Close Connection データベースメソッド
- var $1;$2;$3 : Integer
+ $result:=0 // On Server Close Connection データベースメソッド
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer)
   // [Server Log] レコードを取得
- QUERY([Server Log];[Server Log]User ID=$1;*)
- QUERY([Server Log];&;[Server Log]Connection ID=$2)
+ QUERY([Server Log];[Server Log]User ID=$user;*)
+ QUERY([Server Log];&;[Server Log]Connection ID=$id)
   // 終了日付と時間を保存
  [Server Log]Exit Date:=Current date
  [Server Log]Exit Time:=Current time
@@ -126,7 +126,7 @@ displayed_sidebar: docs
 
 ```4d
   // On Server Open Connection データベースメソッド
- var $0;$1;$2;$3 : Integer
+ #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
  
  If((?02:00:00?<=Current time)&(Current time
 ```

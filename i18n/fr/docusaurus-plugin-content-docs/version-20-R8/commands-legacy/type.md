@@ -55,12 +55,12 @@ displayed_sidebar: docs
 | Text array         | Entier long | 18     |
 | Time array         | Entier long | 32     |
 
-Vous pouvez appliquer la fonction **Type** aux champs, variables interprocess, variables process, variables locales et à des pointeurs dépointés qui référencent ces types d'objets. Vous pouvez appliquer **Type** aux paramètres (*$1,$2..., ${...}*) d'une méthode projet ou au résultat d'une fonction (*$0*).
+Vous pouvez appliquer la fonction **Type** aux champs, variables interprocess, variables process, variables locales et à des pointeurs dépointés qui référencent ces types d'objets. Vous pouvez appliquer **Type** aux paramètres (*$ptrTable,$flags..., ${...}*) d'une méthode projet ou au résultat d'une fonction (*$0*).
 
 **Notes :** 
 
 * Vous ne pouvez pas appliquer la fonction **Type** aux expressions scalaires telles que les propriétés d'objets (*emp.name*) ou les éléments de collections (*maColl\[5\]*). Pour cela, vous devez utiliser la commande [Value type](value-type.md).
-* En mode compilé, si vous appelez la commande **Type** pour un paramètre de méthode ($0, $1...) déclaré comme *C\_VARIANT*, cela ne retournera pas Is variant mais plutôt le type de données courantes (de même si vous appelez la commande [Value type](value-type.md)).
+* En mode compilé, si vous appelez la commande **Type** pour un paramètre de méthode ($0, $ptrTable...) déclaré comme *C\_VARIANT*, cela ne retournera pas Is variant mais plutôt le type de données courantes (de même si vous appelez la commande [Value type](value-type.md)).
 
 ## Exemple 1 
 
@@ -71,16 +71,16 @@ La méthode projet suivante efface une partie ou la totalité des champs de l'en
   // VIDER ENREGISTREMENT ( Pointeur {; Entier long } )
   // VIDER ENREGISTREMENT ( -> [Table] { ; Type des valeurs } )
  
- var $1 : Pointer
- var $2;$vlTypeVal : Integer
+ #DECLARE($ptrTable : Pointer ; $flags : Integer)
+ var $vlTypeVal : Integer
  
  If(Count parameters>=2)
-    $vlTypeVal:=$2
+    $vlTypeVal:=$flags
  Else
     $vlTypeVal:=0xFFFFFFFF
  End if
- For($vlChamp;1;Nombre de champs($1))
-    $vpChamp:=Field(Table($1);$vlChamp)
+ For($vlChamp;1;Nombre de champs($ptrTable))
+    $vpChamp:=Field(Table($ptrTable);$vlChamp)
     $vlTypeChamp:=Type($vpChamp->)
     If($vlTypeVal ??$vlTypeChamp )
        Case of

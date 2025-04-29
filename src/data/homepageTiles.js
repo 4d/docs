@@ -4,19 +4,19 @@ import Link from '@docusaurus/Link';
 
 const localizedLinks = {
   "homepage.sections.textensions.4D-Write-Pro-Reference-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Write-Pro-Reference.100-7477967.en.html',
+    message: 'https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Write-Pro-Reference.100-7547144.en.html',
     id: 'homepage.sections.textensions.4D-Write-Pro-Reference-url',
   }),
   "homepage.sections.textensions.4D-Progress-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Progress.100-7476284.en.html',
+    message: 'https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Progress.100-7545461.en.html',
     id: 'homepage.sections.textensions.4D-Progress-url',
   }),
   "homepage.sections.textensions.4D-SVG-Component-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-SVG-Component.100-7477155.en.html',
+    message: 'https://doc.4d.com/4Dv20R9/4D/20-R9/4D-SVG-Component.100-7546332.en.html',
     id: 'homepage.sections.textensions.4D-SVG-Component-url',
   }),
   "homepage.sections.textensions.4D-Widgets-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R8/4D/20-R8/4D-Widgets.100-7477804.en.html',
+    message: 'https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Widgets.100-7546981.en.html',
     id: 'homepage.sections.textensions.4D-Widgets-url',
   }),
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url" : translate({
@@ -149,11 +149,11 @@ const Sections = [
         <Link to="category/4d-write-pro">
           <Translate>4D Write Pro</Translate>
         </Link>
-       <Link to="https://github.com/4d/4D-Mobile-App-Server">
-          <Translate>4D Mobile App Server</Translate>
-        </Link>
         <Link to="https://developer.4d.com/4D-NetKit">
           <Translate>4D NetKit</Translate>
+        </Link>
+        <Link to="aikit/overview">
+          <Translate>4D AIKit</Translate>
         </Link>
         <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>
           <Translate>4D Progress</Translate>
@@ -247,6 +247,9 @@ const Sections = [
       <div className="homepageLinks">
         <Link to={localizedLinks["homepage.sections.mobile-applications.go-mobile-url"]}>
           <Translate>Go Mobile with 4D</Translate>
+        </Link>
+        <Link to="https://github.com/4d/4D-Mobile-App-Server">
+          <Translate>4D Mobile App Server</Translate>
         </Link>
         <Link to={localizedLinks["homepage.sections.mobile-applications.4D-for-iOS-Archive-url"]}>
           <Translate>4D for iOS (Archive)</Translate>

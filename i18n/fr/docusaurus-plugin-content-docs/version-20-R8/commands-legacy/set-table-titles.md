@@ -59,43 +59,41 @@ La commande **SET TABLE TITLES** est utile dans les cas suivants :
     // traduire_TABLES_ET_CHAMPS ( Texte)
     // traduire_TABLES_ET_CHAMPS ( CodeLangue )
  
- var $1 : Text //code de la langue
+ #DECLARE($Language : Text) //code de la langue
  var $vlTable;$vlChamp : Integer
- var $Langue : Text
- $Langue:=$1
  
  For($vlTable;1;Last table number) // Passer sur chaque table
     If($vlTable#(Table(->[Traductions]))) //Ne pas traduire la table des traductions
   // Vérifier s'il existe une traduction du nom de la table pour la langue spécifiée
-       QUERY([Traductions];[Traductions]CodeLangage=$Langue;*)   //langue souhaitée
+       QUERY([Traductions];[Traductions]CodeLangage=$Language;*)   //langue souhaitée
        QUERY([Traductions]; & ;[Traductions]TableID=$vlTable;*)   //numero de table
        QUERY([Traductions]; & ;[Traductions]ChampID=0)   //numero de champ = 0 signifie que c'est un nom de table
        If(Is table number valid($vlTable))   //vérifier que la table existe encore
           If(Records in selection([Traductions])=0)
   // Else, créer l'enregistrement
              CREATE RECORD([Traductions])
-             [Traductions]CodeLangage:=$Langue
+             [Traductions]CodeLangage:=$Language
              [Traductions]TableID:=$vlTable
              [Traductions]ChampID:=0
   // Le nom de la table traduit aura besoin d'être saisi
-             [Traductions]Traduction:=Table name($vlTable)+" en "+$Langue
+             [Traductions]Traduction:=Table name($vlTable)+" en "+$Language
              SAVE RECORD([Traductions])
           End if
  
           For($vlChamp;1;Last field number($vlTable))
   // Vérifier s'il existe une traduction pour le nom du champ dans la langue spécifiée
-             QUERY([Traductions];[Traductions]CodeLangage=$Langue;*)   //langue souhaitée
+             QUERY([Traductions];[Traductions]CodeLangage=$Language;*)   //langue souhaitée
              QUERY([Traductions]; & ;[Traductions]TableID=$vlTable;*)   //numéro de table
              QUERY([Traductions]; & ;[Traductions]ChampID=$vlChamp)   //numéro de champ
              If(Is field number valid($vlTable;$vlChamp))
                 If(Records in selection([Traductions])=0)
   // Else, créer l'enregistrement
                    CREATE RECORD([Traductions])
-                   [Traductions]CodeLangage:=$Langue
+                   [Traductions]CodeLangage:=$Language
                    [Traductions]TableID:=$vlTable
                    [Traductions]ChampID:=$vlChamp
   // Le nom du champ traduit aura besoin d'être saisi
-                   [Traductions]Traduction:=Field name($vlTable;$vlChamp)+" en "+$Langue
+                   [Traductions]Traduction:=Field name($vlTable;$vlChamp)+" en "+$Language
                    SAVE RECORD([Traductions])
                 End if
              Else
@@ -135,16 +133,14 @@ La méthode projet TABLES\_ET\_CHAMPS\_LOCALISES est la suivante :
   // TABLES_ET_CHAMPS_LOCALISES ( Texte)
   // TABLES_ET_CHAMPS_LOCALISES ( CodeLangue )
  
- var $1 : Text //Code de la langue
+ #DECLARE($Language : Text) //Code de la langue
  var $vlTable;$vlChamp : Integer
- var $Langue : Text
  var $vlNumTable;$vlNumChamp : Integer
- $Langue:=$1
  
   //Mise à jour des noms de table
  ARRAY TEXT($asNoms;0)   // Initialiser les tableaux pour FIXER TITRES TABLES et FIXER TITRES CHAMPS
  ARRAY INTEGER($aiNuméros;0)
- QUERY([Traductions];[Traductions]CodeLangage=$Langue;*)
+ QUERY([Traductions];[Traductions]CodeLangage=$Language;*)
  QUERY([Traductions]; & ;[Traductions]ChampID=0)   //noms de table donc
  SELECTION TO ARRAY([Traductions]Traduction;$asNoms;[Traductions]TableID;$aiNuméros)
  SET TABLE TITLES($asNoms;$aiNuméros)
@@ -153,7 +149,7 @@ La méthode projet TABLES\_ET\_CHAMPS\_LOCALISES est la suivante :
  $vlNumTable:=Last table number // Obtenir le nombre de tables dans la base
  For($vlTable;1;$vlNumTable)   // Passer sur chaque table
     If(Is table number valid($vlTable))
-       QUERY([Traductions];[Traductions]CodeLangage=$Langue;*)
+       QUERY([Traductions];[Traductions]CodeLangage=$Language;*)
        QUERY([Traductions]; & ;[Traductions]TableID=$vlTable;*)
        QUERY([Traductions]; & ;[Traductions]ChampID#0)   //évite le zero qui sert au nom de la table
        SELECTION TO ARRAY([Traductions]Traduction;$asNoms;[Traductions]ChampID;$aiNuméros)

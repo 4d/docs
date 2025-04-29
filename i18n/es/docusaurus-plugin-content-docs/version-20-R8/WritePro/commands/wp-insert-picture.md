@@ -27,7 +27,7 @@ In *targetObj*, you can pass:
 
 - Un rango
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
-- A 4D Write Pro document
+- Un documento 4D Write Pro
 
 For the second parameter, you can pass either:
 
@@ -49,10 +49,10 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 
 If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted picture is included in the resulting range:
 
-| Constante             | Tipo    | Valor | Comentario                                                         |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Picture not included in the updated range                          |
-| wk include in range   | Integer | 0     | Picture included in the updated range (default) |
+| Constante             | Tipo    | Valor | Comentario                                                               |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
+| wk exclude from range | Integer | 1     | Picture not included in the updated range                                |
+| wk include in range   | Integer | 0     | Imagen incluida en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted picture is included in the resulting range.
 

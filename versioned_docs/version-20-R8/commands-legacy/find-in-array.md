@@ -37,11 +37,11 @@ The following project method deletes all empty elements from the string or text 
   // CLEAN UP ARRAY ( Pointer )
   // CLEAN UP ARRAY ( -> Text or String array )
  
- var $1 : Pointer
+ #DECLARE ($arrPtr : Pointer) : Pointer
  Repeat
-    $vlElem:=Find in array($1->;"")
+    $vlElem:=Find in array($arrPtr->;"")
     If($vlElem>0)
-       DELETE FROM ARRAY($1->;$vlElem)
+       DELETE FROM ARRAY($arrPtr->;$vlElem)
     End if
  Until($vlElem<0)
 ```
@@ -66,9 +66,10 @@ The following project method selects the first element of an array whose pointer
   // SELECT ELEMENT ( Pointer ; Pointer)
   // SELECT ELEMENT ( -> Text or String array ; -> Text or String variable or field )
  
- $1->:=Find in array($1->;$2->)
- If($1->=-1)
-    $1->:=0 // If no element was found, set the array to no selected element
+ #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
+$arrPtr->:=Find in array($arrPtr->; $varPtr->)
+ If($tabPtr->=-1)
+    $tabPtr->:=0 // If no element was found, set the array to no selected element
  End if
 ```
 

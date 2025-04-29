@@ -23,7 +23,7 @@ L'emplacement du dossier racine peut être exprimé soit en syntaxe HTML (type U
 
 * Syntaxe HTML : les noms de dossiers sont séparés par une barre oblique ("/"), quelle que soit la plate-forme que vous utilisez.
 * Syntaxe système : chemin d’accès absolu (“nom long”) respectant la syntaxe de la plate-forme courante, par exemple :  
-   * (Mac OS) Disque:Applications:monserv:dossier  
+   * (macOS) Disque:Applications:monserv:dossier  
    * (Windows) C:\\Applications\\monserv\\dossier
 
 **Notes :**

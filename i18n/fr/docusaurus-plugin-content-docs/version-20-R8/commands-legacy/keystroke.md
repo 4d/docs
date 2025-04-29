@@ -44,13 +44,13 @@ Lorsque vous traitez un événement On Before Keystroke, vous gérez la modifica
   // Gérer frappe clavier ( Pointeur ; Pointeur ) -> Booléen
   // Gérer frappe clavier ( -> zoneSource ; -> valeurCourante ) -> Est-ce une nouvelle valeur
  
- var $1;$2 : Pointer
+ #DECLARE ($srcArea : Pointer ; $curValue : Pointer) -> $newValue : Boolean
  var $vtNouvValeur : Text
  
   // Récupérer le texte sélectionné dans la zone saisissable
- GET HIGHLIGHT($1->;$vlDébut;$vlFin)
+ GET HIGHLIGHT($srcArea->;$vlDébut;$vlFin)
   // Commencer à travailler avec la valeur courante
- $vtNouvValeur:=$2->
+ $vtNouvValeur:=$curValue->
   // Selon la touche appuyée ou le caractère saisi, effectuer les actions appropriées
  Case of
  
@@ -95,9 +95,9 @@ Lorsque vous traitez un événement On Before Keystroke, vous gérez la modifica
        FILTER KEYSTROKE("")
  End case
   // Est-ce que la valeur est maintenant différente ?
- $0:=($vtNouvValeur#$2->)
+ $newValue:=($vtNouvValeur#$curValue->)
   // Retourner la valeur pour la gestion de la prochaine frappe clavier
- $2->:=$vtNouvValeur
+ $curValue->:=$vtNouvValeur
 ```
 
 Une fois que vous avez ajouté cette méthode projet à votre application, vous pouvez l'utiliser ainsi :

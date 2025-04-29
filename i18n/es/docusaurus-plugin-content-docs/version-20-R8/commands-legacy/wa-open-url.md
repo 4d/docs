@@ -24,7 +24,7 @@ Si se pasa una cadena vacía en *url*, el comando WA OPEN URL no hace nada y no 
 Como el comando [OPEN URL](open-url.md), **WA OPEN URL** acepta varios tipos de sintaxis en el parámetro *url* para designar los archivos:
 
 * sintaxis posix: "file:///c:/Mi%20Archivo"
-* sintaxis sistema: "c:\\MiCarpeta\\MiArchivo" (Windows) o "MiDisco:MiCarpeta:MiArchivo" (Mac OS).
+* sintaxis sistema: "c:\\MiCarpeta\\MiArchivo" (Windows) o "MiDisco:MiCarpeta:MiArchivo" (macOS).
 
 **Nota:** por compatibilidad, la sintaxis "file://" (uso de dos "/") se acepta en 4D pero no cumple con el RFC. Recomendamos utilizar la sintaxis "file:///" (con tres "/") que cumple con el RFC.
 
