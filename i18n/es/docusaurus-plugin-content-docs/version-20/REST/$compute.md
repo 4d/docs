@@ -38,8 +38,7 @@ Si desea obtener todos los cálculos de un atributo de tipo Número, puede escri
  `GET  /rest/Employee/salary/?$compute=$all`
 
 **Respuesta**:
-
-````
+```js
 {
     "salary": {
         "count": 4,
@@ -51,15 +50,15 @@ Si desea obtener todos los cálculos de un atributo de tipo Número, puede escri
 }
 ````
 
-Si desea obtener todos los cálculos de un atributo de tipo String, puede escribir:
+If you want to get all the computations for an attribute of type String, you can write:
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Respuesta**:
+**Response**:
 
-````
+```js
 {
-    "salary": {
+    "firstName": {
         "count": 4,
         "min": Anne,
         "max": Victor
@@ -73,7 +72,7 @@ Si desea obtener un cálculo con un atributo, escriba lo siguiente:
 
 **Respuesta**:
 
-`235000`
+`335000`
 
 
 Si desea realizar un cálculo con un atributo Objeto, escriba lo siguiente:

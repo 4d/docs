@@ -100,12 +100,12 @@ Callback functions receive up to two parameters:
 | Parámetros | Tipo                                        | Descripción                                           |
 | ---------- | ------------------------------------------- | ----------------------------------------------------- |
 | $listener  | [`TCPListener` object](#tcplistener-object) | The current TCP listener instance.    |
-| $event     | [objeto `TCPEvent`](#tcpevent-object)       | Contains information about the event. |
+| $event     | [objeto `TCPEvent`](#tcpevent-object)       | Contiene información sobre el evento. |
 
-**Sequence of Callback Calls:**
+**Secuencia de retrollamadas:**
 
 1. `onConnection` is triggered each time a connection is established.
-2. `onError` is triggered if an error occurs.
+2. `onError` se activa si se produce un error.
 3. `onTerminate` is always triggered just before a connection is terminated.
 
 #### Objeto TCPEvent

@@ -154,7 +154,7 @@ The **For each: Record or Label** options are used to specify whether to run the
 
 :::
 
-- **Layout preview**: Provides a reduced view of how an entire page of labels will look, based on the dimensions you enter in the Label editor. The page preview also reflects the paper size selected in the Print Setup dialog box. You can also use this area to designate the first label on the page to be printed (this option only affects the first sheet in the case of multi-page printing). This can be useful, for example, when you want to print on a sheet of adhesive labels, part of which has already been used. You can also select the first label on the page to be printed by clicking on it:
+- **Layout preview**: Provides a reduced view of how an entire page of labels will look, based on the dimensions you enter in the Label editor. The page preview also reflects the paper size selected in the Print Setup dialog box. También puede utilizar esta zona para designar la primera etiqueta de la página que se va a imprimir (esta opción sólo afecta a la primera hoja en caso de impresión multipágina). This can be useful, for example, when you want to print on a sheet of adhesive labels, part of which has already been used. You can also select the first label on the page to be printed by clicking on it:
 
 ![](../assets/en/Desktop/label-start.png)
 

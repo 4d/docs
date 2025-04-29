@@ -46,7 +46,7 @@ On 4D Server, you can filter information to be returned using the optional *sess
 
 :::note
 
-When executed on 4D in remote or local mode, `Process activity` always returns the list of running processes (*sessionID* and *options* parameters are ignored).
+Cuando se ejecuta en 4D en modo remoto o local, `Process activity` siempre devuelve la lista de procesos en ejecución (se ignoran los parámetros *sessionID* y *options*).
 
 :::
 

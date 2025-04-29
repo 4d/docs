@@ -624,7 +624,7 @@
     "description": "The label for category Mail in sidebar docs"
   },
   "sidebar.docs.category.Math": {
-    "message": "Math",
+    "message": "Funções matemáticas",
     "description": "The label for category Math in sidebar docs"
   },
   "sidebar.docs.category.Messages": {
@@ -940,7 +940,7 @@
     "description": "The generated-index page title for category Mail in sidebar docs"
   },
   "sidebar.docs.category.Math.link.generated-index.title": {
-    "message": "Math",
+    "message": "Funções matemáticas",
     "description": "The generated-index page title for category Math in sidebar docs"
   },
   "sidebar.docs.category.Menus.link.generated-index.title": {
