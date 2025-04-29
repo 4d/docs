@@ -133,7 +133,8 @@ module.exports = {
       //contextualSearch: false
       //added for command search
       searchParameters: {
-        queryType: 'prefixNone', // Priorise la chaine entiere
+        advancedSyntax: true,
+        queryType: 'prefixAll', // Priorise la chaine entiere
         removeWordsIfNoResults: 'allOptional', // Recherche les elements individuels si aucun resultat
       },
       // end
