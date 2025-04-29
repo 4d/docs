@@ -384,8 +384,8 @@ These buttons propose basic interactions between the chat area, the underlying 4
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
-- **Return raw text**/**Return styled text**: these buttons copy the latest response or the selected response from the AI to the 4D Write Pro document at the current selection point. 
-- **Copy raw text**/**Copy styled text**: these buttons copy the latest response or the selected response from the AI in the clipboard. 
+- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current selection point. 
+- **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard. 
 
 In both cases, if the response was provided with styles (bold, italic, titles), you can decide to copy the text with or without styles. 
 
