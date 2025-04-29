@@ -303,22 +303,21 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 ## Integrated AI
 
-:::warning Developer Preview
-
-This feature is still in development phase and is proposed as a **Developer Preview**. It is therefore not recommended to use it in your deployments. 
-
-:::
-
 You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application. 
 
-Once you have enabled the AI feature, you can display a chat box over your 4D Write Pro document and interact with *chatGPT* to modify the contents of the the selected text or the document itself. 
+Once you have enabled the AI feature, you can display a chat box over your 4D Write Pro document and interact with *chatGPT* to modify the text of the selection or of the document itself. 
+
+:::note
+
+The 4D Write Pro interface uses OpenAI, for which you need to provide your own key (see below).
+
+:::
 
 ### Limitations (Developer Preview)
 
 In the current implementation, the feature has the following limitations:
 
 - use of a predefined AI provider and necessity to pass your OpenAI key
-- call of the AI dialog box through a button
 - basic chatting features
 - no image handling
 - non-configurable predefined action commands
@@ -348,7 +347,7 @@ No checking is done on the OpenAI key validity. If it is invalid, the *chatGPT* 
 :::
 
 
-The A.I. button is then displayed: 
+The **A.I.** button is then displayed: 
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
@@ -374,9 +373,17 @@ The button icon changes when the same request is sent again:
 
 ![ai resend](../assets/en/WritePro/ai-resend.png)
 
-On the left side of this area, a pop up menu provides examples of common actions that can be usually delegated to the AI. Selecting an action writes a corresponding question to the prompt, you still need to click on the Send button afterwards:
+On the left side of this area, a pop up menu provides examples of common actions that can be usually delegated to the AI. 
+
+Selecting an action writes a corresponding question to the prompt. If necessary, you can modify the question and then to click on the Send button to actually send it:
 
 ![ai menu](../assets/en/WritePro/ai-menu.png)
+
+:::note
+
+Default translation actions are based upon the current 4D default configuration and depend on available languages. 
+
+:::
 
 #### Copy buttons
 
@@ -384,10 +391,16 @@ These buttons propose basic interactions between the chat area, the underlying 4
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
-- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current selection point. 
+- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any. 
 - **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard. 
 
-In both cases, if the response was provided with styles (bold, italic, titles), you can decide to copy the text with or without styles. 
+In both cases, if the response was provided with styles, you can decide to copy the text with or without styles. 
+
+:::note
+
+The chat box uses the Markdown language to format text. Basic styles such as bold, italic, underline, titles are supported. When pasting styled text from the AI in the 4D Write Pro area, you may lose some formatting information. 
+
+:::
 
 #### Chat area
 
