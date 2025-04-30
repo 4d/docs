@@ -514,10 +514,10 @@ A built 4D application requires a deployment license. Elle peut être intégrée
 | Licence de déploiement | Description                                                                                    | Où la saisir                                                                               |
 | ---------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | *4D OEM Desktop*       | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                                                     | [Licenses page](#licenses) of the Build application dialog                                 |
+| *4D Unlimited Desktop* | **Non maintenu** - Licence personnalisée intégrée                                              | [Licenses page](#licenses) of the Build application dialog                                 |
 | *4D Desktop*           | Licence par utilisateur, lui permettant d'utiliser des applications 4D autonomes               | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 | *4D Server OEM*        | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Licenses page](#licenses) of the Build application dialog                                 |
-| *4D Server*            | Per-user license, allowing them to use 4D Server and clients                                   | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+| *4D Server*            | Licence par utilisateur, lui permettant d'utiliser 4D Server et des postes clients             | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
 
 :::note
 
