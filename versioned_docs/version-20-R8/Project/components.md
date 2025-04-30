@@ -468,7 +468,7 @@ Define the [dependency version range](#tags-and-versions) to use for this projec
 
 Click on the **Add** button to add the dependency to the project. 
 
-The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
+The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
 
 #### Defining a GitHub dependency version range  
 
