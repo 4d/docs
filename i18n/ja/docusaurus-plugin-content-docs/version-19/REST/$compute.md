@@ -38,8 +38,7 @@ title: '$compute'
  `GET  /rest/Employee/salary/?$compute=$all`
 
 **レスポンス**:
-
-````
+```js
 {
     "salary": {
         "count": 4,
@@ -51,15 +50,15 @@ title: '$compute'
 }
 ````
 
-文字列型の属性を対象にすべての計算値を取得するには、次のように書きます:
+If you want to get all the computations for an attribute of type String, you can write:
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 
-**レスポンス**:
+**Response**:
 
-````
+```js
 {
-    "salary": {
+    "firstName": {
         "count": 4,
         "min": Anne,
         "max": Victor
@@ -73,7 +72,7 @@ title: '$compute'
 
 **レスポンス**:
 
-`235000`
+`335000`
 
 
 オブジェクト属性に対して特定の計算のみをおこなうには、次のように書きます:

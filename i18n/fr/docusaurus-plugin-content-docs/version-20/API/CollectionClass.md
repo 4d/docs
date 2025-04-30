@@ -249,7 +249,7 @@ Contrairement aux collections standard (non partagées), les collections partag�
 <!-- REF #collection.at().Params -->
 | Paramètres | Type    |    | Description                                      |
 | ---------- | ------- |:--:| ------------------------------------------------ |
-| index      | Integer | -> | Index de l'élément à renvoyer                    |
+| index      | Integer | -> | Indice de l'élément à renvoyer                   |
 | Résultat   | any     | <- | L'élément à cet index|<!-- END REF -->
 
 

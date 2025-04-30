@@ -3,11 +3,11 @@ id: attributes
 title: $attributes
 ---
 
-Allows selecting the attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=name,city`, `Company(1)?$attributes=employees.lastname`, or `Employee?$attributes=employer.name`).
+Permet de sélectionner le ou les attribut(s) à obtenir de la dataclass (*e.g.*, `Company(1)?$attributes=name,city`, `Company(1)?$attributes=employees.lastname`, ou `Employee?$attributes=employer.name`).
 
 ## Description
 
-If you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+Lorsque vous avez des attributs relationnels dans une dataclass, utilisez `$attributes` pour définir le chemin des attributs dont vous souhaitez obtenir les valeurs pour l'entité ou les entités associée(s).
 
 Vous pouvez appliquer des `$attributes` à une entité (par exemple, People (1)) ou à une entity selection (par exemple, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
@@ -22,8 +22,8 @@ Vous pouvez appliquer des `$attributes` à une entité (par exemple, People (1))
  - `$attributes=relatedEntities.*` : toutes les propriétés des entités liées sont retournées
  - `$attributes=relatedEntities.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs des entités liées sont retournés.
 
-- If `$attributes` is specified for **storage** attributes:
- - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
+- Si `$attributes` est spécifié pour les attributs **storage** :
+ - `$attributes=attribute1, attribute2, ...` : seuls les attributs des entités sont renvoyés.
 
 ## Exemple avec plusieurs entités liées
 
