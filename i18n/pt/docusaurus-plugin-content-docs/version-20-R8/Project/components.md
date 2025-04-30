@@ -433,7 +433,7 @@ Defina o [intervalo de versão de dependência](#tags-and-versions) para usar ne
 
 Clique no botão **Adicionar** para adicionar a dependência ao projeto.
 
-The GitHub dependency declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
+The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. It will be loaded once the application restarts.
 
 #### Defining a GitHub dependency version range
 
