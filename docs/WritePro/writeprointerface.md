@@ -11,8 +11,8 @@ The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/E
 
 You will find below: 
 
-- the Table Wizard configuration documentation.
-- the integrated A.I. documentation (*developer preview*)
+- the Table Wizard configuration documentation,
+- the integrated A.I. documentation.
 
 ## Table Wizard
 
