@@ -7,24 +7,24 @@ title: 4D-AIKit
 
 ## 概要
 
-4D AIKit is a built-in 4D component that enables interaction with third-party AI APIs.
+4D AIKit は、サードパーティのAI API との相互通信を可能にするビルトインの4D コンポーネントです。
 
 ## OpenAI
 
-The [`OpenAI`](Classes/OpenAI.md) class allows you to make requests to the [OpenAI API](https://platform.openai.com/docs/api-reference/).
+[`OpenAI`](Classes/OpenAI.md) クラスを使用すると、[OpenAI API](https://platform.openai.com/docs/api-reference/) へのリクエストを行うことが可能になります。
 
 ### 設定
 
-First of all, initialize the OpenAI client using your API key
+最初に、API キーを使用してOpenAI クライアントを初期化します。
 
 ```4d
-var $client:=cs.AIKit.OpenAI.new("your api key")
+var $client:=cs.AIKit.OpenAI.new("あなたの API キー")
 ```
 
-For a [compatible provider](compatible-openai.md) API, you can configure the server URL by setting the `baseURL` parameter.
+[互換性のあるプロバイダー](compatible-openai.md) API に対しては、 `baseURL` 引数を設定することでサーバーURL を設定することができます。
 
 ```4d
-var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://your.server.ai"})
+var $client:=cs.AIKit.OpenAI.new({apiKey: "あなたの API キー"; baseURL: "https://your.server.ai"})
 ```
 
 または
@@ -33,23 +33,23 @@ var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://your
 $client.baseURL:="https://your.server.ai"
 ```
 
-### Making requests
+### リクエストをする
 
-`OpenAI` provides different endpoints called resources, each offering various functions.
+`OpenAI` はリソースと呼ばれる様々なエンドポイントを提供していて、それぞれが色々な機能を提供しています。
 
 ```4d
 var $result:=$client.<resource>.<function>(<parameters...>)
 ```
 
-The `$result` contains the `HTTPRequest`, a `success` status, a collection of `errors` and more. See [OpenAIResult](Classes/OpenAIResult.md)
+`$result` には`HTTPRequest` と、`success` ステータス、そして`errors` コレクションなどが含まれます。 詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。
 
-See some examples bellow.
+また以下の例題も参照して下さい。
 
-#### Chat
+#### チャット
 
 https://platform.openai.com/docs/api-reference/chat
 
-##### Completions
+##### チャット補完
 
 https://platform.openai.com/docs/api-reference/chat/create
 
@@ -57,29 +57,29 @@ https://platform.openai.com/docs/api-reference/chat/create
 var $messages:=[{role: "system"; content: "You are a helpful assistant."}]
 $messages.push({role: "user"; content: "Could you explain me why 42 is a special number"})
 var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini"})
-// result in $result.choice
+// $result.choice に結果が戻される
 ```
 
-##### Chat helper
+##### チャットヘルパー
 
-This helper allows you to maintain a list of user messages and assistant responses.
+このヘルパーを使用すると、ユーザーメッセージの一覧とアシスタントの返答のリストを管理することができます。
 
 ```4d
 var $helper:=$client.chat.create("You are a helpful assistant.")
 var $result:=$helper.prompt("Could you explain me why 42 is a special number")
 $result:=$helper.prompt("and could you decompose this number")
-// conversation in $helper.messages
+// $helper.messages 内に会話ログあり
 ```
 
-##### Vision helper
+##### ビジョンヘルパー
 
-This helper enables image analysis through the chat.
+このヘルパーはチャットを通して画像解析を可能にします。
 
 ```4d
 var $result:=$client.chat.vision.create($imageUrl).prompt("give me a description of the image")
 ```
 
-#### Images
+#### 画像
 
 https://platform.openai.com/docs/api-reference/images
 
@@ -87,23 +87,23 @@ https://platform.openai.com/docs/api-reference/images
 var $images:=$client.images.generate("A futuristic city skyline at sunset"; {size: "1024x1024"}).images
 ```
 
-#### Models
+#### モデル
 
 https://platform.openai.com/docs/api-reference/models
 
-Get full list of models
+モデルの完全なリストを取得する例
 
 ```4d
-var $models:=$client.models.list().models // you can then extract the `id`
+var $models:=$client.models.list().models // その後 `id` を抽出します
 ```
 
-Get one model information by id
+IDを使用して一つのモデルの情報を取得する例
 
 ```4d
 var $model:=$client.models.retrieve("a model id").model
 ```
 
-#### Moderations
+#### モデレーション
 
 https://platform.openai.com/docs/api-reference/moderations
 
@@ -111,11 +111,11 @@ https://platform.openai.com/docs/api-reference/moderations
 var $moderation:=$client.moderations.create("This text contains inappropriate language and offensive behavior.").moderation
 ```
 
-#### Asynchronous code
+#### 非同期コード
 
-If you do not want to wait for the OpenAPI response when sending a request to its API, you need to use asynchronous code. The result object will be received in a callback function.
+リクエストをAPI に送信する際にOpenAPI のレスポンスを待ちたくない場合には、非同期コードを使用する必要があります。 戻り値のオブジェクトはコールバック関数内に受け取られます。
 
-See [detailed documentation for examples](asynchronous-call.md)
+詳細については[例題の詳細なドキュメント](asynchronous-call.md) を参照して下さい。
 
 ## Copyright
 
