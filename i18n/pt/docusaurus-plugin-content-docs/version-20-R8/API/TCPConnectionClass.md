@@ -3,9 +3,9 @@ id: TCPConnectionClass
 title: TCPConnection
 ---
 
-The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a server, enabling you to send and receive data, and handle connection lifecycle events using callbacks.
+A classe `TCPConnection` permite gerenciar conexões de cliente TCP (Transmission Control Protocol) com um servidor, possibilitando o envio e o recebimento de dados e a manipulação de eventos do ciclo de vida da conexão usando retornos de chamada.
 
-The `TCPConnection` class is available from the `4D` class store. You can create a TCP connection using the [4D.TCPConnection.new()](#4dtcpconnectionnew) function, which returns a [TCPConnection object](#tcpconnection-object).
+A classe `TCPConnection` está disponível no repositório de classes `4D`. You can create a TCP connection using the [4D.TCPConnection.new()](#4dtcpconnectionnew) function, which returns a [TCPConnection object](#tcpconnection-object).
 
 All `TCPConnection` class functions are thread-safe.
 
@@ -122,7 +122,7 @@ CALL WORKER("new process"; "Async_TCP")
 
 ```
 
-### TCPConnection Object
+### Objeto TCPConnection
 
 A TCPConnection object is a non-sharable object.
 
@@ -189,7 +189,7 @@ All callback functions receive two parameters:
    - `onError` is triggered if an error occurs.
 4. `onTerminate` is always triggered just before the TCPConnection is released (connection is closed or an error occured).
 
-#### TCPEvent object
+#### Objeto TCPEvent
 
 Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de callback](#callback-functions) é chamada.
 
