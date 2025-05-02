@@ -268,7 +268,7 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 #### Descrição
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
+A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna o conteúdo de informações de arquivos de aplicação como um objeto<!-- END REF -->.
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
@@ -307,11 +307,11 @@ A macOS executable file is located within a package (e.g. myApp.app/Contents/Mac
 
 The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
 
-| Propriedade | Tipo   | Descrição                                                                          |
-| ----------- | ------ | ---------------------------------------------------------------------------------- |
-| name        | Text   | Name of architecture ("arm64" or "x86_64") |
-| type        | Number | Numerical identifier of the architecture                                           |
-| uuid        | Text   | Textual representation of the executable uuid                                      |
+| Propriedade | Tipo   | Descrição                                                                         |
+| ----------- | ------ | --------------------------------------------------------------------------------- |
+| name        | Text   | Nome da arquitetura ("arm64" ou "x86_64") |
+| type        | Number | Numerical identifier of the architecture                                          |
+| uuid        | Text   | Textual representation of the executable uuid                                     |
 
 #### Exemplo 1
 
@@ -592,7 +592,7 @@ The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes 
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
 
-***info* parameter object with a .plist file (all platforms)**
+Parâmetro ***info* com um arquivo .plist (todas as plataformas)**
 
 :::note
 
@@ -610,7 +610,7 @@ Para definir um valor de tipo de data, o formato a utilizar é uma string de car
 
 :::
 
-***info* parameter object with a .exe or .dll file (Windows only)**
+Parâmetro ***info* com um arquivo .exe ou .dll (somente Windows)**
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
@@ -630,9 +630,9 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-***info* parameter object with a macOS executable file (macOS only)**
+Parâmetro ***info* com um arquivo executável macOS (somente macOS)**
 
-*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*info* deve ser um objeto com uma única propriedade denominada `archs` que é uma coleção de objetos no formato retornado por [`getAppInfo()`](#getappinfo). Cada objeto deve conter pelo menos as propriedades `type` e `uuid` (`name` não é usado).
 
 Every object in the *info*.archs collection must contain the following properties:
 
