@@ -268,11 +268,11 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 #### Descripción
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
+La función `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->devuelve el contenido de la información de un archivo de aplicación como un objeto<!-- END REF -->.
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
-**Returned object with a .plist file (all platforms)**
+**Objeto devuelto con un archivo .plist (todas las plataformas)**
 
 El contenido xml del archivo se analiza y las llaves se devuelven como propiedades del objeto, conservando sus tipos (texto, booleano, numérico). `.plist dict` se devuelve como un objeto JSON y `.plist array` se devuelve como un array JSON.
 
@@ -592,7 +592,7 @@ The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes 
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
 
-***info* parameter object with a .plist file (all platforms)**
+Parámetro ***info* con un archivo .plist (todas las plataformas)**
 
 :::note
 
