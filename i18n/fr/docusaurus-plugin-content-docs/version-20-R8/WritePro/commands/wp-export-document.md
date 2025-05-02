@@ -8,29 +8,29 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP EXPORT DOCUMENT.Params-->
 
-| Paramètres | Type                    |                             | Description                                                                                                                                         |
-| ---------- | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| wpDoc      | Object                  | &#8594; | 4D Write Pro variable                                                                                                                               |
-| filePath   | Text                    | &#8594; | Path of exported file                                                                                                                               |
-| fileObj    | 4D.File | &#8594; | File object to export                                                                                                                               |
-| format     | Integer                 | &#8594; | Document output format (e.g., .docx, .pdf, etc.) |
-| option     | Object, Integer         | &#8594; | Export options, which can vary depending on the format chosen.                                                                      |
+| Paramètres | Type                    |                             | Description                                                                                                                              |
+| ---------- | ----------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| wpDoc      | Object                  | &#8594; | Variable 4D Write Pro                                                                                                                    |
+| filePath   | Text                    | &#8594; | Chemin du fichier d'export                                                                                                               |
+| fileObj    | 4D.File | &#8594; | Objet du fichier à exporter                                                                                                              |
+| format     | Integer                 | &#8594; | Format de sortie du document (ex : .docx, .pdf, etc.) |
+| option     | Object, Integer         | &#8594; | Options d'export, qui peuvent varier en fonction du format choisi.                                                       |
 
 <!-- END REF-->
 
 ## Description
 
-The **WP EXPORT DOCUMENT** command<!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exports the *wpDoc* 4D Write Pro object to a document on disk according to the *filePath* or *fileObj* parameter as well as any optional parameters.<!-- END REF-->
+La commande **WP EXPORT DOCUMENT**<!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exporte l'objet 4D Write Pro *wpDoc* vers un document sur disque selon le paramètre *filePath* ou *fileObj* ainsi que tout paramètre optionnel.<!-- END REF-->
 
-In *wpDoc*, pass the 4D Write Pro object that you want to export.
+Dans *wpDoc*, passez l'objet 4D Write Pro que vous souhaitez exporter.
 
-You can pass either a *filePath* or *fileObj*:
+Vous pouvez passer soit un *filePath* ou *fileObj* :
 
-- In *filePath*, pass the destination path and the name of the document to be exported. If you pass only the document name, it will be saved at the same level as the 4D structure file.
+- Dans *filePath*, passez le chemin de destination et le nom du document à exporter. Si vous ne passez que le nom du document, il sera sauvegardé au même niveau que le fichier de structure 4D.
 
-- In *fileObj* parameter, pass a 4D.File object representing the file to be exported.
+- Dans le paramètre *fileObj*, passez un objet 4D.File représentant le fichier à exporter.
 
-You can omit the *format* parameter, in which case you need to specify the extension in *filePath*. You can also pass a constant from the *4D Write Pro Constants* theme in the *format* parameter. In this case, 4D adds the appropriate extension to the file name if needed. Les formats suivants sont pris en charge:
+Vous pouvez omettre le paramètre *format*, auquel cas vous devez spécifier l'extension dans *filePath*. Vous pouvez également passer une constante du thème *4D Write Pro Constants* dans le paramètre *format*. Dans ce cas, 4D ajoute l'extension appropriée au nom du fichier si nécessaire. Les formats suivants sont pris en charge:
 
 | Constante            | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | -------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,7 +43,7 @@ You can omit the *format* parameter, in which case you need to specify the exten
 
 **Notes :**
 
-- "4D specific tags" means 4D XHTML with a 4D namespace and 4D CSS styles.
+- "Balises spécifiques 4D" signifie XHTML 4D avec un espace de noms 4D et des styles CSS 4D.
 - For more information about the 4D Write Pro format, refer to *.4wp document format*.
 - To view a list of known differences or incompatibility when using the .docx format, see *Importing and Exporting in .docx format*.
 - For more information on exporting to SVG format, see *Exporting to SVG format*.
