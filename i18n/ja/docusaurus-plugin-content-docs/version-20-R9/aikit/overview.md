@@ -117,9 +117,9 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 詳細については[例題の詳細なドキュメント](asynchronous-call.md) を参照して下さい。
 
-## Copyright
+## 著作権
 
-- This library is not affiliated with, endorsed by, or officially connected to OpenAI in any way.
-- "OpenAI" and any related marks are trademarks or registered trademarks of OpenAI, LLC. All rights related to OpenAI's services, APIs, and technologies remain the property of OpenAI.
-- This project simply provides an interface to OpenAI’s services and does not claim any ownership over their technology, branding, or intellectual property.
+- 本ライブラリは、いかなる方法においてもOpenAI と提携、支援、あるいは公式な連携をしていません。
+- 「OpenAI」および関連するマークは、OpenAI, LLC の商標または登録商標です。 OpenAI のサービス、API、技術に関するすべての権利は OpenAI に帰属します。
+- このプロジェクトはOpenAI のサービスへのインターフェースを提供するものにすぎず、OpenAIの技術、ブランド、知的財産の所有権を主張するものではありません。
 
