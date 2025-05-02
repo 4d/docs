@@ -89,7 +89,7 @@ Você pode exibir as seguintes listas de itens na área de listas da janela do C
 - **Métodos**: nomes de métodos projeto do banco de dados.
 - **Todas as pastas**: nomes das pastas de objetos e subpastas definidas no banco de dados exibidas na forma de uma lista hierárquica. As pastas podem ser utilizadas para organizar objetos de uma forma personalizada. São geridos a partir da página inicial do explorador.
 - **Pastas** (submenu): conteúdo da pasta selecionada usando o submenu.
-- **Macros**: Macro names defined for the database (see [Creating and using macros](./creating-using-macros.md)).
+- **Macros**: nomes de macros definidos para o banco de dados (consulte [Criação e uso de macros](./creating-using-macros.md)).
 - **Comandos**: comandos da linguagem 4D em ordem alfabética.
 - **Comandos por temas**: comandos da linguagem 4D classificados por tema em forma de lista hierárquica.
 - **Barras de menu**: nomes e números das barras de menu [criadas com o editor de barras de menu 4D](../Menus/creating.md).
