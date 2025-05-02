@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Paramètres  | Type            |                             | Description                           |
 | ----------- | --------------- | --------------------------- | ------------------------------------- |
-| wpDoc       | Object          | &#8594; | 4D Write Pro variable                 |
+| wpDoc       | Object          | &#8594; | Variable 4D Write Pro                 |
 | destination | Text, BLOB      | &#8594; | Variable to receive exported contents |
 | format      | Integer         | &#8594; | Variable output format                |
 | option      | Object, Integer | &#8594; | Options d'export                      |
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP EXPORT VARIABLE.Summary-->The **WP EXPORT VARIABLE** command exports the *wpDoc* 4D Write Pro object to the 4D *destination* variable in the specified *format*.<!-- END REF-->
 
-In *wpDoc*, pass the 4D Write Pro object that you want to export.
+Dans *wpDoc*, passez l'objet 4D Write Pro que vous souhaitez exporter.
 
 In *destination*, pass the variable that you want to fill with the exported 4D Write Pro object. The type of this variable depends on the export format specified in the *format* parameter:
 
@@ -42,7 +42,7 @@ In the *format* parameter, pass a constant from the *4D Write Pro Constants* the
 
 **Notes :**
 
-- "4D specific tags" means 4D XHTML with a 4D namespace and 4D CSS styles.
+- "Balises spécifiques 4D" signifie XHTML 4D avec un espace de noms 4D et des styles CSS 4D.
 - For more information about the 4D Write Pro document format, refer to [.4wp document format](https://doc.4d.com/4Dv20/4D/20/Using-a-4D-Write-Pro-area.200-6229460.en.html#2895813).
 - To view a list of known differences or incompatibility when using the .docx format, see [Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html).
 - When exporting to SVG format with this command, images are embedded in base64 format.
