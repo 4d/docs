@@ -9,7 +9,7 @@ Os objetos File handle são criados usando a função [`file.open()`](FileClass#
 
 > Para ler ou escrever um documento inteiro de uma só vez, pode considerar a utilização das funções [file.getText()](FileClass.md#gettext) e [file.setText()](FileClass.md#settext).
 
-Thanks to the standard 4D object *refcounting*, a file handle is automatically deleted when it is no longer referenced and thus, the requested [`File`](FileClass) object is automatically closed. Consequentemente, com os handles dos arquivos não precisa de se preocupar com o encerramento de documentos.
+Graças a *refcounting* padrão de objetos 4D, um handle de arquivo é automaticamente apagado quando deixa de ser referenciado por conseguinte, o [`File`](FileClass) solicitado é automaticamente fechado. Consequentemente, com os handles dos arquivos não precisa de se preocupar com o encerramento de documentos.
 
 :::note
 
