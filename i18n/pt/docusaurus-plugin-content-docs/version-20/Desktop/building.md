@@ -195,15 +195,15 @@ Os elementos devem ser instalados:
 * **no macOS**: ao lado do pacote de software *MyProject.app*.
 
 
-#### About licenses
+#### Sobre as licenças
 
-A stand-alone application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+A stand-alone application requires a deployment license. Ele pode ser incorporado na etapa de compilação pelo desenvolvedor ou inserido na primeira inicialização pelo usuário final, conforme descrito na tabela a seguir:
 
-| Deployment license     | Descrição                                                          | Where to enter it                                                                                 |
-| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | [Página de licenças](#licenses) da caixa de diálogo Build application                             |
-| *4D Unlimited Desktop* | **Descontinuado** - licença personalizada incorporada              | [Página de licenças](#licenses) da caixa de diálogo Build application                             |
-| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | Caixa de diálogo [Primeira ativação](../Admin/licenses.md#first-activation) na máquina do usuário |
+| Licença de implantação | Descrição                                                                               | Onde entrar                                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*       | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Página de licenças](#licenses) da caixa de diálogo Build application                             |
+| *4D Unlimited Desktop* | **Descontinuado** - licença personalizada incorporada                                   | [Página de licenças](#licenses) da caixa de diálogo Build application                             |
+| *4D Desktop*           | Licença por usuário, permitindo-lhes utilizar aplicativos 4D autônomos                  | Caixa de diálogo [Primeira ativação](../Admin/licenses.md#first-activation) na máquina do usuário |
 
 
 
