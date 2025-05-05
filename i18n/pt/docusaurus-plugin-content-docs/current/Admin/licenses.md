@@ -18,14 +18,14 @@ Development licenses are required to access the 4D Design environment and featur
 
 Deployment licenses can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
 
-| Deployment license       | Descrição                                                          | Where to enter it                                                                |
-| ------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| *4D OEM Desktop*         | Embedded custom license, contact 4D Sales for information          | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D Unlimited Desktop*   | **Discontinued** - Embedded custom license                         | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D Desktop*             | Per-user license, allowing them to use stand-alone 4D applications | [First activation](#first-activation) dialog box on the user's machine           |
-| *4D Server OEM*          | Embedded custom license, contact 4D Sales for information          | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses                            | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D Server*              | Per-user license, allowing them to use 4D Server and clients       | [First activation](#first-activation) dialog box on the user's machine           |
+| Licença de implantação   | Descrição                                                                               | Onde entrar                                                                      |
+| ------------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| *4D OEM Desktop*         | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Unlimited Desktop*   | **Descontinuado** - Licença personalizada incorporada                                   | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Desktop*             | Licença por usuário, permitindo-lhes utilizar aplicativos 4D autônomos                  | [First activation](#first-activation) dialog box on the user's machine           |
+| *4D Server OEM*          | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses                                                 | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
+| *4D Server*              | Licença por usuário, permitindo que eles usem 4D Server e clientes                      | [First activation](#first-activation) dialog box on the user's machine           |
 
 ### Expiration
 
