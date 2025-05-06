@@ -196,7 +196,7 @@ Then you can print your labels:
 The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
 
 - in the **Form to use** menu on the "Label" page and/or
-- in the **Apply (method)** menu on the "Layout" page.
+- en el menú **Aplicar (método)** de la página "Diseño".
 
 1. Create a JSON file named **labels.json** and put it in the [Resources folder](../Project/architecture.md#resources) of the project.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
