@@ -40,7 +40,7 @@ Lea [**Novedades en 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-20-R8/), 
 - New options in [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) and [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) to control styles, formulas, data integrity, and password protection.
 - 4D Write Pro:
     - The following commands now allow parameters such as objects or collections: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), and [WP Insert picture](../WritePro/commands/wp-insert-picture.md).
-    - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), and [WP Insert break](../WritePro/commands/wp-insert-break.md), are now functions that return ranges.
+    - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), y [WP Insert break](../WritePro/commands/wp-insert-break.md), son ahora funciones que devuelven rangos.
     - New expressions related to document attributes: [This.sectionIndex](../WritePro/managing-formulas.md), [his.sectionName](../WritePro/managing-formulas.md) and [This.pageIndex](../WritePro/managing-formulas.md).
 - Lenguaje 4D:
     - Comandos modificados: [`FORM EDIT`](../commands/form-edit.md)
@@ -49,7 +49,7 @@ Lea [**Novedades en 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-20-R8/), 
 
 #### Cambios de comportamiento
 
-- Después de una modificación del archivo de registro usando [`SELECT LOG FILE`](../commands/select-log-file.md) o la [Configuración de copia de seguridad](../Backup/settings.md#log-management), el comando [`New log file`](../commands/new-log-file.md) ahora valida el cambio, sin esperar una copia de seguridad. The error -4447 (backup required) is no longer raised.
+- Después de una modificación del archivo de registro usando [`SELECT LOG FILE`](../commands/select-log-file.md) o la [Configuración de copia de seguridad](../Backup/settings.md#log-management), el comando [`New log file`](../commands/new-log-file.md) ahora valida el cambio, sin esperar una copia de seguridad. Ya no se produce el error -4447 (copia de seguridad necesaria).
 - Debido a su [nueva arquitectura](../Desktop/building.md#build-component), los componentes creados con 4D 20 R8 y superiores no pueden ser instalados en versiones anteriores 4D.
 
 ## 4D 20 R7
