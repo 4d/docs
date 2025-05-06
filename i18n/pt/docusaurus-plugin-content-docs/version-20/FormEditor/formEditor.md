@@ -126,7 +126,7 @@ Pode utilizar os seguintes atalhos na Lista de Propriedades:
 
 É possível adicionar objetos a formulários de várias maneiras:
 
-- By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#object-bar))
+- Desenhando o objeto diretamente na forma após selecionar o seu tipo na barra de objeto (veja [Usando a barra de objetos](#object-bar))
 - Arrastando e soltando o objeto da barra de objetos
 - Por arrastar e soltar ou copiar operações em um objeto selecionado da biblioteca [pré-configurada de objetos](objectLibrary.md),
 - Ao arrastar e largar um objeto de outro formulário,
