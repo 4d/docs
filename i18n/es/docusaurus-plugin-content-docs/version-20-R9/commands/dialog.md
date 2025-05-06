@@ -31,7 +31,7 @@ The **DIALOG** command can also be used instead of [ALERT](../commands-legacy/al
 
 En el parámetro *form*, puede pasar:
 
-- the name of a form (project form or table form) to use;
+- el nombre de un formulario (formulario proyecto o formulario tabla) a utilizar;
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use;
 - an object containing a description of the form to use.
 
