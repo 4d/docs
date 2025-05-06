@@ -545,7 +545,7 @@ To build an application without embedded deployment license, just keep the licen
 
 In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). For more information, see the [**Deployment licenses**](../Admin/licenses.md#deployment-licenses) section.
 
-#### Build a licensed application with embedded license(s)
+#### Construir una aplicación con licencia(s) integrada(s)
 
 This option allows you to build a ready-to-use application, in which necessary licenses are already embedded.
 
