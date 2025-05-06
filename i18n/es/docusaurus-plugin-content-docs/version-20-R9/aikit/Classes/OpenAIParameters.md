@@ -22,12 +22,12 @@ Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 
 ### Propiedades de la red
 
-| Propiedad      | Tipo      | Descripción                                                                                                                                              |
-| -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Default is 0.                                    |
-| `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                           |
-| `maxRetries`   | Integer   | The maximum number of retries for the request. (Only if code not asynchrone ie. no function provided) |
-| `extraHeaders` | Object    | Extra headers to send with the request.                                                                                                  |
+| Propiedad      | Tipo      | Descripción                                                                                                                                                        |
+| -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Default is 0.                                              |
+| `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                                     |
+| `maxRetries`   | Integer   | The maximum number of retries for the request. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
+| `extraHeaders` | Object    | Extra headers to send with the request.                                                                                                            |
 
 ### Propiedades OpenAPI
 
