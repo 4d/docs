@@ -272,7 +272,7 @@ A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna o
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
-**Returned object with a .plist file (all platforms)**
+**Objeto retornado com um arquivo .plist (todas as plataformas)**
 
 O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é retornado como um objeto JSON e o `.plist array` é retornado como um array JSON.
 
@@ -282,7 +282,7 @@ A função apenas é compatível com arquivos .plist em formato xml (baseado em 
 
 :::
 
-**Returned object with a .exe or .dll file (Windows only)**
+**Objeto retornado com um arquivo .exe ou .dll (somente Windows)**
 
 Todos os valores de propriedades são Texto.
 
@@ -297,7 +297,7 @@ Todos os valores de propriedades são Texto.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Returned object with a macOS executable file (macOS only)**
+**Objeto retornado com um arquivo executável do macOS (somente macOS)**
 
 :::note
 
