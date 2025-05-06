@@ -3,7 +3,7 @@ id: TCPConnectionClass
 title: TCPConnection
 ---
 
-The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a server, enabling you to send and receive data, and handle connection lifecycle events using callbacks.
+La clase `TCPConnection` permite gestionar conexiones TCP (Transmission Control Protocol) clientes a un servidor, permitiendo enviar y recibir datos, y manejar eventos del ciclo de vida de la conexión mediante retrollamadas.
 
 La clase `TCPConnection` está disponible en el class store `4D`. Puede crear una conexión TCP utilizando la función [4D.TCPConnection.new()](#4dtcpconnectionnew) que devuelve un [TCPConnection object](#tcpconnection-object).
 
