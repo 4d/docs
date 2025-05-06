@@ -10,7 +10,7 @@ Os objetos de sessão são retornados pelo comando [`Session`](../commands/sessi
 The following types of sessions are supported by this class:
 
 - [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-web-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
-- [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
+- [**Sessões de usuário cliente remoto**](../Desktop/clientServer.md#remote-user-sessions): em aplicações cliente/servidor, os usuários remotos têm suas próprias sessões gerenciadas no servidor.
 - [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html): All stored procedures executed on the server share the same virtual user session.
 - [**Standalone session**](../Project/overview.md#development): Local session object returned in single-user application (useful in development and test phases of client/server applications).
 
