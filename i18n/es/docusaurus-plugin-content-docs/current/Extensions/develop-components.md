@@ -388,7 +388,7 @@ The folling keys can be defined:
 | CFBundleName                                               | Nombre del componente (interno)                                                                                                                  |
 | CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                     |
 | NSHumanReadableCopyright                                   | Copyright a mostrar                                                                                                                                                 |
-| CFBundleVersion                                            | Version of the component                                                                                                                                            |
+| CFBundleVersion                                            | Versión del componente                                                                                                                                              |
 | CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
 | com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
 
