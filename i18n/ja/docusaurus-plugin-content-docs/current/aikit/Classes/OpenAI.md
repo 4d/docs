@@ -5,20 +5,20 @@ title: OpenAI
 
 # OpenAI
 
-The `OpenAI` class provides a client for accessing various OpenAI API resources. It includes properties for managing API configurations and methods for performing HTTP requests to the OpenAI endpoints.
+`OpenAI` クラスは、様々なOpenAI API リソースにアクセスするためのクライアントを提供します。 これにはAPI 設定を管理するプロパティやOpenAI エンドポイントへの HTTPリクエストを実行するためのメソッドなどが含まれます。
 
-## Configuration Properties
+## 設定プロパティ
 
-| Property Name | 型    | 説明                                                                           | 任意            |
-| ------------- | ---- | ---------------------------------------------------------------------------- | ------------- |
-| `apiKey`      | Text | Your [OpenAI API Key](https://platform.openai.com/api-keys). | No for OpenAI |
-| `baseURL`     | Text | Base URL for OpenAI API requests.                            | ◯             |
-| `組織`          | Text | Your OpenAI Organization ID.                                 | ◯             |
-| `project`     | Text | Your OpenAI Project ID.                                      | ◯             |
+| プロパティ名    | 型    | 説明                                                         | 任意          |
+| --------- | ---- | ---------------------------------------------------------- | ----------- |
+| `apiKey`  | Text | あなたの [OpenAI API キー](https://platform.openai.com/api-keys) | OpenAI では必須 |
+| `baseURL` | Text | OpenAI API リクエストのためのベースURL。                                | ◯           |
+| `組織`      | Text | あなたの OpenAI 組織 ID。                                         | ◯           |
+| `project` | Text | あなたの OpenAI プロジェクト ID。                                     | ◯           |
 
 ### Additional HTTP properties
 
-| Property Name   | 型                                                                                | 説明                                                                   |
+| プロパティ名          | 型                                                                                | 説明                                                                   |
 | --------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | `timeout`       | Real                                                                             | Time in seconds before timeout occurs.               |
 | `maxRetries`    | Real                                                                             | Maximum number of retry attempts in case of failure. |
@@ -60,7 +60,7 @@ $client.baseURL:="https://server.ai"
 
 The API provides access to multiple resources that allow seamless interaction with OpenAI's services. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
 
-| Property Name | 型                                               | 説明                                             |
+| プロパティ名        | 型                                               | 説明                                             |
 | ------------- | ----------------------------------------------- | ---------------------------------------------- |
 | `models`      | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Access to the Models API.      |
 | `chat`        | [OpenAIChatAPI](OpenAIChatAPI.md)               | Access to the Chat API.        |
