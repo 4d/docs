@@ -141,7 +141,7 @@ A execução de un método no modo preemptivo dependerá de que a propriedade "e
 
 4D permite que você identifique o modo de execução dos processos no modo compilado:
 
-- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
+- O comando [`Process info`] (../commands/process-info.md) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
 - O Explorador de execução e a [janela de administração de 4D Server] (../ServerWindow/processes.md#process-type)
  mostram ícones específicos para os processos preemptivos.
 
