@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | aTable     | Tabla        | &#8594; | Formulario tabla a cargar (si se omite, carga un formulario proyecto)                                                                                                                                 |
 | form       | Text, Object | &#8594; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                                                            |
+| formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                                                            |
 | \*         | Operador     | &#8594; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
 
 <!-- END REF-->
@@ -52,11 +52,11 @@ The current printing form is automatically closed when the [CLOSE PRINTING JOB](
 
 This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
 
-**FORM LOAD** can be used with the [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) and [OBJECT Get type](../commands-legacy/object-get-type.md) commands in order to perform any type of processing on the form contents. You must then call the [FORM UNLOAD](../commands-legacy/form-unload.md) command in order to release the form from memory.
+**FORM LOAD** can be used with the [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) and [OBJECT Get type](../commands-legacy/object-get-type.md) commands in order to perform any type of processing on the form contents. A continuación, debe llamar al comando [FORM UNLOAD](../commands-legacy/form-unload.md) para liberar el formulario de la memoria.
 
 Note that in all cases, the form on screen remains loaded (it is not affected by the **FORM LOAD** command) so it is not necessary to reload it after calling [FORM UNLOAD](../commands-legacy/form-unload.md).
 
-**Reminder:** In the off-screen context, do not forget to call [FORM UNLOAD](../commands-legacy/form-unload.md) to avoid any risk of memory overflow.
+**Recordatorio:** en el contexto fuera de pantalla, no olvide llamar a [FORM UNLOAD](../commands-legacy/form-unload.md) para evitar cualquier riesgo de saturación de memoria.
 
 ## Ejemplo 1
 
