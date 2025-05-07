@@ -9,7 +9,7 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 ## プロパティ
 
-| Property Name      | 型                                                                     | Default Value                                          | 説明                                                                                    |
+| プロパティ名             | 型                                                                     | Default Value                                          | 説明                                                                                    |
 | ------------------ | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------- |
 | `chat`             | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | The chat API instance used for communication with OpenAI.             |
 | `systemPrompt`     | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | The system prompt message that guides the chat assistant's responses. |
