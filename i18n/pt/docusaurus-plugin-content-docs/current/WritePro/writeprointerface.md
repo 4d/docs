@@ -311,7 +311,7 @@ The 4D Write Pro interface uses OpenAI, for which you need to provide your own k
 
 :::
 
-### Limitations (Developer Preview)
+### Limitações (Developer Preview)
 
 In the current implementation, the feature has the following limitations:
 
