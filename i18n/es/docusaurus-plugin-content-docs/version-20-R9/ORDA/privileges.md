@@ -214,7 +214,7 @@ Class extends Entity
    ...
 ```
 
-... you have to write:
+... tiene que escribir:
 
 ```json
 "applyTo":"City.getPopulation"
