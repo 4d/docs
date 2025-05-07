@@ -316,12 +316,12 @@ The 4D Write Pro interface uses OpenAI, for which you need to provide your own k
 In the current implementation, the feature has the following limitations:
 
 - use of a predefined AI provider and necessity to pass your OpenAI key
-- basic chatting features
+- funcionalidades básicas de chat
 - no image handling
 - non-configurable predefined action commands
 - predefined translations English/French and French/English only
 
-### Enabling the AI feature
+### Activando la función de IA
 
 The AI dialog box is available by clicking on a button in the 4D Write Pro interface. This button is **hidden by default**, you need to enable it explicitely.
 
@@ -396,7 +396,7 @@ The chat box uses the Markdown language to format text. Basic styles such as bol
 
 :::
 
-#### Chat area
+#### Área de chat
 
 The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
 
