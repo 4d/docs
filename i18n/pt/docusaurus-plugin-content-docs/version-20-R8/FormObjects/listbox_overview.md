@@ -320,7 +320,7 @@ Quando o comando `OBJECT SET VISIBLE` é usado com um cabeçalho, ele é aplicad
 
 ## Rodapés de list box
 
-> Para poder acessar as propriedades de cabeçalho de uma caixa de listagem, é necessário ativar a opção [Exibir cabeçalhos] (properties_Headers.md#display-headers) da caixa de listagem.
+> Para poder acessar as propriedades de cabeçalho de um list box, é necessário ativar a opção [Exibir cabeçalhos](properties_Headers.md#display-headers) do list box.
 
 List boxes podem conter "cabeçalhos" não editáveis, exibindo informação adicional. No caso de dados mostrados em formato de tabela, os rodapés são geralmente usados para exibir cálculos como totais ou médias.
 
@@ -336,7 +336,7 @@ Quando o comando OBJECT SET VISIBLE for usado com um rodapé, é aplicado a todo
 
 ### Propriedades específicas do rodapé
 
-[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Formato Alpha](properties_Display.md#alpha-format) - [Cor de fundo](properties_BackgroundAndBorder.md#background-color--fill-color) - [Negrito](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Formato de data](properties_Display.md#date-format) - [Tipo de expressão](properties_Object.md#expression-type) - [Fonte](properties_Text.md#font) - [Cor do fonte](properties_Text.md#font-color) - [Dica](properties_Help.md#help-tip) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment) - [Padding horizontal](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Formato de número](properties_Display.md#number-format) - [Nome do objeto](properties_Object.md#object-name) - [Formato da imagem](properties_Display.md#picture-format) - [Formato do tempo](properties_Display.md#time-format) - [Truncate com ellipsis](properties_Display.md#truncate-with-ellipsis) - [Sublinhado](properties_Text.md#underline) - [Cálculo variável](properties_Object.md#variable-calculation) - [Variável ou Expressão](properties_Object.md#variable-or-expression) - [Alinhamento vertical](properties_Text.md#vertical-alignment) - [Padding](properties_Coordinates_CoordinatesAndSizing.md#vertical-padding) - [Largura](properties_CoordinatesAndSizing.md#width) - [Embalagem de palavras](properties_Display.md#wordwrap)
 
 ## Gerenciar entrada
 
@@ -363,7 +363,7 @@ Case of
  End case
 ```
 
-O evento `No Antes da entrada de dados` é retornado antes de `Ao receber o foco`.
+O evento `On Before Data Entry` é retornado antes de `On Getting Focus`.
 
 Para preservar consistência de dados para list boxes de tipo seleção e tipo seleção de entidade, qualquer registro/entidade modificada é automaticamente salva assim que a célula for validada, ou seja.:
 
@@ -388,7 +388,7 @@ A sequencia típica de eventos gerados durante a entrada de dados ou modificaç�
 
 (\*) Com list boxes de seleção de entidade, no evento On Data Change:
 
-- O objeto [Current item] (properties_DataSource.md#current-item) contém o valor antes da modificação.
+- o objeto [item atual](properties_DataSource.md#current-item) contém o valor antes da modificação.
 - o objeto `This` contém o valor modificado.
 
 > Entrada de dados em list boxes do tipo coleção/seleção de entidade tem uma limitação quando a expressão for analisada como null. Nesse caso, não é possível editar ou remover o valor null na célula.
@@ -420,7 +420,7 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
  final, se
 ```
 
-> O comando `OBJECT SET SCROLL POSITION` rola as linhas da caixa de listagem de modo que a primeira linha selecionada ou uma linha especificada seja exibida.
+> O comando `OBJECT SET SCROLL POSITION` rola as linhas do list box de modo que a primeira linha selecionada ou uma linha especificada seja exibida.
 
 ### Personalizar a aparência de linhas selecionadas
 
@@ -445,9 +445,9 @@ Lembre que essas expressões são automaticamente reavaliadas a cada vez que:
 
 #### List box de tipo array
 
-Você precisa analisar a matriz booleana [Variable or Expression] (properties_Object.md#variable-or-expression) associada à caixa de listagem para determinar se as linhas estão selecionadas ou não.
+Você precisa analisar o array booleano [Variable ou Expression](properties_Object.md#variable-or-expression) associada à list box para determinar se as linhas estão selecionadas ou não.
 
-Em seguida, você pode definir a aparência das linhas selecionadas usando uma ou mais das propriedades relevantes de [matriz de cores ou estilos] (#using-arrays-and-expressions).
+Em seguida, você pode definir a aparência das linhas selecionadas usando uma ou mais das propriedades relevantes de [array de cores ou estilos](#using-arrays-and-expressions).
 
 Observe que os conjuntos de caixas de listagem usados para definir a aparência das linhas selecionadas devem ser recalculados durante o evento de formulário `On Selection Change`; no entanto, você também pode modificar esses conjuntos com base nos seguintes eventos de formulário adicionais:
 
@@ -462,7 +462,7 @@ Se escolher esconder os destaques do sistema e quiser exibir seleções de list 
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-Para uma caixa de lista de tipos de matriz, você precisa atualizar a [matriz de cor de fundo da linha de fundo](properties_BackgroundAndBorder.md#row-background-color-array) pela programação. No formulário JSON, se definiu o Array Row Background Color para a list box:
+Para um list box de tipos de array, você precisa atualizar o [array de cor de fundo da linha](properties_BackgroundAndBorder.md#row-background-color-array) pela programação. No formulário JSON, você definiu a seguinte matriz de cores de fundo de linha para o list box:
 
 ```
 	"rowFillSource": "_ListboxBackground",
@@ -485,7 +485,7 @@ No método de objeto da list box, pode escrever:
  End case
 ```
 
-Em uma caixa de listagem do tipo seleção, para produzir o mesmo efeito, você pode usar um método para atualizar a [Background Color Expression] (properties_BackgroundAndBorder.md#background-color-expression) com base no conjunto especificado na propriedade [Highlight Set] (properties_ListBox.md#highlight-set).
+Em um list box do tipo seleção, para produzir o mesmo efeito, você pode usar um método para atualizar a [Expressão da cor de fundo](properties_BackgroundAndBorder.md#background-color-expression) com base no conjunto especificado na propriedade [Conjunto destacado](properties_ListBox.md#highlight-set).
 
 Por exemplo, no formulário JSON, se definiu  HIghlight Set e Background Color Expression para o list box:
 
@@ -498,7 +498,7 @@ Você pode escrever no método *UI_SetColor*:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // green background
+    $color:=0x0080C080 //  fundo verde
  Else
     $color:=lk inherited
  End if
@@ -506,7 +506,7 @@ Você pode escrever no método *UI_SetColor*:
  $0:=$color
 ```
 
-> Em caixas de listagem hierárquicas, as linhas de quebra não podem ser destacadas quando a opção [Ocultar destaque de seleção] (properties_Appearance.md#hide-selection-highlight) está marcada. Já que não é possível diferenciar cores de cabeçalho ao mesmo nível, não há uma maneira de ressaltar uma quebra de linha especifica por programação.
+> Em list boxes hierárquicos, as linhas de quebra não podem ser destacadas quando a opção [Ocultar destaque de seleção](properties_Appearance.md#hide-selection-highlight) está marcada. Já que não é possível diferenciar cores de cabeçalho ao mesmo nível, não há uma maneira de ressaltar uma quebra de linha especifica por programação.
 
 ## Gestão de ordenações
 
@@ -514,29 +514,29 @@ Uma ordenação num list box pode ser padrão ou personalizada. Todas as colunas
 
 ### Ordenação standard
 
-como padrão, uma list box gerencia automaticamente ordenações de coluna padrão quando o cabeçalho for clicado. Uma ordenação normal é uma ordenação alfanumérica de valores de coluna, alternando entre ascendente e descendente com cada clique sucessivo.
+Por padrão, um list box fornece classificações de coluna padrão quando o cabeçalho é clicado. Uma ordenação normal é uma ordenação alfanumérica de valores de coluna, alternando entre ascendente e descendente com cada clique sucessivo.
 
 Você pode ativar ou desativar a classificação padrão do usuário desativando a propriedade [Sortable](properties_Action.md#sortable) da caixa de listagem (ativada por padrão).
 
 O suporte de ordenação padrão depende do tipo de list box:
 
-| Tipo de list box              | Suporte de ordenação padrão | Comentários                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Uma coleção de objetos        | Sim                         | <ul><li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Colecção de valores escalares | Não                         | Use a classificação personalizada com a função [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Seleção de entidades          | Sim                         | <li>A [propriedade de origem da caixa de listagem](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo,</li> "This.data<li>.</li>city" quando "data" é um<li>atributo de objeto</0>)<li>Suportado: classifica propriedades de atributos</0> relacionados<li>(por exemplo</0>, "This.company<li>.</li>name"<li>)</li>Suportado: classifica propriedades de atributos de objetos (por exemplo,<li>"This.data.city" quando "data" é um atributo de objeto)Suportado</li>: classifica<li>atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por meio de atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar a classificação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li> |
-| Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Seleção temporal              | Não                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Arrays                        | Sim                         | As colunas ligadas a arrays de imagens e ponteiros não podem ser ordenadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Tipo de list box              | Suporte de ordenação padrão | Comentários                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Uma coleção de objetos        | Sim                         | <ul><li>As colunas "This.a" ou "This.a.b" são classificáveis.</li><li>A [propriedade de origem da list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Colecção de valores escalares | Não                         | Use a classificação personalizada com a função [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Seleção de entidades          | Sim                         | <li>A [propriedade de origem do list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo, "This.data.city" quando "data" é um atributo objeto)</li><li>Suportado: classifica atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por meio de atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar a classificação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li> |
+| Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Seleção temporal              | Não                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Arrays                        | Sim                         | As colunas ligadas a arrays de imagens e ponteiros não podem ser ordenadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ### Ordenação personalizada
 
-O desenvolvedor pode configurar tipos personalizados, por exemplo, usando o [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916. comando tml) e/ou combinação dos eventos de formulário [`No Header Click`](../Events/onHeaderClick) e [`On Sort`](../Events/onAfterSort) e comandos 4D relevantes.
+O desenvolvedor pode configurar tipos personalizados, por exemplo, usando o comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) e/ou combinação dos eventos de formulário [`On Header Click`](../Events/onHeaderClick) e [`On After Sort`](../Events/onAfterSort) e comandos 4D relevantes.
 
 As ordenações personalizadas permitem-lhe:
 
-- realizar classificações em vários níveis em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`] (https://doc.4d.com/4dv19/help/command/en/page916.html),
-- use functions such as [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+- realizar classificações em vários níveis em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
+- utilize funções como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para classificar colunas com base em critérios complexos.
 
 #### Exemplo
 
@@ -544,7 +544,7 @@ Você deseja classificar um list box usando valores de uma propriedade armazenad
 
 ![](../assets/en/FormObjects/relationLB.png)
 
-Você projeta uma caixa de lista do tipo de seleção de entidades, vinculada à expressão `Form.child`. No evento de formulário `On Load`, você executa `Form.child:=ds.Child.all()`.
+Você cria um list box do tipo de seleção de entidade, vinculada à expressão `Form.child`. No evento de formulário `On Load`, você executa `Form.child:=ds.Child.all()`.
 
 São exibidas duas colunas:
 
@@ -567,25 +567,25 @@ O valor da [variável de cabeçalho de coluna] (properties_Object.md#variable-or
 - Se a variável for estabelecida como 0, a coluna não é ordenada e a flecha de ordenação não é exibida;\
  ![](../assets/en/FormObjects/sorticon0.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
+- Se a variável for definida como 1, a coluna será classificada em ordem crescente e a seta de classificação será exibida.
  ![](../assets/en/FormObjects/sorticon2.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
+- Se a variável for estabelecida como 2, a coluna é ordenada de forma descendente e a flecha de ordenação é exibida.
  ![](../assets/en/FormObjects/sorticon1.png)
 
-> Somente [variáveis] declaradas ou dinâmicas (Concepts/variables.md) podem ser usadas como variáveis de coluna de cabeçalho. Outros tipos de [expressions](Aceitações/quick-tour.md#expressions) como `Form.sortValue` não são suportados.
+> Somente [variáveis](Concepts/variables.md) declaradas ou dinâmicas podem ser usadas como variáveis de cabeçalho de coluna. Outros tipos de [expressions](Aceitações/quick-tour.md#expressions) como `Form.sortValue` não são suportados.
 
 Pode estabelecer o valor da variável (por exemplo, Header2:=2) para  “forçar” a exibição da flecha de ordenação. A ordenação de coluna não é modificada nesse caso; depende do desenvolvedor como vai manejá-la.
 
-> O comando [`OBJECT SET FORMAT`] (https://doc.4d.com/4dv19/help/command/en/page236.html) oferece suporte específico para ícones em cabeçalhos de caixas de listagem, o que pode ser útil quando você deseja trabalhar com um ícone de classificação personalizado.
+> O comando [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) oferece suporte específico para ícones em cabeçalhos de list box, o que pode ser útil quando você deseja trabalhar com um ícone de classificação personalizado.
 
 ## Gerenciar cores linha, estilos e exibição
 
 Aqui estão algumas maneiras de estabelecer cores de fundo, cores de fonte e estilos de fonte para list boxes:
 
-- no nível das [propriedades do objeto da caixa de listagem] (#list-box-objects),
-- no nível das [propriedades da coluna] (#list-box-columns),
-- usando [propriedades de matrizes ou expressões] (#using-arrays-and-expressions) para a caixa de listagem e/ou para cada coluna,
+- no nível das [propriedades do objeto list box](#list-box-objects),
+- no nível das [propriedades da coluna](#list-box-columns),
+- usando [propriedades dos arrays ou expressões](#using-arrays-and-expressions) para o list box e/ou para cada coluna,
 - no nível do texto de cada célula (se [texto multi-estilo](properties_Text.md#multi-style)).
 
 ### Prioridade e herança
@@ -609,15 +609,15 @@ Para cada atributo (estilo, cor e cor de fundo), uma **herança** é implementad
 - para atributos linhas: valores de atributos de colunas
 - para atributos coluna: valores atributos no list box
 
-Dessa maneira se quiser que um objeto herde o valor de atributo de um nível superior, pode usar a constante `lk inherited` (valor padrão) à definição de comando ou diretamente no elemento do array correspondente de estilo/cor. For example, given an array list box containing a standard font style with alternating colors:
+Dessa maneira se quiser que um objeto herde o valor de atributo de um nível superior, pode usar a constante `lk inherited` (valor padrão) à definição de comando ou diretamente no elemento do array correspondente de estilo/cor. Por exemplo, dado um list box array contendo um estilo de fonte padrão com cores alternadas:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Pode realizar as modificações abaixo:
 
-- Mude o fundo da linha 2 para vermelho usando a propriedade [Linha de Cor de Fundo Array](properties_BackgroundAndBorder.md#row-background-color-array) do objeto caixa de lista,
-- altere o estilo de linha 4 para itálico usando a propriedade [Linha de Estilo Array](properties_Text.md#row-style-array) do objeto caixa de lista,
+- altere o fundo da linha 2 para vermelho usando a propriedade de [Array de cor de fundo da linha](properties_BackgroundAndBorder.md#row-background-color-array) do objeto list box,
+- altere o estilo de linha 4 para itálico usando a propriedade [Array de estilos](properties_Text.md#row-style-array) do objeto list box,
 - dois elementos na coluna 5 são alterados para negrito usando a propriedade [Matriz de Estilo da Linha](properties_Text.md#row-style-array) do objeto da coluna 5,
-- Os 2 elementos da coluna 1 e 2 são alterados para azul escuro usando a propriedade [Row Background Color Array] (properties_BackgroundAndBorder.md#row-background-color-array) para os objetos da coluna 1 e 2:
+- os 2 elementos da coluna 1 e 2 são alterados para azul-escuro usando a propriedade [Array de cores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) para os objetos da coluna 1 e 2:
 
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
@@ -654,17 +654,17 @@ Nesse modo, a impressão de caixas de listagem é realizada por programação, p
 Nesse modo:
 
 - A altura do objeto list box é reduzida automaticamente quando o número de linhas a ser impresso for menor que a altura original do objeto (não há linhas "em branco" impressas). Por outro lado a altura não aumenta automaticamente de acordo com os conteúdos do objeto. O tamanho do objeto realmente impresso pode ser obtido por meio do comando `LISTBOX GET PRINT INFORMATION`.
-- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
- These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
+- O objeto list box é impresso "como está", ou seja, considerando seus parâmetros de exibição atuais: visibilidade de cabeçalhos e linhas de grade, linhas ocultas e exibidas etc.
+ Esses parâmetros também incluem a primeira linha a ser impressa: se você chamar o comando `OBJECT SET SCROLL POSITION` antes de iniciar a impressão, a primeira linha impressa no list box será a designada pelo comando.
 - Um mecanismo automático facilita a impressão de caixas de listagem que contêm mais linhas do que é possível exibir: chamadas sucessivas para `Print object` podem ser usadas para imprimir um novo conjunto de linhas a cada vez. O comando `LISTBOX GET PRINT INFORMATION` pode ser usado para verificar o status da impressão enquanto ela estiver em andamento.
 
-## List box hierárquicos.
+## List box hierárquicos
 
 Uma list box hierárquica é uma list box na qual o conteúdo da primeira coluna aparece em forma hierárquica. Esse tipo de representação se adapta à apresentação de informação que inclua valores repetidos ou que dependem de hierarquias (país/região/cidade e assim por diante).
 
-> Apenas [caixas de lista de tipos de arrays](#array-list-boxes) podem ser hierárquicas.
+> Apenas os [list box de tipos arrays](#array-list-boxes) podem ser hierárquicos.
 
-As caixas de listagem hierárquica são uma forma particular de representar dados, mas não modificam a estrutura de dados (matrizes). As caixas de listagem hierárquica são geridas exactamente da mesma forma que as caixas de listagem normais.
+Os list boxes hierárquicos são uma forma particular de representar dados, mas não modificam a estrutura de dados (arrays). Os list box hierárquicos são geridos exatamente da mesma forma que os list boxes normais.
 
 ### Definir a hierarquia
 
@@ -723,11 +723,11 @@ Uma linha de quebra e um "nó" hierárquico são automaticamente adicionados na 
 
 ![](../assets/en/FormObjects/hierarch1.png)
 
-Se esta caixa de listagem for apresentada de forma hierárquica (sendo as três primeiras arrays incluídas na hierarquia), obtém-se:
+Se este list box for apresentada de forma hierárquica (sendo as três primeiras arrays incluídas na hierarquia), obtém-se:
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-As matrizes não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
+Os arrays não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
 \> A
 \> B
 \> A
@@ -737,9 +737,9 @@ Para expandir ou colapsar um "nó" hierárquico, pode simplesmente clicar sobre 
 
 Quando valores do tipo de data ou hora são incluídos numa caixa de listagem hierárquica, eles são exibidos no formato de sistema curto.
 
-#### Ordenar em caixas de listagem hierárquica
+#### Ordenar em list boxes hierárquicos
 
-Numa caixa de listagem em modo hierárquico, uma ordenação padrão (realizada clicando no cabeçalho de uma coluna da caixa de listagem) é sempre construída da seguinte forma:
+Num list box em modo hierárquico, uma ordenação padrão (realizada clicando no cabeçalho de uma coluna de list box) é sempre construída da seguinte forma:
 
 - Em primeiro lugar, todos os níveis da coluna hierárquica (primeira coluna) são automaticamente ordenados por ordem ascendente.
 - A ordenação é então efectuada por ordem ascendente ou descendente (de acordo com a acção do utilizador) sobre os valores da coluna que foi clicada.
@@ -872,8 +872,11 @@ Estão disponíveis propriedades padrão relacionadas com coordenadas, tamanho e
 
 No entanto, o tema Fonte de Dados não está disponível para as colunas da caixa de listagem tipo objecto. De fato, o conteúdo de cada célula de coluna é baseado em atributos encontrados no elemento correspondente da array de objectos. Cada elemento da array pode definir:
 
-the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output.
-the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
+o tipo de valor (obrigatório): texto, cor, evento, etc.
+o valor em si (opcional): usado para entrada/saída.
+a exibição do conteúdo da célula (opcional): botão, lista, etc.
+configurações adicionais (opcional): dependem do tipo de valor
+Para definir essas propriedades, você precisa definir os atributos apropriados no objeto (os atributos disponíveis estão listados abaixo). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
 
 ```4d
 ARRAY OBJECT(obColumn;0) //array de colunas
@@ -958,17 +961,17 @@ O único atributo obrigatório é "valueType" e os seus valores suportados são 
 Os valores das células são armazenados no atributo "value". Este atributo é utilizado tanto para a entrada como para a saída. Também pode ser utilizada para definir valores por defeito quando se utilizam listas (ver abaixo).
 
 ```4d
- ARRAY OBJECT(obColumn;0) //column array
+ ARRAY OBJECT(obColumn;0) //array de colunas
  C_OBJECT($ob1)
  $entry:="Hello world!"
- OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1; "valueType"; "text")
+ OB SET($ob1; "value";$entry) // se o usuário inserir um novo valor, $entry conterá o valor editado
  C_OBJECT($ob2)
- OB SET($ob2;"valueType";"real")
+ OB SET($ob2; "valueType"; "real")
  OB SET($ob2;"value";2/3)
  C_OBJECT($ob3)
- OB SET($ob3;"valueType";"boolean")
- OB SET($ob3;"value";True)
+ OB SET($ob3; "valueType"; "boolean")
+ OB SET($ob3; "value";True)
 
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
