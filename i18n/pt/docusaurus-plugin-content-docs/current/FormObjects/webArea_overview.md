@@ -53,7 +53,7 @@ $4d. HelloWorld();
 
 With [`WA SET CONTEXT`](../commands/wa-set-context.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 
-To check the currently defined context, use [`WA Get context`](../commands/wa-get-context.md).
+Para verificar o contexto atualmente definido, use [`WA Get context`](../commands/wa-get-context.md).
 
 For more information, please refer to [`WA SET CONTEXT`](../commands/wa-set-context.md).
 
