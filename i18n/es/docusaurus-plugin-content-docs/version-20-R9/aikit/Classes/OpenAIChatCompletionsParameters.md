@@ -15,8 +15,8 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 
 | Propiedad               | Tipo    | Default Value   | Descripción                                                                                                                                                                              |
 | ----------------------- | ------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `model`                 | Text    | `"gpt-4o-mini"` | ID of the model to use.                                                                                                                                                  |
-| `stream`                | Boolean | `False`         | Whether to stream back partial progress. If set, tokens will be sent as data-only. Callback formula required.                            |
+| `model`                 | Text    | `"gpt-4o-mini"` | ID del modelo a utilizar.                                                                                                                                                |
+| `stream`                | Boolean | `False`         | Whether to stream back partial progress. If set, tokens will be sent as data-only. Fórmula de retrollamada necesaria.                    |
 | `max_completion_tokens` | Integer | `0`             | The maximum number of tokens that can be generated in the completion.                                                                                                    |
 | `n`                     | Integer | `1`             | How many completions to generate for each prompt.                                                                                                                        |
 | `temperature`           | Real    | `-1`            | What sampling temperature to use, between 0 and 2. Higher values make the output more random, while lower values make it more focused and deterministic. |
