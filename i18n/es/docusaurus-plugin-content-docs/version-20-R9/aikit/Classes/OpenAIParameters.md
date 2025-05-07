@@ -11,12 +11,12 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 ### Properties of Asynchronous Programming
 
-| Propiedad                  | Tipo     | Descripción                                                                                                                                                        |
-| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `formula` or `onTerminate` | Function | A function to be called asynchronously when finished. Ensure that the current process does not terminate.                          |
-| `onResponse`               | Function | A function to be called asynchronously when the request finishes successfully. Ensure that the current process does not terminate. |
-| `onError`                  | Function | A function to be called asynchronously when the request finishes with errors. Ensure that the current process does not terminate.  |
-| `throw`                    | Boolean  | If true, throws an error if one occurs. Only if no formula callback defined.                                                       |
+| Propiedad                 | Tipo     | Descripción                                                                                                                                                        |
+| ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `formula` u `onTerminate` | Function | A function to be called asynchronously when finished. Ensure that the current process does not terminate.                          |
+| `onResponse`              | Function | A function to be called asynchronously when the request finishes successfully. Ensure that the current process does not terminate. |
+| `onError`                 | Function | A function to be called asynchronously when the request finishes with errors. Ensure that the current process does not terminate.  |
+| `throw`                   | Boolean  | If true, throws an error if one occurs. Only if no formula callback defined.                                                       |
 
 Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 
