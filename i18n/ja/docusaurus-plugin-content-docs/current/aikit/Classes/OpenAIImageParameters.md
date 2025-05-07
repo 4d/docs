@@ -13,7 +13,7 @@ The `OpenAIImageParameters` class is designed to configure and manage the parame
 
 ## プロパティ
 
-| Property Name     | 型       | Default Value | 説明                                                                                                                                      |
+| プロパティ名            | 型       | Default Value | 説明                                                                                                                                      |
 | ----------------- | ------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `model`           | Text    | "dall-e-2"    | Specifies the model to use for image generation.                                                                        |
 | `n`               | Integer | 1             | The number of images to generate (must be between 1 and 10; only `n=1` is supported for `dall-e-3`). |
