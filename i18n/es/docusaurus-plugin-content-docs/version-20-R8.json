@@ -416,11 +416,11 @@
     "description": "The generated-index page title for category Process (Communications) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface)": {
-    "message": "Process (User Interface)",
+    "message": "Proceso (interfaz de usuario)",
     "description": "The label for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Process (User Interface).link.generated-index.title": {
-    "message": "Process (User Interface)",
+    "message": "Proceso (interfaz de usuario)",
     "description": "The generated-index page title for category Process (User Interface) in sidebar docs"
   },
   "sidebar.docs.category.Processes.link.generated-index.title": {
