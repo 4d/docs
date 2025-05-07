@@ -484,8 +484,8 @@ Los siguientes campos se registran para cada evento:
 | ---------------- | ---------- | ----------------------------------------------------------------------------------------- |
 | time             | Fecha/Hora | Fecha y hora del evento en formato ISO 8601                                               |
 | localPort        | Number     | Local port used for the connection                                                        |
-| peerAddress      | Text       | IP address of the remote peer                                                             |
-| peerPort         | Number     | Port of the remote peer                                                                   |
+| peerAddress      | Text       | Dirección IP del peer remoto                                                              |
+| peerPort         | Number     | Puerto del peer remoto                                                                    |
 | protocol         | Text       | Indicates whether the event is related to `TCP`                                           |
 | evento           | Text       | El tipo de evento:`open`, `close`, `error`, `send`, `receive`, o `listen` |
 | size             | Number     | The amount of data sent or received (in bytes), 0 if not applicable    |
