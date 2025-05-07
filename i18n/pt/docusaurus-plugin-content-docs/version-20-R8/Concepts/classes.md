@@ -98,7 +98,7 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
-- [`cs`](../commands/cs.md) for user class store
+- [`cs`](../commands/cs.md) para o class store de usuário
 - [`4D`](../commands/4d.md) para o class store integrado
 
 ### `cs`
