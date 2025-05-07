@@ -121,7 +121,7 @@ Hay dos tipos de nombres de familias de fuentes:
 - *family-name:* El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
 - *generic-family:* El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [`OBJECT SET FONT`](../commands-legacy/object-set-font.md) command.
+Puede configurarlo utilizando el comando [`OBJECT SET FONT`](../commands-legacy/object-set-font.md).
 
 #### Gramática JSON
 
@@ -185,7 +185,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) en el manual Lenguaje de 4D.
 
-Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERTY` con la constante `lk font color expression`.
 
@@ -419,7 +419,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 Permite definir un color de fuente personalizado para cada línea del list box o celda de la columna.
 
-Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command. Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md). Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 
 #### Gramática JSON
 
