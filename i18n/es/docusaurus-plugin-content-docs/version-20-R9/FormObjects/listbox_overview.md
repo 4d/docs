@@ -1137,7 +1137,7 @@ Ejemplo:
 Puede utilizar atributos específicos para añadir unidades asociadas a los valores de las celdas (\*por ejemplo, \*: "10 cm", "20 píxeles", etc.). Para definir la lista de unidades, puede utilizar uno de los siguientes atributos:
 
 - "unitsList": un array que contiene los elementos x utilizados para definir las unidades disponibles (por ejemplo: "cm", "pulgadas", "km", "millas", etc.). Utilice este atributo para definir las unidades dentro del objeto.
-- "unitsListReference": una referencia a una lista 4D que contiene las unidades disponibles. Use this attribute to define units with a 4D list created with the [`New list`](../commands-legacy/new-list.md) command.
+- "unitsListReference": una referencia a una lista 4D que contiene las unidades disponibles. Utilice este atributo para definir unidades con una lista 4D creada con el comando [`New list`](../commands-legacy/new-list.md).
 - "unitsListName": un nombre de una lista 4D basada en el diseño que contiene unidades disponibles. Utilice este atributo para definir las unidades con una lista 4D creada en la caja de herramientas.
 
 Independientemente de la forma en que se defina la lista de unidades, puede asociarse con el siguiente atributo:
