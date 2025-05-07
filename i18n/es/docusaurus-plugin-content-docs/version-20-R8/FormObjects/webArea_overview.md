@@ -159,7 +159,7 @@ Además, las áreas web soportan los siguientes eventos de formulario genéricos
 Cuando se ejecuta el formulario, las funciones estándar de la interfaz del navegador están disponibles para el usuario en el área web, lo que permite la interacción con otras áreas del formulario:
 
 - **Comandos menú Edición**: cuando el área web tiene el foco, los comandos del menú **Edición** pueden utilizarse para realizar acciones como copiar, pegar, seleccionar todo, etc., según la selección.
-- **Menú contextual**: es posible utilizar el [menú contextual] estándar (properties_Entry.md#context-menu) del sistema con el área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Menú contextual**: es posible utilizar el [menú contextual] estándar (properties_Entry.md#context-menu) del sistema con el área web. La visualización del menú contextual puede controlarse utilizando el comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 - **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D.
  Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor muestra un icono de "prohibido" ![](../assets/en/FormObjects/forbidden.png). Tiene que usar la instrucción `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para mostrar un icono "drop" y generar el evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). En este evento, puede llamar al comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) o definir la [variable URL](properties_WebArea.md#url) en respuesta a un soltar del usuario.
 
@@ -201,7 +201,7 @@ Para mostrar el inspector Web, puede ejecutar el comando `WA OPEN WEB INSPECTOR`
 
 > Con el [motor de renderizado del sistema de Windows](properties_WebArea.md#use-embedded-web-rendering-engine), un cambio en esta preferencia requiere que se tenga en cuenta una acción de navegación en el área (por ejemplo, una actualización de la página).
 
-For more information, refer to the description of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+Para más información, consulte la descripción del comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 
 Cuando haya realizado los ajustes como se ha descrito anteriormente, entonces tendrá nuevas opciones como **Inspeccionar el elemento** en el menú contextual del área. Al seleccionar esta opción, se muestra la ventana del inspector web.
 
