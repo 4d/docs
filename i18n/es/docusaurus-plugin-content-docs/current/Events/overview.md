@@ -18,7 +18,7 @@ End if
 
 ## Objeto evento
 
-Each event is returned as an object by the [`FORM Event`](../commands/form-event.md) command. Por defecto, contiene las siguientes propiedades:
+Cada evento es devuelto como un objeto por el comando [`FORM Event`](../commands/form-event.md). Por defecto, contiene las siguientes propiedades:
 
 | Propiedad   | Tipo         | Descripción                                                                                                |
 | ----------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
