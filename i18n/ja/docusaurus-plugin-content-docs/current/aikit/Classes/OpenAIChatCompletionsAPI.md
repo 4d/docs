@@ -93,7 +93,7 @@ Delete a stored chat compltions.
 
 https://platform.openai.com/docs/api-reference/chat/delete
 
-### リスト()
+### list()
 
 **list**(*parameters* : OpenAIChatCompletionsListParameters) : Collection
 
