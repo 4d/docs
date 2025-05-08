@@ -21,7 +21,7 @@ Elimina a entidade, coleção de entidades ou seleção de entidades atual (cria
 
 ### Descrição
 
-Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
+Com `$method=delete`, você pode excluir uma entidade ou uma coleção de entidades inteira. Você pode definir a coleção de entidades usando, por exemplo, [`$filter`]($filter.md) ou especificando uma diretamente usando [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) \*(por exemplo, \*, /Employee(22)).
 
 Também pode apagar as entidades em um conjunto de entidades, chamando [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -53,9 +53,9 @@ Cria um conjunto de entidades no cache do 4D Server baseado na coleção de enti
 
 ### Descrição
 
-Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. Por padrão, é válido durante duas horas; no entanto, pode modificar esse tempo passando um valor (em segundos) para $timeout.
+Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. O conjunto de entidades terá um número de referência que você pode passar para `$entityset/\{entitySetID\}` para acessá-lo. Por padrão, é válido durante duas horas; no entanto, pode modificar esse tempo passando um valor (em segundos) para $timeout.
 
-Si ha utilizado `$savedfilter` y/o `$savedorderby` (junto con `$filter` y/o `$orderby`) cuando creó su conjunto de entidades, puede volver a crearlo con el mismo ID de referencia aunque se haya eliminado de la caché de 4D Server.
+Se você utilizou `$savedfilter` e/ou `$savedorderby` (em conjunto com `$filter` e/ou `$orderby`) quando criou seu conjunto de entidades, você pode recriá-lo com o mesmo ID de referência, mesmo que tenha sido removido do cache do 4D Server.
 
 ### Exemplo
 
