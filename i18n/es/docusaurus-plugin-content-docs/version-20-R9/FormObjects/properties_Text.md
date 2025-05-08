@@ -439,7 +439,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 Permite definir un estilo de fuente personalizado para cada línea del list box o cada celda de la columna.
 
-Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. To fill the array (using a method), use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) command. Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Para llenar la matriz (utilizando un método), utilice las constantes enumeradas en el comando [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md). Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 
 #### Gramática JSON
 
