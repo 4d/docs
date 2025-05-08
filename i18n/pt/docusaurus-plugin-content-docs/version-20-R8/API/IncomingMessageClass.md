@@ -308,7 +308,7 @@ Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoma
 
 Parameters are passed in JSON format and enclosed within a collection.
 
-In this case, parameters are received as JSON text in the `urlQuery` property and can be parsed using [`JSON Parse`](../commands-legacy/json-parse.md).
+Nesse caso, os parâmetros são recebidos como texto JSON na propriedade `urlQuery` e podem ser analisados usando [`JSON Parse`](../commands-legacy/json-parse.md).
 
 ```4d
 //urlQuery.myparams: "[{"firstname": "Marie","isWoman": true,"id": 3}]"
