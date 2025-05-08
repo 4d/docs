@@ -18,7 +18,7 @@ Helper for vision stuff.
 | *imageURL* | Text                                        | The URL of the image to analyze.           |
 | 戻り値        | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
-#### Example Usage
+#### 使用例
 
 ```4d
 var $helper:=$client.chat.vision.create("http://example.com/image.jpg")
@@ -34,7 +34,7 @@ var $result:=$helper.prompt("Could you describe it?")
 | *imageFile* | 4D.File                     | The image file to analyze.                 |
 | 戻り値         | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
-#### Example Usage
+#### 使用例
 
 ```4d
 var $helper:=$client.chat.vision.fromFile(Folder(fk resource foldres).file("image.png"))
@@ -50,7 +50,7 @@ var $result:=$helper.prompt("Could you describe it?")
 | *ピクチャー* | Picture                                     | The image to analyze.                      |
 | 戻り値     | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
-#### Example Usage
+#### 使用例
 
 ```4d
 var $helper:=$client.chat.vision.fromPicture($image)
