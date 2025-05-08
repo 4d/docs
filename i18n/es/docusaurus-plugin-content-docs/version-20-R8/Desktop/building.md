@@ -509,19 +509,19 @@ La página de Licencias y certificados puede utilizarse para:
 
 ### Sobre las licencias
 
-A built 4D application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
+Una aplicación 4D construida requiere una licencia de despliegue. Puede ser integrada en el paso de creación por el desarrollador o introducido en el primer lanzamiento por el usuario final, como se describe en la siguiente tabla:
 
-| Licencia de despliegue | Descripción                                                        | Where to enter it                                                                         |
-| ---------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
-| *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | Página [Licencias](#licenses) del diálogo Crear aplicación                                |
-| *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | Página [Licencias](#licenses) del diálogo Crear aplicación                                |
-| *4D Desktop*           | Per-user license, allowing them to use stand-alone 4D applications | Diálogo [Primera activación](../Admin/licenses.md#first-activation) en la máquina usuario |
-| *4D Server OEM*        | Embedded custom license, contact 4D Sales for information          | Página [Licencias](#licenses) del diálogo Crear aplicación                                |
-| *4D Server*            | Per-user license, allowing them to use 4D Server and clients       | Diálogo [Primera activación](../Admin/licenses.md#first-activation) en la máquina usuario |
+| Licencia de despliegue | Descripción                                                                                | Dónde introducirla                                                                        |
+| ---------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*       | Licencia personalizada integrada, contacte al equipo de ventas 4D para obtener información | Página [Licencias](#licenses) del diálogo Crear aplicación                                |
+| *4D Unlimited Desktop* | **Descontinuada** - Licencia personalizada integrada                                       | Página [Licencias](#licenses) del diálogo Crear aplicación                                |
+| *4D Desktop*           | Licencia por usuario, que permite utilizar aplicaciones 4D independientes                  | Diálogo [Primera activación](../Admin/licenses.md#first-activation) en la máquina usuario |
+| *4D Server OEM*        | Licencia personalizada integrada, contacte al equipo de ventas 4D para obtener información | Página [Licencias](#licenses) del diálogo Crear aplicación                                |
+| *4D Server*            | Licencia por usuario, que les permite utilizar 4D Server y clientes                        | Diálogo [Primera activación](../Admin/licenses.md#first-activation) en la máquina usuario |
 
 :::note
 
-También puede construir una [aplicación de evaluación](#build-an-evaluation-application), en cuyo caso se ofrece automáticamente una licencia de despliegue a plazo limitado al usuario al inicio.
+También puede crear una [aplicación de evaluación](#build-an-evaluation-application), en cuyo caso se ofrece automáticamente una licencia de despliegue a plazo limitado al usuario al inicio.
 
 :::
 
@@ -529,45 +529,45 @@ También puede construir una [aplicación de evaluación](#build-an-evaluation-a
 
 Esta pestaña muestra la opción [Construir una aplicación de evaluación](#build-an-evaluation-application) y la lista de [licencias de despliegue que puede insertar](#about-licenses) en su aplicación (independiente o cliente-servidor). Por defecto, la lista está vacía.
 
-You can use this tab to build:
+Puede utilizar esta pestaña para crear:
 
-- an evaluation application,
-- a licensed application without embedded license (the user has to have a per-user license),
+- una aplicación de evaluación,
+- una aplicación licenciada sin licencia integrada (el usuario tiene que tener una licencia por usuario),
 - una aplicación licenciada con licencias anidadas.
 
-#### Build an evaluation application
+#### Crear una aplicación de evaluación
 
-Check this option to create an evaluation version of your application.
+Marque esta opción para crear una versión de evaluación de su aplicación.
 
-An evaluation application allows the end-user to run a full-featured version of your stand-alone or server application on their machine for a limited period of time, starting at first launch. At the end of the evaluation period, the application can no longer be used for a certain period of time on the same machine.
+Una aplicación de evaluación permite al usuario final ejecutar una versión completa de su aplicación autónoma o de servidor en su máquina durante un periodo de tiempo limitado, a partir del primer lanzamiento. Al final del periodo de evaluación, la aplicación ya no podrá utilizarse durante un determinado periodo de tiempo en la misma máquina.
 
 :::info
 
-An internet connection is required on the user machine at the first launch of the evaluation application.
+Se requiere una conexión a Internet en la máquina del usuario en el primer lanzamiento de la aplicación de evaluación.
 
 :::
 
-As soon as the "Build an evaluation application" option is enabled, deployment licenses are ignored.
+En cuanto se activa la opción "Crear una aplicación de evaluación", se ignoran las licencias de despliegue.
 
 :::note Notas
 
-- The [`License info`](../commands/license-info.md) command allows you to know the application license type (*.attributes* collection) and its expiration date (*.expirationDate* object).
+- El comando [`License info`](../commands/license-info.md) permite conocer el tipo de licencia de la aplicación (colección *.attributes*) y su fecha de caducidad (objeto *.expirationDate*).
 - La llave xml BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) permite gestionar las versiones de evaluación.
 - El comando [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) no hace nada cuando se llama desde una versión de evaluación.
 
 :::
 
-#### Build a licensed application without embedded license(s)
+#### Crear una aplicación con licencia sin licencia(s) integrada(s)
 
-To build an application without embedded deployment license, just keep the license list empty and make sure the "Build an evaluation application" option is **unchecked**.
+Para crear una aplicación sin licencia de despliegue incorporada, simplemente mantenga la lista de licencias vacía y asegúrese de que la opción "Crear una aplicación de evaluación" está **desmarcada**.
 
-In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). Para más información, vea el párrafo [**Sobre las licencias**](#about-licenses).
+En este caso, el usuario final tendrá que comprar e introducir una licencia *4D Desktop* o *4D Server* por usuario la primera vez que inicie la aplicación (cuando integra una licencia de despliegue, el usuario no tiene que introducir ni utilizar su propio número de licencia). Para más información, vea el párrafo [**Sobre las licencias**](#about-licenses).
 
 #### Construir una aplicación con licencia(s) integrada(s)
 
-This option allows you to build a ready-to-use application, in which necessary licenses are already embedded.
+Esta opción le permite crear una aplicación lista para usar, en la que ya están integradas las licencias necesarias.
 
-You must designate the files that contain your deployment licenses. These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+Debe designar los archivos que contienen sus licencias de despliegue. Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias de despliegue. Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
 
 Para eliminar o añadir una licencia, utilice los botones **[+]** y **[-]** de la parte inferior de la ventana. Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licencias* de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](../commands-legacy/get-4d-folder.md).
 
@@ -578,19 +578,19 @@ Una vez seleccionado un archivo, la lista indicará las características de la l
 - **Fecha de vencimiento**: fecha de vencimiento de la licencia (si la hay)
 - **Ruta de acceso** - Ubicación en el disco
 
-Si una licencia no es válida, un mensaje le avisará.
+Si una licencia es inválida, un mensaje le avisará.
 
 Puede designar tantos archivos válidos como desee. Al generar una aplicación ejecutable, 4D utilizará la licencia más apropiada disponible.
 
 > Se necesitan licencias "R" dedicadas para generar aplicaciones basadas en las versiones "R-release" (los números de licencia de los productos "R" empiezan por "R-4DDP").
 
-After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
+Una vez creada una aplicación licenciada, se incluye automáticamente un nuevo archivo de licencia de despliegue en la carpeta Licencias junto a la aplicación ejecutable (Windows) o en el paquete (macOS).
 
 ### certificado de firma macOS
 
 El generador de aplicaciones puede firmar aplicaciones 4D fusionadas bajo macOS (aplicaciones monopuesto, componentes, 4D Server y partes cliente bajo macOS). La firma de una aplicación autoriza su ejecución por la funcionalidad Gatekeeper de macOS cuando se selecciona la opción "Mac App Store y desarrolladores identificados" (ver "Acerca de Gatekeeper" más adelante).
 
-- Check the **Sign application** option to include certification in the application builder procedure for macOS. 4D will check the availability of elements required for certification when the build occurs:
+- Marque la opción **Firmar la aplicación** para incluir la certificación en el procedimiento de generación de aplicaciones para macOS. 4D comprobará la disponibilidad de los elementos necesarios para la certificación cuando se produzca la generación:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
@@ -612,7 +612,7 @@ Para obtener un certificado de desarrollador de Apple, Inc., puede utilizar los 
 
 #### Sobre Gatekeeper
 
-Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. Si una aplicación descargada no procede del Apple Store o no está firmada, se rechaza y no se puede ser lanzada.
+Gatekeeper es una función de seguridad macOS que controla la ejecución de las aplicaciones descargadas de Internet. Si una aplicación descargada no procede del Apple Store o no está firmada, se rechaza y no se puede ser lanzada.
 
 > En las máquinas Apple Silicon, los [componentes](../Project/components.md)4D deben ser firmados. Un componente sin firmar generará un error al iniciar la aplicación ("lib4d-arm64.dylib no se puede abrir...").
 
@@ -626,11 +626,11 @@ La notarización en sí debe ser realizada por el desarrollador y es independien
 
 Para más información sobre el concepto de notarización, consulte [esta página en el sitio web para desarrolladores de Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-For more information on the stapling concept, please read [this Apple forum post](https://forums.developer.apple.com/forums/thread/720093).
+Para más información sobre el concepto de grapado, lea [este mensaje del foro de Apple](https://forums.developer.apple.com/forums/thread/720093).
 
 ## Personalizar los iconos de una aplicación
 
-4D asocia un icono por defecto a las aplicaciones ejecutables (monopuestos y cliente-servidor). Sin embargo puede personalizar el icono para cada aplicación.
+4D asocia un icono por defecto a las aplicaciones ejecutables (monopuestos y cliente-servidor). Sin embargo, puede personalizar el icono para cada aplicación.
 
 - **macOs** - cuando se crea una aplicación con doble clic, 4D se encarga de la personalización del icono. Para ello, debe crear un archivo de iconos (tipo icns), antes de crear el archivo de la aplicación, y colocarlo junto a la carpeta del proyecto.
 
