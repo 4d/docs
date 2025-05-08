@@ -46,7 +46,7 @@ Only the [`On Load` form event](../Events/onLoad.md) is executed during the open
 
 To preserve the graphic consistency of forms, it is recommended to apply the "Printing" appearance property regardless of the platform.
 
-The current printing form is automatically closed when the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command is called.
+O formulário de impressão atual é fechado automaticamente quando o comando [CLOSE PRINTING JOB] (../commands-legacy/close-printing-job.md) é chamado.
 
 ### Parsing form contents
 
@@ -56,7 +56,7 @@ This consists in loading an off-screen form for parsing purposes. To do this, ju
 
 Note that in all cases, the form on screen remains loaded (it is not affected by the **FORM LOAD** command) so it is not necessary to reload it after calling [FORM UNLOAD](../commands-legacy/form-unload.md).
 
-**Reminder:** In the off-screen context, do not forget to call [FORM UNLOAD](../commands-legacy/form-unload.md) to avoid any risk of memory overflow.
+**Lembrete:** no contexto fora da tela, não se esqueça de chamar [FORM UNLOAD](../commands-legacy/form-unload.md) para evitar qualquer risco de estouro de memória.
 
 ## Exemplo 1
 
