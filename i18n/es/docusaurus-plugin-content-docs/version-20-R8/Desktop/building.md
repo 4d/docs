@@ -45,7 +45,7 @@ La generación sólo puede efectuarse una vez compilado el proyecto. Si seleccio
 
 Cada parámetro de generación de la aplicación se almacena como una llave XML en el archivo de proyecto de la aplicación llamado `buildApp.4DSettings`, ubicado en la carpeta [`Settings` del proyecto](../Project/architecture.md#settings-user).
 
-Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. You can define several other XML settings file for the same project and employ them using the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command.
+Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. Puede definir varios archivos de parámetros XML para el mismo proyecto y utilizarlos con el comando [`BUILD APPLICATION`](../commands-legacy/build-application.md).
 
 Las llaves XML ofrecen opciones adicionales a las que se muestran en la caja de diálogo del Generador de aplicaciones. La descripción de estas llaves se detalla en el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html).
 
@@ -61,7 +61,7 @@ Cuando se crea una aplicación, 4D genera un archivo de registro llamado *BuildA
 
 La comprobación de este archivo puede ayudarle a ahorrar tiempo durante los siguientes pasos de despliegue, por ejemplo si tiene intención de [notarizar](#about-notarization) su aplicación en macOS.
 
-> Use the `Get 4D file(Build application log file)` statement to get the log file location.
+> Utilice la sentencia `Get 4D file(Build application log file)` para obtener la ubicación del archivo de registro.
 
 ## Nombre de la aplicación y carpeta de destino
 
@@ -99,7 +99,7 @@ Genera un componente compilado a partir de la estructura.
 
 Un [componente](../Extensions/develop-components.md) es un proyecto estándar 4D en el que se han desarrollado funcionalidades específicas. Una vez configurado e [instalado en otro proyecto 4D](../Project/components.md) (el proyecto de la aplicación local), sus funcionalidades son accesibles desde el proyecto local.
 
-If you have named your application *MyComponent*, 4D will automatically create a *Components* folder with the following structure:
+Si ha llamado a su aplicación *MyComponent*, 4D creará automáticamente una carpeta *Components* con la siguiente estructura:
 
 `<destination_folder>/Components/MyComponent.4dbase/Contents/`.
 
@@ -124,7 +124,7 @@ Esta pestaña le permite crear una versión autónoma y monopuesto de su aplicac
 
 Al marcar la opción **Crear una aplicación autónoma** y hacer clic en **Generar** se creará una aplicación autónoma (con doble clic) directamente desde su proyecto de aplicación. En Windows, esta función crea un archivo ejecutable (.exe). En macOS, se encarga de la creación de paquetes de software.
 
-Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine).
+Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Para más información sobre este punto, consulte la documentación comercial y el [4D Store](http://www.4d.com/).
 
 - Puede definir un archivo de datos predeterminado o permitir a los usuarios [crear y utilizar su propio archivo de datos](#management-of-data-files).
 - Puede integrar una licencia de despliegue o dejar que el usuario final introduzca su licencia en el primer inicio de la aplicación (consulte la sección [**Acerca de las licencias**](#about-licenses)).
@@ -183,10 +183,10 @@ Todos estos elementos deben estar en la misma carpeta para que el ejecutable fun
 Cuando se construye una aplicación independiente, 4D copia el contenido de la carpeta 4D Volume Desktop en la carpeta Destination > *Final Application*. A continuación, podrá personalizar el contenido de la carpeta 4D Volume Desktop original según sus necesidades. Puede, por ejemplo:
 
 - Instalar una versión de 4D Volume Desktop correspondiente a un lenguaje específico;
-- Add a custom *Plugins* folder;
+- Añadir una carpeta *Plugins* personalizada;
 - Personalizar el contenido de la carpeta *Resources*.
 
-> The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
+> En macOS, 4D Volume Desktop se ofrece en forma de paquete de software. Para modificarlo, primero debe visualizar su contenido (**Control+clic** sobre el icono).
 
 #### Ubicación de los archivos web
 
@@ -202,7 +202,7 @@ Los elementos deben ser instalados:
 
 ## Página Cliente/Servidor
 
-En esta pestaña, usted puede construir aplicaciones cliente y servidor personalizadas que son homogénicas, multiplataforma y con una opción de actualización automática.
+En esta pestaña, puede construir aplicaciones cliente y servidor personalizadas que son homogénicas, multiplataforma y con una opción de actualización automática.
 
 ![](../assets/en/Desktop/client-server-buildapp.png)
 
@@ -306,7 +306,7 @@ Designa la ubicación en su disco de la aplicación 4D Volume Desktop que se uti
 
 El 4D Volume Desktop debe corresponder a la plataforma actual (que será también la plataforma de la aplicación cliente). Si desea generar una aplicación cliente para la plataforma "concurrente", debe realizar una operación adicional utilizando una aplicación 4D que se ejecute en dicha plataforma.
 
-Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión. For more information about this file, refer to the description of the [`BUILD APPLICATION`](../commands-legacy/build-application.md) command.
+Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión. Los diferentes escenarios propuestos se describen en el párrafo [Gestión de conexiones por las aplicaciones clientes](#management-of-client-connections).
 
 #### Copia de las aplicaciones clientes en la aplicación servidor
 
@@ -476,7 +476,7 @@ La página lista los elementos cargados por la aplicación 4D actual:
 
 ### Añadiendo plug-ins o componentes
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **Plugins** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. El mecanismo para copiar el contenido de la carpeta de la aplicación fuente (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) puede utilizarse para integrar todo tipo de archivo en la aplicación ejecutable.
+Si desea integrar otros plug-ins o componentes en la aplicación ejecutable, sólo tiene que colocarlos en una carpeta **Plugins** o **Components** junto a la aplicación 4D Volume Desktop o junto a la aplicación 4D Server. El mecanismo para copiar el contenido de la carpeta de la aplicación fuente (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) puede utilizarse para integrar todo tipo de archivo en la aplicación ejecutable.
 
 Si hay un conflicto entre dos versiones diferentes del mismo plug-in (una cargada por 4D y la otra ubicada en la carpeta de la aplicación fuente), la prioridad la tiene el plug-in instalado en la carpeta de 4D Volume Desktop/4D Server. Sin embargo, si hay dos instancias de un mismo componente, la aplicación no se abrirá.
 
@@ -490,7 +490,7 @@ Un módulo es una librería de código integrada que 4D utiliza para controlar f
 
 Los siguientes módulos opcionales pueden ser deseleccionados:
 
-- **CEF**: Librería integrada Chromium. Es necesario ejecutar [áreas Web](../FormObjects/webArea_overview.md) que utilizan el motor de renderizado integrado y [áreas 4D View Pro](../FormObjects/viewProArea_overview.md). La llamada a estas áreas cuando el CEF está deseleccionado mostrará áreas en blanco y/o generará errores.
+- **CEF**: librería integrada Chromium. Es necesario ejecutar [áreas Web](../FormObjects/webArea_overview.md) que utilizan el motor de renderizado integrado y [áreas 4D View Pro](../FormObjects/viewProArea_overview.md). La llamada a estas áreas cuando el CEF está deseleccionado mostrará áreas en blanco y/o generará errores.
 - **MeCab**: librería utilizada para la indexación de textos en lengua japonesa (ver este [párrafo de propiedades](../settings/database.md#support-of-mecab-japanese-version)). Si se deselecciona este módulo, los índices de texto se reconstruirán en japonés.
 
 > Si deselecciona MeCab para una aplicación en lenguaje japonés utilizada en plataformas heterogéneas, asegúrese de deseleccionarlo tanto en la compilación cliente/servidor como en la [compilación de la aplicación cliente](#build-client-application) (para la plataforma concurrente), de lo contrario se producirán fallos importantes en la aplicación.
@@ -507,11 +507,11 @@ La página de Licencias y certificados puede utilizarse para:
 
 ![](../assets/en/Admin/buildappCertif.png)
 
-### About licenses
+### Sobre las licencias
 
 A built 4D application requires a deployment license. It can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
 
-| Deployment license     | Descripción                                                        | Where to enter it                                                                         |
+| Licencia de despliegue | Descripción                                                        | Where to enter it                                                                         |
 | ---------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | *4D OEM Desktop*       | Embedded custom license, contact 4D Sales for information          | Página [Licencias](#licenses) del diálogo Crear aplicación                                |
 | *4D Unlimited Desktop* | **Discontinued** - Embedded custom license                         | Página [Licencias](#licenses) del diálogo Crear aplicación                                |
