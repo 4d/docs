@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla        | &#8594; | Table owning the form or If omitted: default table or use of project form                                                                                                    |
 | form       | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, or an object describing the form |
-| formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                                |
+| formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                                |
 | \*         | Operador     | &#8594; | Usar el mismo proceso                                                                                                                                                                        |
 
 <!-- END REF-->
@@ -21,9 +21,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
-This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. Unlike [ADD RECORD](../commands-legacy/add-record.md) or [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons.
+This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. A diferencia de [ADD RECORD](../commands-legacy/add-record.md) o [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** le ofrece un control total sobre el formulario, su contenido y los botones de navegación y validación.
 
-This command is typically called along with the [Open form window](../commands-legacy/open-form-window.md) to display sophisticated forms, as shown in the following example:
+Este comando suele invocarse junto con el comando [Open form window](../commands-legacy/open-form-window.md) para mostrar formularios sofisticados, como se muestra en el siguiente ejemplo:
 
 ![](../assets/en/commands/pict3541609.en.png)
 
@@ -44,7 +44,7 @@ Opcionalmente, puede pasar uno o varios parámetros al *form* utilizando un obje
 
 To fill the "form data" object, you have two possibilities:
 
-- use the *formData* parameter. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
+- usar el parámetro *formData*. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
 
 - [asociar una clase usuario al formulario](../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. The object properties and functions will be automatically available through the object returned by [Form](form.md). Puede escribir por ejemplo `Form.myFunction()`.
 
@@ -57,7 +57,7 @@ To fill the "form data" object, you have two possibilities:
 
 The dialog is closed by the user either with an "accept" action (triggered by the ak accept standard action, the Enter key, or the [ACCEPT](../commands-legacy/accept.md) command), or with a "cancel" action (triggered by the ak cancel standard action, the Escape key, or the [CANCEL](../commands-legacy/cancel.md) command). An accept action will set the OK system variable to 1, while a cancel action will set OK to 0\.
 
-Keep in mind that validation does not equal saving: if the dialog includes fields, you must explicitly call the [SAVE RECORD](../commands-legacy/save-record.md) command to save any data that has been modified.
+Tenga en cuenta que la validación no es igual al guardado: si el diálogo incluye campos, debe llamar explícitamente al comando [SAVE RECORD](../commands-legacy/save-record.md) para guardar cualquier dato que haya sido modificado.
 
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
@@ -65,11 +65,11 @@ If you pass the optional *\** parameter, the form is loaded and displayed in the
 This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command.\
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
-This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. If the current process terminates, the forms created in this way are automatically closed in the same way as if a [CANCEL](../commands-legacy/cancel.md) command had been called. This opening mode is particularly useful for displaying a floating palette with a document, without necessarily requiring another process.
+This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. Si el proceso actual termina, los formularios creados de este modo se cierran automáticamente del mismo modo que si se hubiera llamado a un comando [CANCEL](../commands-legacy/cancel.md). This opening mode is particularly useful for displaying a floating palette with a document, without necessarily requiring another process.
 
 **Notas:**
 
-- You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](../commands-legacy/call-form.md) command to establish communication between the forms.
+- Puede combinar el uso de la sintaxis **DIALOG**(form;\*) con el comando [CALL FORM](../commands-legacy/call-form.md) para establecer la comunicación entre los formularios.
 - You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. Otherwise, error -9909 is generated.
 - When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. You do not have to manage the closing of the window itself.
 
