@@ -88,7 +88,7 @@ For example, to insert the page number in the footer area:
 
 **Date**
 
-When the [**Current date**](../commands-legacy/current-date.md) command, a date variable, or a method returning a date is inserted in a formula, it will automatically be transformed into text using the system date short format.
+Cuando se inserta en una fórmula el comando [**Current date**](../commands-legacy/current-date.md), una variable de fecha o un método que devuelve una fecha, ésta se transformará automáticamente en texto utilizando el formato abreviado de fecha del sistema.
 
 **Time**
 
