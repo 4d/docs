@@ -30,7 +30,7 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 Sends a user prompt to the chat and returns the corresponding completion result.
 
-#### Example Usage
+#### 使用例
 
 ```4D
 var $chatHelper:=$client.chat.create("You are a helpful assistant.")
