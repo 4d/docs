@@ -13,7 +13,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-20-R9
 - The Label wizard now uses the Formula editor for adding or editing formulas in the [label design area](../Desktop/labels.md#label-preview).
 - New [`TCPListener`](../API/TCPListenerClass.md) class to create TCP server connections; new properties in related classes: `address`, `listener` and `port` in [`TCPConnection`](../API/TCPConnectionClass.md) class, `ip` and `port` in [`TCPEvent`](../API/TCPEventClass.md) class.
 - Deprecated commands and constants now generate specific warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors). Você pode saber se um comando está obsoleto usando o comando [`Command name`](../commands/command-name.md).
-- New commands [WA SET CONTEXT](../commands/wa-set-context.md) and [WA Get context](../commands/wa-get-context.md) to control [$4d](../FormObjects/webArea_overview.md#4d-object) contents in web areas.
+- Novos comandos [WA SET CONTEXT](../commands/wa-set-context.md) e [WA Get context](../commands/wa-get-context.md) para controlar o conteúdo de [$4d](../FormObjects/webArea_overview.md#4d-object) em áreas da Web.
 - New [`RDP optimization` database parameter](../commands-legacy/set-database-parameter.md#rdp-optimization-133) to optimize for instance shared clipboard when using Remote Desktop Protocol with 4D.
 - Interpreted components can now be [edited from the host project](../Extensions/develop-components.md#editing-components-from-the-host).
 - [Licenses](../Admin/licenses.md) are now automatically refreshed at startup.
@@ -69,7 +69,7 @@ Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-
 - New Build Application keys for remote 4D applications to validate the server certificate authority [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.en.html) and/or [domain](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.en.html).
 - Capacidade de [criar aplicações independentes sem licenças incorporadas](../Desktop/building.md#licenses).
 - Línguagem 4D:
-    - New commands: [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
+    - Novos comandos: [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
     - Modified commands: [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
 - 4D Write Pro:
     - Novo comando: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
@@ -148,7 +148,7 @@ Leia [**O que há de novo no 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d
 - Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md).
 - Suporte de [formatos personalizados de data e hora](../Project/date-time-formats.md)
 - Nova palavra-chave [`Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de erro simples.
-- New [`HTTP Parse message`](../commands/http-parse-message.md) command.
+- Novo comando [`HTTP Parse message`](../commands/http-parse-message.md).
 - Nova opção de compatibilidade [Impressão sem bloqueio](../settings/compatibility.md).
 - Nuevo [modo de edición](../Admin/dataExplorer.md#editing-data) en el Explorador de datos.
 - Comandos da linguagem 4D: [Novidades de página](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) em doc.4d.com.
@@ -160,7 +160,7 @@ Leia [**O que há de novo no 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d
 - Usando uma sintaxe legada para declarar parâmetros (por exemplo, `C_TEXT($1)` ou `var $1 : Text`) está agora obsoleto e gera avisos na digitação de código, verificação de sintaxe e etapas de compilação.
 - La coherencia de las selecciones ahora se mantiene después de que se hayan eliminado algunos registros y se hayan creado otros (ver [esta entrada de blog](https://blog.4d.com/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/)).
 - Na atualização da [biblioteca OpenSSL](#library-table), o nível de segurança SSL/TLS padrão foi alterado de 1 para 2. Chaves RSA, DSA e DH de 1024 bits ou mais e menos de 2048 bits, assim como chaves ECC de 160 bits ou mais e menos de 224 bits, agora não são mais permitidas. Por padrão, a compressão TLS já estava desativada nas versões anteriores do OpenSSL. No nível de segurança 2, ele não pode ser habilitado.
-- Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command is now sent in clear form by default. In specific cases, a new "passwordAlgorithm" option can also be used for compatibility (see [`Open datastore`](../commands/open-datastore.md) command).
+- Make sure your "On REST authentication" database method can handle passwords in clear form (third parameter is then **False**) and that `Open datastore` encrypts your connection by passing the "tls" option to **True** in *connectionInfo*. In order to allow password verification when the [4D user directory uses the bcrypt algorithm](https://blog.4d.com/bcrypt-support-for-passwords/), the "password" value in the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command is now sent in clear form by default. Em casos específicos, uma nova opção "passwordAlgorithm" também pode ser usada para fins de compatibilidade (consulte o comando [`Open datastore`](../commands/open-datastore.md)).
 
 ## 4D 20 R3
 
