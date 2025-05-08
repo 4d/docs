@@ -31,7 +31,7 @@ A localização atual desta pasta é exibida na área "Atual:". Você pode clica
 
 São oferecidos três opções de localização:
 
-- **Sistema**: cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta situada en la ubicación especificada por Windows y/o macOS. You can find out the current location defined by your system using the [`Temporary folder`](../commands-legacy/temporary-folder.md) 4D command. Os arquivos são colocados em uma subpasta cujo nome consiste no nome do banco de dados e em um identificador exclusivo.
+- **Sistema**: cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta situada en la ubicación especificada por Windows y/o macOS. Você pode descobrir o local atual definido pelo seu sistema usando o comando 4D [`Temporary folder`](../commands-legacy/temporary-folder.md). Os arquivos são colocados em uma subpasta cujo nome consiste no nome do banco de dados e em um identificador exclusivo.
 - **Carpeta de archivos de datos** (opción por defecto): cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta llamada "archivos temporales" situada en el mismo nivel que el archivo de datos de la base de datos.
 - **Definido por el usuario**: esta opción se utiliza para definir una ubicación personalizada. Se a opção local for modificada, será necessário reiniciar a base de dados para que a nova opção seja tida em conta. 4D verifica se a pasta selecionada pode ser acessada por gravação. Se não for esse o caso, o aplicativo tenta outras opções até que uma pasta válida seja encontrada.
 
