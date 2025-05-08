@@ -18,7 +18,7 @@ Las licencias de desarrollo son necesarias para acceder al entorno Diseño 4D y 
 
 Las licencias de despliegue pueden ser anidadas en el paso de creación por el desarrollador o introducido en el primer lanzamiento por el usuario final, como se describe en la siguiente tabla:
 
-| Deployment license       | Descripción                                                        | Where to enter it                                                                |
+| Licencia de despliegue   | Descripción                                                        | Where to enter it                                                                |
 | ------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | *4D OEM Desktop*         | Embedded custom license, contact 4D Sales for information          | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
 | *4D Unlimited Desktop*   | **Discontinued** - Embedded custom license                         | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
