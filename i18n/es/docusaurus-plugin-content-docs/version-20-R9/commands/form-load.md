@@ -38,7 +38,7 @@ Para obtener información detallada sobre el objeto de datos del formulario, con
 
 ### Impresión de datos
 
-In order to be able to execute this command, a print job must be opened beforehand using the [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command. The [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command makes an implicit call to the [FORM UNLOAD](../commands-legacy/form-unload.md) command, so in this context it is necessary to execute **FORM LOAD**. Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](../commands-legacy/print-object.md) command, work with this form.
+Para poder ejecutar este comando, debe abrirse previamente un trabajo de impresión utilizando el comando [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md). El comando [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) hace una llamada implícita al comando [FORM UNLOAD](../commands-legacy/form-unload.md), por lo que en este contexto es necesario ejecutar **FORM LOAD**. Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](../commands-legacy/print-object.md) command, work with this form.
 
 If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks.
 
@@ -52,7 +52,7 @@ The current printing form is automatically closed when the [CLOSE PRINTING JOB](
 
 This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
 
-**FORM LOAD** can be used with the [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) and [OBJECT Get type](../commands-legacy/object-get-type.md) commands in order to perform any type of processing on the form contents. A continuación, debe llamar al comando [FORM UNLOAD](../commands-legacy/form-unload.md) para liberar el formulario de la memoria.
+**FORM LOAD** puede utilizarse con los comandos [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) y [OBJECT Get type](../commands-legacy/object-get-type.md) para realizar cualquier tipo de procesamiento sobre el contenido del formulario. A continuación, debe llamar al comando [FORM UNLOAD](../commands-legacy/form-unload.md) para liberar el formulario de la memoria.
 
 Note that in all cases, the form on screen remains loaded (it is not affected by the **FORM LOAD** command) so it is not necessary to reload it after calling [FORM UNLOAD](../commands-legacy/form-unload.md).
 
