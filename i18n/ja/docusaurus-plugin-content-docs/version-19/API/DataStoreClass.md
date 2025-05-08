@@ -121,7 +121,7 @@ title: DataStore
 
 #### 説明
 
-`Open datastore` コマンドは、 <!-- REF #_command_.Open datastore.Summary -->*connectionInfo* 引数が指定する 4Dデータベースにアプリケーションを接続します<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
+`Open datastore` コマンドは、 <!-- REF #_command_.Open datastore.Summary -->*connectionInfo* 引数が指定する 4Dデータベースにアプリケーションを接続します。<!-- END REF --> ローカルエイリアス*localID*と紐づけられた`4D.DataStoreImplementation`オブジェクトが返されます。
 
 *connectionInfo* で指定する 4Dデータベースはリモートデーターストアとして利用可能でなければなりません。つまり、以下の条件を満たしている必要があります:
 
