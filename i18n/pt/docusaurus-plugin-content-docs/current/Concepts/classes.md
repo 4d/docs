@@ -608,7 +608,7 @@ The following commands have specific features when they are used within class fu
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
+O comando [`Super`](../commands/super.md) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
 
 Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super.md).
 
