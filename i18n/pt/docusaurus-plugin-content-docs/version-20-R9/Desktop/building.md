@@ -786,4 +786,4 @@ O procedimento de instalação produz um arquivo de log detalhando as operaçõe
 
 O log de atualização é chamado `YYYY-MM-DD_HH-MM-SS_log_X.txt`, por exemplo, `2021-08-25_14-23-00_log_1.txt` para um arquivo criado em 25 de agosto de 2021 às 14:23.
 
-Este arquivo é criado na pasta de aplicativos "Atualizadores", dentro da pasta de usuário do sistema. You can find out the location of this file at any time using the [`Last update log path`](../commands-legacy/last-update-log-path.md) command.
+Este arquivo é criado na pasta de aplicativos "Atualizadores", dentro da pasta de usuário do sistema. Você pode descobrir a localização deste arquivo a qualquer momento usando o comando [`Last update log path`](../commands-legacy/last-update-log-path.md).
