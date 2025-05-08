@@ -48,7 +48,7 @@ The structure of the `rateLimit` object is as follows:
 
 Throws the first error in the `errors` collection. This function is useful for propagating errors up the call stack.
 
-## Inherited Classes
+## 継承クラス
 
 Several classes inherit from `OpenAIResult` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIResult`:
 
