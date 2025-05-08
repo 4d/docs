@@ -100,7 +100,7 @@ Este ejemplo es un método formulario genérico. It shows each of the possible e
 
 ## Ejemplo 4
 
-This example shows the template of a form method that handles the events that can occur for a form displayed using the [DISPLAY SELECTION](../commands-legacy/display-selection.md) or [MODIFY SELECTION](../commands-legacy/modify-selection.md) commands. For didactic purposes, it displays the nature of the event in the title bar of the form window.
+Este ejemplo muestra la plantilla de un método de formulario que maneja los eventos que pueden ocurrir para un formulario mostrado usando los comandos [DISPLAY SELECTION](../commands-legacy/display-selection.md) o [MODIFY SELECTION](../commands-legacy/modify-selection.md). For didactic purposes, it displays the nature of the event in the title bar of the form window.
 
 ```4d
   ////Método formulario
