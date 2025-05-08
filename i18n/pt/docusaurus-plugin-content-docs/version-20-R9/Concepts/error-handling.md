@@ -237,7 +237,7 @@ Se um erro *deferred* for lançado fora do bloco `Try`, a execução do código 
 
 :::info
 
-For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](../commands-legacy/throw.md) command description.
+Para obter mais informações sobre erros *deferidos* e *não diferidos*, consulte a descrição do comando [`throw`](../commands-legacy/throw.md).
 
 :::
 
