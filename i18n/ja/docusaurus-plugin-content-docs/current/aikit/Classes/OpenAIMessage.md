@@ -34,7 +34,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 Adds an image URL to the content of the message.
 
-## Example Usage
+## 使用例
 
 ```4d
 // Create an instance of OpenAIMessage
