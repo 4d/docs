@@ -221,7 +221,7 @@ Para exibir o inspetor da Web, você pode executar o comando `WA OPEN WEB INSPEC
 
 > Com [engenharia de renderização de sistema Windows](properties_WebArea. d#use-embedded-web-rendering-engine), uma mudança nesta preferência requer que uma ação de navegação na área (por exemplo, uma atualização de página) seja levada em conta.
 
-For more information, refer to the description of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+Para obter mais informações, consulte a descrição do comando [`WA SET PREFERENCE`] (../commands-legacy/wa-set-preference.md).
 
 Quando você fez as configurações conforme descrito acima, você tem novas opções como **Inspecionar Elemento** no menu de contexto da área. Quando selecionar essa opção, a janela do inspetor Web é exibida.
 
