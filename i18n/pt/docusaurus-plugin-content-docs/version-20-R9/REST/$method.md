@@ -59,15 +59,15 @@ If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$fi
 
 ### Exemplo
 
-Para crear un conjunto de entidades, que se guardará en la caché de 4D Server durante dos horas, añada `$method=entityset` al final de su petición REST:
+To create an entity set, which will be saved in 4D Server's cache for two hours, add `$method=entityset` at the end of your REST request:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
-Puede crear un conjunto de entidades que se almacenará en la caché de 4D Server durante sólo diez minutos pasando un nuevo tiempo de espera a `$timeout`:
+You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to `$timeout`:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-También puede guardar el filtro y ordenar por, pasando true a `$savedfilter` y `$savedorderby`.
+You can also save the filter and order by, by passing true to `$savedfilter` and `$savedorderby`.
 
 > `$skip` y `$top/$limit` no se tienen en cuenta al guardar un conjunto de entidades.
 
@@ -195,7 +195,7 @@ Se surgir um problema ao adicionar ou modificar uma entidade, ser-lhe-á enviado
 
 - **Las fechas** deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, "2010-10-05T23:00:00Z"). Se tiver selecionado a propriedade Apenas data para o seu atributo Data, o fuso horário e a hora (hora, minutos e segundos) serão removidos. Neste caso, também pode enviar a data no formato que lhe é devolvido dd!mm!yyyy (por exemplo, 05!10!2013).
 - **Booleanos** son true o false.
-- Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
+- Arquivos carregados usando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objeto retornado no seguinte formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
  :::
 
 ### Exemplo
