@@ -58,7 +58,7 @@ exposed Function authentify({params : type}) {-> result : type}
 	// code
 ```
 
-The `authentify()` function must be implemented in the [DataStore class](../ORDA/ordaClasses.md#datastore-class) of the project and must be called through a REST request.
+A função `authentify()` precisa ser implementada na [classe DataStore](../ORDA/ordaClasses.md#datastore-class) do projeto e precisa ser chamada através de uma solicitação REST.
 
 This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the session acquires appropriate privileges.
 
@@ -73,7 +73,7 @@ A função pode receber qualquer autenticação ou informação contextual como 
 Esta função deve conter duas partes:
 
 - some code to identify and authenticate the REST request sender,
-- if the authentication is successful, a call to [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) that assigns appropriate privileges to the session.
+- se a autenticação for bem-sucedida, uma chamada para [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) que atribui os privilégios apropriados à sessão.
 
 If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no privileges are assigned, no license is consumed and subsequent non-descriptive REST requests are rejected.
 
