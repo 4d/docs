@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current user session<!-- END REF -->.
+O comando `Session` <!-- REF #_command_.Session.Summary -->retorna o objeto `Session` correspondente à sessão atual do usuário<!-- END REF -->.
 
 Dependendo do processo a partir do qual o comando é chamado, a sessão atual do usuário pode ser:
 
