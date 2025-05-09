@@ -16,7 +16,7 @@ title: VP Get row attributes
 
 ## Descrição
 
-The `VP Get row attributes` command <!-- REF #_method_.VP Get row attributes.Summary -->returns a collection of properties for any row in the *rangeObj*<!-- END REF -->.
+O comando `VP Get row attributes` <!-- REF #_method_.VP Get row attributes.Summary --> retorna uma coleção de propriedades para qualquer linha no *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass an object containing a range of the rows whose attributes will be retrieved.
 
