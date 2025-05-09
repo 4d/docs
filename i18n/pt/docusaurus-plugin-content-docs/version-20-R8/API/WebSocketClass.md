@@ -189,7 +189,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
+A função `.send()` <!-- REF #WebSocketClass.send().Summary -->envia *mensagem* ao servidor de WebSocket no tipo de dados definido (Texto, Blob, ou Objeto)<!-- END REF -->.
 
 Os conteúdos seguintes são enviados em função do tipo de *message*:
 
