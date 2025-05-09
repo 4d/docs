@@ -155,7 +155,7 @@ In the Explorer, a specific icon indicates that the component code is editable:<
 
 :::warning
 
-Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+Apenas [classes expostas](#sharing-of-classes) e [métodos compartilhados](#sharing-of-project-methods) do seu componente podem ser editados.
 
 :::
 
