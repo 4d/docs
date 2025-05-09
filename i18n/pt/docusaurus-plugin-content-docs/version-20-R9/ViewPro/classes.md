@@ -89,7 +89,7 @@ A propriedade `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. Padrão = False
+A propriedade `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica se a primeira coluna deve ser destacada<!-- END REF -->. Padrão = False
 
 ### .showFooter
 
@@ -157,7 +157,7 @@ The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[back
 
 **.forecolor** : Text<!-- END REF -->
 
-The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
+A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[cor de primeiro plano](configuring.md#background--foreground) da tabela<!-- END REF -->.
 
 ### .font
 
@@ -274,7 +274,7 @@ The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstCol
 
 **.firstColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->style of the first alternating column<!-- END REF -->.
+A propriedade `.firstColumnStripStyle` é o estilo <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->da primeira coluna alternada<!-- END REF -->.
 
 ### .firstFooterCellStyle
 
@@ -330,7 +330,7 @@ A propriedade `.headerRowStyle` é a <!-- REF #TableThemeOptions.headerRowStyle.
 
 **.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.highlightFirstColumnStyle` property is the <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->style of the first column<!-- END REF -->. "highlightFirstColumn" tem de ser true.
+A propriedade `.highlightFirstColumnStyle` é o estilo <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->da primeira coluna<!-- END REF -->. "highlightFirstColumn" tem de ser true.
 
 ### .highlightLastColumnStyle
 
@@ -346,7 +346,7 @@ A propriedade `.highlightLastColumnStyle` é o <!-- REF #TableThemeOptions.highl
 
 **.lastFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->style of the last footer cell<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
+A propriedade `.lastFooterCellStyle` é o estilo <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->da última célula do rodapé<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
 
 ### .lastHeaderCellStyle
 
@@ -354,7 +354,7 @@ The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFoote
 
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->style of the last header cell<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
+A propriedade `.lastHeaderCellStyle` é o estilo <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->da última célula do cabeçalho<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
 
 ### .name
 
@@ -370,7 +370,7 @@ The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of 
 
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. O padrão=1
+A propriedade `.secondColumnStripSize` é o tamanho <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->da segunda coluna alternada<!-- END REF -->. O padrão=1
 
 ### .secondColumnStripStyle
 
@@ -378,7 +378,7 @@ The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondC
 
 **.secondColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->style of the second alternating column<!-- END REF -->.
+A propriedade `.secondColumnStripStyle` é o estilo <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->da segunda coluna alternada<!-- END REF -->.
 
 ### .secondRowStripSize
 
