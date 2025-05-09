@@ -35,7 +35,7 @@ As seguintes propriedades estão disponíveis:
 
 #### Descrição
 
-The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
+A propriedade `.data` contém <!-- REF #TCPEvent.data.Summary -->os dados associados ao evento<!-- END REF -->. It is only valid for events of type `"data"`.
 
 :::note
 
@@ -53,7 +53,7 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 #### Descrição
 
-The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
+A propriedade `.ip` contém <!-- REF #TCPEvent.ip.Summary -->o endereço IP da máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 
