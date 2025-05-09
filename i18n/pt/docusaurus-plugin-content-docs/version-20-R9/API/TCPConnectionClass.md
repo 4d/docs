@@ -219,7 +219,7 @@ The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the 
 
 #### Descrição
 
-The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a conexão está fechada<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
 
 <!-- END REF -->
 
@@ -274,7 +274,7 @@ The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whet
 
 #### Descrição
 
-The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine<!-- END REF -->. Essa propriedade é **somente leitura**.
+A propriedade `.port` contém <!-- REF #TCPConnection.port.Summary --> o número da porta da máquina remota <!-- END REF -->. Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
