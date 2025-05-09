@@ -214,7 +214,7 @@ Padrão = 1 (compressão mais rápida).
 
 <!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Integer<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->size threshold (bytes) for requests below which exchanges should not be compressed<!-- END REF -->. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
+O <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->limite de tamanho das solicitações (bytes) para abaixo do qual as trocas não devem ser compactadas<!-- END REF -->. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
 
 Limite de compressão padrão = 1024 bytes
 
@@ -296,7 +296,7 @@ Default = 480 minutos
 
 > Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
-The <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
+A <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->duração (em minutos) das sessões legadas inativas (duração definida no cookie)<!-- END REF -->. No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
 
 Default = 480 minutos
 
@@ -330,7 +330,7 @@ O <!-- REF #WebServerClass.isRunning.Summary --> estado de execução do servido
 
 <!-- REF #WebServerClass.keepSession.Syntax -->**.keepSession** : Boolean<!-- END REF -->
 
-Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
+Contém <!-- REF #WebServerClass.keepSession.Summary -->`True` se as sessões legadas estiverem ativadas no servidor da Web; caso contrário, `False`<!-- END REF -->.
 
 ##### Veja também
 
@@ -463,7 +463,7 @@ O <!-- REF #WebServerClass.rootFolder.Summary --> caminho da pasta raiz do servi
 
 <!-- REF #WebServerClass.scalableSession.Syntax -->**.scalableSession** : Boolean<!-- END REF -->
 
-Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
+Contém <!-- REF #WebServerClass.scalableSession.Summary -->`True` se sessões escalonáveis forem usadas no servidor da Web e `False` caso contrário<!-- END REF -->.
 
 ##### Veja também
 
