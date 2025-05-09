@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsAPI
 
 # OpenAIChatCompletionsAPI
 
-The `OpenAIChatCompletionsAPI` class is designed for managing chat completions with OpenAI's API. It provides methods to create, retrieve, update, delete, and list chat completions.
+`OpenAIChatCompletionsAPI` クラスはOpenAI のAPI でチャット補完を管理するためにデザインされています。 これはチャット補完を作成、取得、更新、削除、そしてリストを表示するメソッドを提供します。
 
 https://platform.openai.com/docs/api-reference/chat
 
@@ -15,19 +15,19 @@ https://platform.openai.com/docs/api-reference/chat
 
 **create**(*messages* : Collection of [OpenAIMessage](OpenAIMessage.md) ; *parameters* : [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)) : Object
 
-| 引数         | 型                                                                     | 説明                                                              |
-| ---------- | --------------------------------------------------------------------- | --------------------------------------------------------------- |
-| *messages* | Collection of [OpenAIMessage](OpenAIMessage.md)                       | The chat messages to include in the request.    |
-| *引数*       | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | The parameters for the chat completion request. |
-| 戻り値        | Object                                                                | The result of the chat completion request.      |
+| 引数           | 型                                                                     | 説明                   |
+| ------------ | --------------------------------------------------------------------- | -------------------- |
+| *messages*   | [OpenAIMessage](OpenAIMessage.md) のコレクション                             | リクエストに含めたいチャットメッセージ。 |
+| *parameters* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | チャット補完リクエスト用のパラメーター。 |
+| 戻り値          | Object                                                                | チャット補完リクエストの結果。      |
 
-Creates a model response for the given chat conversation.
+指定されたチャット対話のモデルレスポンスを作成します。
 
 https://platform.openai.com/docs/api-reference/chat/create
 
 #### 使用例
 
-Provide the full messages list
+完全なメッセージリストの一覧を提供する場合
 
 ```4d
 var $messages:=[]
@@ -38,13 +38,13 @@ $messages.push({"role":"user"; "content": "Hello, how are you?"})
 var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini" })
 ```
 
-Get the response as text
+レスポンスをテキストとして取得する場合
 
 ```4d
 var $text:=$result.choice.text
 ```
 
-Append assistant response for next completion request
+次の補完リクエストのために、アシスタントのレスポンスを追加する
 
 ```
 $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" }
@@ -54,13 +54,13 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 **retrieve**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
 
-| 引数             | 型                                       | 説明                                                         |
-| -------------- | --------------------------------------- | ---------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to retrieve. |
-| *引数*           | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.     |
-| 戻り値            | Object                                  | The retrieved chat completion object.      |
+| 引数             | 型                                       | 説明                |
+| -------------- | --------------------------------------- | ----------------- |
+| *completionID* | Text                                    | 取得したいチャット補完のID。   |
+| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | リクエスト用の追加のパラメーター。 |
+| 戻り値            | Object                                  | 取得したチャット補完オブジェクト。 |
 
-Get a stored chat completion.
+保存されたチャット補完を取得する。
 
 https://platform.openai.com/docs/api-reference/chat/get
 
@@ -68,14 +68,14 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 **update**(*completionID* : Text; *metadata* : Object, *parameters* : OpenAIParameters) : Object
 
-| 引数             | 型                                       | 説明                                                       |
-| -------------- | --------------------------------------- | -------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to update. |
-| *metadata*     | Object                                  | Metadata to update the completion with.  |
-| *引数*           | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.   |
-| 戻り値            | Object                                  | The updated chat completion object.      |
+| 引数             | 型                                       | 説明                   |
+| -------------- | --------------------------------------- | -------------------- |
+| *completionID* | Text                                    | 更新したいチャット補完のID。      |
+| *metadata*     | Object                                  | チャット補完を更新するためのメタデータ。 |
+| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | リクエスト用の追加のパラメーター。    |
+| 戻り値            | Object                                  | 更新されたチャット補完オブジェクト。   |
 
-Modify a stored chat completion.
+保存されたチャット補完を変更する。
 
 https://platform.openai.com/docs/api-reference/chat/update
 
@@ -83,13 +83,13 @@ https://platform.openai.com/docs/api-reference/chat/update
 
 **delete**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
 
-| 引数             | 型                                       | 説明                                                       |
-| -------------- | --------------------------------------- | -------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to delete. |
-| *引数*           | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.   |
-| 戻り値            | Boolean                                 | Whether the deletion was successful.     |
+| 引数             | 型                                       | 説明                |
+| -------------- | --------------------------------------- | ----------------- |
+| *completionID* | Text                                    | 削除したいチャット補完のID。   |
+| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | リクエスト用の追加のパラメーター。 |
+| 戻り値            | Boolean                                 | 削除が成功したかどうかの結果。   |
 
-Delete a stored chat compltions.
+保存されたチャット補完を削除する。
 
 https://platform.openai.com/docs/api-reference/chat/delete
 
@@ -97,11 +97,11 @@ https://platform.openai.com/docs/api-reference/chat/delete
 
 **list**(*parameters* : OpenAIChatCompletionsListParameters) : Collection
 
-| 引数   | 型                                                                             | 説明                                                       |
-| ---- | ----------------------------------------------------------------------------- | -------------------------------------------------------- |
-| *引数* | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | Parameters for listing chat completions. |
-| 戻り値  | Collection                                                                    | A collection of stored chat completions. |
+| 引数           | 型                                                                             | 説明                       |
+| ------------ | ----------------------------------------------------------------------------- | ------------------------ |
+| *parameters* | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | チャット補完の一覧を表示するためのパラメーター。 |
+| 戻り値          | Collection                                                                    | 保存されたチャット補完のコレクション。      |
 
-List stored chat completions.
+保存されたチャット補完を一覧表示する。
 
 https://platform.openai.com/docs/api-reference/chat/list
