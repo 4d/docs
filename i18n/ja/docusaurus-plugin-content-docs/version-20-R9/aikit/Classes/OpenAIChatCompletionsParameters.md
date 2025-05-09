@@ -7,13 +7,13 @@ title: OpenAIChatCompletionParameters
 
 The `OpenAIChatCompletionParameters` class is designed to handle the parameters required for chat completions using the OpenAI API.
 
-## Inherits
+## 継承元
 
 - [OpenAIParameters](OpenAIParameters.md)
 
 ## プロパティ
 
-| プロパティ                   | 型       | Default Value   | 説明                                                                                                                                                                                       |
+| プロパティ                   | 型       | デフォルト値          | 説明                                                                                                                                                                                       |
 | ----------------------- | ------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `model`                 | Text    | `"gpt-4o-mini"` | ID of the model to use.                                                                                                                                                  |
 | `stream`                | Boolean | `false`         | Whether to stream back partial progress. If set, tokens will be sent as data-only. Callback formula required.                            |
