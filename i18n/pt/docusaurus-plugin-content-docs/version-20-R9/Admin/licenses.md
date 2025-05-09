@@ -18,20 +18,20 @@ Development licenses are required to access the 4D Design environment and featur
 
 Deployment licenses can be embedded at build step by the developer or entered at first launch by the end-user, as described in the following table:
 
-| Licença de implantação   | Descrição                                                                               | Onde entrar                                                                      |
-| ------------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| *4D OEM Desktop*         | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D Unlimited Desktop*   | **Descontinuado** - Licença personalizada incorporada                                   | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D Desktop*             | Licença por usuário, permitindo-lhes utilizar aplicativos 4D autônomos                  | [First activation](#first-activation) dialog box on the user's machine           |
-| *4D Server OEM*          | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses                                                 | [Licenses page](../Desktop/building.md#licenses) of the Build application dialog |
-| *4D Server*              | Licença por usuário, permitindo que eles usem 4D Server e clientes                      | [First activation](#first-activation) dialog box on the user's machine           |
+| Licença de implantação   | Descrição                                                                               | Onde entrar                                                                                        |
+| ------------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| *4D OEM Desktop*         | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
+| *4D Unlimited Desktop*   | **Descontinuado** - Licença personalizada incorporada                                   | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
+| *4D Desktop*             | Licença por usuário, permitindo-lhes utilizar aplicativos 4D autônomos                  | Caixa de diálogo [Primeira ativação](#first-activation) na máquina do usuário                      |
+| *4D Server OEM*          | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
+| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses                                                 | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
+| *4D Server*              | Licença por usuário, permitindo que eles usem 4D Server e clientes                      | Caixa de diálogo [Primeira ativação](#first-activation) na máquina do usuário                      |
 
 ### Expiration
 
 Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard.
 
-In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box.
+Em alguns casos, a atualização da licença pode exigir que você clique no botão [**Atualizar**](#refresh) da caixa de diálogo Gerenciador de Licenças.
 
 ## Activating licenses
 
