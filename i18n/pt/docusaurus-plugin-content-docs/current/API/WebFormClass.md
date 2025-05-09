@@ -33,9 +33,9 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 #### Descrição
 
-The components of webforms are <!-- REF #WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these webforms.
+Os componentes dos webforms são objetos <!-- REF #WebFormClass.componentName.Summary -->que estão disponíveis diretamente como propriedades<!-- END REF --> desses webforms.
 
-For more information, please refer to the [`.componentName` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#componentname).
+Para mais informações, consulte a descrição [`.componentName` na documentação de Qodly](https://developer.qodly.com/docs/language/WebFormClass#componentname).
 
 ### .disableState()
 
@@ -58,7 +58,7 @@ Essa função não faz nada se:
 - the *state* is currently not enabled in the web form,
 - o *estado* não existe para o formulário Web.
 
-If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
+Se você [enable](#enablestate) ou desativar vários estados na mesma função de usuário, todas as modificações são enviadas em simultâneo, para o cliente quando a função termina.
 
 For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
@@ -76,14 +76,14 @@ For more information on web form states, please refer to [developer.qodly.com](h
 
 #### Descrição
 
-The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web form<!-- END REF -->.
+A função `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->ativa a renderização do *state* no formulário da Web atual<!-- END REF -->.
 
 Essa função não faz nada se:
 
 - the *state* has already been enabled on the web form,
 - o *estado* não existe para o formulário Web.
 
-If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
+Se você ativar ou [desativar](#disablestate) vários estados dentro da mesma função de usuário, todas as modificações serão enviadas ao mesmo tempo, para o cliente quando a função terminar.
 
 For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
@@ -130,7 +130,7 @@ For more information, please refer to the [`.setError()` description in the Qodl
 
 #### Descrição
 
-The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web form<!-- END REF -->.
+A função `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envia *msg* como uma mensagem de informação para o formulário da Web<!-- END REF -->.
 
 For more information, please refer to the [`.setMessage()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
 
@@ -168,7 +168,7 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->.
 
-For more information, please refer to the [`webForm` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webform).
+Para obter mais informações, consulte a [descrição do comando `webForm` na documentação de Qodly](https://developer.qodly.com/docs/language/WebFormClass#webform).
 
 ## Web Event
 
