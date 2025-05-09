@@ -5,13 +5,13 @@ title: TCPConnection
 
 The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a [server](./TCPListenerClass.md), enabling you to send and receive data, and handle connection lifecycle events using callbacks.
 
-The `TCPConnection` class is available from the `4D` class store. You can create a TCP connection using the [4D.TCPConnection.new()](#4dtcpconnectionnew) function, which returns a [TCPConnection object](#tcpconnection-object).
+The `TCPConnection` class is available from the `4D` class store. Você pode criar uma conexão TCP usando a função [4D.TCPConnection.new()](#4dtcpconnectionnew), que retorna um objeto [TCPConnection](#tcpconnection-object).
 
 All `TCPConnection` class functions are thread-safe.
 
 Thanks to the standard 4D object *refcounting*, a TCPConnection is automatically released when it is no longer referenced. Consequently, the associated resources, are properly cleaned up without requiring explicit closure.
 
-TCPConnection objects are released when no more references to them exist in memory. This typically occurs, for example, at the end of a method execution for local variables. If you want to "force" the closure of a connection at any moment, [**nullify** its references by setting them to **Null**](../Concepts/dt_object.md#resources).
+TCPConnection objects are released when no more references to them exist in memory. This typically occurs, for example, at the end of a method execution for local variables. Se quiser "forçar" o fechamento de uma conexão a qualquer momento, [**nullify** suas referências, definindo-as como **Null**](../Concepts/dt_object.md#resources).
 
 <details><summary>História</summary>
 
@@ -335,7 +335,7 @@ The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes t
 
 #### Descrição
 
-The `wait()` function <!-- REF #TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
+A função `wait()` <!-- REF #TCPConnection.wait().Summary -->aguarda até que a conexão TCP seja fechada ou o `timeout` especificado seja atingido<!-- END REF -->
 
 :::note
 
