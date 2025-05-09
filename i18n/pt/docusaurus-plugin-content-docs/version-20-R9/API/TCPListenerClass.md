@@ -71,11 +71,11 @@ TCPListener objects provide the following properties and functions:
 
 <!-- REF #4D.TCPListener.new().params -->
 
-| Parâmetro  | Tipo                           |                             | Descrição                                                    |
-| ---------- | ------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| port       | Number                         | ->                          | TCP port to listen                                           |
-| options    | Object                         | ->                          | Configuration [options](#options-parameter) for the listener |
-| Resultados | 4D.TCPListener | <- | New TCPListener object                                       |
+| Parâmetro  | Tipo                           |                             | Descrição                                                |
+| ---------- | ------------------------------ | --------------------------- | -------------------------------------------------------- |
+| port       | Number                         | ->                          | TCP port to listen                                       |
+| options    | Object                         | ->                          | Configuração [opções](#options-parameter) para o ouvinte |
+| Resultados | 4D.TCPListener | <- | New TCPListener object                                   |
 
 <!-- END REF -->
 
@@ -141,7 +141,7 @@ The `.errors` property contains <!-- REF #TCPListener.errors.Summary -->a collec
 
 #### Descrição
 
-The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port number of the machine<!-- END REF -->. Essa propriedade é **somente leitura**.
+A propriedade `.port` contém <!-- REF #TCPListener.port.Summary -->o número da porta da máquina<!-- END REF -->. Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -161,7 +161,7 @@ The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port num
 
 #### Descrição
 
-The `terminate()` function <!-- REF #TCPListener.terminate().Summary -->closes the listener and releases the port<!-- END REF -->.
+A função `terminate()` <!-- REF #TCPListener.terminate().Summary -->fecha o listener e libera a porta<!-- END REF -->.
 
 <!-- END REF -->
 
