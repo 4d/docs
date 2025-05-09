@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsResult
 
 # OpenAIChatCompletionsResult
 
-## Inherits
+## 継承元
 
 - [OpenAIResult](OpenAIResult.md)
 
