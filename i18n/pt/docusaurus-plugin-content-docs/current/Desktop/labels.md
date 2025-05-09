@@ -87,7 +87,7 @@ When you use a form, 4D executes any form or object methods associated with it. 
 
 :::note Notas
 
-- You can restrict the forms listed in this menu by means of a [specific JSON file](#controlling-available-forms-and-methods).
+- Você pode restringir os formulários listados neste menu por meio de um [arquivo JSON específico](#controlling-available-forms-and-methods).
 - If the database does not contain any table forms, this menu is not displayed.
 
 :::
@@ -172,7 +172,7 @@ You can use dedicated table forms and project methods to print labels with calcu
  var myVar+=1
 ```
 
-3. Set the project method as ["Shared by components and host database"](../Project/code-overview.md#shared-by-components-and-host-database).
+3. Defina o método projeto como ["Compartilhado por componentes e banco de dados host"](../Project/code-overview.md#shared-by-components-and-host-database).
 
 4. Before displaying the Label editor, make sure the project method is allowed by executing this code:
 
