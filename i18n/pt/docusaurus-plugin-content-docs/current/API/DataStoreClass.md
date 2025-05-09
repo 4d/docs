@@ -891,7 +891,7 @@ Se *attributes* for um Text vazio ou *attributesColl* for uma coleção vazia, t
 Você pode passar um *contextType* para especificar se o contexto é um contexto padrão ou o contexto do item de seleção de entidade atual exibido em uma caixa de listagem:
 
 - Se estabelecido como "main" (padrão), o *contextName* designa um contexto padrão.
-- Se definido para "currentItem", os atributos passados são colocados no contexto do item actual.  See  [Entity selection-based list box](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
+- Se definido para "currentItem", os atributos passados são colocados no contexto do item actual.  Veja [List baseado em uma entidade de seleção](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
 
 Em *pageLength*, especificar o número de entidades dataclass a solicitar ao servidor.
 
