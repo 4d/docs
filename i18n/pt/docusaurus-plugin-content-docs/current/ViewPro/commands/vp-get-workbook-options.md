@@ -19,7 +19,7 @@ title: VP Get workbook options
 ## Descrição
 
 `VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
-returns an object containing all the workbook options in *vpAreaName*<!-- END REF -->
+retorna um objeto que contém todas as opções de pasta de trabalho em *vpAreaName*<!-- END REF -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
