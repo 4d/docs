@@ -145,7 +145,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
 
-- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
+- o componente foi [carregado no modo interpretado](../Project/components.md#interpreted-and-compiled-components),
 - the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
 
 In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
@@ -376,22 +376,22 @@ Components can have an `Info.plist` file at their [root folder](../Project/archi
 
 :::note
 
-This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+Esse arquivo não é obrigatório, mas é necessário para criar componentes [notarizáveis e grampeáveis](../Desktop/building.md#about-notarization) para o macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. No entanto, eles são usados pelo [Gerenciador de dependências](../Project/components.md#loading-components) em todas as plataformas.
 
 The folling keys can be defined:
 
-| \|                                                         | description                                                                                                                                                         |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | Nome do componente (interno)                                                                                                                     |
-| CFBundleDisplayName                                        | Component name to display                                                                                                                                           |
-| NSHumanReadableCopyright                                   | Copyright to display                                                                                                                                                |
-| CFBundleVersion                                            | Version of the component                                                                                                                                            |
-| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
-| com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+| \|                                                         | description                                                                                                                                                                         |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CFBundleName                                               | Nome do componente (interno)                                                                                                                                     |
+| CFBundleDisplayName                                        | Component name to display                                                                                                                                                           |
+| NSHumanReadableCopyright                                   | Copyright to display                                                                                                                                                                |
+| CFBundleVersion                                            | Version of the component                                                                                                                                                            |
+| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                                 |
+| com.4d.minSupportedVersion | Versão 4D mínima compatível, usada pelo gerenciador de dependências para [versões de componentes posteriores a 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
 
 Here is an example of `Info.plist` file:
 
