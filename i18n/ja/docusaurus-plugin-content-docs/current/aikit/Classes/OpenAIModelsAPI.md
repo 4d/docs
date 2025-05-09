@@ -17,11 +17,11 @@ https://platform.openai.com/docs/api-reference/models
 
 **retrieve**(*model* : Text; *parameters* : OpenAIParameters) : OpenAIModelResult
 
-| 引数      | 型                                         | 説明                                                       |
-| ------- | ----------------------------------------- | -------------------------------------------------------- |
-| *model* | Text                                      | The identifier of the model to retrieve. |
-| *引数*    | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.   |
-| 戻り値     | [OpenAIModelResult](OpenAIModelResult.md) | The model result                                         |
+| 引数           | 型                                         | 説明                                                       |
+| ------------ | ----------------------------------------- | -------------------------------------------------------- |
+| *model*      | Text                                      | The identifier of the model to retrieve. |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)   | リクエスト用の追加のパラメーター。                                        |
+| 戻り値          | [OpenAIModelResult](OpenAIModelResult.md) | The model result                                         |
 
 Retrieves a model instance to provide basic information.
 
@@ -34,14 +34,14 @@ var $result:=$client.model.retrieve("text-davinci-003")
 var $model:=$result.model
 ```
 
-### リスト()
+### list()
 
 **list**(*parameters* : OpenAIParameters) : OpenAIModelListResult
 
-| 引数   | 型                                                 | 説明                                                     |
-| ---- | ------------------------------------------------- | ------------------------------------------------------ |
-| *引数* | [OpenAIParameters](OpenAIParameters.md)           | Additional parameters for the request. |
-| 戻り値  | [OpenAIModelListResult](OpenAIModelListResult.md) | The model list result                                  |
+| 引数           | 型                                                 | 説明                    |
+| ------------ | ------------------------------------------------- | --------------------- |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)           | リクエスト用の追加のパラメーター。     |
+| 戻り値          | [OpenAIModelListResult](OpenAIModelListResult.md) | The model list result |
 
 Lists the currently available models.
 
