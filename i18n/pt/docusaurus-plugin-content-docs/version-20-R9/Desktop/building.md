@@ -59,7 +59,7 @@ Quando uma aplicação é construída, 4D gera um arquivo de log chamado *BuildA
 - Todos os erros que forem produzidos.
 - Quaisquer problemas de assinatura (por exemplo, um plug-in não assinado).
 
-Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to [notarize](#about-notarization) your application on macOS.
+Verificar este arquivo pode ajudá-lo a economizar tempo durante as etapas subsequentes de implantação, por exemplo, se você pretende [notarize](#about-notarization) sua aplicação no macOS.
 
 > Use the `Get 4D file(Build application log file)` statement to get the log file location.
 
@@ -427,7 +427,7 @@ O cenário básico é o seguinte:
 - a chave `PublishName` não é copiada no *info.plist* do cliente mesclado
 - Se o aplicativo de usuário único não tiver uma pasta "Dados padrão", o cliente mesclado será executado sem dados.
 
-Automatic update 4D Server features ([Current version](#current-version) number, [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md) command...) funciona com aplicação de usuário único como com aplicação remota padrão. Na conexão, o aplicativo de usuário único compara sua chave `CurrentVers` com o intervalo de versão do 4D Server. Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
+Atualização automática das funcionalidades do 4D Server (número [de versão atual](#current-version), [comando `SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)...) funciona com aplicação de usuário único como com aplicação remota padrão. Na conexão, o aplicativo de usuário único compara sua chave `CurrentVers` com o intervalo de versão do 4D Server. Se fora do intervalo, o aplicativo cliente atualizado será baixado do servidor e o atualizador iniciará o processo de atualização local.
 
 ### Personalização dos nomes da pasta de cache cliente e/ou servidor
 
@@ -544,13 +544,13 @@ As soon as the "Build an evaluation application" option is enabled, deployment l
 
 To build an application without embedded deployment license, just keep the license list empty and make sure the "Build an evaluation application" option is **unchecked**.
 
-In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). For more information, see the [**Deployment licenses**](../Admin/licenses.md#deployment-licenses) section.
+In this case, the end-user will have to purchase and enter a per-user *4D Desktop* or *4D Server* license at first application startup (when you embed a deployment license, the user does not have to enter or use their own license number). Para obter mais informações, consulte a seção [**Licenças de implantação**](../Admin/licenses.md#deployment-licenses).
 
 #### Build a licensed application with embedded license(s)
 
 This option allows you to build a ready-to-use application, in which necessary licenses are already embedded.
 
-You must designate the files that contain your [deployment licenses](../Admin/licenses.md#deployment-licenses). These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+Você deve designar os arquivos que contêm suas [licenças de implementação] (../Admin/licenses.md#deployment-licenses). These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
 Para remover ou adicionar uma licença, use os **[+]** e **[-]** botões na parte inferior da janela. Quando você clicar no botão \[+], uma caixa de diálogo 'Abrir arquivo' aparece exibindo por padrão o conteúdo da pasta *Licenças* do seu computador. Para mais informações sobre a localização desta pasta, consulte o comando [Obter pasta 4D](../commands-legacy/get-4d-folder.md).
 
