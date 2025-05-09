@@ -163,7 +163,7 @@ A pasta Data contém o ficheiro de dados e todos os arquivo e pastas relacionado
 
 Essa pasta contém [**configurações de usuário para os dados**](../Desktop/user-settings.md#user-settings-for-data-file) usadas para a administração de aplicações.
 
-> Estos parámetros tienen prioridad sobre los [parámetros de usuario](#settings-user) y los [parámetros de estructura](#sources). See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
+> Estos parámetros tienen prioridad sobre los [parámetros de usuario](#settings-user) y los [parámetros de estructura](#sources). Consulte também [Prioridade dos parâmetros](../Desktop/user-settings.md#priority-of-settings).
 
 | Conteúdos                           | Descrição                                                                                                                                                                                                                                                                                                        | Formato |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -187,7 +187,7 @@ A pasta Logs contém todos os arquivos de registo utilizados pelo projeto. Os ar
 
 Essa pasta contém [**configurações de usuário**](../Desktop/user-settings.md#user-settings) usadas para a administração de aplicações.
 
-> These settings take priority over [structure settings](#sources) file. However, if [user settings for data](#settings-user-data) exist, they take priority over the user settings. See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
+> Essas configurações têm prioridade sobre o arquivo [parâmetros de estrutura](#sources). No entanto, se houver [parâmetros de usuário para dados](#settings-user-data), elas terão prioridade sobre os parâmetros de usuário. Consulte também [Prioridade dos parâmetros](../Desktop/user-settings.md#priority-of-settings).
 
 | Conteúdos                           | Descrição                                                                                                                                                                                                                                                                                                                                                                            | Formato |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
