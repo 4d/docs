@@ -163,7 +163,7 @@ A pasta Data contém o ficheiro de dados e todos os arquivo e pastas relacionado
 
 Essa pasta contém [**configurações de usuário para os dados**](../Desktop/user-settings.md#user-settings-for-data-file) usadas para a administração de aplicações.
 
-> Estos parámetros tienen prioridad sobre los [parámetros de usuario](#settings-user) y los [parámetros de estructura](#sources). See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
+> Estos parámetros tienen prioridad sobre los [parámetros de usuario](#settings-user) y los [parámetros de estructura](#sources). Consulte também [Prioridade dos parâmetros](../Desktop/user-settings.md#priority-of-settings).
 
 | Conteúdos                           | Descrição                                                                                                                                                                                                                                                                                                                        | Formato |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
