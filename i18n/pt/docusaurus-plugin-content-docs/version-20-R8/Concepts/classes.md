@@ -758,7 +758,7 @@ Se você precisar instanciar um singleton com parâmetros, você também pode ch
 
 O [`.isSingleton`](../API/ClassClass.md#issingleton) propriedade de objetos de classe permite saber se a classe é uma singleton.
 
-The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
+A propriedade [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) dos objetos Class permite saber se a classe é um singleton de sessão.
 
 ### Exemplos
 
