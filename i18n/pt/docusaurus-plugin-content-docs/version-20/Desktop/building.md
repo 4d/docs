@@ -21,7 +21,7 @@ O construtor de aplicações permite-lhe:
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
 * ou o comando [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/en/page871.html),
-* or the [Build Application dialog](#build-application-dialog).
+* ou na [caixa de diálogo Criar aplicação](#build-application-dialog).
 
 :::tip
 
@@ -171,7 +171,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
  Todos estes itens devem ser mantidos na mesma pasta para que o executável possa operar.
 
 * *macOS*
-  * Um pacote de software chamado MyProject.app que contém seu aplicativo e todos os itens necessários para sua operação, incluindo os plug-ins, componentes e licenças. For more information about integrating plug-ins and components, refer to the [Plugins and components](#plugins--components-page) section. For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses--certificate-page) section. **Nota**: No macOS, o comando [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) do idioma 4D retorna o caminho do arquivo ApplicationName (localizado na pasta Contents:macOS do pacote do software) e não o do arquivo .comp (Pasta Contents:Resources do pacote de software).
+  * Um pacote de software chamado MyProject.app que contém seu aplicativo e todos os itens necessários para sua operação, incluindo os plug-ins, componentes e licenças. Para obter mais informações sobre a integração de plug-ins e componentes, consulte a seção [Plugins e componentes](#plugins--components-page). For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses--certificate-page) section. **Nota**: No macOS, o comando [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) do idioma 4D retorna o caminho do arquivo ApplicationName (localizado na pasta Contents:macOS do pacote do software) e não o do arquivo .comp (Pasta Contents:Resources do pacote de software).
 
 #### Personalização da pasta 4D Volume Desktop
 
@@ -648,7 +648,7 @@ Este modo permite a você duplicar seus aplicativos mesclados sem quebrar o link
 
 Você pode selecionar o modo de ligação de dados durante o processo de construção do aplicativo. Você também pode:
 
-* Use the [Application page](#application-page) or [Client/Server page](#clientserver-page) of the Build Application dialog box.
+* Use a [página Aplicação](#application-page) ou [Cliente/Página do servidor](#clientserver-page) da caixa de diálogo Construção de aplicações.
 * Use a chave **LastDataPathLookup** XML (aplicativo de usuário único ou aplicativo do servidor).
 
 ### Definição de uma pasta de dados por defeito
