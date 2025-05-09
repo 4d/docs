@@ -104,7 +104,7 @@ Quando a fonte de dados for uma seleção de entidades, qualquer modificação f
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an *undefined* value, thus displaying blank rows in the list box. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+When entities are deleted, their references remain in the entity selection with an *undefined* value, thus displaying blank rows in the list box. Neste caso, você pode chamar a função [`.clean()`](API/EntitySelectionClass.md#clean) para obter uma nova seleção de entidade, mas sem as referências de entidade deletadas.
 
 :::
 
@@ -187,7 +187,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Variável ou Expressão](properties_Object.md#variable-or-expression)                                                                                                                                      | X              | X                |                                      |
 | [Alinhamento vertical](properties_Text.md#vertical-alignment)                                                                                                                                             | X              | X                | X                                    |
 | [Cor da linha vertical](properties_Gridlines.md#vertical-line-color)                                                                                                                                      | X              | X                | X                                    |
-| [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                                                                                                                                   | X              | X                | X                                    |
+| [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding)                                                                                                                                   | X              | X                | X                                    |
 | [Barra de rolagem vertical](properties_Appearance.md#vertical-scroll-bar)                                                                                                                                 | X              | X                | X                                    |
 | [Tamanho Vertical](properties_ResizingOptions.md#vertical-sizing)                                                                                                                                         | X              | X                | X                                    |
 | [Visibilidade](properties_Display.md#visibility)                                                                                                                                                          | X              | X                | X                                    |
