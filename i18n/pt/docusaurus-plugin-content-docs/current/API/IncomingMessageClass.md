@@ -136,7 +136,7 @@ If the body has not been given as a binary content, the function tries to conver
 
 #### Descrição
 
-The `.getHeader()` function <!-- REF #IncomingMessageClass.getHeader().Summary -->returns the value of the *key* header<!-- END REF -->.
+A função `.getHeader()` <!-- REF #IncomingMessageClass.getHeader().Summary -->retorna o valor do cabeçalho *key*<!-- END REF -->.
 
 :::note
 
@@ -170,7 +170,7 @@ $value := $request.getHeader("content-type")
 
 #### Descrição
 
-The `.getJSON()` function <!-- REF #IncomingMessageClass.getJSON().Summary -->returns the body of the request as a JSON resolution<!-- END REF -->.
+A função `.getJSON()` <!-- REF #IncomingMessageClass.getJSON().Summary -->retorna o corpo da solicitação como uma resolução JSON<!-- END REF -->.
 
 If the body has not been given as JSON valid content, an error is raised.
 
