@@ -20,7 +20,7 @@ Components can be interpreted or [compiled](../Desktop/building.md).
 
 The package folder of a component (*MyComponent.4dbase* folder) can contain:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
+- for **interpreted components**: a standard [Project folder](../Project/architecture.md). O nome da pasta do pacote deve ser sufixado com **.4dbase** se você quiser instalá-lo na pasta [**Components** do seu projeto](architecture.md#components).
 - for **compiled components**:
  - either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
  - or directly a .4DZ file with other folders such as *Resources*.
@@ -400,7 +400,7 @@ If the selected item is not valid, an error message is displayed.
 
 Clique em **Adicionar** para adicionar a dependência ao projeto.
 
-- If you select a component located next to the project package folder (default location), it is declared in the [**dependencies.json**](#dependenciesjson) file.
+- Se você selecionar um componente localizado próximo à pasta do pacote do projeto (local padrão), ele será declarado no arquivo [**dependencies.json**](#dependenciesjson).
 - If you select a component that is not located next to the project package folder, it is declared in the [**dependencies.json**](#dependenciesjson) file and its path is declared in the [**environment4d.json**](#environment4djson) file (see note). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
 
 :::note
