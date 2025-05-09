@@ -120,7 +120,7 @@ This function is only available with web user sessions. It returns an empty stri
 
 :::
 
-The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns its token UUID<!-- END REF -->. This token is unique to the session in which it was generated.
+A função `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->cria um novo OTP (uma senha única) para a sessão e retorna seu UUID<!-- END REF -->. This token is unique to the session in which it was generated.
 
 Para mais informações sobre os tokens OTP, consulte [esta seção](../WebServer/sessions.md#session-token-otp).
 
@@ -159,7 +159,7 @@ Essa propriedade só está disponível com sessões de usuário da Web.
 
 :::
 
-The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
+A propriedade `.expirationDate` contém <!-- REF #SessionClass.expirationDate.Summary -->a data e a hora de expiração do cookie de sessão<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
 Essa propriedade é **somente leitura**. Ele será automaticamente recalculado se o valor da propriedade [`.idleTimeout`](#idletimeout) for modificado.
 
