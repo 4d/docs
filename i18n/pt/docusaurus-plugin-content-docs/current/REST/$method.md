@@ -59,15 +59,15 @@ If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$fi
 
 ### Exemplo
 
-Para crear un conjunto de entidades, que se guardará en la caché de 4D Server durante dos horas, añada `$method=entityset` al final de su petición REST:
+To create an entity set, which will be saved in 4D Server's cache for two hours, add `$method=entityset` at the end of your REST request:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
-Puede crear un conjunto de entidades que se almacenará en la caché de 4D Server durante sólo diez minutos pasando un nuevo tiempo de espera a `$timeout`:
+You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to `$timeout`:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-También puede guardar el filtro y ordenar por, pasando true a `$savedfilter` y `$savedorderby`.
+You can also save the filter and order by, by passing true to `$savedfilter` and `$savedorderby`.
 
 > `$skip` y `$top/$limit` no se tienen en cuenta al guardar un conjunto de entidades.
 
