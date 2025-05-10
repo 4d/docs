@@ -71,7 +71,7 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
   //$myds y $myds2 son equivalentes
 ```
 
-Objects available in the `4D.DataStoreImplementation` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Los objetos disponibles en el `4D.DataStoreImplementation` son mapeados en función de las [reglas generales ORDA](ORDA/dsMapping.md#reglas-generales).
 
 Si no se encuentra ningún datastore coincidente, `Open datastore` devuelve **Null**.
 
