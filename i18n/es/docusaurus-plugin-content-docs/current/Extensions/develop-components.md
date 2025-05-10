@@ -375,7 +375,7 @@ Components can have an `Info.plist` file at their [root folder](../Project/archi
 
 :::note
 
-This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+Este archivo no es obligatorio pero es necesario para construir componentes [notarizables y grapables](../Desktop/building.md#about-notarization) para macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
 
 :::
 
