@@ -5,7 +5,7 @@ title: TCPListener
 
 The `TCPListener` class allows you to create and configure a TCP server in 4D. Once the TCP listener is instantiated, you can receive client TCP connections and communicate using any protocol supporting TCP.
 
-The `TCPListener` class is available from the `4D` class store. You can create a TCP server using the [4D.TCPListener.new()](#4dtcplistenernew) function, which returns a [TCPListener object](#tcplistener-object).
+The `TCPListener` class is available from the `4D` class store. Puede crear un servidor TCP utilizando la funci처n [4D.TCPListener.new()](#4dtcplistenernew), que devuelve un [objeto TCPListener](#tcplistener-object).
 
 All `TCPListener` class functions are thread-safe.
 
@@ -47,7 +47,7 @@ Function onTerminate($listener : 4D.TCPListener; $event : 4D.TCPEvent)
 
 :::note
 
-See [example in TCPConnection class](./TCPConnectionClass.md#asynchronous-example) for a description of the MyAsyncTCPConnection user class.
+Ver [ejemplo en la clase TCPConnection](./TCPConnectionClass.md#asynchronous-example) para una descripci처n de la clase de usuario MyAsyncTCPConnection.
 
 :::
 
@@ -122,7 +122,7 @@ Un objeto [`TCPEvent`](TCPEventClass.md) es devuelto cuando se llama una [funci�
 
 #### Descripci처n
 
-The `.errors` property contains <!-- REF #TCPListener.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+La propiedad `.errors` contiene <!-- REF #TCPListener.errors.Summary -->una colecci처n de objetos de error asociados con la conexi처n<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 | Propiedad |                                                                                           | Tipo       | Descripci처n                                           |
 | --------- | ----------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------- |
