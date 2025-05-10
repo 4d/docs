@@ -288,7 +288,7 @@ If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-ver
 
 :::note
 
-The component developer can define a minimum 4D version in the component's [`info.plist`](../Extensions/develop-components.md#infoplist) file.
+El desarrollador del componente puede definir una versión mínima de 4D en el archivo [`info.plist`](../Extensions/develop-components.md#infoplist).
 
 :::
 
@@ -465,7 +465,7 @@ Puede definir la opción [etiqueta o versión](#tags-and-versions) para una depe
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
-- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. You can use this dependency rule only if the component release tags follow the appropriate [naming convention](#naming-conventions-for-4d-version-tags).
+- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada.
 
 La versión actual de la dependencia de GitHub se muestra a la derecha del elemento de la dependencia:
 
