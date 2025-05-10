@@ -39,7 +39,7 @@ The command facilitates debugging by enabling the identification of the method o
 
 :::note
 
-For this command to be able to operate in compiled mode, the [Range checking](../Project/compiler.md#range-checking) must not be disabled.
+Para que este comando pueda operar en modo compilado, la [verificación de rango](../Project/compiler.md#range-checking) no debe estar deshabilitada.
 
 :::
 
