@@ -80,14 +80,14 @@ title: DataStore
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
 
- var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
+var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
 
- $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
- $frenchStudents:=Open datastore($connectTo;"french")
+$connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
+$frenchStudents:=Open datastore($connectTo;"french")
 
- $connectTo.hostname:="192.168.18.11:8050"
- $foreignStudents:=Open datastore($connectTo;"foreign")
-  //...
+$connectTo.hostname:="192.168.18.11:8050"
+$foreignStudents:=Open datastore($connectTo;"foreign")
+//...
   //...
  $firstFrench:=getFirst("french";"Students")
  $firstForeign:=getFirst("foreign";"Students")
@@ -172,10 +172,10 @@ user / password を指定せずにリモートデータストアに接続しま�
 
 ```4d
  var $connectTo : Object
- var $remoteDS : 4D.DataStoreImplementation
- $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
- $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+var $remoteDS : 4D.DataStoreImplementation
+$connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
+$remoteDS:=Open datastore($connectTo;"students")
+ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 #### 例題 2
@@ -184,11 +184,11 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 ```4d
  var $connectTo : Object
- var $remoteDS : 4D.DataStoreImplementation
- $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
+var $remoteDS : 4D.DataStoreImplementation
+$connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
- $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+$remoteDS:=Open datastore($connectTo;"students")
+ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 #### 例題 3
@@ -197,13 +197,13 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
- $connectTo:=New object("hostname";"192.168.18.11:8044")
- $frenchStudents:=Open datastore($connectTo;"french")
- $connectTo.hostname:="192.168.18.11:8050"
- $foreignStudents:=Open datastore($connectTo;"foreign")
- ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
- ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
+var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
+$connectTo:=New object("hostname";"192.168.18.11:8044")
+$frenchStudents:=Open datastore($connectTo;"french")
+$connectTo.hostname:="192.168.18.11:8050"
+$foreignStudents:=Open datastore($connectTo;"foreign")
+ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
+ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
 #### エラー管理
@@ -594,11 +594,11 @@ $info:=$ds.getAllRemoteContexts()
 
 ```4d
   var $remoteDS : 4D.DataStoreImplementation
-  var $info; $connectTo : Object
+var $info; $connectTo : Object
 
- $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
- $remoteDS:=Open datastore($connectTo;"students")
- $info:=$remoteDS.getInfo()
+$connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
+$remoteDS:=Open datastore($connectTo;"students")
+$info:=$remoteDS.getInfo()
 
   //{"type":"4D Server",
   //"localID":"students",
@@ -1205,27 +1205,27 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 ```4d
  var $connect; $status : Object
- var $person : cs.PersonsEntity
- var $ds : 4D.DataStoreImplementation
- var $choice : Text
- var $error : Boolean
+var $person : cs.PersonsEntity
+var $ds : 4D.DataStoreImplementation
+var $choice : Text
+var $error : Boolean
 
- Case of
+Case of
     :($choice="local")
        $ds:=ds
     :($choice="remote")
        $connect:=New object("hostname";"111.222.3.4:8044")
        $ds:=Open datastore($connect;"myRemoteDS")
- End case
+End case
 
- $ds.startTransaction()
- $person:=$ds.Persons.query("lastname=:1";"Peters").first()
+$ds.startTransaction()
+$person:=$ds.Persons.query("lastname=:1";"Peters").first()
 
- If($person#Null)
+If($person#Null)
     $person.lastname:="Smith"
     $status:=$person.save()
- End if
- ...
+End if
+...
  ...
  If($error)
     $ds.cancelTransaction()
