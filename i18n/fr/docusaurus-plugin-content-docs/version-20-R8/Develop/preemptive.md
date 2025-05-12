@@ -268,12 +268,12 @@ Il peut y avoir certains cas où vous préférez que la vérification de la prop
 Pour faire cela, vous devez entourer le code à exclure de la vérification avec les directives spéciales `%T-` et `%T+` en tant que commentaires. Le commentaire `//%T-` désactive la vérification de la propriété thread safe et `//%T+` la réactive :
 
 ```4d
-  // %T- to disable thread safety checking
+  //%T- to disable thread safety checking
 
   // Place the code containing commands to be excluded from thread safety checking here
  $w:=Open window(10;10;100;100) //for example
 
-  // %T+ to enable thread safety checking again for the rest of the method
+  //%T+ to enable thread safety checking again for the rest of the method
 ```
 
 Bien entendu, le développeur 4D est responsable de la compatibilité du code entre les directives de désactivation et de réactivation avec le mode préemptif. Des erreurs d'exécution seront générées si du code thread-unsafe est exécuté dans un process préemptif.
