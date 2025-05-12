@@ -81,7 +81,7 @@ TCPListener objects provide the following properties and functions:
 
 #### Descripción
 
-The `4D.TCPListener.new()` function <!-- REF #4D.TCPListener.new().Summary -->creates a new TCP server listening to the specified *port* using the defined *options*, and returns a `4D.TCPListener` object<!-- END REF -->.
+La función `4D.TCPListener.new()` <!-- REF #4D.TCPListener.new().Summary -->crea un nuevo servidor TCP escuchando el *puerto* especificado usando las *options* definidas, y devuelve un objeto `4D.TCPListener`<!-- END REF -->.
 
 #### Parámetro *options*
 
@@ -141,7 +141,7 @@ La propiedad `.errors` contiene <!-- REF #TCPListener.errors.Summary -->una cole
 
 #### Descripción
 
-The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port number of the machine<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.port` contiene <!-- REF #TCPListener.port.Summary -->el número de puerto de la máquina<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -161,7 +161,7 @@ The `.port` property contains <!-- REF #TCPListener.port.Summary -->the port num
 
 #### Descripción
 
-The `terminate()` function <!-- REF #TCPListener.terminate().Summary -->closes the listener and releases the port<!-- END REF -->.
+La función `terminate()` <!-- REF #TCPListener.terminate().Summary -->cierra el oyente y libera el puerto<!-- END REF -->.
 
 <!-- END REF -->
 
