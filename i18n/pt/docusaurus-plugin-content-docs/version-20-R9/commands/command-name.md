@@ -66,7 +66,7 @@ The following code allows you to load all valid 4D commands in an array:
 
 ## Exemplo 2
 
-In a form, you want a drop-down list populated with the basic summary report commands. In the object method for that drop-down list, you write:
+Em uma forma, você quer uma lista suspensa preenchida com os comandos básicos do relatório de resumo. In the object method for that drop-down list, you write:
 
 ```4d
  Case of
