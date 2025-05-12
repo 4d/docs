@@ -228,7 +228,7 @@ Cuando se crea una versión en GitHub, se le asocia una **etiqueta** y una **ver
 
 :::note
 
-If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).
+Si seleccionas la regla de dependencia [**Seguir la versión 4D**](#defining-a-github-dependency-version-range), necesita usar una [convención de nomenclatura específica para las etiquetas](#naming-conventions-for-4d-version-tags).
 
 :::
 
@@ -280,7 +280,7 @@ El gestor de dependencias comprueba periódicamente si hay actualizaciones de co
 
 #### Naming conventions for 4D version tags
 
-If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases on the Github repository must comply with specific conventions.
+Si quiere usar la regla de dependencia [**Seguir la versión 4D**](#defining-a-github-dependency-version-range), las etiquetas para las versiones de componentes en el repositorio de Github deben cumplir con convenciones específicas.
 
 - **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *x.y* LTS version, the Dependency Manager will resolve it as "the latest version x.\*" if available or "version below x". If no such version exists, the user will be notified. For example, "20.4" will be resolved by the Dependency manager as "the latest component version 20.\* or version below 20".
 
