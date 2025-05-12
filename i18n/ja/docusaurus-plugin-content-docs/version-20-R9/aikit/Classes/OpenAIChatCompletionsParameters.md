@@ -5,7 +5,7 @@ title: OpenAIChatCompletionParameters
 
 # OpenAIChatCompletionParameters
 
-The `OpenAIChatCompletionParameters` class is designed to handle the parameters required for chat completions using the OpenAI API.
+`OpenAIChatCompletionParameters` クラスはOpenAI API を使用したチャット補完に必要な引数を管理するために設計されています。
 
 ## 継承元
 
@@ -15,10 +15,10 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 
 | プロパティ                   | 型       | デフォルト値          | 説明                                                                                                                                                                                       |
 | ----------------------- | ------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `model`                 | Text    | `"gpt-4o-mini"` | ID of the model to use.                                                                                                                                                  |
-| `stream`                | Boolean | `false`         | Whether to stream back partial progress. If set, tokens will be sent as data-only. Callback formula required.                            |
-| `max_completion_tokens` | Integer | `0`             | The maximum number of tokens that can be generated in the completion.                                                                                                    |
-| `n`                     | Integer | `1`             | How many completions to generate for each prompt.                                                                                                                        |
+| `model`                 | Text    | `"gpt-4o-mini"` | 使用するモデルのID。                                                                                                                                                                              |
+| `stream`                | Boolean | `false`         | 部分的な進捗をストリームで返すかどうかを決めます。 設定されていれば、トークンはデータオンリーとして送信されます。 コールバックフォーミュラが必要となります。                                                                                                          |
+| `max_completion_tokens` | Integer | `0`             | チャット補完の中で生成可能なトークンの最大数。                                                                                                                                                                  |
+| `n`                     | Integer | `1`             | 各プロンプトに対して生成するチャット補完の数。                                                                                                                                                                  |
 | `temperature`           | Real    | `-1`            | What sampling temperature to use, between 0 and 2. Higher values make the output more random, while lower values make it more focused and deterministic. |
 | `store`                 | Boolean | `false`         | Whether or not to store the output of this chat completion request.                                                                                                      |
 
