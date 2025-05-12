@@ -15,7 +15,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | `内容`   | Variant | The content of the message, which can be a text or a collection of objects.                             |
 | `user` | Text    | An optional property representing the user associated with the message.                                 |
 
-## Computed properties
+## 計算プロパティ
 
 | プロパティ  | 型    | 説明                                                        |
 | ------ | ---- | --------------------------------------------------------- |
