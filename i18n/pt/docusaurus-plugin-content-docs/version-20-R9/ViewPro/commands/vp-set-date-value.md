@@ -17,7 +17,7 @@ title: VP SET DATE VALUE
 
 ## Descrição
 
-The `VP SET DATE VALUE` command <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
+O comando <!-- REF #method_.VP SET VALUE.Summary --> atribui um valor de data para um intervalo de células designados<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
