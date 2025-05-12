@@ -11,7 +11,7 @@ You can call 4D methods and class functions from the JavaScript code executed in
 
 > Esta propiedad sólo está disponible si el área web [utiliza el motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods and functions](webArea_overview.md#4d-object).
+Cuando esta propiedad está activada, se instancia un objeto JavaScript especial llamado `$4d`en el área web, que puede [utilizar para gestionar las llamadas a los métodos proyecto y funciones 4D](webArea_overview.md#4d-object).
 
 #### Gramática JSON
 
