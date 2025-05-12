@@ -266,7 +266,7 @@ Si Text: nombre de un [tema nativo SpreadJS](https://developer.mescius.com/sprea
 
 **.firstColumnStripSize** : Integer<!-- END REF -->
 
-The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->size of the first alternating column<!-- END REF -->. O padrão=1
+A propriedade `.firstColumnStripSize` é a <!-- REF #TableThemeOptions.firstColumnStripSize.Resumo --> tamanho da primeira coluna alternativa<!-- END REF -->. O padrão=1
 
 ### .firstColumnStripStyle
 
@@ -386,7 +386,7 @@ A propriedade `.secondColumnStripStyle` é o estilo <!-- REF #TableThemeOptions.
 
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. O padrão=1.
+A propriedade `.secondRowStripSize` é a <!-- REF #TableThemeOptions.secondRowStripSize.Summary --> tamanho da segunda coluna alternativa<!-- END REF -->. O padrão=1.
 
 ### .secondRowStripStyle
 
