@@ -208,7 +208,7 @@ Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de ca
 
 #### Descrição
 
-The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->.
+A propriedade `.address` contém <!-- REF #TCPConnection.address.Summary -->o endereço IP ou nome de domínio da máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -220,7 +220,7 @@ The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the 
 
 #### Descrição
 
-The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a conexão está fechada<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
 
 <!-- END REF -->
 
@@ -232,7 +232,7 @@ The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whethe
 
 #### Descrição
 
-The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+A propriedade `.errors` contém <!-- REF #TCPConnection.errors.Summary -->uma coleção de objetos de erro associados à conexão<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 | Propriedade |                                                                                           | Tipo       | Descrição                                            |
 | ----------- | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------- |
@@ -295,7 +295,7 @@ A propriedade `.port` contém <!-- REF #TCPConnection.port.Summary --> o número
 
 #### Descrição
 
-The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
+A função `send()` <!-- REF #TCPConnection.send().Summary -->envia dados para o servidor<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
 
 <!-- END REF -->
 
