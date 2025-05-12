@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
+El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación al datastore remoto identificado por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `4D.DataStoreImplementation` asociado con el alias local *localID*.
 
 El comando admite los siguientes almacenes de datos remotos:
 
