@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Summary-->The **New log file** command closes the current log file, renames it and creates a new one with the same name in the same location as the previous one<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
 
-The command returns the full pathname (access path + name) of the log file being closed (called the “segment”). This file is stored in the same location as the current log file (specified on the [Configuration page](../Backup/settings.md#configuration) in the Backup theme of the Settings). The command does not carry out any processing (compression, segmentation) on the saved file. No aparece ninguna
+The command returns the full pathname (access path + name) of the log file being closed (called the “segment”). Este archivo se almacena en la misma ubicación que el archivo de registro actual (especificado en la [página de configuración](../Backup/settings.md#configuration) en el tema de copia de seguridad de la configuración). The command does not carry out any processing (compression, segmentation) on the saved file. No aparece ninguna
 caja de diálogo.
 
 The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. Por ejemplo:
