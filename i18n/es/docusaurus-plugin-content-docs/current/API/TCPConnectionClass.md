@@ -11,7 +11,7 @@ Todas las funciones de la clase `TCPConnection` son hilo seguro.
 
 Gracias al *refcounting* estándar de los objetos 4D, una TCPConnection se libera automáticamente cuando deja de estar referenciada. En consecuencia, los recursos asociados, se limpian adecuadamente sin necesidad de un cierre explícito.
 
-Los objetos TCPConnection se liberan cuando ya no existen referencias a ellos en memoria. Esto ocurre típicamente, por ejemplo, al final de una ejecución de un método para variables locales. If you want to "force" the closure of a connection at any moment, [**nullify** its references by setting them to **Null**](../Concepts/dt_object.md#resources).
+Los objetos TCPConnection se liberan cuando ya no existen referencias a ellos en memoria. Esto ocurre típicamente, por ejemplo, al final de una ejecución de un método para variables locales. Si desea "forzar" el cierre de una conexión en cualquier momento, [**nulifique** sus referencias poniéndolas en **Null**](../Concepts/dt_object.md#resources).
 
 <details><summary>Historia</summary>
 
