@@ -236,7 +236,7 @@ If the body has not been given as a string value, the function tries to convert 
 
 #### Descrição
 
-The `.headers` property contains <!-- REF #IncomingMessageClass.headers.Summary -->the current headers of the incoming message as key/value pairs (strings)<!-- END REF -->.
+A propriedade `.headers` contém <!-- REF #IncomingMessageClass.headers.Summary --> os cabeçalhos atuais da mensagem recebida como pares chave/valor (strings)<!-- END REF -->.
 
 A propriedade `.headers` é somente leitura.
 
@@ -252,7 +252,7 @@ Nomes de cabeçalho (chaves) são menores. Note header names are case sensitive.
 
 #### Descrição
 
-The `.url` property contains <!-- REF #IncomingMessageClass.url.Summary -->the URL of the request without the *IP:port* part and as a string<!-- END REF -->.
+A propriedade `.url` contém <!-- REF #IncomingMessageClass.url.Summary -->a URL da solicitação sem a parte *IP:port* e como um string<!-- END REF -->.
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
 
