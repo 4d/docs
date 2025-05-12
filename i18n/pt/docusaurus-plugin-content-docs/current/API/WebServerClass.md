@@ -77,7 +77,7 @@ Caminho do <!-- REF #WebServerClass.certificateFolder.Summary -->pasta onde os a
 
 <!-- REF #WebServerClass.characterSet.Syntax -->**.characterSet** : Number<br/>**.characterSet** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D Web Server should use to communicate with browsers connecting to the application<!-- END REF -->. O valor padrão realmente depende da linguagem do SO. O valor padrão realmente depende da linguagem do SO. Aqui está a lista de identificadores correspondentes aos conjuntos de caracteres suportados pelo Servidor Web 4D:
+O <!-- REF #WebServerClass.characterSet.Summary --> conjunto de caracteres que o servidor Web 4D deve usar para se comunicar com navegadores conectados à aplicação<!-- END REF -->. O valor padrão realmente depende da linguagem do SO. O valor padrão realmente depende da linguagem do SO. Aqui está a lista de identificadores correspondentes aos conjuntos de caracteres suportados pelo Servidor Web 4D:
 
 - 4 = ISO-8859-1
 - 12 = ISO-8859-9
@@ -125,7 +125,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
-Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **methods**:
+Contém a <!-- REF #WebServerClass.CORSSettings.Summary -->lista dos hosts e métodos permitidos para o serviço CORS<!-- END REF --> (veja a propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **methods**:
 
 - **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
  - 192.168.5.17:8081
