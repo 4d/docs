@@ -146,7 +146,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
 
 - the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
-- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+- el componente no es cargado de la [caché local del administrador de dependencias](../Project/components.md#local-cache-for-dependencies), es decir, no está [descargado de GitHub](../Project/components.md#adding-a-github-dependency).
 
 In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
 
@@ -371,7 +371,7 @@ La ejecución del código de inicialización o cierre se realiza mediante el mé
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
+Los componentes pueden tener un archivo `Info.plist` en su [carpeta raíz](../Project/architecture.md) para ofrecer información extra legible por el sistema (sólo macOS) y el [Gestor de dependencias](../Project/components.md#loading-components).
 
 :::note
 
@@ -383,14 +383,14 @@ Keys supported in component `Info.plist` files are mostly [Apple bundle keys](ht
 
 The folling keys can be defined:
 
-| key                                                        | description                                                                                                                                                         |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | Nombre del componente (interno)                                                                                                                  |
-| CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                     |
-| NSHumanReadableCopyright                                   | Copyright a mostrar                                                                                                                                                 |
-| CFBundleVersion                                            | Versión del componente                                                                                                                                              |
-| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
-| com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+| key                                                        | description                                                                                                                                                                                      |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| CFBundleName                                               | Nombre del componente (interno)                                                                                                                                               |
+| CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                                                  |
+| NSHumanReadableCopyright                                   | Copyright a mostrar                                                                                                                                                                              |
+| CFBundleVersion                                            | Versión del componente                                                                                                                                                                           |
+| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                                              |
+| com.4d.minSupportedVersion | Versión mínima soportada en 4D, utilizada por el administrador de Dependencias para [versiones de componentes posteriores a 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
 
 Here is an example of `Info.plist` file:
 
