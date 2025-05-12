@@ -59,41 +59,41 @@ In this example, the complete handling of a drop-down list (initialization, user
 
 ## Ejemplo 3
 
-Este ejemplo es un método formulario genérico. It shows each of the possible events that can occur when a summary report uses a form as an output form:
+Este ejemplo es un método formulario genérico. Muestra cada uno de los posibles eventos que pueden ocurrir cuando un formulario se utiliza como formulario de salida:
 
 ```4d
-  //Method of a form being used as output form for a summary report
+  //Método de un formulario utilizado como formulario de salida para un informe resumen
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Header)
-  //A header area is about to be printed
+  //Un área de encabezado está a punto de imprimirse
        Case of
           :(Before selection($vpFormTable->))
-  //Code for the first break header goes here
+  //El código para la primera ruptura de encabezado va aquí
           :(Level=1)
-  //Code for a break header level 1 goes here
+  //El código para la ruptura de encabezado nivel 1 debe ser pasado aquí
           :(Level=2)
-  //Code for a break header level 2 goes here
+  //El código para la ruptura de encabezado nivel 2 debe ser pasado aquí
   //...
        End case
     :(Form event code=On Printing Detail)
-  //A record is about to be printed
-  //Code for each record goes here
+  //Un registro está a punto de imprimirse
+  //El código para cada registro va aquí
     :(Form event code=On Printing Break)
-  //A break area is about to be printed
+  //Un área de ruptura está a punto de imprimirse
        Case of
           :(Level=0)
-  //Code for a break level 0 goes here
+  //El código para un nivel de ruptura 0 va aquí
           :(Level=1)
-  //Code for a break level 1 goes here
+  //El código para un nivel de ruptura 1 va aquí
   //...
        End case
     :(Form event code=On Printing Footer)
        If(End selection($vpFormTable->))
-  //Code for the last footer goes here
+  //El código para el último pie de página va aquí
        Else
-  //Code for a footer goes here
+  //Código par un pie va aquí
        End if
  End case
 ```
