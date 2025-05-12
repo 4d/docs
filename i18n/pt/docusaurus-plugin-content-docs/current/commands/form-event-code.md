@@ -59,7 +59,7 @@ In this example, the complete handling of a drop-down list (initialization, user
 
 ## Exemplo 3
 
-This example is a template for a form method. It shows each of the possible events that can occur when a summary report uses a form as an output form:
+This example is a template for a form method. Mostra cada um dos possíveis eventos que podem ocorrer quando um relatório de resumo usa um formulário como um formulário de saída:
 
 ```4d
   //Method of a form being used as output form for a summary report
