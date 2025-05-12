@@ -232,7 +232,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #WebSocketClass.terminate().Summary -->closes the WebSocket connection, along with optional *code* and *reason* parameters<!-- END REF -->.
+A função `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->fecha a conexão de WebSocket, juntamente com parâmetros opcionais *code* e *reason*<!-- END REF -->.
 
 In *code*, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
 
