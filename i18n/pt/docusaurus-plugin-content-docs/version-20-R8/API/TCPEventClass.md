@@ -50,7 +50,7 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 #### Descrição
 
-The `.type` property contains <!-- REF #TCPEvent.type.Summary -->the type of the event<!-- END REF -->. Valores possíveis:
+A propriedade `.type` contém <!-- REF #TCPEvent.type.Summary -->o tipo do evento<!-- END REF -->. Valores possíveis:
 
 - `"connection"`: Indicates that a TCPConnection was successfully established.
 - `"data"`: Indicates that data has been received.
