@@ -5,17 +5,17 @@ title: OpenAIChatHelper
 
 # OpenAIChatHelper
 
-The chat helper allow to keep a list of messages in memory and make consecutive prompt.
+チャットヘルパーを使用すると、メモリ内にメッセージのリストを保管しておくことができ、連続したプロンプトを行うことができます。
 
 ## プロパティ
 
-| プロパティ名             | 型                                                                     | デフォルト値                                                 | 説明                                                                                    |
-| ------------------ | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| `chat`             | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | The chat API instance used for communication with OpenAI.             |
-| `systemPrompt`     | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | The system prompt message that guides the chat assistant's responses. |
-| `numberOfMessages` | Integer                                                               | 5                                                      | The maximum number of messages to retain in the chat history.         |
-| `引数`               | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | The parameters for the OpenAI chat completion request.                |
-| `messages`         | [OpenAIMessage](OpenAIMessage.md) のコレクション                             | [] | The collection of messages exchanged in the chat session.             |
+| プロパティ名             | 型                                                                     | デフォルト値                                                 | 説明                                       |
+| ------------------ | --------------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------- |
+| `chat`             | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | Open AI との通信で使用されるチャットAPI インスタンス。        |
+| `systemPrompt`     | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | チャットアシスタントのレスポンスをガイドするためのシステムプロンプトメッセージ。 |
+| `numberOfMessages` | Integer                                                               | 5                                                      | チャット履歴に保持するメッセージの最大数。                    |
+| `引数`               | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | OpenAI チャット補完リクエスト用のパラメーター。              |
+| `messages`         | [OpenAIMessage](OpenAIMessage.md) のコレクション                             | [] | そのチャットセッション内でやりとりされたメッセージのコレクション。        |
 
 ## 関数
 
@@ -23,12 +23,12 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 **prompt**(*prompt* : Text) : OpenAIChatCompletionsResult
 
-| 引数       | 型                                                             | 説明                                                          |
-| -------- | ------------------------------------------------------------- | ----------------------------------------------------------- |
-| *prompt* | Text                                                          | The text prompt to send to OpenAI chat.     |
-| 戻り値      | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | The completion result returned by the chat. |
+| 引数       | 型                                                             | 説明                          |
+| -------- | ------------------------------------------------------------- | --------------------------- |
+| *prompt* | Text                                                          | Open AI チャットに送信するテキストプロンプト。 |
+| 戻り値      | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | チャットから返されたチャット補完結果。         |
 
-Sends a user prompt to the chat and returns the corresponding completion result.
+ユーザープロンプトをチャットに送信し、対応する補完の結果を返します。
 
 #### 使用例
 
