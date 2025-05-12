@@ -122,7 +122,7 @@ Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de ca
 
 #### Descrição
 
-The `.errors` property contains <!-- REF #TCPListener.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+A propriedade `.errors` contém <!-- REF #TCPListener.errors.Summary -->uma coleção de objetos de erros associados à conexão<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 | Propriedade |                                                                                           | Tipo       | Descrição                                            |
 | ----------- | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------- |
