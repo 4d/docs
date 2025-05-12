@@ -630,7 +630,7 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retorna um objeto que fornece informações sobre a dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
-**Returned object**
+**Objeto devolvido**
 
 | Propriedade | Tipo       | Descrição                                 |
 | ----------- | ---------- | ----------------------------------------- |
