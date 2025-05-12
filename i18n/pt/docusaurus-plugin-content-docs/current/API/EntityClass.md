@@ -49,7 +49,7 @@ Uma [entity](ORDA/dsMapping.md#entity) é uma instância de uma [Dataclass](ORDA
 
 #### Descrição
 
-Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
+Qualquer atributo de classe de dados está disponível como uma propriedade de uma entidade, que <!-- REF EntityClass.attributeName.Summary -->armazena o valor do atributo para a entidade<!-- END REF -->.
 
 > Atributos de Dataclass também podem ser alcançados usando a sintaxe alternativa com \[ ].
 
