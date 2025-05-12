@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e retorna um novo objeto do tipo [`4D.Folder`](../API/FolderClass.md)<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
