@@ -82,8 +82,8 @@ Keep in mind that you can only enter methods that are "allowed" for the database
 ### Formulario a utilizar
 
 This drop-down list allows you to define a table form as a label template. The form chosen must be specially adapted to the creation of labels.
-In this case, the label editor is partially disabled: only functions of the [Layout page](#layout-page) can be used — to allow you to configure the page based on the form. The image of the form selected is displayed in the label preview area.
-When you use a form, 4D executes any form or object methods associated with it. When using this option, you can also designate a project method to execute for each record or label and then assignate variables (see [this example](#printing-labels-using-forms-and-methods-example) below). If you want to create your labels using the editor itself, you need to choose the **No Form** option.
+En este caso, el editor de etiquetas está parcialmente deshabilitado: sólo las funciones de la [página de diseño](#layout-page) pueden ser usadas — para permitirte configurar la página basada en el formulario. The image of the form selected is displayed in the label preview area.
+When you use a form, 4D executes any form or object methods associated with it. Al usar esta opción, también puede designar un método proyecto para ejecutar para cada registro o etiqueta y luego asignar variables (ver [este ejemplo](#printing-labels-using-forms-and-methods-example) más abajo). If you want to create your labels using the editor itself, you need to choose the **No Form** option.
 
 :::note Notas
 
