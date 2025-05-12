@@ -109,7 +109,7 @@ The *Contents* folder contains:
 
 - *MyComponent.4DZ* file - the [compiled structure](#build-compiled-structure).
 - Una carpeta *Resources*: todos los resources asociados se copian automáticamente en esta carpeta. Los otros componentes y/o carpetas de plugins no se copian (un componente no puede utilizar plugins u otros componentes).
-- An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). If an *Info.plist* file already [exists at the root of the component](../Extensions/develop-components.md#infoplist) it is merged, otherwise a default file is created. Las siguientes [llaves de Apple bundle](https://developer.apple.com/documentation/bundleresources/information-property-list) están prellenadas:
+- An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). Si un archivo *Info.plist* ya existe [en la raíz del componente](../Extensions/develop-components.md#infoplist) está fusionado, de lo contrario se crea un archivo por defecto. Las siguientes [llaves de Apple bundle](https://developer.apple.com/documentation/bundleresources/information-property-list) están prellenadas:
  - `CFBundleDisplayName` y `CFBundleName` para el nombre de la aplicación,
  - `NSHumanReadableCopyright`, puede ser [definido usando una llave XML](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html).
  - `CFBundleShortVersionString` y `CFBundleVersion` para la versión de la aplicación (x.x.x, p. ej., 1.0.5), puede ser [definido usando una llave XML](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html).
@@ -502,7 +502,7 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 La página de Licencias y certificados puede utilizarse para:
 
-- designate the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
+- designa las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) que quiere integrar en su aplicación [monopuesto](#application-page) o [cliente-servidor](#clientserver-page)
 - firmar la aplicación mediante un certificado en macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
