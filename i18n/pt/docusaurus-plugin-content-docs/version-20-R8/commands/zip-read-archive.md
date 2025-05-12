@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+O comando `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->recupera o conteúdo do *zipFile* e o retorna como um objeto `4D.ZipArchive`<!-- END REF -->.
 
 > O comando não descompacta o arquivo ZIP, apenas oferece uma visão de seus conteúdos. Para extrair os conteúdos do arquivo, precisa usar métodos como [file.copyTo()](../API/Document.md#copyto) ou [folder.copyTo()](../API/Directory.md#copyto).
 
