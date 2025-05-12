@@ -268,12 +268,12 @@ En algunos casos, puede que prefiera que la verificación "thread-safety" de los
 Para hacer esto, debe rodear el código a excluir del comando hilo seguro utilizando las directivas específicas `%T-` y `%T+ como comentarios. El comentario `//%T-`desactiva la verificación hilo seguro y el comentario`//%T+\\\` la reactiva:
 
 ```4d
-  // %T- para deshabilitar la verificación hilo seguro
+  //%T- para deshabilitar la verificación hilo seguro
   
   // Coloque el código que contiene los comandos que se excluirán de la verificacion hilo seguro
  $w:=Open window(10;10;100;100) //por ejemplo
   
-  // %T+ para reactivar nuevamente la verificación hilo seguro para el resto del método
+  //%T+ para reactivar nuevamente la verificación hilo seguro para el resto del método
 ```
 
 Por supuesto, el desarrollador 4D es responsable de que el modo apropiativo del código sea compatible con las directivas de activación y de reactivación. Se generarán errores de tiempo de ejecución si se ejecuta código hilo no seguro en un hilo apropiativo.
