@@ -19,6 +19,6 @@ title: OpenAIChatCompletionsMessagesAPI
 | *parameters*   | `OpenAIChatCompletionsMessagesParameters` | レスポンスをフィルターしてカスタマイズするためのパラメーター。 |
 | 戻り値            | Variant                                   | チャット補完に関連づけられた取得されたメッセージ。       |
 
-The `list()` function retrieves messages associated with a specific chat completion ID. It throws an error if the `completionID` is empty. If the *parameters* argument is not an instance of `OpenAIChatCompletionsMessagesParameters`, it will create a new instance using the provided parameters.
+`list()` 関数は特定のチャット補完ID に割り当てられたメッセージを取得します。 この関数は`completionID` が空の場合、エラーを生成します。 *parameters* 引数が `OpenAIChatCompletionsMessagesParameters` のインスタンスではない場合、提供された引数を使用して新たなインスタンスを作成します。
 
 https://platform.openai.com/docs/api-reference/chat/getMessages
