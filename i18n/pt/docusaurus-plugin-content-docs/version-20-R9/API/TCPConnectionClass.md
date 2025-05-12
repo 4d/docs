@@ -207,7 +207,7 @@ Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de ca
 
 #### Descrição
 
-The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->.
+A propriedade `.address` contém <!-- REF #TCPConnection.address.Summary -->o endereço IP ou nome de domínio da máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -231,7 +231,7 @@ A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a c
 
 #### Descrição
 
-The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+A propriedade `.errors` contém <!-- REF #TCPConnection.errors.Summary -->uma coleção de objetos de erro associados à conexão<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 | Propriedade |                                                                                           | Tipo       | Descrição                                            |
 | ----------- | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------- |
