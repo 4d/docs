@@ -17,7 +17,7 @@ title: VP SET PRINT INFO
 
 ## Descrição
 
-The `VP SET PRINT INFO` command <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->.
+O comando `VP SET INFO` <!-- REF #_method_.VP SET INFO.Summary --> define os atributos a serem usados ao imprimir o *vpAreaName*<!-- END REF -->.
 
 Passe o nome da área 4D View Pro a ser impressa em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
