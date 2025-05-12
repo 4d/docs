@@ -269,12 +269,12 @@ Pode haver alguns casos em que você prefira que a verificação de segurança d
 Para fazer isso, você deve envolver o código a ser excluído da verificação de segurança de thread de comando com as diretivas especiais `%T-` e `%T+` como comentários. O comentário `//%T-` desativa a verificação de segurança de thread e `//%T+` a ativa novamente:
 
 ```4d
-  // %T- to disable thread safety checking
+  //%T- to disable thread safety checking
 
   // Place the code containing commands to be excluded from thread safety checking here
  $w:=Open window(10;10;100;100) //for example
 
-  // %T+ to enable thread safety checking again for the rest of the method
+  //%T+ to enable thread safety checking again for the rest of the method
 ```
 
 Obviamente, o desenvolvedor do 4D é responsável pela compatibilidade do modo preemptivo do código entre as diretivas de desativação e reativação. Erros de tempo de execução serão gerados se o código não seguro de thread for executado em um thread preemptivo.
