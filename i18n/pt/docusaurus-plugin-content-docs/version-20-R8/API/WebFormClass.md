@@ -51,7 +51,7 @@ Para mais informações, consulte a descrição [`.componentName` na documentaç
 
 #### Descrição
 
-The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web form<!-- END REF -->.
+A função `.disableState()` <!-- REF #WebFormClass.disableState().Summary -->desabilita a renderização da *state* na forma atual da web<!-- END REF -->.
 
 Essa função não faz nada se:
 
