@@ -321,7 +321,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | 戻り値     | Text          | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
 <!-- END REF -->
 
-`.sign()` 関数は、 <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> 。この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
+`.sign()` 関数は、 <!-- REF #CryptoKey.sign().Summary -->utf8 形式の *message* 文字列またはBlobを署名します。<!-- END REF --> 。この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
 
 `CryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
 
@@ -336,7 +336,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 #### *戻り値*
 
-The utf8 representation of the *message*.
+戻り値はutf8 形式の *message* 文字列です。
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -402,7 +402,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 <!-- END REF -->
 
 
-`.verify()` 関数は、 <!-- REF #CryptoKey.verify().Summary -->utf8 形式の *message* 文字列の署名を検証します。<!-- END REF --> 。この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。
+`.verify()` 関数は、 <!-- REF #CryptoKey.verify().Summary -->utf8 形式の *message* 文字列の署名を検証します。<!-- END REF --> この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。
 
 `CryptoKey` は有効な **公開** 鍵を格納していなくてはなりません。
 
