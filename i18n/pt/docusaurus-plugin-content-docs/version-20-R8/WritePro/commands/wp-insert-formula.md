@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary--> inserts a *formula* in *targetObj* according to the specified insertion *mode* and returns the resulting text range.<!-- END REF-->
 
-In the *targetObj* parameter, you can pass:
+No parâmetro *targetObj*, você pode passar:
 
 - um intervalo, ou
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
