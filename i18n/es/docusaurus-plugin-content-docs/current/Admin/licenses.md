@@ -31,7 +31,7 @@ Las licencias de despliegue pueden ser anidadas en el paso de creación por el d
 
 Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard.
 
-In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box.
+En algunos casos, la actualización de la licencia puede necesitar que haga clic en el botón [**Actualizar**](#refresh) de la caja de diálogo del Gestor de licencias.
 
 ## Activación de licencias
 
