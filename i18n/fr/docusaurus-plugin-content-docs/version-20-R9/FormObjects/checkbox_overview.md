@@ -392,7 +392,7 @@ Toutes les cases à cocher partagent une même série de propriétés de base :
 > (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/>
 > (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
-Additional specific properties are available, depending on the [button style](#check-box-button-styles):
+Des propriétés spécifiques supplémentaires sont disponibles, en fonction du [style de bouton](#check-box-button-styles) :
 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular: [Trois états](properties_Display.md#three-states)
