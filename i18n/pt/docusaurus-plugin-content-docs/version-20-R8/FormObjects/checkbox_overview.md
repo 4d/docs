@@ -268,7 +268,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 ![](../assets/en/FormObjects/checkbox_officexp.png)
 
-- *macOS* - its background is always displayed. Exemplos com estados desmarcado/ marcado:
+- *macOS* - seu plano de fundo é sempre exibido. Exemplos com estados desmarcado/ marcado:
 
 ![](../assets/en/FormObjects/checkbox_officexp_mac.png)
 
@@ -392,7 +392,7 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 > (1) Não compatível com os estilos [Regular](#regular) e [Flat](#flat).<br/>
 > (2) Não é compatível com os estilos [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) e [Collapse/Expand](#collapseexpand).
 
-Additional specific properties are available, depending on the [button style](#check-box-button-styles):
+Outras propriedades específicas estão disponíveis, dependendo do [estilo do botão](#check-box-button-styles):
 
 - Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
 - Flat, Regular: [Três estados](properties_Display.md#three-states)
