@@ -88,9 +88,9 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1566                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1566                        |
+| Thread safe       | &check; |
 
 
