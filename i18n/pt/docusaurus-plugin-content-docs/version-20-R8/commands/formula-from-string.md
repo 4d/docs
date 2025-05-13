@@ -68,9 +68,9 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1601                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1601                        |
+| Thread safe       | &check; |
 
 
