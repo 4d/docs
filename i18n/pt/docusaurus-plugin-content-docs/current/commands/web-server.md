@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
+O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retorna o objeto de servidor Web padrão ou o objeto de servidor Web definido por meio do parâmetro *option*<!-- END REF -->.
 
 By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
@@ -58,9 +58,9 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1674                        |
-| Thread safe    | &cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1674                        |
+| Thread safe       | &cross; |
 
 
