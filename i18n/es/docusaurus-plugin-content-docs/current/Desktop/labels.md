@@ -87,7 +87,7 @@ When you use a form, 4D executes any form or object methods associated with it. 
 
 :::note Notas
 
-- You can restrict the forms listed in this menu by means of a [specific JSON file](#controlling-available-forms-and-methods).
+- Puede restringir los formularios listados que aparecen en este menú mediante un [archivo JSON específico](#controlling-available-forms-and-methods).
 - If the database does not contain any table forms, this menu is not displayed.
 
 :::
@@ -144,7 +144,7 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
  To be eligible for label processing, a project method must comply with the following settings:
  - debe ser "permitido" para la base de datos (los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y el comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md), de lo contrario no se mostrará en el menú **Aplicación**.
- - it must have the [Shared by components and host database](../Project/code-overview.md#shared-by-components-and-host-database) option.
+ - debe tener la opción [Compartido por componentes y base de datos local](../Project/code-overview.md#shared-by-components-and-host-database).
   Ver también [este ejemplo](#printing-labels-using-forms-and-methods-example) a continuación.
 
 :::note
@@ -198,7 +198,7 @@ The Label editor includes an advanced feature allowing you to restrict which pro
 - in the **Form to use** menu on the "Label" page and/or
 - en el menú **Aplicar (método)** de la página "Diseño".
 
-1. Create a JSON file named **labels.json** and put it in the [Resources folder](../Project/architecture.md#resources) of the project.
+1. Crea un archivo JSON llamado **labels.json** y ponlo en la [carpeta de recursos](../Project/architecture.md#resources) del proyecto.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
 
 The contents of the **labels.json** file should be similar to:
