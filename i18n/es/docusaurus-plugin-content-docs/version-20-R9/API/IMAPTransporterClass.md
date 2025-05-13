@@ -650,7 +650,7 @@ End if
 
 #### Descripción
 
-La función `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->elimina todos los mensajes con la bandera "eliminada" del servidor de correo IMAP.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
+La función `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->elimina todos los mensajes con la bandera "eliminada" del servidor de correo IMAP.<!-- END REF --> La bandera "deleted" puede definirse con los métodos [`.delete()`](#delete) o [`.addFlags()`](#addflags).
 
 **Objeto devuelto**
 
