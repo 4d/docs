@@ -58,9 +58,9 @@ You must declare these parameters:
 
 ### $url - URL extra data
 
-The first parameter ($url) is the URL entered by users in the address area of their web browser, without the host address.
+O primeiro parâmetro ($url) é a URL inserida pelos usuários na área de endereço de seu navegador da web, sem o endereço host.
 
-Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
+Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. A tabela a seguir mostra os valores de $url dependendo do URL inserida no navegador Web:
 
 | URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $url                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -157,7 +157,7 @@ Um formulário pode ser enviado por dois métodos (ambos podem ser usados com 4D
 
 > Cuando el servidor web recibe un formulario publicado, llama al método base `On Web Authentication` (si existe).
 
-In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
+En el método llamado, debe llamar al comando `WEB GET VARIABLES` para [recuperar los nombres y valores](#getting-values-from-http-requests) de todos los campos incluidos en una página HTML enviada al servidor.
 
 Exemplo para definir a ação de um formulário:
 
