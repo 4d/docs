@@ -223,7 +223,7 @@ By definition, an OTP token can only be used once. In this scenario, if a web re
 
 Callbacks from third-party applications that include the OTP token can be processed in different ways in your 4D application, depending on your development and the third-party API. Basically, you have two possibilities to handle the token: through the **`$4DSID`** parameter for an automatic processing, or through a custom parameter that you need to process.
 
-#### Using `$4DSID` in the URL
+#### Usando `$4DSID` no URL
 
 Using the `$4DSID` parameter is the most simple way to process a callback from the third-party application:
 
@@ -262,7 +262,7 @@ Verifying if the received OTP token is valid depends on how it was handled:
 - If you used a `$4DSID`, you can store a custom status property in the [session storage](../API/SessionClass.md#storage) at the moment of the token creation, and check this status once the OTP token was received to see if it is the same value (see example).
 - Se você usou a função [`Session.restore()`](../API/SessionClass.md#restore), ele retorna verdadeiro se a sessão foi restaurada corretamente.
 
-### Scenario with $4DSID
+### Cenário com $4DSID
 
 The scenario using the `$4DSID` key is illustrated in the following diagram:
 
@@ -376,7 +376,7 @@ shared singleton Class constructor()
     Session.restore($req.urlQuery.state)
 ```
 
-### Example of email validation with $4DSID
+### Exemplo de validação de e-mail com $4DSID
 
 1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
 
