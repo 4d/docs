@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
-| Parámetros | Tipo    |                             | Descripción                   |
-| ---------- | ------- | :-------------------------: | ----------------------------- |
-| sessionID  | Integer | &#8594; | ID de sesión                  |
-| Resultado  | Object  | &#8592; | Information about the session |
+| Parámetros | Tipo    |                             | Descripción                 |
+| ---------- | ------- | :-------------------------: | --------------------------- |
+| sessionID  | Integer | &#8594; | ID de sesión                |
+| Resultado  | Object  | &#8592; | Información sobre la sesión |
 
 <!-- END REF -->
 
