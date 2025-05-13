@@ -11,9 +11,9 @@ title: OpenAIModelResult
 
 ## プロパティ
 
-| プロパティ   | 型                             | 説明                         |
-| ------- | ----------------------------- | -------------------------- |
-| `model` | [OpenAIModel](OpenAIModel.md) | The model. |
+| プロパティ   | 型                             | 説明   |
+| ------- | ----------------------------- | ---- |
+| `model` | [OpenAIModel](OpenAIModel.md) | モデル。 |
 
 ## 参照
 
