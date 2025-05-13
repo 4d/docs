@@ -70,7 +70,7 @@ VP IMPORT FROM OBJECT("ViewProArea1"; [VPWorkBooks]SPBook; {formula: Formula(onI
 ```
 
 ```4d
-// Method 'onImportComplete'
+// Método 'onImportComplete'
 #DECLARE($name : Text; $path : Text; $paramObj : Object; $status : Object)
    ALERT("The document has been imported, and all custom functions have finished processing.")
 ```
