@@ -5,15 +5,15 @@ title: OpenAIModel
 
 # OpenAIModel
 
-A model description.
+モデルの詳細。
 
 https://platform.openai.com/docs/api-reference/models/object
 
 ## プロパティ
 
-| プロパティ      | 型       | 説明                                                                                         |
-| ---------- | ------- | ------------------------------------------------------------------------------------------ |
-| `id`       | Text    | Unique identifier for the model                                                            |
-| `created`  | Integer | Timestamp indicating when the model was created                                            |
-| `object`   | Text    | Type of object (e.g., model)            |
-| `owned_by` | Text    | Identifier for the owner (e.g., system) |
+| プロパティ      | 型       | 説明                                                     |
+| ---------- | ------- | ------------------------------------------------------ |
+| `id`       | Text    | モデルの固有の識別子                                             |
+| `created`  | Integer | モデルがいつ作成されたかを示すタイムスタンプ                                 |
+| `object`   | Text    | オブジェクトの種類(例: model) |
+| `owned_by` | Text    | オーナーの識別子(例: システムなど) |
