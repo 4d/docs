@@ -70,7 +70,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `function(result)`: función a pasar como último argumento. Esta función "callback" se llama de forma sincrónica una vez que el método 4D termina de ejecutarse. Recibe el parámetro `result`.
 
-- `result`: Execution result of the 4D method. Este resultado puede ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
+- `result`: resultado de la ejecución del método 4D. Este resultado puede ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
 
 > Por defecto, 4D trabaja en UTF-8. Cuando devuelva un texto que contenga caracteres extendidos, por ejemplo, caracteres con acentos, asegúrese de que la codificación de la página mostrada en el área web esté declarada como UTF-8, ya que de lo contrario los caracteres podrían representarse incorrectamente. En este caso, añada la siguiente línea en la página HTML para declarar la codificación:
 > `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
@@ -92,7 +92,7 @@ En el área web, el método 4D puede ser llamado con la siguiente sintaxis:
 $4d.today()
 ```
 
-The 4D method does not receive any parameters but it does return the result to the callback function called by 4D after the execution of the method. Queremos mostrar la fecha en la página HTML que es cargada por el área web.
+El método 4D no recibe ningún parámetro pero devuelve el resultado a la función de retrollamada por 4D después de la ejecución del método. Queremos mostrar la fecha en la página HTML que es cargada por el área web.
 
 Aquí está el código de la página HTML:
 
