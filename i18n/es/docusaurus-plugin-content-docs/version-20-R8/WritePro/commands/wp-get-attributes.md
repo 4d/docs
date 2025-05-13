@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros  | Tipo                                           |                             | Descripción                               |
 | ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object                                         | &#8594; | Range or element or 4D Write Pro document |
+| targetObj   | Object                                         | &#8594; | Rango o elemento o documento 4D Write Pro |
 | attribName  | Text                                           | &#8594; | Name of attribute to get                  |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
