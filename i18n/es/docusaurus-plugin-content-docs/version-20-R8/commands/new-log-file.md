@@ -30,7 +30,7 @@ The file is renamed with the current backup numbers of the database and of the l
 
 :::warning
 
-A log file must always be related to a data file. If you call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](select-log-file.md) or the [Settings dialog box](../Backup/settings.md#configuration), make sure to have a matching copy of your data file, otherwise the log file could not be integrated.
+A log file must always be related to a data file. Si llama a este comando justo después de una activación del archivo de registro (sin copia de seguridad) usando [`SELECT LOG FILE`](select-log-file.md) o la [caja de diálogo de parámetros](../Backup/settings.md#configuration), asegúrese de tener una copia coincidente de su archivo de datos, de lo contrario el archivo de registro no podría ser integrado.
 
 :::
 
