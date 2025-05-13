@@ -385,7 +385,7 @@ A função `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->
 
 By default, if no *timeout* value is set, the function initializes close handshake and waits to receive close frame from the peer, after that sending FIN packet in attempt to perform a clean socket close. When answer received, the socket is destroyed.
 
-If a *timeout* value is set:
+Se um valor *timeout* for definido:
 
 - when the waiting time is reached, forcibly destroys the socket.
 - if *timeout* = 0, forcibly destroys the socket without closing frames or fin packets exchange, and does it instantly without waiting time.
