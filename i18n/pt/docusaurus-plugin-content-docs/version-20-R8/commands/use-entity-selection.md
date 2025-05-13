@@ -50,7 +50,7 @@ USE ENTITY SELECTION($entitySel) //A seleção atual da tabela Employee é atual
 
 |                           |                             |
 | ------------------------- | --------------------------- |
-| Command number            | 1513                        |
+| Número de comando         | 1513                        |
 | Thread safe               | &check; |
 | Changes current record    |                             |
 | Changes current selection |                             |
