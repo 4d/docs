@@ -615,7 +615,7 @@ $ageAverage:=$students.getAgeAverage()
 
 ### Devolviendo un documento
 
-You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
+You want to propose a link to download the user manual for a selected product with several formats available. Escribe una función `getUserManual()` de la dataclass Products. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 // Product dataclass
