@@ -324,7 +324,7 @@ Além disso, tem acesso às propriedades específicas para cabeçalhos. Especifi
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the list box column object method.
+Na execução, eventos que ocorrem em um cabeçalho são gerados em método de objeto coluna list box.
 
 Quando o comando `OBJECT SET VISIBLE` for usado com um cabeçalho, é aplicado a todos os cabeçalhos, independente do elemento individual estabelecido pelo comando. Por exemplo, `OBJECT SET VISIBLE(*;"header3";False)` esconde todos os cabeçalhos no objeto list box ao qual *header3* pertence e não apenas esse cabeçalho.
 
@@ -347,7 +347,7 @@ Quando cabeçalhos são exibidos, pode clicar para selecionar um quando o objeto
 
 Para cada cabeçalho coluna List Box pode estabelecer propriedades texto padrão: nesse caso, essas propriedades têm prioridade sobre àquelas da coluna ou da list box. Pode também acessar propriedades específicas para cabeçalhos. Particularmente pode inserir um [cálculo personalizado ou automático](properties_Object.md#variable-calculation).
 
-At runtime, events that occur in a footer are generated in the list box column object method.
+Na execução, eventos que ocorrem em um rodapé são gerados em método de objeto coluna list box.
 
 Quando o comando `OBJECT SET VISIBLE` for usado com um rodapé, é aplicado a todos os rodapés, independente do elemento individual estabelecido pelo comando. Por exemplo, `OBJECT SET VISIBLE(*;"footer3";False)` esconde todos os rodapés no objeto list box ao qual *footer3* pertence e não apenas esse rodapé.
 
