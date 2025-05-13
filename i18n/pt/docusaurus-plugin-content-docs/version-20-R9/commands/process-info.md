@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
+O comando `Process info` <!-- REF #_command_.Process info.Summary -->retorna um objeto que fornece informações detalhadas sobre o processo cujo número você passa em *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
 
 O objeto retornado contém as propriedades abaixo:
 
@@ -38,7 +38,7 @@ O objeto retornado contém as propriedades abaixo:
 | name             | Text                                    | Nome de processo                                                                 |
 | number           | Integer                                 | Process number                                                                   |
 | preemptive       | Parâmetros                              | True if run preemptive, false otherwise                                          |
-| sessionID        | Text                                    | Session UUID                                                                     |
+| sessionID        | Text                                    | UUID da sessão                                                                   |
 | state            | Integer                                 | Current status. Possible values: see below       |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
 | type             | Integer                                 | Running process type. Possible values: see below |
@@ -122,7 +122,7 @@ O objeto retornado contém as propriedades abaixo:
 
 :::
 
-Here is an example of output object:
+Aqui está um exemplo de objeto de saída:
 
 ```json
 
