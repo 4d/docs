@@ -145,7 +145,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
 
-- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
+- el componente ha sido [cargado en modo interpretado](../Project/components.md#interpreted-and-compiled-components),
 - el componente no es cargado de la [caché local del administrador de dependencias](../Project/components.md#local-cache-for-dependencies), es decir, no está [descargado de GitHub](../Project/components.md#adding-a-github-dependency).
 
 In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
@@ -155,7 +155,7 @@ In the Explorer, a specific icon indicates that the component code is editable:<
 
 :::warning
 
-Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+Sólo se pueden editar las [clases expuestas](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente.
 
 :::
 
@@ -379,7 +379,7 @@ Este archivo no es obligatorio pero es necesario para construir componentes [not
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#loading-components) en todas las plataformas.
 
 The folling keys can be defined:
 
