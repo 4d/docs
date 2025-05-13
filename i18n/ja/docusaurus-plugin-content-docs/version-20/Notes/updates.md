@@ -28,7 +28,7 @@ Windows Server 2025 では、新しいWindows 印刷ダイアログボックス�
 
 :::
 
-- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
+- [スタンドアロンの4Dアプリケーションを使用するのに必要なライセンスを埋め込まずに](../Desktop/building.md#ライセンスについて)アプリケーションをビルドできるようになりました。
 - [**修正リスト**](https://bugs.4d.com/fixes?version=20.6): 4D 20.6 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 
@@ -121,7 +121,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 :::
 
 - [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの *options* パラメーターに `plugins` プロパティが新しく追加されました。
-- 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore-and-log-integration).
+- 4D Serverの自動復元中に複数のジャーナルファイルが自動的に統合されるようになりました: [自動復元](../Backup/settings.md#自動復元とログの統合)
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。 [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。 [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
 - 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
 - ユーザークラス定義で [`property`](../Concepts/classes.md#property) キーワードをサポート。
@@ -177,7 +177,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 #### 動作の変更
 
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
-- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
+- [ポップアップメニューがリンクされたベベルボタン](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu)に標準アクションが設定されている場合、ポップアップメニューの項目が選択されたときには標準アクションが実行されないようになりました。
 - Blink (CEF) を使用する Webエリアにおいて、外部スクリプトによって表示されるダイアログは、 `setTimeout()` JS 関数から呼び出されていないとブロックされるようになりました。 これは、現在のCEFのアップデートにより、`alert()` や `print()` などの関数によって表示されるダイアログが、OS ではなく Web エリアで処理されるようになったためです。 [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/ja/page1029.html) および [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/ja/page1043.html) 参照。
 
 
