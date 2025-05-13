@@ -458,7 +458,7 @@ Una vez generada la aplicación, se incluye automáticamente un nuevo archivo de
 
 El generador de aplicaciones puede firmar aplicaciones 4D fusionadas bajo macOS (aplicaciones monopuesto, 4D Server y partes cliente bajo macOS). La firma de una aplicación autoriza su ejecución por la funcionalidad Gatekeeper de macOS cuando se selecciona la opción "Mac App Store y desarrolladores identificados" (ver "Acerca de Gatekeeper" más adelante).
 
-* Marque la opción **Firmar la aplicación** para incluir la certificación en el procedimiento de generación de aplicaciones para macOS. 4D will check the availability of elements required for certification when the build occurs:
+* Marque la opción **Firmar la aplicación** para incluir la certificación en el procedimiento de generación de aplicaciones para macOS. 4D comprobará la disponibilidad de los elementos necesarios para la certificación cuando se produzca la generación:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
@@ -477,7 +477,7 @@ Para obtener un certificado de desarrollador de Apple, Inc., puede utilizar los 
 
 #### Sobre Gatekeeper
 
-Gatekeeper is a security feature of macOS that controls the execution of applications downloaded from the Internet. Si una aplicación descargada no procede del Apple Store o no está firmada, se rechaza y no se puede ser lanzada.
+Gatekeeper es una función de seguridad macOS que controla la ejecución de las aplicaciones descargadas de Internet. Si una aplicación descargada no procede del Apple Store o no está firmada, se rechaza y no se puede ser lanzada.
 
 La opción **Firmar la aplicación** del Generador de aplicaciones de 4D le permite generar aplicaciones compatibles con esta opción por defecto.
 
