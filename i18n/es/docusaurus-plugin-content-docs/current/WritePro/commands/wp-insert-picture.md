@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros     | Tipo                    |                             | Descripción                                                |
 | -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
-| targetObj      | Object                  | &#8594; | Range or element or 4D Write Pro document                  |
+| targetObj      | Object                  | &#8594; | Rango o elemento o documento 4D Write Pro                  |
 | picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk |
 | pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
 | mode           | Integer                 | &#8594; | Modo de inserción                                          |
