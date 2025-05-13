@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF--> Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** devuelve un objeto que contiene información sobre el evento formulario que acaba de ocurrir.<!-- END REF--> Por lo general, utilizará **FORM Event** en un método formulario u objeto.
 
 **Objeto devuelto**
 
-Each returned object includes the following main properties:
+Cada objeto devuelto incluye las siguientes propiedades principales:
 
 | **Propiedad** | **Tipo** | **Description**                                                                                                                                                                           |
 | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,22 +29,22 @@ Each returned object includes the following main properties:
 | code          | integer  | Valor numérico del evento de formulario.                                                                                                                                  |
 | description   | text     | Nombre del evento de formulario (*por ejemplo*, "On After Edit"). Consulte la sección [**Eventos formulario**](../Events/overview.md). |
 
-For example, in the case of a click on a button, the object contains the following properties:
+Por ejemplo, en el caso de un clic en un botón, el objeto contiene las siguientes propiedades:
 
 ```json
 {"code":4,"description":"On Clicked","objectName":"Button2"}
 ```
 
-The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
+El objeto evento puede contener propiedades adicionales, dependiendo del objeto para el que se produzca el evento. Para objetos *eventObj* generados en:
 
 - los objetos list box o columna de list box, ver [esta sección](../FormObjects/listbox_overview.md#additional-properties).
 - áreas 4D View Pro, ver [On VP Ready form event](../Events/onVpReady.md).
 
-**Note:** If there is no current event, **FORM Event** returns a null object.
+**Nota:** si no hay ningún evento actual, **FORM Event** devuelve un objeto null.
 
 ## Ejemplo 1
 
-You want to handle the On Clicked event on a button:
+Desea manejar el evento On Clicked en un botón:
 
 ```4d
  If(FORM Event.code=On Clicked)
@@ -54,11 +54,11 @@ You want to handle the On Clicked event on a button:
 
 ## Ejemplo 2
 
-If you set the column object name with a real attribute name of a dataclass like this:
+Si define el nombre del objeto columna con un nombre de atributo real de una dataclass como esta:
 
 ![](../assets/en/commands/pict4843820.en.png)
 
-You can sort the column using the On Header Click event:
+Puede ordenar la columna utilizando el evento On Header Click:
 
 ```4d
  Form.event:=FORM Event
@@ -72,7 +72,7 @@ You can sort the column using the On Header Click event:
 
 ## Ejemplo 3
 
-You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
+Desea gestionar los detalles de visualización en un objeto list box con un método definido en la propiedad *Meta info expression*:
 
 ![](../assets/en/commands/pict4843812.en.png)
 
@@ -92,7 +92,7 @@ El método *setColor*:
  $0:=$meta
 ```
 
-The resulting list box when rows are selected:
+El list box resultante cuando se seleccionan líneas:
 
 ![](../assets/en/commands/pict4843808.en.png)
 
