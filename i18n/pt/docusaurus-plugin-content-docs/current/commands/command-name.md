@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo    |                             | Descrição                    |
 | --------- | ------- | --------------------------- | ---------------------------- |
-| comando   | Integer | &#8594; | Command number               |
+| comando   | Integer | &#8594; | Número de comando            |
 | info      | Integer | &#8592; | Command property to evaluate |
 | theme     | Text    | &#8592; | Language theme of command    |
 | Resultado | Text    | &#8592; | Localized command name       |
@@ -34,7 +34,7 @@ The **Command name** command <!--REF #_command_.Command name.Summary-->returns t
 
 Two optional parameters are available:
 
-- *info*: properties of the command. The returned value is a *bit field*, where the following bits are meaningful:
+- *info*: propriedades do comando. The returned value is a *bit field*, where the following bits are meaningful:
  - First bit (bit 0): set to 1 if the command is [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (i.e., compatible with execution in a preemptive process) and 0 if it is **thread-unsafe**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
  - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors).
 
@@ -135,10 +135,10 @@ Until(OK=0) //end of existing commands
 
 ## Propriedades
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Command number     | 538                         |
-| Thread safe        | &check; |
-| Modifies variables | OK                          |
+|                       |                             |
+| --------------------- | --------------------------- |
+| Número de comando     | 538                         |
+| Thread safe           | &check; |
+| Modifica as variáveis | OK                          |
 
 
