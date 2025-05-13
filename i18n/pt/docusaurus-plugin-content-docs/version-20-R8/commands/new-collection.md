@@ -83,9 +83,9 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1472                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1472                        |
+| Thread safe       | &check; |
 
 
