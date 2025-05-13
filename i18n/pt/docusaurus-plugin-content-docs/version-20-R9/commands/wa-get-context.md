@@ -45,7 +45,7 @@ Checking if a context exists:
 
 ### Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1849                        |
-| Thread safe    | &cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1849                        |
+| Thread safe       | &cross; |
