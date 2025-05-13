@@ -64,7 +64,7 @@ title: フォームプロパティ
 
 #### JSON 文法
 
-フォーム名は、form.4Dform ファイルを格納するフォルダーの名前で定義されます。 See [project architecture](Project/architecture#sources) for more information.
+フォーム名は、form.4Dform ファイルを格納するフォルダーの名前で定義されます。 詳細は[プロジェクトのアーキテクチャー](/Project/architecture#sources)を参照してください。
 
 ---
 
