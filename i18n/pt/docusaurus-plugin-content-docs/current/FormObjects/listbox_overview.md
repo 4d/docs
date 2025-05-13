@@ -310,7 +310,7 @@ Além disso, tem acesso às propriedades específicas para cabeçalhos. Especifi
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the list box column object method.
+Na execução, eventos que ocorrem em um cabeçalho são gerados em método de objeto coluna list box.
 
 Quando o comando `OBJECT SET VISIBLE` é usado com um cabeçalho, ele é aplicado a todos os cabeçalhos, independentemente do elemento individual definido pelo comando. Por ejemplo, `OBJECT SET VISIBLE(*; "header3";False)` ocultará todos los encabezados del objeto list box al que pertenece *header3* y no simplemente este encabezado.
 
@@ -330,7 +330,7 @@ Quando cabeçalhos são exibidos, pode clicar para selecionar um quando o objeto
 
 Para cada cabeçalho coluna List Box pode estabelecer propriedades texto padrão: nesse caso, essas propriedades têm prioridade sobre àquelas da coluna ou da list box. Pode também acessar propriedades específicas para cabeçalhos. Em particular, você pode inserir um [cálculo personalizado ou automático](properties_Object.md#variable-calculation).
 
-At runtime, events that occur in a footer are generated in the list box column object method.
+Na execução, eventos que ocorrem em um rodapé são gerados em método de objeto coluna list box.
 
 Quando o comando OBJECT SET VISIBLE for usado com um rodapé, é aplicado a todos os rodapés, independente do elemento individual estabelecido pelo comando. Por exemplo, OBJECT SET VISIBLE(\*;"footer3";False) esconde todos os rodapés no objeto list box ao qual footer3 pertence e não apenas esse rodapé.
 
@@ -500,7 +500,7 @@ Você pode escrever no método *UI_SetColor*:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // green background
+    $color:=0x0080C080 //  fundo verde
  Else
     $color:=lk inherited
  End if
@@ -533,12 +533,12 @@ O suporte de ordenação padrão depende do tipo de list box:
 
 ### Ordenação personalizada
 
-The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+O desenvolvedor pode configurar tipos personalizados, por exemplo, usando o comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) e/ou combinação dos eventos de formulário [`On Header Click`](../Events/onHeaderClick) e [`On After Sort`](../Events/onAfterSort) e comandos 4D relevantes.
 
 As ordenações personalizadas permitem-lhe:
 
 - realizar classificações em vários níveis em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`] (../commands-legacy/listbox-sort-columns.md),
-- use functions such as [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+- utilize funções como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para classificar colunas com base em critérios complexos.
 
 #### Exemplo
 
