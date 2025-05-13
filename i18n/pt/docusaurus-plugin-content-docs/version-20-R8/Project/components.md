@@ -21,7 +21,7 @@ Components can be interpreted or [compiled](../Desktop/building.md).
 The package folder of a component (*MyComponent.4dbase* folder) can contain:
 
 - for **interpreted components**: a standard [Project folder](../Project/architecture.md). O nome da pasta do pacote deve ser sufixado com **.4dbase** se você quiser instalá-lo na pasta [**Components** do seu projeto](architecture.md#components).
-- for **compiled components**:
+- para **componentes compilados**:
  - either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
  - or directly a .4DZ file with other folders such as *Resources*.
 
