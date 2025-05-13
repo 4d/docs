@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla        | &#8594; | Table owning the form, or Default table, if omitted                                                                                                                                      |
 | form       | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                            |
+| formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                            |
 | areaStart  | Integer      | &#8594; | Marcador de impresión, o Área inicial (si se especifica areaEnd)                                                                                                      |
 | areaEnd    | Integer      | &#8594; | Área final (si se especifica areaStart)                                                                                                                               |
 | Resultado  | Integer      | &#8592; | Altura de la sección impresa                                                                                                                                                             |
