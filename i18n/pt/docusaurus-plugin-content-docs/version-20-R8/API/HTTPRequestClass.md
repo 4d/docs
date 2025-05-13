@@ -395,10 +395,10 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary --> a URL da
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parâmetro  | Tipo                           |                             | Descrição                    |
-| ---------- | ------------------------------ | :-------------------------: | ---------------------------- |
-| timeout    | Real                           |              ->             | Maximum wait time in seconds |
-| Resultados | 4D.HTTPRequest | <- | HTTPRequest object           |
+| Parâmetro  | Tipo                           |                             | Descrição                          |
+| ---------- | ------------------------------ | :-------------------------: | ---------------------------------- |
+| timeout    | Real                           |              ->             | Tempo máximo de espera em segundos |
+| Resultados | 4D.HTTPRequest | <- | HTTPRequest object                 |
 
 <!-- END REF -->
 
