@@ -268,11 +268,11 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 #### Descripción
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
+La función `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->devuelve el contenido de la información de un archivo de aplicación como un objeto<!-- END REF -->.
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
-**Returned object with a .plist file (all platforms)**
+**Objeto devuelto con un archivo .plist (todas las plataformas)**
 
 El contenido xml del archivo se analiza y las llaves se devuelven como propiedades del objeto, conservando sus tipos (texto, booleano, numérico). `.plist dict` se devuelve como un objeto JSON y `.plist array` se devuelve como un array JSON.
 
@@ -588,11 +588,11 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 #### Descripción
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
+La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades *info* como contenido informativo de un archivo de aplicación<!-- END REF -->.
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
 
-***info* parameter object with a .plist file (all platforms)**
+Parámetro ***info* con un archivo .plist (todas las plataformas)**
 
 :::note
 
@@ -610,7 +610,7 @@ Para definir un valor de tipo Fecha, el formato a utilizar es una cadena de time
 
 :::
 
-***info* parameter object with a .exe or .dll file (Windows only)**
+Parámetro ***info* con un archivo .exe o .dll (sólo Windows)**
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
@@ -630,9 +630,9 @@ Para todas las propiedades excepto `WinIcon`, si se pasa un texto nulo o vacío 
 
 Para la propiedad `WinIcon`, si el archivo del icono no existe o tiene un formato incorrecto, se genera un error.
 
-***info* parameter object with a macOS executable file (macOS only)**
+Parámetro ***info* con un archivo ejecutable macOS (sólo macOS)**
 
-*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*info* debe ser un objeto con una única propiedad llamada `archs` que es una colección de objetos en el formato devuelto por [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
 Every object in the *info*.archs collection must contain the following properties:
 

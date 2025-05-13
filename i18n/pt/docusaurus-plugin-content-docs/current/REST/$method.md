@@ -21,7 +21,7 @@ Elimina a entidade, coleção de entidades ou seleção de entidades atual (cria
 
 ### Descrição
 
-Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
+With `$method=delete`, you can delete an entity or an entire entity collection. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
 
 Também pode apagar as entidades em um conjunto de entidades, chamando [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -55,19 +55,19 @@ Cria um conjunto de entidades no cache do 4D Server baseado na coleção de enti
 
 Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. Por padrão, é válido durante duas horas; no entanto, pode modificar esse tempo passando um valor (em segundos) para $timeout.
 
-Si ha utilizado `$savedfilter` y/o `$savedorderby` (junto con `$filter` y/o `$orderby`) cuando creó su conjunto de entidades, puede volver a crearlo con el mismo ID de referencia aunque se haya eliminado de la caché de 4D Server.
+If you have used `$savedfilter` and/or `$savedorderby` (in conjunction with `$filter` and/or `$orderby`) when you created your entity set, you can recreate it with the same reference ID even if it has been removed from 4D Server's cache.
 
 ### Exemplo
 
-Para crear un conjunto de entidades, que se guardará en la caché de 4D Server durante dos horas, añada `$method=entityset` al final de su petición REST:
+To create an entity set, which will be saved in 4D Server's cache for two hours, add `$method=entityset` at the end of your REST request:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
-Puede crear un conjunto de entidades que se almacenará en la caché de 4D Server durante sólo diez minutos pasando un nuevo tiempo de espera a `$timeout`:
+You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to `$timeout`:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-También puede guardar el filtro y ordenar por, pasando true a `$savedfilter` y `$savedorderby`.
+You can also save the filter and order by, by passing true to `$savedfilter` and `$savedorderby`.
 
 > `$skip` y `$top/$limit` no se tienen en cuenta al guardar un conjunto de entidades.
 

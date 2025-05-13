@@ -104,7 +104,7 @@ Quando a fonte de dados for uma seleção de entidades, qualquer modificação f
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an *undefined* value, thus displaying blank rows in the list box. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+When entities are deleted, their references remain in the entity selection with an *undefined* value, thus displaying blank rows in the list box. Neste caso, você pode chamar a função [`.clean()`](API/EntitySelectionClass.md#clean) para obter uma nova seleção de entidade, mas sem as referências de entidade deletadas.
 
 :::
 
@@ -187,7 +187,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Variável ou Expressão](properties_Object.md#variable-or-expression)                                                                                                                                      | X              | X                |                                      |
 | [Alinhamento vertical](properties_Text.md#vertical-alignment)                                                                                                                                             | X              | X                | X                                    |
 | [Cor da linha vertical](properties_Gridlines.md#vertical-line-color)                                                                                                                                      | X              | X                | X                                    |
-| [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                                                                                                                                   | X              | X                | X                                    |
+| [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding)                                                                                                                                   | X              | X                | X                                    |
 | [Barra de rolagem vertical](properties_Appearance.md#vertical-scroll-bar)                                                                                                                                 | X              | X                | X                                    |
 | [Tamanho Vertical](properties_ResizingOptions.md#vertical-sizing)                                                                                                                                         | X              | X                | X                                    |
 | [Visibilidade](properties_Display.md#visibility)                                                                                                                                                          | X              | X                | X                                    |
@@ -197,7 +197,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 ### Eventos formulário suportados
 
-| Evento formulário    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                               | Comentários                                                                                                                                                                                                     |
+| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event.md) para obter as propriedades principais)                                                                    | Comentários                                                                                                                                                                                                     |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                                                                 |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                                                                 |
@@ -271,7 +271,7 @@ Você pode definir propriedades padrão (texto, cor de fundo, etc.) para cada co
 
 ### Eventos formulário suportados
 
-| Evento formulário    | Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)                                                                                               | Comentários                                                                                                                                                         |
+| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event.md) para obter as propriedades principais)                                                                    | Comentários                                                                                                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                     |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                     |
@@ -407,7 +407,6 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
 - **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
  **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
  A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto.
- **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
  A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto. Esta variável corresponde a um array de booleanos que é criado e mantido automaticamente por 4D. O tamanho deste array vem determinado pelo tamanho do list box: contém o mesmo número de elementos que o menor array associado às colunas.
  Cada elemento dessa matriz contém `True` se a linha correspondente for selecionada e `False` caso contrário. 4D atualiza o conteúdo deste array em função das ações de usuário. Do lado contrário, pode mduar o valor dos elementos array para mudar a seleção na list box.
  Mas não se pode inserir nem apagar linhas nesse array; nem se pode reescrever as linhas. O comando `Count in array` pode ser usado para descobrir o número de linhas selecionadas.
@@ -465,7 +464,7 @@ Se escolher esconder os destaques do sistema e quiser exibir seleções de list 
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-Para uma caixa de lista de tipos de matriz, você precisa atualizar a [matriz de cor de fundo da linha de fundo](properties_BackgroundAndBorder.md#row-background-color-array) pela programação. No formulário JSON, se definiu o Array Row Background Color para a list box:
+Para uma caixa de lista de tipos de matriz, você precisa atualizar a [matriz de cor de fundo da linha de fundo](properties_BackgroundAndBorder.md#row-background-color-array) pela programação. In the JSON form, you have defined the following Row Background Color Array for the list box:
 
 ```
 	"rowFillSource": "_ListboxBackground",
@@ -658,7 +657,7 @@ Nesse modo:
 
 - A altura do objeto list box é reduzida automaticamente quando o número de linhas a ser impresso for menor que a altura original do objeto (não há linhas "em branco" impressas). Por outro lado a altura não aumenta automaticamente de acordo com os conteúdos do objeto. O tamanho do objeto realmente impresso pode ser obtido por meio do comando `LISTBOX GET PRINT INFORMATION`.
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
- These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
+ Esses parâmetros também incluem a primeira linha a ser impressa: se você chamar o comando `OBJECT SET SCROLL POSITION` antes de iniciar a impressão, a primeira linha impressa na caixa de listagem será a designada pelo comando.
 - Um mecanismo automático facilita a impressão de caixas de listagem que contêm mais linhas do que é possível exibir: chamadas sucessivas para `Print object` podem ser usadas para imprimir um novo conjunto de linhas a cada vez. O comando `LISTBOX GET PRINT INFORMATION` pode ser usado para verificar o status da impressão enquanto ela estiver em andamento.
 
 ## List box hierárquicos.
@@ -730,7 +729,7 @@ Se esta caixa de listagem for apresentada de forma hierárquica (sendo as três 
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-As matrizes não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
+The arrays are not sorted before the hierarchy is constructed. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
 \> A
 \> B
 \> A
@@ -875,8 +874,11 @@ Estão disponíveis propriedades padrão relacionadas com coordenadas, tamanho e
 
 No entanto, o tema Fonte de Dados não está disponível para as colunas da caixa de listagem tipo objecto. De fato, o conteúdo de cada célula de coluna é baseado em atributos encontrados no elemento correspondente da array de objectos. Cada elemento da array pode definir:
 
-the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output.
-the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
+the value type (mandatory): text, color, event, etc.
+the value itself (optional): used for input/output.
+the cell content display (optional): button, list, etc.
+additional settings (optional): depend on the value type
+To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
 
 ```4d
 ARRAY OBJECT(obColumn;0) //array de colunas

@@ -433,7 +433,7 @@ Definir el [rango de versiones de dependencia](#tags-and-versions) a utilizar pa
 
 Haga clic en el botón **Añadir** para añadir la dependencia al proyecto.
 
-La dependencia de GitHub declarada en el archivo [**dependencies.json**](#dependenciesjson) y añadida a la [lista de dependencias inactivas](#dependency-status) con el estado **Disponible al reiniciar**. Se cargará cuando se reinicie la aplicación.
+The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. Se cargará cuando se reinicie la aplicación.
 
 #### Definición de un intervalo de versiones de dependencia de GitHub
 

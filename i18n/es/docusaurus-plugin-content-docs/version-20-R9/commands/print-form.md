@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla        | &#8594; | Table owning the form, or Default table, if omitted                                                                                                                                      |
 | form       | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData   | Object       | &#8594; | Data to associate to the form                                                                                                                                                            |
+| formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                            |
 | areaStart  | Integer      | &#8594; | Marcador de impresión, o Área inicial (si se especifica areaEnd)                                                                                                      |
 | areaEnd    | Integer      | &#8594; | Área final (si se especifica areaStart)                                                                                                                               |
 | Resultado  | Integer      | &#8592; | Altura de la sección impresa                                                                                                                                                             |
@@ -29,7 +29,7 @@ En el parámetro *form*, puede pasar:
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
 - an object containing a description of the form.
 
-Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](../commands-legacy/page-break.md) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](../commands-legacy/cancel.md) command before the [PAGE BREAK](../commands-legacy/page-break.md) command.
+Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. Para forzar un salto de página entre formularios, utilice el comando [PAGE BREAK](../commands-legacy/page-break.md). Para transferir la impresión a la página siguiente de un formulario cuya altura es superior al espacio disponible, invoque el comando [CANCEL](../commands-legacy/cancel.md) antes del comando [PAGE BREAK](../commands-legacy/page-break.md).
 
 Se pueden utilizar tres sintaxis diferentes:
 
@@ -102,15 +102,15 @@ The value returned by **Print form** indicates the height of the printable area.
 The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
 - Llamar a [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
-- Call [SET PRINT OPTION](../commands-legacy/set-print-option.md) and [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
+- Llame a [SET PRINT OPTION](../commands-legacy/set-print-option.md) y [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
 
-**Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
+**Print form** builds each printed page in memory. Cada página se imprime cuando la página en memoria está llena o cuando se llama a [PAGE BREAK](../commands-legacy/page-break.md). Para asegurar la impresión de la última página después de cualquier uso de **Print form**, debe concluir con el comando [PAGE BREAK](../commands-legacy/page-break.md) (excepto en el contexto de un [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), ver nota). Otherwise, if the last page is not full, it stays in memory and is not printed.
 
-**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. If you call [PAGE BREAK](../commands-legacy/page-break.md) in this case, a blank page is printed.
+**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. Si llama a [PAGE BREAK](../commands-legacy/page-break.md) en este caso, se imprime una página en blanco.
 
 This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
 
-**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands-legacy/print-record.md) instead.
+**Warning:** Subforms are not printed with **Print form**. Para imprimir sólo un formulario con dichos objetos, utilice [PRINT RECORD](../commands-legacy/print-record.md) en su lugar.
 
 **Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
 
@@ -121,7 +121,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 ## Ejemplo 1
 
-The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
+El siguiente ejemplo funciona como lo haría un comando [PRINT SELECTION](../commands-legacy/print-selection.md). However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
 ```4d
  QUERY([Register]) // Seleccionar los registros
@@ -146,7 +146,7 @@ The following example performs as a [PRINT SELECTION](../commands-legacy/print-s
 
 ## Ejemplo 2
 
-Refer to the example of the [SET PRINT MARKER](../commands-legacy/set-print-marker.md) command.
+Consulte el ejemplo del comando [SET PRINT MARKER](../commands-legacy/set-print-marker.md).
 
 ## Ejemplo 3
 
@@ -154,7 +154,7 @@ This form is used as dialog, then printed with modifications:
 
 ![](../assets/en/commands/pict6264975.en.png)
 
-The form method:
+El método del formulario:
 
 ```4d
  If(Form event code=On Printing Detail)

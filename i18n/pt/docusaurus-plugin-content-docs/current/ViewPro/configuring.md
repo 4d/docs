@@ -360,7 +360,7 @@ Atributos do tamanho do papel são usados para especificar as dimensões ou mode
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
  - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
  - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
-  In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
+  Nesse caso, [`VP Get print info`](./commands/vp-get-print-info.md) retorna o formato correspondente com a altura e a largura.
 
 ### Escala
 

@@ -3,11 +3,11 @@ id: php
 title: Página PHP
 ---
 
-Puede [ejecutar scripts PHP en 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.en.html). Essa página permite que você configure o interpretador.
+Você pode [executar scripts PHP em 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.en.html). Essa página permite que você configure o interpretador.
 
 :::note
 
-These settings are specified for all connected machines and all sessions. You can also modify and read them separately for each machine and each session using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands. Los parámetros modificados por el comando `SET DATABASE PARAMETER` tienen prioridad para la sesión actual.
+Estas configurações são especificadas para todas as máquinas conectadas e todas as sessões. Você também pode modificá-los e lê-los separadamente para cada máquina e cada sessão usando os comandos [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) e [`Obter parâmetro do banco de dados`](https://doc.4d.com/4dv20/help/command/en/page643.html). Os parâmetros modificados pelo comando `SET DATABASE PARAMETER` têm prioridade para a sessão atual.
 
 :::
 
@@ -23,6 +23,6 @@ Observe que o endereço HTTP deve estar na mesma máquina que o 4D.
 
 Número da porta do interpretador PHP. Por padrão, 4D usa a porta 8002.
 
-You can change the address and/or port if they are already used by another service or if you have several interpreters on the same machine.
+Você pode alterar o endereço e/ou porta se eles já forem usados por outro serviço ou se você tiver vários intérpretes na mesma máquina.
 
 

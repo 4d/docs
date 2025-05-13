@@ -5,7 +5,7 @@ title: OpenAIImagesAPI
 
 # OpenAIImagesAPI
 
-The `OpenAIImagesAPI` provides functionalities to generate images using OpenAI's API.
+`OpenAIImagesAPI` はOpenAI のAPI を使用して画像を生成する機能を提供します。
 
 https://platform.openai.com/docs/api-reference/images
 
@@ -15,13 +15,13 @@ https://platform.openai.com/docs/api-reference/images
 
 **generate**(*prompt* : Text; *parameters* : OpenAIImageParameters) : OpenAIImagesResult
 
-| 引数       | 型                                                 | 説明                                                                               |
-| -------- | ------------------------------------------------- | -------------------------------------------------------------------------------- |
-| *prompt* | Text                                              | The prompt to use for image generation.                          |
-| *引数*     | [OpenAIImageParameters](OpenAIImageParameters.md) | Parameters for image generation.                                 |
-| 戻り値      | [OpenAIImagesResult](OpenAIImagesResult.md)       | The result containing the generated image(s). |
+| 引数           | 型                                                 | 説明               |
+| ------------ | ------------------------------------------------- | ---------------- |
+| *prompt*     | Text                                              | 画像の生成に使用するプロンプト。 |
+| *parameters* | [OpenAIImageParameters](OpenAIImageParameters.md) | 画像生成のためのパラメータ。   |
+| 戻り値          | [OpenAIImagesResult](OpenAIImagesResult.md)       | 生成された画像を格納する結果。  |
 
-Creates an image given a prompt.
+プロンプトを与えられると画像を作成します。
 
 https://platform.openai.com/docs/api-reference/images/create
 
@@ -36,11 +36,11 @@ If($image#Null)
 End if
 ```
 
-If more than one image generated
+複数の画像が生成された場合
 
 ```4d
 var $image: cs.AIKit.OpenAIImage
 For each($image; $resule.images || [])
-  // asBlob, asPicture, saveToDisk
+  // asBlob、 asPicture、 saveToDisk などを使用
 End for each
 ```

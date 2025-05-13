@@ -27,7 +27,7 @@ Cada janela do Editor de Código possui uma barra de ferramentas que fornece ace
 | **Expandir tudo / Recolher tudo**            | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Estes botões permitem expandir ou recolher todas as estruturas de fluxo de controle do código.                                                                                                                                                                                                                                                                 |
 | **Informações sobre o método**               | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](./overview.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                                                   |
 | **Últimos valores da área de transferência** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Exibe os últimos valores armazenados na área de transferência.                                                                                                                                                                                                                                                                                                 |
-| **Pranchetas**                               | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nove pranchetas disponíveis no editor de código. You can [use these clipboards](#clipboards) by clicking on them directly or by using keyboard shortcuts. Você pode usar uma [opção Preferências](Preferences/methods.md#options-1) para ocultá-las.                                                                                                           |
+| **Pranchetas**                               | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nove pranchetas disponíveis no editor de código. Você pode [usar essas pranchetas](#clipboards) clicando nelas diretamente ou usando atalhos de teclado. Você pode usar uma [opção Preferências](Preferences/methods.md#options-1) para ocultá-las.                                                                                                            |
 | **Menu de navegação suspenso**               | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Permite navegar dentro de métodos e classes com conteúdo marcado automaticamente ou marcadores declarados manualmente. Ver abaixo                                                                                                                                                                                                                              |
 
 
@@ -89,7 +89,7 @@ Você pode exibir as seguintes listas de itens na área de listas da janela do C
 - **Métodos**: nomes de métodos projeto do banco de dados.
 - **Todas as pastas**: nomes das pastas de objetos e subpastas definidas no banco de dados exibidas na forma de uma lista hierárquica. As pastas podem ser utilizadas para organizar objetos de uma forma personalizada. São geridos a partir da página inicial do explorador.
 - **Pastas** (submenu): conteúdo da pasta selecionada usando o submenu.
-- **Macros**: Macro names defined for the database (see [Creating and using macros](./creating-using-macros.md)).
+- **Macros**: nomes de macros definidos para o banco de dados (consulte [Criação e uso de macros](./creating-using-macros.md)).
 - **Comandos**: comandos da linguagem 4D em ordem alfabética.
 - **Comandos por temas**: comandos da linguagem 4D classificados por tema em forma de lista hierárquica.
 - **Barras de menu**: nomes e números das barras de menu [criadas com o editor de barras de menu 4D](../Menus/creating.md).
@@ -273,7 +273,7 @@ A maioria desses atalhos pode ser personalizada na caixa de diálogo [Preferenci
 
 O 4D utiliza técnicas padrão de edição de texto para digitar e editar no Editor de código.
 
-O Editor de código usa convenções de exibição (estilo, cor) para os elementos de sintaxe. You can [customize these conventions](#editing-area). Conforme você digita, ao validar sua entrada, o 4D avalia o texto da linha e aplica o formato de exibição apropriado. 4D também recua cada linha para seu nível adequado em relação à linha anterior quando você usa estruturas de programação (If, End if...).
+O Editor de código usa convenções de exibição (estilo, cor) para os elementos de sintaxe. Você pode [personalizar essas convenções](#editing-area). Conforme você digita, ao validar sua entrada, o 4D avalia o texto da linha e aplica o formato de exibição apropriado. 4D também recua cada linha para seu nível adequado em relação à linha anterior quando você usa estruturas de programação (If, End if...).
 
 Pode utilizar as teclas de setas para se deslocar rapidamente de uma linha para outra. Usar as teclas de seta para mover-se por várias linhas é mais rápido do que clicar, pois o editor atrasa a avaliação da linha em busca de erros.
 

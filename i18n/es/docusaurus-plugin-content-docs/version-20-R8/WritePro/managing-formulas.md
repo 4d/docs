@@ -9,7 +9,7 @@ title: Gestión de fórmulas
 
 Inserting formulas in 4D Write Pro areas is done with the [**WP INSERT FORMULA**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. They are also returned by the [**WP Get text**](commands-legacy/wp-get-text.md) command.
 
-Formulas are evaluated:
+Las fórmulas son evaluadas:
 
 - when they are inserted in a form object which displays computed values
 - when the 4D Write Pro object is loaded in a form object which displays computed values
@@ -45,7 +45,7 @@ You want to replace the selection in a 4D Write Pro area with the contents of a 
 
 ## Formula context object
 
-You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. You can use the properties of this object through [**This**](../commands/this.md):
+You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. Puede utilizar las propiedades de este objeto a través de [**This**](../commands/this.md):
 
 | Propiedades                                                                    | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------------------------------------------------------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ For example, to insert the page number in the footer area:
 
 **Date**
 
-When the [**Current date**](../commands-legacy/current-date.md) command, a date variable, or a method returning a date is inserted in a formula, it will automatically be transformed into text using the system date short format.
+Cuando se inserta en una fórmula el comando [**Current date**](../commands-legacy/current-date.md), una variable de fecha o un método que devuelve una fecha, ésta se transformará automáticamente en texto utilizando el formato abreviado de fecha del sistema.
 
 **Time**
 

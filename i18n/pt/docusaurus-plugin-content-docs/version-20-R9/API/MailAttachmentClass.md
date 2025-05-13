@@ -93,7 +93,7 @@ A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary --
 
 #### Descrição
 
-A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary --> o nome e a extensão do anexo<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary --> o nome e a extensão do anexo<!-- END REF -->.  Por padrão, é o nome do arquivo, a menos que outro nome tenha sido especificado no comando [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ## .path
 

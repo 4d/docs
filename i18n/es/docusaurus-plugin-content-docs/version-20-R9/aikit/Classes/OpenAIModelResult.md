@@ -13,7 +13,7 @@ title: OpenAIModelResult
 
 | Propiedad | Tipo                          | Descripción                |
 | --------- | ----------------------------- | -------------------------- |
-| `model`   | [OpenAIModel](OpenAIModel.md) | The model. |
+| `model`   | [OpenAIModel](OpenAIModel.md) | El modelo. |
 
 ## Ver también
 

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
+El comando **WP Add imagen** <!--REF #_command_.WP Add image.Summary--> ancla la imagen pasada como parámetro en una ubicación fija dentro del *wpDoc* especificado y devuelve su referencia.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
 
 In *wpDoc*, pass the name of a 4D Write Pro document object.
 
@@ -46,7 +46,7 @@ By default, the added picture is:
 
 The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
 
-**Note:** The [WP Selection range](../commands-legacy/wp-selection-range.md) command returns a *picture reference* object if an anchored picture is selected and a *range object* if an inline picture is selected. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**Nota:** el comando [WP Selection range](../commands-legacy/wp-selection-range.md) devuelve un objeto *referencia a imagen* si se selecciona una imagen anclada y un objeto *rango* si se selecciona una imagen en línea. You can determine if a selected object is a picture object by checking the `wk type` attribute:
 
 - **Value = 2**: The selected object is a picture object.
 - **Value = 0**: The selected object is a range object.

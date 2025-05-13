@@ -48,7 +48,7 @@ title: HTTPリクエストの処理
 // メソッドのコード
 ```
 
-Alternatively, you can use the [named parameters](../Concepts/parameters.md) syntax:
+あるいは、[名前付き引数](Concepts/parameters.md#名前付き引数) シンタックスを利用することもできます:
 
 ```4d
 // On Web Connection データベースメソッド
@@ -164,7 +164,7 @@ WEB SEND BLOB($BLOB;"image/png")
 
 > この場合、Webサーバーがポストされたフォームを受信すると、`On Web Authentication` データベースメソッドが (あれば) 呼び出されます。
 
-In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
+HTMLページからサーバーに送信されたフォームの [フィールド名とフィールド値を取得](#httpリクエストから値を取得する) するには、呼び出されたメソッド内で `WEB GET VARIABLES` コマンドを使用します。
 
 フォームのアクションを定義する例:
 

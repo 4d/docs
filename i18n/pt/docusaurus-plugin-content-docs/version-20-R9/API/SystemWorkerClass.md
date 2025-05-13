@@ -497,7 +497,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #SystemWorkerClass.terminate().Summary -->forces the `SystemWorker` to terminate its execution<!-- END REF -->.
+A função `.terminate()` <!-- REF #SystemWorkerClass.terminate().summary --> força o `SystemWorker` a encerrar sua execução<!-- END REF -->.
 
 Esta função envia a instrução para terminar e devolver o controlo ao guião de execução.
 
@@ -557,7 +557,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout* is reached<!-- END REF -->.
+A função `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera até o final da execução do `SystemWorker` ou o *timeout* especificado ser alcançado<!-- END REF -->.
 
 The `.wait()` function waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached(If any is defined), or an error has occured. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 

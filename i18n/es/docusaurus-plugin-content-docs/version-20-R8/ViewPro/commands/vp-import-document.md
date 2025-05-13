@@ -85,7 +85,7 @@ Desea importar un documento 4D View Pro por defecto almacenado en el disco, al a
 
 ```4d
 var $docPath : text
-If(Form event code=On VP Ready) //4D View Pro area loaded and ready
+If(Form event code=On VP Ready) //Área 4D View Pro cargada y lista
     $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
     VP IMPORT DOCUMENT("VPArea";$docPath)
 End if

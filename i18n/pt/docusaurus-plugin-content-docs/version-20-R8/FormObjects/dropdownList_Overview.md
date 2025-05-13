@@ -88,7 +88,7 @@ Para inicializar o array associado à lista pendente, pode:
 
 Nesse caso, o nome da [variável] (properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Esse código pode ser colocado no método do formulário e ser executado quando o evento `On Load` do formulário for executado.
 
-- Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](../commands-legacy/list-to-array.md) command. Por exemplo:
+- Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [`LIST TO ARRAY`](../commands-legacy/list-to-array.md). Por exemplo:
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)

@@ -453,7 +453,7 @@ Define the [dependency version range](#tags-and-versions) to use for this projec
 
 プロジェクトに依存関係を追加するには、**追加** ボタンをクリックします。
 
-すると、GitHub 依存関係は [**dependencies.json**](#dependenciesjson) ファイルに宣言され、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。 このコンポーネントはアプリケーションの再起動後にロードされます。
+The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. このコンポーネントはアプリケーションの再起動後にロードされます。
 
 #### Defining a GitHub dependency version range
 

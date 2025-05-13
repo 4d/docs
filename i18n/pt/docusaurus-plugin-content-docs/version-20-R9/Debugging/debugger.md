@@ -315,7 +315,7 @@ O Painel de controle personalizado é útil para avaliar expressões. É semelha
 
 ### Modo de exibição
 
-You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+Você seleciona o modo de exibição a ser usado em todas as janelas do depurador usando a opção **Exibir** do [menu contextual](#contextual-menu) do painel Observação Personalizada.
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
 

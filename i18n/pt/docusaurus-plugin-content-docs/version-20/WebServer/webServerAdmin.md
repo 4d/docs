@@ -63,7 +63,7 @@ Para o fazer, pode:
 -   4D Server: clique no botão **Limpar Cache** na página HTTP da janela de administração do 4D Server.
 
 A cache é então imediatamente limpa.
-> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
+> Você também pode usar o URL [/4DCACHECLEAR](#4dcacheclear).
 
 
 

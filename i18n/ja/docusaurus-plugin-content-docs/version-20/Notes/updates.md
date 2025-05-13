@@ -14,9 +14,9 @@ title: リリースノート
 
 #### ハイライト
 
-:::info Evaluation applications
+:::info 評価版アプリケーション
 
-Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building.md#build-an-evaluation-application).
+ナイトリービルド**101734**以降、アプリケーションビルド画面には評価版アプリケーションをビルドするための新しいオプションが表示されるようになりました。 詳細は[4D Rxドキュメンテーションの説明](/Desktop/building#評価版アプリケーションをビルド)を参照してください。
 
 :::
 
@@ -24,7 +24,7 @@ Starting with nightly build **101734**, the Build application dialog box has a n
 
 :::警告 WINDOWS SERVER 2025 での既知の問題
 
-Windows Server 2025 では、新しいWindows 印刷ダイアログボックス内での一部のカスタムのオプションは利用不可となっており、現在調査中です。 A fix will be available in the next hotfix.
+Windows Server 2025 では、新しいWindows 印刷ダイアログボックス内での一部のカスタムのオプションは利用不可となっており、現在調査中です。 この問題はHotfixで修正される予定です。
 
 :::
 
@@ -302,7 +302,7 @@ ALERT($param1+" "+$param2)
  $class.concate() // " " と表示
 ```
 詳細については、こちらの [ブログ記事](https://blog.4d.com/ja/stop-press-accessing-parameters-not-being-passed-is-possible) を参照ください。 この全体的な変更を利点を活かすため、呼び出し先メソッドと呼び出し元メソッドの両方を再コンパイルする必要があります。 そのため、コンポーネントの再コンパイルが必要になります。
-- Debugging web server sessions [is easier on 4D Server](../WebServer/sessions.md).
+- Webサーバーセッションを[4D Serverで容易にデバッグ](../WebServer/sessions.md)できるようになりました。
 - 新しい [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
 - ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。 4D 19 R3 では、4Dユーザーパスワードに対して、bcrypt というより強力なハッシュ化アルゴリズムを使用しています。 パスワードが一度変更されると、4D 19 R3 より前のバージョンで同じデータベースを開いた際には、そのアカウントの認証が拒否されます (ログインできません)。 そのため、4Dパスワードを使用している場合には、4D 19 R3 以降のバージョンにアップグレードする前に .4db ファイル (バイナリデータベース) または directory.json ファイル (プロジェクトデータベース) をバックアップしておくことが強く推奨されます。
 - 正確性のため、`4D digest` 定数は、`4D REST digest` へと名称が改められました。

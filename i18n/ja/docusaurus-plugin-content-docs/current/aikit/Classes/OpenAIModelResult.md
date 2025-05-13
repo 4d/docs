@@ -5,7 +5,7 @@ title: OpenAIModelResult
 
 # OpenAIModelResult
 
-## Inherits
+## 継承元
 
 - [OpenAIResult](OpenAIResult.md)
 

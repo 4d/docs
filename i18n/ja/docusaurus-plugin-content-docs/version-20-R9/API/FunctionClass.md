@@ -47,7 +47,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 #### 引数の受け渡し
 
-You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. たとえば:
+フォーミュラには、<a href="Concepts/parameters.md#順番引数">順番引数シンタックス $1, $2...$n を使用して引数を渡すことができます。 たとえば:
 
 ```4d
  var $f : Object

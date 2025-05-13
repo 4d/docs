@@ -39,7 +39,7 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 ---
 
-## Form Class
+## Clase de formulario
 
 Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente para asociar al formulario. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 

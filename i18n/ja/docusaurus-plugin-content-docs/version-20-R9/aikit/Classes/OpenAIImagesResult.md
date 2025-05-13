@@ -5,16 +5,16 @@ title: OpenAIImagesResult
 
 # OpenAIImagesResult
 
-## Inherits
+## 継承元
 
 - [OpenAIResult](OpenAIResult.md)
 
-## Computed properties
+## 計算プロパティ
 
-| プロパティ    | 型                                           | 説明                                                                 |
-| -------- | ------------------------------------------- | ------------------------------------------------------------------ |
-| `images` | Collection of [OpenAIImage](OpenAIImage.md) | Returns a collection of OpenAIImage objects.       |
-| `ピクチャー`  | [OpenAIImage](OpenAIImage.md)               | Returns the first OpenAIImage from the collection. |
+| プロパティ    | 型                                     | 説明                              |
+| -------- | ------------------------------------- | ------------------------------- |
+| `images` | [OpenAIImage](OpenAIImage.md) のコレクション | OpenAIImage オブジェクトのコレクションを返します。 |
+| `ピクチャー`  | [OpenAIImage](OpenAIImage.md)         | コレクションから最初のOpenAIImage を返します。   |
 
 ## 関数
 
@@ -24,8 +24,8 @@ title: OpenAIImagesResult
 
 | 引数       | 型                         | 説明                                                                   |
 | -------- | ------------------------- | -------------------------------------------------------------------- |
-| *folder* | 4D.Folder | The folder where images will be saved.               |
-| *prefix* | Text                      | The prefix for the saved image file names.           |
+| *folder* | 4D.Folder | 画像が保存されるフォルダ。                                                        |
+| *prefix* | Text                      | 保存された画像ファイル名につける接頭辞。                                                 |
 | 戻り値      | Boolean                   | Returns `True` if the images are successfully saved. |
 
 Saves images to the specified disk folder.

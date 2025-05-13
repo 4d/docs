@@ -56,7 +56,7 @@ Este botão pode ser usado para enviar uma mensagem para os usuários 4D selecio
 
 A mensagem será apresentada como um alerta nas máquinas remotas.
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](../commands-legacy/send-message-to-remote-user.md) command.
+> É possível executar a mesma ação para usuários remotos com o comando [`SEND MESSAGE TO REMOTE USER`](../commands-legacy/send-message-to-remote-user.md).
 
 ### Visualizar processos
 

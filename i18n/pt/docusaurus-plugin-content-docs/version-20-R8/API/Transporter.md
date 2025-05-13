@@ -270,7 +270,7 @@ A propriedade `.host` contém <!-- REF #transporter.host.Summary --> o nome ou o
 
 #### Descrição
 
-The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. Pode ser relativo (à pasta atual de Logs) ou absoluto.
+A propriedade `.logFile` contém <!-- REF #transporter.logFile.Summary -->o caminho do arquivo de registro estendido definido (se houver) para a conexão de correio<!-- END REF -->. Pode ser relativo (à pasta atual de Logs) ou absoluto.
 
 Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. Para mais informações sobre arquivos de registo estendidos, consultar:
 

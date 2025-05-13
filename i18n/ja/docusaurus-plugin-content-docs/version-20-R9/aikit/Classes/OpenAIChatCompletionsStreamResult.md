@@ -5,26 +5,26 @@ title: OpenAIChatCompletionsStreamResult
 
 # OpenAIChatCompletionsStreamResult
 
-## Inherits
+## 継承元
 
 - [OpenAIResult](OpenAIResult.md)
 
 ## プロパティ
 
-| プロパティ  | 型      | 説明                                                           |
-| ------ | ------ | ------------------------------------------------------------ |
-| `data` | Object | Contains the stream data sent by the server. |
+| プロパティ  | 型      | 説明                           |
+| ------ | ------ | ---------------------------- |
+| `data` | Object | サーバーから送信されたストリームデータを格納しています。 |
 
-## Computed Properties
+## 計算プロパティ
 
-| プロパティ     | 型                               | 説明                                                                                                   |
-| --------- | ------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `choice`  | [OpenAIChoice](OpenAIChoice.md) | Returns a choice data, with a `delta` message.                                       |
-| `choices` | Collection                      | Returns a collection of [OpenAIChoice](OpenAIChoice.md) data, with `delta` messages. |
+| プロパティ     | 型                               | 説明                                                               |
+| --------- | ------------------------------- | ---------------------------------------------------------------- |
+| `choice`  | [OpenAIChoice](OpenAIChoice.md) | `delta` メッセージ付きの選択データを返します。                                      |
+| `choices` | Collection                      | `delta` メッセージ付きの[OpenAIChoice](OpenAIChoice.md) データのコレクションを返します。 |
 
-### Overrided properties
+### オーバーライドされたプロパティ
 
-| プロパティ        | 型                               | 説明                                                                                                                     |
-| ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `success`    | [OpenAIChoice](OpenAIChoice.md) | Returns `True` if the streaming data was successfully decoded as an object.                            |
-| `terminated` | Boolean                         | A Boolean indicating whether the HTTP request was terminated. ie `onTerminate` called. |
+| プロパティ        | 型                               | 説明                                                               |
+| ------------ | ------------------------------- | ---------------------------------------------------------------- |
+| `success`    | [OpenAIChoice](OpenAIChoice.md) | ストリーミングデータがオブジェクトとして正常にデコードされた場合には `True` を返します。                 |
+| `terminated` | Boolean                         | HTTP リクエストが終了したかどうかを示すブール値。 言い換えると `onTerminate` が呼ばれたかどうかを表します。 |

@@ -1,9 +1,9 @@
 ---
 id: compatible-openai
-title: Providers
+title: Proveedores
 ---
 
-# Providers
+# Proveedores
 
 Many AI providers propose an OpenAI-like API, so you can use this project to connect to them.
 
@@ -11,7 +11,7 @@ To do so you just have to change the original `baseURL` by the service one and u
 
 ## Remote
 
-| Provider                                                                                                                                                                                                 | Base url                                                                                                                                              |
+| Provider                                                                                                                                                                                                 | Url base                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | https://mistral.ai/                                                                                                                                                      | https://api.mistral.ai/v1                                                                             |
 | https://www.deepseek.com/                                                                                                                                | https://api.deepseek.com                                                                              |

@@ -127,7 +127,7 @@ A collection of objects, each with this structure:
  
 ```
 
-En el list box, cada columna se refiere a una de las propiedades del objeto, ya sea directamente (This.name), indirectamente (This.employees.length), o a través de una expresión (*getPicture*) en la que se puede usar directamente. The list box looks like:
+En el list box, cada columna se refiere a una de las propiedades del objeto, ya sea directamente (This.name), indirectamente (This.employees.length), o a través de una expresión (*getPicture*) en la que se puede usar directamente. El list box se ve así:
 
 ![](../assets/en/commands/pict3776706.en.png)
 

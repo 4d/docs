@@ -1,17 +1,17 @@
 ---
 id: compatible-openai
-title: Providers
+title: プロバイダ
 ---
 
-# Providers
+# プロバイダ
 
-Many AI providers propose an OpenAI-like API, so you can use this project to connect to them.
+多くのAI プロバイダがOpenAI に似たAPI を提供しているので、このプロジェクトを使用してそれらに接続することができます。
 
-To do so you just have to change the original `baseURL` by the service one and use their api key if needed.
+そのためには元の `baseURL` をサービスのものに変更し、必要であればそのサービスのAPI キーを使用するだけです。
 
-## Remote
+## リモート
 
-| Provider                                                                                                                                                                                                 | Base url                                                                                                                                              |
+| プロバイダ                                                                                                                                                                                                    | ベースURL                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | https://mistral.ai/ja/                                                                                                                                                   | https://api.mistral.ai/v1/ja                                                                          |
 | https://www.deepseek.com/ja/                                                                                                                             | https://api.deepseek.com/ja                                                                           |
@@ -25,7 +25,7 @@ To do so you just have to change the original `baseURL` by the service one and u
 
 ## ローカル
 
-| Provider                                                | Default base url                                                                                          | Doc                                                                           |
+| プロバイダ                                                   | デフォルトのベースURL                                                                                              | ドキュメント                                                                        |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/ja/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ja/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |

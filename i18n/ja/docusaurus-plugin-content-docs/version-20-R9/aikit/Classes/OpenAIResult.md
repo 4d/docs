@@ -13,13 +13,13 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 | --------- | ------------------------------------------------------------------------------------ | ---------------- |
 | `request` | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | The HTTP request |
 
-## Computed properties
+## 計算プロパティ
 
 | プロパティ        | 型          | 説明                                                                                                                          |
 | ------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `success`    | Boolean    | A Boolean indicating whether the HTTP request was successful.                                               |
 | `errors`     | Collection | Returns a collection of errors. These could be network errors or errors returned by OpenAI. |
-| `terminated` | Boolean    | A Boolean indicating whether the HTTP request was terminated.                                               |
+| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。                                                                                                 |
 | `headers`    | Object     | Returns the response headers as an object.                                                                  |
 | `rateLimit`  | Object     | Returns rate limit information from the response headers.                                                   |
 | `効果`         | Object     | Returns usage information from the response body if any.                                                    |
@@ -48,7 +48,7 @@ The structure of the `rateLimit` object is as follows:
 
 Throws the first error in the `errors` collection. This function is useful for propagating errors up the call stack.
 
-## Inherited Classes
+## 継承クラス
 
 Several classes inherit from `OpenAIResult` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIResult`:
 

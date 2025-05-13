@@ -497,7 +497,7 @@ A função `.isAdminProtected()` <!-- REF #DataStoreClass.getAllRemoteContexts()
 
 > Para mais informações sobre como podem ser criados contextos, ver [optimização cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+Cada objeto da coleção devolvida contém as propriedades listadas na seção [`.getRemoteContextInfo()`](#getremotecontextinfo).
 
 #### Exemplo
 

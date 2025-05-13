@@ -300,7 +300,7 @@ Define um preenchimento horizontal para as células. O valor é definido em pixe
 
 #### Veja também
 
-[Vertical Padding](#vertical-padding)
+[Preenchimento vertical](#vertical-padding)
 
 ---
 
@@ -320,4 +320,4 @@ Define um preenchimento vertical para as células. O valor é definido em pixeis
 
 #### Veja também
 
-[Horizontal Padding](#horizontal-padding)
+[Preenchimento horizontal](#horizontal-padding)

@@ -41,7 +41,7 @@ title: プリエンプティブプロセス
 
 要素毎の "スレッドセーフティ" プロパティは、その要素自身によります:
 
-- 4Dコマンド: スレッドセーフティは内部プロパティです。 4D ドキュメンテーション内においては、スレッドセーフなコマンドには ![](../assets/en/Develop/thread-safe.png) アイコンが表示されています。 You can also use the [`Command name`](../commands-legacy/command-name.md) command to know if a command is thread-safe. 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
+- 4Dコマンド: スレッドセーフティは内部プロパティです。 4D ドキュメンテーション内においては、スレッドセーフなコマンドには ![](../assets/en/Develop/thread-safe.png) アイコンが表示されています。 [`Command name`](../commands-legacy/command-name.md) コマンドを使用して、コマンドがスレッドセーフであるかどうかを知ることもできます。 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
 - プロジェクトメソッド: スレッドセーフであるための条件は [こちらの段落](#スレッドセーフなメソッドの書き方) にまとめられています。
 
 原則として、プリエンプティブスレッド内で実行されるコードは外部との相互作用する部分、たとえばプラグインコードやインタープロセス変数などを呼び出すことはできません。 しかしながら、4Dデータサーバーと ORDA はプリエンプティブ実行をサポートしていることから、データアクセスは可能です。
@@ -155,10 +155,10 @@ title: プリエンプティブプロセス
 - インタープロセス変数を使用していない(1)
 - インターフェースオブジェクトを呼び出していない(2) (例外あり、以下参照)
 
-(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](../commands-legacy/storage.md) catalog.
+(1) プリエンプティブプロセス間(あるいは全てのプロセス間)でデータをやり取りするためには、プロセスへの引数として[共有コレクションまたは共有オブジェクト](../Concepts/shared.md) を渡すか、あるいは[`Storage`](../commands-legacy/storage.md) カタログを使うという方法もあります。
 [ワーカープロセス](processes.md#ワーカープロセス) という新種のプロセスによって、プリエンプティブプロセスを含むあらゆるプロセス間でデータの交換ができるようになります。
 
-(2) The [`CALL FORM`](../commands-legacy/call-form.md) command provides an elegant solution to call interface objects from a preemptive process.
+(2) [`CALL FORM`](../commands-legacy/call-form.md) コマンドは、プリエンプティブプロセスからインターフェースオブジェクトを呼び出すためのエレガントなソリューションを提供します。
 
 :::note 注記
 
@@ -193,7 +193,7 @@ title: プリエンプティブプロセス
 
 ### Triggers
 
-When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+[トリガー](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.ja.html) を呼び出すことのあるコマンドをメソッドが使用している場合、4Dコンパイラーはメソッドがスレッドセーフであるかどうかをチェックするために、トリガーがスレッドセーフかどうかを評価します:
 
 ```4d
  SAVE RECORD([Table_1]) // Table_1 にトリガーが存在する場合、トリガーはスレッドセーフでなければなりません
@@ -216,7 +216,7 @@ When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/
 
 :::note
 
-[クライアント/サーバーアプリケーション](../Desktop/clientServer.md)では、トリガーのコードがスレッドセーフである場合でも、実行はコオペラティブモードでおこなわれることがあります。 This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine. このプロセスは、クライアントからのすべての呼び出しに使用されるため、常にコオペラティブモードで実行されます。
+[クライアント/サーバーアプリケーション](../Desktop/clientServer.md)では、トリガーのコードがスレッドセーフである場合でも、実行はコオペラティブモードでおこなわれることがあります。 これは、リモートプロセスからトリガーが呼び出された場合に発生します: この場合、トリガーはサーバーマシン上の [クライアントプロセスの "双子" プロセス](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.ja.html#68972) で実行されます。 このプロセスは、クライアントからのすべての呼び出しに使用されるため、常にコオペラティブモードで実行されます。
 
 :::
 
@@ -268,12 +268,12 @@ DocRef 参照番号 (開かれたドキュメントの参照番号。次のコ�
 特定のコードを検証対象から除外するには、コメント形式の専用ディレクティブ `%T-` および `%T+` でそのコードを挟みます。 `//%T-` は以降のコードを検証から除外し、`//%T+` は以降のコードに対する検証を有効に戻します:
 
 ```4d
-  // %T- 検証を無効にします
+  //%T- 検証を無効にします
  
   // スレッドセーフ検証から除外するコード
  $w:=Open window(10;10;100;100) // 例
  
-  // %T+ 検証を有効に戻します
+  //%T+ 検証を有効に戻します
 ```
 
 無効化および有効化用のディレクティブでコードを挟んだ場合、そのコードがスレッドセーフかどうかについては、開発者が熟知している必要があります。 プリエンプティブなスレッドでスレッドセーフでないコードが実行された場合には、ランタイムエラーが発生します。

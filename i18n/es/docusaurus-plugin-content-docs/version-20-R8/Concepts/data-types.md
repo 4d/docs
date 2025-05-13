@@ -35,8 +35,8 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 You can always know the type of a field or variable using the following commands:
 
-- [`Type`](../commands-legacy/type.md) for fields and scalar variables
-- [`Value type`](../commands-legacy/value-type.md) for expressions
+- [`Type`](../commands-legacy/type.md) para campos y variables escalares
+- [`Tipo de valor`](../commands-legacy/value-type.md) para expresiones
 
 ## Valores por defecto
 
