@@ -16,7 +16,7 @@ title: VP SET FORMULAS
 
 ## Descrição
 
-The `VP SET FORMULAS` command <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->.
+O comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->atribui um conjunto de fórmulas que começa no intervalo de células especificado<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo da célula (criada com [VP Cell](vp-cell.md)) cuja fórmula você deseja especificar. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 

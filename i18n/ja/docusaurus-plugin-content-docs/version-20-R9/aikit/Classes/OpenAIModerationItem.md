@@ -9,7 +9,7 @@ https://platform.openai.com/docs/api-reference/moderations/object#moderations/ob
 
 ## プロパティ
 
-| Property Name    | 型       | 説明                                                                       |
+| プロパティ名           | 型       | 説明                                                                       |
 | ---------------- | ------- | ------------------------------------------------------------------------ |
 | `categories`     | Object  | Contains categories associated with the moderation item. |
 | `category_score` | Object  | Contains scores for each category.                       |

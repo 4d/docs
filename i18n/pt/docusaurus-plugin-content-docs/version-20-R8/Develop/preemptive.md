@@ -13,7 +13,7 @@ Quando for executado em modo *cooperativo*, todos os processos serão gestionado
 
 Como resultado, no modo apropriativo, o rendimento global da aplicação é incrementado, especialmente em máquinas multi-núcleo, já que múltiplos processos (threads ou fios) podem ser executados simultaneamente. Entretanto, os ganhos reais dependem das operações executadas. Por outro lado, já que no modo apropriativo cada fio é independente dos demais e não é gestionado diretamente pela aplicação, limitações específicas se aplicam aos métodos que queira que sejam compatíveis com o modo apropriativo. Além disso, a execução apropriativa está disponível só em alguns contextos específicos.
 
-## Availability of preemptive mode {#availability-of-preemptive-mode}
+## Disponibilidade do modo preemptivo {#availability-of-preemptive-mode}
 
 O uso do modo preemptivo está disponível nos seguintes contextos de execução:
 
@@ -141,7 +141,7 @@ A execução de un método no modo preemptivo dependerá de que a propriedade "e
 
 4D permite que você identifique o modo de execução dos processos no modo compilado:
 
-- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
+- O comando [`Process info`] (../commands/process-info.md) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
 - O Explorador de execução e a [janela de administração de 4D Server] (../ServerWindow/processes.md#process-type)
  mostram ícones específicos para os processos preemptivos.
 

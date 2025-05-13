@@ -325,7 +325,7 @@ O servidor web 4D fornece vários comandos web de baixo nível, permitindo que v
 
 - o comando [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) retorna o corpo como texto bruto, permitindo qualquer análise necessária
 - o comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) retorna os cabeçalhos da solicitação. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
-- the [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) and [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
+- os comandos [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) e [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) para analisar a parte do corpo de uma solicitação de várias partes e recuperar valores de texto, mas também arquivos postados, usando BLOBs.
 
 Esses comandos estão resumidos no gráfico a seguir:
 

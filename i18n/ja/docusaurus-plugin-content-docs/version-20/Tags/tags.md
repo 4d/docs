@@ -319,7 +319,7 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 解釈エラーの場合、"`<!--#4DEVAL expr-->: ## エラー # エラーコード`" というテキストが挿入されます。
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> [悪意あるコードの侵入・挿入](WebServer/templates.md#悪意あるコードの侵入を防止)を防ぐため、セキュリティ対策として、外部から受信したデータを処理するときには [`4DTEXT`](#4dtext) タグを使用することが推奨されています。
 
 ## 4DHTML
 
@@ -338,7 +338,7 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 解釈エラーの場合、"`<!--#4DHTML myvar-->: ## エラー # エラーコード`" というテキストが挿入されます。
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> [悪意あるコードの侵入・挿入](WebServer/templates.md#悪意あるコードの侵入を防止)を防ぐため、セキュリティ対策として、外部から受信したデータを処理するときには [`4DTEXT`](#4dtext) タグを使用することが推奨されています。
 
 ## 4DIF, 4DELSE, 4DELSEIF と 4DENDIF
 
@@ -423,7 +423,7 @@ No name has been found.
 
 このタグは主に、ある (*path* で指定された) HTMLページを別の HTMLページに含めるためにデザインされました。 デフォルトで、HTMLページのボディー部、つまり `<body>` と`</body>` タグの間の内容だけが統合されます (bodyタグは含まれません)。 これにより、ヘッダーに含まれるメタタグ関連の衝突が回避されます。
 
-However, if the HTML page specified does not contain `<body>` and `</body>` tags, the entire page is included. この場合、メタタグの整合性を管理するのは開発者の役割です。
+しかし、指定したHTMLページに `<body>`および`</body>` タグが存在しない場合、ページの内容がそのままインクルードされます。 この場合、メタタグの整合性を管理するのは開発者の役割です。
 
 `<!--#4DINCLUDE -->` コメントは、テスト (`<!--#4DIF-->`) やループ (`<!--#4DLOOP-->`) と使用するととても便利です。 条件に基づきあるいはランダムにバナーなどを挿入する便利な方法です。 このタグを使用してページをインクルードするとき、拡張子にかかわらず、4Dは呼び出されたページを解析してから、内容を `4DINCLUDE` 呼び出し元のページに挿入します。
 
@@ -651,7 +651,7 @@ However, if the HTML page specified does not contain `<body>` and `</body>` tags
 
 4DTEXT タグを使用して、4D式も挿入できます。 たとえば、フィールドの値を直接挿入できるほか (`<!--#4DTEXT [tableName]fieldName-->`) 、配列要素の値も挿入できますし (`<!--#4DTEXT tabarr{1}-->`) 、値を返すメソッドも使用できます (`<!--#4DTEXT mymethod-->`)。 式の変換には、変数の場合と同じルールが適用されます。 さらに、式は 4Dのシンタックスルールに適合していなければなりません。
 
-> For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> [悪意あるコードの侵入・挿入](WebServer/templates.md#悪意あるコードの侵入を防止)を防ぐため、セキュリティ対策として、外部から受信したデータを処理するときには [`4DTEXT`](#4dtext) タグを使用することが推奨されています。
 
 解釈エラーの場合、"`<!--#4DTEXT myvar--> : ## エラー # エラーコード`" というテキストが挿入されます。
 
@@ -706,7 +706,7 @@ $シンタックスを使用すると、パーサーによって以下のコー�
 
 ここで、`$4dtag` と `<--#4dtag-->` は厳密には同じではないという点に注意が必要です。`<--#4dtag-->` とは異なり、`$4dtag` は 4Dタグを [繰り返し解釈](#再起的処理) することはありません。 `$` タグは常に一度だけ解釈され、その結果は標準テキストとして読まれます。
 
-この違いの理由は、悪意あるコードの侵入を防ぐためにあります。 As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. しかしながら、`4DTEXT` は `$` 記号をエスケープしないため、悪意あるコードの侵入を防ぐために `$4dtag (expression)` シンタックスにおける再帰的処理はサポートしないことになりました。
+この違いの理由は、悪意あるコードの侵入を防ぐためにあります。 [悪意あるコードの侵入を防止](WebServer/templates.md#悪意あるコードの侵入を防止) の章で説明されているように、ユーザーが入力したテキストを使用する場合は意図に反するタグの再解釈を避けるため、`4DHTML` タグではなく `4DTEXT` タグを使用することが強く推奨されています。 しかしながら、`4DTEXT` は `$` 記号をエスケープしないため、悪意あるコードの侵入を防ぐために `$4dtag (expression)` シンタックスにおける再帰的処理はサポートしないことになりました。
 
 以下の例では、使用されるシンタックスとタグによる処理の結果の違いを表しています:
 

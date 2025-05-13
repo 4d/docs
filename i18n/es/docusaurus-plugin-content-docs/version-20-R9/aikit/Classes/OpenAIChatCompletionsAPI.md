@@ -38,7 +38,7 @@ $messages.push({"role":"user"; "content": "Hello, how are you?"})
 var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini" })
 ```
 
-Get the response as text
+Obtener la respuesta como texto
 
 ```4d
 var $text:=$result.choice.text

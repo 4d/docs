@@ -189,7 +189,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
+A função `.send()` <!-- REF #WebSocketClass.send().Summary -->envia *mensagem* ao servidor de WebSocket no tipo de dados definido (Texto, Blob, ou Objeto)<!-- END REF -->.
 
 Os conteúdos seguintes são enviados em função do tipo de *message*:
 
@@ -232,7 +232,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #WebSocketClass.terminate().Summary -->closes the WebSocket connection, along with optional *code* and *reason* parameters<!-- END REF -->.
+A função `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->fecha a conexão de WebSocket, juntamente com parâmetros opcionais *code* e *reason*<!-- END REF -->.
 
 In *code*, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
 

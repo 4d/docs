@@ -5,13 +5,13 @@ title: TCPConnection
 
 The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a [server](./TCPListenerClass.md), enabling you to send and receive data, and handle connection lifecycle events using callbacks.
 
-The `TCPConnection` class is available from the `4D` class store. You can create a TCP connection using the [4D.TCPConnection.new()](#4dtcpconnectionnew) function, which returns a [TCPConnection object](#tcpconnection-object).
+The `TCPConnection` class is available from the `4D` class store. Você pode criar uma conexão TCP usando a função [4D.TCPConnection.new()](#4dtcpconnectionnew), que retorna um objeto [TCPConnection](#tcpconnection-object).
 
 All `TCPConnection` class functions are thread-safe.
 
 Thanks to the standard 4D object *refcounting*, a TCPConnection is automatically released when it is no longer referenced. Consequently, the associated resources, are properly cleaned up without requiring explicit closure.
 
-TCPConnection objects are released when no more references to them exist in memory. This typically occurs, for example, at the end of a method execution for local variables. If you want to "force" the closure of a connection at any moment, [**nullify** its references by setting them to **Null**](../Concepts/dt_object.md#resources).
+TCPConnection objects are released when no more references to them exist in memory. This typically occurs, for example, at the end of a method execution for local variables. Se quiser "forçar" o fechamento de uma conexão a qualquer momento, [**nullify** suas referências, definindo-as como **Null**](../Concepts/dt_object.md#resources).
 
 <details><summary>História</summary>
 
@@ -207,7 +207,7 @@ Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de ca
 
 #### Descrição
 
-The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the IP addess or domain name of the remote machine<!-- END REF -->.
+A propriedade `.address` contém <!-- REF #TCPConnection.address.Summary -->o endereço IP ou nome de domínio da máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -219,7 +219,7 @@ The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the 
 
 #### Descrição
 
-The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whether the connection is closed<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a conexão está fechada<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
 
 <!-- END REF -->
 
@@ -231,7 +231,7 @@ The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whethe
 
 #### Descrição
 
-The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a collection of error objects associated with the connection<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+A propriedade `.errors` contém <!-- REF #TCPConnection.errors.Summary -->uma coleção de objetos de erro associados à conexão<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
 
 | Propriedade |                                                                                           | Tipo       | Descrição                                            |
 | ----------- | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------- |
@@ -274,7 +274,7 @@ The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whet
 
 #### Descrição
 
-The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port number of the remote machine<!-- END REF -->. Essa propriedade é **somente leitura**.
+A propriedade `.port` contém <!-- REF #TCPConnection.port.Summary --> o número da porta da máquina remota <!-- END REF -->. Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -294,7 +294,7 @@ The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port n
 
 #### Descrição
 
-The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to the server<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
+A função `send()` <!-- REF #TCPConnection.send().Summary -->envia dados para o servidor<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
 
 <!-- END REF -->
 
@@ -334,7 +334,7 @@ The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes t
 
 #### Descrição
 
-The `wait()` function <!-- REF #TCPConnection.wait().Summary -->waits until  the TCP connection is closed or the specified `timeout` is reached<!-- END REF -->
+A função `wait()` <!-- REF #TCPConnection.wait().Summary -->aguarda até que a conexão TCP seja fechada ou o `timeout` especificado seja atingido<!-- END REF -->
 
 :::note
 

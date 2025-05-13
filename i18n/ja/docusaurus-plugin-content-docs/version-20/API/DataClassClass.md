@@ -837,7 +837,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 `.newSelection()` 関数は、 <!-- REF #DataClassClass.newSelection().Summary -->データクラスに紐づいた 追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
 
-> For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-alterable-entity-selections).
+> 追加可能なエンティティセレクションについての詳細は [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#shareable-or-alterable-entity-selections) を参照ください。
 
 順列ありのエンティティセレクションを作成するには、*keepOrder* に `dk keep ordered` セレクターを渡します。 この引数を省略した場合のデフォルト、あるいは `dk non ordered` セレクターを渡した場合には、関数は順列なしのエンティティセレクションを返します。 順列なしのエンティティセレクションの方が速いですが、エンティティの位置に頼ることはできません。 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 

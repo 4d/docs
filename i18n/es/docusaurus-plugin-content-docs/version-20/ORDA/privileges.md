@@ -164,7 +164,7 @@ Class extends Entity
   Function getPopulation() : Integer
    ...
 ```
-... you have to write:
+... debe escribir:
 
 ```json
 "applyTo":"City.getPopulation"

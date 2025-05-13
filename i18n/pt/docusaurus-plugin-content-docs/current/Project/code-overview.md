@@ -3,7 +3,7 @@ id: code-overview
 title: Métodos e classes
 ---
 
-El código 4D utilizado en todo el proyecto está escrito en [métodos](../Concepts/methods.md) y [clases](../Concepts/classes.md).
+The 4D code used across your project is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md).
 
 O IDE 4D fornece vários recursos para criar, editar, exportar ou excluir seu código. Normalmente, você usará o [editor de código](../code-editor/write-class-method.md) 4D incluído para trabalhar com seu código. You can also use other editors such as **VS Code**, for which the [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode) is available.
 
@@ -11,10 +11,10 @@ O IDE 4D fornece vários recursos para criar, editar, exportar ou excluir seu c�
 
 Um método em 4D é armazenado em um arquivo **.4dm** localizado na pasta apropriada da pasta [`/Project/Sources/`](../Project/architecture.md#sources).
 
-Puede crear [varios tipos de métodos](../Concepts/methods.md):
+You can create [several types of methods](../Concepts/methods.md):
 
-- Todos los tipos de métodos pueden crearse o abrirse desde la ventana del **Explorador** (excepto los métodos Objeto que se gestionan desde el [editor de formularios](../FormEditor/formEditor.md)).
-- Los métodos proyecto también pueden crearse o abrirse desde el menú **Archivo** o la barra de herramientas (**Nuevo/Método...** o **Abrir/Método...**) o utilizando los accesos directos de la ventana del [editor de código](../code-editor/write-class-method
+- All types of methods can be created or opened from the **Explorer** window (except Object methods which are managed from the [Form editor](../FormEditor/formEditor.md)).
+- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](../code-editor/write-class-method.md#shortcuts).
 - Os triggers também podem ser criados ou abertos a partir do editor de Estrutura.
 - Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
 
@@ -22,22 +22,22 @@ Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
 Uma classe usuário no 4D é definida por um arquivo de método específico (**.4dm**), armazenado na pasta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). O nome do arquivo é o nome da classe.
 
-Puede crear un archivo de clase desde el menú **Archivo** o la barra de herramientas (**Nuevo/Clase...**) o en la página **Métodos** de la ventana **Explorador**.
+You can create a class file from the **File** menu or toolbar (**New/Class...**) or in the **Methods** page of the **Explorer** window.
 
 Para más información, consulte la sección [Clases](../Concepts/classes.md).
 
 ## Excluir os métodos ou as classes
 
-Para eliminar um método ou classe existente, pode:
+To delete an existing method or class, you can:
 
-- en su disco, elimine el archivo *.4dm* de la carpeta "Sources",
+- on your disk, remove the *.4dm* file from the "Sources" folder,
 - in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
-> Para eliminar un método objeto, seleccione **Borrar el método de objeto** en el [editor de formularios](../FormEditor/formEditor.md) (menú **Objeto** o menú contextual).
+> To delete an object method, choose **Clear Object Method** from the [Form editor](../FormEditor/formEditor.md) (**Object** menu or context menu).
 
 ## Importação e exportação de código
 
-É possível importar e exportar um método ou o código de uma classe sob a forma de um ficheiro. Estos comandos se encuentran en el menú **Método** del editor de código [](../code-editor/write-class-method.md).
+É possível importar e exportar um método ou o código de uma classe sob a forma de um ficheiro. These commands are found in the **Method** menu of the [Code editor](../code-editor/write-class-method.md).
 
 - Cuando se selecciona el comando **Exportar el método...**, aparece una caja de diálogo estándar para guardar archivos, que permite elegir el nombre, la ubicación y el formato del archivo de exportación (ver abajo). Tal como acontece com a impressão, a exportação não tem em conta o estado colapsado das estruturas de código e todo o código é exportado.
 - Cuando se selecciona el comando **Importar el método...**, aparece una caja de diálogo estándar de apertura de archivos que permite designar el archivo a importar. A importação substitui o texto selecionado no método. Para substituir um método existente por um método importado, selecionar todo o conteúdo do método antes de efetuar a importação.
@@ -138,7 +138,7 @@ Por razões de segurança, esta opção está desmarcada por padrão. Cada méto
 
 Quando está marcada, esta opção permite que o método do projeto seja executado pelo motor SQL de 4D. Por padrão, não está selecionado, o que significa que, a menos que explicitamente autorizado, os métodos do projeto 4D são protegidos e não podem ser chamados pelo motor SQL de 4D.
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md)  tags or the [QUERY BY SQL](../commands-legacy/query-by-sql.md) command.
+Esta propriedade se aplica a todas as consultas SQL internas e externas --- executadas através do driver ODBC, Código SQL inserido entre o [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md) tags ou o comando [QUERY BY SQL](../commands-legacy/query-by-sql.md).
 
 **Notas:**
 

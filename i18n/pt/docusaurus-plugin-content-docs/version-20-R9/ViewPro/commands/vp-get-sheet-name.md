@@ -17,7 +17,7 @@ title: VP Get sheet name
 
 ## Descrição
 
-The `VP Get sheet name` command <!-- REF #_method_.VP Get sheet name.Summary -->returns the name of a sheet based on its index in *vpAreaName*.<!-- END REF -->
+O comando `VP Get sheet name` <!-- REF #_method_.VP Get sheet name.Summary -->retorna o nome de uma planilha com base em seu índice em *vpAreaName*.<!-- END REF -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 

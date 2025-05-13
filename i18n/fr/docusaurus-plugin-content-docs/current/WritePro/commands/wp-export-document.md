@@ -8,29 +8,29 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP EXPORT DOCUMENT.Params-->
 
-| Paramètres | Type                    |                             | Description                                                                                                                                         |
-| ---------- | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| wpDoc      | Object                  | &#8594; | 4D Write Pro variable                                                                                                                               |
-| filePath   | Text                    | &#8594; | Path of exported file                                                                                                                               |
-| fileObj    | 4D.File | &#8594; | File object to export                                                                                                                               |
-| format     | Integer                 | &#8594; | Document output format (e.g., .docx, .pdf, etc.) |
-| option     | Object, Integer         | &#8594; | Export options, which can vary depending on the format chosen.                                                                      |
+| Paramètres | Type                    |                             | Description                                                                                                                              |
+| ---------- | ----------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| wpDoc      | Object                  | &#8594; | Variable 4D Write Pro                                                                                                                    |
+| filePath   | Text                    | &#8594; | Chemin du fichier d'export                                                                                                               |
+| fileObj    | 4D.File | &#8594; | Objet du fichier à exporter                                                                                                              |
+| format     | Integer                 | &#8594; | Format de sortie du document (ex : .docx, .pdf, etc.) |
+| option     | Object, Integer         | &#8594; | Options d'export, qui peuvent varier en fonction du format choisi.                                                       |
 
 <!-- END REF-->
 
 ## Description
 
-The **WP EXPORT DOCUMENT** command<!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exports the *wpDoc* 4D Write Pro object to a document on disk according to the *filePath* or *fileObj* parameter as well as any optional parameters.<!-- END REF-->
+La commande **WP EXPORT DOCUMENT**<!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exporte l'objet 4D Write Pro *wpDoc* vers un document sur disque selon le paramètre *filePath* ou *fileObj* ainsi que tout paramètre optionnel.<!-- END REF-->
 
-In *wpDoc*, pass the 4D Write Pro object that you want to export.
+Dans *wpDoc*, passez l'objet 4D Write Pro que vous souhaitez exporter.
 
-You can pass either a *filePath* or *fileObj*:
+Vous pouvez passer soit un *filePath* ou *fileObj* :
 
-- In *filePath*, pass the destination path and the name of the document to be exported. If you pass only the document name, it will be saved at the same level as the 4D structure file.
+- Dans *filePath*, passez le chemin de destination et le nom du document à exporter. Si vous ne passez que le nom du document, il sera sauvegardé au même niveau que le fichier de structure 4D.
 
-- In *fileObj* parameter, pass a 4D.File object representing the file to be exported.
+- Dans le paramètre *fileObj*, passez un objet 4D.File représentant le fichier à exporter.
 
-You can omit the *format* parameter, in which case you need to specify the extension in *filePath*. You can also pass a constant from the *4D Write Pro Constants* theme in the *format* parameter. In this case, 4D adds the appropriate extension to the file name if needed. Les formats suivants sont pris en charge:
+Vous pouvez omettre le paramètre *format*, auquel cas vous devez spécifier l'extension dans *filePath*. Vous pouvez également passer une constante du thème *4D Write Pro Constants* dans le paramètre *format*. Dans ce cas, 4D ajoute l'extension appropriée au nom du fichier si nécessaire. Les formats suivants sont pris en charge:
 
 | Constante            | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | -------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,9 +43,9 @@ You can omit the *format* parameter, in which case you need to specify the exten
 
 **Notes :**
 
-- "4D specific tags" means 4D XHTML with a 4D namespace and 4D CSS styles.
+- "Balises spécifiques 4D" signifie XHTML 4D avec un espace de noms 4D et des styles CSS 4D.
 - For more information about the 4D Write Pro document format, refer to [.4wp document format](https://doc.4d.com/4Dv20/4D/20/Using-a-4D-Write-Pro-area.200-6229460.en.html#2895813).
-- To view a list of known differences or incompatibility when using the .docx format, see [Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html).
+- Pour consulter la liste des différences ou des incompatibilités connues lors de l'utilisation du format .docx, voir [Importation et exportation au format .docx](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html).
 - For more information on exporting to SVG format, see [Exporting to SVG format](https://doc.4d.com/4Dv20/4D/20/Exporting-to-SVG-format.200-6229468.en.html).
 
 ### option parameter
@@ -72,27 +72,27 @@ Pass an [object](# "Data structured as a native 4D object") in *option* containi
 | wk visible references                       | visibleReferences  | Displays or exports all 4D expressions inserted in the document as references. Possible values: True/False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | wk whitespace                               | whitespace         | Sets the "white-space" css value for `wk mime html` and `wk web page complete` export formats. The [white-space css style](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space) is applied to paragraphs. Possible values: "normal", "nowrap", "pre", "pre-wrap" (default), "pre-line", "break-spaces".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-The following table indicates the *option* available per export *format*:
+Le tableau suivant indique l'*option* disponible par *format* d'export :
 
-|                                             | **wk 4wp**                                                                                                    | **wk docx**                                                                                                  | **wk mime html**                                                                                                   | **wk pdf**                                                                                                    | **wk web page complete**                                                                                           | **wk svg**                                                                                                       |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| wk CID host domain name                     | \-                                                                                                           | \-                                                                                                          | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                          | \-                                                                                                           | \-                                                                                                                | \-                                                                                                              |
-| wk embedded pictures                        | \-                                                                                                           | \-                                                                                                          | \-                                                                                                                | \-                                                                                                           | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
-| wk factur x                                 | \-                                                                                                           | \-                                                                                                          | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                     | \-                                                                                                                | \-                                                                                                              |
-| wk files                                    | \-                                                                                                           | \-                                                                                                          | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                     | \-                                                                                                                | \-                                                                                                              |
-| wk google fonts tag                         | \-                                                                                                           | \-                                                                                                          | \-                                                                                                                | \-                                                                                                           | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false)    |
-| wk HTML pretty print                        | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false) | \-                                                                                                          | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: False)      | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: False) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: False)      | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false)    |
-| wk max picture DPI                          | \-                                                                                                           | always 300                                                                                                   | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                          | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: 300)   | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: 300)      |
-| wk optimized for                            | \-                                                                                                           | always wk print                                                                                              | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: wk screen)  | always wk print                                                                                               | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: wk print) |
-| wk page index                               | \-                                                                                                           | \-                                                                                                          | \-                                                                                                                | \-                                                                                                           | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: 1)        |
-| wk pdfa version                             | \-                                                                                                           | \-                                                                                                          | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                     | \-                                                                                                                | \-                                                                                                              |
-| wk recompute formulas                       | \-                                                                                                           | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)       | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
-| wk visible background and anchored elements | \-                                                                                                           | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true) | toujours true                                                                                                      | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
-| wk visible empty images                     | \-                                                                                                           | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)       | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
-| wk visible footers                          | \-                                                                                                           | toujours true                                                                                                | always false                                                                                                       | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
-| wk visible headers                          | \-                                                                                                           | toujours true                                                                                                | always false                                                                                                       | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)     |
-| wk visible references                       | \-                                                                                                           | \-                                                                                                          | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false) | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false)    |
-| wk whitespace                               | \-                                                                                                           | \-                                                                                                          | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: "pre-wrap") | \-                                                                                                           | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: "pre-wrap") | \-                                                                                                              |
+|                                             | **wk 4wp**                                                                                                        | **wk docx**                                                                                                      | **wk mime html**                                                                                                   | **wk pdf**                                                                                                        | **wk web page complete**                                                                                           | **wk svg**                                                                                                           |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| wk CID host domain name                     | \-                                                                                                               | \-                                                                                                              | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                          | \-                                                                                                               | \-                                                                                                                | \-                                                                                                                  |
+| wk embedded pictures                        | \-                                                                                                               | \-                                                                                                              | \-                                                                                                                | \-                                                                                                               | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)     |
+| wk factur x                                 | \-                                                                                                               | \-                                                                                                              | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                         | \-                                                                                                                | \-                                                                                                                  |
+| wk files                                    | \-                                                                                                               | \-                                                                                                              | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                         | \-                                                                                                                | \-                                                                                                                  |
+| wk google fonts tag                         | \-                                                                                                               | \-                                                                                                              | \-                                                                                                                | \-                                                                                                               | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : false)    |
+| wk HTML pretty print                        | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : false) | \-                                                                                                              | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : False)  | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : False) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : False)  | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : false)    |
+| wk max picture DPI                          | \-                                                                                                               | toujours 300                                                                                                     | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                          | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : 300)   | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : 300)      |
+| wk optimized for                            | \-                                                                                                               | toujours wk print                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: wk screen)  | toujours wk print                                                                                                 | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : wk print) |
+| wk page index                               | \-                                                                                                               | \-                                                                                                              | \-                                                                                                                | \-                                                                                                               | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : 1)        |
+| wk pdfa version                             | \-                                                                                                               | \-                                                                                                              | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png)                                                         | \-                                                                                                                | \-                                                                                                                  |
+| wk recompute formulas                       | \-                                                                                                               | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)   | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)     |
+| wk visible background and anchored elements | \-                                                                                                               | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true) | toujours true                                                                                                      | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)     |
+| wk visible empty images                     | \-                                                                                                               | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true) | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)   | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)     |
+| wk visible footers                          | \-                                                                                                               | toujours true                                                                                                    | toujours false                                                                                                     | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: true)      | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)     |
+| wk visible headers                          | \-                                                                                                               | toujours true                                                                                                    | toujours false                                                                                                     | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)  | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : true)     |
+| wk visible references                       | \-                                                                                                               | \-                                                                                                              | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : false) | \-                                                                                                                | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (par défaut : false)    |
+| wk whitespace                               | \-                                                                                                               | \-                                                                                                              | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: "pre-wrap") | \-                                                                                                               | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: "pre-wrap") | \-                                                                                                                  |
 
 **Compatibility Note:** Passing a *longint* value in *option* is supported for compatibility reasons, but it is recommended to use an [object](# "Data structured as a native 4D object") parameter.
 
@@ -105,7 +105,7 @@ The wk files property allows you to [export a PDF with attachments](https://blog
 | name          | Text                           | File name. Optional if the *file* property is used, in which case the name is inferred by default from the file name. Mandatory if the *data* property is used (except for the first file of a Factur-X export, in which case the name for the file is automatically "factur-x.xml", see below)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Description   | Text                           | Optionnel. If omitted, default value for the first export file to Factur-X is "Factur-X/ZUGFeRD Invoice", otherwise empty.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | mimeType      | Text                           | Optionnel. If omitted, default value can usually be guessed from file extension; otherwise, "application/octet-stream" is used. If passed, make sure to use an ISO mime type, otherwise the exported file could be invalid.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| data          | Text or BLOB                   | Mandatory if *file* property is missing                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| data          | Text ou BLOB                   | Mandatory if *file* property is missing                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | file          | 4D.File object | Mandatory if *data* property is missing, ignored otherwise.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | relationship  | Text                           | Optionnel. If omitted, default value is "Data". Possible values for Factur-X first file:for BASIC, EN 16931 or EXTENDED profiles: "Alternative", "Source" or "Data" ("Alternative" only for German invoice)for MINIMUM and BASIC WL profiles: "Data" only.for other profiles: "Alternative", "Source" or "Data" (with restrictions perhaps depending on country: see profile specification for more info about other profiles - for instance for RECHNUNG profile only "Alternative" is allowed)for other files (but Factur-X invoice xml file) : "Alternative", "Source", "Data", "Supplement" or "Unspecified"any other value generates an error. |
 
@@ -126,46 +126,46 @@ The wk factur x property is an object that can contains up to two properties:
 | profile       | Text     | Optionnel. If omitted, *profile* is determined from the provided xml file or text (which must use a standard profile). If passed, it can be a non-standard profile name (for using other profiles - for instance RECHNUNG). **Note:* Standard profile names are: MINIMUM, BASIC WL, BASIC, EN 16931 (aka COMFORT which is an alias), EXTENDED.* |
 | version       | Text     | Optionnel. Default value is "1.0"                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-### About Factur-X / ZUGFeRD PDF documents
+### À propos des documents PDF Factur-X / ZUGFeRD
 
-*Factur-X / ZUGFeRD* is a European standard for hybrid e-invoices (PDF for users and XML data for process automation). For more information, please read [this blog post](https://blog.4d.com/4d-write-pro-electronic-invoice-generation).
+*Factur-X / ZUGFeRD* est une norme européenne pour les factures électroniques hybrides (PDF pour les utilisateurs et données XML pour l'automatisation des processus). Pour plus d'informations, veuillez lire [cet article de blog](https://blog.4d.com/4d-write-pro-electronic-invoice-generation).
 
-To trigger a "Factur-X" PDF export, pass both the wk factur x and wk files properties in the *option* parameter (see Example 5). Dans ce cas :
+Pour déclencher une exportation PDF "Factur-X", passez les propriétés wk factur x et wk files dans le paramètre *option* (voir exemple 5). Dans ce cas :
 
-- a Factur-X (ZUGFeRD) PDF is generated,
-- the first element of the wk files collection is used as Factur-X xml file,
-- if the wk files property is missing or contains an empty collection, or if its first element is not a xml file, an error is generated.
+- un PDF Factur-X (ZUGFeRD) est généré,
+- le premier élément de la collection wk files est utilisé comme fichier xml Factur-X,
+- si la propriété wk files est manquante ou contient une collection vide, ou si son premier élément n'est pas un fichier xml, une erreur est générée.
 
 :::note
 
-For a detailed example of Factur-X / ZUGFeRD export implementation, you can download [this HDI 4D project](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
+Pour un exemple détaillé de la mise en œuvre de l'exportation Factur-X / ZUGFeRD, vous pouvez télécharger [ce projet HDI 4D](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
 
 :::
 
 ## Exemple 1
 
-You want to export the contents of the *myArea* 4D Write Pro object in both HTML and PDF format:
+Vous souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* aux formats HTML et PDF :
 
 ```4d
-  // export HTML
+  // exporter HTML
  var $option : Object
  $option:=New object
 
  $option[wk recompute formulas]:=False
  $option[wk HTML pretty print]:=False
  $option[wk optimized for]:=wk print
- $option[wk max picture DPI]:=600 //override default value for print (300 DPI)
+ $option[wk max picture DPI]:=600 //remplacer la valeur par défaut pour l'impression (300 DPI)
 
  WP EXPORT DOCUMENT(myArea;$path;wk web page complete;$option)
 
-  //export PDF
+  //exporter PDF
  var $option : Object
  $option:=New object
 
  $option[wk visible headers]:=True
  $option[wk visible footers]:=True
  $option[wk visible background]:=True
- $option[wk max picture DPI]:=96 //override default value for screen (192 DPI) to limit doc size
+ $option[wk max picture DPI]:=96 //remplacer la valeur par défaut pour l'écran (192 DPI) pour limiter la taille du document
  $option[wk optimized for]:=wk screen
  $option[wk recompute formulas]:=True
 
@@ -174,7 +174,7 @@ You want to export the contents of the *myArea* 4D Write Pro object in both HTML
 
 ## Exemple 2
 
-You want to export the contents of the *myArea* 4D Write Pro object in .4wp format:
+Vous souhaitez exporter le contenu de l'objet 4D Write Pro *myArea* au format .4wp :
 
 ```4d
  var $path : Text
@@ -193,7 +193,7 @@ You want to export the contents of the *myArea* 4D Write Pro object in .4wp form
 
 ## Exemple 3
 
-To export the second page of the document as SVG and export the pictures from the document:
+Pour exporter la deuxième page du document en SVG et exporter les images depuis le document :
 
 ```4d
  var $options : Object
@@ -207,21 +207,21 @@ To export the second page of the document as SVG and export the pictures from th
 
 ## Exemple 4
 
-Exporting a PDF document with PDF/A-2 conformance:
+Exportation d'un document PDF conforme à la norme PDF/A-2 :
 
 ```4d
  var $options: Object:={}
  $options[wk visible empty images] :=False
- $options[wk pdfa version]:=wk pdfa2 // conformance "PDF/A-2"
+ $options[wk pdfa version]:=wk pdfa2 // conformité "PDF/A-2"
  WP EXPORT DOCUMENT(wpDoc;"invoice.pdf";wk pdf;$options)
 ```
 
 ## Exemple 5
 
-Examples of Factur-X PDF exports:
+Exemples d'exportations PDF de Factur-X :
 
 ```4d
-  //BASIC (standard profile)
+  //BASIC (profil standard)
  var $options;$fileInfo : Object
  $options:={}
  $options[wk factur x]:={}
@@ -229,21 +229,21 @@ Examples of Factur-X PDF exports:
  $options[wk factur x].version:="1.0"
 
  $fileInfo:={}
- $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
+ $fileInfo.file:=$file  //$file est un 4D.File avec un fichier .xml comme cible
  $options[wk files]:=[$fileInfo]
 
  WP EXPORT DOCUMENT(wpDoc;"facturX_basic.pdf";wk pdf;$options)
 
-  //RECHNUNG profile (custom profile)
+  //Profil RECHNUNG (profil personnalisé)
  $options:={}
  $options[wk factur x]:={}
  $options[wk factur x].profile:="RECHNUNG"
- $options[wk factur x].version:="2.1" //last version for RECHNUNG
+ $options[wk factur x].version:="2.1" //dernière version pour RECHNUNG
 
  $fileInfo:={}
- $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
- $fileInfo.name:="rechnung.xml" //mandatory file name in PDF for RECHNUNG
- $fileInfo.relationship:="Alternative" //mandatory for Germany
+ $fileInfo.file:=$file  //$file est un 4D.File avec un fichier .xml comme cible
+ $fileInfo.name:="rechnung.xml" //Nom de fichier obligatoire dans le PDF pour RECHNUNG
+ $fileInfo.relationship:="Alternative" //obligatoire pour l'Allemagne
  $fileInfo.description:="ZUGFeRD Rechnung"
  $options[wk files]:=[$fileInfo]
 
@@ -252,7 +252,7 @@ Examples of Factur-X PDF exports:
 
 ## Exemple 6
 
-Exporting a docx document using a File object:
+Exportation d'un document docx en utilisant un objet File :
 
 ```4d
 var $file : 4D.File

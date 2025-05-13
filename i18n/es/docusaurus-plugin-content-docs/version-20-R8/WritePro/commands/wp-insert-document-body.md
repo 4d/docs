@@ -47,10 +47,10 @@ You can combine one of the previous constants with the following insertion optio
 
 In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
-| Constante             | Tipo    | Valor | Comentario                                                               |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |
+| Constante             | Tipo    | Valor | Comentario                                                                            |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
+| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                                       |
+| wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 

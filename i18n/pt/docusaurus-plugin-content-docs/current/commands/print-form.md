@@ -97,7 +97,7 @@ Para obter informações detalhadas sobre o objeto de dados do formulário, cons
 
 **Valor retornado**
 
-The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
+The value returned by **Print form** indicates the height of the printable area. Esse valor será automaticamente levado em conta pelo comando [Get printed height](../commands-legacy/get-printed-height.md).
 
 The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
@@ -121,7 +121,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 ## Exemplo 1
 
-The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
+O exemplo a seguir funciona como um comando [PRINT SELECTION] (../commands-legacy/print-selection.md). However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
 ```4d
  QUERY([Register]) // Select the records

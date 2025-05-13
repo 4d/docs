@@ -444,7 +444,7 @@ Se escolher esconder os destaques do sistema e quiser exibir seleções de list 
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-Para uma list box de tipo array, precisa atualizar [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) por programação. No formulário JSON, se definiu o Array Row Background Color para a list box:
+Para uma list box de tipo array, precisa atualizar [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) por programação. In the JSON form, you have defined the following Row Background Color Array for the list box:
 
 ```
  "rowFillSource": "_ListboxBackground",
@@ -702,7 +702,7 @@ Se esta caixa de listagem for apresentada de forma hierárquica (sendo as três 
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-As matrizes não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contém os dados AAABBAACC, a hierarquia obtida é a seguinte:
+The arrays are not sorted before the hierarchy is constructed. Se, por exemplo, uma matriz contém os dados AAABBAACC, a hierarquia obtida é a seguinte:
 
     > &gt; > A B A C
 

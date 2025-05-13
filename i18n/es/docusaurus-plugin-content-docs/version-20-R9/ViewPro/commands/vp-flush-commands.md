@@ -75,7 +75,7 @@ VP FLUSH COMMANDS("ViewProArea1"; Formula(onFlushComplete))
 ```
 
 ```4d
-// Method 'onFlushComplete'
+// Método 'onFlushComplete'
 #DECLARE($name : Text; $status : Object)
    ALERT("All commands and custom functions have finished executing. You can now print or save the document.")
 ```

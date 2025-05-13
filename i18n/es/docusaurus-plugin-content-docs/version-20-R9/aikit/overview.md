@@ -79,7 +79,7 @@ This helper enables image analysis through the chat.
 var $result:=$client.chat.vision.create($imageUrl).prompt("give me a description of the image")
 ```
 
-#### Images
+#### Imágenes
 
 https://platform.openai.com/docs/api-reference/images
 
@@ -87,7 +87,7 @@ https://platform.openai.com/docs/api-reference/images
 var $images:=$client.images.generate("A futuristic city skyline at sunset"; {size: "1024x1024"}).images
 ```
 
-#### Models
+#### Modelos
 
 https://platform.openai.com/docs/api-reference/models
 

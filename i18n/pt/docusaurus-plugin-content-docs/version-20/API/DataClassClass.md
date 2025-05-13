@@ -156,9 +156,9 @@ Se aplica carregamento diferido/lazy loading.
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                           |
-| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                           |
+| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Esta funcionalidade é [desenhada para o processamento cliente/servidor ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 > Para conhecer o número total de entidades num dataclass, recomenda-se a utilização da função [`getCount()`](#getcount) que é mais optimizada do que a expressão `ds.myClass.all().length`.
 
@@ -283,9 +283,9 @@ Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no ar
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                           |
-| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                           |
+| ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Esta funcionalidade é [desenhada para o processamento cliente/servidor ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 #### Exemplo 1
 
@@ -458,9 +458,9 @@ Se nenhuma entidade for encontrada com *primaryKey*, uma entidade **Null** é re
 
 No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                        |
-| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. This feature is [designed for ORDA client/server processing](../ORDA/remoteDatastores.md#clientserver-optimization). |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                        |
+| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Text | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. Esta funcionalidade é [desenhada para o processamento cliente/servidor ORDA](../ORDA/remoteDatastores.md#clientserver-optimization). |
 
 :::info
 

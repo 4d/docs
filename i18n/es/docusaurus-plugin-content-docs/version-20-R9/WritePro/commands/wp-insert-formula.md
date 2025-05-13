@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary--> inserts a *formula* in *targetObj* according to the specified insertion *mode* and returns the resulting text range.<!-- END REF-->
+El comando **WP Insert formula** <!--REF #_command_.WP Insert formula.Summary--> inserta una *formula* en *targetObj* de acuerdo con el *mode* de inserción especificado y devuelve el rango de texto resultante.<!-- END REF-->
 
 In the *targetObj* parameter, you can pass:
 
@@ -50,10 +50,10 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 
 - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted *formula* is included in the resulting range:
 
-| Constante             | Tipo    | Valor | Comentario                                                               |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |
+| Constante             | Tipo    | Valor | Comentario                                                                            |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
+| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                                       |
+| wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
 

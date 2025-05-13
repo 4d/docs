@@ -7,7 +7,7 @@ title: OpenAIModerationResult
 
 The `OpenAIModerationResult` provides functionality to handle moderation results from the OpenAI API.
 
-## Inherits
+## 継承元
 
 - [OpenAIResult](OpenAIResult.md)
 

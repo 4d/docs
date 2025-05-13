@@ -630,7 +630,7 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retorna um objeto que fornece informações sobre a dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
-**Returned object**
+**Objeto devolvido**
 
 | Propriedade | Tipo       | Descrição                                 |
 | ----------- | ---------- | ----------------------------------------- |
@@ -906,7 +906,7 @@ onde:
 - **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Na fórmula, a entidade está disponível através do objeto `This`.
 
  - **Text**: a string de fórmula deve ser precedida pela declaração `eval()`, para que o parser da consulta avalie a expressão corretamente. Por exemplo: "eval(length(This.lastname) =30)"\*
- - **Objeto**: o [objeto fórmula](FunctionClass.md) é passado como um **marcador de posição** (ver abaixo). The formula must have been created using the [`Formula`](../commands/formula.md) or [`Formula from string`](../commands/formula-from-string.md) command.
+ - **Objeto**: o [objeto fórmula](FunctionClass.md) é passado como um **marcador de posição** (ver abaixo). A fórmula deve ter sido criada usando o comando [`Formula`](../commands/formula.md) ou [`Formula from string`](../commands/formula-from-string.md).
 
 > * Lembre que as fórmulas 4D só suportam os símbolos `&` e `|` como operadores lógicos.
 > * Se a fórmula não for o único critério de pesquisa, o otimizador de motor debusca poderia processar outros critérios previamente (por exemplo atributos indexados) e assim, a fórmula poderia ser avaliada apenas para um subconjunto de entidades.
@@ -1177,7 +1177,7 @@ $es:=ds. Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2
 
 Como alternativa à inserção de fórmulas dentro do parâmetro queryString (ver acima), pode passar diretamente um objeto fórmula como critério de pesquisa booleano. Usar um objeto fórmula para consultas é **recomendado** pois você se beneficia da tokenização, e o código é mais fácil de pesquisar/ler.
 
-The formula must have been created using the [`Formula`](../commands/formula.md) or [`Formula from string`](../commands/formula-from-string.md) command. Nesse modo:
+A fórmula deve ter sido criada usando o comando [`Formula`](../commands/formula.md) ou [`Formula from string`](../commands/formula-from-string.md). Nesse modo:
 
 - a *fórmula* é avaliada por cada entidade e deve retornar verdadeiro ou falso. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 - dentro da *fórmula*, a entidade está disponível através do objeto `This`.
@@ -1519,7 +1519,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
  $queryString:=Request("Enter your query:")
  if(OK=1)
     $settings:=New object("allowFormulas";False)
-    $es:=ds.Students.query($queryString;$settings) //An error is raised if $queryString contains a formula
+    $es:=ds.Students.query($queryString;$settings) // Um erro é gerado se $queryString contiver uma fórmula
  End if
 ```
 

@@ -98,7 +98,7 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
-- [`cs`](../commands/cs.md) for user class store
+- [`cs`](../commands/cs.md) para o class store de usuário
 - [`4D`](../commands/4d.md) para o class store integrado
 
 ### `cs`
@@ -608,7 +608,7 @@ The following commands have specific features when they are used within class fu
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
+O comando [`Super`](../commands/super.md) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
 
 Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super.md).
 
@@ -758,7 +758,7 @@ Se você precisar instanciar um singleton com parâmetros, você também pode ch
 
 O [`.isSingleton`](../API/ClassClass.md#issingleton) propriedade de objetos de classe permite saber se a classe é uma singleton.
 
-The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
+A propriedade [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) dos objetos Class permite saber se a classe é um singleton de sessão.
 
 ### Exemplos
 

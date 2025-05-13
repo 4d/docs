@@ -10,7 +10,7 @@ Os objetos de sessão são retornados pelo comando [`Session`](../commands/sessi
 The following types of sessions are supported by this class:
 
 - [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-web-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
-- [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
+- [**Sessões de usuário cliente remoto**](../Desktop/clientServer.md#remote-user-sessions): em aplicações cliente/servidor, os usuários remotos têm suas próprias sessões gerenciadas no servidor.
 - [**Stored procedures session**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html): All stored procedures executed on the server share the same virtual user session.
 - [**Standalone session**](../Project/overview.md#development): Local session object returned in single-user application (useful in development and test phases of client/server applications).
 
@@ -120,7 +120,7 @@ This function is only available with web user sessions. It returns an empty stri
 
 :::
 
-The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->creates a new OTP (One Time Passcode) for the session and returns its token UUID<!-- END REF -->. This token is unique to the session in which it was generated.
+A função `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->cria um novo OTP (uma senha única) para a sessão e retorna seu UUID<!-- END REF -->. This token is unique to the session in which it was generated.
 
 Para mais informações sobre os tokens OTP, consulte [esta seção](../WebServer/sessions.md#session-token-otp).
 
@@ -159,7 +159,7 @@ Essa propriedade só está disponível com sessões de usuário da Web.
 
 :::
 
-The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
+A propriedade `.expirationDate` contém <!-- REF #SessionClass.expirationDate.Summary -->a data e a hora de expiração do cookie de sessão<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
 Essa propriedade é **somente leitura**. Ele será automaticamente recalculado se o valor da propriedade [`.idleTimeout`](#idletimeout) for modificado.
 
@@ -292,7 +292,7 @@ $privileges := Session.getPrivileges()
 
 #### Descrição
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the *privilege* is associated to the session, and False otherwise<!-- END REF -->.
+A função `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->retorna True se o *privilege* estiver associado à sessão e False caso contrário<!-- END REF -->.
 
 With remote client, stored procedure and standalone sessions, this function always returns True, whatever the *privilege*.
 
@@ -407,7 +407,7 @@ This property is only available with remote client, stored procedure, and standa
 
 :::
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server, or the standalone session<!-- END REF -->.
+A propriedade `.info` <!-- REF #SessionClass.info.Summary -->descreve o cliente remoto ou a sessão do procedimento armazenado no servidor, ou a sessão autônoma<!-- END REF -->.
 
 :::note
 
@@ -702,8 +702,8 @@ End use
 A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->o nome de usuário associado à sessão<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
 
 - Com sessões da Web, essa propriedade é uma cadeia de caracteres vazia por padrão. Ele pode ser definido usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
-- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
-- With standalone sessions, this property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command.
+- Com sessões de procedimento remotas e armazenadas, esta propriedade retorna o mesmo nome de usuário que o comando [`Current user`](../commands-legacy/current-user.md).
+- Com sessões autônomas, essa propriedade contém "designer" ou o nome definido com o comando [`SET USER ALIAS`](../commands-legacy/set-user-alias.md).
 
 Essa propriedade é **somente leitura**.
 

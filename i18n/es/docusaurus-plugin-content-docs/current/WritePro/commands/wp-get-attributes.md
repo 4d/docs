@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | attribName  | Text                                           | &#8594; | Name of attribute to get                  |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Resultado   | Object                                         | &#8592; | Attribute names and values                |
+| Resultado   | Object                                         | &#8592; | Nombres y valores de los atributos        |
 
 <!-- END REF-->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 El comando **WP Get attributes**<!--REF #_command_.WP Get attributes.Summary--> devuelve el valor de cualquier atributo en un rango 4D Write Pro, encabezado, cuerpo, pie de página, tabla o documento.<!-- END REF--> Este comando le da acceso a cualquier tipo de atributos internos 4D Write Pro: carácter, párrafo, documento, tabla o imagen.
 
-In *targetObj*, you can pass:
+En *targetObj*, puede pasar:
 
 - un rango, o
 - un elemento (encabezado / pie de página / cuerpo / tabla / párrafo / imagen anclada / sección / subsección / hoja de estilo), o

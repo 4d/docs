@@ -61,7 +61,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 :::info Compatibidade
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. Para informações sobre este botão, consulte a [documentação de versões 4D anteriores](../Project/compiler.md#generate-typing).
+Este botão só será exibido em projetos convertidos se as **variáveis forem digitadas (digitação direta)** [opção do caminho de compilação](#enabling-direct-typing) não estiverem selecionadas. Para informações sobre este botão, consulte a [documentação de versões 4D anteriores](../Project/compiler.md#generate-typing).
 
 :::
 
@@ -83,7 +83,7 @@ Um duplo clique num aviso abre o método correspondente.
 
 ## Parâmetros do compilador
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
+The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Você pode abrir diretamente esta página através da [janela do compilador](#compiler-window-features) clicando no botão **Parâmetros do Compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -93,7 +93,7 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar o arquivo de símbolo
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). O arquivo de símbolo é criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_symbols.txt`.
+Usado para gerar o arquivo de símbolo (veja [arquivo de símbolos](#symbol-file)). O arquivo de símbolo é criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_symbols.txt`.
 
 #### Gerar ficheiro de erros
 

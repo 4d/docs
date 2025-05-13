@@ -28,14 +28,14 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **Command name** command <!--REF #_command_.Command name.Summary-->returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
+El comando **Command name** <!--REF #_command_.Command name.Summary-->devuelve el nombre así como (opcionalmente) las propiedades del comando cuyo número de comando pasa en *command*.<!-- END REF--> El número de cada comando se indica en el Explorador así como en el área Propiedades de esta documentación.
 
-**Compatibility note:** A command name may vary from one 4D version to the next (commands renamed), this command was used in previous versions to designate a command directly by means of its number, especially in non-tokenized portions of code. This need has diminished over time as 4D continues to evolve because, for non-tokenized statements (formulas), 4D now provides a token syntax. This syntax allows you to avoid potential problems due to variations in command names as well as other elements such as tables, while still being able to type these names in a legible manner (for more information, refer to the *Using tokens in formulas* section). Note also that the \*[Use regional system settings\* option of the Preferences](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) allows you to continue using the French language in a French version of 4D.
+**Compatibility note:** A command name may vary from one 4D version to the next (commands renamed), this command was used in previous versions to designate a command directly by means of its number, especially in non-tokenized portions of code. This need has diminished over time as 4D continues to evolve because, for non-tokenized statements (formulas), 4D now provides a token syntax. This syntax allows you to avoid potential problems due to variations in command names as well as other elements such as tables, while still being able to type these names in a legible manner (for more information, refer to the *Using tokens in formulas* section). Tenga en cuenta también que la opción \*[Usar parámetros del sistema regional\* de las Preferencias](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) le permite seguir usando el idioma francés en una versión francesa de 4D.
 
 Two optional parameters are available:
 
 - *info*: properties of the command. The returned value is a *bit field*, where the following bits are meaningful:
- - First bit (bit 0): set to 1 if the command is [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (i.e., compatible with execution in a preemptive process) and 0 if it is **thread-unsafe**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
+ - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
  - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors).
 
 *theme*: name of the 4D language theme for the command.
@@ -66,7 +66,7 @@ The following code allows you to load all valid 4D commands in an array:
 
 ## Ejemplo 2
 
-In a form, you want a drop-down list populated with the basic summary report commands. In the object method for that drop-down list, you write:
+En un formulario, quiere una lista desplegable con los comandos básicos de informe resumido. In the object method for that drop-down list, you write:
 
 ```4d
  Case of

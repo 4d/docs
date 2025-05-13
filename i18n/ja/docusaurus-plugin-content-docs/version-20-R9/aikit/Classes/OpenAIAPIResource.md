@@ -5,17 +5,17 @@ title: OpenAIAPIResource
 
 # OpenAIAPIResource
 
-Base class to all api resource.
+API リソースへのベ基本クラスです。
 
 ## プロパティ
 
-| プロパティ     | 型                   | 説明                                     |
-| --------- | ------------------- | -------------------------------------- |
-| `_client` | [OpenAI](OpenAI.md) | Private back link to the OpenAI client |
+| プロパティ     | 型                   | 説明                           |
+| --------- | ------------------- | ---------------------------- |
+| `_client` | [OpenAI](OpenAI.md) | OpenAI クライアントへのプライベートなバックリンク |
 
-The client allow to make HTTP Request.
+このクライアントを使用するとHTTPリクエストを行うことができます。
 
-## Inherited Classes
+## 継承クラス
 
 - [OpenAIModelsAPI](OpenAIModelsAPI.md)
 - [OpenAIChatAPI](OpenAIChatAPI.md)

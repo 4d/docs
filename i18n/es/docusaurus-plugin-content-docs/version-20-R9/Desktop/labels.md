@@ -16,18 +16,18 @@ title: Etiquetas
 
 :::note
 
-Labels can also be created using the [Form editor](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+Labels can also be created using the [Form editor](../FormEditor/formEditor.md). Utilice el editor de formularios para diseñar etiquetas especializadas que incluyan variables o aproveche las herramientas de dibujo disponibles en el editor de formularios e imprímalas utilizando el editor de etiquetas o el comando [`PRINT LABEL`](../commands-legacy/print-label.md).
 
 :::
 
 You use the Label editor to create, format, and print labels. The Label editor contains settings for designing labels and positioning the labels on label paper. For example, when producing mailing labels, you might want a label design that includes the person’s first and last name on the first line, the street address on the second line, and so on. As part of the design, the Label editor enables you to specify the number of labels on the page and the margins of the label paper so that the label text is centered within the labels.
 When you create a satisfactory label design, you can save it to disk so that you can reuse it.
 
-To open the Label editor:
+Para abrir el editor de etiquetas:
 
 - In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
  O
-- In an application, call the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+- En una aplicación, llame al comando [`PRINT LABEL`](../commands-legacy/print-label.md).
 
 ![](../assets/en/Desktop/label-wizard.png)
 
@@ -82,12 +82,12 @@ Keep in mind that you can only enter methods that are "allowed" for the database
 ### Formulario a utilizar
 
 This drop-down list allows you to define a table form as a label template. The form chosen must be specially adapted to the creation of labels.
-In this case, the label editor is partially disabled: only functions of the [Layout page](#layout-page) can be used — to allow you to configure the page based on the form. The image of the form selected is displayed in the label preview area.
-When you use a form, 4D executes any form or object methods associated with it. When using this option, you can also designate a project method to execute for each record or label and then assignate variables (see [this example](#printing-labels-using-forms-and-methods-example) below). If you want to create your labels using the editor itself, you need to choose the **No Form** option.
+En este caso, el editor de etiquetas está parcialmente deshabilitado: sólo las funciones de la [página de diseño](#layout-page) pueden ser usadas — para permitirte configurar la página basada en el formulario. The image of the form selected is displayed in the label preview area.
+When you use a form, 4D executes any form or object methods associated with it. Al usar esta opción, también puede designar un método proyecto para ejecutar para cada registro o etiqueta y luego asignar variables (ver [este ejemplo](#printing-labels-using-forms-and-methods-example) más abajo). If you want to create your labels using the editor itself, you need to choose the **No Form** option.
 
 :::note Notas
 
-- You can restrict the forms listed in this menu by means of a [specific JSON file](#controlling-available-forms-and-methods).
+- Puede restringir los formularios listados que aparecen en este menú mediante un [archivo JSON específico](#controlling-available-forms-and-methods).
 - If the database does not contain any table forms, this menu is not displayed.
 
 :::
@@ -116,14 +116,14 @@ There are shortcuts available to move or resize objects more precisely using the
 
 The right-hand side of the tool bar contains commands used to modify items of the label template:
 
-| Icono                                      | Nombre de la herramienta   | Descripción                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------ | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno           | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
-| ![](../assets/en/Desktop/label-tool8.png)  | Color de línea             |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool9.png)  | Lineweight                 |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool10.png) | Font menu                  | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
-| ![](../assets/en/Desktop/label-tool11.png) | Alignment and distribution | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
-| ![](../assets/en/Desktop/label-tool12.png) | Object level               | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
+| Icono                                      | Nombre de la herramienta  | Descripción                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------ | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno          | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
+| ![](../assets/en/Desktop/label-tool8.png)  | Color de línea            |                                                                                                                                                                                                                                                                                                                                                                  |
+| ![](../assets/en/Desktop/label-tool9.png)  | Lineweight                |                                                                                                                                                                                                                                                                                                                                                                  |
+| ![](../assets/en/Desktop/label-tool10.png) | Font menu                 | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
+| ![](../assets/en/Desktop/label-tool11.png) | Alineación y distribución | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
+| ![](../assets/en/Desktop/label-tool12.png) | Object level              | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
 
 ## Layout Page
 
@@ -143,8 +143,8 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
  To be eligible for label processing, a project method must comply with the following settings:
- - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
- - it must have the [Shared by components and host database](../Project/code-overview.md#shared-by-components-and-host-database) option.
+ - debe ser "permitido" para la base de datos (los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y el comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md), de lo contrario no se mostrará en el menú **Aplicación**.
+ - debe tener la opción [Compartido por componentes y base de datos local](../Project/code-overview.md#shared-by-components-and-host-database).
   Ver también [este ejemplo](#printing-labels-using-forms-and-methods-example) a continuación.
 
 :::note
@@ -196,9 +196,9 @@ Then you can print your labels:
 The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
 
 - in the **Form to use** menu on the "Label" page and/or
-- in the **Apply (method)** menu on the "Layout" page.
+- en el menú **Aplicar (método)** de la página "Diseño".
 
-1. Create a JSON file named **labels.json** and put it in the [Resources folder](../Project/architecture.md#resources) of the project.
+1. Crea un archivo JSON llamado **labels.json** y ponlo en la [carpeta de recursos](../Project/architecture.md#resources) del proyecto.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
 
 The contents of the **labels.json** file should be similar to:

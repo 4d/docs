@@ -191,7 +191,7 @@ No Windows, tool4d é uma aplicação de consola, pelo que o fluxo `stdout` é a
 :::note Notas
 
 - tool4d é sempre executado sem ‘interface’ (a opção de linha de comando `headless` é inútil).
-- The [`Application type`](../commands-legacy/application-type.md) command returns the value 6 ("tool4d") when called from the tool4d application.
+- O comando [`Application type`](../commands-legacy/application-type.md) devolve o valor 6 ("tool4d") quando chamado a partir da aplicação tool4d.
 - o [ficheiro de registo de diagnóstico](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) tem o prefixo "4DDiagnosticLogTool".
 
 :::

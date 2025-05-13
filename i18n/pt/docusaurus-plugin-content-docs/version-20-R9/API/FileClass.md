@@ -165,7 +165,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 
 No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
 
-**Returned object**
+**Objeto devolvido**
 
 Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
@@ -268,11 +268,11 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 #### Descrição
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
+A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna o conteúdo de informações de arquivos de aplicação como um objeto<!-- END REF -->.
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
-**Returned object with a .plist file (all platforms)**
+**Objeto retornado com um arquivo .plist (todas as plataformas)**
 
 O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é retornado como um objeto JSON e o `.plist array` é retornado como um array JSON.
 
@@ -282,7 +282,7 @@ A função apenas é compatível com arquivos .plist em formato xml (baseado em 
 
 :::
 
-**Returned object with a .exe or .dll file (Windows only)**
+**Objeto retornado com um arquivo .exe ou .dll (somente Windows)**
 
 Todos os valores de propriedades são Texto.
 
@@ -297,7 +297,7 @@ Todos os valores de propriedades são Texto.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Returned object with a macOS executable file (macOS only)**
+**Objeto retornado com um arquivo executável do macOS (somente macOS)**
 
 :::note
 
@@ -307,11 +307,11 @@ A macOS executable file is located within a package (e.g. myApp.app/Contents/Mac
 
 The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
 
-| Propriedade | Tipo   | Descrição                                                                          |
-| ----------- | ------ | ---------------------------------------------------------------------------------- |
-| name        | Text   | Name of architecture ("arm64" or "x86_64") |
-| type        | Number | Numerical identifier of the architecture                                           |
-| uuid        | Text   | Textual representation of the executable uuid                                      |
+| Propriedade | Tipo   | Descrição                                                                         |
+| ----------- | ------ | --------------------------------------------------------------------------------- |
+| name        | Text   | Nome da arquitetura ("arm64" ou "x86_64") |
+| type        | Number | Numerical identifier of the architecture                                          |
+| uuid        | Text   | Textual representation of the executable uuid                                     |
 
 #### Exemplo 1
 
@@ -421,7 +421,7 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 Por padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-**Returned object**
+**Objeto devolvido**
 
 O objeto `File` movido.
 
@@ -549,7 +549,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
-**Returned object**
+**Objeto devolvido**
 
 O objeto `File` renomeado.
 
@@ -588,11 +588,11 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 #### Descrição
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
+A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como o conteúdo da informação de um arquivo de aplicação<!-- END REF -->.
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
 
-***info* parameter object with a .plist file (all platforms)**
+Parâmetro ***info* com um arquivo .plist (todas as plataformas)**
 
 :::note
 
@@ -610,7 +610,7 @@ Para definir um valor de tipo de data, o formato a utilizar é uma string de car
 
 :::
 
-***info* parameter object with a .exe or .dll file (Windows only)**
+Parâmetro ***info* com um arquivo .exe ou .dll (somente Windows)**
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
@@ -630,9 +630,9 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-***info* parameter object with a macOS executable file (macOS only)**
+Parâmetro ***info* com um arquivo executável macOS (somente macOS)**
 
-*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*info* deve ser um objeto com uma única propriedade denominada `archs` que é uma coleção de objetos no formato retornado por [`getAppInfo()`](#getappinfo). Cada objeto deve conter pelo menos as propriedades `type` e `uuid` (`name` não é usado).
 
 Every object in the *info*.archs collection must contain the following properties:
 

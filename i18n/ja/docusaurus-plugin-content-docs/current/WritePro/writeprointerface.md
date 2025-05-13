@@ -11,8 +11,8 @@ title: 4D WritePro インターフェース
 
 You will find below:
 
-- the Table Wizard configuration documentation.
-- the integrated A.I. documentation (*developer preview*)
+- the Table Wizard configuration documentation,
+- the integrated A.I. ドキュメント.
 
 ## 表ウィザード
 

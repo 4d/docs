@@ -84,7 +84,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 :::warning
 
-You can open Qodly Studio, [debug](#using-qodly-debugger-on-4d-server) and edit Qodly pages directly on a 4D Server machine when a project is running in interpreted mode. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
+Você pode abrir Qodly Studio, [depurar](#using-qodly-debugger-on-4d-server) e editar páginas Qodly diretamente em uma máquina de servidor 4D quando um projeto é executado no modo interpretado. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
 
 :::
 
@@ -184,7 +184,7 @@ Para ativar a renderização das páginas Qodly, as seguintes opções devem ser
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are not available if the configuration options are not activated.
+[Botões de renderização](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) não estarão disponíveis se as opções de configuração não estiverem ativadas.
 
 :::
 
@@ -302,7 +302,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 ### Encerrar sessão
 
-When the ["force login" mode is enabled](#force-login), Qodly Studio for 4D allows you to implement a logout feature in your application.
+Quando o modo ["force login" está ativado](#force-login), o Qodly Studio for 4D permite que você implemente um recurso de logout em seu aplicação.
 
 Para fazer o logout do usuário, basta executar a ação padrão **Logout** na página Qodly. In Qodly Studio, you can associate this standard action to a button for example:
 

@@ -16,7 +16,7 @@ title: VP SET VALUES
 
 ## Descrição
 
-The `VP SET VALUES` command <!-- REF #_method_.VP SET VALUES.Summary -->assigns a collection of values starting at the specified cell range<!-- END REF -->.
+O comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->atribui uma coleção de valores que começa no intervalo de células especificado<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo para a célula (criada com [`VP Cell`](vp-cell.md)) cujo valor você deseja especificar. The cell defined in the *rangeObj* is used to determine the starting point.
 

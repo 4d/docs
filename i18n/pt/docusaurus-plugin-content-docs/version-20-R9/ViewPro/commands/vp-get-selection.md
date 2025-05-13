@@ -17,7 +17,7 @@ title: VP Get selection
 
 ## Descrição
 
-The `VP Get selection` command <!-- REF #_method_.VP Get selection.Summary -->returns a new range object referencing the current selected cells<!-- END REF -->.
+O comando `VP Get selection` <!-- REF #_method_.VP Get selection.Summary -->retorna um novo objeto de intervalo que faz referência às células selecionadas atualmente<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 

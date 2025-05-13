@@ -139,7 +139,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | Roles y privilegios REST/Web                                                     | Edición directa de roles.json/Editor de roles y permisos Qodly Studio                                                                                                                                 | Editor de roles y privilegios de Qodly Studio                                 |
 
 (1) The **Model** item is disabled in Qodly Studio.<br/>
-(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
+(2) En el servidor 4D, la apertura del código 4D con el editor de código Qodly Studio es soportada **para pruebas y depuración** (ver [este párrafo](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
 (2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)).
 
 ### Lenguaje

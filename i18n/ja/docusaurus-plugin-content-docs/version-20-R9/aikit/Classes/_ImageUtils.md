@@ -5,19 +5,19 @@ title: _ImageUtils
 
 # _ImageUtils
 
-The `_ImageUtils` internal class provides utility functions for handling images, including converting images to blobs, encoding images to base64, and creating inline PNG representations.
+`_ImageUtils` 内部クラスは、画像から Blob への変換、画像からbase64 へのエンコード、インライン PNG 表現の作成などを含めた、画像を扱うためのユーティリティ関数を提供します。
 
 ## 関数
 
 ### httpURLToBlob
 
-Converts a URL to a Blob object by making an HTTP request.
+HTTP リクエストを行うことで、URL を Blob オブジェクトへと変換します。
 
-| 引数   | 型    | 説明                                                    |
-| ---- | ---- | ----------------------------------------------------- |
-| $url | Text | The URL of the image to be converted. |
+| 引数   | 型    | 説明           |
+| ---- | ---- | ------------ |
+| $url | Text | 変換したい画像の URL |
 
-**Returns**: Blob or Null if the request fails.
+**戻り値**: Blob 、あるいはリクエストが失敗した場合には Null。
 
 ```4d
 var $blob:=cs._ImageUtils.me.httpURLToBlob("http://example.com/image.png")
@@ -25,13 +25,13 @@ var $blob:=cs._ImageUtils.me.httpURLToBlob("http://example.com/image.png")
 
 ### base64ToBlob
 
-Converts a base64 encoded string to a Blob object.
+base64 にエンコードされた文字列を Blob オブジェクトに変換します。
 
-| 引数      | 型    | 説明                                               |
-| ------- | ---- | ------------------------------------------------ |
-| $base64 | Text | The base64 encoded image string. |
+| 引数      | 型    | 説明                      |
+| ------- | ---- | ----------------------- |
+| $base64 | Text | base64 にエンコードされた画像の文字列。 |
 
-**Returns**: Blob representing the decoded image.
+**戻り値**: でコードされた画像を表す Blob。
 
 ```4d
 var $blob:=cs._ImageUtils.me.base64ToBlob("iVBORw0KGgoAAAANSUhEUgAAAAUA...")
@@ -39,13 +39,13 @@ var $blob:=cs._ImageUtils.me.base64ToBlob("iVBORw0KGgoAAAANSUhEUgAAAAUA...")
 
 ### toBlob
 
-Converts various types of image representations to a Blob object.
+様々な種類の画像表現を Blob オブジェクトに変換します。
 
-| 引数         | 型       | 説明                                                                                              |
-| ---------- | ------- | ----------------------------------------------------------------------------------------------- |
-| $imageInfo | Variant | The image information, which can be a picture, a file object, a URL, or a text. |
+| 引数         | 型       | 説明                                                          |
+| ---------- | ------- | ----------------------------------------------------------- |
+| $imageInfo | Variant | 画像情報(ピクチャ、ファイルオブジェクト、URL、あるいはテキストのいずれか)。 |
 
-**Returns**: Blob or Null if the input is invalid.
+**戻り値**: Blob 、あるいは入力が無効の場合には Null。
 
 ```4d
 var $blob:=cs._ImageUtils.me.toBlob($image)
@@ -53,13 +53,13 @@ var $blob:=cs._ImageUtils.me.toBlob($image)
 
 ### toBase64
 
-Converts an image to a base64 encoded string.
+画像を base64 エンコードされた文字列へと変換します。
 
-| 引数         | 型       | 説明                                                          |
-| ---------- | ------- | ----------------------------------------------------------- |
-| $imageInfo | Variant | The image information to convert to base64. |
+| 引数         | 型       | 説明                 |
+| ---------- | ------- | ------------------ |
+| $imageInfo | Variant | base64 に変換したい画像情報。 |
 
-**Returns**: Base64 encoded Text or an empty string if conversion fails.
+**戻り値**: Base64 にエンコードされたテキスト、あるいは変換に失敗した場合には空の文字列。
 
 ```4d
 var $base64:=cs._ImageUtils.me.toBase64($image)
@@ -67,13 +67,13 @@ var $base64:=cs._ImageUtils.me.toBase64($image)
 
 ### toInlinedPng
 
-Generates an inline PNG data URI from the given image information.
+与えられた画像情報からインラインPNG データURI を生成します。
 
-| 引数         | 型       | 説明                                                |
-| ---------- | ------- | ------------------------------------------------- |
-| $imageInfo | Variant | The image information to convert. |
+| 引数         | 型       | 説明         |
+| ---------- | ------- | ---------- |
+| $imageInfo | Variant | 変換したい画像情報。 |
 
-**Returns**: Text containing the inline PNG data URI or an empty string if conversion fails.
+**戻り値**: インライン PNG データ URI を格納したテキスト、あるいは変換に失敗した場合には空の文字列。
 
 ```4d
 var $dataUri:=cs._ImageUtils.me.toInlinedPng($image)
@@ -81,13 +81,13 @@ var $dataUri:=cs._ImageUtils.me.toInlinedPng($image)
 
 ### toFormData
 
-Converts an image to a text format suitable for form data submission.
+画像を、フォームデータ送信に適したテキスト形式に変換します。
 
-| 引数         | 型       | 説明                                                |
-| ---------- | ------- | ------------------------------------------------- |
-| $imageInfo | Variant | The image information to convert. |
+| 引数         | 型       | 説明         |
+| ---------- | ------- | ---------- |
+| $imageInfo | Variant | 変換したい画像情報。 |
 
-**Returns**: Text representing the form data or an empty string if conversion fails.
+**戻り値**: フォームデータを表すテキスト、あるいは変換に失敗した場合には空の文字列。
 
 ```4d
 var $formData:=cs._ImageUtils.me.toFormData($image)

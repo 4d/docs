@@ -540,7 +540,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 Esta propriedade permite ocultar o objeto no ambiente Aplicação.
 
-É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. Nesse contexto, muitas vezes é necessário ocultar objetos programaticamente durante o evento `On load` do formulário e, depois, exibir determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. The developer can then program their display using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command when needed.
+É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. Nesse contexto, muitas vezes é necessário ocultar objetos programaticamente durante o evento `On load` do formulário e, depois, exibir determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. O desenvolvedor pode então programar sua tela usando o comando [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) quando necessário.
 
 #### Visibilidade automática em formulários lista
 

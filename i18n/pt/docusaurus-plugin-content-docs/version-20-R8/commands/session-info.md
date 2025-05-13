@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `Session info` command <!-- REF #_command_.Session info.Summary -->returns an object describing the session whose ID you pass in the *sessionID* parameter.<!-- END REF -->. If you pass an invalid *sessionID*, the command returns a null object.
+O comando `Session info` <!-- REF #_command_.Session info.Summary -->retorna um objeto que descreve o ID da sessão no parâmetro *sessionID*.<!-- END REF -->. If you pass an invalid *sessionID*, the command returns a null object.
 
 O objeto retornado contém as propriedades abaixo:
 

@@ -21,7 +21,7 @@ Elimina a entidade, coleção de entidades ou seleção de entidades atual (cria
 
 ### Descrição
 
-Con `$method=delete`, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, [`$filter`]($filter.md) or specifying one directly using [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) *(e.g.*, /Employee(22)).
+Com `$method=delete`, você pode excluir uma entidade ou uma coleção de entidades inteira. Você pode definir a coleção de entidades usando, por exemplo, [`$filter`]($filter.md) ou especificando uma diretamente usando [`\{dataClass\}(\{key\})`](dataClass.md#dataclasskey) \*(por exemplo, \*, /Employee(22)).
 
 Também pode apagar as entidades em um conjunto de entidades, chamando [`$entityset/\{entitySetID\}`]($entityset.md#entitysetentitysetid).
 
@@ -53,25 +53,25 @@ Cria um conjunto de entidades no cache do 4D Server baseado na coleção de enti
 
 ### Descrição
 
-Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. The entity set will have a reference number that you can pass to `$entityset/\{entitySetID\}` to access it. Por padrão, é válido durante duas horas; no entanto, pode modificar esse tempo passando um valor (em segundos) para $timeout.
+Quando cria uma coleção de entidades em REST, pode também criar um conjunto de entidades que será guardado na cache do 4D Server. O conjunto de entidades terá um número de referência que você pode passar para `$entityset/\{entitySetID\}` para acessá-lo. Por padrão, é válido durante duas horas; no entanto, pode modificar esse tempo passando um valor (em segundos) para $timeout.
 
-Si ha utilizado `$savedfilter` y/o `$savedorderby` (junto con `$filter` y/o `$orderby`) cuando creó su conjunto de entidades, puede volver a crearlo con el mismo ID de referencia aunque se haya eliminado de la caché de 4D Server.
+Se você utilizou `$savedfilter` e/ou `$savedorderby` (em conjunto com `$filter` e/ou `$orderby`) quando criou seu conjunto de entidades, você pode recriá-lo com o mesmo ID de referência, mesmo que tenha sido removido do cache do 4D Server.
 
 ### Exemplo
 
-Para crear un conjunto de entidades, que se guardará en la caché de 4D Server durante dos horas, añada `$method=entityset` al final de su petición REST:
+Para criar um conjunto de entidades, que será guardado no cache do 4D Server por duas horas, adicione `$method=entityset` no final do seu pedido REST:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset`
 
-Puede crear un conjunto de entidades que se almacenará en la caché de 4D Server durante sólo diez minutos pasando un nuevo tiempo de espera a `$timeout`:
+Pode criar um conjunto de entidades que será armazenado na cache do 4D Server por apenas dez minutos, passando um novo timeout para `$timeout`:
 
 `GET  /rest/People/?$filter="ID>320"&$method=entityset&$timeout=600`
 
-También puede guardar el filtro y ordenar por, pasando true a `$savedfilter` y `$savedorderby`.
+Também é possível guardar o filtro e ordenar por, passando true para `$savedfilter` e `$savedorderby`.
 
 > `$skip` y `$top/$limit` no se tienen en cuenta al guardar un conjunto de entidades.
 
-Después de crear un conjunto de entidades, el primer elemento, `__ENTITYSET`, se añade al objeto devuelto e indica la URI a utilizar para acceder al conjunto de entidades:
+Depois de criar um conjunto de entidades, o primeiro elemento, `__ENTITYSET`, é adicionado ao objeto retornado e indica o URI a ser usado para acessar o conjunto da entidade:
 
 ```json
 __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
@@ -125,7 +125,7 @@ Si desea especificar varios atributos, puede delimitarlos con una coma, µ, `$su
 
 ### Exemplo
 
-Se pretender recuperar apenas as entidades relacionadas para uma entidade específica, pode efetuar o seguinte pedido REST em que staff é o atributo de relação na dataclass Company ligada à dataclass Employee:
+Se quiser recuperar apenas as entidades relacionadas para uma entidade específica, pode efetuar o seguinte pedido REST em que staff é o atributo de relação na dataclass Company ligada à dataclass Employee:
 
 ` GET  /rest/Company(1)/staff?$expand=staff&$method=subentityset&$subOrderby=lastName ASC`
 
@@ -175,27 +175,27 @@ Se pretender recuperar apenas as entidades relacionadas para uma entidade espec�
 
 ## $method=update
 
-Actualiza e/ou cria uma ou mais entidades
+Atualiza ou cria uma ou mais entidades
 
 ### Descrição
 
-`$method=update` le permite actualizar y/o crear una o más entidades en un solo **POST**. Si se actualiza y/o crea una entidad, se efectúa en un objeto con, para cada propiedad, un atributo y su valor, *por ejemplo* `{ lastName: "Smith" }`. Se forem atualizadas e/ou criadas várias entidades, é necessário criar uma coleção de objetos.
+`$method=update permite-lhe atualizar ou criar uma ou mais entidades num único POST**. Se você atualizar ou criar uma entidade, isso é feito em um objeto com cada propriedade sendo um atributo com seu valor, *e. .*, `{ lastName: "Smith" }\`. Se forem atualizadas e/ou criadas várias entidades, é necessário criar uma coleção de objetos.
 
-En cualquier caso, debe definir los **POST** datos en el **body** de la petición.
+Em quaisquer casos, você deve definir os dados **POST** no **corpo** da solicitação.
 
-Para actualizar una entidad, debes pasar los parámetros `__KEY` y `__STAMP` en el objeto junto con todos los atributos modificados. Si faltan ambos parámetros, se añadirá una entidad con los valores del objeto que envíe en el cuerpo de su **POST**.
+Para atualizar uma entidade, você deve passar os parâmetros `__KEY` e `__STAMP` no objeto, juntamente com quaisquer atributos modificados. Se ambos os parâmetros estiverem faltando, uma entidade será adicionada com os valores do objeto que você envia no corpo de seu **POST**.
 
 Os triggers são executados imediatamente ao guardar a entidade no servidor. A resposta contém todos os dados tal como existem no servidor.
 
-También puede poner estas solicitudes para crear o actualizar entidades en una transacción llamando a `$atomic/$atOnce`. Se ocorrerem erros durante a validação de dados, nenhuma das entidades é guardada. También puede utilizar `$method=validate` para validar las entidades antes de crearlas o actualizarlas.
+Você também pode colocar essas solicitações para criar ou atualizar entidades em uma transação chamando `$atomic/$atOnce`. Se ocorrerem erros durante a validação de dados, nenhuma das entidades é guardada. Você também pode usar `$method=validate` para validar as entidades antes de criar ou atualizá-las.
 
 Se surgir um problema ao adicionar ou modificar uma entidade, ser-lhe-á enviado um erro com essa informação.
 
 :::note
 
-- **Las fechas** deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, "2010-10-05T23:00:00Z"). Se tiver selecionado a propriedade Apenas data para o seu atributo Data, o fuso horário e a hora (hora, minutos e segundos) serão removidos. Neste caso, também pode enviar a data no formato que lhe é devolvido dd!mm!yyyy (por exemplo, 05!10!2013).
-- **Booleanos** son true o false.
-- Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
+- **Dates** devem ser expressas no formato JS: AAAA-MM-DDTHH:MM:SSZ (ex.: "2010-10-05T23:00:00Z"). Se tiver selecionado a propriedade Date only para o seu atributo Data, o fuso horário e a hora (hora, minutos e segundos) serão removidos. Neste caso, também pode enviar a data no formato que lhe é devolvido dd!mm!aaaa (por exemplo, 05!10!2013).
+- **Booleanos** são verdadeiro ou falso.
+- Arquivos carregados usando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objeto retornado no seguinte formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
  :::
 
 ### Exemplo
@@ -251,7 +251,7 @@ Também é possível criar e atualizar várias entidades em simultâneo, utiliza
 
 **Response:**
 
-Quando se adiciona ou modifica uma entidade, esta é-lhe devolvida com os atributos modificados. Por exemplo, se criar o novo empregado acima, ser-lhe-á devolvido o seguinte:
+Quando adicionar ou modificar uma entidade, esta é devolvida com os atributos modificados. Por exemplo, se criar o novo empregado acima, será devolvido o seguinte:
 
 ```json
 {

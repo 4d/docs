@@ -15,12 +15,12 @@ https://platform.openai.com/docs/api-reference/moderations
 
 **create**(*input* : Variant; *model* : Text; *parameters* : OpenAIParameters) : OpenAIModerationResult
 
-| 引数      | 型                                                   | 説明                                                                                                                                       |
-| ------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| *入力*    | Variant                                             | Input (or inputs) to classify. Can be a single text or a collection of OpenAIMessage. |
-| *model* | Text                                                | The content moderation model you would like to use.                                                                      |
-| *引数*    | [OpenAIParameters](OpenAIParameters.md)             | Additional parameters for the request.                                                                                   |
-| 戻り値     | [OpenAIModerationResult](OpenAIModerationResult.md) | The result of the moderation, indicating potential harm.                                                                 |
+| 引数           | 型                                                   | 説明                                                                                                                                       |
+| ------------ | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| *入力*         | Variant                                             | Input (or inputs) to classify. Can be a single text or a collection of OpenAIMessage. |
+| *model*      | Text                                                | The content moderation model you would like to use.                                                                      |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)             | リクエスト用の追加のパラメーター。                                                                                                                        |
+| 戻り値          | [OpenAIModerationResult](OpenAIModerationResult.md) | The result of the moderation, indicating potential harm.                                                                 |
 
 Classifies whether the input is potentially harmful.
 

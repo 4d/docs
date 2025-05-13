@@ -35,7 +35,7 @@ See [documentation about asynchronous code](../asynchronous-call.md)
 | ------ | ---- | ----------------------------------------------------------------------------------------------------------- |
 | `user` | Text | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse. |
 
-## Inherited Classes
+## 継承クラス
 
 Several classes inherit from `OpenAIParameters` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIParameters`:
 

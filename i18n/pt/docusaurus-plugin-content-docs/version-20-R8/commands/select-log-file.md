@@ -38,9 +38,9 @@ OK is set to 1 if the log file is correctly created, or closed.
 
 ## Propriedades
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Command number     | 345                         |
-| Thread safe        | &cross; |
-| Modifies variables | OK, error                   |
+|                       |                             |
+| --------------------- | --------------------------- |
+| Número de comando     | 345                         |
+| Thread safe           | &cross; |
+| Modifica as variáveis | OK, error                   |
 

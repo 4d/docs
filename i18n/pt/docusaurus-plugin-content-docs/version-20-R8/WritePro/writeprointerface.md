@@ -213,7 +213,7 @@ The translation file serves an additional role when a user selects a table in th
 
 #### Arquivos de temas
 
-A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
+A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". No entanto, você pode criar seu próprio tema colocando-o na pasta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" em seu projeto.
 
 O ficheiro de tema em formato JSON contém os seguintes atributos:
 
