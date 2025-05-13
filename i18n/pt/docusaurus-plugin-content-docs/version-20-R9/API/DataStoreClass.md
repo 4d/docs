@@ -855,15 +855,15 @@ ds.setGlobalStamp($newValue)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 
-| Parâmetro                                                                | Tipo                          |    | Descrição                                                                                     |
-| ------------------------------------------------------------------------ | ----------------------------- | -- | --------------------------------------------------------------------------------------------- |
-| contextName                                                              | Text                          | -> | Nome do contexto                                                                              |
-| dataClassName                                                            | Text                          | -> | Nome da dataclass                                                                             |
-| dataClassObject                                                          | 4D. DataClass | -> | dataclass object (e.g datastore. Employee) |
-| attributes                                                               | Text                          | -> | Lista de atributos separada por vírgulas                                                      |
-| Atributos do tipo BLOB não são gerenciados na datastore. | Collection                    | -> | Coleção de nomes de atributos (text)                                       |
-| contextType                                                              | Text                          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                        |
-| pageLength                                                               | Integer                       | -> | Page length of the entity selection linked to the context (default is 80)  |
+| Parâmetro                                                                | Tipo                          |    | Descrição                                                                                         |
+| ------------------------------------------------------------------------ | ----------------------------- | -- | ------------------------------------------------------------------------------------------------- |
+| contextName                                                              | Text                          | -> | Nome do contexto                                                                                  |
+| dataClassName                                                            | Text                          | -> | Nome da dataclass                                                                                 |
+| dataClassObject                                                          | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)     |
+| attributes                                                               | Text                          | -> | Lista de atributos separada por vírgulas                                                          |
+| Atributos do tipo BLOB não são gerenciados na datastore. | Collection                    | -> | Coleção de nomes de atributos (text)                                           |
+| contextType                                                              | Text                          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                            |
+| pageLength                                                               | Integer                       | -> | Duração da página da selecção da entidade ligada ao contexto (por padrão é 80) |
 
 <!-- END REF -->
 
