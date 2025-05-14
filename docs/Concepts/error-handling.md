@@ -307,6 +307,50 @@ Exceptions that interrupt code execution are returned by 4D but can have differe
 
 These information are returned for every error (when available) by the [4D error dialog box](../Debugging/basics.md) and the [`Last errors`](../commands-legacy/last-errors.md) command. Keep in mind that, if you intercept and handle errors using a [error-handling method](#installing-an-error-handling-method), you need to process all information since a simple error code could not be correctly interpreted. 
 
-Here is the description of component signatures:
+#### 4D component signatures
 
+|Component Signature|Component|
+|--|---|
+|4DCM|4D Compiler runtime|
+|4DRT|4D runtime|
+|bkrs|4D backup & restore manager|
+|brdg|SQL 4D bridge|
+|cecm|4D code Editor|
+|CZip|zip 4D apis|
+|dbmg|4D database manager|
+|FCGI|fast cgi 4D bridge|
+|FiFo|4D file objects|
+|HTCL|http client 4D apis|
+|HTTP|4D http server|
+|IMAP|IMAP 4D apis|
+|JFEM|Form Macro apis|
+|LD4D|LDAP 4D apis|
+|lscm|4D language syntax manager|
+|MIME|MIME 4D apis|
+|mobi|4D Mobile|
+|pdf1|4D pdf apis|
+|PHP_|php 4D bridge|
+|POP3|POP3 4D apis|
+|SMTP|SMTP 4D apis|
+|SQLS|4D SQL server|
+|srvr|4D network layer apis|
+|svg1|SVG 4D apis|
+|ugmg|4D users and groups manager|
+|UP4D|4D updater|
+|VSS |4D VSS support (Windows Volume Snapshot Service) |
+|webc|4D Web view|
+|xmlc|XML 4D apis|
+|wri1|4D Write Pro|
+
+
+#### System component signatures
+
+|Component Signature|Component|
+|--|---|
+|CARB|Carbon subsystem|
+|COCO|Cocoa subsystem|
+|MACH|macOS Mach subsystem|
+|POSX|posix/bsd subsystem (mac, linux, win)|
+|PW32|Pre-Win32 subsystem|
+|WI32|Win32 subsystem|
 
