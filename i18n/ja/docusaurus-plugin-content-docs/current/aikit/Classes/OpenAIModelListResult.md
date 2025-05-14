@@ -11,6 +11,6 @@ title: OpenAIModelListResult
 
 ## プロパティ
 
-| プロパティ    | 型                                           | 説明                                  |
-| -------- | ------------------------------------------- | ----------------------------------- |
-| `models` | Collection of [OpenAIModel](OpenAIModel.md) | The list of models. |
+| プロパティ    | 型                                     | 説明       |
+| -------- | ------------------------------------- | -------- |
+| `models` | [OpenAIModel](OpenAIModel.md) のコレクション | モデルのリスト。 |

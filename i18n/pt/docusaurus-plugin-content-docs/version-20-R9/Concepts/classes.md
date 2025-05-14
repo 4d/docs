@@ -844,9 +844,9 @@ shared function addItem($item:object)
 By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
 
 ```4d
-//in a user session
+//em uma sessão usuário
 $myList := cs.ItemInventory.me.itemList
-//current user's item list
+//lista de itens do usuário atual
 
 ```
 

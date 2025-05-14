@@ -178,10 +178,10 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                         |
-| ---------- | ---------- | --------------------------- | --------------------------------- |
-| timeout    | Real       | ->                          | Maximum wait time in seconds      |
-| Resultados | Parâmetros | <- | Estado da propriedade `.signaled` |
+| Parâmetro  | Tipo       |                             | Descrição                          |
+| ---------- | ---------- | --------------------------- | ---------------------------------- |
+| timeout    | Real       | ->                          | Tempo máximo de espera em segundos |
+| Resultados | Parâmetros | <- | Estado da propriedade `.signaled`  |
 
 <!-- END REF -->
 

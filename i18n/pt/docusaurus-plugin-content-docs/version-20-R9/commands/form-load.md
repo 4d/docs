@@ -8,59 +8,59 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Params-->
 
-| Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                                                |
-| --------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| aTable    | Tabela       | &#8594; | Table form to load (if omitted, load a project form)                                                                                                                                                  |
-| form      | Text, Object | &#8594; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData  | Object       | &#8594; | Data to associate to the form                                                                                                                                                                                            |
-| \*        | Operador     | &#8594; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
+| Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                                                                                |
+| --------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable    | Tabela       | &#8594; | Formulário tabela a ser carregado (se omitido, carrega um formulário projeto)                                                                                                                                                         |
+| form      | Text, Object | &#8594; | Nome (string) do formulário (projeto ou tabela), ou caminho POSIX (string) para um arquivo .json que descreve o formulário, ou um objeto que descreve o formulário a ser aberto |
+| formData  | Object       | &#8594; | Dados para associar ao formulário                                                                                                                                                                                                                        |
+| \*        | Operador     | &#8594; | Se passado = o comando se aplica ao banco de dados do host quando é executado a partir de um componente (parâmetro ignorado fora desse contexto)                                                                                      |
 
 <!-- END REF-->
 
 ## Descrição
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF--> There can only be one current form per process.
+<!--REF #_command_.FORM LOAD.Summary-->O comando **FORM LOAD** é usado para carregar o *form* na memória no processo atual juntamente com *formData* (opcional) para imprimir seus dados ou analisar seu conteúdo.<!-- END REF--> Só pode haver um formulário atual por processo.
 
-In the *form* parameter, you can pass:
+No parâmetro *form*, você pode passar:
 
-- the name of a form, or
-- the path (in POSIX syntax) to a valid .json file containing a description of the form to use, or
-- an object containing a description of the form.
+- o nome de um formulário, ou
+- o caminho (na sintaxe POSIX) para um arquivo .json válido que contém uma descrição do formulário a ser usado, ou
+- um objeto contendo uma descrição do formulário.
 
-When the command is executed from a component, it loads the component forms by default. If you pass the *\** parameter, the method loads the host database forms.
+Quando o comando for executado a partir de um componente, ele carrega os formulários de componente por padrão. Se você passar o parâmetro *\**, o método carrega os formulários do banco de dados de host.
 
 ### formData
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
-Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
+Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário] (../FormEditor/properties_FormProperties.md#form-class). Quaisquer propriedades do objeto de dados de formulário estarão então disponíveis a partir do contexto do formulário através do comando [Form](form.md).
+O objeto de dados de formulário está disponível no [evento de formulário \`No carregamento](../Events/onLoad.md).
 
 Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](dialog.md).
 
-### Printing data
+### Impressão de dados
 
-In order to be able to execute this command, a print job must be opened beforehand using the [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command. The [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) command makes an implicit call to the [FORM UNLOAD](../commands-legacy/form-unload.md) command, so in this context it is necessary to execute **FORM LOAD**. Once loaded, this *form* becomes the current printing form. Todos os comandos de gerenciamento de objetos e, em particular, o comando [Print object](../commands-legacy/print-object.md), funcionam com esse formulário.
+Para poder executar este comando, uma tarefa de impressão deve ser aberta antes usando o comando [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md). O comando [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) faz uma chamada implícita para o comando [FORM UNLOAD](../commands-legacy/form-unload.md), portanto, nesse contexto, é necessário executar **LOAD FORM**. Uma vez carregado, este *formulário* torna-se o formulário de impressão atual. Todos os comandos de gerenciamento de objetos e, em particular, o comando [Print object](../commands-legacy/print-object.md), funcionam com esse formulário.
 
-If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks.
+Se um formulário de impressão já tiver sido carregado anteriormente (por meio de uma chamada anterior ao comando **FORM LOAD**), ele será fechado e substituído por *form*. Você pode abrir e fechar vários formulários de projeto na mesma sessão de impressão. A alteração do formulário de impressão por meio do comando **FORM LOAD** não gera quebras de página. Cabe ao desenvolvedor gerenciar as quebras de página.
 
-Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. O evento formulário [`On Unload`](../Events/onUnload.md) é executado no final da impressão.
+Apenas o [evento `No carregamento`](../Events/onLoad.md) é executado durante a abertura do formulário de projeto, bem como quaisquer métodos de objeto da forma. Outros eventos de formulário são ignorados. O evento formulário [`On Unload`](../Events/onUnload.md) é executado no final da impressão.
 
-To preserve the graphic consistency of forms, it is recommended to apply the "Printing" appearance property regardless of the platform.
+Para preservar a consistência gráfica das formas, é recomendado aplicar a propriedade de aparência "Imprimindo" independentemente da plataforma.
 
 O formulário de impressão atual é fechado automaticamente quando o comando [CLOSE PRINTING JOB] (../commands-legacy/close-printing-job.md) é chamado.
 
-### Parsing form contents
+### Analisar o conteúdo do formulário
 
-This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
+Isso consiste em carregar um formulário fora da tela para fins de análise. Para fazer isso, basta chamar **FORM LOAD** fora do contexto de um trabalho de impressão. Nesse caso, os eventos de formulário não são executados.
 
-**FORM LOAD** can be used with the [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) and [OBJECT Get type](../commands-legacy/object-get-type.md) commands in order to perform any type of processing on the form contents. You must then call the [FORM UNLOAD](../commands-legacy/form-unload.md) command in order to release the form from memory.
+O **FORM LOAD** pode ser usado com os comandos [FORM GET OBJECTS] (../commands-legacy/form-get-objects.md) e [OBJECT Get type] (../commands-legacy/object-get-type.md) para executar qualquer tipo de processamento no conteúdo do formulário. Em seguida, você deve chamar o comando [FORM UNLOAD](../commands-legacy/form-unload.md) para liberar o formulário da memória.
 
-Note that in all cases, the form on screen remains loaded (it is not affected by the **FORM LOAD** command) so it is not necessary to reload it after calling [FORM UNLOAD](../commands-legacy/form-unload.md).
+Observe que, em todos os casos, o formulário na tela permanece carregado (não é afetado pelo comando **FORM LOAD**), portanto, não é necessário recarregá-lo depois de chamar [FORM UNLOAD](../commands-legacy/form-unload.md).
 
 **Lembrete:** no contexto fora da tela, não se esqueça de chamar [FORM UNLOAD](../commands-legacy/form-unload.md) para evitar qualquer risco de estouro de memória.
 
 ## Exemplo 1
 
-Calling a project form in a print job:
+Chamada de um formulário de projeto em um trabalho de impressão:
 
 ```4d
 OPEN PRINTING JOB
@@ -70,43 +70,43 @@ OPEN PRINTING JOB
 
 ## Exemplo 2
 
-Calling a table form in a print job:
+Chamar um formulário da tabela em um trabalho de impressão:
 
 ```4d
- OPEN PRINTING JOB
- FORM LOAD([People];"print_form")
-  // execution of events and object methods
+OPEN PRINTING JOB
+FORM LOAD([People]; "print_form")
+// execução de eventos e métodos de objeto
 ```
 
 ## Exemplo 3
 
-Parsing of form contents to carry out processing on text input areas:
+Analisar os conteúdos de formulário para executar o processamento nas áreas de entrada de texto:
 
 ```4d
- FORM LOAD([People];"my_form")
-  // selection of form without execution of events or methods
- FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
- For($i;1;Size of array(arrObjNames))
-    If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-  //… processing
-    End if
- End for
- FORM UNLOAD //do not forget to unload the form
+FORM LOAD([People];"my_form")
+// seleção de formulário sem execução de eventos ou métodos
+FORM GET OBJECTS(arrObjNames; rrObjPtrs;arrPages;*)
+For($i;1; tamanho da matriz (arrObjNames))
+If(OBJECT Obter tipo(*; rrObjNames{$i})=Entrada de texto do tipo objeto
+//… processamento
+Finaliza se
+End para
+FORM UNLOAD ///não se esqueça de descarregar o formulário
 ```
 
 ## Exemplo
 
-The following example returns the number of objects on a JSON form:
+O exemplo a seguir retorna o número de objetos em um formato JSON:
 
 ```4d
- ARRAY TEXT(objectsArray;0) //sort form items into arrays
- ARRAY POINTER(variablesArray;0)
- ARRAY INTEGER(pagesArray;0)
- 
- FORM LOAD("/RESOURCES/OutputForm.json") //load the form
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
- 
- ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
+ARRAY TEXT(objectsArray;0) //classificar itens do formulário em arrays
+ARRAY POINTER(variablesArray;0)
+ARRAY INTEGER(pagesArray;0)
+
+FORM LOAD("/RESOURCES/OutputForm.json") //carrega o formulário
+FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
+
+ALERT("The form contains "+String(size of array(objectsArray))+" objects") //retorna a contagem de objetos
 ```
 
 o resultado mostrado é:
@@ -115,43 +115,43 @@ o resultado mostrado é:
 
 ## Exemplo 2
 
-You want to print a form containing a list box. During the *on load* event, you want the contents of the list box to be modified.
+Se quiser imprimir um formulário contendo uma caixa de lista. Durante o evento *on load*, você deseja que o conteúdo da caixa de listagem seja modificado.
 
-1\. In the printing method, you write:
+1\. No método de impressão, você escreve:
 
 ```4d
- var $formData : Object
- var $over : Boolean
- var $full : Boolean
- 
- OPEN PRINTING JOB
- $formData:=New object
- $formData.LBcollection:=New collection()
- ... //fill the collection with data
- 
- FORM LOAD("GlobalForm";$formData) //store the collection in $formData
- $over:=False
- Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
-    LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
-    If(Not($over))
-       PAGE BREAK
-    End if
- Until($over)
- FORM UNLOAD
- CLOSE PRINTING JOB
+var $formData : Object
+var $over : Boolean
+var $full : Boolean
+
+OPEN PRINTING JOB
+$formData:=New object
+$formData.LBcollection:=New collection()
+... //preencher a coleção com dados
+
+FORM LOAD("GlobalForm";$formData) //armazenar a coleção em $formData
+$over:=False
+Repetir
+$full:=Print object(*; "LB") //a fonte de dados dessa caixa de listagem "LB" é Form.LBcollection
+LISTBOX GET PRINT INFORMATION(*; "LB";lk a impressão terminou;$over)
+If(Not($over))
+PAGE BREAK
+End if
+Until($over)
+FORM UNLOAD
+CLOSE PRINTING JOB
 ```
 
-2\. In the form method, you can write:
+2\. No método de formulário, você pode escrever:
 
 ```4d
- var $o : Object
- Case of
-    :(Form event code=On Load)
-       For each($o;Form.LBcollection) //LBcollection is available
-          $o.reference:=Uppercase($o.reference)
-       End for each
- End case
+var $o : Object
+Case of
+:(Form event code=On Load)
+For each($o;Form.LBcollection) //LBcollection está disponível
+$o.reference:=Uppercase($o.reference)
+End for each
+End case
 ```
 
 ## Veja também
@@ -164,9 +164,9 @@ You want to print a form containing a list box. During the *on load* event, you 
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1103                        |
-| Thread safe    | &cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1103                        |
+| Thread safe       | &cross; |
 
 

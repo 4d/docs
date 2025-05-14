@@ -125,30 +125,30 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 ### Opções adicionais (Compatibilidade)
 
-In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
+Em projetos convertidos de versões 4D anteriores a 20 R7, opções de compilação adicionais estão disponíveis:
 
 - **Caminho de compilação**
 - **Digitação padrão**
 - **Métodos Compilador para...**
 
-These options are only maintained for compatibility with legacy code. Para mais informações, consulte a [documentação de lançamentos 4D anteriores](../Project/compiler.md#compiler-settings).
+Essas opções só são mantidas para compatibilidade com os códigos legados. Para mais informações, consulte a [documentação de lançamentos 4D anteriores](../Project/compiler.md#compiler-settings).
 
 Em projetos convertidos, é recomendado [ativar o modo de digitação direta](#enabling-direct-typing) e escrever o código de declaração em conformidade, i.e.:
 
 - declarar explicitamente todas as variáveis [usando palavras-chave `var`](../Concepts/variables.md#declaring-variables)
-- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
+- declarar explicitamente todos os parâmetros em protótipos de função (por exemplo, usando as palavras-chave `Função` ou `Classe Construtor`) ou com palavras `#DECLARE` em métodos (veja [Declaração de parâmetros](../Concepts/parameters.md#declaring-parameters).
 
-#### Enabling direct typing
+#### Ativando digitação direta
 
 :::info
 
-The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+O modo de digitação direta é opcional somente em projetos convertidos. É utilizado nativamente em projetos criados com 4D 20 R7 e superior.
 
 :::
 
-Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+Selecione **Todas as variáveis são digitadas (digitação direta)** no menu **Compilação de Caminho** para habilitar o modo de digitação direta. Quando esta opção for selecionada, outras opções de compatibilidade se tornam inúteis e não são mais exibidas.
 
-Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
+Recomenda-se a utilização desta opção, uma vez que proporciona flexibilidade e eficiência. O conceito de digitação direta assume que todos os elementos são declarados diretamente onde eles são definidos em seu código. Você só precisa ter certeza de que todas as suas variáveis são declaradas usando o recurso regular [`var` syntax](../Concepts/variables.md#declaring-variables) e que seu método e parâmetros de função são declarados [em seus protóticos](../Concepts/parameters.md) (o [Verificar sintaxe](#check-syntax) pode ajudá-lo a detectar declarações ausentes ou inválidas).
 
 ## Avisos
 

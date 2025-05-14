@@ -127,7 +127,7 @@ When a document is displayed in "display expressions" mode, references to tables
 
 You can control how formulas are displayed in your documents:
 
-- as *values* or as *references*
+- como *valores* ou como *referências*
 - when shown as references, display source text, symbol, or name.
 
 ### References or Values

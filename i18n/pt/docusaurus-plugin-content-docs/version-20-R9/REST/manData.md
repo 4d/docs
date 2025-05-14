@@ -31,7 +31,7 @@ Un conjunto de entidades (también conocido como *selección de entidades*) es u
 
 Para criar um conjunto de entidades, chame [`$method=entityset`]($method.md#methodentityset) em sua solicitação REST. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
 
-To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
+Para acessar o conjunto de entidades, você deve usar `$entityset/\{entitySetID\}`, por exemplo:
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 

@@ -115,7 +115,7 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 If you do not want to wait for the OpenAPI response when sending a request to its API, you need to use asynchronous code. The result object will be received in a callback function.
 
-See [detailed documentation for examples](asynchronous-call.md)
+Ver la [documentación detallada para ejemplos](asynchronous-call.md)
 
 ## Copyright
 

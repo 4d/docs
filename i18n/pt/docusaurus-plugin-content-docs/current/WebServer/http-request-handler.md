@@ -209,8 +209,8 @@ Here is a detailed example of a HTTPHandlers.json file:
 In this example, you must implement the following functions:
 
 - *handle function* in the *GeneralHandling* class
-- *manageAccount* in the *UsersHandling* class
-- *handleInvoices* in the *FinancialHandling* class
+- *manageAccount* na classe *UsersHandling*
+- *handleInvoices* na classe \*FinancialHandling
 - *handleDocs* in the *DocsHandling* class
 - *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
 
@@ -265,7 +265,7 @@ The [4D.IncomingMessage class](../API/IncomingMessageClass.md) provides function
 
 Here is a simple example to upload a file on the server.
 
-The **HTTPHandlers.json** file:
+O arquivo **HTTPHandlers.json**:
 
 ```json
 [

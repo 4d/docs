@@ -7,7 +7,7 @@ title: VP FLUSH COMMANDS
 
 | Release | Mudanças                        |
 | ------- | ------------------------------- |
-| 20 R9   | Support of *callback* parameter |
+| 20 R9   | Suporte do parâmetro *callback* |
 
 </details>
 

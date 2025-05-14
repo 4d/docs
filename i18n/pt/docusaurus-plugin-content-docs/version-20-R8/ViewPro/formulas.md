@@ -97,7 +97,7 @@ Quando você copia ou move essas fórmulas para novos locais, o endereço de cad
 
 ### Notação de referências
 
-If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. You may make the reference an absolute reference by putting a dollar sign in front of the letter and the number, as in `$C$5`.
+If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. Você pode fazer a referência absoluta colocando um sinal de dólar na frente da letra e do número, como em `$C$5`.
 
 You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. Uma referência mista permite que você especifique a linha ou a coluna como absoluta, enquanto permite que a outra parte do endereço consulte relativamente.
 
@@ -217,7 +217,7 @@ You can declare the name, type, and number of parameters through the *parameters
 
 For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
 
-If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) e seu tipo será automaticamente convertido.
+Se você não declarar parâmetros, os valores podem ser passados sequencialmente para os métodos (eles serão recebidos em $1, $2...) e seu tipo será automaticamente convertido.
 
 Os parâmetros Date e Object são tratados da seguinte maneira:
 

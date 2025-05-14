@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                    |
 | --------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable    | Tabela       | &#8594; | Table owning the form or If omitted: default table or use of project form                                                                                                    |
+| aTable    | Tabela       | &#8594; | Tabela possuindo o formulário ou se omitido: tabela padrão ou uso do formulário projeto                                                                                      |
 | form      | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, or an object describing the form |
 | formData  | Object       | &#8594; | Data to associate to the form                                                                                                                                                                |
 | \*        | Operador     | &#8594; | Usar o mesmo processo                                                                                                                                                                        |
@@ -44,7 +44,7 @@ Optionally, you can pass parameter(s) to the *form* using a "form data" object. 
 
 To fill the "form data" object, you have two possibilities:
 
-- use the *formData* parameter. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
+- use o parâmetro *formData*. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
 
 - [associate a user class to the form](../FormEditor/properties_FormProperties.md#form-class), in which case 4D will automatically instantiate an object of this class when the form will be loaded. The object properties and functions will be automatically available through the object returned by [Form](form.md). You could write for example `Form.myFunction()`.
 
@@ -179,9 +179,9 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 
 ## Propriedades
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Command number     | 40                          |
-| Thread safe        | &cross; |
-| Modifies variables | OK, error                   |
+|                       |                             |
+| --------------------- | --------------------------- |
+| Número de comando     | 40                          |
+| Thread safe           | &cross; |
+| Modifica as variáveis | OK, error                   |
 

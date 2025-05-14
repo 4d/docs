@@ -111,7 +111,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 ![](../assets/en/FormObjects/radio_xp.png)
 
-- *macOS* - its background is always displayed.
+- *macOS* - seu plano de fundo é sempre exibido.
 
 ### Contrair/expandir
 

@@ -42,9 +42,9 @@ Se o comando for executado com o parâmetro \* de um processo no computador do s
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 372                         |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 372                         |
+| Thread safe       | &check; |
 
 

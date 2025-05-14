@@ -113,7 +113,7 @@ A propriedade `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica 
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Padrão = False
+A propriedade `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indica se deve exibir o manipulador de redimensionamento para tabelas que não têm *source*<!-- END REF -->. Padrão = False
 
 ### .tableColumns
 
@@ -173,7 +173,7 @@ A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->nome da fonte (c
 
 **.textDecoration** : Integer<!-- END REF -->
 
-The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md#fonts-and-text))<!-- END REF -->.
+A propriedade `.textDecoration` é a decoração de texto da tabela <!-- REF #TableStyle.textDecoration.Summary -->(consulte [**Fontes e texto**](configuring.md#fonts-and-text))<!-- END REF -->.
 
 ### .borderLeft
 

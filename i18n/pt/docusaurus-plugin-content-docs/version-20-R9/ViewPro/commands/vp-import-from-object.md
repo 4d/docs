@@ -7,7 +7,7 @@ title: VP IMPORT FROM OBJECT
 
 | Release | Mudanças                        |
 | ------- | ------------------------------- |
-| 20 R9   | Support of *paramObj* parameter |
+| 20 R9   | Suporte do parâmetro *paramObj* |
 
 </details>
 

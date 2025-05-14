@@ -5,22 +5,22 @@ title: OpenAIParameters
 
 # OpenAIParameters
 
-The `OpenAIParameters` class is designed to handle execution and request parameters for interacting with the OpenAI API.
+`OpenAIParameters` クラスはOpenAI API とやり取りをするための実行パラメーターとリクエストパラメーターを管理するために設計されています。
 
 ## プロパティ
 
-### Properties of Asynchronous Programming
+### 非同期プログラミングのプロパティ
 
-| プロパティ                      | 型        | 説明                                                                                                                                                                 |
-| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `formula` or `onTerminate` | Function | A function to be called asynchronously when finished. Ensure that the current process does not terminate.                          |
-| `onResponse`               | Function | A function to be called asynchronously when the request finishes successfully. Ensure that the current process does not terminate. |
-| `onError`                  | Function | A function to be called asynchronously when the request finishes with errors. Ensure that the current process does not terminate.  |
-| `throw`                    | Boolean  | If true, throws an error if one occurs. Only if no formula callback defined.                                                       |
+| プロパティ                        | 型        | 説明                                                         |
+| ---------------------------- | -------- | ---------------------------------------------------------- |
+| `formula` あるいは `onTerminate` | Function | 終了時に非同期で呼び出す関数。 カレントプロセスが終了しないように注意してください。                 |
+| `onResponse`                 | Function | リクエストが正常に終了したときに非同期で呼び出す関数。 カレントプロセスが終了しないように注意してください。     |
+| `onError`                    | Function | リクエストがエラーで終了したときに非同期で呼び出す関数。 カレントプロセスが終了しないように注意してください。    |
+| `throw`                      | Boolean  | true の場合、エラーが発生した場合にエラーをスローします。 コールバックフォーミュラが定義されていない場合のみ。 |
 
-See [documentation about asynchronous code](../asynchronous-call.md)
+詳細については[非同期コードについてのドキュメンテーション](../asynchronous-call.md) を参照してください。
 
-### Network properties
+### ネットワークプロパティ
 
 | プロパティ          | 型         | 説明                                                                                                                                                       |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |

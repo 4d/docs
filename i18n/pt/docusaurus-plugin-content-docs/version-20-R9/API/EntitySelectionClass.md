@@ -1351,7 +1351,7 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 | Parâmetro     | Tipo |                             | Descrição                                        |
 | ------------- | ---- | :-------------------------: | ------------------------------------------------ |
 | attributePath | Text |              ->             | Rota do atributo que se utilizará para o cálculo |
-| Resultados    | any  | <- | Lowest value of attribute                        |
+| Resultados    | any  | <- | Menor valor do atributo                          |
 
 <!-- END REF -->
 
@@ -1547,7 +1547,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 | ----------- | ----------------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
 | pathString  | Text                                |              ->             | Rota(s) de atributos e instruções de classificação para a entity selection |
 | pathObjects | Collection                          |              ->             | Coleção de objetos criterio                                                                   |
-| Resultados  | 4D. EntitySelection | <- | New entity selection in the specified order                                                   |
+| Resultados  | 4D. EntitySelection | <- | Nova entity selection na ordem especificada                                                   |
 
 <!-- END REF -->
 
@@ -2117,7 +2117,7 @@ $sum:=$sel.sum("salary")
 | options      | Integer    |              ->             | `dk with primary key`: adiciona a chave primária<br/>`dk with stamp`: adiciona o marcador |
 | begin        | Integer    |              ->             | Designa o índice inicial                                                                                                  |
 | howMany      | Integer    |              ->             | Número de entidades a extrair                                                                                             |
-| Resultados   | Collection | <- | Collection of objects containing attributes and values of entity selection                                                |
+| Resultados   | Collection | <- | Colecção de objectos contendo atributos e valores de selecção de entidades                                                |
 
 <!-- END REF -->
 

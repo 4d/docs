@@ -40,7 +40,7 @@ Os comandos 4D View Pro não são thread-safe.
 
 <a id="E"><b>E</b></a>
 
-[VP EXPORT DOCUMENT](commands/vp-export-document.md) ***Modified 4D 20 R8***</br>
+[VP EXPORT DOCUMENT](commands/vp-export-document.md) ***Modificado 4D 20 R8***</br>
 [VP EXPORT TO BLOB](commands/vp-export-to-blob.md)</br>
 [VP Export to object](commands/vp-export-to-object.md)
 

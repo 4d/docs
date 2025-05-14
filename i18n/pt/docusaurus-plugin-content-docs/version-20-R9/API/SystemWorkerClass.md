@@ -422,7 +422,7 @@ Essa propriedade é **leitura-escrita**.
 
 #### Descrição
 
-The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->.
+A propriedade `.pid` <!-- REF #SystemWorkerClass.pid.Summary -->contém o identificador exclusivo do processo externo no nível do sistema<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -447,7 +447,7 @@ Essa propriedade é **somente leitura**.
 
 A função `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary --> permite que você escreva no fluxo de entrada (stdin) do processo externo<!-- END REF -->. No parâmetro *message*, passe o texto a ser escrito em *stdin*.
 
-The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
+A função `.postMessage()` também aceita um valor de tipo Blob em *messageBLOB* para passar em *stdin*, para que você possa postar dados binários.
 
 Você pode usar a propriedade `.dataType` do [objeto options](#options-object) para fazer o corpo da resposta retornar valores Blob.
 
@@ -461,7 +461,7 @@ Você pode usar a propriedade `.dataType` do [objeto options](#options-object) p
 
 #### Descrição
 
-The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
+A propriedade `.response` <!-- REF #SystemWorkerClass.response. Resumo --> contém a concatenação de todos os dados retornados assim que o pedido for encerrado<!-- FIM REF -->, ou seja, a mensagem completa recebida da saída do processo.
 
 O tipo da mensagem é definido conforme o atributo [`dataType`](#datatype).
 
@@ -477,7 +477,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary -->contains the concatenation of all the errors returned, once the request is terminated<!-- END REF -->.
+A propriedade `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary -->contém a concatenação de todos os erros retornados, uma vez que a solicitação é encerrada<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -525,7 +525,7 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-The `.timeout` property <!-- REF #SystemWorkerClass.timeout.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
+A propriedade `.timeout` <!-- REF #SystemWorkerClass.timeout.Summary -->contém a duração em segundos antes que o processo externo seja encerrado se ainda estiver ativo<!-- END REF -->.
 
 Essa propriedade é **somente leitura**.
 
@@ -548,10 +548,10 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
-| Parâmetro  | Tipo                            |                             | Descrição                    |
-| ---------- | ------------------------------- | :-------------------------: | ---------------------------- |
-| timeout    | Real                            |              ->             | Maximum wait time in seconds |
-| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker         |
+| Parâmetro  | Tipo                            |                             | Descrição                          |
+| ---------- | ------------------------------- | :-------------------------: | ---------------------------------- |
+| timeout    | Real                            |              ->             | Tempo máximo de espera em segundos |
+| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker               |
 
 <!-- END REF -->
 
@@ -565,7 +565,7 @@ If you pass a *timeout* value, .wait() waits for the external process for the am
 
 :::note
 
-During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. Você pode sair de um `.wait()` chamando [`terminate()`](#terminate) de um retorno de chamada.
+Durante a execução do `.wait()`, as funções de retorno de chamada são executadas, sejam elas originadas de outras instâncias do `SystemWorker`. Você pode sair de um `.wait()` chamando [`terminate()`](#terminate) de um retorno de chamada.
 
 :::
 

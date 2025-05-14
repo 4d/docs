@@ -475,7 +475,7 @@ $param->:=Uppercase($param->)
 ALERT($param->)
 ```
 
-Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Therefore, within the `DO SOMETHING` method, $param is no longer the value of the field but a pointer to the field. The object **referenced** by $param ($param-> in the code above) is the actual field. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
+Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, no método `DO SOMETHING`, $param já não é o valor do campo, mas um ponteiro ao campo. O objeto **referenciado** por $param ($param-> no código acima) é o campo real. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
 
 2. Ao invés de ter o método `DO_SOMETHING` "fazendo algo", você pode reescrever o método para que ele retorne um valor. Portanto escreveria:
 

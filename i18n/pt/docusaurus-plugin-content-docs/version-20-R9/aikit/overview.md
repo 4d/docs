@@ -41,7 +41,7 @@ $client.baseURL:="https://your.server.ai"
 var $result:=$client.<resource>.<function>(<parameters...>)
 ```
 
-The `$result` contains the `HTTPRequest`, a `success` status, a collection of `errors` and more. See [OpenAIResult](Classes/OpenAIResult.md)
+O `$result` contém o `HTTPRequest`, um status de `sucess`, uma coleção de `erros` e outros. See [OpenAIResult](Classes/OpenAIResult.md)
 
 See some examples bellow.
 

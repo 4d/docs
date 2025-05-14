@@ -97,9 +97,9 @@ Con:
 Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por exemplo:
 
 ```4d
-var $p : Pointer // non initialized pointer (Nil value)
-$v:=$p-> // error
-$p->:=$v // error
+var $p : Pointer // Ponteiro não inicializado (valor Nil)
+$v:=$p- // erro
+$p-:=$v // erro
 ```
 
 To prevent such errors, you can write:
@@ -172,12 +172,12 @@ Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo 
 ...
 ```
 
-The debugger will display $param as follows:
+O depurador exibirá $param da seguinte forma:
 
 | $param | ->$MyVar (Method1) |
 | ------ | ------------------------------------- |
 
-You can expand $param and its value will be:
+Você pode expandir $param e seu valor será:
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |

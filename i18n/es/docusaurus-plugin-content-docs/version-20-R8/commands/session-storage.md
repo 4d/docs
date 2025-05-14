@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo   |                             | Descripción                                                |
 | ---------- | ------ | --------------------------- | ---------------------------------------------------------- |
 | id         | Text   | &#8594; | Identificador único (UUID) de la sesión |
-| Resultado  | Object | &#8592; | Storage object of the session                              |
+| Resultado  | Object | &#8592; | Objeto de almacenamiento de la sesión                      |
 
 <!-- END REF-->
 

@@ -5,21 +5,21 @@ title: OpenAIMessage
 
 # OpenAIMessage
 
-The `OpenAIMessage` class represents a structured message containing a role, content, and an optional user. This class provides methods to manipulate and retrieve the text and other content of the message.
+`OpenAIMessage` クラスはロール、コンテンツ、そしてオプションとしてユーザーを格納した構造化されたメッセージを表します。 このクラスはメッセージのテキストや他のコンテンツを操作・取得するメソッドを提供します。
 
 ## プロパティ
 
-| プロパティ  | 型       | 説明                                                                                                                      |
-| ------ | ------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `role` | Text    | The role of the message (e.g., "user", "assistant"). |
-| `内容`   | Variant | The content of the message, which can be a text or a collection of objects.                             |
-| `user` | Text    | An optional property representing the user associated with the message.                                 |
+| プロパティ  | 型       | 説明                                                                   |
+| ------ | ------- | -------------------------------------------------------------------- |
+| `role` | Text    | メッセージのロール(例: "user"、"assistant")。 |
+| `内容`   | Variant | メッセージのコンテンツ。テキスト、またはオブジェクトのコレクションのいずれかです。                            |
+| `user` | Text    | メッセージに割り当てられたユーザーを表すオプションのプロパティ。                                     |
 
 ## 計算プロパティ
 
-| プロパティ  | 型    | 説明                                                        |
-| ------ | ---- | --------------------------------------------------------- |
-| `テキスト` | Text | A property representing the text message. |
+| プロパティ  | 型    | 説明                 |
+| ------ | ---- | ------------------ |
+| `テキスト` | Text | テキストメッセージを表すプロパティ。 |
 
 ## 関数
 
@@ -27,19 +27,19 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 **addImageURL**(*imageURL* : Text; *detail* : Text)
 
-| 引数         | 型    | 説明                                                          |
-| ---------- | ---- | ----------------------------------------------------------- |
-| *imageURL* | Text | The URL of the image to add to the message. |
-| *detail*   | Text | Additional details about the image.         |
+| 引数         | 型    | 説明                |
+| ---------- | ---- | ----------------- |
+| *imageURL* | Text | メッセージに追加する画像のURL。 |
+| *detail*   | Text | 画像に関する追加の詳細情報。    |
 
-Adds an image URL to the content of the message.
+メッセージのコンテンツに画像URL を追加します。
 
 ## 使用例
 
 ```4d
-// Create an instance of OpenAIMessage
+// OpenAIMessage のインスタンスを作成します。
 var $message:=OpenAIMessage({role: "user"; content: "Hello!"})
 
-// Add an image URL with details
+// 詳細な情報の画像URL を追加します。
 $message.addImageURL("http://example.com/image.jpg"; "high")
 ```
