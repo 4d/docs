@@ -49,7 +49,7 @@ con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
 :::note
 
-La función `getCity()` debe haber sido declarada con la palabra clave `onHttpGet` (ver [Configuración de la función](#function-configuration)).
+La función `getCity()` debe haber sido declarada con la palabra clave `onHTTPGet` (ver [Configuración de la función](#function-configuration)).
 
 :::
 
@@ -71,13 +71,13 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
-### `onHttpGet`
+### `onHTTPGet`
 
-Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
-exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
+exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
 ### Hilo seguro

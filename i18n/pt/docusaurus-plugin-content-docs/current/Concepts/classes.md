@@ -748,7 +748,7 @@ Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) 
 :::note
 
 - Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- As funções compartilhadas Singleton suportam a palavra-chave `onHttpGet`(../ORDA/ordaClasses.md#onhttpget-keyword).
+- As funções compartilhadas Singleton suportam a palavra-chave `onHTTPGet`(../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

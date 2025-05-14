@@ -49,7 +49,7 @@ with data in the body of the POST request: `["Aguada"]`
 
 :::note
 
-A função `getCity()` deve ter sido declarada com a palavra-chave `onHttpGet` (veja [Configuração da função](#function-configuration) abaixo).
+A função `getCity()` deve ter sido declarada com a palavra-chave `onHTTPGet` (veja [Configuração da função](#function-configuration) abaixo).
 
 :::
 
@@ -71,13 +71,13 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 Consulte a seção [Funções expostas vs. não expostas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
-### `onHttpGet`
+### `onHTTPGet`
 
-As funções que podem ser chamadas a partir de solicitações HTTP `GET` também devem ser especificamente declaradas com a palavra-chave [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por exemplo:
+As funções que podem ser chamadas a partir de solicitações HTTP `GET` também devem ser especificamente declaradas com a palavra-chave [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por exemplo:
 
 ```4d
 //allowing GET requests
-exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
+exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
 ### Thread-safe

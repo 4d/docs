@@ -243,7 +243,7 @@ HTTP リクエストハンドラーコードは、[**共有された**](../Conce
 
 :::note
 
-[`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) または [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードを使用してリクエストハンドラー関数を外部REST 呼び出しへと公開することは**推奨されていません**。
+[`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) または [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードを使用してリクエストハンドラー関数を外部REST 呼び出しへと公開することは**推奨されていません**。
 
 :::
 
