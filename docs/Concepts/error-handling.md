@@ -26,7 +26,7 @@ It is highly recommended to install a global error-handling method on 4D Server,
 
 Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
 
-Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions and needs to be handled through an error-handling method or a `Try()` keyword.  
+Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes) and needs to be handled through an error-handling method or a `Try()` keyword.  
 
 
 ## Installing an error-handling method
@@ -295,3 +295,62 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 	return $newInvoice
 
 ```
+
+
+## Error codes
+
+Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. A returned error is therefore defined by three elements:
+
+- a **component signature**, which is the origin of the error
+- a **message**, wich explains why the error occurred 
+- a **code**, which is an arbitrary number returned by the component
+
+These information are returned for every error (when available) by the [4D error dialog box](../Debugging/basics.md) and the [`Last errors`](../commands-legacy/last-errors.md) command. Keep in mind that, if you intercept and handle errors using a [error-handling method](#installing-an-error-handling-method), you need to process all information since a simple error code could not be correctly interpreted. 
+
+#### 4D component signatures
+
+|Component Signature|Component|
+|--|---|
+|4DCM|4D Compiler runtime|
+|4DRT|4D runtime|
+|bkrs|4D backup & restore manager|
+|brdg|SQL 4D bridge|
+|cecm|4D code Editor|
+|CZip|zip 4D apis|
+|dbmg|4D database manager|
+|FCGI|fast cgi 4D bridge|
+|FiFo|4D file objects|
+|HTCL|http client 4D apis|
+|HTTP|4D http server|
+|IMAP|IMAP 4D apis|
+|JFEM|Form Macro apis|
+|LD4D|LDAP 4D apis|
+|lscm|4D language syntax manager|
+|MIME|MIME 4D apis|
+|mobi|4D Mobile|
+|pdf1|4D pdf apis|
+|PHP_|php 4D bridge|
+|POP3|POP3 4D apis|
+|SMTP|SMTP 4D apis|
+|SQLS|4D SQL server|
+|srvr|4D network layer apis|
+|svg1|SVG 4D apis|
+|ugmg|4D users and groups manager|
+|UP4D|4D updater|
+|VSS |4D VSS support (Windows Volume Snapshot Service) |
+|webc|4D Web view|
+|xmlc|XML 4D apis|
+|wri1|4D Write Pro|
+
+
+#### System component signatures
+
+|Component Signature|Component|
+|--|---|
+|CARB|Carbon subsystem|
+|COCO|Cocoa subsystem|
+|MACH|macOS Mach subsystem|
+|POSX|posix/bsd subsystem (mac, linux, win)|
+|PW32|Pre-Win32 subsystem|
+|WI32|Win32 subsystem|
+
