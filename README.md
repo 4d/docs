@@ -86,5 +86,5 @@ Exemple:
     - sidebars.js
     - commands/command-index.md (includes version added number) 
 - modified command (moved to commands):
-  1. move to commands
+  1. move to commands (use move_command.exe)
   2. same as above
