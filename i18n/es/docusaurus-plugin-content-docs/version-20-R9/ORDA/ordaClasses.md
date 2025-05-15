@@ -822,7 +822,7 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
-## Palabra clave onHTTPGet
+## onHTTPGet keyword
 
 Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
 
@@ -864,7 +864,7 @@ Consulte la sección [Parámetros](../REST/classFunctions#parameters) en la docu
 
 ### resultado
 
-Una función con la palabra clave `onHTTPGet` puede devolver cualquier valor de un tipo soportado (igual que para [parámetros](../REST/classFunctions#parameters) REST).
+A function with `onHTTPGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
 
 :::info
 
