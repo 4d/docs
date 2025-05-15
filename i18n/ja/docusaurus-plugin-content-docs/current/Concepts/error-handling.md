@@ -98,7 +98,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 :::
 :::
 
-- the [`Last errors`](../commands-legacy/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
+- the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
 - `Call chain` コマンドは、カレントプロセス内におけるメソッド呼び出しチェーンの各ステップを説明するオブジェクトのコレクションを返します。
 
 #### 例題
@@ -154,7 +154,7 @@ Try (expression) : any | Undefined
 
 実行中にエラーが発生した場合、`Try()` の呼び出し前に [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされたかどうかに関係なく、エラーダイアログは表示されず、エラーはキャッチされます。 *expression* が値を返す場合、`Try()` は最後に評価された値を返します。値が返されない場合、`Try()` は `Undefined` を返します。
 
-You can handle the error(s) using the [`Last errors`](../commands-legacy/last-errors.md) command. *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
+You can handle the error(s) using the [`Last errors`](../commands/last-errors.md) command. *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
 
 :::note
 
@@ -245,7 +245,7 @@ End try
 
 :::
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. [`Last errors`](../commands-legacy/last-errors.md) 関数は最後のエラーに関するコレクションを格納しています。 このコードブロック内で[エラー処理メソッドを宣言する](#エラー処理メソッドの実装) こともできます。この場合エラー発生時にはそれが呼び出されます(宣言しない場合には、4Dエラーダイアログが表示されます)。
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. [`Last errors`](../commands/last-errors.md) 関数は最後のエラーに関するコレクションを格納しています。 このコードブロック内で[エラー処理メソッドを宣言する](#エラー処理メソッドの実装) こともできます。この場合エラー発生時にはそれが呼び出されます(宣言しない場合には、4Dエラーダイアログが表示されます)。
 
 :::note
 
@@ -288,57 +288,12 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## Error codes
 
-Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. A returned error is therefore defined by three elements:
+Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. An error is therefore defined by three elements:
 
-- a **component signature**, which is the origin of the error
-- a **message**, wich explains why the error occurred
+- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
+- a **message**, which explains why the error occurred
 - a **code**, which is an arbitrary number returned by the component
 
-These information are returned for every error (when available) by the [4D error dialog box](../Debugging/basics.md) and the [`Last errors`](../commands-legacy/last-errors.md) command. Keep in mind that, if you intercept and handle errors using a [error-handling method](#installing-an-error-handling-method), you need to process all information since a simple error code could not be correctly interpreted.
+The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user.
 
-#### 4D component signatures
-
-| Component Signature       | コンポーネント                                                             |
-| ------------------------- | ------------------------------------------------------------------- |
-| 4DCM                      | 4D Compiler runtime                                                 |
-| 4DRT                      | 4D runtime                                                          |
-| bkrs                      | 4D backup & restore manager                     |
-| brdg                      | SQL 4D bridge                                                       |
-| cecm                      | 4D code Editor                                                      |
-| CZip                      | zip 4D apis                                                         |
-| dbmg                      | 4D database manager                                                 |
-| FCGI                      | fast cgi 4D bridge                                                  |
-| FiFo                      | 4D file objects                                                     |
-| HTCL                      | http client 4D apis                                                 |
-| HTTPクライアント                | 4D http server                                                      |
-| IMAP                      | IMAP 4D apis                                                        |
-| JFEM                      | Form Macro apis                                                     |
-| LD4D                      | LDAP 4D apis                                                        |
-| lscm                      | 4D language syntax manager                                          |
-| MIME                      | MIME 4D apis                                                        |
-| mobi                      | 4D Mobile                                                           |
-| pdf1                      | 4D pdf apis                                                         |
-| PHP_ | php 4D bridge                                                       |
-| POP3                      | POP3 4D apis                                                        |
-| SMTP                      | SMTP 4D apis                                                        |
-| SQLS                      | 4D SQL server                                                       |
-| srvr                      | 4D network layer apis                                               |
-| svg1                      | SVG 4D apis                                                         |
-| ugmg                      | 4D users and groups manager                                         |
-| UP4D                      | 4D updater                                                          |
-| VSS                       | 4D VSS support (Windows Volume Snapshot Service) |
-| webc                      | 4D Web view                                                         |
-| xmlc                      | XML 4D apis                                                         |
-| wri1                      | 4D Write Pro                                                        |
-
-#### System component signatures
-
-| Component Signature | コンポーネント                                                  |
-| ------------------- | -------------------------------------------------------- |
-| CARB                | Carbon subsystem                                         |
-| COCO                | Cocoa subsystem                                          |
-| MACH                | macOS Mach subsystem                                     |
-| POSX                | posix/bsd subsystem (mac, linux, win) |
-| PW32                | Pre-Win32 subsystem                                      |
-| WI32                | Win32 subsystem                                          |
-
+To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors.md) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.
