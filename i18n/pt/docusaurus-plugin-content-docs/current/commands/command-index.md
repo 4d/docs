@@ -530,7 +530,7 @@ title: Índice
 
 <a id="L"><b>L</b></a>
 
-[`Last errors`](../commands-legacy/last-errors.md)<br/>
+[`Last errors`](last-errors.md)<br/>
 [`Last field number`](../commands-legacy/last-field-number.md)<br/>
 [`Last query path`](../commands-legacy/last-query-path.md)<br/>
 [`Last query plan`](../commands-legacy/last-query-plan.md)<br/>
