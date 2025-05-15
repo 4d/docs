@@ -327,7 +327,7 @@ The AI dialog box is available by clicking on a button in the 4D Write Pro inter
 
 To display the AI dialog box button, you need to:
 
-1. Get an API key from the [OpenAI website](https://openai.com/api/).
+1. Obtener una clave API del [sitio web OpenAI](https://openai.com/api/).
 2. Execute the following 4D code:
 
 ```4d
