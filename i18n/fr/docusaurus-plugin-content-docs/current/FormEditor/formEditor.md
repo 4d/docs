@@ -697,7 +697,7 @@ Sélectionnez simplement la vue de destination, faites un clic droit puis sélec
 
 ![](../assets/en/FormEditor/moveObject.png)
 
-OR
+OU
 
 Sélectionnez la vue de destination de la sélection et cliquez sur le bouton **Déplacer vers** en bas de la palette des vues :
 
