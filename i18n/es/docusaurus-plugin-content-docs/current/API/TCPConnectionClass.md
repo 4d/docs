@@ -232,7 +232,7 @@ La propiedad `.closed` contiene <!-- REF #TCPConnection.closed.Summary -->si la 
 
 #### Descripción
 
-La propiedad `.errors` contiene <!-- REF #TCPConnection.errors.Summary -->una colección de objetos de error asociados a la conexión<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+La propiedad `.errors` contiene <!-- REF #TCPConnection.errors.Summary -->una colección de objetos de error asociados a la conexión<!-- END REF -->. Cada objeto de error incluye el código de error, una descripción y la firma del componente que causó el error.
 
 | Propiedad |                                                                                           | Tipo       | Descripción                                           |
 | --------- | ----------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------- |

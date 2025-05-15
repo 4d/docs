@@ -110,7 +110,7 @@ The printer dialog boxes do not appear when you use **Print form**. The report d
 
 This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
 
-**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands-legacy/print-record.md) instead.
+**Warning:** Subforms are not printed with **Print form**. Para imprimir apenas um formulário com esses objetos, use [PRINT RECORD](../commands-legacy/print-record.md) em vez disso.
 
 **Print form** gera apenas um evento [`On Printing Detail`](../Events/onPrintingDetail.md) para o método formulário.
 
@@ -185,9 +185,9 @@ The code that calls the dialog then prints its body:
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 5                           |
-| Thread safe    | &cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 5                           |
+| Thread safe       | &cross; |
 
 

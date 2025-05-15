@@ -92,7 +92,7 @@ You want to get information on your current 4D Server license:
  $obj:=License info
 ```
 
-*$obj* can contain, for example:
+*$obj* pode conter, por exemplo:
 
 ```json
 {
@@ -137,9 +137,9 @@ You want to get information on your current 4D Server license:
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1489                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1489                        |
+| Thread safe       | &check; |
 
 

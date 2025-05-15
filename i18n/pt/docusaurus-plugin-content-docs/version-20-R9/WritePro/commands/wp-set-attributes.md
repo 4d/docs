@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary-->allows you to set the value of any attribute in a range, element, document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
 
-In *targetObj*, you can pass :
+Em *targetObj*, você pode passar:
 
 - um intervalo, ou
 - an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or

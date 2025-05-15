@@ -752,7 +752,7 @@ You declare singleton classes by adding appropriate keyword(s) before the [`Clas
 :::note
 
 - Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- Singleton shared functions support [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- Singleton shared functions support [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

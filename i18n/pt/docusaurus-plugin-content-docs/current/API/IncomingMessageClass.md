@@ -290,7 +290,7 @@ The `.urlPath` property is read-only.
 
 #### Descrição
 
-The `.urlQuery` property contains <!-- REF #IncomingMessageClass.urlQuery.Summary -->the parameters of the request when they have been given in the URL as key/value pairs<!-- END REF -->.
+A propriedade `.urlQuery` contém <!-- REF #IncomingMessageClass.urlQuery.Summary -->os parâmetros da solicitação quando eles são fornecidos no URL como pares de chave/valor<!-- END REF -->.
 
 The `.urlQuery` property is read-only.
 

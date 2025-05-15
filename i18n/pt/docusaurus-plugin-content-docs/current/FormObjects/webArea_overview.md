@@ -7,7 +7,7 @@ As áreas da Web podem exibir vários conteúdo Web em seus formulários: págin
 
 É possível criar várias áreas web no mesmo formulário. No entanto, observe que o uso de áreas web deve seguir [várias regras](#web-area-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](../category/web-area) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Variáveis específicas podem ser usadas para trocar informações entre a área e o ambiente 4D.
+Várias [ações padrão] dedicadas (#standard-actions), vários [comandos de idioma] (../category/web-area), bem como [eventos de formulário] genéricos e específicos (#form-events) permitem que o desenvolvedor controle o funcionamento das áreas da Web. Variáveis específicas podem ser usadas para trocar informações entre a área e o ambiente 4D.
 
 ## Propriedades específicas
 
@@ -37,7 +37,7 @@ Quando a propriedade [Acessar aos métodos 4D](properties_WebArea.md#access-4d-m
 
 :::
 
-## $4d Object
+## Objeto $4d
 
 The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 
@@ -49,7 +49,7 @@ $4d. HelloWorld();
 
 > **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
 
-### Controlling $4d Access
+### Controlando o acesso $4d
 
 With [`WA SET CONTEXT`](../commands/wa-set-context.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 

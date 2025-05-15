@@ -25,6 +25,12 @@ displayed_sidebar: docs
 | message            | テキスト  | エラーの詳細              |
 | componentSignature | テキスト  | エラーを返した内部コンポーネントの署名 |
 
+:::note
+
+コンポーネントのシグネチャの説明については、[エラーコード](../Concepts/error-handling.md#error-codes) セクションを参照してください。
+ 
+:::
+
 このコマンドは、[ON ERR CALL](on-err-call.md) コマンドでインストールされたエラー処理メソッド内から呼び出されている必要があります。
 
 
@@ -32,6 +38,7 @@ displayed_sidebar: docs
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
+[Error handling](../Concepts/error-handling.md)
 
 ## プロパティ
 

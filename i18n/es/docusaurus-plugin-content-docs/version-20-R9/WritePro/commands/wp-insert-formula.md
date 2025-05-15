@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros  | Tipo   |                             | Descripción                                                |
 | ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
-| targetObj   | Object | &#8594; | Range or element or 4D Write Pro document                  |
+| targetObj   | Object | &#8594; | Rango o elemento o documento 4D Write Pro                  |
 | formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
 | mode        | Number | &#8594; | Modo de inserción                                          |
 | rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
@@ -26,7 +26,7 @@ In the *targetObj* parameter, you can pass:
 
 - un rango, o
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
-- a 4D Write Pro document.
+- un documento 4D Write Pro.
 
 In the *formula* parameter, pass the 4D formula to evaluate. Puede pasar:
 

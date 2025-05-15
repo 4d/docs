@@ -5,7 +5,7 @@ title: OutgoingMessage
 
 The `4D.OutgoingMessage` class allows you to build messages to be returned by your application functions in response to [REST requests](../REST/REST_requests.md). If the response is of type `4D.OutgoingMessage`, the REST server does not return an object but the object instance of the `OutgoingMessage` class.
 
-Normalmente, esta clase puede ser usada en funciones personalizadas [HTTP request handler](../WebServer/http-request-handler.md#function-configuration) o en funciones declaradas con la palabra clave [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) y diseñadas para manejar peticiones HTTP GET. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser.
+Normalmente, esta clase puede ser usada en funciones personalizadas [HTTP request handler](../WebServer/http-request-handler.md#function-configuration) o en funciones declaradas con la palabra clave [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) y diseñadas para manejar peticiones HTTP GET. Such requests are used, for example, to implement features such as download file, generate and download picture as well as receiving any content-type via a browser.
 
 An instance of this class is built on 4D Server and can be sent to the browser by the [4D REST Server](../REST/gettingStarted.md) only. This class allows to use other technologies than HTTP (e.g. mobile).
 

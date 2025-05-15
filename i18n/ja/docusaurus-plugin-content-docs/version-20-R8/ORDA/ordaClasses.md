@@ -832,11 +832,11 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
 ```
 
-## onHttpGet キーワード
+## onHTTPGet キーワード
 
-`onHttpGet` キーワードを使用することで、`GET` 動詞(メソッド)を使用してHTTP リクエストを通して呼び出し可能な関数を宣言することができます。 このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
+`onHTTPGet` キーワードを使用することで、`GET` 動詞(メソッド)を使用してHTTP リクエストを通して呼び出し可能な関数を宣言することができます。 このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
 
-`onHttpGet` キーワードが使用できる関数は以下の通りです:
+`onHTTPGet` キーワードが使用できる関数は以下の通りです:
 
 - ORDA データモデルクラス関数
 - [シングルトンクラス関数](../Concepts/classes.md#シングルトンクラス)
@@ -844,8 +844,8 @@ $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機�
 シンタックスは次の通りです:
 
 ```4d
-// onHttpGet 関数を宣言する
-exposed onHttpGet Function <functionName>(params) : result
+// onHTTPGet 関数を宣言する
+exposed onHTTPGet Function <functionName>(params) : result
 ```
 
 :::info
@@ -862,7 +862,7 @@ exposed onHttpGet Function <functionName>(params) : result
 
 ### params
 
-`onHttpGet` キーワードを持つ関数は、[引数](../Concepts/parameters.md) を受け入れます。
+`onHTTPGet` キーワードを持つ関数は、[引数](../Concepts/parameters.md) を受け入れます。
 
 HTTP GET リクエストにおいては、引数はURL 内に直接渡される必要があり、また`$params` キーワードを使用して宣言されている必要があります(引数はコレクション内に受け取られる必要があります)。
 
@@ -874,7 +874,7 @@ REST サーバードキュメントの[引数](../REST/classFunctions#引数) �
 
 ### 戻り値
 
-`onHttpGet` キーワードを持つ関数は、サポートされる型であれば、あらゆる値を返すことが可能です([引数](../REST/classFunctions#引数)と同様です)。
+`onHTTPGet` キーワードを持つ関数は、サポートされる型であれば、あらゆる値を返すことが可能です([引数](../REST/classFunctions#引数)と同様です)。
 
 :::info
 

@@ -748,7 +748,7 @@ Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) 
 :::note
 
 - Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- As funções compartilhadas Singleton suportam a palavra-chave `onHttpGet`(../ORDA/ordaClasses.md#onhttpget-keyword).
+- As funções compartilhadas Singleton suportam a palavra-chave `onHTTPGet`(../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 
@@ -844,9 +844,9 @@ shared function addItem($item:object)
 By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
 
 ```4d
-//in a user session
+//em uma sessão usuário
 $myList := cs.ItemInventory.me.itemList
-//current user's item list
+//lista de itens do usuário atual
 
 ```
 

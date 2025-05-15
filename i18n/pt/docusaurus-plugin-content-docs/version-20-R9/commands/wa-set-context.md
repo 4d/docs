@@ -28,11 +28,11 @@ The command is only usable with an embedded web area where the [**Use embedded w
 Pass in *contextObj* user class instances or formulas to be allowed in `$4d` as objects. Class functions that begin with `_` are considered hidden and cannot be used with `$4d`.
 
 - If *contextObj* is null, `$4d` has access to all 4D methods.
-- If *contextObj* is empty, `$4d` has no access.
+- Se *contextObj* estiver vazio, `$4d` não terá acesso.
 
 ### Exemplo 1
 
-Allow `$4d` to specific methods
+Permitir `$4d` a métodos específicos
 
 ```4d
  var $context:={}
@@ -42,7 +42,7 @@ Allow `$4d` to specific methods
  WA SET CONTEXT(*; "myWebArea"; $context)
 ```
 
-**In JavaScript:**
+**Em JavaScript:**
 
 ```js
 $4d.myMethod(); // Permitiu
@@ -60,7 +60,7 @@ Using a Class Object
  WA SET CONTEXT(*; "MyWA"; $myWAObject)
 ```
 
-**In JavaScript:**
+**Em JavaScript:**
 
 ```js
 $4d.myWAFunction(); // Permitido
@@ -73,7 +73,7 @@ $4d._myPrivateFunction(); // Não fará nada porque a função é privada
 
 ### Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1848                        |
-| Thread safe    | &cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1848                        |
+| Thread safe       | &cross; |

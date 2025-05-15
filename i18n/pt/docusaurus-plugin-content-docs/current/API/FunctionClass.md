@@ -47,7 +47,7 @@ Você também pode executar uma função usando as funções [`apply()`](#apply)
 
 #### Utilização de parâmetros
 
-You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. Por exemplo, pode escrever:
+Você pode passar parâmetros para suas fórmulas usando uma sintaxe de parâmetro sequencial baseada em $1, $2...$n. Por exemplo, pode escrever:
 
 ```4d
  var $f : Object
@@ -126,7 +126,7 @@ A função `.apply()` <!-- REF #FunctionClass.apply().Summary -->executa o objet
 
 In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
 
-You can also pass a collection to be used as $1...$n parameters in the formula using the optional *formulaParams* parameter.
+Também pode passar uma coleção a ser usada como parâmetros $1...$n na fórmula usando o parâmetro opcional *formulaParams*.
 
 Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros são passados como coleção. Isso pode ser útil para passar resultados calculados. Isso pode ser útil para passar resultados calculados.
 

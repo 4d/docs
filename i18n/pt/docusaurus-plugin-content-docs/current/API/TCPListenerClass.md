@@ -97,18 +97,18 @@ In the *options* parameter, pass an object to configure the listener and all the
 
 Callback functions receive up to two parameters:
 
-| Parâmetro | Tipo                                        | Descrição                                             |
-| --------- | ------------------------------------------- | ----------------------------------------------------- |
-| $listener | [`TCPListener` object](#tcplistener-object) | The current TCP listener instance.    |
-| $event    | [objeto `TCPEvent`](#tcpevent-object)       | Contains information about the event. |
+| Parâmetro | Tipo                                        | Descrição                                          |
+| --------- | ------------------------------------------- | -------------------------------------------------- |
+| $listener | [`TCPListener` object](#tcplistener-object) | The current TCP listener instance. |
+| $event    | [objeto `TCPEvent`](#tcpevent-object)       | Contém informações sobre o evento. |
 
-**Sequence of Callback Calls:**
+**Sequência de chamadas de retorno:**
 
 1. `onConnection` is triggered each time a connection is established.
-2. `onError` is triggered if an error occurs.
+2. `onError` é acionado se ocorrer um erro.
 3. `onTerminate` is always triggered just before a connection is terminated.
 
-#### TCPEvent object
+#### Objeto TCPEvent
 
 Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de callback](#callback-functions) é chamada.
 
@@ -122,7 +122,7 @@ Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de ca
 
 #### Descrição
 
-A propriedade `.errors` contém <!-- REF #TCPListener.errors.Summary -->uma coleção de objetos de erros associados à conexão<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+A propriedade `.errors` contém <!-- REF #TCPListener.errors.Summary -->uma coleção de objetos de erros associados à conexão<!-- END REF -->. Cada objeto de erro inclui o código de erro, uma descrição e a assinatura do componente que causou o erro.
 
 | Propriedade |                                                                                           | Tipo       | Descrição                                            |
 | ----------- | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------- |

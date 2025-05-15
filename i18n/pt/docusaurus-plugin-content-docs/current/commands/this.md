@@ -181,9 +181,9 @@ Once the form is executed, the list box is automatically filled with the entity 
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1470                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1470                        |
+| Thread safe       | &check; |
 
 

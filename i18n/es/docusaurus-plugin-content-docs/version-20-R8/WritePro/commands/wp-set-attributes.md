@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros  | Tipo                                            |                             | Descripción                                                             |
 | ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
-| targetObj   | Object                                          | &#8594; | Range or element or 4D Write Pro document                               |
+| targetObj   | Object                                          | &#8594; | Rango o elemento o documento 4D Write Pro                               |
 | attribName  | Text                                            | &#8594; | Name of attribute to set                                                |
 | attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Nuevo valor de atributo                                                 |
 | attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 El comando **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->le permite definir el valor de todo atributo en un rango, elemento, documento.<!-- END REF--> Este comando le da acceso a todo de atributo interno 4D Write Pro: carácter, párrafo, documento, tabla o imagen.
 
-In *targetObj*, you can pass :
+En *targetObj*, puede pasar :
 
 - un rango, o
 - an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or

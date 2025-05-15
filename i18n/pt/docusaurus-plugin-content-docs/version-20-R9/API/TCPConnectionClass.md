@@ -5,13 +5,13 @@ title: TCPConnection
 
 The `TCPConnection` class allows you to manage Transmission Control Protocol (TCP) client connections to a [server](./TCPListenerClass.md), enabling you to send and receive data, and handle connection lifecycle events using callbacks.
 
-The `TCPConnection` class is available from the `4D` class store. Você pode criar uma conexão TCP usando a função [4D.TCPConnection.new()](#4dtcpconnectionnew), que retorna um objeto [TCPConnection](#tcpconnection-object).
+A classe `TCPConnection` está disponível no repositório de classes `4D`. Você pode criar uma conexão TCP usando a função [4D.TCPConnection.new()](#4dtcpconnectionnew), que retorna um objeto [TCPConnection](#tcpconnection-object).
 
-All `TCPConnection` class functions are thread-safe.
+Todas as funções da classe `TCPConnection` são thread-seguras.
 
-Thanks to the standard 4D object *refcounting*, a TCPConnection is automatically released when it is no longer referenced. Consequently, the associated resources, are properly cleaned up without requiring explicit closure.
+Graças ao objeto 4D padrão *refcounting*, um TCPConnection é automaticamente liberado quando não for mais referenciado. Consequentemente, os recursos associados são devidamente limpos sem a necessidade de fechamento explícito.
 
-TCPConnection objects are released when no more references to them exist in memory. This typically occurs, for example, at the end of a method execution for local variables. Se quiser "forçar" o fechamento de uma conexão a qualquer momento, [**nullify** suas referências, definindo-as como **Null**](../Concepts/dt_object.md#resources).
+Os objetos TCPConnection são liberados quando não houver mais referências a eles na memória. Isso geralmente ocorre, por exemplo, no final da execução de um método para variáveis locais. Se quiser "forçar" o fechamento de uma conexão a qualquer momento, [**nullify** suas referências, definindo-as como **Null**](../Concepts/dt_object.md#resources).
 
 <details><summary>História</summary>
 
@@ -24,23 +24,23 @@ TCPConnection objects are released when no more references to them exist in memo
 
 ### Exemplos
 
-The following examples demonstrate how to use the 4D.TCPConnection and 4D.TCPEvent classes to manage a TCP client connection, handle events, send data, and properly close the connection. Both synchronous and asynchronous examples are provided.
+Os exemplos a seguir demonstram como usar as classes 4D.TCPConnection e 4D.TCPEvent para gerenciar uma conexão de cliente TCP, manipular eventos, enviar dados e fechar adequadamente a conexão. São fornecidos exemplos síncronos e assíncronos.
 
-#### Synchronous Example
+#### Exemplo síncrono
 
-This example shows how to establish a connection, send data, and shut it down using a simple object for configuration:
+Este exemplo mostra como estabelecer uma conexão, enviar dados e encerrá-la usando um objeto simples para configuração:
 
 ```4d
 var $domain : Text := "127.0.0.1"
 var $port : Integer := 10000
-var $options : Object := New object() // Configuration object
+var $options : Object := New object() // Objeto de configuração
 var $tcpClient : 4D.TCPConnection
 var $message : Text := "test message"
 
-// Open a connection
+// Abra uma conexão
 $tcpClient := 4D.TCPConnection.new($domain; $port; $options)
 
-// Send data
+// Enviar dados
 var $blobData : Blob
 TEXT TO BLOB($message; $blobData; UTF8 text without length)
 $tcpClient.send($blobData)
@@ -51,61 +51,61 @@ $tcpClient.wait(0)
 
 ```
 
-#### Asynchronous Example
+#### Exemplo assíncrono
 
-This example defines a class that handles the connection lifecycle and events, showcasing how to work asynchronously:
+Este exemplo define uma classe que lida com o ciclo de vida e os eventos da conexão, demonstrando como trabalhar de forma assíncrona:
 
 ```4d
-// Class definition: cs.MyAsyncTCPConnection
+// Definição de classe: cs.MyAsyncTCPConnection
 
 Class constructor($url : Text; $port : Integer)
     This.connection := Null
     This.url := $url
     This.port := $port
 
-// Connect to one of the servers launched inside workers
+// Conectar-se a um dos servidores lançados dentro dos workers
 Function connect()
     This.connection := 4D.TCPConnection.new(This.url; This.port; This)
 
-// Disconnect from the server
+// Desconectar do servidor
 Function disconnect()
     This.connection.shutdown()
     This.connection := Null
 
-// Send data to the server
+// Enviar dados para o servidor
 Function getInfo()
     var $blob : Blob
     TEXT TO BLOB("Information"; $blob)
     This.connection.send($blob)
 
-// Callback called when the connection is successfully established
+// Callback chamado quando a conexão é estabelecida com sucesso
 Function onConnection($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
     ALERT("Connection established")
 
-// Callback called when the connection is properly closed
+// Callback chamado quando a conexão é fechada corretamente
 Function onShutdown($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
-    ALERT("Connection closed")
+    ALERT("Conexão fechada")
 
-// Callback called when receiving data from the server
+// Callback chamado ao receber dados do servidor
 Function onData($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
     ALERT(BLOB to text($event.data; UTF8 text without length))
 
-	//Warning: There's no guarantee you'll receive all the data you need in a single network packet.
+	//Warning: Não há garantia de que você receberá todos os dados de que precisa em um único pacote de rede.
 	
-// Callback called when the connection is closed unexpectedly
+// Chamada de retorno quando a conexão é fechada inesperadamente
 Function onError($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
-    ALERT("Connection error")
+    ALERT("Erro de conexão")
 
-// Callback called after onShutdown/onError just before the TCPConnection object is released
+// Chamada de retorno após onShutdown/onError, logo antes de o objeto TCPConnection ser liberado
 Function onTerminate($connection : 4D.TCPConnection; $event : 4D.TCPEvent)
-	ALERT("Connection terminated")
+	ALERT("Conexão encerrada")
 
 
 ```
 
-##### Usage example
+##### Exemplos de uso
 
-Create a new method named AsyncTCP, to initialize and manage the TCP connection:
+Crie um novo método chamado AsyncTCP, para inicializar e gerenciar a conexão TCP:
 
 ```4d
 var $myObject : cs.MyAsyncTCPConnection
@@ -116,18 +116,18 @@ $myObject.disconnect()
 
 ```
 
-Call the AsyncTCP method in a worker:
+Chamar o método AsyncTCP em um worker:
 
 ```4d
 CALL WORKER("new process"; "Async_TCP")
 
 ```
 
-### TCPConnection Object
+### Objeto TCPConnection
 
-A TCPConnection object is a non-sharable object.
+Um objeto TCPConnection é um objeto não compartilhável.
 
-TCPConnection objects provide the following properties and functions:
+Os objetos TCPConnection fornecem as seguintes propriedades e funções:
 
 |                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------- |
@@ -151,49 +151,49 @@ TCPConnection objects provide the following properties and functions:
 
 | Parâmetro     | Tipo          |                             | Descrição                                                |
 | ------------- | ------------- | --------------------------- | -------------------------------------------------------- |
-| serverAddress | Text          | ->                          | Domain name or IP address of the server                  |
-| serverPort    | Integer       | ->                          | Port number of the server                                |
+| serverAddress | Text          | ->                          | Nome de domínio ou endereço IP do servidor               |
+| serverPort    | Integer       | ->                          | Número da porta do servidor                              |
 | options       | Object        | ->                          | Configuração [opções](#options-parameter) para a conexão |
-| Resultados    | TCPConnection | <- | New TCPConnection object                                 |
+| Resultados    | TCPConnection | <- | Novo objeto TCPConnection                                |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
+A função `4D.TCPConnection.new()` <!-- REF #4D.TCPConnection.new().Summary -->cria uma nova conexão TCP com o *serverAddress* e a *serverPort* especificados, usando as *opções* definidas, e retorna um objeto `4D.HTTPRequest`<!-- END REF -->.
 
 #### `options` parameter
 
 In the *options* parameter, pass an object that can contain the following properties:
 
-| Propriedade  | Tipo       | Descrição                                                              | Por padrão |
-| ------------ | ---------- | ---------------------------------------------------------------------- | ---------- |
-| onConnection | Formula    | Callback triggered when the connection is established. | Indefinido |
-| onData       | Formula    | Callback triggered when data is received                               | Indefinido |
-| onShutdown   | Formula    | Callback triggered when the connection is properly closed              | Indefinido |
-| onError      | Formula    | Callback triggered in case of an error                                 | Indefinido |
-| onTerminate  | Formula    | Callback triggered just before the TCPConnection is released           | Indefinido |
-| noDelay      | Parâmetros | **Read-only** Disables Nagle's algorithm if `true`                     | False      |
+| Propriedade  | Tipo       | Descrição                                                             | Por padrão |
+| ------------ | ---------- | --------------------------------------------------------------------- | ---------- |
+| onConnection | Formula    | Callback acionado quando a conexão for estabelecida.  | Indefinido |
+| onData       | Formula    | Callback acionado quando os dados forem recebidos                     | Indefinido |
+| onShutdown   | Formula    | Callback acionado quando a conexão for fechada corretamente           | Indefinido |
+| onError      | Formula    | Callback acionado no caso de um erro                                  | Indefinido |
+| onTerminate  | Formula    | Callback acionada imediatamente antes de a TCPConnection ser liberada | Indefinido |
+| noDelay      | Parâmetros | **Somente leitura** Desabilita o algoritmo do Nagle se `true`         | False      |
 
 #### Funções Callback
 
-All callback functions receive two parameters:
+Todas as funções de chamada de retorno recebem dois parâmetros de objectos:
 
-| Parâmetro   | Tipo                                            | Descrição                                             |
-| ----------- | ----------------------------------------------- | ----------------------------------------------------- |
-| $connection | [objeto `TCPConnection`](#tcpconnection-object) | The current TCP connection instance.  |
-| $event      | [objeto `TCPEvent`](#tcpevent-object)           | Contains information about the event. |
+| Parâmetro   | Tipo                                            | Descrição                                          |
+| ----------- | ----------------------------------------------- | -------------------------------------------------- |
+| $connection | [objeto `TCPConnection`](#tcpconnection-object) | A instância de conexão TCP atual.  |
+| $event      | [objeto `TCPEvent`](#tcpevent-object)           | Contém informações sobre o evento. |
 
-**Sequence of Callback Calls:**
+**Sequência de chamadas de retorno:**
 
-1. `onConnection` is triggered when the connection is established.
-2. `onData` is triggered each time data is received.
-3. Either `onShutdown` or `onError` is triggered:
-   - `onShutdown` is triggered when the connection is properly closed.
-   - `onError` is triggered if an error occurs.
-4. `onTerminate` is always triggered just before the TCPConnection is released (connection is closed or an error occured).
+1. O `onConnection` é acionado quando a conexão é estabelecida.
+2. `onData` é acionado cada vez que os dados são recebidos.
+3. O `onShutdown` ou o `onError` estão ativados:
+   - O `onShutdown` é acionado quando a conexão for fechada corretamente.
+   - `onError` é acionado se ocorrer um erro.
+4. O `onTerminate` é sempre acionado logo antes de a TCPConnection ser liberada (a conexão é fechada ou ocorre um erro).
 
-#### TCPEvent object
+#### Objeto TCPEvent
 
 Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de callback](#callback-functions) é chamada.
 
@@ -219,7 +219,7 @@ A propriedade `.address` contém <!-- REF #TCPConnection.address.Summary -->o en
 
 #### Descrição
 
-A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a conexão está fechada<!-- END REF -->. Returns `true` if the connection is closed, either due to an error, a call to `shutdown()`, or closure by the server.
+A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a conexão está fechada<!-- END REF -->. Retorna `true` se a conexão for fechada, seja devido a um erro, uma chamada para `shutdown()`, ou fechamento pelo servidor.
 
 <!-- END REF -->
 
@@ -231,7 +231,7 @@ A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a c
 
 #### Descrição
 
-A propriedade `.errors` contém <!-- REF #TCPConnection.errors.Summary -->uma coleção de objetos de erro associados à conexão<!-- END REF -->. Each error object includes the error code, a description, and the signature of the component that caused the error.
+A propriedade `.errors` contém <!-- REF #TCPConnection.errors.Summary -->uma coleção de objetos de erro associados à conexão<!-- END REF -->. Cada objeto de erro inclui o código de erro, uma descrição e a assinatura do componente que causou o erro.
 
 | Propriedade |                                                                                           | Tipo       | Descrição                                            |
 | ----------- | ----------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------- |
@@ -250,7 +250,7 @@ A propriedade `.errors` contém <!-- REF #TCPConnection.errors.Summary -->uma co
 
 #### Descrição
 
-The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->the [`TCPListener`](./TCPListenerClass.md) object that created the `TCPConnection`, if any<!-- END REF -->. Essa propriedade é **somente leitura**.
+A propriedade `.listener` contém <!-- REF #TCPConnection.listener.Summary -->o objeto [`TCPListener`](./TCPListenerClass.md) que criou a `TCPConnection`, se houver<!-- END REF -->. Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -262,7 +262,7 @@ The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->th
 
 #### Descrição
 
-The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whether Nagle's algorithm is disabled (`true`) or enabled (`false`)<!-- END REF -->. Essa propriedade é **somente leitura**.
+A propriedade `.noDelay` contém <!-- REF #TCPConnection.noDelay.Summary -->se o algoritmo de Nagle está desativado (`true`) ou ativado (`false`)<!-- END REF -->. Essa propriedade é **somente leitura**.
 
 <!-- END REF -->
 
@@ -286,15 +286,15 @@ A propriedade `.port` contém <!-- REF #TCPConnection.port.Summary --> o número
 
 <!-- REF #TCPConnection.send().params -->
 
-| Parâmetro | Tipo |    | Descrição       |
-| --------- | ---- | -- | --------------- |
-| data      | Blob | -> | Data to be sent |
+| Parâmetro | Tipo |    | Descrição              |
+| --------- | ---- | -- | ---------------------- |
+| data      | Blob | -> | Dados a serem enviados |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `send()` <!-- REF #TCPConnection.send().Summary -->envia dados para o servidor<!-- END REF -->. If the connection is not established yet, the data is sent once the connection is established.
+A função `send()` <!-- REF #TCPConnection.send().Summary -->envia dados para o servidor<!-- END REF -->. Se a conexão ainda não foi estabelecida, os dados são enviados assim que a conexão for estabelecida.
 
 <!-- END REF -->
 
@@ -314,7 +314,7 @@ A função `send()` <!-- REF #TCPConnection.send().Summary -->envia dados para o
 
 #### Descrição
 
-The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes the *write* channel of the connection (client to server stream)<!-- END REF --> while keeping the *read* channel (server to client stream) open, allowing you to continue receiving data until the connection is fully closed by the server or an error occurs.
+A função `shutdown()` <!-- REF #TCPConnection.shutdown().Summary -->fecha o canal de *gravação* da conexão (fluxo do cliente para o servidor)<!-- END REF --> e mantém o canal de *leitura* (fluxo do servidor para o cliente) aberto, permitindo que você continue recebendo dados até que a conexão seja totalmente fechada pelo servidor ou ocorra um erro.
 
 <!-- END REF -->
 
@@ -326,9 +326,9 @@ The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes t
 
 <!-- REF #TCPConnection.wait().params -->
 
-| Parâmetro | Tipo |     | Descrição                    |
-| --------- | ---- | :-: | ---------------------------- |
-| timeout   | Real |  -> | Maximum wait time in seconds |
+| Parâmetro | Tipo |     | Descrição                          |
+| --------- | ---- | :-: | ---------------------------------- |
+| timeout   | Real |  -> | Tempo máximo de espera em segundos |
 
 <!-- END REF -->
 
@@ -338,7 +338,7 @@ A função `wait()` <!-- REF #TCPConnection.wait().Summary -->aguarda até que a
 
 :::note
 
-During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. Você pode sair de um `.wait()` chamando [`shutdown()`](#shutdown) de um retorno de chamada.
+Durante a execução do `.wait()`, as funções de retorno de chamada são executadas, sejam elas originadas de outras instâncias do `SystemWorker`. Você pode sair de um `.wait()` chamando [`shutdown()`](#shutdown) de um retorno de chamada.
 
 :::
 

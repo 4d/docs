@@ -9,8 +9,8 @@ https://platform.openai.com/docs/api-reference/moderations/object#moderations/ob
 
 ## プロパティ
 
-| プロパティ名           | 型       | 説明                                                                       |
-| ---------------- | ------- | ------------------------------------------------------------------------ |
-| `categories`     | Object  | Contains categories associated with the moderation item. |
-| `category_score` | Object  | Contains scores for each category.                       |
-| `flagged`        | Boolean | Indicates whether the moderation item is flagged.        |
+| プロパティ名           | 型       | 説明                                 |
+| ---------------- | ------- | ---------------------------------- |
+| `categories`     | Object  | モデレーション項目に関連づけられているカテゴリーが格納されています。 |
+| `category_score` | Object  | 各カテゴリーのスコアが格納されています。               |
+| `flagged`        | Boolean | モデレーション項目にフラグが立てられているかどうかを示します。    |

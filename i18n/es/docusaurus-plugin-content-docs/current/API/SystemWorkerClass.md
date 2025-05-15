@@ -565,7 +565,7 @@ If you pass a *timeout* value, .wait() waits for the external process for the am
 
 :::note
 
-During the `.wait()` execution, callback functions are executed, whether they originate from other `SystemWorker` instances. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
+Durante la ejecución de `.wait()`, se ejecutan funciones de retrollamda, tanto si proceden de otras instancias de `SystemWorker`. Puede salir de un `.wait()` llamando a [`terminate()`](#terminate) desde un callback.
 
 :::
 
