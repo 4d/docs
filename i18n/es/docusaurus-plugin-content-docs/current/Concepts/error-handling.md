@@ -97,7 +97,7 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 4D mantiene automáticamente una serie de variables denominadas [**variables sistema**](variables.md#system-variables), que responden a diferentes necesidades.
 :::
 
-- el comando [`Last errors`](../commands-legacy/last-errors.md) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D.
+- the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
 - el comando `Call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.
 
 #### Ejemplo
@@ -153,7 +153,7 @@ Try (expression) : any | Undefined
 
 Si se produce un error durante su ejecución, se intercepta y no se muestra ningún diálogo de error, si un [método de gestión de errores](#installing-an-error-handling-method) fue instalado o no antes de la llamada a `Try()`. Si *expression* devuelve un valor, `Try()` devuelve el último valor evaluado, en caso contrario devuelve `Define`.
 
-Puede manejar los errores utilizando el comando [`Last errors`](../commands-legacy/last-errors.md). Si *expression* arroja un error dentro de una pila de llamadas `Try()`, el flujo de ejecución se detiene y devuelve a la última ejecución `Try()` (la primera encontrada de nuevo en la pila de llamadas).
+Puede manejar los errores utilizando el comando [`Last errors`](../commands/last-errors.md). Si *expression* arroja un error dentro de una pila de llamadas `Try()`, el flujo de ejecución se detiene y devuelve a la última ejecución `Try()` (la primera encontrada de nuevo en la pila de llamadas).
 
 :::note
 
@@ -244,7 +244,7 @@ Para más información sobre errores *diferidos* y *no diferidos*, por favor con
 
 :::
 
-En el bloque de código `Catch`, puede gestionar los errores utilizando los comandos estándar de gestión de errores. La función [`Last errors`](../commands-legacy/last-errors.md) contiene la colección de los últimos errores. En este bloque de código puede declarar [un método de gestión de errores](#installing-an-error-handling-method), en cuyo caso se llama en caso de error (de lo contrario se muestra el diálogo de error de 4D).
+En el bloque de código `Catch`, puede gestionar los errores utilizando los comandos estándar de gestión de errores. La función [`Last errors`](../commands/last-errors.md) contiene la colección de los últimos errores. En este bloque de código puede declarar [un método de gestión de errores](#installing-an-error-handling-method), en cuyo caso se llama en caso de error (de lo contrario se muestra el diálogo de error de 4D).
 
 :::note
 
@@ -287,57 +287,12 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## Error codes
 
-Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. A returned error is therefore defined by three elements:
+Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. An error is therefore defined by three elements:
 
-- a **component signature**, which is the origin of the error
-- a **message**, wich explains why the error occurred
+- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
+- a **message**, which explains why the error occurred
 - a **code**, which is an arbitrary number returned by the component
 
-These information are returned for every error (when available) by the [4D error dialog box](../Debugging/basics.md) and the [`Last errors`](../commands-legacy/last-errors.md) command. Keep in mind that, if you intercept and handle errors using a [error-handling method](#installing-an-error-handling-method), you need to process all information since a simple error code could not be correctly interpreted.
+The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user.
 
-#### 4D component signatures
-
-| Component Signature       | Componente                                                          |
-| ------------------------- | ------------------------------------------------------------------- |
-| 4DCM                      | 4D Compiler runtime                                                 |
-| 4DRT                      | 4D runtime                                                          |
-| bkrs                      | 4D backup & restore manager                     |
-| brdg                      | SQL 4D bridge                                                       |
-| cecm                      | 4D code Editor                                                      |
-| CZip                      | zip 4D apis                                                         |
-| dbmg                      | 4D database manager                                                 |
-| FCGI                      | fast cgi 4D bridge                                                  |
-| FiFo                      | 4D file objects                                                     |
-| HTCL                      | http client 4D apis                                                 |
-| HTTP                      | 4D http server                                                      |
-| IMAP                      | IMAP 4D apis                                                        |
-| JFEM                      | Form Macro apis                                                     |
-| LD4D                      | LDAP 4D apis                                                        |
-| lscm                      | 4D language syntax manager                                          |
-| MIME                      | MIME 4D apis                                                        |
-| mobi                      | 4D Mobile                                                           |
-| pdf1                      | 4D pdf apis                                                         |
-| PHP_ | php 4D bridge                                                       |
-| POP3                      | POP3 4D apis                                                        |
-| SMTP                      | SMTP 4D apis                                                        |
-| SQLS                      | 4D SQL server                                                       |
-| srvr                      | 4D network layer apis                                               |
-| svg1                      | SVG 4D apis                                                         |
-| ugmg                      | 4D users and groups manager                                         |
-| UP4D                      | 4D updater                                                          |
-| VSS                       | 4D VSS support (Windows Volume Snapshot Service) |
-| webc                      | 4D Web view                                                         |
-| xmlc                      | XML 4D apis                                                         |
-| wri1                      | 4D Write Pro                                                        |
-
-#### System component signatures
-
-| Component Signature | Componente                                               |
-| ------------------- | -------------------------------------------------------- |
-| CARB                | Carbon subsystem                                         |
-| COCO                | Cocoa subsystem                                          |
-| MACH                | macOS Mach subsystem                                     |
-| POSX                | posix/bsd subsystem (mac, linux, win) |
-| PW32                | Pre-Win32 subsystem                                      |
-| WI32                | Win32 subsystem                                          |
-
+To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors.md) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.
