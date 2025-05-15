@@ -195,7 +195,7 @@ Then you can print your labels:
 
 The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
 
-- in the **Form to use** menu on the "Label" page and/or
+- en el menú **Formulario a utilizar** de la página "Etiqueta" y/o
 - en el menú **Aplicar (método)** de la página "Diseño".
 
 1. Crea un archivo JSON llamado **labels.json** y ponlo en la [carpeta de recursos](../Project/architecture.md#resources) del proyecto.
