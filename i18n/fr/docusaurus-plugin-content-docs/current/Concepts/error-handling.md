@@ -25,7 +25,7 @@ Il est fortement recommandé d'installer une méthode globale de gestion des err
 
 De nombreuses fonctions des classes 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet *status*. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
 
-D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. Cette catégorie d'erreurs génère des exceptions et doit être gérée par une méthode de gestion des erreurs ou un mot-clé `Try()`.
+D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes) and needs to be handled through an error-handling method or a `Try()` keyword.
 
 ## Installer une méthode de gestion des erreurs
 
@@ -284,3 +284,60 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 	return $newInvoice
 
 ```
+
+## Error codes
+
+Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. A returned error is therefore defined by three elements:
+
+- a **component signature**, which is the origin of the error
+- a **message**, wich explains why the error occurred
+- a **code**, which is an arbitrary number returned by the component
+
+These information are returned for every error (when available) by the [4D error dialog box](../Debugging/basics.md) and the [`Last errors`](../commands-legacy/last-errors.md) command. Keep in mind that, if you intercept and handle errors using a [error-handling method](#installing-an-error-handling-method), you need to process all information since a simple error code could not be correctly interpreted.
+
+#### 4D component signatures
+
+| Component Signature       | Composant                                                           |
+| ------------------------- | ------------------------------------------------------------------- |
+| 4DCM                      | 4D Compiler runtime                                                 |
+| 4DRT                      | 4D runtime                                                          |
+| bkrs                      | 4D backup & restore manager                     |
+| brdg                      | SQL 4D bridge                                                       |
+| cecm                      | 4D code Editor                                                      |
+| CZip                      | zip 4D apis                                                         |
+| dbmg                      | 4D database manager                                                 |
+| FCGI                      | fast cgi 4D bridge                                                  |
+| FiFo                      | 4D file objects                                                     |
+| HTCL                      | http client 4D apis                                                 |
+| HTTP                      | 4D http server                                                      |
+| IMAP                      | IMAP 4D apis                                                        |
+| JFEM                      | Form Macro apis                                                     |
+| LD4D                      | LDAP 4D apis                                                        |
+| lscm                      | 4D language syntax manager                                          |
+| MIME                      | MIME 4D apis                                                        |
+| mobi                      | 4D Mobile                                                           |
+| pdf1                      | 4D pdf apis                                                         |
+| PHP_ | php 4D bridge                                                       |
+| POP3                      | POP3 4D apis                                                        |
+| SMTP                      | SMTP 4D apis                                                        |
+| SQLS                      | 4D SQL server                                                       |
+| srvr                      | 4D network layer apis                                               |
+| svg1                      | SVG 4D apis                                                         |
+| ugmg                      | 4D users and groups manager                                         |
+| UP4D                      | 4D updater                                                          |
+| VSS                       | 4D VSS support (Windows Volume Snapshot Service) |
+| webc                      | 4D Web view                                                         |
+| xmlc                      | XML 4D apis                                                         |
+| wri1                      | 4D Write Pro                                                        |
+
+#### System component signatures
+
+| Component Signature | Composant                                                |
+| ------------------- | -------------------------------------------------------- |
+| CARB                | Carbon subsystem                                         |
+| COCO                | Cocoa subsystem                                          |
+| MACH                | macOS Mach subsystem                                     |
+| POSX                | posix/bsd subsystem (mac, linux, win) |
+| PW32                | Pre-Win32 subsystem                                      |
+| WI32                | Win32 subsystem                                          |
+
