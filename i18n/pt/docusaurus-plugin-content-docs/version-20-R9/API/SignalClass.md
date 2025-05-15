@@ -195,8 +195,8 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `.sign
 
 A função devolve o valor da propriedade .signaled:
 
-- **true** if the signal was triggered (`.trigger()` was called).
-- **false** if the timeout expired before the signal was triggered.
+- **true** se o sinal foi acionado (`.trigger()` foi chamado).
+- **false** se o tempo limite expirou antes de o sinal ser acionado.
 
 :::note Aviso
 
