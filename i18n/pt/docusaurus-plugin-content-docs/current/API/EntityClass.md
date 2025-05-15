@@ -149,7 +149,7 @@ A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compara o conteúdo
 
 No *entityToCompare*, passe a entidade a ser comparada à entidade original.
 
-In *attributesToCompare*, you can designate specific attributes to compare. Se fornecida, a comparação é feita apenas nos atributos especificados. Se não for fornecida, todas as diferenças entre as entidades são devolvidas.
+Em *attributesToCompare*, você pode designar atributos específicos para comparar. Se fornecida, a comparação é feita apenas nos atributos especificados. Se não for fornecida, todas as diferenças entre as entidades são devolvidas.
 
 As diferenças são retornadas como uma coleção de objetos cujas propriedades são:
 
