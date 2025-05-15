@@ -18,9 +18,9 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                   |
-| ----------- | -------------------------------- |
-| 20 R7       | Support of *sessionID* parameter |
+| Lanzamiento | Modificaciones                    |
+| ----------- | --------------------------------- |
+| 20 R7       | Soporte del parámetro *sessionID* |
 
 </details>
 
