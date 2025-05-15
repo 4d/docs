@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** devuelve un objeto que contiene información sobre el evento formulario que acaba de ocurrir. Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** devuelve un objeto que contiene información sobre el evento formulario que acaba de ocurrir. Por lo general, utilizará **FORM Event** en un método formulario u objeto.
 
 **Objeto devuelto**
 
