@@ -49,7 +49,7 @@ con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
 :::note
 
-La función `getCity()` debe haber sido declarada con la palabra clave `onHTTPGet` (ver [Configuración de la función](#function-configuration)).
+The `getCity()` function must have been declared with the `onHTTPGet` keyword (see [Function configuration](#function-configuration) below).
 
 :::
 
@@ -73,7 +73,7 @@ Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#ex
 
 ### `onHTTPGet`
 
-Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
