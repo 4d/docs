@@ -83,7 +83,7 @@ For example, you want to use a project method as a formula encapsulated in an ob
  $g:=$person.greeting("hi") // devuelve "hi John Smith"
 ```
 
-With the *Greeting* project method:
+Con el método proyecto *Greeting*:
 
 ```4d
  #DECLARE($greeting : Text) : Text
