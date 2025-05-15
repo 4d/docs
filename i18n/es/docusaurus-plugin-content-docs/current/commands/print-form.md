@@ -33,7 +33,7 @@ Since **Print form** does not issue a page break after printing the form, it is 
 
 Se pueden utilizar tres sintaxis diferentes:
 
-- **Detail area printing**
+- **Impresión de área de detalle**
 
 Sintaxis:
 
