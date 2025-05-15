@@ -27,7 +27,7 @@ Tenha em mente que somente funções com a [palavra-chave `exposed`](../ORDA/ord
 
 ## Chamadas funções
 
-Singleton functions can be called using REST **POST** or **GET** requests.
+As funções singleton podem ser chamadas usando solicitações REST **POST** ou **GET**.
 
 A sintaxe formal é:
 
