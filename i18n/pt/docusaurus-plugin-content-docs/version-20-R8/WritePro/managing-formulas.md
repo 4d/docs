@@ -137,7 +137,7 @@ By default, 4D formulas are displayed as values. When you insert a 4D formula, 4
 To display formulas as references, you can:
 
 - check the **Show references** option in the Property list (see *Configuring View properties*), or
-- use the visibleReferences standard action (see *Dynamic expressions*), or
+- usar a ação padrão visibleReferences (consulte *Expressões dinâmicas*), ou
 - use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk visible references` selector to **True**.
 
 Formula references can be displayed as:
