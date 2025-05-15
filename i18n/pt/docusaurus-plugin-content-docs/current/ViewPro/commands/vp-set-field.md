@@ -23,7 +23,7 @@ Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especifi
 
 The *field* parameter specifies a 4D database [virtual field](../formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. O nome da estrutura virtual do *field* pode ser visualizado na barra de fórmulas. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
 
-The optional *formatPattern* defines a pattern for the *field* parameter. Você pode passar qualquer [formato personalizado] válido(../configuring.md#cell-format).
+O *formatPattern* opcional define um padrão para o parâmetro de campo. Você pode passar qualquer [formato personalizado] válido(../configuring.md#cell-format).
 
 ## Exemplo
 
