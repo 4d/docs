@@ -338,16 +338,16 @@ WP SetAIKey ("<Your OpenAI Key>") //
 
 :::note
 
-No checking is done on the OpenAI key validity. If it is invalid, the *chatGPT* box will stay empty.
+No checking is done on the OpenAI key validity. Si no es válida, la casilla *chatGPT* permanecerá vacía.
 
 :::
 
-The **A.I.** button is then displayed:
+A continuación, aparece el botón **I.A**:
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
 - in the 4D Write Pro Toolbar, in the **Import Export** tab,
-- in the 4D Write Pro Widget, in the **Font Style** tab.
+- en el widget 4D Write Pro, en la pestaña **Estilo de fuente**.
 
 Click on the button to display the AI dialog box.
 
