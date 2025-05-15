@@ -34,7 +34,7 @@ El comando **Command name** <!--REF #_command_.Command name.Summary-->devuelve e
 
 Two optional parameters are available:
 
-- *info*: properties of the command. The returned value is a *bit field*, where the following bits are meaningful:
+- *info*: propiedades del comando. The returned value is a *bit field*, where the following bits are meaningful:
  - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
  - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors).
 
