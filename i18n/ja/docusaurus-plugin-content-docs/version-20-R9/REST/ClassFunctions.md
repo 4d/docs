@@ -50,7 +50,7 @@ POST リクエストのボディに関数に渡す引数を含めます: `["Agua
 
 :::note
 
-`getCity()` 関数は、 `onHTTPGet` キーワードを使用して宣言されている必要があります(以下の[関数の設定](#関数の設定) を参照して下さい)。
+The `getCity()` function must have been declared with the `onHTTPGet` keyword (see [Function configuration](#function-configuration) below).
 
 :::
 
@@ -74,10 +74,10 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 ### `onHTTPGet`
 
-HTTP `GET` リクエストから呼び出すことのできる関数は、[`onHTTPGet` キーワード](../ORDA/ordaClasses.md#onHTTPGet-キーワード) も使用して明確に宣言されていなければなりません。 例:
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). 例:
 
 ```4d
-// GET リクエストを許可する
+//allowing GET requests
 exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
