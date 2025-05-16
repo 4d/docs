@@ -33,7 +33,7 @@ Since **Print form** does not issue a page break after printing the form, it is 
 
 Three different syntaxes may be used:
 
-- **Detail area printing**
+- **Impressão da área de detalhe**
 
 Sintaxe:
 
@@ -43,7 +43,7 @@ Sintaxe:
 
 In this case, **Print form** only prints the Detail area (the area between the Header line and the Detail line) of the form.
 
-- **Form area printing**
+- **Impressão da área de formulário**
 
 Sintaxe:
 
@@ -79,7 +79,7 @@ In this case, the command will print the section designated by the *marker*. Pas
 | Form header8  | Integer | 208   |
 | Form header9  | Integer | 209   |
 
-- **Section printing**
+- **Impressão da seção**
 
 Sintaxe:
 
