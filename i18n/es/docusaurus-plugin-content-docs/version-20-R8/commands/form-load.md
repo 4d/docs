@@ -8,18 +8,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Params-->
 
-| Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                              |
-| ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| aTable     | Tabla        | &#8594; | Formulario tabla a cargar (si se omite, carga un formulario proyecto)                                                                                                                                 |
-| form       | Text, Object | &#8594; | Name (string) of form (project or table), ora POSIX path (string) to a .json file describing the form, or an object describing the form to open |
-| formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                                                            |
-| \*         | Operador     | &#8594; | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context)                                                                         |
+| Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                                                         |
+| ---------- | ------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable     | Tabla        | &#8594; | Formulario tabla a cargar (si se omite, carga un formulario proyecto)                                                                                                                                                            |
+| form       | Text, Object | &#8594; | Nombre (cadena) del formulario (proyecto o tabla), o una ruta POSIX (cadena) a un archivo .json que describa el formulario, o un objeto que describa el formulario a abrir |
+| formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                                                                                       |
+| \*         | Operador     | &#8594; | Si se pasa = el comando se aplica a la base de datos del host cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto)                                                                                  |
 
 <!-- END REF-->
 
 ## Descripción
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents. There can only be one current form per process.
+<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->El comando **FORM LOAD** se utiliza para cargar el *form* en memoria en el proceso actual junto con *formData* (opcional) para imprimir sus datos o analizar su contenido. Sólo puede haber un formulario actual por proceso.
 
 En el parámetro *form*, puede pasar:
 
@@ -48,7 +48,7 @@ To preserve the graphic consistency of forms, it is recommended to apply the "Pr
 
 The current printing form is automatically closed when the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command is called.
 
-### Parsing form contents
+### Análisis del contenido del formulario
 
 This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
 

@@ -30,7 +30,7 @@ Para más información, consulte la sección [Clases](../Concepts/classes.md).
 
 To delete an existing method or class, you can:
 
-- on your disk, remove the *.4dm* file from the "Sources" folder,
+- em seu disco, remova o arquivo *.4dm* da pasta "Sources",
 - in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
 > To delete an object method, choose **Clear Object Method** from the [Form editor](../FormEditor/formEditor.md) (**Object** menu or context menu).

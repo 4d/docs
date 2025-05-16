@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
 
-In *wpDoc*, pass the name of a 4D Write Pro document object.
+Em *wpDoc*, passe o nome de um objeto documento 4D Write Pro.
 
 For the optional second parameter, you can pass either:
 
@@ -48,7 +48,7 @@ The location, layer (inline, in front/behind text), visibility, and any properti
 
 **Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. You can determine if a selected object is a picture object by checking the `wk type` attribute:
 
-- **Value = 2**: The selected object is a picture object.
+- **Value = 2**: o objeto selecionado é um objeto imagem.
 - **Value = 0**: The selected object is a range object.
 
 ## Exemplo 1

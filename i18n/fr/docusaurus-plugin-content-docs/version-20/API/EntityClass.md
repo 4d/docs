@@ -1615,7 +1615,7 @@ Retourne :
 
 La fonction `touched()` <!-- REF #EntityClass.touched().Summary -->vérifie si un attribut de l'entité a été modifié depuis que l'entité a été chargée en mémoire ou sauvegardée<!-- END REF -->.
 
-Si un attribut a été modifié ou calculé, la fonction retourne Vrai, sinon elle retourne Faux. Vous pouvez utiliser cette fonction pour savoir s'il est nécessaire de sauvegarder l'entité.
+Si un attribut a été modifié ou calculé, la fonction retourne Vrai, sinon elle retourne Faux. You can use this function to determine if you need to save the entity.
 
 Cette fonction retourne Faux pour une entité qui vient d'être créée (avec [`.new( )`](DataClassClass.md#new)). A noter cependant que si vous utilisez une fonction pour calculer un attribut de l'entité, la fonction `.touched()` retournera Vrai. Par exemple, si vous appelez [`.getKey()`](#getkey) pour calculer la clé primaire, `.touched()` retourne alors Vrai.
 

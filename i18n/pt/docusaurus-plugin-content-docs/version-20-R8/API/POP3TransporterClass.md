@@ -200,7 +200,7 @@ O objeto `boxInfo` retornado contém as seguintes propriedades:
 
 A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->retorna o objeto `Email` correspondente ao *msgNumber* na caixa de correio designada pelo [`transporter POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-Pass in *msgNumber* the number of the message to retrieve. Esse número é retornado na propriedade `number` pela função [`.getMailInfoList()`](#getmailinfolist).
+Passe em *msgNumber* o número da mensagem a recuperar. Esse número é retornado na propriedade `number` pela função [`.getMailInfoList()`](#getmailinfolist).
 
 Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Somente propriedades de cabeçalhos ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) são então retornados. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
 

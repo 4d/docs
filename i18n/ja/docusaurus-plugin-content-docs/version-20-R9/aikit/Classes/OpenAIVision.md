@@ -5,7 +5,7 @@ title: OpenAIVision
 
 # OpenAIVision
 
-Helper for vision stuff.
+視覚関連のヘルパー。
 
 ## 関数
 
@@ -13,10 +13,10 @@ Helper for vision stuff.
 
 \**create*(*imageURL* : Text) : OpenAIVisionHelper
 
-| 引数         | 型                                           | 説明                                                         |
-| ---------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageURL* | Text                                        | The URL of the image to analyze.           |
-| 戻り値        | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
+| 引数         | 型                                           | 説明                    |
+| ---------- | ------------------------------------------- | --------------------- |
+| *imageURL* | Text                                        | 解析したい画像のURL。          |
+| 戻り値        | [OpenAIVisionHelper](OpenAIVisionHelper.md) | 画像を解析するためのヘルパーインスタンス。 |
 
 #### 使用例
 
@@ -29,10 +29,10 @@ var $result:=$helper.prompt("Could you describe it?")
 
 \**fromFile*(*imageFile* : 4D.File) : OpenAIVisionHelper
 
-| 引数          | 型                                           | 説明                                                         |
-| ----------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageFile* | 4D.File                     | The image file to analyze.                 |
-| 戻り値         | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
+| 引数          | 型                                           | 説明                    |
+| ----------- | ------------------------------------------- | --------------------- |
+| *imageFile* | 4D.File                     | 解析したい画像ファイル。          |
+| 戻り値         | [OpenAIVisionHelper](OpenAIVisionHelper.md) | 画像を解析するためのヘルパーインスタンス。 |
 
 #### 使用例
 
@@ -45,10 +45,10 @@ var $result:=$helper.prompt("Could you describe it?")
 
 \**fromPicture*(*image* : Picture) : OpenAIVisionHelper
 
-| 引数      | 型                                           | 説明                                                         |
-| ------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *ピクチャー* | Picture                                     | The image to analyze.                      |
-| 戻り値     | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
+| 引数      | 型                                           | 説明                    |
+| ------- | ------------------------------------------- | --------------------- |
+| *image* | Picture                                     | 解析したい画像。              |
+| 戻り値     | [OpenAIVisionHelper](OpenAIVisionHelper.md) | 画像を解析するためのヘルパーインスタンス。 |
 
 #### 使用例
 

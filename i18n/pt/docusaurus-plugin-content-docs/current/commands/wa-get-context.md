@@ -7,11 +7,11 @@ title: WA Get context
 
 <!--REF #_command_.WA Get context.Params-->
 
-| Parâmetro  | Tipo                  |                             | Descrição                                                                                                                                 |
-| ---------- | --------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador              | &#8594; | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
-| object     | Objecto de formulário | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted).                    |
-| contextObj | Object                | &#8592; | Context object if previously defined, otherwise `null`.                                                                   |
+| Parâmetro  | Tipo                  |                             | Descrição                                                                                                                                      |
+| ---------- | --------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador              | &#8594; | Se especificado, *object* é um nome de objeto (string). If omitted, *object* is a variable. |
+| object     | Objecto de formulário | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                 |
+| contextObj | Object                | &#8592; | Context object if previously defined, otherwise `null`.                                                                        |
 
 <!-- END REF-->
 

@@ -753,7 +753,7 @@ shared Function Bar($value : Integer)
 :::note
 
 - セッションシングルトンは、自動的に共有シングルトンとなります(クラスコンストラクターにおいて`shared` キーワードを使用する必要はありません)。
-- シングルトンの共有関数は、[`onHTTPGet` キーワード](../ORDA/ordaClasses.md#onhttpget-keyword) をサポートします。
+- Singleton shared functions support [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

@@ -48,8 +48,8 @@ The location, layer (inline, in front/behind text), visibility, and any properti
 
 **Nota:** el comando [WP Selection range](../commands-legacy/wp-selection-range.md) devuelve un objeto *referencia a imagen* si se selecciona una imagen anclada y un objeto *rango* si se selecciona una imagen en línea. You can determine if a selected object is a picture object by checking the `wk type` attribute:
 
-- **Value = 2**: The selected object is a picture object.
-- **Value = 0**: The selected object is a range object.
+- **Value = 2**: el objeto seleccionado es un objeto imagen.
+- **Valor = 0**: el objeto seleccionado es un objeto de rango.
 
 ## Ejemplo 1
 

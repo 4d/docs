@@ -10,6 +10,15 @@ Leia [**O que há de novo no 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20
 
 :::
 
+
+## 4D 20.7 LTS
+
+#### Destaques
+
+- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.7): lista de todos os erros corrigidos no 4D 20.7 LTS.
+
+
+
 ## 4D 20.6 LTS
 
 #### Destaques

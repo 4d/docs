@@ -22,22 +22,22 @@ title: OpenAIParameters
 
 ### ネットワークプロパティ
 
-| プロパティ          | 型         | 説明                                                                                                                                                       |
-| -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Default is 0.                                    |
-| `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                           |
-| `maxRetries`   | Integer   | The maximum number of retries for the request. (Only if code not asynchrone ie. no function provided) |
-| `extraHeaders` | Object    | Extra headers to send with the request.                                                                                                  |
+| プロパティ          | 型         | 説明                                                                          |
+| -------------- | --------- | --------------------------------------------------------------------------- |
+| `timeout`      | Real      | クライアントレベルのリクエストのデフォルトのタイムアウトをオーバーライドします(秒単位)。 デフォルトは0です。 |
+| `httpAgent`    | HTTPAgent | クライアントレベルのリクエストのデフォルトのHTTP エージェントをオーバーライドします。                               |
+| `maxRetries`   | Integer   | リクエストのリトライの最大回数。 (コードが非同期でない場合、つまり関数が提供されていない場合のみ)       |
+| `extraHeaders` | Object    | リクエストに付随して送信する追加のヘッダー。                                                      |
 
-### OpenAPI properties
+### OpenAPIプロパティ
 
-| プロパティ  | 型    | 説明                                                                                                          |
-| ------ | ---- | ----------------------------------------------------------------------------------------------------------- |
-| `user` | Text | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse. |
+| プロパティ  | 型    | 説明                                                 |
+| ------ | ---- | -------------------------------------------------- |
+| `user` | Text | エンドユーザーを表す固有の識別子。これはOpenAI が不正利用をモニターし検知するのに役立ちます。 |
 
 ## 継承クラス
 
-Several classes inherit from `OpenAIParameters` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIParameters`:
+特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIParameters` クラスを継承します。 `OpenAIParameters` 以下はクラスを拡張するクラスの一部です:
 
 - [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)
 - [OpenAIChatCompletionsMessagesParameters](OpenAIChatCompletionsMessagesParameters.md)

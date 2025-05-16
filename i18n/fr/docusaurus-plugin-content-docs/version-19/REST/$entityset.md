@@ -51,7 +51,7 @@ Voici les opérateurs logiques :
 | Opérateur | Description                                                                                                                                                         |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AND       | Retourne les entités communes aux deux entity sets                                                                                                                  |
-| OR        | Retourne les entités contenues dans les deux entity sets                                                                                                            |
+| OU        | Retourne les entités contenues dans les deux entity sets                                                                                                            |
 | EXCEPT    | Retourne les entités de l'entity set #1 moins celles de l'entity set #2                                                                                             |
 | INTERSECT | Retourne true ou false s'il existe une intersection des entités dans les deux entity sets (ce qui signifie qu'au moins une entité est commune aux deux entity sets) |
 > Les opérateurs logiques ne sont pas sensibles à la casse, vous pouvez donc écrire "AND" ou "and".
@@ -62,7 +62,7 @@ Vous trouverez ci-dessous une représentation des opérateurs logiques basés su
 
 ![](../assets/en/REST/and.png)
 
-**OR**
+**OU**
 
 ![](../assets/en/REST/or.png)
 

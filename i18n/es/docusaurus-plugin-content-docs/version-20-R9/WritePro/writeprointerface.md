@@ -327,7 +327,7 @@ The AI dialog box is available by clicking on a button in the 4D Write Pro inter
 
 To display the AI dialog box button, you need to:
 
-1. Get an API key from the [OpenAI website](https://openai.com/api/).
+1. Obtener una clave API del [sitio web OpenAI](https://openai.com/api/).
 2. Execute the following 4D code:
 
 ```4d
@@ -338,16 +338,16 @@ WP SetAIKey ("<Your OpenAI Key>") //
 
 :::note
 
-No checking is done on the OpenAI key validity. If it is invalid, the *chatGPT* box will stay empty.
+No checking is done on the OpenAI key validity. Si no es válida, la casilla *chatGPT* permanecerá vacía.
 
 :::
 
-The **A.I.** button is then displayed:
+A continuación, aparece el botón **I.A**:
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
 - in the 4D Write Pro Toolbar, in the **Import Export** tab,
-- in the 4D Write Pro Widget, in the **Font Style** tab.
+- en el widget 4D Write Pro, en la pestaña **Estilo de fuente**.
 
 Click on the button to display the AI dialog box.
 
