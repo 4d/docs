@@ -25,7 +25,7 @@ title: リリースノート
 
 :::info 評価版アプリケーション
 
-ナイトリービルド**101734**以降、アプリケーションビルド画面には評価版アプリケーションをビルドするための新しいオプションが表示されるようになりました。 See [description in the 4D Rx documentation](../../../docs/Desktop/building#build-an-evaluation-application).
+ナイトリービルド**101734**以降、アプリケーションビルド画面には評価版アプリケーションをビルドするための新しいオプションが表示されるようになりました。 詳細は[4D Rx ドキュメンテーションの説明](../../../docs/Desktop/building#build-an-evaluation-application)を参照してください。
 
 :::
 
