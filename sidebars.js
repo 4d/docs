@@ -87,8 +87,24 @@ module.exports =
                 "Debugging/debugging-remote"
               ]
             },
-            "Debugging/debugLogFiles"
-          ]
+            "Debugging/debugLogFiles",
+               {
+                  type: "category",
+                  label: "Preferences",
+                  link: {
+                    type: "doc",
+                    id: "Preferences/overview"
+                },
+                  items: [
+                    "Preferences/general",
+                    "Preferences/structure",
+                    "Preferences/forms",
+                    "Preferences/methods",
+                    "Preferences/shortcuts"
+            ]
+        }
+
+        ]
         },
         {
           type: "category",
@@ -116,22 +132,8 @@ module.exports =
             "Develop/preemptive-processes"
           ]
         },
-        "Tags/transformation-tags",
-        {
-          type: "category",
-          label: "Preferences",
-          link: {
-            type: "doc",
-            id: "Preferences/overview"
-          },
-          items: [
-            "Preferences/general",
-            "Preferences/structure",
-            "Preferences/forms",
-            "Preferences/methods",
-            "Preferences/shortcuts"
-          ]
-        }
+        "Develop-legacy/transactions",
+        "Tags/transformation-tags"
       ]
     },
     {
