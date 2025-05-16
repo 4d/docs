@@ -22,7 +22,7 @@ The command checks the compliance of each session file in the MobileApps folder 
 
 If a session file is not valid or has been deleted, the corresponding session is removed from memory.
 
-The command can return one of the following errors, that can be handled through [ON ERR CALL](on-err-call.md) and [Last errors](last-errors.md)  commands:
+The command can return one of the following errors, that can be handled through [ON ERR CALL](on-err-call.md) and [Last errors](../commands/last-errors.md)  commands:
 
 | **Component name** | **Error code** | **Description**                                                |
 | ------------------ | -------------- | -------------------------------------------------------------- |

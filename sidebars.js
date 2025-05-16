@@ -781,7 +781,7 @@ module.exports =
                 "commands-legacy/asserted",
                 "commands-legacy/filter-event",
                 "commands-legacy/get-assert-enabled",
-                "commands-legacy/last-errors",
+                "commands/last-errors",
                 "commands-legacy/method-called-on-error",
                 "commands-legacy/method-called-on-event",
                 "commands-legacy/on-err-call",

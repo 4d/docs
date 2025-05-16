@@ -39,7 +39,7 @@ O alcance deste comando determina o contexto de execução onde um erro ativa a 
 
 Pode identificar erros lendo a variável sistema Error, a qual contém o número de código do erro. Os códigos de erros são listados no tema *Códigos de Erro*. Para maior informação, consulte a seção *Erros de Sintaxe (1 -> 81)*. O valor da variável Error é significativo só no método de gestão de erros; se necessitar o código do erro no método que provocou o erro, copie a variável Error em sua própria variável processo. Também pode acessar as variáveis sistema Error method e Error line as quais contém respectivamente, o nome do método e o número de linha onde ocorreu o erro (ver *Error, Error method, Error line*).
 
-Pode usar o comando [Last errors](last-errors.md) ou [Last errors](last-errors.md)  para obter a sequência de errors (ou seja a pilha de erros) na fonte da interrupçãoo.
+Pode usar o comando [Last errors](../commands/last-errors.md) ou [Last errors](../commands/last-errors.md)  para obter a sequência de errors (ou seja a pilha de erros) na fonte da interrupçãoo.
 
 O método de gestão de erros deve tratar os erros de maneira apropriada ou mostrar uma mensagem de erro ao usuário. Os erros podem ser gerados por:
 
@@ -181,8 +181,8 @@ O método abaixo de gestão de erros ignora as interrupções de usuário e most
 
 [ABORT](abort.md)  
 *Error Handler*  
-[Last errors](last-errors.md)   
-[Last errors](last-errors.md)  
+[Last errors](../commands/last-errors.md)   
+[Last errors](../commands/last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *Variáveis sistema*  
 
