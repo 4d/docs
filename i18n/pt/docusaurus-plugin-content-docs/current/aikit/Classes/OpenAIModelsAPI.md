@@ -36,7 +36,7 @@ var $model:=$result.model
 
 ### lista()
 
-**list**(*parameters* : OpenAIParameters) : OpenAIModelListResult
+**list**(*parameters* : OpenAIParameters): OpenAIModelListResult
 
 | Parâmetro    | Tipo                                              | Descrição                                              |
 | ------------ | ------------------------------------------------- | ------------------------------------------------------ |

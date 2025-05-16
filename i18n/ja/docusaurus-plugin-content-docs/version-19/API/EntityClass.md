@@ -1540,11 +1540,12 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### 説明
 
-`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->。
+`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->。 You can use this function to determine if you need to save the entity.
 
-属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
+This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
-この関数は、([`.new( )`](DataClassClass.md#new) で作成された) 新規エンティティに対しては常に false を返します。 ただし、エンティティの属性を計算する関数を使用した場合には、`.touched()` 関数は true を返します。 たとえば、プライマリーキーを計算するために [`.getKey()`](#getkey) を呼び出した場合、`.touched()` メソッドは true を返します。
+For a new entity that has just been created (with [`.new()`](DataClassClass.md#new)), the function returns False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+
 
 #### 例題
 
@@ -1587,7 +1588,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 `.toObject()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 
-この関数は、種類 ([kind](DataClassClass.md#attributename)) が `storage` あるいは `relatedEntity` である属性に適用されます。
+This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
 リレート先のエンティティそのものが更新されていた場合 (外部キーの変更)、リレートエンティティの名称とそのプライマリーキー名が返されます。
 

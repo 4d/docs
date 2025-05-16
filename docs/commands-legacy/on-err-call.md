@@ -41,7 +41,7 @@ To stop the trapping of errors, call **ON ERR CALL** again with the desired *sco
 
 You can identify errors by reading the Error system variable, which contains the code number of the error. Error codes are listed in the *Error Codes* theme. For example, you can see the section *Syntax Errors (1 -> 81)*. The Error variable value is significant only within the error-handling method; if you need the error code within the method that provoked the error, copy the Error variable to your own process variable. You can also access the Error method, Error line and Error formula system variables which contain, respectively, the name of the method, the line number and the text of the formula where the error occurred (see [Handling errors within the method](../Concepts/error-handling.md#handling-errors-within-the-method)).
 
-You can use the [Last errors](last-errors.md) or [Last errors](last-errors.md)  command to obtain the error sequence (i.e., the error "stack") at the origin of the interruption.
+You can use the [Last errors](../commands/last-errors.md) or [Last errors](../commands/last-errors.md)  command to obtain the error sequence (i.e., the error "stack") at the origin of the interruption.
 
 The error-handling method should manage the error in an appropriate way or present an error message to the user. Errors can be generated during processing performed by:
 
@@ -176,8 +176,8 @@ The following error-handling method ignores the user interruptions and displays 
 
 [ABORT](abort.md)  
 *Error Handler*  
-[Last errors](last-errors.md)   
-[Last errors](last-errors.md)  
+[Last errors](../commands/last-errors.md)   
+[Last errors](../commands/last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *System Variables*  
 

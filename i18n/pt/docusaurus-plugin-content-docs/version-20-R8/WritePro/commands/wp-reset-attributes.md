@@ -23,7 +23,7 @@ The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summa
 
 > In the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once.
 
-In the *targetObj* parameter, you can pass either:
+No parâmetro *targetObj*, você pode passar qualquer um deles:
 
 - um intervalo, ou
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or

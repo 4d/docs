@@ -47,7 +47,7 @@ If no description is provided, it is filled with:
 | message            | text     | Description of the error.<br/> The **message** may contain placeholders that will be replaced by custom properties added to the errorObj object. Each placeholder must be specified using braces {} enclosing the name of the property to be used. If the **message** is not provided or is an empty string, the command will look for a description in the current database xliff files with a resname built as follows: ERR\_{componentSignature}\_{errCode}". |
 | deferred           | boolean  | True if the error should be deferred when the current method returns or at the end of the [Try block](https:developer.4d.com/docs/Concepts/error-handling#trycatchend-try). Default value is false.                                                                                                                                                                                                                                                                      |
 
-When you use this syntax, the *errorObj* object is returned in [Last errors](last-errors.md).
+When you use this syntax, the *errorObj* object is returned in [Last errors](../commands/last-errors.md).
 
 **Note:** It is possible to call the command several times in the same project method to generate several errors. You can use the deferred option to send all errors at once.
 
@@ -55,7 +55,7 @@ When you use this syntax, the *errorObj* object is returned in [Last errors](las
 
 It throws all current errors in **deferred mode**, meaning they will be added to a stack and handled when the calling method returns. This is typically done from within an [ON ERR CALL](on-err-call.md) callback.
 
-* **In an application:** When an error occurs, it is added to the error stack and the [ON ERR CALL](on-err-call.md) method of the application is called at the end of the current method. The [Last errors](last-errors.md) function returns the stack of errors.
+* **In an application:** When an error occurs, it is added to the error stack and the [ON ERR CALL](on-err-call.md) method of the application is called at the end of the current method. The [Last errors](../commands/last-errors.md) function returns the stack of errors.
 * **As a consequence, in a component:** The stack of errors can be sent to the host application and the [ON ERR CALL](on-err-call.md) method of the host application is called.
 
 ## Example 1 
@@ -101,7 +101,7 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 ## See also 
 
 [ASSERT](assert.md)  
-[Last errors](last-errors.md)  
+[Last errors](../commands/last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
 ## Properties

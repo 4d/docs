@@ -35,7 +35,7 @@ En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido c
 
 Se devuelve un error si el objeto *viewPro* no es válido.
 
-In *paramObj*, you can pass the following property:
+En *paramObj*, puede pasar la siguiente propiedad:
 
 | Propiedad | Tipo                        | Descripción                                                                                                                                                                                                                                                                                       |
 | --------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

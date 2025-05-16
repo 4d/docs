@@ -18,9 +18,9 @@ L'application 4D crée des process pour ses propres besoins, par exemple le proc
 Il existe plusieurs façons de créer un nouveau process :
 
 - Exécuter une méthode en mode Développement en sélectionnant la case à cocher **Nouveau process** dans la boîte de dialogue d'exécution de méthode. La méthode choisie dans ce dialogue est la méthode process.
-- Use the [`New process`](../commands-legacy/new-process.md) command. La méthode passée en tant que paramètre à la commande `New process` est la méthode process.
+- Utilisez la commande [`New process`](../commands-legacy/new-process.md). La méthode passée en tant que paramètre à la commande `New process` est la méthode process.
 - Utiliser la commande [`Execute on server`](../commands-legacy/execute-on-server.md) afin de créer une procédure stockée sur le serveur. La méthode passée en paramètre à la commande est la méthode process.
-- Use the [`CALL WORKER`](../commands-legacy/call-worker.md) command. Si le process du worker n'existe pas déjà, il est créé.
+- Utiliser la commande [`CALL WORKER`](../commands-legacy/call-worker.md). Si le process du worker n'existe pas déjà, il est créé.
 
 :::note
 
@@ -50,7 +50,7 @@ Chaque process contient des éléments spécifiques qu'il peut traiter indépend
 
 ### Éléments d'interface
 
-Les éléments d'interface sont utilisés dans les [Applications Desktop] (../category/desktop-applications). Il s'agit des éléments suivants :
+Les éléments d'interface sont utilisés dans les [Applications Desktop](../category/desktop-applications). Il s'agit des éléments suivants :
 
 - [Barre de menus](../Menus/creating.md) : Chaque process peut avoir sa propre barre de menus courante. La barre de menus du process au premier plan est la barre de menus courante de l'application.
 - Une ou plusieurs fenêtres : Chaque processus peut avoir plusieurs fenêtres ouvertes simultanément. A l'inverse, des process peuvent n'avoir pas de fenêtre du tout.
@@ -98,13 +98,13 @@ Un process worker peut être "engagé" par n'importe quel process (en utilisant 
 
 :::info
 
-In Desktop applications, a project method can also be executed with parameters in the context of any form using the [`CALL FORM`](../commands-legacy/call-form.md) command.
+Dans les applications Desktop, une méthode projet peut également être exécutée avec des paramètres dans le contexte de n'importe quel formulaire en utilisant la commande [`CALL FORM`](../commands-legacy/call-form.md).
 
 :::
 
 Cette fonctionnalité répond aux besoins suivants en matière de communication interprocess de 4D :
 
-- Étant donné qu'ils sont pris en charge par les process coopératifs et préemptifs, ils constituent la solution idéale pour la communication interprocessus dans les [process préemptifs] (preemptive.md) ([les variables interprocess sont dépréciées] (https://doc.4d.com/4Dv20/4D/20/Deprecated-or-Removed-Features.100-6259787.en.html#5868705) et ne sont pas autorisées dans les processus préemptifs).
+- Étant donné qu'ils sont pris en charge par les process coopératifs et préemptifs, ils constituent la solution idéale pour la communication interprocess dans les [process préemptifs](preemptive.md) ([les variables interprocess sont dépréciées](https://doc.4d.com/4Dv20/4D/20/Deprecated-or-Removed-Features.100-6259787.en.html#5868705) et ne sont pas autorisées dans les process préemptifs).
 - Ils constituent une alternative simple aux sémaphores, qui peuvent être lourds à mettre en place et complexes à utiliser
 
 :::note
@@ -144,10 +144,10 @@ Le process principal créé par 4D lors de l'ouverture d'une base de données po
 
 ### Identifier les process worker
 
-All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`Process info`](../commands/process-info.md) command.
+Tous les process worker, à l'exception du process principal, ont le type de process `Worker process` (5) renvoyé par la commande [`Process info`](../commands/process-info.md).
 
 Des [icônes spécifiques](../ServerWindow/processes#process-type) identifient les process worker.
 
 ### Voir également
 
-Pour plus d'informations, veuillez consulter [cet article de blog] (https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sur l'utilisation des workers.
+Pour plus d'informations, veuillez consulter [cet article de blog](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sur l'utilisation des workers.

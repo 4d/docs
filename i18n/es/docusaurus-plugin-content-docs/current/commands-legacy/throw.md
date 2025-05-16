@@ -57,7 +57,7 @@ Cuando se utiliza esta sintaxis, el objeto *errorObj* se devuelve en Últimos er
 
 Lanza todos los errores actuales en **modo diferido**, lo que significa que se añadirán a una pila y se gestionarán cuando vuelva el método que los llama. Esto se hace típicamente desde dentro de una retrollamada [ON ERR CALL](on-err-call.md).
 
-* **En una aplicación**: cuando se produce un error, se añade a la pila de errores y se llama al método [ON ERR CALL](on-err-call.md) de la aplicación al final del método actual. La función [Last errors](last-errors.md) devuelve la pila de errores.
+* **En una aplicación**: cuando se produce un error, se añade a la pila de errores y se llama al método [ON ERR CALL](on-err-call.md) de la aplicación al final del método actual. La función [Last errors](../commands/last-errors.md) devuelve la pila de errores.
 * **Como consecuencia, en un componente:** la pila de errores se puede enviar a la aplicación local y se llama al método [ON ERR CALL](on-err-call.md) de la aplicación local.
 
 ## Ejemplo 1 
@@ -103,7 +103,7 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 ## Ver también 
 
 [ASSERT](assert.md)  
-[Last errors](last-errors.md)  
+[Last errors](../commands/last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
 ## Propiedades

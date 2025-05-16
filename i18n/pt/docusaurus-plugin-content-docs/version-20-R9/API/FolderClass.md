@@ -295,7 +295,7 @@ Quando `Delete with contents` é passado:
 
 A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->move ou renomeia o objeto `Folder` (pasta de origem) para a *destinationFolder* especificada<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
 Por padrão, a pasta mantém o seu nome quando movida. Por padrão, a pasta mantém o seu nome quando movida. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 

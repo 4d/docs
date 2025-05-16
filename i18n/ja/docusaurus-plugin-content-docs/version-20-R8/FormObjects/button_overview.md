@@ -15,7 +15,7 @@ title: ボタン
 
 フォーム実行時、標準アクションが設定されたボタンは必要に応じてグレー表示されます。 たとえば、あるテーブルの1番目のレコードが表示されていると、先頭レコード (`firstRecord`) 標準アクションがついたボタンはグレー表示されます。
 
-If you want a button to perform an action that's not available as a standard action, leave the standard action field empty and write an [object method to specify the button’s action](../FormObjects/properties_Action.md#method).
+標準アクションとして提供されていない動作をボタンに実行させたい場合には、標準アクションのフィールドは空欄にしておき、 [ボタンのアクションを指定するオブジェクトメソッドを書きます](../FormObjects/properties_Action.md#メソッド)。
 通常は、イベントテーマで `On Clicked` イベントを有効にして、ボタンのクリック時にのみメソッドを実行します。 どのタイプのボタンにもメソッドを割り当てることができます。
 
 ボタンに関連付けられた変数 ([variable](properties_Object.md#変数あるいは式) 属性) は、デザインモードやアプリケーションモードでフォームが初めて開かれるときに自動で **0** に初期化されます。 ボタンをクリックすると、変数の値は **1** になります。

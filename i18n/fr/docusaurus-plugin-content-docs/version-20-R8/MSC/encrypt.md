@@ -69,7 +69,7 @@ Pour des raisons de sécurité, toutes les opérations de maintenance liées au 
 À ce stade, deux options s'offrent à vous :
 
 - entrez la phrase secrète courante(2) et cliquez sur **OK**.
-  OR
+  OU
 - connectez un périphérique tel qu'une clé USB et cliquez sur le bouton **Scanner les disques**.
 
 (1) Le trousseau 4D stocke toutes les clés de chiffrement des données valides qui ont été saisies au cours de la session d'application.\

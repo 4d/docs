@@ -832,11 +832,11 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
 ```
 
-## onHTTPGet キーワード
+## onHTTPGet keyword
 
-`onHTTPGet` キーワードを使用することで、`GET` 動詞(メソッド)を使用してHTTP リクエストを通して呼び出し可能な関数を宣言することができます。 このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
+Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
 
-`onHTTPGet` キーワードが使用できる関数は以下の通りです:
+The `onHTTPGet` keyword is available with:
 
 - ORDA データモデルクラス関数
 - [シングルトンクラス関数](../Concepts/classes.md#シングルトンクラス)
@@ -844,7 +844,7 @@ $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機�
 シンタックスは次の通りです:
 
 ```4d
-// onHTTPGet 関数を宣言する
+// declare an onHTTPGet function
 exposed onHTTPGet Function <functionName>(params) : result
 ```
 
@@ -862,7 +862,7 @@ exposed onHTTPGet Function <functionName>(params) : result
 
 ### params
 
-`onHTTPGet` キーワードを持つ関数は、[引数](../Concepts/parameters.md) を受け入れます。
+A function with `onHTTPGet` keyword accepts [parameters](../Concepts/parameters.md).
 
 HTTP GET リクエストにおいては、引数はURL 内に直接渡される必要があり、また`$params` キーワードを使用して宣言されている必要があります(引数はコレクション内に受け取られる必要があります)。
 
@@ -874,7 +874,7 @@ REST サーバードキュメントの[引数](../REST/classFunctions#引数) �
 
 ### 戻り値
 
-`onHTTPGet` キーワードを持つ関数は、サポートされる型であれば、あらゆる値を返すことが可能です([引数](../REST/classFunctions#引数)と同様です)。
+A function with `onHTTPGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
 
 :::info
 

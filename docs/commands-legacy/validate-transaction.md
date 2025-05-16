@@ -14,9 +14,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.VALIDATE TRANSACTION.Summary-->**VALIDATE TRANSACTION** accepts the transaction that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF--> The command saves the changes to the data of the database that occurred during the transaction.
+<!--REF #_command_.VALIDATE TRANSACTION.Summary-->**VALIDATE TRANSACTION** accepts the [transaction](../Develop-legacy/transactions.md) that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF--> The command saves the changes to the data of the database that occurred during the transaction.
 
-Starting with version 11 of 4D, you can nest several transactions (sub-transactions). If the main transaction is cancelled, all the sub-transactions are cancelled, even if they have been validated individually using this command.
+You can nest several transactions (sub-transactions). If the main transaction is cancelled, all the sub-transactions are cancelled, even if they have been validated individually using this command.
 
 ## System variables and sets 
 
@@ -29,7 +29,7 @@ Note that when OK is set to 0, the transaction is automatically cancelled intern
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
-*Using Transactions*  
+[Transactions](../Develop-legacy/transactions.md)
 
 ## Properties
 

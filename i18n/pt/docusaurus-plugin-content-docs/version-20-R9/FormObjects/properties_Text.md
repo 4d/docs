@@ -28,7 +28,7 @@ Define o texto selecionado para aparecer mais escuro e mais pesado.
 Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**] (../commands-legacy/object-set-font-style.md).
 
 > This is normal text.<br/>
-> **This is bold text.**
+> **Este é um texto em negrito.**
 
 #### Gramática JSON
 

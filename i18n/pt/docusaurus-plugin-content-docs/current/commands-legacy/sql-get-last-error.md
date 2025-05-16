@@ -30,7 +30,7 @@ Os dos últimos parâmetros apenas são preenchidos quando o erro vem da fonte O
 
 ## Ver também 
 
-[Last errors](last-errors.md)   
+[Last errors](../commands/last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
 
 ## Propriedades

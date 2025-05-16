@@ -33,7 +33,7 @@ Since **Print form** does not issue a page break after printing the form, it is 
 
 Se pueden utilizar tres sintaxis diferentes:
 
-- **Detail area printing**
+- **Impresión de área de detalle**
 
 Sintaxis:
 
@@ -104,7 +104,7 @@ The printer dialog boxes do not appear when you use **Print form**. The report d
 - Llamar a [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
 - Llame a [SET PRINT OPTION](../commands-legacy/set-print-option.md) y [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
 
-**Print form** builds each printed page in memory. Cada página se imprime cuando la página en memoria está llena o cuando se llama a [PAGE BREAK](../commands-legacy/page-break.md). Para asegurar la impresión de la última página después de cualquier uso de **Print form**, debe concluir con el comando [PAGE BREAK](../commands-legacy/page-break.md) (excepto en el contexto de un [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), ver nota). Otherwise, if the last page is not full, it stays in memory and is not printed.
+**Print form** crea cada página impresa en la memoria. Cada página se imprime cuando la página en memoria está llena o cuando se llama a [PAGE BREAK](../commands-legacy/page-break.md). Para asegurar la impresión de la última página después de cualquier uso de **Print form**, debe concluir con el comando [PAGE BREAK](../commands-legacy/page-break.md) (excepto en el contexto de un [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), ver nota). Otherwise, if the last page is not full, it stays in memory and is not printed.
 
 **Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. Si llama a [PAGE BREAK](../commands-legacy/page-break.md) en este caso, se imprime una página en blanco.
 

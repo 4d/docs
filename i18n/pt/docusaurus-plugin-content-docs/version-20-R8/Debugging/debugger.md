@@ -456,7 +456,7 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 
 - **Show documentation**: Opens the documentation for the target element. Este comando está disponível para:
  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
- - *4D commands, functions, class names:* Displays the online documentation.
+ - *Comandos 4D, funções e nomes de classes:* exibe a documentação on-line.
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
 - **Copiar para o Painel de Expressão**: Copia a expressão selecionada para o painel de observação personalizado.

@@ -56,7 +56,7 @@ In the *mode* parameter, pass a constant to indicate the insertion mode to be us
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Se *targetObj* não for um intervalo, *rangeUpdate* será ignorado.
 
 ## Exemplo 1
 

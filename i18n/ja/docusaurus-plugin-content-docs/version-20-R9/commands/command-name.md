@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Command name.Params-->
 
-| 引数    | 型       |                             | 説明                           |
-| ----- | ------- | --------------------------- | ---------------------------- |
-| コマンド  | Integer | &#8594; | コマンド番号                       |
-| info  | Integer | &#8592; | Command property to evaluate |
-| theme | Text    | &#8592; | Language theme of command    |
-| 戻り値   | Text    | &#8592; | Localized command name       |
+| 引数    | 型       |                             | 説明                        |
+| ----- | ------- | --------------------------- | ------------------------- |
+| コマンド  | Integer | &#8594; | コマンド番号                    |
+| info  | Integer | &#8592; | 評価するコマンドのプロパティ            |
+| theme | Text    | &#8592; | Language theme of command |
+| 戻り値   | Text    | &#8592; | Localized command name    |
 
 <!-- END REF-->
 

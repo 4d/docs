@@ -110,8 +110,8 @@ The left-hand side of the tool bar includes commands for selecting and inserting
 There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
 
 - Keyboard arrow keys move the selection of objects 1 pixel at a time.
-- **Shift** + arrow keys move the selection of objects 10 pixels at a time.
-- **Ctrl** + arrow keys enlarge or reduce the selection of objects by 1 pixel.
+- **Shift** + teclas de seta movem a seleção de objetos 10 píxeis por vez.
+- **Ctrl** + teclas de seta ampliam ou reduzem a seleção de objetos em 1 píxel.
 - **Ctrl** + **Maj** + arrow keys enlarge or reduce the selection of objects by 10 pixels.
 
 The right-hand side of the tool bar contains commands used to modify items of the label template:
@@ -138,7 +138,7 @@ The Layout page contains controls for printing labels based on the requirements 
  **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
 - **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
-- **Width** and **Height**: Sets the height and width of each label manually. They cannot be edited when the **Automatic resizing** option is checked.
+- **Width** and **Height**: Sets the height and width of each label manually. Eles não podem ser editados quando a opção **Redimensionamento automático** estiver marcada.
 - **Margins** (Top, Right, Left, Bottom): Sets the margins of your sheet. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
 - **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
@@ -201,7 +201,7 @@ The Label editor includes an advanced feature allowing you to restrict which pro
 1. Crie um arquivo JSON chamado **labels.json** e coloque-o na pasta [Resources] (../Project/architecture.md#resources) do projeto.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
 
-The contents of the **labels.json** file should be similar to:
+O conteúdo do arquivo **labels.json** deve ser semelhante a:
 
 ```json
 [ 
@@ -210,7 +210,7 @@ The contents of the **labels.json** file should be similar to:
 ]
 ```
 
-If no **labels.json** file has been defined, then no filtering is applied.
+Se nenhum arquivo **labels.json** tiver sido definido, nenhuma filtragem será aplicada.
 
 ## Managing label files
 

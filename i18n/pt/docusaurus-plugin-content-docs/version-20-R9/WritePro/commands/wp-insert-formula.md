@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary--> inserts a *formula* in *targetObj* according to the specified insertion *mode* and returns the resulting text range.<!-- END REF-->
 
-In the *targetObj* parameter, you can pass:
+No parâmetro *targetObj*, você pode passar:
 
 - um intervalo, ou
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
 - um documento 4D Write Pro.
 
-In the *formula* parameter, pass the 4D formula to evaluate. Pode passar:
+No parâmetro *formula*, passe a fórmula 4D a ser avaliada. Pode passar:
 
 - either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
 - or an object containing two properties:
@@ -57,7 +57,7 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Se *targetObj* não for um intervalo, *rangeUpdate* será ignorado.
 
 :::note
 

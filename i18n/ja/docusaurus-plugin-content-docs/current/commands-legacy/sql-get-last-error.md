@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Last errors](last-errors.md)   
+[Last errors](../commands/last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
 
 ## プロパティ

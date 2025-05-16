@@ -99,7 +99,7 @@ Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. 
 Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente.
 
 - attributes of the **storage** kind can be set or get as simple properties of the entity object,
-- attributes of the **relatedEntity** kind will return an entity,
+- atributos do tipo **relatedEntity** retornarão uma entidade,
 - attributes of the **relatedEntities** kind will return an entity selection,
 - attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
 

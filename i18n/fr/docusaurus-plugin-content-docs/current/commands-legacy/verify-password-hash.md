@@ -23,7 +23,7 @@ Cette fonction compare *motDePasse* à un *hash* généré par la commande [Gene
 
 ### Gestion des erreurs 
 
-Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](last-errors.md)  et [ON ERR CALL](on-err-call.md).
+Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](../commands/last-errors.md)  et [ON ERR CALL](on-err-call.md).
 
 | **Numéro** | **Message**                                              |
 | ---------- | -------------------------------------------------------- |

@@ -23,7 +23,7 @@ The **WP DELETE SUBSECTION** command <!--REF #_command_.WP DELETE SUBSECTION.Sum
 
 In *wpSection*, pass the section from which you want to remove the subsection elements. The section can be obtained using the [WP Get sections](../commands-legacy/wp-get-sections.md) or [WP Get section](../commands-legacy/wp-get-section.md) commands.
 
-The *subSectionType* parameter specifes the subsection to delete. You can pass one of the following constants:
+O parâmetro *subSectionType* especifica a subseção a ser excluída. You can pass one of the following constants:
 
 | Parâmetros    | Tipo    | Valor |
 | ------------- | ------- | ----- |

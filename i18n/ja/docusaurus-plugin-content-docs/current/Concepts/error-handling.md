@@ -25,7 +25,7 @@ title: エラー処理
 
 `entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
 
-ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 これらのエラーは例外を発生させ、エラー処理メソッドや `Try()` キーワードを介して対応する必要があります。
+ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes) and needs to be handled through an error-handling method or a `Try()` keyword.
 
 ## エラー処理メソッドの実装
 
@@ -98,7 +98,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 :::
 :::
 
-- the [`Last errors`](../commands-legacy/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
+- the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
 - `Call chain` コマンドは、カレントプロセス内におけるメソッド呼び出しチェーンの各ステップを説明するオブジェクトのコレクションを返します。
 
 #### 例題
@@ -154,7 +154,7 @@ Try (expression) : any | Undefined
 
 実行中にエラーが発生した場合、`Try()` の呼び出し前に [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされたかどうかに関係なく、エラーダイアログは表示されず、エラーはキャッチされます。 *expression* が値を返す場合、`Try()` は最後に評価された値を返します。値が返されない場合、`Try()` は `Undefined` を返します。
 
-You can handle the error(s) using the [`Last errors`](../commands-legacy/last-errors.md) command. *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
+You can handle the error(s) using the [`Last errors`](../commands/last-errors.md) command. *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
 
 :::note
 
@@ -245,7 +245,7 @@ End try
 
 :::
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. [`Last errors`](../commands-legacy/last-errors.md) 関数は最後のエラーに関するコレクションを格納しています。 このコードブロック内で[エラー処理メソッドを宣言する](#エラー処理メソッドの実装) こともできます。この場合エラー発生時にはそれが呼び出されます(宣言しない場合には、4Dエラーダイアログが表示されます)。
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. [`Last errors`](../commands/last-errors.md) 関数は最後のエラーに関するコレクションを格納しています。 このコードブロック内で[エラー処理メソッドを宣言する](#エラー処理メソッドの実装) こともできます。この場合エラー発生時にはそれが呼び出されます(宣言しない場合には、4Dエラーダイアログが表示されます)。
 
 :::note
 
@@ -285,3 +285,15 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 	return $newInvoice
 
 ```
+
+## Error codes
+
+Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. An error is therefore defined by three elements:
+
+- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
+- a **message**, which explains why the error occurred
+- a **code**, which is an arbitrary number returned by the component
+
+The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user.
+
+To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors.md) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.

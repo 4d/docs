@@ -21,7 +21,7 @@ title: VP Find
 
 O comando `VP Find` <!-- REF #_method_.VP Find.Summary -->pesquisa o *rangeObj* para o *searchValue*<!-- END REF -->. Podem ser utilizados parâmetros opcionais para refinar a pesquisa e/ou substituir quaisquer resultados encontrados.
 
-In the *rangeObj* parameter, pass an object containing a range to search.
+No parâmetro *rangeObj*, passe um objeto que contenha um intervalo a ser pesquisado.
 
 The *searchValue* parameter lets you pass the text to search for within the *rangeObj*.
 
