@@ -32,7 +32,7 @@ displayed_sidebar: docs
 By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. Se soportan las siguientes sintaxis:
 
 - **Compile project**(): compiles the opened project using the options defined in the Structure Settings
-- **Compile project**(*options*): compila el proyecto abierto. The *options* defined override the Structure Settings
+- **Compile project**(*options*): compila el proyecto abierto. Las *options* definidas reemplazan los parámetros de la estructura
 - **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
 - **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
 
