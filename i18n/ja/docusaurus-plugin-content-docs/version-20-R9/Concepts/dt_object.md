@@ -18,7 +18,7 @@ title: Object
  - ピクチャー(2)
  - collection
 
-(1) **非ストリームオブジェクト** である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
+(1) **非ストリームオブジェクト** である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
 
 (2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
@@ -42,18 +42,18 @@ title: Object
 
 オブジェクトのインスタンス化は、以下のいずれかの方法でおこなうことができます:
 
-- using the [`New object`](../commands-legacy/new-object.md) command,
+- [`New object`](../commands-legacy/new-object.md) コマンドを使用する。
 - `{}` 演算子を使用する。
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Database measures`](../commands-legacy/database-measures.md) or [`File`](../commands/file.md). この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](../commands-legacy/database-measures.md) や [`File`](../commands/file.md) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
 ### `New object` コマンド
 
-The [`New object`](../commands-legacy/new-object.md) command creates a new empty or prefilled object and returns its reference.
+[`New object`](../commands-legacy/new-object.md) コマンドは、空の、あるいは値の入った新規コレクションを作成し、その参照を返します。
 
 例:
 
@@ -69,7 +69,7 @@ The [`New object`](../commands-legacy/new-object.md) command creates a new empty
 
 `{}` 演算子を使って、**オブジェクトリテラル** を作成することができます。 オブジェクトリテラルとは、オブジェクトのプロパティ名とその値のペアが 0組以上含まれたセミコロン区切りのリストを中括弧 `{}` で囲んだものです。 オブジェクトリテラルのシンタックスは、空の、またはプロパティが格納されたオブジェクトを作成します。
 
-プロパティの値は式とみなされるため、プロパティ値に `{}` を使ってサブオブジェクトを作成することができます。  また、**コレクションリテラル** を作成し、参照することもできます。  また、**コレクションリテラル** を作成し、参照することもできます。  また、**コレクションリテラル** を作成し、参照することもできます。
+プロパティの値は式とみなされるため、プロパティ値に `{}` を使ってサブオブジェクトを作成することができます。  また、**コレクションリテラル** を作成し、参照することもできます。
 
 例:
 
@@ -110,8 +110,8 @@ $col:=$o.col[5] // 6
 
 二種類のオブジェクトを作成することができます:
 
-- regular (non-shared) objects, using the [`New object`](../commands-legacy/new-object.md) command or object literal syntax (`{}`). 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- shared objects, using the [`New shared object`](../commands-legacy/new-shared-object.md) command. 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
+- [`New object`](../commands-legacy/new-object.md) コマンド、またはオブジェクトリテラルのシンタックス (`{}`) を使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New shared object`](../commands-legacy/new-shared-object.md) コマンドを使用して作成する共有コレクション。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
  詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
 ## プロパティ
@@ -150,8 +150,6 @@ $col:=$o.col[5] // 6
 
 - **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの)。
  例:
- 例:
- 例:
 
 ```4d
      $age:=$myObjVar.employee.age // 変数
@@ -171,8 +169,6 @@ $col:=$o.col[5] // 6
 ```
 
 - オブジェクトを返す **プロジェクトメソッド** または **関数**。
- 例:
- 例:
  例:
 
 ```4d
