@@ -590,7 +590,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como o conteúdo da informação de um arquivo de aplicação<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
+The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. If used with another file type or with *.exe**/**.dll** files that do not already exist on disk, the function does nothing (no error is generated). 
 
 Parâmetro ***info* com um arquivo .plist (todas as plataformas)**
 
