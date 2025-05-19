@@ -29,7 +29,7 @@ title: コンポーネントの開発
 
 コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。ただし [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/ja/page1007.html) および [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/ja/page63.html) コマンドは除きます。これらのコマンドは、パラメーターにて指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
 
-[`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) と [`Get database parameter`](https://doc.4d.com/4dv20/help/command/ja/page643.html) コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
+The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
 
 さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
 
