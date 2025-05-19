@@ -5,34 +5,36 @@ title: Transactions
 
 ## Description
 
-Transactions are a series of related data modifications made to a database or datastore within a [process](./processes.md). A transaction is not saved to a database permanently until the transaction is validated. If a transaction is not completed, either because it is canceled or because of some outside event, the modifications are not saved.
+Les transactions sont une série de modifications effectuées à l'intérieur d'un process sur des données reliées entre elles. Une transaction n'est sauvegardée de façon définitive dans la base que si la transaction est validée. Si une transaction n'est pas complétée, parce qu'elle est annulée ou en raison d'un quelconque événement extérieur, les modifications ne sont pas sauvegardées.
 
-During a transaction, all changes made to the database data within a process are stored locally in a temporary buffer. If the transaction is accepted with [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md) or [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), the changes are saved permanently. If the transaction is canceled with [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md) or [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), the changes are not saved. In all cases, neither the current selection nor the current record are modified by the transaction management commands.
+Pendant une transaction, toutes les modifications effectuées sur les données de la base dans le process sont stockées localement dans un buffer temporaire. Si la transaction est acceptée avec [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md) ou [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), les changements sont sauvegardés de façon définitive. Si la transaction est annulée avec [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md) ou [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), les changements ne sont pas sauvegardés. Dans tous les cas, ni la sélection courante ni l'enregistrement courant ne sont modifiés par les commandes de gestion des transactions.
 
-4D supports nested transactions, i.e. transactions on several hierarchical levels. The number of subtransactions allowed is unlimited. The [`Transaction level`](../commands-legacy/transaction-level.md) command can be used to find out the current transaction level where the code is executed. When you use nested transactions, the result of each subtransaction depends on the validation or cancellation of the higher-level transaction. If the higher-level transaction is validated, the results of the subtransactions are confirmed (validation or cancellation). On the other hand, if the higher-level transaction is cancelled, all the subtransactions are cancelled, regardless of their respective results.
+4D prend en charge les transactions imbriquées, c'est-à-dire les transactions sur plusieurs niveaux hiérarchiques. Le nombre de sous-transactions autorisées est illimité. La commande [`Transaction level`](../commands-legacy/transaction-level.md) permet de connaître le niveau courant de transaction dans lequel le code est exécuté. Lorsque vous utilisez des transactions imbriquées, le résultat de chaque sous-transaction dépend de la validation ou de l'annulation de la transaction du niveau supérieur. Si la transaction supérieure est validée, les résultats des sous-transactions sont entérinés (validation ou annulation). En revanche, si la transaction supérieure est annulée, toutes les sous-transactions sont annulées, quels que soient leurs sous-résultats.
 
-4D includes a feature allowing you to [suspend and resume transactions](#suspending-transactions) within your 4D code. When a transaction is suspended, you can execute operations independently from the transaction itself and then resume the transaction to validate or cancel it as usual. 
 
-### Example
+4D inclut une fonctionnalité vous permettant de [suspendre temporairement et de réactiver des transactions](#suspending-transactions) dans votre code 4D. Lorsqu'une transaction est suspendue, vous pouvez exécuter des opérations indépendantes de la transaction elle-même puis la réactiver afin de la valider ou de l'annuler, de façon classique. 
 
-In this example, the database is a simple invoicing system. The invoice lines are stored in a table called [Invoice Lines], which is related to the table [Invoices] by means of a relation between the fields [Invoices]Invoice ID and [Invoice Lines]Invoice ID. When an invoice is added, a unique ID is calculated, using the [`Sequence number`](../commands-legacy/sequence-number.md) command. The relation between [Invoices] and [Invoice Lines] is an automatic Relate Many relation. The **Auto assign related value in subform** check box is checked.
+### Exemple
 
-The relation between [Invoice Lines] and [Parts] is manual.
+L'exemple de cette section s'appuie sur la structure présentée ci-dessous. C'est une base relativement simple de facturation. Les lignes de factures sont stockées dans une table appelée [Invoice Lines], qui est reliée à la table [Invoices] par une relation entre les champs [Invoices]Invoice ID et [Invoice Lines]Invoice ID. Lorsqu'une facture est ajoutée, un numéro unique est calculé avec la commande [`Sequence number`](../commands-legacy/sequence-number.md). Le lien entre [Invoices] et [Invoice Lines] est du type aller-retour automatique. L'option "Mise à jour auto dans les sous-formulaires" est cochée. La lien entre [Invoice Lines] et [Parts] est manuel.
+
 
 ![](../assets/en/Develop/transactions-structure.png)
 
 
-When a user enters an invoice, the following actions are executed:
+Quand un utilisateur saisit une facture, les actions suivantes doivent être exécutées :
 
-- Add a record in the table [Invoices].
-- Add several records in the table [Invoice Lines].
-- Update the [Parts]In Warehouse field of each part listed in the invoice.
+Ajouter un enregistrement dans la table [Invoices].
+Ajouter plusieurs enregistrements dans la table [Invoice Lines].
+Mettre à jour le champ [Parts]In Warehouse pour chaque pièce figurant sur la facture.
 
-This example is a typical situation in which you need to use a transaction. You must be sure that you can save all these records during the operation or that you will be able to cancel the transaction if a record cannot be added or updated. In other words, you must save related data. If you do not use a transaction, you cannot guarantee the logical data integrity of your database. For example, if one record of the [Parts] records is locked, you will not be able to update the quantity stored in the field [Parts]In Warehouse. Therefore, this field will become logically incorrect. The sum of the parts sold and the parts remaining in the warehouse will not be equal to the original quantity entered in the record. You can avoid such a situation by using transactions.
+En d'autres termes, vous devez sauvegarder les données liées. C'est la situation type où vous devez utiliser une transaction. Vous pourrez ainsi être certain de pouvoir soit sauvegarder tous ces enregistrements pendant l'opération, soit annuler la transaction si un enregistrement ne peut être ajouté ou mis à jour.
 
-There are several ways of performing data entry using transactions:
+Si vous n'utilisez pas une transaction, vous ne pouvez pas garantir l'intégrité logique des données de votre base. Par exemple, si un enregistrement parmi ceux de la table [Parts] est verrouillé, vous ne pourrez pas mettre à jour la quantité stockée dans le champ [Parts]In Warehouse. Ce champ sera alors logiquement incorrect. La somme des pièces vendues et restantes dans l'entrepôt ne sera pas égale à la quantité d'origine saisie dans l'enregistrement. Vous pouvez éviter cette situation en utilisant les transactions.
 
-1. You can handle the transactions yourself by using the transaction commands [`START TRANSACTION`](../commands-legacy/start-transaction.md), [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md) and [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md). You can write, for example:
+Il y a plusieurs façons d'effectuer une saisie sous transaction :
+
+1. Vous pouvez gérer les transactions en utilisant les commandes de transaction [`START TRANSACTION`](../commands-legacy/start-transaction.md), [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md) et [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md). Vous pouvez par exemple écrire :
 
 ```4d
  READ WRITE([Invoice Lines])
@@ -50,9 +52,11 @@ There are several ways of performing data entry using transactions:
  READ ONLY(*)
 ```
 
-2. To reduce record locking while performing the data entry, you can also choose to manage transactions from within the form method and access the tables in `READ WRITE` only when it becomes necessary. You perform the data entry using the input form for [Invoices], which contains the related table [Invoice Lines] in a subform. The form has two buttons: *bCancel* and *bOK*, both of which are no action buttons.
+2. Pour réduire les verrouillages des enregistrements pendant la saisie de données, vous pouvez aussi choisir de gérer les transactions à partir de la méthode du formulaire et d'accéder aux tables en LECTURE ECRITURE uniquement quand cela est nécessaire.
+Vous effectuez la saisie de données en utilisant le formulaire de saisie pour [Invoices], qui contient la table liée [Invoice Lines] dans un sous-formulaire. Le formulaire comporte deux boutons : *bAnnuler* et *bOK*. Aucune action ne leur est attribuée.
 
-The adding loop becomes:
+La boucle d'ajout devient alors :
+
 
 ```4d
  READ WRITE([Invoice Lines])
@@ -64,9 +68,10 @@ The adding loop becomes:
  READ ONLY([Invoice Lines])
 ```
 
-Note that the [Parts] table is now in read-only access mode during data entry. Read/write access will be available only if the data entry is validated.
+Notez que la table [Parts] est désormais en "lecture seulement" pendant la saisie de données. L'accès en lecture/écriture ne s'active que si les données sont validées.
 
-The transaction is started in the [Invoices] input form method listed here:
+La transaction est ouverte dans la méthode du formulaire entrée de la table [Invoices] :
+
 
 ```4d
  Case of
@@ -78,7 +83,7 @@ The transaction is started in the [Invoices] input form method listed here:
  End case
 ```
 
-If you click the *bCancel* button, the data entry as well as the transaction must be canceled. Here is the object method of the *bCancel* button:
+Si vous cliquez sur le bouton *bAnnuler*, la saisie et la transaction doivent être annulées. Voici la méthode objet du bouton *bAnnuler* :
 
 ```4d
  Case of
@@ -88,20 +93,22 @@ If you click the *bCancel* button, the data entry as well as the transaction mus
  End case
 ```
 
-If you click the *bOK* button, the data entry must be accepted and the transaction must be validated. Here is the object method of the *bOK* button:
+Si vous cliquez sur le bouton *bOK*, la saisie et la transaction doivent être acceptées. Voici la méthode objet du bouton *bOK* :
+
 
 ```4d
  Case of
     :(Form event code=On Clicked)
        var $NbLines:=Records in selection([Invoice Lines])
-       READ WRITE([Parts]) //Switch to Read/Write access for the [Parts] table
-       FIRST RECORD([Invoice Lines]) //Start at the first line
-       var $ValidTrans:=True //Assume everything will be OK
+       READ WRITE([Parts]) //Passer en lecture/écriture pour accéder à la table [Parts]
+       FIRST RECORD([Invoice Lines]) //Commencer à la première ligne
+       var $ValidTrans:=True //Tout devrait marcher
        var $Line : Integer
-       For($Line;1;$NbLines) //For each line
+       For($Line;1;$NbLines) //Pour chaque ligne
           RELATE ONE([Invoice Lines]Part No)
-          OK:=1 //Assume you want to continue
-          While(Locked([Parts]) & (OK=1)) //Try getting the record in Read/Write access
+          OK:=1 //Vous voulez continuer
+          While(Locked([Parts]) & (OK=1)) 
+          //Essayer d'obtenir l'enregistrement en lecture/écriture
              CONFIRM("The Part "+[Invoice Lines]Part No+" is in use. Wait?")
              If(OK=1)
                 DELAY PROCESS(Current process;60)
@@ -109,51 +116,54 @@ If you click the *bOK* button, the data entry must be accepted and the transacti
              End if
           End while
           If(OK=1)
-               //Update quantity in the warehouse
+               //Mettre à jour quantité dans l'entrepôt
              [Parts]In Warehouse:=[Parts]In Warehouse-[Invoice Lines]Quantity
-             SAVE RECORD([Parts]) //Save the record
+             SAVE RECORD([Parts]) //Sauvegarder l'enregistrement
           Else
-             $Line:=$NbLines+1 //Leave the loop
+             $Line:=$NbLines+1 //Sortir de la boucle
              $ValidTrans:=False
           End if
-          NEXT RECORD([Invoice Lines]) //Go next line
+          NEXT RECORD([Invoice Lines]) //Aller à la ligne suivante
        End for
-       READ ONLY([Parts]) //Set the table state to read only
+       READ ONLY([Parts]) //Mettre la table en mode lecture seulement
        If($ValidTrans)
-          SAVE RECORD([Invoices]) //Save the Invoices record
-          VALIDATE TRANSACTION //Validate all database modifications
+          SAVE RECORD([Invoices]) //Sauvegarder les enregistrements
+          VALIDATE TRANSACTION //Valider toutes les modifications de la base
        Else
-          CANCEL TRANSACTION //Cancel everything
+          CANCEL TRANSACTION //Tout annuler
        End if
-       CANCEL //Leave the form
+       CANCEL //Quitter le formulaire
  End case
 ```
 
-In this code, we call the `CANCEL` command regardless of the button clicked. The new record is not validated by a call to [`ACCEPT`](../commands-legacy/accept.md), but by the [`SAVE RECORD`](../commands-legacy/save-record.md) command. In addition, note that `SAVE RECORD` is called just before the [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md) command. Therefore, saving the [Invoices] record is actually a part of the transaction. Calling the `ACCEPT` command would also validate the record, but in this case the transaction would be validated before the [Invoices] record was saved. In other words, the record would be saved outside the transaction.
+Dans le code ci-dessus, quel que soit le bouton sur lequel l'utilisateur a cliqué, nous appelons la commande `CANCEL`. Le nouvel enregistrement n'est pas validé par un appel à [`ACCEPT`](../commands-legacy/accept.md) mais par [`SAVE RECORD`](../commands-legacy/save-record.md). De plus, vous remarquez que [`SAVE RECORD`](../commands-legacy/save-record.md) est appelée juste avant la commande [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md). Ainsi, la sauvegarde de l'enregistrement [Invoices] est partie intégrante de la transaction. Appeler la commande [`ACCEPT`](../commands-legacy/accept.md) validerait aussi l'enregistrement mais dans ce cas, la transaction serait validée avant le stockage de la facture. Autrement dit, l'enregistrement serait sauvegardé en-dehors de la transaction.
 
-Depending on your needs, you can customize your database, as shown in these examples. In the last example, the handling of locked records in the [Parts] table could be developed further.
+En fonction de vos besoins, personnalisez votre base à votre convenance, comme dans les exemples précédents. Dans le dernier exemple, la gestion du verrouillage des enregistrements de la table [Parts] pourrait être plus élaborée.
 
 
-## Suspending transactions
 
-### Principle
 
-Suspending a transaction is useful when you need to perform, from within a transaction, certain operations that do not need to be executed under the control of this transaction. For example, imagine the case where a customer places an order, thus within a transaction, and also updates their address. Next the customer changes their mind and cancels the order. The transaction is cancelled, but you do not want the address change to be reverted. This is a typical example where suspending the transaction is useful. Three commands are used to suspend and resume transactions:
+## Suspendre des transactions
 
-- [`SUSPEND TRANSACTION`](../commands-legacy/suspend-transaction.md): pauses current transaction. Any updated or added records remain locked.
-- [`RESUME TRANSACTION`](../commands-legacy/resume-transaction.md): reactivates a suspended transaction.
-- [`Active transaction`](../commands-legacy/active-transaction.md): returns False if the transaction is suspended or if there is no current transaction, and True if it is started or resumed.
+### Principe  
 
-### Example  
+Suspendre une transaction est utile notamment lorsque vous devez, depuis une transaction, lancer certaines opérations qui n'ont pas besoin d'être effectuées sous le contrôle de cette transaction. Par exemple, imaginez le cas d'un client qui passe une commande, donc via une transaction, et qui en profite pour mettre à jour son adresse postale. Finalement, le client se ravise et annule sa commande. La transaction est annulée, mais pour autant vous ne souhaitez pas que la mise à jour de l'adresse le soit également. Ce cas peut typiquement être géré via la suspension de la transaction. Trois commandes permettent de gérer la suspension et la réactivation des transactions :
 
-This example illustrates the need for a suspended transaction. In an Invoices database, we want to get a new invoice number during a transaction. This number is computed and stored in a [Settings] table. In a multi-user environment, concurrent accesses must be protected; however, because of the transaction, the [Settings] table could be locked by another user even though this data is independent from the main transaction. In this case, you can suspend the transaction when accessing the table.
+- [`SUSPEND TRANSACTION`](../commands-legacy/suspend-transaction.md): suspend la transaction courante. Tous les enregistrements en cours de mise à jour ou de création restent verrouillés.
+- [`RESUME TRANSACTION`](../commands-legacy/resume-transaction.md): réactive une transaction suspendue, le cas échéant.
+- [`Active transaction`](../commands-legacy/active-transaction.md): retourne Faux si la transaction courante est suspendue ou s'il n'y a pas de transaction courante, et Vrai si elle est démarrée ou réactivée.
+
+### Exemple  
+
+Cet exemple présente un cas typique où la suspension d'une transaction est utile. Dans une base de facturation (Invoices), nous voulons obtenir un nouveau numéro de facture durant une transaction. Ce numéro est calculé et stocké dans une table [Settings]. Dans un environnement multi-utilisateur, les accès doivent être protégés ; cependant, à cause de la transaction, la table [Settings] pourrait être verrouillée par un autre utilisateur alors même que ses données ne dépendent pas de la transaction principale. Dans ce cas, vous pouvez suspendre la transaction pour l'accès à la table.
+
 
 ```4d
-  //Standard method that creates an invoice
+  //Méthode standard qui crée une facture
  START TRANSACTION
  ...
  CREATE RECORD([Invoices])
- //call the method to get an available number
+ //appel de la méthode pour obtenir un numéro disponible
  [Invoices]InvoiceID:=GetInvoiceNum 
  ...
  SAVE RECORD([Invoices])
@@ -161,7 +171,7 @@ This example illustrates the need for a suspended transaction. In an Invoices da
 
  ```
 
-The *GetInvoiceNum* method suspends the transaction before executing. Note that this code will work even when the method is called from outside of a transaction:
+La méthode *GetInvoiceNum* suspend la transaction avant de s'exécuter. A noter que ce code fonctionnera même si la méthode est appelée en-dehors de toute transaction :
 
 ```4d
   //GetInvoiceNum project method
@@ -169,7 +179,7 @@ The *GetInvoiceNum* method suspends the transaction before executing. Note that 
  #DECLARE -> $freeNum : Integer
  SUSPEND TRANSACTION
  ALL RECORDS([Settings])
- If(Locked([Settings])) //multi-user access
+ If(Locked([Settings])) //accès multi-utilisateur
     While(Locked([Settings]))
        MESSAGE("Waiting for locked Settings record")
        DELAY PROCESS(Current process;30)
@@ -184,37 +194,39 @@ The *GetInvoiceNum* method suspends the transaction before executing. Note that 
 
 ```
 
-### Detailed operation
+### Détail du fonctionnement
 
-#### How does a suspended transaction work?  
+#### Que se passe-t-il quand une transaction est suspendue ?  
 
-When a transaction is suspended, the following principles are implemented:
+Lorsqu'une transaction est suspendue, les principes de fonctionnement suivants s'appliquent :
 
-- You can access records that were added or modified during the transaction, and you cannot see any records that were deleted during the transaction.
-- You can create, save, delete, or modify records outside the transaction.
-- You can start a new transaction, but within this included transaction you will not be able to see any records or record values that were added or modified during the suspended transaction. In fact, this new transaction is totally independent from the suspended one, similar to a transaction of another process, and since the suspended transaction could later be resumed or canceled, any added or modified records are automatically hidden for the new transaction. As soon as you commit or cancel the new transaction, you can see these records again.
-- Any records that are modified, deleted or added within the suspended transaction remain locked for other processes. If you try to modify or delete these records outside the transaction or in a new transaction, an error is generated.
+- Vous pouvez accéder aux enregistrements qui ont été ajoutés ou modifiés durant la transaction, et vous ne pouvez pas accéder aux enregistrements qui ont été supprimés durant la transaction.
+- Vous pouvez créer, sauvegarder, supprimer ou modifier des enregistrements en-dehors de la transaction.
+- Vous pouvez démarrer une nouvelle transaction, mais à l'intérieur de cette transaction incluse, vous ne pourrez pas voir les enregistrements ou les valeurs d'enregistrements qui auront été modifié(s) ou ajouté(e)s dans la transaction suspendue. En fait, cette nouvelle transaction est totalement indépendante de celle qui a été suspendue, comme s'il s'agissait d'une transaction dans un autre process, et puisque la transaction suspendue pourra être par la suite validée ou annulée, tout enregistrement modifié ou annulé est automatiquement masqué pour la nouvelle transaction. Dès que vous validerez ou annulerez cette nouvelle transaction, vous pourrez à nouveau accéder à ces enregistrements. 
+- Tous les enregistrements modifiés, supprimés ou ajoutés à l'intérieur de la transaction suspendue restent verrouillés pour les autres process. If vous tentez de modifier ou de supprimer ces enregistrements hors de la transaction ou dans une autre transaction, une erreur est générée.
 
-These implementations are summarized in the following graphic:
+Ces principes sont résumés dans le schéma suivant :
 
 ![](../assets/en/Develop/transactions-schema1.png)
 
 
-*Values edited during transaction A (ID1 record gets Val11) are not available in a new transaction (B) created during the "suspended" period. Values edited during the "suspended" period (ID2 record gets Val22 and ID3 record gets Val33) are saved even after transaction A is cancelled.*
+*Les valeurs modifiées durant la transaction A (enregistrement ID1 prend la valeur Val11) ne sont pas disponibles dans une nouvelle transaction (B) créée pendant la période de suspension. Les valeurs modifiées durant la période de suspension (enregistrement ID2 prend la valeur Val22 et enregistrement ID3 prend la valeur Val33) sont sauvegardées même après que la transaction A a été annulée.*
 
-Specific features have been added to handle errors:
+Des fonctionnalités spécifiques ont été ajoutées pour prendre en charge les erreurs :
 
-- The current record of each table becomes temporarily locked if it is modified during the transaction and is automatically unlocked when the transaction is resumed. This mechanism is important to prevent unwanted saves on parts of the transaction.
-- If you execute an invalid sequence such as start transaction / suspend transaction / start transaction / resume transaction, an error is generated. This mechanism prevents developers from forgetting to commit or cancel any included transactions before resuming the suspended transaction.
+- L'enregistrement courant de chaque table devient temporairement verrouillé s'il est modifié pendant la transaction et est automatiquement déverrouillé lorsque la transaction est réactivée. Ce mécanisme est important pour empêcher que des parties de la transaction soient sauvegardées de manière impromptue.
+- Si vous exécutez une séquence invalide telle que *start transaction / suspend transaction / start transaction / resume transaction*, une erreur est générée. Ce mécanisme prévient tout éventuel oubli de valider ou d'annuler des sous-transactions incluses avant de réactiver une transaction suspendue.
 
 
-#### Suspended transactions and process status 
 
-The [`In transaction`](../commands-legacy/in-transaction.md) command returns True when a transaction has been started, even if it is suspended. To find out whether the current transaction is suspended, you need to use the [`Active transaction`](../commands-legacy/active-transaction.md) command, which returns False in this case. 
 
-Both commands, however, also return False if no transaction has been started. You may then need to use the [`Transaction level`](../commands-legacy/transaction-level.md) command, which returns 0 in this context (no transaction started).
+#### Transactions suspendues et statut du process 
 
-The following graphic illustrates the various transaction contexts and the corresponding values returned by the transaction commands:
+La commande [`In transaction`](../commands-legacy/in-transaction.md) retourne Vrai dès qu'une transaction a été démarrée, même si elle a été suspendue. Pour savoir si la transaction courante a été suspendue, vous devez utiliser la commande [`Active transaction`](../commands-legacy/active-transaction.md) qui retourne Faux dans ce cas. 
+
+Ces deux commandes, cependant, retournent également Faux si aucune transaction n'a été démarrée. Vous pourrez alors avoir besoin d'utiliser la commande [`Transaction level`](../commands-legacy/transaction-level.md), qui retourne 0 dans ce contexte (pas de transaction démarrée).
+
+Le schéma suivant illustre les différents contextes de transaction et les valeurs correspondantes retournées par les commandes de transaction :
 
 ![](../assets/en/Develop/transactions-schema2.png)
 

@@ -23,7 +23,7 @@ displayed_sidebar: docs
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 [Transaction level](transaction-level.md)  
-*Utiliser des transactions*  
+[Transactions](../Develop-legacy/transactions.md)
 [VALIDATE TRANSACTION](validate-transaction.md)  
 
 ## Propriétés
