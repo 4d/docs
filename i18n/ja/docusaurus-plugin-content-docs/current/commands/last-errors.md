@@ -9,71 +9,71 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Params-->
 
-| 引数  | 型          |                             | 説明                          |
-| --- | ---------- | --------------------------- | --------------------------- |
-| 戻り値 | Collection | &#8592; | Collection of error objects |
+| 引数  | 型          |                             | 説明               |
+| --- | ---------- | --------------------------- | ---------------- |
+| 戻り値 | Collection | &#8592; | エラーオブジェクトのコレクション |
 
 <!-- END REF-->
 
 ## 説明
 
-<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> The stack of errors includes objects sent by the [throw](throw.md) command, if any. 
+<!--REF #_command_.Last errors.Summary-->**Last errors** コマンドは4D アプリケーションのカレントのスタックエラーをエラーオブジェクトのコレクションとして返すか、あるいはエラーが何も起きなかった場合には **null** を返します。<!-- END REF-->エラーのスタックには、 [throw](throw.md) コマンドで返されたオブジェクトも(あれば)含みます。
 
-This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command.
+このコマンドは、 [ON ERR CALL](on-err-call.md) コマンドによって実装されたエラー呼び出しメソッドから呼び出されなければなりません。
 
-Each error object contains the following properties:
+それぞれのエラーオブジェクトには、次のプロパティが格納されています:
 
-| **プロパティ**          | **型**  | **Description**                                                                             |
-| ------------------ | ------ | ------------------------------------------------------------------------------------------- |
-| errCode            | number | エラーコード                                                                                      |
-| message            | text   | エラーの詳細                                                                                      |
-| componentSignature | text   | Signature of the internal component which returned the error (see below) |
+| **プロパティ**          | **型**  | **Description**                              |
+| ------------------ | ------ | -------------------------------------------- |
+| errCode            | number | エラーコード                                       |
+| message            | text   | エラーの詳細                                       |
+| componentSignature | text   | エラーを返した内部コンポーネントの署名(以下参照) |
 
-#### Internal component signatures (4D)
+#### 内部コンポーネント署名(4D)
 
-| Component Signature       | コンポーネント                                                             |
-| ------------------------- | ------------------------------------------------------------------- |
-| 4DCM                      | 4D Compiler runtime                                                 |
-| 4DRT                      | 4D runtime                                                          |
-| bkrs                      | 4D backup & restore manager                     |
-| brdg                      | SQL 4D bridge                                                       |
-| cecm                      | 4D code Editor                                                      |
-| CZip                      | zip 4D apis                                                         |
-| dbmg                      | 4D database manager                                                 |
-| FCGI                      | fast cgi 4D bridge                                                  |
-| FiFo                      | 4D file objects                                                     |
-| HTCL                      | http client 4D apis                                                 |
-| HTTPクライアント                | 4D http server                                                      |
-| IMAP                      | IMAP 4D apis                                                        |
-| JFEM                      | Form Macro apis                                                     |
-| LD4D                      | LDAP 4D apis                                                        |
-| lscm                      | 4D language syntax manager                                          |
-| MIME                      | MIME 4D apis                                                        |
-| mobi                      | 4D Mobile                                                           |
-| pdf1                      | 4D pdf apis                                                         |
-| PHP_ | php 4D bridge                                                       |
-| POP3                      | POP3 4D apis                                                        |
-| SMTP                      | SMTP 4D apis                                                        |
-| SQLS                      | 4D SQL server                                                       |
-| srvr                      | 4D network layer apis                                               |
-| svg1                      | SVG 4D apis                                                         |
-| ugmg                      | 4D users and groups manager                                         |
-| UP4D                      | 4D updater                                                          |
-| VSS                       | 4D VSS support (Windows Volume Snapshot Service) |
-| webc                      | 4D Web view                                                         |
-| xmlc                      | XML 4D apis                                                         |
-| wri1                      | 4D Write Pro                                                        |
+| コンポーネント署名                 | コンポーネント                                                   |
+| ------------------------- | --------------------------------------------------------- |
+| 4DCM                      | 4D コンパイラランタイム                                             |
+| 4DRT                      | 4D ランタイム                                                  |
+| bkrs                      | 4D バックアップ&復元マネージャー                    |
+| brdg                      | SQL 4D ブリッジ                                               |
+| cecm                      | 4D コードエディター                                               |
+| CZip                      | zip 4DのAPI                                                |
+| dbmg                      | 4D データベースマネージャー                                           |
+| FCGI                      | fast cgi 4D ブリッジ                                          |
+| FiFo                      | 4D ファイルオブジェクト                                             |
+| HTCL                      | HTTP クライアント4D API                                         |
+| HTTPクライアント                | 4D HTTP サーバー                                              |
+| IMAP                      | IMAP 4D API                                               |
+| JFEM                      | フォームマクロAPI                                                |
+| LD4D                      | LDAP 4D API                                               |
+| lscm                      | 4D ランゲージシンタックスマネージャー                                      |
+| MIME                      | MIME 4D API                                               |
+| mobi                      | 4D Mobile                                                 |
+| pdf1                      | 4D PDF API                                                |
+| PHP_ | PFP 4D ブリッジ                                               |
+| POP3                      | POP3 4D API                                               |
+| SMTP                      | SMTP 4D API                                               |
+| SQLS                      | 4D SQL サーバー                                               |
+| srvr                      | 4D ネットワークレイヤーAPI                                          |
+| svg1                      | SVG 4D API                                                |
+| ugmg                      | 4D ユーザー&グループマネージャー                    |
+| UP4D                      | 4D アップデーター                                                |
+| VSS                       | 4D VSS サポート(Windows ボリュームスナップショットサービス) |
+| webc                      | 4D Web view                                               |
+| xmlc                      | XML 4D API                                                |
+| wri1                      | 4D Write Pro                                              |
 
-#### Internal component signatures (System)
+#### 内部コンポーネント署名(システム)
 
-| Component Signature | コンポーネント                                                  |
-| ------------------- | -------------------------------------------------------- |
-| CARB                | Carbon subsystem                                         |
-| COCO                | Cocoa subsystem                                          |
-| MACH                | macOS Mach subsystem                                     |
-| POSX                | posix/bsd subsystem (mac, linux, win) |
-| PW32                | Pre-Win32 subsystem                                      |
-| WI32                | Win32 subsystem                                          |
+| コンポーネント署名 | コンポーネント                                            |
+| --------- | -------------------------------------------------- |
+| CARB      | Carbon サブシステム                                      |
+| COCO      | Cocoa サブシステム                                       |
+| MACH      | macOS Mach サブシステム                                  |
+| POSX      | posix/bsd サブシステム(mac、linux、win) |
+| PW32      | Pre-Win32 サブシステム                                   |
+| WI32      | Win32 サブシステム                                       |
 
 ## 参照
 
