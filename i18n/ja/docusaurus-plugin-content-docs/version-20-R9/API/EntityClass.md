@@ -1640,7 +1640,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### 説明
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
 
 This only applies to attributes of [`kind`](DataClassClass.md#returned-object) "storage" or "relatedEntity".
 
