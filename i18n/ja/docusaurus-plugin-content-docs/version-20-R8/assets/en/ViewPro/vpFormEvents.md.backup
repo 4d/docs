@@ -7,4 +7,4 @@ title: 4D View Pro フォームイベント
 
 ![](vpFormEvents.PNG)
 
-一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。 一部の4D View Pro フォームイベントは、4D View Pro エリア内でイベントが生成された場合には、`FORM Event` コマンドによって返されるオブジェクト内には追加の情報が提供されます。 The following table shows which events are standard and which are specific 4D View Pro form events:
+一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。 一部の4D View Pro フォームイベントは、4D View Pro エリア内でイベントが生成された場合には、`FORM Event` コマンドによって返されるオブジェクト内には追加の情報が提供されます。 以下の表示には、どのフォームイベントが他のオブジェクトと共通で、どのフォームイベントが 4D View Pro エリアに特有のものであるのかが示されています:
