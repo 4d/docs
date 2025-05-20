@@ -3,7 +3,7 @@ id: TCPEventClass
 title: TCPEvent
 ---
 
-The `TCPEvent` class provides information about events occurring during the lifecycle of a TCP connection. It is generated when a [TCPConnection](TCPConnectionClass.md) is opened and is typically utilized in callbacks such as `onConnection`, `onData`, `onError`, and others.
+La classe `TCPEvent` fournit des informations sur les événements survenant au cours du cycle de vie d'une connexion TCP. Un événement est généré lorsqu'une [TCPConnection](TCPConnectionClass.md) est ouverte et est typiquement utilisé dans des callbacks tels que `onConnection`, `onData`, `onError`, et d'autres.
 
 <details><summary>Historique</summary>
 
@@ -13,9 +13,9 @@ The `TCPEvent` class provides information about events occurring during the life
 
 </details>
 
-### TCPEvent Object
+### Objet TCPEvent
 
-A `TCPEvent` object is immutable and non-streamable.
+Un objet `TCPEvent` est immutable et non-streamable.
 
 Les propriétés suivantes sont disponibles :
 
@@ -32,11 +32,11 @@ Les propriétés suivantes sont disponibles :
 
 #### Description
 
-The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
+La propriété `.data` contient <!-- REF #TCPEvent.data.Summary -->les données associées à l'événement<!-- END REF -->. Elle n'est valide que pour les événements de type `"data"`.
 
 :::note
 
-When working with low-level TCP/IP connections, keep in mind there is no guarantee that all data will arrive in a single packet. Data arrives in order but may be fragmented across multiple packets.
+Lorsque vous travaillez avec des connexions TCP/IP de bas niveau, n'oubliez pas qu'il n'y a aucune garantie que toutes les données arrivent en un seul paquet. Les données arrivent dans l'ordre mais peuvent être fragmentées en plusieurs paquets.
 
 :::
 
@@ -50,13 +50,13 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 #### Description
 
-The `.type` property contains <!-- REF #TCPEvent.type.Summary -->the type of the event<!-- END REF -->. Valeurs possibles :
+La propriété `.type` contient <!-- REF #TCPEvent.type.Summary -->le type d'événement<!-- END REF -->. Valeurs possibles :
 
-- `"connection"`: Indicates that a TCPConnection was successfully established.
-- `"data"`: Indicates that data has been received.
-- `"error"`: Indicates that an error occurred during the TCPConnection.
-- `"close"`: Indicates that the TCPConnection has been properly closed.
-- `"terminate"`: Indicates that the TCPConnection is about to be released.
+- `"connection"` : indique qu'une connexion TCP a été établie avec succès.
+- `"data"` : indique que des données ont été reçues.
+- `"error"`: indique qu'une erreur est survenue pendant la TCPConnection.
+- `"close"` : indique que la connexion TCP a été correctement fermée.
+- `"terminate"` : indique que la connexion TCP est sur le point d'être libérée.
 
 <!-- END REF -->
 
