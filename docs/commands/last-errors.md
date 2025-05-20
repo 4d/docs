@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> The stack of errors includes objects sent by the [throw](throw.md) command, if any. 
 
-This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command.
+This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
 
 Each error object contains the following properties:
 
