@@ -979,7 +979,7 @@ Exemple avec option `dk reload if stamp changed` :
 
 La fonction `.next()` <!-- REF #EntityClass.next().Summary -->retourne une référence vers l'entité suivante dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-|
+Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
 S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous êtes sur la dernière entité de la sélection), la fonction retourne Null. Si l'entité suivante a été supprimée, la fonction renvoie l'entité valide suivante (et finalement Null).
 
@@ -1021,7 +1021,7 @@ S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous ête
 
 La fonction `.previous()` <!-- REF #EntityClass.previous().Summary --> retourne une référence vers l'entité précédente dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-|
+Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
 Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
@@ -1539,11 +1539,11 @@ Retourne :
 
 #### Description
 
-La fonction `touched()` <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+La fonction `touched()` <!-- REF #EntityClass.touched().Summary -->renvoie True si au moins un attribut de l'entité a été modifié depuis que l'entité a été chargée en mémoire ou sauvegardée<!-- END REF -->. Vous pouvez utiliser cette fonction pour déterminer si vous devez sauvegarder l'entité.
 
-This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
+Ceci ne s'applique qu'aux attributs du [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
-For a new entity that has just been created (with [`.new()`](DataClassClass.md#new)), the function returns False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Pour une nouvelle entité qui vient d'être créée (avec [`.new()`](DataClassClass.md#new)), la fonction renvoie False. Toutefois, dans ce contexte, si vous accédez à un attribut dont [la propriété`autoFilled`](./DataClassClass.md#returned-object) est True, la fonction `.touched()` renverra alors True. Par exemple, après avoir exécuté `$id:=ds.Employee.ID` pour une nouvelle entité (en supposant que l'attribut ID possède la propriété "Autoincrement"), `.touched()` renvoie True.
 
 
 #### Exemple
@@ -1587,7 +1587,7 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 
 La fonction `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary -->retourne les noms des attributs qui ont été modifiés depuis que l'entité a été chargée en mémoire<!-- END REF -->.
 
-This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
+Ceci ne s'applique qu'aux attributs du [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
 Dans le cas d'un attribut relationnel ayant été "touché" (i.e., la clé étrangère), le nom de l'entité liée et celui de sa clé primaire sont retournés.
 

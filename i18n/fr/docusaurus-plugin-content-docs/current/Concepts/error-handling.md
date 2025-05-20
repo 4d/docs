@@ -33,7 +33,7 @@ Dans 4D, toutes les erreurs peuvent être détectées et traitées par des méth
 
 Une fois installés, les gestionnaires d'erreurs sont automatiquement appelés en mode interprété ou compilé en cas d'erreur dans l'application 4D ou l'un de ses composants. Un gestionnaire d'erreur différent peut être appelé en fonction du contexte d'exécution (voir ci-dessous).
 
-To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command with the project method name and (optionnally) scope as parameters. Par exemple :
+Pour *installer* une méthode de gestion des erreurs, il suffit d'appeler la commande [`ON ERR CALL`](../commands-legacy/on-err-call.md) avec le nom de la méthode projet et (optionnellement) le champ d'application en paramètres. Par exemple :
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Installe une méthode locale de gestion des erreurs
@@ -98,7 +98,7 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 :::
 
 - the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
-- the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
+- la commande `Call chain` qui renvoie une collection d'objets décrivant chaque étape de la chaîne d'appel de méthode dans le process en cours.
 
 #### Exemple
 

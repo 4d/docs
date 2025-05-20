@@ -515,11 +515,11 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 `.setAppInfo()` 関数は、 <!-- REF #FileClass.setAppInfo().Summary -->*info* に渡したプロパティを **.exe** や **.dll**、**.plist** ファイルの情報として書き込みます<!-- END REF -->。
 
-この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は何もしません (エラーは生成されません)。
-
-> この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
 **.exe または .dll ファイル用の *info* オブジェクト**
+
+The function must be used with an existing and valid .exe or .dll file, otherwise it does nothing (no error is generated).
+
 
 > .exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。
 
@@ -539,6 +539,8 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
 
 **.plist ファイル用の *info* オブジェクト**
+
+> この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
 *info* オブジェクトに設定された各プロパティは .plist ファイルにキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
 

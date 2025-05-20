@@ -17,7 +17,7 @@ title: 識別子の命名規則
 
 クラス名は、ドット記法のための標準的な [プロパティ名の命名規則](Concepts/dt_object.md#オブジェクトプロパティ識別子) に準拠している必要があります。
 
-> Giving the same name to a class and a [database table](#tables-and-fields) is not recommended, in order to prevent any conflict.
+> 同じ名前をクラスと[データベーステーブル](#tables-and-fields) につけることは、あらゆるコンフリクトを避けるため推奨されていません。
 
 ## 関数
 
@@ -29,7 +29,7 @@ title: 識別子の命名規則
 
 プロパティ名 (オブジェクト *属性* とも呼びます) は255文字以内の文字列で指定します。
 
-オブジェクトプロパティは、スカラー値・ORDA要素・クラス関数・他のオブジェクト等を参照できます。 Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](./dt_object.md#properties)**:
+オブジェクトプロパティは、スカラー値・ORDA要素・クラス関数・他のオブジェクト等を参照できます。 参照先に関わらず、**[ドット記法](dt_object.md#プロパティ) を使用するには** オブジェクトプロパティ名は次の命名規則に従う必要があります:
 
 - 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
 - その後の文字には、文字・数字・アンダースコア(_)・ドル記号 ($) が使用できます。

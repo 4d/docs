@@ -590,7 +590,7 @@ $fhandle:=$f.open("read")
 
 `.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。
 
-この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 ファイルがディスク上に存在しない、または、サポートされているファイルでない場合、この関数は何もしません (エラーは生成されません)。
+この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 If used with another file type or with *.exe*\*/**.dll** files that do not already exist on disk, the function does nothing (no error is generated).
 
 **.plist ファイル用の*info* オブジェクト (全プラットフォーム)**
 
@@ -600,9 +600,11 @@ $fhandle:=$f.open("read")
 
 :::
 
-*info* オブジェクトに設定された各プロパティは .plist ファイルにキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
+If the .plist file already exists on the disk, it is updated. Otherwise, it is created.
 
-*info* に設定されたキーが .plist ファイル内ですでに定義されている場合は、その値が更新され、元の型が維持されます。 .plist ファイルに既存のそのほかのキーはそのまま維持されます。
+Each valid property set in the *info* object parameter is written in the .plist file as a key. あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
+
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. .plist ファイルに既存のそのほかのキーはそのまま維持されます。
 
 :::note
 
@@ -610,9 +612,9 @@ $fhandle:=$f.open("read")
 
 :::
 
-**.exe または .dll ファイル用の *info* パラメーター(Windowsのみ)**
+***info* parameter object with a .exe or .dll file (Windows only)**
 
-*info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
 | プロパティ            | 型    | 説明                                                                   |
 | ---------------- | ---- | -------------------------------------------------------------------- |
@@ -626,40 +628,40 @@ $fhandle:=$f.open("read")
 | OriginalFilename | Text |                                                                      |
 | WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
 
-`WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
+For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. テキストでない型の値を渡した場合には、文字列に変換されます。
 
-`WinIcon` プロパティにおいては、アイコンファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
+For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-**macOS 実行ファイル用の *info* パラメーター(macOSのみ)**
+***info* parameter object with a macOS executable file (macOS only)**
 
-*info* オブジェクトは、[`getAppInfo()`](#getappinfo) から返されるフォーマットのオブジェクトのコレクションである、`archs` という単一のプロパティのみを持つ構造でなければなりません。 各オブジェクトは少なくとも`type` および `uuid` プロパティを格納していなければなりません(`name` は使用されません)。
+*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
-つまり、*info*.archs コレクション内のすべてのオブジェクトは、以下のプロパティを持っている必要があります:
+Every object in the *info*.archs collection must contain the following properties:
 
-| プロパティ | 型      | 説明                   |
-| ----- | ------ | -------------------- |
-| type  | Number | 編集したいアーキテクチャーの数値識別子  |
-| uuid  | Text   | 新しい実行ファイルUUIDのテキスト表現 |
+| プロパティ | 型      | 説明                                                 |
+| ----- | ------ | -------------------------------------------------- |
+| type  | Number | Numerical identifier of the architecture to modify |
+| uuid  | Text   | Textual representation of the new executable uuid  |
 
 #### 例題 1
 
 ```4d
-  // info.plist ファイルのキーをいくつか設定します (すべてのプラットフォーム)
+  // set some keys in an info.plist file (all platforms)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2023" // テキスト
-$info.ProductVersion:=12 // 整数
-$info.ShipmentDate:="2023-04-22T06:00:00Z" // タイムスタンプ
-$info.CFBundleIconFile:="myApp.icns" // macOS 用
+$info.Copyright:="Copyright 4D 2023" //text
+$info.ProductVersion:=12 //integer
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
 #### 例題 2
 
 ```4d
-  // .exe ファイルの著作権、バージョン、およびアイコン情報を設定します (Windows)
+  // set copyright, version and icon of a .exe file (Windows)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -674,18 +676,18 @@ $exeFile.setAppInfo($info)
 #### 例題 3
 
 ```4d
-// アプリケーションのUUIDを再生成する(macOS)
+// regenerate uuids of an application (macOS)
 
-// myApp のUUIDを読み出す
+// read myApp uuids 
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 
-// すべてのアーキテクチャー用にUUIDを再生成
+// regenerate uuids for all architectures
 For each ($i; $info.archs)
 	$i.uuid:=Generate UUID
 End for each 
 
-// アプリを新しいUUIDに更新する
+// update the app with the new uuids
 $app.setAppInfo($info)
 ```
 
@@ -709,15 +711,15 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| 引数      | 型    |    | 説明            |
-| ------- | ---- | -- | ------------- |
-| content | BLOB | -> | ファイルの新しいコンテンツ |
+| 引数      | 型    |    | 説明                        |
+| ------- | ---- | -- | ------------------------- |
+| content | BLOB | -> | New contents for the file |
 
 <!-- END REF -->
 
 #### 説明
 
-`.setContent()` 関数は、<!-- REF #FileClass.setContent().Summary -->*content* 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 #### 例題
 
@@ -756,11 +758,11 @@ $app.setAppInfo($info)
 
 #### 説明
 
-`.setText()` 関数は、<!-- REF #FileClass.setText().Summary -->*text* に渡されたテキストをファイルの新しいコンテンツとして書き込みます<!-- END REF -->。
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
-`File` オブジェクトで参照されているファイルがディスク上に存在しない場合、このメソッドがそのファイルを作成します。 ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。 ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
+If the file referenced in the `File` object does not exist on the disk, it is created by the function. ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。 ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
 
-*text* には、ファイルに書き込むテキストを渡します。 テキストリテラル ("my text" など) のほか、4Dテキストフィールドや変数も渡せます。
+In *text*, pass the text to write to the file. テキストリテラル ("my text" など) のほか、4Dテキストフィールドや変数も渡せます。
 
 任意で、コンテンツの書き込みに使用する文字セットを渡します。 これには、次の二つの方法があります:
 
@@ -771,7 +773,7 @@ $app.setAppInfo($info)
 
 文字セットにバイトオーダーマーク (BOM) が存在し、かつその文字セットに "-no-bom" 接尾辞 (例: "UTF-8-no-bom") が含まれていない場合、4D は BOM をファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで "UTF-8" の文字セットを BOMなしで使用します。
 
-*breakMode* には、ファイルを保存する前に改行文字に対しておこなう処理を指定する倍長整数を渡します。 **System Documents** テーマ内にある、以下の定数を使用することができます:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 | 定数                            | 値 | 説明                                                                                                                                                                |
 | ----------------------------- | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -783,7 +785,7 @@ $app.setAppInfo($info)
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
-> **互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 詳細はdoc.4d.com 上の[互換性ページ](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.ja.html) を参照してください。
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
 
 #### 例題
 
