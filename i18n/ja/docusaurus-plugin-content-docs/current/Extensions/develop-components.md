@@ -11,13 +11,13 @@ title: コンポーネントの開発
 
 - **マトリクスプロジェクト**: コンポーネント開発に使用する4D プロジェクト。 マトリクスプロジェクトは特別な属性を持たない標準のプロジェクトです。 マトリクスプロジェクトはひとつのコンポーネントを構成します。
 - **ホストプロジェクト**: コンポーネントがインストールされ、それを使用するアプリケーションプロジェクト。
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.
+- **コンポーネント**: [ホストアプリケーションにインストール](../Project/components.md) され、同アプリケーションによって使用されるマトリクスプロジェクトのこと。マトリクスプロジェクトはコンパイルし、[ビルド](Desktop/building.md#コンポーネントをビルド) することができます。
 
 ## 基本
 
 4D コンポーネントの作成とインストールは直接 4D を使用しておこないます:
 
-- To use a component, you simply need to [install it in your application](../Project/components.md).
+- コンポーネントを使用するには、[アプリケーションにインストール](../Project/components.md) するだけです。
 - 言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
 - コンポーネントは次の 4D の要素を呼び出すことができます: クラス、関数、プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リストなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
 - コンポーネント内でデータストアや標準のテーブル、データファイルを使用することはできません。 しかし、外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
@@ -27,13 +27,13 @@ title: コンポーネントの開発
 
 [使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
 
-When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
+コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。 ただし[`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) と [`EXECUTE METHOD`](../commands-legacy/execute-method.md) コマンドは除きます。これらはコマンドで指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
 
-The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
+[`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) および [`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
 
 さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
 
-The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used to obtain the list of components that are loaded by the host project.
+[`COMPONENT LIST`](../commands-legacy/component-list.md) コマンドを使用して、ホストプロジェクトにロードされたコンポーネントのリストを取得できます。
 
 ### 使用できないコマンド
 
