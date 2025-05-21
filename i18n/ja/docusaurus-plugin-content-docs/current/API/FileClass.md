@@ -590,7 +590,7 @@ $fhandle:=$f.open("read")
 
 `.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。
 
-この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 If used with another file type or with a **.exe**/**.dll** file that does not already exist on disk, the function does nothing (no error is generated).
+この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
 
 **.plist ファイル用の*info* オブジェクト (全プラットフォーム)**
 
@@ -600,11 +600,11 @@ $fhandle:=$f.open("read")
 
 :::
 
-If the .plist file already exists on the disk, it is updated. Otherwise, it is created.
+もし .plist ファイルがディスク上に既に存在する場合、それは更新されます。 そうでない場合には、作成されます。
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
+*info* オブジェクト引数内に設定されたそれぞれの有効なプロパティは、 .plist ファイル内にキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. .plist ファイルに既存のそのほかのキーはそのまま維持されます。
+*info* 引数内に設定されたキーが.plist ファイル内に既に定義されていた場合には、元の型を保ったまま値が更新されます。 .plist ファイルに既存のそのほかのキーはそのまま維持されます。
 
 :::note
 
@@ -612,9 +612,9 @@ If a key set in the *info* parameter is already defined in the .plist file, its 
 
 :::
 
-***info* parameter object with a .exe or .dll file (Windows only)**
+**.exe または .dll ファイル用の*info* オブジェクト(Windows のみ)**
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
+*info* オブジェクト引数内に設定されているそれぞれの有効なプロパティは、.exe あるいは .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
 | プロパティ            | 型    | 説明                                                                   |
 | ---------------- | ---- | -------------------------------------------------------------------- |
@@ -628,40 +628,40 @@ Each valid property set in the *info* object parameter is written in the version
 | OriginalFilename | Text |                                                                      |
 | WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. テキストでない型の値を渡した場合には、文字列に変換されます。
+`WinIcon` を除き全てのプロパティにおいて、値としてnull または空の文字列を渡した場合、プロパティには空の文字列が書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+`WinIcon` プロパティにおいては、ファイルが存在しない、または不正なフォーマットだった場合にはエラーが生成されます。
 
-***info* parameter object with a macOS executable file (macOS only)**
+**macOS 実行ファイル用の *info* パラメーター(macOSのみ)**
 
-*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*info* オブジェクトは単一の`archs` という名前のプロパティを持ち、そのコレクションの中に[`getAppInfo()`](#getappinfo) から返されるフォーマットのオブジェクトを格納していなければなりません。 それぞれのオブジェクトには、少なくとも`type` および `uuid` プロパティが格納されている必要があります(`name` は使用されません)。
 
-Every object in the *info*.archs collection must contain the following properties:
+*info*.archs コレクション内のそれぞれのオブジェクトは、以下のプロパティを格納していなければなりません:
 
-| プロパティ | 型      | 説明                                                 |
-| ----- | ------ | -------------------------------------------------- |
-| type  | Number | Numerical identifier of the architecture to modify |
-| uuid  | Text   | Textual representation of the new executable uuid  |
+| プロパティ | 型      | 説明                   |
+| ----- | ------ | -------------------- |
+| type  | Number | 編集したいアーキテクチャーの数値識別子  |
+| uuid  | Text   | 新しい実行ファイルUUIDのテキスト表現 |
 
 #### 例題 1
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
+  // info.plist ファイル内のキーを一部設定する(全プラットフォーム用)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2023" //text
-$info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
-$info.CFBundleIconFile:="myApp.icns" //for macOS
+$info.Copyright:="Copyright 4D 2023" //テキスト
+$info.ProductVersion:=12 //整数
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //タイムスタンプ
+$info.CFBundleIconFile:="myApp.icns" //macOS用
 $infoPlistFile.setAppInfo($info)
 ```
 
 #### 例題 2
 
 ```4d
-  // set copyright, version and icon of a .exe file (Windows)
+  // .exe ファイルに対して著作権、バージョン、およびアイコンを設定する(Windows用)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -676,18 +676,18 @@ $exeFile.setAppInfo($info)
 #### 例題 3
 
 ```4d
-// regenerate uuids of an application (macOS)
+// アプリケーションのUUIDを再生成する (macOS)
 
-// read myApp uuids 
+// myApp UUIDを読み出す
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 
-// regenerate uuids for all architectures
+// 全てのアーキテクチャー用にUUIDを再生成する
 For each ($i; $info.archs)
 	$i.uuid:=Generate UUID
 End for each 
 
-// update the app with the new uuids
+// 新しいUUID でアプリを更新する
 $app.setAppInfo($info)
 ```
 
