@@ -9,29 +9,29 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Params-->
 
-| Paramètres | Type       |                             | Description                 |
-| ---------- | ---------- | --------------------------- | --------------------------- |
-| Résultat   | Collection | &#8592; | Collection of error objects |
+| Paramètres | Type       |                             | Description                |
+| ---------- | ---------- | --------------------------- | -------------------------- |
+| Résultat   | Collection | &#8592; | Collection d'objets erreur |
 
 <!-- END REF-->
 
 ## Description
 
-<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> The stack of errors includes objects sent by the [throw](throw.md) command, if any. 
+<!--REF #_command_.Last errors.Summary-->La commande **Last errors** renvoie la pile d'erreurs courante de l'application 4D sous la forme d'une collection d'objets erreur, ou **null** si aucune erreur ne s'est produite.<!-- END REF--> La pile d'erreurs inclut les objets envoyés par la commande [throw](throw.md), le cas échéant. 
 
-This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command.
+Cette commande doit être appelée à partir d'une méthode d'appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md) ou dans un contexte [Try ou Try/Catch](../Concepts/error-handling.md#tryexpression).
 
-Each error object contains the following properties:
+Chaque objet erreur contient les propriétés suivantes :
 
-| **Propriété**      | **Type** | **Description**                                                                             |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------- |
-| errCode            | number   | Code d'erreur                                                                               |
-| message            | text     | Description de l'erreur                                                                     |
-| componentSignature | text     | Signature of the internal component which returned the error (see below) |
+| **Propriété**      | **Type** | **Description**                                                                            |
+| ------------------ | -------- | ------------------------------------------------------------------------------------------ |
+| errCode            | number   | Code d'erreur                                                                              |
+| message            | text     | Description de l'erreur                                                                    |
+| componentSignature | text     | Signature du composant interne qui a renvoyé l'erreur (voir ci-dessous) |
 
-#### Internal component signatures (4D)
+#### Signatures des composants internes (4D)
 
-| Component Signature       | Composant                                                           |
+| Signature du composant    | Composant                                                           |
 | ------------------------- | ------------------------------------------------------------------- |
 | 4DCM                      | 4D Compiler runtime                                                 |
 | 4DRT                      | 4D runtime                                                          |
@@ -64,16 +64,16 @@ Each error object contains the following properties:
 | xmlc                      | XML 4D apis                                                         |
 | wri1                      | 4D Write Pro                                                        |
 
-#### Internal component signatures (System)
+#### Signatures des composants internes (système)
 
-| Component Signature | Composant                                                |
-| ------------------- | -------------------------------------------------------- |
-| CARB                | Carbon subsystem                                         |
-| COCO                | Cocoa subsystem                                          |
-| MACH                | macOS Mach subsystem                                     |
-| POSX                | posix/bsd subsystem (mac, linux, win) |
-| PW32                | Pre-Win32 subsystem                                      |
-| WI32                | Win32 subsystem                                          |
+| Signature du composant | Composant                                                |
+| ---------------------- | -------------------------------------------------------- |
+| CARB                   | Carbon subsystem                                         |
+| COCO                   | Cocoa subsystem                                          |
+| MACH                   | macOS Mach subsystem                                     |
+| POSX                   | posix/bsd subsystem (mac, linux, win) |
+| PW32                   | Pre-Win32 subsystem                                      |
+| WI32                   | Win32 subsystem                                          |
 
 ## Voir également
 
