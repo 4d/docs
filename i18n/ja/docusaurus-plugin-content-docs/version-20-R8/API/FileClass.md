@@ -544,7 +544,7 @@ The function must be used with an existing and valid .exe or .dll file, otherwis
 
 > .exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
+*info* オブジェクト引数内に設定されているそれぞれの有効なプロパティは、.exe あるいは .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
 | プロパティ            | 型    | 説明                                                                   |
 | ---------------- | ---- | -------------------------------------------------------------------- |
@@ -558,24 +558,24 @@ Each valid property set in the *info* object parameter is written in the version
 | OriginalFilename | Text |                                                                      |
 | WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. テキストでない型の値を渡した場合には、文字列に変換されます。
+`WinIcon` を除き全てのプロパティにおいて、値としてnull または空の文字列を渡した場合、プロパティには空の文字列が書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+`WinIcon` プロパティにおいては、ファイルが存在しない、または不正なフォーマットだった場合にはエラーが生成されます。
 
 **.plist ファイル用の *info* オブジェクト**
 
 > この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
+*info* オブジェクト引数内に設定されたそれぞれの有効なプロパティは、 .plist ファイル内にキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. .plist ファイルに既存のそのほかのキーはそのまま維持されます。
+*info* 引数内に設定されたキーが.plist ファイル内に既に定義されていた場合には、元の型を保ったまま値が更新されます。 .plist ファイルに既存のそのほかのキーはそのまま維持されます。
 
 > 日付型の値を定義するには、Xcode plist エディターのようにミリ秒を除いた ISO UTC 形式の JSONタイムスタンプ文字列 (例: "2003-02-01T01:02:03Z") を使用します。
 
 #### 例題
 
 ```4d
-  // set copyright, version and icon of a .exe file (Windows)
+  // .exe ファイルに対して著作権、バージョン、およびアイコンを設定する(Windows用)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -588,15 +588,15 @@ $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
+  // info.plist ファイル内のキーを一部設定する(全プラットフォーム用)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2023" //text
-$info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
-$info.CFBundleIconFile:="myApp.icns" //for macOS
+$info.Copyright:="Copyright 4D 2023" //テキスト
+$info.ProductVersion:=12 //整数
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //タイムスタンプ
+$info.CFBundleIconFile:="myApp.icns" //macOS用
 $infoPlistFile.setAppInfo($info)
 ```
 
