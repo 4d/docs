@@ -47,7 +47,7 @@ L'architecture du dossier `Documentation` est la suivante :
     + `Formulaires`
         * loginDial.md
         * ...
-    + `Methods`
+    + `Méthodes`
         * myMethod.md
         * ...
     + `TableForms`
