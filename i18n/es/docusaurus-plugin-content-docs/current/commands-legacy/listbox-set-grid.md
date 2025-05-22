@@ -27,7 +27,7 @@ Pase en los parámetros *horizontal* y *vertical* los valores booleanos que indi
 ## Ver también 
 
 [LISTBOX GET GRID](listbox-get-grid.md)  
-[LISTBOX Get property](listbox-get-property.md)  
+[LISTBOX Get property](../commands/listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
 
 ## Propiedades

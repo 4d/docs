@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX Get property](listbox-get-property.md)  
+[LISTBOX Get property](../commands/listbox-get-property.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  

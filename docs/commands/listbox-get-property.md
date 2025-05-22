@@ -1,8 +1,6 @@
 ---
 id: listbox-get-property
 title: LISTBOX Get property
-slug: /commands/listbox-get-property
-displayed_sidebar: docs
 ---
 
 <!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *object* ; *property* ) : any<!-- END REF-->
@@ -79,7 +77,7 @@ In addition, it is not possible to return values from more than one column at a 
 Given a listbox "MyListbox", if you execute the following statement:
 
 ```4d
- $Value:=LISTBOX Get property(*;"MyListbox";lk selection mode) // value returned indicates selection mode
+ $Value:=LISTBOX Get property(*;"MyListbox";lk selection mode) // value returned indicates selection mode
 ```
 
 In this case, the result returned indicates whether multiple rows can be selected.
@@ -89,7 +87,7 @@ In this case, the result returned indicates whether multiple rows can be selecte
 Given a list box "MyListbox", if you execute the following statement:
 
 ```4d
- $resizable:=LISTBOX Get property(*;"MyListbox";lk column resizable)
+ $resizable:=LISTBOX Get property(*;"MyListbox";lk column resizable)
 ```
 
 **LISTBOX Get property** returns -1 because the lk column resizable property applies to columns and a list box was passed as parameter.
