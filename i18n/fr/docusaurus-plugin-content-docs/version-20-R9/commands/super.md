@@ -19,7 +19,7 @@ Le mot-clé `Super` <!-- REF #_command_.Super.Summary -->permet les appels à la
 
 `Super` peut être utilisé de deux différentes manières :
 
-1. A l'intérieur du code de la fonction [constructeur](../Concepts/classes.md#class-constructor), `Super` est une commande qui permet d'appeler le constructeur de la superclass. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. A l'intérieur du code de la fonction [constructor](../Concepts/classes.md#class-constructor), `Super` est une commande qui permet d'appeler le constructeur de la superclass. Dans une fonction constructor, la commande `Super` est utilisée seule et doit être appelée avant que le mot-clé `This` soit utilisé.
 
 - Si tous les class constructors dans l'arbre des héritages ne sont pas appelés correctement, l'erreur -10748 et générée. Il est de la responsabilité du développeur 4D de s'assurer que tous les appels sont valides.
 - Si la commande `This` est appelée sur un objet dont les superclasses n'ont pas été construites, l'erreur -10743 est générée.
@@ -32,7 +32,7 @@ Super($text1) //appel du constructeur de la superclasse avec un paramètre text
 This.param:=$text2 // utilisation d'un second param
 ```
 
-2. Inside a [class function](../Concepts/classes.md#function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. A l'intérieur d'une [fonction de classe](../Concepts/classes.md#function), `Super` désigne le prototype de la [`superclass`](../API/ClassClass.md#superclass) et permet d'appeler une fonction de la hiérarchie de la superclasse.
 
 ```4d
 Super.doSomething(42) //appelle la fonction "doSomething"   
@@ -67,11 +67,11 @@ Class extends Rectangle
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Rectangle's width and height
+ // Appelle le constructeur de la classe parente avec les dimensions
+ // fournies pour la largeur et la hauteur du Rectangle
  Super($side;$side)
- // In derived classes, Super must be called 
- // before you can use 'This'
+ // Dans les classes dérivées, Super doit être appelé
+ // avant que vous puissiez utiliser 'This'
  This.name:="Square"
 
 Function getArea() : Integer
@@ -111,7 +111,7 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 ## Voir également
 
-[**Concept page for Classes**](../Concepts/classes.md).
+[**Page de Concept pour les Classes**](../Concepts/classes.md).
 
 ## Propriétés
 

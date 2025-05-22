@@ -620,15 +620,15 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| 引数      | 型    |    | 説明                        |
-| ------- | ---- | -- | ------------------------- |
-| content | BLOB | -> | New contents for the file |
+| 引数      | 型    |    | 説明            |
+| ------- | ---- | -- | ------------- |
+| content | BLOB | -> | ファイルの新しいコンテンツ |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+`.setContent()` 関数は、<!-- REF #FileClass.setContent().Summary -->*content* 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 #### 例題
 
@@ -667,11 +667,11 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### 説明
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+`.setText()` 関数は、<!-- REF #FileClass.setText().Summary -->*text* に渡されたテキストをファイルの新しいコンテンツとして書き込みます<!-- END REF -->。
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。 ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
+`File` オブジェクトで参照されているファイルがディスク上に存在しない場合、この関数がそのファイルを作成します。 ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。 ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
 
-In *text*, pass the text to write to the file. テキストリテラル ("my text" など) のほか、4Dテキストフィールドや変数も渡せます。
+*text* には、ファイルに書き込むテキストを渡します。 テキストリテラル ("my text" など) のほか、4Dテキストフィールドや変数も渡せます。
 
 任意で、コンテンツの書き込みに使用する文字セットを渡します。 これには、次の二つの方法があります:
 
@@ -682,7 +682,7 @@ In *text*, pass the text to write to the file. テキストリテラル ("my tex
 
 文字セットにバイトオーダーマーク (BOM) が存在し、かつその文字セットに "-no-bom" 接尾辞 (例: "UTF-8-no-bom") が含まれていない場合、4D は BOM をファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで "UTF-8" の文字セットを BOMなしで使用します。
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+*breakMode* には、ファイルを保存する前に改行文字に対して行う処理を指定する整数を渡します。 **System Documents** テーマ内にある、以下の定数を使用することができます:
 
 | 定数                            | 値 | 説明                                                                                                                                                                |
 | ----------------------------- | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -694,7 +694,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
-**Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
+**互換性に関する注記:** EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 詳細については、doc.4d.com 上の[互換性ページ](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.ja.html)を参照してください。
 
 #### 例題
 
