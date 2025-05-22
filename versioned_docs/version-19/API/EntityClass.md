@@ -594,15 +594,14 @@ The following generic code duplicates any entity:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk key as string`: primary key is returned as a string, no matter the primary key type|
-|Result|Text|<-|Value of the text primary key of the entity|
-|Result|Integer|<-|Value of the numeric primary key of the entity|
+|Result|any|<-|Value of the primary key of the entity (Integer or Text)|
 
 <!-- END REF -->
 
