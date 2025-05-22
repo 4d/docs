@@ -166,15 +166,15 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 *options* に渡すオブジェクトは、次のプロパティを持つことができます:
 
-| プロパティ             | 型       | 説明                                                                                                                                       | デフォルト                          |
-| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| onConnection      | Formula | 接続が確立した時にトリガーされるコールバック                                                                                                                   | 未定義                            |
-| onData            | Formula | データが受信されたときにトリガーされるコールバック                                                                                                                | 未定義                            |
-| onShutdown        | Formula | 接続が適切に閉じられた時にトリガーされるコールバック                                                                                                               | 未定義                            |
-| onError           | Formula | エラーの場合にトリガーされるコールバック                                                                                                                     | 未定義                            |
-| onTerminate       | Formula | TCPConnection がリリースされる直前にトリガーされるコールバック                                                                                                   | 未定義                            |
-| noDelay           | Boolean | **読み出し専用** `true` の場合にはNagle のアルゴリズムを無効化します                                                                                              | false                          |
-| connectionTimeout | Real    | Maximum time (in seconds) to establish the connection. If exceeded, the connection attempt is aborted | System-defined, generally ≥ 30 |
+| プロパティ             | 型       | 説明                                                             | デフォルト                 |
+| ----------------- | ------- | -------------------------------------------------------------- | --------------------- |
+| onConnection      | Formula | 接続が確立した時にトリガーされるコールバック                                         | 未定義                   |
+| onData            | Formula | データが受信されたときにトリガーされるコールバック                                      | 未定義                   |
+| onShutdown        | Formula | 接続が適切に閉じられた時にトリガーされるコールバック                                     | 未定義                   |
+| onError           | Formula | エラーの場合にトリガーされるコールバック                                           | 未定義                   |
+| onTerminate       | Formula | TCPConnection がリリースされる直前にトリガーされるコールバック                         | 未定義                   |
+| noDelay           | Boolean | **読み出し専用** `true` の場合にはNagle のアルゴリズムを無効化します                    | false                 |
+| connectionTimeout | Real    | 接続を確立するまでの最大時間(秒単位)。 これを超えると、接続を試みるのを中止します。 | システムによって定義、一般的には30 以上 |
 
 #### コールバック関数
 
