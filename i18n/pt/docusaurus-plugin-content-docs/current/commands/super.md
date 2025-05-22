@@ -112,9 +112,9 @@ Parâmetros
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1706                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1706                        |
+| Thread safe       | &check; |
 
 

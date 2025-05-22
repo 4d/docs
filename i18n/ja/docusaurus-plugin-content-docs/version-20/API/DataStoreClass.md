@@ -80,14 +80,14 @@ title: DataStore
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
 
- var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
+var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
 
- $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
- $frenchStudents:=Open datastore($connectTo;"french")
+$connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
+$frenchStudents:=Open datastore($connectTo;"french")
 
- $connectTo.hostname:="192.168.18.11:8050"
- $foreignStudents:=Open datastore($connectTo;"foreign")
-  //...
+$connectTo.hostname:="192.168.18.11:8050"
+$foreignStudents:=Open datastore($connectTo;"foreign")
+//...
   //...
  $firstFrench:=getFirst("french";"Students")
  $firstForeign:=getFirst("foreign";"Students")
@@ -126,7 +126,7 @@ title: DataStore
 
 #### 説明
 
-`Open datastore` コマンドは、 <!-- REF #_command_.Open datastore.Summary -->*connectionInfo* 引数が指定する 4Dデータベースにアプリケーションを接続します<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
+`Open datastore` コマンドは、 <!-- REF #_command_.Open datastore.Summary -->*connectionInfo* 引数が指定する 4Dデータベースにアプリケーションを接続します。<!-- END REF --> ローカルエイリアス*localID*と紐づけられた`4D.DataStoreImplementation`オブジェクトが返されます。
 
 *connectionInfo* で指定する 4Dデータベースはリモートデーターストアとして利用可能でなければなりません。つまり、以下の条件を満たしている必要があります:
 
@@ -138,7 +138,7 @@ title: DataStore
 
 *localID* 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 *localID* 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに *localID* のセッションが新規に作成されます。
 
-Objects available in the `4D.DataStoreImplementation` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+`4D.DataStoreImplementation` のオブジェクトは[変換のルール](ORDA/dsMapping.md#general-rules)に従い、リモートデータストアからマッピングされます。
 
 一旦セッションが開かれると、以下の 2行の宣言は同等のものとなり、同じデータストアオブジェクトへの参照を返します:
 
@@ -172,10 +172,10 @@ user / password を指定せずにリモートデータストアに接続しま�
 
 ```4d
  var $connectTo : Object
- var $remoteDS : 4D.DataStoreImplementation
- $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
- $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+var $remoteDS : 4D.DataStoreImplementation
+$connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
+$remoteDS:=Open datastore($connectTo;"students")
+ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 #### 例題 2
@@ -184,11 +184,11 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 ```4d
  var $connectTo : Object
- var $remoteDS : 4D.DataStoreImplementation
- $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
+var $remoteDS : 4D.DataStoreImplementation
+$connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
- $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+$remoteDS:=Open datastore($connectTo;"students")
+ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 #### 例題 3
@@ -197,13 +197,13 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
- $connectTo:=New object("hostname";"192.168.18.11:8044")
- $frenchStudents:=Open datastore($connectTo;"french")
- $connectTo.hostname:="192.168.18.11:8050"
- $foreignStudents:=Open datastore($connectTo;"foreign")
- ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
- ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
+var $frenchStudents; $foreignStudents : 4D.DataStoreImplementation
+$connectTo:=New object("hostname";"192.168.18.11:8044")
+$frenchStudents:=Open datastore($connectTo;"french")
+$connectTo.hostname:="192.168.18.11:8050"
+$foreignStudents:=Open datastore($connectTo;"foreign")
+ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
+ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
 #### エラー管理
@@ -491,7 +491,7 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 > コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+返されるコレクション内の各オブジェクトは、 [`.getRemoteContextInfo()`](#getremotecontextinfo) に列挙されているプロパティをそれぞれ持ちます。
 
 #### 例題
 
@@ -594,11 +594,11 @@ $info:=$ds.getAllRemoteContexts()
 
 ```4d
   var $remoteDS : 4D.DataStoreImplementation
-  var $info; $connectTo : Object
+var $info; $connectTo : Object
 
- $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
- $remoteDS:=Open datastore($connectTo;"students")
- $info:=$remoteDS.getInfo()
+$connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
+$remoteDS:=Open datastore($connectTo;"students")
+$info:=$remoteDS.getInfo()
 
   //{"type":"4D Server",
   //"localID":"students",
@@ -798,7 +798,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 `.makeSelectionsAlterable()` 関数は、 <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->カレントアプリケーションのデータストアにおいて、すべての新規エンティティセレクションをデフォルトで追加可能に設定します<!-- END REF --> ([リモートデータストア](ORDA/remoteDatastores.md) を含む)。 これはたとえば `On Startup` データベースメソッドなどで、一度だけ使用することが想定されています。
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
+この関数が呼ばれなかった場合、新規エンティティセレクションが共有可能かどうかは、共有可能エンティティセレクションを"元"にしたのか、あるいは[どんな関数を呼び出して作成したのか](ORDA/entities.md#共有可能追加可能なエンティティセレクション)で決まります。
 
 > この関数は、`OB Copy` または [`.copy()`](./EntitySelectionClass.md#copy) に `ck shared` オプションを明示的に使用して作成されたエンティティセレクションには適用されません。
 
@@ -1205,27 +1205,27 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 ```4d
  var $connect; $status : Object
- var $person : cs.PersonsEntity
- var $ds : 4D.DataStoreImplementation
- var $choice : Text
- var $error : Boolean
+var $person : cs.PersonsEntity
+var $ds : 4D.DataStoreImplementation
+var $choice : Text
+var $error : Boolean
 
- Case of
+Case of
     :($choice="local")
        $ds:=ds
     :($choice="remote")
        $connect:=New object("hostname";"111.222.3.4:8044")
        $ds:=Open datastore($connect;"myRemoteDS")
- End case
+End case
 
- $ds.startTransaction()
- $person:=$ds.Persons.query("lastname=:1";"Peters").first()
+$ds.startTransaction()
+$person:=$ds.Persons.query("lastname=:1";"Peters").first()
 
- If($person#Null)
+If($person#Null)
     $person.lastname:="Smith"
     $status:=$person.save()
- End if
- ...
+End if
+...
  ...
  If($error)
     $ds.cancelTransaction()

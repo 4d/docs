@@ -116,13 +116,13 @@ Os nomes das bandeiras personalizadas devem respeitar esta regra: a palavra-chav
 > - Para que uma palavra-chave seja tida em conta, tem de ser true.
 > - A interpretação dos marcadores de palavras-chave pode variar por cliente de correio.
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -203,13 +203,13 @@ Charsets possíveis:
 | mail mode UTF8                 | US-ASCII_UTF8_QP                                  | headerCharset & bodyCharset: US-ASCII se possível, caso contrário UTF-8 & Quoted-printable (**valor padrão**)                                                                                                |
 | modo de correio UTF8 na base64 | US-ASCII_UTF8_B64                                 | headerCharset & bodyCharset: US-ASCII se possível, caso contrário UTF-8 & base64                                                                                                                                                |
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -304,13 +304,13 @@ Pode passar:
 
 O parâmetro destinationBox permite-lhe passar um valor de texto com o nome da caixa de correio onde as cópias das mensagens serão colocadas.
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -405,13 +405,13 @@ Por outras palavras, uma tentativa de criar "Projectos/IMAP/Doc" num servidor em
 
 No parâmetro `name`, passe o nome da nova caixa de correio.
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -483,13 +483,13 @@ Pode passar:
 
 A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). As mensagens sinalizadas são excluídas do servidor IMAP com a função [`.expunge()`](#expunge) ou selecionando outra caixa de correio ou quando o [objeto transportador](#imap-transporter-object) (criado com [IMAP New transporter](../commands/imap-new-transporter.md)) é destruído.
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -581,15 +581,15 @@ No parâmetro `name`, passe o nome da caixa de correio a ser excluída.
 > - Todas as mensagens na caixa de correio eliminadas serão também eliminadas.
 > - A capacidade de apagar uma caixa de correio depende do servidor de correio.
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
-| errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
+| errors      |                                                                                             | Collection | Pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
 |             | \[].message            | Text       | Descrição do erro 4D                                                                               |
 |             | \[].componentSignature | Text       | Assinatura da componente interna que devolveu o erro                                               |
@@ -650,15 +650,15 @@ End if
 
 #### Descrição
 
-The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
+A função `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->remove todas as mensagens com a bandeira "deletado" do servidor IMAP.<!-- END REF --> O marcador "apagada" pode ser definida com os métodos .delete() ou .addFlags() .
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -726,7 +726,7 @@ No parâmetro opcional *name*, passe o nome da caixa de correio a ser acessada. 
 
 Se o *nome* da caixa de correio não for selecionável ou não existir, a função gera um erro e retorna **null**.
 
-**Returned object**
+**Objeto devolvido**
 
 O objeto `boxInfo` retornado contém as seguintes propriedades:
 
@@ -791,16 +791,16 @@ No parâmetro opcional `parameters`, passe um objeto que contenha valores para f
 
 Cada objecto da coleção devolvida contém as seguintes propriedades:
 
-| Propriedade                                                                          | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| \[].name        | Text       | Nome da nova caixa de correio. Retornado se withBoxProperties=true ou withBoxInfo=true                                                                                                                                                                                                                                                                                           |
-| \[].selectable  | Parâmetros | Indica se os direitos de acesso permitem ou não que a caixa de correio seja selecionada: <ul><li>true - a caixa de correio pode ser selecionada</li><li>false - a caixa de correio não pode ser selecionada</li></ul>	Retornado se withBoxProperties=true                                                                                                                        |
-| \[].inferior    | Parâmetros | Indica se os direitos de acesso permitem ou não a criação de uma hierarquia inferior na caixa de correio: <ul><li>true - um nível inferior pode ser criado</li><li>false - um nível inferior não pode ser criado</li></ul>	Retornado se withBoxProperties=true                                                                                                                   |
-| \[].interesting | Parâmetros | Indica se a caixa de correio foi marcada como "interessante" pelo servidor: <ul><li>true - A caixa de correio foi marcada como "interessante" pelo servidor. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true |
-| [].mailCount     | Number     | Número de mensagens na caixa de entrada. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                           |
-| [].mailRecent    | Number     | Número de mensagens marcadas como "recent" (indicando novas mensagens). Retornado se withBoxInfo=true                                                                                                                                                                                                                                                         |
-| [].mailUnseen    | Number     | Número de mensagens marcadas como "unseen". Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                        |
-| [].id            | Text       | Identificador exclusivo da caixa de correio. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                       |
+| Propriedade                                                                          | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \[].name        | Text       | Nome da nova caixa de correio. Retornado se withBoxProperties=true ou withBoxInfo=true                                                                                                                                                                                                                                                                                                        |
+| \[].selectable  | Parâmetros | Indica se os direitos de acesso permitem ou não que a caixa de correio seja selecionada: <ul><li>true - a caixa de correio pode ser selecionada</li><li>false - a caixa de correio não pode ser selecionada</li></ul>	Retornado se withBoxProperties=true                                                                                                                                     |
+| \[].inferior    | Parâmetros | Indica se os direitos de acesso permitem ou não a criação de uma hierarquia inferior na caixa de correio: <ul><li>true - um nível inferior pode ser criado</li><li>false - um nível inferior não pode ser criado</li></ul>	Retornado se withBoxProperties=true                                                                                                                                |
+| \[].interesting | Parâmetros | Indica se a caixa de correio foi marcada como "interessante" pelo servidor: <ul><li>true - A caixa de correio foi marcada como "interessante" pelo servidor. Por exemplo, ela pode conter novas mensagens.</li><li>false - A caixa de correio não foi marcada como "interessante" pelo servidor.</li></ul>Retornado se withBoxProperties=true |
+| [].mailCount     | Number     | Número de mensagens na caixa de entrada. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                                        |
+| [].mailRecent    | Number     | Número de mensagens marcadas como "recent" (indicando novas mensagens). Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                      |
+| [].mailUnseen    | Number     | Número de mensagens marcadas como "unseen". Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                                     |
+| [].id            | Text       | Identificador exclusivo da caixa de correio. Retornado se withBoxInfo=true                                                                                                                                                                                                                                                                                                                    |
 
 Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecção vazia.
 
@@ -1011,10 +1011,10 @@ O parâmetro opcional *options* permite que você defina as partes das mensagens
 
 **Options**
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                           |
-| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen  | Parâmetros | Se Verdadeiro, as mensagens especificadas são marcadas como "vistas" na caixa de correio. Se falso, as mensagens não são marcadas como "vistas". Valor padrão: True |
-| withBody    | Parâmetros | Pass True para devolver o corpo das mensagens especificadas. Se falso, apenas os cabeçalhos das mensagens são devolvidos. Valor padrão: True                        |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                     |
+| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen  | Parâmetros | Se True, as mensagens especificadas são marcadas como "vistas" na caixa de correio. Se falso, as mensagens não são marcadas como "vistas". Valor padrão: True |
+| withBody    | Parâmetros | Pass True para devolver o corpo das mensagens especificadas. Se falso, apenas os cabeçalhos das mensagens são devolvidos. Valor padrão: True                  |
 
 > - Se nenhuma caixa de correio for selecionada com o comando [`.selectBox()`](#selectbox), será gerado um erro.
 > - Se não houver uma conexão aberta, `.getMails()` abrirá uma conexão com a última caixa de correio especificada com [`.selectBox()`](#selectbox).
@@ -1175,13 +1175,13 @@ O parâmetro destinationBox permite-lhe passar um valor de texto com o nome da c
 
 > Esta função só é suportada por servidores IMAP em conformidade com o RFC [8474](https://tools.ietf.org/html/rfc8474).
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -1357,13 +1357,13 @@ Consulte [.addFlags()](#addflags) para obter mais informações sobre sinalizado
 
 > - Para que uma palavra-chave seja tida em conta, tem de ser true.
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -1427,13 +1427,13 @@ No parâmetro `currentName`, passe o nome da caixa de correio a ser renomeada.
 
 Passe o novo nome da caixa de correio no parâmetro `newName`.
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -1664,7 +1664,7 @@ O parâmetro opcional *state* define o tipo de acesso à caixa de correio. Os va
 > - Se não houver uma conexão aberta, `.selectBox()` abrirá uma conexão.
 > - Se a conexão não tiver sido usada desde o atraso de conexão designado (veja `IMAP New transporter`), a função [`.checkConnection()`](#checkconnection) será automaticamente chamada.
 
-**Returned object**
+**Objeto devolvido**
 
 O objeto `boxInfo` retornado contém as seguintes propriedades:
 
@@ -1728,13 +1728,13 @@ A função `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->
 
 No parâmetro `nome`, passe o nome da caixa de correio para adicionar (inscrever) para suas caixas de correio "inscritas".
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |
@@ -1801,13 +1801,13 @@ A função `.unsubscribe()` <!-- REF #IMAPTransporterClass.unsubscribe().Summary
 
 No parâmetro `name`, passe o nome da caixa de correio para remover (cancelar a subscrição) das suas caixas de correio activas.
 
-**Returned object**
+**Objeto devolvido**
 
 A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                          |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se a operação for bem sucedida, Falso caso contrário                                    |
+| success     |                                                                                             | Parâmetros | True se a operação for bem sucedida, False caso contrário                                          |
 | statusText  |                                                                                             | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D     |
 | errors      |                                                                                             | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP) |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                                  |

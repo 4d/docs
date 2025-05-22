@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 エラーはシステム変数Error の値で判別します。このシステム変数にはエラーコードが納められます。このマニュアルの付録に *エラーコード* が記載されています。詳細は*シンタックスエラー (1 -> 81)*を参照してください。システム変数Error の値はエラー処理メソッド内のみで有効です。エラーの原因となったメソッド内でこのエラーコードが必要であれば、システム変数Error を独自のプロセス変数にコピーしてください。またError method 、Error lineとError formula システム変数にはそれぞれ、エラーが発生したメソッドの名前とその行番号、フォーミュラのテキストが格納されます ([メソッド内でのエラー処理]([../Concepts/error-handling.md]) 参照)。
 
-[Last errors](last-errors.md) または [Last errors](last-errors.md)  コマンドを使用する事で割り込みの発生源のエラーシークエンス(例えばエラー"スタック"など)を取得する事ができます。
+[Last errors](../commands/last-errors.md) または [Last errors](../commands/last-errors.md)  コマンドを使用する事で割り込みの発生源のエラーシークエンス(例えばエラー"スタック"など)を取得する事ができます。
 
 エラー処理メソッドは適切な方法でエラーを管理、またはユーザに対してエラーメッセージを表示します。エラーは以下で実行されたプロセス中に生成されます:
 
@@ -177,8 +177,8 @@ IO ERROR HANDLERプロジェクトメソッドは以下のようになります:
 
 [ABORT](abort.md)  
 *Error Handler*  
-[Last errors](last-errors.md)   
-[Last errors](last-errors.md)  
+[Last errors](../commands/last-errors.md)   
+[Last errors](../commands/last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *システム変数*  
 

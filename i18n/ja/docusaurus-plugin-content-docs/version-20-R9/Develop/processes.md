@@ -18,9 +18,9 @@ title: プロセスとワーカー
 新規プロセスを作成するにはいくつかの方法があります:
 
 - デザインモードにおいて、"メソッド実行" ダイアログボックスで **新規プロセス** チェックボックスをチェックした後、メソッドを実行する。 メソッド実行ダイアログボックスで選択したメソッドが (そのプロセスをコントロールする) プロセスメソッドとなります。
-- Use the [`New process`](../commands-legacy/new-process.md) command. `New process` コマンドの引数として渡されたメソッドがプロセスメソッドです。
-- Use the [`Execute on server`](../commands-legacy/execute-on-server.md) command in order to create a stored procedure on the server. コマンドの引数として渡されたメソッドがプロセスメソッドです。
-- Use the [`CALL WORKER`](../commands-legacy/call-worker.md) command. ワーカープロセスが既に存在していない場合、新たに作成されます。
+- [`New process`](../commands-legacy/new-process.md) コマンドを使用する。 `New process` コマンドの引数として渡されたメソッドがプロセスメソッドです。
+- サーバー上ですトアドプロシージャーを作成するためには、[`Execute on server`](../commands-legacy/execute-on-server.md) コマンドを使用します。 コマンドの引数として渡されたメソッドがプロセスメソッドです。
+- [`CALL WORKER`](../commands-legacy/call-worker.md) コマンドを使用する。 ワーカープロセスが既に存在していない場合、新たに作成されます。
 
 :::note
 
@@ -33,7 +33,7 @@ title: プロセスとワーカー
 - プロセスメソッドの実行が完了したとき。
 - ユーザーがアプリケーションを終了したとき。
 - メソッドからプロセスを中止するか、またはデバッガーまたはランタイムエクスプローラーで **アボート** ボタンを使用した場合。
-- If you call the [`KILL WORKER`](../commands-legacy/kill-worker.md) command (to delete a worker process only).
+- [`KILL WORKER`](../commands-legacy/kill-worker.md) コマンドを呼び出した場合(ただしこれで削除できるのはワーカープロセスのみです)。
 
 プロセスは別のプロセスを作成することができます。 プロセスは階層構造にはなっていません。どのプロセスから作成されようと、すべてのプロセスは同等です。 いったん、“親” プロセスが “子” プロセスを作成すると、親プロセスの実行状況に関係なく、子プロセスは処理を続行します。
 
@@ -94,11 +94,11 @@ title: プロセスとワーカー
 
 ワーカープロセスとは、簡単かつ強力なプロセス間通信の方法です。 この機能は非同期のメッセージシステムに基づいており、プロセスやフォームを呼び出して、呼び出し先のコンテキストにおいて任意のメソッドを指定パラメーターとともに実行させることができます。
 
-A worker can be "hired" by any process (using the [`CALL WORKER`](../commands-legacy/call-worker.md) command) to execute project methods with parameters in their own context, thus allowing access to shared information.
+あらゆるプロセスは [`CALL WORKER`](../commands-legacy/call-worker.md) コマンドを使用することでワーカープロセスを "雇用" することができ、ワーカーのコンテキストにおいて任意のプロジェクトメソッドを指定のパラメーターで実行させることができます。つまり、呼び出し元のプロセスとワーカーの間で情報の共有が可能です。
 
 :::info
 
-In Desktop applications, a project method can also be executed with parameters in the context of any form using the [`CALL FORM`](../commands-legacy/call-form.md) command.
+デスクトップアプリケーションにおいては、[`CALL FORM`](../commands-legacy/call-form.md) コマンドを使うことで、あらゆるフォームのコンテキストにおいて任意のプロジェクトメソッドを指定のパラメーターで実行させることができます。
 
 :::
 
@@ -136,7 +136,7 @@ In Desktop applications, a project method can also be executed with parameters i
 
 ワーカープロセスは、ストアドプロシージャーを使って 4D Server 上に作成することもできます。たとえば、`CALL WORKER` コマンドを実行するメソッドを `Execute on server` コマンドから実行できます。
 
-A worker process is closed by a call to the [`KILL WORKER`](../commands-legacy/kill-worker.md) command, which empties the worker's message box and asks the associated process to stop processing messages and to terminate its current execution as soon as the current task is finished.
+ワーカープロセスを閉じるには [`KILL WORKER`](../commands-legacy/kill-worker.md) コマンドをコールします。これによってワーカーのメッセージボックスが空にされ、関連プロセスはメッセージの処理を停止し、現在のタスク完了後に実行を終了します。
 
 ワーカープロセスを新規生成する際に指定したメソッドがワーカーの初期メソッドになります。 次回以降の呼び出しで *method* パラメーターに空の文字列を受け渡した場合、`CALL WORKER` はこの初期メソッドの実行をワーカーに依頼します。
 
@@ -144,7 +144,7 @@ A worker process is closed by a call to the [`KILL WORKER`](../commands-legacy/k
 
 ### ワーカープロセスの識別
 
-All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`Process info`](../commands/process-info.md) command.
+全てのワーカープロセス(メインプロセスを除く)は、[`Process info`](../commands/process-info.md) コマンドからは `Worker process` (5) が返されるプロセスタイプを持ちます。
 
 [専用アイコン](../ServerWindow/processes#プロセスタイプ) からもワーカープロセスを識別することができます。
 

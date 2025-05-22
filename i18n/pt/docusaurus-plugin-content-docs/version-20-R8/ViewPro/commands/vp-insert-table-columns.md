@@ -28,18 +28,18 @@ title: VP INSERT TABLE COLUMNS
 
 ## Descrição
 
-The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
+O comando `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->insere uma ou *count* de coluna(s) vazia(s) na *tableName* especificada no índice *column* especificado<!-- END REF -->.
 
 When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md) command.
 
 In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
 
-| Parâmetros               | Valor | Descrição                                                                                       |
-| ------------------------ | ----- | ----------------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0     | Insert column(s) before the *column* (default if omitted) |
-| `vk table insert after`  | 1     | Inserir coluna(s) após a *coluna*                                            |
+| Parâmetros               | Valor | Descrição                                                                                                             |
+| ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------- |
+| `vk table insert before` | 0     | Inserir a(s) coluna(s) antes da *column* (padrão se omitida) |
+| `vk table insert after`  | 1     | Inserir coluna(s) após a *coluna*                                                                  |
 
-This command inserts some columns in the *tableName* table, NOT in the sheet. O número total de colunas da folha não é impactado pelo  comando. Dados presentes à direita da tabela (se houver) são movidos para a direita automaticamente de acordo com o número de colunas adicionadas.
+Este comando insere algumas colunas na tabela *tableName*, NÂO na folha. O número total de colunas da folha não é impactado pelo  comando. Dados presentes à direita da tabela (se houver) são movidos para a direita automaticamente de acordo com o número de colunas adicionadas.
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
 

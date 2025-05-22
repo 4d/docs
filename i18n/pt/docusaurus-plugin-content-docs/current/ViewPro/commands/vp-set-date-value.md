@@ -17,13 +17,13 @@ title: VP SET DATE VALUE
 
 ## Descrição
 
-The `VP SET DATE VALUE` command <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
+O comando <!-- REF #method_.VP SET VALUE.Summary --> atribui um valor de data para um intervalo de células designados<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
 The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
 
-The optional *formatPattern* defines a pattern for the *dateValue* parameter. Passe qualquer formato personalizado ou você pode usar uma das seguintes constantes:
+O parâmetro *formatPattern* opcional define um padrão para o parâmetro *dateValue*. Passe qualquer formato personalizado ou você pode usar uma das seguintes constantes:
 
 | Parâmetros              | Descrição                              | Padrão predefinido dos EUA |
 | ----------------------- | -------------------------------------- | -------------------------- |

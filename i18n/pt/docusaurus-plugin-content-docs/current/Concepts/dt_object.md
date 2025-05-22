@@ -47,7 +47,7 @@ Com a notação de objetos, pode acessar às propriedades dos objetos de duas ma
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Database measures`](../commands-legacy/database-measures.md) or [`File`](../commands/file.md). Neste caso, não é necessário instanciar explicitamente o objecto, a linguagem 4D faz isso por você.
+Vários comandos e funções 4D retornam objetos, por exemplo, [`Database measures`](../commands-legacy/database-measures.md) ou [`File`](../commands/file.md). Neste caso, não é necessário instanciar explicitamente o objecto, a linguagem 4D faz isso por você.
 
 :::
 

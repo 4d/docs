@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros  | Tipo    |                             | Descripción                               |
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document |
+| targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro |
 | breakType   | Integer | &#8594; | Type of break to insert                   |
 | mode        | Integer | &#8594; | Modo de inserción                         |
 | rangeUpdate | Integer | &#8594; | Range update mode                         |
@@ -49,10 +49,10 @@ In the *mode* parameter, pass a constant to indicate the insertion mode to be us
 
 - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
-| Constante             | Tipo    | Valor | Comentario                                                               |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |
+| Constante             | Tipo    | Valor | Comentario                                                                            |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
+| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                                       |
+| wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 

@@ -26,6 +26,12 @@ Cada objeto de error contiene los siguientes atributos:
 | componentSignature | text     | Firma del componente interno que devolvió el error |
   
   
+:::nota
+
+Para una descripción de las firmas de los componentes, consulte la sección [Códigos de error](../Concepts/error-handling.md#error-codes).
+ 
+:::
+
 Este comando debe ser llamado desde un método de llamada de error instalado por el comando [ON ERR CALL](on-err-call.md). 
 
 
@@ -33,6 +39,7 @@ Este comando debe ser llamado desde un método de llamada de error instalado por
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
+[Error handling](../Concepts/error-handling.md)
 
 ## Propiedades
 

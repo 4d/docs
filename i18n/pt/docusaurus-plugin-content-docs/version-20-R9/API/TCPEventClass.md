@@ -31,11 +31,11 @@ As seguintes propriedades estão disponíveis:
 
 ## .data
 
-<!-- REF #TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
+<!-- REF #TCPEvent.data.Syntax -->**data**: Blob<!-- END REF -->
 
 #### Descrição
 
-The `.data` property contains <!-- REF #TCPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type `"data"`.
+A propriedade `.data` contém <!-- REF #TCPEvent.data.Summary -->os dados associados ao evento<!-- END REF -->. It is only valid for events of type `"data"`.
 
 :::note
 
@@ -53,7 +53,7 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 #### Descrição
 
-The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
+A propriedade `.ip` contém <!-- REF #TCPEvent.ip.Summary -->o endereço IP da máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -65,7 +65,7 @@ The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of t
 
 #### Descrição
 
-The `.port` property contains <!-- REF #TCPEvent.port.Summary -->the port number of the remote machine<!-- END REF -->.
+A propriedade `.port` contém <!-- REF #TCPEvent.port.Summary --> o número da porta da máquina remota <!-- END REF -->.
 
 <!-- END REF -->
 
@@ -77,7 +77,7 @@ The `.port` property contains <!-- REF #TCPEvent.port.Summary -->the port number
 
 #### Descrição
 
-The `.type` property contains <!-- REF #TCPEvent.type.Summary -->the type of the event<!-- END REF -->. Valores possíveis:
+A propriedade `.type` contém <!-- REF #TCPEvent.type.Summary -->o tipo do evento<!-- END REF -->. Valores possíveis:
 
 - `"connection"`: Indicates that a TCPConnection was successfully established.
 - `"data"`: Indicates that data has been received.

@@ -9,42 +9,42 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Command name.Params-->
 
-| 引数    | 型       |                             | 説明                           |
-| ----- | ------- | --------------------------- | ---------------------------- |
-| コマンド  | Integer | &#8594; | コマンド番号                       |
-| info  | Integer | &#8592; | Command property to evaluate |
-| theme | Text    | &#8592; | Language theme of command    |
-| 戻り値   | Text    | &#8592; | Localized command name       |
+| 引数    | 型       |                             | 説明             |
+| ----- | ------- | --------------------------- | -------------- |
+| コマンド  | Integer | &#8594; | コマンド番号         |
+| info  | Integer | &#8592; | 評価するコマンドのプロパティ |
+| theme | Text    | &#8592; | コマンドのランゲージテーマ  |
+| 戻り値   | Text    | &#8592; | ローカライズされたコマンド名 |
 
 <!-- END REF-->
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                             |
-| ----- | ------------------------------ |
-| 20 R9 | Support of deprecated property |
+| リリース  | 内容                    |
+| ----- | --------------------- |
+| 20 R9 | deprecated プロパティのサポート |
 
 </details>
 
 ## 説明
 
-The **Command name** command <!--REF #_command_.Command name.Summary-->returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
+**Command name** コマンドは、<!--REF #_command_.Command name.Summary-->*command* 引数にコマンド番号を渡したコマンドの名前と、オプションとしてそのコマンドのプロパティを返します。<!-- END REF-->各コマンドの番号はエクスプローラー内に記載してある他、このドキュメンテーションのプロパティエリアにも記載があります。
 
-**Compatibility note:** A command name may vary from one 4D version to the next (commands renamed), this command was used in previous versions to designate a command directly by means of its number, especially in non-tokenized portions of code. This need has diminished over time as 4D continues to evolve because, for non-tokenized statements (formulas), 4D now provides a token syntax. This syntax allows you to avoid potential problems due to variations in command names as well as other elements such as tables, while still being able to type these names in a legible manner (for more information, refer to the *Using tokens in formulas* section). Note also that the \*[Use regional system settings\* option of the Preferences](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) allows you to continue using the French language in a French version of 4D.
+**互換性に関する注意:** コマンド名はある4D のバージョンと他のバージョンでは異なる(コマンドが改名された)可能性があり、このコマンドは以前のバージョンでは特にトークナイズドされていない部分のコードにおいて、コマンドをその番号で指定するのに使用されていました。 この用途の必要性は、時とともに4D が進化するにつれて減ってきています。それはトークナイズドされていない宣言(フォーミュラ)に対しては、4D は現在はトークンシンタックスを提供しているからです。 このシンタックスを使用すると、コマンド名の変遷や、あるいはテーブル名などの他の要素が変わったことによって引き起こされる潜在的な問題を避けつつ、読みやすい方法でこれらの名前を入力することができるようになります(詳細な情報については、 *フォーミュラ内でトークンを使用* の章を参照して下さい)。 また、[環境設定内の*リージョンシステム設定を使用* オプション](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) を使用すると、フランス語版の4D において引き続きフランス語のコマンド名を使用することが可能となります。
 
-Two optional parameters are available:
+二つのオプションの引数を渡すことができます:
 
-- *info*: properties of the command. The returned value is a *bit field*, where the following bits are meaningful:
- - First bit (bit 0): set to 1 if the command is [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (i.e., compatible with execution in a preemptive process) and 0 if it is **thread-unsafe**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
- - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors).
+- *info*: コマンドのプロパティを指定します。 返される値は *ビットフィールド* で、以下のビットが意味を持ちます:
+ - 最初のビット(bit 0): コマンドが[**スレッドセーフである**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code)(つまりプリエンプティブプロセスでの実行に互換性がある)場合には1 に設定され、コマンドが**スレッドセーフでない**場合には0 に設定されます。 [プリエンプティブプロセス](../Develop/preemptive.md) 内ではスレッドセーフなコマンドのみが使用可能です。
+ - 二つ目のビット(bit 1): コマンドが**廃止予定** の場合には1 に設定され、そうでない場合には0 に設定されます。 廃止予定のコマンドはサポートされている限りにおいては通常通り機能し続けますが、可能であれば置き換えるべきであり、今後書く新しいコード内においては使用するべきではありません。 コード内における廃止予定のコマンドは[ライブチェッカーおよびコンパイラ](../code-editor/write-class-method.md#警告とエラー) において警告を生成します。
 
-*theme*: name of the 4D language theme for the command.
+*theme*: コマンドの4D ランゲージテーマの名前。
 
-The **Command name** command sets the *OK* variable to 1 if *command* corresponds to an existing command number, and to 0 otherwise. Note, however, that some existing commands have been disabled, in which case **Command name** returns an empty string (see last example).
+**Command name** コマンドは、*command* で指定したコマンドが既存のコマンド番号と対応する場合には*OK* 変数を1に設定し、それ以外の場合には0に設定します。 しかしながら、既存のコマンドの一部には無効化されてしまったコマンドもあり、そういったコマンドの場合には**Command name** は空の文字列を返すという点に注意が必要です(最後の例題を参照して下さい)。
 
 ## 例題 1
 
-The following code allows you to load all valid 4D commands in an array:
+以下のコードを使用すると、全ての有効な4Dコマンドを配列内に読み込むことができます:
 
 ```4d
  var $Lon_id : Integer
@@ -55,18 +55,18 @@ The following code allows you to load all valid 4D commands in an array:
  Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id)
-    If(OK=1) //command number exists
-       If(Length($Txt_command)>0) //command is not disabled
+    If(OK=1) // コマンド番号が存在する
+       If(Length($Txt_command)>0) // コマンドが無効化されていない
           APPEND TO ARRAY($tTxt_commands;$Txt_command)
           APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
        End if
     End if
- Until(OK=0) //end of existing commands
+ Until(OK=0) // 既存のコマンドの終了
 ```
 
 ## 例題 2
 
-In a form, you want a drop-down list populated with the basic summary report commands. In the object method for that drop-down list, you write:
+フォームで、一般的なサマリーレポートコマンドのドロップダウンリストを作成します。 ドロップダウンリストのオブジェクトメソッドに、次のように記述します:
 
 ```4d
  Case of
@@ -80,13 +80,13 @@ In a form, you want a drop-down list populated with the basic summary report com
  End case
 ```
 
-In the English version of 4D, the drop-down list will read: Sum, Average, Min, and Max. In the French version\*, the drop-down list will read: Somme, Moyenne, Min, and Max.
+4Dの日本語版ではドロップダウンリストに、Sum、Average、Min、Maxが表示されます。 フランス語版\*では、ドロップダウンリストには、Somme、Moyenne、Min、Maxが表示されます。
 
-\*with a 4D application configured to use the French programming language (see compatibility note)
+\*フランス語のプログラミング言語を使用するよう設定されている4Dアプリケーション(互換性に関する注意を参照して下さい)
 
 ## 例題 3
 
-You want to create a method that returns **True** if the command, whose number is passed as parameter, is thread-safe, and **False** otherwise.
+番号を引数として渡したコマンドがスレッドセーフである場合には**True** を、そうでない場合には**False** を返す様なメソッドを作成したい場合を考えます。
 
 ```4d
   //Is_Thread_Safe project method
@@ -94,23 +94,23 @@ You want to create a method that returns **True** if the command, whose number i
  var $threadsafe : Integer
  var $name; $theme : Text
  $name:=Command name($command;$threadsafe;$theme)
- If($threadsafe ?? 0) //if the first bit is set to 1
+ If($threadsafe ?? 0) // 最初のビットが1に設定されている
     return True
  Else
     return False
  End if
 ```
 
-Then, for the "SAVE RECORD" command (53) for example, you can write:
+これを使い、例えば"SAVE RECORD"コマンド(53番)に対して、以下のように書く事ができます:
 
 ```4d
  $isSafe:=Is_Thread_Safe(53)
-  // returns True
+  // True を返す
 ```
 
 ## 例題 4
 
-You want to return a collection of all deprecated commands in your version of 4D.
+使用中のバージョンの4D 内で、廃止予定のコマンドを全てコレクションに入れて返したい場合を考えます。
 
 ```4d
 var $info; $Lon_id : Integer
@@ -120,18 +120,18 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) //the second bit is set to 1
-            //then the command is deprecated
+    If($info ?? 1) // 二つ目のビットが1である
+            // 1であればコマンドは廃止予定である
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) //end of existing commands
+Until(OK=0) // 既存のコマンドの終了
 
 ```
 
 ## 参照
 
 [EXECUTE FORMULA](../commands-legacy/execute-formula.md)\
-[Preemptive Processes](../Develop/preemptive.md)
+[プリエンプティブプロセス](../Develop/preemptive.md)
 
 ## プロパティ
 

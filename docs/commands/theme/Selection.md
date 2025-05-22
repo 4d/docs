@@ -10,6 +10,7 @@ slug: /commands/theme/Selection
 |[<!-- INCLUDE #_command_.ALL RECORDS.Syntax -->](../../commands-legacy/all-records.md)<br/>|
 |[<!-- INCLUDE #_command_.APPLY TO SELECTION.Syntax -->](../../commands-legacy/apply-to-selection.md)<br/>|
 |[<!-- INCLUDE #_command_.Before selection.Syntax -->](../../commands-legacy/before-selection.md)<br/>|
+|[<!-- INCLUDE #_command_.Create entity selection.Syntax -->](../../commands/create-entity-selection.md)<br/>|
 |[<!-- INCLUDE #_command_.CREATE SELECTION FROM ARRAY.Syntax -->](../../commands-legacy/create-selection-from-array.md)<br/>|
 |[<!-- INCLUDE #_command_.DELETE SELECTION.Syntax -->](../../commands-legacy/delete-selection.md)<br/>|
 |[<!-- INCLUDE #_command_.DISPLAY SELECTION.Syntax -->](../../commands-legacy/display-selection.md)<br/>|
@@ -29,3 +30,4 @@ slug: /commands/theme/Selection
 |[<!-- INCLUDE #_command_.SCAN INDEX.Syntax -->](../../commands-legacy/scan-index.md)<br/>|
 |[<!-- INCLUDE #_command_.Selected record number.Syntax -->](../../commands-legacy/selected-record-number.md)<br/>|
 |[<!-- INCLUDE #_command_.TRUNCATE TABLE.Syntax -->](../../commands-legacy/truncate-table.md)<br/>|
+|[<!-- INCLUDE #_command_.USE ENTITY SELECTION.Syntax -->](../../commands/use-entity-selection.md)<br/>|

@@ -9,9 +9,9 @@ The `OpenAIChoice` class represents a choice made by the OpenAI API response, co
 
 ## Propiedades
 
-| Propiedad       | Tipo                              | Descripción                                                                                                                         |
-| --------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `message `      | [OpenAIMessage](OpenAIMessage.md) | The message associated with this choice.                                                                            |
-| `delta`         | [OpenAIMessage](OpenAIMessage)    | A partial message used for streaming responses.(stream: True.md) |
-| `finish_reason` | Text                              | La razón por la que terminó la elección (por ejemplo, "stop").                                   |
-| `index`         | Integer                           | The index of the choice in the response.                                                                            |
+| Propiedad       | Tipo                              | Descripción                                                                                                                                        |
+| --------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `message `      | [OpenAIMessage](OpenAIMessage.md) | The message associated with this choice.                                                                                           |
+| `delta`         | [OpenAIMessage](OpenAIMessage)    | Un mensaje parcial utilizado para las respuestas de streaming.(stream: True.md) |
+| `finish_reason` | Text                              | La razón por la que terminó la elección (por ejemplo, "stop").                                                  |
+| `index`         | Integer                           | The index of the choice in the response.                                                                                           |

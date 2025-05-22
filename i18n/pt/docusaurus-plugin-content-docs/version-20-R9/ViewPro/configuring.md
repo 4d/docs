@@ -126,7 +126,7 @@ Definir um padrão de formato garante que o conteúdo dos seus documentos 4D Vie
 
 A versão 4D View Pro tem formatos embutidos para números, datas, horas e texto, mas você também pode criar seus próprios padrões para formatar o conteúdo das células usando caracteres especiais e códigos.
 
-For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern *($\* #,##0.00*) which would display amounts as shown:
+For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) a ser alinhado, independentemente do espaço exigido pelo número (ou seja, se o valor é US$ 5,00 ou US$ 5.000,00). You could use formatting characters and spectify the pattern *($\* #,##0.00*) which would display amounts as shown:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
@@ -360,7 +360,7 @@ Atributos do tamanho do papel são usados para especificar as dimensões ou mode
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
  - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
  - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
-  In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
+  Nesse caso, [`VP Get print info`](./commands/vp-get-print-info.md) retorna o formato correspondente com a altura e a largura.
 
 ### Escala
 

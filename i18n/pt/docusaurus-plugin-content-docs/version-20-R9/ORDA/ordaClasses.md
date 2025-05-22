@@ -814,11 +814,11 @@ $status:=$remoteDS. Schools.registerNewStudent($student) // OK
 $id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
-## onHttpGet keyword
+## onHTTPGet keyword
 
-Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
+Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
 
-The `onHttpGet` keyword is available with:
+The `onHTTPGet` keyword is available with:
 
 - ORDA Data model class functions
 - [Funções classe Singletons](../Concepts/classes.md#singleton-classes)
@@ -826,8 +826,8 @@ The `onHttpGet` keyword is available with:
 A sintaxe formal é:
 
 ```4d
-// declare an onHttpGet function
-exposed onHttpGet Function <functionName>(params) : result
+// declare an onHTTPGet function
+exposed onHTTPGet Function <functionName>(params) : result
 ```
 
 :::info
@@ -844,7 +844,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 ### params
 
-Uma função com a palavra-chave `onHttpGet` aceita [parâmetros](../Concepts/parameters.md).
+A function with `onHTTPGet` keyword accepts [parameters](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
 
@@ -856,7 +856,7 @@ Consulte a seção [Parâmetros](../REST/classFunctions#parameters) na documenta
 
 ### resultado
 
-Uma função com a palavra-chave `onHttpGet` pode retornar qualquer valor de um tipo compatível (o mesmo que para [parâmetros](../REST/classFunctions#parameters) REST).
+A function with `onHTTPGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
 
 :::info
 

@@ -87,8 +87,24 @@ module.exports =
                 "Debugging/debugging-remote"
               ]
             },
-            "Debugging/debugLogFiles"
-          ]
+            "Debugging/debugLogFiles",
+               {
+                  type: "category",
+                  label: "Preferences",
+                  link: {
+                    type: "doc",
+                    id: "Preferences/overview"
+                },
+                  items: [
+                    "Preferences/general",
+                    "Preferences/structure",
+                    "Preferences/forms",
+                    "Preferences/methods",
+                    "Preferences/shortcuts"
+            ]
+        }
+
+        ]
         },
         {
           type: "category",
@@ -116,22 +132,8 @@ module.exports =
             "Develop/preemptive-processes"
           ]
         },
-        "Tags/transformation-tags",
-        {
-          type: "category",
-          label: "Preferences",
-          link: {
-            type: "doc",
-            id: "Preferences/overview"
-          },
-          items: [
-            "Preferences/general",
-            "Preferences/structure",
-            "Preferences/forms",
-            "Preferences/methods",
-            "Preferences/shortcuts"
-          ]
-        }
+        "Develop-legacy/transactions",
+        "Tags/transformation-tags"
       ]
     },
     {
@@ -221,7 +223,6 @@ module.exports =
                 "commands-legacy/compact-data-file",
                 "commands-legacy/component-list",
                 "commands-legacy/create-data-file",
-                "commands/create-entity-selection",
                 "commands-legacy/data-file",
                 "commands-legacy/database-measures",
                 "commands-legacy/drop-remote-user",
@@ -253,7 +254,6 @@ module.exports =
                 "commands-legacy/set-update-folder",
                 "commands-legacy/structure-file",
                 "commands-legacy/table-fragmentation",
-                "commands/use-entity-selection",
                 "commands-legacy/verify-current-data-file",
                 "commands-legacy/verify-data-file",
                 "commands-legacy/version-type"
@@ -783,7 +783,7 @@ module.exports =
                 "commands-legacy/asserted",
                 "commands-legacy/filter-event",
                 "commands-legacy/get-assert-enabled",
-                "commands-legacy/last-errors",
+                "commands/last-errors",
                 "commands-legacy/method-called-on-error",
                 "commands-legacy/method-called-on-event",
                 "commands-legacy/on-err-call",
@@ -1629,6 +1629,7 @@ module.exports =
                 "commands-legacy/all-records",
                 "commands-legacy/apply-to-selection",
                 "commands-legacy/before-selection",
+                "commands/create-entity-selection",
                 "commands-legacy/create-selection-from-array",
                 "commands-legacy/delete-selection",
                 "commands-legacy/display-selection",
@@ -1647,7 +1648,8 @@ module.exports =
                 "commands-legacy/reduce-selection",
                 "commands-legacy/scan-index",
                 "commands-legacy/selected-record-number",
-                "commands-legacy/truncate-table"
+                "commands-legacy/truncate-table",
+                "commands/use-entity-selection"
               ]
             },
             {

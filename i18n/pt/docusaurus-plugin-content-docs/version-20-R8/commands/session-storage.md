@@ -39,8 +39,8 @@ O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storag
 This method modifies the value of a "settings" property stored in the storage object of a specific session:
 
 ```4d
-  //Set storage for a session
-  //The "Execute On Server" method property is set
+  //Definir armazenamento para uma sessão
+  //A propriedade do método "Execute On Server" está definida
  
  #DECLARE($id : Text; $text : Text)
  var $obj : Object
@@ -65,9 +65,9 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1839                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1839                        |
+| Thread safe       | &check; |
 
 

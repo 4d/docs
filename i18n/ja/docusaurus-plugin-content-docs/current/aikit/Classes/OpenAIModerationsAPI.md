@@ -5,7 +5,7 @@ title: OpenAIModerationsAPI
 
 # OpenAIModerationsAPI
 
-The `OpenAIModerationsAPI` is responsible for classifying if text and/or image inputs are potentially harmful.
+`OpenAIModerationsAPI` は、入力のテキストまたは画像が、潜在的に有害であるかどうかを判断するためのものです。
 
 https://platform.openai.com/docs/api-reference/moderations
 
@@ -15,26 +15,26 @@ https://platform.openai.com/docs/api-reference/moderations
 
 **create**(*input* : Variant; *model* : Text; *parameters* : OpenAIParameters) : OpenAIModerationResult
 
-| 引数      | 型                                                   | 説明                                                                                                                                       |
-| ------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| *入力*    | Variant                                             | Input (or inputs) to classify. Can be a single text or a collection of OpenAIMessage. |
-| *model* | Text                                                | The content moderation model you would like to use.                                                                      |
-| *引数*    | [OpenAIParameters](OpenAIParameters.md)             | Additional parameters for the request.                                                                                   |
-| 戻り値     | [OpenAIModerationResult](OpenAIModerationResult.md) | The result of the moderation, indicating potential harm.                                                                 |
+| 引数           | 型                                                   | 説明                                            |
+| ------------ | --------------------------------------------------- | --------------------------------------------- |
+| *input*      | Variant                                             | 分類する入力。 単一のテキストまたはOpenAIMessage のコレクションを渡せます。 |
+| *model*      | Text                                                | 使用したいコンテンツモデレーションモデル。                         |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)             | リクエスト用の追加のパラメーター。                             |
+| 戻り値          | [OpenAIModerationResult](OpenAIModerationResult.md) | 潜在的な危険性を表すモデレーションの結果。                         |
 
-Classifies whether the input is potentially harmful.
+入力が潜在的に有害かどうかを判断します。
 
 https://platform.openai.com/docs/api-reference/moderations/create
 
 ## 例題
 
-### Moderate a text
+### テキストのモデレート
 
 ```4d
 var $result:=$client.moderation.create("Some text to classify"; "omni-moderation-latest"; $parameters)
 ```
 
-### Moderate a text and an image
+### テキストと画像のモデレート
 
 ```4d
 var $messages:=[{type: "text"; text: "...text to classify goes here..."}; \

@@ -96,7 +96,7 @@ A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->cria
 
 The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
 
-In *url*, pass the URL where you want to send the request. A sintaxe a utilizar é:
+Em *url*, passe o URL para onde pretende enviar o pedido. A sintaxe a utilizar é:
 
 ```
 {http://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
@@ -395,10 +395,10 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary --> a URL da
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-| Parâmetro  | Tipo                           |                             | Descrição                    |
-| ---------- | ------------------------------ | :-------------------------: | ---------------------------- |
-| timeout    | Real                           |              ->             | Maximum wait time in seconds |
-| Resultados | 4D.HTTPRequest | <- | HTTPRequest object           |
+| Parâmetro  | Tipo                           |                             | Descrição                          |
+| ---------- | ------------------------------ | :-------------------------: | ---------------------------------- |
+| timeout    | Real                           |              ->             | Tempo máximo de espera em segundos |
+| Resultados | 4D.HTTPRequest | <- | HTTPRequest object                 |
 
 <!-- END REF -->
 

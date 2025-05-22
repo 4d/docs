@@ -56,7 +56,7 @@ The search area allows you to narrow the list of fields displayed to those conta
 
 ### Label preview
 
-You use this area to design your label zone by placing and positioning all the items that you want to include in your label. The white rectangle represents a single label (its size is configured on the [Layout page](#layout-page)).
+You use this area to design your label zone by placing and positioning all the items that you want to include in your label. O retângulo branco representa um único rótulo (seu tamanho é configurado na página [Layout](#layout-page)).
 
 - You can drag fields onto the label.
 - You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
@@ -70,7 +70,7 @@ You use this area to design your label zone by placing and positioning all the i
 
 :::note
 
-Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command.
+Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Os métodos permitidos dependem das [configurações do projeto](../settings/security.md#options) e do comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md).
 
 :::
 
@@ -82,12 +82,12 @@ Keep in mind that you can only enter methods that are "allowed" for the database
 ### Form to use
 
 This drop-down list allows you to define a table form as a label template. The form chosen must be specially adapted to the creation of labels.
-In this case, the label editor is partially disabled: only functions of the [Layout page](#layout-page) can be used — to allow you to configure the page based on the form. The image of the form selected is displayed in the label preview area.
+Neste caso, o editor de rótulo é parcialmente desativado: somente funções do [Layout page](#layout-page) podem ser usadas — para permitir que você configure a página com base no formulário. The image of the form selected is displayed in the label preview area.
 When you use a form, 4D executes any form or object methods associated with it. When using this option, you can also designate a project method to execute for each record or label and then assignate variables (see [this example](#printing-labels-using-forms-and-methods-example) below). If you want to create your labels using the editor itself, you need to choose the **No Form** option.
 
 :::note Notas
 
-- You can restrict the forms listed in this menu by means of a [specific JSON file](#controlling-available-forms-and-methods).
+- Você pode restringir os formulários listados neste menu por meio de um [arquivo JSON específico](#controlling-available-forms-and-methods).
 - If the database does not contain any table forms, this menu is not displayed.
 
 :::
@@ -110,8 +110,8 @@ The left-hand side of the tool bar includes commands for selecting and inserting
 There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
 
 - Keyboard arrow keys move the selection of objects 1 pixel at a time.
-- **Shift** + arrow keys move the selection of objects 10 pixels at a time.
-- **Ctrl** + arrow keys enlarge or reduce the selection of objects by 1 pixel.
+- **Shift** + teclas de seta movem a seleção de objetos 10 píxeis por vez.
+- **Ctrl** + teclas de seta ampliam ou reduzem a seleção de objetos em 1 píxel.
 - **Ctrl** + **Maj** + arrow keys enlarge or reduce the selection of objects by 10 pixels.
 
 The right-hand side of the tool bar contains commands used to modify items of the label template:
@@ -138,14 +138,14 @@ The Layout page contains controls for printing labels based on the requirements 
  **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
 - **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
-- **Width** and **Height**: Sets the height and width of each label manually. They cannot be edited when the **Automatic resizing** option is checked.
+- **Width** and **Height**: Sets the height and width of each label manually. Eles não podem ser editados quando a opção **Redimensionamento automático** estiver marcada.
 - **Margins** (Top, Right, Left, Bottom): Sets the margins of your sheet. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
 - **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
  To be eligible for label processing, a project method must comply with the following settings:
  - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
- - it must have the [Shared by components and host database](../Project/code-overview.md#shared-by-components-and-host-database) option.
-  See also [this example](#printing-labels-using-forms-and-methods-example) below.
+ - precisa ter a opção [Compartilhada por componentes e banco de dados host](../Project/code-overview.md#shared-by-components-and-host-database).
+  Veja também [este exemplo](#printing-labels-using-forms-and-methods-example) abaixo.
 
 :::note
 
@@ -172,7 +172,7 @@ You can use dedicated table forms and project methods to print labels with calcu
  var myVar+=1
 ```
 
-3. Set the project method as ["Shared by components and host database"](../Project/code-overview.md#shared-by-components-and-host-database).
+3. Defina o método projeto como ["Compartilhado por componentes e banco de dados host"](../Project/code-overview.md#shared-by-components-and-host-database).
 
 4. Before displaying the Label editor, make sure the project method is allowed by executing this code:
 
@@ -198,10 +198,10 @@ The Label editor includes an advanced feature allowing you to restrict which pro
 - in the **Form to use** menu on the "Label" page and/or
 - in the **Apply (method)** menu on the "Layout" page.
 
-1. Create a JSON file named **labels.json** and put it in the [Resources folder](../Project/architecture.md#resources) of the project.
+1. Crie um arquivo JSON chamado **labels.json** e coloque-o na pasta [Resources] (../Project/architecture.md#resources) do projeto.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
 
-The contents of the **labels.json** file should be similar to:
+O conteúdo do arquivo **labels.json** deve ser semelhante a:
 
 ```json
 [ 
@@ -210,7 +210,7 @@ The contents of the **labels.json** file should be similar to:
 ]
 ```
 
-If no **labels.json** file has been defined, then no filtering is applied.
+Se nenhum arquivo **labels.json** tiver sido definido, nenhuma filtragem será aplicada.
 
 ## Managing label files
 

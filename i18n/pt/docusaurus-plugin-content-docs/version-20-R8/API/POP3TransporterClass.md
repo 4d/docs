@@ -7,7 +7,7 @@ The `POP3Transporter` class allows you to retrieve messages from a POP3 email se
 
 ### Objeto POP3 transporter
 
-POP3 Transporter objects are instantiated with the [`POP3 New transporter`](../commands/pop3-new-transporter.md) command. Eles oferecem as propriedades abaixo e funções:
+Os objetos POP3 Transporter são instanciados com o comando [`POP3 New transporter`](../commands/pop3-new-transporter.md). Eles oferecem as propriedades abaixo e funções:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -200,7 +200,7 @@ O objeto `boxInfo` retornado contém as seguintes propriedades:
 
 A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->retorna o objeto `Email` correspondente ao *msgNumber* na caixa de correio designada pelo [`transporter POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-Pass in *msgNumber* the number of the message to retrieve. Esse número é retornado na propriedade `number` pela função [`.getMailInfoList()`](#getmailinfolist).
+Passe em *msgNumber* o número da mensagem a recuperar. Esse número é retornado na propriedade `number` pela função [`.getMailInfoList()`](#getmailinfolist).
 
 Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Somente propriedades de cabeçalhos ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) são então retornados. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
 
@@ -215,7 +215,7 @@ O método retorna Null se:
 - *msgNumber* determina uma mensagem não existente,
 - a mensagem foi marcada para exclusão usando [`.delete()`](#delete).
 
-**Returned object**
+**Objeto devolvido**
 
 `.getMail()` retorna um [`objeto email`](EmailObjectClass.md#email-object).
 

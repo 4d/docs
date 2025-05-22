@@ -17,7 +17,7 @@ As fórmulas são avaliadas:
 - when they are "frozen" using the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (if not already computed)
 - before printing (if not already computed)
 - before exporting to .docx (if the formula can't be mapped with MS Word formulas)
-- when the standard actions to freeze, print, export, or compute formulas are called. See *Standard actions*
+- when the standard actions to freeze, print, export, or compute formulas are called. Veja *Ações padrão*
 
 Formulas are not evaluated when a document is loaded (using [**WP New**](commands-legacy/wp-new.md), [**WP Insert document body**](commands/wp-insert-document-body.md), or `wpArea:=[table]field`):
 
@@ -127,7 +127,7 @@ When a document is displayed in "display expressions" mode, references to tables
 
 You can control how formulas are displayed in your documents:
 
-- as *values* or as *references*
+- como *valores* ou como *referências*
 - when shown as references, display source text, symbol, or name.
 
 ### References or Values
@@ -137,7 +137,7 @@ By default, 4D formulas are displayed as values. When you insert a 4D formula, 4
 To display formulas as references, you can:
 
 - check the **Show references** option in the Property list (see *Configuring View properties*), or
-- use the visibleReferences standard action (see *Dynamic expressions*), or
+- usar a ação padrão visibleReferences (consulte *Expressões dinâmicas*), ou
 - use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk visible references` selector to **True**.
 
 Formula references can be displayed as:

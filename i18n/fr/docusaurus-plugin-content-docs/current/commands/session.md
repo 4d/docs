@@ -33,7 +33,7 @@ Selon le process à partir duquel la commande est appelée, la session utilisate
 - une session web (lorsque les [sessions évolutives sont activées](WebServer/sessions.md#enabling-web-sessions)),
 - une session de client distant,
 - la session des procédures stockées,
-- the *designer* session in a standalone application.
+- la session *designer* dans une application autonome.
 
 Pour plus d'informations, voir le paragraphe [Types de session](../API/SessionClass.md#session-types).
 
@@ -70,9 +70,9 @@ Tous les process des procédures stockées partagent la même session d'utilisat
 
 Pour des informations sur la session d'utilisateur virtuel des procédures stockées, veuillez vous référer à la page [4D Server et langage 4D](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html).
 
-## Standalone session
+## Session autonome
 
-The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
+L'objet `Session` est disponible à partir de n'importe quel process dans les applications autonomes (mono-utilisateur) afin que vous puissiez écrire et tester votre code client/serveur en utilisant l'objet `Session` dans votre environnement de développement 4D.
 
 ## Exemple
 

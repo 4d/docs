@@ -8,19 +8,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
-| Parámetros | Tipo    |                             | Descripción                                                                            |
-| ---------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
-| sessionID  | Text    | &#8594; | ID de sesión                                                                           |
-| options    | Integer | &#8594; | Opciones de retorno                                                                    |
-| Resultado  | Object  | &#8592; | Snapshot of running processes and/or (4D Server only) user sessions |
+| Parámetros | Tipo    |                             | Descripción                                                                                          |
+| ---------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| sessionID  | Text    | &#8594; | ID de sesión                                                                                         |
+| options    | Integer | &#8594; | Opciones de retorno                                                                                  |
+| Resultado  | Object  | &#8592; | Instantánea de los procesos en ejecución y/o sesiones de usuario (sólo 4D Server) |
 
 <!-- END REF-->
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                   |
-| ----------- | -------------------------------- |
-| 20 R7       | Support of *sessionID* parameter |
+| Lanzamiento | Modificaciones                    |
+| ----------- | --------------------------------- |
+| 20 R7       | Soporte del parámetro *sessionID* |
 
 </details>
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 By default when used without any parameters, **Process activity** returns an object containing the following properties:
 
 - "processes", a collection of all processes
-- "sessions" (4D Server only), a collection of all sessions
+- "sessions" (sólo 4D Server), una colección de todas las sesiones
 
 On 4D Server, you can filter information to be returned using the optional *sessionID* and *options* parameters:
 

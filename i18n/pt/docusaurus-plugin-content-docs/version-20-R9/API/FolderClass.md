@@ -170,7 +170,7 @@ Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar
 
 No Windows, é sempre criado um atalho (arquivo.lnk) (o parâmetro *aliasType* é ignorado).
 
-**Returned object**
+**Objeto devolvido**
 
 Um objeto `4D.File` com a propriedade `isAlias` definida como **true**.
 
@@ -295,11 +295,11 @@ Quando `Delete with contents` é passado:
 
 A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->move ou renomeia o objeto `Folder` (pasta de origem) para a *destinationFolder* especificada<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
 Por padrão, a pasta mantém o seu nome quando movida. Por padrão, a pasta mantém o seu nome quando movida. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-**Returned object**
+**Objeto devolvido**
 
 O objeto `Folder` movido.
 
@@ -355,7 +355,7 @@ A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a past
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-**Returned object**
+**Objeto devolvido**
 
 O objeto `Folder` renomeado.
 

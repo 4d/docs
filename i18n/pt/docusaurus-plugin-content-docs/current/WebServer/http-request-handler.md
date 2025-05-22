@@ -24,7 +24,7 @@ Custom HTTP Request handlers are supported:
 
 :::warning
 
-[By default](../ORDA/privileges.md#default-file) for security reasons, external access to the datastore is not allowed in 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+[Por padrão](../ORDA/privileges.md#default-file) por razões de segurança, o acesso externo ao datastore não é permitido em 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
 
 :::
 
@@ -209,8 +209,8 @@ Here is a detailed example of a HTTPHandlers.json file:
 In this example, you must implement the following functions:
 
 - *handle function* in the *GeneralHandling* class
-- *manageAccount* in the *UsersHandling* class
-- *handleInvoices* in the *FinancialHandling* class
+- *manageAccount* na classe *UsersHandling*
+- *handleInvoices* na classe \*FinancialHandling
 - *handleDocs* in the *DocsHandling* class
 - *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
 
@@ -243,7 +243,7 @@ Request handler functions are not necessarily shared, unless some request handle
 
 :::note
 
-It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
+It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
 
 :::
 
@@ -265,7 +265,7 @@ The [4D.IncomingMessage class](../API/IncomingMessageClass.md) provides function
 
 Here is a simple example to upload a file on the server.
 
-The **HTTPHandlers.json** file:
+O arquivo **HTTPHandlers.json**:
 
 ```json
 [
@@ -280,7 +280,7 @@ The **HTTPHandlers.json** file:
 
 The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. Ele é recebido no objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) na solicitação.
+The binary content of the file is put in the body of the request and a POST verb is used. O nome do arquivo é fornecido como parâmetro (*fileName*) no URL. Ele é recebido no objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) na solicitação.
 
 ```4d
     //UploadFile class

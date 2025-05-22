@@ -99,7 +99,7 @@ Com as entidades, não há o conceito de "registro atual" como na linguagem 4D. 
 Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente.
 
 - attributes of the **storage** kind can be set or get as simple properties of the entity object,
-- attributes of the **relatedEntity** kind will return an entity,
+- atributos do tipo **relatedEntity** retornarão uma entidade,
 - attributes of the **relatedEntities** kind will return an entity selection,
 - attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
 
@@ -254,7 +254,7 @@ Você pode criar e usar simultaneamente tantas seleções de entidades diferente
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an *undefined* value. In this case, you can call the [`.clean()`](API/EntitySelectionClass.md#clean) function to get a new entity selection but without the deleted entity references.
+When entities are deleted, their references remain in the entity selection with an *undefined* value. Neste caso, você pode chamar a função [`.clean()`](API/EntitySelectionClass.md#clean) para obter uma nova seleção de entidade, mas sem as referências de entidade deletadas.
 
 :::
 

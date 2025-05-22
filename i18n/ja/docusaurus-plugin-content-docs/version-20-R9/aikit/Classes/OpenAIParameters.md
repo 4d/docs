@@ -5,39 +5,39 @@ title: OpenAIParameters
 
 # OpenAIParameters
 
-The `OpenAIParameters` class is designed to handle execution and request parameters for interacting with the OpenAI API.
+`OpenAIParameters` クラスはOpenAI API とやり取りをするための実行パラメーターとリクエストパラメーターを管理するために設計されています。
 
 ## プロパティ
 
-### Properties of Asynchronous Programming
+### 非同期プログラミングのプロパティ
 
-| プロパティ                      | 型        | 説明                                                                                                                                                                 |
-| -------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `formula` or `onTerminate` | Function | A function to be called asynchronously when finished. Ensure that the current process does not terminate.                          |
-| `onResponse`               | Function | A function to be called asynchronously when the request finishes successfully. Ensure that the current process does not terminate. |
-| `onError`                  | Function | A function to be called asynchronously when the request finishes with errors. Ensure that the current process does not terminate.  |
-| `throw`                    | Boolean  | If true, throws an error if one occurs. Only if no formula callback defined.                                                       |
+| プロパティ                        | 型        | 説明                                                         |
+| ---------------------------- | -------- | ---------------------------------------------------------- |
+| `formula` あるいは `onTerminate` | Function | 終了時に非同期で呼び出す関数。 カレントプロセスが終了しないように注意してください。                 |
+| `onResponse`                 | Function | リクエストが正常に終了したときに非同期で呼び出す関数。 カレントプロセスが終了しないように注意してください。     |
+| `onError`                    | Function | リクエストがエラーで終了したときに非同期で呼び出す関数。 カレントプロセスが終了しないように注意してください。    |
+| `throw`                      | Boolean  | true の場合、エラーが発生した場合にエラーをスローします。 コールバックフォーミュラが定義されていない場合のみ。 |
 
-See [documentation about asynchronous code](../asynchronous-call.md)
+詳細については[非同期コードについてのドキュメンテーション](../asynchronous-call.md) を参照してください。
 
-### Network properties
+### ネットワークプロパティ
 
-| プロパティ          | 型         | 説明                                                                                                                                                       |
-| -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Default is 0.                                    |
-| `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                           |
-| `maxRetries`   | Integer   | The maximum number of retries for the request. (Only if code not asynchrone ie. no function provided) |
-| `extraHeaders` | Object    | Extra headers to send with the request.                                                                                                  |
+| プロパティ          | 型         | 説明                                                                          |
+| -------------- | --------- | --------------------------------------------------------------------------- |
+| `timeout`      | Real      | クライアントレベルのリクエストのデフォルトのタイムアウトをオーバーライドします(秒単位)。 デフォルトは0です。 |
+| `httpAgent`    | HTTPAgent | クライアントレベルのリクエストのデフォルトのHTTP エージェントをオーバーライドします。                               |
+| `maxRetries`   | Integer   | リクエストのリトライの最大回数。 (コードが非同期でない場合、つまり関数が提供されていない場合のみ)       |
+| `extraHeaders` | Object    | リクエストに付随して送信する追加のヘッダー。                                                      |
 
-### OpenAPI properties
+### OpenAPIプロパティ
 
-| プロパティ  | 型    | 説明                                                                                                          |
-| ------ | ---- | ----------------------------------------------------------------------------------------------------------- |
-| `user` | Text | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse. |
+| プロパティ  | 型    | 説明                                                 |
+| ------ | ---- | -------------------------------------------------- |
+| `user` | Text | エンドユーザーを表す固有の識別子。これはOpenAI が不正利用をモニターし検知するのに役立ちます。 |
 
-## Inherited Classes
+## 継承クラス
 
-Several classes inherit from `OpenAIParameters` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIParameters`:
+特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIParameters` クラスを継承します。 `OpenAIParameters` 以下はクラスを拡張するクラスの一部です:
 
 - [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)
 - [OpenAIChatCompletionsMessagesParameters](OpenAIChatCompletionsMessagesParameters.md)

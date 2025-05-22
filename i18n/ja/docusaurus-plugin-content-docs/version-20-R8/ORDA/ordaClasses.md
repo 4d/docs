@@ -140,7 +140,7 @@ Function GetBestOnes()
 `City クラス` は API を提供しています:
 
 ```4d
-// cs.City class
+// cs.City クラス
 
 Class extends DataClass
 
@@ -267,10 +267,10 @@ End if
 データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません:
 
 - 4D のテーブル名は、**cs** [クラスストア](Concepts/classes.md#クラスストア) 内において自動的に DataClass クラス名として使用されるため、**cs** 名前空間において衝突があってはなりません。 特に:
- - Do not give the same name to a 4D table and to a [user class name](../Concepts/classes.md#class-definition). 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
+ - 4D テーブル名と[ユーザークラス名](../Concepts/classes.md#クラス定義)に同じ名前をつけてはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
  - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
 
-- When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
+- クラス定義の際、[`Class extends`](../Concepts/classes.md#class-extends-classname) ステートメントに使用する親クラスの名前は完全に合致するものでなくてはいけません (文字の大小が区別されます)。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
 
 - データモデルクラスオブジェクトのインスタンス化に `new()` キーワードは使えません (エラーが返されます)。 上述の ORDA クラステーブルに一覧化されている、通常の [インスタンス化の方法](#アーキテクチャー) を使う必要があります。
 
@@ -832,11 +832,11 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
 ```
 
-## onHttpGet キーワード
+## onHTTPGet キーワード
 
-`onHttpGet` キーワードを使用することで、`GET` 動詞(メソッド)を使用してHTTP リクエストを通して呼び出し可能な関数を宣言することができます。 このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
+`onHTTPGet` キーワードを使用することで、`GET` 動詞(メソッド)を使用してHTTP リクエストを通して呼び出し可能な関数を宣言することができます。 このような関数は例えば[`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用することで、あらゆるWeb コンテンツを返すことができます。
 
-`onHttpGet` キーワードが使用できる関数は以下の通りです:
+`onHTTPGet` キーワードが使用できる関数は以下の通りです:
 
 - ORDA データモデルクラス関数
 - [シングルトンクラス関数](../Concepts/classes.md#シングルトンクラス)
@@ -844,7 +844,7 @@ $id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機�
 シンタックスは次の通りです:
 
 ```4d
-// onHttpGet 関数を宣言する
+// onHTTPGet 関数を宣言する
 exposed onHttpGet Function <functionName>(params) : result
 ```
 
@@ -862,7 +862,7 @@ exposed onHttpGet Function <functionName>(params) : result
 
 ### params
 
-`onHttpGet` キーワードを持つ関数は、[引数](../Concepts/parameters.md) を受け入れます。
+`onHTTPGet` キーワードを持つ関数は、[引数](../Concepts/parameters.md) を受け入れます。
 
 HTTP GET リクエストにおいては、引数はURL 内に直接渡される必要があり、また`$params` キーワードを使用して宣言されている必要があります(引数はコレクション内に受け取られる必要があります)。
 
@@ -874,7 +874,7 @@ REST サーバードキュメントの[引数](../REST/classFunctions#引数) �
 
 ### 戻り値
 
-`onHttpGet` キーワードを持つ関数は、サポートされる型であれば、あらゆる値を返すことが可能です([引数](../REST/classFunctions#引数)と同様です)。
+`onHTTPGet` キーワードを持つ関数は、サポートされる型であれば、あらゆる値を返すことが可能です([引数](../REST/classFunctions#引数)と同様です)。
 
 :::info
 
@@ -997,7 +997,7 @@ End if
 
 ### クラスファイル
 
-An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
+ORDA データモデルユーザークラスは、クラスと同じ名称の .4dm ファイルを [通常のクラスファイルと同じ場所](../Concepts/classes.md#クラス定義) (つまり、Project フォルダー内の `/Sources/Classes` フォルダー) に追加することで定義されます。 たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
 
 ### クラスの作成
 

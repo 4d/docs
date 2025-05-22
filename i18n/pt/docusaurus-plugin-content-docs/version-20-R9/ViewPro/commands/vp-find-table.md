@@ -24,7 +24,7 @@ title: VP Find table
 
 ## Descrição
 
-The `VP Find table` command <!-- REF #_method_.VP Find table.Summary -->returns the name of the table to which to the *rangeObj* cell belongs<!-- END REF -->.
+O comando `VP Find table` <!-- REF #_method_.VP Find table.Summary -->retorna o nome da tabela ao qual a célula *rangeObj* pertence<!-- END REF -->.
 
 Em *rangeObj*, passar um objeto de intervalo de células. Se as células designadas não pertencerem a uma tabela, o comando retornará uma string vazia.
 

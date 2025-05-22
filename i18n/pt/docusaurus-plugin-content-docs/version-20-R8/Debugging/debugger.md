@@ -29,7 +29,7 @@ Há várias formas de exibir o depurador:
 
 Quando chamada, a janela do depurador fornece o nome do método ou da função de classe que rastreia atualmente e a ação que causa o aparecimento inicial da janela do depurador. Por exemplo, na janela do depurador acima:
 
-- *drop* is the method being traced
+- *drop* é o método que está sendo rastreado
 - The debugger window appeared because of a break point.
 
 A exibição de uma nova janela do depurador utiliza a mesma configuração que a última janela exibida na mesma sessão. Se executar vários processos usuário, pode rastreá-los de forma independente e ter uma janela do depurador aberta para cada processo.
@@ -42,7 +42,7 @@ A janela do depurador é normalmente apresentada na máquina onde o código é e
 :::note Notas
 
 - Se o servidor estiver a funcionar sem interface, não pode ser apresentada qualquer janela do depurador no servidor, pelo ser necessário utilizar o depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
-- You can also [attach the Qodly Studio debugger to a 4D Server application](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
+- Você também pode [anexar o depurador do Qodly Studio a um aplicativo do Servidor 4D](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) se você precisar depurar páginas Qodly em um ambiente implantado.
 
 :::
 
@@ -315,7 +315,7 @@ O Painel de controle personalizado é útil para avaliar expressões. É semelha
 
 ### Modo de exibição
 
-You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+Você seleciona o modo de exibição a ser usado em todas as janelas do depurador usando a opção **Exibir** do [menu contextual](#contextual-menu) do painel Observação Personalizada.
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
 
@@ -456,7 +456,7 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 
 - **Show documentation**: Opens the documentation for the target element. Este comando está disponível para:
  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
- - *4D commands, functions, class names:* Displays the online documentation.
+ - *Comandos 4D, funções e nomes de classes:* exibe a documentação on-line.
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
 - **Copiar para o Painel de Expressão**: Copia a expressão selecionada para o painel de observação personalizado.

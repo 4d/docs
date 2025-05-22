@@ -63,7 +63,7 @@ Retourne les [shared singletons](#singletons) (s'il y en a) et des informations 
 
 En appelant `$catalog/$all`, vous pouvez recevoir des informations détaillées sur les attributs de chacune des dataclasses du modèle de votre projet.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/\{dataClass\}`](#catalogdataclass).
+Pour plus d'informations sur ce qui est retourné pour chaque dataclass et ses attributs, utilisez [`$catalog/\{dataClass\}`](#catalogdataclass).
 
 ### Exemple
 
@@ -328,7 +328,7 @@ Vous pouvez récupérer les informations concernant une dataclass spécifique.
 
 ## singletons
 
-Si vous avez défini des [shared singletons] (../Concepts/classes.md#singleton-classes) contenant au moins une [fonction exposée] (../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), une section `singletons` est ajoutée au json retourné pour les syntaxes `/$catalog` et `/$catalog/$all`. Il contient la collection des classes singleton sous forme d'objets avec leur **name** et **methods** (c'est-à-dire les fonctions exposées).
+Si vous avez défini des [shared singletons](../Concepts/classes.md#singleton-classes) contenant au moins une [fonction exposée](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions), une section `singletons` est ajoutée au json retourné pour les syntaxes `/$catalog` et `/$catalog/$all`. Il contient la collection des classes singleton sous forme d'objets avec leur **name** et **methods** (c'est-à-dire les fonctions exposées).
 
 Les fonctions singleton peuvent être appelées par des requêtes REST à l'aide de la commande [`$singleton`]($singleton.md).
 

@@ -33,7 +33,7 @@ The following ORDA and singleton functions can be called in REST:
 
 :::
 
-Functions are simply called on the appropriate ORDA interface or singleton class, without (). [Parameters](#parameters) are passed either in the body of the POST request (`POST` calls) or in the `params` collection in the URL (`GET` calls).
+Functions are simply called on the appropriate ORDA interface or singleton class, without (). [Parâmetros](#parameters) são passados no corpo da solicitação POST (chamadas `POST`) ou na coleção `params` no URL (chamadas `GET`).
 
 For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
@@ -49,7 +49,7 @@ with data in the body of the POST request: `["Aguada"]`
 
 :::note
 
-A função `getCity()` deve ter sido declarada com a palavra-chave `onHttpGet` (veja [Configuração da função](#function-configuration) abaixo).
+The `getCity()` function must have been declared with the `onHTTPGet` keyword (see [Function configuration](#function-configuration) below).
 
 :::
 
@@ -71,13 +71,13 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 Consulte a seção [Funções expostas vs. não expostas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
-### `onHttpGet`
+### `onHTTPGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por exemplo:
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por exemplo:
 
 ```4d
 //allowing GET requests
-exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
+exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
 ### Thread-safe
@@ -86,7 +86,7 @@ All 4D code called from REST requests **must be thread-safe** if the project run
 
 :::info
 
-You can restrict calls to specific ORDA functions by configuring appropriate privileges in the [**roles.json**](../ORDA/privileges.md#rolesjson-file) file.
+Você pode restringir chamadas a funções ORDA específicas configurando os privilégios apropriados no arquivo [**roles.json**](../ORDA/privileges.md#rolesjson-file).
 
 :::
 

@@ -18,7 +18,7 @@ Les données sont collectées lors des événements suivants :
 - démarrage de la base de données,
 - fermeture de la base de données,
 - démarrage du serveur web,
-- use of specific features such as php, open datastore, remote debugger,
+- utilisation de fonctions spécifiques telles que php, open datastore, débogueur distant,
 - connexion client,
 - envoi de la collecte de données.
 
@@ -57,21 +57,21 @@ Certaines données sont également collectées à intervalles réguliers.
 | --------- | ------ | ------------------------------------------------------------------------------------- |
 | webServer | Object | "started":true si le serveur web est en cours de démarrage ou démarré |
 
-### Collected at new web session creation
+### Collecté lors de la création d'une nouvelle session web
 
-| Data                                                | Type   | Notes                                                                                |
-| --------------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
-| databases.webMaxLicensedSessions    | Number | Maximum number of non-REST web sessions on the server that use the webserver license |
-| databases.restMaxLicensedSessions   | Number | Maximum number of REST web sessions on the server that use the REST license          |
-| databases.webMaxUnlicensedSessions  | Number | Maximum number of other non-REST web sessions on the server                          |
-| databases.restMaxUnlicensedSessions | Number | Maximum number of other REST web sessions on the server                              |
+| Data                                                | Type   | Notes                                                                                       |
+| --------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------- |
+| databases.webMaxLicensedSessions    | Number | Nombre maximum de sessions web non-REST sur le serveur qui utilisent la licence serveur web |
+| databases.restMaxLicensedSessions   | Number | Nombre maximum de sessions web REST sur le serveur qui utilisent la licence REST            |
+| databases.webMaxUnlicensedSessions  | Number | Nombre maximum d'autres sessions web non-REST sur le serveur                                |
+| databases.restMaxUnlicensedSessions | Number | Nombre maximum d'autres sessions web REST sur le serveur                                    |
 
-### Collected at datastore opening
+### Collecté à l'ouverture du datastore
 
-| Data                                              | Type   | Notes                                                         |
-| ------------------------------------------------- | ------ | ------------------------------------------------------------- |
-| databases.externalDatastoreOpened | Number | Number of calls to `Open datastore`                           |
-| databases.internalDatastoreOpened | Number | Number of times the datastore is opened by an external server |
+| Data                                              | Type   | Notes                                                            |
+| ------------------------------------------------- | ------ | ---------------------------------------------------------------- |
+| databases.externalDatastoreOpened | Number | Nombre d'appels à `Open datastore`                               |
+| databases.internalDatastoreOpened | Number | Nombre de fois où le datastore est ouvert par un serveur externe |
 
 ### Collectés à intervalles réguliers
 
@@ -98,8 +98,8 @@ Certaines données sont également collectées à intervalles réguliers.
 | indexSegment.diskWriteBytes    | Number  | Nombre d'octets écrits dans le fichier d'index                                                   |
 | indexSegment.diskReadCount     | Number  | Nombre de lectures dans le fichier d'index                                                       |
 | indexSegment.diskWriteCount    | Number  | Nombre d'écritures dans le fichier d'index                                                       |
-| databases.webScalableSessions  | Boolean | True if scalable sessions are activated                                                          |
-| databases.webIPAddressesNumber | Number  | Number of different IP addresses that made a request to 4D Server                                |
+| databases.webScalableSessions  | Boolean | Vrai si les sessions évolutives sont activées                                                    |
+| databases.webIPAddressesNumber | Number  | Nombre d'adresses IP différentes ayant adressé une requête à 4D Server                           |
 
 ### Collecté lors de la fermeture de la base de données et de l'envoi de la collecte de données
 
@@ -111,13 +111,13 @@ Certaines données sont également collectées à intervalles réguliers.
 | webserverBytesOut              | Number | Octets envoyés par le serveur web pendant la collecte des données  |
 | qodly.webforms | Number | Nombre de webforms Qodly                                           |
 
-### Collected at every new call to the remote debugger
+### Collecté à chaque nouvel appel au débogueur distant
 
-| Data                                                        | Type   | Notes                                                         |
-| ----------------------------------------------------------- | ------ | ------------------------------------------------------------- |
-| databases.remoteDebugger4DRemoteAttachments | Number | Number of attachments to the remote debugger from a remote 4D |
-| databases.remoteDebuggerQodlyAttachments    | Number | Number of attachments to the remote debugger from Qodly       |
-| databases.remoteDebuggerVSCodeAttachments   | Number | Number of attachments to the remote debugger from VS Code     |
+| Data                                                        | Type   | Notes                                                                 |
+| ----------------------------------------------------------- | ------ | --------------------------------------------------------------------- |
+| databases.remoteDebugger4DRemoteAttachments | Number | Nombre de rattachements au débogueur distant à partir d'un 4D distant |
+| databases.remoteDebuggerQodlyAttachments    | Number | Nombre de rattachements au débogueur distant à partir de Qodly        |
+| databases.remoteDebuggerVSCodeAttachments   | Number | Nombre de rattachements au débogueur distant à partir de VS Code      |
 
 ### Collecté à chaque fois que PHP execute est appelé
 

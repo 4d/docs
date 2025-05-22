@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Params-->
 
-| Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                    |
-| --------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable    | Tabela       | &#8594; | Table owning the form or If omitted: default table or use of project form                                                                                                    |
-| form      | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, or an object describing the form |
-| formData  | Object       | &#8594; | Data to associate to the form                                                                                                                                                                |
-| \*        | Operador     | &#8594; | Usar o mesmo processo                                                                                                                                                                        |
+| Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                                                  |
+| --------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable    | Tabela       | &#8594; | Tabela possuindo o formulário ou se omitido: tabela padrão ou uso do formulário projeto                                                                                                                    |
+| form      | Text, Object | &#8594; | Nome (string) da tabela ou formulário do projeto, ou um caminho POSIX (string) para um arquivo .json descrevendo o formulário, ou um objeto descrevendo o formulário |
+| formData  | Object       | &#8594; | Dados para associar ao formulário                                                                                                                                                                                          |
+| \*        | Operador     | &#8594; | Usar o mesmo processo                                                                                                                                                                                                      |
 
 <!-- END REF-->
 
@@ -21,43 +21,43 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
 
-This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. Unlike [ADD RECORD](../commands-legacy/add-record.md) or [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons.
+This command is designed to work with customized and advanced user interfaces based on forms. Você pode usá-lo para exibir informações provenientes do banco de dados ou de outros locais, ou para fornecer recursos de entrada de dados. Unlike [ADD RECORD](../commands-legacy/add-record.md) or [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons.
 
-This command is typically called along with the [Open form window](../commands-legacy/open-form-window.md) to display sophisticated forms, as shown in the following example:
+Normalmente, esse comando é chamado junto com [Open form window](../commands-legacy/open-form-window.md) para exibir formulários sofisticados, conforme mostrado no exemplo a seguir:
 
 ![](../assets/en/commands/pict3541609.en.png)
 
-The **DIALOG** command can also be used instead of [ALERT](../commands-legacy/alert.md), [CONFIRM](../commands-legacy/confirm.md) or [Request](../commands-legacy/request.md) when the information to be presented or gathered is more complex than those commands can manage.
+O comando **DIALOG** também pode ser usado em vez de [ALERT](../commands-legacy/alert.md), [CONFIRM](../commands-legacy/confirm.md) ou [Request](../commands-legacy/request.md) quando as informações a serem apresentadas ou reunidas são mais complexas do que esses comandos podem gerir.
 
-In the *form* parameter, you can pass:
+No parâmetro *form*, você pode passar:
 
-- the name of a form (project form or table form) to use;
-- the path (in POSIX syntax) to a valid .json file containing a description of the form to use;
-- an object containing a description of the form to use.
+- o nome de um formulário (formulário de projeto ou formulário de tabela) a ser usado;
+- o caminho (na sintaxe POSIX) para um arquivo .json válido que contém uma descrição do formulário a ser usado;
+- um objeto que contém uma descrição do formulário a ser usado.
 
-Optionally, you can pass parameter(s) to the *form* using a "form data" object. Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. For example, if you use a form data object containing {"version";"12"}, you will be able to get or set the value of the "version" property in the form by calling:
+Opcionalmente, você pode passar parâmetro(s) para o *formulário* usando um objeto "dados do formulário". Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md). Por exemplo, se você usar um objeto de dados de formulário contendo {"version"; "12"}, poderá obter ou definir o valor da propriedade "version" no formulário chamando:
 
 ```4d
  $v:=Form.version //"12"
  Form.version:=13
 ```
 
-To fill the "form data" object, you have two possibilities:
+Para preencher o objeto "form data", você tem duas possibilidades:
 
-- use the *formData* parameter. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
+- use o parâmetro *formData*. O uso de uma variável local para *formData* permite que você passe parâmetros com segurança para seus formulários, independentemente do contexto de chamada. Em particular, se o mesmo formulário for chamado de diferentes lugares no mesmo processo, você sempre poderá acessar seus valores específicos simplesmente chamando [Form](form.md).myProperty. Além disso, uma vez que os objetos são passados por referência, se o usuário modifica um valor de propriedade no formulário, ele será automaticamente salvo no objeto em si.
 
-- [associate a user class to the form](../FormEditor/properties_FormProperties.md#form-class), in which case 4D will automatically instantiate an object of this class when the form will be loaded. The object properties and functions will be automatically available through the object returned by [Form](form.md). You could write for example `Form.myFunction()`.
+- [associar uma classe de usuário ao formulário](../FormEditor/properties_FormProperties.md#form-class), caso em que o 4D instanciará automaticamente um objeto dessa classe quando o formulário for carregado. As propriedades e funções do objeto estarão automaticamente disponíveis através do objeto retornado por [Form](form.md). Você poderia escrever por exemplo `Form.myFunction()`.
 
 :::note
 
-- The *formData* parameter has priority over a form class (the class object is not instantiated if a *formData* parameter is passed).
-- If you do not pass the *formData* parameter (or if you pass an undefined object) and no user class is associated to the form, **DIALOG** creates a new empty object bound to the *form*.
+- O parâmetro *formData* tem prioridade sobre uma classe de formulário (o objeto de classe não é instanciado se um parâmetro *formData* for passado).
+- Se você não passar o parâmetro *formData* (ou se passar um objeto indefinido) e nenhuma classe de usuário estiver associada ao formulário, **DIALOG** criará um novo objeto vazio vinculado ao *formulário*.
 
 :::
 
-The dialog is closed by the user either with an "accept" action (triggered by the ak accept standard action, the Enter key, or the [ACCEPT](../commands-legacy/accept.md) command), or with a "cancel" action (triggered by the ak cancel standard action, the Escape key, or the [CANCEL](../commands-legacy/cancel.md) command). An accept action will set the OK system variable to 1, while a cancel action will set OK to 0\.
+A caixa de diálogo é fechada pelo usuário com uma ação de "aceitação" (acionada pela ação padrão ak accept, pela tecla Enter ou pelo comando [ACCEPT](../commands-legacy/accept.md)) ou com uma ação de "cancelamento" (acionada pela ação padrão ak cancel, pela tecla Escape ou pelo comando [CANCEL](../commands-legacy/cancel.md)). Uma ação de aceitação definirá a variável de sistema OK como 1, enquanto uma ação de cancelamento definirá OK como 0\.
 
-Keep in mind that validation does not equal saving: if the dialog includes fields, you must explicitly call the [SAVE RECORD](../commands-legacy/save-record.md) command to save any data that has been modified.
+Lembre-se de que a validação não é igual a gravação: se o diálogo incluir campos, você deve chamar explicitamente o comando [SAVE RECORD](../commands-legacy/save-record.md) para salvar todos os dados que foram modificados.
 
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
@@ -65,76 +65,76 @@ If you pass the optional *\** parameter, the form is loaded and displayed in the
 This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command.\
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
 If you pass the optional *\** parameter, the form is loaded and displayed in the last open window of the current process and the command finishes its execution while leaving the active form on the screen.\
-This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. If the current process terminates, the forms created in this way are automatically closed in the same way as if a [CANCEL](../commands-legacy/cancel.md) command had been called. This opening mode is particularly useful for displaying a floating palette with a document, without necessarily requiring another process.
+This form then reacts “normally” to user actions and is closed using a standard action or when 4D code related to the form (object method or form method) calls the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. Se o processo atual for encerrado, os formulários criados dessa forma serão automaticamente fechados da mesma forma como se um comando [CANCEL](../commands-legacy/cancel.md) tivesse sido chamado. Esse modo de abertura é particularmente útil para exibir uma paleta flutuante com um documento, sem necessariamente exigir outro processo.
 
 **Notas:**
 
-- You can combine the use of the **DIALOG**(form;\*) syntax with the [CALL FORM](../commands-legacy/call-form.md) command to establish communication between the forms.
-- You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. Otherwise, error -9909 is generated.
-- When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. You do not have to manage the closing of the window itself.
+- Você pode combinar o uso da sintaxe **DIALOG**(formulário;\*) com o comando [CHAMAR FORM](../commands-legacy/call-form.md) para estabelecer a comunicação entre os formulários.
+- Você deve criar uma janela antes de chamar a instrução **DIALOG**(formulário;\*). Não é possível usar a janela de diálogo atual no processo nem a janela criada por padrão para cada processo. Caso contrário, o erro -9909 é gerado.
+- Quando o parâmetro *\** é usado, a janela é fechada automaticamente após uma ação padrão ou uma chamada para o comando [CANCEL](../commands-legacy/cancel.md) ou [ACCEPT](../commands-legacy/accept.md). Você não tem que gerenciar o fechamento da janela em si.
 
 ## Exemplo 1
 
-The following example can be used to create a tool palette:
+O exemplo a seguir pode ser usado para criar uma paleta de ferramentas:
 
 ```4d
-  //Display tool palette
+  //Exibe a paleta de ferramentas
  $palette_window:=Open form window("tools";Palette form window)
- DIALOG("tools";*) //Give back the control immediately
-  //Display main document windowl
+ DIALOG("tools";*) //Devolve o controle imediatamente
+  //Exibe a janela do documento principal
  $document_window:=Open form window("doc";Plain form window)
  DIALOG("doc")
 ```
 
 ## Exemplo 2
 
-In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
+Em um formulário que exibe o registro de uma pessoa, o botão "Check children" (Verificar filhos) abre uma caixa de diálogo para verificar/modificar os nomes e as idades dos filhos:
 
 ![](../assets/en/commands/pict3542015.en.png)
 
-**Note:** The "Children" object field is represented only to show its structure for this example.
+**Nota:** O campo de objeto "Children" é representado apenas para mostrar sua estrutura neste exemplo.
 
 No formulário de verificação, você atribuiu algumas propriedades do objeto [Form](form.md) a variáveis:
 
 ![](../assets/en/commands/pict3541682.en.png)
 
-Here is the code for the "Check children" button:
+Aqui está o código do botão "Check children":
 
 ```4d
  var $win;$n;$i : Integer
  var $save : Boolean
- ARRAY OBJECT($children;0)
- OB GET ARRAY([Person]Children;"children";$children) //get the children collection
- $save:=False //initialize the save variable
+ ARRAY OBJECT($children; )
+ OB GET ARRAY([Person]crianças;"crianças";$children) //get a coleção dos filhos
+ $save:=False //initialize a variável de salvamento
  
  $n:=Size of array($children)
  If($n>0)
-    $win:=Open form window("Edit_Children";Movable form dialog box)
-    SET WINDOW TITLE("Check children for "+[Person]Name)
-    For($i;1;$n) //for each child
-       DIALOG("Edit_Children";$children{$i}) //displays dialog filled with values
-       If(OK=1) //the user clicked OK
-          $save:=True
-       End if
-    End for
+    $win:=Abrir janela de forma ("Edit_Children"; Caixa de diálogo de formulário ovable)
+    SET WINDOW TITLE("Cheque os filhos para "+[Person]Nome)
+    For($i; ;$n) //para cada criança
+       DIALOG("Edit_Children";$children{$i}) //exibe um diálogo cheio de valores
+       If(OK=1) ///o usuário clicou em OK
+          $save:=Verdadeiro
+       End se
+    End para
     If($save=True)
-       [Person]Children:=[Person]Children //forces object field update
-    End if
+       [Person]Children:=[Person]Filhos//força atualização do campo de objeto
+    End se
     CLOSE WINDOW($win)
  Else
-    ALERT("No child to check.")
- End if
+    ALERT("Não há filho para verificar. )
+ finais, se
 ```
 
-The form displays information for each child:
+O formulário exibe informações de cada criança:
 
 ![](../assets/en/commands/pict3515152.en.png)
 
-If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards).
+Se os valores forem editados e o botão OK for clicado, o campo será atualizado (o registro pai deverá ser salvo em seguida).
 
 ## Exemplo 3
 
-The following example uses the path to a .json form to display the records in an employee list:
+O exemplo a seguir usa o caminho para um formulário .json para exibir os registros em uma lista de funcionários:
 
 ```4d
  Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
@@ -142,13 +142,13 @@ The following example uses the path to a .json form to display the records in an
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```
 
-which displays:
+que é exibido:
 
 ![](../assets/en/commands/pict3687439.en.png)
 
 ## Exemplo
 
-The following example uses a .json file as an object and modifies a few properties:
+O exemplo a seguir usa um arquivo .json como um objeto e modifica algumas propriedades:
 
 ```4d
  var $form : Object
@@ -160,13 +160,13 @@ The following example uses a .json file as an object and modifies a few properti
  DIALOG($form;*)
 ```
 
-The altered form is displayed with the title, logo and border modified:
+O formulário alterado é exibido com o título, o logotipo e a borda modificados:
 
 ![](../assets/en/commands/pict3688356.en.png)
 
-## System variables and sets
+## Variáveis e configurações do sistema
 
-After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is canceled, OK is set to 0.
+Depois de uma chamada para **DIALOG**, se a caixa de diálogo for aceita, OK está definido como 1; se for cancelado, OK está definido como 0.
 
 ## Veja também
 
@@ -179,9 +179,9 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 
 ## Propriedades
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Command number     | 40                          |
-| Thread safe        | &cross; |
-| Modifies variables | OK, error                   |
+|                       |                             |
+| --------------------- | --------------------------- |
+| Número de comando     | 40                          |
+| Thread safe           | &cross; |
+| Modifica as variáveis | OK, error                   |
 

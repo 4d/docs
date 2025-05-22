@@ -280,12 +280,12 @@ There may be some cases where you prefer that thread safety checking of commands
 To do this, you must surround the code to be excluded from command thread safety checking with the special directives `%T-` and `%T+` as comments. The `//%T-` comment disables thread safety checking and `//%T+` enables it again:
 
 ```4d
-  // %T- to disable thread safety checking
+  //%T- to disable thread safety checking
 
   // Place the code containing commands to be excluded from thread safety checking here
  $w:=Open window(10;10;100;100) //for example
 
-  // %T+ to enable thread safety checking again for the rest of the method
+  //%T+ to enable thread safety checking again for the rest of the method
 ```
 
 Of course, the 4D developer is responsible for the preemptive mode compatibility of the code between the deactivation and reactivation directives. Runtime errors will be generated if thread-unsafe code is executed in a preemptive thread.

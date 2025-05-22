@@ -17,7 +17,7 @@ title: VP Get row count
 
 ## Descrição
 
-The `VP Get row count` command <!-- REF #_method_.VP Get row count.Summary -->returns the total number of rows from the designated *sheet*<!-- END REF -->.
+O comando `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->retorna o número total de linhas da *sheet* designada<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 

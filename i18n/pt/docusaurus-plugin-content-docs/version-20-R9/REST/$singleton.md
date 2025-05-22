@@ -27,7 +27,7 @@ Tenha em mente que somente funções com a [palavra-chave `exposed`](../ORDA/ord
 
 ## Chamadas funções
 
-Singleton functions can be called using REST **POST** or **GET** requests.
+As funções singleton podem ser chamadas usando solicitações REST **POST** ou **GET**.
 
 A sintaxe formal é:
 
@@ -43,7 +43,7 @@ with data in the body of the POST request: `["myparam"]`
 
 :::note
 
-The `SingletonClassFunction()` function must have been declared with the `onHttpGet` keyword to be callable with `GET` (see [Function configuration](ClassFunctions#function-configuration)).
+The `SingletonClassFunction()` function must have been declared with the `onHTTPGet` keyword to be callable with `GET` (see [Function configuration](ClassFunctions#function-configuration)).
 
 :::
 
@@ -77,7 +77,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singletons) command.
+A classe `mySingleton` e a função `sayHello` são listadas quando você chama o comando [`$catalog`]($catalog.md#singletons).
 
 :::
 

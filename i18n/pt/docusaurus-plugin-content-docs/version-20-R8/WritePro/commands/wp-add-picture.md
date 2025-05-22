@@ -22,11 +22,11 @@ displayed_sidebar: docs
 
 The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
 
-In *wpDoc*, pass the name of a 4D Write Pro document object.
+Em *wpDoc*, passe o nome de um objeto documento 4D Write Pro.
 
 For the optional second parameter, you can pass either:
 
-- In *picture*:  A 4D picture
+- Em *picture*:  uma imagem 4D
 - In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
 - In *PictureFileObj*: a `4D.File` object representing a picture file.
 
@@ -46,9 +46,9 @@ By default, the added picture is:
 
 The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
 
-**Note:** The [WP Selection range](../commands-legacy/wp-selection-range.md) command returns a *picture reference* object if an anchored picture is selected and a *range object* if an inline picture is selected. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. You can determine if a selected object is a picture object by checking the `wk type` attribute:
 
-- **Value = 2**: The selected object is a picture object.
+- **Value = 2**: o objeto selecionado é um objeto imagem.
 - **Value = 0**: The selected object is a range object.
 
 ## Exemplo 1

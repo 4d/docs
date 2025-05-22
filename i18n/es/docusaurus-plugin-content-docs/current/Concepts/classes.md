@@ -752,7 +752,7 @@ Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) a
 :::note
 
 - Los singletons de sesión son automáticamente singletons compartidos (no hay necesidad de usar la palabra clave `shared` en el constructor de clases).
-- Las funciones compartidas Singleton soportan [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
+- Singleton shared functions support [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

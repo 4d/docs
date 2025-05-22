@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+O comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->retorna uma coleção de todos os objetos do servidor Web disponíveis na aplicação 4D<!-- END REF -->.
 
 Uma aplicação 4D pode conter em qualquer lugar de um a vários servidores Web:
 
@@ -57,9 +57,9 @@ Queremos saber quantos servidores rodando estão disponíveis:
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1716                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1716                        |
+| Thread safe       | &check; |
 
 

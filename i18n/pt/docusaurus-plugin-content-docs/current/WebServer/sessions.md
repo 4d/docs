@@ -30,7 +30,7 @@ This OTPion is selected by default in new projects. It can however be disabled b
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the OTPion defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> The [`WEB SET OTPION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
+> O comando [`WEB SET OTPION`](../commands-legacy/web-set-option.md) também pode definir o modo de sessão para o servidor Web principal.
 
 Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no servidor Web 4D Server e os servidores Web de máquinas 4D remotas.
 
@@ -102,7 +102,7 @@ Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout
 
 Os privilégios podem ser associados a sessões usuário Web. No servidor web, você pode fornecer acesso ou recursos específicos, dependendo dos privilégios da sessão.
 
-Você atribui privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). Em seu código, você pode verificar os privilégios da sessão para permitir ou negar o acesso usando a função [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Você atribui privilégios usando a função [`.setPrivileges()`](API/SessionClass.md#setprivileges). Em seu código, você pode verificar os privilégios da sessão para permitir ou negar o acesso usando a função [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Por padrão, as novas sessões não têm nenhum privilégio: elas são sessões **Guest** ([`.isGuest()`](API/SessionClass.md#isguest) retorna true).
 
 Exemplo:
 
@@ -205,7 +205,7 @@ For more examples, please refer to the [Scalable sessions for advanced web appli
 
 The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
 
-In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Thanks to this architecture, the [session cookie](#session-implementation) is not exposed on the network, which eliminates the risk of man-in-the-middle attack.
+In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Graças a esta arquitetura, o [cookie de sessão](#session-implementation) não está exposto na rede, o que elimina o risco de ataque do homem-meio.
 
 ### Visão Geral
 
@@ -223,7 +223,7 @@ By definition, an OTP token can only be used once. In this scenario, if a web re
 
 Callbacks from third-party applications that include the OTP token can be processed in different ways in your 4D application, depending on your development and the third-party API. Basically, you have two possibilities to handle the token: through the **`$4DSID`** parameter for an automatic processing, or through a custom parameter that you need to process.
 
-#### Using `$4DSID` in the URL
+#### Usando `$4DSID` no URL
 
 Using the `$4DSID` parameter is the most simple way to process a callback from the third-party application:
 
@@ -262,7 +262,7 @@ Verifying if the received OTP token is valid depends on how it was handled:
 - If you used a `$4DSID`, you can store a custom status property in the [session storage](../API/SessionClass.md#storage) at the moment of the token creation, and check this status once the OTP token was received to see if it is the same value (see example).
 - Se você usou a função [`Session.restore()`](../API/SessionClass.md#restore), ele retorna verdadeiro se a sessão foi restaurada corretamente.
 
-### Scenario with $4DSID
+### Cenário com $4DSID
 
 The scenario using the `$4DSID` key is illustrated in the following diagram:
 
@@ -376,7 +376,7 @@ shared singleton Class constructor()
     Session.restore($req.urlQuery.state)
 ```
 
-### Example of email validation with $4DSID
+### Exemplo de validação de e-mail com $4DSID
 
 1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
 
@@ -467,7 +467,7 @@ A new user is created, and some information is stored in the session, especially
 
 ### Lifespan
 
-A session token has a lifespan, and the session itself has a lifespan. O tempo de vida útil do token de sessão pode ser definido [na criação do token](../API/SessionClass.md#createotp). By default, the token lifespan is the same value as the [`.idleTimeout`](../API/SessionClass.md#idletimeout) value.
+A session token has a lifespan, and the session itself has a lifespan. O tempo de vida útil do token de sessão pode ser definido [na criação do token](../API/SessionClass.md#createotp). Por padrão, o tempo de vida do token é o mesmo valor que o valor [`.idleTimeout`](../API/SessionClass.md#idletimeout).
 
 A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
 

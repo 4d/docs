@@ -10,13 +10,22 @@ title: リリースノート
 
 :::
 
+
+## 4D 20.7 LTS
+
+#### ハイライト
+
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.7): 4D 20.7 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+
+
+
 ## 4D 20.6 LTS
 
 #### ハイライト
 
-:::info Evaluation applications
+:::info 評価版アプリケーション
 
-Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building.md#build-an-evaluation-application).
+ナイトリービルド**101734**以降、アプリケーションビルド画面には評価版アプリケーションをビルドするための新しいオプションが表示されるようになりました。 詳細は[4D Rx ドキュメンテーションの説明](../../../docs/Desktop/building#build-an-evaluation-application)を参照してください。
 
 :::
 
@@ -24,11 +33,11 @@ Starting with nightly build **101734**, the Build application dialog box has a n
 
 :::警告 WINDOWS SERVER 2025 での既知の問題
 
-Windows Server 2025 では、新しいWindows 印刷ダイアログボックス内での一部のカスタムのオプションは利用不可となっており、現在調査中です。 A fix will be available in the next hotfix.
+Windows Server 2025 では、新しいWindows 印刷ダイアログボックス内での一部のカスタムのオプションは利用不可となっており、現在調査中です。 この問題はHotfixで修正される予定です。
 
 :::
 
-- Ability to [build standalone applications without embedded licenses](../Desktop/building.md#licenses).
+- [スタンドアロンの4Dアプリケーションを使用するのに必要なライセンスを埋め込まずに](../Desktop/building.md#ライセンスについて)アプリケーションをビルドできるようになりました。
 - [**修正リスト**](https://bugs.4d.com/fixes?version=20.6): 4D 20.6 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
 
@@ -121,7 +130,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 :::
 
 - [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの *options* パラメーターに `plugins` プロパティが新しく追加されました。
-- 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore-and-log-integration).
+- 4D Serverの自動復元中に複数のジャーナルファイルが自動的に統合されるようになりました: [自動復元](../Backup/settings.md#自動復元とログの統合)
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。 [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。 [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
 - 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
 - ユーザークラス定義で [`property`](../Concepts/classes.md#property) キーワードをサポート。
@@ -177,7 +186,7 @@ Windows 11 24H2 では、Microsoft Print to PDFドライバーを使用して PD
 #### 動作の変更
 
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
-- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
+- [ポップアップメニューがリンクされたベベルボタン](../FormObjects/properties_TextAndPicture.md#with-pop-up-menu)に標準アクションが設定されている場合、ポップアップメニューの項目が選択されたときには標準アクションが実行されないようになりました。
 - Blink (CEF) を使用する Webエリアにおいて、外部スクリプトによって表示されるダイアログは、 `setTimeout()` JS 関数から呼び出されていないとブロックされるようになりました。 これは、現在のCEFのアップデートにより、`alert()` や `print()` などの関数によって表示されるダイアログが、OS ではなく Web エリアで処理されるようになったためです。 [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/ja/page1029.html) および [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/ja/page1043.html) 参照。
 
 
@@ -302,7 +311,7 @@ ALERT($param1+" "+$param2)
  $class.concate() // " " と表示
 ```
 詳細については、こちらの [ブログ記事](https://blog.4d.com/ja/stop-press-accessing-parameters-not-being-passed-is-possible) を参照ください。 この全体的な変更を利点を活かすため、呼び出し先メソッドと呼び出し元メソッドの両方を再コンパイルする必要があります。 そのため、コンポーネントの再コンパイルが必要になります。
-- Debugging web server sessions [is easier on 4D Server](../WebServer/sessions.md).
+- Webサーバーセッションを[4D Serverで容易にデバッグ](../WebServer/sessions.md)できるようになりました。
 - 新しい [4D NetKit](https://github.com/4d/4D-NetKit/tree/20.x) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
 - ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。 4D 19 R3 では、4Dユーザーパスワードに対して、bcrypt というより強力なハッシュ化アルゴリズムを使用しています。 パスワードが一度変更されると、4D 19 R3 より前のバージョンで同じデータベースを開いた際には、そのアカウントの認証が拒否されます (ログインできません)。 そのため、4Dパスワードを使用している場合には、4D 19 R3 以降のバージョンにアップグレードする前に .4db ファイル (バイナリデータベース) または directory.json ファイル (プロジェクトデータベース) をバックアップしておくことが強く推奨されます。
 - 正確性のため、`4D digest` 定数は、`4D REST digest` へと名称が改められました。

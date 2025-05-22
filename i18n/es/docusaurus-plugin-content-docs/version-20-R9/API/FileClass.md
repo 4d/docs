@@ -268,11 +268,11 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 #### Descripción
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
+La función `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->devuelve el contenido de la información de un archivo de aplicación como un objeto<!-- END REF -->.
 
 The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
-**Returned object with a .plist file (all platforms)**
+**Objeto devuelto con un archivo .plist (todas las plataformas)**
 
 El contenido xml del archivo se analiza y las llaves se devuelven como propiedades del objeto, conservando sus tipos (texto, booleano, numérico). `.plist dict` se devuelve como un objeto JSON y `.plist array` se devuelve como un array JSON.
 
@@ -588,11 +588,11 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 #### Descripción
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
+La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades *info* como contenido informativo de un archivo de aplicación<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
+The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. If used with another file type or with *.exe*\*/**.dll** files that do not already exist on disk, the function does nothing (no error is generated).
 
-***info* parameter object with a .plist file (all platforms)**
+Parámetro ***info* con un archivo .plist (todas las plataformas)**
 
 :::note
 
@@ -600,9 +600,11 @@ La función sólo admite archivos .plist en formato xml (basados en texto). Se d
 
 :::
 
-Cada propiedad válida definida en el parámetro objeto *info* se escribe en el archivo .plist en forma de llave. Se aceptan todos los nombre de llaves. Los tipos de valores se conservan cuando es posible.
+If the .plist file already exists on the disk, it is updated. Otherwise, it is created.
 
-Si un conjunto de llaves en el parámetro *info* ya está definido en el archivo .plist, su valor se actualiza manteniendo su tipo original. Las demás llaves existentes en el archivo .plist no se modifican.
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Se aceptan todos los nombre de llaves. Los tipos de valores se conservan cuando es posible.
+
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Las demás llaves existentes en el archivo .plist no se modifican.
 
 :::note
 
@@ -612,7 +614,7 @@ Para definir un valor de tipo Fecha, el formato a utilizar es una cadena de time
 
 ***info* parameter object with a .exe or .dll file (Windows only)**
 
-Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
 | Propiedad        | Tipo | Comentario                                                                                                                                              |
 | ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -626,9 +628,9 @@ Cada propiedad válida definida en el parámetro objeto *info* se escribe en el 
 | OriginalFilename | Text |                                                                                                                                                         |
 | WinIcon          | Text | Ruta Posix del archivo .ico. Esta propiedad sólo se aplica a los archivos ejecutables generados por 4D. |
 
-Para todas las propiedades excepto `WinIcon`, si se pasa un texto nulo o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
+For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
 
-Para la propiedad `WinIcon`, si el archivo del icono no existe o tiene un formato incorrecto, se genera un error.
+For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
 ***info* parameter object with a macOS executable file (macOS only)**
 
@@ -644,7 +646,7 @@ Every object in the *info*.archs collection must contain the following propertie
 #### Ejemplo 1
 
 ```4d
-  // definir algunas llaves en un archivo info.plist (todas las plataformas)
+  // set some keys in an info.plist file (all platforms)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
@@ -659,7 +661,7 @@ $infoPlistFile.setAppInfo($info)
 #### Ejemplo 2
 
 ```4d
-  // definir el copyright y versión de un archivo .exe (Windows)
+  // set copyright, version and icon of a .exe file (Windows)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -709,15 +711,15 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parámetros | Tipo |    | Descripción                       |
-| ---------- | ---- | -- | --------------------------------- |
-| content    | BLOB | -> | Nuevos contenidos para el archivo |
+| Parámetros | Tipo |    | Descripción               |
+| ---------- | ---- | -- | ------------------------- |
+| content    | BLOB | -> | New contents for the file |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función .setContent( ) <!-- REF #FileClass.setContent().Summary --> reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOBcontent<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
 #### Ejemplo
 
@@ -756,11 +758,11 @@ La función .setContent( ) <!-- REF #FileClass.setContent().Summary --> reescrib
 
 #### Descripción
 
-La función `.setText()` <!-- REF #FileClass.setText().Summary --> escribe *text* como el nuevo contenido del archivo<!-- END REF -->.
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
-Comentario Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
+If the file referenced in the `File` object does not exist on the disk, it is created by the function. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
-En *text*, pase el texto a escribir en el archivo. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
+In *text*, pass the text to write to the file. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
 
 Opcionalmente, puede designar el conjunto de caracteres que se utilizará para la escritura del contenido. Puede pasar:
 
@@ -771,7 +773,7 @@ Opcionalmente, puede designar el conjunto de caracteres que se utilizará para l
 
 Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D la inserta en el archivo a menos que el conjunto de caracteres utilizado contenga el sufijo "-no-bom" (por ejemplo, "UTF-8-no-bom"). Si no especifica un conjunto de caracteres, por defecto 4D utiliza el conjunto de caracteres "UTF-8" sin BOM.
 
-En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema **Documentos sistema**, están disponibles:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 | Constante                     | Valor | Comentario                                                                                                                                                                                                                                          |
 | ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -783,7 +785,7 @@ En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar 
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
-> **Nota de compatibilidad**: las opciones de compatibilidad están disponibles para la gestión de EOL y de BOM. Ver la [página Compatibilidad](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) en doc.4d.com.
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
 
 #### Ejemplo
 

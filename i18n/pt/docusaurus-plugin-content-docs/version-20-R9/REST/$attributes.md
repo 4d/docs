@@ -22,8 +22,8 @@ Puede aplicar `$attributes` a una entidad (*p. Ej.*, People(1)) o una entity sel
  - `$attributes=relatedEntities.*`: se devuelven todas las propiedades de todas las entidades relacionadas
  - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: sólo se devuelven los atributos de las entidades relacionadas.
 
-- If `$attributes` is specified for **storage** attributes:
- - `$attributes=attribute1, attribute2, ...`: only those attributes of the entities are returned.
+- Se `$attributes` for especificado para os atributos **storage**:
+ - `$attributes=attribute1, attribute2, ...`: somente os atributos das entidades são retornados.
 
 ## Exemplo com entidades relacionadas
 

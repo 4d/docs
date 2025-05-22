@@ -13,7 +13,7 @@ Lorsqu'ils sont exécutés en mode *coopératif*, tous les process sont gérés 
 
 En conséquence, en mode préemptif, les performances globales de l'application sont améliorées, notamment sur les machines multicœurs, car plusieurs process peuvent réellement s'exécuter simultanément. Cependant, les gains réels dépendent des opérations en cours d'exécution. En contrepartie, étant donné qu'en mode préemptif chaque process est indépendant des autres et n'est pas géré directement par l'application, il y a des contraintes spécifiques appliquées au code que vous souhaitez rendre compatible avec une utilisation en préemptif. De plus, l'exécution en préemptif n'est disponible que dans certains contextes.
 
-## Availability of preemptive mode {#availability-of-preemptive-mode}
+## Disponibilité du mode préemptif {#availability-of-preemptive-mode}
 
 L'utilisation du mode préemptif est prise en charge dans les contextes d'exécution suivants :
 
@@ -41,7 +41,7 @@ Le code 4D ne peut être exécuté dans un process préemptif que lorsque certai
 
 La propriété "thread safety" de chaque élément dépend de l'élément lui-même :
 
-- Commandes 4D : la propriété thread-safe est une propriété interne. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands/command-name.md) command to know if a command is thread-safe. Une grande partie des commandes 4D peut s'exécuter en mode préemptif.
+- Commandes 4D : la propriété thread-safe est une propriété interne. Dans la documentation 4D, les commandes thread-safe sont identifiées par l'icône ![](../assets/en/Develop/thread-safe.png). Vous pouvez également utiliser la commande [`Command name`](../commands/command-name.md) pour savoir si une commande est thread-safe. Une grande partie des commandes 4D peut s'exécuter en mode préemptif.
 - Méthodes projet : les conditions pour être thread-safe sont répertoriées dans [ce paragraphe](#writing-a-thread-safe-method).
 
 Fondamentalement, le code à exécuter dans des threads préemptifs ne peut pas appeler des parties avec des interactions externes, telles que du code de plug-in ou des variables interprocess. Cependant, l'accès aux données est autorisé car le serveur de données 4D et ORDA prennent en charge l'exécution préemptive.
@@ -141,7 +141,7 @@ Exécuter une méthode en mode préemptif dépendra de sa propriété "execution
 
 4D vous permet d'identifier le mode d'exécution des process en mode compilé :
 
-- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
+- La commande [`Process info`](../commands/process-info.md) vous permet de savoir si un process est exécuté en mode préemptif ou coopératif.
 - L'Explorateur d'exécution et la [fenêtre d'administration de 4D Server](../ServerWindow/processes.md#process-type) affichent des icônes spécifiques pour les process préemptifs.
 
 ## Ecrire une méthode thread-safe
@@ -155,10 +155,10 @@ Pour être thread-safe, une méthode doit respecter les règles suivantes :
 - Elle ne doit pas utiliser de variables interprocess(1)
 - Elle ne doit pas appeler d'objets d'interface (2) (il y a cependant des exceptions, voir ci-dessous).
 
-(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](../commands-legacy/storage.md) catalog.
+(1) Pour échanger des données entre process préemptifs (et entre tous les process), vous pouvez passer des [collections partagées ou objets partagés](../Concepts/shared.md) comme paramètres aux process, et/ou utiliser le catalogue [`Storage`](../commands-legacy/storage.md).
 Les [process Worker](processes.md#worker-processes) vous permettent également d'échanger des messages entre tous les process, y compris les process préemptifs.
 
-(2) The [`CALL FORM`](../commands-legacy/call-form.md) command provides an elegant solution to call interface objects from a preemptive process.
+(2) La commande [`CALL FORM`](../commands-legacy/call-form.md) fournit une solution élégante pour appeler des objets d'interface à partir d'un process préemptif.
 
 :::note Notes
 
@@ -193,7 +193,7 @@ Les seuls accès possibles à l'interface utilisateur depuis un thread préempti
 
 ### Triggers
 
-When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+Lorsqu'une méthode utilise une commande qui peut appeler un [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), le compilateur 4D évalue la "thread safety" du trigger afin de vérifier celle de la méthode :
 
 ```4d
  SAVE RECORD([Table_1]) //trigger sur Table_1, s'il existe, doit être thread-safe
@@ -216,7 +216,7 @@ Dans ce cas, tous les triggers sont évalués. Si une commande thread-unsafe est
 
 :::note
 
-In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+Dans les [applications client/serveur](../Desktop/clientServer.md), les triggers peuvent être exécutés en mode coopératif, même si leur code est thread-safe. Cela se produit lorsqu'un trigger est déclenché à partir d'un process distant : dans ce cas, le trigger est exécuté dans le [process "jumeau" du process client](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) sur la machine serveur. Comme ce process est utilisé pour tous les appels du client, il est toujours exécuté en mode coopératif.
 
 :::
 
@@ -268,12 +268,12 @@ Il peut y avoir certains cas où vous préférez que la vérification de la prop
 Pour faire cela, vous devez entourer le code à exclure de la vérification avec les directives spéciales `%T-` et `%T+` en tant que commentaires. Le commentaire `//%T-` désactive la vérification de la propriété thread safe et `//%T+` la réactive :
 
 ```4d
-  // %T- to disable thread safety checking
-
-  // Place the code containing commands to be excluded from thread safety checking here
- $w:=Open window(10;10;100;100) //for example
-
-  // %T+ to enable thread safety checking again for the rest of the method
+  //%T- pour désactiver la vérification thread safety
+ 
+  // Placez le code contenant les commandes à exclure de la vérification thread safety ici
+ $w:=Open window(10;10;100;100) //par exemple
+ 
+  //%T+ pour réactiver la vérification thread safety pour le reste de la méthode
 ```
 
 Bien entendu, le développeur 4D est responsable de la compatibilité du code entre les directives de désactivation et de réactivation avec le mode préemptif. Des erreurs d'exécution seront générées si du code thread-unsafe est exécuté dans un process préemptif.

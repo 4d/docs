@@ -42,7 +42,7 @@ Os objectos Httprequest fornecem as seguintes propriedades e funções:
 
 #### Descrição
 
-The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summary -->the accessor that gets the `connectionHandler` object used to initiate the connection<!-- END REF -->.
+A propriedade `.handler` contém <!-- REF #WebSocketConnectionClass.handler.Summary -->o acessório que obtém o objeto `connectionHandler` usado para iniciar a conexão<!-- END REF -->.
 
 <!-- END REF -->
 

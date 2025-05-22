@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros  | Tipo    |                             | Descripción                                              |
 | ----------- | ------- | --------------------------- | -------------------------------------------------------- |
-| targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document                |
+| targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro                |
 | wpDoc       | Object  | &#8594; | Documento 4D Write Pro                                   |
 | mode        | Integer | &#8594; | Modo de inserción                                        |
 | rangeUpdate | Integer | &#8594; | Range update mode                                        |
@@ -26,7 +26,7 @@ En *targetObj*, pase:
 
 - Un rango, o
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
-- a 4D Write Pro document.
+- un documento 4D Write Pro.
 
 The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
 
@@ -47,10 +47,10 @@ You can combine one of the previous constants with the following insertion optio
 
 In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
-| Constante             | Tipo    | Valor | Comentario                                                               |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |
+| Constante             | Tipo    | Valor | Comentario                                                                            |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
+| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                                       |
+| wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 

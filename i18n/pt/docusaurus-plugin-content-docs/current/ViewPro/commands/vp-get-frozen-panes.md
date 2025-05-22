@@ -17,7 +17,7 @@ title: VP Get frozen panes
 
 ## Descrição
 
-The `VP Get frozen panes` command <!-- REF #_method_.VP Get frozen panes.Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
+O comando `VP Get frozen panes` <!-- REF #_method_.VP Get frozen panes.Summary -->retorna um objeto com informações sobre as colunas congeladas e linhas no *vpAreaName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 

@@ -1,9 +1,9 @@
 ---
 id: compatible-openai
-title: Providers
+title: Proveedores
 ---
 
-# Providers
+# Proveedores
 
 Many AI providers propose an OpenAI-like API, so you can use this project to connect to them.
 
@@ -11,7 +11,7 @@ To do so you just have to change the original `baseURL` by the service one and u
 
 ## Remote
 
-| Provider                                                                                                                                                                                                 | Base url                                                                                                                                              |
+| Provider                                                                                                                                                                                                 | Url base                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | https://mistral.ai/                                                                                                                                                      | https://api.mistral.ai/v1                                                                             |
 | https://www.deepseek.com/                                                                                                                                | https://api.deepseek.com                                                                              |
@@ -25,7 +25,7 @@ To do so you just have to change the original `baseURL` by the service one and u
 
 ## Local
 
-| Provider                                             | Default base url                                                                                          | Doc                                                                           |
+| Provider                                             | Url base por defecto                                                                                      | Doc                                                                           |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |

@@ -136,7 +136,7 @@ If the body has not been given as a binary content, the function tries to conver
 
 #### Descrição
 
-The `.getHeader()` function <!-- REF #IncomingMessageClass.getHeader().Summary -->returns the value of the *key* header<!-- END REF -->.
+A função `.getHeader()` <!-- REF #IncomingMessageClass.getHeader().Summary -->retorna o valor do cabeçalho *key*<!-- END REF -->.
 
 :::note
 
@@ -170,7 +170,7 @@ $value := $request.getHeader("content-type")
 
 #### Descrição
 
-The `.getJSON()` function <!-- REF #IncomingMessageClass.getJSON().Summary -->returns the body of the request as a JSON resolution<!-- END REF -->.
+A função `.getJSON()` <!-- REF #IncomingMessageClass.getJSON().Summary -->retorna o corpo da solicitação como uma resolução JSON<!-- END REF -->.
 
 If the body has not been given as JSON valid content, an error is raised.
 
@@ -236,7 +236,7 @@ If the body has not been given as a string value, the function tries to convert 
 
 #### Descrição
 
-The `.headers` property contains <!-- REF #IncomingMessageClass.headers.Summary -->the current headers of the incoming message as key/value pairs (strings)<!-- END REF -->.
+A propriedade `.headers` contém <!-- REF #IncomingMessageClass.headers.Summary --> os cabeçalhos atuais da mensagem recebida como pares chave/valor (strings)<!-- END REF -->.
 
 A propriedade `.headers` é somente leitura.
 
@@ -252,7 +252,7 @@ Nomes de cabeçalho (chaves) são menores. Note header names are case sensitive.
 
 #### Descrição
 
-The `.url` property contains <!-- REF #IncomingMessageClass.url.Summary -->the URL of the request without the *IP:port* part and as a string<!-- END REF -->.
+A propriedade `.url` contém <!-- REF #IncomingMessageClass.url.Summary -->a URL da solicitação sem a parte *IP:port* e como um string<!-- END REF -->.
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
 
@@ -290,7 +290,7 @@ The `.urlPath` property is read-only.
 
 #### Descrição
 
-The `.urlQuery` property contains <!-- REF #IncomingMessageClass.urlQuery.Summary -->the parameters of the request when they have been given in the URL as key/value pairs<!-- END REF -->.
+A propriedade `.urlQuery` contém <!-- REF #IncomingMessageClass.urlQuery.Summary -->os parâmetros da solicitação quando eles são fornecidos no URL como pares de chave/valor<!-- END REF -->.
 
 The `.urlQuery` property is read-only.
 
@@ -308,7 +308,7 @@ Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoma
 
 Parameters are passed in JSON format and enclosed within a collection.
 
-In this case, parameters are received as JSON text in the `urlQuery` property and can be parsed using [`JSON Parse`](../commands-legacy/json-parse.md).
+Nesse caso, os parâmetros são recebidos como texto JSON na propriedade `urlQuery` e podem ser analisados usando [`JSON Parse`](../commands-legacy/json-parse.md).
 
 ```4d
 //urlQuery.myparams: "[{"firstname": "Marie","isWoman": true,"id": 3}]"

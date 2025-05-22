@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
+O comando `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.Summary -->converte um documento MIME em um objeto de e-mail válido<!-- END REF -->.
 
 > O formato dos objetos de email 4D segue a [especificação JMAP](https://jmap.io/spec-mail.html).
 
@@ -89,9 +89,9 @@ $status:=$transporter.send($email)
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1681                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1681                        |
+| Thread safe       | &check; |
 
 

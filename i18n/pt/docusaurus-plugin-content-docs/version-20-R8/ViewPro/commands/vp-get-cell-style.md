@@ -16,7 +16,7 @@ title: VP Get cell style
 
 ## Descrição
 
-The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->returns a [style object](../configuring.md#style-objects) for the first cell in the *rangeObj*<!-- END REF -->.
+O comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->retorna um [objeto estilo](../configuring.md#style-objects) para a primeira célula no *rangeObj*<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo que contenha o estilo a ser recuperado.
 

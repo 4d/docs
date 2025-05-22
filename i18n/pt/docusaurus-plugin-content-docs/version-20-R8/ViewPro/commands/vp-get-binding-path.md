@@ -24,7 +24,7 @@ title: VP Get binding path
 
 ## Descrição
 
-The `VP Get binding path` command <!-- REF #_method_.VP Get binding path.Summary -->returns the name of the attribute bound to the cell specified in *rangeObj*<!-- END REF -->.
+O comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->retorna o nome do atributo vinculado à célula especificada no *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass an object that is either a cell range or a combined range of cells. Note que:
 

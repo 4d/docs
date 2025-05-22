@@ -50,11 +50,11 @@ title: '$compute'
 }
 ````
 
-If you want to get all the computations for an attribute of type String, you can write:
+文字列型の属性を対象にすべての計算値を取得するには、次のように書きます:
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Response**:
+**レスポンス**:
 
 ```js
 {

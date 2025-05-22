@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## Description
 
-The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
+La commande **WP Add picture**<!--REF #_command_.WP Add picture.Summary--> ancre l'image passée en paramètre à un emplacement fixe dans le *wpDoc* spécifié et renvoie sa référence.<!-- END REF--> La référence renvoyée peut ensuite être transmise à la commande [WP SET ATTRIBUTES](wp-set-attributes.md) pour placer l'image à n'importe quel endroit du *wpDoc* (page, section, en-tête, pied de page, etc.) with a defined layer, size, etc.
 
 In *wpDoc*, pass the name of a 4D Write Pro document object.
 

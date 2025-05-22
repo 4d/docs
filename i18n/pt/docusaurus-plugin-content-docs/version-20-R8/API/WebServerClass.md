@@ -77,7 +77,7 @@ Caminho do <!-- REF #WebServerClass.certificateFolder.Summary -->pasta onde os a
 
 <!-- REF #WebServerClass.characterSet.Syntax -->**.characterSet** : Number<br/>**.characterSet** : Text<!-- END REF -->
 
-The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D Web Server should use to communicate with browsers connecting to the application<!-- END REF -->. O valor padrão realmente depende da linguagem do SO. O valor padrão realmente depende da linguagem do SO. Aqui está a lista de identificadores correspondentes aos conjuntos de caracteres suportados pelo Servidor Web 4D:
+O <!-- REF #WebServerClass.characterSet.Summary --> conjunto de caracteres que o servidor Web 4D deve usar para se comunicar com navegadores conectados à aplicação<!-- END REF -->. O valor padrão realmente depende da linguagem do SO. O valor padrão realmente depende da linguagem do SO. Aqui está a lista de identificadores correspondentes aos conjuntos de caracteres suportados pelo Servidor Web 4D:
 
 - 4 = ISO-8859-1
 - 12 = ISO-8859-9
@@ -125,7 +125,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
-Contains the <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **methods**:
+Contém a <!-- REF #WebServerClass.CORSSettings.Summary -->lista dos hosts e métodos permitidos para o serviço CORS<!-- END REF --> (veja a propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **methods**:
 
 - **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
  - 192.168.5.17:8081
@@ -197,7 +197,7 @@ Valor padrão: 63072000 (2 anos).
 
 <!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Integer<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)<!-- END REF -->. Este seletor permite otimizar trocas priorizando a velocidade de execução (menos compactação) ou a quantidade de compressão (menos velocidade)
+O <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->nível de compressão para todas as trocas HTTP comprimidas para o servidor HTTP 4D (solicitações do cliente ou respostas do servidor)<!-- END REF -->. Este seletor permite otimizar trocas priorizando a velocidade de execução (menos compactação) ou a quantidade de compressão (menos velocidade)
 
 Valores possíveis:
 
@@ -214,7 +214,7 @@ Padrão = 1 (compressão mais rápida).
 
 <!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Integer<!-- END REF -->
 
-The <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->size threshold (bytes) for requests below which exchanges should not be compressed<!-- END REF -->. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
+O <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->limite de tamanho das solicitações (bytes) para abaixo do qual as trocas não devem ser compactadas<!-- END REF -->. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
 
 Limite de compressão padrão = 1024 bytes
 
@@ -296,7 +296,7 @@ Default = 480 minutos
 
 > Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
-The <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
+A <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->duração (em minutos) das sessões legadas inativas (duração definida no cookie)<!-- END REF -->. No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
 
 Default = 480 minutos
 
@@ -330,7 +330,7 @@ O <!-- REF #WebServerClass.isRunning.Summary --> estado de execução do servido
 
 <!-- REF #WebServerClass.keepSession.Syntax -->**.keepSession** : Boolean<!-- END REF -->
 
-Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
+Contém <!-- REF #WebServerClass.keepSession.Summary -->`True` se as sessões legadas estiverem ativadas no servidor da Web; caso contrário, `False`<!-- END REF -->.
 
 ##### Veja também
 
@@ -463,7 +463,7 @@ O <!-- REF #WebServerClass.rootFolder.Summary --> caminho da pasta raiz do servi
 
 <!-- REF #WebServerClass.scalableSession.Syntax -->**.scalableSession** : Boolean<!-- END REF -->
 
-Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
+Contém <!-- REF #WebServerClass.scalableSession.Summary -->`True` se sessões escalonáveis forem usadas no servidor da Web e `False` caso contrário<!-- END REF -->.
 
 ##### Veja também
 
@@ -568,7 +568,7 @@ The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the w
 
 The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
-All settings of [Web Server objects](../commands/web-server.md-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
+All settings of [Web Server objects](../commands/web-server.md-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
 
 As configurações de sessão personalizadas serão redefinidas quando a função [`.stop()`](#stop) for chamada.
 

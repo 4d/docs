@@ -7,7 +7,7 @@ title: VP IMPORT FROM OBJECT
 
 | Release | Mudanças                        |
 | ------- | ------------------------------- |
-| 20 R9   | Support of *paramObj* parameter |
+| 20 R9   | Suporte do parâmetro *paramObj* |
 
 </details>
 
@@ -33,7 +33,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 Em *viewPro*, passe um objeto 4D View Pro válido. Esse objeto pode ter sido criado usando [VP Export to object] (vp-export-to-object.md) ou manualmente. Para mais informações sobre objetos 4D View Pro, consulte a seção [4D View Pro](../configuring.md#4d-view-pro-object).
 
-An error is returned if the *viewPro* object is invalid.
+Um erro é retornado se o objeto *viewPro* for inválido.
 
 In *paramObj*, you can pass the following property:
 

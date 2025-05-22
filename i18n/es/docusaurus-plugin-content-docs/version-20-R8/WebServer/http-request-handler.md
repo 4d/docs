@@ -122,7 +122,7 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 - `/$lib/renderer`
 - `/$shared`
 
-### Class and method
+### Clase y método
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
@@ -243,7 +243,7 @@ Request handler functions are not necessarily shared, unless some request handle
 
 :::note
 
-**no es recomendado** exponer las funciones del gestor de solicitudes a llamadas REST externas usando las palabras claves [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) o [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
+It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
 
 :::
 

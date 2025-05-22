@@ -1291,11 +1291,11 @@ End if
 ```4d
 
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;1);"INVOICE")
- VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
- VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
+VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
+VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
 
- VP FLUSH COMMANDS("ViewProArea1")
- TRACE
+VP FLUSH COMMANDS("ViewProArea1")
+TRACE
 ```
 
 ### VP Font to object
@@ -5239,7 +5239,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 *formula* 引数に、*rangeObj* 引数のレンジに割り当てたいフォーミュラまたは 4Dメソッド名を指定します。
 
-> *formula* が文字列の場合、数値の区切り文字にピリオド `.` そして引数の区切り文字にカンマ `,` を使用します。 If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
+> *formula* が文字列の場合、数値の区切り文字にピリオド `.` そして引数の区切り文字にカンマ `,` を使用します。 4Dメソッドを使用する場合、そのメソッドは [`SET ALLOWED METHODS`](#vp-set-allowed-methods) コマンドで許可されている必要があります。
 
 任意の *formatPattern* 引数は、*formula* に対する [パターン](configuring.md#セルフォーマット) を定義します。
 
@@ -5294,7 +5294,7 @@ VP SET FORMULA($range;"SUM(A1,B7,C11)") // 引数の区切り文字に ","
 * 第1レベルのコレクションは、フォーミュラのサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。
 * それぞれのサブコレクションは行におけるセルの値を定義します。 値は、セルに割り当てるフォーミュラを格納したテキスト要素でなくてはなりません。
 
-> フォーミュラが文字列の場合、数値の区切り文字にピリオド `.` そして引数の区切り文字にカンマ `,` を使用します。 If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
+> フォーミュラが文字列の場合、数値の区切り文字にピリオド `.` そして引数の区切り文字にカンマ `,` を使用します。 4Dメソッドを使用する場合、そのメソッドは [`SET ALLOWED METHODS`](#vp-set-allowed-methods) コマンドで許可されている必要があります。
 
 *rangeObj* 内のフォーミュラは、空の文字列 ("") で置き換えることで削除することができます。
 

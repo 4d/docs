@@ -9,7 +9,10 @@ Un développeur 4D peut facilement implémenter ces palettes dans leur applicati
 
 La documentation principale de l'[interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se trouve dans le *4D - Mode Développement*.
 
-Vous trouverez ci-dessous la documentation de configuration de l'Assistant de table.
+You will find below:
+
+- the Table Wizard configuration documentation,
+- the integrated A.I. documentation.
 
 ## Assistant de table
 
@@ -295,3 +298,113 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 #### Voir également
 
 [4D Write Pro - Table Wizard (vidéo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+
+## Integrated AI
+
+You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application.
+
+Once you have enabled the AI feature, you can display a chat box over your 4D Write Pro document and interact with *chatGPT* to modify the text of the selection or of the document itself.
+
+:::note
+
+The 4D Write Pro interface uses OpenAI, for which you need to provide your own key (see below).
+
+:::
+
+### Limitations (Developer Preview)
+
+In the current implementation, the feature has the following limitations:
+
+- use of a predefined AI provider and necessity to pass your OpenAI key
+- basic chatting features
+- no image handling
+- non-configurable predefined action commands
+- predefined translations English/French and French/English only
+
+### Enabling the AI feature
+
+The AI dialog box is available by clicking on a button in the 4D Write Pro interface. This button is **hidden by default**, you need to enable it explicitely.
+
+To display the AI dialog box button, you need to:
+
+1. Get an API key from the [OpenAI website](https://openai.com/api/).
+2. Execute the following 4D code:
+
+```4d
+
+WP SetAIKey ("<Your OpenAI Key>") //
+
+```
+
+:::note
+
+No checking is done on the OpenAI key validity. If it is invalid, the *chatGPT* box will stay empty.
+
+:::
+
+The **A.I.** button is then displayed:
+
+![ai button](../assets/en/WritePro/ai-button.png)
+
+- in the 4D Write Pro Toolbar, in the **Import Export** tab,
+- in the 4D Write Pro Widget, in the **Font Style** tab.
+
+Click on the button to display the AI dialog box.
+
+### AI dialog box
+
+The 4D Write Pro AI dialog box allows a straightforward interaction between the chat area and the 4D Write Pro document.
+
+#### Prompt area
+
+At the bottom of the window, the **prompt area** allows you to enter any question to send to the AI.
+
+To send your question to the AI, click on the Send button:
+
+![ai send](../assets/en/WritePro/ai-send.png)
+
+The button icon changes when the same request is sent again:
+
+![ai resend](../assets/en/WritePro/ai-resend.png)
+
+On the left side of this area, a pop up menu provides examples of common actions that can be usually delegated to the AI.
+
+Selecting an action writes a corresponding question to the prompt. If necessary, you can modify the question and then to click on the Send button to actually send it:
+
+![ai menu](../assets/en/WritePro/ai-menu.png)
+
+:::note
+
+Default translation actions are based upon the current 4D default configuration and depend on available languages.
+
+:::
+
+#### Copy buttons
+
+These buttons propose basic interactions between the chat area, the underlying 4D Write Pro document, and the clipboard:
+
+![ai interaction](../assets/en/WritePro/ai-interaction.png)
+
+- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
+- **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
+
+In both cases, if the response was provided with styles, you can decide to copy the text with or without styles.
+
+:::note
+
+The chat box uses the Markdown language to format text. Basic styles such as bold, italic, underline, titles are supported. When pasting styled text from the AI in the 4D Write Pro area, you may lose some formatting information.
+
+:::
+
+#### Chat area
+
+The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
+
+To empty this area, you can click on the Erase button of the History area (resets the window and all interactions).
+
+#### Historique
+
+The History area lists all your prompts sent to the AI. You can hide/show this area using the button on the top right corner of the Chat area.
+
+The Erase button allows you to reset the whole window and erase all interactions. It is equivalent to close/reopen the AI dialog box.
+

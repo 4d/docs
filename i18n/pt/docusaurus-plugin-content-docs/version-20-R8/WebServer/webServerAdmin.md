@@ -21,7 +21,7 @@ O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 
 - Programaticamente, chamando o comando [`webServer.start()`](API/WebServerClass.md#start) ou `WEB START SERVER`.
 
-The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
+O servidor Web de qualquer componente pode ser iniciado com a chamada da função [`webServer.start()`](API/WebServerClass.md#start) no objeto do servidor Web do componente.
 
 > Você não precisa reiniciar a aplicação 4D para iniciar ou parar o servidor web.
 

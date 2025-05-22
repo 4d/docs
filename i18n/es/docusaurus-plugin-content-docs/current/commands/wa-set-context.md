@@ -17,7 +17,7 @@ title: WA SET CONTEXT
 
 ### Descripción
 
-The `WA SET CONTEXT` command <!--REF #_command_.WA SET CONTEXT.Summary--> defines a context object *contextObj* for `$4d` in the Web area designated by the \* and *object* parameters. When this command is used, `$4d` can only access contents declared within the provided *contextObj*. When no context object is set, `$4d` has access to all 4D methods and can not access user classes.<!-- END REF-->
+El comando `WA SET CONTEXT` <!--REF #_command_.WA SET CONTEXT.Summary--> define un objeto contextual *contextObj* para `$4d` en el área Web designado por los parámetros \* y *object*. When this command is used, `$4d` can only access contents declared within the provided *contextObj*. When no context object is set, `$4d` has access to all 4D methods and can not access user classes.<!-- END REF-->
 
 :::note
 

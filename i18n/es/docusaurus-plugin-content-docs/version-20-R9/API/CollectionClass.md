@@ -3186,7 +3186,7 @@ La retrollamada recibe los siguientes parámetros:
  - *$1.value2* (todo tipo): valor del segundo elemento a comparar
 - $2...$N (cualquier tipo): parámetros adicionales
 
-If you used a method, you must set the folllowing parameter:
+Resultado
 
 - Elemento a insertar en la colección
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros  | Tipo                                            |                             | Descripción                                                             |
 | ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
-| targetObj   | Object                                          | &#8594; | Range or element or 4D Write Pro document                               |
+| targetObj   | Object                                          | &#8594; | Rango o elemento o documento 4D Write Pro                               |
 | attribName  | Text                                            | &#8594; | Name of attribute to set                                                |
 | attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Nuevo valor de atributo                                                 |
 | attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary-->allows you to set the value of any attribute in a range, element, document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
+El comando **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->le permite definir el valor de cualquier atributo en un rango, elemento, documento.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
 
-In *targetObj*, you can pass :
+En *targetObj*, puede pasar :
 
 - un rango, o
 - an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
@@ -29,7 +29,7 @@ In *targetObj*, you can pass :
 
 You can specify attributes to set for *targetObj* in one of two ways:
 
-- Use the *attribName* and *attribValue* parameters. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many *attribName*/*attribValue* pairs as you want in a single call.
+- Utilice los parámetros *attribName* y *attribValue*. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many *attribName*/*attribValue* pairs as you want in a single call.
 
 - Use the *attribObj* parameter to pass a single object containing attribute names and their corresponding values as object properties.
 

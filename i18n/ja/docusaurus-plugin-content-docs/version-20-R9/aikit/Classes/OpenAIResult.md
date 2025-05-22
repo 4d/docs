@@ -5,7 +5,7 @@ title: OpenAIResult
 
 # OpenAIResult
 
-The `OpenAIResult` class is designed to handle the response from HTTP requests and provides functions to evaluate the success of the request, retrieve body content, and collect any errors that may have occurred during processing.
+`OpenAIResult` クラスはHTTP リクエストからのレスポンスを管理するために設計されており、リクエストの成否の評価、本文コンテンツの取得、そして処理中に起きたかもしれないあらゆるエラーの収集などの機能を提供します。
 
 ## プロパティ
 
@@ -13,44 +13,44 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 | --------- | ------------------------------------------------------------------------------------ | ---------------- |
 | `request` | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | The HTTP request |
 
-## Computed properties
+## 計算プロパティ
 
-| プロパティ        | 型          | 説明                                                                                                                          |
-| ------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `success`    | Boolean    | A Boolean indicating whether the HTTP request was successful.                                               |
-| `errors`     | Collection | Returns a collection of errors. These could be network errors or errors returned by OpenAI. |
-| `terminated` | Boolean    | A Boolean indicating whether the HTTP request was terminated.                                               |
-| `headers`    | Object     | Returns the response headers as an object.                                                                  |
-| `rateLimit`  | Object     | Returns rate limit information from the response headers.                                                   |
-| `効果`         | Object     | Returns usage information from the response body if any.                                                    |
+| プロパティ        | 型          | 説明                                                               |
+| ------------ | ---------- | ---------------------------------------------------------------- |
+| `success`    | Boolean    | HTTP リクエストが成功したかどうかを示すブール値。                                      |
+| `errors`     | Collection | エラーのコレクションを返します。 これのエラーはネットワークエラーまたはOpenAI から返されたエラーである可能性があります。 |
+| `terminated` | Boolean    | HTTP リクエストが終了したかどうかを示すブール値。                                      |
+| `headers`    | Object     | レスポンスのヘッダーをオブジェクトとして返します。                                        |
+| `rateLimit`  | Object     | レスポンスヘッダーからのレート制限情報を返します。                                        |
+| `usage`      | Object     | レスポンス本文からの使用状況を返します(あれば)。                     |
 
 ### rateLimit
 
-The `rateLimit` property returns an object containing rate limit information from the response headers.
-This information includes the limits, remaining requests, and reset times for both requests and tokens.
+`rateLimit` プロパティはレスポンスヘッダーからのレート制限情報を格納しているオブジェクトを返します。
+この情報には上限、残りのリクエスト、そしてリクエストとトークン両方のリセットまでの時間が含まれます。
 
-For more details on rate limits and the specific headers used, refer to [the OpenAI Rate Limits Documentation](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
+レート制限と使用される特定のヘッダーの詳細な情報については、[OpenAI のレート制限についてのドキュメンテーション](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers) を参照してください。
 
-The structure of the `rateLimit` object is as follows:
+`rateLimit` オブジェクトの構造は以下のようになっています:
 
-| フィールド               | 型       | 説明                                               |
-| ------------------- | ------- | ------------------------------------------------ |
-| `limit.request`     | Integer | Number of allowed requests.      |
-| `limit.tokens`      | Integer | Number of allowed tokens.        |
-| `remaining.request` | Integer | Number of remaining requests.    |
-| `remaining.tokens`  | Integer | Number of remaining tokens.      |
-| `reset.request`     | 文字列     | Time until request limit resets. |
-| `reset.tokens`      | 文字列     | Time until token limit resets.   |
+| フィールド               | 型       | 説明                     |
+| ------------------- | ------- | ---------------------- |
+| `limit.request`     | Integer | 許可されたリクエスト数。           |
+| `limit.tokens`      | Integer | 許可されたトークン数。            |
+| `remaining.request` | Integer | 残りのリクエスト数。             |
+| `remaining.tokens`  | Integer | 残りのトークン数。              |
+| `reset.request`     | 文字列     | リクエストの制限がリセットされるまでの時間。 |
+| `reset.tokens`      | 文字列     | トークンの制限がリセットされるまでの時間。  |
 
 ## 関数
 
 ### `throw()`
 
-Throws the first error in the `errors` collection. This function is useful for propagating errors up the call stack.
+`errors` コレクション内の最初のエラーをスローします。 この関数は呼び出しスタック内のエラーを辿っていくのに有用です。
 
-## Inherited Classes
+## 継承クラス
 
-Several classes inherit from `OpenAIResult` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIResult`:
+特定の用途のためにこのクラスの機能を拡張するために、いくつかのクラスが`OpenAIResult` クラスを継承します。 `OpenAIResult` 以下はクラスを拡張するクラスの一部です:
 
 - [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)
 - [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md)

@@ -11,10 +11,10 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 | Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional      |
 | ---------------------- | ---- | ---------------------------------------------------------------------------- | ------------- |
-| `apiKey`               | Text | Your [OpenAI API Key](https://platform.openai.com/api-keys). | No for OpenAI |
+| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | No for OpenAI |
 | `baseURL`              | Text | Base URL for OpenAI API requests.                            | Sí            |
 | `organization`         | Text | Your OpenAI Organization ID.                                 | Sí            |
-| `project`              | Text | Your OpenAI Project ID.                                      | Sí            |
+| `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí            |
 
 ### Propiedades HTTP adicionales
 
@@ -31,9 +31,9 @@ Create an instance of the OpenAI client class.
 
 | Argument Name | Tipo           | Descripción                                                                                     |
 | ------------- | -------------- | ----------------------------------------------------------------------------------------------- |
-| *apiKey*      | Text or Object | apiKey if Text as first argument and the second can be an Object of parameters. |
+| *apiKey*      | Texto u objeto | apiKey if Text as first argument and the second can be an Object of parameters. |
 
-#### API key
+#### Llave API
 
 ```4d
 // as text

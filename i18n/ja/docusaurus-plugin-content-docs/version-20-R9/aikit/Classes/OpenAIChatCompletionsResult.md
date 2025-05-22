@@ -5,16 +5,16 @@ title: OpenAIChatCompletionsResult
 
 # OpenAIChatCompletionsResult
 
-## Inherits
+## 継承元
 
 - [OpenAIResult](OpenAIResult.md)
 
-## Computed properties
+## 計算プロパティ
 
-| プロパティ     | 型            | 説明                                                                                                |
-| --------- | ------------ | ------------------------------------------------------------------------------------------------- |
-| `choices` | Collection   | Returns a collection of [OpenAIChoice](OpenAIChoice.md) from the OpenAI response. |
-| `choice`  | OpenAIChoice | Returns the first [OpenAIChoice](OpenAIChoice.md) from the choices collection.    |
+| プロパティ     | 型            | 説明                                                           |
+| --------- | ------------ | ------------------------------------------------------------ |
+| `choices` | Collection   | Open AI レスポンスから[OpenAIChoice](OpenAIChoice.md) のコレクションを返します。 |
+| `choice`  | OpenAIChoice | choices コレクションの中から最初の[OpenAIChoice](OpenAIChoice.md) を返します。  |
 
 ## 参照
 

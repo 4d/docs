@@ -133,7 +133,7 @@ Function myTransform ($x : Integer) -> $x : Integer
 
 ### サポートされているデータ型
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. 例:
+名前付き引数の場合、[`var` キーワードでサポートされている](variables.md) データ型 (クラスオブジェクト含む) を使用できます。  例:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -190,7 +190,7 @@ Function getValue -> $v : Integer
 
 ## 引数の間接参照 (${N})
 
-4Dメソッドおよび関数は、可変長の引数を受け取ることができます。 You can address those parameters with a `For...End for` loop, the [`Count parameters`](../commands-legacy/count-parameters.md) command and the **parameter indirection syntax**. メソッド内で、間接参照は `${N}` のように表示します。ここの `N` は数値式です。
+4Dメソッドおよび関数は、可変長の引数を受け取ることができます。 `For...End for` ループや [`Count parameters`](../commands-legacy/count-parameters.md) コマンド、**引数の間接参照シンタックス** を使って、これらの引数を扱うことができます。 メソッド内で、間接参照は `${N}` のように表示します。ここの `N` は数値式です。
 
 ### 可変長引数の使い方
 
@@ -214,7 +214,7 @@ Function getValue -> $v : Integer
  Result:=MySum("000";1;2;200) // "203"
 ```
 
-0、1、またはそれ以上のパラメーターを宣言してある場合でも、任意の数の引数を渡すことができます。 呼び出されたコード内では、`${N}` シンタックスを使って引数を利用でき、可変長引数の型はデフォルトで [バリアント](dt_variant.md) です ([可変長引数の記法](#可変長引数の宣言) を使ってこれらを宣言できます)。  You just need to make sure parameters exist, thanks to the [`Count parameters`](../commands-legacy/count-parameters.md) command. 例:
+0、1、またはそれ以上のパラメーターを宣言してある場合でも、任意の数の引数を渡すことができます。 呼び出されたコード内では、`${N}` シンタックスを使って引数を利用でき、可変長引数の型はデフォルトで [バリアント](dt_variant.md) です ([可変長引数の記法](#可変長引数の宣言) を使ってこれらを宣言できます)。  [`Count parameters`](../commands-legacy/count-parameters.md) コマンドを使用して、パラメーターが存在することをあらかじめ確認しておく必要があります。 例:
 
 ```4d
 // foo メソッド
@@ -319,7 +319,7 @@ method1(42) // 型間違い。 期待されるのはテキスト
 
 - [コンパイル済みプロジェクト](interpreted.md) では、可能な限りコンパイル時にエラーが生成されます。  それ以外の場合は、メソッドの呼び出し時にエラーが生成されます。
 - インタープリタープロジェクトでは:
- - if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
+ - 名前付きシンタックス (`#DECLARE` または `Function`) を使用して引数が宣言されている場合は、メソッドの呼び出し時にエラーが発生します。
  - 旧式の (`C_XXX`) シンタックスを使用して宣言されている場合、エラーは発生せず、呼び出されたメソッドは期待される型の空の値を受け取ります。
 
 ## オブジェクトプロパティを名前付き引数として使用する

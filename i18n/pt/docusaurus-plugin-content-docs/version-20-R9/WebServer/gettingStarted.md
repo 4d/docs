@@ -43,7 +43,7 @@ Case of
 End case 
 ```
 
-The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. Este código muito simples apenas envia o texto para o navegador.
+O método banco de dados [`On Web Connection`](httpRequests.md#on-web-connection) é chamado para solicitações de entrada e recebe o URL de destino no parâmetro `$1`. Este código muito simples apenas envia o texto para o navegador.
 
 3. No seu browser, introduza o seguinte URL:
 

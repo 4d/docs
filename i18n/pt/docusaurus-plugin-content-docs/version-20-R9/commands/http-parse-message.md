@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `HTTP Parse message` command <!--REF #_command_.HTTP Parse message.Summary-->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
+O comando `HTTP Parse message` <!--REF #_command_.HTTP Parse message.Summary-->analisa um texto multipart/form-data ou blob (mensagem HTTP "response") e extrai o conteúdo de um objeto. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
 
 :::info
 
@@ -82,7 +82,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1824                        |
-| Thread safe    | &cross; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1824                        |
+| Thread safe       | &cross; |

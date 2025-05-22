@@ -21,7 +21,7 @@ O comando `VP SET ROW COUNT` <!-- REF #_method_.VP SET ROW COUNT.Summary --> def
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the total number of rows in the *rowCount* parameter. \*rowCount tem de ser superior a 0.
+Passe o número total de linhas no parâmetro *rowCount*. \*rowCount tem de ser superior a 0.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the *rowCount* will be applied (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 

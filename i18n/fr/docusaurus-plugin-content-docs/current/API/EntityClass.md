@@ -1635,11 +1635,11 @@ Retourne :
 
 #### Description
 
-La fonction `.touched()` <!-- REF #EntityClass.touched().Summary -->vérifie si un attribut de l'entité a été modifié ou non depuis que l'entité a été chargée en mémoire ou sauvegardée<!-- END REF -->.
+La fonction `.touched()` <!-- REF #EntityClass.touched().Summary -->renvoie True si au moins un attribut de l'entité a été modifié depuis que l'entité a été chargée en mémoire ou sauvegardée<!-- END REF -->. Vous pouvez utiliser cette fonction pour déterminer si vous devez sauvegarder l'entité.
 
-Si un attribut a été modifié ou calculé, la fonction retourne Vrai, sinon elle retourne Faux. Vous pouvez utiliser cette fonction pour savoir s'il est nécessaire de sauvegarder l'entité.
+Ceci ne s'applique qu'aux attributs de [`kind`](DataClassClass.md#returned-object) "storage" ou "relatedEntity".
 
-Cette fonction renvoie Faux pour une nouvelle entité qui vient d'être créée (avec [`.new()`](DataClassClass.md#new)). A noter cependant que si vous utilisez une fonction pour calculer un attribut de l'entité, la fonction `.touched()` retournera Vrai. Par exemple, si vous appelez [`.getKey()`](#getkey) pour calculer la clé primaire, `.touched()` renvoie Vrai.
+Pour une nouvelle entité qui vient d'être créée (avec [`.new()`](DataClassClass.md#new)), la fonction renvoie False. Cependant, dans ce contexte, si vous accédez à un attribut dont la propriété [`autoFilled`](./DataClassClass.md#returned-object) est True, la fonction `.touched()` renverra True. Par exemple, après avoir exécuté `$id:=ds.Employee.ID` pour une nouvelle entité (en supposant que l'attribut ID possède la propriété "Autoincrement"), `.touched()` renvoie True.
 
 #### Exemple
 
@@ -1683,7 +1683,7 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 
 La fonction `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary -->renvoie les noms des attributs qui ont été modifiés depuis que l'entité a été chargée en mémoire<!-- END REF -->.
 
-Cette fonction est applicable aux attributs dont le [kind](DataClassClass.md#attributename) est `storage` ou `relatedEntity`.
+Ceci ne s'applique qu'aux attributs de [`kind`](DataClassClass.md#returned-object) "storage" ou "relatedEntity".
 
 Dans le cas d'un attribut relationnel ayant été "touché" (i.e., la clé étrangère), le nom de l'entité liée et celui de sa clé primaire sont retournés.
 

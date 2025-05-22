@@ -16,7 +16,7 @@ title: VP SET ROW ATTRIBUTES
 
 ## Descrição
 
-The `VP SET ROW ATTRIBUTES` command <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->applies the attributes defined in the *propertyObj* to the rows in the *rangeObj*<!-- END REF -->.
+O comando `VP SET ROW ATTRIBUTES` <!-- REF #_method_.VP SET ATTRIBUTES. Resumo -->aplica os atributos definidos na *propriedadeObj* às linhas no *intervaloObj*<!-- END REF -->.
 
 In the *rangeObj*, pass an object containing a range. Se o intervalo contiver colunas e linhas, os atributos são aplicados apenas às linhas.
 

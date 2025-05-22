@@ -49,7 +49,7 @@ con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
 :::note
 
-La función `getCity()` debe haber sido declarada con la palabra clave `onHttpGet` (ver [Configuración de la función](#function-configuration)).
+The `getCity()` function must have been declared with the `onHTTPGet` keyword (see [Function configuration](#function-configuration) below).
 
 :::
 
@@ -71,13 +71,13 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
-### `onHttpGet`
+### `onHTTPGet`
 
-Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
-exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
+exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
 ### Hilo seguro
@@ -615,7 +615,7 @@ $ageAverage:=$students.getAgeAverage()
 
 ### Devolviendo un documento
 
-You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
+You want to propose a link to download the user manual for a selected product with several formats available. Escribe una función `getUserManual()` de la dataclass Products. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 // Product dataclass

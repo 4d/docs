@@ -58,9 +58,9 @@ You must declare these parameters:
 
 ### $url - URL extra data
 
-The first parameter ($url) is the URL entered by users in the address area of their web browser, without the host address.
+O primeiro parâmetro ($url) é a URL inserida pelos usuários na área de endereço de seu navegador da web, sem o endereço host.
 
-Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
+Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. A tabela a seguir mostra os valores de $url dependendo do URL inserida no navegador Web:
 
 | URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $url                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ The $BrowserIP parameter receives the IP address of the browser’s machine. Ess
 
 ### $ServerIP - Endereço IP do servidor
 
-The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D permite multi-home que você pode usar máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
+O parâmetro $ServerIP recebe o endereço IP solicitado pelo 4D Web Server. 4D permite multi-home que você pode usar máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
 ### $user e $password - Nome de usuário e senha
 
@@ -157,7 +157,7 @@ Um formulário pode ser enviado por dois métodos (ambos podem ser usados com 4D
 
 > Cuando el servidor web recibe un formulario publicado, llama al método base `On Web Authentication` (si existe).
 
-In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-http-requests) of all the fields included in an HTML page submitted to the server.
+En el método llamado, debe llamar al comando `WEB GET VARIABLES` para [recuperar los nombres y valores](#getting-values-from-http-requests) de todos los campos incluidos en una página HTML enviada al servidor.
 
 Exemplo para definir a ação de um formulário:
 
@@ -325,7 +325,7 @@ O servidor web 4D fornece vários comandos web de baixo nível, permitindo que v
 
 - o comando [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) retorna o corpo como texto bruto, permitindo qualquer análise necessária
 - o comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) retorna os cabeçalhos da solicitação. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
-- the [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) and [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
+- os comandos [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) e [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) para analisar a parte do corpo de uma solicitação de várias partes e recuperar valores de texto, mas também arquivos postados, usando BLOBs.
 
 Esses comandos estão resumidos no gráfico a seguir:
 

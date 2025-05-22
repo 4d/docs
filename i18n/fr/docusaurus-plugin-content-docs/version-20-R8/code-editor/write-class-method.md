@@ -802,7 +802,7 @@ La balise `<method>` permet de générer et d'utiliser des macro-commandes qui e
 
 Le code d'une méthode appelée est exécuté dans un nouveau process. Ce process est tué une fois la méthode exécutée.
 
-> Le process de structure reste figé jusqu'à ce que l'exécution de la méthode appelée soit terminée. Vous devez vous assurer que l'exécution est rapide et qu'il n'y a aucun risque qu'elle bloque l'application. If this occurs, use the **Ctrl+F8** (Windows) or **Command+F8** (macOS) command to "kill" the process.
+> Le process de structure reste figé jusqu'à ce que l'exécution de la méthode appelée soit terminée. Vous devez vous assurer que l'exécution est rapide et qu'il n'y a aucun risque qu'elle bloque l'application. Si cela se produit, utilisez la commande **Ctrl+F8** (Windows) ou **Command+F8** (macOS) pour "tuer" le process.
 
 ### Appeler des macros
 
@@ -834,7 +834,7 @@ La prise en charge des macros peut changer d'une version de 4D à l'autre. Afin 
 
 #### Variables de sélection de texte pour les méthodes
 
-Il est recommandé de gérer les sélections de texte à l'aide des commandes [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) et [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) . Ces commandes peuvent être utilisées pour surmonter le cloisonnement des espaces d'exécution du projet hôte/composant et ainsi permettre la création de composants dédiés à la gestion des macros. Afin d'activer ce mode pour une macro, vous devez déclarer l'attribut Version avec la valeur 2 dans l'élément Macro. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands are used. Cet attribut doit être déclaré comme suit :
+Il est recommandé de gérer les sélections de texte à l'aide des commandes [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) et [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) . Ces commandes peuvent être utilisées pour surmonter le cloisonnement des espaces d'exécution du projet hôte/composant et ainsi permettre la création de composants dédiés à la gestion des macros. Afin d'activer ce mode pour une macro, vous devez déclarer l'attribut Version avec la valeur 2 dans l'élément Macro. Dans ce cas, 4D ne gère plus les variables prédéfinies _textSel, _textReplace, etc. et les commandes [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) et [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) sont utilisées. Cet attribut doit être déclaré comme suit :
 
 `<macro name="MyMacro" version="2">`<br/> `--- Text of the macro ---`<br/> `</macro>`
 

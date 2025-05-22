@@ -7,7 +7,7 @@ The `SMTPTransporter` class allows you to configure SMTP connections and send em
 
 ### Objecto SMTP Transporter
 
-SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command. Eles oferecem as propriedades abaixo e funções:
+Os objetos SMTP Transporter são instanciados com o comando [`SMTP New transporter`](../commands/smtp-new-transporter.md). Eles oferecem as propriedades abaixo e funções:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
