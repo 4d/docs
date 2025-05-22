@@ -600,15 +600,14 @@ Le code générique suivant duplique toute entité :
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | Paramètres | Type    |    | Description                                                                              |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
-| Résultat   | Text    | <- | Valeur de la clé primaire texte de l'entité                                              |
-| Résultat   | Integer | <- | Valeur de la clé primaire numérique de l'entité                                          |
+| Résultat   | any     | <- | Value of the primary key of the entity (Integer or Text)                                 |
 
 <!-- END REF -->
 
