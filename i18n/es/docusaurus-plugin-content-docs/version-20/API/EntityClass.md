@@ -600,15 +600,14 @@ El siguiente código genérico duplica cualquier entidad:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                               |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Resultado  | Text    | <- | Valor de la llave primaria de texto de la entidad                                                         |
-| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                         |
+| Resultado  | any     | <- | Value of the primary key of the entity (Integer or Text)                                                  |
 
 <!-- END REF -->
 
