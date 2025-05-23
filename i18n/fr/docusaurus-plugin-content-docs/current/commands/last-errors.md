@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.Last errors.Summary-->La commande **Last errors** renvoie la pile d'erreurs courante de l'application 4D sous la forme d'une collection d'objets erreur, ou **null** si aucune erreur ne s'est produite.<!-- END REF--> La pile d'erreurs inclut les objets envoyés par la commande [throw](throw.md), le cas échéant. 
+<!--REF #_command_.Last errors.Summary-->La commande **Last errors** renvoie la pile d'erreurs courante de l'application 4D sous la forme d'une collection d'objets erreur, ou **null** si aucune erreur ne s'est produite.<!-- END REF--> La pile d'erreurs inclut les objets envoyés par la commande [throw](../commands-legacy/throw.md), le cas échéant. 
 
-Cette commande doit être appelée à partir d'une méthode d'appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md) ou dans un contexte [Try ou Try/Catch](../Concepts/error-handling.md#tryexpression).
+Cette commande doit être appelée à partir d'une méthode d'appel sur erreur installée par la commande [ON ERR CALL](../commands-legacy/on-err-call.md) ou dans un contexte [Try ou Try/Catch](../Concepts/error-handling.md#tryexpression).
 
 Chaque objet erreur contient les propriétés suivantes :
 
@@ -77,8 +77,8 @@ Chaque objet erreur contient les propriétés suivantes :
 
 ## Voir également
 
-[ON ERR CALL](on-err-call.md)\
-[throw](throw.md)\
+[ON ERR CALL](../commands-legacy/on-err-call.md)
+[throw](../commands-legacy/throw.md)\
 [Error handling](../Concepts/error-handling.md)
 
 ## Propriétés
