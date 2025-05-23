@@ -17,7 +17,7 @@ Information logged needs to be analyzed to detect and fix issues. This section p
 * [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [ORDA requests log file](#orda-requests)
-* [4DTCPLog.txt](#4dtcplogtxt)
+* [4DTCPUDPLog.txt](#4dtcpudplogtxt)
 
 > When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
 
@@ -463,23 +463,23 @@ Here is an example of a server-side ORDA log record:
 
 ```
 
-## 4DTCPLog.txt
+## 4DTCPUDPLog.txt
 
-This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+This log file records events related to TCP or UDP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
 
 How to start this log: 
 
 - Use the `SET DATABASE PARAMETER` command:
 
   ```4d
-  SET DATABASE PARAMETER(TCP log; 1)
+  SET DATABASE PARAMETER(TCPUDP log; 1)
   ```
 
 - Configure the log through a [JSON configuration file](#using-a-log-configuration-file):
 
   ```json
   {
-      "TCPLogs":{
+      "TCPUDPLogs":{
         "state" : 1
 	       }
   }
@@ -493,8 +493,8 @@ The following fields are logged for each event:
 |localPort|Number|Local port used for the connection|                                                                       
 |peerAddress|Text|IP address of the remote peer                                                           
 |peerPort|Number|Port of the remote peer|                                                                 
-|protocol|Text|Indicates whether the event is related to `TCP`|                                                                     
-|event|Text|The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen`|
+|protocol|Text|"TCP" or "UDP"|                                                                     
+|event|Text|The type of event: `open`, `close`, `error`, `send`, `receive`, `listen`|
 |size|Number|The amount of data sent or received (in bytes), 0 if not applicable|
 |excerpt|Number|First 10 bytes of data in hexadecimal format|                                                   
 |textExcerpt|Text|First 10 bytes of data in text format|                                                  
@@ -523,7 +523,6 @@ There are several ways to enable the log configuration file, depending on your c
 :::note
 
 If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
-
 
 :::
 
