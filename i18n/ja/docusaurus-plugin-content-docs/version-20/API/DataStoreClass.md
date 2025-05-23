@@ -138,7 +138,7 @@ $foreignStudents:=Open datastore($connectTo;"foreign")
 
 *localID* 引数は、リモートデータストア上で開かれるセッションのローカルエイリアスです。 *localID* 引数の ID がすでにアプリケーションに存在している場合、その ID が使用されています。 そうでない場合、データストアオブジェクトが使用されたときに *localID* のセッションが新規に作成されます。
 
-Objects available in the `4D.DataStoreImplementation` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+`4D.DataStoreImplementation` のオブジェクトは[変換のルール](ORDA/dsMapping.md#general-rules)に従い、リモートデータストアからマッピングされます。
 
 一旦セッションが開かれると、以下の 2行の宣言は同等のものとなり、同じデータストアオブジェクトへの参照を返します:
 
@@ -491,7 +491,7 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 > コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#getremotecontextinfo) section.
+返されるコレクション内の各オブジェクトは、 [`.getRemoteContextInfo()`](#getremotecontextinfo) に列挙されているプロパティをそれぞれ持ちます。
 
 #### 例題
 
@@ -798,7 +798,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 `.makeSelectionsAlterable()` 関数は、 <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->カレントアプリケーションのデータストアにおいて、すべての新規エンティティセレクションをデフォルトで追加可能に設定します<!-- END REF --> ([リモートデータストア](ORDA/remoteDatastores.md) を含む)。 これはたとえば `On Startup` データベースメソッドなどで、一度だけ使用することが想定されています。
 
-When this function is not called, new entity selections can be shareable, depending on the nature of their "parent", or [how they are created](ORDA/entities.md#shareable-or-alterable-entity-selections).
+この関数が呼ばれなかった場合、新規エンティティセレクションが共有可能かどうかは、共有可能エンティティセレクションを"元"にしたのか、あるいは[どんな関数を呼び出して作成したのか](ORDA/entities.md#共有可能追加可能なエンティティセレクション)で決まります。
 
 > この関数は、`OB Copy` または [`.copy()`](./EntitySelectionClass.md#copy) に `ck shared` オプションを明示的に使用して作成されたエンティティセレクションには適用されません。
 

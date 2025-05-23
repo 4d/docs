@@ -17,13 +17,13 @@ title: エラー処理
 
 :::tip グッドプラクティス
 
-サーバー上で実行されるコードのため、4D Server にはグローバルなエラー処理メソッドを実装しておくことが強く推奨されます。 サーバー上で実行されるコードのため、4D Server にはグローバルなエラー処理メソッドを実装しておくことが強く推奨されます。 4D Server が [ヘッドレス](../Admin/cli.md) で実行されていない場合 (つまり、[管理画面](../ServerWindow/overview.md) 付きで起動されている場合)、このメソッドによって、予期せぬダイアログがサーバーマシン上に表示されることを防ぎます。 ヘッドレスモードでは、エラーは解析のため [4DDebugLog ファイル](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) に記録されます。 ヘッドレスモードでは、エラーは解析のため [4DDebugLog ファイル](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) に記録されます。
+サーバー上で実行されるコードのため、4D Server にはグローバルなエラー処理メソッドを実装しておくことが強く推奨されます。 4D Server が [ヘッドレス](../Admin/cli.md) で実行されていない場合 (つまり、[管理画面](../ServerWindow/overview.md) 付きで起動されている場合)、このメソッドによって、予期せぬダイアログがサーバーマシン上に表示されることを防ぎます。 ヘッドレスモードでは、エラーは解析のため [4DDebugLog ファイル](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) に記録されます。
 
 :::
 
 ## エラー/ステータス
 
-`entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
+`entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
 
 ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 これらのエラーは例外を発生させ、エラー処理メソッドや `Try()` キーワードを介して対応する必要があります。
 
@@ -33,7 +33,7 @@ title: エラー処理
 
 インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。 実行コンテキストに応じて、異なるエラーハンドラーを呼び出すこともできます (後述参照)。
 
-To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command with the project method name and (optionnally) scope as parameters. 例:
+エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](../commands-legacy/on-err-call.md) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッドを実装します
@@ -45,7 +45,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-[`Method called on error`](../commands-legacy/method-called-on-error.md) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます: このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](../commands-legacy/method-called-on-error.md) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -209,7 +209,7 @@ End if
 
 ## Try...Catch...End try
 
-The `Try...Catch...End try` structure allows you to test a block code in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed.
+`Try...Catch...End try` 文は、実際の実行コンテキスト (特にローカル変数の値を含む) でコードブロックをテストし、スローされるエラーをキャッチすることで、4D のエラーダイアログボックスが表示されないようにできます。
 
 `Try(expression)` キーワードが単一の行の式を評価するのとは異なり、`Try...Catch...End try` 文は、単純なものから複雑なものまで、任意のコードブロックを評価することができます。エラー処理メソッドは必要としない点は同じです。 また、`Catch` ブロックは、任意の方法でエラーを処理するために使用できます。
 
@@ -229,7 +229,7 @@ End try
 
 - エラーがスローされなかった場合には、対応する `End try` キーワードの後へとコード実行が継続されます。 `Catch` と `End try` キーワード間のコードは実行されません。
 - コードブロックの実行が *非遅延エラー* をスローした場合、実行フローは停止し、対応する `Catch` コードブロックを実行します。
-- If the code block calls a method that throws a *deferred error*, the execution flow jumps directly to the corresponding `Catch` code block.
+- コードブロックが *非遅延エラー* をスローするメソッドを呼び出した場合、実行フローは対応する `Catch` コードブロックへと直接ジャンプします。
 - 遅延エラーが `Try` ブロックから直接スローされた場合、実行フローは `Try` ブロックの終わりまで継続し、対応する `Catch` ブロックは実行しません。
 
 :::note
@@ -244,7 +244,7 @@ End try
 
 :::
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. [`Last errors`](../commands-legacy/last-errors.md) 関数は最後のエラーに関するコレクションを格納しています。 このコードブロック内で[エラー処理メソッドを宣言する](#エラー処理メソッドの実装) こともできます。この場合エラー発生時にはそれが呼び出されます(宣言しない場合には、4Dエラーダイアログが表示されます)。
+`Catch` コードブロックでは、標準のエラー処理コマンドを使用してエラーを処理できます。 [`Last errors`](../commands-legacy/last-errors.md) 関数は最後のエラーに関するコレクションを格納しています。 このコードブロック内で[エラー処理メソッドを宣言する](#エラー処理メソッドの実装) こともできます。この場合エラー発生時にはそれが呼び出されます(宣言しない場合には、4Dエラーダイアログが表示されます)。
 
 :::note
 

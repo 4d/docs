@@ -60,7 +60,7 @@ Para as necessidades de sua interface, você deseja rodear a área na que o usu�
 No método objeto do listbox, pode escrever:
 
 ```4d
- OBJECT SET VISIBLE(*;"rectangleInfo";False) //inicializar um retângulo vermelho
+ OBJECT SET VISIBLE(*;"RedRect";False) //inicializar um retângulo vermelho
  $ptr:=OBJECT Get pointer(Object current)
  OBJECT GET COORDINATES($ptr->;$x1;$y1;$x2;$y2)
  OBJECT SET VISIBLE(*;"RedRect";True)

@@ -9,42 +9,42 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
-| Paramètres   | Type       |                             | Description           |
-| ------------ | ---------- | --------------------------- | --------------------- |
-| methodsArray | Text array | &#8594; | Array of method names |
+| Paramètres   | Type       |                             | Description                 |
+| ------------ | ---------- | --------------------------- | --------------------------- |
+| methodsArray | Text array | &#8594; | Tableau de noms de méthodes |
 
 <!-- END REF-->
 
 ## Description
 
-<!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
+<!--REF #_command_.SET ALLOWED METHODS.Summary-->La commande **SET ALLOWED METHODS** permet de désigner les méthodes projet qui peuvent être appelées directement depuis l'application.<!-- END REF-->
 
-4D includes a security mechanism that filters enterable project methods from the following contexts:
+4D inclut un mécanisme de sécurité filtrant les méthodes projet saisissables depuis les contextes suivants :
 
-- The formula editor - allowed methods appear at the end of the list of default commands and can be used in formulas (see section *Description of formula editor*).
-- The label editor - the allowed methods are listed in the **Apply** menu if they are also shared with the component (see section *Description of label editor*).
-- Formulas inserted in styled text areas or 4D Write Pro documents through the [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression.md) command - disallowed methods are automatically rejected.
-- 4D View Pro documents - by default, if the [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) command has never been called during the session, 4D View Pro formulas only accept methods defined by **SET ALLOWED METHODS**. However, using [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) is recommended. See [Declaring allowed method](../ViewPro/formulas.md#declaring-allowed-methods).
+- L'éditeur de formules - les méthodes autorisées apparaissent à la fin de la liste des commandes par défaut et peuvent être utilisées dans les formules (voir la section *Description de l'éditeur de formules*).
+- L'éditeur d'étiquettes - les méthodes autorisées sont listées dans le menu **Appliquer** si elles sont également partagées avec le composant (voir la section *Description de l'éditeur d'étiquettes*).
+- Les formules insérées dans des zones de texte stylées ou dans des documents 4D Write Pro par la commande [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression.md) - les méthodes non autorisées sont automatiquement rejetées.
+- Les documents 4D View Pro - par défaut, si la commande [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) n'a jamais été appelée au cours de la session, les formules 4D View Pro n'acceptent que les méthodes définies par **SET ALLOWED METHODS**. Cependant, il est recommandé d'utiliser [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md). Voir [Déclarer une méthode autorisée](../ViewPro/formulas.md#declaring-allowed-methods).
 
-By default, if you do not use the **SET ALLOWED METHODS** command, no method is enterable (using an unauthorized method in an expression causes an error).
+Par défaut, si vous n'utilisez pas la commande **SET ALLOWED METHODS**, aucune méthode n'est appelable (l'utilisation d'une méthode non autorisée dans une expression provoque une erreur).
 
-In the *methodsArray* parameter, pass the name of an array containing the list of methods to allow. The array must have been set previously.
+Dans le paramètre *methodsArray*, passez le nom d'un tableau contenant la liste des méthodes à autoriser. Le tableau doit avoir été défini précédemment.
 
-You can use the wildcard character (@) in method names to define one or more authorized method groups.
+Vous pouvez utiliser le caractère "joker" (@) dans les noms des méthodes pour définir un ou plusieurs groupe(s) de méthodes autorisées.
 
-If you would like the user to be able to call 4D commands that are unauthorized by default or plug-in commands, you must use specific methods that handle these commands.
+Si vous souhaitez que l'utilisateur puisse appeler des commandes 4D non autorisées par défaut ou des commandes de plug-in, vous devez utiliser des méthodes spécifiques chargées d’exécuter ces commandes.
 
-**Note:** Formula filtering access can be disabled for all users or for the Designer and Administrator via [an option on the "Security" page of the Settings](../settings/security.md#options). If the "Disabled for all" option is checked, the **SET ALLOWED METHODS** command will have no effect.
+**Note :** Le filtrage des commandes et méthodes peut être désactivé pour tous les utilisateurs ou pour le Super_Utilisateur et l'Administrateur via [une option sur la page "Sécurité" des Paramètres](../settings/security.md#options). Si l'option "Désactivé pour tous" est sélectionnée, la commande **SET ALLOWED METHODS** n'aura aucun effet.
 
 :::warning
 
-This command only filters the **input** of methods, not their **execution**. It does not control the execution of formulas created outside the application.
+Cette commande ne filtre que la **saisie** des méthodes, pas leur **exécution**. Elle ne contrôle pas l'exécution des formules créées en dehors de l'application.
 
 :::
 
 ## Exemple
 
-This example authorizes all methods starting with “formula” and the “Total\_general” method to be entered by the user in protected contexts:
+Cet exemple autorise la saisie de toutes les méthodes commençant par "formula" et de la méthode "Total_general" par l'utilisateur dans des contextes protégés :
 
 ```4d
  ARRAY TEXT(methodsArray;2)

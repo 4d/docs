@@ -107,7 +107,7 @@ Licenses are usually automatically updated at startup of your 4D application.
 Puede utilizar el botón **Refrescar** en los siguientes contextos:
 
 - Cuando haya comprado una expansión adicional y quiera activarla,
-- When you need to update an expired number (Partners or evolutions).
+- Cuando necesite actualizar un número de licencia caducado (Partners o evoluciones).
 
 Elija el comando **Administrador de licencias...** del menú **Ayuda** de la aplicación 4D o 4D Server, y luego haga clic en el botón **Refrescar**:
 

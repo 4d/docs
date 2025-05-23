@@ -132,7 +132,7 @@ Les comparaisons avec les opérateurs Supérieur à (`>`), Inférieur à (`<`), 
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Les comparaisons des valeurs Undefined avec des valeurs Pointer, Picture, Boolean, Blob, Object, Collection, Undefined ou Null en utilisant les opérateurs Supérieur à (`>`), Inférieur à (`<`), Supérieur ou égal à (`>=`), et Inférieur ou égal à (`<=`) ne sont pas prises en charge et renvoient une erreur.
 
 :::
 

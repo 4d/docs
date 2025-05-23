@@ -49,7 +49,7 @@ The *param1...N* parameters are sent in PHP in the JSON format in UTF-8\. They a
 
 **Note:** For technical reasons, the size of parameters passed via the FastCGI protocol must not exceed 64 KB. You need to take this limitation into account if you use parameters of the Text type. 
 
-The command returns True if the execution has been carried out correctly on the 4D side, in other words, if the launching of the execution environment, the opening of the script and the establishing of the communication with the PHP interpreter were successful. Otherwise, an error is generated, which you can intercept with the [ON ERR CALL](on-err-call.md) command and analyze with [Last errors](last-errors.md) .   
+The command returns True if the execution has been carried out correctly on the 4D side, in other words, if the launching of the execution environment, the opening of the script and the establishing of the communication with the PHP interpreter were successful. Otherwise, an error is generated, which you can intercept with the [ON ERR CALL](on-err-call.md) command and analyze with [Last errors](../commands/last-errors.md) .   
 In addition, the script itself may generate PHP errors. In this case, you must use the [PHP GET FULL RESPONSE](php-get-full-response.md) command in order to analyze the source of the error (see example 4). 
 
 **Note:** PHP can be used to configure error management. For more information, please refer, for example, to the following page: <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.

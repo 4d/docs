@@ -568,7 +568,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
-[Web Server オブジェクト](../commands/web-server.md-object) の設定は、読み取り専用プロパティ ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)) を除いて、すべてカスタマイズ可能です。
+[Web Server オブジェクト](../commands/web-server.md-object) の設定は、読み取り専用プロパティ ([.isRunning](#isrunning), [.name](#name)、 [.openSSLVersion](#opensslversion)、 [.perfectForwardSecrecy](#perfectforwardsecrecy)、および [.sessionCookieName](#sessioncookiename)) を除いて、すべてカスタマイズ可能です。
 
 カスタマイズされた設定は [`.stop()`](#stop) が呼び出されたときにリセットされます。
 

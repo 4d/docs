@@ -516,11 +516,11 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades de *info* como contenido informativo de un archivo **.exe**, **.dll** o **.plist**<!-- END REF -->.
 
-La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función no hace nada (no se genera ningún error).
-
-> La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
 **Parámetro *info* con un archivo .exe o .dll**
+
+The function must be used with an existing and valid .exe or .dll file, otherwise it does nothing (no error is generated).
+
 
 > Escribir la información de archivos .exe o .dll sólo es posible en Windows.
 
@@ -540,6 +540,8 @@ Cada propiedad válida definida en el parámetro objeto *info* se escribe en el 
 Si se pasa un texto null o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
 
 **Parámetro *info* con un un archivo .plist**
+
+> La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el archivo .plist en forma de llave. Se aceptan todos los nombre de llaves. Los tipos de valores se conservan cuando es posible.
 

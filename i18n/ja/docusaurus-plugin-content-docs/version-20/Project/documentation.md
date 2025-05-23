@@ -104,7 +104,7 @@ title: ドキュメンテーション
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-`\<MethodName>.md` ファイルが `\<package>/documentation` フォルダーに存在する場合、コードエディターは次の優先順位でヘルプTips を表示します:
+`<メソッド名>.md` ファイルが `<パッケージ名>/documentation` フォルダーに存在する場合、コードエディターは次の優先順位でヘルプTips を表示します:
 
 - Markdown ファイルの先頭に設置した、HTML コメントタグで囲まれたテキスト (`<!-- コマンドの説明 -->`)
 
@@ -113,7 +113,7 @@ title: ドキュメンテーション
 
 :::note
 
-Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#help-tips).
+いずれもない場合、コードエディターには[メソッドコードの冒頭にあるブロックコメント](../code-editor/write-class-method.md#ヘルプtips)が表示されます。
 
 :::
 

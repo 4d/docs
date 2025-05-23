@@ -9,7 +9,7 @@ title: フォームプロパティ
 
 > 配色プロパティは、macOS でのみ適用されます。
 
-このプロパティは、フォームのカラースキームを定義します。 このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](../commands-legacy/set-application-color-scheme.md) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます: これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
+このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](../commands-legacy/set-application-color-scheme.md) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
 - dark - 暗い背景に明るいテキスト
 - light - 明るい背景に暗いテキスト
@@ -52,7 +52,7 @@ title: フォームプロパティ
 
 - またコードエディター内での[自動補完機能](../code-editor/write-class-method.md#autocomplete-functions) を利用することもできます。
 
-- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。  Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a *formData* object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), [`FORM LOAD`](../commands/form-load.md), and [`PRINT SELECTION`](../commands-legacy/print-selection.md) commands.
+- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。  これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、[`FORM LOAD`](../commands/form-load.md) あるいは [`PRINT SELECTION`](../commands-legacy/print-selection.md) といったコマンドに*formData* オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。
 
 :::note
 
@@ -74,7 +74,7 @@ title: フォームプロパティ
 
 #### JSON 文法
 
-フォーム名は、form.4Dform ファイルを格納するフォルダーの名前で定義されます。 See [project architecture](Project/architecture#sources) for more information.
+フォーム名は、form.4Dform ファイルを格納するフォルダーの名前で定義されます。 詳しくは [プロジェクトのアーキテクチャー](Project/architecture.md#sources) を参照ください。
 
 ---
 
@@ -176,7 +176,7 @@ title: フォームプロパティ
 - カレントページ
 - それぞれのフォームオブジェクトの配置・大きさ・表示状態 (リストボックス列のサイズと表示状態も含む)。
 
-> このオプションは、`OBJECT DUPLICATE` コマンドを使用して作成されたオブジェクトに対しては無効です。 このコマンドを使用したときに使用環境を復元させるには、デベロッパーがオブジェクトの作成・定義・配置の手順を再現しなければなりません。 このコマンドを使用したときに使用環境を復元させるには、デベロッパーがオブジェクトの作成・定義・配置の手順を再現しなければなりません。
+> このオプションは、`OBJECT DUPLICATE` コマンドを使用して作成されたオブジェクトに対しては無効です。 このコマンドを使用したときに使用環境を復元させるには、デベロッパーがオブジェクトの作成・定義・配置の手順を再現しなければなりません。
 
 このオプションが選択されているとき、一部のオブジェクトに置いては [値を記憶](FormObjects/properties_Object.md#値を記憶) のオプションが選択可能になります。
 
@@ -200,7 +200,7 @@ title: フォームプロパティ
 
 - Resourcesフォルダーに保存された、標準の XLIFF参照
 - テーブル/フィールドラベル: 適用できるシンタックスは `<?[TableNum]FieldNum>` または `<?[TableName]FieldName>` です。
-- 変数またはフィールド: 適用できるシンタックスは `\<VariableName>` または `\<[TableName]FieldName>`。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。
+- 変数またはフィールド: 適用できるシンタックスは `\<VariableName>` または `\<[TableName]FieldName>`。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。
 
 > ウィンドウタイトルの最大文字数は 31 です。
 

@@ -503,11 +503,11 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
-
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 
 ***info* parameter object with a .exe or .dll file**
+
+The function must be used with an existing and valid .exe or .dll file, otherwise it does nothing (no error is generated).
+
 
 > Writing a .exe or .dll file information is only possible on Windows.
 
@@ -527,6 +527,8 @@ Each valid property set in the *info* object parameter is written in the version
 If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
 ***info* parameter object with a .plist file**
+
+> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 
 Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
 

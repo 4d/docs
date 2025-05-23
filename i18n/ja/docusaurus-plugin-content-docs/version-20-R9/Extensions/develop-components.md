@@ -11,13 +11,13 @@ title: コンポーネントの開発
 
 - **マトリクスプロジェクト**: コンポーネント開発に使用する4D プロジェクト。 マトリクスプロジェクトは特別な属性を持たない標準のプロジェクトです。 マトリクスプロジェクトはひとつのコンポーネントを構成します。
 - **ホストプロジェクト**: コンポーネントがインストールされ、それを使用するアプリケーションプロジェクト。
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.
+- **コンポーネント**: [ホストアプリケーションにインストール](../Project/components.md) され、同アプリケーションによって使用されるマトリクスプロジェクトのこと。マトリクスプロジェクトはコンパイルし、[ビルド](Desktop/building.md#コンポーネントをビルド) することができます。
 
 ## 基本
 
 4D コンポーネントの作成とインストールは直接 4D を使用しておこないます:
 
-- To use a component, you simply need to [install it in your application](../Project/components.md).
+- コンポーネントを使用するには、[アプリケーションにインストール](../Project/components.md) するだけです。
 - 言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
 - コンポーネントは次の 4D の要素を呼び出すことができます: クラス、関数、プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リストなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
 - コンポーネント内でデータストアや標準のテーブル、データファイルを使用することはできません。 しかし、外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
@@ -27,13 +27,13 @@ title: コンポーネントの開発
 
 [使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。
 
-When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
+コマンドがコンポーネントから呼ばれると、コマンドはコンポーネントのコンテキストで実行されます。 ただし[`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) と [`EXECUTE METHOD`](../commands-legacy/execute-method.md) コマンドは除きます。これらはコマンドで指定されたメソッドのコンテキストを使用します。 また、ユーザー＆グループテーマの読み出しコマンドはコンポーネントで使用することができますが、読み出されるのはホストプロジェクトのユーザー＆グループ情報であることに注意してください (コンポーネントに固有のユーザー＆グループはありません)。
 
-The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
+[`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) および [`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドは例外となります: これらのコマンドのスコープはグローバルです。 これらのコマンドがコンポーネントから呼び出されると、結果はホストプロジェクトに適用されます。
 
 さらに、`Structure file` と `Get 4D folder` コマンドは、コンポーネントで使用するための設定ができるようになっています。
 
-The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used to obtain the list of components that are loaded by the host project.
+[`COMPONENT LIST`](../commands-legacy/component-list.md) コマンドを使用して、ホストプロジェクトにロードされたコンポーネントのリストを取得できます。
 
 ### 使用できないコマンド
 
@@ -76,7 +76,7 @@ The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command. 例:
+ホストプロジェクトのプロジェクトメソッドがコンポーネントから利用可能になっていれば、[`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) または [`EXECUTE METHOD`](../commands-legacy/execute-method.md) コマンドを使用して、コンポーネント側からホストのメソッドを実行することができます。 例:
 
 ```4d
 // ホストメソッド
@@ -141,21 +141,21 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 > 非表示のクラス内の、非表示でない関数は、そのクラスを [継承](../Concepts/classes.md#継承) するクラスでコード補完を使用すると提案されます。 たとえば、あるコンポーネントに `_Person` クラスを継承した `Teacher` クラスがある場合、`Teacher` のコード補完では `_Person` の非表示でない関数が提案されます。
 
-## Editing components from the host
+## ホストからコンポーネントを編集する
 
-To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
+ホストプロジェクトの実際のコンテキストからコンポーネントをチューニングするのを容易にするために、ロードしたコンポーネントをインタープリターモードのホストプロジェクトから直接編集してそのコードを保存することが可能です。 コンポーネントのコードは、以下の条件を満たしている場合に編集可能です:
 
-- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
-- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+- コンポーネントが [インタープリタモードでロードされている](../Project/components.md#インタープリターとコンパイル済みコンポーネント)こと
+- コンポーネントが[依存関係マネージャーのローカルキャッシュ](../Project/components.md#local-cache-for-dependencies) からロードされていないこと、つまり[GitHub からダウンロードされた](../Project/components.md#githubの依存関係の追加) ものではないこと。
 
-In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
+この場合、ホストプロジェクトのコードエディター内でコンポーネントのコードを開き、編集して、保存することができ、その変更は直ちに反映されます。
 
-In the Explorer, a specific icon indicates that the component code is editable:<br/>
+エクスプローラーでは、コンポーネントのコードが編集可能であることを表す特定のアイコンが表示されます:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 :::warning
 
-Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+編集できるのは、コンポーネントの[公開された関数](#クラスの共有) と [共有されたメソッド](#プロジェクトメソッドの共有)だけです。
 
 :::
 
@@ -375,28 +375,28 @@ SAVE RECORD($tablepointer->)
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
+コンポーネントは、その[root フォルダ](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#コンポーネントのロード)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
 
 :::note
 
-This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+このファイルは必須ではありませんが、macOS 用の[公証可能でステープル可能な](../Desktop/building.md#ノータリゼーション-公証-について) コンポーネントをビルドするためには必要です。 そのため、これがまだ存在しない場合にはに[ビルド時に](../Desktop/building.md#build-component)自動的に作成されます。 一部のキーはbuildApp XML キーを使用して設定可能である点に留意してください([コンポーネントのビルド](../Desktop/building.md#コンポーネントをビルド) を参照してください)。
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらは全てのプラットフォームにおいて[依存関係マネージャ](../Project/components.md#コンポーネントの読み込み) によって使用されます。
 
-The folling keys can be defined:
+定義可能なキーは以下の通りです:
 
-| key                                                        | description                                                                                                                                                         |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | Component name (internal)                                                                                                                        |
-| CFBundleDisplayName                                        | Component name to display                                                                                                                                           |
-| NSHumanReadableCopyright                                   | Copyright to display                                                                                                                                                |
-| CFBundleVersion                                            | Version of the component                                                                                                                                            |
-| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
-| com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+| key                                                        | description                                                                                                 |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| CFBundleName                                               | コンポーネント名(内部)                                                                             |
+| CFBundleDisplayName                                        | 表示するコンポーネント名                                                                                                |
+| NSHumanReadableCopyright                                   | 表示する著作権                                                                                                     |
+| CFBundleVersion                                            | コンポーネントのバージョン                                                                                               |
+| CFBundleShortVersionString                                 | 表示するコンポーネントのバージョン                                                                                           |
+| com.4d.minSupportedVersion | サポートされる最低限の4D のバージョン。これは依存関係マネージャの[4D のバージョンに従うコンポーネント](../Project/components.md#4Dバージョンタグの命名規則)において使用されます。 |
 
-Here is an example of `Info.plist` file:
+以下は、`Info.plist` ファイルの一例です:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
@@ -418,7 +418,7 @@ Here is an example of `Info.plist` file:
 </plist>
 ```
 
-On macOS, information is available from the finder:
+macOS 上では、Finder からこの情報を見ることができます:
 
 ![](../assets/en/Develop/infoplist-component.png)
 
@@ -435,6 +435,6 @@ On macOS, information is available from the finder:
 - 共有のプロジェクトメソッド、クラス、および関数は、ホストプロジェクトのメソッドから呼び出し可能です。共有のプロジェクトメソッドは、エクスプローラーのメソッドページにも表示されます。 しかし、その内容はプレビューエリアにもデバッガーにも表示されません。
 - マトリクスプロジェクトの他のプロジェクトメソッドは一切表示されません。
 
-## Sharing your components on GitHub
+## GitHub上でコンポーネントを共有する
 
 開発したコンポーネントを [GitHub](https://github.com/topics/4d-component) で公開し、4D開発者のコミュニティをサポートすることをお勧めします。 正しく参照されるためには、**`4d-component`** トピックをご利用ください。

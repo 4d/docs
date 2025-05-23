@@ -31,7 +31,7 @@ For a description of component signatures, please refer to the [Error codes](../
  
 :::
 
-This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command.
+This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
 
 
 ## See also 

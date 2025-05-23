@@ -23,7 +23,7 @@ Esta función compara la *contrasena* con un *hash* generado por la función [Ge
 
 ### Gestión de errores 
 
-Se pueden devolver los errores siguientes. Puede revisar un error con los comandos [Last errors](last-errors.md)  y [ON ERR CALL](on-err-call.md).  
+Se pueden devolver los errores siguientes. Puede revisar un error con los comandos [Last errors](../commands/last-errors.md)  y [ON ERR CALL](on-err-call.md).  
 
 | **Número** | **Mensaje**                                           |
 | ---------- | ----------------------------------------------------- |

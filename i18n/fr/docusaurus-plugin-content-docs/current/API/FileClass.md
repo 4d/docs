@@ -590,7 +590,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés *info* en tant que contenu d'information d'un fichier d'application<!-- END REF -->.
 
-La fonction doit être utilisée avec un fichier existant et pris en charge : **.plist** (toutes les plateformes), **.exe**/**.dll** (Windows), ou **exécutable macOS**. Si le fichier n'existe pas sur le disque ou n'est pas un fichier pris en charge, la fonction ne fait rien (aucune erreur n'est générée).
+La fonction doit être utilisée avec un fichier existant et pris en charge : **.plist** (toutes les plateformes), **.exe**/**.dll** (Windows), ou **exécutable macOS**. Si elle est utilisée avec un autre type de fichier ou avec un fichier **.exe**/**.dll** qui n'existe pas déjà sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
 
 **Paramètre *info* avec un fichier .plist (toutes plateformes)**
 
@@ -599,6 +599,8 @@ La fonction doit être utilisée avec un fichier existant et pris en charge : **
 Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
 :::
+
+Si le fichier .plist existe déjà sur le disque, il est mis à jour. Dans le cas contraire, il est créé.
 
 Chaque propriété valide définie dans le paramètre objet *info* est écrite dans le fichier . plist sous forme de clé. Tous les noms de clés sont acceptés. Les types des valeurs sont préservés si possible.
 
@@ -610,9 +612,9 @@ Pour définir une valeur de type Date, le format à utiliser est chaîne de time
 
 :::
 
-**Paramètre *info* avec un fichier .exe ou .dll (Windows uniquement)**
+**Paramètre objet *info* avec un fichier .exe ou .dll (Windows uniquement)**
 
-Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
+Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
 
 | Propriété        | Type | Commentaire                                                                                                                                             |
 | ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -630,16 +632,16 @@ Pour toutes les propriétés à l'exception de `WinIcon`, si vous passez un text
 
 Pour la propriété `WinIcon`, si le fichier d'icône n'existe pas ou a un format incorrect, une erreur est générée.
 
-**Paramètre *info* avec un fichier exécutable macOS (macOS uniquement)**
+**Paramètre *info* avec un fichier macOS exécutable (macOS uniquement)**
 
 *info* doit être un objet avec une seule propriété nommée `archs` qui est une collection d'objets dans le format retourné par [`getAppInfo()`](#getappinfo). Chaque objet doit contenir au moins les propriétés `type` et `uuid` (`name` n'est pas utilisé).
 
 Chaque objet de la collection *info*.archs doit contenir les propriétés suivantes :
 
-| Propriété | Type   | Description                                             |
-| --------- | ------ | ------------------------------------------------------- |
-| type      | Number | Identifiant numérique de l'architecture à modifier      |
-| uuid      | Text   | Représentation textuelle du nouvel uuid de l'exécutable |
+| Propriété | Type   | Description                                        |
+| --------- | ------ | -------------------------------------------------- |
+| type      | Number | Identifiant numérique de l'architecture à modifier |
+| uuid      | Text   | Représentation textuelle du nouvel uuid exécutable |
 
 #### Exemple 1
 
@@ -648,9 +650,9 @@ Chaque objet de la collection *info*.archs doit contenir les propriétés suivan
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
-$info:=Nouvel objet
+$info:=New object
 $info.Copyright:="Copyright 4D 2023" //text
-$info.ProductVersion:=12 //integer .ShipmentDate:="2023-04-22T06:00:00Z" //timestamp .ProductVersion:=12 //integer
+$info.ProductVersion:=12 //integer
 $info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
 $info.CFBundleIconFile:="myApp.icns" //pour macOS
 $infoPlistFile.setAppInfo($info)
@@ -664,7 +666,7 @@ var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file ; fk platform path)
 $iconFile:=File("/RESOURCES/myApp.ico")
-$info:=Nouvel objet
+$info:=New object
 $info.LegalCopyright:="Copyright 4D 2023"
 $info.ProductVersion:="1.0.0"
 $info.WinIcon:=$iconFile.path

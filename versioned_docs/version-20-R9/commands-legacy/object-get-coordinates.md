@@ -60,7 +60,7 @@ For interface needs, you want to surround the clicked area with a red rectangle:
 In the object method of the list box, you can write:
 
 ```4d
- OBJECT SET VISIBLE(*;"rectangleInfo";False) //initialize a red rectangle
+ OBJECT SET VISIBLE(*;"RedRect";False) //initialize a red rectangle
  $ptr:=OBJECT Get pointer(Object current)
  OBJECT GET COORDINATES($ptr->;$x1;$y1;$x2;$y2)
  OBJECT SET VISIBLE(*;"RedRect";True)

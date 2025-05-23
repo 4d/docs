@@ -467,7 +467,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 On a remote datastore:
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -1128,7 +1128,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

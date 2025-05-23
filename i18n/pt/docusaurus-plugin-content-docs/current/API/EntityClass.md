@@ -149,7 +149,7 @@ A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compara o conteúdo
 
 No *entityToCompare*, passe a entidade a ser comparada à entidade original.
 
-In *attributesToCompare*, you can designate specific attributes to compare. Se fornecida, a comparação é feita apenas nos atributos especificados. Se não for fornecida, todas as diferenças entre as entidades são devolvidas.
+Em *attributesToCompare*, você pode designar atributos específicos para comparar. Se fornecida, a comparação é feita apenas nos atributos especificados. Se não for fornecida, todas as diferenças entre as entidades são devolvidas.
 
 As diferenças são retornadas como uma coleção de objetos cujas propriedades são:
 
@@ -614,15 +614,14 @@ O seguinte código genérico duplica qualquer entidade:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
 
 | Parâmetro  | Tipo    |                             | Descrição                                                                                               |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: primary key is returned as a string, no matter the primary key type |
-| Resultados | Text    | <- | Valor do texto chave primária da entidade                                                               |
-| Resultados | Integer | <- | Valor da chave primária numérica da entidade                                                            |
+| Resultados | any     | <- | Value of the primary key of the entity (Integer or Text)                             |
 
 <!-- END REF -->
 
@@ -1637,11 +1636,11 @@ Retorna:
 
 #### Descrição
 
-A função `.touched()` <!-- REF #EntityClass.touched().Summary -->testa se um atributo de entidade foi ou não modificado desde que a entidade foi carregada na memória ou salva<!-- END REF -->.
+The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
 
-Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
+This only applies to attributes of [`kind`](DataClassClass.md#returned-object) "storage" or "relatedEntity".
 
-Essa função retorna False para uma nova entidade que acabou de ser criada (com [`.new( )`](DataClassClass.md#new)). No entanto, observe que se você usar uma função que calcule um atributo da entidade, a função `.touched()` então retornará Verdade. Por exemplo, se você chamar [`.getKey()`](#getkey) para calcular a chave primária, `.touched()` retornará True.
+For a new entity that has just been created (with [`.new()`](DataClassClass.md#new)), the function returns False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
 
 #### Exemplo
 
@@ -1685,7 +1684,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 A função `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary --> retorna os nomes dos atributos que foram modificados desde que a entidade foi carregada na memória<!-- END REF -->.
 
-Isso se aplica para atributos [kind](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
+This only applies to attributes of [`kind`](DataClassClass.md#returned-object) "storage" or "relatedEntity".
 
 No caso de uma entidade relacionada que foi tocada (touched) \*ou seja, a chave primária) o nome da entidade relacionada e sua chave primária são retornados.
 

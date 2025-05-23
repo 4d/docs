@@ -11,4 +11,4 @@ title: On Bound Variable Change
 
 このイベントは、親フォーム中のサブフォームにバインドされた変数の値が更新され (同じ値が代入された場合でも) 、かつサブフォームがカレントフォームページまたはページ0 に属している場合に、[サブフォーム](FormObjects/subform_overview.md) のフォームメソッドのコンテキストで生成されます。
 
-For more information, refer to the [Managing the bound variable](FormObjects/subform_overview.md#using-the-bound-variable-or-expression) section.
+詳細については、[バインドされた変数の管理](FormObjects/subform_overview.md#バインドされた変数あるいは式の管理) を参照してください。

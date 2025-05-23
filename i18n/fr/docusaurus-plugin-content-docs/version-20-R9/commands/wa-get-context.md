@@ -7,27 +7,27 @@ title: WA Get context
 
 <!--REF #_command_.WA Get context.Params-->
 
-| Paramètres | Type                |                             | Description                                                                                                                               |
-| ---------- | ------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur           | &#8594; | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
-| object     | Objet de formulaire | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted).                    |
-| contextObj | Object              | &#8592; | Context object if previously defined, otherwise `null`.                                                                   |
+| Paramètres | Type                |                             | Description                                                                                                                                          |
+| ---------- | ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur           | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
+| object     | Objet de formulaire | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis).                              |
+| contextObj | Object              | &#8592; | Objet contexte si défini précédemment, sinon `null`.                                                                                 |
 
 <!-- END REF-->
 
 ### Description
 
-The `WA Get context` command<!--REF #_command_.WA Get context.Summary--> retrieves the context object defined for `$4d` in the Web area designated by the \* and *object* parameters using [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> If `WA SET CONTEXT` was not called for the web area the command returns `null`.
+La commande `WA Get context`<!--REF #_command_.WA Get context.Summary--> récupère l'objet contexte défini pour `$4d` dans la zone Web désignée par les paramètres \* et *object* en utilisant [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> Si `WA SET CONTEXT` n'a pas été appelé pour la zone web, la commande renvoie `null`.
 
 :::note
 
-The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
+La commande n'est utilisable qu'avec une zone web intégrée où les paramètres [**Utiliser le moteur de rendu web intégré**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) et **Accéder aux méthodes 4D** sont fixés à `true`.
 
 :::
 
 ### Exemple
 
-Checking if a context exists:
+Vérification de l'existence d'un contexte :
 
 ```4d
  var $contextObj:=WA Get context(*; "myWebArea")

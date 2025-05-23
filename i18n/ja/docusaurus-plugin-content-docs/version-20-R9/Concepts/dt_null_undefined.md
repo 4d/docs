@@ -25,7 +25,7 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 
 未定義の式を読み込んだ、または割り当てようとしたときに 4D は通常、エラーを生成します。 ただし以下の場合には生成されません:
 
-- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) with them:
+- 未定義の値を(配列を除く)変数に代入することは、変数に対して[`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) を呼び出すのと同じ効果があります:
 
 ```4d
      var $o : Object

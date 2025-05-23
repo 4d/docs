@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time. Este comando retorna todos os processos, incluindo processos internos que não são alcançáveis pelo comando [Informações do processo](process-info.md). 
+<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->O comando **Process activity** retorna um snapshot dos processos em execução e/ou (4D Server apenas) sessões usuário conectadas em um dado momento. Este comando retorna todos os processos, incluindo processos internos que não são alcançáveis pelo comando [Informações do processo](process-info.md). 
 
 Por padrão quando usado sem quaisquer parâmetros, a **atividade de processo** retorna um objeto que contém as seguintes propriedades:
 
@@ -76,18 +76,18 @@ No servidor, o comando `Process activity` retorna uma propriedade adicional de "
 Se quiser obter a coleção de todas as sessões de usuários:
 
 ```4d
-  //To be executed on the server
+  //Para ser executado no servidor
  
  var $o : Object
  var $i : Integer
  var $processName;$userName : Text
 
  
- $o:=Process activity //Get process & session info
- For($i;0;($o.processes.length)-1) //Iterate over the "processes" collection
+ $o:=Process activity //obter informação de processo e sessão
+ For($i;0;($o.processes.length)-1) //Iterar sobre a coleção "processes" 
     $processName:=$o.processes[$i].name
-    $userName:=String($o.processes[$i].session.userName) // Easy access to userName
-  //use String because session object might be undefined
+    $userName:=String($o.processes[$i].session.userName) // Acesso fácil a  userName
+  //use String porque o objeto de sessão pode ser indefinido
  End for
 ```
 

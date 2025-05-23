@@ -942,7 +942,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | Conjonction | Symbole(s)                                                       |
 | ----------- | ----------------------------------------------------------------------------------- |
 | AND         | &, &&, and              |
-| OR          | &#124;,&#124;&#124;, or |
+| OU          | &#124;,&#124;&#124;, or |
 
 - **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
 

@@ -161,7 +161,7 @@ Connection to a remote datastore without user / password:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -173,7 +173,7 @@ Connection to a remote datastore with user / password / timeout / tls:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -387,7 +387,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 On a remote datastore:
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -726,7 +726,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

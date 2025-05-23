@@ -62,7 +62,7 @@ O depurador é então ligado ao cliente 4D remoto:
 Para ligar o depurador de novo ao servidor:
 
 1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
-2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
+2. Na barra de menu de 4D Server, selecione **Editar** > **Anexar depurador**.
 
 > Quando o depurador estiver conectado ao servidor (padrão), todos os processos do servidor são executados automaticamente no modo cooperativo para permitir a depuração. Este fato pode ter um impacto significativo no desempenho. Quando não for necessário depurar na máquina do servidor, recomenda-se desconectar o depurador e anexá-lo a uma máquina remota, se necessário.
 

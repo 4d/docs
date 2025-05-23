@@ -600,15 +600,14 @@ Le code générique suivant duplique toute entité :
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | Paramètres | Type    |    | Description                                                                              |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
-| Résultat   | Text    | <- | Valeur de la clé primaire texte de l'entité                                              |
-| Résultat   | Integer | <- | Valeur de la clé primaire numérique de l'entité                                          |
+| Résultat   | any     | <- | Valeur de la clé primaire de l'entité (Integer ou Text)                                  |
 
 <!-- END REF -->
 
@@ -1045,7 +1044,7 @@ Exemple avec option `dk reload if stamp changed` :
 
 La fonction `.next()` <!-- REF #EntityClass.next().Summary -->retourne une référence vers l'entité suivante dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-|
+Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
 S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous êtes sur la dernière entité de la sélection), la fonction retourne Null. Si l'entité suivante a été supprimée, la fonction renvoie l'entité valide suivante (et finalement Null).
 
@@ -1087,7 +1086,7 @@ S'il n'y a pas d'entité suivante valide dans l'entity selection (i.e. vous ête
 
 La fonction `.previous()` <!-- REF #EntityClass.previous().Summary --> retourne une référence vers l'entité précédente dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-|
+Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
 Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
 
@@ -1615,7 +1614,7 @@ Retourne :
 
 La fonction `touched()` <!-- REF #EntityClass.touched().Summary -->vérifie si un attribut de l'entité a été modifié depuis que l'entité a été chargée en mémoire ou sauvegardée<!-- END REF -->.
 
-Si un attribut a été modifié ou calculé, la fonction retourne Vrai, sinon elle retourne Faux. Vous pouvez utiliser cette fonction pour savoir s'il est nécessaire de sauvegarder l'entité.
+Si un attribut a été modifié ou calculé, la fonction retourne Vrai, sinon elle retourne Faux. Vous pouvez utiliser cette fonction pour déterminer si vous devez sauvegarder l'entité.
 
 Cette fonction retourne Faux pour une entité qui vient d'être créée (avec [`.new( )`](DataClassClass.md#new)). A noter cependant que si vous utilisez une fonction pour calculer un attribut de l'entité, la fonction `.touched()` retournera Vrai. Par exemple, si vous appelez [`.getKey()`](#getkey) pour calculer la clé primaire, `.touched()` retourne alors Vrai.
 

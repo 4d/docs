@@ -268,12 +268,12 @@ DocRef 参照番号 (開かれたドキュメントの参照番号。次のコ�
 特定のコードを検証対象から除外するには、コメント形式の専用ディレクティブ `%T-` および `%T+` でそのコードを挟みます。 `//%T-` は以降のコードを検証から除外し、`//%T+` は以降のコードに対する検証を有効に戻します:
 
 ```4d
-  //%T- to disable thread safety checking
-
-  // Place the code containing commands to be excluded from thread safety checking here
- $w:=Open window(10;10;100;100) //for example
-
-  //%T+ to enable thread safety checking again for the rest of the method
+  // %T- 検証を無効にします
+ 
+  // スレッドセーフ検証から除外するコード
+ $w:=Open window(10;10;100;100) // 例
+ 
+  // %T+ 検証を有効に戻します
 ```
 
 無効化および有効化用のディレクティブでコードを挟んだ場合、そのコードがスレッドセーフかどうかについては、開発者が熟知している必要があります。 プリエンプティブなスレッドでスレッドセーフでないコードが実行された場合には、ランタイムエラーが発生します。

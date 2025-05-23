@@ -32,7 +32,7 @@ No objeto *opções*, passe as propriedades que se utilizarão ao gerar o hash d
 
 ### Gestão de erros 
 
-The following errors may be returned. You can review an error with the [Last errors](last-errors.md)  and [ON ERR CALL](on-err-call.md) commands.  
+The following errors may be returned. You can review an error with the [Last errors](../commands/last-errors.md)  and [ON ERR CALL](on-err-call.md) commands.  
 
 | **Number** | **Message**                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------ |

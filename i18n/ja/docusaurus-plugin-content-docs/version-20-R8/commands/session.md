@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 コマンドを呼び出したプロセスによって、カレントユーザーセッションは次のいずれかです:
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
+- Web セッション([スケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合)
 - リモートクライアントセッション
 - ストアドプロシージャセッション
 - スタンドアロンアプリケーションの*designer* セッション

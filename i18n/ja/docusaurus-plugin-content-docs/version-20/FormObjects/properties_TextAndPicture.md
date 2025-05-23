@@ -181,7 +181,7 @@ title: テキスト、ピクチャー
 
 ## タイトルと画像を隣接させる
 
-This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](properties_Text.md#horizontal-alignment) properties.
+このプロパティにより、ボタンのタイトルおよびタイトルピクチャーを隣接して表示させるか、それとも[タイトル/ピクチャー位置](#タイトルピクチャー位置)と[横方向マージン](properties_Text.md#横方向マージン)プロパティで指定されたとおりに離れて表示させるかを指定することができます。
 
 ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。
 

@@ -45,7 +45,7 @@ Converts various types of image representations to a Blob object.
 | ---------- | ------------ | ----------------------------------------------------------------------------------------------- |
 | $imageInfo | Diferente de | The image information, which can be a picture, a file object, a URL, or a text. |
 
-**Returns**: Blob or Null if the input is invalid.
+**Retornos**: Blob ou Null se a entrada for inválida.
 
 ```4d
 var $blob:=cs._ImageUtils.me.toBlob($image)
@@ -59,7 +59,7 @@ Converts an image to a base64 encoded string.
 | ---------- | ------------ | ----------------------------------------------------------- |
 | $imageInfo | Diferente de | The image information to convert to base64. |
 
-**Returns**: Base64 encoded Text or an empty string if conversion fails.
+**Retorna**: texto codificado em Base64 ou uma string vazia se a conversão falhar.
 
 ```4d
 var $base64:=cs._ImageUtils.me.toBase64($image)

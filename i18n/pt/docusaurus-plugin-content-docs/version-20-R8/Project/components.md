@@ -463,7 +463,7 @@ The Dependency manager provides an integrated handling of updates on GitHub. The
 - Automatic and manual checking of available versions
 - Automatic and manual updating of components
 
-Manual operations can be done **per dependency** or **for all dependencies**.
+As operações manuais podem ser feitas **por dependência** ou **para todas as dependências**.
 
 #### Checking for new versions
 

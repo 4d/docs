@@ -8,32 +8,32 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print form.Params-->
 
-| Paramètres | Type         |                             | Description                                                                                                                                                                              |
-| ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Table        | &#8594; | Table owning the form, or Default table, if omitted                                                                                                                                      |
-| form       | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
-| formData   | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                         |
-| areaStart  | Integer      | &#8594; | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
-| areaEnd    | Integer      | &#8594; | Ending area (if areaStart specified)                                                                                                                                  |
-| Résultat   | Integer      | &#8592; | Height of printed section                                                                                                                                                                |
+| Paramètres | Type         |                             | Description                                                                                                                                                                                           |
+| ---------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable     | Table        | &#8594; | Table du formulaire, ou table par défaut si omis                                                                                                                                                      |
+| form       | Text, Object | &#8594; | Nom (chaîne) du formulaire, ou chemin POSIX (chaîne) vers un fichier .json décrivant le formulaire, ou objet décrivant le formulaire à imprimer |
+| formData   | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                                      |
+| areaStart  | Integer      | &#8594; | Marqueur d'impression ou zone de démarrage (si areaEnd est spécifié)                                                                                                               |
+| areaEnd    | Integer      | &#8594; | Zone de fin (si areaStart est spécifié)                                                                                                                                            |
+| Résultat   | Integer      | &#8592; | Hauteur de la section imprimée                                                                                                                                                                        |
 
 <!-- END REF-->
 
 ## Description
 
-<!--REF #_command_.Print form.Summary-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*.**Print form** simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->La commande **Print form** imprime simplement *form* avec les valeurs courantes des champs et des variables de la table *aTable*. Elle est généralement utilisée pour imprimer des états très complexes qui nécessitent un contrôle complet du processus d'impression. **Print form** ne gère pas les traitements d'enregistrements, ni les ruptures, sauts de pages, en-têtes ou pieds de pages. Vous devez vous-même prendre en charge ces opérations. **Print form** imprime uniquement des champs et des variables avec une taille fixe, la commande ne gère pas les objets de taille variable.
 
 Dans le paramètre *form*, vous pouvez passer soit :
 
 - le nom d'un formulaire,
-- the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
+- le chemin d'accès (en syntaxe POSIX) d'un fichier .json valide contenant une description du formulaire à utiliser (voir *Chemin d'accès au fichier de formulaire*), ou
 - un objet contenant la description du formulaire à utiliser.
 
-Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. To force a page break between forms, use the [PAGE BREAK](../commands-legacy/page-break.md) command. In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](../commands-legacy/cancel.md) command before the [PAGE BREAK](../commands-legacy/page-break.md) command.
+Comme **Print form** ne génère pas de saut de page après avoir imprimé un formulaire, elle vous permet de combiner facilement différents formulaires sur la même page. Ainsi, **Print form** est idéale pour effectuer des impressions complexes impliquant plusieurs tables et plusieurs formulaires. Pour forcer un saut de page entre les formulaires, utilisez la commande [PAGE BREAK](../commands-legacy/page-break.md). Pour reporter l'impression à la page suivante d'un formulaire dont la hauteur est supérieure à l'espace disponible, appelez la commande [CANCEL](../commands-legacy/cancel.md) avant la commande [PAGE BREAK](../commands-legacy/page-break.md).
 
-Three different syntaxes may be used:
+Trois syntaxes différentes peuvent être utilisées :
 
-- **Detail area printing**
+- **Impression du corps d'un formulaire**
 
 Syntaxe :
 
@@ -41,9 +41,9 @@ Syntaxe :
  height:=Print form(myTable;myForm)
 ```
 
-In this case, **Print form** only prints the Detail area (the area between the Header line and the Detail line) of the form.
+Dans ce cas, **Print form** n'imprime que la zone de corps du formulaire (la zone comprise entre les marqueur d'en-tête et de corps).
 
-- **Form area printing**
+- **Impression de zone de formulaire**
 
 Syntaxe :
 
@@ -51,7 +51,7 @@ Syntaxe :
  height:=Print form(myTable;myForm;marker)
 ```
 
-In this case, the command will print the section designated by the *marker*. Pass one of the constants of the *Form Area* theme in the marker parameter:
+Dans ce cas, la commande imprime la section désignée par *marker*. Passez dans le paramètre *marker* une des constantes :
 
 | Constante     | Type    | Valeur |
 | ------------- | ------- | ------ |
@@ -79,7 +79,7 @@ In this case, the command will print the section designated by the *marker*. Pas
 | Form header8  | Integer | 208    |
 | Form header9  | Integer | 209    |
 
-- **Section printing**
+- **Impression de section**
 
 Syntaxe :
 
@@ -87,58 +87,58 @@ Syntaxe :
  height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
-In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. The values entered must be expressed in pixels.
+Dans ce cas, la commande imprime la section comprise entre les paramètres *areaStart* et *areaEnd*. Les valeurs saisies doivent être exprimées en pixels.
 
 **formData**
 
-Optionnellement, vous pouvez passer des paramètres au formulaire *form* en utilisant soit l'objet *formData*, soit l'objet de classe de formulaire automatiquement instancié par 4D si vous avez [associé une classe utilisateur au formulaire](../FormEditor/properties_FormProperties.md#form-class). Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md). Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class).
+Optionnellement, vous pouvez passer des paramètres au formulaire *form* en utilisant soit l'objet *formData*, soit l'objet de classe de formulaire automatiquement instancié par 4D si vous avez [associé une classe utilisateur au formulaire](../FormEditor/properties_FormProperties.md#form-class). Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md). L'objet form data est disponible dans l'[événement formulaire `On Printing Detail`](../Events/onPrintingDetail.md).
 
 Pour des informations détaillées sur l'objet de données formulaire, veuillez vous référer à la commande [`DIALOG`](dialog.md).
 
 **Valeur retournée**
 
-The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
+La valeur retournée par **Print form** indique la hauteur de la zone d’impression. Cette valeur sera automatiquement prise en compte par la commande [Get printed height](../commands-legacy/get-printed-height.md).
 
-The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
+Les boîtes de dialogue standard d'impression n'apparaissent pas lorsque vous utilisez la commande **Print form**. L'état généré ne tient pas compte des paramètres d'impression définis en mode Développement pour le formulaire. Il y a deux manières de définir les paramètres d'impression avant d'effectuer une série d'appels à **Print form** :
 
-- Call [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
-- Call [SET PRINT OPTION](../commands-legacy/set-print-option.md) and [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
+- Appeler [PRINT SETTINGS](../commands-legacy/print-settings.md). Dans ce cas, vous laissez l'utilisateur définir ses paramètres dans les boîtes de dialogue d'impression.
+- Appeler [SET PRINT OPTION](../commands-legacy/set-print-option.md) et [GET PRINT OPTION](../commands-legacy/get-print-option.md). Dans ce cas, les paramètres sont définis par programmation.
 
-**Print form** builds each printed page in memory. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
+**Print form** construit chaque page à imprimer en mémoire. Chaque page est imprimée lorsque la page en mémoire est remplie ou lorsque vous appelez [PAGE BREAK](../commands-legacy/page-break.md). Pour vous assurer que la dernière page d'une impression exécutée par l'intermédiaire de **Print form** est effectivement imprimée, il faut terminer par la commande [PAGE BREAK](../commands-legacy/page-break.md) (sauf dans le cadre d'un [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), voir note). Sinon, la dernière page, si elle n'est pas remplie, reste en mémoire et n'est pas imprimée.
 
-**Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. If you call [PAGE BREAK](../commands-legacy/page-break.md) in this case, a blank page is printed.
+**Attention :** Si la commande est appelée dans le contexte d'une tâche d'impression ouverte avec [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), vous ne devez PAS appeler [PAGE BREAK](../commands-legacy/page-break.md) pour la dernière page car celle-ci est automatiquement imprimée par la commande [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md). Si vous appelez [PAGE BREAK](../commands-legacy/page-break.md) dans ce cas, une page vide est imprimée.
 
-This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
+Cette commande permet d'imprimer des zones et des objets externes (par exemple, les zones 4D Write Pro ou 4D View Pro). La zone est réinitialisée à chaque exécution de la commande.
 
-**Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands-legacy/print-record.md) instead.
+**Attention :** **Print form** n'imprime pas les sous-formulaires. Si vous voulez imprimer uniquement un formulaire comportant de tels objets, utilisez plutôt [PRINT RECORD](../commands-legacy/print-record.md).
 
-**Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
+**Print form** ne génère qu'un seul événement [`On Printing Detail`](../Events/onPrintingDetail.md) pour la méthode formulaire.
 
-**4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. In this context:
+**4D Server:** Cette commande peut être exécutée sur 4D Server dans le cadre d'une procédure stockée. Dans ce contexte :
 
-- Make sure that no dialog box appears on the server machine (except for a specific requirement).
-- In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
+- Veillez à ce qu'aucune boîte de dialogue n'apparaisse sur la machine serveur (sauf exigence particulière).
+- Dans le cas d'un problème concernant l'imprimante (manque de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
 ## Exemple 1
 
-The following example performs as a [PRINT SELECTION](../commands-legacy/print-selection.md) command would. However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
+L'exemple suivant effectue la même chose que ce que ferait la commande [PRINT SELECTION](../commands-legacy/print-selection.md). Cependant, l'état utilise deux formulaires différents suivant le type d'enregistrement (chèque émis ou dépôt) :
 
 ```4d
- QUERY([Register]) // Select the records
+ QUERY([Register]) // sélectionner les enregistrements
  If(OK=1)
-    ORDER BY([Register]) // Sort the records
+    ORDER BY([Register]) // trier les enregistrements
     If(OK=1)
-       PRINT SETTINGS // Display Printing dialog boxes
+       PRINT SETTINGS // Afficher les boîtes de dialogue d'impression
        If(OK=1)
           For($vlRecord;1;Records in selection([Register]))
              If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Use one form for checks
+                Print form([Register];"Check Out") // formulaire de chèque
              Else
-                Print form([Register];"Deposit Out") // Use another form for deposits
+                Print form([Register];"Deposit Out") // formulaire de dépôt
              End if
              NEXT RECORD([Register])
           End for
-          PAGE BREAK // Make sure the last page is printed
+          PAGE BREAK // S'assurer que la dernière page est imprimée
        End if
     End if
  End if
@@ -146,15 +146,15 @@ The following example performs as a [PRINT SELECTION](../commands-legacy/print-s
 
 ## Exemple 2
 
-Refer to the example of the [SET PRINT MARKER](../commands-legacy/set-print-marker.md) command.
+Voir l'exemple de la commande [SET PRINT MARKER](../commands-legacy/set-print-marker.md).
 
 ## Exemple 3
 
-This form is used as dialog, then printed with modifications:
+Ce formulaire est utilisé comme dialogue, puis imprimé avec des modifications :
 
 ![](../assets/en/commands/pict6264975.en.png)
 
-The form method:
+La méthode formulaire :
 
 ```4d
  If(Form event code=On Printing Detail)
@@ -164,7 +164,7 @@ The form method:
  End if
 ```
 
-The code that calls the dialog then prints its body:
+Le code qui appelle la boîte de dialogue imprime ensuite le corps :
 
 ```4d
  $formData:=New object

@@ -31,7 +31,7 @@ Par défaut pour des raisons de sécurité, si vous omettez le paramètre *optio
 * Si vous passez Delete with contents :  
    * Le dossier ainsi que tout son contenu sont supprimés.  
    **Attention :** Si le dossier est verrouillé ou en lecture seule, il sera néanmoins supprimé si l'utilisateur courant dispose des droits d’accès nécessaires.  
-   * Si le dossier désigné ou un des fichiers qu'il contient ne peut pas être supprimé, la procédure de suppression est abandonnée dès que le premier élément inaccessible est atteint, et une erreur(\*) est retournée. Dans ce cas, le dossier ne sera que partiellement supprimé. Il est cependant possible d'utiliser la commande [Last errors](last-errors.md)  pour obtenir le nom et le chemin d’accès du fichier à l'origine de l'erreur.  
+   * Si le dossier désigné ou un des fichiers qu'il contient ne peut pas être supprimé, la procédure de suppression est abandonnée dès que le premier élément inaccessible est atteint, et une erreur(\*) est retournée. Dans ce cas, le dossier ne sera que partiellement supprimé. Il est cependant possible d'utiliser la commande [Last errors](../commands/last-errors.md)  pour obtenir le nom et le chemin d’accès du fichier à l'origine de l'erreur.  
    * Si le dossier désigné n'existe pas, la commande ne fait rien et aucune erreur n'est générée.  
    (\*) sous Windows : -54 (Tentative d'écriture dans un fichier verrouillé)  
    sous macOS : -45 (Fichier verrouillé ou chemin d'accès invalide)

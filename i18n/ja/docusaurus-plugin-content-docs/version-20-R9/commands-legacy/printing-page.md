@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Printing page.Summary-->Printing pageは、印刷中のページ番号を返します。<!-- END REF-->このコマンドは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドまたはデザインモードのプリント...メニューの選択によって印刷する場合にのみ使用することができます。
+<!--REF #_command_.Printing page.Summary-->Printing pageは、印刷中のページ番号を返します。<!-- END REF-->
 
 ## 例題 
 

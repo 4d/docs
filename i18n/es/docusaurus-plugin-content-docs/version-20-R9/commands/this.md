@@ -22,7 +22,7 @@ En la mayoría de los casos, el valor de `This` está determinado por cómo se l
 
 This command can be used in different contexts, described below. Within these contexts, you will access object/collection element properties or entity attributes through **This.<*propertyPath*\>**. For example, *This.name* or *This.employer.lastName* are valid pathes to object, element or entity properties.
 
-In any other context, the command returns **Null**.
+En cualquier otro contexto, el comando devuelve **Null**.
 
 ## Función de clase
 
@@ -83,7 +83,7 @@ For example, you want to use a project method as a formula encapsulated in an ob
  $g:=$person.greeting("hi") // devuelve "hi John Smith"
 ```
 
-With the *Greeting* project method:
+Con el método proyecto *Greeting*:
 
 ```4d
  #DECLARE($greeting : Text) : Text

@@ -22,7 +22,7 @@ El comando verifica el cumplimiento de cada archivo de sesión en la carpeta Mob
 
 Si un archivo de sesión no es válido o ha sido eliminado, la sesión correspondiente se elimina de la memoria.
 
-El comando puede devolver uno de los siguientes errores, que se puede manejar a través de los comandos [ON ERR CALL](on-err-call.md) y [Last errors](last-errors.md) :
+El comando puede devolver uno de los siguientes errores, que se puede manejar a través de los comandos [ON ERR CALL](on-err-call.md) y [Last errors](../commands/last-errors.md) :
 
 | **Nombre del componente** | **Código de error** | **Descripción**                                            |
 | ------------------------- | ------------------- | ---------------------------------------------------------- |

@@ -111,11 +111,11 @@ End Use
 
 ### 自動的な Use...End use 呼び出し
 
-The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
+以下の機能は、内部的な **Use/End use** を自動でトリガーするため、この構文を実行時に明示的に呼び出す必要はありません:
 
-- [collection functions](../API/CollectionClass.md) that modify shared collections,
-- [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
-- [`OB REMOVE`](../commands-legacy/ob-remove.md) command,
+- 共有コレクションを変更する[コレクション関数](../API/CollectionClass.md)
+- [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) コマンド
+- [`OB REMOVE`](../commands-legacy/ob-remove.md) コマンド
 - [共有クラス](classes.md#共有クラス) 内で定義された [共有関数](classes.md#共有関数)
 
 ## 例題 1
