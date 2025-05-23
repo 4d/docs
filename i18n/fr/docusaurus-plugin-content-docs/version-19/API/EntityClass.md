@@ -607,7 +607,7 @@ Le code générique suivant duplique toute entité :
 | Paramètres | Type    |    | Description                                                                              |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
-| Résultat   | any     | <- | Value of the primary key of the entity (Integer or Text)                                 |
+| Résultat   | any     | <- | Valeur de la clé primaire de l'entité (Integer ou Text)                                  |
 
 <!-- END REF -->
 

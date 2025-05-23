@@ -682,7 +682,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
+[Webサーバーオブジェクト](#webサーバーオブジェクト)の設定すべては、読み取り専用プロパティ([.isRunning](#isrunning)、[.name](#name)、[.openSSLVersion](#opensslversion)、[.perfectForwardSecrecy](#perfectforwardsecrecy)、[.sessionCookieName](#sessioncookiename))を除き、カスタマイズすることができます。
 
 カスタマイズされた設定は [`.stop()`](#stop) が呼び出されたときにリセットされます。
 
