@@ -13,6 +13,12 @@ Thanks to the standard 4D object *refcounting*, a TCPConnection is automatically
 
 TCPConnection objects are released when no more references to them exist in memory. This typically occurs, for example, at the end of a method execution for local variables. If you want to "force" the closure of a connection at any moment, [**nullify** its references by setting them to **Null**](../Concepts/dt_object.md#resources).
 
+:::info 4DTCPUDPLog.txt file
+
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. 
+
+:::
+
 <details><summary>History</summary>
 
 |Release|Changes|
