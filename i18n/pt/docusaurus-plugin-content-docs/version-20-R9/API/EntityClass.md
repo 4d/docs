@@ -614,15 +614,14 @@ O seguinte código genérico duplica qualquer entidade:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
 
 | Parâmetro  | Tipo    |                             | Descrição                                                                                                                     |
 | ---------- | ------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: a chave primária é retornada como uma string, independentemente do tipo de chave primária |
-| Resultados | Text    | <- | Valor do texto chave primária da entidade                                                                                     |
-| Resultados | Integer | <- | Valor da chave primária numérica da entidade                                                                                  |
+| Resultados | any     | <- | Value of the primary key of the entity (Integer or Text)                                                   |
 
 <!-- END REF -->
 
