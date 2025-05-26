@@ -34,7 +34,7 @@ The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary 
 
 You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parameter:
 
-- *fileToZip*: You simply pass a `4D.File` to compress.
+- *fileToZip*: você simplesmente passa um `4D.File` para compactar.
 
 - *folderToZip*: você passa um `4D.Folder` para compactar. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
 
