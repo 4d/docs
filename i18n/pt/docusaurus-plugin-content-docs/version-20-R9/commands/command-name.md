@@ -38,7 +38,7 @@ Two optional parameters are available:
  - First bit (bit 0): set to 1 if the command is [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (i.e., compatible with execution in a preemptive process) and 0 if it is **thread-unsafe**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
  - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors).
 
-*theme*: name of the 4D language theme for the command.
+*theme*: nome do tema da linguagem 4D para o comando.
 
 The **Command name** command sets the *OK* variable to 1 if *command* corresponds to an existing command number, and to 0 otherwise. Note, however, that some existing commands have been disabled, in which case **Command name** returns an empty string (see last example).
 
