@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 **Compile project**<!--REF #_command_.Compile project.Summary--> permite compilar el proyecto local actual o el proyecto especificado en el parámetro *projectFile*.<!-- END REF--> Para más información sobre compilación, consultr la [página de compilación](../Project/compiler.md).
 
-By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. Se soportan las siguientes sintaxis:
+By default, the command uses the compiler options defined in the Structure Settings. Puede sobreescribirlas pasando un parámetro *options*. Se soportan las siguientes sintaxis:
 
 - **Compile project**(): compiles the opened project using the options defined in the Structure Settings
 - **Compile project**(*options*): compila el proyecto abierto. Las *options* definidas reemplazan los parámetros de la estructura
