@@ -612,7 +612,7 @@ Para definir um valor de tipo de data, o formato a utilizar é uma string de car
 
 :::
 
-***info* parameter object with a .exe or .dll file (Windows only)**
+**Parâmetro objeto *info* com um arquivo .exe ou .dll (somente Windows)**
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
