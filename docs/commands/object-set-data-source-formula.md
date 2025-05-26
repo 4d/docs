@@ -17,15 +17,13 @@ title: OBJECT SET DATA SOURCE FORMULA
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary-->The **OBJECT SET DATA SOURCE FORMULA** command assigns a formula (expression) as the data source of the object(s) designated by the *object* and *\** parameters<!-- END REF-->. The formula must be provided as a `4D.Formula` object.
+<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary-->The **OBJECT SET DATA SOURCE FORMULA** command assigns a formula (expression) as the data source of the object(s) designated by the *object* and *\** parameters<!-- END REF-->. The formula must be provided as a [`4D.Formula`](../API/FunctionClass.md#formula-objects) object.
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
-The formula acts as the source from which the object retrieves its value at runtime. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
+The *formula* acts as the source from which the object retrieves its value at runtime. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
 
-If the *object* parameter contains a pattern using the `@` character, the formula is applied to all matching objects in the form.
-
-If the command is applied to an object that does not exist or cannot support formulas, it does nothing. If an error occurs during the execution of the formula or its assignment, the appropriate 4D error is generated.
+If the command is applied to an object that does not exist or cannot support formulas, it does nothing.
 
 :::note
 
@@ -36,9 +34,17 @@ If the command is applied to an object that does not exist or cannot support for
 
 ## Example
 
+You want to dynamically bind an input field to an expression. For example, show the discounted price based on a base price field and a discount value
+
 ```4d
-$formula := Formula(This.value1 + This.value2)
-OBJECT SET DATA SOURCE FORMULA(*;"SumField";$formula)
+
+Form.basePrice := 100
+Form.discount := 0.2
+
+$discountedFormula := Formula(Form.basePrice * (1 - Form.discount))
+
+OBJECT SET DATA SOURCE FORMULA(*;"DiscountedPriceInput"; $discountedFormula)
+
 ```
 
 ## See Also
