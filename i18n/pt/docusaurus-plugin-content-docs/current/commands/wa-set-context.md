@@ -27,7 +27,7 @@ The command is only usable with an embedded web area where the [**Use embedded w
 
 Pass in *contextObj* user class instances or formulas to be allowed in `$4d` as objects. Class functions that begin with `_` are considered hidden and cannot be used with `$4d`.
 
-- If *contextObj* is null, `$4d` has access to all 4D methods.
+- Se *contextObj* for null, `$4d` terá acesso a todos os métodos 4D.
 - Se *contextObj* estiver vazio, `$4d` não terá acesso.
 
 ### Exemplo 1
