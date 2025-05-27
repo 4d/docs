@@ -20,7 +20,7 @@ O comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->atribui um
 
 Em *rangeObj*, passe um intervalo para a célula (criada com [`VP Cell`](vp-cell.md)) cujo valor você deseja especificar. The cell defined in the *rangeObj* is used to determine the starting point.
 
-> - If *rangeObj* is not a cell range, only the first cell of the range is used.
+> - Se *rangeObj* não for um intervalo de células, somente a primeira célula do intervalo será usada.
 > - If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
 
 O parâmetro *valuesCol* é bidimensional:
