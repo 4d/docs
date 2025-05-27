@@ -27,7 +27,7 @@ title: VP MOVE CELLS
 
 O comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary --> move ou copia os valores, estilo e fórmulas de *originRange* para *targetRange*<!-- END REF -->.
 
-*originRange* and *targetRange* can refer to different View Pro areas.
+*originRange* e *targetRange* podem se referir a áreas View Pro diferentes.
 
 In *originRange*, pass a range object containing the values, style, and formula cells to copy or move. Se *originRange* for um intervalo combinado, somente o primeiro será usado.
 
