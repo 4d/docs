@@ -7,8 +7,8 @@ You can call [data model class functions](ORDA/ordaClasses.md) defined for the O
 
 Functions can be called in two ways:
 
-- using **POST requests**, with data parameters passed in the body of the request.
-- using **GET requests**, with parameters directly passed in the URL.
+- usando **POST requests**, com parâmetros de dados passados no corpo da solicitação.
+- usando solicitações **GET**, com parâmetros passados diretamente no URL.
 
 POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. However, GET requests can be more compliant with user experience, allowing to call functions by entering an URL in a browser (note: the developer must ensure no sensitive action is done in such functions).
 
