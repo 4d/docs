@@ -1542,7 +1542,7 @@ A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->returns True if
 
 This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
-For a new entity that has just been created (with [`.new()`](DataClassClass.md#new)), the function returns False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Para uma nova entidade que acabou de ser criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
 
 
 #### Exemplo
