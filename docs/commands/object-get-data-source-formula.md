@@ -37,8 +37,8 @@ $formula:=OBJECT Get data source formula(*; "myInput")
 ## See also 
 
 [OBJECT SET DATA SOURCE FORMULA](object-set-data-source-formula.md)<br/>
-[LISTBOX GET COLUMN FORMULA](listbox-get-column-formula.md)<br/>
-[OBJECT SET DATA SOURCE](object-set-data-source.md)
+[LISTBOX GET COLUMN FORMULA](../commands-legacy/listbox-get-column-formula.md)<br/>
+[OBJECT SET DATA SOURCE](../commands-legacy/object-set-data-source.md)
 
 ## Properties
 

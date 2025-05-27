@@ -52,8 +52,8 @@ OBJECT SET DATA SOURCE FORMULA(*;"DiscountedPriceInput"; $discountedFormula)
 ## See Also
 
 [OBJECT Get data source formula](object-get-data-source-formula.md)<br/>
-[LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)<br/>
-[OBJECT SET DATA SOURCE](object-set-data-source.md) 
+[LISTBOX SET COLUMN FORMULA](../commands-legacy/listbox-set-column-formula.md)<br/>
+[OBJECT SET DATA SOURCE](../commands-legacy/object-get-data-source.md) 
 
 ## Properties
 
