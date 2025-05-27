@@ -31,7 +31,7 @@ By default, for security reasons, if you omit the *deleteOption* parameter, **DE
 * When Delete with contents (1) is passed:  
    * The folder along with all of its contents are deleted.  
    **Warning:** Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, they are still deleted.  
-   * If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(\*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use [Last errors](last-errors.md)  command to retrieve the name and path of the offending file.  
+   * If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(\*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use [Last errors](../commands/last-errors.md)  command to retrieve the name and path of the offending file.  
    * If the folder specified does not exist, the command does nothing and no error is returned.  
    (\*) under Windows: -54 (Attempt to open locked file for writing)  
    under macOS: -45 (The file is locked or the pathname is not correct)

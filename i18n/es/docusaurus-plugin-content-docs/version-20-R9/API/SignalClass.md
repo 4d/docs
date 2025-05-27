@@ -196,7 +196,7 @@ If the signal is already in the signaled state (i.e. the `.signaled` property is
 La función devuelve el valor de la propiedad `.signaled`.
 
 - **true** si la señal se activó (se llamó a `.trigger()`).
-- **false** if the timeout expired before the signal was triggered.
+- **false** si el tiempo de espera expiró antes de que se activara la señal.
 
 :::note Atención
 

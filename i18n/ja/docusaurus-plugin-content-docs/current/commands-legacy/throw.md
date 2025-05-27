@@ -48,7 +48,7 @@ description 引数を渡さなかった場合には、次の情報が提示さ�
 | message            | text    | エラーの説明。<br/> **message** には、errorObj オブジェクト引数に追加されたカスタムプロパティによって置き換えられるプレースホルダーを含めることができます。各プレースホルダーは、置き換えに使用するカスタムプロパティ名を中括弧 {} で囲むことで指定します。 **message** が渡されない場合、または空文字列の場合、コマンドはカレントデータベースの xliff ファイルを検索し、"ERR\_{componentSignature}\_{errCode}" に合致する resname を探します。<br/>を探します。 |
 | deferred           | boolean | カレントメソッドの終了時または[Try ブロック](developer.4d.com/docs/Concepts/error-handling#trycatchend-try)の終了時にエラーを延期するかどうかを指定します。デフォルト値は false です。                                                                                                                                                                    |
 
-このシンタックスを使用すると、[Last errors](last-errors.md) で errorObjオブジェクトが返されます。
+このシンタックスを使用すると、[Last errors](../commands/last-errors.md) で errorObjオブジェクトが返されます。
 
 **注記:** 同じプロジェクトメソッド内でこのコマンドを複数回呼び出して、複数のエラーを生成することができます。遅延モードを使って、これらのエラーを一度にスローできます。
 
@@ -56,7 +56,7 @@ description 引数を渡さなかった場合には、次の情報が提示さ�
 
 このシンタックスは、カレントエラーをすべて**遅延モード**でスローします。つまり、これらのエラーはエラースタックに追加され、カレントメソッド終了時に処理されます。これは通常、[ON ERR CALL](on-err-call.md) コールバック内でおこなわれます。
 
-* **アプリケーションにおいて:** 発生したエラーはエラースタックに追加され、カレントメソッド終了時にアプリケーションの [ON ERR CALL](on-err-call.md) メソッドが呼び出されます。[Last errors](last-errors.md) 関数はエラースタックを返します。
+* **アプリケーションにおいて:** 発生したエラーはエラースタックに追加され、カレントメソッド終了時にアプリケーションの [ON ERR CALL](on-err-call.md) メソッドが呼び出されます。[Last errors](../commands/last-errors.md) 関数はエラースタックを返します。
 * **コンポーネントにおいて:** エラースタックはホストアプリケーションに送信され、ホストアプリケーションの [ON ERR CALL](on-err-call.md) メソッドが呼び出されます。
 
 ## 例題 1 
@@ -102,7 +102,7 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 ## 参照 
 
 [ASSERT](assert.md)  
-[Last errors](last-errors.md)  
+[Last errors](../commands/last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
 ## プロパティ

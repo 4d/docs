@@ -599,15 +599,14 @@ El siguiente código genérico duplica cualquier entidad:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                               |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Resultado  | Text    | <- | Valor de la llave primaria de texto de la entidad                                                         |
-| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                         |
+| Resultado  | any     | <- | Value of the primary key of the entity (Integer or Text)                                                  |
 
 <!-- END REF -->
 
@@ -1539,11 +1538,12 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 #### Descripción
 
-La función `.touched()` <!-- REF #EntityClass.touched().Summary -->comprueba si un atributo de la entidad ha sido modificado o no desde que se cargó la entidad en la memoria o se guardó<!-- END REF -->.
+La función `.touched()` <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
 
-Si un atributo ha sido modificado o calculado, la función devuelve True, en caso contrario devuelve False. Puede utilizar esta función para determinar si necesita guardar la entidad.
+This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
-Esta función devuelve False para una nueva entidad que acaba de ser creada (con [`.new( )`](DataClassClass.md#new)). Tenga en cuenta, sin embargo, que si utiliza una función que calcula un atributo de la entidad, la función `.touched()` devolverá entonces True. Por ejemplo, si se llama a [`.getKey()`](#getkey) para calcular la llave primaria, `.touched()` devuelve True.
+For a new entity that has just been created (with [`.new()`](DataClassClass.md#new)), the function returns False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+
 
 #### Ejemplo
 
@@ -1586,7 +1586,7 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 La función `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary -->devuelve los nombres de los atributos que han sido modificados desde que la entidad fue cargada en memoria<!-- END REF -->.
 
-Esto se aplica a los atributos [kind](DataClassClass.md#attributename) `storage` o `relatedEntity`.
+This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
 En el caso de que se haya tocado una entidad relacionada (es decir, la llave externa), se devuelve el nombre de la entidad relacionada y el nombre de su llave primaria.
 

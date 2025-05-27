@@ -9,42 +9,42 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Command name.Params-->
 
-| Paramètres | Type    |                             | Description                  |
-| ---------- | ------- | --------------------------- | ---------------------------- |
-| command    | Integer | &#8594; | Numéro de commande           |
-| info       | Integer | &#8592; | Command property to evaluate |
-| theme      | Text    | &#8592; | Language theme of command    |
-| Résultat   | Text    | &#8592; | Localized command name       |
+| Paramètres | Type    |                             | Description                        |
+| ---------- | ------- | --------------------------- | ---------------------------------- |
+| command    | Integer | &#8594; | Numéro de commande                 |
+| info       | Integer | &#8592; | Propriété de la commande à évaluer |
+| theme      | Text    | &#8592; | Thème du langage de la commande    |
+| Résultat   | Text    | &#8592; | Nom de la commande                 |
 
 <!-- END REF-->
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                  |
-| ------- | ------------------------------ |
-| 20 R9   | Support of deprecated property |
+| Release | Modifications                            |
+| ------- | ---------------------------------------- |
+| 20 R9   | Prise en charge de la propriété obsolète |
 
 </details>
 
 ## Description
 
-The **Command name** command <!--REF #_command_.Command name.Summary-->returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
+La commande **Command name** <!--REF #_command_.Command name.Summary-->retourne le nom ainsi que (optionnellement) les propriétés de la commande dont vous passez le numéro dans *commande*<!-- END REF-->. Le numéro de chaque commande est indiqué dans l'explorateur ainsi que dans la zone Propriétés de cette documentation.
 
-**Compatibility note:** A command name may vary from one 4D version to the next (commands renamed), this command was used in previous versions to designate a command directly by means of its number, especially in non-tokenized portions of code. This need has diminished over time as 4D continues to evolve because, for non-tokenized statements (formulas), 4D now provides a token syntax. This syntax allows you to avoid potential problems due to variations in command names as well as other elements such as tables, while still being able to type these names in a legible manner (for more information, refer to the *Using tokens in formulas* section). Note also that the \*[Use regional system settings\* option of the Preferences](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) allows you to continue using the French language in a French version of 4D.
+**Note de compatibilité :** Le nom d'une commande pouvant varier d'une version à l'autre de 4D (commandes renommées), cette commande était utilisée dans les versions précédentes pour désigner une commande directement par son numéro, notamment dans les portions de code non tokenisées. Ce besoin a diminué au fil du temps alors que 4D continue d'évoluer parce que, pour les requêtes non tokenisées (formules), 4D fournit maintenant une syntaxe avec tokens. Cette syntaxe de s'affranchir des variations des noms de commandes mais aussi des autres éléments comme les tables, tout en permettant de les saisir de façon lisible (pour plus d'informations, se référer à la section *Utilisation des tokens dans les formules*). Notez également que l'option [*Utiliser les paramètres régionaux du système* des Préférences](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) vous permet de continuer à utiliser le langage en Français dans une version française de 4D.
 
-Two optional parameters are available:
+Deux paramètres optionnels sont disponibles :
 
-- *info*: properties of the command. The returned value is a *bit field*, where the following bits are meaningful:
- - First bit (bit 0): set to 1 if the command is [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (i.e., compatible with execution in a preemptive process) and 0 if it is **thread-unsafe**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
- - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors).
+- *info* : propriétés de la commande. La valeur renvoyée est un *champ de bits*, où les bits suivants sont significatifs :
+ - Premier bit (bit 0) : il vaut 1 si la commande est [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (c'est-à-dire compatible avec une exécution dans un processus préemptif) et 0 si elle est **thread-unsafe**. Seules les commandes thread-safe peuvent être utilisées dans les [process préemptifs](../Develop/preemptive.md).
+ - Deuxième bit (bit 1) : mis à 1 si la commande est **obsolète**, et à 0 si elle ne l'est pas. Une commande obsolète (ou dépréciée) continuera à fonctionner normalement tant qu'elle sera prise en charge, mais elle doit être remplacée dans la mesure du possible et ne doit plus être utilisée dans le nouveau code. Les commandes obsolètes dans votre code génèrent des avertissements dans le [live checker et le compilateur](../code-editor/write-class-method.md#warnings-and-errors).
 
-*theme*: name of the 4D language theme for the command.
+*thème* : nom du thème du langage 4D pour la commande.
 
-The **Command name** command sets the *OK* variable to 1 if *command* corresponds to an existing command number, and to 0 otherwise. Note, however, that some existing commands have been disabled, in which case **Command name** returns an empty string (see last example).
+La commande **Command name** met la variable *OK* à 1 si *command* correspond à un numéro de commande existant, et à 0 sinon. Notez toutefois que certaines commandes existantes ont été désactivées, auquel cas **Command name** renvoie une chaîne vide (voir le dernier exemple).
 
 ## Exemple 1
 
-The following code allows you to load all valid 4D commands in an array:
+Le code suivant permet de charger toutes les commandes 4D valides dans un tableau :
 
 ```4d
  var $Lon_id : Integer
@@ -55,18 +55,18 @@ The following code allows you to load all valid 4D commands in an array:
  Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id)
-    If(OK=1) //command number exists
-       If(Length($Txt_command)>0) //command is not disabled
+    If(OK=1) //le numéro de commande existe
+       If(Length($Txt_command)>0) //la commande n'est pas désactivée
           APPEND TO ARRAY($tTxt_commands;$Txt_command)
           APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
        End if
     End if
- Until(OK=0) //end of existing commands
+ Until(OK=0) //fin des commandes existantes
 ```
 
 ## Exemple 2
 
-In a form, you want a drop-down list populated with the basic summary report commands. In the object method for that drop-down list, you write:
+Dans un formulaire, vous voulez afficher une liste déroulante contenant les commandes standard de génération d'états. Dans la méthode objet de cette liste déroulante, vous écrivez :
 
 ```4d
  Case of
@@ -80,13 +80,13 @@ In a form, you want a drop-down list populated with the basic summary report com
  End case
 ```
 
-In the English version of 4D, the drop-down list will read: Sum, Average, Min, and Max. In the French version\*, the drop-down list will read: Somme, Moyenne, Min, and Max.
+Dans la version anglaise de 4D, la liste déroulante contiendra : Sum, Average, Min et Max. Dans la version française\*, la liste déroulante contiendra : Somme, Moyenne, Min et Max.
 
-\*with a 4D application configured to use the French programming language (see compatibility note)
+\*avec une application 4D configurée pour utiliser le langage de programmation français (voir note de compatibilité)
 
 ## Exemple 3
 
-You want to create a method that returns **True** if the command, whose number is passed as parameter, is thread-safe, and **False** otherwise.
+Vous souhaitez créer une méthode qui renvoie **True** si la commande, dont le numéro est passé en paramètre, est thread-safe, et **False** dans le cas contraire.
 
 ```4d
   //Is_Thread_Safe project method
@@ -94,23 +94,23 @@ You want to create a method that returns **True** if the command, whose number i
  var $threadsafe : Integer
  var $name; $theme : Text
  $name:=Command name($command;$threadsafe;$theme)
- If($threadsafe ?? 0) //if the first bit is set to 1
+ If($threadsafe ?? 0) //si le premier bit est à 1
     return True
  Else
     return False
  End if
 ```
 
-Then, for the "SAVE RECORD" command (53) for example, you can write:
+Ensuite, pour la commande "SAVE RECORD" (53) par exemple, vous pouvez écrire :
 
 ```4d
  $isSafe:=Is_Thread_Safe(53)
-  // returns True
+  // renvoie True
 ```
 
 ## Exemple 4
 
-You want to return a collection of all deprecated commands in your version of 4D.
+Vous souhaitez renvoyer une collection de toutes les commandes obsolètes dans votre version de 4D.
 
 ```4d
 var $info; $Lon_id : Integer
@@ -120,11 +120,11 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) //the second bit is set to 1
-            //then the command is deprecated
+    If($info ?? 1) //le 2e bit est à 1
+            //alors la commande est dépréciée
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) //end of existing commands
+Until(OK=0) //fin des commandes existantes
 
 ```
 

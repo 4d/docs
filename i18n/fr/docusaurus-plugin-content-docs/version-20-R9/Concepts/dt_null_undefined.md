@@ -25,7 +25,7 @@ Un champ ne peut pas être indéfini (la commande `Undefined` retourne toujours 
 
 En règle générale, lorsque le code tente de lire ou d'assigner des expressions indéfinies, 4D générera des erreurs, excepté dans les cas suivants :
 
-- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) with them:
+- Affecter une valeur indéfinie aux variables (à l'exception des tableaux) a le même effet que d'appeler [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) avec elles :
 
 ```4d
      var $o : Object
@@ -132,7 +132,7 @@ Les comparaisons avec les opérateurs Supérieur à (`>`), Inférieur à (`<`), 
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Boolean, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Les comparaisons des valeurs Undefined avec des valeurs Pointer, Picture, Boolean, Blob, Object, Collection, Undefined ou Null en utilisant les opérateurs Supérieur à (`>`), Inférieur à (`<`), Supérieur ou égal à (`>=`), et Inférieur ou égal à (`<=`) ne sont pas prises en charge et renvoient une erreur.
 
 :::
 

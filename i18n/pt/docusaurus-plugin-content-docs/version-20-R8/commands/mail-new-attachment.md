@@ -46,7 +46,7 @@ Pode passar uma rota ou um Blob para definir o anexo. Se *name* for omitido e:
 - passar uma rota de arquivo, o nome e extensão do arquivo é usado,
 - passar um BLOB, um nome aleatório sem extensão é gerado automaticamente.
 
-The optional *cid* parameter lets you pass an internal ID for the attachment. This ID is the value of the `Content-Id` header, it will be used in HTML messages only. The cid associates the attachment with a reference defined in the message body using an HTML tag such as `\<img src="cid:ID">`. Isso significa que os conteúdos do anexo (por exemplo uma imagem) deve ser exibida dentro da mensagem do cliente mail. O resultado final deve variar dependendo do cliente mail. Isso significa que os conteúdos do anexo (por exemplo uma imagem) deve ser exibida dentro da mensagem do cliente mail.
+O parâmetro opcional *cid* permite passar uma ID interna para o anexo. This ID is the value of the `Content-Id` header, it will be used in HTML messages only. The cid associates the attachment with a reference defined in the message body using an HTML tag such as `\<img src="cid:ID">`. Isso significa que os conteúdos do anexo (por exemplo uma imagem) deve ser exibida dentro da mensagem do cliente mail. O resultado final deve variar dependendo do cliente mail. Isso significa que os conteúdos do anexo (por exemplo uma imagem) deve ser exibida dentro da mensagem do cliente mail.
 
 You can use the optional *type* parameter to explicitly set the `content-type` of the attachment file. Por exemplo, pode passar uma string definindo um tipo MIME ("video/mpeg"). Esse valor de content-type vai ser estabelecido para o anexo, independente de sua extensão. For more information about MIME types, please refer to the [MIME type page on Wikipedia](https://en.wikipedia.org/wiki/MIME).
 
@@ -78,7 +78,7 @@ The optional *disposition* parameter lets you pass the `content-disposition` hea
 | mail disposition attachment | "attachment" | Estabelece o valor de cabeçalho Content-disposition para "attachment" que significa que o arquivo anexo deve ser fornecido como um link na mensagem.                                                                        |
 | mail disposition inline     | "inline"     | Estabelece o valor de cabeçalho Content-disposition para "inline", o que significa que o anexo deve ser renderizado dentro do conteúdo da mensagem, no local "cid". A renderização depende do cliente mail. |
 
-By default, if the *disposition* parameter is omitted:
+Como padrão, se o parâmetro *disposition* for omisso:
 
 - if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
 - if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".

@@ -100,7 +100,7 @@ Within a custom error method, you have access to several pieces of information t
 4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. 
 :::
 
-- the [`Last errors`](../commands-legacy/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application. 
+- the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application. 
 - the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process. 
 
 
@@ -158,7 +158,7 @@ Try (expression) : any | Undefined
 
 If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. If *expression* returns a value, `Try()` returns the last evaluated value, otherwise it returns `Undefined`. 
 
-You can handle the error(s) using the [`Last errors`](../commands-legacy/last-errors.md) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack). 
+You can handle the error(s) using the [`Last errors`](../commands/last-errors.md) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack). 
  
 :::note
 
@@ -255,7 +255,7 @@ For more information on *deferred* and *non-deferred* errors, please refer to th
 :::
 
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](../commands-legacy/last-errors.md) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](../commands/last-errors.md) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
 
 :::note
 
@@ -299,58 +299,12 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## Error codes
 
-Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. A returned error is therefore defined by three elements:
+Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. An error is therefore defined by three elements:
 
-- a **component signature**, which is the origin of the error
-- a **message**, wich explains why the error occurred 
+- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
+- a **message**, which explains why the error occurred 
 - a **code**, which is an arbitrary number returned by the component
 
-These information are returned for every error (when available) by the [4D error dialog box](../Debugging/basics.md) and the [`Last errors`](../commands-legacy/last-errors.md) command. Keep in mind that, if you intercept and handle errors using a [error-handling method](#installing-an-error-handling-method), you need to process all information since a simple error code could not be correctly interpreted. 
+The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user. 
 
-#### 4D component signatures
-
-|Component Signature|Component|
-|--|---|
-|4DCM|4D Compiler runtime|
-|4DRT|4D runtime|
-|bkrs|4D backup & restore manager|
-|brdg|SQL 4D bridge|
-|cecm|4D code Editor|
-|CZip|zip 4D apis|
-|dbmg|4D database manager|
-|FCGI|fast cgi 4D bridge|
-|FiFo|4D file objects|
-|HTCL|http client 4D apis|
-|HTTP|4D http server|
-|IMAP|IMAP 4D apis|
-|JFEM|Form Macro apis|
-|LD4D|LDAP 4D apis|
-|lscm|4D language syntax manager|
-|MIME|MIME 4D apis|
-|mobi|4D Mobile|
-|pdf1|4D pdf apis|
-|PHP_|php 4D bridge|
-|POP3|POP3 4D apis|
-|SMTP|SMTP 4D apis|
-|SQLS|4D SQL server|
-|srvr|4D network layer apis|
-|svg1|SVG 4D apis|
-|ugmg|4D users and groups manager|
-|UP4D|4D updater|
-|VSS |4D VSS support (Windows Volume Snapshot Service) |
-|webc|4D Web view|
-|xmlc|XML 4D apis|
-|wri1|4D Write Pro|
-
-
-#### System component signatures
-
-|Component Signature|Component|
-|--|---|
-|CARB|Carbon subsystem|
-|COCO|Cocoa subsystem|
-|MACH|macOS Mach subsystem|
-|POSX|posix/bsd subsystem (mac, linux, win)|
-|PW32|Pre-Win32 subsystem|
-|WI32|Win32 subsystem|
-
+To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors.md) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components. 

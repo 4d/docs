@@ -236,7 +236,7 @@ The project must be running in interpreted mode so that **Qodly Studio** menu it
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+2. Na barra de ferramentas Qodly Studio, clique no botão **Debug**.<br/>
     ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.

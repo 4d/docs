@@ -63,7 +63,7 @@ Leia [**O que há de novo no 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-
 - Agora você pode [adicionar e remover componentes usando a interface do gerenciador de componentes](../Project/components.md#monitoring-project-dependencies).
 - Novo modo [**direct typing mode**] (../Project/compiler.md#enabling-direct-typing) no qual você declara todas as variáveis e parâmetros em seu código usando as palavras-chave `var` e `#DECLARE`/`Function` (somente o modo suportado em novos projetos). A [funcionalidade verificação de sintaxe](../Project/compiler.md#check-syntax) foi aprimorado de acordo.
 - Suporte a [Session singletons] (../Concepts/classes.md#singleton-classes) e à nova propriedade de classe [`.isSessionSingleton`] (../API/ClassClass.md#issessionsingleton).
-- Nova palavra-chave de função [`onHTTPGet`] (../ORDA/ordaClasses.md#onhttpget-keyword) para definir funções singleton ou ORDA que podem ser chamadas por meio de solicitações [HTTP REST GET] (../REST/ClassFunctions.md#function-calls).
+- New [`onHTTPGet` function keyword](../ORDA/ordaClasses.md#onhttpget-keyword) to define singleton or ORDA functions that can be called through [HTTP REST GET requests](../REST/ClassFunctions.md#function-calls).
 - Nova classe [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para que o servidor REST retorne qualquer conteúdo Web.
 - Qodly Studio: agora você pode [anexar o depurador Qodly a 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
 - New Build Application keys para aplicativos 4D remotos para validar a autoridade de certificação do servidor [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.en.html) e/ou [domain](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.en.html).
@@ -124,7 +124,7 @@ Leia [**O que há de novo no 4D 20 R5**](https://blog.4d.com/en-whats-new-in-4d-
 - Soporte de [clases compartidas](../Concepts/classes.md#shared-classes) y de [clases singleton](../Concepts/classes.md#singleton-classes). Novas propriedades de classe: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#issingleton), [`me`](../API/ClassClass.md#me).
 - Suporte à [inicializando uma propriedade de classe em sua linha de declaração](../Concepts/classes.md#initializing-the-property-in-the-declaration-line).
 - Novo modo [forçar  login para solicitações REST](../REST/authUsers.md#force-login-mode) com um suporte específico [no Qodly Studio para 4D](../WebServer/qodly-studio.md#force-login).
-- Nuevo parámetro REST [$format](../REST/$format.md).
+- New [$format](../REST/$format.md) REST parameter.
 - O objeto [`Session`](../commands/session.md) agora está disponível em sessões de usuários remotos e sessões de procedimentos armazenados.
 - Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6817247.en.html) em doc.4d.com.
 - 4D Write Pro: [Página de novidades](https://doc.4d.com/4Dv20R5/4D/20-R5/What-s-new.901-6851780.en.html) em doc.4d.com.

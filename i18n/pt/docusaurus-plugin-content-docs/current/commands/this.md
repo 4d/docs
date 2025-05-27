@@ -161,7 +161,7 @@ Note que:
 
 - *This.ID*, *This.Title* and *This.Date* directly refers to the corresponding attributes in the ds.Event dataclass.
 - *This.meetings* is a related attribute (based upon the One To Many relation name) that returns an entity selection of the ds.Meeting dataclass.
-- **Form.eventList** is the entity selection that is attached to the list box. The initialization code can be put in the on load form event:
+- **Form.eventList** é a entity selection que está anexada à list box. The initialization code can be put in the on load form event:
 
 ```4d
  Case of  

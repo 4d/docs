@@ -22,7 +22,7 @@ The `VP Get stylesheet` command <!-- REF #_method_.VP Get stylesheet.Summary -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In *styleName*, pass the name of the style sheet to get.
+Em *styleName*, passe o nome da folha de estilo a obter.
 
 You can define where to get the style sheet in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 

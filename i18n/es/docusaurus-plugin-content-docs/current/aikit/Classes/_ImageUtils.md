@@ -45,7 +45,7 @@ Converts various types of image representations to a Blob object.
 | ---------- | ------- | ----------------------------------------------------------------------------------------------- |
 | $imageInfo | Variant | The image information, which can be a picture, a file object, a URL, or a text. |
 
-**Returns**: Blob or Null if the input is invalid.
+**Devuelve**: Blob o Null si la entrada no es válida.
 
 ```4d
 var $blob:=cs._ImageUtils.me.toBlob($image)

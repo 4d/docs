@@ -600,15 +600,14 @@ El siguiente código genérico duplica cualquier entidad:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                               |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Resultado  | Text    | <- | Valor de la llave primaria de texto de la entidad                                                         |
-| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                         |
+| Resultado  | any     | <- | Value of the primary key of the entity (Integer or Text)                                                  |
 
 <!-- END REF -->
 
@@ -1616,7 +1615,7 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 La función `.touched()` <!-- REF #EntityClass.touched().Summary -->comprueba si un atributo de la entidad ha sido modificado o no desde que se cargó la entidad en la memoria o se guardó<!-- END REF -->.
 
-Si un atributo ha sido modificado o calculado, la función devuelve True, en caso contrario devuelve False. Puede utilizar esta función para determinar si necesita guardar la entidad.
+Si un atributo ha sido modificado o calculado, la función devuelve True, en caso contrario devuelve False. You can use this function to determine if you need to save the entity.
 
 Esta función devuelve False para una nueva entidad que acaba de ser creada (con [`.new( )`](DataClassClass.md#new)). Tenga en cuenta, sin embargo, que si utiliza una función que calcula un atributo de la entidad, la función `.touched()` devolverá entonces True. Por ejemplo, si se llama a [`.getKey()`](#getkey) para calcular la llave primaria, `.touched()` devuelve True.
 

@@ -88,7 +88,7 @@ The $BrowserIP parameter receives the IP address of the browser’s machine. Ess
 
 ### $ServerIP - Endereço IP do servidor
 
-The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D permite multi-home que você pode usar máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
+O parâmetro $ServerIP recebe o endereço IP solicitado pelo 4D Web Server. 4D permite multi-home que você pode usar máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
 ### $user e $password - Nome de usuário e senha
 

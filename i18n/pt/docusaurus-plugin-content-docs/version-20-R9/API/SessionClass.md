@@ -584,7 +584,7 @@ A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->
 
 - In the *privileges* parameter, pass a collection of strings containing privilege names.
 
-- In the *settings* parameter, pass an object containing the following properties:
+- No parâmetro *settings*, passe um objeto que contenha as seguintes propriedades:
 
 | Propriedade | Tipo               | Descrição                                                                                                |
 | ----------- | ------------------ | -------------------------------------------------------------------------------------------------------- |

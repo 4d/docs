@@ -33,7 +33,7 @@ Dependendo do processo a partir do qual o comando é chamado, a sessão atual do
 - uma sessão web (quando [sessões escaláveis são ativadas](WebServer/sessions.md#enabling-web-sessions)),
 - uma sessão de cliente remoto,
 - a sessão de procedimentos armazenados,
-- the *designer* session in a standalone application.
+- a sessão *designer* em um aplicativo autônomo.
 
 Para obter mais informações, consulte [Tipos de sessão](../API/SessionClass.md#session-types).
 

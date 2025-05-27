@@ -417,7 +417,7 @@ Resultado em *$info*:
 
 A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o objeto `File` para a *destinationFolder* especificada<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
 Por padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
@@ -590,7 +590,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como o conteúdo da informação de um arquivo de aplicação<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
+The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. If used with another file type or with *.exe*\*/**.dll** files that do not already exist on disk, the function does nothing (no error is generated).
 
 Parâmetro ***info* com um arquivo .plist (todas as plataformas)**
 
@@ -599,6 +599,8 @@ Parâmetro ***info* com um arquivo .plist (todas as plataformas)**
 A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
 :::
+
+If the .plist file already exists on the disk, it is updated. Otherwise, it is created.
 
 Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
@@ -610,7 +612,7 @@ Para definir um valor de tipo de data, o formato a utilizar é uma string de car
 
 :::
 
-Parâmetro ***info* com um arquivo .exe ou .dll (somente Windows)**
+**Parâmetro objeto *info* com um arquivo .exe ou .dll (somente Windows)**
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
@@ -630,9 +632,9 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-Parâmetro ***info* com um arquivo executável macOS (somente macOS)**
+**Parâmetro *info* com um arquivo macOS executável (somente macOS)**
 
-*info* deve ser um objeto com uma única propriedade denominada `archs` que é uma coleção de objetos no formato retornado por [`getAppInfo()`](#getappinfo). Cada objeto deve conter pelo menos as propriedades `type` e `uuid` (`name` não é usado).
+*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
 Every object in the *info*.archs collection must contain the following properties:
 
@@ -645,26 +647,29 @@ Every object in the *info*.archs collection must contain the following propertie
 
 ```4d
   // set some keys in an info.plist file (all platforms)
-var $infoPlistFile : 4D. File
+var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info. Copyright:="Copyright 4D 2021" //text
-$info. ProductVersion:=12 //integer
-$info. ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
+$info.Copyright:="Copyright 4D 2023" //text
+$info.ProductVersion:=12 //integer
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
 #### Exemplo 2
 
 ```4d
-  // set copyright and version of a .exe file (Windows)
-var $exeFile : 4D. File
+  // set copyright, version and icon of a .exe file (Windows)
+var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
+$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info. LegalCopyright:="Copyright 4D 2021"
-$info. ProductVersion:="1.0.0"
+$info.LegalCopyright:="Copyright 4D 2023"
+$info.ProductVersion:="1.0.0"
+$info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
@@ -706,15 +711,15 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parâmetro | Tipo |    | Descrição                      |
-| --------- | ---- | -- | ------------------------------ |
-| content   | BLOB | -> | Novos conteúdos para o arquivo |
+| Parâmetro | Tipo |    | Descrição                 |
+| --------- | ---- | -- | ------------------------- |
+| content   | BLOB | -> | New contents for the file |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo usando os dados armazenados no BLOB *content*<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
 
 #### Exemplo
 
@@ -753,11 +758,11 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 #### Descrição
 
-A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- END REF -->.
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
+In *text*, pass the text to write to the file. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
@@ -780,7 +785,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-> **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. Consulte a [página Compatibilidade](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) em doc.4d.com.
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
 
 #### Exemplo
 

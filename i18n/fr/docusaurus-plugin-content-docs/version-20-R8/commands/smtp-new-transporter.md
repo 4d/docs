@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
-| Paramètres | Type                               |                             | Description                                                                       |
-| ---------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
-| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                         |
-| Résultat   | 4D.SMTPTransporter | &#8592; | [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) |
+| Paramètres | Type                               |                             | Description                                                                      |
+| ---------- | ---------------------------------- | --------------------------- | -------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                        |
+| Résultat   | 4D.SMTPTransporter | &#8592; | [Objet SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
 <!-- END REF-->
 
@@ -27,14 +27,14 @@ displayed_sidebar: docs
 
 ## Description
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new [SMTP transporter object](../API/SMTPTransporterClass.md#smtp-transporter-object) object. L'objet transporteur retourné sera alors utilisé pour l'envoi d'emails.
+La commande `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summary -->configure une nouvelle connexion SMTP<!-- END REF --> en fonction du paramètre *server* et renvoie un nouvel [objet SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object). L'objet transporteur retourné sera alors utilisé pour l'envoi d'emails.
 
-> Cette commande n'ouvre pas de connexion au serveur SMTP. Cette commande n'ouvre pas de connexion au serveur SMTP.
+> Cette commande n'ouvre pas de connexion au serveur SMTP. La connexion SMTP est réellement ouverte lorsque la fonction [`.send()`](../API/SMTPTransporterClass.md#send) est exécutée.
 >
 > La connexion SMTP est automatiquement fermée :
 >
 > - lorsque l'objet transporter est détruit si la propriété [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) est à true (par défaut),
-> - after each  [`.send()`](../API/SMTPTransporterClass.md#send) function execution if the [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) property is set to false.
+> - après chaque exécution de la fonction [`send()`](../API/SMTPTransporterClass.md#send) si la propriété [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) est false.
 
 Dans le paramètre *server*, passez un objet contenant les propriétés suivantes :
 

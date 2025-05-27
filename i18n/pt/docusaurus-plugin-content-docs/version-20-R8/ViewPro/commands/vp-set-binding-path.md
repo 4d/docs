@@ -31,7 +31,7 @@ In *rangeObj*, pass an object that is either a cell range or a combined range of
 - If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
 - If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
 
-In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
+No *dataContextAttribute*, passe o nome do atributo para vincular a *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
 
 > Os atributos do tipo coleção não são suportados. Quando você passar o nome de uma coleção, o comando não faz nada.
 

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary--> inserts a *picture* or a *pictureFileObj* in the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and returns a reference to the picture element.<!-- END REF--> The picture will be inserted as a character in the *targetObj*.
+The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary--> inserts a *picture* or a *pictureFileObj* in the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and returns a reference to the picture element.<!-- END REF--> A imagem será inserida como um caractere no *targetObj*.
 
 Em *targetObj*, você pode passar:
 
@@ -35,7 +35,7 @@ For the second parameter, you can pass either:
  - A picture field or variable
  - A string containing a path to a picture file stored on disk, in the system syntax.
   If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
-- In *pictureFileObj* : a `File` object representing a picture file.
+- Em *pictureFileObj*: um objeto `File` que representa um arquivo imagem.
 
 Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 
@@ -56,7 +56,7 @@ If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted picture is included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Se *targetObj* não for um intervalo, *rangeUpdate* será ignorado.
 
 ## Exemplo 1
 

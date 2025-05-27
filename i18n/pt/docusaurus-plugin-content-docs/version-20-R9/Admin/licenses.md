@@ -7,12 +7,12 @@ title: Licenças
 
 To use 4D products and features, you need to install appropriate licenses on your computer. 4D provides two categories of licenses:
 
-- **Development licenses**, required for working with 4D and 4D Server IDE.
+- **Licenças de desenvolvimento**, necessárias para trabalhar com o IDE de 4D e 4D Server.
 - **Deployment licenses**, required for deploying your custom applications built with 4D.
 
 ### Development licenses
 
-Development licenses are required to access the 4D Design environment and features. For example, *4D Developer Pro* is a single-user development license. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
+Development licenses are required to access the 4D Design environment and features. Por exemplo, *4D Developer Pro* é uma licença de desenvolvimento para um único usuário. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
 
 ### Deployment licenses
 

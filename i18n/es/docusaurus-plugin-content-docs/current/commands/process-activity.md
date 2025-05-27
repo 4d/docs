@@ -8,19 +8,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
-| Parámetros | Tipo    |                             | Descripción                                                                            |
-| ---------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
-| sessionID  | Text    | &#8594; | ID de sesión                                                                           |
-| options    | Integer | &#8594; | Opciones de retorno                                                                    |
-| Resultado  | Object  | &#8592; | Snapshot of running processes and/or (4D Server only) user sessions |
+| Parámetros | Tipo    |                             | Descripción                                                                                          |
+| ---------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| sessionID  | Text    | &#8594; | ID de sesión                                                                                         |
+| options    | Integer | &#8594; | Opciones de retorno                                                                                  |
+| Resultado  | Object  | &#8592; | Instantánea de los procesos en ejecución y/o sesiones de usuario (sólo 4D Server) |
 
 <!-- END REF-->
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                   |
-| ----------- | -------------------------------- |
-| 20 R7       | Support of *sessionID* parameter |
+| Lanzamiento | Modificaciones                    |
+| ----------- | --------------------------------- |
+| 20 R7       | Soporte del parámetro *sessionID* |
 
 </details>
 
@@ -35,7 +35,7 @@ By default when used without any parameters, **Process activity** returns an obj
 
 On 4D Server, you can filter information to be returned using the optional *sessionID* and *options* parameters:
 
-- If you pass a user session ID in the *sessionID* parameter, the command only returns information related to this session. By default if the *options* parameter is omitted, the returned object contains a collection with all processes related to the session and a collection with a single object describing the session. If you pass an invalid session ID, a **null** object is returned.
+- If you pass a user session ID in the *sessionID* parameter, the command only returns information related to this session. By default if the *options* parameter is omitted, the returned object contains a collection with all processes related to the session and a collection with a single object describing the session. Si se pasa un ID de sesión inválido, se devuelve un objeto **null**.
 - You can select the collection(s) to return by passing one of the following constants in the *options* parameter:
 
 | Constante              | Valor | Comentario                                                                          |

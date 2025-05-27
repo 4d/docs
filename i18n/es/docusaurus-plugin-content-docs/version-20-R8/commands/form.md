@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
 
-- the *formData* object passed as parameter to this command, if any,
+- el objeto *formData* pasado como parámetro a este comando, si existe,
 - o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
 - o, un objeto vacío.
 
@@ -52,7 +52,7 @@ If the current form is a subform, the returned object depends on the parent cont
 
 - If the variable associated to the parent container has not been typed as an object, **Form** returns an empty object, maintained by 4D in the subform context.
 
-For more information, please refer to the *Page subforms* section.
+Para más información, consulte la sección *Subformularios de página*.
 
 ### Formulario tabla
 

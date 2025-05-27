@@ -60,7 +60,7 @@ displayed_sidebar: docs
 リストボックスのオブジェクトメソッドにおいて、以下の様に記述します:
 
 ```4d
- OBJECT SET VISIBLE(*;"rectangleInfo";False) //赤い四角を初期化
+ OBJECT SET VISIBLE(*;"RedRect";False) //赤い四角を初期化
  $ptr:=OBJECT Get pointer(Object current)
  OBJECT GET COORDINATES($ptr->;$x1;$y1;$x2;$y2)
  OBJECT SET VISIBLE(*;"RedRect";True)

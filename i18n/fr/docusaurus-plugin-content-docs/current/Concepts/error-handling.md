@@ -25,7 +25,7 @@ Il est fortement recommandé d'installer une méthode globale de gestion des err
 
 De nombreuses fonctions des classes 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet *status*. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
 
-D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. Cette catégorie d'erreurs génère des exceptions et doit être gérée par une méthode de gestion des erreurs ou un mot-clé `Try()`.
+D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes) and needs to be handled through an error-handling method or a `Try()` keyword.
 
 ## Installer une méthode de gestion des erreurs
 
@@ -33,7 +33,7 @@ Dans 4D, toutes les erreurs peuvent être détectées et traitées par des méth
 
 Une fois installés, les gestionnaires d'erreurs sont automatiquement appelés en mode interprété ou compilé en cas d'erreur dans l'application 4D ou l'un de ses composants. Un gestionnaire d'erreur différent peut être appelé en fonction du contexte d'exécution (voir ci-dessous).
 
-To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command with the project method name and (optionnally) scope as parameters. Par exemple :
+Pour *installer* une méthode de gestion des erreurs, il suffit d'appeler la commande [`ON ERR CALL`](../commands-legacy/on-err-call.md) avec le nom de la méthode projet et (optionnellement) le champ d'application en paramètres. Par exemple :
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Installe une méthode locale de gestion des erreurs
@@ -97,8 +97,8 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 4D gère automatiquement un certain nombre de variables appelées [**variables système**](variables.md#system-variables), répondant à différents besoins.
 :::
 
-- la commande [`Last errors`](../commands-legacy/last-errors.md) qui renvoie sous forme de collection la pile courante d'erreurs survenues dans l'application 4D.
-- the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
+- the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
+- la commande `Call chain` qui renvoie une collection d'objets décrivant chaque étape de la chaîne d'appel de méthode dans le process en cours.
 
 #### Exemple
 
@@ -153,7 +153,7 @@ Try (expression) : any | Undefined
 
 Si une erreur s'est produite pendant son exécution, elle est interceptée et aucune fenêtre d'erreur n'est affichée, qu'une [méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) ait été installée ou non avant l'appel à `Try()`. Si *expression* retourne une valeur, `Try()` retourne la dernière valeur évaluée, sinon elle retourne `Undefined`.
 
-You can handle the error(s) using the [`Last errors`](../commands-legacy/last-errors.md) command. Si *expression* génère une erreur dans une pile d'appels `Try()`, le flux d'exécution s'arrête et retourne au dernier `Try()` exécuté (le premier trouvé en remontant dans la pile d'appels).
+You can handle the error(s) using the [`Last errors`](../commands/last-errors.md) command. Si *expression* génère une erreur dans une pile d'appels `Try()`, le flux d'exécution s'arrête et retourne au dernier `Try()` exécuté (le premier trouvé en remontant dans la pile d'appels).
 
 :::note
 
@@ -244,7 +244,7 @@ For more information on *deferred* and *non-deferred* errors, please refer to th
 
 :::
 
-Dans le bloc de code `Catch`, vous pouvez gérer la ou les erreur(s) en utilisant les commandes de gestion des erreurs standard. The [`Last errors`](../commands-legacy/last-errors.md) function contains the last errors collection. Vous pouvez [déclarer une méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) dans ce bloc de code, auquel cas elle est appelée en cas d'erreur (sinon la boîte de dialogue d'erreur 4D est affichée).
+Dans le bloc de code `Catch`, vous pouvez gérer la ou les erreur(s) en utilisant les commandes de gestion des erreurs standard. The [`Last errors`](../commands/last-errors.md) function contains the last errors collection. Vous pouvez [déclarer une méthode de gestion des erreurs](#installer-une-methode-de-gestion-des-erreurs) dans ce bloc de code, auquel cas elle est appelée en cas d'erreur (sinon la boîte de dialogue d'erreur 4D est affichée).
 
 :::note
 
@@ -284,3 +284,15 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 	return $newInvoice
 
 ```
+
+## Error codes
+
+Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. An error is therefore defined by three elements:
+
+- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
+- a **message**, which explains why the error occurred
+- a **code**, which is an arbitrary number returned by the component
+
+The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user.
+
+To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors.md) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.

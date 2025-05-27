@@ -538,15 +538,13 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés *info* en tant que contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
-
-> Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
-
 **Paramètre *info* avec un fichier .exe or .dll**
+
+La fonction doit être utilisée avec un fichier .exe ou .dll existant et valide, sinon elle ne fait rien (aucune erreur n'est générée).
 
 > La modification des informations d'un fichier .exe ou .dll n'est possible que sous Windows.
 
-Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
+Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
 
 | Propriété        | Type | Commentaire                                                                                                                                             |
 | ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -566,6 +564,8 @@ Pour la propriété `WinIcon`, si le fichier d'icône n'existe pas ou a un forma
 
 **Paramètre *info* avec un fichier .plist**
 
+> Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
+
 Chaque propriété valide définie dans le paramètre objet *info* est écrite dans le fichier . plist sous forme de clé. Tous les noms de clés sont acceptés. Les types des valeurs sont préservés si possible.
 
 Si une clé définie dans le paramètre *info* est déjà définie dans le fichier .plist, sa valeur est mise à jour tout en conservant son type d'origine. Les autres clés définies dans le fichier .plist ne sont pas modifiées.
@@ -580,7 +580,7 @@ var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file ; fk platform path)
 $iconFile:=File("/RESOURCES/myApp.ico")
-$info:=Nouvel objet
+$info:=New object
 $info.LegalCopyright:="Copyright 4D 2023"
 $info.ProductVersion:="1.0.0"
 $info.WinIcon:=$iconFile.path
@@ -592,9 +592,9 @@ $exeFile.setAppInfo($info)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
-$info:=Nouvel objet
+$info:=New object
 $info.Copyright:="Copyright 4D 2023" //text
-$info.ProductVersion:=12 //integer .ShipmentDate:="2023-04-22T06:00:00Z" //timestamp .ProductVersion:=12 //integer
+$info.ProductVersion:=12 //integer
 $info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
 $info.CFBundleIconFile:="myApp.icns" //pour macOS
 $infoPlistFile.setAppInfo($info)

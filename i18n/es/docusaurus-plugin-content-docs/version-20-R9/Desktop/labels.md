@@ -162,7 +162,7 @@ The **For each: Record or Label** options are used to specify whether to run the
 
 You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
 
-1. In a dedicated table form, add your label field(s) and variable(s).
+1. En un formulario tabla dedicado, añada su(s) campo(s) de etiqueta y su(s) variable(s).
  Here, in a table form named "label", we added the *myVar* variable:
  ![](../assets/en/Desktop/label-example1.png)
 
@@ -195,13 +195,13 @@ Then you can print your labels:
 
 The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
 
-- in the **Form to use** menu on the "Label" page and/or
+- en el menú **Formulario a utilizar** de la página "Etiqueta" y/o
 - en el menú **Aplicar (método)** de la página "Diseño".
 
 1. Crea un archivo JSON llamado **labels.json** y ponlo en la [carpeta de recursos](../Project/architecture.md#resources) del proyecto.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
 
-The contents of the **labels.json** file should be similar to:
+El contenido del archivo **labels.json** debe ser similar a:
 
 ```json
 [ 

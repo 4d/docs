@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Description
 
-The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary--> inserts a *picture* or a *pictureFileObj* in the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and returns a reference to the picture element.<!-- END REF--> The picture will be inserted as a character in the *targetObj*.
+La commande **WP Insert picture**<!--REF #_command_.WP Insert picture.Summary--> insère *picture* ou *pictureFileObj* dans le *targetObj* spécifié en fonction des paramètres *mode* d'insertion et *rangeUpdate*, et renvoie une référence à l'élément image.<!-- END REF--> L'image sera insérée en tant que caractère dans *targetObj*.
 
 In *targetObj*, you can pass:
 

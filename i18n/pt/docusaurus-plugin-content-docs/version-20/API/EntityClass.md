@@ -600,15 +600,14 @@ O seguinte código genérico duplica qualquer entidade:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | Parâmetro  | Tipo    |    | Descrição                                                                                              |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------------ |
 | mode       | Integer | -> | `dk key as string`: a chave primária se devolve como uma string, sem importar o tipo de chave primária |
-| Resultados | Text    | <- | Valor do texto chave primária da entidade                                                              |
-| Resultados | Integer | <- | Valor da chave primária numérica da entidade                                                           |
+| Resultados | any     | <- | Value of the primary key of the entity (Integer or Text)                                               |
 
 <!-- END REF -->
 
@@ -1614,7 +1613,7 @@ Retorna:
 
 A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->.
 
-Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
+Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. You can use this function to determine if you need to save the entity.
 
 Esta função retorna False para uma nova entidade que foi criada (com [`.new( )`](DataClassClass.md#new)). Note entretanto que se usar uma função que calcule um atributo da entidade, a função `.touched()` vai retornar True. Por exemplo se chamar [`.getKey()`](#getkey) para calcular a chave primária, `.touched()` retorna True.
 
