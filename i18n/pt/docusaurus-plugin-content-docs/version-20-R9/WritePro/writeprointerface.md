@@ -323,7 +323,7 @@ In the current implementation, the feature has the following limitations:
 
 ### Enabling the AI feature
 
-The AI dialog box is available by clicking on a button in the 4D Write Pro interface. This button is **hidden by default**, you need to enable it explicitely.
+The AI dialog box is available by clicking on a button in the 4D Write Pro interface. Este botão está **escondido por padrão**, você precisa habilitá-lo explicitamente.
 
 To display the AI dialog box button, you need to:
 
@@ -342,7 +342,7 @@ No checking is done on the OpenAI key validity. Se for inválido, a caixa *chatG
 
 :::
 
-The **A.I.** button is then displayed:
+O botão **I.A.** é exibido:
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
