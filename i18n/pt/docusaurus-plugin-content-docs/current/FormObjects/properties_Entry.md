@@ -261,7 +261,7 @@ You can configure this option by clicking the [...] button in the Shortcuts prop
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
-> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
+> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. Para más información sobre cómo asociar accesos directos a los menús, consulte [Configuración de las propiedades de los menús](../Menus/properties.md).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
 
