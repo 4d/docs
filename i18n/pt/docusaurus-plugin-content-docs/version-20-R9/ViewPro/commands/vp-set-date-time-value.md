@@ -22,7 +22,7 @@ O comando `VP SET DATA VALUE` <!-- REF #_method_.VP SET DATE TIME VALUE.Summary 
 
 Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) cujo valor você deseja especificar. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
+O parâmetro *dateValue* especifica um valor de data a ser atribuído ao intervalo *rangeObj*.
 
 The *timeValue* parameter specifies a time value (expressed in seconds) to be assigned to the *rangeObj*.
 
