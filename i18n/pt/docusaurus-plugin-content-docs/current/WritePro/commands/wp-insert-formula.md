@@ -38,7 +38,7 @@ No parâmetro *formula*, passe a fórmula 4D a ser avaliada. Pode passar:
 | name            | Text     | Name to display for the formula in the document                                                                                                                                             |
 | formula         | Object   | The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command |
 
-When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
+When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. Para obter mais informações, consulte a página [Gerenciar fórmulas](../managing-formulas.md).
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used:
 
