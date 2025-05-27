@@ -103,13 +103,13 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 これらの引数を以下のように宣言しなければなりません:
 
 ```4d
-// On Web Authentication database method
+// On Web Authentication データベースメソッド
 #DECLARE ($url : Text; $content : Text; \
   $IPClient : Text; $IPServer : Text; \
   $user : Text; $password : Text) \
   -> $accept : Boolean
 
-//Code for the method
+//メソッドのコード
 
 ```
 
@@ -121,11 +121,11 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 
 #### $url - URL
 
-The first parameter (`$url`) is the URL received by the server, from which the host address has been removed.
+最初の引数 (`$url`) は、ユーザーが Webブラウザーのアドレスエリアに入力したURLからホストのアドレスを取り除いたものです。
 
-イントラネット接続の場合をみてみましょう。 4D Webサーバーマシンの IPアドレスを 123.45.67.89 とします。 The following table shows the values of $urll depending on the URL entered in the Web browser:
+イントラネット接続の場合をみてみましょう。 4D Webサーバーマシンの IPアドレスを 123.45.67.89 とします。 以下の表は Webブラウザーに入力された URL に対して、$urll が受け取る値を示しています:
 
-| Webブラウザーに入力された値                                                                                                                                   | Value of parameter $urll                                                              |
+| Webブラウザーに入力された値                                                                                                                                   | $urll 引数の値                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.45.67.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -133,43 +133,43 @@ The first parameter (`$url`) is the URL received by the server, from which the h
 | http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.45.67.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-#### $content - Header and Body of the HTTP request
+#### $content - HTTP リクエストのヘッダーと本文
 
-The second parameter (`$content`) is the header and the body of the HTTP request sent by the web browser. この情報は `On Web Authentication` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
+二番目の引数(`$content`) はWeb ブラウザから送信されたHTTP リクエストのヘッダーと本文部分です。 この情報は `On Web Authentication` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
 
 アプリケーションでこの情報を使用するには、開発者がヘッダーとボディを解析しなければなりません。 `WEB GET HTTP HEADER` や `WEB GET HTTP BODY` コマンドを使うことができます。
 
-> For performance reasons, the size of data passing through the $content parameter must not exceed 32 KB. これを超過する分は、4D HTTPサーバーにより切り取られます。
+> パフォーマンス上の理由により、$content を介して渡されるデータのサイズは 32KB 以下でなくてはなりません。 これを超過する分は、4D HTTPサーバーにより切り取られます。
 
-#### $IPClient - Web client IP address
+#### $IPClient - Web クライアントIP アドレス
 
-The `$IPClient` parameter receives the IP address of the browser’s machine. この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
+`$IPClient` 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
 
 > 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
 
-#### $IPServer - Server IP address
+#### $IPServer - サーバーIP アドレス
 
-The `$IPServer` parameter receives the IP address used to call the web server. 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は [設定ページ](webServerConfig.md#リクエストを受け付ける-ipアドレス) を参照ください。
+`$IPServer` 引数は Webサーバーを呼び出すために使用された IPアドレスを受け取ります。 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は [設定ページ](webServerConfig.md#リクエストを受け付ける-ipアドレス) を参照ください。
 
-#### $user and $password - User Name and Password
+#### $user と $password - ユーザー名とパスワード
 
-The `$user` and `$password` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. [BASIC](#basic認証) または [DIGEST](#digest認証) 認証が選択されていると、接続のたびにこのダイアログが表示されます。
+`$user` と `$password` 引数は、ブラウザーが表示する標準の認証ダイアログにユーザーが入力したユーザー名とパスワードを受け取ります。 [BASIC](#basic認証) または [DIGEST](#digest認証) 認証が選択されていると、接続のたびにこのダイアログが表示されます。
 
-> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
+> ブラウザーから送信されたユーザー名が 4D に存在する場合、$password 引数 (ユーザーパスワード) はセキュリティのため渡されません。
 
-#### $accept - Function return
+#### $accept - 関数の戻り値
 
-The `On Web Authentication` database method returns a boolean:
+`On Web Authentication` データベースメソッドはブール値を返します:
 
-- If it is True, the connection is accepted.
+- True であれば、接続を受け入れます。
 
-- If it is False, the connection is refused.
+- False であれば、接続は拒否されます。
 
 `On Web Connection` データベースメソッドは、`On Web Authentication` データベースメソッドにより接続が受け入れられた時にのみ実行されます。
 
 :::warning
 
-- If no value is returned, the connection is considered as **accepted** and the `On Web Connection` database method is executed.
+- 値が何も返されなかった場合、接続は**受け入れられたもの**とみなされ、`On Web Connection` データベースメソッドが実行されます。
 - `On Web Authentication` データベースメソッド内でインターフェース要素を呼び出してはいけません (`ALERT`, `DIALOG` 等)。 メソッドの実行が中断され、接続が拒否されてしまいます。 処理中にエラーが発生した場合も同様です。
 
 :::
