@@ -239,7 +239,7 @@ In *code*, you can pass a status code explaining why the connection is being clo
 - If unspecified, a close code for the connection is automatically set to 1000 for a normal closure, or otherwise to another standard value in the range 1001-1015 that indicates the actual reason the connection was closed.
 - Se especificado, o valor desse parâmetro de código substitui a configuração automática. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. Se você especificar um valor *code*, também deverá especificar um valor *reason*.
 
-In *reason*, you can pass a string describing why the connection is being closed.
+Em *reason*, você pode passar uma frase descrevendo porque a conexão está sendo fechada.
 
 <!-- END REF -->
 

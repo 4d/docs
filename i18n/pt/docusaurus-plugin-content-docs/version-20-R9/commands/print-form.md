@@ -51,7 +51,7 @@ Sintaxe:
  height:=Print form(myTable;myForm;marker)
 ```
 
-In this case, the command will print the section designated by the *marker*. Pass one of the constants of the *Form Area* theme in the marker parameter:
+Nesse caso, o comando imprimirá a seção designada pelo *marker*. Pass one of the constants of the *Form Area* theme in the marker parameter:
 
 | Parâmetros    | Tipo    | Valor |
 | ------------- | ------- | ----- |
@@ -97,9 +97,9 @@ Para obter informações detalhadas sobre o objeto de dados do formulário, cons
 
 **Valor retornado**
 
-The value returned by **Print form** indicates the height of the printable area. Esse valor será automaticamente levado em conta pelo comando [Get printed height](../commands-legacy/get-printed-height.md).
+O valor retornado por **Print form** indica a altura da área impressa. Esse valor será automaticamente levado em conta pelo comando [Get printed height](../commands-legacy/get-printed-height.md).
 
-The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
+As caixas de diálogo da impressora não são exibidas quando você usa **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
 - Chame [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
 - Call [SET PRINT OPTION](../commands-legacy/set-print-option.md) and [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.

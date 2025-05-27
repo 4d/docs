@@ -57,7 +57,7 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 :::note
 

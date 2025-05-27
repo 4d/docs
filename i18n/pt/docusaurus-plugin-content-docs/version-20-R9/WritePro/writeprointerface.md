@@ -338,7 +338,7 @@ WP SetAIKey ("<Your OpenAI Key>") //
 
 :::note
 
-No checking is done on the OpenAI key validity. If it is invalid, the *chatGPT* box will stay empty.
+No checking is done on the OpenAI key validity. Se for inválido, a caixa *chatGPT* permanecerá vazia.
 
 :::
 

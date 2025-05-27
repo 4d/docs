@@ -28,7 +28,7 @@ For the optional second parameter, you can pass either:
 
 - Em *picture*:  uma imagem 4D
 - In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
-- In *PictureFileObj*: a `4D.File` object representing a picture file.
+- Em *PictureFileObj*: um objeto `4D.File` que representa um arquivo imagem.
 
 :::note
 
@@ -49,7 +49,7 @@ The location, layer (inline, in front/behind text), visibility, and any properti
 **Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. You can determine if a selected object is a picture object by checking the `wk type` attribute:
 
 - **Value = 2**: o objeto selecionado é um objeto imagem.
-- **Value = 0**: The selected object is a range object.
+- **Value = 0**: o objeto selecionado é um objeto intervalo.
 
 ## Exemplo 1
 

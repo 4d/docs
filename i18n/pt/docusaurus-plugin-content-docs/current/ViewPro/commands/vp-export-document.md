@@ -89,7 +89,7 @@ O parâmetro opcional *paramObj* permite que você defina várias propriedades p
 
 - Ao exportar um documento do 4D View Pro para um arquivo no formato Microsoft Excel, algumas configurações podem ser perdidas. Por exemplo, os métodos e fórmulas 4D não são suportados pelo Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
-- Using *excelOptions* object is recommended when exporting in ".xlsx" format. Make sure to not mix this object with legacy first level properties (*password*, *includeBindingSource*...) to avoid potiental issues.
+- Usando o objeto *excelOptions* é recomendado ao exportar no formato ".xlsx". Make sure to not mix this object with legacy first level properties (*password*, *includeBindingSource*...) to avoid potiental issues.
 
 **Notas sobre o formato PDF**:
 

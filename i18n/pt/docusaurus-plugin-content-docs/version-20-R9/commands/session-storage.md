@@ -8,35 +8,35 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Params-->
 
-| Parâmetro | Tipo   |                             | Descrição                                                  |
-| --------- | ------ | --------------------------- | ---------------------------------------------------------- |
-| id        | Text   | &#8594; | Unique identifier (UUID) of the session |
-| Resultado | Object | &#8592; | Storage object of the session                              |
+| Parâmetro | Tipo   |                             | Descrição                                               |
+| --------- | ------ | --------------------------- | ------------------------------------------------------- |
+| id        | Text   | &#8594; | Identificador único (UUID) da sessão |
+| Resultado | Object | &#8592; | Objeto de armazenamento da sessão                       |
 
 <!-- END REF-->
 
 <details><summary>História</summary>
 
-| Release | Mudanças                       |
-| ------- | ------------------------------ |
-| 20 R8   | Support of standalone sessions |
-| 20 R6   | Adicionado                     |
+| Release | Mudanças                    |
+| ------- | --------------------------- |
+| 20 R8   | Suporte a sessões autônomas |
+| 20 R6   | Adicionado                  |
 
 </details>
 
 ## Descrição
 
-<!--REF #_command_.Session storage.Summary-->The **Session storage** command returns the storage object of the session whose unique identifier you passed in the *id* parameter.<!-- END REF--> 
+<!--REF #_command_.Session storage.Summary-->O comando **Session storage** retorna o objeto de armazenamento da sessão cujo identificador exclusivo você passou no parâmetro *id*.<!-- END REF--> 
 
-In *id*, pass the UUID of the session for which you want to get the storage. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../API/SessionClass.md#id) property of the [session object](../API/SessionClass.md). If the session does not exist, the command returns **Null**.
+Em *id*, passe o UUID da sessão para a qual você deseja obter o armazenamento. Ele é atribuído automaticamente pelo 4D (4D Server ou, para sessões autônomas, 4D single-user) e é armazenado na propriedade [**.id**](../API/SessionClass.md#id) do [objeto sessão](../API/SessionClass.md). Se a sessão não existir, o comando retornará **Null**.
 
 **Nota:** você pode obter os identificadores de sessão usando o comando [Process activity](process-activity.md).
 
-O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storage) da sessão. It is a shared object used to store information available to all processes of the session. It is a shared object used to store information available to all processes of the session.
+O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storage) da sessão. It is a shared object used to store information available to all processes of the session. É um objeto compartilhado usado para armazenar informações disponíveis para todos os processos da sessão.
 
 ## Exemplo
 
-This method modifies the value of a "settings" property stored in the storage object of a specific session:
+Esse método modifica o valor de uma propriedade "settings" armazenada no objeto de armazenamento de uma sessão específica:
 
 ```4d
   //Definir armazenamento para uma sessão

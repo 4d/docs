@@ -30,7 +30,7 @@ The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->remo
 
 Em *vpAreaName*, passe o nome da área onde a tabela a ser removida está localizada.
 
-In *tableName*, pass the name of the table to remove.
+Em *tableName*, passe o nome da tabela para remover.
 
 Em *options*, você pode especificar o comportamento adicional. Valores possíveis:
 

@@ -461,12 +461,12 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 リモートデータストアの場合:
 
 ```4d
-  var $remoteDS : cs.DataStore
-  var $info; $connectTo : Object
+  var $remoteDS : 4D.DataStoreImplementation
+var $info; $connectTo : Object
 
- $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
- $remoteDS:=Open datastore($connectTo;"students")
- $info:=$remoteDS.getInfo()
+$connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
+$remoteDS:=Open datastore($connectTo;"students")
+$info:=$remoteDS.getInfo()
 
   //{"type":"4D Server",
   //"localID":"students",
@@ -1123,7 +1123,7 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

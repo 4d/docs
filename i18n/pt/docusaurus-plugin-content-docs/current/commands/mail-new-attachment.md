@@ -78,7 +78,7 @@ The optional *disposition* parameter lets you pass the `content-disposition` hea
 | mail disposition attachment | "attachment" | Estabelece o valor de cabeçalho Content-disposition para "attachment" que significa que o arquivo anexo deve ser fornecido como um link na mensagem.                                                                        |
 | mail disposition inline     | "inline"     | Estabelece o valor de cabeçalho Content-disposition para "inline", o que significa que o anexo deve ser renderizado dentro do conteúdo da mensagem, no local "cid". A renderização depende do cliente mail. |
 
-By default, if the *disposition* parameter is omitted:
+Como padrão, se o parâmetro *disposition* for omisso:
 
 - if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
 - if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".

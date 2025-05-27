@@ -38,7 +38,7 @@ If you would like the user to be able to call 4D commands that are unauthorized 
 
 :::warning
 
-This command only filters the **input** of methods, not their **execution**. It does not control the execution of formulas created outside the application.
+Esse comando filtra apenas a **entrada** dos métodos, não sua **execução**. It does not control the execution of formulas created outside the application.
 
 :::
 

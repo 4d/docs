@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Summary-->The **Session storage** command returns the storage object of the session whose unique identifier you passed in the *id* parameter.<!-- END REF--> 
 
-In *id*, pass the UUID of the session for which you want to get the storage. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../API/SessionClass.md#id) property of the [session object](../API/SessionClass.md). If the session does not exist, the command returns **Null**.
+Em *id*, passe o UUID da sessão para a qual você deseja obter o armazenamento. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../API/SessionClass.md#id) property of the [session object](../API/SessionClass.md). Se a sessão não existir, o comando retornará **Null**.
 
 **Nota:** você pode obter os identificadores de sessão usando o comando [Process activity](process-activity.md).
 
