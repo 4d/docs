@@ -22,12 +22,12 @@ Em *rangeObj*, passe um intervalo de células em que o estilo será aplicado. Se
 
 > Borders applied with `VP SET CELL STYLE` will be applied to each cell of the *rangeObj*, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the *rangeObj* as a whole.
 
-The *styleObj* parameter lets you pass an object containing style settings. Pode utilizar uma folha de estilos existente ou criar um novo estilo. If the *styleObj* contains both an existing style sheet and additional style settings, the existing style sheet is applied first, followed by the additional settings.
+O parâmetro *styleObj* permite que você passe um objeto contendo configurações de estilo. Pode utilizar uma folha de estilos existente ou criar um novo estilo. If the *styleObj* contains both an existing style sheet and additional style settings, the existing style sheet is applied first, followed by the additional settings.
 
 Para remover um estilo e reverter para as configurações de estilo padrão (se houver), passe um valor NULL:
 
 - giving the *styleObj* parameter a NULL value will remove any style settings from the *rangeObj*,
-- giving an attribute a NULL value will remove this specific attribute from the *rangeObj*.
+- atribuir um valor NULL a um atributo removerá esse atributo específico do *rangeObj*.
 
 Para obter mais informações sobre objetos de estilo e folhas de estilo, consulte o parágrafo [Objetos de estilo](../configuring.md#style-objects).
 
