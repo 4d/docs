@@ -116,7 +116,7 @@ End if
 
 :::info
 
-Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. Para mais informações, consulte a página [**Privilégios**](../ORDA/privileges.md) do capítulo ORDA.
 
 :::
 
@@ -408,7 +408,7 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 
 ```
 
-2. The user is sent this URL as a link in an email. The URL prefix `/validateEmail` is handled by a [custom HTTP request handler](./http-request-handler.md):
+2. The user is sent this URL as a link in an email. O prefixo URL `/validateEmail` é tratado por um [manipulador de requisição HTTP personalizado](./http-request-handler.md):
 
 ```json
 [
