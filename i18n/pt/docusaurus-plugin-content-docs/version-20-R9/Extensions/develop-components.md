@@ -376,7 +376,7 @@ Components can have an `Info.plist` file at their [root folder](../Project/archi
 
 :::note
 
-Esse arquivo não é obrigatório, mas é necessário para criar componentes [notarizáveis e grampeáveis](../Desktop/building.md#about-notarization) para o macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+Esse arquivo não é obrigatório, mas é necessário para criar componentes [notarizáveis e grampeáveis](../Desktop/building.md#about-notarization) para o macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note que algumas chaves podem ser definidas usando uma chave XML do buildApp (veja [componente de compilação](../Desktop/building.md#build-component)).
 
 :::
 
