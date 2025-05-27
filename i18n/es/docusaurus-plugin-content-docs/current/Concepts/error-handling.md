@@ -291,7 +291,7 @@ Exceptions that interrupt code execution are returned by 4D but can have differe
 
 - a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
 - a **message**, which explains why the error occurred
-- a **code**, which is an arbitrary number returned by the component
+- un **código**, que es un número arbitrario devuelto por el componente
 
 The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user.
 
