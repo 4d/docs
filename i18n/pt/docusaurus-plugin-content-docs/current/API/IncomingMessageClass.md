@@ -5,7 +5,7 @@ title: IncomingMessage
 
 The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Parameters given directly in the request with GET verb are handled by the [`.urlQuery`](#urlquery) property, while parameters passed in the body of the request are available through functions such as [`.getBlob()`](#getblob) or [`getText()`](#gettext).
 
-The HTTP request handler can return any value (or nothing). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
+The HTTP request handler can return any value (or nothing). Geralmente ele retorna uma instância da classe [`4D.OutgoingMessage`](OutgoingMessageClass.md).
 
 All properties of this class are read-only. They are automatically filled by the request handler.
 
@@ -140,7 +140,7 @@ A função `.getHeader()` <!-- REF #IncomingMessageClass.getHeader().Summary -->
 
 :::note
 
-The *key* parameter is not case sensitive.
+O parâmetro *key* não diferencia maiúsculas de minúsculas.
 
 :::
 
@@ -317,7 +317,7 @@ $test:=Value type(JSON Parse($r.urlQuery.myparams))=Is collection) //true
 
 Special characters such as simple quotes or carriage returns must be escaped.
 
-Example: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
+Exemple: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
 ````4d
 //urlQuery.mdcode = ```4d
