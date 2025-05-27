@@ -67,7 +67,7 @@ Este botão só será exibido em projetos convertidos se as **variáveis forem d
 
 ### Limpar código compilado
 
-The **Clear compiled code** button deletes the compiled code of the project. Al hacer clic en él, se borra todo el [código generado durante la compilación](#classic-compiler), se desactiva el comando **Reiniciar compilado** del menú **Ejecutar** y la opción "Proyecto compilado" no está disponible al inicio.
+O botão **Limpar o código compilado** exclui o código compilado do projeto. Al hacer clic en él, se borra todo el [código generado durante la compilación](#classic-compiler), se desactiva el comando **Reiniciar compilado** del menú **Ejecutar** y la opción "Proyecto compilado" no está disponible al inicio.
 
 ### Mostrar/ocultar avisos
 
