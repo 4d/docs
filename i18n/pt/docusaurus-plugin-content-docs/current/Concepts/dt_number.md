@@ -121,7 +121,7 @@ Os operadores bitwise operam com expressões ou valores inteiros (Long).
 
 While using the bitwise operators, you must think about a Long value as an array of 32 bits. Os bits são numerados de 0 a 31, da direita para a esquerda.
 
-Já que cada bit pode ser igual a 0 ou 1, também se pode pensar num valor Long Integer como um valor onde se pode armazenar 32 valores booleanos. A bit equal to 1 means **True** and a bit equal to 0 means **False**.
+Já que cada bit pode ser igual a 0 ou 1, também se pode pensar num valor Long Integer como um valor onde se pode armazenar 32 valores booleanos. Um bit igual a 1 significa **True** e um bit igual a 0 significa **False**.
 
 An expression that uses a bitwise operator returns a Long value, except for the Bit Test operator, where the expression returns a Boolean value. A tabela a seguir lista os operadores bitwise e sua sintaxe:
 
