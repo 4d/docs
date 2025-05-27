@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP EXPORT VARIABLE.Summary-->The **WP EXPORT VARIABLE** command exports the *wpDoc* 4D Write Pro object to the 4D *destination* variable in the specified *format*.<!-- END REF-->
 
-In *wpDoc*, pass the 4D Write Pro object that you want to export.
+En *wpDoc*, pase el objeto 4D Write Pro que desea exportar.
 
 In *destination*, pass the variable that you want to fill with the exported 4D Write Pro object. The type of this variable depends on the export format specified in the *format* parameter:
 
