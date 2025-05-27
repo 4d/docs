@@ -12,7 +12,7 @@ To use 4D products and features, you need to install appropriate licenses on you
 
 ### Development licenses
 
-Development licenses are required to access the 4D Design environment and features. For example, *4D Developer Pro* is a single-user development license. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
+Development licenses are required to access the 4D Design environment and features. Por exemplo, *4D Developer Pro* é uma licença de desenvolvimento para um único usuário. Registered development licenses are automatically installed [when you log](GettingStarted/Installation.md) in the Welcome Wizard, or you can add them using the [Instant activation](#instant-activation) dialog box.
 
 ### Deployment licenses
 
