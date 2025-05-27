@@ -34,9 +34,9 @@ Puede modificar el tamaño de la caché en el área **Tamaño de la caché de la
 
 ## Pasta de certificados
 
-| Pode ser definido com | Nome                | Comentários                                                                                                                                            |
-| --------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| objeto webServer      | `certificateFolder` | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
+| Pode ser definido com | Nome                | Comentários                                                                                                                                                 |
+| --------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer      | `certificateFolder` | Propriedade de texto, mas pode ser um objeto [`4D.Folder`](API/FolderClass.md) quando usado com o parâmetro *settings* da função `start()`. |
 
 Pasta onde estão localizados os arquivos de certificado TLS para o servidor web.
 
@@ -44,7 +44,7 @@ Por defecto con 4D o 4D Server, estos archivos deben colocarse junto a la [carpe
 
 Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recursos locales de la base de datos en la máquina remota (ver `Carpeta base 4D Client` del comando `Get 4D folder`). Deve copiar esses arquivos manualmente na máquina remota.
 
-> Los archivos de certificados TLS son *key.pem* (documento que contiene la llave de cifrado privada) y *cert.pem* (documento que contiene el certificado).
+> TLS certificate files are *key.pem* (document containing the private encryption key) and *cert.pem* (document containing the certificate).
 
 ## Conjunto de caracteres
 
@@ -318,7 +318,8 @@ Valores possíveis: Cadeia de endereços IP. Ambos os formatos de string IPv6 (p
 
 #### Acerca do suporte IPv6
 
-- **No warning when TCP port is occupied**<br/> When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
+- **No warning when TCP port is occupied**<br/>
+   When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
 
 Se o seu servidor 4D não parecer responder na porta definida, pode testar o endereço [::1] na máquina do servidor (equivalente a 127.0.0.1 para IPv6, adicionar [:portNum] para testar outro número de porta). Se 4D responder, é provável que outro aplicativo esteja usando a porta em IPv4.
 
