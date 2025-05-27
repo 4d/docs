@@ -582,7 +582,7 @@ A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->
 
 - No parâmetro *privilege*, passe uma cadeia de caracteres contendo um nome de privilégio (ou vários nomes de privilégio separados por vírgula).
 
-- In the *privileges* parameter, pass a collection of strings containing privilege names.
+- No parâmetro *privileges*, passe uma coleção de cadeias de caracteres contendo nomes de privilégios.
 
 - No parâmetro *settings*, passe um objeto que contenha as seguintes propriedades:
 
