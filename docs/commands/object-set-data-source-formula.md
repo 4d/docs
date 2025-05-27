@@ -23,6 +23,8 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 The *formula* acts as the source from which the object retrieves its value at runtime. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
 
+If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to an automatic form variable  (`$form_xxxx`).
+
 If the command is applied to an object that does not exist or cannot support formulas, it does nothing.
 
 :::note

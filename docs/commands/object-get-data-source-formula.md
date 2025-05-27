@@ -21,15 +21,17 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 When a formula is associated with a form object, it acts as the object's data source at runtime. 
 
-If this command is applied to an object with no associated formula, or if the object does not exist, it returns `Null`.
+If this command is applied to an object with no custom formula assigned, it returns the automatically assigned form variable (`$form_xxxx`).  
+If the object does not exist or does not support formulas, it returns `Null`.
+
 
 ## Example 
 
+You want check what formula (if any) is bound to an object:
+
 ```4d
-$formula := OBJECT Get data source formula(*;"TotalField")
-If ($formula#Null)
-   ALERT($formula.source)  // Displays the formula's source text
-End if
+$formula:=OBJECT Get data source formula(*; "myInput")
+
 ```
 
 ## See also 
