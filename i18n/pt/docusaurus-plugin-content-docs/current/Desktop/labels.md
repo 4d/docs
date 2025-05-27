@@ -16,7 +16,7 @@ title: Labels
 
 :::note
 
-Labels can also be created using the [Form editor](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+As etiquetas também podem ser criadas usando o [Editor de formulário](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
 
 :::
 
@@ -46,7 +46,7 @@ Displays the names of the fields in the current table in a hierarchical list. If
 :::note Notas
 
 - Only tables and fields which are visible appear in the Label editor.
-- [Object type](../Concepts/dt_object.md) fields are not supported by the Label editor.
+- Os campos de tipo [Object](../Concepts/dt_object.md) não são suportados pelo editor de etiquetas.
 
 :::
 
@@ -139,7 +139,7 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
 - **Largura** e **Altura**: define a altura e a largura de cada etiqueta manualmente. Eles não podem ser editados quando a opção **Redimensionamento automático** estiver marcada.
-- **Margins** (Top, Right, Left, Bottom): Sets the margins of your sheet. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
+- **Margens** (Superior, Direita, Esquerda, Inferior): define as margens de sua folha. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
 - **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
  To be eligible for label processing, a project method must comply with the following settings:
@@ -218,7 +218,7 @@ Se nenhum arquivo **labels.json** tiver sido definido, nenhuma filtragem será a
 
 You can drag and drop label files from your desktop onto the label design area.
 
-Label designs are managed using the **Load** and **Save** buttons of the tool bar.
+Os desenhos das etiquetas são gerenciados usando os botões **Carregar** e **Salvar** da barra de ferramentas.
 
 - To load a label design, click on the **Load** button and designate the design you want to load by means of the File Open dialog box (if a label design is already present in the wizard, 4D replaces it by the one you have loaded).
 - To save a label design, click on the **Save** button and indicate the name and location of the design to be created.
