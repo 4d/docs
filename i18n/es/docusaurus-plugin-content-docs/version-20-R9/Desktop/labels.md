@@ -201,7 +201,7 @@ The Label editor includes an advanced feature allowing you to restrict which pro
 1. Crea un archivo JSON llamado **labels.json** y ponlo en la [carpeta de recursos](../Project/architecture.md#resources) del proyecto.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
 
-The contents of the **labels.json** file should be similar to:
+El contenido del archivo **labels.json** debe ser similar a:
 
 ```json
 [ 
