@@ -7,11 +7,11 @@ title: WA SET CONTEXT
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 
-| Parâmetro  | Tipo                  |                             | Descrição                                                                                                                                      |
-| ---------- | --------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador              | &#8594; | Se especificado, *object* é um nome de objeto (string). If omitted, *object* is a variable. |
-| object     | Objecto de formulário | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                 |
-| contextObj | Object                | &#8594; | Object containing the functions that can be called with `$4d`.                                                                 |
+| Parâmetro  | Tipo                  |                             | Descrição                                                                                                                                       |
+| ---------- | --------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador              | &#8594; | Se especificado, *object* é um nome de objeto (string). Se omitido, *object* é uma variável. |
+| object     | Objecto de formulário | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                  |
+| contextObj | Object                | &#8594; | Object containing the functions that can be called with `$4d`.                                                                  |
 
 <!-- END REF-->
 
