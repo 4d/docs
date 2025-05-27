@@ -23,7 +23,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 The *formula* acts as the source from which the object retrieves its value at runtime. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
 
-If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to an automatic form variable  (`$form_xxxx`).
+If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to an [automatic form variable](../FormObjects/properties_Object.md#dynamic-variables) (`$form_xxxx`).
 
 If the command is applied to an object that does not exist or cannot support formulas, it does nothing.
 
@@ -36,7 +36,7 @@ If the command is applied to an object that does not exist or cannot support for
 
 ## Example
 
-You want to dynamically bind an input field to an expression. For example, show the discounted price based on a base price field and a discount value
+You want to dynamically bind an input to an expression. For example, show the discounted price based on a base price and a discount value:
 
 ```4d
 
