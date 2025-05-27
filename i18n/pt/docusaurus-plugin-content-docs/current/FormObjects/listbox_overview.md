@@ -569,7 +569,7 @@ O valor da [variável de cabeçalho de coluna] (properties_Object.md#variable-or
 - Se a variável for estabelecida como 0, a coluna não é ordenada e a flecha de ordenação não é exibida;\
  ![](../assets/en/FormObjects/sorticon0.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
+- Se a variável for definida como 1, a coluna será classificada em ordem crescente e a seta de classificação será exibida.
  ![](../assets/en/FormObjects/sorticon2.png)
 
 - If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
@@ -1142,7 +1142,7 @@ Você deseja exibir uma caixa de combinação com base em uma lista de "cores" d
 Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 - "unitsList": um array que contém os elementos x usados para definir as unidades disponíveis (por exemplo: "cm", "polegadas", "km", "milhas" etc.). Utilize este atributo para definir unidades no interior do objeto.
-- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use this attribute to define units with a 4D list created with the [`New list`](../commands-legacy/new-list.md) command.
+- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [`New list`](../commands-legacy/new-list.md).
 - "unitsListName": um nome de uma lista 4D baseada em design que contém unidades disponíveis. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Independentemente da forma como a lista de unidades é definida, ela pode ser associada ao seguinte atributo:
@@ -1202,7 +1202,7 @@ O valueType "color" permite-lhe apresentar uma cor ou um texto.
 
 #### event valueType
 
-El "event" valueType muestra un botón que genera un evento `On Clicked` al ser presionado. Nenhum dado ou valor pode ser transmitido ou devolvido.
+The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
 Opcionalmente, pode passar um atributo "label".
 
