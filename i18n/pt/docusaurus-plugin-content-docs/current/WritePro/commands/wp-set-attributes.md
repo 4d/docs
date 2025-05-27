@@ -27,7 +27,7 @@ Em *targetObj*, você pode passar:
 - an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
-You can specify attributes to set for *targetObj* in one of two ways:
+Você pode especificar atributos para *targetObj* de uma de duas maneiras:
 
 - Use os parâmetros *attribName* e *attribValue*. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many *attribName*/*attribValue* pairs as you want in a single call.
 
