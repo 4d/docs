@@ -28,7 +28,7 @@ For the optional second parameter, you can pass either:
 
 - Em *picture*:  uma imagem 4D
 - In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
-- In *PictureFileObj*: a `4D.File` object representing a picture file.
+- Em *PictureFileObj*: um objeto `4D.File` que representa um arquivo imagem.
 
 :::note
 
