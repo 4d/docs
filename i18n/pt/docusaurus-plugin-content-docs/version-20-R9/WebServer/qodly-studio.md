@@ -245,7 +245,7 @@ If the debugger is already attached to a another machine or another Qodly Studio
 
 To detach the Qodly Studio debugger from your running 4D Server application:
 
-1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
+1. Clique no botão **Debug** na barra de ferramentas Qodly Studio enquanto uma sessão de depuração está ativa.
     A warning dialog box will prompt you to confirm whether you want to detach the debugger.
 2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
 
@@ -328,7 +328,7 @@ Se você executar o renderizador a partir do Qodly Studio e esses dois servidore
 
 :::info
 
-Using different schemes might also lead to [session](sessions.md) issues, such as losing [privileges](../ORDA/privileges.md) after a page refresh.
+O uso de diferentes esquemas também pode levar a problemas [sessão](sessions.md), como a perda [privilégios](../ORDA/privileges.md) após a atualização da página.
 
 :::
 
