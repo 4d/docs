@@ -211,8 +211,8 @@ In this example, you must implement the following functions:
 - *handle function* in the *GeneralHandling* class
 - *manageAccount* na classe *UsersHandling*
 - *handleInvoices* na classe \*FinancialHandling
-- *handleDocs* in the *DocsHandling* class
-- *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
+- *handleDocs* na classe *DocsHandling*
+- *handleTheInvoice* / *handleDetails* / *handleInvoices* na clase *InvoicesHandling*
 
 Examples of URLs triggering the handlers:
 
