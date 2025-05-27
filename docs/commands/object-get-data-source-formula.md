@@ -15,7 +15,7 @@ title: OBJECT Get data source formula
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get data source formula.Summary-->The **OBJECT Get data source formula** command returns the formula (if any) associated object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+The **OBJECT Get data source formula** command<!--REF #_command_.OBJECT Get data source formula.Summary--> returns the formula (if any) associated object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
