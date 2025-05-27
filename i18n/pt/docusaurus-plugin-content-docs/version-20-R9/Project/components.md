@@ -3,31 +3,31 @@ id: components
 title: Componentes
 ---
 
-Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. Por exemplo, o componente [4D SVG](https://github.com/4d/4D-SVG) adiciona comandos avançados e um mecanismo de renderização integrado que pode ser usado para exibir arquivos SVG.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that can be found on GitHub.
+Você pode [develop](../Extensions/develop-components.md) e [build](../Desktop/building.md) seus próprios componentes 4D, ou faça download de componentes públicos compartilhados pela comunidade 4D que podem ser encontrados no GitHub.
 
-When developing in 4D, the component files can be transparently stored in your computer or on a Github repository.
+Ao desenvolver em 4D, os arquivos de componentes podem ser armazenados de forma transparente no seu computador ou em um repositório do Github.
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md).
+Componentes podem ser interpretados ou [compiled](../Desktop/building.md).
 
-- A 4D project running in interpreted mode can use either interpreted or compiled components.
-- A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
+- Um projeto 4D em modo interpretado pode usar componentes interpretados ou compilados.
+- Um projeto 4D em execução no modo compilado não pode usar componentes interpretados. Por isso não pode ser usado em um componente.
 
-### Package folder
+### Pasta do pacote
 
-The package folder of a component (*MyComponent.4dbase* folder) can contain:
+A pasta do pacote de um componente (*MyComponent.4dbase*) pode conter:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md). O nome da pasta do pacote deve ser sufixado com **.4dbase** se você quiser instalá-lo na pasta [**Components** do seu projeto](architecture.md#components).
+- para **componentes interpretados**: um padrão [Pasta do projeto](../Project/architecture.md). O nome da pasta do pacote deve ser sufixado com **.4dbase** se você quiser instalá-lo na pasta [**Components** do seu projeto](architecture.md#components).
 - para **componentes compilados**:
- - either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
- - or directly a .4DZ file with other folders such as *Resources*.
+ - ou uma pasta "Conteúdo" contendo um arquivo .4DZ, uma pasta de *Recursos*, um arquivo *Info.plist* (arquitetura recomendada)
+ - ou diretamente um arquivo .4DZ com outras pastas como *Recursos*.
 
 :::note
 
-The "Contents" folder architecture is recommended for components if you want to [notarize](../Desktop/building.md#about-notarization) your applications on macOS.
+A arquitetura da pasta "Contents" é recomendada para componentes, se você deseja [notarize](../Desktop/building.md#about-notarization) suas aplicações no macOS.
 
 :::
 
@@ -35,23 +35,23 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 :::note
 
-Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. In other environments, components are managed differently:
+Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. Em outros ambientes, os componentes são geridos de forma diferente:
 
-- in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
+- em [4D no modo remoto](../Desktop/clientServer.md), componentes são carregados pelo servidor e enviados para o aplicativo remoto
 - em aplicações mescladas, componentes são [incluídos na etapa de compilação](../Desktop/building.md#plugins--components-page).
 
 :::
 
 ### Visão Geral
 
-To load a component in your 4D project, you can either:
+Para carregar um componente no seu projeto 4D, você pode:
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
-- or, declare the component in the **dependencies.json** file of your project; this is done automatically for local files when you [**add a dependency using the Dependency manager interface**](#adding-a-github-dependency).
+- copiar os arquivos do componente na pasta [**Components** do seu projeto](architecture.md#components) (as pastas do pacote de componentes interpretados devem ser sufixas com ".4dbase", veja acima),
+- ou, declarar o componente nas **dependências**. fil\*\* arquivo de seu projeto; isto é feito automaticamente para arquivos locais quando você [**adicionar uma dependência usando a interface do Gerenciador de Dependência**](#adding-a-github-dependency).
 
 Os componentes declarados no arquivo **dependencies.json** podem ser armazenados em locais diferentes:
 
-- at the same level as your 4D project's package folder: this is the default location,
+- no mesmo nível da pasta do pacote do seu projeto 4D: este é o local padrão,
 - em qualquer lugar de sua máquina: o caminho do componente deve ser declarado no arquivo **environment4d.json**
 - em um repositório GitHub: o caminho do componente pode ser declarado no arquivo **dependencies.json** ou no arquivo **environment4d.json**, ou em ambos os arquivos.
 
@@ -76,20 +76,20 @@ Pode conter:
 
 O arquivo **environment4d.json** é opcional. Ele permite que você defina **caminhos personalizados** para alguns ou todos os componentes declarados no arquivo **dependencies.json**. Este arquivo pode ser armazenado na pasta pacote de projeto ou em uma das pastas pais, a qualquer nível (superior à raiz).
 
-The main benefits of this architecture are the following:
+Os principais benefícios desta arquitetura são os seguintes:
 
-- you can store the **environment4d.json** file in a parent folder of your projects and decide not to commit it, allowing you to have your local component organization.
+- você pode armazenar o **ambiente4d. arquivo son** em uma pasta pai de seus projetos e decida não fazer commit dele, permitindo que você tenha sua organização local de componentes.
 - se quiser usar o mesmo repositório GitHub para vários projetos, você poderá fazer referência a ele no arquivo **environment4d.json** e declará-lo no arquivo **dependencies.json**.
 
 ### Prioridade
 
-Since components can be installed in different ways, a priority order is applied when the same component is referenced at several locations:
+Uma vez que os componentes podem ser instalados de maneiras diferentes, uma ordem de prioridade é aplicada quando o mesmo componente é referenciado em vários locais:
 
 **Prioridade mais alta**
 
 1. Componentes armazenados na pasta [**Components** do projeto](architecture.md#components).
-2. Components declared in the **dependencies.json** file (the **environment4d.json** declared path overrides the **dependencies.json** path to configure a local environment).
-3. Internal User 4D components (e.g. 4D NetKit, 4D SVG...)
+2. Componentes declarados no arquivo **dependencies.json** (o **environment4d.json** declarou o caminho substitui o caminho **dependencies.json** para configurar um ambiente local).
+3. Componentes 4D do usuário interno (por exemplo, 4D NetKit, 4D SVG...)
 
 **Prioridade mais baixa**
 
@@ -107,7 +107,7 @@ flowchart TB
     id3("3<br/>User 4D components")
 ```
 
-When a component cannot be loaded because of another instance of the same component located at a higher priority level, both get a specific [status](#dependency-status): the non-loaded component is given the *Overloaded* status, while the loaded component has the *Overloading* status.
+Quando um componente não puder ser carregado por causa de outra instância do mesmo componente localizada em um nível de prioridade mais alto ambos recebem um [status]específico (#dependency-status): o componente não-carregado é dado o status *Sobrecargado*, enquanto o componente carregado tem o status *Sobrecarga*.
 
 ### Componentes locais
 
@@ -122,9 +122,9 @@ Você declara um componente local no arquivo [**dependencies.json**](#dependenci
 }
 ```
 
-... where "myComponent1" and "myComponent2" are the name of the components to be loaded.
+... onde "myComponent1" e "myComponent2" são o nome dos componentes a serem carregados.
 
-By default, if "myComponent1" and "myComponent2" are not declared in an [**environment4d.json**](#environment4djson) file, 4D will look for the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project's package folder, e.g.:
+Por padrão, se "myComponent1" e "myComponent2" não forem declarados em um arquivo [**environment4d.json**](#environment4djson), 4D procurará pela pasta de pacote do componente (*i. .* A pasta raiz do projeto do componente) no mesmo nível que a pasta de pacote do seu projeto 4D, por exemplo:
 
 ```
 	/MyProjectRoot/
@@ -135,13 +135,13 @@ Graças a essa arquitetura, você pode simplesmente copiar todos os seus compone
 
 :::note
 
-If you do not want to use the **dependencies.json** architecture, you can install local components by copying their files in the [**Components** folder of your project](architecture.md#components).
+Se você não quiser se beneficiar das **dependências. arquitetura do son**, você pode instalar componentes locais copiando seus arquivos na pasta [**Components** do seu projeto](architecture.md#components).
 
 :::
 
 #### Personalizando caminhos dos componentes
 
-If you want to customize the location of local components, you declare the paths for the dependencies that are not stored at the same level as the project folder in the [**environment4d.json**](#environment4djson) file.
+Se você quiser personalizar a localização dos componentes locais, você declara os caminhos para as dependências que não são armazenados no mesmo nível que a pasta do projeto no [**environment4d. son**](#environment4djson) arquivo.
 
 Você pode usar caminhos **relativos** ou **absolutos** (veja abaixo).
 
@@ -167,11 +167,11 @@ Se um caminho do componente for declarado no **ambiente4d. arquivo son** não é
 
 Os caminhos são expressos na sintaxe POSIX, conforme descrito em [este parágrafo](../Concepts/paths#posix-syntax).
 
-Os caminhos relativos são relativos ao arquivo [`environment4d.json`](#environment4djson). Absolute paths are linked to the user's machine.
+Os caminhos relativos são relativos ao arquivo [`environment4d.json`](#environment4djson). Caminhos absolutos estão vinculados à máquina do usuário.
 
-Using relative paths is **recommended** in most cases, since they provide flexibility and portability of the components architecture, especially if the project is hosted in a source control tool.
+Usar caminhos relativos é **recomendado** na maioria dos casos, já que eles fornecem flexibilidade e portabilidade da arquitetura de componentes, especialmente se o projeto for hospedado em uma ferramenta de controle de fonte.
 
-Absolute paths should only be used for components that are specific to one machine and one user.
+Caminhos absolutos devem ser usados apenas para componentes específicos para um computador e um usuário.
 
 ### Componentes armazenados no GitHub
 
@@ -330,7 +330,7 @@ Para exibir o painel Dependências:
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
  ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
+- com 4D Server, selecione o item de menu **Janela/Dependências do projeto**.<br/>
  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 The Dependencies panel is then displayed. Dependencies are sorted by name in alphabetical order:
