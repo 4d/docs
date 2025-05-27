@@ -824,7 +824,8 @@ $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 
 ## Palabra clave onHTTPGet
 
-Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
+Utilice la palabra clave `onHTTPGet` para declarar funciones que puedan ser llamadas a través de peticiones HTTP utilizando el verbo `GET`. Estas funciones pueden devolver cualquier contenido web, por ejemplo utilizando la clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md).
+
 
 The `onHTTPGet` keyword is available with:
 
