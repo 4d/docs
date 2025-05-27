@@ -26,12 +26,12 @@ title: VP SET BINDING PATH
 
 The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
-In *rangeObj*, pass an object that is either a cell range or a combined range of cells.
+Em *rangeObj*, passe um objeto que seja um intervalo de células ou um intervalo combinado de células.
 
 - If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
 - If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
 
-No *dataContextAttribute*, passe o nome do atributo para vincular a *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
+No *dataContextAttribute*, passe o nome do atributo para vincular a *rangeObj*. Se *dataContextAttribute* é uma string vazia, a função remove a vinculação atual.
 
 > Os atributos do tipo coleção não são suportados. Quando você passar o nome de uma coleção, o comando não faz nada.
 
