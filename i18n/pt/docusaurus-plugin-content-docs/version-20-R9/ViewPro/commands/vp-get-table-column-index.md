@@ -37,7 +37,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcific
 
 > A indexação começa em 0.
 
-If *tableName* or *columnName* is not found, the command returns -1.
+Se *tableName* ou *columnName* não for encontrado, o comando retornará -1.
 
 ## Exemplo
 
