@@ -100,7 +100,7 @@ Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na 
 
 - attributes of the **storage** kind can be set or get as simple properties of the entity object,
 - atributos do tipo **relatedEntity** retornarão uma entidade,
-- attributes of the **relatedEntities** kind will return an entity selection,
+- atributos do tipo **relatedEntities** retornarão uma seleção de entidade,
 - attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
 
 :::info
