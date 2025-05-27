@@ -34,9 +34,9 @@ Puede modificar el tamaño de la caché en el área **Tamaño de la caché de la
 
 ## Pasta de certificados
 
-| Pode ser definido com | Nome                | Comentários                                                                                                                                            |
-| --------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| objeto webServer      | `certificateFolder` | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
+| Pode ser definido com | Nome                | Comentários                                                                                                                                                 |
+| --------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer      | `certificateFolder` | Propriedade de texto, mas pode ser um objeto [`4D.Folder`](API/FolderClass.md) quando usado com o parâmetro *settings* da função `start()`. |
 
 Pasta onde estão localizados os arquivos de certificado TLS para o servidor web.
 
@@ -44,7 +44,7 @@ Por defecto con 4D o 4D Server, estos archivos deben colocarse junto a la [carpe
 
 Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recursos locales de la base de datos en la máquina remota (ver `Carpeta base 4D Client` del comando `Get 4D folder`). Deve copiar esses arquivos manualmente na máquina remota.
 
-> Los archivos de certificados TLS son *key.pem* (documento que contiene la llave de cifrado privada) y *cert.pem* (documento que contiene el certificado).
+> Os arquivos de certificado TLS são *key.pem* (documento que contém a chave de criptografia privada) e *cert.pem* (documento que contém o certificado).
 
 ## Conjunto de caracteres
 
@@ -66,7 +66,7 @@ Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor pad
 
 Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos algoritmos de cifra implementados pelo servidor da Web. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a [página ciphers](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
-> The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.
+> A lista de criptogramas padrão usada por 4D pode ser modificada para a sessão usando o comando `SET DATABASE PARAMETER`. Nesse caso, a modificação se aplica a todo o aplicativo 4D, incluindo o servidor web, o servidor SQL, as conexões cliente/servidor, bem como o cliente HTTP e todos os comandos 4D que usam o protocolo seguro.
 
 ## Parâmetros CORS
 
@@ -119,7 +119,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 | objeto webServer      | `debugLog`      | number      |
 | `WEB SET OPTION`      | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
+Status do arquivo de log de solicitação HTTP do servidor web ([*HTTPDebugLog_nn. xt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), armazenado na pasta "Logs" do aplicativo -- nn é o número do arquivo). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
 | Valor | Parâmetros                     | Descrição                                                                         |
 | ----- | ------------------------------ | --------------------------------------------------------------------------------- |
@@ -287,7 +287,7 @@ Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor
 | `WEB SET OPTION`                   | `Web inactive process timeout`                                                                                |             |
 | Caixa de diálogos de configurações | [Página Opções (I)/Tempo de processo inativo](../settings/web.md#inactive-process-timeout) | Slider      |
 
-Life duration (in minutes) of inactive processes associated with legacy sessions. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the session context is destroyed.
+Duração da vida (em minutos) dos processos inativos associados às sessões legadas. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão é destruído.
 
 Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
@@ -318,7 +318,8 @@ Valores possíveis: Cadeia de endereços IP. Ambos os formatos de string IPv6 (p
 
 #### Acerca do suporte IPv6
 
-- **No warning when TCP port is occupied**<br/> When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
+- **Sem aviso quando a porta TCP estiver ocupada**<br/>
+   Quando o servidor estiver definido para responder em "Qualquer" endereços IP, se a porta TCP estiver sendo usada por outra aplicação, isso não é indicado quando o servidor é iniciado. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
 
 Se o seu servidor 4D não parecer responder na porta definida, pode testar o endereço [::1] na máquina do servidor (equivalente a 127.0.0.1 para IPv6, adicionar [:portNum] para testar outro número de porta). Se 4D responder, é provável que outro aplicativo esteja usando a porta em IPv4.
 
@@ -327,14 +328,14 @@ Se o seu servidor 4D não parecer responder na porta definida, pode testar o end
 - **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
-	2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
-	2001:0DB8::85a3:0:ac1f:8001:8081 // IPv6 address with port 8081
+	2001:0DB8::85a3:0:ac1f:8001 // endereço IPv6
+	2001:0DB8::85a3:0:ac1f:8001:8081 // endereço IPv6 com a porta 8081
 ```
 
 Para evitar essa confusão, recomendamos usar a notação [ ] sempre que você combinar um endereço IPv6 com um número de porta, por exemplo:
 
 ```code4d
-	[2001:0DB8::85a3:0:ac1f:8001]:8081 //IPv6 address with port 8081
+	[2001:0DB8::85a3:0:ac1f:8001]:8081 //endereço IPv6 com porta 8081
 ```
 
 ## Manter sessão
@@ -502,11 +503,11 @@ Neste caso, os robots não estão autorizados a aceder a todo o sítio.
 
 ## Pasta raiz
 
-| Pode ser definido com              | Nome                                                                         | Comentários                                                                                                                           |
-| ---------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer                   | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
-| `WEB SET ROOT FOLDER`              |                                                                              |                                                                                                                                       |
-| Caixa de diálogos de configurações | [Página Configuração/raiz HTML padrão](../settings/web.md#default-html-root) |                                                                                                                                       |
+| Pode ser definido com              | Nome                                                                         | Comentários                                                                                                                                |
+| ---------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| objeto webServer                   | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Propriedade de texto, mas pode ser um objeto [`4D.Folder`](API/FolderClass.md) quando usado com o parâmetro *settings* da função `start()` |
+| `WEB SET ROOT FOLDER`              |                                                                              |                                                                                                                                            |
+| Caixa de diálogos de configurações | [Página Configuração/raiz HTML padrão](../settings/web.md#default-html-root) |                                                                                                                                            |
 
 Caminho da pasta raiz do servidor web, ou seja, a pasta na qual 4D procurará as páginas HTML estáticas e semidinâmicas, imagens, etc., para enviar aos navegadores. O caminho é formatado no caminho completo POSIX. O servidor da Web precisará ser reiniciado para que a nova pasta raiz seja levada em consideração.
 
