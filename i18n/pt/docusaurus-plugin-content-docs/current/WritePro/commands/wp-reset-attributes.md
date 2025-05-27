@@ -29,7 +29,7 @@ No parâmetro *targetObj*, você pode passar qualquer um deles:
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
-When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the *4D Write Pro Attributes* section.
+When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Os valores padrão estão listados na seção *4D Write Pro Attributes*.
 
 :::note Notas
 
