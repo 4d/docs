@@ -60,7 +60,7 @@ A mensagem será apresentada como um alerta nas máquinas remotas.
 
 ### Visualizar processos
 
-This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](processes.md) of the window. Quando você clicar neste botão, o 4D Server alterna para a página Processos e entra nos nomes de usuário selecionados na área de pesquisa/filtragem.
+Este botão pode ser usado diretamente para mostrar os processos do(s) usuário(s) selecionado(s) na página [**Processos**](processes.md) da janela. Quando você clicar neste botão, o 4D Server alterna para a página Processos e entra nos nomes de usuário selecionados na área de pesquisa/filtragem.
 
 ### Drop user
 
