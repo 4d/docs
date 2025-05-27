@@ -13,7 +13,7 @@ As fórmulas são avaliadas:
 
 - when they are inserted in a form object which displays computed values
 - when the 4D Write Pro object is loaded in a form object which displays computed values
-- when the [**WP COMPUTE FORMULAS**](commands-legacy/wp-compute-formulas.md) command is called
+- quando o comando [**WP COMPUTE FORMULAS**](commands-legacy/wp-compute-formulas.md) for chamado
 - when they are "frozen" using the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (if not already computed)
 - before printing (if not already computed)
 - before exporting to .docx (if the formula can't be mapped with MS Word formulas)
@@ -45,7 +45,7 @@ You want to replace the selection in a 4D Write Pro area with the contents of a 
 
 ## Formula context object
 
-You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. You can use the properties of this object through [**This**](../commands/this.md):
+You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. Você pode usar as propriedades desse objeto por meio de [**This**](../commands/this.md):
 
 | Propriedades                                                                   | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -109,13 +109,13 @@ When the [**Current time**](../commands-legacy/current-time.md) command, a time 
 
 ## Support of virtual structure
 
-Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) and [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) commands.
+Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. A estrutura virtual exposta às fórmulas é definida por meio dos comandos [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) e [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*).
 
 When a virtual structure is defined:
 
 - references to expressions containing fields display virtual names when the 4D Write Pro document shows references and not values.
 - [**WP Get text**](commands-legacy/wp-get-text.md) returns virtual structure names if `wk expressions as source` option is set in expressions parameter.
-- [WP Insert formula](commands/wp-insert-formula.md) ignores the virtual structure and always expects real table/field names
+- [WP Insert formula](commands/wp-insert-formula.md) ignora a estrutura virtual e sempre espera tabela/nomes de campo reais
 
 :::note
 
