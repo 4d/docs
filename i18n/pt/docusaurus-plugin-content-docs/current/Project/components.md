@@ -11,7 +11,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 ## Componentes interpretados e compilados
 
-Components can be interpreted or [compiled](../Desktop/building.md).
+Componentes podem ser interpretados ou [compilados](../Desktop/building.md).
 
 - A 4D project running in interpreted mode can use either interpreted or compiled components.
 - A 4D project running in compiled mode cannot use interpreted components. Por isso não pode ser usado em um componente.
@@ -37,7 +37,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. In other environments, components are managed differently:
 
-- in [4D in remote mode](../Desktop/clientServer.md), components are loaded by the server and sent to the remote application.
+- em [4D no modo remoto](../Desktop/clientServer.md), componentes são carregados pelo servidor e enviados para o aplicativo remoto.
 - em aplicações mescladas, componentes são [incluídos na etapa de compilação](../Desktop/building.md#plugins--components-page).
 
 :::
