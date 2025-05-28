@@ -36,7 +36,7 @@ Este estado liberta recursos no servidor. Além disso, a aplicação remota 4D r
 
 O seguinte cenário é suportado: um usuário remoto parou de funcionar durante algum tempo, por exemplo, durante uma pausa no almoço, mas mantém a conexão com o servidor aberta. A máquina passa para o modo de suspensão. Quando o usuário retorna, acordaram a máquina e a aplicação remota 4D recupera automaticamente a sua conexão com o servidor, bem como o contexto da sessão.
 
-> Uma sessão remota de sono é automaticamente desligada pelo servidor após 48 horas de inatividade. You can modify this default timeout using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command with the `Remote connection sleep timeout` selector.
+> Uma sessão remota de sono é automaticamente desligada pelo servidor após 48 horas de inatividade. Você pode modificar esse tempo limite padrão usando o comando [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) com o seletor `Remote connection sleep timeout`.
 
 ## Área de pesquisa/filtragem
 
