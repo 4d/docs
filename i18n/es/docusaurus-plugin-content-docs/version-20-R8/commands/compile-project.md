@@ -72,12 +72,12 @@ El parámetro *options* es un objeto. Here are the available compilation options
 
 ### Resultado
 
-The object returned by **Compile project** has up to three properties:
+El objeto devuelto por **Compile project** tiene hasta tres propiedades:
 
 | **Propiedad**                                                                                                          | **Tipo**             | **Description**                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | success                                                                                                                | Boolean              | True si la acción guardar tiene éxito, false en caso contrario.                                                          |
-| errors                                                                                                                 | Colección de objetos | **Available only in case of error or warning**. Collection of objects describing compilation errors or warnings          |
+| errors                                                                                                                 | Colección de objetos | **Disponible sólo en caso de error o de warning**. Collection of objects describing compilation errors or warnings       |
 | \[\].isError                                     | Boolean              | Error if True, warning otherwise                                                                                                         |
 | \[\].message                                     | Text                 | Mensaje de error                                                                                                                         |
 | \[\].code                                        | Object               | [objeto código](#code-object)                                                                                                            |
