@@ -39,7 +39,7 @@ Esta página contém opções relacionadas ao acesso e à proteção de dados pa
     - **Desactivado para el Diseñador y el Administrador**: esta opción concede acceso completo a los comandos 4D y a los métodos sólo al Diseñador y al Administrador. Ele pode ser usado para definir um modo de acesso ilimitado para comandos e métodos, enquanto permanece no controle das operações realizadas. Durante a fase de desenvolvimento, este modo pode ser usado para testar livremente todas as fórmulas, relatórios e assim por diante. Durante a operação, pode ser usado para configurar soluções seguras que permitam o acesso a comandos e métodos temporários. This consists in changing the user (via the [`CHANGE CURRENT USER`](../commands-legacy/change-current-user.md) command) before calling a dialog box or starting a printing process that requires full access to the commands, then returning to the original user when the specific operation is completed.
         **Nota:** si se ha activado el acceso completo mediante la opción anterior, esta opción no tendrá ningún efecto.
     - **Desactivado para todos**: esta opción desactiva el control en las fórmulas. Quando esta opção estiver marcada, os usuários terão acesso a todos os comandos 4D e plug-ins, bem como a todos os métodos do projeto (exceto para os invisíveis).
-        **Note:** This option takes priority over the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command. Quando está selecionado, este comando não faz nada.
+        **Nota:** esta opção tem prioridade sobre o comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md). Quando está selecionado, este comando não faz nada.
 
 - **Autorizar las propiedades usuario**: debe marcar esta opción para poder mostrar cajas de diálogo separadas para las propiedades usuario. Cuando esta opción está marcada, hay disponibles hasta tres cuadros de diálogo: **Propiedades estructura**, **Propiedades usuario**, y **Propiedades usuario para archivo de datos**. Para mais informações, consulte [Parâmetros do usuário](../Desktop/user-settings.md).
 
@@ -48,7 +48,7 @@ Esta página contém opções relacionadas ao acesso e à proteção de dados pa
     Quando esta opção está seleccionada:
 
     - os componentes 4D são carregados,
-    - each [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) of the component (if any) is called by the host database,
+    - cada [método banco de dados On Host Database Event](../commands-legacy/on-host-database-event-database-method.md) do componente (se houver) é chamado pelo banco de dados host,
     - o código do método é executado.
 
     Quando não é verificado:
