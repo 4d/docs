@@ -20,7 +20,7 @@ O comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->atribui um v
 
 The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](vp-set-text-value.md) and [`VP SET NUM VALUE`](vp-set-num-value.md), reduce the values to specific types.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell) or [`VP Column`](vp-column.md)) whose value you want to specify. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
+Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cell`](vp-cell) ou [`VP Column`](vp-column.md)) cujo valor você deseja especificar. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
 O parâmetro *valueObj* é um objeto que inclui propriedades para o valor e o [format](../configuring.md#cell-format) para atribuir ao *rangeObj*. Pode incluir as seguintes propriedades:
 
