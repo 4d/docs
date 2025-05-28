@@ -406,7 +406,7 @@ Objetos de estilo 4D View Pro e folhas de estilo permitem que você controle os 
 
 ### Objetos de estilo & Hojas de estilo
 
-Os objetos estilo contêm os parâmetros de estilo. Podem ser utilizados numa folha de estilo ou por conta própria. Objetos de estilo também podem ser usados além de uma folha de estilo para que diferentes configurações possam ser especificadas para intervalos de células individuais sem afetar o resto do documento. You can use style objects directly with the [VP SET CELL STYLE](commands/vp-set-cell-style.md) and [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
+Os objetos estilo contêm os parâmetros de estilo. Podem ser utilizados numa folha de estilo ou por conta própria. Objetos de estilo também podem ser usados além de uma folha de estilo para que diferentes configurações possam ser especificadas para intervalos de células individuais sem afetar o resto do documento. Você pode usar objetos de estilo diretamente com os comandos [VP SET CELL STYLE](commands/vp-set-cell-style.md) e [VP SET PELO STYLE](commands/vp-set-default-style.md). You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
 
 Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Folhas de estilo salvas com o documento podem ser usadas para definir as propriedades para uma única folha, várias folhas ou um livro de trabalho inteiro. Quando criada, uma folha de estilo 4D View Pro é dado um nome que é salvo na folha de estilo na propriedade "nome". Isto permite que uma folha de estilo seja facilmente usada e, se cuidadosamente selecionada, pode facilitar sua identificação e propósito (por exemplo, Letterhead\_internal, Letterhead_external).
 
@@ -482,7 +482,7 @@ Exemplo:
 
 ## Objeto 4D View Pro
 
-El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. É tratado automaticamente pelo 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) or [VP Export to object](commands/vp-export-to-object.md) commands.
+El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. É tratado automaticamente pelo 4D View Pro. Você pode definir ou obter este objeto usando os comandos [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) ou [VP Export to object](commands/vp-export-to-object.md).
 
 Contém as seguintes propriedades:
 
