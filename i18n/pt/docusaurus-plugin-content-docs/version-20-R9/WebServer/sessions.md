@@ -244,7 +244,7 @@ The OTP token can also be provided as a custom parameter that you need to proces
 - the third-party application does not allow to insert parameters such as a `$4DSID` directly in the redirect Uri, and provides a dedicated API (the implementation depends on the third-party application),
 - or, you want to call an ORDA function through REST to process the callback, in which case you need to pass the OTP with the [REST parameter syntax](../REST/ClassFunctions.md#parameters) (e.g. `?$params='["XXX123"]'`).
 
-In both cases, you need to extract the token from the custom parameter and to call the [`Session.restore()`](../API/SessionClass.md#restore) function with the token as parameter.
+Em ambos os casos, você precisa extrair o token do parâmetro personalizado e chamar a [`Session.restore()`](../API/SessionClass.md#restore) com o token como parâmetro.
 
 #### Processing a invalid OTP
 
