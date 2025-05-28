@@ -1007,7 +1007,7 @@ Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase pred
 Class extends Entity
 ```
 
-Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
+Una vez definida una clase, su nombre ya no aparecerá atenuado en el Explorador.
 
 ### Editar las clases
 
