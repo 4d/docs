@@ -45,7 +45,7 @@ Em *source*, você pode passar um nome de propriedade de um [contexto de dados] 
 - Se você não especificar uma *fonte*, o comando cria uma tabela vazia com o tamanho definido em *rangeObj*.
 - Se a *fonte* especificada não puder ser totalmente exibida no documento, nenhuma tabela será criada.
 
-In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set.
+Na classe *options*, passe um objeto da [classe `cs.ViewPro.TableOptions`](../classes.md#tableoptions) que contém as propriedades da tabela a serem definidas.
 
 Dentro do objeto *opções*, a coleção *tableColumns* determina a estrutura das colunas da tabela. O comprimento da coleção *tableColumns* deve ser igual à contagem de colunas de intervalo:
 
