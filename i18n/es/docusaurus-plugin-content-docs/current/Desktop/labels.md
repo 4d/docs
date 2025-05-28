@@ -210,7 +210,7 @@ El contenido del archivo **labels.json** debe ser similar a:
 ]
 ```
 
-If no **labels.json** file has been defined, then no filtering is applied.
+Si no se ha definido ningún archivo **labels.json** entonces no se aplica ningún filtro.
 
 ## Managing label files
 
