@@ -219,7 +219,7 @@ O servidor Web 4D permite que você recupere dados enviados através de solicita
 
 Quando o servidor web recebe uma solicitação com dados no cabeçalho ou no URL, 4D pode recuperar os valores de qualquer objeto HTML que ele contém. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file.md) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), where the user enters or modifies values, then clicks on the validation button.
 
-In this case, 4D can retrieve the values of the HTML objects found in the request using the [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md) command. El comando `WEB GET VARIABLES` recupera los valores como texto.
+Neste caso, 4D pode recuperar os valores dos objetos HTML encontrados na solicitação usando o [comando [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md). El comando `WEB GET VARIABLES` recupera los valores como texto.
 
 Considere o seguinte código fonte da página HTML:
 
