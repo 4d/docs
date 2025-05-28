@@ -68,7 +68,7 @@ Você pode aumentar os benefícios da otimização usando a propriedade **contex
 
 A mesma propriedade de contexto de otimização pode ser passada para um número ilimitado de seleções de entidades na mesma classe de dados. All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). No entanto, lembre-se de que um contexto é atualizado automaticamente quando novos atributos são usados em outras partes do código. A reutilização do mesmo contexto em códigos diferentes pode resultar em sobrecarga do contexto e, portanto, reduzir sua eficiência.
 
-> A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
+> Um mecanismo semelhante é implementado para as entidades que são carregadas, de modo que apenas atributos usados são requisitados (veja a função [`dataClass.get()`](../API/DataClassClass.md#get)).
 
 **Exemplo com `dataClass.query()`:**
 
