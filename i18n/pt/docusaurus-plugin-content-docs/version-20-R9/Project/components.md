@@ -175,23 +175,23 @@ Caminhos absolutos devem ser usados apenas para componentes específicos para um
 
 ### Componentes armazenados no GitHub
 
-4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
+Componentes 4D disponíveis já que os lançamentos do GitHub podem ser referenciados e carregados automaticamente e atualizados nos seus projetos 4D.
 
 :::note
 
-Regarding components stored on GitHub, both [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files support the same contents.
+Em relação aos componentes armazenados no GitHub, ambos os arquivos [**dependencies.json**](#dependenciesjson) e [**environment4d.json**](#environment4djson) suportam o mesmo conteúdo.
 
 :::
 
 #### Configurando o repositório GitHub
 
-To be able to directly reference and use a 4D component stored on GitHub, you need to configure the GitHub component's repository:
+Para ser capaz de fazer referência direta e usar um componente 4D armazenado no GitHub, você precisa configurar o repositório do componente GitHub:
 
 - Compacte os arquivos de componentes no formato ZIP.
-- Name this archive with the same name as the GitHub repository.
-- Integrate the archive into a [GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) of the repository.
+- Nomeie este arquivo com o mesmo nome do repositório do GitHub.
+- Integre o arquivo em uma [versão do GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) do repositório.
 
-These steps can easily be automated, with 4D code or using GitHub Actions, for example.
+Essas etapas podem ser facilmente automatizadas, com o código 4D ou usando o GitHub Actions, por exemplo.
 
 #### Declarando caminhos
 
@@ -208,7 +208,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 }
 ```
 
-... where "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. Você precisa declará-lo no arquivo [**environment4d.json**] (#environment4djson):
+... onde "myGitHubComponent1" é referenciado e declarado para o projeto, embora "myGitHubComponent2" seja apenas referenciado. Você precisa declará-lo no arquivo [**environment4d.json**] (#environment4djson):
 
 ```json
 {
@@ -220,19 +220,19 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 }
 ```
 
-"myGitHubComponent2" can be used by several projects.
+"myGitHubComponent2" pode ser usado por vários projetos.
 
-#### Tags and versions
+#### Tags e versões
 
-When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
+Quando uma versão é criada no GitHub, ela é associada a uma **tag** e uma **versão**. O gerenciador de dependências usa essas informações para lidar com a disponibilidade automática de componentes.
 
 :::note
 
-If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).
+Se você selecionar a [**Seguir 4D Version**](#defining-a-github-dependency-version-range) regra de dependência, você precisa usar uma [convenção de nome específico para as tags](#naming-conventions-for-4d-version-tags).
 
 :::
 
-- **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
+- **Tags** são textos que referenciam exclusivamente uma versão. No arquivo [**dependencies.json**](#dependenciesjson) e [**environment4d.json**](#environment4djson) arquivos, você pode indicar a tag de lançamento que deseja usar no seu projeto. Por exemplo :
 
 ```json
 {
@@ -245,7 +245,7 @@ If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-
 }
 ```
 
-- Uma versão também é identificada por uma **versão**. The versioning system used is based on the [*Semantic Versioning*](https://regex101.com/r/Ly7O1x/3/) concept, which is the most commonly used. Each version number is identified as follows: `majorNumber.minorNumber.pathNumber`. In the same way as for tags, you can indicate the version of the component you wish to use in your project, as in this example:
+- Uma versão também é identificada por uma **versão**. O sistema de versionamento usado é baseado no conceito de [*Versão semântica*](https://regex101.com/r/Ly7O1x/3/), que é o mais comummente usado. Cada número de versão é identificado da seguinte forma: `majorNumber.minorNumber.pathNumber`. Da mesma forma que para marcadores, você pode indicar a versão do componente que você deseja usar em seu projeto, como neste exemplo:
 
 ```json
 {
@@ -258,7 +258,7 @@ If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-
 }
 ```
 
-A range is defined by two semantic versions, a min and a max, with operators '\< | > | >= | <= | ='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ and ^ prefixes define versions starting at a number, and up to respectively the next major and minor version.
+Um intervalo é definido por duas versões semânticas, um mínimo e um máximo, com as operadoras '\< ë> £>= ├<= ├='. O `*` pode ser usado como um espaço reservado para todas as versões. ~ e ^ prefixos define versões começando em um número e até a próxima versão principal e secundária.
 
 Eis alguns exemplos:
 
@@ -266,25 +266,25 @@ Eis alguns exemplos:
 - "\*": a versão mais recente lançada.
 - "1.\*": todas as versões da versão principal 1.
 - "1.2.\*": todos os patches da versão menor 1.2.
-- ">=1.2.3": the latest version, starting with the 1.2.3 version.
-- ">1.2.3": the latest version, starting with the version just after the 1.2.3.
-- "^1.2.3": the latest version 1, starting with the 1.2.3 version and strictly lower than version 2.
-- "~1.2.3": the latest version 1.2, starting with the 1.2.3 version and strictly lower than version 1.3.
+- ">=1.2.3": a última versão, começando com a versão 1.2.3.
+- ">1.2.3": a versão mais recente, começando com a versão imediatamente após a versão 1.2.3.
+- "^1.2.3": a última versão 1, começando com a versão 1.2.3 e estritamente inferior à versão 2.
+- "~1.2.3": a última versão 1.2, começando com a versão 1.2.3 e estritamente inferior à versão 1.3.
 - "<=1.2.3": a versão mais recente até a 1.2.3.
 - "1.0.0 - 1.2.3" ou ">=1.0.0 <=1.2.3": versão entre 1.0.0 e 1.2.3.
 - "`<1.2.3 || >=2`": versão que não está entre 1.2.3 e 2.0.0.
 
-If you do not specify a tag or a version, 4D automatically retrieves the "latest" version.
+Se você não especificar uma tag ou uma versão, 4D recupera automaticamente a "versão mais recente".
 
-The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range).
+O gerenciador de dependências verifica periodicamente se as atualizações do componente estão disponíveis no Github. Se uma nova versão estiver disponível para um componente, um indicador de atualização é então exibido para o componente na lista de dependências, [dependendo das configurações](#defining-a-github-dependency-version-range).
 
-#### Naming conventions for 4D version tags
+#### Nomeando convenções para tags de versão 4D
 
-If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases on the Github repository must comply with specific conventions.
+Se quiser usar a [**Seguir 4D Version**](#defining-a-github-dependency-version-range) regra de dependência, os marcadores de versões de componentes no repositório do Github devem obedecer a convenções específicas.
 
-- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *x.y* LTS version, the Dependency Manager will resolve it as "the latest version x.\*" if available or "version below x". If no such version exists, the user will be notified. For example, "20.4" will be resolved by the Dependency manager as "the latest component version 20.\* or version below 20".
+- **Versões do LT**: padrão `x.y.p`, onde `x. ` corresponde à versão 4D principal a seguir e o `p` (opcional) pode ser usado para versões patch ou atualizações adicionais. Quando um projeto especifica que segue a versão 4D para *x. \* Versão LTS, o Gerenciador de Dependências irá resolvê-lo como "a versão mais recente x.*" se disponível ou "versão abaixo de x". Se não existir essa versão, o usuário será notificado. Por exemplo, "20.4" será resolvido pelo Gerenciador de Dependências como "a última versão do componente 20.\* ou versão abaixo de 20".
 
-- **R-Release versions**: `xRy.p` pattern, where `x` and `y` correspond to the main 4D R-release version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *xRy* version, the Dependency Manager will resolve it to the "latest version below xR(y+1)" if available. If no such version exists, the user will be notified. For example, "20R9" will be resolved by the Dependency manager as "the latest component version below 20R10".
+- **Versões do R-Release**: `xRy. ` padrão, onde `x` e `y` correspondem à versão principal 4D R-release para seguir e `p` (opcional) podem ser usados para versões patch ou atualizações adicionais. Quando um projeto especifica que segue a versão 4D para *x. \* Versão LTS, o Gerenciador de Dependências irá resolvê-lo como "a versão mais recente x.*" se disponível ou "versão abaixo de x. Se não existir essa versão, o usuário será notificado. Por exemplo, "20R9" será resolvido pelo Gerenciador de Dependências como "a última versão do componente abaixo de 20R10".
 
 :::note
 
