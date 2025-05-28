@@ -505,7 +505,7 @@ Quando o método, classe ou função é validado, 4D verifica:
 
 The Code Editor can only check for obvious syntax errors (misspellings and the like). Não verifica os erros que só ocorrem durante a execução. Erros de execução são capturados por 4D quando o código é executado.
 
-4D tem um depurador integrado (consulte [Depuração](../Debugging/debugger.md)) para lidar com esses erros e corrigi-los. O compilador também oferece uma ajuda indispensável para a detecção de erros. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
+4D tem um depurador integrado (consulte [Depuração](../Debugging/debugger.md)) para lidar com esses erros e corrigi-los. O compilador também oferece uma ajuda indispensável para a detecção de erros. Para obter mais informações sobre o compilador, consulte o capítulo [Compilação](../Project/compiler.md).
 
 ## Dicas de ajuda
 
