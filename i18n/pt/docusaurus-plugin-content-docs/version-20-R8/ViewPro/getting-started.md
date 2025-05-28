@@ -152,4 +152,4 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 - .sjs
 - .pdf (apenas para exportação)
 
-For more details, check out the description of [VP IMPORT DOCUMENT](commands/vp-import-document.md) and [VP EXPORT DOCUMENT](commands/vp-export-document.md).
+Para obter mais detalhes, confira a descrição de [VP IMPORT DOCUMENT](commands/vp-import-document.md) e [VP EXPORT DOCUMENT](commands/vp-export-document.md).
