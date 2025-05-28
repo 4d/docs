@@ -42,7 +42,7 @@ A resolução recomendada é 1920x1080.
 
 Por padrão, o acesso a Qodly Studio não é concedido.
 
-Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
+Qodly Studio é servido pelo [servidor web WebAdmin](../Admin/webAdmin.md) e exibe dados de projetos 4D tratados pelo [servidor web](webServer.md).
 
 Para permitir o acesso ao Qodly Studio, você deve permiti-lo explicitamente em dois níveis:
 
