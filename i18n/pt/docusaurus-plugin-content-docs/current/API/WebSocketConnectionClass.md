@@ -3,7 +3,7 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
-The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class](WebSocketServerClass.md).
+A API da classe `WebSocketConnection` permite que você gerencie conexões WebSocket, uma vez estabelecida usando a [classe `WebSocketServer`](WebSocketServerClass.md).
 
 :::info
 
