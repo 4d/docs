@@ -3,17 +3,17 @@ id: qodly-studio
 title: Qodly Studio for 4D
 ---
 
-**Qodly Studio** é um construtor de interfaces para aplicações web. It provides developers with a graphical page editor to design applications running in web browsers or smartphones. Ele suporta nativamente os [objetos ORDA](../ORDA/overview.md).
+**Qodly Studio** é um construtor de interfaces para aplicações web. Ele fornece aos desenvolvedores um editor gráfico de página para projetar aplicativos que são executados em navegadores web ou smartphones. Ele suporta nativamente os [objetos ORDA](../ORDA/overview.md).
 
 Você pode usar Qodly Studio diretamente do seu **ambiente 4D** para criar interfaces modernas e sofisticadas que podem ser facilmente integradas aos seus projetos 4D existentes e implementadas **no local**.
 
-Qodly Studio can also be used in the [**Qodly Cloud platform**](https://qodly.com), dedicated to the development of web business applications.
+O Qodly Studio também pode ser usado na [**plataforma Qodly Cloude**](https://qodly.com), dedicada ao desenvolvimento de aplicativos de negócios web.
 
-Qodly Studio proposes a full-featured web UI, allowing you to:
+O Qodly Studio propõe uma interface de usuário web completa permitindo que você:
 
-- create Qodly pages by placing components on a canvas
-- map components to Qodly Sources
-- acionar o código 4D configurando eventos
+- crie páginas Qodly colocando componentes em uma tela
+- mapeie componentes para Qodly Sources
+- acione o código 4D configurando eventos
 - e muito mais.
 
 ## Configuração
@@ -34,22 +34,22 @@ A resolução recomendada é 1920x1080.
 
 - Desenvolvimento: 4D v20 R2 ou superior
 - Desenvolvimento: 4D Server v20 R2 ou superior
-- Qodly Studio only works with 4D projects (binary databases are not supported).
-- Web sessions (*aka* Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
-- O código 4D chamado pelos formulários Qodly deve ser [hilo seguro] (preemptiveWeb.md).
+- Qodly Studio só funciona com projetos 4D (bancos de dados binários não são suportados).
+- Sessões Web (*aka* realizáveis) precisam [estar habilitadas](sessions.md#enabling-web-sessions).
+- O código 4D chamado pelos formulários Qodly deve ser [thread-safe](preemptiveWeb.md).
 
 ### Habilitando o acesso a Qodly Studio
 
 Por padrão, o acesso a Qodly Studio não é concedido.
 
-Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
+O Qodly Studio é servido pelo [servidor web WebAdmin](../Admin/webAdmin.md) e exibe dados de projetos 4D tratados pelo [servidor web](webServer.md).
 
 Para permitir o acesso ao Qodly Studio, você deve permiti-lo explicitamente em dois níveis:
 
 - ao nível da aplicação 4D
 - a nível do projeto
 
-If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).
+Se um dos dois níveis (ou ambos) não estiver habilitado, o acesso ao Qodly Studio é negado (uma página 403 é retornada).
 
 #### No nível 4D
 
@@ -251,7 +251,7 @@ To detach the Qodly Studio debugger from your running 4D Server application:
 
 ## Force login
 
-With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-login-mode) allows you to control the number of opened web sessions that require 4D Client licenses. Você também pode fazer [desconectar](#logout) o usuário a qualquer momento para diminuir o número de licenças retidas.
+Com Qodly Studio for 4D, o [modo "forçar login"](../REST/authUsers.md#force-login-mode) permite controlar o número de sessões web abertas que requerem licenças cliente 4D. Você também pode fazer [desconectar](#logout) o usuário a qualquer momento para diminuir o número de licenças retidas.
 
 ### Configuração
 
