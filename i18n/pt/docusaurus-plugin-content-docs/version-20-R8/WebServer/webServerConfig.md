@@ -503,11 +503,11 @@ Neste caso, os robots não estão autorizados a aceder a todo o sítio.
 
 ## Pasta raiz
 
-| Pode ser definido com              | Nome                                                                         | Comentários                                                                                                                           |
-| ---------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer                   | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
-| `WEB SET ROOT FOLDER`              |                                                                              |                                                                                                                                       |
-| Caixa de diálogos de configurações | [Página Configuração/raiz HTML padrão](../settings/web.md#default-html-root) |                                                                                                                                       |
+| Pode ser definido com              | Nome                                                                         | Comentários                                                                                                                             |
+| ---------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer                   | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Propriedade Texto, mas pode ser um objeto [`4D.Folder`](API/FolderClass.md) quando usado com o parâmetro *settings* da função `start()` |
+| `WEB SET ROOT FOLDER`              |                                                                              |                                                                                                                                         |
+| Caixa de diálogos de configurações | [Página Configuração/raiz HTML padrão](../settings/web.md#default-html-root) |                                                                                                                                         |
 
 Caminho da pasta raiz do servidor web, ou seja, a pasta na qual 4D procurará as páginas HTML estáticas e semidinâmicas, imagens, etc., para enviar aos navegadores. O caminho é formatado no caminho completo POSIX. O servidor da Web precisará ser reiniciado para que a nova pasta raiz seja levada em consideração.
 
