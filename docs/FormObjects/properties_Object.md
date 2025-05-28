@@ -110,23 +110,6 @@ To get or set the value of form objects that use dynamic variables, you just nee
  OBJECT SET VALUE("comments";$value+10) 
 ```
 
-There are two advantages with this mechanism:
-
-- On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
-- On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
-
-
-In the 4D code, dynamic variables themselves can be accessed using [`OBJECT Get data source formula`](../commands/object-get-data-sourvce-formula.md) or through a pointer. For example:
-
-```4d
-  // to get the dynamic variable assigned to "tstart"
- $var:=OBJECT Get data source formula(*; "tstart")
-  //$var is the variable name
-  //OR
- $var:=OBJECT Get pointer(Object named;"tstart") 
-  //$var-> gives the variable name
-```
-
 
 ### Array List Box
 
