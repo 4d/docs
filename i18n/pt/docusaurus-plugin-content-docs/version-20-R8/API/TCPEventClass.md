@@ -3,7 +3,7 @@ id: TCPEventClass
 title: TCPEvent
 ---
 
-The `TCPEvent` class provides information about events occurring during the lifecycle of a TCP connection. It is generated when a [TCPConnection](TCPConnectionClass.md) is opened and is typically utilized in callbacks such as `onConnection`, `onData`, `onError`, and others.
+The `TCPEvent` class provides information about events occurring during the lifecycle of a TCP connection. Ele é gerado quando um [TCPConnection](TCPConnectionClass.md) é aberto e normalmente utilizado em callbacks como `onConnection`, `onData`, `onError`, entre outros.
 
 <details><summary>História</summary>
 
