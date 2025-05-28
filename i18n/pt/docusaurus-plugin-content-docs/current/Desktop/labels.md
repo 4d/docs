@@ -27,7 +27,7 @@ To open the Label editor:
 
 - In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
  OU
-- In an application, call the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+- Em uma aplicação, chame o comando [`PRINT LABEL`](../commands-legacy/print-label.md).
 
 ![](../assets/en/Desktop/label-wizard.png)
 
