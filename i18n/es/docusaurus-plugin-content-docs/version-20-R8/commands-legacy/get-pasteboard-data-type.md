@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | firmas4D | Text array | &#8592; | Firmas 4D de tipos de datos |
 | tiposNativos | Text array | &#8592; | Tipos de datos nativos |
-| nombresFormatos | Text array | &#8592; | Nombres de los formatos (Windows únicamente), cadenas vacías bajo Mac OS |
+| nombresFormatos | Text array | &#8592; | Nombres de los formatos |
 
 <!-- END REF-->
 
@@ -30,7 +30,7 @@ Este comando devuelve los tipos de datos en diferentes formas vía dos (o tres) 
 
 El array *tiposNativos* permite soportar todo tipo de datos presentes en el portapapeles, incluyendo los datos cuyo tipo no está referenciado por 4D.
 
-* Bajo Windows, también puede pasar el array *nombresFormatos*, que recibe los nombres de los tipos de datos encontrados en el portapapeles. Los valores devueltos en este array pueden ser utilizados por ejemplo para construir un menú desplegable de selección de formato. Bajo Mac OS, el array *nomsFormats* devuelve las cadenas vacías.
+* También puede pasar el array *nombresFormatos*, que recibe los nombres de los tipos de datos encontrados en el portapapeles. Los valores devueltos en este array pueden ser utilizados por ejemplo para construir un menú desplegable de selección de formato. 
 
 Para mayor información sobre los tipos de datos soportados, consulte la sección *Gestión de portapapeles*.
 
