@@ -286,7 +286,7 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. An error is therefore defined by three elements:
 
-- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
+- um **assinatura do componente**, sendo a origem do erro (veja [`Last errors`](../commands/last-errors.md) para ter uma lista de assinaturas)
 - uma **mensagem**, que explica porque o erro ocorreu
 - um **código**, que é um número arbitrário retornado pelo componente
 
