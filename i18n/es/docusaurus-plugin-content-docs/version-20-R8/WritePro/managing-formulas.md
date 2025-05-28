@@ -66,7 +66,7 @@ You can insert special expressions related to document attributes in any documen
 
 :::note
 
-Additional context properties are available when you work with tables. See *Handling tables* for more information.
+Additional context properties are available when you work with tables. Vea *Gestión de tablas* para más información.
 
 :::
 
