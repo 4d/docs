@@ -24,7 +24,7 @@ Custom HTTP Request handlers are supported:
 
 :::warning
 
-[Por padrão](../ORDA/privileges.md#default-file) por razões de segurança, o acesso externo ao datastore não é permitido em 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+[Por padrão](../ORDA/privileges.md#default-file) por razões de segurança, o acesso externo ao datastore não é permitido em 4D. Você precisa configurar os [privilégios ORDA](../ORDA/privileges.md) para permitir solicitações HTTP.
 
 :::
 
