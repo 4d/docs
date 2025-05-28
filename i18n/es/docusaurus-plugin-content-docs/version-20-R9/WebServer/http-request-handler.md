@@ -209,7 +209,7 @@ Here is a detailed example of a HTTPHandlers.json file:
 In this example, you must implement the following functions:
 
 - *handle function* in the *GeneralHandling* class
-- *manageAccount* in the *UsersHandling* class
+- *manageAccount* en la clase *UsersHandling*
 - *handleInvoices* in the *FinancialHandling* class
 - *handleDocs* en la clase *DocsHandling*
 - *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
