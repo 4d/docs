@@ -24,7 +24,7 @@ Custom HTTP Request handlers are supported:
 
 :::warning
 
-[Por padrão](../ORDA/privileges.md#default-file) por razões de segurança, o acesso externo ao datastore não é permitido em 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+[Por padrão](../ORDA/privileges.md#default-file) por razões de segurança, o acesso externo ao datastore não é permitido em 4D. Você precisa configurar os [privilégios ORDA](../ORDA/privileges.md) para permitir solicitações HTTP.
 
 :::
 
@@ -249,7 +249,7 @@ It is **not recommended** to expose request handler functions to external REST c
 
 ### Input: an instance of the 4D.IncomingMessage class
 
-When a request has been intercepted by the handler, it is received on the server as an instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+Quando uma solicitação foi interceptada pelo manipulador, ela é recebida no servidor como uma instância da [4D.IncomingMessage clas](../API/IncomingMessageClass.md).
 
 All necessary information about the request are available in this object, including the request url, verb, headers, and, if any, parameters (put in the URL) and body.
 
