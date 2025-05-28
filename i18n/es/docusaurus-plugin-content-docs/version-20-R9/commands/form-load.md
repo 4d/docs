@@ -50,7 +50,7 @@ The current printing form is automatically closed when the [CLOSE PRINTING JOB](
 
 ### Análisis del contenido del formulario
 
-This consists in loading an off-screen form for parsing purposes. To do this, just call **FORM LOAD** outside the context of a print job. In this case, form events are not executed.
+This consists in loading an off-screen form for parsing purposes. Para ello, basta con llamar a **FORM LOAD** fuera del contexto de un trabajo de impresión. In this case, form events are not executed.
 
 **FORM LOAD** puede utilizarse con los comandos [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) y [OBJECT Get type](../commands-legacy/object-get-type.md) para realizar cualquier tipo de procesamiento sobre el contenido del formulario. A continuación, debe llamar al comando [FORM UNLOAD](../commands-legacy/form-unload.md) para liberar el formulario de la memoria.
 
