@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form*** imprime campos y variables solo en un marco de tamaño fijo.
 
 En el parámetro *form*, puede pasar:
 
@@ -99,7 +99,7 @@ Para obtener información detallada sobre el objeto de datos del formulario, con
 
 The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
 
-The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
+Las cajas de diálogo de la impresora no aparecen cuando se utiliza **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
 - Llamar a [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
 - Llame a [SET PRINT OPTION](../commands-legacy/set-print-option.md) y [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
