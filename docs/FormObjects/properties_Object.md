@@ -116,12 +116,15 @@ There are two advantages with this mechanism:
 - On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 
-In the 4D code, dynamic variables themselves can be accessed through a pointer to the form object. For example:
+In the 4D code, dynamic variables themselves can be accessed using [`OBJECT Get data source formula`](../commands/object-get-data-sourvce-formula.md) or through a pointer. For example:
 
 ```4d
   // to get the dynamic variable assigned to "tstart"
- $p:=OBJECT Get pointer(Object named;"tstart") 
-  //$p-> gives the variable name
+ $var:=OBJECT Get data source formula(*; "tstart")
+  //$var is the variable name
+  //OR
+ $var:=OBJECT Get pointer(Object named;"tstart") 
+  //$var-> gives the variable name
 ```
 
 
