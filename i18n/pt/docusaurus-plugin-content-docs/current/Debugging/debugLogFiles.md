@@ -234,7 +234,7 @@ Os campos abaixo estão registrados para cada evento:
 
 ## 4DDiagnosticLog.txt
 
-Esse arquivo registra vários eventos relacionados à operação de aplicação e sua leitura humana. You can include custom information in this file using the [LOG EVENT](../commands-legacy/log-event.md) command.
+Esse arquivo registra vários eventos relacionados à operação de aplicação e sua leitura humana. Você pode incluir informações personalizadas nesse arquivo usando o comando [LOG EVENT](../commands-legacy/log-event.md).
 
 Como iniciar esse log:
 
