@@ -824,37 +824,38 @@ $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 
 ## onHTTPGet keyword
 
-Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
+Utilice la palabra clave `onHTTPGet` para declarar funciones que puedan ser llamadas a través de peticiones HTTP utilizando el verbo `GET`. Estas funciones pueden devolver cualquier contenido web, por ejemplo utilizando la clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md).
 
-The `onHTTPGet` keyword is available with:
 
-- ORDA Data model class functions
+La palabra clave `onHTTPGet` está disponible con:
+
+- Funciones de la clase ORDA Data model
 - [Funciones de la clase Singletons](../Concepts/classes.md#singleton-classes)
 
 La sintaxis formal es:
 
 ```4d
-// declare an onHTTPGet function
+// declarar una función onHTTPGet
 exposed onHTTPGet Function <functionName>(params) : result
 ```
 
 :::info
 
-The `exposed` keyword must also be added in this case, otherwise an error will be generated.
+En este caso también debe añadirse la palabra clave `exposed`, de lo contrario se generará un error.
 
 :::
 
 :::caution
 
-As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+Como este tipo de llamada es una acción que se ofrece fácilmente, el desarrollador debe asegurarse de que no se realiza ninguna acción sensible en dichas funciones.
 
 :::
 
 ### params
 
-A function with `onHTTPGet` keyword accepts [parameters](../Concepts/parameters.md).
+Una función con la palabra clave `onHTTPGet` acepta [parámetros](../Concepts/parameters.md).
 
-In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
+En la petición HTTP GET, los parámetros deben pasarse directamente en la URL y declararse utilizando la palabra clave `$params` (deben estar encerrados en una colección).
 
 ```
 IP:port/rest/<dataclass>/functionName?$params='[<params>]'
@@ -868,13 +869,13 @@ A function with `onHTTPGet` keyword can return any value of a supported type (sa
 
 :::info
 
-You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+Puede devolver un valor de la clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para beneficiarse de propiedades y funciones para definir el encabezado, el cuerpo y el estado de la respuesta.
 
 :::
 
 ### Ejemplo
 
-You have defined the following function:
+Ha definido la siguiente función:
 
 ```4d
 Class extends DataClass
@@ -892,7 +893,7 @@ exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height 
 	return $response
 ```
 
-It can be called by the following HTTP GET request:
+Se puede llamar mediante la siguiente petición HTTP GET:
 
 ```
 IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
@@ -911,7 +912,7 @@ local Function <functionName>
 
 Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 
-> La palabra clave `local` sólo puede utilizarse con las funciones de clase del modelo de datos. Si se utiliza con una función de [ clase usuario estándar](Concepts/classes.md), se ignora y el compilador devuelve un error.
+> La palabra clave `local` sólo puede utilizarse con las funciones de clase del modelo de datos. Si se utiliza con una función de [clase usuario estándar](Concepts/classes.md), se ignora y el compilador devuelve un error.
 
 Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
 
@@ -1006,7 +1007,7 @@ Para crear un archivo de clase ORDA, basta con hacer doble clic en la clase pred
 Class extends Entity
 ```
 
-Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
+Una vez definida una clase, su nombre ya no aparecerá atenuado en el Explorador.
 
 ### Editar las clases
 
