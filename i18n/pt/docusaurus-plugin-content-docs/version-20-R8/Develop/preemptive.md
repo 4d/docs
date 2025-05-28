@@ -217,7 +217,7 @@ Nesse caso, todos os triggers são avaliados. Se um comando thread-unsafe for de
 
 :::note
 
-In [client/server applications](../Desktop/clientServer.md), triggers may be executed in cooperative mode, even if their code is thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
+Em as [aplicações client/servidor](../Desktop/clientServer.md), os triggers podem ser executados em modo cooperativo, mesmo que o código deles seja thread-safe. This happens when a trigger is activated from a remote process: in this case, the trigger is executed in the ["twinned" process of the client process](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) on the server machine. Since this process is used for all calls from the client, it is always executed in cooperative mode.
 
 :::
 
