@@ -852,7 +852,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 ### params
 
-A function with `onHTTPGet` keyword accepts [parameters](../Concepts/parameters.md).
+Una función con la palabra clave `onHTTPGet` acepta [parámetros](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
 
