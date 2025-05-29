@@ -109,7 +109,7 @@ The *Contents* folder contains:
 
 - *MyComponent.4DZ* file - the [compiled structure](#build-compiled-structure).
 - Uma pasta *Resources* - quaisquer Recursos associados são automaticamente copiados para esta pasta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
-- An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). If an *Info.plist* file already [exists at the root of the component](../Extensions/develop-components.md#infoplist) it is merged, otherwise a default file is created. As seguintes [Chaves do pacote da Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) são prepreenchidas:
+- An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). Se um arquivo *Info.plist* já [existir na raiz do componente](../Extensions/develop-components.md#infoplist) ele for mesclado, caso contrário um arquivo padrão será criado. As seguintes [Chaves do pacote da Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) são prepreenchidas:
  - `CFBundleDisplayName` e `CFBundleName` para o nome da aplicação,
  - `NSHumanReadableCopyright`, pode ser [configurado usando uma chave XML](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html).
  - `CFBundleShortVersionString` e `CFBundleVersion` para a versão do aplicativo (formato x.x.x, por exemplo, 1.0.5), podem ser [definidas usando uma chave XML](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html).
