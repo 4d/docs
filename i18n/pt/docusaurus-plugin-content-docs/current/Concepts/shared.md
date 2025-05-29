@@ -3,7 +3,7 @@ id: shared
 title: Objetos e coleções compartilhados
 ---
 
-**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](./dt_object.md) e [collections](./dt_collection.md) cujo conteúdo é compartilhado entre processos. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
 
 Objetos compartilhados e coleções compartilhadas são armazenados em variáveis padrão [`Object`](./dt_object.md) e [`Collection`](./dt_collection.md) do tipo, mas devem ser instanciados usando comandos específicos:
 
