@@ -408,7 +408,7 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 
 ```
 
-2. The user is sent this URL as a link in an email. The URL prefix `/validateEmail` is handled by a [custom HTTP request handler](./http-request-handler.md):
+2. The user is sent this URL as a link in an email. El prefijo URL `/validateEmail` es manejado por un [gestor de solicitudes HTTP personalizadas](./http-request-handler.md):
 
 ```json
 [
