@@ -48,7 +48,7 @@ Esta página contém opções relacionadas ao acesso e à proteção de dados pa
     Quando esta opção está seleccionada:
 
     - os componentes 4D são carregados,
-    - each [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) of the component (if any) is called by the host database,
+    - cada [método banco de dados On Host Database Event](../commands-legacy/on-host-database-event-database-method.md) do componente (se houver) é chamado pelo banco de dados host,
     - o código do método é executado.
 
     Quando não é verificado:
