@@ -93,7 +93,7 @@ There are 2 url parts - Url parts are: start - example
 
 :::note
 
-A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Un objeto 4D.IncomingMessage es un objeto [no compartible](../Concepts/shared.md).
 
 :::
 
@@ -317,7 +317,7 @@ $test:=Value type(JSON Parse($r.urlQuery.myparams))=Is collection) //true
 
 Special characters such as simple quotes or carriage returns must be escaped.
 
-Example: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
+Ejemplo: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
 ````4d
 //urlQuery.mdcode = ```4d
