@@ -112,7 +112,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 **Warning:** Subforms are not printed with **Print form**. Para imprimir sólo un formulario con dichos objetos, utilice [PRINT RECORD](../commands-legacy/print-record.md) en su lugar.
 
-**Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
+**Print form** genera sólo un [evento [`On Printing Detail`](../Events/onPrintingDetail.md) para el método formulario.
 
 **4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. En este contexto:
 
