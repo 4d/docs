@@ -45,7 +45,7 @@ You want to replace the selection in a 4D Write Pro area with the contents of a 
 
 ## Formula context object
 
-You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. Você pode usar as propriedades desse objeto por meio de [**This**](../commands/this.md):
+Você pode inserir expressões especiais relacionadas aos atributos de documento em qualquer área de documento (corpo, cabeçalho, rodapé) usando o comando [WP Insert formula](commands/wp-insert-formula.md). Within a formula, a formula context object is automatically exposed. Você pode usar as propriedades desse objeto por meio de [**This**](../commands/this.md):
 
 | Propriedades                                                                   | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
