@@ -250,7 +250,7 @@ To detach the Qodly Studio debugger from your running 4D Server application:
 
 ## Force login
 
-With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-login-mode) allows you to control the number of opened web sessions that require 4D Client licenses. Você também pode fazer [desconectar](#logout) o usuário a qualquer momento para diminuir o número de licenças retidas.
+Com Qodly Studio for 4D, o [modo "forçar login"](../REST/authUsers.md#force-login-mode) permite controlar o número de sessões web abertas que requerem licenças cliente 4D. Você também pode fazer [desconectar](#logout) o usuário a qualquer momento para diminuir o número de licenças retidas.
 
 ### Configuração
 
