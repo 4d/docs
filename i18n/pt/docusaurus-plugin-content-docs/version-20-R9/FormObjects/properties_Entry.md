@@ -27,7 +27,7 @@ Permite ao usuário aceder a um menu de contexto padrão no objeto quando o form
 
 Para uma imagem do tipo [entrada](input_overview.md), além dos comandos de edição padrão (Recortar, Copiar, Colar e Limpar), o menu contém o comando **Importar...**, que pode ser usado para importar uma imagem armazenada em um arquivo, bem como o comando **Salvar como...**, que pode ser usado para salvar a imagem no disco. O menu também pode ser usado para modificar o formato de exibição da imagem: são oferecidas as opções **Truncado não centralizado**, **Escalonado para caber** e **Escalonado para caber na imagem centralizada**. A modificação do [formato de exibição](properties_Display.md#picture-format) usando esse menu é temporária; ela não é salva com o registro.
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
+Para uma [entrada](input_overview.md) tipo texto [multi-style](properties_Text.md#multi-style), além dos comandos de edição padrão, o menu de contexto fornece os seguintes comandos:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. A lista pode armazenar até 10 fontes (além disso, a última fonte usada substitui a mais antiga). Por defeito, esta lista está vazia e a opção não é apresentada. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
