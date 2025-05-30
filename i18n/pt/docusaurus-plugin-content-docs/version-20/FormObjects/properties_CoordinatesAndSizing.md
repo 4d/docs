@@ -291,7 +291,7 @@ Define um preenchimento horizontal para as células. O valor é definido em pixe
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+[List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapés](properties_Footers.md) - [Encabeçados](properties_Headers.md)
 
 #### Veja também
 
@@ -311,7 +311,7 @@ Define um preenchimento vertical para as células. O valor é definido em pixeis
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+[List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapés](properties_Footers.md) - [Encabeçados](properties_Headers.md)
 
 #### Veja também
 
