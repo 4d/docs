@@ -496,7 +496,7 @@ This second technique of returning a value by a subroutine is called "using a fu
 
 Deve prestar atenção ao fato de que os tipos de dados Objeto e Coleção só podem ser manejados através de uma referência (ou seja, um  ponteiro interno\*).
 
-Por isso, quando usar esses tipos de dados como parâmetros, `$param, $return...` não contém *valores* mas sim *referências*. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$param, $return...` parameters do not need to be dereferenced in the subroutine.
+Por isso, quando usar esses tipos de dados como parâmetros, `$param, $return...` não contém *valores* mas sim *referências*. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. Este é o mesmo princípio que para [ponteiros](dt_pointer.md#pointers-as-parameters-to-methods), exceto que os parâmetros `$param, $return...` não precisam ser desreferenciados na sub-rotina.
 
 Por exemplo, considere o método `CreatePerson` que cria um objeto e o envia como parâmetro:
 
