@@ -111,7 +111,7 @@ Once the export operation is finished, `VP EXPORT DOCUMENT` automatically trigge
 
 ## Passagem de um método de retorno de chamada (fórmula)
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../commands/formula.md) command to call a 4D method which will be executed once the export has completed. O método de retorno de chamada receberá os seguintes valores em parâmetros locais:
+Ao incluir o parâmetro opcional *paramObj*, o comando permite que você use o comando [`Formula`](../../commands/formula.md) para chamar um método 4D que será executado após a conclusão da exportação. O método de retorno de chamada receberá os seguintes valores em parâmetros locais:
 
 | Parâmetro |                               | Tipo    | Descrição                                                                    |
 | --------- | ----------------------------- | ------- | ---------------------------------------------------------------------------- |
