@@ -97,7 +97,7 @@ Para obtener información detallada sobre el objeto de datos del formulario, con
 
 **Valor devuelto**
 
-The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
+The value returned by **Print form** indicates the height of the printable area. Este valor será tomado en cuenta automáticamente por el comando [Get printed height](../commands-legacy/get-printed-height.md).
 
 Las cajas de diálogo de la impresora no aparecen cuando se utiliza **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
