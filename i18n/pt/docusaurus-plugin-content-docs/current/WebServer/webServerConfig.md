@@ -26,11 +26,11 @@ Há diferentes maneiras de configurar as definições do servidor web 4D, depend
 
 Ativa e configura a cache da página Web.
 
-El servidor web 4D dispone de una caché que permite cargar las páginas estáticas, las imágenes GIF, las imágenes JPEG (<512 kb) y las hojas de estilo (archivos.css) en memoria, a medida que se solicitan. O uso do cache permite que você aumente significativamente o desempenho do servidor da Web ao enviar páginas estáticas. A cache é partilhada entre todos os processos Web. Quando a cache está ativada, o servidor da Web 4D procura primeiro qualquer página estática solicitada pelo navegador na cache. Se encontrar a página, envia-a imediatamente. Se não, 4D carrega a página do disco e a coloca no cache.
+The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. O uso do cache permite que você aumente significativamente o desempenho do servidor da Web ao enviar páginas estáticas. A cache é partilhada entre todos os processos Web. Quando a cache está ativada, o servidor da Web 4D procura primeiro qualquer página estática solicitada pelo navegador na cache. Se encontrar a página, envia-a imediatamente. Se não, 4D carrega a página do disco e a coloca no cache.
 
-Puede modificar el tamaño de la caché en el área **Tamaño de la caché de las páginas**. O valor que você define depende do número e do tamanho das páginas estáticas do seu site, bem como dos recursos que as máquinas hospedeiras têm à disposição.
+You can modify the size of the cache in the **Pages Cache Size** area. O valor que você define depende do número e do tamanho das páginas estáticas do seu site, bem como dos recursos que as máquinas hospedeiras têm à disposição.
 
-> Mientras utiliza su base de datos web, puede verificar el rendimiento de la caché utilizando el comando `WEB GET STATISTICS`. Se, por exemplo, você notar que a taxa de utilização do cache está próxima a 100%, você pode querer considerar aumentar o tamanho que lhe foi atribuído. As URLs [/4DSTATS] e [/4DHTMLSTATS] permitem que você também obtenha informações sobre o estado do cache.
+> While using your web database, you can check the performance of the cache by using the `WEB GET STATISTICS` command. Se, por exemplo, você notar que a taxa de utilização do cache está próxima a 100%, você pode querer considerar aumentar o tamanho que lhe foi atribuído. As URLs [/4DSTATS] e [/4DHTMLSTATS] permitem que você também obtenha informações sobre o estado do cache.
 
 ## Pasta de certificados
 
@@ -40,9 +40,9 @@ Puede modificar el tamaño de la caché en el área **Tamaño de la caché de la
 
 Pasta onde estão localizados os arquivos de certificado TLS para o servidor web.
 
-Por defecto con 4D o 4D Server, estos archivos deben colocarse junto a la [carpeta Project](Project/architecture.md#project-folder).
+By default with 4D or 4D Server, these files must be placed next to the [project folder](Project/architecture.md#project-folder).
 
-Con 4D en modo remoto, estos archivos deben estar ubicados en la carpeta de recursos locales de la base de datos en la máquina remota (ver `Carpeta base 4D Client` del comando `Get 4D folder`). Deve copiar esses arquivos manualmente na máquina remota.
+With 4D in remote mode, these files must be located in the local resources folder of the database on the remote machine (see `4D Client Database Folder` paragraph of the `Get 4D folder` command). Deve copiar esses arquivos manualmente na máquina remota.
 
 > TLS certificate files are *key.pem* (document containing the private encryption key) and *cert.pem* (document containing the certificate).
 
@@ -119,7 +119,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 | objeto webServer      | `debugLog`      | number      |
 | `WEB SET OPTION`      | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
+Estado do arquivo de log de solicitações HTTP do servidor web ([*HTTPDebugLog_nn. xt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), armazenado na pasta "Logs" da aplicação -- nn é o número do arquivo). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
 | Valor | Parâmetros                     | Descrição                                                                         |
 | ----- | ------------------------------ | --------------------------------------------------------------------------------- |
@@ -151,7 +151,7 @@ Você pode designar outra página inicial padrão inserindo seu nome de caminho.
 
 Por exemplo, se você quiser que a página inicial padrão seja "MyHome. tm", e está localizado na pasta "Web" (ela própria localizada na pasta raiz padrão HTML), use "Web/MyHome.htm".
 
-Si no se especifica ninguna página de inicio por defecto, se llama al método base `On Web Connection`. Cabe-lhe a si processar o pedido de forma processual.
+If you do not specify any default home page, the `On Web Connection` database method is called. Cabe-lhe a si processar o pedido de forma processual.
 
 ## Ativar CORS
 
@@ -165,7 +165,7 @@ O servidor web 4D implementa o compartilhamento de recursos entre origens (CORS)
 
 Quando desativado (padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas.
 
-Para más información sobre CORS, consulte la página [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) en Wikipedia.
+For more information about CORS, please refer to the [Cross-origin resource sharing page](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
 
 #### Veja também
 
@@ -200,13 +200,13 @@ Estado da comunicação por HTTPS. Esta opción se describe en [esta sección](A
 
 Estado do HTTP Strict Transport Security (HSTS).
 
-Cuando [HTTPS está activado](#enable-https), recuerde que si [HTTP está también activado](#enable-http), el navegador puede cambiar entre HTTPS y HTTP (por ejemplo, en la zona de la URL del navegador, el usuario puede sustituir "https" por "http"). Para prohibir las redirecciones http, puede [desactivar el HTTP](#enable-http), sin embargo en este caso se muestra un mensaje de error a las peticiones HTTP del cliente.
+Cuando [HTTPS está activado](#enable-https), recuerde que si [HTTP está también activado](#enable-http), el navegador puede cambiar entre HTTPS y HTTP (por ejemplo, en la zona de la URL del navegador, el usuario puede sustituir "https" por "http"). To forbid http redirections, you can [disable HTTP](#enable-http), however in this case an error message is displayed to client HTTP requests.
 
 O HSTS permite que o servidor web 4D declare que os navegadores só devem interagir com ele por meio de conexões HTTPS seguras. Uma vez ativado, o servidor 4D da web irá adicionar automaticamente informações relacionadas ao HSTS em todos os cabeçalhos de resposta. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor da web 4D, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con el parámetro web **HSTS max age**.
 
-> HSTS requiere que [HTTPS esté activado](#enable-https) en el servidor. [El HTTP](#enable-http) también debe estar activado para permitir las conexiones iniciales del cliente.
+> HSTS requires that [HTTPS is enabled](#enable-https) on the server. [El HTTP](#enable-http) también debe estar activado para permitir las conexiones iniciales del cliente.
 
-> Puede obtener el modo de conexión actual utilizando el comando `WEB Is secured connection`.
+> You can get the current connection mode using the `WEB Is secured connection` command.
 
 ## HSTS Max Age
 
@@ -277,7 +277,7 @@ Ativação do método HTTP TRACE no servidor web 4D. Por motivos de segurança, 
 | `WEB SET OPTION`                   | `Web HTTPS port ID`                                                 |             |
 | Caixa de diálogos de configurações | [Página de Configuração/Porta HTTPS](../settings/web.md#https-port) |             |
 
-Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor é 443 (valor padrão). Ver también [HTTP Port](#http-port) para obtener información sobre los números de puerto.
+Número da porta IP de escuta para conexões HTTPS via TLS. Por padrão, o valor é 443 (valor padrão). See also [HTTP Port](#http-port) for information on port numbers.
 
 ## Tempo limite do processo inativo
 
@@ -325,7 +325,8 @@ Se o seu servidor 4D não parecer responder na porta definida, pode testar o end
 
 - **IPv4-mapped IPv6 addresses**<br/> To standardize processing, 4D provides a standard hybrid representation of IPv4 addresses in IPv6. Esses endereços são escritos com um prefixo de 96 bits no formato IPv6, seguido de 32 bits escritos na notação ponto-decimal do IPv4. Por exemplo, ::ffff:192.168.2.34 representa o endereço IPv4 192.168.2.34.
 
-- **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
+- **Indication of port numbers**<br/>
+   Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
 	2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
@@ -592,7 +593,7 @@ El valor del atributo `Secure` de la cookie de sesión se define automáticament
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------- |
 | Caixa de diálogos de configurações | [Página Opções (I)/Usar processos preventivos](../settings/web.md#use-preemptive-processes) |             |
 
-Esta opción activa el modo apropiativo para el código del servidor web de su aplicación cuando se selecciona la opción **Sin sesiones** (el modo apropiativo siempre está activado con **sesiones escalables**). Cuando esta opción está marcada en este contexto, el compilador 4D evaluará automáticamente la propiedad hilo seguro de cada pieza de [código relacionado con la web](preemptiveWeb.md#thread-safety-of-4d-web-code) y devolverá errores en caso de incompatibi
+This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 
 ## Parâmetros obsoletos
 
@@ -600,11 +601,11 @@ As configurações a seguir ainda são compatíveis, mas dependem de recursos ou
 
 #### Permitir acesso ao banco de dados através de URLs 4DSYNC
 
-Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas */4DSYNC*.
+This option controls the support of HTTP synchronization requests containing deprecated */4DSYNC* URLs.
 
 #### Validação do endereço IP da sessão
 
-> Esta opción no está disponible en [modo sesiones evolutivas](WebServer/sessions.md) (no hay validación).
+> This option is not not available in [scalable sessions mode](WebServer/sessions.md) (there is no validation).
 
 Estado de validação de endereço IP para cookies de sessão. Por motivos de segurança por padrão o servidor web 4D verifica o endereço IP de cada solicitação contendo um cookie de sessão e rejeita-o se este endereço não corresponde ao endereço IP usado para criar o cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. Por exemplo, quando os dispositivos móveis mudam entre redes Wi-Fi e 4G/5G, seu endereço IP será alterado. Neste caso, você deve passar 0 nesta opção para permitir que os clientes possam continuar usando suas sessões da Web, mesmo quando o endereço IP mudar. Observe que essa configuração reduz o nível de segurança de seu aplicativo. Quando é modificado, essa configuração é eficaz imediatamente (não é necessário reiniciar o servidor HTTP).
 
@@ -616,7 +617,7 @@ Quando essa opção está marcada, o servidor da Web envia caracteres estendidos
 
 O servidor web 4D pode usar conexões persistentes. A opção keep-alive permite que você mantenha uma única conexão TCP aberta para o conjunto de trocas entre o navegador da Web e o servidor para economizar recursos do sistema e otimizar as transferências.
 
-La opción **Utilizar las conexiones persistentes** activa o desactiva las conexiones TCP persistentes para el servidor web. Esta opção está activada por padrão. Na maioria dos casos, é recomendável manter essa opção marcada, pois ela acelera as trocas. Se o navegador da Web não suportar a conexão keep alive, o 4D Web Server mudará automaticamente para HTTP/1.0.
+The **Use Keep-Alive Connections** option enables or disables keep-alive TCP connections for the web server. Esta opção está activada por padrão. Na maioria dos casos, é recomendável manter essa opção marcada, pois ela acelera as trocas. Se o navegador da Web não suportar a conexão keep alive, o 4D Web Server mudará automaticamente para HTTP/1.0.
 
 A função keep-alive do 4D Web Server diz respeito a todas as conexões TCP/IP (HTTP, HTTPS). Observe, entretanto, que as conexões keep-alive nem sempre são usadas para todos os processos da Web 4D.
 
@@ -624,9 +625,9 @@ Em alguns casos, outras funções internas otimizadas podem ser invocadas. As li
 
 Duas opções permitem que você defina como funcionam as conexões persistentes:
 
-- **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
+- **Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
    The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
-- **Tiempo de espera antes de desconexión**: este valor define el periodo máximo de espera (en segundos) durante el cual el servidor web mantiene una conexión TCP abierta sin recibir ninguna petición del navegador web. Once this period is over, the server closes the connection.<p>
+- **Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Once this period is over, the server closes the connection.<p>
    If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o usuário.</p>
 
