@@ -127,7 +127,7 @@ Ao marcar a opção **Construir aplicação autônoma** e clicar em **Construir*
 O princípio consiste em mesclar um arquivo de estrutura compilado com **4D Volume Desktop** (o mecanismo de banco de dados 4D). A funcionalidade fornecida pelo ficheiro 4D Volume Desktop está ligada à oferta do produto a que se subscreveu. Para mais informações sobre este ponto, consulte a documentação de vendas e a [4D Store](http://www.4d.com/).
 
 - Você pode definir um arquivo de dados padrão ou permitir que os usuários [criem e usem seu próprio arquivo de dados](#management-of-data-files).
-- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**Deployment Licenses**](../Admin/licenses.md#deployment-licenses) section).
+- Você pode incorporar uma licença de implantação ou deixar o usuário final inserir sua licença na primeira inicialização do aplicativo (veja a seção [**Licenças de Implantação**](../Admin/licenses.md#deployment-licenses)).
 
 :::note
 
@@ -503,7 +503,7 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 A página de Licenças e Certificados pode ser usada:
 
-- designate the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
+- designa as [licenças de implantação](../Admin/licenses.md#deployment-licenses) que você deseja integrar a sua aplicação [single-user](#application-page) ou [client-server](#clientserver-page)
 - assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
