@@ -860,7 +860,7 @@ A function with `onHTTPGet` keyword can return any value of a supported type (sa
 
 :::info
 
-You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+Você pode retornar um valor do [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) tipo de classe para se beneficiar de propriedades e funções para definir o cabeçalho, o corpo e o estado da resposta.
 
 :::
 
