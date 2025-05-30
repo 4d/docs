@@ -250,11 +250,11 @@ Utilizado para indicar o número da versão atual da aplicação gerada. Pode en
 
 **Nota Preliminar:** Os seguintes termos são utilizados nesta secção:
 
-| Nome                                | Definição                                                                                                                                                                     |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ficheiro do directório do projecto  | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project         |
-| Ficheiro do directório de aplicação | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the built 4D Server |
-| Ficheiro obrigatório                | Arquivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) na pasta [Data > Settings](../Project/architecture.md#settings-user-data)                      |
+| Nome                                | Definição                                                                                                                                                                          |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ficheiro do directório do projecto  | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project              |
+| Ficheiro do directório de aplicação | o arquivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) localizado na pasta [Settings ](../Project/architecture.md#settings-user) do 4D Server construído |
+| Ficheiro obrigatório                | Arquivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) na pasta [Data > Settings](../Project/architecture.md#settings-user-data)                           |
 
 Quando marca esta opção, o ficheiro do directório do projecto é copiado para o ficheiro do directório da aplicação no momento da construção.
 
