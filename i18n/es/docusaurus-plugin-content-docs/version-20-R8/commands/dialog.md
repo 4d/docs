@@ -50,7 +50,7 @@ To fill the "form data" object, you have two possibilities:
 
 :::note
 
-- The *formData* parameter has priority over a form class (the class object is not instantiated if a *formData* parameter is passed).
+- El parámetro *formData* tiene prioridad sobre una clase de formulario (el objeto de clase no es instanciado si se pasa un parámetro *formData*).
 - If you do not pass the *formData* parameter (or if you pass an undefined object) and no user class is associated to the form, **DIALOG** creates a new empty object bound to the *form*.
 
 :::
