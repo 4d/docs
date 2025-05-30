@@ -19,7 +19,7 @@ As fórmulas são avaliadas:
 - before exporting to .docx (if the formula can't be mapped with MS Word formulas)
 - when the standard actions to freeze, print, export, or compute formulas are called. Veja *Ações padrão*
 
-Formulas are not evaluated when a document is loaded (using [**WP New**](commands-legacy/wp-new.md), [**WP Insert document body**](commands/wp-insert-document-body.md), or `wpArea:=[table]field`):
+As fórmulas não são avaliadas quando um documento é carregado (usando [**WP New**](commands-legacy/wp-new.md), [**WP Insert document body**](commands/wp-insert-document-body.md), ou `wpArea:=[table]field`):
 
 - if the document is only offscreen,
 - if the document is displayed onscreen but the form object only shows references.
