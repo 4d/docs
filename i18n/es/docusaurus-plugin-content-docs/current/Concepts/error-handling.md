@@ -97,7 +97,7 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 4D mantiene automáticamente una serie de variables denominadas [**variables sistema**](variables.md#system-variables), que responden a diferentes necesidades.
 :::
 
-- the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
+- el comando [`Last errors`](../commands/last-errors.md) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D.
 - el comando `Call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.
 
 #### Ejemplo
