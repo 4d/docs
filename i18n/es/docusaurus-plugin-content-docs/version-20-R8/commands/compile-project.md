@@ -40,7 +40,7 @@ By default, the command uses the compiler options defined in the Structure Setti
 
 Unlike the Compiler window, this command requires that you explicitly designate the component(s) to compile. When compiling a project with **Compile project**, you need to declare its components using the *components* property of the *options* parameter. Keep in mind that the components must already be compiled (binary components are supported).
 
-The resulting compiled code will be stored in the DerivedData or Libraries folder of the project, depending on the *targets* property of the *options* parameter. If you want to create .4dz files, you still need to manually zip the compiled project or use the [build application](../Desktop/building.md) feature.
+The resulting compiled code will be stored in the DerivedData or Libraries folder of the project, depending on the *targets* property of the *options* parameter. Si quiere crear archivos .4dz, todavía necesita comprimir manualmente el proyecto compilado o usar la funcionalidad [build application](../Desktop/building.md).
 
 If you pass an empty collection in *targets*, **Compile project** will execute a syntax check without compiling.
 
