@@ -14,7 +14,7 @@ Las fórmulas son evaluadas:
 - when they are inserted in a form object which displays computed values
 - when the 4D Write Pro object is loaded in a form object which displays computed values
 - when the [**WP COMPUTE FORMULAS**](commands-legacy/wp-compute-formulas.md) command is called
-- when they are "frozen" using the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (if not already computed)
+- cuando estén "congelados" usando el comando [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) (si aún no se ha calculado)
 - antes de imprimir (si no se ha calculado ya)
 - before exporting to .docx (if the formula can't be mapped with MS Word formulas)
 - when the standard actions to freeze, print, export, or compute formulas are called. Ver *Acciones estándar*
@@ -172,7 +172,7 @@ To display formula references as symbols, you can:
 
 - check the **Display formula source as symbol option** in the Property list (see *Configuring View properties*), or
 - use the displayFormulaAsSymbol standard action (see *Using 4D Write Pro standard actions*), or
-- use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk display formula as symbol` selector to **True**.
+- usa el comando [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) con el selector `wk display formula as symbol` en **True**.
 
 ### Referencias como nombres
 
@@ -186,7 +186,7 @@ If you assign formula names, they are displayed instead of texts:
 
 ![](../assets/en/WritePro/wp-formulas6.png)
 
-To assign a name to a formula, you need to use the [WP Insert formula](commands/wp-insert-formula.md) command with an object parameter. Por ejemplo:
+Para asignar un nombre a una fórmula, debe utilizar el comando [WP Insert formula](commands/wp-insert-formula.md) con un parámetro objeto. Por ejemplo:
 
 ```4d
   //inserts the previous day in the document
