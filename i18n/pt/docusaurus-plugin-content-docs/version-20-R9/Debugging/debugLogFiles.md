@@ -259,7 +259,7 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 O arquivo *4DDiagnosticLog.txt* pode registrar diferentes níveis de mensagens, de `ERROR` (mais importante) a `TRACE` (menos importante). Por padrão, o nível `INFO` é definido, o que significa que o arquivo registrará apenas eventos importantes, incluindo erros e resultados inesperados (veja abaixo).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command, depending on your needs. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
+Você pode selecionar o nível das mensagens usando o seletor `Diagnostic log level` do comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), dependendo de suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
 
 | Parâmetros  | Descrição                                                                                            | Quando seleccionado, inclui                                   |
 | ----------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
