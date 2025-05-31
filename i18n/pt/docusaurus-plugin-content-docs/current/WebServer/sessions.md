@@ -242,7 +242,7 @@ Um url [`4DACTION`](./httpRequests.md#4daction) também pode ser usada no lado 4
 The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. You must use this solution if:
 
 - the third-party application does not allow to insert parameters such as a `$4DSID` directly in the redirect Uri, and provides a dedicated API (the implementation depends on the third-party application),
-- or, you want to call an ORDA function through REST to process the callback, in which case you need to pass the OTP with the [REST parameter syntax](../REST/ClassFunctions.md#parameters) (e.g. `?$params='["XXX123"]'`).
+- ou, você deseja chamar uma função ORDA através do REST para processar a callback, nesse caso você precisa passar o OTP com a [sintaxe do parâmetro REST](../REST/ClassFunctions.md#parameters) (por exemplo, `?$params='["XXX123"]'`).
 
 Em ambos os casos, você precisa extrair o token do parâmetro personalizado e chamar a [`Session.restore()`](../API/SessionClass.md#restore) com o token como parâmetro.
 
