@@ -14,7 +14,7 @@ Shared objects and collections can only contain scalar values or other shared ob
 
 Para modificar um objeto/coleção compartilhada, a estrutura **Usar... Uso final** deve ser chamada. A leitura de um valor de objeto/coleção compartilhado não requer **Uso...Uso final**.
 
-A unique, global catalog returned by the [`Storage`](../commands-legacy/storage.md) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+Um catálogo único e global retornado pelo comando [`Storage`](../commands-legacy/storage.md) está sempre disponível em toda a aplicação e seus componentes, e pode ser usado para armazenar todos os objetos e coleções compartilhadas.
 
 ## Utilização de objetos ou coleções compartidos
 
