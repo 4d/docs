@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsResult
 
 # OpenAIChatCompletionsResult
 
-## Inherits
+## Hereda
 
 - [OpenAIResult](OpenAIResult.md)
 
