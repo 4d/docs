@@ -114,7 +114,7 @@ Table and field expressions inserted in 4D Write Pro documents support the virtu
 When a virtual structure is defined:
 
 - references to expressions containing fields display virtual names when the 4D Write Pro document shows references and not values.
-- [**WP Get text**](commands-legacy/wp-get-text.md) returns virtual structure names if `wk expressions as source` option is set in expressions parameter.
+- [**WP Get text**](commands-legacy/wp-get-text.md) devuelve nombres de estructura virtual si la opción `wk expressions as source` está establecida en el parámetro de expresiones.
 - [WP Insert formula](commands/wp-insert-formula.md) ignores the virtual structure and always expects real table/field names
 
 :::note
