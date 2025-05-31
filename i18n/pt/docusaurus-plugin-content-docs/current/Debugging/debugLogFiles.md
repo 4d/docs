@@ -300,7 +300,7 @@ SET DATABASE PARAMETER(POP3 Log;1) //inicia POP3 log
 SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 ```
 
-> 4D Server: Clique no botão **Start Request and Debug Logs** na [Página de manutenção] (ServerWindow/maintenance.md) da janela de administração do 4D Server.
+> 4D Server: Clique no botão **Iniciar os históricos de solicitaçoes e depuração** na página [Manutenção](ServerWindow/maintenance.md) da janela de administração do 4D Server.
 
 Esta rota do histórico é retornada pelo comando `Get 4D file`.
 
@@ -362,7 +362,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 :::note
 
-Não é obrigatório acionar o [4DRequestsLog.txt] (#4drequestslogtxt) do lado do cliente usando `SET DATABASE PARAMETER`. No entanto, é necessário se pretender registar o campo único `sequenceNumber`.
+Não é obrigatório acionar o [4DRequestsLog.txt](#4drequestslogtxt) do lado do cliente usando `SET DATABASE PARAMETER`. No entanto, é necessário se pretender registar o campo único `sequenceNumber`.
 
 :::
 
