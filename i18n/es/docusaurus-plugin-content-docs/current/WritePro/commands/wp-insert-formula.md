@@ -30,7 +30,7 @@ En el parámetro *targetObj*, puede pasar:
 
 In the *formula* parameter, pass the 4D formula to evaluate. Puede pasar:
 
-- either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
+- o un [objeto de la fórmula](../../commands/formula.md-objects) creado por el comando [**Formula**](../../commands/formula.md) o [**Formula from string**](../../commands/formula.md-from-string),
 - or an object containing two properties:
 
 | **Propiedad** | **Tipo** | **Description**                                                                                                                                                                             |
