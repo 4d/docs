@@ -14,7 +14,7 @@ Um método em 4D é armazenado em um arquivo **.4dm** localizado na pasta apropr
 Você pode criar [vários tipos de métodos](../Concepts/methods.md):
 
 - All types of methods can be created or opened from the **Explorer** window (except Object methods which are managed from the [Form editor](../FormEditor/formEditor.md)).
-- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](../code-editor/write-class-method.md#shortcuts).
+- Os métodos projeto também podem ser criados ou abertos no menu **File**, ou na barra de ferramentas (\*\*Novo/Método.. \*\* ou **Abrir/Método...**) ou usando atalhos na [janela do editor de código](../code-editor/write-class-method.md#shortcuts).
 - Os triggers também podem ser criados ou abertos a partir do editor de Estrutura.
 - Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
 
