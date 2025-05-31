@@ -3,7 +3,7 @@ id: datastores
 title: Datastores remotos
 ---
 
-Um **datastore remoto** é uma referência, em uma aplicação 4D local (4D ou 4D Server), a um [datastore] (dsMapping.md#datastore) armazenado em outra aplicação 4D.
+Um **datastore remoto** é uma referência, em uma aplicação 4D local (4D ou 4D Server), a um [datastore](dsMapping.md#datastore) armazenado em outra aplicação 4D.
 
 O aplicativo 4D local se conecta ao datastore remoto e faz referência a ele por meio de uma chamada ao comando [`Open datastore`](../commands/open-datastore.md).
 
