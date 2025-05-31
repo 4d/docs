@@ -9,7 +9,7 @@ Many AI providers propose an OpenAI-like API, so you can use this project to con
 
 To do so you just have to change the original `baseURL` by the service one and use their api key if needed.
 
-## Remote
+## Remoto
 
 | Provider                                                                                                                                                                                                 | Url base                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
