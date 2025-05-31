@@ -1538,7 +1538,7 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 #### Descripción
 
-La función `.touched()` <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+La función `.touched()` <!-- REF #EntityClass.touched().Summary -->retorna True si al menos un atributo de entidad ha sido modificado desde que la entidad fue cargada en la memoria o guardada<!-- END REF -->. You can use this function to determine if you need to save the entity.
 
 This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
