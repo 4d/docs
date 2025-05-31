@@ -198,7 +198,7 @@ The content-type must be given in the headers to indicate that the body is a pic
 
 :::note
 
-If the request is built using the [`HTTPRequest` class](HTTPRequestClass.md), the picture must be sent in the body as a Blob with the appropriate content-type.
+Si la solicitud se crea utilizando la [clase `HTTPRequest`](HTTPRequestClass.md), la imagen debe ser enviada en el cuerpo como un Blob con el tipo de contenido apropiado.
 
 :::
 
