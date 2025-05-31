@@ -32,7 +32,7 @@ Super($text1) //chama o construtor da superclasse com um parâmetro de texto
 This.param:=$text2 // usa o segundo parâmetro
 ```
 
-2. Inside a [class function](../Concepts/classes.md#function), `Super` designates the prototype of the [`superclass`](../API/ClassClass.md#superclass) and allows to call a function of the superclass hierarchy.
+2. Dentro de uma [função da classe](../Concepts/classes.md#function), `Super` designa o protótipo da [`superclass`](../API/ClassClass.md#superclass) e permite chamar uma função da hierarquia da superclasse.
 
 ```4d
 Super.doSomething(42) //chamada a função "doSomething"  
