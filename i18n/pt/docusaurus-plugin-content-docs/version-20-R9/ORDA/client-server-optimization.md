@@ -37,7 +37,7 @@ O contexto de otimização é baseado nas seguintes implementações:
 
 - An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
 
-- You can build optimization contexts manually using the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function (see [Preconfiguring contexts](#preconfiguring-contexts)).
+- Você pode criar contextos de otimização manualmente usando a função [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) (veja [contextos preconfigurando](#preconfiguring-contexts)).
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
@@ -125,7 +125,7 @@ Se quiser fornecer aplicativos finais com o mais alto nível de otimização, vo
 1. Projete seus algoritmos.
 2. Execute seu aplicativo e deixe que o mecanismo de aprendizado automático preencha os contextos de otimização.
 3. Call the [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) or [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) function to collect  contexts. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
-4. In the final step, call the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function to build contexts at application startup and [use them](#reusing-the-context-property) in your algorithms.
+4. Na etapa final, chame a função [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) para construir contextos na inicialização da aplicação e [usá-los](#reusing-the-context-property) em seus algoritmos.
 
 ## Cache ORDA
 
