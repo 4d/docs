@@ -1540,9 +1540,9 @@ Retorna:
 
 A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
 
-This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
+Isso só se aplica a atributos do tipo [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
-Para uma nova entidade que acabou de ser criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Para uma nova entidade que acabou de ser criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
 
 
 #### Exemplo
@@ -1586,7 +1586,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 A função `.indexOf()` <!-- REF #EntityClass.touchedAttributes().Summary -->retorna a posição da entidade em uma seleção de entidade<!-- END REF -->.
 
-This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
+Isso só se aplica a atributos do tipo [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
 No caso de uma entidade relacionada que foi tocada (touched) *ou seja, a chave primária) o nome da entidade relacionada e sua chave primária são retornados.
 
