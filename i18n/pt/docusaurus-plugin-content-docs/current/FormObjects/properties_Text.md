@@ -25,7 +25,7 @@ Quando essa propriedade está ativada, os comandos [OPEN FONT PICKER](../command
 
 Define o texto selecionado para aparecer mais escuro e mais pesado.
 
-Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**] (../commands-legacy/object-set-font-style.md).
+Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
 > Este é um texto normal.<br/>
 > **Este é um texto em negrito.**
@@ -46,7 +46,7 @@ Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**]
 
 Define o texto selecionado como ligeiramente inclinado para a direita.
 
-Você também pode definir essa propriedade por meio do comando [**OBJECT SET FONT STYLE**] (../commands-legacy/object-set-font-style.md).
+Você também pode definir essa propriedade por meio do comando [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
 > Este é um texto normal.<br/>
 > *Este é o texto em itálico.*
@@ -165,7 +165,7 @@ A cor pode ser especificada por:
 - um valor HEX - como "#ff0000"
 - um valor RGB - como "rgb(255,0,0)"
 
-Você também pode definir essa propriedade usando o comando [**OBJECT SET RGB COLORS**] (../commands-legacy/object-set-rgb-colors.md).
+Você também pode definir essa propriedade usando o comando [**OBJECT SET RGB COLORS**](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 
