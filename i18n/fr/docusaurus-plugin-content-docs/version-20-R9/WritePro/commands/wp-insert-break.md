@@ -11,10 +11,10 @@ displayed_sidebar: docs
 | Paramètres  | Type    |                             | Description                               |
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document |
-| breakType   | Integer | &#8594; | Type of break to insert                   |
-| mode        | Integer | &#8594; | Insertion mode                            |
-| rangeUpdate | Integer | &#8594; | Range update mode                         |
-| Résultat    | Object  | &#8592; | Text range of the break character         |
+| breakType   | Integer | &#8594; | Type de rupture à insérer                 |
+| mode        | Integer | &#8594; | Mode d'insertion                          |
+| rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage           |
+| Résultat    | Object  | &#8592; | Plage de texte du caractère de rupture    |
 
 <!-- END REF-->
 
@@ -60,13 +60,13 @@ If you do not pass a *rangeUpdate* parameter, by default the inserted contents a
 
 ## Exemple 1
 
-While building invoices, you want to insert page breaks except on the last page:
+Lors de la construction des factures, vous voulez insérer des sauts de page sauf sur la dernière page :
 
 ```4d
  $nbInvoices:=Records in selection([INVOICE])
  For($j;1;$nbInvoices)
-    ... //processing invoices
-    If($j#$nbInvoices) //insert page break except for last page
+    ... //traitement des factures
+    If($j#$nbInvoices) //insérer un saut de page à l'exception de la dernière page
        WP Insert break($buildRange;wk page break;wk append;wk exclude from range)
     End if
  End for
@@ -74,9 +74,9 @@ While building invoices, you want to insert page breaks except on the last page:
 
 ## Exemple 2
 
-You want to insert a continuous section break to have a single column section and a two-column section on the same page.
+Vous souhaitez insérer un saut de section continu pour avoir une section à une seule colonne et une section à deux colonnes sur la même page.
 
-1. Insert a continuous section break at the selection to create a new section:
+1. Insérez un saut de section continu au niveau de la sélection pour créer une nouvelle section :
 
 ```4d
  $range:=WP Selection range(*;"WParea")  
@@ -84,7 +84,7 @@ You want to insert a continuous section break to have a single column section an
 ```
 
 ![](../../assets/en/WritePro/commands/pict5562056.en.png)
-2. Set the column count to 2 for the first section:
+2. Définir le nombre de colonnes à 2 pour la première section:
 
 ```4d
  $section:=WP Get section(WParea;1)  
