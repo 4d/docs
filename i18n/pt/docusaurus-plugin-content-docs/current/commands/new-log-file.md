@@ -35,7 +35,7 @@ A log file must always be related to a data file. If you call this command just 
 
 ## Gestão de erros
 
-No caso de um erro, o comando gera um código que pode ser interceptado com o comando [ON ERR CALL] (../commands-legacy/on-err-call.md).
+No caso de um erro, o comando gera um código que pode ser interceptado com o comando [ON ERR CALL](../commands-legacy/on-err-call.md).
 
 ## Veja também
 
