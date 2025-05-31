@@ -249,7 +249,7 @@ It is **not recommended** to expose request handler functions to external REST c
 
 ### Input: an instance of the 4D.IncomingMessage class
 
-When a request has been intercepted by the handler, it is received on the server as an instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+Cuando una solicitud ha sido interceptada por el manejador, se recibe en el servidor como una instancia de la [clase 4D.IncomingMessage](../API/IncomingMessageClass.md).
 
 All necessary information about the request are available in this object, including the request url, verb, headers, and, if any, parameters (put in the URL) and body.
 
