@@ -243,7 +243,7 @@ Métodos de projeto 4D também podem retornar valores na fórmula da célula 4D 
 - [date](Concepts/dt_date.md) (convertido para o tipo JS Date no 4D View Pro - hora, minuto, segundo = 0)
 - [time](Concepts/dt_time.md) (convertido para JS Date type in 4D View Pro - data na data base, i.e. 12/30/1899)
 - [boolean](Concepts/dt_boolean.md) (convertido em bool no 4D View Pro)
-- [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
+- [imagem](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg outros tipos convertidos para png) cria uma URI (data:image/png; ase64,xxxx) e depois usado como plano de fundo em 4D View Pro na célula onde a fórmula é executada
 - [object](Concepts/dt_object.md) com as duas propriedades a seguir (permitindo a passagem de uma data e hora):
 
  | Propriedade | Tipo | Descrição         |
