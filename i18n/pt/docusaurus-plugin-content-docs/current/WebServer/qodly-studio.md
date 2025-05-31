@@ -36,7 +36,7 @@ A resolução recomendada é 1920x1080.
 - Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 - Web sessions (*aka* Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
-- O código 4D chamado pelos formulários Qodly deve ser [hilo seguro] (preemptiveWeb.md).
+- O código 4D chamado pelos formulários Qodly deve ser [hilo seguro](preemptiveWeb.md).
 
 ### Habilitando o acesso a Qodly Studio
 
@@ -179,7 +179,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 Para ativar a renderização das páginas Qodly, as seguintes opções devem ser definidas.
 
 - A opção **Propriedades** > **Web** > **Funcionalidades Web** > [**Expor como servidor REST**](../settings/web.md#expose-as-rest-server) deve ser ativada.
-- O [servidor Web 4D] (webServer.md) deve estar em execução.
+- O [servidor Web 4D](webServer.md) deve estar em execução.
 
 :::note
 
@@ -193,7 +193,7 @@ Ao renderizar formulários Qodly no Qodly Studio, o renderizador se conectará a
 
 Keep in mind that Qodly Studio runs through the 4D WebAdmin web server. When you use Qodly Studio as a developer, even when you preview a Qodly Page in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
 
-However, page rendering happens outside Qodly Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
+However, page rendering happens outside Qodly Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. Veja [Funções expostas vs não expostas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) e [Exposição de tabelas](../REST/configuration.md#exposing-tables) para obter mais informações sobre como expor ativos.
 
 ### Acessar páginas Qodly
 
