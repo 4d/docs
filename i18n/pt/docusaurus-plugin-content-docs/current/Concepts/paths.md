@@ -71,7 +71,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Caminhos de acesso Windows e sequências de escape
 
-A linguagem 4D permite o uso de [sequências de escape] (quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab`.
+A linguagem 4D permite o uso de [sequências de escape](quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab`.
 
 Uma vez que o carácter `\` também é utilizado como separador nos nomes de caminho no Windows, é necessário introduzir um duplo `\\` nos nomes de caminho do Windows.
 
