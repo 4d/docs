@@ -35,7 +35,7 @@ Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma
 
 Una acción de permiso definida en un nivel determinado se hereda por defecto en los niveles inferiores, pero se pueden establecer varios permisos:
 
-- Una acción de permiso definida a nivel de almacén de datos se asigna automáticamente a todas las clases de datos. The *execute* permission action defined at the datastore level applies to all functions of the project, including all [singleton](../REST/$singleton.md) functions.
+- Una acción de permiso definida a nivel de almacén de datos se asigna automáticamente a todas las clases de datos. La acción de permiso *execute* definida en el nivel del datastore se aplica a todas las funciones del proyecto, incluyendo todas las funciones [singleton](../REST/$singleton.md).
 - Una acción de permiso definida a nivel de clase de datos anula la configuración del almacén de datos (si existe). Por defecto, todos los atributos de la clase de datos heredan de los permisos de la clase de datos.
 - A diferencia de los permisos de clase de datos, una acción de permiso definida a nivel de atributo no anula los permisos de clase de datos padre, sino que se añade a ellos. Por ejemplo, si asignó el privilegio "general" a una clase de datos y el privilegio "detail" a un atributo de la clase de datos, tanto el privilegio "general" como el privilegio "detail" deben definirse en la sesión para acceder al atributo.
 
