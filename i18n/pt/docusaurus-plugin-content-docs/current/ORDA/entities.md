@@ -100,7 +100,7 @@ Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na 
 
 - attributes of the **storage** kind can be set or get as simple properties of the entity object,
 - atributos do tipo **relatedEntity** retornarão uma entidade,
-- attributes of the **relatedEntities** kind will return an entity selection,
+- atributos do tipo **relatedEntities** retornarão uma seleção de entidade,
 - attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
 
 :::info
@@ -334,7 +334,7 @@ $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 
 :::note Entity selections devolvidas pelo servidor
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`](API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo: Exemplo: Exemplo: Exemplo: Exemplo:
+Na arquitetura cliente/servidor, as seleções de entidades retornadas do servidor são sempre compartilháveis no cliente, mesmo que [`copy()`](API/EntitySelectionClass.md#copy) tenha sido chamada no servidor. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`](API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo: Exemplo: Exemplo: Exemplo: Exemplo:
 
 ```4d
 	//a function is always executed on the server

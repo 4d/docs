@@ -330,7 +330,7 @@ Para mostrar el panel Dependencias:
 - con 4D, seleccione el ítem de menú **Diseño/Dependencias del Proyecto** (entorno de desarrollo),<br/>
  ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
+- con el servidor 4D, seleccione el elemento de menú **Ventana/Dependencias del proyecto**.<br/>
  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 A continuación, se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:

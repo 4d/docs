@@ -70,7 +70,7 @@ Un [objeto de clase Web srver](API/WebServerClass.md../commands/web-server.md-ob
 | [`start()`](API/WebServerClass.md#start) | settings (objet) | status (objecto) | Inicia o servidor web |
 | [`stop()`](API/WebServerClass.md#start)  | -                                   | -                                   | Pára o servidor Web   |
 
-To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
+Para começar e parar um servidor web, basta chamar as funções [`start()`](API/WebServerClass.md#start) e [`stop()`](API/WebServerClass.md#stop) do objeto do servidor web:
 
 ```4d
 var $status : Object

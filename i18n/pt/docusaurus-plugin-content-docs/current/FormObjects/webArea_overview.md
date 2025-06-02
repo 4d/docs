@@ -7,7 +7,7 @@ As áreas da Web podem exibir vários conteúdo Web em seus formulários: págin
 
 É possível criar várias áreas web no mesmo formulário. No entanto, observe que o uso de áreas web deve seguir [várias regras](#web-area-rules).
 
-Várias [ações padrão] dedicadas (#standard-actions), vários [comandos de idioma] (../category/web-area), bem como [eventos de formulário] genéricos e específicos (#form-events) permitem que o desenvolvedor controle o funcionamento das áreas da Web. Variáveis específicas podem ser usadas para trocar informações entre a área e o ambiente 4D.
+Várias [ações padrão](#standard-actions) dedicadas, vários [comandos de linguagem](../category/web-area), bem como [eventos de formulário](#form-events) genéricos e específicos permitem que o desenvolvedor controle o funcionamento das áreas da Web. Variáveis específicas podem ser usadas para trocar informações entre a área e o ambiente 4D.
 
 ## Propriedades específicas
 
@@ -22,7 +22,7 @@ Duas variáveis específicas podem ser associadas a cada área web:
 
 ### Motor de renderização Web
 
-Você pode escolher entre [dois mecanismos de renderização] (properties_WebArea.md#use-embedded-web-rendering-engine) para a área da Web, dependendo das especificidades do seu aplicativo.
+Você pode escolher entre [dois mecanismos de renderização](properties_WebArea.md#use-embedded-web-rendering-engine) para a área da Web, dependendo das especificidades do seu aplicativo.
 
 A seleção do motor de renderização web aninhado permite chamar aos métodos 4D desde a área web. A seleção do mecanismo de renderização do sistema é recomendada quando a área da web está conectada à internet, porque ela sempre se beneficia das últimas atualizações de segurança.
 
@@ -32,7 +32,7 @@ Quando a propriedade [Acessar aos métodos 4D](properties_WebArea.md#access-4d-m
 
 :::note Notas
 
-- Essa propriedade só estará disponível se a área da Web [usar o mecanismo de renderização da Web incorporado] (properties_WebArea.md#use-embedded-web-rendering-engine).
+- Essa propriedade só estará disponível se a área da Web [usar o mecanismo de renderização da Web incorporado](properties_WebArea.md#use-embedded-web-rendering-engine).
 - Por motivos de segurança, já que permite a execução de código 4D, essa opção só deve ser ativada para páginas confiáveis, como as páginas geradas pela aplicação.
 
 :::
@@ -51,11 +51,11 @@ $4d. HelloWorld();
 
 ### Controlando o acesso $4d
 
-With [`WA SET CONTEXT`](../commands/wa-set-context.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+Com [`WA SET CONTEXT`](../commands/wa-set-context.md), os desenvolvedores podem controlar o que pode estar disponível por `$4d` em uma area Web. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 
 Para verificar o contexto atualmente definido, use [`WA Get context`](../commands/wa-get-context.md).
 
-For more information, please refer to [`WA SET CONTEXT`](../commands/wa-set-context.md).
+Para obter mais informações, consulte [`WA SET CONTEXT`](../commands/wa-set-context.md).
 
 ### Calling 4D Methods from JavaScript
 
@@ -123,8 +123,8 @@ Define the Class with 4D project method `calcSum` which receives parameters and 
 // SumCalculator user class
 
 Function calcSum(... : Real) -> $sum : Real
-   // receives n Real type parameters
-   // and returns a Real
+   // recebe n Real type parametros
+   // e retorna um Real
   var $i; $n : Integer
   $n := Count parameters
 
@@ -179,11 +179,11 @@ Além disso, áreas web são compatíveis com os eventos de formulário genéric
 Quando o formulário for executado, as funções da interface de navegador padrão estão disponíveis para o usuário na área web, o que permite a interação com outras áreas do formulário:
 
 - Comandos do menu **Editar**: Quando a área da Web está em foco, os comandos do menu **Edit** podem ser usados para executar ações como copiar, colar, selecionar tudo etc., de acordo com a seleção.
-- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. A exibição do menu de contexto pode ser controlada com o comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 - **Arrastar e soltar**: O usuário pode arrastar e soltar texto, imagens e documentos dentro da área da Web ou entre uma área da Web e os objetos do formulário 4D, de acordo com as propriedades do objeto 4D.
- Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). Você precisa usar a instrução `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para exibir um ícone "drop" e gerar o evento [`On Window Opening Denied`] (Events/onWindowOpeningDenied.md). Nesse caso, você pode chamar o comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou definir a [variável URL](properties_WebArea.md#url) em resposta a um drop do usuário.
+ Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). Você precisa usar a instrução `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para exibir um ícone "drop" e gerar o evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Nesse caso, você pode chamar o comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou definir a [variável URL](properties_WebArea.md#url) em resposta a um drop do usuário.
 
-> Os recursos de arrastar e soltar descritos acima não são compatíveis com as áreas da Web que usam o [mecanismo de renderização do sistema macOS] (properties_WebArea.md#use-embedded-web-rendering-engine).
+> Os recursos de arrastar e soltar descritos acima não são compatíveis com as áreas da Web que usam o [mecanismo de renderização do sistema macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 ### Subformulários
 
@@ -221,7 +221,7 @@ Para exibir o inspetor da Web, você pode executar o comando `WA OPEN WEB INSPEC
 
 > Com [engenharia de renderização de sistema Windows](properties_WebArea. d#use-embedded-web-rendering-engine), uma mudança nesta preferência requer que uma ação de navegação na área (por exemplo, uma atualização de página) seja levada em conta.
 
-Para obter mais informações, consulte a descrição do comando [`WA SET PREFERENCE`] (../commands-legacy/wa-set-preference.md).
+Para obter mais informações, consulte a descrição do comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 
 Quando você fez as configurações conforme descrito acima, você tem novas opções como **Inspecionar Elemento** no menu de contexto da área. Quando selecionar essa opção, a janela do inspetor Web é exibida.
 

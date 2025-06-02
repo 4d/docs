@@ -3,7 +3,7 @@ id: WebServerClass
 title: WebServer
 ---
 
-The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). Essa classe está disponível no "class store" de `4D`.
+A API classe `WebServer` permite que você inicie e monitore um servidor web para o aplicativo principal (host), bem como cada componente hospedado (veja o resumo [objeto Web Server](WebServer/webServerObject.md)). Essa classe está disponível no "class store" de `4D`.
 
 ### Objeto Web Server
 

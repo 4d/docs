@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** não faz nenhum processamento de registro, processamento quebrado ou quebra de página. These operations are your responsibility. **Print form** imprime campos e variáveis em um quadro de tamanho fixo apenas.
 
 No parâmetro *form*, você pode passar:
 
@@ -91,7 +91,7 @@ In this case, the command will print the section included between the *areaStart
 
 **formData**
 
-Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário] (../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md). Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class).
+Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md). Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class).
 
 Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](dialog.md).
 
@@ -102,7 +102,7 @@ O valor retornado por **Print form** indica a altura da área impressa. Esse val
 As caixas de diálogo da impressora não são exibidas quando você usa **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
 - Chame [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
-- Call [SET PRINT OPTION](../commands-legacy/set-print-option.md) and [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
+- Chame [SET PRINT OPTION](../commands-legacy/set-print-option.md) e [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
 
 **Print form**\* cria cada página impressa na memória. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
 
@@ -121,7 +121,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 ## Exemplo 1
 
-O exemplo a seguir funciona como um comando [PRINT SELECTION] (../commands-legacy/print-selection.md). However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
+O exemplo a seguir funciona como um comando [PRINT SELECTION](../commands-legacy/print-selection.md). However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
 ```4d
  QUERY([Register]) // Select the records

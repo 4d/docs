@@ -20,7 +20,7 @@ title: OpenAIChatCompletionsStreamResult
 | Propriedade | Tipo                            | Descrição                                                                                            |
 | ----------- | ------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `choice`    | [OpenAIChoice](OpenAIChoice.md) | Returns a choice data, with a `delta` message.                                       |
-| `choices`   | Collection                      | Returns a collection of [OpenAIChoice](OpenAIChoice.md) data, with `delta` messages. |
+| `choices`   | Collection                      | Retorna uma coleção de dados [OpenAIChoice](OpenAIChoice.md), com mensagens `delta`. |
 
 ### Overrided properties
 

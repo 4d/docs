@@ -183,13 +183,11 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
-
-
-|
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
+| 引数 | 型 |  | 説明         |
+| -- | - |::| ---------- |
+|    |   |  | 引数を必要としません |
+<!-- END REF -->
 
 
 #### 説明

@@ -636,7 +636,7 @@ For the `WinIcon` property, if the icon file does not exist or has an incorrect 
 
 *info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
-Every object in the *info*.archs collection must contain the following properties:
+Cada objeto na coleção *info*.archs deve conter as seguintes propriedades:
 
 | Propriedade | Tipo   | Descrição                                          |
 | ----------- | ------ | -------------------------------------------------- |
@@ -785,7 +785,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
+> **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
 
 #### Exemplo
 

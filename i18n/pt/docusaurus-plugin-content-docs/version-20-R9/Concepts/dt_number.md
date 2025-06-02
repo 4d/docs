@@ -13,7 +13,7 @@ Número é um termo genérico que significa:
 Usually when working with Integers, you handle *Long* values (4-byte Integer). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
 
 - Database fields with `Integer` type,
-- Elements of arrays declared with [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
+- Elementos de arrays declarados com [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
 
 These legacy data types are automatically converted in *Longs* when used in the 4D Language.
 

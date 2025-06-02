@@ -5,7 +5,7 @@ title: Object
 
 Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. A estrutura dos objectos 4D "nativos" baseia-se no princípio clássico dos pares "propriedade/valor". A sintaxe desses objetos é baseada na notação JSON:
 
-- Um nome de uma propriedade é sempre um texto, por exemplo "nome". Ele deve seguir [regras específicas] (identifiers.md#object-properties).
+- Um nome de uma propriedade é sempre um texto, por exemplo "nome". Ele deve seguir [regras específicas](identifiers.md#object-properties).
 
 - Um valor de propriedade pode ser do seguinte tipo:
  - number (Real, Integer, etc.)
@@ -42,7 +42,7 @@ Os objetos devem ter sido inicializados, por exemplo utilizando o comando <code>
 
 Com a notação de objetos, pode acessar às propriedades dos objetos de duas maneiras:
 
-- usando o comando [`New object`] (../commands-legacy/new-object.md),
+- usando o comando [`New object`](../commands-legacy/new-object.md),
 - usando o operador '{}'.
 
 :::info
@@ -53,7 +53,7 @@ Vários comandos e funções 4D retornam objetos, por exemplo, [`Database measur
 
 ### Comando `New object`
 
-O comando [`New object`] (../commands-legacy/new-object.md) cria um objeto vazio ou pré-preenchido e retorna sua referência.
+O comando [`New object`](../commands-legacy/new-object.md) cria um objeto vazio ou pré-preenchido e retorna sua referência.
 
 Exemplos:
 
@@ -110,9 +110,9 @@ $col:=$o.col[5] //6
 
 Pode criar dois tipos de objetos:
 
-- objetos regulares (não compartilhados), usando o comando [`New object`] (../commands-legacy/new-object.md) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- objetos compartilhados, usando o comando [`New shared object`] (../commands-legacy/new-shared-object.md). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
- Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
+- objetos regulares (não compartilhados), usando o comando [`New object`](../commands-legacy/new-object.md) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
+- objetos compartilhados, usando o comando [`New shared object`](../commands-legacy/new-shared-object.md). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
+ Para obter mais informações, consulte a seção [Objetos e coleções compartilhados](shared.md).
 
 ## Propriedades
 

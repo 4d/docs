@@ -10,9 +10,13 @@ Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 #### Lo más destacado
 
 - Nueva opción `connectionTimeout` en el parámetro [`options`](../API/TCPConnectionClass.md#options-parameter) de la función [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
-- UUIDs in 4D are now generated in **version 7**. In previous 4D releases, they were generated in version 4.
+- Los UUIDs en 4D ahora se generan en la **versión 7**. In previous 4D releases, they were generated in version 4.
 - Lenguaje 4D:
     - For consistency, [`Create entity selection`](../commands/create-entity-selection.md) and [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) commands have been moved from the ["4D Environment"](../commands/theme/4D_Environment.md) to the ["Selection"](../commands/theme/Selection.md) themes.
+
+#### Cambios de comportamiento
+
+- On Windows, current printer fonts intended only for printing (i.e. not usable on screen) are no longer loaded by 4D at startup.
 
 ## 4D 20 R9
 
@@ -27,11 +31,11 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-20-R9
 - Nuevos comandos [WA SET CONTEXT](../commands/wa-set-context.md) y [WA Get context](../commands/wa-get-context.md) para controlar los contenidos [$4d](../FormObjects/webArea_overview.md#4d-object) en áreas web.
 - New [`RDP optimization` database parameter](../commands-legacy/set-database-parameter.md#rdp-optimization-133) to optimize for instance shared clipboard when using Remote Desktop Protocol with 4D.
 - Los componentes interpretados pueden ahora [editarse desde el proyecto local](../Extensions/develop-components.md#editing-components-from-the-host).
-- [Licenses](../Admin/licenses.md) are now automatically refreshed at startup.
+- [Licencias](../Admin/licenses.md) ahora se actualizan automáticamente al iniciar.
 - New [4D AIKit component](../aikit/overview.md) enabling interaction with third-party AI APIs.
 - The following VP command callbacks now wait for all 4D custom functions to complete their calculations: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md), and [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
 - New [4D Netkit](https://developer.4d.com/4D-NetKit/) features to manage Google and Microsoft 365 calendars; ability to use the host web server for OAuth 2.0 authentication.
-- 4D Write Pro Interface: New [integrated AI](../WritePro/writeprointerface.md#integrated-ai) to interact with **chatGTP** from your 4D Write Pro documents.
+- Interfaz 4D Write Pro: Nueva [IA integrada](../WritePro/writeprointerface.md#integrated-ai) para interactuar con **chatGTP** desde sus documentos 4D Write Pro.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R9): list of all bugs that have been fixed in 4D 20 R9.
 
 ## 4D 20 R8
@@ -40,7 +44,7 @@ Lea [**Novedades en 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-20-R8/), 
 
 #### Lo más destacado
 
-- Implement your own [**HTTP request handlers**](../WebServer/http-request-handler.md) using the new [`4D.IncomingMessage`](../API/IncomingMessageClass.md) class.
+- Implemente sus propios [**HTTP request handlers**](../WebServer/http-request-handler.md) utilizando la nueva clase [`4D.IncomingMessage`](../API/IncomingMessageClass.md).
 - Las expresiones utilizadas en [propiedades de objetos de formulario](../FormObjects/properties_Reference.md) ahora se benefician de la comprobación de sintaxis en la [Lista de propiedades](../FormEditor/formEditor.md#property-list) y en el [Compilador](../Project/compiler.md#check-syntax).
 - Puede [asociar una clase a un formulario](../FormEditor/properties_FormProperties.md#form-class) para habilitar la anticipación del tipo de código y la instanciación automática de los datos del formulario cuando utilice el comando [`Form`](../commands/form.md).
 - Soporte de [sesiones autónomas](../API/SessionClass.md) para simplificar la codificación local de aplicaciones cliente/servidor.
@@ -48,7 +52,7 @@ Lea [**Novedades en 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-20-R8/), 
 - [Nueva arquitectura de componentes construidos](../Desktop/building.md#build-component) para un mejor cumplimiento de las pautas de notarización de Apple.
 - Ahora puede [crear fácilmente aplicaciones de evaluación](../Desktop/building.md#build-an-evaluation-application) en el cuadro de diálogo de Build App.
 - Dependencias: use el administrador de Dependencias para [buscar nuevas versiones](../Project/components.md#checking-for-new-versions) y [actualizar](../Project/components.md#updating-dependencies) componentes GitHub.
-- New [`TCPConnection`](../API/TCPConnectionClass.md) and [`TCPEvent`](../API/TCPEventClass.md) classes to manage TCP client connections, handle events, and enhance control over data transmission. Añadido [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) para un registro detallado de eventos TCP.
+- Nuevas clases [`TCPConnection`](../API/TCPConnectionClass.md) y [`TCPEvent`](../API/TCPEventClass.md) para gestionar conexiones cliente TCP, manejar eventos y mejorar el control sobre la transmisión de datos. Añadido [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) para un registro detallado de eventos TCP.
 - Nuevas opciones en [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) y [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) para controlar estilos, fórmulas, integridad de datos y protección por contraseña.
 - 4D Write Pro:
     - Los siguientes comandos permiten ahora parámetros como objetos o colecciones: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), y [WP Insert picture](../WritePro/commands/wp-insert-picture.md).

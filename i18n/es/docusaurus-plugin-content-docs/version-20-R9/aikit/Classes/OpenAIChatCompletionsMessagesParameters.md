@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsMessagesParameters
 
 # OpenAIChatCompletionsMessagesParameters
 
-## Inherits
+## Hereda
 
 - [OpenAIParameters](OpenAIParameters.md)
 

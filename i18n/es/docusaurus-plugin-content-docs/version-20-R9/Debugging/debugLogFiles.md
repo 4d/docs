@@ -263,7 +263,7 @@ Dependiendo del evento, se pueden incluir otros campos en el registro, como la t
 
 El archivo *4DDiagnosticLog.txt* puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command, depending on your needs. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
+Puede seleccionar el nivel de los mensajes utilizando el selector `Diagnostic log level` del comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), en función de sus necesidades. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
 
 | Constante   | Descripción                                                                                     | Cuando se selecciona, incluye                                 |
 | ----------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -671,7 +671,7 @@ El archivo de configuración del registro es un archivo `.json` que debe cumplir
 :::note
 
 - The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\`,...).
-- For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+- Para httpDebugLogs, la propiedad "level" corresponde a las opciones constantes `wdl` descritas en el comando [`WEB SET OPTION`](../commands-legacy/web-set-option.md).
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 
 :::

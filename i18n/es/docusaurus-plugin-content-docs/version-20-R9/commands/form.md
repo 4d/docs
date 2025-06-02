@@ -61,9 +61,9 @@ Para más información, consulte la sección *Subformularios de página*.
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: **Form** returns the object associated with the table form displayed on screen.\
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
-| **Propiedad** | **Tipo** | **Description**                           |
-| ------------- | -------- | ----------------------------------------- |
-| parentForm    | object   | **Form** object of the parent output form |
+| **Propiedad** | **Tipo** | **Description**                                |
+| ------------- | -------- | ---------------------------------------------- |
+| parentForm    | object   | Objeto **Form** del formulario de salida padre |
 
 ## Ejemplo
 

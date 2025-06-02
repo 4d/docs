@@ -116,7 +116,7 @@ End if
 
 :::info
 
-Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. Para mais informações, consulte a página [**Privilégios**](../ORDA/privileges.md) do capítulo ORDA.
 
 :::
 
@@ -242,9 +242,9 @@ Um url [`4DACTION`](./httpRequests.md#4daction) também pode ser usada no lado 4
 The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. You must use this solution if:
 
 - the third-party application does not allow to insert parameters such as a `$4DSID` directly in the redirect Uri, and provides a dedicated API (the implementation depends on the third-party application),
-- or, you want to call an ORDA function through REST to process the callback, in which case you need to pass the OTP with the [REST parameter syntax](../REST/ClassFunctions.md#parameters) (e.g. `?$params='["XXX123"]'`).
+- ou, você deseja chamar uma função ORDA através do REST para processar a callback, nesse caso você precisa passar o OTP com a [sintaxe do parâmetro REST](../REST/ClassFunctions.md#parameters) (por exemplo, `?$params='["XXX123"]'`).
 
-In both cases, you need to extract the token from the custom parameter and to call the [`Session.restore()`](../API/SessionClass.md#restore) function with the token as parameter.
+Em ambos os casos, você precisa extrair o token do parâmetro personalizado e chamar a [`Session.restore()`](../API/SessionClass.md#restore) com o token como parâmetro.
 
 #### Processing a invalid OTP
 
@@ -408,7 +408,7 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 
 ```
 
-2. The user is sent this URL as a link in an email. The URL prefix `/validateEmail` is handled by a [custom HTTP request handler](./http-request-handler.md):
+2. The user is sent this URL as a link in an email. O prefixo URL `/validateEmail` é tratado por um [manipulador de requisição HTTP personalizado](./http-request-handler.md):
 
 ```json
 [

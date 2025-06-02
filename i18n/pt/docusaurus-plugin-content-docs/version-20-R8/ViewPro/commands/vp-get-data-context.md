@@ -29,7 +29,7 @@ O comando `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -
 
 Em *sheet*, passe o índice da planilha para obter o contexto de dados. Se nenhum índice for passado, o comando retornará o contexto de dados da planilha atual. Se não houver contexto para a planilha, o comando retornará `Null`.
 
-The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](vp-set-data-context.md).
+A função retorna um objeto ou uma coleção, dependendo do tipo de contexto de dados definido com [VP SET DATA CONTEXT](vp-set-data-context.md).
 
 ## Exemplo
 

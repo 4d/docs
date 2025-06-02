@@ -5,7 +5,7 @@ title: Utilizar processos web preemptivos
 
 The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your compiled applications. You can configure your web-related code, including 4D tags and web database methods, to run simultaneously on as many cores as possible.
 
-For in-depth information on preemptive process in 4D, please refer to the [Preemptive Processes](../Develop/preemptive.md) section.
+Para informações aprofundadas sobre o processo preventivo em 4D, consulte a seção [Processos Preemptivos](../Develop/preemptive.md).
 
 ## Disponibilidade do modo preemptivo para os processos web
 
@@ -43,7 +43,7 @@ Todo o código 4D executado pelo servidor deve ser hilo seguro se você quiser q
 
 - El método proyecto `compilador_web` (independientemente de su propiedad real "Modo de ejecución");
 
-- Basically any code processed by the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command in the web context, for example through .shtml pages
+- Basicamente, qualquer código processado pelo comando [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) no contexto Web, por exemplo, por páginas .shtml
 
 - Todo método proyecto con el atributo "Disponible a través de etiquetas 4D y URLs (`4DACTION`, etc.)
 

@@ -715,9 +715,9 @@ Uma **classe singleton** é uma classe de usuário que produz apenas uma única 
 
 4D supports three types of singletons:
 
-- a **process singleton** has a unique instance for the process in which it is instantiated,
+- um **processo singleton** tem uma instância única para o processo no qual ele é instanciado,
 - a **shared singleton** has a unique instance for all processes on the machine.
-- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
+- uma **sessão singleton** é um singleton compartilhado, mas com uma instância única para todos os processos na [sessão](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
 
 Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
 
@@ -748,7 +748,7 @@ Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) 
 :::note
 
 - Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- Singleton shared functions support [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- As funções compartilhadas Singleton suportam a [palavra-chave `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 

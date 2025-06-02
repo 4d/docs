@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | ----------- | ------- | --------------------------- | -------------------------------------------------------- |
 | targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document                |
 | wpDoc       | Object  | &#8594; | 4D Write Pro document                                    |
-| mode        | Integer | &#8594; | Insertion mode                                           |
-| rangeUpdate | Integer | &#8594; | Range update mode                                        |
+| mode        | Integer | &#8594; | Mode d'insertion                                         |
+| rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage                          |
 | Résultat    | Object  | &#8592; | Text range object referencing the inserted document body |
 
 <!-- END REF-->

@@ -34,7 +34,7 @@ You can use the wildcard character (@) in method names to define one or more aut
 
 If you would like the user to be able to call 4D commands that are unauthorized by default or plug-in commands, you must use specific methods that handle these commands.
 
-**Note:** Formula filtering access can be disabled for all users or for the Designer and Administrator via [an option on the "Security" page of the Settings](../settings/security.md#options). If the "Disabled for all" option is checked, the **SET ALLOWED METHODS** command will have no effect.
+**Nota:** el filtrado de fórmula puede ser deshabilitado para todos los usuarios o para el Diseñador y Administrador a través de [una opción en la página "Seguridad" de los Parámetros](../settings/security.md#options). If the "Disabled for all" option is checked, the **SET ALLOWED METHODS** command will have no effect.
 
 :::warning
 

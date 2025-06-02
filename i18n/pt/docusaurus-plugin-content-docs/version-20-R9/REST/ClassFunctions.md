@@ -73,7 +73,7 @@ Consulte a seção [Funções expostas vs. não expostas](../ORDA/ordaClasses.md
 
 ### `onHTTPGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por exemplo:
+As funções que podem ser chamadas a partir de solicitações HTTP `GET` também devem ser especificamente declaradas com a palavra-chave [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por exemplo:
 
 ```4d
 //allowing GET requests

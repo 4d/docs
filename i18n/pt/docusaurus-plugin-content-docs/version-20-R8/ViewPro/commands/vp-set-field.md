@@ -19,9 +19,9 @@ title: VP SET FIELD
 
 O comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->atribui um campo virtual do banco de dados 4D a um intervalo de células designado<!-- END REF -->.
 
-Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. If *rangeObj* includes multiple cells, the specified field will be linked in each cell.
+Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. Se *rangeObj* inclui várias células, o campo especificado será conectado em cada célula.
 
-The *field* parameter specifies a 4D database [virtual field](../formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. O nome da estrutura virtual do *field* pode ser visualizado na barra de fórmulas. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
+O parâmetro *field* especifica um [campo virtual](../formulas.md#referencing-fields-using-the-virtual-structure) de banco de dados 4D a ser atribuído ao *rangeObj*. O nome da estrutura virtual do *field* pode ser visualizado na barra de fórmulas. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
 
 O *formatPattern* opcional define um padrão para o parâmetro de campo. Você pode passar qualquer [formato personalizado] válido(../configuring.md#cell-format).
 

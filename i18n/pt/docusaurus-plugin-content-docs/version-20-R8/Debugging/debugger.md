@@ -323,7 +323,7 @@ As opções abaixo estão disponíveis:
 
 - **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
 - **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
-- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **Expressões**: exibe apenas expressões personalizadas que você digitou manualmente. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
 
@@ -368,7 +368,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
 - **Exibir**: seleciona o [modo de exibição](#display-mode) a ser usado para todas as janelas de depuração.
-- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
+- **New Expression...**: insere uma nova expressão e exibe o 4D Formula Editor.
  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
@@ -454,7 +454,7 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Show documentation**: Opens the documentation for the target element. Este comando está disponível para:
+- **Mostrar documentação**: abre a documentação para o elemento de destino. Este comando está disponível para:
  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
  - *Comandos 4D, funções e nomes de classes:* exibe a documentação on-line.
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.

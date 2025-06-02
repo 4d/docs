@@ -1538,11 +1538,11 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 #### Descripción
 
-La función `.touched()` <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+La función `.touched()` <!-- REF #EntityClass.touched().Summary -->retorna True si al menos un atributo de entidad ha sido modificado desde que la entidad fue cargada en la memoria o guardada<!-- END REF -->. You can use this function to determine if you need to save the entity.
 
 This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
-For a new entity that has just been created (with [`.new()`](DataClassClass.md#new)), the function returns False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Para una nueva entidad que acaba de ser creada (con [`.new()`](DataClassClass.md#new)), la función devuelve False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
 
 
 #### Ejemplo

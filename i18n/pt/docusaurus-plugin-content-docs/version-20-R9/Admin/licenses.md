@@ -8,7 +8,7 @@ title: Licenças
 To use 4D products and features, you need to install appropriate licenses on your computer. 4D provides two categories of licenses:
 
 - **Licenças de desenvolvimento**, necessárias para trabalhar com o IDE de 4D e 4D Server.
-- **Deployment licenses**, required for deploying your custom applications built with 4D.
+- as licenças de implementação\*\*, necessárias para implementar suas aplicações personalizadas criadas com 4D.
 
 ### Development licenses
 
@@ -35,7 +35,7 @@ Em alguns casos, a atualização da licença pode exigir que você clique no bot
 
 ## Activating licenses
 
-Uma vez instalados no seu disco, deve activar os seus produtos 4D para poder utilizá-los. Usually, **the activation is automatic** when you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
+Uma vez instalados no seu disco, deve activar os seus produtos 4D para poder utilizá-los. Geralmente, **a ativação é automática** quando [entrar usando a sua conta 4D](GettingStarted/Installation.md) no assistente de boas-vindas.
 
 Contudo, em casos específicos, poderá ter de activar as suas licenças manualmente, por exemplo, se:
 

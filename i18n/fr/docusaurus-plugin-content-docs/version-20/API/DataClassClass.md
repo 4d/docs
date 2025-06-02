@@ -183,13 +183,11 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
-|
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 
 #### Description

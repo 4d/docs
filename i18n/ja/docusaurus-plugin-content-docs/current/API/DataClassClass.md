@@ -181,7 +181,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
 
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |

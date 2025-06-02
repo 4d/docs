@@ -48,7 +48,7 @@ Os comandos 4D View Pro não são thread-safe.
 
 [VP Find](commands/vp-find.md)</br>
 [VP Find table](commands/vp-find-table.md)</br>
-[VP FLUSH COMMANDS](commands/vp-flush-commands.md) ***Modified 4D 20 R9***</br>
+[VP FLUSH COMMANDS](commands/vp-flush-commands.md) ***Modificado 4D 20 R9***</br>
 [VP Font to object](commands/vp-font-to-object.md)
 
 <a id="G"><b>G</b></a>

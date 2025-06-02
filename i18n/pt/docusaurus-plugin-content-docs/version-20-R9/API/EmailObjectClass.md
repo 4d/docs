@@ -14,7 +14,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 
 Você envia objetos `Email` usando a função SMTP [`.send()`](SMTPTransporterClass.md#send).
 
-[`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) commands can be used to convert `Email` objects to and from MIME contents.
+Os comandos [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) e [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) podem ser usados para converter objetos `Email` de e para conteúdos MIME.
 
 ### Objeto Email
 

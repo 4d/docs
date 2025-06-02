@@ -183,13 +183,11 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-
-|
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 
 #### Descripción

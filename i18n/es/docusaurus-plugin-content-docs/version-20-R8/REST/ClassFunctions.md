@@ -8,7 +8,7 @@ Puede llamar a [funciones clase modelo de datos](ORDA/ordaClasses.md) definidas 
 Las funciones pueden llamarse de dos maneras:
 
 - using **POST requests**, with data parameters passed in the body of the request.
-- using **GET requests**, with parameters directly passed in the URL.
+- usando **GET requests**, con parámetros directamente pasados en la URL.
 
 POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. Sin embargo, las peticiones GET pueden ser más compatibles con la experiencia del usuario, permitiendo llamar a las funciones introduciendo una URL en un navegador (nota: el desarrollador debe asegurarse de que no se hace ninguna acción sensible en dichas funciones).
 
@@ -73,7 +73,7 @@ Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#ex
 
 ### `onHTTPGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
