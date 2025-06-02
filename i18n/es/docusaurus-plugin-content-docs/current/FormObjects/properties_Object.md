@@ -101,32 +101,30 @@ Puede utilizar una [expresión](Concepts/quick-tour.md#expressions) como fuente 
 Puede dejarle a 4D crear variables asociadas con los objetos de su formulario (botones, variables editables, casillas de verificación, etc.) dinámicamente y de acuerdo a sus necesidades. Para ello, basta con dejar en blanco la propiedad "Variable o expresión" (o el campo JSON de `dataSource`).
 
 Cuando una variable no tiene nombre, al cargar el formulario, 4D crea una nueva variable para el objeto, con un nombre calculado que es único en el espacio de las variables de proceso del intérprete (lo que significa que este mecanismo puede utilizarse incluso en modo compilado). Esta variable temporal se destruirá cuando se cierre el formulario.
-Para que este principio funcione en modo compilado, es imprescindible que las variables dinámicas estén explícitamente declaradas. Hay dos maneras de hacer esto:
 
-- Puede definir el tipo utilizando la propiedad [tipo de expresión](#expression-type).
-- Puede utilizar un código de inicialización específico cuando se carga el formulario que utilice, por ejemplo, el comando `VARIABLE TO VARIABLE`:
+To get or set the value of form objects that use dynamic variables, you just need to call [`OBJECT Get value`](../commands-legacy/object-get-value.md) and [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) commands. Por ejemplo:
 
 ```4d
- If(Form event code=On Load)
-    var $init : Text
-    $Ptr_object:=OBJECT Get pointer(Object named;"comments")
-    $init:=""
-    VARIABLE TO VARIABLE(Current process;$Ptr_object->;$init)
- End if
-```
-
-En el código 4D, se puede acceder a las variables dinámicas utilizando un puntero obtenido con el comando `OBJECT Get pointer`. Por ejemplo:
-
-```4d
-  // asigna la hora 12:00:00 a la variable para el objeto "tstart"
- $p :=OBJECT Get pointer(Object named;"tstart")
- $p->:=?12:00:00?
+ var $value : Variant
+ $value:=OBJECT Get value("comments")
+ OBJECT SET VALUE("comments";$value+10) 
 ```
 
 Este mecanismo tiene dos ventajas:
 
 - Por un lado, permite desarrollar componentes de tipo "subformulario" que pueden utilizarse varias veces en el mismo formulario local. Tomemos como ejemplo el caso de un subformulario datepicker que se inserta dos veces en un formulario anfitrión para definir una fecha de inicio y una fecha de fin. Este subformulario utilizará objetos para elegir la fecha del mes y del año. Será necesario que estos objetos trabajen con variables diferentes para la fecha de inicio y la fecha final. Dejar que 4D cree su variable con un nombre único es una forma de resolver esta dificultad.
 - Por otra parte, puede utilizarse para limitar el uso de la memoria. De hecho, los objetos formulario sólo funcionan con variables proceso o interproceso. Sin embargo, en el modo compilado, se crea una instancia de cada variable de proceso en todos los procesos, incluidos los procesos del servidor. Esta instancia ocupa memoria, incluso cuando el formulario no se utiliza durante la sesión. Por lo tanto, dejar que 4D cree variables dinámicamente al cargar los formularios puede ahorrar memoria.
+
+In the 4D code, dynamic variables themselves can be accessed using [`OBJECT Get data source formula`](../commands/object-get-data-sourvce-formula.md) or through a pointer. Por ejemplo:
+
+```4d
+  // to get the dynamic variable assigned to "tstart"
+ $var:=OBJECT Get data source formula(*; "tstart")
+  //$var is the variable name
+  //OR
+ $var:=OBJECT Get pointer(Object named;"tstart") 
+  //$var-> gives the variable name
+```
 
 ### List box array
 

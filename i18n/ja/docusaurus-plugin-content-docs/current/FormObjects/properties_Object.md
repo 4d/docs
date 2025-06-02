@@ -150,32 +150,30 @@ title: オブジェクト
 ボタン、入力オブジェクト、チェックボックス等のフォームオブジェクト に割り当てられる変数を、 必要に応じて動的に、4D に作成させることができます。 必要に応じて動的に、4D に作成させることができます。 これをおこなうには、"変あるいは式" プロパティを空にします (あるいは JSON の `dataSource` フィールド):
 
 変数名が与えられていない場合、4D はフォームがロードされたときにインタープリターのプロセス変数の空間内でユニークな名前を計算し、その名前でオブジェクト用の変数を新規作成します (このメカニズムはコンパイルモードでも使用することができます)。 この一時的な変数はフォームが閉じられるときに破棄されます。
-この方式をコンパイルモードで動作させるためには、ダイナミック変数の型を明示的に指定しなければなりません。 これをおこなうには 2つの方法があります:
 
-- プロパティリストの [式タイプ](#式の型-式タイプ) を使用して型を指定する。
-- たとえば `VARIABLE TO VARIABLE` コマンドを使用する、専用の初期化コードをフォームロード時に実行する。
+To get or set the value of form objects that use dynamic variables, you just need to call [`OBJECT Get value`](../commands-legacy/object-get-value.md) and [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) commands. 例:
 
 ```4d
- If(Form event code=On Load)
-    var $init : Text
-    $Ptr_object:=OBJECT Get pointer(Object named;"comments")
-    $init:=""
-    VARIABLE TO VARIABLE(Current process;$Ptr_object->;$init)
- End if
-```
-
-4Dコード中では、`OBJECT Get pointer` コマンドで取得できるポインターを介してダイナミック変数にアクセスできます。 例:
-
-```4d
-  // "tstart" オブジェクトの変数に時刻 12:00:00 を代入します
- $p :=OBJECT Get pointer(Object named;"tstart")
- $p->:=?12:00:00?
+ var $value : Variant
+ $value:=OBJECT Get value("comments")
+ OBJECT SET VALUE("comments";$value+10) 
 ```
 
 このメカニズムを使用する利点は 2つあります:
 
 - ひとつのホストフォーム上で複数個配置することの可能な "サブフォーム" タイプのコンポーネント開発を可能にします。 たとえば、開始日と終了日を設定する 2つの日付ピッカーサブフォームをホストフォーム上に配置するケースを考えてみましょう。 このサブフォームでは、日付を選択するためのオブジェクトが使用されます。 開始日と終了日をそれぞれ選択できるよう、これらオブジェクトにはそれぞれ別の変数が割り当てられている必要があります。 4Dにダイナミック変数を生成させることでユニークな変数を得ることができ、この問題を解決できます。
 - また、メモリの利用を減少させることができます。 フォームオブジェクトでは、プロセス変数とインタープロセス変数しか使用できません。 しかしコンパイルモードでは、各プロセス変数のインスタンスが (サーバープロセスを含め) すべてのプロセスに対して作成されます。 このインスタンスは、セッション中にフォームが使用されない場合でもメモリを消費します。 フォームのロード時、4Dにダイナミック変数を作成させることで、メモリを節約できます。
+
+In the 4D code, dynamic variables themselves can be accessed using [`OBJECT Get data source formula`](../commands/object-get-data-sourvce-formula.md) or through a pointer. 例:
+
+```4d
+  // to get the dynamic variable assigned to "tstart"
+ $var:=OBJECT Get data source formula(*; "tstart")
+  //$var is the variable name
+  //OR
+ $var:=OBJECT Get pointer(Object named;"tstart") 
+  //$var-> gives the variable name
+```
 
 ### 配列リストボックス
 

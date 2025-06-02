@@ -51,11 +51,11 @@ $4d. HelloWorld();
 
 ### Controlando o acesso $4d
 
-With [`WA SET CONTEXT`](../commands/wa-set-context.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+Com [`WA SET CONTEXT`](../commands/wa-set-context.md), os desenvolvedores podem controlar o que pode estar disponível por `$4d` em uma area Web. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 
 Para verificar o contexto atualmente definido, use [`WA Get context`](../commands/wa-get-context.md).
 
-For more information, please refer to [`WA SET CONTEXT`](../commands/wa-set-context.md).
+Para obter mais informações, consulte [`WA SET CONTEXT`](../commands/wa-set-context.md).
 
 ### Calling 4D Methods from JavaScript
 
@@ -123,8 +123,8 @@ Define the Class with 4D project method `calcSum` which receives parameters and 
 // SumCalculator user class
 
 Function calcSum(... : Real) -> $sum : Real
-   // receives n Real type parameters
-   // and returns a Real
+   // recebe n Real type parametros
+   // e retorna um Real
   var $i; $n : Integer
   $n := Count parameters
 
@@ -179,7 +179,7 @@ Além disso, áreas web são compatíveis com os eventos de formulário genéric
 Quando o formulário for executado, as funções da interface de navegador padrão estão disponíveis para o usuário na área web, o que permite a interação com outras áreas do formulário:
 
 - Comandos do menu **Editar**: Quando a área da Web está em foco, os comandos do menu **Edit** podem ser usados para executar ações como copiar, colar, selecionar tudo etc., de acordo com a seleção.
-- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. A exibição do menu de contexto pode ser controlada com o comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 - **Arrastar e soltar**: O usuário pode arrastar e soltar texto, imagens e documentos dentro da área da Web ou entre uma área da Web e os objetos do formulário 4D, de acordo com as propriedades do objeto 4D.
  Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). Você precisa usar a instrução `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para exibir um ícone "drop" e gerar o evento [`On Window Opening Denied`] (Events/onWindowOpeningDenied.md). Nesse caso, você pode chamar o comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou definir a [variável URL](properties_WebArea.md#url) em resposta a um drop do usuário.
 

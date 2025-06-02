@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> The stack of errors includes objects sent by the [throw](../commands-legacy/throw.md) command, if any. 
+<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> A pilha de erros inclui objetos enviados pelo comando [throw](../commands-legacy/throw.md), se houver. 
 
-This command must be called from an on error call method installed by the [ON ERR CALL](../commands-legacy/on-err-call.md) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
+Este comando deve ser chamado de uma método de chamada de erro instalado pelo comando [ON ERR CALL](../commands-legacy/on-err-call.md) ou dentro de um contexto [Try ou Try/Catch](../Concepts/error-handling.md#tryexpression).
 
 Each error object contains the following properties:
 

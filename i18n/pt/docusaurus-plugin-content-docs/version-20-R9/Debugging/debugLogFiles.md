@@ -234,7 +234,7 @@ Os campos abaixo estão registrados para cada evento:
 
 ## 4DDiagnosticLog.txt
 
-Esse arquivo registra vários eventos relacionados à operação de aplicação e sua leitura humana. You can include custom information in this file using the [LOG EVENT](../commands-legacy/log-event.md) command.
+Esse arquivo registra vários eventos relacionados à operação de aplicação e sua leitura humana. Você pode incluir informações personalizadas nesse arquivo usando o comando [LOG EVENT](../commands-legacy/log-event.md).
 
 Como iniciar esse log:
 
@@ -259,7 +259,7 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 O arquivo *4DDiagnosticLog.txt* pode registrar diferentes níveis de mensagens, de `ERROR` (mais importante) a `TRACE` (menos importante). Por padrão, o nível `INFO` é definido, o que significa que o arquivo registrará apenas eventos importantes, incluindo erros e resultados inesperados (veja abaixo).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command, depending on your needs. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
+Você pode selecionar o nível das mensagens usando o seletor `Diagnostic log level` do comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), dependendo de suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
 
 | Parâmetros  | Descrição                                                                                            | Quando seleccionado, inclui                                   |
 | ----------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -667,7 +667,7 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
 :::note
 
 - The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\\\`,...).
-- For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+- Para httpDebugLogs, a propriedade "level" corresponde às opções constantes do `wdl` descritas no comando [`WEB SET OPTION`](../commands-legacy/web-set-option.md).
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 
 :::

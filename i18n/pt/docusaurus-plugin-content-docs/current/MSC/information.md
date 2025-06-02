@@ -55,5 +55,5 @@ As informações são fornecidas sob a forma de gráficos:
 
 Arquivos que são muito fragmentados reduzem o desempenho do disco e, assim, do banco de dados. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the [Compact](compact.md) page:
+Um ícone de aviso também é exibido no botão da página [Compact](compact.md):
 ![](../assets/en/MSC/MSC_compactwarn.png)

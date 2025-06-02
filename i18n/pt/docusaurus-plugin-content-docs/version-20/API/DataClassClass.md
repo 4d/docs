@@ -183,13 +183,11 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-
-|
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 
 #### Descrição

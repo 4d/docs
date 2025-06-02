@@ -21,7 +21,7 @@ O comando <!-- REF #method_.VP SET VALUE.Summary --> atribui um valor de data pa
 
 Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
+O parâmetro *dateValue* especifica um valor de data a ser atribuído ao intervalo *rangeObj*.
 
 O parâmetro *formatPattern* opcional define um padrão para o parâmetro *dateValue*. Passe qualquer formato personalizado ou você pode usar uma das seguintes constantes:
 

@@ -8,7 +8,7 @@ No Windows, os desenvolvedores 4D podem testar e configurar suas aplicações 4D
 
 :::info
 
-The concept of sdi.mdI does not exist on macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
+O conceito sdi.mdI não existe no macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
 
 :::
 

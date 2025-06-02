@@ -11,6 +11,6 @@ title: OpenAIModelListResult
 
 ## Propriedades
 
-| Propriedade | Tipo                                        | Descrição                           |
-| ----------- | ------------------------------------------- | ----------------------------------- |
-| `models`    | Collection of [OpenAIModel](OpenAIModel.md) | The list of models. |
+| Propriedade | Tipo                                     | Descrição                           |
+| ----------- | ---------------------------------------- | ----------------------------------- |
+| `models`    | Coleção de [OpenAIModel](OpenAIModel.md) | The list of models. |

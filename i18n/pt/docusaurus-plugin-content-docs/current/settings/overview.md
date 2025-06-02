@@ -17,7 +17,7 @@ Pode aceder à caixa de diálogo Parâmetros:
 - haciendo clic en **Parámetros** en la barra de herramientas 4D
 - en 4D Server, utilizando la opción de menú **Edición > Parámetros...**
 
-When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
+Quando o modo [**Propriedades usuário** está ativado](../Desktop/user-settings.md), **Propriedades...** é renomeado de **Propriedades da estrutura...** e dois comandos de menu adicionais estão disponíveis em cada local:
 
 - **Parámetros usuario...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario. Se estas forem modificadas, serão utilizadas em vez dos parâmetros de estrutura.
 - **Parámetros usuario para el archivo de datos...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario adjunto al archivo de datos actual. Se eles forem modificados, serão usados em vez de parâmetros de usuário ou estrutura.

@@ -288,7 +288,7 @@ The following example illustrates how to manage a deletion action in a hierarchi
 
 ## Exemplo 12
 
-In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us to synchronize the display of two pictures in a form. The following code is added in the "satellite" object method (picture field or variable):
+Neste exemplo, o evento [`On Scroll`](../Events/onScroll.md) do formulário nos permite sincronizar a exibição de duas fotos em um formulário. The following code is added in the "satellite" object method (picture field or variable):
 
 ```4d
  Case of

@@ -39,7 +39,7 @@ In the *insertAfter* parameter, you can pass one of the following constants to i
 
 Este comando insere algumas linhas na tabela *tableName*, NÂO na folha. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos para baixo automaticamente de acordo com o número de linhas adicionadas.
 
-If the *tableName* table is bound to a [data context](vp-set-data-context.md), the command inserts new, empty element(s) in the collection.
+Se a tabela *tableName* estiver vinculada a um [contexto de dados](vp-set-data-context.md), o comando insere novo(s) elemento(s) vazio(s) na coleção.
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
 

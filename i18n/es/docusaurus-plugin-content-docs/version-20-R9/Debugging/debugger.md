@@ -454,7 +454,7 @@ El menú contextual de la Ventana de evaluación de los métodos da acceso a var
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Show documentation**: Opens the documentation for the target element. Este comando está disponible para:
+- **Mostrar documentación**: abre la documentación del elemento de destino. Este comando está disponible para:
  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
  - *4D commands, functions, class names:* Displays the online documentation.
 - **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.

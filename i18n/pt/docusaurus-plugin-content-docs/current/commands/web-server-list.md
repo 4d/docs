@@ -33,7 +33,7 @@ Uma aplicação 4D pode conter em qualquer lugar de um a vários servidores Web:
 
 All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
 
-> O objeto do servidor Web padrão é carregado automaticamente pelo 4D na inicialização. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](web-server.md) command.
+> O objeto do servidor Web padrão é carregado automaticamente pelo 4D na inicialização. Por outro lado, cada servidor Web de componentes que você deseja usar precisa ser instanciado usando o comando [`WEB Server`](web-server.md).
 
 You can use the [.name](../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 

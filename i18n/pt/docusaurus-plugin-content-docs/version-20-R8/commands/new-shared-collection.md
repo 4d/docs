@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova coleção compartilhada vazia ou pré-preenchida<!-- END REF --> e retorna sua referência. Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md).
+O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova coleção compartilhada vazia ou pré-preenchida<!-- END REF --> e retorna sua referência. Coleções podem ser tratadas usando propriedades e funções da [API da classe da coleção](../API/CollectionClass.md).
 
 A adição de um elemento a esta coleção utilizando o operador de atribuição deve ser rodeada pela estrutura [`Use...End use`](../Concepts/shared.md#useend-use), caso contrário é gerado um erro (isto não é necessário ao adicionar elementos utilizando funções como [`push()`](../API/CollectionClass.md#push) ou [`map()`](../API/CollectionClass.md#map) porque estes ativam automaticamente uma estrutura interna *Use...End use*). A leitura de um elemento sem um *Use... End use* estrutura é, no entanto, possível.
 

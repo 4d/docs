@@ -3,7 +3,7 @@ id: IncomingMessageClass
 title: IncomingMessage
 ---
 
-The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
+La clase `4D.IncomingMessage` le permite manejar el objeto recibido por un [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
 
 El gestor de peticiones HTTP puede devolver cualquier valor (o nada). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
 
@@ -93,7 +93,7 @@ There are 2 url parts - Url parts are: start - example
 
 :::note
 
-A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Un objeto 4D.IncomingMessage es un objeto [no compartible](../Concepts/shared.md).
 
 :::
 
@@ -198,7 +198,7 @@ The content-type must be given in the headers to indicate that the body is a pic
 
 :::note
 
-If the request is built using the [`HTTPRequest` class](HTTPRequestClass.md), the picture must be sent in the body as a Blob with the appropriate content-type.
+Si la solicitud se crea utilizando la [clase `HTTPRequest`](HTTPRequestClass.md), la imagen debe ser enviada en el cuerpo como un Blob con el tipo de contenido apropiado.
 
 :::
 
@@ -317,7 +317,7 @@ $test:=Value type(JSON Parse($r.urlQuery.myparams))=Is collection) //true
 
 Special characters such as simple quotes or carriage returns must be escaped.
 
-Example: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
+Ejemplo: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
 ````4d
 //urlQuery.mdcode = ```4d

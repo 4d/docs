@@ -31,7 +31,7 @@ The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Em *viewPro*, passe um objeto 4D View Pro válido. Esse objeto pode ter sido criado usando [VP Export to object] (vp-export-to-object.md) ou manualmente. Para mais informações sobre objetos 4D View Pro, consulte a seção [4D View Pro](../configuring.md#4d-view-pro-object).
+Em *viewPro*, passe um objeto 4D View Pro válido. Esse objeto pode ter sido criado usando [VP Export to object](vp-export-to-object.md) ou manualmente. Para mais informações sobre objetos 4D View Pro, consulte a seção [4D View Pro](../configuring.md#4d-view-pro-object).
 
 Um erro é retornado se o objeto *viewPro* for inválido.
 
@@ -55,7 +55,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
 :::note
 
-The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+A função callback especificada no atributo `formula` é acionada depois que todas as [funções personalizadas 4D](../formulas.md#4d-functions) dentro do conteúdo importado tiverem concluído seus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 :::
 

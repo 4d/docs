@@ -29,7 +29,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet to p
 
 > * As áreas do 4D View Pro só podem ser impressas com o comando `VP PRINT`.
 > * Os comandos do tema de linguagem 4D **Impressão** não são compatíveis com o `VP PRINT`.
-> * Esse comando é destinado a impressão individual pelo usuário final. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](vp-export-document.md) method.
+> * Esse comando é destinado a impressão individual pelo usuário final. Para trabalhos de impressão automatizados, recomendamos exportar a área 4D View Pro como um PDF com o método [VP EXPORT DOCUMENT](vp-export-document.md).
 
 ## Exemplo
 

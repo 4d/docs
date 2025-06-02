@@ -35,8 +35,8 @@ The **Command name** command <!--REF #_command_.Command name.Summary-->returns t
 Two optional parameters are available:
 
 - *info*: propriedades do comando. O valor retornado é um *campo de bits*, em que os seguintes bits são significativos:
- - First bit (bit 0): set to 1 if the command is [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (i.e., compatible with execution in a preemptive process) and 0 if it is **thread-unsafe**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
- - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Deprecated commands in your code generate warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors).
+ - Primeiro bit (bit 0): definida como 1 se o comando for [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (o seja, compatível com a execução em um processo preventivo) e 0 se for **thread-unsafe**. Apenas os comandos thread-safe podem ser usados em [processos preventivos](../Develop/preemptive.md).
+ - Segundo bit (bit 1): defina como 1 se o comando for **obsoleto** e 0 se não for. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Comandos obsoletos no seu código geram avisos no [verificador ao vivo e no compilador](../code-editor/write-class-method.md#warnings-and-errors).
 
 *theme*: nome do tema da linguagem 4D para o comando.
 

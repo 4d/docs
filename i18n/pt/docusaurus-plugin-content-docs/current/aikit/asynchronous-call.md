@@ -7,7 +7,7 @@ title: Asynchronous Call
 
 If you do not want to wait for the OpenAPI response when making a request to its API, you need to use asynchronous code.
 
-You must provide a `4D.Formula` to receive the result. See [OpenAIParameters](Classes/OpenAIParameters.md) for a list of them.
+You must provide a `4D.Formula` to receive the result. Ver [OpenAIParameters](Classes/OpenAIParameters.md) para uma lista deles.
 
 The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), so the response will be received within the current process.
 
@@ -46,7 +46,7 @@ $messages.push({role: "user"; content: "Could you explain me why 42 is a special
 $client.chat.completions.create($messages; { onResponse: Formula(MyChatCompletionsReceiveMethod($1))})
 ```
 
-`$1` will be an instance of [OpenAIChatCompletionsResult](Classes/OpenAIChatCompletionsResult.md), so `MyChatCompletionsReceiveMethod` method could be:
+`$1` será uma instância de [OpenAIChatCompletionsResult](Classes/OpenAIChatCompletionsResult.md), então o método `MyChatCompletionsReceiveMethod` poderia ser:
 
 ```4d
 #DECLARE($result: cs.AIKit.OpenAIChatCompletionsResult)

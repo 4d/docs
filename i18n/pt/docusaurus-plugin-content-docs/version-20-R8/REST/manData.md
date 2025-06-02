@@ -47,7 +47,7 @@ Se o conjunto de entidades não existir mais no cache 4D Server, será recriada 
 
 Usando [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidlogicoperatorothercollection), você pode combinar dois conjuntos de entidades criados anteriormente. Pode então combinar os resultados em ambos, retornar só o que é comum entre os dois, ou retornar o que não é comum entre os dois.
 
-A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
+Uma nova seleção de entidades é retornada; no entanto, você também pode criar uma entidade definida chamando [`$method=entityset`]($method.md#methodentityset) no final da solicitação REST.
 
 ## Calcular dados
 

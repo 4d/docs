@@ -249,10 +249,10 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                        |
-| ------- | ------------------------------- |
-| 20 R9   | Read UUIDs in macOS executables |
-| 19      | Adicionado                      |
+| Release | Mudanças                           |
+| ------- | ---------------------------------- |
+| 20 R9   | Ler os UUIDs nos executáveis macOS |
+| 19      | Adicionado                         |
 
 </details>
 
@@ -260,9 +260,9 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                    |
-| ---------- | ------ | --------------------------- | ---------------------------- |
-| Resultados | Object | <- | Application file information |
+| Parâmetro  | Tipo   |                             | Descrição                           |
+| ---------- | ------ | --------------------------- | ----------------------------------- |
+| Resultados | Object | <- | Informações do arquivo da aplicação |
 
 <!-- END REF -->
 
@@ -270,7 +270,7 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna o conteúdo de informações de arquivos de aplicação como um objeto<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
+A função deve ser usada com um arquivo existente e compatível: **.plist** (todas as plataformas), **.exe**/**.dll** (Windows) ou **macOS executável**. Se o arquivo não existir no disco ou não for um arquivo compatível, a função retornará um objeto vazio (nenhum erro será gerado).
 
 **Objeto retornado com um arquivo .plist (todas as plataformas)**
 
@@ -301,22 +301,22 @@ Todos os valores de propriedades são Texto.
 
 :::note
 
-A macOS executable file is located within a package (e.g. myApp.app/Contents/MacOS/myApp).
+Um arquivo executável macOS está localizado em um pacote (por exemplo, myApp.app/Contents/MacOS/myApp).
 
 :::
 
-The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
+A função retorna um objeto `archs` que contém uma coleção de objetos que descrevem cada arquitetura encontrada no executável (um executável fat pode incorporar várias arquiteturas). Cada objeto da coleção contém as seguintes propriedades:
 
 | Propriedade | Tipo   | Descrição                                                                         |
 | ----------- | ------ | --------------------------------------------------------------------------------- |
 | name        | Text   | Nome da arquitetura ("arm64" ou "x86_64") |
-| type        | Number | Numerical identifier of the architecture                                          |
-| uuid        | Text   | Textual representation of the executable uuid                                     |
+| type        | Number | Identificador numérico da arquitetura                                             |
+| uuid        | Text   | Representação textual do uuid executável                                          |
 
 #### Exemplo 1
 
 ```4d
-  // display copyright info of an info.plist (any platform)
+  // exibir informações de direitos autorais de um info.plist (qualquer plataforma)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
@@ -327,18 +327,20 @@ ALERT($info.Copyright)
 #### Exemplo 2
 
 ```4d
- // display copyright info of application .exe file (windows)
+// definir copyright e versão de um arquivo .exe (Windows)
 var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
-$info:=$exeFile.getAppInfo()
-ALERT($info.LegalCopyright)
+$info:=New object
+$info.LegalCopyright:="Copyright 4D 2021"
+$info.ProductVersion:="1.0.0"
+$exeFile.setAppInfo($info)
 ```
 
 #### Exemplo 3
 
 ```4d
- // Get uuids of an application (macOS)
+ // Obter uuids de um aplicativo (macOS)
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 ```
@@ -545,9 +547,9 @@ $fhandle:=$f.open("read")
 
 A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o arquivo com o nome que você passou em *newName* e retorna o objeto `File` renomeado<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
+O parâmetro *newName* deve estar em conformidade com as regras de nome (por exemplo, ele não deve conter caracteres como ":", "/", etc.), caso contrário um erro é retornado. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
+Note que a função modifica o nome completo do arquivo, ou seja, se você não passar uma extensão em *newName*, o arquivo terá um nome sem uma extensão.
 
 **Objeto devolvido**
 
@@ -570,7 +572,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 | Release | Mudanças                        |
 | ------- | ------------------------------- |
-| 20 R9   | Read UUIDs in macOS executables |
+| 20 R9   | Ler UUIDs nos executáveis macOS |
 | 20      | Suporte de WinIcon              |
 | 19      | Adicionado                      |
 
@@ -580,9 +582,9 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                              |
-| --------- | ------ | -- | ------------------------------------------------------ |
-| info      | Object | -> | Properties to write in an application file information |
+| Parâmetro | Tipo   |    | Descrição                                                             |
+| --------- | ------ | -- | --------------------------------------------------------------------- |
+| info      | Object | -> | Propriedades para escrever em informações de um arquivo de aplicativo |
 
 <!-- END REF -->
 
@@ -590,7 +592,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como o conteúdo da informação de um arquivo de aplicação<!-- END REF -->.
 
-The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. If used with another file type or with *.exe*\*/**.dll** files that do not already exist on disk, the function does nothing (no error is generated).
+A função só pode ser usada com os seguintes tipos de arquivo: **.plist** (todas as plataformas), **.exe**/**.dll** (Windows), ou **macOS executável**. Se usado com outro tipo de arquivo ou com *.exe*\*/**.dll** arquivos que ainda não existem no disco, a função não faz nada (nenhum erro é gerado).
 
 Parâmetro ***info* com um arquivo .plist (todas as plataformas)**
 
@@ -600,11 +602,11 @@ A função apenas é compatível com arquivos .plist em formato xml (baseado em 
 
 :::
 
-If the .plist file already exists on the disk, it is updated. Otherwise, it is created.
+Se o arquivo .plist já existir no disco, ele será atualizado. Caso contrário, será criado.
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
+Cada propriedade válida definida no parâmetro do objecto info está escrita no arquivo  .plist como uma chave. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Outras chaves existentes no arquivo .plist são deixadas intocadas.
+Se uma chave definida no parâmetro *info* já estiver definida no arquivo .plist, seu valor será atualizado enquanto mantém seu tipo original. Outras chaves existentes no arquivo .plist são deixadas intocadas.
 
 :::note
 
@@ -614,7 +616,7 @@ Para definir um valor de tipo de data, o formato a utilizar é uma string de car
 
 **Parâmetro objeto *info* com um arquivo .exe ou .dll (somente Windows)**
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
+Cada propriedade válida definida no parâmetro do objeto *info* é escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
 | Propriedade      | Tipo | Comentário                                                                                                                                                |
 | ---------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -628,32 +630,32 @@ Each valid property set in the *info* object parameter is written in the version
 | OriginalFilename | Text |                                                                                                                                                           |
 | WinIcon          | Text | Caminho Posix do ficheiro .ico. Esta propriedade aplica-se apenas a ficheiros executáveis gerados por 4D. |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Se passar um tipo de valor diferente de texto, este é transformado em string.
+Para todas as propriedades, exceto `WinIcon`, se você passar um texto nulo ou vazio como valor, uma seqüência vazia é escrita na propriedade. Se passar um tipo de valor diferente de texto, este é transformado em string.
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+Para a propriedade `WinIcon`, se o arquivo de ícone não existir ou tiver um formato incorreto, um erro é gerado.
 
 **Parâmetro *info* com um arquivo macOS executável (somente macOS)**
 
-*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*informações* devem ser um objeto com uma única propriedade chamada `archs` que é uma coleção de objetos no formato retornado por [`getAppInfo()`](#getappinfo). Cada objeto deve conter pelo menos as propriedades `type` e `uuid` (`name` não são usadas).
 
-Every object in the *info*.archs collection must contain the following properties:
+Cada objeto na coleção *info*.archs deve conter as seguintes propriedades:
 
-| Propriedade | Tipo   | Descrição                                          |
-| ----------- | ------ | -------------------------------------------------- |
-| type        | Number | Numerical identifier of the architecture to modify |
-| uuid        | Text   | Textual representation of the new executable uuid  |
+| Propriedade | Tipo   | Descrição                                            |
+| ----------- | ------ | ---------------------------------------------------- |
+| type        | Number | Identificador numérico da arquitetura para modificar |
+| uuid        | Text   | Textual representation of the new executable uuid    |
 
 #### Exemplo 1
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
-var $infoPlistFile : 4D.File
+  // define algumas chaves em um arquivo info.plist (todas as plataformas)
+var $infoPlistFile : 4D. ile
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
-$info:=New object
-$info.Copyright:="Copyright 4D 2023" //text
+$info:=Novo objeto
+$info. opyright:="Copyright 4D 2023" //text
 $info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info. hipmentDate:="2023-04-22T06:00:00Z" //timestamp
 $info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
@@ -661,28 +663,26 @@ $infoPlistFile.setAppInfo($info)
 #### Exemplo 2
 
 ```4d
-  // set copyright, version and icon of a .exe file (Windows)
-var $exeFile; $iconFile : 4D.File
+  // estabelece copyright e versão do arquivo .exe (Windows)
+var $exeFile : 4D. File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
-$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2023"
-$info.ProductVersion:="1.0.0"
-$info.WinIcon:=$iconFile.path
+$info. LegalCopyright:="Copyright 4D 2021"
+$info. ProductVersion:="1.0.0"
 $exeFile.setAppInfo($info)
 ```
 
 #### Exemplo 3
 
 ```4d
-// regenerate uuids of an application (macOS)
+// regenera  as uuids de uma aplicação (macOS)
 
-// read myApp uuids 
+// lê os uuids myApp 
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 
-// regenerate uuids for all architectures
+// regenera uuids para todas as arquiteturas
 For each ($i; $info.archs)
 	$i.uuid:=Generate UUID
 End for each 
@@ -711,15 +711,15 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parâmetro | Tipo |    | Descrição                 |
-| --------- | ---- | -- | ------------------------- |
-| content   | BLOB | -> | New contents for the file |
+| Parâmetro | Tipo |    | Descrição                      |
+| --------- | ---- | -- | ------------------------------ |
+| content   | BLOB | -> | Novos conteúdos para o arquivo |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
+A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo usando os dados armazenados no *conteúdo* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
 
 #### Exemplo
 
@@ -758,22 +758,22 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Descrição
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- FIM REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
+Se o arquivo referenciado no objeto `Arquivo` não existir no disco, ele será criado pela função. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-In *text*, pass the text to write to the file. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
+Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
+- em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
 - ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 
 Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
+Em breakMode, você pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha no documento. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                            |
 | ----------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -783,9 +783,9 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 | `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                                                                            |
 | `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                                                                             |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Por padrão, ao omitir o parâmetro *breakMode*, as quebras de linha são processadas no modo nativo (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
+> **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. Veja a [Página Compatibilidade](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) em doc.4d.com.
 
 #### Exemplo
 
