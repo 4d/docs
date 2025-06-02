@@ -23,7 +23,7 @@ O comando `VP Find` <!-- REF #_method_.VP Find.Summary -->pesquisa o *rangeObj* 
 
 No parâmetro *rangeObj*, passe um objeto que contenha um intervalo a ser pesquisado.
 
-The *searchValue* parameter lets you pass the text to search for within the *rangeObj*.
+O parâmetro *searchValue* permite que você passe o texto a ser pesquisado dentro do *rangeObj*.
 
 You can pass the optional *searchCondition* parameter to specify how the search is performed. As propriedades abaixo são compatíveis:
 

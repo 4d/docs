@@ -31,8 +31,8 @@ The `_OpenAIAsyncOptions` internal class provides function to handle asynchronou
 
 ### onTerminate()
 
-On terminate send [OpenAIResult](OpenAIResult.md) to the callback "formula".
+On terminate enviar [OpenAIResult](OpenAIResult.md) para o callback "formula".
 
 ### onData()
 
-On data receive send [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md) to the callback "formula".
+Nos dados receber envio [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md) para o callback "formula".

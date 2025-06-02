@@ -17,7 +17,7 @@ Converts a URL to a Blob object by making an HTTP request.
 | --------- | ---- | ----------------------------------------------------- |
 | $url      | Text | The URL of the image to be converted. |
 
-**Returns**: Blob or Null if the request fails.
+**Devuelve**: Blob o Null si la solicitud falla.
 
 ```4d
 var $blob:=cs._ImageUtils.me.httpURLToBlob("http://example.com/image.png")

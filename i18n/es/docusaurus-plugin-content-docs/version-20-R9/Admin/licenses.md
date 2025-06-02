@@ -35,7 +35,7 @@ En algunos casos, la actualización de la licencia puede necesitar que haga clic
 
 ## Activación de licencias
 
-Una vez instalados en su disco, debe activar sus productos 4D para poder utilizarlos. Usually, **the activation is automatic** when you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
+Una vez instalados en su disco, debe activar sus productos 4D para poder utilizarlos. Normalmente, **la activación es automática** si [inicia sesión con su cuenta 4D](GettingStarted/Installation.md) en el asistente de bienvenida.
 
 Sin embargo, en algunos casos específicos podría ser necesario activar las licencias manualmente, por ejemplo si:
 

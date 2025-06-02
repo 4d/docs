@@ -24,7 +24,7 @@ El comando **WP EXPORT DOCUMENT**<!--REF #_command_.WP EXPORT DOCUMENT.Summary--
 
 En *wpDoc*, pase el objeto 4D Write Pro que desea exportar.
 
-You can pass either a *filePath* or *fileObj*:
+Puede pasar un *filePath* o *fileObj*:
 
 - In *filePath*, pass the destination path and the name of the document to be exported. If you pass only the document name, it will be saved at the same level as the 4D structure file.
 

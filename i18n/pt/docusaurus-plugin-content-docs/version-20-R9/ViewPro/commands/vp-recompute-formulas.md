@@ -19,7 +19,7 @@ O comando `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summa
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-> Be sure the [VP SUSPEND COMPUTING](vp-suspend-computing.md) command has not been executed before using `VP RECOMPUTE FORMULAS`, otherwise the command does nothing.
+> Certifique-se de que o comando [VP SUSPEND COMPUTING](vp-suspend-computing.md) não foi executado antes de usar o comando `VP RECOMPUTE FORMULAS`, caso contrário, o comando não faz nada.
 
 ## Exemplo
 

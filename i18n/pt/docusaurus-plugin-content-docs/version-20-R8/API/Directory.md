@@ -501,7 +501,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 A função `.file()` cria <!-- REF #directory.file().Summary -->um objeto `File` dentro do objeto `Folder` e retorna sua referência<!-- END REF -->.
 
-In *path*, pass a relative POSIX path to designate the file to return. A rota se avaliará a partir da pasta pai como raíz.
+Em *path*, passe uma rota relativa POSIX para designar o arquivo a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
 **Valor retornado**
 
@@ -706,7 +706,7 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 A função `.getIcon()` <!-- REF #directory.getIcon().Summary -->retorna o ícone da pasta <!-- END REF -->.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
+O parâmetro opcional *size* especifica as dimensões em píxels do icone devolvido. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
 Se a pasta não existir no disco, se devolve um icone vazio como padrão.
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | signatures4D | Text array | &#8592; | Signatures 4D des types de données |
 | typesNatifs | Text array | &#8592; | Types de données natifs |
-| nomsFormats | Text array | &#8592; | Noms des formats (Windows uniquement), chaînes vides sous Mac OS |
+| nomsFormats | Text array | &#8592; | Noms ou descriptions des formats|
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ Cette commande retourne les types de données sous plusieurs formes différentes
    * Sous Mac OS, les types natifs sont exprimés sous forme d’UTI (UniformType Identifier).  
    * Sous Windows, les types natifs sont exprimés sous forme de numéros, chaque numéro étant associé à un nom de format. Le tableau *typesNatifs* contient ces numéros sous forme de chaîne (“3”, “12”, etc.). Si vous souhaitez utiliser des libellés plus explicites, il est recommandé d’utiliser le tableau facultatif *nomsFormats*, qui contient le nom de format des types natifs sous Windows.  
 Le tableau *typesNatifs* permet de prendre en charge tout type de données présent dans le conteneur, y compris des données dont le type n’est pas référencé par 4D.
-* Sous Windows, vous pouvez également passer le tableau *nomsFormats*, qui reçoit les noms des types de données présents dans le conteneur. Les valeurs retournées dans ce tableau peuvent être utilisées par exemple pour construire un pop up menu de sélection de format. Sous Mac OS, le tableau *nomsFormats* retourne des chaînes vides.
+* Vous pouvez également passer le tableau *nomsFormats*, qui reçoit les noms ou les descriptions des types de données présents dans le conteneur. Les valeurs retournées dans ce tableau peuvent être utilisées par exemple pour construire un pop up menu de sélection de format. 
 
 Pour plus d’informations sur les types de données pris en charge, reportez-vous à la section *Gestion du conteneur de données*. 
 

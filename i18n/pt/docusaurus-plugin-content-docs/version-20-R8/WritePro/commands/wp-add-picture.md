@@ -32,11 +32,11 @@ For the optional second parameter, you can pass either:
 
 :::note
 
-Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 
 :::
 
-- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. This allows you to then call [WP SET ATTRIBUTES](wp-set-attributes.md) with the wk image expression selector to fill the image with a 4D expression. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
+- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. Isto permite que você chame [WP SET ATTRIBUTES](wp-set-attributes.md) com o seletor wk image expression para preencher a imagem com uma expressão 4D. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
 
 By default, the added picture is:
 

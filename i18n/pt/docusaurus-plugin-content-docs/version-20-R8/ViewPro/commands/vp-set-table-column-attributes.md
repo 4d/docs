@@ -31,7 +31,7 @@ O comando `VP SET TABLE COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUM
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In the *attributes* parameter, pass an object that contains the properties to set:
+No parâmetro *attributes*, passe um objeto que contenha as propriedades a serem definidas:
 
 | Propriedade         | Tipo    | Descrição                                                                                                                                                                                                    |
 | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

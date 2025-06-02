@@ -68,7 +68,7 @@ Esta função não faz nada e sempre retorna **Verdadeiro** com cliente remoto, 
 
 :::
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session and returns **True** if the execution was successful<!-- END REF -->. A menos que esteja no modo ["forceLogin"] (../REST/authUsers.md#force-login-mode), a sessão se torna automaticamente uma sessão de convidado.
+The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session and returns **True** if the execution was successful<!-- END REF -->. A menos que esteja no modo ["forceLogin"](../REST/authUsers.md#force-login-mode), a sessão se torna automaticamente uma sessão de convidado.
 
 :::note
 
@@ -582,7 +582,7 @@ A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->
 
 - No parâmetro *privilege*, passe uma cadeia de caracteres contendo um nome de privilégio (ou vários nomes de privilégio separados por vírgula).
 
-- In the *privileges* parameter, pass a collection of strings containing privilege names.
+- No parâmetro *privileges*, passe uma coleção de cadeias de caracteres contendo nomes de privilégios.
 
 - No parâmetro *settings*, passe um objeto que contenha as seguintes propriedades:
 

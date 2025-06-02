@@ -21,7 +21,7 @@ O comando `VP SET NUM VALUE` <!-- REF #_method_.VP SET NUM VALUE.Summary -->atri
 
 Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) cujo valor você deseja especificar. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The *numberValue* parameter specifies a numeric value to be assigned to the *rangeObj*.
+O parâmetro *numberValue* especifica um valor numérico a ser atribuído ao *rangeObj*.
 
 O *formatPattern* opcional define um [padrão](../configuring.md#cell-format) para o parâmetro *numberValue*.
 
