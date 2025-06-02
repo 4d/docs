@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Paramètres  | Type    |                             | Description                               |
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document |
+| targetObj   | Object  | &#8594; | Plage ou élément ou document 4D Write Pro |
 | breakType   | Integer | &#8594; | Type de rupture à insérer                 |
 | mode        | Integer | &#8594; | Mode d'insertion                          |
 | rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage           |
@@ -20,43 +20,45 @@ displayed_sidebar: docs
 
 ## Description
 
-The **WP Insert break** command <!--REF #_command_.WP Insert break.Summary-->inserts a new break of the *breakType* type in the *targetObj* according to the specified insertion *mode* and *rangeUpdate* parameters, and  returns the text range of the break character<!-- END REF-->
+La commande **WP Insert break** <!--REF #_command_.WP Insert break.Summary-->insère une nouvelle rupture du type *breakType* dans le *targetObj* conformément aux paramètres *mode* d'insertion et *rangeUpdate* spécifiés, et retourne la plage de texte du caractère de rupture<!-- END REF-->
 
-In *targetObj*, pass:
+Dans *targetObj*, passez :
 
-- a range, or
-- an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
-- a 4D Write Pro document
+- une plage, ou
+- un élément (tableau / ligne / paragraphe / corps / en-tête / pied de page / image en ligne / section / sous-section), ou
+- un document 4D Write Pro
 
-In *breakType*, pass one of the following constants from the *4D Write Pro Constants* theme to define the type of break to insert:
+Dans *breakType*, passez l'une des constantes suivantes du thème *4D Write Pro Constants* pour définir le type de break à insérer :
 
-| Constante                   | Type    | Valeur | Commentaire                                                                                                                                     |
-| --------------------------- | ------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk column break             | Integer | 3      | Column break: inserts a column break                                                                                            |
-| wk continuous section break | Integer | 5      | Defines a continuous section break (often used to change the number of columns without starting a new page). |
-| wk line break               | Integer | 0      | Line break (in the same paragraph)                                                                                           |
-| wk page break               | Integer | 2      | Page break: defines a new page                                                                                                  |
-| wk paragraph break          | Integer | 4      | Paragraph break: defines a new paragraph                                                                                        |
-| wk section break            | Integer | 1      | Section break: defines a new section                                                                                            |
+| Constante                   | Type    | Valeur | Commentaire                                                                                                                                                   |
+| --------------------------- | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| wk column break             | Integer | 3      | Pause de colonne : insère un saut de colonne                                                                                                  |
+| wk continuous section break | Integer | 5      | Définit un saut de section continu (souvent utilisé pour modifier le nombre de colonnes sans commencer une nouvelle page). |
+| wk line break               | Integer | 0      | Saut de ligne (dans le même paragraphe)                                                                                                    |
+| wk page break               | Integer | 2      | Saut de page : définit une nouvelle page                                                                                                      |
+| wk paragraph break          | Integer | 4      | ```
+Saut de paragraphe : définit un nouveau paragraphe
+```                                                                                                    |
+| wk section break            | Integer | 1      | Saut de section : définit une nouvelle section                                                                                                |
 
-In the *mode* parameter, pass a constant to indicate the insertion mode to be used for the break in the destination *targetObj*:
+Dans le paramètre *mode*, passez une constante pour indiquer le mode d'insertion à utiliser pour le break dans la destination *targetObj* :
 
-| Constante  | Type    | Valeur | Commentaire                            |
-| ---------- | ------- | ------ | -------------------------------------- |
-| wk append  | Integer | 2      | Insert contents at end of target       |
-| wk prepend | Integer | 1      | Insert contents at beginning of target |
-| wk replace | Integer | 0      | Replace target contents                |
+| Constante  | Type    | Valeur | Commentaire                             |
+| ---------- | ------- | ------ | --------------------------------------- |
+| wk append  | Integer | 2      | Insérer le contenu à la fin de la cible |
+| wk prepend | Integer | 1      | Insérer le contenu au début de la cible |
+| wk replace | Integer | 0      | Remplacer le contenu de la cible        |
 
-- If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
+- Si *targetObj* est une plage, vous pouvez utiliser le paramètre facultatif *rangeUpdate* pour transmettre l'une des constantes suivantes afin de spécifier si le contenu inséré est inclus ou non dans la plage résultante :
 
-| Constante             | Type    | Valeur | Commentaire                                                              |
-| --------------------- | ------- | ------ | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1      | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0      | Inserted contents included in updated range (default) |
+| Constante             | Type    | Valeur | Commentaire                                                                     |
+| --------------------- | ------- | ------ | ------------------------------------------------------------------------------- |
+| wk exclude from range | Integer | 1      | Les contenus insérés ne sont pas inclus dans la plage mise à jour               |
+| wk include in range   | Integer | 0      | Contenu inséré inclus dans la plage mise à jour (par défaut) |
 
-If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
+Si vous ne passez pas un paramètre *rangeUpdate*, par défaut, le contenu inséré est inclus dans la plage résultante.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.
 
 ## Exemple 1
 
