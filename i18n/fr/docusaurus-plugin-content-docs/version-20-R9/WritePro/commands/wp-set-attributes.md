@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Paramètres  | Type                                            |                             | Description                                                                       |
 | ----------- | ----------------------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
-| targetObj   | Object                                          | &#8594; | Range or element or 4D Write Pro document                                         |
+| targetObj   | Object                                          | &#8594; | Plage ou élément ou document 4D Write Pro                                         |
 | attribName  | Text                                            | &#8594; | Nom de l'attribut à définir                                                       |
 | attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Nouvelle valeur d'attribut                                                        |
 | attribObj   | Object                                          | &#8594; | Objet contenant les noms des attributs et leurs valeurs correspondantes à définir |
@@ -23,9 +23,9 @@ La commande **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary--
 
 Dans *targetObj*, vous pouvez passer :
 
-- a range, or
+- une plage, ou
 - un élément (en-tête / pied de page / corps / tableau / ligne / paragraphe / image ancrée ou en ligne / section / sous-section / feuille de style), ou
-- a 4D Write Pro document
+- un document 4D Write Pro
 
 Vous pouvez spécifier les attributs à définir pour *targetObj* d'une des deux façons :
 
