@@ -621,7 +621,7 @@ El siguiente código genérico duplica cualquier entidad:
 | Parámetros | Tipo    |                             | Descripción                                                                                                               |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Resultado  | any     | <- | Value of the primary key of the entity (Integer or Text)                                               |
+| Resultado  | any     | <- | Valor de la llave primaria de la entidad (Integer or Text)                                             |
 
 <!-- END REF -->
 
@@ -1639,11 +1639,11 @@ Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
 
 #### Descripción
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+La función `.touched()` <!-- REF #EntityClass.touched().Summary -->devuelve True si al menos un atributo de la entidad ha sido modificado desde que la entidad fue cargada en memoria o guardada<!-- END REF -->. Puede utilizar esta función para determinar si necesita guardar la entidad.
 
 Esto solo se aplica a los atributos de [`kind`](DataClassClass.md#returned-object) "storage" o "relatedEntity".
 
-Para una nueva entidad que acaba de ser creada (con [`.new()`](DataClassClass.md#new)), la función devuelve False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Para una nueva entidad que acaba de ser creada (con [`.new()`](DataClassClass.md#new)), la función devuelve False. Sin embargo, en este contexto, si accede a un atributo cuya [propiedad `autoFilled`](./DataClassClass.md#returned-object) es True, la función `.touched()` entonces devolverá True. Por ejemplo, después de ejecutar `$id:=ds.Employee.ID` para una nueva entidad (asumiendo que el atributo ID tiene la propiedad "Autoincrement"), `.touched()` devuelve True.
 
 #### Ejemplo
 
