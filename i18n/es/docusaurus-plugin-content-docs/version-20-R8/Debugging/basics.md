@@ -72,7 +72,7 @@ La ventana de error de sintaxis propone varias opciones:
 
 :::tip
 
-To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Mantenga presionada la tecla **Alt** (Windows) u **Opción** (macOS) y haga clic en el botón **Continuar** la primera vez que aparece. La etiqueta del botón cambia a **Ignorar** si el diálogo es llamado de nuevo por el mismo error.
+Para ignorar un error que ocurre repetidamente (por ejemplo, en bucles), puede convertir el botón **Continuar** en un botón **Ignorar**. Mantenga presionada la tecla **Alt** (Windows) u **Opción** (macOS) y haga clic en el botón **Continuar** la primera vez que aparece. La etiqueta del botón cambia a **Ignorar** si el diálogo es llamado de nuevo por el mismo error.
 
 :::
 
@@ -87,7 +87,7 @@ To ignore an error that occurs repeatedly (for example, in loops), you can turn 
 
 ## Depurador
 
-Un error común de los principiantes al tratar con la detección de errores es hacer clic en **Abandonar** en la ventana de error de sintaxis, volver al editor de código, y tratar de averiguar lo que está pasando mirando el código. ¡No lo haga! You will save plenty of time and energy by always using the [**Debugger**](debugger.md).
+Un error común de los principiantes al tratar con la detección de errores es hacer clic en **Abandonar** en la ventana de error de sintaxis, volver al editor de código, y tratar de averiguar lo que está pasando mirando el código. ¡No lo haga! Ahorrará mucho tiempo y energía usando siempre el [**Depurador**](debugger.md).
 
 El depurador le permite pasar lentamente por los métodos. Muestra toda la información que necesita para entender por qué ha ocurrido un error. Una vez que tiene esta información, usted sabe cómo arreglar el error.
 
@@ -95,6 +95,6 @@ Otra razón para usar el Depurador es el desarrollo del código. A veces se pued
 
 ## Rupturas
 
-En el proceso de depuración, puede que necesite saltar el seguimiento de algunas partes del código hasta una línea determinada. Or, you may want to trace the code when a given expression has a certain value (e.g. `$myVar > 1000`), or every time a specific 4D command is called.
+En el proceso de depuración, puede que necesite saltar el seguimiento de algunas partes del código hasta una línea determinada. O, puede querer rastrear el código cuando una expresión dada tiene un determinado valor (por ejemplo, `$myVar > 1000`), o cada vez que se llama un comando 4D específico.
 
 Estas necesidades están cubiertas por **puntos de interrupción** y las funciones de **captura de comando**. Pueden configurarse desde el editor de código, el depurador o el explorador de ejecución.
