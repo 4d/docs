@@ -110,7 +110,7 @@ Los objetos compartidos y las colecciones compartidas están diseñados para per
 
 ### Llamadas automáticas Use...End use
 
-The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
+Las siguientes funcionalidades activan automáticamente un **Use/End use** interno, haciendo innecesaria una llamada explícita a la estructura cuando se ejecuta la función:
 
 - [funciones de collection](../API/CollectionClass.md) que modifican las colecciones compartidas,
 - comando [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md),
