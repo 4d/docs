@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Paramètres  | Type                                           |                             | Description                               |
 | ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object                                         | &#8594; | Range or element or 4D Write Pro document |
+| targetObj   | Object                                         | &#8594; | Plage ou élément ou document 4D Write Pro |
 | attribName  | Text                                           | &#8594; | Name of attribute to get                  |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
@@ -24,9 +24,9 @@ La commande **WP Get attributes**<!--REF #_command_.WP Get attributes.Summary-->
 
 In *targetObj*, you can pass:
 
-- a range, or
-- an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
-- a 4D Write Pro document
+- une plage, ou
+- un élément (en-tête / pied de page / corps / tableau / paragraphe / image ancrée ou en ligne / section / sous-section / feuille de style), ou
+- un document 4D Write Pro
 
 In *attribName*, pass the name of the attribute you want to retrieve.
 
