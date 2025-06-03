@@ -23,13 +23,14 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 The *formula* acts as the source from which the object retrieves its value at runtime. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
 
-If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to an [automatic form variable](../FormObjects/properties_Object.md#dynamic-variables) (`$form_xxxx`).
+If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to a [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).
 
 If the command is applied to an object that does not exist or cannot support formulas, it does nothing.
 
-:::note
+:::note Notes
 
- The formula is executed in the context of the form that owns the object. When working with nested forms (e.g., subforms), ensure that the formula is defined and assigned in the appropriate form context to avoid unexpected behavior.
+ * The formula is executed in the context of the form that owns the object. When working with nested forms (e.g., subforms), ensure that the formula is defined and assigned in the appropriate form context to avoid unexpected behavior.
+ * If you assign a formula to an input object or any object with a modifiable value, make sure that the formula is [**assignable**](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
 
 :::
 
@@ -53,7 +54,8 @@ OBJECT SET DATA SOURCE FORMULA(*;"DiscountedPriceInput"; $discountedFormula)
 
 [OBJECT Get data source formula](object-get-data-source-formula.md)<br/>
 [LISTBOX SET COLUMN FORMULA](../commands-legacy/listbox-set-column-formula.md)<br/>
-[OBJECT SET DATA SOURCE](../commands-legacy/object-set-data-source.md) 
+[OBJECT SET DATA SOURCE](../commands-legacy/object-set-data-source.md)<br/> 
+[OBJECT SET VALUE](../commands-legacy/object-set-value.md)
 
 ## Properties
 

@@ -21,7 +21,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 When a formula is associated with a form object, it acts as the object's data source at runtime. 
 
-If this command is applied to an object with no custom formula assigned, it returns the automatically assigned [form variable](../FormObjects/properties_Object.md#dynamic-variables)  (`$form_xxxx`).  
+If this command is applied to an object with no custom formula assigned, it returns the automatically assigned [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).  
 If the object does not exist or does not support formulas, it returns `Null`.
 
 
@@ -38,7 +38,8 @@ $formula:=OBJECT Get data source formula(*; "myInput")
 
 [OBJECT SET DATA SOURCE FORMULA](object-set-data-source-formula.md)<br/>
 [LISTBOX GET COLUMN FORMULA](../commands-legacy/listbox-get-column-formula.md)<br/>
-[OBJECT SET DATA SOURCE](../commands-legacy/object-set-data-source.md)
+[OBJECT SET DATA SOURCE](../commands-legacy/object-set-data-source.md)<br/>
+[OBJECT GET VALUE](../commands-legacy/object-get-value.md)
 
 ## Properties
 
