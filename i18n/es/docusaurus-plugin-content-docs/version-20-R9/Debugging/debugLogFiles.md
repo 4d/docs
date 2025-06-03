@@ -458,7 +458,7 @@ Este es un ejemplo de un registro ORDA del lado del servidor:
 
 ## 4DTCPLog.txt
 
-This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+Este archivo de registro registra eventos relacionados con conexiones TCP. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión. Este registro ayuda a los desarrolladores a monitorear y depurar la actividad de red dentro de sus aplicaciones.
 
 Como iniciar este historial:
 
@@ -483,15 +483,15 @@ Los siguientes campos se registran para cada evento:
 | Nombre del campo | Tipo       | Descripción                                                                                   |
 | ---------------- | ---------- | --------------------------------------------------------------------------------------------- |
 | time             | Fecha/Hora | Fecha y hora del evento en formato ISO 8601                                                   |
-| localPort        | Number     | Local port used for the connection                                                            |
+| localPort        | Number     | Puerto local usado para la conexión                                                           |
 | peerAddress      | Text       | Dirección IP del peer remoto                                                                  |
 | peerPort         | Number     | Puerto del peer remoto                                                                        |
-| protocol         | Text       | Indicates whether the event is related to `TCP`                                               |
+| protocol         | Text       | Indica si el evento está relacionado con `TCP`                                                |
 | evento           | Text       | El tipo de evento:`open`, `close`, `error`, `send`, `receive`, o `listen`     |
 | size             | Number     | La cantidad de datos enviados o recibidos (en bytes), 0 si no es aplicable |
-| excerpt          | Number     | First 10 bytes of data in hexadecimal format                                                  |
-| textExcerpt      | Text       | First 10 bytes of data in text format                                                         |
-| comment          | Text       | Additional information about the event, such as error details or encryption status            |
+| excerpt          | Number     | Primeros 10 bytes de datos en formato hexadecimal                                             |
+| textExcerpt      | Text       | Primeros 10 bytes de datos en formato texto                                                   |
+| comment          | Text       | Información adicional sobre el evento, como detalles de error o estado de cifrado             |
 
 ## Utilización de un archivo de configuración de log
 
