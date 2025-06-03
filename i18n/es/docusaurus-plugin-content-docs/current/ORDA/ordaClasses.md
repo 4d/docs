@@ -1020,6 +1020,6 @@ Para las clases ORDA basadas en el datastore local (`ds`), puede acceder directa
 
 ### Editor de código
 
-En el editor de código de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo, con una variable de clase Entity:
+En el editor de código de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo con una variable de clase Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
