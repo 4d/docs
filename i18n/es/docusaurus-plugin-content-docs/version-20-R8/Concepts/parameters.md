@@ -47,7 +47,7 @@ Los valores de entrada y salida son [evaluados](#values-or-references) en el mom
 
 :::info Compatibilidad
 
-The legacy declaration syntax, where parameters are automatically copied in sequentially numbered local variables $0, $1, etc. and declared using compiler directives such as `C_TEXT($1;$2)`, is **deprecated** as of 4D 20 R7.
+La sintaxis de declaración heredada, donde los parámetros se copian automáticamente en variables locales numeradas secuencialmente $0, $1, etc. y declarado usando directivas de compilador como `C_TEXT($1;$2)`, es **obsoleto** a partir de 4D 20 R7.
 
 :::
 
@@ -55,7 +55,7 @@ The legacy declaration syntax, where parameters are automatically copied in sequ
 
 En los métodos llamados o en las funciones de clase, los valores de los parámetros se asignan a las variables locales. Generalmente se declararan los parámetros utilizando un **nombre de parámetro** con un **tipo de parámetro**, separados por dos puntos.
 
-- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
+- Para funciones de clase, los parámetros se declaran junto con el prototipo de función, por ejemplo, cuando se utilizan las palabras clave `Function` o `Class Constructor`.
 - Para los métodos (métodos proyecto, métodos objeto formulario, métodos base y triggers), los parámetros se declaran utilizando la palabra clave `#DECLARE` al principio del código del método.
 
 Ejemplos:
@@ -124,16 +124,16 @@ Function add($x : Variant; $y : Integer): Integer
 Los parámetros, que incluyen el valor devuelto, deben declararse una sola vez. En particular, no se puede declarar el mismo parámetro como entrada y salida, incluso con el mismo tipo. Por ejemplo:
 
 ```qs
-	//invalid declaration
-Function myTransform ($x : Integer) -> $x : Integer
-	//error: $x is declared twice
+	//declaración inválida
+Función myTransform ($x : Integer) -> $x : Integer
+	//error: $x se declara dos veces
 ```
 
 :::
 
 ### Tipos de datos soportados
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md), including class objects. Por ejemplo:
+Con los parámetros con nombre, puede utilizar los mismos tipos de datos [soportados por la palabra clave `var`](variables.md), incluidos los objetos de las clases. Por ejemplo:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -170,7 +170,7 @@ Function square($x : Integer) -> $result : Integer
 
 :::note
 
-Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. Si `return` se utiliza sin una expresión, la función o el método devuelve un valor nulo del tipo de retorno declarado (si lo hay), de lo contrario *undefined*.
+Internamente, `return x` ejecuta `myReturnValue:=x`, y regresa al llamante. Si `return` se utiliza sin una expresión, la función o el método devuelve un valor nulo del tipo de retorno declarado (si lo hay), de lo contrario *undefined*.
 
 :::
 
@@ -180,12 +180,12 @@ La instrucción `return` puede utilizarse junto con la sintaxis estándar para l
 Function getValue -> $v : Integer
 	$v:=10
 	return 20
-	// returns 20
+	// devuelve 20
 
 Function getValue -> $v : Integer
 	return 10
-	$v:=20 // never executed
-	// returns 10
+	$v:=20 // nunca ejecutado
+	// devuelve 10
 ```
 
 ## Indirección de parámetros (${N})
@@ -283,15 +283,15 @@ Este método puede llamarse con un número variable de parámetros Real. En caso
 
 ```4d
 
-$total1:=SumNumbers // returns 0
-$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
-$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+$total1:=SumNumbers // devuelve 0
+$total2:=SumNumbers(1; 2; 3; 4; 5) // devuelve 15
+$total3:=SumNumbers(1; 2; "hola"; 4; 5) // error
 
 ```
 
 :::note Compatibilidad
 
-The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecated as of 4D 20 R7.
+La sintaxis heredada para declarar parámetros variadicos (`C_TEXT(${4})`) está obsoleta a partir de 4D 20 R7.
 
 :::
 
@@ -461,7 +461,7 @@ ALERT([People]Name)
  ALERT($param)
 ```
 
-La caja de alerta mostrada por `DO_SOMETHING` dirá "WILLIAMS" y la caja de alerta mostrada por `MY_METHOD` dirá "williams". The method locally changed the value of the parameter $param, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
+La caja de alerta mostrada por `DO_SOMETHING` dirá "WILLIAMS" y la caja de alerta mostrada por `MY_METHOD` dirá "williams". El método cambió localmente el valor del parámetro $param, pero esto no afecta al valor del campo `[People]Name` pasado como parámetro por el método `MY_METHOD`.
 
 Hay dos formas de hacer que el método `DO_SOMETHING` cambie el valor del campo:
 
@@ -478,7 +478,7 @@ $param->:=Uppercase($param->)
 ALERT($param->)
 ```
 
-Aquí el parámetro no es el campo, sino un puntero al mismo. Therefore, within the `DO SOMETHING` method, $param is no longer the value of the field but a pointer to the field. The object **referenced** by $param ($param-> in the code above) is the actual field. Por lo tanto, cambiar el objeto referenciado va más allá del alcance de la subrutina, y el campo real se ve afectado. En este ejemplo, las dos cajas de alerta dirán "WILLIAMS".
+Aquí el parámetro no es el campo, sino un puntero al mismo. Por lo tanto, dentro del método `DO SOMETHING`, $param ya no es el valor del campo sino un puntero al campo. El objeto **referenciado** por $param ($param-> en el código anterior) es el campo real. Por lo tanto, cambiar el objeto referenciado va más allá del alcance de la subrutina, y el campo real se ve afectado. En este ejemplo, las dos cajas de alerta dirán "WILLIAMS".
 
 2. En lugar de que el método `DO_SOMETHING` "haga algo", puede reescribir el método para que devuelva un valor. Por lo tanto, escribiría:
 
@@ -493,13 +493,13 @@ Aquí el parámetro no es el campo, sino un puntero al mismo. Therefore, within 
  ALERT($result)
 ```
 
-This second technique of returning a value by a subroutine is called "using a function". Se describe en el párrafo [Valores devueltos](#returned-value).
+Esta segunda técnica de retornar un valor por una subrutina se llama "utilizar una función". Se describe en el párrafo [Valores devueltos](#returned-value).
 
 ### Casos particulares: objetos y colecciones
 
 Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un *puntero* interno).
 
-Consequently, when using such data types as parameters, `$param, $return...` do not contain *values* but *references*. Modifying the value of the `$param, $return...` parameters within the subroutine will be propagated wherever the source object or collection is used. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$param, $return...` no necesitan ser desreferenciados en la subrutina.
+Consequently, when using such data types as parameters, `$param, $return...` do not contain *values* but *references*. La modificación del valor de los parámetros `$param, $return...` dentro de la subrutina se propagará a cualquier lugar donde se utilice el objeto o colección fuente. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$param, $return...` no necesitan ser desreferenciados en la subrutina.
 
 Por ejemplo, considere el método `CreatePerson` que crea un objeto y lo envía como parámetro:
 
