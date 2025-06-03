@@ -25,7 +25,7 @@ Es muy recomendable instalar un método global de gestión de errores en 4D Serv
 
 Muchas funciones de clase 4D, como `entity.save()` o `transporter.send()`, devuelven un objeto *status*. Este objeto se utiliza para almacenar errores "predecibles" en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no detienen la ejecución del programa. Esta categoría de errores puede ser manejada por el código habitual.
 
-Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de la red o, en general, cualquier interrupción inesperada. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes) and needs to be handled through an error-handling method or a `Try()` keyword.
+Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de la red o, en general, cualquier interrupción inesperada. Esta categoría de errores genera excepciones definidas por [un *código*, un *mensaje* y una *firma*](#error-codes) y necesita ser manejada a través de un método de gestión de errores o una palabra clave `Try()`.
 
 ## Instalación de un método de gestión de errores
 
@@ -230,7 +230,7 @@ El código entre las palabras clave `Try` y `Catch` se ejecuta en primer lugar, 
 - Si no se lanza ningún error, la ejecución del código continúa después de la palabra clave correspondiente `End try`. El código situado entre las palabras clave `Catch` y `End try` no se ejecuta.
 - Si la ejecución del bloque de código arroja un error no diferido \*\*, el flujo de ejecución se detiene y ejecuta el bloque de código correspondiente `Catch`.
 - If the code block calls a method that throws a *deferred error*, the execution flow jumps directly to the corresponding `Catch` code block.
-- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
+- Si un error diferido es lanzado directamente desde el bloque `Try`, el flujo de ejecución continúa hasta el final del bloque `Try` y no ejecuta el correspondiente bloque `Catch`.
 
 :::note
 
@@ -285,14 +285,14 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ```
 
-## Error codes
+## Códigos de error
 
-Excepciones que interrumpen la ejecución de código son devueltas por 4D pero pueden tener diferentes orígenes como el sistema operativo, un dispositivo, el núcleo 4D, un [`throw`](../commands-legacy/throw.md) en su código, etc. An error is therefore defined by three elements:
+Excepciones que interrumpen la ejecución de código son devueltas por 4D pero pueden tener diferentes orígenes como el sistema operativo, un dispositivo, el núcleo 4D, un [`throw`](../commands-legacy/throw.md) en su código, etc. Por lo tanto, tres elementos definen un error:
 
-- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
-- a **message**, which explains why the error occurred
+- una **firma del componente**, que es el origen del error (ver [`Last errors`](../commands/last-errors.md) para tener una lista de firmas)
+- un **mensaje**, que explica por qué se ha producido el error
 - un **código**, que es un número arbitrario devuelto por el componente
 
-The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user.
+La [caja de diálogo de error 4D](../Debugging/basics.md) muestra el código y el mensaje al usuario.
 
-To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors.md) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.
+Para tener una descripción completa de un error y especialmente su origen, necesita llamar al comando [`Last errors`](../commands/last-errors.md). Cuando intercepta y maneja errores usando un [método de gestión de errores](#installing-an-error-handling-method) en sus aplicaciones finales, use [`Last errors`](../commands/last-errors.md) y asegúrese de registrar todas las propiedades del objeto *error* ya que los códigos de error dependen de los componentes.
