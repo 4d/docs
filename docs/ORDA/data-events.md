@@ -27,7 +27,7 @@ ORDA events in the datastore are equivalent to triggers in the 4D database. Howe
 
 A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class). 
 
-It can be defined at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes) and [**aliases**](../ORDA/ordaClasses.md#alias-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute. For the same event, you can define different functions for different attributes. 
+It can be defined at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute. For the same event, you can define different functions for different attributes. 
 
 You can also define the same event at both attribute and entity levels. The attribute event is called first and then the entity event.
 
@@ -84,16 +84,16 @@ Event functions (except `constructor()`) accept a single *event* object as param
 
 ## Event function description
 
-### `constructor`
+### `Class constructor`
 
 #### Syntax
 
 ```4d
-constructor()
+Class constructor()
 // code
 ```
 
-This event is triggered just after a new entity is created, using for example [`dataClass.new()`](../API/DataClassClass.md#new) or [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection). It is useful to set initial values for entity instantiation, for example a custom ID.
+This event is triggered just after a new entity is created, using for example [`dataClass.new()`](../API/DataClassClass.md#new), [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) or the [REST API](../REST/$method.md#methodupdate). It is useful to set initial values for entity instantiation, for example a custom ID.
 
 This event can only be set at the entity level. 
 
@@ -110,7 +110,7 @@ In client/server configurations, keep in mind that this event is triggered when 
 ```4d
 
  //cs.BookingEntity class
-constructor () 
+Class constructor() 
 
     This.departureDate:=Current date
     This.arrivalDate:=Add to date(Current date; 0; 0; 2)
@@ -135,9 +135,9 @@ This event is triggered as soon as the 4D Server / 4D engine can detect a modifi
 
 - in 4D single-user:
     - the user sets a value on a 4D form
-    - the 4D code makes an assignment with the `:=` operator (4D single-user). The event is also triggered in case of self-assignment (`$attributevalue:=$attributevalue`).
+    - the 4D code makes an assignment with the `:=` operator (4D single-user). The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
 - in client/server, remote datastore, Qodly: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter)
-- with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md) (`$method=update`)
+- with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
 
 The function receives an [*event* object](#event-parameter) as parameter. 
 
@@ -145,20 +145,40 @@ If this event [throws](../commands-legacy/throw.md) an error, it will not stop t
 
 :::note
 
-This event is not triggered when attributes are assigned in the [`constructor()`](#constructor) event.
+This event is triggered when attributes are assigned in the [`constructor()`](#class-constructor) event.
 
 :::
 
 #### Example 1
 
-You want to log in a journal when any attribute in the entity is touched.
+You want to update several attributes when any attribute in the entity is touched.
 
 ```4d
+
 Function event touched($event : Object) 
 
-// Update a journal file
+//  Store the updates in the Storage to save them later in a journal file
 //
+	var $logInfo : Object
+	
+	If (Storage.logs#Null)
+		$logInfo:=New shared object()
+		Use ($logInfo)
+			$logInfo.dataclass:=$event.dataClassName
+			$logInfo.attribute:=$event.attributeName
+			$logInfo.entityID:=This.ID
+			$logInfo.updatedBy:=Current user()
+			$logInfo.when:=String(Current date())
+			$logInfo.at:=String(Current time())
+		End use 
+		
+		Use (Storage.logs)
+			Storage.logs.push($logInfo)
+		End use 
+	End if 
+
 ```
+
 
 #### Example 2
 
@@ -188,53 +208,4 @@ Function event touched arrivalDate ($event : Object)
 
 
 
-
-## Examples
-
-### Dynamic code
-
-```4d
-
- //cs.BookingEntity class
-
-Function event validateSave price($event : Object)
-    return This.checkValue($event)
-
-Function event validateSave departureDate($event : Object)
-    return This.checkValue($event)
-
-
-Function checkValue ($event: Object) 
-
-Case of
-    :($event.attributeName = "price")
-        If (This.price = 0)
-            throw {errCode: 1; message: "Price can't be 0"}
-        End if
-
-    :($event.attributeName = "departureDate")
-        If (This.departureDate < Current date())
-            throw {errCode: 1; message: "Departure date is in the past"}
-        End if
-End case
-```
-
-
-### afterSave event
-
-```4d
-
- //cs.BookingEntity class
-Function event afterSave ($event : Object)
- 
-// The save action failed   
-If ($event.saveStatus = "failed")
-
-        // The status attribute was to be saved with a new "confirmed" value
-    If ($event.savedAttributes.indexOf("status") = -1)
-        // Send a mail to the Admin to check the booking
-        //...
-    End if
-
-End if
 
