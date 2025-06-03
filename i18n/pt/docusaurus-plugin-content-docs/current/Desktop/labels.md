@@ -16,7 +16,7 @@ title: Labels
 
 :::note
 
-Labels can also be created using the [Form editor](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+As etiquetas também podem ser criadas usando o [Editor de formulário](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
 
 :::
 
@@ -27,7 +27,7 @@ To open the Label editor:
 
 - In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
  OU
-- In an application, call the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+- Em uma aplicação, chame o comando [`PRINT LABEL`](../commands-legacy/print-label.md).
 
 ![](../assets/en/Desktop/label-wizard.png)
 
@@ -46,7 +46,7 @@ Displays the names of the fields in the current table in a hierarchical list. If
 :::note Notas
 
 - Only tables and fields which are visible appear in the Label editor.
-- [Object type](../Concepts/dt_object.md) fields are not supported by the Label editor.
+- Os campos de tipo [Object](../Concepts/dt_object.md) não são suportados pelo editor de etiquetas.
 
 :::
 
@@ -62,9 +62,9 @@ You use this area to design your label zone by placing and positioning all the i
 - You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
  ![](../assets/en/Desktop/label-concat.png)<br/>
  If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
-- You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
+- You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. O **editor de fórmulas** é então exibido:
  ![](../assets/en/Desktop/label-formula1.png)<br/>
- For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:<br/>
+ Por exemplo, você pode aplicar um formato para um campo usando o comando [`String`](../commands-legacy/string.md):<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
@@ -138,8 +138,8 @@ The Layout page contains controls for printing labels based on the requirements 
  **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
 - **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
-- **Width** and **Height**: Sets the height and width of each label manually. Eles não podem ser editados quando a opção **Redimensionamento automático** estiver marcada.
-- **Margins** (Top, Right, Left, Bottom): Sets the margins of your sheet. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
+- **Largura** e **Altura**: define a altura e a largura de cada etiqueta manualmente. Eles não podem ser editados quando a opção **Redimensionamento automático** estiver marcada.
+- **Margens** (Superior, Direita, Esquerda, Inferior): define as margens de sua folha. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
 - **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
  To be eligible for label processing, a project method must comply with the following settings:
@@ -195,10 +195,10 @@ Then you can print your labels:
 
 The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
 
-- in the **Form to use** menu on the "Label" page and/or
+- no menu **Formulário para usar** na página "Etiqueta" e/ou
 - in the **Apply (method)** menu on the "Layout" page.
 
-1. Crie um arquivo JSON chamado **labels.json** e coloque-o na pasta [Resources] (../Project/architecture.md#resources) do projeto.
+1. Crie um arquivo JSON chamado **labels.json** e coloque-o na pasta [Resources](../Project/architecture.md#resources) do projeto.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
 
 O conteúdo do arquivo **labels.json** deve ser semelhante a:
@@ -218,7 +218,7 @@ Se nenhum arquivo **labels.json** tiver sido definido, nenhuma filtragem será a
 
 You can drag and drop label files from your desktop onto the label design area.
 
-Label designs are managed using the **Load** and **Save** buttons of the tool bar.
+Os desenhos das etiquetas são gerenciados usando os botões **Carregar** e **Salvar** da barra de ferramentas.
 
 - To load a label design, click on the **Load** button and designate the design you want to load by means of the File Open dialog box (if a label design is already present in the wizard, 4D replaces it by the one you have loaded).
 - To save a label design, click on the **Save** button and indicate the name and location of the design to be created.

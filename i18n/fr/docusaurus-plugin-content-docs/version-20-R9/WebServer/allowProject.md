@@ -1,6 +1,6 @@
 ---
 id: allowProject
-title: Méthodes projet
+title: Autoriser les méthodes projet
 ---
 
 Les balises 4D telles que `4DEVAL`, `4DTEXT`, `4DHTML`... ainsi que l'URL [`/4DACTION`](./httpRequests.md#4daction) vous permettent de déclencher l'exécution de toute méthode projet d'un projet 4D publié sur le Web. Par exemple, la requête *http://www.server.com/4DACTION/login* entraîne l'exécution de la méthode projet ***login***, si elle existe.

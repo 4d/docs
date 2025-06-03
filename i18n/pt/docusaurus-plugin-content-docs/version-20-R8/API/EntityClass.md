@@ -614,15 +614,14 @@ O seguinte código genérico duplica qualquer entidade:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
 
 | Parâmetro  | Tipo    |                             | Descrição                                                                                               |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: primary key is returned as a string, no matter the primary key type |
-| Resultados | Text    | <- | Valor do texto chave primária da entidade                                                               |
-| Resultados | Integer | <- | Valor da chave primária numérica da entidade                                                            |
+| Resultados | any     | <- | Value of the primary key of the entity (Integer or Text)                             |
 
 <!-- END REF -->
 
@@ -1639,9 +1638,9 @@ Retorna:
 
 The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
 
-This only applies to attributes of [`kind`](DataClassClass.md#returned-object) "storage" or "relatedEntity".
+Isso se aplica somente a atributos de [`kind`](DataClassClass.md#returned-object) "storage" ou "relatedEntity".
 
-For a new entity that has just been created (with [`.new()`](DataClassClass.md#new)), the function returns False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Para uma nova entidade que foi criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
 
 #### Exemplo
 
@@ -1685,7 +1684,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 A função `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary --> retorna os nomes dos atributos que foram modificados desde que a entidade foi carregada na memória<!-- END REF -->.
 
-This only applies to attributes of [`kind`](DataClassClass.md#returned-object) "storage" or "relatedEntity".
+Isso se aplica somente a atributos de [`kind`](DataClassClass.md#returned-object) "storage" ou "relatedEntity".
 
 No caso de uma entidade relacionada que foi tocada (touched) \*ou seja, a chave primária) o nome da entidade relacionada e sua chave primária são retornados.
 

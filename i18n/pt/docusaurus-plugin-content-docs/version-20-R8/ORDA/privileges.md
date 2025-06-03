@@ -35,7 +35,7 @@ Each time a resource is accessed within a session (whatever the way it is access
 
 Uma ação de permissão definida em um determinado nível é herdada por padrão em níveis inferiores, mas várias permissões podem ser configuradas:
 
-- Uma ação de permissão definida no nível do datastore é automaticamente atribuída a todas as dataclasses. The *execute* permission action defined at the datastore level applies to all functions of the project, including all [singleton](../REST/$singleton.md) functions.
+- Uma ação de permissão definida no nível do datastore é automaticamente atribuída a todas as dataclasses. A ação de permissão *execute* definida no nível de datastore aplica-se a todas as funções do projeto, incluindo todas as funções [singleton](../REST/$singleton.md).
 - Uma ação de permissão definida ao nível da classe de dados substitui a definição do armazenamento de dados (se existir). Por padrão, todos os atributos do dataclass herdam das permissões de banco de dados.
 - Ao contrário das permissões da classe de dados, uma ação de permissão definida no nível do atributo não substitui a(s) permissão(ões) pai da classe de dados, mas é adicionada a ela. Por exemplo, se você atribuiu o privilégio "geral" a uma classe de dados e o privilégio "detalhe" a um atributo da classe de dados, ambos os privilégios "geral" e "detalhe" devem ser definidos na sessão para acessar o atributo.
 

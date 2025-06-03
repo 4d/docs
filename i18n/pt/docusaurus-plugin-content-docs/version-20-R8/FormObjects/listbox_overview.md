@@ -1200,7 +1200,7 @@ O valueType "color" permite-lhe apresentar uma cor ou um texto.
 
 #### event valueType
 
-El "event" valueType muestra un botón que genera un evento `On Clicked` al ser presionado. Nenhum dado ou valor pode ser transmitido ou devolvido.
+The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
 Opcionalmente, pode passar um atributo "label".
 

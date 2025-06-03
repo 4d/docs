@@ -3,15 +3,15 @@ id: develop-components
 title: Componentes de desenvolvimento
 ---
 
-Um componente 4D é um conjunto de funções, métodos e formulários 4D que representam uma ou mais funcionalidades que podem ser [instaladas e usadas em aplicativos 4D] (Concepts/components.md). Por exemplo, você pode desenvolver um componente de e-mail 4D que gerencia todos os aspectos de envio, recebimento e armazenamento de e-mails em aplicativos 4D.
+Um componente 4D é um conjunto de funções, métodos e formulários 4D que representam uma ou mais funcionalidades que podem ser [instaladas e usadas em aplicativos 4D](Concepts/components.md). Por exemplo, você pode desenvolver um componente de e-mail 4D que gerencia todos os aspectos de envio, recebimento e armazenamento de e-mails em aplicativos 4D.
 
-Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-los privados. Você também pode [compartilhar seus componentes com a comunidade 4D] (https://github.com/topics/4d-component).
+Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-los privados. Você também pode [compartilhar seus componentes com a comunidade 4D](https://github.com/topics/4d-component).
 
 ## Definições
 
 - **Projeto Matrix**: ´projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
 - **Projeto Host**: projeto aplicação onde um componente é instalado e usado.
-- **Component**: Matrix project that can be compiled and [built](Desktop/building.md#build-component), [installed in the host application](../Project/components.md) and whose contents are used in the host application.
+- **Componente**: projeto Matriz que pode ser compilado e [creado](Desktop/building.md#build-component), [instalado na aplicação host](../Project/components.md) e cujo conteúdo é usado na aplicação host.
 
 ## Básicos
 
@@ -168,7 +168,7 @@ Um arquivo de sintaxe (formato JSON) é criado automaticamente durante a fase de
 ![](../assets/en/settings/syntax-code-completion-2.png)
 ![](../assets/en/settings/syntax-code-completion-1.png)
 
-Se você não inserir um [component namespace] (#declaring-the-component-namespace), os recursos para as classes e os métodos expostos não serão gerados, mesmo que a opção de arquivo de sintaxe esteja marcada.
+Se você não inserir um [component namespace](#declaring-the-component-namespace), os recursos para as classes e os métodos expostos não serão gerados, mesmo que a opção de arquivo de sintaxe esteja marcada.
 
 ## Passar variáveis
 
@@ -235,7 +235,7 @@ Neste caso é preciso usar a comparação de ponteiros:
 
 ## Gestão de erros
 
-Um [método de tratamento de erros] (Concepts/error-handling.md) instalado pelo comando `ON ERR CALL` aplica-se somente ao aplicativo em execução. No caso de um erro gerado por um componente, o método de tratamento de erros `ON ERR CALL` do projeto host não é chamado, e vice-versa.
+Um [método de tratamento de erros](Concepts/error-handling.md) instalado pelo comando `ON ERR CALL` aplica-se somente ao aplicativo em execução. No caso de um erro gerado por um componente, o método de tratamento de erros `ON ERR CALL` do projeto host não é chamado, e vice-versa.
 
 ## Acesso às tabelas do projeto local
 
@@ -376,7 +376,7 @@ Components can have an `Info.plist` file at their [root folder](../Project/archi
 
 :::note
 
-Esse arquivo não é obrigatório, mas é necessário para criar componentes [notarizáveis e grampeáveis](../Desktop/building.md#about-notarization) para o macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+Esse arquivo não é obrigatório, mas é necessário para criar componentes [notarizáveis e grampeáveis](../Desktop/building.md#about-notarization) para o macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note que algumas chaves podem ser definidas usando uma chave XML do buildApp (veja [componente de compilação](../Desktop/building.md#build-component)).
 
 :::
 
@@ -427,7 +427,7 @@ Por padrão, todo o código de um projeto de matriz instalado como um componente
 - Os outros métodos de projeto do projeto matriz não aparecem no Explorer, mas também podem ser visualizados no depurador do projeto host.
 - As classes e funções não-ocultas podem ser vistas no depurador [se um namespace for declarado](#declaring-the-component-namespace).
 
-Para proteger o código de um componente de forma eficaz, basta [compilar e construir] (Desktop/building.md#build-component) o projeto da matriz e fornecê-lo na forma de um arquivo .4dz. Quando um projeto compilado usado como uma matriz é instalado como um componente:
+Para proteger o código de um componente de forma eficaz, basta [compilar e construir](Desktop/building.md#build-component) o projeto da matriz e fornecê-lo na forma de um arquivo .4dz. Quando um projeto compilado usado como uma matriz é instalado como um componente:
 
 - Os métodos, as classes e as funções do projeto compartilhado podem ser chamados nos métodos do projeto host e também ficam visíveis na página Métodos do Explorer. No entanto, seu conteúdo não aparecerá na área de visualização e no depurador.
 - Os outros métodos projeto do projeto matriz nunca aparecerão.

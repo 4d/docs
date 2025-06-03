@@ -1481,7 +1481,7 @@ Podem ser aplicadas várias fórmulas:
  $0:=ds.Students.query(":1 and :2 and nationality='French'";$formula1;$formula2)
 ```
 
-A text formula in *queryString* receives a parameter:
+Uma fórmula texto em *queryString* recebe um parâmetro:
 
 ```4d
  var $es : cs.StudentsSelection

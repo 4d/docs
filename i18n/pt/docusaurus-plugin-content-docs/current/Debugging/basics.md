@@ -87,7 +87,7 @@ To ignore an error that occurs repeatedly (for example, in loops), you can turn 
 
 ## Depurador
 
-Un error común de los principiantes al tratar con la detección de errores es hacer clic en **Abandonar** en la ventana de error de sintaxis, volver al editor de código, y tratar de averiguar lo que está pasando mirando el código. Não faça isso! You will save plenty of time and energy by always using the [**Debugger**](debugger.md).
+Un error común de los principiantes al tratar con la detección de errores es hacer clic en **Abandonar** en la ventana de error de sintaxis, volver al editor de código, y tratar de averiguar lo que está pasando mirando el código. Não faça isso! Você economizará muito tempo e energia usando sempre o [**Depurador**](debugger.md).
 
 O depurador permite-lhe percorrer os métodos lentamente. Apresenta todas as informações necessárias para compreender o motivo do erro. Assim que tiver esta informação, saberá como corrigir o erro.
 

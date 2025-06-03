@@ -332,7 +332,7 @@ Estos comandos se resumen en el siguiente gráfico:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-El servidor web de 4D ahora soporta archivos cargados con codificación chunked desde cualquier cliente web. La codificación de transferencia en trozos es un mecanismo de transferencia de datos especificado en HTTP/1.1. Permite transferir datos en una serie de "trozos" (partes) sin conocer el tamaño final de los datos. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
+El servidor web de 4D ahora soporta archivos cargados con codificación chunked desde cualquier cliente web. La codificación de transferencia en trozos es un mecanismo de transferencia de datos especificado en HTTP/1.1. Permite transferir datos en una serie de "trozos" (partes) sin conocer el tamaño final de los datos. El servidor Web 4D también soporta la codificación de transferencia en trozos desde el servidor a los clientes Web (usando [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
 
 ## Método proyecto COMPILER_WEB
 

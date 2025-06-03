@@ -19,6 +19,10 @@ Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 	
 
 
+#### Behavior changes
+
+- On Windows, current printer fonts intended only for printing (i.e. not usable on screen) are no longer loaded by 4D at startup. 
+
 
 ## 4D 20 R9
 

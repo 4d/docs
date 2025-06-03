@@ -263,7 +263,7 @@ Puede configurar esta opción haciendo clic en [...] en la propiedad Accesos dir
 
 > También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
+Para ver una lista de todos los métodos abreviados utilizados en el entorno Diseño de 4D, consulte la [página Atajos](../Preferences/shortcuts.md) en la caja de diálogo Preferencias.
 
 #### Gramática JSON
 

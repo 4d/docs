@@ -32,7 +32,7 @@ Passez dans *ligne* le numéro de la ligne dont vous souhaitez obtenir la couleu
 
 **Note :** La commande ne tient pas compte de l’éventuel statut masqué/affiché des lignes de la list box.
 
-Passez la constante lk background color ou lk font color (thème "*List box*") dans le paramètre *typeCouleur* selon que vous souhaitez connaître la couleur de fond ou la couleur de police de la ligne. Si vous omettez ce paramètre, la couleur de police est retournée.
+Passez la constante `lk background color`  ou `lk font color`  (thème "*List box*") dans le paramètre *typeCouleur* selon que vous souhaitez connaître la couleur de fond ou la couleur de police de la ligne. Si vous omettez ce paramètre, la couleur de police est retournée.
 
 **Attention**, une couleur affectée à une ligne n’est pas forcément affichée dans toutes les cellules de ligne (cf. exemple). Si des valeurs de couleur contradictoires sont définies via les propriétés de la list box ou de la colonne, un ordre de priorité est appliqué. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 

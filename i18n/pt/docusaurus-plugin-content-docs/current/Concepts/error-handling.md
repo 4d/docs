@@ -95,7 +95,7 @@ Within the custom error method, you have access to several pieces of information
 4D mantém automaticamente um número de variáveis chamadas [**variáveis sistema**](variables.md#system-variables), indo ao encontro de necessidades diferentes.
 :::
 
-- the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application.
+- o comando [`Last errors`](../commands/last-errors.md) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D.
 - the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### Exemplo
@@ -284,12 +284,12 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## Error codes
 
-Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. An error is therefore defined by three elements:
+Exceções que interrompem a execução de código são retornadas pela 4D, mas podem ter origens diferentes como o SO, um dispositivo, o kernel 4D, um [`throw`](../commands-legacy/throw.md) no seu código, etc. An error is therefore defined by three elements:
 
-- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
-- a **message**, which explains why the error occurred
-- a **code**, which is an arbitrary number returned by the component
+- um **assinatura do componente**, sendo a origem do erro (veja [`Last errors`](../commands/last-errors.md) para ter uma lista de assinaturas)
+- uma **mensagem**, que explica porque o erro ocorreu
+- um **código**, que é um número arbitrário retornado pelo componente
 
-The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user.
+A [caixa de diálogo de erro 4D](../Debugging/basics.md) mostra o código e a mensagem para o usuário.
 
-To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors.md) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.
+Para ter uma descrição completa de um erro e especialmente de sua origem, você precisa chamar o comando [`Last errors`](../commands/last-errors.md). When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.

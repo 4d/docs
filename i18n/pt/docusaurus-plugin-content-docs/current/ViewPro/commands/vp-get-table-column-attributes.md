@@ -35,7 +35,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcific
 
 > A indexação começa em 0.
 
-The command returns an object describing the current attributes of the *column*:
+O comando retorna um objeto descrevendo os atributos atuais da *column*:
 
 | Propriedade         | Tipo    | Descrição                                                                                                                               |
 | ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |

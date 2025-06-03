@@ -241,9 +241,9 @@ Métodos de projeto 4D também podem retornar valores na fórmula da célula 4D 
 - [text](Aceitar/dt_string.md) (convertido em string em 4D View Pro)
 - [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido em número no 4D View Pro)
 - [date](Concepts/dt_date.md) (convertido para o tipo JS Date no 4D View Pro - hora, minuto, segundo = 0)
-- [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
+- [time](Concepts/dt_time.md) (convertido para JS Date type in 4D View Pro - data na data base, i.e. 12/30/1899)
 - [boolean](Concepts/dt_boolean.md) (convertido em bool no 4D View Pro)
-- [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
+- [imagem](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg outros tipos convertidos para png) cria uma URI (data:image/png; ase64,xxxx) e depois usado como plano de fundo em 4D View Pro na célula onde a fórmula é executada
 - [object](Concepts/dt_object.md) com as duas propriedades a seguir (permitindo a passagem de uma data e hora):
 
  | Propriedade | Tipo | Descrição         |
@@ -307,7 +307,7 @@ Por exemplo, se você declarou o campo "Name" da tabela "People" na estrutura vi
 =LEN(PEOPLE_NAME())
 ```
 
-> If a field has the same name as a [4D method](../Concepts/methods.md), it takes priority over the method.
+> Se um campo tiver o mesmo nome que um [método 4D](../Concepts/methods.md), tem prioridade sobre o método.
 
 #### Exemplo
 
@@ -349,7 +349,7 @@ Queremos imprimir o nome de uma pessoa em uma célula de área do 4D View Pro us
 
 ### Declaração dos métodos permitidos
 
-Você pode chamar diretamente os métodos do projeto 4D a partir de suas fórmulas do 4D View Pro. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+Você pode chamar diretamente os métodos do projeto 4D a partir de suas fórmulas do 4D View Pro. Por razões de segurança, você deve declarar explicitamente métodos que podem ser chamados pelo usuário com o comando [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
 
 #### Requisitos
 

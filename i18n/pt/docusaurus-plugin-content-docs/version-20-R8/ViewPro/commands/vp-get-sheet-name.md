@@ -21,7 +21,7 @@ O comando `VP Get sheet name` <!-- REF #_method_.VP Get sheet name.Summary -->re
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *sheet*, pass the index of the sheet whose name will be returned.
+Em *sheet*, passe o índice da folha cujo nome será devolvido.
 
 Se o índice de folha passado não existir, o método devolve um nome vazio.
 

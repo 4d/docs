@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | 4Dsignatures | Text array | &#8592; | 4D signatures of data types |
 | nativeTypes | Text array | &#8592; | Native data types |
-| formatNames | Text array | &#8592; | Format names (Windows only), empty strings under Mac OS |
+| formatNames | Text array | &#8592; | Format names or descriptions |
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ This command returns the data types in several different forms via two (or three
    * Under Mac OS, native types are expressed as UTIs (Uniform Type Identifier).  
    * Under Windows, native types are expressed as numbers, with each number being associated with a format name. The *nativeTypes* array contains these numbers in the form of strings (“3”, “12”, and so on). If you want to use more explicit labels, it is recommended to use the optional *formatNames* array, which contains the format names of the native types under Windows.  
 The *nativeTypes* array lets any type of data found in the pasteboard to be supported, including data whose type is not referenced by 4D.
-* Under Windows, you can also pass the *formatNames* array, which receives the names of the data types found in the pasteboard. The values returned in this array can be used, for example, to build a format selection pop-up menu. Under Mac OS, the *formatNames* array returns empty strings.
+* You can also pass the *formatNames* array, which receives the names or descriptions of the data types found in the pasteboard. The values returned in this array can be used, for example, to build a format selection pop-up menu.
 
 For more information about the data types supported, please refer to the *Managing Pasteboards* section. 
 

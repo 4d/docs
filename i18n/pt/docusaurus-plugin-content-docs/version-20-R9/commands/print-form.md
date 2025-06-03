@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF--> It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF--> It is usually used to print very complex reports that require complete control over the printing process. **Print form** não faz nenhum processamento de registro, processamento quebrado ou quebra de página. These operations are your responsibility. **Print form** imprime campos e variáveis em um quadro de tamanho fixo apenas.
 
 No parâmetro *form*, você pode passar:
 
@@ -51,7 +51,7 @@ Sintaxe:
  height:=Print form(myTable;myForm;marker)
 ```
 
-In this case, the command will print the section designated by the *marker*. Pass one of the constants of the *Form Area* theme in the marker parameter:
+Nesse caso, o comando imprimirá a seção designada pelo *marker*. Pass one of the constants of the *Form Area* theme in the marker parameter:
 
 | Parâmetros    | Tipo    | Valor |
 | ------------- | ------- | ----- |
@@ -97,12 +97,12 @@ Para obter informações detalhadas sobre o objeto de dados do formulário, cons
 
 **Valor retornado**
 
-The value returned by **Print form** indicates the height of the printable area. Esse valor será automaticamente levado em conta pelo comando [Get printed height](../commands-legacy/get-printed-height.md).
+O valor retornado por **Print form** indica a altura da área impressa. Esse valor será automaticamente levado em conta pelo comando [Get printed height](../commands-legacy/get-printed-height.md).
 
-The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
+As caixas de diálogo da impressora não são exibidas quando você usa **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
 - Chame [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
-- Call [SET PRINT OPTION](../commands-legacy/set-print-option.md) and [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
+- Chame [SET PRINT OPTION](../commands-legacy/set-print-option.md) e [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
 
 **Print form**\* cria cada página impressa na memória. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
 

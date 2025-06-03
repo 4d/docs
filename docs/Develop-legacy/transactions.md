@@ -5,7 +5,7 @@ title: Transactions
 
 ## Description
 
-Transactions are a series of related data modifications made to a database or datastore within a [process](./processes.md). A transaction is not saved to a database permanently until the transaction is validated. If a transaction is not completed, either because it is canceled or because of some outside event, the modifications are not saved.
+Transactions are a series of related data modifications made to a database or datastore within a [process](../Develop/processes.md). A transaction is not saved to a database permanently until the transaction is validated. If a transaction is not completed, either because it is canceled or because of some outside event, the modifications are not saved.
 
 During a transaction, all changes made to the database data within a process are stored locally in a temporary buffer. If the transaction is accepted with [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md) or [`validateTransaction()`](../API/DataStoreClass.md#validatetransaction), the changes are saved permanently. If the transaction is canceled with [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md) or [`cancelTransaction()`](../API/DataStoreClass.md#canceltransaction), the changes are not saved. In all cases, neither the current selection nor the current record are modified by the transaction management commands.
 

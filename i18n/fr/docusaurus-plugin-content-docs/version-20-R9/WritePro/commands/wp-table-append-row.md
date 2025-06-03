@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table append row.Params-->
 
-| Paramètres | Type                                      |                             | Description                                   |
-| ---------- | ----------------------------------------- | --------------------------- | --------------------------------------------- |
-| tableRef   | Object                                    | &#8594; | Table reference                               |
-| value      | Text, Number, Time, Date, Picture, Object | &#8594; | Value(s) to set in the row |
-| valueColl  | Collection                                | &#8594; | Collection of values to set in the row        |
-| Résultat   | Object                                    | &#8592; | Row range object                              |
+| Paramètres | Type                                      |                             | Description                                          |
+| ---------- | ----------------------------------------- | --------------------------- | ---------------------------------------------------- |
+| tableRef   | Object                                    | &#8594; | Référence du tableau                                 |
+| value      | Text, Number, Time, Date, Picture, Object | &#8594; | Valeur(s) à définir dans la ligne |
+| valueColl  | Collection                                | &#8594; | Collection de valeurs à définir dans la ligne        |
+| Résultat   | Object                                    | &#8592; | Objet plage ligne                                    |
 
 <!-- END REF-->
 
@@ -85,26 +85,26 @@ $row:=WP Table append row($table; $colItems)
 
 ## Exemple 3
 
-In a billing application, you want to create a table automatically filled with related invoice lines:
+Dans une application de facturation, vous souhaitez créer un tableau automatiquement rempli avec les lignes de facture correspondantes :
 
 ```4d
  var $wpTable;$wpRange : Object
  
  $wpRange:=WP Text range(4DWPArea;wk start text;wk end text)
  
- $wpTable:=WP Insert table($wpRange;wk append) //create the table
+ $wpTable:=WP Insert table($wpRange;wk append) //créer le tableau
  
-  // add the header row
+  // ajouter la ligne d'en-tête
  $row:=WP Table append row($wpTable;"Name";"Quantity";"Unit Price";"Discount Rate";"Total")
  WP SET ATTRIBUTES($row;wk font bold;wk true;wk text align;wk center)
  
-  //simply apply to selection
+  //simplement appliquer à la sélection
  APPLY TO SELECTION([INVOICE_LINES];WP Table append row($wpTable;[INVOICE_LINES]ProductName;[INVOICE_LINES]Quantity;[INVOICE_LINES]ProductUnitPrice;[INVOICE_LINES]DiscountRate;[INVOICE_LINES]Total))
  
-  //add a footer row
+  //ajouter une ligne de pied de page
  $row:=WP Table append row($wpTable;"Total:";Sum([INVOICE_LINES]Quantity);"";"";Sum([INVOICE_LINES]Total))
  
-  //format the table
+  //formater le tableau
  $range:=WP Table get columns($wpTable;1;5)
  WP SET ATTRIBUTES($range;wk width;"80pt")
  WP SET ATTRIBUTES($wpTable;wk font size;10)

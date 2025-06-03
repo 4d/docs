@@ -236,7 +236,7 @@ El proyecto debe ejecutarse en modo interpretado para que el elemento de menú *
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+2. En la barra de herramientas de Qodly Studio, haga clic en el botón **Debug**.<br/>
     ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.

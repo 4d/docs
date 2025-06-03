@@ -460,7 +460,7 @@ La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->devuelve 
 En un almacén de datos remoto:
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -1123,7 +1123,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

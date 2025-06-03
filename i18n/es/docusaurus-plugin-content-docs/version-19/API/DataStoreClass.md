@@ -121,7 +121,7 @@ Utilizando el almacén de datos principal de la base 4D:
 
 #### Descripción
 
-El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
+El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `4D.DataStoreImplementation` coincidente asociado al alias local *localID*.
 
 La base de datos *connectionInfo* 4D debe estar disponible como almacén de datos remoto, es decir:
 
@@ -164,7 +164,7 @@ Conexión a un almacén de datos remoto sin usuario/contraseña:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -176,7 +176,7 @@ Conexión a un almacén de datos remoto con usuario/contraseña/ timeout / tls:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -398,7 +398,7 @@ La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->The `.get
 En un almacén de datos remoto:
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -747,7 +747,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

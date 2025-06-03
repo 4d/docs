@@ -7,7 +7,7 @@ title: OpenAIImageParameters
 
 The `OpenAIImageParameters` class is designed to configure and manage the parameters used for image generation through the OpenAI API.
 
-## Inherits
+## Hereda
 
 - [OpenAIParameters](OpenAIParameters.md)
 

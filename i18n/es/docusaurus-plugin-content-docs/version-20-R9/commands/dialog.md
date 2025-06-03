@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
+<!--REF #_command_.DIALOG.Summary-->El comando **DIALOG** presenta el *formulario* al usuario, junto con (el) los parámetro(s) *formData* (opcional).<!-- END REF--> 
 
 This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. A diferencia de [ADD RECORD](../commands-legacy/add-record.md) o [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** le ofrece un control total sobre el formulario, su contenido y los botones de navegación y validación.
 
@@ -46,11 +46,11 @@ To fill the "form data" object, you have two possibilities:
 
 - usar el parámetro *formData*. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
 
-- [asociar una clase usuario al formulario](../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. The object properties and functions will be automatically available through the object returned by [Form](form.md). Puede escribir por ejemplo `Form.myFunction()`.
+- [asociar una clase usuario al formulario](../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. Las propiedades y funciones del objeto estarán automáticamente disponibles a través del objeto devuelto por [Form](form.md). Puede escribir por ejemplo `Form.myFunction()`.
 
 :::note
 
-- The *formData* parameter has priority over a form class (the class object is not instantiated if a *formData* parameter is passed).
+- El parámetro *formData* tiene prioridad sobre una clase de formulario (el objeto de clase no es instanciado si se pasa un parámetro *formData*).
 - If you do not pass the *formData* parameter (or if you pass an undefined object) and no user class is associated to the form, **DIALOG** creates a new empty object bound to the *form*.
 
 :::

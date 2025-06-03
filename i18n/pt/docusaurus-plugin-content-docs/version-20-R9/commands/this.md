@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](super.md) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Veja [este exemplo](super.md#exemplo-1).
+> Quando chamar o construtor da superclasse num construtor utilizando a palavra-chave [Super](super.md), esteja atento que `This` não deve ser chamado antes do construtor da superclasse, caso contrário é gerado um erro. Veja [este exemplo](super.md#exemplo-1).
 
 Em qualquer caso, `This` refere-se ao objeto em que o método foi chamado, como se o método estivesse no objeto.
 
@@ -83,7 +83,7 @@ For example, you want to use a project method as a formula encapsulated in an ob
  $g:=$person.greeting("hi") // returns "hi John Smith"
 ```
 
-With the *Greeting* project method:
+Com o método projeto *Greeting*:
 
 ```4d
  #DECLARE($greeting : Text) : Text
@@ -161,7 +161,7 @@ Note que:
 
 - *This.ID*, *This.Title* and *This.Date* directly refers to the corresponding attributes in the ds.Event dataclass.
 - *This.meetings* is a related attribute (based upon the One To Many relation name) that returns an entity selection of the ds.Meeting dataclass.
-- **Form.eventList** is the entity selection that is attached to the list box. The initialization code can be put in the on load form event:
+- **Form.eventList** é a entity selection que está anexada à list box. The initialization code can be put in the on load form event:
 
 ```4d
  Case of  

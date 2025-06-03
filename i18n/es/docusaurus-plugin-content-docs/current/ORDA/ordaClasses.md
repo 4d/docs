@@ -852,7 +852,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 ### params
 
-A function with `onHTTPGet` keyword accepts [parameters](../Concepts/parameters.md).
+Una función con la palabra clave `onHTTPGet` acepta [parámetros](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
 
@@ -868,7 +868,7 @@ A function with `onHTTPGet` keyword can return any value of a supported type (sa
 
 :::info
 
-You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+Puede devolver un valor del tipo de clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para beneficiarse de las propiedades y funciones para definir el encabezado, el cuerpo y el estado de la respuesta.
 
 :::
 
@@ -1020,6 +1020,6 @@ Para las clases ORDA basadas en el datastore local (`ds`), puede acceder directa
 
 ### Editor de código
 
-En el editor de código de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo con una variable de clase Entity:
+En el editor de código de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo, con una variable de clase Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)

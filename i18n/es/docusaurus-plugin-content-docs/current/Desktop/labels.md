@@ -16,7 +16,7 @@ title: Etiquetas
 
 :::note
 
-Labels can also be created using the [Form editor](../FormEditor/formEditor.md). Utilice el editor de formularios para diseñar etiquetas especializadas que incluyan variables o aproveche las herramientas de dibujo disponibles en el editor de formularios e imprímalas utilizando el editor de etiquetas o el comando [`PRINT LABEL`](../commands-legacy/print-label.md).
+Las etiquetas también se pueden crear usando el [Editor de formularios](../FormEditor/formEditor.md). Utilice el editor de formularios para diseñar etiquetas especializadas que incluyan variables o aproveche las herramientas de dibujo disponibles en el editor de formularios e imprímalas utilizando el editor de etiquetas o el comando [`PRINT LABEL`](../commands-legacy/print-label.md).
 
 :::
 
@@ -201,7 +201,7 @@ The Label editor includes an advanced feature allowing you to restrict which pro
 1. Crea un archivo JSON llamado **labels.json** y ponlo en la [carpeta de recursos](../Project/architecture.md#resources) del proyecto.
 2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
 
-The contents of the **labels.json** file should be similar to:
+El contenido del archivo **labels.json** debe ser similar a:
 
 ```json
 [ 
@@ -210,7 +210,7 @@ The contents of the **labels.json** file should be similar to:
 ]
 ```
 
-If no **labels.json** file has been defined, then no filtering is applied.
+Si no se ha definido ningún archivo **labels.json** entonces no se aplica ningún filtro.
 
 ## Managing label files
 

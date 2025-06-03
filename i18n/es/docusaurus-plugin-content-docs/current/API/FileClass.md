@@ -612,7 +612,7 @@ Para definir un valor de tipo Fecha, el formato a utilizar es una cadena de time
 
 :::
 
-***info* parameter object with a .exe or .dll file (Windows only)**
+**Parámetro objeto *info* con un archivo .exe o .dll (sólo Windows)**
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
@@ -632,7 +632,7 @@ For all properties except `WinIcon`, if you pass a null or empty text as value, 
 
 For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-***info* parameter object with a macOS executable file (macOS only)**
+**Parámetro *info* con un archivo ejecutable macOS (sólo macOS)**
 
 *info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
@@ -762,7 +762,7 @@ The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text*
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
-In *text*, pass the text to write to the file. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
+En *text*, pase el texto a escribir en el archivo. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
 
 Opcionalmente, puede designar el conjunto de caracteres que se utilizará para la escritura del contenido. Puede pasar:
 

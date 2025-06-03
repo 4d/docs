@@ -76,9 +76,9 @@ Voici la liste des objets dont la valeur peut être mémorisée :
 
 > Voir également **[Expression](properties_DataSource.md#expression)** pour les colonnes de list box de type sélection et collection.
 
-Cette propriété spécifie la source des données. Chaque objet de formulaire actif est associé à un nom d'objet et à un nom de variable. Le nom de la variable peut être différent du nom de l'objet. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
+Cette propriété spécifie la source des données. Chaque objet de formulaire actif est associé à un nom d'objet et à un nom de variable. Le nom de la variable peut être différent du nom de l'objet. Dans un même formulaire, vous pouvez utiliser plusieurs fois la même variable alors que chaque [nom d'objet](#object-name) doit être unique.
 
-> La taille du nom de la variable est limitée à 31 octets. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
+> La taille du nom de la variable est limitée à 31 octets. Voir la section [Identifiants](Concepts/identifiers.md) pour plus d'informations sur les règles de nommage.
 
 Les variables d'objet de formulaire vous permettent de contrôler et de piloter les objets. Par exemple, lorsqu'un bouton est cliqué, sa variable est fixée à 1 ; à tout autre moment, elle est fixée à 0. L'expression associée à un indicateur de progression permet de lire et de modifier le réglage en cours.
 
@@ -86,41 +86,28 @@ Les variables ou expressions peuvent être saisissables ou non saisissables et p
 
 #### Grammaire JSON
 
-| Nom        | Type de données             | Valeurs possibles                                                                                                                                                                                                                                         |
-| ---------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | texte, ou tableau de textes | <li>4D variable, field name, or any expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
+| Nom        | Type de données             | Valeurs possibles                                                                                                                                                                                                                                                                |
+| ---------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | texte, ou tableau de textes | <li>variable, nom de champ, ou toute expression 4D.</li><li>Chaîne vide pour [variables dynamiques](#dynamic-variables).</li><li>Tableau de chaînes (collection de noms de tableau) pour une [colonne de listbox hiérarchique](listbox_overview.md#hierarchical-list-boxes)</li> |
 
 ### Expressions
 
-Vous pouvez utiliser une [expression](Concepts/quick-tour.md#expressions) comme source de données pour un objet. Toute expression 4D valide est autorisée : expression simple, propriété d'objet, formule, fonction 4D, nom de méthode projet ou champ utilisant la syntaxe standard `[Table]Field`. L'expression est évaluée lors de l'exécution du formulaire et réévaluée à chaque événement du formulaire. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
+Vous pouvez utiliser une [expression](Concepts/quick-tour.md#expressions) comme source de données pour un objet. Toute expression 4D valide est autorisée : expression simple, propriété d'objet, formule, fonction 4D, nom de méthode projet ou champ utilisant la syntaxe standard `[Table]Field`. L'expression est évaluée lors de l'exécution du formulaire et réévaluée à chaque événement du formulaire. Notez que les expressions peuvent être [assignables ou non assignables](Concepts/quick-tour.md#expressions).
 
 > Si la valeur saisie correspond à la fois à un nom de variable et à un nom de méthode, 4D considère que vous indiquez la méthode.
 
 ### Variables dynamiques
 
-You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
+Vous pouvez laisser à 4D le soin de créer les variables associées à vos objets de formulaire (boutons, zones de saisie, cases à cocher, etc.) de façon dynamique et en fonction de vos besoins. Pour cela, il suffit de laisser la propriété "Variable ou expression" (ou le champ JSON `dataSource`) vide.
 
 Lorsqu'une variable n'est pas nommée, au chargement du formulaire, 4D crée une nouvelle variable pour l'objet, avec un nom calculé qui est unique dans l'espace des variables de process de l'interpréteur (ce qui signifie que ce mécanisme peut être utilisé même en mode compilé). Cette variable temporaire sera détruite à la fermeture du formulaire.
-Pour que ce principe fonctionne en mode compilé, il est impératif que les variables dynamiques soient explicitement typées. Il existe deux façons de procéder :
 
-- You can set the type using the [Expression type](#expression-type) property.
-- You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
+To get or set the value of form objects that use dynamic variables, you just need to call [`OBJECT Get value`](../commands-legacy/object-get-value.md) and [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) commands. Par exemple :
 
 ```4d
- If(Form event code=On Load)
-    var $init : Text
-    $Ptr_object:=OBJECT Get pointer(Object named;"comments")
-    $init:=""
-    VARIABLE TO VARIABLE(Current process;$Ptr_object->;$init)
- End if
-```
-
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Par exemple :
-
-```4d
-  // assign the time 12:00:00 to the variable for the "tstart" object
- $p :=OBJECT Get pointer(Object named;"tstart")
- $p->:=?12:00:00?
+ var $value : Variant
+ $value:=OBJECT Get value("comments")
+ OBJECT SET VALUE("comments";$value+10) 
 ```
 
 Ce mécanisme présente deux avantages :
@@ -128,9 +115,20 @@ Ce mécanisme présente deux avantages :
 - D'une part, il permet de développer des composants de type "sous-formulaire" qui peuvent être utilisés plusieurs fois dans le même formulaire hôte. Prenons l'exemple d'un sous-formulaire de type datepicker qui est inséré deux fois dans un formulaire hôte pour définir une date de début et une date de fin. Ce sous-formulaire utilisera des objets pour choisir le mois et l'année de la date. Il sera nécessaire que ces objets fonctionnent avec des variables différentes pour la date de début et la date de fin. Laisser 4D créer sa variable avec un nom unique est un moyen de résoudre cette difficulté.
 - D'autre part, il peut être utilisé pour limiter l'utilisation de la mémoire. En fait, les objets formulaires ne fonctionnent qu'avec des variables process ou interprocess. Cependant, en mode compilé, une instance de chaque variable process est créée dans tous les process, y compris les process serveur. Cette instance occupe de la mémoire, même si le formulaire n'est pas utilisé durant la session. Par conséquent, le fait de laisser 4D créer des variables de manière dynamique lors du chargement des formulaires permet d'économiser de la mémoire.
 
+In the 4D code, dynamic variables themselves can be accessed using [`OBJECT Get data source formula`](../commands/object-get-data-sourvce-formula.md) or through a pointer. Par exemple :
+
+```4d
+  // to get the dynamic variable assigned to "tstart"
+ $var:=OBJECT Get data source formula(*; "tstart")
+  //$var is the variable name
+  //OR
+ $var:=OBJECT Get pointer(Object named;"tstart") 
+  //$var-> gives the variable name
+```
+
 ### List box tableau
 
-For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
+Pour une list box de type tableau, la propriété **Variable ou Expression** contient généralement le nom de la variable de type tableau définie pour la list box et pour chaque colonne. Toutefois, vous pouvez utiliser un tableau texte (contenant des noms de tableaux) comme valeur *dataSource* pour une colonne de list box afin de définir une [listbox hiérarchique](listbox_overview.md#hierarchical-list-boxes).
 
 #### Objets pris en charge
 
@@ -140,22 +138,22 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 ## Type d’expression
 
-> This property is called [**Data Type**](properties_DataSource.md#data-type-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
+> Cette propriété est appelée [**Type de données**](properties_DataSource.md#data-type-expression-type) dans la liste de propriétés pour les colonnes de list box de type [sélection](listbox_overview.md#selection-list-boxes) et [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) et pour les [Listes déroulantes](dropdownList_Overview.md) associées à un [objet](FormObjects/dropdownList_Overview.md#using-an-object) ou un [tableau](FormObjects/dropdownList_Overview.md#using-an-array).
 
 Spécifie le type de données pour l'expression ou la variable associée à l'objet. Notez que l'objectif principal de ce paramètre est de configurer les options (telles que les formats d'affichage) disponibles pour le type de données. Il ne type pas la variable elle-même. En vue d'une compilation de projet, vous devez [déclarer la variable](Concepts/variables.md#declaring-variables).
 
 Toutefois, cette propriété a une fonction de typage dans les cas spécifiques suivants :
 
-- **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
-- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. Les formats fournis dépendent du type de variable (list box de type tableau) ou du type de données/de champ (list box de type sélection et collection). Les formats 4D standard qui peuvent être utilisés sont les suivants : Alpha, Numérique, Date, Heure, Image et Booléen. Le type Texte n'a pas de format d'affichage spécifique. Tous les formats personnalisés existants sont également disponibles.
-- **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires.
+- **[Variables dynamiques](#dynamic-variables)** : vous pouvez utiliser cette propriété pour déclarer le type des variables dynamiques.
+- **[Colonnes de list box](listbox_overview.md#list-box-columns)** : cette propriété est utilisée pour associer un format d'affichage aux données de la colonne. Les formats fournis dépendent du type de variable (list box de type tableau) ou du type de données/de champ (list box de type sélection et collection). Les formats 4D standard qui peuvent être utilisés sont les suivants : Alpha, Numérique, Date, Heure, Image et Booléen. Le type Texte n'a pas de format d'affichage spécifique. Tous les formats personnalisés existants sont également disponibles.
+- **[Variables image](input_overview.md)** : vous pouvez utiliser ce menu pour déclarer les variables avant de charger le formulaire en mode interprété. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Ces mécanismes exigent une plus grande précision dans la configuration des variables : elles doivent avoir été déclarées avant le chargement du formulaire - c'est-à-dire avant même l'événement formulaire `On Load` - à la différence des autres types de variables. Pour cela, il faut soit que l'instruction `var varName : Picture` ait été exécutée avant le chargement du formulaire (typiquement, dans la méthode appelant la commande `DIALOG`), soit que la variable ait été typée au niveau du formulaire en utilisant la propriété type d'expression.
  Sinon, la variable image ne sera pas affichée correctement (uniquement en mode interprété).
 
 #### Grammaire JSON
 
-| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                                                    |
-| ------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dataSourceTypeHint | string          | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
+| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                                                                  |
+| ------------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string          | <li>**Objets standards :** "integer", "boolean", "number", "image", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**colonnes de list box :** "boolean", "number", "picture", "text", date", "time". *list box tableaux/sélection uniquement* : "integer", "object"</li> |
 
 #### Objets pris en charge
 
@@ -165,7 +163,7 @@ Toutefois, cette propriété a une fonction de typage dans les cas spécifiques 
 
 ## CSS Class
 
-A list of space-separated words used as class selectors in [css files](FormEditor/createStylesheet.md#style-sheet-files).
+Une liste de mots séparés par des espaces utilisés comme sélecteurs de classes dans [fichiers css](FormEditor/createStylesheet.md#style-sheet-files).
 
 #### Grammaire JSON
 
@@ -185,10 +183,10 @@ Pour utiliser des éléments de collection ou des entités afin de définir le c
 
 Saisissez une expression qui renvoie une collection ou une entity selection. En général, vous saisissez le nom d'une variable, d'un élément de collection ou d'une propriété qui contient une collection ou une entity selection.
 
-La collection ou l'entity selection doit être disponible pour le formulaire lors de son chargement. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
+La collection ou l'entity selection doit être disponible pour le formulaire lors de son chargement. Chaque élément de la collection ou de chaque entité de l'entity selection sera associé(e) à une ligne de list box et sera disponible en tant qu'objet via le mot-clé [`This`](../Concepts/classes.md#this) :
 
-- if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example `This.<propertyPath>`.
-- if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example `This.<attributePath>`.
+- si vous avez utilisé une collection d'objets, vous pouvez appeler **This** dans l'expression datasource pour accéder à chaque valeur de propriété, par exemple `This.<propertyPath>`.
+- si vous avez utilisé une entity selection, vous pouvez appeler **This** dans l'expression detasource pour accéder à chaque valeur d'attribut, par exemple `This.<attributePath>`.
 
 > Si vous avez utilisé une collection de valeurs scalaires (et non des objets), 4D vous permet d'afficher chaque valeur en appelant **This.value** dans l'expression datasource. Cependant, dans ce cas, vous ne pourrez pas modifier les valeurs ou accéder à l'objet courant (voir ci-dessous).
 
@@ -210,10 +208,10 @@ Spécifie le type de list box.
 
 ![](../assets/en/FormObjects/listbox_dataSource.png)
 
-- **Arrays**(default): use array elements as the rows of the list box.
-- **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
-- **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
-- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
+- **Tableaux** (par défaut) : utiliser des éléments de tableaux comme lignes de la list box.
+- **Sélection courante** : utiliser des expressions, champs ou méthodes dont les valeurs seront évaluées pour chaque enregistrement de la sélection courante d'une table.
+- **Sélection temporaire** : utiliser des expressions, champs ou méthodes dont les valeurs seront évaluées pour chaque enregistrement de la sélection temporaire.
+- **Collection ou Entity selection** : utiliser des éléments de collections ou des entités pour définir le contenu des lignes de la list box. Notez qu'avec ce type de list box vous devez définir la propriété [Collection ou Entity Selection](properties_Object.md#collection-or-entity-selection).
 
 #### Grammaire JSON
 
@@ -229,7 +227,7 @@ Spécifie le type de list box.
 
 ## Type de Plug-in
 
-Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Les noms des zones externes de plug-in sont publiés dans le fichier manifest.json du plug-in.
+Nom de la [zone externe de plugin](pluginArea_overview.md) associée à l'objet. Les noms des zones externes de plug-in sont publiés dans le fichier manifest.json du plug-in.
 
 #### Grammaire JSON
 
@@ -269,9 +267,9 @@ Vous pouvez forcer un retour chariot dans le libellé en utilisant le caractère
 
 Pour insérer un \ dans le libellé, entrez "&#92;&#92;".
 
-Par défaut, le libellé est placé au centre de l'objet. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) property.
+Par défaut, le libellé est placé au centre de l'objet. Lorsque l'objet contient également une icône, vous pouvez modifier l'emplacement relatif de ces deux éléments à l'aide de la propriété [Position Titre/Image](properties_TextAndPicture.md#titlepicture-position).
 
-For application translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html)).
+Pour des raisons de traduction d'applications, vous pouvez entrer une référence XLIFF dans la zone de titre d'un bouton (voir [Annexe B : architecture XLIFF](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html)).
 
 #### Grammaire JSON
 
@@ -287,9 +285,9 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 ## Calcul de la variable
 
-This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
+Cette propriété définit le type de calcul à effectuer dans une zone [pied de colonne](listbox_overview.md#list-box-footers).
 
-> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md) 4D command.
+> Le calcul des pieds de page peut également être défini en utilisant la commande 4D [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md).
 
 Il existe plusieurs types de calculs. Le tableau suivant montre quels calculs peuvent être utilisés en fonction du type de données présentes dans chaque colonne et indique le type automatiquement affecté par 4D à la variable de pied de colonne (si elle n'est pas typée par le code) :
 
@@ -311,7 +309,7 @@ Il existe plusieurs types de calculs. Le tableau suivant montre quels calculs pe
 
 Les calculs automatiques ne tiennent pas compte de l'état affiché/masqué des lignes de list box. Si vous souhaitez limiter un calcul aux seules lignes visibles, vous devez utiliser un calcul personnalisé.
 
-*Null* values are not taken into account for any calculations.
+Les valeurs *Null* ne sont prises en compte pour aucun calcul.
 
 Si la colonne contient différents types de valeurs (colonne basée sur une collection par exemple) :
 

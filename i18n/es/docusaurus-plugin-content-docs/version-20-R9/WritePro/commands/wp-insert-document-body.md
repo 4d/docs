@@ -54,7 +54,7 @@ In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pa
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 ## Ejemplo 1
 

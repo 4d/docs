@@ -47,7 +47,7 @@ Function onTerminate($listener : 4D.TCPListener; $event : 4D.TCPEvent)
 
 :::note
 
-See [example in TCPConnection class](./TCPConnectionClass.md#asynchronous-example) for a description of the MyAsyncTCPConnection user class.
+Veja [exemplo da clase TCPConnection](./TCPConnectionClass.md#asynchronous-example) para uma descrição da classe de usuário MyAsyncTCPConnection.
 
 :::
 

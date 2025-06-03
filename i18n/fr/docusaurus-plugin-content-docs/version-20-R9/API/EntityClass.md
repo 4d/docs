@@ -3,7 +3,7 @@ id: EntityClass
 title: Entity
 ---
 
-Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/dsMapping.md#dataclass), tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.
+Une [entity](ORDA/dsMapping.md#entity) (ou "entité") est une instance d'une [Dataclass](ORDA/dsMapping.md#dataclass), tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.
 
 ### Sommaire
 
@@ -611,15 +611,14 @@ Le code générique suivant duplique toute entité :
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
 
 | Paramètres | Type    |                             | Description                                                                                              |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
-| Résultat   | Text    | <- | Valeur de la clé primaire texte de l'entité                                                              |
-| Résultat   | Integer | <- | Valeur de la clé primaire numérique de l'entité                                                          |
+| Résultat   | any     | <- | Valeur de la clé primaire de l'entité (Integer ou Text)                               |
 
 <!-- END REF -->
 
@@ -657,7 +656,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 | Paramètres | Type |                             | Description                                                        |
 | ---------- | ---- | --------------------------- | ------------------------------------------------------------------ |
-| Résultat   | Text | <- | Attirbuts de contexte associés à l'entity, séparés par une virgule |
+| Résultat   | Text | <- | Attributs de contexte associés à l'entity, séparés par une virgule |
 
 <!-- END REF -->
 

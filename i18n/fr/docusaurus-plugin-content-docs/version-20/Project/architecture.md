@@ -32,7 +32,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 - `Sources`
     + `Classes`
     + `DatabaseMethods`
-    + `Methods`
+    + `Méthodes`
     + `Formulaires`
     + `TableForms`
     + `Triggers`
@@ -73,7 +73,7 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 | ------------------------ | ------------------------------------------------------------------ | ------ |
 | *databaseMethodName*.4dm | Méthodes base définies dans le projet. Un fichier par méthode base | text   |
 
-#### `Methods`
+#### `Méthodes`
 
 | Contenu          | Description                                                     | Format |
 | ---------------- | --------------------------------------------------------------- | ------ |
@@ -121,7 +121,7 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 
 Le dossier Trash contient des méthodes et des formulaires qui ont été supprimés du projet (le cas échéant). Il peut contenir les dossiers suivants :
 
-- `Methods`
+- `Méthodes`
 - `Formulaires`
 - `TableForms`
 

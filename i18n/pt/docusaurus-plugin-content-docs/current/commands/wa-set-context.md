@@ -7,11 +7,11 @@ title: WA SET CONTEXT
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 
-| Parâmetro  | Tipo                  |                             | Descrição                                                                                                                                      |
-| ---------- | --------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador              | &#8594; | Se especificado, *object* é um nome de objeto (string). If omitted, *object* is a variable. |
-| object     | Objecto de formulário | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                 |
-| contextObj | Object                | &#8594; | Object containing the functions that can be called with `$4d`.                                                                 |
+| Parâmetro  | Tipo                  |                             | Descrição                                                                                                                                       |
+| ---------- | --------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador              | &#8594; | Se especificado, *object* é um nome de objeto (string). Se omitido, *object* é uma variável. |
+| object     | Objecto de formulário | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                  |
+| contextObj | Object                | &#8594; | Object containing the functions that can be called with `$4d`.                                                                  |
 
 <!-- END REF-->
 
@@ -27,7 +27,7 @@ The command is only usable with an embedded web area where the [**Use embedded w
 
 Pass in *contextObj* user class instances or formulas to be allowed in `$4d` as objects. Class functions that begin with `_` are considered hidden and cannot be used with `$4d`.
 
-- If *contextObj* is null, `$4d` has access to all 4D methods.
+- Se *contextObj* for null, `$4d` terá acesso a todos os métodos 4D.
 - Se *contextObj* estiver vazio, `$4d` não terá acesso.
 
 ### Exemplo 1

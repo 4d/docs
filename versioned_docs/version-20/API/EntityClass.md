@@ -916,7 +916,12 @@ A record locked by `.lock()` is unlocked:
 * when the [`unlock()`](#unlock) function is called on a matching entity in the same process
 * automatically, when it is no longer referenced by any entities in memory. For example, if the lock is put only on one local reference of an entity, the entity is unlocked when the function ends. As long as there are references to the entity in memory, the record remains locked.
 
-> An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
+:::note Notes
+
+- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
+
+:::
 
 By default, if the *mode* parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
 
@@ -1704,7 +1709,7 @@ The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the p
 
 A record is automatically unlocked when it is no longer referenced by any entities in the locking process (for example: if the lock is put only on one local reference of an entity, the entity and thus the record is unlocked when the process ends).
 
->When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. For example:
+When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. For example:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1713,6 +1718,13 @@ A record is automatically unlocked when it is no longer referenced by any entiti
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+
+:::
+
 
 **Result**
 

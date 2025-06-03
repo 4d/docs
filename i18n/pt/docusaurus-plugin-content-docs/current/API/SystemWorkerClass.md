@@ -89,7 +89,7 @@ In the *options* parameter, pass an object that can contain the following proper
 | ---------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onResponse       | Formula    | indefinido | Chamada de retorno para mensagens de worker do sistema. Esta chamada de retorno é chamada assim que a resposta completa é recebida. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                      |
 | onData           | Formula    | indefinido | Chamada de retorno para os dados do worker do sistema. Esta chamada de retorno é chamada cada vez que o worker do sistema recebe dados. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                  |
-| onDataError      | Formula    | indefinido | Callback for the external process errors (*stderr* of the external process). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                          |
+| onDataError      | Formula    | indefinido | Callback para os erros do processo externo (*stderr* do processo externo). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                            |
 | onError          | Formula    | indefinido | Chamada de retorno para erros de execução, devolvida pelo worker do sistema em caso de condições anormais de tempo de execução (erros de sistema). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                    |
 | onTerminate      | Formula    | indefinido | Chamada de retorno quando o processo externo é terminado. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                                                                |
 | timeout          | Number     | indefinido | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                                                                                                                     |
@@ -461,7 +461,7 @@ Você pode usar a propriedade `.dataType` do [objeto options](#options-object) p
 
 #### Descrição
 
-A propriedade `.response` <!-- REF #SystemWorkerClass.response. Resumo --> contém a concatenação de todos os dados retornados assim que o pedido for encerrado<!-- FIM REF -->, ou seja, a mensagem completa recebida da saída do processo.
+A propriedade `.response` <!-- REF #SystemWorkerClass.response.Summary--> contém a concatenação de todos os dados retornados assim que o pedido for encerrado<!-- END REF -->, ou seja, a mensagem completa recebida da saída do processo.
 
 O tipo da mensagem é definido conforme o atributo [`dataType`](#datatype).
 
@@ -497,7 +497,7 @@ A propriedade `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary
 
 #### Descrição
 
-A função `.terminate()` <!-- REF #SystemWorkerClass.terminate().summary --> força o `SystemWorker` a encerrar sua execução<!-- END REF -->.
+A função `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary --> força o `SystemWorker` a encerrar sua execução<!-- END REF -->.
 
 Esta função envia a instrução para terminar e devolver o controlo ao guião de execução.
 

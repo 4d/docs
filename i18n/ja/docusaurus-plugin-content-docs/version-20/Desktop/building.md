@@ -21,7 +21,7 @@ title: アプリケーションビルド
 プロジェクトパッケージをビルドするには次の方法があります:
 
 * [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/ja/page871.html) コマンドを使う
-* or the [Build Application dialog](#build-application-dialog).
+* あるいは[アプリケーションビルド画面](#アプリケーションビルド)を使用することができます。
 
 :::tip
 
@@ -44,11 +44,11 @@ title: アプリケーションビルド
 
 ### buildApp.4DSettings
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-user).
+アプリケーションビルドの設定パラメーターは、`buildApp.4DSettings` という名前の XML ファイル内の XML キーとして記録されます。このファイルはプロジェクトの[`Settings` フォルダー](../Project/architecture.md#settings-ユーザー)にあります。
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じデータベースについて内容の異なる複数の XML ファイルを定義し、[BUILD APPLICATION](https://doc.4d.com/4Dv19/4D/19/BUILD-APPLICATION.301-5392523.ja.html) コマンドでそれらを使い分けることができます。
 
-また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual.
+また、XML キーを使用すれば、アプリケーションビルドダイアログには表示されない追加の設定をおこなうことができます。 XML キーの詳細は [アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.ja.html) リファレンスを参照してください。
 
 ### ログファイル
 
@@ -88,7 +88,7 @@ Each build application parameter is stored as an XML key in the application proj
 
 .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルは4D Server、4D Volume Desktop(組み込みアプリ)、および4D において使用できます。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
-> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#buildapp4dsettings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> .4dz ファイルを生成する際、4D はデフォルトで **標準的な** zip形式を使用します。 このフォーマットの利点は、あらゆる解凍ツールで簡単に読み取ることができることです。 標準圧縮形式を使用しない場合、 [`buildApp.4DSettings`](#buildapp4dsettings) ファイルの`UseStandardZipFormat` XML キーに値 `False` を設定してください (詳細は [アプリケーションビルド設定ファイル](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-5447429.en.html) リファレンスを参照してください)。
 
 #### 関連するフォルダーを含む
 
@@ -163,7 +163,7 @@ Each build application parameter is stored as an XML key in the application proj
 * *Windows*
   * MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
   * 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
-  * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。 **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
+  * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。 **注記**: もし*Default Data* フォルダーが設定されていれば、ここに格納されます ([データファイルの管理](#データファイルの管理)を参照してください)。
   * (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
   * (オプション) Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが(あれば)含まれます。 この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
   * 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
@@ -199,11 +199,11 @@ Each build application parameter is stored as an XML key in the application proj
 
 スタンドアロンアプリケーションには運用ライセンスが必要となります。 これは開発者によってビルドの段階で埋め込むか、以下の表で説明されているように、初回起動時にエンドユーザーによって入力される必要があります:
 
-| 運用ライセンス                | 説明                                            | 入力する場所                                                                                     |
-| ---------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| *4D OEM Desktop*       | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。        | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                                        |
-| *4D Unlimited Desktop* | **販売終了** - 埋め込まれたカスタムのライセンス                   | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                                        |
-| *4D Desktop*           | ユーザーごとのライセンスで、スタンドアロンの4D アプリケーションを使用するのに必要です。 | [First activation](../Admin/licenses.md#first-activation) dialog box on the user's machine |
+| 運用ライセンス                | 説明                                            | 入力する場所                                                                      |
+| ---------------------- | --------------------------------------------- | --------------------------------------------------------------------------- |
+| *4D OEM Desktop*       | 埋め込まれたカスタムのライセンス。詳細は 4D 営業部にお取り合わせ下さい。        | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                         |
+| *4D Unlimited Desktop* | **販売終了** - 埋め込まれたカスタムのライセンス                   | アプリケーションビルドダイアログの[ライセンスページ](#ライセンス)                                         |
+| *4D Desktop*           | ユーザーごとのライセンスで、スタンドアロンの4D アプリケーションを使用するのに必要です。 | ユーザーのコンピューターで表示される[初回のアクティベーション](../Admin/licenses.md#初回のアクティベーション) ダイアログ画面 |
 
 
 
@@ -250,11 +250,11 @@ Each build application parameter is stored as an XML key in the application proj
 
 **注記**: ここでは、以下の用語を使用します:
 
-| 名称                  | 定義                                                                                                                                                                            |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| プロジェクトのディレクトリファイル   | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project         |
-| アプリケーションのディレクトリファイル | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the built 4D Server |
-| データのディレクトリファイル      | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings-user-data)                    |
+| 名称                  | 定義                                                                                                                                                   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| プロジェクトのディレクトリファイル   | プロジェクトの[ Settings フォルダー](../Project/architecture.md#settings-ユーザー)内の[directory.json](../Users/handling_users_groups.md#directoryjson-ファイル) ファイル      |
+| アプリケーションのディレクトリファイル | ビルドアプリケーションの[ Settings フォルダー](../Project/architecture.md#settings-ユーザー)内の[directory.json](../Users/handling_users_groups.md#directoryjson-ファイル) ファイル |
+| データのディレクトリファイル      | [ユーザーデータ > Settings フォルダー](../Project/architecture.md#settings-ユーザーデータ)内の[directory.json](../Users/handling_users_groups.md#directoryjson-ファイル) ファイル |
 
 このオプションをチェックすると、ビルド時にプロジェクトのディレクトリファイルがアプリケーションのディレクトリファイルとしてコピーされます。
 
@@ -565,7 +565,7 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 
 Gatekeeper とは macOS のセキュリティ機能で、インターネットからダウンロードしてきたアプリケーションの実行を管理するものです。 もしダウンロードしたアプリケーションが Apple Store からダウンロードしたものではない、または署名されていない場合には実行が拒否されます。
 
-> On Apple Silicon machines, 4D components need to be actually signed. 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")
+> Apple Silicon マシンでは, コンポーネントもきちんと署名されている必要があります。 署名されていないコンポーネントの場合、アプリケーション起動時にエラー ("lib4d-arm64.dylib を開けません...")
 
 アプリケーションビルダーの **アプリケーションに署名** 機能によって、このセキュリティオプションと互換性のあるアプリケーションやコンポーネントをデフォルトで生成することができます。
 
@@ -573,7 +573,7 @@ Gatekeeper とは macOS のセキュリティ機能で、インターネット�
 
 macOS 10.14.5 (Mojave) および 10.15 (Catalina) において、アプリケーションのノータリゼーション (公証) が Apple より強く推奨されています。公証を得ていないアプリケーションをインターネットからダウンロードした場合、デフォルトでブロックされます。
 
-The 4D [built-in signing features](#macos-signing-certificate) have been adapted to meet all of Apple's requirements to allow using the Apple notary service. 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。 公証についての詳細は [4D ブログ記事 (英語)](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) や関連の [テクニカルノート (日本語)](https://4d-jp.github.io/tech_notes/20-02-25-notarization/) を参照ください。
+4Dに組み込まれている[署名機能全般](#macos-署名に使用する証明書)は、Apple が提供する公証サービスの利用条件に適合するよう作られています。 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。 公証についての詳細は [4D ブログ記事 (英語)](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) や関連の [テクニカルノート (日本語)](https://4d-jp.github.io/tech_notes/20-02-25-notarization/) を参照ください。
 
 公証についての詳細は、[Apple のデベロッパー Web サイト](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) を参照ください。
 

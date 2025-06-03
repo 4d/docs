@@ -76,7 +76,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 - Quando importar um arquivo formatado em Excel em um documento 4D View Pro, algumas configurações podem ser perdidas. You can verify your settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 - Usando o objeto *excelOptions* é recomendado ao importar o formato ".xlsx". Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
-- The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+- A função callback especificada no atributo `formula` é acionada depois que todas as [funções personalizadas 4D](../formulas.md#4d-functions) dentro do conteúdo importado tiverem concluído seus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 :::
 

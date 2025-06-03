@@ -48,7 +48,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface fornecido p
 
 #### Descrição
 
-Cada classe de dados em um datastore está disponível como uma propriedade do [objeto DataStore] (ORDA/dsMapping.md#datastore). O objeto retornado <!-- REF DataStoreClass.dataclassName.Summary -->contém uma descrição da dataclass<!-- END REF -->.
+Cada classe de dados em um datastore está disponível como uma propriedade do [objeto DataStore](ORDA/dsMapping.md#datastore). O objeto retornado <!-- REF DataStoreClass.dataclassName.Summary -->contém uma descrição da dataclass<!-- END REF -->.
 
 #### Exemplo
 
@@ -456,7 +456,7 @@ A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->retorna um
 Em um armazém de dados remoto:
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -657,7 +657,7 @@ A função também retornará `True` se o datastore tiver sido bloqueado por out
 
 A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->define todas as seleções de entidades como alteráveis por padrão nos datastores do aplicativo atual<!-- END REF --> (incluindo [datastores remotos](ORDA/remoteDatastores.md)). Ele deve ser usado uma vez, por exemplo, no método de banco de dados `On Startup`.
 
-Quando essa função não é chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai" ou [como elas são criadas] (ORDA/entities.md#shareable-or-alterable-entity-selections).
+Quando essa função não é chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai" ou [como elas são criadas](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Essa função não modifica as seleções de entidades criadas por [`.copy()`](./EntitySelectionClass.md#copy) ou `OB Copy` quando a opção explícita `ck shared` é utilizada.
 
@@ -1114,7 +1114,7 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

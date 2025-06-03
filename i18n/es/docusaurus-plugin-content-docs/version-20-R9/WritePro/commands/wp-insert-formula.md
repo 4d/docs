@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 El comando **WP Insert formula** <!--REF #_command_.WP Insert formula.Summary--> inserta una *formula* en *targetObj* de acuerdo con el *mode* de inserción especificado y devuelve el rango de texto resultante.<!-- END REF-->
 
-In the *targetObj* parameter, you can pass:
+En el parámetro *targetObj*, puede pasar:
 
 - un rango, o
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
@@ -30,7 +30,7 @@ In the *targetObj* parameter, you can pass:
 
 In the *formula* parameter, pass the 4D formula to evaluate. Puede pasar:
 
-- either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
+- o un [objeto de la fórmula](../../commands/formula.md-objects) creado por el comando [**Formula**](../../commands/formula.md) o [**Formula from string**](../../commands/formula.md-from-string),
 - or an object containing two properties:
 
 | **Propiedad** | **Tipo** | **Description**                                                                                                                                                                             |
@@ -38,7 +38,7 @@ In the *formula* parameter, pass the 4D formula to evaluate. Puede pasar:
 | name          | Text     | Name to display for the formula in the document                                                                                                                                             |
 | formula       | Object   | The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command |
 
-When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
+When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. Para más información, vea la página [Gestión de formulas](../managing-formulas.md).
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used:
 
@@ -57,7 +57,7 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 :::note
 

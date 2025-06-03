@@ -11,10 +11,10 @@ title: OpenAIChatCompletionsResult
 
 ## Computed properties
 
-| Propriedade | Tipo         | Descrição                                                                                         |
-| ----------- | ------------ | ------------------------------------------------------------------------------------------------- |
-| `choices`   | Collection   | Returns a collection of [OpenAIChoice](OpenAIChoice.md) from the OpenAI response. |
-| `choice`    | OpenAIChoice | Returns the first [OpenAIChoice](OpenAIChoice.md) from the choices collection.    |
+| Propriedade | Tipo         | Descrição                                                                                     |
+| ----------- | ------------ | --------------------------------------------------------------------------------------------- |
+| `choices`   | Collection   | Retorna uma coleção de [OpenAIChoice](OpenAIChoice.md) da resposta do OpenAI. |
+| `choice`    | OpenAIChoice | Retorna o primeiro [OpenAIChoice](OpenAIChoice.md) das opções da coleção.     |
 
 ## Veja também
 

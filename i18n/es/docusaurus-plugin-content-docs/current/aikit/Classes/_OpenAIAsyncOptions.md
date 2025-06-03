@@ -31,7 +31,7 @@ The `_OpenAIAsyncOptions` internal class provides function to handle asynchronou
 
 ### onTerminate()
 
-On terminate send [OpenAIResult](OpenAIResult.md) to the callback "formula".
+On terminate envía [OpenAIResult](OpenAIResult.md) a la retrollamada "formula".
 
 ### onData()
 

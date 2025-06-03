@@ -7,19 +7,19 @@ title: Managing formulas
 
 4D Write Pro documents can contain references to 4D formulas such as variables, fields, expressions, project methods, or 4D commands. Specific information such as the page number can also be referenced through formulas (see [Inserting document and page expressions](#inserting-date-and-time-formulas) below).
 
-Inserting formulas in 4D Write Pro areas is done with the [**WP INSERT FORMULA**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. They are also returned by the [**WP Get text**](commands-legacy/wp-get-text.md) command.
+Inserting formulas in 4D Write Pro areas is done with the [**WP INSERT FORMULA**](commands/wp-insert-formula.md) command and can be read using the [**WP Get formulas**](commands-legacy/wp-get-formulas.md) command. Eles também são devolvidos pelo comando [**WP Get text**](commands-legacy/wp-get-text.md).
 
 As fórmulas são avaliadas:
 
 - when they are inserted in a form object which displays computed values
 - when the 4D Write Pro object is loaded in a form object which displays computed values
-- when the [**WP COMPUTE FORMULAS**](commands-legacy/wp-compute-formulas.md) command is called
+- quando o comando [**WP COMPUTE FORMULAS**](commands-legacy/wp-compute-formulas.md) for chamado
 - when they are "frozen" using the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (if not already computed)
 - before printing (if not already computed)
 - before exporting to .docx (if the formula can't be mapped with MS Word formulas)
 - when the standard actions to freeze, print, export, or compute formulas are called. Veja *Ações padrão*
 
-Formulas are not evaluated when a document is loaded (using [**WP New**](commands-legacy/wp-new.md), [**WP Insert document body**](commands/wp-insert-document-body.md), or `wpArea:=[table]field`):
+As fórmulas não são avaliadas quando um documento é carregado (usando [**WP New**](commands-legacy/wp-new.md), [**WP Insert document body**](commands/wp-insert-document-body.md), ou `wpArea:=[table]field`):
 
 - if the document is only offscreen,
 - if the document is displayed onscreen but the form object only shows references.
@@ -45,24 +45,24 @@ You want to replace the selection in a 4D Write Pro area with the contents of a 
 
 ## Formula context object
 
-You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. You can use the properties of this object through [**This**](../commands/this.md):
+Você pode inserir expressões especiais relacionadas aos atributos de documento em qualquer área de documento (corpo, cabeçalho, rodapé) usando o comando [WP Insert formula](commands/wp-insert-formula.md). Within a formula, a formula context object is automatically exposed. Você pode usar as propriedades desse objeto por meio de [**This**](../commands/this.md):
 
-| Propriedades                                                                   | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------------------------------------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [This](../commands/this.md).title                              | Text   | Title defined in wk title attribute                                                                                                                                                                                                                                                                                                                               |
-| [This](../commands/this.md).author                             | Text   | Author defined in wk author attribute                                                                                                                                                                                                                                                                                                                             |
-| [This](../commands/this.md).subject                            | Text   | Subject defined in wk subject attribute                                                                                                                                                                                                                                                                                                                           |
-| [This](../commands/this.md).company                            | Text   | Company defined in wk company attribute                                                                                                                                                                                                                                                                                                                           |
-| [This](../commands/this.md).notes                              | Text   | Notes defined in wk notes attribute                                                                                                                                                                                                                                                                                                                               |
-| [This](../commands/this.md).dateCreation                       | Date   | Date creation defined in wk date creation attribute                                                                                                                                                                                                                                                                                                               |
-| [This](../commands/this.md).dateModified                       | Date   | Date modified defined in wk date modified attribute                                                                                                                                                                                                                                                                                                               |
-| [This](../commands/this.md).pageNumber (\*) | Number | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command. |
-| [This](../commands/this.md).pageCount (\*)  | Number | Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command.                                                                                                                                         |
-| [This](../commands/this.md).document                           | Object | Documento 4D Write Pro                                                                                                                                                                                                                                                                                                                                            |
-| [This](../commands/this.md).data                               | Object | Data context of the 4D Write Pro document set by [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                                                                                                                                                |
-| [This](../commands/this.md).sectionIndex                       | Number | The Index of the section in the 4D Write Pro document starting from 1                                                                                                                                                                                                                                                                                             |
-| [This](../commands/this.md).pageIndex                          | Number | The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)                                                                                                                                                                                                                                   |
-| [This](../commands/this.md).sectionName                        | String | The name that the user gives to the section                                                                                                                                                                                                                                                                                                                       |
+| Propriedades                                                                   | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [This](../commands/this.md).title                              | Text   | Title defined in wk title attribute                                                                                                                                                                                                                                                                                                                        |
+| [This](../commands/this.md).author                             | Text   | Author defined in wk author attribute                                                                                                                                                                                                                                                                                                                      |
+| [This](../commands/this.md).subject                            | Text   | Subject defined in wk subject attribute                                                                                                                                                                                                                                                                                                                    |
+| [This](../commands/this.md).company                            | Text   | Company defined in wk company attribute                                                                                                                                                                                                                                                                                                                    |
+| [This](../commands/this.md).notes                              | Text   | Notes defined in wk notes attribute                                                                                                                                                                                                                                                                                                                        |
+| [This](../commands/this.md).dateCreation                       | Date   | Date creation defined in wk date creation attribute                                                                                                                                                                                                                                                                                                        |
+| [This](../commands/this.md).dateModified                       | Date   | Date modified defined in wk date modified attribute                                                                                                                                                                                                                                                                                                        |
+| [This](../commands/this.md).pageNumber (\*) | Number | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> Esta fórmula é sempre dinâmica; não é afetada pelo comando [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md). |
+| [This](../commands/this.md).pageCount (\*)  | Number | Page count: total count of pages.<br/> Esta fórmula é sempre dinâmica; não é afetada pelo comando [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md).                                                                                                                                         |
+| [This](../commands/this.md).document                           | Object | Documento 4D Write Pro                                                                                                                                                                                                                                                                                                                                     |
+| [This](../commands/this.md).data                               | Object | Contexto dos dados do documento 4D Write Pro definido por [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                                                                                                                                |
+| [This](../commands/this.md).sectionIndex                       | Number | The Index of the section in the 4D Write Pro document starting from 1                                                                                                                                                                                                                                                                                      |
+| [This](../commands/this.md).pageIndex                          | Number | The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)                                                                                                                                                                                                                            |
+| [This](../commands/this.md).sectionName                        | String | The name that the user gives to the section                                                                                                                                                                                                                                                                                                                |
 
 :::note
 
@@ -72,7 +72,7 @@ Additional context properties are available when you work with tables. See *Hand
 
 (\*) **Important**: **This.pageNumber**, **This.pageIndex** and **This.pageCount** must be used only directly in a 4D Write Pro formula (they must be present in the *formula.source* string). They will return incorrect values if they are used by the 4D language within a method called by the formula. However, they can be passed as parameters to a method called directly by the formula:
 
-- This will work: « *formatNumber(This.pageNumber)* »
+- Isso funcionará: " *formatNumber(This.pageNumber)* "
 - This will NOT work: « *formatNumber* » with *formatNumber* method processing *This.pageNumber*.
 
 For example, to insert the page number in the footer area:
@@ -109,13 +109,13 @@ When the [**Current time**](../commands-legacy/current-time.md) command, a time 
 
 ## Support of virtual structure
 
-Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) and [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) commands.
+Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. A estrutura virtual exposta às fórmulas é definida por meio dos comandos [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) e [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*).
 
 When a virtual structure is defined:
 
 - references to expressions containing fields display virtual names when the 4D Write Pro document shows references and not values.
 - [**WP Get text**](commands-legacy/wp-get-text.md) returns virtual structure names if `wk expressions as source` option is set in expressions parameter.
-- [WP Insert formula](commands/wp-insert-formula.md) ignores the virtual structure and always expects real table/field names
+- [WP Insert formula](commands/wp-insert-formula.md) ignora a estrutura virtual e sempre espera tabela/nomes de campo reais
 
 :::note
 
@@ -186,7 +186,7 @@ If you assign formula names, they are displayed instead of texts:
 
 ![](../assets/en/WritePro/wp-formulas6.png)
 
-To assign a name to a formula, you need to use the [WP Insert formula](commands/wp-insert-formula.md) command with an object parameter. Por exemplo:
+Para atribuir um nome a uma fórmula, você precisa usar o comando [WP Insert formula](commands/wp-insert-formula.md) com um parâmetro objeto. Por exemplo:
 
 ```4d
   //inserts the previous day in the document

@@ -97,12 +97,12 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 4D propose un large ensemble de constantes prédéfinies, dont les valeurs sont accessibles par un nom. Elles permettent d'écrire un code plus lisible. Par exemple, `XML DATA` est une constante (valeur 6).
 
 ```4d
-vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
+vRef:=Open document("PassFile";"TEXT";Read Mode) // ouvre le document en lecture seule
 ```
 
 > Les constantes prédéfinies apparaissent <u>soulignées</u> par défaut dans l'éditeur de code 4D.
 
-## Methods
+## Méthodes
 
 4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.
 

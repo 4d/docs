@@ -19,7 +19,7 @@ As variáveis são objetos da linguagem; pode criar e utilizar variables que nun
 
 Você cria variáveis declarando-as usando a palavra-chave `var`.
 
-Quando as variáveis são declaradas, elas são inicializadas com o [**valor padrão correspondente ao seu tipo**] (data-types.md#default-values), que elas manterão durante a sessão, desde que não tenham sido [atribuídas] (#assigning-data). Como alternativa, ao declarar variáveis, você pode [inicializar](#initializing-variables-in-the-declaration-line) o valor delas juntamente com o tipo de dados, tudo em uma única linha.
+Quando as variáveis são declaradas, elas são inicializadas com o [**valor padrão correspondente ao seu tipo**](data-types.md#default-values), que elas manterão durante a sessão, desde que não tenham sido [atribuídas](#assigning-data). Como alternativa, ao declarar variáveis, você pode [inicializar](#initializing-variables-in-the-declaration-line) o valor delas juntamente com o tipo de dados, tudo em uma única linha.
 
 :::note
 
@@ -48,12 +48,12 @@ var $myFile : 4D. File  //a file class object variable
 var $myVar //a variant variable
 ```
 
-`varName` é o nome da variável, que deve estar em conformidade com as [regras 4D] (Concepts/identifiers.md) sobre identificadores.
+`varName` é o nome da variável, que deve estar em conformidade com as [regras 4D](Concepts/identifiers.md) sobre identificadores.
 Essa sintaxe só é compatível com declarações de [variáveis locais e de processo](#local-process-and-interprocess-variables), excluindo, portanto, [variáveis interprocessos](#interprocess-variables) (obsoleto) e [arrays](Concepts/arrays.md).
 
 `varType` pode ser:
 
-- um [tipo básico] (Concepts/data-types.md), caso em que a variável contém um valor do tipo declarado,
+- um [tipo básico](Concepts/data-types.md), caso em que a variável contém um valor do tipo declarado,
 - uma [referência de classe](Concepts/classes.md) (classe 4D ou classe de usuário), caso em que a variável contém uma referência a um objeto da classe definida.
 
 Se `varType` for omitido, será criada uma variável do tipo **variant**.
@@ -136,7 +136,7 @@ var $mycol:=[]  // Inferred as a Collection
 
 :::note
 
-O tipo inferido pode ser diferente entre [modo interpretado e compilado] (interpreted.md) se a avaliação do valor for muito ambígua. Nesse caso, um aviso é gerado pelo compilador e um tipo variante é usado. For example, in the following *$a* type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and *$a* will be typed as a variant for the compiled mode.
+O tipo inferido pode ser diferente entre [modo interpretado e compilado](interpreted.md) se a avaliação do valor for muito ambígua. Nesse caso, um aviso é gerado pelo compilador e um tipo variante é usado. For example, in the following *$a* type will be correctly inferred in interpreted mode (Text), but the syntax checking will generate a warning and *$a* will be typed as a variant for the compiled mode.
 
 ```4d
 var $class:={test: "a"}
@@ -212,7 +212,7 @@ Frequentemente, em um banco de dados, pequenas pedaços de informação são nec
 
 Este método pede simplesmente ao utilizador que introduza uma identificação. Coloca a resposta numa variável local, $vsID, e depois procura o ID que o utilizador introduziu. Quando este método termina, a variável local $vsID é apagada da memória. Isto é ótimo, porque a variável é necessária apenas uma vez e apenas neste método.
 
-**Nota:** Parâmetros $1, $2... passados para os métodos são variáveis locais. Para obter mais informações, consulte [Parameters] (Concepts/parameters.md).
+**Nota:** Parâmetros $1, $2... passados para os métodos são variáveis locais. Para obter mais informações, consulte [Parâmetros](Concepts/parameters.md).
 
 ### Variáveis processo
 
@@ -234,7 +234,7 @@ Para obter mais informações, consulte o capítulo **Processos** e a descriçã
 
 :::warning Obsoleto
 
-Use of interprocess variables is not recommended since they are not available from [preemptive processes](../Develop/preemptive.md) and tend to make the code less maintainable.
+O uso de variáveis de interprocesso não é recomendado, dado que elas não estão disponíveis em [processos preventivos](../Develop/preemptive.md) e tendem a tornar o código menos sustentável.
 
 :::
 

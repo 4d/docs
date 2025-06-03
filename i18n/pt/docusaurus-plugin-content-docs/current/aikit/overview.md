@@ -11,7 +11,7 @@ title: 4D-AIKit
 
 ## OpenAI
 
-The [`OpenAI`](Classes/OpenAI.md) class allows you to make requests to the [OpenAI API](https://platform.openai.com/docs/api-reference/).
+La clase [`OpenAI`](Classes/OpenAI.md) permite realizar peticiones a la [API OpenAI](https://platform.openai.com/docs/api-reference/).
 
 ### Configuração
 
@@ -41,7 +41,7 @@ $client.baseURL:="https://your.server.ai"
 var $result:=$client.<resource>.<function>(<parameters...>)
 ```
 
-O `$result` contém o `HTTPRequest`, um status de `sucess`, uma coleção de `erros` e outros. See [OpenAIResult](Classes/OpenAIResult.md)
+O `$result` contém o `HTTPRequest`, um status de `sucess`, uma coleção de `erros` e outros. Ver [OpenAIResult](Classes/OpenAIResult.md)
 
 See some examples bellow.
 
@@ -115,7 +115,7 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 If you do not want to wait for the OpenAPI response when sending a request to its API, you need to use asynchronous code. The result object will be received in a callback function.
 
-See [detailed documentation for examples](asynchronous-call.md)
+Veja [documentação detalhada para exemplos](asynchronous-call.md)
 
 ## Copyright
 

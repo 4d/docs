@@ -31,7 +31,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 - Sources
   - Classes
   - DatabaseMethods
-  - Methods
+  - Méthodes
   - Formulaires
   - TableForms
   - Triggers
@@ -114,7 +114,7 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 Le dossier Trash contient des méthodes et des formulaires qui ont été supprimés du projet (le cas échéant). Il peut contenir les dossiers suivants :
 
-- Methods
+- Méthodes
 - Formulaires
 - TableForms
 

@@ -615,15 +615,14 @@ vCompareResult1 (すべての差異が返されています):
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
 
-| 引数   | 型       |                             | 説明                                                                       |
-| ---- | ------- | :-------------------------: | ------------------------------------------------------------------------ |
-| mode | Integer |              ->             | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
-| 戻り値  | Text    | <- | エンティティのテキスト型プライマリーキーの値                                                   |
-| 戻り値  | Integer | <- | エンティティの数値型プライマリーキーの値                                                     |
+| 引数   | 型       |                             | 説明                                                                          |
+| ---- | ------- | :-------------------------: | --------------------------------------------------------------------------- |
+| mode | Integer |              ->             | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します    |
+| 戻り値  | any     | <- | Value of the primary key of the entity (Integer or Text) |
 
 <!-- END REF -->
 

@@ -14,7 +14,7 @@ Las fórmulas son evaluadas:
 - when they are inserted in a form object which displays computed values
 - when the 4D Write Pro object is loaded in a form object which displays computed values
 - when the [**WP COMPUTE FORMULAS**](commands-legacy/wp-compute-formulas.md) command is called
-- when they are "frozen" using the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (if not already computed)
+- cuando estén "congelados" usando el comando [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) (si aún no se ha calculado)
 - antes de imprimir (si no se ha calculado ya)
 - before exporting to .docx (if the formula can't be mapped with MS Word formulas)
 - when the standard actions to freeze, print, export, or compute formulas are called. Ver *Acciones estándar*
@@ -59,14 +59,14 @@ You can insert special expressions related to document attributes in any documen
 | [This](../commands/this.md).pageNumber (\*) | Number | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command. |
 | [This](../commands/this.md).pageCount (\*)  | Number | Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command.                                                                                                                                         |
 | [This](../commands/this.md).document                           | Object | Documento 4D Write Pro                                                                                                                                                                                                                                                                                                                                            |
-| [This](../commands/this.md).data                               | Object | Data context of the 4D Write Pro document set by [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                                                                                                                                                |
+| [This](../commands/this.md).data                               | Object | Contexto de datos del documento 4D Write Pro definido por [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                                                                                                                                       |
 | [This](../commands/this.md).sectionIndex                       | Number | The Index of the section in the 4D Write Pro document starting from 1                                                                                                                                                                                                                                                                                             |
 | [This](../commands/this.md).pageIndex                          | Number | The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)                                                                                                                                                                                                                                   |
 | [This](../commands/this.md).sectionName                        | String | The name that the user gives to the section                                                                                                                                                                                                                                                                                                                       |
 
 :::note
 
-Additional context properties are available when you work with tables. See *Handling tables* for more information.
+Additional context properties are available when you work with tables. Vea *Gestión de tablas* para más información.
 
 :::
 
@@ -114,7 +114,7 @@ Table and field expressions inserted in 4D Write Pro documents support the virtu
 When a virtual structure is defined:
 
 - references to expressions containing fields display virtual names when the 4D Write Pro document shows references and not values.
-- [**WP Get text**](commands-legacy/wp-get-text.md) returns virtual structure names if `wk expressions as source` option is set in expressions parameter.
+- [**WP Get text**](commands-legacy/wp-get-text.md) devuelve nombres de estructura virtual si la opción `wk expressions as source` está establecida en el parámetro de expresiones.
 - [WP Insert formula](commands/wp-insert-formula.md) ignores the virtual structure and always expects real table/field names
 
 :::note
@@ -172,7 +172,7 @@ To display formula references as symbols, you can:
 
 - check the **Display formula source as symbol option** in the Property list (see *Configuring View properties*), or
 - use the displayFormulaAsSymbol standard action (see *Using 4D Write Pro standard actions*), or
-- use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk display formula as symbol` selector to **True**.
+- usa el comando [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) con el selector `wk display formula as symbol` en **True**.
 
 ### Referencias como nombres
 
@@ -186,7 +186,7 @@ If you assign formula names, they are displayed instead of texts:
 
 ![](../assets/en/WritePro/wp-formulas6.png)
 
-To assign a name to a formula, you need to use the [WP Insert formula](commands/wp-insert-formula.md) command with an object parameter. Por ejemplo:
+Para asignar un nombre a una fórmula, debe utilizar el comando [WP Insert formula](commands/wp-insert-formula.md) con un parámetro objeto. Por ejemplo:
 
 ```4d
   //inserts the previous day in the document

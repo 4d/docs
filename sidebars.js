@@ -2257,7 +2257,8 @@ module.exports =
                 "commands-legacy/xml-get-options",
                 "commands-legacy/xml-set-options"
               ]
-            }
+            },
+            "commands-legacy/constant-list"
           ]
         },
         {

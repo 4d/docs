@@ -11,10 +11,10 @@ title: OpenAIImagesResult
 
 ## Computed properties
 
-| Propriedade | Tipo                                        | Descrição                                                          |
-| ----------- | ------------------------------------------- | ------------------------------------------------------------------ |
-| `images`    | Collection of [OpenAIImage](OpenAIImage.md) | Returns a collection of OpenAIImage objects.       |
-| `imagem`    | [OpenAIImage](OpenAIImage.md)               | Returns the first OpenAIImage from the collection. |
+| Propriedade | Tipo                                     | Descrição                                                          |
+| ----------- | ---------------------------------------- | ------------------------------------------------------------------ |
+| `images`    | Coleção de [OpenAIImage](OpenAIImage.md) | Returns a collection of OpenAIImage objects.       |
+| `imagem`    | [OpenAIImage](OpenAIImage.md)            | Returns the first OpenAIImage from the collection. |
 
 ## Funções
 

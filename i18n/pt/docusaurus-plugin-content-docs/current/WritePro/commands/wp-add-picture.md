@@ -28,15 +28,15 @@ For the optional second parameter, you can pass either:
 
 - Em *picture*:  uma imagem 4D
 - In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
-- In *PictureFileObj*: a `4D.File` object representing a picture file.
+- Em *PictureFileObj*: um objeto `4D.File` que representa um arquivo imagem.
 
 :::note
 
-Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 
 :::
 
-- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. This allows you to then call [WP SET ATTRIBUTES](wp-set-attributes.md) with the wk image expression selector to fill the image with a 4D expression. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
+- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. Isto permite que você chame [WP SET ATTRIBUTES](wp-set-attributes.md) com o seletor wk image expression para preencher a imagem com uma expressão 4D. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
 
 By default, the added picture is:
 
@@ -49,7 +49,7 @@ The location, layer (inline, in front/behind text), visibility, and any properti
 **Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. You can determine if a selected object is a picture object by checking the `wk type` attribute:
 
 - **Value = 2**: o objeto selecionado é um objeto imagem.
-- **Value = 0**: The selected object is a range object.
+- **Value = 0**: o objeto selecionado é um objeto intervalo.
 
 ## Exemplo 1
 

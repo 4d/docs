@@ -10,9 +10,9 @@ displayed_sidebar: docs
 
 | Paramètres  | Type   |                             | Description                                                |
 | ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
-| targetObj   | Object | &#8594; | Range or element or 4D Write Pro document                  |
+| targetObj   | Object | &#8594; | Plage ou élément ou document 4D Write Pro                  |
 | formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
-| mode        | Number | &#8594; | Insertion mode                                             |
+| mode        | Number | &#8594; | Mode d'insertion                                           |
 | rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
 | Résultat    | Object | &#8592; | Text range object reprsenting the result of the formula    |
 
@@ -24,7 +24,7 @@ The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary-->
 
 In the *targetObj* parameter, you can pass:
 
-- a range, or
+- une plage, ou
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
 - a 4D Write Pro document.
 
@@ -42,22 +42,22 @@ When you use an object with a formula *name*, this name is displayed in the docu
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used:
 
-| Constante  | Type    | Valeur | Commentaire                            |
-| ---------- | ------- | ------ | -------------------------------------- |
-| wk append  | Integer | 2      | Insert contents at end of target       |
-| wk prepend | Integer | 1      | Insert contents at beginning of target |
-| wk replace | Integer | 0      | Replace target contents                |
+| Constante  | Type    | Valeur | Commentaire                             |
+| ---------- | ------- | ------ | --------------------------------------- |
+| wk append  | Integer | 2      | Insérer le contenu à la fin de la cible |
+| wk prepend | Integer | 1      | Insérer le contenu au début de la cible |
+| wk replace | Integer | 0      | Remplacer le contenu de la cible        |
 
 - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted *formula* is included in the resulting range:
 
-| Constante             | Type    | Valeur | Commentaire                                                              |
-| --------------------- | ------- | ------ | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1      | Inserted contents not included in updated range                          |
-| wk include in range   | Integer | 0      | Inserted contents included in updated range (default) |
+| Constante             | Type    | Valeur | Commentaire                                                                     |
+| --------------------- | ------- | ------ | ------------------------------------------------------------------------------- |
+| wk exclude from range | Integer | 1      | Les contenus insérés ne sont pas inclus dans la plage mise à jour               |
+| wk include in range   | Integer | 0      | Contenu inséré inclus dans la plage mise à jour (par défaut) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.
 
 :::note
 

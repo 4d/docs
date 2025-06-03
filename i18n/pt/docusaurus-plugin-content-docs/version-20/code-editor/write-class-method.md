@@ -245,7 +245,7 @@ No macOS, use a tecla **Command** em vez da tecla **Ctrl** mencionada (Windows).
 | [PgDn]                                                           | Rolar o conteúdo do método, página por página, de cima para baixo (não modifica o ponto de inserção)                                         |
 | [**Introspecção**](#goto-definition)                             |                                                                                                                                              |
 | [Ctrl]+K ou [Alt]+clique duas vezes                              | Mesmo que o comando [**Goto definition**](#goto-definition)                                                                                  |
-| \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token  | Sublinhar o token (elemento linguístico identificado). Clique no token sublinhado = igual ao comando [**Goto definition**](#goto-definition) |
+| \[Ctrl\] (Windows) ou \[Alt\] (macOS)+pairing sobre um token     | Sublinhar o token (elemento linguístico identificado). Clique no token sublinhado = igual ao comando [**Goto definition**](#goto-definition) |
 | [**Procurar e substituir**](#find-and-replace)                   |                                                                                                                                              |
 | [Ctrl]+F                                                         | Find                                                                                                                                         |
 | [Ctrl]+G                                                         | Encontrar o próximo                                                                                                                          |
@@ -505,7 +505,7 @@ Quando o método, classe ou função é validado, 4D verifica:
 
 The Code Editor can only check for obvious syntax errors (misspellings and the like). Não verifica os erros que só ocorrem durante a execução. Erros de execução são capturados por 4D quando o código é executado.
 
-4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. O compilador também oferece uma ajuda indispensável para a detecção de erros. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
+4D tem um depurador integrado (consulte [Depuração](../Debugging/debugger.md)) para lidar com esses erros e corrigi-los. O compilador também oferece uma ajuda indispensável para a detecção de erros. Para obter mais informações sobre o compilador, consulte o capítulo [Compilação](../Project/compiler.md).
 
 ## Dicas de ajuda
 

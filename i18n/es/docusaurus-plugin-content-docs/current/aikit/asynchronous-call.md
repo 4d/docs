@@ -46,7 +46,7 @@ $messages.push({role: "user"; content: "Could you explain me why 42 is a special
 $client.chat.completions.create($messages; { onResponse: Formula(MyChatCompletionsReceiveMethod($1))})
 ```
 
-`$1` will be an instance of [OpenAIChatCompletionsResult](Classes/OpenAIChatCompletionsResult.md), so `MyChatCompletionsReceiveMethod` method could be:
+`$1` será una instancia de [OpenAIChatCompletionsResult](Classes/OpenAIChatCompletionsResult.md), así que el método `MyChatCompletionsReceiveMethod` podría ser:
 
 ```4d
 #DECLARE($result: cs.AIKit.OpenAIChatCompletionsResult)

@@ -34,7 +34,7 @@ In *row*, pass the number of the row whose color you want to get.
 
 **Note:** The command does not take any hidden/visible states of the list box rows into account.
 
-In the *colorType* parameter, you can pass either the lk background color or lk font color constant ("*List Box*" theme) in order to find out the background or font color for the row. If you omit this parameter, the font color is returned.
+In the *colorType* parameter, you can pass either the `lk background color`  or `lk font color`  constant ("*List Box*" theme) in order to find out the background or font color for the row. If you omit this parameter, the font color is returned.
 
 **Warning:** A color assigned to a row is not necessarily displayed in every cell of the row (see example). If conflicting color values are set using properties for list boxes or list box columns, an order of priority is applied. For more information, refer to the *Design Reference* manual.
 

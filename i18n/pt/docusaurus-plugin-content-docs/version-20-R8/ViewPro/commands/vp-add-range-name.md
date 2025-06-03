@@ -30,7 +30,7 @@ Pode passar um objeto com propriedades adicionais para a fórmula nomeada em *op
 | scope       | Number | Âmbito do intervalo. Você pode passar o índice da planilha (a contagem começa em 0) ou usar as seguintes constantes: <li>`vk current sheet``vk</li><li> workbook`O</li>escopo determina se um nome de intervalo é local em uma determinada planilha (*scope*=sheet index ou `vk current sheet`) ou global em toda a pasta de trabalho (*scope*=`vk workbook`). |
 | comment     | Text   | Comentário associado ao intervalo nomeado                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-> - Um intervalo nomeado é, na verdade, uma fórmula nomeada que contém coordenadas. `VP ADD RANGE NAME` facilitates the creation of named ranges, but you can also use the [`VP ADD FORMULA NAME`](vp-add-formula-name.md) method to create named ranges.
+> - Um intervalo nomeado é, na verdade, uma fórmula nomeada que contém coordenadas. `VP ADD RANGE NAME` facilita a criação de intervalos nomeados, mas você também pode usar o método [`VP ADD FORMULA NAME`](vp-add-formula-name.md) para criar intervalos nomeados.
 > - As fórmulas que definem intervalos nomeados podem ser recuperadas com o método [`VP Get formula by name`] (vp-get-formula-by-name.md).
 
 ## Exemplo

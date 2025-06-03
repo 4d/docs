@@ -5,7 +5,7 @@ title: OpenAIImagesResult
 
 # OpenAIImagesResult
 
-## Inherits
+## Hereda
 
 - [OpenAIResult](OpenAIResult.md)
 

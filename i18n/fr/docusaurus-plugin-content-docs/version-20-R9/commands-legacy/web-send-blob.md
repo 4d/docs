@@ -25,50 +25,7 @@ Le type de données contenues dans le BLOB est indiqué par le paramètre *type*
 * *type* \= **Mime/Type** (ex. : “text/html”, “image/tiff”, etc.) : dans ce cas, vous fournissez directement au navigateur le type MIME des données contenues dans le BLOB. Cette solution est celle qui vous offre le plus de latitude. En effet, outre les types standard, vous pouvez passer un type MIME personnalisé pour envoyer des documents propriétaires en Intranet. Il vous suffit pour cela de configurer les navigateurs afin qu’ils reconnaissent le type envoyé et, par exemple, exécutent l’application correspondante. La valeur à passer dans le paramètre *type* est, dans ce cas “application/x-\[NomDuType\]”). Dans les navigateurs des postes clients, vous référencez ce type et lui associez l’action “Exécuter l’application”. La commande **WEB SEND BLOB** vous permet alors d’envoyer des documents de tout type, les clients Intranet ouvrant automatiquement l’application associée.  
 **Note :** Pour plus d'informations sur les types MIME, reportez-vous à la page <http://www.iana.org/assignments/media-types>.
 
-Voici une liste des types MIME les plus courants :
-
-| **Extension** | **Mime/Type**            |
-| ------------- | ------------------------ |
-| .htm          | text/html                |
-| .html         | text/html                |
-| .shtml        | text/html                |
-| .shtm         | text/html                |
-| .css          | text/css                 |
-| .pdf          | application/pdf          |
-| .rtf          | application/rtf          |
-| .ps           | application/postscript   |
-| .eps          | application/postscript   |
-| .hqx          | application/mac-binhex40 |
-| .js           | application/javascript   |
-| .json         | application/json         |
-| .txt          | text/plain               |
-| .text         | text/plain               |
-| .gif          | image/gif                |
-| .jpg          | image/jpeg               |
-| .jpeg         | image/jpeg               |
-| .jpe          | image/jpeg               |
-| .jfif         | image/jpeg               |
-| .pic          | image/pict               |
-| .pict         | image/pict               |
-| .tif          | image/tiff               |
-| .tiff         | image/tiff               |
-| .mpeg         | video/mpeg               |
-| .mpg          | video/mpeg               |
-| .mov          | video/quicktime          |
-| .moov         | video/quicktime          |
-| .aif          | audio/aiff               |
-| .aiff         | audio/aiff               |
-| .wav          | audio/wav                |
-| .ram          | audio/x-pn-realaudio     |
-| .sit          | application/x-stuffit    |
-| .bin          | application/x-stuffit    |
-| .xml          | application/xml          |
-| .z            | application/x-zip        |
-| .zip          | application/x-zip        |
-| .gz           | application/x-gzip       |
-| .tar          | application/x-tar        |
-
-**Note :** La liste des types MIME pris en charge par le serveur HTTP de 4D est stockée dans le fichier "MimeTypes.xml" situé dans le dossier suivant de l'application 4D : *\[Contents\]\\Native components\\HTTPServer.bundle\\Contents\\Resources*. 
+La liste des types MIME et leurs extensions pris en charge par le serveur HTTP de 4D est stockée dans le fichier "MimeTypes.xml" situé dans le dossier "Resources" de l'application 4D.
 
 Les éventuelles références aux variables 4D et balises de type *4DSCRIPT* dans la page sont toujours analysées.
 

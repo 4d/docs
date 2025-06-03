@@ -90,7 +90,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 *Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
-Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Esse mecanismo é descrito na seção [Web Sessions Management (Legacy)] (https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
+Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Esse mecanismo é descrito na seção [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
 
 Quando selecionada, a opção [Reutilizar Contextos Temporários (4D em modo remoto)](#reuse-temporary-contexts) é marcada automaticamente (e bloqueada).
 
@@ -257,7 +257,7 @@ Configure the automatic backup parameters for the request log. Configure the aut
 
 As opções dessa guia são usadas para ativar e configurar os serviços da Web para o projeto 4D, tanto para a publicação (lado do servidor) quanto para a assinatura (lado do cliente).
 
-Para obter mais informações sobre o suporte de serviços da Web em 4D, consulte o capítulo [Publicação e uso de serviços da Web] (https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html).
+Para obter mais informações sobre o suporte de serviços da Web em 4D, consulte o capítulo [Publicação e uso de serviços da Web](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html).
 
 ### Servidor
 
@@ -313,7 +313,7 @@ O botão aciona a seguinte sequência de atualização:
 
 Lembre-se de reiniciar seu projeto após realizar essa atualização.
 
-A próxima etapa é modificar seu código adequadamente. [**Veja esta postagem do blog para saber como proceder**] (https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
+A próxima etapa é modificar seu código adequadamente. [**Veja esta postagem do blog para saber como proceder**](https://blog.4d.com/force-login-becomes-default-for-all-rest-auth/).
 
 ### Qodly Studio
 

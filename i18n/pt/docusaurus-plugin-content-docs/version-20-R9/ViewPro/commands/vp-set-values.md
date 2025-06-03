@@ -18,10 +18,10 @@ title: VP SET VALUES
 
 O comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->atribui uma coleção de valores que começa no intervalo de células especificado<!-- END REF -->.
 
-Em *rangeObj*, passe um intervalo para a célula (criada com [`VP Cell`](vp-cell.md)) cujo valor você deseja especificar. The cell defined in the *rangeObj* is used to determine the starting point.
+Em *rangeObj*, passe um intervalo para a célula (criada com [`VP Cell`](vp-cell.md)) cujo valor você deseja especificar. A célula definida no *rangeObj* é usada para determinar o ponto de partida.
 
-> - If *rangeObj* is not a cell range, only the first cell of the range is used.
-> - If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
+> - Se *rangeObj* não for um intervalo de células, somente a primeira célula do intervalo será usada.
+> - Se *rangeObj* incluir vários intervalos, somente a primeira célula do primeiro intervalo será usada.
 
 O parâmetro *valuesCol* é bidimensional:
 
