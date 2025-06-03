@@ -308,7 +308,7 @@ Este funcionamiento se aplica a todos los tipos de objetos de los formularios. L
 
 Puede repartir los objetos de manera que queden dispuestos con el mismo espacio entre ellos. Para ello, puede distribuir los objetos utilizando las herramientas de distribución de la paleta Herramientas o el Asistente de alineación. Este último le permite alinear y distribuir objetos en una sola operación.
 
-> Puede cambiar el orden de entrada en tiempo de ejecución utilizando los comandos `FORM SET ENTRY ORDER` y `FORM GET ENTRY ORDER`.
+> Cuando la [rejilla magnética](#using-the-magnetic-grid) está activada, también se ofrece una guía visual para su distribución cuando un objeto se mueve manualmente.
 
 Para repartir los objetos con igual espacio:
 
