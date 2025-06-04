@@ -19,7 +19,7 @@ Uma cópia de segurança pode ser iniciada de três maneiras:
  ![](../assets/en/Backup/backup01.png)
  Você pode ver o local da pasta de backup usando o menu pop-up ao lado da área "Backup destination". Essa localização é definida na página de **Backup/Configuração** das Configurações do Banco de Dados.
 
-- Você também pode abrir o [Maintenance and Security Center] (MSC/overview.md) do 4D e exibir a [Backup page] (MSC/backup.md).
+- Você também pode abrir o [Centro de segurança e manutenção](MSC/overview.md) de 4D e exibir a [Página de backup](MSC/backup.md).
 
 O botão **Database properties...** faz com que a página Backup/Configuration (Backup/Configuração) das Structure Settings (Configurações da estrutura) seja exibida.
 
@@ -29,7 +29,7 @@ O botão **Database properties...** faz com que a página Backup/Configuration (
 
 As cópias de segurança programadas são iniciadas automaticamente. Se configuran en la página **Backup/Planificador** de las \*\* Propiedades\*\*.
 
-As cópias de segurança são feitas automaticamente na hora definida nessa página sem nenhum tipo de intervenção do usuário. Para obter mais informações sobre como usar essa caixa de diálogo, consulte [Agendador nas configurações de backup] (settings.md#scheduler).
+As cópias de segurança são feitas automaticamente na hora definida nessa página sem nenhum tipo de intervenção do usuário. Para obter mais informações sobre como usar essa caixa de diálogo, consulte [Agendador nas configurações de backup](settings.md#scheduler).
 
 ## Comando BACKUP
 
