@@ -89,7 +89,7 @@ Para inicializar el array asociado a la lista desplegable, puede:
 
 En este caso, el nombre de la [variable](properties_Object.md#variable-or-expression) asociada al objeto en el formulario debe ser `aCities`. Este código podría colocarse en el método formulario y ejecutarse cuando se ejecute el evento formulario `On Load`.
 
-- Before the object is displayed, load the values of a list into the array using the [`LIST TO ARRAY`](../commands-legacy/list-to-array.md) command. Por ejemplo:
+- Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [`LIST TO ARRAY`](../commands-legacy/list-to-array.md). Por ejemplo:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -103,13 +103,13 @@ Si necesita guardar la elección del usuario en un campo, deberá utilizar una s
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) //new record
-          aCities:=3 //display a default value
-       Else //existing record, display stored value
+       If(Record number([People])<0) //nuevo registro
+          aCities:=3 //mostrar un valor por defecto
+       Else //registro existente, mostrar valor almacenado
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) //user modified selection
-       City:=aCities{aCities} //field gets new value
+    :(Form event=On Clicked) //el usuario modifica la selección
+       City:=aCities{aCities} //el campo obtiene un nuevo valor
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
