@@ -468,7 +468,7 @@ No parâmetro opcional *settings*, você pode passar um objeto que contenha opç
 
 :::info
 
-Quando você chama a função `.get()` **sem** parâmetro *configurações*, uma solicitação para valores de atributos é enviada diretamente para o servidor (o [cache ORDA](. /ORDA/client-server-optimization.md#orda-cache) não é usado). Por outro lado, quando você chama o `. função et()` **com** um `context` passado no parâmetro *settings*, valores de atributo são recuperados do cache ORDA correspondente ao contexto. Nesse caso, pode ser aconselhável chamar [`reload()`] (EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
+Quando você chama a função `.get()` **sem** parâmetro *configurações*, uma solicitação para valores de atributos é enviada diretamente para o servidor (o [cache ORDA](. /ORDA/client-server-optimization.md#orda-cache) não é usado). Por outro lado, quando você chama o `. função et()` **com** um `context` passado no parâmetro *settings*, valores de atributo são recuperados do cache ORDA correspondente ao contexto. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
 
 :::
 
