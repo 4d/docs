@@ -26,50 +26,7 @@ El tipo de datos contenidos en el BLOB es indicado por *tipo*. Este parámetro p
     
 **Nota:** para mayor información sobre los tipos MIME, consulte la página: <http://www.iana.org/assignments/media-types>.
 
-Esta es una lista de los tipos MIME más comunes:
-
-| **Extensión** | **Mime/Tipo**            |
-| ------------- | ------------------------ |
-| .htm          | text/html                |
-| .html         | text/html                |
-| .shtml        | text/html                |
-| .shtm         | text/html                |
-| .css          | text/css                 |
-| .pdf          | application/pdf          |
-| .rtf          | application/rtf          |
-| .ps           | application/postscript   |
-| .eps          | application/postscript   |
-| .hqx          | application/mac-binhex40 |
-| .js           | application/javascript   |
-| .json         | application/json         |
-| .txt          | text/plain               |
-| .text         | text/plain               |
-| .gif          | image/gif                |
-| .jpg          | image/jpeg               |
-| .jpeg         | image/jpeg               |
-| .jpe          | image/jpeg               |
-| .jfif         | image/jpeg               |
-| .pic          | image/pict               |
-| .pict         | image/pict               |
-| .tif          | image/tiff               |
-| .tiff         | image/tiff               |
-| .mpeg         | video/mpeg               |
-| .mpg          | video/mpeg               |
-| .mov          | video/quicktime          |
-| .moov         | video/quicktime          |
-| .aif          | audio/aiff               |
-| .aiff         | audio/aiff               |
-| .wav          | audio/wav                |
-| .ram          | audio/x-pn-realaudio     |
-| .sit          | application/x-stuffit    |
-| .bin          | application/x-stuffit    |
-| .xml          | application/xml          |
-| .z            | application/x-zip        |
-| .zip          | application/x-zip        |
-| .gz           | application/x-gzip       |
-| .tar          | application/x-tar        |
-
-**Nota:** la lista de tipos MIME soportada por el servidor 4D HTTP se guarda en el archivo "MimeTypes.xml" que se encuentra en la siguiente carpta de la aplicación 4D: *\[Contents\]\\Native components\\HTTPServer.bundle\\Contents\\Resources*.   
+La lista de tipos MIME y sus extensiones de archivo soportados por el servidor 4D HTTP se guarda en el archivo "MimeTypes.xml" que se encuentra en la  carpeta "Resources" de la aplicación 4D.
   
 Las referencias a las variables 4D y etiquetas de tipo *4DSCRIPT* en la página siempre se analizan.
 
