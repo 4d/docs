@@ -31,7 +31,7 @@ Pode passar um objeto com propriedades adicionais para a fórmula nomeada em *op
 | comment     | Text   | Comentário associado ao intervalo nomeado                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 > - Um intervalo nomeado é, na verdade, uma fórmula nomeada que contém coordenadas. `VP ADD RANGE NAME` facilita a criação de intervalos nomeados, mas você também pode usar o método [`VP ADD FORMULA NAME`](vp-add-formula-name.md) para criar intervalos nomeados.
-> - As fórmulas que definem intervalos nomeados podem ser recuperadas com o método [`VP Get formula by name`] (vp-get-formula-by-name.md).
+> - As fórmulas que definem intervalos nomeados podem ser recuperadas com o método [`VP Get formula by name`](vp-get-formula-by-name.md).
 
 ## Exemplo
 
