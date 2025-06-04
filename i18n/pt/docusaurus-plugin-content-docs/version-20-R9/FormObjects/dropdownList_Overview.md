@@ -40,7 +40,7 @@ Se o objeto contiver outras propriedades, estas são ignoradas.
 
 Objetos lista drop down são iniciados ao carregar uma lista de valores em um array. Pode fazer isso de várias maneiras:
 
-- Insira uma lista de valores padrão nas propriedades do objeto selecionando `\<Static List>` no tema [Data Source] (properties_DataSource.md) da Property List. Os valores por defeito são carregados automaticamente para um objeto.
+- Insira uma lista de valores padrão nas propriedades do objeto selecionando `\<Static List>` no tema [Fonte de dados](properties_DataSource.md) da Property List. Os valores por defeito são carregados automaticamente para um objeto.
 
 - Executar código que cria o objeto e as suas propriedades. Por exemplo, se "myList" for a [variable](properties_Object.md#variable-or-expression) associada à lista suspensa, você poderá escrever no evento de formulário [On Load](Events/onLoad.md):
 
@@ -68,11 +68,11 @@ Form.myDrop.currentValue //"oranges" Form.myDrop.index //3
 
 ### Usar um array
 
-Uma [matriz] (Concepts/arrays.md) é uma lista de valores na memória que é referenciada pelo nome da matriz. Uma lista drop down exibe um array como lista de valores quando clicar nela.
+Uma [array](Concepts/arrays.md) é uma lista de valores na memória que é referenciada pelo nome do array. Uma lista drop down exibe um array como lista de valores quando clicar nela.
 
 Para inicializar o array associado à lista pendente, pode:
 
-- Insira uma lista de valores padrão nas propriedades do objeto selecionando `\<Static List>` no tema [Data Source] (properties_DataSource.md) da Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
+- Insira uma lista de valores padrão nas propriedades do objeto selecionando `\<Static List>` no tema [Fonte de dados](properties_DataSource.md) da Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
 
 - Antes que o objeto seja exibido, execute um código que atribua valores aos elementos do array. Por exemplo:
 
@@ -86,7 +86,7 @@ Para inicializar o array associado à lista pendente, pode:
   $aCities{6}:="Green Bay" 
 ```
 
-Nesse caso, o nome da [variável] (properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Esse código pode ser colocado no método do formulário e ser executado quando o evento `On Load` do formulário for executado.
+Nesse caso, o nome da [variável](properties_Object.md#variable-or-expression) associada ao objeto no formulário deve ser `aCities`. Esse código pode ser colocado no método do formulário e ser executado quando o evento `On Load` do formulário for executado.
 
 - Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [`LIST TO ARRAY`](../commands-legacy/list-to-array.md). Por exemplo:
 
@@ -124,7 +124,7 @@ Se quiser usar uma lista suspensa para gerenciar os valores de uma área de entr
 
 Por exemplo, no caso de um campo "Cor" que só possa conter os valores "White", "Blue", "Green" ou "Red", agora é possível criar uma lista que contenha esses valores e associe-os a um objeto emergente menu que faça referência ao campo "Color". 4D então se encarrega automaticamente de gerenciar o input e exibir os valores atuais no formulário.
 
-> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se quiser exibir conteúdos hierárquicos, você precisará usar uma [lista de opções hierárquicas] (#using-a-hierarchical-choice-list).
+> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se quiser exibir conteúdos hierárquicos, você precisará usar uma [lista de opções hierárquicas](#using-a-hierarchical-choice-list).
 
 Para associar uma lista suspensa a um campo ou variável, digite o nome do campo ou da variável diretamente como o campo [Variable or Expression](properties_Object.md#variable-or-expression) da lista suspensa na Lista de propriedades.
 
@@ -152,9 +152,9 @@ Pode gerenciar as listas suspensas hierárquicas usando os comandos **listas hie
 
 ### Usar uma ação padrão
 
-Você pode criar automaticamente uma lista suspensa usando uma [ação padrão] (properties_Action.md#standard-action). Esta funcionalidade é suportada nos seguintes contextos:
+Você pode criar automaticamente uma lista suspensa usando uma [ação padrão](properties_Action.md#standard-action). Esta funcionalidade é suportada nos seguintes contextos:
 
-- Uso da ação padrão `gotoPage`. Nesse caso, o 4D exibirá automaticamente a [página do formulário] (FormEditor/forms.md#form-pages) que corresponde ao número do item selecionado. Por exemplo, se o usuário selecionar o terceiro item, 4D exibirá a terceira página do formulário atual (se existir). No tempo de execução, por padrão a lista suspensa exibe os números de página (1, 2...).
+- Uso da ação padrão `gotoPage`. Nesse caso, o 4D exibirá automaticamente a [página do formulário](FormEditor/forms.md#form-pages) que corresponde ao número do item selecionado. Por exemplo, se o usuário selecionar o terceiro item, 4D exibirá a terceira página do formulário atual (se existir). No tempo de execução, por padrão a lista suspensa exibe os números de página (1, 2...).
 
 - Uso de uma ação padrão que exibe uma sub-lista de itens, por exemplo, `backgroundColor`. Essa funcionalidade exige que:
  - uma área de texto com estilo ([4D Write Pro area](writeProArea_overview.md) ou [input](input_overview.md) com a propriedade [multistyle](properties_Text.md#multi-style)) está presente no formulário como o alvo da ação padrão.
