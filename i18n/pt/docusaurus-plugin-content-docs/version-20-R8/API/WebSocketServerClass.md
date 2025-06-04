@@ -3,7 +3,7 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
-A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Quando o servidor 4D WebSocket estiver ativo, você poderá abrir e usar conexões WebSocket entre o 4D e os clientes usando a classe [`WebSocketConnection`] (WebSocketConnectionClass.md).
+A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Quando o servidor 4D WebSocket estiver ativo, você poderá abrir e usar conexões WebSocket entre o 4D e os clientes usando a classe [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 <details><summary>História</summary>
 
@@ -15,13 +15,13 @@ A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket 
 
 :::note Sobre os servidores WebSocket
 
-O protocolo WebSocket proporciona um canal de comunicação full-duplex entre um servidor WebSocket e um cliente (por exemplo, um navegador Web). Para obter mais informações sobre servidores WebSocket, leia [esta página na Wikipedia] (https://en.wikipedia.org/wiki/WebSocket).
+O protocolo WebSocket proporciona um canal de comunicação full-duplex entre um servidor WebSocket e um cliente (por exemplo, um navegador Web). Para obter mais informações sobre servidores WebSocket, leia [esta página na Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
 
 :::
 
 :::info Veja também
 
-Consulte também [esta postagem no blog] (https://blog.4d.com/new-built-in-websocket-server/) sobre o servidor 4D WebSocket.
+Consulte também [esta postagem no blog](https://blog.4d.com/new-built-in-websocket-server/) sobre o servidor 4D WebSocket.
 
 :::
 
@@ -37,9 +37,9 @@ Além disso, terá de criar duas classes de utilizador que conterão funções d
 - uma classe de usuário para tratar as ligações ao servidor,
 - uma classe de usuário para tratar as mensagens.
 
-Você deve [criar o servidor WebSocket] (#4dwebsocketservernew) em um [worker](../Develop/processes.md#worker-processes) para manter a conexão ativa.
+Você deve [criar o servidor WebSocket](#4dwebsocketservernew) em um [worker](../Develop/processes.md#worker-processes) para manter a conexão ativa.
 
-O [4D Web Server] (WebServerClass.md) deve ser iniciado.
+O [4D Web Server](WebServerClass.md) deve ser iniciado.
 
 ### Exemplo
 
@@ -82,7 +82,7 @@ Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
 
 :::tip JS do lado do cliente
 
-Consulte [esta publicação no blog] (https://blog.4d.com/websocket-server/) para ver um exemplo de código Javascript do lado do cliente que manipula uma conexão WebSocket.
+Consulte [esta publicação no blog](https://blog.4d.com/websocket-server/) para ver um exemplo de código Javascript do lado do cliente que manipula uma conexão WebSocket.
 
 :::
 
@@ -115,7 +115,7 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 
 A função `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->cria e inicia um servidor WebSocket que usará os retornos de chamada especificados *WSSHandler* e (opcionalmente) *opções*  e retorna um objeto `4D.WebSocketServer`<!-- END REF -->.
 
-A chamada dessa função requer que o [4D Web Server] (WebServerClass.md) seja iniciado. O **host** e a **port** do servidor WebSocket são os mesmos que o host e a porta do 4D Web Server.
+A chamada dessa função requer que o [4D Web Server](WebServerClass.md) seja iniciado. O **host** e a **port** do servidor WebSocket são os mesmos que o host e a porta do 4D Web Server.
 
 ### Parâmetro *WSSHandler*
 
@@ -319,7 +319,7 @@ No parâmetro opcional *options*, passe um objeto que contenha as seguintes prop
 
 #### Descrição
 
-A propriedade `.connections` contém <!-- REF #WebSocketServerClass.connections.Summary -->todas as conexões atuais tratadas pelo servidor WebSocket<!-- END REF -->. Cada elemento da coleção é um objeto [`WebSocketConnection`] (WebSocketConnectionClass.md).
+A propriedade `.connections` contém <!-- REF #WebSocketServerClass.connections.Summary -->todas as conexões atuais tratadas pelo servidor WebSocket<!-- END REF -->. Cada elemento da coleção é um objeto [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 Quando uma conexão é encerrada, seu [`status`](WebSocketConnectionClass.md#status) muda para "Fechado" e ele é removido desta coleção.
 
