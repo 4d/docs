@@ -1,14 +1,12 @@
 ---
-id: data-events
-title: Data Events
+id: orda-events
+title: ORDA Events
 ---
 
 
-Data events are ORDA functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
 
 You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
-
-Events can prevent "illegal" operations on the entities. They can also trigger business logic before, during, or after executing actions on data such as instantiating, saving, or dropping entities. For example, the `validateSave()` event can check the validity of data entered in the entity.
 
 
 
@@ -27,14 +25,13 @@ ORDA events in the datastore are equivalent to triggers in the 4D database. Howe
 
 A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class). 
 
-It can be defined at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute. For the same event, you can define different functions for different attributes. 
+It can be set at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute. 
+
+For the same event, you can define different functions for different attributes. 
 
 You can also define the same event at both attribute and entity levels. The attribute event is called first and then the entity event.
 
 
-### Stopping operation
-
-Some events can stop the undergoing action by returning an error. Other events can return errors but do not stop the action. 
 
 ### Execution location in remote configurations
 
@@ -48,24 +45,19 @@ In REST connections (i.e. Qodly applications, [REST API requests](../REST/REST_r
 
 ### Summary table
 
-The following table lists all available ORDA events along with their rules. 
+The following table lists ORDA events along with their rules. 
 
-| Event  | Level    | Function name   | Can stop action by returning an error|  (C/S) Executed on |
-| :--------------- |:--------------- | :----- | :-----: | :-----: |
-| Instantiate entity  | Entity      |   `constructor()` | No |   client | 
-| Attribute touched  | Attribute    |    `event touched <attrName>()` | No | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
-|   | Entity   |   `event touched()`  | No | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
-| Before saving an entity | Attribute          |    `event validateSave <attrName>()` | Yes | server | 
-|  | Entity          |    `event validateSave()`  | Yes | server | 
-| When saving an entity | Attribute          |    `event saving <attrName>()`| Yes |  server | 
-|  | Entity          |    `event saving()`  | Yes | server | 
-| After saving an entity | Entity          |    `event afterSave()`  | No |  server | 
-| Before dropping an entity | Attribute          |    `event validateDrop <attrName>()`| Yes |  server | 
-|  | Entity          |    `event validateDrop()`  | Yes |  server |
-| When dropping an entity | Attribute          |    `event dropping <attrName>()`| Yes | server | 
-|  | Entity          |    `event dropping()`  | Yes | server |
-| After dropping an entity | Entity          |    `event afterDrop()`  | No | server | 
+| Event  | Level    | Function name   |  (C/S) Executed on |
+| :--------------- |:--------------- | :----- | :-----: |
+| Entity instantiation  | Entity      |   [`constructor()`]() |   client | 
+| Attribute touched  | Attribute    |    `event touched <attrName>()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
+|   | Entity   |   `event touched()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
 
+:::note
+
+The [`constructor()`] function is not an event but is always called when a new entity is instantiated. 
+
+:::
 
 ## *event* parameter
 
@@ -84,45 +76,14 @@ Event functions (except `constructor()`) accept a single *event* object as param
 
 ## Event function description
 
-### `Class constructor`
+
+### `Function event touched`
 
 #### Syntax
 
 ```4d
-Class constructor()
-// code
-```
-
-This event is triggered just after a new entity is created, using for example [`dataClass.new()`](../API/DataClassClass.md#new), [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) or the [REST API](../REST/$method.md#methodupdate). It is useful to set initial values for entity instantiation, for example a custom ID.
-
-This event can only be set at the entity level. 
-
-This event function does not receive or return parameters. However, you can use it to set attribute values using [`This`](../commands/this.md).
-
-:::note
-
-In client/server configurations, keep in mind that this event is triggered when an entity is created in memory **on the server**. When the client attempts to save the new entity, an update request is sent to the server and an entity is created in memory on the server thus triggering the event.
-
-:::
-
-#### Example
-
-```4d
-
- //cs.BookingEntity class
-Class constructor() 
-
-    This.departureDate:=Current date
-    This.arrivalDate:=Add to date(Current date; 0; 0; 2)
-
-```
-
-### `event touched`
-
-#### Syntax
-
-```4d
-Function event touched($event : Object)<br/>Function event touched <attributeName>($event : Object)
+Function event touched($event : Object)
+Function event touched <attributeName>($event : Object)
 // code
 ```
 

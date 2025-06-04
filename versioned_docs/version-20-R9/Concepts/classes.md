@@ -334,13 +334,13 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
  End if
 ```
 
-### `Class Constructor`
+### `Class constructor`
 
 #### Syntax
 
 ```4d
 // Class: MyClass
-{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
+{shared} {{session} singleton} Class constructor({$parameterName : type; ...})
 // code
 ```
 
@@ -368,7 +368,7 @@ Using the `singleton` keyword creates a **singleton**, used to create a single i
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-Class Constructor ($name : Text ; $age : Integer)
+Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
 ```
@@ -434,7 +434,7 @@ If you omit the type in the declaration line, the property is created as a varia
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` or `Class Constructor` block.
+The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
 
 :::
 
@@ -702,11 +702,11 @@ The [`.isShared`](../API/ClassClass.md#isshared) property of Class objects allow
 
 ### Creating a shared class
 
-To create a shared class, add the `shared` keyword before the [Class Constructor](#class-constructor). For example:
+To create a shared class, add the `shared` keyword before the [Class constructor](#class-constructor). For example:
 
 ```4d
 	//shared class: Person
-shared Class Constructor($firstname : Text; $lastname : Text)
+shared Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -729,7 +729,7 @@ To create a shared function, add the `shared` keyword before the [Function](#fun
 
 ```4d
 	//shared class Foo
-shared Class Constructor()
+shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
@@ -778,7 +778,7 @@ Once instantiated, a singleton class (and its singleton) exists as long as a ref
 
 You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
 
-- To declare a (process) singleton class, write `singleton Class Constructor()`.
+- To declare a (process) singleton class, write `singleton Class constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
 - To declare a session singleton class, write `session singleton Class constructor()`.
 
@@ -806,7 +806,7 @@ The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of
 
 ```4d
 	//class: ProcessTag
-singleton Class Constructor()
+singleton Class constructor()
  This.tag:=Random
 ```
 

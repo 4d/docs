@@ -302,6 +302,65 @@ When compiled, data model class functions are executed:
 If your project is designed to run in client/server, make sure your data model class function code is thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).
 
 
+## `Class constructor`
+
+#### Syntax
+
+```4d
+// Entity class 
+Class constructor()
+// code
+```
+:::note
+
+There is no ending keyword for class constructor function code. The 4D language automatically detects the end of a function's code by the next `Function` keyword or the end of the class file. 
+
+:::
+
+An ORDA class constructor function is triggered just after a new entity is created in memory, [whatever the way it is created]. It is useful to set initial values for entity instantiation, for example a custom ID.
+
+This function can only be set at the [entity level](#entity-class). There can only be one constructor function in an entity class (otherwise an error is returned). 
+
+This ORDA class constructor function does not receive or return parameters. However, you can use it to set attribute values using [`This`](../commands/this.md).
+
+:::note
+
+An ORDA class constructor function is similar to a [user class constructor function](../Concepts/classes.md#class-constructor), with the following differences:
+
+- you cannot pass parameters to the constructor,
+- you cannot use `shared`, `session`, or `singleton` keywords,
+- you cannot call the [`Super`](../Concepts/classes.md#super) keyword within the function.
+
+:::
+
+#### Commands that trigger the Class constructor functions
+
+
+(for example [`dataClass.new()`]
+(../API/DataClassClass.md#new), [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) or the [REST API](../REST/$method.md#methodupdate)
+
+#### Remote configurations
+
+When using a remote configurations, you need to pay attention to the following principles:
+
+- In **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
+
+:::
+
+
+#### Example
+
+```4d
+
+ //cs.BookingEntity class
+Class constructor() 
+
+    This.departureDate:=Current date
+    This.arrivalDate:=Add to date(Current date; 0; 0; 2)
+
+```
+
+
 ## Computed attributes
 
 

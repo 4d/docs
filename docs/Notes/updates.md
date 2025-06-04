@@ -7,7 +7,7 @@ title: Release Notes
 
 #### Highlights
 
-- Handling of [ORDA events on data](../ORDA/data-events.md).  
+- Handling of [ORDA events on data](../ORDA/orda-events.md).  
 
 
 ## 4D 20 R9
