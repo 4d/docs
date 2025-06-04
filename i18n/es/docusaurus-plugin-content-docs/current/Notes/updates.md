@@ -5,18 +5,18 @@ title: Notas del lanzamiento
 
 ## 4D 20 R10
 
-Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R10/), the blog post that lists all new features and enhancements in 4D 20 R10.
+Lea [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R10/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R10.
 
 #### Lo más destacado
 
 - Nueva opción `connectionTimeout` en el parámetro [`options`](../API/TCPConnectionClass.md#options-parameter) de la función [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
-- Los UUIDs en 4D ahora se generan en la **versión 7**. In previous 4D releases, they were generated in version 4.
+- Los UUIDs en 4D ahora se generan en la **versión 7**. En versiones anteriores 4D, se generaron en la versión 4.
 - Lenguaje 4D:
-    - For consistency, [`Create entity selection`](../commands/create-entity-selection.md) and [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) commands have been moved from the ["4D Environment"](../commands/theme/4D_Environment.md) to the ["Selection"](../commands/theme/Selection.md) themes.
+    - Por coherencia, los comandos [`Create entity selection`](../commands/create-entity-selection.md) y [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) han sido movidos del tema ["4D Environment"](../commands/theme/4D_Environment.md) al ["Selection"](../commands/theme/Selection.md).
 
 #### Cambios de comportamiento
 
-- On Windows, current printer fonts intended only for printing (i.e. not usable on screen) are no longer loaded by 4D at startup.
+- En Windows, las fuentes de impresora actuales destinadas únicamente a la impresión (es decir, no se pueden utilizar en pantalla) ya no son cargadas al inicio por 4D.
 - The support for *MeCab* library (used for sorting/searching in Japanese language) has been removed. To allow to use ICU, 4D will automatically reindex every Alpha, Text or Object field on first launch with 4D 20 R10 or newer.
 
 ## 4D 20 R9
