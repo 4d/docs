@@ -22,7 +22,7 @@ Se a propriedade [Sortable](FormObjects/properties_Action.md#sortable) não esti
 
 ### 4D View Pro
 
-Esse evento é gerado quando o usuário clica em um cabeçalho de coluna ou linha em um documento 4D View Pro. Nesse contexto, o [objeto evento] (overview.md#event-object) retornado pelo comando `FORM Event` contém:
+Esse evento é gerado quando o usuário clica em um cabeçalho de coluna ou linha em um documento 4D View Pro. Nesse contexto, o [objeto evento](overview.md#event-object) retornado pelo comando `FORM Event` contém:
 
 | Propriedade | Tipo          | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
