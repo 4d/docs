@@ -14,7 +14,7 @@ O editor de formulários apresenta cada formulário JSON na sua própria janela,
 
 Você pode mostrar ou ocultar vários elementos da interface na página atual do formulário:
 
-- **Formulário herdado**: Objetos de formulário herdados (se houver um [formulário herdado] (forms.md#inherited-forms)).
+- **Formulário herdado**: Objetos de formulário herdados (se houver um [formulário herdado](forms.md#inherited-forms)).
 - **Página 0**: objetos de [página 0](forms.md#form-pages). Esta opção permite que você distinga entre os objetos na página atual do formulário e aqueles na página 0.
 - **Papel**: bordas da página de impressão, mostradas como linhas cinzas. Este elemento só pode ser exibido por padrão em formulários do tipo ["para impressão"](properties_FormProperties.md#form-type).
 - **Réguas**: réguas da janela do editor de formulários.
@@ -41,7 +41,7 @@ Você pode exibir ou ocultar elementos a qualquer momento na janela atual do edi
 
 ### Regras
 
-As réguas na lateral e na parte inferior o ajudam a posicionar os objetos no formulário. Elas podem ser [exibidas ou ocultas] (#display-options).
+As réguas na lateral e na parte inferior o ajudam a posicionar os objetos no formulário. Elas podem ser [exibidas ou ocultas](#display-options).
 
 Selecione **Ruler definition...** no menu **Form** para alterar as unidades de medida de modo que o formulário exiba polegadas, centímetros ou pixels.
 
@@ -84,7 +84,7 @@ A barra de objeto contém todos os objetos ativos e inativos que podem ser usado
 | ![](../assets/en/FormEditor/combo.png)     | [Caixa de Combo](FormObjects/comboBox_overview.md) / [Lista Dropdown](FormObjects/dropdownList_Overview.md) / [Menu de Pop-up de imagens](FormObjects/picturePopupMenu_overview.md)                                                                       |   P   |
 | ![](../assets/en/FormEditor/button.png)    | [Button](FormObjects/button_overview.md) / [Picture Button](FormObjects/pictureButton_overview.md) / [Button Grid](FormObjects/buttonGrid_overview.md)                                                                                                    |   B   |
 | ![](../assets/en/FormEditor/radio.png)     | [Botão de Rádio](FormObjects/radio_overview.md)                                                                                                                                                                                                           |   R   |
-| ![](../assets/en/FormEditor/checkbox.png)  | [Caixa de seleção] (FormObjects/checkbox_overview.md)                                                                                         |   C   |
+| ![](../assets/en/FormEditor/checkbox.png)  | [Caixa de seleção](FormObjects/checkbox_overview.md)                                                                                                                                                                                                      |   C   |
 | ![](../assets/en/FormEditor/indicator.png) | [Progress Indicator](FormObjects/progressIndicator.md) / [Ruler](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)                                                                                            |   I   |
 | ![](../assets/en/FormEditor/rectangle.png) | [Rectangle](FormObjects/shapes_overview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval)                                                                                                         |   S   |
 | ![](../assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Controle de guia](FormObjects/tabControl.md)                                                                                                                                                                      |   D   |
@@ -213,7 +213,7 @@ A caixa de diálogo "Duplicate Many" é exibida quando você seleciona um ou mai
 
 Ao começar a arrastar o objeto selecionado, seus manipuladores desaparecem. 4D exibe marcadores que mostram a localização dos limites do objeto nas réguas para você poder posicionar o objeto exatamente onde deseja. Tenha cuidado para não arrastar uma alça. Arrastar uma alça redimensiona o objeto. Você pode pressionar a tecla **Shift** para executar o movimento com uma restrição.
 
-Quando a [Magnetic Grid] (#using-the-magnetic-grid) está ativada, os objetos são movidos em etapas, indicando locais perceptíveis.
+Quando a [Magnetic Grid](#using-the-magnetic-grid) está ativada, os objetos são movidos em etapas, indicando locais perceptíveis.
 
 Para mover um objeto um píxel de cada vez:
 
@@ -281,7 +281,7 @@ Para exibir essa caixa de diálogo, selecione os objetos que deseja alinhar e es
 
 Você pode visualizar os resultados do alinhamento clicando no botão **Preview**. Os objetos são então alinhados no editor de formulários, mas como a caixa de diálogo não desaparece, ainda é possível cancelar ou aplicar o alinhamento.
 
-> Esta caixa de diálogo permite-lhe alinhar e distribuir objetos numa única operação. Para obter mais informações sobre como distribuir objetos, consulte [Distribuir objetos] (#distributing-objects).
+> Esta caixa de diálogo permite-lhe alinhar e distribuir objetos numa única operação. Para obter mais informações sobre como distribuir objetos, consulte [Distribuir objetos](#distributing-objects).
 
 #### Utilização da Rede Magnética
 
@@ -308,7 +308,7 @@ Esta operação aplica-se a todos os tipos de objetos dos formulários. A Magnet
 
 Você pode distribuir os objetos de modo que eles fiquem dispostos com um espaço igual entre eles. Para fazer isso, você pode distribuir objetos usando as ferramentas Distribuir na paleta Ferramentas ou o Assistente de alinhamento. Este último permite-lhe alinhar e distribuir objetos numa única operação.
 
-> Quando a [Magnetic Grid] (#using-the-magnetic-grid) está ativada, um guia visual também é fornecido para distribuição quando um objeto é movido manualmente.
+> Quando a [grade magnética](#using-the-magnetic-grid) estiver ligada, um guia visual também é fornecido para distribuição quando um objeto é movido manualmente.
 
 Para distribuir objetos com igual espaçamento:
 
@@ -416,7 +416,7 @@ Por defeito, todos os objetos que suportam a propriedade focusable são incluíd
 
 O editor de formulário permite que você visualize seus formulários com ou sem valores CSS aplicados.
 
-Quando as [folhas de estilo] (createStylesheet.md) forem definidas, os formulários (inclusive os formulários herdados e os subformulários) são abertos no modo CSS Preview do seu sistema operacional por padrão.
+Quando as [folhas de estilo](createStylesheet.md) forem definidas, os formulários (inclusive os formulários herdados e os subformulários) são abertos no modo CSS Preview do seu sistema operacional por padrão.
 
 ### Selecção do modo de pré-visualização do CSS
 
@@ -434,7 +434,7 @@ Seleccione um dos seguintes modos de pré-visualização a partir do menu:
 
 > Se um tamanho de fonte muito grande para um objeto for definido em uma folha de estilo ou JSON, o objeto será automaticamente renderizado para acomodar a fonte, mas o tamanho do objeto não será alterado.
 
-O modo de visualização CSS reflete a ordem de prioridade aplicada às folhas de estilo versus atributos JSON, conforme definido na seção [JSON vs. Folha de estilo] (stylesheets.html#json-vs-style-sheet).
+O modo de visualização CSS reflete a ordem de prioridade aplicada às folhas de estilo versus atributos JSON, conforme definido na seção [JSON vs. Folha de estilo](stylesheets.html#json-vs-style-sheet).
 
 Quando o modo de pré-visualização CSS é selecionado, os objetos são exibidos automaticamente com os estilos definidos em uma folha de estilo (se houver).
 
@@ -681,7 +681,7 @@ Uma vez criadas as vistas, pode utilizar a paleta Vista para:
 
 Um objeto só pode pertencer a uma única vista.
 
-Para criar um objeto em outra visualização, basta selecionar a visualização na paleta Visualizar (antes de criar o objeto) clicando em seu nome (um ícone Editar é exibido para a [Visualização atual] (#antes-de-começar) e o nome aparece em negrito):
+Para criar um objeto em outra visualização, basta selecionar a visualização na paleta Visualizar (antes de criar o objeto) clicando em seu nome (um ícone Editar é exibido para a [Visualização atual](#before-you-begin) e o nome aparece em negrito):
 
 ![](../assets/en/FormEditor/addObject.png)
 
@@ -711,7 +711,7 @@ Você também pode mover um objeto para outra visualização por meio do menu de
 
 ![](../assets/en/FormEditor/moveObject2.png)
 
-> A [Visualização atual] (#antes-de-comecar) é mostrada em negrito.
+> A [Visualização atual](#before-you-begin) é mostrada em negrito.
 
 #### Seleccionar todos os objectos de uma vista
 
@@ -737,7 +737,7 @@ Para ocultar uma exibição, clique no ícone *Mostrar/Ocultar*. Em seguida, é 
 
 ![](../assets/en/FormEditor/hidden.png)
 
-> A [Visualização atual] (#before-you-begin) não pode ser ocultada.
+> A [Visualização atual](#before-you-begin) não pode ser ocultada.
 
 Para mostrar uma visualização oculta, simplesmente selecione-a ou clique no ícone *Mostrar/Ocultar* para essa exibição.
 
