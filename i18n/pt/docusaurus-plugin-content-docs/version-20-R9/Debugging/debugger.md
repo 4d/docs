@@ -17,7 +17,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 
 Há várias formas de exibir o depurador:
 
-- Clicar no botão **Trace** na [janela Syntax Error] (basics.md#syntax-error-window)
+- Clicar no botão **Trace** na [janela Syntax Error](basics.md#syntax-error-window)
 - Usando o comando [`TRACE`](../commands-legacy/trace.md)
 - Clicando no botão **Depurar** na janela Executar método ou selecionando o botão **Executar e depurar...** no Editor de Código
 - Usando **Alt+Shift+Botão Direito** (Windows) ou **Ctrl+Option+Cmd+Click** (macOS) enquanto um método está sendo executado, em seguida, selecionando o processo para rastrear no menu pop-up:
@@ -136,7 +136,7 @@ O painel de expressão: **Watch Pane** exibe informações gerais úteis sobre o
 
 A coluna **Expressão** exibe os nomes dos objetos e das expressões. A coluna **Value** exibe seus valores correspondentes atuais. Clicar em qualquer valor no lado direito do painel permite-lhe modificar o valor do objeto, se tal for permitido para esse objeto.
 
-A qualquer momento, você pode arrastar e soltar temas, sublistas de temas (se houver) e itens de temas para o [Custom Watch Pane] (#custom-watch-pane).
+A qualquer momento, você pode arrastar e soltar temas, sublistas de temas (se houver) e itens de temas para a [Janela de avaliação](#custom-watch-pane).
 
 ### Lista de expressões
 
@@ -144,7 +144,7 @@ A qualquer momento, você pode arrastar e soltar temas, sublistas de temas (se h
 
 This theme lets you keep track of the values of expressions:
 
-- usado na linha de código a ser executada (aquela marcada com o contador de programas - a seta amarela no [Painel Código-fonte] (#painel código-fonte)),
+- usado na linha de código a ser executada (aquela marcada com o contador de programas - a seta amarela na [Janela de avaliação de código](#source-code-pane)),
 - utilizado na linha de código anterior
 
 Como a linha de código anterior é a que acabou de ser executada antes, este tema mostra os objetos ou expressões da linha atual antes e depois da execução da linha.  Digamos que executa o seguinte método:
@@ -389,7 +389,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 O painel Código-fonte mostra o código-fonte do método ou função que está sendo rastreado no momento.
 
-Essa área também permite que você adicione ou remova [**pontos de interrupção**] (breakpoints.md).
+Essa área também permite que você adicione ou remova [**pontos de interrupção**](breakpoints.md).
 
 ### Prototype
 
@@ -412,7 +412,7 @@ Isto também funciona com as selecções:
 
 ### Adição de expressões ao painel de controle personalizado
 
-Você pode copiar qualquer expressão selecionada do painel Código-fonte para o [painel de observação personalizada] (#painel de observação personalizada).
+Você pode copiar qualquer expressão selecionada do painel Código-fonte para o [painel de observação personalizada](#custom-watch-pane).
 
 1. No painel de código fonte, selecione a expressão a avaliar
 2. Faça uma das seguintes opções:
