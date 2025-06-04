@@ -126,13 +126,13 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 
 Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
-| Valor | Parâmetros                     | Descrição                                                                         |
-| ----- | ------------------------------ | --------------------------------------------------------------------------------- |
-| 0     | wdl disable                    | Os debug logs Web HTTP são desativados                                            |
-| 1     | wdl enable without body        | Default is true (enabled).                                                        |
-| 3     | wdl enable with response body  | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta |
-| 5     | wdl enable with request body   | Web HTTP debug log está ativado com a parte do corpo apenas no pedido             |
-| 7     | wdl enable with all body parts | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta |
+| Valor | Parâmetros                     | Descrição                                                                             |
+| ----- | ------------------------------ | ------------------------------------------------------------------------------------- |
+| 0     | wdl disable                    | Os debug logs Web HTTP são desativados                                                |
+| 1     | wdl enable without body        | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
+| 3     | wdl enable with response body  | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta     |
+| 5     | wdl enable with request body   | Web HTTP debug log está ativado com a parte do corpo apenas no pedido                 |
+| 7     | wdl enable with all body parts | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta     |
 
 
 ## Defaut Home page
