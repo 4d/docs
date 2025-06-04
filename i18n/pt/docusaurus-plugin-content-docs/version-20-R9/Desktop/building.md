@@ -21,11 +21,11 @@ O construtor de aplicações permite-lhe:
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
 - ou o comando [`BUILD APPLICATION`](../commands-legacy/build-application.md),
-- ou na [caixa de diálogo Criar aplicativo] (#build-application-dialog).
+- ou na [caixa de diálogo Criar aplicativo](#build-application-dialog).
 
 :::tip
 
-Você também pode fazer download e usar o [`Build4D`] (https://github.com/4d-depot/Build4D), um componente que fornece classes para compilar, construir e assinar projetos 4D, mesmo a partir de um aplicativo sem interface.
+Você também pode fazer download e usar o [`Build4D`](https://github.com/4d-depot/Build4D), um componente que fornece classes para compilar, construir e assinar projetos 4D, mesmo a partir de um aplicativo sem interface.
 
 :::
 
@@ -224,12 +224,12 @@ Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 - Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
 - Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor. Você não precisa escolher um servidor em uma caixa de diálogo de conexão. O cliente direciona o servidor usando seu nome, quando o cliente e o servidor estão na mesma sub-rede, ou usando seu endereço IP, que é definido usando a chave `IPAddress` XML no arquivo buildapp.4DSettings. Se a conexão falhar, [mecanismos alternativos específicos](#management-of-client-connections) podem ser implementados). Você pode "forçar" a exibição da caixa de diálogo de conexão padrão segurando a tecla **Option** (macOS) ou **Alt** (Windows) enquanto inicia a aplicação cliente.
  Apenas a parte do cliente pode conectar à parte do servidor correspondente. Se um usuário tentar conectar à parte do servidor usando uma aplicação 4D padrão, uma mensagem de erro é retornada e a conexão é impossível.
-- Um aplicativo cliente/servidor pode ser configurado de modo que a parte do cliente [possa ser atualizada automaticamente pela rede] (#copy-of-client-applications-inside-the-server-application). Você só precisa criar e distribuir uma versão inicial do aplicativo cliente, atualizações subsequentes são tratadas usando o mecanismo de atualização automática.
+- Um aplicativo cliente/servidor pode ser configurado de modo que a parte do cliente [possa ser atualizada automaticamente pela rede](#copy-of-client-applications-inside-the-server-application). Você só precisa criar e distribuir uma versão inicial do aplicativo cliente, atualizações subsequentes são tratadas usando o mecanismo de atualização automática.
 - Também é possível automatizar a atualização da parte do servidor por meio do uso de uma sequência de comandos de linguagem ([SET UPDATE FOLDER](../commands-legacy/set-update-folder.md) e [RESTART 4D](../commands-legacy/restart-4d.md)).
 
 :::note
 
-Se você quiser que as conexões cliente/servidor sejam feitas em [TLS] (../Admin/tls.md), basta marcar a [configuração apropriada] (../settings/client-server.md#encrypt-client-server-communications). Se desejar usar um certificado personalizado, considere a possibilidade de usar o [`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.en.html).
+Se você quiser que as conexões cliente/servidor sejam feitas em [TLS](../Admin/tls.md), basta marcar a [configuração apropriada](../settings/client-server.md#encrypt-client-server-communications). Se desejar usar um certificado personalizado, considere a possibilidade de usar o [`CertificateAuthoritiesCertificates`](https://doc.4d.com/4Dv20R8/4D/20-R8/CertificateAuthoritiesCertificates.300-7479862.en.html).
 
 :::
 
@@ -550,7 +550,7 @@ Nesse caso, o usuário final terá de comprar e inserir uma licença *4D Desktop
 
 Essa opção permite que você crie um aplicativo pronto para uso, no qual as licenças necessárias já estão incorporadas.
 
-Você deve designar os arquivos que contêm suas [licenças de implementação] (../Admin/licenses.md#deployment-licenses). Esses arquivos foram gerados ou atualizados quando a licença *4D Developer Professional* e as licenças de implementação foram adquiridas. Sua licença atual de *4D Developer Professional* é associada automaticamente a cada licença de implantação que será utilizada na aplicação construída. Você pode adicionar outro número 4D Developer Professional e suas licenças associadas.
+Você deve designar os arquivos que contêm suas [licenças de implementação](../Admin/licenses.md#deployment-licenses). Esses arquivos foram gerados ou atualizados quando a licença *4D Developer Professional* e as licenças de implementação foram adquiridas. Sua licença atual de *4D Developer Professional* é associada automaticamente a cada licença de implantação que será utilizada na aplicação construída. Você pode adicionar outro número 4D Developer Professional e suas licenças associadas.
 
 Para remover ou adicionar uma licença, use os **[+]** e **[-]** botões na parte inferior da janela. Quando você clicar no botão \[+], uma caixa de diálogo 'Abrir arquivo' aparece exibindo por padrão o conteúdo da pasta *Licenças* do seu computador. Para mais informações sobre a localização desta pasta, consulte o comando [Obter pasta 4D](../commands-legacy/get-4d-folder.md).
 
