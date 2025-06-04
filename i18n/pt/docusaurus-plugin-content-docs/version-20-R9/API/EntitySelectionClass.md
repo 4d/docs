@@ -1082,7 +1082,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 A função `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retorna informações sobre o contexto de otimização usado pela seleção de entidades<!-- END REF -->.
 
-Se não houver [contexto de otimização] (../ORDA/client-server-optimization.md) para a seleção da entidade, a função retornará um texto vazio.
+Se não houver [contexto de otimização](../ORDA/client-server-optimization.md) para a seleção da entidade, a função retornará um texto vazio.
 
 #### Exemplo
 
@@ -1134,11 +1134,11 @@ $info:=$persons.getRemoteContextAttributes()
 
 A função `.isAlterable()` <!-- REF #EntitySelectionClass.isAlterable().Summary -->retorna True se a seleção da entidade for alterável<!-- END REF --> e False se a seleção da entidade não for alterável.
 
-Para obter mais informações, consulte [Seleções de entidades compartilháveis ou alteráveis] (ORDA/entities.md#shareable-or-alterable-entity-selections).
+Para obter mais informações, consulte [Seleções de entidades compartilháveis ou alteráveis](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 #### Exemplo
 
-Você está prestes a exibir `Form.products` em uma [caixa de listagem] (FormObjects/listbox_overview.md) para permitir que o usuário adicione novos produtos. Se quiser ter certeza que é alterável para que o usuário possa adicionar novos produtos sem erro:
+Você está prestes a exibir `Form.products` em um [list box](FormObjects/listbox_overview.md) para permitir que o usuário adicione novos produtos. Se quiser ter certeza que é alterável para que o usuário possa adicionar novos produtos sem erro:
 
 ```4d
 If (Not(Form.products.isAlterable()))
