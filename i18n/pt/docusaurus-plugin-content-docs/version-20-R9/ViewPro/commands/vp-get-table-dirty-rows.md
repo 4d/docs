@@ -31,7 +31,7 @@ The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *tableName*, pass the name of the table for which you want to get the dirty rows. Somente as colunas modificadas vinculadas a um [contexto de dados] (vp-set-data-context.md) serão levadas em consideração.
+In *tableName*, pass the name of the table for which you want to get the dirty rows. Somente as colunas modificadas vinculadas a um [contexto de dados](vp-set-data-context.md) serão levadas em consideração.
 
 By default, calling the command will clear the *dirty* status from the current table. Para manter este estado intacto, passe `False` no parâmetro *reset*.
 
