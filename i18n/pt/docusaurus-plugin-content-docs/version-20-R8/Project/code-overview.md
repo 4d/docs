@@ -96,7 +96,7 @@ Quando se torna invisível um método projeto, este continua a estar disponível
 
 Este atributo é utilizado no âmbito dos componentes. Quando estiver selecionada, indica que o método estará disponível para os componentes quando a aplicação for utilizada como base de dados do anfitrião. Por outro lado, quando a aplicação for utilizada como um componente, o método estará disponível para as bases de dados do anfitrião.
 
-Para obter mais informações sobre os componentes, consulte o capítulo [Developing and installing 4D components] (../Extensions/develop-components.md).
+Para obter mais informações sobre os componentes, consulte o capítulo [Desenvolvendo e instalando componentes 4D](../Extensions/develop-components.md).
 
 #### Executar no servidor
 
