@@ -118,7 +118,7 @@ Os parâmetros $5 e $6 recebem o nome de usuário e a senha inseridos pelo usuá
 Este URL permite que você chame o método projeto *MethodName* 4D com um parâmetro de texto opcional *Param*. O método receberá este parâmetro em *$1*.
 
 - O método projeto 4D deve ter sido [permitido para solicitações web](allowProject.md): a "Disponível através de etiquetas 4D e URLs (4DACTION...)" o valor do atributo deve ter sido verificado nas propriedades do método. Se o atributo não for verificado, o pedido Web é rejeitado.
-- When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
+- Quando 4D recebe um pedido `/4DACTION/MethodName/Param`, o método banco de dados `On Web Authentication` (se existir) é chamado.
 
 `4DACTION/` pode ser associado a um URL em uma página Web estática:
 

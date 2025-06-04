@@ -928,7 +928,7 @@ O parâmetro *options* opcional permite que você passe um objeto definindo inst
 
 #### Resultados
 
-`.getMail()` retorna um objeto [`Email`] (EmailObjectClass.md#email-object) com as seguintes propriedades IMAP específicas: *id*, *receivedAt* e *size*.
+`.getMail()` retorna um objeto [`Email`](EmailObjectClass.md#email-object) com as seguintes propriedades IMAP específicas: *id*, *receivedAt* e *size*.
 
 #### Exemplo
 
@@ -973,13 +973,13 @@ Se quiser receber uma mensagem com ID = 1:
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                                                                                                                                                                                                                                                                                      |
-| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ids        | Collection |              ->             | Colecção de identificação da mensagem                                                                                                                                                                                                                                                          |
-| startMsg   | Integer    |              ->             | Número sequencial da primeira mensagem                                                                                                                                                                                                                                                         |
-| endMsg     | Integer    |              ->             | Número sequencial da última mensagem                                                                                                                                                                                                                                                           |
-| options    | Object     |              ->             | Instruções de tratamento de mensagens                                                                                                                                                                                                                                                          |
-| Resultados | Object     | <- | Objeto contendo:<br/><ul><li>uma coleção de [objetos de e-mail] (EmailObjectClass.md#email-object) e</li><li>uma coleção de IDs ou números para mensagens ausentes, se houver</li></ul> |
+| Parâmetro  | Tipo       |                             | Descrição                                                                                                                                                                                              |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ids        | Collection |              ->             | Colecção de identificação da mensagem                                                                                                                                                                  |
+| startMsg   | Integer    |              ->             | Número sequencial da primeira mensagem                                                                                                                                                                 |
+| endMsg     | Integer    |              ->             | Número sequencial da última mensagem                                                                                                                                                                   |
+| options    | Object     |              ->             | Instruções de tratamento de mensagens                                                                                                                                                                  |
+| Resultados | Object     | <- | Objeto contendo:<br/><ul><li>uma coleção de [objetos de e-mail](EmailObjectClass.md#email-object) e</li><li>uma coleção de IDs ou números para mensagens ausentes, se houver</li></ul> |
 
 <!-- END REF -->
 
@@ -1025,7 +1025,7 @@ O parâmetro opcional *options* permite que você defina as partes das mensagens
 
 | Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                                                              |
 | ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lista       | Collection | Coleção de objetos [`Email`] (EmailObjectClass.md#email-object). Se não forem encontrados objetos e-mail, uma coleção vazia é devolvida.                                                        |
+| lista       | Collection | Coleção de objetos [`Email`](EmailObjectClass.md#email-object). Se não forem encontrados objetos e-mail, uma coleção vazia é devolvida.                                                                                                                                                |
 | notFound    | Collection | Coleção de:<br/><ul><li>primeira sintaxe - IDs de mensagens passadas anteriormente que não existem</li><li>segunda sintaxe - números de sequência de mensagens entre startMsg e endMsg que não existem</li></ul>Uma coleção vazia é retornada se todas as mensagens forem encontradas. |
 
 #### Exemplo
@@ -1499,7 +1499,7 @@ End if
 
 #### Descrição
 
-> Essa função é baseada na especificação do [protocolo IMAP] (https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
+> Essa função é baseada na especificação do [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
 A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->procura por mensagens que correspondam aos *searchCriteria* fornecidos na caixa de correio atual<!-- END REF -->. O *searchCriteria* consiste em uma ou mais chaves de pesquisa.
 

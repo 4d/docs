@@ -13,7 +13,7 @@ Por exemplo, se você tiver um relatório recorrente com formatação específic
 - Adicionar / excluir / modificar formulários, objetos de formulário e suas propriedades
 - Modificar ficheiros de projeto (atualizar, apagar)
 
-O código de macros suporta [funções de classe] (Concepts/classes.md) e [propriedades de objeto de formulário em JSON] (FormObjects/properties_Reference.md) para permitir que você defina qualquer recurso personalizado no editor de formulários.
+O código de macros suporta [funções de classe](Concepts/classes.md) e [propriedades de objeto de formulário em JSON](FormObjects/properties_Reference.md) para permitir que você defina qualquer recurso personalizado no editor de formulários.
 
 As macros podem ser definidas para o projeto host ou para componentes do projeto. Normalmente, você vai criar uma macro e instalá-la nos componentes que você usa para o desenvolvimento.
 
@@ -138,7 +138,7 @@ As propriedades personalizadas, quando usadas, são passadas para a função [co
 
 ## Instanciando macros em 4D
 
-Cada macro que você deseja instanciar em seu projeto ou componente deve ser declarada como uma [classe 4D] (Concepts/classes.md).
+Cada macro que você deseja instanciar em seu projeto ou componente deve ser declarada como uma [classe 4D](Concepts/classes.md).
 
 O nome da classe deve corresponder ao nome definido usando o atributo [class](#declaring-macros) do arquivo `formMacros.json`.
 
@@ -156,11 +156,11 @@ Toda classe de macro pode conter um construtor `Class` e duas funções: `onInvo
 | --------- | ------ | ---------------------------------------------------------------------------- |
 | $macro    | Object | Objeto declaração de macro (no arquivo `formMacros.json`) |
 
-As macros são instanciadas usando uma função [construtor de classe] (Concepts/classes.md#class-constructor), se ela existir.
+As macros são instanciadas usando uma função [construtor de classe](Concepts/classes.md#class-constructor), se ela existir.
 
 O class constructor é chamado uma vez durante a instanciação das classes, que ocorre na inicialização da aplicação.
 
-As propriedades personalizadas adicionadas à [declaração de macro] (#declaring-macros) são retornadas no parâmetro da função do construtor da classe.
+As propriedades personalizadas adicionadas à [declaração de macro](#declaring-macros) são retornadas no parâmetro da função do construtor da classe.
 
 #### Exemplo
 
@@ -237,7 +237,7 @@ Por exemplo, se objectos da página actual e grupos tiverem sido modificados, po
 
 Ao lidar com o atributo 'método' de objetos de formulário, você pode definir o valor do atributo de duas maneiras nas macros:
 
-- Usando uma [string contendo o nome/caminho do arquivo do método] (FormObjects/properties_Action.md#method).
+- Usando uma [string contendo o nome/caminho do arquivo do método](FormObjects/properties_Action.md#method).
 
 - Utilizar um objeto com a seguinte estrutura:
 

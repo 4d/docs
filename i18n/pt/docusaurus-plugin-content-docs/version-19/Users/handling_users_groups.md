@@ -53,7 +53,7 @@ Para adicionar um usuário da Barra de Ferramentas:
 
 A lista de usuários exibe todos os usuários, incluindo o[Designer and the Administrator](#designer-and-administrator).
 
-2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OU Clique com o botão direito do mouse na lista de usuários e escolha **Adicionar** ou **Duplicar** no menu de contexto.
 
 > O comando **Duplicate** pode ser usado para criar rapidamente vários usuários com as mesmas características.
 

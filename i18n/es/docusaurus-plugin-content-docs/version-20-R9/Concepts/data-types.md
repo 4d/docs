@@ -33,7 +33,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 ## Comandos
 
-You can always know the type of a field or variable using the following commands:
+Siempre puede conocer el tipo de un campo o variable usando los siguientes comandos:
 
 - [`Type`](../commands-legacy/type.md) para campos y variables escalares
 - [`Tipo de valor`](../commands-legacy/value-type.md) para expresiones

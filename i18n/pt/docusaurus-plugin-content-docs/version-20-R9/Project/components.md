@@ -208,7 +208,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 }
 ```
 
-... onde "myGitHubComponent1" é referenciado e declarado para o projeto, embora "myGitHubComponent2" seja apenas referenciado. Você precisa declará-lo no arquivo [**environment4d.json**] (#environment4djson):
+... onde "myGitHubComponent1" é referenciado e declarado para o projeto, embora "myGitHubComponent2" seja apenas referenciado. Você precisa declará-lo no arquivo [**environment4d.json**](#environment4djson):
 
 ```json
 {

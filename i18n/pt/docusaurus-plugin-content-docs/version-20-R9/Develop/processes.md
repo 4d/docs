@@ -18,9 +18,9 @@ A aplicação 4D cria processos para suas próprias necessidades, por exemplo, o
 Existem várias maneiras de criar um processo:
 
 - Execute um método no ambiente de Design após marcar a caixa de seleção **Novo Processo** na caixa de diálogo "Executar Método". O método escolhido na caixa de diálogo Executar Método é o método do processo.
-- Use o comando [`New process`] (../commands-legacy/new-process.md). O método passado como parâmetro para o comando `Novo processo` é o método de processo.
-- Use o comando [`Execute on server`] (../commands-legacy/execute-on-server.md) para criar um procedimento armazenado no servidor. O método passado como parâmetro do comando é o método processo.
-- Use o comando [`CALL WORKER`] (../commands-legacy/call-worker.md). Se o processo worker ainda não existir, será criado.
+- Use o comando [`New process`](../commands-legacy/new-process.md). O método passado como parâmetro para o comando `Novo processo` é o método de processo.
+- Use o comando [`Execute on server`](../commands-legacy/execute-on-server.md) para criar um procedimento armazenado no servidor. O método passado como parâmetro do comando é o método processo.
+- Use o comando [`CALL WORKER`](../commands-legacy/call-worker.md). Se o processo worker ainda não existir, será criado.
 
 :::note
 
@@ -66,7 +66,7 @@ Elementos de interface são usados em [Aplicações para Desktop](../category/de
 
 :::note
 
-Cada processo também possui uma seleção atual e registro atual separados por tabela. Para obter mais informações sobre esses conceitos, consulte [doc.4d.com] (https://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
+Cada processo também possui uma seleção atual e registro atual separados por tabela. Para obter mais informações sobre esses conceitos, consulte [doc.4d.com](https://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
 
 :::
 

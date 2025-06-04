@@ -149,7 +149,7 @@ Try (expression) : any | Undefined
 
 *expressão* pode ser qualquer expressão válida.
 
-Se ocorrer um erro durante sua execução, ele será interceptado e nenhuma caixa de diálogo de erro será exibida, independentemente de um [método de tratamento de erros] (#installing-an-error-handling-method) ter sido instalado ou não antes da chamada para `Try()`. Se *expressão* retorna um valor, `Try()` retorna o último valor avaliado, caso contrário, ele retorna `Undefined`.
+Se ocorrer um erro durante sua execução, ele será interceptado e nenhuma caixa de diálogo de erro será exibida, independentemente de um [método de tratamento de erros](#installing-an-error-handling-method) ter sido instalado ou não antes da chamada para `Try()`. Se *expressão* retorna um valor, `Try()` retorna o último valor avaliado, caso contrário, ele retorna `Undefined`.
 
 Você pode lidar com o(s) erro(s) usando o comando [`Últimos erros`](../commands-legacy/last-errors.md). Se a *expressão* lançar um erro em uma pilha de chamadas `Try()`, o fluxo de execução será interrompido e retornará ao último `Try()` executado (o primeiro encontrado na pilha de chamadas).
 

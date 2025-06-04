@@ -92,6 +92,6 @@ Embora seja tratado de forma transparente por 4D, o modo SDI introduz pequenas v
 
 :::info
 
-Você pode usar o comando [**Application info**] (../commands-legacy/application-info.md) para saber o modo de execução atual no Windows.
+Você pode usar o comando [**Application info**](../commands-legacy/application-info.md) para saber o modo de execução atual no Windows.
 
 :::

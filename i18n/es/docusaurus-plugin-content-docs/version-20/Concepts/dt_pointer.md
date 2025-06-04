@@ -88,7 +88,7 @@ Con:
 
 :::warning punteros Null
 
-Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por ejemplo:
+Intentar asignar o leer un puntero null (también conocido como "nil") producirá un error durante la ejecución. Por ejemplo:
 
 ```4d
 var $p : Puntero // Puntero no inicializado (Valor Nil)
@@ -158,13 +158,13 @@ Los punteros a variables locales permiten guardar las variables del proceso en m
 #DECLARE($param : Pointer)
 ...
 ```
-The debugger will display $param as follows:
+El depurador mostrará $param de la siguiente manera:
 
 | $param | ->$MyVar (Method1) |
 | ------ | ------------------ |
 |        |                    |
 
-You can expand $param and its value will be:
+Puede expandir $param y su valor será:
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |

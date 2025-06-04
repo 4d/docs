@@ -42,7 +42,7 @@ Pasta onde estão localizados os arquivos de certificado TLS para o servidor web
 
 Por padrão com o servidor 4D ou 4D, esses arquivos devem ser colocados ao lado da [pasta do projeto](Project/architecture.md#project-folder).
 
-Com o 4D em modo remoto, esses arquivos devem estar localizados na pasta de recursos locais do banco de dados na máquina remota (consulte o parágrafo `Pasta banco de dados 4D Client`do comando `Get 4D folder`). Deve copiar esses arquivos manualmente na máquina remota.
+Com 4D em modo remoto, esses arquivos devem estar localizados na pasta de recursos locais do banco de dados na máquina remota (consulte o parágrafo `Pasta banco de dados 4D Client`do comando `Get 4D folder`). Deve copiar esses arquivos manualmente na máquina remota.
 
 > Os arquivos de certificado TLS são *key.pem* (documento que contém a chave de criptografia privada) e *cert.pem* (documento que contém o certificado).
 
@@ -121,13 +121,13 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 
 Status do arquivo de log de solicitação HTTP do servidor web ([*HTTPDebugLog_nn. xt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), armazenado na pasta "Logs" do aplicativo -- nn é o número do arquivo). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
-| Valor | Parâmetros                     | Descrição                                                                         |
-| ----- | ------------------------------ | --------------------------------------------------------------------------------- |
-| 0     | wdl disable                    | Os debug logs Web HTTP são desativados                                            |
-| 1     | wdl enable without body        | Default is true (enabled).                     |
-| 3     | wdl enable with response body  | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta |
-| 5     | wdl enable with request body   | Web HTTP debug log está ativado com a parte do corpo apenas no pedido             |
-| 7     | wdl enable with all body parts | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta |
+| Valor | Parâmetros                     | Descrição                                                                                                                |
+| ----- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| 0     | wdl disable                    | Os debug logs Web HTTP são desativados                                                                                   |
+| 1     | wdl enable without body        | O log de depuração HTTP Web é ativado sem partes do corpo (o tamanho do corpo é fornecido neste caso) |
+| 3     | wdl enable with response body  | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta                                        |
+| 5     | wdl enable with request body   | Web HTTP debug log está ativado com a parte do corpo apenas no pedido                                                    |
+| 7     | wdl enable with all body parts | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta                                        |
 
 ## Página inicial padrão
 

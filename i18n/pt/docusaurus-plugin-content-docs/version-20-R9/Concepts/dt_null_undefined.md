@@ -13,7 +13,7 @@ Na linguagem 4D e para atributos do campo objeto, valores nulos são gerenciados
 
 - atributos de objetos
 - elementos da coleção
-- variáveis do tipo objeto, coleção, ponteiro, imagem ou variante (consulte também [Null as default value] (data-types.md#null-as-default-value).
+- variáveis do tipo objeto, coleção, ponteiro, imagem ou variante (consulte também [Null como valor padrão](data-types.md#null-as-default-value).
 
 ## Indefinido
 
@@ -97,7 +97,7 @@ Quando expressões de um determinado tipo são esperadas em seu código 4D, voc�
 |              | Null `#` Undefined      | Parâmetros | a.nullProp `#` b.undefinedProp | False |
 |              | Null `#` *scalar value* | Parâmetros | a.nullProp `#` 42                              | True  |
 
-\*Os valores escalares são valores do tipo string, Date, Time, Boolean, number, ou Blob. Quando declarado, seu [valor padrão] (data-types.md#default-values) não é indefinido nem nulo. Outros tipos (Ponteiro, Imagem, Objecto, Colecção) têm valor por defeito indefinido ou nulo. Ex:
+\*Os valores escalares são valores do tipo string, Date, Time, Boolean, number, ou Blob. Quando declarado, seu [valor padrão](data-types.md#default-values) não é indefinido nem null. Outros tipos (Ponteiro, Imagem, Objecto, Colecção) têm valor por defeito indefinido ou nulo. Ex:
 
 ```4d
 var $object : Object

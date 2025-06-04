@@ -19,42 +19,43 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-20-R9
 - [Licenses](../Admin/licenses.md) are now automatically refreshed at startup.
 - New [4D AIKit component](../aikit/overview.md) enabling interaction with third-party AI APIs.
 - The following VP command callbacks now wait for all 4D custom functions to complete their calculations: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md), and [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
-- New [4D Netkit](https://developer.4d.com/4D-NetKit/) features to manage Google and Microsoft 365 calendars; ability to use the host web server for OAuth 2.0 authentication.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R9): list of all bugs that have been fixed in 4D 20 R9.
+- Nouvelles fonctionnalités [4D NetKit](https://developer.4d.com/4D-NetKit/) permettant de gérer les calendriers Google et Microsoft 365 ; possibilité d'utiliser le serveur web hôte pour l'authentification OAuth 2.0.
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) (used for sorting/searching in Japanese language) is now deprecated and its support will be removed in the next release.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R9) : liste de tous les bugs qui ont été corrigés dans 4D 20 R9.
 
 ## 4D 20 R8
 
-Read [**What’s new in 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-20-R8/), the blog post that lists all new features and enhancements in 4D 20 R8.
+Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fr-whats-new-in-4d-20-R8/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R8.
 
 #### Points forts
 
-- Implement your own [**HTTP request handlers**](../WebServer/http-request-handler.md) using the new [`4D.IncomingMessage`](../API/IncomingMessageClass.md) class.
-- Expressions used in [form object properties](../FormObjects/properties_Reference.md) now benefit from syntax checking in the [Property list](../FormEditor/formEditor.md#property-list) and in the [Compiler](../Project/compiler.md#check-syntax).
-- You can [associate a class to a form](../FormEditor/properties_FormProperties.md#form-class) to enable code type-ahead and automatic instantiation of form data when using the [`Form`](../commands/form.md) command.
-- Support of [standalone sessions](../API/SessionClass.md) to simplify local coding for client/server applications.
-- [4D debugger](../Debugging/debugger.md): new design and auto-save, display mode features.
-- [New built component architecture](../Desktop/building.md#build-component) for a better compliance with Apple notarization guidelines.
-- You can now easily [build evaluation applications](../Desktop/building.md#build-an-evaluation-application) in the Build application dialog box.
-- Dependencies: Use the Dependency manager to [check for new versions](../Project/components.md#checking-for-new-versions) and [update](../Project/components.md#updating-dependencies) GitHub components.
-- New [`TCPConnection`](../API/TCPConnectionClass.md) and [`TCPEvent`](../API/TCPEventClass.md) classes to manage TCP client connections, handle events, and enhance control over data transmission. Added [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) for detailed logging of TCP events.
-- New options in [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) and [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) to control styles, formulas, data integrity, and password protection.
+- Implémentez votre propre [**gestionnaire de requêtes HTTP**](../WebServer/http-request-handler.md) en utilisant la nouvelle classe [`4D.IncomingMessage`](../API/IncomingMessageClass.md).
+- Les expressions utilisées dans [les propriétés des objets de formulaire] (../FormObjects/properties_Reference.md) bénéficient maintenant de la vérification syntaxique dans la [liste des propriétés] (../FormEditor/formEditor.md#property-list) et dans le [Compilateur](../Project/compiler.md#check-syntax).
+- Vous pouvez [associer une classe à un formulaire](../FormEditor/properties_FormProperties.md#form-class) pour activer le type-ahead et l'instanciation automatique des données de formulaire lors de l'utilisation de la commande [`Form`](../commands/form.md).
+- Prise en charge de [sessions autonomes](../API/SessionClass.md) pour simplifier le développement en local d'applications client/serveur.
+- [débogueur 4D](../Debugging/debugger.md) : nouveau design, nouvelles fonctions de sauvegarde automatique et de mode d'affichage.
+- [Nouvelle architecture des composants générés](../Desktop/building.md#build-component) pour une meilleure conformité avec les directives de notarisation d'Apple.
+- Vous pouvez maintenant facilement [générer des applications d'évaluation](../Desktop/building.md#build-an-evaluation-application) dans la boîte de dialogue du Générateur d'applications.
+- Dépendances : Utilisez le Gestionnaire de dépendances pour [vérifier les nouvelles versions](../Project/components.md#checking-for-new-versions) et [mettre à jour](../Project/components.md#updating-dependencies) les composants GitHub.
+- Nouvelles classes [`TCPConnection`](../API/TCPConnectionClass.md) et [`TCPEvent`](../API/TCPEventClass.md) pour gérer les connexions client TCP, traiter les événements et améliorer le contrôle de la transmission des données. Ajout de [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) pour la journalisation détaillée des événements TCP.
+- Nouvelles options dans [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) et [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) pour contrôler les styles, les formules, l'intégrité des données et la protection par mot de passe.
 - 4D Write Pro :
-    - The following commands now allow parameters such as objects or collections: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), and [WP Insert picture](../WritePro/commands/wp-insert-picture.md).
-    - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), and [WP Insert break](../WritePro/commands/wp-insert-break.md), are now functions that return ranges.
-    - New expressions related to document attributes: [This.sectionIndex](../WritePro/managing-formulas.md), [This.sectionName](../WritePro/managing-formulas.md) and [This.pageIndex](../WritePro/managing-formulas.md).
+    - Les commandes suivantes acceptent maintenant des paramètres tels que des objets ou des collections : [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get Attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), et [WP Insert picture] (../WritePro/commands/wp-insert-picture.md).
+    - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), et [WP Insert break](../WritePro/commands/wp-insert-break.md), sont maintenant des fonctions qui retournent des plages.
+    - Nouvelles expressions liées aux attributs de documents : [This.sectionIndex](../WritePro/managing-formulas.md), [This.sectionName](../WritePro/managing-formulas.md) et [This.pageIndex](../WritePro/managing-formulas.md).
 - Langage 4D:
-    - Modified commands: [`FORM EDIT`](../commands/form-edit.md)
-    - [`.sign()`](../API/CryptoKeyClass.md#sign) and [`.verify()`](../API/CryptoKeyClass.md#verify) functions of the [4D.CryptoKey class](../API/CryptoKeyClass.md) support Blob in the *message* parameter.
+    - Commande modifiée : [`FORM EDIT`](../commands/form-edit.md)
+    - Les fonctions [`.sign()`](../API/CryptoKeyClass.md#sign) et [`.verify()`](../API/CryptoKeyClass.md#verify) de la [classe 4D.CryptoKey](../API/CryptoKeyClass.md) prennent en charge des Blobs dans le paramètre *message*.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R8) : liste de tous les bugs qui ont été corrigés dans 4D 20 R8.
 
 #### Changements de comportement
 
-- After a log file modification using [`SELECT LOG FILE`](../commands/select-log-file.md) or the [Backup settings](../Backup/settings.md#log-management), the [`New log file`](../commands/new-log-file.md) command now validates the change, without waiting for a backup. The error -4447 (backup required) is no longer raised.
-- Because of their [new architecture](../Desktop/building.md#build-component), components built with 4D 20 R8 and higher cannot be installed in previous 4D releases.
+- Après une modification du fichier journal en utilisant [`SELECT LOG FILE`](../commands/select-log-file.md) ou les [paramètres de sauvegarde](../Backup/settings.md#log-management), la commande [`New log file`](../commands/new-log-file.md) valide maintenant le changement, sans attendre une sauvegarde. L'erreur -4447 (sauvegarde requise) n'est plus générée.
+- En raison de leur [nouvelle architecture](../Desktop/building.md#build-component), les composants construits avec 4D 20 R8 et suivantes ne peuvent pas être installés dans les versions 4D précédentes.
 
 ## 4D 20 R7
 
-Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-20-R7/), the blog post that lists all new features and enhancements in 4D 20 R7.
+Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-20-R7/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R7.
 
 #### Points forts
 
@@ -63,7 +64,7 @@ Read [**What’s new in 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-20-R7
 - Vous pouvez désormais [ajouter et supprimer des composants à l'aide de l'interface du Gestionnaire de composants](../Project/components.md#monitoring-project-dependencies).
 - Nouveau [**mode de typage direct**](../Project/compiler.md#enabling-direct-typing) dans lequel vous déclarez toutes les variables et paramètres dans votre code en utilisant les mots-clés `var` et `#DECLARE`/`Function` (seul mode supporté dans les nouveaux projets). La [fonctionnalité de vérification de syntaxe](../Project/compiler.md#check-syntax) a été adaptée en conséquence.
 - Prise en charge des [singletons de session](../Concepts/classes.md#singleton-classes) et nouvelle propriété de classe [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton).
-- New [`onHTTPGet` function keyword](../ORDA/ordaClasses.md#onhttpget-keyword) to define singleton or ORDA functions that can be called through [HTTP REST GET requests](../REST/ClassFunctions.md#function-calls).
+- Nouveau [mot-clé fonction `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) pour définir des fonctions singleton ou ORDA qui peuvent être appelées par des [requêtes HTTP REST GET](../REST/ClassFunctions.md#function-calls).
 - Nouvelle classe [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) pour que le serveur REST retourne n'importe quel contenu web.
 - Qodly Studio : Vous pouvez maintenant [attacher le débogueur Qodly à 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
 - Nouvelles clés Build Application pour que les applications 4D distantes valident les [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.fe.html) et/ou les [domaines](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.fe.html) des autorités de certification des serveurs.
@@ -100,7 +101,7 @@ Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Nouvelle [API `$singleton`](../REST/$singleton.md) pour appeler les fonctions singleton exposées depuis REST et nouveaux [privilèges associés](../ORDA/privileges.md).
 - Un [nouveau bouton de paramètre](../settings/web.md#activer-la-validation-dauthentification-rest-avec-la-fonction-dsauthentify) vous aide à mettre à niveau votre projet pour utiliser le mode REST "connexion forcée" (la méthode base `On REST Authentication` est maintenant obsolète).
 - Un [nouvel onglet de paramètres](../Project/compiler.md#warnings) vous permet de définir la génération de warnings de manière globale.
-- Several commands, mainly from the "4D Environment" theme, are now thread-safe ([see the full list](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.en.html)), as well as some selectors of the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) commands.
+- Several commands, mainly from the "4D Environment" theme, are now thread-safe, as well as some selectors of the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) commands.
 - Nouveau [composant 4D-QPDF](https://github.com/4d/4D-QPDF) qui fournit la commande `PDF Get attachments` pour extraire les pièces jointes d'un document PDF/A3.
 - Commandes du langage 4D : [Liste des nouveautés](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.fe.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20R/4D/20-R6/What-s-new.901-6993921.fe.html) sur doc.4d.com.

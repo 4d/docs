@@ -3,7 +3,7 @@ id: debugger
 title: Depurador
 ---
 
-The 4D debugger is useful when you need to spot errors or monitor the execution of methods. Le permite recorrer su código lentamente y examinar la información. Este proceso se llama "rastreo".
+El depurador 4D es útil cuando se necesita detectar errores o controlar la ejecución de métodos. Le permite recorrer su código lentamente y examinar la información. Este proceso se llama "rastreo".
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 

@@ -66,7 +66,7 @@ Esta função não faz nada e sempre retorna **Verdadeiro** com cliente remoto, 
 
 :::
 
-A função `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->remove todos os privilégios associados à sessão e retorna **True** se a execução foi bem-sucedida<!-- END REF -->. A menos que esteja no modo ["forceLogin"] (../REST/authUsers.md#force-login-mode), a sessão se torna automaticamente uma sessão de convidado.
+A função `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->remove todos os privilégios associados à sessão e retorna **True** se a execução foi bem-sucedida<!-- END REF -->. A menos que esteja no modo ["forceLogin"](../REST/authUsers.md#force-login-mode), a sessão se torna automaticamente uma sessão de convidado.
 
 :::note
 

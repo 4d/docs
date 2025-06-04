@@ -1956,7 +1956,7 @@ Os níveis de classificação são determinados pela ordem em que as coleções 
 
 :::note
 
-A função `.multiSort()` utiliza um algoritmo de classificação [estável] (https://en.wikipedia.org/wiki/Sorting_algorithm#Stability).
+A função `.multiSort()` utiliza um algoritmo de classificação [estável](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability).
 
 :::
 
@@ -2514,7 +2514,7 @@ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
 $result2:=$col.query("company.name = :1";"John's Pizzas")
 ```
 
-> O uso de uma [**referência de coleção** ou **referência de objeto**](#object-or-collection-reference-as-value) no parâmetro *value* não é compatível com essa sintaxe. Você deve usar o parâmetro [*querySettings*] (#querysettings-parameter).
+> O uso de uma [**referência de coleção** ou **referência de objeto**](#object-or-collection-reference-as-value) no parâmetro *value* não é compatível com essa sintaxe. Você deve usar o parâmetro [*querySettings*](#querysettings-parameter).
 
 #### Pesquisa de valores null
 
