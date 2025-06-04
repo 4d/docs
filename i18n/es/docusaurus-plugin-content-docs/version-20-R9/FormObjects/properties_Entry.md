@@ -261,7 +261,7 @@ Puede configurar esta opción haciendo clic en [...] en la propiedad Accesos dir
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
-> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
+> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. Para más información sobre cómo asociar accesos directos a los menús, consulte [Configuración de las propiedades de los menús](../Menus/properties.md).
 
 Para ver una lista de todos los métodos abreviados utilizados en el entorno Diseño de 4D, consulte la [página Atajos](../Preferences/shortcuts.md) en la caja de diálogo Preferencias.
 
