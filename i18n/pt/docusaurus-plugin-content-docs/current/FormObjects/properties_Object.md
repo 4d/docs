@@ -110,22 +110,6 @@ To get or set the value of form objects that use dynamic variables, you just nee
  OBJECT SET VALUE("comments";$value+10) 
 ```
 
-Este mecanismo tem duas vantagens:
-
-- Por um lado, ele permite o desenvolvimento de componentes do tipo "subformulário" que podem ser usados várias vezes no mesmo formulário host. Tomemos como exemplo o caso de um subformulário datepicker que é inserido duas vezes em um formulário host para definir uma data inicial e uma data final. Esse subformulário usará objetos para escolher a data do mês e do ano. Será necessário que esses objetos trabalhem com variáveis diferentes para a data de início e a data de término. Permitir que 4D crie sua variável com um nome exclusivo é uma forma de resolver essa dificuldade.
-- Por outro lado, pode ser utilizado para limitar a utilização da memória. De facto, os objectos formulário só funcionam com variáveis processo ou inter-processo. No entanto, no modo compilado, uma instância de cada variável de processo é criada em todos os processos, incluindo os processos do servidor. Essa instância ocupa memória, mesmo quando o formulário não é usado durante a sessão. Portanto, permitir que 4D crie variáveis dinamicamente ao carregar os formulários pode economizar memória.
-
-In the 4D code, dynamic variables themselves can be accessed using [`OBJECT Get data source formula`](../commands/object-get-data-sourvce-formula.md) or through a pointer. Por exemplo:
-
-```4d
-  // to get the dynamic variable assigned to "tstart"
- $var:=OBJECT Get data source formula(*; "tstart")
-  //$var is the variable name
-  //OR
- $var:=OBJECT Get pointer(Object named;"tstart") 
-  //$var-> gives the variable name
-```
-
 ### List box array
 
 For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
