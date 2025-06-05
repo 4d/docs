@@ -13,6 +13,8 @@ title: リリースノート
 - 4D 内でのUUID は**バージョン7**で生成されるようになりました。 以前の4D のリリースでは、バージョン4で生成されていました。
 - 4Dランゲージ:
     - 統一性のため、[`Create entity selection`](../commands/create-entity-selection.md) コマンドおよび [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) コマンドは、["4D 環境"](../commands/theme/4D_Environment.md) テーマから ["Selection"](../commands/theme/Selection.md) テーマへと移動しました。
+    - New [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) and [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) commands to assign and read `Formula` objects as data sources for form objects.
+    - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) and [`LISTBOX Get property`](../commands/listbox-get-property.md) support three new constants: `lk current item`, `lk current item position`, and `lk selected items expression`.
 
 #### 動作の変更
 
