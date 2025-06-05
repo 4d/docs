@@ -110,22 +110,6 @@ To get or set the value of form objects that use dynamic variables, you just nee
  OBJECT SET VALUE("comments";$value+10) 
 ```
 
-Ce mécanisme présente deux avantages :
-
-- D'une part, il permet de développer des composants de type "sous-formulaire" qui peuvent être utilisés plusieurs fois dans le même formulaire hôte. Prenons l'exemple d'un sous-formulaire de type datepicker qui est inséré deux fois dans un formulaire hôte pour définir une date de début et une date de fin. Ce sous-formulaire utilisera des objets pour choisir le mois et l'année de la date. Il sera nécessaire que ces objets fonctionnent avec des variables différentes pour la date de début et la date de fin. Laisser 4D créer sa variable avec un nom unique est un moyen de résoudre cette difficulté.
-- D'autre part, il peut être utilisé pour limiter l'utilisation de la mémoire. En fait, les objets formulaires ne fonctionnent qu'avec des variables process ou interprocess. Cependant, en mode compilé, une instance de chaque variable process est créée dans tous les process, y compris les process serveur. Cette instance occupe de la mémoire, même si le formulaire n'est pas utilisé durant la session. Par conséquent, le fait de laisser 4D créer des variables de manière dynamique lors du chargement des formulaires permet d'économiser de la mémoire.
-
-In the 4D code, dynamic variables themselves can be accessed using [`OBJECT Get data source formula`](../commands/object-get-data-sourvce-formula.md) or through a pointer. Par exemple :
-
-```4d
-  // to get the dynamic variable assigned to "tstart"
- $var:=OBJECT Get data source formula(*; "tstart")
-  //$var is the variable name
-  //OR
- $var:=OBJECT Get pointer(Object named;"tstart") 
-  //$var-> gives the variable name
-```
-
 ### List box tableau
 
 Pour une list box de type tableau, la propriété **Variable ou Expression** contient généralement le nom de la variable de type tableau définie pour la list box et pour chaque colonne. Toutefois, vous pouvez utiliser un tableau texte (contenant des noms de tableaux) comme valeur *dataSource* pour une colonne de list box afin de définir une [listbox hiérarchique](listbox_overview.md#hierarchical-list-boxes).
