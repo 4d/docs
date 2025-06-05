@@ -17,4 +17,4 @@ Si des options avancées sont fournies par l'auteur du plug-in, un bouton **Prop
 
 #### Objets pris en charge
 
-[Plug-in Area](pluginArea_overview.md)
+[Zone de plugin](pluginArea_overview.md)
