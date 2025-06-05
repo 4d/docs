@@ -52,7 +52,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 
 An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command in the *4D Language Reference manual*.
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](../commands-legacy/listbox-set-property.md) command with `lk background color expression` constant.
+You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) command with `lk background color expression` constant.
 
 >With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
