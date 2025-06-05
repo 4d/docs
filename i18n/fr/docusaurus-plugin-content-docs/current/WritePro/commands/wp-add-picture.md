@@ -8,52 +8,52 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Add picture.Params-->
 
-| Paramètres     | Type                    |                             | Description                                                |
-| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
-| wpDoc          | Object                  | &#8594; | 4D Write Pro document                                      |
-| picture        | Picture                 | &#8594; | 4D picture                                                 |
-| picturePath    | Text                    | &#8594; | Picture path                                               |
-| pictureFileObj | 4D.File | &#8594; | 4D.File object representing a picture file |
-| Résultat       | Object                  | &#8592; | Object referencing the picture                             |
+| Paramètres     | Type                    |                             | Description                                                 |
+| -------------- | ----------------------- | --------------------------- | ----------------------------------------------------------- |
+| wpDoc          | Object                  | &#8594; | 4D Write Pro document                                       |
+| picture        | Picture                 | &#8594; | Image 4D                                                    |
+| picturePath    | Text                    | &#8594; | Chemin de l'image                                           |
+| pictureFileObj | 4D.File | &#8594; | Objet 4D.File représentant un fichier image |
+| Résultat       | Object                  | &#8592; | Objet référençant l'image                                   |
 
 <!-- END REF-->
 
 ## Description
 
-The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
+La commande **WP Add picture**<!--REF #_command_.WP Add picture.Summary--> ancre l'image passée en paramètre à un emplacement fixe dans le *wpDoc* spécifié et retourne sa référence.<!-- END REF--> La référence retournée peut alors être passée à la commande [WP SET ATTRIBUTES](wp-set-attributes.md) pour déplacer l'image à n'importe quel emplacement dans le *wpDoc* (page, section, en-tête, pied de page, etc.) avec une couche définie, taille, etc.
 
-In *wpDoc*, pass the name of a 4D Write Pro document object.
+Dans *wpDoc*, passez le nom d'un objet document 4D Write Pro.
 
-For the optional second parameter, you can pass either:
+Pour le deuxième paramètre facultatif, vous pouvez passer soit :
 
-- In *picture*:  A 4D picture
-- In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
-- In *PictureFileObj*: a `4D.File` object representing a picture file.
+- En *picture* :  Une image 4D
+- Dans *picturePath* : une chaîne contenant un chemin vers un fichier image stocké sur le disque (syntaxe système). Vous pouvez passer un chemin complet ou un chemin relatif au fichier de structure de la base de données. Vous pouvez également transmettre un nom de fichier, auquel cas le fichier doit être situé à côté du fichier de structure de la base de données. Si vous passez un nom de fichier, vous devez indiquer l'extension du fichier.
+- Dans *PictureFileObj* : un objet `4D.File` représentant un fichier image.
 
 :::note
 
-Any picture format [supported by 4D](../../FormEditor/pictures.md#native-formats-supported) can be used. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Vous pouvez obtenir la liste des formats d'image disponibles en utilisant la commande [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés.
 
 :::
 
-- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. This allows you to then call [WP SET ATTRIBUTES](wp-set-attributes.md) with the wk image expression selector to fill the image with a 4D expression. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
+- Si *image* est omise, une référence d'image valide est retournée et une image vide est ajoutée. Cela vous permet d'appeler [WP SET ATTRIBUTES](wp-set-attributes.md) avec le sélecteur d'image wk pour remplir l'image avec une expression 4D. Si l'expression ne peut pas être évaluée ou si elle ne retourne pas une image valide, une image vide (image à cadre noir par défaut) s'affiche.
 
-By default, the added picture is:
+Par défaut, l'image ajoutée est :
 
-- Embedded behind the text
-- Displayed at the top left corner of the paper box
-- Shown on all pages
+- Incorporée derrière le texte
+- Affichée en haut à gauche de la boîte à papier
+- Affichée sur toutes les pages
 
-The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
+L'emplacement, la couche (en ligne, devant/derrière le texte), la visibilité et toutes les propriétés de l'image peuvent être modifiées en utilisant la commande [WP SET ATTRIBUTES](wp-set-attributes.md), ou via des actions standards (voir *Utiliser des actions standard 4D Write Pro*).
 
-**Note:** The [WP Selection range](../commands-legacy/wp-selection-range.md) command returns a *picture reference* object if an anchored picture is selected and a *range object* if an inline picture is selected. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**Note :** La commande [WP Selection range](../commands-legacy/wp-selection-range.md) retourne un objet *picture reference* si une image ancrée est sélectionnée et un *range object* si une image en ligne est sélectionnée. Vous pouvez déterminer si un objet sélectionné est un objet image en vérifiant l'attribut `wk type` :
 
-- **Value = 2**: The selected object is a picture object.
-- **Value = 0**: The selected object is a range object.
+- **Value = 2** : l'objet sélectionné est un objet image.
+- **Value = 0** : l'objet sélectionné est un objet plage.
 
 ## Exemple 1
 
-You want to add a picture with default settings using a filepath.
+Vous souhaitez ajouter une image avec les paramètres par défaut en utilisant un chemin d'accès.
 
 ```4d
  var $obPict : Object
@@ -66,7 +66,7 @@ Le résultat est:
 
 ## Exemple 2
 
-You want to add a resized picture, centered and anchored to the header:
+Vous voulez ajouter une image redimensionnée, centrée et ancrée dans l'entête :
 
 ```4d
  var $obImage : Object
@@ -86,11 +86,11 @@ Le résultat est:
 
 ## Exemple 3
 
-You want to use a field expression to add an anchored image to a document displaying some text from the database:
+Vous voulez utiliser une expression de champ pour ajouter une image ancrée à un document affichant du texte provenant de la base de données :
 
 ```4d
  QUERY([Flowers];[Flowers]Common_Name="tulip")
- WP SET TEXT(myDoc;[Flowers]Description;wk append) //insert text
+ WP SET TEXT(myDoc;[Flowers]Description;wk append) //insertion du texte
  var $obImage : Object
  $obImage:=WP Add picture(myDoc)
  WP SET ATTRIBUTES($obImage;wk image formula;Formula([Flowers]Image))
