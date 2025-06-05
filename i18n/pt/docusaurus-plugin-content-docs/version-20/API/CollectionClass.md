@@ -915,7 +915,7 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 #### Descrição
 
-A função `.every()` <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* method<!-- END REF -->.
+A função `.every()` <!-- REF #collection.every().Summary -->retorna **true** se todos os elementos da coleção passaram com sucesso um teste implementado no objeto *formula* fornecido ou método *methodName*<!-- END REF -->.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
 
@@ -2205,7 +2205,7 @@ A função `.orderBy()` <!-- REF #collection.orderBy().Summary -->devolve uma no
 Esta função devolve uma *cópia superficial*, o que significa que os objetos ou coleções de ambas coleções compartem a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
-If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned with an internal order). Pode modificar esta ordem automático passando as constantes `ck ascending` ou `ck descending` no parâmetro *ascOrDesc* (ver abaixo).
+Se você não passar nenhum parâmetro, a função ordena os valores escalares na coleção em ordem crescente (outros tipos de elementos, como objetos ou coleções, são retornados com uma ordem interna). Pode modificar esta ordem automático passando as constantes `ck ascending` ou `ck descending` no parâmetro *ascOrDesc* (ver abaixo).
 
 Também pode passar um parâmetro de critérios para definir como devem ordenar-se os elementos da coleção. Três sintaxes são compatíveis com esse parâmetro:
 
@@ -2848,7 +2848,7 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
 | index      | Integer    | -> | Elemento no qual que se inicia a eliminação                               |
 | howMany    | Integer    | -> | Número de elementos a eliminar, ou 1 elemento se omitir                   |
-| Resultados | Collection | <- | Modified collection without removed element(s)|<!-- END REF -->
+| Resultados | Collection | <- | Coleção modificada sem elemento(s) removido(s)|<!-- END REF -->
 
 
 |
@@ -3225,7 +3225,7 @@ Quer saber se pelo menos um valor de colecção é >0.
 A função `.shift()` <!-- REF #collection.sort().Summary -->remove o primeiro elemento da colecção e devolve-o como resultado da função<!-- END REF --> .
 > Essa função modifica a coleção original.
 
-Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. If the collection contains scalar values of different types, they are first grouped by type and sorted afterwards. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
+Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. Se a coleção contiver valores escalares diferentes, eles serão primeiro agrupados por tipo e, em seguida, classificados. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
 1.  null
 2.  booleans

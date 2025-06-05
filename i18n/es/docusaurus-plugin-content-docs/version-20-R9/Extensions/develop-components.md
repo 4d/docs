@@ -414,7 +414,7 @@ Here is an example of `Info.plist` file:
 </plist>
 ```
 
-On macOS, information is available from the finder:
+En macOS, la información está disponible en el Finder:
 
 ![](../assets/en/Develop/infoplist-component.png)
 
@@ -431,6 +431,6 @@ Para proteger eficazmente el código de un componente, basta con [compilar y gen
 - Los métodos, clases y funciones del proyecto compartido pueden ser llamados desde los métodos proyecto locales y también se muestran en la página de métodos del Explorador. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
 - Los otros métodos proyecto del proyecto matriz nunca aparecerán.
 
-## Sharing your components on GitHub
+## Compartiendo sus componentes en GitHub
 
 Lo animamos a que apoye a la comunidad de desarrolladores 4D compartiendo sus componentes, preferiblemente en la plataforma [GitHub](https://github.com/topics/4d-component). Recomendamos que utilice el tema **`4d-component`** para ser referenciado correctamente.
