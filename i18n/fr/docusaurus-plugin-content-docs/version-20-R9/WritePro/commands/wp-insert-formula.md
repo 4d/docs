@@ -8,39 +8,39 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
-| Paramètres  | Type   |                             | Description                                                |
-| ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
-| targetObj   | Object | &#8594; | Plage ou élément ou document 4D Write Pro                  |
-| formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
-| mode        | Number | &#8594; | Mode d'insertion                                           |
-| rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
-| Résultat    | Object | &#8592; | Text range object reprsenting the result of the formula    |
+| Paramètres  | Type   |                             | Description                                                        |
+| ----------- | ------ | --------------------------- | ------------------------------------------------------------------ |
+| targetObj   | Object | &#8594; | Plage ou élément ou document 4D Write Pro                          |
+| formula     | Object | &#8594; | Objet de formule OU Objet avec des propriétés de formule et de nom |
+| mode        | Number | &#8594; | Mode d'insertion                                                   |
+| rangeUpdate | Number | &#8594; | Inclut ou exclut le contenu inséré dans la plage                   |
+| Résultat    | Object | &#8592; | Objet de plage de texte représentant le résultat de la formule     |
 
 <!-- END REF-->
 
 ## Description
 
-The **WP Insert formula** command<!--REF #_command_.WP Insert formula.Summary--> inserts a *formula* in *targetObj* according to the specified insertion *mode* and returns the resulting text range.<!-- END REF-->
+La commande **WP Insert formula**<!--REF #_command_.WP Insert formula.Summary--> insère une *formule* dans *targetObj* selon le *mode d'insertion* spécifié et retourne la plage de texte résultante.<!-- END REF-->
 
-In the *targetObj* parameter, you can pass:
+Dans le paramètre *targetObj*, vous pouvez passer :
 
 - une plage, ou
-- an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
+- un élément (tableau / ligne / cellule(s) / paragraphe / corps / en-tête / pied de page / section / / sous-section / image en ligne), ou
 - a 4D Write Pro document.
 
-In the *formula* parameter, pass the 4D formula to evaluate. Vous pouvez passer :
+Dans le paramètre *formule*, passez la formule 4D à évaluer. Vous pouvez passer :
 
-- either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
-- or an object containing two properties:
+- soit un [objet formule](../../commands/formula.md-objects) créé par la commande [**Formula**](../../commands/formula.md) ou [**Formula from string**](../../commands/formula.md-from-string) command,
+- ou un objet contenant deux propriétés :
 
-| **Propriété** | **Type** | **Description**                                                                                                                                                                             |
-| ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name          | Text     | Name to display for the formula in the document                                                                                                                                             |
-| formula       | Object   | The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command |
+| **Propriété** | **Type** | **Description**                                                                                                                                                                                |
+| ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name          | Text     | Nom à afficher pour la formule dans le document                                                                                                                                                |
+| formula       | Object   | L'[objet formule](../../commandes/formula.md-objets) créé par la commande [**Formula**](../../commands/formula.md) ou [**Formula from string**](../../commands/formula.md-from-string) command |
 
-When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
+Lorsque vous utilisez un objet avec une formule *name*, ce nom est affiché dans le document au lieu de la référence de formule lorsque les formules sont affichées comme référence, et dans l'info-bulle de la formule lorsqu'elle est affichée en tant que valeur ou symboles. Si la propriété *name* contient une chaîne vide ou est omise, elle est supprimée de l'objet et la formule est affichée par défaut. Pour plus d'informations, voir la page [Gérer les formules](../managing-formulas.md) .
 
-In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used:
+Dans le paramètre *mode*, passez une des constantes suivantes pour indiquer le mode d'insertion à utiliser :
 
 | Constante  | Type    | Valeur | Commentaire                             |
 | ---------- | ------- | ------ | --------------------------------------- |
@@ -48,44 +48,44 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 | wk prepend | Integer | 1      | Insérer le contenu au début de la cible |
 | wk replace | Integer | 0      | Remplacer le contenu de la cible        |
 
-- If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted *formula* is included in the resulting range:
+- Si *targetObj* est une distance, vous pouvez utiliser le paramètre optionnel *rangeUpdate* pour passer une des constantes suivantes pour spécifier si ou non la *formula* insérée est incluse dans la plage résultante :
 
 | Constante             | Type    | Valeur | Commentaire                                                                     |
 | --------------------- | ------- | ------ | ------------------------------------------------------------------------------- |
 | wk exclude from range | Integer | 1      | Les contenus insérés ne sont pas inclus dans la plage mise à jour               |
 | wk include in range   | Integer | 0      | Contenu inséré inclus dans la plage mise à jour (par défaut) |
 
-If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
+Si vous ne passez pas un paramètre *rangeUpdate*, par défaut, la *formula* insérée est incluse dans la plage résultante.
 
 - Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.
 
 :::note
 
-Keep in mind that, when called, the formula object is evaluated within the context of the database or component that created it.
+N'oubliez pas que, lorsqu'il est appelé, l'objet formula est évalué dans le contexte de la base de données ou du composant qui l'a créé.
 
 :::
 
 ## Exemple 1
 
-To replace all current date formulas with formatted strings:
+Pour remplacer toutes les formules de date actuelles par des chaînes formatées :
 
 ```4d
  var $_formulas : Collection
  var $find;$newFormula : Object
  
-  // define the formula to find
+  // définir la formule à rechercher
  $find:=Formula(Current date)
  
-  // define the replacement formula
+  // définir la formule de remplacement
  $newFormula:=Formula(String(Current date;System date long))
  
-  // find all formulas in the document
+  // trouver toutes les formules dans le document
  $_formulas:=WP Get formulas(WriteProArea)
  
-  // query the collection from WP Get formulas
+  // requérir la collection à partir de WP Get formulas
  $_formulas:=$_formulas.query("formula.source =:1";$find.source)
  
-  // then replace each formula
+  // puis remplacer chaque formule
  For each($formula;$_formulas)
     WP Insert formula($formula.range;$newFormula;wk replace)
  End for each
@@ -93,19 +93,19 @@ To replace all current date formulas with formatted strings:
 
 ## Exemple 2
 
-You want to use a formula name for the customer name:
+Vous souhaitez utiliser un nom de formule pour le nom du client :
 
 ```4d
-  //add some data
+  //ajouter des données
  $data:=New object("customer";New object("lastname";"Smith";"firstname";"John"))
  WP SET DATA CONTEXT(WPArea;$data)
  
-  //create a formula object with a name
+  //créer un objet formule avec un nom
  $o:=New object
  $o.formula:=Formula(This.data.customer.firstname+" "+This.data.customer.lastname)
  $o.name:="Customer name"
  
-  //inserts as text
+  //s'insère comme un texte
  $range:=WP Text range(WPArea;wk start text;wk end text)
  WP SET TEXT($range;"Dear ";wk append)
  WP Insert formula($range;$o;wk append)
@@ -117,7 +117,7 @@ Résultat:
 
 ## Exemple 3
 
-You want to highlight a formula in yellow:
+Vous souhaitez surligner une formule en jaune :
 
 ```4d
 WParea:=WP New
