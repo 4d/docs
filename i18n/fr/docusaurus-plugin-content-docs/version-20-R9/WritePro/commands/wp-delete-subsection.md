@@ -9,21 +9,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 
-| Paramètres     | Type    |                             | Description                                                                        |
-| -------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | &#8594; | 4D Write Pro section                                                               |
-| subSectionType | Integer | &#8594; | Subsection type (wk first page, wk left page, or wk right page) |
-| subSection     | Object  | &#8594; | 4D Write Pro subsection                                                            |
+| Paramètres     | Type    |                             | Description                                                                             |
+| -------------- | ------- | --------------------------- | --------------------------------------------------------------------------------------- |
+| wpSection      | Object  | &#8594; | 4D Write Pro section                                                                    |
+| subSectionType | Integer | &#8594; | Type de sous-section (wk first page, wk left page, or wk right page) |
+| subSection     | Object  | &#8594; | Sous-section 4D Write Pro                                                               |
 
 <!-- END REF-->
 
 ## Description
 
-The **WP DELETE SUBSECTION** command <!--REF #_command_.WP DELETE SUBSECTION.Summary-->removes the *subSectionType* subsection elements from the *wpSection* 4D Write Pro section, or it directly removes the passed *subSection*<!-- END REF-->. Subsection elements include headers, footers, columns, anchored pictures, etc. Note that the body of the document is left untouched.
+La commande **WP DELETE SUBSECTION** <!--REF #_command_.WP DELETE SUBSECTION.Summary--> supprime les éléments de sous-section *subSectionType* de la section *wpSection* 4D Write Pro, ou supprime directement la *subSection*<!-- END REF--> passée. Les éléments de sous-section comprennent les en-têtes, les pieds de page, les colonnes, les images ancrées, etc. Notez que le corps du document n'est pas modifié.
 
-In *wpSection*, pass the section from which you want to remove the subsection elements. The section can be obtained using the [WP Get sections](../commands-legacy/wp-get-sections.md) or [WP Get section](../commands-legacy/wp-get-section.md) commands.
+Dans *wpSection*, passez la section à partir de laquelle vous voulez supprimer les éléments de la sous-section. La section peut être obtenue en utilisant les commandes [WP Get sections](../commands-legacy/wp-get-sections.md) ou [WP Get section](../commands-legacy/wp-get-section.md).
 
-The *subSectionType* parameter specifes the subsection to delete. You can pass one of the following constants:
+Le paramètre subSectionType spécifie la sous-section à supprimer. Vous pouvez passer l'une des constantes suivantes :
 
 | Constante     | Type    | Valeur |
 | ------------- | ------- | ------ |
@@ -33,33 +33,33 @@ The *subSectionType* parameter specifes the subsection to delete. You can pass o
 
 :::note
 
-Deleting a left page or right page subsection will automatically delete the opposite subsection. For example, if you delete a right page subsection, the left page subsection is automatically deleted.
+La suppression d'une sous-section de la page gauche ou de la page droite entraîne automatiquement la suppression de la sous-section opposée. Par exemple, si vous supprimez une sous-section de la page de droite, la sous-section de la page de gauche est automatiquement supprimée.
 
 :::
 
-If the *subSectionType* does not exist, the command does nothing (no error is generated).
+Si le *subSectionType* n'existe pas, la commande ne fait rien (aucune erreur n'est générée).
 
 :::note
 
-When a subsection is deleted, the header and footer are removed, as well as anchored pictures and textboxes but the body remains untouched.
+Lorsqu'une sous-section est supprimée, l'en-tête et le pied de page sont supprimés, ainsi que les images et les zones de texte ancrées, mais le corps reste intact.
 
 :::
 
 ## Exemple 1
 
-You want to delete the first page subsection of the first section:
+Vous souhaitez supprimer la sous-section "première page" de la première section :
 
 ```4d
  var $section;$subsection : Object
-  // get first section
+  // lire la première section
  $section:=WP Get section(wpDoc;1)
-  // Delete the subsection
+  // Supprimer la sous-section
  WP DELETE SUBSECTION($section;wk first page)
 ```
 
 ## Exemple 2
 
-You want to delete the right page subsection of section 3:
+Vous souhaitez supprimer la sous-section de la page de droite de la section 3 :
 
 ```4d
 
