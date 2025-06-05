@@ -1663,7 +1663,8 @@ A função `.unlock()` <!-- REF #EntityClass.unlock().Summary -->remove a tranca
 > Para saber mais veja [Entity locking](ORDA/entities.md#entity-locking).
 
 Um registro é destrancado automaticamente quando não for mais referenciado por nenhuma entidade no processo de trancamento (por exemplo, se uma tranca for posta apenas na referência local da entidade, a entidade e o registro é destrancado quando o processo terminar).
-> Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
+
+Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
 
 ```4d
  $e1:=ds. Emp.all()[0]
@@ -1672,6 +1673,13 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+
+:::
+
 
 **Resultados**
 
