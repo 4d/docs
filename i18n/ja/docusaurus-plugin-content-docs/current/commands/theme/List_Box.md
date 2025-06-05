@@ -29,7 +29,7 @@ slug: /commands/theme/List-Box
 | [<!-- INCLUDE #_command_.LISTBOX Get number of rows.Syntax -->](../../commands-legacy/listbox-get-number-of-rows.md)<br/>           |
 | [<!-- INCLUDE #_command_.LISTBOX GET OBJECTS.Syntax -->](../../commands-legacy/listbox-get-objects.md)<br/>                         |
 | [<!-- INCLUDE #_command_.LISTBOX GET PRINT INFORMATION.Syntax -->](../../commands-legacy/listbox-get-print-information.md)<br/>     |
-| [<!-- INCLUDE #_command_.LISTBOX Get property.Syntax -->](../../commands-legacy/listbox-get-property.md)<br/>                       |
+| [<!-- INCLUDE #_command_.LISTBOX Get property.Syntax -->](../listbox-get-property.md)<br/>                                          |
 | [<!-- INCLUDE #_command_.LISTBOX Get row color.Syntax -->](../../commands-legacy/listbox-get-row-color.md)<br/>                     |
 | [<!-- INCLUDE #_command_.LISTBOX Get row color as number.Syntax -->](../../commands-legacy/listbox-get-row-color-as-number.md)<br/> |
 | [<!-- INCLUDE #_command_.LISTBOX Get row font style.Syntax -->](../../commands-legacy/listbox-get-row-font-style.md)<br/>           |
@@ -57,7 +57,7 @@ slug: /commands/theme/List-Box
 | [<!-- INCLUDE #_command_.LISTBOX SET HEADERS HEIGHT.Syntax -->](../../commands-legacy/listbox-set-headers-height.md)<br/>           |
 | [<!-- INCLUDE #_command_.LISTBOX SET HIERARCHY.Syntax -->](../../commands-legacy/listbox-set-hierarchy.md)<br/>                     |
 | [<!-- INCLUDE #_command_.LISTBOX SET LOCKED COLUMNS.Syntax -->](../../commands-legacy/listbox-set-locked-columns.md)<br/>           |
-| [<!-- INCLUDE #_command_.LISTBOX SET PROPERTY.Syntax -->](../../commands-legacy/listbox-set-property.md)<br/>                       |
+| [<!-- INCLUDE #_command_.LISTBOX SET PROPERTY.Syntax -->](../listbox-set-property.md)<br/>                                          |
 | [<!-- INCLUDE #_command_.LISTBOX SET ROW COLOR.Syntax -->](../../commands-legacy/listbox-set-row-color.md)<br/>                     |
 | [<!-- INCLUDE #_command_.LISTBOX SET ROW FONT STYLE.Syntax -->](../../commands-legacy/listbox-set-row-font-style.md)<br/>           |
 | [<!-- INCLUDE #_command_.LISTBOX SET ROW HEIGHT.Syntax -->](../../commands-legacy/listbox-set-row-height.md)<br/>                   |
