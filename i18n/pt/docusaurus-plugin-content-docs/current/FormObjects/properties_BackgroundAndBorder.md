@@ -51,7 +51,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. Para mais informações, consulte a descrição do comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) no *Manual de Linguagem 4D*.
 
-Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](../commands-legacy/listbox-set-property.md) com a constante `lk color expression`.
+Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) com a constante `lk color expression`.
 
 > Com os list box de tipo coleção ou seleção de entidades, esta propriedade também pode ser definida usando uma [Meta Info Expression](properties_Text.md#meta-info-expression).
 
