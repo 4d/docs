@@ -29,9 +29,9 @@ Chaque objet de formulaire actif est associé à un nom d'objet. Chaque nom d'ob
 
 > Les noms d'objets sont limités à une taille de 255 octets.
 
-When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../category/object-forms)).
+Lorsque vous utilisez le langage 4D, vous pouvez vous référer à un objet de formulaire actif par son nom d'objet (voir les commandes [Objects (Forms)](../category/object-forms)).
 
-For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
+Pour plus d'informations sur les règles de nommage pour les objets de formulaire, reportez-vous à la section [Identifiers](Concepts/identifiers.md).
 
 #### Grammaire JSON
 
@@ -47,18 +47,18 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 ## Mémoriser valeur
 
-This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
+Cette propriété est disponible lorsque l'option [Mémoriser géométrie](FormEditor/properties_FormProperties.md#save-geometry) est sélectionnée pour le formulaire.
 
 Cette fonction n'est disponible que pour les objets qui contribuent à la géométrie globale du formulaire. Par exemple, cette option est disponible pour les cases à cocher car leur valeur peut être utilisée pour masquer ou afficher des zones supplémentaires dans la fenêtre.
 
 Voici la liste des objets dont la valeur peut être mémorisée :
 
-| Object                                     | Valeur mémorisée                                                                                         |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Valeur de la variable associée (0, 1, 2)                                              |
-| [Drop-down List](dropdownList_Overview.md) | Numéro de la ligne sélectionnée                                                                          |
-| [Radio Button](radio_overview.md)          | Valeur de la variable associée (1, 0, True ou False pour les boutons selon leur type) |
-| [Tab control](tabControl.md)               | Numéro de l'onglet sélectionné                                                                           |
+| Object                                       | Valeur mémorisée                                                                                         |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [Case à cocher](checkbox_overview.md)        | Valeur de la variable associée (0, 1, 2)                                              |
+| [Liste déroulante](dropdownList_Overview.md) | Numéro de la ligne sélectionnée                                                                          |
+| [Bouton Radio](radio_overview.md)            | Valeur de la variable associée (1, 0, True ou False pour les boutons selon leur type) |
+| [Onglet](tabControl.md)                      | Numéro de l'onglet sélectionné                                                                           |
 
 #### Grammaire JSON
 
@@ -68,7 +68,7 @@ Voici la liste des objets dont la valeur peut être mémorisée :
 
 #### Objets pris en charge
 
-[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
+[Case à cocher](checkbox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [Bouton radio](radio_overview.md) - [Onglets](tabControl.md)
 
 ---
 
@@ -239,7 +239,7 @@ Nom de la [zone externe de plugin](pluginArea_overview.md) associée à l'objet.
 
 #### Objets pris en charge
 
-[Plug-in Area](pluginArea_overview.md)
+[Zone de plugin](pluginArea_overview.md)
 
 ---
 
@@ -255,7 +255,7 @@ Permet d'utiliser les boutons radio dans des ensembles coordonnés : un seul bou
 
 #### Objets pris en charge
 
-[Radio Button](radio_overview.md)
+[Bouton Radio](radio_overview.md)
 
 ---
 
@@ -281,7 +281,7 @@ Pour des raisons de traduction d'applications, vous pouvez entrer une référenc
 
 #### Objets pris en charge
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Bouton](button_overview.md) - [Case à cocher](checkbox_overview.md) - [En-tête de Listbox](listbox_overview.md#list-box-headers) - [Bouton radio](radio_overview.md) - [Zone de texte](text.md)
 
 ---
 
@@ -316,15 +316,15 @@ Les valeurs *Null* ne sont prises en compte pour aucun calcul.
 Si la colonne contient différents types de valeurs (colonne basée sur une collection par exemple) :
 
 - Les fonctions Average et Sum ne prennent en compte que les éléments numériques (les autres types d'éléments sont ignorés).
-- Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/CollectionClass.md#sort) function.
+- Minimum et Maximum renvoient un résultat selon l'ordre habituel de la liste de types, tel que documenté dans la fonction [collection.sort()](API/CollectionClass.md#sort).
 
 L'utilisation de calculs automatiques dans les pieds de colonnes basées sur des expressions présente les limitations suivantes :
 
-- it is **supported** with all list box types when the expression is "simple" (such as `[table]field` or `this.attribute`),
-- it is **supported but not recommended** for performance reasons with collection/entity selection list boxes when the expression is "complex" (other than `this.attribute`) and the list box contains a large number of rows,
-- it is **not supported** with current selection/named selection list boxes when the expression is "complex". Vous devez utiliser des calculs personnalisés.
+- elle est **prise en charge** par tous les types de list box lorsque l'expression est "simple" (comme `[table]field` ou `this.attribute`),
+- elle est **prise en charge mais non recommandée** pour des raisons de performances avec des listbox collection/entity selection lorsque l'expression est "complexe" (autre que `this.attribute`) et que la list box contient un grand nombre de lignes,
+- elle n'est **pas prise en charge** avec les listbox sélection courante/sélection temporaire lorsque l'expression est "complexe". Vous devez utiliser des calculs personnalisés.
 
-When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
+Lorsque **Custom** ("none" en JSON) est défini, aucun calcul automatique n'est effectué par 4D et vous devez assigner la valeur de la variable dans cette zone par programmation.
 
 #### Grammaire JSON
 
@@ -334,4 +334,4 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 #### Objets pris en charge
 
-[List Box Footer](listbox_overview.md#list-box-footers)
+[Pied de listbox](listbox_overview.md#list-box-footers)
