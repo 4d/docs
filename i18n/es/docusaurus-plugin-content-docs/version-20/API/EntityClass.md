@@ -935,7 +935,12 @@ El objeto devuelto por <`.unlock()<` contiene la siguiente propiedad:
 * cuando la función [`unlock()`](#unlock) se llama en una entidad correspondiente en el mismo proceso
 * automáticamente, cuando ya no es referenciado por ninguna entidad en la memoria. Por ejemplo, si el bloqueo se pone sólo en una referencia local de una entidad, la entidad se desbloquea cuando la función termina. Mientras haya referencias a la entidad en la memoria, el registro permanece bloqueado.
 
-> Una entidad también puede ser [bloqueada por una sesión REST](../REST/$lock.md), en cuyo caso sólo puede ser desbloqueada por la sesión.
+:::note Notas
+
+- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- Una entidad también puede ser [bloqueada por una sesión REST](../REST/$lock.md), en cuyo caso sólo puede ser desbloqueada por la sesión.
+
+:::
 
 Por defecto, si se omite el parámetro *mode*, la función devolverá un error (ver más abajo) si la misma entidad fue modificada (es decir, el sello ha cambiado) por otro proceso o usuario en el ínterin.
 
@@ -1737,7 +1742,8 @@ La función `.unlock()` <!-- REF #EntityClass.unlock().Summary -->elimina el blo
 > Para más información, consulte la sección [Entity locking](ORDA/entities.md#entity-locking).
 
 Un registro se desbloquea automáticamente cuando ya no es referenciado por ninguna entidad en el proceso de bloqueo (por ejemplo: si el bloqueo se pone sólo en una referencia local de una entidad, la entidad y, por tanto, el registro se desbloquea cuando el proceso termina).
-> Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
+
+Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1746,6 +1752,13 @@ Un registro se desbloquea automáticamente cuando ya no es referenciado por ning
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+
+:::
+
 
 **Resultado**
 
