@@ -1676,7 +1676,7 @@ Lorsqu'un enregistrement est verrouillé, il doit être déverrouillé depuis le
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+`unlock()` doit être appelé autant de fois que [`lock()`](#lock) a été appelé dans le même process pour que l'entité soit effectivement déverrouillée.
 
 :::
 
