@@ -2293,6 +2293,7 @@ module.exports =
             "API/TCPConnectionClass",
             "API/TCPEventClass",
             "API/TCPListenerClass",
+            "API/VectorClass",
             "API/WebFormClass",
             "API/WebFormItemClass",
             "API/WebServerClass",
