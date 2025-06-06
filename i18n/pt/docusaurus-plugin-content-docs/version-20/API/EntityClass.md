@@ -933,7 +933,12 @@ Um registro bloqueado está desbloqueado:
 * quando a função [`desbloqueia()`](#unlock) é chamada a uma entidade correspondente no mesmo processo
 * automaticamente, quando já não é referenciado por nenhuma entidade em memória. Por exemplo, se a fechadura for colocada apenas numa referência local de uma entidade, a entidade é desbloqueada quando a função termina. Enquanto houver referências à entidade em memória, o registo permanece bloqueado.
 
-> Uma entidade pode ser [locked by a REST session](../REST/$lock.md), em cujo caso só pode ser destravado pela sessão.
+:::note Notas
+
+- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- Uma entidade pode ser [locked by a REST session](../REST/$lock.md), em cujo caso só pode ser destravado pela sessão.
+
+:::
 
 Por padrão, se o parâmetro *modo* for omitido, a função retornará um erro (veja abaixo) se a mesma entidade tiver sido modificada (ou seja, O selo mudou) por outro processo ou usuário nesse meio tempo.
 
@@ -1735,7 +1740,8 @@ A função `.unlock()` <!-- REF #EntityClass.unlock().Summary -->remove a tranca
 > Para saber mais veja [Entity locking](ORDA/entities.md#entity-locking).
 
 Um registro é destrancado automaticamente quando não for mais referenciado por nenhuma entidade no processo de trancamento (por exemplo, se uma tranca for posta apenas na referência local da entidade, a entidade e o registro é destrancado quando o processo terminar).
-> Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
+
+Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
 
 ```4d
  $e1:=ds. Emp.all()[0]
@@ -1744,6 +1750,13 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+
+:::
+
 
 **Resultados**
 

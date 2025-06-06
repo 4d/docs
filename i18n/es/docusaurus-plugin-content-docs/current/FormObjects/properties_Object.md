@@ -110,22 +110,6 @@ Obtener o definir el valor de los objetos del formulario que utilizan variables 
  OBJECT SET VALUE("comments";$value+10) 
 ```
 
-Este mecanismo tiene dos ventajas:
-
-- Por un lado, permite desarrollar componentes de tipo "subformulario" que pueden utilizarse varias veces en el mismo formulario local. Tomemos como ejemplo el caso de un subformulario datepicker que se inserta dos veces en un formulario anfitrión para definir una fecha de inicio y una fecha de fin. Este subformulario utilizará objetos para elegir la fecha del mes y del año. Será necesario que estos objetos trabajen con variables diferentes para la fecha de inicio y la fecha final. Dejar que 4D cree su variable con un nombre único es una forma de resolver esta dificultad.
-- Por otra parte, puede utilizarse para limitar el uso de la memoria. De hecho, los objetos formulario sólo funcionan con variables proceso o interproceso. Sin embargo, en el modo compilado, se crea una instancia de cada variable de proceso en todos los procesos, incluidos los procesos del servidor. Esta instancia ocupa memoria, incluso cuando el formulario no se utiliza durante la sesión. Por lo tanto, dejar que 4D cree variables dinámicamente al cargar los formularios puede ahorrar memoria.
-
-En el código 4D, las variables dinámicas mismas pueden ser accedidas usando [`OBJECT Get data source formula`](../commands/object-get-data-sourvce-formula.md) o a través de un puntero. Por ejemplo:
-
-```4d
-  // para obtener la variable dinámica asignada a "tstart"
- $var:=OBJECT Get data source formula(*; "tstart")
-  //$var es el nombre de la variable
-  //OR
- $var:=OBJECT Get pointer(Object named;"tstart") 
-  //$var-> da el nombre de la variable
-```
-
 ### List box array
 
 Para un list box array, la propiedad **Variable o Expresión** normalmente contiene el nombre de la variable array definida para el list box y para cada columna. Sin embargo, puede utilizar un array de cadenas (que contenga nombres de arrays) como *dataSource* valor de una columna list box para definir un [list box jerárquico](listbox_overview.md#hierarchical-list-boxes).

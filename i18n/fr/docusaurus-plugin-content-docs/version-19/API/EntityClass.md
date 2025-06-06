@@ -1663,7 +1663,8 @@ La fonction `unlock()` <!-- REF #EntityClass.unlock().Summary -->supprime le ver
 > Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
 
 Un enregistrement est automatiquement déverrouillé lorsqu'il n'est plus référencé par aucune entité dans le process qui l'a verrouillé (par exemple : si le verrou est posé sur uniquement sur une référence locale d'une entité, l'entité et donc l'enregistrement sont déverrouillés lorsque le process se termine).
-> Lorsqu'un enregistrement est verrouillé, il doit être déverrouillé depuis le process qui l'a verrouillé et via la référence d'entité sur laquelle le verrou a été posé. Par exemple :
+
+Lorsqu'un enregistrement est verrouillé, il doit être déverrouillé depuis le process qui l'a verrouillé et via la référence d'entité sur laquelle le verrou a été posé. Par exemple :
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1672,6 +1673,13 @@ Un enregistrement est automatiquement déverrouillé lorsqu'il n'est plus réfé
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+
+:::
+
 
 **Résultat**
 

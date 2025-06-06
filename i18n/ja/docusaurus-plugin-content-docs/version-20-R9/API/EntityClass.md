@@ -956,7 +956,12 @@ $info:=$address.getRemoteContextAttributes()
 - 同プロセス内で合致するエンティティに対して [`.unlock()`](#unlock) 関数が呼び出された場合
 - メモリ内のどのエンティティからも参照されなくなった場合、自動的にロックが解除されます。 たとえば、エンティティのローカル参照に対してのみロックがかかっていた場合、関数の実行が終了すればロックは解除されます。 メモリ内にエンティティへの参照がある限り、レコードはロックされたままです。
 
-> エンティティは [RESTセッションによってロックされる](../REST/$lock.md) 場合もあります。
+:::note 注記
+
+- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- エンティティは [RESTセッションによってロックされる](../REST/$lock.md) 場合もあります。
+
+:::
 
 *mode* 引数を渡さなかった場合のデフォルトでは、同エンティティが他のプロセスまたはユーザーによって変更されていた場合 (つまり、スタンプが変更されていた場合) にエラーを返します (以下参照)。
 
@@ -1767,7 +1772,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 ロックしているプロセス内のどのエンティティからもレコードが参照されなくなった場合、自動的にレコードロックが解除されます (たとえば、エンティティのローカル参照に対してのみロックがかかっていた場合、プロセスが終了すればエンティティおよびレコードのロックは解除されます)。
 
-> レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例: 例:
+レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例: 例:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1776,6 +1781,12 @@ employeeObject:=employeeSelected.toObject("directReports.*")
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+
+:::
 
 **戻り値**
 

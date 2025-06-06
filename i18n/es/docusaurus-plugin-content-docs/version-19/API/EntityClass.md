@@ -1663,7 +1663,8 @@ La función `.unlock()` <!-- REF #EntityClass.unlock().Summary -->elimina el blo
 > Para más información, consulte la sección [Entity locking](ORDA/entities.md#entity-locking).
 
 Un registro se desbloquea automáticamente cuando ya no es referenciado por ninguna entidad en el proceso de bloqueo (por ejemplo: si el bloqueo se pone sólo en una referencia local de una entidad, la entidad y, por tanto, el registro se desbloquea cuando el proceso termina).
-> Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
+
+Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1672,6 +1673,13 @@ Un registro se desbloquea automáticamente cuando ya no es referenciado por ning
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+
+:::
+
 
 **Resultado**
 
