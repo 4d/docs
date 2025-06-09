@@ -957,7 +957,7 @@ Un registro bloqueado por `.lock()` se desbloquea:
 
 :::note Notas
 
-- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- [`unlock()`](#unlock) debe ser llamado tantas veces como `lock()` fue llamado en el mismo proceso para que la entidad sea realmente desbloqueada.
 - Una entidad también puede ser [bloqueada por una sesión REST](../REST/$lock.md), en cuyo caso solo puede ser desbloqueada por la sesión.
 
 :::
@@ -1783,7 +1783,7 @@ Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y 
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+`unlock()` debe ser llamado tantas veces como [`lock()`](#lock) fue llamado en el mismo proceso para que la entidad sea realmente desbloqueada.
 
 :::
 
