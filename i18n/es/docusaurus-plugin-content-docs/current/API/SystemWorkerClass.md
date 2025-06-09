@@ -112,7 +112,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onData` y `onDataError` se ejecutan una o varias veces
 2. si se llama, `onError` se ejecuta una vez (detiene el procesamiento del system worker)
 3. si no se ha producido ningún error, `onResponse` se ejecuta una vez
-4. `onTerminate` is always executed
+4. `onTerminate` se ejecuta siempre una vez
 
 :::info
 
@@ -559,9 +559,9 @@ Esta propiedad es de **solo lectura**.
 
 La función `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera hasta el final de la ejecución de `SystemWorker` o se alcanza el *timeout* especificado<!-- END REF -->.
 
-The `.wait()` function waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached(If any is defined), or an error has occured. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
+La función `.wait()` espera hasta el final del procesamiento de la fórmula `onTerminate`, excepto si el *timeout* es alcanzado (Si alguno está definido), o ha ocurrido un error. Si se alcanza el *timeout*, no se elimina el `SystemWorker`.
 
-If you pass a *timeout* value, .wait() waits for the external process for the amount of time defined in the *timeout* parameter.
+Si pasa un valor de *timeout*, .wait() espera el proceso externo por la cantidad de tiempo definido en el parámetro *timeout*.
 
 :::note
 
