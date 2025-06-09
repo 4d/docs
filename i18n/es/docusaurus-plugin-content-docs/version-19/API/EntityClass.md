@@ -1676,7 +1676,7 @@ Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y 
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+`unlock()` debe ser llamado tantas veces como [`lock()`](#lock) fue llamado en el mismo proceso para que la entidad sea realmente desbloqueada.
 
 :::
 
