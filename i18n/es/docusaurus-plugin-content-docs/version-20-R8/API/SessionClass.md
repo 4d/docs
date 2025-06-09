@@ -70,7 +70,7 @@ La función `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summar
 
 :::note
 
-In "forceLogin" mode, `.clearPrivileges()` does not transform the session to a Guest session, it only clears the session's privileges.
+En modo "forceLogin", `.clearPrivileges()` no transforma la sesión a una sesión de invitado, sólo elimina los privilegios de la sesión.
 
 :::
 
@@ -148,7 +148,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 La función `.getPrivileges()` <!-- REF #SessionClass.getPrivileges().Summary -->devuelve una colección de todos los nombres de privilegios asociados a la sesión<!-- END REF -->.
 
-With remote client, stored procedure and standalone sessions, this function returns a collection only containing "WebAdmin".
+Con clientes remotos, procedimientos almacenados y sesiones independientes, esta función devuelve una colección que sólo contiene "WebAdmin".
 
 :::info
 
@@ -244,7 +244,7 @@ $privileges := Session.getPrivileges()
 
 La función `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->devuelve True si *privilege* está asociado a la sesión, y False en caso contrario<!-- END REF -->.
 
-With remote client, stored procedure and standalone sessions, this function always returns True, whatever the *privilege*.
+Con cliente remoto, procedimientos almacenados y sesiones independientes, esta función siempre devuelve True, sea cual sea el *privilege*.
 
 #### Ejemplo
 
@@ -277,7 +277,7 @@ End if
 
 #### Descripción
 
-La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->el identificador único (UUID) de la sesión de usuario<!-- END REF -->. With 4D Server, this unique string is automatically assigned by the server for each session and allows you to identify its processes.
+La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->el identificador único (UUID) de la sesión de usuario<!-- END REF -->. Con 4D Server, esta cadena única es asignada automáticamente por el servidor para cada sesión y permite identificar sus procesos.
 
 :::tip
 
@@ -353,7 +353,7 @@ End if
 
 :::note
 
-This property is only available with remote client, stored procedure, and standalone sessions.
+Esta propiedad solo está disponible con clientes remotos, procedimientos almacenados y sesiones independientes.
 
 :::
 
@@ -368,18 +368,18 @@ La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión 
 
 El objeto `.info` contiene las siguientes propiedades:
 
-| Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                              |
-| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone"                                                                                                                                                                |
-| userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                       |
-| machineName      | Text          | Sesiones remotas: nombre de la máquina remota. Sesión de procedimientos almacenados: nombre del equipo servidor. Standalone session: name of the machine |
-| systemUserName   | Text          | Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.                                                                                                                          |
-| IPAddress        | Text          | Dirección IP de la máquina remota                                                                                                                                                                                                        |
-| hostType         | Text          | Tipo de host: "windows" o "mac"                                                                                                                                                                                          |
-| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión. Standalone session: date and time of application startup                                                                                                          |
-| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                   |
-| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                      |
-| persistentID     | Text          | Remote sessions: Session's persistent ID                                                                                                                                                                                 |
+| Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                            |
+| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone"                                                                                                                                                              |
+| userName         | Text          | Nombre de usuario 4D (mismo valor que [`.userName`](#username))                                                                                                                                                     |
+| machineName      | Text          | Sesiones remotas: nombre de la máquina remota. Sesión de procedimientos almacenados: nombre del equipo servidor. Sesión autónoma: nombre de la máquina |
+| systemUserName   | Text          | Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.                                                                                                                        |
+| IPAddress        | Text          | Dirección IP de la máquina remota                                                                                                                                                                                                      |
+| hostType         | Text          | Tipo de host: "windows" o "mac"                                                                                                                                                                                        |
+| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión. Sesión autónoma: fecha y hora de inicio de la aplicación                                                                                                        |
+| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                 |
+| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                    |
+| persistentID     | Text          | Sesiones remotas: ID persistente de la sesión                                                                                                                                                                          |
 
 :::note
 
@@ -415,7 +415,7 @@ Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y lu
 
 :::note
 
-This function always returns **False** with remote client, stored procedure, and standalone sessions.
+Esta función siempre devuelve **False** con clientes remotos, procedimientos almacenados y sesiones independientes.
 
 :::
 
@@ -463,7 +463,7 @@ End if
 
 :::note
 
-This function does nothing and always returns **False** with remote client, stored procedure, and standalone sessions.
+Esta función no hace nada y siempre devuelve **False** con cliente remoto, procedimiento almacenado y sesiones independientes.
 
 :::
 
