@@ -389,10 +389,10 @@ The folling keys can be defined:
 | CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                                                  |
 | NSHumanReadableCopyright                                   | Copyright a mostrar                                                                                                                                                                              |
 | CFBundleVersion                                            | Versión del componente                                                                                                                                                                           |
-| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                                              |
+| CFBundleShortVersionString                                 | Versión del componente a mostrar                                                                                                                                                                 |
 | com.4d.minSupportedVersion | Versión mínima soportada en 4D, utilizada por el administrador de Dependencias para [versiones de componentes posteriores a 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
 
-Here is an example of `Info.plist` file:
+Aquí hay un ejemplo del archivo `Info.plist`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
