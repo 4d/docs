@@ -1538,7 +1538,7 @@ Retorna:
 
 #### Descrição
 
-A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se pelo menos um atributo da entidade foi modificado desde que a entidade foi carregada na memória ou salva<!-- END REF -->. Pode usar essa função para determinar se precisar salvar a entidade.
 
 Isso só se aplica a atributos do tipo [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
