@@ -43,7 +43,7 @@ Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIA
 Si le formulaire courant est un sous-formulaire, l'objet renvoyé dépend de la variable du conteneur parent :
 
 - Si la variable associée au conteneur parent a été typée comme objet, **Form** renvoie la valeur de cette variable.\
- Dans ce cas, l'objet renvoyé par **Form** est le même que celui renvoyé par l'expression suivante :
+    Dans ce cas, l'objet renvoyé par **Form** est le même que celui renvoyé par l'expression suivante :
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
