@@ -33,10 +33,10 @@ Toutes les formules ont des opérandes et des opérateurs :
 
 - **Opérateurs** : voir [Valeurs et opérateurs](#values-and-operators) ci-dessous.
 - **Les opérandes** comprennent plusieurs catégories:
- - [valeurs](#values-and-operators) (5 types de données sont pris en charge)
- - [Les références à d'autres cellules](#cell-references) (relatives, absolues, mixtes ou par nom)
- - [fonctions de feuille de calcul standard](#built-in-functions)
- - [Fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
+  - [valeurs](#values-and-operators) (5 types de données sont pris en charge)
+  - [Les références à d'autres cellules](#cell-references) (relatives, absolues, mixtes ou par nom)
+  - [fonctions de feuille de calcul standard](#built-in-functions)
+  - [Fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
 
 ## Valeurs et opérateurs
 
@@ -191,11 +191,11 @@ Nous souhaitons imprimer "Hello World" dans une cellule de la zone 4D View Pro e
 
 3. Modifiez le contenu d'une cellule dans une zone 4D View Pro et saisissez :
 
- ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
- "myMethod" est alors appelé par 4D et la cellule s'affiche :
+  "myMethod" est alors appelé par 4D et la cellule s'affiche :
 
- ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Paramètres
 
@@ -246,10 +246,10 @@ Les méthodes projet 4D peuvent également retourner des valeurs dans la formule
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg autres types convertis en png) crée un URI (data:image/png;base64,xxxx) et ensuite utilisé comme fond dans 4D View Pro dans la cellule où la formule est exécutée
 - [objet](Concepts/dt_object.md) avec les deux propriétés suivantes (permettant de passer une date et une heure) :
 
- | Propriété | Type | Description       |
- | --------- | ---- | ----------------- |
- | value     | Date | Valeur date       |
- | time      | Real | Heure en secondes |
+  | Propriété | Type | Description       |
+  | --------- | ---- | ----------------- |
+  | value     | Date | Valeur date       |
+  | time      | Real | Heure en secondes |
 
 Si la méthode 4D ne retourne rien, une chaîne vide est automatiquement retournée.
 
@@ -321,19 +321,19 @@ Nous souhaitons imprimer le nom d'une personne dans une cellule de la zone 4D Vi
 
 2. Exécuter le code suivant pour initialiser une structure virtuelle :
 
- ```4d
- ARRAY TEXT($tableTitles;1)
- ARRAY LONGINT($tableNum;1)
- $tableTitles{1}:="Emp"
- $tableNum{1}:=2
- SET TABLE TITLES($tableTitles;$tableNum;*)
-  
- ARRAY TEXT($fieldTitles;1)
- ARRAY LONGINT($fieldNum;1)
- $fieldTitles{1}:="Name"
- $fieldNum{1}:=2 //nom de famille
- SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
- ```
+  ```4d
+  ARRAY TEXT($tableTitles;1)
+  ARRAY LONGINT($tableNum;1)
+  $tableTitles{1}:="Emp"
+  $tableNum{1}:=2
+  SET TABLE TITLES($tableTitles;$tableNum;*)
+   
+  ARRAY TEXT($fieldTitles;1)
+  ARRAY LONGINT($fieldNum;1)
+  $fieldTitles{1}:="Name"
+  $fieldNum{1}:=2 //nom de famille
+  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+  ```
 
 3. Modifiez le contenu d'une cellule de la zone 4D View Pro et saisir "=e" :
 
