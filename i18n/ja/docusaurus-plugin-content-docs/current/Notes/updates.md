@@ -19,7 +19,7 @@ title: リリースノート
 #### 動作の変更
 
 - Windows 上では、印刷しか想定していない(つまりスクリーン上で使用不可能な)カレントプリンターフォントは、4D の起動時にはロードされないようになりました。
-- *MeCab* ライブラリー (日本語言語における並べ替え/検索に使用)のサポートは削除されました。 ICU を使用可能にするため、4D 20 R10 以降のバージョンの初回起動時において、文字列型、テキスト型、オブジェクト型フィールドに対して4D は自動的に再インデックスを行います。
+- The *MeCab* library has been removed. This change only affects the processing of Japanese text.
 
 ## 4D 20 R9
 
@@ -38,7 +38,7 @@ title: リリースノート
 - 新しい[4D AIKit コンポーネント](../aikit/overview.md) を使用することでサードパーティAI のAPI とやり取りをすることが可能になります。
 - 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
 - Google およびMicrosoft 365 カレンダーを管理するための新しい[4D Netkit](https://developer.4d.com/4D-NetKit/) 機能。OAuth 2.0 認証のためのホストWeb サーバーを使用する機能。
-- [*MeCab* ライブラリー](../settings/database.md#support-of-mecab-japanese-version) (日本語言語における並べ替え/検索に使用) は廃止予定となり、そのサポートは次のリリースにおいて削除される予定です。
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - 4D Write Pro インターフェース: 新しい [統合されたAI](../WritePro/writeprointerface.md#integrated-ai) を使用して、4D Write Pro ドキュメントから**chatGTP** とやり取りすることができます。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R9): 4D 20 R9 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/99/release-note-version-20r9//))。
 
