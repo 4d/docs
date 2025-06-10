@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro |
 | breakType   | Integer | &#8594; | Type of break to insert                   |
 | mode        | Integer | &#8594; | Modo de inserción                         |
-| rangeUpdate | Integer | &#8594; | Range update mode                         |
+| rangeUpdate | Integer | &#8594; | Modo de actualización del rango           |
 | Resultado   | Object  | &#8592; | Text range of the break character         |
 
 <!-- END REF-->
