@@ -37,7 +37,7 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 
 :::
 
-## $4d Object
+## $4d オブジェクト
 
 The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 

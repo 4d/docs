@@ -1538,11 +1538,11 @@ Retorna:
 
 #### Descrição
 
-A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se pelo menos um atributo da entidade foi modificado desde que a entidade foi carregada na memória ou salva<!-- END REF -->. Pode usar essa função para determinar se precisar salvar a entidade.
 
 Isso só se aplica a atributos do tipo [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
-Para uma nova entidade que acabou de ser criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Para uma nova entidade que acabou de ser criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. Por exemplo, após executar `$id:=ds.Employee.ID` para uma nova entidade (assumindo que o atributo de ID tem a propriedade "Autoincrement"), `.touched()` retorna True.
 
 
 #### Exemplo
@@ -1676,7 +1676,7 @@ Quando um registro for trancado, deve ser destrancado do processo de trancamento
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+`unlock()` deve ser chamado tantas vezes quanto [`lock()`](#lock) foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
 
 :::
 

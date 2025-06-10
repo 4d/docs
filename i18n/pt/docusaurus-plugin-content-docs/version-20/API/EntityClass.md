@@ -1618,7 +1618,7 @@ Retorna:
 
 A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->.
 
-Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. You can use this function to determine if you need to save the entity.
+Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
 
 Esta função retorna False para uma nova entidade que foi criada (com [`.new( )`](DataClassClass.md#new)). Note entretanto que se usar uma função que calcule um atributo da entidade, a função `.touched()` vai retornar True. Por exemplo se chamar [`.getKey()`](#getkey) para calcular a chave primária, `.touched()` retorna True.
 
@@ -1753,7 +1753,7 @@ Quando um registro for trancado, deve ser destrancado do processo de trancamento
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+`unlock()` deve ser chamado tantas vezes quanto [`lock()`](#lock) foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
 
 :::
 

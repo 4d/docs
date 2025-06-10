@@ -13,13 +13,13 @@ title: リリースノート
 - 4D 内でのUUID は**バージョン7**で生成されるようになりました。 以前の4D のリリースでは、バージョン4で生成されていました。
 - 4Dランゲージ:
     - 統一性のため、[`Create entity selection`](../commands/create-entity-selection.md) コマンドおよび [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) コマンドは、["4D 環境"](../commands/theme/4D_Environment.md) テーマから ["Selection"](../commands/theme/Selection.md) テーマへと移動しました。
-    - New [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) and [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) commands to assign and read `Formula` objects as data sources for form objects.
-    - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) and [`LISTBOX Get property`](../commands/listbox-get-property.md) support three new constants: `lk current item`, `lk current item position`, and `lk selected items expression`.
+    - 新しい [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) および [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) コマンドを使用して、フォームオブジェクトに対して`Formula` オブジェクトを割り当て、または読み出しができるようになります。
+    - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) および [`LISTBOX Get property`](../commands/listbox-get-property.md) は3つの新しい定数をサポートするようになりました: `lk current item`、`lk current item position`、および `lk selected items expression` です。
 
 #### 動作の変更
 
-- On Windows, current printer fonts intended only for printing (i.e. not usable on screen) are no longer loaded by 4D at startup.
-- The support for *MeCab* library (used for sorting/searching in Japanese language) has been removed. To allow to use ICU, 4D will automatically reindex every Alpha, Text or Object field on first launch with 4D 20 R10 or newer.
+- Windows 上では、印刷しか想定していない(つまりスクリーン上で使用不可能な)カレントプリンターフォントは、4D の起動時にはロードされないようになりました。
+- *MeCab* ライブラリー (日本語言語における並べ替え/検索に使用)のサポートは削除されました。 ICU を使用可能にするため、4D 20 R10 以降のバージョンの初回起動時において、文字列型、テキスト型、オブジェクト型フィールドに対して4D は自動的に再インデックスを行います。
 
 ## 4D 20 R9
 
@@ -38,7 +38,7 @@ title: リリースノート
 - 新しい[4D AIKit コンポーネント](../aikit/overview.md) を使用することでサードパーティAI のAPI とやり取りをすることが可能になります。
 - 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
 - Google およびMicrosoft 365 カレンダーを管理するための新しい[4D Netkit](https://developer.4d.com/4D-NetKit/) 機能。OAuth 2.0 認証のためのホストWeb サーバーを使用する機能。
-- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) (used for sorting/searching in Japanese language) is now deprecated and its support will be removed in the next release.
+- [*MeCab* ライブラリー](../settings/database.md#support-of-mecab-japanese-version) (日本語言語における並べ替え/検索に使用) は廃止予定となり、そのサポートは次のリリースにおいて削除される予定です。
 - 4D Write Pro インターフェース: 新しい [統合されたAI](../WritePro/writeprointerface.md#integrated-ai) を使用して、4D Write Pro ドキュメントから**chatGTP** とやり取りすることができます。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R9): 4D 20 R9 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/99/release-note-version-20r9//))。
 
@@ -121,7 +121,7 @@ title: リリースノート
 - 公開されたシングルトン関数を REST で呼び出すための新しい [`$singleton` API](../REST/$singleton.md) と、それに伴う新しい [権限](../ORDA/privileges.md) が追加されました。
 - プロジェクトを "強制ログイン" RESTモードにアップグレードするための [新しい設定ボタン](../settings/web.md#dsauthentify-関数によって-rest認証を有効化する) が追加されました (`On REST Authentication`データベースメソッドは非推奨となりました)。
 - [新しい設定タブ](../Project/compiler.md#警告) を使用して、警告の生成をグローバルに定義できます。
-- Several commands, mainly from the "4D Environment" theme, are now thread-safe, as well as some selectors of the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) commands.
+- 主に"4D 環境"テーマからのコマンドを含めたいくつかのコマンドがスレッドセーフになったとともに、[`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドのいくつかもセレクターもスレッドセーフとなりました。
 - PDF/A3 ドキュメントから添付ファイルを抽出する `PDF Get attachments` コマンドを提供する新しい [4D-QPDF コンポーネント](https://github.com/4d/4D-QPDF)。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6993921.ja.html) ページ。

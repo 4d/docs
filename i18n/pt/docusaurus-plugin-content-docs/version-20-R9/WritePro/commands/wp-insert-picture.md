@@ -8,20 +8,20 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert picture.Params-->
 
-| Parâmetro      | Tipo                     |                             | Descrição                                                  |
-| -------------- | ------------------------ | --------------------------- | ---------------------------------------------------------- |
-| targetObj      | Object                   | &#8594; | Range or element or 4D Write Pro document                  |
-| picture        | Imagem                   | &#8594; | Picture field or variable, or path to picture file on disk |
-| pictureFileObj | 4D. File | &#8594; | A File object representing a picture file. |
-| mode           | Integer                  | &#8594; | Insertion mode                                             |
-| rangeUpdate    | Integer                  | &#8594; | Range update mode                                          |
-| Resultado      | Object                   | &#8592; | Object referencing the picture                             |
+| Parâmetro      | Tipo                     |                             | Descrição                                                                 |
+| -------------- | ------------------------ | --------------------------- | ------------------------------------------------------------------------- |
+| targetObj      | Object                   | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
+| picture        | Imagem                   | &#8594; | Campo de imagem ou variável, ou caminho para o arquivo de imagem no disco |
+| pictureFileObj | 4D. File | &#8594; | Um objeto de arquivo representando um arquivo de imagem.  |
+| mode           | Integer                  | &#8594; | Modo de inserção                                                          |
+| rangeUpdate    | Integer                  | &#8594; | Modo de atualização à escala                                              |
+| Resultado      | Object                   | &#8592; | Objeto referenciando a imagem                                             |
 
 <!-- END REF-->
 
 ## Descrição
 
-The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary--> inserts a *picture* or a *pictureFileObj* in the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and returns a reference to the picture element.<!-- END REF--> A imagem será inserida como um caractere no *targetObj*.
+O comando **WP Insert picture**<!--REF #_command_.WP Insert picture.Summary--> insere uma *picture* ou um *pictureFileObj* no *targetObj* de acordo com os parâmetros *mode* e *rangeUpdate* , e retorna uma referência ao elemento imagem.<!-- END REF--> A imagem será inserida como um caractere no *targetObj*.
 
 Em *targetObj*, você pode passar:
 

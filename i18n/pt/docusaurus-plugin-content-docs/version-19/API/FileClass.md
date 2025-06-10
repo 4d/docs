@@ -518,7 +518,7 @@ A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve a
 
 **Parâmetro *info* com um arquivo .exe ou .dll**
 
-The function must be used with an existing and valid .exe or .dll file, otherwise it does nothing (no error is generated).
+A função deve ser usada com um arquivo .exe ou .dll existente e valido, caso contrário não faz nada (nenhum erro é gerado).
 
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.

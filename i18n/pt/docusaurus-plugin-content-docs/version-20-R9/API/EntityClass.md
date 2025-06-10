@@ -1641,7 +1641,7 @@ Retorna:
 
 #### Descrição
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. Pode usar essa função para determinar se precisar salvar a entidade.
 
 Isso se aplica somente a atributos de [`kind`](DataClassClass.md#returned-object) "storage" ou "relatedEntity".
 

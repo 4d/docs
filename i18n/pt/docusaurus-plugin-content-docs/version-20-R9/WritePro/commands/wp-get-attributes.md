@@ -8,44 +8,44 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get attributes.Params-->
 
-| Parâmetro   | Tipo                                           |                             | Descrição                                 |
-| ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object                                         | &#8594; | Range or element or 4D Write Pro document |
-| attribName  | Text                                           | &#8594; | Nome do atributo para obter               |
-| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
-| attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Resultado   | Object                                         | &#8592; | Attribute names and values                |
+| Parâmetro   | Tipo                                           |                             | Descrição                                       |
+| ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------------- |
+| targetObj   | Object                                         | &#8594; | Intervalo ou elemento ou documento 4D Write Pro |
+| attribName  | Text                                           | &#8594; | Nome do atributo para obter                     |
+| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Valor atual do atributo para o alvo             |
+| attribColl  | Collection                                     | &#8594; | Coleção de nomes de atributo para obter         |
+| Resultado   | Object                                         | &#8592; | Nomes e valores de atributos                    |
 
 <!-- END REF-->
 
 ## Descrição
 
-The **WP Get attributes** command<!--REF #_command_.WP Get attributes.Summary--> returns the value of any attribute in a 4D Write Pro range, header, body, footer, table, or document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attributes: character, paragraph, document, table, or image.
+O comando **WP Get attributes** <!--REF #_command_.WP Get attributes. ummary--> retorna o valor de qualquer atributo em um intervalo 4D de escrita Pro, cabeçalho, corpo, rodapé, tabela ou documento.<!-- FIM REF--> Este comando lhe dá acesso a qualquer tipo de atributo interno da 4D Write Pro: caractere, parágrafo, tabela ou imagem.
 
 Em *targetObj*, você pode passar:
 
 - um intervalo, ou
-- an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
+- um elemento (cabeçalho / rodapé / corpo / tabela / parágrafo / imagem embutida ou embutida em linha / seção / subseção / folha de estilo), ou
 - um documento 4D Write Pro
 
 Em *attribName*, passe o nome do atributo que você deseja recuperar.
 
-You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
+Você também pode passar uma coleção de nomes de atributos em *attribColl*, nesse caso o comando retornará um objeto que contém os nomes de atributos passados em *attribColl* juntamente com seus valores correspondentes.
 
-For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the *4D Write Pro Attributes* section.
+Para uma lista completa de atributos a passar, bem como seu escopo e valores, consulte a seção *4D Write Pro Atributes*.
 
-If there are different values for the same attribute in the element passed as a parameter, the command returns:
+Se houver valores diferentes para o mesmo atributo no elemento passado como um parâmetro, o comando retorna:
 
-- for numerical values, wk mixed
-- for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
-- for string values, an empty string
-- for picture values, an empty picture.
+- para valores numéricos, wk mix
+- para um array, um array vazio (guia para, cor se *attribValue* é definido como array), com uma exceção para o deslocamento de sombra do texto wk para o qual o valor da matriz sempre conterá 2 entradas que podem ser definidas separadamente para wk misturar se o deslocamento horizontal ou vertical (ou ambos) são misturadas.
+- para valores da string, uma string vazia
+- para valores de imagem, uma imagem vazia.
 
-**Note**: If *targetObj* contains a paragraph and a character style sheets, the paragraph style sheet name is returned.
+**Nota**: se *targetObj* contiver um parágrafo e uma folha de estilo de personagem, a folha de estilo de parágrafos será retornada.
 
 ## Exemplo 1
 
-You want to get the background color of the selected area:
+Para obter a cor de fundo da área selecionada:
 
 ```4d
  $range:=WP Selection range(*;"WParea")
@@ -54,7 +54,7 @@ You want to get the background color of the selected area:
 
 ## Exemplo 2
 
-You want to get the font size, background color and border style of the selected area using a collection:
+Para obter o tamanho da fonte, cor de fundo e estilo da borda da área selecionada usando uma coleção:
 
 ```4d
  $range:=WP Selection range(*;"WParea")

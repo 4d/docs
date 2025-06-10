@@ -758,9 +758,9 @@ La función `.setContent( )`<!-- REF #FileClass.setContent().Summary --> reescri
 
 #### Descripción
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+La función `.setText()` <!-- REF #FileClass.setText().Summary --> escribe *text* como el nuevo contenido del archivo<!-- END REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
+Si el archivo referenciado en el objeto `File` no existe en el disco, la función lo crea. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
 En *text*, pase el texto a escribir en el archivo. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
 
@@ -773,7 +773,7 @@ Opcionalmente, puede designar el conjunto de caracteres que se utilizará para l
 
 Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D la inserta en el archivo a menos que el conjunto de caracteres utilizado contenga el sufijo "-no-bom" (por ejemplo, "UTF-8-no-bom"). Si no especifica un conjunto de caracteres, por defecto 4D utiliza el conjunto de caracteres "UTF-8" sin BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema **Documentos sistema**, están disponibles:
 
 | Constante                     | Valor | Comentario                                                                                                                                                                                                                                          |
 | ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -785,7 +785,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
+> **Nota de compatibilidad**: las opciones de compatibilidad están disponibles para la gestión de EOL y de BOM. Ver la [página Compatibilidad](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) en doc.4d.com.
 
 #### Ejemplo
 
