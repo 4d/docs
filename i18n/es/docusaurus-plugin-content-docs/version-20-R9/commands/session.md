@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 | Lanzamiento | Modificaciones                                                     |
 | ----------- | ------------------------------------------------------------------ |
-| 20 R8       | Support of standalone sessions                                     |
+| 20 R8       | Soporte de sesiones autónomas                                      |
 | 20 R5       | Soporte de cliente remoto y sesiones de procedimientos almacenados |
 | 18 R6       | Añadidos                                                           |
 
