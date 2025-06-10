@@ -1753,7 +1753,7 @@ Quando um registro for trancado, deve ser destrancado do processo de trancamento
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+`unlock()` deve ser chamado tantas vezes quanto [`lock()`](#lock) foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
 
 :::
 
