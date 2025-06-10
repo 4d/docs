@@ -19,7 +19,7 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-
 #### Changements de comportement
 
 - Sous Windows, les polices d'imprimante courantes destinées uniquement à l'impression (c'est-à-dire non utilisables à l'écran) ne sont plus chargées par 4D au démarrage.
-- La prise en charge de la bibliothèque *MeCab* (utilisée pour trier/rechercher en langue japonaise) a été supprimé. Pour permettre l'utilisation d'ICU, 4D réindexera automatiquement chaque champ Alpha, Texte ou Objet au premier lancement avec 4D 20 R10 ou plus récent d'une base avec données configurées en japonais.
+- The *MeCab* library has been removed. This change only affects the processing of Japanese text.
 
 ## 4D 20 R9
 
@@ -38,7 +38,7 @@ Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Nouveau [composant 4D AIkit](../aikit/overview.md) permettant l'interaction avec les API IA tierces.
 - Les fonctions de callback suivantes de 4D View Pro attendent maintenant que toutes les fonctions personnalisées de 4D terminent leurs calculs : [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md), et [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
 - Nouvelles fonctionnalités [4D NetKit](https://developer.4d.com/4D-NetKit/) permettant de gérer les calendriers Google et Microsoft 365 ; possibilité d'utiliser le serveur web hôte pour l'authentification OAuth 2.0.
-- La bibliothèque [*MeCab*](../settings/database.md#support-of-mecab-japanese-version) (utilisée pour trier/rechercher en langue japonaise) est désormais obsolète et sa prise en charge sera supprimée dans la prochaine version.
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - 4D Write Pro Interface : nouvelle [IA intégrée](../WritePro/writeprointerface.md#integrated-ai) pour interagir avec **chatGTP** depuis vos documents 4D Write Pro.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R9) : liste de tous les bugs qui ont été corrigés dans 4D 20 R9.
 
