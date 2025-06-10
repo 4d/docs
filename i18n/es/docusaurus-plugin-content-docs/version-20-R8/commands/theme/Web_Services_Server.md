@@ -1,6 +1,6 @@
 ---
 id: Web_Services_Server_theme
-title: Web Services (Server)
+title: Web Services (Servidor)
 slug: /commands/theme/Web-Services-Server
 ---
 
