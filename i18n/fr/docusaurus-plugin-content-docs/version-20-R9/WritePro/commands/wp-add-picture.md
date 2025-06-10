@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Paramètres     | Type                    |                             | Description                                                 |
 | -------------- | ----------------------- | --------------------------- | ----------------------------------------------------------- |
-| wpDoc          | Object                  | &#8594; | 4D Write Pro document                                       |
+| wpDoc          | Object                  | &#8594; | Document 4D Write Pro                                       |
 | picture        | Picture                 | &#8594; | Image 4D                                                    |
 | picturePath    | Text                    | &#8594; | Chemin de l'image                                           |
 | pictureFileObj | 4D.File | &#8594; | Objet 4D.File représentant un fichier image |
