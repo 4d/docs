@@ -344,7 +344,7 @@ La propiedad `.verb` contiene <!-- REF #IncomingMessageClass.verb.Summary -->el 
 
 HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 
-The `.verb` property is read-only.
+La propiedad `.verb` es de sólo lectura.
 
 <!-- END REF -->
 
