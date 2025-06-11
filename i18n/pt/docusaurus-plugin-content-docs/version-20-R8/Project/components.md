@@ -22,8 +22,8 @@ The package folder of a component (*MyComponent.4dbase* folder) can contain:
 
 - para **componentes interpretados**: uma [pasta Project](../Project/architecture.md). O nome da pasta do pacote deve ser sufixado com **.4dbase** se você quiser instalá-lo na pasta [**Components** do seu projeto](architecture.md#components).
 - para **componentes compilados**:
- - either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
- - or directly a .4DZ file with other folders such as *Resources*.
+    - either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
+    - or directly a .4DZ file with other folders such as *Resources*.
 
 :::note
 
@@ -308,10 +308,10 @@ In an opened project, you can add, remove, update, and get information about dep
 Para exibir o painel Dependências:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
- ![dependency-menu](../assets/en/Project/dependency-menu.png)
+    ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
- ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+    ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 The Dependencies panel is then displayed. Dependencies are sorted by name in alphabetical order:
 
