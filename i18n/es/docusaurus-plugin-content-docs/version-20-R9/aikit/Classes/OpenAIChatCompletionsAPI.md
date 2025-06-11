@@ -68,12 +68,12 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 **update**(*completionID* : Text; *metadata* : Object, *parameters* : OpenAIParameters) : Object
 
-| Parámetros     | Tipo                                    | Descripción                                              |
-| -------------- | --------------------------------------- | -------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to update. |
-| *metadata*     | Object                                  | Metadata to update the completion with.  |
-| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.   |
-| Resultado      | Object                                  | The updated chat completion object.      |
+| Parámetros     | Tipo                                    | Descripción                                                     |
+| -------------- | --------------------------------------- | --------------------------------------------------------------- |
+| *completionID* | Text                                    | The ID of the chat completion to update.        |
+| *metadata*     | Object                                  | Metadata to update the completion with.         |
+| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.          |
+| Resultado      | Object                                  | El objeto de finalización del chat actualizado. |
 
 Modify a stored chat completion.
 
