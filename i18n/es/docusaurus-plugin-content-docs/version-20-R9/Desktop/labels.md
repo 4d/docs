@@ -3,7 +3,7 @@ id: labels
 title: Etiquetas
 ---
 
-4D’s Label editor provides a convenient way to print a wide variety of labels. With it, you can do the following:
+4D’s Label editor provides a convenient way to print a wide variety of labels. Con ella, puede hacer lo siguiente:
 
 - Design labels for mailings, file folders and file cards, and for many other needs,
 - Create and insert decorative items in label templates,
@@ -58,7 +58,7 @@ The search area allows you to narrow the list of fields displayed to those conta
 
 You use this area to design your label zone by placing and positioning all the items that you want to include in your label. El rectángulo blanco representa una sola etiqueta (su tamaño se configura en la página [Diseño](#layout-page)).
 
-- You can drag fields onto the label.
+- Puede arrastrar los campos a la etiqueta.
 - You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
   ![](../assets/en/Desktop/label-concat.png)<br/>
   If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
@@ -102,7 +102,7 @@ The left-hand side of the tool bar includes commands for selecting and inserting
 | ----------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![](../assets/en/Desktop/label-tool1.png) | Selección                | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
 | ![](../assets/en/Desktop/label-tool2.png) | Creación de línea        |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool3.png) | Creación rectangular     | For Rectangle or Rounded rectangle.                                                                                                                                                                |
+| ![](../assets/en/Desktop/label-tool3.png) | Creación rectangular     | Para creación de rectángulo o rectángulo redondeado.                                                                                                                                               |
 | ![](../assets/en/Desktop/label-tool4.png) | Creación de círculo      |                                                                                                                                                                                                                    |
 | ![](../assets/en/Desktop/label-tool5.png) | Inserción de texto       | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
 | ![](../assets/en/Desktop/label-tool6.png) | Inserción de fórmula     | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
