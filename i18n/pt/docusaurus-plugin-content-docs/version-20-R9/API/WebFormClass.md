@@ -166,7 +166,7 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 #### Descrição
 
-The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->.
+O comando `Web Form` <!-- REF #_command_.Web Form.Summary --> retorna um `4D. Objeto proxy ebForm` que permite a você interagir com o formulário web <!-- END REF -->.
 
 Para obter mais informações, consulte a [descrição do comando `webForm` na documentação de Qodly](https://developer.qodly.com/docs/language/WebFormClass#webform).
 
