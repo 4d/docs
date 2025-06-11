@@ -252,7 +252,7 @@ exposed Function authentify($role : Text) : Text
 	Session.setPrivileges({roles: $role})
 ```
 
-Assuming the `authentify()` function is called with the "Medium" role:
+Assumindo que a função `authentify()` seja chamada com o papel "Medium":
 
 ```4d
 var $privileges : Collection
