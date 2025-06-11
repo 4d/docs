@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 el comando **WP Table append row**<!--REF #_command_.WP Table append row.Summary--> añade una fila a la tabla *tableRef*, la llena con *value*(s) o una colección *valueColl*, y devuelve el objeto de rango de filas correspondiente.<!-- END REF-->
 
-The command supports two syntaxes:
+El comando soporta dos sintaxis:
 
 - **Using values as parameters:**
   Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
