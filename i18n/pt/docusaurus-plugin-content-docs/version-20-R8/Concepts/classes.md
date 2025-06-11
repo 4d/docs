@@ -180,7 +180,7 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 - `propriedade` para definir as propriedades estáticas dos objetos com um tipo.
 - `Função get <Nome>` e `Função set <Nome>` para definir propriedades calculadas dos objetos.
 - `Class extends <ClassName>` para definir a herança.
-- `This` and `Super` are commands that have special features within classes.
+- `This` e `Super` são comandos que possuem recursos especiais dentro das classes.
 
 ### `Function`
 
