@@ -44,7 +44,7 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 | $user      | Text | <- | Nombre de usuario                                                            |
 | $password  | Text | <- | Contraseña                                                                   |
 
-You must declare these parameters:
+Debe declarar estos parámetros:
 
 ```4d
 // Método base On Web Connection
