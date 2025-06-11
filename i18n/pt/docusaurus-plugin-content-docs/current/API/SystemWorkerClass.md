@@ -186,7 +186,7 @@ End if
 
 #### Exemplos em macOS
 
-1. Edit a text file (`cat` is the macOS command used to edit files). Neste exemplo, o caminho de acesso completo do comando é passado:
+1. Editar um arquivo de texto (`cat` é o comando macOS utilizado para editar os arquivos). Neste exemplo, o caminho de acesso completo do comando é passado:
 
 ```4d
 
