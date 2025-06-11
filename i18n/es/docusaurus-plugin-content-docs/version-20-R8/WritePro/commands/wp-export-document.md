@@ -216,7 +216,7 @@ Exporting a PDF document with PDF/A-2 conformance:
 
 ## Ejemplo 5
 
-Examples of Factur-X PDF exports:
+Ejemplos de exportación PDF de Factur-X:
 
 ```4d
   //BASIC (standard profile)
