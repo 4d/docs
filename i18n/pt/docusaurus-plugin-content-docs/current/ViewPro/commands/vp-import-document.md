@@ -119,7 +119,7 @@ End if
 
 ## Exemplo 3
 
-You want to import a `.txt` file that uses a comma (",") as delimiter:
+Você deseja importar um arquivo `.txt` que usa uma vírgula (",") como delimitador:
 
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv.png)
 
