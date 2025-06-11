@@ -104,9 +104,9 @@ Callback functions receive up to two parameters:
 
 **Sequência de chamadas de retorno:**
 
-1. `onConnection` is triggered each time a connection is established.
+1. `onConnection` é acionado cada vez que uma conexão é estabelecida.
 2. `onError` é acionado se ocorrer um erro.
-3. `onTerminate` is always triggered just before a connection is terminated.
+3. `onTerminate` é sempre acionado antes de uma conexão ser encerrada.
 
 #### Objeto TCPEvent
 
