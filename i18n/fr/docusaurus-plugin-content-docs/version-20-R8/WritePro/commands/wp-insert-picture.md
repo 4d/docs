@@ -15,31 +15,31 @@ displayed_sidebar: docs
 | pictureFileObj | 4D.File | &#8594; | Un objet Fichier représentant un fichier image.        |
 | mode           | Integer                 | &#8594; | Mode d'insertion                                                       |
 | rangeUpdate    | Integer                 | &#8594; | Mode de mise à jour de la plage                                        |
-| Résultat       | Object                  | &#8592; | Object referencing the picture                                         |
+| Résultat       | Object                  | &#8592; | Objet référençant l'image                                              |
 
 <!-- END REF-->
 
 ## Description
 
-The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary--> inserts a *picture* or a *pictureFileObj* in the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and returns a reference to the picture element.<!-- END REF--> The picture will be inserted as a character in the *targetObj*.
+La commande **WP Insert picture**<!--REF #_command_.WP Insert picture.Summary--> insère *picture* ou *pictureFileObj* dans le *targetObj* spécifié en fonction des paramètres *mode* d'insertion et *rangeUpdate*, et retourne une référence à l'élément picture.<!-- END REF--> L'image sera insérée comme un caractère dans le *targetObj*.
 
 In *targetObj*, you can pass:
 
-- A range
-- An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
-- A 4D Write Pro document
+- Une plage
+- Un élément (tableau / ligne / paragraphe / corps / en-tête / pied de page / image en ligne / section / sous-section)
+- Un document 4D Write Pro
 
-For the second parameter, you can pass either:
+Pour le deuxième paramètre, vous pouvez passer soit :
 
-- In *picture*:
- - A picture field or variable
- - A string containing a path to a picture file stored on disk, in the system syntax.
-  If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
-- In *pictureFileObj* : a `File` object representing a picture file.
+- Dans *picture*:
+ - Champ ou variable d'image
+ - Chaîne contenant le chemin d'accès à un fichier d'image stocké sur le disque, dans la syntaxe du système.
+  Si vous utilisez une chaîne, vous pouvez fournir soit un chemin d'accès complet, soit un chemin d'accès relatif au fichier de structure de la base de données. Vous pouvez également transmettre un nom de fichier, auquel cas le fichier doit être situé à côté du fichier de structure de la base de données. You can also pass a file name, in which case the file must be located next to the database structure file.
+- Dans *pictureFileObj* : un objet `File` représentant un fichier image.
 
-Any picture format [supported by 4D](../../FormEditor/pictures.md#native-formats-supported) can be used. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Vous pouvez obtenir la liste des formats d'image disponibles en utilisant la commande [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés.
 
-In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used on the picture in the document:
+Dans le paramètre *mode*, passez l'une des constantes suivantes pour indiquer le mode d'insertion à utiliser pour l'image dans le document :
 
 | Constante  | Type    | Valeur | Commentaire                             |
 | ---------- | ------- | ------ | --------------------------------------- |
@@ -47,20 +47,20 @@ In the *mode* parameter, pass one of the following constants to indicate the ins
 | wk prepend | Integer | 1      | Insérer le contenu au début de la cible |
 | wk replace | Integer | 0      | Remplacer le contenu de la cible        |
 
-If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted picture is included in the resulting range:
+Si *targetObj* est une plage, vous pouvez éventuellement utiliser le paramètre *rangeUpdate* pour transmettre l'une des constantes suivantes afin de spécifier si l'image insérée est incluse ou non dans la plage résultante :
 
-| Constante             | Type    | Valeur | Commentaire                                                        |
-| --------------------- | ------- | ------ | ------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1      | Picture not included in the updated range                          |
-| wk include in range   | Integer | 0      | Picture included in the updated range (default) |
+| Constante             | Type    | Valeur | Commentaire                                                             |
+| --------------------- | ------- | ------ | ----------------------------------------------------------------------- |
+| wk exclude from range | Integer | 1      | Image non incluse dans la plage mise à jour                             |
+| wk include in range   | Integer | 0      | Image incluse dans la plage mise à jour (par défaut) |
 
-If you do not pass a *rangeUpdate* parameter, by default the inserted picture is included in the resulting range.
+Si vous ne passez pas de paramètre *rangeUpdate*, l'image insérée est incluse par défaut dans la plage résultante.
 
 - Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.
 
 ## Exemple 1
 
-In the following example, a user selects the picture they want to insert into the range object and will be warned if this picture could not be inserted:
+Dans l'exemple suivant, un utilisateur sélectionne l'image qu'il souhaite insérer dans l'objet plage et sera averti si cette image n'a pas pu être insérée :
 
 ```4d
  var $wpRange : Object
@@ -69,13 +69,13 @@ In the following example, a user selects the picture they want to insert into th
  var $fail : Boolean
  $fail:=False
  
-  //ask user to choose a picture on the disk that they want to insert
+  //on demande à l'utilisateur de choisir, sur le disque,l'image qu'il souhaite insérer
  $imgRef:=Open document("")
-  //if user does not cancel
+  //si l'utilisateur n'annule pas
  If(OK=1)
-  //if the file is a supported picture file
+  //si le format du fichier image est pris en charge
     If(Is picture file(document))
-  // insert picture selected by user
+  //on insère l'image
        WP Insert picture($wpRange;document;wk replace)
     Else
        $fail:=True
@@ -83,7 +83,7 @@ In the following example, a user selects the picture they want to insert into th
  Else
     $fail:=True
  End if
-  //if the insertion failed, alert the user
+  //si l'insertion a échoué, on informe l'utilisateur
  If($fail)
     ALERT("Picture insertion failed")
  End if
@@ -91,7 +91,7 @@ In the following example, a user selects the picture they want to insert into th
 
 ## Exemple 2
 
-You want to insert a picture in the body of the documment:
+Vous souhaitez insérer une image dans le corps du document :
 
 ```4d
 var $file : 4D.File

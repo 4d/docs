@@ -9,7 +9,7 @@ El depurador 4D es útil cuando se necesita detectar errores o controlar la ejec
 
 :::info
 
-If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+Si está acostumbrado a codificar con **VS Code**, también puede usar este editor para depurar código 4D en el servidor 4D después de instalar la extensión [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode).
 
 :::
 
@@ -30,7 +30,7 @@ Hay varias formas de conseguir que el depurador se muestre:
 Cuando se llama, la ventana del depurador ofrece el nombre del método o de la función de clase que se está rastreando en ese momento, y la acción que provoca la aparición inicial de la ventana del depurador. Por ejemplo, en la ventana del depurador arriba:
 
 - *drop* es el método rastreado
-- The debugger window appeared because of a break point.
+- La ventana del depurador apareció debido a un punto de interrupción.
 
 La visualización de una nueva ventana del depurador utiliza la misma configuración que la última ventana visualizada en la misma sesión. Si ejecuta varios procesos usuario, puede rastrearlos independientemente y tener una ventana de depuración abierta para cada proceso.
 
@@ -54,7 +54,7 @@ La barra de herramientas del depurador incluye varios botones, asociados a acces
 
 :::note
 
-Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+Los accesos directos por defecto pueden ser personalizados en la [Página de accesos directos](../Preferences/shortcuts.md) de la caja de diálogo de preferencias.
 
 :::
 
@@ -111,14 +111,14 @@ Si utiliza este botón para modificar un método, las modificaciones sólo será
 
 > **Consejo:** utilice este botón cuando sepa qué cambios son necesarios en su código y cuando no interfieran con el resto del código a ejecutar o rastrear.
 
-## Auto-saving
+## Auto-guardado
 
-The current state of the debugger window is automatically saved in the project. Esto incluye:
+El estado actual de la ventana de depuración se guarda automáticamente en el proyecto. Esto incluye:
 
 - el tamaño y la posición de la ventana,
-- the position of the division lines,
+- la posición de las líneas de división,
 - el [modo de visualización](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.
+- las expresiones que se muestran actualmente en el panel de visualización personalizado. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 

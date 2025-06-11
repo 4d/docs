@@ -462,7 +462,7 @@ Se escolher esconder os destaques do sistema e quiser exibir seleções de list 
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-Para uma caixa de lista de tipos de matriz, você precisa atualizar a [matriz de cor de fundo da linha de fundo](properties_BackgroundAndBorder.md#row-background-color-array) pela programação. In the JSON form, you have defined the following Row Background Color Array for the list box:
+Para uma caixa de lista de tipos de matriz, você precisa atualizar a [matriz de cor de fundo da linha de fundo](properties_BackgroundAndBorder.md#row-background-color-array) pela programação. No formulário JSON, se definiu o array de cores de fundo seguinte para o list box:
 
 ```
 	"rowFillSource": "_ListboxBackground",
@@ -727,7 +727,7 @@ Se esta caixa de listagem for apresentada de forma hierárquica (sendo as três 
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-The arrays are not sorted before the hierarchy is constructed. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
+Os arrays não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
 \> A
 \> B
 \> A
@@ -872,11 +872,11 @@ Estão disponíveis propriedades padrão relacionadas com coordenadas, tamanho e
 
 No entanto, o tema Fonte de Dados não está disponível para as colunas da caixa de listagem tipo objecto. De fato, o conteúdo de cada célula de coluna é baseado em atributos encontrados no elemento correspondente da array de objectos. Cada elemento da array pode definir:
 
-the value type (mandatory): text, color, event, etc.
-the value itself (optional): used for input/output.
-the cell content display (optional): button, list, etc.
-additional settings (optional): depend on the value type
-To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
+o tipo de valor (obrigatório): texto, cor, evento, etc.
+o valor em si (opcional): usado para entrada/saída.
+a exibição do conteúdo da célula (opcional): botão, lista, etc.
+configurações adicionais (opcional): dependem do tipo de valor
+Para definir essas propriedades, você precisa definir os atributos apropriados no objeto (os atributos disponíveis estão listados abaixo). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
 
 ```4d
 ARRAY OBJECT(obColumn;0) //array de colunas

@@ -2058,7 +2058,7 @@ Esta função devolve uma cópia superficial, o que significa que os objectos ou
 
 > Essa função não modifica a coleção original.
 
-If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned with an internal order). Você pode modificar essa ordem automática passando as constantes `ck ascending` ou `ck descending` no parâmetro *ascOrDesc* (veja abaixo).
+Se você não passar nenhum parâmetro, a função ordena os valores escalares na coleção em ordem crescente (outros tipos de elementos, como objetos ou coleções, são retornados com uma ordem interna). Você pode modificar essa ordem automática passando as constantes `ck ascending` ou `ck descending` no parâmetro *ascOrDesc* (veja abaixo).
 
 Também pode passar um parâmetro de critérios para definir como devem ordenar-se os elementos da coleção. Três sintaxes são compatíveis com esse parâmetro:
 

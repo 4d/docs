@@ -321,7 +321,7 @@ O valor devolvido é a chave pública.
 | Resultados | Text          | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 <!-- END REF -->
 
-A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string or Blob<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Devolve a sua assinatura no formato base64 ou base64URL, dependendo do valor do atributo `options.encoding` que passou.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de um * $var:=OBJECT Get pointer(Object named;"tstart") * string ou Blob<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Devolve a sua assinatura no formato base64 ou base64URL, dependendo do valor do atributo `options.encoding` que passou.
 
 `CryptoKey` deve conter uma chave válida **privada**.
 
@@ -336,7 +336,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repres
 
 #### *Resultados*
 
-The utf8 representation of the *message*.
+A representação utf8 de *message*.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->

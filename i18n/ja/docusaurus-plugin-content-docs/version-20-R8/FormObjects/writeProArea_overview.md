@@ -9,7 +9,7 @@ title: 4D Write Pro エリア
 
 ## 4D Write Pro エリアの使用
 
-4D Write Pro areas are documented in the [4D Write Pro Reference](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.en.html) manual.
+4D Write Pro についての詳細は [4D Write Pro リファレンス](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.ja.html) マニュアルを参照ください。
 
 ## プロパティ一覧
 

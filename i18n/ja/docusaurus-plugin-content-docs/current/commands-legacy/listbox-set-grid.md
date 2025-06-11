@@ -27,7 +27,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [LISTBOX GET GRID](listbox-get-grid.md)  
-[LISTBOX Get property](listbox-get-property.md)  
+[LISTBOX Get property](../commands/listbox-get-property.md)  
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
 
 ## プロパティ
