@@ -1,6 +1,6 @@
 ---
 id: labels
-title: Labels
+title: Etiquetas
 ---
 
 4D’s Label editor provides a convenient way to print a wide variety of labels. With it, you can do the following:
@@ -26,7 +26,7 @@ When you create a satisfactory label design, you can save it to disk so that you
 To open the Label editor:
 
 - In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
- OU
+  OU
 - Em uma aplicação, chame o comando [`PRINT LABEL`](../commands-legacy/print-label.md).
 
 ![](../assets/en/Desktop/label-wizard.png)
@@ -60,11 +60,11 @@ You use this area to design your label zone by placing and positioning all the i
 
 - You can drag fields onto the label.
 - You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
- ![](../assets/en/Desktop/label-concat.png)<br/>
- If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
+  ![](../assets/en/Desktop/label-concat.png)<br/>
+  If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
 - You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. O **editor de fórmulas** é então exibido:
- ![](../assets/en/Desktop/label-formula1.png)<br/>
- Por exemplo, você pode aplicar um formato para um campo usando o comando [`String`](../commands-legacy/string.md):<br/>
+  ![](../assets/en/Desktop/label-formula1.png)<br/>
+  Por exemplo, você pode aplicar um formato para um campo usando o comando [`String`](../commands-legacy/string.md):<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
@@ -77,7 +77,7 @@ Keep in mind that you can only enter methods that are "allowed" for the database
 - You can drag and drop picture files as well as label files (".4lbp" files) from the desktop of the OS.
 
 - To modify the area, double-click on the contents in order to switch to editing mode. When you double-click on fields or formulas, the **Formula editor** is displayed, allowing you to remove or modify items:
- ![](../assets/en/Desktop/label-formula.png)
+  ![](../assets/en/Desktop/label-formula.png)
 
 ### Form to use
 
@@ -98,7 +98,7 @@ The graphic area of the editor includes both a tool bar and a context menu that 
 
 The left-hand side of the tool bar includes commands for selecting and inserting objects. You can also access these tools by means of the **Tool>** command in the area's context menu.
 
-| Ícone                                     | Tool name          | Descrição                                                                                                                                                                                                          |
+| Ícone                                     | Nome da ferramenta | Descrição                                                                                                                                                                                                          |
 | ----------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![](../assets/en/Desktop/label-tool1.png) | Seleção            | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
 | ![](../assets/en/Desktop/label-tool2.png) | Line creation      |                                                                                                                                                                                                                    |
@@ -116,12 +116,12 @@ There are shortcuts available to move or resize objects more precisely using the
 
 The right-hand side of the tool bar contains commands used to modify items of the label template:
 
-| Ícone                                      | Tool name                  | Descrição                                                                                                                                                                                                                                                                                                                                                        |
+| Ícone                                      | Nome da ferramenta         | Descrição                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------------------------ | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/Desktop/label-tool7.png)  | Fill Color                 | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
 | ![](../assets/en/Desktop/label-tool8.png)  | Cor da linha               |                                                                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Desktop/label-tool9.png)  | Lineweight                 |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool10.png) | Font menu                  | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
+| ![](../assets/en/Desktop/label-tool10.png) | Menu Fonte                 | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
 | ![](../assets/en/Desktop/label-tool11.png) | Alignment and distribution | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
 | ![](../assets/en/Desktop/label-tool12.png) | Object level               | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
 
@@ -135,17 +135,17 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Rows** and **Columns**: Set the number of labels to be printed by "row" and by "column" on each sheet. These settings determine the label size when the "Automatic resizing" option is enabled.
 - **Labels per record**: Sets the number of copies to print for each label (copies are printed consecutively).
 - **Print Setup...**: Sets the format of the page on which the sheet of labels will be printed. When you click this button, the setup dialog box for the printer selected in your system appears. By default, the sheet of labels is generated based on an A4 page in portrait mode.
- **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
+  **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
 - **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
 - **Largura** e **Altura**: define a altura e a largura de cada etiqueta manualmente. Eles não podem ser editados quando a opção **Redimensionamento automático** estiver marcada.
 - **Margens** (Superior, Direita, Esquerda, Inferior): define as margens de sua folha. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
 - **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
- To be eligible for label processing, a project method must comply with the following settings:
- - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
- - precisa ter a opção [Compartilhada por componentes e banco de dados host](../Project/code-overview.md#shared-by-components-and-host-database).
-  Veja também [este exemplo](#printing-labels-using-forms-and-methods-example) abaixo.
+  To be eligible for label processing, a project method must comply with the following settings:
+  - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
+  - precisa ter a opção [Compartilhada por componentes e banco de dados host](../Project/code-overview.md#shared-by-components-and-host-database).
+    Veja também [este exemplo](#printing-labels-using-forms-and-methods-example) abaixo.
 
 :::note
 
@@ -163,8 +163,8 @@ The **For each: Record or Label** options are used to specify whether to run the
 You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
 
 1. In a dedicated table form, add your label field(s) and variable(s).
- Here, in a table form named "label", we added the *myVar* variable:
- ![](../assets/en/Desktop/label-example1.png)
+  Here, in a table form named "label", we added the *myVar* variable:
+  ![](../assets/en/Desktop/label-example1.png)
 
 2. Create a `setMyVar` project method with the following code:
 
@@ -183,10 +183,10 @@ You can use dedicated table forms and project methods to print labels with calcu
 ```
 
 5. Open the Label editor and use your form:
- ![](../assets/en/Desktop/label-example2.png)
+  ![](../assets/en/Desktop/label-example2.png)
 
 6. In the Layout page, select the method:
- ![](../assets/en/Desktop/label-example3.png)
+  ![](../assets/en/Desktop/label-example3.png)
 
 Then you can print your labels:
 ![](../assets/en/Desktop/label-example4.png)
