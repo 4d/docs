@@ -15,7 +15,7 @@ Helper for vision stuff.
 
 | Parámetros | Tipo                                        | Descripción                                                |
 | ---------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageURL* | Text                                        | The URL of the image to analyze.           |
+| *imageURL* | Text                                        | La URL de la imagen a analizar.            |
 | Resultado  | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
 #### Ejemplo de Uso
