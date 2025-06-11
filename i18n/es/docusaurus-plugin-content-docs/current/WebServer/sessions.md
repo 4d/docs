@@ -239,7 +239,7 @@ Una url [`4DACCIÓN`](./httpRequests.md#4daction) también puede ser usada en el
 
 #### Utilizar un parámetro personalizado
 
-The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. You must use this solution if:
+The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. Debe utilizar esta solución si:
 
 - the third-party application does not allow to insert parameters such as a `$4DSID` directly in the redirect Uri, and provides a dedicated API (the implementation depends on the third-party application),
 - o, quiere llamar a una función ORDA a través de REST para procesar la retrollamada, en cuyo caso es necesario pasar el OTP con la [sintaxis de parámetro REST](../REST/ClassFunctions.md#parameters) (por ejemplo, `?$params='["XXX123"]'`).
