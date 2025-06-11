@@ -298,7 +298,7 @@ Parameters can be passed in the URL of requests **directly** or **as JSON conten
 
 #### Direct parameters
 
-Example: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
+Exemplo: `http://127.0.0.1:8044/minhaCall?firstname=Marie&id=2&isWoman=true`
 
 In this case, parameters are received as stringified values in the `urlQuery` property: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
 
