@@ -29,7 +29,7 @@ Each error object contains the following properties:
 | message            | text     | Descripción del error                                                                       |
 | componentSignature | text     | Signature of the internal component which returned the error (see below) |
 
-#### Internal component signatures (4D)
+#### Firmas de los componentes internos (4D)
 
 | Firma del componente      | Componente                                                          |
 | ------------------------- | ------------------------------------------------------------------- |
