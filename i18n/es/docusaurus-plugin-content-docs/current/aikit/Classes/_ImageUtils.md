@@ -69,9 +69,9 @@ var $base64:=cs._ImageUtils.me.toBase64($image)
 
 Generates an inline PNG data URI from the given image information.
 
-| Argumento  | Tipo    | Descripción                                       |
-| ---------- | ------- | ------------------------------------------------- |
-| $imageInfo | Variant | The image information to convert. |
+| Argumento  | Tipo    | Descripción                                              |
+| ---------- | ------- | -------------------------------------------------------- |
+| $imageInfo | Variant | La información de la imagen a convertir. |
 
 **Returns**: Text containing the inline PNG data URI or an empty string if conversion fails.
 
@@ -83,9 +83,9 @@ var $dataUri:=cs._ImageUtils.me.toInlinedPng($image)
 
 Converts an image to a text format suitable for form data submission.
 
-| Argumento  | Tipo    | Descripción                                       |
-| ---------- | ------- | ------------------------------------------------- |
-| $imageInfo | Variant | The image information to convert. |
+| Argumento  | Tipo    | Descripción                                              |
+| ---------- | ------- | -------------------------------------------------------- |
+| $imageInfo | Variant | La información de la imagen a convertir. |
 
 **Returns**: Text representing the form data or an empty string if conversion fails.
 
