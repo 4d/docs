@@ -52,7 +52,7 @@ $4d.someOtherMethod(); // Not accessible
 
 ### Ejemplo 2
 
-Using a Class Object
+Utilizar un objeto de clase
 
 ```4d
  var $myWAObject:=cs.WAFunctions.new()

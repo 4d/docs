@@ -12,7 +12,7 @@ title: LISTBOX SET PROPERTY
 | \*         | Operador      | &#8594; | If specified, object is an object name (string). If omitted, object is a variable. |
 | object     | any           | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted)                                 |
 | property   | Integer       | &#8594; | List box or column property                                                                                                           |
-| value      | Integer, Text | &#8594; | Value of property                                                                                                                     |
+| value      | Integer, Text | &#8594; | Valor de la propiedad                                                                                                                 |
 
 <!-- END REF-->
 

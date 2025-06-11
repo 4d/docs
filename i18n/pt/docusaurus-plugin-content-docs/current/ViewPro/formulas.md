@@ -33,10 +33,10 @@ Todas as fórmulas têm operandos e operadores:
 
 - **Operadores**: consulte [Valores e operadores](#valores-e-operadores) abaixo.
 - Os **Operandos** inclui várias categorias:
- - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
- - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
- - [funções de planilha padrão](#built-in-functions)
- - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
+  - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
+  - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
+  - [funções de planilha padrão](#built-in-functions)
+  - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
 
 ## Valores e operadores
 
@@ -191,11 +191,11 @@ Queremos imprimir "Hello World" em uma célula de área do 4D View Pro usando um
 
 3. Editar o conteúdo de uma célula numa área 4D View Pro e digitar:
 
- ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
- "myMethod" é então chamado por 4D e a célula aparece:
+  "myMethod" é então chamado por 4D e a célula aparece:
 
- ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Parâmetros
 
@@ -246,10 +246,10 @@ Métodos de projeto 4D também podem retornar valores na fórmula da célula 4D 
 - [imagem](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg outros tipos convertidos para png) cria uma URI (data:image/png; ase64,xxxx) e depois usado como plano de fundo em 4D View Pro na célula onde a fórmula é executada
 - [object](Concepts/dt_object.md) com as duas propriedades a seguir (permitindo a passagem de uma data e hora):
 
- | Propriedade | Tipo | Descrição         |
- | ----------- | ---- | ----------------- |
- | value       | Date | Valor data        |
- | time        | Real | Tempo em segundos |
+  | Propriedade | Tipo | Descrição         |
+  | ----------- | ---- | ----------------- |
+  | value       | Date | Valor data        |
+  | time        | Real | Tempo em segundos |
 
 Se o método 4D não retornar nada, uma string vazia será automaticamente retornada.
 
@@ -319,19 +319,19 @@ Queremos imprimir o nome de uma pessoa em uma célula de área do 4D View Pro us
 
 2. Execute o seguinte código para inicializar uma estrutura virtual:
 
- ```4d
- ARRAY TEXT($tableTitles;1)
- ARRAY LONGINT($tableNum;1)
- $tableTitles{1}:="Emp"
- $tableNum{1}:=2
- SET TABLE TITLES($tableTitles;$tableNum;*)
-  
- ARRAY TEXT($fieldTitles;1)
- ARRAY LONGINT($fieldNum;1)
- $fieldTitles{1}:="Name"
- $fieldNum{1}:=2 //last name
- SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
- ```
+  ```4d
+  ARRAY TEXT($tableTitles;1)
+  ARRAY LONGINT($tableNum;1)
+  $tableTitles{1}:="Emp"
+  $tableNum{1}:=2
+  SET TABLE TITLES($tableTitles;$tableNum;*)
+   
+  ARRAY TEXT($fieldTitles;1)
+  ARRAY LONGINT($fieldNum;1)
+  $fieldTitles{1}:="Name"
+  $fieldNum{1}:=2 //last name
+  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+  ```
 
 3. Edite o conteúdo de uma célula na área do 4D View Pro e digite "=e":
 

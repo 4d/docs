@@ -14,12 +14,12 @@ Lea [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R10/)
 - Lenguaje 4D:
     - Por coherencia, los comandos [`Create entity selection`](../commands/create-entity-selection.md) y [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) han sido movidos del tema ["4D Environment"](../commands/theme/4D_Environment.md) al ["Selection"](../commands/theme/Selection.md).
     - Nuevos comandos [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) y [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) para asignar y leer los objetos `Formula` como fuentes de datos para los objetos de formulario.
-    - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) and [`LISTBOX Get property`](../commands/listbox-get-property.md) support three new constants: `lk current item`, `lk current item position`, and `lk selected items expression`.
+    - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) y [`LISTBOX Get property`](../commands/listbox-get-property.md) soportan tres nuevas constantes: `lk current item`, `lk current item position` y `lk selected items expression`.
 
 #### Cambios de comportamiento
 
 - En Windows, las fuentes de impresora actuales destinadas únicamente a la impresión (es decir, no se pueden utilizar en pantalla) ya no son cargadas al inicio por 4D.
-- The support for *MeCab* library (used for sorting/searching in Japanese language) has been removed. To allow to use ICU, 4D will automatically reindex every Alpha, Text or Object field on first launch with 4D 20 R10 or newer.
+- The *MeCab* library has been removed. This change only affects the processing of Japanese text.
 
 ## 4D 20 R9
 
@@ -38,7 +38,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-20-R9
 - New [4D AIKit component](../aikit/overview.md) enabling interaction with third-party AI APIs.
 - The following VP command callbacks now wait for all 4D custom functions to complete their calculations: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md), and [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
 - New [4D Netkit](https://developer.4d.com/4D-NetKit/) features to manage Google and Microsoft 365 calendars; ability to use the host web server for OAuth 2.0 authentication.
-- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) (used for sorting/searching in Japanese language) is now deprecated and its support will be removed in the next release.
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - Interfaz 4D Write Pro: Nueva [IA integrada](../WritePro/writeprointerface.md#integrated-ai) para interactuar con **chatGTP** desde sus documentos 4D Write Pro.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R9): list of all bugs that have been fixed in 4D 20 R9.
 

@@ -366,7 +366,7 @@ End if
 
 ## マルチスタイル
 
-このプロパティは、選択エリアでスタイルの利用を可能にするかどうかを指定するものです。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。
+This property enables the possibility of using [specific styles](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.en.html) in the selected area. プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN>` HTMLタグをスタイル属性として解釈します。
 
 デフォルトでは、このオプションは有効化されていません。
 

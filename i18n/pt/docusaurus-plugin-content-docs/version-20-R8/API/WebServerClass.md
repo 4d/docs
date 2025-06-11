@@ -128,16 +128,16 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 Contém a <!-- REF #WebServerClass.CORSSettings.Summary -->lista dos hosts e métodos permitidos para o serviço CORS<!-- END REF --> (veja a propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **methods**:
 
 - **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
- - 192.168.5.17:8081
- - 192.168.5.17
- - 192.168.\*
- - 192.168.\*:8081
- - <http://192.168.5.17:8081>
- - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
- - <http://myProject.myDomain.com>
- - \*.myDomain.com
- - myProject.myDomain.com
- - \*
+  - 192.168.5.17:8081
+  - 192.168.5.17
+  - 192.168.\*
+  - 192.168.\*:8081
+  - <http://192.168.5.17:8081>
+  - <http://\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*.myDomain.com>
+  - <http://myProject.myDomain.com>
+  - \*.myDomain.com
+  - myProject.myDomain.com
+  - \*
 
 - **methods** (texto, opcional): métodos HTTP aceito(s) para o host CORS correspondente. Separar cada método com um ";" (por exemplo: "post;get"). Separar cada método com um ";" (por exemplo: "post;get").
 

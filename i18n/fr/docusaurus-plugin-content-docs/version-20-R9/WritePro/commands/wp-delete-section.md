@@ -9,52 +9,52 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 
-| Paramètres  | Type    |                             | Description                        |
-| ----------- | ------- | --------------------------- | ---------------------------------- |
-| section     | Object  | &#8594; | 4D Write Pro section               |
-| wpDoc       | Object  | &#8594; | 4D Write Pro document              |
-| indexNumber | Integer | &#8594; | Index of the section to be deleted |
-| count       | Integer | &#8594; | Number of sections to be deleted   |
+| Paramètres  | Type    |                             | Description                     |
+| ----------- | ------- | --------------------------- | ------------------------------- |
+| section     | Object  | &#8594; | Section 4D Write Pro            |
+| wpDoc       | Object  | &#8594; | Document 4D Write Pro           |
+| indexNumber | Integer | &#8594; | Index de la section à supprimer |
+| count       | Integer | &#8594; | Nombre de sections à supprimer  |
 
 <!-- END REF-->
 
 ## Description
 
-The **WP DELETE SECTION** command <!--REF #_command_.WP DELETE SECTION.Summary-->deletes the passed *section* object, or deletes one or more sections starting at  *indexNumber* and depending on the *count* passed<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
+La commande **WP DELETE SECTION** <!--REF #_command_.WP DELETE SECTION.Summary--> supprime l'objet *section* transmis, ou supprime une ou plusieurs sections à partir de *indexNumber* et en fonction du *count* transmis<!-- END REF-->. Lorsqu'une section est supprimée, tout ce qui lui est associé, y compris l'en-tête, le pied de page, une partie du corps, les images ancrées, les zones de texte et le saut de section final (qu'il s'agisse d'un saut de section ou d'un saut de section continu), est également supprimé.
 
-An error is raised if the **WP DELETE SECTION** command requests to delete all sections or if the document contains only one section.
+Une erreur est levée si la commande **WP DELETE SECTION** demande la suppression de toutes les sections ou si le document ne contient qu'une seule section.
 
-**WP DELETE SECTION** re-indexes the anchorSection attribute of text boxes and pictures to adjust their anchors to their sections after changes. For example, if a document has four sections and the second section is deleted, sections 3 and 4 will become sections 2 and 3 and text boxes and pictures that were previously anchored to sections 3 and 4 will now be anchored to sections 2 and 3.
+**WP DELETE SECTION** ré-indexe l'attribut anchorSection des zones de texte et des images pour ajuster leurs ancres à leurs sections après des modifications. Par exemple, si un document comporte quatre sections et que la deuxième section est supprimée, les sections 3 et 4 deviendront les sections 2 et 3 et les zones de texte et les images qui étaient auparavant ancrées dans les sections 3 et 4 seront désormais ancrées dans les sections 2 et 3.
 
 :::note
 
-If an image or textbox is anchored to a page (e.g., page 20) and this page no longer exists after a section has been deleted, the image (or textbox) will remain in the document and will reappear on page 20 if this page ever exists again later.
+Si une image ou une zone de texte est ancrée à une page (par exemple, la page 20) et que cette page n'existe plus après la suppression d'une section, l'image (ou la zone de texte) restera dans le document et réapparaîtra à la page 20 si cette page existe à nouveau ultérieurement.
 
 :::
 
 ## Exemples
 
-To remove the first section of the document:
+Pour supprimer la première section du document :
 
 ```4d
 
 wpDoc:=WP Import document("test.wp")
-// remove section 1 only (without error unless there is only one section in the document)
+// supprimer uniquement la section 1 (sans erreur, sauf s'il n'y a qu'une seule section dans le document)
 WP DELETE SECTION(wpDoc ; 1) 
 
 ```
 
-To remove section 5 of the document:
+Pour supprimer la section 5 du document :
 
 ```4d
 
 wpDoc:=WP Import document("test.wp")
-// remove section 5 only
+// supprimer uniquement la section 5
 WP DELETE SECTION(wpDoc ; 5)
 
 ```
 
-To remove section 5, 6 and 7 of the document:
+Pour supprimer la section 5, 6 et 7 du document:
 
 ```4d
  
@@ -63,24 +63,24 @@ WP DELETE SECTION(wpDoc ; 5 ; 3 )
 
 ```
 
-To remove all sections starting from 5:
+Pour supprimer toutes les sections à partir de 5 :
 
 ```4d
  
 wpDoc:=WP Import document("test.wp")
-// remove all sections starting at section 5 (without error unless section 5 does not exist)
+// supprimer toutes les sections à partir de la section 5 (sans erreur, sauf si la section 5 n'existe pas)
 WP DELETE SECTION(wpDoc ; 5 ; MAXLONG )
 
 ```
 
-To retrieve and remove section 5:
+Pour récupérer et supprimer la section 5 :
 
 ```4d
  
 wpDoc:=WP Import document("test.wp")
-// get section 5
+// récupèrer la section 5
 $section:=WP Get section(wpDoc, 5)
-// remove $section
+// supprimer $section
 WP DELETE SECTION($section)
 
 ```

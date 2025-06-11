@@ -256,7 +256,7 @@ A propriedade `.url` contém <!-- REF #IncomingMessageClass.url.Summary -->a URL
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
 
-The `.url` property is read-only.
+A propriedade `.url` é somente leitura.
 
 :::note
 
@@ -278,7 +278,7 @@ The `.urlPath` property contains <!-- REF #IncomingMessageClass.urlPath.Summary 
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.urlPath` property is ["docs", "invoices" ,"today"].
 
-The `.urlPath` property is read-only.
+A propriedade `.urlPath` é somente leitura.
 
 <!-- END REF -->
 
@@ -292,7 +292,7 @@ The `.urlPath` property is read-only.
 
 A propriedade `.urlQuery` contém <!-- REF #IncomingMessageClass.urlQuery.Summary -->os parâmetros da solicitação quando eles são fornecidos no URL como pares de chave/valor<!-- END REF -->.
 
-The `.urlQuery` property is read-only.
+A propriedade `.urlQuery` é somente leitura.
 
 Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
 
@@ -344,7 +344,7 @@ A propriedade `.verb` contém <!-- REF #IncomingMessageClass.verb.Summary -->o v
 
 HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 
-The `.verb` property is read-only.
+A propriedade `.verb` é somente leitura.
 
 <!-- END REF -->
 

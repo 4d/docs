@@ -44,15 +44,15 @@ In this 4D Write Pro area, you selected a word:
 Se executar o seguinte código:
 
 ```4d
- $range:=WP Get selection(*;"WParea") //get the selected range
+ $range:=WP Get selection(*;"WParea") //recupera o intervalo selecionado
  
-  // set the shadow offset in pt for the selected text
+  // define o offset sombra no texto selecionado
  WP SET ATTRIBUTES($range;wk text shadow offset;1)
-  //set the paragraph padding
+  //define o parágrafo padding
  WP SET ATTRIBUTES($range;wk padding;1)
-  //define a border of 10 pt
+  //define uma borda de 10 pt
  WP SET ATTRIBUTES($range;wk border style;wk solid;wk border width;10)
-  //set the border colors
+  //define as cores do limite
  WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
 ```
 

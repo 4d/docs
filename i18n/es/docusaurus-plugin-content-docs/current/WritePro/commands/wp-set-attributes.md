@@ -56,7 +56,7 @@ Si ejecuta el siguiente código:
  WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
 ```
 
-You get the following result:
+Obtiene el siguiente resultado:
 
 ![](../../assets/en/WritePro/commands/pict2643642.en.png)
 

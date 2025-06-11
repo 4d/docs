@@ -110,7 +110,7 @@ Hay dos formas de acceder a Qodly Studio:
 
     A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#access-key) para acceder a Qodly Studio.
 
-## Developing with Qodly Studio
+## Desarrollar con Qodly Studio
 
 ### Documentation
 

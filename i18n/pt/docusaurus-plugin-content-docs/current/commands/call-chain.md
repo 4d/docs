@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 <details><summary>História</summary>
 
-| Release | Mudanças                      |
-| ------- | ----------------------------- |
-| 20 R9   | Support of `formula` property |
+| Release | Mudanças                         |
+| ------- | -------------------------------- |
+| 20 R9   | Suporte da propriedade `formula` |
 
 </details>
 

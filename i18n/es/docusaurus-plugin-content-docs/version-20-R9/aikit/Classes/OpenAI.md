@@ -42,7 +42,7 @@ var $client:=cs.AIKit.OpenAI.new("your api key")
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"})
 ```
 
-#### Server URL
+#### URL del servidor
 
 For a [compatible provider](../compatible-openai.md) API, you can configure the server URL.
 
@@ -50,7 +50,7 @@ For a [compatible provider](../compatible-openai.md) API, you can configure the 
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://server.ai"})
 ```
 
-or after creating an instance
+o después de crear una instancia
 
 ```4d
 $client.baseURL:="https://server.ai"

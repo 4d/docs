@@ -82,7 +82,7 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 <!-- END REF -->
 
-The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
+A função `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary --> cria e retorna um novo [objeto `4D.WebSocket`](#websocket-object) conectado ao servidor de WebSocket no endereço que você passou em *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
 
 Em *url*, passe o URL ao qual o servidor WebSocket responderá. Podem ser utilizados os seguintes padrões de URL:
 
@@ -112,7 +112,7 @@ Aqui está a sequência de chamadas de retorno:
 1. `onOpen` é executado uma vez
 2. São executados zero ou vários `onMessage`
 3. Zero ou um `onError` é executado (pára o processamento)
-4. `onTerminate` is always executed
+4. `onTerminate` é sempre executado uma vez
 
 #### Exemplo
 

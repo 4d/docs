@@ -96,9 +96,9 @@ La propiedad `.headers` es de sólo lectura. Para definir un encabezado, use la 
 
 <!-- REF #OutgoingMessageClass.setBody().Params -->
 
-| Parámetros | Tipo |    | Descripción                  |
-| ---------- | ---- | -- | ---------------------------- |
-| body       | any  | -> | Body of the outgoing message |
+| Parámetros | Tipo |    | Descripción                 |
+| ---------- | ---- | -- | --------------------------- |
+| body       | any  | -> | Cuerpo del mensaje saliente |
 
 <!-- END REF -->
 

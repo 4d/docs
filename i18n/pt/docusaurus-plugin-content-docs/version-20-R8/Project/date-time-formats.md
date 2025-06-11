@@ -65,7 +65,7 @@ The following table lists all supported patterns for date and time formats.
 |         |                                                                          | ccccc         | T                                                                     |
 |         |                                                                          | cccccc        | Tu                                                                    |
 | a       | AM ou PM                                                                 | a, aa, ou aaa | PM [abbrev]       |
-|         |                                                                          | aaaa          | PM [wide]         |
+|         |                                                                          | aaaa          | PM [completo]     |
 |         |                                                                          | aaaaa         | p                                                                     |
 | b       | AM, PM, meio-dia, meia-noite                                             | b, bb ou bbb  | mid.                                                  |
 |         |                                                                          | bbbb          | meia-noite                                                            |

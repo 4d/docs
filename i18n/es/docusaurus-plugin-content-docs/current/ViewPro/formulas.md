@@ -33,10 +33,10 @@ Todas las fórmulas tienen operandos y operadores:
 
 - **Operadores**: ver [Valores y operadores](#valores-y-operadores) abajo.
 - Los **Operandos** incluyen varias categorías:
- - [valores](#valores-y-operadores) (se soportan 5 tipos de datos)
- - [referencias a otras celdas](#cell-references) (relativas, absolutas, mixtas o por nombre)
- - [funciones estándar de hoja de cálculo](#built-in-functions)
- - [Funciones 4D](#4d-functions) basadas en fórmulas 4D y que ofrecen acceso a variables, campos, métodos, comandos o expresiones 4D.
+  - [valores](#valores-y-operadores) (se soportan 5 tipos de datos)
+  - [referencias a otras celdas](#cell-references) (relativas, absolutas, mixtas o por nombre)
+  - [funciones estándar de hoja de cálculo](#built-in-functions)
+  - [Funciones 4D](#4d-functions) basadas en fórmulas 4D y que ofrecen acceso a variables, campos, métodos, comandos o expresiones 4D.
 
 ## Valores y operadores
 
@@ -191,11 +191,11 @@ Queremos imprimir "Hola Mundo" en una celda del área 4D View Pro utilizando un 
 
 3. Edite el contenido de una celda en un área 4D View Pro y escriba:
 
- ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
- "myMethod" es entonces llamado por 4D y la la celda se muestra:
+  "myMethod" es entonces llamado por 4D y la la celda se muestra:
 
- ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Parámetros
 
@@ -246,10 +246,10 @@ Los métodos proyecto 4D también pueden devolver valores en la fórmula de la c
 - [imagen](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg otros tipos convertidos a png) crea un URI (data:image/png;base64,xxxx) y luego se usa como fondo en 4D View Pro en la celda donde se ejecuta la fórmula
 - [objeto](Concepts/dt_object.md) con las dos propiedades siguientes (que permiten pasar una fecha y una hora):
 
- | Propiedad | Tipo  | Descripción      |
- | --------- | ----- | ---------------- |
- | value     | Fecha | Valor fecha      |
- | time      | Real  | Hora en segundos |
+  | Propiedad | Tipo  | Descripción      |
+  | --------- | ----- | ---------------- |
+  | value     | Fecha | Valor fecha      |
+  | time      | Real  | Hora en segundos |
 
 Si el método 4D no devuelve nada, se devuelve automáticamente una cadena vacía.
 
@@ -321,19 +321,19 @@ Queremos imprimir el nombre de una persona en una celda del área 4D View Pro ut
 
 2. Ejecuta el siguiente código para inicializar una estructura virtual:
 
- ```4d
- ARRAY TEXT($tableTitles;1)
- ARRAY LONGINT($tableNum;1)
- $tableTitles{1}:="Emp"
- $tableNum{1}:=2
- SET TABLE TITLES($tableTitles;$tableNum;*)
-  
- ARRAY TEXT($fieldTitles;1)
- ARRAY LONGINT($fieldNum;1)
- $fieldTitles{1}:="Name"
- $fieldNum{1}:=2 //apellido
- SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
- ```
+  ```4d
+  ARRAY TEXT($tableTitles;1)
+  ARRAY LONGINT($tableNum;1)
+  $tableTitles{1}:="Emp"
+  $tableNum{1}:=2
+  SET TABLE TITLES($tableTitles;$tableNum;*)
+   
+  ARRAY TEXT($fieldTitles;1)
+  ARRAY LONGINT($fieldNum;1)
+  $fieldTitles{1}:="Name"
+  $fieldNum{1}:=2 //apellido
+  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+  ```
 
 3. Edite el contenido de una celda en el área 4D View Pro e introduzca "=e":
 

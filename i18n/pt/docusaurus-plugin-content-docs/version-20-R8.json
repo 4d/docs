@@ -168,11 +168,11 @@
     "description": "The generated-index page title for category Database Methods in sidebar docs"
   },
   "sidebar.docs.category.Date and Time": {
-    "message": "Date and Time",
+    "message": "Data e Horas",
     "description": "The label for category Date and Time in sidebar docs"
   },
   "sidebar.docs.category.Date and Time.link.generated-index.title": {
-    "message": "Date and Time",
+    "message": "Data e Horas",
     "description": "The generated-index page title for category Date and Time in sidebar docs"
   },
   "sidebar.docs.category.Design Object Access": {

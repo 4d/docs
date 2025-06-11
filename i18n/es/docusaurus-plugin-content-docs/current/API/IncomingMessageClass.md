@@ -61,7 +61,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
 
-Here is the response:
+Esta es la respuesta:
 
 ```json
 Called URL: /start/example? param=demo&name=4D 
@@ -105,9 +105,9 @@ Un objeto 4D.IncomingMessage es un objeto [no compartible](../Concepts/shared.md
 
 <!-- REF #IncomingMessageClass.getBlob().Params -->
 
-| Parámetros | Tipo |                             | Descripción                   |
-| ---------- | ---- | --------------------------- | ----------------------------- |
-| Resultado  | Blob | <- | Body of the request as a Blob |
+| Parámetros | Tipo |                             | Descripción                     |
+| ---------- | ---- | --------------------------- | ------------------------------- |
+| Resultado  | Blob | <- | Cuerpo de la petición como Blob |
 
 <!-- END REF -->
 
@@ -184,9 +184,9 @@ If the body has not been given as JSON valid content, an error is raised.
 
 <!-- REF #IncomingMessageClass.getPicture().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                    |
-| ---------- | ------- | --------------------------- | ------------------------------ |
-| Resultado  | Picture | <- | Body of the request as picture |
+| Parámetros | Tipo    |                             | Descripción                       |
+| ---------- | ------- | --------------------------- | --------------------------------- |
+| Resultado  | Picture | <- | Cuerpo de la petición como imagen |
 
 <!-- END REF -->
 
