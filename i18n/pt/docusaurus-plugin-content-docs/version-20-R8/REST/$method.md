@@ -196,7 +196,7 @@ Se surgir um problema ao adicionar ou modificar uma entidade, ser-lhe-á enviado
 - **Dates** devem ser expressas no formato JS: AAAA-MM-DDTHH:MM:SSZ (ex.: "2010-10-05T23:00:00Z"). Se tiver selecionado a propriedade Date only para o seu atributo Data, o fuso horário e a hora (hora, minutos e segundos) serão removidos. Neste caso, também pode enviar a data no formato que lhe é devolvido dd!mm!aaaa (por exemplo, 05!10!2013).
 - **Booleanos** são verdadeiro ou falso.
 - Arquivos carregados usando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objeto retornado no seguinte formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
- :::
+    :::
 
 ### Exemplo
 
