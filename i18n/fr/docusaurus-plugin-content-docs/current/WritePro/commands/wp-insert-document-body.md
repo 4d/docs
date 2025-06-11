@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Paramètres  | Type    |                             | Description                                              |
 | ----------- | ------- | --------------------------- | -------------------------------------------------------- |
 | targetObj   | Object  | &#8594; | Plage ou élément ou document 4D Write Pro                |
-| wpDoc       | Object  | &#8594; | 4D Write Pro document                                    |
+| wpDoc       | Object  | &#8594; | Document 4D Write Pro                                    |
 | mode        | Integer | &#8594; | Mode d'insertion                                         |
 | rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage                          |
 | Résultat    | Object  | &#8592; | Text range object referencing the inserted document body |

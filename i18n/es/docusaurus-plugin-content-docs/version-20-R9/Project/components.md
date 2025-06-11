@@ -22,8 +22,8 @@ La carpeta del paquete de un componente puede contener:
 
 - para **componentes interpretados**: una [Carpeta Project](../Project/architecture.md) estándar. El nombre de la carpeta del paquete debe llevar el sufijo **.4dbase** si desea instalarlo en la carpeta [**Componentes** de su proyecto](architecture.md#components).
 - para **componentes compilados**:
- - una carpeta "Contents" que contenga un archivo .4DZ, una carpeta *Resources*, un archivo *Info.plist* (arquitectura recomendada)
- - o directamente un archivo .4DZ con otras carpetas como *Resources*.
+    - una carpeta "Contents" que contenga un archivo .4DZ, una carpeta *Resources*, un archivo *Info.plist* (arquitectura recomendada)
+    - o directamente un archivo .4DZ con otras carpetas como *Resources*.
 
 :::note
 
@@ -328,10 +328,10 @@ En un proyecto abierto, puede añadir, eliminar, actualizar y obtener informaci�
 Para mostrar el panel Dependencias:
 
 - con 4D, seleccione el ítem de menú **Diseño/Dependencias del Proyecto** (entorno de desarrollo),<br/>
- ![dependency-menu](../assets/en/Project/dependency-menu.png)
+    ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - con el servidor 4D, seleccione el elemento de menú **Ventana/Dependencias del proyecto**.<br/>
- ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+    ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 A continuación, se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:
 

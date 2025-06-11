@@ -94,57 +94,57 @@ A tabela a seguir indica a *option* disponível por *format* de exportação:
 | wk visible references                       | \-                                                                                                          | \-                                                                                                         | \-                                                                                                               | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (padrão: false) | \-                                                                                                               | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (padrão: false)    |
 | wk whitespace                               | \-                                                                                                          | \-                                                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (padrão: "pre-wrap") | \-                                                                                                          | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (padrão: "pre-wrap") | \-                                                                                                             |
 
-**Compatibility Note:** Passing a *longint* value in *option* is supported for compatibility reasons, but it is recommended to use an [object](# "Data structured as a native 4D object") parameter.
+**Nota de compatibilidade:** Passar um valor *longint* na *option* é suportado por razões de compatibilidade. mas é recomendado usar um parâmetro [object](# "Dados estruturados como um objeto 4D nativo".
 
-### wk files collection
+### coleção de arquivos wk
 
-The wk files property allows you to [export a PDF with attachments](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures). This property must contain a collection of objects describing the files to be embedded in the final document. Each object of the collection can contain the following properties:
+A propriedade de arquivos wk permite [exportar um PDF com anexos](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures). Essa propriedade deve conter uma coleção de objetos que descrevam os arquivos para serem incorporados no documento final. Cada objeto da coleção pode conter as seguintes propriedades:
 
-| **Propriedade** | **Tipo**                       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| --------------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name            | Text                           | File name. Optional if the *file* property is used, in which case the name is inferred by default from the file name. Mandatory if the *data* property is used (except for the first file of a Factur-X export, in which case the name for the file is automatically "factur-x.xml", see below)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| description     | Text                           | Opcional. If omitted, default value for the first export file to Factur-X is "Factur-X/ZUGFeRD Invoice", otherwise empty.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| mimeType        | Text                           | Opcional. If omitted, default value can usually be guessed from file extension; otherwise, "application/octet-stream" is used. If passed, make sure to use an ISO mime type, otherwise the exported file could be invalid.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| data            | Texto ou BLOB                  | Obrigatório se a propriedade *file* está faltando                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| file            | Objeto 4D.File | Obrigatório se a propriedade *data* estiver ausente; caso contrário, será ignorado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| relationship    | Text                           | Opcional. If omitted, default value is "Data". Possible values for Factur-X first file:for BASIC, EN 16931 or EXTENDED profiles: "Alternative", "Source" or "Data" ("Alternative" only for German invoice)for MINIMUM and BASIC WL profiles: "Data" only.for other profiles: "Alternative", "Source" or "Data" (with restrictions perhaps depending on country: see profile specification for more info about other profiles - for instance for RECHNUNG profile only "Alternative" is allowed)for other files (but Factur-X invoice xml file) : "Alternative", "Source", "Data", "Supplement" or "Unspecified"any other value generates an error. |
+| **Propriedade** | **Tipo**                       | **Descrição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| --------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name            | Text                           | Nome do Arquivo Opcional se a propriedade *file* for usada, neste caso o nome é inferido por padrão do nome do arquivo. Obrigatório se a propriedade *data* é usada (exceto para o primeiro arquivo de uma exportação Factur-X, nesse caso o nome do arquivo é automaticamente "factur-x. ml", veja abaixo)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| description     | Text                           | Opcional. Se omitido, o valor padrão do primeiro arquivo de exportação para Factur-X é "Factur-X/ZUGFeRD Invoice", caso contrário vazio.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| mimeType        | Text                           | Opcional. Se omitido, o valor padrão pode ser geralmente sugerido a partir da extensão do arquivo; caso contrário, é usado "application/octet-stream". Se nome for passado, certifique-se de usar um tipo ISO mime , caso contrário o arquivo exportado pode ser inválido.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| data            | Texto ou BLOB                  | Obrigatório se a propriedade *file* está faltando                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| file            | Objeto 4D.File | Obrigatório se a propriedade *data* estiver ausente; caso contrário, será ignorado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| relationship    | Text                           | Opcional. Se omitido, o valor padrão é "Dados". Possíveis valores para o primeiro arquivo Factur-X: para BASIC, EN 16931 ou EXTENDED: "Alternativo", "Fonte" ou "Dados" ("Alternativa" apenas para fatura alemã)para MINIMUM e perfis BASIC WL: apenas "Dados". ou outros perfis: "Alternativa", "Fonte" ou "Dados" (com restrições, talvez dependendo do país: veja a especificação do perfil para mais informações sobre outros perfis - por exemplo, para o perfil RECHNUNG apenas "Alternativa" é permitido)para outros arquivos (mas o arquivo xml de fatura de Factur-X) : "Alternativo", "Fonte", "Dados", "Suplementar" ou "Unspecified"qualquer outro valor gera um erro. |
 
-If the *option* parameter also contains a wk factur x property, then the first element of the wk files collection must be the Factur-X (ZUGFeRD) invoice xml file (see below).
+Se o parâmetro *option* também contiver uma propriedade x do wk, em seguida, o primeiro elemento da coleção de arquivos wk deve ser o arquivo xml Factur-X (ZUGFeRD) para a fatura (veja abaixo).
 
 :::note
 
-PDF attachments are only supported by the PDF/A-3 version. When you pass the wk files property, the "PDF/A-3" version is automatically used.
+Os anexos de PDF são suportados apenas pela versão PDF/A-3. Quando você passar a propriedade de arquivos wk, a versão "PDF/A-3" é usada automaticamente.
 
 :::
 
 ### wk factur x object
 
-The wk factur x property is an object that can contains up to two properties:
+A propriedade wk factur x é um objeto que pode conter até duas propriedades:
 
-| **Propriedade** | **Tipo** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| profile         | Text     | Opcional. If omitted, *profile* is determined from the provided xml file or text (which must use a standard profile). If passed, it can be a non-standard profile name (for using other profiles - for instance RECHNUNG). **Note:* Standard profile names are: MINIMUM, BASIC WL, BASIC, EN 16931 (aka COMFORT which is an alias), EXTENDED.* |
-| version         | Text     | Opcional. Valor padrão é "1.0"                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Propriedade** | **Tipo** | **Descrição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| --------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| profile         | Text     | Opcional. Se omitido, *perfil* é determinado a partir do arquivo xml fornecido ou do texto (que deve usar um perfil padrão). Se for passado, pode ser um nome de perfil não padrão (por meio de outros perfis - por exemplo, RECHNUNG). **Nota:* Os nomes padrão são: MINIMUM, BASIC WL, BASIC, EN 16931 (também conhecida como COMFORT que é um alias), EXTENDED.* |
+| version         | Text     | Opcional. Valor padrão é "1.0"                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ### Sobre documentos PDF Factur-X / ZUGFeRD
 
-*Factur-X / ZUGFeRD* is a European standard for hybrid e-invoices (PDF for users and XML data for process automation). For more information, please read [this blog post](https://blog.4d.com/4d-write-pro-electronic-invoice-generation).
+*Factur-X / ZUGFeRD* é um padrão europeu para faturas eletrônicas híbridas (PDF para usuários e dados XML para automação do processo). Para mais informações, por favor leia [este post de blog](https://blog.4d.com/4d-write-pro-electronic-invoice-generation).
 
-To trigger a "Factur-X" PDF export, pass both the wk factur x and wk files properties in the *option* parameter (see Example 5). Nesse modo:
+Para acionar a exportação de um PDF "Factur-X", passe as propriedades de arquivos wk factur x e wk no parâmetro *option* (veja Exemplo 5). Nesse modo:
 
-- a Factur-X (ZUGFeRD) PDF is generated,
-- the first element of the wk files collection is used as Factur-X xml file,
-- if the wk files property is missing or contains an empty collection, or if its first element is not a xml file, an error is generated.
+- um PDF de Factur-X (ZUGFeRD) é gerado,
+- o primeiro elemento da coleção de arquivos wk é usado como arquivo xml Factur-X,
+- se a propriedade de arquivos wk estiver ausente ou contiver uma coleção vazia, ou se seu primeiro elemento não for um arquivo xml, um erro é gerado.
 
 :::note
 
-For a detailed example of Factur-X / ZUGFeRD export implementation, you can download [this HDI 4D project](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
+Para um exemplo detalhado de implementação da exportação Factur-X / ZUGFeRD, você pode baixar [este projeto HDI 4D](https://github.com/4d-depot/HDI%5F4DWP%5FGenerateFacturX).
 
 :::
 
 ## Exemplo 1
 
-You want to export the contents of the *myArea* 4D Write Pro object in both HTML and PDF format:
+Se quiser exportar o conteúdo do objeto *myArea* 4D Write Pro no formato HTML e PDF:
 
 ```4d
   // exportar HTML
@@ -174,7 +174,7 @@ You want to export the contents of the *myArea* 4D Write Pro object in both HTML
 
 ## Exemplo 2
 
-You want to export the contents of the *myArea* 4D Write Pro object in .4wp format:
+Se quiser exportar o conteúdo do *myArea* 4D Write Pro no formato .4wp:
 
 ```4d
  var $path : Text
@@ -193,7 +193,7 @@ You want to export the contents of the *myArea* 4D Write Pro object in .4wp form
 
 ## Exemplo 3
 
-To export the second page of the document as SVG and export the pictures from the document:
+Para exportar a segunda página do documento como SVG e exportar as imagens do documento:
 
 ```4d
  var $options : Object
@@ -207,7 +207,7 @@ To export the second page of the document as SVG and export the pictures from th
 
 ## Exemplo
 
-Exporting a PDF document with PDF/A-2 conformance:
+Exportando um documento PDF com conformidade com PDF/A-2:
 
 ```4d
  var $options: Object:={}
@@ -221,33 +221,33 @@ Exporting a PDF document with PDF/A-2 conformance:
 Exemplos de exportações PDF de Factur-X:
 
 ```4d
-  //BASIC (standard profile)
- var $options;$fileInfo : Object
+  //BASIC (perfil padrão)
+ var $options;$fileInfo : objeto
  $options:={}
  $options[wk factur x]:={}
- $options[wk factur x].profile:="BASIC"
+ $options[wk factur x]. rofile:="BASIC"
  $options[wk factur x].version:="1.0"
 
  $fileInfo:={}
- $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
+ $fileInfo.file:=$file  //$file é um 4D. ile with a .xml file as target
  $options[wk files]:=[$fileInfo]
 
- WP EXPORT DOCUMENT(wpDoc;"facturX_basic.pdf";wk pdf;$options)
+ WP EXPORT DOCUMENT(wpDoc;"facturX_basic. df";wk pdf;$options) Perfil
 
-  //RECHNUNG profile (custom profile)
+  //RECHNUNG (perfil personalizado)
  $options:={}
  $options[wk factur x]:={}
- $options[wk factur x].profile:="RECHNUNG"
- $options[wk factur x].version:="2.1" //last version for RECHNUNG
+ $options[wk factur x]. rofile:="RECHNUNG"
+ $options[wk factur x].version:="2.1" //última versão do RECHNUNG
 
  $fileInfo:={}
- $fileInfo.file:=$file  //$file is a 4D.File with an .xml file as target
- $fileInfo.name:="rechnung.xml" //mandatory file name in PDF for RECHNUNG
- $fileInfo.relationship:="Alternative" //mandatory for Germany
- $fileInfo.description:="ZUGFeRD Rechnung"
+ $fileInfo. ile:=$file  //$file é um 4D.File com um arquivo .xml como target
+ $fileInfo.name:="rechnung. ml" //nome de arquivo obrigatório em PDF para RECHNUNG
+ $fileInfo.relationship:="Alternative" //obrigatório para a Alemanha
+ $fileInfo. escription:="Rechnung ZUGFeRD"
  $options[wk files]:=[$fileInfo]
 
- WP EXPORT DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
+ WP EXPORTE DOCUMENT(wpDoc;"facturX_rechnung.pdf";wk pdf;$options)
 ```
 
 ## Exemplo 6

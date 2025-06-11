@@ -35,8 +35,8 @@ La commande **Command name** <!--REF #_command_.Command name.Summary-->retourne 
 Deux paramètres optionnels sont disponibles :
 
 - *info* : propriétés de la commande. La valeur renvoyée est un *champ de bits*, où les bits suivants sont significatifs :
- - Premier bit (bit 0) : il vaut 1 si la commande est [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (c'est-à-dire compatible avec une exécution dans un processus préemptif) et 0 si elle est **thread-unsafe**. Seules les commandes thread-safe peuvent être utilisées dans les [process préemptifs](../Develop/preemptive.md).
- - Deuxième bit (bit 1) : mis à 1 si la commande est **obsolète**, et à 0 si elle ne l'est pas. Une commande obsolète (ou dépréciée) continuera à fonctionner normalement tant qu'elle sera prise en charge, mais elle doit être remplacée dans la mesure du possible et ne doit plus être utilisée dans le nouveau code. Les commandes obsolètes dans votre code génèrent des avertissements dans le [live checker et le compilateur](../code-editor/write-class-method.md#warnings-and-errors).
+  - Premier bit (bit 0) : il vaut 1 si la commande est [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (c'est-à-dire compatible avec une exécution dans un processus préemptif) et 0 si elle est **thread-unsafe**. Seules les commandes thread-safe peuvent être utilisées dans les [process préemptifs](../Develop/preemptive.md).
+  - Deuxième bit (bit 1) : mis à 1 si la commande est **obsolète**, et à 0 si elle ne l'est pas. Une commande obsolète (ou dépréciée) continuera à fonctionner normalement tant qu'elle sera prise en charge, mais elle doit être remplacée dans la mesure du possible et ne doit plus être utilisée dans le nouveau code. Les commandes obsolètes dans votre code génèrent des avertissements dans le [live checker et le compilateur](../code-editor/write-class-method.md#warnings-and-errors).
 
 *thème* : nom du thème du langage 4D pour la commande.
 

@@ -107,7 +107,7 @@ When the [**Current time**](../commands-legacy/current-time.md) command, a time 
  
 ```
 
-## Support of virtual structure
+## Soporte de estructura virtual
 
 Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) and [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) commands.
 
@@ -210,18 +210,18 @@ Whatever the formula display mode, you can get additional information on formula
 
 - When formulas do not have names, tips provide the source text of formulas:
 
- ![](../assets/en/WritePro/wp-formulas7.png)
+  ![](../assets/en/WritePro/wp-formulas7.png)
 
 - When formulas have names but are displayed as values or as symbols, the tip provides the name of formulas:
 
- ![](../assets/en/WritePro/wp-formulas8.png)
+  ![](../assets/en/WritePro/wp-formulas8.png)
 
 In this context, you can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula.
 
 - When formulas have names and are displayed as names, no tip is displayed by default.
- You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
- [
- ![](../assets/en/WritePro/wp-formulas9.png)
+  You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
+  [
+  ![](../assets/en/WritePro/wp-formulas9.png)
 
 #### Ver también
 

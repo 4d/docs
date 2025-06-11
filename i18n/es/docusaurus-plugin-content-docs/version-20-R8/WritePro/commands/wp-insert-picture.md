@@ -14,8 +14,8 @@ displayed_sidebar: docs
 | picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk |
 | pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
 | mode           | Integer                 | &#8594; | Modo de inserción                                          |
-| rangeUpdate    | Integer                 | &#8594; | Range update mode                                          |
-| Resultado      | Object                  | &#8592; | Object referencing the picture                             |
+| rangeUpdate    | Integer                 | &#8594; | Modo de actualización del rango                            |
+| Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                     |
 
 <!-- END REF-->
 
@@ -32,9 +32,9 @@ En *targetObj*, puede pasar:
 For the second parameter, you can pass either:
 
 - En *picture*:
- - A picture field or variable
- - A string containing a path to a picture file stored on disk, in the system syntax.
-  If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
+  - Campo o variable de imagen
+  - A string containing a path to a picture file stored on disk, in the system syntax.
+    If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
 - En *pictureFileObj* : un objeto `File` que representa un archivo imagen.
 
 Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. Puede obtener la lista de formatos de imagen disponibles usando el comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.

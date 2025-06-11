@@ -290,10 +290,10 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 2種類のログファイルを生成することができます:
 
 - 通常バージョン:
- - 4DSMTPLog.txt, 4DPOP3Log.txt, および 4DIMAPLog.txt と名前がつけられます。
- - 添付ファイルは含めません
- - 10MBごとの自動循環ファイルリサイクルを使用します。
- - 通常のデバッギング用途を想定しています。
+  - 4DSMTPLog.txt, 4DPOP3Log.txt, および 4DIMAPLog.txt と名前がつけられます。
+  - 添付ファイルは含めません
+  - 10MBごとの自動循環ファイルリサイクルを使用します。
+  - 通常のデバッギング用途を想定しています。
 
 このログを開始するには:
 
@@ -308,10 +308,10 @@ SET DATABASE PARAMETER(SMTP Log;1) // SMTPログを開始
 このログのパスは `Get 4D file` コマンドによって返されます。
 
 - 拡張バージョン:
- - 添付ファイルも含まれます。
-  自動ファイルリサイクルは使用されません。
- - カスタムの名前を使用できます。
- - 特定の目的のために用意されています。
+  - 添付ファイルも含まれます。
+    自動ファイルリサイクルは使用されません。
+  - カスタムの名前を使用できます。
+  - 特定の目的のために用意されています。
 
 このログを開始するには:
 
@@ -464,19 +464,19 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 - `SET DATABASE PARAMETER` コマンドを使用する:
 
- ```4d
- SET DATABASE PARAMETER(TCP log; 1)
- ```
+  ```4d
+  SET DATABASE PARAMETER(TCP log; 1)
+  ```
 
 - [JSON 設定ファイル](#using-a-log-configuration-file) を使用してログを設定する:
 
- ```json
- {
-     "TCPLogs":{
-       "state" : 1
-          }
- }
- ```
+  ```json
+  {
+      "TCPLogs":{
+        "state" : 1
+           }
+  }
+  ```
 
 それぞれのイベントに対して、以下のフィールドが記録されます:
 
@@ -504,14 +504,14 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 - **インターフェース付きの 4D Server**: メンテナンスページを開き、[ログ設定ファイルを読み込む](ServerWindow/maintenance.md#ログ設定ファイルを読み込む) ボタンをクリックしてファイルを選択します。  この場合、設定ファイルには任意の名前を使用することができます。 ファイルは、サーバー上で即座に有効化されます。
 - **インタープリタまたはコンパイル済みプロジェクト**: ファイルの名前は `logConfig.json` でプロジェクトの [Settings フォルダ](../Project/architecture.md#settings-user) 内にコピーする必要があります(このフォルダは [`Project` フォルダ](../Project/architecture.md#project-folder) と同階層に位置しています)。 このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
 - **ビルドしたアプリケーション**: ファイルは `logConfig.json` という名称で次のフォルダーに置く必要があります:
- - Windows: `Users\[userName]\AppData\Roaming\[application]`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+  - Windows: `Users\[userName]\AppData\Roaming\[application]`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **スタンドアロンまたはリモート4D でのすべてのプロジェクト**: ファイルは `logConfig.json` という名称で次のフォルダーに置く必要があります:
- - Windows: `Users\[userName]\AppData\Roaming\4D`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+  - Windows: `Users\[userName]\AppData\Roaming\4D`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **4D Server でのすべてのプロジェクト**: ファイルは `logConfig.json` という名称で次のフォルダーに置く必要があります:
- - Windows: `Users\[userName]\AppData\Roaming\4D Server`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 

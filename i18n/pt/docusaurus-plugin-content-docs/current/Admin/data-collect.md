@@ -70,7 +70,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 | Dados                                             | Tipo   | Notas                                                         |
 | ------------------------------------------------- | ------ | ------------------------------------------------------------- |
-| databases.externalDatastoreOpened | Number | Number of calls to `Open datastore`                           |
+| databases.externalDatastoreOpened | Number | Número de chamadas para 'Open datastore'                      |
 | databases.internalDatastoreOpened | Number | Number of times the datastore is opened by an external server |
 
 ### Recolha a intervalos regulares

@@ -518,7 +518,7 @@ A função `.restore()` <!-- REF #SessionClass.restore().Summary -->substitui a 
 
 If the original user session has been correctly restored, the function returns `true`.
 
-The function returns `false` if:
+A função retorna `false` se:
 
 - the session token has already been used,
 - the session token has expired,

@@ -161,7 +161,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 Ver ejemplo para [recibir una selección de entidad](#receiving-an-entity-selection-as-parameter) con una petición POST.
 Ver ejemplo para [obtener una lista construida sobre una selección de entidades](#using-an-entity-selection-to-get-a-list) con una petición GET.
 
-## POST request examples
+## Ejemplos de peticiones POST
 
 Esta base de datos se expone como un almacén de datos remoto en localhost (puerto 8111):
 

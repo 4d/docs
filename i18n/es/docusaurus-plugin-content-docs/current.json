@@ -780,7 +780,7 @@
     "description": "The label for category Web Services (Client) in sidebar docs"
   },
   "sidebar.docs.category.Web Services (Server)": {
-    "message": "Web Services (Server)",
+    "message": "Web Services (Servidor)",
     "description": "The label for category Web Services (Server) in sidebar docs"
   },
   "sidebar.docs.category.Windows": {
@@ -1108,7 +1108,7 @@
     "description": "The generated-index page title for category Web Services (Client) in sidebar docs"
   },
   "sidebar.docs.category.Web Services (Server).link.generated-index.title": {
-    "message": "Web Services (Server)",
+    "message": "Web Services (Servidor)",
     "description": "The generated-index page title for category Web Services (Server) in sidebar docs"
   },
   "sidebar.docs.category.Windows.link.generated-index.title": {

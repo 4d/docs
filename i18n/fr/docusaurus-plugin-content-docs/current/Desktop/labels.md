@@ -26,7 +26,7 @@ Une fois que vous avez terminé un modèle d’étiquette, vous pouvez le sauveg
 Pour ouvrir l’éditeur d’étiquettes :
 
 - En mode Développement, sélectionnez **Etiquettes...** dans le menu **Outils** ou dans le menu associé au bouton “Outils” dans la barre d’outils de 4D.
- OU
+  OU
 - En mode Application, utilisez la commande [`PRINT LABEL`](../commands-legacy/print-label.md) .
 
 ![](../assets/en/Desktop/label-wizard.png)
@@ -60,11 +60,11 @@ Cette zone vous permet d’insérer tous les éléments que vous souhaitez voir 
 
 - Vous pouvez faire glisser des champs sur l'étiquette.
 - Vous pouvez concaténer deux champs en déposant le second sur le premier. Ils seront automatiquement séparés par un espace.<br/>
- ![](../assets/en/Desktop/label-concat.png)<br/>
- Si vous appuyez sur la touche **Maj**, ils seront séparés par un retour chariot. Ce fonctionnement permet par exemple de créer des étiquettes d’adresses utilisant plusieurs champs superposés (Adresse1, Adresse2, etc.) ne générant pas de ligne vide lorsqu’une adresse ne requiert qu’un champ.
+  ![](../assets/en/Desktop/label-concat.png)<br/>
+  Si vous appuyez sur la touche **Maj**, ils seront séparés par un retour chariot. Ce fonctionnement permet par exemple de créer des étiquettes d’adresses utilisant plusieurs champs superposés (Adresse1, Adresse2, etc.) ne générant pas de ligne vide lorsqu’une adresse ne requiert qu’un champ.
 - Vous pouvez ajouter une formule à l'étiquette en sélectionnant l'outil **Formule** ![](../assets/en/Desktop/label-tool6.png) (ou en choisissant **Outil>Formule** dans le menu contextuel) et en dessinant une zone. L'**Éditeur de formules** s'affiche alors :
- ![](../assets/en/Desktop/label-formula1.png)<br/>
- Par exemple, vous pouvez appliquer un format à un champ à l'aide de la commande [`String`](../commands-legacy/string.md) :<br/>
+  ![](../assets/en/Desktop/label-formula1.png)<br/>
+  Par exemple, vous pouvez appliquer un format à un champ à l'aide de la commande [`String`](../commands-legacy/string.md) :<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
@@ -77,7 +77,7 @@ N'oubliez pas que vous ne pouvez saisir que des méthodes "autorisées" pour la 
 - Vous pouvez glisser-déposer des fichiers image ainsi que des fichiers d'étiquettes (fichiers ".4lbp" uniquement) depuis le bureau du système d'exploitation.
 
 - Pour modifier la zone, double-cliquez sur le contenu afin de passer en mode édition. Lorsque vous double-cliquez sur des champs ou des formules, l'**Éditeur de formules** s'affiche, vous permettant de supprimer ou de modifier des éléments :
- ![](../assets/en/Desktop/label-formula.png)
+  ![](../assets/en/Desktop/label-formula.png)
 
 ### Formulaire à utiliser
 
@@ -135,17 +135,17 @@ Cette page contient des commandes permettant d'imprimer des étiquettes en fonct
 - **Lignes** et **Colonnes** : nombre d’étiquettes que vous souhaitez imprimer par “ligne” et par “colonne” sur une planche. Ces paramètres déterminent les dimensions des étiquettes lorsque l’option “Dimensions automatiques” est activée.
 - **Etiquettes par enregistrement** : nombre d’étiquettes à imprimer pour chaque enregistrement (les copies seront imprimées les unes à la suite des autres).
 - **Format d’impression** : format de la feuille sur laquelle la planche d’étiquettes sera imprimée. Lorsque vous cliquez sur ce bouton, la boîte de dialogue de configuration de l’imprimante sélectionnée dans votre système s’affiche. Par défaut, la planche d’étiquettes est générée sur la base d’une page A4 en mode portrait.
- **Note :** La planche créée par l’éditeur se base sur la page logique de l’imprimante, c’est-à-dire la page physique (par exemple une feuille A4) moins les marges inutilisables de chaque côté de la feuille. Les marges de la page physique sont représentées par les filets bleus dans la zone de prévisualisation de la planche.
+  **Note :** La planche créée par l’éditeur se base sur la page logique de l’imprimante, c’est-à-dire la page physique (par exemple une feuille A4) moins les marges inutilisables de chaque côté de la feuille. Les marges de la page physique sont représentées par les filets bleus dans la zone de prévisualisation de la planche.
 - **Unité** : Modifie les unités dans lesquelles vous spécifiez les mesures de l'étiquette et de la page d'étiquette. Vous pouvez utiliser des points, des millimètres, des centimètres ou des pouces.
 - **Dimensions automatiques** : indique à 4D de calculer automatiquement la taille des étiquettes (c’est-à-dire les paramètres Largeur et Hauteur) en fonction des valeurs fixées dans tous les autres paramètres. Lorsque cette option est active, la taille des étiquettes est recalculée à chaque fois que vous modifiez un paramètre dans la page. Dans ce cas également, les paramètres Largeur et Hauteur ne peuvent pas être saisis manuellement.
 - **Largeur** et **Hauteur** : ces zones permettent de définir manuellement la largeur et la hauteur de chaque étiquette. Ces zones ne sont pas modifiables lorsque l'option **Dimensions automatiques** est cochée.
 - **Marges** (Haut , Droite, Gauche, Bas) : permet de saisir les marges de votre planche. Les marges sont symbolisées par des filets de couleur bleue dans la zone de prévisualisation. Vous pouvez cliquer sur **Appliquer les marges de l'imprimante** afin de répliquer dans les zones de marge les informations de marge fournies par l'imprimante sélectionnée (ces valeurs peuvent être modifiées).
 - **Intervalles** : définit l’espacement horizontal et/ou vertical entre les étiquettes dans la planche.
 - **Méthode** : ce paramètre vous permet de déclencher une méthode particulière lors de l’impression de votre planche d’étiquettes. Par exemple, vous pouvez exécuter une méthode qui enregistre la date et l'heure auxquelles chaque étiquette a été imprimée. Cette fonction est également utile lorsque vous imprimez des étiquettes à l'aide d'un formulaire table dédié, auquel cas vous pouvez remplir des variables à partir d'une méthode.
- Pour être éligible au traitement des étiquettes, une méthode projet doit respecter les conditions suivantes :
- - elle doit être "autorisée" pour la base de données (les méthodes autorisées dépendent des [paramètres du projet](../settings/security.md#options) et de la commande [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)), sinon elle ne sera pas affichée dans le menu **Appliquer**.
- - elle doit avoir l'option [Partagée entre composants et base hôte](../Project/code-overview.md#shared-by-components-and-host-database) .
-  Voir aussi [cet exemple](#printing-labels-using-forms-and-methods-example) ci-dessous.
+  Pour être éligible au traitement des étiquettes, une méthode projet doit respecter les conditions suivantes :
+  - elle doit être "autorisée" pour la base de données (les méthodes autorisées dépendent des [paramètres du projet](../settings/security.md#options) et de la commande [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)), sinon elle ne sera pas affichée dans le menu **Appliquer**.
+  - elle doit avoir l'option [Partagée entre composants et base hôte](../Project/code-overview.md#shared-by-components-and-host-database) .
+    Voir aussi [cet exemple](#printing-labels-using-forms-and-methods-example) ci-dessous.
 
 :::note
 
@@ -163,8 +163,8 @@ Les options **A chaque : Enregistrement ou Étiquette** permettent de spécifier
 Vous pouvez utiliser des formulaires table dédiés et des méthodes projet pour imprimer des étiquettes contenant des variables calculées. Cet exemple simple explique comment configurer l'ensemble.
 
 1. Dans le formulaire table à utiliser, ajoutez le(s) champ(s) et variable(s) souhaité(s).
- Ici, dans le formulaire table nommé "labels", nous ajoutons la variable *myVar* :
- ![](../assets/en/Desktop/label-example1.png)
+  Ici, dans le formulaire table nommé "labels", nous ajoutons la variable *myVar* :
+  ![](../assets/en/Desktop/label-example1.png)
 
 2. Créez une méthode projet nommée *setMyVar* contenant le code suivant :
 
@@ -183,10 +183,10 @@ Vous pouvez utiliser des formulaires table dédiés et des méthodes projet pour
 ```
 
 5. Ouvrez l'éditeur d'étiquettes et sélectionnez votre formulaire :
- ![](../assets/en/Desktop/label-example2.png)
+  ![](../assets/en/Desktop/label-example2.png)
 
 6. Dans la page Planche, sélectionnez la méthode :
- ![](../assets/en/Desktop/label-example3.png)
+  ![](../assets/en/Desktop/label-example3.png)
 
 Vous pouvez alors imprimer vos étiquettes :
 ![](../assets/en/Desktop/label-example4.png)
