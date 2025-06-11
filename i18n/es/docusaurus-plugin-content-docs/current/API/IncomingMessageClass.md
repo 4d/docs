@@ -184,9 +184,9 @@ If the body has not been given as JSON valid content, an error is raised.
 
 <!-- REF #IncomingMessageClass.getPicture().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                    |
-| ---------- | ------- | --------------------------- | ------------------------------ |
-| Resultado  | Picture | <- | Body of the request as picture |
+| Parámetros | Tipo    |                             | Descripción                       |
+| ---------- | ------- | --------------------------- | --------------------------------- |
+| Resultado  | Picture | <- | Cuerpo de la petición como imagen |
 
 <!-- END REF -->
 
