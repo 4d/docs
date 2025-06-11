@@ -12,7 +12,7 @@ title: LISTBOX Get property
 | \*        | Operador      | &#8594; | If specified, object is an object name (string). If omitted, object is a variable |
 | object    | any           | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido)        |
 | property  | Integer       | &#8594; | Property whose value you want to get                                                                                 |
-| Resultado | Integer, Text | &#8592; | Current value                                                                                                        |
+| Resultado | Integer, Text | &#8592; | Valor atual                                                                                                          |
 
 <!-- END REF-->
 
