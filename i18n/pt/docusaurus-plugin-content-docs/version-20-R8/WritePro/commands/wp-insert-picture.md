@@ -25,16 +25,16 @@ The **WP Insert picture** command<!--REF #_command_.WP Insert picture.Summary-->
 
 Em *targetObj*, você pode passar:
 
-- A range
+- Um intervalo
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
 - Um documento 4D Write Pro
 
 For the second parameter, you can pass either:
 
 - Em *picture*:
- - A picture field or variable
- - A string containing a path to a picture file stored on disk, in the system syntax.
-  If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
+  - A picture field or variable
+  - A string containing a path to a picture file stored on disk, in the system syntax.
+    If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
 - Em *pictureFileObj*: um objeto `File` que representa um arquivo imagem.
 
 Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
