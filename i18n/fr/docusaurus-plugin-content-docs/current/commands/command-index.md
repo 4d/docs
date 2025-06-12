@@ -574,7 +574,7 @@ title: Index
 [`LISTBOX Get number of rows`](../commands-legacy/listbox-get-number-of-rows.md)<br/>
 [`LISTBOX GET OBJECTS`](../commands-legacy/listbox-get-objects.md)<br/>
 [`LISTBOX GET PRINT INFORMATION`](../commands-legacy/listbox-get-print-information.md)<br/>
-[`LISTBOX Get property`](listbox-get-property.md) **modified 4D 20 R10**<br/>
+[`LISTBOX Get property`](listbox-get-property.md) **modifié 4D 20 R10**<br/>
 [`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color.md)<br/>
 [`LISTBOX Get row color as number`](../commands-legacy/listbox-get-row-color-as-number.md)<br/>
 [`LISTBOX Get row font style`](../commands-legacy/listbox-get-row-font-style.md)<br/>
@@ -602,7 +602,7 @@ title: Index
 [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height.md)<br/>
 [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md)<br/>
 [`LISTBOX SET LOCKED COLUMNS`](../commands-legacy/listbox-set-locked-columns.md)<br/>
-[`LISTBOX SET PROPERTY`](listbox-set-property.md) **modified 4D 20 R10**<br/>
+[`LISTBOX SET PROPERTY`](listbox-set-property.md) **modifié 4D 20 R10**<br/>
 [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md)<br/>
 [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md)<br/>
 [`LISTBOX SET ROW HEIGHT`](../commands-legacy/listbox-set-row-height.md)<br/>
@@ -727,7 +727,7 @@ title: Index
 [`OBJECT GET COORDINATES`](../commands-legacy/object-get-coordinates.md)<br/>
 [`OBJECT Get corner radius`](../commands-legacy/object-get-corner-radius.md)<br/>
 [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md)<br/>
-[`OBJECT Get data source formula`](object-get-data-source-formula.md) **new 4D 20 R10**<br/>
+[`OBJECT Get data source formula`](object-get-data-source-formula.md) **nouveau 4D 20 R10**<br/>
 [`OBJECT GET DRAG AND DROP OPTIONS`](../commands-legacy/object-get-drag-and-drop-options.md)<br/>
 [`OBJECT Get enabled`](../commands-legacy/object-get-enabled.md)<br/>
 [`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md)<br/>
@@ -776,7 +776,7 @@ title: Index
 [`OBJECT SET COORDINATES`](../commands-legacy/object-set-coordinates.md)<br/>
 [`OBJECT SET CORNER RADIUS`](../commands-legacy/object-set-corner-radius.md)<br/>
 [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md)<br/>
-[`OBJECT SET DATA SOURCE FORMULA`](object-set-data-source-formula.md) **new 4D 20 R10**<br/>
+[`OBJECT SET DATA SOURCE FORMULA`](object-set-data-source-formula.md) **nouveau 4D 20 R10**<br/>
 [`OBJECT SET DRAG AND DROP OPTIONS`](../commands-legacy/object-set-drag-and-drop-options.md)<br/>
 [`OBJECT SET ENABLED`](../commands-legacy/object-set-enabled.md)<br/>
 [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)<br/>
@@ -1280,7 +1280,7 @@ title: Index
 [`WA Evaluate JavaScript`](../commands-legacy/wa-evaluate-javascript.md)<br/>
 [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md)<br/>
 [`WA Forward URL available`](../commands-legacy/wa-forward-url-available.md)<br/>
-[`WA Get context`](../commands/wa-get-context.md) **new 4D 20 R9**<br/>
+[`WA Get context`](../commands/wa-get-context.md) **nouveau 4D 20 R9**<br/>
 [`WA Get current URL`](../commands-legacy/wa-get-current-url.md)<br/>
 [`WA GET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-get-external-links-filters.md)<br/>
 [`WA Get last filtered URL`](../commands-legacy/wa-get-last-filtered-url.md)<br/>
@@ -1296,7 +1296,7 @@ title: Index
 [`WA OPEN WEB INSPECTOR`](../commands-legacy/wa-open-web-inspector.md)<br/>
 [`WA REFRESH CURRENT URL`](../commands-legacy/wa-refresh-current-url.md)<br/>
 [`WA Run offscreen area`](../commands-legacy/wa-run-offscreen-area.md)<br/>
-[`WA SET CONTEXT`](../commands/wa-set-context.md)  **new 4D 20 R9**<br/>
+[`WA SET CONTEXT`](../commands/wa-set-context.md)  **nouveau 4D 20 R9**<br/>
 [`WA SET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-set-external-links-filters.md)<br/>
 [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md)<br/>
 [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)<br/>
