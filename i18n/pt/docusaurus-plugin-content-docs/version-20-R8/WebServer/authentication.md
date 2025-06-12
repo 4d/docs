@@ -149,7 +149,7 @@ O parâmetro `$IPClient` recebe o endereço IP da máquina do navegador. Essas i
 
 #### $IPServer - Endereço IP do servidor
 
-The `$IPServer` parameter receives the IP address used to call the web server. 4D permite multi-home que você explore máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
+El parámetro `$IPServer` recibe la dirección IP utilizada para llamar al servidor web. 4D permite multi-home que você explore máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
 #### $user e $password - Nome de usuário e senha
 

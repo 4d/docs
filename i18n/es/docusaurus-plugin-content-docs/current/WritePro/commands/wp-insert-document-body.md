@@ -40,10 +40,10 @@ In the *mode* parameter, pass one or a combination of the following constants fr
 
 You can combine one of the previous constants with the following insertion options:
 
-| Constante                | Tipo    | Valor | Comentario                                                                                                                                           |
-| ------------------------ | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk freeze expressions    | Integer | 64    | Freeze expressions at the moment of the insertion                                                                                                    |
-| wk keep paragraph styles | Integer | 128   | Apply destination paragraph styles. In case of wk append operation, insert contents without initial paragraph break. |
+| Constante                | Tipo    | Valor | Comentario                                                                                                                                              |
+| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| wk freeze expressions    | Integer | 64    | Freeze expressions at the moment of the insertion                                                                                                       |
+| wk keep paragraph styles | Integer | 128   | Aplicar estilos de párrafo de destino. In case of wk append operation, insert contents without initial paragraph break. |
 
 In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 

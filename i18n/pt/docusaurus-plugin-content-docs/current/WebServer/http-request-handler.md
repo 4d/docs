@@ -216,8 +216,8 @@ In this example, you must implement the following functions:
 
 Examples of URLs triggering the handlers:
 
-`IP:port/info/` with a GET verb
-`IP:port/info/general` with a GET verb
+`IP:port/info/` com um verbo GET
+`IP:port/info/general` com um verbo GET
 
 `IP:port/userAccount/update/` with a POST verb
 `IP:port/userAccount/update/profile` with a POST verb

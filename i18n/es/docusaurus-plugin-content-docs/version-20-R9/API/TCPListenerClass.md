@@ -99,7 +99,7 @@ Callback functions receive up to two parameters:
 
 | Parámetros | Tipo                                        | Descripción                                           |
 | ---------- | ------------------------------------------- | ----------------------------------------------------- |
-| $listener  | [`TCPListener` object](#tcplistener-object) | The current TCP listener instance.    |
+| $listener  | [`TCPListener` object](#tcplistener-object) | La instancia actual del listener TCP. |
 | $event     | [objeto `TCPEvent`](#tcpevent-object)       | Contiene información sobre el evento. |
 
 **Secuencia de retrollamadas:**

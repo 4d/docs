@@ -142,7 +142,7 @@ You want to print a form containing a list box. During the *on load* event, you 
  CLOSE PRINTING JOB
 ```
 
-2\. In the form method, you can write:
+2\. En el método formulario, puede escribir:
 
 ```4d
  var $o : Object

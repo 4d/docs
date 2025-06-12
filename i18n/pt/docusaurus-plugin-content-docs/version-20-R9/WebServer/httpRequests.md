@@ -54,7 +54,7 @@ You must declare these parameters:
 
 ```
 
-> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) não é permitido e encerra o processamento do método.
+> Chamando um comando 4D que exibe um elemento de interface (`DIALOG`, `ALERT`, etc.) não é permitido e encerra o processamento do método.
 
 ### $url - URL extra data
 

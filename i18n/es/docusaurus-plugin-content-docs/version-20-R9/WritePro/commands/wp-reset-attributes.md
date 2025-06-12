@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | targetObj           | Object     | &#8594; | Rango o elemento o documento 4D Write Pro           |
 | sectionOrSubsection | Object     | &#8594; | Sección o subsección de un documento 4D Write Pro   |
 | attribName          | Text       | &#8594; | Nombre de atributo(s) a eliminar |
-| attribColl          | Collection | &#8594; | Collection of attributes to remove                  |
+| attribColl          | Collection | &#8594; | Colección de atributos a eliminar                   |
 
 <!-- END REF-->
 

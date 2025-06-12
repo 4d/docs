@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | breakType   | Integer | &#8594; | Type of break to insert                   |
 | mode        | Integer | &#8594; | Modo de inserción                         |
 | rangeUpdate | Integer | &#8594; | Modo de actualización del rango           |
-| Resultado   | Object  | &#8592; | Text range of the break character         |
+| Resultado   | Object  | &#8592; | Rango de texto del caracter de ruptura    |
 
 <!-- END REF-->
 

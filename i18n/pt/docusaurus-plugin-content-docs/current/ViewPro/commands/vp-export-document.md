@@ -172,7 +172,7 @@ Método ***AfterExport***:
 
 ## Exemplo
 
-You want to export the current sheet to a `.txt` file with pipe-separated values:
+Pretende exportar a folha atual para um ficheiro `.txt` com valores separados por "|":
 
 ![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv.png)
 

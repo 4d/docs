@@ -41,7 +41,7 @@ On 4D Server, you can filter information to be returned using the optional *sess
 | Constante              | Valor | Comentario                                                                          |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------- |
 | Processes and sessions | 0     | Devuelve las listas "processes" y "sessions" (valor por defecto) |
-| Processes only         | 1     | Returns only the "processes" list                                                   |
+| Processes only         | 1     | Devuelve sólo la lista "processes"                                                  |
 | Sólo sesiones          | 2     | Returns only the "sessions" list                                                    |
 
 :::note

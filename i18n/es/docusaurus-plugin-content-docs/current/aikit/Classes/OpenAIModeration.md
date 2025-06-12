@@ -16,4 +16,4 @@ https://platform.openai.com/docs/api-reference/moderations/object
 | `id`       | Text                                            | The ID associated with the moderation request. |
 | `model`    | Text                                            | The moderation model used for processing.      |
 | `results`  | Collection                                      | A collection of moderation results.            |
-| `elemento` | [OpenAIModerationItem](OpenAIModerationItem.md) | The first item from the results.               |
+| `elemento` | [OpenAIModerationItem](OpenAIModerationItem.md) | El primer elemento de los resultados.          |

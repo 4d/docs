@@ -267,7 +267,7 @@ A função `.getMailInfo()` <!-- REF #POP3TransporterClass.getMailInfo().Summary
 
 In *msgNumber*, pass the number of the message to retrieve. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
-The `mailInfo` object returned contains the following properties:
+O objeto `mailInfo` retornado contém as funcionalidades abaixo:
 
 | Propriedade | Tipo   | Descrição                    |
 | ----------- | ------ | ---------------------------- |

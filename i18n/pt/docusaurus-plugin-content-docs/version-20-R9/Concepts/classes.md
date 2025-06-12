@@ -180,7 +180,7 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 - `propriedade` para definir as propriedades estáticas dos objetos com um tipo.
 - `Função get <Nome>` e `Função set <Nome>` para definir propriedades calculadas dos objetos.
 - `Class extends <ClassName>` para definir a herança.
-- `This` and `Super` are commands that have special features within classes.
+- `This` e `Super` são comandos que possuem recursos especiais dentro das classes.
 
 ### `Function`
 
@@ -741,7 +741,7 @@ Once instantiated, a singleton class (and its singleton) exists as long as a ref
 
 Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) antes do [`Class constructor`](#class-constructor):
 
-- To declare a (process) singleton class, write `singleton Class Constructor()`.
+- Para declarar uma classe singleton (process), escreva `singleton Class Constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
 - To declare a session singleton class, write `session singleton Class constructor()`.
 

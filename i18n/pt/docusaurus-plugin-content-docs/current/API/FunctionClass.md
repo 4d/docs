@@ -112,11 +112,11 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <!-- REF #FunctionClass.apply().Params -->
 
-| Parâmetro     | Tipo       |                             | Descrição                                                                                                               |
-| ------------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
-| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                     |
-| formulaParams | Collection |              ->             | Collection of values to be passed as $1...$n when `formula` is executed |
-| Resultados    | any        | <- | Valores de execução de fórmula                                                                                          |
+| Parâmetro     | Tipo       |                             | Descrição                                                                                                                       |
+| ------------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
+| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                             |
+| formulaParams | Collection |              ->             | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
+| Resultados    | any        | <- | Valores de execução de fórmula                                                                                                  |
 
 <!-- END REF -->
 

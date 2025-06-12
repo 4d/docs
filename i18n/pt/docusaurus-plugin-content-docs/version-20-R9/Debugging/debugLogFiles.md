@@ -476,18 +476,18 @@ Como iniciar esse log:
 
 Os campos abaixo estão registrados para cada evento:
 
-| Campo nome  | Tipo      | Descrição                                                                                  |
-| ----------- | --------- | ------------------------------------------------------------------------------------------ |
-| time        | Data/Hora | Date and time of the event in ISO 8601 format                                              |
-| localPort   | Number    | Local port used for the connection                                                         |
-| peerAddress | Text      | IP address of the remote peer                                                              |
-| peerPort    | Number    | Port of the remote peer                                                                    |
-| protocol    | Text      | Indicates whether the event is related to `TCP`                                            |
-| "event"     | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
-| size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
-| excerpt     | Number    | First 10 bytes of data in hexadecimal format                                               |
-| textExcerpt | Text      | First 10 bytes of data in text format                                                      |
-| comment     | Text      | Additional information about the event, such as error details or encryption status         |
+| Campo nome  | Tipo      | Descrição                                                                                 |
+| ----------- | --------- | ----------------------------------------------------------------------------------------- |
+| time        | Data/Hora | Date and time of the event in ISO 8601 format                                             |
+| localPort   | Number    | Local port used for the connection                                                        |
+| peerAddress | Text      | IP address of the remote peer                                                             |
+| peerPort    | Number    | Port of the remote peer                                                                   |
+| protocol    | Text      | Indicates whether the event is related to `TCP`                                           |
+| "event"     | Text      | O tipo de evento:`open`, `close`, `error`, `send`, `receive`, ou `listen` |
+| size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable    |
+| excerpt     | Number    | First 10 bytes of data in hexadecimal format                                              |
+| textExcerpt | Text      | First 10 bytes of data in text format                                                     |
+| comment     | Text      | Additional information about the event, such as error details or encryption status        |
 
 ## Utilizar um ficheiro de configuração de log
 

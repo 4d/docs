@@ -41,7 +41,7 @@ If the command is called from a non supported context (e.g. scalable sessions di
 
 ## Sessões web
 
-The `Session` object of web sessions is available from any web process:
+O objeto `Session` das sessões web está disponível em qualquer processo web:
 
 - `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
@@ -53,7 +53,7 @@ Para obter mais informações sobre as sessões dos usuários da web, consulte a
 
 ## Sessões cliente remoto
 
-The `Session` object of remote client sessions is available from:
+O objeto `Session` das sessões remotas de clientes está disponível em:
 
 - Métodos de projeto que têm o atributo [Execute on Server](../Project/code-overview.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
 - Triggers,
