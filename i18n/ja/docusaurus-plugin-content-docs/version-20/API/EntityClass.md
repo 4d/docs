@@ -937,7 +937,7 @@ $info:=$address.getRemoteContextAttributes()
 
 :::note 注記
 
-- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- エンティティのロックが解除されるためには、そのプロセスでエンティティに対して `lock()` が呼ばれたのと同じ回数 [`unlock()`](#unlock) が呼ばれる必要があります。
 - エンティティは [RESTセッションによってロックされる](../REST/$lock.md) 場合もあります。
 
 :::
@@ -1755,7 +1755,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+エンティティのロックが解除されるためには、そのプロセスでエンティティに対して [`lock()`](#lock) が呼ばれたのと同じ回数 `unlock()` が呼ばれる必要があります。
 
 :::
 
