@@ -151,7 +151,7 @@ Você pode designar outra página inicial padrão inserindo seu nome de caminho.
 
 Por exemplo, se você quiser que a página inicial padrão seja "MyHome. tm", e está localizado na pasta "Web" (ela própria localizada na pasta raiz padrão HTML), use "Web/MyHome.htm".
 
-If you do not specify any default home page, the `On Web Connection` database method is called. Cabe-lhe a si processar o pedido de forma processual.
+Se você não especificar nenhuma página inicial padrão, o método de banco de dados `On Web Connection` é chamado. Cabe-lhe a si processar o pedido de forma processual.
 
 ## Ativar CORS
 
