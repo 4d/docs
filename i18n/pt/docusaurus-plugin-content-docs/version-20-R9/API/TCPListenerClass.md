@@ -3,7 +3,7 @@ id: TCPListenerClass
 title: TCPListener
 ---
 
-The `TCPListener` class allows you to create and configure a TCP server in 4D. Once the TCP listener is instantiated, you can receive client TCP connections and communicate using any protocol supporting TCP.
+A classe `TCPListener` permite que você crie e configure um servidor TCP em 4D. Once the TCP listener is instantiated, you can receive client TCP connections and communicate using any protocol supporting TCP.
 
 The `TCPListener` class is available from the `4D` class store. You can create a TCP server using the [4D.TCPListener.new()](#4dtcplistenernew) function, which returns a [TCPListener object](#tcplistener-object).
 
