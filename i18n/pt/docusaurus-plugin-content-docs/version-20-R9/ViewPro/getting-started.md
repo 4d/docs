@@ -42,7 +42,7 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 - Para selecionar várias células contínuas, arraste o mouse de uma extremidade da seleção para a outra. Você também pode clicar nas duas extremidades da seleção enquanto mantém pressionada a tecla Shift.
 
 - To select all cells in the spreadsheet, click on the cell at the top left of the area:
- ![](../assets/en/ViewPro/vpSelectAll.PNG)
+    ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
 - Para selecionar uma coluna, clique na letra correspondente (ou conjunto de letras).
 
@@ -78,10 +78,10 @@ Dependendo da área clicada, as seguintes opções também estão disponíveis:
 
 - haga clic en el encabezado de una columna o línea: **Insertar**, **Borrar**, **Ocultar**, o **Mostrar** el contenido
 - clique numa célula ou num intervalo de células:
- - **Filtrar**: permite ocultar la línea mediante filtros (ver "Filtrar las líneas" en la [documentación de SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
- - **Ordenar**: ordena el contenido de la columna.
- - **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
-  ![](../assets/en/ViewPro/vpContext2.PNG)
+    - **Filtrar**: permite ocultar la línea mediante filtros (ver "Filtrar las líneas" en la [documentación de SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
+    - **Ordenar**: ordena el contenido de la columna.
+    - **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
+        ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Uso dos comandos 4D View Pro
 

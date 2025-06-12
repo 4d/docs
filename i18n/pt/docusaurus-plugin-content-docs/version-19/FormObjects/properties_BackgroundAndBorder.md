@@ -48,7 +48,7 @@ No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a c
 
 Uma expressão ou uma variável (variáveis de matriz não podem ser usadas) para aplicar uma cor de fundo personalizada a cada linha da caixa de listagem. A expressão ou variável será avaliada para cada linha exibida e deve retornar um valor de cor RGB. Para obter mais informações, consulte a descrição do comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html) no manual *Linguajem 4D*.
 
-Você também pode definir essa propriedade usando a propriedade [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) com a constante `de expressão `lk background color` `.
+Você também pode definir essa propriedade usando a propriedade [`LISTBOX SET PROPERTY`](https://doc.4d.com/4dv20/help/command/en/page1440.html) com a constante `de expressão lk background color`.
 > Com caixas de listagem do tipo de seleção de coleção ou entidade, essa propriedade também pode ser definida usando uma [expressão de metainformação](properties_Text.md#meta-info-expression).
 
 #### Gramática JSON

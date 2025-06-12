@@ -60,7 +60,7 @@ var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini"})
 // resultado en $result.choice
 ```
 
-##### Chat helper
+##### Ayudante del chat
 
 This helper allows you to maintain a list of user messages and assistant responses.
 
@@ -117,7 +117,7 @@ If you do not want to wait for the OpenAPI response when sending a request to it
 
 Ver la [documentación detallada para ejemplos](asynchronous-call.md)
 
-## Copyright
+## Derechos de autor
 
 - This library is not affiliated with, endorsed by, or officially connected to OpenAI in any way.
 - "OpenAI" and any related marks are trademarks or registered trademarks of OpenAI, LLC. All rights related to OpenAI's services, APIs, and technologies remain the property of OpenAI.

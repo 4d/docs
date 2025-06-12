@@ -3,7 +3,7 @@ id: ClassClass
 title: Class
 ---
 
-Quando uma classe de usuário é [defined] (Concepts/classes.md#class-definition) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si mesmo, da classe "Class", que tem propriedades e uma função.
+Quando uma classe de usuário é [defined](Concepts/classes.md#class-definition) no projeto, ela é carregada no ambiente de linguagem 4D. Uma classe é um objeto em si mesmo, da classe "Class", que tem propriedades e uma função.
 
 ### Resumo
 
@@ -154,9 +154,9 @@ Essa propriedade é **somente leitura**.
 
 #### Descrição
 
-A função `.new()` <!-- REF #ClassClass.new().Summary -->cria e retorna um objeto `cs.className` que é uma nova instância da classe na qual ela é chamada<!-- END REF -->. Essa função está automaticamente disponível em todas as classes do armazenamento de classes [`cs`] (Concepts/classes.md#cs).
+A função `.new()` <!-- REF #ClassClass.new().Summary -->cria e retorna um objeto `cs.className` que é uma nova instância da classe na qual ela é chamada<!-- END REF -->. Essa função está automaticamente disponível em todas as classes do armazenamento de classes [`cs`](Concepts/classes.md#cs).
 
-Você pode passar um ou mais parâmetros *param* opcionais, que serão passados para a função [class constructor](Concepts/classes.md#class-constructor) (se houver) na definição da classe *className*. Na função do construtor, o [`This`] (Concepts/classes.md#this) é vinculado ao novo objeto que está sendo construído.
+Você pode passar um ou mais parâmetros *param* opcionais, que serão passados para a função [class constructor](Concepts/classes.md#class-constructor) (se houver) na definição da classe *className*. Na função do construtor, o [`This`](Concepts/classes.md#this) é vinculado ao novo objeto que está sendo construído.
 
 :::note Notas
 
@@ -214,7 +214,7 @@ $person:=cs. Person.new("John";"Doe";40)
 
 A propriedade `.superclass` <!-- REF #ClassClass.superclass.Summary -->retorna a classe pai da classe<!-- END REF -->. Uma superclasse pode ser um objeto `4D.Class` ou um objeto `cs.className`. Se a classe não tiver uma classe pai, a propriedade retorna null\*\*.
 
-Uma superclasse de uma classe de usuário é declarada em uma classe usando a palavra-chave [`Class extends <superclass>`] (Concepts/classes.md#class-extends-classname).
+Uma superclasse de uma classe de usuário é declarada em uma classe usando a palavra-chave [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
 
 Essa propriedade é **somente leitura**.
 

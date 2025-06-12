@@ -31,7 +31,7 @@ In the case of list boxes, the following points must be considered:
 
 * Data source modifications must take the list box type into account: for example, it is not possible to use a field as the data source for a column in an array type list box.
 * For selection type list boxes, it is not possible to modify or read the data source of the list box object itself: in this case, it is an internal reference and not a data source.
-* This command is mainly used in the context of array type list boxes. For selection type list boxes, you can use the [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) command instead.
+* This command is mainly used in the context of array type list boxes. For selection type list boxes, you can use the [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) command or [OBJECT SET DATA SOURCE FORMULA](../commands/object-set-data-source-formula.md) instead.
 
 If this command is applied to a data source that is not modifiable, it does nothing. 
 
@@ -49,6 +49,7 @@ Modification of the data source for an entry area:
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
+[OBJECT SET DATA SOURCE FORMULA](../commands/object-set-data-source-formula.md)
 
 ## Properties
 

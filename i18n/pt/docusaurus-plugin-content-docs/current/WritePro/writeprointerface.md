@@ -396,7 +396,7 @@ The chat box uses the Markdown language to format text. Basic styles such as bol
 
 :::
 
-#### Chat area
+#### Área de chat
 
 The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
 

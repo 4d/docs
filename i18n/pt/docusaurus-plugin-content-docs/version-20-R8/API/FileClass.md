@@ -540,7 +540,7 @@ A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve a
 
 \***Parâmetro *info* com um arquivo .exe ou .dll**
 
-The function must be used with an existing and valid .exe or .dll file, otherwise it does nothing (no error is generated).
+A função deve ser usada com um arquivo .exe ou .dll existente e valido, caso contrário não faz nada (nenhum erro é gerado).
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
@@ -694,7 +694,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-**Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
+**Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. Veja a [Página Compatibilidade](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) em doc.4d.com.
 
 #### Exemplo
 

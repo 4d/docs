@@ -33,7 +33,7 @@ Starting with nightly build **101734**, the Build application dialog box has a n
 
 :::warning KNOWN ISSUE ON WINDOWS SERVER 2025
 
-On Windows Server 2025, some custom options in the new Windows Print dialog box are not available and are still under investigation. A fix will be available in the next hotfix.
+No Windows Server 2025, algumas opções personalizadas na nova caixa de diálogo de Impressão do Windows não estão disponíveis e ainda estão sob investigação. Uma correção estará disponível no próximo hotfix.
 
 :::
 

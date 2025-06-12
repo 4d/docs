@@ -56,11 +56,11 @@ Todo atributo de la dataclass está disponible como una propiedad de una entidad
 El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attributename) (relation o storage):
 
 - Si el tipo de *attributeName* es **storage**:
- `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
+  `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
 - Si el tipo de *attributeName* es **relatedEntity**:
- `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
+  `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
 - Si el tipo *attributeName* es **relatedEnties**:
- `.attributeName` devuelve una nueva selección de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
+  `.attributeName` devuelve una nueva selección de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
 
 #### Ejemplo
 
@@ -621,7 +621,7 @@ El siguiente código genérico duplica cualquier entidad:
 | Parámetros | Tipo    |                             | Descripción                                                                                                               |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Resultado  | any     | <- | Value of the primary key of the entity (Integer or Text)                                               |
+| Resultado  | any     | <- | Valor de la llave primaria de la entidad (Integer or Text)                                             |
 
 <!-- END REF -->
 
@@ -955,7 +955,12 @@ Un registro bloqueado por `.lock()` se desbloquea:
 - cuando la función [`unlock()`](#unlock) se llama en una entidad correspondiente en el mismo proceso
 - automáticamente, cuando ya no es referenciado por ninguna entidad en la memoria. Por ejemplo, si el bloqueo se pone sólo en una referencia local de una entidad, la entidad se desbloquea cuando la función termina. Mientras haya referencias a la entidad en la memoria, el registro permanece bloqueado.
 
-> Una entidad también puede ser [bloqueada por una sesión REST](../REST/$lock.md), en cuyo caso solo puede ser desbloqueada por la sesión.
+:::note Notas
+
+- [`unlock()`](#unlock) debe ser llamado tantas veces como `lock()` fue llamado en el mismo proceso para que la entidad sea realmente desbloqueada.
+- Una entidad también puede ser [bloqueada por una sesión REST](../REST/$lock.md), en cuyo caso solo puede ser desbloqueada por la sesión.
+
+:::
 
 Por defecto, si se omite el parámetro *mode*, la función devolverá un error (ver más abajo) si la misma entidad fue modificada (es decir, el sello ha cambiado) por otro proceso o usuario en el ínterin.
 
@@ -1639,11 +1644,11 @@ Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
 
 #### Descripción
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity.
+La función `.touched()` <!-- REF #EntityClass.touched().Summary -->devuelve True si al menos un atributo de la entidad ha sido modificado desde que la entidad fue cargada en memoria o guardada<!-- END REF -->. Puede utilizar esta función para determinar si necesita guardar la entidad.
 
 Esto solo se aplica a los atributos de [`kind`](DataClassClass.md#returned-object) "storage" o "relatedEntity".
 
-Para una nueva entidad que acaba de ser creada (con [`.new()`](DataClassClass.md#new)), la función devuelve False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Para una nueva entidad que acaba de ser creada (con [`.new()`](DataClassClass.md#new)), la función devuelve False. Sin embargo, en este contexto, si accede a un atributo cuya [propiedad `autoFilled`](./DataClassClass.md#returned-object) es True, la función `.touched()` entonces devolverá True. Por ejemplo, después de ejecutar `$id:=ds.Employee.ID` para una nueva entidad (asumiendo que el atributo ID tiene la propiedad "Autoincrement"), `.touched()` devuelve True.
 
 #### Ejemplo
 
@@ -1766,7 +1771,7 @@ La función `.unlock()` <!-- REF #EntityClass.unlock().Summary --> elimina el bl
 
 Un registro se desbloquea automáticamente cuando ya no es referenciado por ninguna entidad en el proceso de bloqueo (por ejemplo: si el bloqueo se pone sólo en una referencia local de una entidad, la entidad y, por tanto, el registro se desbloquea cuando el proceso termina).
 
-> Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
+Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1775,6 +1780,12 @@ Un registro se desbloquea automáticamente cuando ya no es referenciado por ning
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` debe ser llamado tantas veces como [`lock()`](#lock) fue llamado en el mismo proceso para que la entidad sea realmente desbloqueada.
+
+:::
 
 **Resultado**
 

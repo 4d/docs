@@ -15,7 +15,7 @@ Los puntos de interrupción de comandos le permiten comenzar a rastrear la ejecu
 
 Para crear un punto de interrupción, haga clic en el margen izquierdo de la ventana de evaluación del código fuente en el depurador o en el editor de código.
 
-In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If (Value type(request.reponse.headers...`:
+En el siguiente ejemplo, se ha definido un punto de interrupción (el punto rojo) en el depurador, en la línea `If (Value type(request.reponse.headers...`:
 
 ![break-point](../assets/en/Debugging/break.png)
 

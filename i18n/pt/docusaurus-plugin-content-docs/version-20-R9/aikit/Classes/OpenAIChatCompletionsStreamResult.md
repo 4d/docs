@@ -26,5 +26,5 @@ title: OpenAIChatCompletionsStreamResult
 
 | Propriedade  | Tipo                            | Descrição                                                                                                              |
 | ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `success`    | [OpenAIChoice](OpenAIChoice.md) | Returns `True` if the streaming data was successfully decoded as an object.                            |
+| `success`    | [OpenAIChoice](OpenAIChoice.md) | Retorna `True` se os dados de streaming foram decodificados como um objeto com sucesso.                |
 | `terminated` | Parâmetros                      | A Boolean indicating whether the HTTP request was terminated. ie `onTerminate` called. |

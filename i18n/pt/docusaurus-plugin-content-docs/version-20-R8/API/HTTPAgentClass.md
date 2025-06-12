@@ -3,9 +3,9 @@ id: HTTPAgentClass
 title: HTTPAgent
 ---
 
-A classe `HTTPAgent` permite que você manipule [objetos `HTTPAgent`] (#httpagent-object) que podem ser usados para gerenciar a persistência e a reutilização de conexões com servidores usando a classe [HTTPRequest] (HTTPRequestClass.md).
+A classe `HTTPAgent` permite que você manipule [objetos `HTTPAgent`](#httpagent-object) que podem ser usados para gerenciar a persistência e a reutilização de conexões com servidores usando a classe [HTTPRequest](HTTPRequestClass.md).
 
-A classe `HTTPAgent` está disponível no repositório de classes `4D`. Você pode criar um novo objeto [`HTTPAgent`] (#httpagent-object) usando a função [4D.HTTPAgent.new()] (#4dhttpagentnew).
+A classe `HTTPAgent` está disponível no repositório de classes `4D`. Você pode criar um novo objeto [`HTTPAgent`](#httpagent-object) usando a função [4D.HTTPAgent.new()](#4dhttpagentnew).
 
 Quando nenhum agente está associado a uma solicitação HTTP, é usado um agente global com valores padrão. O agente padrão é a forma mais simples de agente HTTP, adequado para casos de uso básicos. Recomenda-se o uso de agentes personalizados para obter mais controle, no nível do agente e não para cada solicitação HTTP, sobre aspectos específicos da conexão, como configurações de keep-alive, tempos limite ou configurações de TLS/SSL.
 
@@ -52,7 +52,7 @@ Como o HTTPAgent é um objeto compartilhável, você pode adicioná-lo a uma cla
 
 A função `4D.HTTPAgent.new()` <!-- REF #4D.HTTPAgent.new().Summary -->cria um objeto HTTPAgent compartilhável com as *opções* definidas e retorna um objeto `4D.HTTPAgent`<!-- END REF -->.
 
-O [objeto `HTTPAgent`] (#httpagent-object) retornado é usado para personalizar as conexões com os servidores HTTP.
+O [objeto `HTTPAgent`](#httpagent-object) retornado é usado para personalizar as conexões com os servidores HTTP.
 
 #### `options` parameter
 

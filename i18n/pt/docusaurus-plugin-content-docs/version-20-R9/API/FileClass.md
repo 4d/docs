@@ -643,7 +643,7 @@ Cada objeto na coleção *info*.archs deve conter as seguintes propriedades:
 | Propriedade | Tipo   | Descrição                                            |
 | ----------- | ------ | ---------------------------------------------------- |
 | type        | Number | Identificador numérico da arquitetura para modificar |
-| uuid        | Text   | Textual representation of the new executable uuid    |
+| uuid        | Text   | Representação textual do novo uuid executável        |
 
 #### Exemplo 1
 

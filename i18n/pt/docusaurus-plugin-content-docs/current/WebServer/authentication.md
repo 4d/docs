@@ -51,8 +51,8 @@ Quando um usuário se conecta ao servidor, uma caixa de diálogo padrão é exib
 Os valores introduzidos são então avaliados:
 
 - Si la opción **Incluir contraseñas de 4D** está marcada, las credenciales de los usuarios se evaluarán primero contra la [tabla interna de usuarios 4D](Users/overview.md).
- - Se o nome de usuário enviado pelo navegador existir na tabela de usuários 4D e a senha estiver correta, a conexão será aceita. Se a palavra-passe estiver incorreta, a ligação é recusada.
- - Se o nome de usuário não existir na tabela de usuários 4D, o método de banco de dados [`On Web Authentication`](#on-web-authentication) será chamado. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
+  - Se o nome de usuário enviado pelo navegador existir na tabela de usuários 4D e a senha estiver correta, a conexão será aceita. Se a palavra-passe estiver incorreta, a ligação é recusada.
+  - Se o nome de usuário não existir na tabela de usuários 4D, o método de banco de dados [`On Web Authentication`](#on-web-authentication) será chamado. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 - If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) para que você possa processá-los. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 
 > Com o servidor da Web 4D Client, lembre-se de que todos os sites publicados pelas máquinas 4D Client compartilharão a mesma tabela de usuários. Validação de usuários/senhas é realizada pela aplicação 4D Server.
@@ -149,7 +149,7 @@ O parâmetro `$IPClient` recebe o endereço IP da máquina do navegador. Essas i
 
 #### $IPServer - Endereço IP do servidor
 
-The `$IPServer` parameter receives the IP address used to call the web server. 4D permite multi-home que você explore máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
+El parámetro `$IPServer` recibe la dirección IP utilizada para llamar al servidor web. 4D permite multi-home que você explore máquinas com mais de um endereço IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
 #### $user e $password - Nome de usuário e senha
 

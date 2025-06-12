@@ -50,11 +50,11 @@ Si desea obtener todos los cálculos de un atributo de tipo Número, puede escri
 }
 ````
 
-If you want to get all the computations for an attribute of type String, you can write:
+Si desea obtener todos los cálculos para un atributo de tipo String, puede escribir:
 
- `GET  /rest/Employee/firstName/?$compute=$all`
+ `GET /rest/Employee/firstName/?$compute=$all`
 
-**Response**:
+**Respuesta**:
 
 ```js
 {

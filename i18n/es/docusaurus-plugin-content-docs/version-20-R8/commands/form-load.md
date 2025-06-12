@@ -42,7 +42,7 @@ Para poder ejecutar este comando, debe abrirse previamente un trabajo de impresi
 
 If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks.
 
-Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Other form events are ignored. The [`On Unload` form event](../Events/onUnload.md) is executed at the end of printing.
+Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Otros eventos de formulario son ignorados. The [`On Unload` form event](../Events/onUnload.md) is executed at the end of printing.
 
 To preserve the graphic consistency of forms, it is recommended to apply the "Printing" appearance property regardless of the platform.
 
@@ -142,7 +142,7 @@ You want to print a form containing a list box. During the *on load* event, you 
  CLOSE PRINTING JOB
 ```
 
-2\. In the form method, you can write:
+2\. En el método formulario, puede escribir:
 
 ```4d
  var $o : Object

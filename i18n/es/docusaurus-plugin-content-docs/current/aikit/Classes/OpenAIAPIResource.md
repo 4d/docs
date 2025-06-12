@@ -15,7 +15,7 @@ Base class to all api resource.
 
 The client allow to make HTTP Request.
 
-## Inherited Classes
+## Clases heredadas
 
 - [OpenAIModelsAPI](OpenAIModelsAPI.md)
 - [OpenAIChatAPI](OpenAIChatAPI.md)

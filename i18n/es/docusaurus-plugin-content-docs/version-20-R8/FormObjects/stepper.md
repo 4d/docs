@@ -19,7 +19,7 @@ Se puede asociar un stepper directamente a una variable numérica, hora o fecha.
     - [step](properties_Scale.md#step) = 600 (10\*60)
 - Para los valores de tipo fecha, el valor introducido en la propiedad [step](properties_Scale.md#step) representa días. Las propiedades Mínimo y Máximo se ignoran.
 
-> Para que el stepper funcione con una variable de hora o fecha, es imprescindible definir su tipo en el formulario Y para [declararla explícitamente] (../Concepts/variables.md#declaring-variables) como `Time` o `Date`.
+> Para que el stepper funcione con una variable de hora o fecha, es imprescindible definir su tipo en el formulario Y para [declararla explícitamente](../Concepts/variables.md#declaring-variables) como `Time` o `Date`.
 
 Para más información, consulte [Uso de indicadores](progressIndicator.md#using-indicators) en la página "Indicador de progreso".
 

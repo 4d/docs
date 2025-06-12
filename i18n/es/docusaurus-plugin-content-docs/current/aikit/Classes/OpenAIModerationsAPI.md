@@ -34,7 +34,7 @@ https://platform.openai.com/docs/api-reference/moderations/create
 var $result:=$client.moderation.create("Some text to classify"; "omni-moderation-latest"; $parameters)
 ```
 
-### Moderate a text and an image
+### Moderar un texto y una imagen
 
 ```4d
 var $messages:=[{type: "text"; text: "...text to classify goes here..."}; \

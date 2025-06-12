@@ -5,18 +5,18 @@ title: Object
 
 Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. A estrutura dos objectos 4D "nativos" baseia-se no princípio clássico dos pares "propriedade/valor". A sintaxe desses objetos é baseada na notação JSON:
 
-- Um nome de uma propriedade é sempre um texto, por exemplo "nome". Ele deve seguir [regras específicas] (identifiers.md#object-properties).
+- Um nome de uma propriedade é sempre um texto, por exemplo "nome". Ele deve seguir [regras específicas](identifiers.md#object-properties).
 
 - Um valor de propriedade pode ser do seguinte tipo:
- - number (Real, Integer, etc.)
- - text
- - null
- - boolean
- - ponteiro (armazenado como tal, avaliado usando o comando `JSON Stringify` ou quando copiado),
- - data (tipo de data ou cadeia de formato de data ISO)
- - objeto (os objetos podem estar aninhados em vários níveis)
- - imagem(2)
- - collection
+  - number (Real, Integer, etc.)
+  - text
+  - null
+  - boolean
+  - ponteiro (armazenado como tal, avaliado usando o comando `JSON Stringify` ou quando copiado),
+  - data (tipo de data ou cadeia de formato de data ISO)
+  - objeto (os objetos podem estar aninhados em vários níveis)
+  - imagem(2)
+  - collection
 
 (1) **Objetos não-transmissíveis** como objetos ORDA ([entidades](ORDA/dsMapping.md#entity), [seleções de entidades](ORDA/dsMapping.md#entity-selection), etc.), [manipuladores de arquivo](../API/FileHandleClass.md), [servidor web](../API/WebServerClass.md)... não podem ser armazenado em **campos objeto**. Um erro é retornado se você tentar fazer isso; no entanto, eles são totalmente compatíveis com **variáveis do objeto** na memória.
 
@@ -42,7 +42,7 @@ Os objetos devem ter sido inicializados, por exemplo utilizando o comando <code>
 
 Com a notação de objetos, pode acessar às propriedades dos objetos de duas maneiras:
 
-- usando o comando [`New object`] (../commands-legacy/new-object.md),
+- usando o comando [`New object`](../commands-legacy/new-object.md),
 - usando o operador '{}'.
 
 :::info
@@ -53,7 +53,7 @@ Vários comandos e funções 4D retornam objetos, por exemplo, [`Database measur
 
 ### Comando `New object`
 
-O comando [`New object`] (../commands-legacy/new-object.md) cria um objeto vazio ou pré-preenchido e retorna sua referência.
+O comando [`New object`](../commands-legacy/new-object.md) cria um objeto vazio ou pré-preenchido e retorna sua referência.
 
 Exemplos:
 
@@ -110,16 +110,16 @@ $col:=$o.col[5] //6
 
 Pode criar dois tipos de objetos:
 
-- objetos regulares (não compartilhados), usando o comando [`New object`] (../commands-legacy/new-object.md) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- objetos compartilhados, usando o comando [`New shared object`] (../commands-legacy/new-shared-object.md). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
- Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
+- objetos regulares (não compartilhados), usando o comando [`New object`](../commands-legacy/new-object.md) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
+- objetos compartilhados, usando o comando [`New shared object`](../commands-legacy/new-shared-object.md). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
+  Para obter mais informações, consulte a seção [Objetos e coleções compartilhados](shared.md).
 
 ## Propriedades
 
 Você acessa os valores de propriedade do objeto por meio de uma cadeia de tokens. As propriedades do objeto podem ser acessadas de duas maneiras:
 
 - usando um símbolo de "ponto":
- > object.propertyName
+  > object.propertyName
 
 Exemplo:
 
@@ -128,7 +128,7 @@ Exemplo:
 ```
 
 - usando uma cadeia de caracteres entre colchetes:
- > object["propertyName"]
+  > object["propertyName"]
 
 Exemplos:
 
@@ -149,7 +149,7 @@ Como o valor de uma propriedade de objeto pode ser um objeto ou uma coleção, �
 A notação de objetos está disponível em qualquer elemento da lenguagem que possa conter ou devolver um objeto, ou seja:
 
 - Os **Objetos** próprios (armazenados em variáveis, campos, propriedades de objetos, arrays de objetos ou elementos de coleções).
- Exemplos:
+  Exemplos:
 
 ```4d
      $age:=$myObjVar.employee.age //variável
@@ -160,14 +160,14 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
 ```
 
 - **Comandos 4D** que devolvem objectos.
- Exemplo:
+  Exemplo:
 
 ```4d
      $measures:=Database measures.DB.tables
 ```
 
 - **Métodos projeto** ou **Funções** que retornam objetos.
- Exemplo:
+  Exemplo:
 
 ```4d
       // MyMethod1
@@ -179,7 +179,7 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
 ```
 
 - **Coleções**
- Exemplo:
+  Exemplo:
 
 ```4d
      myColl.length //tamanho da coleção

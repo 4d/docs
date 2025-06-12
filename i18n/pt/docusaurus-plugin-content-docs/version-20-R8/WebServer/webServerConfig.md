@@ -121,13 +121,13 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 
 Estado do arquivo de log de solicitações HTTP do servidor web ([*HTTPDebugLog_nn. xt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), armazenado na pasta "Logs" da aplicação -- nn é o número do arquivo). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
-| Valor | Parâmetros                     | Descrição                                                                         |
-| ----- | ------------------------------ | --------------------------------------------------------------------------------- |
-| 0     | wdl disable                    | Os debug logs Web HTTP são desativados                                            |
-| 1     | wdl enable without body        | Default is true (enabled).                     |
-| 3     | wdl enable with response body  | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta |
-| 5     | wdl enable with request body   | Web HTTP debug log está ativado com a parte do corpo apenas no pedido             |
-| 7     | wdl enable with all body parts | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta |
+| Valor | Parâmetros                     | Descrição                                                                                                |
+| ----- | ------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| 0     | wdl disable                    | Os debug logs Web HTTP são desativados                                                                   |
+| 1     | wdl enable without body        | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
+| 3     | wdl enable with response body  | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta                        |
+| 5     | wdl enable with request body   | Web HTTP debug log está ativado com a parte do corpo apenas no pedido                                    |
+| 7     | wdl enable with all body parts | O log de depuração HTTP da Web está ativado com parte do corpo apenas em resposta                        |
 
 ## Defaut Home page
 
@@ -151,7 +151,7 @@ Você pode designar outra página inicial padrão inserindo seu nome de caminho.
 
 Por exemplo, se você quiser que a página inicial padrão seja "MyHome. tm", e está localizado na pasta "Web" (ela própria localizada na pasta raiz padrão HTML), use "Web/MyHome.htm".
 
-If you do not specify any default home page, the `On Web Connection` database method is called. Cabe-lhe a si processar o pedido de forma processual.
+Se você não especificar nenhuma página inicial padrão, o método de banco de dados `On Web Connection` é chamado. Cabe-lhe a si processar o pedido de forma processual.
 
 ## Ativar CORS
 

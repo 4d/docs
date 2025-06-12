@@ -3,7 +3,7 @@ id: EmailObjectClass
 title: Email
 ---
 
-Creating, sending or receiving emails in 4D is done by handling an `Email` object.
+Criar, enviar ou receber e-mails em 4D é feito manipulando um objeto `Email`.
 
 `Email` objects are created when receiving mails through a *transporter* class function:
 

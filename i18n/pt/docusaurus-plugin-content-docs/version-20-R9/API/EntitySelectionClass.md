@@ -124,11 +124,11 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 Qualquer atributo de classe de dados pode ser usado como uma propriedade de uma seleção de entidade para retornar <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" de valores para o atributo na seleção de entidade<!-- END REF -->. Os valores projetados podem ser uma coleção ou uma nova seleção de entidade, dependendo do [kind](DataClassClass.md#attributename) (`storage` ou `relation`) do atributo.
 
 - Se o tipo de *attributeName* for `storage`:
- `.attributeName` retorna uma coleção de valores do mesmo tipo que *attributeName*.
+  `.attributeName` retorna uma coleção de valores do mesmo tipo que *attributeName*.
 - Se o tipo de *attributeName* for `relatedEntity`:
- `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo que *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+  `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo que *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 - Se o tipo de *attributeName* for `relatedEntities`:
- `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo que *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
+  `.attributeName` retorna uma nova seleção de entidade de valores relacionados do mesmo tipo que *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
 
 Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. If the original entity selection and the <em x-id="3">entitySelection</em> parameter are empty, an empty entity selection is returned.
 
@@ -1082,7 +1082,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 A função `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retorna informações sobre o contexto de otimização usado pela seleção de entidades<!-- END REF -->.
 
-Se não houver [contexto de otimização] (../ORDA/client-server-optimization.md) para a seleção da entidade, a função retornará um texto vazio.
+Se não houver [contexto de otimização](../ORDA/client-server-optimization.md) para a seleção da entidade, a função retornará um texto vazio.
 
 #### Exemplo
 
@@ -1134,11 +1134,11 @@ $info:=$persons.getRemoteContextAttributes()
 
 A função `.isAlterable()` <!-- REF #EntitySelectionClass.isAlterable().Summary -->retorna True se a seleção da entidade for alterável<!-- END REF --> e False se a seleção da entidade não for alterável.
 
-Para obter mais informações, consulte [Seleções de entidades compartilháveis ou alteráveis] (ORDA/entities.md#shareable-or-alterable-entity-selections).
+Para obter mais informações, consulte [Seleções de entidades compartilháveis ou alteráveis](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 #### Exemplo
 
-Você está prestes a exibir `Form.products` em uma [caixa de listagem] (FormObjects/listbox_overview.md) para permitir que o usuário adicione novos produtos. Se quiser ter certeza que é alterável para que o usuário possa adicionar novos produtos sem erro:
+Você está prestes a exibir `Form.products` em um [list box](FormObjects/listbox_overview.md) para permitir que o usuário adicione novos produtos. Se quiser ter certeza que é alterável para que o usuário possa adicionar novos produtos sem erro:
 
 ```4d
 If (Not(Form.products.isAlterable()))

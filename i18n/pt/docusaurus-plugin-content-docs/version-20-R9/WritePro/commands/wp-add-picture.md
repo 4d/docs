@@ -20,40 +20,40 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) with a defined layer, size, etc.
+O comando **WP Adicionar imagem** <!--REF #_command_.WP Adicionar imagem. ummary--> ancora a imagem passada como parâmetro em um local fixo dentro do *wpDoc* especificado e retorna sua referência.<!-- END REF--> A referência retornada pode ser passada para o comando [WP SET ATTRIBUTES](wp-set-attributes.md) para mover a imagem para qualquer local em *wpDoc* (página, seção, cabeçalho, rodapé, etc.) com uma camada, tamanho, etc.
 
 Em *wpDoc*, passe o nome de um objeto documento 4D Write Pro.
 
-For the optional second parameter, you can pass either:
+Para o segundo parâmetro opcional, você também pode passar:
 
 - Em *picture*:  uma imagem 4D
-- In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
+- Em *picturePath*: Uma string contendo um caminho para um arquivo de imagem armazenado no disco (sintaxe do sistema). Você pode passar um nome completo ou um nome de caminho relativo ao arquivo de estrutura de banco de dados. Você também pode passar um nome de arquivo, neste caso o arquivo deve estar localizado ao lado do arquivo de estrutura de banco de dados. Se você passar um nome de arquivo, você precisará indicar a extensão do arquivo.
 - Em *PictureFileObj*: um objeto `4D.File` que representa um arquivo imagem.
 
 :::note
 
-Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Se a imagem encapsular vários formatos (codecs), 4D Write Pro apenas mantém um formato para exibição e um formato para impressão (se diferente) no documento; os "melhores" formatos são selecionados automaticamente.
 
 :::
 
-- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. Isto permite que você chame [WP SET ATTRIBUTES](wp-set-attributes.md) com o seletor wk image expression para preencher a imagem com uma expressão 4D. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
+- Se a *imagem* for omitida, uma referência de imagem válida é retornada, e uma imagem vazia é adicionada. Isto permite que você chame [WP SET ATTRIBUTES](wp-set-attributes.md) com o seletor wk image expression para preencher a imagem com uma expressão 4D. Se a expressão não puder ser avaliada ou não retornar uma imagem válida, uma imagem vazia (imagem preta padrão) é exibida.
 
-By default, the added picture is:
+Por padrão, a imagem adicionada é:
 
-- Embedded behind the text
-- Displayed at the top left corner of the paper box
-- Shown on all pages
+- Incorporado por trás do texto
+- Exibido no canto superior esquerdo da caixa de papel
+- Exibido em todas as páginas
 
-The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
+O local, camada (inline, front-behind de texto), visibilidade e quaisquer propriedades da imagem podem ser modificadas usando o comando [WP SET ATTRIBUTES](wp-set-attributes.md) ou através de ações padrão (veja *Usando ações 4D Write Pro padrão*).
 
-**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. Você pode determinar se um objeto selecionado é um objeto de imagem verificando o atributo `wk type`:
 
 - **Value = 2**: o objeto selecionado é um objeto imagem.
 - **Value = 0**: o objeto selecionado é um objeto intervalo.
 
 ## Exemplo 1
 
-You want to add a picture with default settings using a filepath.
+Se quiser adicionar uma imagem com configurações padrão usando um caminho de arquivo.
 
 ```4d
  var $obPict : Object
@@ -66,7 +66,7 @@ O resultado é:
 
 ## Exemplo 2
 
-You want to add a resized picture, centered and anchored to the header:
+Você quer adicionar uma imagem redimensionada, centralizada e ancorada ao cabeçalho:
 
 ```4d
  var $obImage : Object
@@ -86,7 +86,7 @@ O resultado é:
 
 ## Exemplo 3
 
-You want to use a field expression to add an anchored image to a document displaying some text from the database:
+Se quiser usar uma expressão de campo para adicionar uma imagem ancorada para um documento que exibe algum texto da base de dados:
 
 ```4d
  QUERY([Flowers];[Flowers]Common_Name="tulip")

@@ -30,7 +30,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | Parámetros | Tipo | Descripción                                                 |
 | ---------- | ---- | ----------------------------------------------------------- |
 | *imageURL* | Text | The URL of the image to add to the message. |
-| *detail*   | Text | Additional details about the image.         |
+| *detail*   | Text | Detalles adicionales sobre la imagen.       |
 
 Adds an image URL to the content of the message.
 

@@ -252,7 +252,7 @@ Ao criar ou editar classes de modelo de dados, é necessário preste atenção �
     - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](../Concepts/classes.md#class-definition). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
     - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
-- When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). Por exemplo, `Class extends EntitySelection` para uma classe de seleção de entidades.
+- Ao definir uma classe, certifique-se de que a instrução [`Class extends`](../Concepts/classes.md#class-extends-classname) corresponde exatamente ao nome da classe-mãe (lembre-se de que são sensíveis a maiúsculas e minúsculas). Por exemplo, `Class extends EntitySelection` para uma classe de seleção de entidades.
 
 - Não é possível instanciar um objeto de classe de modelo de dados com a palavra-chave `new()` (é devolvido um erro). É necessário utilizar um método normal, tal como indicado na coluna [`Instantiated by` da tabela de classes ORDA](#architecture).
 
@@ -921,7 +921,7 @@ If ($status.success)
 
 ### Ficheiros de classe (class files)
 
-An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. Por exemplo, uma classe de entidade para a classe de dados `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm` .
+Uma classe usuário do modelo de dados ORDA é definida adicionando, na [mesma localização que os arquivos classe normais](../Concepts/classes.md#class-definition) (*ou seja,* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para a classe de dados `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm` .
 
 
 ### Criação de classes

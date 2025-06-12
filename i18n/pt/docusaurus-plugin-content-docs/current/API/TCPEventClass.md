@@ -7,10 +7,10 @@ The `TCPEvent` class provides information about events occurring during the life
 
 <details><summary>História</summary>
 
-| Release | Mudanças                        |
-| ------- | ------------------------------- |
-| 20 R9   | New `ip`, and `port` attributes |
-| 20 R8   | Classe adicionada               |
+| Release | Mudanças                      |
+| ------- | ----------------------------- |
+| 20 R9   | Novos atributos `ip` e `port` |
+| 20 R8   | Classe adicionada             |
 
 </details>
 
@@ -79,11 +79,11 @@ A propriedade `.port` contém <!-- REF #TCPEvent.port.Summary --> o número da p
 
 A propriedade `.type` contém <!-- REF #TCPEvent.type.Summary -->o tipo do evento<!-- END REF -->. Valores possíveis:
 
-- `"connection"`: Indicates that a TCPConnection was successfully established.
+- `"conexão"`: indica que uma TCPConnection foi estabelecida com sucesso.
 - `"data"`: Indicates that data has been received.
-- `"error"`: Indicates that an error occurred during the TCPConnection.
-- `"close"`: Indicates that the TCPConnection has been properly closed.
-- `"terminate"`: Indicates that the TCPConnection is about to be released.
+- `"error"`: indica que um erro ocorreu durante a TCPConnection.
+- `"close"`: indica que a TCPConnection foi fechada corretamente.
+- `"terminate"`: indica que a TCPConnection está prestes a ser liberada.
 
 <!-- END REF -->
 

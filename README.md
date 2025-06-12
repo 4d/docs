@@ -35,6 +35,9 @@ To generate syntax files:
 
 `npm run syntax`
 
+- auto build for main
+- for a beta branch: get the prod and generate, then push in the branch
+
 ## Markdown conventions
 
 ### API file names

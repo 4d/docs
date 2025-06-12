@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Params-->
 
-| Parámetros | Tipo       |                             | Descripción                 |
-| ---------- | ---------- | --------------------------- | --------------------------- |
-| Resultado  | Collection | &#8592; | Collection of error objects |
+| Parámetros | Tipo       |                             | Descripción                   |
+| ---------- | ---------- | --------------------------- | ----------------------------- |
+| Resultado  | Collection | &#8592; | Colección de objetos de error |
 
 <!-- END REF-->
 
@@ -29,9 +29,9 @@ Each error object contains the following properties:
 | message            | text     | Descripción del error                                                                       |
 | componentSignature | text     | Signature of the internal component which returned the error (see below) |
 
-#### Internal component signatures (4D)
+#### Firmas de los componentes internos (4D)
 
-| Component Signature       | Componente                                                          |
+| Firma del componente      | Componente                                                          |
 | ------------------------- | ------------------------------------------------------------------- |
 | 4DCM                      | 4D Compiler runtime                                                 |
 | 4DRT                      | 4D runtime                                                          |
@@ -66,14 +66,14 @@ Each error object contains the following properties:
 
 #### Internal component signatures (System)
 
-| Component Signature | Componente                                               |
-| ------------------- | -------------------------------------------------------- |
-| CARB                | Carbon subsystem                                         |
-| COCO                | Cocoa subsystem                                          |
-| MACH                | macOS Mach subsystem                                     |
-| POSX                | posix/bsd subsystem (mac, linux, win) |
-| PW32                | Pre-Win32 subsystem                                      |
-| WI32                | Win32 subsystem                                          |
+| Firma del componente | Componente                                               |
+| -------------------- | -------------------------------------------------------- |
+| CARB                 | Carbon subsystem                                         |
+| COCO                 | Cocoa subsystem                                          |
+| MACH                 | macOS Mach subsystem                                     |
+| POSX                 | posix/bsd subsystem (mac, linux, win) |
+| PW32                 | Pre-Win32 subsystem                                      |
+| WI32                 | Win32 subsystem                                          |
 
 ## Ver también
 

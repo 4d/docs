@@ -6,7 +6,7 @@ title: Function
 Um objeto **`4D.Function`** contém um trecho de código que pode ser executado a partir de um objeto, usando o operador `()`, ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos `Function`:
 
 - **as funções nativas**, ou seja, funções incorporadas de várias classes 4D, como `collection.sort()` ou `file.copyTo()`.
-- **as funções usuário**, criadas nas [classes usuário] (Concepts/classes.md) usando a palavra-chave [Function](Concepts/classes.md#function).
+- **as funções usuário**, criadas nas [classes usuário](Concepts/classes.md) usando a palavra-chave [Function](Concepts/classes.md#function).
 - **funções de fórmula**, ou seja, funções que podem executar qualquer fórmula 4D.
 
 ### Objetos de formulários
@@ -112,11 +112,11 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <!-- REF #FunctionClass.apply().Params -->
 
-| Parâmetro     | Tipo       |                             | Descrição                                                                                                               |
-| ------------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
-| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                     |
-| formulaParams | Collection |              ->             | Collection of values to be passed as $1...$n when `formula` is executed |
-| Resultados    | any        | <- | Valores de execução de fórmula                                                                                          |
+| Parâmetro     | Tipo       |                             | Descrição                                                                                                                       |
+| ------------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
+| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                             |
+| formulaParams | Collection |              ->             | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
+| Resultados    | any        | <- | Valores de execução de fórmula                                                                                                  |
 
 <!-- END REF -->
 

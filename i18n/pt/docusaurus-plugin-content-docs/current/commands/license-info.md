@@ -71,7 +71,7 @@ O objeto retornado contém as propriedades abaixo:
 | renewalFailureCount | number                 | Number of unsuccessful automatic renewal attempts for at least one of the product licenses (optional)                                                                                                                                                         | 3                                                                                                                                                 |
 | products            | uma coleção de objetos | Description of product license (one element per product license). Ver abaixo.                                                                                                                                                 |                                                                                                                                                   |
 
-Each object of the `products` collection can have the following properties:
+Cada objeto da coleção `products` pode ter as seguintes propriedades:
 
 | **Propriedade** |                                                                                            | **Tipo**               | **Description**                                                             | **Exemplo**                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------ | ---------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |

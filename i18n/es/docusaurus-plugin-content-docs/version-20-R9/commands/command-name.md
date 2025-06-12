@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Command name.Params-->
 
-| Parámetros | Tipo    |                             | Descripción                  |
-| ---------- | ------- | --------------------------- | ---------------------------- |
-| comando    | Integer | &#8594; | Número de comando            |
-| info       | Integer | &#8592; | Command property to evaluate |
-| theme      | Text    | &#8592; | Language theme of command    |
-| Resultado  | Text    | &#8592; | Localized command name       |
+| Parámetros | Tipo    |                             | Descripción                     |
+| ---------- | ------- | --------------------------- | ------------------------------- |
+| comando    | Integer | &#8594; | Número de comando               |
+| info       | Integer | &#8592; | Propiedad del comando a evaluar |
+| theme      | Text    | &#8592; | Tema del lenguaje del comando   |
+| Resultado  | Text    | &#8592; | Localized command name          |
 
 <!-- END REF-->
 
@@ -35,8 +35,8 @@ El comando **Command name** <!--REF #_command_.Command name.Summary-->devuelve e
 Two optional parameters are available:
 
 - *info*: propiedades del comando. The returned value is a *bit field*, where the following bits are meaningful:
- - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
- - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Los comandos obsoletos en su código generan advertencias en el [Live Checker y el compilador](../code-editor/write-class-method.md#warnings-and-errors).
+  - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
+  - Second bit (bit 1): set to 1 if the command is **deprecated**, and 0 if it is not. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Los comandos obsoletos en su código generan advertencias en el [Live Checker y el compilador](../code-editor/write-class-method.md#warnings-and-errors).
 
 *theme*: name of the 4D language theme for the command.
 

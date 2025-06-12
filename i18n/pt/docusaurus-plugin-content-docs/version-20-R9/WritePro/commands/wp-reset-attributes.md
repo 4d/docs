@@ -10,44 +10,44 @@ displayed_sidebar: docs
 
 | Parâmetro           | Tipo       |                             | Descrição                                                              |
 | ------------------- | ---------- | --------------------------- | ---------------------------------------------------------------------- |
-| targetObj           | Object     | &#8594; | Range or element or 4D Write Pro document                              |
-| sectionOrSubsection | Object     | &#8594; | Section or subsection of a 4D Write Pro document                       |
+| targetObj           | Object     | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                        |
+| sectionOrSubsection | Object     | &#8594; | Seção ou subseção de um documento 4D Write Pro                         |
 | attribName          | Text       | &#8594; | Nome do(s) atributo(s) a remover |
-| attribColl          | Collection | &#8594; | Collection of attributes to remove                                     |
+| attribColl          | Collection | &#8594; | Coleção de atributos para remover                                      |
 
 <!-- END REF-->
 
 ## Descrição
 
-The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> allows you to reset the value of one or more attributes in the range, element, or document passed as parameter.<!-- END REF--> This command can remove any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image. You can pass the attribute name to be reset in *attribName* or you can pass a collection of attributes in *attribColl* to reset multiple attributes at once.
+O comando **WP REDEFINIR ATTRIBUTES** <!--REF #_command_.WP REDEFINIR ATTRIBUTES. ummary--> permite que você reinicie o valor de um ou mais atributos no intervalo, elemento ou documento passado como parâmetro.<!-- FIM REF--> Este comando pode remover qualquer tipo de atributo interno 4D Write Pro: caractere, parágrafo, tabela ou imagem. Você pode passar o nome do atributo para ser redefinido em *attribName* ou você pode passar uma coleção de atributos em *attribColl* para redefinir vários atributos de uma vez.
 
-> In the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once.
+> No caso de uma seção ou uma subseção, o objeto *sectionOrSubsection* pode ser passado sozinho e todos os atributos são redefinidos de uma vez.
 
 No parâmetro *targetObj*, você pode passar qualquer um deles:
 
 - um intervalo, ou
-- an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
+- um elemento (cabeçalho / rodapé / corpo / tabela / parágrafo / imagem embutida ou embutida em linha / seção / subseção / folha de estilo), ou
 - um documento 4D Write Pro
 
-When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Os valores padrão estão listados na seção *4D Write Pro Attributes*.
+Quando um valor de atributo é removido usando o comando **WP RESET ATTRIBUTES**, o valor padrão é aplicado a *targetObj* ou *sectionOrSubsection*. Os valores padrão estão listados na seção *4D Write Pro Attributes*.
 
 :::note Notas
 
-- When **WP RESET ATTRIBUTES** is applied to a section/sub-section object, attributes are then inherited from the parent section or document.
-- When **WP RESET ATTRIBUTES** is applied to a style sheet object, the attributes are removed from the style sheet unless it is the default ("Normal") style sheet. In this case, the default value is applied to the attribute (the "Normal" style sheet defines all style sheet attributes).
-- When *sectionOrSubsection* is not a section nor a subsection and if no attribute is provided, then an error is raised.
+- Quando **WP RESET ATTRIBUTES** é aplicado a uma seção/objeto de subseção, os atributos são herdados da seção ou documento pai.
+- Quando **WP REDEFINIR ATTRIBUTES** é aplicado a um objeto de folha de estilo, os atributos são removidos da folha de estilo a menos que seja o padrão a folha de estilo ("Normal"). Neste caso, o valor padrão é aplicado ao atributo (a folha de estilo "Normal" define todos os atributos de folha de estilo).
+- Quando *sectionOrSubsection* não é uma seção nem uma subseção e se nenhum atributo é fornecido, então um erro é gerado.
 
 :::
 
-If the attribute to be reset was not defined in the element passed as a parameter, the command does nothing.
+Se o atributo a ser reiniciado não foi definido no elemento passado como parâmetro, o comando não faz nada.
 
 ## Exemplo 1
 
-You want to remove several attributes from the following selection:
+Você deseja remover vários atributos da seguinte seleção:
 
 ![](../../assets/en/WritePro/commands/pict2643861.en.png)
 
-You can execute:
+Você pode executar:
 
 ```4d
  $range:=WP Get selection(*;"WParea")
@@ -58,13 +58,13 @@ You can execute:
  WP RESET ATTRIBUTES($range;wk border style)
 ```
 
-The resulting document is:
+O documento resultante é:
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 
 ## Exemplo 2
 
-You want to remove several attributes using a collection:
+Você deseja remover vários atributos usando uma coleção:
 
 ```4d
 $myRange:=WP Get selection(*;"WParea")
@@ -76,10 +76,10 @@ WP RESET ATTRIBUTES($myRange; $myCollection)
 ## Exemplo 3
 
 ```4d
-$section:=WP Get section($document; 3)
-WP RESET ATTRIBUTES($section)  // All attributes of the section are removed
+$section:=VP seção($document; 3)
+WP RESET ATTRIBUTES($section) // Todos os atributos da seção são removidos
 $subSection:=WP Get subsection(WP Get section($document; 3); wk left page)
-WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
+WP RESET ATTRIBUTES($subSection) // Todos os atributos da subseção são removidos
 ```
 
 ## Veja também

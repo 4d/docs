@@ -291,10 +291,10 @@ Estos archivos de registro registran cada intercambio entre la aplicación 4D y 
 Los archivos de historial pueden producirse en dos versiones:
 
 - una versión normal:
- - archivos llamados 4DSMTPLog.txt, 4DPOP3Log.txt, o 4DIMAPLog.txt
- - sin adjuntos
- - utiliza un reciclaje automático de archivos circulares cada 10 MB
- - destinado a la depuración habitual
+  - archivos llamados 4DSMTPLog.txt, 4DPOP3Log.txt, o 4DIMAPLog.txt
+  - sin adjuntos
+  - utiliza un reciclaje automático de archivos circulares cada 10 MB
+  - destinado a la depuración habitual
 
 Para iniciar este historial:
 
@@ -309,9 +309,9 @@ SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 Esta ruta al historial es devuelta por el comando `Get 4D file`.
 
 - una versión extendida:
- - attachment(s) included no automatic recycling
- - nombre personalizado
- - reservado con fines específicos
+  - attachment(s) included no automatic recycling
+  - nombre personalizado
+  - reservado con fines específicos
 
 Para iniciar este historial:
 
@@ -458,40 +458,40 @@ Este es un ejemplo de un registro ORDA del lado del servidor:
 
 ## 4DTCPLog.txt
 
-This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+Este archivo de registro registra eventos relacionados con conexiones TCP. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión. Este registro ayuda a los desarrolladores a monitorear y depurar la actividad de red dentro de sus aplicaciones.
 
 Como iniciar este historial:
 
 - Utilice el comando `SET DATABASE PARAMETER`:
 
- ```4d
- SET DATABASE PARAMETER(TCP log; 1)
- ```
+  ```4d
+  SET DATABASE PARAMETER(TCP log; 1)
+  ```
 
 - Cómo activar el archivo
 
- ```json
- {
-     "TCPLogs":{
-       "state" : 1
-          }
- }
- ```
+  ```json
+  {
+      "TCPLogs":{
+        "state" : 1
+           }
+  }
+  ```
 
 Los siguientes campos se registran para cada evento:
 
 | Nombre del campo | Tipo       | Descripción                                                                                   |
 | ---------------- | ---------- | --------------------------------------------------------------------------------------------- |
 | time             | Fecha/Hora | Fecha y hora del evento en formato ISO 8601                                                   |
-| localPort        | Number     | Local port used for the connection                                                            |
+| localPort        | Number     | Puerto local usado para la conexión                                                           |
 | peerAddress      | Text       | Dirección IP del peer remoto                                                                  |
 | peerPort         | Number     | Puerto del peer remoto                                                                        |
-| protocol         | Text       | Indicates whether the event is related to `TCP`                                               |
+| protocol         | Text       | Indica si el evento está relacionado con `TCP`                                                |
 | evento           | Text       | El tipo de evento:`open`, `close`, `error`, `send`, `receive`, o `listen`     |
 | size             | Number     | La cantidad de datos enviados o recibidos (en bytes), 0 si no es aplicable |
-| excerpt          | Number     | First 10 bytes of data in hexadecimal format                                                  |
-| textExcerpt      | Text       | First 10 bytes of data in text format                                                         |
-| comment          | Text       | Additional information about the event, such as error details or encryption status            |
+| excerpt          | Number     | Primeros 10 bytes de datos en formato hexadecimal                                             |
+| textExcerpt      | Text       | Primeros 10 bytes de datos en formato texto                                                   |
+| comment          | Text       | Información adicional sobre el evento, como detalles de error o estado de cifrado             |
 
 ## Utilización de un archivo de configuración de log
 
@@ -504,14 +504,14 @@ Hay varias maneras de activar el archivo de configuración de registro, dependie
 - **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
 - **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la [carpeta de Configuración](../Project/architecture.md#settings-user) del proyecto (situada al mismo nivel que la [carpeta `Proyecto`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
 - **una aplicación construida**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
- - Windows: `Users\[userName]\AppData\Roaming\[application]`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+  - Windows: `Users\[userName]\AppData\Roaming\[application]`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **todos los proyectos con un 4D autónomo o remoto**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
- - Windows: `Users\[userName]\AppData\Roaming\4D`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+  - Windows: `Users\[userName]\AppData\Roaming\4D`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos los proyectos con 4D Server**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
- - Windows: `Users\[userName]\AppData\Roaming\4D Server`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 

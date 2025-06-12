@@ -44,7 +44,7 @@ A CSS file defined at the form level will override default style sheet(s). For m
 
 ## Form Class
 
-Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form . The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
 Associating a class to the form provides the following benefits:
 

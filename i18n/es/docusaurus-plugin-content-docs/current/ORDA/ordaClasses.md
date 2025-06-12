@@ -262,8 +262,8 @@ End if
 Al crear o editar clases de modelos de datos, debe prestar atención a las siguientes reglas:
 
 - Dado que se utilizan para definir nombres de clase DataClass automáticos en el [class store](Concepts/classes.md#class-stores) **cs**, las tablas 4D deben nombrarse para evitar todo conflicto en el espacio de nombres **cs**. En particular:
- - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
- - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
+  - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
+  - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
 
 - Al definir una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) coincida exactamente con el nombre de la clase padre (recuerde que son sensibles a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
 
@@ -424,13 +424,13 @@ Esta función soporta tres sintaxis:
 - Con la primera sintaxis, se maneja toda la consulta a través de la propiedad del objeto `$event.result`.
 - Con la segunda y tercera sintaxis, la función devuelve un valor en *$result*:
 
- - Si *$result* es un texto, debe ser una cadena de consulta válida
- - Si *$result* es un Objeto, debe contener dos propiedades:
+  - Si *$result* es un texto, debe ser una cadena de consulta válida
+  - Si *$result* es un Objeto, debe contener dos propiedades:
 
- | Propiedad                          | Tipo       | Descripción                                                                                                                            |
- | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
- | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
- | $result.parameters | Collection | valores para marcadores                                                                                                                |
+  | Propiedad                          | Tipo       | Descripción                                                                                                                            |
+  | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+  | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
+  | $result.parameters | Collection | valores para marcadores                                                                                                                |
 
 La función `query` se ejecuta cada vez que se lanza una consulta que utiliza el atributo calculado. Resulta útil personalizar y optimizar las consultas basándose en los atributos indexados. Cuando la función `query` no está implementada para un atributo calculado, la búsqueda es siempre secuencial (basada en la evaluación de todos los valores utilizando la función `get <AttributeName>`).
 
@@ -822,7 +822,7 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
-## onHTTPGet keyword
+## Palabra clave onHTTPGet
 
 Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
 
@@ -1020,6 +1020,6 @@ Para las clases ORDA basadas en el datastore local (`ds`), puede acceder directa
 
 ### Editor de código
 
-En el editor de código de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo, con una variable de clase Entity:
+En el editor de código de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo con una variable de clase Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)

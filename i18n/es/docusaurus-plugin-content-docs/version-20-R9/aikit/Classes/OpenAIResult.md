@@ -33,14 +33,14 @@ For more details on rate limits and the specific headers used, refer to [the Ope
 
 The structure of the `rateLimit` object is as follows:
 
-| Campo               | Tipo    | Descripción                                      |
-| ------------------- | ------- | ------------------------------------------------ |
-| `limit.request`     | Integer | Number of allowed requests.      |
-| `limit.tokens`      | Integer | Number of allowed tokens.        |
-| `remaining.request` | Integer | Number of remaining requests.    |
-| `remaining.tokens`  | Integer | Number of remaining tokens.      |
-| `reset.request`     | String  | Time until request limit resets. |
-| `reset.tokens`      | String  | Time until token limit resets.   |
+| Campo               | Tipo    | Descripción                                       |
+| ------------------- | ------- | ------------------------------------------------- |
+| `limit.request`     | Integer | Número de solicitudes permitidas. |
+| `limit.tokens`      | Integer | Number of allowed tokens.         |
+| `remaining.request` | Integer | Número de peticiones restantes.   |
+| `remaining.tokens`  | Integer | Número de tokens restantes.       |
+| `reset.request`     | String  | Time until request limit resets.  |
+| `reset.tokens`      | String  | Time until token limit resets.    |
 
 ## Funciones
 
@@ -48,7 +48,7 @@ The structure of the `rateLimit` object is as follows:
 
 Throws the first error in the `errors` collection. This function is useful for propagating errors up the call stack.
 
-## Inherited Classes
+## Clases heredadas
 
 Several classes inherit from `OpenAIResult` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIResult`:
 

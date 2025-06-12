@@ -110,9 +110,9 @@ Os tipos suportados dependem da categoria do formulário:
 
 ## Nome do formulário herdado
 
-Essa propriedade designa o [formulário a ser herdado] (forms.md#inherited-forms) no formulário atual.
+Essa propriedade designa o [formulário a ser herdado](forms.md#inherited-forms) no formulário atual.
 
-Para herdar de um formulário de tabela, defina a tabela na propriedade [Inherited Form Table] (#inherited-form-table).
+Para herdar de um formulário de tabela, defina a tabela na propriedade [Tabela de formulário herdada](#inherited-form-table).
 
 Para remover a herança, selecione `\<None>` na Property List (ou " " em JSON).
 
@@ -126,7 +126,7 @@ Para remover a herança, selecione `\<None>` na Property List (ou " " em JSON).
 
 ## Tabelas de formulário herdadas
 
-Essa propriedade especifica a tabela do banco de dados da qual [herdar um formulário] (forms.md#inherited-forms) no formulário atual.
+Essa propriedade especifica a tabela do banco de dados da qual [herdar um formulário](forms.md#inherited-forms) no formulário atual.
 
 Defina como `\<None>` na Property List (ou " " em JSON) para herdar de um formulário de projeto.
 
@@ -145,7 +145,7 @@ Cada formulário é composto por, pelo menos, duas páginas:
 - uma página 0 (página de fundo)
 - uma página 1 (página principal)
 
-Para obter mais informações, consulte [Páginas de formulário] (forms.md#form-pages).
+Para obter mais informações, consulte [Páginas de formulário](forms.md#form-pages).
 
 #### Gramática JSON
 
@@ -157,7 +157,7 @@ Para obter mais informações, consulte [Páginas de formulário] (forms.md#form
 
 ## Publicado como subformulário
 
-Para que um formulário de componente seja selecionado como um [subformulário] (FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. Quando esta propriedade for selecionada, o formulário será publicado na aplicação host.
+Para que um formulário de componente seja selecionado como um [subformulário](FormObjects/subform_overview.md) em um aplicativo host, ele deve ter sido explicitamente compartilhado. Quando esta propriedade for selecionada, o formulário será publicado na aplicação host.
 
 Apenas os projetos formulário podem ser especificados como subformulários publicados.
 
@@ -178,7 +178,7 @@ Quando a opção é usada, se a janela for aberta usando o comando "Abrir janela
 
 > Esta opção não leva em conta objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
 
-Quando essa opção é selecionada, a opção [Save Value] (FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
+Quando essa opção é selecionada, a opção [Salvar valor](FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
 
 #### Gramática JSON
 

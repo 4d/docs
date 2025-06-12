@@ -3,13 +3,13 @@ id: debugger
 title: Depurador
 ---
 
-The 4D debugger is useful when you need to spot errors or monitor the execution of methods. Le permite recorrer su código lentamente y examinar la información. Este proceso se llama "rastreo".
+El depurador 4D es útil cuando se necesita detectar errores o controlar la ejecución de métodos. Le permite recorrer su código lentamente y examinar la información. Este proceso se llama "rastreo".
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
 :::info
 
-If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+Si está acostumbrado a codificar con **VS Code**, también puede usar este editor para depurar código 4D en el servidor 4D después de instalar la extensión [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode).
 
 :::
 
@@ -30,7 +30,7 @@ Hay varias formas de conseguir que el depurador se muestre:
 Cuando se llama, la ventana del depurador ofrece el nombre del método o de la función de clase que se está rastreando en ese momento, y la acción que provoca la aparición inicial de la ventana del depurador. Por ejemplo, en la ventana del depurador arriba:
 
 - *drop* es el método rastreado
-- The debugger window appeared because of a break point.
+- La ventana del depurador apareció debido a un punto de interrupción.
 
 La visualización de una nueva ventana del depurador utiliza la misma configuración que la última ventana visualizada en la misma sesión. Si ejecuta varios procesos usuario, puede rastrearlos independientemente y tener una ventana de depuración abierta para cada proceso.
 
@@ -54,7 +54,7 @@ La barra de herramientas del depurador incluye varios botones, asociados a acces
 
 :::note
 
-Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+Los accesos directos por defecto pueden ser personalizados en la [Página de accesos directos](../Preferences/shortcuts.md) de la caja de diálogo de preferencias.
 
 :::
 
@@ -111,14 +111,14 @@ Si utiliza este botón para modificar un método, las modificaciones sólo será
 
 > **Consejo:** utilice este botón cuando sepa qué cambios son necesarios en su código y cuando no interfieran con el resto del código a ejecutar o rastrear.
 
-## Auto-saving
+## Auto-guardado
 
-The current state of the debugger window is automatically saved in the project. Esto incluye:
+El estado actual de la ventana de depuración se guarda automáticamente en el proyecto. Esto incluye:
 
 - el tamaño y la posición de la ventana,
-- the position of the division lines,
+- la posición de las líneas de división,
 - el [modo de visualización](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.
+- las expresiones que se muestran actualmente en el panel de visualización personalizado. Por defecto, las expresiones se guardan con el método o función actual. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.
 
 The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
 
@@ -142,7 +142,7 @@ En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las
 
 #### Expresiones de línea
 
-This theme lets you keep track of the values of expressions:
+Este tema le permite seguir los valores de las expresiones:
 
 - utilizado en la línea de código a ejecutar (la marcada con el contador de programa-la flecha amarilla en el [Panel de Código Fuente](#source-code-pane)),
 - utilizado en la línea de código anterior
@@ -158,27 +158,27 @@ $c:=a+b
 
 1. Se abre una ventana Depurador con el contador del programa fijado en la línea con `a:=1`. En este punto aparece el tema **Objetos Línea**:
 
- | $a | Indefinido |
- | -- | ---------- |
+  | $a | Indefinido |
+  | -- | ---------- |
 
- La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+  La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, aparece el tema **Objetos Línea**:
 
- | $a | 1          |
- | -- | ---------- |
- | $b | Indefinido |
+  | $a | 1          |
+  | -- | ---------- |
+  | $b | Indefinido |
 
- El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+  El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con $c:=a+b. aparece el tema **Objetos en línea**:
 
- | $c | Indefinido |
- | -- | ---------- |
- | $a | 1          |
- | $b | 2          |
+  | $c | Indefinido |
+  | -- | ---------- |
+  | $a | 1          |
+  | $b | 2          |
 
- El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+  El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 #### Variables
 
@@ -280,9 +280,9 @@ En la imagen de arriba:
 - `thirdMethod` no ha recibido ningún parámetro
 - `$0` actualmente está indefinido, ya que el método no ha asignado ningún valor a `$0` (porque aún no ha ejecutado esta asignación o porque el método es una subrutina y no una función)
 - `secondMethod` ha recibido tres parámetros de `firstMethod`:
- - $1 es un puntero a la tabla `[Employee]`
- - $2 es un puntero al campo `ID` en la tabla  `[Employee]`
- - $3 es un parámetro alfanumérico cuyo valor es "Z"
+  - $1 es un puntero a la tabla `[Employee]`
+  - $2 es un puntero al campo `ID` en la tabla  `[Employee]`
+  - $3 es un parámetro alfanumérico cuyo valor es "Z"
 
 Puede hacer doble clic en el nombre de cualquier método para mostrar su contenido en la [Ventana de código fuente](#source-code-pane).
 
@@ -321,19 +321,19 @@ El modo de visualización que se utilizará para todas las ventanas del depurado
 
 Las siguientes opciones están disponibles:
 
-- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
+- **Variables locales**: muestra y evalúa automáticamente las variables locales tan pronto como se inicialicen en el código fuente en ejecución.
 - **Expresiones de línea**: muestra y evalúa automáticamente el mismo contenido que el elemento [Expresiones de línea](#line-expressions) de la Lista de expresiones.
-- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **Expresiones**: solo muestra expresiones personalizadas que ha introducido manualmente. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
 
-Whatever the display mode, you can add custom expressions at any moment.
+Cualquiera que sea el modo de visualización, puede añadir expresiones personalizadas en cualquier momento.
 
 :::
 
 ### Gestión de expresiones
 
-You can enter any expression to evaluate. Una expresión personalizada sólo se muestra en la ventana actual del depurador, excepto si la [fija](#pinning-an-expression).
+Puede introducir cualquier expresión a evaluar. Una expresión personalizada sólo se muestra en la ventana actual del depurador, excepto si la [fija](#pinning-an-expression).
 
 Hay varias formas de añadir expresiones a la lista:
 
@@ -345,21 +345,21 @@ Hay varias formas de añadir expresiones a la lista:
 
 Para editar una expresión, haga clic en ella para seleccionarla y, a continuación, vuelva a hacer clic o presione **Intro** en su teclado.
 
-To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
+Para eliminar una expresión personalizada, haga clic en ella para seleccionarla, luego pulse **Backspace** o **Delete** en su teclado, o haga clic en el icono **x**.
 
 :::warning
 
-Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+Tenga cuidado cuando evalúe una expresión 4D que modifique el valor de una de las Variables del Sistema (por ejemplo, la variable OK) porque la ejecución del resto del método puede verse alterada.
 
 :::
 
 ### Pinning an expression
 
-You can click on the pushpin icon to pin an expression:
+Puede hacer clic en el icono de pushpin para anclar una expresión:
 
 ![pinning-expression](../assets/en/Debugging/pin-expression.png)
 
-The expression will then be displayed in all debugger windows.
+La expresión se mostrará en todas las ventanas del depurador.
 
 ### Menú contextual de la ventana de expresión
 
@@ -369,8 +369,8 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 - **Mostrar**: selecciona el [modo de visualización](#display-mode) para todas las ventanas de depuración.
 - **Nueva Expresión...**: inserta una nueva expresión y muestra el editor de Fórmula 4D.
- ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
- Para obtener más información sobre el Editor de Fórmulas, consulte el [manual de Diseño 4D](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
+  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+  Para obtener más información sobre el Editor de Fórmulas, consulte el [manual de Diseño 4D](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
 * **Insertar comando...**: muestra un menú que permite insertar un comando 4D como una nueva expresión.
 * **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
@@ -416,9 +416,9 @@ Puede copiar toda expresión seleccionada del panel de código fuente en el [Cus
 
 1. En el panel de código fuente, seleccione la expresión a evaluar
 2. Haga una de las siguientes cosas:
- - Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
- - Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
- - Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
+  - Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
+  - Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
+  - Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
 
 ### Contador del programa
 
@@ -455,8 +455,8 @@ El menú contextual de la Ventana de evaluación de los métodos da acceso a var
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Mostrar documentación**: abre la documentación del elemento de destino. Este comando está disponible para:
- - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
- - *4D commands, functions, class names:* Displays the online documentation.
+  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
+  - *4D commands, functions, class names:* Displays the online documentation.
 - **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
 - **Copiar**: copia estándar de la expresión seleccionada al portapapeles.
 - **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.

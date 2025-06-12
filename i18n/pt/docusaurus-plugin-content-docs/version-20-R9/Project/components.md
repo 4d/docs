@@ -22,8 +22,8 @@ A pasta do pacote de um componente (*MyComponent.4dbase*) pode conter:
 
 - para **componentes interpretados**: um padrão [Pasta do projeto](../Project/architecture.md). O nome da pasta do pacote deve ser sufixado com **.4dbase** se você quiser instalá-lo na pasta [**Components** do seu projeto](architecture.md#components).
 - para **componentes compilados**:
- - ou uma pasta "Conteúdo" contendo um arquivo .4DZ, uma pasta de *Recursos*, um arquivo *Info.plist* (arquitetura recomendada)
- - ou diretamente um arquivo .4DZ com outras pastas como *Recursos*.
+    - ou uma pasta "Conteúdo" contendo um arquivo .4DZ, uma pasta de *Recursos*, um arquivo *Info.plist* (arquitetura recomendada)
+    - ou diretamente um arquivo .4DZ com outras pastas como *Recursos*.
 
 :::note
 
@@ -208,7 +208,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 }
 ```
 
-... onde "myGitHubComponent1" é referenciado e declarado para o projeto, embora "myGitHubComponent2" seja apenas referenciado. Você precisa declará-lo no arquivo [**environment4d.json**] (#environment4djson):
+... onde "myGitHubComponent1" é referenciado e declarado para o projeto, embora "myGitHubComponent2" seja apenas referenciado. Você precisa declará-lo no arquivo [**environment4d.json**](#environment4djson):
 
 ```json
 {
@@ -328,10 +328,10 @@ In an opened project, you can add, remove, update, and get information about dep
 Para exibir o painel Dependências:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),<br/>
- ![dependency-menu](../assets/en/Project/dependency-menu.png)
+    ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - com 4D Server, selecione o item de menu **Janela/Dependências do projeto**.<br/>
- ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+    ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 The Dependencies panel is then displayed. Dependencies are sorted by name in alphabetical order:
 

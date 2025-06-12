@@ -3,7 +3,7 @@ id: TCPListenerClass
 title: TCPListener
 ---
 
-The `TCPListener` class allows you to create and configure a TCP server in 4D. Once the TCP listener is instantiated, you can receive client TCP connections and communicate using any protocol supporting TCP.
+A classe `TCPListener` permite que você crie e configure um servidor TCP em 4D. Once the TCP listener is instantiated, you can receive client TCP connections and communicate using any protocol supporting TCP.
 
 The `TCPListener` class is available from the `4D` class store. You can create a TCP server using the [4D.TCPListener.new()](#4dtcplistenernew) function, which returns a [TCPListener object](#tcplistener-object).
 
@@ -104,9 +104,9 @@ Callback functions receive up to two parameters:
 
 **Sequência de chamadas de retorno:**
 
-1. `onConnection` is triggered each time a connection is established.
+1. `onConnection` é acionado cada vez que uma conexão é estabelecida.
 2. `onError` é acionado se ocorrer um erro.
-3. `onTerminate` is always triggered just before a connection is terminated.
+3. `onTerminate` é sempre acionado antes de uma conexão ser encerrada.
 
 #### Objeto TCPEvent
 

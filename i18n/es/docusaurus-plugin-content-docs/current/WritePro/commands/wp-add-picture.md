@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | picture        | Picture                 | &#8594; | Imagen 4D                                                  |
 | picturePath    | Text                    | &#8594; | Ruta de la imagen                                          |
 | pictureFileObj | 4D.File | &#8594; | 4D.File object representing a picture file |
-| Resultado      | Object                  | &#8592; | Object referencing the picture                             |
+| Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                     |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-forma
 
 - If *picture* is omitted, a valid picture reference is returned, and an empty image is added. Esto le permite llamar a [WP SET ATTRIBUTES](wp-set-attributes.md) con el selector wk image expression para llenar la imagen con una expresión 4D. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
 
-By default, the added picture is:
+Por defecto, la imagen añadida es:
 
 - Embedded behind the text
 - Displayed at the top left corner of the paper box

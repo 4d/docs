@@ -48,7 +48,7 @@ If *options* refers to a paste option not present in the copied object (e.g. for
 
 ## Exemplo
 
-Veja o exemplo de [VP Copy to object] (vp-copy-to-object.md)
+Veja o exemplo de [VP Copy to object](vp-copy-to-object.md)
 
 ## Veja também
 

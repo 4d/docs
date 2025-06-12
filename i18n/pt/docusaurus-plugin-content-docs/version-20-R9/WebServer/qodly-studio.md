@@ -36,7 +36,7 @@ A resolução recomendada é 1920x1080.
 - Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio só funciona com projetos 4D (bancos de dados binários não são suportados).
 - Sessões Web (*aka* realizáveis) precisam [estar habilitadas](sessions.md#enabling-web-sessions).
-- O código 4D chamado pelos formulários Qodly deve ser [thread-safe](preemptiveWeb.md).
+- O código 4D chamado pelos formulários Qodly deve ser [hilo seguro](preemptiveWeb.md).
 
 ### Habilitando o acesso a Qodly Studio
 
@@ -179,7 +179,7 @@ Veja [esta página](https://developer.qodly.com/docs/studio/rendering) para info
 Para ativar a renderização das páginas Qodly, as seguintes opções devem ser definidas.
 
 - A opção **Propriedades** > **Web** > **Funcionalidades Web** > [**Expor como servidor REST**](../settings/web.md#expose-as-rest-server) deve ser ativada.
-- O [servidor Web 4D] (webServer.md) deve estar em execução.
+- O [servidor Web 4D](webServer.md) deve estar em execução.
 
 :::note
 

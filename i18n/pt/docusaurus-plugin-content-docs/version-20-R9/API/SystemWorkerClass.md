@@ -112,7 +112,7 @@ Aqui está a sequência de chamadas de retorno:
 1. `onData` e `onDataError` são executados uma ou várias vezes
 2. se chamado, `onError` é executado uma vez (pára o processamento do system worker)
 3. se não ocorreu nenhum erro, `onResponse` é executado uma vez
-4. `onTerminate` is always executed
+4. `onTerminate` é sempre executado uma vez
 
 :::info
 
@@ -186,7 +186,7 @@ End if
 
 #### Exemplos em macOS
 
-1. Edit a text file (`cat` is the macOS command used to edit files). Neste exemplo, o caminho de acesso completo do comando é passado:
+1. Editar um arquivo de texto (`cat` é o comando macOS utilizado para editar os arquivos). Neste exemplo, o caminho de acesso completo do comando é passado:
 
 ```4d
 
