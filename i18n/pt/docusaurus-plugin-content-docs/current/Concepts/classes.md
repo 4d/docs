@@ -741,7 +741,7 @@ Once instantiated, a singleton class (and its singleton) exists as long as a ref
 
 Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) antes do [`Class constructor`](#class-constructor):
 
-- To declare a (process) singleton class, write `singleton Class Constructor()`.
+- Para declarar uma classe singleton (process), escreva `singleton Class Constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
 - To declare a session singleton class, write `session singleton Class constructor()`.
 
