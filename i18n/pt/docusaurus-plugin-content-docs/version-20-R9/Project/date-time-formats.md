@@ -70,7 +70,7 @@ The following table lists all supported patterns for date and time formats.
 | b       | AM, PM, meio-dia, meia-noite                                             | b, bb ou bbb  | mid.                                                  |
 |         |                                                                          | bbbb          | meia-noite                                                            |
 |         |                                                                          | bbbbb         | md                                                                    |
-| B       | flexible day periods                                                     | B, BB ou BBB  | at night [abbrev] |
+| B       | flexible day periods                                                     | B, BB ou BBB  | à noite [abbrev]  |
 |         |                                                                          | BBBB          | at night [wide]   |
 |         |                                                                          | BBBBB         | at night [narrow] |
 | h       | hora em am/pm (1~12)                  | h             | 7                                                                     |
