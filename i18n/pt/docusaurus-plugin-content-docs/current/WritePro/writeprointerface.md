@@ -299,7 +299,7 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 [4D Write Pro - Table Wizard (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
 
-## Integrated AI
+## IA Integrada
 
 You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application.
 
@@ -351,7 +351,7 @@ O botão **I.A.** é exibido:
 
 Click on the button to display the AI dialog box.
 
-### AI dialog box
+### Diálogo IA
 
 The 4D Write Pro AI dialog box allows a straightforward interaction between the chat area and the 4D Write Pro document.
 
