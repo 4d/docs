@@ -37,7 +37,7 @@ La sintaxis formal es:
 
 with data in the body of the POST request: `["myparam"]`
 
-#### GET request
+#### Petición GET
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction?$params='["myparam"]'`
 
