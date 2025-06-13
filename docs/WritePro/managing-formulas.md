@@ -28,13 +28,9 @@ Formulas become static values if you call the [**WP FREEZE FORMULAS**](commands-
 
 **Compatibility Note**: *Handling expressions using the [**ST INSERT EXPRESSION**](../commands-legacy/st-insert-expression.md), [**ST Get expression**](../commands-legacy/st-get-expression.md), [**ST COMPUTE EXPRESSIONS**](../commands-legacy/st-compute-expressions.md), and [**ST FREEZE EXPRESSIONS**](../commands-legacy/st-freeze-expressions.md) commands is deprecated, however, it is still supported in 4D Write Pro for compatibility*.
 
-:::warning (since 4D 20 R10)
+:::note
 
-- **Within the same 4D application**, formulas are pasted as-is and remain fully editable.
-- **Between different 4D applications or external environments**, only the *computed values* are pasted (as text or images). Formulas themselves are not transferred. If the value is unavailable (e.g., the formula was never computed), 4D pastes the formula source as plain text — not as a live, editable formula.
-
-This behavior is automatic and cannot be disabled.
-It behavior applies to formulas in both **4D Write Pro** documents and **styled text input areas**, including input fields and listbox cells.
+For security reasons, when formulas are copied from a 4D application and pasted to a different 4D application or an external environment, only the original computed values are pasted (as text or images). If the original value was unavailable (e.g., the formula was never computed), 4D pastes the formula source as plain text.
 
 :::
 
