@@ -125,7 +125,7 @@ The right-hand side of the tool bar contains commands used to modify items of th
 | ![](../assets/en/Desktop/label-tool11.png) | Alineación y distribución | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
 | ![](../assets/en/Desktop/label-tool12.png) | Nivel de los objetos      | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
 
-## Layout Page
+## Página Diseño
 
 The Layout page contains controls for printing labels based on the requirements of your current print settings.
 
