@@ -108,7 +108,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 | Parâmetro  | Tipo    |                             | Descrição                         |
 | ---------- | ------- | :-------------------------: | --------------------------------- |
 | lifespan   | Integer |              ->             | Session token lifespan in seconds |
-| Resultados | Text    | <- | UUID of the session               |
+| Resultados | Text    | <- | UUID da sessão                    |
 
 <!-- END REF -->
 

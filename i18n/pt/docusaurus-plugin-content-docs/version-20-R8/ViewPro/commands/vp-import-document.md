@@ -25,7 +25,7 @@ title: VP IMPORT DOCUMENT
 
 ## Descrição
 
-The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
+O comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->importa e exibe o documento designado por *filePath* na área 4D View Pro *vpAreaName*<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 

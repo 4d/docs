@@ -9,7 +9,7 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 
 ## Propriedades
 
-### Error properties
+### Propriedades do erro
 
 | Propriedade | Tipo    | Descrição                                                                      |
 | ----------- | ------- | ------------------------------------------------------------------------------ |

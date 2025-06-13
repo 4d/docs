@@ -118,7 +118,7 @@ Por exemplo, para obter e definir um valor de atributo de armazenamento do tipo 
  $entity.save() //salvar as modificações
 ```
 
-> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
+> Os campos Blob dos banco de dados ([blobs scalaires](Concepts/dt_blob.md) são automaticamente convertidos de e para atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) quando manipulados por ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
 
 O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 

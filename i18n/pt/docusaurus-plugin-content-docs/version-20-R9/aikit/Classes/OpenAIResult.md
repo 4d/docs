@@ -9,11 +9,11 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 
 ## Propriedades
 
-| Propriedade | Tipo                                                                                 | Descrição        |
-| ----------- | ------------------------------------------------------------------------------------ | ---------------- |
-| `request`   | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | The HTTP request |
+| Propriedade | Tipo                                                                                 | Descrição          |
+| ----------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `request`   | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | A solicitação HTTP |
 
-## Computed properties
+## Propriedades calculadas
 
 | Propriedade  | Tipo       | Descrição                                                                                                                   |
 | ------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |

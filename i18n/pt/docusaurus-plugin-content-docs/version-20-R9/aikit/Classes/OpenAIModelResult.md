@@ -11,9 +11,9 @@ title: OpenAIModelResult
 
 ## Propriedades
 
-| Propriedade | Tipo                          | Descrição                  |
-| ----------- | ----------------------------- | -------------------------- |
-| `model`     | [OpenAIModel](OpenAIModel.md) | The model. |
+| Propriedade | Tipo                          | Descrição                 |
+| ----------- | ----------------------------- | ------------------------- |
+| `model`     | [OpenAIModel](OpenAIModel.md) | O modelo. |
 
 ## Veja também
 

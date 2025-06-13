@@ -31,7 +31,7 @@ Each error object contains the following properties:
 
 #### Internal component signatures (4D)
 
-| Component Signature       | Componente                                                          |
+| Assinatura do componente  | Componente                                                          |
 | ------------------------- | ------------------------------------------------------------------- |
 | 4DCM                      | 4D Compiler runtime                                                 |
 | 4DRT                      | 4D runtime                                                          |
@@ -66,14 +66,14 @@ Each error object contains the following properties:
 
 #### Internal component signatures (System)
 
-| Component Signature | Componente                                               |
-| ------------------- | -------------------------------------------------------- |
-| CARB                | Carbon subsystem                                         |
-| COCO                | Cocoa subsystem                                          |
-| MACH                | macOS Mach subsystem                                     |
-| POSX                | posix/bsd subsystem (mac, linux, win) |
-| PW32                | Pre-Win32 subsystem                                      |
-| WI32                | Win32 subsystem                                          |
+| Assinatura do componente | Componente                                               |
+| ------------------------ | -------------------------------------------------------- |
+| CARB                     | Carbon subsystem                                         |
+| COCO                     | Cocoa subsystem                                          |
+| MACH                     | macOS Mach subsystem                                     |
+| POSX                     | posix/bsd subsystem (mac, linux, win) |
+| PW32                     | Pre-Win32 subsystem                                      |
+| WI32                     | Win32 subsystem                                          |
 
 ## Veja também
 

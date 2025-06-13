@@ -16,7 +16,7 @@ title: VP Run offscreen area
 
 ## Descrição
 
-The `VP Run offscreen area` command <!-- REF #_method_.VP Run offscreen area.Summary -->creates an offscreen area in memory which can be used to process 4D View Pro area commands and functions<!-- END REF -->.
+O comando `VP Run offscreen area` <!-- REF #_method_.VP Run offscreen area.Summary -->cria uma área fora da tela na memória que pode ser usada para processar comandos e funções da área do 4D View Pro<!-- END REF -->.
 
 Em objeto *parameters*, passe qualquer uma das seguintes propriedades opcionais. These properties will be available through the `This` command within the `onEvent` method and reference the instance:
 

@@ -13,7 +13,7 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 
 ## Propriedades
 
-| Propriedade             | Tipo       | Default Value   | Descrição                                                                                                                                                                                |
+| Propriedade             | Tipo       | Valor padrão    | Descrição                                                                                                                                                                                |
 | ----------------------- | ---------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `model`                 | Text       | `"gpt-4o-mini"` | ID of the model to use.                                                                                                                                                  |
 | `stream`                | Parâmetros | `False`         | Whether to stream back partial progress. If set, tokens will be sent as data-only. Callback formula required.                            |

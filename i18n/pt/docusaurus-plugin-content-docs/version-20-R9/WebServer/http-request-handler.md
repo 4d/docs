@@ -122,7 +122,7 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 - `/$lib/renderer`
 - `/$shared`
 
-### Class and method
+### Classe e método
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
@@ -141,7 +141,7 @@ Ex: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. All names can be used.
+No control is done on verb names. Todos os nomes podem ser usados.
 
 :::
 

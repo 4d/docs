@@ -9,12 +9,12 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 ## Configuration Properties
 
-| Nome da propriedade | Tipo | Descrição                                                                    | Opcional      |
-| ------------------- | ---- | ---------------------------------------------------------------------------- | ------------- |
-| `apiKey`            | Text | Your [OpenAI API Key](https://platform.openai.com/api-keys). | No for OpenAI |
-| `baseURL`           | Text | Base URL for OpenAI API requests.                            | Sim           |
-| `organization`      | Text | Your OpenAI Organization ID.                                 | Sim           |
-| `project`           | Text | Your OpenAI Project ID.                                      | Sim           |
+| Nome da propriedade | Tipo | Descrição                                                                    | Opcional        |
+| ------------------- | ---- | ---------------------------------------------------------------------------- | --------------- |
+| `apiKey`            | Text | Your [OpenAI API Key](https://platform.openai.com/api-keys). | Não para OpenAI |
+| `baseURL`           | Text | Base URL for OpenAI API requests.                            | Sim             |
+| `organization`      | Text | Your OpenAI Organization ID.                                 | Sim             |
+| `project`           | Text | Your OpenAI Project ID.                                      | Sim             |
 
 ### Additional HTTP properties
 
@@ -42,7 +42,7 @@ var $client:=cs.AIKit.OpenAI.new("your api key")
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"})
 ```
 
-#### Server URL
+#### URL do Servidor
 
 For a [compatible provider](../compatible-openai.md) API, you can configure the server URL.
 
@@ -67,7 +67,7 @@ The API provides access to multiple resources that allow seamless interaction wi
 | `images`            | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Access to the Images API.      |
 | `moderations`       | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Access to the Moderations API. |
 
-### Example Usage
+### Exemplo de uso
 
 ```4d
 $client.chat.completions.create(...)

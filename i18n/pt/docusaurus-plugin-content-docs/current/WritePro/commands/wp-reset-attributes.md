@@ -47,7 +47,7 @@ You want to remove several attributes from the following selection:
 
 ![](../../assets/en/WritePro/commands/pict2643861.en.png)
 
-You can execute:
+Você pode executar:
 
 ```4d
  $range:=WP Get selection(*;"WParea")

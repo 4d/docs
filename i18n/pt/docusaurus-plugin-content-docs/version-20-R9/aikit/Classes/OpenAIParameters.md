@@ -20,16 +20,16 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 Veja [documentação sobre código assíncrono](../asynchronous-call.md)
 
-### Network properties
+### Propriedades de rede
 
 | Propriedade    | Tipo      | Descrição                                                                                                                                                |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Default is 0.                                    |
+| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. O padrão é 0.                                    |
 | `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                           |
 | `maxRetries`   | Integer   | The maximum number of retries for the request. (Only if code not asynchrone ie. no function provided) |
 | `extraHeaders` | Object    | Extra headers to send with the request.                                                                                                  |
 
-### OpenAPI properties
+### Propriedades OpenAPI
 
 | Propriedade | Tipo | Descrição                                                                                                   |
 | ----------- | ---- | ----------------------------------------------------------------------------------------------------------- |
