@@ -227,7 +227,7 @@ Os desenhos das etiquetas são gerenciados usando os botões **Carregar** e **Sa
 
 The file extension of 4D labels saved by the wizard is ".4lbp". Note that this format is open since it is written internally in XML.
 
-### Preloading label files
+### Pré-carregamento de arquivos de etiquetas
 
 The Label Wizard allows you to store label files within your application, so that label designs can be selected and opened by the user directly using the **Load** button.
 
