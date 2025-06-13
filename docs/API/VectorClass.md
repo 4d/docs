@@ -66,16 +66,17 @@ In *parameter*, pass a collection of real numbers representing the vector to cre
 
 #### Example
 
-To create and store a vector:
+To create a vector:
 
 ```4d
+var $vector : 4D.Vector := 4D.Vector.new([0.123, -0.456, 0.789]) 
+```
 
-var $vector:4D.Vector:=4D.Vector.new([0.123, -0.456, 0.789, ...])  //values coming from AI
-var $vector2:=OB Copy($vector)
-VARIABLE TO BLOB($vector; $blob)  //streaming (required for storage and transmission over the network)
-var $component2:=$vector[1]
+You can access individual components or convert the entire vector back to a collection:
 
-
+```4d
+var $firstComponent := $vector[0]
+var $collection := $vector.toCollection()
 ```
 
 
@@ -108,32 +109,9 @@ This metric measures the **angle between vectors** and is commonly used to deter
 #### Example
 
 ```4d
-var $provider:="GPT-4"
-var $model:="text-embedding-ada-002"
-var $people:=ds.People.get(1)
-
-$prompt:=String($people.Firstname)+" "+String($people.Lastname)+" was born on "+String($people.Birthday)+\
-" and lives in "+String($people.Address)+", "+String($people.ZipCode)+", "+String($people.City)+", "+\
-String($people.Country)+". Contact: "+String($people.email)+", "+String($people.Cell)+", "+String($people.Phone)+\
-". Family IDs - Father: "+String($people.FatherID)+", Mother : "+String($people.MotherID)+", Partner: "+\
-String($people.PartnerID)+"."
-
-var $clientAI:=cs.AIKit.OpenAI.new("<your api key>")  //using 4D AIKit
-
-// Vector calculation with OpenAI component
-var $result:=$clientAI.embeddings.create($prompt; $model)
-
-// 4D.vector object creation
-var $vector:=4D.Vector.new($result.embeddings[0].embedding)
-
-$question:="I'm looking for Fabrice who lives in France"
-// Vector calculation with OpenAI component
-$questionVector:=4D.Vector.new($clientAI.embeddings.create($question; $model).embeddings[0].embedding))
-
-// similarity calculation
-If ($vector.cosineSimilarity($questionVector)>0.9)
-	ALERT("Interesting result")
-End if 
+var $vector : 4D.Vector := 4D.Vector.new([0.123, -0.456, 0.789]) 
+var $anotherVector : 4D.Vector := 4D.Vector.new([0.598, -0.951, 0.789])
+var $similarity := $vector.cosineSimilarity($anotherVector)
 ```
 
 
@@ -167,27 +145,9 @@ This metric reflects both **similarity** and **magnitude**, and is generally use
 
 
 ```4d
-$documents:=[{text: "How to bake a chocolate cake"; similarity: 0}; \
-{text: "Best hiking trails in the Alps"; similarity: 0}; \
-{text: "Tips for learning 4D programming"; similarity: 0}; \
-{text: "Top 10 sci-fi movies of all time"; similarity: 0}]
-
-$question:="4D coding tutorials"
-// Vector calculation with OpenAI component
-$questionVector:=4D.Vector.new($clientAI.embeddings.create($question; $model).embeddings[0].embedding))
-
-
-For each ($document; $documents)
-        // Vector calculation with OpenAI component
-	$vector:=4D.Vector.new($clientAI.embeddings.create($document.text; $model).embeddings[0].embedding)
-
-        // similarity
-	$document.similarity:=$vector.dotSimilarity($questionVector)
-End for each 
-
-$documents:=$documents.orderBy("similarity asc")
-
-ALERT("Best answer: "+$documents[0].text)
+var $vector : 4D.Vector := 4D.Vector.new([0.123, -0.456, 0.789]) 
+var $anotherVector : 4D.Vector := 4D.Vector.new([0.598, -0.951, 0.789])
+var $score := $vector.dotSimilarity($anotherVector)
 
 ```
 
@@ -218,52 +178,16 @@ This measures the straight-line distance in the vector space. It is recommended 
 - The lower the returned value is, more similar vectors are. 
 
 
-#### Example 1
+#### Example
 
 
 ```4d
-var $model:="text-embedding-ada-002"
-// 2 text to compare
-$text1="Find the best Italian restaurants in Paris"
-$text2="Top-rated pizza places near the Eiffel Tower"
-
-var $clientAI:=InitOpenAI()
-// Vector calculation with OpenAI component
-var $result:=$clientAI.embeddings.create($text1; $model)
-
-var $vector:=4D.Vector.new($result.embeddings[0].embedding)
-
-// Vector calculation with OpenAI component
-$questionResult:=4D.Vector.new($clientAI.embeddings.create($text2; $model).embeddings[0].embedding)
-
-var $similarity:=$vector.euclidianSimilarity($questionResult)
-ALERT("euclidian similarity"+String($similarity))
+var $vector : 4D.Vector := 4D.Vector.new([0.123, -0.456, 0.789]) 
+var $anotherVector : 4D.Vector := 4D.Vector.new([0.598, -0.951, 0.789])
+var $distance := $vector.euclideanDistance($anotherVector)
 
 ```
 
-#### Example 2
-
-
-```4d
-$places=[\
-   {name: "Eiffel Tower"; coord: [48.8584; 200.2945]; similarity: 0}; \
-   {name: "Louvre Museum"; coord: [48.8606; 200.3376]; similarity: 0}; \
-   {name: "Notre-Dame"; coord: [48.8529; 200.35]; similarity: 0}; \
-   {name: "Montmartre"; coord: [48.8867; 200.3431]; similarity: 0}\
-]
-
-$userLocation:=[8.8566; 20.3522]
-var $vector:=4D.Vector.new($userLocation)
-
-For each ($place; $places)
-	$place.similarity:=$vector.euclidianSimilarity(4D.Vector.new($place.coord))
-End for each 
-
-$places:=$places.orderBy("similarity asc")
-
-ALERT("Nearest monument: "+$places[0].name)
-
-```
 
 ## .length
 
