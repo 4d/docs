@@ -91,7 +91,7 @@ var $images:=$client.images.generate("A futuristic city skyline at sunset"; {siz
 
 https://platform.openai.com/docs/api-reference/models
 
-Get full list of models
+Obtener lista completa de modelos
 
 ```4d
 var $models:=$client.models.list().models // a continuación, puede extraer el `id`
