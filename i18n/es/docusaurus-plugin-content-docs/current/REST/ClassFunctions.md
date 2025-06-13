@@ -43,7 +43,7 @@ Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podr�
 
 con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
-#### GET request
+#### Petición GET
 
 `/rest/City/getCity?$params='["Aguada"]'`
 
@@ -116,7 +116,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 
 **Parámetros en el cuerpo:** ["Aguada","Paris"]
 
-#### GET request
+#### Petición GET
 
 `/rest/City/getCities?$params='["Aguada","Paris"]'`
 
