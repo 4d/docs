@@ -36,7 +36,7 @@ For a comprehensive list of attributes to pass, as well as their scope and value
 
 If there are different values for the same attribute in the element passed as a parameter, the command returns:
 
-- for numerical values, wk mixed
+- para valores numéricos, wk mixed
 - for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
 - para valores cadena, una cadena vacía
 - for picture values, an empty picture.
