@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | comando   | Integer | &#8594; | Número de comando            |
 | info      | Integer | &#8592; | Command property to evaluate |
 | theme     | Text    | &#8592; | Language theme of command    |
-| Resultado | Text    | &#8592; | Localized command name       |
+| Resultado | Text    | &#8592; | Nome do comando              |
 
 <!-- END REF-->
 
