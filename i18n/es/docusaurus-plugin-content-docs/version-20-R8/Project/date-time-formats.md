@@ -71,8 +71,8 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         |                                                                                 | bbbb         | medianoche                                                                 |
 |         |                                                                                 | bbbbb        | md                                                                         |
 | B       | períodos de días flexibles                                                      | B, BB o BBB  | de noche [abreviatura] |
-|         |                                                                                 | BBBB         | at night [wide]        |
-|         |                                                                                 | BBBBB        | at night [narrow]      |
+|         |                                                                                 | BBBB         | de noche [completo]    |
+|         |                                                                                 | BBBBB        | de noche [abreviado]   |
 | h       | hora en am/pm (1~12)                         | h            | 7                                                                          |
 |         |                                                                                 | hh           | 07                                                                         |
 | H       | hora en día (0~23)                           | H            | 0                                                                          |
