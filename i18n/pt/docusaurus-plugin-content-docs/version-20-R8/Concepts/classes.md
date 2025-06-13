@@ -602,7 +602,7 @@ Classe ($side : Integer)
   $area:=This.height*This.width
 ```
 
-## Class function commands
+## Comandos de funções de classe
 
 The following commands have specific features when they are used within class functions:
 
