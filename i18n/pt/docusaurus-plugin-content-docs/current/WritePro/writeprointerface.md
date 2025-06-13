@@ -9,10 +9,10 @@ Um desenvolvedor 4D pode facilmente implementar essas paletas em sua aplicação
 
 La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual *Diseño 4D*.
 
-You will find below:
+Você encontrará abaixo:
 
 - the Table Wizard configuration documentation,
-- the integrated A.I. documentation.
+- a I.A. integrada. documentation.
 
 ## Assistente de tabelas
 
