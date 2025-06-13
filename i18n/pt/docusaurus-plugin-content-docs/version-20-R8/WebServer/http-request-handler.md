@@ -141,7 +141,7 @@ Ex: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. All names can be used.
+No control is done on verb names. Todos os nomes podem ser usados.
 
 :::
 
