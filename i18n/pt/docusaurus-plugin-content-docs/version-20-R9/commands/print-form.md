@@ -154,7 +154,7 @@ This form is used as dialog, then printed with modifications:
 
 ![](../assets/en/commands/pict6264975.en.png)
 
-The form method:
+O método formulário:
 
 ```4d
  If(Form event code=On Printing Detail)

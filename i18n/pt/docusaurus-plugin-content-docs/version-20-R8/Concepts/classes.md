@@ -602,7 +602,7 @@ Classe ($side : Integer)
   $area:=This.height*This.width
 ```
 
-## Class function commands
+## Comandos de funções de classe
 
 The following commands have specific features when they are used within class functions:
 
@@ -711,7 +711,7 @@ Se a palavra-chave da função `shared` for usada em uma classe de usuário não
 
 Uma **classe singleton** é uma classe de usuário que produz apenas uma única instância. For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-### Singletons types
+### Tipos de singletons
 
 4D supports three types of singletons:
 
@@ -762,7 +762,7 @@ A propriedade [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) d
 
 ### Exemplos
 
-#### Process singleton
+#### Singleton process
 
 ```4d
 	//class: ProcessTag
@@ -826,7 +826,7 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("caminhão")
 
 Como a função *buildVehicle()* modifica o singleton **cs.VehicleFactory** (ao incrementar `This.vehicleBuilt`) você precisa adicionar a palavra-chave `shared` a ela.
 
-#### Session singleton
+#### Singleton session
 
 In an inventory application, you want to implement an item inventory using session singletons.
 

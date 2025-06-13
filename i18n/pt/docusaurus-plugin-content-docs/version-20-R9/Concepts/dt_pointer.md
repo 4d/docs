@@ -92,7 +92,7 @@ Con:
 | Desigualdade | Pointer # Pointer   | Parâmetros | vPtrA # vPtrC | True  |
 |              |                     |            | vPtrA # vPtrB | False |
 
-:::warning Null Pointers
+:::warning Ponteiros Null
 
 Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por exemplo:
 

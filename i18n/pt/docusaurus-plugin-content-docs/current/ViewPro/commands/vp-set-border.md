@@ -17,7 +17,7 @@ title: VP SET BORDER
 
 ## Descrição
 
-The `VP SET BORDER` command <!-- REF #_method_.VP SET BORDER.Summary -->applies the border style(s) defined in *borderStyleObj* and *borderPosObj* to the range defined in the *rangeObj*<!-- END REF -->.
+O comando `VP SET BORDER` <!-- REF #_method_.VP SET BORDER.Summary -->aplica o(s) estilo(s) de borda definido em *borderStyleObj* e *borderPosObj* ao intervalo definido no *rangeObj*<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo de células em que o estilo de borda será aplicado. If the *rangeObj* contains multiple cells, borders applied with `VP SET BORDER` will be applied to the *rangeObj* as a whole (as opposed to the [`VP SET CELL STYLE`](vp-set-cell-style.md) command which applies borders to each cell of the *rangeObj*). If a style sheet has already been applied, `VP SET BORDER` will override the previously applied border settings for the *rangeObj*.
 

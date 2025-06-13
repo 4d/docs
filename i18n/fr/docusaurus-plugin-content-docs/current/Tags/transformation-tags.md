@@ -5,9 +5,9 @@ title: Balises de transformation
 
 4D fournit un ensemble de balises de transformation qui vous permettent d'insérer des références à des variables ou des expressions 4D, ou d'effectuer différents types de traitement dans un texte source, appelé "template". Ces balises sont interprétées lors de l'exécution du texte source et génèrent un texte de sortie.
 
-This principle is used in particular by the 4D Web server to build [web template pages](WebServer/templates.md).
+Ce principe est notamment utilisé par le serveur Web 4D pour construire des [pages web modèles] (WebServer/templates.md).
 
-These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
+Ces balises sont généralement insérées comme des commentaires de type HTML (`<!--#Tag Contents-->`) mais une [syntaxe alternative conforme au xml] (#alternative-syntax-for-4dtext-4dhtml-4deval) est disponible pour certaines d'entre elles.
 
 Il est possible de combiner plusieurs types de balises. Par exemple, la structure HTML suivante est tout à fait envisageable :
 
@@ -53,11 +53,11 @@ Les balises 4D sont interprétées de manière récursive : 4D tente toujours de
 
 Si le champ texte `[Mail]Letter_type` contient lui-même une balise, par exemple `<! -#4DSCRIPT/m_Gender-->`, cette balise sera évaluée récursivement après l'interprétation de la balise 4DHTML.
 
-Ce principe puissant répond à la plupart des besoins liés à la transformation des textes. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](WebServer/templates.md#prevention-of-malicious-code-insertion).
+Ce principe puissant répond à la plupart des besoins liés à la transformation des textes. Notez, cependant, que dans certains cas, cela peut également permettre l'insertion de code malveillant dans le contexte web, [ce qui peut être évité] (WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ### Identifiants avec tokens
 
-Pour garantir l'évaluation correcte des expressions traitées via les balises, quel que soit le langage ou la version de 4D, il est recommandé d'utiliser la syntaxe tokenisée pour les éléments dont le nom peut varier selon les versions (commandes, tables, champs, constantes). For example, to insert the `Current time` command, enter `Current time:C178`.
+Pour garantir l'évaluation correcte des expressions traitées via les balises, quel que soit le langage ou la version de 4D, il est recommandé d'utiliser la syntaxe tokenisée pour les éléments dont le nom peut varier selon les versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande `Current time`, entrez `Current time:C178`.
 
 ### Utilisation du "." comme séparateur décimal
 

@@ -222,7 +222,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 
 "myGitHubComponent2" can be used by several projects.
 
-#### Tags and versions
+#### Tags e versões
 
 When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
 
@@ -329,7 +329,7 @@ Por padrão, todas as dependências identificadas pelo gerenciador de dependênc
 - **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflito**: dependências carregadas, mas que sobrecarregam pelo menos outra dependência em um [nível de prioridade](#priority) inferior. Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
-### Dependency status
+### Estado de dependências
 
 Dependencies requiring the developer's attention are indicated by a **status label** at the right side of the line and a specific background color:
 
@@ -352,7 +352,7 @@ A tooltip is displayed when you hover over the dependency line, provding additio
 
 ![dependency-tips](../assets/en/Project/dependency-tip1.png)
 
-### Dependency origin
+### Origem da dependência
 
 The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
 
@@ -514,7 +514,7 @@ When you select an update command:
 - a dialog box is displayed and proposes to **restart the project**, so that the updated dependencies are immediately available. It is usually recommended to restart the project to evaluate updated dependencies.
 - if you click Later, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
 
-#### Automatic update
+#### Atualização automática
 
 The **Automatic update** option is available in the **options** menu at the bottom of the Dependency manager window.
 

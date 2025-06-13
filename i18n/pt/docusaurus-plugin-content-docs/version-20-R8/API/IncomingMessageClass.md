@@ -129,7 +129,7 @@ If the body has not been given as a binary content, the function tries to conver
 
 | Parâmetro  | Tipo |                             | Descrição                         |
 | ---------- | ---- | --------------------------- | --------------------------------- |
-| \|         | Text | ->                          | Header property to get            |
+| \|         | Text | ->                          | Propriedade de cabeçalho a obter  |
 | Resultados | Text | <- | Valor da propriedade do cabeçalho |
 
 <!-- END REF -->
@@ -302,7 +302,7 @@ Exemplo: `http://127.0.0.1:8044/minhaCall?firstname=Marie&id=2&isWoman=true`
 
 In this case, parameters are received as stringified values in the `urlQuery` property: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
 
-#### JSON contents parameters
+#### Parâmetros conteúdo JSON
 
 Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoman": true,"id": 3}]'`.
 

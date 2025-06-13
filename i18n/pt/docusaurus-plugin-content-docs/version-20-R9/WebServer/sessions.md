@@ -246,7 +246,7 @@ The OTP token can also be provided as a custom parameter that you need to proces
 
 Em ambos os casos, você precisa extrair o token do parâmetro personalizado e chamar a [`Session.restore()`](../API/SessionClass.md#restore) com o token como parâmetro.
 
-#### Processing a invalid OTP
+#### Processando um OTP inválido
 
 The OTP token is considered invalid if:
 
@@ -308,7 +308,7 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+A classe singleton:
 
 ```4d
 //Class OperationsHandler
@@ -367,7 +367,7 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+A classe singleton:
 
 ```4d
 //Class OperationsHandler

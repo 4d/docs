@@ -28,11 +28,11 @@ title: VP SET TABLE THEME
 
 ## Description
 
-The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the *tableName*<!-- END REF -->.
+La commande `VP SET TABLE THEME` <!-- REF #_method_.VP SET TABLE THEME.Summary --> modifie le thème actuel de la *tableName*<!-- END REF -->.
 
-In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to modify.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro et dans *tableName*, le nom de la table à modifier.
 
-In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class](../classes.md#tabletheme) that contains the theme properties to modify.
+Dans le paramètre *options*, passez un objet de la classe [`cs.ViewPro.TableTheme`](../classes.md#tabletheme) qui contient les propriétés du thème à modifier.
 
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 

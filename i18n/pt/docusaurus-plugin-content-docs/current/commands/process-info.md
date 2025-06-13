@@ -34,7 +34,7 @@ O objeto retornado contém as propriedades abaixo:
 | cpuTime          | Real                                    | Tempo de execução (segundos)                                  |
 | cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
 | creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
-| ID               | Integer                                 | Process unique ID                                                                |
+| ID               | Integer                                 | ID única do processo                                                             |
 | name             | Text                                    | Nome de processo                                                                 |
 | number           | Integer                                 | Process number                                                                   |
 | preemptive       | Parâmetros                              | True if run preemptive, false otherwise                                          |
@@ -114,7 +114,7 @@ O objeto retornado contém as propriedades abaixo:
 | Web server spare process      | -32   |
 | Worker pool in use            | -41   |
 | Worker pool spare             | -42   |
-| Worker process                | 5     |
+| Processo do trabalhador       | 5     |
 
 :::note
 

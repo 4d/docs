@@ -15,7 +15,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | `conteúdo`  | Diferente de | The content of the message, which can be a text or a collection of objects.                             |
 | `user`      | Text         | An optional property representing the user associated with the message.                                 |
 
-## Computed properties
+## Propriedades calculadas
 
 | Propriedade | Tipo | Descrição                                                 |
 | ----------- | ---- | --------------------------------------------------------- |
@@ -34,7 +34,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 Adds an image URL to the content of the message.
 
-## Example Usage
+## Exemplo de uso
 
 ```4d
 // Create an instance of OpenAIMessage
