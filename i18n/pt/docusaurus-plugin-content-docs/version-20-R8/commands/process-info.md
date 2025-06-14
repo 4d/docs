@@ -39,7 +39,7 @@ O objeto retornado contém as propriedades abaixo:
 | number           | Integer                                 | Process number                                                                   |
 | preemptive       | Parâmetros                              | True if run preemptive, false otherwise                                          |
 | sessionID        | Text                                    | UUID da sessão                                                                   |
-| state            | Integer                                 | Current status. Possible values: see below       |
+| state            | Integer                                 | Estado atual. Possible values: see below         |
 | systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
 | type             | Integer                                 | Running process type. Possible values: see below |
 | visible          | Parâmetros                              | True if visible, false otherwise                                                 |
