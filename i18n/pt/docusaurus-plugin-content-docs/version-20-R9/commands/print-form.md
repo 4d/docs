@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                |
 | --------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable    | Tabela       | &#8594; | Table owning the form, or Default table, if omitted                                                                                                                                      |
+| aTable    | Tabela       | &#8594; | Tabela do formulário ou tabela padrão, se omitida                                                                                                                                        |
 | form      | Text, Object | &#8594; | Name (string) of the form, or a POSIX path (string) to a .json file describing the form, or an object describing the form to print |
 | formData  | Object       | &#8594; | Dados para associar ao formulário                                                                                                                                                        |
 | areaStart | Integer      | &#8594; | Print marker, or Beginning area (if areaEnd is specified)                                                                                                             |
@@ -31,7 +31,7 @@ No parâmetro *form*, você pode passar:
 
 Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. Para forçar uma quebra de página entre os formulários, use o comando [PAGE BREAK](../commands-legacy/page-break.md). In order to carry printing over to the next page for a form whose height is greater than the available space, call the [CANCEL](../commands-legacy/cancel.md) command before the [PAGE BREAK](../commands-legacy/page-break.md) command.
 
-Three different syntaxes may be used:
+Três sintaxes diferentes podem ser usadas:
 
 - **Impressão da área de detalhe**
 
@@ -87,7 +87,7 @@ Sintaxe:
  height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
-In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. The values entered must be expressed in pixels.
+In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. Os valores inseridos devem ser expressos em pixels.
 
 **formData**
 
@@ -101,7 +101,7 @@ O valor retornado por **Print form** indica a altura da área impressa. Esse val
 
 As caixas de diálogo da impressora não são exibidas quando você usa **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
-- Chame [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
+- Chame [PRINT SETTINGS](../commands-legacy/print-settings.md). Nesse caso, você permite que o usuário escolha as configurações.
 - Chame [SET PRINT OPTION](../commands-legacy/set-print-option.md) e [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
 
 **Print form**\* cria cada página impressa na memória. Each page is printed when the page in memory is full or when you call [PAGE BREAK](../commands-legacy/page-break.md). To ensure the printing of the last page after any use of **Print form**, you must conclude with the [PAGE BREAK](../commands-legacy/page-break.md) command (except in the context of an [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), see note). Otherwise, if the last page is not full, it stays in memory and is not printed.
@@ -124,21 +124,21 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 O exemplo a seguir funciona como um comando [PRINT SELECTION](../commands-legacy/print-selection.md). However, the report uses one of two different forms, depending on whether the record is for a check or a deposit:
 
 ```4d
- QUERY([Register]) // Select the records
+ QUERY([Register]) // Selecionar os registros
  If(OK=1)
-    ORDER BY([Register]) // Sort the records
+    ORDER BY([Register]) // Ordenar os registros
     If(OK=1)
-       PRINT SETTINGS // Display Printing dialog boxes
+       PRINT SETTINGS // Exibir caixas de diálogo de impressão
        If(OK=1)
           For($vlRecord;1;Records in selection([Register]))
              If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Use one form for checks
+                Print form([Register];"Check Out") // Use um formulário para cheques
              Else
-                Print form([Register];"Deposit Out") // Use another form for deposits
+                Print form([Register];"Deposit Out") // Use outro formulário para depósitos
              End if
              NEXT RECORD([Register])
           End for
-          PAGE BREAK // Make sure the last page is printed
+          PAGE BREAK // Certifique-se de que a última página seja impressa
        End if
     End if
  End if
