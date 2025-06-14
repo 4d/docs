@@ -37,13 +37,13 @@ Functions are simply called on the appropriate ORDA interface or singleton class
 
 For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
-#### POST request
+#### Solicitação POST
 
 `/rest/City/getCity`
 
 with data in the body of the POST request: `["Aguada"]`
 
-#### GET request
+#### Solicitação GET
 
 `/rest/City/getCity?$params='["Aguada"]'`
 
@@ -110,13 +110,13 @@ Scalar value parameter(s) must simply be enclosed in a collection. Todos os tipo
 
 For example, with a  dataclass function `getCities()` receiving text parameters:
 
-#### POST request
+#### Solicitação POST
 
 `/rest/City/getCities`
 
 **Parâmetros no corpo:** ["Aguda","Paris"]
 
-#### GET request
+#### Solicitação GET
 
 `/rest/City/getCities?$params='["Aguada","Paris"]'`
 
