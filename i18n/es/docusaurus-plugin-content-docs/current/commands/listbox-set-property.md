@@ -57,7 +57,7 @@ In the *property* and *value* parameters, you indicate, respectively, the proper
 | lk single click edit           | 29    | **[Single-Click Edit](../FormObjects/properties_Entry.md#single-click-edit)** property<br/>Applies to: List box<br/>Possible values:<br/>lk no (0) <br/>lk yes (1)                                                                                                                                                                                                                                                                                       |
 | lk sortable                    | 20    | **[Sortable](../FormObjects/properties_Action.md#sortable)** property<br/>Applies to: List box<br/>Possible values:\*\*<br/>\*\*lk no (0) <br/>lk yes (1)                                                                                                                                                                                                                                                                                                |
 | lk truncate                    | 12    | **[Truncate with ellipsis](../FormObjects/properties_Display.md#truncate-with-ellipsis)** property<br/>Applies to: List box or column<br/>Possible values:\*\*<br/>\*\*lk without ellipsis (0) lk with ellipsis (1)                                                                                                                                                                                                                                      |
-| lk ver scrollbar width         | 5     | Width in pixels                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| lk ver scrollbar width         | 5     | Ancho en píxeles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | lk current item expression     | 38    | **[Current item](../FormObjects/properties_DataSource.md#current-item)** property<br/>Applies to: List box (Collection / Entity selection)                                                                                                                                                                                                                                                                                                                                                  |
 | lk current item pos expression | 39    | **[Current item position](../FormObjects/properties_DataSource.md#current-item-position)** property<br/>Applies to: List box (Collection / Entity selection)                                                                                                                                                                                                                                                                                                                                |
 | lk selected items expression   | 40    | **[Selected items](../FormObjects/properties_DataSource.md#selected-items)** property<br/>Applies to: List box (Collection / Entity selection)                                                                                                                                                                                                                                                                                                                                              |
@@ -71,7 +71,7 @@ In the *property* and *value* parameters, you indicate, respectively, the proper
 You want to make all columns of the "MyListbox" list box resizable:
 
 ```4d
- LISTBOX SET PROPERTY(*;"MyListbox";lk column resizable;lk yes) //All columns of the "MyListbox" list box are set as resizable
+ LISTBOX SET PROPERTY(*;"MyListbox";lk column resizable;lk yes) //Todas las columnas del list box "MyListbox" se establecen como redimensionables
 ```
 
 ## Ejemplo 2
@@ -79,7 +79,7 @@ You want to make all columns of the "MyListbox" list box resizable:
 You want to set a maximum width for the column whose name is "ProductNumber":
 
 ```4d
- LISTBOX SET PROPERTY(*;"ProductNumber";lk column max width;200) //This column will have a maximum width of 200
+ LISTBOX SET PROPERTY(*; "ProductNumber";lk column max width;200) //Esta columna tendrá un ancho máximo de 200
 ```
 
 ## Ver también
