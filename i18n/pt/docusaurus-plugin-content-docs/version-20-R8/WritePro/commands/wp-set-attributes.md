@@ -62,7 +62,7 @@ You get the following result:
 
 ## Exemplo 2
 
-This example illustrates the use of wk inside and wk outside constants:
+Este exemplo ilustra o uso das constantes wk inside e wk outside:
 
 ```4d
  $wpRange:=WP Get selection(writeProdoc)
