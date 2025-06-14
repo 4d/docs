@@ -334,7 +334,7 @@ O valor devolvido é a chave pública.
 
 | Parâmetro  | Tipo          |                             | Descrição                                                                       |
 | ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------- |
-| message    | Texto OU Blob | ->                          | Message to sign                                                                 |
+| message    | Texto OU Blob | ->                          | Mensagem a assinar                                                              |
 | options    | Object        | ->                          | Opções de assinatura                                                            |
 | Resultados | Text          | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
 
