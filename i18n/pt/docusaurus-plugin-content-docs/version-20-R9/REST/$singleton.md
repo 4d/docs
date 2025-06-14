@@ -31,13 +31,13 @@ As funções singleton podem ser chamadas usando solicitações REST **POST** ou
 
 A sintaxe formal é:
 
-#### POST request
+#### Solicitação POST
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
 with data in the body of the POST request: `["myparam"]`
 
-#### GET request
+#### Solicitação GET
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction?$params='["myparam"]'`
 
