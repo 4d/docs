@@ -46,7 +46,7 @@ By default, the added picture is:
 
 The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
 
-**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. Você pode determinar se um objeto selecionado é um objeto imagem verificando o atributo `wk type`:
 
 - **Value = 2**: o objeto selecionado é um objeto imagem.
 - **Value = 0**: o objeto selecionado é um objeto intervalo.
