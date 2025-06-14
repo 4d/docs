@@ -29,9 +29,9 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 Create an instance of the OpenAI client class.
 
-| Argument Name | Tipo           | Descrição                                                                                       |
-| ------------- | -------------- | ----------------------------------------------------------------------------------------------- |
-| *apiKey*      | Text or Object | apiKey if Text as first argument and the second can be an Object of parameters. |
+| Argument Name | Tipo            | Descrição                                                                                       |
+| ------------- | --------------- | ----------------------------------------------------------------------------------------------- |
+| *apiKey*      | Texto ou objeto | apiKey if Text as first argument and the second can be an Object of parameters. |
 
 #### Chave API
 
