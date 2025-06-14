@@ -71,7 +71,7 @@ In the *property* and *value* parameters, you indicate, respectively, the proper
 You want to make all columns of the "MyListbox" list box resizable:
 
 ```4d
- LISTBOX SET PROPERTY(*;"MyListbox";lk column resizable;lk yes) //All columns of the "MyListbox" list box are set as resizable
+ LISTBOX SET PROPERTY(*; "MyListbox";lk column resizable;lk yes) /Todas as colunas do list box "MyListbox" são definidas como redimensionáveis
 ```
 
 ## Exemplo 2
@@ -79,7 +79,7 @@ You want to make all columns of the "MyListbox" list box resizable:
 You want to set a maximum width for the column whose name is "ProductNumber":
 
 ```4d
- LISTBOX SET PROPERTY(*;"ProductNumber";lk column max width;200) //This column will have a maximum width of 200
+ LISTBOX SET PROPERTY(*; "ProductNumber";lk column max width;200) /Essa coluna terá uma largura máxima de 200
 ```
 
 ## Veja também
