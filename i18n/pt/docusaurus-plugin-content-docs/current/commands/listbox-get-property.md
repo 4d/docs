@@ -74,14 +74,14 @@ In addition, it is not possible to return values from more than one column at a 
 
 **Note:**
 
-- The lk display footer and lk display header constants are useful for calculating the actual size of a list box area in a form.
+- As constantes lk display footer e lk display header são úteis para calcular o tamanho real da área de um list box em um formulário.
 
 ## Exemplo 1
 
 Given a listbox "MyListbox", if you execute the following statement:
 
 ```4d
- $Value:=LISTBOX Get property(*;"MyListbox";lk selection mode) // value returned indicates selection mode
+ $Value:=LISTBOX Get property(*; "MyListbox";lk selection mode) // o valor retornado indica o modo de seleção
 ```
 
 In this case, the result returned indicates whether multiple rows can be selected.
@@ -94,7 +94,7 @@ Given a list box "MyListbox", if you execute the following statement:
  $resizable:=LISTBOX Get property(*;"MyListbox";lk column resizable)
 ```
 
-**LISTBOX Get property** returns -1 because the lk column resizable property applies to columns and a list box was passed as parameter.
+**LISTBOX Get property** retorna -1 porque a propriedade lk column resizable se aplica a colunas e um list box foi passada como parâmetro.
 
 ## Veja também
 
