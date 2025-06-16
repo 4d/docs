@@ -5,7 +5,7 @@ title: OpenAIModerationsAPI
 
 # OpenAIModerationsAPI
 
-The `OpenAIModerationsAPI` is responsible for classifying if text and/or image inputs are potentially harmful.
+L'interface `OpenAIModerationsAPI` est chargée de déterminer si les textes et/ou les images introduits sont potentiellement dangereux.
 
 https://platform.openai.com/docs/api-reference/moderations
 
