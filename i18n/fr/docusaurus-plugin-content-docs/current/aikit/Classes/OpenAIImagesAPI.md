@@ -5,7 +5,7 @@ title: OpenAIImagesAPI
 
 # OpenAIImagesAPI
 
-The `OpenAIImagesAPI` provides functionalities to generate images using OpenAI's API.
+Le `OpenAIImagesAPI` fournit des fonctionnalités pour générer des images en utilisant l'API d'OpenAI.
 
 https://platform.openai.com/docs/api-reference/images
 
@@ -15,13 +15,13 @@ https://platform.openai.com/docs/api-reference/images
 
 **generate**(*prompt* : Text; *parameters* : OpenAIImageParameters) : OpenAIImagesResult
 
-| Paramètres   | Type                                              | Description                                                                      |
-| ------------ | ------------------------------------------------- | -------------------------------------------------------------------------------- |
-| *prompt*     | Text                                              | The prompt to use for image generation.                          |
-| *paramètres* | [OpenAIImageParameters](OpenAIImageParameters.md) | Parameters for image generation.                                 |
-| Résultat     | [OpenAIImagesResult](OpenAIImagesResult.md)       | The result containing the generated image(s). |
+| Paramètres   | Type                                              | Description                                                      |
+| ------------ | ------------------------------------------------- | ---------------------------------------------------------------- |
+| *prompt*     | Text                                              | L'invite à utiliser pour la génération d'image.  |
+| *paramètres* | [OpenAIImageParameters](OpenAIImageParameters.md) | Paramètres pour la génération d'images.          |
+| Résultat     | [OpenAIImagesResult](OpenAIImagesResult.md)       | Le résultat contenant la ou les images générées. |
 
-Creates an image given a prompt.
+Crée une image à partir d'une invite.
 
 https://platform.openai.com/docs/api-reference/images/create
 
@@ -36,7 +36,7 @@ If($image#Null)
 End if
 ```
 
-If more than one image generated
+Si plusieurs images ont été générées
 
 ```4d
 var $image: cs.AIKit.OpenAIImage
