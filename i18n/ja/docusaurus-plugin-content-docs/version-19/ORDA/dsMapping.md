@@ -63,7 +63,7 @@ ORDA は、下地である 4D ストラクチャーへの自動マッピング�
 * モデルにはデータストアを構成するすべてのデータクラスが格納され、その詳細な情報も含まれます。 これはその下地にあるデータベース自体からは独立した存在です。
 * データとは、そのモデル内で使用・保存される情報を指します。 たとえば、従業員の名前、住所、生年月日などはデータストア内で扱うことができるデータに含まれます。
 
-A datastore object is handled through functions and properties of the [**DataStore**](../API/DataStoreClass.md) class.
+データストア型オブジェクトは、[**データストア**](../API/DataStoreClass.md)クラスのメンバー関数およびプロパティを介して扱うことができます。
 
 コード内で扱うにあたっては、データストアはオブジェクトであり、公開されているすべての [データクラス](#dataclass) をプロパティとして持ちます。
 
@@ -94,7 +94,7 @@ $mydatastore:=OB Copy(ds) // null を返します
 
 データクラスとは、テーブルに相当するものです。 オブジェクトモデルとして使用され、リレーショナル属性 (データクラス間のリレーションに基づいてビルドされた属性) を含めてすべてのフィールドを属性として参照します。 リレーショナル属性はクエリにおいて通常の属性のように使用することができます。
 
-A dataclass object is handled through functions and properties of the [**DataClass**](../API/DataClassClass.md) class.
+データクラス型オブジェクトは、[**データクラス**](../API/DataClassClass.md)クラスのメンバー関数およびプロパティを介して扱うことができます。
 
 4D プロジェクト内のすべてのデータクラスは、`ds` データストアのプロパティとして利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データストアのデータクラスとして公開したい各テーブルについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
@@ -139,7 +139,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
  $revenuesAttribute:=ds.Company["revenues"] // 別の書き方
 ```
 
-このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves [with their **attribute properties**](../API/DataClassClass.md#attributename). 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
+このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスで返されるのは、属性内に保管されている値ではなく、[**属性のプロパティ**](../API/DataClassClass.md#attributename)を含む、属性自身の参照である点に留意してください。 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
 
 テーブル内の適格なフィールドはすべて、親 [データクラス](#データクラス) の属性として利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データクラスの属性として公開したい各フィールドについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
@@ -177,7 +177,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 エンティティの目的はデータの管理 (作成、更新、削除) です。 エンティティセレクションを用いてエンティティ参照を取得した場合、その参照にはエンティティセレクションについての情報も保持されるため、セレクションを走査することが可能です。
 
-An entity object is handled through functions and properties of the [**Entity**](../API/EntityClass.md) class.
+エンティティ型オブジェクトは、[**エンティティ**](../API/EntityClass.md)クラスのメンバー関数およびプロパティを介して扱うことができます。
 
 エンティティオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
@@ -197,7 +197,7 @@ An entity object is handled through functions and properties of the [**Entity**]
 
 エンティティセレクションとは、同じデータクラスに所属する一つ以上のエンティティへの参照を格納しているオブジェクトのことです。 通常、クエリの結果として、あるいはリレーション属性の戻り値として作成されます。 エンティティセレクションは、データクラスから 0個、1個、あるいは X個のエンティティを格納することができます (X はデータクラスに格納されているエンティティの総数です)。
 
-An entity selection object is handled through functions and properties of the [**EntitySelection**](../API/EntitySelectionClass.md) class.
+エンティティセレクション型オブジェクトは、[**エンティティセレクション**](../API/EntitySelectionClass.md)クラスのメンバー関数およびプロパティを介して扱うことができます。
 
 例:
 
