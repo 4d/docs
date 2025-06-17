@@ -716,7 +716,7 @@ Uma **classe singleton** é uma classe de usuário que produz apenas uma única 
 4D supports three types of singletons:
 
 - um **processo singleton** tem uma instância única para o processo no qual ele é instanciado,
-- a **shared singleton** has a unique instance for all processes on the machine.
+- um **singleton compartilhado** tem uma instância única para todos os processos na máquina.
 - uma **sessão singleton** é um singleton compartilhado, mas com uma instância única para todos os processos na [sessão](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
 
 Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
@@ -729,7 +729,7 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton criado em  | Scope of process singleton                                                                                 | Escopo do singleton compartilhado | Scope of session singleton                                            |
+| Singleton criado em  | Escopo de um singleton process                                                                             | Escopo do singleton compartilhado | Escopo da sessão singleton                                            |
 | -------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------- |
 | **4D usuário único** | Processo                                                                                                   | Aplicação                         | Application or Web/REST session                                       |
 | **4D Server**        | Processo                                                                                                   | Máquina 4D Server                 | Client/server session or Web/REST session or Stored procedure session |
@@ -841,7 +841,7 @@ shared function addItem($item:object)
     This.itemList.push($item)
 ```
 
-By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
+By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Acessar o inventário do usuário é tão simples quanto:
 
 ```4d
 //em uma sessão usuário
