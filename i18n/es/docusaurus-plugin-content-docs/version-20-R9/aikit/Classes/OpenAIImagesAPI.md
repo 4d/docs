@@ -15,11 +15,11 @@ https://platform.openai.com/docs/api-reference/images
 
 **generate**(*prompt* : Text; *parameters* : OpenAIImageParameters) : OpenAIImagesResult
 
-| Parámetros   | Tipo                                              | Descripción                                                       |
-| ------------ | ------------------------------------------------- | ----------------------------------------------------------------- |
-| *prompt*     | Text                                              | The prompt to use for image generation.           |
-| *parámetros* | [OpenAIImageParameters](OpenAIImageParameters.md) | Parameters for image generation.                  |
-| Resultado    | [OpenAIImagesResult](OpenAIImagesResult.md)       | El resultado que contiene las imágenes generadas. |
+| Parámetros   | Tipo                                              | Descripción                                                           |
+| ------------ | ------------------------------------------------- | --------------------------------------------------------------------- |
+| *prompt*     | Text                                              | El indicador que se utilizará para generar la imagen. |
+| *parámetros* | [OpenAIImageParameters](OpenAIImageParameters.md) | Parameters for image generation.                      |
+| Resultado    | [OpenAIImagesResult](OpenAIImagesResult.md)       | El resultado que contiene las imágenes generadas.     |
 
 Creates an image given a prompt.
 
