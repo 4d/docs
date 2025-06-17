@@ -108,7 +108,7 @@ Las cajas de diálogo de la impresora no aparecen cuando se utiliza **Print form
 
 **Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. Si llama a [PAGE BREAK](../commands-legacy/page-break.md) en este caso, se imprime una página en blanco.
 
-This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
+This command prints external areas and objects (for example, 4D Write or 4D View areas). El área se reinicializa cada vez que se ejecuta el comando.
 
 **Warning:** Subforms are not printed with **Print form**. Para imprimir sólo un formulario con dichos objetos, utilice [PRINT RECORD](../commands-legacy/print-record.md) en su lugar.
 
@@ -164,7 +164,7 @@ El método del formulario:
  End if
 ```
 
-The code that calls the dialog then prints its body:
+El código que llama al diálogo imprime su cuerpo:
 
 ```4d
  $formData:=New object
