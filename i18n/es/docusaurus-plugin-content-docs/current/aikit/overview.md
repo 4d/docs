@@ -97,7 +97,7 @@ Obtener lista completa de modelos
 var $models:=$client.models.list().models // a continuación, puede extraer el `id`
 ```
 
-Get one model information by id
+Obtener información de un modelo por id
 
 ```4d
 var $model:=$client.models.retrieve("a model id").model
