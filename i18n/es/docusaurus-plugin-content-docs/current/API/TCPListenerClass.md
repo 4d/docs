@@ -75,7 +75,7 @@ TCPListener objects provide the following properties and functions:
 | ---------- | ------------------------------ | --------------------------- | ------------------------------------------------------------ |
 | port       | Number                         | ->                          | Puerto TCP de escucha                                        |
 | options    | Object                         | ->                          | Configuration [options](#options-parameter) for the listener |
-| Resultado  | 4D.TCPListener | <- | New TCPListener object                                       |
+| Resultado  | 4D.TCPListener | <- | Nuevo objeto TCPListener                                     |
 
 <!-- END REF -->
 
