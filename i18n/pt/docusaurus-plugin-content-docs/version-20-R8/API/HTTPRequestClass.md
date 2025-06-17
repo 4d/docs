@@ -120,7 +120,7 @@ Por exemplo, pode passar as seguintes cordas:
 
 #### `options` parameter
 
-In the *options* parameter, pass an object that can contain the following properties:
+No parâmetro *options*, passe um objeto que possa conter as seguintes propriedades:
 
 | Propriedade            | Tipo                                              | Descrição                                                                                                                                                                                                                                                                                                                                                           | Por padrão           |
 | ---------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
