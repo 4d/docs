@@ -40,7 +40,7 @@ Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-forma
 
 Por defecto, la imagen añadida es:
 
-- Embedded behind the text
+- Incorporado detrás del texto
 - Aparece en la esquina superior izquierda de la papelera
 - Mostrar en todas las páginas
 
