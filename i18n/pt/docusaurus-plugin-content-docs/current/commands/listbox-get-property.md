@@ -24,7 +24,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 **Note:** If the list box or column specified using the *object* and *\** parameters does not exist, the **LISTBOX Get property** command returns -1 for numeric properties, or an empty string.
 
-In the *property* parameter, pass a constant indicating the property whose value you want to get. You can use one of the following constants from the “*List Box*” theme:
+In the *property* parameter, pass a constant indicating the property whose value you want to get. Você pode usar uma das seguintes constantes do tema "*List Box*":
 
 | Parâmetros                     | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
