@@ -41,7 +41,7 @@ var $model:=$result.model
 | Parâmetro    | Tipo                                              | Descrição                                              |
 | ------------ | ------------------------------------------------- | ------------------------------------------------------ |
 | *parâmetros* | [OpenAIParameters](OpenAIParameters.md)           | Additional parameters for the request. |
-| Resultado    | [OpenAIModelListResult](OpenAIModelListResult.md) | The model list result                                  |
+| Resultado    | [OpenAIModelListResult](OpenAIModelListResult.md) | Resultado da lista de modelos                          |
 
 Lists the currently available models.
 
