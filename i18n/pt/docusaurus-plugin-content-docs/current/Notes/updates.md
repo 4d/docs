@@ -10,7 +10,7 @@ Leia [**O que há de novo no 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d
 #### Destaques
 
 - Nova opção `connectionTimeout` no parâmetro [`options`](../API/TCPConnectionClass.md#options-parameter) da função [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
-- UUIDs in 4D are now generated in **version 7**. In previous 4D releases, they were generated in version 4.
+- Os UUIDs em 4D agora são gerados na **versão 7**. In previous 4D releases, they were generated in version 4.
 - Línguagem 4D:
     - For consistency, [`Create entity selection`](../commands/create-entity-selection.md) and [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) commands have been moved from the ["4D Environment"](../commands/theme/4D_Environment.md) to the ["Selection"](../commands/theme/Selection.md) themes.
     - New [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) and [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) commands to assign and read `Formula` objects as data sources for form objects.
