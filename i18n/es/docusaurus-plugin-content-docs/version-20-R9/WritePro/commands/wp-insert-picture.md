@@ -41,11 +41,11 @@ Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-forma
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used on the picture in the document:
 
-| Constante  | Tipo    | Valor | Comentario                                  |
-| ---------- | ------- | ----- | ------------------------------------------- |
-| wk append  | Integer | 2     | Insertar el contenido al final del objetivo |
-| wk prepend | Integer | 1     | Insert contents at beginning of target      |
-| wk replace | Integer | 0     | Replace target contents                     |
+| Constante  | Tipo    | Valor | Comentario                                      |
+| ---------- | ------- | ----- | ----------------------------------------------- |
+| wk append  | Integer | 2     | Insertar el contenido al final del objetivo     |
+| wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
+| wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
 If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted picture is included in the resulting range:
 
