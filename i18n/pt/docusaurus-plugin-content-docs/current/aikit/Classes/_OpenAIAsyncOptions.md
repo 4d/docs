@@ -9,7 +9,7 @@ The `_OpenAIAsyncOptions` internal class provides function to handle asynchronou
 
 ## Propriedades
 
-### HTTP Properties
+### Propriedades HTTP
 
 | Propriedade | Tipo         |
 | ----------- | ------------ |
