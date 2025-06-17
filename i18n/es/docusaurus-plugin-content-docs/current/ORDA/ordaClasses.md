@@ -3,7 +3,7 @@ id: ordaClasses
 title: Clases del modelo de datos
 ---
 
-ORDA permite crear funciones de clase de alto nivel arriba del modelo de datos. Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
+ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
 
 Por ejemplo, podría crear una función `getNextWithHigherSalary()` en la clase `EmployeeEntity` para devolver los empleados con un salario superior al seleccionado. Sería tan sencillo como llamar:
 
@@ -874,7 +874,7 @@ Puede devolver un valor del tipo de clase [`4D.OutgoingMessage`](../API/Outgoing
 
 ### Ejemplo
 
-You have defined the following function:
+Ha definido la siguiente función:
 
 ```4d
 Class extends DataClass

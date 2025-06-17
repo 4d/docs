@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Params-->
 
-| Parámetros | Tipo |                             | Descripción                      |
-| ---------- | ---- | --------------------------- | -------------------------------- |
-| Resultado  | Text | &#8592; | Full pathname of closed log file |
+| Parámetros | Tipo |                             | Descripción                                   |
+| ---------- | ---- | --------------------------- | --------------------------------------------- |
+| Resultado  | Text | &#8592; | Ruta completa del archivo de registro cerrado |
 
 <!-- END REF-->
 

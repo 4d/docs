@@ -50,14 +50,14 @@ You can insert special expressions related to document attributes in any documen
 | Propiedades                                                                    | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------------------------------------------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [This](../commands/this.md).title                              | Text   | Título definido en el atributo wk title                                                                                                                                                                                                                                                                                                                            |
-| [This](../commands/this.md).author                             | Text   | Author defined in wk author attribute                                                                                                                                                                                                                                                                                                                              |
-| [This](../commands/this.md).subject                            | Text   | Subject defined in wk subject attribute                                                                                                                                                                                                                                                                                                                            |
-| [This](../commands/this.md).company                            | Text   | Company defined in wk company attribute                                                                                                                                                                                                                                                                                                                            |
+| [This](../commands/this.md).author                             | Text   | Autor definido en el atributo wk author                                                                                                                                                                                                                                                                                                                            |
+| [This](../commands/this.md).subject                            | Text   | Asunto definido en el atributo wk subject                                                                                                                                                                                                                                                                                                                          |
+| [This](../commands/this.md).company                            | Text   | Empresa definida en el atributo wk company                                                                                                                                                                                                                                                                                                                         |
 | [This](../commands/this.md).notes                              | Text   | Notas definidas en el atributo wk notes                                                                                                                                                                                                                                                                                                                            |
-| [This](../commands/this.md).dateCreation                       | Fecha  | Date creation defined in wk date creation attribute                                                                                                                                                                                                                                                                                                                |
-| [This](../commands/this.md).dateModified                       | Fecha  | Date modified defined in wk date modified attribute                                                                                                                                                                                                                                                                                                                |
+| [This](../commands/this.md).dateCreation                       | Fecha  | Fecha de creación definida en el atributo wk date creation                                                                                                                                                                                                                                                                                                         |
+| [This](../commands/this.md).dateModified                       | Fecha  | Fecha de modificación definida en el atributo wk date modified                                                                                                                                                                                                                                                                                                     |
 | [This](../commands/this.md).pageNumber (\*) | Number | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> Esta fórmula siempre es dinámica; no se ve afectada por el comando [**FORMULAS WP FREEZE**](commands-legacy/wp-freeze-formulas.md). |
-| [This](../commands/this.md).pageCount (\*)  | Number | Page count: total count of pages.<br/> Esta fórmula siempre es dinámica; no se ve afectada por el comando [**FORMULAS WP FREEZE**](commands-legacy/wp-freeze-formulas.md).                                                                                                                                         |
+| [This](../commands/this.md).pageCount (\*)  | Number | Número de páginas: número total de páginas.<br/> Esta fórmula siempre es dinámica; no se ve afectada por el comando [**FORMULAS WP FREEZE**](commands-legacy/wp-freeze-formulas.md).                                                                                                                               |
 | [This](../commands/this.md).document                           | Object | Documento 4D Write Pro                                                                                                                                                                                                                                                                                                                                             |
 | [This](../commands/this.md).data                               | Object | Contexto de datos del documento 4D Write Pro definido por [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                                                                                                                                        |
 | [This](../commands/this.md).sectionIndex                       | Number | The Index of the section in the 4D Write Pro document starting from 1                                                                                                                                                                                                                                                                                              |
@@ -80,8 +80,8 @@ For example, to insert the page number in the footer area:
 ```4d
  $footer:=WP Get footer(4DWP;1)
  WP INSERT FORMULA($footer;Formula(This.pageNumber);wk append)
-  //Using Formula(myMethod) with myMethod processing This.pageNumber
-  //would not work correctly
+  //Usando Formula(myMethod) con myMethod procesando This.pageNumber
+  //no funcionaría correctamente
 ```
 
 ## Inserting date and time formulas
@@ -92,7 +92,7 @@ Cuando se inserta en una fórmula el comando [**Current date**](../commands-lega
 
 **Time**
 
-When the [**Current time**](../commands-legacy/current-time.md) command, a time variable, or a method returning a time is inserted in a formula, it must be enclosed within a [**String**](../commands-legacy/string.md) command because time type is not supported in JSON. Consider the following examples of formulas:
+When the [**Current time**](../commands-legacy/current-time.md) command, a time variable, or a method returning a time is inserted in a formula, it must be enclosed within a [**String**](../commands-legacy/string.md) command because time type is not supported in JSON. Considera los siguientes ejemplos de fórmulas:
 
 ```4d
   // This code is the best practice
@@ -132,15 +132,15 @@ You can control how formulas are displayed in your documents:
 
 ### Referencias o Valores
 
-By default, 4D formulas are displayed as values. When you insert a 4D formula, 4D Write Pro computes and displays its current value.  If you wish to know which formula is used or what is its name, you need to display it as a reference.
+Por defecto, las fórmulas 4D se muestran como valores. When you insert a 4D formula, 4D Write Pro computes and displays its current value.  If you wish to know which formula is used or what is its name, you need to display it as a reference.
 
 To display formulas as references, you can:
 
 - check the **Show references** option in the Property list (see *Configuring View properties*), or
 - use the visibleReferences standard action (see *Dynamic expressions*), or
-- use the [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) command with the `wk visible references` selector to **True**.
+- usa el comando [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) con el selector `wk visible references` en **True**.
 
-Formula references can be displayed as:
+Las referencias a fórmulas pueden mostrarse como:
 
 - textos fuente (por defecto)
 - symbols

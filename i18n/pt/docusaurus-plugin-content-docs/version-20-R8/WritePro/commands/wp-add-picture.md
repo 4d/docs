@@ -36,17 +36,17 @@ Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-f
 
 :::
 
-- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. Isto permite que você chame [WP SET ATTRIBUTES](wp-set-attributes.md) com o seletor wk image expression para preencher a imagem com uma expressão 4D. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
+- Se *imagem* for omitida, uma referência de imagem válida é retornada, e uma imagem vazia é adicionada. Isto permite que você chame [WP SET ATTRIBUTES](wp-set-attributes.md) com o seletor wk image expression para preencher a imagem com uma expressão 4D. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
 
 By default, the added picture is:
 
 - Embedded behind the text
 - Displayed at the top left corner of the paper box
-- Shown on all pages
+- Exibido em todas as páginas
 
 The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
 
-**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. Você pode determinar se um objeto selecionado é um objeto imagem verificando o atributo `wk type`:
 
 - **Value = 2**: o objeto selecionado é um objeto imagem.
 - **Value = 0**: o objeto selecionado é um objeto intervalo.

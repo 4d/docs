@@ -105,7 +105,7 @@ $4d.today(function(result)
 
 #### Exemplo 2
 
-The 4D project method `calcSum` receives parameters and returns their sum:
+O método projeto `calcSum` 4D recebe parâmetros e retorna sua soma:
 
 Código 4D do método `calcSum`:
 

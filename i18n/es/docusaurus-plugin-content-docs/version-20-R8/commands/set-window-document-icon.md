@@ -37,12 +37,12 @@ En el caso de una aplicación MDI en Windows, puede pasar `-1` en *winRef* para 
 
 ## Ejemplo
 
-In this example, we want to create four windows:
+En este ejemplo, queremos crear cuatro ventanas:
 
 1. Use the application icon on Windows and no icon on macOS (default state when no *image* or *file* is used).
 2. Utilice un icono "user".
 3. Associate a document with the window (this uses its file type icon).
-4. Customize the icon associated with the document.
+4. Personalizar el icono asociado al documento.
 
 ```4d
  var $winRef : Integer

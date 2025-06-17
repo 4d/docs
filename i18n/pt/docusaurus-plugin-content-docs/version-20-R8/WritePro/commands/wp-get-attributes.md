@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | attribName  | Text                                           | &#8594; | Nome do atributo para obter               |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Resultado   | Object                                         | &#8592; | Attribute names and values                |
+| Resultado   | Object                                         | &#8592; | Nomes e valores dos atributos             |
 
 <!-- END REF-->
 
@@ -36,7 +36,7 @@ For a comprehensive list of attributes to pass, as well as their scope and value
 
 If there are different values for the same attribute in the element passed as a parameter, the command returns:
 
-- for numerical values, wk mixed
+- para valores numéricos, wk mixed
 - for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
 - for string values, an empty string
 - for picture values, an empty picture.

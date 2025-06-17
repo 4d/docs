@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros  | Tipo                                           |                             | Descripción                               |
 | ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object                                         | &#8594; | Rango o elemento o documento 4D Write Pro |
-| attribName  | Text                                           | &#8594; | Name of attribute to get                  |
+| attribName  | Text                                           | &#8594; | Nombre del atributo a obtener             |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
 | Resultado   | Object                                         | &#8592; | Nombres y valores de los atributos        |
@@ -36,7 +36,7 @@ For a comprehensive list of attributes to pass, as well as their scope and value
 
 If there are different values for the same attribute in the element passed as a parameter, the command returns:
 
-- for numerical values, wk mixed
+- para valores numéricos, wk mixed
 - for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
 - para valores cadena, una cadena vacía
 - for picture values, an empty picture.

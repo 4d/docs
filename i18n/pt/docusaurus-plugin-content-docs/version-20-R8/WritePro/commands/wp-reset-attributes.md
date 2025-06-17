@@ -58,7 +58,7 @@ Você pode executar:
  WP RESET ATTRIBUTES($range;wk border style)
 ```
 
-The resulting document is:
+O documento resultante é:
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 

@@ -33,7 +33,7 @@ ou
 $client.baseURL:="https://your.server.ai"
 ```
 
-### Making requests
+### Fazer solicitações
 
 `OpenAI` provides different endpoints called resources, each offering various functions.
 
@@ -43,7 +43,7 @@ var $result:=$client.<resource>.<function>(<parameters...>)
 
 O `$result` contém o `HTTPRequest`, um status de `sucess`, uma coleção de `erros` e outros. Ver [OpenAIResult](Classes/OpenAIResult.md)
 
-See some examples bellow.
+Veja alguns exemplos abaixo.
 
 #### Chat
 
@@ -111,7 +111,7 @@ https://platform.openai.com/docs/api-reference/moderations
 var $moderation:=$client.moderations.create("This text contains inappropriate language and offensive behavior.").moderation
 ```
 
-#### Asynchronous code
+#### Código assíncrono
 
 If you do not want to wait for the OpenAPI response when sending a request to its API, you need to use asynchronous code. The result object will be received in a callback function.
 

@@ -34,7 +34,7 @@ If an image or textbox is anchored to a page (e.g., page 20) and this page no lo
 
 ## Ejemplos
 
-To remove the first section of the document:
+Para eliminar la primera sección del documento:
 
 ```4d
 
@@ -63,7 +63,7 @@ WP DELETE SECTION(wpDoc ; 5 ; 3 )
 
 ```
 
-To remove all sections starting from 5:
+Para eliminar todas las secciones a partir de la 5:
 
 ```4d
  

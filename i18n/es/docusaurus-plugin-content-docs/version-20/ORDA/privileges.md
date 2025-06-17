@@ -149,7 +149,7 @@ La sintaxis del archivo `roles.json` es la siguiente:
 
 :::
 
-#### Assigning permissions to ORDA class functions
+#### Asignación de permisos a las funciones de la clase ORDA
 
 Al configurar los permisos, las funciones de clase ORDA se declaran en el elemento `applyTo` usando la siguiente sintaxis:
 
@@ -170,7 +170,7 @@ Class extends Entity
 "applyTo":"City.getPopulation"
 ```
 
-It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. Por ejemplo, si ha creado una función "drop" en las clases `cs.CityEntity` y `cs.CitySelection`, debe darles nombres diferentes como `dropEntity()` y `dropSelection()`. You can then write in the "roles.json" file:
+It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. Por ejemplo, si ha creado una función "drop" en las clases `cs.CityEntity` y `cs.CitySelection`, debe darles nombres diferentes como `dropEntity()` y `dropSelection()`. A continuación, puede escribir en el archivo "roles.json":
 
 ```json
     "permissions": {

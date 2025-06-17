@@ -75,7 +75,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 Authentication on the WebAdmin web server is granted using an access key. Para mais detalhes, consulte [Chave de Acesso](../Admin/webAdmin.md#access-key).
 
-### Development and deployment
+### Desenvolvimento e implantação
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
@@ -231,7 +231,7 @@ To attach the Qodly Studio debugger to your running 4D Server application:
 
 :::note
 
-The project must be running in interpreted mode so that **Qodly Studio** menu item is available.
+O projeto deve estar sendo executado no modo interpretado para que o item de menu **Qodly Studio** esteja disponível.
 
 :::
 

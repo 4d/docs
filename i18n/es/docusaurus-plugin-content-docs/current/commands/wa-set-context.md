@@ -32,7 +32,7 @@ Pass in *contextObj* user class instances or formulas to be allowed in `$4d` as 
 
 ### Ejemplo 1
 
-Allow `$4d` to specific methods
+Permitir `$4d` a métodos específicos
 
 ```4d
  var $context:={}

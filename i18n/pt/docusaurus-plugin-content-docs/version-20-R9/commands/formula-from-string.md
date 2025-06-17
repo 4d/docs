@@ -34,7 +34,7 @@ Esse comando é como [`Formula`](formula.md), exceto pelo fato de que ele lida c
 
 > Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
-If the formula is created in a component, you might consider using the *context* parameter. Por padrão, dado que as fórmulas são executadas no contexto em que foram criadas, não conseguirá chamar uma variável, uma função ou um método não compartilhado do banco de dados host. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. Estão disponíveis as seguintes constantes:
+Se a fórmula é criada em um componente, você pode considerar usar o parâmetro *context*. Por padrão, dado que as fórmulas são executadas no contexto em que foram criadas, não conseguirá chamar uma variável, uma função ou um método não compartilhado do banco de dados host. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. Estão disponíveis as seguintes constantes:
 
 | Parâmetros                       | Tipo    | Descrição                                                                          |
 | -------------------------------- | ------- | ---------------------------------------------------------------------------------- |

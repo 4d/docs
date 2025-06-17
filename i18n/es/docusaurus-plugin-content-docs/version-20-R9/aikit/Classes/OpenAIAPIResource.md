@@ -5,7 +5,7 @@ title: OpenAIAPIResource
 
 # OpenAIAPIResource
 
-Base class to all api resource.
+Clase de base para todos los recursos api.
 
 ## Propiedades
 

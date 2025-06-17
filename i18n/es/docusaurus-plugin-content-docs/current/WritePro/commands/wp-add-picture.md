@@ -8,19 +8,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Add picture.Params-->
 
-| Parámetros     | Tipo                    |                             | Descripción                                                |
-| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
-| wpDoc          | Object                  | &#8594; | Documento 4D Write Pro                                     |
-| picture        | Picture                 | &#8594; | Imagen 4D                                                  |
-| picturePath    | Text                    | &#8594; | Ruta de la imagen                                          |
-| pictureFileObj | 4D.File | &#8594; | 4D.File object representing a picture file |
-| Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                     |
+| Parámetros     | Tipo                    |                             | Descripción                                                     |
+| -------------- | ----------------------- | --------------------------- | --------------------------------------------------------------- |
+| wpDoc          | Object                  | &#8594; | Documento 4D Write Pro                                          |
+| picture        | Picture                 | &#8594; | Imagen 4D                                                       |
+| picturePath    | Text                    | &#8594; | Ruta de la imagen                                               |
+| pictureFileObj | 4D.File | &#8594; | Objeto 4D.File que representa un archivo imagen |
+| Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                          |
 
 <!-- END REF-->
 
 ## Descripción
 
-El comando **WP Add imagen** <!--REF #_command_.WP Add image.Summary--> ancla la imagen pasada como parámetro en una ubicación fija dentro del *wpDoc* especificado y devuelve su referencia.<!-- END REF--> La referencia devuelta puede pasarse al comando [WP SET ATTRIBUTES](wp-set-attributes.md) para mover la imagen a cualquier ubicación en *wpDoc* (página, sección, encabezado, pie de página, etc.) with a defined layer, size, etc.
+El comando **WP Add imagen** <!--REF #_command_.WP Add image.Summary--> ancla la imagen pasada como parámetro en una ubicación fija dentro del *wpDoc* especificado y devuelve su referencia.<!-- END REF--> La referencia devuelta puede pasarse al comando [WP SET ATTRIBUTES](wp-set-attributes.md) para mover la imagen a cualquier ubicación en *wpDoc* (página, sección, encabezado, pie de página, etc.) con una capa definida, tamaño, etc.
 
 In *wpDoc*, pass the name of a 4D Write Pro document object.
 
@@ -90,7 +90,7 @@ You want to use a field expression to add an anchored image to a document displa
 
 ```4d
  QUERY([Flowers];[Flowers]Common_Name="tulip")
- WP SET TEXT(myDoc;[Flowers]Description;wk append) //insert text
+ WP SET TEXT(myDoc;[Flowers]Description;wk append) //insertar texto
  var $obImage : Object
  $obImage:=WP Add picture(myDoc)
  WP SET ATTRIBUTES($obImage;wk image formula;Formula([Flowers]Image))

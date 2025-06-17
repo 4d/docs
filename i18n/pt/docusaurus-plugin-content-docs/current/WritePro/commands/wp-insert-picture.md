@@ -13,8 +13,8 @@ displayed_sidebar: docs
 | targetObj      | Object                   | &#8594; | Range or element or 4D Write Pro document                  |
 | picture        | Imagem                   | &#8594; | Picture field or variable, or path to picture file on disk |
 | pictureFileObj | 4D. File | &#8594; | A File object representing a picture file. |
-| mode           | Integer                  | &#8594; | Insertion mode                                             |
-| rangeUpdate    | Integer                  | &#8594; | Range update mode                                          |
+| mode           | Integer                  | &#8594; | Modo de inserção                                           |
+| rangeUpdate    | Integer                  | &#8594; | Modo de atualização de intervalo                           |
 | Resultado      | Object                   | &#8592; | Object referencing the picture                             |
 
 <!-- END REF-->
@@ -29,7 +29,7 @@ Em *targetObj*, você pode passar:
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
 - Um documento 4D Write Pro
 
-For the second parameter, you can pass either:
+Para o segundo parâmetro, você também pode passar:
 
 - Em *picture*:
   - A picture field or variable

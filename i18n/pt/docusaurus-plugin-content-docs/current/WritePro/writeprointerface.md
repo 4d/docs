@@ -24,7 +24,7 @@ The Table Wizard comes with default templates and themes, which developers can c
 
 To implement the Table Wizard in your application, the developers are able to create and configure template files.
 
-### WP Table Wizard interface
+### Interface do assistente de tabela WP
 
 The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
 
@@ -398,7 +398,7 @@ The chat box uses the Markdown language to format text. Basic styles such as bol
 
 #### Área de chat
 
-The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
+The Chat area displays the whole interaction between you and the AI. Você pode rolar e selecionar a parte que desejar.
 
 To empty this area, you can click on the Erase button of the History area (resets the window and all interactions).
 

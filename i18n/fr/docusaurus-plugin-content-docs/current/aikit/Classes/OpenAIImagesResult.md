@@ -5,15 +5,15 @@ title: OpenAIImagesResult
 
 # OpenAIImagesResult
 
-## Inherits
+## Hérite de
 
 - [OpenAIResult](OpenAIResult.md)
 
-## Computed properties
+## Propriétés calculées
 
 | Propriété | Type                                        | Description                                                        |
 | --------- | ------------------------------------------- | ------------------------------------------------------------------ |
-| `images`  | Collection of [OpenAIImage](OpenAIImage.md) | Returns a collection of OpenAIImage objects.       |
+| `images`  | Collection de [OpenAIImage](OpenAIImage.md) | Returns a collection of OpenAIImage objects.       |
 | `image`   | [OpenAIImage](OpenAIImage.md)               | Returns the first OpenAIImage from the collection. |
 
 ## Fonctions

@@ -12,7 +12,7 @@ title: LISTBOX Get property
 | \*         | Operador      | &#8594; | If specified, object is an object name (string). Si se omite, object es una variable |
 | object     | any           | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted)                   |
 | property   | Integer       | &#8594; | Property whose value you want to get                                                                                    |
-| Resultado  | Integer, Text | &#8592; | Current value                                                                                                           |
+| Resultado  | Integer, Text | &#8592; | Valor actual                                                                                                            |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ In the *property* parameter, pass a constant indicating the property whose value
 | lk single click edit           | 29    | **[Single-Click Edit](../FormObjects/properties_Entry.md#single-click-edit)** property<br/>Applies to: List box<br/>Possible values:<br/>lk no (0) <br/>lk yes (1)                                                                                                                                                                                                                                                                                       |
 | lk sortable                    | 20    | **[Sortable](../FormObjects/properties_Action.md#sortable)** property<br/>Applies to: List box<br/>Possible values:\*\*<br/>\*\*lk no (0) <br/>lk yes (1)                                                                                                                                                                                                                                                                                                |
 | lk truncate                    | 12    | **[Truncate with ellipsis](../FormObjects/properties_Display.md#truncate-with-ellipsis)** property<br/>Applies to: List box or column<br/>Possible values:\*\*<br/>\*\*lk without ellipsis (0) lk with ellipsis (1)                                                                                                                                                                                                                                      |
-| lk ver scrollbar width         | 5     | Width in pixels                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| lk ver scrollbar width         | 5     | Ancho en píxeles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | lk current item expression     | 38    | **[Current item](../FormObjects/properties_DataSource.md#current-item)** property <br/>Applies to: List box (Collection / Entity selection)                                                                                                                                                                                                                                                                                                                                                 |
 | lk current item pos expression | 39    | **[Current item position](../FormObjects/properties_DataSource.md#current-item-position)** property <br/>Applies to: List box (Collection / Entity selection)                                                                                                                                                                                                                                                                                                                               |
 | lk selected items expression   | 40    | **[Selected items](../FormObjects/properties_DataSource.md#selected-items)** property <br/>Applies to: List box (Collection / Entity selection)                                                                                                                                                                                                                                                                                                                                             |
@@ -74,14 +74,14 @@ In addition, it is not possible to return values from more than one column at a 
 
 **Note:**
 
-- The lk display footer and lk display header constants are useful for calculating the actual size of a list box area in a form.
+- Las constantes lk display footer y lk display header son útiles para calcular el tamaño real del área de un list box en un formulario.
 
 ## Ejemplo 1
 
 Given a listbox "MyListbox", if you execute the following statement:
 
 ```4d
- $Value:=LISTBOX Get property(*;"MyListbox";lk selection mode) // value returned indicates selection mode
+ $Value:=LISTBOX Get property(*; "MyListbox";lk selection mode) // el valor devuelto indica el modo de selección
 ```
 
 In this case, the result returned indicates whether multiple rows can be selected.
@@ -94,7 +94,7 @@ Given a list box "MyListbox", if you execute the following statement:
  $resizable:=LISTBOX Get property(*;"MyListbox";lk column resizable)
 ```
 
-**LISTBOX Get property** returns -1 because the lk column resizable property applies to columns and a list box was passed as parameter.
+**LISTBOX Get property** devuelve -1 porque la propiedad lk column resizable se aplica a columnas y se ha pasado un list box como parámetro.
 
 ## Ver también
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-**Form event code** returns a numeric value identifying the type of form event that has just occurred. Usually, you will use **Form event code** from within a form or object method.
+**Form event code** returns a numeric value identifying the type of form event that has just occurred. Normalmente, você usará **Form event code** em um método formulário ou objeto.
 
 4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
 
@@ -304,7 +304,7 @@ Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
 ## Exemplo 13
 
-You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
+You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. No método objeto do list box, você pode escrever:
 
 ```4d
  Case of

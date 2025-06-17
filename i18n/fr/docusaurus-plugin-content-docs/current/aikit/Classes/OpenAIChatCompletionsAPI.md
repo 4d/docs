@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsAPI
 
 # OpenAIChatCompletionsAPI
 
-The `OpenAIChatCompletionsAPI` class is designed for managing chat completions with OpenAI's API. It provides methods to create, retrieve, update, delete, and list chat completions.
+La classe `OpenAIChatCompletionsAPI` est conçue pour gérer les complétions de chat avec l'API OpenAI. Elle fournit des méthodes pour créer, récupérer, mettre à jour, supprimer et lister les compléments de chat.
 
 https://platform.openai.com/docs/api-reference/chat
 
@@ -25,7 +25,7 @@ Creates a model response for the given chat conversation.
 
 https://platform.openai.com/docs/api-reference/chat/create
 
-#### Example Usage
+#### Exemple d'utilisation
 
 Provide the full messages list
 
@@ -38,13 +38,13 @@ $messages.push({"role":"user"; "content": "Hello, how are you?"})
 var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini" })
 ```
 
-Get the response as text
+Obtenir la réponse sous forme de texte
 
 ```4d
 var $text:=$result.choice.text
 ```
 
-Append assistant response for next completion request
+Ajouter la réponse de l'assistant pour la prochaine demande de complétion
 
 ```
 $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" }

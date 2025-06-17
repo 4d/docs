@@ -17,9 +17,9 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 ## Propriedades calculadas
 
-| Propriedade | Tipo | Descrição                                                 |
-| ----------- | ---- | --------------------------------------------------------- |
-| `text`      | Text | A property representing the text message. |
+| Propriedade | Tipo | Descrição                                                           |
+| ----------- | ---- | ------------------------------------------------------------------- |
+| `text`      | Text | Uma propriedade que representa a mensagem de texto. |
 
 ## Funções
 
@@ -30,7 +30,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | Parâmetro  | Tipo | Descrição                                                   |
 | ---------- | ---- | ----------------------------------------------------------- |
 | *imageURL* | Text | The URL of the image to add to the message. |
-| *detail*   | Text | Additional details about the image.         |
+| *detail*   | Text | Detalhes adicionais sobre a imagem.         |
 
 Adds an image URL to the content of the message.
 

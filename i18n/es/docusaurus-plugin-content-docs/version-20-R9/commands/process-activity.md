@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 By default when used without any parameters, **Process activity** returns an object containing the following properties:
 
-- "processes", a collection of all processes
+- "processes", una colección de todos los procesos
 - "sessions" (sólo 4D Server), una colección de todas las sesiones
 
 On 4D Server, you can filter information to be returned using the optional *sessionID* and *options* parameters:
@@ -42,7 +42,7 @@ On 4D Server, you can filter information to be returned using the optional *sess
 | ---------------------- | ----- | ----------------------------------------------------------------------------------- |
 | Processes and sessions | 0     | Devuelve las listas "processes" y "sessions" (valor por defecto) |
 | Processes only         | 1     | Devuelve sólo la lista "processes"                                                  |
-| Sólo sesiones          | 2     | Returns only the "sessions" list                                                    |
+| Sólo sesiones          | 2     | Devuelve solo la lista "sessions"                                                   |
 
 :::note
 

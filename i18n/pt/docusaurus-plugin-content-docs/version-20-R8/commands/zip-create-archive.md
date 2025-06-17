@@ -124,7 +124,7 @@ Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:
 
 ## Exemplo
 
-You want to pass a collection of folders and files to compress to the *zipStructure* object:
+Pode passar uma coleção de pastas e arquivos para compactar ao objeto *zipStructure*:
 
 ```4d
  var $destination : 4D.File

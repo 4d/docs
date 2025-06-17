@@ -15,14 +15,14 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 
 ## Propiedades calculadas
 
-| Propiedad     | Tipo       | Descripción                                                                                                                 |
-| ------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `success`     | Boolean    | A Boolean indicating whether the HTTP request was successful.                                               |
-| `errors`      | Collection | Returns a collection of errors. These could be network errors or errors returned by OpenAI. |
-| `terminated`  | Boolean    | A Boolean indicating whether the HTTP request was terminated.                                               |
-| `headers`     | Object     | Returns the response headers as an object.                                                                  |
-| `rateLimit`   | Object     | Returns rate limit information from the response headers.                                                   |
-| `utilización` | Object     | Returns usage information from the response body if any.                                                    |
+| Propiedad     | Tipo       | Descripción                                                                                                                    |
+| ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `success`     | Boolean    | A Boolean indicating whether the HTTP request was successful.                                                  |
+| `errors`      | Collection | Devuelve una colección de errores. These could be network errors or errors returned by OpenAI. |
+| `terminated`  | Boolean    | A Boolean indicating whether the HTTP request was terminated.                                                  |
+| `headers`     | Object     | Returns the response headers as an object.                                                                     |
+| `rateLimit`   | Object     | Returns rate limit information from the response headers.                                                      |
+| `utilización` | Object     | Returns usage information from the response body if any.                                                       |
 
 ### rateLimit
 
@@ -36,7 +36,7 @@ The structure of the `rateLimit` object is as follows:
 | Campo               | Tipo    | Descripción                                       |
 | ------------------- | ------- | ------------------------------------------------- |
 | `limit.request`     | Integer | Número de solicitudes permitidas. |
-| `limit.tokens`      | Integer | Number of allowed tokens.         |
+| `limit.tokens`      | Integer | Número de tokens permitidos.      |
 | `remaining.request` | Integer | Número de peticiones restantes.   |
 | `remaining.tokens`  | Integer | Número de tokens restantes.       |
 | `reset.request`     | String  | Time until request limit resets.  |

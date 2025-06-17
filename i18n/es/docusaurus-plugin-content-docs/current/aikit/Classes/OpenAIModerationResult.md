@@ -13,9 +13,9 @@ The `OpenAIModerationResult` provides functionality to handle moderation results
 
 ## Propiedades
 
-| Propiedad    | Tipo                                    | Descripción                             |
-| ------------ | --------------------------------------- | --------------------------------------- |
-| `moderation` | [OpenAIModeration](OpenAIModeration.md) | the moderation object . |
+| Propiedad    | Tipo                                    | Descripción                              |
+| ------------ | --------------------------------------- | ---------------------------------------- |
+| `moderation` | [OpenAIModeration](OpenAIModeration.md) | el objeto de moderación. |
 
 ## Ver también
 

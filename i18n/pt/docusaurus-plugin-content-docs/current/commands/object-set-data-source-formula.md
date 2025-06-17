@@ -7,11 +7,11 @@ title: OBJECT SET DATA SOURCE FORMULA
 
 <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Params-->
 
-| Parâmetro | Tipo                       |                             | Descrição                                                                                                          |
-| --------- | -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| \*        | Operador                   | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable   |
-| object    | any                        | &#8594; | Object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
-| formula   | 4D.Formula | &#8594; | Formula to assign as the data source                                                                               |
+| Parâmetro | Tipo                       |                             | Descrição                                                                                                                  |
+| --------- | -------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| \*        | Operador                   | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable           |
+| object    | any                        | &#8594; | Nome do objeto (se \* for especificado) ou<br/>Campo ou variável (se \* for omitido) |
+| formula   | 4D.Formula | &#8594; | Formula to assign as the data source                                                                                       |
 
 <!-- END REF-->
 

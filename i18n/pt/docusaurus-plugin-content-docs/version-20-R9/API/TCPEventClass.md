@@ -14,7 +14,7 @@ The `TCPEvent` class provides information about events occurring during the life
 
 </details>
 
-### TCPEvent Object
+### Objeto TCPEvent
 
 A `TCPEvent` object is immutable and non-streamable.
 
@@ -35,7 +35,7 @@ As seguintes propriedades estão disponíveis:
 
 #### Descrição
 
-A propriedade `.data` contém <!-- REF #TCPEvent.data.Summary -->os dados associados ao evento<!-- END REF -->. It is only valid for events of type `"data"`.
+A propriedade `.data` contém <!-- REF #TCPEvent.data.Summary -->os dados associados ao evento<!-- END REF -->. É válido apenas para eventos do tipo `"data"`.
 
 :::note
 

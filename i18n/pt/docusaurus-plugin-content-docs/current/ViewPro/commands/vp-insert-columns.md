@@ -19,7 +19,7 @@ O comando `VP INSERT COLUMNS` <!-- REF #_method_.VP INSERT COLUMNS.Summary -->in
 
 In *rangeObj*, pass an object containing a range of the starting column (the column which designates where the new column will be inserted) and the number of columns to insert. Se o número de colunas a inseriri for omitido (não definido), uma única coluna é inserida.
 
-New columns are inserted on the left, directly before the starting column in the *rangeObj*.
+Novas colunas são inseridas na esquerda, diretamente na coluna inicio em *rangeObj*.
 
 ## Exemplo
 

@@ -462,7 +462,7 @@ O objeto `Folder` copiado.
 
 #### Exemplo
 
-You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
+Se quiser copiar uma *pasta* Imagens da pasta de documentos do usuário a pasta da Database:
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder

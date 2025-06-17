@@ -18,7 +18,7 @@ https://platform.openai.com/docs/api-reference/images
 | Parâmetro    | Tipo                                              | Descrição                                                                        |
 | ------------ | ------------------------------------------------- | -------------------------------------------------------------------------------- |
 | *prompt*     | Text                                              | The prompt to use for image generation.                          |
-| *parâmetros* | [OpenAIImageParameters](OpenAIImageParameters.md) | Parameters for image generation.                                 |
+| *parâmetros* | [OpenAIImageParameters](OpenAIImageParameters.md) | Parâmetros para a geração de imagens.                            |
 | Resultado    | [OpenAIImagesResult](OpenAIImagesResult.md)       | The result containing the generated image(s). |
 
 Creates an image given a prompt.
