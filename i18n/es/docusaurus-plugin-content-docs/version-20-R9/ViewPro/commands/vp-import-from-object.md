@@ -43,15 +43,15 @@ En *paramObj*, puede pasar la siguiente propiedad:
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
-| Parámetros |                               | Tipo    | Descripción                                                |
-| ---------- | ----------------------------- | ------- | ---------------------------------------------------------- |
-| param1     |                               | Text    | El nombre del objeto de área 4D View Pro                   |
-| param2     |                               | Text    | Reserved for compatibility, this parameter is always empty |
-| param3     |                               | Object  | Referencia al parámetro *paramObj* del comando             |
-| param4     |                               | Object  | Un objeto devuelto por el método con un mensaje de estado  |
-|            | .success      | Boolean | `True` if import was successful, `False` otherwise         |
-|            | .errorCode    | Integer | Código de error                                            |
-|            | .errorMessage | Text    | Mensaje de error                                           |
+| Parámetros |                               | Tipo    | Descripción                                                                       |
+| ---------- | ----------------------------- | ------- | --------------------------------------------------------------------------------- |
+| param1     |                               | Text    | El nombre del objeto de área 4D View Pro                                          |
+| param2     |                               | Text    | Reserved for compatibility, this parameter is always empty                        |
+| param3     |                               | Object  | Referencia al parámetro *paramObj* del comando                                    |
+| param4     |                               | Object  | Un objeto devuelto por el método con un mensaje de estado                         |
+|            | .success      | Boolean | `True` si la importación se ha realizado correctamente, `False` en caso contrario |
+|            | .errorCode    | Integer | Código de error                                                                   |
+|            | .errorMessage | Text    | Mensaje de error                                                                  |
 
 :::note
 
