@@ -101,7 +101,7 @@ The following table lists all supported patterns for date and time formats.
 |         |                                                                          | zzzz          | GMT-08:00                                              |
 |         |                                                                          | zzzzz         | -08:00, -07:52:58, Z   |
 |         |                                                                          |               |                                                                        |
-| '       | escape for text                                                          | '             | '                                                                      |
+| '       | escape para texto                                                        | '             | '                                                                      |
 | ' '     | duas aspas simples produzem uma                                          | ' '           | ' '                                                                    |
 
 ## Explorando padrões
