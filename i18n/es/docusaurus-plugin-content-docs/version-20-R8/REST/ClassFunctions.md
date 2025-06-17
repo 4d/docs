@@ -645,7 +645,7 @@ You can call the function using a request like:
 
 **GET** `http://127.0.0.1:8044/rest/Products/getUserManual?$params='[1,"pdf"]'`
 
-### Using an entity to download a PDF document
+### Utilizar una entidad para descargar un documento PDF
 
 Same example as above but you want to pass an entity as parameter to the datastore function.
 
@@ -667,7 +667,7 @@ Puede llamar a la función usando esta petición:
 
 **GET** `http://127.0.0.1:8044/rest/Product/getUserManual?$params='[{"__DATACLASS":"Product","__ENTITY":true,"__KEY":41}]'`
 
-### Using an entity selection to get a list
+### Utilizar una selección de entidades para obtener una lista
 
 You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
