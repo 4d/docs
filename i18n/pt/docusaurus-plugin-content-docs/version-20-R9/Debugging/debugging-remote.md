@@ -50,7 +50,7 @@ Pode anexar o depurador a qualquer cliente 4D remoto autorizado a conectar-se à
 Para anexar o depurador a um cliente 4D remoto:
 
 1. In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless).
-2. In a remote 4D client connected to the server, select **Run** > **Attach Remote Debugger**
+2. Em um cliente 4D remoto conectado ao servidor, selecione **Executar** > **Anexar depurador remoto**
 
 If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the menu command becomes **Detach Remote Debugger**.
 
@@ -70,7 +70,7 @@ Para ligar o depurador de novo ao servidor:
 
 4D permite que você anexe automaticamente o depurador a um cliente 4D remoto ou ao servidor na inicialização:
 
-- On the server (if not headless), this option is named **Attach Debugger At Startup**. Quando o servidor é iniciado, ele anexa automaticamente o depurador (padrão).
+- No servidor (se não sem cabeçalha), esta opção se chama **Anexar depurador na inicialização**. Quando o servidor é iniciado, ele anexa automaticamente o depurador (padrão).
 
 > **Warning**: If this option is selected for a server which is subsequently launched in headless mode, the debugger won't be available for this server.
 
