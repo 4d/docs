@@ -20,10 +20,10 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 
 | Propiedad    | Tipo    | Descripción                                                     |
 | ------------ | ------- | --------------------------------------------------------------- |
-| `response`   | Object  | The full response object.                       |
+| `response`   | Object  | El objeto de respuesta completo.                |
 | `status`     | Integer | The HTTP status code of the response.           |
 | `statusText` | Text    | The status text of the HTTP response.           |
-| `body`       | Object  | The body of the error response.                 |
+| `body`       | Object  | El cuerpo de la respuesta de error.             |
 | `headers`    | Object  | Los encabezados de la respuesta de error.       |
 | `requestID`  | Text    | The request ID from the error response headers. |
 
