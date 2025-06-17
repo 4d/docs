@@ -304,10 +304,10 @@ O valor devolvido é a chave pública.
 
 <details><summary>Histórico</summary>
 
-| Release | Mudanças                   |
-| ------- | -------------------------- |
-| 20 R8   | Support of message as Blob |
-| 18 R4   | Adicionado                 |
+| Release | Mudanças                      |
+| ------- | ----------------------------- |
+| 20 R8   | Suporte de mensagem como Blob |
+| 18 R4   | Adicionado                    |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<br/>.**sign** (*message* : Blob ; *options* : Object) : Text<!-- END REF -->
@@ -332,7 +332,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representaç
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                             |
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao produzir um JWT para o algoritmo PS@                                                     |
-| encoding          | text    | Representation to be used for result signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                               |
+| encoding          | text    | Representação a ser usada para a assinatura do resultado. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                     |
 
 #### *Resultados*
 
@@ -383,10 +383,10 @@ Contém <!-- REF #CryptoKey.type.Summary -->nome do tipo da chave - "RSA", "ECDS
 
 <details><summary>Histórico</summary>
 
-| Release | Mudanças                   |
-| ------- | -------------------------- |
-| 20 R8   | Support of message as Blob |
-| 18 R4   | Adicionado                 |
+| Release | Mudanças                      |
+| ------- | ----------------------------- |
+| 20 R8   | Suporte de mensagem como Blob |
+| 18 R4   | Adicionado                    |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : Object<br/>*.verify**( *message* : Blob ; *signature* : Text ; *options* : Object) : Object<!-- END REF -->
