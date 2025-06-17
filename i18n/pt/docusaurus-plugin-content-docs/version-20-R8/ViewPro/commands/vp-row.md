@@ -23,9 +23,9 @@ O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->retorna um novo objeto d
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The *row* parameter defines the first row of the row range. Passar o índice da linha (a contagem começa em 0) neste parâmetro. If the range contains multiple rows, you should also use the optional *rowCount* parameter.
+O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Se o intervalo contém várias linhas, você também deve usar o parâmetro opcional *rowCount*.
 
-The optional *rowCount* parameter allows you to define the total number of rows of the range. \*rowCount tem de ser superior a 0. Se for omisso, o valor será definido como 1 por padrão.
+O parâmetro *rowCount* opcional permite que você defina o número total de linhas do intervalo. \*rowCount tem de ser superior a 0. Se for omisso, o valor será definido como 1 por padrão.
 
 No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se não for especificada, a folha de cálculo atual é utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 
