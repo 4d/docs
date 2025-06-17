@@ -18,7 +18,7 @@ https://platform.openai.com/docs/api-reference/images
 | Parámetros   | Tipo                                              | Descripción                                                           |
 | ------------ | ------------------------------------------------- | --------------------------------------------------------------------- |
 | *prompt*     | Text                                              | El indicador que se utilizará para generar la imagen. |
-| *parámetros* | [OpenAIImageParameters](OpenAIImageParameters.md) | Parameters for image generation.                      |
+| *parámetros* | [OpenAIImageParameters](OpenAIImageParameters.md) | Parámetros para la generación de imágenes.            |
 | Resultado    | [OpenAIImagesResult](OpenAIImagesResult.md)       | El resultado que contiene las imágenes generadas.     |
 
 Creates an image given a prompt.
@@ -36,7 +36,7 @@ If($image#Null)
 End if
 ```
 
-If more than one image generated
+Si se genera más de una imagen
 
 ```4d
 var $image: cs.AIKit.OpenAIImage
