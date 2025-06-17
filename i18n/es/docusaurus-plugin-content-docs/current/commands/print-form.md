@@ -27,7 +27,7 @@ En el parámetro *form*, puede pasar:
 
 - el nombre de un formulario, o
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
-- an object containing a description of the form.
+- un objeto que contiene la descripción del formulario.
 
 Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. Para forzar un salto de página entre formularios, utilice el comando [PAGE BREAK](../commands-legacy/page-break.md). Para transferir la impresión a la página siguiente de un formulario cuya altura es superior al espacio disponible, invoque el comando [CANCEL](../commands-legacy/cancel.md) antes del comando [PAGE BREAK](../commands-legacy/page-break.md).
 
@@ -87,7 +87,7 @@ Sintaxis:
  height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
-In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. The values entered must be expressed in pixels.
+In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. Los valores introducidos deben expresarse en píxeles.
 
 **formData**
 
