@@ -20,14 +20,14 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 
 | Propriedade  | Tipo    | Descrição                                                       |
 | ------------ | ------- | --------------------------------------------------------------- |
-| `response`   | Object  | The full response object.                       |
+| `response`   | Object  | O objeto de resposta completo.                  |
 | `status`     | Integer | The HTTP status code of the response.           |
 | `statusText` | Text    | The status text of the HTTP response.           |
 | `body`       | Object  | The body of the error response.                 |
 | `headers`    | Object  | The headers of the error response.              |
 | `requestID`  | Text    | The request ID from the error response headers. |
 
-### OpenAI specific
+### OpenAI específico
 
 | Propriedade | Tipo         | Descrição                                                           |
 | ----------- | ------------ | ------------------------------------------------------------------- |
@@ -35,7 +35,7 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 | `tipo`      | Text         | The type of error returned by the API.              |
 | `param`     | Text         | The parameter that caused the error, if applicable. |
 
-### HTTP status code info
+### Código de estado HTTP
 
 | Propriedade                  | Tipo       | Descrição                                                                        |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------- |
