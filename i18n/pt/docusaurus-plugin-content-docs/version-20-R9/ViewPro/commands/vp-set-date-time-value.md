@@ -24,7 +24,7 @@ Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cel
 
 O parâmetro *dateValue* especifica um valor de data a ser atribuído ao intervalo *rangeObj*.
 
-The *timeValue* parameter specifies a time value (expressed in seconds) to be assigned to the *rangeObj*.
+O parâmetro *timeValue* especifica um valor de tempo (expresso em segundos) a ser atribuído ao *rangeObj*.
 
 The optional *formatPattern* defines a pattern for the *dateValue* and *timeValue* parameters. Para informações sobre padrões e caracteres de formatação, por favor, consulte a seção [Formato de Data e Hora](../configuring.md#date-and-time).
 
