@@ -31,8 +31,8 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 
 | Propiedad | Tipo    | Descripción                                                         |
 | --------- | ------- | ------------------------------------------------------------------- |
-| `code`    | Variant | The code of error returned by the API.              |
-| `tipo`    | Text    | The type of error returned by the API.              |
+| `code`    | Variant | El código de error devuelto por la API.             |
+| `tipo`    | Text    | El tipo de error devuelto por la API.               |
 | `param`   | Text    | The parameter that caused the error, if applicable. |
 
 ### Información sobre el código de estado HTTP
