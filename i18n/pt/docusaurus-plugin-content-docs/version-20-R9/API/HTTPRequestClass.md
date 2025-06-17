@@ -408,7 +408,7 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary --> a URL da
 
 A função `wait()` <!-- REF #HTTPRequestClass.wait().Summary --> espera por uma resposta do servidor ou até o `timeout` especificado ser alcançado<!-- END REF -->.
 
-If a *timeout* is provided, the function waits for the specified duration in this parameter. Decimals are accepted.
+Se for fornecido um *timeout*, a função aguardará a duração especificada nesse parâmetro. Aceitam-se números decimais.
 
 Se a resposta do servidor já tiver chegado, a função regressa imediatamente.
 
