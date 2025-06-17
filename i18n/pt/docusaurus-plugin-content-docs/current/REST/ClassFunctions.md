@@ -96,7 +96,7 @@ You can send parameters to functions defined in ORDA user classes or singletons.
 
 As regras abaixo são válidas:
 
-- In functions called through POST requests, parameters must be passed **in the body of the POST request**.
+- Nas funções chamadas por meio de solicitações POST, os parâmetros devem ser passados **no corpo da solicitação POST**.
 - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
 - Os parâmetros devem ser incluídos numa coleção (formato JSON).
 - Todos os tipos de dados escalares suportados nas coleções JSON podem ser passados como parâmetros.
