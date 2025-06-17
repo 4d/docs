@@ -112,7 +112,7 @@ The following table lists all supported patterns for date and time formats.
 
 ### `L` (monopuesto) vs `M`
 
-In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
+In some languages (Russian, Slovak), the month used alone is different from the month in a date. Em "10 de janeiro de 2010", "Janeiro" não é escrito da mesma forma que em "*rendez-vous* em Janeiro".
 
 ### `e` vs `c`
 
