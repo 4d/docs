@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --------- | ------- | --------------------------- | ---------------------------- |
 | comando   | Integer | &#8594; | Número de comando            |
 | info      | Integer | &#8592; | Command property to evaluate |
-| theme     | Text    | &#8592; | Language theme of command    |
+| theme     | Text    | &#8592; | Tema da linguagem do comando |
 | Resultado | Text    | &#8592; | Nome do comando              |
 
 <!-- END REF-->
@@ -105,7 +105,7 @@ Then, for the "SAVE RECORD" command (53) for example, you can write:
 
 ```4d
  $isSafe:=Is_Thread_Safe(53)
-  // returns True
+  // retorna True
 ```
 
 ## Exemplo
