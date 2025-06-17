@@ -77,7 +77,7 @@ As entidades passadas nos parâmetros são referenciadas no servidor através da
 - Se __KEY não for fornecido, uma nova entidade é criada no servidor com os atributos fornecidos.
 - Se __KEY for fornecido, a entidade correspondente a __KEY é carregada no servidor com os atributos fornecidos
 
-See examples for creating or updating entities.
+Veja exemplos para criar ou atualizar entidades.
 
 #### Parâmetro de entidade relacionada
 
