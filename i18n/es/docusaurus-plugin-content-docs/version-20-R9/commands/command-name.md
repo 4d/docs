@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | comando    | Integer | &#8594; | Número de comando               |
 | info       | Integer | &#8592; | Propiedad del comando a evaluar |
 | theme      | Text    | &#8592; | Tema del lenguaje del comando   |
-| Resultado  | Text    | &#8592; | Localized command name          |
+| Resultado  | Text    | &#8592; | Nombre del comando              |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ El comando **Command name** <!--REF #_command_.Command name.Summary-->devuelve e
 
 **Compatibility note:** A command name may vary from one 4D version to the next (commands renamed), this command was used in previous versions to designate a command directly by means of its number, especially in non-tokenized portions of code. This need has diminished over time as 4D continues to evolve because, for non-tokenized statements (formulas), 4D now provides a token syntax. This syntax allows you to avoid potential problems due to variations in command names as well as other elements such as tables, while still being able to type these names in a legible manner (for more information, refer to the *Using tokens in formulas* section). Tenga en cuenta también que la opción \*[Usar parámetros del sistema regional\* de las Preferencias](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) le permite seguir usando el idioma francés en una versión francesa de 4D.
 
-Two optional parameters are available:
+Hay dos parámetros opcionales:
 
 - *info*: propiedades del comando. The returned value is a *bit field*, where the following bits are meaningful:
   - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
