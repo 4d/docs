@@ -83,7 +83,7 @@ In the *commandLine* parameter, pass the full path of the application's file to 
 
 #### Objeto *options*
 
-In the *options* parameter, pass an object that can contain the following properties:
+No parâmetro *options*, passe um objeto que possa conter as seguintes propriedades:
 
 | Propriedade      | Tipo       | Por padrão | Descrição                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
