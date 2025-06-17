@@ -462,7 +462,7 @@ O objeto `File` copiado.
 
 #### Exemplo
 
-You want to copy a picture *file* from the user's document folder to the application folder:
+Se quiser copiar um *file* imagem da pasta de documentos do usuário a pasta da aplicação:
 
 ```4d
 var $source; $copy : Object
