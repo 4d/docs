@@ -7,13 +7,13 @@ title: OpenAI
 
 The `OpenAI` class provides a client for accessing various OpenAI API resources. It includes properties for managing API configurations and methods for performing HTTP requests to the OpenAI endpoints.
 
-## Configuration Properties
+## Propiedades de configuración
 
 | Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional       |
 | ---------------------- | ---- | ---------------------------------------------------------------------------- | -------------- |
 | `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | No para OpenAI |
 | `baseURL`              | Text | Base URL for OpenAI API requests.                            | Sí             |
-| `organization`         | Text | Your OpenAI Organization ID.                                 | Sí             |
+| `organization`         | Text | Su ID de organización OpenAI.                                | Sí             |
 | `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí             |
 
 ### Propiedades HTTP adicionales
@@ -60,12 +60,12 @@ $client.baseURL:="https://server.ai"
 
 The API provides access to multiple resources that allow seamless interaction with OpenAI's services. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
 
-| Nombre de la propiedad | Tipo                                            | Descripción                                    |
-| ---------------------- | ----------------------------------------------- | ---------------------------------------------- |
-| `models`               | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Acceso a la API Models.        |
-| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)               | Acceso a la API Chat.          |
-| `images`               | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Access to the Images API.      |
-| `moderations`          | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Access to the Moderations API. |
+| Nombre de la propiedad | Tipo                                            | Descripción                                      |
+| ---------------------- | ----------------------------------------------- | ------------------------------------------------ |
+| `models`               | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Acceso a la API Models.          |
+| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)               | Acceso a la API Chat.            |
+| `images`               | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Acceso a la API Images.          |
+| `moderations`          | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Acceso a la API de moderaciones. |
 
 ### Ejemplo de Uso
 
