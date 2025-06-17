@@ -206,7 +206,7 @@ Optionally, you can pass `true` in the *headerOnly* parameter to exclude the bod
 
 :::note
 
-The *headerOnly* option may not be supported by the server.
+A opção *headerOnly* pode não ser suportada pelo servidor.
 
 :::
 
@@ -265,7 +265,7 @@ Se quiser saber o emissário do primeiro email da mailbox:
 
 A função `.getMailInfo()` <!-- REF #POP3TransporterClass.getMailInfo().Summary -->retorna um objeto `mailInfo` correspondente ao *msgNumber* na caixa de correio designada pelo [`transporter POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite que recupere informação sobre o email.
 
-In *msgNumber*, pass the number of the message to retrieve. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
+Passe em *msgNumber* o número da mensagem a recuperar. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
 O objeto `mailInfo` retornado contém as funcionalidades abaixo:
 
@@ -390,7 +390,7 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 The `.getMIMEAsBlob()` function <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* in the mailbox designated by the [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->.
 
-In *msgNumber*, pass the number of the message to retrieve. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
+Passe em *msgNumber* o número da mensagem a recuperar. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
 O método retorna uma BLOB vazia se:
 
