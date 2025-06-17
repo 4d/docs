@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
 | targetObj   | Object | &#8594; | Range or element or 4D Write Pro document                  |
 | formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
-| mode        | Number | &#8594; | Insertion mode                                             |
+| mode        | Number | &#8594; | Modo de inserção                                           |
 | rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
 | Resultado   | Object | &#8592; | Text range object reprsenting the result of the formula    |
 
@@ -31,7 +31,7 @@ No parâmetro *targetObj*, você pode passar:
 No parâmetro *formula*, passe a fórmula 4D a ser avaliada. Pode passar:
 
 - um [objeto fórmula](../../commands/formula.md-objects) criado pelo comando [**Formula**](../../commands/formula.md) ou [**Formula from string**](../../commands/formula.md-from-string),
-- or an object containing two properties:
+- ou um objeto que contém duas propriedades:
 
 | **Propriedade** | **Tipo** | **Description**                                                                                                                                                                             |
 | --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
