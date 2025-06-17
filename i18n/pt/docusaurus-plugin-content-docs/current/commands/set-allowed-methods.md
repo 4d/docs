@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
-| Parâmetro    | Tipo       |                             | Descrição             |
-| ------------ | ---------- | --------------------------- | --------------------- |
-| methodsArray | Text array | &#8594; | Array of method names |
+| Parâmetro    | Tipo       |                             | Descrição                 |
+| ------------ | ---------- | --------------------------- | ------------------------- |
+| methodsArray | Text array | &#8594; | Array de nomes de métodos |
 
 <!-- END REF-->
 
@@ -34,7 +34,7 @@ You can use the wildcard character (@) in method names to define one or more aut
 
 If you would like the user to be able to call 4D commands that are unauthorized by default or plug-in commands, you must use specific methods that handle these commands.
 
-**Nota:** acesso de filtragem de fórmulas pode ser desativado para todos os usuários ou para o Desenhador e Administrador através de [uma opção na página de "Segurança" dos parâmetros](../settings/security.md#options). If the "Disabled for all" option is checked, the **SET ALLOWED METHODS** command will have no effect.
+**Nota:** acesso de filtragem de fórmulas pode ser desativado para todos os usuários ou para o Desenhador e Administrador através de [uma opção na página de "Segurança" dos parâmetros](../settings/security.md#options). Se a opção "Desabilitado para todos" estiver marcada, o comando **SET ALLOWED METHODS** não terá efeito.
 
 :::warning
 
