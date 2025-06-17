@@ -12,7 +12,7 @@ title: LISTBOX SET PROPERTY
 | \*        | Operador      | &#8594; | If specified, object is an object name (string). If omitted, object is a variable. |
 | object    | any           | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido)                         |
 | property  | Integer       | &#8594; | List box or column property                                                                                                           |
-| value     | Integer, Text | &#8594; | Value of property                                                                                                                     |
+| value     | Integer, Text | &#8594; | Valor da propriedade                                                                                                                  |
 
 <!-- END REF-->
 
@@ -24,7 +24,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 **Note:** If the list box or list box column specified using the *object* and *\** parameters does not exist, the command does nothing and no error is triggered.
 
-In the *property* and *value* parameters, you indicate, respectively, the property to set and its new value. You can use the following constants found in the “*List Box*” theme:
+In the *property* and *value* parameters, you indicate, respectively, the property to set and its new value. Você pode usar as seguintes constantes encontradas no tema "*List Box*":
 
 | Parâmetros                     | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
