@@ -90,7 +90,7 @@ The $BrowserIP parameter receives the IP address of the browser’s machine. Est
 
 The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D permite el multi-homing, que permite utilizar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
-### $user and $password - User Name and Password
+### $user y $password - Nombre de usuario y contraseña
 
 Los parámetros $user y $password reciben el nombre de usuario y la contraseña introducidos por el usuario en el cuadro de diálogo de identificación estándar que muestra el navegador, si procede (ver la página [autenticación](authentication.md)).
 
@@ -108,7 +108,7 @@ Los parámetros $user y $password reciben el nombre de usuario y la contraseña 
 
 **Uso:** URL o acción del formulario.
 
-Esta URL permite llamar al método proyecto 4D *MethodName* con un parámetro texto opcional *Param*. The method will receive this parameter.
+Esta URL permite llamar al método proyecto 4D *MethodName* con un parámetro texto opcional *Param*. El método recibirá este parámetro.
 
 - El método proyecto 4D debe haber sido [permitido para peticiones web](allowProject.md): el valor del atributo "Disponible a través de etiquetas y URLs 4D (4DACTION...)" debe haber sido marcado en las propiedades del método. Si no se comprueba el atributo, se rechaza la solicitud web.
 - Cuando 4D recibes una petición `/4DACTION/MethodName/Param`, se llama el método base `On Web Authentication` (si existe).
