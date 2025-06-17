@@ -13,7 +13,7 @@ title: OpenAIImagesResult
 
 | Propiedad | Tipo                                       | Descripción                                                        |
 | --------- | ------------------------------------------ | ------------------------------------------------------------------ |
-| `images`  | Colección de [OpenAIImage](OpenAIImage.md) | Returns a collection of OpenAIImage objects.       |
+| `images`  | Colección de [OpenAIImage](OpenAIImage.md) | Devuelve una colección de objetos OpenAIImage.     |
 | `imagen`  | [OpenAIImage](OpenAIImage.md)              | Returns the first OpenAIImage from the collection. |
 
 ## Funciones
