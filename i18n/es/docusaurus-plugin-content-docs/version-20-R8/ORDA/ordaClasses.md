@@ -874,7 +874,7 @@ Puede devolver un valor del tipo de clase [`4D.OutgoingMessage`](../API/Outgoing
 
 ### Ejemplo
 
-You have defined the following function:
+Ha definido la siguiente función:
 
 ```4d
 Class extends DataClass
