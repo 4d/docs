@@ -70,7 +70,7 @@ Todos os processos de procedimento armazenado compartilham a mesma sessão de us
 
 Para informações sobre procedimentos armazenados, consulte a página [4D Server e 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html).
 
-## Standalone session
+## Sessão autônoma
 
 The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
 
