@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                           |
-| ----------- | ---------------------------------------- |
-| 20 R8       | Support of `type` "formObjectExpression" |
+| Lanzamiento | Modificaciones                            |
+| ----------- | ----------------------------------------- |
+| 20 R8       | Soporte del "type" "formObjectExpression" |
 
 </details>
 
@@ -59,7 +59,7 @@ El parámetro *options* es un objeto. Here are the available compilation options
 | defaultTypeForNumerics                                                             | Integer                          | Possible value: Is real or Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | generateSymbols                                                                    | Boolean                          | True to generate symbol information in the .symbols returned object                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | generateSyntaxFile                                                                 | Boolean                          | True para generar un [archivo de sintaxis para la finalización del código](../settings/general.md).md#generate-syntax-file-for-code-completion-when en-compiled) en la carpeta \\Resources\\en.lproj del proyecto                                                                                                                                                                                                                                                                                                            |
-| generateTypingMethods                                                              | Text                             | "reset" or "append" to generate typing methods. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand.                                                                                                                                                                                                                                                               |
+| generateTypingMethods                                                              | Text                             | "reset" o "append" para generar métodos de tipado. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand.                                                                                                                                                                                                                                                            |
 | plugins                                                                            | Objeto 4D.Folder | Carpeta de Plug-ins a usar en lugar de [Carpeta de Plug-ins del proyecto actual](../Project/architecture.md#plugins). Esta propiedad solo está disponible con la sintaxis *projectFile*.                                                                                                                                                                                                                                                                                                                                       |
 | targets                                                                            | Colección de cadenas             | Possible values: "x86_64_generic", "arm64_macOS_lib". Pass an empty collection to execute syntax check only                                                                                                                                                                                                                                                                                                                                |
 | typeInference                                                                      | Text                             | "all": el compilador deduce los tipos de todas las variables no declaradas explícitamente, "locals": el compilador deduce los tipos de variables locales no declaradas explícitamente, "none": todas las variables deben ser explícitamente declaradas en el código (modo antiguo), "direct": todas las variables deben ser explícitamente declaradas en el código ([escritura directa](../Project/compiler.md#enabling-direct-typing)). |
@@ -78,7 +78,7 @@ El objeto devuelto por **Compile project** tiene hasta tres propiedades:
 | ---------------------------------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | success                                                                                                                | Boolean              | True si la acción guardar tiene éxito, false en caso contrario.                                                          |
 | errors                                                                                                                 | Colección de objetos | **Disponible sólo en caso de error o de warning**. Collection of objects describing compilation errors or warnings       |
-| \[\].isError                                     | Boolean              | Error if True, warning otherwise                                                                                                         |
+| \[\].isError                                     | Boolean              | Error si es True, sino warning                                                                                                           |
 | \[\].message                                     | Text                 | Mensaje de error                                                                                                                         |
 | \[\].code                                        | Object               | [objeto código](#code-object)                                                                                                            |
 | \[\].line                                        | Number               | Número de línea del error en el código. For class methods, line number in the function                                   |
@@ -167,7 +167,7 @@ Compile a project other than the current project:
  $status:=Compile project($projectFile)
 ```
 
-Compile a project and declare its component:
+Compilar un proyecto y declarar su componente:
 
 ```4d
  var $status : Object
