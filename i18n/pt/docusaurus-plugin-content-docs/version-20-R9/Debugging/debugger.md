@@ -372,7 +372,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
   ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
   For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **Inserir comando...**: exibe um menu que permite inserir um comando 4D como uma nova expressão.
 * **Excluir tudo**: Remove todas as expressões do Painel de Vigia Personalizado.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
@@ -455,7 +455,7 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 - **Mostrar documentação**: abre a documentação para o elemento de destino. Este comando está disponível para:
-  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
+  - *Métodos projeto*, *classes usuário*: seleciona o método no Explorer e alterna para a guia de documentação
   - *Comandos 4D, funções e nomes de classes:* exibe a documentação on-line.
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
