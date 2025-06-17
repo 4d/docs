@@ -217,7 +217,7 @@ The basic sequence of an OTP session token use in a 4D web application is the fo
 4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
 5. The request callback is processed in your application.
 
-By definition, an OTP token can only be used once. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
+Por definición, un token OTP sólo puede utilizarse una vez. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
 
 ### Procesando el OTP en la retrollamada
 
