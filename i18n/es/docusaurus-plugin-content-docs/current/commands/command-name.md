@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                 |
-| ----------- | ------------------------------ |
-| 20 R9       | Support of deprecated property |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 20 R9       | Soporte de la propiedad obsoleta |
 
 </details>
 
