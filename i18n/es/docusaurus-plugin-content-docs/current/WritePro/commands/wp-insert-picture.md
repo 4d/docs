@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert picture.Params-->
 
-| Parámetros     | Tipo                    |                             | Descripción                                                |
-| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
-| targetObj      | Object                  | &#8594; | Rango o elemento o documento 4D Write Pro                  |
-| picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk |
-| pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
-| mode           | Integer                 | &#8594; | Modo de inserción                                          |
-| rangeUpdate    | Integer                 | &#8594; | Modo de actualización del rango                            |
-| Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                     |
+| Parámetros     | Tipo                    |                             | Descripción                                                      |
+| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------------- |
+| targetObj      | Object                  | &#8594; | Rango o elemento o documento 4D Write Pro                        |
+| picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk       |
+| pictureFileObj | 4D.File | &#8594; | Un objeto File que representa un archivo imagen. |
+| mode           | Integer                 | &#8594; | Modo de inserción                                                |
+| rangeUpdate    | Integer                 | &#8594; | Modo de actualización del rango                                  |
+| Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                           |
 
 <!-- END REF-->
 
@@ -41,11 +41,11 @@ Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-forma
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used on the picture in the document:
 
-| Constante  | Tipo    | Valor | Comentario                             |
-| ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Integer | 2     | Insert contents at end of target       |
-| wk prepend | Integer | 1     | Insert contents at beginning of target |
-| wk replace | Integer | 0     | Replace target contents                |
+| Constante  | Tipo    | Valor | Comentario                                  |
+| ---------- | ------- | ----- | ------------------------------------------- |
+| wk append  | Integer | 2     | Insertar el contenido al final del objetivo |
+| wk prepend | Integer | 1     | Insert contents at beginning of target      |
+| wk replace | Integer | 0     | Replace target contents                     |
 
 If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted picture is included in the resulting range:
 
