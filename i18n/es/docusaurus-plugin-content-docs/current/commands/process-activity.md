@@ -73,7 +73,7 @@ On the server, the `Process activity` command returns an additional "session" pr
 
 ## Ejemplo 1
 
-You want to get the collection of all user sessions:
+Desea obtener la colección de todas las sesiones usuario:
 
 ```4d
   //To be executed on the server
