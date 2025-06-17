@@ -21,7 +21,7 @@ The Table Wizard comes with default templates and themes, which developers can c
 
 To implement the Table Wizard in your application, the developers are able to create and configure template files.
 
-### WP Table Wizard interface
+### Interface do assistente de tabela WP
 
 The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
 
