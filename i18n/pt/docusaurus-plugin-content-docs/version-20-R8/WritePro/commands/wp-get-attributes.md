@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | attribName  | Text                                           | &#8594; | Nome do atributo para obter               |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Resultado   | Object                                         | &#8592; | Attribute names and values                |
+| Resultado   | Object                                         | &#8592; | Nomes e valores dos atributos             |
 
 <!-- END REF-->
 
