@@ -112,7 +112,7 @@ There are shortcuts available to move or resize objects more precisely using the
 - Keyboard arrow keys move the selection of objects 1 pixel at a time.
 - **Shift** + teclas de seta movem a seleção de objetos 10 píxeis por vez.
 - **Ctrl** + teclas de seta ampliam ou reduzem a seleção de objetos em 1 píxel.
-- **Ctrl** + **Maj** + arrow keys enlarge or reduce the selection of objects by 10 pixels.
+- **Ctrl** + **Maj** + teclas de seta ampliam ou reduzem a seleção de objetos em 10 pixels.
 
 The right-hand side of the tool bar contains commands used to modify items of the label template:
 
@@ -136,7 +136,7 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Labels per record**: Sets the number of copies to print for each label (copies are printed consecutively).
 - **Print Setup...**: Sets the format of the page on which the sheet of labels will be printed. When you click this button, the setup dialog box for the printer selected in your system appears. By default, the sheet of labels is generated based on an A4 page in portrait mode.
   **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
-- **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
+- **Unidade**: altera as unidades nas quais você especifica as medidas da etiqueta e da página da etiqueta. You can use points, millimeters, centimeters, or inches.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
 - **Largura** e **Altura**: define a altura e a largura de cada etiqueta manualmente. Eles não podem ser editados quando a opção **Redimensionamento automático** estiver marcada.
 - **Margens** (Superior, Direita, Esquerda, Inferior): define as margens de sua folha. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
