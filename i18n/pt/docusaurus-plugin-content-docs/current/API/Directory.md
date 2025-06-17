@@ -450,7 +450,7 @@ A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
 Como padrão, a pasta é copiada com o nome da pasta original. Se quiser renomear a cópia, passe o novo nome no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+Se já existir uma pasta com o mesmo nome em *destinationFolder*, por padrão 4D gera um erro. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
 
 | Parâmetros     | Valor | Comentário                                      |
 | -------------- | ----- | ----------------------------------------------- |
