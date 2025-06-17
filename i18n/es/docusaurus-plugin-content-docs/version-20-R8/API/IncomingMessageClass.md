@@ -162,9 +162,9 @@ $value := $request.getHeader("content-type")
 
 <!-- REF #IncomingMessageClass.getJSON().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                |
-| ---------- | ------- | --------------------------- | ------------------------------------------ |
-| Resultado  | Variant | <- | JSON resolution of the body of the request |
+| Parámetros | Tipo    |                             | Descripción                             |
+| ---------- | ------- | --------------------------- | --------------------------------------- |
+| Resultado  | Variant | <- | Resolución JSON del body de la petición |
 
 <!-- END REF -->
 
