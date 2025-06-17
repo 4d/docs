@@ -80,7 +80,7 @@ Em uma forma, você quer uma lista suspensa preenchida com os comandos básicos 
  End case
 ```
 
-In the English version of 4D, the drop-down list will read: Sum, Average, Min, and Max. In the French version\*, the drop-down list will read: Somme, Moyenne, Min, and Max.
+In the English version of 4D, the drop-down list will read: Sum, Average, Min, and Max. Na versão em francês\*, a lista suspensa será exibida: Somme, Moyenne, Min e Max.
 
 \*with a 4D application configured to use the French programming language (see compatibility note)
 
