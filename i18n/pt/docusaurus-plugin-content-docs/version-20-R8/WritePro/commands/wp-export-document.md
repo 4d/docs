@@ -26,7 +26,7 @@ Em *wpDoc*, passe o objeto 4D Write Pro que você deseja exportar.
 
 Você pode passar um *filePath* ou *fileObj*:
 
-- In *filePath*, pass the destination path and the name of the document to be exported. If you pass only the document name, it will be saved at the same level as the 4D structure file.
+- Em *filePath*, passe o caminho de destino e o nome do documento a ser exportado. If you pass only the document name, it will be saved at the same level as the 4D structure file.
 
 - No parâmetro *fileObj*, passe um objeto 4D.File representando o arquivo a ser exportado.
 
@@ -44,7 +44,7 @@ You can omit the *format* parameter, in which case you need to specify the exten
 **Notas:**
 
 - "4D specific tags" means 4D XHTML with a 4D namespace and 4D CSS styles.
-- For more information about the 4D Write Pro format, refer to *.4wp document format*.
+- Para obter mais informações sobre o formato 4D Write Pro, consulte o *formato de documento .4wp*.
 - To view a list of known differences or incompatibility when using the .docx format, see *Importing and Exporting in .docx format*.
 - For more information on exporting to SVG format, see *Exporting to SVG format*.
 
