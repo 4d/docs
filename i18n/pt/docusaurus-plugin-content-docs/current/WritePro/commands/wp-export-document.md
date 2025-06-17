@@ -26,7 +26,7 @@ Em *wpDoc*, passe o objeto 4D Write Pro que você deseja exportar.
 
 Você pode passar um *filePath* ou *fileObj*:
 
-- In *filePath*, pass the destination path and the name of the document to be exported. If you pass only the document name, it will be saved at the same level as the 4D structure file.
+- Em *filePath*, passe o caminho de destino e o nome do documento a ser exportado. If you pass only the document name, it will be saved at the same level as the 4D structure file.
 
 - No parâmetro *fileObj*, passe um objeto 4D.File representando o arquivo a ser exportado.
 
