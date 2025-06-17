@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros  | Tipo    |                             | Descripción                               |
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro |
-| breakType   | Integer | &#8594; | Type of break to insert                   |
+| breakType   | Integer | &#8594; | Tipo de ruptura a insertar                |
 | mode        | Integer | &#8594; | Modo de inserción                         |
 | rangeUpdate | Integer | &#8594; | Modo de actualización del rango           |
 | Resultado   | Object  | &#8592; | Rango de texto del caracter de ruptura    |
@@ -41,11 +41,11 @@ In *breakType*, pass one of the following constants from the *4D Write Pro Const
 
 In the *mode* parameter, pass a constant to indicate the insertion mode to be used for the break in the destination *targetObj*:
 
-| Constante  | Tipo    | Valor | Comentario                                  |
-| ---------- | ------- | ----- | ------------------------------------------- |
-| wk append  | Integer | 2     | Insertar el contenido al final del objetivo |
-| wk prepend | Integer | 1     | Insert contents at beginning of target      |
-| wk replace | Integer | 0     | Replace target contents                     |
+| Constante  | Tipo    | Valor | Comentario                                      |
+| ---------- | ------- | ----- | ----------------------------------------------- |
+| wk append  | Integer | 2     | Insertar el contenido al final del objetivo     |
+| wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
+| wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
 - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
