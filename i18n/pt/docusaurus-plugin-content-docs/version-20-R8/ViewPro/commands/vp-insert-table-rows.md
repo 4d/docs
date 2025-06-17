@@ -41,7 +41,7 @@ Este comando insere algumas linhas na tabela *tableName*, NÂO na folha. O núme
 
 Se a tabela *tableName* estiver vinculada a um [contexto de dados](vp-set-data-context.md), o comando insere novo(s) elemento(s) vazio(s) na coleção.
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+Se *tableName* não existir ou se não houver espaço suficiente na folha, nada acontece.
 
 ## Exemplo
 
