@@ -9,7 +9,7 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 ## Propiedades
 
-### Properties of Asynchronous Programming
+### Propiedades de la programación asíncrona
 
 | Propiedad                 | Tipo     | Descripción                                                                                                                                                   |
 | ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -24,7 +24,7 @@ Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                                        |
 | -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Default is 0.                                              |
+| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Por defecto es 0.                                          |
 | `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                                     |
 | `maxRetries`   | Integer   | The maximum number of retries for the request. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
 | `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                               |
