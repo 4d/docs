@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ----------------------------------------- | --------------------------- | ------------------------------------------------- |
 | tableRef   | Object                                    | &#8594; | Referencia de tabla                               |
 | value      | Text, Number, Time, Date, Picture, Object | &#8594; | Valor(es) a definir en la fila |
-| valueColl  | Collection                                | &#8594; | Collection of values to set in the row            |
+| valueColl  | Collection                                | &#8594; | Colección de valores a definir en la línea        |
 | Resultado  | Object                                    | &#8592; | Row range object                                  |
 
 <!-- END REF-->
