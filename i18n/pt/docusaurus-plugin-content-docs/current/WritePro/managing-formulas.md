@@ -130,7 +130,7 @@ You can control how formulas are displayed in your documents:
 - como *valores* ou como *referências*
 - when shown as references, display source text, symbol, or name.
 
-### References or Values
+### Referências ou valores
 
 By default, 4D formulas are displayed as values. When you insert a 4D formula, 4D Write Pro computes and displays its current value.  If you wish to know which formula is used or what is its name, you need to display it as a reference.
 
@@ -158,7 +158,7 @@ When you display formulas as references, the **source** of the formula is displa
 
 ![](../assets/en/WritePro/wp-formulas2.png)
 
-### References as symbols
+### Referências como símbolos
 
 When formula source texts are displayed in a document, the design could be confusing if you work on sophisticated templates using tables for example, and when formulas are complex:
 
