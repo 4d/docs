@@ -294,7 +294,7 @@ A propriedade `.urlQuery` contém <!-- REF #IncomingMessageClass.urlQuery.Summar
 
 A propriedade `.urlQuery` é somente leitura.
 
-Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
+Os parâmetros podem ser passados no URL das solicitações **diretamente** ou **como conteúdo JSON**.
 
 #### Direct parameters
 
