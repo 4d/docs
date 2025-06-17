@@ -98,14 +98,14 @@ The graphic area of the editor includes both a tool bar and a context menu that 
 
 The left-hand side of the tool bar includes commands for selecting and inserting objects. You can also access these tools by means of the **Tool>** command in the area's context menu.
 
-| Ícone                                     | Nome da ferramenta   | Descrição                                                                                                                                                                                                          |
-| ----------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/Desktop/label-tool1.png) | Seleção              | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
-| ![](../assets/en/Desktop/label-tool2.png) | Criação de linha     |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool3.png) | Criação de retângulo | For Rectangle or Rounded rectangle.                                                                                                                                                                |
-| ![](../assets/en/Desktop/label-tool4.png) | Criação de círculo   |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool5.png) | Inserção de texto    | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
-| ![](../assets/en/Desktop/label-tool6.png) | Inserção de fórmula  | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
+| Ícone                                     | Nome da ferramenta   | Descrição                                                                                                                                                                                                                                  |
+| ----------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](../assets/en/Desktop/label-tool1.png) | Seleção              | Click on a single object or draw a selection box around several objects. Para uma seleção de objetos não adjacentes, mantenha pressionada a tecla **Shift** e clique em cada objeto que deseja selecionar. |
+| ![](../assets/en/Desktop/label-tool2.png) | Criação de linha     |                                                                                                                                                                                                                                            |
+| ![](../assets/en/Desktop/label-tool3.png) | Criação de retângulo | For Rectangle or Rounded rectangle.                                                                                                                                                                                        |
+| ![](../assets/en/Desktop/label-tool4.png) | Criação de círculo   |                                                                                                                                                                                                                                            |
+| ![](../assets/en/Desktop/label-tool5.png) | Inserção de texto    | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                                                 |
+| ![](../assets/en/Desktop/label-tool6.png) | Inserção de fórmula  | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                                                  |
 
 There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
 
@@ -131,8 +131,8 @@ The Layout page contains controls for printing labels based on the requirements 
 
 ![](../assets/en/Desktop/label-layout.png)
 
-- **Labels Order**: Specifies whether labels should be printed in the direction of the rows or the columns.
-- **Rows** and **Columns**: Set the number of labels to be printed by "row" and by "column" on each sheet. These settings determine the label size when the "Automatic resizing" option is enabled.
+- **Ordem de etiquetas**: especifica se os rótulos devem ser impressos na direção das linhas ou das colunas.
+- **Linhas** e **Colunas**: coloque o número de etiquetas a serem impressas por "linha" e por "coluna" em cada folha. These settings determine the label size when the "Automatic resizing" option is enabled.
 - **Labels per record**: Sets the number of copies to print for each label (copies are printed consecutively).
 - **Print Setup...**: Sets the format of the page on which the sheet of labels will be printed. When you click this button, the setup dialog box for the printer selected in your system appears. By default, the sheet of labels is generated based on an A4 page in portrait mode.
   **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
