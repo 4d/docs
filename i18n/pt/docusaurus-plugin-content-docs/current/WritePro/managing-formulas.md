@@ -154,7 +154,7 @@ Por exemplo, se você tiver inserido a data atual junto com um formato, a data s
 
 ![](../assets/en/WritePro/wp-formulas1.png)
 
-When you display formulas as references, the **source** of the formula is displayed:
+Quando você exibir fórmulas como referências, a **fonte** da fórmula é exibida:
 
 ![](../assets/en/WritePro/wp-formulas2.png)
 
