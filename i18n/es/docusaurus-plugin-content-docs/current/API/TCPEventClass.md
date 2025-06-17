@@ -7,10 +7,10 @@ The `TCPEvent` class provides information about events occurring during the life
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                  |
-| ----------- | ------------------------------- |
-| 20 R9       | New `ip`, and `port` attributes |
-| 20 R8       | Clase añadida                   |
+| Lanzamiento | Modificaciones                 |
+| ----------- | ------------------------------ |
+| 20 R9       | Nuevos atributos `ip` y \`port |
+| 20 R8       | Clase añadida                  |
 
 </details>
 
