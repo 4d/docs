@@ -61,7 +61,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
 
-Here is the response:
+Aqui está a resposta:
 
 ```json
 Called URL: /start/example? param=demo&name=4D 
@@ -214,9 +214,9 @@ If the body is not received as a valid picture, the function returns null.
 
 <!-- REF #IncomingMessageClass.getText().Params -->
 
-| Parâmetro  | Tipo |                             | Descrição                   |
-| ---------- | ---- | --------------------------- | --------------------------- |
-| Resultados | Text | <- | Body of the request as text |
+| Parâmetro  | Tipo |                             | Descrição                       |
+| ---------- | ---- | --------------------------- | ------------------------------- |
+| Resultados | Text | <- | Corpo da solicitação como texto |
 
 <!-- END REF -->
 
@@ -240,7 +240,7 @@ A propriedade `.headers` contém <!-- REF #IncomingMessageClass.headers.Summary 
 
 A propriedade `.headers` é somente leitura.
 
-Nomes de cabeçalho (chaves) são menores. Note header names are case sensitive.
+Nomes de cabeçalho (chaves) são menores. Observe que os nomes dos cabeçalhos diferenciam maiúsculas de minúsculas.
 
 <!-- END REF -->
 
