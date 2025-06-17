@@ -1,9 +1,9 @@
 ---
 id: asynchronous-call
-title: Asynchronous Call
+title: Chamada assíncrona
 ---
 
-# Asynchronous Call
+# Chamada assíncrona
 
 If you do not want to wait for the OpenAPI response when making a request to its API, you need to use asynchronous code.
 
@@ -13,7 +13,7 @@ The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/do
 
 > ⚠️ If your process ends at the conclusion of the current method (e.g., using New process, or playing in the method editor), the callback formula might not be called asynchronously. In such cases, consider using `CALL WORKER` or `CALL FORM`.
 
-## Examples of Usage
+## Exemplos de uso
 
 ### model list
 
