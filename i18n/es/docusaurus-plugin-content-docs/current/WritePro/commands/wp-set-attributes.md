@@ -37,7 +37,7 @@ For a comprehensive list of attributes to pass, as well as their scope and respe
 
 ## Ejemplo 1
 
-In this 4D Write Pro area, you selected a word:
+En esta área 4D Write Pro, ha seleccionado una palabra:
 
 ![](../../assets/en/WritePro/commands/pict2643639.en.png)
 
