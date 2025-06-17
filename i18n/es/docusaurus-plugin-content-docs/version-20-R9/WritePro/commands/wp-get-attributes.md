@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros  | Tipo                                           |                             | Descripción                               |
 | ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object                                         | &#8594; | Rango o elemento o documento 4D Write Pro |
-| attribName  | Text                                           | &#8594; | Name of attribute to get                  |
+| attribName  | Text                                           | &#8594; | Nombre del atributo a obtener             |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
 | Resultado   | Object                                         | &#8592; | Nombres y valores de los atributos        |
