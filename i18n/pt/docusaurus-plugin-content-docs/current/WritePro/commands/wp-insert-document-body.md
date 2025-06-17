@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | ----------- | ------- | --------------------------- | -------------------------------------------------------- |
 | targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document                |
 | wpDoc       | Object  | &#8594; | Documento 4D Write Pro                                   |
-| mode        | Integer | &#8594; | Insertion mode                                           |
-| rangeUpdate | Integer | &#8594; | Range update mode                                        |
+| mode        | Integer | &#8594; | Modo de inserção                                         |
+| rangeUpdate | Integer | &#8594; | Modo de atualização de intervalo                         |
 | Resultado   | Object  | &#8592; | Text range object referencing the inserted document body |
 
 <!-- END REF-->
@@ -28,7 +28,7 @@ Em *targetObj*, passe:
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
 - um documento 4D Write Pro.
 
-The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
+The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. Além disso, os elementos são copiados, de modo que *wpDoc* pode ser reutilizado várias vezes.
 
 In the *mode* parameter, pass one or a combination of the following constants from the *4D Write Pro Constants* theme to indicate the insertion mode to be used for the document in the destination *targetObj*:
 
