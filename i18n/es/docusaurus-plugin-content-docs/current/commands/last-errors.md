@@ -64,7 +64,7 @@ Each error object contains the following properties:
 | xmlc                      | XML 4D apis                                                         |
 | wri1                      | 4D Write Pro                                                        |
 
-#### Internal component signatures (System)
+#### Firmas de componentes internos (Sistema)
 
 | Firma del componente | Componente                                               |
 | -------------------- | -------------------------------------------------------- |
