@@ -31,7 +31,7 @@ var $result:=$helper.prompt("Could you describe it?")
 
 | Parâmetro   | Tipo                                        | Descrição                                                  |
 | ----------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageFile* | 4D. File                    | The image file to analyze.                 |
+| *imageFile* | 4D. File                    | O arquivo imagem a ser analisado.          |
 | Resultado   | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
 #### Exemplo de uso
@@ -47,7 +47,7 @@ var $result:=$helper.prompt("Could you describe it?")
 
 | Parâmetro | Tipo                                        | Descrição                                                  |
 | --------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imagem*  | Imagem                                      | The image to analyze.                      |
+| *imagem*  | Imagem                                      | A imagem a analisar.                       |
 | Resultado | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
 #### Exemplo de uso
