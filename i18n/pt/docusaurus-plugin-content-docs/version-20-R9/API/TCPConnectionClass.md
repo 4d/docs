@@ -164,7 +164,7 @@ A função `4D.TCPConnection.new()` <!-- REF #4D.TCPConnection.new().Summary -->
 
 #### `options` parameter
 
-In the *options* parameter, pass an object that can contain the following properties:
+No parâmetro *options*, passe um objeto que possa conter as seguintes propriedades:
 
 | Propriedade  | Tipo       | Descrição                                                             | Por padrão |
 | ------------ | ---------- | --------------------------------------------------------------------- | ---------- |
