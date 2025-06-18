@@ -28,7 +28,7 @@ According to the calling method type, the returned string can be as follows:
 | Project Form Method                  | FormName                                          |
 | Table Form Object Method             | \[TableName\].FormName.ObjectName                 |
 | Project Form Object Method           | FormName.ObjectName                               |
-| Class Constructor                    | ClassName:constructor                             |
+| Class constructor                    | ClassName:constructor                             |
 | Class Function                       | ClassName.FunctionName                            |
 | Component Project Method             | MethodName                                        |
 | Component Project Form Method        | FormName(ComponentName)                           |

@@ -334,13 +334,13 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
  End if
 ```
 
-### `Class Constructor`
+### `Class constructor`
 
 #### Syntax
 
 ```4d
 // Class: MyClass
-{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
+{shared} {{session} singleton} Class constructor({$parameterName : type; ...})
 // code
 ```
 
@@ -362,13 +362,19 @@ Using the `shared` keyword creates a **shared class**, used to only instantiate 
 
 Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. For more information, refer to the [Singleton classes](#singleton-classes) paragraph.
 
+:::note
+
+[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1). 
+
+:::
+
 
 #### Example
 
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-Class Constructor ($name : Text ; $age : Integer)
+Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
 ```
@@ -434,7 +440,7 @@ If you omit the type in the declaration line, the property is created as a varia
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` or `Class Constructor` block.
+The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
 
 :::
 
@@ -526,6 +532,12 @@ $o.age:="Smith"  //error with check syntax
 
 If the property is not accessed, the code never executes.
 
+:::note
+
+[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) benefit from an extended implementation of computed properties with [two additional functions](../ORDA/ordaClasses.md#computed-attributes-1): `query` and `orderBy`.
+
+:::
+
 Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
 
 In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
@@ -539,6 +551,13 @@ If the functions are declared in a [shared class](#shared-classes), you can use 
 The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of any [valid property type](dt_object.md).
 
 > Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+
+:::note
+
+ORDA entity classes can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1). 
+
+:::
+
 
 #### Example 1
 
@@ -702,11 +721,11 @@ The [`.isShared`](../API/ClassClass.md#isshared) property of Class objects allow
 
 ### Creating a shared class
 
-To create a shared class, add the `shared` keyword before the [Class Constructor](#class-constructor). For example:
+To create a shared class, add the `shared` keyword before the [Class constructor](#class-constructor). For example:
 
 ```4d
 	//shared class: Person
-shared Class Constructor($firstname : Text; $lastname : Text)
+shared Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -729,7 +748,7 @@ To create a shared function, add the `shared` keyword before the [Function](#fun
 
 ```4d
 	//shared class Foo
-shared Class Constructor()
+shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
@@ -778,7 +797,7 @@ Once instantiated, a singleton class (and its singleton) exists as long as a ref
 
 You declare singleton classes by adding appropriate keyword(s) before the [`Class constructor`](#class-constructor):
 
-- To declare a (process) singleton class, write `singleton Class Constructor()`.
+- To declare a (process) singleton class, write `singleton Class constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
 - To declare a session singleton class, write `session singleton Class constructor()`.
 
@@ -806,7 +825,7 @@ The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of
 
 ```4d
 	//class: ProcessTag
-singleton Class Constructor()
+singleton Class constructor()
  This.tag:=Random
 ```
 

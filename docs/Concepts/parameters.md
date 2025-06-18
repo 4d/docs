@@ -58,7 +58,7 @@ The legacy declaration syntax, where parameters are automatically copied in sequ
 
 Inside called methods or class functions, parameter values are assigned to local variables. You usually declare parameters using a **parameter name** along with a **parameter type**, separated by colon.  
 
-- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
+- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class constructor` keywords.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
 
 Examples:

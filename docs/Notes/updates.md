@@ -3,6 +3,12 @@ id: updates
 title: Release Notes
 ---
 
+## 4D 20 R10
+
+#### Highlights
+
+- Handling of [ORDA events on data](../ORDA/orda-events.md).  
+
 
 ## 4D 20 R10
 
