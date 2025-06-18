@@ -11,13 +11,13 @@ The `_OpenAIAsyncOptions` internal class provides function to handle asynchronou
 
 ### HTTP Properties
 
-| Propriété  | Type    |
-| ---------- | ------- |
-| `method`   | Text    |
-| `headers`  | Object  |
-| `dataType` | Text    |
-| `body`     | Variant |
-| \`timeout  | Integer |
+| Propriété   | Type    |
+| ----------- | ------- |
+| `method`    | Text    |
+| `headers`   | Object  |
+| `dataType`  | Text    |
+| `body`      | Variant |
+| \\`timeout | Integer |
 
 ### Class instances Properties
 
