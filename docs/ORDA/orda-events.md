@@ -61,13 +61,13 @@ The following table lists ORDA events along with their rules.
 
 | Event  | Level    | Function name   |  (C/S) Executed on |
 | :--------------- |:--------------- | :----- | :-----: |
-| Entity instantiation  | Entity      |   [`constructor()`]() |   client | 
+| Entity instantiation  | Entity      |   [`constructor()`](./ordaClasses.md#class-constructor-1) |   client | 
 | Attribute touched  | Attribute    |    `event touched <attrName>()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
 |   | Entity   |   `event touched()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | 
 
 :::note
 
-The [`constructor()`] function is not actually an event function but is always called when a new entity is instantiated. 
+The [`constructor()`](./ordaClasses.md#class-constructor-1) function is not actually an event function but is always called when a new entity is instantiated. 
 
 :::
 
@@ -128,7 +128,18 @@ This event is also triggered:
 
 #### Example 1
 
-...
+You want to uppercase all text attributes of an entity when it is updated.
+
+
+```4d
+    //ProductsEntity class
+Function event touched($event : Object)
+	
+	If (Value type(This[$event.attributeName])=Is text)
+		This[$event.attributeName]:=Uppercase(This[$event.attributeName])
+	End if 
+```
+
 
 #### Example 2
 
@@ -154,6 +165,7 @@ Function event touched arrivalDate($event : Object)
     This.sameDay:=(This.departureDate = This.arrivalDate)
 
 ```
+
 
 
 
