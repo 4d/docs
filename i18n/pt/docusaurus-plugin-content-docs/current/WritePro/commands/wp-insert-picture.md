@@ -69,13 +69,13 @@ No exemplo a seguir, um usuário seleciona a imagem que deseja inserir no objeto
  var $fail : Boolean
  $fail:=False
  
-  //ask user to choose a picture on the disk that they want to insert
+  //pede ao usuário para escolher uma imagem no disco que queiram inserir
  $imgRef:=Open document("")
-  //if user does not cancel
+  //sse usuário não cancelar
  If(OK=1)
-  //if the file is a supported picture file
+  //se o arquivo não for um arquivo de imagem compatível
     If(Is picture file(document))
-  // insert picture selected by user
+  // insere imagem selecionado pelo usuário
        WP Insert picture($wpRange;document;wk replace)
     Else
        $fail:=True
@@ -83,7 +83,7 @@ No exemplo a seguir, um usuário seleciona a imagem que deseja inserir no objeto
  Else
     $fail:=True
  End if
-  //if the insertion failed, alert the user
+  //se a inserção falhar, alerteo usuário
  If($fail)
     ALERT("Picture insertion failed")
  End if
@@ -91,7 +91,7 @@ No exemplo a seguir, um usuário seleciona a imagem que deseja inserir no objeto
 
 ## Exemplo 2
 
-You want to insert a picture in the body of the documment:
+Se quiser inserir uma imagem no corpo da documentação:
 
 ```4d
 var $file : 4D.File
