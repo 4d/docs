@@ -252,7 +252,7 @@ Ejemplos de exportación PDF de Factur-X:
 
 ## Ejemplo 6
 
-Exporting a docx document using a File object:
+Exportación de un documento docx mediante un objeto File:
 
 ```4d
 var $file : 4D.File
