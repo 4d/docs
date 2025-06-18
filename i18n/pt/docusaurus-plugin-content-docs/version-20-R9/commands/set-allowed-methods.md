@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
+<!--REF #_command_.SET ALLOWED METHODS.Summary-->O comando **SET ALLOWED METHODS** designa os métodos projeto que podem ser inseridos por meio da aplicação.<!-- END REF-->
 
 4D includes a security mechanism that filters enterable project methods from the following contexts:
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 By default, if you do not use the **SET ALLOWED METHODS** command, no method is enterable (using an unauthorized method in an expression causes an error).
 
-In the *methodsArray* parameter, pass the name of an array containing the list of methods to allow. The array must have been set previously.
+No parâmetro *methodsArray*, passe o nome de um array que contenha a lista de métodos a serem permitidos. The array must have been set previously.
 
 You can use the wildcard character (@) in method names to define one or more authorized method groups.
 
