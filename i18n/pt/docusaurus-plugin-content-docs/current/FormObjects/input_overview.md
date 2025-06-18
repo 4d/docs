@@ -13,6 +13,12 @@ Além disso, as entradas podem ser [inserível ou não inserível](properties_En
 
 Você pode gerenciar os dados com os [métodos](Concepts/methods.md) objeto ou formulário.
 
+:::note
+
+For security reasons, in [multi-style](./properties_Text.md#multi-style) input areas, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+
+:::
+
 ### Exemplo JSON:
 
 ```4d
