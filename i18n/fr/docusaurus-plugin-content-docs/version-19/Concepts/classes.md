@@ -276,9 +276,7 @@ $area:=$rect.getArea() //5000
 
 ```4d
 // Class: MyClass
-Class Constructor({$parameterName : type; ...})
-// code
-// code
+Class constructor({$parameterName : type; ...})
 // code
 ```
 
@@ -300,7 +298,7 @@ Pour une fonction class constructor, la commande `Current method name` retourne 
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-Class Constructor ($name : Text)
+Class constructor ($name : Text)
  This.name:=$name
 ```
 
@@ -508,10 +506,10 @@ Lorsqu'une fonction [class constructor](#class-constructor) est utilisée (avec 
 ```4d
 //Class: ob
 
-Class Constructor  
+Class constructor  
 
- // Créer des propriétés en
- // les assignant au This
+ // Create properties on This as
+ // desired by assigning to them
  This.a:=42 
 ```
 
