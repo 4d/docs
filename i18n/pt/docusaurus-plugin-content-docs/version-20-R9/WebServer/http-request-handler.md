@@ -24,7 +24,7 @@ Custom HTTP Request handlers are supported:
 
 :::warning
 
-[By default](../ORDA/privileges.md#default-file) for security reasons, external access to the datastore is not allowed in 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+[Por padrão](../ORDA/privileges.md#default-file) por razões de segurança, o acesso externo ao datastore não é permitido em 4D. Você precisa configurar os [privilégios ORDA](../ORDA/privileges.md) para permitir solicitações HTTP.
 
 :::
 
@@ -36,7 +36,7 @@ This file contains all listened URL patterns, the handled verbs, and the code to
 
 At runtime, the first pattern matching the URL is executed, the others are ignored.
 
-Here is an example of a *HTTPHandlers.json* file contents:
+Aqui está um exemplo do conteúdo de um arquivo *HTTPHandlers.json*:
 
 ```json
 
@@ -70,7 +70,7 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 ### URL patterns
 
-URL patterns can be given as **prefixes** or using **regular expressions**.
+Os padrões de URL podem ser fornecidos como **prefixos** ou usando **expressões regulares**.
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
    Ex: `"regexPattern" : "/docs/**/index.html"`
@@ -113,7 +113,7 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 ```
 
-#### Forbidden patterns
+#### Padrões proibidos
 
 URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
 
@@ -122,7 +122,7 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 - `/$lib/renderer`
 - `/$shared`
 
-### Class and method
+### Classe e método
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
@@ -141,7 +141,7 @@ Ex: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. All names can be used.
+No control is done on verb names. Todos os nomes podem ser usados.
 
 :::
 
@@ -209,15 +209,15 @@ Here is a detailed example of a HTTPHandlers.json file:
 In this example, you must implement the following functions:
 
 - *handle function* in the *GeneralHandling* class
-- *manageAccount* in the *UsersHandling* class
-- *handleInvoices* in the *FinancialHandling* class
-- *handleDocs* in the *DocsHandling* class
-- *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
+- *manageAccount* na classe *UsersHandling*
+- *handleInvoices* na classe \*FinancialHandling
+- *handleDocs* na classe *DocsHandling*
+- *handleTheInvoice* / *handleDetails* / *handleInvoices* na clase *InvoicesHandling*
 
 Examples of URLs triggering the handlers:
 
-`IP:port/info/` with a GET verb
-`IP:port/info/general` with a GET verb
+`IP:port/info/` com um verbo GET
+`IP:port/info/general` com um verbo GET
 
 `IP:port/userAccount/update/` with a POST verb
 `IP:port/userAccount/update/profile` with a POST verb
@@ -243,13 +243,13 @@ Request handler functions are not necessarily shared, unless some request handle
 
 :::note
 
-It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
+It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
 
 :::
 
 ### Input: an instance of the 4D.IncomingMessage class
 
-When a request has been intercepted by the handler, it is received on the server as an instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+Quando uma solicitação foi interceptada pelo manipulador, ela é recebida no servidor como uma instância da [4D.IncomingMessage clas](../API/IncomingMessageClass.md).
 
 All necessary information about the request are available in this object, including the request url, verb, headers, and, if any, parameters (put in the URL) and body.
 
@@ -265,7 +265,7 @@ The [4D.IncomingMessage class](../API/IncomingMessageClass.md) provides function
 
 Here is a simple example to upload a file on the server.
 
-The **HTTPHandlers.json** file:
+O arquivo **HTTPHandlers.json**:
 
 ```json
 [
@@ -280,7 +280,7 @@ The **HTTPHandlers.json** file:
 
 The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. The file name is given as parameter (*fileName*) in the URL. Ele é recebido no objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) na solicitação.
+The binary content of the file is put in the body of the request and a POST verb is used. O nome do arquivo é fornecido como parâmetro (*fileName*) no URL. Ele é recebido no objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) na solicitação.
 
 ```4d
     //UploadFile class

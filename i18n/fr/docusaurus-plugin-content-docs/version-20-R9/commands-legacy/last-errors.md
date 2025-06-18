@@ -25,6 +25,12 @@ Chaque objet erreur contient les attributs suivants :
 | message            | texte    | Description de l'erreur                                |
 | componentSignature | texte    | Signature du composant interne qui a retourné l'erreur |
 
+:::note
+
+Pour une description des signatures de composants, veuillez vous référer à la section [Codes d'erreur](../Concepts/error-handling.md#error-codes).
+ 
+:::
+
 Cette commande doit être appelée depuis une méthode d'appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).
 
 
@@ -32,6 +38,7 @@ Cette commande doit être appelée depuis une méthode d'appel sur erreur instal
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
+[Error handling](../Concepts/error-handling.md)
 
 #### Propriétés
 

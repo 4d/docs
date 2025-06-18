@@ -31,7 +31,7 @@ title: オブジェクトライブラリ
 
 設定済みオブジェクトライブラリは変更できません。 デフォルトオブジェクトを編集したり、設定済みオブジェクトやフォームのライブラリを独自に作るには、カスタムオブジェクトライブラリを作成します (後述参照)。
 
-All objects proposed in the standard object library are described on [this section](../FormEditor/objectLibrary.md).
+標準のオブジェクトライブラリにて提供されているオブジェクトについては[このセクション](../FormEditor/objectLibrary.md) で詳しく説明されています。
 
 ## カスタムオブジェクトライブラリの作成と使用
 

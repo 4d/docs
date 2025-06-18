@@ -3,7 +3,7 @@ id: EntityClass
 title: Entity
 ---
 
-Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/dsMapping.md#dataclass), tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.
+Une [entity](ORDA/dsMapping.md#entity) (ou "entité") est une instance d'une [Dataclass](ORDA/dsMapping.md#dataclass), tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.
 
 ### Sommaire
 
@@ -611,15 +611,14 @@ Le code générique suivant duplique toute entité :
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
 
 | Paramètres | Type    |                             | Description                                                                                              |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
-| Résultat   | Text    | <- | Valeur de la clé primaire texte de l'entité                                                              |
-| Résultat   | Integer | <- | Valeur de la clé primaire numérique de l'entité                                                          |
+| Résultat   | any     | <- | Valeur de la clé primaire de l'entité (Integer ou Text)                               |
 
 <!-- END REF -->
 
@@ -657,7 +656,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 | Paramètres | Type |                             | Description                                                        |
 | ---------- | ---- | --------------------------- | ------------------------------------------------------------------ |
-| Résultat   | Text | <- | Attirbuts de contexte associés à l'entity, séparés par une virgule |
+| Résultat   | Text | <- | Attributs de contexte associés à l'entity, séparés par une virgule |
 
 <!-- END REF -->
 
@@ -952,7 +951,12 @@ Un enregistrement verrouillé peut être déverrouillé :
 - lorsque la fonction [`unlock()`](#unlock) est appelée sur une entité correspondante dans le même process
 - automatiquement, lorsqu'elle n'est plus référencée par aucune entité en mémoire. Par exemple, si le verrou n'est posé que sur une référence locale d'une entité, celle-ci est déverrouillée à la fin de la fonction. Tant qu'il existe des références à l'entité en mémoire, l'enregistrement reste verrouillé.
 
-> Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
+:::note Notes
+
+- [`unlock()`](#unlock) doit être appelé autant de fois que `lock()` a été appelé dans le même process pour que l'entité soit effectivement déverrouillée.
+- Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
+
+:::
 
 Par défaut, si le paramètre *mode* est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).
 
@@ -1635,11 +1639,11 @@ Retourne :
 
 #### Description
 
-La fonction `.touched()` <!-- REF #EntityClass.touched().Summary -->vérifie si un attribut de l'entité a été modifié ou non depuis que l'entité a été chargée en mémoire ou sauvegardée<!-- END REF -->.
+La fonction `.touched()` <!-- REF #EntityClass.touched().Summary -->renvoie True si au moins un attribut de l'entité a été modifié depuis que l'entité a été chargée en mémoire ou sauvegardée<!-- END REF -->. Vous pouvez utiliser cette fonction pour déterminer si vous devez sauvegarder l'entité.
 
-Si un attribut a été modifié ou calculé, la fonction retourne Vrai, sinon elle retourne Faux. Vous pouvez utiliser cette fonction pour savoir s'il est nécessaire de sauvegarder l'entité.
+Ceci ne s'applique qu'aux attributs de [`kind`](DataClassClass.md#returned-object) "storage" ou "relatedEntity".
 
-Cette fonction renvoie Faux pour une nouvelle entité qui vient d'être créée (avec [`.new()`](DataClassClass.md#new)). A noter cependant que si vous utilisez une fonction pour calculer un attribut de l'entité, la fonction `.touched()` retournera Vrai. Par exemple, si vous appelez [`.getKey()`](#getkey) pour calculer la clé primaire, `.touched()` renvoie Vrai.
+Pour une nouvelle entité qui vient d'être créée (avec [`.new()`](DataClassClass.md#new)), la fonction renvoie False. Cependant, dans ce contexte, si vous accédez à un attribut dont la propriété [`autoFilled`](./DataClassClass.md#returned-object) est True, la fonction `.touched()` renverra True. Par exemple, après avoir exécuté `$id:=ds.Employee.ID` pour une nouvelle entité (en supposant que l'attribut ID possède la propriété "Autoincrement"), `.touched()` renvoie True.
 
 #### Exemple
 
@@ -1683,7 +1687,7 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 
 La fonction `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary -->renvoie les noms des attributs qui ont été modifiés depuis que l'entité a été chargée en mémoire<!-- END REF -->.
 
-Cette fonction est applicable aux attributs dont le [kind](DataClassClass.md#attributename) est `storage` ou `relatedEntity`.
+Ceci ne s'applique qu'aux attributs de [`kind`](DataClassClass.md#returned-object) "storage" ou "relatedEntity".
 
 Dans le cas d'un attribut relationnel ayant été "touché" (i.e., la clé étrangère), le nom de l'entité liée et celui de sa clé primaire sont retournés.
 
@@ -1762,7 +1766,7 @@ La fonction `.unlock()` <!-- REF #EntityClass.unlock().Summary -->supprime le ve
 
 Un enregistrement est automatiquement déverrouillé lorsqu'il n'est plus référencé par aucune entité dans le process qui l'a verrouillé (par exemple : si le verrou est posé sur uniquement sur une référence locale d'une entité, l'entité et donc l'enregistrement sont déverrouillés lorsque le process se termine).
 
-> Lorsqu'un enregistrement est verrouillé, il doit être déverrouillé depuis le process qui l'a verrouillé et via la référence d'entité sur laquelle le verrou a été posé. Par exemple :
+Lorsqu'un enregistrement est verrouillé, il doit être déverrouillé depuis le process qui l'a verrouillé et via la référence d'entité sur laquelle le verrou a été posé. Par exemple :
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1771,6 +1775,12 @@ Un enregistrement est automatiquement déverrouillé lorsqu'il n'est plus réfé
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` doit être appelé autant de fois que [`lock()`](#lock) a été appelé dans le même process pour que l'entité soit effectivement déverrouillée.
+
+:::
 
 **Résultat**
 

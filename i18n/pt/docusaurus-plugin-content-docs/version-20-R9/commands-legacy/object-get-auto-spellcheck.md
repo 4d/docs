@@ -18,6 +18,11 @@ displayed_sidebar: docs
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->O comando **OBJECT Get auto spellcheck** devolve o estado da opção Correção ortográfica automática do ou dos objeto(s) designado(s) pelos parâmetros *objeto* e *\** para o processo atual .<!-- END REF-->  
+
+Esse comando é compatível com objetos dos seguintes tipos:
+
+- Baseado em texto [inputs](../FormObjects/input_overview.md)
+- [Áreas do 4D Write Pro](.../FormObjects/writeProArea_overview.md).
   
 Se passado o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (uma cadeia). Se este parâmetro não passar, indica que *objeto* é uma variável ou um campo. Neste caso, passe uma referencia no lugar de um nome.  
   

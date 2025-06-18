@@ -8,62 +8,62 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
-| Parámetros | Tipo    |                             | Descripción                                                                            |
-| ---------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
-| sessionID  | Text    | &#8594; | ID de sesión                                                                           |
-| options    | Integer | &#8594; | Opciones de retorno                                                                    |
-| Resultado  | Object  | &#8592; | Snapshot of running processes and/or (4D Server only) user sessions |
+| Parámetros | Tipo    |                             | Descripción                                                                                          |
+| ---------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| sessionID  | Text    | &#8594; | ID de sesión                                                                                         |
+| options    | Integer | &#8594; | Opciones de retorno                                                                                  |
+| Resultado  | Object  | &#8592; | Instantánea de los procesos en ejecución y/o sesiones de usuario (sólo 4D Server) |
 
 <!-- END REF-->
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                   |
-| ----------- | -------------------------------- |
-| 20 R7       | Support of *sessionID* parameter |
+| Lanzamiento | Modificaciones                    |
+| ----------- | --------------------------------- |
+| 20 R7       | Soporte del parámetro *sessionID* |
 
 </details>
 
 ## Descripción
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF--> This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
+<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF--> Este comando devuelve todos los procesos, incluidos los procesos internos a los que no se puede acceder mediante el comando [Process info](process-info.md). 
 
 By default when used without any parameters, **Process activity** returns an object containing the following properties:
 
-- "processes", a collection of all processes
-- "sessions" (4D Server only), a collection of all sessions
+- "processes", una colección de todos los procesos
+- "sessions" (sólo 4D Server), una colección de todas las sesiones
 
 On 4D Server, you can filter information to be returned using the optional *sessionID* and *options* parameters:
 
-- If you pass a user session ID in the *sessionID* parameter, the command only returns information related to this session. By default if the *options* parameter is omitted, the returned object contains a collection with all processes related to the session and a collection with a single object describing the session. If you pass an invalid session ID, a **null** object is returned.
+- If you pass a user session ID in the *sessionID* parameter, the command only returns information related to this session. By default if the *options* parameter is omitted, the returned object contains a collection with all processes related to the session and a collection with a single object describing the session. Si se pasa un ID de sesión inválido, se devuelve un objeto **null**.
 - You can select the collection(s) to return by passing one of the following constants in the *options* parameter:
 
 | Constante              | Valor | Comentario                                                                          |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------- |
 | Processes and sessions | 0     | Devuelve las listas "processes" y "sessions" (valor por defecto) |
-| Processes only         | 1     | Returns only the "processes" list                                                   |
-| Sólo sesiones          | 2     | Returns only the "sessions" list                                                    |
+| Processes only         | 1     | Devuelve sólo la lista "processes"                                                  |
+| Sólo sesiones          | 2     | Devuelve solo la lista "sessions"                                                   |
 
 :::note
 
-When executed on 4D in remote or local mode, `Process activity` always returns the list of running processes (*sessionID* and *options* parameters are ignored).
+Cuando se ejecuta en 4D en modo remoto o local, `Process activity` siempre devuelve la lista de procesos en ejecución (se ignoran los parámetros *sessionID* y *options*).
 
 :::
 
 **Sessions**
 
-The "sessions" property contains a collection of objects describing all running sessions on the server. For a description of session object properties, please refer to the [`Session info`](session-info.md) command.
+The "sessions" property contains a collection of objects describing all running sessions on the server. Para una descripción de las propiedades del objeto de sesión, por favor consulte el comando [`Session info`](session-info.md).
 
 :::note Notas
 
-- You can get the object of a session using the [Session](session.md) command.
+- Puede obtener el objeto de una sesión utilizando el comando [Session](session.md).
 - `Process activity` returns remote client sessions, stored procedure session and rest sessions but not Web sessions (limitation).
 
 :::
 
 **Processes**
 
-The "processes" property contains a collection of process objects describing all running processes. For a description of process object properties, please refer to the [`Process info`](process-info.md) command.
+The "processes" property contains a collection of process objects describing all running processes. Para una descripción de las propiedades del objeto de proceso, por favor consulte el comando [`Process info`](process-info.md).
 
 On the server, the `Process activity` command returns an additional "session" property:
 
@@ -73,7 +73,7 @@ On the server, the `Process activity` command returns an additional "session" pr
 
 ## Ejemplo 1
 
-You want to get the collection of all user sessions:
+Desea obtener la colección de todas las sesiones usuario:
 
 ```4d
   //To be executed on the server

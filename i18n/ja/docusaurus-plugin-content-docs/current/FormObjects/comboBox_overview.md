@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: コンボボックス
 ---
 
-A combo box is similar to a [drop-down list](dropdownList_Overview.md), except that it accepts text entered from the keyboard and has additional options.
+コンボボックスは [ドロップダウンリスト](dropdownList_Overview.md) と似ていますが、キーボードから入力されたテキストを受けいれる点と、二つの追加オプションがついている点が異なります。
 
 ![](../assets/en/FormObjects/combo_box.png)
 

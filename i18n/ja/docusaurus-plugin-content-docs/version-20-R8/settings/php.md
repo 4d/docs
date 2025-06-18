@@ -7,7 +7,7 @@ title: PHP ページ
 
 :::note
 
-これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 You can also modify and read them separately for each machine and each session using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands. `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。
+これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 You can also modify and read them separately for each machine and each session using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands. `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。
 
 :::
 

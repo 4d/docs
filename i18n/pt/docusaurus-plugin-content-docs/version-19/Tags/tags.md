@@ -54,7 +54,7 @@ As etiquetas 4D são interpretadas de forma recursiva: 4D sempre tenta reinterpr
 
 Se o próprio campo de texto `[Mail]Letter_type` contiver uma tag, por exemplo, `<!--#4DSCRIPT/m_Gender-->`, essa tag será avaliada recursivamente após a interpretação da tag 4DHTML.
 
-Esse princípio poderoso atende à maioria das necessidades relacionadas à transformação de texto. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+Esse princípio poderoso atende à maioria das necessidades relacionadas à transformação de texto. Observe, entretanto, que em alguns casos isso também pode permitir a inserção de código malicioso no contexto web, [o que pode ser evitado](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ### Identificadores com tokens
 

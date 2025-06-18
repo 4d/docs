@@ -249,7 +249,7 @@ Contrairement aux collections standard (non partagées), les collections partag�
 <!-- REF #collection.at().Params -->
 | Paramètres | Type    |    | Description                                      |
 | ---------- | ------- |:--:| ------------------------------------------------ |
-| index      | Integer | -> | Index de l'élément à renvoyer                    |
+| index      | Integer | -> | Indice de l'élément à renvoyer                   |
 | Résultat   | any     | <- | L'élément à cet index|<!-- END REF -->
 
 
@@ -1235,7 +1235,7 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 <!-- REF #collection.find().Params -->
 | Paramètres | Type        |    | Description                                                                  |
 | ---------- | ----------- |:--:| ---------------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Elément à partir duquel débuter la recherche                                 |
+| startFrom  | Integer     | -> | Indice d'élément à partir duquel débuter la recherche                        |
 | formula    | 4D.Function | -> | Objet formule                                                                |
 | methodName | Text        | -> | Nom de méthode                                                               |
 | param      | any         | -> | Paramètre(s) à passer à *formula* ou à *methodName*                          |
@@ -1328,7 +1328,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 <!-- REF #collection.findIndex().Params -->
 | Paramètres | Type        |    | Description                                                                   |
 | ---------- | ----------- |:--:| ----------------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Elément à partir duquel débuter la recherche                                  |
+| startFrom  | Integer     | -> | Indice d'élément à partir duquel débuter la recherche                         |
 | formula    | 4D.Function | -> | Objet formule                                                                 |
 | methodName | Text        | -> | Nom de méthode                                                                |
 | param      | any         | -> | Paramètre(s) à passer à *formula* ou à *methodName*                           |
@@ -1605,7 +1605,7 @@ $c2:=$c.flatMap($f; $c.sum())
 | Paramètres | Type       |    | Description                                                                 |
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------- |
 | toSearch   | expression | -> | Expression à rechercher dans la collection                                  |
-| startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                                |
+| startFrom  | Integer    | -> | Indice d'élément à partir duquel débuter la recherche                       |
 | Résultat   | Boolean    | <- | True si *toSearch* est trouvé dans la collection|<!-- END REF -->
 
 
@@ -1673,7 +1673,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 | Paramètres | Type       |    | Description                                                                                                   |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------- |
 | toSearch   | expression | -> | Expression à rechercher dans la collection                                                                    |
-| startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                                                                  |
+| startFrom  | Integer    | -> | Indice d'élément à partir duquel débuter la recherche                                                         |
 | Résultat   | Integer    | <- | Numéro de la première occurrence de toSearch dans la collection, -1 si non trouvée|<!-- END REF -->
 
 
@@ -1946,7 +1946,7 @@ $last:=$emptyCol.last() // retourne Undefined
 | Paramètres | Type       |    | Description                                                                                                  |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------ |
 | toSearch   | expression | -> | Elément à chercher dans la collection                                                                        |
-| startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                                                                 |
+| startFrom  | Integer    | -> | Indice d'élément à partir duquel débuter la recherche                                                        |
 | Résultat   | Integer    | <- | Numéro de la dernière occurrence de toSearch dans la collection, -1 si non trouvé|<!-- END REF -->
 
 

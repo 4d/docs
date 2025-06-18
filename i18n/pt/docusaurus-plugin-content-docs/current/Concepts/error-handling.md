@@ -25,7 +25,7 @@ Basicamente, há duas maneiras de lidar com erros em 4D. Pode:
 
 Muitas funções de classe 4D, tais como `entity.save()` ou `transporter.send()`, retornam um objeto de *status*. Este objecto é utilizado para armazenar erros "previsíveis" no contexto do tempo de execução, por exemplo, palavra-passe inválida, entidade bloqueada, etc., que não interrompem a execução do programa. Esta categoria de erros pode ser tratada por código normal.
 
-Outros erros "imprevisíveis" incluem erro de gravação em disco, falha de rede, ou em geral qualquer interrupção inesperada. Esta categoria de erros gera exceções e precisa ser tratada através de um método de manipulação de erros ou uma palavra-chave `Try()`.
+Outros erros "imprevisíveis" incluem erro de gravação em disco, falha de rede, ou em geral qualquer interrupção inesperada. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes) and needs to be handled through an error-handling method or a `Try()` keyword.
 
 ## Instalação de um método de gestão de erros
 
@@ -85,17 +85,17 @@ Within the custom error method, you have access to several pieces of information
 
 - variáveis sistema (\*):
 
- - `Erro` (inteiro longo): código de erro
- - `Error line` (entero largo): número de línea del método que ha provocado el error
- - `Linha de erro` (longin): número de linha no método que desencadeou o erro
- - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
+  - `Erro` (inteiro longo): código de erro
+  - `Error line` (entero largo): número de línea del método que ha provocado el error
+  - `Linha de erro` (longin): número de linha no método que desencadeou o erro
+  - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
 
 :::info
 
 4D mantém automaticamente um número de variáveis chamadas [**variáveis sistema**](variables.md#system-variables), indo ao encontro de necessidades diferentes.
 :::
 
-- o comando [`Últimos erros`](../commands-legacy/last-errors.md) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D.
+- o comando [`Last errors`](../commands/last-errors.md) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D.
 - the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
 
 #### Exemplo
@@ -151,7 +151,7 @@ Try (expression) : any | Undefined
 
 Se ocorrer um erro durante sua execução, ele será interceptado e nenhuma caixa de diálogo de erro será exibida, independentemente de um [método de tratamento de erros] (#installing-an-error-handling-method) ter sido instalado ou não antes da chamada para `Try()`. Se *expressão* retorna um valor, `Try()` retorna o último valor avaliado, caso contrário, ele retorna `Undefined`.
 
-Você pode lidar com o(s) erro(s) usando o comando [`Últimos erros`](../commands-legacy/last-errors.md). Se a *expressão* lançar um erro em uma pilha de chamadas `Try()`, o fluxo de execução será interrompido e retornará ao último `Try()` executado (o primeiro encontrado na pilha de chamadas).
+Você pode lidar com o(s) erro(s) usando o comando [`Últimos erros`](../commands/last-errors.md). Se a *expressão* lançar um erro em uma pilha de chamadas `Try()`, o fluxo de execução será interrompido e retornará ao último `Try()` executado (o primeiro encontrado na pilha de chamadas).
 
 :::note
 
@@ -237,11 +237,11 @@ Se um erro *deferred* for lançado fora do bloco `Try`, a execução do código 
 
 :::info
 
-For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](../commands-legacy/throw.md) command description.
+Para obter mais informações sobre erros *deferidos* e *não diferidos*, consulte a descrição do comando [`throw`](../commands-legacy/throw.md).
 
 :::
 
-No bloco de código `Catch`, você pode lidar com o(s) erro(s) usando comandos padrão de tratamento de erros. A função [`Últimos Erros`](../commands-legacy/last-errors.md) contém a última coleção de erros. Você pode [declarar um método de tratamento de erros](#installing-an-error-handling-method) neste bloco de código, caso em que ele é chamado em caso de erro (caso contrário, a caixa de diálogo de erro do 4D é exibida).
+No bloco de código `Catch`, você pode lidar com o(s) erro(s) usando comandos padrão de tratamento de erros. A função [`Últimos Erros`](../commands/last-errors.md) contém a última coleção de erros. Você pode [declarar um método de tratamento de erros](#installing-an-error-handling-method) neste bloco de código, caso em que ele é chamado em caso de erro (caso contrário, a caixa de diálogo de erro do 4D é exibida).
 
 :::note
 
@@ -281,3 +281,15 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 	return $newInvoice
 
 ```
+
+## Códigos de erro
+
+Exceções que interrompem a execução de código são retornadas pela 4D, mas podem ter origens diferentes como o SO, um dispositivo, o kernel 4D, um [`throw`](../commands-legacy/throw.md) no seu código, etc. An error is therefore defined by three elements:
+
+- um **assinatura do componente**, sendo a origem do erro (veja [`Last errors`](../commands/last-errors.md) para ter uma lista de assinaturas)
+- uma **mensagem**, que explica porque o erro ocorreu
+- um **código**, que é um número arbitrário retornado pelo componente
+
+A [caixa de diálogo de erro 4D](../Debugging/basics.md) mostra o código e a mensagem para o usuário.
+
+Para ter uma descrição completa de um erro e especialmente de sua origem, você precisa chamar o comando [`Last errors`](../commands/last-errors.md). When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.

@@ -19,11 +19,11 @@ displayed_sidebar: docs
 
 ## Descripción
 
-El comando **WP DELETE SUBSECTION** <!--REF #_command_.WP DELETE SUBSECTION.Summary-->elimina los elementos *subSectionType* de la sección *wpSection* 4D Write Pro, o directamente elimina la *subSection*<!-- END REF-->. Subsection elements include headers, footers, columns, anchored pictures, etc. Note that the body of the document is left untouched.
+El comando **WP DELETE SUBSECTION** <!--REF #_command_.WP DELETE SUBSECTION.Summary-->elimina los elementos *subSectionType* de la sección *wpSection* 4D Write Pro, o directamente elimina la *subSection*<!-- END REF-->. Subsection elements include headers, footers, columns, anchored pictures, etc. Tenga en cuenta que el cuerpo del documento no se modifica.
 
-In *wpSection*, pass the section from which you want to remove the subsection elements. The section can be obtained using the [WP Get sections](../commands-legacy/wp-get-sections.md) or [WP Get section](../commands-legacy/wp-get-section.md) commands.
+In *wpSection*, pass the section from which you want to remove the subsection elements. La sección puede obtenerse utilizando los comandos [WP Get sections](../commands-legacy/wp-get-sections.md) o [WP Get section](../commands-legacy/wp-get-section.md).
 
-The *subSectionType* parameter specifes the subsection to delete. You can pass one of the following constants:
+El parámetro *subSectionType* especifica la subsección a borrar. Puede pasar una de las siguientes constantes:
 
 | Constante     | Tipo    | Valor |
 | ------------- | ------- | ----- |

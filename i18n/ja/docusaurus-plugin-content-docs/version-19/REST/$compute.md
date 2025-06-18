@@ -38,8 +38,7 @@ title: '$compute'
  `GET  /rest/Employee/salary/?$compute=$all`
 
 **レスポンス**:
-
-````
+```js
 {
     "salary": {
         "count": 4,
@@ -57,9 +56,9 @@ title: '$compute'
 
 **レスポンス**:
 
-````
+```js
 {
-    "salary": {
+    "firstName": {
         "count": 4,
         "min": Anne,
         "max": Victor
@@ -73,7 +72,7 @@ title: '$compute'
 
 **レスポンス**:
 
-`235000`
+`335000`
 
 
 オブジェクト属性に対して特定の計算のみをおこなうには、次のように書きます:

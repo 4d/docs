@@ -82,7 +82,7 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 <!-- END REF -->
 
-The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
+A função `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary --> cria e retorna um novo [objeto `4D.WebSocket`](#websocket-object) conectado ao servidor de WebSocket no endereço que você passou em *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
 
 Em *url*, passe o URL ao qual o servidor WebSocket responderá. Podem ser utilizados os seguintes padrões de URL:
 
@@ -112,7 +112,7 @@ Aqui está a sequência de chamadas de retorno:
 1. `onOpen` é executado uma vez
 2. São executados zero ou vários `onMessage`
 3. Zero ou um `onError` é executado (pára o processamento)
-4. `onTerminate` is always executed
+4. `onTerminate` é sempre executado uma vez
 
 #### Exemplo
 
@@ -189,7 +189,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.send()` function <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
+A função `.send()` <!-- REF #WebSocketClass.send().Summary -->envia *mensagem* ao servidor de WebSocket no tipo de dados definido (Texto, Blob, ou Objeto)<!-- END REF -->.
 
 Os conteúdos seguintes são enviados em função do tipo de *message*:
 
@@ -232,14 +232,14 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #WebSocketClass.terminate().Summary -->closes the WebSocket connection, along with optional *code* and *reason* parameters<!-- END REF -->.
+A função `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->fecha a conexão de WebSocket, juntamente com parâmetros opcionais *code* e *reason*<!-- END REF -->.
 
 In *code*, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
 
 - If unspecified, a close code for the connection is automatically set to 1000 for a normal closure, or otherwise to another standard value in the range 1001-1015 that indicates the actual reason the connection was closed.
 - Se especificado, o valor desse parâmetro de código substitui a configuração automática. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. Se você especificar um valor *code*, também deverá especificar um valor *reason*.
 
-In *reason*, you can pass a string describing why the connection is being closed.
+Em *reason*, você pode passar uma frase descrevendo porque a conexão está sendo fechada.
 
 <!-- END REF -->
 

@@ -599,15 +599,14 @@ El siguiente código genérico duplica cualquier entidad:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                                               |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Resultado  | Text    | <- | Valor de la llave primaria de texto de la entidad                                                         |
-| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                         |
+| Resultado  | any     | <- | Valor de la llave primaria de la entidad (Integer or Text)                                                |
 
 <!-- END REF -->
 
@@ -1539,11 +1538,12 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 #### Descripción
 
-La función `.touched()` <!-- REF #EntityClass.touched().Summary -->comprueba si un atributo de la entidad ha sido modificado o no desde que se cargó la entidad en la memoria o se guardó<!-- END REF -->.
+La función `.touched()` <!-- REF #EntityClass.touched().Summary -->retorna True si al menos un atributo de entidad ha sido modificado desde que la entidad fue cargada en la memoria o guardada<!-- END REF -->. Puede utilizar esta función para determinar si necesita guardar la entidad.
 
-Si un atributo ha sido modificado o calculado, la función devuelve True, en caso contrario devuelve False. Puede utilizar esta función para determinar si necesita guardar la entidad.
+Esto solo se aplica a los atributos de [tipo](DataClassClass.md#attributename) `storage` o `relatedEntity`.
 
-Esta función devuelve False para una nueva entidad que acaba de ser creada (con [`.new( )`](DataClassClass.md#new)). Tenga en cuenta, sin embargo, que si utiliza una función que calcula un atributo de la entidad, la función `.touched()` devolverá entonces True. Por ejemplo, si se llama a [`.getKey()`](#getkey) para calcular la llave primaria, `.touched()` devuelve True.
+Para una nueva entidad que acaba de ser creada (con [`.new()`](DataClassClass.md#new)), la función devuelve False. Sin embargo, en este contexto. si accede a un atributo cuya [propiedad `autoFilled` ](./DataClassClass.md#returned-object) es True, la función `.touched()` devolverá True. Por ejemplo, después de ejecutar `$id:=ds.Employee.ID` para una nueva entidad (asumiendo que el atributo ID tiene la propiedad "Autoincrement"), `.touched()` devuelve True.
+
 
 #### Ejemplo
 
@@ -1586,7 +1586,7 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 La función `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary -->devuelve los nombres de los atributos que han sido modificados desde que la entidad fue cargada en memoria<!-- END REF -->.
 
-Esto se aplica a los atributos [kind](DataClassClass.md#attributename) `storage` o `relatedEntity`.
+Esto solo se aplica a los atributos de [tipo](DataClassClass.md#attributename) `storage` o `relatedEntity`.
 
 En el caso de que se haya tocado una entidad relacionada (es decir, la llave externa), se devuelve el nombre de la entidad relacionada y el nombre de su llave primaria.
 
@@ -1663,7 +1663,8 @@ La función `.unlock()` <!-- REF #EntityClass.unlock().Summary -->elimina el blo
 > Para más información, consulte la sección [Entity locking](ORDA/entities.md#entity-locking).
 
 Un registro se desbloquea automáticamente cuando ya no es referenciado por ninguna entidad en el proceso de bloqueo (por ejemplo: si el bloqueo se pone sólo en una referencia local de una entidad, la entidad y, por tanto, el registro se desbloquea cuando el proceso termina).
-> Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
+
+Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1672,6 +1673,13 @@ Un registro se desbloquea automáticamente cuando ya no es referenciado por ning
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` debe ser llamado tantas veces como [`lock()`](#lock) fue llamado en el mismo proceso para que la entidad sea realmente desbloqueada.
+
+:::
+
 
 **Resultado**
 

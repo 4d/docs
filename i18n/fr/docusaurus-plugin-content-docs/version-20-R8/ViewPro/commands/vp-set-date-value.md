@@ -17,13 +17,13 @@ title: VP SET DATE VALUE
 
 ## Description
 
-The `VP SET DATE VALUE` command <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
+La commande `VP SET DATE VALUE` <!-- REF #_method_.VP SET DATE VALUE.Summary --> attribue une valeur de date spécifiée à une plage de cellules désignée<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) whose value you want to specify. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
+Dans *rangeObj*, passez une plage de cellule(s) dont vous voulez spécifier la valeur. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
+Le paramètre *dateValue* indique une valeur date à assigner à *rangeObj*.
 
-The optional *formatPattern* defines a pattern for the *dateValue* parameter. Passez un format personnalisé ou utilisez ou utilisez l'une des constantes suivantes :
+L'option *formatPattern* définit un modèle pour le paramètre *dateValue*. Passez un format personnalisé ou utilisez ou utilisez l'une des constantes suivantes :
 
 | Constante               | Description                             | Configuration par défaut des US |
 | ----------------------- | --------------------------------------- | ------------------------------- |
@@ -32,15 +32,15 @@ The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pa
 | `vk pattern short date` | Format ISO 8601 court pour la date      | "MM/dd/yyyy"                    |
 | `vk pattern year month` | Format ISO 8601 pour le mois et l'année | "yyyy MMMM"                     |
 
-For information on patterns and formatting characters, please refer to the [Date and time formats](../configuring.md#date-and-time-formats) section.
+Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Formats de date et d'heure] (../configuring.md#date-and-time-formats).
 
 ## Exemple
 
 ```4d
-//Set the cell value to the current date
+//Fixer la valeur de la cellule à la date du jour
 VP SET DATE VALUE(VP Cell("ViewProArea";4;2);Current date))
  
-//Set the cell value to a specific date with a designated format
+//Fixer la valeur de la cellule à une date spécifique avec un format désigné
 VP SET DATE VALUE(VP Cell("ViewProArea";4;4);Date("12/25/94");"d/m/yy ")
 VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 ```

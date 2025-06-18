@@ -461,12 +461,12 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 リモートデータストアの場合:
 
 ```4d
-  var $remoteDS : cs.DataStore
-  var $info; $connectTo : Object
+  var $remoteDS : 4D.DataStoreImplementation
+var $info; $connectTo : Object
 
- $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
- $remoteDS:=Open datastore($connectTo;"students")
- $info:=$remoteDS.getInfo()
+$connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
+$remoteDS:=Open datastore($connectTo;"students")
+$info:=$remoteDS.getInfo()
 
   //{"type":"4D Server",
   //"localID":"students",
@@ -1015,7 +1015,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 クライアント側の ORDAリクエストログを作成するには、リモートマシン上でこの関数を呼び出します。 ログは、渡した引数によってファイルまたはメモリに送ることができます:
 
 - `File` コマンドで作成された *file* オブジェクトを渡した場合、ログデータはオブジェクト (JSON フォーマット) のコレクションとしてこのファイルに書き込まれます。 各オブジェクトは一つのリクエストを表します。<br/>ファイルがまだ存在しない場合には、作成されます。 もしファイルが既に存在する場合、新しいログデータはそこに追加されていきます。
- メモリへのログ記録が既に始まっている状態で、 `.startRequestLog()`が file 引数付きで呼び出された場合、メモリに記録されていたログは停止され消去されます。
+  メモリへのログ記録が既に始まっている状態で、 `.startRequestLog()`が file 引数付きで呼び出された場合、メモリに記録されていたログは停止され消去されます。
 
 > JSON 評価を実行するには、ファイルの終わりに手動で \] 文字を追加する必要があります。
 
@@ -1123,7 +1123,7 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

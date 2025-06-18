@@ -6,7 +6,7 @@ title: Function
 Um objeto **`4D.Function`** contém um trecho de código que pode ser executado a partir de um objeto, usando o operador `()`, ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos `Function`:
 
 - **as funções nativas**, ou seja, funções incorporadas de várias classes 4D, como `collection.sort()` ou `file.copyTo()`.
-- **as funções usuário**, criadas nas [classes usuário] (Concepts/classes.md) usando a palavra-chave [Function](Concepts/classes.md#function).
+- **as funções usuário**, criadas nas [classes usuário](Concepts/classes.md) usando a palavra-chave [Function](Concepts/classes.md#function).
 - **funções de fórmula**, ou seja, funções que podem executar qualquer fórmula 4D.
 
 ### Objetos de formulários
@@ -47,7 +47,7 @@ Você também pode executar uma função usando as funções [`apply()`](#apply)
 
 #### Utilização de parâmetros
 
-You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. Por exemplo, pode escrever:
+Você pode passar parâmetros para suas fórmulas usando uma sintaxe de parâmetro sequencial baseada em $1, $2...$n. Por exemplo, pode escrever:
 
 ```4d
  var $f : Object
@@ -112,11 +112,11 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <!-- REF #FunctionClass.apply().Params -->
 
-| Parâmetro     | Tipo       |                             | Descrição                                                                                                               |
-| ------------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
-| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                     |
-| formulaParams | Collection |              ->             | Collection of values to be passed as $1...$n when `formula` is executed |
-| Resultados    | any        | <- | Valores de execução de fórmula                                                                                          |
+| Parâmetro     | Tipo       |                             | Descrição                                                                                                                       |
+| ------------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
+| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                             |
+| formulaParams | Collection |              ->             | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
+| Resultados    | any        | <- | Valores de execução de fórmula                                                                                                  |
 
 <!-- END REF -->
 
@@ -124,9 +124,9 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 A função `.apply()` <!-- REF #FunctionClass.apply().Summary -->executa o objeto `formula` ao qual ele é aplicado e retorna o valor resultante<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
+No parâmetro *thisObj* pode passar uma referência ao objeto a ser usada como `This` na fórmula.
 
-You can also pass a collection to be used as $1...$n parameters in the formula using the optional *formulaParams* parameter.
+Também pode passar uma coleção a ser usada como parâmetros $1...$n na fórmula usando o parâmetro opcional *formulaParams*.
 
 Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros são passados como coleção. Isso pode ser útil para passar resultados calculados. Isso pode ser útil para passar resultados calculados.
 
@@ -184,7 +184,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros s�
 
 A função `.call()` <!-- REF #FunctionClass.call().Summary -->executa o objeto `formula` ao qual ele está aplicado e retorna o valor resultante<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
+No parâmetro *thisObj* pode passar uma referência ao objeto a ser usada como `This` na fórmula.
 
 Você também pode passar valores para serem usados como parâmetros *$1...$n* na fórmula usando os parâmetros *params* opcionais.
 

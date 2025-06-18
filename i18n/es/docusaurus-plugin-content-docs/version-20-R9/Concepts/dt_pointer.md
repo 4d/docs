@@ -94,12 +94,12 @@ Con:
 
 :::warning Punteros Null
 
-Trying to assign or to read a null pointer (aka "nil") will produce an error at runtime. Por ejemplo:
+Intentar asignar o leer un puntero null (también conocido como "nil") producirá un error durante la ejecución. Por ejemplo:
 
 ```4d
-var $p : Pointer // non initialized pointer (Nil value)
-$v:=$p-> // error
-$p->:=$v // error
+var $p : Pointer // Puntero no inicializado (Valor Nil)
+$v:=$p- // error
+$p-:=$v // error
 ```
 
 Para evitar estos errores, puede escribir:
@@ -172,12 +172,12 @@ Los punteros a variables locales permiten guardar las variables del proceso en m
 ...
 ```
 
-The debugger will display $param as follows:
+El depurador mostrará $param de la siguiente manera:
 
 | $param | ->$MyVar (Method1) |
 | ------ | ------------------------------------- |
 
-You can expand $param and its value will be:
+Puede expandir $param y su valor será:
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |
@@ -258,15 +258,15 @@ Muestra un cuadro de alerta con la palabra "Goodbye".
 A continuación se explica cada línea del ejemplo:
 
 - $MyVar:="Hello"
- \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
+  \--> Esta línea pone la cadena "Hello" en la variable $MyVar.
 - $PointerOne:=-$MyVar
- \--> $PointerOne ahora contiene un puntero a $MyVar.
+  \--> $PointerOne ahora contiene un puntero a $MyVar.
 - $PointerTwo:=->$PointerOne
- \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
+  \--> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
 - ($PointerTwo->)->:="Goodbye"
- \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
+  \--> $PointerTwo-> hace referencia al contenido de $PointerOne, que a su vez hace referencia a $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
 - ALERT (($PointerTwo->)->)
- \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo-&#062;)-&#062; references the contents of $MyVar.
+  \--> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Therefore ($PointerTwo-&#062;)-&#062; references the contents of $MyVar.
 
 La siguiente línea pone "Hello" en $MyVar:
 

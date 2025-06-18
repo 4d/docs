@@ -11,7 +11,7 @@ El siguiente formulario multipágina utiliza un objeto de control de pestañas:
 
 Para navegar de una pantalla a otra, el usuario sólo tiene que hacer clic en la pestaña deseada.
 
-Las pantallas pueden representar páginas en un formulario de varias páginas o un objeto que cambia cuando el usuario hace clic en una pestaña. If the tab control is used as a page navigation tool, then the [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) command or the `gotoPage` standard action would be used when a user clicks a tab.
+Las pantallas pueden representar páginas en un formulario de varias páginas o un objeto que cambia cuando el usuario hace clic en una pestaña. Si el control de pestañas se utiliza como una herramienta de navegación de la página, entonces se utilizaría el comando [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) o la acción estándar `gotoPage` cuando un usuario hace clic en una pestaña.
 
 Otro uso del control de pestañas es para controlar los datos que se muestran en un subformulario. Por ejemplo, se podría implementar un Rolodex utilizando un control de pestañas. Las pestañas mostrarían las letras del alfabeto y la acción del control de pestañas sería cargar los datos correspondientes a la letra que el usuario pulsara.
 

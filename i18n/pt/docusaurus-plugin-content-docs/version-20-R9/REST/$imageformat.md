@@ -17,7 +17,7 @@ Definir o formato a utilizar para mostrar imagens. Pode utilizar um dos seguinte
 | ".jpeg" or "image/jpeg" | Formato JPEG                      |
 | ".tiff" ou "image/tiff" | Formato TIFF                      |
 
-Once you have defined the format, you must pass the image attribute to [`$expand`]($expand.md) to load the photo completely.
+Uma vez definido o formato, é necessário passar o atributo de imagem a [`$expand`]($expand.md) para carregar completamente a fotografia.
 
 Se não houver nenhuma imagem a carregar ou se o formato não permitir que a imagem seja carregada, a resposta será um objeto vazio `{}`.
 

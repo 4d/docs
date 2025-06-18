@@ -56,11 +56,11 @@ Todo atributo de la dataclass está disponible como una propiedad de una entidad
 El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attributename) (relation o storage):
 
 - Si el tipo de *attributeName* es **storage**:
- `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
+  `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
 - Si el tipo de *attributeName* es **relatedEntity**:
- `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
+  `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
 - Si el tipo *attributeName* es **relatedEnties**:
- `.attributeName` devuelve una nueva selección de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
+  `.attributeName` devuelve una nueva selección de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
 
 #### Ejemplo
 
@@ -384,7 +384,7 @@ El objeto devuelto por `.drop()` contiene las siguientes propiedades:
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:<br/><li>la entidad ha sido eliminada (el marcador ha cambiado y ahora el espacio de memoria está libre)</li><li>la entidad ha sido eliminada y reemplazada por otra con otra clave primaria (el marcador ha cambiado y una nueva entidad ahora utiliza el espacio memoria). Cuando se utiliza entity.drop( ), este error puede ser devuelto cuando se utiliza la opción dk force drop if stamp changed. Cuando se utiliza entity.lock(), se puede devolver este error cuando la opción dk reload if stamp changed es utilizada</li> **statusText asociado**: "Entity does not exist anymore" |
-| `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<br/> **Associated statusText**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<br/> **statusText asociado**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.<br/>**statusText asociado**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `dk status stamp has changed`             | 2     | El valor del marcador interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).<br/><li>con `.save()`: error solo si no se utiliza la opción `dk auto merge`</li><li>con `.drop()`: error solo si no se utiliza la opción `dk force drop if stamp changed`</li><li>con `.lock()`: error solo si no se utiliza la opción `dk reload if stamp changed`</li><li>**Estado asociado**: "Stamp has changed"</li>                                                                                                                                                                                                                                                                                                                          |
 | `dk status wrong permission`              | 1     | Los privilegios actuales no permiten suprimir la entidad. **Associated statusText**: "Permission Error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -614,15 +614,14 @@ El siguiente código genérico duplica cualquier entidad:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
 
 | Parámetros | Tipo    |                             | Descripción                                                                                                               |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Resultado  | Text    | <- | Valor de la llave primaria de texto de la entidad                                                                         |
-| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                                         |
+| Resultado  | any     | <- | Valor de la llave primaria de la entidad (Integer or Text)                                             |
 
 <!-- END REF -->
 
@@ -956,7 +955,12 @@ Un registro bloqueado por `.lock()` se desbloquea:
 - cuando la función [`unlock()`](#unlock) se llama en una entidad correspondiente en el mismo proceso
 - automáticamente, cuando ya no es referenciado por ninguna entidad en la memoria. Por ejemplo, si el bloqueo se pone sólo en una referencia local de una entidad, la entidad se desbloquea cuando la función termina. Mientras haya referencias a la entidad en la memoria, el registro permanece bloqueado.
 
-> Una entidad también puede ser [bloqueada por una sesión REST](../REST/$lock.md), en cuyo caso solo puede ser desbloqueada por la sesión.
+:::note Notas
+
+- [`unlock()`](#unlock) debe ser llamado tantas veces como `lock()` fue llamado en el mismo proceso para que la entidad sea realmente desbloqueada.
+- Una entidad también puede ser [bloqueada por una sesión REST](../REST/$lock.md), en cuyo caso solo puede ser desbloqueada por la sesión.
+
+:::
 
 Por defecto, si se omite el parámetro *mode*, la función devolverá un error (ver más abajo) si la misma entidad fue modificada (es decir, el sello ha cambiado) por otro proceso o usuario en el ínterin.
 
@@ -1640,11 +1644,11 @@ Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
 
 #### Descripción
 
-La función `.touched()` <!-- REF #EntityClass.touched().Summary --> comprueba si un atributo de la entidad ha sido modificado o no desde que la entidad fue cargada en memoria o guardada<!-- END REF -->.
+La función `.touched()` <!-- REF #EntityClass.touched().Summary -->devuelve True si al menos un atributo de la entidad ha sido modificado desde que la entidad fue cargada en memoria o guardada<!-- END REF -->. Puede utilizar esta función para determinar si necesita guardar la entidad.
 
-Si un atributo ha sido modificado o calculado, la función devuelve True, en caso contrario devuelve False. Puede utilizar esta función para determinar si necesita guardar la entidad.
+Esto solo se aplica a los atributos de [`kind`](DataClassClass.md#returned-object) "storage" o "relatedEntity".
 
-Esta función devuelve False para una nueva entidad que acaba de ser creada (con [`.new( )`](DataClassClass.md#new)). Tenga en cuenta, sin embargo, que si utiliza una función que calcula un atributo de la entidad, la función `.touched()` devolverá entonces True. Por ejemplo, si llama [`.getKey()`](#getkey) para calcular la llave primaria, `.touched()` devuelve True.
+Para una nueva entidad que acaba de ser creada (con [`.new()`](DataClassClass.md#new)), la función devuelve False. Sin embargo, en este contexto, si accede a un atributo cuya [propiedad `autoFilled`](./DataClassClass.md#returned-object) es True, la función `.touched()` entonces devolverá True. Por ejemplo, después de ejecutar `$id:=ds.Employee.ID` para una nueva entidad (asumiendo que el atributo ID tiene la propiedad "Autoincrement"), `.touched()` devuelve True.
 
 #### Ejemplo
 
@@ -1688,7 +1692,7 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 La función`.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary --> devuelve los nombres de los atributos que han sido modificados desde que la entidad fue cargada en memoria<!-- END REF -->.
 
-Esta función se aplica a los atributos cuyo [kind](DataClassClass.md#attributename) es `storage` o `relatedEntity`.
+Esto solo se aplica a los atributos de [`kind`](DataClassClass.md#returned-object) "storage" o "relatedEntity".
 
 En el caso de que se haya tocado una entidad relacionada (es decir, la llave externa), se devuelve el nombre de la entidad relacionada y el nombre de su llave primaria.
 
@@ -1767,7 +1771,7 @@ La función `.unlock()` <!-- REF #EntityClass.unlock().Summary --> elimina el bl
 
 Un registro se desbloquea automáticamente cuando ya no es referenciado por ninguna entidad en el proceso de bloqueo (por ejemplo: si el bloqueo se pone sólo en una referencia local de una entidad, la entidad y, por tanto, el registro se desbloquea cuando el proceso termina).
 
-> Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
+Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1776,6 +1780,12 @@ Un registro se desbloquea automáticamente cuando ya no es referenciado por ning
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` debe ser llamado tantas veces como [`lock()`](#lock) fue llamado en el mismo proceso para que la entidad sea realmente desbloqueada.
+
+:::
 
 **Resultado**
 

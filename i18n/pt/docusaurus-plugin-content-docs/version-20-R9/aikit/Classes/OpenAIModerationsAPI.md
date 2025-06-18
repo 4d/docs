@@ -28,7 +28,7 @@ https://platform.openai.com/docs/api-reference/moderations/create
 
 ## Exemplos
 
-### Moderate a text
+### Moderar um texto
 
 ```4d
 var $result:=$client.moderation.create("Some text to classify"; "omni-moderation-latest"; $parameters)

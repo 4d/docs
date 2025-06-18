@@ -1,6 +1,6 @@
 ---
 id: number
-title: Number (Real, Integer)
+title: Número (Real, Entero)
 ---
 
 Número es un término genérico que significa:
@@ -13,7 +13,7 @@ Número es un término genérico que significa:
 Usually when working with Integers, you handle *Long* values (4-byte Integer). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
 
 - Database fields with `Integer` type,
-- Elements of arrays declared with [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
+- Elementos de arrays declarados con [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
 
 These legacy data types are automatically converted in *Longs* when used in the 4D Language.
 
@@ -121,7 +121,7 @@ Los operadores bitwise operan sobre expresiones o valores Enteros (largos).
 
 While using the bitwise operators, you must think about a Long value as an array of 32 bits. Los bits están numerados de 0 a 31, de derecha a izquierda.
 
-Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor Entero largo como un valor en el que se pueden almacenar 32 valores booleanos. A bit equal to 1 means **True** and a bit equal to 0 means **False**.
+Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor Entero largo como un valor en el que se pueden almacenar 32 valores booleanos. Un bit igual a 1 significa **True** y un bit igual a 0 significa **False**.
 
 An expression that uses a bitwise operator returns a Long value, except for the Bit Test operator, where the expression returns a Boolean value. La siguiente tabla lista los operadores a nivel de bits y su sintaxis:
 

@@ -23,7 +23,7 @@ Webユーザーに特定のアクセス権を与えるには、ユーザーを�
 
 ### カスタムの認証 (デフォルト)
 
-このモードでは基本的に、ユーザーを認証する方法は開発者に委ねられています。 4D only evaluates HTTP requests [that require an authentication](#database-method-calls).
+このモードでは基本的に、ユーザーを認証する方法は開発者に委ねられています。 4Dは、[認証を必要とする](#データベースメソッドの呼び出し) HTTPリクエストのみを評価します。
 
 この認証モードは最も柔軟性が高く、以下のことが可能です:
 
@@ -119,7 +119,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
   -> $RequestAccepted : Boolean
 
 ```
-> `On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
+> `On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 このデータベースメソッドが受け取る情報は、[認証モード](#authentication-modes)の設定により異なります。
 
 #### $1 - URL
 

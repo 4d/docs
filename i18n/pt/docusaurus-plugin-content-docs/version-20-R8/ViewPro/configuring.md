@@ -51,7 +51,7 @@ Tanto os recursos relacionados ao Ribbon como o grupo da interface de ferramenta
 
 Os seguintes eventos de formulário estão disponíveis na lista de propriedades para as áreas 4D View Pro.
 
-Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Some standard form events provide extended information in the object returned by the [`FORM Event`](../commands/form-event.md) command when they are generated for 4D View Pro areas. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
+Alguns dos eventos são eventos padrão de formulário (disponíveis para todos os objetos ativos) e alguns são eventos específicos de forma 4D View Pro. Alguns eventos formulário padrão fornecem informações ampliadas no objeto retornado pelo comando [`FORM Event`](../commands/form-event.md) quando são gerados para áreas 4D View Pro. A tabela a seguir mostra quais eventos são padrões e quais são específicos ou fornecem informações adicionais para as áreas 4D View Pro:
 
 | Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -126,7 +126,7 @@ Definir um padrão de formato garante que o conteúdo dos seus documentos 4D Vie
 
 A versão 4D View Pro tem formatos embutidos para números, datas, horas e texto, mas você também pode criar seus próprios padrões para formatar o conteúdo das células usando caracteres especiais e códigos.
 
-For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern *($\* #,##0.00*) which would display amounts as shown:
+For example, when using the [VP SET VALUE](commands/vp-set-value.md) or [VP SET NUM VALUE](commands/vp-set-num-value.md) commands to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) a ser alinhado, independentemente do espaço exigido pelo número (ou seja, se o valor é US$ 5,00 ou US$ 5.000,00). You could use formatting characters and spectify the pattern *($\* #,##0.00*) which would display amounts as shown:
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
@@ -279,7 +279,7 @@ Atributos de cabeçalho e rodapé são usados para especificar texto ou imagens 
 | headerRight       | text                                      | O texto e o formato do cabeçalho direito nas páginas impressas.  |
 | headerRightImage  | picture &#124; text\* | A imagem para a secção direita do cabeçalho.                     |
 
-\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](commands/vp-get-print-info.md).
+\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. Não importa o tipo usado para definir uma imagem, a imagem em si (não é uma referência) é armazenada na área 4D View Pro sendo retornada pela [VP Get print info](commands/vp-get-print-info.md).
 
 ### Caracteres especiais
 
@@ -358,9 +358,9 @@ Atributos do tamanho do papel são usados para especificar as dimensões ou mode
 - If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
- - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
- - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
-  In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
+  - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
+  - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
+    Nesse caso, [`VP Get print info`](./commands/vp-get-print-info.md) retorna o formato correspondente com a altura e a largura.
 
 ### Escala
 
@@ -398,7 +398,7 @@ Atributos de marca d'água são usados para sobrepor texto ou uma imagem na áre
 |               | \[ ].x        | inteiro longo                             | A coordenada horizontal do ponto superior esquerdo do texto / imagem da marca d'água.                                                                                                                                                                                                                                            |
 |               | \[ ].y        | inteiro longo                             | A coordenada vertical do ponto superior esquerdo do texto / imagem da marca d'água.                                                                                                                                                                                                                                              |
 
-\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](commands/vp-get-print-info.md).
+\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. Não importa o tipo usado para definir uma imagem, a imagem em si (não é uma referência) é armazenada na área 4D View Pro sendo retornada pela [VP Get print info](commands/vp-get-print-info.md).
 
 ## Objetos Estilo
 
@@ -406,7 +406,7 @@ Objetos de estilo 4D View Pro e folhas de estilo permitem que você controle os 
 
 ### Objetos de estilo & Hojas de estilo
 
-Os objetos estilo contêm os parâmetros de estilo. Podem ser utilizados numa folha de estilo ou por conta própria. Objetos de estilo também podem ser usados além de uma folha de estilo para que diferentes configurações possam ser especificadas para intervalos de células individuais sem afetar o resto do documento. You can use style objects directly with the [VP SET CELL STYLE](commands/vp-set-cell-style.md) and [VP SET DEFAULT STYLE](commands/vp-set-default-style.md) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
+Os objetos estilo contêm os parâmetros de estilo. Podem ser utilizados numa folha de estilo ou por conta própria. Objetos de estilo também podem ser usados além de uma folha de estilo para que diferentes configurações possam ser especificadas para intervalos de células individuais sem afetar o resto do documento. Você pode usar objetos de estilo diretamente com os comandos [VP SET CELL STYLE](commands/vp-set-cell-style.md) e [VP SET PELO STYLE](commands/vp-set-default-style.md). You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](commands/vp-set-table-theme.md) or [VP CREATE TABLE](commands/vp-create-table.md) commands.
 
 Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Folhas de estilo salvas com o documento podem ser usadas para definir as propriedades para uma única folha, várias folhas ou um livro de trabalho inteiro. Quando criada, uma folha de estilo 4D View Pro é dado um nome que é salvo na folha de estilo na propriedade "nome". Isto permite que uma folha de estilo seja facilmente usada e, se cuidadosamente selecionada, pode facilitar sua identificação e propósito (por exemplo, Letterhead\_internal, Letterhead_external).
 
@@ -448,7 +448,7 @@ Exemplo:
 
 | Propriedade     |              | Tipo          | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Valores possíveis                                                                                                                                                                                                                                  |
 | --------------- | ------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| font            |              | text          | Especifica as características da fonte em CSS (fonte curta ("font-style font-variant font-weight font-size/line-height font-family"). Exemplo: "14pt Century Gothic". Os valores font-size e font-family são obrigatórios. Se um dos outros valores estiver faltando, seus valores padrão serão usados. Nota: se um nome de fonte conter um espaço, o nome deve estar entre aspas. | Uma abreviação de fonte CSS. 4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](commands/vp-font-to-object.md) and [`VP Object to font`](commands/vp-object-to-font.md) |
+| font            |              | text          | Especifica as características da fonte em CSS (fonte curta ("font-style font-variant font-weight font-size/line-height font-family"). Exemplo: "14pt Century Gothic". Os valores font-size e font-family são obrigatórios. Se um dos outros valores estiver faltando, seus valores padrão serão usados. Nota: se um nome de fonte conter um espaço, o nome deve estar entre aspas. | Uma abreviação de fonte CSS. 4D fornece comandos para lidar com características da fonte como objetos: [`VP Font to object`](commands/vp-font-to-object.md) e [`VP Object to font`](commands/vp-object-to-font.md) |
 | formatter       |              | text          | Padrão para propriedade valor/tempo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Formatos número/texto/data/hora, caracteres especiais. Ver [Formato de celda](#cell-format).                                                                                                                       |
 | isVerticalText  |              | boolean       | Especifica a direção do texto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | True = texto vertical, False = texto horizontal.                                                                                                                                                                                   |
 | labelOptions    |              | object        | Define as opções de etiqueta de célula (opções de marca de água).                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                                    |
@@ -482,7 +482,7 @@ Exemplo:
 
 ## Objeto 4D View Pro
 
-El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. É tratado automaticamente pelo 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) or [VP Export to object](commands/vp-export-to-object.md) commands.
+El [objeto](Concepts/dt_object.md) 4D View Pro almacena todo el contenido de la hoja de cálculo. É tratado automaticamente pelo 4D View Pro. Você pode definir ou obter este objeto usando os comandos [VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) ou [VP Export to object](commands/vp-export-to-object.md).
 
 Contém as seguintes propriedades:
 

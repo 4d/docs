@@ -23,13 +23,13 @@ The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summa
 
 > In the case of a section or a subsection, the *sectionOrSubsection* object can be passed alone and all the attributes are reset at once.
 
-In the *targetObj* parameter, you can pass either:
+No parâmetro *targetObj*, você pode passar qualquer um deles:
 
 - um intervalo, ou
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
-When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the *4D Write Pro Attributes* section.
+When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Os valores padrão estão listados na seção *4D Write Pro Attributes*.
 
 :::note Notas
 
@@ -47,7 +47,7 @@ You want to remove several attributes from the following selection:
 
 ![](../../assets/en/WritePro/commands/pict2643861.en.png)
 
-You can execute:
+Você pode executar:
 
 ```4d
  $range:=WP Get selection(*;"WParea")
@@ -58,7 +58,7 @@ You can execute:
  WP RESET ATTRIBUTES($range;wk border style)
 ```
 
-The resulting document is:
+O documento resultante é:
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 

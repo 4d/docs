@@ -5,15 +5,15 @@ title: OpenAIModelResult
 
 # OpenAIModelResult
 
-## Inherits
+## 継承元
 
 - [OpenAIResult](OpenAIResult.md)
 
 ## プロパティ
 
-| プロパティ   | 型                             | 説明                         |
-| ------- | ----------------------------- | -------------------------- |
-| `model` | [OpenAIModel](OpenAIModel.md) | The model. |
+| プロパティ   | 型                             | 説明   |
+| ------- | ----------------------------- | ---- |
+| `model` | [OpenAIModel](OpenAIModel.md) | モデル。 |
 
 ## 参照
 

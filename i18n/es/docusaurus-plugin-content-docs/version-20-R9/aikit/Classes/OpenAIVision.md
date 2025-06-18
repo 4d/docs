@@ -15,7 +15,7 @@ Helper for vision stuff.
 
 | Parámetros | Tipo                                        | Descripción                                                |
 | ---------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageURL* | Text                                        | The URL of the image to analyze.           |
+| *imageURL* | Text                                        | La URL de la imagen a analizar.            |
 | Resultado  | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
 #### Ejemplo de Uso
@@ -31,7 +31,7 @@ var $result:=$helper.prompt("Could you describe it?")
 
 | Parámetros  | Tipo                                        | Descripción                                                |
 | ----------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageFile* | 4D.File                     | The image file to analyze.                 |
+| *imageFile* | 4D.File                     | El archivo de imagen que se va a analizar. |
 | Resultado   | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
 #### Ejemplo de Uso
@@ -47,7 +47,7 @@ var $result:=$helper.prompt("Could you describe it?")
 
 | Parámetros | Tipo                                        | Descripción                                                |
 | ---------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imagen*   | Picture                                     | The image to analyze.                      |
+| *imagen*   | Picture                                     | La imagen a analizar.                      |
 | Resultado  | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
 #### Ejemplo de Uso

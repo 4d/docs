@@ -36,13 +36,13 @@ If a *callback* function is provided, it is only executed after all stored comma
 
 The following parameters can be used in the callback function:
 
-| Parámetros |                               | Tipo    | Descripción                                               |
-| ---------- | ----------------------------- | ------- | --------------------------------------------------------- |
-| param1     |                               | Text    | El nombre del objeto de área 4D View Pro                  |
-| param2     |                               | Object  | Un objeto devuelto por el método con un mensaje de estado |
-|            | .success      | Boolean | `True` if import was successful, `False` otherwise        |
-|            | .errorCode    | Integer | Código de error                                           |
-|            | .errorMessage | Text    | Mensaje de error                                          |
+| Parámetros |                               | Tipo    | Descripción                                                                       |
+| ---------- | ----------------------------- | ------- | --------------------------------------------------------------------------------- |
+| param1     |                               | Text    | El nombre del objeto de área 4D View Pro                                          |
+| param2     |                               | Object  | Un objeto devuelto por el método con un mensaje de estado                         |
+|            | .success      | Boolean | `True` si la importación se ha realizado correctamente, `False` en caso contrario |
+|            | .errorCode    | Integer | Código de error                                                                   |
+|            | .errorMessage | Text    | Mensaje de error                                                                  |
 
 ---
 
@@ -75,7 +75,7 @@ VP FLUSH COMMANDS("ViewProArea1"; Formula(onFlushComplete))
 ```
 
 ```4d
-// Method 'onFlushComplete'
+// Método 'onFlushComplete'
 #DECLARE($name : Text; $status : Object)
    ALERT("All commands and custom functions have finished executing. You can now print or save the document.")
 ```

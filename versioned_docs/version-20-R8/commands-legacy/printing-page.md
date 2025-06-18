@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Printing page.Summary-->**Printing page** returns the printing page number.<!-- END REF--> It can be used only when you are printing with [PRINT SELECTION](print-selection.md) or the Print menu in the Design environment.
+<!--REF #_command_.Printing page.Summary-->The **Printing page** command returns the printing page number.<!-- END REF-->
 
 ## Example 
 

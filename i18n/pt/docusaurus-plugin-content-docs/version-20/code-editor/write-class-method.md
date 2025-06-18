@@ -27,7 +27,7 @@ Cada janela do Editor de Código possui uma barra de ferramentas que fornece ace
 | **Expandir tudo / Recolher tudo**            | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Estes botões permitem expandir ou recolher todas as estruturas de fluxo de controle do código.                                                                                                                                                                                                                                                                 |
 | **Informações sobre o método**               | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](./overview.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                                                   |
 | **Últimos valores da área de transferência** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Exibe os últimos valores armazenados na área de transferência.                                                                                                                                                                                                                                                                                                 |
-| **Pranchetas**                               | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nove pranchetas disponíveis no editor de código. You can [use these clipboards](#clipboards) by clicking on them directly or by using keyboard shortcuts. Você pode usar uma [opção Preferências](Preferences/methods.md#options-1) para ocultá-las.                                                                                                           |
+| **Pranchetas**                               | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nove pranchetas disponíveis no editor de código. Você pode [usar essas pranchetas](#clipboards) clicando nelas diretamente ou usando atalhos de teclado. Você pode usar uma [opção Preferências](Preferences/methods.md#options-1) para ocultá-las.                                                                                                            |
 | **Menu de navegação suspenso**               | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Permite navegar dentro de métodos e classes com conteúdo marcado automaticamente ou marcadores declarados manualmente. Ver abaixo                                                                                                                                                                                                                              |
 
 
@@ -89,7 +89,7 @@ Você pode exibir as seguintes listas de itens na área de listas da janela do C
 - **Métodos**: nomes de métodos projeto do banco de dados.
 - **Todas as pastas**: nomes das pastas de objetos e subpastas definidas no banco de dados exibidas na forma de uma lista hierárquica. As pastas podem ser utilizadas para organizar objetos de uma forma personalizada. São geridos a partir da página inicial do explorador.
 - **Pastas** (submenu): conteúdo da pasta selecionada usando o submenu.
-- **Macros**: Macro names defined for the database (see [Creating and using macros](./creating-using-macros.md)).
+- **Macros**: nomes de macros definidos para o banco de dados (consulte [Criação e uso de macros](./creating-using-macros.md)).
 - **Comandos**: comandos da linguagem 4D em ordem alfabética.
 - **Comandos por temas**: comandos da linguagem 4D classificados por tema em forma de lista hierárquica.
 - **Barras de menu**: nomes e números das barras de menu [criadas com o editor de barras de menu 4D](../Menus/creating.md).
@@ -245,7 +245,7 @@ No macOS, use a tecla **Command** em vez da tecla **Ctrl** mencionada (Windows).
 | [PgDn]                                                           | Rolar o conteúdo do método, página por página, de cima para baixo (não modifica o ponto de inserção)                                         |
 | [**Introspecção**](#goto-definition)                             |                                                                                                                                              |
 | [Ctrl]+K ou [Alt]+clique duas vezes                              | Mesmo que o comando [**Goto definition**](#goto-definition)                                                                                  |
-| \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token  | Sublinhar o token (elemento linguístico identificado). Clique no token sublinhado = igual ao comando [**Goto definition**](#goto-definition) |
+| \[Ctrl\] (Windows) ou \[Alt\] (macOS)+pairing sobre um token     | Sublinhar o token (elemento linguístico identificado). Clique no token sublinhado = igual ao comando [**Goto definition**](#goto-definition) |
 | [**Procurar e substituir**](#find-and-replace)                   |                                                                                                                                              |
 | [Ctrl]+F                                                         | Find                                                                                                                                         |
 | [Ctrl]+G                                                         | Encontrar o próximo                                                                                                                          |
@@ -273,7 +273,7 @@ A maioria desses atalhos pode ser personalizada na caixa de diálogo [Preferenci
 
 O 4D utiliza técnicas padrão de edição de texto para digitar e editar no Editor de código.
 
-O Editor de código usa convenções de exibição (estilo, cor) para os elementos de sintaxe. You can [customize these conventions](#editing-area). Conforme você digita, ao validar sua entrada, o 4D avalia o texto da linha e aplica o formato de exibição apropriado. 4D também recua cada linha para seu nível adequado em relação à linha anterior quando você usa estruturas de programação (If, End if...).
+O Editor de código usa convenções de exibição (estilo, cor) para os elementos de sintaxe. Você pode [personalizar essas convenções](#editing-area). Conforme você digita, ao validar sua entrada, o 4D avalia o texto da linha e aplica o formato de exibição apropriado. 4D também recua cada linha para seu nível adequado em relação à linha anterior quando você usa estruturas de programação (If, End if...).
 
 Pode utilizar as teclas de setas para se deslocar rapidamente de uma linha para outra. Usar as teclas de seta para mover-se por várias linhas é mais rápido do que clicar, pois o editor atrasa a avaliação da linha em busca de erros.
 
@@ -505,7 +505,7 @@ Quando o método, classe ou função é validado, 4D verifica:
 
 The Code Editor can only check for obvious syntax errors (misspellings and the like). Não verifica os erros que só ocorrem durante a execução. Erros de execução são capturados por 4D quando o código é executado.
 
-4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. O compilador também oferece uma ajuda indispensável para a detecção de erros. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
+4D tem um depurador integrado (consulte [Depuração](../Debugging/debugger.md)) para lidar com esses erros e corrigi-los. O compilador também oferece uma ajuda indispensável para a detecção de erros. Para obter mais informações sobre o compilador, consulte o capítulo [Compilação](../Project/compiler.md).
 
 ## Dicas de ajuda
 

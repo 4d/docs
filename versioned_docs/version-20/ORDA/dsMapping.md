@@ -3,7 +3,7 @@ id: dsmapping
 title: Data Model Objects
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying database structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects. 
+The ORDA technology is based upon an automatic mapping of an underlying [database structure](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects. 
  
 
 ## Structure mapping 
@@ -67,6 +67,8 @@ The datastore is the interface object to a database. It builds a representation 
 - The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
 - Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
 
+A datastore object is handled through functions and properties of the [**DataStore**](../API/DataStoreClass.md) class.
+
 When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed. 
 
 4D allows you to handle the following datastores:
@@ -99,6 +101,8 @@ The main (default) datastore is always available through the `ds` command, but t
 ### Dataclass
 
 A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
+
+A dataclass object is handled through functions and properties of the [**DataClass**](../API/DataClassClass.md) class.
 
 All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore. 
 
@@ -144,7 +148,8 @@ Dataclass properties are attribute objects describing the underlying fields or r
  $revenuesAttribute:=ds.Company["revenues"] //alternate way
 ```
 
-This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
+This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves [with their **attribute properties**](../API/DataClassClass.md#attributename).
+ To handle values, you need to go through [Entities](#entity).
 
 All eligible fields in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute. 
 
@@ -189,6 +194,8 @@ An entity is the equivalent of a record. It is actually an object that reference
 
 The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
 
+An entity object is handled through functions and properties of the [**Entity**](../API/EntityClass.md) class.
+
 The entity object itself cannot be copied as an object:
 
 ```4d
@@ -208,7 +215,10 @@ The entity properties are however enumerable:
 
 An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
+An entity selection object is handled through functions and properties of the [**EntitySelection**](../API/EntitySelectionClass.md) class.
+
 Example:
+
 
 ```4d
 var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type

@@ -26,7 +26,7 @@ It is highly recommended to install a global error-handling method on 4D Server,
 
 Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
 
-Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions and needs to be handled through an error-handling method or a `Try()` keyword.  
+Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes) and needs to be handled through an error-handling method or a `Try()` keyword.  
 
 
 ## Installing an error-handling method
@@ -100,7 +100,7 @@ Within a custom error method, you have access to several pieces of information t
 4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs. 
 :::
 
-- the [`Last errors`](../commands-legacy/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application. 
+- the [`Last errors`](../commands/last-errors.md) command that returns a collection of the current stack of errors that occurred in the 4D application. 
 - the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process. 
 
 
@@ -158,7 +158,7 @@ Try (expression) : any | Undefined
 
 If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. If *expression* returns a value, `Try()` returns the last evaluated value, otherwise it returns `Undefined`. 
 
-You can handle the error(s) using the [`Last errors`](../commands-legacy/last-errors.md) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack). 
+You can handle the error(s) using the [`Last errors`](../commands/last-errors.md) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack). 
  
 :::note
 
@@ -255,7 +255,7 @@ For more information on *deferred* and *non-deferred* errors, please refer to th
 :::
 
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](../commands-legacy/last-errors.md) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](../commands/last-errors.md) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
 
 :::note
 
@@ -295,3 +295,16 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 	return $newInvoice
 
 ```
+
+
+## Error codes
+
+Exceptions that interrupt code execution are returned by 4D but can have different origins such as the OS, a device, the 4D kernel, a [`throw`](../commands-legacy/throw.md) in your code, etc. An error is therefore defined by three elements:
+
+- a **component signature**, which is the origin of the error (see [`Last errors`](../commands/last-errors.md) to have a list of signatures)
+- a **message**, which explains why the error occurred 
+- a **code**, which is an arbitrary number returned by the component
+
+The [4D error dialog box](../Debugging/basics.md) displays the code and the message to the user. 
+
+To have a full description of an error and especially its origin, you need to call the [`Last errors`](../commands/last-errors.md) command. When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components. 

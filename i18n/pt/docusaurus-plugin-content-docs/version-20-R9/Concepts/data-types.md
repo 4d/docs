@@ -27,7 +27,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 | [Coleção](Concepts/dt_collection.md)                    | -                                           | Sim                     | `Collection`                     |                                 |
 | [Variant](Concepts/dt_variant.md)(2) | -                                           | Sim                     | `Variant`                        |                                 |
 
-(1) Note que ORDA maneja campos de bancos de dados através de objetos (entidades) e assim, só é compatível com tipos de dados disponíveis a esses objetos. Para obter mais informações, consulte a descrição do tipo de dados [Object] (Concepts/dt_object.md).
+(1) Note que ORDA maneja campos de bancos de dados através de objetos (entidades) e assim, só é compatível com tipos de dados disponíveis a esses objetos. Para obter mais informações, consulte a descrição do tipo de dados [Object](Concepts/dt_object.md).
 
 (2) Na verdade, a variante não é um tipo de *dado*, mas um tipo de *variável* que pode conter um valor de qualquer outro tipo de dado.
 
@@ -35,8 +35,8 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 You can always know the type of a field or variable using the following commands:
 
-- [`Type`](../commands-legacy/type.md) for fields and scalar variables
-- [`Value type`](../commands-legacy/value-type.md) for expressions
+- [`Type`](../commands-legacy/type.md) para campos e variáveis escalares
+- [`Value type`](../commands-legacy/value-type.md) para expressões
 
 ## Valor padrão
 

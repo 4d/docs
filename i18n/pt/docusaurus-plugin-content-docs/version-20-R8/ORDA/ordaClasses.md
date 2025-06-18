@@ -3,7 +3,7 @@ id: ordaClasses
 title: Classes de modelo de dados
 ---
 
-ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
+ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
 
 Por exemplo, você poderia criar uma função `getNextWithHigherSalary()` na classe `EmployeeEntity` para retornar os funcionários com um salário maior do que o selecionado. Seria tão simples como chamar:
 
@@ -258,8 +258,8 @@ End if
 Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
 - Como eles são usados para definir nomes automáticos de classe de DataClass nos **cs** [loja de classe](Concepts/classes.md#class-stores), tabelas 4D devem ser nomeadas para evitar qualquer conflito no namespace **cs**. Em particular:
- - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](../Concepts/classes.md#class-definition). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
- - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
+  - Não dê o mesmo nome a uma tabela 4D e a um [nome de classe de usuário](../Concepts/classes.md#class-definition). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
+  - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
 - Ao definir uma classe, verifique se a instrução [`class extends`](../Concepts/classes.md#class-extends-classname) corresponde exatamente ao nome da classe pai (lembre-se de que são sensíveis a maiúsculas e minúsculas). Por exemplo, 'Classe amplia EntitySelection' para uma classe de seleção de entidade.
 
@@ -420,13 +420,13 @@ Esta função suporta três sintaxes:
 - Com a primeira sintaxe, você manipula toda a consulta através da propriedade de objeto$event.result\\\\\\\\`.
 - Com a segunda e terceira sintaxes, a função retorna um valor em *$result*:
 
- - Se *$result* é um Texto, deve ser uma string de consulta válida
- - Se *$result* é um objeto, ele deve conter duas propriedades:
+  - Se *$result* é um Texto, deve ser uma string de consulta válida
+  - Se *$result* é um objeto, ele deve conter duas propriedades:
 
- | Propriedade                        | Tipo       | Descrição                                                                                                                             |
- | ---------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
- | $result.query      | Text       | Cadeia de consulta válida com marcadores de posição (:1, :2, etc.) |
- | $result.parameters | Collection | valores para marcadores                                                                                                               |
+  | Propriedade                        | Tipo       | Descrição                                                                                                                             |
+  | ---------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+  | $result.query      | Text       | Cadeia de consulta válida com marcadores de posição (:1, :2, etc.) |
+  | $result.parameters | Collection | valores para marcadores                                                                                                               |
 
 A função `query` é executada sempre que é lançada uma consulta que utiliza o atributo calculado. É útil personalizar e otimizar as consultas com base em atributos indexados. Quando a função 'query' não estiver implementada para um atributo computado, a busca sempre é sequencial (baseada na avaliação de todos os valores usando a função `obter <AttributeName>`).
 
@@ -814,11 +814,11 @@ $status:=$remoteDS. Schools.registerNewStudent($student) // OK
 $id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
-## onHttpGet keyword
+## Palavra clave onHTTPGet
 
-Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
+Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Tais funções podem retornar qualquer conteúdo da web, por exemplo, usando a classe [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md).
 
-The `onHttpGet` keyword is available with:
+The `onHTTPGet` keyword is available with:
 
 - ORDA Data model class functions
 - [Funções classe Singletons](../Concepts/classes.md#singleton-classes)
@@ -826,8 +826,8 @@ The `onHttpGet` keyword is available with:
 A sintaxe formal é:
 
 ```4d
-// declare an onHttpGet function
-exposed onHttpGet Function <functionName>(params) : result
+// declare an onHTTPGet function
+exposed onHTTPGet Function <functionName>(params) : result
 ```
 
 :::info
@@ -844,7 +844,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 ### params
 
-Uma função com a palavra-chave `onHttpGet` aceita [parâmetros](../Concepts/parameters.md).
+Uma função com a palavra-chave `onHTTPGet` aceita [parâmetros](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
 
@@ -856,11 +856,11 @@ Consulte a seção [Parâmetros](../REST/classFunctions#parameters) na documenta
 
 ### resultado
 
-Uma função com a palavra-chave `onHttpGet` pode retornar qualquer valor de um tipo compatível (o mesmo que para [parâmetros](../REST/classFunctions#parameters) REST).
+A function with `onHTTPGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
 
 :::info
 
-You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+Você pode retornar um valor do [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) tipo de classe para se beneficiar de propriedades e funções para definir o cabeçalho, o corpo e o estado da resposta.
 
 :::
 

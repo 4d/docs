@@ -49,7 +49,7 @@ avec des données contenues dans le body de la requête POST : `["Aguada"]`
 
 :::note
 
-The `getCity()` function must have been declared with the `onHttpGet` keyword (see [Function configuration](#function-configuration) below).
+The `getCity()` function must have been declared with the `onHTTPGet` keyword (see [Function configuration](#function-configuration) below).
 
 :::
 
@@ -71,13 +71,13 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 Voir la section [Fonctions exposées vs non exposées](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
-### `onHttpGet`
+### `onHTTPGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHttpGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Par exemple :
+Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Par exemple :
 
 ```4d
 //allowing GET requests
-exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
+exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
 ### Thread-safe

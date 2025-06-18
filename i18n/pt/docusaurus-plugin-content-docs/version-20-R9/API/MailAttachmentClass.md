@@ -93,7 +93,7 @@ A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary --
 
 #### Descrição
 
-A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary --> o nome e a extensão do anexo<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](../commands/mail-new-attachment.md) command.
+A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary --> o nome e a extensão do anexo<!-- END REF -->.  Por padrão, é o nome do arquivo, a menos que outro nome tenha sido especificado no comando [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ## .path
 
@@ -133,4 +133,4 @@ A propriedade `.size` contém <!-- REF #MailAttachmentClass.size.Summary --> o v
 
 #### Descrição
 
-A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command, the `content-type` is based on its file extension.
+A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se esse tipo não for explicitamente passado para o comando [`MAIL New attachment`](../commands/mail-new-attachment.md), o `content-type` será baseado em sua extensão de arquivo.

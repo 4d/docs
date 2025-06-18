@@ -54,7 +54,7 @@ Esquematicamente, essa variável funciona como a área de endereço de um navega
 
 ### Variável URL e comando WA OPEN URL
 
-The URL variable produces the same effects as the [WA OPEN URL](../commands-legacy/wa-open-url.md) command. No entanto, há que assinalar as seguintes diferenças:
+A variável URL produz os mesmos efeitos que o comando [WA OPEN URL](../commands-legacy/wa-open-url.md). No entanto, há que assinalar as seguintes diferenças:
 
 - Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). O comando [WA OPEN URL](../commands-legacy/wa-open-url.md) aceita ambas as notações.
 - Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. O comando [WA OPEN URL](../commands-legacy/wa-open-url.md) gera um erro nesse caso.

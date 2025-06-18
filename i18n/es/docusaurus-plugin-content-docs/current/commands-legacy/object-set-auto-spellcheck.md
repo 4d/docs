@@ -17,7 +17,12 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->El comando **OBJECT SET AUTO SPELLCHECK** permite definir o modificar dinámicamente el estado de la opción **Corrección ortográfica** de los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF--> Esta opción activa o desactiva la corrección ortográfica automática durante la entrada para el objeto (objetos de tipo texto únicamente).  
+<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->El comando **OBJECT SET AUTO SPELLCHECK** permite definir o modificar dinámicamente el estado de la opción **Corrección ortográfica** de los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF--> Esta opción activa o desactiva la corrección ortográfica automática durante la entrada para el objeto.
+
+Este comando admite objetos de tipo:
+
+- [input](../FormObjects/input_overview.md) de tipo texto solamente,
+- 4D Write Pro area](../FormObjects/writeProArea_overview.md).
   
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (una cadena). Si no pasa este parámetro, indica que el parámetro *objeto* es una variable o un campo. En este caso, pase una referencia en lugar de un nombre.  
   

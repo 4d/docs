@@ -110,7 +110,7 @@ Hay dos formas de acceder a Qodly Studio:
 
     A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#access-key) para acceder a Qodly Studio.
 
-## Developing with Qodly Studio
+## Desarrollar con Qodly Studio
 
 ### Documentation
 
@@ -139,7 +139,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | Roles y privilegios REST/Web                                                     | Edición directa de roles.json/Editor de roles y permisos Qodly Studio                                                                                                                                 | Editor de roles y privilegios de Qodly Studio                                 |
 
 (1) The **Model** item is disabled in Qodly Studio.<br/>
-(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
+(2) En el servidor 4D, la apertura del código 4D con el editor de código Qodly Studio es soportada **para pruebas y depuración** (ver [este párrafo](#development-and-deployment)). (1) The **Model** item is disabled in Qodly Studio.<br/>
 (2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)).
 
 ### Lenguaje
@@ -190,7 +190,7 @@ Para habilitar el renderizado de las páginas Qodly, se deben configurar las sig
 
 ### Alcance de los formularios Qodly
 
-Al renderizar formularios Qodly en el Qodly Studio, el renderizador se conectará al servidor web 4D a través de HTTP o HTTPS, dependiendo de la configuración, siguiendo el mismo patrón de conexión HTTP/HTTPS que para el [servidor web WebAdmin 4D] (../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license-usage-for-rendering) sobre los esquemas de URL y el uso de licencias.
+Al renderizar formularios Qodly en el Qodly Studio, el renderizador se conectará al servidor web 4D a través de HTTP o HTTPS, dependiendo de la configuración, siguiendo el mismo patrón de conexión HTTP/HTTPS que para el [servidor web WebAdmin 4D](../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license-usage-for-rendering) sobre los esquemas de URL y el uso de licencias.
 
 Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Studio como desarrollador, incluso cuando previsualiza una página Qodly en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
@@ -236,7 +236,7 @@ El proyecto debe ejecutarse en modo interpretado para que el elemento de menú *
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+2. En la barra de herramientas de Qodly Studio, haga clic en el botón **Debug**.<br/>
     ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.

@@ -7,7 +7,7 @@ title: OpenAIModelsAPI
 
 ## クラスの説明
 
-`OpenAIModelsAPI` is a class that allows interaction with OpenAI models through various functions, such as retrieving model information, listing available models, and (optionally) deleting fine-tuned models.
+`OpenAIModelsAPI` はさまざまな機能を通してOpenAI のモデルとやり取りをすることを可能にするクラスです。この機能とはモデル情報の取得、利用可能なモデルを一覧表示すること、そして(オプションとして)ファインチューンされたモデルを削除することなどです。
 
 https://platform.openai.com/docs/api-reference/models
 
@@ -17,37 +17,37 @@ https://platform.openai.com/docs/api-reference/models
 
 **retrieve**(*model* : Text; *parameters* : OpenAIParameters) : OpenAIModelResult
 
-| 引数      | 型                                         | 説明                                                       |
-| ------- | ----------------------------------------- | -------------------------------------------------------- |
-| *model* | Text                                      | The identifier of the model to retrieve. |
-| *引数*    | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.   |
-| 戻り値     | [OpenAIModelResult](OpenAIModelResult.md) | The model result                                         |
+| 引数           | 型                                         | 説明                |
+| ------------ | ----------------------------------------- | ----------------- |
+| *model*      | Text                                      | 取得するモデルの識別子。      |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)   | リクエスト用の追加のパラメーター。 |
+| 戻り値          | [OpenAIModelResult](OpenAIModelResult.md) | モデルの結果            |
 
-Retrieves a model instance to provide basic information.
+モデルインスタンスを取得し、基本情報を提供します。
 
 https://platform.openai.com/docs/api-reference/models/retrieve
 
-#### Example usage:
+#### 使用例:
 
 ```4d
 var $result:=$client.model.retrieve("text-davinci-003")
 var $model:=$result.model
 ```
 
-### リスト()
+### list()
 
 **list**(*parameters* : OpenAIParameters) : OpenAIModelListResult
 
-| 引数   | 型                                                 | 説明                                                     |
-| ---- | ------------------------------------------------- | ------------------------------------------------------ |
-| *引数* | [OpenAIParameters](OpenAIParameters.md)           | Additional parameters for the request. |
-| 戻り値  | [OpenAIModelListResult](OpenAIModelListResult.md) | The model list result                                  |
+| 引数           | 型                                                 | 説明                |
+| ------------ | ------------------------------------------------- | ----------------- |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)           | リクエスト用の追加のパラメーター。 |
+| 戻り値          | [OpenAIModelListResult](OpenAIModelListResult.md) | モデルリストの結果         |
 
-Lists the currently available models.
+現在利用可能なモデルを一覧表示します。
 
 https://platform.openai.com/docs/api-reference/models/list
 
-#### Example usage:
+#### 使用例:
 
 ```4d
 var $result:=$client.model.list($parameters)

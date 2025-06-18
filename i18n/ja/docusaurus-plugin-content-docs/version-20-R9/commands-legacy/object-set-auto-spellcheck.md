@@ -19,6 +19,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->**OBJECT SET AUTO SPELLCHECK**コマンドは*object*と*\**引数で指定されたオブジェクトの自動スペルチェックオプションをカレントプロセス内で動的に設定します。<!-- END REF-->このオプションを使用して、オブジェクト (テキスト型オブジェクトのみ) にデータが入力される際の自動スペルチェックを有効/無効にできます。
 
+このコマンドはテキスト・タイプのオブジェクトをサポートする：
+
+- [input](../FormObjects/input_overview.md)のテキスト・タイプのオブジェクトにのみ対応しています、
+- [4D Write Pro エリア](../FormObjects/writeProArea_overview.md)。
+
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
 この機能を有効にするには*autoSpellcheck*に**True**を、無効にするには**False**を渡します。

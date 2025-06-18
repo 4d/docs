@@ -16,7 +16,7 @@ title: VP SET CUSTOM FUNCTIONS
 
 ## Descrição
 
-The `VP SET CUSTOM FUNCTIONS` command <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designates the 4D formulas that can be called directly from 4D View Pro formulas<!-- END REF -->. Because custom functions are not stored in the document,`VP SET CUSTOM FUNCTIONS` must be executed in the `On Load` form event.
+O comando `VP SET CUSTOM FUNCTIONS` <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designa as fórmulas 4D que podem ser chamadas diretamente das fórmulas 4D View Pro<!-- END REF -->. Because custom functions are not stored in the document,`VP SET CUSTOM FUNCTIONS` must be executed in the `On Load` form event.
 
 As fórmulas especificadas por `VP SET CUSTOM FUNCTIONS` aparecem em um menu pop-up quando a primeira letra de seu nome é inserida. Veja a página [Fórmulas e Funções](../formulas.md).
 
@@ -39,7 +39,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 
 > **AVISO**
 
-> - As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](vp-set-allowed-methods.md) command (if any) are ignored in the 4D View Pro area.
+> - Assim que `VP SET CUSTOM FUNCTIONS` for chamado, os métodos permitidos pelo [VP SET ALLOWED METHODS](vp-set-allowed-methods.md) (se houver) são ignorados na área 4D View Pro.
 > - As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 ## Exemplo

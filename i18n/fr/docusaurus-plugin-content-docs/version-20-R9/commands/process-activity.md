@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.Process activity.Summary-->La commande **Process activity** retourne une vue instantanée des pocess en cours d'exécution et/ou (4D Server uniquement) de sessions utilisateur connectées à un moment donné.<!-- END REF--> This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
+<!--REF #_command_.Process activity.Summary-->La commande **Process activity** retourne une vue instantanée des pocess en cours d'exécution et/ou (4D Server uniquement) de sessions utilisateur connectées à un moment donné.<!-- END REF--> Cette commande retourne tous les process, y compris les process internes qui ne sont pas accessibles à la commande [Process info](process-info.md). 
 
 Par défaut, lorsqu'elle est utilisée sans aucun paramètre, **Process activity** renvoie un objet contenant les propriétés suivantes :
 

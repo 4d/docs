@@ -25,7 +25,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 ## Exemplo
 
-Veja o exemplo em [VP SUSPEND COMPUTING] (vp-suspend-computing.md).
+Veja o exemplo em [VP SUSPEND COMPUTING](vp-suspend-computing.md).
 
 ## Veja também
 

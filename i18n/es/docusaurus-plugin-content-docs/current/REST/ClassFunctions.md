@@ -8,7 +8,7 @@ Puede llamar a [funciones clase modelo de datos](ORDA/ordaClasses.md) definidas 
 Las funciones pueden llamarse de dos maneras:
 
 - using **POST requests**, with data parameters passed in the body of the request.
-- using **GET requests**, with parameters directly passed in the URL.
+- usando **GET requests**, con parámetros directamente pasados en la URL.
 
 POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. Sin embargo, las peticiones GET pueden ser más compatibles con la experiencia del usuario, permitiendo llamar a las funciones introduciendo una URL en un navegador (nota: el desarrollador debe asegurarse de que no se hace ninguna acción sensible en dichas funciones).
 
@@ -43,13 +43,13 @@ Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podr�
 
 con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
-#### GET request
+#### Petición GET
 
 `/rest/City/getCity?$params='["Aguada"]'`
 
 :::note
 
-La función `getCity()` debe haber sido declarada con la palabra clave `onHttpGet` (ver [Configuración de la función](#function-configuration)).
+The `getCity()` function must have been declared with the `onHTTPGet` keyword (see [Function configuration](#function-configuration) below).
 
 :::
 
@@ -71,13 +71,13 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
-### `onHttpGet`
+### `onHTTPGet`
 
-Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHttpGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
-exposed onHttpGet Function getSomeInfo() : 4D.OutgoingMessage
+exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
 ### Hilo seguro
@@ -116,7 +116,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 
 **Parámetros en el cuerpo:** ["Aguada","Paris"]
 
-#### GET request
+#### Petición GET
 
 `/rest/City/getCities?$params='["Aguada","Paris"]'`
 
@@ -161,7 +161,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 Ver ejemplo para [recibir una selección de entidad](#receiving-an-entity-selection-as-parameter) con una petición POST.
 Ver ejemplo para [obtener una lista construida sobre una selección de entidades](#using-an-entity-selection-to-get-a-list) con una petición GET.
 
-## POST request examples
+## Ejemplos de peticiones POST
 
 Esta base de datos se expone como un almacén de datos remoto en localhost (puerto 8111):
 
@@ -615,7 +615,7 @@ $ageAverage:=$students.getAgeAverage()
 
 ### Devolviendo un documento
 
-You want to propose a link to download the user manual for a selected product with several formats available. You write a `getUserManual()` function of the Products dataclass. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
+You want to propose a link to download the user manual for a selected product with several formats available. Escribe una función `getUserManual()` de la dataclass Products. You return an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 
 ```4d
 // Product dataclass
@@ -645,7 +645,7 @@ You can call the function using a request like:
 
 **GET** `http://127.0.0.1:8044/rest/Products/getUserManual?$params='[1,"pdf"]'`
 
-### Using an entity to download a PDF document
+### Utilizar una entidad para descargar un documento PDF
 
 Same example as above but you want to pass an entity as parameter to the datastore function.
 
@@ -667,7 +667,7 @@ Puede llamar a la función usando esta petición:
 
 **GET** `http://127.0.0.1:8044/rest/Product/getUserManual?$params='[{"__DATACLASS":"Product","__ENTITY":true,"__KEY":41}]'`
 
-### Using an entity selection to get a list
+### Utilizar una selección de entidades para obtener una lista
 
 You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
 

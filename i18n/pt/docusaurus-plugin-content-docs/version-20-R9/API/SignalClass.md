@@ -178,10 +178,10 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 <!-- REF #SignalClass.wait().Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                         |
-| ---------- | ---------- | --------------------------- | --------------------------------- |
-| timeout    | Real       | ->                          | Maximum wait time in seconds      |
-| Resultados | Parâmetros | <- | Estado da propriedade `.signaled` |
+| Parâmetro  | Tipo       |                             | Descrição                          |
+| ---------- | ---------- | --------------------------- | ---------------------------------- |
+| timeout    | Real       | ->                          | Tempo máximo de espera em segundos |
+| Resultados | Parâmetros | <- | Estado da propriedade `.signaled`  |
 
 <!-- END REF -->
 
@@ -189,14 +189,14 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 A função `.wait( )` <!-- REF #SignalClass.wait().Summary -->faz com que o processo atual aguarde até que a propriedade `.signaled` do objeto signal se torne **true** ou o *timeout* opcional expire<!-- END REF -->.
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter. Decimals are accepted.
+To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter. Aceitam-se números decimais.
 
 Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `.signaled` já é **true**), a função devolve imediatamente, sem esperar.
 
 A função devolve o valor da propriedade .signaled:
 
-- **true** if the signal was triggered (`.trigger()` was called).
-- **false** if the timeout expired before the signal was triggered.
+- **true** se o sinal foi acionado (`.trigger()` foi chamado).
+- **false** se o tempo limite expirou antes de o sinal ser acionado.
 
 :::note Aviso
 

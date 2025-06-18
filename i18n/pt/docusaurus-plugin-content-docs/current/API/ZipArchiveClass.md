@@ -38,7 +38,7 @@ End if
 
 #### Descrição
 
-The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+A propriedade `.root` contém <!-- REF #ZipArchiveClass.root.Summary --> uma pasta virtual fornecendo acesso ao conteúdo do arquivo ZIP <!-- END REF -->.
 
 The `root` folder and its contents can be manipulated with the [ZipFile](ZipFileClass.md) and [ZipFolder](ZipFolderClass.md) functions and properties.
 

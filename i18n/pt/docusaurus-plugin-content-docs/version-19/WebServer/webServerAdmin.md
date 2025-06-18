@@ -51,7 +51,7 @@ Este comando permite verificar o funcionamento do servidor web, a visualização
 A qualquer momento, você pode limpar o cache das páginas e imagens que ele contém (se, por exemplo, você tiver modificado uma página estática e quiser recarregá-la no cache).
 
 Para o fazer, basta clicar no botão **Clear Cache** na página Web/Opções (I) da caixa de diálogo Parâmetros. A cache é então imediatamente limpa.
-> You can also use the [/4DCACHECLEAR](#4dcacheclear) URL.
+> Você também pode usar o URL [/4DCACHECLEAR](#4dcacheclear).
 
 ## Explorador de execução
 

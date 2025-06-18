@@ -34,7 +34,7 @@ Em *fila*, passe o número da fila cuja cor deseja obter.
 
 **Nota:** o comando não leva em consideração o possível estado oculto/visível das filas de list box.
 
-No parâmetro *tipoCor*, pode passar ou a constante lk background color ou lk font color (tema "*List box*" ) com o objetivo de averiguar a cor de fundo ou a cor da fonte da fila. Se omitir este parâmetro, se devolve a cor da fonte.  
+No parâmetro *tipoCor*, pode passar ou a constante `lk background color`  ou `lk font color`  (tema "*List box*" ) com o objetivo de averiguar a cor de fundo ou a cor da fonte da fila. Se omitir este parâmetro, se devolve a cor da fonte.  
   
 **Advertência:** uma cor atribuída a uma fila não é mostrada necessariamente em cada célula da fila (ver o exemplo). Se os valores de cor em conflto forem definidos via as propriedades de list box ou da coluna list box, se aplica uma orden de prioridade. Para obter mais informação, consulte o manual de *Desenho*.
 

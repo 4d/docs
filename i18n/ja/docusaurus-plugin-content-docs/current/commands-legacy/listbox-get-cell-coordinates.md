@@ -39,7 +39,7 @@ displayed_sidebar: docs
 リストボックス内の選択されたセルの周りに赤い長方形を描画する場合を考えます:
 
 ```4d
- OBJECT SET VISIBLE(*;"rectangleInfo";False) //赤い長方形を初期化
+ OBJECT SET VISIBLE(*;"RedRect";False) //赤い長方形を初期化
   //長方形はフォーム内のどこかに既に定義済み
  LISTBOX GET CELL POSITION(*;"LB1";$col;$row)
  LISTBOX GET CELL COORDINATES(*;"LB1";$col;$row;$x1;$y1;$x2;$y2)

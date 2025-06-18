@@ -12,7 +12,7 @@ title: Restitution
 
 - La perte de fichier(s) de l'application. Cet incident peut être causé par des secteurs défectueux sur le disque contenant l'application, un virus, une erreur de manipulation, etc. Il est nécessaire de restituer la dernière sauvegarde puis d’intégrer éventuellement l’historique courant. Pour savoir si une application a été endommagée à la suite d’un incident, il suffit de la relancer avec 4D. Le programme effectue un auto-diagnostic et précise les opérations de réparation à effectuer. En mode automatique, ces opérations sont effectuées directement, sans intervention de l’utilisateur. Si une stratégie de sauvegarde régulière a été mise en place, les outils de récupération de 4D vous permettront (dans la plupart des cas) de retrouver l'application dans l’état exact où elle se trouvait avant l’incident.
 
-> 4D peut lancer automatiquement des procédures de récupération des applications après incident. Ces mécanismes sont gérés à l’aide de deux options accessibles dans la Page **Sauvegarde/Sauvegarde & et Restitution** de la fenêtre des Propriétés. For more information, refer to the [Automatic Restore](settings.md#automatic-restore-and-log-integration) paragraph.\
+> 4D peut lancer automatiquement des procédures de récupération des applications après incident. Ces mécanismes sont gérés à l’aide de deux options accessibles dans la Page **Sauvegarde/Sauvegarde & et Restitution** de la fenêtre des Propriétés. Pour plus d'informations, reportez-vous au paragraphe [Restitution automatique](settings.md#automatic-restore-and-log-integration).\
 > Si l'incident résulte d'une opération inappropriée effectuée sur les données (suppression d'un enregistrement par exemple), vous pouvez tenter de réparer le fichier de données à l'aide de la fonction "rollback" du fichier d'historique. Cette fonction est accessible dans la Page [Retour arrière](MSC/rollback.md) du CSM.
 
 ## Restitution manuelle d’une sauvegarde (dialogue standard)
@@ -25,7 +25,8 @@ Pour restituer manuellement une application via une boîte de dialogue standard 
 
 1. Lancez l’application 4D et choisissez la commande **Restituer...** dans le menu **Fichier**.
     Il n'est pas obligatoire qu'un projet d'application soit ouvert.
-    OR Execute the `RESTORE` command from a 4D method.
+    OU BIEN
+    Exécutez la commande `RESTORE` depuis une méthode de 4D.
     Une boîte de dialogue standard d’ouverture de fichiers apparaît.
 2. Désignez le fichier de sauvegarde (.4bk) ou le fichier de sauvegarde de l’historique (.4bl) à restituer et cliquez sur **Ouvrir**.
     Un boîte de dialogue apparaît, vous permettant de désigner l’emplacement auquel vous souhaitez que les fichiers soient restitués . Par défaut, 4D restitue les fichiers dans un dossier nommé *“Nomarchive”* (sans extension) placé à côté de l’archive. Vous pouvez afficher le chemin :

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 | Lanzamiento | Modificaciones                                                     |
 | ----------- | ------------------------------------------------------------------ |
-| 20 R8       | Support of standalone sessions                                     |
+| 20 R8       | Soporte de sesiones autónomas                                      |
 | 20 R5       | Soporte de cliente remoto y sesiones de procedimientos almacenados |
 | 18 R6       | Añadidos                                                           |
 
@@ -33,7 +33,7 @@ Dependiendo del proceso desde el que se llame al comando, la sesión de usuario 
 - una sesión web (cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-web-sessions)),
 - una sesión de cliente remoto,
 - la sesión de procedimientos almacenados,
-- the *designer* session in a standalone application.
+- la sesión del ***Print form*** en una aplicación independiente.
 
 Para obtener más información, consulte el párrafo [Tipos de sesion](../API/SessionClass.md#session-types).
 

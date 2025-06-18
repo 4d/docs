@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the [`4D.File`](../API/FileClass.md) type<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `File` <!-- REF #_command_.File.Summary --> cria e retorna um novo objeto do tipo [`4D.File`](../API/FileClass.md)<!-- END REF -->. O comando aceita duas sintaxes:
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -46,7 +46,7 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work wit
 
 **File ( fileConstant { ; \* } )**
 
-In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
+No parâmetro *fileConstant*, passe um arquivo embutido ou do sistema, usando uma das seguintes constantes:
 
 | Parâmetros                        | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -62,7 +62,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 | Diagnostic log file               | 11    | Log file created by the `SET DATABASE PARAMETER(Diagnostic log recording)` command. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                                                                            |
 | Directory file                    | 16    | directório.json, contendo a descrição dos usuários e grupos (se houver) para a aplicação do projecto. Pode ser localizado ou na pasta de configurações do usuário (por padrão, global ao projecto), ou na pasta de definições de dados (específica a um arquivo de dados).                                                                                                                                                      |
 | HTTP Client log file              | 24    | Arquivo de registo criado pelo comando `HTTP SET OPTION(HTTP client log)`. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| HTTP debug log file               | 9     | Log file created by the `WEB SET OPTION(Web debug log)` command. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                                                                                               |
+| HTTP debug log file               | 9     | Arquivo de log criado pelo comando `WEB SET OPTION(Web debug log)`. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                                                                                            |
 | HTTP log file                     | 8     | Arquivo de registo criado pelo comando `WEB SET OPTION(Web log recording)`. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                                                                                    |
 | IMAP Log file                     | 23    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(IMAP Log)`. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Last backup file                  | 2     | Último arquivo de backup, denominado `\<applicationName>[bkpNum].4BK`, armazenado em um local personalizado.                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -88,9 +88,9 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1566                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1566                        |
+| Thread safe       | &check; |
 
 

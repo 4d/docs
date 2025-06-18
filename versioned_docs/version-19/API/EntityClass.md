@@ -594,15 +594,14 @@ The following generic code duplicates any entity:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk key as string`: primary key is returned as a string, no matter the primary key type|
-|Result|Text|<-|Value of the text primary key of the entity|
-|Result|Integer|<-|Value of the numeric primary key of the entity|
+|Result|any|<-|Value of the primary key of the entity (Integer or Text)|
 
 <!-- END REF -->
 
@@ -1512,11 +1511,12 @@ Returns:
 
 #### Description
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
+The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. You can use this function to determine if you need to save the entity. 
 
-If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.
+This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
-This function returns False for a new entity that has just been created (with [`.new( )`](DataClassClass.md#new)). Note however that if you use a function which calculates an attribute of the entity, the `.touched()` function will then return True. For example, if you call [`.getKey()`](#getkey) to calculate the primary key, `.touched()` returns True.
+For a new entity that has just been created (with [`.new()`](DataClassClass.md#new)), the function returns False. However in this context, if you access an attribute whose [`autoFilled` property](./DataClassClass.md#returned-object) is True, the `.touched()` function will then return True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+
 
 #### Example  
 
@@ -1557,7 +1557,7 @@ In this example, we check to see if it is necessary to save the entity:
 
 The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
-This applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
+This only applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
 In the case of a related entity having been touched (i.e., the foreign key), the name of the related entity and its primary key's name are returned.
 
@@ -1633,7 +1633,7 @@ The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the p
 
 A record is automatically unlocked when it is no longer referenced by any entities in the locking process (for example: if the lock is put only on one local reference of an entity, the entity and thus the record is unlocked when the process ends).
 
->When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. For example:
+When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. For example:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1642,6 +1642,13 @@ A record is automatically unlocked when it is no longer referenced by any entiti
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+
+:::
+
 
 **Result**
 

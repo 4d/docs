@@ -25,7 +25,7 @@ When this property is enabled, the [OPEN FONT PICKER](../commands-legacy/open-fo
 
 Le texte sélectionné est plus foncé et plus épais.
 
-You can set this property using the [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) command.
+Vous pouvez définir cette propriété en utilisant la commande [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
 > This is normal text.<br/>
 > **This is bold text.**
@@ -46,7 +46,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](../commands-lega
 
 Fait pencher le texte sélectionné légèrement vers la droite.
 
-You can also set this property via the [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) command.
+Vous pouvez également définir cette propriété via la commande [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
 > This is normal text.<br/>
 > *This is text in italics.*
@@ -372,7 +372,7 @@ La méthode *Color* contiendrait alors :
 
 ## Multistyle
 
-Cette propriété permet d'utiliser des styles spécifiques dans la zone sélectionnée. Lorsque cette option est cochée, 4D interprète toutes les balises `<SPAN> HTML` trouvées dans la zone.
+This property enables the possibility of using [specific styles](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.en.html) in the selected area. Lorsque cette option est cochée, 4D interprète toutes les balises `<SPAN> HTML` trouvées dans la zone.
 
 Par défaut, cette option n'est pas activée.
 

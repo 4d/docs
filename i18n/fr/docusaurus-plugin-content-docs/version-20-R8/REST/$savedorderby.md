@@ -7,7 +7,7 @@ Enregistre le tri défini par `$orderby` lors de la création d'un ensemble d'en
 
 ## Description
 
-Lorsque vous créez un ensemble d'entités, vous pouvez, par sécurité, enregistrer l'ordre de tri et le filtre utilisés pour sa création. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$method=release`]($method.md#methodrelease)).
+Lorsque vous créez un ensemble d'entités, vous pouvez, par sécurité, enregistrer l'ordre de tri et le filtre utilisés pour sa création. Si l'ensemble d'entités que vous avez créé est supprimé du cache du serveur 4D (en raison du délai écoulé, le besoin d'espace du serveur, ou si vous le supprimez en appelant [`$method=release`]($method.md#methodrelease)).
 
 Utilisez `$savedorderby` pour enregistrer l'ordre que vous avez défini lors de la création de votre ensemble d'entités, puis passez `$savedorderby` avec votre appel, pour récupérer à chaque fois l'ensemble d'entités.
 

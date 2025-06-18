@@ -36,7 +36,7 @@ Si desea obtener todos los cálculos de un atributo de tipo Número, puede escri
 
 **Response**:
 
-```
+```js
 {
     "salary": {
         "count": 4,
@@ -54,7 +54,7 @@ Si desea obtener todos los cálculos de un atributo de tipo String, puede escrib
 
 **Response**:
 
-```
+```js
 {
     "salary": {
         "count": 4,
@@ -70,7 +70,7 @@ Si desea obtener un cálculo con un atributo, escriba lo siguiente:
 
 **Response**:
 
-`235000`
+`335000`
 
 Si desea realizar un cálculo con un atributo Objeto, escriba lo siguiente:
 

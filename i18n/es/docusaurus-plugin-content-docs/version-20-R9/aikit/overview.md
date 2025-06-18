@@ -60,7 +60,7 @@ var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini"})
 // resultado en $result.choice
 ```
 
-##### Chat helper
+##### Ayudante del chat
 
 This helper allows you to maintain a list of user messages and assistant responses.
 
@@ -79,7 +79,7 @@ This helper enables image analysis through the chat.
 var $result:=$client.chat.vision.create($imageUrl).prompt("give me a description of the image")
 ```
 
-#### Images
+#### Imágenes
 
 https://platform.openai.com/docs/api-reference/images
 
@@ -87,17 +87,17 @@ https://platform.openai.com/docs/api-reference/images
 var $images:=$client.images.generate("A futuristic city skyline at sunset"; {size: "1024x1024"}).images
 ```
 
-#### Models
+#### Modelos
 
 https://platform.openai.com/docs/api-reference/models
 
-Get full list of models
+Obtener lista completa de modelos
 
 ```4d
 var $models:=$client.models.list().models // a continuación, puede extraer el `id`
 ```
 
-Get one model information by id
+Obtener información de un modelo por id
 
 ```4d
 var $model:=$client.models.retrieve("a model id").model
@@ -115,9 +115,9 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 If you do not want to wait for the OpenAPI response when sending a request to its API, you need to use asynchronous code. The result object will be received in a callback function.
 
-See [detailed documentation for examples](asynchronous-call.md)
+Ver la [documentación detallada para ejemplos](asynchronous-call.md)
 
-## Copyright
+## Derechos de autor
 
 - This library is not affiliated with, endorsed by, or officially connected to OpenAI in any way.
 - "OpenAI" and any related marks are trademarks or registered trademarks of OpenAI, LLC. All rights related to OpenAI's services, APIs, and technologies remain the property of OpenAI.

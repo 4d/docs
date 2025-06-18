@@ -249,10 +249,10 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                  |
-| ----------- | ------------------------------- |
-| 20 R9       | Read UUIDs in macOS executables |
-| 19          | Añadidos                        |
+| Lanzamiento | Modificaciones                                |
+| ----------- | --------------------------------------------- |
+| 20 R9       | Lectura de los UUIDs en los ejecutables macOS |
+| 19          | Añadidos                                      |
 
 </details>
 
@@ -260,19 +260,19 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| Parámetros | Tipo   |                             | Descripción                  |
-| ---------- | ------ | --------------------------- | ---------------------------- |
-| Resultado  | Object | <- | Application file information |
+| Parámetros | Tipo   |                             | Descripción                              |
+| ---------- | ------ | --------------------------- | ---------------------------------------- |
+| Resultado  | Object | <- | Información del archivo de la aplicación |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of an application file information as an object<!-- END REF -->.
+La función `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->devuelve el contenido de la información de un archivo de aplicación como un objeto<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
+La función debe ser usada con un archivo existente y soportado: **.plist** (todas las plataformas), **.exe**/**.dll** (Windows), o **ejecutable macOS**. Si el archivo no existe en el disco o no es un archivo soportado, la función devuelve un objeto vacío (no se genera ningún error).
 
-**Returned object with a .plist file (all platforms)**
+**Objeto devuelto con un archivo .plist (todas las plataformas)**
 
 El contenido xml del archivo se analiza y las llaves se devuelven como propiedades del objeto, conservando sus tipos (texto, booleano, numérico). `.plist dict` se devuelve como un objeto JSON y `.plist array` se devuelve como un array JSON.
 
@@ -301,22 +301,22 @@ Todos los valores de propiedades son de tipo Texto.
 
 :::note
 
-A macOS executable file is located within a package (e.g. myApp.app/Contents/MacOS/myApp).
+Un archivo ejecutable macOS se encuentra dentro de un paquete (por ejemplo, myApp.app/Contents/MacOS/myApp).
 
 :::
 
-The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
+La función devuelve un objeto `archs` que contiene una colección de objetos que describen cada arquitectura encontrada en el ejecutable (un gran ejecutable puede integrar varias arquitecturas). Cada objeto de la colección contiene las siguientes propiedades:
 
 | Propiedad | Tipo   | Descripción                                                                            |
 | --------- | ------ | -------------------------------------------------------------------------------------- |
 | name      | Text   | Nombre de la arquitectura ("arm64" o "x86_64") |
-| type      | Number | Numerical identifier of the architecture                                               |
-| uuid      | Text   | Textual representation of the executable uuid                                          |
+| type      | Number | Identificador numérico de la arquitectura                                              |
+| uuid      | Text   | Representación textual del uuid del ejecutable                                         |
 
 #### Ejemplo 1
 
 ```4d
-  // display copyright info of an info.plist (any platform)
+  // mostrar información de derechos de autor de una info.plist (cualquier plataforma)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
@@ -327,7 +327,7 @@ ALERT($info.Copyright)
 #### Ejemplo 2
 
 ```4d
- // display copyright info of application .exe file (windows)
+ // mostrar información de copyright del archivo .exe de aplicación (windows)
 var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -338,7 +338,7 @@ ALERT($info.LegalCopyright)
 #### Ejemplo 3
 
 ```4d
- // Get uuids of an application (macOS)
+ // Obtener uuids de una aplicación (macOS)
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 ```
@@ -568,11 +568,11 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                  |
-| ----------- | ------------------------------- |
-| 20 R9       | Read UUIDs in macOS executables |
-| 20          | Soporte de WinIcon              |
-| 19          | Añadidos                        |
+| Lanzamiento | Modificaciones                                |
+| ----------- | --------------------------------------------- |
+| 20 R9       | Lectura de los UUIDs en los ejecutables macOS |
+| 20          | Soporte de WinIcon                            |
+| 19          | Añadidos                                      |
 
 </details>
 
@@ -580,25 +580,27 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| Parámetros | Tipo   |    | Descripción                                            |
-| ---------- | ------ | -- | ------------------------------------------------------ |
-| info       | Object | -> | Properties to write in an application file information |
+| Parámetros | Tipo   |    | Descripción                                                             |
+| ---------- | ------ | -- | ----------------------------------------------------------------------- |
+| info       | Object | -> | Propiedades para escribir en la información de un archivo de aplicación |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
+La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades *info* como contenido informativo de un archivo de aplicación<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function does nothing (no error is generated).
+La función sólo se puede usar con los siguientes tipos de archivos: **.plist** (todas las plataformas), existente **.exe**/**.dll** (Windows), o **ejecutable macOS**. If used with another file type or with *.exe*\*/**.dll** files that do not already exist on disk, the function does nothing (no error is generated).
 
-***info* parameter object with a .plist file (all platforms)**
+Parámetro ***info* con un archivo .plist (todas las plataformas)**
 
 :::note
 
 La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
 :::
+
+Si el archivo .plist ya existe en el disco, se actualiza. De lo contrario, se creará.
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el archivo .plist en forma de llave. Se aceptan todos los nombre de llaves. Los tipos de valores se conservan cuando es posible.
 
@@ -610,7 +612,7 @@ Para definir un valor de tipo Fecha, el formato a utilizar es una cadena de time
 
 :::
 
-***info* parameter object with a .exe or .dll file (Windows only)**
+**Parámetro objeto *info* con un archivo .exe o .dll (sólo Windows)**
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
@@ -630,16 +632,16 @@ Para todas las propiedades excepto `WinIcon`, si se pasa un texto nulo o vacío 
 
 Para la propiedad `WinIcon`, si el archivo del icono no existe o tiene un formato incorrecto, se genera un error.
 
-***info* parameter object with a macOS executable file (macOS only)**
+**Parámetro *info* con un archivo ejecutable macOS (sólo macOS)**
 
-*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*info* debe ser un objeto con una única propiedad llamada `archs` que es una colección de objetos en el formato devuelto por [`getAppInfo()`](#getappinfo). Cada objeto debe contener al menos las propiedades `type` y `uuid` (`name` no es usado).
 
-Every object in the *info*.archs collection must contain the following properties:
+Cada objeto de la colección *info*.archs debe contener las siguientes propiedades:
 
-| Propiedad | Tipo   | Descripción                                        |
-| --------- | ------ | -------------------------------------------------- |
-| type      | Number | Numerical identifier of the architecture to modify |
-| uuid      | Text   | Textual representation of the new executable uuid  |
+| Propiedad | Tipo   | Descripción                                           |
+| --------- | ------ | ----------------------------------------------------- |
+| type      | Number | Identificador numérico de la arquitectura a modificar |
+| uuid      | Text   | Representación textual del nuevo uuid ejecutable      |
 
 #### Ejemplo 1
 
@@ -652,7 +654,7 @@ $info:=New object
 $info.Copyright:="Copyright 4D 2023" //text
 $info.ProductVersion:=12 //integer
 $info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
-$info.CFBundleIconFile:="myApp.icns" //for macOS
+$info.CFBundleIconFile:="myApp.icns" //para macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
@@ -674,18 +676,18 @@ $exeFile.setAppInfo($info)
 #### Ejemplo 3
 
 ```4d
-// regenerate uuids of an application (macOS)
+// regenerar uuids de una aplicación (macOS)
 
-// read myApp uuids 
+// leer uuids de myApp 
 var $app:=File("/Applications/myApp.app/Contents/MacOS/myApp")
 var $info:=$app.getAppInfo()
 
-// regenerate uuids for all architectures
+// regenera los uuids para todas las arquitecturas
 For each ($i; $info.archs)
 	$i.uuid:=Generate UUID
 End for each 
 
-// update the app with the new uuids
+// actualiza la app con los nuevos uuids
 $app.setAppInfo($info)
 ```
 
@@ -709,15 +711,15 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parámetros | Tipo |    | Descripción                       |
-| ---------- | ---- | -- | --------------------------------- |
-| content    | BLOB | -> | Nuevos contenidos para el archivo |
+| Parámetros | Tipo |    | Descripción                   |
+| ---------- | ---- | -- | ----------------------------- |
+| content    | BLOB | -> | Nuevos contenidos del archivo |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función .setContent( ) <!-- REF #FileClass.setContent().Summary --> reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOBcontent<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
+La función `.setContent( )`<!-- REF #FileClass.setContent().Summary --> reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
 #### Ejemplo
 
@@ -758,7 +760,7 @@ La función .setContent( ) <!-- REF #FileClass.setContent().Summary --> reescrib
 
 La función `.setText()` <!-- REF #FileClass.setText().Summary --> escribe *text* como el nuevo contenido del archivo<!-- END REF -->.
 
-Comentario Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
+Si el archivo referenciado en el objeto `File` no existe en el disco, la función lo crea. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
 En *text*, pase el texto a escribir en el archivo. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
 

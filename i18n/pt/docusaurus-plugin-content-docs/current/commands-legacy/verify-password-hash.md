@@ -23,7 +23,7 @@ Esta função compara a *senha* com um *hash* gerado pela função [Generate pas
 
 ### Gestão de erros 
 
-Os erros abaixo podem ser devolvidos. Pode revisar um erro com os comandos [Last errors](last-errors.md)  e [ON ERR CALL](on-err-call.md).  
+Os erros abaixo podem ser devolvidos. Pode revisar um erro com os comandos [Last errors](../commands/last-errors.md)  e [ON ERR CALL](on-err-call.md).  
   
 | **Número** | **Mensagem**                                         |
 | ---------- | ---------------------------------------------------- |

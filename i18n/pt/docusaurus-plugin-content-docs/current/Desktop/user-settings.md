@@ -79,7 +79,7 @@ Quando você editar as configurações nesta caixa de diálogo, elas são automa
 
 Algumas das configurações do usuário também estão disponíveis através do comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md). As definições do utilizador são parâmetros com a propriedade **Kept between two sessions** definida para **Yes**.
 
-When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command are automatically saved in the user settings for the data file.
+Quando a funcionalidade **Propriedades usuário** está ativada, as propriedades usuário editadas pelo comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) são automaticamente salvas nas configurações do usuário para o arquivo de dados.
 
 > 'Número de seqüência de tabela' é uma exceção; esse valor de configuração é sempre salvo no próprio arquivo de dados.
 

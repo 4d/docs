@@ -18,7 +18,7 @@ Los datos se recogen durante los siguientes eventos:
 - inicio de la base de datos,
 - cierre de base de datos,
 - inicio del servidor web,
-- use of specific features such as php, open datastore, remote debugger,
+- uso de funciones específicas como php, open datastore, depurador remoto,
 - conexión con el cliente,
 - envío de recolección de datos.
 
@@ -57,7 +57,7 @@ También se recogen algunos datos a intervalos regulares.
 | --------- | ------ | ---------------------------------------------------------------------------- |
 | webServer | Object | "started":true si el servidor web está arrancando o iniciado |
 
-### Collected at new web session creation
+### Recolectado durante la creación de una nueva sesión web
 
 | Datos                                               | Tipo   | Notas                                                                                          |
 | --------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------- |
@@ -66,7 +66,7 @@ También se recogen algunos datos a intervalos regulares.
 | databases.webMaxUnlicensedSessions  | Number | Número máximo de otras sesiones web no REST en el servidor                                     |
 | databases.restMaxUnlicensedSessions | Number | Número máximo de otras sesiones web REST en el servidor                                        |
 
-### Collected at datastore opening
+### Recolectadoo al abrir el datastore
 
 | Datos                                             | Tipo   | Notas                                                            |
 | ------------------------------------------------- | ------ | ---------------------------------------------------------------- |
@@ -111,7 +111,7 @@ También se recogen algunos datos a intervalos regulares.
 | webserverBytesOut              | Number | Bytes enviados por el servidor web durante la recolección de datos  |
 | qodly.webforms | Number | Número de formularios web Qodly                                     |
 
-### Collected at every new call to the remote debugger
+### Recolectado en cada nueva llamada al depurador remoto
 
 | Datos                                                       | Tipo   | Notas                                                         |
 | ----------------------------------------------------------- | ------ | ------------------------------------------------------------- |

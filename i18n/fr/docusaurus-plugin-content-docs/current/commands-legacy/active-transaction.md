@@ -19,7 +19,8 @@ displayed_sidebar: docs
 
 Comme cette commande retourne également **Faux** lorsque le process courant n'est pas en transaction, vous aurez besoin d'utiliser la commande [In transaction](in-transaction.md) afin de vérifier que le process est bien en transaction. 
 
-Pour plus d'informations, reportez-vous à la section *Suspendre des transactions*. 
+Pour plus d'informations, reportez-vous à la section [Suspendre des transactions](../Develop-legacy/transactions.md#suspending-transactions)
+. 
 
 ## Description 
 
@@ -42,7 +43,7 @@ Vous voulez connaître le statut courant de transaction :
 [In transaction](in-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
-*Suspendre des transactions*  
+[Suspendre des transactions](../Develop-legacy/transactions.md#suspending-transactions)
 
 ## Propriétés
 

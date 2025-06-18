@@ -141,12 +141,12 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 > Las funciones no ocultas al interior de una clase oculta aparecen como sugerencias cuando se utiliza completar código con una clase que [hereda](../Concepts/classes.md#inheritance) de ella. Por ejemplo, si un componente tiene una clase `Teacher` que hereda una clase `_Person`, la finalización del código para `Teacher` sugiere funciones no ocultas de `_Person`.
 
-## Editing components from the host
+## Edición de componentes desde el host
 
 To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
 
-- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
-- the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
+- el componente ha sido [cargado en modo interpretado](../Project/components.md#interpreted-and-compiled-components),
+- el componente no es cargado de la [caché local del administrador de dependencias](../Project/components.md#local-cache-for-dependencies), es decir, no está [descargado de GitHub](../Project/components.md#adding-a-github-dependency).
 
 In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
 
@@ -155,7 +155,7 @@ In the Explorer, a specific icon indicates that the component code is editable:<
 
 :::warning
 
-Only [exposed classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited.
+Sólo se pueden editar las [clases expuestas](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente.
 
 :::
 
@@ -211,7 +211,7 @@ Cuando se utilizan punteros para que los componentes y el proyecto local se comu
 - El comando `Get pointer` no devolverá un puntero a una variable del proyecto local si se llama desde un componente y viceversa.
 
 - La arquitectura de componentes permite la coexistencia, dentro del mismo proyecto interpretado, de componentes interpretados y compilados (a la inversa, en un proyecto compilado sólo pueden utilizarse componentes compilados). Para utilizar punteros en este caso, debe respetar el siguiente principio: el intérprete puede desanclar un puntero construido en modo compilado; sin embargo, en modo compilado, no puede desanclar un puntero construido en modo interpretado.
- Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en el mismo proyecto local.
+  Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en el mismo proyecto local.
 
 - Si el componente C define la variable `myCvar`, el componente I puede acceder al valor de esta variable utilizando el puntero `->myCvar`.
 
@@ -371,28 +371,28 @@ La ejecución del código de inicialización o cierre se realiza mediante el mé
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
+Los componentes pueden tener un archivo `Info.plist` en su [carpeta raíz](../Project/architecture.md) para ofrecer información extra legible por el sistema (sólo macOS) y el [Gestor de dependencias](../Project/components.md#loading-components).
 
 :::note
 
-This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+Este archivo no es obligatorio pero es necesario para construir componentes [notarizables y grapables](../Desktop/building.md#about-notarization) para macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#loading-components) en todas las plataformas.
 
-The folling keys can be defined:
+Se pueden definir las siguientes teclas:
 
-| key                                                        | description                                                                                                                                                         |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | Nombre del componente (interno)                                                                                                                  |
-| CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                     |
-| NSHumanReadableCopyright                                   | Copyright a mostrar                                                                                                                                                 |
-| CFBundleVersion                                            | Version of the component                                                                                                                                            |
-| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
-| com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+| key                                                        | description                                                                                                                                                                                      |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| CFBundleName                                               | Nombre del componente (interno)                                                                                                                                               |
+| CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                                                  |
+| NSHumanReadableCopyright                                   | Copyright a mostrar                                                                                                                                                                              |
+| CFBundleVersion                                            | Versión del componente                                                                                                                                                                           |
+| CFBundleShortVersionString                                 | Versión del componente a mostrar                                                                                                                                                                 |
+| com.4d.minSupportedVersion | Versión mínima soportada en 4D, utilizada por el administrador de Dependencias para [versiones de componentes posteriores a 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
 
-Here is an example of `Info.plist` file:
+Aquí hay un ejemplo del archivo `Info.plist`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
@@ -414,7 +414,7 @@ Here is an example of `Info.plist` file:
 </plist>
 ```
 
-On macOS, information is available from the finder:
+En macOS, la información está disponible en el Finder:
 
 ![](../assets/en/Develop/infoplist-component.png)
 
@@ -431,6 +431,6 @@ Para proteger eficazmente el código de un componente, basta con [compilar y gen
 - Los métodos, clases y funciones del proyecto compartido pueden ser llamados desde los métodos proyecto locales y también se muestran en la página de métodos del Explorador. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
 - Los otros métodos proyecto del proyecto matriz nunca aparecerán.
 
-## Sharing your components on GitHub
+## Compartiendo sus componentes en GitHub
 
 Lo animamos a que apoye a la comunidad de desarrolladores 4D compartiendo sus componentes, preferiblemente en la plataforma [GitHub](https://github.com/topics/4d-component). Recomendamos que utilice el tema **`4d-component`** para ser referenciado correctamente.

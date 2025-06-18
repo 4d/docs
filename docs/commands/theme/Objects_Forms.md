@@ -18,6 +18,7 @@ slug: /commands/theme/Objects-Forms
 |[<!-- INCLUDE #_command_.OBJECT GET COORDINATES.Syntax -->](../../commands-legacy/object-get-coordinates.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT Get corner radius.Syntax -->](../../commands-legacy/object-get-corner-radius.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT Get data source.Syntax -->](../../commands-legacy/object-get-data-source.md)<br/>|
+|[<!-- INCLUDE #_command_.OBJECT Get data source formula.Syntax -->](../object-get-data-source-formula.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT GET DRAG AND DROP OPTIONS.Syntax -->](../../commands-legacy/object-get-drag-and-drop-options.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT Get enabled.Syntax -->](../../commands-legacy/object-get-enabled.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT Get enterable.Syntax -->](../../commands-legacy/object-get-enterable.md)<br/>|
@@ -66,6 +67,7 @@ slug: /commands/theme/Objects-Forms
 |[<!-- INCLUDE #_command_.OBJECT SET COORDINATES.Syntax -->](../../commands-legacy/object-set-coordinates.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET CORNER RADIUS.Syntax -->](../../commands-legacy/object-set-corner-radius.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET DATA SOURCE.Syntax -->](../../commands-legacy/object-set-data-source.md)<br/>|
+|[<!-- INCLUDE #_command_.OBJECT SET DATA SOURCE FORMULA.Syntax -->](../object-set-data-source-formula.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET DRAG AND DROP OPTIONS.Syntax -->](../../commands-legacy/object-set-drag-and-drop-options.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET ENABLED.Syntax -->](../../commands-legacy/object-set-enabled.md)<br/>|
 |[<!-- INCLUDE #_command_.OBJECT SET ENTERABLE.Syntax -->](../../commands-legacy/object-set-enterable.md)<br/>|

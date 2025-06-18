@@ -108,9 +108,9 @@ Los objetos compartidos y las colecciones compartidas están diseñados para per
 - La línea **End use** desbloquea las propiedades *Shared_object_or_Shared_collection* y todos los objetos del mismo grupo.
 - En el código 4D se pueden anidar varias estructuras **Use...End use**. Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**.
 
-### Automatic Use...End use calls
+### Llamadas automáticas Use...End use
 
-The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
+Las siguientes funcionalidades activan automáticamente un **Use/End use** interno, haciendo innecesaria una llamada explícita a la estructura cuando se ejecuta la función:
 
 - [funciones de collection](../API/CollectionClass.md) que modifican las colecciones compartidas,
 - comando [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md),

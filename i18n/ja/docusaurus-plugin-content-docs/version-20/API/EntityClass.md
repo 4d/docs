@@ -600,15 +600,14 @@ vCompareResult1 (すべての差異が返されています):
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | 引数   | 型       |    | 説明                                                       |
 | ---- | ------- |:--:| -------------------------------------------------------- |
 | mode | Integer | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
-| 戻り値  | Text    | <- | エンティティのテキスト型プライマリーキーの値                                   |
-| 戻り値  | Integer | <- | エンティティの数値型プライマリーキーの値                                     |
+| 戻り値  | any     | <- | Value of the primary key of the entity (Integer or Text) |
 
 <!-- END REF -->
 
@@ -936,7 +935,12 @@ $info:=$address.getRemoteContextAttributes()
 * 同プロセス内で合致するエンティティに対して [`.unlock()`](#unlock) 関数が呼び出された場合
 * メモリ内のどのエンティティからも参照されなくなった場合、自動的にロックが解除されます。 たとえば、エンティティのローカル参照に対してのみロックがかかっていた場合、関数の実行が終了すればロックは解除されます。 メモリ内にエンティティへの参照がある限り、レコードはロックされたままです。
 
-> エンティティは [RESTセッションによってロックされる](../REST/$lock.md) 場合もあります。
+:::note 注記
+
+- エンティティのロックが解除されるためには、そのプロセスでエンティティに対して `lock()` が呼ばれたのと同じ回数 [`unlock()`](#unlock) が呼ばれる必要があります。
+- エンティティは [RESTセッションによってロックされる](../REST/$lock.md) 場合もあります。
+
+:::
 
 *mode* 引数を渡さなかった場合のデフォルトでは、同エンティティが他のプロセスまたはユーザーによって変更されていた場合 (つまり、スタンプが変更されていた場合) にエラーを返します (以下参照)。
 
@@ -966,7 +970,7 @@ $info:=$address.getRemoteContextAttributes()
 |                  | task_name           | text                | プロセス名                                                                                                                                             |
 |                  | client_version      | text                | クライアントのリリース                                                                                                                                       |
 |                  |                     |                     | ***RESTセッションによるロックの場合:***                                                                                                                         |
-|                  | host                | text                | URL that locked the entity (e.g. "`www.myserver.com`")                                                                                            |
+|                  | host                | text                | エンティティをロックした URL (例: "`www.myserver.com`")                                                                                                        |
 |                  | IPAddr              | text                | ロック元の IPアドレス (例: "127.0.0.1")                                                                                                                     |
 |                  | userAgent           | text                | ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                     |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):                                                                          |
@@ -1738,7 +1742,8 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 > 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
 ロックしているプロセス内のどのエンティティからもレコードが参照されなくなった場合、自動的にレコードロックが解除されます (たとえば、エンティティのローカル参照に対してのみロックがかかっていた場合、プロセスが終了すればエンティティおよびレコードのロックは解除されます)。
-> レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例: 例:
+
+レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例: 例:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1747,6 +1752,13 @@ employeeObject:=employeeSelected.toObject("directReports.*")
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+エンティティのロックが解除されるためには、そのプロセスでエンティティに対して [`lock()`](#lock) が呼ばれたのと同じ回数 `unlock()` が呼ばれる必要があります。
+
+:::
+
 
 **戻り値**
 

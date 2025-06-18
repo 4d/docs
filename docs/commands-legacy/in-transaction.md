@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.In transaction.Summary-->The In transaction command returns **TRUE** if the current process is in a transaction, otherwise it returns **FALSE**.<!-- END REF-->
+<!--REF #_command_.In transaction.Summary-->The `In transaction` command returns **TRUE** if the current process is in a [transaction](../Develop-legacy/transactions.md), otherwise it returns **FALSE**.<!-- END REF-->
 
 ## Example 
 

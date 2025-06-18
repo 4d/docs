@@ -600,15 +600,14 @@ vCompareResult1 (すべての差異が返されています):
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | 引数   | 型       |    | 説明                                                       |
 | ---- | ------- |:--:| -------------------------------------------------------- |
 | mode | Integer | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
-| 戻り値  | Text    | <- | エンティティのテキスト型プライマリーキーの値                                   |
-| 戻り値  | Integer | <- | エンティティの数値型プライマリーキーの値                                     |
+| 戻り値  | any     | <- | Value of the primary key of the entity (Integer or Text) |
 
 <!-- END REF -->
 
@@ -1540,11 +1539,12 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 #### 説明
 
-`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします<!-- END REF -->。
+`.touched()` 関数は、 <!-- REF #EntityClass.touched().Summary -->メモリ読み込み後にエンティティの属性が1個でも変更されていれば True を返します<!-- END REF -->。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
 
-属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
+この関数は、種類 ([kind](DataClassClass.md#attributename)) が `storage` あるいは `relatedEntity` である属性にだけ適用されます。
 
-この関数は、([`.new( )`](DataClassClass.md#new) で作成された) 新規エンティティに対しては常に false を返します。 ただし、エンティティの属性を計算する関数を使用した場合には、`.touched()` 関数は true を返します。 たとえば、プライマリーキーを計算するために [`.getKey()`](#getkey) を呼び出した場合、`.touched()` メソッドは true を返します。
+( [`.new()`](DataClassClass.md#new)で) 作成されたばかりの新しいエンティティの場合、関数は False を返します。 しかし、[`autoFilled`プロパティが](./DataClassClass.md#返されるオブジェクト)Trueである属性にアクセスすると、`.touched()`関数はTrueを返します。 例えば、新しいエンティティに対して`$id:=ds.Employee.ID を`実行すると (ID 属性に "自動インクリメント" プロパティが設定されていると仮定)、`.touched()`は True を返します。
+
 
 #### 例題
 
@@ -1587,7 +1587,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 `.toObject()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 
-この関数は、種類 ([kind](DataClassClass.md#attributename)) が `storage` あるいは `relatedEntity` である属性に適用されます。
+この関数は、種類 ([kind](DataClassClass.md#attributename)) が `storage` あるいは `relatedEntity` である属性にだけ適用されます。
 
 リレート先のエンティティそのものが更新されていた場合 (外部キーの変更)、リレートエンティティの名称とそのプライマリーキー名が返されます。
 
@@ -1664,7 +1664,8 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 > 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
 ロックしているプロセス内のどのエンティティからもレコードが参照されなくなった場合、自動的にレコードロックが解除されます (たとえば、エンティティのローカル参照に対してのみロックがかかっていた場合、プロセスが終了すればエンティティおよびレコードのロックは解除されます)。
-> レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例: 例:
+
+レコードがロックされている場合、ロックしているプロセスから、ロックされたエンティティ参照に対してロックを解除する必要があります: 例: 例:
 
 ```4d
  $e1:=ds.Emp.all()[0]
@@ -1673,6 +1674,13 @@ employeeObject:=employeeSelected.toObject("directReports.*")
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+エンティティのロックが解除されるためには、そのプロセスでエンティティに対して [`lock()`](#lock) が呼ばれたのと同じ回数 `unlock()` が呼ばれる必要があります。
+
+:::
+
 
 **戻り値**
 

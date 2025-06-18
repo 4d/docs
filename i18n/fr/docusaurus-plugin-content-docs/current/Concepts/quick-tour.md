@@ -54,7 +54,7 @@ Même si cela est généralement déconseillé, vous pouvez créer des variables
 MyOtherDate:=Current date+30
 ```
 
-La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable créée par affectation est interprétée comme étant sans type, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes et changer de type dynamiquement. This flexibility does not apply to variables declared with the `var` keyword (their type cannot change) and in [compiled mode](interpreted.md) where the type can never be changed, regardless of how the variable was created.
+La ligne de code se lit "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable créée par affectation est interprétée comme étant sans type, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes et changer de type dynamiquement. Cette flexibilité ne s'applique pas aux variables déclarées avec le mot-clé `var` (leur type ne peut pas changer) et en [mode compilé](interpreted.md) où le type ne peut jamais être changé, quelle que soit la façon dont la variable a été créée.
 
 ## Commandes
 
@@ -96,12 +96,12 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 4D propose un large ensemble de constantes prédéfinies, dont les valeurs sont accessibles par un nom. Elles permettent d'écrire un code plus lisible. Par exemple, `XML DATA` est une constante (valeur 6).
 
 ```4d
-vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
+vRef:=Open document("PassFile";"TEXT";Read Mode) // ouvre le document en lecture seule
 ```
 
 > Les constantes prédéfinies apparaissent <u>soulignées</u> par défaut dans l'éditeur de code 4D.
 
-## Methods
+## Méthodes
 
 4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage.
 Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.

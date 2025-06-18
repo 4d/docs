@@ -5,18 +5,18 @@ title: OpenAIError Class
 
 # OpenAIError Class
 
-The `OpenAIError` class is designed to handle errors returned by the OpenAI API. It extracts relevant information from the error response and provides methods to access this information.
+La classe `OpenAIError` est conçue pour gérer les erreurs retournées par l'API OpenAI. Elle extrait les informations pertinentes de la réponse d'erreur et fournit des méthodes pour accéder à ces informations.
 
 ## Propriétés
 
-### Error properties
+### Propriétés d'erreurs
 
 | Propriété | Type    | Description                                                                    |
 | --------- | ------- | ------------------------------------------------------------------------------ |
 | `errCode` | Integer | The error code returned by the API or the HTTP status.         |
 | `message` | Text    | The error message returned by the API or the HTTP status text. |
 
-### HTTP reponse properties
+### Propriétés de réponse HTTP
 
 | Propriété    | Type    | Description                                                     |
 | ------------ | ------- | --------------------------------------------------------------- |
@@ -27,7 +27,7 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 | `headers`    | Object  | The headers of the error response.              |
 | `requestID`  | Text    | The request ID from the error response headers. |
 
-### OpenAI specific
+### Spécifique à OpenAI
 
 | Propriété | Type    | Description                                                         |
 | --------- | ------- | ------------------------------------------------------------------- |
@@ -35,7 +35,7 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 | `type`    | Text    | The type of error returned by the API.              |
 | `param`   | Text    | The parameter that caused the error, if applicable. |
 
-### HTTP status code info
+### Code d'état HTTP
 
 | Propriété                    | Type    | Description                                                                      |
 | ---------------------------- | ------- | -------------------------------------------------------------------------------- |

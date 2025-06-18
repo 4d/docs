@@ -12,7 +12,7 @@ A linguagem 4D suporta os operadores que talvez já conheça de outras linguagen
 A linguagem 4D suporta operadores **binários** e **ternários**:
 
 - Os operadores binários operam em dois alvos (como `2 + 3`) e aparecem entre seus dois alvos.
-- os operadores ternários operam em três objectivos. Como o C, o 4D tem apenas um operador ternário, o [operador condicional ternário] (#operador ternário) (`a ? b : c`).
+- os operadores ternários operam em três objectivos. Como o C, o 4D tem apenas um operador ternário, o [operador condicional ternário](#ternary-operator) (`a ? b : c`).
 
 Os valores que os operadores afectam são os operandos. Na expressão `1 + 2`, o símbolo + é um operador binário e seus dois operandos são os valores 1 e 2.
 
@@ -90,7 +90,7 @@ São suportados os seguintes operadores de atribuição compostos:
 |               | Time \*= Number    | Number      | `$t1*=5 //$t1:=$t1*5`                                                      |
 |               | Picture \*= Number | Imagem      | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 por 5)`                            |
 
-Esses operadores se aplicam a quaisquer [expressões atribuíveis] (quick-tour.md#assignable-vs-non-assignable-expressions) (exceto imagens como propriedades de objetos ou elementos de coleções).
+Esses operadores se aplicam a quaisquer [expressões atribuíveis](quick-tour.md#assignable-vs-non-assignable-expressions) (exceto imagens como propriedades de objetos ou elementos de coleções).
 
 A operação "source `operator` value" não é estritamente equivalente a "source := source `operator` value" porque a expressão que designa a fonte (variável, campo, propriedade de objeto, elemento de coleção) é avaliada apenas uma vez. Por exemplo, em expressões como `getPointer()->+=1` o método `getPointer` é chamado apenas uma vez.
 
@@ -134,7 +134,7 @@ $t2*=2 // $t2="HelloHello"
 
 Os operadores **&&** e **||** são **operadores de curto-circuito**. Um operador de curto-circuito é aquele que não avalia necessariamente todos os seus operandos.
 
-A diferença é que o single [**&** e **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** não retornam um valor booleano. Eles avaliam expressões como [verdadeiro ou falso] (#verdadeiro-e-falso) e, em seguida, retornam uma das expressões.
+A diferença é que o single [**&** e **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** não retornam um valor booleano. Eles avaliam expressões como [truthy ou falsy](#truthy-and-falsy) e, em seguida, retornam uma das expressões.
 
 ### Operador em curto-circuito AND (&&)
 
@@ -150,7 +150,7 @@ A regra é a seguinte:
 
 Dado `Expr1 && Expr2`:
 
-O operador AND de curto-circuito avalia os operandos da esquerda para a direita, retornando imediatamente com o valor do primeiro operando falso que encontrar; se todos os valores forem [verdadeiros] (#verdadeiro-e-falso), o valor do último operando será retornado.
+O operador AND de curto-circuito avalia os operandos da esquerda para a direita, retornando imediatamente com o valor do primeiro operando falso que encontrar; se todos os valores forem [truthy](#truthy-and-falsy), o valor do último operando será retornado.
 
 A tabela a seguir resume os diferentes casos do operador **&&**:
 
@@ -268,13 +268,13 @@ Isso significa que `a || b && c` é avaliado como `(a || b) && c`.
 
 </details>
 
-O operador condicional ternário permite-lhe escrever expressões condicionais de uma linha. Por exemplo, ele pode substituir uma sequência completa de instruções [If…Else] (flow-control.md#ifelseend-if).
+O operador condicional ternário permite-lhe escrever expressões condicionais de uma linha. Por exemplo, ele pode substituir uma sequência completa de instruções [If…Else](flow-control.md#ifelseend-if).
 
 Aceita três operandos na seguinte ordem:
 
 - uma condição seguida de um ponto de interrogação (?)
 - uma expressão a ser executada se a condição for [truthy](#truthy-and-falsy), seguido por dois pontos (:)
-- uma expressão a ser executada se a condição for [falsa] (#truthy-and-falsy)
+- uma expressão a ser executada se a condição for [falsy](#truthy-and-falsy)
 
 ### Sintaxe
 
@@ -321,7 +321,7 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 Para além de um tipo, cada valor tem também um valor booliano inerente, geralmente conhecido como truthy ou falsy\*\*.
 
-> Os valores **truthy** e **falsy** são avaliados somente pelos operadores [short-circuit] (#operadores de curto-circuito) e [ternary] (#operador alternativo).
+> Os valores **truthy** e **falsy** são avaliados somente pelos operadores [em corto circuito](#short-circuit-operators) e [ternary](#ternary-operator).
 
 Os seguintes valores são falsy\*\*:
 
@@ -341,9 +341,9 @@ Todos os outros valores são considerados **verdadeiros**, inclusive:
 
 - 0 - zero numérico (inteiro ou não)
 
-Em 4D, a avaliação **verdadeira** e **falsa** reflete a **utilização** de um valor, o que significa que um valor verdadeiro existe e pode ser processado pelo código sem gerar erros ou resultados inesperados. A lógica por trás disso é fornecer uma maneira conveniente de lidar com valores *indefinidos* e *nulos* em objetos e coleções, de modo que um número reduzido de instruções [If…Else] (flow-control.md#ifelseend-if) seja necessário para evitar erros de tempo de execução.
+Em 4D, a avaliação **verdadeira** e **falsa** reflete a **utilização** de um valor, o que significa que um valor verdadeiro existe e pode ser processado pelo código sem gerar erros ou resultados inesperados. A lógica por trás disso é fornecer uma maneira conveniente de lidar com valores *undefined* e *null* em objetos e coleções, de modo que um número reduzido de instruções [If…Else](flow-control.md#ifelseend-if) seja necessário para evitar erros de tempo de execução.
 
-Por exemplo, quando você usa um [operador OR de curto-circuito] (#short-circuit-or-operator-):
+Por exemplo, quando você usa um [operador OR de curto-circuito](#short-circuit-or-operator-):
 
 ```4d
 $value:=$object.value || $defaultValue

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Printing page.Summary-->**Printing page** devuelve el número de la página en impresión.<!-- END REF--> Puede utilizarse sólo cuando esté imprimiendo con [PRINT SELECTION](print-selection.md) o con el menú Impresión en el entorno Diseño.
+<!--REF #_command_.Printing page.Summary-->**Printing page** devuelve el número de la página en impresión.<!-- END REF-->.
 
 ## Ejemplo 
 

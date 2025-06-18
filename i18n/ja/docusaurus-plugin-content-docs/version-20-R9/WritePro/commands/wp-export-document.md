@@ -126,7 +126,7 @@ wk factur x プロパティは、2つまでのプロパティを格納するこ�
 | profile   | Text  | 任意。 オプション。 任意。 任意。 任意。 任意。 If omitted, *profile* is determined from the provided xml file or text (which must use a standard profile). 渡された場合には、標準のプロファイル名以外の名前でも構いません(他のプロファイル、例えばRECHNUNG などを使用することも可能)。 **注意**: 標準のプロファイル名は以下のとおりです: MINIMUM、BASIC WL、BASIC、EN 16931 (別名 COMFORT でありこれはエイリアス)、EXTENDED |
 | version   | Text  | 任意。 オプション。 オプション。 デフォルト値は"1.0"                                                                                                                                                                                                                                                                                                                                                                     |
 
-### About Factur-X / ZUGFeRD PDF documents
+### Factur-X / ZUGFeRD PDF ドキュメントについて
 
 *Factur-X / ZUGFeRD* はハイブリッドな電子請求書のための欧州の規格です(PDFはユーザー用、XML データは処理の自動化用)。 詳細な情報については [こちらのblog記事](https://blog.4d.com/4d-write-pro-electronic-invoice-generation) を参照してください。 詳細な情報については [こちらのblog記事](https://blog.4d.com/4d-write-pro-electronic-invoice-generation) を参照してください。 詳細な情報については [こちらのblog記事](https://blog.4d.com/4d-write-pro-electronic-invoice-generation) を参照してください。
 

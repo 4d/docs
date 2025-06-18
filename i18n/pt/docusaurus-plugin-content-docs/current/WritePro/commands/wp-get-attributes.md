@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | attribName  | Text                                           | &#8594; | Nome do atributo para obter               |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Resultado   | Object                                         | &#8592; | Attribute names and values                |
+| Resultado   | Object                                         | &#8592; | Nomes e valores dos atributos             |
 
 <!-- END REF-->
 
@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 The **WP Get attributes** command<!--REF #_command_.WP Get attributes.Summary--> returns the value of any attribute in a 4D Write Pro range, header, body, footer, table, or document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attributes: character, paragraph, document, table, or image.
 
-In *targetObj*, you can pass:
+Em *targetObj*, você pode passar:
 
 - um intervalo, ou
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
-In *attribName*, pass the name of the attribute you want to retrieve.
+Em *attribName*, passe o nome do atributo que você deseja recuperar.
 
 You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
 
@@ -36,7 +36,7 @@ For a comprehensive list of attributes to pass, as well as their scope and value
 
 If there are different values for the same attribute in the element passed as a parameter, the command returns:
 
-- for numerical values, wk mixed
+- para valores numéricos, wk mixed
 - for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
 - for string values, an empty string
 - for picture values, an empty picture.

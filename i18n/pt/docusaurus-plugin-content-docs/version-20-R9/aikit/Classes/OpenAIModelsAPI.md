@@ -21,13 +21,13 @@ https://platform.openai.com/docs/api-reference/models
 | ------------ | ----------------------------------------- | -------------------------------------------------------- |
 | *model*      | Text                                      | The identifier of the model to retrieve. |
 | *parâmetros* | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.   |
-| Resultado    | [OpenAIModelResult](OpenAIModelResult.md) | The model result                                         |
+| Resultado    | [OpenAIModelResult](OpenAIModelResult.md) | O resultado do modelo                                    |
 
 Retrieves a model instance to provide basic information.
 
 https://platform.openai.com/docs/api-reference/models/retrieve
 
-#### Example usage:
+#### Exemplo de uso:
 
 ```4d
 var $result:=$client.model.retrieve("text-davinci-003")
@@ -36,18 +36,18 @@ var $model:=$result.model
 
 ### lista()
 
-**list**(*parameters* : OpenAIParameters) : OpenAIModelListResult
+**list**(*parameters* : OpenAIParameters): OpenAIModelListResult
 
 | Parâmetro    | Tipo                                              | Descrição                                              |
 | ------------ | ------------------------------------------------- | ------------------------------------------------------ |
 | *parâmetros* | [OpenAIParameters](OpenAIParameters.md)           | Additional parameters for the request. |
-| Resultado    | [OpenAIModelListResult](OpenAIModelListResult.md) | The model list result                                  |
+| Resultado    | [OpenAIModelListResult](OpenAIModelListResult.md) | Resultado da lista de modelos                          |
 
 Lists the currently available models.
 
 https://platform.openai.com/docs/api-reference/models/list
 
-#### Example usage:
+#### Exemplo de uso:
 
 ```4d
 var $result:=$client.model.list($parameters)

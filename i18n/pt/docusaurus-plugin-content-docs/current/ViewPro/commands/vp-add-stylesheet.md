@@ -35,7 +35,7 @@ Você pode designar onde definir a folha de estilos no parâmetro opcional sheet
 
 Se uma folha de estilo *styleName* for definida no nível da pasta de trabalho e em um nível de planilha, o nível da planilha terá prioridade sobre o nível da pasta de trabalho quando a folha de estilo for definida.
 
-To apply the style sheet, use the [VP SET DEFAULT STYLE](vp-set-default-style.md) or [VP SET CELL STYLE](vp-set-cell-style.md) commands.
+Para aplicar a folha de estilo, use os comandos [VP SET DEFAULT STYLE](vp-set-default-style.md) ou [VP SET CELL STYLE](vp-set-cell-style.md).
 
 ## Exemplo
 

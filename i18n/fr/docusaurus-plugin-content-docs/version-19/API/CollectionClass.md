@@ -1058,7 +1058,7 @@ Le code de ***TypeLookUp*** est :
 <!-- REF #collection.find().Params -->
 | Paramètres | Type    |    | Description                                                                  |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------- |
-| startFrom  | Integer | -> | Elément à partir duquel débuter la recherche                                 |
+| startFrom  | Integer | -> | Indice d'élément à partir duquel débuter la recherche                        |
 | methodName | Text    | -> | Nom de la méthode à appeler pour la recherche                                |
 | param      | any     | -> | Paramètre(s) à passer à *methodName*                                         |
 | Résultat   | any     | <- | Première valeur trouvée (Undefined si non trouvée)<!-- END REF -->
@@ -1152,7 +1152,7 @@ Le code de la méthode ***FindCity*** est :
 <!-- REF #collection.findIndex().Params -->
 | Paramètres | Type    |    | Description                                                                   |
 | ---------- | ------- |:--:| ----------------------------------------------------------------------------- |
-| startFrom  | Integer | -> | Elément à partir duquel débuter la recherche                                  |
+| startFrom  | Integer | -> | Indice d'élément à partir duquel débuter la recherche                         |
 | methodName | Text    | -> | Nom de la méthode à appeler pour la recherche                                 |
 | param      | any     | -> | Paramètre(s) à passer à *methodName*                                          |
 | Résultat   | Integer | <- | Numéro du premier élément trouvé (-1 si non trouvé)<!-- END REF -->
@@ -1228,7 +1228,7 @@ Le code de la méthode ***FindCity*** est :
 | Paramètres | Type       |    | Description                                                                                                   |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------- |
 | toSearch   | expression | -> | Expression à rechercher dans la collection                                                                    |
-| startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                                                                  |
+| startFrom  | Integer    | -> | Indice d'élément à partir duquel débuter la recherche                                                         |
 | Résultat   | Integer    | <- | Numéro de la première occurrence de toSearch dans la collection, -1 si non trouvée|<!-- END REF -->
 
 |
@@ -1428,7 +1428,7 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 | Paramètres | Type       |    | Description                                                                                                  |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------ |
 | toSearch   | expression | -> | Elément à chercher dans la collection                                                                        |
-| startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                                                                 |
+| startFrom  | Integer    | -> | Indice d'élément à partir duquel débuter la recherche                                                        |
 | Résultat   | Integer    | <- | Numéro de la dernière occurrence de toSearch dans la collection, -1 si non trouvé|<!-- END REF -->
 
 |

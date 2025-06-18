@@ -35,7 +35,7 @@ En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido c
 
 Se devuelve un error si el objeto *viewPro* no es válido.
 
-In *paramObj*, you can pass the following property:
+En *paramObj*, puede pasar la siguiente propiedad:
 
 | Propiedad | Tipo                        | Descripción                                                                                                                                                                                                                                                                                       |
 | --------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,19 +43,19 @@ In *paramObj*, you can pass the following property:
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
-| Parámetros |                               | Tipo    | Descripción                                                |
-| ---------- | ----------------------------- | ------- | ---------------------------------------------------------- |
-| param1     |                               | Text    | El nombre del objeto de área 4D View Pro                   |
-| param2     |                               | Text    | Reserved for compatibility, this parameter is always empty |
-| param3     |                               | Object  | Referencia al parámetro *paramObj* del comando             |
-| param4     |                               | Object  | Un objeto devuelto por el método con un mensaje de estado  |
-|            | .success      | Boolean | `True` if import was successful, `False` otherwise         |
-|            | .errorCode    | Integer | Código de error                                            |
-|            | .errorMessage | Text    | Mensaje de error                                           |
+| Parámetros |                               | Tipo    | Descripción                                                                       |
+| ---------- | ----------------------------- | ------- | --------------------------------------------------------------------------------- |
+| param1     |                               | Text    | El nombre del objeto de área 4D View Pro                                          |
+| param2     |                               | Text    | Reserved for compatibility, this parameter is always empty                        |
+| param3     |                               | Object  | Referencia al parámetro *paramObj* del comando                                    |
+| param4     |                               | Object  | Un objeto devuelto por el método con un mensaje de estado                         |
+|            | .success      | Boolean | `True` si la importación se ha realizado correctamente, `False` en caso contrario |
+|            | .errorCode    | Integer | Código de error                                                                   |
+|            | .errorMessage | Text    | Mensaje de error                                                                  |
 
 :::note
 
-The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 :::
 
@@ -70,7 +70,7 @@ VP IMPORT FROM OBJECT("ViewProArea1"; [VPWorkBooks]SPBook; {formula: Formula(onI
 ```
 
 ```4d
-// Method 'onImportComplete'
+// Método 'onImportComplete'
 #DECLARE($name : Text; $path : Text; $paramObj : Object; $status : Object)
    ALERT("The document has been imported, and all custom functions have finished processing.")
 ```

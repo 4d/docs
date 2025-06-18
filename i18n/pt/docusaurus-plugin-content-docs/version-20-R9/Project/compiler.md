@@ -13,9 +13,9 @@ A compilação é tratada da sua aplicação 4D e é inteiramente automática.
 
 1. Abra la ventana de compilación seleccionando el comando **Compilador...** en el menú **Diseño** o el botón **Compilador** de la barra de herramientas.
 
- ![](../assets/en/Project/compilerWin1.png)
+  ![](../assets/en/Project/compilerWin1.png)
 
- ![](../assets/en/Project/comp1.png)
+  ![](../assets/en/Project/comp1.png)
 
 > También puede lanzar directamente la compilación seleccionando el elemento de menú **Iniciar compilación** en el menú **Diseño**.
 
@@ -53,7 +53,7 @@ Além do botão [**Compilar**](#compilar), a janela Compilador oferece recursos 
 
 ### Verificar sintaxe
 
-The **Check Syntax** button starts the execution of the syntax-checking phase. No final do processo de verificação, todos os erros detectados são listados na área de informações. You can double–click on an error line in order to display the corresponding method or form object.
+O botão **Verificar a sintaxe** inicia a execução da fase de verificação de sintaxe. No final do processo de verificação, todos os erros detectados são listados na área de informações. You can double–click on an error line in order to display the corresponding method or form object.
 
 El control sintáctico también puede lanzarse directamente con el comando **Verificar sintaxis** asociado al botón de la barra de herramientas **Compilador**. Esta é a única opção disponível se você não tiver uma licença adequada para permitir a compilação de aplicações.
 
@@ -61,13 +61,13 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 :::info Compatibidade
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. Para informações sobre este botão, consulte a [documentação de versões 4D anteriores](../Project/compiler.md#generate-typing).
+Este botão só será exibido em projetos convertidos se as **variáveis forem digitadas (digitação direta)** [opção do caminho de compilação](#enabling-direct-typing) não estiverem selecionadas. Para informações sobre este botão, consulte a [documentação de versões 4D anteriores](../Project/compiler.md#generate-typing).
 
 :::
 
 ### Limpar código compilado
 
-The **Clear compiled code** button deletes the compiled code of the project. Al hacer clic en él, se borra todo el [código generado durante la compilación](#classic-compiler), se desactiva el comando **Reiniciar compilado** del menú **Ejecutar** y la opción "Proyecto compilado" no está disponible al inicio.
+O botão **Limpar o código compilado** exclui o código compilado do projeto. Al hacer clic en él, se borra todo el [código generado durante la compilación](#classic-compiler), se desactiva el comando **Reiniciar compilado** del menú **Ejecutar** y la opción "Proyecto compilado" no está disponible al inicio.
 
 ### Mostrar/ocultar avisos
 
@@ -83,7 +83,7 @@ Um duplo clique num aviso abre o método correspondente.
 
 ## Parâmetros do compilador
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window-features) by clicking on the **Compiler Settings** button:
+The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Você pode abrir diretamente esta página através da [janela do compilador](#compiler-window-features) clicando no botão **Parâmetros do Compilador**:
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -93,7 +93,7 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar o arquivo de símbolo
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). O arquivo de símbolo é criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_symbols.txt`.
+Usado para gerar o arquivo de símbolo (veja [arquivo de símbolos](#symbol-file)). O arquivo de símbolo é criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_symbols.txt`.
 
 #### Gerar ficheiro de erros
 
@@ -125,30 +125,30 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 ### Opções adicionais (Compatibilidade)
 
-In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
+Em projetos convertidos de versões 4D anteriores a 20 R7, opções de compilação adicionais estão disponíveis:
 
 - **Caminho de compilação**
 - **Digitação padrão**
 - **Métodos Compilador para...**
 
-These options are only maintained for compatibility with legacy code. Para mais informações, consulte a [documentação de lançamentos 4D anteriores](../Project/compiler.md#compiler-settings).
+Essas opções só são mantidas para compatibilidade com os códigos legados. Para mais informações, consulte a [documentação de lançamentos 4D anteriores](../Project/compiler.md#compiler-settings).
 
 Em projetos convertidos, é recomendado [ativar o modo de digitação direta](#enabling-direct-typing) e escrever o código de declaração em conformidade, i.e.:
 
 - declarar explicitamente todas as variáveis [usando palavras-chave `var`](../Concepts/variables.md#declaring-variables)
-- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
+- declarar explicitamente todos os parâmetros em protótipos de função (por exemplo, usando as palavras-chave `Função` ou `Classe Construtor`) ou com palavras `#DECLARE` em métodos (veja [Declaração de parâmetros](../Concepts/parameters.md#declaring-parameters).
 
-#### Enabling direct typing
+#### Ativando digitação direta
 
 :::info
 
-The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+O modo de digitação direta é opcional somente em projetos convertidos. É utilizado nativamente em projetos criados com 4D 20 R7 e superior.
 
 :::
 
-Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+Selecione **Todas as variáveis são digitadas (digitação direta)** no menu **Compilação de Caminho** para habilitar o modo de digitação direta. Quando esta opção for selecionada, outras opções de compatibilidade se tornam inúteis e não são mais exibidas.
 
-Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
+Recomenda-se a utilização desta opção, uma vez que proporciona flexibilidade e eficiência. O conceito de digitação direta assume que todos os elementos são declarados diretamente onde eles são definidos em seu código. Você só precisa ter certeza de que todas as suas variáveis são declaradas usando o recurso regular [`var` syntax](../Concepts/variables.md#declaring-variables) e que seu método e parâmetros de função são declarados [em seus protóticos](../Concepts/parameters.md) (o [Verificar sintaxe](#check-syntax) pode ajudá-lo a detectar declarações ausentes ou inválidas).
 
 ## Avisos
 
@@ -231,13 +231,13 @@ Estas duas listas contêm quatro colunas:
 - Tipo da variável. Os tipos são definidos por comandos da diretiva do compilador ou são determinados pelo compilador com base na utilização da variável. Se o tipo de uma variável não puder ser determinado, a coluna estará vazia.
 - Número de dimensões se a variável for um array.
 - Referência ao contexto onde o compilador estabeleceu o tipo da variável. Se a variável é usada em vários contextos, o contexto mencionado é o usado pelo compilador para determinar seu tipo.
- - Se a variável foi encontrada em um método de banco de dados, o nome do método de banco de dados é dado, precedido por (M)\*.
- - Se a variável foi encontrada em um método do projeto, o método é identificado como foi definido em 4D, precedido por (M).
- - Se a variável for encontrada em um gatilho, o nome da tabela é dado, precedido por (TM).
- - Se a variável foi encontrada em um método do formulário, o nome do formulário é dado, precedido pelo nome da tabela e (FM).
- - Se a variável foi encontrada em um método do objeto, o nome do método do objeto é fornecido, precedido pelo nome do formulário, nome da tabela, e por (OM).
- - Se a variável for um objeto em um formulário e não aparecer em qualquer projeto, formulário, método do objeto, ou gatilho, o nome do formulário em que aparece é dado, precedido por (F).
-  No final de cada lista, você pode encontrar os tamanhos das variáveis do processo e interprocessos em bytes.
+  - Se a variável foi encontrada em um método de banco de dados, o nome do método de banco de dados é dado, precedido por (M)\*.
+  - Se a variável foi encontrada em um método do projeto, o método é identificado como foi definido em 4D, precedido por (M).
+  - Se a variável for encontrada em um gatilho, o nome da tabela é dado, precedido por (TM).
+  - Se a variável foi encontrada em um método do formulário, o nome do formulário é dado, precedido pelo nome da tabela e (FM).
+  - Se a variável foi encontrada em um método do objeto, o nome do método do objeto é fornecido, precedido pelo nome do formulário, nome da tabela, e por (OM).
+  - Se a variável for um objeto em um formulário e não aparecer em qualquer projeto, formulário, método do objeto, ou gatilho, o nome do formulário em que aparece é dado, precedido por (F).
+    No final de cada lista, você pode encontrar os tamanhos das variáveis do processo e interprocessos em bytes.
 
 > Durante a compilação, o compilador não pode determinar em qual processo uma determinada variável de processo é usada. Uma variável processo pode ter um valor diferente em cada processo. Consequentemente, todas as variáveis do processo são sistematicamente duplicadas à medida que cada novo processo é lançado: portanto, é aconselhável ter cuidado com a quantidade de memória que eles vão utilizar. Além disso, lembre-se de que o espaço para as variáveis do processo não está relacionado ao tamanho da pilha do processo.
 
@@ -279,9 +279,9 @@ A estrutura do ficheiro de erros é a seguinte:
 
 - Na parte superior do arquivo está a lista de erros e avisos, classificados por método e em sua ordem de criação em 4D.
 - En la sección ***Errores generales*** se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. There are two cases in which the compiler reports a general error:
- - número da linha no método (0 indica erros gerais)
- - atributo de aviso indicando se a anomalia detectada é um aviso (warning="true") ou um erro (warning="false")
- - diagnóstico que descreve o erro
+  - número da linha no método (0 indica erros gerais)
+  - atributo de aviso indicando se a anomalia detectada é um aviso (warning="true") ou um erro (warning="false")
+  - diagnóstico que descreve o erro
 
 Si su proyecto no tiene errores generales, el archivo no tendrá una sección *Errores generales*.
 
@@ -290,8 +290,8 @@ Um ficheiro de erros pode conter três tipos de mensagens:
 - **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. O compilador relata esse tipo de erro quando encontra uma expressão em que vê uma inconsistência relacionada ao tipo de dados ou sintaxe. Na janela do compilador, clique duas vezes em cada erro detectado para abrir o método em questão diretamente no Editor de Código 4D, com a linha que contém o erro destacado.
 
 - **Errores generales**: son errores que imposibilitan la compilación del proyecto. Há dois casos em que o compilador informa um erro geral:
- - Não foi possível determinar o tipo de dados de uma variável processo.
- - Dois tipos diferentes de objetos têm o mesmo nome.
+  - Não foi possível determinar o tipo de dados de uma variável processo.
+  - Dois tipos diferentes de objetos têm o mesmo nome.
 
 Os erros gerais são assim chamados porque não podem ser vinculados a nenhum método específico. No primeiro caso, o compilador não pôde executar uma digitação especificada em nenhum lugar do projeto. No segundo, ele não conseguiu decidir se associava um determinado nome a um objeto e não a outro.
 
@@ -347,8 +347,8 @@ O código compilado resultante é armazenado na pasta [Libraries](architecture.m
 - **Ordenador Apple**: el compilador Silicon sólo puede ejecutarse desde una máquina Apple.
 - **Arquitectura proyecto de 4D**: el compilador Silicon sólo está disponible para los desarrollos 4D que utilizan la [arquitectura proyecto](architecture.md).
 - **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. *clang* requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
- - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
- - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
+  - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
+  - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
 
 > Recomendamos instalar **Xcode**, que es bastante sencillo de instalar. Puede decidir instalar **Developer Tools** que es más compacto, sin embargo su instalación es un poco más compleja.
 

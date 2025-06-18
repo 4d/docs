@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 **注:** 技術的な理由で、FastCGIプロトコル経由で渡す引数のサイズは64KBを超えてはなりません。テキスト型の引数を使用する際にはこの制限を考慮にいれる必要があります。
 
-4D側でコマンドが正しく実行できると、言い換えれば実行環境の起動、スクリプトのオープン、そしてPHPインタープリターとの通信に成功すると、コマンドからTrueが返されます。 そうでない場合、[ON ERR CALL](on-err-call.md)でとらえることができ、[Last errors](last-errors.md) で解析できるエラーが生成されます。   
+4D側でコマンドが正しく実行できると、言い換えれば実行環境の起動、スクリプトのオープン、そしてPHPインタープリターとの通信に成功すると、コマンドからTrueが返されます。 そうでない場合、[ON ERR CALL](on-err-call.md)でとらえることができ、[Last errors](../commands/last-errors.md) で解析できるエラーが生成されます。   
 さらにスクリプト自身がPHPエラーを生成するかもしれません。この場合[PHP GET FULL RESPONSE](php-get-full-response.md)コマンドを使用してエラーの発生元を解析しなければなりません (例題4参照)。
 
 **注** **:** PHPを使用してエラー管理を設定できます。詳細は例えば以下のページを参照してください: <http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting>.

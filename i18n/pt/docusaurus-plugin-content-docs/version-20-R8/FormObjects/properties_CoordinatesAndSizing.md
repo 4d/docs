@@ -140,7 +140,7 @@ Com as [áreas de texto](text.md) e [entradas](input_overview.md):
 
 :::
 
-Você também pode definir essa propriedade usando os comandos [OBJECT Get corner radius] (https://doc.4d.com/4dv19/help/command/en/page1323.html) e [OBJECT SET CORNER RADIUS] (https://doc.4d.com/4dv19/help/command/en/page1324.html).
+Você também pode definir essa propriedade usando os comandos [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) e [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html).
 
 #### Gramática JSON
 
@@ -300,7 +300,7 @@ Define um preenchimento horizontal para as células. O valor é definido em pixe
 
 #### Veja também
 
-[Vertical Padding](#vertical-padding)
+[Preenchimento vertical](#vertical-padding)
 
 ---
 
@@ -320,4 +320,4 @@ Define um preenchimento vertical para as células. O valor é definido em pixeis
 
 #### Veja também
 
-[Horizontal Padding](#horizontal-padding)
+[Preenchimento horizontal](#horizontal-padding)

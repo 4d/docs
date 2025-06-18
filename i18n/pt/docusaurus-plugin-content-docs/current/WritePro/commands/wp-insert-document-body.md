@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | ----------- | ------- | --------------------------- | -------------------------------------------------------- |
 | targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document                |
 | wpDoc       | Object  | &#8594; | Documento 4D Write Pro                                   |
-| mode        | Integer | &#8594; | Insertion mode                                           |
-| rangeUpdate | Integer | &#8594; | Range update mode                                        |
+| mode        | Integer | &#8594; | Modo de inserção                                         |
+| rangeUpdate | Integer | &#8594; | Modo de atualização de intervalo                         |
 | Resultado   | Object  | &#8592; | Text range object referencing the inserted document body |
 
 <!-- END REF-->
@@ -28,7 +28,7 @@ Em *targetObj*, passe:
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
 - um documento 4D Write Pro.
 
-The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
+The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. Além disso, os elementos são copiados, de modo que *wpDoc* pode ser reutilizado várias vezes.
 
 In the *mode* parameter, pass one or a combination of the following constants from the *4D Write Pro Constants* theme to indicate the insertion mode to be used for the document in the destination *targetObj*:
 
@@ -40,10 +40,10 @@ In the *mode* parameter, pass one or a combination of the following constants fr
 
 You can combine one of the previous constants with the following insertion options:
 
-| Parâmetros               | Tipo    | Valor | Comentário                                                                                                                                           |
-| ------------------------ | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk freeze expressions    | Integer | 64    | Freeze expressions at the moment of the insertion                                                                                                    |
-| wk keep paragraph styles | Integer | 128   | Apply destination paragraph styles. In case of wk append operation, insert contents without initial paragraph break. |
+| Parâmetros               | Tipo    | Valor | Comentário                                                                                                                                              |
+| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| wk freeze expressions    | Integer | 64    | Freeze expressions at the moment of the insertion                                                                                                       |
+| wk keep paragraph styles | Integer | 128   | Apply destination paragraph styles. No caso da operação wk append, insira o conteúdo sem a quebra de parágrafo inicial. |
 
 In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
@@ -54,7 +54,7 @@ In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pa
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Se *targetObj* não for um intervalo, *rangeUpdate* será ignorado.
 
 ## Exemplo 1
 

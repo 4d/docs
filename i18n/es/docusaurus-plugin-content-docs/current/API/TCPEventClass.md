@@ -7,10 +7,10 @@ The `TCPEvent` class provides information about events occurring during the life
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                  |
-| ----------- | ------------------------------- |
-| 20 R9       | New `ip`, and `port` attributes |
-| 20 R8       | Clase añadida                   |
+| Lanzamiento | Modificaciones                 |
+| ----------- | ------------------------------ |
+| 20 R9       | Nuevos atributos `ip` y \`port |
+| 20 R8       | Clase añadida                  |
 
 </details>
 
@@ -53,7 +53,7 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 #### Descripción
 
-The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
+La propiedad `.ip` contiene <!-- REF #TCPEvent.ip.Summary -->la dirección IP de la máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -65,7 +65,7 @@ The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of t
 
 #### Descripción
 
-The `.port` property contains <!-- REF #TCPEvent.port.Summary -->the port number of the remote machine<!-- END REF -->.
+La propiedad `.port` contiene <!-- REF #TCPEvent.port.Summary -->el número de puerto de la máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 

@@ -9,13 +9,13 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 ## Propiedades
 
-| Propiedad   | Tipo    | Descripción                                                                                                             |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `rol`       | Text    | The role of the message (e.g., "user", "assistant"). |
-| `contenido` | Variant | The content of the message, which can be a text or a collection of objects.                             |
-| `user`      | Text    | An optional property representing the user associated with the message.                                 |
+| Propiedad   | Tipo    | Descripción                                                                                 |
+| ----------- | ------- | ------------------------------------------------------------------------------------------- |
+| `rol`       | Text    | El rol del mensaje (por ejemplo, "user", "assistant").   |
+| `contenido` | Variant | The content of the message, which can be a text or a collection of objects. |
+| `user`      | Text    | An optional property representing the user associated with the message.     |
 
-## Computed properties
+## Propiedades calculadas
 
 | Propiedad | Tipo | Descripción                                               |
 | --------- | ---- | --------------------------------------------------------- |
@@ -30,7 +30,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | Parámetros | Tipo | Descripción                                                 |
 | ---------- | ---- | ----------------------------------------------------------- |
 | *imageURL* | Text | The URL of the image to add to the message. |
-| *detail*   | Text | Additional details about the image.         |
+| *detail*   | Text | Detalles adicionales sobre la imagen.       |
 
 Adds an image URL to the content of the message.
 

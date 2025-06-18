@@ -60,7 +60,7 @@ title: コンパイル
 
 ### 型宣言を生成する
 
-**型宣言を生成** ボタンは、型宣言をおこなう "コンパイラーメソッド" を作成 (または更新) します。 Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler-method). これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
+**型宣言を生成** ボタンは、型宣言をおこなう "コンパイラーメソッド" を作成 (または更新) します。 コンパイラーメソッドは、すべての変数や配列の型(プロセスまたはインタープロセス)および[プロジェクトメソッドのパラメーター](../Concepts/parameters.md#compiler-メソッド)をまとめて宣言するための特別なプロジェクトメソッドです。 これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
 
 これらのメソッドは、必ず `Compiler_` で始まります。 [コンパイラー設定](#コンパイラーメソッド) にて、5つのコンパイラーメソッドそれぞれに対してデフォルト名を設定することができます。 4D により生成、管理されるコンパイラーメソッドは自動的に "非表示" 属性が割り当てられます:
 
@@ -123,11 +123,11 @@ title: コンパイル
 
 #### Symbolファイルを生成
 
-Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。 Symbolファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `ProjectName_symbols.txt` という名前で作成されます。
+Symbolファイルを生成するのに使用します ([Symbolファイル](#symbolファイル) 参照)。 Symbolファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `プロジェクト名_symbols.txt` という名前で作成されます。
 
 #### エラーファイルを生成
 
-シンタックスチェック時にエラーファイルを生成するのに使用します ([エラーファイル](#エラーファイル) 参照)。 エラーファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `ProjectName_error.xml` という名前で作成されます。
+シンタックスチェック時にエラーファイルを生成するのに使用します ([エラーファイル](#エラーファイル) 参照)。 エラーファイルは、プロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に `プロジェクト名_error.xml` という名前で作成されます。
 
 
 #### コンパイルパス
@@ -179,7 +179,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 - **インタープロセス変数**: インタープロセス変数定義を集約します。
 - **配列**: プロセス配列定義を集約します。
 - **インタープロセス配列**: インタープロセス配列定義を集約します。
-- **メソッド**: メソッドの引数を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler-method).
+- **メソッド**: メソッドの引数を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 詳細は [`Compiler_Methods`](../Concepts/parameters.md#compiler-メソッド) を参照してください。
 
 それぞれの対応するエリアで、作成されるメソッド名を編集できますが、これらには必ず `Compiler_` という接頭辞が付きます。これは変更できません。 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 また、メソッド名はユニークでなければならず、[メソッドの命名規則](Concepts/identifiers.md#プロジェクトメソッド) に準じたものでなければなりません。
 
@@ -188,7 +188,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 ### Symbolファイル
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. このドキュメントはいくつかの部分に分かれています:
+コンパイラー設定で[**Symbol ファイルを生成**](#symbol-file) オプションを有効にした場合、 コンパイル時に`プロジェクト名_symbols.txt` という名前のシンボルファイルがプロジェクトの [Logs フォルダー](../Project/architecture.md#logs) 内に作成されます。 このドキュメントはいくつかの部分に分かれています:
 
 #### プロセスおよびインタープロセス変数のリスト
 

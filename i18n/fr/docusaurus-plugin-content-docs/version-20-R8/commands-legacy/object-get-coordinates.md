@@ -60,7 +60,7 @@ Pour les besoins de votre interface, vous souhaitez entourer d'un rectangle roug
 Dans la méthode objet de la list box, vous écrivez :
 
 ```4d
- OBJECT SET VISIBLE(*;"rectangleInfo";False) //initialiser un rectangle rouge
+ OBJECT SET VISIBLE(*;"RedRect";False) //initialiser un rectangle rouge
  $ptr:=OBJECT Get pointer(Object current)
  OBJECT GET COORDINATES($ptr->;$x1;$y1;$x2;$y2)
  OBJECT SET VISIBLE(*;"RedRect";True)

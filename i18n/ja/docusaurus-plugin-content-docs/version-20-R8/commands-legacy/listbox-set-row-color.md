@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 **注:** このコマンドは列の表示/非表示の状態は無視します。
 
-*color* 引数には、指定したい色をRGBカラー値で渡します。RGBカラーについての詳細は、 [OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドの詳細を参照して下さい。一つ上の行の配色をそのまま使用したい場合には、*color* 引数 に lk inherited 定数を渡します。
+*color* 引数には、指定したい色をRGBカラー値で渡します。RGBカラーについての詳細は、 [OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドの詳細を参照して下さい。一つ上の行の配色をそのまま使用したい場合には、*color* 引数 に`lk inherited` 定数を渡します。
 
-*colorType* 引数には、行の背景色を指定したいのかフォントカラーを指定したのかによって、 lk background color または lk font color のどちらかの定数を渡します。省略時には、指定した色はフォントカラーとして使用されます。
+*colorType* 引数には、行の背景色を指定したいのかフォントカラーを指定したのかによって、 `lk background color`  または `lk font color`  のどちらかの定数を渡します。省略時には、指定した色はフォントカラーとして使用されます。
 
 このコマンドは、列またはリストボックスに対して定義されていた可能性のあるカラー配列内の値を変更します。この配列が未定義だった場合、このコマンドは、 [LISTBOX Get array](listbox-get-array.md) コマンドを使用してアクセス可能な配列を動的に作成します。
 

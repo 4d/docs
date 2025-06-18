@@ -43,7 +43,7 @@ POST リクエストのボディに関数に渡す引数を含めます: `["mypa
 
 :::note
 
-`SingletonClassFunction()` 関数を `GET` で呼び出し可能にするためには、この関数は `onHttpGet` キーワードで宣言されている必要があります([関数の設定](ClassFunctions#関数の設定) を参照して下さい)。
+The `SingletonClassFunction()` function must have been declared with the `onHTTPGet` keyword to be callable with `GET` (see [Function configuration](ClassFunctions#function-configuration)).
 
 :::
 

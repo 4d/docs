@@ -10,11 +10,11 @@ displayed_sidebar: docs
 
 | Parámetros  | Tipo                                           |                             | Descripción                               |
 | ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object                                         | &#8594; | Range or element or 4D Write Pro document |
-| attribName  | Text                                           | &#8594; | Name of attribute to get                  |
+| targetObj   | Object                                         | &#8594; | Rango o elemento o documento 4D Write Pro |
+| attribName  | Text                                           | &#8594; | Nombre del atributo a obtener             |
 | attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
 | attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Resultado   | Object                                         | &#8592; | Attribute names and values                |
+| Resultado   | Object                                         | &#8592; | Nombres y valores de los atributos        |
 
 <!-- END REF-->
 
@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 El comando **WP Get attributes**<!--REF #_command_.WP Get attributes.Summary--> devuelve el valor de cualquier atributo en un rango 4D Write Pro, encabezado, cuerpo, pie de página, tabla o documento.<!-- END REF--> Este comando le da acceso a cualquier tipo de atributos internos 4D Write Pro: carácter, párrafo, documento, tabla o imagen.
 
-In *targetObj*, you can pass:
+En *targetObj*, puede pasar:
 
 - un rango, o
 - un elemento (encabezado / pie de página / cuerpo / tabla / párrafo / imagen anclada / sección / subsección / hoja de estilo), o
 - un documento 4D Write Pro
 
-In *attribName*, pass the name of the attribute you want to retrieve.
+En *attribName*, pase el nombre del atributo a recuperar.
 
 You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
 
@@ -36,9 +36,9 @@ For a comprehensive list of attributes to pass, as well as their scope and value
 
 If there are different values for the same attribute in the element passed as a parameter, the command returns:
 
-- for numerical values, wk mixed
+- para valores numéricos, wk mixed
 - for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
-- for string values, an empty string
+- para valores cadena, una cadena vacía
 - for picture values, an empty picture.
 
 **Note**: If *targetObj* contains a paragraph and a character style sheets, the paragraph style sheet name is returned.

@@ -157,13 +157,13 @@ Os ponteiros para variáveis locais permitem-lhe guardar variáveis de processo 
 #DECLARE($param : Pointer)
 ...
 ```
-The debugger will display $param as follows:
+O depurador exibirá $param da seguinte forma:
 
 | $param | ->$MyVar (Method1) |
 | ------ | ------------------ |
 |        |                    |
 
-You can expand $param and its value will be:
+Você pode expandir $param e seu valor será:
 
 | $MyVar | "Hello world" |
 | ------ | ------------- |

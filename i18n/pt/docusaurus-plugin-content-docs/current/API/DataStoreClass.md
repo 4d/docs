@@ -48,7 +48,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface fornecido p
 
 #### Descrição
 
-Cada classe de dados em um datastore está disponível como uma propriedade do [objeto DataStore] (ORDA/dsMapping.md#datastore). O objeto retornado <!-- REF DataStoreClass.dataclassName.Summary -->contém uma descrição da dataclass<!-- END REF -->.
+Cada classe de dados em um datastore está disponível como uma propriedade do [objeto DataStore](ORDA/dsMapping.md#datastore). O objeto retornado <!-- REF DataStoreClass.dataclassName.Summary -->contém uma descrição da dataclass<!-- END REF -->.
 
 #### Exemplo
 
@@ -427,7 +427,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->retorna um objeto que fornece informações sobre o datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
-**Returned object**
+**Objeto devolvido**
 
 | Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -456,7 +456,7 @@ A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->retorna um
 Em um armazém de dados remoto:
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -657,7 +657,7 @@ A função também retornará `True` se o datastore tiver sido bloqueado por out
 
 A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->define todas as seleções de entidades como alteráveis por padrão nos datastores do aplicativo atual<!-- END REF --> (incluindo [datastores remotos](ORDA/remoteDatastores.md)). Ele deve ser usado uma vez, por exemplo, no método de banco de dados `On Startup`.
 
-Quando essa função não é chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai" ou [como elas são criadas] (ORDA/entities.md#shareable-or-alterable-entity-selections).
+Quando essa função não é chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai" ou [como elas são criadas](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 > Essa função não modifica as seleções de entidades criadas por [`.copy()`](./EntitySelectionClass.md#copy) ou `OB Copy` quando a opção explícita `ck shared` é utilizada.
 
@@ -855,15 +855,15 @@ ds.setGlobalStamp($newValue)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 
-| Parâmetro                                                                | Tipo                          |    | Descrição                                                                                     |
-| ------------------------------------------------------------------------ | ----------------------------- | -- | --------------------------------------------------------------------------------------------- |
-| contextName                                                              | Text                          | -> | Nome do contexto                                                                              |
-| dataClassName                                                            | Text                          | -> | Nome da dataclass                                                                             |
-| dataClassObject                                                          | 4D. DataClass | -> | dataclass object (e.g datastore. Employee) |
-| attributes                                                               | Text                          | -> | Lista de atributos separada por vírgulas                                                      |
-| Atributos do tipo BLOB não são gerenciados na datastore. | Collection                    | -> | Coleção de nomes de atributos (text)                                       |
-| contextType                                                              | Text                          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                        |
-| pageLength                                                               | Integer                       | -> | Page length of the entity selection linked to the context (default is 80)  |
+| Parâmetro                                                                | Tipo                          |    | Descrição                                                                                         |
+| ------------------------------------------------------------------------ | ----------------------------- | -- | ------------------------------------------------------------------------------------------------- |
+| contextName                                                              | Text                          | -> | Nome do contexto                                                                                  |
+| dataClassName                                                            | Text                          | -> | Nome da dataclass                                                                                 |
+| dataClassObject                                                          | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)     |
+| attributes                                                               | Text                          | -> | Lista de atributos separada por vírgulas                                                          |
+| Atributos do tipo BLOB não são gerenciados na datastore. | Collection                    | -> | Coleção de nomes de atributos (text)                                           |
+| contextType                                                              | Text                          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                            |
+| pageLength                                                               | Integer                       | -> | Duração da página da selecção da entidade ligada ao contexto (por padrão é 80) |
 
 <!-- END REF -->
 
@@ -891,7 +891,7 @@ Se *attributes* for um Text vazio ou *attributesColl* for uma coleção vazia, t
 Você pode passar um *contextType* para especificar se o contexto é um contexto padrão ou o contexto do item de seleção de entidade atual exibido em uma caixa de listagem:
 
 - Se estabelecido como "main" (padrão), o *contextName* designa um contexto padrão.
-- Se definido para "currentItem", os atributos passados são colocados no contexto do item actual.  See  [Entity selection-based list box](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
+- Se definido para "currentItem", os atributos passados são colocados no contexto do item actual.  Veja [List baseado em uma entidade de seleção](../ORDA/client-server-optimization.md#entity-selection-based-list-box).
 
 Em *pageLength*, especificar o número de entidades dataclass a solicitar ao servidor.
 
@@ -1005,7 +1005,7 @@ Para uma descrição do formato de log do pedido ORDA, por favor, consulte a se�
 Para criar um registo de pedidos ORDA do lado do cliente, chame esta função numa máquina remota. O registro pode ser enviado para um arquivo ou para a memória, dependendo do parâmetro:
 
 - Se você tiver passado um objeto *file* criado com o comando `File`, os dados de registro serão gravados nesse arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
- Se chamar a.startRequestLog() com um arquivo enquanto se iniciou previamente um registro na memória, o registro em memória para e é esvaziado.
+  Se chamar a.startRequestLog() com um arquivo enquanto se iniciou previamente um registro na memória, o registro em memória para e é esvaziado.
 
 > Deve adicionar manualmente um caractere \N ao final do arquivo para realizar uma validação JSON
 
@@ -1114,7 +1114,7 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

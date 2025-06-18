@@ -50,7 +50,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 #### 引数の受け渡し
 
-You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. たとえば:
+フォーミュラには、順番引数シンタックス $1, $2...$n を使用して引数を渡すことができます。 たとえば:</p> 
+
+
 
 ```4d
  var $f : Object
@@ -59,7 +61,10 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
  $f.message("John") // "Hello John" を表示します
 ```
 
+
 あるいは、[.call()](#call) 関数を使用して:
+
+
 
 ```4d
  var $f : Object
@@ -68,9 +73,14 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
  $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) // "Welcome to 2019" (例) を返します
 ```
 
+
+
+
 #### 単一メソッド用の引数
 
 利便性のために、フォーミュラが単一のプロジェクトメソッドから作成された場合には、引数はフォーミュラオブジェクトの初期化では省略することができます。 省略された引数は、フォーミュラを呼び出す時に一緒に渡すことができます。 例:
+
+
 
 ```4d
  var $f : 4D.Function
@@ -89,18 +99,23 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
  End if
 ```
 
+
 引数はメソッド内において、呼び出し時に指定した順で受け取られます。
 
 
 
-### 概要
 
+
+### 概要
 
 |                                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.apply().Summary -->|
 | [<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.call().Summary --> |
 | [<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.source.Summary --> |
+
+
+
 
 
 
@@ -113,6 +128,7 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 | ----- | ----------------------------- |
 | 17 R6 | 名称変更 (New formula -> Formula) |
 | 17 R3 | 追加                            |
+
 
 </details>
 
@@ -129,6 +145,9 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 |
 
 
+
+
+
 #### 説明
 
 `Formula` コマンドは、 <!-- REF #_command_.Formula.Summary -->*formulaExp* の式に基づいた `4D Function` オブジェクトを作成します<!-- END REF -->。 *formulaExp* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
@@ -138,7 +157,9 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
 *   [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
-*   object notation syntax (see [formula objects](#formula-objects)).
+*   オブジェクト記法シンタックス ([Formula オブジェクト](#formula-object) 参照)
+
+
 
 ```4d
  var $f : 4D.Function
@@ -151,6 +172,7 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
  $o.myFormula() // 3 を返します
 ```
 
+
 フォーミュラには [引数](#引数の受け渡し) を渡すことができます ([例題4](#例題-4) 参照)。
 
 フォーミュラの実行対象となるオブジェクトを指定することができます ([例題5](#例題-5) 参照)。 このオブジェクトのプロパティは、`This` コマンドでアクセス可能です。
@@ -160,9 +182,13 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 `Formula` によって作成されたオブジェクトは、たとえばデータベースのフィールドや Blob ドキュメントなどに保存可能です。
 
 
+
+
 #### 例題 1
 
 単純なフォーミュラの例:
+
+
 
 ```4d
  var $f : 4D.Function
@@ -174,9 +200,14 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
  $result:=$o.f() // 3 を返します
 ```
 
+
+
+
 #### 例題 2
 
 ローカル変数を使用するフォーミュラの例:
+
+
 
 ```4d
 
@@ -189,9 +220,14 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 ```
 
 
+
+
+
 #### 例題 3
 
 引数を用いたシンプルなフォーミュラの例:
+
+
 
 ```4d
  $o:=New object("f";Formula($1+$2))
@@ -199,9 +235,14 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 ```
 
 
+
+
+
 #### 例題 4
 
 引数を用いたプロジェクトメソッドを使用する例:
+
+
 
 ```4d
  $o:=New object("f";Formula(myMethod))
@@ -209,9 +250,14 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 ```
 
 
+
+
+
 #### 例題 5
 
 `This` を使用する例:
+
+
 
 ```4d
  $o:=New object("fullName";Formula(This.firstName+" "+This.lastName))
@@ -220,9 +266,14 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
  $result:=$o.fullName() // "John Smith" を返します
 ```
 
+
+
+
 #### 例題 6
 
 オブジェクト記法を使用してフォーミュラを呼び出す例:
+
+
 
 ```4d
  var $feta; $robot : Object
@@ -244,6 +295,9 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 
 
 
+
+
+
 ## Formula from string
 
 <details><summary>履歴</summary>
@@ -252,6 +306,7 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 | ----- | ----------------------------------------------------- |
 | 17 R6 | 名称変更 (New formula from string -> Formula from string) |
 | 17 R3 | 追加                                                    |
+
 
 </details>
 
@@ -268,17 +323,26 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 |
 
 
+
+
+
 #### 説明
 
 `Formula from string` コマンドは、 <!-- REF #_command_.Formula from string.Summary -->*formulaString* に基づいた `4D.Function` オブジェクトを作成します<!-- END REF -->。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
 このコマンドは [`Formula`](#formula) に似ていますが、テキストに基づいたフォーミュラを扱う点が異なります。 多くの場合において、`Formula` コマンドの使用が推奨されます。 `Formula from string` コマンドは、元となるフォーミュラがテキストとして表現されている場合 (例: 外部の JSON ファイルに保存されていた場合など) にのみ使用されるべきです。 このコンテキストにおいては、トークンシンタックスの使用が強く推奨されます。
+
+
 > ローカル変数の中身はコンパイル済みモードでは名前によるアクセスが不可能なため、*formulaString* 引数内で使用することはできません。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー(-10737) が生成されます。
+
+
 
 
 #### 例題
 
 以下のコードは、テキストフォーマットのフォーミュラを受け入れるダイアログを作成し、:
+
+
 
 ```4d
  var $textFormula : Text
@@ -290,11 +354,10 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
  End if
 ```
 
+
 ![](../assets/en/API/formulaDialog.png)
 
-
 そのフォーミュラを実行します:
-
 
 ![](../assets/en/API/formulaAlert.png)
 
@@ -312,6 +375,7 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 | ----- | -- |
 | 17 R3 | 追加 |
 
+
 </details>
 
 <!-- REF #FunctionClass.apply().Syntax -->**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
@@ -328,10 +392,12 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 |
 
 
+
+
+
 #### 説明
 
 `.apply()` 関数は、 <!-- REF #FunctionClass.apply().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
-
 
 *thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 
@@ -340,7 +406,11 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 `.apply()` は [`.call()`](#call) と似ていますが、引数をコレクションとして渡す点が異なります。 これは計算された結果を渡すのに便利です。
 
 
+
+
 #### 例題 1
+
+
 
 ```4d
  var $f : 4D.Function
@@ -351,7 +421,12 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 ```
 
 
+
+
+
 #### 例題 2
+
+
 
 ```4d
  var $calc : 4D.Function
@@ -377,6 +452,7 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 | ----- | -- |
 | 17 R3 | 追加 |
 
+
 </details>
 
 <!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
@@ -393,6 +469,9 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 |
 
 
+
+
+
 #### 説明
 
 `.call()` 関数は、 <!-- REF #FunctionClass.call().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
@@ -403,7 +482,11 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 
 `.call()` は [`.apply()`](#apply) と似ていますが、引数を直接渡す点が異なります。
 
+
+
 #### 例題 1
+
+
 
 ```4d
  var $f : 4D.Function
@@ -411,7 +494,12 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
  $result:=$f.call(Null;"hello") // "HELLO" を返します
 ```
 
+
+
+
 #### 例題 2
+
+
 
 ```4d
  $o:=New object("value";50)
@@ -432,6 +520,7 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 | ----- | -- |
 | 18 R2 | 追加 |
 
+
 </details>
 
 <!-- REF #FunctionClass.source.Syntax -->**.source** : Text <!-- END REF -->
@@ -443,7 +532,11 @@ You can pass parameters to your formulas using a sequential parameter syntax bas
 
 このプロパティは **読み取り専用** です。
 
+
+
 #### 例題
+
+
 
 ```4d
  var $of : 4D.Function

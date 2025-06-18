@@ -33,10 +33,10 @@ Todas as fórmulas têm operandos e operadores:
 
 - **Operadores**: consulte [Valores e operadores](#valores-e-operadores) abaixo.
 - Os **Operandos** inclui várias categorias:
- - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
- - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
- - [funções de planilha padrão](#using-functions)
- - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
+  - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
+  - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
+  - [funções de planilha padrão](#using-functions)
+  - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
 
 ## Valores e operadores
 
@@ -97,7 +97,7 @@ Quando você copia ou move essas fórmulas para novos locais, o endereço de cad
 
 ### Notação de referências
 
-If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. You may make the reference an absolute reference by putting a dollar sign in front of the letter and the number, as in `$C$5`.
+If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. Você pode fazer a referência absoluta colocando um sinal de dólar na frente da letra e do número, como em `$C$5`.
 
 You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. Uma referência mista permite que você especifique a linha ou a coluna como absoluta, enquanto permite que a outra parte do endereço consulte relativamente.
 
@@ -191,11 +191,11 @@ Queremos imprimir "Hello World" em uma célula de área do 4D View Pro usando um
 
 3. Editar o conteúdo de uma célula numa área 4D View Pro e digitar:
 
- ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
- "myMethod" é então chamado por 4D e a célula aparece:
+  "myMethod" é então chamado por 4D e a célula aparece:
 
- ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Parâmetros
 
@@ -217,7 +217,7 @@ You can declare the name, type, and number of parameters through the *parameters
 
 For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions) command description.
 
-If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) e seu tipo será automaticamente convertido.
+Se você não declarar parâmetros, os valores podem ser passados sequencialmente para os métodos (eles serão recebidos em $1, $2...) e seu tipo será automaticamente convertido.
 
 Os parâmetros Date e Object são tratados da seguinte maneira:
 
@@ -241,15 +241,15 @@ Métodos de projeto 4D também podem retornar valores na fórmula da célula 4D 
 - [text](Aceitar/dt_string.md) (convertido em string em 4D View Pro)
 - [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido em número no 4D View Pro)
 - [date](Concepts/dt_date.md) (convertido para o tipo JS Date no 4D View Pro - hora, minuto, segundo = 0)
-- [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
+- [time](Concepts/dt_time.md) (convertido para JS Date type in 4D View Pro - data na data base, i.e. 12/30/1899)
 - [boolean](Concepts/dt_boolean.md) (convertido em bool no 4D View Pro)
-- [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
+- [imagem](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg outros tipos convertidos para png) cria uma URI (data:image/png; ase64,xxxx) e depois usado como plano de fundo em 4D View Pro na célula onde a fórmula é executada
 - [object](Concepts/dt_object.md) com as duas propriedades a seguir (permitindo a passagem de uma data e hora):
 
- | Propriedade | Tipo | Descrição         |
- | ----------- | ---- | ----------------- |
- | value       | Date | Valor data        |
- | time        | Real | Tempo em segundos |
+  | Propriedade | Tipo | Descrição         |
+  | ----------- | ---- | ----------------- |
+  | value       | Date | Valor data        |
+  | time        | Real | Tempo em segundos |
 
 Se o método 4D não retornar nada, uma string vazia será automaticamente retornada.
 
@@ -307,7 +307,7 @@ Por exemplo, se você declarou o campo "Name" da tabela "People" na estrutura vi
 =LEN(PEOPLE_NAME())
 ```
 
-> If a field has the same name as a [4D method](../Concepts/methods.md), it takes priority over the method.
+> Se um campo tiver o mesmo nome que um [método 4D](../Concepts/methods.md), tem prioridade sobre o método.
 
 #### Exemplo
 
@@ -319,19 +319,19 @@ Queremos imprimir o nome de uma pessoa em uma célula de área do 4D View Pro us
 
 2. Execute o seguinte código para inicializar uma estrutura virtual:
 
- ```4d
- ARRAY TEXT($tableTitles;1)
- ARRAY LONGINT($tableNum;1)
- $tableTitles{1}:="Emp"
- $tableNum{1}:=2
- SET TABLE TITLES($tableTitles;$tableNum;*)
-  
- ARRAY TEXT($fieldTitles;1)
- ARRAY LONGINT($fieldNum;1)
- $fieldTitles{1}:="Name"
- $fieldNum{1}:=2 //last name
- SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
- ```
+  ```4d
+  ARRAY TEXT($tableTitles;1)
+  ARRAY LONGINT($tableNum;1)
+  $tableTitles{1}:="Emp"
+  $tableNum{1}:=2
+  SET TABLE TITLES($tableTitles;$tableNum;*)
+   
+  ARRAY TEXT($fieldTitles;1)
+  ARRAY LONGINT($fieldNum;1)
+  $fieldTitles{1}:="Name"
+  $fieldNum{1}:=2 //last name
+  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+  ```
 
 3. Edite o conteúdo de uma célula na área do 4D View Pro e digite "=e":
 
@@ -349,7 +349,7 @@ Queremos imprimir o nome de uma pessoa em uma célula de área do 4D View Pro us
 
 ### Declaração dos métodos permitidos
 
-Você pode chamar diretamente os métodos do projeto 4D a partir de suas fórmulas do 4D View Pro. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command.
+Você pode chamar diretamente os métodos do projeto 4D a partir de suas fórmulas do 4D View Pro. Por razões de segurança, você deve declarar explicitamente métodos que podem ser chamados pelo usuário com o comando [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md).
 
 #### Requisitos
 

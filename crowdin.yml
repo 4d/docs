@@ -4,6 +4,7 @@ files:
       - /docs/preprocessing.conf
       - /docs/commands-legacy/*.*
       - /docs/WritePro/commands-legacy/*.*
+      - /docs/*-legacy/*.*
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
   - source: /i18n/en/docusaurus-plugin-content-docs/*.json
     ignore:
@@ -15,6 +16,7 @@ files:
       - /versioned_docs/**/commands-legacy/*.*
       - /versioned_docs/**/WritePro/commands-legacy/*.*
       - /versioned_docs/version-18/
+      - /versioned_docs/**/*-legacy/*.*
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/**/%original_file_name%
   - source: /i18n/en/docusaurus-theme-classic/*.json
     translation: /i18n/%two_letters_code%/docusaurus-theme-classic/%original_file_name%

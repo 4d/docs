@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Params-->
 
-| Parámetros | Tipo   |                             | Descripción                   |
-| ---------- | ------ | --------------------------- | ----------------------------- |
-| Resultado  | Object | &#8592; | Form data of the current form |
+| Parámetros | Tipo   |                             | Descripción                 |
+| ---------- | ------ | --------------------------- | --------------------------- |
+| Resultado  | Object | &#8592; | Datos del formulario actual |
 
 <!-- END REF-->
 
@@ -27,14 +27,14 @@ displayed_sidebar: docs
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor). 4D automatically associates an object to the current form in the following cases:
 
 - the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
-- the current form is a subform,
+- el formulario actual es un subformulario,
 - a table form is currently displayed on screen.
 
 ### Commands (DIALOG...)
 
 If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
 
-- the *formData* object passed as parameter to this command, if any,
+- el objeto *formData* pasado como parámetro a este comando, si existe,
 - o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
 - o, un objeto vacío.
 
@@ -43,8 +43,8 @@ If the current form is being displayed or loaded by a call to the [DIALOG](dialo
 If the current form is a subform, the returned object depends on the parent container variable:
 
 - **Form** returns the object associated with the table form displayed on screen.\
- **Form** returns the object associated with the table form displayed on screen.\
- In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+    **Form** returns the object associated with the table form displayed on screen.\
+    In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
@@ -52,7 +52,7 @@ If the current form is a subform, the returned object depends on the parent cont
 
 - If the variable associated to the parent container has not been typed as an object, **Form** returns an empty object, maintained by 4D in the subform context.
 
-For more information, please refer to the *Page subforms* section.
+Para más información, consulte la sección *Subformularios de página*.
 
 ### Formulario tabla
 
@@ -61,9 +61,9 @@ For more information, please refer to the *Page subforms* section.
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: **Form** returns the object associated with the table form displayed on screen.\
 In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
-| **Propiedad** | **Tipo** | **Description**                           |
-| ------------- | -------- | ----------------------------------------- |
-| parentForm    | object   | **Form** object of the parent output form |
+| **Propiedad** | **Tipo** | **Description**                                |
+| ------------- | -------- | ---------------------------------------------- |
+| parentForm    | object   | Objeto **Form** del formulario de salida padre |
 
 ## Ejemplo
 

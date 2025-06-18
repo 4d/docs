@@ -26,14 +26,14 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current user session<!-- END REF -->.
+O comando `Session` <!-- REF #_command_.Session.Summary -->retorna o objeto `Session` correspondente à sessão atual do usuário<!-- END REF -->.
 
 Dependendo do processo a partir do qual o comando é chamado, a sessão atual do usuário pode ser:
 
 - uma sessão web (quando [sessões escaláveis são ativadas](WebServer/sessions.md#enabling-web-sessions)),
 - uma sessão de cliente remoto,
 - a sessão de procedimentos armazenados,
-- the *designer* session in a standalone application.
+- a sessão *designer* em um aplicativo autônomo.
 
 Para obter mais informações, consulte [Tipos de sessão](../API/SessionClass.md#session-types).
 
@@ -41,7 +41,7 @@ If the command is called from a non supported context (e.g. scalable sessions di
 
 ## Sessões web
 
-The `Session` object of web sessions is available from any web process:
+O objeto `Session` das sessões web está disponível em qualquer processo web:
 
 - `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
@@ -49,11 +49,11 @@ The `Session` object of web sessions is available from any web process:
 - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
 - Funções ORDA [chamadas com solicitações REST](../REST/ClassFunctions.md).
 
-For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
+Para obter mais informações sobre as sessões dos usuários da web, consulte a seção [Sessões de Servidor Web](../WebServer/sessions.md).
 
 ## Sessões cliente remoto
 
-The `Session` object of remote client sessions is available from:
+O objeto `Session` das sessões remotas de clientes está disponível em:
 
 - Métodos de projeto que têm o atributo [Execute on Server](../Project/code-overview.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
 - Triggers,
@@ -68,9 +68,9 @@ Todos os processos de procedimento armazenado compartilham a mesma sessão de us
 - métodos chamados com o comando [`Execute on server`](../commands-legacy/execute-on-server.md),
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
-For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) page.
+Para informações sobre procedimentos armazenados, consulte a página [4D Server e 4D Language](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html).
 
-## Standalone session
+## Sessão autônoma
 
 The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
 
@@ -104,9 +104,9 @@ IP:port/4DACTION/action_Session
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1714                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1714                        |
+| Thread safe       | &check; |
 
 

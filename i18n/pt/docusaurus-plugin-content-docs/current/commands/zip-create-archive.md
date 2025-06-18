@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+O comando `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary --> cria um objeto de arquivo ZIP comprimido e retorna o status da operação<!-- END REF -->.
 
 You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parameter:
 
-- *fileToZip*: You simply pass a `4D.File` to compress.
+- *fileToZip*: você simplesmente passa um `4D.File` para compactar.
 
 - *folderToZip*: você passa um `4D.Folder` para compactar. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
 
@@ -124,7 +124,7 @@ Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:
 
 ## Exemplo
 
-You want to pass a collection of folders and files to compress to the *zipStructure* object:
+Pode passar uma coleção de pastas e arquivos para compactar ao objeto *zipStructure*:
 
 ```4d
  var $destination : 4D.File
@@ -166,9 +166,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1640                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1640                        |
+| Thread safe       | &check; |
 
 

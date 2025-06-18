@@ -538,11 +538,9 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades *info* como contenido de información de un archivo **.exe**, **.dll** o **.plist**<!-- END REF -->.
 
-La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función no hace nada (no se genera ningún error).
-
-> La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
-
 ***Parámetro info* con un archivo .exe o .dll**
+
+La función debe ser usada con un archivo .exe o .dll existente y válido, de lo contrario no hace nada (no se genera ningún error).
 
 > Escribir la información de archivos .exe o .dll sólo es posible en Windows.
 
@@ -565,6 +563,8 @@ Para todas las propiedades excepto `WinIcon`, si se pasa un texto nulo o vacío 
 Para la propiedad `WinIcon`, si el archivo del icono no existe o tiene un formato incorrecto, se genera un error.
 
 ***Parámetro info* con un un archivo .plist**
+
+> La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el archivo .plist en forma de llave. Se aceptan todos los nombre de llaves. Los tipos de valores se conservan cuando es posible.
 
@@ -596,7 +596,7 @@ $info:=New object
 $info.Copyright:="Copyright 4D 2023" //text
 $info.ProductVersion:=12 //integer
 $info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
-$info.CFBundleIconFile:="myApp.icns" //for macOS
+$info.CFBundleIconFile:="myApp.icns" //para macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
@@ -620,15 +620,15 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parámetros | Tipo |    | Descripción                       |
-| ---------- | ---- | -- | --------------------------------- |
-| content    | BLOB | -> | Nuevos contenidos para el archivo |
+| Parámetros | Tipo |    | Descripción                   |
+| ---------- | ---- | -- | ----------------------------- |
+| content    | BLOB | -> | Nuevos contenidos del archivo |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función .setContent( ) <!-- REF #FileClass.setContent().Summary --> reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOBcontent<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
+La función `.setContent( )`<!-- REF #FileClass.setContent().Summary --> reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. Para obtener información sobre BLOBs, consulte la sección [BLOB](Concepts/dt_blob.md).
 
 #### Ejemplo
 
@@ -669,7 +669,7 @@ La función .setContent( ) <!-- REF #FileClass.setContent().Summary --> reescrib
 
 La función `.setText()` <!-- REF #FileClass.setText().Summary --> escribe *text* como el nuevo contenido del archivo<!-- END REF -->.
 
-Comentario Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
+Si el archivo referenciado en el objeto `File` no existe en el disco, la función lo crea. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
 En *text*, pase el texto a escribir en el archivo. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
 

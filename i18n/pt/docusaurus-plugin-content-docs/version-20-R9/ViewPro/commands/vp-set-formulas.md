@@ -16,7 +16,7 @@ title: VP SET FORMULAS
 
 ## Descrição
 
-The `VP SET FORMULAS` command <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->.
+O comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->atribui um conjunto de fórmulas que começa no intervalo de células especificado<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo da célula (criada com [VP Cell](vp-cell.md)) cuja fórmula você deseja especificar. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
@@ -28,7 +28,7 @@ O parâmetro *formulasCol* é uma coleção bidimensional:
 > If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
 > Se um método 4D for usado, ele deverá ser permitido com o comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
-You remove the formulas in *rangeObj* by replacing them with an empty string ("").
+Você remove as fórmulas do intervalo *rangeObj* substituindo-as por uma string vazia ("").
 
 ## Exemplo 1
 

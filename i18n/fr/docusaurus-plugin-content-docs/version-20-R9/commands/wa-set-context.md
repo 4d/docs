@@ -7,32 +7,32 @@ title: WA SET CONTEXT
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 
-| Paramètres | Type                |                             | Description                                                                                                                               |
-| ---------- | ------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur           | &#8594; | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
-| object     | Objet de formulaire | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted).                    |
-| contextObj | Object              | &#8594; | Object containing the functions that can be called with `$4d`.                                                            |
+| Paramètres | Type                |                             | Description                                                                                                                                          |
+| ---------- | ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur           | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
+| object     | Objet de formulaire | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis).                              |
+| contextObj | Object              | &#8594; | Objet contenant les fonctions qui peuvent être appelées avec `$4d`.                                                                  |
 
 <!-- END REF-->
 
 ### Description
 
-The `WA SET CONTEXT` command <!--REF #_command_.WA SET CONTEXT.Summary--> defines a context object *contextObj* for `$4d` in the Web area designated by the \* and *object* parameters. When this command is used, `$4d` can only access contents declared within the provided *contextObj*. When no context object is set, `$4d` has access to all 4D methods and can not access user classes.<!-- END REF-->
+La commande `WA SET CONTEXT` <!--REF #_command_.WA SET CONTEXT.Summary--> définit un objet contexte *contextObj* pour `$4d` dans la zone Web désignée par les paramètres \* et *object*. Lorsque cette commande est utilisée, `$4d` ne peut accéder qu'aux contenus déclarés dans le *contextObj* fourni. Si aucun objet contexte n'est défini, `$4d` a accès à toutes les méthodes 4D et ne peut pas accéder aux classes utilisateurs.<!-- END REF-->
 
 :::note
 
-The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
+La commande n'est utilisable qu'avec une zone web intégrée où les paramètres [**Utiliser le moteur de rendu web intégré**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) et **Accéder aux méthodes 4D** sont fixés à `true`.
 
 :::
 
-Pass in *contextObj* user class instances or formulas to be allowed in `$4d` as objects. Class functions that begin with `_` are considered hidden and cannot be used with `$4d`.
+Passez dans *contextObj* les instances de classes utilisateurs ou les formules à autoriser dans `$4d` en tant qu'objets. Les fonctions de classe qui commencent par `_` sont considérées comme cachées et ne peuvent pas être utilisées avec `$4d`.
 
-- If *contextObj* is null, `$4d` has access to all 4D methods.
-- If *contextObj* is empty, `$4d` has no access.
+- Si *contextObj* est null, `$4d` a accès à toutes les méthodes 4D.
+- Si *contextObj* est vide, `$4d` n'a aucun accès.
 
 ### Exemple 1
 
-Allow `$4d` to specific methods
+Autoriser l'accès à des méthodes spécifiques via `$4d`
 
 ```4d
  var $context:={}
@@ -42,17 +42,17 @@ Allow `$4d` to specific methods
  WA SET CONTEXT(*; "myWebArea"; $context)
 ```
 
-**In JavaScript:**
+**En JavaScript:**
 
 ```js
-$4d.myMethod(); // Allowed
-$4d.myMethod2(); // Allowed
-$4d.someOtherMethod(); // Not accessible
+$4d.myMethod(); // Autorisé
+$4d.myMethod2(); // Autorisé
+$4d.someOtherMethod(); // Non autorisé
 ```
 
 ### Exemple 2
 
-Using a Class Object
+Utiliser un objet de classe
 
 ```4d
  var $myWAObject:=cs.WAFunctions.new()
@@ -60,11 +60,11 @@ Using a Class Object
  WA SET CONTEXT(*; "MyWA"; $myWAObject)
 ```
 
-**In JavaScript:**
+**En JavaScript:**
 
 ```js
-$4d.myWAFunction(); // Allowed
-$4d._myPrivateFunction(); // Will do nothing because function is private
+$4d.myWAFunction(); // Autorisé
+$4d._myPrivateFunction(); // Ne fera rien car la function est privée
 ```
 
 ### Voir également

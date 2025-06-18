@@ -234,7 +234,7 @@ Os campos abaixo estão registrados para cada evento:
 
 ## 4DDiagnosticLog.txt
 
-Esse arquivo registra vários eventos relacionados à operação de aplicação e sua leitura humana. You can include custom information in this file using the [LOG EVENT](../commands-legacy/log-event.md) command.
+Esse arquivo registra vários eventos relacionados à operação de aplicação e sua leitura humana. Você pode incluir informações personalizadas nesse arquivo usando o comando [LOG EVENT](../commands-legacy/log-event.md).
 
 Como iniciar esse log:
 
@@ -259,7 +259,7 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 O arquivo *4DDiagnosticLog.txt* pode registrar diferentes níveis de mensagens, de `ERROR` (mais importante) a `TRACE` (menos importante). Por padrão, o nível `INFO` é definido, o que significa que o arquivo registrará apenas eventos importantes, incluindo erros e resultados inesperados (veja abaixo).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command, depending on your needs. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
+Você pode selecionar o nível das mensagens usando o seletor `Diagnostic log level` do comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), dependendo de suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
 
 | Parâmetros  | Descrição                                                                                            | Quando seleccionado, inclui                                   |
 | ----------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -287,10 +287,10 @@ Esses históricos registram cada troca entre a aplicação 4D e o servidor de ma
 Os arquivos de histórico podem ser produzidos em duas versões:
 
 - uma versão comum:
- - chamada 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
- - sem anexos
- - usa um arquivo circular automático que é reciclado a cada 10MB
- - para depurações comuns
+  - chamada 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
+  - sem anexos
+  - usa um arquivo circular automático que é reciclado a cada 10MB
+  - para depurações comuns
 
 Para começar esse histórico:
 
@@ -300,14 +300,14 @@ SET DATABASE PARAMETER(POP3 Log;1) //inicia POP3 log
 SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 ```
 
-> 4D Server: Clique no botão **Start Request and Debug Logs** na [Página de manutenção] (ServerWindow/maintenance.md) da janela de administração do 4D Server.
+> 4D Server: Clique no botão **Iniciar os históricos de solicitaçoes e depuração** na página [Manutenção](ServerWindow/maintenance.md) da janela de administração do 4D Server.
 
 Esta rota do histórico é retornada pelo comando `Get 4D file`.
 
 - uma versão estendida:
- - attachment(s) included no automatic recycling
- - nome personalizado
- - guardado para propósitos específicos
+  - attachment(s) included no automatic recycling
+  - nome personalizado
+  - guardado para propósitos específicos
 
 Para começar esse histórico:
 
@@ -362,7 +362,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 :::note
 
-Não é obrigatório acionar o [4DRequestsLog.txt] (#4drequestslogtxt) do lado do cliente usando `SET DATABASE PARAMETER`. No entanto, é necessário se pretender registar o campo único `sequenceNumber`.
+Não é obrigatório acionar o [4DRequestsLog.txt](#4drequestslogtxt) do lado do cliente usando `SET DATABASE PARAMETER`. No entanto, é necessário se pretender registar o campo único `sequenceNumber`.
 
 :::
 
@@ -460,34 +460,34 @@ Como iniciar esse log:
 
 - Use the `SET DATABASE PARAMETER` command:
 
- ```4d
- SET DATABASE PARAMETER(TCP log; 1)
- ```
+  ```4d
+  SET DATABASE PARAMETER(TCP log; 1)
+  ```
 
 - Configure o log através de um [arquivo de configuração JSON](#using-a-log-configuration-file):
 
- ```json
- {
-     "TCPLogs":{
-       "state" : 1
-          }
- }
- ```
+  ```json
+  {
+      "TCPLogs":{
+        "state" : 1
+           }
+  }
+  ```
 
 Os campos abaixo estão registrados para cada evento:
 
-| Campo nome  | Tipo      | Descrição                                                                                  |
-| ----------- | --------- | ------------------------------------------------------------------------------------------ |
-| time        | Date/Time | Date and time of the event in ISO 8601 format                                              |
-| localPort   | Number    | Local port used for the connection                                                         |
-| peerAddress | Text      | IP address of the remote peer                                                              |
-| peerPort    | Number    | Port of the remote peer                                                                    |
-| protocol    | Text      | Indicates whether the event is related to `TCP`                                            |
-| "event"     | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
-| size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
-| excerpt     | Number    | First 10 bytes of data in hexadecimal format                                               |
-| textExcerpt | Text      | First 10 bytes of data in text format                                                      |
-| comment     | Text      | Additional information about the event, such as error details or encryption status         |
+| Campo nome  | Tipo      | Descrição                                                                                 |
+| ----------- | --------- | ----------------------------------------------------------------------------------------- |
+| time        | Data/Hora | Data e hora do evento no formato ISO 8601                                                 |
+| localPort   | Number    | Local port used for the connection                                                        |
+| peerAddress | Text      | IP address of the remote peer                                                             |
+| peerPort    | Number    | Porta do peer remoto                                                                      |
+| protocol    | Text      | Indicates whether the event is related to `TCP`                                           |
+| "event"     | Text      | O tipo de evento:`open`, `close`, `error`, `send`, `receive`, ou `listen` |
+| size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable    |
+| excerpt     | Number    | Primeiros 10 bytes de dados em formato hexadecimal                                        |
+| textExcerpt | Text      | Primeiros 10 bytes de dados em formato de texto                                           |
+| comment     | Text      | Additional information about the event, such as error details or encryption status        |
 
 ## Utilizar um ficheiro de configuração de log
 
@@ -500,14 +500,14 @@ Existem várias formas de ativar o arquivo de configuração do registo, depende
 - **Servidor 4D com interface**: você pode abrir a página Manutenção e clicar no botão [Carregar arquivo de configuração dos registos](ServerWindow/maintenance.md#load-logs-configuration-file), depois selecionar o arquivo. Neste caso, pode utilizar qualquer nome para o arquivo de configuração. É imediatamente ativado no servidor.
 - **um projeto interpretado ou compilado**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta [Settings](../Project/architecture.md#settings-user) do projeto (situada ao mesmo nível que a pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
 - **uma aplicação construída**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta seguinte:
- - Windows: `Users\[userName]\AppData\Roaming\[application]`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+  - Windows: `Users\[userName]\AppData\Roaming\[application]`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **todos os projetos com um 4D autônomo ou remoto**: o arquivo deve chamar-se `logConfig.json` e ser copiado para a pasta seguinte:
- - Windows: `Users\[userName]\AppData\Roaming\4D`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+  - Windows: `Users\[userName]\AppData\Roaming\4D`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos os projetos com 4D Server**: o arquivo deve ser nomeado `logConfig.json` e copiado para a seguinte pasta:
- - Windows: `Users\[userName]\AppData\Roaming\4D Server`
- - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+  - Windows: `Users\[userName]\AppData\Roaming\4D Server`
+  - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
@@ -667,7 +667,7 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
 :::note
 
 - The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\\\`,...).
-- For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+- Para httpDebugLogs, a propriedade "level" corresponde às opções constantes do `wdl` descritas no comando [`WEB SET OPTION`](../commands-legacy/web-set-option.md).
 - For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
 
 :::

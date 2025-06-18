@@ -20,24 +20,24 @@ ORDA client/server architectures that support the optimization are:
 O contexto de otimização é baseado nas seguintes implementações:
 
 - Quando um cliente solicita uma seleção de entidade do servidor, 4D "aprende" automaticamente quais atributos da seleção de entidade são realmente usados no lado do cliente durante a execução do código e constrói um "contexto de otimização" correspondente. Esse contexto é anexado à seleção da entidade e armazena os atributos usados. Será atualizado dinamicamente se outros atributos forem usados depois. Os seguintes métodos e funções accionam a fase de aprendizagem:
- - [`Create entity selection`](../commands/create-entity-selection.md)
- - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
- - [`dataClass.all()`](../API/DataClassClass.md#all)
- - [`dataClass.get()`](../API/DataClassClass.md#get)
- - [`dataClass.query()`](../API/DataClassClass.md#query)
- - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
+  - [`Create entity selection`](../commands/create-entity-selection.md)
+  - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
+  - [`dataClass.all()`](../API/DataClassClass.md#all)
+  - [`dataClass.get()`](../API/DataClassClass.md#get)
+  - [`dataClass.query()`](../API/DataClassClass.md#query)
+  - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
-- As solicitações subsequentes enviadas ao servidor sobre a mesma seleção de entidade reutilizam automaticamente o contexto de otimização e obtêm apenas os atributos necessários do servidor, o que acelera o processamento. For example, in an [entity selection-based list box](#entity-selection-based-list-box), the learning phase takes place during the display of the first row. a visualização das linhas seguintes é optimizada. As funções a seguir associam automaticamente o contexto de otimização da seleção da entidade de origem à seleção da entidade retornada:
- - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
- - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
- - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
- - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby)
- - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
- - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
+- As solicitações subsequentes enviadas ao servidor sobre a mesma seleção de entidade reutilizam automaticamente o contexto de otimização e obtêm apenas os atributos necessários do servidor, o que acelera o processamento. Por exemplo, em um [list box entity selection](#entity-selection-based-list-box), a fase de aprendizagem ocorre durante a exibição da primeira linha. a visualização das linhas seguintes é optimizada. As funções a seguir associam automaticamente o contexto de otimização da seleção da entidade de origem à seleção da entidade retornada:
+  - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
+  - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
+  - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
+  - [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby)
+  - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
+  - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
 - An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
 
-- You can build optimization contexts manually using the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function (see [Preconfiguring contexts](#preconfiguring-contexts)).
+- Você pode criar contextos de otimização manualmente usando a função [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) (veja [contextos preconfigurando](#preconfiguring-contexts)).
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
@@ -66,9 +66,9 @@ Você pode aumentar os benefícios da otimização usando a propriedade **contex
 
 > Você também pode criar contextos usando a função [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
-A mesma propriedade de contexto de otimização pode ser passada para um número ilimitado de seleções de entidades na mesma classe de dados. All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). No entanto, lembre-se de que um contexto é atualizado automaticamente quando novos atributos são usados em outras partes do código. A reutilização do mesmo contexto em códigos diferentes pode resultar em sobrecarga do contexto e, portanto, reduzir sua eficiência.
+A mesma propriedade de contexto de otimização pode ser passada para um número ilimitado de seleções de entidades na mesma classe de dados. Todas as funções ORDA que manipulam seleções de entidades suportam a propriedade **context** (por exemplo, [`dataClass.query()`](../API/DataClassClass.md#query) ou [`dataClass.all()`](../API/DataClassClass.md#all)). No entanto, lembre-se de que um contexto é atualizado automaticamente quando novos atributos são usados em outras partes do código. A reutilização do mesmo contexto em códigos diferentes pode resultar em sobrecarga do contexto e, portanto, reduzir sua eficiência.
 
-> A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
+> Um mecanismo semelhante é implementado para as entidades que são carregadas, de modo que apenas atributos usados são requisitados (veja a função [`dataClass.get()`](../API/DataClassClass.md#get)).
 
 **Exemplo com `dataClass.query()`:**
 
@@ -125,7 +125,7 @@ Se quiser fornecer aplicativos finais com o mais alto nível de otimização, vo
 1. Projete seus algoritmos.
 2. Execute seu aplicativo e deixe que o mecanismo de aprendizado automático preencha os contextos de otimização.
 3. Call the [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) or [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) function to collect  contexts. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
-4. In the final step, call the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function to build contexts at application startup and [use them](#reusing-the-context-property) in your algorithms.
+4. Na etapa final, chame a função [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) para construir contextos na inicialização da aplicação e [usá-los](#reusing-the-context-property) em seus algoritmos.
 
 ## Cache ORDA
 

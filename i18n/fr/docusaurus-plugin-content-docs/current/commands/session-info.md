@@ -49,7 +49,7 @@ Cette commande renvoie la propriété [`.info`](../API/SessionClass.md#info) de 
 
 :::
 
-Voici un exemple d'objet de sortie :
+Voici un exemple d'objet retourné :
 
 ```json
 

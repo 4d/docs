@@ -3,7 +3,7 @@ id: compute
 title: $compute
 ---
 
-Cálculo de atributos específicos (*e.*, `Employee/salary/?$compute=sum)` o en el caso de un atributo Objeto (*por ejemplo*, Employee/objectAtt.property1/?$compute=sum)
+Calcular em atributos específicos (por exemplo, Employee/salary/?$compute=sum) ou no caso de um atributo Object (por exemplo, Employee/objectAtt.property1/?$compute=sum)
 
 ## Descrição
 
@@ -36,7 +36,7 @@ Se quiser obter todos os cálculos para um atributo do tipo Número, pode escrev
 
 **Response**:
 
-```
+```js
 {
     "salary": {
         "count": 4,
@@ -54,9 +54,9 @@ Se quiser obter todos os cálculos para um atributo do tipo String, pode escreve
 
 **Response**:
 
-```
+```js
 {
-    "salary": {
+    "firstName": {
         "count": 4,
         "min": Anne,
         "max": Victor
@@ -70,7 +70,7 @@ Se pretender obter apenas um cálculo num atributo, pode escrever o seguinte:
 
 **Response**:
 
-`235000`
+`335000`
 
 Se pretender efetuar um cálculo num atributo de um objeto, pode escrever o seguinte:
 

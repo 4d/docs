@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 The **WP Import document** command<!--REF #_command_.WP Import document.Summary--> converts an existing 4D Write Pro / 4D Write document (.4wp, .4w7 or .4wt) or MS Word document (.docx) to a new 4D Write Pro object.<!-- END REF-->
 
-You can pass either a *filePath* or *fileObj*:
+Vous pouvez passer soit un *filePath* ou *fileObj* :
 
 - In the *filePath* parameter, pass the path of a document stored on disk. You must pass a complete path, unless the document is located at the same level as the structure file, in which case you can just pass its name.
 

@@ -103,6 +103,7 @@ Creation of a new radio button "bRadio6" based on the existing radio button "bRa
 *Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
+[OBJECT SET DATA SOURCE FORMULA](../commands/object-set-data-source-formula.md)
 
 ## Properties
 

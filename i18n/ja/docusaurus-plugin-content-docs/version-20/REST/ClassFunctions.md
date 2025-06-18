@@ -454,14 +454,14 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
 既存の Schools エンティティを既存の Studentsエンティティに紐付けます。 `StudentsEntity` クラスは次の API を提供しています:
 
 ```
-// StudentsEntity class
+// StudentsEntity クラス
 
 Class extends Entity
 
 exposed Function putToSchool($school : Object) -> $status : Object
 
-        //$school is a Schools entity
-        //Associate the related entity school to the current Students entity
+        //$school は School エンティティ
+        //カレントの Students エンティティに学生が在籍中の学校エンティティを紐付け
     This.school:=$school
 
     $status:=This.save()

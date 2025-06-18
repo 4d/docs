@@ -17,7 +17,7 @@ title: VP SET SHOW PRINT LINES
 
 ## Descrição
 
-The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> sets whether to display print preview lines in a spreadsheet.<!-- END REF -->.
+O comando `VP SET SHOW PRINT LINES` <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> define se deseja exibir linhas de pré-visualização de impressão em uma planilha<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 

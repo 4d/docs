@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | assinaturas4D | Text array | &#8592; | Assinaturas 4D de tipos de dados |
 | tiposNativos | Text array | &#8592; | Tipos de dados nativos |
-| nomesFormatos | Text array | &#8592; | Nomes de formato (apenas Windows), strings vazias em MacOS |
+| nomesFormatos | Text array | &#8592; | Nomes de formato|
 
 <!-- END REF-->
 
@@ -30,7 +30,7 @@ Este comando devolve os tipos de dados em diferentes formas através de dois (ou
 
 O array *tiposNativos* permite suportar todo tipo de dados presentes na área de transferência, incluindo os dados cujo tipo não está referenciado por 4D.
 
-* Em Windows, também pode passar o array *nomesFormatos*, que recebe os nomes dos tipos de dados encontrados na área de transferência. Os valores devolvidos neste array podem ser utilizados por exemplo para construir um menu suspenso de seleção de formato. Em Mac OS, o array *nomesFormatos* devolve as cadeias vazias.
+* Também pode passar o array *nomesFormatos*, que recebe os nomes dos tipos de dados encontrados na área de transferência. Os valores devolvidos neste array podem ser utilizados por exemplo para construir um menu suspenso de seleção de formato. 
 
 Para maior informação sobre os tipos de dados suportados, consulte a seção *Gerenciar área de transferência*.
 

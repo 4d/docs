@@ -3,7 +3,7 @@ id: ordaClasses
 title: Classes du modèle de données
 ---
 
-ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
+ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
 
 Par exemple, vous pouvez créer une fonction `getNextWithHigherSalary()` dans la classe `EmployeeEntity` pour retourner les employés ayant un salaire supérieur à celui qui est sélectionné. Il serait aussi simple à appeler que :
 
@@ -262,10 +262,10 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
- - Do not give the same name to a 4D table and to a [user class name](../Concepts/classes.md#class-definition). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
- - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
+  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+  - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
-- When defining a class, make sure the [`Class extends`](../Concepts/classes.md#class-extends-classname) statement exactly matches the parent class name (remember that they're case sensitive). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
+- Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](../Concepts/classes.md#class-extends-classname) correspond exactement au nom de la classe parente (rappelez-vous qu'ils sont sensibles à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
 
 - Vous ne pouvez pas instancier un objet de classe du modèle de données avec le mot clé `new()` (une erreur est retournée). Vous devez utiliser une des méthodes listées dans la colonne [`Instanciée par` de la table de classe ORDA](#architecture).
 
@@ -424,13 +424,13 @@ Cette fonction prend en charge trois syntaxes :
 - Avec la première syntaxe, vous traitez l'ensemble de la requête via la propriété de l'objet objet `$event.result`.
 - Avec les deuxième et troisième syntaxes, la fonction retourne une valeur dans *$result* :
 
- - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
- - Si *$result* est Object, il doit contenir deux propriétés :
+  - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
+  - Si *$result* est Object, il doit contenir deux propriétés :
 
- | Propriété                          | Type       | Description                                                                                                                  |
- | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
- | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
- | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
+  | Propriété                          | Type       | Description                                                                                                                  |
+  | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
+  | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
+  | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
 
 La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés.
 
@@ -822,11 +822,11 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method"
 ```
 
-## onHttpGet keyword
+## onHTTPGet keyword
 
-Use the `onHttpGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
+Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
 
-The `onHttpGet` keyword is available with:
+The `onHTTPGet` keyword is available with:
 
 - ORDA Data model class functions
 - [Singletons class functions](../Concepts/classes.md#singleton-classes)
@@ -834,8 +834,8 @@ The `onHttpGet` keyword is available with:
 La syntaxe formelle est la suivante :
 
 ```4d
-// declare an onHttpGet function
-exposed onHttpGet Function <functionName>(params) : result
+// declare an onHTTPGet function
+exposed onHTTPGet Function <functionName>(params) : result
 ```
 
 :::info
@@ -852,7 +852,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 ### params
 
-A function with `onHttpGet` keyword accepts [parameters](../Concepts/parameters.md).
+A function with `onHTTPGet` keyword accepts [parameters](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
 
@@ -864,7 +864,7 @@ See the [Parameters](../REST/classFunctions#parameters) section in the REST serv
 
 ### Résultat
 
-A function with `onHttpGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+A function with `onHTTPGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
 
 :::info
 
@@ -985,7 +985,7 @@ End if
 
 ### Fichiers de classe (class files)
 
-An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. Par exemple, une classe d'entité pour la dataclass `Utilities` sera définie via un fichier `UtilitiesEntity.4dm`.
+Une classe utilisateur ORDA de modèle de données est définie en ajoutant, au [même emplacement que les fichiers de classe usuels](../Concepts/classes.md#class-definition) (c'est-à-dire dans le dossier `/Sources/Classes` du dossier projet), un fichier .4dm avec le nom de la classe. Par exemple, une classe d'entité pour la dataclass `Utilities` sera définie via un fichier `UtilitiesEntity.4dm`.
 
 ### Créer des classes
 

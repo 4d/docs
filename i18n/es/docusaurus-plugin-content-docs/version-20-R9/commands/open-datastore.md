@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
+El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación al datastore remoto identificado por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `4D.DataStoreImplementation` asociado con el alias local *localID*.
 
 El comando admite los siguientes almacenes de datos remotos:
 
@@ -71,7 +71,7 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
   //$myds y $myds2 son equivalentes
 ```
 
-Objects available in the `4D.DataStoreImplementation` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Los objetos disponibles en el `4D.DataStoreImplementation` son mapeados en función de las [reglas generales ORDA](ORDA/dsMapping.md#reglas-generales).
 
 Si no se encuentra ningún datastore coincidente, `Open datastore` devuelve **Null**.
 

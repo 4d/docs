@@ -80,7 +80,7 @@ Para criar uma nova classe, pode:
 
 - selecione a categoria **Classes** e clique no botão ![](../assets/en/Users/PlussNew.png).
 - selecione **Nova Classe...** no menu de ação na parte inferior da janela do Explorer, ou no menu contextual do grupo Classes.
- ![](../assets/en/Concepts/newClass.png)
+  ![](../assets/en/Concepts/newClass.png)
 - selecione **Novo > Classe...** a partir do menu contextual da página inicial do Explorador.
 
 #### Suporte de código de classe
@@ -88,17 +88,17 @@ Para criar uma nova classe, pode:
 Nas várias janelas 4D (editor de código, compilador, depurador, explorador de tempo de execução), o código de classe é basicamente tratado como um método de projecto com algumas especificidades:
 
 - No editor de código:
- - uma aula não pode ser executada
- - uma função de classe é um bloco de código
- - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
- - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
+  - uma aula não pode ser executada
+  - uma função de classe é um bloco de código
+  - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
+  - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
 - No explorador e Depurador de Runtime, as funções de classe são exibidas com o formato `<ClassName>` construtor ou `<ClassName>.<FunctionName>`.
 
 ## Lojas de classe
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
-- [`cs`](../commands/cs.md) for user class store
+- [`cs`](../commands/cs.md) para o class store de usuário
 - [`4D`](../commands/4d.md) para o class store integrado
 
 ### `cs`
@@ -180,7 +180,7 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 - `propriedade` para definir as propriedades estáticas dos objetos com um tipo.
 - `Função get <Nome>` e `Função set <Nome>` para definir propriedades calculadas dos objetos.
 - `Class extends <ClassName>` para definir a herança.
-- `This` and `Super` are commands that have special features within classes.
+- `This` e `Super` são comandos que possuem recursos especiais dentro das classes.
 
 ### `Function`
 
@@ -238,8 +238,8 @@ No código da aplicação, as funções de classe são chamadas como métodos me
 
 - utilização do operador `()`. Por exemplo, `myObject.methodName("olá")`
 - use of a "4D. Function" class member method:
- - [`apply()`](API/FunctionClass.md#apply)
- - [`call()`](API/FunctionClass.md#call)
+  - [`apply()`](API/FunctionClass.md#apply)
+  - [`call()`](API/FunctionClass.md#call)
 
 :::warning Aviso de segurança de thread
 
@@ -602,13 +602,13 @@ Classe ($side : Integer)
   $area:=This.height*This.width
 ```
 
-## Class function commands
+## Comandos de funções de classe
 
 The following commands have specific features when they are used within class functions:
 
 ### `Super`
 
-The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
+O comando [`Super`](../commands/super.md) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
 
 Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super.md).
 
@@ -711,13 +711,13 @@ Se a palavra-chave da função `shared` for usada em uma classe de usuário não
 
 Uma **classe singleton** é uma classe de usuário que produz apenas uma única instância. For more information on the concept of singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-### Singletons types
+### Tipos de singletons
 
 4D supports three types of singletons:
 
-- a **process singleton** has a unique instance for the process in which it is instantiated,
-- a **shared singleton** has a unique instance for all processes on the machine.
-- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
+- um **processo singleton** tem uma instância única para o processo no qual ele é instanciado,
+- um **singleton compartilhado** tem uma instância única para todos os processos na máquina.
+- uma **sessão singleton** é um singleton compartilhado, mas com uma instância única para todos os processos na [sessão](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
 
 Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
 
@@ -729,7 +729,7 @@ As classes Singleton não são suportadas por [classes baseadas em ORDA](../ORDA
 
 The following table indicates the scope of a singleton instance depending on where it was created:
 
-| Singleton criado em  | Scope of process singleton                                                                                 | Escopo do singleton compartilhado | Scope of session singleton                                            |
+| Singleton criado em  | Escopo de um singleton process                                                                             | Escopo do singleton compartilhado | Escopo da sessão singleton                                            |
 | -------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------- | --------------------------------------------------------------------- |
 | **4D usuário único** | Processo                                                                                                   | Aplicação                         | Application or Web/REST session                                       |
 | **4D Server**        | Processo                                                                                                   | Máquina 4D Server                 | Client/server session or Web/REST session or Stored procedure session |
@@ -741,14 +741,14 @@ Once instantiated, a singleton class (and its singleton) exists as long as a ref
 
 Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) antes do [`Class constructor`](#class-constructor):
 
-- To declare a (process) singleton class, write `singleton Class Constructor()`.
+- Para declarar uma classe singleton (process), escreva `singleton Class Constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
 - To declare a session singleton class, write `session singleton Class constructor()`.
 
 :::note
 
 - Session singletons are automatically shared singletons (there's no need to use the `shared` keyword in the class constructor).
-- As funções compartilhadas Singleton suportam a palavra-chave `onHttpGet`(../ORDA/ordaClasses.md#onhttpget-keyword).
+- As funções compartilhadas Singleton suportam a [palavra-chave `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 
@@ -758,11 +758,11 @@ Se você precisar instanciar um singleton com parâmetros, você também pode ch
 
 O [`.isSingleton`](../API/ClassClass.md#issingleton) propriedade de objetos de classe permite saber se a classe é uma singleton.
 
-The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
+A propriedade [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) dos objetos Class permite saber se a classe é um singleton de sessão.
 
 ### Exemplos
 
-#### Process singleton
+#### Singleton process
 
 ```4d
 	//class: ProcessTag
@@ -826,7 +826,7 @@ $vehicle:=cs.VehicleFactory.me.buildVehicle("caminhão")
 
 Como a função *buildVehicle()* modifica o singleton **cs.VehicleFactory** (ao incrementar `This.vehicleBuilt`) você precisa adicionar a palavra-chave `shared` a ela.
 
-#### Session singleton
+#### Singleton session
 
 In an inventory application, you want to implement an item inventory using session singletons.
 
@@ -841,12 +841,12 @@ shared function addItem($item:object)
     This.itemList.push($item)
 ```
 
-By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Accessing the user's inventory is as simple as:
+By defining the ItemInventory class as a session singleton, you make sure that every session and therefore every user has their own inventory. Acessar o inventário do usuário é tão simples quanto:
 
 ```4d
-//in a user session
+//em uma sessão usuário
 $myList := cs.ItemInventory.me.itemList
-//current user's item list
+//lista de itens do usuário atual
 
 ```
 

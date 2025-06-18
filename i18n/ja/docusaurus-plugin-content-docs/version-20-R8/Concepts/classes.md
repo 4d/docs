@@ -80,7 +80,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 - **クラス** カテゴリを選択し、![](../assets/en/Users/PlussNew.png) ボタンをクリックします。
 - エクスプローラーウィンドウの下部にあるアクションメニュー、またはクラスグループのコンテキストメニューから **新規クラス...** を選択します。
- ![](../assets/en/Concepts/newClass.png)
+  ![](../assets/en/Concepts/newClass.png)
 - エクスプローラーのホームページのコンテキストメニューより **新規** > **クラス...** を選択します。
 
 #### クラスのコードサポート
@@ -88,10 +88,10 @@ Project フォルダー Project Sources Classes Polygon.4dm
 各種 4Dウィンドウ (コードエディター、コンパイラー、デバッガー、ランタイムエクスプローラー) において、クラスコードは "特殊なプロジェクトメソッド" のように扱われます:
 
 - コードエディター:
- - クラスは実行できません
- - クラスメソッドはコードのブロックです
- - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
- - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
+  - クラスは実行できません
+  - クラスメソッドはコードのブロックです
+  - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
+  - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
 - ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
 
 ## クラスストア
@@ -238,8 +238,8 @@ Function getFullname()->$fullname : Text
 
 - `()` 演算子の使用 。 例: `myObject.methodName("hello") `
 - "4D.Function" クラスメンバーメソッドの使用:
- - [`apply()`](API/FunctionClass.md#apply)
- - [`call()`](API/FunctionClass.md#call)
+  - [`apply()`](API/FunctionClass.md#apply)
+  - [`call()`](API/FunctionClass.md#call)
 
 :::warning スレッドセーフに関する警告
 
@@ -360,8 +360,8 @@ Class constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// プロジェクトメソッド内において
+// クラスをインスタンス化することができます
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
 // $o = {"name":"John";"age":42}
@@ -511,7 +511,7 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 両方の関数が定義されている場合、計算プロパティは **read-write** となります。   両方の関数が定義されている場合、計算プロパティは **read-write** となります。  `Function get` のみが定義されている場合、計算プロパティは**read-only** です。 この場合、コードがプロパティを変更しようとするとエラーが返されます。 `Function set` のみが定義されている場合、4D はプロパティの読み取り時に *undefined* を返します。 この場合、コードがプロパティを変更しようとするとエラーが返されます。 `Function set` のみが定義されている場合、4D はプロパティの読み取り時に *undefined* を返します。
 
-If the functions are declared in a [shared class](#shared-classes), you can use the `shared` keyword with them so that they could be called without [`Use...End use` structure](shared.md#useend-use). 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
+関数が[共有クラス](#共有クラス)で宣言されている場合、`shared` キーワードを使用することで、[`Use...End use` 構文](shared.md#useend-use)なしで呼び出せるようにすることができます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
 
 計算プロパティの型は、*ゲッター* の `$return` の型宣言によって定義されます。  [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。 [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。
 
@@ -753,7 +753,7 @@ shared Function Bar($value : Integer)
 :::note
 
 - セッションシングルトンは、自動的に共有シングルトンとなります(クラスコンストラクターにおいて`shared` キーワードを使用する必要はありません)。
-- シングルトンの共有関数は、[`onHttpGet` キーワード](../ORDA/ordaClasses.md#onhttpget-keyword) をサポートします。
+- シングルトンの共有関数は[`onHTTPGet` キーワード](../ORDA/ordaClasses.md#onhttpget-キーワード) をサポートします。
 
 :::
 

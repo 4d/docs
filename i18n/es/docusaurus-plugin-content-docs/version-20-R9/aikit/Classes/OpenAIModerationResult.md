@@ -7,15 +7,15 @@ title: OpenAIModerationResult
 
 The `OpenAIModerationResult` provides functionality to handle moderation results from the OpenAI API.
 
-## Inherits
+## Hereda
 
 - [OpenAIResult](OpenAIResult.md)
 
 ## Propiedades
 
-| Propiedad    | Tipo                                    | Descripción                             |
-| ------------ | --------------------------------------- | --------------------------------------- |
-| `moderation` | [OpenAIModeration](OpenAIModeration.md) | the moderation object . |
+| Propiedad    | Tipo                                    | Descripción                              |
+| ------------ | --------------------------------------- | ---------------------------------------- |
+| `moderation` | [OpenAIModeration](OpenAIModeration.md) | el objeto de moderación. |
 
 ## Ver también
 

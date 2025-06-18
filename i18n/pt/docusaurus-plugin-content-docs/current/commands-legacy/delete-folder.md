@@ -31,7 +31,7 @@ Como padrão, por razões de segurança, se omitir o parâmetro *deleteOption*, 
 * Se Delete with contents (1) for passado:  
    * A pasta é apagada junto com todos os seus conteúdos.  
    **Aviso:** Mesmo se a pasta ou seus conteúdos estiverem bloqueados ou em modo apenas-leitura, se o usuário atual tiver direitos de acesso, eles serão apagados.  
-   * Se esta pasta, ou qualquer um dos arquivos que conter, não puder ser apagada, o processo é abortado assim o primeiro elemento inacessível for apagado e um erro(\*) for retornado. Isto significa que uma pasta pode ser parcialmente apagada. Quando o processo de eliminação for abortado, pode usar o comando [Last errors](last-errors.md)  para recuperar o nome e caminho do arquivo problemático.  
+   * Se esta pasta, ou qualquer um dos arquivos que conter, não puder ser apagada, o processo é abortado assim o primeiro elemento inacessível for apagado e um erro(\*) for retornado. Isto significa que uma pasta pode ser parcialmente apagada. Quando o processo de eliminação for abortado, pode usar o comando [Last errors](../commands/last-errors.md)  para recuperar o nome e caminho do arquivo problemático.  
    * Se a pasta especificada não existir, o comando não faz nada e nenhum erro é retornado.  
    (\*) em Windows: -54 (Tentativa de abrir um arquivo bloqueado para escrita)  
    em macOS: -45 (O arquivo está bloqueado ou o caminho não é correto)

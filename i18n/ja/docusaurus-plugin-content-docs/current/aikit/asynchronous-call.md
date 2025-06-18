@@ -1,27 +1,27 @@
 ---
 id: asynchronous-call
-title: Asynchronous Call
+title: 非同期コード
 ---
 
-# Asynchronous Call
+# 非同期コード
 
-If you do not want to wait for the OpenAPI response when making a request to its API, you need to use asynchronous code.
+リクエストをAPI に送信する際にOpenAPI のレスポンスを待ちたくない場合には、非同期コードを使用する必要があります。
 
-You must provide a `4D.Formula` to receive the result. See [OpenAIParameters](Classes/OpenAIParameters.md) for a list of them.
+結果を受け取るには `4D.Formula` を渡す必要があります。 それらの一覧については、[OpenAIParameters](Classes/OpenAIParameters.md) を参照して下さい。
 
-The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), so the response will be received within the current process.
+非同期メソッドは [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) に基づいているもので、レスポンスはカレントプロセス内で受信されます。
 
-> ⚠️ If your process ends at the conclusion of the current method (e.g., using New process, or playing in the method editor), the callback formula might not be called asynchronously. In such cases, consider using `CALL WORKER` or `CALL FORM`.
+> ⚠️ もしカレントのメソッドの終わりでプロセスも終了する(例: New process を使用している、あるいはメソッドエディターでコードをテストしている)場合、コールバックフォーミュラは非同期に呼び出されない可能性があります。 そのような場合には、`CALL WORKER` あるいは `CALL FORM` の使用を検討して下さい。
 
-## Examples of Usage
+## 使用例
 
-### model list
+### モデルリスト
 
 ```4d
 $client.models.list({formula: Formula(MyReceiveMethod($1))})
 ```
 
-`$1` will be an instance of [OpenAIModelListResult](Classes/OpenAIModelListResult.md), so `MyReceiveMethod` method could be:
+`$1` は[OpenAIModelListResult](Classes/OpenAIModelListResult.md) のインスタンスのため、`MyReceiveMethod` メソッドの内容は例えば以下のようになります:
 
 ```4d
 #DECLARE($result: cs.AIKit.OpenAIModelListResult)
@@ -37,7 +37,7 @@ Else
 End if
 ```
 
-### chat completions
+### チャット補完
 
 ```4d
 var $messages:=[{role: "system"; content: "You are a helpful assistant."}]
@@ -46,11 +46,11 @@ $messages.push({role: "user"; content: "Could you explain me why 42 is a special
 $client.chat.completions.create($messages; { onResponse: Formula(MyChatCompletionsReceiveMethod($1))})
 ```
 
-`$1` will be an instance of [OpenAIChatCompletionsResult](Classes/OpenAIChatCompletionsResult.md), so `MyChatCompletionsReceiveMethod` method could be:
+`$1` は[OpenAIChatCompletionsResult](Classes/OpenAIChatCompletionsResult.md) のインスタンスのため、`MyChatCompletionsReceiveMethod` メソッドの内容は例えば以下のようになります:
 
 ```4d
 #DECLARE($result: cs.AIKit.OpenAIChatCompletionsResult)
 
-ASSERT($result.success) // We use onResponse here, callback receive only if success
+ASSERT($result.success) // ここでは onResponse を使用するため、成功した場合のみコールバックを受け取る
 Form.assistantMessage:=$result.choices[0].text
 ```

@@ -33,10 +33,10 @@ Toutes les formules ont des opérandes et des opérateurs :
 
 - **Opérateurs** : voir [Valeurs et opérateurs](#values-and-operators) ci-dessous.
 - **Les opérandes** comprennent plusieurs catégories:
- - [valeurs](#values-and-operators) (5 types de données sont pris en charge)
- - [Les références à d'autres cellules](#cell-references) (relatives, absolues, mixtes ou par nom)
- - [fonctions de feuille de calcul standard](#built-in-functions)
- - [Fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
+  - [valeurs](#values-and-operators) (5 types de données sont pris en charge)
+  - [Les références à d'autres cellules](#cell-references) (relatives, absolues, mixtes ou par nom)
+  - [fonctions de feuille de calcul standard](#built-in-functions)
+  - [Fonctions 4D](#4d-functions) basées sur des formules 4D et donnant accès à des variables, champs, méthodes, commandes ou expressions 4D.
 
 ## Valeurs et opérateurs
 
@@ -191,11 +191,11 @@ Nous souhaitons imprimer "Hello World" dans une cellule de la zone 4D View Pro e
 
 3. Modifiez le contenu d'une cellule dans une zone 4D View Pro et saisissez :
 
- ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
- "myMethod" est alors appelé par 4D et la cellule s'affiche :
+  "myMethod" est alors appelé par 4D et la cellule s'affiche :
 
- ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+  ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Paramètres
 
@@ -246,10 +246,10 @@ Les méthodes projet 4D peuvent également retourner des valeurs dans la formule
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg autres types convertis en png) crée un URI (data:image/png;base64,xxxx) et ensuite utilisé comme fond dans 4D View Pro dans la cellule où la formule est exécutée
 - [objet](Concepts/dt_object.md) avec les deux propriétés suivantes (permettant de passer une date et une heure) :
 
- | Propriété | Type | Description       |
- | --------- | ---- | ----------------- |
- | value     | Date | Valeur date       |
- | time      | Real | Heure en secondes |
+  | Propriété | Type | Description       |
+  | --------- | ---- | ----------------- |
+  | value     | Date | Valeur date       |
+  | time      | Real | Heure en secondes |
 
 Si la méthode 4D ne retourne rien, une chaîne vide est automatiquement retournée.
 
@@ -282,13 +282,13 @@ Des solutions alternatives sont disponibles pour déclarer des champs ou des mé
 
 ### Référencement de champs à l'aide de la structure virtuelle
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter. Cette solution alternative peut être utile si votre application s'appuie déjà sur une structure virtuelle (sinon, [il est recommandé d'utiliser `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+4D View Pro vous permet de référencer les champs 4D en utilisant la structure virtuelle de la base de données, c'est-à-dire déclarée par les commandes [`SET TABLE TITLES`](../commandes-legacy/set-table-titles.md) et/ou [`SET FIELD TITLES`](../commandes-legacy/set-field-titles.md) avec le paramètre \*. Cette solution alternative peut être utile si votre application s'appuie déjà sur une structure virtuelle (sinon, [il est recommandé d'utiliser `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 #### Conditions requises
 
-- The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter (see example),
+- Le champ doit appartenir à la structure virtuelle de la base de données, c'est-à-dire qu'il doit être déclaré par les commandes [`SET TABLE TITLES`](../commandes-legacy/set-table-titles.md) et/ou [`SET FIELD TITLES`](../commandes-legacy/set-field-titles.md) avec le paramètre \* (voir l'exemple),
 - Les noms de table et de champ doivent être conformes à ECMA (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 - Le type de champ doit être pris en charge par 4D View Pro (voir ci-dessus).
 
@@ -321,19 +321,19 @@ Nous souhaitons imprimer le nom d'une personne dans une cellule de la zone 4D Vi
 
 2. Exécuter le code suivant pour initialiser une structure virtuelle :
 
- ```4d
- ARRAY TEXT($tableTitles;1)
- ARRAY LONGINT($tableNum;1)
- $tableTitles{1}:="Emp"
- $tableNum{1}:=2
- SET TABLE TITLES($tableTitles;$tableNum;*)
-  
- ARRAY TEXT($fieldTitles;1)
- ARRAY LONGINT($fieldNum;1)
- $fieldTitles{1}:="Name"
- $fieldNum{1}:=2 //nom de famille
- SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
- ```
+  ```4d
+  ARRAY TEXT($tableTitles;1)
+  ARRAY LONGINT($tableNum;1)
+  $tableTitles{1}:="Emp"
+  $tableNum{1}:=2
+  SET TABLE TITLES($tableTitles;$tableNum;*)
+   
+  ARRAY TEXT($fieldTitles;1)
+  ARRAY LONGINT($fieldNum;1)
+  $fieldTitles{1}:="Name"
+  $fieldNum{1}:=2 //nom de famille
+  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+  ```
 
 3. Modifiez le contenu d'une cellule de la zone 4D View Pro et saisir "=e" :
 

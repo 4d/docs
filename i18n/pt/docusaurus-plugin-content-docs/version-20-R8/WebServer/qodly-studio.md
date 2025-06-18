@@ -36,13 +36,13 @@ A resolução recomendada é 1920x1080.
 - Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 - Web sessions (*aka* Scalable sessions) must [be enabled](sessions.md#enabling-web-sessions).
-- O código 4D chamado pelos formulários Qodly deve ser [hilo seguro] (preemptiveWeb.md).
+- O código 4D chamado pelos formulários Qodly deve ser [hilo seguro](preemptiveWeb.md).
 
 ### Habilitando o acesso a Qodly Studio
 
 Por padrão, o acesso a Qodly Studio não é concedido.
 
-Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
+Qodly Studio é servido pelo [servidor web WebAdmin](../Admin/webAdmin.md) e exibe dados de projetos 4D tratados pelo [servidor web](webServer.md).
 
 Para permitir o acesso ao Qodly Studio, você deve permiti-lo explicitamente em dois níveis:
 
@@ -75,7 +75,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 Authentication on the WebAdmin web server is granted using an access key. Para mais detalhes, consulte [Chave de Acesso](../Admin/webAdmin.md#access-key).
 
-### Development and deployment
+### Desenvolvimento e implantação
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
@@ -84,7 +84,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 :::warning
 
-You can open Qodly Studio, [debug](#using-qodly-debugger-on-4d-server) and edit Qodly pages directly on a 4D Server machine when a project is running in interpreted mode. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
+Você pode abrir Qodly Studio, [depurar](#using-qodly-debugger-on-4d-server) e editar páginas Qodly diretamente em uma máquina de servidor 4D quando um projeto é executado no modo interpretado. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
 
 :::
 
@@ -179,11 +179,11 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 Para ativar a renderização das páginas Qodly, as seguintes opções devem ser definidas.
 
 - A opção **Propriedades** > **Web** > **Funcionalidades Web** > [**Expor como servidor REST**](../settings/web.md#expose-as-rest-server) deve ser ativada.
-- O [servidor Web 4D] (webServer.md) deve estar em execução.
+- O [servidor Web 4D](webServer.md) deve estar em execução.
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are not available if the configuration options are not activated.
+[Botões de renderização](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) não estarão disponíveis se as opções de configuração não estiverem ativadas.
 
 :::
 
@@ -193,7 +193,7 @@ Ao renderizar formulários Qodly no Qodly Studio, o renderizador se conectará a
 
 Keep in mind that Qodly Studio runs through the 4D WebAdmin web server. When you use Qodly Studio as a developer, even when you preview a Qodly Page in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
 
-However, page rendering happens outside Qodly Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
+However, page rendering happens outside Qodly Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. Veja [Funções expostas vs não expostas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) e [Exposição de tabelas](../REST/configuration.md#exposing-tables) para obter mais informações sobre como expor ativos.
 
 ### Acessar páginas Qodly
 
@@ -231,7 +231,7 @@ To attach the Qodly Studio debugger to your running 4D Server application:
 
 :::note
 
-The project must be running in interpreted mode so that **Qodly Studio** menu item is available.
+O projeto deve estar sendo executado no modo interpretado para que o item de menu **Qodly Studio** esteja disponível.
 
 :::
 
@@ -244,13 +244,13 @@ If the debugger is already attached to a another machine or another Qodly Studio
 
 To detach the Qodly Studio debugger from your running 4D Server application:
 
-1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
+1. Clique no botão **Debug** na barra de ferramentas Qodly Studio enquanto uma sessão de depuração está ativa.
     A warning dialog box will prompt you to confirm whether you want to detach the debugger.
 2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
 
 ## Force login
 
-With Qodly Studio for 4D, the ["force login" mode](../REST/authUsers.md#force-login-mode) allows you to control the number of opened web sessions that require 4D Client licenses. Você também pode fazer [desconectar](#logout) o usuário a qualquer momento para diminuir o número de licenças retidas.
+Com Qodly Studio for 4D, o [modo "forçar login"](../REST/authUsers.md#force-login-mode) permite controlar o número de sessões web abertas que requerem licenças cliente 4D. Você também pode fazer [desconectar](#logout) o usuário a qualquer momento para diminuir o número de licenças retidas.
 
 ### Configuração
 
@@ -301,7 +301,7 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 ### Encerrar sessão
 
-When the ["force login" mode is enabled](#force-login), Qodly Studio for 4D allows you to implement a logout feature in your application.
+Quando o modo ["force login" está ativado](#force-login), o Qodly Studio for 4D permite que você implemente um recurso de logout em seu aplicação.
 
 Para fazer o logout do usuário, basta executar a ação padrão **Logout** na página Qodly. In Qodly Studio, you can associate this standard action to a button for example:
 
@@ -327,7 +327,7 @@ Se você executar o renderizador a partir do Qodly Studio e esses dois servidore
 
 :::info
 
-Using different schemes might also lead to [session](sessions.md) issues, such as losing [privileges](../ORDA/privileges.md) after a page refresh.
+O uso de diferentes esquemas também pode levar a problemas [sessão](sessions.md), como a perda [privilégios](../ORDA/privileges.md) após a atualização da página.
 
 :::
 

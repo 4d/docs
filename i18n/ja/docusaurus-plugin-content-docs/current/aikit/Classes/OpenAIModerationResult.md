@@ -5,17 +5,17 @@ title: OpenAIModerationResult
 
 # OpenAIModerationResult
 
-The `OpenAIModerationResult` provides functionality to handle moderation results from the OpenAI API.
+`OpenAIModerationResult` はOpenAI API からのモデレーション結果を管理する機能を提供します。
 
-## Inherits
+## 継承元
 
 - [OpenAIResult](OpenAIResult.md)
 
 ## プロパティ
 
-| プロパティ        | 型                                       | 説明                                      |
-| ------------ | --------------------------------------- | --------------------------------------- |
-| `moderation` | [OpenAIModeration](OpenAIModeration.md) | the moderation object . |
+| プロパティ        | 型                                       | 説明             |
+| ------------ | --------------------------------------- | -------------- |
+| `moderation` | [OpenAIModeration](OpenAIModeration.md) | モデレーションオブジェクト。 |
 
 ## 参照
 

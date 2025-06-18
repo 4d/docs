@@ -41,7 +41,7 @@ Pour désinstaller une méthode de gestion des erreurs, appelez de nouveau **ON 
 
 Vous pouvez identifier les erreurs en lisant la variable système Error, qui contient le code de l'erreur. Les codes d'erreurs retournés par 4D sont traités dans les sections *Codes d'erreurs*. Reportez-vous par exemple à la section *Erreurs de syntaxe (1 -> 81)*. La variable Error n'est définie qu'à l'intérieur de la méthode de gestion des erreurs ; si vous souhaitez que le code soit accessible dans la méthode ayant provoqué l'erreur, copiez la variable Error dans votre propre variable process. Vous pouvez également accéder aux variables système Error method, Error line et Error formula contenant respectivement le nom de la méthode, le numéro de ligne et le texte de la formule à l'origine de l'erreur (cf. [Gérer les erreurs dans une méthode](../Concepts/error-handling.md#gérer-les-erreurs-dans-une-méthode)).
 
-Vous pouvez utiliser la commande [Last errors](last-errors.md) ou [Last errors](last-errors.md)  pour obtenir la séquence d'erreurs (c'est-à-dire la "pile" d'erreurs) à l'origine de l'interruption.
+Vous pouvez utiliser la commande [Last errors](../commands/last-errors.md) ou [Last errors](../commands/last-errors.md)  pour obtenir la séquence d'erreurs (c'est-à-dire la "pile" d'erreurs) à l'origine de l'interruption.
 
 La méthode de gestion des erreurs doit généralement traiter les erreurs de manière appropriée ou afficher un message d'erreur à l'utilisateur. Les erreurs peuvent être générées lors de traitements effectués sur :
 
@@ -175,8 +175,8 @@ La méthode de gestion d'erreurs suivante ignore les interruptions de l'utilisat
 
 [ABORT](abort.md)  
 *Gestionnaire d'erreur*  
-[Last errors](last-errors.md)   
-[Last errors](last-errors.md)  
+[Last errors](../commands/last-errors.md)   
+[Last errors](../commands/last-errors.md)  
 [Method called on error](method-called-on-error.md)  
 *Variables système*  
 

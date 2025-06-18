@@ -19,6 +19,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get auto spellcheck.Summary-->The **OBJECT Get auto spellcheck** command returns the status of the Auto spellcheck option for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
 
+This command supports objects of the following types:
+
+- Text-based [inputs](../FormObjects/input_overview.md)
+- [4D Write Pro areas](../FormObjects/writeProArea_overview.md).
+
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable or a field. In this case, you pass a reference instead of a name.
 
 The command returns **True** when automatic spell-checking is enabled for the *object* and **False** when it is not. 

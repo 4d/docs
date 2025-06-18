@@ -17,7 +17,7 @@ title: VP REMOVE NAME
 
 ## Descrição
 
-The `VP REMOVE NAME` command <!-- REF #_method_.VP REMOVE NAME.Summary -->removes the named range or named formula passed in the *name* parameter in the defined *scope*<!-- END REF -->.
+O comando `VP REMOVE NAME` <!-- REF #_method_.VP REMOVE NAME.Summary -->remove o intervalo especificado ou a fórmula especificada passada no parâmetro *nome* no *escopo* definido \*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 

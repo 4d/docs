@@ -17,7 +17,7 @@ Converts a URL to a Blob object by making an HTTP request.
 | --------- | ---- | ----------------------------------------------------- |
 | $url      | Text | The URL of the image to be converted. |
 
-**Returns**: Blob or Null if the request fails.
+**Retornos**: Blob ou Null se a solicitação falhar.
 
 ```4d
 var $blob:=cs._ImageUtils.me.httpURLToBlob("http://example.com/image.png")
@@ -31,7 +31,7 @@ Converts a base64 encoded string to a Blob object.
 | --------- | ---- | ------------------------------------------------ |
 | $base64   | Text | The base64 encoded image string. |
 
-**Returns**: Blob representing the decoded image.
+**Retorna**: Blob representa a imagem decodificada.
 
 ```4d
 var $blob:=cs._ImageUtils.me.base64ToBlob("iVBORw0KGgoAAAANSUhEUgAAAAUA...")
@@ -45,7 +45,7 @@ Converts various types of image representations to a Blob object.
 | ---------- | ------------ | ----------------------------------------------------------------------------------------------- |
 | $imageInfo | Diferente de | The image information, which can be a picture, a file object, a URL, or a text. |
 
-**Returns**: Blob or Null if the input is invalid.
+**Retornos**: Blob ou Null se a entrada for inválida.
 
 ```4d
 var $blob:=cs._ImageUtils.me.toBlob($image)
@@ -59,7 +59,7 @@ Converts an image to a base64 encoded string.
 | ---------- | ------------ | ----------------------------------------------------------- |
 | $imageInfo | Diferente de | The image information to convert to base64. |
 
-**Returns**: Base64 encoded Text or an empty string if conversion fails.
+**Retorna**: texto codificado em Base64 ou uma string vazia se a conversão falhar.
 
 ```4d
 var $base64:=cs._ImageUtils.me.toBase64($image)

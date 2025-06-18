@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Methods
+title: Méthodes
 ---
 
 Une méthode est essentiellement un morceau de code qui exécute une ou plusieurs action(s). Une méthode est composée d'instructions.

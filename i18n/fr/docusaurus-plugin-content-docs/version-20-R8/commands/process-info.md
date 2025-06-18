@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
-| Paramètres    | Type    |                             | Description                   |
-| ------------- | ------- | :-------------------------: | ----------------------------- |
-| processNumber | Integer | &#8594; | Process number                |
-| Résultat      | Object  | &#8592; | Informations sur le processus |
+| Paramètres    | Type    |                             | Description                 |
+| ------------- | ------- | :-------------------------: | --------------------------- |
+| processNumber | Integer | &#8594; | Process number              |
+| Résultat      | Object  | &#8592; | Informations sur le process |
 
 <!-- END REF -->
 
@@ -25,26 +25,26 @@ displayed_sidebar: docs
 
 ## Description
 
-The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
+La commande `Process info` <!-- REF #_command_.Process info.Summary -->renvoie un objet fournissant des informations détaillées sur le process dont le numéro est passé dans *processNumber*<!-- END REF -->. Si vous passez un numéro de process incorrect, la commande renvoie un objet null.
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété        | Type                                    | Description                                                                      |
-| ---------------- | --------------------------------------- | -------------------------------------------------------------------------------- |
-| cpuTime          | Real                                    | Running time (seconds)                                        |
-| cpuUsage         | Real                                    | Percentage of time devoted to this process (between 0 and 1)  |
-| creationDateTime | Text (Date ISO 8601) | Date and time of process creation                                                |
-| ID               | Integer                                 | Process unique ID                                                                |
-| name             | Text                                    | Nom du process                                                                   |
-| number           | Integer                                 | Process number                                                                   |
-| préemptif        | Boolean                                 | True if run preemptive, false otherwise                                          |
-| sessionID        | Text                                    | UUID de la session                                                               |
-| state            | Integer                                 | Current status. Possible values: see below       |
-| systemID         | Text                                    | ID for the user process, 4D process or spare process                             |
-| type             | Integer                                 | Running process type. Possible values: see below |
-| visible          | Boolean                                 | True if visible, false otherwise                                                 |
+| Propriété        | Type                                    | Description                                                                                               |
+| ---------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| cpuTime          | Real                                    | Durée d'exécution (secondes)                                                           |
+| cpuUsage         | Real                                    | Pourcentage de temps consacré à ce process (entre 0 et 1)                              |
+| creationDateTime | Text (Date ISO 8601) | Date et heure de création du process                                                                      |
+| ID               | Integer                                 | ID unique du process                                                                                      |
+| name             | Text                                    | Nom du process                                                                                            |
+| number           | Integer                                 | Process number                                                                                            |
+| préemptif        | Boolean                                 | Vrai si l'exécution est préemptive, faux sinon                                                            |
+| sessionID        | Text                                    | UUID de la session                                                                                        |
+| state            | Integer                                 | Statut courant. Valeurs possibles : voir ci-dessous                       |
+| systemID         | Text                                    | ID du process utilisateur, 4D ou de réserve                                                               |
+| type             | Integer                                 | Type de process en cours d'exécution. Valeurs possibles : voir ci-dessous |
+| visible          | Boolean                                 | Vrai si visible, faux sinon                                                                               |
 
-- Possible values for "state":
+- Valeurs possibles pour "state" :
 
 | Constante                 | Valeur |
 | ------------------------- | ------ |
@@ -57,7 +57,7 @@ L'objet retourné contient les propriétés suivantes :
 | Waiting for internal flag | 4      |
 | Paused                    | 5      |
 
-- Possible values for "type":
+- Valeurs possibles pour "type" :
 
 | Constante                     | Valeur |
 | ----------------------------- | ------ |
@@ -118,11 +118,11 @@ L'objet retourné contient les propriétés suivantes :
 
 :::note
 
-4D's internal processes have a negative type value and processes generated by the user have a positive value. Worker processes launched by user have type 5.
+Les process internes de 4D ont une valeur de type négative et les process générés par l'utilisateur ont une valeur positive. Les process worker lancés par l'utilisateur sont de type 5.
 
 :::
 
-Voici un exemple d'objet de sortie :
+Voici un exemple d'objet retourné :
 
 ```json
 
@@ -145,7 +145,7 @@ Voici un exemple d'objet de sortie :
 
 ## Exemple
 
-Vous voulez savoir si le processus est préventif :
+Vous voulez savoir si le process est préemptif :
 
 ```4d
 

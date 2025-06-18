@@ -15,11 +15,11 @@ https://platform.openai.com/docs/api-reference/chat
 
 **create**(*messages* : Collection of [OpenAIMessage](OpenAIMessage.md) ; *parameters* : [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)) : Object
 
-| Parámetros   | Tipo                                                                  | Descripción                                                     |
-| ------------ | --------------------------------------------------------------------- | --------------------------------------------------------------- |
-| *messages*   | Colección de [OpenAIMessage](OpenAIMessage.md)                        | The chat messages to include in the request.    |
-| *parámetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | The parameters for the chat completion request. |
-| Resultado    | Object                                                                | The result of the chat completion request.      |
+| Parámetros   | Tipo                                                                  | Descripción                                                                |
+| ------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| *messages*   | Colección de [OpenAIMessage](OpenAIMessage.md)                        | Los mensajes de chat que se incluirán en la solicitud.     |
+| *parámetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Los parámetros para la solicitud de finalización del chat. |
+| Resultado    | Object                                                                | The result of the chat completion request.                 |
 
 Creates a model response for the given chat conversation.
 
@@ -27,7 +27,7 @@ https://platform.openai.com/docs/api-reference/chat/create
 
 #### Ejemplo de Uso
 
-Provide the full messages list
+Ofrece la lista completa de mensajes
 
 ```4d
 var $messages:=[]
@@ -38,7 +38,7 @@ $messages.push({"role":"user"; "content": "Hello, how are you?"})
 var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini" })
 ```
 
-Get the response as text
+Obtener la respuesta como texto
 
 ```4d
 var $text:=$result.choice.text
@@ -68,12 +68,12 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 **update**(*completionID* : Text; *metadata* : Object, *parameters* : OpenAIParameters) : Object
 
-| Parámetros     | Tipo                                    | Descripción                                              |
-| -------------- | --------------------------------------- | -------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to update. |
-| *metadata*     | Object                                  | Metadata to update the completion with.  |
-| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.   |
-| Resultado      | Object                                  | The updated chat completion object.      |
+| Parámetros     | Tipo                                    | Descripción                                                     |
+| -------------- | --------------------------------------- | --------------------------------------------------------------- |
+| *completionID* | Text                                    | The ID of the chat completion to update.        |
+| *metadata*     | Object                                  | Metadata to update the completion with.         |
+| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.          |
+| Resultado      | Object                                  | El objeto de finalización del chat actualizado. |
 
 Modify a stored chat completion.
 

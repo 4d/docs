@@ -5,22 +5,22 @@ title: OpenAIChatCompletionsStreamResult
 
 # OpenAIChatCompletionsStreamResult
 
-## Inherits
+## Hereda
 
 - [OpenAIResult](OpenAIResult.md)
 
 ## Propiedades
 
-| Propiedad | Tipo   | Descripción                                                  |
-| --------- | ------ | ------------------------------------------------------------ |
-| `data`    | Object | Contains the stream data sent by the server. |
+| Propiedad | Tipo   | Descripción                                                           |
+| --------- | ------ | --------------------------------------------------------------------- |
+| `data`    | Object | Contiene los datos de flujo enviados por el servidor. |
 
-## Computed Properties
+## Propiedades calculadas
 
-| Propiedad | Tipo                            | Descripción                                                                                          |
-| --------- | ------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `choice`  | [OpenAIChoice](OpenAIChoice.md) | Returns a choice data, with a `delta` message.                                       |
-| `choices` | Collection                      | Returns a collection of [OpenAIChoice](OpenAIChoice.md) data, with `delta` messages. |
+| Propiedad | Tipo                            | Descripción                                                                                           |
+| --------- | ------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `choice`  | [OpenAIChoice](OpenAIChoice.md) | Returns a choice data, with a `delta` message.                                        |
+| `choices` | Collection                      | Devuelve una colección de datos [OpenAIChoice](OpenAIChoice.md) con mensajes `delta`. |
 
 ### Overrided properties
 

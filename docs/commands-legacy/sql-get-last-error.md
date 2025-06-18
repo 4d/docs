@@ -32,7 +32,7 @@ The last two parameters are only filled when the error comes from the ODBC sourc
 
 ## See also 
 
-[Last errors](last-errors.md)   
+[Last errors](../commands/last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
 
 ## Properties

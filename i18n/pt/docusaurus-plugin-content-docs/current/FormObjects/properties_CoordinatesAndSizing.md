@@ -140,7 +140,7 @@ Com as [áreas de texto](text.md) e [entradas](input_overview.md):
 
 :::
 
-Você também pode definir essa propriedade usando os comandos [OBJECT Get corner radius] (../commands-legacy/object-get-corner-radius.md) e [OBJECT SET CORNER RADIUS] (../commands-legacy/object-set-corner-radius.md).
+Você também pode definir essa propriedade usando os comandos [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) e [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md).
 
 #### Gramática JSON
 
@@ -300,7 +300,7 @@ Define um preenchimento horizontal para as células. O valor é definido em pixe
 
 #### Veja também
 
-[Vertical Padding](#vertical-padding)
+[Preenchimento vertical](#vertical-padding)
 
 ---
 
@@ -320,4 +320,4 @@ Define um preenchimento vertical para as células. O valor é definido em pixeis
 
 #### Veja também
 
-[Horizontal Padding](#horizontal-padding)
+[Preenchimento horizontal](#horizontal-padding)

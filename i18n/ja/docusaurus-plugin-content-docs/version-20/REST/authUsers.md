@@ -22,7 +22,7 @@ RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) �
 
 4D Server上では、**インタプリタモードであっても**、RESTリクエストは自動的にプリエンプティブプロセスで処理されます。 そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
+> サーバー上で実行されているインタープリターモードの Web コードをデバッグするには、[サーバー側](../Debugging/debugging-remote.md#有効化済デバッガー)またはクライアント側で[リモートデバッガー](../Debugging/debugging-remote.md)が有効さされている必要があります。 これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
 
 シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。
 

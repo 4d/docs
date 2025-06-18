@@ -26,11 +26,11 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+O comando `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->recupera o conteúdo do *zipFile* e o retorna como um objeto `4D.ZipArchive`<!-- END REF -->.
 
-> O comando não descompacta o arquivo ZIP, apenas oferece uma visão de seus conteúdos. To extract the contents of an archive, you need to use methods such as [file.copyTo()](../API/Document.md#copyto) or [folder.copyTo()](../API/Directory.md#copyto).
+> O comando não descompacta o arquivo ZIP, apenas oferece uma visão de seus conteúdos. Para extrair os conteúdos do arquivo, precisa usar métodos como [file.copyTo()](../API/Document.md#copyto) ou [folder.copyTo()](../API/Directory.md#copyto).
 
-Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
+Passe um objeto `4D.File` referenciando o arquivo ZIP comprimido no parâmetro *zipFile*. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
 
 If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. Se uma senha for exigida mas não for passada, quando tentar ler os conteúdos do arquivo um erro será gerado.
 
@@ -87,9 +87,9 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 
 ## Propriedades
 
-|                |                             |
-| -------------- | --------------------------- |
-| Command number | 1637                        |
-| Thread safe    | &check; |
+|                   |                             |
+| ----------------- | --------------------------- |
+| Número de comando | 1637                        |
+| Thread safe       | &check; |
 
 

@@ -3,11 +3,11 @@ id: IncomingMessageClass
 title: IncomingMessage
 ---
 
-The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
+La clase `4D.IncomingMessage` le permite manejar el objeto recibido por un [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
 
 El gestor de peticiones HTTP puede devolver cualquier valor (o nada). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
 
-All properties of this class are read-only. They are automatically filled by the request handler.
+All properties of this class are read-only. Son automáticamente llenados por el gestor de peticiones.
 
 <details><summary>Historia</summary>
 
@@ -61,7 +61,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
 
-Here is the response:
+Esta es la respuesta:
 
 ```json
 Called URL: /start/example? param=demo&name=4D 
@@ -93,7 +93,7 @@ There are 2 url parts - Url parts are: start - example
 
 :::note
 
-A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
+Un objeto 4D.IncomingMessage es un objeto [no compartible](../Concepts/shared.md).
 
 :::
 
@@ -105,9 +105,9 @@ A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 <!-- REF #IncomingMessageClass.getBlob().Params -->
 
-| Parámetros | Tipo |                             | Descripción                   |
-| ---------- | ---- | --------------------------- | ----------------------------- |
-| Resultado  | Blob | <- | Body of the request as a Blob |
+| Parámetros | Tipo |                             | Descripción                     |
+| ---------- | ---- | --------------------------- | ------------------------------- |
+| Resultado  | Blob | <- | Cuerpo de la petición como Blob |
 
 <!-- END REF -->
 
@@ -162,9 +162,9 @@ $value := $request.getHeader("content-type")
 
 <!-- REF #IncomingMessageClass.getJSON().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                |
-| ---------- | ------- | --------------------------- | ------------------------------------------ |
-| Resultado  | Variant | <- | JSON resolution of the body of the request |
+| Parámetros | Tipo    |                             | Descripción                             |
+| ---------- | ------- | --------------------------- | --------------------------------------- |
+| Resultado  | Variant | <- | Resolución JSON del body de la petición |
 
 <!-- END REF -->
 
@@ -184,9 +184,9 @@ If the body has not been given as JSON valid content, an error is raised.
 
 <!-- REF #IncomingMessageClass.getPicture().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                    |
-| ---------- | ------- | --------------------------- | ------------------------------ |
-| Resultado  | Picture | <- | Body of the request as picture |
+| Parámetros | Tipo    |                             | Descripción                       |
+| ---------- | ------- | --------------------------- | --------------------------------- |
+| Resultado  | Picture | <- | Cuerpo de la petición como imagen |
 
 <!-- END REF -->
 
@@ -198,7 +198,7 @@ The content-type must be given in the headers to indicate that the body is a pic
 
 :::note
 
-If the request is built using the [`HTTPRequest` class](HTTPRequestClass.md), the picture must be sent in the body as a Blob with the appropriate content-type.
+Si la solicitud se crea utilizando la [clase `HTTPRequest`](HTTPRequestClass.md), la imagen debe ser enviada en el cuerpo como un Blob con el tipo de contenido apropiado.
 
 :::
 
@@ -302,13 +302,13 @@ Example: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
 
 In this case, parameters are received as stringified values in the `urlQuery` property: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
 
-#### JSON contents parameters
+#### Parámetros contenido JSON
 
 Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoman": true,"id": 3}]'`.
 
 Parameters are passed in JSON format and enclosed within a collection.
 
-In this case, parameters are received as JSON text in the `urlQuery` property and can be parsed using [`JSON Parse`](../commands-legacy/json-parse.md).
+En este caso, los parámetros se reciben como texto JSON en la propiedad `urlQuery` y se pueden analizar utilizando [`JSON Parse`](../commands-legacy/json-parse.md).
 
 ```4d
 //urlQuery.myparams: "[{"firstname": "Marie","isWoman": true,"id": 3}]"
@@ -317,7 +317,7 @@ $test:=Value type(JSON Parse($r.urlQuery.myparams))=Is collection) //true
 
 Special characters such as simple quotes or carriage returns must be escaped.
 
-Example: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
+Ejemplo: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
 ````4d
 //urlQuery.mdcode = ```4d
@@ -344,7 +344,7 @@ La propiedad `.verb` contiene <!-- REF #IncomingMessageClass.verb.Summary -->el 
 
 HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 
-The `.verb` property is read-only.
+La propiedad `.verb` es de sólo lectura.
 
 <!-- END REF -->
 

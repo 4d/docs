@@ -3,11 +3,11 @@ id: php
 title: Página PHP
 ---
 
-Puede [ejecutar scripts PHP en 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.en.html). Essa página permite que você configure o interpretador.
+You can [execute PHP scripts in 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.en.html). Essa página permite que você configure o interpretador.
 
 :::note
 
-These settings are specified for all connected machines and all sessions. You can also modify and read them separately for each machine and each session using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands. Los parámetros modificados por el comando `SET DATABASE PARAMETER` tienen prioridad para la sesión actual.
+These settings are specified for all connected machines and all sessions. Você também pode modificá-los e lê-los separadamente para cada máquina e cada sessão usando os comandos [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) e [`Obter parâmetro do banco de dados`](../commands-legacy/get-database-parameter.md). Los parámetros modificados por el comando `SET DATABASE PARAMETER` tienen prioridad para la sesión actual.
 
 :::
 

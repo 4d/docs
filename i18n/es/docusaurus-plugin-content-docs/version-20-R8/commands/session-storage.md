@@ -11,16 +11,16 @@ displayed_sidebar: docs
 | Parámetros | Tipo   |                             | Descripción                                                |
 | ---------- | ------ | --------------------------- | ---------------------------------------------------------- |
 | id         | Text   | &#8594; | Identificador único (UUID) de la sesión |
-| Resultado  | Object | &#8592; | Storage object of the session                              |
+| Resultado  | Object | &#8592; | Objeto de almacenamiento de la sesión                      |
 
 <!-- END REF-->
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                 |
-| ----------- | ------------------------------ |
-| 20 R8       | Support of standalone sessions |
-| 20 R6       | Añadidos                       |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 20 R8       | Soporte de sesiones autónomas |
+| 20 R6       | Añadidos                      |
 
 </details>
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 In *id*, pass the UUID of the session for which you want to get the storage. Se asigna automáticamente por 4D (4D Server o, para sesiones independientes, 4D mono-usuario) y se almacena en [**.id**](../API/SessionClass.md#id) propiedad del [objeto de sesión](../API/SessionClass.md). If the session does not exist, the command returns **Null**.
 
-**Note:** You can get the session identifiers using the [Process activity](process-activity.md) command.
+**Nota:** puede obtener los identificadores de sesión usando el comando [Process activity](process-activity.md).
 
 El objeto devuelto es la propiedad [**.storage**](../API/SessionClass.md#storage) de la sesión. It is a shared object used to store information available to all processes of the session.
 

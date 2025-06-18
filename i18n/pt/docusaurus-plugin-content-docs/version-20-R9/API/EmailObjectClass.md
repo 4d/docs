@@ -3,9 +3,9 @@ id: EmailObjectClass
 title: Email
 ---
 
-Creating, sending or receiving emails in 4D is done by handling an `Email` object.
+Criar, enviar ou receber e-mails em 4D é feito manipulando um objeto `Email`.
 
-`Email` objects are created when receiving mails through a *transporter* class function:
+Os objetos `Email` são criados ao receber e-mails através de uma função de classe *transporter*:
 
 - IMAP - funções [`.getMail()`](IMAPTransporterClass.md#getmail) e [`.getMails()`](IMAPTransporterClass.md#getmails) para obter e-mails de um servidor IMAP
 - POP3 - Função [`.getMail()`](POP3TransporterClass.md#getmail) para obter um e-mail de um servidor POP3.
@@ -14,7 +14,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 
 Você envia objetos `Email` usando a função SMTP [`.send()`](SMTPTransporterClass.md#send).
 
-[`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) commands can be used to convert `Email` objects to and from MIME contents.
+Os comandos [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) e [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) podem ser usados para converter objetos `Email` de e para conteúdos MIME.
 
 ### Objeto Email
 

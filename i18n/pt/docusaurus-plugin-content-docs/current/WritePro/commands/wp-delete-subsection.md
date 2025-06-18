@@ -11,8 +11,8 @@ displayed_sidebar: docs
 
 | Parâmetro      | Tipo    |                             | Descrição                                                                          |
 | -------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | &#8594; | 4D Write Pro section                                                               |
-| subSectionType | Integer | &#8594; | Subsection type (wk first page, wk left page, or wk right page) |
+| wpSection      | Object  | &#8594; | Seção 4D Write Pro                                                                 |
+| subSectionType | Integer | &#8594; | Tipo de subseção (wk first page, wk left page ou wk right page) |
 | subSection     | Object  | &#8594; | Subseção 4D Write Pro                                                              |
 
 <!-- END REF-->
@@ -21,9 +21,9 @@ displayed_sidebar: docs
 
 The **WP DELETE SUBSECTION** command <!--REF #_command_.WP DELETE SUBSECTION.Summary-->removes the *subSectionType* subsection elements from the *wpSection* 4D Write Pro section, or it directly removes the passed *subSection*<!-- END REF-->. Subsection elements include headers, footers, columns, anchored pictures, etc. Note that the body of the document is left untouched.
 
-In *wpSection*, pass the section from which you want to remove the subsection elements. The section can be obtained using the [WP Get sections](../commands-legacy/wp-get-sections.md) or [WP Get section](../commands-legacy/wp-get-section.md) commands.
+Na *wpSection*, passe a seção da qual você deseja remover os elementos da subseção. The section can be obtained using the [WP Get sections](../commands-legacy/wp-get-sections.md) or [WP Get section](../commands-legacy/wp-get-section.md) commands.
 
-The *subSectionType* parameter specifes the subsection to delete. You can pass one of the following constants:
+O parâmetro *subSectionType* especifica a subseção a ser excluída. You can pass one of the following constants:
 
 | Parâmetros    | Tipo    | Valor |
 | ------------- | ------- | ----- |
@@ -37,7 +37,7 @@ Deleting a left page or right page subsection will automatically delete the oppo
 
 :::
 
-If the *subSectionType* does not exist, the command does nothing (no error is generated).
+Se o *subSectionType* não existir, o comando não faz nada (nenhum erro é gerado).
 
 :::note
 
@@ -51,9 +51,9 @@ You want to delete the first page subsection of the first section:
 
 ```4d
  var $section;$subsection : Object
-  // get first section
+  // obter a primeira seção
  $section:=WP Get section(wpDoc;1)
-  // Delete the subsection
+  // Excluir a subseção
  WP DELETE SUBSECTION($section;wk first page)
 ```
 

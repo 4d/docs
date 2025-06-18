@@ -94,7 +94,7 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 A função `.touched()` <!-- REF #EntityClass.clone().Summary -->comprova se um atributo da entidade tiver sido modificado ou não desde que se carregou a entidade na memória ou se salvou<!-- END REF -->.
 
-This function allows you to update entities separately. Note however that, for performance reasons, the new entity shares the same reference of object attributes as the cloned entity.
+This function allows you to update entities separately. No entanto, por razões de desempenho, a nova entidade compartilha a mesma referência de atributos de objeto que a entidade clonada.
 > Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando a função [`.save()`](#save) for executada.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).
@@ -599,15 +599,14 @@ O seguinte código genérico duplica qualquer entidade:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : any<!-- END REF -->
 
 
 <!-- REF #EntityClass.getKey().Params -->
 | Parâmetro  | Tipo    |    | Descrição                                                                                              |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------------ |
 | mode       | Integer | -> | `dk key as string`: a chave primária se devolve como uma string, sem importar o tipo de chave primária |
-| Resultados | Text    | <- | Valor do texto chave primária da entidade                                                              |
-| Resultados | Integer | <- | Valor da chave primária numérica da entidade                                                           |
+| Resultados | any     | <- | Value of the primary key of the entity (Integer or Text)                                               |
 
 <!-- END REF -->
 
@@ -1539,11 +1538,12 @@ Retorna:
 
 #### Descrição
 
-A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->.
+A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se pelo menos um atributo da entidade foi modificado desde que a entidade foi carregada na memória ou salva<!-- END REF -->. Pode usar essa função para determinar se precisar salvar a entidade.
 
-Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
+Isso só se aplica a atributos do tipo [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
-Esta função retorna False para uma nova entidade que foi criada (com [`.new( )`](DataClassClass.md#new)). Note entretanto que se usar uma função que calcule um atributo da entidade, a função `.touched()` vai retornar True. Por exemplo se chamar [`.getKey()`](#getkey) para calcular a chave primária, `.touched()` retorna True.
+Para uma nova entidade que acabou de ser criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. Por exemplo, após executar `$id:=ds.Employee.ID` para uma nova entidade (assumindo que o atributo de ID tem a propriedade "Autoincrement"), `.touched()` retorna True.
+
 
 #### Exemplo
 
@@ -1586,7 +1586,7 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 A função `.indexOf()` <!-- REF #EntityClass.touchedAttributes().Summary -->retorna a posição da entidade em uma seleção de entidade<!-- END REF -->.
 
-Isso aplica para atributos do [tipo](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
+Isso só se aplica a atributos do tipo [type](DataClassClass.md#attributename) `storage` ou `relatedEntity`.
 
 No caso de uma entidade relacionada que foi tocada (touched) *ou seja, a chave primária) o nome da entidade relacionada e sua chave primária são retornados.
 
@@ -1663,7 +1663,8 @@ A função `.unlock()` <!-- REF #EntityClass.unlock().Summary -->remove a tranca
 > Para saber mais veja [Entity locking](ORDA/entities.md#entity-locking).
 
 Um registro é destrancado automaticamente quando não for mais referenciado por nenhuma entidade no processo de trancamento (por exemplo, se uma tranca for posta apenas na referência local da entidade, a entidade e o registro é destrancado quando o processo terminar).
-> Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
+
+Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
 
 ```4d
  $e1:=ds. Emp.all()[0]
@@ -1672,6 +1673,13 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` deve ser chamado tantas vezes quanto [`lock()`](#lock) foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
+
+:::
+
 
 **Resultados**
 

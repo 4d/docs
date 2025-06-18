@@ -7,14 +7,14 @@ title: OpenAI
 
 The `OpenAI` class provides a client for accessing various OpenAI API resources. It includes properties for managing API configurations and methods for performing HTTP requests to the OpenAI endpoints.
 
-## Configuration Properties
+## Propiedades de configuración
 
-| Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional      |
-| ---------------------- | ---- | ---------------------------------------------------------------------------- | ------------- |
-| `apiKey`               | Text | Your [OpenAI API Key](https://platform.openai.com/api-keys). | No for OpenAI |
-| `baseURL`              | Text | Base URL for OpenAI API requests.                            | Sí            |
-| `organization`         | Text | Your OpenAI Organization ID.                                 | Sí            |
-| `project`              | Text | Your OpenAI Project ID.                                      | Sí            |
+| Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional       |
+| ---------------------- | ---- | ---------------------------------------------------------------------------- | -------------- |
+| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | No para OpenAI |
+| `baseURL`              | Text | Base URL for OpenAI API requests.                            | Sí             |
+| `organization`         | Text | Su ID de organización OpenAI.                                | Sí             |
+| `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí             |
 
 ### Propiedades HTTP adicionales
 
@@ -31,9 +31,9 @@ Create an instance of the OpenAI client class.
 
 | Argument Name | Tipo           | Descripción                                                                                     |
 | ------------- | -------------- | ----------------------------------------------------------------------------------------------- |
-| *apiKey*      | Text or Object | apiKey if Text as first argument and the second can be an Object of parameters. |
+| *apiKey*      | Texto u objeto | apiKey if Text as first argument and the second can be an Object of parameters. |
 
-#### API key
+#### Llave API
 
 ```4d
 // as text
@@ -42,7 +42,7 @@ var $client:=cs.AIKit.OpenAI.new("your api key")
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"})
 ```
 
-#### Server URL
+#### URL del servidor
 
 For a [compatible provider](../compatible-openai.md) API, you can configure the server URL.
 
@@ -50,7 +50,7 @@ For a [compatible provider](../compatible-openai.md) API, you can configure the 
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://server.ai"})
 ```
 
-or after creating an instance
+o después de crear una instancia
 
 ```4d
 $client.baseURL:="https://server.ai"
@@ -60,12 +60,12 @@ $client.baseURL:="https://server.ai"
 
 The API provides access to multiple resources that allow seamless interaction with OpenAI's services. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
 
-| Nombre de la propiedad | Tipo                                            | Descripción                                    |
-| ---------------------- | ----------------------------------------------- | ---------------------------------------------- |
-| `models`               | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Acceso a la API Models.        |
-| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)               | Acceso a la API Chat.          |
-| `images`               | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Access to the Images API.      |
-| `moderations`          | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Access to the Moderations API. |
+| Nombre de la propiedad | Tipo                                            | Descripción                                      |
+| ---------------------- | ----------------------------------------------- | ------------------------------------------------ |
+| `models`               | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Acceso a la API Models.          |
+| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)               | Acceso a la API Chat.            |
+| `images`               | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Acceso a la API Images.          |
+| `moderations`          | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Acceso a la API de moderaciones. |
 
 ### Ejemplo de Uso
 

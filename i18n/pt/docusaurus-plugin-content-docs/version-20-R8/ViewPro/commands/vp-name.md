@@ -24,7 +24,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 O parâmetro *rangeName* especifica um intervalo de célula nomeada existente.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual ou toda a pasta de trabalho com as seguintes constantes:
+No parâmetro opcional *sheet*, você pode designar uma planilha específica onde *rangeName* é definido. Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual ou toda a pasta de trabalho com as seguintes constantes:
 
 - `vk current sheet`
 - `vk workbook`
@@ -34,9 +34,9 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 Suponha que pretende atribuir um valor ao intervalo nomeado "Total".
 
 ```4d
-// name the B5 cell as Total
-VP ADD RANGE NAME(VP Cell("ViewProArea";1;4);"Total")
-$name:=VP Name("ViewProArea";"Total")
+// nomear a célula B5 como Total
+VP ADD RANGE NAME(VP Cell("ViewProArea";1;4); "Total")
+$name:=VP Name("ViewProArea"; "Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 

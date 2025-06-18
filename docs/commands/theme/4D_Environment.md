@@ -15,7 +15,6 @@ slug: /commands/theme/4D-Environment
 |[<!-- INCLUDE #_command_.Compact data file.Syntax -->](../../commands-legacy/compact-data-file.md)<br/>|
 |[<!-- INCLUDE #_command_.COMPONENT LIST.Syntax -->](../../commands-legacy/component-list.md)<br/>|
 |[<!-- INCLUDE #_command_.CREATE DATA FILE.Syntax -->](../../commands-legacy/create-data-file.md)<br/>|
-|[<!-- INCLUDE #_command_.Create entity selection.Syntax -->](../../commands/create-entity-selection.md)<br/>|
 |[<!-- INCLUDE #_command_.Data file.Syntax -->](../../commands-legacy/data-file.md)<br/>|
 |[<!-- INCLUDE #_command_.Database measures.Syntax -->](../../commands-legacy/database-measures.md)<br/>|
 |[<!-- INCLUDE #_command_.DROP REMOTE USER.Syntax -->](../../commands-legacy/drop-remote-user.md)<br/>|
@@ -47,7 +46,6 @@ slug: /commands/theme/4D-Environment
 |[<!-- INCLUDE #_command_.SET UPDATE FOLDER.Syntax -->](../../commands-legacy/set-update-folder.md)<br/>|
 |[<!-- INCLUDE #_command_.Structure file.Syntax -->](../../commands-legacy/structure-file.md)<br/>|
 |[<!-- INCLUDE #_command_.Table fragmentation.Syntax -->](../../commands-legacy/table-fragmentation.md)<br/>|
-|[<!-- INCLUDE #_command_.USE ENTITY SELECTION.Syntax -->](../../commands/use-entity-selection.md)<br/>|
 |[<!-- INCLUDE #_command_.VERIFY CURRENT DATA FILE.Syntax -->](../../commands-legacy/verify-current-data-file.md)<br/>|
 |[<!-- INCLUDE #_command_.VERIFY DATA FILE.Syntax -->](../../commands-legacy/verify-data-file.md)<br/>|
 |[<!-- INCLUDE #_command_.Version type.Syntax -->](../../commands-legacy/version-type.md)<br/>|

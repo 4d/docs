@@ -35,6 +35,9 @@ To generate syntax files:
 
 `npm run syntax`
 
+- auto build for main
+- for a beta branch: get the prod and generate, then push in the branch
+
 ## Markdown conventions
 
 ### API file names
@@ -77,3 +80,14 @@ Exemple:
 -> regénérer page des thèmes en anglais
 
 
+## Classic Commands Update
+
+- new command:
+  1. create a page in commands folder
+  2. add reference in:
+    - commands/theme/ page
+    - sidebars.js
+    - commands/command-index.md (includes version added number) 
+- modified command (moved to commands):
+  1. move to commands (use move_command.exe)
+  2. same as above

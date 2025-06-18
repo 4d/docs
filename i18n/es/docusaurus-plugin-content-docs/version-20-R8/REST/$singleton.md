@@ -3,7 +3,7 @@ id: singleton
 title: $singleton
 ---
 
-Puede llamar directamente a [funciones de sus singletons compartidos] (../Concepts/classes.md#singleton-classes) a través de REST.
+Puede llamar directamente a [funciones de sus singletons compartidos](../Concepts/classes.md#singleton-classes) a través de REST.
 
 Singleton functions are called in POST or GET requests with the `$singleton` command and without `()`. Por ejemplo, si ha definido una función `buildVehicle()` en la clase compartida singleton `VehicleFactory`, podría llamarla utilizando la siguiente petición:
 
@@ -37,13 +37,13 @@ La sintaxis formal es:
 
 with data in the body of the POST request: `["myparam"]`
 
-#### GET request
+#### Petición GET
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction?$params='["myparam"]'`
 
 :::note
 
-La función `SingletonClassFunction()` debe haber sido declarada con la palabra clave `onHttpGet` para ser invocable con `GET` (ver [Configuración de funciones](ClassFunctions#function-configuration)).
+The `SingletonClassFunction()` function must have been declared with the `onHTTPGet` keyword to be callable with `GET` (see [Function configuration](ClassFunctions#function-configuration)).
 
 :::
 

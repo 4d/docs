@@ -9,7 +9,7 @@ title: バックアップ設定
 - 各バックアップに含めるファイル
 - 自動タスクの実行を可能にする高度な設定
 
-> Settings defined in this dialog box are written in the *Backup.4DSettings* file, stored in the [Settings folder](Project/architecture.md#settings-user).
+> このダイアログ画面で定義した設定は [Settings](Project/architecture.md#settings-ユーザー) フォルダーの中にある *Backup.4DSettings* ファイルに書き込まれます。
 
 ## スケジューラー
 
@@ -50,8 +50,8 @@ title: バックアップ設定
 
 - **データ**: アプリケーションのデータファイル。 このオプションが選択されている場合、次のものがデータとともにバックアップされます:
     - データベースのカレントログファイル (あれば)
-    - the full `Settings` folder located [next to the data file](Project/architecture.md#settings-user-data) (if it exists), i.e. the *user settings for data*.
-- **ストラクチャー**: アプリケーションの Project フォルダーとファイル。 プロジェクトがコンパイルされている場合には、このオプションは .4dz ファイルをバックアップします。 When this option is checked, the full `Settings` folder located [at the same level as the Project folder](../Project/architecture.md#settings-user), i.e. the *user settings*, is automatically backed up.
+    - このオプションを選択した場合、[データファイルと同じ階層にある](../Project/architecture.md#settings-ユーザーデータ)`Settings` フォルダー (もし存在すれば) 、つまり*ユーザーデータ設定*が自動的にバップアップされます。
+- **ストラクチャー**: アプリケーションの Project フォルダーとファイル。 プロジェクトがコンパイルされている場合には、このオプションは .4dz ファイルをバックアップします。 このオプションを選択した場合、[プロジェクトフォルダーと同じ階層にある](../Project/architecture.md#settings-ユーザー)`Settings` フォルダー 、つまり*ユーザー設定*が自動的にバップアップされます。
 - **ユーザーストラクチャー(バイナリデータベースのみ)**: *廃止予定*
 - **添付**: このエリアでは、アプリケーションと同時にバックアップの対象とするファイルやフォルダーを指定します。 ここではどのようなタイプのファイル (ドキュメントやプラグイン、テンプレート、ラベル、レポート、ピクチャーなど) でも指定できます。 個々のファイル、または丸ごとバックアップするフォルダーを個々に設定できます。 添付エリアには、設定されたファイルのパスが表示されます。
     - **削除**: 選択したファイルを添付エリアから取り除きます。

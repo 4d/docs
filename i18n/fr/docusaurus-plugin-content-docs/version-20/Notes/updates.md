@@ -10,13 +10,22 @@ Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/
 
 :::
 
+
+## 4D 20.7 LTS
+
+#### Points forts
+
+- [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.7): liste de tous les bugs qui ont été corrigés dans 4D 20.7 LTS.
+
+
+
 ## 4D 20.6 LTS
 
 #### Points forts
 
 :::info Applications d'évaluation
 
-À partir de la "nightly build" **101734**, la boîte de dialogue Build application comporte une nouvelle option permettant de construire des applications d'évaluation. Voir sa [description dans la documentation 4D Rx](../../current/Desktop/building.md#build-an-evaluation-application).
+À partir de la "nightly build" **101734**, la boîte de dialogue Build application comporte une nouvelle option permettant de construire des applications d'évaluation. Voir la [description dans la documentation 4D Rx](../../../docs/Desktop/building#build-an-evaluation-application).
 
 :::
 

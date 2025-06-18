@@ -43,10 +43,10 @@ Para obtener una visión general de esta clase, consulte la página [**CryptoKey
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parámetros | Tipo         |    | Descripción                                      |
-| ---------- | ------------ | -- | ------------------------------------------------ |
-| settings   | Object       | -> | Settings to generate or load a key pair          |
-| Resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado |
+| Parámetros | Tipo         |    | Descripción                                       |
+| ---------- | ------------ | -- | ------------------------------------------------- |
+| settings   | Object       | -> | Parámetros para generar o cargar un par de llaves |
+| Resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 <!-- END REF -->
 
 La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un nuevo objeto `4D.CryptoKey` que encapsula un par de llaves de cifrado<!-- END REF -->, basado en el parámetro objeto *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.

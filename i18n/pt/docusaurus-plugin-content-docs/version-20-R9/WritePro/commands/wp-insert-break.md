@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object  | &#8594; | Range or element or 4D Write Pro document |
 | breakType   | Integer | &#8594; | Type of break to insert                   |
-| mode        | Integer | &#8594; | Insertion mode                            |
-| rangeUpdate | Integer | &#8594; | Range update mode                         |
+| mode        | Integer | &#8594; | Modo de inserção                          |
+| rangeUpdate | Integer | &#8594; | Modo de atualização de intervalo          |
 | Resultado   | Object  | &#8592; | Text range of the break character         |
 
 <!-- END REF-->
@@ -56,7 +56,7 @@ In the *mode* parameter, pass a constant to indicate the insertion mode to be us
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Se *targetObj* não for um intervalo, *rangeUpdate* será ignorado.
 
 ## Exemplo 1
 

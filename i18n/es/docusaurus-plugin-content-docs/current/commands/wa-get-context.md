@@ -27,7 +27,7 @@ The command is only usable with an embedded web area where the [**Use embedded w
 
 ### Ejemplo
 
-Checking if a context exists:
+Verificación de la existencia de un contexto:
 
 ```4d
  var $contextObj:=WA Get context(*; "myWebArea")

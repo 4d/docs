@@ -148,7 +148,7 @@ title: クラス
 <!-- REF #TableStyle.backColor.Syntax -->
 **.backColor** : Text<!-- END REF -->
 
-`.backColor` プロパティは、 <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->。
+`.backColor` プロパティは、 <!-- REF #TableStyle.backColor.Summary -->表の[背景色](configuring.md#background--foreground)を定義します。<!-- END REF -->。
 
 
 ### .forecolor
@@ -156,7 +156,7 @@ title: クラス
 <!-- REF #TableStyle.forecolor.Syntax -->
 **.forecolor** : Text<!-- END REF -->
 
-`.forecolor` プロパティは、 <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->。
+`.forecolor` プロパティは、 <!-- REF #TableStyle.forecolor.Summary -->表の[前景色](configuring.md#background--foreground)を定義します。<!-- END REF -->。
 
 
 
@@ -165,7 +165,7 @@ title: クラス
 <!-- REF #TableStyle.font.Syntax -->
 **.font** : Text<!-- END REF -->
 
-`.font` プロパティは、 <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->。
+`.font` プロパティは、 <!-- REF #TableStyle.font.Summary -->表のフォント(see [**フォントとテキスト**](configuring.md#フォントとテキスト)を参照)を定義します。<!-- END REF -->。
 
 
 
@@ -174,7 +174,7 @@ title: クラス
 <!-- REF #TableStyle.textDecoration.Syntax -->
 **.textDecoration** : Integer<!-- END REF -->
 
-`.textDecoration` プロパティは、 <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md#fonts-and-text))<!-- END REF -->。
+`.textDecoration` プロパティは、 <!-- REF #TableStyle.textDecoration.Summary -->表のテキストに追加する装飾(see [**フォントとテキスト**](configuring.md#フォントとテキスト)を参照)を定義します。<!-- END REF -->。
 
 
 ### .borderLeft

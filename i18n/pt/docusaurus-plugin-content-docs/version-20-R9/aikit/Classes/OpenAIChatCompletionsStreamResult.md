@@ -15,16 +15,16 @@ title: OpenAIChatCompletionsStreamResult
 | ----------- | ------ | ------------------------------------------------------------ |
 | `data`      | Object | Contains the stream data sent by the server. |
 
-## Computed Properties
+## Propriedades calculadas
 
 | Propriedade | Tipo                            | Descrição                                                                                            |
 | ----------- | ------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `choice`    | [OpenAIChoice](OpenAIChoice.md) | Returns a choice data, with a `delta` message.                                       |
-| `choices`   | Collection                      | Returns a collection of [OpenAIChoice](OpenAIChoice.md) data, with `delta` messages. |
+| `choices`   | Collection                      | Retorna uma coleção de dados [OpenAIChoice](OpenAIChoice.md), com mensagens `delta`. |
 
 ### Overrided properties
 
 | Propriedade  | Tipo                            | Descrição                                                                                                              |
 | ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `success`    | [OpenAIChoice](OpenAIChoice.md) | Returns `True` if the streaming data was successfully decoded as an object.                            |
+| `success`    | [OpenAIChoice](OpenAIChoice.md) | Retorna `True` se os dados de streaming foram decodificados como um objeto com sucesso.                |
 | `terminated` | Parâmetros                      | A Boolean indicating whether the HTTP request was terminated. ie `onTerminate` called. |

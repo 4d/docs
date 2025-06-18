@@ -7,7 +7,7 @@ No Windows, os desenvolvedores 4D podem testar e configurar suas aplicações 4D
 
 :::info
 
-The concept of sdi.mdI does not exist on macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
+O conceito sdi.mdI não existe no macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
 
 :::
 
@@ -92,6 +92,6 @@ Embora seja tratado de forma transparente por 4D, o modo SDI introduz pequenas v
 
 :::info
 
-You can use the [**Application info**](../commands-legacy/application-info.md) command to know the current running mode on Windows.
+Você pode usar o comando [**Application info**](../commands-legacy/application-info.md) para saber o modo de execução atual no Windows.
 
 :::

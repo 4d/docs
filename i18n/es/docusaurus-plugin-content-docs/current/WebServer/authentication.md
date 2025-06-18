@@ -51,8 +51,8 @@ Cuando un usuario se conecta al servidor, aparece una caja de diálogo estándar
 A continuación, se evalúan los valores introducidos:
 
 - Si la opción **Incluir contraseñas de 4D** está marcada, las credenciales de los usuarios se evaluarán primero contra la [tabla interna de usuarios 4D](Users/overview.md).
- - Si el nombre de usuario enviado por el navegador existe en la tabla de usuarios 4D y la contraseña es correcta, se acepta la conexión. Si la contraseña es incorrecta, se rechaza la conexión.
- - Si el nombre de usuario no existe en la tabla de usuarios 4D, se llama al método base [`On Web Authentication`](#on-web-authentication). Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
+  - Si el nombre de usuario enviado por el navegador existe en la tabla de usuarios 4D y la contraseña es correcta, se acepta la conexión. Si la contraseña es incorrecta, se rechaza la conexión.
+  - Si el nombre de usuario no existe en la tabla de usuarios 4D, se llama al método base [`On Web Authentication`](#on-web-authentication). Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 - Si la opción **Incluir contraseñas 4D** no está marcada, las credenciales de usuario se envían al método base [`On Web Authentication`](#on-web-authentication) junto con el resto de parámetros de conexión (dirección IP y puerto, URL...) para que pueda procesarlos. Si el método base `On Web Authentication` no existe, se rechazan las conexiones.
 
 > Con el servidor Web del cliente 4D, tenga en cuenta que todos los sitios publicados por las máquinas 4D Client compartirán la misma tabla de usuarios. La validación de los usuarios/contraseñas la realiza la aplicación 4D Server.
@@ -125,7 +125,7 @@ El primer parámetro (`$url`) es la URL recibida por el servidor, de la que se h
 
 Tomemos el ejemplo de una conexión a la Intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.45.67.89. The following table shows the values of $urll depending on the URL entered in the Web browser:
 
-| URL introducida en el navegador web                                                                                                               | Value of parameter $urll                                                              |
+| URL introducida en el navegador web                                                                                                               | Valor del parámetro $urll                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.45.67.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -151,7 +151,7 @@ The `$IPClient` parameter receives the IP address of the browser’s machine. Es
 
 The `$IPServer` parameter receives the IP address used to call the web server. 4D permite el multi-homing, que permite explotar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
-#### $user and $password - User Name and Password
+#### $user y $password - Nombre de usuario y contraseña
 
 Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
@@ -161,9 +161,9 @@ Generalidades Generalidades Generalidades Generalidades Generalidades Generalida
 
 The `On Web Authentication` database method returns a boolean:
 
-- If it is True, the connection is accepted.
+- Si es True, la conexión es aceptada.
 
-- If it is False, the connection is refused.
+- Si es False, la conexión es rechazada.
 
 El método base `On Web Connection` sólo se ejecuta si la conexión ha sido aceptada por `On Web Authentication`.
 

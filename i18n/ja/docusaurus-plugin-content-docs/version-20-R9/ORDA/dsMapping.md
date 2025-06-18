@@ -3,7 +3,7 @@ id: dsmapping
 title: データモデルオブジェクト
 ---
 
-ORDA は、下地であるデータベースストラクチャーへの自動マッピングに基づいた技術です。 ORDA は、エンティティやエンティティセレクションオブジェクトを介してデータへのアクセスも提供します。 結果的に ORDA は、データモデルオブジェクト一式の形でデータベース全体を公開します。
+The ORDA technology is based upon an automatic mapping of an underlying [database structure](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). ORDA は、エンティティやエンティティセレクションオブジェクトを介してデータへのアクセスも提供します。 結果的に ORDA は、データモデルオブジェクト一式の形でデータベース全体を公開します。
 
 ## ストラクチャーマッピング
 
@@ -21,14 +21,14 @@ ORDA は、下地であるデータベースストラクチャーへの自動マ
 
 - テーブル、フィールド、そしてリレーション名はオブジェクトプロパティ名へとマップされます。 それらの名前が標準のオブジェクト命名規則に則っているようにしてください ([識別子の命名規則](Concepts/identifiers.md) 参照)。
 - データストアは単一のプライマリーキーを持つテーブルのみを参照します。 以下のテーブルは参照されません:
- - プライマリーキーがないテーブル
- - 複合プライマリーキーを持つテーブル
+  - プライマリーキーがないテーブル
+  - 複合プライマリーキーを持つテーブル
 - BLOBフィールドは、[BLOB オブジェクト](Concepts/dt_blob.md#blob-の種類) 型の属性として利用可能です。
 
 > ORDA のデータストアマッピングでは、次のものは考慮されません:
 >
 > - テーブルあるいはフィールドの "非表示" オプション
-> - `SET TABLE TITLES` あるいは `SET FIELD TITLES` を通して定義されたバーチャルストラクチャー
+> - the virtual structure defined through [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md),
 > - リレーションの "手動" あるいは "自動" プロパティ
 
 ### リモートデータストアの利用
@@ -63,6 +63,8 @@ ORDA は、下地であるデータベースストラクチャーへの自動マ
 - モデルにはデータストアを構成するすべてのデータクラスが格納され、その詳細な情報も含まれます。 これはその下地にあるデータベース自体からは独立した存在です。
 - データとは、そのモデル内で使用・保存される情報を指します。 たとえば、従業員の名前、住所、生年月日などはデータストア内で扱うことができるデータに含まれます。
 
+A datastore object is handled through functions and properties of the [**DataStore**](../API/DataStoreClass.md) class.
+
 コード内で扱うにあたっては、データストアはオブジェクトであり、公開されているすべての [データクラス](#dataclass) をプロパティとして持ちます。
 
 4D では次のデータストアを扱うことができます:
@@ -91,6 +93,8 @@ $mydatastore:=OB Copy(ds) // null を返します
 ### データクラス
 
 データクラスとは、テーブルに相当するものです。 オブジェクトモデルとして使用され、リレーショナル属性 (データクラス間のリレーションに基づいてビルドされた属性) を含めてすべてのフィールドを属性として参照します。 リレーショナル属性はクエリにおいて通常の属性のように使用することができます。
+
+A dataclass object is handled through functions and properties of the [**DataClass**](../API/DataClassClass.md) class.
 
 4D プロジェクト内のすべてのデータクラスは、`ds` データストアのプロパティとして利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データストアのデータクラスとして公開したい各テーブルについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
@@ -135,7 +139,8 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
  $revenuesAttribute:=ds.Company["revenues"] // 別の書き方
 ```
 
-このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。 その代わりに、属性自身への参照を返します。 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
+このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves [with their **attribute properties**](../API/DataClassClass.md#attributename).
+値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
 
 テーブル内の適格なフィールドはすべて、親 [データクラス](#データクラス) の属性として利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データクラスの属性として公開したい各フィールドについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
@@ -178,6 +183,8 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 エンティティの目的はデータの管理 (作成、更新、削除) です。 エンティティセレクションを用いてエンティティ参照を取得した場合、その参照にはエンティティセレクションについての情報も保持されるため、セレクションを走査することが可能です。
 
+An entity object is handled through functions and properties of the [**Entity**](../API/EntityClass.md) class.
+
 エンティティオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
 ```4d
@@ -195,6 +202,8 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 ### エンティティセレクション
 
 エンティティセレクションとは、同じデータクラスに所属する一つ以上のエンティティへの参照を格納しているオブジェクトのことです。 通常、クエリの結果として、あるいはリレーション属性の戻り値として作成されます。 エンティティセレクションは、データクラスから 0個、1個、あるいは X個のエンティティを格納することができます (X はデータクラスに格納されているエンティティの総数です)。
+
+An entity selection object is handled through functions and properties of the [**EntitySelection**](../API/EntitySelectionClass.md) class.
 
 例:
 

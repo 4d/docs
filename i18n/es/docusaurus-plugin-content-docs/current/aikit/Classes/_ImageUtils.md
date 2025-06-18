@@ -17,7 +17,7 @@ Converts a URL to a Blob object by making an HTTP request.
 | --------- | ---- | ----------------------------------------------------- |
 | $url      | Text | The URL of the image to be converted. |
 
-**Returns**: Blob or Null if the request fails.
+**Devuelve**: Blob o Null si la solicitud falla.
 
 ```4d
 var $blob:=cs._ImageUtils.me.httpURLToBlob("http://example.com/image.png")
@@ -31,7 +31,7 @@ Converts a base64 encoded string to a Blob object.
 | --------- | ---- | ------------------------------------------------ |
 | $base64   | Text | The base64 encoded image string. |
 
-**Returns**: Blob representing the decoded image.
+**Devuelve**: Blob que representa la imagen decodificada.
 
 ```4d
 var $blob:=cs._ImageUtils.me.base64ToBlob("iVBORw0KGgoAAAANSUhEUgAAAAUA...")
@@ -45,7 +45,7 @@ Converts various types of image representations to a Blob object.
 | ---------- | ------- | ----------------------------------------------------------------------------------------------- |
 | $imageInfo | Variant | The image information, which can be a picture, a file object, a URL, or a text. |
 
-**Returns**: Blob or Null if the input is invalid.
+**Devuelve**: Blob o Null si la entrada no es válida.
 
 ```4d
 var $blob:=cs._ImageUtils.me.toBlob($image)
@@ -69,9 +69,9 @@ var $base64:=cs._ImageUtils.me.toBase64($image)
 
 Generates an inline PNG data URI from the given image information.
 
-| Argumento  | Tipo    | Descripción                                       |
-| ---------- | ------- | ------------------------------------------------- |
-| $imageInfo | Variant | The image information to convert. |
+| Argumento  | Tipo    | Descripción                                              |
+| ---------- | ------- | -------------------------------------------------------- |
+| $imageInfo | Variant | La información de la imagen a convertir. |
 
 **Returns**: Text containing the inline PNG data URI or an empty string if conversion fails.
 
@@ -83,9 +83,9 @@ var $dataUri:=cs._ImageUtils.me.toInlinedPng($image)
 
 Converts an image to a text format suitable for form data submission.
 
-| Argumento  | Tipo    | Descripción                                       |
-| ---------- | ------- | ------------------------------------------------- |
-| $imageInfo | Variant | The image information to convert. |
+| Argumento  | Tipo    | Descripción                                              |
+| ---------- | ------- | -------------------------------------------------------- |
+| $imageInfo | Variant | La información de la imagen a convertir. |
 
 **Returns**: Text representing the form data or an empty string if conversion fails.
 

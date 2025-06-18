@@ -11,7 +11,7 @@ Para definir um tempo limite para uma entidade definida que você cria usando [`
 
 Una vez que se ha definido el tiempo de espera, cada vez que se llama a un conjunto de entidades (mediante el uso de `$method=entityset`), el tiempo de espera se recalcula basándose en la hora actual y el tiempo de espera.
 
-If an entity set is removed and then recreated using `$method=entityset` along with [`$savedfilter`]($savedfilter.md), the new default timeout is 10 minutes regardless of the timeout you defined when calling `$timeout`.
+Se um conjunto de entidades for removido e depois recriado utilizando `$method=entityset` com [`$savedfilter`]($savedfilter.md), o novo tempo limite predefinido é de 10 minutos, independentemente do tempo limite definido ao chamar `$timeout`.
 
 ## Exemplo
 

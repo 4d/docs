@@ -87,10 +87,10 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 
 - des variables système dédiées :
 
- - `Error` (entier long): Code d'erreur
- - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
- - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
- - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
+  - `Error` (entier long): Code d'erreur
+  - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
+  - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
+  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
 
 :::info
 
@@ -98,7 +98,7 @@ Dans une méthode de gestion d'erreur personnalisée, vous avez accès à plusie
 :::
 
 - la commande [`Last errors`](../commands-legacy/last-errors.md) qui renvoie sous forme de collection la pile courante d'erreurs survenues dans l'application 4D.
-- the `Call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
+- la commande `Call chain` qui renvoie une collection d'objets décrivant chaque étape de la chaîne d'appel de méthode dans le process en cours.
 
 #### Exemple
 

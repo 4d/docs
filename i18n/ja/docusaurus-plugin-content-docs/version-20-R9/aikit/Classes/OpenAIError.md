@@ -5,44 +5,44 @@ title: OpenAIError Class
 
 # OpenAIError Class
 
-The `OpenAIError` class is designed to handle errors returned by the OpenAI API. It extracts relevant information from the error response and provides methods to access this information.
+`OpenAIError` クラスはOpen AI API によって返されたエラーを管理するように設計されています。 これはエラーレスポンスから関連のある情報を抽出し、この情報にアクセスするための方法を提供します。
 
 ## プロパティ
 
-### Error properties
+### エラープロパティ
 
-| プロパティ     | 型       | 説明                                                                             |
-| --------- | ------- | ------------------------------------------------------------------------------ |
-| `errCode` | Integer | The error code returned by the API or the HTTP status.         |
-| `message` | Text    | The error message returned by the API or the HTTP status text. |
+| プロパティ     | 型       | 説明                                |
+| --------- | ------- | --------------------------------- |
+| `errCode` | Integer | API または HTTP ステータスから返されたエラーコード。   |
+| `message` | Text    | API または HTTP ステータスから返されたエラーメッセージ。 |
 
-### HTTP reponse properties
+### HTTP レスポンスプロパティ
 
-| プロパティ        | 型       | 説明                                                              |
-| ------------ | ------- | --------------------------------------------------------------- |
-| `レスポンス`      | Object  | The full response object.                       |
-| `status`     | Integer | The HTTP status code of the response.           |
-| `statusText` | Text    | The status text of the HTTP response.           |
-| `body`       | Object  | The body of the error response.                 |
-| `headers`    | Object  | The headers of the error response.              |
-| `requestID`  | Text    | The request ID from the error response headers. |
+| プロパティ        | 型       | 説明                      |
+| ------------ | ------- | ----------------------- |
+| `response`   | Object  | 完全なレスポンスオブジェクト。         |
+| `status`     | Integer | レスポンスのHTTP ステータスコード。    |
+| `statusText` | Text    | HTTP レスポンスのステータステキスト。   |
+| `body`       | Object  | エラーレスポンスの本文。            |
+| `headers`    | Object  | エラーレスポンスのヘッダー。          |
+| `requestID`  | Text    | エラーレスポンスヘッダーからのリクエストID。 |
 
-### OpenAI specific
+### OpenAI 特有のプロパティ
 
-| プロパティ   | 型       | 説明                                                                  |
-| ------- | ------- | ------------------------------------------------------------------- |
-| `コード`   | Variant | The code of error returned by the API.              |
-| `type`  | Text    | The type of error returned by the API.              |
-| `param` | Text    | The parameter that caused the error, if applicable. |
+| プロパティ   | 型       | 説明                                            |
+| ------- | ------- | --------------------------------------------- |
+| `code`  | Variant | API によって返されたエラーコード。                           |
+| `type`  | Text    | API によって返されたエラーの種類。                           |
+| `param` | Text    | エラーを引き起こしたパラメーター(可能な場合のみ)。 |
 
-### HTTP status code info
+### HTTP ステータスコード情報
 
-| プロパティ                        | 型       | 説明                                                                               |
-| ---------------------------- | ------- | -------------------------------------------------------------------------------- |
-| `isBadRequestError`          | Boolean | Indicates if the error is a 400 Bad Request error.               |
-| `isAuthenticationError`      | Boolean | Indicates if the error is a 401 Authentication error.            |
-| `isPermissionDeniedError`    | Boolean | Indicates ∏if the error is a 403 Permission Denied error.        |
-| `isNotFoundError`            | Boolean | Indicates if the error is a 404 Not Found error.                 |
-| `isUnprocessableEntityError` | Boolean | Indicates if the error is a 422 Unprocessable Entity error.      |
-| `isRateLimitError`           | Boolean | Indicates if the error is a 429 Rate Limit error.                |
-| `isInternalServerError`      | Boolean | Indicates if the error is a 500 or higher Internal Server error. |
+| プロパティ                        | 型       | 説明                                      |
+| ---------------------------- | ------- | --------------------------------------- |
+| `isBadRequestError`          | Boolean | エラーが400 Bad Request エラーであるかどうかを示します。    |
+| `isAuthenticationError`      | Boolean | エラーが401 認証エラーであるかを示します。                 |
+| `isPermissionDeniedError`    | Boolean | エラーが403 接続拒否エラーであるかどうかを示します。            |
+| `isNotFoundError`            | Boolean | エラーが404 Not Found エラーであるかどうかを示します。      |
+| `isUnprocessableEntityError` | Boolean | エラーが422 処理不可能エンティティエラーであるかどうかを示します。     |
+| `isRateLimitError`           | Boolean | エラーが429 レート制限エラーであるかどうかを示します。           |
+| `isInternalServerError`      | Boolean | エラーが500 あるいはそれ以上の内部サーバーエラーであるかどうかを示します。 |

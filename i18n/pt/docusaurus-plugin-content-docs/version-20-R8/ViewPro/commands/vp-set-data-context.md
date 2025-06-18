@@ -27,11 +27,11 @@ title: VP SET DATA CONTEXT
 
 ## Descrição
 
-O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](vp-set-binding-path.md) method. On the other hand, the [VP Get data context](vp-get-data-context.md) command can return a context containing user modifications.
+O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](vp-set-binding-path.md) method. Por outro lado, o comando [VP Get data context](vp-get-data-context.md) pode retornar um contexto contendo modificações de usuário.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In *dataObj* or *dataColl*, pass an object or a collection containing the data to load in the data context. As imagens são convertidas em esquemas URI de dados.
+No *dataObj* ou *dataColl*, passe um objeto ou uma coleção que contenha os dados para carregar no contexto dos dados. As imagens são convertidas em esquemas URI de dados.
 
 Para passar um valor de tempo em *dataObj* ou *dataColl*, encapsule-o em um objeto com as seguintes propriedades (consulte [exemplo 4](#example-4---date-and-time-syntax)):
 
@@ -47,7 +47,7 @@ Em *options*, você pode passar um objeto que especifica opções adicionais. As
 | reset               | Object | True para redefinir o conteúdo da planilha antes de carregar o novo contexto; caso contrário, False (padrão).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | autoGenerateColumns | Object | Apenas utilizado quando os dados são uma coleção. True (padrão) para especificar que as colunas devem ser geradas automaticamente quando o contexto de dados é vinculado. In this case, the following rules apply: <ul><li>If *dataColl* is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If *dataColl* contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). A primeira subcoleção determina o número de colunas criadas.</li></ul> |
 
-In *sheet*, pass the index of the sheet that will receive the data context. Se nenhum índice for passado, o contexto será aplicado à folha atual.
+Em *sheet*, passe o índice da planilha que receberá o contexto de dados. Se nenhum índice for passado, o contexto será aplicado à folha atual.
 
 If you export your document to an object using [VP Export to object](vp-export-to-object.md), or to a 4DVP document using [VP EXPORT DOCUMENT](vp-export-document.md), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para obter mais detalhes, consulte a descrição desses métodos.
 
@@ -91,7 +91,7 @@ $options:=New object("autoGenerateColumns"; True) VP SET DATA CONTEXT("ViewProAr
 
 ## Exemplo 3
 
-The *data* passed as a parameter is a collection that contains subcollections. Cada subcoleção define o conteúdo de uma linha:
+*data* passada como parâmetro é uma coleção que contém subcoleções. Cada subcoleção define o conteúdo de uma linha:
 
 ```4d
 var $data : Collection

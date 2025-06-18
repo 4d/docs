@@ -461,7 +461,7 @@ Class extends Entity
 exposed Function putToSchool($school : Object) -> $status : Object
 
         //$school is a Schools entity
-        //Associate the related entity school to the current Students entity
+        //Asocia la entidad relacionada "school" con la entidad actual "Students"
     This.school:=$school
 
     $status:=This.save()

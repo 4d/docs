@@ -14,7 +14,7 @@ Este evento é acionado quando o formulário é carregado ou impresso.
 Todos os objetos do formulário (de qualquer página) cuja propriedade de evento de objeto `On Load` estiver selecionada terão seu método objeto chamado.
 Então, se a propriedade de evento formulário `On Load` for selecionada, o formulário terá seu método formulário chamado.
 
-> Os eventos `On Load` e [`On Unload`] (onUnload.md) são gerados para objetos se estiverem ativados tanto para os objetos quanto para o formulário ao qual os objetos pertencem. Se os eventos estiverem ativados somente para objetos, eles não ocorrerão; esses dois eventos também devem ser ativados no nível do formulário.
+> Os eventos `On Load` e [`On Unload`](onUnload.md) são gerados para objetos se estiverem ativados tanto para os objetos quanto para o formulário ao qual os objetos pertencem. Se os eventos estiverem ativados somente para objetos, eles não ocorrerão; esses dois eventos também devem ser ativados no nível do formulário.
 
 ### Subformulário
 

@@ -10,21 +10,30 @@ Leia [**O que há de novo no 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20
 
 :::
 
+
+## 4D 20.7 LTS
+
+#### Destaques
+
+- [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.7): lista de todos os erros corrigidos no 4D 20.7 LTS.
+
+
+
 ## 4D 20.6 LTS
 
 #### Destaques
 
 :::info Evaluation applications
 
-Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building.md#build-an-evaluation-application).
+Starting with nightly build **101734**, the Build application dialog box has a new option allowing to build evaluation applications. See [description in the 4D Rx documentation](../../../docs/Desktop/building#build-an-evaluation-application).
 
 :::
 
-- 4D 20.6 LTS is certified on Windows Server 2025
+- 4D 20.6 LTS é certificado no Windows Server 2025
 
-:::warning KNOWN ISSUE ON WINDOWS SERVER 2025
+:::warning PROBLEMA CONHECIDO NO WINDOWS SERVER 2025
 
-On Windows Server 2025, some custom options in the new Windows Print dialog box are not available and are still under investigation. A fix will be available in the next hotfix.
+No Windows Server 2025, algumas opções personalizadas na nova caixa de diálogo de Impressão do Windows não estão disponíveis e ainda estão sob investigação. Uma correção estará disponível no próximo hotfix.
 
 :::
 

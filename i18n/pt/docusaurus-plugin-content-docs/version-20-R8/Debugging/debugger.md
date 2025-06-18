@@ -17,7 +17,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 
 Há várias formas de exibir o depurador:
 
-- Clicar no botão **Trace** na [janela Syntax Error] (basics.md#syntax-error-window)
+- Clicar no botão **Trace** na [janela Syntax Error](basics.md#syntax-error-window)
 - Usando o comando [`TRACE`](../commands-legacy/trace.md)
 - Clicando no botão **Depurar** na janela Executar método ou selecionando o botão **Executar e depurar...** no Editor de Código
 - Usando **Alt+Shift+Botão Direito** (Windows) ou **Ctrl+Option+Cmd+Click** (macOS) enquanto um método está sendo executado, em seguida, selecionando o processo para rastrear no menu pop-up:
@@ -29,7 +29,7 @@ Há várias formas de exibir o depurador:
 
 Quando chamada, a janela do depurador fornece o nome do método ou da função de classe que rastreia atualmente e a ação que causa o aparecimento inicial da janela do depurador. Por exemplo, na janela do depurador acima:
 
-- *drop* is the method being traced
+- *drop* é o método que está sendo rastreado
 - The debugger window appeared because of a break point.
 
 A exibição de uma nova janela do depurador utiliza a mesma configuração que a última janela exibida na mesma sessão. Se executar vários processos usuário, pode rastreá-los de forma independente e ter uma janela do depurador aberta para cada processo.
@@ -42,7 +42,7 @@ A janela do depurador é normalmente apresentada na máquina onde o código é e
 :::note Notas
 
 - Se o servidor estiver a funcionar sem interface, não pode ser apresentada qualquer janela do depurador no servidor, pelo ser necessário utilizar o depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
-- You can also [attach the Qodly Studio debugger to a 4D Server application](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
+- Você também pode [anexar o depurador do Qodly Studio a um aplicativo do Servidor 4D](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) se você precisar depurar páginas Qodly em um ambiente implantado.
 
 :::
 
@@ -136,7 +136,7 @@ O painel de expressão: **Watch Pane** exibe informações gerais úteis sobre o
 
 A coluna **Expressão** exibe os nomes dos objetos e das expressões. A coluna **Value** exibe seus valores correspondentes atuais. Clicar em qualquer valor no lado direito do painel permite-lhe modificar o valor do objeto, se tal for permitido para esse objeto.
 
-A qualquer momento, você pode arrastar e soltar temas, sublistas de temas (se houver) e itens de temas para o [Custom Watch Pane] (#custom-watch-pane).
+A qualquer momento, você pode arrastar e soltar temas, sublistas de temas (se houver) e itens de temas para a [Janela de avaliação](#custom-watch-pane).
 
 ### Lista de expressões
 
@@ -144,7 +144,7 @@ A qualquer momento, você pode arrastar e soltar temas, sublistas de temas (se h
 
 This theme lets you keep track of the values of expressions:
 
-- usado na linha de código a ser executada (aquela marcada com o contador de programas - a seta amarela no [Painel Código-fonte] (#painel código-fonte)),
+- usado na linha de código a ser executada (aquela marcada com o contador de programas - a seta amarela na [Janela de avaliação de código](#source-code-pane)),
 - utilizado na linha de código anterior
 
 Como a linha de código anterior é a que acabou de ser executada antes, este tema mostra os objetos ou expressões da linha atual antes e depois da execução da linha.  Digamos que executa o seguinte método:
@@ -158,27 +158,27 @@ $c:=a+b
 
 1. Uma janela do depurador é aberta com o contador do programa definido para a linha com `a:=1`. Nesse momento, o tema **Line Objects** é exibido:
 
- | $a | Indefinido |
- | -- | ---------- |
+  | $a | Indefinido |
+  | -- | ---------- |
 
- A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+  A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 2. Você clica no botão **Step Over**. O contador do programa está agora definido para a linha `b:=a+1`. Neste ponto, o tema **Objetos linha** é exibido:
 
- | $a | 1          |
- | -- | ---------- |
- | $b | Indefinido |
+  | $a | 1          |
+  | -- | ---------- |
+  | $b | Indefinido |
 
- O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+  O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 3. Você clica no botão **Step Over** novamente. O contador do programa está agora definido na linha com $c:=a+b. O tema **Objetos atuais** exibe:
 
- | $c | Indefinido |
- | -- | ---------- |
- | $a | 1          |
- | $b | 2          |
+  | $c | Indefinido |
+  | -- | ---------- |
+  | $a | 1          |
+  | $b | 2          |
 
- O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+  O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 #### Variáveis.
 
@@ -280,9 +280,9 @@ Na imagem acima:
 - O `thirdMethod` não recebeu nenhum parâmetro
 - \`$0 está atualmente indefinido, porque o método não atribuiu nenhum valor a $0 (porque ainda não executou esta atribuição ou por o método ser uma sub-rotina e não uma função)
 - O `secondMethod` recebeu três parâmetros do `firstMethod`:
- - $1 é um ponteiro para a tabela `[Employee]`
- - $2 é um ponteiro para o campo `ID` na tabela `[Employee]`
- - $3 é um parâmetro alfanumérico cujo valor é "Z"
+  - $1 é um ponteiro para a tabela `[Employee]`
+  - $2 é um ponteiro para o campo `ID` na tabela `[Employee]`
+  - $3 é um parâmetro alfanumérico cujo valor é "Z"
 
 Você pode dar duplo clique no nome de qualquer método para exibir seu conteúdo no [Source Code Pane](#source-code-pane).
 
@@ -315,7 +315,7 @@ O Painel de controle personalizado é útil para avaliar expressões. É semelha
 
 ### Modo de exibição
 
-You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+Você seleciona o modo de exibição a ser usado em todas as janelas do depurador usando a opção **Exibir** do [menu contextual](#contextual-menu) do painel Observação Personalizada.
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
 
@@ -323,7 +323,7 @@ As opções abaixo estão disponíveis:
 
 - **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
 - **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
-- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **Expressões**: exibe apenas expressões personalizadas que você digitou manualmente. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
 
@@ -368,11 +368,11 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
 - **Exibir**: seleciona o [modo de exibição](#display-mode) a ser usado para todas as janelas de depuração.
-- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
- ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
- For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
+- **New Expression...**: insere uma nova expressão e exibe o 4D Formula Editor.
+  ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **Inserir comando...**: exibe um menu que permite inserir um comando 4D como uma nova expressão.
 * **Excluir tudo**: Remove todas as expressões do Painel de Vigia Personalizado.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
 
@@ -389,9 +389,9 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 O painel Código-fonte mostra o código-fonte do método ou função que está sendo rastreado no momento.
 
-Essa área também permite que você adicione ou remova [**pontos de interrupção**] (breakpoints.md).
+Essa área também permite que você adicione ou remova [**pontos de interrupção**](breakpoints.md).
 
-### Prototype
+### Protótipo
 
 The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
 
@@ -412,13 +412,13 @@ Isto também funciona com as selecções:
 
 ### Adição de expressões ao painel de controle personalizado
 
-Você pode copiar qualquer expressão selecionada do painel Código-fonte para o [painel de observação personalizada] (#painel de observação personalizada).
+Você pode copiar qualquer expressão selecionada do painel Código-fonte para o [painel de observação personalizada](#custom-watch-pane).
 
 1. No painel de código fonte, selecione a expressão a avaliar
 2. Faça uma das seguintes opções:
- - Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
- - Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
- - Clique com o botão direito do mouse no texto selecionado **>** **Copiar para o painel de expressões**
+  - Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
+  - Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
+  - Clique com o botão direito do mouse no texto selecionado **>** **Copiar para o painel de expressões**
 
 ### Contador do programa
 
@@ -454,9 +454,9 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Show documentation**: Opens the documentation for the target element. Este comando está disponível para:
- - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
- - *4D commands, functions, class names:* Displays the online documentation.
+- **Mostrar documentação**: abre a documentação para o elemento de destino. Este comando está disponível para:
+  - *Métodos projeto*, *classes usuário*: seleciona o método no Explorer e alterna para a guia de documentação
+  - *Comandos 4D, funções e nomes de classes:* exibe a documentação on-line.
 - **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
 - **Copiar para o Painel de Expressão**: Copia a expressão selecionada para o painel de observação personalizado.

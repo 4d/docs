@@ -128,16 +128,16 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ([`CORSEnabled`](#corsenabled) プロパティ参照)。 各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。 **methods** プロパティは任意です。
 
 - **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 *host* が存在しない、または空の場合、当該オブジェクトは無視されます。 複数のシンタックスがサポートされています:
- - 192.168.5.17:8081
- - 192.168.5.17
- - 192.168.\*
- - 192.168.\*:8081
- - <http://192.168.5.17:8081>
- - <http://\*.myDomain.com>
- - <http://myProject.myDomain.com>
- - \*.myDomain.com
- - myProject.myDomain.com
- - \*
+  - 192.168.5.17:8081
+  - 192.168.5.17
+  - 192.168.\*
+  - 192.168.\*:8081
+  - <http://192.168.5.17:8081>
+  - <http://\*.myDomain.com>
+  - <http://myProject.myDomain.com>
+  - \*.myDomain.com
+  - myProject.myDomain.com
+  - \*
 
 - **methods** (テキスト、任意): 対応する CORSホストに対して許可する HTTPメソッド。 メソッド名はセミコロン区切りで指定します(例: "post;get")。 *methods* が空、null、あるいは undefined の場合、すべてのメソッドが許可されます。
 
@@ -568,7 +568,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
-[Web Server オブジェクト](../commands/web-server.md-object) の設定は、読み取り専用プロパティ ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)) を除いて、すべてカスタマイズ可能です。
+[Web Server オブジェクト](../commands/web-server.md-object) の設定は、読み取り専用プロパティ ([.isRunning](#isrunning), [.name](#name)、 [.openSSLVersion](#opensslversion)、 [.perfectForwardSecrecy](#perfectforwardsecrecy)、および [.sessionCookieName](#sessioncookiename)) を除いて、すべてカスタマイズ可能です。
 
 カスタマイズされた設定は [`.stop()`](#stop) が呼び出されたときにリセットされます。
 

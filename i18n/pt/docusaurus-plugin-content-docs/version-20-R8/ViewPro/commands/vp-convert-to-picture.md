@@ -24,7 +24,7 @@ Este comando é útil, por exemplo:
 - para incorporar um documento 4D View Pro em outro documento, como um documento 4D Write Pro
 - para imprimir um documento do 4D View Pro sem ter que carregá-lo em uma área do 4D View Pro.
 
-Em *vpObject*, passe o objeto 4D View Pro que você deseja converter. This object must have been previously parsed using [VP Export to object](vp-export-to-object.md) or saved using [VP EXPORT DOCUMENT](vp-export-document.md).
+Em *vpObject*, passe o objeto 4D View Pro que você deseja converter. Este objeto deve ter sido analisado anteriormente usando [VP Export to object](vp-export-to-object.md) ou salvo usando [VP EXPORT DOCUMENT](vp-export-document.mdo).
 
 > SVG conversion process requires that expressions and formats (cf. [Cell Format](../configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. Se você converter um documento que não foi avaliado anteriormente, as expressões ou os formatos poderão ser renderizados de forma inesperada.
 

@@ -28,19 +28,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Summary-->The **Session storage** command returns the storage object of the session whose unique identifier you passed in the *id* parameter.<!-- END REF--> 
 
-In *id*, pass the UUID of the session for which you want to get the storage. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../API/SessionClass.md#id) property of the [session object](../API/SessionClass.md). If the session does not exist, the command returns **Null**.
+Dans *id*, indiquez l'UUID de la session pour laquelle vous souhaitez obtenir le stockage. Il est automatiquement attribué par 4D (4D Server ou, pour les sessions autonomes, 4D monoposte) et est stocké dans la propriété [**.id**](../API/SessionClass.md#id) de l'[objet session](../API/SessionClass.md). Si la session n'existe pas, la commande renvoie **Null**.
 
-**Note:** You can get the session identifiers using the [Process activity](process-activity.md) command.
+**Note:** Vous pouvez obtenir les identifiants de session à l'aide de la commande [Process activity](process-activity.md).
 
-The returned object is the [**.storage**](../API/SessionClass.md#storage) property of the session. It is a shared object used to store information available to all processes of the session.
+L'objet renvoyé est la propriété [**.storage**](../API/SessionClass.md#storage) de la session. Il s'agit d'un objet partagé utilisé pour stocker des informations accessibles à tous les process de la session.
 
 ## Exemple
 
-This method modifies the value of a "settings" property stored in the storage object of a specific session:
+Cette méthode modifie la valeur d'une propriété "settings" stockée dans l'objet storage d'une session spécifique :
 
 ```4d
-  //Set storage for a session
-  //The "Execute On Server" method property is set
+  //Définition du storage d'une session
+  //La propriété de méthode "Execute On Server" est définie
  
  #DECLARE($id : Text; $text : Text)
  var $obj : Object

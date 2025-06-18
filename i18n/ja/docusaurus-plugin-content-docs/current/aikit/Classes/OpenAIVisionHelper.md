@@ -11,15 +11,15 @@ title: OpenAIVisionHelper
 
 **prompt**(*prompt*: Test; *parameters* : OpenAIChatCompletionsParameters)
 
-| 引数       | 型                                                                     | 説明                                                                   |
-| -------- | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| *prompt* | Text                                                                  | The text prompt to send to the OpenAI chat API.      |
-| *引数*     | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Optional parameters for the chat completion request. |
-| 戻り値      | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | The result of the vision.                            |
+| 引数           | 型                                                                     | 説明                             |
+| ------------ | --------------------------------------------------------------------- | ------------------------------ |
+| *prompt*     | Text                                                                  | OpenAI チャットAPI に送信するテキストプロンプト。 |
+| *parameters* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | チャット補完リクエスト用の任意のパラメーター。        |
+| 戻り値          | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | ビジョンの結果。                       |
 
-Sends a prompt to the OpenAI chat API along with an associated image URL, and optionally accepts parameters for the chat completion.
+OpenAI API にプロンプトとそれに付随した画像URL を送信します。またオプションとしてチャット補完用のパラメーターも受付ます。
 
-#### Example Usage
+#### 使用例
 
 ```4d
 var $helper:=$client.chat.vision.create("http://example.com/image.jpg")

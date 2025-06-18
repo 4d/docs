@@ -35,7 +35,7 @@ Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma
 
 Una acción de permiso definida en un nivel determinado se hereda por defecto en los niveles inferiores, pero se pueden establecer varios permisos:
 
-- Una acción de permiso definida a nivel de almacén de datos se asigna automáticamente a todas las clases de datos. The *execute* permission action defined at the datastore level applies to all functions of the project, including all [singleton](../REST/$singleton.md) functions.
+- Una acción de permiso definida a nivel de almacén de datos se asigna automáticamente a todas las clases de datos. La acción de permiso *execute* definida en el nivel del datastore se aplica a todas las funciones del proyecto, incluyendo todas las funciones [singleton](../REST/$singleton.md).
 - Una acción de permiso definida a nivel de clase de datos anula la configuración del almacén de datos (si existe). Por defecto, todos los atributos de la clase de datos heredan de los permisos de la clase de datos.
 - A diferencia de los permisos de clase de datos, una acción de permiso definida a nivel de atributo no anula los permisos de clase de datos padre, sino que se añade a ellos. Por ejemplo, si asignó el privilegio "general" a una clase de datos y el privilegio "detail" a un atributo de la clase de datos, tanto el privilegio "general" como el privilegio "detail" deben definirse en la sesión para acceder al atributo.
 
@@ -197,7 +197,7 @@ La sintaxis del archivo `roles.json` es la siguiente:
 
 :::
 
-#### Assigning permissions to ORDA class functions
+#### Asignación de permisos a las funciones de la clase ORDA
 
 When configuring permissions, ORDA class functions are declared in the `applyTo` element using the following syntax:
 
@@ -214,13 +214,13 @@ Class extends Entity
    ...
 ```
 
-... you have to write:
+... tiene que escribir:
 
 ```json
 "applyTo":"City.getPopulation"
 ```
 
-It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. For example, if you have created a "drop" function in both `cs.CityEntity` and `cs.CitySelection` classes, you need to give them different names such as `dropEntity()` and `dropSelection()`. You can then write in the "roles.json" file:
+It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. For example, if you have created a "drop" function in both `cs.CityEntity` and `cs.CitySelection` classes, you need to give them different names such as `dropEntity()` and `dropSelection()`. A continuación, puede escribir en el archivo "roles.json":
 
 ```json
 	"permissions": {

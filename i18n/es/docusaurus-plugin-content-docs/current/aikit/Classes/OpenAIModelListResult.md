@@ -5,12 +5,12 @@ title: OpenAIModelListResult
 
 # OpenAIModelListResult
 
-## Inherits
+## Hereda
 
 - [OpenAIResult](OpenAIResult.md)
 
 ## Propiedades
 
-| Propiedad | Tipo                                       | Descripción                         |
-| --------- | ------------------------------------------ | ----------------------------------- |
-| `models`  | Colección de [OpenAIModel](OpenAIModel.md) | The list of models. |
+| Propiedad | Tipo                                       | Descripción                          |
+| --------- | ------------------------------------------ | ------------------------------------ |
+| `models`  | Colección de [OpenAIModel](OpenAIModel.md) | La lista de modelos. |

@@ -9,7 +9,7 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 ## Propiedades
 
-| Nombre de la propiedad | Tipo                                                                  | Default Value                                          | Descripción                                                                           |
+| Nombre de la propiedad | Tipo                                                                  | Valor por defecto                                      | Descripción                                                                           |
 | ---------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------- |
 | `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | The chat API instance used for communication with OpenAI.             |
 | `systemPrompt`         | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | The system prompt message that guides the chat assistant's responses. |
@@ -25,7 +25,7 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 | Parámetros | Tipo                                                          | Descripción                                                 |
 | ---------- | ------------------------------------------------------------- | ----------------------------------------------------------- |
-| *prompt*   | Text                                                          | The text prompt to send to OpenAI chat.     |
+| *prompt*   | Text                                                          | Texto a enviar al chat de OpenAI.           |
 | Resultado  | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | The completion result returned by the chat. |
 
 Sends a user prompt to the chat and returns the corresponding completion result.

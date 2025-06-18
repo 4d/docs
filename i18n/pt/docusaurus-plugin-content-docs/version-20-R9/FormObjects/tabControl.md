@@ -11,7 +11,7 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
-As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. If the tab control is used as a page navigation tool, then the [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) command or the `gotoPage` standard action would be used when a user clicks a tab.
+As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. Se o controle de tabulação for usado como uma ferramenta de navegação de página, o comando [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) ou a ação padrão `gotoPage` será usada quando um usuário clicar em uma tabulação.
 
 Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. As guias mostrariam as letras do alfabeto e a ação do controle do guia seria carregar os dados correspondentes à letra que o usuário clicou.
 

@@ -25,13 +25,20 @@ Each error object contains the following attributes:
 | message            | text     | Description of the error                                     |
 | componentSignature | text     | Signature of the internal component which returned the error |
 
-This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command.
+:::note
+
+For a description of component signatures, please refer to the [Error codes](../Concepts/error-handling.md#error-codes) section.
+ 
+:::
+
+This command must be called from an on error call method installed by the [ON ERR CALL](on-err-call.md) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
 
 
 ## See also 
 
 [ON ERR CALL](on-err-call.md)  
 [throw](throw.md)  
+[Error handling](../Concepts/error-handling.md)
 
 ## Properties
 

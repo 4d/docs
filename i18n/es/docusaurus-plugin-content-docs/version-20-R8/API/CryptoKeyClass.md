@@ -43,10 +43,10 @@ Para obtener una visión general de esta clase, consulte la entrada del blog [**
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Parámetros | Tipo                         |                             | Descripción                                      |
-| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------ |
-| settings   | Object                       | ->                          | Settings to generate or load a key pair          |
-| Resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado |
+| Parámetros | Tipo                         |                             | Descripción                                       |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
+| settings   | Object                       | ->                          | Parámetros para generar o cargar un par de llaves |
+| Resultado  | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 
 <!-- END REF -->
 

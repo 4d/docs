@@ -25,13 +25,13 @@ title: VP PASTE FROM OBJECT
 
 ## Descrição
 
-The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
+O comando `VP PASTE FROM OBJECT` <!-- REF #_method_.PASTE FROM OBJECT.Summary -->cola o conteúdo, o estilo e as fórmulas armazenadas em *dataObject* no objeto *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass the cell range object where the values, formatting, and/or formula cells will be pasted. Se *rangeObj* se refere a mais de uma célula, apenas a primeira é usada.
 
 In *dataObject*, pass the object that contains the cell data, formatting, and formulas to be pasted.
 
-In the optional *options* parameter, you can specify what to paste in the cell range. Valores possíveis:
+Na opção opcional *options*, você pode especificar o que colar no intervalo de células. Valores possíveis:
 
 |Constant|Description|
 \|---|---|---|
@@ -48,7 +48,7 @@ If *options* refers to a paste option not present in the copied object (e.g. for
 
 ## Exemplo
 
-Veja o exemplo de [VP Copy to object] (vp-copy-to-object.md)
+Veja o exemplo de [VP Copy to object](vp-copy-to-object.md)
 
 ## Veja também
 
