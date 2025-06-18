@@ -284,7 +284,7 @@ Si vous souhaitez utiliser la règle de dépendance [**Suivre la version 4D**](#
 
 - **Versions LTS** : Modèle `x.y.p`, où `x.y` correspond à la version principale de 4D à suivre et `p` (facultatif) peut être utilisé pour les versions correctives ou les mises à jour supplémentaires. Lorsqu'un projet spécifie qu'il suit la version 4D pour la version LTS *x.y*, le Gestionnaire de dépendances le résoudra comme "la dernière version x.\*" si elle est disponible ou "une version inférieure à x". Si une telle version n'existe pas, l'utilisateur en sera informé. Par exemple, "20.4" sera résolu par le Gestionnaire de dépendances comme "la dernière version du composant 20.\* ou une version inférieure à 20".
 
-- **Versions R-Release** : Modèle `xRy.p`, où `x` et `y` correspondent à la version principale de 4D R à suivre et `p` (facultatif) peut être utilisé pour les versions correctives ou les mises à jour supplémentaires. Lorsqu'un projet spécifie qu'il suit la version 4D pour la version *xRy*, le Gestionnaire de dépendances le résoudra à la "dernière version inférieure à xR(y+1)" si elle est disponible. Si une telle version n'existe pas, l'utilisateur en sera informé. Par exemple, "20R9" sera résolu par le gestionnaire de dépendances comme "la dernière version du composant inférieure à 20R10".
+- **Versions R-Release** : Modèle `xRy.p`, où `x` et `y` correspondent à la version principale de 4D R à suivre et `p` (facultatif) peut être utilisé pour les versions correctives ou les mises à jour supplémentaires. Lorsqu'un projet spécifie qu'il suit la version 4D pour la version *xRy*, le Gestionnaire de dépendances le résoudra à la "dernière version inférieure à xR(y+1)" si elle est disponible. Si une telle version n'existe pas, l'utilisateur en sera informé. Si une telle version n'existe pas, l'utilisateur en sera informé.
 
 :::note
 
@@ -579,6 +579,6 @@ Une boîte de dialogue de confirmation s'affiche. Si la dépendance a été déc
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la dépendance supprimée est automatiquement modifié en "Déchargé après redémarrage". Elle sera libérée de la mémoire une fois que l'application aura redémarré.
+Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la dépendance supprimée est automatiquement modifié en "Déchargé après redémarrage". Elle sera chargée une fois que l'application aura redémarré.
 
 
