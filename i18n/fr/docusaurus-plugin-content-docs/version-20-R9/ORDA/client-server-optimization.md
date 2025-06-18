@@ -27,7 +27,7 @@ Le contexte d'optimisation est fondé sur ce qui suit :
   - [`dataClass.query()`](../API/DataClassClass.md#query)
   - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
-- Les requêtes ultérieures envoyées au serveur sur la même entity selection réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Par exemple, dans une [list box de type entity selection](#entity-selection-based-list-box), la phase d'apprentissage a lieu pendant l'affichage de la première ligne. L'affichage des lignes suivantes est optimisé. Les fonctions suivantes associent automatiquement le contexte d'optimisation de l'entity selection d'origine à l'entity selection retournée :
+- Les requêtes ultérieures envoyées au serveur sur la même entity selection réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Les requêtes ultérieures envoyées au serveur sur la même entity selection réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. L'affichage des lignes suivantes est optimisé. Les fonctions suivantes associent automatiquement le contexte d'optimisation de l'entity selection d'origine à l'entity selection retournée :
   - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
   - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
   - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
@@ -66,7 +66,7 @@ Vous pouvez augmenter les avantages de l'optimisation en utilisant la propriét�
 
 > Vous pouvez également créer des contextes en utilisant la fonction [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
-Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Toutes les fonctions ORDA qui gèrent les entity selections prennent en charge la propriété **context** (par exemple [`dataClass.query()`](../API/DataClassClass.md#query) ou [`dataClass.all()`](../API/DataClassClass.md#all)). Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
+Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
 
 > Un mécanisme similaire est implémenté pour les entités qui sont chargées, de sorte que seuls les attributs utilisés sont demandés (voir la fonction [`dataClass.get()`](../API/DataClassClass.md#get)).
 
