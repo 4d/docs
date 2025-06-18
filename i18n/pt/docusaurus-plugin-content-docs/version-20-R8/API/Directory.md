@@ -547,7 +547,7 @@ A função `.files()` retorna <!-- REF #directory.files().Summary -->uma coleç�
 
 > Os apelidos ou links simbolicos não são resolvidos.
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
 
 | Parâmetros            | Valor | Comentário                                                       |
 | --------------------- | ----- | ---------------------------------------------------------------- |
@@ -655,7 +655,7 @@ Um objeto `Folder` ou null se *path* for inválido.
 
 A função `.folders()` <!-- REF #directory.folders().Summary -->retorna uma coleção de objetos `Folder` contidos na pasta principal<!-- END REF -->.
 
-By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
 
 | Parâmetros            | Valor | Comentário                                                     |
 | --------------------- | ----- | -------------------------------------------------------------- |
