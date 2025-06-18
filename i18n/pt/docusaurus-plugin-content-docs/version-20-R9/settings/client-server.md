@@ -14,7 +14,7 @@ As páginas Cliente-servidor agrupam parâmetros relacionados ao uso do banco de
 Essa opção permite que você indique se o banco de dados do 4D Server aparecerá ou não na lista de bancos de dados publicados.
 
 - When this option is checked (default), the database is made public and appears in the list of published databases (**Available** tab).
-- Quando a opção não estiver marcada, o banco de dados não será tornado público e não aparecerá na lista de bancos de dados publicados. To connect, users must manually enter the address of the database on the **Custom** tab of the connection dialog box.
+- Quando a opção não estiver marcada, o banco de dados não será tornado público e não aparecerá na lista de bancos de dados publicados. Para se conectar, os usuários devem inserir manualmente o endereço do banco de dados na guia **Personalizado** da caixa de diálogo de conexão.
 
 :::note
 
