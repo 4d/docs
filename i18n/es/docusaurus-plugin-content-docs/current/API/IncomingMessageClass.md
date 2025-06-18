@@ -7,7 +7,7 @@ La clase `4D.IncomingMessage` le permite manejar el objeto recibido por un [**HT
 
 El gestor de peticiones HTTP puede devolver cualquier valor (o nada). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
 
-All properties of this class are read-only. Son automáticamente llenados por el gestor de peticiones.
+Todas las propiedades de esta clase son de sólo lectura. Son automáticamente llenados por el gestor de peticiones.
 
 <details><summary>Historia</summary>
 
