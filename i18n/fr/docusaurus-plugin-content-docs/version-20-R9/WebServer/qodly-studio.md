@@ -321,7 +321,7 @@ In default mode when any page is rendered, or in "force login" mode when a page 
 
 La configuration de schéma d'URL de Qodly Studio (HTTP et HTTPS) influe sur le nombre de licences qui sont prises lors du rendu des pages Qodly. Avec une configuration appropriée, vous pouvez éviter la consommation inutile de licences.
 
-Comme expliqué dans la section [configuration](#configuration), le serveur Web WebAdmin fournit un accès sécurisé à Qodly Studio. D'autre part, le [moteur de rendu](#enabling-rendering) communique avec le serveur web 4D de la base de données en utilisant des requêtes REST. En tant que tel, il se comporte comme un client 4D conventionnel.
+Comme expliqué dans la section [configuration](#configuration), le serveur Web WebAdmin fournit un accès sécurisé à Qodly Studio. En tant que tel, il se comporte comme un client 4D conventionnel. D'autre part, le [moteur de rendu](#enabling-rendering) communique avec le serveur web 4D de la base de données en utilisant des requêtes REST.
 
 Si vous exécutez le moteur de rendu depuis Qodly Studio et que ces deux serveurs Web ne sont pas accessibles via le même schéma d'URL (HTTP ou HTTPS), cela peut entraîner un décompte de licence incorrect.
 
