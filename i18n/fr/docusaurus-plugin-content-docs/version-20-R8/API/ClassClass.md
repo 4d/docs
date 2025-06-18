@@ -99,7 +99,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-Sommaire Si la classe singleton n'a jamais été instanciée au préalable, cette propriété appelle le constructeur de la classe sans paramètres et crée l'instance. Sinon, elle renvoie l'instance singleton existante.
+Sommaire Sommaire Si la classe singleton n'a jamais été instanciée au préalable, cette propriété appelle le constructeur de la classe sans paramètres et crée l'instance. Sinon, elle renvoie l'instance singleton existante.
 
 Si `cs.className` n'est pas une [classe singleton](../Concepts/classes.md#singleton-classes), `.me` est **undefined** par défaut.
 
@@ -145,10 +145,10 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #ClassClass.new().Params -->
 
-| Paramètres | Type                      |                             | Description                                                         |
-| ---------- | ------------------------- | :-------------------------: | ------------------------------------------------------------------- |
-| param      | any                       |              ->             | Paramètre(s) à passer à la fonction constructeur |
-| Résultat   | 4D.Object | <- | Nouvel objet de la classe                                           |
+| Paramètres | Type                     |                             | Description                                                         |
+| ---------- | ------------------------ | :-------------------------: | ------------------------------------------------------------------- |
+| param      | any                      |              ->             | Paramètre(s) à passer à la fonction constructeur |
+| Résultat   | 4D.Class | <- | Nouvel objet de la classe                                           |
 
 <!-- END REF -->
 
@@ -167,7 +167,7 @@ Vous pouvez passer un ou plusieurs paramètres optionnels *param*, qui seront pa
 
 #### Exemples
 
-Pour créer une nouvelle instance de la classe Person :
+Pour créer une nouvelle instance de la classe Person avec des paramètres :
 
 ```4d
 var $person : cs.Person  
@@ -175,7 +175,7 @@ $person:=cs.Person.new() //créer la nouvelle instance
 //$person contient les fonctions de la classe
 ```
 
-Pour créer une nouvelle instance de la classe Person avec des paramètres :
+Pour créer une nouvelle instance de la classe Person :
 
 ```4d
 //Class: Person.4dm
