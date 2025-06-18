@@ -532,7 +532,7 @@ Registering your personal access token in the Dependency manager is:
 To provide your GitHub access token, you can either:
 
 - click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
-- or, select **Add a GitHub personal access token...** in the Dependency manager menu at any moment.
+- ou selecione **Adicionar um token de acesso pessoal GitHub...** no menu do Gerenciador de dependências a qualquer momento.
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
