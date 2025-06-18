@@ -558,6 +558,6 @@ Une boîte de dialogue de confirmation s'affiche. Si la dépendance a été déc
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la dépendance supprimée est automatiquement modifié en "Déchargé après redémarrage". Elle sera libérée de la mémoire une fois que l'application aura redémarré.
+Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la dépendance supprimée est automatiquement modifié en "Déchargé après redémarrage". Elle sera chargée une fois que l'application aura redémarré.
 
 
