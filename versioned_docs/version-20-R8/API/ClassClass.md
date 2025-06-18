@@ -101,7 +101,7 @@ This property is **read-only**.
 
 </details>
 
-<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Object<!-- END REF -->
 
 #### Description
 
@@ -148,7 +148,7 @@ This property is **read-only**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Object<!-- END REF -->
 
 
 
@@ -156,7 +156,7 @@ This property is **read-only**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Class|<-|New object of the class|
+|Result|4D.Object|<-|New object of the class|
 <!-- END REF -->
 
 
