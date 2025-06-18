@@ -13,6 +13,12 @@ title: 入力
 
 データは、[オブジェクトメソッドやフォームメソッド](Concepts/methods.md)を使って管理することができます。
 
+:::note
+
+For security reasons, in [multi-style](./properties_Text.md#multi-style) input areas, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+
+:::
+
 ### JSON 例:
 
 ```4d
