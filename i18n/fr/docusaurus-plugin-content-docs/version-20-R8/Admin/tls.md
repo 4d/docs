@@ -65,7 +65,7 @@ Les certificats TLS gérés par 4D doivent être au format **PEM**. Si votre pre
 
 4D prend en charge les certificats dans les formats de cryptage standard suivants :
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_\\\\(cryptosystem\\\\))
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_\\\\\(cryptosystem\\\\\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibilité
