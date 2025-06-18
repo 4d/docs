@@ -19,7 +19,7 @@ Indique si le Web server accepte des connexions non sécurisées. Voir [Activer 
 
 #### Port HTTP
 
-Numéro de port IP (TCP) d'écoute pour HTTP. Voir [Port HTTP](../WebServer/webServerConfig.md#http-port).
+Numéro de port IP (TCP) d'écoute pour HTTP. Numéro de port IP (TCP) d'écoute pour HTTP.
 
 #### Adresse IP
 
@@ -45,7 +45,7 @@ Permet de définir l'emplacement par défaut des fichiers du site Web et indique
 
 #### Page d’accueil par défaut
 
-Cette option permet de désigner la page d’accueil par défaut pour le serveur Web. Voir [page d'accueil par défaut](../WebServer/webServerConfig.md#default-home-page).
+Cette option permet de désigner la page d’accueil par défaut pour le serveur Web. Cette option permet de désigner la page d’accueil par défaut pour le serveur Web.
 
 ## Options (I)
 
@@ -53,16 +53,16 @@ Cette option permet de désigner la page d’accueil par défaut pour le serveur
 
 #### Utiliser le cache Web de 4D
 
-Active le cache de la page web. Voir [Cache](../WebServer/webServerConfig.md#cache).
+Active le cache de la page web. Active le cache de la page web.
 
 #### Taille du cache des pages
 
-Définit la taille du cache. Voir [Cache](../WebServer/webServerConfig.md#cache).
+Définit la taille du cache. Active le cache de la page web.
 
 #### Vider le cache
 
 À tout moment, vous pouvez vider le cache des pages et des images qu'il contient (si, par exemple, vous avez modifié une page statique et que vous souhaitez la recharger dans le cache).
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). Le cache est alors immédiatement effacé.
+À tout moment, vous pouvez vider le cache des pages et des images qu'il contient (si, par exemple, vous avez modifié une page statique et que vous souhaitez la recharger dans le cache). Le cache est alors immédiatement effacé.
 
 > Vous pouvez également utiliser l'URL spécifique [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
@@ -90,7 +90,7 @@ Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémenta
 
 *Note de compatibilité :* Cette option est disponible uniquement dans les bases/projets créé(e) s avec une version 4D antérieure à 4D v18 R6.
 
-Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Voir [Keep Session](../WebServer/webServerConfig.md#keep-session).
+Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP.
 
 L'option [Réutilisation des contextes temporaires (4D en mode distant)](#reuse-temporary-contexts) est automatiquement cochée (et verrouillée).
 
@@ -98,7 +98,7 @@ L'option [Réutilisation des contextes temporaires (4D en mode distant)](#reuse-
 
 Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
-Cette option indique la limite strictement supérieure du nombre de process Web pouvant être simultanément ouverts sur le serveur. Voir [Process Web simultanés maxi](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Cette option indique la limite strictement supérieure du nombre de process Web pouvant être simultanément ouverts sur le serveur. Cette option indique la limite strictement supérieure du nombre de process Web pouvant être simultanément ouverts sur le serveur.
 
 #### Réutilisation des contextes temporaires
 
@@ -118,7 +118,7 @@ Active les process web préemptifs dans vos applications compilées. Lorsque l'o
 
 Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
-Permet de définir le délai maximum avant fermeture (timeout) des process Web inactifs sur le serveur. Voir [Durée de vie des process inactifs](../WebServer/webServerConfig.md#durée-de-vie-des-process-inactifs).
+Permet de définir le délai maximum avant fermeture (timeout) des process Web inactifs sur le serveur. Permet de définir le délai maximum avant fermeture (timeout) des process Web inactifs sur le serveur.
 
 ### Mots de passe Web
 
