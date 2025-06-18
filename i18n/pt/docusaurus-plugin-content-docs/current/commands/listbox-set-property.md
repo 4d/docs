@@ -20,11 +20,11 @@ title: LISTBOX SET PROPERTY
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->The **LISTBOX SET PROPERTY** command sets the *value* for the *property* of the list box or list box column specified using the *object* and *\** parameters.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). Se você não passar esse parâmetro, estará indicando que o parâmetro *object* é uma variável. In this case, you pass a variable reference instead of a string.
+Se você passar o parâmetro opcional *\**, estará indicando que o parâmetro *object* é um nome de objeto (string). Se você não passar esse parâmetro, estará indicando que o parâmetro *object* é uma variável. In this case, you pass a variable reference instead of a string.
 
 **Note:** If the list box or list box column specified using the *object* and *\** parameters does not exist, the command does nothing and no error is triggered.
 
-In the *property* and *value* parameters, you indicate, respectively, the property to set and its new value. Você pode usar as seguintes constantes encontradas no tema "*List Box*":
+Nos parâmetros *property* e *value*, você indica, respectivamente, a propriedade a ser definida e seu novo valor. Você pode usar as seguintes constantes encontradas no tema "*List Box*":
 
 | Parâmetros                     | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
