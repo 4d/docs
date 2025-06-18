@@ -5,6 +5,12 @@ title: Release Notes
 
 ## 4D 20 R10
 
+#### Points forts
+
+- Handling of [ORDA events on data](../ORDA/orda-events.md).
+
+## 4D 20 R10
+
 Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-20-R10/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R10.
 
 #### Points forts
