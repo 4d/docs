@@ -40,8 +40,8 @@ Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-forma
 
 Por defecto, la imagen añadida es:
 
-- Embedded behind the text
-- Displayed at the top left corner of the paper box
+- Incorporado detrás del texto
+- Aparece en la esquina superior izquierda de la papelera
 - Mostrar en todas las páginas
 
 The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).

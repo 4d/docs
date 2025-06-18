@@ -224,7 +224,7 @@ Você declara um componente armazenado no GitHub no arquivo [**dependencies.json
 
 #### Tags e versões
 
-When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
+Quando uma versão é criada no GitHub, ela é associada a uma **tag** e uma **version**. The Dependency manager uses these information to handle automatic availability of components.
 
 - **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. **Etiquetas** são textos que fazem referência exclusiva a uma versão. In the [**dependencies.json** file](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Por exemplo :
 
@@ -346,7 +346,7 @@ Estão disponíveis as seguintes etiquetas de status:
 - **Unloaded after restart**: The dependency reference has just been removed [using the interface](#removing-a-dependency), it will be unloaded once the application restarts.
 - **Update available \<version\>**: A new version of the GitHub dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
 - **Refreshed after restart**: The [component version configuration](#defining-a-github-dependency-version-range) of the GitHub dependency has been modified, it will be adjusted the next startup.
-- **Recent update**: A new version of the GitHub dependency has been loaded at startup.
+- **Atualização recente**: uma nova versão da dependência do GitHub foi carregada na inicialização.
 
 A tooltip is displayed when you hover over the dependency line, provding additional information about the status:
 
@@ -386,7 +386,7 @@ Component icon and location logo provide additional information:
 
 ### Adding a local dependency
 
-To add a local dependency, click on the **+** button in the footer area of the panel. A caixa de diálogo abaixo é mostrada:
+Para adicionar uma dependência local, clique no botão **+** na área de rodapé do painel. A caixa de diálogo abaixo é mostrada:
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 

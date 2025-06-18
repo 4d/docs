@@ -59,7 +59,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
+A solicitação é recebida no servidor como *$request*, uma instância de objeto da classe `4D.IncomingMessage`.
 
 Aqui está a resposta:
 
@@ -294,7 +294,7 @@ A propriedade `.urlQuery` contém <!-- REF #IncomingMessageClass.urlQuery.Summar
 
 A propriedade `.urlQuery` é somente leitura.
 
-Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
+Os parâmetros podem ser passados no URL das solicitações **diretamente** ou **como conteúdo JSON**.
 
 #### Direct parameters
 

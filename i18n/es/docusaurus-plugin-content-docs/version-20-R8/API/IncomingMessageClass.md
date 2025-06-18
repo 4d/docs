@@ -7,7 +7,7 @@ La clase `4D.IncomingMessage` le permite manejar el objeto recibido por un [**HT
 
 El gestor de peticiones HTTP puede devolver cualquier valor (o nada). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
 
-All properties of this class are read-only. They are automatically filled by the request handler.
+All properties of this class are read-only. Son automáticamente llenados por el gestor de peticiones.
 
 <details><summary>Historia</summary>
 
@@ -302,7 +302,7 @@ Example: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
 
 In this case, parameters are received as stringified values in the `urlQuery` property: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
 
-#### JSON contents parameters
+#### Parámetros contenido JSON
 
 Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoman": true,"id": 3}]'`.
 

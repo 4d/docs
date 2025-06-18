@@ -20,7 +20,7 @@ title: LISTBOX Get property
 
 <!--REF #_command_.LISTBOX Get property.Summary-->The **LISTBOX Get property** command returns the value of the *property* of the list box or column specified using the *object* and *\** parameters.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
+If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). Se você não passar esse parâmetro, estará indicando que o parâmetro *object* é uma variável. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
 
 **Note:** If the list box or column specified using the *object* and *\** parameters does not exist, the **LISTBOX Get property** command returns -1 for numeric properties, or an empty string.
 

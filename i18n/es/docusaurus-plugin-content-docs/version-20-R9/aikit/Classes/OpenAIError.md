@@ -31,8 +31,8 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 
 | Propiedad | Tipo    | Descripción                                                         |
 | --------- | ------- | ------------------------------------------------------------------- |
-| `code`    | Variant | The code of error returned by the API.              |
-| `tipo`    | Text    | The type of error returned by the API.              |
+| `code`    | Variant | El código de error devuelto por la API.             |
+| `tipo`    | Text    | El tipo de error devuelto por la API.               |
 | `param`   | Text    | The parameter that caused the error, if applicable. |
 
 ### Información sobre el código de estado HTTP
@@ -44,5 +44,5 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 | `isPermissionDeniedError`    | Boolean | Indicates ∏if the error is a 403 Permission Denied error.        |
 | `isNotFoundError`            | Boolean | Indicates if the error is a 404 Not Found error.                 |
 | `isUnprocessableEntityError` | Boolean | Indicates if the error is a 422 Unprocessable Entity error.      |
-| `isRateLimitError`           | Boolean | Indicates if the error is a 429 Rate Limit error.                |
+| `isRateLimitError`           | Boolean | Indica si el error es un error de límite de velocidad 429.       |
 | `isInternalServerError`      | Boolean | Indicates if the error is a 500 or higher Internal Server error. |

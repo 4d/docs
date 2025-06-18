@@ -42,11 +42,11 @@ When you use an object with a formula *name*, this name is displayed in the docu
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used:
 
-| Constante  | Tipo    | Valor | Comentario                                  |
-| ---------- | ------- | ----- | ------------------------------------------- |
-| wk append  | Integer | 2     | Insertar el contenido al final del objetivo |
-| wk prepend | Integer | 1     | Insert contents at beginning of target      |
-| wk replace | Integer | 0     | Replace target contents                     |
+| Constante  | Tipo    | Valor | Comentario                                      |
+| ---------- | ------- | ----- | ----------------------------------------------- |
+| wk append  | Integer | 2     | Insertar el contenido al final del objetivo     |
+| wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
+| wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
 - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted *formula* is included in the resulting range:
 

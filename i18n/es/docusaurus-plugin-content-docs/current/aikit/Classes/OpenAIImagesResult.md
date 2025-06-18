@@ -24,7 +24,7 @@ title: OpenAIImagesResult
 
 | Parámetros | Tipo                      | Descripción                                                          |
 | ---------- | ------------------------- | -------------------------------------------------------------------- |
-| *folder*   | 4D.Folder | The folder where images will be saved.               |
+| *folder*   | 4D.Folder | La carpeta donde se guardarán las imágenes.          |
 | *prefix*   | Text                      | The prefix for the saved image file names.           |
 | Resultado  | Boolean                   | Returns `True` if the images are successfully saved. |
 

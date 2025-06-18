@@ -13,4 +13,4 @@ https://platform.openai.com/docs/api-reference/moderations/object#moderations/ob
 | ---------------------- | ------- | ------------------------------------------------------------------------ |
 | `categories`           | Object  | Contains categories associated with the moderation item. |
 | `category_score`       | Object  | Contiene puntuaciones para cada categoría.               |
-| `flagged`              | Boolean | Indicates whether the moderation item is flagged.        |
+| `flagged`              | Boolean | Indica si el elemento de moderación está marcado.        |

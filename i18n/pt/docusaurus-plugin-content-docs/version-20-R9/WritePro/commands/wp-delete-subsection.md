@@ -37,7 +37,7 @@ Deleting a left page or right page subsection will automatically delete the oppo
 
 :::
 
-If the *subSectionType* does not exist, the command does nothing (no error is generated).
+Se o *subSectionType* não existir, o comando não faz nada (nenhum erro é gerado).
 
 :::note
 

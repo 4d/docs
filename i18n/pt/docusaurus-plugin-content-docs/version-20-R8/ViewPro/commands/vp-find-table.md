@@ -28,7 +28,7 @@ O comando `VP Find table` <!-- REF #_method_.VP Find table.Summary -->retorna o 
 
 Em *rangeObj*, passar um objeto de intervalo de células. Se as células designadas não pertencerem a uma tabela, o comando retornará uma string vazia.
 
-If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+Se *rangeObj* não for um intervalo de células ou contiver vários intervalos, será usada a primeira célula do primeiro intervalo.
 
 ## Exemplo
 
