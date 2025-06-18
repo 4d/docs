@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retorna o objeto de servidor Web padrão ou o objeto de servidor Web definido por meio do parâmetro *option*<!-- END REF -->.
 
-By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
+By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. Para designar o servidor Web a ser retornado, você pode passar uma das seguintes constantes no parâmetro *option*:
 
 | Parâmetros                                   | Valor | Comentário                                                                     |
 | -------------------------------------------- | ----- | ------------------------------------------------------------------------------ |
