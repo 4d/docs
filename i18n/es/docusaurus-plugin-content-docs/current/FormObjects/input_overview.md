@@ -13,6 +13,12 @@ Además, las entradas pueden ser [editables o no editables](properties_Entry.md#
 
 Puede gestionar los datos con los [métodos](Concepts/methods.md) objeto o formulario.
 
+:::note
+
+For security reasons, in [multi-style](./properties_Text.md#multi-style) input areas, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+
+:::
+
 ### Ejemplo JSON:
 
 ```4d
