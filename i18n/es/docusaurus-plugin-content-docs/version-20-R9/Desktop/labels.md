@@ -41,7 +41,7 @@ The Label page contains several areas with settings for designing and formatting
 
 ### Lista de campos
 
-Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. The fields in the related table are indented. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
+Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. Los campos de la tabla relacionada están indentados. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
 
 :::note Notas
 
