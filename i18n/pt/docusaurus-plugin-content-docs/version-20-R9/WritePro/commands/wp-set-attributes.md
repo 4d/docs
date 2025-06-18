@@ -56,13 +56,13 @@ Se executar o seguinte código:
  WP SET ATTRIBUTES($range;wk border color;"blue";wk border color bottom;"#00FA9A";wk border color right;"#00FA9A")
 ```
 
-You get the following result:
+Você recebeu o seguinte resultado:
 
 ![](../../assets/en/WritePro/commands/pict2643642.en.png)
 
 ## Exemplo 2
 
-This example illustrates the use of wk inside and wk outside constants:
+Você recebeu o seguinte resultado:
 
 ```4d
  $wpRange:=WP Get selection(writeProdoc)
@@ -71,13 +71,13 @@ This example illustrates the use of wk inside and wk outside constants:
  WP SET ATTRIBUTES($wpRange;wk border color+wk outside;"#00FA9A")
 ```
 
-Assuming all of the contents were selected, the result is:
+Supondo que todos os conteúdos foram selecionados, o resultado é:
 
 ![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
 ## Exemplo 3
 
-You want to set a background image for the document:
+Se quiser definir uma imagem de fundo para o documento:
 
 ```4d
  var WParea : Object
@@ -92,7 +92,7 @@ O resultado é:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
-You want to set a background image that covers the whole printable area. All attributes are passed using a single object:
+Se quiser definir uma imagem de fundo que cubra toda a área de impressão. Todos os atributos são passados usando um único objeto:
 
 ```4d
  var WParea : Object
@@ -114,13 +114,13 @@ O resultado é:
 
 :::note
 
-The paper box value is only applicable to documents and sections.
+O valor da caixa de papel só é aplicável a documentos e seções.
 
 :::
 
 ## Exemplo
 
-You want to set tabs at varying intervals and designate a character as the leading character for the last tab:
+Se quiser definir abas em intervalos variados e designar um caractere como o caractere principal na última aba:
 
 ```4d
  $tab1:=New object()

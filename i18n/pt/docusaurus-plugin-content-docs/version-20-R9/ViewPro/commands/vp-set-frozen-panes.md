@@ -26,7 +26,7 @@ The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Definindo o valor de qualquer uma das colunas ou das propriedades da linha igual a zero resets (descongelados) a propriedade. Se uma propriedade for definida para menos de zero, o comando não fará nada. Pode passar:
+Você pode passar um objeto definindo as colunas e linhas para congelar no parâmetro *paneObj*. Definindo o valor de qualquer uma das colunas ou das propriedades da linha igual a zero resets (descongelados) a propriedade. Se uma propriedade for definida para menos de zero, o comando não fará nada. Pode passar:
 
 | Propriedade         | Tipo    | Descrição                                                |
 | ------------------- | ------- | -------------------------------------------------------- |

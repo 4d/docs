@@ -5,16 +5,16 @@ title: OpenAIChatCompletionsResult
 
 # OpenAIChatCompletionsResult
 
-## Inherits
+## Hérite de
 
 - [OpenAIResult](OpenAIResult.md)
 
-## Computed properties
+## Propriétés calculées
 
-| Propriété | Type         | Description                                                                                       |
-| --------- | ------------ | ------------------------------------------------------------------------------------------------- |
-| `choices` | Collection   | Returns a collection of [OpenAIChoice](OpenAIChoice.md) from the OpenAI response. |
-| `choice`  | OpenAIChoice | Returns the first [OpenAIChoice](OpenAIChoice.md) from the choices collection.    |
+| Propriété | Type         | Description                                                                                     |
+| --------- | ------------ | ----------------------------------------------------------------------------------------------- |
+| `choices` | Collection   | Renvoie une collection de [OpenAIChoice](OpenAIChoice.md) de la réponse OpenAI. |
+| `choice`  | OpenAIChoice | Renvoie le premier [OpenAIChoice](OpenAIChoice.md) de la collection de choix.   |
 
 ## Voir également
 

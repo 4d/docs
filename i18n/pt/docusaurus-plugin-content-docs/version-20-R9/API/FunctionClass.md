@@ -124,7 +124,7 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 A função `.apply()` <!-- REF #FunctionClass.apply().Summary -->executa o objeto `formula` ao qual ele é aplicado e retorna o valor resultante<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
+No parâmetro *thisObj* pode passar uma referência ao objeto a ser usada como `This` na fórmula.
 
 Também pode passar uma coleção a ser usada como parâmetros $1...$n na fórmula usando o parâmetro opcional *formulaParams*.
 
@@ -184,7 +184,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros s�
 
 A função `.call()` <!-- REF #FunctionClass.call().Summary -->executa o objeto `formula` ao qual ele está aplicado e retorna o valor resultante<!-- END REF -->. The formula object can be created using the `Formula` or `Formula from string` commands.
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the formula.
+No parâmetro *thisObj* pode passar uma referência ao objeto a ser usada como `This` na fórmula.
 
 Você também pode passar valores para serem usados como parâmetros *$1...$n* na fórmula usando os parâmetros *params* opcionais.
 

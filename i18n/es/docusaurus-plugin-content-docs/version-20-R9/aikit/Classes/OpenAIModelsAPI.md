@@ -21,7 +21,7 @@ https://platform.openai.com/docs/api-reference/models
 | ------------ | ----------------------------------------- | -------------------------------------------------------- |
 | *model*      | Text                                      | The identifier of the model to retrieve. |
 | *parámetros* | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.   |
-| Resultado    | [OpenAIModelResult](OpenAIModelResult.md) | The model result                                         |
+| Resultado    | [OpenAIModelResult](OpenAIModelResult.md) | El resultado del modelo                                  |
 
 Retrieves a model instance to provide basic information.
 

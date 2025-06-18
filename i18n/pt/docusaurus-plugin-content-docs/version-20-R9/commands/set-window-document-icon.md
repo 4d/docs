@@ -40,7 +40,7 @@ No caso de uma aplicação MDI no Windows, você pode passar `-1` no *winRef* pa
 In this example, we want to create four windows:
 
 1. Use the application icon on Windows and no icon on macOS (default state when no *image* or *file* is used).
-2. Use a "user" icon.
+2. Use um ícone "user".
 3. Associate a document with the window (this uses its file type icon).
 4. Customize the icon associated with the document.
 

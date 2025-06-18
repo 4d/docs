@@ -141,7 +141,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 > Las funciones no ocultas al interior de una clase oculta aparecen como sugerencias cuando se utiliza completar código con una clase que [hereda](../Concepts/classes.md#inheritance) de ella. Por ejemplo, si un componente tiene una clase `Teacher` que hereda una clase `_Person`, la finalización del código para `Teacher` sugiere funciones no ocultas de `_Person`.
 
-## Editing components from the host
+## Edición de componentes desde el host
 
 To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
 
@@ -381,7 +381,7 @@ Este archivo no es obligatorio pero es necesario para construir componentes [not
 
 Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#loading-components) en todas las plataformas.
 
-The folling keys can be defined:
+Se pueden definir las siguientes teclas:
 
 | key                                                        | description                                                                                                                                                                                      |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

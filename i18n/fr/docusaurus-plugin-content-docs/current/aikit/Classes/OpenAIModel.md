@@ -5,15 +5,15 @@ title: OpenAIModel
 
 # OpenAIModel
 
-A model description.
+Une description du modèle.
 
 https://platform.openai.com/docs/api-reference/models/object
 
 ## Propriétés
 
-| Propriété  | Type    | Description                                                                                |
-| ---------- | ------- | ------------------------------------------------------------------------------------------ |
-| `id`       | Text    | Unique identifier for the model                                                            |
-| `created`  | Integer | Timestamp indicating when the model was created                                            |
-| `object`   | Text    | Type of object (e.g., model)            |
-| `owned_by` | Text    | Identifier for the owner (e.g., system) |
+| Propriété  | Type    | Description                                                           |
+| ---------- | ------- | --------------------------------------------------------------------- |
+| `id`       | Text    | Identifiant unique du modèle                                          |
+| `created`  | Integer | Horodatage indiquant quand le modèle a été créé                       |
+| `object`   | Text    | Type d'objet (par exemple, modèle)                 |
+| `owned_by` | Text    | Identifiant du propriétaire (par exemple, système) |

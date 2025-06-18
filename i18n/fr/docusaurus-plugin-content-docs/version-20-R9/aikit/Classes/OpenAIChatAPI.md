@@ -5,7 +5,7 @@ title: OpenAIChatAPI
 
 # OpenAIChatAPI
 
-The `OpenAIChatAPI` class provides an interface to interact with OpenAI's chat based functionality, leveraging completion and vision capabilities.
+La classe `OpenAIChatAPI` fournit une interface permettant d'interagir avec la fonctionnalité de chat de l'OpenAI, en tirant parti des capacités de complétion et de vision.
 
 ## Propriétés
 

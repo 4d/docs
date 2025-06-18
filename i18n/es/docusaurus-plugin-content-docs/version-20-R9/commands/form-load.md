@@ -25,7 +25,7 @@ En el parámetro *form*, puede pasar:
 
 - el nombre de un formulario, o
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use, or
-- an object containing a description of the form.
+- un objeto que contiene la descripción del formulario.
 
 When the command is executed from a component, it loads the component forms by default. If you pass the *\** parameter, the method loads the host database forms.
 
@@ -40,7 +40,7 @@ Para obtener información detallada sobre el objeto de datos del formulario, con
 
 Para poder ejecutar este comando, debe abrirse previamente un trabajo de impresión utilizando el comando [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md). El comando [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) hace una llamada implícita al comando [FORM UNLOAD](../commands-legacy/form-unload.md), por lo que en este contexto es necesario ejecutar **FORM LOAD**. Once loaded, this *form* becomes the current printing form. All the object management commands, and in particular the [Print object](../commands-legacy/print-object.md) command, work with this form.
 
-If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. It is up to the developer to manage page breaks.
+If a printing form has already been loaded beforehand (via a previous call to the **FORM LOAD** command), it is closed and replaced by *form*. You can open and close several project forms in the same print session. Changing the printing form via the **FORM LOAD** command does not generate page breaks. Corresponde al desarrollador gestionar los saltos de página.
 
 Only the [`On Load` form event](../Events/onLoad.md) is executed during the opening of the project form, as well as any object methods of the form. Otros eventos de formulario son ignorados. The [`On Unload` form event](../Events/onUnload.md) is executed at the end of printing.
 
@@ -115,7 +115,7 @@ el resultado mostrado es:
 
 ## Ejemplo 5
 
-You want to print a form containing a list box. During the *on load* event, you want the contents of the list box to be modified.
+Desea imprimir un formulario que contiene un list box. During the *on load* event, you want the contents of the list box to be modified.
 
 1\. En el método de impresión, usted escribe:
 

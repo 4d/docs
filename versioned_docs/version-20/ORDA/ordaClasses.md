@@ -5,7 +5,7 @@ title: Data Model Classes
 
 
 
-ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.
+ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.
 
 For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. It would be as simple as calling:
 

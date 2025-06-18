@@ -36,7 +36,7 @@ This file contains all listened URL patterns, the handled verbs, and the code to
 
 At runtime, the first pattern matching the URL is executed, the others are ignored.
 
-Here is an example of a *HTTPHandlers.json* file contents:
+Aqui está um exemplo do conteúdo de um arquivo *HTTPHandlers.json*:
 
 ```json
 
@@ -70,7 +70,7 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 ### URL patterns
 
-URL patterns can be given as **prefixes** or using **regular expressions**.
+Os padrões de URL podem ser fornecidos como **prefixos** ou usando **expressões regulares**.
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
    Ex: `"regexPattern" : "/docs/**/index.html"`
@@ -113,7 +113,7 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 ```
 
-#### Forbidden patterns
+#### Padrões proibidos
 
 URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
 
@@ -122,7 +122,7 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 - `/$lib/renderer`
 - `/$shared`
 
-### Class and method
+### Classe e método
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
@@ -141,7 +141,7 @@ Ex: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. All names can be used.
+No control is done on verb names. Todos os nomes podem ser usados.
 
 :::
 

@@ -398,7 +398,7 @@ The chat box uses the Markdown language to format text. Basic styles such as bol
 
 #### Área de chat
 
-The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
+The Chat area displays the whole interaction between you and the AI. Puede desplazarse y seleccionar la parte que desee.
 
 To empty this area, you can click on the Erase button of the History area (resets the window and all interactions).
 

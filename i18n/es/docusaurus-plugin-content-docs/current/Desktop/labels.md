@@ -9,8 +9,8 @@ title: Etiquetas
 - Create and insert decorative items in label templates,
 - Specify the font, font size, and style to be used for the labels,
 - Specify the number of labels across and down on each page,
-- Specify how many labels to print per record,
-- Specify the label page margins,
+- Especifique cuántas etiquetas imprimir por registro,
+- Especifique los márgenes de la página de etiquetas,
 - Designate a method to execute when printing each label or record,
 - Create a preview and print the labels.
 
@@ -59,7 +59,7 @@ The search area allows you to narrow the list of fields displayed to those conta
 You use this area to design your label zone by placing and positioning all the items that you want to include in your label. El rectángulo blanco representa una sola etiqueta (su tamaño se configura en la página [Diseño](#layout-page)).
 
 - Puede arrastrar los campos a la etiqueta.
-- You can also concatenate two fields by dropping the second field onto the first one. They are automatically separated by a space.<br/>
+- You can also concatenate two fields by dropping the second field onto the first one. Se separan automáticamente con un espacio.<br/>
   ![](../assets/en/Desktop/label-concat.png)<br/>
   If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
 - You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
@@ -104,7 +104,7 @@ The left-hand side of the tool bar includes commands for selecting and inserting
 | ![](../assets/en/Desktop/label-tool2.png) | Creación de línea        |                                                                                                                                                                                                                    |
 | ![](../assets/en/Desktop/label-tool3.png) | Creación rectangular     | Para creación de rectángulo o rectángulo redondeado.                                                                                                                                               |
 | ![](../assets/en/Desktop/label-tool4.png) | Creación de círculo      |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool5.png) | Inserción de texto       | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                         |
+| ![](../assets/en/Desktop/label-tool5.png) | Inserción de texto       | Dibuja un rectángulo e introduce texto en su interior. You can edit any text area, including those containing field references, by double-clicking it.                             |
 | ![](../assets/en/Desktop/label-tool6.png) | Inserción de fórmula     | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
 
 There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
@@ -118,14 +118,14 @@ The right-hand side of the tool bar contains commands used to modify items of th
 
 | Icono                                      | Nombre de la herramienta  | Descripción                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------------------ | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno          | all color icons display the selected color                                                                                                                                                                                                                                                                                                                       |
+| ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno          | todos los iconos de color muestran el color seleccionado                                                                                                                                                                                                                                                                                                         |
 | ![](../assets/en/Desktop/label-tool8.png)  | Color de línea            |                                                                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Desktop/label-tool9.png)  | Peso lineal               |                                                                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Desktop/label-tool10.png) | Font menu                 | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
 | ![](../assets/en/Desktop/label-tool11.png) | Alineación y distribución | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
 | ![](../assets/en/Desktop/label-tool12.png) | Nivel de los objetos      | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
 
-## Layout Page
+## Página Diseño
 
 The Layout page contains controls for printing labels based on the requirements of your current print settings.
 
@@ -191,7 +191,7 @@ You can use dedicated table forms and project methods to print labels with calcu
 Then you can print your labels:
 ![](../assets/en/Desktop/label-example4.png)
 
-## Controlling available forms and methods
+## Control de los formularios y métodos disponibles
 
 The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros  | Tipo    |                             | Descripción                               |
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro |
-| breakType   | Integer | &#8594; | Type of break to insert                   |
+| breakType   | Integer | &#8594; | Tipo de ruptura a insertar                |
 | mode        | Integer | &#8594; | Modo de inserción                         |
 | rangeUpdate | Integer | &#8594; | Modo de actualización del rango           |
 | Resultado   | Object  | &#8592; | Rango de texto del caracter de ruptura    |
@@ -35,23 +35,23 @@ In *breakType*, pass one of the following constants from the *4D Write Pro Const
 | wk column break             | Integer | 3     | Column break: inserts a column break                                                                                            |
 | wk continuous section break | Integer | 5     | Defines a continuous section break (often used to change the number of columns without starting a new page). |
 | wk line break               | Integer | 0     | Salto de línea (en el mismo párrafo)                                                                                         |
-| wk page break               | Integer | 2     | Page break: defines a new page                                                                                                  |
-| wk paragraph break          | Integer | 4     | Paragraph break: defines a new paragraph                                                                                        |
+| wk page break               | Integer | 2     | Salto de página: define una nueva página                                                                                        |
+| wk paragraph break          | Integer | 4     | Salto de párrafo: define un nuevo párrafo                                                                                       |
 | wk section break            | Integer | 1     | Section break: defines a new section                                                                                            |
 
 In the *mode* parameter, pass a constant to indicate the insertion mode to be used for the break in the destination *targetObj*:
 
-| Constante  | Tipo    | Valor | Comentario                             |
-| ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Integer | 2     | Insert contents at end of target       |
-| wk prepend | Integer | 1     | Insert contents at beginning of target |
-| wk replace | Integer | 0     | Replace target contents                |
+| Constante  | Tipo    | Valor | Comentario                                      |
+| ---------- | ------- | ----- | ----------------------------------------------- |
+| wk append  | Integer | 2     | Insertar el contenido al final del objetivo     |
+| wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
+| wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
 - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
 | Constante             | Tipo    | Valor | Comentario                                                                            |
 | --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                                       |
+| wk exclude from range | Integer | 1     | Contenido insertado no incluido en el rango actualizado                               |
 | wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.

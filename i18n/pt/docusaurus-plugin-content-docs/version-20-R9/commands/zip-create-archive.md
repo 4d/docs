@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+O comando `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary --> cria um objeto de arquivo ZIP comprimido e retorna o status da operação<!-- END REF -->.
 
 You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parameter:
 
@@ -124,7 +124,7 @@ Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:
 
 ## Exemplo
 
-You want to pass a collection of folders and files to compress to the *zipStructure* object:
+Pode passar uma coleção de pastas e arquivos para compactar ao objeto *zipStructure*:
 
 ```4d
  var $destination : 4D.File

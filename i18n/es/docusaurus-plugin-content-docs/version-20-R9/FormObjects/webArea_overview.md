@@ -49,7 +49,7 @@ $4d.HelloWorld();
 
 > **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
 
-### Controlling $4d Access
+### Controlar el acceso a $4d
 
 Con [`WA SET CONTEXT`](../commands/wa-set-context.md), los desarrolladores pueden controlar lo que puede estar disponible a través de `$4d` desde un área Web. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 

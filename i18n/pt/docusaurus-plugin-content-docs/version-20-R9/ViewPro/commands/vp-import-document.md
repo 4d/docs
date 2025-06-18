@@ -25,7 +25,7 @@ title: VP IMPORT DOCUMENT
 
 ## Descrição
 
-The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
+O comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->importa e exibe o documento designado por *filePath* na área 4D View Pro *vpAreaName*<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -40,7 +40,7 @@ If the document extension is not a recognized extension, such as `.4vp` or `.xls
 
 An error is returned if the `filePath` parameter is invalid, or if the file is missing or malformed.
 
-The optional *paramObj* parameter allows you to define properties for the imported document:
+O parâmetro opcional *paramObj* permite definir as propriedades do documento importado:
 
 | Parâmetro    |                           | Tipo                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------ | ------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -68,7 +68,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 |              | calcOnDemand              | boolean                      | Whether to calculate formulas only when they are demanded, default false.                                                                                                                                                                                                                                                                                                                                                                          |
 |              | includeUnusedStyles       | boolean                      | Whether to include the unused name style when converting excel xml to the json, default true.                                                                                                                                                                                                                                                                                                                                                      |
 |              | senha                     | text                         | The password to open the workbook.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|              | openMode                  | text                         | The open mode of normal, lazy and incremental. By default is normal.                                                                                                                                                                                                                                                                                                                                                               |
+|              | openMode                  | text                         | The open mode of normal, lazy and incremental. Por padrão, é normal.                                                                                                                                                                                                                                                                                                                                                               |
 
 :::note Notas
 

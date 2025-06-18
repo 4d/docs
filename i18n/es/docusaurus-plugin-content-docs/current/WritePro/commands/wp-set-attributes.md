@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parámetros  | Tipo                                            |                             | Descripción                                                             |
 | ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
 | targetObj   | Object                                          | &#8594; | Rango o elemento o documento 4D Write Pro                               |
-| attribName  | Text                                            | &#8594; | Name of attribute to set                                                |
+| attribName  | Text                                            | &#8594; | Nombre del atributo a definir                                           |
 | attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Nuevo valor de atributo                                                 |
 | attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
 
@@ -37,7 +37,7 @@ For a comprehensive list of attributes to pass, as well as their scope and respe
 
 ## Ejemplo 1
 
-In this 4D Write Pro area, you selected a word:
+En esta área 4D Write Pro, ha seleccionado una palabra:
 
 ![](../../assets/en/WritePro/commands/pict2643639.en.png)
 

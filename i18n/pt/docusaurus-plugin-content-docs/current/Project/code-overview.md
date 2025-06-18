@@ -28,7 +28,7 @@ Para más información, consulte la sección [Clases](../Concepts/classes.md).
 
 ## Excluir os métodos ou as classes
 
-To delete an existing method or class, you can:
+Para eliminar um método ou classe existente, pode:
 
 - em seu disco, remova o arquivo *.4dm* da pasta "Sources",
 - in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.

@@ -31,7 +31,7 @@ In *rangeObj*, pass the cell range object where the values, formatting, and/or f
 
 In *dataObject*, pass the object that contains the cell data, formatting, and formulas to be pasted.
 
-In the optional *options* parameter, you can specify what to paste in the cell range. Valores possíveis:
+Na opção opcional *options*, você pode especificar o que colar no intervalo de células. Valores possíveis:
 
 |Constant|Description|
 \|---|---|---|

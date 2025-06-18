@@ -25,7 +25,7 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 
 | Parámetros | Tipo                                                          | Descripción                                                 |
 | ---------- | ------------------------------------------------------------- | ----------------------------------------------------------- |
-| *prompt*   | Text                                                          | The text prompt to send to OpenAI chat.     |
+| *prompt*   | Text                                                          | Texto a enviar al chat de OpenAI.           |
 | Resultado  | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | The completion result returned by the chat. |
 
 Sends a user prompt to the chat and returns the corresponding completion result.

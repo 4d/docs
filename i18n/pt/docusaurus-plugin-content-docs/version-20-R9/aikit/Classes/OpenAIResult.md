@@ -9,11 +9,11 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 
 ## Propriedades
 
-| Propriedade | Tipo                                                                                 | Descrição        |
-| ----------- | ------------------------------------------------------------------------------------ | ---------------- |
-| `request`   | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | The HTTP request |
+| Propriedade | Tipo                                                                                 | Descrição          |
+| ----------- | ------------------------------------------------------------------------------------ | ------------------ |
+| `request`   | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | A solicitação HTTP |
 
-## Computed properties
+## Propriedades calculadas
 
 | Propriedade  | Tipo       | Descrição                                                                                                                   |
 | ------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -36,7 +36,7 @@ The structure of the `rateLimit` object is as follows:
 | Campo               | Tipo    | Descrição                                        |
 | ------------------- | ------- | ------------------------------------------------ |
 | `limit.request`     | Integer | Number of allowed requests.      |
-| `limit.tokens`      | Integer | Number of allowed tokens.        |
+| `limit.tokens`      | Integer | Número de tokens permitidos.     |
 | `remaining.request` | Integer | Number of remaining requests.    |
 | `remaining.tokens`  | Integer | Number of remaining tokens.      |
 | `reset.request`     | String  | Time until request limit resets. |
@@ -48,7 +48,7 @@ The structure of the `rateLimit` object is as follows:
 
 Throws the first error in the `errors` collection. This function is useful for propagating errors up the call stack.
 
-## Inherited Classes
+## Classes herdadas
 
 Several classes inherit from `OpenAIResult` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIResult`:
 

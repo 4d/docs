@@ -11,15 +11,15 @@ title: OpenAIVisionHelper
 
 **prompt**(*prompt*: Test; *parameters* : OpenAIChatCompletionsParameters)
 
-| Paramètres   | Type                                                                  | Description                                                          |
-| ------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| *prompt*     | Text                                                                  | The text prompt to send to the OpenAI chat API.      |
-| *paramètres* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Optional parameters for the chat completion request. |
-| Résultat     | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | The result of the vision.                            |
+| Paramètres   | Type                                                                  | Description                                                                  |
+| ------------ | --------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| *prompt*     | Text                                                                  | Texte d'invite à envoyer au chat de l'OpenAI.                |
+| *paramètres* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Paramètres optionnels pour la requête de complétion du chat. |
+| Résultat     | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | Le résultat de la vision.                                    |
 
-Sends a prompt to the OpenAI chat API along with an associated image URL, and optionally accepts parameters for the chat completion.
+Envoie une invite à l'API de chat OpenAI avec une URL d'image associée, et accepte éventuellement les paramètres pour la complétion du chat.
 
-#### Example Usage
+#### Exemple d'utilisation
 
 ```4d
 var $helper:=$client.chat.vision.create("http://example.com/image.jpg")

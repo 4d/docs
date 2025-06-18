@@ -5,9 +5,9 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                             |
-| ------- | ----------------------------------------- |
-| 20 R2   | Support of .sjs documents |
+| Release | Modifications                                      |
+| ------- | -------------------------------------------------- |
+| 20 R2   | Prise en charge des documents .sjs |
 
 </details>
 

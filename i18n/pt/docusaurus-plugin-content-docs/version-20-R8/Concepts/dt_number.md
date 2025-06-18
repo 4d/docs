@@ -1,6 +1,6 @@
 ---
 id: number
-title: Number (Real, Integer)
+title: Número (Real, Inteiro)
 ---
 
 Número é um termo genérico que significa:
@@ -10,12 +10,12 @@ Número é um termo genérico que significa:
 
 :::info Compatibidade
 
-Usually when working with Integers, you handle *Long* values (4-byte Integer). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
+Normalmente, ao trabalhar com números inteiros, você lida com valores *Long* (números inteiros de 4 bytes). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
 
 - Campos do banco de dados tipo 'Integer',
 - Elementos de arrays declarados com [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
 
-These legacy data types are automatically converted in *Longs* when used in the 4D Language.
+Esses tipos de dados legados são automaticamente convertidos em *Longs* quando usados na linguagem 4D.
 
 :::
 

@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Params-->
 
-| Parámetros | Tipo |                             | Descripción                      |
-| ---------- | ---- | --------------------------- | -------------------------------- |
-| Resultado  | Text | &#8592; | Full pathname of closed log file |
+| Parámetros | Tipo |                             | Descripción                                   |
+| ---------- | ---- | --------------------------- | --------------------------------------------- |
+| Resultado  | Text | &#8592; | Ruta completa del archivo de registro cerrado |
 
 <!-- END REF-->
 
@@ -30,7 +30,7 @@ The file is renamed with the current backup numbers of the database and of the l
 
 :::warning
 
-A log file must always be related to a data file. Si llama a este comando justo después de una activación del archivo de registro (sin copia de seguridad) usando [`SELECT LOG FILE`](select-log-file.md) o la [caja de diálogo de parámetros](../Backup/settings.md#configuration), asegúrese de tener una copia coincidente de su archivo de datos, de lo contrario el archivo de registro no podría ser integrado.
+Un archivo de registro siempre debe estar relacionado con un archivo de datos. Si llama a este comando justo después de una activación del archivo de registro (sin copia de seguridad) usando [`SELECT LOG FILE`](select-log-file.md) o la [caja de diálogo de parámetros](../Backup/settings.md#configuration), asegúrese de tener una copia coincidente de su archivo de datos, de lo contrario el archivo de registro no podría ser integrado.
 
 :::
 

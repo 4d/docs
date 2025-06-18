@@ -566,7 +566,7 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de 
 
 The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
+The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
 All settings of [Web Server objects](../commands/web-server.md-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
 

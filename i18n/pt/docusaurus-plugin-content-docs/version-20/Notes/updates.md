@@ -29,9 +29,9 @@ Starting with nightly build **101734**, the Build application dialog box has a n
 
 :::
 
-- 4D 20.6 LTS is certified on Windows Server 2025
+- 4D 20.6 LTS é certificado no Windows Server 2025
 
-:::warning KNOWN ISSUE ON WINDOWS SERVER 2025
+:::warning PROBLEMA CONHECIDO NO WINDOWS SERVER 2025
 
 No Windows Server 2025, algumas opções personalizadas na nova caixa de diálogo de Impressão do Windows não estão disponíveis e ainda estão sob investigação. Uma correção estará disponível no próximo hotfix.
 

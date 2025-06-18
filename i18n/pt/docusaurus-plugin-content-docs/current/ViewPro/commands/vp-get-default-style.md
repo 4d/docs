@@ -35,7 +35,7 @@ Este código:
 $defaultStyle:=VP Get default style("myDoc")
 ```
 
-will return this information in the *$defaultStyle* object:
+devolverá esta informação no objeto *$defaultStyle*:
 
 ```4d
 {

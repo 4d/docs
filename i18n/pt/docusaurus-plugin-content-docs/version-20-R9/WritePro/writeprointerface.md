@@ -9,10 +9,10 @@ Um desenvolvedor 4D pode facilmente implementar essas paletas em sua aplicação
 
 La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual *Diseño 4D*.
 
-You will find below:
+Você encontrará abaixo:
 
 - the Table Wizard configuration documentation,
-- the integrated A.I. documentation.
+- a I.A. integrada. documentation.
 
 ## Assistente de tabelas
 
@@ -24,7 +24,7 @@ The Table Wizard comes with default templates and themes, which developers can c
 
 To implement the Table Wizard in your application, the developers are able to create and configure template files.
 
-### WP Table Wizard interface
+### Interface do assistente de tabela WP
 
 The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
 
@@ -299,7 +299,7 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 [4D Write Pro - Table Wizard (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
 
-## Integrated AI
+## IA Integrada
 
 You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application.
 
@@ -351,7 +351,7 @@ O botão **I.A.** é exibido:
 
 Click on the button to display the AI dialog box.
 
-### AI dialog box
+### Diálogo IA
 
 The 4D Write Pro AI dialog box allows a straightforward interaction between the chat area and the 4D Write Pro document.
 
@@ -398,7 +398,7 @@ The chat box uses the Markdown language to format text. Basic styles such as bol
 
 #### Área de chat
 
-The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
+The Chat area displays the whole interaction between you and the AI. Você pode rolar e selecionar a parte que desejar.
 
 To empty this area, you can click on the Erase button of the History area (resets the window and all interactions).
 

@@ -361,7 +361,7 @@ Les attributs de taille de papier sont utilisés pour spécifier les dimensions 
 
 - Si vous définissez le format du papier à l'aide de la propriété `kind`, vous pouvez utiliser l'une ou l'autre :
   - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - one of the formats returned by the [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md) command.
+  - un des formats retournés par la commande [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
     Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
 
 ### Graduation

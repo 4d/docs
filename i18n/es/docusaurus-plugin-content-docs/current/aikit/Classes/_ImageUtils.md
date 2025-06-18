@@ -31,7 +31,7 @@ Converts a base64 encoded string to a Blob object.
 | --------- | ---- | ------------------------------------------------ |
 | $base64   | Text | The base64 encoded image string. |
 
-**Returns**: Blob representing the decoded image.
+**Devuelve**: Blob que representa la imagen decodificada.
 
 ```4d
 var $blob:=cs._ImageUtils.me.base64ToBlob("iVBORw0KGgoAAAANSUhEUgAAAAUA...")

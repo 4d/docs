@@ -3,7 +3,7 @@ id: ordaClasses
 title: Classes de modelo de dados
 ---
 
-ORDA permite-lhe criar funções de classe de alto nível acima do modelo de dados. Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
+ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Isto permite-lhe escrever código orientado para o negócio e "publicá-lo" tal como uma API. Datastore, classes de dados, seleções de entidades e entidades estão todos disponíveis como objetos de classe que podem conter funções.
 
 Por exemplo, você poderia criar uma função `getNextWithHigherSalary()` na classe `EmployeeEntity` para retornar os funcionários com um salário maior do que o selecionado. Seria tão simples como chamar:
 
@@ -814,7 +814,7 @@ $status:=$remoteDS. Schools.registerNewStudent($student) // OK
 $id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
-## onHTTPGet keyword
+## Palavra clave onHTTPGet
 
 Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Tais funções podem retornar qualquer conteúdo da web, por exemplo, usando a classe [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md).
 

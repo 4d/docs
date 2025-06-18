@@ -19,7 +19,7 @@ title: VP SET DATE VALUE
 
 O comando <!-- REF #method_.VP SET VALUE.Summary --> atribui um valor de data para um intervalo de células designados<!-- END REF -->.
 
-Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
+Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
 O parâmetro *dateValue* especifica um valor de data a ser atribuído ao intervalo *rangeObj*.
 

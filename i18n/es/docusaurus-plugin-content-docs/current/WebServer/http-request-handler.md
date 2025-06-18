@@ -210,7 +210,7 @@ In this example, you must implement the following functions:
 
 - *handle function* in the *GeneralHandling* class
 - *manageAccount* en la clase *UsersHandling*
-- *handleInvoices* in the *FinancialHandling* class
+- *handleInvoices* en la clase *FinancialHandling*
 - *handleDocs* en la clase *DocsHandling*
 - *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
 

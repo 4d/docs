@@ -11,8 +11,8 @@ displayed_sidebar: docs
 
 | Parâmetro      | Tipo    |                             | Descrição                                                                          |
 | -------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
-| wpSection      | Object  | &#8594; | 4D Write Pro section                                                               |
-| subSectionType | Integer | &#8594; | Subsection type (wk first page, wk left page, or wk right page) |
+| wpSection      | Object  | &#8594; | Seção 4D Write Pro                                                                 |
+| subSectionType | Integer | &#8594; | Tipo de subseção (wk first page, wk left page ou wk right page) |
 | subSection     | Object  | &#8594; | Subseção 4D Write Pro                                                              |
 
 <!-- END REF-->
@@ -37,7 +37,7 @@ Deleting a left page or right page subsection will automatically delete the oppo
 
 :::
 
-If the *subSectionType* does not exist, the command does nothing (no error is generated).
+Se o *subSectionType* não existir, o comando não faz nada (nenhum erro é gerado).
 
 :::note
 
@@ -51,9 +51,9 @@ You want to delete the first page subsection of the first section:
 
 ```4d
  var $section;$subsection : Object
-  // get first section
+  // obter a primeira seção
  $section:=WP Get section(wpDoc;1)
-  // Delete the subsection
+  // Excluir a subseção
  WP DELETE SUBSECTION($section;wk first page)
 ```
 

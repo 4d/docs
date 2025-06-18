@@ -135,9 +135,9 @@ No entanto, essa propriedade tem uma função de digitação nos seguintes casos
 
 #### Gramática JSON
 
-| Nome               | Tipo de dados | Valores possíveis                                                                                                                                                                                                                                                                                                                    |
-| ------------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dataSourceTypeHint | string        | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
+| Nome               | Tipo de dados | Valores possíveis                                                                                                                                                                                                                                                                                                                     |
+| ------------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string        | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *list box array/seleção somente*: "integer", "object"</li> |
 
 #### Objectos suportados
 

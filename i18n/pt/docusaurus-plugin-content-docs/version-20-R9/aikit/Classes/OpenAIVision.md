@@ -18,7 +18,7 @@ Helper for vision stuff.
 | *imageURL* | Text                                        | The URL of the image to analyze.           |
 | Resultado  | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
-#### Example Usage
+#### Exemplo de uso
 
 ```4d
 var $helper:=$client.chat.vision.create("http://example.com/image.jpg")
@@ -31,10 +31,10 @@ var $result:=$helper.prompt("Could you describe it?")
 
 | Parâmetro   | Tipo                                        | Descrição                                                  |
 | ----------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageFile* | 4D. File                    | The image file to analyze.                 |
+| *imageFile* | 4D. File                    | O arquivo imagem a ser analisado.          |
 | Resultado   | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
-#### Example Usage
+#### Exemplo de uso
 
 ```4d
 var $helper:=$client.chat.vision.fromFile(Folder(fk resource foldres).file("image.png"))
@@ -47,10 +47,10 @@ var $result:=$helper.prompt("Could you describe it?")
 
 | Parâmetro | Tipo                                        | Descrição                                                  |
 | --------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imagem*  | Imagem                                      | The image to analyze.                      |
+| *imagem*  | Imagem                                      | A imagem a analisar.                       |
 | Resultado | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
 
-#### Example Usage
+#### Exemplo de uso
 
 ```4d
 var $helper:=$client.chat.vision.fromPicture($image)

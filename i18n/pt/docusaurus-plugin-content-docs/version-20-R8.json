@@ -184,19 +184,19 @@
     "description": "The generated-index page title for category Design Object Access in sidebar docs"
   },
   "sidebar.docs.category.Drag and Drop": {
-    "message": "Drag and Drop",
+    "message": "Arrastar e Soltar",
     "description": "The label for category Drag and Drop in sidebar docs"
   },
   "sidebar.docs.category.Drag and Drop.link.generated-index.title": {
-    "message": "Drag and Drop",
+    "message": "Arrastar e Soltar",
     "description": "The generated-index page title for category Drag and Drop in sidebar docs"
   },
   "sidebar.docs.category.Entry Control": {
-    "message": "Entry Control",
+    "message": "Controle de entrada",
     "description": "The label for category Entry Control in sidebar docs"
   },
   "sidebar.docs.category.Entry Control.link.generated-index.title": {
-    "message": "Entry Control",
+    "message": "Controle de entrada",
     "description": "The generated-index page title for category Entry Control in sidebar docs"
   },
   "sidebar.docs.category.File and Folder": {

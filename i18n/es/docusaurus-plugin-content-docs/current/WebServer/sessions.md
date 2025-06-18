@@ -217,7 +217,7 @@ The basic sequence of an OTP session token use in a 4D web application is the fo
 4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
 5. The request callback is processed in your application.
 
-By definition, an OTP token can only be used once. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
+Por definición, un token OTP sólo puede utilizarse una vez. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
 
 ### Procesando el OTP en la retrollamada
 
@@ -248,7 +248,7 @@ En ambos casos, necesita extraer el token del parámetro personalizado y llamar 
 
 #### Procesando un OTP inválido
 
-The OTP token is considered invalid if:
+El token OTP se considera inválido si:
 
 - el token de sesión ya ha sido utilizado,
 - el token de sesión ha caducado,
@@ -295,7 +295,7 @@ Note right of 4DServer: e.g. https://acme.com/my4DApp/completeOperation?$4DSID=2
 
 ```
 
-The 4D HTTP request handler definition:
+La definición del gestor de peticiones HTTP de 4D:
 
 ```json
 [
@@ -317,7 +317,7 @@ shared singleton Class constructor()
     $session:=Session
 ```
 
-### Scenario with `restore` function
+### Escenario con función `restore`
 
 The scenario using a custom parameter is illustrated in the following diagram:
 
@@ -354,7 +354,7 @@ sequenceDiagram
 
 ```
 
-The 4D HTTP request handler definition:
+La definición del gestor de peticiones HTTP de 4D:
 
 ```json
 [
@@ -376,7 +376,7 @@ shared singleton Class constructor()
     Session.restore($req.urlQuery.state)
 ```
 
-### Example of email validation with $4DSID
+### Ejemplo de validación de correo electrónico con $4DSID
 
 1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
 
@@ -408,7 +408,7 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 
 ```
 
-2. The user is sent this URL as a link in an email. El prefijo URL `/validateEmail` es manejado por un [gestor de solicitudes HTTP personalizadas](./http-request-handler.md):
+2. Se envía al usuario esta URL como enlace en un correo electrónico. El prefijo URL `/validateEmail` es manejado por un [gestor de solicitudes HTTP personalizadas](./http-request-handler.md):
 
 ```json
 [
@@ -460,7 +460,7 @@ A new user is created, and some information is stored in the session, especially
 
 ### Contextos soportados
 
-- Both HTTP and HTTPS schemas are supported.
+- Se admiten esquemas HTTP y HTTPS.
 - Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.
 - Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
 - Tokens are not supported with client/server sessions or single-user sessions.

@@ -32,7 +32,7 @@ Um sinal é um objeto partilhado que pode ser passado como parâmetro de um work
 - o worker/processo chamado pode atualizar o objeto sinal depois de um processamento especifico ter terminado
 - o worker/processo chamado pode parar sua execução e esperar até que o sinal seja atualizado, sem consumir qualquer recurso de CPU.
 
-Optionally, in the *description* parameter you can pass a custom text describing the signal. Esse texto pode também ser definido depois da criação do sinal.
+Opcionalmente, no parâmetro *description* pode passar um texto personalizado descrevendo o sinal. Esse texto pode também ser definido depois da criação do sinal.
 
 Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
 

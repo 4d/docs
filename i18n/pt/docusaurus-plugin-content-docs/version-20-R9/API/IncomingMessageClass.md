@@ -59,9 +59,9 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
+A solicitação é recebida no servidor como *$request*, uma instância de objeto da classe `4D.IncomingMessage`.
 
-Here is the response:
+Aqui está a resposta:
 
 ```json
 Called URL: /start/example? param=demo&name=4D 
@@ -129,7 +129,7 @@ If the body has not been given as a binary content, the function tries to conver
 
 | Parâmetro  | Tipo |                             | Descrição                         |
 | ---------- | ---- | --------------------------- | --------------------------------- |
-| \|         | Text | ->                          | Header property to get            |
+| \|         | Text | ->                          | Propriedade de cabeçalho a obter  |
 | Resultados | Text | <- | Valor da propriedade do cabeçalho |
 
 <!-- END REF -->
@@ -214,9 +214,9 @@ If the body is not received as a valid picture, the function returns null.
 
 <!-- REF #IncomingMessageClass.getText().Params -->
 
-| Parâmetro  | Tipo |                             | Descrição                   |
-| ---------- | ---- | --------------------------- | --------------------------- |
-| Resultados | Text | <- | Body of the request as text |
+| Parâmetro  | Tipo |                             | Descrição                       |
+| ---------- | ---- | --------------------------- | ------------------------------- |
+| Resultados | Text | <- | Corpo da solicitação como texto |
 
 <!-- END REF -->
 
@@ -240,7 +240,7 @@ A propriedade `.headers` contém <!-- REF #IncomingMessageClass.headers.Summary 
 
 A propriedade `.headers` é somente leitura.
 
-Nomes de cabeçalho (chaves) são menores. Note header names are case sensitive.
+Nomes de cabeçalho (chaves) são menores. Observe que os nomes dos cabeçalhos diferenciam maiúsculas de minúsculas.
 
 <!-- END REF -->
 
@@ -294,7 +294,7 @@ A propriedade `.urlQuery` contém <!-- REF #IncomingMessageClass.urlQuery.Summar
 
 A propriedade `.urlQuery` é somente leitura.
 
-Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
+Os parâmetros podem ser passados no URL das solicitações **diretamente** ou **como conteúdo JSON**.
 
 #### Direct parameters
 
@@ -302,7 +302,7 @@ Exemplo: `http://127.0.0.1:8044/minhaCall?firstname=Marie&id=2&isWoman=true`
 
 In this case, parameters are received as stringified values in the `urlQuery` property: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
 
-#### JSON contents parameters
+#### Parâmetros conteúdo JSON
 
 Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoman": true,"id": 3}]'`.
 

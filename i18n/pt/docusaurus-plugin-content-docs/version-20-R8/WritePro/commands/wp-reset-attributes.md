@@ -47,7 +47,7 @@ You want to remove several attributes from the following selection:
 
 ![](../../assets/en/WritePro/commands/pict2643861.en.png)
 
-You can execute:
+Você pode executar:
 
 ```4d
  $range:=WP Get selection(*;"WParea")
@@ -58,7 +58,7 @@ You can execute:
  WP RESET ATTRIBUTES($range;wk border style)
 ```
 
-The resulting document is:
+O documento resultante é:
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 

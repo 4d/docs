@@ -11,9 +11,9 @@ title: OpenAIChatCompletionsStreamResult
 
 ## Propiedades
 
-| Propiedad | Tipo   | Descripción                                                  |
-| --------- | ------ | ------------------------------------------------------------ |
-| `data`    | Object | Contains the stream data sent by the server. |
+| Propiedad | Tipo   | Descripción                                                           |
+| --------- | ------ | --------------------------------------------------------------------- |
+| `data`    | Object | Contiene los datos de flujo enviados por el servidor. |
 
 ## Propiedades calculadas
 

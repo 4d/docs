@@ -31,7 +31,7 @@ O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In *dataObj* or *dataColl*, pass an object or a collection containing the data to load in the data context. As imagens são convertidas em esquemas URI de dados.
+No *dataObj* ou *dataColl*, passe um objeto ou uma coleção que contenha os dados para carregar no contexto dos dados. As imagens são convertidas em esquemas URI de dados.
 
 Para passar um valor de tempo em *dataObj* ou *dataColl*, encapsule-o em um objeto com as seguintes propriedades (consulte [exemplo 4](#example-4---date-and-time-syntax)):
 
@@ -91,7 +91,7 @@ $options:=New object("autoGenerateColumns"; True) VP SET DATA CONTEXT("ViewProAr
 
 ## Exemplo 3
 
-The *data* passed as a parameter is a collection that contains subcollections. Cada subcoleção define o conteúdo de uma linha:
+*data* passada como parâmetro é uma coleção que contém subcoleções. Cada subcoleção define o conteúdo de uma linha:
 
 ```4d
 var $data : Collection

@@ -3,15 +3,15 @@ id: dsmapping
 title: Objetos Data Model
 ---
 
-A tecnologia ORDA baseia-se em um mapeamento automático de uma estrutura de banco de dados subjacente. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe toda a base de dados como um conjunto de objetos de modelo de dados.
+The ORDA technology is based upon an automatic mapping of an underlying [database structure](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe toda a base de dados como um conjunto de objetos de modelo de dados.
 
 ## Mapeamento da estrutura
 
 Quando você chama um datastore usando os comandos [`ds`](commands/ds.md) ou [`Open datastore`](commands/open-datastore.md), 4D faz automaticamente referência a tabelas e campos da estrutura 4D correspondente como propriedades do objeto [datastore](#datastore) retornado:
 
-- As tabelas correspondem às dataclasses.
-- Os campos são mapeados para atributos de armazenamento.
-- As relações são mapeadas para atributos de relações - os nomes de relações, definidos no editor de estrutura, são usados como nomes de atributos de relações.
+- Tables are mapped to [dataclasses](#dataclass).
+- Fields are mapped to [storage attributes](#storage-and-relation-attributes).
+- Relations are mapped to [relation attributes](#storage-and-relation-attributes) - relation names, defined in the [Structure editor](https://doc.4d.com/4Dv20/4D/20.2/Creating-and-modifying-relations.300-6750296.en.html), are used as relation attribute names.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
 
@@ -28,7 +28,7 @@ As seguintes regras são aplicadas a quaisquer conversões:
 > O mapeamento ORDA não leva em consideração:
 >
 > - a opção "Invisível" para tabelas ou campos,
-> - a estrutura virtual definida através de `SET TABLE TITLES` ou `SET FIELD TITLES`,
+> - the virtual structure defined through [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md),
 > - a propriedade "Manual" ou "Automática" das relações.
 
 ### Regras para o controlo do acesso remoto
@@ -63,6 +63,8 @@ O datastore é o objeto de interface para um banco de dados. Constrói uma repre
 - O modelo contém e descreve todas as dataclasses que compõem o datastore. É independente do próprio banco de dados subjacente.
 - Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. Por exemplo, nomes, endereços e datas de nascimento dos funcionários são peças de dados com os quais você pode trabalhar em um datastore.
 
+A datastore object is handled through functions and properties of the [**DataStore**](../API/DataStoreClass.md) class.
+
 Cuando se maneja a través del código, el datastore es un objeto cuyas propiedades son todas las [dataclasses](#dataclass) que se han expuesto específicamente.
 
 4D permite lidar com os seguintes datastores:
@@ -91,6 +93,8 @@ El datastore principal (por defecto) siempre está disponible a través del coma
 ### Dataclass
 
 Uma dataclass é o equivalente a uma tabela. É usado como um modelo de objeto e referir-se a todos os campos como atributos, incluindo atributos relativo (atributos construídos sobre as relações entre os dataclasses). Os atributos relacionais podem ser utilizados em consultas como qualquer outro atributo.
+
+A dataclass object is handled through functions and properties of the [**DataClass**](../API/DataClassClass.md) class.
 
 Todas las dataclasses de un proyecto 4D están disponibles como propiedad del datastore `ds`. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
 
@@ -135,7 +139,8 @@ As propriedades de dataclass são objetos de atributo que descrevem os campos ou
  $revenuesAttribute:=ds. Company["revenues"] //alternate way
 ```
 
-Este código asigna a `$nameAttribute` y `$revenuesAttribute` las referencias a los atributos name y revenues de la clase `Company`. Essa sintaxe NAO devolve valores mantidos dentro do atributo, mas sim devolve referências aos próprios atributos. Para manejar los valores, es necesario pasar por [Entidades](#entity).
+Este código asigna a `$nameAttribute` y `$revenuesAttribute` las referencias a los atributos name y revenues de la clase `Company`. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves [with their **attribute properties**](../API/DataClassClass.md#attributename).
+Para manejar los valores, es necesario pasar por [Entidades](#entity).
 
 Todos los campos elegibles de una tabla están disponibles como atributos de su [dataclass](#dataclass) padre. Para los datastores remotos a los que se accede a través de `Open datastore` o [peticiones REST](REST/gettingStarted.md), se debe seleccionar la opción **Exponer como recurso REST** al nivel de la estructura 4D para cada campo que se desee exponer como at
 
@@ -178,6 +183,8 @@ Uma entidade é o equivalente a um registo. Na verdade, é um objeto que referir
 
 O objetivo da entidade é gerir dados (criar, atualizar, apagar). Quando uma referência de entidade é obtida por uma seleção de entidade, ela também retém informações sobre a seleção de entidade, o que permite a iteração por meio da seleção.
 
+An entity object is handled through functions and properties of the [**Entity**](../API/EntityClass.md) class.
+
 O objeto entidade em si não pode ser copiado como um objeto:
 
 ```4d
@@ -195,6 +202,8 @@ As propriedades da entidade são, no entanto, enumeráveis:
 ### Seleção de entidades
 
 Uma seleção de entidade é um objeto contendo uma ou mais referência(s) a entidades pertencentes à mesma dataclass. É normalmente criado como resultado de uma consulta ou devolvido a partir de um atributo de relação. Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
+
+An entity selection object is handled through functions and properties of the [**EntitySelection**](../API/EntitySelectionClass.md) class.
 
 Exemplo:
 

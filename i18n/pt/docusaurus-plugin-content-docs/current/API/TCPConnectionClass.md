@@ -164,17 +164,17 @@ A função `4D.TCPConnection.new()` <!-- REF #4D.TCPConnection.new().Summary -->
 
 #### `options` parameter
 
-In the *options* parameter, pass an object that can contain the following properties:
+No parâmetro *options*, passe um objeto que possa conter as seguintes propriedades:
 
-| Propriedade       | Tipo       | Descrição                                                                                                                                | Por padrão                     |
-| ----------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| onConnection      | Formula    | Callback acionado quando a conexão for estabelecida.                                                                     | Indefinido                     |
-| onData            | Formula    | Callback acionado quando os dados forem recebidos                                                                                        | Indefinido                     |
-| onShutdown        | Formula    | Callback acionado quando a conexão for fechada corretamente                                                                              | Indefinido                     |
-| onError           | Formula    | Callback acionado no caso de um erro                                                                                                     | Indefinido                     |
-| onTerminate       | Formula    | Callback acionada imediatamente antes de a TCPConnection ser liberada                                                                    | Indefinido                     |
-| noDelay           | Parâmetros | **Somente leitura** Desabilita o algoritmo do Nagle se `true`                                                                            | False                          |
-| connectionTimeout | Real       | Maximum time (in seconds) to establish the connection. If exceeded, the connection attempt is aborted | System-defined, generally ≥ 30 |
+| Propriedade       | Tipo       | Descrição                                                                                                                                   | Por padrão                     |
+| ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| onConnection      | Formula    | Callback acionado quando a conexão for estabelecida.                                                                        | Indefinido                     |
+| onData            | Formula    | Callback acionado quando os dados forem recebidos                                                                                           | Indefinido                     |
+| onShutdown        | Formula    | Callback acionado quando a conexão for fechada corretamente                                                                                 | Indefinido                     |
+| onError           | Formula    | Callback acionado no caso de um erro                                                                                                        | Indefinido                     |
+| onTerminate       | Formula    | Callback acionada imediatamente antes de a TCPConnection ser liberada                                                                       | Indefinido                     |
+| noDelay           | Parâmetros | **Somente leitura** Desabilita o algoritmo do Nagle se `true`                                                                               | False                          |
+| connectionTimeout | Real       | Maximum time (in seconds) to establish the connection. Se excedido, a tentativa de conexão será abortada | System-defined, generally ≥ 30 |
 
 #### Funções Callback
 

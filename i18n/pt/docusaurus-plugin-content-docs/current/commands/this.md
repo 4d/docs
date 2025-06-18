@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
-| Parâmetro | Tipo   |                             | Descrição                 |
-| --------- | ------ | --------------------------- | ------------------------- |
-| Resultado | Object | &#8592; | Current element or object |
+| Parâmetro | Tipo   |                             | Descrição                |
+| --------- | ------ | --------------------------- | ------------------------ |
+| Resultado | Object | &#8592; | Elemento ou objeto atual |
 
 <!-- END REF-->
 
@@ -96,7 +96,7 @@ In the context of a list box associated to a collection or an entity selection, 
 
 :::note
 
-If you use a collection of scalar values in a list box, 4D creates an object for each element with a single **value** property. Thus, the element value is returned by the **This.value** non-assignable expression.
+If you use a collection of scalar values in a list box, 4D creates an object for each element with a single **value** property. Assim, o valor do elemento é retornado pela expressão não atribuível **This.value**.
 
 :::
 

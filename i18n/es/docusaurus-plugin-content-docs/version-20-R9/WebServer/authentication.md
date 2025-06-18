@@ -151,7 +151,7 @@ The `$IPClient` parameter receives the IP address of the browser’s machine. Es
 
 The `$IPServer` parameter receives the IP address used to call the web server. 4D permite el multi-homing, que permite explotar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
-#### $user and $password - User Name and Password
+#### $user y $password - Nombre de usuario y contraseña
 
 Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
@@ -161,9 +161,9 @@ Generalidades Generalidades Generalidades Generalidades Generalidades Generalida
 
 The `On Web Authentication` database method returns a boolean:
 
-- If it is True, the connection is accepted.
+- Si es True, la conexión es aceptada.
 
-- If it is False, the connection is refused.
+- Si es False, la conexión es rechazada.
 
 El método base `On Web Connection` sólo se ejecuta si la conexión ha sido aceptada por `On Web Authentication`.
 

@@ -102,7 +102,7 @@ If you use a collection of scalar values in a list box, 4D creates an object for
 
 ## Ejemplo 1
 
-A collection of objects, each with this structure:
+Una colección de objetos, cada uno con esta estructura:
 
 ```json
 {  

@@ -14,6 +14,12 @@ In addition, inputs can be [enterable or non-enterable](properties_Entry.md#ente
 
 You can manage the data with object or form [methods](Concepts/methods.md).
 
+:::note
+
+For security reasons, in [multi-style](./properties_Text.md#multi-style) input areas, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+
+:::
+
 
 ### JSON Example:    
 

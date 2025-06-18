@@ -37,13 +37,13 @@ Functions are simply called on the appropriate ORDA interface or singleton class
 
 For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
-#### POST request
+#### Solicitação POST
 
 `/rest/City/getCity`
 
 with data in the body of the POST request: `["Aguada"]`
 
-#### GET request
+#### Solicitação GET
 
 `/rest/City/getCity?$params='["Aguada"]'`
 
@@ -96,7 +96,7 @@ You can send parameters to functions defined in ORDA user classes or singletons.
 
 As regras abaixo são válidas:
 
-- In functions called through POST requests, parameters must be passed **in the body of the POST request**.
+- Nas funções chamadas por meio de solicitações POST, os parâmetros devem ser passados **no corpo da solicitação POST**.
 - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
 - Os parâmetros devem ser incluídos numa coleção (formato JSON).
 - Todos os tipos de dados escalares suportados nas coleções JSON podem ser passados como parâmetros.
@@ -110,13 +110,13 @@ Scalar value parameter(s) must simply be enclosed in a collection. Todos os tipo
 
 For example, with a  dataclass function `getCities()` receiving text parameters:
 
-#### POST request
+#### Solicitação POST
 
 `/rest/City/getCities`
 
 **Parâmetros no corpo:** ["Aguda","Paris"]
 
-#### GET request
+#### Solicitação GET
 
 `/rest/City/getCities?$params='["Aguada","Paris"]'`
 
@@ -612,9 +612,9 @@ $students.add($newStudent)
 $ageAverage:=$students.getAgeAverage()
 ```
 
-## GET request examples
+## Exemplos de requisições GET
 
-### Returning a document
+### Retornando um documento
 
 You want to propose a link to download the user manual for a selected product with several formats available. Você escreve uma função `getUserManual()` da dataclass Products. Você retorna um objeto da [classe `OutgoingMessage`](../API/OutgoingMessageClass.md).
 

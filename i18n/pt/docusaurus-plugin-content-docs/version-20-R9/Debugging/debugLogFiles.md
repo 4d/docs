@@ -478,15 +478,15 @@ Os campos abaixo estão registrados para cada evento:
 
 | Campo nome  | Tipo      | Descrição                                                                                 |
 | ----------- | --------- | ----------------------------------------------------------------------------------------- |
-| time        | Data/Hora | Date and time of the event in ISO 8601 format                                             |
+| time        | Data/Hora | Data e hora do evento no formato ISO 8601                                                 |
 | localPort   | Number    | Local port used for the connection                                                        |
 | peerAddress | Text      | IP address of the remote peer                                                             |
-| peerPort    | Number    | Port of the remote peer                                                                   |
+| peerPort    | Number    | Porta do peer remoto                                                                      |
 | protocol    | Text      | Indicates whether the event is related to `TCP`                                           |
 | "event"     | Text      | O tipo de evento:`open`, `close`, `error`, `send`, `receive`, ou `listen` |
 | size        | Number    | The amount of data sent or received (in bytes), 0 if not applicable    |
-| excerpt     | Number    | First 10 bytes of data in hexadecimal format                                              |
-| textExcerpt | Text      | First 10 bytes of data in text format                                                     |
+| excerpt     | Number    | Primeiros 10 bytes de dados em formato hexadecimal                                        |
+| textExcerpt | Text      | Primeiros 10 bytes de dados em formato de texto                                           |
 | comment     | Text      | Additional information about the event, such as error details or encryption status        |
 
 ## Utilizar um ficheiro de configuração de log

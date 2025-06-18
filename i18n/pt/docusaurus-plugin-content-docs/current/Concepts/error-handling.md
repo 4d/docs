@@ -282,7 +282,7 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ```
 
-## Error codes
+## Códigos de erro
 
 Exceções que interrompem a execução de código são retornadas pela 4D, mas podem ter origens diferentes como o SO, um dispositivo, o kernel 4D, um [`throw`](../commands-legacy/throw.md) no seu código, etc. An error is therefore defined by three elements:
 

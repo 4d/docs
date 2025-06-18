@@ -75,7 +75,7 @@ TCPListener objects provide the following properties and functions:
 | ---------- | ------------------------------ | --------------------------- | ------------------------------------------------------------ |
 | port       | Number                         | ->                          | Puerto TCP de escucha                                        |
 | options    | Object                         | ->                          | Configuration [options](#options-parameter) for the listener |
-| Resultado  | 4D.TCPListener | <- | New TCPListener object                                       |
+| Resultado  | 4D.TCPListener | <- | Nuevo objeto TCPListener                                     |
 
 <!-- END REF -->
 
@@ -90,7 +90,7 @@ In the *options* parameter, pass an object to configure the listener and all the
 | Propiedad    | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                   | Por defecto |
 | ------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | onConnection | Formula | Callback when a new connection is established. The Formula receives two parameters (*$listener* and *$event*, see below) and must return either null/undefined to prevent the connection or an *option* object that will be used to create the [`TCPConnection`](./TCPConnectionClass.md). | Indefinido  |
-| onError      | Formula | Callback triggered in case of an error. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                                              | Indefinido  |
+| onError      | Formula | Retrollamada activada en caso de error. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                                              | Indefinido  |
 | onTerminate  | Formula | Callback triggered just before the TCPListener is closed. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                            | Indefinido  |
 
 #### Función callback (retrollamada)

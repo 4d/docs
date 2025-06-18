@@ -46,7 +46,7 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work wit
 
 **File ( fileConstant { ; \* } )**
 
-In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
+No parâmetro *fileConstant*, passe um arquivo embutido ou do sistema, usando uma das seguintes constantes:
 
 | Parâmetros                        | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

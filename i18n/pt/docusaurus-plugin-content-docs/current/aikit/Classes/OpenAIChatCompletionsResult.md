@@ -9,7 +9,7 @@ title: OpenAIChatCompletionsResult
 
 - [OpenAIResult](OpenAIResult.md)
 
-## Computed properties
+## Propriedades calculadas
 
 | Propriedade | Tipo         | Descrição                                                                                     |
 | ----------- | ------------ | --------------------------------------------------------------------------------------------- |

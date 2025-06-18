@@ -108,7 +108,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 | Parâmetro  | Tipo    |                             | Descrição                         |
 | ---------- | ------- | :-------------------------: | --------------------------------- |
 | lifespan   | Integer |              ->             | Session token lifespan in seconds |
-| Resultados | Text    | <- | UUID of the session               |
+| Resultados | Text    | <- | UUID da sessão                    |
 
 <!-- END REF -->
 
@@ -116,7 +116,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 :::note
 
-This function is only available with web user sessions. It returns an empty string in other contexts.
+This function is only available with web user sessions. Ele retorna uma string vazia em outros contextos.
 
 :::
 
@@ -501,7 +501,7 @@ End if
 
 | Parâmetro  | Tipo       |                             | Descrição                                                                          |
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------- |
-| token      | Text       |              ->             | Session token UUID                                                                 |
+| token      | Text       |              ->             | UUID do token de sessão                                                            |
 | Resultados | Parâmetros | <- | True if the current session has been successfully replaced by the session in token |
 
 <!-- END REF -->
