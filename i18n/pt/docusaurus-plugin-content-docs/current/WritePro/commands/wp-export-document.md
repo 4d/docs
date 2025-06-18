@@ -30,7 +30,7 @@ Você pode passar um *filePath* ou *fileObj*:
 
 - No parâmetro *fileObj*, passe um objeto 4D.File representando o arquivo a ser exportado.
 
-You can omit the *format* parameter, in which case you need to specify the extension in *filePath*. You can also pass a constant from the *4D Write Pro Constants* theme in the *format* parameter. In this case, 4D adds the appropriate extension to the file name if needed. São suportados os seguintes formatos:
+Você pode omitir o parâmetro *format*, neste caso você precisa especificar a extensão em *filePath*. You can also pass a constant from the *4D Write Pro Constants* theme in the *format* parameter. In this case, 4D adds the appropriate extension to the file name if needed. São suportados os seguintes formatos:
 
 | Parâmetros           | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | -------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -128,7 +128,7 @@ A propriedade wk factur x é um objeto que pode conter até duas propriedades:
 
 ### About Factur-X / ZUGFeRD PDF documents
 
-*Factur-X / ZUGFeRD* is a European standard for hybrid e-invoices (PDF for users and XML data for process automation). For more information, please read [this blog post](https://blog.4d.com/4d-write-pro-electronic-invoice-generation).
+*Factur-X / ZUGFeRD* é um padrão europeu para faturas eletrônicas híbridas (PDF para usuários e dados XML para automação do processo). For more information, please read [this blog post](https://blog.4d.com/4d-write-pro-electronic-invoice-generation).
 
 Para acionar a exportação PDF "Factur-X", passe as propriedades wk factur x e wk files no parâmetro *option* (veja exemplo 5). Nesse modo:
 
