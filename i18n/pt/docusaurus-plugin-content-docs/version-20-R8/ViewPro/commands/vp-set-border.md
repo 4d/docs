@@ -28,7 +28,7 @@ O parâmetro *borderStyleObj* permite que você defina o estilo das linhas da bo
 | color       | text    | Define a cor da margem. Predefinição = black.   | Sintaxe da cor CSS "#rrggbb" (sintaxe preferencial), sintaxe da cor CSS "rgb(r,g,b)" (sintaxe alternativa), nome da cor CSS (sintaxe alternativa)                                                                                                                                                                                                                                                                 |
 | style       | Integer | Define o estilo da borda. Predefinição = vazio. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
-You can define the position of the *borderStyleObj* (i.e., where the line is applied) with the *borderPosObj*:
+Você pode definir a posição do *borderStyleObj* (ou seja, onde a linha é aplicada) com o *borderPosObj*:
 
 | Propriedade     | Tipo    | Descrição                                                                                  |
 | --------------- | ------- | ------------------------------------------------------------------------------------------ |
