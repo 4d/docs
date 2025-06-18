@@ -18,7 +18,7 @@ L'application 4D crée des process pour ses propres besoins, par exemple le proc
 Il existe plusieurs façons de créer un nouveau process :
 
 - Exécuter une méthode en mode Développement en sélectionnant la case à cocher **Nouveau process** dans la boîte de dialogue d'exécution de méthode. La méthode choisie dans ce dialogue est la méthode process.
-- Utilisez la commande [`New process`](../commands-legacy/new-process.md). La méthode passée en tant que paramètre à la commande `New process` est la méthode process.
+- La méthode passée en tant que paramètre à la commande `New process` est la méthode process. Utilisez la commande [`New process`](../commands-legacy/new-process.md).
 - Utiliser la commande [`Execute on server`](../commands-legacy/execute-on-server.md) afin de créer une procédure stockée sur le serveur. La méthode passée en paramètre à la commande est la méthode process.
 - Utiliser la commande [`CALL WORKER`](../commands-legacy/call-worker.md). Si le process du worker n'existe pas déjà, il est créé.
 
