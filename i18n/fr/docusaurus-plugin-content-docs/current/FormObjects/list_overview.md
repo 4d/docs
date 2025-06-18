@@ -127,9 +127,13 @@ Voici quelques astuces quant à l'utilisation du numéro de référence unique :
 2. Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
     Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
     Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
+    You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command.\
+    Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
+    Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
     You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
 
 3. Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
+    Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
     Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
     Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
     Vous programmez une gestion élaborée de listes hiérarchiques, dans laquelle vous devez absolument pouvoir identifier chaque élément de manière unique à tous les niveaux de la liste. Un moyen simple d'implémenter ce fonctionnement est de maintenir un compteur personnel. Supposons que vous créez une liste *hlList* à l'aide de la commande `APPEND TO LIST`. A ce stade, vous initialisez un compteur *vlhCounter* à 1. A chaque fois que vous appelez `APPEND TO LIST` ou `INSERT IN LIST`, vous incrémentez ce compteur `(vlhCounter:=vlhCounter+1)`, et vous passez le compteur comme numéro de référence de l'élément. L'astuce consiste à ne pas décrémenter le compteur lorsque vous détruisez des éléments — le compteur ne peut qu'augmenter. En procédant ainsi, vous garantissez l'unicité des numéros de référence des éléments. Puisque ces numéros sont des valeurs de type Entier long, vous pouvez ajouter ou insérer plus de deux milliards d'éléments dans une liste qui a été réinitialisée... (si vous manipulez d'aussi grandes quantités d'éléments, cela signifie généralement que vous devriez utiliser une table plutôt qu'une liste.)
