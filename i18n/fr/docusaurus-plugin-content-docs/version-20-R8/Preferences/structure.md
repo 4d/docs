@@ -10,7 +10,7 @@ These options in the preferences modify the default name and type of the primary
 Les options suivantes sont disponibles :
 
 - **Nom** ("ID" par défaut) : Définit le nom par défaut des champs clés primaires. Vous pouvez utiliser le nom que vous souhaitez, dans le respect des [règles de nommage des tables standard de 4D](Concepts/identifiers.md#tables-and-fields).
-- **Type** ([Entier long](Concepts/dt_number.md) par défaut) : Définit le type des champs clés primaires par défaut. Vous pouvez choisir le type UUID. Dans ce cas, les champs clés primaires créés par défaut seront de [type Alpha](Concepts/dt_string.md) et auront les propriétés **UUID Format** et **Auto UUID** cochées.
+- **Type** ([Entier long](Concepts/dt_number.md) par défaut) : Définit le type des champs clés primaires par défaut. Vous pouvez choisir le type UUID. Vous pouvez choisir le type UUID.
 
 ## Éditeur de structure
 
