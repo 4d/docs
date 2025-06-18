@@ -115,7 +115,7 @@ The following data types are supported in the *body*:
 
 When this function is used, the content-type header is automatically set depending on the *body* type:
 
-- Content-Type:text/plain if the body is a Text
+- Content-Type:text/plain si el cuerpo es un Texto
 - Content-Type:application/octet-stream if body is a Blob
 - Content-Type:application/json if body is an Object
 - Content-Type:image/jpeg, image/gif... si el body es una imagen
