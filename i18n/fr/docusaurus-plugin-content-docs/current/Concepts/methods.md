@@ -38,7 +38,7 @@ Vous pouvez également exécuter les méthodes projet manuellement, à des fins 
 
 Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.
 
-Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du projet dans lequel elle a été créée. Vous pouvez procéder de la manière suivante : Vous pouvez procéder de la manière suivante : de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
+Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du projet dans lequel elle a été créée. Vous pouvez procéder de la manière suivante : Vous pouvez procéder de la manière suivante : Vous pouvez procéder de la manière suivante : de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
 
 L'utilisation de sous-routines procure les avantages suivants :
 
@@ -161,7 +161,7 @@ L’automatisation de séquences d’actions est une possibilité très puissant
 
 ### Méthodes de gestion de process
 
-Une **méthode process** est une méthode projet appelée lorsqu’un process est démarré. Le process existera tant que la méthode sera en cours d'exécution. A noter qu'une méthode de menu associée à une commande de menu pour laquelle la propriété *Démarrer un nouveau process* est sélectionnée, est aussi la méthode de gestion de process pour le process créé.
+Une **méthode process** est une méthode projet appelée lorsqu’un process est démarré. Le process existera tant que la méthode sera en cours d'exécution. Le process existera tant que la méthode sera en cours d'exécution.
 
 ### Méthodes de gestion d’événements et d'erreurs
 
@@ -205,7 +205,7 @@ Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectio
 
 **Notes 4D Server**:
 
-- Si vous souhaitez que la méthode soit exécutée sur la machine serveur plutôt que sur la machine cliente, sélectionnez l'option **Sur 4D Server** dans le menu Exécuter : Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Cette option peut être utilisée pour réduire le trafic réseau et optimiser le fonctionnement de 4D Server, en particulier pour les méthodes qui appellent des données stockées sur le disque. Tous les types de méthodes peuvent être exécutés sur la machine serveur ou sur une autre machine cliente, à l'exception de celles qui modifient l'interface utilisateur. Dans ce cas, les procédures stockées sont inefficaces.
+- Si vous souhaitez que la méthode soit exécutée sur la machine serveur plutôt que sur la machine cliente, sélectionnez l'option **Sur 4D Server** dans le menu Exécuter : Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Cette option peut être utilisée pour réduire le trafic réseau et optimiser le fonctionnement de 4D Server, en particulier pour les méthodes qui appellent des données stockées sur le disque. Tous les types de méthodes peuvent être exécutés sur la machine serveur ou sur une autre machine cliente, à l'exception de celles qui modifient l'interface utilisateur. Dans ce cas, les procédures stockées sont inefficaces.
 - Vous pouvez également choisir d'exécuter la méthode sur un autre poste client. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](../commands-legacy/register-client.md).
 
 Par défaut, l'option **En local** est sélectionnée. Avec la version mono-utilisateur de 4D, c'est la seule option disponible.
@@ -219,7 +219,7 @@ Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
 Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
-Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
+Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
 
 - `[Amis et parents]Nom`
 - `[Amis et parents]Enfant'Nom`
