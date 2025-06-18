@@ -17,7 +17,7 @@ Le tableau suivant répertorie tous les motifs pris en charge pour les formats d
 
 | Symbole | Description                                                              | Motif         | Exemple de sortie                                                                                     |
 | ------- | ------------------------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------------------------------- |
-| G       | indicateur d'époque                                                      | G, GG, ou GGG | ap. J.-C.                                             |
+| G       | indicateur d'époque                                                      | G, GG, ou GGG | ap.                                                                                   |
 |         |                                                                          | GGGG          | après Jésus-Christ                                                                                    |
 |         |                                                                          | GGGGG         | A                                                                                                     |
 | y       | année                                                                    | yy            | 96                                                                                                    |
