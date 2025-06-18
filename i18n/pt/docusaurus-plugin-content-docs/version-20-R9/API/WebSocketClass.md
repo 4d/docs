@@ -3,7 +3,7 @@ id: WebSocketClass
 title: WebSocket
 ---
 
-The `WebSocket` class allows you to open a WebSocket client connection with a server, send and receive data, and close the connection.
+A classe `WebSocket` permite-lhe abrir uma ligação de cliente WebSocket com um servidor, enviar e receber dados e fechar a ligação.
 
 As ligações cliente WebSocket são úteis, por exemplo, para receber dados financeiros em tempo real ou enviar e receber mensagens de um chat.
 
@@ -82,25 +82,25 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 <!-- END REF -->
 
-A função `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary --> cria e retorna um novo [objeto `4D.WebSocket`](#websocket-object) conectado ao servidor de WebSocket no endereço que você passou em *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
+A função `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary --> cria e retorna um novo [objeto `4D.WebSocket`](#websocket-object) conectado ao servidor de WebSocket no endereço que você passou em *url*<!-- END REF -->. O objeto `4D.WebSocket` fornece uma API para criar e gerir uma ligação WebSocket a um servidor, bem como para enviar e receber dados de e para o servidor.
 
 Em *url*, passe o URL ao qual o servidor WebSocket responderá. Podem ser utilizados os seguintes padrões de URL:
 
 - `ws://host[:port]path[?query]` para ligações padrão
 - `wss://host[:port]path[?query]` para conexões TLS seguras
 
-If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
+Se a ligação não for possível, é devolvido um objeto `null` sendo gerado um erro (que pode ser intersetado através de um método instalado com `ON ERR CALL`).
 
 ### Parâmetro *connectionHandler*
 
-In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
+Em *connectionHandler*, você pode passar um objeto que contém funções de callback a serem chamadas de acordo com eventos de conexão, bem como o tipo de dados e os cabeçalhos a serem tratados.
 
 - As chamadas de retorno são chamadas automaticamente no contexto do formulário ou do worker que inicia a ligação.
 - O WebSocket será válido enquanto o formulário ou o worker não for fechado.
 
 | Propriedade | Tipo                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onMessage   | [Function](FunctionClass.md) | Função de retorno de chamada para dados WebSocket. Chamado sempre que o WebSocket tiver recebido dados. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "message"</li><li>`$2.data` (text, blob, or object, see `dataType`): Received data</li></ul>                                                                                                                                                                                                                                                            |
+| onMessage   | [Function](FunctionClass.md) | Função de retorno de chamada para dados WebSocket. Chamado sempre que o WebSocket tiver recebido dados. A chamada de retorno recebe os seguintes parâmetros<li>:`$1`: Objeto WebSocket`$2`</li><li>: Objeto</li><ul><li>`$2.type` (texto): sempre "message"</li><li>`$2.data` (texto, blob ou objeto, consulte `dataType`): Dados recebidos</li></ul>                                                                                                                                                                                                                                               |
 | onError     | [Function](FunctionClass.md) | Função de retorno de chamada para erros de execução. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "error"</li><li>`$2.errors`: collection of 4D errors stack in case of execution error.<ul><li>`[].errCode` (number): 4D error code</li><li>`[].message` (text): Description of the 4D error</li><li>`[].componentSignature` (text): Signature of the internal component which returned the error</li></ul></li></ul> |
 | onTerminate | [Function](FunctionClass.md) | Função de retorno de chamada quando o WebSocket é terminado. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. Isto é específico do servidor e do subprotocolo em causa.</li></ul>                                                                                                                                         |
 | onOpen      | [Function](FunctionClass.md) | Função de retorno de chamada quando o websocket está aberto. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "open"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                      |
