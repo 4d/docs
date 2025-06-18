@@ -35,7 +35,7 @@ Dans certains cas, la mise à jour de la licence peut nécessiter que vous cliqu
 
 ## Activation des licences
 
-Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Généralement, **l'activation est automatique** si vous vous [connectez à l'aide de votre compte 4D](GettingStarted/Installation.md) dans l'Assistant de bienvenue.
+Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser.
 
 Cependant, dans des cas spécifiques, vous pourriez avoir besoin d'activer vos licences manuellement, si par exemple :
 
