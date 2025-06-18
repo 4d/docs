@@ -11,6 +11,7 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-
 
 - Nouvelle option `connectionTimeout` dans le paramètre [`options`](../API/TCPConnectionClass.md#options-parameter) de la fonction [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
 - Les UUIDs dans 4D sont maintenant générés en **version 7**. Dans les versions 4D précédentes, ils étaient générés en version 4.
+- Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
 - Langage 4D:
     - Pour des raisons de cohérence, les commandes [`Create entity selection`](../commands/create-entity-selection.md) et [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) ont été déplacées du thème ["4D Environnement"](../commands/theme/4D_Environment.md) vers le thème ["Sélections"](../commands/theme/Selection.md).
     - Nouvelles commandes [`OBJET SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) et [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) pour assigner et lire les objets `Formula` comme sources de données pour les objets de formulaire.
