@@ -27,7 +27,7 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 ### Class constructor
 
-Create an instance of the OpenAI client class.
+Crear una instancia de la clase cliente OpenAI.
 
 | Argument Name | Tipo           | Descripción                                                                                     |
 | ------------- | -------------- | ----------------------------------------------------------------------------------------------- |
