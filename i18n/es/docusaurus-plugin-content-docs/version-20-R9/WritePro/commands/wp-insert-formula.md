@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
-| Parámetros  | Tipo   |                             | Descripción                                                |
-| ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
-| targetObj   | Object | &#8594; | Rango o elemento o documento 4D Write Pro                  |
-| formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
-| mode        | Number | &#8594; | Modo de inserción                                          |
-| rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
-| Resultado   | Object | &#8592; | Text range object reprsenting the result of the formula    |
+| Parámetros  | Tipo   |                             | Descripción                                                       |
+| ----------- | ------ | --------------------------- | ----------------------------------------------------------------- |
+| targetObj   | Object | &#8594; | Rango o elemento o documento 4D Write Pro                         |
+| formula     | Object | &#8594; | Objeto de fórmula U Objeto con propiedades de fórmula y de nombre |
+| mode        | Number | &#8594; | Modo de inserción                                                 |
+| rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range        |
+| Resultado   | Object | &#8592; | Text range object reprsenting the result of the formula           |
 
 <!-- END REF-->
 
