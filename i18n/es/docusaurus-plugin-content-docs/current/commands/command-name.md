@@ -66,7 +66,7 @@ The following code allows you to load all valid 4D commands in an array:
 
 ## Ejemplo 2
 
-En un formulario, quiere una lista desplegable con los comandos básicos de informe resumido. In the object method for that drop-down list, you write:
+En un formulario, quiere una lista desplegable con los comandos básicos de informe resumido. En el método objeto para esa lista desplegable, escribe:
 
 ```4d
  Case of
