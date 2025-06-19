@@ -73,7 +73,7 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
 - To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
-   Ex: `"pattern" : "docs"` or `"pattern" : "docs/invoices"`
+   Ej: `"pattern": "docs"` o `"pattern": "docs/invoices"`
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
    Ex: `"regexPattern" : "/docs/.+/index\.html"`
@@ -263,7 +263,7 @@ The request handler can return an object instance of the [4D.OutGoingMessage cla
 
 La [clase 4D.IncomingMessage](../API/IncomingMessageClass.md) ofrece funciones para obtener los [encabezados](../API/IncomingMessageClass.md#headers) y el [cuerpo](../API/IncomingMessageClass.md#gettext) de la solicitud.
 
-Here is a simple example to upload a file on the server.
+He aquí un ejemplo sencillo para cargar un archivo en el servidor.
 
 El archivo **HTTPHandlers.json**:
 
