@@ -127,7 +127,7 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 
 Contém a <!-- REF #WebServerClass.CORSSettings.Summary -->lista dos hosts e métodos permitidos para o serviço CORS<!-- END REF --> (veja a propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **methods**:
 
-- **host** (texto, obrigatório): Nome de domínio ou endereço IP onde as páginas externas são permitidas de enviar requisições de dados para o servidor através do CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
+- **host** (texto, obrigatório): nome de domínio ou endereço IP onde as páginas externas são permitidas de enviar requisições de dados para o servidor através do CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.\*
@@ -453,7 +453,7 @@ A <!-- REF #WebServerClass.perfectForwardSecrecy.Summary --> disponibilidade de 
 
 <!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
 
-O <!-- REF #WebServerClass.rootFolder.Summary --> caminho da pasta raiz do servidor web <!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
+O <!-- REF #WebServerClass.rootFolder.Summary --> caminho da pasta raiz do servidor web <!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao utilizar esta propriedade no parâmetro `settings`, pode ser um objecto `Folder`.
 
 <!-- END REF -->
 
@@ -564,11 +564,11 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de 
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
+A função `.start()` <!-- REF #WebServerClass.start().Summary -->inicia o servidor da Web no qual ela é aplicada<!-- END REF -->, usando as propriedades definidas no parâmetro opcional do objeto *settings*.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
+O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION`. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
-All settings of [Web Server objects](../commands/web-server.md-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
+Todas as configurações dos [objetos servidor web](../commands/web-server.md-object) podem ser personalizadas, exceto propriedades somente leitura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) e [.sessionCookieName](#sessioncookiename)).
 
 As configurações de sessão personalizadas serão redefinidas quando a função [`.stop()`](#stop) for chamada.
 
@@ -578,8 +578,8 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                   |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se o servidor web foi correctamente iniciado, Falso caso contrário               |
-| errors      |                                                                                             | Collection | pilha de erros 4D (não devolvidos se o servidor web começou com sucesso) |
+| success     |                                                                                             | Parâmetros | True se o servidor web foi correctamente iniciado, False caso contrário                     |
+| errors      |                                                                                             | Collection | Pilha de erros 4D (não devolvidos se o servidor web começou com sucesso) |
 |             | \[].errCode            | Number     | Código de erro 4D                                                                           |
 |             | \[].message            | Text       | Descrição do erro 4D                                                                        |
 |             | \[].componentSignature | Text       | Assinatura da componente interna que devolveu o erro                                        |
@@ -629,11 +629,11 @@ A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->interrompe o ser
 
 Se o servidor web foi iniciado, todas as ligações e processos web são fechados, uma vez terminados os pedidos actualmente tratados. Se o servidor web não foi iniciado, o método não faz nada.
 
-> This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
+> Essa função redefine os parâmetros Web personalizados definidos para a sessão usando o parâmetro *settings* da função [`.start()`](#start), se houver.
 
 #### Exemplo
 
-Para parar o servidor Web da base de dados:
+Para interromper o servidor Web do banco de dados:
 
 ```4d
  var $webServer : 4D.WebServer
