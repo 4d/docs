@@ -11,7 +11,7 @@ Helper for vision stuff.
 
 ### create()
 
-\**create*(*imageURL* : Text) : OpenAIVisionHelper
+**create**(*imageURL* : Text) : OpenAIVisionHelper
 
 | Parámetros | Tipo                                        | Descripción                                                |
 | ---------- | ------------------------------------------- | ---------------------------------------------------------- |
@@ -27,7 +27,7 @@ var $result:=$helper.prompt("Could you describe it?")
 
 ### fromFile()
 
-\**fromFile*(*imageFile* : 4D.File) : OpenAIVisionHelper
+**fromFile**(*imageFile* : 4D.File) : OpenAIVisionHelper
 
 | Parámetros  | Tipo                                        | Descripción                                                |
 | ----------- | ------------------------------------------- | ---------------------------------------------------------- |
@@ -37,13 +37,13 @@ var $result:=$helper.prompt("Could you describe it?")
 #### Ejemplo de Uso
 
 ```4d
-var $helper:=$client.chat.vision.fromFile(Folder(fk resource foldres).file("image.png"))
+var $helper:=$client.chat.vision.fromFile(Folder(fk resources folder).file("image.png"))
 var $result:=$helper.prompt("Could you describe it?")
 ```
 
 ### fromPicture()
 
-\**fromPicture*(*image* : Picture) : OpenAIVisionHelper
+**fromPicture**(*image* : Picture) : OpenAIVisionHelper
 
 | Parámetros | Tipo                                        | Descripción                                                |
 | ---------- | ------------------------------------------- | ---------------------------------------------------------- |
