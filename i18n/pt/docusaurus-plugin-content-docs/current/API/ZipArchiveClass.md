@@ -3,10 +3,10 @@ id: ZipArchiveClass
 title: ZIPArchive
 ---
 
-A 4D ZIP archive is a `File` or `Folder` object containing one or more files or folders, which are compressed to be smaller than their original size. Esses arquivos são criados com uma extensão ".zip" e podem ser usados para poupar espaço em disco ou transferir arquivos via meios que tenham limitações de tamanho (por exemplo, um email ou por uma rede).
+Um arquivo 4D Zip é um objeto `File` ou `Folder`contendo um ou mais arquivos ou pastas, que são comprimidos para ter um tamanho menor que o original. Esses arquivos são criados com uma extensão ".zip" e podem ser usados para poupar espaço em disco ou transferir arquivos via meios que tenham limitações de tamanho (por exemplo, um email ou por uma rede).
 
 - Você cria um arquivo ZIP 4D com o comando [`ZIP Create archive`](../commands/zip-create-archive.md).
-- 4D [`ZIPFile`](ZipFileClass.md) and [`ZIPFolder`](ZipFolderClass.md) instances are available through the [`root`](#root) property (`ZIPFolder`) of the object returned by [`ZIP Read archive`](../commands/zip-read-archive.md) command.
+- As instâncias 4D [`ZIPFile`](ZipFileClass.md) e [`ZIPFolder`](ZipFolderClass.md) estão disponíveis por meio da propriedade [`root`](#root) (`ZIPFolder`) do objeto retornado pelo comando [`ZIP Read archive`](../commands/zip-read-archive.md).
 
 ### Exemplo
 
@@ -40,6 +40,6 @@ End if
 
 A propriedade `.root` contém <!-- REF #ZipArchiveClass.root.Summary --> uma pasta virtual fornecendo acesso ao conteúdo do arquivo ZIP <!-- END REF -->.
 
-The `root` folder and its contents can be manipulated with the [ZipFile](ZipFileClass.md) and [ZipFolder](ZipFolderClass.md) functions and properties.
+A pasta `root` e seu conteúdo podem ser manipulados com as funções e propriedades [ZipFile](ZipFileClass.md) e [ZipFolder](ZipFolderClass.md).
 
 Essa propriedade é **somente leitura**.
