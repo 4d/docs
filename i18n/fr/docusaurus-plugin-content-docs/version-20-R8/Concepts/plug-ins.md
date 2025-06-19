@@ -11,7 +11,7 @@ Un plug-in est un morceau de code, écrit dans n'importe quel langage tel que C 
 
 ## Où se trouvent les plug-ins ?
 
-De nombreux plug-ins ont déjà été écrits par la communauté 4D. Les plug-ins publiés sont disponibles sur GitHub. De plus, vous pouvez développer vos propres plug-ins.
+De nombreux plug-ins ont déjà été écrits par la communauté 4D. Les plug-ins publiés [sont disponibles sur GitHub](https://github.com/search?q=4d-plugin\&type=Repositories). De plus, vous pouvez développer vos propres plug-ins.
 
 ## Installer un plug-in
 
