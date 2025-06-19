@@ -5,7 +5,7 @@ title: Vector
 
 
 
-The `Vector` class allows you to handle vectors calculated by IAs and to execute distance calculations between them. This class is available from the `4D` class store.
+The `Vector` class allows you to handle vectors calculated by AIs and to execute distance calculations between them. This class is available from the `4D` class store.
 
 In the world of AIs, a **vector** is a sequence of numbers that enables a machine to understand and manipulate complex data. For a detailed overview of the role of vectors with AIs, please refer to [this page](https://aiforsocialgood.ca/blog/understanding-the-role-of-vectors-in-artificial-intelligence-a-comprehensive-guide).  
 
