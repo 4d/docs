@@ -80,7 +80,7 @@ La propiedad `.port` contiene <!-- REF #TCPEvent.port.Summary -->el número de p
 La propiedad `.type` contiene <!-- REF #TCPEvent.type.Summary -->el tipo del evento<!-- END REF -->. Los valores posibles son:
 
 - `"connection"`: Indicates that a TCPConnection was successfully established.
-- `"data"`: Indicates that data has been received.
+- `"data"`: indica que los datos han sido recibidos.
 - `"error"`: Indicates that an error occurred during the TCPConnection.
 - `"close"`: Indicates that the TCPConnection has been properly closed.
 - `"terminate"`: Indicates that the TCPConnection is about to be released.
