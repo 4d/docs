@@ -111,9 +111,9 @@ As solicitações subsequentes ao servidor enviadas pelas funções de navegaç�
 Por exemplo, o código a seguir carrega a entidade selecionada e permite a navegação na seleção da entidade. As entidades são carregadas em um contexto separado e o contexto inicial da caixa de listagem não é alterado:
 
 ```4d
- $myEntity:=Form.currentElement //current item expression
-  //... do something
- $myEntity:=$myEntity.next() //loads the next entity using the same context
+ $myEntity:=Form.currentElement //expressão do item atual
+  //... fazer algo
+ $myEntity:=$myEntity.next() //carrega a próxima entidade usando o mesmo contexto
 ```
 
 ### Pré-configuração de contextos
