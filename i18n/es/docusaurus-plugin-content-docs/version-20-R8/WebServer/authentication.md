@@ -133,7 +133,7 @@ Tomemos el ejemplo de una conexión a la Intranet. Supongamos que la dirección 
 | http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.45.67.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-#### $content - Header and Body of the HTTP request
+#### $content - Encabezado y Cuerpo de la petición HTTP
 
 El segundo parámetro (`$content`) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Tenga en cuenta que esta información se pasa a su método base `On Web Authentication` tal cual. Su contenido variará en función de la naturaleza del navegador web que intenta la conexión.
 
