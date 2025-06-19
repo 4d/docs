@@ -3,7 +3,7 @@ id: ZipFolderClass
 title: ZIPFolder
 ---
 
-The following properties and functions from the [Folder](FolderClass.md) class are available to `ZIPFolder` objects:
+As seguintes propriedades e funções da classe [Folder](FolderClass.md) estão disponíveis para os objetos `ZIPFolder`:
 
 | APIs disponíveis de [Folder](FolderClass.md) para ZIPFolder                            | Comentário                                                                                                                                                   |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
