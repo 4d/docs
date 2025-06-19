@@ -151,7 +151,7 @@ title: Index
 [`Count users`](../commands-legacy/count-users.md)<br/>
 [`CREATE ALIAS`](../commands-legacy/create-alias.md)<br/>
 [`CREATE DATA FILE`](../commands-legacy/create-data-file.md)<br/>
-[`Create deployment license`](../commands-legacy/create-deployment-license.md)<br/>
+[`Create deployment license`](create-deployment-license.md)<br/>
 [`Create document`](../commands-legacy/create-document.md)<br/>
 [`CREATE EMPTY SET`](../commands-legacy/create-empty-set.md)<br/>
 [`Create entity selection`](create-entity-selection.md)<br/>

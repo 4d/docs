@@ -866,7 +866,7 @@ module.exports =
               },
               items: [
                 "commands-legacy/change-licenses",
-                "commands-legacy/create-deployment-license",
+                "commands/create-deployment-license",
                 "commands-legacy/is-license-available",
                 "commands/license-info",
                 "commands-legacy/license-usage",

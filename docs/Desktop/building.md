@@ -513,7 +513,7 @@ The Licences & Certificate page can be used to:
 
 ### Licenses
 
-This tab displays the **Application type** menu, allowing you to select how licenses will be managed in the built application. The following options are available:
+This tab displays the **Application type** menu, allowing you to define how you want to manage licenses in the built application. The following options are available:
 
 ![](../assets/en/Admin/buildappLic.png)
 
@@ -565,9 +565,9 @@ After a licensed application is built, a new deployment license file is automati
 
 #### Application embedding licenses from the following list
 
-Select this option to build a ready-to-use application (stand-alone or client-server), embedding necessary [deployment licenses](../Admin/licenses.md#deployment-licenses) that you designate specifically. When you select this option, a license list is displayed in the tab. 
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding necessary [deployment licenses](../Admin/licenses.md#deployment-licenses) that you designate specifically. 
 
-You must designate the files that contain your licenses. These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
+When you select this option, a license list is displayed in the tab. You must designate the files that contain your licenses. These files were generated or updated when the *4D Developer Professional* license and the deployment licenses were purchased. Your current *4D Developer Professional* license is automatically associated with each deployment license to be used in the application built. You can add another 4D Developer Professional number and its associated licenses.
 
 To remove or add a license, use the **[+]** and **[-]** buttons at the bottom of the window. When you click on the \[+] button, an open file dialog box appears displaying by default the contents of the *Licenses* folder of your machine. For more information about the location of this folder, refer to the [Get 4D folder](../commands-legacy/get-4d-folder.md) command.
 
