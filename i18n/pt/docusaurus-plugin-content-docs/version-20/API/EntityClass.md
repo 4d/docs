@@ -935,7 +935,7 @@ Um registro bloqueado está desbloqueado:
 
 :::note Notas
 
-- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- [`unlock()`](#unlock) deve ser chamado tantas vezes quanto `lock()`> foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
 - Uma entidade pode ser [locked by a REST session](../REST/$lock.md), em cujo caso só pode ser destravado pela sessão.
 
 :::

@@ -41,7 +41,7 @@ L'analyse ou le parsing du contenu d'une source de *template* se fait dans deux 
 
 - En utilisant la commande `PROCESS 4D TAGS`; cette commande accepte un *template* en entrée, ainsi que des paramètres optionnels et retourne un texte résultant du traitement.
 
-- En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées en utilisant des URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. Pour analyser les pages HTML dans ce cas, vous devez ajouter le suffixe « .shtm » ou « .shtml » (par exemple, <http://www.server.com/dir/page.shtm>).
+- En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées en utilisant des URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées.
 
 ### Traitement récursif
 
@@ -187,7 +187,7 @@ The *item* parameter is a variable of the same type as the collection elements.
 
 The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the *item* variable is assigned the first mismatched value type.
 
-Le nombre de boucles est basé sur le nombre d'éléments de la collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. Vous devez tenir compte des points suivants :
+Le nombre de boucles est basé sur le nombre d'éléments de la collection. Le nombre de boucles est basé sur le nombre d'éléments de la collection. Vous devez tenir compte des points suivants :
 
 - If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable est de type scalaire, seule la variable sera modifiée.
 - The *item* variable gets the same type as the first collection element. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
@@ -644,7 +644,7 @@ The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D var
 
 The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
 
-Vous pouvez également insérer des expressions 4D. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). La conversion des expressions suit les mêmes règles que celles des variables. De plus, l'expression doit respecter les règles de syntaxe 4D.
+Vous pouvez également insérer des expressions 4D. Vous pouvez également insérer des expressions 4D. La conversion des expressions suit les mêmes règles que celles des variables. De plus, l'expression doit respecter les règles de syntaxe 4D.
 
 > For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
@@ -701,7 +701,7 @@ En utilisant la syntaxe $, le code suivant est validé par le parseur :
 
 Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). `$` tags are always evaluated once and the result is considered as plain text.
 
-Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
+Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. Cette différence consiste à empêcher l'injection de code malveillant.
 
 Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et de la balise  utilisées :
 

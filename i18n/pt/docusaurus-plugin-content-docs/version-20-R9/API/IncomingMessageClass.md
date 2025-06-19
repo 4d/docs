@@ -32,7 +32,7 @@ O seguinte arquivo [**HTTPHandlers.json**](../WebServer/http-request-handler.md)
 ]
 ```
 
-The `http://127.0.0.1/start/example?param=demo&name=4D` request is run with a `GET` verb in a browser. It is handled by the *gettingStarted* function of the following *GeneralHandling* singleton class:
+The `http://127.0.0.1/start/example?param=demo&name=4D` request is run with a `GET` verb in a browser. Ele é tratado pela função *gettingStarted* da seguinte classe singleton *GeneralHandling*:
 
 ```4d
 shared singleton Class constructor()

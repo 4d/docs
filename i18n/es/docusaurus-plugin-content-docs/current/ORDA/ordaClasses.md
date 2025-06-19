@@ -209,6 +209,12 @@ Cada tabla expuesta con ORDA ofrece una clase Entity en el class store `cs`.
 - **Nombre de clase**: _DataClassName_Entity (donde *DataClassName* es el nombre de la tabla)
 - **Ejemplo**: cs.CityEntity
 
+#### Class constructor
+
+You can define a **class constructor** for an Entity class. The class constructor is called whenever an entity is created in memory and can be used to initialize some values.
+
+For information, please refer to the [Class constructor](#class-constructor-1) section.
+
 #### Atributos calculados
 
 Las clases Entity permiten definir **atributos calculados** utilizando palabras clave específicas:
@@ -267,7 +273,7 @@ Al crear o editar clases de modelos de datos, debe prestar atención a las sigui
 
 - Al definir una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) coincida exactamente con el nombre de la clase padre (recuerde que son sensibles a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
 
-- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). Debe utilizar un método regular como se muestra en la [columna `Instantiated by` de la tabla de clases ORDA](#architecture).
+- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). You must use a regular function as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
 
 - No puede sobrescribir una función de clase ORDA nativa del [class store](Concepts/classes.md#class-stores) **`4D`** con una función de clase usuario de modelo de datos.
 
@@ -279,6 +285,87 @@ Cuando se compilan, las funciones de clase del modelo de datos se ejecutan:
 - en **procesos apropiativos** en las aplicaciones cliente/servidor (excepto si se utiliza la palabra clave [`local`](#local-functions), en cuyo caso depende del proceso llamante como en monopuesto).
 
 Si su proyecto está diseñado para ejecutarse en cliente/servidor, asegúrese de que el código de la función de clase del modelo de datos es hilo seguro. Si se llama un código thread-unsafe, se lanzará un error en tiempo de ejecución (no se lanzará ningún error al momento de la compilación ya que la ejecución cooperativa está soportada en las aplicaciones monopuesto).
+
+## `Class constructor`
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R10      | Añadidos       |
+
+</details>
+
+#### Sintaxis
+
+```4d
+// Entity class 
+Class constructor()
+// code
+```
+
+:::note
+
+No hay palabra clave final para el código de función class constructor. El lenguaje 4D detecta automáticamente el final del código de una función por la siguiente palabra clave `Function` o el final del archivo de clase.
+
+:::
+
+An ORDA class constructor function is triggered just after a new entity is created in memory, [whatever the way it is created](#commands-that-trigger-the-class-constructor-functions). It is useful to set initial values for entity instantiation, for example a custom ID.
+
+This function can only be set at the [entity level](#entity-class). There can only be one constructor function in an entity class (otherwise an error is returned).
+
+This ORDA class constructor function does not receive or return parameters. However, you can use it to initialize attribute values using [`This`](../commands/this.md). Note that values initialized by the constructor are overriden if corresponding attributes are filled by the code.
+
+:::note
+
+An ORDA class constructor function is similar to a [user class constructor function](../Concepts/classes.md#class-constructor), with the following differences:
+
+- you cannot pass parameters to the constructor,
+- you cannot use `shared`, `session`, or `singleton` keywords,
+- you cannot call the [`Super`](../Concepts/classes.md#super) keyword within the function,
+- the class constructor cannot be called using the `new()` function on an entity (entities can only be created by specific functions, see below).
+
+:::
+
+#### Commands that trigger the Class constructor functions
+
+The `Class constructor` function is triggered by the following commands and features:
+
+- [`dataClass.new()`](../API/DataClassClass.md#new)
+- [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
+- [`entity.clone()`](../API/EntityClass.md#clone)
+- [REST API $method=update](../REST/$method.md#methodupdate) in a POST without the `__KEY` and `__STAMP` parameters
+- the [Data Explorer](../Admin/dataExplorer.md#editing-data).
+
+:::note Nota de compatibilidad
+
+Records created at the 4D database level using 4D classic language commands or standard actions do not trigger the entity Class constructor.
+
+:::
+
+#### Remote configurations
+
+When using a remote configurations, you need to pay attention to the following principles:
+
+- In **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
+
+:::warning
+
+Since functions such as [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) can create a large number of entities and thus trigger the entity Class constructor consequently, you need to make sure the constructor code does not execute excessive time-consuming processings, for performance reasons. In remote configurations (see below), the code should not trigger multiple requests to the server.
+
+:::
+
+#### Ejemplo
+
+```4d
+
+ //cs.BookingEntity class
+Class constructor() 
+
+    This.departureDate:=Current date
+    This.arrivalDate:=Add to date(Current date; 0; 0; 2)
+
+```
 
 ## Atributos calculados
 

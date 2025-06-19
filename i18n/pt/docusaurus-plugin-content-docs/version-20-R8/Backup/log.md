@@ -85,5 +85,5 @@ Se você clicar em **Parar**, o arquivo de log atual é fechado imediatamente (a
 
 Se quiser fechar o arquivo de histórico atual porque é muito grande, pode considerar realizar um backup de arquivo de dados, o que vai fazer com que também se crie uma cópia de segurança do arquivo de histórico
 
-> **4D Server:** O comando `New log file` fecha automaticamente o arquivo de histórico atual e começa um novo.
+> **4D Server:** o comando `New log file` fecha automaticamente o arquivo de histórico atual e começa um novo.
 > Se por alguma razão o arquivo de histórico ficar indisponível durante uma sessão de trabalho, o erro 1274 é gerado e o servidor 4D não permimte que o usuários escrevam mais dados. Quando o arquivo de histórico estiver disponível novamente, é preciso fazer um backup.

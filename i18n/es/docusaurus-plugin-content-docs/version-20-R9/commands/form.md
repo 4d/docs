@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 - the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
 - el formulario actual es un subformulario,
-- a table form is currently displayed on screen.
+- un formulario de tabla se muestra actualmente en la pantalla.
 
 ### Commands (DIALOG...)
 

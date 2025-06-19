@@ -22,12 +22,12 @@ Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 
 ### Propiedades de la red
 
-| Propiedad      | Tipo      | Descripción                                                                                                                                                        |
-| -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Por defecto es 0.                                          |
-| `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                                     |
-| `maxRetries`   | Integer   | The maximum number of retries for the request. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
-| `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                               |
+| Propiedad      | Tipo      | Descripción                                                                                                                                                          |
+| -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Por defecto es 0.                                            |
+| `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                                       |
+| `maxRetries`   | Integer   | El número máximo de reintentos para la petición. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
+| `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                                 |
 
 ### Propiedades OpenAPI
 

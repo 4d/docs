@@ -5,12 +5,19 @@ title: リリースノート
 
 ## 4D 20 R10
 
+#### ハイライト
+
+- Handling of [ORDA events on data](../ORDA/orda-events.md).
+
+## 4D 20 R10
+
 [**4D 20 R10の新機能**](https://blog.4d.com/en-whats-new-in-4d-20-R10/) 4D 20 R10 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
 - [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) 関数の[`options`](../API/TCPConnectionClass.md#options-parameter) 引数に新しい`connectionTimeout` オプションが追加されました。
 - 4D 内でのUUID は**バージョン7**で生成されるようになりました。 以前の4D のリリースでは、バージョン4で生成されていました。
+- Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
 - 4Dランゲージ:
     - 統一性のため、[`Create entity selection`](../commands/create-entity-selection.md) コマンドおよび [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) コマンドは、["4D 環境"](../commands/theme/4D_Environment.md) テーマから ["Selection"](../commands/theme/Selection.md) テーマへと移動しました。
     - 新しい [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) および [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) コマンドを使用して、フォームオブジェクトに対して`Formula` オブジェクトを割り当て、または読み出しができるようになります。

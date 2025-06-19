@@ -3,7 +3,7 @@ id: SMTPTransporterClass
 title: SMTPTransporter
 ---
 
-The `SMTPTransporter` class allows you to configure SMTP connections and send emails through *SMTP transporter* objects.
+A classe `SMTPTransporter` permite-lhe configurar ligações SMTP e enviar correios eletrónicos através de objetos *SMTP transporter*.
 
 ### Objecto SMTP Transporter
 
@@ -96,12 +96,12 @@ Para obter informações sobre os códigos de estado SMTP, consulte [esta págin
 
 #### Descrição
 
-The `.keepAlive` property contains <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
+A propriedade `.keepAlive` contém <!-- REF #SMTPTransporterClass.keepAlive. ummary -->**Verdadeiro** se a conexão SMTP deve ser mantida viva até que o objeto `transportador` seja destruído<!-- FIM REF -->, e **Falso** caso contrário. Por padrão, se a propriedade `keepAlive` não tiver sido definida no objeto `server` (usado para criar o objeto `transporter` com `SMTP New transporter`), ela será **True**.
 
 A coleção SMTP é automaticamente fechada:
 
 - quando o objeto `transporter` é destruído se a propriedade `.keepAlive` for true,
-- after each `.send( )` function execution if the `.keepAlive` property is set to false.
+- após cada execução da função `.send( )` se a propriedade `.keepAlive` estiver definida como false.
 
 <!-- INCLUDE transporter.logFile.Desc -->
 
@@ -131,11 +131,11 @@ A coleção SMTP é automaticamente fechada:
 
 #### Descrição
 
-The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
+A função `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envia o objeto [*mail*](EmailObjectClass.md#email-object) para o servidor SMTP definido no objeto `transporter` e retorna um objeto de status<!-- END REF -->.
 
-> The `transporter` object must have already been created using the `SMTP New transporter` command.
+> O objeto `transporter` já deve ter sido criado com o comando `SMTP New transporter`.
 
-O método cria a ligação SMTP se esta ainda não estiver viva. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. Para obter mais informações, consulte a descrição do comando [`SMTP New transporter`](../commands/smtp-new-transporter.md).
+O método cria a ligação SMTP se esta ainda não estiver viva. Se a propriedade `.keepAlive` do objeto `transporter` for **false**, a conexão SMTP será automaticamente fechada após a execução de `.send()`; caso contrário, ela permanecerá ativa até que o objeto `transporter` seja destruído. Para obter mais informações, consulte a descrição do comando [`SMTP New transporter`](../commands/smtp-new-transporter.md).
 
 Em *mail*, passe um objeto [`Email`](EmailObjectClass.md#email-object) válido para enviar. As propriedades de origem (de onde vem o e-mail) e de destino (um ou mais destinatários) devem ser incluídas, as restantes propriedades são opcionais.
 
@@ -149,7 +149,7 @@ A função devolve um objecto que descreve o estado SMTP da operação. Este obj
 | status      | number  | Código de estado devolvido pelo servidor SMTP (0 no caso de um problema não relacionado com o processamento de correio) |
 | statusText  | text    | Mensagem de estado devolvida pelo servidor SMTP                                                                                            |
 
-In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `Last errors` command for information about the error.
+No caso de um problema não relacionado ao processamento SMTP (por exemplo, uma propriedade obrigatória está faltando no e-mail), 4D gera um erro que pode ser interceptado usando um método instalado pelo comando `ON ERR CALL`. Use o comando `Últimos Erros` para obter informações sobre o erro.
 
 Neste caso, o objecto de estatuto resultante contém os seguintes valores:
 

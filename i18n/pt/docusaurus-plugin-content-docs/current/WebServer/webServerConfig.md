@@ -601,7 +601,7 @@ As configurações a seguir ainda são compatíveis, mas dependem de recursos ou
 
 #### Permitir acesso ao banco de dados através de URLs 4DSYNC
 
-This option controls the support of HTTP synchronization requests containing deprecated */4DSYNC* URLs.
+Essa opção controla o suporte de solicitações de sincronização HTTP que contêm URLs obsoletos */4DSYNC*.
 
 #### Validação do endereço IP da sessão
 
@@ -617,7 +617,7 @@ Quando essa opção está marcada, o servidor da Web envia caracteres estendidos
 
 O servidor web 4D pode usar conexões persistentes. A opção keep-alive permite que você mantenha uma única conexão TCP aberta para o conjunto de trocas entre o navegador da Web e o servidor para economizar recursos do sistema e otimizar as transferências.
 
-The **Use Keep-Alive Connections** option enables or disables keep-alive TCP connections for the web server. Esta opção está activada por padrão. Na maioria dos casos, é recomendável manter essa opção marcada, pois ela acelera as trocas. Se o navegador da Web não suportar a conexão keep alive, o 4D Web Server mudará automaticamente para HTTP/1.0.
+A opção **Usar conexões persistentes** ativa ou desativa conexões TCP persistentes para o servidor Web. Esta opção está activada por padrão. Na maioria dos casos, é recomendável manter essa opção marcada, pois ela acelera as trocas. Se o navegador da Web não suportar a conexão keep alive, o 4D Web Server mudará automaticamente para HTTP/1.0.
 
 A função keep-alive do 4D Web Server diz respeito a todas as conexões TCP/IP (HTTP, HTTPS). Observe, entretanto, que as conexões keep-alive nem sempre são usadas para todos os processos da Web 4D.
 

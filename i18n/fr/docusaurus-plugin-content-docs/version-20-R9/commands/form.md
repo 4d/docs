@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.Form.Summary-->La commande **Form** renvoie l'objet associé au formulaire en cours (instancié à partir du paramètre *formData* ou de la classe utilisateur assignée dans l'éditeur de formulaires).<!-- END REF--> 4D associe automatiquement un objet au formulaire courant dans les cas suivants :
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).La commande **Form** renvoie l'objet associé au formulaire en cours (instancié à partir du paramètre *formData* ou de la classe utilisateur assignée dans l'éditeur de formulaires).<!-- END REF--> 4D associe automatiquement un objet au formulaire courant dans les cas suivants :
 
 - le formulaire courant a été chargé par l'une des commandes [`DIALOG`](dialog.md), [`Print form`](print-form.md), ou [`FORM LOAD`](form-load.md),
 - le formulaire courant est un sous-formulaire,
@@ -42,8 +42,8 @@ Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIA
 
 Si le formulaire courant est un sous-formulaire, l'objet renvoyé dépend de la variable du conteneur parent :
 
-- Si la variable associée au conteneur parent a été typée comme objet, **Form** renvoie la valeur de cette variable.\
-    Dans ce cas, l'objet renvoyé par **Form** est le même que celui renvoyé par l'expression suivante :
+- **Form** retourne l'objet associé au formulaire table affiché à l'écran.\
+    Dans le contexte d'un formulaire de saisie affiché à partir d'un formulaire de sortie (c'est-à-dire après un double-clic sur un enregistrement), l'objet retourné contient la propriété suivante :
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  

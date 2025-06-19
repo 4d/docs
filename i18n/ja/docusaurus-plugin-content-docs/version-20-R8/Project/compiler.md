@@ -136,7 +136,7 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 変換されたプロジェクトでは、[直接型指定を有効化](#直接型指定の有効化) し、それに準拠した宣言コードを書くことが推奨されます:
 
 - [`var` キーワードを使って](../Concepts/variables.md#変数の宣言) すべての変数を明示的に宣言する。
-- 関数のプロトタイプで `Function` や `Class Constructor` キーワードを使って、またはメソッド内で `#DECLARE` キーワードを使って、すべてのパラメーターを明示的に宣言する ([パラメーターの宣言](../Concepts/parameters.md#パラメーターの宣言)を参照）。
+- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
 #### 直接型指定の有効化
 

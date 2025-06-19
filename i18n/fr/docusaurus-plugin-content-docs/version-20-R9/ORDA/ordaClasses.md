@@ -32,7 +32,7 @@ De plus, 4D [crée préalablement et automatiquement](#creating-classes) les cla
 
 ## Architecture
 
-ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\`
+ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\`
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 

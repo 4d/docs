@@ -202,7 +202,7 @@ A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->reto
 
 Passe em *msgNumber* o número da mensagem a recuperar. Esse número é retornado na propriedade `number` pela função [`.getMailInfoList()`](#getmailinfolist).
 
-Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Somente propriedades de cabeçalhos ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) são então retornados. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
+Opcionalmente, você pode passar `true` no parâmetro *headerOnly* para excluir as partes do corpo do objeto `Email` retornado. Somente propriedades de cabeçalhos ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) são então retornados. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
 
 :::note
 
@@ -338,7 +338,7 @@ Se a mailbox não conter uma mensagem, uma coleção vazia é retornada.
 
 *number* is the number of a message in the mailbox at the time the `POP3_transporter` was created. The *number* property is not a static value in relation to any specific message and will change from session to session dependent on its relation to other messages in the mailbox at the time the session was opened. Os números atribuídos às mensagens só são válidos durante o tempo de vida do objeto [`POP3_transporter`](#pop3-transporter-object). At the time the `POP3_transporter` is deleted any message marked for deletion will be removed. Quando o usuário se registrar de volta no servidor, as mensagens atuais no mailbox serão numeradas de 1 a x.
 
-The *id* however is a unique number assigned to the message when it was received by the server. Esse número é calculado usando a hora e data que a mensagem for recebida e é um valor atribuído ao seu servidor POP3. Infelizmente, servidores POP3 não usam a referência primária *id* para suas mensagens. Throughout the POP3 sessions you will need to specify the *number* as the reference to messages on the server. Desenvolvedores podem precisar ter cuirdado se desenvolverem soluções que trazem referências às mensagens na database mas deixam o corpo da mensagem no servidor.
+The *id* however is a unique number assigned to the message when it was received by the server. Esse número é calculado usando a hora e data que a mensagem for recebida e é um valor atribuído ao seu servidor POP3. Infelizmente, servidores POP3 não usam a referência primária *id* para suas mensagens. Através das sessões POP3 precisa especificar o *number* como a referência às mensagens no servidor. Desenvolvedores podem precisar ter cuirdado se desenvolverem soluções que trazem referências às mensagens na database mas deixam o corpo da mensagem no servidor.
 
 ##### Exemplo
 

@@ -488,7 +488,7 @@ Le générateur de list box s'affiche :
 
 ![](../assets/en/FormEditor/listboxBuilderTable.png)
 
-3. Sélectionnez les champs de la list box dans la zone **Champs** :
+3. Sélectionnez une table dans la liste déroulante **Table** :
 
 ![](../assets/en/FormEditor/listboxBuilderFields.png)
 
@@ -522,11 +522,11 @@ Le bouton **Insérer champs** est uniquement disponible avec les formulaires tab
 
 L'apparence du formulaire final dépend du type de formulaire :
 
-- **Formulaire détail** : en cliquant sur le bouton **Insérer champs**, un formulaire en page est généré :
+- **Formulaire liste** : en cliquant sur le bouton **Insérer champs**, cela génère un formulaire en liste avec des champs organisés sur une seule ligne et des marqueurs de zone :
 
 ![](../assets/en/FormEditor/insertFields2.png)
 
-- **Formulaire liste** : en cliquant sur le bouton **Insérer champs**, cela génère un formulaire en liste avec des champs organisés sur une seule ligne et des marqueurs de zone :
+- **Formulaire détail** : en cliquant sur le bouton **Insérer champs**, un formulaire en page est généré :
 
 ![](../assets/en/FormEditor/insertFields3.png)
 
@@ -657,11 +657,11 @@ A noter que la vue par défaut ne change pas :
 
 Pour renommer une vue, vous pouvez soit :
 
-- Cliquer sur le bouton **Supprimer la vue sélectionnée** en bas de la palette des vues :
+- Faire un clic droit sur le nom de la vue et sélectionner **Supprimer la vue** :
 
 ![](../assets/en/FormEditor/deleteView.png)
 
-- Faire un clic droit sur le nom de la vue et sélectionner **Supprimer la vue** :
+- Cliquer sur le bouton **Supprimer la vue sélectionnée** en bas de la palette des vues :
 
 ![](../assets/en/FormEditor/deleteView2.png)
 
@@ -717,7 +717,7 @@ Vous pouvez également déplacer un objet vers une autre vue via le menu context
 
 Vous pouvez sélectionner dans la page courante du formulaire tous les objets appartenant à une même vue. Cette fonction est utile pour appliquer des modifications globales à un ensemble d’objets.
 
-Pour cela, faites un clic droit sur la vue dans laquelle vous souhaitez sélectionner tous les objets et cliquez sur le bouton **Tout sélect. dans vue**:
+Pour modifier le plan d'un objet, sélectionnez-le et choisissez :
 
 ![](../assets/en/FormEditor/selectAll.png)
 

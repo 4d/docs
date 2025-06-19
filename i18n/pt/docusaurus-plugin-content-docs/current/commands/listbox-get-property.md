@@ -20,7 +20,7 @@ title: LISTBOX Get property
 
 <!--REF #_command_.LISTBOX Get property.Summary-->The **LISTBOX Get property** command returns the value of the *property* of the list box or column specified using the *object* and *\** parameters.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). Se você não passar esse parâmetro, estará indicando que o parâmetro *object* é uma variável. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
+Se você passar o parâmetro opcional *\**, estará indicando que o parâmetro *object* é um nome de objeto (string). Se você não passar esse parâmetro, estará indicando que o parâmetro *object* é uma variável. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
 
 **Note:** If the list box or column specified using the *object* and *\** parameters does not exist, the **LISTBOX Get property** command returns -1 for numeric properties, or an empty string.
 
@@ -66,7 +66,7 @@ In the *property* parameter, pass a constant indicating the property whose value
 
 In general, to signal an invalid result **LISTBOX Get property** returns -1 when retrieving properties that have numeric values, or an empty string; however, no errors are generated. More specifically, this occurs in the following cases:
 
-- If you pass a *property* that does not exist
+- Se você passar uma *property* que não existe
 - If you pass a *property* that is not available for the specified list box or column, e.g. you pass the lk font color expression property with an array type list box
 - If you pass a column as parameter with a *property* that is applied to a list box, and vice versa if you pass a list box as parameter with a *property* that is applied to a column (see \* above)
 

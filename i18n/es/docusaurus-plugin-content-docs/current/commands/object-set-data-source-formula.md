@@ -36,7 +36,7 @@ If the command is applied to an object that does not exist or cannot support for
 
 ## Ejemplo
 
-You want to dynamically bind an input to an expression. For example, show the discounted price based on a base price and a discount value:
+Desea vincular dinámicamente una entrada a una expresión. For example, show the discounted price based on a base price and a discount value:
 
 ```4d
 

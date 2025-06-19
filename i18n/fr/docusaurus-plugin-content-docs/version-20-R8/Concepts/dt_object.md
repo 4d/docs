@@ -111,7 +111,7 @@ $col:=$o.col[5] //6
 Vous pouvez créer deux types d'objets :
 
 - des objets standard (non-partagés), en utilisant la commande [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.fr.html) ou la syntaxe d'objet littéral (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
-- des objets partagés, en utilisant la commande [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.fr.html). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs.
+- des objets partagés, en utilisant la commande [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.fr.html). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. shared objects, using the [`New shared object`](../commands-legacy/new-shared-object.md) command.
   Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
 ## Propriétés

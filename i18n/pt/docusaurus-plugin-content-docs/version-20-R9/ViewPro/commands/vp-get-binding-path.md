@@ -28,7 +28,7 @@ O comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -
 
 Em *rangeObj*, passe um objeto que seja um intervalo de células ou um intervalo combinado de células. Note que:
 
-- If *rangeObj* is a range with several cells, the command returns the attribute name linked to the first cell in the range.
+- Se *rangeObj* for um intervalo com várias células, o comando retornará o nome do atributo vinculado à primeira célula do intervalo.
 - If *rangeObj* contains several ranges of cells, the command returns the attribute name linked to the first cell of the first range.
 
 ## Exemplo

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.FORM LOAD.Summary-->La commande **FORM LOAD** est utilisée pour charger le formulaire *form* en mémoire dans le process courant avec *formData* (facultatif) afin d'imprimer ses données ou d'analyser son contenu.<!-- END REF--> Il ne peut y avoir qu'un seul formulaire courant par process.
+<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.La commande **FORM LOAD** est utilisée pour charger le formulaire *form* en mémoire dans le process courant avec *formData* (facultatif) afin d'imprimer ses données ou d'analyser son contenu.<!-- END REF--> Il ne peut y avoir qu'un seul formulaire courant par process.
 
 Dans le paramètre *form*, vous pouvez passer soit :
 
@@ -32,7 +32,7 @@ Lorsque la commande est exécutée à partir d'un composant, elle charge les for
 ### formData
 
 Optionnellement, vous pouvez passer des paramètres au formulaire *form* en utilisant soit l'objet *formData*, soit l'objet de classe de formulaire automatiquement instancié par 4D si vous avez [associé une classe utilisateur au formulaire](../FormEditor/properties_FormProperties.md#form-class). Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md).
-L'objet de données formulaire est disponible dans l'événement formumaire [`On Load`](../Events/onLoad.md).
+Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md).
 
 Pour des informations détaillées sur l'objet de données formulaire, veuillez vous référer à la commande [`DIALOG`](dialog.md).
 

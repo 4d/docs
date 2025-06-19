@@ -55,7 +55,7 @@ La sintaxis de declaración heredada, donde los parámetros se copian automátic
 
 En los métodos llamados o en las funciones de clase, los valores de los parámetros se asignan a las variables locales. Generalmente se declararan los parámetros utilizando un **nombre de parámetro** con un **tipo de parámetro**, separados por dos puntos.
 
-- Para funciones de clase, los parámetros se declaran junto con el prototipo de función, por ejemplo, cuando se utilizan las palabras clave `Function` o `Class Constructor`.
+- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class constructor` keywords.
 - Para los métodos (métodos proyecto, métodos objeto formulario, métodos base y triggers), los parámetros se declaran utilizando la palabra clave `#DECLARE` al principio del código del método.
 
 Ejemplos:

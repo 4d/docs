@@ -7,12 +7,12 @@ title: LISTBOX SET PROPERTY
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 
-| Paramètres | Type          |                             | Description                                                                                                                           |
-| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur     | &#8594; | If specified, object is an object name (string). If omitted, object is a variable. |
-| object     | any           | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis)                                |
-| property   | Integer       | &#8594; | List box or column property                                                                                                           |
-| value      | Integer, Text | &#8594; | Value of property                                                                                                                     |
+| Paramètres | Type          |                             | Description                                                                                                                                                             |
+| ---------- | ------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur     | &#8594; | If specified, object is an object name (string). If specified, object is an object name (string). |
+| object     | any           | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis)                                                                  |
+| property   | Integer       | &#8594; | List box or column property                                                                                                                                             |
+| value      | Integer, Text | &#8594; | Value of property                                                                                                                                                       |
 
 <!-- END REF-->
 

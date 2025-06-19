@@ -115,7 +115,7 @@ O <!-- REF #WebServerClass.CORSEnabled.Summary -->estado do serviço CORS (*Cros
 
 Padrão: Falso (desabilitado)
 
-For more information about CORS, please refer to the [Cross-origin resource sharing page](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
+Para obter mais informações sobre o CORS, consulte a [página de compartilhamento de recursos entre origens](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) na Wikipédia.
 
 <!-- END REF -->
 
@@ -127,7 +127,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 Contém a <!-- REF #WebServerClass.CORSSettings.Summary -->lista dos hosts e métodos permitidos para o serviço CORS<!-- END REF --> (veja a propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **methods**:
 
-- **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
+- **host** (texto, obrigatório): nome de domínio ou endereço IP onde as páginas externas são permitidas de enviar requisições de dados para o servidor através do CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
   - 192.168.5.17:8081
   - 192.168.5.17
   - 192.168.\*
@@ -149,7 +149,7 @@ Contém a <!-- REF #WebServerClass.CORSSettings.Summary -->lista dos hosts e mé
 
 <!-- REF #WebServerClass.debugLog.Syntax -->**.debugLog** : Integer<!-- END REF -->
 
-The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log file<!-- END REF --> (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number).
+O status <!-- REF #WebServerClass.debugLog.Summary -->do arquivo de registro de solicitação HTTP<!-- END REF --> (HTTPDebugLog_nn.txt, armazenado na pasta "Logs" do aplicativo - nn é o número do arquivo).
 
 - 0 = desactivado
 - 1 = habilitado sem partes do corpo (o tamanho do corpo é fornecido neste caso)
@@ -248,7 +248,7 @@ O padrão = 80
 
 <!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
 
-A <!-- REF #WebServerClass.HTTPTrace.Summary --> ativação de `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
+A <!-- REF #WebServerClass.HTTPTrace.Summary --> ativação de `HTTP TRACE`<!-- END REF -->. Por razões de segurança, o servidor web padrão rejeita petições `HTTP TRACE` com um erro 405. Quando ativado, o servidor web responde a petições `HTTP TRACE` com a linha, cabeçalho e corpo pedido.
 
 <!-- END REF -->
 
@@ -282,9 +282,9 @@ O padrão = 443
 
 > Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
-A <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->duração da vida (em minutos) dos processos de sessão legados inativos<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
+A <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->duração da vida (em minutos) dos processos de sessão legados inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
 
-Default = 480 minutos
+Padrão = 480 minutos
 
 <!-- END REF -->
 
@@ -374,7 +374,7 @@ Normal = 100
 
 <!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Integer<!-- END REF -->
 
-Contains the <!-- REF #WebServerClass.maxRequestSize.Summary -->maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passar o valor máximo (2147483647) significa na prática que não é estabelecido um limite. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Se um pedido atingir este limite, o servidor web rejeita-o.
+Contém o <!-- REF #WebServerClass.maxRequestSize.Summary -->tamanho máximo (em bytes) das solicitações HTTP de entrada (POST) que o servidor da Web tem permissão para processar<!-- END REF -->. Passar o valor máximo (2147483647) significa na prática que não é estabelecido um limite. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Se um pedido atingir este limite, o servidor web rejeita-o.
 
 Valores possíveis: 500000 - 2147483647
 
@@ -388,7 +388,7 @@ Valores possíveis: 500000 - 2147483647
 
 > Essa propriedade não é retornada no [modo de sessões dimensionáveis](#scalablesession).
 
-Contém o <!-- REF #WebServerClass.maxSessions.Summary --> número máximo de sessões legacy simultâneas<!-- END REF -->. When you reach the limit, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)
+Contém o <!-- REF #WebServerClass.maxSessions.Summary --> número máximo de sessões legacy simultâneas<!-- END REF -->. Quando se atinge o limite, a sessão de legado mais antiga é encerrada (e o método banco de dados`On Web Legacy Close Session` é chamado) se o servidor web precisar de criar um. O número de sessões legadas em simultâneo não pode exceder o número total de processos web (propriedade `maxConcurrentProcesses`, 100 por padrão)
 
 <!-- END REF -->
 
@@ -453,7 +453,7 @@ A <!-- REF #WebServerClass.perfectForwardSecrecy.Summary --> disponibilidade de 
 
 <!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
 
-O <!-- REF #WebServerClass.rootFolder.Summary --> caminho da pasta raiz do servidor web <!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
+O <!-- REF #WebServerClass.rootFolder.Summary --> caminho da pasta raiz do servidor web <!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao utilizar esta propriedade no parâmetro `settings`, pode ser um objecto `Folder`.
 
 <!-- END REF -->
 
@@ -564,11 +564,11 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de 
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
+A função `.start()` <!-- REF #WebServerClass.start().Summary -->inicia o servidor da Web no qual ela é aplicada<!-- END REF -->, usando as propriedades definidas no parâmetro opcional do objeto *settings*.
 
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
+O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION`. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
-All settings of [Web Server objects](../commands/web-server.md-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
+Todas as configurações dos [objetos servidor web](../commands/web-server.md-object) podem ser personalizadas, exceto propriedades somente leitura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) e [.sessionCookieName](#sessioncookiename)).
 
 As configurações de sessão personalizadas serão redefinidas quando a função [`.stop()`](#stop) for chamada.
 
@@ -578,8 +578,8 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                   |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | Verdadeiro se o servidor web foi correctamente iniciado, Falso caso contrário               |
-| errors      |                                                                                             | Collection | pilha de erros 4D (não devolvidos se o servidor web começou com sucesso) |
+| success     |                                                                                             | Parâmetros | True se o servidor web foi correctamente iniciado, False caso contrário                     |
+| errors      |                                                                                             | Collection | Pilha de erros 4D (não devolvidos se o servidor web começou com sucesso) |
 |             | \[].errCode            | Number     | Código de erro 4D                                                                           |
 |             | \[].message            | Text       | Descrição do erro 4D                                                                        |
 |             | \[].componentSignature | Text       | Assinatura da componente interna que devolveu o erro                                        |
@@ -629,11 +629,11 @@ A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->interrompe o ser
 
 Se o servidor web foi iniciado, todas as ligações e processos web são fechados, uma vez terminados os pedidos actualmente tratados. Se o servidor web não foi iniciado, o método não faz nada.
 
-> This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
+> Essa função redefine os parâmetros Web personalizados definidos para a sessão usando o parâmetro *settings* da função [`.start()`](#start), se houver.
 
 #### Exemplo
 
-Para parar o servidor Web da base de dados:
+Para interromper o servidor Web do banco de dados:
 
 ```4d
  var $webServer : 4D.WebServer

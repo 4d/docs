@@ -13,6 +13,12 @@ De plus, les zones de saisie peuvent être [saisissables ou non saisissables](pr
 
 Vous pouvez gérer les données avec des [méthodes](Concepts/methods.md) objet ou formulaire.
 
+:::note
+
+For security reasons, in [multi-style](./properties_Text.md#multi-style) input areas, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+
+:::
+
 ### Exemple JSON :
 
 ```4d

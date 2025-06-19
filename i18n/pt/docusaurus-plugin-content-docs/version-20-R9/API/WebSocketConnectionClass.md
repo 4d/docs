@@ -7,7 +7,7 @@ A API da classe `WebSocketConnection` permite que você gerencie conexões WebSo
 
 :::info
 
-For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
+Para obter uma visão geral e alguns exemplos da implementação do servidor WebSocket em 4D, consulte a classe [`WebSocketServer`](WebSocketServerClass.md).
 
 :::
 
@@ -21,7 +21,7 @@ For an overview and some examples of the WebSocket server implementation in 4D, 
 
 ### Objecto WebSocketConnection
 
-A `WebSocketConnection` object is automatically created when the [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) callback function of the [WebSocketServer object](WebSocketServerClass.md#4dwebsocketservernew) returns a [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object) object.
+Um objeto `WebSocketConnection` é criado automaticamente quando a função de retorno de chamada [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) do objeto [WebSocketServer](WebSocketServerClass.md#4dwebsocketservernew) retorna um objeto [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object).
 
 Os objectos Httprequest fornecem as seguintes propriedades e funções:
 
@@ -96,7 +96,7 @@ Os conteúdos seguintes são enviados em função do tipo de *message*:
 
 #### Descrição
 
-The `.status` property contains <!-- REF #WebSocketConnectionClass.status.Summary -->the connection status (can be "Closing", "Closed" or  "Connected")<!-- END REF -->.
+A propriedade `.status` contém <!-- REF #WebSocketConnectionClass.status.Summary -->o status da conexão (pode ser "Closing", "Closed" ou "Connected")<!-- END REF -->.
 
 Esta propriedade é só de leitura.
 
@@ -110,10 +110,10 @@ Esta propriedade é só de leitura.
 
 <!-- REF #WebSocketConnectionClass.terminate().Params -->
 
-| Parâmetro | Tipo    |     | Descrição                                                                                            |
-| --------- | ------- | :-: | ---------------------------------------------------------------------------------------------------- |
-| code      | Integer |  -> | Error code sent to the client (must be > 3000, otherwise the message is not sent) |
-| message   | Text    |  -> | Mensagem de erro enviada ao cliente                                                                  |
+| Parâmetro | Tipo    |     | Descrição                                                                                                       |
+| --------- | ------- | :-: | --------------------------------------------------------------------------------------------------------------- |
+| code      | Integer |  -> | Código de erro enviado ao cliente (deve ser > 3000, caso contrário a mensagem não é enviada) |
+| message   | Text    |  -> | Mensagem de erro enviada ao cliente                                                                             |
 
 <!-- END REF -->
 
@@ -121,7 +121,7 @@ Esta propriedade é só de leitura.
 
 A função `.terminate()` <!-- REF #WebSocketConnectionClass.terminate().Summary -->força a conexão a fechar<!-- END REF -->.
 
-A *code* and *message* can be sent to the client during the closure to indicate the reason of the termination.
+Um *code* e uma *message* podem ser enviados ao cliente durante o encerramento para indicar o motivo da rescisão.
 
 <!-- END REF -->
 
@@ -133,7 +133,7 @@ A *code* and *message* can be sent to the client during the closure to indicate 
 
 #### Descrição
 
-The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->the [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) parent object of the connection<!-- END REF -->.
+A propriedade `.wss` contém <!-- REF #WebSocketConnectionClass.wss.Summary -->o objeto pai [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) da conexão<!-- END REF -->.
 
 Esta propriedade é só de leitura.
 

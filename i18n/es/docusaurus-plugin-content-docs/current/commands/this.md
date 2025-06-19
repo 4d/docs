@@ -31,7 +31,7 @@ Cuando se utiliza una [función constructora de clase](../Concepts/classes.md#cl
 ```4d
 //Class: ob
 
-Class Constructor  
+Class constructor  
 
  // Create properties on This as
  // desired by assigning to them
