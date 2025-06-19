@@ -9,7 +9,7 @@ Além disso, 4D trabalha constantemente com dados cache em memória. Todas as mu
 
 Por último, 4D possui funções que analisam os conteúdos do arquivo de histórico, tornando possível reverter as operações realizadas sobre os dados do banco de dados. Essas funções estão disponíveis no MSC: consulte a página de [Análise de atividade](MSC/analysis.md) e a página de [Rollback](MSC/rollback.md).
 
-## como o arquivo de histórico funciona
+## Como funciona o arquivo de log
 
 O arquivo de histórico gerado por 4D contém uma descrição de todas as operações realizadas nos dados das tbelas registradas no diário do banco de dados, as quais são registradas de forma sequencial. Por padrão, todas as tabelas são registradas, ou seja, incluídas no arquivo de log, mas você pode desmarcar tabelas individuais usando a propriedade de tabela **Incluir no arquivo de log**.
 
@@ -85,5 +85,5 @@ Se você clicar em **Parar**, o arquivo de log atual é fechado imediatamente (a
 
 Se quiser fechar o arquivo de histórico atual porque é muito grande, pode considerar realizar um backup de arquivo de dados, o que vai fazer com que também se crie uma cópia de segurança do arquivo de histórico
 
-> **4D Server:** O comando `New log file` fecha automaticamente o arquivo de histórico atual e começa um novo.
+> **4D Server:** o comando `New log file` fecha automaticamente o arquivo de histórico atual e começa um novo.
 > Se por alguma razão o arquivo de histórico ficar indisponível durante uma sessão de trabalho, o erro 1274 é gerado e o servidor 4D não permimte que o usuários escrevam mais dados. Quando o arquivo de histórico estiver disponível novamente, é preciso fazer um backup.
