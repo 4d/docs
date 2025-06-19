@@ -145,9 +145,9 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #ClassClass.new().Params -->
 
-| Paramètres | Type                     |                             | Description                                                         |
-| ---------- | ------------------------ | :-------------------------: | ------------------------------------------------------------------- |
-| param      | any                      |              ->             | Paramètre(s) à passer à la fonction constructeur |
+| Paramètres | Type                      |                             | Description                                                         |
+| ---------- | ------------------------- | :-------------------------: | ------------------------------------------------------------------- |
+| param      | any                       |              ->             | Paramètre(s) à passer à la fonction constructeur |
 | Résultat   | 4D.Object | <- | Nouvel objet de la classe                                           |
 
 <!-- END REF -->
