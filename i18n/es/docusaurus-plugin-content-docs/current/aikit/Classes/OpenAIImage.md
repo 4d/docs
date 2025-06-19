@@ -23,7 +23,9 @@ https://platform.openai.com/docs/api-reference/images/object
 
 **asBlob**() : 4D.Blob
 
-\| Function result| 4D.Blob | Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
+| Parámetros | Tipo                    | Descripción                                                                                            |
+| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------ |
+| Resultado  | 4D.Blob | Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
 
 #### Ejemplo de Uso
 
@@ -35,7 +37,9 @@ var $blob:=$image.asBlob()
 
 **asPicture**() : Picture
 
-\| Function result| Picture | Creates a picture object from the blob converted image. |
+| Parámetros | Tipo    | Descripción                                                             |
+| ---------- | ------- | ----------------------------------------------------------------------- |
+| Resultado  | Picture | Creates a picture object from the blob converted image. |
 
 #### Ejemplo de Uso
 
@@ -52,7 +56,7 @@ var $picture:=$image.asPicture()
 | *file*     | 4D.File | The file object where the image will be saved.     |
 | Resultado  | Boolean                 | Returns `True` if the image is successfully saved. |
 
-Saves the image to disk, attempting to download it first if it is a URL. Returns `False` if it could not retrieve the image data.
+Saves the image to disk, attempting to download it first if it is a URL. Devuelve `False` si no ha podido recuperar los datos de la imagen.
 
 #### Ejemplo de Uso
 
