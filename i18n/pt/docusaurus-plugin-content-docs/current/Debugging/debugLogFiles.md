@@ -155,7 +155,7 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 
 ## 4DHTTPClientLog.txt
 
-Este arquivo de histórico registra o tráfego HTTP que passa pelo cliente HTTP do 4D. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+Este arquivo de histórico registra o tráfego HTTP que passa pelo cliente HTTP do 4D. Petições inteiras e respostas, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
 Como iniciar esse log:
 
@@ -167,16 +167,16 @@ HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)
 
 Os campos abaixo são registrados tanto para Request quanto para Response:
 
-| Campo nome      | Descrição                                                                                           |
-| --------------- | --------------------------------------------------------------------------------------------------- |
-| SequenceID      | Número de operação único e sequencial da sessão de histórico                                        |
-| ConnectionID    | Identificador UUID da conexão de processo                                                           |
-| LocalIP         | Endereço IP do Cliente                                                                              |
-| PeerIP          | Endereço IP do servidor                                                                             |
-| TimeStamp       | Timestamp (ms) at the time the request is sent or the response is fully received |
-| ElapsedTimeInMs | (response only) Difference with the request timestamp                            |
+| Campo nome      | Descrição                                                                                                  |
+| --------------- | ---------------------------------------------------------------------------------------------------------- |
+| SequenceID      | Número de operação único e sequencial da sessão de histórico                                               |
+| ConnectionID    | Identificador UUID da conexão de processo                                                                  |
+| LocalIP         | Endereço IP do Cliente                                                                                     |
+| PeerIP          | Endereço IP do servidor                                                                                    |
+| TimeStamp       | Timestamp (ms) no momento em que o pedido é enviado ou a resposta é totalmente recebida |
+| ElapsedTimeInMs | (somente resposta) Diferença com o registro de data e hora da solicitação               |
 
-Depending on log options, various other fields can also be logged.
+Dependendo das opções de registro, vários outros campos também podem ser registrados.
 
 - Para solicitação: linha de solicitação, cabeçalhos, corpo da solicitação
 - Para resposta: linha de estado, cabeçalhos, corpo da resposta (não compactado), se houver
