@@ -29,12 +29,12 @@ displayed_sidebar: docs
 [クラスコンストラクター](../Concepts/classes.md#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-// クラス: ob
+//Class: ob
 
-Class Constructor  
+Class constructor  
 
- // This のプロパティを
- // 代入によって作成します
+ // Create properties on This as
+ // desired by assigning to them
 
  This.a:=42
 ```
