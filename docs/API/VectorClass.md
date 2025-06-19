@@ -5,23 +5,24 @@ title: Vector
 
 
 
-The `Vector` class allows you to handle vectors calculated by AIs and to execute distance calculations between them. This class is available from the `4D` class store.
+The `Vector` class allows you to handle **vectors** and to execute distance and similarity calculations between them. This class is available from the `4D` class store.
 
-In the world of AIs, a **vector** is a sequence of numbers that enables a machine to understand and manipulate complex data. For a detailed overview of the role of vectors with AIs, please refer to [this page](https://aiforsocialgood.ca/blog/understanding-the-role-of-vectors-in-artificial-intelligence-a-comprehensive-guide).  
-
-
+In the world of AIs, a vector is a sequence of numbers that enables a machine to understand and manipulate complex data. For a detailed overview of the role of vectors with AIs, you can refer to [this page](https://aiforsocialgood.ca/blog/understanding-the-role-of-vectors-in-artificial-intelligence-a-comprehensive-guide).  
 
 
-### Vector calculation comparison
+
+
+### Understanding the different vector computations 
 
 The `4D.Vector` class proposes three types of vector computations. The following table summarizes the main characteristics of each one:
 
 ||cosineSimilarity|dotSimilarity|euclideanDistance|
 |---|---|---|----|
-|Definition|Compares the orientation of two texts represented as vectors. The more they point in the same direction, the closer they are.|Sum of products between each vector dimension. It's like a weighted compatibility score.|Actual distance between two vectors, as if measured with a ruler|
+|Definition|Compares the orientation of two texts represented as vectors. The more they point in the same direction, the closer they are.|Sum of products between each vector dimension. It's like a weighted compatibility score.|Actual distance between two vectors, as if measured with a ruler.|
 |Simple analogy|Are we talking about the same subject?|Are you talking about the same subject insistently?|Are you really far away from what I'm saying?|
 |Example|Imagine you're looking for movies to watch on a video on-demand streaming service. Cosine similarity is used to compare your tastes (for example, you like action movies with a bit of comedy) to the movie descriptions in their database. It doesn't matter whether you're a "small" fan (you watch 1 film a month) or a "big" fan (you watch 10 films a week), what matters is whether the films have similar characteristics to what you like (action + comedy). The streaming service uses cosine similarity to recommend films that "point in the same direction" as your preferences.|Think of a search engine. When you type "chocolate cake recipe", the algorithm compares your query to web pages. The dot product can be used not only to check whether a page is talking about chocolate cakes (a similar direction to your search), but also to give more weight to pages that are highly relevant (for example, a page with lots of detailed content about chocolate cakes will have a greater "length" and therefore a higher score). A page with just one sentence on the subject will have a lower score.|Imagine a dating application. The algorithm can use Euclidean distance to compare your profile (your interests, age, location, etc.) with those of other users. If your profiles are very similar (for example, you both like hiking, pop music, and you live 5 km apart), the Euclidean distance between your profiles will be low, and the app will suggest this person as a good "match". Here, all differences (however small) count, not just the general direction of your tastes.|
 
+In any cases, it's a good idea to test the different vectors to determine which best suits your needs and data.
 
 ### Vector object
 
@@ -69,7 +70,7 @@ In *parameter*, pass a collection of real numbers representing the vector to cre
 To create a vector:
 
 ```4d
-var $vector : 4D.Vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
+var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
 ```
 
 You can access individual components or convert the entire vector back to a collection:
@@ -109,8 +110,8 @@ This metric measures the **angle between vectors** and is commonly used to deter
 #### Example
 
 ```4d
-var $vector : 4D.Vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
-var $anotherVector : 4D.Vector := 4D.Vector.new([0.598; -0.951; 0.789])
+var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
+var $anotherVector := 4D.Vector.new([0.598; -0.951; 0.789])
 var $similarity := $vector.cosineSimilarity($anotherVector)
 ```
 
@@ -145,8 +146,8 @@ This metric reflects both **similarity** and **magnitude**, and is generally use
 
 
 ```4d
-var $vector : 4D.Vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
-var $anotherVector : 4D.Vector := 4D.Vector.new([0.598; -0.951; 0.789])
+var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
+var $anotherVector := 4D.Vector.new([0.598; -0.951; 0.789])
 var $score := $vector.dotSimilarity($anotherVector)
 
 ```
@@ -182,8 +183,8 @@ This measures the straight-line distance in the vector space. It is recommended 
 
 
 ```4d
-var $vector : 4D.Vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
-var $anotherVector : 4D.Vector := 4D.Vector.new([0.598; -0.951; 0.789])
+var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
+var $anotherVector := 4D.Vector.new([0.598; -0.951; 0.789])
 var $distance := $vector.euclideanDistance($anotherVector)
 
 ```
