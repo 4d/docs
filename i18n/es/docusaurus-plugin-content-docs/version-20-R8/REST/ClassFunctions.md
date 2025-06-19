@@ -641,7 +641,7 @@ return $response
 
 ```
 
-You can call the function using a request like:
+Puede llamar a la función utilizando una petición como:
 
 **GET** `http://127.0.0.1:8044/rest/Products/getUserManual?$params='[1,"pdf"]'`
 
