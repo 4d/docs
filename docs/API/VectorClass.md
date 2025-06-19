@@ -69,7 +69,7 @@ In *parameter*, pass a collection of real numbers representing the vector to cre
 To create a vector:
 
 ```4d
-var $vector : 4D.Vector := 4D.Vector.new([0.123, -0.456, 0.789]) 
+var $vector : 4D.Vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
 ```
 
 You can access individual components or convert the entire vector back to a collection:
