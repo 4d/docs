@@ -63,7 +63,7 @@ O datastore é o objeto de interface para um banco de dados. Constrói uma repre
 * O modelo contém e descreve todas as dataclasses que compõem o datastore. É independente do próprio banco de dados subjacente.
 * Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. Por exemplo, nomes, endereços e datas de nascimento dos funcionários são peças de dados com os quais você pode trabalhar em um datastore.
 
-A datastore object is handled through functions and properties of the [**DataStore**](../API/DataStoreClass.md) class.
+Um objeto datastore é manipulado por meio de funções e propriedades da classe [**DataStore**](../API/DataStoreClass.md).
 
 Quando manipulado pelo código, o datastore é um objeto cujas propriedades são todas as [dataclasses](#dataclass) que foram especificamente expostas.
 
@@ -94,7 +94,7 @@ O datastore principal (padrão) está sempre disponível através do comando `ds
 
 Uma dataclass é o equivalente a uma tabela. É usado como um modelo de objeto e referir-se a todos os campos como atributos, incluindo atributos relativo (atributos construídos sobre as relações entre os dataclasses). Os atributos relacionais podem ser utilizados em consultas como qualquer outro atributo.
 
-A dataclass object is handled through functions and properties of the [**DataClass**](../API/DataClassClass.md) class.
+Um objeto dataclass é manipulado por meio de funções e propriedades da classe [**DataClass**](../API/DataClassClass.md).
 
 Todas as dataclasses em um projeto 4D estão disponíveis como uma propriedade do armazenamento de dados `ds`. Para datastores remotos acessados através `Open datastore` ou [Solicitações REST](REST/gettingStarted.md), a opção **Expor como recurso REST** deve ser selecionada no nível de estrutura 4D para cada tabela exposta que você quer ser exposta como dataclass no datastore.
 
@@ -139,7 +139,7 @@ As propriedades de dataclass são objetos de atributo que descrevem os campos ou
  $revenuesAttribute:=ds. Company["revenues"] //alternate way
 ```
 
-Esse código atribui a `$nameAttribute` e `$revenuesAttribute` faz referência aos atributos name e revenues da classe `Company`. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves [with their **attribute properties**](../API/DataClassClass.md#attributename). Para manejar os valores, é necessário passar por [Entidades](#entity).
+Esse código atribui a `$nameAttribute` e `$revenuesAttribute` faz referência aos atributos name e revenues da classe `Company`. Essa sintaxe NÃO retorna valores mantidos dentro do atributo, mas, em vez disso, retorna referências aos próprios atributos [com suas **propriedades de atributo**](../API/DataClassClass.md#attributename). Para manejar os valores, é necessário passar por [Entidades](#entity).
 
 Todos os campos elegíveis em uma tabela estão disponíveis como atributos de sua [dataclass](#dataclass) principal. Para datastores remotos acessados através `Open datastore` ou [Solicitações REST](REST/gettingStarted.md), a opção **Expor como recurso REST** deve ser selecionada no nível de estrutura 4D para cada campo que você deseja ser exposto como um atributo de dataclass.
 
