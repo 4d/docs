@@ -64,7 +64,7 @@ El documento resultante es:
 
 ## Ejemplo 2
 
-You want to remove several attributes using a collection:
+Desea eliminar varios atributos utilizando una colección:
 
 ```4d
 $myRange:=WP Get selection(*;"WParea")
