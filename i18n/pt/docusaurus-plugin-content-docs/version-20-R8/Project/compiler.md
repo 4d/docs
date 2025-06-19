@@ -136,7 +136,7 @@ Essas opções só são mantidas para compatibilidade com os códigos legados. P
 Em projetos convertidos, é recomendado [ativar o modo de digitação direta](#enabling-direct-typing) e escrever o código de declaração em conformidade, i.e.:
 
 - declarar explicitamente todas as variáveis [usando palavras-chave `var`](../Concepts/variables.md#declaring-variables)
-- declarar explicitamente todos os parâmetros em protótipos de função (por exemplo, usando as palavras-chave `Função` ou `Classe Construtor`) ou com palavras `#DECLARE` em métodos (veja [Declaração de parâmetros](../Concepts/parameters.md#declaring-parameters).
+- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
 #### Ativando digitação direta
 
