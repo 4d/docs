@@ -154,7 +154,7 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 
 ## 4DHTTPClientLog.txt
 
-Este arquivo de histórico registra o tráfego HTTP que passa pelo cliente HTTP do 4D. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+Este arquivo de histórico registra o tráfego HTTP que passa pelo cliente HTTP do 4D. Petições inteiras e respostas, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
 Como iniciar esse log:
 
@@ -166,16 +166,16 @@ HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)
 
 Os campos abaixo são registrados tanto para Request quanto para Response:
 
-| Campo nome      | Descrição                                                                        |
-| --------------- | -------------------------------------------------------------------------------- |
-| SequenceID      | Número de operação único e sequencial da sessão de histórico                     |
-| ConnectionID    | Identificador UUID da conexão de processo                                        |
-| LocalIP         | Endereço IP do Cliente                                                           |
-| PeerIP          | Endereço IP do servidor                                                          |
-| TimeStamp       | Timestamp (ms) at the time the request is sent or the response is fully received |
-| ElapsedTimeInMs | (response only) Difference with the request timestamp                            |
+| Campo nome      | Descrição                                                                               |
+| --------------- | --------------------------------------------------------------------------------------- |
+| SequenceID      | Número de operação único e sequencial da sessão de histórico                            |
+| ConnectionID    | Identificador UUID da conexão de processo                                               |
+| LocalIP         | Endereço IP do Cliente                                                                  |
+| PeerIP          | Endereço IP do servidor                                                                 |
+| TimeStamp       | Timestamp (ms) no momento em que o pedido é enviado ou a resposta é totalmente recebida |
+| ElapsedTimeInMs | (somente resposta) Diferença com o registro de data e hora da solicitação               |
 
-Depending on log options, various other fields can also be logged.
+Dependendo das opções de registro, vários outros campos também podem ser registrados.
 
 - Para solicitação: linha de solicitação, cabeçalhos, corpo da solicitação
 - Para resposta: linha de estado, cabeçalhos, corpo da resposta (não compactado), se houver
@@ -460,7 +460,7 @@ Eis um exemplo de um registo de registo ORDA do lado do servidor:
 Existem várias formas de ativar o arquivo de configuração do registo, dependendo da sua configuração:
 
 - **Servidor 4D com interface**: pode abrir a página Manutenção e clicar no botão [Carregar arquivo de configuração dos registos](ServerWindow/maintenance.md#load-logs-configuration-file) , depois selecionar o arquivo. Neste caso, pode utilizar qualquer nome para o arquivo de configuração. É imediatamente ativado no servidor.
-- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-user) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
+- **um projeto interpretado ou compilado**: o arquivo deve ser denominado `logConfig.json` e copiado na [pasta Settings](../Project/architecture.md#settings-user) do projeto (localizada no mesmo nível da pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
 - **uma aplicação construída**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta seguinte:
     * Windows: `Users\[userName]\AppData\Roaming\[application]`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
