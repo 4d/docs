@@ -168,7 +168,7 @@ In this case, you can display formula references as ![](../assets/en/WritePro/wp
 
 ![](../assets/en/WritePro/wp-formulas4.png)
 
-To display formula references as symbols, you can:
+Para mostrar las referencias a fórmulas como símbolos, puede:
 
 - check the **Display formula source as symbol option** in the Property list (see *Configuring View properties*), or
 - use the displayFormulaAsSymbol standard action (see *Using 4D Write Pro standard actions*), or
