@@ -149,7 +149,7 @@ A função devolve um objecto que descreve o estado SMTP da operação. Este obj
 | status      | number  | Código de estado devolvido pelo servidor SMTP (0 no caso de um problema não relacionado com o processamento de correio) |
 | statusText  | text    | Mensagem de estado devolvida pelo servidor SMTP                                                                                            |
 
-In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `Last errors` command for information about the error.
+No caso de um problema não relacionado ao processamento SMTP (por exemplo, uma propriedade obrigatória está faltando no e-mail), 4D gera um erro que pode ser interceptado usando um método instalado pelo comando `ON ERR CALL`. Use o comando `Últimos Erros` para obter informações sobre o erro.
 
 Neste caso, o objecto de estatuto resultante contém os seguintes valores:
 
