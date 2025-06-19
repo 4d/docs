@@ -109,8 +109,8 @@ This metric measures the **angle between vectors** and is commonly used to deter
 #### Example
 
 ```4d
-var $vector : 4D.Vector := 4D.Vector.new([0.123, -0.456, 0.789]) 
-var $anotherVector : 4D.Vector := 4D.Vector.new([0.598, -0.951, 0.789])
+var $vector : 4D.Vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
+var $anotherVector : 4D.Vector := 4D.Vector.new([0.598; -0.951; 0.789])
 var $similarity := $vector.cosineSimilarity($anotherVector)
 ```
 
@@ -145,8 +145,8 @@ This metric reflects both **similarity** and **magnitude**, and is generally use
 
 
 ```4d
-var $vector : 4D.Vector := 4D.Vector.new([0.123, -0.456, 0.789]) 
-var $anotherVector : 4D.Vector := 4D.Vector.new([0.598, -0.951, 0.789])
+var $vector : 4D.Vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
+var $anotherVector : 4D.Vector := 4D.Vector.new([0.598; -0.951; 0.789])
 var $score := $vector.dotSimilarity($anotherVector)
 
 ```
@@ -182,8 +182,8 @@ This measures the straight-line distance in the vector space. It is recommended 
 
 
 ```4d
-var $vector : 4D.Vector := 4D.Vector.new([0.123, -0.456, 0.789]) 
-var $anotherVector : 4D.Vector := 4D.Vector.new([0.598, -0.951, 0.789])
+var $vector : 4D.Vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
+var $anotherVector : 4D.Vector := 4D.Vector.new([0.598; -0.951; 0.789])
 var $distance := $vector.euclideanDistance($anotherVector)
 
 ```
