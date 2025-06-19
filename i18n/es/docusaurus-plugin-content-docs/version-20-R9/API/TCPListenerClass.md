@@ -87,15 +87,15 @@ La función `4D.TCPListener.new()` <!-- REF #4D.TCPListener.new().Summary -->cre
 
 In the *options* parameter, pass an object to configure the listener and all the `TCPConnections` it creates:
 
-| Propiedad    | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                   | Por defecto |
-| ------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| onConnection | Formula | Callback when a new connection is established. The Formula receives two parameters (*$listener* and *$event*, see below) and must return either null/undefined to prevent the connection or an *option* object that will be used to create the [`TCPConnection`](./TCPConnectionClass.md). | Indefinido  |
-| onError      | Formula | Retrollamada activada en caso de error. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                                              | Indefinido  |
-| onTerminate  | Formula | Callback triggered just before the TCPListener is closed. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                            | Indefinido  |
+| Propiedad    | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                            | Por defecto |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| onConnection | Formula | Llamada de retorno cuando se define una nueva conexión. The Formula receives two parameters (*$listener* and *$event*, see below) and must return either null/undefined to prevent the connection or an *option* object that will be used to create the [`TCPConnection`](./TCPConnectionClass.md). | Indefinido  |
+| onError      | Formula | Retrollamada activada en caso de error. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                                                       | Indefinido  |
+| onTerminate  | Formula | Retrollamada activada justo antes de que se cierre el TCPListener. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                            | Indefinido  |
 
 #### Función callback (retrollamada)
 
-Callback functions receive up to two parameters:
+Las funciones de retrollamada reciben hasta dos parámetros:
 
 | Parámetros | Tipo                                        | Descripción                                           |
 | ---------- | ------------------------------------------- | ----------------------------------------------------- |
