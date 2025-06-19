@@ -378,7 +378,7 @@ shared singleton Class constructor()
 
 ### Ejemplo de validación de correo electrónico con $4DSID
 
-1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
+1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. Se genera un OTP correspondiente a la sesión actual. An URL is then returned with this OTP given in the $4DSID parameter.
 
 ```4d
 //cs.Users class
