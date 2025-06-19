@@ -321,14 +321,14 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
  End if
 ```
 
-### `Class Constructor`
+### `Class constructor`
 
 #### Sintaxis
 
 ```4d
 // Class: MyClass
-{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
-// código
+{shared} {{session} singleton} Class constructor({$parameterName : type; ...})
+// code
 ```
 
 :::note
@@ -354,7 +354,7 @@ Utilizando la palabra clave `singleton` se crea un **singleton**, utilizado para
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-Class Constructor ($name : Text ; $age : Integer)
+Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
 ```
@@ -417,7 +417,7 @@ Si omite el tipo en la línea de declaración, la propiedad se crea como una var
 
 :::info
 
-La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de cualquier bloque `Function` o `Class Constructor`.
+The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
 
 :::
 
@@ -673,11 +673,11 @@ La propiedad [`.isShared`](../API/ClassClass.md#isshared) de los objetos de la C
 
 ### Creación de una clase compartida
 
-Para crear una clase compartida, añada la palabra clave `shared` antes del [Class Constructor](#class-constructor). Por ejemplo:
+To create a shared class, add the `shared` keyword before the [Class constructor](#class-constructor). Por ejemplo:
 
 ```4d
 	//shared class: Person
-shared Class Constructor($firstname : Text; $lastname : Text)
+shared Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -697,12 +697,12 @@ Si una función definida al interior de una clase compartida modifica objetos de
 Para crear una función compartida, añada la palabra clave `shared` antes de la palabra clave [Function](#function) en una clase compartida. Por ejemplo:
 
 ```4d
-//clase compartida Foo
-shared Class Constructor()
+	//shared class Foo
+shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
-  This.variable:=$value //no es necesario llamar use/end use
+  This.variable:=$value //no need to call use/end use
 ```
 
 :::note
@@ -745,7 +745,7 @@ Una vez instanciado, existe una clase singleton (y su singleton) siempre que exi
 
 Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) antes del [`Class constructor`](#class-constructor):
 
-- Para declarar una clase singleton (proceso), escriba `singleton Class Constructor()`.
+- To declare a (process) singleton class, write `singleton Class constructor()`.
 - Para declarar una clase singleton compartida, escribe `shared singleton Class constructor()`.
 - Para declarar una clase singleton de sesión, escriba `session singleton Class constructor()`.
 
@@ -770,7 +770,7 @@ La propiedad [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) de
 
 ```4d
 	//class: ProcessTag
-singleton Class Constructor()
+singleton Class constructor()
  This.tag:=Random
 ```
 
