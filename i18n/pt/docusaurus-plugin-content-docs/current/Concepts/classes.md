@@ -325,8 +325,8 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 ```4d
 // Class: MyClass
-{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
-// código
+{shared} {{session} singleton} Class constructor({$parameterName : type; ...})
+// code
 ```
 
 :::note
@@ -347,12 +347,20 @@ Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada 
 
 Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. Para obter mais informações, consulte o parágrafo [classes do Singleton](#singleton-classes).
 
+:::note
+
+[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1).
+
+:::
+
 #### Exemplo
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass Class Constructor ($name : Text)
+// Class constructor of MyClass
+Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
+ This.age:=$age
 ```
 
 ```4d
@@ -413,7 +421,7 @@ Se você omitir o tipo na linha de declaração, a propriedade é criada como um
 
 :::info
 
-A palavra-chave `property` só pode ser utilizada em métodos de classe e fora de qualquer bloco `Function` ou `Class Constructor`.
+The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
 
 :::
 
@@ -499,6 +507,12 @@ $o.age:="Smith"  //error com a sintaxe checada
 
 Se a propriedade não for acedida, o código nunca é executado.
 
+:::note
+
+[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) benefit from an extended implementation of computed properties with [two additional functions](../ORDA/ordaClasses.md#computed-attributes-1): `query` and `orderBy`.
+
+:::
+
 As propriedades computadas são concebidas para tratar dados que não precisam de ser guardados na memória. São geralmente baseados em propriedades persistentes. Por exemplo, se um objeto de classe contiver como propriedade persistente o *preço bruto* e a *taxa de IVA*, o *preço líquido* poderia ser tratado por uma propriedade calculada.
 
 No arquivo de definição de classe, as declarações de propriedade computadas usam as palavras-chave `Função` (a *getter*) e `Function set` (as *setter*), seguido pelo nome da propriedade. O nome deve estar em conformidade com as [regras de nomenclatura de propriedades](Concepts/identifiers.md#object-properties).
@@ -512,6 +526,12 @@ Se as funções forem declaradas em uma [classe compartilhada](#shared-classes),
 O tipo da propriedade calculada é definido pela declaração de tipo `$return` do *getter*. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
 
 > A atribuição de *undefined* a uma propriedade de objeto apaga seu valor enquanto preserva seu tipo. Para fazer isso, a `Function get` é chamada primeiro para recuperar o tipo de valor, em seguida, a `Function set` é chamada com um valor vazio desse tipo.
+
+:::note
+
+ORDA entity classes can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1).
+
+:::
 
 #### Exemplo 1
 
@@ -669,11 +689,11 @@ O [`.isShared`](../API/ClassClass.md#isshared) propriedade de objetos de Classe 
 
 ### Criação de uma classe compartilhada
 
-Para criar uma classe compartilhada, adicione a palavra-chave `shared` antes do [Construtor de Classe](#class-constructor). Por exemplo:
+To create a shared class, add the `shared` keyword before the [Class constructor](#class-constructor). Por exemplo:
 
 ```4d
 	//shared class: Person
-shared Class Constructor($firstname : Text; $lastname : Text)
+shared Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -693,12 +713,12 @@ Se uma função definida dentro de uma classe compartilhada modificar objetos da
 Para criar uma função compartilhada, adicione a palavra-chave `shared` antes da palavra-chave [Function](#function) em uma classe compartilhada. Por exemplo:
 
 ```4d
-//classe compartilhada Foo
-shared Class Constructor()
+	//shared class Foo
+shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
-  This.variable:=$value //não é necessário chamar use/end use
+  This.variable:=$value //no need to call use/end use
 ```
 
 :::note
@@ -741,7 +761,7 @@ Once instantiated, a singleton class (and its singleton) exists as long as a ref
 
 Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) antes do [`Class constructor`](#class-constructor):
 
-- Para declarar uma classe singleton (process), escreva `singleton Class Constructor()`.
+- To declare a (process) singleton class, write `singleton Class constructor()`.
 - To declare a shared singleton class, write `shared singleton Class constructor()`.
 - To declare a session singleton class, write `session singleton Class constructor()`.
 
@@ -766,7 +786,7 @@ A propriedade [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) d
 
 ```4d
 	//class: ProcessTag
-singleton Class Constructor()
+singleton Class constructor()
  This.tag:=Random
 ```
 
