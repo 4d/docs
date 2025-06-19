@@ -23,7 +23,9 @@ https://platform.openai.com/docs/api-reference/images/object
 
 **asBlob**() : 4D.Blob
 
-\| 関数の戻り値| 4D.Blob | 生成された画像をそのURL またはbase64 エンコードのJSON に基づいてBlob 形式へと変換します。 |
+| 引数  | 型                       | 説明                                                                                                     |
+| --- | ----------------------- | ------------------------------------------------------------------------------------------------------ |
+| 戻り値 | 4D.Blob | Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
 
 #### 使用例
 
@@ -35,7 +37,9 @@ var $blob:=$image.asBlob()
 
 **asPicture**() : Picture
 
-\| 関数の戻り値| Picture | Blob に変換された画像からピクチャーオブジェクトを作成します。 |
+| 引数  | 型       | 説明                                                                      |
+| --- | ------- | ----------------------------------------------------------------------- |
+| 戻り値 | Picture | Creates a picture object from the blob converted image. |
 
 #### 使用例
 
