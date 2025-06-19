@@ -55,7 +55,7 @@ MyLength:=Length("How did I get here?")
 
 呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 通常、引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言します。
 
-- クラス関数の場合、引数は関数のプロトタイプとともに宣言されます。つまり、`Function` または `Class Constructor` キーワードを使うときに宣言されます。
+- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class constructor` keywords.
 - メソッドの場合 (プロジェクトメソッド、フォームオブジェクトメソッド、データベースメソッド、トリガー)、引数はメソッドコード先頭の `#DECLARE` キーワードを使って宣言されます。
 
 例:
