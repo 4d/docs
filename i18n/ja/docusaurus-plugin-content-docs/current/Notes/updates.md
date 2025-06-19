@@ -5,6 +5,12 @@ title: リリースノート
 
 ## 4D 20 R10
 
+#### ハイライト
+
+- Handling of [ORDA events on data](../ORDA/orda-events.md).
+
+## 4D 20 R10
+
 [**4D 20 R10の新機能**](https://blog.4d.com/en-whats-new-in-4d-20-R10/) 4D 20 R10 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
