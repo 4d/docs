@@ -3,21 +3,21 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-System workers allow the 4D code to call any external process (a shell command, PHP, etc.) na mesma máquina. Os trabalhadores do sistema são chamados assíncronos. Ao utilizar os callbacks, 4D torna possível a comunicação de ambas as maneiras.
+Os System workers permitem que o código 4D chame qualquer processo externo (um comando shell, PHP, etc.) na mesma máquina. Os trabalhadores do sistema são chamados assíncronos. Ao utilizar os callbacks, 4D torna possível a comunicação de ambas as maneiras.
 
-The `SystemWorker` class is available from the `4D` class store.
+A classe `SystemWorker` está disponível na loja da classe `4D`.
 
 ### Exemplo
 
 ```4d
-    // Windows example to get access to the ipconfig information
+    // Exemplo Windows para obter acesso à informação ipconfig
 var $myWinWorker : 4D.SystemWorker
 var $ipConfig : Text
 $myWinWorker:= 4D.SystemWorker.new("ipconfig")
 $ipConfig:=$myWinWorker.wait(1).response //timeout 1 second
 
-    // macOS example to change the permissions for a file on macOS
-    // chmod is the macOS command used to modify file access
+    // exemplo macOS para mudar as permissões de um ficheiro no macOS
+    // chmod é o comando macOS usado para modificar o acesso a ficheiros
 var $myMacWorker : 4D.SystemWorker
 $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
@@ -75,11 +75,11 @@ A função `4D.SystemWorker.new()` <!-- REF #4D.SystemWorker.new().Summary --> c
 
 O objecto worker do sistema devolvido pode ser utilizado para postar mensagens ao worker e obter a saída do worker.
 
-If an error occurs during the creation of the proxy object, the function returns a `null` object and an error is thrown.
+Se ocorrer um erro durante a criação do objeto proxy, a função retornará um objeto `null` e um erro será lançado.
 
-In the *commandLine* parameter, pass the full path of the application's file to be executed (posix syntax), as well as any required arguments, if necessary. If you pass only the application name, 4D will use the `PATH` environment variable to locate the executable.
+No parâmetro *commandLine*, passe o caminho completo do arquivo do aplicativo a ser executado (sintaxe posix), bem como os argumentos necessários, se for o caso. Se você passar apenas o nome da aplicação, o 4D usará a variável de ambiente `PATH` para localizar o executável.
 
-**Advertência**: esta função só pode lançar aplicações executáveis; não pode executar instruções que fazem parte da shell (intérprete de comandos). For example, under Windows it is not possible to use this command to execute the `dir` instruction.
+**Advertência**: esta função só pode lançar aplicações executáveis; não pode executar instruções que fazem parte da shell (intérprete de comandos). Por exemplo, no Windows não é possível usar este comando para executar a instrução `dir`.
 
 #### Objeto *options*
 
@@ -95,7 +95,7 @@ No parâmetro *options*, passe um objeto que possa conter as seguintes proprieda
 | timeout          | Number     | indefinido | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                                                                                                                     |
 | dataType         | Text       | "text"     | Tipo de conteúdo do corpo da resposta. Valores possíveis: "text" (predefinição), "blob".                                                                                                                                                                                                                                                   |
 | encoding         | Text       | "UTF-8"    | Somente se `dataType="text"`. Codificação do conteúdo do corpo da resposta. Para obter a lista de valores disponíveis, consulte a descrição do comando [`CONVERT FROM TEXT`](../commands-legacy/convert-from-text.md)                                                                                                                                                         |
-| variables        | Object     |            | Define variáveis de ambiente personalizadas para o system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o system worker herda do ambiente 4D. |
+| variables        | Object     |            | Define variáveis de ambiente personalizadas para o system worker. Sintaxe: `variáveis.key=valor`, onde `chave` é o nome da variável e `valor` seu valor. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o system worker herda do ambiente 4D. |
 | currentDirectory | Folder     |            | Directório de trabalho no qual o processo é executado                                                                                                                                                                                                                                                                                                                                                         |
 | hideWindow       | Parâmetros | true       | (Windows) Esconder a janela de aplicação (se possível) ou a consola Windows                                                                                                                                                                                                                                                                                             |
 
@@ -196,7 +196,7 @@ $sw.wait() //execução síncrona
 
 ```
 
-2. To launch an independent "graphic" application, it is preferable to use the `open` system command (in this case, the code has the same effect as double-clicking the application):
+2. Para iniciar um aplicativo "gráfico" independente, é preferível usar o comando de sistema `open` (nesse caso, o código tem o mesmo efeito de um clique duplo no aplicativo):
 
 ```4d
 var $sw : 4D.SystemWorker
@@ -282,25 +282,25 @@ Function _createFile($title : Text; $textBody : Text)
 
 A função `.closeInput()` <!-- REF #SystemWorkerClass.closeInput().Summary -->fecha o fluxo de entrada (*stdin*) do processo externo<!-- END REF -->.
 
-When the executable waits for all data to be received through `postMessage()`, `.closeInput()` is useful to indicate to the executable that data sending is finished and that it can proceed.
+Quando o executável esperar que todos os dados sejam recebidos através de `postMessage()`, `. loseInput()` é útil para indicar ao executável que o envio de dados foi concluído e que pode prosseguir.
 
 #### Exemplo
 
 ```4D
-// Create some data to gzip
+// Crie alguns dados para gzip
 var $input;$output : Blob
 var $gzip : Text
 TEXT TO BLOB("Hello, World!";$input)
 $gzip:="\"C:\\Program Files (x86)\\GnuWin32\\bin\\gzip.exe\" "
 
-// Create an asynchronous system worker
+// Criar um system worker assíncrono
 var $worker : 4D.SystemWorker
-$worker:= 4D.SystemWorker.new($gzip;New object("dataType";"blob"))
+$worker:= 4D.SystemWorker.new($gzip;New object("dataType"; "blob"))
 
-// Send the compressed file on stdin.
+// Envie o arquivo compactado para stdin.
 $worker.postMessage($input)
-// Note that we call closeInput() to indicate we're done.
-// gzip (and most program waiting data from stdin) will wait for more data until the input is explicitely closed.
+// Observe que chamamos closeInput() para indicar que terminamos.
+// O gzip (e a maioria dos programas que aguardam dados do stdin) aguardará mais dados até que a entrada seja explicitamente fechada.
 $worker.closeInput()
 $worker.wait()
 
@@ -559,9 +559,9 @@ Essa propriedade é **somente leitura**.
 
 A função `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera até o final da execução do `SystemWorker` ou o *timeout* especificado ser alcançado<!-- END REF -->.
 
-The `.wait()` function waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached(If any is defined), or an error has occured. Se *timeout* for alcançado, o `SystemWorker` não é morto.
+A função `.wait()` aguarda até o final do processamento da fórmula `onTerminate`, exceto se o *timeout* for atingido (se houver algum definido) ou se ocorrer um erro. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 
-If you pass a *timeout* value, .wait() waits for the external process for the amount of time defined in the *timeout* parameter.
+Se você passar um valor de *timeout*, .wait() aguardará o processo externo durante o tempo definido no parâmetro *timeout*.
 
 :::note
 
@@ -569,6 +569,6 @@ Durante a execução do `.wait()`, as funções de retorno de chamada são execu
 
 :::
 
-> This function is not necessary if you created the `SystemWorker` from a 4D worker process.
+> Essa função não é necessária se você criou o `SystemWorker` a partir de um processo de trabalho 4D.
 
 <!-- END REF -->
