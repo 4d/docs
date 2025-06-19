@@ -22,7 +22,7 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 | `terminated`  | Boolean    | A Boolean indicating whether the HTTP request was terminated.                                                  |
 | `headers`     | Object     | Returns the response headers as an object.                                                                     |
 | `rateLimit`   | Object     | Returns rate limit information from the response headers.                                                      |
-| `utilización` | Object     | Returns usage information from the response body if any.                                                       |
+| `utilización` | Object     | Devuelve la información de uso del cuerpo de la respuesta, si existe.                                          |
 
 ### rateLimit
 
