@@ -6,11 +6,11 @@ title: Página de Backup
 
 Uma cópia de segurança pode ser iniciada de três maneiras:
 
-- Manualmente, utilizando el comando **Copia de seguridad...** del menú 4D **Archivo** o el botón **Copia de seguridad** del [Centro de mantenimiento y seguridad](MSC/backup.md).
+- Manualmente, usando o comando **Backup...** do menu **Arquivo** de 4D ou o botão **Backup** do [Centro de segurança e manutenção](MSC/backup.md).
 - Automaticamente, usando o agendamento  que pode ser estabelecido em Configurações de Banco de Dados
 - Por programação, utilizando o comando `BACKUP`.
 
-> 4D Server: Um backup pode ser iniciado manualmente a partir de uma máquina remota usando um método que chama o comando `BACKUP`. O comando será executado, em todos os casos, no servidor.
+> 4D Server: um backup pode ser iniciado manualmente a partir de uma máquina remota usando um método que chama o comando `BACKUP`. O comando será executado, em todos os casos, no servidor.
 
 ## Cópia de segurança manual
 
@@ -27,7 +27,7 @@ O botão **Database properties...** faz com que a página Backup/Configuration (
 
 ## Backup automático periódico
 
-As cópias de segurança programadas são iniciadas automaticamente. Se configuran en la página **Backup/Planificador** de las \*\* Propiedades\*\*.
+As cópias de segurança programadas são iniciadas automaticamente. Eles são configurados na página **Backup/Scheduler** das **Configurações**.
 
 As cópias de segurança são feitas automaticamente na hora definida nessa página sem nenhum tipo de intervenção do usuário. Para obter mais informações sobre como usar essa caixa de diálogo, consulte [Agendador nas configurações de backup](settings.md#scheduler).
 
@@ -62,9 +62,9 @@ Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o ac
 
 Pode acontecer que uma cópia de segurança não seja executada corretamente. Pode haver várias causas de falha na cópia de segurança: interrupção do usuário, arquivo adjunto não encontrado, problemas no disco de destino, transação incompleta, etc. 4D processa a incidência segundo a causa.
 
-Em todos os casos tenha em mente que o status do último backup (bem sucedido ou falhado) é armazenado na última área de Informações de Backup da página de [Backup na MSC](MSC/backup. d) ou na **página de manutenção** do servidor 4D, bem como no **Backup do journal.txt**.
+Em todos os casos tenha em mente que o status do último backup (bem sucedido ou falhado) é armazenado na última área de Informações de Backup da página de [Backup na MSC](MSC/backup.md) ou na **página de manutenção** do servidor 4D, bem como no **Backup do journal.txt**.
 
-- \*\*Interrupção de Usuário: The Botão Parar na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para sendo gerado o erro 1406. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
+- **Interrupção de Usuário**: o botão **Parar** na caixa de diálogo de progresso permite aos usuários interromper o processo de cópia de segurança a qualquer momento. Nesse caso, a cópia de elementos para sendo gerado o erro 1406. Você pode interceptar esse erro no método de banco de dados `On Backup Shutdown`.
 - **Arquivo anexado não encontrado**: Quando um arquivo anexado não pode ser encontrado, 4D realiza um backup parcial (backup de arquivos de aplicação e arquivos anexados acessíveis) e retorna um erro.
 - **Backup impossível** (o disco está cheio ou protegido contra gravação, falta de disco, falha de disco, transação incompleta, aplicativo não iniciado no momento do backup automático programado, etc.):
   Se esse for um erro de primeira vez, 4D fará uma segunda tentativa de realizar o backup. A espera entre as duas tentativas é definida na página **Backup/Backup & Restore** nas Configurações.
@@ -80,7 +80,7 @@ O histórico de cópia de segurança é chamado "Backup Journal[001].txt" e fica
 
 Em determinadas estratégias de copia de segurança (por exemplo, no caso de que se realizem copias de segurança de numerosos arquivos anexos), o histórico de cópias de segurança pode alcançar rapidamente um grande tamanho. Dois mecanismos podem ser usados para controlar este tamanho:
 
-- **Backup automático**: Antes de cada backup, o aplicativo examina o tamanho do arquivo de diário de backup atual. Se for superior a 10 MB, se arquiva o arquivo atual e é criado um arquivo com o número [xxx] incrementado, por exemplo "Backup Journal[002].txt”. Quando o arquivo número 999 for alcançado, a numeração volta para 1 e os arquivos existentes começam a ser substituídos.
+- **Backup automático**: antes de cada backup, o aplicativo examina o tamanho do arquivo de diário de backup atual. Se for superior a 10 MB, se arquiva o arquivo atual e é criado um arquivo com o número [xxx] incrementado, por exemplo "Backup Journal[002].txt”. Quando o arquivo número 999 for alcançado, a numeração volta para 1 e os arquivos existentes começam a ser substituídos.
 - **Possibilidade de reduzir a quantidade de informações registradas**: Para fazer isso, basta modificar o valor da chave `VerboseMode` no arquivo *Backup.4DSettings* do projeto. Como padrão, essa chave é definida como True. Se mudar o valor desta chave a False, só se armazenará no diário de copias de segurança a informação principal: data e hora de inicio da operação  e os erros encontrados. As chaves XML relativas à configuração de backup são descritas no manual *Backup das chaves XML 4D*.
 
 ## backupHistory.json
