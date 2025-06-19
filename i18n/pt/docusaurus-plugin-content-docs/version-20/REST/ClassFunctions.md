@@ -439,14 +439,14 @@ Corpo do pedido:
 Neste exemplo, associamos uma escola existente a uma entidade Students. A classe `StudentEntity` tem um API:
 
 ```
-// StudentsEntity class
+// Classe StudentsEntity
 
 Class extends Entity
 
 exposed Function putToSchool($school : Object) -> $status : Object
 
-        //$school is a Schools entity
-        //Associate the related entity school to the current Students entity
+        //$school é uma entidade Schools
+        //Associar a entidade relacionada school à entidade Students atual
     This.school:=$school
 
     $status:=This.save()
