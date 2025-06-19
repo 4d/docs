@@ -23,7 +23,7 @@ https://platform.openai.com/docs/api-reference/models
 | *parámetros* | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.   |
 | Resultado    | [OpenAIModelResult](OpenAIModelResult.md) | El resultado del modelo                                  |
 
-Retrieves a model instance to provide basic information.
+Recupera una instancia del modelo para ofrecer información básica.
 
 https://platform.openai.com/docs/api-reference/models/retrieve
 
