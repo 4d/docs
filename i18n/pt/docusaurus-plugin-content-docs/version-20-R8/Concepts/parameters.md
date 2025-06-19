@@ -55,7 +55,7 @@ The legacy declaration syntax, where parameters are automatically copied in sequ
 
 Dentro de métodos ou funções de classe chamados, valores parâmetros são atribuidos à variáveis locais. Normalmente, você declara os parâmetros usando um **nome do parâmetro** junto com um **tipo de parâmetro**, separados por dois pontos.
 
-- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
+- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class constructor` keywords.
 - Para métodos (métodos de projeto, métodos de objeto de formulário, métodos de banco de dados e acionadores), os parâmetros são declarados usando a palavra-chave `#DECLARE` no início do código do método.
 
 Exemplos:
