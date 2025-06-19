@@ -5,6 +5,12 @@ title: Notas del lanzamiento
 
 ## 4D 20 R10
 
+#### Lo más destacado
+
+- Handling of [ORDA events on data](../ORDA/orda-events.md).
+
+## 4D 20 R10
+
 Lea [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R10/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R10.
 
 #### Lo más destacado
@@ -20,7 +26,7 @@ Lea [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R10/)
 #### Cambios de comportamiento
 
 - En Windows, las fuentes de impresora actuales destinadas únicamente a la impresión (es decir, no se pueden utilizar en pantalla) ya no son cargadas al inicio por 4D.
-- The *MeCab* library has been removed. This change only affects the processing of Japanese text.
+- The *MeCab* library has been removed. Este cambio sólo afecta al tratamiento del texto en japonés.
 
 ## 4D 20 R9
 
