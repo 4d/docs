@@ -31,7 +31,7 @@ El comando soporta dos sintaxis:
 
   The following value types are supported in both syntaxes: Text, Number, Time, Date, Picture and Object (formulas or named formulas returning a row element).
 
-The default cell alignment will depend on the value type:
+La alineación predeterminada de las celdas dependerá del tipo de valor:
 
 - texto: alineación izquierda
 - imágenes: centrado
