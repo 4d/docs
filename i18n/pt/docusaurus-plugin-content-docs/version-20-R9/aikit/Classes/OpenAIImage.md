@@ -23,7 +23,9 @@ https://platform.openai.com/docs/api-reference/images/object
 
 **asBlob**() : 4D.Blob
 
-\| Function result| 4D.Blob | Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
+| Parâmetro | Tipo                     | Descrição                                                                                              |
+| --------- | ------------------------ | ------------------------------------------------------------------------------------------------------ |
+| Resultado | 4D. Blob | Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
 
 #### Exemplo de uso
 
@@ -35,7 +37,9 @@ var $blob:=$image.asBlob()
 
 **asPicture**() : Picture
 
-\| Function result| Picture | Creates a picture object from the blob converted image. |
+| Parâmetro | Tipo   | Descrição                                                               |
+| --------- | ------ | ----------------------------------------------------------------------- |
+| Resultado | Imagem | Creates a picture object from the blob converted image. |
 
 #### Exemplo de uso
 
