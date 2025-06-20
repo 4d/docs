@@ -72,7 +72,7 @@ A janela de erro de sintaxe propõe várias opções:
 
 :::tip
 
-To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Mantenha pressionada a tecla Alt (Windows) ou Opção (macOS) e clique no botão Continuar na primeira vez que ele aparecer. O botão rótulo muda para **Ignorar** se a caixa de diálogo for chamada novamente para o mesmo erro.
+Para ignorar um erro que ocorre repetidamente (por exemplo, em loops), você pode transformar o botão **Continuar** em um botão **Ignorar**. Mantenha pressionada a tecla Alt (Windows) ou Opção (macOS) e clique no botão Continuar na primeira vez que ele aparecer. O botão rótulo muda para **Ignorar** se a caixa de diálogo for chamada novamente para o mesmo erro.
 
 :::
 
