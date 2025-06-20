@@ -345,7 +345,7 @@ Só pode haver uma função de construtor em uma classe (caso contrário um erro
 
 Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada apenas para instanciar objetos compartilhados. Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
 
-Using the `singleton` keyword creates a **singleton**, used to create a single instance of the class. A `session singleton` creates a single instance per session. Para obter mais informações, consulte o parágrafo [classes do Singleton](#singleton-classes).
+O uso da palavra-chave `singleton` cria um **singleton**, usado para criar uma única instância da classe. A `session singleton` creates a single instance per session. Para obter mais informações, consulte o parágrafo [classes do Singleton](#singleton-classes).
 
 :::note
 
@@ -838,7 +838,7 @@ shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
   This.vehicleBuilt+=1
 ```
 
-You can then call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in the application on your machine with a single line:
+Em seguida, você pode chamar o singleton **cs.VehicleFactory** para obter um novo veículo de qualquer lugar da aplicação em sua máquina com uma única linha:
 
 ```4d
 $vehicle:=cs.VehicleFactory.me.buildVehicle("caminhão")
