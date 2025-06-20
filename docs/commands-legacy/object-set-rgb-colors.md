@@ -50,12 +50,12 @@ Here are the methods for these objects:
 ```4d
   //vsColorValue non-enterable Object Method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsColorValue:="0x00000000"
  End case
   // vsColor non-enterable variable Object Method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsColor:=""
        OBJECT SET RGB COLORS(vsColor;0x00FFFFFF;0x0000)
  End case

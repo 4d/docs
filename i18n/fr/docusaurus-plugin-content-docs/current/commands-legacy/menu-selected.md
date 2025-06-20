@@ -44,7 +44,7 @@ La méthode formulaire suivante utilise la fonction **Menu selected** pour fourn
 
 ```4d
  Case of
-    :(FORM Event=On Menu Selected)
+    :(FORM Event.code=On Menu Selected)
        C_STRING(16;$refMenuIncludingItem)
        var $ref;$NumMenu;$NumMenuItem : Integer
        $ref:=Menu selected($refMenuIncludingItem)

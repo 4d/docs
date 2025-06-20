@@ -28,7 +28,7 @@ Este exemplo é um modelo para um método de formulário. Mostra cada evento pos
  $vpFormTable:=Current form table
  Case of
   // ...
-    :(FORM Event=On Header)
+    :(FORM Event.code=On Header)
   // Se vai imprimir a área de cabeçalho
        Case of
           :(Before selection($vpFormTabela->))
@@ -39,10 +39,10 @@ Este exemplo é um modelo para um método de formulário. Mostra cada evento pos
   // O código para a quebra do cabeçalho nível 2 deve ir aqui
   // ...
        End case
-    :(FORM Event=On Printing Details)
+    :(FORM Event.code=On Printing Details)
   // Se vai imprimir um registro
   // O código para cada registro vai aqui
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
   // Se vai imprimir uma área de quebra
        Case of
           :(Level=0)
@@ -51,7 +51,7 @@ Este exemplo é um modelo para um método de formulário. Mostra cada evento pos
   // O código para a quebra 1 vai aqui
   // ...
        End case
-    :(FORM Event=On Printing Footer)
+    :(FORM Event.code=On Printing Footer)
        If(End selection($vpFormTabela->))
   // O código para o último rodapé deve ir aqui
        Else

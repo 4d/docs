@@ -26,7 +26,7 @@ Utilizando uma área de rolagem chamada *atVolumes*,se quiser mostrar a lista de
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        ARRAY TEXT(atVolumes;0)
        VOLUME LIST(atVolumes)
  

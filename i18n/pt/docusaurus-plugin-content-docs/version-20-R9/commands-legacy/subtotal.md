@@ -30,7 +30,7 @@ O exemplo a seguir é um método de objeto numa área de quebra de um formulári
 
 ```4d
  Case of
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
        vSalario:=Subtotal([Empregados]Salario)
  End case
 ```

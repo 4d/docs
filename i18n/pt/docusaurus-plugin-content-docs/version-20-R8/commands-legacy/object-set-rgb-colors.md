@@ -51,13 +51,13 @@ Estes são os métodos destes objetos:
 ```4d
   // Método de objeto da variável não editável vsCorValor
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsCorValor:="0x00000000"
  End case
  
   // Método de objeto da variável não editável vsCor
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsColor:=""
        OBJECT SET RGB COLORS(vsCor;0x00FFFFFF;0x0000)
  End case

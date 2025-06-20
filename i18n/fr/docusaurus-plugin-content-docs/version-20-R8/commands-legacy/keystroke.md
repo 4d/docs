@@ -105,10 +105,10 @@ Une fois que vous avez ajouté cette méthode projet à votre application, vous 
 ```4d
   // Méthode objet de la zone saisissable MonObjet
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        MonObjet:=""
        MonObjetCaché:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Gérer frappe clavier(->MonObjet;->MonObjetCaché))
   // Effectuer des actions appropriées par rapport à la valeur stockée dans MonObjetCaché
        End if
@@ -124,12 +124,12 @@ Il est composé des objets suivants : une zone saisissable *vaRecherche*, une zo
 ```4d
   // Méthode objet de la zone saisissable vaRecherche
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vaRecherche:=""
        vaRésultat:=""
        vaMessage:="Saisissez les premiers caractères de la ville que vous cherchez."
        CLEAR VARIABLE(taRecherche)
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Gérer frappe clavier(->vaRecherche;->vaRésultat))
           If(vaRésultat#"")
              QUERY([Codes postaux];[Codes postaux]Ville=vaRésultat+"@")

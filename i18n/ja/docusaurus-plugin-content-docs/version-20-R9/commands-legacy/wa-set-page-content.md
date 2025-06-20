@@ -34,11 +34,7 @@ Windows では、この引数は効果がなく、ベースURLは指定されま
 "Hello world!" を表示して、ベースURL を"file:///" にします (Mac OS のみ):
 
 ```4d
- WA SET PAGE CONTENT(MyWArea;"
-
-[Hello World!]
-
-";"file:///")
+WA SET PAGE CONTENT(MyWArea;"<html><body><h1>Hello World!</h1></body></html>";"file:///")
 ```
 
 ## 参照 

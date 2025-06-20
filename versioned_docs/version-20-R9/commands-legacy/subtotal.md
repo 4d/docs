@@ -31,7 +31,7 @@ The following example is a one-line object method in a Break area of a form (B0,
 
 ```4d
  Case of
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
        vSalary:=Subtotal([Employees]Salary)
  End case
 ```

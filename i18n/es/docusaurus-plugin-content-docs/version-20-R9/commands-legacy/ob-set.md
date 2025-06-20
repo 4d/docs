@@ -153,7 +153,7 @@ Usted quiere exportar datos en JSON que contienen una fecha 4D que desea convert
 En un método formulario, puede escribir:
 
 ```4d
- If(FORM Event=On Validate)
+ If(FORM Event.code=On Validate)
     OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
     OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
  End if

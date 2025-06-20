@@ -80,7 +80,7 @@ Se quiser exportar o método abaixo "simple\_init" :
 ```4d
  Case of
 
-:(FORM Event=On Load)
+:(FORM Event.code=On Load)
        ALL RECORDS([Customer])
  End case
 

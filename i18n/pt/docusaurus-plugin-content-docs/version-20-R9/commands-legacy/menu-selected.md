@@ -46,7 +46,7 @@ O método a seguir de formulário utiliza Menu selected para proporcionar os arg
 
 ```4d
  Case of
-    :(FORM Event=On Menu Selected)
+    :(FORM Event.code=On Menu Selected)
        C_STRING(16;$MenuRefIncludingItem)
        var $ref;$MenuNum;$MenuItemNum : Integer
        $ref:=Menu selected($MenuRefIncludingItem)

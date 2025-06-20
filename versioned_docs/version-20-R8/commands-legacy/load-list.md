@@ -37,10 +37,10 @@ You create a database for the international market and you need to switch to dif
 ```4d
   // hlList Hierarchical List Object Method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        var hlList : Integer
        hlList:=Load list("Std Options"+◊gsCurrentLanguage)
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
        CLEAR LIST(hlList;*)
  End case
 ```

@@ -55,7 +55,7 @@ Quando há um evento clique duplo, você comprova que existe uma expressão, e a
 
 ```4d
  Case of
-    :(FORM Event=On Double Clicked)
+    :(FORM Event.code=On Double Clicked)
        GET HIGHLIGHT(*;"StyledText_t";startSel;endSel)
        If(ST Get content type(*;"StyledText_t";startSel;endSel)=ST Expression type)
           vExpression:=ST Get expression(*;"StyledText_t";startSel;endSel)
@@ -75,7 +75,7 @@ Você quer executar um método 4D quando é feito clique em um link de um usuár
 
 ```4d
  Case of
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   //recuperamos a seleção
        HIGHLIGHT TEXT(*;"myText";startSel;endSel)
        If(startSel#endSel) //há conteúdo selecionado

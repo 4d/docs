@@ -31,7 +31,7 @@ While performing data entry in a form, you click on a button that executes a len
 ```4d
   // bAnalysis button Object Method
  Case of
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // Save current window title in a local variable
        $vsCurTitle:=Get window title
   // Start the lengthy operation

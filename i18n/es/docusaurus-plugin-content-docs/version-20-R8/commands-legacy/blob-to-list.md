@@ -37,13 +37,13 @@ En este ejemplo, el método de un formulario de entrada extrae una lista de un c
  
  Case of
  
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        hList:=BLOB to list([Cosas por hacer]Ideas)
        If(OK=0)
           hList:=New list
        End if
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
        CLEAR LIST(hList;*)
  
     :(bValidate=1)

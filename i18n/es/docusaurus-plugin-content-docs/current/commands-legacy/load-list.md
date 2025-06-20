@@ -35,10 +35,10 @@ Usted crea una base para el mercado internacional y necesita cambiar a los difer
 ```4d
   // Método de objeto de la lista jerárquica hlList
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        var hlList : Integer
        hlList:=Load list("Std Options"+◊gsIdiomaActual)
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
        CLEAR LIST(hlList;*)
  End case
 ```

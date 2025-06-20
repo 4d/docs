@@ -50,12 +50,12 @@ displayed_sidebar: docs
 ```4d
   // vsColorValue入力不可オブジェクトメソッド
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsColorValue:="0x00000000"
  End case
   // vsColor入力不可変数オブジェクトメソッド
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsColor:=""
        OBJECT SET RGB COLORS(vsColor;0x00FFFFFF;0x0000)
  End case

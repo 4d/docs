@@ -32,7 +32,7 @@ Para desativar por programação o disparador do evento de formulário On Timer,
 Imaginemos que você queira, quando um formulário aparece em tela, que o computador faça um bipe a cada três segundos. Pra fazer isso, escreva o seguinte método de formulário: 
 
 ```4d
- If(FORM Event=On Load)
+ If(FORM Event.code=On Load)
     SET TIMER(60*3)
  End if
  

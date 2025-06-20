@@ -70,14 +70,14 @@ You want to drag some private data from different objects in your form. You can 
 
 ```4d
   //source object
- If(FORM Event=On Begin Drag Over)
+ If(FORM Event.code=On Begin Drag Over)
     APPEND DATA TO PASTEBOARD("some.private.data";$data)
  End if
 ```
 
 ```4d
   //target object
- If(FORM Event=On Drag Over)
+ If(FORM Event.code=On Drag Over)
     $0:=Choose(Pasteboard data size("some.private.data")>0;0;-1)
  End if
 ```
