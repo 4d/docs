@@ -450,7 +450,7 @@ A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
 Como padrão, a pasta é copiada com o nome da pasta original. Se quiser renomear a cópia, passe o novo nome no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-Se já existir uma pasta com o mesmo nome em *destinationFolder*, por padrão 4D gera um erro. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+Se já existir uma pasta com o mesmo nome em *destinationFolder*, por padrão 4D gera um erro. Pode passar a constante `fk overwrite` no parâmetro *overwrite* para ignorar e sobrescriber o arquivo existente
 
 | Parâmetros     | Valor | Comentário                                      |
 | -------------- | ----- | ----------------------------------------------- |
@@ -547,7 +547,7 @@ A função `.files()` retorna <!-- REF #directory.files().Summary -->uma coleç�
 
 > Os apelidos ou links simbolicos não são resolvidos.
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
+Como padrão, se omitir o parâmetro *options*, só se devolvem na coleção os arquivos de primeiro nivel da pasta, assim como os arquivos ou pastas invisíveis. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
 
 | Parâmetros            | Valor | Comentário                                                       |
 | --------------------- | ----- | ---------------------------------------------------------------- |
@@ -655,7 +655,7 @@ Um objeto `Folder` ou null se *path* for inválido.
 
 A função `.folders()` <!-- REF #directory.folders().Summary -->retorna uma coleção de objetos `Folder` contidos na pasta principal<!-- END REF -->.
 
-By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
+Como padrão, se omitir o parâmetro *options*, só se devolvem as pastas no primeiro nível da pasta. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
 
 | Parâmetros            | Valor | Comentário                                                     |
 | --------------------- | ----- | -------------------------------------------------------------- |
