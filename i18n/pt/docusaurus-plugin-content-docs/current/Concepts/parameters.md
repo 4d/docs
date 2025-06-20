@@ -47,7 +47,7 @@ Os valores de entrada e saída são [avaliados](#valores-ou-referências) no mom
 
 :::info Compatibidade
 
-The legacy declaration syntax, where parameters are automatically copied in sequentially numbered local variables $0, $1, etc. and declared using compiler directives such as `C_TEXT($1;$2)`, is **deprecated** as of 4D 20 R7.
+A sintaxe de declaração herdada, em que os parâmetros são automaticamente copiados em variáveis locais numeradas sequencialmente $0, $1, etc. e declarados usando diretivas do compilador, como `C_TEXT($1;$2)`, é **depreciada** a partir de 4D 20 R7.
 
 :::
 
