@@ -502,9 +502,9 @@ Cuando se utiliza una función [class constructor](#class-constructor) (con la f
 
 Class constructor  
 
- // Create properties on This as
- // desired by assigning to them
- This.a:=42 
+    // Crear las propiedades en This 
+    // asignándolas
+    This.a:=42 
 ```
 
 ```4d
