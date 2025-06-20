@@ -68,7 +68,7 @@ Esta função não faz nada e sempre retorna **Verdadeiro** com cliente remoto, 
 
 :::
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session and returns **True** if the execution was successful<!-- END REF -->. A menos que esteja no modo ["forceLogin"](../REST/authUsers.md#force-login-mode), a sessão se torna automaticamente uma sessão de convidado.
+A função `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->remove todos os privilégios associados à sessão e retorna **True** se a execução foi bem-sucedida<!-- END REF -->. A menos que esteja no modo ["forceLogin"](../REST/authUsers.md#force-login-mode), a sessão se torna automaticamente uma sessão de convidado.
 
 :::note
 
@@ -124,7 +124,7 @@ A função `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->cria um 
 
 Para mais informações sobre os tokens OTP, consulte [esta seção](../WebServer/sessions.md#session-token-otp).
 
-By default, if the *lifespan* parameter is omitted, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. You can set a custom timeout by passing a value in seconds in *lifespan* (the minimum value is 10 seconds, *lifespan* is reset to 10 if a smaller value is passed). If an expired token is used to restore a web user session, it is ignored.
+Por padrão, se o parâmetro *lifespan* for omitido, o token será criado com o mesmo tempo de vida que o [`.idleTimeOut`](#idletimeout) da sessão. Você pode definir um tempo limite personalizado passando um valor em segundos em *lifespan* (o valor mínimo é 10 segundos, *lifespan* é redefinido para 10 se um valor menor for passado). If an expired token is used to restore a web user session, it is ignored.
 
 The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application.
 
