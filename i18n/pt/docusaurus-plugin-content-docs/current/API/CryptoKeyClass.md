@@ -441,7 +441,7 @@ A `CryptoKey` deve conter uma chave **pública** válida.
 
 The function returns a status object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches).
 
-In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+Se a assinatura não puder ser verificada por não ter sido assinada com a mesma *message*, chave ou algoritmo, o objecto `status` devolvido contém uma colecção de erros em `status.errors`.
 
 | Propriedade | Tipo       | Descrição                                                  |
 | ----------- | ---------- | ---------------------------------------------------------- |
