@@ -144,7 +144,7 @@ Várias funções aceitam um *propriedadePath* como parâmetro. Este parâmetro 
 
 ## Operadores em coleções
 
-You can use comparison operators with **collection references**, which means that you can evaluate if two or more references point to the same instance of a collection.
+É possível usar operadores de comparação com **referências de coleção**, o que significa que você pode avaliar se duas ou mais referências apontam para a mesma instância de uma coleção.
 
 ```4d
 var $c1:=["a";42] //reference to an instance
