@@ -129,7 +129,7 @@ Checking the **Build stand-alone Application** option and clicking **Build** wil
 The principle consists of merging a compiled structure file with **4D Volume Desktop** (the 4D database engine). The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
 - You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
-- You can either embed a deployment license or let the final user enter their license at the first application launch (see the [**Deployment Licenses**](../Admin/licenses.md#deployment-licenses) section).
+- You can either embed a [deployment license](../Admin/licenses.md#deployment-licenses) or let the final user enter their license at the first application launch (see [**Licenses**](#licenses) below).
 
 :::note
 
@@ -550,9 +550,9 @@ An internet connection is required on the user machine at the first launch of th
 
 #### Application automatically embedding available licenses
 
-Select this option to build a ready-to-use application (stand-alone or client-server), embedding [deployment licenses](../Admin/licenses.md#deployment-licenses) automatically. 
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically [deployment licenses](../Admin/licenses.md#deployment-licenses). 
 
-When building the application, 4D will automatically integrate necessary valid license(s) found on the machine. If multiple valid licenses are found on the machine, 4D will use the most appropriate, in the following order:
+When building the application, 4D will automatically integrate necessary valid license(s) found in the [Licenses folder](../commands-legacy/get-4d-folder.md#licenses-folder) of the machine. If there are multiple valid licenses, 4D will use the most appropriate, in the following order:
 
 1. OEM licenses, or
 2. business licenses, or

@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 In *mergedApp*, pass a [4D.Folder](../API/FolderClass.md) object containing a reference to the folder containing the built application in which you want to embed a license. 
 
-You can then [let 4D select automatically the license to use](#automatic-license) for the target or [designate the licenses to use](#designating-the-licenses-to-use).
+Depending on the second parameter, you [let 4D select automatically the license to use](#automatic-license-selection) for the target or [designate the license(s) to use](#designating-the-licenses-to-use).
 
 ### Automatic license selection
 
@@ -89,6 +89,8 @@ Use the automatic syntax to create a single-user 4D application:
 
 
 ## Example 2
+
+Designate a license to use:
 
 ```4d
  var $status : Object
