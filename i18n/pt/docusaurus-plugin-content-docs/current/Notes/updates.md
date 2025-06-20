@@ -16,6 +16,7 @@ Leia [**O que há de novo no 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d
 #### Destaques
 
 - Nova opção `connectionTimeout` no parâmetro [`options`](../API/TCPConnectionClass.md#options-parameter) da função [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
+- New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - Os UUIDs em 4D agora são gerados na **versão 7**. In previous 4D releases, they were generated in version 4.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
 - Línguagem 4D:
