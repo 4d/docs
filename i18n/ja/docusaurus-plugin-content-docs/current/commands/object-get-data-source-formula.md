@@ -21,14 +21,14 @@ title: OBJECT Get data source formula
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。 この演算子を省略した場合には *object* 引数でフィールドまたは変数を指定します。 この場合、文字列ではなくてフィールドまたは変数参照を渡します(フィールドまたは変数オブジェクトのみ)。
 
-When a formula is associated with a form object, it acts as the object's data source at runtime.
+フォームオブジェクトにフォーミュラが割り当てられている場合、それはランタイムにオブジェクトのデータソースとして振る舞います。
 
-If this command is applied to an object with no custom formula assigned, it returns the automatically assigned [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).\
-If the object does not exist or does not support formulas, it returns `Null`.
+もしこのコマンドがフォーミュラが割り当てられていないオブジェクトに対して適用された場合、コマンドは自動的に割り当てられている[ダイナミックフォーム変数](../FormObjects/properties_Object.md#ダイナミック変数)を返します。\
+フォームオブジェクトが存在しないかフォーミュラをサポートしていない場合、 `Null` を返します。
 
 ## 例題
 
-You want check what formula (if any) is bound to an object:
+オブジェクトに割り当てられているフォーミュラ(あれば)をチェックしたい場合を考えます:
 
 ```4d
 $formula:=OBJECT Get data source formula(*; "myInput")
