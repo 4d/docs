@@ -9,7 +9,7 @@ The 4D debugger is useful when you need to spot errors or monitor the execution 
 
 :::info
 
-If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+Se estiver acostumado a codificar com **VS Code**, você também pode usar esse editor para depurar o código 4D no 4D Server depois de instalar a extensão [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode).
 
 :::
 
@@ -120,7 +120,7 @@ The current state of the debugger window is automatically saved in the project. 
 - o [modo de exibição](#display-mode),
 - the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. Você pode [**fixar uma expressão**](#pinning-an-expression) para mantê-la exibida em todos os contextos.
 
-The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
+O botão **Configuração padrão da janela** restaura a posição e o tamanho padrão da janela atual (incluindo as linhas de divisão e a própria janela).
 
 ![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
@@ -321,8 +321,8 @@ Você seleciona o modo de exibição a ser usado em todas as janelas do depurado
 
 As opções abaixo estão disponíveis:
 
-- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
-- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
+- **Variáveis locais**: exibe e avalia automaticamente as variáveis locais assim que elas são inicializadas no código-fonte em execução.
+- **Expressões de linha**: exibe e avalia automaticamente o mesmo conteúdo das [Expressões de linha](#line-expressions) item da Lista de expressões.
 - **Expressões**: exibe apenas expressões personalizadas que você digitou manualmente. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
@@ -345,7 +345,7 @@ Existem várias formas de adicionar expressões à lista:
 
 Para editar uma expressão, clique nela para selecioná-la e, em seguida, clique novamente ou pressione **Enter** no seu teclado.
 
-To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
+Para excluir uma expressão personalizada, clique nela para selecioná-la e, em seguida, pressione **Backspace** ou **Delete** no teclado, ou clique no ícone **x**.
 
 :::warning
 
