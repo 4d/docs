@@ -66,7 +66,7 @@ Os comandos abaixo não são compatíveis para seu uso dentro de um componente p
 
 Todos os métodos de projeto de um projeto de matriz são, por definição, incluídos no componente (o projeto é o componente), o que significa que eles podem ser chamados e executados dentro do componente.
 
-Por outro lado, por padrão, esses métodos projeto não estarão visíveis e não poderão ser chamados no projeto host. In the matrix project, you must explicitly designate the methods that you want to share with the host project and its components by checking the **Shared by components and host project** box in the method properties dialog box:
+Por outro lado, por padrão, esses métodos projeto não estarão visíveis e não poderão ser chamados no projeto host. No projeto de matriz, você deve designar explicitamente os métodos que deseja compartilhar com o projeto host e seus componentes, marcando a caixa **Compartilhado por componentes e projeto host** na caixa de diálogo de propriedades do método:
 
 ![](../assets/en/Concepts/shared-methods.png)
 
@@ -94,11 +94,11 @@ EXECUTE METHOD($param)
 
 ## Compartilhamento de classes
 
-By default, component classes cannot be called from the 4D Code Editor of the host project. If you want your component classes to be exposed in the host project and its loaded components, you need to **declare a component namespace**. Additionally, you can control how component classes are suggested in the host Code Editor.
+By default, component classes cannot be called from the 4D Code Editor of the host project. Se quiser que suas classes de componentes sejam expostas no projeto host e em seus componentes carregados, você precisará **declarar um namespace de componente**. Additionally, you can control how component classes are suggested in the host Code Editor.
 
 ### Declaração do namespace
 
-To allow classes of your component to be exposed in the host projects and their loaded components, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. Por padrão, a área está vazia: as classes de componentes não estão disponíveis fora do contexto do componente.
+Para permitir que as classes de seu componente sejam expostas nos projetos host e em seus componentes carregados, insira um valor na opção [**Namespace do componente na class store** na página General](../settings/general.md#component-namespace-in-the-class-store) das Configurações do projeto da matriz. Por padrão, a área está vazia: as classes de componentes não estão disponíveis fora do contexto do componente.
 
 ![](../assets/en/settings/namespace.png)
 
@@ -108,7 +108,7 @@ Um namespace garante que não surja nenhum conflito quando um projeto host usar 
 
 :::
 
-When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. Por exemplo, se você digitar "eGeometry" como namespace do componente, Supondo que você criou uma classe `Rectangle` contendo uma função `getArea()`, assim que seu projeto for instalado como componente, o desenvolvedor do projeto host pode escrever:
+Ao inserir um valor, você declara que as classes de componentes estarão disponíveis no [user class store (**cs**)](../Concepts/classes.md#cs) do projeto host, bem como em seus componentes carregados, por meio do namespace `cs.<value>`. Por exemplo, se você digitar "eGeometry" como namespace do componente, Supondo que você criou uma classe `Rectangle` contendo uma função `getArea()`, assim que seu projeto for instalado como componente, o desenvolvedor do projeto host pode escrever:
 
 ```4d
 //in host project or one of its components
