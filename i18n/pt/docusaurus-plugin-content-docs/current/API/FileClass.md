@@ -270,7 +270,7 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna o conteúdo de informações de arquivos de aplicação como um objeto<!-- END REF -->.
 
-The function must be used with an existing, supported file: **.plist** (all platforms), **.exe**/**.dll** (Windows), or **macOS executable**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
+A função deve ser usada com um arquivo existente e compatível: **.plist** (todas as plataformas), **.exe**/**.dll** (Windows) ou **macOS executável**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
 
 **Objeto retornado com um arquivo .plist (todas as plataformas)**
 
@@ -545,9 +545,9 @@ $fhandle:=$f.open("read")
 
 A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o arquivo com o nome que você passou em *newName* e retorna o objeto `File` renomeado<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
+O parâmetro *newName* deve estar em conformidade com as regras de nome (por exemplo, ele não deve conter caracteres como ":", "/", etc.), caso contrário um erro é retornado. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
+Note que a função modifica o nome completo do arquivo, ou seja, se você não passar uma extensão em *newName*, o arquivo terá um nome sem uma extensão.
 
 **Objeto devolvido**
 
@@ -590,7 +590,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como o conteúdo da informação de um arquivo de aplicação<!-- END REF -->.
 
-The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. If used with another file type or with a **.exe**/**.dll** file that does not already exist on disk, the function does nothing (no error is generated).
+A função só pode ser usada com os seguintes tipos de arquivo: **.plist** (todas as plataformas), **.exe**/**.dll** (Windows), ou **macOS executável**. Se usado com outro tipo de arquivo ou com um arquivo **.exe**/**.dll** que ainda não existem no disco, a função não faz nada (nenhum erro é gerado).
 
 Parâmetro ***info* com um arquivo .plist (todas as plataformas)**
 
@@ -602,9 +602,9 @@ A função apenas é compatível com arquivos .plist em formato xml (baseado em 
 
 If the .plist file already exists on the disk, it is updated. Otherwise, it is created.
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
+Cada propriedade válida definida no parâmetro do objecto info está escrita no arquivo .plist como uma chave. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Outras chaves existentes no arquivo .plist são deixadas intocadas.
+Se uma chave definida no parâmetro *info* já estiver definida no arquivo .plist, seu valor será atualizado enquanto mantém seu tipo original. Outras chaves existentes no arquivo .plist são deixadas intocadas.
 
 :::note
 
@@ -614,7 +614,7 @@ Para definir um valor de tipo de data, o formato a utilizar é uma string de car
 
 **Parâmetro objeto *info* com um arquivo .exe ou .dll (somente Windows)**
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
+Cada propriedade válida definida no parâmetro do objeto *info* é escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
 | Propriedade      | Tipo | Comentário                                                                                                                                                |
 | ---------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -634,7 +634,7 @@ For the `WinIcon` property, if the icon file does not exist or has an incorrect 
 
 **Parâmetro *info* com um arquivo macOS executável (somente macOS)**
 
-*info* must be an object with a single property named `archs` that is a collection of objects in the format returned by [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
+*info* devem ser um objeto com uma única propriedade chamada `archs` que é uma coleção de objetos no formato retornado por [`getAppInfo()`](#getappinfo). Each object must contain at least the `type` and `uuid` properties (`name` is not used).
 
 Cada objeto na coleção *info*.archs deve conter as seguintes propriedades:
 
@@ -719,7 +719,7 @@ $app.setAppInfo($info)
 
 #### Descrição
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
+A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo usando os dados armazenados no *content* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
 
 #### Exemplo
 
@@ -758,7 +758,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Descrição
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- END REF -->.
 
 If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
@@ -766,14 +766,14 @@ Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my t
 
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
+- em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
 - ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
 Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
+Em breakMode, você pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha no documento. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                            |
 | ----------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -783,7 +783,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 | `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                                                                            |
 | `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                                                                             |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Por padrão, ao omitir o parâmetro *breakMode*, as quebras de linha são processadas no modo nativo (1).
 
 > **Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. Veja a [Página Compatibilidade](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) em doc.4d.com.
 
