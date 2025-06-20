@@ -141,7 +141,7 @@ La ejecución de un método en modo apropiativo dependerá de su propiedad "ejec
 
 4D permite identificar el modo de ejecución de los procesos en modo compilado:
 
-- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
+- El comando [`Process info`](../commands/process-info.md) permite averiguar si un proceso se ejecuta en modo apropiativo o cooperativo.
 - El Explorador de ejecución y la [ventana de administración de 4D Server](../ServerWindow/processes.md#process-type) muestran iconos específicos para los procesos apropiativos.
 
 ## Escribir un método hilo seguro
@@ -193,7 +193,7 @@ Los únicos accesos posibles a la interfaz de usuario desde un hilo apropiativo 
 
 ### Triggers
 
-When a method uses a command that can call a [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+Cuando un método utiliza un comando que puede llamar a un [trigger](https://doc.4d.com/4Dv20/4D/20.6/Triggers.300-7488308.en.html), el compilador 4D evalúa la seguridad del hilo del trigger para comprobar la seguridad del hilo del método:
 
 ```4d
  SAVE RECORD([Table_1]) //activar en Table_1, si existe, debe ser hilo seguro
@@ -268,12 +268,12 @@ En algunos casos, puede que prefiera que la verificación "thread-safety" de los
 Para hacer esto, debe rodear el código a excluir del comando hilo seguro utilizando las directivas específicas `%T-` y `%T+ como comentarios. El comentario `//%T-`desactiva la verificación hilo seguro y el comentario`//%T+\\\` la reactiva:
 
 ```4d
-  //%T- to disable thread safety checking
-
-  // Place the code containing commands to be excluded from thread safety checking here
- $w:=Open window(10;10;100;100) //for example
-
-  //%T+ to enable thread safety checking again for the rest of the method
+  // %T- para deshabilitar la verificación hilo seguro
+  
+  // Coloque el código que contiene los comandos que se excluirán de la verificacion hilo seguro
+ $w:=Open window(10;10;100;100) //por ejemplo
+  
+  //%T+ para reactivar nuevamente la verificación hilo seguro para el resto del método
 ```
 
 Por supuesto, el desarrollador 4D es responsable de que el modo apropiativo del código sea compatible con las directivas de activación y de reactivación. Se generarán errores de tiempo de ejecución si se ejecuta código hilo no seguro en un hilo apropiativo.
