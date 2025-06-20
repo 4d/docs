@@ -3,7 +3,7 @@ id: shared
 title: Objetos e coleções compartilhados
 ---
 
-**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](./dt_object.md) e [collections](./dt_collection.md) cujo conteúdo é compartilhado entre processos. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](./dt_object.md) e [collections](./dt_collection.md) cujo conteúdo é compartilhado entre processos. Em contraste com [variáveis de interprocesso](./variables.md#interprocess-variables), objetos compartilhados e coleções compartilhadas têm a vantagem de ser compatíveis com **processos 4D preemptivos**: eles podem ser passados por referência para comandos como [`New process`](https://doc.md.com/4dv20/help/command/en/page317.html) ou [`CALL WORKER`](../commands-legacy/call-worker.md).
 
 Objetos compartilhados e coleções compartilhadas são armazenados em variáveis padrão [`Object`](./dt_object.md) e [`Collection`](./dt_collection.md) do tipo, mas devem ser instanciados usando comandos específicos:
 
@@ -110,7 +110,7 @@ Objetos compartilhados e coleções compartilhadas são projetados para permitir
 
 ### Automatic Use...End use calls
 
-The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
+As funcionalidades a seguir ativam automaticamente um uso interno de **Use/End use**, fazendo uma chamada explícita para a estrutura desnecessária quando a funcionalidade é executada:
 
 - [funções de coleção](../API/CollectionClass.md) que modificam as coleções compartilhadas,
 - comando [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md),
