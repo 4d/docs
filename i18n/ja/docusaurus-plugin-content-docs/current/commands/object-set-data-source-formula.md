@@ -11,32 +11,32 @@ title: OBJECT SET DATA SOURCE FORMULA
 | ------- | -------------------------- | --------------------------- | --------------------------------------------------------------------------------------- |
 | \*      | 演算子                        | &#8594; | 指定時、object はオブジェクト名(文字列)<br/>省略時: object は変数またはフィールド |
 | object  | any                        | &#8594; | オブジェクト名( \* 指定時)、または<br/>変数やフィールド( \* 省略時)        |
-| formula | 4D.Formula | &#8594; | Formula to assign as the data source                                                    |
+| formula | 4D.Formula | &#8594; | データソースとして割り当てるフォーミュラ                                                                    |
 
 <!-- END REF-->
 
 ## 説明
 
-The **OBJECT SET DATA SOURCE FORMULA** command <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary-->  assigns a formula (expression) as the data source of the object(s) designated by the *object* and *\** parameters <!-- END REF-->. The formula must be provided as a [`4D.Formula`](../API/FunctionClass.md#formula-objects) object.
+**OBJECT SET DATA SOURCE FORMULA** コマンドは、<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary--> *object* 引数と *\** で指定したオブジェクトのデータソースとしてフォーミュラ(式)を割り当てます<!-- END REF-->。 フォーミュラは [`4D.Formula`](../API/FunctionClass.md#formula-objects) オブジェクトとしてとして提供されていなければなりません。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。 この演算子を省略した場合には *object* 引数でフィールドまたは変数を指定します。 この場合、文字列ではなくてフィールドまたは変数参照を渡します(フィールドまたは変数オブジェクトのみ)。
 
-The *formula* acts as the source from which the object retrieves its value at runtime. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
+*formula* 引数のフォーミュラは、ランタイムでオブジェクトが値を取得するためのソースとして機能します。 これによって、計算された値、条件付き表示、あるいは派生データなどの動的な動作が可能になります。
 
-If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to a [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).
+*formula* 引数に *Null* が渡された場合、4D はオブジェクトのデータソースを[ダイナミックフォーム変数](../FormObjects/properties_Object.md#ダイナミック変数)へとリセットします。
 
-If the command is applied to an object that does not exist or cannot support formulas, it does nothing.
+コマンドが、存在しないオブジェクトあるいはフォーミュラをサポートしないオブジェクトに対して適用された場合、何もしません。
 
 :::note 注記
 
-- The formula is executed in the context of the form that owns the object. When working with nested forms (e.g., subforms), ensure that the formula is defined and assigned in the appropriate form context to avoid unexpected behavior.
-- If you assign a formula to an input object or any object with a modifiable value, make sure that the formula is [**assignable**](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+- フォーミュラは、オブジェクトが属するフォームのコンテキストにおいて実行されます。 ネストされたフォーム(例: サブフォーム)の場合、予期せぬ振る舞いを避けるため、フォーミュラが適切なフォームコンテキストで定義され割り当てられているようにしてください。
+- フォーミュラを入力オブジェクトなどの値を変更可能なオブジェクトに対して割り当てた場合、フォーミュラが必ず[**代入可能**](../Concepts/quick-tour.md#代入可-vs-代入不可の式)なフォーミュラであることを確認してください。
 
 :::
 
 ## 例題
 
-You want to dynamically bind an input to an expression. For example, show the discounted price based on a base price and a discount value:
+入力オブジェクトに式を動的に割り当てたい場合を考えます。 例えば、基本価格と割引率に基づいて割引価格を表示したいとします:
 
 ```4d
 
