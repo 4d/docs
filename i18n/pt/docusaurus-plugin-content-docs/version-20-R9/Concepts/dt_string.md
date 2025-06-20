@@ -201,7 +201,7 @@ O seguinte método de projeto capitaliza o primeiro carácter de cada palavra do
   //Capitalize_text project method
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
-
+ 
  $0:=$1
  $vlLen:=Length($0)
  If($vlLen>0)
