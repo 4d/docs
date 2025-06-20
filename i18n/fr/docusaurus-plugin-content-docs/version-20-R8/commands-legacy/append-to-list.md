@@ -53,7 +53,7 @@ Vous voulez utiliser une liste hiérarchique, appelée *hlList*, qui affiche les
  
  Case of
  
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        var hlList;$hSousListe;$vlDépartement;$vlEmployé;$vlDépartementID : Integer
   // Créer une nouvelle liste hiérarchique vide
        hlList:=New list
@@ -96,11 +96,11 @@ Vous voulez utiliser une liste hiérarchique, appelée *hlList*, qui affiche les
   // Afficher la liste en style Windows et forcer la hauteur de ligne minimale à 14 Pts
        SET LIST PROPERTIES(hlList;Ala Windows;Windows node;14)
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // La liste n'est plus utile. N'oubliez pas de l'effacer !
        CLEAR LIST(hlList;*)
  
-    :(FORM Event=On Double Clicked)
+    :(FORM Event.code=On Double Clicked)
   // Il y a eu un double-clic
   // Obtenir la position de l'élément sélectionné
        $vlÉlémentPos:=Selected list items(hlList)

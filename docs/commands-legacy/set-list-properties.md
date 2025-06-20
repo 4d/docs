@@ -49,7 +49,7 @@ You want to disallow the expand/collapse sublist on double-click. You can write 
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        hlCities:=Load list("Cities") //load the Cities choice list in the hlCities form object
        SET LIST PROPERTIES(hlCities;0;0;0;1) //disallow double-click to expand/collapse
  End case

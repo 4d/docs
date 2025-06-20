@@ -68,14 +68,14 @@ Se quiser arrastar alguns dados privados de diferentes objetos em seu formulári
 
 ```4d
   //objeto origem
- If(FORM Event=On Begin Drag Over)
+ If(FORM Event.code=On Begin Drag Over)
     APPEND DATA TO PASTEBOARD("some.private.data";$data)
  End if
 ```
 
 ```4d
   //objeto destino
- If(FORM Event=On Drag Over)
+ If(FORM Event.code=On Drag Over)
     $0:=Choose(Pasteboard data size("some.private.data")>0;0;-1)
  End if
 ```

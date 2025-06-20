@@ -50,13 +50,13 @@ Les méthodes associées à ces objets sont les suivantes :
 ```4d
   // Méthode objet de la variable non saisissable vsColorValue
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsColorValue:="0x00000000"
  End case
  
   // Méthode objet de la variable non saisissable vsColor
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsColor:=""
        OBJECT SET RGB COLORS(vsColor;0x00FFFFFF;0x0000)
  End case

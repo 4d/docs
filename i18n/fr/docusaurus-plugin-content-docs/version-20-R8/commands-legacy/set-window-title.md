@@ -31,7 +31,7 @@ Vous effectuez une saisie dans un formulaire et vous cliquez sur un bouton qui d
 ```4d
   // Méthode objet du bouton bAnalyse
  Case of
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // Sauvegarde du titre courant de la fenêtre dans une variable
        $vsTitreCour:=Get window title
   // Commencer l'opération longue

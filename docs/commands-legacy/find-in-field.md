@@ -35,7 +35,7 @@ It is fast and particularly useful to avoid creating double entries during data 
 In an audio CD database, during data entry let’s assume that you want to verify the singer’s name to see if it already exists in the database. Because homonyms can exist, you don’t want the \[Singer\]Name field to be unique. Therefore, in the input form, you can write the following code in the \[Singer\]Name field’s object method:
 
 ```4d
- If(FORM Event=On Data Change)
+ If(FORM Event.code=On Data Change)
     $RecNum:=Find in field([Singer]Name;[Singer]Name)
     If($RecNum #-1) // If this name has already been entered
        CONFIRM("A singer with the same already exists. Do you want to see the record?";"Yes";"No")

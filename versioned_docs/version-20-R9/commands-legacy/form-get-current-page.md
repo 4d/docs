@@ -27,11 +27,11 @@ In a form, when you select a menu item from the menu bar or when the form receiv
 ```4d
   // [myTable];"myForm" Form Method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
   // ...
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // ...
-    :(FORM Event=On Menu Selected)
+    :(FORM Event.code=On Menu Selected)
        $vlMenuNumber:=Menu selected>>16
        $vlItemNumber:=Menu selected & 0xFFFF
        Case of
@@ -49,7 +49,7 @@ In a form, when you select a menu item from the menu bar or when the form receiv
           :($vlMenuNumber=...)
   // ...
        End case
-    :(FORM Event=On Outside Call)
+    :(FORM Event.code=On Outside Call)
        Case of
           :(FORM Get current page=1)
   // Do appropriate reply for page 1

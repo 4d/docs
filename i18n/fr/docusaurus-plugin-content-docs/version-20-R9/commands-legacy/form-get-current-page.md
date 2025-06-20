@@ -27,11 +27,11 @@ Alors que vous êtes en train d'utiliser un formulaire, si vous choisissez une c
 ```4d
   // Méthode formulaire [maTable];"monFormulaire"
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
   // ...
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // ...
-    :(FORM Event=On Menu Selected)
+    :(FORM Event.code=On Menu Selected)
        $vlNuméroMenu:=Menu selected>>16
        $vlNuméroCmde:=Menu selected & 0xFFFF
        Case of
@@ -49,7 +49,7 @@ Alors que vous êtes en train d'utiliser un formulaire, si vous choisissez une c
           :($vlNuméroMenu=...)
   // ...
        End case
-    :(FORM Event=On Outside Call)
+    :(FORM Event.code=On Outside Call)
        Case of
           :(FORM Get current page=1)
   // Fournir une réponse appropriée pour la page 1

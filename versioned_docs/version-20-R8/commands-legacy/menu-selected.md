@@ -44,7 +44,7 @@ The following form method uses **Menu selected** to supply the menu and menu ite
 
 ```4d
  Case of
-    :(FORM Event=On Menu Selected)
+    :(FORM Event.code=On Menu Selected)
        C_STRING(16;$refMenuIncludingItem)
        var $ref;$MenuNum;$MenuItemNum : Integer
        $ref:=Menu selected($refMenuIncludingItem)

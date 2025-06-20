@@ -53,7 +53,7 @@ You want to display a hierarchical list, named *hlList*, that shows the Departme
  
  Case of
  
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        var hlList;$hSubList;$vlDepartment;$vlEmployee;$vlDepartmentID : Integer
   // Create a new empty hierarchical list
        hlList:=New list
@@ -101,11 +101,11 @@ You want to display a hierarchical list, named *hlList*, that shows the Departme
   // and force the minimal line height to 14 Pts
        SET LIST PROPERTIES(hlList;Ala Windows;Windows node;14)
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // The list is no longer needed; do not forget to get rid of it!
        CLEAR LIST(hlList;*)
  
-    :(FORM Event=On Double Clicked)
+    :(FORM Event.code=On Double Clicked)
   // A double-click occurred
   // Get the position of the selected item
        $vlItemPos:=Selected list items(hlList)

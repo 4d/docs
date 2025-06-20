@@ -31,7 +31,7 @@ El siguiente ejemplo es un método de objeto en un área de ruptura de un formul
 
 ```4d
  Case of
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
        vSalario:=Subtotal([Empleados]Salario)
  End case
 ```

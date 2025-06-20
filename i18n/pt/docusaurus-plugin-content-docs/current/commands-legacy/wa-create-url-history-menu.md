@@ -47,7 +47,7 @@ O código abaixo pode estar associado a um botão 3D com menu pop up chamado "An
     :(Form event code=On Clicked)
        WA OPEN BACK URL(WA_area)
   //Clique na flecha -> mostrar pop up
-    :(FORM Event=On Alternative Click)
+    :(FORM Event.code=On Alternative Click)
   //Criar um menu de histórico anterior
        $Menu:=WA Create URL history menu(WA_area;WA previous URLs)
   //Mostrar este menu em um pop-up

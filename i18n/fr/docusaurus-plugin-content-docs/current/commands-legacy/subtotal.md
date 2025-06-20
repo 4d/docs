@@ -31,7 +31,7 @@ L'exemple suivant est la méthode objet d'une variable intitulée *vSalaire*, pl
 
 ```4d
  Case of
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
        vSalaire:=Subtotal([Employés]Salaire)
  End case
 ```

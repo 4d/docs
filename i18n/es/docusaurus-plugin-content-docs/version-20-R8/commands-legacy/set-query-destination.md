@@ -111,7 +111,7 @@ Para hacer esto, puede redireccionar sus búsquedas en las selecciones temporale
 ```4d
   // Método de objeto asRolodex
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
   // Antes de que el formulario aparezca en la pantalla,
   // inicializar el rolodex y el array de booleanos que
   // nos indica si una búsqueda para la letra correspondiente
@@ -123,7 +123,7 @@ Para hacer esto, puede redireccionar sus búsquedas en las selecciones temporale
           abQueryDone{$vlElem}:=False
        End for
  
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // Cuando un usuario hace clic en la pestaña, verificar si la búsqueda correspondiente
   // ha sido realizada o no
        If(Not(abQueryDone{asRolodex}))
@@ -143,7 +143,7 @@ Para hacer esto, puede redireccionar sus búsquedas en las selecciones temporale
           USE NAMED SELECTION("Rolodex"+asRolodex{asRolodex}
        End if
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // Luego el formulario desaparece de la pantalla
   // Borrar las selecciones temporales
        For($vlElem;1;26)

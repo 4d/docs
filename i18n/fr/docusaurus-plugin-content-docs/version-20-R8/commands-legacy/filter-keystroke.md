@@ -38,9 +38,9 @@ Avec le code suivant :
 ```4d
   // Méthode objet de la zone saisissable monObjet
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        monObjet:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Position(Keystroke;"0123456789")>0)
           FILTER KEYSTROKE("*")
        End if
@@ -56,10 +56,10 @@ Le code ci-dessous définit le comportement d'une zone de saisie de mot de passe
 ```4d
   // Méthode objet de la zone saisissable vaMotsPasse
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vaMotsPasse:=""
        vaMotPasseActuel:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        Gérer frappe clavier(->vaMotsPasse;->vaMotPasseRéel)
        If(Position(Keystroke;Char(Backspace key)+Char(Left arrow key)+
           Char(Right arrow key)+Char(Up arrow key)+
@@ -149,13 +149,13 @@ Une fois que vous avez ajouté ces méthodes projet à votre base, vous pouvez l
 ```4d
   // vsDescription enterable area object method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsDescription:=""
        vsShadowDescription:=""
   // Establish the list of the “forbidden” characters to be treated as special keys
   // ( here, in this example, only the Help Key is filtered)
        vsSpecialKeys:=Char(HelpKey)
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        $vsKey:=Shadow keystroke(->vsDescription;->vsShadowDescription;vsSpecialKeys)
        Case of
           :(Character code($vsKey)=Help key)

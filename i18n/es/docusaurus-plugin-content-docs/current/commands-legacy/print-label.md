@@ -60,7 +60,7 @@ El segundo método es el método de formulario del formulario *"Imprimir Etiquet
 ```4d
   //Método de formulario [Direcciones]; "Etiqueta salida"
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vEtiq:=[Direcciones]Nom1+" "+[Direcciones]Nom2+Char(13)+[Direcciones]Dir1+Char(13)
        If([Direcciones]Dir2#"")
           vEtiq:=vLabel+[Direcciones]Dir2+Char(13)

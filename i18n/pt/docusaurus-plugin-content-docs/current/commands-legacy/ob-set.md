@@ -155,7 +155,7 @@ Se quiser exportar dados em JSON que contém uma data 4D convertida. Note que a 
 Em um método formulário, pode escrever:
 
 ```4d
- If(FORM Event=On Validate)
+ If(FORM Event.code=On Validate)
     OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
     OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
  End if

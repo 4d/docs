@@ -51,12 +51,12 @@ In this form, a help tip is displayed and changes dynamically when the mouse hov
  var $doRefresh : Boolean
  
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        oldTip:=""
        SET DATABASE PARAMETER(Tips enabled;1) //To make sure tips are enabled
        SET DATABASE PARAMETER(Tips delay;0) // Tip displayed immediately at mouse stop
        SET DATABASE PARAMETER(Tips duration;60*10) // 10 seconds max display
-    :(FORM Event=On Mouse Move)
+    :(FORM Event.code=On Mouse Move)
        MOUSE POSITION($x;$y;$b)
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
        $x:=$x-$left
@@ -95,11 +95,11 @@ You have a list box, "Commands List", containing a list and you want to set a he
  
  Case of
  
-    :(FORM Event=On Mouse Enter)
+    :(FORM Event.code=On Mouse Enter)
  
        SET DATABASE PARAMETER(Tips delay;1) // make the tip appear quickly
  
-    :(FORM Event=On Mouse Move)
+    :(FORM Event.code=On Mouse Move)
  
   //#1 : find which row is hovered
  
@@ -113,7 +113,7 @@ You have a list box, "Commands List", containing a list and you want to set a he
           OBJECT SET HELP TIP(*;"Commands List";[Documentation]Description) // the full description will be used as "help tip" when (if) the mouse stops moving.
        End if
  
-    :(FORM Event=On Mouse Leave)
+    :(FORM Event.code=On Mouse Leave)
  
        SET DATABASE PARAMETER(Tips delay;3) // make the tip appear normaly
  

@@ -49,7 +49,7 @@ El siguiente ejemplo es parte de un método de objeto para un campo *\[Employees
 
 ```4d
  Case of
-    :(FORM Event=On Data Change)
+    :(FORM Event.code=On Data Change)
        If([Employees]Salary<10000)
           ALERT("Salary must be greater than $10,000")
           REJECT([Employees]Salary)

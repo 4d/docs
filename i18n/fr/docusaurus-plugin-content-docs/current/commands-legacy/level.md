@@ -28,7 +28,7 @@ Cet exemple est une maquette de méthode formulaire. Il traite chaque événemen
  $vpFormTable:=Current form table
  Case of
   // ...
-    :(FORM Event=On Header)
+    :(FORM Event.code=On Header)
   // La zone en-tête va être imprimée
        Case of
           :(Before selection($vpFormTable->))
@@ -39,10 +39,10 @@ Cet exemple est une maquette de méthode formulaire. Il traite chaque événemen
   // Le code pour la rupture d'en-tête niveau 2 doit être placé ici
   // ...
        End case
-    :(FORM Event=On Printing Detail)
+    :(FORM Event.code=On Printing Detail)
   // Un enregistrement va être imprimé
   // Le code pour chaque enregistrement doit être placé ici
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
   // Une rupture va être imprimée
        Case of
           :(Level=0)
@@ -51,7 +51,7 @@ Cet exemple est une maquette de méthode formulaire. Il traite chaque événemen
   // Le code pour la rupture 1 doit être placé ici
   // ...
        End case
-    :(FORM Event=On Printing Footer)
+    :(FORM Event.code=On Printing Footer)
        If(End selection($vpFormTable->))
   // Le code pour le dernier pied de page doit être placé ici
        Else

@@ -48,7 +48,7 @@ Vous souhaitez interdire le déploiement/contraction sur double-clic. Vous pouve
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        hlVilles:=Load list("Villes") //charger l'énumération Villes dans l'objet hlVilles
        SET LIST PROPERTIES(hlVilles;0;0;0;1) //pas de déploiement sur double-clic
  End case

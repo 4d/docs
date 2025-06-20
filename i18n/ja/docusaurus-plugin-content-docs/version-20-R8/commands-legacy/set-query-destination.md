@@ -114,7 +114,7 @@ displayed_sidebar: docs
 ```4d
   // asRolodex
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
   // フォームが表示される前に
   // rolodexと、検索が行われたかを示すブール配列を初期化
        ARRAY STRING(1;asRolodex;26)
@@ -124,7 +124,7 @@ displayed_sidebar: docs
           abQueryDone{$vlElem}:=False
        End for
  
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // タブコントロールがクリックされたら、対応するクエリが実行済みかどうか調べる
        If(Not(abQueryDone{asRolodex}))
   // 実行されていなければ、次のクエリ結果を命名セレクションに格納する
@@ -143,7 +143,7 @@ displayed_sidebar: docs
           USE NAMED SELECTION("Rolodex"+asRolodex{asRolodex})
        End if
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // フォームを閉じる際には
   // 作成された命名セレクションをクリアする
        For($vlElem;1;26)

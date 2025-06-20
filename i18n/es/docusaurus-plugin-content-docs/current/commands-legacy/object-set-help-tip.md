@@ -58,12 +58,12 @@ En este formulario, un mensaje de ayuda se visualiza y cambia dinámicamente cua
  var $doRefresh : Boolean
  
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        oldTip:=""
        SET DATABASE PARAMETER(Tips enabled;1) //Para asegurarse de que los consejos están habilitados
        SET DATABASE PARAMETER(Tips delay;0) // Sugerencia mostrada inmediatamente al detener el ratón
        SET DATABASE PARAMETER(Tips duration;60*10) // 10 segundos máximo de visualización
-    :(FORM Event=On Mouse Move)
+    :(FORM Event.code=On Mouse Move)
        MOUSE POSITION($x;$y;$b)
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
        $x:=$x-$left
@@ -102,11 +102,11 @@ Usted tiene un list box, "Commands List", que contiene una lista y desea definir
  
  Case of
  
-    :(FORM Event=On Mouse Enter)
+    :(FORM Event.code=On Mouse Enter)
  
        SET DATABASE PARAMETER(Tips delay;1) // hace que el mensaje aparezca rápidamente
  
-    :(FORM Event=On Mouse Move)
+    :(FORM Event.code=On Mouse Move)
  
   //#1 : encuentra la fila que se ha movido
  
@@ -120,7 +120,7 @@ Usted tiene un list box, "Commands List", que contiene una lista y desea definir
           OBJECT SET HELP TIP(*;"Commands List";[Documentation]Description) // La descripción completa se utilizará como "mensaje de ayuda" cuando (si) el ratón deja de moverse.
        End if
  
-    :(FORM Event=On Mouse Leave)
+    :(FORM Event.code=On Mouse Leave)
  
        SET DATABASE PARAMETER(Tips delay;3) // hace que el mensaje aparezca normalmente
  

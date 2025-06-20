@@ -26,7 +26,7 @@ Para evitar esto, en el evento formulario On Resize de la ventana estándar, es 
 
 ```4d
  Case of
-    :(FORM Event=On Resize)
+    :(FORM Event.code=On Resize)
        GET WINDOW RECT($left;$top;$right;$bottom)
        If(Screen height=($bottom-$top))
           HIDE TOOL BAR

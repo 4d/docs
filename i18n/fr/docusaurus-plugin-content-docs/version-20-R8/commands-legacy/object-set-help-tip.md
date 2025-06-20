@@ -51,12 +51,12 @@ Dans ce formulaire, un message d'aide est affiché et change dynamiquement lorsq
  var $doRefresh : Boolean
  
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        oldTip:=""
        SET DATABASE PARAMETER(Message aide activation;1) //Pour être sûr que les messages d'aide sont activés
        SET DATABASE PARAMETER(Message aide délai;0) // Le message est affiché dès que la souris s'arrête
        SET DATABASE PARAMETER(Message aide durée;60*10) // Affichage de 10 secondes
-    :(FORM Event=On Mouse Move)
+    :(FORM Event.code=On Mouse Move)
        MOUSE POSITION($x;$y;$b)
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
        $x:=$x-$left
@@ -95,10 +95,10 @@ Vous avez défini une list box "liste de commandes" et vous souhaitez proposer d
  
  Case of
  
-    :(FORM Event=On Mouse Enter)
+    :(FORM Event.code=On Mouse Enter)
        SET DATABASE PARAMETER(Tips delay;1) // l'infobulle doit s'afficher rapidement
  
-    :(FORM Event=On Mouse Move)
+    :(FORM Event.code=On Mouse Move)
   //#1 : trouver quelle ligne est survolée
        MOUSE POSITION($mouseX;$mouseY;$mouseZ)
        LISTBOX GET CELL POSITION(*;"Commands List";$mouseX;$mouseY;$col;$row)
@@ -109,7 +109,7 @@ Vous avez défini une list box "liste de commandes" et vous souhaitez proposer d
           OBJECT SET HELP TIP(*;"Commands List";[Documentation]Description) // la description complète sera utilisée comme message d'aide lorsque (si) la souris est immobile
        End if
  
-    :(FORM Event=On Mouse Leave)
+    :(FORM Event.code=On Mouse Leave)
        SET DATABASE PARAMETER(Tips delay;3) //Retour délai normal
  
  End case

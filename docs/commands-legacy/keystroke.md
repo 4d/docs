@@ -107,10 +107,10 @@ After this project method is added to your application, you can use it as follow
 ```4d
   // myObject enterable area object method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        MyObject:=""
        MyShadowObject:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Handle keystroke(->MyObject;->MyShadowObject))
   // Perform appropriate actions using the value stored in MyShadowObject
        End if
@@ -128,12 +128,12 @@ The *vsLookup* object method is listed here:
 ```4d
   // vsLookup enterable area object method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsLookup:=""
        vsResult:=""
        vsMessage:="Enter the first characters of the city you are looking for."
        CLEAR VARIABLE(asLookup)
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Handle keystroke(->vsLookup;->vsResult))
           If(vsResult#"")
              QUERY([US Zip Codes];[US Zip Codes]City=vsResult+"@")

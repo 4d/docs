@@ -153,7 +153,7 @@ You want to export data in JSON that contains a 4D date that you want to be conv
 In the method of a form containing a 4D Write Pro area, you can write:
 
 ```4d
- If(FORM Event=On Validate)
+ If(FORM Event.code=On Validate)
     OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
     OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
  End if

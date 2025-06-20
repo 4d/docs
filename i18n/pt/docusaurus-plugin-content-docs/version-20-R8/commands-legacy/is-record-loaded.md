@@ -26,7 +26,7 @@ Ao invés de utilizar as ações automáticas “Seguinte registro” ou “Regi
 
 ```4d
   // Método de objeto do botão “Anterior” (sem ação automática)
- If(FORM Event=On Clicked)
+ If(FORM Event.code=On Clicked)
     PREVIOUS RECORD([Grupo])
     If(Not(Is record loaded([Grupo])))
        GOTO SELECTED RECORD([Grupo];Records in selection([Grupo]))
@@ -35,7 +35,7 @@ Ao invés de utilizar as ações automáticas “Seguinte registro” ou “Regi
  End if
  
   // Método de objeto do botão “Seguinte” (sem ação automática)
- If(FORM Event=On Clicked)
+ If(FORM Event.code=On Clicked)
     NEXT RECORD([Grupo])
     If(Not(Is record loaded([Grupo])))
        GOTO SELECTED RECORD([Grupos];1)

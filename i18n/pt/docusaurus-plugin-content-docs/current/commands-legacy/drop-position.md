@@ -66,7 +66,7 @@ O método de objeto de list box da esquerda (destino) contém o código abaixo:
           $0:=-1 //Recusa o soltar
        End if
  
-    :(FORM Event=On Drop) //o evento deve ser selecionado para o list box
+    :(FORM Event.code=On Drop) //o evento deve ser selecionado para o list box
        var $toGet : Blob
        var $rownum;$val : Integer
        $rownum:=Drop position($colnum)

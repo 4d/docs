@@ -34,10 +34,10 @@ Les objets dans la zone de groupe **Employer Information** ont tous un nom qui c
 ```4d
     // Méthode objet Case à cocher cbCurrentlyEmployed
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        cbCurrentlyEmployed:=1
  
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // Cacher ou montrer tous les objets dont le nom contient "emp"
        OBJECT SET VISIBLE(*;"@emp@";cbCurrentlyEmployed # 0)
   // Mais toujours conserver la case à cocher visible

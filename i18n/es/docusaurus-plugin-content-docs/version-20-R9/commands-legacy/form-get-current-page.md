@@ -29,11 +29,11 @@ En un formulario, si selecciona un elemento de menú de la barra de menús o si 
 ```4d
   // Método de formulario [miTabla];"miForm"
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
   // ...
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // ...
-    :(FORM Event=On Menu Selected)
+    :(FORM Event.code=On Menu Selected)
        $vlNumeroMenu:=Menu selected>>16
        $vlNumeroCmdo:=Menu selected & 0xFFFF
        Case of
@@ -51,7 +51,7 @@ En un formulario, si selecciona un elemento de menú de la barra de menús o si 
           :($vlMenuNumber=...)
   // ...
        End case
-    :(FORM Event=On Outside Call)
+    :(FORM Event.code=On Outside Call)
        Case of
           :(FORM Get current page=1)
   // Dar una respuesta apropiada para la página 1

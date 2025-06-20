@@ -35,11 +35,7 @@ Under Windows, this parameter has no effect and the base URL is not specified so
 Displays "Hello world!" and sets a "file:///" base URL (Mac OS only):
 
 ```4d
- WA SET PAGE CONTENT(MyWArea;"
-
-[Hello World!]
-
-";"file:///")
+WA SET PAGE CONTENT(MyWArea;"<html><body><h1>Hello World!</h1></body></html>";"file:///")
 ```
 
 ## See also 

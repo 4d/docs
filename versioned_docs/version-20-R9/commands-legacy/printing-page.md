@@ -23,7 +23,7 @@ The following example changes the position of the page numbers on a report so th
 
 ```4d
  Case of
-    :(FORM Event=On Printing Footer)
+    :(FORM Event.code=On Printing Footer)
        If((Printing page% 2)=0) // Modulo is 0, it is an even page
           vLeftPageNum:=String(Printing page) // Set the left page number
           vRightPageNum:="" // Clear the right page number

@@ -35,10 +35,10 @@ Here is the object method of the check box:
 ```4d
   // cbCurrentlyEmployed Check Box Object Method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        cbCurrentlyEmployed:=1
  
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // Hide or Show all the objects whose name contains "emp"
        OBJECT SET VISIBLE(*;"@emp@";cbCurrentlyEmployed#0)
   // But always keep the check box itself visible

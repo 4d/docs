@@ -31,7 +31,7 @@ Enquanto realiza uma entrada de dados em um formulário, você clica em um botã
 ```4d
   // Método de objeto do botão bAnalise
  Case of
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // Guardar o título atual da janela em uma variável
        $vsTituloAtual:=Get window title
   // Iniciar a operação longa

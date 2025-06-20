@@ -24,7 +24,7 @@ Instead of using the “Next record” or “Previous record” automatic action
 
 ```4d
   // Object method of the “Previous” button (without an automatic action)
- If(FORM Event=On Clicked)
+ If(FORM Event.code=On Clicked)
     PREVIOUS RECORD([Group])
     If(Not(Is record loaded([Group])))
        GOTO SELECTED RECORD([Group];Records in selection([Group]))
@@ -33,7 +33,7 @@ Instead of using the “Next record” or “Previous record” automatic action
  End if
  
   // Object method of the “Next” button (without an automatic action)
- If(FORM Event=On Clicked)
+ If(FORM Event.code=On Clicked)
     NEXT RECORD([Group])
     If(Not(Is record loaded([Group])))
        GOTO SELECTED RECORD([Groups];1)

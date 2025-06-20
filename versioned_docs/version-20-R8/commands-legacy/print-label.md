@@ -60,7 +60,7 @@ The second method is the form method for the form *"Label Out"*. The form contai
 ```4d
   // [Addresses]; "Label Out" form method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vLabel:=[Addresses]Name1+" "+[Addresses]Name2+Char(13)+[Addresses]Addr1+Char(13)
        If([Addresses]Addr2 #"")
           vLabel:=vLabel+[Addresses]Addr2+Char(13)

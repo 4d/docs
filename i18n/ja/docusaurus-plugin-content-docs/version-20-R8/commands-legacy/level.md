@@ -28,7 +28,7 @@ displayed_sidebar: docs
  $vpFormTable:=Current form table
  Case of
   // ...
-    :(FORM Event=On Header)
+    :(FORM Event.code=On Header)
   // ヘッダエリアが印刷されようとしている
        Case of
           :(Before selection($vpFormTable->))
@@ -39,10 +39,10 @@ displayed_sidebar: docs
   // Level 2のヘッダブレークコード
   // ...
        End case
-    :(FORM Event=On Printing Details)
+    :(FORM Event.code=On Printing Details)
   // レコードが印刷されようとしている
   // 各レコード毎のコード
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
   // ブレークエリアが印刷されようとしている
        Case of
           :(Level=0)
@@ -51,7 +51,7 @@ displayed_sidebar: docs
   // ブレークLevel 1のコード
   // ...
        End case
-    :(FORM Event=On Printing Footer)
+    :(FORM Event.code=On Printing Footer)
        If(End selection($vpFormTable->))
   // 最後のフッタのコード
        Else

@@ -33,7 +33,7 @@ In *selector*, you can pass the Additional text or Associated standard action co
 
 ## See also 
 
-*Hierarchical Lists*  
+[Hierarchical Lists](../FormObjects/list_overview.md)
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
 ## Properties

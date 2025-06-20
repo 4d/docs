@@ -35,10 +35,10 @@ Este es el método de objeto de la casilla de selección:
 ```4d
  &NBSP;&NBSP; // Método de objeto de Casilla de selección cbEmpleadoActualmente
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        cbEmpleadoActualmente:=1
  
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // Ocultar o mostrar todos los objetos cuyo nombre contiene "emp"
        OBJECT SET VISIBLE(*;"@emp@";cbEmpleadoActualmente&NBSP;#&NBSP;0)
   // Pero siempre conservar la casilla de selección visible

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## See also 
 
-*Programmed management of Web Areas*  
+*[Web Area overview](../FormObjects/webArea_overview.md)*  
 [WA Run offscreen area](wa-run-offscreen-area.md)  
 
 ## Properties

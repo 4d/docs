@@ -35,10 +35,10 @@ Você cria um banco para o mercado internacional e necessita mudar aos diferente
 ```4d
   // Método de objeto da lista hierárquica hlList
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        var hlList : Integer
        hlList:=Load list("Std Options"+◊gsIdiomaAtual)
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
        CLEAR LIST(hlList;*)
  End case
 ```

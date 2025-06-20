@@ -49,7 +49,7 @@ L'exemple suivant est une partie de la méthode objet d'un champ *\[Employés\]S
 
 ```4d
  Case of
-    :(FORM Event=On Data Change)
+    :(FORM Event.code=On Data Change)
        If([Employés]Salaire<10000)
           ALERT("Le salaire annuel doit être supérieur à 10 000 Euros.")
           REJECT([Employés]Salaire)

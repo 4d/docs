@@ -24,7 +24,7 @@ Au lieu d’utiliser les actions automatiques “Enregistrement suivant” ou �
 
 ```4d
   // Méthode objet du bouton sans action "PRÉCÉDENT"
- If(FORM Event=On Clicked)
+ If(FORM Event.code=On Clicked)
     PREVIOUS RECORD([Groupe])
     If(Not(Is record loaded([Groupe])))
        GOTO SELECTED RECORD([Groupe];Records in selection([Groupe]))
@@ -33,7 +33,7 @@ Au lieu d’utiliser les actions automatiques “Enregistrement suivant” ou �
  End if
  
   // Méthode objet du bouton sans action "SUIVANT"
- If(FORM Event=On Clicked)
+ If(FORM Event.code=On Clicked)
     NEXT RECORD([Groupe])
     If(Not(Is record loaded([Groupe])))
        GOTO SELECTED RECORD([Groupe];1) //Aller au premier enregistrement de la sélection

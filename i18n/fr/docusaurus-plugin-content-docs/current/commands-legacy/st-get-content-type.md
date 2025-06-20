@@ -65,7 +65,7 @@ Vous souhaitez afficher des commandes d’un menu contextuel en fonction du type
 
 ```4d
  Case of
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   //on récupère la sélection
        GET HIGHLIGHT(*;"myText";startSel;endSel)
        If(Contextual click&(Macintosh control down=False)) //appel du menu contextuel

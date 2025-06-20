@@ -82,7 +82,7 @@ O método de objeto associado com este botão é o seguinte:
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        var b1;<>contraido : Boolean
        var margem : Integer
        margen:=15
@@ -95,7 +95,7 @@ O método de objeto associado com este botão é o seguinte:
           FORM SET SIZE("tab";margem;margem)
        End if
  
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
        <>contraido:=b1
        If(b1)
   //contraido
