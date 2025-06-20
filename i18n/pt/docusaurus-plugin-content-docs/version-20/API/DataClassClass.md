@@ -838,9 +838,9 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 #### Exemplo
 
 ```4d
- var $USelection; $OSelection : cs. EmployeeSelection
- $USelection:=ds. Employee.newSelection() //create an unordered empty entity selection
- $OSelection:=ds. Employee.newSelection(dk keep ordered) //create an ordered empty entity selection
+ var $USelection; $OSelection : cs.EmployeeSelection
+ $USelection:=ds.Employee.newSelection() //criar uma seleção vazia sem ordenação da entidade
+ $OSelection:=ds.Employee.newSelection(dk keep ordered) //criar uma seleção de entidade vazia ordenada
 ```
 
 <!-- END REF -->
