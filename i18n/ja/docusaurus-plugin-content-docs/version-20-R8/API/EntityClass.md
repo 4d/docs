@@ -619,10 +619,10 @@ vCompareResult1 (すべての差異が返されています):
 
 <!-- REF #EntityClass.getKey().Params -->
 
-| 引数   | 型       |                             | 説明                                                                          |
-| ---- | ------- | :-------------------------: | --------------------------------------------------------------------------- |
-| mode | Integer |              ->             | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します    |
-| 戻り値  | any     | <- | Value of the primary key of the entity (Integer or Text) |
+| 引数   | 型       |                             | 説明                                                                       |
+| ---- | ------- | :-------------------------: | ------------------------------------------------------------------------ |
+| mode | Integer |              ->             | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
+| 戻り値  | any     | <- | エンティティのプライマリーキーの値(整数またはテキスト)                          |
 
 <!-- END REF -->
 
@@ -958,7 +958,7 @@ $info:=$address.getRemoteContextAttributes()
 
 :::note 注記
 
-- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- エンティティが実際にアンロックされるためには、同じプロセス内で `lock()` を呼び出したの同じ回数だけ[`unlock()`](#unlock) を呼び出さなければなりません。
 - エンティティは [RESTセッションによってロックされる](../REST/$lock.md) 場合もあります。
 
 :::
@@ -1784,7 +1784,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+エンティティが実際にアンロックされるためには、同じプロセス内で [`lock()`](#lock) を呼び出したの同じ回数だけ `unlock()`を呼び出さなければなりません。
 
 :::
 
