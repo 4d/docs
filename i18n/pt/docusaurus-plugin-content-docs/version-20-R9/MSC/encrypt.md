@@ -32,7 +32,7 @@ Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessári
   Otherwise, the following message is displayed:
   ![](../assets/en/MSC/MSC_encrypt2.png)<p>
   This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
-  \*\*Note: \*\*The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
+  \*\*Nota: \*\*A mesma mensagem é apresentada quando o estado **Cifrável** tiver sido modificado num ficheiro de dados já encriptado ou após o ficheiro de dados ter sido descifrado (ver abaixo).</p>
 3. Click on the Encrypt picture button.\
   ![](../assets/en/MSC/MSC_encrypt3.png)\
   You will be prompted to enter a passphrase for your data file:
