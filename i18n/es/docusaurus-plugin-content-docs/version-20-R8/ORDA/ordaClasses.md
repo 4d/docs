@@ -724,8 +724,8 @@ En la dataclass Course:
 Class extends Entity
 
 Exposed Alias courseName name //scalar
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+Exposed Alias teacherName teacher.name //valor escalar
+Exposed Alias studentName student.name //valor escalar
 
 ```
 
