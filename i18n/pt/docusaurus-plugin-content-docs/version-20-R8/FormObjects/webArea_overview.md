@@ -199,7 +199,7 @@ Para exibir o inspetor da Web, você pode executar o comando `WA OPEN WEB INSPEC
   	WA SET PREFERENCE(*; "WA";WA enable Web inspector;True)  
   ```
 
-> Com [engenharia de renderização de sistema Windows](properties_WebArea. d#use-embedded-web-rendering-engine), uma mudança nesta preferência requer que uma ação de navegação na área (por exemplo, uma atualização de página) seja levada em conta.
+> Com [engenharia de renderização de sistema Windows](properties_WebArea.md#use-embedded-web-rendering-engine), uma mudança nesta preferência requer que uma ação de navegação na área (por exemplo, uma atualização de página) seja levada em conta.
 
 Para obter mais informações, consulte a descrição do comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 
