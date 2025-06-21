@@ -17,12 +17,11 @@ Não precisa ativar nada para os usos abaixo:
 
 ## Primeira ativação
 
-Com 4D, selecione o comando **Gestião de licenças...** do menu **Ajuda**. Com 4D Server basta lançar a aplicação 4D Server. The dialog box for choosing the activation mode appears.
+Com 4D, selecione o comando **Gestião de licenças...** do menu **Ajuda**. Com 4D Server basta lançar a aplicação 4D Server. Aparece a caixa de diálogo para escolher o modo de ativação.
 
 ![](../assets/en/getStart/server1.png)
 
-4D oferece três modos de ativação. Recomendamos
-**La activación inmediata**.
+4D oferece três modos de ativação. Recomendamos **Ativação Instantânea**.
 
 ### Ativação instantânea
 
