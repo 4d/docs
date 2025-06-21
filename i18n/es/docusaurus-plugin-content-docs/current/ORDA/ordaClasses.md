@@ -321,7 +321,7 @@ This ORDA class constructor function does not receive or return parameters. Howe
 An ORDA class constructor function is similar to a [user class constructor function](../Concepts/classes.md#class-constructor), with the following differences:
 
 - you cannot pass parameters to the constructor,
-- you cannot use `shared`, `session`, or `singleton` keywords,
+- no puede utilizar las palabras clave `shared`, `session` o `singleton`,
 - you cannot call the [`Super`](../Concepts/classes.md#super) keyword within the function,
 - the class constructor cannot be called using the `new()` function on an entity (entities can only be created by specific functions, see below).
 
@@ -335,7 +335,7 @@ The `Class constructor` function is triggered by the following commands and feat
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
 - [`entity.clone()`](../API/EntityClass.md#clone)
 - [REST API $method=update](../REST/$method.md#methodupdate) in a POST without the `__KEY` and `__STAMP` parameters
-- the [Data Explorer](../Admin/dataExplorer.md#editing-data).
+- el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
 
 :::note Nota de compatibilidad
 
@@ -811,8 +811,8 @@ En la dataclass Course:
 Class extends Entity
 
 Exposed Alias courseName name //scalar
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+Exposed Alias teacherName teacher.name //valor escalar
+Exposed Alias studentName student.name //valor escalar
 
 ```
 
