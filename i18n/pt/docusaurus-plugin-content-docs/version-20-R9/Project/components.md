@@ -486,92 +486,92 @@ O gerenciador de dependências fornece um tratamento integrado de atualizações
 
 As operações manuais podem ser feitas **por dependência** ou **para todas as dependências**.
 
-#### Checking for new versions
+#### Verificando por versões mais novas
 
-Dependencies are regularly checked for updates on GitHub. This checking is done transparently in background.
+As dependências são verificadas regularmente quanto a atualizações no GitHub. Essa verificação é feita de forma transparente em segundo plano.
 
 :::note
 
-If you provide an [access token](#providing-your-github-access-token), checks are performed more frequently, as GitHub then allows a higher frequency of requests to repositories.
+Se você fornecer um [token de acesso](#providing-your-github-access-token), as verificações serão realizadas com mais frequência, pois o GitHub permite uma frequência maior de solicitações aos repositórios.
 
 :::
 
-In addition, you can check for updates at any moment, for a single dependency or for all dependencies:
+Além disso, você pode verificar se há atualizações a qualquer momento, para uma única dependência ou para todas as dependências:
 
-- To check for updates of a single dependency, right-click on the dependency and select **Check for updates** in the contextual menu.
+- Para verificar se há atualizações de uma única dependência, clique com o botão direito do mouse na dependência e selecione **Verificar atualizações** no menu contextual.
 
 ![componente de verificação](../assets/en/Project/check-component-one.png)
 
-- To check for updates of all dependencies, click on the **options** menu at the bottom of the Dependency manager window and select **Check for updates**.
+- Para verificar se há atualizações de todas as dependências, clique no menu **opções** na parte inferior da janela do Gerenciador de dependências e selecione **Verificar atualizações**.
 
 ![componentes de verificação](../assets/en/Project/check-component-all.png)
 
-If a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is detected on GitHub, a specific dependency status is displayed:
+Se uma nova versão de componente que corresponda à sua [configuração de controle de versão de componente](#defining-a-github-dependency-version-range) for detectada no GitHub, um status de dependência específico será exibido:
 
 ![dependency-new-version](../assets/en/Project/dependency-available.png)
 
 Você pode decidir [atualizar o componente](#updating-dependencies) ou não.
 
-If you do not want to use a component update (for example you want to stay with a specific version), just let the current status (make sure the [**Automatic update**](#automatic-update) feature is not checked).
+Se não quiser usar uma atualização de componente (por exemplo, se quiser permanecer com uma versão específica), basta deixar o status atual (certifique-se de que o recurso [**Atualização automática**](#automatic-update) não esteja marcado).
 
-#### Updating dependencies
+#### Atualização de dependências
 
-**Updating a dependency** means downloading a new version of the dependency from GitHub and keeping it ready to be loaded the next time the project is started.
+**Atualizar uma dependência** significa baixar uma nova versão da dependência do GitHub e mantê-lo pronto para ser carregado na próxima vez que o projeto for iniciado.
 
-You can update dependencies at any moment, for a single dependency or for all dependencies:
+Você pode atualizar as dependências a qualquer momento, para uma única dependência ou para todas as dependências:
 
-- To update a single dependency, right-click on the dependency and select **Update \<component name\> on next startup** in the contextual menu or in the **options** menu at the bottom of the Dependency manager window:
+- Para atualizar uma única dependência, clique com o botão direito na dependência e selecione **Atualizar \<component name\> na próxima inicialização** no menu contextual ou no menu **opções** na parte inferior da janela Gerenciador de Dependências:
 
 ![componente de verificação](../assets/en/Project/update-component-one.png)
 
-- To update all dependencies at once, click on the **options** menu at the bottom of the Dependency manager window and select **Update all remote dependencies on next startup**:
+- Para atualizar todas as dependências de uma só vez, clique no menu **opções** na parte inferior da janela do gerenciador de dependências e selecione **Atualizar todas as dependências remotas na próxima inicialização**:
 
 ![check components](../assets/en/Project/update-component-all.png)
 
-In any cases, whatever the current dependency status, an automatic checking is done on GitHub before updating the dependency, to make sure the most recent version is retrieved, [according to your component versioning configuration](#defining-a-github-dependency-version-range).
+Em qualquer caso, independentemente do status atual da dependência, é feita uma verificação automática no GitHub antes de atualizar a dependência, para garantir que a versão mais recente seja recuperada, [de acordo com a configuração de controle de versão do componente](#defining-a-github-dependency-version-range).
 
-When you select an update command:
+Quando você seleciona um comando de atualização:
 
-- a dialog box is displayed and proposes to **restart the project**, so that the updated dependencies are immediately available. It is usually recommended to restart the project to evaluate updated dependencies.
-- if you click Later, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
+- uma caixa de diálogo é exibida e propõe **reiniciar o projeto**, para que as dependências atualizadas estejam imediatamente disponíveis. Em geral, recomenda-se reiniciar o projeto para avaliar as dependências atualizadas.
+- Se você clicar em Later (Mais tarde), o comando de atualização não estará mais disponível no menu, o que significa que a ação foi planejada para a próxima inicialização.
 
 #### Atualização automática
 
-The **Automatic update** option is available in the **options** menu at the bottom of the Dependency manager window.
+A opção **Atualização automática** está disponível no menu **opções** na parte inferior da janela do Gerenciador de dependências.
 
-When this option is checked (default), new GitHub component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. This option facilitates the day-to-day management of dependency updates, by eliminating the need to manually select updates.
+Quando essa opção está marcada (padrão), as novas versões de componentes do GitHub que correspondem à sua [configuração de controle de versão de componentes](#defining-a-github-dependency-version-range) são atualizadas automaticamente na próxima inicialização do projeto. Essa opção facilita o gerenciamento diário das atualizações de dependências, eliminando a necessidade de selecionar manualmente as atualizações.
 
-When this option is unchecked, a new component version matching your [component versioning configuration](#defining-a-github-dependency-version-range) is only indicated as available and will require a [manual updating](#updating-dependencies). Desmarque a opção **Atualização automática** se quiser monitorar as atualizações de dependências com precisão.
+Quando essa opção estiver desmarcada, uma nova versão de componente que corresponda à sua [configuração de controle de versão de componente] (#defining-a-github-dependency-version-range) será indicada apenas como disponível e exigirá uma [atualização manual] (#updating-dependencies). Desmarque a opção **Atualização automática** se quiser monitorar as atualizações de dependências com precisão.
 
-### Providing your GitHub access token
+### Fornecer seu token de acesso ao GitHub
 
-Registering your personal access token in the Dependency manager is:
+O registro do seu token de acesso pessoal no Gerenciador de dependências é:
 
 - obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
 - recomendado para uma [verificação de atualizações de dependências](#updating-github-dependencies).
 
-To provide your GitHub access token, you can either:
+Para fornecer seu token de acesso ao GitHub, você pode:
 
-- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private GitHub repository path.
+- clique no botão **Adicionar um token de acesso pessoal...** que é exibido na caixa de diálogo "Adicionar uma dependência" depois que você inserir um caminho de repositório privado do GitHub.
 - ou selecione **Adicionar um token de acesso pessoal GitHub...** no menu do Gerenciador de dependências a qualquer momento.
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
-You can then enter your personal access token:
+Em seguida, você pode inserir seu token de acesso pessoal:
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
-You can only enter one personal access token. Once a token has been entered, you can edit it.
+Você só pode inserir um token de acesso pessoal. Uma vez que um token foi inserido, você pode editá-lo.
 
 O token fornecido é armazenado em um arquivo **github.json** na [pasta 4D ativa](../commands-legacy/get-4d-folder.md#active-4d-folder).
 
-### Removing a dependency
+### Removendo uma dependência
 
-To remove a dependency from the Dependencies panel, select the dependency to remove and click on the **-** button of the panel or select **Remove the dependency...** from the contextual menu. You can select several dependencies, in which case the action is applied to all selected dependencies.
+Para remover uma dependência do painel Dependências, selecione a dependência a ser removida e clique no botão **-** do painel ou selecione **Remover a dependência...** no menu contextual. Você pode selecionar várias dependências e, nesse caso, a ação é aplicada a todas as dependências selecionadas.
 
 :::note
 
-Somente as dependências declaradas no arquivo [**dependencies.json**](#dependenciesjson) podem ser removidas usando o painel Dependencies. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
+Somente as dependências declaradas no arquivo [**dependencies.json**](#dependenciesjson) podem ser removidas usando o painel Dependencies. Se uma dependência selecionada não pode ser removida, o botão **-** está desativado e o **Remover a dependência...** do item de menu está oculto.
 
 :::
 
@@ -579,6 +579,6 @@ Somente as dependências declaradas no arquivo [**dependencies.json**](#dependen
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-Se você confirmar a caixa de diálogo, a dependência [estado](#dependency-status) removida é automaticamente sinalizada "Unload after restart". It will be unloaded once the application restarts.
+Se você confirmar a caixa de diálogo, a dependência [estado](#dependency-status) removida é automaticamente sinalizada "Unload after restart". Ele será descarregado quando o aplicativo for reiniciado.
 
 
