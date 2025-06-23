@@ -53,7 +53,9 @@ If no valid license is found, an error is generated.
 
 In *license*, pass a [4D.File](../API/FileClass.md) object containing a reference to the license file used to generate the embedded license.
 
-If the build requires a specific OEM license (*4D OEM XML Keys*) and if no such license is already installed in the Licenses folder of the building machine, you need to pass it using the *oemLicense* parameter. This parameter is useful if you dedicate a machine to build your applications. 
+In the non-automatic mode, if the build requires a specific OEM license (*4D OEM XML Keys*) and if no such license is already installed in the Licenses folder of the building machine, you need to pass it using the *oemLicense* parameter. This parameter is useful if you dedicate a machine to build your applications. 
+
+### Result
 
 The command returns a *status* object containing the following properties:
 
@@ -65,8 +67,17 @@ The command returns a *status* object containing the following properties:
 | errors       | Collection                                             | Collection of error objects                 |
 | \[\].message | Text                                                   | Error message                               |
 | \[\].errCode | Number                                                 | Error number                                |
+| standalone   | Object           | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Volume Desktop` license |
+| oemServer   | Object          |(only in [automatic mode](#automatic-license-selection) Description attributes for `4D Server` OEM license |
+| oemXMLKey   | Object            |(only in [automatic mode](#automatic-license-selection) Description attributes for `4D Server` XML Key license |
 
+*Description attributes* are:
 
+| **Property** | **Type**        | **Description**     |
+| ------------ | ------------| ------------------------------------------ |
+| absolutePlatformPath   | Text        | Path to the original license file retained |
+| offerName   | Text         | Commercial name of the license retained |
+| productNumber   | Number      | Serial number of the license retained |
 
 :::note Notes
 

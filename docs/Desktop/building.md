@@ -550,19 +550,19 @@ An internet connection is required on the user machine at the first launch of th
 
 #### Application automatically embedding available licenses
 
-Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically [deployment licenses](../Admin/licenses.md#deployment-licenses). 
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses). 
 
 When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands-legacy/get-4d-folder.md#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
 
 1. OEM licenses, or
-2. business licenses, or
-3. unlimited licenses.
+2. 4D Desktop Business licenses, or
+3. other licenses.
 
 The license tab displays the list of licenses automatically used for the build. The list cannot be modified. 
 
-If no valid license is found, an error is generated. 
+Once you start the build, if no valid license is found, an error is generated. Otherwise, a dialog is displayed to list the generated application(s). Detailed information are also provided in the [Log file](#log-file).
 
-After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
+After a licensed application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS). 
 
 
 #### Application embedding licenses from the following list
