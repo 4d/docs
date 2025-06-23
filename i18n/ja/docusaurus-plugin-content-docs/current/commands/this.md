@@ -33,8 +33,8 @@ displayed_sidebar: docs
 
 Class constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // This に対して値を割り当てることで
+ // プロパティを作成する
 
  This.a:=42
 ```
