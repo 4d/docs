@@ -182,7 +182,7 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection
+//Extraer los empleados con un salario superior a la media de esta selección de entidades
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
 	return This.query("salary > :1";This.average("salary")).orderBy("salary")
@@ -322,7 +322,7 @@ An ORDA class constructor function is similar to a [user class constructor funct
 
 - you cannot pass parameters to the constructor,
 - no puede utilizar las palabras clave `shared`, `session` o `singleton`,
-- you cannot call the [`Super`](../Concepts/classes.md#super) keyword within the function,
+- no puede llamar a la palabra clave [`Super`](../Concepts/classes.md#super) dentro de la función,
 - the class constructor cannot be called using the `new()` function on an entity (entities can only be created by specific functions, see below).
 
 :::
