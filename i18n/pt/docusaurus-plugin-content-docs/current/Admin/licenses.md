@@ -23,8 +23,9 @@ As licenças de implementação podem ser incorporadas na etapa de compilação 
 | *4D OEM Desktop*         | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
 | *4D Unlimited Desktop*   | **Descontinuado** - Licença personalizada incorporada                                   | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
 | *4D Desktop*             | Licença por usuário, permitindo-lhes utilizar aplicativos 4D autônomos                  | Caixa de diálogo [Primeira ativação](#first-activation) na máquina do usuário                      |
+| *4D Desktop Business*    | Embedded custom license for stand-alone 4D applications                                 | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
 | *4D Server OEM*          | Licença personalizada incorporada, entre em contato com 4D Sales para obter informações | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
-| *4D XML Keys Activation* | Usado para ativar as licenças OEM do 4D Server                                          | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
+| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses in non-automatic embedding mode                 | [Página de licenças](../Desktop/building.md#licenses) da caixa de diálogo do Gerador de aplicações |
 | *4D Server*              | Licença por usuário, permitindo que eles usem 4D Server e clientes                      | Caixa de diálogo [Primeira ativação](#first-activation) na máquina do usuário                      |
 
 ### Vencimento
