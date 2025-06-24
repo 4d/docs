@@ -3,7 +3,7 @@ id: POP3TransporterClass
 title: POP3Transporter
 ---
 
-The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
+O `POP3Transporter` permite recuperar mensagens de um servidor de email POP3.
 
 ### Objeto POP3 transporter
 
@@ -103,7 +103,7 @@ A função `.delete( )` <!-- REF #POP3TransporterClass.delete().Summary -->flags
 
 No parâmetro *msgNumber*, passe o número do email a apagar. Esse número é retornado na propriedade number pelo método [`.getMailInfoList()`](#getmailinfolist).
 
-Executar esse método não remove de verdade qualquer email. The flagged email will be deleted from the POP3 server only when the `POP3_transporter` object (created with `POP3 New transporter`) is destroyed. A marcação pode ser removida com o método `.undeleteAll()`.
+Executar esse método não remove de verdade qualquer email. O email marcado será apagado do servidor POP3 apenas quando o `POP3_transporter` (criado com `POP3 New transporter`) for destruído. A marcação pode ser removida com o método `.undeleteAll()`.
 
 > Se a sessão atual terminar de forma inesperada e perder a conexão (por exemplo timeout, falha de rede, etc), uma mensagem de erro é gerada e mensagens marcadas para serem apagadas continuam no servidor POP3.
 
@@ -324,7 +324,7 @@ O método retorna **Null** se:
 
 A função `.getMailInfoList()` <!-- REF #POP3TransporterClass.getMailInfoList().Summary --> retorna uma coleção de objetos `mailInfo` descrevendo todas as mensagens na caixa de correio designada pelo [`transporter POP3 `](#pop3-transporter-object)<!-- END REF -->. Essa função permite gerenciar localmente a lista de mensagens localizadas no servidor POP3.
 
-Each `mailInfo` object in the returned collection contains the following properties:
+Cada objeto `mailInfo` na coleção retornada contém as propriedades abaixo:
 
 | Propriedade                                                                      | Tipo   | Descrição                                                                         |
 | -------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------- |
@@ -336,7 +336,7 @@ Se a mailbox não conter uma mensagem, uma coleção vazia é retornada.
 
 #### número e propriedades ID
 
-*number* é o número de uma mensagem no mailbox no momento em que`POP3_transporter` for criado. A propriedade *number* não é um valor estático em relação a qualquer mensagem específica e vai mudar de sessão a sessão dependendo de sua relação com outras mensagens no mailibox na hora em que a sessão for aberta. Os números atribuídos às mensagens só são válidos durante o tempo de vida do objeto [`POP3_transporter`](#pop3-transporter-object). At the time the `POP3_transporter` is deleted any message marked for deletion will be removed. Quando o usuário se registrar de volta no servidor, as mensagens atuais no mailbox serão numeradas de 1 a x.
+*number* é o número de uma mensagem no mailbox no momento em que`POP3_transporter` for criado. A propriedade *number* não é um valor estático em relação a qualquer mensagem específica e vai mudar de sessão a sessão dependendo de sua relação com outras mensagens no mailibox na hora em que a sessão for aberta. Os números atribuídos às mensagens só são válidos durante o tempo de vida do objeto [`POP3_transporter`](#pop3-transporter-object). No momento em que `POP3_transporter` for apagado qualquer mensagem marcada para ser apagada será removida. Quando o usuário se registrar de volta no servidor, as mensagens atuais no mailbox serão numeradas de 1 a x.
 
 Entretanto, *id* é um número único atribuído à mensagem quando for recebida pelo servidor. Esse número é calculado usando a hora e data que a mensagem for recebida e é um valor atribuído ao seu servidor POP3. Infelizmente, servidores POP3 não usam a referência primária *id* para suas mensagens. Através das sessões POP3 precisa especificar o *number* como a referência às mensagens no servidor. Desenvolvedores podem precisar ter cuirdado se desenvolverem soluções que trazem referências às mensagens na database mas deixam o corpo da mensagem no servidor.
 
@@ -453,7 +453,7 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 ##### Descrição
 
-The `.undeleteAll()` function <!-- REF #POP3TransporterClass.undeleteAll().Summary -->removes all delete flags set on the emails in the [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->.
+A função `.undeleteAll()` <!-- REF #POP3TransporterClass.undeleteAll().Summary -->remove todos os sinalizadores de exclusão definidos nos e-mails no [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->.
 
 <!-- END REF -->
 
