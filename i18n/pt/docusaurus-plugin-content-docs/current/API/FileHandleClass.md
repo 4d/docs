@@ -98,7 +98,7 @@ A propriedade `.breakModeRead` retorna <!-- REF #FileHandleClass.breakModeRead.S
 
 A propriedade `.breakModeRead` pode ser definida na criação do identificador com a função [`file.open()`](FileClass.md#open) (consulte [a função `.open()`](FileClass.md#open) para obter mais informações). O padrão é "nativo".
 
-> The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
+> A propriedade `.breakModeRead` contém sempre um valor de texto, mesmo que a opção `.open()` tenha sido definida usando um número (constante).
 
 Essa propriedade é **somente leitura**.
 
@@ -124,7 +124,7 @@ A propriedade `.breakModeWrite` retorna <!-- REF #FileHandleClass.breakModeWrite
 
 A propriedade `.breakModeWrite` pode ser definida na criação do identificador com a função [`file.open()`](FileClass.md#open) (consulte [a função `.open()`](FileClass.md#open) para obter mais informações). O padrão é "nativo".
 
-> The `.breakModeWrite` property always contains a text value, even if the `.open()` option was set using a number (constant).
+> A propriedade `.breakModeWrite` contém sempre um valor de texto, mesmo que a opção `.open()` tenha sido definida utilizando um número (constante).
 
 Essa propriedade é **somente leitura**.
 
@@ -266,27 +266,27 @@ Essa propriedade é **somente leitura**.
 
 A propriedade `.offset` retorna <!-- REF #FileHandleClass.offset.Summary --> o deslocamento atual do fluxo de dados (posição no documento)<!-- END REF -->. O valor do offset é automaticamente atualizado após as operações de leitura e escrita.
 
-Setting the `.offset` will change its current value at the moment of the next read or write operation.
+A modificação de `.offset` alterará seu valor atual no momento da próxima operação de leitura ou gravação.
 
 - Se o valor passado for negativo, o `.offset` é definido para o início do arquivo (zero).
-- If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
+- Se o valor passado for superior ao tamanho do arquivo, o arquivo `.offset` é definido para o fim do arquivo (tamanho do ficheiro).
 
 Essa propriedade é **leitura/escrita**.
 
 :::caution
 
-Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. No entanto, a unidade de medida do deslocamento difere conforme a função de leitura: com [`readBlob()`](#readblob), `.offset` é um número de bytes, enquanto com [`readText()`](#readtext)/[`readLine()`](#readline) ele é um número de caracteres. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
+Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. No entanto, a unidade de medida do deslocamento difere conforme a função de leitura: com [`readBlob()`](#readblob), `.offset` é um número de bytes, enquanto com [`readText()`](#readtext)/[`readLine()`](#readline) ele é um número de caracteres. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Então, se você começar a ler com `readBlob()` e então chamar `readText()`, a leitura do texto começará em uma posição inconsistente. Portanto, é essencial definir a propriedade `.offset` caso você altere de leitura/escrita de blob para leitura/escrita de texto no mesmo filehandle. Por exemplo:
 
 ```4d
-  // Open a european text file using utf-16 encoding (two bytes per character)
-  // We want to read the first 10 characters as bytes, then the remaining as text.
+  // Abra um arquivo de texto europeu usando a codificação utf-16 (dois bytes por caractere)
+  // Queremos ler os primeiros 10 caracteres como bytes, depois, o restante como texto.
 $fh:=File("/RESOURCES/sample_utf_16.txt").open()
-  // read the 20 first bytes (i.e. 10 characters)
-$b:=$fh.readBlob(20) // $fh.offset=20
-  // then read all text skipping the first 10 characters we just read in previous blob
-  // because we are now reading text instead of bytes, the meaning of 'offset' is not the same.
-  // We need to translate it from bytes to characters.
-$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
+  // leia os 20 primeiros bytes (i. . 10 caracteres)
+$b:=$fh.readBlob(20) // $fh. ffset=20
+  // depois leia todo o texto ignorando os primeiros 10 caracteres que acabamos de ler em blob
+  // porque agora estamos lendo texto em vez de bytes, o significado de 'offset' não é o mesmo.
+  // Precisamos traduzi-lo de bytes para caracteres.
+$fh.offset:=10 // peça para pular 10 utf-16 caracteres (20 bytes)
 $s:=$fh.readText()
 ```
 
