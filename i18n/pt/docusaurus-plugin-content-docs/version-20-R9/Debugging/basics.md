@@ -95,6 +95,6 @@ Outra razão para utilizar o depurador é para desenvolver código. Por vezes, p
 
 ## Rupturas
 
-No processo de depuração, pode ser necessário saltar o rastreio de algumas partes do código até uma determinada linha. Or, you may want to trace the code when a given expression has a certain value (e.g. `$myVar > 1000`), or every time a specific 4D command is called.
+No processo de depuração, pode ser necessário saltar o rastreio de algumas partes do código até uma determinada linha. Ou, você pode querer rastrear o código quando uma determinada expressão tiver um determinado valor (por exemplo, `$myVar > 1000`), ou toda vez que um comando 4D específico é chamado.
 
 Estas necessidades são cobertas pelos  pontos de interrupção e pelas funcionalidades de  captura de comandos. Podem ser configurados a partir do editor de código, do depurador ou do explorador de execução.
