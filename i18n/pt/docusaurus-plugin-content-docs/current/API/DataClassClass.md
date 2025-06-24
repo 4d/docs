@@ -55,7 +55,7 @@ Os objetos atributos retornados contêm as seguintes propriedades:
 | autoFilled       | Parâmetros | True se o valor do atributo for automaticamente preenchido por 4D. Corresponde às seguintes propriedades de campos 4D: "Autoincrement" para os campos de tipo numérico e "Auto UUID" para os campos UUID (alfa). Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | exposed          | Parâmetros | True se o atributo estiver exposto no REST                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | fieldNumber      | integer    | Número interno do campo 4D do atributo. Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| fieldType        | Integer    | Tipo de campo de banco de dados 4D do atributo. Depende do atributo `kind`. Possible values: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](../commands-legacy/value-type.md)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li><li>if `.kind` = "calculated" or "alias" = same as above, depending on the resulting value (field type, relatedEntity or relatedEntities)</li>                                                                                                                                                                                                          |
+| fieldType        | Integer    | Tipo de campo de banco de dados 4D do atributo. Depende do atributo `kind`. Valores possíveis: <li>if `.kind` = "storage": corresponding 4D field type pe, consulte [`Value type`](../commands-legacy/value-type.md)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `. ind` = "relatedEntities": 42 (`is collection`)</li><li>if `. ind` = "calculado" ou "alias" = o mesmo que acima, dependendo do valor resultante (tipo de campo, relatedEntity ou relatedEntities)</li>                                                                                                                                                                                            |
 | indexed          | Parâmetros | True se houver um índice B-tree ou Cluster B-tree no atributo. Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | inverseName      | Text       | Nome do atributo que está do outro lado da relação. Retornado somente quando `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | keywordIndexed   | Parâmetros | True se houver um índice de palavras-chave no atributo. Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -468,7 +468,7 @@ No parâmetro opcional *settings*, você pode passar um objeto que contenha opç
 
 :::info
 
-Quando você chama a função `.get()` **sem** parâmetro *configurações*, uma solicitação para valores de atributos é enviada diretamente para o servidor (o [cache ORDA](. /ORDA/client-server-optimization.md#orda-cache) não é usado). Por outro lado, quando você chama o `. função et()` **com** um `context` passado no parâmetro *settings*, valores de atributo são recuperados do cache ORDA correspondente ao contexto. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
+Quando você chama a função `.get()` **sem** parâmetro *settings*, uma solicitação para valores de atributos é enviada diretamente para o servidor (o [cache ORDA](../ORDA/client-server-optimization.md#orda-cache) não é usado). Por outro lado, quando você chama o `. função et()` **com** um `context` passado no parâmetro *settings*, valores de atributo são recuperados do cache ORDA correspondente ao contexto. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
 
 :::
 
@@ -1027,15 +1027,15 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
  $vSingles:=ds.Person.query("spouse = null") //sintaxe correta
 ```
 
-#### Not equal to null or undefined values
+#### Não igual os valores null ou undefined
 
-O comparador "não igual a *value*" (`#` ou `!=`) não retorna atributos cujo valor é null ou indefinido. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
+O comparador "não igual a *value*" (`#` ou `!=`) não retorna atributos cujo valor é null ou indefinido. Por exemplo, a consulta a seguir só retornará pessoas cujo estado "info.married" é `false` e não as pessoas cuja propriedade "info.married" é "null" ou faltando:
 
 ```4d
 $notMarried:=ds.Person.query("info.married#true") //encontra pessoas cujo valor do atributo é false
 ```
 
-If you want to find persons whose "info.married" status is `false`, null, or not defined, you need to write:
+Se você deseja encontrar pessoas cujo estado "info.married" seja `false`, null, ou não definido, você precisa escrever:
 
 ```4d
 $notMarried:=ds.Person.query("info.married#true | info.married=null") //encontra atributos false, null e undefined
@@ -1219,7 +1219,7 @@ No parâmetro *querySettings* é possível passar um objeto que conteha opções
 
 #### Sobre queryPlan e queryPath
 
-The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. Geralmente a descrição do plano de pesquisa e sua rota são idênticas, mas podem diferir porque 4D pode implementar otimizações dinâmicas quando uma pesquisa for executada para melhorar desempenho. Por exemplo, o motor 4D pode converter dinamicamente uma consulta indexada em uma consulta sequencial se estimar que seja mais rápido. Esse caso particular pode acontecer quando o número de entidades sendo pesquisada é baixo.
+A informação registrada em `queryPlan`/`queryPath` inclui o tipo de pesquisa (indexada e sequencial) e cada subconsulta necessária com os operadores de conjunção. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. Geralmente a descrição do plano de pesquisa e sua rota são idênticas, mas podem diferir porque 4D pode implementar otimizações dinâmicas quando uma pesquisa for executada para melhorar desempenho. Por exemplo, o motor 4D pode converter dinamicamente uma consulta indexada em uma consulta sequencial se estimar que seja mais rápido. Esse caso particular pode acontecer quando o número de entidades sendo pesquisada é baixo.
 
 Por exemplo, se executar esta pesquisa:
 
@@ -1454,7 +1454,7 @@ A fórmula é fornecida como texto com `eval()` no parâmetro *queryString*:
  $es:=ds.Students.query("eval(length(This.lastname) >=30) and nationality='French'")
 ```
 
-The formula is given as a `Formula` object through a placeholder:
+A fórmula se dá como um objeto `Formula` através de um marcador de posição:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1543,13 +1543,13 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                                                                          |
-| --------- | ------ | -- | -------------------------------------------------------------------------------------------------- |
-| settings  | Object | -> | Object that sets the timeout and maximum size of the ORDA cache for the dataclass. |
+| Parâmetro | Tipo   |    | Descrição                                                                                            |
+| --------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
+| settings  | Object | -> | Objecto que define o tempo limite e o tamanho máximo da cache ORDA para a dataclass. |
 
 <!-- END REF -->
 
-> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -1562,13 +1562,13 @@ No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 | timeout     | Integer | Tempo de espera em segundos. |
 | maxEntries  | Integer | Número máximo de entidades.  |
 
-`timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Uma vez decorrido o tempo limite, as entidades da classe de dados na cache são consideradas como expiradas. Isto significa que:
+`timeout` define o timeout da cache ORDA para o dataclass (por defeito é de 30 segundos). Uma vez decorrido o tempo limite, as entidades da classe de dados na cache são consideradas como expiradas. Isto significa que:
 
 - os dados ainda estão lá
 - na próxima vez que os dados forem necessários, serão solicitados ao servidor
 - 4D remove automaticamente os dados expirados quando o número máximo de entidades é atingido
 
-Setting a `timeout` property sets a new timeout for the entities already present in the cache. É útil quando se trabalha com dados que não mudam com muita frequência, e, portanto, quando não são necessários novos pedidos ao servidor.
+A definição de uma propriedade `timeout` define um novo tempo limite para as entidades já presentes na cache. É útil quando se trabalha com dados que não mudam com muita frequência, e, portanto, quando não são necessários novos pedidos ao servidor.
 
 `maxEntries` define o número máximo de entidades na cache ORDA. O padrão é de 30 000.
 
