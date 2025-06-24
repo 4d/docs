@@ -621,7 +621,7 @@ O seguinte código genérico duplica qualquer entidade:
 | Parâmetro  | Tipo    |                             | Descrição                                                                                                                     |
 | ---------- | ------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: a chave primária é retornada como uma string, independentemente do tipo de chave primária |
-| Resultados | any     | <- | Value of the primary key of the entity (Integer or Text)                                                   |
+| Resultados | any     | <- | Valor da chave primária da entidade (Inteiro ou Texto)                                                     |
 
 <!-- END REF -->
 
@@ -955,7 +955,7 @@ Um registro bloqueado por `.lock()` é desbloqueado:
 
 :::note Notas
 
-- [`unlock()`](#unlock) must be called as many times as `lock()` was called in the same process for the entity to be actually unlocked.
+- [`unlock()`](#unlock) deve ser chamado tantas vezes quanto `lock()` foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
 - Uma entidade também pode ser [travada por uma sessão REST](../REST/$lock.md), caso em que só pode ser destravada pela sessão.
 
 :::
@@ -1641,24 +1641,24 @@ Retorna:
 
 #### Descrição
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->returns True if at least one entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->. Pode usar essa função para determinar se precisar salvar a entidade.
+A função `.touched()` <!-- REF #EntityClass.touched().Summary -->retorna True se pelo menos um atributo de entidade tiver sido modificado desde que a entidade foi carregada na memória ou salva<!-- END REF -->. Pode usar essa função para determinar se precisar salvar a entidade.
 
 Isso se aplica somente a atributos de [`kind`](DataClassClass.md#returned-object) "storage" ou "relatedEntity".
 
-Para uma nova entidade que foi criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. For example, after you execute `$id:=ds.Employee.ID` for a new entity (assuming the ID attribute has the "Autoincrement" property), `.touched()` returns True.
+Para uma nova entidade que foi criada (com [`.new()`](DataClassClass.md#new)), a função retorna False. No entanto, neste contexto, se você acessar um atributo cuja propriedade [`autoFilled`](./DataClassClass.md#returned-object) é True, a função `.touched()` retornará True. Por exemplo, depois que você executa `$id:=ds.Employee.ID` para uma nova entidade (supondo que o atributo ID tenha a propriedade "Autoincrement"), `.touched()` retorna True.
 
 #### Exemplo
 
 Neste exemplo, vemos se é necessário salvar a entidade:
 
 ```4d
- var $emp : cs. EmployeeEntity
- $emp:=ds. Employee.get(672)
- $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
+ var $emp : cs.EmployeeEntity
+ $emp:=ds.Employee.get(672)
+ $emp.firstName:=$emp.firstName //Mesmo que seja atualizado com o mesmo valor, o atributo é marcado como tocado
 
- If($emp.touched()) //if at least one of the attributes has been changed
+ If($emp.touched()) //se pelo menos um dos atributos tiver sido alterado
     $emp.save()
- End if // otherwise, no need to save the entity
+ End if // caso contrário, não é necessário salvar a entidade
 ```
 
 <!-- END REF -->
@@ -1780,7 +1780,7 @@ Quando um registro for trancado, deve ser destrancado do processo de trancamento
 
 :::note
 
-`unlock()` must be called as many times as [`lock()`](#lock) was called in the same process for the entity to be actually unlocked.
+`unlock()` deve ser chamado tantas vezes quanto [`lock()`](#lock) foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
 
 :::
 
