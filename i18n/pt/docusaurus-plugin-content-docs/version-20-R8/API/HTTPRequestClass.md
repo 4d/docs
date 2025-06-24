@@ -94,7 +94,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->cria e envia uma solicitação HTTP para o servidor HTTP definido na *url* com as *opções* definidas e retorna um objeto `4D.HTTPRequest`<!-- END REF -->.
 
-The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
+O objeto devolvido `HTTPRequest` é utilizado para processar respostas do servidor HTTP e métodos de chamada.
 
 Em *url*, passe o URL para onde pretende enviar o pedido. A sintaxe a utilizar é:
 
@@ -124,7 +124,7 @@ No parâmetro *options*, passe um objeto que possa conter as seguintes proprieda
 
 | Propriedade            | Tipo                                              | Descrição                                                                                                                                                                                                                                                                                                                                                           | Por padrão           |
 | ---------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| agent                  | [4D.HTTPAgent](HTTPAgentClass.md) | HTTPAgent para usar para o HTTPRequest. Agent options will be merged with request options (request options take precedence). If no specific agent is defined, a global agent with default values is used.                                                                                        | Objeto agente global |
+| agent                  | [4D.HTTPAgent](HTTPAgentClass.md) | HTTPAgent para usar para o HTTPRequest. As opções do agente serão mescladas com as opções de solicitação (as opções de solicitação têm precedência). Se nenhum agente específico for definido, será usado um agente global com valores padrão.                                                   | Objeto agente global |
 | automaticRedirections  | Parâmetros                                        | Se true, os redirecionamentos serão realizados automaticamente (até 5 redirecionamentos são tratados, a resposta do 6. º redirecionamento é retornada, se houver)                                                                                                                                                                | True                 |
 | body                   | Diferente de                                      | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                                                                 | indefinido           |
 | certificatesFolder     | [Folder](FolderClass.md)                          | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                                                                                                                   | indefinido           |
@@ -133,7 +133,7 @@ No parâmetro *options*, passe um objeto que possa conter as seguintes proprieda
 | encoding               | Text                                              | Utilizado apenas em caso de pedidos com um `body` (métodos `post` or `put`). Codificação do conteúdo do corpo do pedido se for um texto, ignorado se o tipo de conteúdo for colocado dentro dos cabeçalhos                                                                                                                       | "UTF-8"              |
 | headers                | Object                                            | Cabeçalhos do pedido. Sintaxe: `headers.key=value` (*value* pode ser uma coleção se a mesma chave precisar aparecer várias vezes)                                                                                                                                                                                | Objecto vazio        |
 | method                 | Text                                              | "POST", "GET", ou outro método                                                                                                                                                                                                                                                                                                                                      | "GET"                |
-| minTLSVersion          | Text                                              | Sets the minimum version of TLS: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                                                                                                                 | "`TLSv1_2`"          |
+| minTLSVersion          | Text                                              | Define a versão mínima do TLS: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                                                                                                                   | "`TLSv1_2`"          |
 | onData                 | [Function](FunctionClass.md)                      | Chamada de retorno quando os dados do corpo são recebidos. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                     | indefinido           |
 | onError                | [Function](FunctionClass.md)                      | Chamada de retorno quando ocorre um erro. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                                      | indefinido           |
 | onHeaders              | [Function](FunctionClass.md)                      | Chamada de retorno quando os cabeçalhos são recebidos. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                         | indefinido           |
@@ -159,7 +159,7 @@ Aqui está a sequência de chamadas de retorno:
 
 1. `onHeaders` é sempre chamado uma vez
 
-2. `onData` is called zero or several times (not called if the request does not have a body)
+2. `onData` é chamado zero ou várias vezes (não chamado se o pedido não tiver um corpo)
 
 3. Se não ocorreu nenhum erro, `onResponse` é sempre chamado uma vez
 
@@ -184,7 +184,7 @@ Um objeto `event` é retornado quando uma [função de retorno de chamada](#call
 
 #### authentication-object
 
-An authentication object handles the `options.serverAuthentication` or `options.proxyAuthentication` property. Pode conter as seguintes propriedades:
+Um objeto de autenticação manipula a propriedade `options.serverAuthentication` ou `options.proxyAuthentication`. Pode conter as seguintes propriedades:
 
 | Propriedade | Tipo | Descrição                                                                                      | Por padrão |
 | ----------- | ---- | ---------------------------------------------------------------------------------------------- | ---------- |
@@ -307,13 +307,13 @@ A propriedade `.response` contém <!-- REF #HTTPRequestClass.response.Summary --
 
 Um objeto `response` é um objeto não compartilhável. Contém as seguintes propriedades:
 
-| Propriedade                 | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                             |
-| --------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Diferente de | Corpo da resposta. O tipo da mensagem é definido conforme a propriedade [`dataType`](#datatype). Indefinido se o corpo ainda não tiver sido recebido                                                                                                                                                                                  |
-| .headers    | Object       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos em minúsculas. `<headername>.key` = value (value can be a collection if the same key appears multiple times). Indefinido se os cabeçalhos ainda não tiverem sido recebidos.                                         |
-| .status     | Number       | Código de estado da resposta                                                                                                                                                                                                                                                                                                                                          |
-| .statusText | Text         | Mensagem que explica o código de estado                                                                                                                                                                                                                                                                                                                               |
-| .rawHeaders | Object       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos intactos (com o seu caso original). `<headerName>.key` = value (value can be a collection if the same key appears multiple times). Indefinido se os cabeçalhos ainda não tiverem sido recebidos. |
+| Propriedade                 | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Diferente de | Corpo da resposta. O tipo da mensagem é definido conforme a propriedade [`dataType`](#datatype). Indefinido se o corpo ainda não tiver sido recebido                                                                                                                                                                                   |
+| .headers    | Object       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos em minúsculas. `<headername>.key` = valor (valor pode ser uma coleção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos.                                         |
+| .status     | Number       | Código de estado da resposta                                                                                                                                                                                                                                                                                                                                           |
+| .statusText | Text         | Mensagem que explica o código de estado                                                                                                                                                                                                                                                                                                                                |
+| .rawHeaders | Object       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos intactos (com o seu caso original). `<headerName>.key` = valor (valor pode ser uma coleção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos. |
 
 <!-- END REF -->
 
@@ -414,7 +414,7 @@ Se a resposta do servidor já tiver chegado, a função regressa imediatamente.
 
 :::note
 
-During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  Você pode sair de uma .wait() chamando [`terminate()`](#terminate) de um retorno de chamada.
+Durante a execução de .wait(), as funções de callback dos workers são executadas, sejam elas originadas de outras instâncias de `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou de outras chamadas [`CALL WORKER`](../commands-legacy/call-worker.md).  Você pode sair de uma .wait() chamando [`terminate()`](#terminate) de um retorno de chamada.
 
 :::
 
