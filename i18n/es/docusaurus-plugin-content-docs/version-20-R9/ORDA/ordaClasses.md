@@ -182,7 +182,7 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection
+//Extraer los empleados con un salario superior a la media de esta selección de entidades
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
 	return This.query("salary > :1";This.average("salary")).orderBy("salary")
