@@ -31,7 +31,7 @@ A janela tem as seguintes características principais:
 
 Esta biblioteca é só de leitura. Se quiser editar objetos padrão ou criar sua própria biblioteca de objetos pré-configurados ou formulários projetos, você precisará criar uma biblioteca de objetos personalizada (veja abaixo).
 
-All objects proposed in the standard object library are described on [this section](../FormEditor/objectLibrary.md).
+Todos os objetos propostos na biblioteca de objetos padrão estão descritos em [esta seção](../FormEditor/objectLibrary.md).
 
 ## Utilização da biblioteca de objetos padrão
 
