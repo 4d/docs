@@ -351,7 +351,7 @@ Utilizando la palabra clave `singleton` se crea un **singleton**, utilizado para
 
 :::note
 
-[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1).
+Las [clases de entidad ORDA](../ORDA/ordaClasses.md#entity-class) también pueden beneficiarse de una función `Class constructor`. La implementación es similar a la de las clases normales pero [con algunas diferencias](../ORDA/ordaClasses.md#class-constructor-1).
 
 :::
 
@@ -423,7 +423,7 @@ Si omite el tipo en la línea de declaración, la propiedad se crea como una var
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
+La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de cualquier bloque `Function` o `Class constructor`.
 
 :::
 
@@ -511,7 +511,7 @@ Si no se accede a la propiedad, el código nunca se ejecuta.
 
 :::note
 
-[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) benefit from an extended implementation of computed properties with [two additional functions](../ORDA/ordaClasses.md#computed-attributes-1): `query` and `orderBy`.
+Las [clases de entidad ORDA](../ORDA/ordaClasses.md#entity-class) se benefician de una implementación extendida de propiedades computadas con [dos funciones adicionales](../ORDA/ordaClasses.md#computed-attributes-1): `query` y `orderBy`.
 
 :::
 
@@ -531,7 +531,7 @@ El tipo de la propiedad calculada es definido por la declaración de tipo `$retu
 
 :::note
 
-ORDA entity classes can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1).
+Las clases de entidad ORDA también pueden beneficiarse de una función `Class constructor`. La implementación es similar a la de las clases normales pero [con algunas diferencias](../ORDA/ordaClasses.md#class-constructor-1).
 
 :::
 
@@ -691,7 +691,7 @@ La propiedad [`.isShared`](../API/ClassClass.md#isshared) de los objetos de la C
 
 ### Creación de una clase compartida
 
-To create a shared class, add the `shared` keyword before the [Class constructor](#class-constructor). Por ejemplo:
+Para crear una clase compartida, añada la palabra clave `shared` antes del [Class constructor](#class-constructor). Por ejemplo:
 
 ```4d
 	//shared class: Person
@@ -715,12 +715,12 @@ Si una función definida al interior de una clase compartida modifica objetos de
 Para crear una función compartida, añada la palabra clave `shared` antes de la palabra clave [Function](#function) en una clase compartida. Por ejemplo:
 
 ```4d
-	//shared class Foo
+//clase compartida Foo
 shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
-  This.variable:=$value //no need to call use/end use
+  This.variable:=$value //no es necesario llamar use/end use
 ```
 
 :::note
@@ -763,7 +763,7 @@ Una vez instanciado, existe una clase singleton (y su singleton) siempre que exi
 
 Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) antes del [`Class constructor`](#class-constructor):
 
-- To declare a (process) singleton class, write `singleton Class constructor()`.
+- Para declarar una clase singleton (proceso), escriba `singleton Class constructor()`.
 - Para declarar una clase singleton compartida, escribe `shared singleton Class constructor()`.
 - Para declarar una clase singleton de sesión, escriba `session singleton Class constructor()`.
 
