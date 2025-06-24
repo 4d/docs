@@ -489,8 +489,8 @@ Quando se utiliza uma função [construtora de classe](#class-constructor) (com 
 
 Class constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // Crie propriedades nisto como
+ // desejado ao atribuir-lhes
  This.a:=42 
 ```
 
