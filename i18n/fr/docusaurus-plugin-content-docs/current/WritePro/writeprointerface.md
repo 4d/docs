@@ -9,9 +9,9 @@ Un développeur 4D peut facilement implémenter ces palettes dans leur applicati
 
 La documentation principale de l'[interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se trouve dans le *4D - Mode Développement*.
 
-You will find below:
+Vous trouverez ci-dessous :
 
-- the Table Wizard configuration documentation,
+- la documentation de configuration de l'assistant de table,
 - the integrated A.I. documentation.
 
 ## Assistant de table
@@ -299,7 +299,7 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 [4D Write Pro - Table Wizard (vidéo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
 
-## Integrated AI
+## IA intégrée
 
 You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application.
 
