@@ -104,7 +104,7 @@ Quando a fonte de dados for uma seleção de entidades, qualquer modificação f
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an *undefined* value, thus displaying blank rows in the list box. Neste caso, você pode chamar a função [`.clean()`](API/EntitySelectionClass.md#clean) para obter uma nova seleção de entidade, mas sem as referências de entidade deletadas.
+Quando as entidades são excluídas, suas referências permanecem na seleção da entidade com um valor *undefined*, assim exibindo linhas em branco no list box. Neste caso, você pode chamar a função [`.clean()`](API/EntitySelectionClass.md#clean) para obter uma nova seleção de entidade, mas sem as referências de entidade deletadas.
 
 :::
 
@@ -336,7 +336,7 @@ Quando o comando OBJECT SET VISIBLE for usado com um rodapé, é aplicado a todo
 
 ### Propriedades específicas do rodapé
 
-[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Formato Alpha](properties_Display.md#alpha-format) - [Cor de fundo](properties_BackgroundAndBorder.md#background-color--fill-color) - [Negrito](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Formato de data](properties_Display.md#date-format) - [Tipo de expressão](properties_Object.md#expression-type) - [Fonte](properties_Text.md#font) - [Cor do fonte](properties_Text.md#font-color) - [Dica](properties_Help.md#help-tip) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment) - [Padding horizontal](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Formato de número](properties_Display.md#number-format) - [Nome do objeto](properties_Object.md#object-name) - [Formato da imagem](properties_Display.md#picture-format) - [Formato do tempo](properties_Display.md#time-format) - [Truncate com ellipsis](properties_Display.md#truncate-with-ellipsis) - [Sublinhado](properties_Text.md#underline) - [Cálculo variável](properties_Object.md#variable-calculation) - [Variável ou Expressão](properties_Object.md#variable-or-expression) - [Alinhamento vertical](properties_Text.md#vertical-alignment) - [Padding](properties_Coordinates_CoordinatesAndSizing.md#vertical-padding) - [Largura](properties_CoordinatesAndSizing.md#width) - [Embalagem de palavras](properties_Display.md#wordwrap)
 
 ## Gerenciar entrada
 
@@ -522,7 +522,7 @@ O suporte de ordenação padrão depende do tipo de list box:
 
 | Tipo de list box              | Suporte de ordenação padrão | Comentários                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Uma coleção de objetos        | Sim                         | <ul><li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Uma coleção de objetos        | Sim                         | <ul><li>As colunas "This.a" ou "This.a.b" são classificáveis.</li><li>A [propriedade de origem da list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Colecção de valores escalares | Não                         | Use a classificação personalizada com a função [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Seleção de entidades          | Sim                         | <li>A [propriedade de origem da caixa de listagem](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo,</li> "This.data<li>.</li>city" quando "data" é um<li>atributo de objeto</0>)<li>Suportado: classifica propriedades de atributos</0> relacionados<li>(por exemplo</0>, "This.company<li>.</li>name"<li>)</li>Suportado: classifica propriedades de atributos de objetos (por exemplo,<li>"This.data.city" quando "data" é um atributo de objeto)Suportado</li>: classifica<li>atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por meio de atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar a classificação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li> |
 | Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -570,7 +570,7 @@ O valor da [variável de cabeçalho de coluna](properties_Object.md#variable-or-
 - Se a variável for definida como 1, a coluna será classificada em ordem crescente e a seta de classificação será exibida.
   ![](../assets/en/FormObjects/sorticon2.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
+- Se a variável for estabelecida como 2, a coluna é ordenada de forma descendente e a flecha de ordenação é exibida.
   ![](../assets/en/FormObjects/sorticon1.png)
 
 > Somente [variáveis] declaradas ou dinâmicas (Concepts/variables.md) podem ser usadas como variáveis de coluna de cabeçalho. Outros tipos de [expressions](Aceitações/quick-tour.md#expressions) como `Form.sortValue` não são suportados.
@@ -609,7 +609,7 @@ Para cada atributo (estilo, cor e cor de fundo), uma **herança** é implementad
 - para atributos linhas: valores de atributos de colunas
 - para atributos coluna: valores atributos no list box
 
-Dessa maneira se quiser que um objeto herde o valor de atributo de um nível superior, pode usar a constante `lk inherited` (valor padrão) à definição de comando ou diretamente no elemento do array correspondente de estilo/cor. For example, given an array list box containing a standard font style with alternating colors:
+Dessa maneira se quiser que um objeto herde o valor de atributo de um nível superior, pode usar a constante `lk inherited` (valor padrão) à definição de comando ou diretamente no elemento do array correspondente de estilo/cor. Por exemplo, dado um list box array contendo um estilo de fonte padrão com cores alternadas:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Pode realizar as modificações abaixo:
@@ -961,17 +961,17 @@ O único atributo obrigatório é "valueType" e os seus valores suportados são 
 Os valores das células são armazenados no atributo "value". Este atributo é utilizado tanto para a entrada como para a saída. Também pode ser utilizada para definir valores por defeito quando se utilizam listas (ver abaixo).
 
 ```4d
- ARRAY OBJECT(obColumn;0) //column array
+ ARRAY OBJECT(obColumn;0) //array de colunas
  C_OBJECT($ob1)
  $entry:="Hello world!"
- OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1; "valueType"; "text")
+ OB SET($ob1; "value";$entry) // se o usuário inserir um novo valor, $entry conterá o valor editado
  C_OBJECT($ob2)
- OB SET($ob2;"valueType";"real")
+ OB SET($ob2; "valueType"; "real")
  OB SET($ob2;"value";2/3)
  C_OBJECT($ob3)
- OB SET($ob3;"valueType";"boolean")
- OB SET($ob3;"value";True)
+ OB SET($ob3; "valueType"; "boolean")
+ OB SET($ob3; "value";True)
 
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
@@ -1200,7 +1200,7 @@ O valueType "color" permite-lhe apresentar uma cor ou um texto.
 
 #### event valueType
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Nenhum dado ou valor pode ser transmitido ou devolvido.
+O "event" valueType exibe um botão simples que gera um evento `On Clicked` quando clicado. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
 Opcionalmente, pode passar um atributo "label".
 
