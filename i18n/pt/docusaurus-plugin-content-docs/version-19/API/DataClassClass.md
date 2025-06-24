@@ -812,7 +812,7 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
  $vSingles:=ds. Person.query("spouse = null") //correct syntax
 ```
 
-#### Not equal to null or undefined values
+#### Não igual os valores null ou undefined
 
 O comparador "not equal to *value*" (`#` ou `!`) não retorna atributos cujo valor é null ou indefinido. Por exemplo, a consulta a seguir só retornará pessoas cujas "informações". status chegado é `false` e não as pessoas cuja propriedade "info.married" é "null" ou faltando:
 
