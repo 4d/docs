@@ -127,7 +127,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 この処理はコンパイル済みストラクチャーファイルと**4D Volume Desktop** (4D データベースエンジン)を統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
 - デフォルトのデータファイルを定義することも、ユーザーに [独自のデータファイルを作成して使用](#データファイルの管理) してもらうこともできます。
-- 運用ライセンスを埋め込むか、初回起動時にエンドユーザー自身にライセンスを入力させるかを選択することができます([**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の段落を参照して下さい)。
+- You can either embed a [deployment license](../Admin/licenses.md#deployment-licenses) or let the final user enter their license at the first application launch (see [**Licenses**](#licenses) below).
 
 :::note
 
@@ -502,24 +502,26 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-- [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したい[運用ライセンス](../Admin/licenses.md#運用ライセンス) を指定します。
+- configure the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### ライセンスリスト
 
-このタブには[評価版アプリケーションをビルドする](#評価版アプリケーションをビルドする) オプションが表示される他、アプリケーション(スタンドアロン版またはクライアントサーバー版)に[埋め込み可能な運用ライセンス](../Admin/licenses.md#運用ライセンス) として利用可能なライセンス一覧が表示されます。 デフォルトでリストは空です。
+This tab displays the **Application type** menu, allowing you to define how you want to manage licenses in the built application. 次のオプションから選択することができます:
 
-このタブを使用して以下のようなものをビルドできます:
+![](../assets/en/Admin/buildappLic.png)
 
-- 評価版アプリケーション
-- 埋め込みライセンス抜きのアプリケーション(エンドユーザーはユーザーごとのライセンスが必要になります)
-- 埋め込みライセンス付きのアプリケーション
+#### Application without embedded license
 
-#### 評価版アプリケーションをビルド
+Select this option to build an application without embedded deployment license.
 
-アプリケーションの評価版を作成するには、このオプションをチェックして下さい。
+この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細な情報については、[**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の章を参照して下さい。
+
+#### Evaluation application
+
+Select this option to create an evaluation version of your application.
 
 評価アプリケーションを使用すると、エンドユーザーは自身のマシン上で自身のスタンドアロンまたはサーバーアプリケーションを機能制約なく一定期間実行することができます。 期間のカウントは最初の起動から始まります。 評価期間が終わると、同一マシン上では一定期間アプリケーションを使用できなくなります。
 
@@ -529,8 +531,6 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 :::
 
-"評価版アプリケーションをビルド"オプションが有効化されると、配布ライセンスは無視されます。
-
 :::note 注記
 
 - [`License info`](../commands/license-info.md) コマンドを使用するとアプリケーションライセンスのタイプ (*.attributes* コレクション) およびそれらの有効期限 (*.expirationDate* オブジェクト) を知ることができます。
@@ -539,17 +539,27 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 :::
 
-#### 埋め込みライセンス抜きのアプリケーションをビルドする
+#### Application automatically embedding available licenses
 
-埋め込み配布ライセンス抜きのアプリケーションをビルドするには、ライセンスの一覧リストを空にし、"評価版アプリケーションをビルドする"が**チェックされていない**ことを確認して下さい。
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses).
 
-この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細な情報については、[**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の章を参照して下さい。
+When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands-legacy/get-4d-folder.md#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
 
-#### 埋め込みライセンス付きのアプリケーションをビルドする
+1. OEM licenses, or
+2. 4D Desktop Business licenses, or
+3. other licenses.
 
-このオプションを使用すると、必要なライセンスがすでに埋め込まれている、すぐに使用可能なアプリケーションをビルドすることができます。
+The license tab displays the list of licenses automatically used for the build. The list cannot be modified.
 
-[運用ライセンス](../Admin/licenses.md#運用ライセンス) を含んだファイルを指定する必要があります。 これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
+Once you start the build, if no valid license is found, an error is generated. Otherwise, a dialog is displayed to list the generated application(s). Detailed information are also provided in the [Log file](#log-file).
+
+ライセンスつきのアプリケーションがビルドされると、実行可能アプリケーションの隣(Windows)、あるいはパッケージの中(macOS) にあるLicenses フォルダ内に配布ライセンスファイルが自動的に配置されます。
+
+#### Application embedding licenses from the following list
+
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding necessary [deployment licenses](../Admin/licenses.md#deployment-licenses) that you designate specifically.
+
+When you select this option, a license list is displayed in the tab. You must designate the files that contain your licenses. これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については [Get 4D folder](../commands-legacy/get-4d-folder.md) コマンドの説明を参照してください。
 
