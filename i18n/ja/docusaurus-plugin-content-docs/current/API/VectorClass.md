@@ -56,9 +56,9 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 
 #### 説明
 
-The `4D.Vector.new()` function <!-- REF #4D.Vector.new().Summary -->creates and returns a new object of the `4D.Vector` type<!-- END REF -->.
+`4D.Vector.new()` 関数は、<!-- REF #4D.Vector.new().Summary -->新しい`4D.Vector`型のオブジェクト作成して返します<!-- END REF -->。
 
-In *parameter*, pass a collection of real numbers representing the vector to create. These values are provided by artifical intelligences and represent mathematically objects like words or data.
+*parameter* 引数には、作成したベクトルを表す実数値のコレクションを渡します。 These values are provided by artifical intelligences and represent mathematically objects like words or data.
 
 #### 例題
 
