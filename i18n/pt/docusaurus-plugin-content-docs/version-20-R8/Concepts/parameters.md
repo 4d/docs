@@ -180,12 +180,12 @@ A instrução `return` pode ser usada junto com a sintaxe padrão para [valores 
 Function getValue -> $v : Integer
 	$v:=10
 	return 20
-	// returns 20
+	// retorna 20
 
 Function getValue -> $v : Integer
 	return 10
 	$v:=20 // never executed
-	// returns 10
+	// retorna 10
 ```
 
 ## Indireção dos parâmetros
@@ -283,9 +283,9 @@ Esse método pode ser chamado com um número variável de parâmetros Real. No c
 
 ```4d
 
-$total1:=SumNumbers // returns 0
-$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
-$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+$total1:=SumNumbers // retorna 0 
+$total2:=SumNumbers(1; 2; 3; 4; 5) // retorna 15
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // erro
 
 ```
 
