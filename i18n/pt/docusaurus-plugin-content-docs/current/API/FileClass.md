@@ -249,10 +249,10 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <details><summary>História</summary>
 
-| Release | Mudanças                        |
-| ------- | ------------------------------- |
-| 20 R9   | Read UUIDs in macOS executables |
-| 19      | Adicionado                      |
+| Release | Mudanças                           |
+| ------- | ---------------------------------- |
+| 20 R9   | Ler os UUIDs nos executáveis macOS |
+| 19      | Adicionado                         |
 
 </details>
 
@@ -260,9 +260,9 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <!--REF #FileClass.getAppInfo().Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                    |
-| ---------- | ------ | --------------------------- | ---------------------------- |
-| Resultados | Object | <- | Application file information |
+| Parâmetro  | Tipo   |                             | Descrição                           |
+| ---------- | ------ | --------------------------- | ----------------------------------- |
+| Resultados | Object | <- | Informações do arquivo da aplicação |
 
 <!-- END REF -->
 
@@ -270,7 +270,7 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna o conteúdo de informações de arquivos de aplicação como um objeto<!-- END REF -->.
 
-A função deve ser usada com um arquivo existente e compatível: **.plist** (todas as plataformas), **.exe**/**.dll** (Windows) ou **macOS executável**. If the file does not exist on disk or is not a supported file, the function returns an empty object (no error is generated).
+A função deve ser usada com um arquivo existente e compatível: **.plist** (todas as plataformas), **.exe**/**.dll** (Windows) ou **macOS executável**. Se o arquivo não existir no disco ou não for um arquivo compatível, a função retornará um objeto vazio (nenhum erro será gerado).
 
 **Objeto retornado com um arquivo .plist (todas as plataformas)**
 
@@ -301,22 +301,22 @@ Todos os valores de propriedades são Texto.
 
 :::note
 
-A macOS executable file is located within a package (e.g. myApp.app/Contents/MacOS/myApp).
+Um arquivo executável macOS está localizado em um pacote (por exemplo, myApp.app/Contents/MacOS/myApp).
 
 :::
 
-The function returns an `archs` object that contains a collection of objects describing every architecture found in the executable (a fat executable can embed several architectures). Every object of the collection contains the following properties:
+A função retorna um objeto `archs` que contém uma coleção de objetos que descrevem cada arquitetura encontrada no executável (um executável fat pode incorporar várias arquiteturas). Cada objeto da coleção contém as seguintes propriedades:
 
 | Propriedade | Tipo   | Descrição                                                                         |
 | ----------- | ------ | --------------------------------------------------------------------------------- |
 | name        | Text   | Nome da arquitetura ("arm64" ou "x86_64") |
-| type        | Number | Numerical identifier of the architecture                                          |
+| type        | Number | Identificador numérico da arquitetura                                             |
 | uuid        | Text   | Representação textual do uuid do executável                                       |
 
 #### Exemplo 1
 
 ```4d
-  // display copyright info of an info.plist (any platform)
+  // exibir informações de direitos autorais de um info.plist (qualquer plataforma)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
@@ -568,11 +568,11 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <details><summary>História</summary>
 
-| Release | Mudanças                        |
-| ------- | ------------------------------- |
-| 20 R9   | Read UUIDs in macOS executables |
-| 20      | Suporte de WinIcon              |
-| 19      | Adicionado                      |
+| Release | Mudanças                           |
+| ------- | ---------------------------------- |
+| 20 R9   | Ler os UUIDs nos executáveis macOS |
+| 20      | Suporte de WinIcon                 |
+| 19      | Adicionado                         |
 
 </details>
 
@@ -580,9 +580,9 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <!--REF #FileClass.setAppInfo().Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                              |
-| --------- | ------ | -- | ------------------------------------------------------ |
-| info      | Object | -> | Properties to write in an application file information |
+| Parâmetro | Tipo   |    | Descrição                                                             |
+| --------- | ------ | -- | --------------------------------------------------------------------- |
+| info      | Object | -> | Propriedades para escrever em informações de um arquivo de aplicativo |
 
 <!-- END REF -->
 
@@ -600,7 +600,7 @@ A função apenas é compatível com arquivos .plist em formato xml (baseado em 
 
 :::
 
-If the .plist file already exists on the disk, it is updated. Otherwise, it is created.
+Se o arquivo .plist já existir no disco, ele será atualizado. Caso contrário, será criado.
 
 Cada propriedade válida definida no parâmetro do objecto info está escrita no arquivo .plist como uma chave. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
@@ -628,9 +628,9 @@ Cada propriedade válida definida no parâmetro do objeto *info* é escrita no r
 | OriginalFilename | Text |                                                                                                                                                           |
 | WinIcon          | Text | Caminho Posix do ficheiro .ico. Esta propriedade aplica-se apenas a ficheiros executáveis gerados por 4D. |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Se passar um tipo de valor diferente de texto, este é transformado em string.
+Para todas as propriedades, exceto `WinIcon`, se você passar um texto nulo ou vazio como valor, uma sequência vazia é escrita na propriedade. Se passar um tipo de valor diferente de texto, este é transformado em string.
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+Para a propriedade `WinIcon`, se o arquivo de ícone não existir ou tiver um formato incorreto, um erro é gerado.
 
 **Parâmetro *info* com um arquivo macOS executável (somente macOS)**
 
@@ -711,9 +711,9 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parâmetro | Tipo |    | Descrição                 |
-| --------- | ---- | -- | ------------------------- |
-| content   | BLOB | -> | New contents for the file |
+| Parâmetro | Tipo |    | Descrição                      |
+| --------- | ---- | -- | ------------------------------ |
+| content   | BLOB | -> | Novos conteúdos para o arquivo |
 
 <!-- END REF -->
 
@@ -760,7 +760,7 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- END REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
+Se o arquivo referenciado no objeto `File` não existir no disco, ele será criado pela função. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
 Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
@@ -769,7 +769,7 @@ Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o
 - em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
 - ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 
 Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.
 

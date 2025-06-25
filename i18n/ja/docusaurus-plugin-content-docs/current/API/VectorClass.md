@@ -58,17 +58,17 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 
 `4D.Vector.new()` 関数は、<!-- REF #4D.Vector.new().Summary -->新しい`4D.Vector`型のオブジェクト作成して返します<!-- END REF -->。
 
-*parameter* 引数には、作成したベクトルを表す実数値のコレクションを渡します。 These values are provided by artifical intelligences and represent mathematically objects like words or data.
+*parameter* 引数には、作成したベクトルを表す実数値のコレクションを渡します。 これらの値は人工知能によって提供されるものであり、単語やデータなどのオブジェクトを数学的に表します。
 
 #### 例題
 
-To create a vector:
+ベクトルを作成します:
 
 ```4d
 var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
 ```
 
-You can access individual components or convert the entire vector back to a collection:
+ここのベクトル成分にアクセスすることや、あるいはベクトル全体をコレクションに戻すこともできます:
 
 ```4d
 var $firstComponent := $vector[0]
@@ -81,23 +81,23 @@ var $collection := $vector.toCollection()
 
 <!--REF #VectorClass.cosineSimilarity().Params -->
 
-| 引数     | 型                         |                             | 説明                       |
-| ------ | ------------------------- | --------------------------- | ------------------------ |
-| vector | 4D.Vector | ->                          | Vector to compare with   |
-| 戻り値    | Real                      | <- | Distance between vectors |
+| 引数     | 型                         |                             | 説明       |
+| ------ | ------------------------- | --------------------------- | -------- |
+| vector | 4D.Vector | ->                          | 比較するベクトル |
+| 戻り値    | Real                      | <- | ベクトル感の距離 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.cosineSimilarity()` function <!-- REF #VectorClass.cosineSimilarity().Summary -->calculates the cosine similarity between the current 4D vector and the one you passed in the *vector* parameter<!-- END REF -->. Both vectors must have the same size.
+`.cosineSimilarity()` 関数は、<!-- REF #VectorClass.cosineSimilarity().Summary -->現在の4D ベクトルと*vector* 引数に渡したベクトルとの間のコサイン類似度を計算します<!-- END REF -->。 両ベクトルはサイズが同じである必要があります。
 
-This metric measures the **angle between vectors** and is commonly used to determine semantic similarity between texts. It is recommended for text embeddings, documents, sentences, and any data where **direction** matters more than **magnitude** (e.g. for semantic search or text classification).
+この計算は**ベクトル間の角度** を計算し、一般的にはテキスト間の意味的類似度を決定するために使用されます。 これはテキスト埋め込み、ドキュメント、文章など、データの**方向性** の方が**大きさ** より重要なデータ(例: 意味検索やテキスト分類など)に対して推奨されます。
 
 **戻り値**
 
-- Range: -1 (opposite) to 1 (identical).
-- The higher the returned value is, more similar vectors are.
+- 範囲: -1 (反対) 〜 1 (同一)
+- 返された値が高ければ高いほど、二つのベクトルは類似しているということになります。
 
 #### 例題
 
@@ -113,23 +113,23 @@ var $similarity := $vector.cosineSimilarity($anotherVector)
 
 <!--REF #VectorClass.dotSimilarity().Params -->
 
-| 引数     | 型                         |                             | 説明                       |
-| ------ | ------------------------- | --------------------------- | ------------------------ |
-| vector | 4D.Vector | ->                          | Vector to compare with   |
-| 戻り値    | Real                      | <- | Distance between vectors |
+| 引数     | 型                         |                             | 説明       |
+| ------ | ------------------------- | --------------------------- | -------- |
+| vector | 4D.Vector | ->                          | 比較するベクトル |
+| 戻り値    | Real                      | <- | ベクトル感の距離 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.dotSimilarity()` function <!-- REF #VectorClass.dotSimilarity().Summary -->calculates the dot product of the current 4D vector and the one you passed in the *vector* parameter<!-- END REF -->. Both vectors must have the same size.
+`.dotSimilarity()` 関数は、<!-- REF #VectorClass.dotSimilarity().Summary -->現在の4D ベクトルと*vector* 引数に渡したベクトルとの間のドット積を計算します<!-- END REF -->。 両ベクトルはサイズが同じである必要があります。
 
-This metric reflects both **similarity** and **magnitude**, and is generally used in models where vector norms (magnitudes) vary. It is recommended for scenarios where embeddings have been fine-tuned with magnitude in mind (e.g., recommendation engines, scoring relevance).
+この計算は**類似度** と **大きさ** の両方を反映し、一般的にはベクトルのノルム(大きさ)が異なるモデルで使用されます。 これは、埋め込みが大きさを考慮して微調整されているようなシナリオ(例: 推薦エンジン、関連性スコアづけ)などに推奨されます。
 
 **戻り値**
 
-- Depends on vector magnitudes and directions
-- The higher the returned value is, more similar vectors are.
+- ベクトルの大きさと方向性に依存します
+- 返された値が高ければ高いほど、二つのベクトルは類似しているということになります。
 
 #### 例題
 
@@ -146,23 +146,23 @@ var $score := $vector.dotSimilarity($anotherVector)
 
 <!--REF #VectorClass.euclideanDistance().Params -->
 
-| 引数     | 型                         |                             | 説明                       |
-| ------ | ------------------------- | --------------------------- | ------------------------ |
-| vector | 4D.Vector | ->                          | Vector to compare with   |
-| 戻り値    | Real                      | <- | Distance between vectors |
+| 引数     | 型                         |                             | 説明       |
+| ------ | ------------------------- | --------------------------- | -------- |
+| vector | 4D.Vector | ->                          | 比較するベクトル |
+| 戻り値    | Real                      | <- | ベクトル感の距離 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.euclideanDistance()` function <!-- REF #VectorClass.euclideanDistance().Summary -->calculates the Euclidean distance between the current 4D vector and the one you passed in the *vector* parameter<!-- END REF -->. Both vectors must have the same size.
+`.euclideanDistance()` 関数は、<!-- REF #VectorClass.euclideanDistance().Summary -->現在の4D ベクトルと*vector* 引数に渡したベクトルとの間のユークリッド距離を計算します<!-- END REF -->。 両ベクトルはサイズが同じである必要があります。
 
-This measures the straight-line distance in the vector space. It is recommended for numeric or structured data embeddings, or when using models where proximity in raw space directly correlates with similarity.
+この計算はベクトル空間内での直線距離を計算します。 これは、数値または構造化されたデータ埋め込みや、生の空間での近似性が類似性に直接相関するモデルを使用する場合に推奨されます。
 
 **戻り値**
 
-- returned value >= 0
-- The lower the returned value is, more similar vectors are.
+- 戻り値 >= 0
+- 返された値が低ければ低いほど、二つのベクトルは類似しているということになります。
 
 #### 例題
 
@@ -179,7 +179,7 @@ var $distance := $vector.euclideanDistance($anotherVector)
 
 #### 説明
 
-The `.length` property contains <!-- REF #VectorClass.params.Summary -->the number of vector components<!-- END REF -->.
+`.length` プロパティには<!-- REF #VectorClass.params.Summary -->ベクトル成分の数<!-- END REF -->を格納しています。
 
 <!-- END REF -->
 
@@ -189,12 +189,12 @@ The `.length` property contains <!-- REF #VectorClass.params.Summary -->the numb
 
 <!--REF #VectorClass.toCollection().Params -->
 
-| 引数  | 型          |                             | 説明                                                            |
-| --- | ---------- | --------------------------- | ------------------------------------------------------------- |
-| 戻り値 | Collection | <- | Collection of real numbers representing the vector components |
+| 引数  | 型          |                             | 説明                  |
+| --- | ---------- | --------------------------- | ------------------- |
+| 戻り値 | Collection | <- | ベクトル成分を表す実数値のコレクション |
 
 <!-- END REF -->
 
-The `.toCollection()` function <!-- REF #VectorClass.toCollection().Summary -->returns the vector components as a collection of reals<!-- END REF -->.
+`.toCollection()` 関数は、<!-- REF #VectorClass.toCollection().Summary -->ベクトル成分を実数値のコレクションとして返します<!-- END REF -->。
 
 

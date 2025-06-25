@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Os objetos de sessão são retornados pelo comando [`Session`](../commands/session.md). These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
+Os objetos de sessão são retornados pelo comando [`Session`](../commands/session.md). Esses objetos fornecem ao desenvolvedor uma interface que permite gerenciar a sessão atual do usuário e executar ações como armazenar dados contextuais, compartilhar informações entre processos de sessão, iniciar processos preemptivos relacionados à sessão ou (somente na Web) gerenciar [privilégios](../ORDA/privileges.md).
 
 ### Tipos de sessão
 
@@ -79,12 +79,12 @@ No modo "forceLogin", `.clearPrivileges()` não transforma a sessão em uma sess
 #### Exemplo
 
 ```4d
-//Invalidate a web user session
+//Invalidar uma sessão de usuário da web
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest is True
+$isGuest:=Session.isGuest() //$isGuest é True
 ```
 
 <!-- END REF -->
@@ -105,10 +105,10 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 <!-- REF #SessionClass.createOTP().Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                         |
-| ---------- | ------- | :-------------------------: | --------------------------------- |
-| lifespan   | Integer |              ->             | Session token lifespan in seconds |
-| Resultados | Text    | <- | UUID da sessão                    |
+| Parâmetro  | Tipo    |                             | Descrição                              |
+| ---------- | ------- | :-------------------------: | -------------------------------------- |
+| lifespan   | Integer |              ->             | Duração do token de sessão em segundos |
+| Resultados | Text    | <- | UUID da sessão                         |
 
 <!-- END REF -->
 
@@ -116,17 +116,17 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 :::note
 
-This function is only available with web user sessions. Ele retorna uma string vazia em outros contextos.
+Essa função só está disponível com sessões de usuário Web. Ele retorna uma string vazia em outros contextos.
 
 :::
 
-A função `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->cria um novo OTP (uma senha única) para a sessão e retorna seu UUID<!-- END REF -->. This token is unique to the session in which it was generated.
+A função `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->cria um novo OTP (uma senha única) para a sessão e retorna seu UUID<!-- END REF -->. Esse token é exclusivo da sessão em que foi gerado.
 
 Para mais informações sobre os tokens OTP, consulte [esta seção](../WebServer/sessions.md#session-token-otp).
 
-Por padrão, se o parâmetro *lifespan* for omitido, o token será criado com o mesmo tempo de vida que o [`.idleTimeOut`](#idletimeout) da sessão. Você pode definir um tempo limite personalizado passando um valor em segundos em *lifespan* (o valor mínimo é 10 segundos, *lifespan* é redefinido para 10 se um valor menor for passado). If an expired token is used to restore a web user session, it is ignored.
+Por padrão, se o parâmetro *lifespan* for omitido, o token será criado com o mesmo tempo de vida que o [`.idleTimeOut`](#idletimeout) da sessão. Você pode definir um tempo limite personalizado passando um valor em segundos em *lifespan* (o valor mínimo é 10 segundos, *lifespan* é redefinido para 10 se um valor menor for passado). Se um token expirado for usado para restaurar uma sessão de usuário Web, ele será ignorado.
 
-The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application.
+O token retornado pode então ser usado em trocas com aplicativos ou sites de terceiros para identificar a sessão com segurança. For example, the session OTP token can be used with a payment application.
 
 #### Exemplo
 
@@ -196,7 +196,7 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 #### Descrição
 
-The `.getPrivileges()` function <!-- REF #SessionClass.getPrivileges().Summary -->returns a collection of all the privilege names associated to the session<!-- END REF -->.
+A função `.getPrivileges()` <!-- REF #SessionClass.getPrivileges().Summary -->retorna uma coleção de todos os nomes de privilégios associados à sessão<!-- END REF -->.
 
 Com cliente remoto, procedimento armazenado e sessões autônomas, essa função retorna uma coleção que contém apenas "WebAdmin".
 
@@ -510,7 +510,7 @@ End if
 
 :::note
 
-This function is only available with web user sessions. It returns False in other contexts.
+Essa função só está disponível com sessões de usuário Web. It returns False in other contexts.
 
 :::
 
@@ -649,7 +649,7 @@ A propriedade `.storage` contém <!-- REF #SessionClass.storage.Summary --> um o
 
 Quando um objeto `Session` é criado, a propriedade `.storage` está vazia. Since it is a shared object, this property will be available in the `Storage` object of the server.
 
-> Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
+> Como o objeto `Storage` do servidor, a propriedade `.storage` é sempre "single": adicionar um objeto compartilhado ou uma coleção compartilhada a `.storage` não cria um grupo compartilhado.
 
 Essa propriedade é **apenas de leitura**, mas retorna um objeto de leitura e gravação.
 
