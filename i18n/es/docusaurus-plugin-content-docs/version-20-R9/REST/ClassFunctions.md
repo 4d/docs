@@ -7,14 +7,14 @@ Puede llamar a [funciones clase modelo de datos](ORDA/ordaClasses.md) definidas 
 
 Las funciones pueden llamarse de dos maneras:
 
-- using **POST requests**, with data parameters passed in the body of the request.
+- utilizando peticiones **POST**, con parámetros de datos pasados en el cuerpo de la solicitud.
 - usando **GET requests**, con parámetros directamente pasados en la URL.
 
-POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. Sin embargo, las peticiones GET pueden ser más compatibles con la experiencia del usuario, permitiendo llamar a las funciones introduciendo una URL en un navegador (nota: el desarrollador debe asegurarse de que no se hace ninguna acción sensible en dichas funciones).
+Las peticiones POST ofrecen un mejor nivel de seguridad porque evitan la ejecución de código sensible a través de una acción tan simple como hacer clic en un enlace. Sin embargo, las peticiones GET pueden ser más compatibles con la experiencia del usuario, permitiendo llamar a las funciones introduciendo una URL en un navegador (nota: el desarrollador debe asegurarse de que no se hace ninguna acción sensible en dichas funciones).
 
 ## Llamadas de las funciones
 
-The following ORDA and singleton functions can be called in REST:
+Las siguientes funciones ORDA y singleton pueden llamarse en REST:
 
 | Función de clase                                                   | Sintaxis                                                                                                                |
 | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
@@ -647,7 +647,7 @@ Puede llamar a la función utilizando una petición como:
 
 ### Utilizar una entidad para descargar un documento PDF
 
-Same example as above but you want to pass an entity as parameter to the datastore function.
+Mismo ejemplo que el anterior pero se desea pasar una entidad como parámetro a la función datastore.
 
 ```4d
 // Product dataclass
@@ -669,7 +669,7 @@ Puede llamar a la función usando esta petición:
 
 ### Utilizar una selección de entidades para obtener una lista
 
-You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
+Desea enviar una selección de entidades como parámetro a una función singleton utilizando una solicitud REST GET y devolver una lista utilizando un objeto de la clase [`OutgoingMessage`](../API/OutgoingMessageClass.md).
 
 ```4d
 shared singleton Class constructor()
