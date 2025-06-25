@@ -64,9 +64,16 @@ module.exports =
             },
             "Project/components",
             "Project/date-time-formats",
-            "Project/documentation"
-          ]
-        },
+            "Project/documentation",
+            {
+               type: "category",
+               label: "Dababase structure",
+               items: [
+                 "Develop-legacy/field-properties",
+                      ]
+            }
+                 ]
+            },
         {
           type: "category",
           label: "Development Environment",
