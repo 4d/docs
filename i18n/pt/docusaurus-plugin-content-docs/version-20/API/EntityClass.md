@@ -607,7 +607,7 @@ O seguinte código genérico duplica qualquer entidade:
 | Parâmetro  | Tipo    |    | Descrição                                                                                              |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------------ |
 | mode       | Integer | -> | `dk key as string`: a chave primária se devolve como uma string, sem importar o tipo de chave primária |
-| Resultados | any     | <- | Value of the primary key of the entity (Integer or Text)                                               |
+| Resultados | any     | <- | Valor da chave primária da entidade (Inteiro ou Texto)                                                 |
 
 <!-- END REF -->
 

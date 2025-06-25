@@ -417,7 +417,7 @@ Si omite el tipo en la línea de declaración, la propiedad se crea como una var
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
+La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de cualquier bloque `Function` o `Class constructor`.
 
 :::
 
@@ -673,7 +673,7 @@ La propiedad [`.isShared`](../API/ClassClass.md#isshared) de los objetos de la C
 
 ### Creación de una clase compartida
 
-To create a shared class, add the `shared` keyword before the [Class constructor](#class-constructor). Por ejemplo:
+Para crear una clase compartida, añada la palabra clave `shared` antes del [Class constructor](#class-constructor). Por ejemplo:
 
 ```4d
 	//shared class: Person
@@ -697,12 +697,12 @@ Si una función definida al interior de una clase compartida modifica objetos de
 Para crear una función compartida, añada la palabra clave `shared` antes de la palabra clave [Function](#function) en una clase compartida. Por ejemplo:
 
 ```4d
-	//shared class Foo
+//clase compartida Foo
 shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
-  This.variable:=$value //no need to call use/end use
+  This.variable:=$value //no es necesario llamar use/end use
 ```
 
 :::note
@@ -745,7 +745,7 @@ Una vez instanciado, existe una clase singleton (y su singleton) siempre que exi
 
 Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) antes del [`Class constructor`](#class-constructor):
 
-- To declare a (process) singleton class, write `singleton Class constructor()`.
+- Para declarar una clase singleton (proceso), escriba `singleton Class constructor()`.
 - Para declarar una clase singleton compartida, escribe `shared singleton Class constructor()`.
 - Para declarar una clase singleton de sesión, escriba `session singleton Class constructor()`.
 

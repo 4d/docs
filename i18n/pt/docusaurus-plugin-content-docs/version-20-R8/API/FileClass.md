@@ -558,9 +558,9 @@ Cada propriedade válida definida no parâmetro do objeto *info* é escrita no r
 | OriginalFilename | Text |                                                                                                                                                           |
 | WinIcon          | Text | Caminho Posix do ficheiro .ico. Esta propriedade aplica-se apenas a ficheiros executáveis gerados por 4D. |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Se passar um tipo de valor diferente de texto, este é transformado em string.
+Para todas as propriedades, exceto `WinIcon`, se você passar um texto nulo ou vazio como valor, uma sequência vazia é escrita na propriedade. Se passar um tipo de valor diferente de texto, este é transformado em string.
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+Para a propriedade `WinIcon`, se o arquivo de ícone não existir ou tiver um formato incorreto, um erro é gerado.
 
 \***Parâmetro *info* com um arquivo .plist**
 
@@ -620,9 +620,9 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parâmetro | Tipo |    | Descrição                 |
-| --------- | ---- | -- | ------------------------- |
-| content   | BLOB | -> | New contents for the file |
+| Parâmetro | Tipo |    | Descrição                      |
+| --------- | ---- | -- | ------------------------------ |
+| content   | BLOB | -> | Novos conteúdos para o arquivo |
 
 <!-- END REF -->
 
@@ -669,7 +669,7 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- END REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
+Se o arquivo referenciado no objeto `File` não existir no disco, ele será criado pela função. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
 Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
@@ -678,7 +678,7 @@ Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o
 - em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
 - ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 
 Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.
 
