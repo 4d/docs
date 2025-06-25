@@ -381,7 +381,7 @@ Default translation actions are based upon the current 4D default configuration 
 
 #### Copy buttons
 
-These buttons propose basic interactions between the chat area, the underlying 4D Write Pro document, and the clipboard:
+Estos botones proponen interacciones básicas entre el área de chat, el documento subyacente de 4D Write Pro y el portapapeles:
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
