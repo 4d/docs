@@ -3,12 +3,6 @@ id: updates
 title: Release Notes
 ---
 
-## 4D 20 R10
-
-#### Highlights
-
-- Handling of [ORDA events on data](../ORDA/orda-events.md).  
-
 
 ## 4D 20 R10
 
@@ -20,6 +14,7 @@ Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 - New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs. 
 - UUIDs in 4D are now generated in **version 7**. In previous 4D releases, they were generated in version 4.
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
+- Handling of [ORDA events on data](../ORDA/orda-events.md).  
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
 - 4D Language:
 	- For consistency, [`Create entity selection`](../commands/create-entity-selection.md) and [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) commands have been moved from the ["4D Environment"](../commands/theme/4D_Environment.md) to the ["Selection"](../commands/theme/Selection.md) themes.
@@ -31,6 +26,7 @@ Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 
 - On Windows, current printer fonts intended only for printing (i.e. not usable on screen) are no longer loaded by 4D at startup. 
 - The *MeCab* library has been removed. This change only affects the processing of Japanese text.
+- When an object parameter of a method is [declared](../Concepts/parameters.md#declaring-parameters) with a ["cs" class](../Concepts/classes.md#cs) type, calling this method with an object parameter of a different class now generates an error. 
 
 
 ## 4D 20 R9
