@@ -95,7 +95,7 @@ Essa propriedade é **somente leitura**.
 
 </details>
 
-<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Object<!-- END REF -->
 
 #### Descrição
 
@@ -141,7 +141,7 @@ Essa propriedade é **somente leitura**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Object<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
 

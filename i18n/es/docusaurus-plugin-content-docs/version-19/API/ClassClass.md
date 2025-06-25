@@ -53,7 +53,7 @@ Esta propiedad es **de sólo lectura**.
 | Parámetros | Tipo     |    | Descripción                                         |
 | ---------- | -------- |:--:| --------------------------------------------------- |
 | param      | any      | -> | Parámetro(s) a pasar a la función constructor       |
-| Resultado  | 4D.Class | <- | Nuevo objeto de la clase|<!-- END REF -->
+| Resultado  | 4D.Object | <- | Nuevo objeto de la clase|<!-- END REF -->
 
 |
 

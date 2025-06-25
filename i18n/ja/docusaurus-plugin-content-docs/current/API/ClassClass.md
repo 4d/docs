@@ -95,7 +95,7 @@ title: Class
 
 </details>
 
-<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Object<!-- END REF -->
 
 #### 説明
 
@@ -141,14 +141,14 @@ title: Class
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Object<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
 
 | 引数    | 型                        |                             | 説明              |
 | ----- | ------------------------ | :-------------------------: | --------------- |
 | param | any                      |              ->             | コンストラクター関数に渡す引数 |
-| 戻り値   | 4D.Class | <- | クラスの新規オブジェクト    |
+| 戻り値   | 4D.Object | <- | クラスの新規オブジェクト    |
 
 <!-- END REF -->
 
