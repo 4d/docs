@@ -23,13 +23,15 @@ Although they are usually equivalent, some data types available at the database 
 |[Pointer](Concepts/dt_pointer.md)	|-	|Yes|`Pointer`|`ARRAY POINTER`
 |[Picture](Concepts/dt_picture.md)	|Yes	|Yes|`Picture`|`ARRAY PICTURE`
 |[BLOB](Concepts/dt_blob.md)	|Yes	|Yes|`Blob`, `4D.Blob`|`ARRAY BLOB`
-|[Object](Concepts/dt_object.md)	|Yes	|Yes|`Object`|`ARRAY OBJECT`
+|[Object](Concepts/dt_object.md)	|Yes(3)	|Yes|`Object`|`ARRAY OBJECT`
 |[Collection](Concepts/dt_collection.md)	|-	|Yes|`Collection`|  
 |[Variant](Concepts/dt_variant.md)(2)	|-	|Yes|`Variant`||
 
 (1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description. 
 
 (2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type. 
+
+(3) You can assign a class to an [object field](../Develop-legacy/field-properties.md) in the structure editor.
 
 ## Commands
 
