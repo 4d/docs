@@ -114,9 +114,9 @@ As funções de objetos de pasta como [`folder.file()`](../API/FolderClass.md#fi
 ```4d
 var $userImages : 4D.Folder
 var $ok : Boolean
-  //to reference a "Picture" folder within the user documents folder
+//para referenciar uma pasta "Picture" dentro da pasta de documentos do usuário
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para criar uma pasta no ambiente de trabalho
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
