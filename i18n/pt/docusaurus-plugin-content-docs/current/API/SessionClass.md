@@ -611,9 +611,9 @@ Em um método de autenticação personalizado, deve estabecer o privilégio "Web
 ```4d
 var $userOK : Boolean
 
-... //Authenticate the user
+... //Autenticar o usuário
 
-If ($userOK) //The user has been approved
+If ($userOK) //O usuário foi aprovado
   var $info : Object
   $info:=New object()
   $info.privileges:=New collection("WebAdmin")
