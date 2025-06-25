@@ -3,7 +3,7 @@ id: httpRequests
 title: Procesamiento de peticiones HTTP
 ---
 
-The 4D web server provides several built-in features to handle HTTP requests:
+El servidor web de 4D ofrece varias funcionalidades integradas para gestionar las peticiones HTTP:
 
 - el método base `On Web Connection`, un enrutador para su aplicación web,
 - la URL `/4DACTION` para llamar al código del lado del servidor
@@ -13,7 +13,7 @@ The 4D web server provides several built-in features to handle HTTP requests:
 
 :::info
 
-You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. Vea la sección [**HTTP Request Handler**](http-request-handler.md).
+También puede implementar sus propios gestores de peticiones HTTP para tener un control personalizado sobre las peticiones entrantes y las respuestas salientes. Cuando se activa un gestor de peticiones HTTP personalizado, no se llama a ningún método de la base de datos. Vea la sección [**HTTP Request Handler**](http-request-handler.md).
 
 :::
 
@@ -60,7 +60,7 @@ Debe declarar estos parámetros:
 
 El primer parámetro ($url) es la URL introducida por los usuarios en el área de direcciones de su navegador web, sin la dirección local.
 
-Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
+Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.4.567.89. La siguiente tabla muestra los valores de $url en función de la URL introducida en el navegador web:
 
 | URL introducida en el navegador web                                                                                                               | Valor del parámetro $url                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -72,23 +72,23 @@ Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección 
 
 Tenga en cuenta que es libre de utilizar este parámetro a su conveniencia. 4D simplemente ignora el valor pasado más allá de la parte del host de la URL. Por ejemplo, puede establecer una convención en la que el valor "*/Customers/Add*" significa "ir directamente a añadir un nuevo registro en la tabla `[Customers]`.” Al proporcionar a los usuarios de la web una lista de posibles valores y/o marcadores por defecto, puede dar accesos directos a diferentes partes de su aplicación. De este modo, los usuarios de la web pueden acceder rápidamente a los recursos de su sitio web sin tener que recorrer toda la ruta de navegación cada vez que realicen una nueva conexión.
 
-### $header - Header and Body of the HTTP request
+### $header - Encabezado y Cuerpo de la petición HTTP
 
 El segundo parámetro ($header) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Tenga en cuenta que esta información se pasa a su método base `On Web Connection` "tal cual". Su contenido variará en función de la naturaleza del navegador web que intenta la conexión.
 
 Si su aplicación utiliza esta información, deberá analizar el encabezado y el cuerpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
-> For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
+> Por razones de rendimiento, el tamaño de los datos que pasan por el parámetro $header no debe superar los 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
 
 ### $BrowserIP - Dirección IP del cliente web
 
-The $BrowserIP parameter receives the IP address of the browser’s machine. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
+El parámetro $BrowserIP recibe la dirección IP de la máquina del navegador. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
 
 > 4D devuelve las direcciones IPv4 en un formato híbrido IPv6/IPv4 escrito con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
 ### $ServerIP - Dirección IP del servidor
 
-The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D permite el multi-homing, que permite utilizar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
+El parámetro $ServerIP recibe la dirección IP solicitada por el servidor web 4D. 4D permite el multi-homing, que permite utilizar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
 ### $user y $password - Nombre de usuario y contraseña
 
