@@ -46,14 +46,14 @@ This property is **read-only**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Class<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Class<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Object<!-- END REF -->
 
 
 <!-- REF #ClassClass.new().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Class|<-|New object of the class|<!-- END REF -->
+|Result|4D.Object|<-|New object of the class|<!-- END REF -->
 
 #### Description
 
