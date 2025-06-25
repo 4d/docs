@@ -12,7 +12,7 @@ For more field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv20
 
 This property is only available for fields of type **Object**.
 
-It allows you to define a **class-typed object field** in the database structure.
+It allows you to define a **class-typed object field** in the database structure, enabling code completion, syntax checking, and runtime validation in both the structure editor and the code editor.
 
 When a value is assigned to an entity's object field, 4D ensures that the object belongs to the declared class.
 
