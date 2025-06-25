@@ -99,12 +99,52 @@ This metric measures the **angle between vectors** and is commonly used to deter
 - Range: -1 (opposite) to 1 (identical).
 - The higher the returned value is, more similar vectors are.
 
-#### Exemple
+#### Exemple 1
 
 ```4d
 var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
 var $anotherVector := 4D.Vector.new([0.598; -0.951; 0.789])
 var $similarity := $vector.cosineSimilarity($anotherVector)
+```
+
+#### Exemple 2
+
+:::info
+
+This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings:
+
+:::
+
+```4d
+
+var $model:="text-embedding-ada-002"
+var $people:=ds.People.get(1)
+
+$prompt:=String($people.Firstname)+" "+String($people.Lastname)+" was born on "+\
+String($people.Birthday)+" and lives in "+String($people.Address)+", "+\
+String($people.ZipCode)+", "+String($people.City)+", "+String($people.Country)+\
+". Contact: "+String($people.email)+", "+String($people.Cell)+", "+\
+String($people.Phone)+". Family IDs - Father: "+String($people.FatherID)+\
+", Mother : "+String($people.MotherID)+", Partner: "+String($people.PartnerID)+"."
+
+var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())
+
+// Vector calculation with 4D AIKit
+var $result:=$clientAI.embeddings.create($prompt; $model)
+
+// 4D.vector object creation
+var $vector:=$result.vector
+
+var $question:="I'm looking for John who lives in USA"
+
+// Vector calculation with 4D AIKit component
+var $questionVector:=$clientAI.embeddings.create($question; $model).vector
+
+// similarity calculation
+If ($vector.cosineSimilarity($questionVector)>0.9)
+  ALERT("Interesting result")
+End if
+
 ```
 
 ## .dotSimilarity()
@@ -138,6 +178,39 @@ var $vector := 4D.Vector.new([0.123; -0.456; 0.789])
 var $anotherVector := 4D.Vector.new([0.598; -0.951; 0.789])
 var $score := $vector.dotSimilarity($anotherVector)
 
+```
+
+#### Exemple 2
+
+:::info
+
+This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings:
+
+:::
+
+```4d
+var $model:="text-embedding-ada-002"
+var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())
+
+$documents:=[{text: "How to bake a chocolate cake"; similarity: 0}; \
+{text: "Best hiking trails in the Alps"; similarity: 0}; \
+{text: "Tips for learning 4D programming"; similarity: 0}; \
+{text: "Top 10 sci-fi movies of all time"; similarity: 0}]
+
+$question:="4D coding tutorials"
+
+// Vector calculation with 4D AIKit component
+$questionVector:=$clientAI.embeddings.create($question; $model).vector
+
+For each ($document; $documents)
+        // Vector calculation with 4D AIKit component
+    $vector:=$clientAI.embeddings.create($document.text; $model).vector
+        // similarity
+    $document.similarity:=$vector.dotSimilarity($questionVector)
+End for each
+
+$documents:=$documents.orderBy("similarity desc")
+ALERT("Best answer: "+$documents[0].text)
 ```
 
 ## .euclideanDistance()
