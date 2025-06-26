@@ -147,9 +147,9 @@ Várias funções aceitam um *propriedadePath* como parâmetro. Este parâmetro 
 É possível usar operadores de comparação com **referências de coleção**, o que significa que você pode avaliar se duas ou mais referências apontam para a mesma instância de uma coleção.
 
 ```4d
-var $c1:=["a";42] //reference to an instance
-var $c2:=["a";42] //reference to a different instance
-var $c3:=$c1 //reference to the same instance
+var $c1:=["a";42] //referência a uma instância
+var $c2:=["a";42] //referência a uma instância diferente
+var $c3:=$c1 //referência à mesma instância
 ```
 
 Based upon the code above, the comparison table is:

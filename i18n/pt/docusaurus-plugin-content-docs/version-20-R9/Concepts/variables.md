@@ -127,10 +127,10 @@ var $d : cs.Customer:=cs.Customer.new()
 As variáveis também podem ser declaradas e inicializadas sem mencionar explicitamente seu tipo de dados, caso em que seu tipo será inferido por 4D. Aqui estão alguns exemplos:
 
 ```4d
-var $text:="hello"  // Inferred as Text
-var $number:=20  // Inferred as Real
-var $obj:={}  // Inferred as an Object
-var $mycol:=[]  // Inferred as a Collection  
+var $text:="hello" // Inferido como Texto
+var $number:=20 // Inferido como Real
+var $obj:={} // Inferido como um objeto
+var $mycol:=[] // Inferido como uma coleção  
 
 ```
 
