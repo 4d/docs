@@ -14,13 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## 互換性に関する注意 
-
-<!--REF #_command_.WP Picture range.Summary-->**WP Picture range** は以前のバージョンの4D Write Pro では**WP Create picture range** という名前でした。<!-- END REF-->分かりやすさのために名前が変更されています。
-
 ## 説明 
 
-新しい**WP Picture range**コマンドは、*targetObj* 引数に渡したオブジェクト内に含まれるピクチャーのみを格納したレンジオブジェクトを返します。返された画像レンジオブジェクトは、[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) と[WP SET ATTRIBUTES](../commands/wp-set-attributes.md) によってピクチャーの属性のみを管理するのに使用することができます。
+<!--REF #_command_.WP Picture range.Summary-->**WP Picture range**コマンドは、*targetObj* 引数に渡したオブジェクト内に含まれるピクチャーのみを格納したレンジオブジェクトを返します。<!-- END REF-->返された画像レンジオブジェクトは、[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) と[WP SET ATTRIBUTES](../commands/wp-set-attributes.md) によってピクチャーの属性のみを管理するのに使用することができます。
 
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 

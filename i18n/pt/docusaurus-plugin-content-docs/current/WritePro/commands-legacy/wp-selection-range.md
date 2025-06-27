@@ -17,12 +17,9 @@ displayed_sidebar: docs
 
 *Esse comando não é seguro para thread e não pode ser usado em código adequado.*
 
-
-## Compatibilidade 
-
-<!--REF #_command_.WP Selection range.Summary-->**WP Selection range** era chamada **WP Get selection** em versões anteriores de 4D Write Pro.<!-- END REF--> Foi renomeada para ter mais claridade. 
-
 ## Descrição 
+
+<!--REF #_command_.WP Selection range.Summary-->O comando **WP Selection range** devolve um novo objeto faixa ou um objeto imagem baseado no conteúdo atualmente selecionado na área *wpArea* 4D Write Pro.<!-- END REF--> 
 
 O novo comando **WP Selection range** devolve um novo objeto de faixa de texto (faixaObj) baseado no texto selecionado atualmente na área *wpArea* de 4D Write Pro.
 

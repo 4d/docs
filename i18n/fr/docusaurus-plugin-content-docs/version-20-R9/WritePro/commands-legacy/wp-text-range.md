@@ -16,13 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibilité 
-
-<!--REF #_command_.WP Text range.Summary-->La commande **WP Text range** était nommée **WP Create range** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté. 
-
 ## Description 
 
-La commande **WP Text range** retourne une nouvelle plage contenant les caractères situés entre *débutPlage* et *finPlage* dans l'objet *objCible*.
+<!--REF #_command_.WP Text range.Summary-->La commande **WP Text range** retourne une nouvelle plage contenant les caractères situés entre *débutPlage* et *finPlage* dans l'objet *objCible*.<!-- END REF-->
 
 Un **objet plage 4D Write Pro** peut être utilisé pour manipuler des attributs sur une partie du document (notamment à l'aide des commandes [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md)). Pour plus d'informations, veuillez vous reporter au paragraphe *Gestion des plages*.
 
