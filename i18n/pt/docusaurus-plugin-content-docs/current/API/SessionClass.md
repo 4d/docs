@@ -126,7 +126,7 @@ Para mais informações sobre os tokens OTP, consulte [esta seção](../WebServe
 
 Por padrão, se o parâmetro *lifespan* for omitido, o token será criado com o mesmo tempo de vida que o [`.idleTimeOut`](#idletimeout) da sessão. Você pode definir um tempo limite personalizado passando um valor em segundos em *lifespan* (o valor mínimo é 10 segundos, *lifespan* é redefinido para 10 se um valor menor for passado). Se um token expirado for usado para restaurar uma sessão de usuário Web, ele será ignorado.
 
-O token retornado pode então ser usado em trocas com aplicativos ou sites de terceiros para identificar a sessão com segurança. For example, the session OTP token can be used with a payment application.
+O token retornado pode então ser usado em trocas com aplicativos ou sites de terceiros para identificar a sessão com segurança. Por exemplo, o token de sessão OTP pode ser usado com um aplicativo de pagamento.
 
 #### Exemplo
 
@@ -298,7 +298,7 @@ Com cliente remoto, procedimento armazenado e sessões autônomas, essa função
 
 #### Exemplo
 
-You want to check if the "WebAdmin" privilege is associated to the web user session:
+Você deseja verificar se o privilégio "WebAdmin" está associado à sessão do usuário da Web:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
@@ -360,7 +360,7 @@ Essa propriedade só está disponível com sessões de usuário da Web.
 
 :::
 
-The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->.
+A propriedade `.idleTimeout` contém <!-- REF #SessionClass.idleTimeout.Summary -->o tempo limite da sessão de inatividade (em minutos), após o qual a sessão é automaticamente encerrada pelo 4D<!-- END REF -->.
 
 Se não se definir esta propriedade, o valor padrão é 60 (1h).
 
@@ -374,10 +374,10 @@ Essa propriedade é **leitura escrita**.
 
 ```4d
 If (Session.isGuest())
-		// A Guest session will close after 60 minutes of inactivity
+		// Uma sessão de convidado será fechada após 60 minutos de inatividade
 	Session.idleTimeout:=60
 Else
-		// Other sessions will close after 120 minutes of inactivity
+		// Outras sessões serão fechadas após 120 minutos de inatividade
 	Session.idleTimeout:=120
 End if
 
@@ -416,7 +416,7 @@ A propriedade `.info` <!-- REF #SessionClass.info.Summary -->descreve o cliente 
 
 :::
 
-The `.info` object contains the following properties:
+O objeto `.info` contém as seguintes propriedades:
 
 | Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                   |
 | ---------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -433,7 +433,7 @@ The `.info` object contains the following properties:
 
 :::note
 
-Since `.info` is a computed property, it is recommended to call it once and then to store it in a local variable if you want to do some processing on its properties.
+Desde `. nfo` é uma propriedade computada, é recomendável chamá-lo uma vez e então armazená-lo em uma variável local se você quiser fazer algum processamento em suas propriedades.
 
 :::
 
@@ -469,7 +469,7 @@ Essa função sempre retorna **False** com cliente remoto, procedimento armazena
 
 :::
 
-The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
+A função `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retorna True se a sessão for uma sessão Guest (ou seja, não tem privilégios)<!-- END REF -->.
 
 #### Exemplo
 
@@ -477,7 +477,7 @@ No método base `On Web Connection`:
 
 ```4d
 If (Session.isGuest())
-	//Do something for Guest user
+	//Fazer algo para o usuário convidado
 End if
 ```
 
@@ -499,10 +499,10 @@ End if
 
 <!-- REF #SessionClass.restore().Params -->
 
-| Parâmetro  | Tipo       |                             | Descrição                                                                          |
-| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------- |
-| token      | Text       |              ->             | UUID do token de sessão                                                            |
-| Resultados | Parâmetros | <- | True if the current session has been successfully replaced by the session in token |
+| Parâmetro  | Tipo       |                             | Descrição                                                                    |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------- |
+| token      | Text       |              ->             | UUID do token de sessão                                                      |
+| Resultados | Parâmetros | <- | True se a sessão atual tiver sido substituída com êxito pela sessão no token |
 
 <!-- END REF -->
 
@@ -510,26 +510,26 @@ End if
 
 :::note
 
-Essa função só está disponível com sessões de usuário Web. It returns False in other contexts.
+Essa função só está disponível com sessões de usuário Web. Ele retorna False em outros contextos.
 
 :::
 
-A função `.restore()` <!-- REF #SessionClass.restore().Summary -->substitui a sessão do usuário da web pela sua sessão original correspondente ao *token* UUID<!-- END REF -->. Session's storage and privileges are restored.
+A função `.restore()` <!-- REF #SessionClass.restore().Summary -->substitui a sessão do usuário da web pela sua sessão original correspondente ao *token* UUID<!-- END REF -->. O armazenamento e os privilégios da sessão são restaurados.
 
-If the original user session has been correctly restored, the function returns `true`.
+Se a sessão original do usuário tiver sido restaurada corretamente, a função retornará `true`.
 
 A função retorna `false` se:
 
-- the session token has already been used,
-- the session token has expired,
-- the session token does not exist,
-- the original session itself has expired.
+- o token de sessão já foi usado,
+- o token de sessão expirou,
+- o token de sessão não existe,
+- a própria sessão original expirou.
 
-In this case, the current web user session is left untouched (no session is restored).
+Nesse caso, a sessão atual do usuário da Web não é alterada (nenhuma sessão é restaurada).
 
 #### Exemplo
 
-In a singleton called by a custom HTTP Request handler:
+Em um singleton chamado por um manipulador de solicitação HTTP personalizado:
 
 ```4d
 shared singleton Class constructor()
@@ -586,11 +586,11 @@ A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->
 
 - No parâmetro *settings*, passe um objeto que contenha as seguintes propriedades:
 
-| Propriedade | Tipo               | Descrição                                                                                                |
-| ----------- | ------------------ | -------------------------------------------------------------------------------------------------------- |
-| privileges  | Text ou Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
-| roles       | Text ou Collection | <li>String containing a role, or</li><li>Collection of strings containing roles</li>                     |
-| userName    | Text               | Nome de usuário associado à sessão (opcional)                                         |
+| Propriedade | Tipo               | Descrição                                                                                                                 |
+| ----------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| privileges  | Text ou Collection | <li>String contendo um nome de privilégio, ou</li><li>Coleção de cadeias de caracteres contendo nomes de privilégios</li> |
+| roles       | Text ou Collection | <li>String que contém uma função, ou</li><li>Coleção de cadeias de caracteres contendo funções</li>                       |
+| userName    | Text               | Nome de usuário associado à sessão (opcional)                                                          |
 
 :::note
 
@@ -634,10 +634,10 @@ End if
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                               |
-| ------- | ------------------------------------------------------ |
-| 20 R5   | Support of remote client and stored procedure sessions |
-| 18 R6   | Adicionado                                             |
+| Release | Mudanças                                                      |
+| ------- | ------------------------------------------------------------- |
+| 20 R5   | Suporte a sessões de procedimento armazenado e cliente remoto |
+| 18 R6   | Adicionado                                                    |
 
 </details>
 
@@ -647,7 +647,7 @@ End if
 
 A propriedade `.storage` contém <!-- REF #SessionClass.storage.Summary --> um objeto compartilhado que pode ser usado para armazenar informações disponíveis para todos os processos da sessão<!-- END REF -->.
 
-Quando um objeto `Session` é criado, a propriedade `.storage` está vazia. Since it is a shared object, this property will be available in the `Storage` object of the server.
+Quando um objeto `Session` é criado, a propriedade `.storage` está vazia. Como se trata de um objeto compartilhado, essa propriedade estará disponível no objeto `Storage` do servidor.
 
 > Como o objeto `Storage` do servidor, a propriedade `.storage` é sempre "single": adicionar um objeto compartilhado ou uma coleção compartilhada a `.storage` não cria um grupo compartilhado.
 
@@ -688,10 +688,10 @@ End use
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                               |
-| ------- | ------------------------------------------------------ |
-| 20 R5   | Support of remote client and stored procedure sessions |
-| 18 R6   | Adicionado                                             |
+| Release | Mudanças                                                      |
+| ------- | ------------------------------------------------------------- |
+| 20 R5   | Suporte a sessões de procedimento armazenado e cliente remoto |
+| 18 R6   | Adicionado                                                    |
 
 </details>
 
