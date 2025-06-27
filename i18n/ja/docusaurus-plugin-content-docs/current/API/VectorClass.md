@@ -111,7 +111,8 @@ var $similarity := $vector.cosineSimilarity($anotherVector)
 
 :::info
 
-This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings:
+以下の例題では埋め込みを生成するのに[4D AIKit 拡張機能](../aikit/overview.md)
+を使用します:
 
 :::
 
@@ -129,18 +130,18 @@ String($people.Phone)+". Family IDs - Father: "+String($people.FatherID)+\
 
 var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())
 
-// Vector calculation with 4D AIKit
+// 4D AIKit でのベクトル計算
 var $result:=$clientAI.embeddings.create($prompt; $model)
 
-// 4D.vector object creation
+// 4D.vector オブジェクト作成
 var $vector:=$result.vector
 
 var $question:="I'm looking for John who lives in USA"
 
-// Vector calculation with 4D AIKit component
+// 4D AIKit コンポーネントでのベクトル計算
 var $questionVector:=$clientAI.embeddings.create($question; $model).vector
 
-// similarity calculation
+// 類似度計算
 If ($vector.cosineSimilarity($questionVector)>0.9)
   ALERT("Interesting result")
 End if
@@ -184,7 +185,8 @@ var $score := $vector.dotSimilarity($anotherVector)
 
 :::info
 
-This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings:
+以下の例題では埋め込みを生成するのに[4D AIKit 拡張機能](../aikit/overview.md)
+を使用します:
 
 :::
 
@@ -199,13 +201,13 @@ $documents:=[{text: "How to bake a chocolate cake"; similarity: 0}; \
 
 $question:="4D coding tutorials"
 
-// Vector calculation with 4D AIKit component
+// 4D AIKit コンポーネントでのベクトル計算
 $questionVector:=$clientAI.embeddings.create($question; $model).vector
 
 For each ($document; $documents)
-        // Vector calculation with 4D AIKit component
+        // 4D AIKit コンポーネントでのベクトル計算
     $vector:=$clientAI.embeddings.create($document.text; $model).vector
-        // similarity
+        // 類似度
     $document.similarity:=$vector.dotSimilarity($questionVector)
 End for each
 
