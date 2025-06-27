@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 <details><summary>História</summary>
 
-| Release | Mudanças                                               |
-| ------- | ------------------------------------------------------ |
-| 20 R8   | Support of standalone sessions                         |
-| 20 R5   | Support of remote client and stored procedure sessions |
-| 18 R6   | Adicionado                                             |
+| Release | Mudanças                                                      |
+| ------- | ------------------------------------------------------------- |
+| 20 R8   | Support of standalone sessions                                |
+| 20 R5   | Suporte a sessões de procedimento armazenado e cliente remoto |
+| 18 R6   | Adicionado                                                    |
 
 </details>
 
