@@ -250,10 +250,10 @@ Em ambos os casos, você precisa extrair o token do parâmetro personalizado e c
 
 The OTP token is considered invalid if:
 
-- the session token has already been used,
-- the session token has expired,
-- the session token does not exist,
-- the original session itself has expired.
+- o token de sessão já foi usado,
+- o token de sessão expirou,
+- o token de sessão não existe,
+- a própria sessão original expirou.
 
 In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session.
 
