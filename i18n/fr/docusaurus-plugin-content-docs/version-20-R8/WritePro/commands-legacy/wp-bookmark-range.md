@@ -15,13 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibilité 
-
-<!--REF #_command_.WP Bookmark range.Summary-->La commande **WP Bookmark range** était nommée **WP Get bookmark range** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté. 
-
 ## Description 
 
-La commande **WP Bookmark range** retourne un objet de type plage (objPlage) contenant la plage associée au signet nommé *nomSignet* dans le document *docWP*.
+<!--REF #_command_.WP Bookmark range.Summary-->La commande **WP Bookmark range** retourne un objet de type plage (objPlage) contenant la plage associée au signet nommé *nomSignet* dans le document *docWP*.<!-- END REF-->
 
 Si le signet *nomSignet* n'existe pas dans *docWP*, un objet plage objPlage vide est retourné.
 

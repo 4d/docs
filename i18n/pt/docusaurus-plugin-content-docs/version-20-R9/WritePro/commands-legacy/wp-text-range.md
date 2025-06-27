@@ -16,13 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibilidade 
-
-<!--REF #_command_.WP Text range.Summary-->**WP Text range** recebeu o nome **WP Get range** em versões anteriores de 4D Write Pro.<!-- END REF--> Foi renomeado para maior clareza.
-
 ## Descrição 
 
-O novo comando **WP Text range d**evolve um novo objeto de faixa de texto (objFaixa) que contem a seleção entre *faixaInicio* e *faixaFim* na área *wpArea* 4D Write Pro.
+<!--REF #_command_.WP Text range.Summary-->O comando **WP Text range** devolve um novo objeto de faixa de texto (objFaixa) que contem a seleção entre *faixaInicio* e *faixaFim* na área *wpArea* 4D Write Pro.<!-- END REF-->
 
 Um **4D Write Pro objeto de faixa de texto** pode ser usado para manejar atributos numa seleção de texto (com os comandos [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) e [WP SET ATTRIBUTES](../commands/wp-set-attributes.md)). Para saber mais consulte o parágrafo *Comandos de seleção de faixa*.
 

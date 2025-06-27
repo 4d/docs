@@ -14,13 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibility 
-
-<!--REF #_command_.WP Picture range.Summary-->**WP Picture range** was named **WP Create picture range** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
-
 ## Description 
 
-The **WP Picture range** command returns a specific range object that addresses only the pictures contained in the *targetObj* you passed as parameter. The image range object returned can be used by [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) to handle picture attributes. 
+<!--REF #_command_.WP Picture range.Summary-->The **WP Picture range** command returns a specific range object that addresses only the pictures contained in the *targetObj* you passed as parameter.<!-- END REF--> The image range object returned can be used by [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) to handle picture attributes. 
 
 In *targetObj*, you can pass:
 

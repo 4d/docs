@@ -16,13 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## 互換性に関する注意 
-
-<!--REF #_command_.WP Text range.Summary-->**WP Text range** は、以前のバージョンの4D Write Proでは**WP Create range** という名前でした。<!-- END REF-->分かりやすさのために名前が変更されています。
-
 ## 説明 
 
-**WP Text range**コマンドは*targetObj* 引数の4D Write Proエリア内から、*startRange* と*endRange* の間に含まれるセレクションを新しいレンジオブジェクトを返します。
+<!--REF #_command_.WP Text range.Summary-->**WP Text range**コマンドは*targetObj* 引数の4D Write Proエリア内から、*startRange* と*endRange* の間に含まれるセレクションを新しいレンジオブジェクトを返します。<!-- END REF-->
 
 **4D Write Pro レンジオブジェクト**を使用するとテキストのセレクションの属性を管理することができます(具体的には[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) コマンドを使用します)。詳細な情報については、*セレクションレンジコマンド* の段落を参照してください。
 
