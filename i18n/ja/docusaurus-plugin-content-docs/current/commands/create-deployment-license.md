@@ -7,10 +7,10 @@ displayed_sidebar: docs
 
 <details><summary>履歴</summary>
 
-| リリース   | 内容                                |
-| ------ | --------------------------------- |
-| 20 R10 | New *autoLicenseTarget* parameter |
-| 20     | 追加                                |
+| リリース   | 内容                        |
+| ------ | ------------------------- |
+| 20 R10 | 新しい*autoLicenseTarget* 引数 |
+| 20     | 追加                        |
 
 </details>
 
@@ -18,77 +18,77 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create deployment license.Params-->
 
-| 引数                | 型                         |                             | 説明                                                |
-| ----------------- | ------------------------- | --------------------------- | ------------------------------------------------- |
-| mergedApp         | 4D.Folder | &#8594; | Folder containing the merged application          |
-| autoLicenseTarget | Integer                   | &#8594; | Target license for automatic license embedding    |
-| buildLicense      | 4D.File   | &#8594; | License required to generate the embedded license |
-| oemLicense        | 4D.File   | &#8594; | 4D OEM XML Key license if server license          |
-| 戻り値               | Object                    | &#8592; | ステータス                                             |
+| 引数                | 型                         |                             | 説明                              |
+| ----------------- | ------------------------- | --------------------------- | ------------------------------- |
+| mergedApp         | 4D.Folder | &#8594; | 組み込みアプリを格納しているフォルダ              |
+| autoLicenseTarget | Integer                   | &#8594; | 自動ライセンス埋め込み用のターゲットライセンス         |
+| buildLicense      | 4D.File   | &#8594; | 埋め込みライセンスを生成するのに必要なライセンス        |
+| oemLicense        | 4D.File   | &#8594; | サーバーライセンスの場合は4D OEM XML キーライセンス |
+| 戻り値               | Object                    | &#8592; | ステータス                           |
 
 <!-- END REF-->
 
 ## 説明
 
-<!--REF #_command_.Create deployment license.Summary-->The **Create deployment license** command creates an embedded license file in the Licenses folder of the *mergedApp* built application.<!-- END REF--> If the Licenses folder does not exist in the *mergedApp* folder, it is created by the command.
+<!--REF #_command_.Create deployment license.Summary-->**Create deployment license** コマンドは*mergedApp* 引数のビルドアプリケーションのLicenses フォルダ内に埋め込みライセンスファイルを作成します。<!-- END REF-->*mergedApp* 引数で指定したフォルダ内にLicenses フォルダが存在しない場合、このコマンドによって作成されます。
 
-In *mergedApp*, pass a [4D.Folder](../API/FolderClass.md) object containing a reference to the folder containing the built application in which you want to embed a license.
+*mergedApp* 引数には、ライセンスを埋め込みたいビルドアプリケーションを格納しているフォルダへの参照を格納した[4D.Folder](../API/FolderClass.md) オブジェクトを渡します。
 
-Depending on the second parameter, you [let 4D select automatically the license to use](#automatic-license-selection) for the target or [designate the license(s) to use](#designating-the-licenses-to-use).
+第二引数によって、ターゲットに対して[使用するライセンスを4D に自動的に決めさせる](#automatic-license-selection) か、または[使用するライセンスを指定](#designating-the-licenses-to-use) します。
 
-### Automatic license selection
+### 自動ライセンス選択
 
-If you pass the *autoLicenseTarget* parameter, you let 4D find and use the most appropriate license for the specified target. For more information on the automatic license selection, please refer to the [Build application](../Desktop/building.md#application-automatically-embedding-available-licenses) section.
+*autoLicenseTarget* 引数を渡した場合、指定されたターゲットに対して、最適なライセンスを4D に探させて使用します。 自動ライセンス選択についてのより詳細な情報については、[ビルドアプリケーション](../Desktop/building.md#application-automatically-embedding-available-licenses) の章を参照して下さい。
 
-The following constants are supported in the *autoLicenseTarget* parameter:
+以下の定数が*autoLicenseTarget* 引数においてサポートされます:
 
-| 定数                   | 値 | 説明                                                              |
-| -------------------- | - | --------------------------------------------------------------- |
-| 4D Volume Desktopの場所 | 1 | Create automatically a license for a 4D single-user application |
-| 4D Server            | 5 | Create automatically a license for a 4D Server application      |
+| 定数                | 値 | 説明                                   |
+| ----------------- | - | ------------------------------------ |
+| 4D Volume Desktop | 1 | 4D シングルユーザーアプリケーション用のライセンスを自動的に作成します |
+| 4D Server         | 5 | 4D Server アプリケーション用のライセンスを自動的に作成します  |
 
-If no valid license is found, an error is generated.
+有効なライセンスが見つからない場合、エラーが生成されます。
 
-### Designating the license(s) to use
+### 使用するライセンスを指定する
 
-In *license*, pass a [4D.File](../API/FileClass.md) object containing a reference to the license file used to generate the embedded license.
+*license* 引数には、埋め込みライセンスを生成するのに使用したライセンスファイルへの参照を格納した[4D.File](../API/FileClass.md) オブジェクトを渡します。
 
-In the non-automatic mode, if the build requires a specific OEM license (*4D OEM XML Keys*) and if no such license is already installed in the Licenses folder of the building machine, you need to pass it using the *oemLicense* parameter. This parameter is useful if you dedicate a machine to build your applications.
+非自動モードにおいて、ビルドに特定のOEM ライセンス(*4D OEM XML キー*)が必要で、そのようなライセンスがLicenses フォルダ内にすでにインストールされていない場合には、*oemLicense* 引数を使用してそれを渡す必要があります。 この引数は、アプリケーションのビルドに専用のマシンを用意している場合などに有用です。
 
 ### 戻り値
 
-The command returns a *status* object containing the following properties:
+コマンドは、以下のプロパティを格納した *status* オブジェクトを返します:
 
-| **プロパティ**                                                                          | **型**                                          | **Description**                                                                                                                   |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| success                                                                            | Boolean                                        | True if the license file has been generated                                                                                       |
-| file                                                                               | [4D.File](../API/FileClass.md) | The generated license file                                                                                                        |
-| statusText                                                                         | Text                                           | Description of the error if any                                                                                                   |
-| errors                                                                             | Collection                                     | エラーオブジェクトのコレクション                                                                                                                  |
-| \[\].message | Text                                           | エラーメッセージ                                                                                                                          |
-| \[\].errCode | Number                                         | エラー番号                                                                                                                             |
-| standalone                                                                         | Object                                         | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Volume Desktop` license |
-| oemServer                                                                          | Object                                         | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Server` OEM license     |
-| oemXMLKey                                                                          | Object                                         | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Server` XML Key license |
+| **プロパティ**                                                                          | **型**                                          | **Description**                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------- |
+| success                                                                            | Boolean                                        | ライセンスファイルが生成された場合にはTrue                                                                |
+| file                                                                               | [4D.File](../API/FileClass.md) | 生成されたライセンスファイル                                                                         |
+| statusText                                                                         | Text                                           | エラーの詳細(あれば)                                                         |
+| errors                                                                             | Collection                                     | エラーオブジェクトのコレクション                                                                       |
+| \[\].message | Text                                           | エラーメッセージ                                                                               |
+| \[\].errCode | Number                                         | エラー番号                                                                                  |
+| standalone                                                                         | Object                                         | ([自動モード](#自動ライセンス選択)の場合のみ) `4D Volume Desktop` ライセンスのDescription 属性 |
+| oemServer                                                                          | Object                                         | ([自動モード](#自動ライセンス選択)の場合のみ) `4D Server` OEM ライセンスのDescription 属性     |
+| oemXMLKey                                                                          | Object                                         | ([自動モード](#自動ライセンス選択)の場合のみ) `4D Server` XML キーライセンスのDescription 属性   |
 
-*Description attributes* are:
+*Description 属性* は以下のようになっています:
 
-| **プロパティ**            | **型**  | **Description**                            |
-| -------------------- | ------ | ------------------------------------------ |
-| absolutePlatformPath | Text   | Path to the original license file retained |
-| offerName            | Text   | Commercial name of the license retained    |
-| productNumber        | Number | Serial number of the license retained      |
+| **プロパティ**            | **型**  | **Description**       |
+| -------------------- | ------ | --------------------- |
+| absolutePlatformPath | Text   | 保持している元のライセンスファイルへのパス |
+| offerName            | Text   | 保持しているライセンスの商用名       |
+| productNumber        | Number | 保持しているライセンスのシリアル番号    |
 
 :::note 注記
 
-- The generated license must be used only with the application referenced by *mergedApp*.
-- It is necessary to regenerate the license each time the application is rebuilt.
+- 生成されたライセンスは*mergedApp* 引数で参照されているアプリケーション以外で使用してはいけません。
+- ライセンスは、アプリケーションのビルド/リビルドごとに再生成する必要があります。
 
 :::
 
 ## 例題 1
 
-Use the automatic syntax to create a single-user 4D application:
+自動シンタックスを使用してシングルユーザー向け4Dアプリケーションを作成します:
 
 ```4d
  var $status : Object
@@ -99,7 +99,7 @@ Use the automatic syntax to create a single-user 4D application:
 
 ## 例題 2
 
-Designate a license to use:
+使用するライセンスを指定します:
 
 ```4d
  var $status : Object
