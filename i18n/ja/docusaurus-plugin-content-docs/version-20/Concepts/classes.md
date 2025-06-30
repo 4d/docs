@@ -325,7 +325,7 @@ Class constructor({$parameterName : type; ...})
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
+// MyClass の Class constructor
 Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
@@ -377,7 +377,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
+`property` は、クラスのコードだけで使うことができるキーワードです。`Function` または `Class constructor` ブロックの外で使用する必要があります。
 
 :::
 
