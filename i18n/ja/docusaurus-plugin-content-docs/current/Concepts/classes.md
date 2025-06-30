@@ -328,7 +328,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 ```4d
 // Class: MyClass
 {shared} {{session} singleton} Class constructor({$parameterName : type; ...})
-// code
+// コード
 ```
 
 :::note
@@ -351,7 +351,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1).
+[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-class) も`Class constructor` 機能の恩恵を受けることができます。 実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
 
 :::
 
@@ -423,7 +423,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
+`property` キーワードは、クラス関数内の `Function` および `Class constructor` ブロック外でのみ使用できます。
 
 :::
 
@@ -531,7 +531,7 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 :::note
 
-ORDA entity classes can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1).
+ORDA entity classes can also benefit from a `Class constructor` function. 実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
 
 :::
 
