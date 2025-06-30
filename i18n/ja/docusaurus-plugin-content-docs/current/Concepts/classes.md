@@ -359,7 +359,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
+// MyClass の Class constructor
 Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
@@ -511,7 +511,7 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 :::note
 
-[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) benefit from an extended implementation of computed properties with [two additional functions](../ORDA/ordaClasses.md#computed-attributes-1): `query` and `orderBy`.
+[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-class) は計算属性の拡張された実装ににおいて[二つの追加された関数](../ORDA/ordaClasses.md#computed-attributes-1)の恩恵を受けることができます: `query` と`orderBy` です。
 
 :::
 
@@ -531,7 +531,7 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 :::note
 
-ORDA entity classes can also benefit from a `Class constructor` function. 実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
+ORDA エンティティクラス も`Class constructor` 機能の恩恵を受けることができます。 実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
 
 :::
 
@@ -692,10 +692,10 @@ $val:=$o.f() //8
 
 ### 共有クラスの作成
 
-To create a shared class, add the `shared` keyword before the [Class constructor](#class-constructor). 例:
+共有クラスを作成するには、[Class constructor](#class-constructor) の前に `shared` キーワードを追加します。 例:
 
 ```4d
-	//shared class: Person
+	//共有クラス: Person
 shared Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
@@ -716,12 +716,12 @@ cs.Person.isShared // true
 共有クラス内で共有関数を作成するには、[Function](#function) キーワードの前に `shared` キーワードを追加します 。  例:
 
 ```4d
-	//shared class Foo
+	//共有クラス Foo
 shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
-  This.variable:=$value //no need to call use/end use
+  This.variable:=$value //use/end use を呼び出す必要なし
 ```
 
 :::note
@@ -764,7 +764,7 @@ shared Function Bar($value : Integer)
 
 シングルトンクラスを宣言するには、[`Class constructor`](#class-constructor) の前に適切なキーワードを追加します:
 
-- To declare a (process) singleton class, write `singleton Class constructor()`.
+- (プロセス)シングルトンクラスを宣言するためには、 `singleton Class constructor()` と書きます。
 - 共有シングルトンクラスを宣言するには、`shared singleton Class constructor()` と書きます。
 - セッションシングルトンクラスを宣言するには、`session singleton Class constructor()` と書きます。
 
@@ -788,7 +788,7 @@ shared Function Bar($value : Integer)
 #### プロセスシングルトン
 
 ```4d
-	//class: ProcessTag
+	//クラス: ProcessTag
 singleton Class constructor()
  This.tag:=Random
 ```
