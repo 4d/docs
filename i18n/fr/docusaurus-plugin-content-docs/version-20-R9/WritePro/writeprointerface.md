@@ -108,7 +108,7 @@ Si votre application est susceptible d'être exécutée sur un 4D avec une langu
 
 ##### Exemple
 
-Here's a brief example of what your JSON file might look like:
+Voici un bref exemple de ce à quoi votre fichier JSON pourrait ressembler :
 
 ```json
 {
