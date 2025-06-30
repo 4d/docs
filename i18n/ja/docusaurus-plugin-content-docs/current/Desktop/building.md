@@ -127,7 +127,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 この処理はコンパイル済みストラクチャーファイルと**4D Volume Desktop** (4D データベースエンジン)を統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
 - デフォルトのデータファイルを定義することも、ユーザーに [独自のデータファイルを作成して使用](#データファイルの管理) してもらうこともできます。
-- You can either embed a [deployment license](../Admin/licenses.md#deployment-licenses) or let the final user enter their license at the first application launch (see [**Licenses**](#licenses) below).
+- [運用ライセンス](../Admin/licenses.md#運用ライセンス) を埋め込むか、あるいはアプリケーションの初回起動時にエンドユーザーに自分の手でライセンスを入力させるようにすることができます(以下の[**ライセンス**](#ライセンス) 参照)。
 
 :::note
 
@@ -502,26 +502,26 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-- configure the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
+- [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したい[運用ライセンス](../Admin/licenses.md#運用ライセンス) を設定します。
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### ライセンスリスト
 
-This tab displays the **Application type** menu, allowing you to define how you want to manage licenses in the built application. 次のオプションから選択することができます:
+このタブには**アプリケーションタイプ** メニューが表示され、これを使用することでビルドされたアプリケーション内でどのようにライセンスを管理したいかを定義することができます。 次のオプションから選択することができます:
 
 ![](../assets/en/Admin/buildappLic.png)
 
-#### Application without embedded license
+#### 埋め込みライセンスのないアプリケーション
 
-Select this option to build an application without embedded deployment license.
+埋め込みライセンスのないアプリケーションをビルドする場合にはこのオプションを選択してください。
 
 この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細な情報については、[**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の章を参照して下さい。
 
-#### Evaluation application
+#### 評価版アプリケーション
 
-Select this option to create an evaluation version of your application.
+あなたのアプリケーションの評価版を作成したい場合にはこのオプションを選択してください。
 
 評価アプリケーションを使用すると、エンドユーザーは自身のマシン上で自身のスタンドアロンまたはサーバーアプリケーションを機能制約なく一定期間実行することができます。 期間のカウントは最初の起動から始まります。 評価期間が終わると、同一マシン上では一定期間アプリケーションを使用できなくなります。
 
@@ -539,7 +539,7 @@ Select this option to create an evaluation version of your application.
 
 :::
 
-#### Application automatically embedding available licenses
+#### 利用可能なライセンスを自動的に埋め込むアプリケーション
 
 Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses).
 
