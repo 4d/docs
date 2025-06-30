@@ -325,7 +325,7 @@ Class constructor({$parameterName : type; ...})
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
+// MyClass の Class constructor
 Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
