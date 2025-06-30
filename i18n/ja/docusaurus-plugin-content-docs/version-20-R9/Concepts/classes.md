@@ -328,7 +328,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 ```4d
 // Class: MyClass
 {shared} {{session} singleton} Class constructor({$parameterName : type; ...})
-// code
+// コード
 ```
 
 :::note
@@ -417,7 +417,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
+`property` キーワードは、クラス関数内の `Function` および `Class constructor` ブロック外でのみ使用できます。
 
 :::
 
