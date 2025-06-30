@@ -61,6 +61,17 @@ Components declared in the **dependencies.json** file can be stored at different
 
 If the same component is installed at different locations, a [priority order](#priority) is applied.  
 
+### Automatic dependency resolution
+
+When you add or update a component (whether local or from GitHub), 4D automatically resolves and installs all dependencies required by that component. This includes:
+
+- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
+- **Secondary dependencies**: Components required by your primary dependencies, which are automatically resolved and installed
+
+The dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
+
+**Conflict resolution**: When multiple dependencies require different versions of the same component, the dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+
 
 ### dependencies.json and environment4d.json
 
@@ -373,9 +384,20 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
+- **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
+- **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were automatically resolved.
 - **Active**: Dependencies that are loaded and can be used in the project. It includes *overloading* dependencies, which are actually loaded. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+
+### Primary and secondary dependencies
+
+The Dependencies panel distinguishes between two types of dependencies:
+
+- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
+- **Secondary dependencies**: Components that are automatically resolved and installed because they are required by your primary dependencies
+
+Secondary dependencies are visually distinguished in the interface and cannot be removed directly. When you hover over a secondary dependency, a tooltip displays the parent dependency that requires it. To remove a secondary dependency, you must remove the primary dependency that requires it.
 
 ### Dependency status
 
@@ -617,9 +639,11 @@ To remove a dependency from the Dependencies panel, select the dependency to rem
 
 :::note
 
-Only dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
+Only primary dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. Secondary dependencies cannot be removed directly - to remove a secondary dependency, you must remove the primary dependency that requires it.
 
 :::
+
+**Dependency usage warnings**: When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
 
 A confirmation dialog box is displayed. If the dependency was declared in the **environment4d.json** file, an option allows you to remove it:
 
