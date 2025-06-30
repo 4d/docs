@@ -3,7 +3,7 @@ id: httpRequests
 title: Traitement des requêtes HTTP
 ---
 
-The 4D web server provides several built-in features to handle HTTP requests:
+Le serveur web 4D fournit plusieurs fonctionnalités intégrées pour gérer les requêtes HTTP :
 
 - la méthode base `On Web Connection`, un routeur pour votre application web,
 - l'URL `/4DACTION` pour appeler le code côté serveur
@@ -44,7 +44,7 @@ Par exemple, l'URL "*a/b/c*" appellera la méthode base, mais "*a/b/c.html*" n'a
 | $user      | Text | <- | Nom d'utilisateur                                                           |
 | $password  | Text | <- | Mot de passe                                                                |
 
-You must declare these parameters:
+Vous devez déclarer ces paramètres :
 
 ```4d
 // On Web Connection
