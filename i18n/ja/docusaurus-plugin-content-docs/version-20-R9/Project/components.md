@@ -27,7 +27,7 @@ title: コンポーネント
 
 :::note
 
-The "Contents" folder architecture is recommended for components if you want to [notarize](../Desktop/building.md#about-notarization) your applications on macOS.
+アプリケーションをmacOS 上で[公証](../Desktop/building.md#公証について) したい場合には、"Contents" フォルダアーキテクチャーが推奨されます。
 
 :::
 
@@ -46,7 +46,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
+- コンポーネントファイルを[プロジェクトの**Components**フォルダ](architecture.md#components)内にコピーする(インタープリタ版コンポーネントパッケージフォルダはフォルダ名の末尾が".4dbase" になっている必要があります、上記参照)。
 - または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#github依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
@@ -69,8 +69,8 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 このファイルには次の内容を含めることができます:
 
-- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
-- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
+- [ローカル保存されている](#ローカルコンポーネント) コンポーネントの名前(デフォルトパス、または **environment4d.json** ファイルで定義されたパス)。
+- [GitHubリポジトリ](#github-に保存されたコンポーネント) に保存されているコンポーネントの名前 (パスはこのファイルまたは **environment4d.json** ファイルで定義できます)。
 
 #### environment4d.json
 
@@ -224,11 +224,11 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 #### タグとバージョン
 
-When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
+GitHubでリリースが作成されると、そこに**タグ**と**バージョン**が関連づけられます。 依存関係マネージャーはこれらの情報を使用してコンポーネントの自動利用可能性を管理します。
 
 :::note
 
-If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, you need to use a [specific naming convention for the tags](#naming-conventions-for-4d-version-tags).
+[**4Dのバージョンに追随する**](#defining-a-github-dependency-version-range) 依存関係ルールを選択した場合、[タグには特定の命名規則](#4dバージョンタグの命名規則) を使用する必要があります。
 
 :::
 
@@ -276,19 +276,19 @@ If you select the [**Follow 4D Version**](#defining-a-github-dependency-version-
 
 タグやバージョンを指定しない場合、4D は自動的に "latest" バージョンを取得します。
 
-The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range).
+依存関係マネージャーはコンポーネントの更新がGitHub上で利用可能かどうかを定期的にチェックします。 コンポーネントに対して新しいバージョンが利用可能だった場合、[設定に応じて](#github依存関係バージョン範囲)依存関係一覧の中で更新マークが表示されます。
 
-#### Naming conventions for 4D version tags
+#### 4Dバージョンタグの命名規則
 
-If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases on the Github repository must comply with specific conventions.
+[**4Dのバージョンに追随する**](#github依存関係バージョン範囲) 依存関係ルールを使用したい場合、GitHub レポジトリ上でのコンポーネントのリリースのタグは、特定の命名規則に従う必要があります。
 
-- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *x.y* LTS version, the Dependency Manager will resolve it as "the latest version x.\*" if available or "version below x". If no such version exists, the user will be notified. For example, "20.4" will be resolved by the Dependency manager as "the latest component version 20.\* or version below 20".
+- **LTS バージョン**: `x.y.p` パターン。ここでの`x.y` は追随したいメインの4D バージョンを表し、`p` (オプション) はパッチバージョンや他の追加のアップデートなどのために使用することができます。 プロジェクトが4D バージョンの *x.y* のLTS バージョンを追随すると指定した場合、依存関係マネージャーはそれを"x.\* の最新バージョン"(利用可能であれば)、あるいは"x 未満のバージョン"と解釈します。 もしそのようなバージョンが存在しない場合、その旨がユーザーに通知されます。 たとえば、 "20.4" という指定は依存関係マネージャーによって"バージョン 20.\* の最新コンポーネント、または20 未満のバージョン"として解決されます。
 
-- **R-Release versions**: `xRy.p` pattern, where `x` and `y` correspond to the main 4D R-release version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *xRy* version, the Dependency Manager will resolve it to the "latest version below xR(y+1)" if available. If no such version exists, the user will be notified. For example, "20R9" will be resolved by the Dependency manager as "the latest component version below 20R10".
+- **R-リリースバージョン**: `xRy.p` パターン。ここでの`x` と `y` は追随したいメインの4D Rリリースを表し、`p` (オプション) はパッチバージョンや他の追加のアップデートなどのために使用することができます。 プロジェクトが4D バージョンの*xRy* バージョンを追随すると指定した場合、依存関係マネージャーはそれを"xR(y+1) 未満の最新バージョン"(利用可能であれば) と解釈します。 もしそのようなバージョンが存在しない場合、その旨がユーザーに通知されます。 たとえば、"20R9" という指定は依存関係マネージャーによって"20R10 未満の最新コンポーネントバージョン"として解決されます。
 
 :::note
 
-The component developer can define a minimum 4D version in the component's [`info.plist`](../Extensions/develop-components.md#infoplist) file.
+コンポーネントデベロッパーは、コンポーネントの[`info.plist`](../Extensions/develop-components.md#infoplist) ファイル内で最小限の4D バージョンを定義することができます。
 
 :::
 
@@ -304,7 +304,7 @@ The component developer can define a minimum 4D version in the component's [`inf
 
 :::
 
-You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager.
+その後依存関係マネージャーに[接続トークンを提供する](#githubアクセストークンを提供する) 必要があります。
 
 #### 依存関係のローカルキャッシュ
 
@@ -337,7 +337,7 @@ You then need to [provide your connection token](#providing-your-github-access-t
 
 ![dependency](../assets/en/Project/dependency.png)
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
+依存関係パネルインターフェースを使用すると(シングルユーザー版4D と4D Serverにおいて)依存関係を管理することができます。
 
 ### 依存関係のフィルタリング
 
@@ -461,11 +461,11 @@ The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjs
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **最新**: (デフォルト) 最新の安定版バージョンとしてタグ付けされたリリースをダウンロードします。
-- **次のメジャーバージョンまで上げる**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンまでに制限します。
-- **次のマイナーバージョンまで上げる**: 上と同様に、更新を次のマイナーバージョンまでに制限します。
-- **バージョンを指定 (Tag)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
-- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. You can use this dependency rule only if the component release tags follow the appropriate [naming convention](#naming-conventions-for-4d-version-tags).
+- **自動更新する(latest)**: デフォルトで選択され、最新の(安定)バージョンとしてタグ付けされたリリースをダウンロードできるようにします。
+- **メジャー更新の手前まで**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンの手前までに制限します。
+- **マイナー更新の手前まで**: 上と同様に、更新を次のマイナーバージョンの手前までに制限します。
+- **自動更新しない(タグ指定)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
+- **4Dのバージョンに追随する**: 実行中の4D バージョンと互換性のある最新のコンポーネントリリースをダウンロードします。 この依存関係ルールは、コンポーネントのリリースタグが適切な[命名規則](#4dバージョンタグの命名規則) に従っていた場合にのみ使用できます。
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 
