@@ -20,10 +20,10 @@ title: コンポーネント
 
 コンポーネントのパッケージフォルダ(*MyComponent.4dbase* フォルダ) には以下のものを含めることができます:
 
-- for **interpreted components**: a standard [Project folder](../Project/architecture.md). The package folder name must be suffixed with **.4dbase** if you want to install it in the [**Components** folder of your project](architecture.md#components).
-- for **compiled components**:
-    - either a "Contents" folder containing a .4DZ file, a *Resources* folder, an *Info.plist* file (recommended architecture)
-    - or directly a .4DZ file with other folders such as *Resources*.
+- **インタープリタ版コンポーネント**の場合: 標準の[Project フォルダ](../Project/architecture.md)。 [プロジェクトの**Components** フォルダ](architecture.md#コンポーネント)にインストールする場合には、パッケージフォルダ名の末尾を **.4dbase** にする必要があります。
+- **コンパイル版コンポーネント**の場合:
+    - .4DZ ファイル、*Resources* フォルダ、*Info.plist* ファイルを格納している"Contents" フォルダ(推奨されるアーキテクチャ)
+    - *Resources* などの他のフォルダを格納している.4DZ ファイル。
 
 :::note
 
