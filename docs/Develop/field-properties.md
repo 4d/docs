@@ -10,10 +10,21 @@ For more field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv20
 ![](../assets/en/Develop/inspector.png)
 
 
-This property is only available for fields of type **Object**.
+This property is available for fields of type **Object** (in 4D projects only). It allows you to define a **class-typed object field** in the database structure, enhancing code completion, syntax checking, and runtime validation when typing code that involves object fields.
 
-It allows you to define a **class-typed object field** in the database structure, enhancing code completion, syntax checking, and runtime validation when typing code that involves object fields.
+You can enter any valid **streamable** class name in this property, including: 
+  - User classes (e.g. `cs.MyClass`)
+  - Built-in 4D classes (e.g. `4D.File`, `4D.Folder`)
+  - [Exposed](../Extensions/develop-components.md#sharing-of-classes) component-defined classes (e.g. `cs.MyComponent.MyClass`)
 
-When a value is assigned to an entity's object field, 4D ensures that the object belongs to the declared class.
+If you enter an invalid class name, a warning is triggered and the input is rejected. 
+
+In your code, when assigning a value to a class-typed object field, 4D verifies that it belongs to the declared class. If not or if the object has no class, an error is triggered. Accessing unknown attributes will also raise syntax errors.
+
+To retrieve the associated class name at runtime use the `ds.Table.field.classID` property.
+
+### See also
+
+- [Blog post: Stricter class-based typing for objects](https://blog.4d.com/stricter-class-based-typing-for-objects/)
 
 
