@@ -69,7 +69,7 @@ module.exports =
                type: "category",
                label: "Dababase structure",
                items: [
-                 "Develop-legacy/field-properties",
+                 "Develop/field-properties",
                       ]
             }
                  ]
