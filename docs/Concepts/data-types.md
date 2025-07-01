@@ -31,7 +31,7 @@ Although they are usually equivalent, some data types available at the database 
 
 (2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type. 
 
-(3) You can [assign a class](../Develop-legacy/field-properties.md) to an object field in the structure editor.
+(3) You can [assign a class](../Develop/field-properties.md) to an object field in the structure editor.
 
 ## Commands
 
