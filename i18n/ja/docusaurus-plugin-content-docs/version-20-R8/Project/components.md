@@ -27,7 +27,7 @@ title: コンポーネント
 
 :::note
 
-The "Contents" folder architecture is recommended for components if you want to [notarize](../Desktop/building.md#about-notarization) your applications on macOS.
+アプリケーションをmacOS 上で[公証](../Desktop/building.md#公証について) したい場合には、"Contents" フォルダアーキテクチャーが推奨されます。
 
 :::
 
@@ -46,7 +46,7 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 4Dプロジェクトにコンポーネントを読み込むには、以下の方法があります:
 
-- copy the component files in the [**Components** folder of your project](architecture.md#components) (interpreted component package folders must be suffixed with ".4dbase", see above),
+- コンポーネントファイルを[プロジェクトの**Components**フォルダ](architecture.md#components)内にコピーする(インタープリタ版コンポーネントパッケージフォルダはフォルダ名の末尾が".4dbase" になっている必要があります、上記参照)。
 - または、プロジェクトの **dependencies.json** ファイルでコンポーネントを宣言します。これは、[**依存関係インターフェースを使用して依存関係を追加**](#github依存関係の追加) するときに、ローカルファイルに対して自動的におこなわれます。
 
 **dependencies.json** ファイルで宣言されているコンポーネントは、異なる場所に保存できます:
@@ -69,8 +69,8 @@ The "Contents" folder architecture is recommended for components if you want to 
 
 このファイルには次の内容を含めることができます:
 
-- names of components [stored locally](#local-components) (default path or path defined in an **environment4d.json** file),
-- names of components [stored on GitHub repositories](#components-stored-on-github) (their path can be defined in this file or in an **environment4d.json** file).
+- [ローカル保存されている](#ローカルコンポーネント) コンポーネントの名前(デフォルトパス、または **environment4d.json** ファイルで定義されたパス)。
+- [GitHubリポジトリ](#github-に保存されたコンポーネント) に保存されているコンポーネントの名前 (パスはこのファイルまたは **environment4d.json** ファイルで定義できます)。
 
 #### environment4d.json
 
@@ -224,7 +224,7 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 #### タグとバージョン
 
-When a release is created in GitHub, it is associated to a **tag** and a **version**. The Dependency manager uses these information to handle automatic availability of components.
+GitHubでリリースが作成されると、そこに**タグ**と**バージョン**が関連づけられます。 依存関係マネージャーはこれらの情報を使用してコンポーネントの自動利用可能性を管理します。
 
 - **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependenciesjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば:
 
@@ -270,7 +270,7 @@ When a release is created in GitHub, it is associated to a **tag** and a **versi
 
 タグやバージョンを指定しない場合、4D は自動的に "latest" バージョンを取得します。
 
-The Dependency manager checks periodically if component updates are available on Github. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-github-dependency-version-range).
+依存関係マネージャーはコンポーネントの更新がGitHub上で利用可能かどうかを定期的にチェックします。 コンポーネントに対して新しいバージョンが利用可能だった場合、[設定に応じて](#github依存関係バージョン範囲)依存関係一覧の中で更新マークが表示されます。
 
 #### プライベートリポジトリ
 
@@ -284,7 +284,7 @@ The Dependency manager checks periodically if component updates are available on
 
 :::
 
-You then need to [provide your connection token](#providing-your-github-access-token) to the Dependency manager.
+その後依存関係マネージャーに[接続トークンを提供する](#githubアクセストークンを提供する) 必要があります。
 
 #### 依存関係のローカルキャッシュ
 
@@ -317,7 +317,7 @@ You then need to [provide your connection token](#providing-your-github-access-t
 
 ![dependency](../assets/en/Project/dependency.png)
 
-The Dependencies panel interface allows you to manage dependencies (on 4D single-user and 4D Server).
+依存関係パネルインターフェースを使用すると(シングルユーザー版4D と4D Serverにおいて)依存関係を管理することができます。
 
 ### 依存関係のフィルタリング
 
@@ -441,10 +441,10 @@ The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjs
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **最新**: (デフォルト) 最新の安定版バージョンとしてタグ付けされたリリースをダウンロードします。
-- **次のメジャーバージョンまで上げる**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンまでに制限します。
-- **次のマイナーバージョンまで上げる**: 上と同様に、更新を次のマイナーバージョンまでに制限します。
-- **バージョンを指定 (Tag)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
+- **自動更新する(latest)**: デフォルトで選択され、最新の(安定)バージョンとしてタグ付けされたリリースをダウンロードできるようにします。
+- **メジャー更新の手前まで**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンの手前までに制限します。
+- **マイナー更新の手前まで**: 上と同様に、更新を次のマイナーバージョンの手前までに制限します。
+- **自動更新しない(タグ指定)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 
