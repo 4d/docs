@@ -342,11 +342,17 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. This includes:
 
 - **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
-- **Secondary dependencies**: Components required by your primary dependencies, which are automatically resolved and installed
+- **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
 
 The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
 
 - **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+
+:::note
+
+`dependencies.json` files are ignored in components loaded from the [**Components** folder](architecture.md#components). 
+
+:::
 
 
 
@@ -393,12 +399,9 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
 - **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
 
-### Primary and secondary dependencies
+### Secondary dependencies
 
-The Dependencies panel distinguishes between two types of dependencies:
-
-- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
-- **Secondary dependencies**: Components that are [automatically resolved](#automatic-dependency-resolution) and installed because they are required by your primary dependencies. Secondary dependency [origin](#dependency-origin) is `Component dependency`
+The Dependencies panel displays [**secondary dependencies**](#automatic-dependency-resolution) with the `Component dependency` [origin](#dependency-origin):
 
 ![recursive-dependency](../assets/en/Project/recursive.png)
 
@@ -442,9 +445,9 @@ The following origins are possible:
 |---|---|
 |Built in 4D|Built-in 4D component, stored in the `Components` folder of the 4D application|
 |Declared in project|Component declared in the [`dependencies.json`](#dependenciesjson) file|
-|Declared in environment|Component declared in the [`environnement4d.json`](#environment4djson) file|
+|Declared in environment|Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file|
 |Components folder|Component located in the [`Components`](architecture.md#components) folder|
-|Components dependency|Secondary component (required by a primary component)|
+|Component dependency|Secondary component ([required by a another component](#automatic-dependency-resolution))|
 
 
 
