@@ -16,13 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibility 
-
-<!--REF #_command_.WP Text range.Summary-->**WP Text range** was named **WP Create range** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
-
 ## Description 
 
-The **WP Text range** command returns a new range object containing the selection between *startRange* and *endRange* in the *targetObj*.
+<!--REF #_command_.WP Text range.Summary-->The **WP Text range** command returns a new range object containing the selection between *startRange* and *endRange* in the *targetObj*.<!-- END REF-->
 
 A **4D Write Pro range object** can be used to handle attributes on a text selection (in particular with the [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) commands). For more information, refer to the *Range handling commands* paragraph.
 
