@@ -5,21 +5,17 @@ title: Release Notes
 
 ## 4D 20 R10
 
-#### Points forts
-
-- Handling of [ORDA events on data](../ORDA/orda-events.md).
-
-## 4D 20 R10
-
 Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-20-R10/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R10.
 
 #### Points forts
 
+- Handling of [ORDA events on data](../ORDA/orda-events.md).
 - Nouvelle option `connectionTimeout` dans le paramètre [`options`](../API/TCPConnectionClass.md#options-parameter) de la fonction [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
 - New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - Les UUIDs dans 4D sont maintenant générés en **version 7**. Dans les versions 4D précédentes, ils étaient générés en version 4.
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
+- Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
 - Langage 4D:
     - Pour des raisons de cohérence, les commandes [`Create entity selection`](../commands/create-entity-selection.md) et [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) ont été déplacées du thème ["4D Environnement"](../commands/theme/4D_Environment.md) vers le thème ["Sélections"](../commands/theme/Selection.md).
     - Nouvelles commandes [`OBJET SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) et [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) pour assigner et lire les objets `Formula` comme sources de données pour les objets de formulaire.
@@ -36,6 +32,7 @@ Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 #### Points forts
 
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - Prise en charge des [tokens de session](../WebServer/sessions.md#session-token-otp) gérés avec les nouvelles fonctions [`Session.createOTP()`](../API/SessionClass.md#createotp) et [`Session.restore()`](../API/SessionClass.md#restore).
 - L'assistant d'étiquettes utilise maintenant l'éditeur de formules pour ajouter ou éditer des formules dans la [zone de construction du modèle](../Desktop/labels.md#label-preview).
 - Nouvelle classe [`TCPListener`](../API/TCPListenerClass.md) pour créer des connexions au serveur TCP ; nouvelles propriétés dans les classes connexes : `address`, `listener` et `port` dans la classe [`TCPConnection`](../API/TCPConnectionClass.md), `ip` et `port` dans la classe [`TCPEvent`](../API/TCPEventClass.md).
@@ -47,7 +44,6 @@ Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Nouveau [composant 4D AIkit](../aikit/overview.md) permettant l'interaction avec les API IA tierces.
 - Les fonctions de callback suivantes de 4D View Pro attendent maintenant que toutes les fonctions personnalisées de 4D terminent leurs calculs : [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md), et [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
 - Nouvelles fonctionnalités [4D NetKit](https://developer.4d.com/4D-NetKit/) permettant de gérer les calendriers Google et Microsoft 365 ; possibilité d'utiliser le serveur web hôte pour l'authentification OAuth 2.0.
-- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - 4D Write Pro Interface : nouvelle [IA intégrée](../WritePro/writeprointerface.md#integrated-ai) pour interagir avec **chatGTP** depuis vos documents 4D Write Pro.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R9) : liste de tous les bugs qui ont été corrigés dans 4D 20 R9.
 
