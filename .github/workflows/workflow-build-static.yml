@@ -11,17 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: '22.x'
+          bun-version: latest
       - name: Build
         run: |
-          if [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          npm run build -- --locale ${{ matrix.language }}
+          bun install
+          bun run build -- --locale ${{ matrix.language }}
         env:
             DOCUSAURUS_LANGUAGE: ${{ matrix.language }}
             DOCUSAURUS_ROUTER: 'hash'

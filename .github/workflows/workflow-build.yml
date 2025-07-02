@@ -26,17 +26,13 @@ jobs:
           /usr/share/swift
           df -h /
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: '22.x'
+          bun-version: latest
       - name: Build
         run: |
-          if [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          npm run build
+          bun install
+          bun run build
       - name: Google verification
         run: |
           cd build
