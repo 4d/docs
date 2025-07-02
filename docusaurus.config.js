@@ -8,6 +8,8 @@ const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
 const router = process.env.DOCUSAURUS_ROUTER
 const isStatic = process.env.DOCUSAURUS_ROUTER === "hash"
 const language = process.env.DOCUSAURUS_LANGUAGE ?? "en"
+const is_CI = process.env.GITHUB_ACTIONS  === "true"
+
 
 const locales = isStatic ? [language] : ["en", "fr", "es", "ja", "pt"]
 const localeConfigs = isStatic ? {} : {
@@ -130,6 +132,18 @@ module.exports = {
           return undefined; // Return a falsy value: no redirect created
         },
       },
+      function disableExpensiveBundlerOptimizationPlugin() {
+      return {
+        name: "disable-expensive-bundler-optimizations",
+        configureWebpack(_config, isServer) {
+          return {
+            optimization: {
+              concatenateModules: false,
+            },
+          };
+        },
+      };
+    },
     ],
   ],
   themeConfig: {

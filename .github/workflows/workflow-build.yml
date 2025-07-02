@@ -42,6 +42,8 @@ jobs:
           cd build
           echo "google-site-verification: google1a6263055b2bea44.html" >> google1a6263055b2bea44.html
       - uses: actions/upload-artifact@v4
+        env:
+          DOCUSAURUS_SSG_WORKER_THREAD_COUNT: 1 # To limit the memory usage
         with:
           path: ./build
           name: build
