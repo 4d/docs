@@ -46,6 +46,8 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false,
           remarkPlugins: [remarkGfm],
           // Docs folder path relative to website dir.
           path: 'docs',
@@ -92,7 +94,11 @@ module.exports = {
       },
     ],
   ],
+
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true, // required with ssgWorkerThreads
+    },
     experimental_faster: {
       swcJsLoader: true,
       swcJsMinimizer: true,
@@ -100,6 +106,7 @@ module.exports = {
       lightningCssMinimizer: true,
       rspackBundler: true,
       mdxCrossCompilerCache: true,
+      ssgWorkerThreads: true,
     },
     experimental_router: router,
   },
