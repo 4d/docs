@@ -186,6 +186,7 @@ Absolute paths should only be used for components that are specific to one machi
 
 
 
+
 ### Components stored on GitHub
 
 4D components available as GitHub releases can be referenced and automatically loaded and updated in your 4D projects.
@@ -336,6 +337,25 @@ Referenced GitHub components are downloaded in a local cache folder then loaded 
 ...where `<app name>` can be "4D", "4D Server", or "tool4D".
 
 
+### Automatic dependency resolution
+
+When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. This includes:
+
+- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
+- **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
+
+The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
+
+- **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+
+:::note
+
+`dependencies.json` files are ignored in components loaded from the [**Components** folder](architecture.md#components). 
+
+:::
+
+
+
 ### dependency-lock.json
 
 A `dependency-lock.json` file is created in the [`userPreferences` folder](architecture.md#userpreferencesusername) of your project.
@@ -373,9 +393,20 @@ By default, all dependencies identified by the Dependency manager are listed, wh
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
+- **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
+- **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
 - **Active**: Dependencies that are loaded and can be used in the project. It includes *overloading* dependencies, which are actually loaded. *Overloaded* dependencies are listed in the **Conflicts** panel, along with all conflicting dependencies.
 - **Inactive**: Dependencies that are not loaded in the project and are not available. There are many possible reasons for this status: missing files, version incompatibility...
-- **Conflict**: Dependencies that are loaded but that overloads at least one other dependency at lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+- **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). Overloaded dependencies are also displayed so that you can check the origin of the conflict and take appropriate actions.
+
+### Secondary dependencies
+
+The Dependencies panel displays [**secondary dependencies**](#automatic-dependency-resolution) with the `Component dependency` [origin](#dependency-origin):
+
+![recursive-dependency](../assets/en/Project/recursive.png)
+
+When you hover over a secondary dependency, a tooltip displays the parent dependency that requires it. A secondary dependency cannot be [removed](#removing-a-dependency) directly, you must remove or edit the primary dependency that requires it.
+
 
 ### Dependency status
 
@@ -412,10 +443,12 @@ The following origins are possible:
 
 |Origin tag|Description|
 |---|---|
-|4D Component|Built-in 4D component, stored in the `Components` folder of the 4D application|
-|dependencies.json|Component declared in the [`dependencies.json`](#dependenciesjson) file|
-|Environment|Component declared in the [`environnement4d.json`](#environment4djson) file|
-|Project Component|Component located in the [`Components`](architecture.md#components) folder|
+|Built in 4D|Built-in 4D component, stored in the `Components` folder of the 4D application|
+|Declared in project|Component declared in the [`dependencies.json`](#dependenciesjson) file|
+|Declared in environment|Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file|
+|Components folder|Component located in the [`Components`](architecture.md#components) folder|
+|Component dependency|Secondary component ([required by a another component](#automatic-dependency-resolution))|
+
 
 
 **Right-click** in a dependency line and select **Show on disk** to reveal the location of a dependency:
@@ -617,7 +650,7 @@ To remove a dependency from the Dependencies panel, select the dependency to rem
 
 :::note
 
-Only dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
+Only primary dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. Secondary dependencies cannot be removed directly - to remove a secondary dependency, you must remove the primary dependency that requires it. If a selected dependency cannot be removed, the **-** button is disabled and the **Remove the dependency...** menu item is hidden.
 
 :::
 
@@ -627,4 +660,7 @@ A confirmation dialog box is displayed. If the dependency was declared in the **
 
 If you confirm the dialog box, the removed dependency [status](#dependency-status) is automatically flagged "Unload after restart". It will be unloaded once the application restarts.
 
+#### Dependency usage warnings
+
+When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
 
