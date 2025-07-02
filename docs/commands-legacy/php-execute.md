@@ -5,6 +5,8 @@ slug: /commands/php-execute
 displayed_sidebar: docs
 ---
 
+<!-- IREF #_command_PHP Execute.deprecated -->
+
 <!--REF #_command_.PHP Execute.Syntax-->**PHP Execute** ( *scriptPath* {; *functionName* {; *phpResult* {; *param*} {; *param2* ; ... ; *paramN*}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.PHP Execute.Params-->
 | Parameter | Type |  | Description |

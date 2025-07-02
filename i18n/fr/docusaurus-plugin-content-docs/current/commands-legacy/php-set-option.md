@@ -5,6 +5,8 @@ slug: /commands/php-set-option
 displayed_sidebar: docs
 ---
 
+<!-- IREF #PHP SET OPTION.deprecated -->
+
 <!--REF #_command_.PHP SET OPTION.Syntax-->**PHP SET OPTION** ( *option* ; *valeur* {; *} )<!-- END REF-->
 <!--REF #_command_.PHP SET OPTION.Params-->
 | Paramètre | Type |  | Description |
