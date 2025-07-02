@@ -300,7 +300,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 #### シンタックス
 
 ```4d
-// Class: MyClass
+// クラス: MyClass
 Class constructor({$parameterName : type; ...})
 // コード
 ```
@@ -663,12 +663,12 @@ $val:=$o.f() //42
 [クラスコンストラクター](#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-//Class: ob
+//クラス: ob
 
 Class constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // 値を代入にすることによって
+ // This のプロパティを作成
  This.a:=42
 ```
 
