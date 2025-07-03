@@ -45,7 +45,7 @@ jobs:
           if [ "$LANGUAGE" = 'en' ]; then
             npm run build -- --locale $LANGUAGE
           else
-            npm run build -- --locale --out-dir ./build/$LANGUAGE
+            npm run build -- --locale $LANGUAGE --out-dir ./build/$LANGUAGE
           fi
       - name: Google verification
         if: matrix.language == 'en'
