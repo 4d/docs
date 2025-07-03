@@ -31,10 +31,10 @@ Vector objects are shared, immutable, and streamable.
 ||
 |---|
 |[<!-- INCLUDE #VectorClass.cosineSimilarity().Syntax -->](#cosinesimilarity)<br/><!-- INCLUDE #VectorClass.cosineSimilarity().Summary -->|
-|[<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity.Summary -->|
+|[<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity().Summary -->|
 |[<!-- INCLUDE #VectorClass.euclideanDistance().Syntax -->](#euclideandistance)<br/><!-- INCLUDE #VectorClass.euclideanDistance().Summary --> |
 |[<!-- INCLUDE #VectorClass.length.Syntax -->](#length)<br/><!-- INCLUDE #VectorClass.length.Summary -->|
-|[<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection.Summary -->|
+|[<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection().Summary -->|
 
 
 
@@ -302,7 +302,7 @@ ALERT("Nearest monument: "+$places[0].name)
 
 #### Description
 
-The `.length` property contains <!-- REF #VectorClass.params.Summary -->the number of vector components<!-- END REF -->.
+The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
 
 <!-- END REF -->
 
