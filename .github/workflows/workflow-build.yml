@@ -1,4 +1,4 @@
-name: Build documentation
+name: Build split documentation
 
 on:
   workflow_call:
@@ -8,46 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - name: Get disk space
-        run: |
-          df -h /
-          sudo rm -rf \
-          "$AGENT_TOOLSDIRECTORY" \
-          /opt/google/chrome \
-          /opt/microsoft/msedge \
-          /opt/microsoft/powershell \
-          /opt/pipx \
-          /usr/lib/mono \
-          /usr/local/julia* \
-          /usr/local/lib/android \
-          /usr/local/lib/node_modules \
-          /usr/local/share/chromium \
-          /usr/local/share/powershell \
-          /usr/share/dotnet \
-          /usr/share/swift
-          df -h /
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-      - name: Build
-        run: |
-          bun install
-          bun run build
-      - name: Google verification
-        run: |
-          cd build
-          echo "google-site-verification: google1a6263055b2bea44.html" >> google1a6263055b2bea44.html
-      - uses: actions/upload-artifact@v4
-        env:
-          DOCUSAURUS_SSG_WORKER_THREAD_COUNT: 1 # To limit the memory usage
-        with:
-          path: ./build
-          name: build
-=======
         - name: Build locales
-          uses: "workflow-build-locale.yml"
+          uses: ./.github/workflows/workflow-build-locale.yml
+
   merge:
     needs: [build]
     runs-on: ubuntu-latest
@@ -58,5 +21,3 @@ jobs:
             pattern: build-locale-*
             merge-multiple: true
             path: ./build
-
->>>>>>> 12ea56fcabb6 (start merger)
