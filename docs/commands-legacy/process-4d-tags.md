@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.PROCESS 4D TAGS.Summary-->The **PROCESS 4D TAGS** command causes the processing of 4D transformation tags contained in the *inputTemplate* parameter while (optionally) inserting value(s) using the *param* parameters and returns the result in *outputResult*.<!-- END REF--> For a complete description of these tags, refer to the *4D Transformation Tags* section.
+<!--REF #_command_.PROCESS 4D TAGS.Summary-->The **PROCESS 4D TAGS** command causes the processing of 4D transformation tags contained in the *inputTemplate* parameter while (optionally) inserting value(s) using the *param* parameters and returns the result in *outputResult*.<!-- END REF--> For a complete description of these tags, refer to the [**4D Transformation Tags**](../Tags/transformation-tags.md) section.
 
 This command lets you execute a "template" type text containing tags and references to 4D expressions and/or variables, and to produce a result depending on the execution context and/or the values passed as parameters.   
 For example, you can use this command to generate and save HTML pages based on **semi-dynamic pages** containing 4D transformation tags (without it being necessary for 4D's Web server to be started). You can use it to send e-mail messages in HTML format that contain processing of and/or references to data contained in the database via the 4D Internet Commands. It is possible to process any type of data based on text, such as XML, SVG or multi-style text.
@@ -58,20 +58,20 @@ This example loads a 'template' type document, processes the tags it contains an
 This example generates a text using data of the arrays:
 
 ```4d
- ARRAY TEXT($array;2)
- $array{1}:="hello"
- $array{2}:="world"
- $input:=""
- $input:=$input+""
- $input:=$input+" "
- $input:=$input+""
- PROCESS 4D TAGS($input;$output;"elements = ";->$array)
-  // $output = "elements = hello world"
+ARRAY TEXT($array; 2)
+$array{1}:="hello"
+$array{2}:="world"
+$input:="<!--#4DEVAL $1-->"
+$input:=$input+"<!--#4DLOOP $2-->"
+$input:=$input+"<!--#4DEVAL $2->{$2->}--> "
+$input:=$input+"<!--#4DENDLOOP-->"
+PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
+// $output = "elements = hello world"
 ```
 
 ## See also 
 
-*4D Transformation Tags*  
+[**4D Transformation Tags**](../Tags/transformation-tags.md)  
 
 ## Properties
 
