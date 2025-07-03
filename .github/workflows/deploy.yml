@@ -20,14 +20,12 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
-        pattern: build-locale-*
-        merge-multiple: true
-        path: ./build
+        name: build
     - name: Publish
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+        publish_dir: ./
 
   publish-release:
     needs: [workflow-static]

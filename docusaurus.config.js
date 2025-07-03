@@ -8,8 +8,6 @@ const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
 const router = process.env.DOCUSAURUS_ROUTER
 const isStatic = process.env.DOCUSAURUS_ROUTER === "hash"
 const language = process.env.DOCUSAURUS_LANGUAGE ?? "en"
-const is_CI = process.env.GITHUB_ACTIONS === "true"
-
 
 const locales = isStatic ? [language] : ["en", "fr", "es", "ja", "pt"]
 const localeConfigs = isStatic ? {} : {
@@ -48,8 +46,6 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          showLastUpdateAuthor: false,
-          showLastUpdateTime: false,
           remarkPlugins: [remarkGfm],
           // Docs folder path relative to website dir.
           path: 'docs',
@@ -96,11 +92,7 @@ module.exports = {
       },
     ],
   ],
-
   future: {
-    v4: {
-      removeLegacyPostBuildHeadAttribute: true, // required with ssgWorkerThreads
-    },
     experimental_faster: {
       swcJsLoader: true,
       swcJsMinimizer: true,
@@ -108,7 +100,6 @@ module.exports = {
       lightningCssMinimizer: true,
       rspackBundler: true,
       mdxCrossCompilerCache: true,
-      ssgWorkerThreads: true,
     },
     experimental_router: router,
   },
@@ -133,18 +124,6 @@ module.exports = {
         },
       },
     ],
-    function disableExpensiveBundlerOptimizationPlugin() {
-      return {
-        name: "disable-expensive-bundler-optimizations",
-        configureWebpack(_config, isServer) {
-          return {
-            optimization: {
-              concatenateModules: false,
-            },
-          };
-        },
-      };
-    },
   ],
   themeConfig: {
     algolia: {
