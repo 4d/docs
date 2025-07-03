@@ -547,7 +547,7 @@ When building the application, 4D will automatically integrate necessary license
 
 1. licencias OEM, o
 2. 4D Desktop Business licenses, or
-3. other licenses.
+3. otras licencias.
 
 The license tab displays the list of licenses automatically used for the build. The list cannot be modified.
 
