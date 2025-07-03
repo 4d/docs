@@ -315,6 +315,23 @@ Os componentes GitHub referenciados são baixados em uma pasta de cache local e 
 
 ...onde `<app name>` pode ser "4D", "4D Server" ou "tool4D".
 
+### Automatic dependency resolution
+
+When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. Isto inclui:
+
+- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
+- **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
+
+The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
+
+- **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+
+:::note
+
+`dependencies.json` files are ignored in components loaded from the [**Components** folder](architecture.md#components).
+
+:::
+
 ### dependency-lock.json
 
 Um arquivo `dependency-lock.json` foi criado na pasta [`userPreferences`](architecture.md#userpreferencesusername) do seu projeto.
@@ -345,9 +362,19 @@ Por padrão, todas as dependências identificadas pelo gerenciador de dependênc
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
+- **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
+- **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
 - **Ativo**: dependências carregadas e podem ser usadas no projeto. Isso inclui dependências *overloading*, que são de fato carregadas. As dependências *sobrecarregadas* são listadas no painel **Conflitos**, juntamente com todas as dependências conflitantes.
 - **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. Há muitos motivos possíveis para esse status: arquivos ausentes, incompatibilidade de versão...
-- **Conflito**: dependências carregadas, mas que sobrecarregam pelo menos outra dependência em um [nível de prioridade](#priority) inferior. As dependências sobrecarregadas também são exibidas para que você possa verificar a origem do conflito e tomar as medidas adequadas.
+- **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). As dependências sobrecarregadas também são exibidas para que você possa verificar a origem do conflito e tomar as medidas adequadas.
+
+### Secondary dependencies
+
+The Dependencies panel displays [**secondary dependencies**](#automatic-dependency-resolution) with the `Component dependency` [origin](#dependency-origin):
+
+![recursive-dependency](../assets/en/Project/recursive.png)
+
+When you hover over a secondary dependency, a tooltip displays the parent dependency that requires it. A secondary dependency cannot be [removed](#removing-a-dependency) directly, you must remove or edit the primary dependency that requires it.
 
 ### Estado de dependências
 
@@ -380,12 +407,13 @@ O painel de Dependências lista todas as dependências do projeto, independentem
 
 As seguintes origens são possíveis:
 
-| Etiqueta de origem                | Descrição                                                                    |
-| --------------------------------- | ---------------------------------------------------------------------------- |
-| Componente 4D                     | Componente 4D incorporado, armazenado na pasta `Components` da aplicação 4D  |
-| dependencies.json | Componente declarado no arquivo [`dependencies.json`](#dependenciesjson)     |
-| Ambiente                          | Componente declarado no arquivo [`environnement4d.json`](#environment4djson) |
-| Componente do projeto             | Componente localizado na pasta [`Components`](architecture.md#components)    |
+| Etiqueta de origem      | Descrição                                                                                                                                    |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Built in 4D             | Componente 4D incorporado, armazenado na pasta `Components` da aplicação 4D                                                                  |
+| Declared in project     | Componente declarado no arquivo [`dependencies.json`](#dependenciesjson)                                                                     |
+| Declared in environment | Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file |
+| Pasta Components        | Componente localizado na pasta [`Components`](architecture.md#components)                                                                    |
+| Component dependency    | Secondary component ([required by a another component](#automatic-dependency-resolution))                                 |
 
 **Clique com o botão direito do mouse** em uma linha de dependência e selecione **Mostrar no disco** para revelar o local de uma dependência:
 
@@ -571,7 +599,7 @@ Para remover uma dependência do painel Dependências, selecione a dependência 
 
 :::note
 
-Somente as dependências declaradas no arquivo [**dependencies.json**](#dependenciesjson) podem ser removidas usando o painel Dependencies. Se uma dependência selecionada não pode ser removida, o botão **-** está desativado e o **Remover a dependência...** do item de menu está oculto.
+Only primary dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. Secondary dependencies cannot be removed directly - to remove a secondary dependency, you must remove the primary dependency that requires it. Se uma dependência selecionada não pode ser removida, o botão **-** está desativado e o **Remover a dependência...** do item de menu está oculto.
 
 :::
 
@@ -581,4 +609,7 @@ Somente as dependências declaradas no arquivo [**dependencies.json**](#dependen
 
 Se você confirmar a caixa de diálogo, a dependência [estado](#dependency-status) removida é automaticamente sinalizada "Unload after restart". Ele será descarregado quando o aplicativo for reiniciado.
 
+#### Dependency usage warnings
+
+When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
 
