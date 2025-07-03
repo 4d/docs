@@ -3,7 +3,7 @@ id: field-properties
 title: Field properties
 ---
 
-For more field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv20R9/4D/20-R9/Field-properties.300-7543749.en.html#5523008).
+For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv20R10/4D/20-R10/Field-properties.300-7543749.en.html#5523008).
 
 ## Class
 
@@ -27,7 +27,7 @@ If you enter an invalid class name, a warning is triggered and the input is reje
 
 In your code, when assigning a value to a class-typed object field, 4D verifies that it belongs to the declared class. If not or if the object has no class, an error is triggered. Accessing unknown attributes will also raise syntax errors.
 
-To retrieve the associated class name at runtime use the `ds.Table.field.classID` property.
+To retrieve the associated class name at runtime, use the [`classID`](../API/DataClassClass.md#attributename) property, for example `ds.MyTable.MyField.classID`.
 
 ### See also
 

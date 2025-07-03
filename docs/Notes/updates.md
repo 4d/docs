@@ -27,8 +27,7 @@ Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 
 - On Windows, current printer fonts intended only for printing (i.e. not usable on screen) are no longer loaded by 4D at startup. 
 - The *MeCab* library has been removed. This change only affects the processing of Japanese text.
-- When an object parameter of a method is [declared](../Concepts/parameters.md#declaring-parameters) with a ["cs" class](../Concepts/classes.md#cs) type, calling this method with an object parameter of a different class now generates an error. 
-
+- When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
 
 ## 4D 20 R9
 
