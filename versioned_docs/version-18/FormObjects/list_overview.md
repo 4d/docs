@@ -87,7 +87,6 @@ It is possible to modify the appearance of a hierarchical list form objects usin
 - `OBJECT SET FONT`
 - `OBJECT SET FONT STYLE`
 - `OBJECT SET FONT SIZE`
-- `OBJECT SET COLOR`
 - `OBJECT SET FILTER`
 - `OBJECT SET ENTERABLE`
 - `OBJECT SET SCROLLBAR`
