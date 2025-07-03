@@ -3,12 +3,13 @@ name: Build documentation
 on:
   workflow_call:
 
-
 jobs:
   build:
+    strategy:
+      matrix:
+        language: ["en", "fr", "es", "ja", "pt"]
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - name: Get disk space
         run: |
           df -h /
@@ -28,31 +29,24 @@ jobs:
           /usr/share/swift
           df -h /
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: '22.x'
       - name: Build
+        env:
+          DOCUSAURUS_SSG_WORKER_THREAD_COUNT: 1 # To limit the memory usage
         run: |
-          bun install
-          bun run build
+          if [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+          npm run build -- --locale ${{ matrix.language }}
       - name: Google verification
         run: |
           cd build
           echo "google-site-verification: google1a6263055b2bea44.html" >> google1a6263055b2bea44.html
       - uses: actions/upload-artifact@v4
-        env:
-          DOCUSAURUS_SSG_WORKER_THREAD_COUNT: 1 # To limit the memory usage
         with:
           path: ./build
-          name: build
-=======
-        - name: Build locales
-          uses: "workflow-build-locale.yml"
-  merge:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-        - name: "Call merger"
-          run: "node ./tools/merge_locales.js"
-
->>>>>>> 12ea56fcabb6 (start merger)
+          name: build-${{ matrix.language }}
