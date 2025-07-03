@@ -403,7 +403,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 \* テキスト型を使用する場合には、画像のファイルパス (絶対パスまたは相対パス) を渡します。 相対パスを渡す場合、ファイルはデータベースのストラクチャーファイルのと階層に置かれてなければなりません。 Windows では、ファイル拡張子も含めて渡します。 画像指定に使用するデータ型にかかわらず、4D View Pro エリアには (参照ではなく) 画像そのものが保存され、[VP Get print info](commands/vp-get-print-info.md) によって返されます。
 
-## スタイルオブジェクト
+## Style Objects {#style-objects} {#style-objects}
 
 4D View Pro スタイルオブジェクトとスタイルシートを使用すると、4D View Pro ドキュメントのグラフィカル要素や見た目を管理することができるようになります。
 
