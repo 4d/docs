@@ -5,7 +5,7 @@ slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( refImage | nomImage ; *image* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *refImage * ; *image* )<br/>**GET PICTURE FROM LIBRARY** ( *nomImage* ; *image* )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -16,7 +16,15 @@ displayed_sidebar: docs
 
 ## Description 
 
+:::warning
+
+Cette commande ne peut pas être utilisée dans les projets car la bibliothèque d'images est disponible uniquement dans les bases de données binaires. 
+
+:::
+
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->La commande **GET PICTURE FROM LIBRARY** retourne dans *image* l'image de la bibliothèque dont vous avez passé le numéro de référence dans *refImage* ou le nom dans *nomImage*.<!-- END REF-->
+
+
 
 S'il n'existe pas d'image de ce numéro ou de ce nom dans la bibliothèque d'images, **GET PICTURE FROM LIBRARY** ne modifie pas le paramètre *image*. 
 

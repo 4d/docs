@@ -16,7 +16,15 @@ displayed_sidebar: docs
 
 ## Description 
 
+:::warning
+
+This command cannot be used in projects because the Picture library is only available in binary databases. 
+
+:::
+
+
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->The **GET PICTURE FROM LIBRARY** command returns in the *picture* parameter the Picture Library graphic whose reference number is passed in *picRef* or whose name is passed in *picName*.<!-- END REF-->
+
 
 If there is no picture with that reference number or name, **GET PICTURE FROM LIBRARY** leaves *picture* unchanged. 
 
