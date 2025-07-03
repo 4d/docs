@@ -83,7 +83,6 @@ Es posible modificar la apariencia de una lista jerárquica en un formulario uti
 - `OBJECT SET FONT`
 - `OBJECT SET FONT STYLE`
 - `OBJECT SET FONT SIZE`
-- `OBJECT SET COLOR`
 - `OBJECT SET FILTER`
 - `OBJECT SET ENTERABLE`
 - `OBJECT SET SCROLLBAR`
