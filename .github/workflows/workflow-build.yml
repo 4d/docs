@@ -52,7 +52,11 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-        - name: "Call merger"
-          run: "node ./tools/merge_locales.js"
+        - name: Download artifact
+          uses: actions/download-artifact@v4
+          with:
+            pattern: build-locale-*
+            merge-multiple: true
+            path: ./build
 
 >>>>>>> 12ea56fcabb6 (start merger)

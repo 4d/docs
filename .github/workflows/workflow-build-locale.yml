@@ -41,12 +41,17 @@ jobs:
           else
           npm i
           fi
-          npm run build -- --locale ${{ matrix.language }}
+          if [ "${{ matrix.language }}" = 'en' ]
+            npm run build -- --locale ${{ matrix.language }}
+          else
+            npm run build -- --locale --out-dir ./build/${{ matrix.language }}
+          fi
       - name: Google verification
+        if: matrix.language == 'en'
         run: |
           cd build
           echo "google-site-verification: google1a6263055b2bea44.html" >> google1a6263055b2bea44.html
       - uses: actions/upload-artifact@v4
         with:
           path: ./build
-          name: build-${{ matrix.language }}
+          name: build-locale-${{ matrix.language }}
