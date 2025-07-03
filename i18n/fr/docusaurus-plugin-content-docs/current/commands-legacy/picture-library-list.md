@@ -16,7 +16,14 @@ displayed_sidebar: docs
 
 ## Description 
 
+:::warning
+
+Cette commande ne peut pas être utilisée dans les projets car la bibliothèque d'images est disponible uniquement dans les bases de données binaires. 
+
+:::
+
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->La commande **PICTURE LIBRARY LIST** retourne les numéros de référence et le nom des images stockées dans la bibliothèque d’images de la base de données.<!-- END REF--> 
+
 
 Après l’appel, vous récupérez les numéros de référence des images dans le tableau *refsImages* et leurs noms dans le tableau *nomsImages*. Les deux tableaux sont synchronisés : le nième élément de *refsImages* est le numéro de référence de l'image de la bibliothèque dont le nom est retourné dans le nième élément de *nomsImages*.
 

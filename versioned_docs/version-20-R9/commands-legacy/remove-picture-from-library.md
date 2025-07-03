@@ -15,7 +15,15 @@ displayed_sidebar: docs
 
 ## Description 
 
+:::warning
+
+This command cannot be used in projects because the Picture library is only available in binary databases. 
+
+:::
+
+
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->The REMOVE PICTURE FROM LIBRARY command removes from the Picture Library the picture whose reference number is passed in *picRef* or whose name is passed in *picName*.<!-- END REF--> 
+
 
 If there is no picture with that reference number or name, the command does nothing.
 

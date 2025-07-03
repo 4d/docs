@@ -5,7 +5,7 @@ slug: /commands/remove-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( refImage | nomImage )<!-- END REF-->
+<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *refImage* )<br/>**REMOVE PICTURE FROM LIBRARY** ( *nomImage* )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,6 +14,12 @@ displayed_sidebar: docs
 <!-- END REF-->
 
 ## Description 
+
+:::warning
+
+Cette commande ne peut pas être utilisée dans les projets car la bibliothèque d'images est disponible uniquement dans les bases de données binaires. 
+
+:::
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->La commande **REMOVE PICTURE FROM LIBRARY** supprime de la bibliothèque d’images l’image dont vous avez passé le numéro de référence dans *refImage* ou le nom dans *nomImage*.<!-- END REF-->  
 Si ce numéro de référence ou ce nom ne correspond à aucune image, la commande ne fait rien.
