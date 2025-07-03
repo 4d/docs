@@ -7,7 +7,7 @@ For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv2
 
 ## Class
 
-![](../assets/en/Develop/inspector.png)
+![](../assets/en/Develop/inspector-class.png)
 
 
 This property is available for fields of type **Object** (in 4D projects only). It allows you to define a **class-typed object field**, enhancing code completion, syntax checking, and runtime validation when typing code that involves object fields.
