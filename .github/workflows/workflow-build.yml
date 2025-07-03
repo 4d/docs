@@ -18,3 +18,8 @@ jobs:
             pattern: build-locale-*
             merge-multiple: true
             path: ./build
+        - name: "Upload merged artifact" #TODO: remove it, its only for tests
+          uses: actions/upload-artifact@v4
+          with:
+           path: ./build
+           name: build
