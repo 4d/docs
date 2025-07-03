@@ -42,7 +42,7 @@ jobs:
           else
           npm i
           fi
-          if [ "$LANGUAGE" = 'en' ]
+          if [ "$LANGUAGE" = 'en' ]; then
             npm run build -- --locale $LANGUAGE
           else
             npm run build -- --locale --out-dir ./build/$LANGUAGE
