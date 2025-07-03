@@ -403,7 +403,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](commands/vp-get-print-info.md).
 
-## Style Objects
+## Style Objects {#style-objects}
 
 4D View Pro style objects and style sheets allow you to control the graphical aspects and the look of your 4D View Pro documents.
 
