@@ -35,16 +35,17 @@ jobs:
       - name: Build
         env:
           DOCUSAURUS_SSG_WORKER_THREAD_COUNT: 1 # To limit the memory usage
+          LANGUAGE: ${{ matrix.language }}
         run: |
           if [ -e package-lock.json ]; then
           npm ci
           else
           npm i
           fi
-          if [ "${{ matrix.language }}" = 'en' ]
-            npm run build -- --locale ${{ matrix.language }}
+          if [ "$LANGUAGE" = 'en' ]
+            npm run build -- --locale $LANGUAGE
           else
-            npm run build -- --locale --out-dir ./build/${{ matrix.language }}
+            npm run build -- --locale --out-dir ./build/$LANGUAGE
           fi
       - name: Google verification
         if: matrix.language == 'en'
