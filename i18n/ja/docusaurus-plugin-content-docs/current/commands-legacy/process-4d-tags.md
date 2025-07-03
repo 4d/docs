@@ -58,15 +58,15 @@ displayed_sidebar: docs
 以下の例は、配列のデータを使用してテキストを生成します:
 
 ```4d
- ARRAY TEXT($array;2)
- $array{1}:="hello"
- $array{2}:="world"
- $input:=""
- $input:=$input+""
- $input:=$input+" "
- $input:=$input+""
- PROCESS 4D TAGS($input;$output;"elements = ";->$array)
-  // $output = "elements = hello world"
+ARRAY TEXT($array; 2)
+$array{1}:="hello"
+$array{2}:="world"
+$input:="<!--#4DEVAL $1-->"
+$input:=$input+"<!--#4DLOOP $2-->"
+$input:=$input+"<!--#4DEVAL $2->{$2->}--> "
+$input:=$input+"<!--#4DENDLOOP-->"
+PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
+// $output = "elements = hello world"
 ```
 
 ## 参照 
