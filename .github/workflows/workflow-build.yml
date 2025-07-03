@@ -34,7 +34,7 @@ jobs:
           node-version: '22.x'
       - name: Build
         env:
-          DOCUSAURUS_SSG_WORKER_THREAD_COUNT: 1 # To limit the memory usage
+          #DOCUSAURUS_SSG_WORKER_THREAD_COUNT: 1 # To limit the memory usage
           LANGUAGE: ${{ matrix.language }}
         run: |
           if [ -e package-lock.json ]; then
@@ -61,8 +61,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Upload merged artifact
-        uses: actions/upload-artifact@v4
-        with:
-         path: ./build
-         name: build
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        pattern: build-locale-*
+        merge-multiple: true
+        path: ./build
+    - name: "Verif"
+      run: "find ./build -maxdepth 3"
