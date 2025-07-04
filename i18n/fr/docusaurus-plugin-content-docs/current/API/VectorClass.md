@@ -26,10 +26,10 @@ Vector objects are shared, immutable, and streamable.
 |                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #VectorClass.cosineSimilarity().Syntax -->](#cosinesimilarity)<br/><!-- INCLUDE #VectorClass.cosineSimilarity().Summary -->    |
-| [<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity.Summary -->               |
+| [<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity().Summary -->             |
 | [<!-- INCLUDE #VectorClass.euclideanDistance().Syntax -->](#euclideandistance)<br/><!-- INCLUDE #VectorClass.euclideanDistance().Summary --> |
 | [<!-- INCLUDE #VectorClass.length.Syntax -->](#length)<br/><!-- INCLUDE #VectorClass.length.Summary -->                                      |
-| [<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection.Summary -->                  |
+| [<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection().Summary -->                |
 
 ## 4D.Vector.new()
 
@@ -111,7 +111,7 @@ var $similarity := $vector.cosineSimilarity($anotherVector)
 
 :::info
 
-This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings:
+This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings.
 
 :::
 
@@ -144,6 +144,9 @@ var $questionVector:=$clientAI.embeddings.create($question; $model).vector
 If ($vector.cosineSimilarity($questionVector)>0.9)
   ALERT("Interesting result")
 End if
+
+//actual result: 0,7360136465949
+
 
 ```
 
@@ -184,7 +187,7 @@ var $score := $vector.dotSimilarity($anotherVector)
 
 :::info
 
-This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings:
+This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings.
 
 :::
 
@@ -211,6 +214,13 @@ End for each
 
 $documents:=$documents.orderBy("similarity desc")
 ALERT("Best answer: "+$documents[0].text)
+
+//$documents:
+//{text:Tips for learning 4D programming,similarity:0.90409492325102}
+//{text:Top 10 sci-fi movies of all time,similarity:0.75362527646035}
+//{text:How to bake a chocolate cake,similarity:0.73664833336323}
+//{text:Best hiking trails in the Alps,similarity:0.73138600461065}
+ 
 ```
 
 ## .euclideanDistance()
@@ -237,7 +247,7 @@ This measures the straight-line distance in the vector space. It is recommended 
 - returned value >= 0
 - The lower the returned value is, more similar vectors are.
 
-#### Exemple
+#### Exemple 1
 
 ```4d
 var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
@@ -246,13 +256,34 @@ var $distance := $vector.euclideanDistance($anotherVector)
 
 ```
 
+#### Exemple 2
+
+```4d
+$places:=[\
+{name: "Eiffel Tower"; coord: [48.8584; 200.2945]; similarity: 0}; \
+{name: "Louvre Museum"; coord: [48.8606; 200.3376]; similarity: 0}; \
+{name: "Notre-Dame"; coord: [48.8529; 200.35]; similarity: 0}; \
+{name: "Montmartre"; coord: [48.8867; 200.3431]; similarity: 0}\
+]
+
+$userLocation:=[8.8566; 20.3522]
+var $vector:=4D.Vector.new($userLocation)
+
+For each ($place; $places)
+  $place.similarity:=$vector.euclideanDistance(4D.Vector.new($place.coord))
+End for each
+
+$places:=$places.orderBy("similarity asc")
+ALERT("Nearest monument: "+$places[0].name)
+```
+
 ## .length
 
 <!-- REF #VectorClass.length.Syntax -->**length** : Integer<!-- END REF -->
 
 #### Description
 
-The `.length` property contains <!-- REF #VectorClass.params.Summary -->the number of vector components<!-- END REF -->.
+The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
 
 <!-- END REF -->
 
