@@ -113,7 +113,7 @@ $person:=cs. Person.new("John";"Doe";40)
 
 A propriedade `.superclass` <!-- REF #ClassClass.superclass.Summary -->devolve a classe pai da classe<!-- END REF -->. A superclass can be a `4D. Class` object, or a `cs.className` object. Se a classe não tiver uma classe pai, a propriedade retorna **null**.
 
-Uma superclasse de uma classe de usuário é declarada em uma classe usando a palavra chave [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
+To define a superclass for a user class, use the  [`extends`](Concepts/classes.md#class-extends-classname) keyword like: `Class extends <superclass>`.
 
 Essa propriedade é **apenas leitura**.
 
