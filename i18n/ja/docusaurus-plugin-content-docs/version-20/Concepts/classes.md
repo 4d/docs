@@ -300,7 +300,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 #### シンタックス
 
 ```4d
-// Class: MyClass
+// クラス: MyClass
 Class constructor({$parameterName : type; ...})
 // コード
 ```
@@ -325,7 +325,7 @@ Class constructor({$parameterName : type; ...})
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
+// MyClass の Class constructor
 Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
@@ -377,7 +377,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
+`property` は、クラスのコードだけで使うことができるキーワードです。`Function` または `Class constructor` ブロックの外で使用する必要があります。
 
 :::
 
@@ -663,12 +663,12 @@ $val:=$o.f() //42
 [クラスコンストラクター](#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-//Class: ob
+//クラス: ob
 
 Class constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // 値を代入にすることによって
+ // This のプロパティを作成
  This.a:=42
 ```
 

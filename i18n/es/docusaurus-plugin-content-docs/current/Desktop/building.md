@@ -127,7 +127,7 @@ Al marcar la opción **Crear una aplicación autónoma** y hacer clic en **Gener
 Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
 - Puede definir un archivo de datos predeterminado o permitir a los usuarios [crear y utilizar su propio archivo de datos](#management-of-data-files).
-- Puede integrar una licencia de despliegue o dejar que el usuario final introduzca su licencia en el primer inicio de la aplicación (consulte la sección [\*\*Licencias de despliegue \*\*](../Admin/licenses.md#deployment-licenses)).
+- You can either embed a [deployment license](../Admin/licenses.md#deployment-licenses) or let the final user enter their license at the first application launch (see [**Licenses**](#licenses) below).
 
 :::note
 
@@ -502,24 +502,26 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 La página de Licencias y certificados puede utilizarse para:
 
-- designa las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) que quiere integrar en su aplicación [monopuesto](#application-page) o [cliente-servidor](#clientserver-page)
+- configure the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
 - firmar la aplicación mediante un certificado en macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licencias
 
-Esta pestaña muestra la opción [Construir una aplicación de evaluación](#build-an-evaluation-application) y la lista de [licencias de despliegue que puede insertar](../Admin/licenses.md#deployment-licenses) en su aplicación (independiente o cliente-servidor). Por defecto, la lista está vacía.
+This tab displays the **Application type** menu, allowing you to define how you want to manage licenses in the built application. Las siguientes opciones están disponibles:
 
-Puede utilizar esta pestaña para crear:
+![](../assets/en/Admin/buildappLic.png)
 
-- una aplicación de evaluación,
-- una aplicación licenciada sin licencia integrada (el usuario tiene que tener una licencia por usuario),
-- una aplicación licenciada con licencias anidadas.
+#### Application without embedded license
 
-#### Crear una aplicación de evaluación
+Select this option to build an application without embedded deployment license.
 
-Marque esta opción para crear una versión de evaluación de su aplicación.
+En este caso, el usuario final tendrá que comprar e introducir una licencia *4D Desktop* o *4D Server* por usuario la primera vez que inicie la aplicación (cuando integra una licencia de despliegue, el usuario no tiene que introducir ni utilizar su propio número de licencia). Para más información, consulte la sección [**Licencias de despliegue**](../Admin/licenses.md#deployment-licenses).
+
+#### Evaluation application
+
+Select this option to create an evaluation version of your application.
 
 Una aplicación de evaluación permite al usuario final ejecutar una versión completa de su aplicación autónoma o de servidor en su máquina durante un periodo de tiempo limitado, a partir del primer lanzamiento. Al final del periodo de evaluación, la aplicación ya no podrá utilizarse durante un determinado periodo de tiempo en la misma máquina.
 
@@ -529,8 +531,6 @@ Se requiere una conexión a Internet en la máquina del usuario en el primer lan
 
 :::
 
-En cuanto se activa la opción "Crear una aplicación de evaluación", se ignoran las licencias de despliegue.
-
 :::note Notas
 
 - El comando [`License info`](../commands/license-info.md) permite conocer el tipo de licencia de la aplicación (colección *.attributes*) y su fecha de caducidad (objeto *.expirationDate*).
@@ -539,17 +539,27 @@ En cuanto se activa la opción "Crear una aplicación de evaluación", se ignora
 
 :::
 
-#### Crear una aplicación con licencia sin licencia(s) integrada(s)
+#### Application automatically embedding available licenses
 
-Para crear una aplicación sin licencia de despliegue incorporada, simplemente mantenga la lista de licencias vacía y asegúrese de que la opción "Crear una aplicación de evaluación" está **desmarcada**.
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses).
 
-En este caso, el usuario final tendrá que comprar e introducir una licencia *4D Desktop* o *4D Server* por usuario la primera vez que inicie la aplicación (cuando integra una licencia de despliegue, el usuario no tiene que introducir ni utilizar su propio número de licencia). Para más información, consulte la sección [**Licencias de despliegue**](../Admin/licenses.md#deployment-licenses).
+When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands-legacy/get-4d-folder.md#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
 
-#### Construir una aplicación con licencia(s) integrada(s)
+1. licencias OEM, o
+2. 4D Desktop Business licenses, or
+3. otras licencias.
 
-Esta opción le permite crear una aplicación lista para usar, en la que ya están integradas las licencias necesarias.
+The license tab displays the list of licenses automatically used for the build. The list cannot be modified.
 
-Debe designar los archivos que contienen sus [licencias de despliegue](../Admin/licenses.md#deployment-licenses). Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias de despliegue. Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
+Once you start the build, if no valid license is found, an error is generated. De lo contrario, se muestra un cuadro de diálogo para enumerar la(s) aplicación(es) generada(s). Detailed information are also provided in the [Log file](#log-file).
+
+Una vez creada una aplicación licenciada, se incluye automáticamente un nuevo archivo de licencia de despliegue en la carpeta Licencias junto a la aplicación ejecutable (Windows) o en el paquete (macOS).
+
+#### Application embedding licenses from the following list
+
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding necessary [deployment licenses](../Admin/licenses.md#deployment-licenses) that you designate specifically.
+
+When you select this option, a license list is displayed in the tab. You must designate the files that contain your licenses. Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias de despliegue. Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
 
 Para eliminar o añadir una licencia, utilice los botones **[+]** y **[-]** de la parte inferior de la ventana. Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licencias* de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](../commands-legacy/get-4d-folder.md).
 

@@ -5,20 +5,17 @@ title: Notas de lançamento
 
 ## 4D 20 R10
 
-#### Destaques
-
-- Handling of [ORDA events on data](../ORDA/orda-events.md).
-
-## 4D 20 R10
-
 Leia [**O que há de novo no 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R10/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 20 R10.
 
 #### Destaques
 
+- Handling of [ORDA events on data](../ORDA/orda-events.md).
 - Nova opção `connectionTimeout` no parâmetro [`options`](../API/TCPConnectionClass.md#options-parameter) da função [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
 - New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - Os UUIDs em 4D agora são gerados na **versão 7**. In previous 4D releases, they were generated in version 4.
+- [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
+- Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
 - Línguagem 4D:
     - For consistency, [`Create entity selection`](../commands/create-entity-selection.md) and [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) commands have been moved from the ["4D Environment"](../commands/theme/4D_Environment.md) to the ["Selection"](../commands/theme/Selection.md) themes.
     - New [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) and [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) commands to assign and read `Formula` objects as data sources for form objects.
@@ -35,18 +32,18 @@ Leia [**O que há de novo no 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Destaques
 
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - Suporte de [tokens de sessão](../WebServer/sessions.md#session-token-otp) manipulado com as novas funções [`Session.createOTP()`](../API/SessionClass.md#createotp) e [`Session.restore()`](../API/SessionClass.md#restore).
 - O assistente de etiqueta agora usa o editor de fórmula para adicionar ou editar fórmulas na [área de design de etiqueta](../Desktop/labels.md#label-preview).
-- New [`TCPListener`](../API/TCPListenerClass.md) class to create TCP server connections; new properties in related classes: `address`, `listener` and `port` in [`TCPConnection`](../API/TCPConnectionClass.md) class, `ip` and `port` in [`TCPEvent`](../API/TCPEventClass.md) class.
-- Deprecated commands and constants now generate specific warnings in the [live checker and the compiler](../code-editor/write-class-method.md#warnings-and-errors). Você pode saber se um comando está obsoleto usando o comando [`Command name`](../commands/command-name.md).
+- Nova classe [`TCPListener`](../API/TCPListenerClass.md) para criar conexões de servidor TCP; novas propriedades em classes relacionadas: `address`, `listener` e `port` em a classe [`TCPConnection`](../API/TCPConnectionClass.md), `ip` e `port` em a classe [`TCPEvent`](../API/TCPEventClass.md).
+- Os comandos e constantes obsoletos agora geram warnings específicos no [live checker e no compilador](../code-editor/write-class-method.md#warnings-and-errors). Você pode saber se um comando está obsoleto usando o comando [`Command name`](../commands/command-name.md).
 - Novos comandos [WA SET CONTEXT](../commands/wa-set-context.md) e [WA Get context](../commands/wa-get-context.md) para controlar o conteúdo de [$4d](../FormObjects/webArea_overview.md#4d-object) em áreas da Web.
-- New [`RDP optimization` database parameter](../commands-legacy/set-database-parameter.md#rdp-optimization-133) to optimize for instance shared clipboard when using Remote Desktop Protocol with 4D.
+- Novo [parâmetro de banco de dados `RD`](../commands-legacy/set-database-parameter.md#rdp-optimization-133) para otimizar, por exemplo, a área de transferência compartilhada ao usar o protocolo remoto desktop com 4D.
 - Os componentes interpretados agora podem ser [editados a partir do projeto host](../Extensions/develop-components.md#editing-components-from-the-host).
 - [Licencias](../Admin/licenses.md) são agora atualizadas automaticamente na inicialização.
-- New [4D AIKit component](../aikit/overview.md) enabling interaction with third-party AI APIs.
-- The following VP command callbacks now wait for all 4D custom functions to complete their calculations: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md), and [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
-- New [4D Netkit](https://developer.4d.com/4D-NetKit/) features to manage Google and Microsoft 365 calendars; ability to use the host web server for OAuth 2.0 authentication.
-- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
+- Nova [4D AIKit component](../aikit/overview.md) permitindo a interação com APIs de terceiros.
+- Os seguintes comandos de callbacks de comando VP agora esperam que todas as funções personalizadas 4D completem seus cálculos: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md) e [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
+- Novos recursos [4D Netkit](https://developer.4d.com/4D-NetKit/) para gerenciar agendas do Google e do Microsoft 365; capacidade de usar o servidor web de hospedagem para autenticação OAuth 2.0.
 - 4D Write Pro Interface: New [integrated AI](../WritePro/writeprointerface.md#integrated-ai) to interact with **chatGTP** from your 4D Write Pro documents.
 - [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=20_R9): lista de todos os bugs que foram corrigidos no 4D 20 R9.
 
@@ -120,8 +117,8 @@ Leia [**O que há de novo no 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-
 - Operadores de comparação nas [referências a objetos](../Concepts/dt_object.md#object-operators) e nas [referências a coleções](../Concepts/dt_collection.md#collection-operators). [`collection.query()`](../API/CollectionClass.md#query) now supports [object and collection references as query values](../API/CollectionClass.md#object-or-collection-reference-as-value).
 - When a component has a [declared namespace](../Extensions/develop-components.md#declaring-the-component-namespace), its classes are now automatically shared between all loaded components in the host project via [`cs.<namespace>`](../Concepts/classes.md#cs).
 - Gerenciador de componentes: suporte de [componentes armazenados no GitHub](../Project/components.md#components-stored-on-github).
-- New [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) function and [`$clean`](../REST/$clean.md) REST API to get a new entity selection based upon the original entity selection but without its deleted entities.
-- New [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) function and [`$info/privileges`](../REST/$info.md) REST API to inspect session privileges for an easier debugging.
+- Novo [`entitySeletion. lean()`](../API/EntitySelectionClass.md#clean) função e [`$clean`](../REST/$clean.md) REST API para obter uma nova seleção de entidade baseada na seleção da entidade original, mas sem as entidades excluídas.
+- Nova função [`session.getPrivileges()`](../API/SessionClass.md#getprivileges) e [`$info/privileges`](../REST/$info.md) API REST para inspecionar os privilégios de sessão para uma depuração mais fácil.
 - Novo [arquivo 4DCEFParameters.json](../FormObjects/webArea_overview.md#4dcefparametersjson) para personalizar áreas web embutidas no 4D.
 - Nova classe [HTTPAgent](../API/HTTPAgentClass.md) e nova propriedade [`agent`](../API/HTTPRequestClass.md#options-parameter) para a classe HTTPRequest.
 - Novas funções [`enableState()`](../API/WebFormClass.md) e [`disableState()`](../API/WebFormClass.md) para monitorar os estados da página Qodly a partir do servidor.

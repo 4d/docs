@@ -5,20 +5,17 @@ title: リリースノート
 
 ## 4D 20 R10
 
-#### ハイライト
-
-- Handling of [ORDA events on data](../ORDA/orda-events.md).
-
-## 4D 20 R10
-
 [**4D 20 R10の新機能**](https://blog.4d.com/en-whats-new-in-4d-20-R10/) 4D 20 R10 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
+- Handling of [ORDA events on data](../ORDA/orda-events.md).
 - [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) 関数の[`options`](../API/TCPConnectionClass.md#options-parameter) 引数に新しい`connectionTimeout` オプションが追加されました。
 - New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - 4D 内でのUUID は**バージョン7**で生成されるようになりました。 以前の4D のリリースでは、バージョン4で生成されていました。
+- [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
+- Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
 - 4Dランゲージ:
     - 統一性のため、[`Create entity selection`](../commands/create-entity-selection.md) コマンドおよび [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) コマンドは、["4D 環境"](../commands/theme/4D_Environment.md) テーマから ["Selection"](../commands/theme/Selection.md) テーマへと移動しました。
     - 新しい [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) および [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) コマンドを使用して、フォームオブジェクトに対して`Formula` オブジェクトを割り当て、または読み出しができるようになります。
@@ -35,6 +32,7 @@ title: リリースノート
 
 #### ハイライト
 
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - ラベルウィザードは、[ラベルデザインエリア](../Desktop/labels.md#ラベルプレビューエリア) においてフォーミュラを追加または編集する際にフォーミュラエディターを使用するようになりました。
 - TCP サーバー接続を作成するための新しい[`TCPListener`](../API/TCPListenerClass.md) クラス。関連クラスに新しいプロパティが追加されました。[`TCPConnection`](../API/TCPConnectionClass.md) クラスに`address`、`listener` および `port`。[`TCPEvent`](../API/TCPEventClass.md) クラスに `ip` および `port`。
@@ -46,7 +44,6 @@ title: リリースノート
 - 新しい[4D AIKit コンポーネント](../aikit/overview.md) を使用することでサードパーティAI のAPI とやり取りをすることが可能になります。
 - 以下のVP コマンドのコールバックは、4D カスタム関数がその計算を全て終えるのを待つようになりました: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md)、[VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md)、および [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md)
 - Google およびMicrosoft 365 カレンダーを管理するための新しい[4D Netkit](https://developer.4d.com/4D-NetKit/) 機能。OAuth 2.0 認証のためのホストWeb サーバーを使用する機能。
-- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - 4D Write Pro インターフェース: 新しい [統合されたAI](../WritePro/writeprointerface.md#integrated-ai) を使用して、4D Write Pro ドキュメントから**chatGTP** とやり取りすることができます。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R9): 4D 20 R9 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/99/release-note-version-20r9//))。
 

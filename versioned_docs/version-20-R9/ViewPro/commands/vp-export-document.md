@@ -8,6 +8,7 @@ title: VP EXPORT DOCUMENT
 
 |Release|Changes|
 |---|---|
+|20 R9|Trigger of callback function after custom functions completed|
 |20 R2|Support of .sjs documents|
 </details>
 

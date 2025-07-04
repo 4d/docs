@@ -257,7 +257,7 @@ Paramètres d’archivage automatique du journal des requêtes. D'abord, vous de
 
 Les options de cette page permettent d'activer et de configurer les services Web au sein de la base 4D, aussi bien en publication (serveur) qu'en souscription (client) .
 
-For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter.
+Pour plus d'informations sur la prise en charge des services Web dans 4D, veuillez consulter le chapitre [Publication et utilisation de Services Web] (https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html).
 
 ### Serveur
 
@@ -289,11 +289,11 @@ Démarre et stoppe le serveur REST. Voir [Configuration du serveur REST](../REST
 
 :::info Obsolète
 
-**Cette section est obsolète** à partir de 4D 20 R6. Si la configuration actuelle du projet est obsolète et doit être mise à niveau, cette section, y compris le bouton **Activer l'authentification REST via la fonction ds.authentify()** (voir ci-dessous), est affichée. If your project is already compatible with the [Force login](../REST/authUsers.md#force-login-mode) mode, the section is missing and you can ignore this paragraph.
+**Cette section est obsolète** à partir de 4D 20 R6. Si la configuration actuelle du projet est obsolète et doit être mise à niveau, cette section, y compris le bouton **Activer l'authentification REST via la fonction ds.authentify()** (voir ci-dessous), est affichée. Si votre projet est déjà compatible avec le mode [Force login](../REST/authUsers.md#force-login-mode), la section est manquante et vous pouvez ignorer ce paragraphe.
 
 :::
 
-See [Users and sessions](../REST/authUsers.md) to know the recommended way to control and manage REST access in your 4D projects.
+Voir [Utilisateurs et sessions](../REST/authUsers.md) pour connaître la méthode recommandée pour contrôler et gérer l'accès REST dans vos projets 4D.
 
 #### Activer l'authentification REST via la fonction ds.authentify()
 

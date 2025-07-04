@@ -53,14 +53,14 @@ Esta propiedad es **de sólo lectura**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Class<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Object<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Object<!-- END REF -->
 
 
 <!-- REF #ClassClass.new().Params -->
-| Parámetros | Tipo     |    | Descripción                                         |
-| ---------- | -------- |:--:| --------------------------------------------------- |
-| param      | any      | -> | Parámetro(s) a pasar a la función constructor       |
-| Resultado  | 4D.Class | <- | Nuevo objeto de la clase|<!-- END REF -->
+| Parámetros | Tipo      |    | Descripción                                         |
+| ---------- | --------- |:--:| --------------------------------------------------- |
+| param      | any       | -> | Parámetro(s) a pasar a la función constructor       |
+| Resultado  | 4D.Object | <- | Nuevo objeto de la clase|<!-- END REF -->
 
 
 |

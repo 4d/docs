@@ -17,6 +17,12 @@ displayed_sidebar: docs
 
 ## Description 
 
+:::warning
+
+This command cannot be used in projects because the Picture library is only available in binary databases. 
+
+:::
+
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->The **SET PICTURE TO LIBRARY** command creates a new picture or replaces a picture in the Picture Library.<!-- END REF-->
 
 Before the call, you pass:

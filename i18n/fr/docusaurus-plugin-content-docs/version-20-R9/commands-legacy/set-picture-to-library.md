@@ -17,6 +17,12 @@ displayed_sidebar: docs
 
 ## Description 
 
+:::warning
+
+Cette commande ne peut pas être utilisée dans les projets car la bibliothèque d'images est disponible uniquement dans les bases de données binaires. 
+
+:::
+
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->La commande **SET PICTURE TO LIBRARY** crée une nouvelle image ou remplace une image existante dans la bibliothèque d’images.<!-- END REF-->
 
 Avant l’appel, vous passez :

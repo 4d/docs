@@ -16,7 +16,15 @@ displayed_sidebar: docs
 
 ## Description 
 
+:::warning
+
+This command cannot be used in projects because the Picture library is only available in binary databases. 
+
+:::
+
+
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->The **PICTURE LIBRARY LIST** command returns the reference numbers and names of the pictures currently stored in the Picture Library of the database.<!-- END REF-->
+
 
 After the call, you retrieve the reference numbers in the array *picRefs* and the names in the array *picNames*. The two arrays are synchronized: the nth element of *picRefs* is the reference number of the Picture Library graphic whose name is returned in the nth element of *picNames*.
 

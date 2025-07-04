@@ -317,11 +317,11 @@ Class constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Em um método projeto
+// Você pode instanciar um objeto
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"John";"age":42}
+// $o = {"name": "John"; "age":42}
 ```
 
 
@@ -640,8 +640,8 @@ Quando se utiliza uma função [construtora de classe](#class-constructor) (com 
 
 Class constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // Crie propriedades nisto como
+ // desejado ao atribuir-lhes
  This.a:=42
 ```
 
