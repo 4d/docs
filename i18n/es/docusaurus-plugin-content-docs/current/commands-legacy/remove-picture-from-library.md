@@ -13,7 +13,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Descripción 
+## Descripción
+
+:::warning
+
+Este comando no puede utilizarse en proyectos porque la librería de imágenes sólo está disponible en bases de datos binarias. 
+
+:::
 
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->El comando REMOVE PICTURE FROM LIBRARY elimina de la librería de imágenes la imagen cuyo número de referencia se pasa en *refImag* o cuyo nombre se pasa en *nomImag*.<!-- END REF--> 
 
