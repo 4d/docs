@@ -397,7 +397,7 @@ Les attributs du filigrane sont utilisés pour superposer du texte ou une image 
 
 \* Si vous utilisez un type texte, passez le chemin d'accès (absolu ou relatif) de l'image. Si vous passez un chemin relatif, le fichier doit être situé à côté du fichier de structure de la base de données. Sous Windows, l'extension de fichier doit être indiquée. Quel que soit le type utilisé pour définir une image, l'image elle-même (pas une référence) est stockée dans la zone 4D View Pro et est retournée par [VP Get print info](method-list.md#vp-get-print-info).
 
-## Objets de style
+## Objets de style {#style-objects}
 
 Les objets et les feuilles de style 4D View Pro vous permettent de contrôler les aspects graphiques et l'apparence de vos documents 4D View Pro.
 

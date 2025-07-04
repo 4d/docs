@@ -5,9 +5,10 @@ title: VP EXPORT DOCUMENT
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                             |
-| ----------- | ------------------------------------------ |
-| 20 R2       | Soporte de documentos .sjs |
+| Lanzamiento | Modificaciones                                                |
+| ----------- | ------------------------------------------------------------- |
+| 20 R9       | Trigger of callback function after custom functions completed |
+| 20 R2       | Soporte de documentos .sjs                    |
 
 </details>
 

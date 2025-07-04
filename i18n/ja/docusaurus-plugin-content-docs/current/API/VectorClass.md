@@ -26,10 +26,10 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 |                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #VectorClass.cosineSimilarity().Syntax -->](#cosinesimilarity)<br/><!-- INCLUDE #VectorClass.cosineSimilarity().Summary -->    |
-| [<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity.Summary -->               |
+| [<!-- INCLUDE #VectorClass.dotSimilarity().Syntax -->](#dotsimilarity)<br/><!-- INCLUDE #VectorClass.dotSimilarity().Summary -->             |
 | [<!-- INCLUDE #VectorClass.euclideanDistance().Syntax -->](#euclideandistance)<br/><!-- INCLUDE #VectorClass.euclideanDistance().Summary --> |
 | [<!-- INCLUDE #VectorClass.length.Syntax -->](#length)<br/><!-- INCLUDE #VectorClass.length.Summary -->                                      |
-| [<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection.Summary -->                  |
+| [<!-- INCLUDE #VectorClass.toCollection().Syntax -->](#tocollection)<br/><!-- INCLUDE #VectorClass.toCollection().Summary -->                |
 
 ## 4D.Vector.new()
 
@@ -112,7 +112,7 @@ var $similarity := $vector.cosineSimilarity($anotherVector)
 :::info
 
 以下の例題では埋め込みを生成するのに[4D AIKit 拡張機能](../aikit/overview.md)
-を使用します:
+を使用します.
 
 :::
 
@@ -130,21 +130,24 @@ String($people.Phone)+". Family IDs - Father: "+String($people.FatherID)+\
 
 var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())
 
-// 4D AIKit でのベクトル計算
+// Vector calculation with 4D AIKit
 var $result:=$clientAI.embeddings.create($prompt; $model)
 
-// 4D.vector オブジェクト作成
+// 4D.vector object creation
 var $vector:=$result.vector
 
 var $question:="I'm looking for John who lives in USA"
 
-// 4D AIKit コンポーネントでのベクトル計算
+// Vector calculation with 4D AIKit component
 var $questionVector:=$clientAI.embeddings.create($question; $model).vector
 
-// 類似度計算
+// similarity calculation
 If ($vector.cosineSimilarity($questionVector)>0.9)
   ALERT("Interesting result")
 End if
+
+//actual result: 0,7360136465949
+
 
 ```
 
@@ -186,7 +189,7 @@ var $score := $vector.dotSimilarity($anotherVector)
 :::info
 
 以下の例題では埋め込みを生成するのに[4D AIKit 拡張機能](../aikit/overview.md)
-を使用します:
+を使用します.
 
 :::
 
@@ -201,18 +204,25 @@ $documents:=[{text: "How to bake a chocolate cake"; similarity: 0}; \
 
 $question:="4D coding tutorials"
 
-// 4D AIKit コンポーネントでのベクトル計算
+// Vector calculation with 4D AIKit component
 $questionVector:=$clientAI.embeddings.create($question; $model).vector
 
 For each ($document; $documents)
-        // 4D AIKit コンポーネントでのベクトル計算
+        // Vector calculation with 4D AIKit component
     $vector:=$clientAI.embeddings.create($document.text; $model).vector
-        // 類似度
+        // similarity
     $document.similarity:=$vector.dotSimilarity($questionVector)
 End for each
 
 $documents:=$documents.orderBy("similarity desc")
 ALERT("Best answer: "+$documents[0].text)
+
+//$documents:
+//{text:Tips for learning 4D programming,similarity:0.90409492325102}
+//{text:Top 10 sci-fi movies of all time,similarity:0.75362527646035}
+//{text:How to bake a chocolate cake,similarity:0.73664833336323}
+//{text:Best hiking trails in the Alps,similarity:0.73138600461065}
+ 
 ```
 
 ## .euclideanDistance()
@@ -239,7 +249,7 @@ ALERT("Best answer: "+$documents[0].text)
 - 戻り値 >= 0
 - 返された値が低ければ低いほど、二つのベクトルは類似しているということになります。
 
-#### 例題
+#### 例題 1
 
 ```4d
 var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
@@ -248,13 +258,34 @@ var $distance := $vector.euclideanDistance($anotherVector)
 
 ```
 
+#### 例題 2
+
+```4d
+$places:=[\
+{name: "Eiffel Tower"; coord: [48.8584; 200.2945]; similarity: 0}; \
+{name: "Louvre Museum"; coord: [48.8606; 200.3376]; similarity: 0}; \
+{name: "Notre-Dame"; coord: [48.8529; 200.35]; similarity: 0}; \
+{name: "Montmartre"; coord: [48.8867; 200.3431]; similarity: 0}\
+]
+
+$userLocation:=[8.8566; 20.3522]
+var $vector:=4D.Vector.new($userLocation)
+
+For each ($place; $places)
+  $place.similarity:=$vector.euclideanDistance(4D.Vector.new($place.coord))
+End for each
+
+$places:=$places.orderBy("similarity asc")
+ALERT("Nearest monument: "+$places[0].name)
+```
+
 ## .length
 
 <!-- REF #VectorClass.length.Syntax -->**length** : Integer<!-- END REF -->
 
 #### 説明
 
-`.length` プロパティには<!-- REF #VectorClass.params.Summary -->ベクトル成分の数<!-- END REF -->を格納しています。
+The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
 
 <!-- END REF -->
 

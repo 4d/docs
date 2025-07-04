@@ -395,7 +395,7 @@ Atributos de marca d'água são usados para sobrepor texto ou uma imagem na áre
 
 \* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. Se você passar por um caminho relativo, o arquivo deve estar localizado ao lado do arquivo de estrutura do banco de dados. No Windows, a extensão do ficheiro deve ser indicada. Independentemente do tipo usado para definir uma imagem, a própria imagem (não uma referência) é armazenada na área 4D View Pro sendo retornada pelo comando [VP Get print info](method-list.md#vp-get-print-info).
 
-## Objetos Estilo
+## Objetos Estilo {#style-objects}
 
 Objetos de estilo 4D View Pro e folhas de estilo permitem que você controle os aspectos gráficos e a aparência dos seus documentos 4D View Pro.
 

@@ -1561,7 +1561,7 @@ A noter que dans les deux derniers exemples, le résultat de la recherche est di
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ```
 
-... La fonction `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte aux lettres courante<!-- END REF -->.
+... signifie que le critère de recherche utilise le jeu de caractères iso-8859 et que le serveur devra convertir la chaîne avant la recherche, si nécessaire.
 
 #### Mots-clés de recherche autorisés
 
@@ -1572,7 +1572,8 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 - \*\*Valeurs de type chaîne
   \*\* : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée.
-  Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. La recherche ne tient pas compte de la casse des caractères.
+  Exemple : `searchCriteria = FROM "SMITH"`
+  Pour toutes les clés de recherche qui utilisent des chaînes, un message correspond à la clé si la chaîne est une sous-chaîne du champ. La recherche ne tient pas compte de la casse des caractères.
 
 - **Noms de champs** : Les valeurs de type nom de champ contiennent le nom d’un champ d’en-tête.
   Exemple : `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
@@ -1581,7 +1582,8 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
   Exemple : `searchCriteria = KEYWORD \Flagged \Draft`
 
 - **Ensemble de messages** : Les valeurs de ce type désignent un ensemble de messages. Elles contiennent une liste de numéros de messages dans un ordre croissant, de 1 au nombre total de messages dans la boîte aux lettres. Les numéros sont séparés par des virgules ; un deux-points (:) indique un intervalle (inclusif) de numéros.
-  Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages.
+  Exemples :
+  `2,4:7,9,12:*` est `2,4,5,6,7,9,12,13,14,15` pour une boîte aux lettres contenant 15 messages.
   `searchCriteria = 1:5 ANSWERED` recherche, parmi les messages 1 à 5, ceux qui comportent le marqueur \Answered.
   `searchCriteria= 2,4 ANSWERED` recherche, parmi les messages 2 et 4, ceux qui comportent le marqueur \Answered.
 
