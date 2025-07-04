@@ -96,7 +96,7 @@ Para obter informações sobre os códigos de estado SMTP, consulte [esta págin
 
 #### Descrição
 
-A propriedade `.keepAlive` contém <!-- REF #SMTPTransporterClass.keepAlive. ummary -->**Verdadeiro** se a conexão SMTP deve ser mantida viva até que o objeto `transportador` seja destruído<!-- FIM REF -->, e **Falso** caso contrário. Por padrão, se a propriedade `keepAlive` não tiver sido definida no objeto `server` (usado para criar o objeto `transporter` com `SMTP New transporter`), ela será **True**.
+A propriedade `.keepAlive` contém <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**Verdadeiro** se a conexão SMTP deve ser mantida viva até que o objeto `transportador` seja destruído<!-- END REF -->, e **Falso** caso contrário. Por padrão, se a propriedade `keepAlive` não tiver sido definida no objeto `server` (usado para criar o objeto `transporter` com `SMTP New transporter`), ela será **True**.
 
 A coleção SMTP é automaticamente fechada:
 
