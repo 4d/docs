@@ -83,7 +83,6 @@ Assim como em outros comandos de gerenciamento de propriedades de objetos, é po
 - `OBJECT SET FONT`
 - `OBJECT SET FONT STYLE`
 - `OBJECT SET FONT SIZE`
-- `OBJECT SET COLOR`
 - `OBJECT SET FILTER`
 - `OBJECT SET ENTERABLE`
 - `OBJECT SET SCROLLBAR`
