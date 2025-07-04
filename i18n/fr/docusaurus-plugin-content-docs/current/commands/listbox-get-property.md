@@ -98,9 +98,9 @@ Dans ce cas, le résultat retourné indique si plusieurs lignes peuvent être s�
 
 ## Voir également
 
-[LISTBOX SET GRID](listbox-set-grid.md)\
+[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)\
 [LISTBOX SET PROPERTY](listbox-set-property.md)\
-[OBJECT SET SCROLLBAR](object-set-scrollbar.md)
+[OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
 
 ## Propriétés
 
