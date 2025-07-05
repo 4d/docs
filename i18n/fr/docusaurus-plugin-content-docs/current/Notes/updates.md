@@ -15,6 +15,7 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-
 - Les UUIDs dans 4D sont maintenant générés en **version 7**. Dans les versions 4D précédentes, ils étaient générés en version 4.
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
+- You can now [associate a class](../Develop/field-properties.md) to an object field in the structure editor.
 - Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
 - Langage 4D:
     - Pour des raisons de cohérence, les commandes [`Create entity selection`](../commands/create-entity-selection.md) et [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) ont été déplacées du thème ["4D Environnement"](../commands/theme/4D_Environment.md) vers le thème ["Sélections"](../commands/theme/Selection.md).
@@ -25,6 +26,7 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-
 
 - Sous Windows, les polices d'imprimante courantes destinées uniquement à l'impression (c'est-à-dire non utilisables à l'écran) ne sont plus chargées par 4D au démarrage.
 - The *MeCab* library has been removed. This change only affects the processing of Japanese text.
+- When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
 
 ## 4D 20 R9
 
