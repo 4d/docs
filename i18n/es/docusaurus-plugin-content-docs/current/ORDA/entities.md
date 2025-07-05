@@ -118,7 +118,12 @@ $entity.lastname:="Jones" //definir el nombr del empleado
 $entity.save() //guardar los cambios
 ```
 
-> Los campos Blob de las bases de datos ([blobs escalares](Concepts/dt_blob.md) se convierten automáticamente a y desde atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) cuando se manejan a través de ORDA. Cuando guarde un atributo de objeto blob, tenga en cuenta que, a diferencia del tamaño del objeto blob, que sólo está limitado por la memoria disponible, el tamaño del campo blob está limitado a 2 GB.
+:::note Notas
+
+- Database Object fields can be [associated with classes](../Develop/field-properties.md), in which case only objects of the defined class can be assigned to the entity attribute.
+- Los campos Blob de las bases de datos ([blobs escalares](Concepts/dt_blob.md) se convierten automáticamente a y desde atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) cuando se manejan a través de ORDA. Cuando guarde un atributo de objeto blob, tenga en cuenta que, a diferencia del tamaño del objeto blob, que sólo está limitado por la memoria disponible, el tamaño del campo blob está limitado a 2 GB.
+
+:::
 
 El acceso a un atributo relacionado depende del tipo de atributo. Por ejemplo, con la siguiente estructura:
 
