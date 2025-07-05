@@ -118,7 +118,12 @@ Por exemplo, para obter e definir um valor de atributo de armazenamento do tipo 
  $entity.save() //salvar as modificações
 ```
 
-> Os campos Blob dos banco de dados ([blobs scalaires](Concepts/dt_blob.md) são automaticamente convertidos de e para atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) quando manipulados por ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
+:::note Notas
+
+- Database Object fields can be [associated with classes](../Develop/field-properties.md), in which case only objects of the defined class can be assigned to the entity attribute.
+- Os campos Blob dos banco de dados ([blobs scalaires](Concepts/dt_blob.md) são automaticamente convertidos de e para atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) quando manipulados por ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
+
+:::
 
 O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
