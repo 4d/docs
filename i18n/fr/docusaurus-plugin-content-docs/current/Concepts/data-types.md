@@ -23,13 +23,15 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Pointer](Concepts/dt_pointer.md)                       | -                                                | Oui                           | `Pointer`                         | `ARRAY POINTER`                  |
 | [Picture](Concepts/dt_picture.md)                       | Oui                                              | Oui                           | `Picture`                         | `ARRAY PICTURE`                  |
 | [BLOB](Concepts/dt_blob.md)                             | Oui                                              | Oui                           | `Blob`, `4D.Blob`                 | `ARRAY BLOB`                     |
-| [Object](Concepts/dt_object.md)                         | Oui                                              | Oui                           | `Object`                          | `ARRAY OBJECT`                   |
+| [Object](Concepts/dt_object.md)                         | Yes(3)                        | Oui                           | `Object`                          | `ARRAY OBJECT`                   |
 | [Collection](Concepts/dt_collection.md)                 | -                                                | Oui                           | `Collection`                      |                                  |
 | [Variant](Concepts/dt_variant.md)(2) | -                                                | Oui                           | `Variant`                         |                                  |
 
 (1) A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, veuillez vous reporter à la description du type [Object](Concepts/dt_object.md).
 
 (2) Variant n'est pas un type de *données* à proprement parler mais un type de *variable* qui peut contenir une valeur de n'importe quel autre type de données.
+
+(3) You can [assign a class](../Develop/field-properties.md) to an object field in the structure editor.
 
 ## Commandes
 
