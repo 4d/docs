@@ -31,7 +31,7 @@ Create an instance of the OpenAI client class.
 
 | Argument Name | Type     | Description                                           |
 |---------------|----------|-------------------------------------------------------|
-| *apiKey*         | Text or Object  | apiKey if Text as first argument and the second can be an Object of parameters. |
+| `apiKey | configuration`    | Text or Object  | apiKey if Text or configuration Object. |
 
 #### API key
 
@@ -66,7 +66,7 @@ The API provides access to multiple resources that allow seamless interaction wi
 | `chat`            | [OpenAIChatAPI](OpenAIChatAPI.md)               | Access to the Chat API.        |
 | `images`          | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Access to the Images API.      |
 | `moderations`     | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Access to the Moderations API. |
-
+| `embeddings`      | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | Access to the Embeddings API.  |
 
 ### Example Usage
 
