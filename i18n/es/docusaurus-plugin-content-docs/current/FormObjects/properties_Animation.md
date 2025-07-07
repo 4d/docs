@@ -17,6 +17,10 @@ Las imágenes se muestran en un bucle continuo. Cuando el usuario llega a la úl
 
 [Botón imagen](pictureButton_overview.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Retorna cuando se libera
@@ -32,6 +36,10 @@ Muestra la primera imagen todo el tiempo, excepto cuando el usuario hace clic en
 #### Objetos soportados
 
 [Botón imagen](pictureButton_overview.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -49,6 +57,10 @@ Permite al usuario mantener pulsado el botón del ratón para mostrar las imáge
 
 [Botón imagen](pictureButton_overview.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Cambiar cada x ticks
@@ -64,6 +76,10 @@ Permite recorrer el contenido del botón de imagen a la velocidad especificada (
 #### Objetos soportados
 
 [Botón imagen](pictureButton_overview.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -81,6 +97,10 @@ Modifica el contenido del botón de la imagen cuando el cursor del ratón pasa p
 
 [Botón imagen](pictureButton_overview.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Utilizar el Último cuadro como Desactivado
@@ -96,3 +116,8 @@ Permite definir la última miniatura como la que se mostrará cuando el botón e
 #### Objetos soportados
 
 [Botón imagen](pictureButton_overview.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
