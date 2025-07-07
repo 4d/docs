@@ -17,6 +17,10 @@ Les images sont affichées en boucle continue. Lorsque l'utilisateur atteint la 
 
 [Picture Button](pictureButton_overview.md)
 
+#### Commandes
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Retour sur relâchement du clic
@@ -32,6 +36,10 @@ Affiche la première image en permanence, sauf lorsque l'utilisateur clique sur 
 #### Objets pris en charge
 
 [Picture Button](pictureButton_overview.md)
+
+#### Commandes
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -49,6 +57,10 @@ Permet à l'utilisateur de maintenir le bouton de la souris enfoncé pour affich
 
 [Picture Button](pictureButton_overview.md)
 
+#### Commandes
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Défilement tous les n ticks
@@ -64,6 +76,10 @@ Permet de parcourir le contenu du bouton d'image à la vitesse spécifiée (en g
 #### Objets pris en charge
 
 [Picture Button](pictureButton_overview.md)
+
+#### Commandes
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -81,6 +97,10 @@ Modifie le contenu du bouton image lorsque le curseur de la souris passe dessus.
 
 [Picture Button](pictureButton_overview.md)
 
+#### Commandes
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Dernière imagette si désactivé
@@ -96,3 +116,8 @@ Permet de définir la dernière vignette comme étant celle à afficher lorsque 
 #### Objets pris en charge
 
 [Picture Button](pictureButton_overview.md)
+
+#### Commandes
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
