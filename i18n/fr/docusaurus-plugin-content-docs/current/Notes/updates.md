@@ -13,6 +13,7 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-
 - Nouvelle option `connectionTimeout` dans le paramètre [`options`](../API/TCPConnectionClass.md#options-parameter) de la fonction [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
 - New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - Les UUIDs dans 4D sont maintenant générés en **version 7**. Dans les versions 4D précédentes, ils étaient générés en version 4.
+- New [`UDPSocket`](../API/UDPSocketClass.md) and [`UDPEvent`](../API/UDPEventClass.md) classes to send data using UDP sockets. Support of detailed logging for UDP events in the [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) log file (renamed from `4DTCPLog.txt`).
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
 - You can now [associate a class](../Develop/field-properties.md) to an object field in the structure editor.
@@ -255,7 +256,7 @@ Voir [**Release Notes pour 4D 20.x LTS**](../../version-20/Notes/updates.md).
 | Libuv        | 11.51.0 | **20 R10**          | Utilisé pour QUIC                                                                                                                                  |
 | libZip       | 1.9.2   | 20                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                         |
 | LZMA         | 5.4.1   | 20                  |                                                                                                                                                    |
-| ngtcp2       | 1.13                    | **20 R10**\*\*      | Utilisé pour QUIC                                                                                                                                  |
+| ngtcp2       | 1.13                    | **20 R10**          | Utilisé pour QUIC                                                                                                                                  |
 | OpenSSL      | 3.3.2   | 20 R7               | Le niveau de sécurité TLS/SSL par défaut a été relevé. Voir [Changements de comportement](#behavior-changes) pour la version 20 R4 |
 | PDFWriter    | 4.5.11  | 20 R3               |                                                                                                                                                    |
 | PHP          | 8.2.4   | 20                  |                                                                                                                                                    |
