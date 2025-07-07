@@ -36,8 +36,6 @@ Por ejemplo, dada una lista de selección que contiene "Francia, Alemania, Itali
 
 Asocia una lista de selección a un objeto. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
 
-También se pueden asociar listas de selección a objetos utilizando los comandos [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) o [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md).
-
 #### Gramática JSON
 
 | Nombre     | Tipos de datos   | Valores posibles                                                                 |
@@ -49,6 +47,10 @@ También se pueden asociar listas de selección a objetos utilizando los comando
 
 [Lista desplegable](dropdownList_Overview.md) -
 [Combo box](comboBox_overview.md) - [Lista Jerárquica](list_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+
+#### Comandos
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
 
 ---
 
@@ -86,6 +88,10 @@ Especifica una variable o expresión a la que se asignará el elemento/entidad d
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Posición elemento actual
@@ -109,6 +115,10 @@ Indica una variable o expresión a la que se le asignará un entero largo que in
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -255,6 +265,10 @@ Se pueden utilizar todas las tablas de la base de datos, independientemente de s
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source.md) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source.md)
+
 ---
 
 ## Guardar como
@@ -309,6 +323,10 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Selección temporal
@@ -328,3 +346,9 @@ Especifica la selección temporal a utilizar. Debe introducir el nombre de una s
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source.md) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source.md)
+
+
