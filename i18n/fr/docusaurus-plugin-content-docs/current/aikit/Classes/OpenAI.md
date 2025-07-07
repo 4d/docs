@@ -29,9 +29,9 @@ La classe OpenAI fournit un client permettant d'accéder à diverses ressources 
 
 Créer une instance de la classe client OpenAI.
 
-| Nom de l'argument | Type         | Description                                                                                     |
-| ----------------- | ------------ | ----------------------------------------------------------------------------------------------- |
-| *apiKey*          | Text, Object | apiKey if Text as first argument and the second can be an Object of parameters. |
+| Nom de l'argument         | Type         | Description                                             |
+| ------------------------- | ------------ | ------------------------------------------------------- |
+| `apiKey or configuration` | Text, Object | apiKey if Text or configuration Object. |
 
 #### Clé API
 
@@ -66,6 +66,7 @@ L'API donne accès à de multiples ressources qui permettent une interaction tra
 | `chat`           | [OpenAIChatAPI](OpenAIChatAPI.md)               | Accès à l'API de Chat.         |
 | `images`         | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Accès à l'API Images.          |
 | `moderations`    | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Accès à l'API des modérations. |
+| `embeddings`     | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | Access to the Embeddings API.  |
 
 ### Exemple d'utilisation
 
