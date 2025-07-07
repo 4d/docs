@@ -66,7 +66,7 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 ### update()
 
-**update**(*completionID* : Text; *metadata* : Object, *parameters* : OpenAIParameters) : Object
+**update**(*completionID* : Text; *metadata* : Object; *parameters* : OpenAIParameters) : Object
 
 | Paramètres     | Type                                    | Description                                              |
 | -------------- | --------------------------------------- | -------------------------------------------------------- |
