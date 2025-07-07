@@ -17,7 +17,7 @@ Les informations stockées dans les journaux doivent être analysées pour déte
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [Fichier journal des requêtes ORDA](#orda-requests)
-- [4DTCPLog.txt](#4dtcplogtxt)
+- [4DTCPUDPLog.txt](#4dtcpudplogtxt)
 
 > Lorsqu'un fichier journal peut être généré soit sur 4D Server, soit sur le client distant, le mot "Server" est ajouté au nom du fichier côté serveur, par exemple "4DRequestsLogServer.txt"
 
@@ -457,23 +457,23 @@ Voici un exemple d'enregistrement ORDA côté serveur :
 
 ```
 
-## 4DTCPLog.txt
+## 4DTCPUDPLog.txt
 
-This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+This log file records events related to TCP or UDP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
 
 Pour lancer ce journal :
 
 - Use the `SET DATABASE PARAMETER` command:
 
   ```4d
-  SET DATABASE PARAMETER(TCP log; 1)
+  SET DATABASE PARAMETER(TCPUDP log; 1)
   ```
 
 - Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
 
   ```json
   {
-      "TCPLogs":{
+      "TCPUDPLogs":{
         "state" : 1
            }
   }
@@ -481,18 +481,18 @@ Pour lancer ce journal :
 
 Les champs suivants sont enregistrés pour chaque évènement :
 
-| Noms des champs | Type      | Description                                                                                |
-| --------------- | --------- | ------------------------------------------------------------------------------------------ |
-| time            | Date/Time | Date and time of the event in ISO 8601 format                                              |
-| localPort       | Number    | Local port used for the connection                                                         |
-| peerAddress     | Text      | IP address of the remote peer                                                              |
-| peerPort        | Number    | Port of the remote peer                                                                    |
-| protocol        | Text      | Indicates whether the event is related to `TCP`                                            |
-| event           | Text      | The type of event:`open`, `close`, `error`, `send`, `receive`, or `listen` |
-| size            | Number    | The amount of data sent or received (in bytes), 0 if not applicable     |
-| excerpt         | Number    | First 10 bytes of data in hexadecimal format                                               |
-| textExcerpt     | Text      | First 10 bytes of data in text format                                                      |
-| comment         | Text      | Additional information about the event, such as error details or encryption status         |
+| Noms des champs | Type      | Description                                                                              |
+| --------------- | --------- | ---------------------------------------------------------------------------------------- |
+| time            | Date/Time | Date and time of the event in ISO 8601 format                                            |
+| localPort       | Number    | Local port used for the connection                                                       |
+| peerAddress     | Text      | IP address of the remote peer                                                            |
+| peerPort        | Number    | Port of the remote peer                                                                  |
+| protocol        | Text      | "TCP" or "UDP"                                                                           |
+| event           | Text      | The type of event: `open`, `close`, `error`, `send`, `receive`, `listen` |
+| size            | Number    | The amount of data sent or received (in bytes), 0 if not applicable   |
+| excerpt         | Number    | First 10 bytes of data in hexadecimal format                                             |
+| textExcerpt     | Text      | First 10 bytes of data in text format                                                    |
+| comment         | Text      | Additional information about the event, such as error details or encryption status       |
 
 ## Utilisation d'un fichier de configuration de log
 
