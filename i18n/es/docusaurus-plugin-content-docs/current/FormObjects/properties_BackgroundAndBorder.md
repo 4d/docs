@@ -7,7 +7,7 @@ title: Fondo y borde
 
 Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Permite definir un color de fondo diferente para las líneas o columnas impares de un list box.
 
-También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
+You can also set this property using the  command.
 
 #### Gramática JSON
 
@@ -18,6 +18,10 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 #### Objetos soportados
 
 [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+
+#### Comandos
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 ---
 
@@ -38,6 +42,10 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 #### Objetos soportados
 
 [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
+
+#### Comandos
+
+[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color.md) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 #### Ver también
 
@@ -65,6 +73,10 @@ También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PRO
 
 [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
+#### Comandos
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+
 ---
 
 ## Estilo de línea de borde {#border-line-style}
@@ -80,6 +92,10 @@ Permite definir un estilo estándar para el borde del objeto.
 #### Objetos soportados
 
 [Área 4D View Pro](viewProArea_overview.md) - [Áreas 4D Write Pro](writeProArea_overview.md) - [Botones](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Botón imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
+
+#### Comandos
+
+[`OBJECT Get border style`](../commands-legacy/object-get-border-style.md) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style.md)
 
 ---
 
@@ -119,6 +135,10 @@ Puede eliminar estas líneas vacías seleccionando esta opción. La parte inferi
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+
 ---
 
 ## Color de línea
@@ -143,6 +163,10 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 #### Objetos soportados
 
 [Línea](shapes_overview.md#line) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle)
+
+#### Comandos
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 ---
 
@@ -202,6 +226,10 @@ Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT 
 
 [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
+#### Comandos
+
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAYS`](../commands-legacy/listbox-set-arrays.md)
+
 ---
 
 ## Transparente
@@ -217,6 +245,10 @@ Define el fondo del list box como "Transparent". Cuando se define, se ignora cua
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 #### Ver también
 
