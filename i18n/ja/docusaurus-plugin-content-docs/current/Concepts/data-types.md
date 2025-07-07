@@ -23,13 +23,15 @@ title: データタイプの概要
 | [ポインター](Concepts/dt_pointer.md)                       | -                          | ◯        | `Pointer`                | `ARRAY POINTER`         |
 | [ピクチャー](Concepts/dt_picture.md)                       | ◯                          | ◯        | `Picture`                | `ARRAY PICTURE`         |
 | [BLOB](Concepts/dt_blob.md)                           | ◯                          | ◯        | `Blob`, `4D.Blob`        | `ARRAY BLOB`            |
-| [オブジェクト](Concepts/dt_object.md)                       | ◯                          | ◯        | `Object`                 | `ARRAY OBJECT`          |
+| [オブジェクト](Concepts/dt_object.md)                       | Yes(3)  | ◯        | `Object`                 | `ARRAY OBJECT`          |
 | [コレクション](Concepts/dt_collection.md)                   | -                          | ◯        | `Collection`             |                         |
 | [バリアント](Concepts/dt_variant.md)(2) | -                          | ◯        | `Variant`                |                         |
 
 (1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
 (2) バリアントは実際のところ *データ* タイプではなく、あらゆるデータタイプの値を格納することのできる *変数* タイプです。
+
+(3) You can [assign a class](../Develop/field-properties.md) to an object field in the structure editor.
 
 ## コマンド
 

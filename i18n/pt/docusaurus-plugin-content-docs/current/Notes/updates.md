@@ -15,6 +15,7 @@ Leia [**O que há de novo no 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d
 - Os UUIDs em 4D agora são gerados na **versão 7**. In previous 4D releases, they were generated in version 4.
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
+- You can now [associate a class](../Develop/field-properties.md) to an object field in the structure editor.
 - Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
 - Línguagem 4D:
     - For consistency, [`Create entity selection`](../commands/create-entity-selection.md) and [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) commands have been moved from the ["4D Environment"](../commands/theme/4D_Environment.md) to the ["Selection"](../commands/theme/Selection.md) themes.
@@ -25,6 +26,7 @@ Leia [**O que há de novo no 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d
 
 - On Windows, current printer fonts intended only for printing (i.e. not usable on screen) are no longer loaded by 4D at startup.
 - The *MeCab* library has been removed. This change only affects the processing of Japanese text.
+- When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
 
 ## 4D 20 R9
 
