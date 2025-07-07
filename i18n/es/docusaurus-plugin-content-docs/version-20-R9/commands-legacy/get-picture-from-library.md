@@ -16,6 +16,12 @@ displayed_sidebar: docs
 
 ## Descripción 
 
+:::warning
+
+Este comando no puede utilizarse en proyectos porque la librería de imágenes sólo está disponible en bases de datos binarias. 
+
+:::
+
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->El comando GET PICTURE FROM LIBRARY devuelve en el parámetro *imagen* la imagen de la librería de imágenes cuyo número de referencia se pasa en *refImag* o cuyo nombre se pasa en *nomImag*.<!-- END REF-->
 
 Si no hay una imagen con ese nombre o número de referencia, GET PICTURE FROM LIBRARY no modifica *imagen*. 
