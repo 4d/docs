@@ -45,6 +45,10 @@ A l'exécution, un champ ou toute zone saisissable est délimité par un rectang
 
 [Zones 4D Write Pro](writeProArea_overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [List Box](listbox_overview.md) - [Sous-formulaire](subform_overview.md)
 
+#### Commandes
+
+[OBJECT Get focus rectangle invisible](../commands-legacy/OBJECT Get focus rectangle invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
+
 ---
 
 ## Cacher surlignage sélection
@@ -66,6 +70,10 @@ Par défaut, cette option n'est pas activée.
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
+
+#### Commandes
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -93,6 +101,10 @@ Valeurs disponibles :
 
 [Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
+#### Commandes
+
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+
 #### Voir également
 
 [Vertical scroll bar](#vertical-scroll-bar)
@@ -113,6 +125,10 @@ Définit la résolution d'écran pour le contenu de la zone 4D Write Pro. Par d�
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Afficher l'arrière-plan
@@ -129,6 +145,10 @@ Affiche/masque les images d'arrière-plan et la couleur d'arrière-plan.
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Afficher les pieds de page
@@ -144,6 +164,10 @@ Affiche/masque les pieds de page lorsque le [mode d'affichage de la page](#view-
 #### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -179,6 +203,10 @@ Affiche/masque les en-têtes de la page lorsque le [mode d'affichage de la page]
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Montrer les caractères cachés
@@ -194,6 +222,10 @@ Affiche/masque les caractères visibles
 #### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -211,6 +243,10 @@ Affiche/masque la règle horizontale lorsque la vue du document est en mode [Pag
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Show HTML WYSIWYG
@@ -227,6 +263,10 @@ Active/désactive la vue HTML WYSIWYG, dans laquelle tous les attributs avancés
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Afficher le cadre de la page
@@ -242,6 +282,10 @@ Affiche/masque le cadre de la page lorsque le [mode d'affichage de la page](#vie
 #### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -269,6 +313,10 @@ Lorsque la propriété Afficher les références est activée, la référence s'
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Afficher règle verticale
@@ -284,6 +332,10 @@ Affiche/masque la règle verticale lorsque la vue du document est en mode [Page]
 #### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -351,6 +403,10 @@ Valeurs disponibles :
 
 [Liste hiérarchique](list_overview.md) - [Sous-formulaire](subform_overview.md) - [List Box](listbox_overview.md) - [Zone de saisie](input_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md)
 
+#### Commandes
+
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+
 #### Voir également
 
 [Horizontal scroll bar](#horizontal-scroll-bar)
@@ -377,7 +433,9 @@ Définit le mode d'affichage du document 4D Write Pro dans la zone de formulaire
 
 [4D Write Pro area](writeProArea_overview.md)
 
----
+#### Commandes
+
+## [WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## Zoom
 
@@ -392,3 +450,7 @@ Définit le pourcentage de zoom pour l'affichage du contenu de la zone 4D Write 
 #### Objets pris en charge
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commandes
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
