@@ -7,7 +7,13 @@ title: Fournisseurs (Providers)
 
 De nombreux fournisseurs d'IA proposent une API de type OpenAI, vous pouvez donc utiliser ce projet pour vous y connecter.
 
-Pour ce faire, il suffit de remplacer le `baseURL` original par celui du service et d'utiliser leur clé d'api si nécessaire.
+To do so you just have to change the original `baseURL` by the provider one and use their api key if needed.
+
+```4d
+$client.baseURL:="https://api.mistral.ai/v1"
+```
+
+Some of them
 
 ## Distant
 
