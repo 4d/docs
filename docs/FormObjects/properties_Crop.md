@@ -18,6 +18,10 @@ Sets the number of columns in a thumbnail table.
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
 
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Rows
@@ -33,3 +37,7 @@ Sets the number of rows in a thumbnail table.
 #### Objects Supported
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
