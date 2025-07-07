@@ -43,8 +43,8 @@ Se o formulário atual estiver sendo exibido ou carregado por uma chamada aos co
 Se o formulário atual for um subformulário, o objeto retornado dependerá da variável do contêiner pai:
 
 - Se a variável associada ao contêiner pai tiver sido digitada como um objeto, **Form** retornará o valor dessa variável.\
- **Form** returns the object associated with the table form displayed on screen.\
- In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+    **Form** returns the object associated with the table form displayed on screen.\
+    In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  

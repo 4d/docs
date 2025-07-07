@@ -477,7 +477,7 @@ Se escolher esconder os destaques do sistema e quiser exibir seleções de list 
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-Para uma list box de tipo array, precisa atualizar [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) por programação. In the JSON form, you have defined the following Row Background Color Array for the list box:
+Para uma list box de tipo array, precisa atualizar [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) por programação. No formulário JSON, se definiu o array de cores de fundo seguinte para o list box:
 
 ```
     "rowFillSource": "_ListboxBackground",
@@ -554,7 +554,7 @@ O desenvolvedor pode estabelecer ordenações personalizadas com o comando `LIST
 As ordenações personalizadas permitem-lhe:
 
 - efetuar ordenações multinível em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
-- use functions such as [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+- use funções como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para classificar colunas com base em critérios complexos.
 
 #### Exemplo
 
@@ -751,7 +751,7 @@ Se esta caixa de listagem for apresentada de forma hierárquica (sendo as três 
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-The arrays are not sorted before the hierarchy is constructed. Se, por exemplo, uma matriz contém os dados AAABBAACC, a hierarquia obtida é a seguinte:
+Os arrays não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contém os dados AAABBAACC, a hierarquia obtida é a seguinte:
 
     > &gt; > A B A C
 
@@ -888,7 +888,7 @@ Estão disponíveis propriedades padrão relacionadas com coordenadas, tamanho e
 
 No entanto, o tema Fonte de Dados não está disponível para as colunas da caixa de listagem tipo objecto. De fato, o conteúdo de cada célula de coluna é baseado em atributos encontrados no elemento correspondente da array de objectos. Cada elemento da array pode definir:
 
-the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
+o tipo de valor (obrigatório): texto, cor, evento, etc. o valor em si (opcional): usado para entrada/saída. a exibição do conteúdo da célula (opcional): botão, lista, etc. configurações adicionais (opcional): dependem do tipo de valor Para definir essas propriedades, você precisa definir os atributos apropriados no objeto (os atributos disponíveis estão listados abaixo). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
 
 ```4d  
 ARRAY OBJECT(obColumn;0) //column array

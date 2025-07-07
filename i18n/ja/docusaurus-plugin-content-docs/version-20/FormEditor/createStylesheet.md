@@ -56,7 +56,12 @@ CSS の **要素セレクター**と同様に、スタイルの適用対象を�
 
 まずオブジェクトタイプを指定した後で、中カッコ { } の中に適用するスタイルを宣言します。
 
-> オブジェクトタイプとは、フォームオブジェクトの "[タイプ](FormObjects/properties_Object.md#タイプ)" JSON プロパティを指します。
+:::note
+
+- オブジェクトタイプとは、フォームオブジェクトの "[タイプ](FormObjects/properties_Object.md#タイプ)" JSON プロパティを指します。
+- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+
+:::
 
 次の例では、*button* タイプのすべてのオブジェクトについて、表示するフォントを Helvetica Neue に、フォントサイズを 20 ピクセルに指定します:
 
@@ -198,7 +203,7 @@ text[text|=Hello]
 
 メディアクエリは、アプリケーションにカラースキームを適用するのに利用します。
 
-メディアクエリは、メディア特性と値によって構成されます (例: `\&#060;media feature&#062;:\&#060;value&#062;`)。
+A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
 
 使用可能なメディア特性:
 

@@ -3,7 +3,7 @@ id: httpRequests
 title: Procesamiento de peticiones HTTP
 ---
 
-The 4D web server provides several built-in features to handle HTTP requests:
+El servidor web de 4D ofrece varias funcionalidades integradas para gestionar las peticiones HTTP:
 
 - el método base `On Web Connection`, un enrutador para su aplicación web,
 - la URL `/4DACTION` para llamar al código del lado del servidor
@@ -13,7 +13,7 @@ The 4D web server provides several built-in features to handle HTTP requests:
 
 :::info
 
-You can also implement your own HTTP request handlers for a customized control over incoming requests and outgoing responses. When a custom HTTP request handler is triggered, no database method is called. Vea la sección [**HTTP Request Handler**](http-request-handler.md).
+También puede implementar sus propios gestores de peticiones HTTP para tener un control personalizado sobre las peticiones entrantes y las respuestas salientes. Cuando se activa un gestor de peticiones HTTP personalizado, no se llama a ningún método de la base de datos. Vea la sección [**HTTP Request Handler**](http-request-handler.md).
 
 :::
 
@@ -44,7 +44,7 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 | $user      | Text | <- | Nombre de usuario                                                            |
 | $password  | Text | <- | Contraseña                                                                   |
 
-You must declare these parameters:
+Debe declarar estos parámetros:
 
 ```4d
 // Método base On Web Connection
@@ -60,7 +60,7 @@ You must declare these parameters:
 
 El primer parámetro ($url) es la URL introducida por los usuarios en el área de direcciones de su navegador web, sin la dirección local.
 
-Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.4.567.89. The following table shows the values of $url depending on the URL entered in the web browser:
+Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.4.567.89. La siguiente tabla muestra los valores de $url en función de la URL introducida en el navegador web:
 
 | URL introducida en el navegador web                                                                                                               | Valor del parámetro $url                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -72,25 +72,25 @@ Utilicemos como ejemplo una conexión de intranet. Supongamos que la dirección 
 
 Tenga en cuenta que es libre de utilizar este parámetro a su conveniencia. 4D simplemente ignora el valor pasado más allá de la parte del host de la URL. Por ejemplo, puede establecer una convención en la que el valor "*/Customers/Add*" significa "ir directamente a añadir un nuevo registro en la tabla `[Customers]`.” Al proporcionar a los usuarios de la web una lista de posibles valores y/o marcadores por defecto, puede dar accesos directos a diferentes partes de su aplicación. De este modo, los usuarios de la web pueden acceder rápidamente a los recursos de su sitio web sin tener que recorrer toda la ruta de navegación cada vez que realicen una nueva conexión.
 
-### $header - Header and Body of the HTTP request
+### $header - Encabezado y Cuerpo de la petición HTTP
 
 El segundo parámetro ($header) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Tenga en cuenta que esta información se pasa a su método base `On Web Connection` "tal cual". Su contenido variará en función de la naturaleza del navegador web que intenta la conexión.
 
 Si su aplicación utiliza esta información, deberá analizar el encabezado y el cuerpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
-> For performance reasons, the size of data passing through the $header parameter must not exceed 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
+> Por razones de rendimiento, el tamaño de los datos que pasan por el parámetro $header no debe superar los 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
 
 ### $BrowserIP - Dirección IP del cliente web
 
-The $BrowserIP parameter receives the IP address of the browser’s machine. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
+El parámetro $BrowserIP recibe la dirección IP de la máquina del navegador. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
 
 > 4D devuelve las direcciones IPv4 en un formato híbrido IPv6/IPv4 escrito con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
 ### $ServerIP - Dirección IP del servidor
 
-The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D permite el multi-homing, que permite utilizar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
+El parámetro $ServerIP recibe la dirección IP solicitada por el servidor web 4D. 4D permite el multi-homing, que permite utilizar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.html#ip-address-to-listen).
 
-### $user and $password - User Name and Password
+### $user y $password - Nombre de usuario y contraseña
 
 Los parámetros $user y $password reciben el nombre de usuario y la contraseña introducidos por el usuario en el cuadro de diálogo de identificación estándar que muestra el navegador, si procede (ver la página [autenticación](authentication.md)).
 
@@ -108,7 +108,7 @@ Los parámetros $user y $password reciben el nombre de usuario y la contraseña 
 
 **Uso:** URL o acción del formulario.
 
-Esta URL permite llamar al método proyecto 4D *MethodName* con un parámetro texto opcional *Param*. The method will receive this parameter.
+Esta URL permite llamar al método proyecto 4D *MethodName* con un parámetro texto opcional *Param*. El método recibirá este parámetro.
 
 - El método proyecto 4D debe haber sido [permitido para peticiones web](allowProject.md): el valor del atributo "Disponible a través de etiquetas y URLs 4D (4DACTION...)" debe haber sido marcado en las propiedades del método. Si no se comprueba el atributo, se rechaza la solicitud web.
 - Cuando 4D recibes una petición `/4DACTION/MethodName/Param`, se llama el método base `On Web Authentication` (si existe).
@@ -276,7 +276,7 @@ Las principales características de esta página son:
 - Incluye tres botones **Submit**: `vsbLogOn`, `vsbRegister` y `vsbInformation`.
 - Cuando se hace clic en **Log On**, el envío del formulario se procesa primero por la función de JavaScript `LogOn`. Si no se introduce ningún nombre, el formulario ni siquiera se envía a 4D, y se muestra una alerta de JavaScript.
 - El formulario tiene un método POST 4D así como un script Submit (*GetBrowserInformation*) que copia las propiedades del navegador a los cuatro objetos ocultos cuyos nombres empiezan por *vtNav_App*.
- También incluye el objeto `vtUserName`.
+  También incluye el objeto `vtUserName`.
 
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
 
@@ -332,7 +332,7 @@ Estos comandos se resumen en el siguiente gráfico:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-El servidor web de 4D ahora soporta archivos cargados con codificación chunked desde cualquier cliente web. La codificación de transferencia en trozos es un mecanismo de transferencia de datos especificado en HTTP/1.1. Permite transferir datos en una serie de "trozos" (partes) sin conocer el tamaño final de los datos. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
+El servidor web de 4D ahora soporta archivos cargados con codificación chunked desde cualquier cliente web. La codificación de transferencia en trozos es un mecanismo de transferencia de datos especificado en HTTP/1.1. Permite transferir datos en una serie de "trozos" (partes) sin conocer el tamaño final de los datos. El servidor Web 4D también soporta la codificación de transferencia en trozos desde el servidor a los clientes Web (usando [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
 
 ## Método proyecto COMPILER_WEB
 

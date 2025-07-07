@@ -3,7 +3,7 @@ id: inputOverview
 title: Entrada
 ---
 
-Inputs allow you to add enterable or non-enterable expressions such as database fields and [variables](Concepts/variables.md) to your forms. Las entradas pueden manejar datos basados en caracteres (texto, fechas, números...) o imágenes:
+Las entradas permiten añadir expresiones editables o no editables, como campos de base de datos y [variables](Concepts/variables.md) a sus formularios. Las entradas pueden manejar datos basados en caracteres (texto, fechas, números...) o imágenes:
 
 ![](../assets/en/FormObjects/input.png)
 
@@ -12,6 +12,12 @@ Las entradas pueden contener [expresiones asignables o no asignables](Concepts/q
 Además, las entradas pueden ser [editables o no editables](properties_Entry.md#enterable). Una entrada introducible acepta los datos. Puede definir los controles de entrada de datos para el objeto. Una entrada no editable sólo puede mostrar valores, pero no puede ser editada por el usuario.
 
 Puede gestionar los datos con los [métodos](Concepts/methods.md) objeto o formulario.
+
+:::note
+
+For security reasons, in [multi-style](./properties_Text.md#multi-style) input areas, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+
+:::
 
 ### Ejemplo JSON:
 

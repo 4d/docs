@@ -178,7 +178,7 @@ Le serveur renvoie les entités, c'est-à-dire les données, de la dataclass Fri
 }
 ```
 
-Cet exemple très simple montre comment le serveur web interagit de manière transparente avec le [serveur REST](REST/gettingStarted.md) pour renvoyer toutes les données demandées, à condition qu'elles soient exposées. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées. Examinez l'[Explorateur de données Web](Admin/dataExplorer.md) intégré pour avoir un exemple d'interface web sophistiquée liée aux dataclass.
+Cet exemple très simple montre comment le serveur web interagit de manière transparente avec le [serveur REST](REST/gettingStarted.md) pour renvoyer toutes les données demandées, à condition qu'elles soient exposées. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées. Dans vos interfaces web, vous pouvez facilement lier le code javascript ou html avec les données retournées.
 
 ## Connexion et session
 

@@ -20,12 +20,12 @@ Apenas um depurador pode depurar uma aplicação 4D Server num determinado momen
 - o depurador local do Servidor 4D (padrão) - se o servidor não estiver sendo executado sem interface.
 - o depurador de um cliente 4D remoto - se a sessão remota tiver acesso ao modo Desenho.
 - o [depurador Qodly](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) no servidor 4D - se o servidor permitir acesso a Qodly Studio.
-- the **VS Code** debugger, provided you installed the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+- o depurador **VS Code**, desde que você tenha instalado a extensão [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode).
 
 O depurador anexado é chamado sempre que um 4D Server se encontra:
 
 - um ponto de ruptura
-- a `TRACE` command
+- um comando `TRACE`
 - um ponto de interrupção para fazer o pedido
 - um erro
 
@@ -49,10 +49,10 @@ Pode anexar o depurador a qualquer cliente 4D remoto autorizado a conectar-se à
 
 Para anexar o depurador a um cliente 4D remoto:
 
-1. In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless).
-2. In a remote 4D client connected to the server, select **Run** > **Attach Remote Debugger**
+1. Na barra de menu do 4D Server, selecione **Editar** > **Desativar o depurador** para que o depurador se torne disponível para máquinas remotas (essa etapa é inútil se o 4D Server estiver sendo executado sem interface).
+2. Em um cliente 4D remoto conectado ao servidor, selecione **Executar** > **Anexar depurador remoto**
 
-If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the menu command becomes **Detach Remote Debugger**.
+Se o anexo é aceito (veja [solicitações de anexos rejeitadas](#rejected-attachment-requests)), o comando do menu torna-se **Desconectar o depurador remoto**.
 
 O depurador é então ligado ao cliente 4D remoto:
 
@@ -61,7 +61,7 @@ O depurador é então ligado ao cliente 4D remoto:
 
 Para ligar o depurador de novo ao servidor:
 
-1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
+1. No cliente 4D remoto que tem o depurador conectado, selecione **Executar** > **Desconectar o depurador remoto**.
 2. Na barra de menu de 4D Server, selecione **Editar** > **Anexar depurador**.
 
 > Quando o depurador estiver conectado ao servidor (padrão), todos os processos do servidor são executados automaticamente no modo cooperativo para permitir a depuração. Este fato pode ter um impacto significativo no desempenho. Quando não for necessário depurar na máquina do servidor, recomenda-se desconectar o depurador e anexá-lo a uma máquina remota, se necessário.
@@ -70,13 +70,13 @@ Para ligar o depurador de novo ao servidor:
 
 4D permite que você anexe automaticamente o depurador a um cliente 4D remoto ou ao servidor na inicialização:
 
-- On the server (if not headless), this option is named **Attach Debugger At Startup**. Quando o servidor é iniciado, ele anexa automaticamente o depurador (padrão).
+- No servidor (se não sem cabeçalha), esta opção se chama **Anexar depurador na inicialização**. Quando o servidor é iniciado, ele anexa automaticamente o depurador (padrão).
 
-> **Warning**: If this option is selected for a server which is subsequently launched in headless mode, the debugger won't be available for this server.
+> **Aviso**: se essa opção for selecionada para um servidor que será iniciado posteriormente no modo sem cabeça, o depurador não estará disponível para esse servidor.
 
-- On a remote 4D client, this option is named **Attach Remote Debugger At Startup**. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server. If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the remote debugger is automatically attached to the remote 4D client and the **Detach Remote Debugger option is displayed**.
+- Em um cliente remoto 4D, esta opção se chama **Anexar depurador remoto na inicialização**. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server. Se o anexo for aceite (veja [solicitações de anexo rejeitadas](#rejected-attachment-requests)), o depurador remoto é anexado automaticamente ao cliente remoto 4D e a opção **Desanexar depurador remoto é exibida**.
 
-> This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
+> Essa configuração é aplicada por projeto e é armazenada localmente no arquivo [`.4DPreferences`](Project/architecture.md#userpreferencesusername).
 
 ## Solicitações de anexos rejeitadas
 
@@ -90,5 +90,5 @@ Se uma máquina tentar anexar o depurador enquanto este já estiver anexado, a a
 
 A ligação do depurador neste caso exige que:
 
-- the attached debugger is detached from the server or from the remote 4D client using respectively the **Detach debugger** or **Detach remote debugger** menu command,
+- o depurador anexado é desconectado do servidor ou do cliente 4D remoto usando, respectivamente, o comando de menu **Detach debugger** ou **Detach remote debugger**,
 - a sessão do cliente remoto 4D anexado é encerrada.

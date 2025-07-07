@@ -518,7 +518,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 **.exe または .dll ファイル用の *info* オブジェクト**
 
-The function must be used with an existing and valid .exe or .dll file, otherwise it does nothing (no error is generated).
+関数に渡されるファイルは、ディスク上に存在する有効な .exe または .dll ファイルでなければなりません。そうでない場合、この関数は何もしません (エラーは生成されません)。
 
 
 > .exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。

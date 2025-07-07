@@ -28,7 +28,7 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
  $vpFormTable:=Current form table
  Case of
   // ...
-    :(FORM Event=On Header)
+    :(FORM Event.code=On Header)
   // Se va a imprimir el área de encabezado
        Case of
           :(Before selection($vpFormTabla->))
@@ -39,10 +39,10 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
   // El código para la ruptura del encabezado nivel 2 debe ir acá
   // ...
        End case
-    :(FORM Event=On Printing Details)
+    :(FORM Event.code=On Printing Details)
   // Se va a imprimir un registro
   // El código para cada registro va acá
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
   // Se va a imprimir un área de ruptura
        Case of
           :(Level=0)
@@ -51,7 +51,7 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
   // El código para la ruptura 1 va acá
   // ...
        End case
-    :(FORM Event=On Printing Footer)
+    :(FORM Event.code=On Printing Footer)
        If(End selection($vpFormTabla->))
   // El código para el último pie de página debe ir acá
        Else

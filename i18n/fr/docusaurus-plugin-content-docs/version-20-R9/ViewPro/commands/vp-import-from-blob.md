@@ -15,6 +15,14 @@ title: VP IMPORT FROM BLOB
 | vpBlob     | 4D.Blob | -> | Blob contenant un document 4D View Pro  |                  |
 | paramObj   | Object                  | -> | Options d'import                        | <!-- END REF --> |
 
+<details><summary>Historique</summary>
+
+| Release | Modifications                                                 |
+| ------- | ------------------------------------------------------------- |
+| 20 R9   | Trigger of callback function after custom functions completed |
+
+</details>
+
 ## Description
 
 La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importe *vpBlob* dans la zone 4D View Pro *vpAreaName* et remplace son contenu<!-- END REF -->. *vpBlob* doit contenir un document 4D View Pro précédemment enregistré en tant que Blob soit en utilisant la commande [VP EXPORT TO BLOB](vp-export-to-blob.md) soit via l'interface 4D View Pro.

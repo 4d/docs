@@ -24,7 +24,7 @@ title: HTTP Request handler
 
 :::warning
 
-[By default](../ORDA/privileges.md#default-file) for security reasons, external access to the datastore is not allowed in 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+セキュリティ上の理由から、[デフォルトで](../ORDA/privileges.md#デフォルトファイル)、4D ではデータストアへの外部からのアクセスは許可されていません。 HTTP リクエストを許可するには、[ORDA privileges](../ORDA/privileges.md) を設定する必要があります。
 
 :::
 
@@ -76,7 +76,7 @@ URL パターンは**接頭辞** として、あるいは**正規表現** を使
    Ex: `"pattern" : "docs"` または `"pattern" : "docs/invoices"`
 
 - 正規表現パターンを宣言するためには、HTTPHandlers.json ファイル内において"regexPattern" プロパティ名を使用します。 正規表現パターンは直接管理されます。
-   Ex: `"regexPattern" : "/docs/.+/index\.html"`
+   礼: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" と "regexPattern" プロパティは同じハンドラー定義内で同時に使用することはできません(使用した場合、"regexPattern" プロパティのみが有効となります)。
 
@@ -243,7 +243,7 @@ HTTP リクエストハンドラーコードは、[**共有された**](../Conce
 
 :::note
 
-It is **not recommended** to expose request handler functions to external REST calls using [`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) or [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keywords.
+[`exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) または [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードを使用してリクエストハンドラー関数を外部REST 呼び出しへと公開することは**推奨されていません**。
 
 :::
 
@@ -325,4 +325,4 @@ Function uploadFile($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ## 参照
 
-[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (blog post)
+[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (blog記事)

@@ -7,7 +7,7 @@ title: OpenAIChatCompletionParameters
 
 The `OpenAIChatCompletionParameters` class is designed to handle the parameters required for chat completions using the OpenAI API.
 
-## Inherits
+## Hereda
 
 - [OpenAIParameters](OpenAIParameters.md)
 

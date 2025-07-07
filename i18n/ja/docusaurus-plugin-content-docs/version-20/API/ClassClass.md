@@ -53,14 +53,14 @@ title: Class
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Class<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Object<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Object<!-- END REF -->
 
 
 <!-- REF #ClassClass.new().Params -->
-| 引数    | 型        |    | 説明                                      |
-| ----- | -------- |:--:| --------------------------------------- |
-| param | any      | -> | コンストラクター関数に渡す引数                         |
-| 戻り値   | 4D.Class | <- | クラスの新規オブジェクト|<!-- END REF -->
+| 引数    | 型         |    | 説明                                      |
+| ----- | --------- |:--:| --------------------------------------- |
+| param | any       | -> | コンストラクター関数に渡す引数                         |
+| 戻り値   | 4D.Object | <- | クラスの新規オブジェクト|<!-- END REF -->
 
 
 |
@@ -125,7 +125,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 `.superclass` プロパティは、 <!-- REF #ClassClass.superclass.Summary -->対象クラスの親クラスを返します<!-- END REF -->。 スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。
 
-ユーザークラスのスーパークラスは、[`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) キーワードを使ってクラス内で定義されます。
+To define a superclass for a user class, use the  [`extends`](Concepts/classes.md#class-extends-classname) keyword like: `Class extends <superclass>`.
 
 このプロパティは **読み取り専用** です。
 

@@ -101,32 +101,15 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
 When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed.
-In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. There are two ways to do this:
 
-- You can set the type using the [Expression type](#expression-type) property.
-- You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
+To get or set the value of form objects that use dynamic variables, you just need to call [`OBJECT Get value`](../commands-legacy/object-get-value.md) and [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) commands. For example:
 
 ```4d
- If(Form event code=On Load)
-    var $init : Text
-    $Ptr_object:=OBJECT Get pointer(Object named;"comments")
-    $init:=""
-    VARIABLE TO VARIABLE(Current process;$Ptr_object->;$init)
- End if
+ var $value : Variant
+ $value:=OBJECT Get value("comments")
+ OBJECT SET VALUE("comments";$value+10) 
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
-
-```4d
-  // assign the time 12:00:00 to the variable for the "tstart" object
- $p :=OBJECT Get pointer(Object named;"tstart")
- $p->:=?12:00:00?
-```
-
-There are two advantages with this mechanism:
-
-- On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
-- On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 ### Array List Box
 

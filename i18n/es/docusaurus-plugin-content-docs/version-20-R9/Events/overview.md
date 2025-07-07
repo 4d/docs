@@ -5,7 +5,7 @@ title: Eventos formulario
 
 Los eventos formulario son eventos que pueden llevar a la ejecución del método de formulario y/o del o de los métodos objeto de formulario. Los eventos de formulario le permiten controlar el flujo de su aplicación y escribir código que se ejecuta sólo cuando ocurre un evento específico.
 
-In your code, you control the events using the [`FORM Event`](../commands/form-event.md) command, that returns the triggered event. Por ejemplo:
+En su código, usted controla los eventos utilizando el comando [`FORM Event`](../commands/form-event.md), que devuelve el evento accionado. Por ejemplo:
 
 ```4d
 //code of a button

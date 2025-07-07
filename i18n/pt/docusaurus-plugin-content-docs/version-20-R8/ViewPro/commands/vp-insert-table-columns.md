@@ -41,7 +41,7 @@ In the *insertAfter* parameter, you can pass one of the following constants to i
 
 Este comando insere algumas colunas na tabela *tableName*, NÂO na folha. O número total de colunas da folha não é impactado pelo  comando. Dados presentes à direita da tabela (se houver) são movidos para a direita automaticamente de acordo com o número de colunas adicionadas.
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+Se *tableName* não existir ou se não houver espaço suficiente na folha, nada acontece.
 
 ## Exemplo
 

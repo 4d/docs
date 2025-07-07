@@ -31,7 +31,7 @@ O comando `VP SET TABLE COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUM
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In the *attributes* parameter, pass an object that contains the properties to set:
+No parâmetro *attributes*, passe um objeto que contenha as propriedades a serem definidas:
 
 | Propriedade         | Tipo    | Descrição                                                                                                                                                                                                    |
 | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -46,7 +46,7 @@ Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcific
 
 > A indexação começa em 0.
 
-If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.
+Se *tableName* não for encontrado ou se *column* for maior que o número de colunas, o comando não fará nada.
 
 ## Exemplo
 

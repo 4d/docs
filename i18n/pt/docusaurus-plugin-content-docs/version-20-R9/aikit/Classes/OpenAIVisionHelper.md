@@ -15,11 +15,11 @@ title: OpenAIVisionHelper
 | ------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | *prompt*     | Text                                                                  | The text prompt to send to the OpenAI chat API.      |
 | *parâmetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Optional parameters for the chat completion request. |
-| Resultado    | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | The result of the vision.                            |
+| Resultado    | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | O resultado da visão.                                |
 
 Sends a prompt to the OpenAI chat API along with an associated image URL, and optionally accepts parameters for the chat completion.
 
-#### Example Usage
+#### Exemplo de uso
 
 ```4d
 var $helper:=$client.chat.vision.create("http://example.com/image.jpg")

@@ -47,7 +47,7 @@ Pour une list box de type sélection, collection ou entity selection, *tabStyles
 ## Voir aussi 
 
 [LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX Get property](listbox-get-property.md)  
+[LISTBOX Get property](../commands/listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
 ## Propriétés

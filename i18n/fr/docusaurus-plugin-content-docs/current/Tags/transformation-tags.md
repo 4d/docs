@@ -5,9 +5,9 @@ title: Balises de transformation
 
 4D fournit un ensemble de balises de transformation qui vous permettent d'insérer des références à des variables ou des expressions 4D, ou d'effectuer différents types de traitement dans un texte source, appelé "template". Ces balises sont interprétées lors de l'exécution du texte source et génèrent un texte de sortie.
 
-This principle is used in particular by the 4D Web server to build [web template pages](WebServer/templates.md).
+Ce principe est notamment utilisé par le serveur Web 4D pour construire des [pages web templates](WebServer/templates.md).
 
-These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
+Ces balises sont généralement insérées comme des commentaires de type HTML (`<!--#Tag Contents-->`) mais une [syntaxe alternative compatible xml](#alternative-syntax-for-4dtext-4dhtml-4deval) est disponible pour certaines d'entre elles.
 
 Il est possible de combiner plusieurs types de balises. Par exemple, la structure HTML suivante est tout à fait envisageable :
 
@@ -41,7 +41,7 @@ L'analyse ou le parsing du contenu d'une source de *template* se fait dans deux 
 
 - En utilisant la commande `PROCESS 4D TAGS`; cette commande accepte un *template* en entrée, ainsi que des paramètres optionnels et retourne un texte résultant du traitement.
 
-- En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées en utilisant des URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. Pour analyser les pages HTML dans ce cas, vous devez ajouter le suffixe « .shtm » ou « .shtml » (par exemple, <http://www.server.com/dir/page.shtm>).
+- En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées en utilisant des URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées.
 
 ### Traitement récursif
 
@@ -53,25 +53,25 @@ Les balises 4D sont interprétées de manière récursive : 4D tente toujours de
 
 Si le champ texte `[Mail]Letter_type` contient lui-même une balise, par exemple `<! -#4DSCRIPT/m_Gender-->`, cette balise sera évaluée récursivement après l'interprétation de la balise 4DHTML.
 
-Ce principe puissant répond à la plupart des besoins liés à la transformation des textes. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](WebServer/templates.md#prevention-of-malicious-code-insertion).
+Ce principe puissant répond à la plupart des besoins liés à la transformation des textes. Notez, cependant, que dans certains cas, cela peut également permettre l'insertion de code malveillant dans le contexte web, [ce qui peut être évité](WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ### Identifiants avec tokens
 
-Pour garantir l'évaluation correcte des expressions traitées via les balises, quel que soit le langage ou la version de 4D, il est recommandé d'utiliser la syntaxe tokenisée pour les éléments dont le nom peut varier selon les versions (commandes, tables, champs, constantes). For example, to insert the `Current time` command, enter `Current time:C178`.
+Pour garantir l'évaluation correcte des expressions traitées via les balises, quel que soit le langage ou la version de 4D, il est recommandé d'utiliser la syntaxe tokenisée pour les éléments dont le nom peut varier selon les versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande `Current time`, entrez `Current time:C178`.
 
 ### Utilisation du "." comme séparateur décimal
 
-4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Les paramètres régionaux sont ignorés. Cette fonctionnalité facilite la maintenance du code et la compatibilité entre les langues et les versions de 4D.
+4D utilise toujours le caractère point (.) comme séparateur décimal lors de l'évaluation d'une expression numérique utilisant une balise 4D `4DTEXT`, `4DHTML`, et `4DEVAL`. Les paramètres régionaux sont ignorés. Cette fonctionnalité facilite la maintenance du code et la compatibilité entre les langues et les versions de 4D.
 
 ## 4DBASE
 
-#### Syntax: `<!--#4DBASE folderPath-->`
+#### Syntaxe : `<!--#4DBASE folderPath-->`
 
-The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
+La balise `<!--#4DBASE -->` désigne le répertoire de travail à utiliser par la balise `<!--#4DINCLUDE-->`.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--#4DBASE -->`, if any. If the `<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+Lorsqu'elle est appelée dans une page Web, la balise `<!--#4DBASE -->` modifie tous les appels `<!--#4DINCLUDE-->` ultérieurs sur cette page, jusqu'au prochain `<!--#4DBASE -->`, s'il y en a un. Si le dossier `<!--#4DBASE -->` est modifié à partir d'un fichier inclus, il récupère sa valeur originale dans le fichier parent.
 
-The *folderPath* parameter must contain a pathname relative to the current page and it must end with a slash (`/`). Le dossier désigné doit être situé à l'intérieur du dossier Web.
+Le paramètre *folderPath* doit contenir un nom de chemin relatif à la page courante et doit se terminer par une barre oblique (`/`). Le dossier désigné doit être situé à l'intérieur du dossier Web.
 
 Passez le mot-clé "WEBFOLDER" pour rétablir le chemin par défaut (relatif à la page).
 
@@ -116,7 +116,7 @@ Dans le fichier "head.html", le dossier courant est modifié via `<!--#4DBASE --
 
 ```html
 /* Head.htm */
-/* the working directory here is relative to the included file (FR/ or US/) */
+/* le répertoire de travail ici est relatif au fichier inclus (FR/ ou US/) */
 <!--#4DBASE Styles/-->
 <!--#4DINCLUDE main.css-->
 <!--#4DINCLUDE product.css-->
@@ -137,11 +137,11 @@ Par exemple, vous pouvez écrire dans un template :
 
 ```html
 <!--#4DCODE
-//PARAMETERS initialization
+//Initialisation des paramètres
 C_OBJECT:C1216($graphParameters)
 OB SET:C1220($graphParameters;"graphType";1)
 $graphType:=1
-//...your code here
+//...votre code ici
 If(OB Is defined:C1231($graphParameters;"graphType"))
     $graphType:=OB GET:C1224($graphParameters;"graphType")
     If($graphType=7)
@@ -157,10 +157,10 @@ End if
 
 Voici les caractéristiques de la balise 4DCODE :
 
-- The `TRACE` command is supported and activates the 4D debugger, thus allowing you to debug your template code.
+- La commande `TRACE` est prise en charge et active le débogueur 4D, vous permettant ainsi de déboguer votre code de template.
 - Toute erreur affichera le dialogue d'erreur standard qui permet à l'utilisateur d'arrêter l'exécution du code ou d'entrer en mode débogage.
-- The text in between `<!--#4DCODE` and `-->` is split into lines accepting any line-ending convention (cr, lf, or crlf).
-- The text is tokenized within the context of the database that called `PROCESS 4D TAGS`. Ceci est important pour la reconnaissance des méthodes de projet par exemple. The [Available through tags and 4D URLs (4DACTION ...)](WebServer/allowProject.md) method property is not taken into account.
+- Le texte compris entre `<!--#4DCODE` and `-->` est divisé en lignes acceptant n'importe quelle convention de fin de ligne (cr, lf, ou crlf).
+- Le texte est tokenisé dans le contexte de la base de données qui a appelé `PROCESS 4D TAGS`. C'est important pour la reconnaissance des méthodes projet par exemple. La propriété de méthode [Disponible via les balises et les URL 4D (4DACTION...)](WebServer/allowProject.md) n'est pas prise en compte.
 - Même si le texte utilise toujours l'anglais-US, il est recommandé d'utiliser la syntaxe token (:Cxxx) pour les noms de commandes et de constantes afin de se prémunir contre d'éventuels problèmes dus à des commandes ou des constantes renommées d'une version de 4D à une autre.
 
 > Le fait que les balises 4DCODE puissent appeler n'importe quelle commande du langage 4D ou méthode du projet pourrait être considéré comme un problème de sécurité, en particulier lorsque la base de données est disponible via HTTP. Toutefois, étant donné qu'elle exécute du code côté serveur appelé à partir de vos propres fichiers de modèle, la balise elle-même ne représente pas un problème de sécurité. Dans ce contexte, comme pour tout serveur Web, la sécurité est principalement gérée au niveau des accès distants aux fichiers du serveur.
@@ -187,7 +187,7 @@ The *item* parameter is a variable of the same type as the collection elements.
 
 The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the *item* variable is assigned the first mismatched value type.
 
-Le nombre de boucles est basé sur le nombre d'éléments de la collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. Vous devez tenir compte des points suivants :
+Le nombre de boucles est basé sur le nombre d'éléments de la collection. Le nombre de boucles est basé sur le nombre d'éléments de la collection. Vous devez tenir compte des points suivants :
 
 - If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable est de type scalaire, seule la variable sera modifiée.
 - The *item* variable gets the same type as the first collection element. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
@@ -644,7 +644,7 @@ The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D var
 
 The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
 
-Vous pouvez également insérer des expressions 4D. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). La conversion des expressions suit les mêmes règles que celles des variables. De plus, l'expression doit respecter les règles de syntaxe 4D.
+Vous pouvez également insérer des expressions 4D. Vous pouvez également insérer des expressions 4D. La conversion des expressions suit les mêmes règles que celles des variables. De plus, l'expression doit respecter les règles de syntaxe 4D.
 
 > For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
@@ -701,7 +701,7 @@ En utilisant la syntaxe $, le code suivant est validé par le parseur :
 
 Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). `$` tags are always evaluated once and the result is considered as plain text.
 
-Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. However, since `4DTEXT` does not escape the `$` symbol, we decided to break support for recursion in order to prevent malicious injection using the `$4dtag (expression)` syntax.
+Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. Cette différence consiste à empêcher l'injection de code malveillant.
 
 Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et de la balise  utilisées :
 

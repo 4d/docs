@@ -5,7 +5,7 @@ title: Componentes
 
 Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
 
-Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que se pueden encontrar en GitHub.
+Puede [desarrollar](../Extensions/develop-components.md) y [crear](../Desktop/building.md) sus propios componentes 4D, o descargar componentes públicos compartidos por la comunidad 4D que [se pueden encontrar en GitHub](https://github.com/search?q=4d-component\\\\\\\\\\&type=Repositories).
 
 Al desarrollar en 4D, los archivos de los componentes pueden almacenarse de forma transparente en su ordenador o en un repositorio Github.
 
@@ -22,8 +22,8 @@ La carpeta del paquete de un componente puede contener:
 
 - para **componentes interpretados**: una [Carpeta Project](../Project/architecture.md) estándar. El nombre de la carpeta del paquete debe llevar el sufijo **.4dbase** si desea instalarlo en la carpeta [**Componentes** de su proyecto](architecture.md#components).
 - para **componentes compilados**:
- - una carpeta "Contents" que contenga un archivo .4DZ, una carpeta *Resources*, un archivo *Info.plist* (arquitectura recomendada)
- - o directamente un archivo .4DZ con otras carpetas como *Resources*.
+    - una carpeta "Contents" que contenga un archivo .4DZ, una carpeta *Resources*, un archivo *Info.plist* (arquitectura recomendada)
+    - o directamente un archivo .4DZ con otras carpetas como *Resources*.
 
 :::note
 
@@ -315,6 +315,23 @@ Los componentes GitHub a los que se hace referencia se descargan en una carpeta 
 
 ...donde `<app name>` puede ser "4D", "4D Server" o "tool4D".
 
+### Automatic dependency resolution
+
+When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. Esto incluye:
+
+- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
+- **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
+
+The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
+
+- **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+
+:::note
+
+`dependencies.json` files are ignored in components loaded from the [**Components** folder](architecture.md#components).
+
+:::
+
 ### dependency-lock.json
 
 Se crea un archivo `dependency-lock.json` en la carpeta [`userPreferences`](architecture.md#userpreferencesusername) de su proyecto.
@@ -328,10 +345,10 @@ En un proyecto abierto, puede añadir, eliminar, actualizar y obtener informaci�
 Para mostrar el panel Dependencias:
 
 - con 4D, seleccione el ítem de menú **Diseño/Dependencias del Proyecto** (entorno de desarrollo),<br/>
- ![dependency-menu](../assets/en/Project/dependency-menu.png)
+    ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - con 4D Server, seleccione el ítem de menú **Ventana/Dependencias del Proyecto**.<br/>
- ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+    ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 A continuación, se muestra el panel Dependencias. Las dependencias se ordenan por nombre en orden alfabético:
 
@@ -345,9 +362,19 @@ Por defecto, se listan todas las dependencias identificadas por el gestor de dep
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
+- **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
+- **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
 - **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. Incluye dependencias *overloading*, las cuales son realmente cargadas. Las dependencias *Overloaded* se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
 - **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. Hay muchas razones posibles para este estado: archivos que faltan, incompatibilidad de versiones...
-- **Conflicto**: dependencias que se cargan pero que sobrecargan al menos otra dependencia de menor [nivel de prioridad](#prioridad). También se muestran las dependencias sobrecargadas para que pueda comprobar el origen del conflicto y tomar las medidas oportunas.
+- **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). También se muestran las dependencias sobrecargadas para que pueda comprobar el origen del conflicto y tomar las medidas oportunas.
+
+### Secondary dependencies
+
+The Dependencies panel displays [**secondary dependencies**](#automatic-dependency-resolution) with the `Component dependency` [origin](#dependency-origin):
+
+![recursive-dependency](../assets/en/Project/recursive.png)
+
+When you hover over a secondary dependency, a tooltip displays the parent dependency that requires it. A secondary dependency cannot be [removed](#removing-a-dependency) directly, you must remove or edit the primary dependency that requires it.
 
 ### Estado de dependencias
 
@@ -380,12 +407,13 @@ El panel Dependencias enumera todas las dependencias del proyecto, sea cual sea 
 
 Las siguientes opciones de origen son posibles:
 
-| Etiqueta de origen                | Descripción                                                                        |
-| --------------------------------- | ---------------------------------------------------------------------------------- |
-| Componente 4D                     | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D |
-| dependencies.json | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)        |
-| Entorno                           | Componente declarado en el archivo [`environnement4d.json`](#environment4djson)    |
-| Componente del proyecto           | Componente ubicado en la carpeta [`Components`](architecture.md#components)        |
+| Etiqueta de origen      | Descripción                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Built in 4D             | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D                                                           |
+| Declared in project     | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)                                                                  |
+| Declared in environment | Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file |
+| Carpeta Components      | Componente ubicado en la carpeta [`Components`](architecture.md#components)                                                                  |
+| Component dependency    | Secondary component ([required by a another component](#automatic-dependency-resolution))                                 |
 
 **Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 
@@ -571,7 +599,7 @@ Para eliminar una dependencia desde el panel de dependencias, seleccione la depe
 
 :::note
 
-Sólo las dependencias declaradas en el archivo [**dependencies.json**](#dependenciesjson) pueden eliminarse mediante el panel Dependencias. Si no se puede eliminar una dependencia seleccionada, se desactiva el botón **-** y se oculta la opción de menú **Eliminar la dependencia...**.
+Only primary dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. Secondary dependencies cannot be removed directly - to remove a secondary dependency, you must remove the primary dependency that requires it. Si no se puede eliminar una dependencia seleccionada, se desactiva el botón **-** y se oculta la opción de menú **Eliminar la dependencia...**.
 
 :::
 
@@ -581,4 +609,7 @@ Aparece una caja de diálogo de confirmación. Si la dependencia se declaró en 
 
 Si confirma la caja de diálogo, la dependencia eliminada [estado](#estado-dependencia) se marca automáticamente como "Descargar tras reinicio". Se descargará cuando se reinicie la aplicación.
 
+#### Dependency usage warnings
+
+When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
 

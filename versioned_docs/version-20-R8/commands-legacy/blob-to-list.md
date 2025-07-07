@@ -37,13 +37,13 @@ In this example, the form method for a data entry form extracts a list from a BL
  
  Case of
  
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        hList:=BLOB to list([Things To Do]Other Crazy Ideas)
        If(OK=0)
           hList:=New list
        End if
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
        CLEAR LIST(hList;*)
  
     :(bValidate=1)

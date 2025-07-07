@@ -43,7 +43,7 @@ Dans un formulaire entrée, vous souhaitez que les caractères saisis soient aut
 Voici un exemple de traitement à la volée des caractères saisis dans un champ texte. Le principe consiste à placer dans un autre champ texte (appelé “Mots”) la décomposition en mots de la phrase en cours de saisie. Pour cela, écrivez dans la méthode objet du champ de saisie :
 
 ```4d
- If(FORM Event=On After Keystroke)
+ If(FORM Event.code=On After Keystroke)
     $SaisieTempsRéel:=Get edited text
     PLATFORM PROPERTIES($plate_forme)
     If($plate_forme#3) // Macintosh ou Power Macintosh

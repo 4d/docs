@@ -55,7 +55,12 @@ CSS の <strong x-id="1">要素セレクター</strong>と同様に、スタイ�
 
 まずオブジェクトタイプを指定した後で、中カッコ { } の中に適用するスタイルを宣言します。
 
-> オブジェクトタイプとは、フォームオブジェクトの "[タイプ](FormObjects/properties_Object.md#タイプ)" JSON プロパティを指します。
+:::note
+
+- オブジェクトタイプとは、フォームオブジェクトの "[タイプ](FormObjects/properties_Object.md#タイプ)" JSON プロパティを指します。
+- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+
+:::
 
 次の例では、*button* タイプのすべてのオブジェクトについて、表示するフォントを Helvetica Neue に、フォントサイズを 20 ピクセルに指定します:
 
@@ -197,7 +202,7 @@ text[text|=Hello]
 
 メディアクエリは、アプリケーションにカラースキームを適用するのに利用します。
 
-メディアクエリは、メディア特性と値によって構成されます (例: `\<media feature>:\<value>` )。
+A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
 
 使用可能なメディア特性:
 
@@ -272,13 +277,13 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
 
 - `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` および `verticalLineStroke` の属性は 3種類のシンタックスを受け付けます:
 
- - CSS カラーネーム: `fill: red;`
- - 16進数カラーコード: `fill: #FF0000;`
- - `rgb()` 関数: `fill:rgb(255,0,0)`
+  - CSS カラーネーム: `fill: red;`
+  - 16進数カラーコード: `fill: #FF0000;`
+  - `rgb()` 関数: `fill:rgb(255,0,0)`
 
 - CSS では禁じられている文字を使用している文字列については、その文字列を単一引用符または二重引用符でくくることができます。 例:
- - xliff 参照の場合: `tooltip: ":xliff:CommonMenuFile";`
- - データソースがフィールド式の場合: `dataSource: "[Table_1:1]ID:1";`
+  - xliff 参照の場合: `tooltip: ":xliff:CommonMenuFile";`
+  - データソースがフィールド式の場合: `dataSource: "[Table_1:1]ID:1";`
 
 ## 優先順位
 

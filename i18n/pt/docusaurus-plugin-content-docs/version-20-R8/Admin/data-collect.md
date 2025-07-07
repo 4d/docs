@@ -18,7 +18,7 @@ Dados são coletados durante os eventos abaixo:
 - arranque da base de dados,
 - fechamento de banco de dados,
 - início do servidor Web,
-- use of specific features such as php, open datastore, remote debugger,
+- uso de recursos específicos, como php, open datastore, depurador remoto,
 - ligação cliente,
 - envio da recolha de dados.
 
@@ -57,21 +57,21 @@ Alguns dados são também recolhidos a intervalos regulares.
 | --------- | ------ | ------------------------------------------------------------------------------- |
 | webServer | Object | "started":true se o servidor Web estiver a arrancar ou iniciado |
 
-### Collected at new web session creation
+### Coletado na criação de uma nova sessão Web
 
 | Dados                                               | Tipo   | Notas                                                                                |
 | --------------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
-| databases.webMaxLicensedSessions    | Number | Maximum number of non-REST web sessions on the server that use the webserver license |
-| databases.restMaxLicensedSessions   | Number | Maximum number of REST web sessions on the server that use the REST license          |
-| databases.webMaxUnlicensedSessions  | Number | Maximum number of other non-REST web sessions on the server                          |
-| databases.restMaxUnlicensedSessions | Number | Maximum number of other REST web sessions on the server                              |
+| databases.webMaxLicensedSessions    | Number | Número máximo de sessões Web não REST no servidor que usam a licença do servidor Web |
+| databases.restMaxLicensedSessions   | Number | Número máximo de sessões REST web no servidor que usa a licença REST                 |
+| databases.webMaxUnlicensedSessions  | Number | Número máximo de outras sessões não-REST no servidor                                 |
+| databases.restMaxUnlicensedSessions | Number | Número máximo de outras sessões da Web REST no servidor                              |
 
-### Collected at datastore opening
+### Coletado na abertura do datastore
 
-| Dados                                             | Tipo   | Notas                                                         |
-| ------------------------------------------------- | ------ | ------------------------------------------------------------- |
-| databases.externalDatastoreOpened | Number | Number of calls to `Open datastore`                           |
-| databases.internalDatastoreOpened | Number | Number of times the datastore is opened by an external server |
+| Dados                                             | Tipo   | Notas                                                                         |
+| ------------------------------------------------- | ------ | ----------------------------------------------------------------------------- |
+| databases.externalDatastoreOpened | Number | Número de chamadas para 'Open datastore'                                      |
+| databases.internalDatastoreOpened | Number | Número de vezes que o armazenamento de dados é aberto por um servidor externo |
 
 ### Recolha a intervalos regulares
 
@@ -98,8 +98,8 @@ Alguns dados são também recolhidos a intervalos regulares.
 | indexSegment.diskWriteBytes    | Number     | Número de bytes escritos no ficheiro de índice                                                 |
 | indexSegment.diskReadCount     | Number     | Número de leituras no ficheiro índice                                                          |
 | indexSegment.diskWriteCount    | Number     | Número de escritas no ficheiro de índice                                                       |
-| databases.webScalableSessions  | Parâmetros | True if scalable sessions are activated                                                        |
-| databases.webIPAddressesNumber | Number     | Number of different IP addresses that made a request to 4D Server                              |
+| databases.webScalableSessions  | Parâmetros | True se as sessões escalonáveis estiverem ativadas                                             |
+| databases.webIPAddressesNumber | Number     | Número de endereços IP diferentes que fizeram uma solicitação ao 4D Server                     |
 
 ### Recolhidos aquando do encerramento da base de dados e do envio da recolha de dados
 
@@ -111,19 +111,19 @@ Alguns dados são também recolhidos a intervalos regulares.
 | webserverBytesOut              | Number | Bytes enviados pelo servidor Web durante a recolha de dados   |
 | qodly.webforms | Number | Número de formulários web Qodly                               |
 
-### Collected at every new call to the remote debugger
+### Coletado a cada nova chamada para o depurador remoto
 
-| Dados                                                       | Tipo   | Notas                                                         |
-| ----------------------------------------------------------- | ------ | ------------------------------------------------------------- |
-| databases.remoteDebugger4DRemoteAttachments | Number | Number of attachments to the remote debugger from a remote 4D |
-| databases.remoteDebuggerQodlyAttachments    | Number | Number of attachments to the remote debugger from Qodly       |
-| databases.remoteDebuggerVSCodeAttachments   | Number | Number of attachments to the remote debugger from VS Code     |
+| Dados                                                       | Tipo   | Notas                                                 |
+| ----------------------------------------------------------- | ------ | ----------------------------------------------------- |
+| databases.remoteDebugger4DRemoteAttachments | Number | Número de anexos ao depurador remoto de um 4D remoto  |
+| databases.remoteDebuggerQodlyAttachments    | Number | Número de anexos ao depurador remoto da Qodly         |
+| databases.remoteDebuggerVSCodeAttachments   | Number | Número de anexos para o depurador remoto do Código VS |
 
 ### Recolhido sempre que PHP execute é chamado
 
 | Dados       | Tipo       | Notas                                                                                           |
 | ----------- | ---------- | ----------------------------------------------------------------------------------------------- |
-| phpCall     | Number     | Nùmero de llamadas a `PHP execute`                                                              |
+| phpCall     | Number     | Número de chamadas para 'PHP execute'                                                           |
 | externalPHP | Parâmetros | True se o cliente efetuar uma chamada para `PHP execute` e utilizar a sua própria versão de php |
 
 ### Recolhido na ligação do cliente
@@ -147,7 +147,7 @@ Uma vez por semana, o ficheiro é automaticamente enviado através da rede para 
 
 > Se o arquivo não pôde ser enviado por algum motivo, é, no entanto, apagado e não é exibida nenhuma mensagem de erro no lado do Servidor 4D.
 
-O ficheiro é enviado para o seguinte endereço de servidor: `https://dcollector.4d.com` (ip: 195.68.52.83).
+O arquivo é enviado para o seguinte endereço de servidor: `https://dcollector.4d.com` (ip: 195.68.52.83).
 
 ## Desativar a coleção de dados em aplicações cliente/servidor geradas
 

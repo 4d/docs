@@ -71,7 +71,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Caminhos de acesso Windows e sequências de escape
 
-A linguagem 4D permite o uso de [sequências de escape] (quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab`.
+A linguagem 4D permite o uso de [sequências de escape](quick-tour.md#escape-sequences). As sequências de fuga começam com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab`.
 
 Uma vez que o carácter `\` também é utilizado como separador nos nomes de caminho no Windows, é necessário introduzir um duplo `\\` nos nomes de caminho do Windows.
 
@@ -114,9 +114,9 @@ As funções de objetos de pasta como [`folder.file()`](../API/FolderClass.md#fi
 ```4d
 var $userImages : 4D.Folder
 var $ok : Boolean
-  //to reference a "Picture" folder within the user documents folder
+//para referenciar uma pasta "Picture" dentro da pasta de documentos do usuário
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para criar uma pasta no ambiente de trabalho
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 

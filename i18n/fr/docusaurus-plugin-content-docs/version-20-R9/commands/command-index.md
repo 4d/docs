@@ -1060,7 +1060,7 @@ title: Index
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
-[`Session info`](session-info.md) - **new 4D 20 R7**<br/>
+[`Session info`](session-info.md) - **nouveau 4D 20 R7**<br/>
 [`Session storage`](session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)<br/>
@@ -1130,7 +1130,7 @@ title: Index
 [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)<br/>
 [`SET USER ALIAS`](../commands-legacy/set-user-alias.md)<br/>
 [`Set user properties`](../commands-legacy/set-user-properties.md)<br/>
-[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **new 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **nouveau 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands-legacy/set-window-rect.md)<br/>
 [`SET WINDOW TITLE`](../commands-legacy/set-window-title.md)<br/>
 [`Shift down`](../commands-legacy/shift-down.md)<br/>
@@ -1278,7 +1278,7 @@ title: Index
 [`WA Evaluate JavaScript`](../commands-legacy/wa-evaluate-javascript.md)<br/>
 [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md)<br/>
 [`WA Forward URL available`](../commands-legacy/wa-forward-url-available.md)<br/>
-[`WA Get context`](../commands/wa-get-context.md) **new 4D 20 R9**<br/>
+[`WA Get context`](../commands/wa-get-context.md) **nouveau 4D 20 R9**<br/>
 [`WA Get current URL`](../commands-legacy/wa-get-current-url.md)<br/>
 [`WA GET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-get-external-links-filters.md)<br/>
 [`WA Get last filtered URL`](../commands-legacy/wa-get-last-filtered-url.md)<br/>
@@ -1294,7 +1294,7 @@ title: Index
 [`WA OPEN WEB INSPECTOR`](../commands-legacy/wa-open-web-inspector.md)<br/>
 [`WA REFRESH CURRENT URL`](../commands-legacy/wa-refresh-current-url.md)<br/>
 [`WA Run offscreen area`](../commands-legacy/wa-run-offscreen-area.md)<br/>
-[`WA SET CONTEXT`](../commands/wa-set-context.md)  **new 4D 20 R9**<br/>
+[`WA SET CONTEXT`](../commands/wa-set-context.md)  **nouveau 4D 20 R9**<br/>
 [`WA SET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-set-external-links-filters.md)<br/>
 [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md)<br/>
 [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)<br/>

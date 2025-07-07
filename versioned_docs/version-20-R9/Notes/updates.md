@@ -21,6 +21,7 @@ Read [**What’s new in 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-20-R9
 - New [4D AIKit component](../aikit/overview.md) enabling interaction with third-party AI APIs.
 - The following VP command callbacks now wait for all 4D custom functions to complete their calculations: [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md), [VP IMPORT FORM BLOB](../ViewPro/commands/vp-import-from-blob.md), [VP IMPORT FROM OBJECT](../ViewPro/commands/vp-import-from-object.md), and [VP FLUSH COMMANDS](../ViewPro/commands/vp-flush-commands.md).
 - New [4D Netkit](https://developer.4d.com/4D-NetKit/) features to manage Google and Microsoft 365 calendars; ability to use the host web server for OAuth 2.0 authentication. 
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) (used for sorting/searching in Japanese language) is now deprecated and its support will be removed in the next release. 
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R9): list of all bugs that have been fixed in 4D 20 R9.
 
 
@@ -105,7 +106,7 @@ Read [**What’s new in 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6
 - New [`$singleton` API](../REST/$singleton.md) to call exposed singleton functions from REST and new [associated privileges](../ORDA/privileges.md).
 - A [new settings button](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) helps you upgrade your project to use "force login" REST mode (the `On REST Authentication` database method is now deprecated).
 - A [new settings tab](../Project/compiler.md#warnings) helps you define warnings generation globally.
-- Several commands, mainly from the "4D Environment" theme, are now thread-safe ([see the full list](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.en.html)), as well as some selectors of the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) commands.   
+- Several commands, mainly from the "4D Environment" theme, are now thread-safe, as well as some selectors of the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) commands.   
 - New [4D-QPDF component](https://github.com/4d/4D-QPDF) that provides the `PDF Get attachments` command to extract attachments from a PDF/A3 document.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6993921.en.html) on doc.4d.com.
@@ -251,7 +252,7 @@ See [**Release Notes for 4D 20.x LTS**](../../version-20/Notes/updates.md).
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
 |BoringSSL|0aa300b|20 R6|Used for QUIC|
-|CEF|131|**20 R8**|Chromium 6778|
+|CEF|131|20 R8|Chromium 6778|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
 |libldap|2.6.7|20 R6||
@@ -260,7 +261,7 @@ See [**Release Notes for 4D 20.x LTS**](../../version-20/Notes/updates.md).
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
 |OpenSSL|3.3.2|20 R7|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
-|PDFWriter|4.3|20|FreeType dependency in 12.2.1|
+|PDFWriter|4.5.11|20 R3||
 |PHP|8.2.4|20||
 |SpreadJS|17.1.0|20 R7|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features|
 |webKit|WKWebView|19||

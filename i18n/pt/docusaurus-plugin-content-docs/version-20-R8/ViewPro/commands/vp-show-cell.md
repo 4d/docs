@@ -19,7 +19,7 @@ title: VP SHOW CELL
 
 O comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary --> verticalmente e horizontalmente reposiciona a visão do *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range of cells as an object to designate the cells to be viewed. The view of the *rangeObj* will be positioned vertically or horizontally (i.e., where *rangeObj* appears) based on the *vPos* and *hPos* parameters. The *vPos* parameter defines the desired vertical position to display the *rangeObj*, and the *hPos* parameter defines the desired horizontal position to display the *rangeObj*.
+Em *rangeObj*, passe um intervalo de células como um objeto para designar as células a serem visualizadas. The view of the *rangeObj* will be positioned vertically or horizontally (i.e., where *rangeObj* appears) based on the *vPos* and *hPos* parameters. The *vPos* parameter defines the desired vertical position to display the *rangeObj*, and the *hPos* parameter defines the desired horizontal position to display the *rangeObj*.
 
 Estão disponíveis os seguintes selectores:
 

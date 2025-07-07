@@ -36,7 +36,7 @@ Cette fonction, très rapide, est particulièrement utile pour prévenir la cré
 Dans une base de données de CD audio, vous souhaitez vérifier, au moment de la saisie d’un nouveau nom de chanteur, si celui-ci n’existe pas déjà dans la base. Comme il peut exister des homonymes, vous ne souhaitez pas toutefois que le champ \[Chanteur\]Nom soit unique. Pour cela, dans le formulaire d’entrée, vous écrivez dans la méthode objet du champ \[Chanteur\]Nom :
 
 ```4d
- If(FORM Event=On Data Change)
+ If(FORM Event.code=On Data Change)
     $EnrgNum:=Find in field([Chanteur]Nom;[Chanteur]Nom)
     If($EnrgNum #-1) // Si ce nom a déjà été saisi
        CONFIRM("Un chanteur de ce nom existe déjà. Voulez-vous visualiser sa fiche ?";"Oui";"Non")

@@ -8,14 +8,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert picture.Params-->
 
-| Parámetros     | Tipo                    |                             | Descripción                                                |
-| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------- |
-| targetObj      | Object                  | &#8594; | Rango o elemento o documento 4D Write Pro                  |
-| picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk |
-| pictureFileObj | 4D.File | &#8594; | A File object representing a picture file. |
-| mode           | Integer                 | &#8594; | Modo de inserción                                          |
-| rangeUpdate    | Integer                 | &#8594; | Range update mode                                          |
-| Resultado      | Object                  | &#8592; | Object referencing the picture                             |
+| Parámetros     | Tipo                    |                             | Descripción                                                      |
+| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------------- |
+| targetObj      | Object                  | &#8594; | Rango o elemento o documento 4D Write Pro                        |
+| picture        | Picture                 | &#8594; | Picture field or variable, or path to picture file on disk       |
+| pictureFileObj | 4D.File | &#8594; | Un objeto File que representa un archivo imagen. |
+| mode           | Integer                 | &#8594; | Modo de inserción                                                |
+| rangeUpdate    | Integer                 | &#8594; | Modo de actualización del rango                                  |
+| Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                           |
 
 <!-- END REF-->
 
@@ -29,23 +29,23 @@ En *targetObj*, puede pasar:
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
 - Un documento 4D Write Pro
 
-For the second parameter, you can pass either:
+Para el segundo parámetro, puede pasar cualquiera de los dos:
 
 - En *picture*:
- - A picture field or variable
- - A string containing a path to a picture file stored on disk, in the system syntax.
-  If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
-- In *pictureFileObj* : a `File` object representing a picture file.
+  - Campo o variable de imagen
+  - A string containing a path to a picture file stored on disk, in the system syntax.
+    If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file.
+- En *pictureFileObj* : un objeto `File` que representa un archivo imagen.
 
-Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. Puede obtener la lista de formatos de imagen disponibles usando el comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used on the picture in the document:
 
-| Constante  | Tipo    | Valor | Comentario                             |
-| ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Integer | 2     | Insert contents at end of target       |
-| wk prepend | Integer | 1     | Insert contents at beginning of target |
-| wk replace | Integer | 0     | Replace target contents                |
+| Constante  | Tipo    | Valor | Comentario                                      |
+| ---------- | ------- | ----- | ----------------------------------------------- |
+| wk append  | Integer | 2     | Insertar el contenido al final del objetivo     |
+| wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
+| wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
 If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted picture is included in the resulting range:
 
@@ -56,7 +56,7 @@ If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted picture is included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 ## Ejemplo 1
 

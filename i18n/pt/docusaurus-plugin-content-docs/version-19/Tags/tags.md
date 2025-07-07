@@ -54,7 +54,7 @@ As etiquetas 4D são interpretadas de forma recursiva: 4D sempre tenta reinterpr
 
 Se o próprio campo de texto `[Mail]Letter_type` contiver uma tag, por exemplo, `<!--#4DSCRIPT/m_Gender-->`, essa tag será avaliada recursivamente após a interpretação da tag 4DHTML.
 
-Esse princípio poderoso atende à maioria das necessidades relacionadas à transformação de texto. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+Esse princípio poderoso atende à maioria das necessidades relacionadas à transformação de texto. Observe, entretanto, que em alguns casos isso também pode permitir a inserção de código malicioso no contexto web, [o que pode ser evitado](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ### Identificadores com tokens
 
@@ -704,7 +704,7 @@ Utilizando a sintaxe $, o seguinte código é validado pelo analisador:
 
 Observe que `$4dtag` and `<--#4dtag -->` não são estritamente equivalentes: diferente de `<--#4dtag -->`, `$4dtag` processamento não interpreta tags 4D [recursivamente](#recursive-processing). `$` tags são sempre avaliadas uma vez e o resultado é considerado como texto simples.
 
-A razão para esta diferença é evitar a injeção de código malicioso. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. No entanto, uma vez que `4DTEXT` não escapa do símbolo `$` , decidimos quebrar o suporte para recursão a fim de evitar injeções maliciosas usando a sintaxe `$4dtag (expressão)`.
+A razão para esta diferença é evitar a injeção de código malicioso. Como [explicado abaixo](../WebServer/templates.md#prevention-of-malicious-code-insertion), é altamente recomendável usar etiquetas `4DTEXT` em vez de `4DHTML` quando manipular texto do usuário para proteger contra reinterpretação indesejada de etiquetas: com `4DTEXT`, caracteres especiais como "<" são escapados, portanto quaisquer tags 4D usando o `<! -#4dtag expressão -->` a sintaxe perderá seu significado específico. No entanto, uma vez que `4DTEXT` não escapa do símbolo `$` , decidimos quebrar o suporte para recursão a fim de evitar injeções maliciosas usando a sintaxe `$4dtag (expressão)`.
 
 Os seguintes exemplos mostram o resultado do processamento dependendo da sintaxe e da tag usada:
 

@@ -104,7 +104,7 @@ O editor de código 4D exibe uma parte da documentação de um método em sua di
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-Se um arquivo chamado `\&#060;MethodName&#062;. d` existe na pasta `\&#060;package&#062;/documentação` , o editor de código é exibido (por prioridade):
+Se um arquivo chamado `\&#060;MethodName&#062;.md` existe na pasta `\&#060;package&#062;/documentação`, o editor de código é exibido (por prioridade):
 
 - Qualquer texto inserido em uma tag de comentário HTML (`<!-- documentação comando -->`) na parte superior do arquivo de markdown.
 

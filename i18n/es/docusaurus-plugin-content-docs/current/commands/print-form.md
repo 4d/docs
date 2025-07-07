@@ -21,13 +21,13 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form** prints fields and variables in a fixed size frame only.
+<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*. It is usually used to print very complex reports that require complete control over the printing process. **Print form** does not do any record processing, break processing or page breaks. These operations are your responsibility. **Print form*** imprime campos y variables solo en un marco de tamaño fijo.
 
 En el parámetro *form*, puede pasar:
 
 - el nombre de un formulario, o
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
-- an object containing a description of the form.
+- un objeto que contiene la descripción del formulario.
 
 Since **Print form** does not issue a page break after printing the form, it is easy to combine different forms on the same page. Thus, **Print form** is perfect for complex printing tasks that involve different tables and different forms. Para forzar un salto de página entre formularios, utilice el comando [PAGE BREAK](../commands-legacy/page-break.md). Para transferir la impresión a la página siguiente de un formulario cuya altura es superior al espacio disponible, invoque el comando [CANCEL](../commands-legacy/cancel.md) antes del comando [PAGE BREAK](../commands-legacy/page-break.md).
 
@@ -87,7 +87,7 @@ Sintaxis:
  height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
-In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. The values entered must be expressed in pixels.
+In this case, the command will print the section included between the *areaStart* and *areaEnd* parameters. Los valores introducidos deben expresarse en píxeles.
 
 **formData**
 
@@ -97,9 +97,9 @@ Para obtener información detallada sobre el objeto de datos del formulario, con
 
 **Valor devuelto**
 
-The value returned by **Print form** indicates the height of the printable area. This value will be automatically taken into account by the [Get printed height](../commands-legacy/get-printed-height.md) command.
+The value returned by **Print form** indicates the height of the printable area. Este valor será tomado en cuenta automáticamente por el comando [Get printed height](../commands-legacy/get-printed-height.md).
 
-The printer dialog boxes do not appear when you use **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
+Las cajas de diálogo de la impresora no aparecen cuando se utiliza **Print form**. The report does not use the print settings that were assigned to the form in the Design environment. There are two ways to specify the print settings before issuing a series of calls to **Print form**:
 
 - Llamar a [PRINT SETTINGS](../commands-legacy/print-settings.md). In this case, you let the user choose the settings.
 - Llame a [SET PRINT OPTION](../commands-legacy/set-print-option.md) y [GET PRINT OPTION](../commands-legacy/get-print-option.md). In this case, print settings are specified programmatically.
@@ -108,11 +108,11 @@ The printer dialog boxes do not appear when you use **Print form**. The report d
 
 **Warning:** If the command is called in the context of a printing job opened with [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), you must NOT call [PAGE BREAK](../commands-legacy/page-break.md) for the last page because it is automatically printed by the [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) command. Si llama a [PAGE BREAK](../commands-legacy/page-break.md) en este caso, se imprime una página en blanco.
 
-This command prints external areas and objects (for example, 4D Write or 4D View areas). The area is reset for each execution of the command.
+This command prints external areas and objects (for example, 4D Write or 4D View areas). El área se reinicializa cada vez que se ejecuta el comando.
 
 **Warning:** Subforms are not printed with **Print form**. Para imprimir sólo un formulario con dichos objetos, utilice [PRINT RECORD](../commands-legacy/print-record.md) en su lugar.
 
-**Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
+**Print form** genera sólo un [evento [`On Printing Detail`](../Events/onPrintingDetail.md) para el método formulario.
 
 **4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. En este contexto:
 
@@ -164,7 +164,7 @@ El método del formulario:
  End if
 ```
 
-The code that calls the dialog then prints its body:
+El código que llama al diálogo imprime su cuerpo:
 
 ```4d
  $formData:=New object

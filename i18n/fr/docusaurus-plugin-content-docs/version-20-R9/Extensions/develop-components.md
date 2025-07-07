@@ -5,7 +5,7 @@ title: Développement de composants
 
 Un composant 4D est un ensemble de fonctions, méthodes et de formulaires 4D représentant une ou plusieurs fonctionnalité(s) qu’il est possible [d’installer et d'utiliser dans des applications 4D](Concepts/components.md). Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des applications 4D.
 
-Vous pouvez développer des composants 4D pour vos propres besoins et les garder privés. Vous pouvez également [partager vos composants avec la communauté 4D](https://github.com/topics/4d-component).
+Vous pouvez développer des composants 4D pour vos propres besoins et les garder privés. Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos composants, de préférence sur la [plateforme GitHub](https://github.com/topics/4d-component).
 
 ## Définitions
 
@@ -72,7 +72,7 @@ En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelable
 
 Les méthodes projet partagée peuvent être appelées dans le code du projet hôte (mais elles ne peuvent pas être modifiées dans l'éditeur de code du projet hôte). Ces méthodes constituent les **points d’entrée** du composant.
 
-A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. Pour ce faire, vous devez explicitement désigner les méthodes projet du projet hôte que vous souhaitez rendre accessibles aux composants (dans les propriétés de la méthode, cochez la case **Partagée entre composants et projet hôte**).
+A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte.
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
@@ -212,7 +212,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et le projet 
 - La commande `Get pointer` ne retournera pas un pointeur vers une variable du projet hôte si elle est appelée depuis un composant et inversement.
 
 - L'architecture des composants permet la coexistence, au sein du même projet interprété, de composants à la fois interprétés et compilés (inversement, seuls des composants compilés peuvent être utilisés dans un projet compilé). L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété.
- Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans le même projet hôte.
+  Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans le même projet hôte.
 
 - Si le composant C définit la variable `mavarC`, le composant I peut accéder à la valeur de cette variable en utilisant le pointeur `->mavarC`.
 
@@ -434,4 +434,4 @@ Pour assurer la protection du code d'un composant, [compilez et générerez](Des
 
 ## Sharing your components on GitHub
 
-Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos composants, de préférence sur la [plateforme GitHub](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.
+Vous pouvez également [partager vos composants avec la communauté 4D](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.

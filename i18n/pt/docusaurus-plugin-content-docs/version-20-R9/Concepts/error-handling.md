@@ -33,7 +33,7 @@ Em 4D, todos os erros podem ser capturados e tratados por métodos específicos 
 
 Uma vez instalados, os manipuladores de erros são automaticamente chamados em modo interpretado ou compilado em caso de erro na aplicação 4D ou num dos seus componentes. Um manipulador de erros diferente pode ser chamado em função do contexto de execução (ver abaixo).
 
-To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command with the project method name and (optionnally) scope as parameters. Por exemplo:
+Para *instalar* um método de projeto de tratamento de erros, você só precisa chamar o comando [`ON ERR CALL`](../commands-legacy/on-err-call.md) com o nome do método do projeto e (opcionalmente) o escopo como parâmetros. Por exemplo:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Instala o método de gestão de erros
@@ -85,10 +85,10 @@ Within the custom error method, you have access to several pieces of information
 
 - variáveis sistema (\*):
 
- - `Erro` (inteiro longo): código de erro
- - `Error line` (entero largo): número de línea del método que ha provocado el error
- - `Linha de erro` (longin): número de linha no método que desencadeou o erro
- - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
+  - `Erro` (inteiro longo): código de erro
+  - `Error line` (entero largo): número de línea del método que ha provocado el error
+  - `Linha de erro` (longin): número de linha no método que desencadeou o erro
+  - `Fórmula de erro` (texto): fórmula do código 4D (texto bruto) que está na origem do erro.
 
 :::info
 
@@ -149,7 +149,7 @@ Try (expression) : any | Undefined
 
 *expressão* pode ser qualquer expressão válida.
 
-Se ocorrer um erro durante sua execução, ele será interceptado e nenhuma caixa de diálogo de erro será exibida, independentemente de um [método de tratamento de erros] (#installing-an-error-handling-method) ter sido instalado ou não antes da chamada para `Try()`. Se *expressão* retorna um valor, `Try()` retorna o último valor avaliado, caso contrário, ele retorna `Undefined`.
+Se ocorrer um erro durante sua execução, ele será interceptado e nenhuma caixa de diálogo de erro será exibida, independentemente de um [método de tratamento de erros](#installing-an-error-handling-method) ter sido instalado ou não antes da chamada para `Try()`. Se *expressão* retorna um valor, `Try()` retorna o último valor avaliado, caso contrário, ele retorna `Undefined`.
 
 Você pode lidar com o(s) erro(s) usando o comando [`Últimos erros`](../commands-legacy/last-errors.md). Se a *expressão* lançar um erro em uma pilha de chamadas `Try()`, o fluxo de execução será interrompido e retornará ao último `Try()` executado (o primeiro encontrado na pilha de chamadas).
 

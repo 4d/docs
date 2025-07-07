@@ -36,7 +36,6 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
 
-You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) or [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) commands.
 
 #### JSON Grammar
 
@@ -49,6 +48,12 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 [Drop-down List](dropdownList_Overview.md) -
 [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+
+#### Commands
+
+ [OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
+
+
 
 ---
 
@@ -65,6 +70,7 @@ List of static values to use as labels for the tab control object.
 #### Objects Supported
 
 [Tab Control](tabControl.md)
+
 
 ---
 
@@ -85,6 +91,10 @@ Specifies a variable or expression that will be assigned the collection element/
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -109,6 +119,10 @@ Specifies a variable or expression that will be assigned a longint indicating th
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -255,6 +269,10 @@ All database tables can be used, regardless of whether the form is related to a 
 
 [List Box](listbox_overview.md)
 
+#### Commands
+
+[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source.md) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source.md)
+
 ---
 
 ## Save as
@@ -309,6 +327,10 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 [List Box](listbox_overview.md)
 
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Selection Name
@@ -328,3 +350,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+#### Commands
+
+[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source.md) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source.md)
+
+

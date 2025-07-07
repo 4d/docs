@@ -29,7 +29,7 @@ The <code>On Web Connection</code> database method is automatically called when 
 
 Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no llamará al método base si la página "c.html" existe en la subcarpeta "a/b" del [WebFolder](webServerConfig.md#root-folder).
 
-> The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
+> O pedido deveria ter sido aceite anteriormente pelo método banco de dados [`On Web Authentication`](authentication.md#on-web-authentication) (se existir) e o servidor web deve ser lançado.
 
 ### Sintaxe
 
@@ -54,7 +54,7 @@ You must declare these parameters:
 
 ```
 
-> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) não é permitido e encerra o processamento do método.
+> Chamando um comando 4D que exibe um elemento de interface (`DIALOG`, `ALERT`, etc.) não é permitido e encerra o processamento do método.
 
 ### $url - URL extra data
 
@@ -219,7 +219,7 @@ O servidor Web 4D permite que você recupere dados enviados através de solicita
 
 Quando o servidor web recebe uma solicitação com dados no cabeçalho ou no URL, 4D pode recuperar os valores de qualquer objeto HTML que ele contém. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file.md) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), where the user enters or modifies values, then clicks on the validation button.
 
-In this case, 4D can retrieve the values of the HTML objects found in the request using the [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md) command. El comando `WEB GET VARIABLES` recupera los valores como texto.
+Neste caso, 4D pode recuperar os valores dos objetos HTML encontrados na solicitação usando o [comando [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md). El comando `WEB GET VARIABLES` recupera los valores como texto.
 
 Considere o seguinte código fonte da página HTML:
 
@@ -275,7 +275,7 @@ As principais características desta página são:
 - Incluye tres botones **Submit**: `vsbLogOn`, `vsbRegister` y `vsbInformation`.
 - Cuando se hace clic en **Log On**, el envío del formulario se procesa primero por la función de JavaScript `LogOn`. Se nenhum nome for inserido, o formulário nem é enviado para 4D, e um alerta JavaScript é exibido.
 - El formulario tiene un método POST 4D así como un script Submit (*GetBrowserInformation*) que copia las propiedades del navegador a los cuatro objetos ocultos cuyos nombres empiezan por *vtNav_App*.
- También incluye el objeto `vtUserName`.
+  También incluye el objeto `vtUserName`.
 
 Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace clic en uno de los botones del formulario HTML.
 

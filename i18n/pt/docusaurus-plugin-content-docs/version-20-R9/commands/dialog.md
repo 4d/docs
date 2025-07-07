@@ -60,7 +60,7 @@ A caixa de diálogo é fechada pelo usuário com uma ação de "aceitação" (ac
 Lembre-se de que a validação não é igual a gravação: se o diálogo incluir campos, você deve chamar explicitamente o comando [SAVE RECORD](../commands-legacy/save-record.md) para salvar todos os dados que foram modificados.
 
 Se você passar o parâmetro opcional *\**, o formulário será carregado e exibido na última janela aberta do processo atual e o comando terminará sua execução deixando o formulário ativo na tela.\
-Esse formulário reage "normalmente" às ações do usuário e é fechado usando uma ação padrão ou quando o código 4D relacionado ao formulário (método de objeto ou método de formulário) chama o comando [CANCEL] (../commands-legacy/cancel.md) ou [ACCEPT] (../commands-legacy/accept.md). Se o processo atual for encerrado, os formulários criados dessa forma serão automaticamente fechados da mesma forma como se um comando [CANCEL](../commands-legacy/cancel.md) tivesse sido chamado. Esse modo de abertura é particularmente útil para exibir uma paleta flutuante com um documento, sem necessariamente exigir outro processo.
+Esse formulário reage "normalmente" às ações do usuário e é fechado usando uma ação padrão ou quando o código 4D relacionado ao formulário (método de objeto ou método de formulário) chama o comando [CANCEL](../commands-legacy/cancel.md) ou [ACCEPT](../commands-legacy/accept.md). Se o processo atual for encerrado, os formulários criados dessa forma serão automaticamente fechados da mesma forma como se um comando [CANCEL](../commands-legacy/cancel.md) tivesse sido chamado. Esse modo de abertura é particularmente útil para exibir uma paleta flutuante com um documento, sem necessariamente exigir outro processo.
 
 **Notas:**
 

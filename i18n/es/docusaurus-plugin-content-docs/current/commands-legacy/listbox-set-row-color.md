@@ -34,9 +34,9 @@ En *fila*, pase el número de la fila en la que desea aplicar el nuevo color.
 
 **Nota:** El comando no tiene en cuenta ningún estado oculto/visible de las filas del listbox.
 
-En *color*, pase un valor de color RGB. Para obtener más información acerca de los colores RGB, consulte la descripción del comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Si desea que la fila herede el conjunto de colores para el nivel más alto, usted puede pasar la constante lk inherited en el parámetro *color*.
+En *color*, pase un valor de color RGB. Para obtener más información acerca de los colores RGB, consulte la descripción del comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Si desea que la fila herede el conjunto de colores para el nivel más alto, usted puede pasar la constante`lk inherited` en el parámetro *color*.
 
-En el parámetro *tipoColor*, pase las constantes lk background color o lk font color para indicar si desea aplicar el color para el fondo o para el color de fuente de la fila. Si omite este parámetro, el color se aplica para el color de fuente.
+En el parámetro *tipoColor*, pase las constantes `lk background color`  o `lk font color`  para indicar si desea aplicar el color para el fondo o para el color de fuente de la fila. Si omite este parámetro, el color se aplica para el color de fuente.
 
 Este comando modifica los valores que se encuentran en el array de colores que pueden haberse definido para la columna del listbox. Si estos arreglos no están ya definidos, el comando crea dinámicamente arrays que puede acceder mediante el comando [LISTBOX Get array](listbox-get-array.md).  
   

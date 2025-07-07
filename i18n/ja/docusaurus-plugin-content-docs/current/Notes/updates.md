@@ -9,10 +9,24 @@ title: リリースノート
 
 #### ハイライト
 
+- Handling of [ORDA events on data](../ORDA/orda-events.md).
 - [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) 関数の[`options`](../API/TCPConnectionClass.md#options-parameter) 引数に新しい`connectionTimeout` オプションが追加されました。
+- New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - 4D 内でのUUID は**バージョン7**で生成されるようになりました。 以前の4D のリリースでは、バージョン4で生成されていました。
+- [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
+- Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
+- You can now [associate a class](../Develop/field-properties.md) to an object field in the structure editor.
+- Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
 - 4Dランゲージ:
     - 統一性のため、[`Create entity selection`](../commands/create-entity-selection.md) コマンドおよび [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) コマンドは、["4D 環境"](../commands/theme/4D_Environment.md) テーマから ["Selection"](../commands/theme/Selection.md) テーマへと移動しました。
+    - 新しい [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) および [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) コマンドを使用して、フォームオブジェクトに対して`Formula` オブジェクトを割り当て、または読み出しができるようになります。
+    - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) および [`LISTBOX Get property`](../commands/listbox-get-property.md) は3つの新しい定数をサポートするようになりました: `lk current item`、`lk current item position`、および `lk selected items expression` です。
+
+#### 動作の変更
+
+- Windows 上では、印刷しか想定していない(つまりスクリーン上で使用不可能な)カレントプリンターフォントは、4D の起動時にはロードされないようになりました。
+- The *MeCab* library has been removed. This change only affects the processing of Japanese text.
+- When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
 
 ## 4D 20 R9
 
@@ -20,6 +34,7 @@ title: リリースノート
 
 #### ハイライト
 
+- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - ラベルウィザードは、[ラベルデザインエリア](../Desktop/labels.md#ラベルプレビューエリア) においてフォーミュラを追加または編集する際にフォーミュラエディターを使用するようになりました。
 - TCP サーバー接続を作成するための新しい[`TCPListener`](../API/TCPListenerClass.md) クラス。関連クラスに新しいプロパティが追加されました。[`TCPConnection`](../API/TCPConnectionClass.md) クラスに`address`、`listener` および `port`。[`TCPEvent`](../API/TCPEventClass.md) クラスに `ip` および `port`。
@@ -113,7 +128,7 @@ title: リリースノート
 - 公開されたシングルトン関数を REST で呼び出すための新しい [`$singleton` API](../REST/$singleton.md) と、それに伴う新しい [権限](../ORDA/privileges.md) が追加されました。
 - プロジェクトを "強制ログイン" RESTモードにアップグレードするための [新しい設定ボタン](../settings/web.md#dsauthentify-関数によって-rest認証を有効化する) が追加されました (`On REST Authentication`データベースメソッドは非推奨となりました)。
 - [新しい設定タブ](../Project/compiler.md#警告) を使用して、警告の生成をグローバルに定義できます。
-- いくつかのコマンド (主に "4D環境" テーマのもの) がスレッドセーフになりました ([完全なリストはこちらを参照ください](https://doc.4d.com/4Dv20R6/4D/Preemptive_6957385.999-2878208.ja.html))。また、[`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドの一部のセレクターもスレッドセーフになりました。
+- 主に"4D 環境"テーマからのコマンドを含めたいくつかのコマンドがスレッドセーフになったとともに、[`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドのいくつかもセレクターもスレッドセーフとなりました。
 - PDF/A3 ドキュメントから添付ファイルを抽出する `PDF Get attachments` コマンドを提供する新しい [4D-QPDF コンポーネント](https://github.com/4d/4D-QPDF)。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6957482.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R6/4D/20-R6/What-s-new.901-6993921.ja.html) ページ。
@@ -229,20 +244,22 @@ title: リリースノート
 
 ## ライブラリの一覧
 
-| ライブラリ     | 現在のバージョン                               | 更新された 4D バージョン | 説明                                                                                                                                  |
-| --------- | -------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL | 0aa300b                                | 20 R6          | QUIC に使用                                                                                                                            |
-| CEF       | 131                                    | **20 R8**      | Chromium 6778                                                                                                                       |
-| Hunspell  | 1.7.2  | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                                              |
-| ICU       | 73.2                   | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                                                    |
-| libldap   | 2.6.7  | 20 R6          |                                                                                                                                     |
-| libsasl   | 2.1.28 | 20             |                                                                                                                                     |
-| Libuv     | 1.48                   | 20 R6          | QUIC に使用                                                                                                                            |
-| libZip    | 1.9.2  | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                               |
-| LZMA      | 5.4.1  | 20             |                                                                                                                                     |
-| OpenSSL   | 3.3.2  | 20 R7          | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の[動作の変更](#動作の変更)参照。 リリース v20R4 の[動作の変更](#動作の変更)参照。 リリース v20R4 の[動作の変更](#動作の変更)参照。 |
-| PDFWriter | 4.3                    | 20             | 12.2.1 で FreeType依存                                                                                 |
-| PHP       | 8.2.4  | 20             |                                                                                                                                     |
-| SpreadJS  | 17.1.0 | 20 R7          | 新機能の概要については、[このブログ記事](https://blog.4d.com/ja/4d-view-pro-whats-new-in-4d-20-r7/) を参照ください。                                           |
-| webKit    | WKWebView                              | 19             |                                                                                                                                     |
-| Zlib      | 1.2.13 | 20             |                                                                                                                                     |
+| ライブラリ     | 現在のバージョン                                | 更新された 4D バージョン | 説明                                                                                                                                  |
+| --------- | --------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| BoringSSL | 9295969                                 | **20 R10**     | QUIC に使用                                                                                                                            |
+| CEF       | 131                                     | 20 R8          | Chromium 6778                                                                                                                       |
+| Hunspell  | 1.7.2   | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                                              |
+| ICU       | 73.2                    | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                                                    |
+| libldap   | 2.6.7   | 20 R6          |                                                                                                                                     |
+| libsasl   | 2.1.28  | 20             |                                                                                                                                     |
+| Liblsquic | 4.2.0   | **20 R10**     | QUIC に使用                                                                                                                            |
+| Libuv     | 11.51.0 | **20 R10**     | QUIC に使用                                                                                                                            |
+| libZip    | 1.9.2   | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                               |
+| LZMA      | 5.4.1   | 20             |                                                                                                                                     |
+| ngtcp2    | 1.13                    | **20 R10**\*\* | QUIC に使用                                                                                                                            |
+| OpenSSL   | 3.3.2   | 20 R7          | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の[動作の変更](#動作の変更)参照。 リリース v20R4 の[動作の変更](#動作の変更)参照。 リリース v20R4 の[動作の変更](#動作の変更)参照。 |
+| PDFWriter | 4.5.11  | 20 R3          |                                                                                                                                     |
+| PHP       | 8.2.4   | 20             |                                                                                                                                     |
+| SpreadJS  | 17.1.0  | 20 R7          | 新機能の概要については、[このブログ記事](https://blog.4d.com/ja/4d-view-pro-whats-new-in-4d-20-r7/) を参照ください。                                           |
+| webKit    | WKWebView                               | 19             |                                                                                                                                     |
+| Zlib      | 1.2.13  | 20             |                                                                                                                                     |

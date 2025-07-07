@@ -63,6 +63,8 @@ O datastore é o objeto de interface para um banco de dados. Constrói uma repre
 * O modelo contém e descreve todas as dataclasses que compõem o datastore. É independente do próprio banco de dados subjacente.
 * Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. Por exemplo, nomes, endereços e datas de nascimento dos funcionários são peças de dados com os quais você pode trabalhar em um datastore.
 
+Um objeto datastore é manipulado por meio de funções e propriedades da classe [**DataStore**](../API/DataStoreClass.md).
+
 Quando manipulado pelo código, o datastore é um objeto cujas propriedades são todas as [dataclasses](#dataclass) que foram especificamente expostas.
 
 4D permite lidar com os seguintes datastores:
@@ -91,6 +93,8 @@ O datastore principal (padrão) está sempre disponível através do comando `ds
 ### Dataclass
 
 Uma dataclass é o equivalente a uma tabela. É usado como um modelo de objeto e referir-se a todos os campos como atributos, incluindo atributos relativo (atributos construídos sobre as relações entre os dataclasses). Os atributos relacionais podem ser utilizados em consultas como qualquer outro atributo.
+
+Um objeto dataclass é manipulado por meio de funções e propriedades da classe [**DataClass**](../API/DataClassClass.md).
 
 Todas as dataclasses em um projeto 4D estão disponíveis como uma propriedade do armazenamento de dados `ds`. Para datastores remotos acessados através `Open datastore` ou [Solicitações REST](REST/gettingStarted.md), a opção **Expor como recurso REST** deve ser selecionada no nível de estrutura 4D para cada tabela exposta que você quer ser exposta como dataclass no datastore.
 
@@ -135,7 +139,7 @@ As propriedades de dataclass são objetos de atributo que descrevem os campos ou
  $revenuesAttribute:=ds. Company["revenues"] //alternate way
 ```
 
-Esse código atribui a `$nameAttribute` e `$revenuesAttribute` faz referência aos atributos name e revenues da classe `Company`. Essa sintaxe NAO devolve valores mantidos dentro do atributo, mas sim devolve referências aos próprios atributos. Para manejar os valores, é necessário passar por [Entidades](#entity).
+Esse código atribui a `$nameAttribute` e `$revenuesAttribute` faz referência aos atributos name e revenues da classe `Company`. Essa sintaxe NÃO retorna valores mantidos dentro do atributo, mas, em vez disso, retorna referências aos próprios atributos [com suas **propriedades de atributo**](../API/DataClassClass.md#attributename). Para manejar os valores, é necessário passar por [Entidades](#entity).
 
 Todos os campos elegíveis em uma tabela estão disponíveis como atributos de sua [dataclass](#dataclass) principal. Para datastores remotos acessados através `Open datastore` ou [Solicitações REST](REST/gettingStarted.md), a opção **Expor como recurso REST** deve ser selecionada no nível de estrutura 4D para cada campo que você deseja ser exposto como um atributo de dataclass.
 
@@ -173,6 +177,8 @@ Uma entidade é o equivalente a um registo. Na verdade, é um objeto que referir
 
 O objetivo da entidade é gerir dados (criar, atualizar, apagar). Quando uma referência de entidade é obtida por uma seleção de entidade, ela também retém informações sobre a seleção de entidade, o que permite a iteração por meio da seleção.
 
+An entity object is handled through functions and properties of the [**Entity**](../API/EntityClass.md) class.
+
 O objeto entidade em si não pode ser copiado como um objeto:
 
 ```4d
@@ -191,7 +197,10 @@ As propriedades da entidade são, no entanto, enumeráveis:
 
 Uma seleção de entidade é um objeto contendo uma ou mais referência(s) a entidades pertencentes à mesma dataclass. É normalmente criado como resultado de uma consulta ou devolvido a partir de um atributo de relação. Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
+An entity selection object is handled through functions and properties of the [**EntitySelection**](../API/EntitySelectionClass.md) class.
+
 Exemplo:
+
 
 ```4d
 var $e : cs. EmployeeSelection //declares a $e object variable of the EmployeeSelection class type

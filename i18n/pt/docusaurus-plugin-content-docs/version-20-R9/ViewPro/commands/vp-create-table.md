@@ -28,7 +28,7 @@ title: VP CREATE TABLE
 
 ## Descrição
 
-O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->cria uma tabela no intervalo especificado<!-- END REF -->. É possível criar uma tabela em um intervalo de células para facilitar o gerenciamento e a análise de um grupo de dados relacionados. Em geral, uma tabela contém dados relacionados em linhas e colunas e aproveita um [contexto de dados] (vp-set-data-context).
+O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->cria uma tabela no intervalo especificado<!-- END REF -->. É possível criar uma tabela em um intervalo de células para facilitar o gerenciamento e a análise de um grupo de dados relacionados. Em geral, uma tabela contém dados relacionados em linhas e colunas e aproveita um [contexto de dados](vp-set-data-context).
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
@@ -40,12 +40,12 @@ Em *tableName*, passe um nome para a tabela. O nome deve:
 - incluir pelo menos 5 caracteres
 - não incluir espaços ou começar com um número
 
-Em *source*, você pode passar um nome de propriedade de um [contexto de dados] (vp-set-data-context.md) para exibir seus dados na tabela. Isto liga a tabela ao contexto de dados. Quando o contexto de dados é atualizado, os dados exibidos na tabela são atualizados de acordo. A propriedade *source* deve conter uma coleção de objetos e cada elemento representa uma linha.
+Em *source*, você pode passar um nome de propriedade de um [contexto de dados](vp-set-data-context.md) para exibir seus dados na tabela. Isto liga a tabela ao contexto de dados. Quando o contexto de dados é atualizado, os dados exibidos na tabela são atualizados de acordo. A propriedade *source* deve conter uma coleção de objetos e cada elemento representa uma linha.
 
 - Se você não especificar uma *fonte*, o comando cria uma tabela vazia com o tamanho definido em *rangeObj*.
 - Se a *fonte* especificada não puder ser totalmente exibida no documento, nenhuma tabela será criada.
 
-In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set.
+Na classe *options*, passe um objeto da [classe `cs.ViewPro.TableOptions`](../classes.md#tableoptions) que contém as propriedades da tabela a serem definidas.
 
 Dentro do objeto *opções*, a coleção *tableColumns* determina a estrutura das colunas da tabela. O comprimento da coleção *tableColumns* deve ser igual à contagem de colunas de intervalo:
 

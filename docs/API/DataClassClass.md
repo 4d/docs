@@ -68,6 +68,7 @@ Returned attribute objects contain the following properties:
 |relatedDataClass|Text|Name of the dataclass related to the attribute. Returned only when `.kind` = "relatedEntity" or "relatedEntities".|
 |type|Text|Conceptual value type of the attribute, useful for generic programming. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-types).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li>|
 |unique|Boolean|True if the attribute value must be unique. Not returned if `.kind` = "relatedEntity" or "relatedEntities".|
+|classID| Text | Available only if `.type = "object"` and a class has been specified in the structure editor. </br>Returns the name of the class used to instantiate the object. |
 
 :::tip
 
@@ -184,7 +185,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 ||||Does not require any parameters|

@@ -49,9 +49,9 @@ $4d.HelloWorld();
 
 > **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
 
-### Controlling $4d Access
+### Controlar el acceso a $4d
 
-With [`WA SET CONTEXT`](../commands/wa-set-context.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+Con [`WA SET CONTEXT`](../commands/wa-set-context.md), los desarrolladores pueden controlar lo que puede estar disponible a través de `$4d` desde un área Web. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 
 Para verificar el contexto definido actualmente, utilice [`WA Get context`](../commands/wa-get-context.md).
 
@@ -66,7 +66,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 ```
 
 - `param1...paramN`: puede pasar tantos parámetros como necesite al método 4D.
- Estos parámetros pueden ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
+  Estos parámetros pueden ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
 
 - `function(result)`: función a pasar como último argumento. Esta función "callback" se llama de forma sincrónica una vez que el método 4D termina de ejecutarse. Recibe el parámetro `result`.
 
@@ -181,7 +181,7 @@ Cuando se ejecuta el formulario, las funciones estándar de la interfaz del nave
 - **Comandos menú Edición**: cuando el área web tiene el foco, los comandos del menú **Edición** pueden utilizarse para realizar acciones como copiar, pegar, seleccionar todo, etc., según la selección.
 - **Menú contextual**: es posible utilizar el [menú contextual] estándar (properties_Entry.md#context-menu) del sistema con el área web. La visualización del menú contextual puede controlarse utilizando el comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 - **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D.
- Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor muestra un icono de "prohibido" ![](../assets/en/FormObjects/forbidden.png). Tiene que usar la instrucción `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para mostrar un icono "drop" y generar el evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). En este evento, puede llamar al comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) o definir la [variable URL](properties_WebArea.md#url) en respuesta a un soltar del usuario.
+  Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor muestra un icono de "prohibido" ![](../assets/en/FormObjects/forbidden.png). Tiene que usar la instrucción `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para mostrar un icono "drop" y generar el evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). En este evento, puede llamar al comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) o definir la [variable URL](properties_WebArea.md#url) en respuesta a un soltar del usuario.
 
 > Las funciones de arrastrar y soltar descritas anteriormente no son compatibles con las áreas web que utilizan el [motor de renderizado del sistema macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -209,15 +209,15 @@ Puede visualizar y utilizar un inspector web dentro de las áreas web de sus for
 Para mostrar el inspector Web, puede ejecutar el comando `WA OPEN WEB INSPECTOR` o utilizar el menú contextual del área web.
 
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br/>
- This command can be used directly with onscreen (form object) and offscreen web areas.
+  This command can be used directly with onscreen (form object) and offscreen web areas.
 
 - **Use the web area context menu**<br/>
- This feature can only be used with onscreen web areas and requires that the following conditions are met:
- - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
- - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
- ```4d
- 	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
- ```
+  This feature can only be used with onscreen web areas and requires that the following conditions are met:
+  - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
+  - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
+  ```4d
+  	WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
+  ```
 
 > Con el [motor de renderizado del sistema de Windows](properties_WebArea.md#use-embedded-web-rendering-engine), un cambio en esta preferencia requiere que se tenga en cuenta una acción de navegación en el área (por ejemplo, una actualización de la página).
 

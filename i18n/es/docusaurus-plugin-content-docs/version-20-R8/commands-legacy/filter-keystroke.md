@@ -38,9 +38,9 @@ Utilizando el siguiente código:
 ```4d
   // Método de objeto del área editable miObjeto
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        miObjeto:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Position(Keystroke;"0123456789")>0)
           FILTER KEYSTROKE("*")
        End if
@@ -56,10 +56,10 @@ Este código define el comportamiento de un área de entrada de contraseña, en 
 ```4d
   // Método de objeto del área editable vsContraseña
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsContraseña:=""
        vsContraseñaReal:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        Manejo keystroke(->vsContraseña;->vsContraseñaReal)
        If(Position(Keystroke;Char(Backspace)+Char(Left arrow key)+
           Char(Right arrow key)+Char(Up arrow key)+Char(Down arrow key))=0)
@@ -150,13 +150,13 @@ Una vez haya añadido estos métodos de proyecto a su base, puede utilizarlos de
 ```4d
   // Método de objeto del área editable vsDescripcion
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsDescripcion:=""
        vsShadowDescripcion:=""
   // Establecer la lista de caracteres “prohibidos” a tratar como teclas especiales
   // ( acá, en este ejemplo, sólo la tecla Help es filtrada)
        vsSpecialKeys:=Char(HelpKey)
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        $vsKey:=Tecleado sombra(->vsDescripcion;->vsShadowDescripcion;vsSpecialKeys)
        Case of
           :(Character code($vsKey)=Help key)

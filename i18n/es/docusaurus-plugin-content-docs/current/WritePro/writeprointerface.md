@@ -9,10 +9,10 @@ Un desarrollador 4D puede implementar fácilmente estas paletas en su aplicació
 
 La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual *Diseño 4D*.
 
-You will find below:
+Encontrará a continuación:
 
 - the Table Wizard configuration documentation,
-- the integrated A.I. documentation.
+- la I.A. integrada. documentation.
 
 ## Asistente de tablas
 
@@ -299,7 +299,7 @@ Por cada atributo usado en su archivo JSON (encabezado, datos, arrastre, resumen
 
 [4D Write Pro - Asistente para tablas (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
 
-## Integrated AI
+## IA Integrada
 
 You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application.
 
@@ -328,7 +328,7 @@ The AI dialog box is available by clicking on a button in the 4D Write Pro inter
 To display the AI dialog box button, you need to:
 
 1. Obtener una clave API del [sitio web OpenAI](https://openai.com/api/).
-2. Execute the following 4D code:
+2. Ejecutar el siguiente código 4D:
 
 ```4d
 
@@ -338,7 +338,7 @@ WP SetAIKey ("<Your OpenAI Key>") //
 
 :::note
 
-No checking is done on the OpenAI key validity. Si no es válida, la casilla *chatGPT* permanecerá vacía.
+No se comprueba la validez de la llave OpenAI. Si no es válida, la casilla *chatGPT* permanecerá vacía.
 
 :::
 
@@ -351,7 +351,7 @@ A continuación, aparece el botón **I.A**:
 
 Click on the button to display the AI dialog box.
 
-### AI dialog box
+### Diálogo IA
 
 The 4D Write Pro AI dialog box allows a straightforward interaction between the chat area and the 4D Write Pro document.
 
@@ -381,7 +381,7 @@ Default translation actions are based upon the current 4D default configuration 
 
 #### Copy buttons
 
-These buttons propose basic interactions between the chat area, the underlying 4D Write Pro document, and the clipboard:
+Estos botones proponen interacciones básicas entre el área de chat, el documento subyacente de 4D Write Pro y el portapapeles:
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
@@ -398,7 +398,7 @@ The chat box uses the Markdown language to format text. Basic styles such as bol
 
 #### Área de chat
 
-The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
+The Chat area displays the whole interaction between you and the AI. Puede desplazarse y seleccionar la parte que desee.
 
 To empty this area, you can click on the Erase button of the History area (resets the window and all interactions).
 

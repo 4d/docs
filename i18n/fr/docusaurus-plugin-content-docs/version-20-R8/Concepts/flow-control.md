@@ -9,10 +9,10 @@ Quelle que soit la simplicité ou la complexité d’une méthode ou d'une fonct
 - **Conditionnelle** : une structure conditionnelle permet aux méthodes de tester une condition et d’exécuter des séquences d’instructions différentes en fonction du résultat. La condition est une expression booléenne, c'est-à-dire une expression qui est évaluée à vrai ou faux. La condition est une expression booléenne, c'est-à-dire une expression qui est évaluée à vrai ou faux. Une structure conditionnelle est la structure [`If...Else...End if`](#ifelseend-if), qui dirige le flux du programme le long de l'une des deux voies.
 - **Répétitive** : Il est très courant, lorsque vous écrivez des méthodes, de rencontrer des cas où vous devez répéter une séquence d’instructions un certain nombre de fois. Pour traiter ces besoins, le langage 4D vous propose plusieurs structures répétitives :
 
- - [`While...End while`](#whileend-while)
- - [`Repeat...Until`](#repeatuntil)
- - [`For...End for`](#forend-for)
- - [`For each...End for each`](#for-eachend-for-each)
+  - [`While...End while`](#whileend-while)
+  - [`Repeat...Until`](#repeatuntil)
+  - [`For...End for`](#forend-for)
+  - [`For each...End for each`](#for-eachend-for-each)
 
 Les boucles sont contrôlées de deux manières : soit elles bouclent jusqu'à ce qu'une condition soit remplie, soit elles bouclent un certain nombre de fois. Chaque structure répétitive peut être utilisée de l’une ou l’autre manière, mais les boucles `While` et `Repeat` sont mieux adaptées à la répétition jusqu’à ce qu’une condition soit remplie, alors que les boucles `For` sont mieux adaptées à la répétition  `For each...End for each`, destinée à effectuer des boucles dans les objets et les collections, permet de combiner les deux manières. `For each...End for each`, destinée à effectuer des boucles dans les objets et les collections, permet de combiner les deux manières.
 
@@ -177,7 +177,7 @@ A titre de comparaison, voici la version avec `If...Else...End if` de la même m
  End if
 ```
 
-Rappelez-vous qu’avec une structure de type `Case of...Else...End case`, seul le premier cas TRUE rencontré est exécuté. Même si d’autres cas sont TRUE, seules les instructions suivant le premier cas TRUE seront prises en compte.
+Vous pouvez placer une instruction Else après le dernier cas. Même si d’autres cas sont TRUE, seules les instructions suivant le premier cas TRUE seront prises en compte.
 
 Par conséquent, lorsque vous testez dans la même méthode des cas simples et des cas complexes, vous devez placer les cas complexes avant les cas simples, sinon ils ne seront jamais exécutés. Par exemple, si vous souhaitez traiter le cas simple (vResult=1) et le cas complexe (vResult=1) & (vCondition#2) et que vous structurez la méthode de la manière suivante :
 
@@ -563,8 +563,8 @@ Le tableau suivant compare les trois types de `For each...End for each` :
 - Par défaut, les *statements* inclus sont exécutés pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`While`) ou à la fin de chaque itération (`Until`).
 - Les paramètres optionnels *begin* et *end* peuvent être utilisés avec les collections et les entity selections afin de définir des bornes pour la boucle.
 - La boucle `For each...End for each` peut être utilisée sur une **collection partagée** ou un **objet partagé**. Si vous souhaitez modifier un ou plusieurs éléments des propriétés d'objets ou de la collection dans le code, vous devez utiliser les mots-clés `Use...End use`. Vous pouvez, si vous le souhaitez, appeler les mots-clés `Use...End use` :
- - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
- - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.
+  - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
+  - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.
 
 Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
 

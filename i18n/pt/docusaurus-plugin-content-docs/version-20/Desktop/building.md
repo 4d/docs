@@ -44,7 +44,7 @@ A geração do banco de dados só pode ser realizado quando o banco de dados for
 
 ### buildApp.4DSettings
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the [`Settings` folder of the project](../Project/architecture.md#settings-user).
+Cada parâmetro de geração da aplicação é armazenado como uma chave XML no arquivo da aplicação chamada `buildApp.4DSettings`, localizado na pasta [` Settings` do projeto](../Project/architecture.md#settings-user).
 
 Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do ficheiro é atualizado, se necessário, quando se clica em **Criar** ou **Salvar os parâmetros**. Pode definir vários outros ficheiros de parâmetros XML para o mesmo projeto e utilizá-los utilizando o comando [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html).
 
@@ -163,7 +163,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
 * *Windows*
   * MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
   * Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
-  * Uma pasta Database - Inclui uma pasta Resources e um arquivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#management-of-data-files).
+  * Uma pasta Database - Inclui uma pasta Resources e um arquivo MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Note**: esta pasta também contém a pasta *Dados padrão*, se tiver sido definido (ver [Gerenciamento de arquivos de dados em aplicativos finais](#management-of-data-files).
   * (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. Para obter mais informações sobre isso, consulte os plugins [e componentes](#plugins--components-page).
   * (Opcional) Pasta Licenses (Licenças) - Um arquivo XML de números de licença integrados ao aplicativo, se houver. Para obter mais informações sobre isso, consulte a seção [Licenses & Certificate](#licenses--certificate-page) .
   * Itens adicionais adicionados à pasta da Área de Trabalho de Volume 4D, se houver (veja [Personalizando a pasta de Volume 4D para Desktop](#customizing-4d-volume-desktop-folder)).
@@ -171,7 +171,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
  Todos estes itens devem ser mantidos na mesma pasta para que o executável possa operar.
 
 * *macOS*
-  * Um pacote de software chamado MyProject.app que contém seu aplicativo e todos os itens necessários para sua operação, incluindo os plug-ins, componentes e licenças. Para obter mais informações sobre a integração de plug-ins e componentes, consulte a seção [Plugins e componentes](#plugins--components-page). For more information about integrating licenses, refer to the [Licenses & Certificate](#licenses--certificate-page) section. **Nota**: No macOS, o comando [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) do idioma 4D retorna o caminho do arquivo ApplicationName (localizado na pasta Contents:macOS do pacote do software) e não o do arquivo .comp (Pasta Contents:Resources do pacote de software).
+  * Um pacote de software chamado MyProject.app que contém seu aplicativo e todos os itens necessários para sua operação, incluindo os plug-ins, componentes e licenças. Para obter mais informações sobre a integração de plug-ins e componentes, consulte a seção [Plugins e componentes](#plugins--components-page). Para obter mais informações sobre a integração de licenças, consulte a seção [Licenças e Certificado](#licenses--certificate-page). **Nota**: No macOS, o comando [Application file](https://doc.4d.com/4Dv18R4/4D/18-R4/Application-file.301-4982855.en.html) do idioma 4D retorna o caminho do arquivo ApplicationName (localizado na pasta Contents:macOS do pacote do software) e não o do arquivo .comp (Pasta Contents:Resources do pacote de software).
 
 #### Personalização da pasta 4D Volume Desktop
 
@@ -197,7 +197,7 @@ Os elementos devem ser instalados:
 
 #### Sobre as licenças
 
-A stand-alone application requires a deployment license. Ele pode ser incorporado na etapa de compilação pelo desenvolvedor ou inserido na primeira inicialização pelo usuário final, conforme descrito na tabela a seguir:
+Uma aplicação autônoma requer uma licença de implantação. Ele pode ser incorporado na etapa de compilação pelo desenvolvedor ou inserido na primeira inicialização pelo usuário final, conforme descrito na tabela a seguir:
 
 | Licença de implantação | Descrição                                                                               | Onde entrar                                                                                       |
 | ---------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -250,11 +250,11 @@ Utilizado para indicar o número da versão atual da aplicação gerada. Pode en
 
 **Nota Preliminar:** Os seguintes termos são utilizados nesta secção:
 
-| Nome                                | Definição                                                                                                                                                                     |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ficheiro do directório do projecto  | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the project         |
-| Ficheiro do directório de aplicação | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-user) of the built 4D Server |
-| Ficheiro obrigatório                | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings-user-data)                    |
+| Nome                                | Definição                                                                                                                                                                          |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ficheiro do directório do projecto  | arquivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) localizado na [pasta Settings](../Project/architecture.md#settings-user) do projeto                 |
+| Ficheiro do directório de aplicação | o arquivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) localizado na pasta [Settings ](../Project/architecture.md#settings-user) do 4D Server construído |
+| Ficheiro obrigatório                | Arquivo [directory.json](../Users/handling_users_groups.md#directoryjson-file) na pasta [Data > Settings](../Project/architecture.md#settings-user-data)                           |
 
 Quando marca esta opção, o ficheiro do directório do projecto é copiado para o ficheiro do directório da aplicação no momento da construção.
 
@@ -514,7 +514,7 @@ Esta aba exibe a lista de licenças [de implantação disponíveis que você pod
 
 :::info
 
-If you keep the list empty, you build a stand-alone application without embedded deployment license. Neste caso, o usuário final terá de comprar e inserir uma licença por usuário *4D Desktop*. If you integrate a deployment license, the user will not have to enter or use their own license number at application startup. Para obter mais informações, consulte o parágrafo [**Sobre as licenças**](#about-licenses).
+Se você manter a lista vazia, construirá uma aplicação independente sem licença de implantação incorporada. Neste caso, o usuário final terá de comprar e inserir uma licença por usuário *4D Desktop*. Se você integrar uma licença de implementação, o usuário não precisará inserir ou usar seu próprio número de licença na inicialização do aplicativo. Para obter mais informações, consulte o parágrafo [**Sobre as licenças**](#about-licenses).
 
 :::
 
@@ -544,7 +544,7 @@ Depois que o aplicativo é construído, um novo arquivo de licença de implanta�
 
 O construtor de aplicativos pode assinar aplicativos 4D mesclados no macOS (aplicativos de usuário único, componentes, servidor 4D e partes de clientes sob macOS). A assinatura de um aplicativo autoriza que ele seja executado usando a funcionalidade de Gatekeeper do macOS quando a opção "Mac App Store e Desenvolvedores identificados" estiver selecionada (veja "Sobre Gatekeeper" abaixo).
 
-* Check the **Sign application** option to include certification in the application builder procedure for macOS. 4D irá verificar a disponibilidade de elementos necessários para a certificação quando a compilação ocorrer:
+* Marque a opção **Assinar a aplicação** para incluir a certificação no procedimento de construtor de aplicativos para macOS. 4D irá verificar a disponibilidade de elementos necessários para a certificação quando a compilação ocorrer:
 
 ![](../assets/en/Admin/buildapposxcertProj.png)
 
@@ -565,7 +565,7 @@ Para obter um certificado de desenvolvedor da Apple, Inc., você pode usar os co
 
 O Gatekeeper é um recurso de segurança do macOS que controla a execução de aplicativos baixados da Internet. Se um aplicativo baixado não vem da Apple Store ou não estiver assinado, será rejeitado e não poderá ser iniciado.
 
-> On Apple Silicon machines, 4D components need to be actually signed. Um componente não assinado irá gerar um erro ao iniciar o aplicativo ("lib4d-arm64.dylib não pode ser aberto...").
+> Nas máquinas do Apple Silicon, 4D componentes precisam ser realmente assinados. Um componente não assinado irá gerar um erro ao iniciar o aplicativo ("lib4d-arm64.dylib não pode ser aberto...").
 
 A aplicação **Sinal** opção do construtor de aplicação 4D permite que você gere aplicativos e componentes que são compatíveis com esta opção por padrão.
 

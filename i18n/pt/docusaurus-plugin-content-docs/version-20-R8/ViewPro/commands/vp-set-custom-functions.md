@@ -24,7 +24,7 @@ As fórmulas especificadas por `VP SET CUSTOM FUNCTIONS` aparecem em um menu pop
 
 Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-In the *formulaObj* parameter, pass an object containing the 4D formulas that can be called from 4D View Pro formulas as well as additional properties. Each `customFunction` property passed in *formulaObj* becomes the name of a function in the 4D View Pro area.
+In the *formulaObj* parameter, pass an object containing the 4D formulas that can be called from 4D View Pro formulas as well as additional properties. Cada propriedade `customFunction` passada em *formulaObj* se torna o nome de uma função na área 4D View Pro.
 
 | Propriedade        |            |                                                                                | Tipo                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------ | ---------- | ------------------------------------------------------------------------------ | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 
 > **AVISO**
 
-> - As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](vp-set-allowed-methods.md) command (if any) are ignored in the 4D View Pro area.
+> - Assim que `VP SET CUSTOM FUNCTIONS` for chamado, os métodos permitidos pelo [VP SET ALLOWED METHODS](vp-set-allowed-methods.md) (se houver) são ignorados na área 4D View Pro.
 > - As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 ## Exemplo

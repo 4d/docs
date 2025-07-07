@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 
-| Parámetros  | Tipo    |                             | Descripción                        |
-| ----------- | ------- | --------------------------- | ---------------------------------- |
-| sección     | Object  | &#8594; | Sección 4D Write Pro               |
-| wpDoc       | Object  | &#8594; | Documento 4D Write Pro             |
-| indexNumber | Integer | &#8594; | Index of the section to be deleted |
-| count       | Integer | &#8594; | Número de secciones a eliminar     |
+| Parámetros  | Tipo    |                             | Descripción                     |
+| ----------- | ------- | --------------------------- | ------------------------------- |
+| sección     | Object  | &#8594; | Sección 4D Write Pro            |
+| wpDoc       | Object  | &#8594; | Documento 4D Write Pro          |
+| indexNumber | Integer | &#8594; | Índice de la sección a eliminar |
+| count       | Integer | &#8594; | Número de secciones a eliminar  |
 
 <!-- END REF-->
 
@@ -34,7 +34,7 @@ If an image or textbox is anchored to a page (e.g., page 20) and this page no lo
 
 ## Ejemplos
 
-To remove the first section of the document:
+Para eliminar la primera sección del documento:
 
 ```4d
 
@@ -63,7 +63,7 @@ WP DELETE SECTION(wpDoc ; 5 ; 3 )
 
 ```
 
-To remove all sections starting from 5:
+Para eliminar todas las secciones a partir de la 5:
 
 ```4d
  
@@ -73,7 +73,7 @@ WP DELETE SECTION(wpDoc ; 5 ; MAXLONG )
 
 ```
 
-To retrieve and remove section 5:
+Para recuperar y eliminar la sección 5:
 
 ```4d
  

@@ -22,8 +22,8 @@ Le dossier racine d'un composant (dossier *MyComponent.4dbase*) peut contenir :
 
 - pour les **composants interprétés** : un [dossier project](../Project/architecture.md) standard. Le nom du dossier du dossier racine doit être suffixé **.4dbase** si vous voulez l'installer dans le dossier [**Components**](architecture.md#components) de votre projet.
 - pour les **composants compilés** :
- - soit un dossier "Contents" contenant un fichier .4DZ, un dossier *Resources*, un fichier *Info.plist* (architecture recommandée)
- - soit directement un fichier .4DZ avec d'autres dossiers tels que *Resources*.
+    - soit un dossier "Contents" contenant un fichier .4DZ, un dossier *Resources*, un fichier *Info.plist* (architecture recommandée)
+    - soit directement un fichier .4DZ avec d'autres dossiers tels que *Resources*.
 
 :::note
 
@@ -308,10 +308,10 @@ Dans un projet ouvert, vous pouvez ajouter, supprimer, mettre à jour et obtenir
 Pour afficher la fenêtre Dépendances :
 
 - avec 4D, sélectionnez la ligne de menu **Développement/Dépendances du projet** (environnement de développement),<br/>
- ![dependency-menu](../assets/en/Project/dependency-menu.png)
+    ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - avec 4D Server, sélectionnez la ligne de menu **Fenêtre/Dépendances du projet**.<br/>
- ![menu-dépendances-serveur](../assets/en/Project/dependency-menu-server.png)
+    ![menu-dépendances-serveur](../assets/en/Project/dependency-menu-server.png)
 
 La fenêtre Dépendances s'affiche alors. Les dépendances sont classées par nom par ordre alphabétique :
 
@@ -558,6 +558,6 @@ Une boîte de dialogue de confirmation s'affiche. Si la dépendance a été déc
 
 ![dependency-remove](../assets/en/Project/remove-comp.png)
 
-Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la dépendance supprimée est automatiquement modifié en "Déchargé après redémarrage". Elle sera libérée de la mémoire une fois que l'application aura redémarré.
+Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la dépendance supprimée est automatiquement modifié en "Déchargé après redémarrage". Elle sera chargée une fois que l'application aura redémarré.
 
 

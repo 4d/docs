@@ -17,7 +17,7 @@ title: VP SET SELECTION
 
 O comando `VP SET SELECTION` <!-- REF #_method_.VP SET SELECTION.Summary --> define as células especificadas como a seleção e a primeira célula como a célula ativa<!-- END REF -->.
 
-In *rangeObj*, pass a range object of cells to designate as the current selection.
+Em *rangeObj*, passe um objeto de intervalo de células para designar como a seleção atual.
 
 ## Exemplo
 

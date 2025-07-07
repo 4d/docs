@@ -116,7 +116,7 @@ End if
 
 :::info
 
-Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. Para mais informações, consulte a página [**Privilégios**](../ORDA/privileges.md) do capítulo ORDA.
 
 :::
 

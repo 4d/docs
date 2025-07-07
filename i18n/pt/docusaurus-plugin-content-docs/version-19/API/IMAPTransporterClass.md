@@ -183,7 +183,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -269,7 +269,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -368,7 +368,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -468,7 +468,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -545,7 +545,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -643,7 +643,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -711,7 +711,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -1217,7 +1217,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -1393,7 +1393,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -1462,7 +1462,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -1545,7 +1545,7 @@ SearchKey1 = FLAGGED SearchKey2 = NOT FLAGGED SearchKey3 = FLAGGED DRAFT
 searchCriteria = FLAGGED FROM "SMITH"
 ```
 
-... devolve todas as mensagens com o conjunto de bandeiras sinalizadas E enviadas por Smith.
+... retorna todas as mensagens com o sinalizador \Flagged definido e enviadas por Smith.
 
 * Pode utilizar os operadores **OR** ou **NOT** como se segue:
 
@@ -1553,13 +1553,13 @@ searchCriteria = FLAGGED FROM "SMITH"
 searchCriteria = OR SEEN FLAGGED
 ```
 
-... devolve todas as mensagens com o conjunto de bandeiras visíveis OU o conjunto de bandeiras sinalizadoras
+... retorna todas as mensagens com o sinalizador \Seen definido OU com o sinalizador \Flagged definido
 
 ```
 searchCriteria = NOT SEEN
 ```
 
-... devolve todas as mensagens com a bandeira não estabelecida.
+... retorna todas as mensagens com o sinalizador \Seen não definido.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
@@ -1737,7 +1737,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |
@@ -1809,7 +1809,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 | Propriedade |                         | Tipo       | Descrição                                                                                      |
 | ----------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| success     |                         | Parâmetros | True if the operation is successful, False otherwise                                           |
+| success     |                         | Parâmetros | True se a operação for bem sucedida, False caso contrário                                      |
 | statusText  |                         | Text       | Mensagem de estado devolvida pelo servidor IMAP, ou último erro devolvido na pilha de erros 4D |
 | errors      |                         | Collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor IMAP)                |
 |             | \[].errcode            | Number     | Código de erro 4D                                                                              |

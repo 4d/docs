@@ -51,7 +51,7 @@ Les interfaces de Ruban et de Barre d'outils regroupent les fonctionnalités qui
 
 Les événements formulaire suivants sont disponibles dans la Liste de propriétés des zones 4D View Pro.
 
-Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains événements formulaire standard fournissent des informations étendues dans l'objet retourné par la commande [`FORM Event`](../commands/form-event.md) lorsqu'ils sont générés pour les zones 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
+Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
 
 | Événements 4D standard                          | Événements 4D View Pro spécifiques et étendus         |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -360,9 +360,9 @@ Les attributs de taille de papier sont utilisés pour spécifier les dimensions 
 - Si le format du papier est spécifié en utilisant les propriétés `height` et `width`, [`VP Get print info`](./commands/vp-get-print-info.md) retourne un format de papier avec `custom` comme valeur pour `kind`.
 
 - Si vous définissez le format du papier à l'aide de la propriété `kind`, vous pouvez utiliser l'une ou l'autre :
- - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
- - one of the formats returned by the [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md) command.
-  Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
+  - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
+  - Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
+    un des formats retournés par la commande [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
 
 ### Graduation
 
@@ -402,7 +402,7 @@ Les attributs du filigrane sont utilisés pour superposer du texte ou une image 
 
 \* Si vous utilisez un type texte, passez le chemin d'accès (absolu ou relatif) de l'image. Si vous passez un chemin relatif, le fichier doit être situé à côté du fichier de structure de la base de données. Sous Windows, l'extension de fichier doit être indiquée. Peu importe le type utilisé pour définir une image, l'image elle-même (pas une référence) est stockée dans la zone 4D View Pro et est retournée par [VP Get print info](commands/vp-get-print-info.md).
 
-## Objets de style
+## Style Objects {#style-objects} {#style-objects}
 
 Les objets et les feuilles de style 4D View Pro vous permettent de contrôler les aspects graphiques et l'apparence de vos documents 4D View Pro.
 

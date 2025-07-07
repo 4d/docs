@@ -46,14 +46,14 @@ Cette propriété est en **lecture seule**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Class<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Object<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Object<!-- END REF -->
 
 
 <!-- REF #ClassClass.new().Params -->
-| Paramètres | Type     |    | Description                                          |
-| ---------- | -------- |:--:| ---------------------------------------------------- |
-| param      | any      | -> | Paramètre(s) à passer à la fonction constructeur     |
-| Résultat   | 4D.Class | <- | Nouvel objet de la classe|<!-- END REF -->
+| Paramètres | Type      |    | Description                                          |
+| ---------- | --------- |:--:| ---------------------------------------------------- |
+| param      | any       | -> | Paramètre(s) à passer à la fonction constructeur     |
+| Résultat   | 4D.Object | <- | Nouvel objet de la classe|<!-- END REF -->
 
 |
 
@@ -67,7 +67,7 @@ Si `.new()` si appelé sur une classe qui n'existe pas, une erreur est retourné
 
 #### Exemples
 
-Pour créer une nouvelle instance de la classe Person :
+Pour créer une nouvelle instance de la classe Person avec des paramètres :
 
 ```4d
 var $person : cs.Person  
@@ -75,7 +75,7 @@ $person:=cs.Person.new() //créer la nouvelle instance
 //$person contient les fonctions de la classe
 ```
 
-Pour créer une nouvelle instance de la classe Person avec des paramètres :
+Pour créer une nouvelle instance de la classe Person :
 
 ```4d
 //Class: Person.4dm
@@ -113,7 +113,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 La propriété `.superclass` <!-- REF #ClassClass.superclass.Summary -->retourne la classe parente de la classe<!-- END REF -->. Une superclasse peut être un objet `4D.Class`, ou un objet `cs.className`. Si la classe n'a pas de classe parente, la propriété renvoie **null**.
 
-Une superclasse de classe utilisateur est déclarée dans une classe à l'aide du mot-clé [`Class extend<superclass>`](Concepts/classes.md#class-extends-classname).
+To define a superclass for a user class, use the  [`extends`](Concepts/classes.md#class-extends-classname) keyword like: `Class extends <superclass>`.
 
 Cette propriété est en **lecture seule**.
 

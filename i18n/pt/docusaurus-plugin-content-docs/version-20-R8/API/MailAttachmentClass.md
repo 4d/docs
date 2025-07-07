@@ -125,7 +125,7 @@ A propriedade `.platformPath` retorna <!-- REF #MailAttachmentClass.platformPath
 
 #### Descrição
 
-A propriedade `.size` contém <!-- REF #MailAttachmentClass.size.Summary --> o valor do cabeçalho `size` do arquivo anexo<!-- END REF -->. The `.size` property is returned when the MIME message defines a size header in the attachment part.
+A propriedade `.size` contém <!-- REF #MailAttachmentClass.size.Summary --> o valor do cabeçalho `size` do arquivo anexo<!-- END REF -->. A propriedade `.size` é retornada quando a mensagem MIME define um cabeçalho de tamanho na parte do anexo.
 
 ## .type
 
@@ -133,4 +133,4 @@ A propriedade `.size` contém <!-- REF #MailAttachmentClass.size.Summary --> o v
 
 #### Descrição
 
-A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](../commands/mail-new-attachment.md) command, the `content-type` is based on its file extension.
+A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se esse tipo não for explicitamente passado para o comando [`MAIL New attachment`](../commands/mail-new-attachment.md), o `content-type` será baseado em sua extensão de arquivo.

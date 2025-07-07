@@ -80,7 +80,7 @@ Para crear una nueva clase, puede:
 
 - seleccione la categoría **Clases** y haga clic en el botón ![](../assets/en/Users/PlussNew.png).
 - seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases.
- ![](../assets/en/Concepts/newClass.png)
+  ![](../assets/en/Concepts/newClass.png)
 - seleccione **Nueva > Clase...** en el menú contextual de la página de inicio del Explorador.
 
 #### Soporte del código de clase
@@ -88,10 +88,10 @@ Para crear una nueva clase, puede:
 En las diferentes ventanas 4D (editor de código, compilador, depurador, explorador de ejecución), el código de la clase se maneja básicamente como un método proyecto con algunas especificidades:
 
 - En el editor de código:
- - una clase no puede ser ejecutada
- - una función de clase es un bloque de código
- - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
- - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
+  - una clase no puede ser ejecutada
+  - una función de clase es un bloque de código
+  - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
+  - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
 - En el explorador de Ejecución y Depurador, las funciones clase se muestran con el formato `<ClassName>` constructor o `<ClassName>.<FunctionName>`.
 
 ## Class stores
@@ -238,8 +238,8 @@ En el código de la aplicación, las funciones de clases se llaman como los mét
 
 - uso del operador `()`. Por ejemplo, `myObject.methodName("hello")`
 - utilización de un método miembro de la clase "4D.Function":
- - [`apply()`](API/FunctionClass.md#apply)
- - [`call()`](API/FunctionClass.md#call)
+  - [`apply()`](API/FunctionClass.md#apply)
+  - [`call()`](API/FunctionClass.md#call)
 
 :::warning Aviso de seguridad del hilo
 
@@ -321,13 +321,13 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
  End if
 ```
 
-### `Class Constructor`
+### `Class constructor`
 
 #### Sintaxis
 
 ```4d
 // Class: MyClass
-{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
+{shared} {{session} singleton} Class constructor({$parameterName : type; ...})
 // código
 ```
 
@@ -349,12 +349,18 @@ Utilizando la palabra clave `shared` se crea una **clase compartida**, utilizada
 
 Utilizando la palabra clave `singleton` se crea un **singleton**, utilizado para crear una sola instancia de la sesión. Un `session singleton` crea una sola instancia por sesión. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
 
+:::note
+
+Las [clases de entidad ORDA](../ORDA/ordaClasses.md#entity-class) también pueden beneficiarse de una función `Class constructor`. La implementación es similar a la de las clases normales pero [con algunas diferencias](../ORDA/ordaClasses.md#class-constructor-1).
+
+:::
+
 #### Ejemplo
 
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-Class Constructor ($name : Text ; $age : Integer)
+Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
 ```
@@ -417,7 +423,7 @@ Si omite el tipo en la línea de declaración, la propiedad se crea como una var
 
 :::info
 
-La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de cualquier bloque `Function` o `Class Constructor`.
+La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de cualquier bloque `Function` o `Class constructor`.
 
 :::
 
@@ -503,6 +509,12 @@ $o.age:="Smith" //error con la sintaxis de verificación
 
 Si no se accede a la propiedad, el código nunca se ejecuta.
 
+:::note
+
+Las [clases de entidad ORDA](../ORDA/ordaClasses.md#entity-class) se benefician de una implementación extendida de propiedades computadas con [dos funciones adicionales](../ORDA/ordaClasses.md#computed-attributes-1): `query` y `orderBy`.
+
+:::
+
 Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. Por ejemplo, si un objeto de clase contiene como propiedad persistente el *precio bruto* y el *tipo de IVA*, El *precio neto* podría ser manejado por una propiedad calculada.
 
 En el archivo de definición de la clase, las declaraciones de propiedades calculadas utilizan las palabras claves `Function get` (*getter*) y `Function set` (*setter*) seguido por el nombre de la propiedad. El nombre debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
@@ -516,6 +528,12 @@ Si las funciones se declaran en una [clase compartida](#shared-classes), puede u
 El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del \*getter \*. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
 > Asignar *undefined* a una propiedad de objeto limpia su valor mientras se preserva su tipo. Para ello, la `Function get` es llamada primero para recuperar el tipo de valor, luego `Function set` es llamado con un valor vacío de ese tipo.
+
+:::note
+
+Las clases de entidad ORDA también pueden beneficiarse de una función `Class constructor`. La implementación es similar a la de las clases normales pero [con algunas diferencias](../ORDA/ordaClasses.md#class-constructor-1).
+
+:::
 
 #### Ejemplo 1
 
@@ -673,11 +691,11 @@ La propiedad [`.isShared`](../API/ClassClass.md#isshared) de los objetos de la C
 
 ### Creación de una clase compartida
 
-Para crear una clase compartida, añada la palabra clave `shared` antes del [Class Constructor](#class-constructor). Por ejemplo:
+Para crear una clase compartida, añada la palabra clave `shared` antes del [Class constructor](#class-constructor). Por ejemplo:
 
 ```4d
 	//shared class: Person
-shared Class Constructor($firstname : Text; $lastname : Text)
+shared Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -698,7 +716,7 @@ Para crear una función compartida, añada la palabra clave `shared` antes de la
 
 ```4d
 //clase compartida Foo
-shared Class Constructor()
+shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
@@ -745,14 +763,14 @@ Una vez instanciado, existe una clase singleton (y su singleton) siempre que exi
 
 Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) antes del [`Class constructor`](#class-constructor):
 
-- Para declarar una clase singleton (proceso), escriba `singleton Class Constructor()`.
+- Para declarar una clase singleton (proceso), escriba `singleton Class constructor()`.
 - Para declarar una clase singleton compartida, escribe `shared singleton Class constructor()`.
 - Para declarar una clase singleton de sesión, escriba `session singleton Class constructor()`.
 
 :::note
 
 - Los singletons de sesión son automáticamente singletons compartidos (no hay necesidad de usar la palabra clave `shared` en el constructor de clases).
-- Singleton shared functions support [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword).
+- Las funciones compartidas Singleton soportan [palabra clave `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword).
 
 :::
 
@@ -770,7 +788,7 @@ La propiedad [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) de
 
 ```4d
 	//class: ProcessTag
-singleton Class Constructor()
+singleton Class constructor()
  This.tag:=Random
 ```
 

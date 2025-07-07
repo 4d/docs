@@ -28,13 +28,13 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
+O comando `Formula from string` <!-- REF #_command_.Formula from string.Summary -->cria um objeto `4D.Function` baseado na *formulaString* e, opcionalmente, um *context*<!-- END REF -->.  *formulaString* pode ser tão simples quanto um único valor ou tão complexo quanto um método projeto com parâmetros.
 
 Esse comando é como [`Formula`](formula.md), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. Esse comando é como [`Formula`](#formula), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. É altamente recomendável usar a sintaxe com tokens com esse comando.
 
-> Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
+> Como conteúdos de variáveis locais não podem ser acessados por nome em modo compilado, não podem ser usados em *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
-If the formula is created in a component, you might consider using the *context* parameter. Por padrão, dado que as fórmulas são executadas no contexto em que foram criadas, não conseguirá chamar uma variável, uma função ou um método não compartilhado do banco de dados host. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. Estão disponíveis as seguintes constantes:
+Se a fórmula é criada em um componente, você pode considerar usar o parâmetro *context*. Por padrão, dado que as fórmulas são executadas no contexto em que foram criadas, não conseguirá chamar uma variável, uma função ou um método não compartilhado do banco de dados host. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. Estão disponíveis as seguintes constantes:
 
 | Parâmetros                       | Tipo    | Descrição                                                                          |
 | -------------------------------- | ------- | ---------------------------------------------------------------------------------- |

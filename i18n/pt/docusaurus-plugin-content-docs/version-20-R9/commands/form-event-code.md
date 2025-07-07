@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-**Form event code** returns a numeric value identifying the type of form event that has just occurred. Usually, you will use **Form event code** from within a form or object method.
+**Form event code** retorna um valor numérico que identifica o tipo de evento formulário que acabou de ocorrer. Normalmente, você usará **Form event code** em um método formulário ou objeto.
 
 4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
 
@@ -288,7 +288,7 @@ The following example illustrates how to manage a deletion action in a hierarchi
 
 ## Exemplo 12
 
-In this example, the [`On Scroll`](../Events/onScroll.md) form event allows us to synchronize the display of two pictures in a form. The following code is added in the "satellite" object method (picture field or variable):
+Neste exemplo, o evento [`On Scroll`](../Events/onScroll.md) do formulário nos permite sincronizar a exibição de duas fotos em um formulário. The following code is added in the "satellite" object method (picture field or variable):
 
 ```4d
  Case of
@@ -304,7 +304,7 @@ Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
 ## Exemplo 13
 
-You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. In the list box object method, you can write:
+You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. No método objeto do list box, você pode escrever:
 
 ```4d
  Case of

@@ -27,7 +27,7 @@ Ajusta el texto seleccionado para que aparezca más oscuro y pesado.
 
 Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
-> This is normal text.<br/>
+> Este es un texto normal.<br/>
 > **Esto es texto en negrita.**
 
 #### Gramática JSON
@@ -48,7 +48,7 @@ Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 
 También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
-> This is normal text.<br/>
+> Este es un texto normal.<br/>
 > *Este texto está en cursiva.*
 
 #### Gramática JSON
@@ -216,7 +216,7 @@ Foreground color;Dark shadow color)
 
 Utilizado para aplicar un estilo de fuente personalizado a cada línea de list box o de cada celda de la columna.
 
-Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). You can use the constants listed in the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) command.
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). Puede usar las constantes listadas en el comando [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md).
 
 Ejemplo:
 
@@ -372,7 +372,7 @@ Entonces, el método *Color* contendría:
 
 ## Multistyle
 
-Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. Cuando esta opción está marcada, 4D interpreta todas las etiquetas `<SPAN> HTML` presentes en el área.
+This property enables the possibility of using [specific styles](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.en.html) in the selected area. Cuando esta opción está marcada, 4D interpreta todas las etiquetas `<SPAN> HTML` presentes en el área.
 
 Por defecto, esta opción no está activa.
 

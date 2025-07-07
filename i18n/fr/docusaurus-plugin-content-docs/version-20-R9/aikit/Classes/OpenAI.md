@@ -5,69 +5,69 @@ title: OpenAI
 
 # OpenAI
 
-The `OpenAI` class provides a client for accessing various OpenAI API resources. It includes properties for managing API configurations and methods for performing HTTP requests to the OpenAI endpoints.
+La classe OpenAI fournit un client permettant d'accéder à diverses ressources de l'API OpenAI. Il inclut des propriétés de gestion des configurations API et des méthodes pour effectuer des requêtes HTTP vers les points de terminaison OpenAI.
 
-## Configuration Properties
+## Propriétés de configuration
 
-| Property Name  | Type | Description                                                                  | Optionnel     |
-| -------------- | ---- | ---------------------------------------------------------------------------- | ------------- |
-| `apiKey`       | Text | Your [OpenAI API Key](https://platform.openai.com/api-keys). | No for OpenAI |
-| `baseURL`      | Text | Base URL for OpenAI API requests.                            | Oui           |
-| `organisation` | Text | Your OpenAI Organization ID.                                 | Oui           |
-| `project`      | Text | Your OpenAI Project ID.                                      | Oui           |
+| Nom de propriété | Type | Description                                                                    | Optionnel       |
+| ---------------- | ---- | ------------------------------------------------------------------------------ | --------------- |
+| `apiKey`         | Text | Votre [clé API OpenAI ](https://platform.openai.com/api-keys). | Non pour OpenAI |
+| `baseURL`        | Text | URL de base pour les requêtes de l'API OpenAI.                 | Oui             |
+| `organisation`   | Text | Votre identifiant d'organisation OpenAI.                       | Oui             |
+| `project`        | Text | Votre identifiant de projet OpenAI.                            | Oui             |
 
-### Additional HTTP properties
+### Propriétés HTTP supplémentaires
 
-| Property Name   | Type                                                                             | Description                                                          |
-| --------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `timeout`       | Real                                                                             | Time in seconds before timeout occurs.               |
-| `maxRetries`    | Real                                                                             | Maximum number of retry attempts in case of failure. |
-| `httpAgent`     | [4D.HTTPAgent](https://developer.4d.com/docs/API/HTTPAgentClass) | HTTP agent used for making requests.                 |
-| `customHeaders` | Real                                                                             | Custom headers to be included in the HTTP requests.  |
+| Nom de propriété | Type                                                                             | Description                                                          |
+| ---------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `timeout`        | Real                                                                             | Time in seconds before timeout occurs.               |
+| `maxRetries`     | Real                                                                             | Maximum number of retry attempts in case of failure. |
+| `httpAgent`      | [4D.HTTPAgent](https://developer.4d.com/docs/API/HTTPAgentClass) | HTTP agent used for making requests.                 |
+| `customHeaders`  | Real                                                                             | Custom headers to be included in the HTTP requests.  |
 
 ### Class constructor
 
-Create an instance of the OpenAI client class.
+Créer une instance de la classe client OpenAI.
 
-| Argument Name | Type           | Description                                                                                     |
-| ------------- | -------------- | ----------------------------------------------------------------------------------------------- |
-| *apiKey*      | Text or Object | apiKey if Text as first argument and the second can be an Object of parameters. |
+| Nom de l'argument | Type         | Description                                                                                     |
+| ----------------- | ------------ | ----------------------------------------------------------------------------------------------- |
+| *apiKey*          | Text, Object | apiKey if Text as first argument and the second can be an Object of parameters. |
 
-#### API key
+#### Clé API
 
 ```4d
-// as text
+// en tant que texte
 var $client:=cs.AIKit.OpenAI.new("your api key")
-// as object
+// en tant qu'objet
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"})
 ```
 
-#### Server URL
+#### URL du serveur
 
-For a [compatible provider](../compatible-openai.md) API, you can configure the server URL.
+Pour une API [compatible provider](../compatible-openai.md), vous pouvez configurer l'URL du serveur.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://server.ai"})
 ```
 
-or after creating an instance
+ou après avoir créé une instance
 
 ```4d
 $client.baseURL:="https://server.ai"
 ```
 
-## API resources
+## Ressources API
 
-The API provides access to multiple resources that allow seamless interaction with OpenAI's services. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
+L'API donne accès à de multiples ressources qui permettent une interaction transparente avec les services de l'OpenAI. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
 
-| Property Name | Type                                            | Description                                    |
-| ------------- | ----------------------------------------------- | ---------------------------------------------- |
-| `models`      | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Access to the Models API.      |
-| `chat`        | [OpenAIChatAPI](OpenAIChatAPI.md)               | Access to the Chat API.        |
-| `images`      | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Access to the Images API.      |
-| `moderations` | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Access to the Moderations API. |
+| Nom de propriété | Type                                            | Description                                    |
+| ---------------- | ----------------------------------------------- | ---------------------------------------------- |
+| `models`         | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Accès à l'API des modèles.     |
+| `chat`           | [OpenAIChatAPI](OpenAIChatAPI.md)               | Accès à l'API de Chat.         |
+| `images`         | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Accès à l'API Images.          |
+| `moderations`    | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Accès à l'API des modérations. |
 
-### Example Usage
+### Exemple d'utilisation
 
 ```4d
 $client.chat.completions.create(...)

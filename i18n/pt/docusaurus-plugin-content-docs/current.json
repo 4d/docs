@@ -560,7 +560,7 @@
     "description": "The label for category Database Methods in sidebar docs"
   },
   "sidebar.docs.category.Date and Time": {
-    "message": "Date and Time",
+    "message": "Data e Horas",
     "description": "The label for category Date and Time in sidebar docs"
   },
   "sidebar.docs.category.Design Object Access": {
@@ -568,11 +568,11 @@
     "description": "The label for category Design Object Access in sidebar docs"
   },
   "sidebar.docs.category.Drag and Drop": {
-    "message": "Drag and Drop",
+    "message": "Arrastar e Soltar",
     "description": "The label for category Drag and Drop in sidebar docs"
   },
   "sidebar.docs.category.Entry Control": {
-    "message": "Entry Control",
+    "message": "Controle de entrada",
     "description": "The label for category Entry Control in sidebar docs"
   },
   "sidebar.docs.category.File and Folder": {
@@ -864,7 +864,7 @@
     "description": "The generated-index page title for category Database Methods in sidebar docs"
   },
   "sidebar.docs.category.Date and Time.link.generated-index.title": {
-    "message": "Date and Time",
+    "message": "Data e Horas",
     "description": "The generated-index page title for category Date and Time in sidebar docs"
   },
   "sidebar.docs.category.Design Object Access.link.generated-index.title": {
@@ -872,11 +872,11 @@
     "description": "The generated-index page title for category Design Object Access in sidebar docs"
   },
   "sidebar.docs.category.Drag and Drop.link.generated-index.title": {
-    "message": "Drag and Drop",
+    "message": "Arrastar e Soltar",
     "description": "The generated-index page title for category Drag and Drop in sidebar docs"
   },
   "sidebar.docs.category.Entry Control.link.generated-index.title": {
-    "message": "Entry Control",
+    "message": "Controle de entrada",
     "description": "The generated-index page title for category Entry Control in sidebar docs"
   },
   "sidebar.docs.category.File and Folder.link.generated-index.title": {

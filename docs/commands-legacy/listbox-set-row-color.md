@@ -34,9 +34,9 @@ In *row*, pass the number of the row where you want to apply the new color.
 
 **Note:** The command does not take any hidden/visible states of the list box rows into account.
 
-In *color*, pass an RGB color value. For more information about RGB colors, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. If you want the row to inherit the color set for the higher level, you can pass the lk inherited constant in *color*.
+In *color*, pass an RGB color value. For more information about RGB colors, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. If you want the row to inherit the color set for the higher level, you can pass the`lk inherited` constant in *color*.
 
-In the *colorType* parameter, pass the lk background color or lk font color constants to indicate whether you want to apply the color as the background or the font color of the row. If you omit this parameter, the color is applied as the font color. 
+In the *colorType* parameter, pass the `lk background color`  or `lk font color`  constants to indicate whether you want to apply the color as the background or the font color of the row. If you omit this parameter, the color is applied as the font color. 
 
 This command modifies values found in the array of colors that may have been defined for the column or list box. If these arrays are not already defined, the command dynamically creates arrays that you can access using the [LISTBOX Get array](listbox-get-array.md) command. 
 

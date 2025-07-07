@@ -29,8 +29,12 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/
 
 #### Objects Supported
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
 
+
+#### Commands
+
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
 
 
 
@@ -60,7 +64,11 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/
 
 #### Objects Supported
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) 
+[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) 
+
+#### Commands
+
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
 
 
 #### See also
@@ -139,6 +147,9 @@ Authorizes the movement of rows during execution. This option is selected by def
 [List Box](listbox_overview.md)
 
 
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 
 
@@ -158,6 +169,9 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 [Hierarchical List](list_overview.md)
 
 
+#### Commands
+
+[GET LIST PROPERTIES](../commands-legacy/get-list-properties.md) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties.md)
 
 
 ---
@@ -181,17 +195,20 @@ In other cases (list boxes based on named selections, columns associated with ex
 [List Box](listbox_overview.md)
 
 
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 
 
 
 ---
 ## Standard action
+
 Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) section of the *Design Reference*.
 
 You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed. 
 
-You can also set this property using the `OBJECT SET ACTION` command.
 
 #### JSON Grammar
 
@@ -202,3 +219,8 @@ You can also set this property using the `OBJECT SET ACTION` command.
 #### Objects Supported
 
 [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Tab control](tabControl.md)
+
+#### Commands
+
+[`OBJECT Get action`](../commands-legacy/object-get-action.md) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action.md)
+

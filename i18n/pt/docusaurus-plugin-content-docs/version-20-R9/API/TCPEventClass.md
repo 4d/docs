@@ -3,20 +3,20 @@ id: TCPEventClass
 title: TCPEvent
 ---
 
-The `TCPEvent` class provides information about events occurring during the lifecycle of a TCP connection. It is generated when a [TCPConnection](TCPConnectionClass.md) is opened and is typically utilized in callbacks such as `onConnection`, `onData`, `onError`, and others.
+A classe `TCPEvent` fornece informações sobre os eventos que ocorrem durante o ciclo de vida de uma conexão TCP. Ele é gerado quando um [TCPConnection](TCPConnectionClass.md) é aberto e normalmente utilizado em callbacks como `onConnection`, `onData`, `onError`, entre outros.
 
 <details><summary>História</summary>
 
-| Release | Mudanças                        |
-| ------- | ------------------------------- |
-| 20 R9   | New `ip`, and `port` attributes |
-| 20 R8   | Classe adicionada               |
+| Release | Mudanças                      |
+| ------- | ----------------------------- |
+| 20 R9   | Novos atributos `ip` e `port` |
+| 20 R8   | Classe adicionada             |
 
 </details>
 
-### TCPEvent Object
+### Objeto TCPEvent
 
-A `TCPEvent` object is immutable and non-streamable.
+Um objeto `TCPEvent` é imutável e não pode ser transmitido.
 
 As seguintes propriedades estão disponíveis:
 
@@ -35,11 +35,11 @@ As seguintes propriedades estão disponíveis:
 
 #### Descrição
 
-A propriedade `.data` contém <!-- REF #TCPEvent.data.Summary -->os dados associados ao evento<!-- END REF -->. It is only valid for events of type `"data"`.
+A propriedade `.data` contém <!-- REF #TCPEvent.data.Summary -->os dados associados ao evento<!-- END REF -->. É válido apenas para eventos do tipo `"data"`.
 
 :::note
 
-When working with low-level TCP/IP connections, keep in mind there is no guarantee that all data will arrive in a single packet. Data arrives in order but may be fragmented across multiple packets.
+Ao trabalhar com conexões TCP/IP de baixo nível, lembre-se de que não há garantia de que todos os dados chegarão em um único pacote. Os dados chegam em ordem, mas podem estar fragmentados em vários pacotes.
 
 :::
 
@@ -79,11 +79,11 @@ A propriedade `.port` contém <!-- REF #TCPEvent.port.Summary --> o número da p
 
 A propriedade `.type` contém <!-- REF #TCPEvent.type.Summary -->o tipo do evento<!-- END REF -->. Valores possíveis:
 
-- `"connection"`: Indicates that a TCPConnection was successfully established.
-- `"data"`: Indicates that data has been received.
-- `"error"`: Indicates that an error occurred during the TCPConnection.
-- `"close"`: Indicates that the TCPConnection has been properly closed.
-- `"terminate"`: Indicates that the TCPConnection is about to be released.
+- `"conexão"`: indica que uma TCPConnection foi estabelecida com sucesso.
+- `"data"`: Indica que os dados foram recebidos.
+- `"error"`: indica que um erro ocorreu durante a TCPConnection.
+- `"close"`: indica que a TCPConnection foi fechada corretamente.
+- `"terminate"`: indica que a TCPConnection está prestes a ser liberada.
 
 <!-- END REF -->
 

@@ -80,7 +80,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 - **クラス** カテゴリを選択し、![](../assets/en/Users/PlussNew.png) ボタンをクリックします。
 - エクスプローラーウィンドウの下部にあるアクションメニュー、またはクラスグループのコンテキストメニューから **新規クラス...** を選択します。
- ![](../assets/en/Concepts/newClass.png)
+  ![](../assets/en/Concepts/newClass.png)
 - エクスプローラーのホームページのコンテキストメニューより **新規** > **クラス...** を選択します。
 
 #### クラスのコードサポート
@@ -88,10 +88,10 @@ Project フォルダー Project Sources Classes Polygon.4dm
 各種 4Dウィンドウ (コードエディター、コンパイラー、デバッガー、ランタイムエクスプローラー) において、クラスコードは "特殊なプロジェクトメソッド" のように扱われます:
 
 - コードエディター:
- - クラスは実行できません
- - クラスメソッドはコードのブロックです
- - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
- - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
+  - クラスは実行できません
+  - クラスメソッドはコードのブロックです
+  - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
+  - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
 - ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
 
 ## クラスストア
@@ -238,8 +238,8 @@ Function getFullname()->$fullname : Text
 
 - `()` 演算子の使用 。 例: `myObject.methodName("hello") `
 - "4D.Function" クラスメンバーメソッドの使用:
- - [`apply()`](API/FunctionClass.md#apply)
- - [`call()`](API/FunctionClass.md#call)
+  - [`apply()`](API/FunctionClass.md#apply)
+  - [`call()`](API/FunctionClass.md#call)
 
 :::warning スレッドセーフに関する警告
 
@@ -321,13 +321,13 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
  End if 
 ```
 
-### `Class Constructor`
+### `Class constructor`
 
 #### シンタックス
 
 ```4d
-// クラス: MyClass
-{shared} {{session} singleton} Class Constructor({$parameterName : type; ...})
+// Class: MyClass
+{shared} {{session} singleton} Class constructor({$parameterName : type; ...})
 // コード
 ```
 
@@ -349,11 +349,17 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 `singleton` キーワードを使うと **シングルトン** が作成されます。シングルトンクラスは、クラスインスタンスを一つに限定する場合に使われます。   `session singleton` キーワードを使うと、セッションごとに 1つのインスタンスを作成します。  詳細については、後述の [シングルトンクラス](#シングルトンクラス) の項目を参照ください。
 
+:::note
+
+[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-class) も`Class constructor` 機能の恩恵を受けることができます。 実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
+
+:::
+
 #### 例題
 
 ```4d
-// クラス: MyClass
-// MyClass のクラスコンストラクター
+// Class: MyClass
+// MyClass の Class constructor
 Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
@@ -417,7 +423,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-`property` キーワードは、クラス関数内の `Function` および `Class Constructor` ブロック外でのみ使用できます。
+`property` キーワードは、クラス関数内の `Function` および `Class constructor` ブロック外でのみ使用できます。
 
 :::
 
@@ -503,6 +509,12 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 プロパティがアクセスされない場合は、コードも実行されません。
 
+:::note
+
+[ORDA エンティティクラス](../ORDA/ordaClasses.md#entity-class) は計算属性の拡張された実装ににおいて[二つの追加された関数](../ORDA/ordaClasses.md#computed-attributes-1)の恩恵を受けることができます: `query` と`orderBy` です。
+
+:::
+
 計算プロパティは、メモリ上に保持する必要のないデータを処理するために設計されています。 計算プロパティは通常、永続的なプロパティに基づいています。 たとえば、クラスオブジェクトの永続的なプロパティとして、*税込価格* と *消費税率* が含まれている場合、*税抜価格* は計算プロパティで処理することができます。
 
 クラス定義ファイルでは、計算プロパティの宣言には、`Function get` (*ゲッター*) と `Function set` (*セッター*) のキーワードを使い、その後にプロパティ名を記述します。 名称は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
@@ -516,6 +528,12 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 計算プロパティの型は、*ゲッター* の `$return` の型宣言によって定義されます。  [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。 [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。
 
 > オブジェクトプロパティに *undefined* を代入すると、型を保持したまま値がクリアされます。 このためには、まず `Function get` を呼び出して値の型を取得し、 次にその型の空の値で `Function set` を呼び出します。
+
+:::note
+
+ORDA エンティティクラス も`Class constructor` 機能の恩恵を受けることができます。 実装は通常のクラスと同様ですが、[一部に違いがあります](../ORDA/ordaClasses.md#class-constructor-1)。
+
+:::
 
 #### 例題 1
 
@@ -674,11 +692,11 @@ $val:=$o.f() //8
 
 ### 共有クラスの作成
 
-共有クラスを作成するには、[Class Constructor](#class-constructor) の前に `shared` キーワードを追加します。 例: 例: 例: 例: 例: 例: 例: 例: 例: 例: 例: 例: 例: 例:
+共有クラスを作成するには、[Class constructor](#class-constructor) の前に `shared` キーワードを追加します。 例:
 
 ```4d
-// 共有クラス: Person
-shared Class Constructor($firstname : Text; $lastname : Text)
+	//共有クラス: Person
+shared Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -698,12 +716,12 @@ cs.Person.isShared // true
 共有クラス内で共有関数を作成するには、[Function](#function) キーワードの前に `shared` キーワードを追加します 。  例:
 
 ```4d
-// 共有クラス Foo
-shared Class Constructor()
+	//共有クラス Foo
+shared Class constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
-  This.variable:=$value // use/end use の呼び出しは不要です
+  This.variable:=$value //use/end use を呼び出す必要なし
 ```
 
 :::note
@@ -746,7 +764,7 @@ shared Function Bar($value : Integer)
 
 シングルトンクラスを宣言するには、[`Class constructor`](#class-constructor) の前に適切なキーワードを追加します:
 
-- (プロセス) シングルトンクラスを宣言するには、`singleton Class constructor()` と書きます。
+- (プロセス)シングルトンクラスを宣言するためには、 `singleton Class constructor()` と書きます。
 - 共有シングルトンクラスを宣言するには、`shared singleton Class constructor()` と書きます。
 - セッションシングルトンクラスを宣言するには、`session singleton Class constructor()` と書きます。
 
@@ -770,8 +788,8 @@ shared Function Bar($value : Integer)
 #### プロセスシングルトン
 
 ```4d
-// クラス: ProcessTag
-singleton Class Constructor()
+	//クラス: ProcessTag
+singleton Class constructor()
  This.tag:=Random
 ```
 

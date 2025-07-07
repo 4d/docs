@@ -26,7 +26,7 @@ Ne confondez pas le **marqueur de modification global** avec le **marqueur inter
 
 ## Configuration du suivi des changements de données
 
-Par défaut, le marqueur de modification global n'est pas créé (la fonction [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) retourne 0. Vue d’ensemble Vue d’ensemble Vous pouvez utiliser le menu contextuel de l'éditeur de structure pour créer automatiquement tous les éléments nécessaires.
+Par défaut, le marqueur de modification global n'est pas créé (la fonction [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) retourne 0. Vue d’ensemble Vue d’ensemble Vue d’ensemble Vous pouvez utiliser le menu contextuel de l'éditeur de structure pour créer automatiquement tous les éléments nécessaires.
 
 ### Configuration de la structure
 

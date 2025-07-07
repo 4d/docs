@@ -45,6 +45,11 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 [4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
 
+
+#### Commands
+
+[OBJECT Get focus rectangle invisible](../commands-legacy/OBJECT Get focus rectangle invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
+
 ---
 
 ## Hide selection highlight
@@ -66,6 +71,11 @@ By default, this option is not enabled.
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -93,6 +103,12 @@ Available values:
 
 [Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
+#### Commands
+
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+
+
+
 #### See also
 
 [Vertical scroll bar](#vertical-scroll-bar)
@@ -113,6 +129,14 @@ dpi|number|0=automatic, 72, 96 |
 
 [4D Write Pro area](writeProArea_overview.md)
 
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+
+
+
 ---
 
 ## Show background
@@ -129,6 +153,11 @@ showBackground|boolean|true (default), false|
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+
 ---
 
 ## Show footers
@@ -144,6 +173,11 @@ showFooters|boolean|true (default), false|
 #### Objects Supported
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 
 ---
 
@@ -179,6 +213,11 @@ showHeaders|boolean|true (default), false|
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+
 ---
 
 ## Show hidden characters
@@ -194,6 +233,11 @@ showHiddenChars|boolean|true (default), false|
 #### Objects Supported
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 
 ---
 
@@ -211,6 +255,11 @@ showHorizontalRuler|boolean|true (default), false|
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+
 ---
 
 ## Show HTML WYSIWYG
@@ -227,6 +276,11 @@ showHTMLWysiwyg|boolean|true, false (default)|
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+
 ---
 
 ## Show page frame
@@ -242,6 +296,11 @@ showPageFrames|boolean|true, false|
 #### Objects Supported
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 
 ---
 
@@ -269,6 +328,11 @@ showReferences|boolean|true, false (default)|
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+
 ---
 
 ## Show vertical ruler
@@ -284,6 +348,11 @@ showVerticalRuler|boolean|true (default), false|
 #### Objects Supported
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 
 ---
 
@@ -351,6 +420,11 @@ Available values:
 
 [Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
+#### Commands
+
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+
+
 #### See also
 
 [Horizontal scroll bar](#horizontal-scroll-bar)
@@ -377,6 +451,9 @@ layoutMode|text|"page", "draft", "embedded"|
 
 [4D Write Pro area](writeProArea_overview.md)
 
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 ---
 
 ## Zoom
@@ -392,3 +469,7 @@ zoom|number|minimum = 0 |
 #### Objects Supported
 
 [4D Write Pro area](writeProArea_overview.md)
+
+#### Commands
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)

@@ -5,7 +5,7 @@ title: Etiquetas de transformação
 
 4D oferece um conjunto de etiquetas de transformação que lhe permite inserir referências a variáveis ou expressões 4D, ou realizar diferentes processamentos dentro de um texto source, referido como um "modelo". Essas etiquetas são interpretadas quando o texto de origem é executado e geram um texto de saída.
 
-Esse princípio é usado em particular pelo servidor da Web 4D para criar [páginas de modelo da Web] (WebServer/templates.md).
+Esse princípio é usado em particular pelo servidor da Web 4D para criar [páginas de modelo da Web](WebServer/templates.md).
 
 Em geral, essas tags devem ser inseridas como comentários do tipo HTML (`<!--#Tag Contents-->`), mas uma sintaxe alternativa compatível com xml (#alternative-syntax-for-4dtext-4dhtml-4deval) está disponível para algumas delas.
 
@@ -41,7 +41,7 @@ A análise do conteúdo de uma fonte *template* é feita em dois contextos:
 
 - Usando o comando `PROCESS 4D TAGS`; esse comando aceita um *template* como entrada, bem como parâmetros opcionais, e retorna um texto resultante do processamento.
 
-- Usando o servidor HTTP integrado do 4D: [páginas de modelo] (WebServer/templates.md) enviadas por meio dos comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (texto/html tipo BLOB), `WEB SEND TEXT` ou chamadas usando URLs. Nesse último caso, por motivos de otimização, as páginas sufixadas com ".htm" e ".html" NÃO são analisadas. Para analisar páginas HTML nesse caso, você deve adicionar o sufixo ".shtm" ou ".shtml" (por exemplo, <http://www.server.com/dir/page.shtm>).
+- Usando o servidor HTTP integrado do 4D: [páginas de modelo](WebServer/templates.md) enviadas por meio dos comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (texto/html tipo BLOB), `WEB SEND TEXT` ou chamadas usando URLs. Nesse último caso, por motivos de otimização, as páginas sufixadas com ".htm" e ".html" NÃO são analisadas. Para analisar páginas HTML nesse caso, você deve adicionar o sufixo ".shtm" ou ".shtml" (por exemplo, <http://www.server.com/dir/page.shtm>).
 
 ### Processamento recursivo
 
@@ -53,7 +53,7 @@ As etiquetas 4D são interpretadas de forma recursiva: 4D sempre tenta reinterpr
 
 Se o próprio campo de texto `[Mail]Letter_type` contiver uma tag, por exemplo, `<!--#4DSCRIPT/m_Gender-->`, essa tag será avaliada recursivamente após a interpretação da tag 4DHTML.
 
-Esse princípio poderoso atende à maioria das necessidades relacionadas à transformação de texto. Observe, entretanto, que em alguns casos isso também pode permitir a inserção de código malicioso no contexto da Web, [o que pode ser evitado] (WebServer/templates.md#prevention-of-malicious-code-insertion).
+Esse princípio poderoso atende à maioria das necessidades relacionadas à transformação de texto. Observe, entretanto, que em alguns casos isso também pode permitir a inserção de código malicioso no contexto da Web, [o que pode ser evitado](WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ### Identificadores com tokens
 
@@ -305,7 +305,7 @@ As propriedades do objeto são processadas de acordo com sua ordem de criação.
 
 #### Sintaxe alternativa: `$4DEVAL(expressão)`
 
-A tag `4DEVAL` permite que você avalie uma variável ou expressão 4D. Como a tag [`4DHTML`](#4dhtml), `4DEVAL` não escapa dos caracteres HTML ao retornar o texto. No entanto, ao contrário do `4DHTML` ou [`4DTEXT`] (#4dtext), o `4DEVAL` permite que você execute qualquer instrução 4D válida, incluindo atribuições e expressões que não retornam nenhum valor.
+A tag `4DEVAL` permite que você avalie uma variável ou expressão 4D. Como a tag [`4DHTML`](#4dhtml), `4DEVAL` não escapa dos caracteres HTML ao retornar o texto. No entanto, ao contrário do `4DHTML` ou [`4DTEXT`](#4dtext), o `4DEVAL` permite que você execute qualquer instrução 4D válida, incluindo atribuições e expressões que não retornam nenhum valor.
 
 Por exemplo, é possível executar:
 
@@ -318,7 +318,7 @@ Por exemplo, é possível executar:
 
 No caso de um erro durante a interpretação, o texto inserido terá o formato: `<!--#4DEVAL expr-->: ## error # error code`.
 
-> Por motivos de segurança, recomenda-se usar a tag [`4DTEXT`] (#4dtext) ao processar dados introduzidos de fora do aplicativo, para evitar a [inserção de código malicioso] (../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Por motivos de segurança, recomenda-se usar a tag [`4DTEXT`](#4dtext) ao processar dados introduzidos de fora do aplicativo, para evitar a [inserção de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DHTML
 
@@ -337,7 +337,7 @@ Por exemplo, aqui estão os resultados do processamento da variável de texto 4D
 
 No caso de um erro de interpretação, o texto inserido será `<!--#4DHTML myvar-->: ## error # error code`.
 
-> Por motivos de segurança, recomenda-se usar a tag [`4DTEXT`] (#4dtext) ao processar dados introduzidos de fora do aplicativo, para evitar a [inserção de código malicioso] (../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Por motivos de segurança, recomenda-se usar a tag [`4DTEXT`](#4dtext) ao processar dados introduzidos de fora do aplicativo, para evitar a [inserção de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DIF, 4DELSE, 4DELSEIF e 4DENDIF
 
@@ -646,7 +646,7 @@ O valor da variável 4D `vtSiteName` será inserido na página HTML quando ela f
 
 Também é possível inserir expressões 4D. Você pode, por exemplo, inserir diretamente o conteúdo de um campo (`<!--#4DTEXT [tableName]fieldName-->`), um elemento de array (`<! -#4DTEXT tabarr{1}-->`) ou um método retornando um valor (`<!--#4DTEXT mymethod-->`). A conversão de expressões segue as mesmas regras das variáveis. Além disso, a expressão deve respeitar as regras de sintaxe 4D.
 
-> Por motivos de segurança, recomenda-se usar essa tag ao processar dados introduzidos de fora do aplicativo, a fim de evitar a [inserção de código malicioso] (../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Por motivos de segurança, recomenda-se usar essa tag ao processar dados introduzidos de fora do aplicativo, a fim de evitar a [inserção de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 No caso de um erro de avaliação, o texto inserido aparecerá como `<!--#4DTEXT myvar-->: ## error # error code`.
 
@@ -699,9 +699,9 @@ Utilizando a sintaxe $, o seguinte código é validado pelo analisador:
 <line x1="$4DEVAL($x)" y1="$4DEVAL($graphY1)"/>
 ```
 
-Observe que `$4dtag` e `<--#4dtag -->` não são estritamente equivalentes: ao contrário de `<--#4dtag -->`, o processamento de `$4dtag` não interpreta tags 4D [recursivamente] (#recursive-processing). As tags `$` são sempre avaliadas uma vez e o resultado é considerado como texto simples.
+Observe que `$4dtag` e `<--#4dtag -->` não são estritamente equivalentes: ao contrário de `<--#4dtag -->`, o processamento de `$4dtag` não interpreta tags 4D [recursivamente](#recursive-processing). As tags `$` são sempre avaliadas uma vez e o resultado é considerado como texto simples.
 
-A razão para esta diferença é evitar a injeção de código malicioso. Conforme [explicado abaixo] (../WebServer/templates.md#prevention-of-malicious-code-insertion), é altamente recomendável usar as tags `4DTEXT` em vez das tags `4DHTML` ao manipular o texto do usuário para se proteger contra reinterpretações indesejadas das tags: com `4DTEXT`, caracteres especiais como "<" são escapados, portanto, quaisquer tags 4D que usem a sintaxe `<!--#4dtag expression -->` perderão seu significado específico. No entanto, como o `4DTEXT` não escapa do símbolo `$`, decidimos interromper o suporte à recursão para evitar a injeção maliciosa usando a sintaxe `$4dtag (expression)`.
+A razão para esta diferença é evitar a injeção de código malicioso. Conforme [explicado abaixo](../WebServer/templates.md#prevention-of-malicious-code-insertion), é altamente recomendável usar as tags `4DTEXT` em vez das tags `4DHTML` ao manipular o texto do usuário para se proteger contra reinterpretações indesejadas das tags: com `4DTEXT`, caracteres especiais como "<" são escapados, portanto, quaisquer tags 4D que usem a sintaxe `<!--#4dtag expression -->` perderão seu significado específico. No entanto, como o `4DTEXT` não escapa do símbolo `$`, decidimos interromper o suporte à recursão para evitar a injeção maliciosa usando a sintaxe `$4dtag (expression)`.
 
 Os seguintes exemplos mostram o resultado do processamento dependendo da sintaxe e da tag usada:
 

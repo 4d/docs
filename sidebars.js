@@ -64,9 +64,16 @@ module.exports =
             },
             "Project/components",
             "Project/date-time-formats",
-            "Project/documentation"
-          ]
-        },
+            "Project/documentation",
+            {
+               type: "category",
+               label: "Dababase structure",
+               items: [
+                 "Develop/field-properties",
+                      ]
+            }
+                 ]
+            },
         {
           type: "category",
           label: "Development Environment",
@@ -116,6 +123,7 @@ module.exports =
           items: [
             "ORDA/dsmapping",
             "ORDA/ordaClasses",
+            "ORDA/orda-events",
             "ORDA/entities",
             "ORDA/global-stamp",
             "ORDA/datastores",
@@ -865,7 +873,7 @@ module.exports =
               },
               items: [
                 "commands-legacy/change-licenses",
-                "commands-legacy/create-deployment-license",
+                "commands/create-deployment-license",
                 "commands-legacy/is-license-available",
                 "commands/license-info",
                 "commands-legacy/license-usage",
@@ -903,7 +911,7 @@ module.exports =
                 "commands-legacy/listbox-get-number-of-rows",
                 "commands-legacy/listbox-get-objects",
                 "commands-legacy/listbox-get-print-information",
-                "commands-legacy/listbox-get-property",
+                "commands/listbox-get-property",
                 "commands-legacy/listbox-get-row-color",
                 "commands-legacy/listbox-get-row-color-as-number",
                 "commands-legacy/listbox-get-row-font-style",
@@ -931,7 +939,7 @@ module.exports =
                 "commands-legacy/listbox-set-headers-height",
                 "commands-legacy/listbox-set-hierarchy",
                 "commands-legacy/listbox-set-locked-columns",
-                "commands-legacy/listbox-set-property",
+                "commands/listbox-set-property",
                 "commands-legacy/listbox-set-row-color",
                 "commands-legacy/listbox-set-row-font-style",
                 "commands-legacy/listbox-set-row-height",
@@ -2293,6 +2301,7 @@ module.exports =
             "API/TCPConnectionClass",
             "API/TCPEventClass",
             "API/TCPListenerClass",
+            "API/VectorClass",
             "API/WebFormClass",
             "API/WebFormItemClass",
             "API/WebServerClass",
@@ -2862,6 +2871,10 @@ module.exports =
                 "aikit/Classes/openaichatcompletionsstreamresult",
                 "aikit/Classes/openaichathelper",
                 "aikit/Classes/openaichoice",
+                "aikit/Classes/openaiembedding",
+                "aikit/Classes/openaiembeddingsapi",
+                "aikit/Classes/openaiembeddingsparameters",
+                "aikit/Classes/openaiembeddingsresult",
                 "aikit/Classes/openaierror",
                 "aikit/Classes/openaiimage",
                 "aikit/Classes/openaiimageparameters",

@@ -7,11 +7,11 @@ title: Área Web
 
 ## Acessar métodos 4D
 
-You can call 4D methods and class functions from the JavaScript code executed in a Web area and get values in return. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
+Você pode chamar métodos 4D e funções de classe a partir do código JavaScript executado em uma área Web e obter valores em troca. Para consegue chamar métodos 4D de uma área Web, você deve ativar o parâmetro de acessibilidade 4D ("todos").
 
 > Esta propriedade só está disponível se a área Web [usar o mecanismo de renderização Web incorporado](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods and functions](webArea_overview.md#4d-object).
+Quando essa propriedade estiver ativada, um objeto JavaScript especial chamado `$4d` é instanciado na área Web, que você pode [usar para gerenciar chamadas para métodos projeto e funciones 4D](webArea_overview.md#4d-object).
 
 #### Gramática JSON
 
@@ -77,7 +77,7 @@ A variável URL produz os mesmos efeitos que o comando [WA OPEN URL](../commands
 
 Essa opção permite escolher entre dois mecanismos de renderização para a área Web, dependendo das especificidades de sua aplicação:
 
-- **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. Isso significa que você se beneficia automaticamente dos mais recentes avanços na renderização da Web, por HTML5 ou JavaScript. No entanto, você poderá notar algumas diferenças de renderização entre as plataformas. No Windows, 4D usa Microsoft Edge WebView2. No macOS, 4D usa a versão atual do WebKit (Safari).
+- **desmarcada** - `valor JSON: system` (padrão): neste caso, 4D usa o mecanismo "melhor" correspondente ao sistema. Isso significa que você se beneficia automaticamente dos mais recentes avanços na renderização da Web, por HTML5 ou JavaScript. No entanto, você poderá notar algumas diferenças de renderização entre as plataformas. No Windows, 4D usa Microsoft Edge WebView2. No macOS, 4D usa a versão atual do WebKit (Safari).
 
 > No Windows, se o Microsoft Edge WebView2 não estiver instalado, o 4D usa o mecanismo incorporado como mecanismo de renderização do sistema. Para saber se ele está instalado no seu sistema, procure "Microsoft Edge WebView2 Runtime" no painel de aplicações.
 

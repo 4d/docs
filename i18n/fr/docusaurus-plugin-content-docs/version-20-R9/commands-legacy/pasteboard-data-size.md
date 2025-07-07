@@ -72,14 +72,14 @@ Vous voulez déplacer des données en format privé entre divers objets de votre
 
 ```4d
   //objet source
- If(FORM Event=On Begin Drag Over)
+ If(FORM Event.code=On Begin Drag Over)
     APPEND DATA TO PASTEBOARD("some.private.data";$data)
  End if
 ```
 
 ```4d
   //objet cible
- If(FORM Event=On Drag Over)
+ If(FORM Event.code=On Drag Over)
     $0:=Choose(Pasteboard data size("some.private.data")>0;0;-1)
  End if
 ```

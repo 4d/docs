@@ -33,7 +33,7 @@ En 4D, todos los errores pueden ser detectados y manejados por métodos proyecto
 
 Una vez instalados, los manejadores de errores son llamados automáticamente en modo interpretado o compilado en caso de error en la aplicación 4D o en uno de sus componentes. Se puede llamar a un manejador de errores diferente en función del contexto de ejecución (ver abajo).
 
-Para *instalar* un método proyecto de gestión de errores, basta con llamar al comando [`ON ERR CALL`](../commands-legacy/on-err-call.md) con el nombre del método proyecto y (opcionalmente) el álcance como parámetros. Por ejemplo:
+Para *instalar* un método proyecto de gestión de errores, basta con llamar al comando [`ON ERR CALL`](../commands-legacy/on-err-call.md) con el nombre del método proyecto y (opcionalmente) el alcance como parámetros. Por ejemplo:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Instala un método local de gestión de errores
@@ -87,10 +87,10 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 
 - las variables sistema dedicadas:
 
- - `Error` (entero largo): código de error
- - `Error method`(texto): nombre del método que ha provocado el error
- - `Error line` (entero largo): número de línea del método que ha provocado el error
- - `Error formula` (texto): fórmula del código 4D (texto bruto) que está en el origen del error.
+  - `Error` (entero largo): código de error
+  - `Error method`(texto): nombre del método que ha provocado el error
+  - `Error line` (entero largo): número de línea del método que ha provocado el error
+  - `Error formula` (texto): fórmula del código 4D (texto bruto) que está en el origen del error.
 
 :::info
 
@@ -230,7 +230,7 @@ El código entre las palabras clave `Try` y `Catch` se ejecuta en primer lugar, 
 - Si no se lanza ningún error, la ejecución del código continúa después de la palabra clave correspondiente `End try`. El código situado entre las palabras clave `Catch` y `End try` no se ejecuta.
 - Si la ejecución del bloque de código arroja un error no diferido \*\*, el flujo de ejecución se detiene y ejecuta el bloque de código correspondiente `Catch`.
 - If the code block calls a method that throws a *deferred error*, the execution flow jumps directly to the corresponding `Catch` code block.
-- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
+- Si un error diferido es lanzado directamente desde el bloque `Try`, el flujo de ejecución continúa hasta el final del bloque `Try` y no ejecuta el correspondiente bloque `Catch`.
 
 :::note
 

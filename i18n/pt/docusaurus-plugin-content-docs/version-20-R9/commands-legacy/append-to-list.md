@@ -53,7 +53,7 @@ Você deseja mostrar uma lista hierárquica, chamada *hlList*, que mostre os dep
  
  Case of
  
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        var hlList;$hSubList;$vlDepartament;$vlEmpregado;$v1DepartmentID : Integer
   // Criar uma nova lista hierárquica vazia
        hlList:=New list
@@ -99,11 +99,11 @@ Você deseja mostrar uma lista hierárquica, chamada *hlList*, que mostre os dep
   // e forçar a altura de linha mínima a 14 Pts
        SET LIST PROPERTIES(hlList;Ala Windows;Windows node;14)
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // A lista já não é necessária; Não esqueça de apagá-la!
        CLEAR LIST(hlList;*)
  
-    :(FORM Event=On Double Clicked)
+    :(FORM Event.code=On Double Clicked)
   // Há um duplo clique
   // Obter a posição do elemento selecionado
        $vlItemPos:=Selected list items(hlList)

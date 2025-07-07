@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro                |
 | wpDoc       | Object  | &#8594; | Documento 4D Write Pro                                   |
 | mode        | Integer | &#8594; | Modo de inserción                                        |
-| rangeUpdate | Integer | &#8594; | Range update mode                                        |
+| rangeUpdate | Integer | &#8594; | Modo de actualización del rango                          |
 | Resultado   | Object  | &#8592; | Text range object referencing the inserted document body |
 
 <!-- END REF-->
@@ -32,29 +32,29 @@ The inserted *wpDoc* document can be any 4D Write Pro document object created us
 
 In the *mode* parameter, pass one or a combination of the following constants from the *4D Write Pro Constants* theme to indicate the insertion mode to be used for the document in the destination *targetObj*:
 
-| Constante  | Tipo    | Valor | Comentario                             |
-| ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Integer | 2     | Insert contents at end of target       |
-| wk prepend | Integer | 1     | Insert contents at beginning of target |
-| wk replace | Integer | 0     | Replace target contents                |
+| Constante  | Tipo    | Valor | Comentario                                      |
+| ---------- | ------- | ----- | ----------------------------------------------- |
+| wk append  | Integer | 2     | Insertar el contenido al final del objetivo     |
+| wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
+| wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
 You can combine one of the previous constants with the following insertion options:
 
-| Constante                | Tipo    | Valor | Comentario                                                                                                                                           |
-| ------------------------ | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk freeze expressions    | Integer | 64    | Freeze expressions at the moment of the insertion                                                                                                    |
-| wk keep paragraph styles | Integer | 128   | Apply destination paragraph styles. In case of wk append operation, insert contents without initial paragraph break. |
+| Constante                | Tipo    | Valor | Comentario                                                                                                                                              |
+| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| wk freeze expressions    | Integer | 64    | Congelar expresiones en el momento de la inserción                                                                                                      |
+| wk keep paragraph styles | Integer | 128   | Aplicar estilos de párrafo de destino. In case of wk append operation, insert contents without initial paragraph break. |
 
 In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
 | Constante             | Tipo    | Valor | Comentario                                                                            |
 | --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                                       |
+| wk exclude from range | Integer | 1     | Contenido insertado no incluido en el rango actualizado                               |
 | wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 ## Ejemplo 1
 

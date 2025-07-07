@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
-| Parámetros   | Tipo           |                             | Descripción           |
-| ------------ | -------------- | --------------------------- | --------------------- |
-| methodsArray | Array de texto | &#8594; | Array of method names |
+| Parámetros   | Tipo           |                             | Descripción                 |
+| ------------ | -------------- | --------------------------- | --------------------------- |
+| methodsArray | Array de texto | &#8594; | Array de nombres de métodos |
 
 <!-- END REF-->
 
@@ -28,13 +28,13 @@ displayed_sidebar: docs
 
 By default, if you do not use the **SET ALLOWED METHODS** command, no method is enterable (using an unauthorized method in an expression causes an error).
 
-In the *methodsArray* parameter, pass the name of an array containing the list of methods to allow. The array must have been set previously.
+In the *methodsArray* parameter, pass the name of an array containing the list of methods to allow. El array debe haber sido configurado previamente.
 
 You can use the wildcard character (@) in method names to define one or more authorized method groups.
 
 If you would like the user to be able to call 4D commands that are unauthorized by default or plug-in commands, you must use specific methods that handle these commands.
 
-**Note:** Formula filtering access can be disabled for all users or for the Designer and Administrator via [an option on the "Security" page of the Settings](../settings/security.md#options). If the "Disabled for all" option is checked, the **SET ALLOWED METHODS** command will have no effect.
+**Nota:** el filtrado de fórmula puede ser deshabilitado para todos los usuarios o para el Diseñador y Administrador a través de [una opción en la página "Seguridad" de los Parámetros](../settings/security.md#options). If the "Disabled for all" option is checked, the **SET ALLOWED METHODS** command will have no effect.
 
 :::warning
 

@@ -23,7 +23,7 @@ L'exemple suivant change la position des numéros de page sur un état pour que 
 
 ```4d
  Case of
-    :(FORM Event=On Printing Footer)
+    :(FORM Event.code=On Printing Footer)
        If((Printing page% 2)=0) // Modulo vaut 0 pour un numéro de page pair
           vNumGauche:=String(Page impression) // Fixer le numéro de page à gauche
           vNumDroite:="" // Effacer le numéro de page droit

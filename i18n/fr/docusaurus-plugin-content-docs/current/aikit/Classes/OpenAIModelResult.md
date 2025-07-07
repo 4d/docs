@@ -5,7 +5,7 @@ title: OpenAIModelResult
 
 # OpenAIModelResult
 
-## Inherits
+## Hérite de
 
 - [OpenAIResult](OpenAIResult.md)
 
@@ -13,7 +13,7 @@ title: OpenAIModelResult
 
 | Propriété | Type                          | Description                |
 | --------- | ----------------------------- | -------------------------- |
-| `model`   | [OpenAIModel](OpenAIModel.md) | The model. |
+| `model`   | [OpenAIModel](OpenAIModel.md) | Le modèle. |
 
 ## Voir également
 

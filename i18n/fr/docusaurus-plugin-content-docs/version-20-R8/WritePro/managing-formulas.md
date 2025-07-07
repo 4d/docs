@@ -49,8 +49,8 @@ You can insert special expressions related to document attributes in any documen
 
 | Propriétés                                                                     | Type   | Description                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------------------------------------------------------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [This](../commands/this.md).title                              | Text   | Title defined in wk title attribute                                                                                                                                                                                                                                                                                                                               |
-| [This](../commands/this.md).author                             | Text   | Author defined in wk author attribute                                                                                                                                                                                                                                                                                                                             |
+| [This](../commands/this.md).title                              | Text   | Titre défini dans l'attribut wk title                                                                                                                                                                                                                                                                                                                             |
+| [This](../commands/this.md).author                             | Text   | Auteur défini dans l'attribut wk author                                                                                                                                                                                                                                                                                                                           |
 | [This](../commands/this.md).subject                            | Text   | Subject defined in wk subject attribute                                                                                                                                                                                                                                                                                                                           |
 | [This](../commands/this.md).company                            | Text   | Company defined in wk company attribute                                                                                                                                                                                                                                                                                                                           |
 | [This](../commands/this.md).notes                              | Text   | Notes defined in wk notes attribute                                                                                                                                                                                                                                                                                                                               |
@@ -58,7 +58,7 @@ You can insert special expressions related to document attributes in any documen
 | [This](../commands/this.md).dateModified                       | Date   | Date modified defined in wk date modified attribute                                                                                                                                                                                                                                                                                                               |
 | [This](../commands/this.md).pageNumber (\*) | Number | Page number as it is defined:<li>- From the document start (default) or </li><li>- From the section page start if it is defined by section page start.</li> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command. |
 | [This](../commands/this.md).pageCount (\*)  | Number | Page count: total count of pages.<br/> This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command.                                                                                                                                         |
-| [This](../commands/this.md).document                           | Object | 4D Write Pro document                                                                                                                                                                                                                                                                                                                                             |
+| [This](../commands/this.md).document                           | Object | Document 4D Write Pro                                                                                                                                                                                                                                                                                                                                             |
 | [This](../commands/this.md).data                               | Object | Data context of the 4D Write Pro document set by [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md)                                                                                                                                                                                                                                                |
 | [This](../commands/this.md).sectionIndex                       | Number | The Index of the section in the 4D Write Pro document starting from 1                                                                                                                                                                                                                                                                                             |
 | [This](../commands/this.md).pageIndex                          | Number | The actual page number in the 4D Write Pro document starting from 1 (regardless of the section page numbers)                                                                                                                                                                                                                                   |
@@ -210,18 +210,18 @@ Whatever the formula display mode, you can get additional information on formula
 
 - When formulas do not have names, tips provide the source text of formulas:
 
- ![](../assets/en/WritePro/wp-formulas7.png)
+  ![](../assets/en/WritePro/wp-formulas7.png)
 
 - When formulas have names but are displayed as values or as symbols, the tip provides the name of formulas:
 
- ![](../assets/en/WritePro/wp-formulas8.png)
+  ![](../assets/en/WritePro/wp-formulas8.png)
 
 In this context, you can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula.
 
 - When formulas have names and are displayed as names, no tip is displayed by default.
- You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
- [
- ![](../assets/en/WritePro/wp-formulas9.png)
+  You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
+  [
+  ![](../assets/en/WritePro/wp-formulas9.png)
 
 #### Voir également
 

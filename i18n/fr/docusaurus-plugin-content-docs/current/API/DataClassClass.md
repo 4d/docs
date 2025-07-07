@@ -67,6 +67,7 @@ Les objets attributs retournés contiennent les propriétés suivantes :
 | relatedDataClass | Text    | Nom de la dataclass liée à l'attribut. Renvoyé uniquement lorsque `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | type             | Text    | Type conceptuel de la valeur de l'attribut, utile pour la programmation générique. Dépend de l'attribut `kind`. Valeurs possibles : <li>si `.kind` = "storage" : "blob", "bool", "date", "image", "number", "object", ou "string". "number" est renvoyé pour tous les types numériques, y compris la durée ; "string" est renvoyé pour les types d'attributs uuid, alpha et texte ; les attributs "blob" sont des [objets blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity" : nom de la dataClass liée</li><li>si `.kind` = "relatedEntities" : nom de la dataClass liée + suffixe "Selection"</li><li>si `.kind` = "calculated" ou "alias" : même chose que ci-dessus, en fonction du résultat</li> |
 | unique           | Boolean | Vrai si la valeur de l'attribut doit être unique. Non retourné si `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| classID          | Text    | Available only if `.type = "object"` and a class has been specified in the structure editor. </br>Returns the name of the class used to instantiate the object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 :::tip
 
@@ -181,7 +182,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
 
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
@@ -261,13 +262,13 @@ La correspondance entre les objets de la collection et les entités est effectu�
 Pour chaque objet de *objectCol* :
 
 - Si l'objet contient une propriété booléenne "\_\*NEW" fixée à faux (ou ne contient pas de propriété booléenne "\*\_NEW"), l'entité est modifiée ou créée avec les valeurs correspondantes des propriétés de l'objet. Aucune vérification spécifique n'est effectuée concernant la clé primaire :
- - Si la clé primaire est fournie et existe, l'entité est modifiée. Dans ce cas, la clé primaire peut être fournie telle quelle ou via la propriété "\_\_KEY" (contenant la valeur de la propriété primaire).
- - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
- - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
+  - Si la clé primaire est fournie et existe, l'entité est modifiée. Dans ce cas, la clé primaire peut être fournie telle quelle ou via la propriété "\_\_KEY" (contenant la valeur de la propriété primaire).
+  - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
+  - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
 - si l'objet contient une propriété booléenne "\_\_NEW" fixée à **vrai**, l'entité est créée avec les valeurs correspondantes des propriétés de l'objet. Une vérification est effectuée sur la clé primaire :
- - Si la clé primaire est fournie (telle quelle) et existe, une erreur est générée
- - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
- - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
+  - Si la clé primaire est fournie (telle quelle) et existe, une erreur est générée
+  - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
+  - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
 
 > La propriété "\*\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\_\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
 
@@ -902,8 +903,8 @@ où :
 
 - **formula** : Une formule valide passée en `Text` ou en `Object`. La formule sera évaluée pour chaque entité traitée et doit retourner une valeur booléenne. Dans la formule, l'entité est disponible via l'objet `This`.
 
- - **Text** : la chaîne de la formule doit être précédée de l'instruction `eval()`, afin que l'analyseur de la requête évalue correctement l'expression. Par exemple : *"eval(length(This.lastname) >=30)"*
- - **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide de la commande [`Formula`](../commands/formula.md) ou [`Formula from string`](../commands/formula-from-string.md).
+  - **Text** : la chaîne de la formule doit être précédée de l'instruction `eval()`, afin que l'analyseur de la requête évalue correctement l'expression. Par exemple : *"eval(length(This.lastname) >=30)"*
+  - **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide de la commande [`Formula`](../commands/formula.md) ou [`Formula from string`](../commands/formula-from-string.md).
 
 > * N'oubliez pas que les formules de 4D prennent uniquement en charge les symboles `&` et `|` comme opérateurs logiques.
 > * Si la formule n'est pas le seul critère de recherche, le système d'optimisation des requêtes pourra prioriser le traitement d'autres critères (ex : attributs indexés) et ainsi, la formule sera évaluée uniquement pour un sous-ensemble d'entités.
@@ -930,13 +931,13 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | Contient mot-clé                        | %                             | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                                                                     |
 
 - Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20.
- Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
- - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
- - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
- - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
- - Constantes de type **date** : "YYYY-MM-DD" format
- - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
- - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
+  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+  - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
+  - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
+  - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
+  - Constantes de type **date** : "YYYY-MM-DD" format
+  - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
+  - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
 | Conjonction | Symbole(s)                                                       |

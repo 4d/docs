@@ -55,7 +55,7 @@ Os objetos atributos retornados contêm as seguintes propriedades:
 | autoFilled       | Parâmetros | True se o valor do atributo for automaticamente preenchido por 4D. Corresponde às seguintes propriedades de campos 4D: "Autoincrement" para os campos de tipo numérico e "Auto UUID" para os campos UUID (alfa). Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                          |
 | exposed          | Parâmetros | True se o atributo estiver exposto no REST                                                                                                                                                                                                                                                                                                                                                 |
 | fieldNumber      | integer    | Número interno do campo 4D do atributo. Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                                   |
-| fieldType        | Integer    | Tipo de campo de banco de dados 4D do atributo. Depende do atributo `kind`. Valores possíveis: <li>se `.kind` = "storage": tipo de campo 4D correspondente, consulte [`Value type`] (https://doc.4d.com/4dv20/help/command/en/page1509.html)</li><li>se `.kind` = "relatedEntity": 38 (`is object`)</li><li>se `.kind` = "relatedEntities": 42 (`is collection`)</li><li>se `.kind` = "calculated" ou "alias" = o mesmo que acima, dependendo do valor resultante (tipo de campo, relatedEntity ou relatedEntities)</li>                                                                                                                                                                                         |
+| fieldType        | Integer    | Tipo de campo de banco de dados 4D do atributo. Depende do atributo `kind`. Valores possíveis: <li>se `.kind` = "storage": tipo de campo 4D correspondente, consulte [`Value type`](https://doc.4d.com/4dv20/help/command/en/page1509.html)</li><li>se `.kind` = "relatedEntity": 38 (`is object`)</li><li>se `.kind` = "relatedEntities": 42 (`is collection`)</li><li>se `.kind` = "calculated" ou "alias" = o mesmo que acima, dependendo do valor resultante (tipo de campo, relatedEntity ou relatedEntities)</li>                                                                                                                                                                                         |
 | indexed          | Parâmetros | True se houver um índice B-tree ou Cluster B-tree no atributo. Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                            |
 | inverseName      | Text       | Nome do atributo que está do outro lado da relação. Retornado somente quando `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                               |
 | keywordIndexed   | Parâmetros | True se houver um índice de palavras-chave no atributo. Não retornado se `.kind` = "relatedEntity" ou "relatedEntities".                                                                                                                                                                                                                                                                   |
@@ -183,13 +183,11 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-
-|
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 
 #### Descrição
@@ -464,7 +462,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 :::info
 
-Quando você chama a função `.get()` **sem o parâmetro** *settings*, uma solicitação para valores de atributo é enviada diretamente para o servidor (a [cache ORDA](../ORDA/remoteDatastores.md#orda-cache) não é usada). On the other hand, when you call the `.get()` function **with** a `context` passed in the *settings* parameter, attribute values are retrieved from the ORDA cache corresponding to the context. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
+Quando você chama a função `.get()` **sem o parâmetro** *settings*, uma solicitação para valores de atributo é enviada diretamente para o servidor (a [cache ORDA](../ORDA/remoteDatastores.md#orda-cache) não é usada). Por outro lado, quando você chama a função `.get()` **com** um `contexto` passado no parâmetro *settings*, os valores dos atributos são recuperados do cache ORDA correspondente ao contexto. Nesse caso, pode ser aconselhável chamar [`reload()`](EntityClass.md#reload) para garantir que os dados mais recentes sejam recuperados do servidor.
 
 :::
 
@@ -840,9 +838,9 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 #### Exemplo
 
 ```4d
- var $USelection; $OSelection : cs. EmployeeSelection
- $USelection:=ds. Employee.newSelection() //create an unordered empty entity selection
- $OSelection:=ds. Employee.newSelection(dk keep ordered) //create an ordered empty entity selection
+ var $USelection; $OSelection : cs.EmployeeSelection
+ $USelection:=ds.Employee.newSelection() //criar uma seleção vazia sem ordenação da entidade
+ $OSelection:=ds.Employee.newSelection(dk keep ordered) //criar uma seleção de entidade vazia ordenada
 ```
 
 <!-- END REF -->
@@ -1013,7 +1011,7 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
  $vSingles:=ds. Person.query("spouse = null") //correct syntax
 ```
 
-#### Not equal to null or undefined values
+#### Não igual os valores null ou undefined
 
 O comparador "not equal to *value*" (`#` ou `!`) não retorna atributos cujo valor é null ou indefinido. Por exemplo, a consulta a seguir só retornará pessoas cujas "informações". status chegado é `false` e não as pessoas cuja propriedade "info.married" é "null" ou faltando:
 

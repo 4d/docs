@@ -36,7 +36,7 @@ Este comando es rápido y muy útil para evitar la creación de entradas dobles 
 En una base de datos de CDs, durante la entrada de datos asumamos que usted quiere verificar el nombre del cantante para ver si ya existe en la base. Como pueden existir homónimos, usted quiere que el campo \[Cantante\]Nombre sea único. Por lo tanto, en el formulario de entrada, puede escribir el siguiente código en el método de objeto del campo \[Cantante\]Nombre:
 
 ```4d
- If(FORM Event=On Data Change)
+ If(FORM Event.code=On Data Change)
     $RecNum:=Find in field([Cantante]Nombre;[Cantante]Nombre)
     If($RecNum #-1) // si este nombre ya ha sido introducido
        CONFIRM("Ya existe un cantante con el mismo nombre. ¿Quiere ver el registro?";"Sí";"No")

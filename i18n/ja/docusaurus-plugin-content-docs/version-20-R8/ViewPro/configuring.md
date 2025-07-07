@@ -360,10 +360,10 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 - `height` と `width` プロパティで用紙サイズを指定した場合、[`VP Get print info`](./commands/vp-get-print-info.md) が返す用紙サイズ属性の `kind` プロパティ値は `custom` です。
 
 - `kind` プロパティで用紙サイズを設定する場合、以下のいずれかを使用することができます:
- - [ SpreadJS のフォーマットリスト](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind) のフォーマット
- - one of the formats returned by the [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md) command.
-  [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/ja/page785.html) コマンドで返されるフォーマット。
-  この場合、[`VP Get print info`](./commands/vp-get-print-info.md) は対応するフォーマットを高さと幅とともに返します。
+  - [ SpreadJS のフォーマットリスト](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind) のフォーマット
+  - one of the formats returned by the [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md) command.
+    [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/ja/page785.html) コマンドで返されるフォーマット。
+    この場合、[`VP Get print info`](./commands/vp-get-print-info.md) は対応するフォーマットを高さと幅とともに返します。
 
 ### スケール
 
@@ -403,7 +403,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 \* テキスト型を使用する場合には、画像のファイルパス (絶対パスまたは相対パス) を渡します。 相対パスを渡す場合、ファイルはデータベースのストラクチャーファイルのと階層に置かれてなければなりません。 Windows では、ファイル拡張子も含めて渡します。 画像指定に使用するデータ型にかかわらず、4D View Pro エリアには (参照ではなく) 画像そのものが保存され、[VP Get print info](commands/vp-get-print-info.md) によって返されます。
 
-## スタイルオブジェクト
+## Style Objects {#style-objects}
 
 4D View Pro スタイルオブジェクトとスタイルシートを使用すると、4D View Pro ドキュメントのグラフィカル要素や見た目を管理することができるようになります。
 

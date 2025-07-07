@@ -5,6 +5,9 @@ slug: /commands/php-get-option
 displayed_sidebar: docs
 ---
 
+<!-- IREF #_command_.PHP GET OPTION.deprecated -->
+
+
 <!--REF #_command_.PHP GET OPTION.Syntax-->**PHP GET OPTION** ( *opção* ; *valor* )<!-- END REF-->
 <!--REF #_command_.PHP GET OPTION.Params-->
 | Parâmetro | Tipo |  | Descrição |

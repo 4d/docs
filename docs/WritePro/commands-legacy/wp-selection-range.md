@@ -17,14 +17,9 @@ displayed_sidebar: docs
 
 *This command is not thread-safe, it cannot be used in preemptive code.*
 
-
-## Compatibility 
-
-<!--REF #_command_.WP Selection range.Summary-->**WP Selection range** was named **WP Get selection** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
-
 ## Description 
 
-The **WP Selection range** command returns a new range object or a picture object based upon the currently selected content in the *wpArea* 4D Write Pro area.
+<!--REF #_command_.WP Selection range.Summary-->The **WP Selection range** command returns a new range object or a picture object based upon the currently selected content in the *wpArea* 4D Write Pro area.<!-- END REF-->
 
 If you pass the optional *\** parameter, you indicate that *wpArea* is a form object name (string). If you do not pass this parameter, you indicate that *wpArea* is a 4D Write Pro object variable or field. If no 4D Write Pro area is passed in the *wpArea* parameter, an empty object is returned.
 

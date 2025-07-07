@@ -8,7 +8,7 @@ title: Background and Border
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
+You can also set this property using the  command.
 
 #### JSON Grammar
 
@@ -19,6 +19,10 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 #### Objects Supported
 
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+
+#### Commands
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 ---
 
@@ -40,6 +44,12 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 
 [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
+#### Commands
+
+[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color.md) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+
+
+
 #### See also
 
 [Transparent](#transparent)
@@ -52,7 +62,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 
 An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command in the *4D Language Reference manual*.
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](../commands-legacy/listbox-set-property.md) command with `lk background color expression` constant.
+You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) command with `lk background color expression` constant.
 
 >With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -65,6 +75,11 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](../commands-le
 #### Objects Supported
 
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+
+#### Commands
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+
 
 ---
 
@@ -81,6 +96,13 @@ Allows setting a standard style for the object border.
 #### Objects Supported
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+
+
+#### Commands
+
+[`OBJECT Get border style`](../commands-legacy/object-get-border-style.md) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style.md) 
+
+
 
 ---
 
@@ -120,6 +142,10 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 [List Box](listbox_overview.md)
 
+#### Commands
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+
 ---
 
 ## Line Color
@@ -144,6 +170,11 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 #### Objects Supported
 
 [Line](shapes_overview.md#line) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle)
+
+#### Commands
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+
 
 ---
 
@@ -203,6 +234,11 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands
 
 [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
+#### Commands
+
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAYS`](../commands-legacy/listbox-set-arrays.md)
+
+
 ---
 
 ## Transparent
@@ -218,6 +254,11 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+#### Commands
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+
 
 #### See also
 

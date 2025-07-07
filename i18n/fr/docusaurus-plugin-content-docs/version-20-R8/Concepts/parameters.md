@@ -190,7 +190,7 @@ Function getValue -> $v : Integer
 
 ## Indirections sur les paramètres (${N})
 
-Les méthodes et fonctions 4D acceptent un nombre variable de paramètres. Vous pouvez adresser ces paramètres avec une boucle `For...End for`, la [commande `Count parameters`](https://doc.4d.com/4dv20/help/command/fr/page259.html) et la **syntaxe d'indirection des paramètres**. Au sein de la méthode, une adresse d'indirection est formatée `${N}`, où `N` est une expression numérique.
+Les méthodes et fonctions 4D acceptent un nombre variable de paramètres. Vous pouvez adresser ces paramètres avec une boucle `For...End for`, la [commande `Count parameters`](https://doc.4d.com/4dv20/help/command/fr/page259.html) et la **syntaxe d'indirection des paramètres**. You can address those parameters with a `For...End for` loop, the [`Count parameters`](../commands-legacy/count-parameters.md) command and the **parameter indirection syntax**.
 
 ### Utilisation des paramètres variadiques
 
@@ -319,8 +319,8 @@ Ce cas est traité par 4D en fonction du contexte :
 
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
- - if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
- - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
+  - if the parameter was declared using the named syntax (`#DECLARE` or `Function`), an error is generated when the method is called.
+  - if the parameter was declared using a legacy (`_C_XXX`) syntax, no error is generated, the called method receives an empty value of the expected type.
 
 ## Utilisation des propriétés d'objet comme paramètres nommés
 
@@ -478,7 +478,7 @@ $param->:=Uppercase($param->)
 ALERT($param->)
 ```
 
-Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Therefore, within the `DO SOMETHING` method, $param is no longer the value of the field but a pointer to the field. The object **referenced** by $param ($param-> in the code above) is the actual field. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAMS".
+Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Therefore, within the `DO SOMETHING` method, $param is no longer the value of the field but a pointer to the field. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAMS".
 
 2. Plutôt que la méthode `DO_SOMETHING` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur.
 

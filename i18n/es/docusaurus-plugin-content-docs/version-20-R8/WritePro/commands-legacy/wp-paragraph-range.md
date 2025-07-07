@@ -14,13 +14,10 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibilidad 
-
-<!--REF #_command_.WP Paragraph range.Summary-->**WP Paragraph range** recibió el nombre de **WP Get paragraphs** en versiones anteriores de 4D Write Pro.<!-- END REF--> Ha sido renombrado por claridad.
 
 ## Descripción 
 
-El nuevo comando **WP Paragraph range** devuelve un rango de objetos específico que se refiere únicamente a los párrafos contenidos en *rangoObj* que se pasó como parámetro. El objeto rango de párrafo devuelto puede ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar los atributos del párrafo únicamente.
+<!--REF #_command_.WP Paragraph range.Summary-->El comando **WP Paragraph range** devuelve un rango de objetos específico que se refiere únicamente a los párrafos contenidos en *rangoObj* que se pasó como parámetro.<!-- END REF--> El objeto rango de párrafo devuelto puede ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar los atributos del párrafo únicamente.
 
 En *rangoObj*, puede pasar:
 

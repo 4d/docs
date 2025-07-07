@@ -397,7 +397,7 @@ Los atributos de marca de agua se utilizan para superponer texto o una imagen en
 
 \* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](method-list.md#vp-get-print-info).
 
-## Objetos Estilo
+## Objetos Estilo {#style-objects}
 
 Los objetos de estilo y las hojas de estilo de 4D View Pro le permiten controlar los aspectos gráficos y el aspecto de sus documentos 4D View Pro.
 

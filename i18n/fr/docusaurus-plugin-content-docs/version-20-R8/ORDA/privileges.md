@@ -35,7 +35,7 @@ Chaque fois qu'on accède à une ressource dans une session (quelle que soit la 
 
 Une action de permission définie à un certain niveau est héritée par défaut aux niveaux inférieurs, mais plusieurs niveaux de permissions peuvent être définis :
 
-- Une action de permission définie au niveau du datastore est automatiquement assignée à toutes les dataclass. L'action de permission *execute* définie au niveau du datastore s'applique à toutes les fonctions du projet, y compris toutes les fonctions [singleton](../REST/$singleton.md).
+- Une action de permission définie au niveau du datastore est automatiquement assignée à toutes les dataclass. Une action de permission définie au niveau du datastore est automatiquement assignée à toutes les dataclass.
 - Une action de permission définie au niveau dataclass remplace le paramétrage du datastore (le cas échéant). Par défaut, tous les attributs de la dataclass héritent des permissions de la dataclass.
 - Contrairement aux permissions des dataclass, une action de permission définie au niveau de l'attribut ne remplace pas la permission de la dataclass parente, mais y est ajoutée. Par exemple, si vous avez attribué le privilège "général" à une dataclass et le privilège "détail" à un attribut de la dataclass, les deux privilèges, "général" et "détail", doivent être définis dans la session afin d'accéder à l'attribut.
 

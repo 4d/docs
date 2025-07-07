@@ -58,7 +58,7 @@ La variable URL produce los mismos efectos que el comando [WA OPEN URL](../comma
 
 - Para el acceso a los documentos, esta variable sólo acepta URLs que cumplan con el RFC ("file://c:/My%20Doc") y no los nombres de ruta del sistema ("c:\MyDoc"). El comando [WA OPEN URL](../commands-legacy/wa-open-url.md) acepta ambas notaciones.
 - Si la variable URL contiene una cadena vacía, el área web no intenta cargar la URL. El comando [WA OPEN URL](../commands-legacy/wa-open-url.md) genera un error en este caso.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](../commands-legacy/wa-open-url.md) command.
+- Si la variable URL no contiene un protocolo (http, correo, archivo, etc.), el área web añade "http://", lo cual no es el caso del comando [WA OPEN URL](../commands-legacy/wa-open-url.md).
 - Cuando el área Web no se muestra en el formulario (cuando se encuentra en otra página del formulario), la ejecución del comando [WA OPEN URL](../commands-legacy/wa-open-url.md) no tiene ningún efecto, mientras que la asignación de un valor a la variable URL puede utilizarse para actualizar la URL actual.
 
 #### Gramática JSON

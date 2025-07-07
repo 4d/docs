@@ -3,9 +3,9 @@ id: EmailObjectClass
 title: Email
 ---
 
-Creating, sending or receiving emails in 4D is done by handling an `Email` object.
+Criar, enviar ou receber e-mails em 4D é feito manipulando um objeto `Email`.
 
-`Email` objects are created when receiving mails through a *transporter* class function:
+Os objetos `Email` são criados ao receber e-mails através de uma função de classe *transporter*:
 
 - IMAP - funções [`.getMail()`](IMAPTransporterClass.md#getmail) e [`.getMails()`](IMAPTransporterClass.md#getmails) para obter e-mails de um servidor IMAP
 - POP3 - Função [`.getMail()`](POP3TransporterClass.md#getmail) para obter um e-mail de um servidor POP3.
@@ -14,7 +14,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 
 Você envia objetos `Email` usando a função SMTP [`.send()`](SMTPTransporterClass.md#send).
 
-[`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) commands can be used to convert `Email` objects to and from MIME contents.
+Os comandos [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) e [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) podem ser usados para converter objetos `Email` de e para conteúdos MIME.
 
 ### Objeto Email
 
@@ -54,7 +54,7 @@ Todas as propriedades que contêm endereços de e-mail ([`from`](#from), [`cc`](
 #### Text
 
 - e-mail único: "somebody@domain.com"
-- single display name+email: "Somebody <somebody@domain.com>"
+- nome de exibição único + e-mail: "Somebody <somebody@domain.com>"
 - vários e-mails: "Somebody <somebody@domain.com>,me@home.org"
 
 #### Object
@@ -74,7 +74,7 @@ Uma coleção de objetos de endereço.
 
 As propriedades [`textBody`](#textbody) e [`htmlBody`](#htmlbody) são usadas somente com a função [SMTP.send()](SMTPTransporterClass.md#send) para permitir o envio de e-mails simples. Quando ambas as propriedades são preenchidas, o tipo de conteúdo MIME multiparte/alternativo é utilizada. O cliente de email deve reconhecer a parte multiparte/alternativa e exibir a parte do texto ou html conforme necessário.
 
-[`bodyStructure`](#bodystructure) e [`bodyValues`](#bodyvalues) são usados para [SMTP](SMTPTransporterClass.md) quando o [objeto Email](#email-object) é criado a partir de um documento MIME, por exemplo, quando gerado pelo comando `MAIL Convert from MIME`. In this case, both `bodyStructure` and `bodyValues` properties must be passed together, and it is not recommended to use `textBody` and `htmlBody`.
+[`bodyStructure`](#bodystructure) e [`bodyValues`](#bodyvalues) são usados para [SMTP](SMTPTransporterClass.md) quando o [objeto Email](#email-object) é criado a partir de um documento MIME, por exemplo, quando gerado pelo comando `MAIL Convert from MIME`. Nesse caso, as propriedades `bodyStructure` e `bodyValues` devem ser passadas juntas, e não é recomendável usar `textBody` e `htmlBody`.
 
 #### Exemplo de objetos bodyStructure e bodyValues
 
@@ -135,10 +135,10 @@ O objeto `.bodyStructure` contém as seguintes propriedades:
 | partID      | Text                   | Identifica a parte de maneira única dentro do email                                                                                                                                  |
 | type        | Text                   | (obrigatório) Valor do campo de cabeçalho Content-Type da parte                                                                                                   |
 | charset     | Text                   | Valor do parâmetro charset do campo de cabeçalho Content-Type                                                                                                                        |
-| encoding    | Text                   | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                                  |
+| encoding    | Text                   | Se `isEncodingProblem=true`, o valor de Content-Transfer-Encoding é adicionado (por padrão indefinido)                                                            |
 | disposition | Text                   | Valor do campo de cabeçalho Conteúdo - Disposição da parte                                                                                                                           |
-| Línguagem   | Coleção de textos      | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.                   |
-| location    | Text                   | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                                     |
+| Línguagem   | Coleção de textos      | Lista de tags de linguagem, conforme definido em [RFC3282](https://tools.ietf.org/html/rfc3282), no campo de cabeçalho Content-Language da parte, se presente.       |
+| location    | Text                   | URI, conforme definido em [RFC2557](https://tools.ietf.org/html/rfc2557), no campo de cabeçalho Content-Location da parte, se presente.                              |
 | subParts    | Uma coleção de objetos | Partes do corpo de cada filho (coleção de objetos *EmailBodyPart*)                                                                                                |
 | headers     | Uma coleção de objetos | Lista de todos os campos de cabeçalho da parte, na ordem em que eles aparecem na mensagem (coleção de objetos *EmailHeader*, ver propriedade [headers](#headers)) |
 
@@ -152,10 +152,10 @@ A propriedade `.bodyValues` contém o objeto <!-- REF #EmailObjectClass.bodyValu
 
 O objeto `.bodyValues` contém as seguintes propriedades:
 
-| Propriedade                                | Tipo    | Valor                                                                                                                                                                                               |
-| ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | Valor da parte do corpo                                                                                                                                                                             |
-| *partID*.isEncodingProblem | boolean | Verdadeiro se seções malformadas forem encontradas durante a decodificação do conjunto de charset, ou charset desconhecido, ou codificação de conteúdo desconhecido. Padrão é falso |
+| Propriedade                                | Tipo    | Valor                                                                                                                                                                                         |
+| ------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | text    | Valor da parte do corpo                                                                                                                                                                       |
+| *partID*.isEncodingProblem | boolean | True se seções malformadas forem encontradas durante a decodificação do conjunto de charset, ou charset desconhecido, ou codificação de conteúdo desconhecido. Padrão é falso |
 
 ## .cc
 
@@ -200,7 +200,7 @@ Para uma melhor capacidade de entrega, é recomendado usar o mesmo endereço de 
 
 A propriedade `.headers` contém uma coleção <!-- REF #EmailObjectClass.headers.Summary -->de objetos `EmailHeader`, na ordem em que aparecem na mensagem<!-- END REF -->. Esta propriedade permite que usuários adicionem cabeçalhos estendidos (registrados) ou definidos pelo usuário (não registrados, começando com cabeçalhos "X").
 
-> If an `EmailHeader` object property defines a header such as "from" or "cc" which is already set as a property at the mail level, the `EmailHeader` property is ignored.
+> Se uma propriedade de objeto `EmailHeader` define um cabeçalho como "from" ou "cc" que já está definida como uma propriedade no nível de correio, a propriedade `EmailHeader` é ignorada.
 
 Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 

@@ -15,6 +15,14 @@ title: VP IMPORT FROM BLOB
 | vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro |                  |
 | paramObj   | Object                  | -> | Opciones de importación                       | <!-- END REF --> |
 
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones                                                |
+| ----------- | ------------------------------------------------------------- |
+| 20 R9       | Trigger of callback function after custom functions completed |
+
+</details>
+
 ## Descripción
 
 El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa el *vpBlob* del área *vpAreaName* de 4D View Pro y reemplaza su contenido<!-- END REF -->. *vpBlob* debe contener un documento 4D View Pro previamente guardado como Blob ya sea utilizando el comando [VP EXPORT TO BLOB](vp-export-to-blob.md) o a través de la interfaz de 4D View Pro.
@@ -46,7 +54,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 :::note
 
-The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 ::::
 

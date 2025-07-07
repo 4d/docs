@@ -79,7 +79,7 @@ O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel
 - *Windows* - el botón es idéntico al estilo [Bevel](#bevel).
 
 - *macOS* - las esquinas del botón están redondeadas.
- ![](../assets/en/FormObjects/roundedBevel.png)
+  ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 
@@ -152,4 +152,4 @@ Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 
 Propiedades específicas adicionales están disponibles en función del [estilo de botón](#button-styles):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- Personalizado: [Caminho segundo plano](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Offset](properties_TextAndPicture.md#icon-offset) - [Margem Vertical](properties_TextAndPicture.md#vertical-margin)

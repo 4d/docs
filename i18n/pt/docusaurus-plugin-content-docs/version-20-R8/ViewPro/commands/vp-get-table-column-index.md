@@ -31,13 +31,13 @@ O comando `VP Get table index` <!-- REF #_method_.VP Get table column index.Summ
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *columnName*, pass the name of the table column for which you want to get the index.
+Em *columnName*, passe o nome da tabela coluna para o qual deseja o indice.
 
 Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 
-If *tableName* or *columnName* is not found, the command returns -1.
+Se *tableName* ou *columnName* não for encontrado, o comando retornará -1.
 
 ## Exemplo
 

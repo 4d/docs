@@ -110,7 +110,7 @@ Os objectos partilhados e as colecções partilhadas são concebidos para permit
 
 :::note
 
-[Collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed, making an explicit call to the structure unnecessary. Também é o caso de comandos `ARRAY TO COLLECTION` e `OB REMOVE`.
+[Funções de coleção](../API/CollectionClass.md) que modificam coleções compartilhadas automaticamente acionam um **Use** interno para esta coleção compartilhada enquanto a função é executada, fazer uma chamada explícita à estrutura desnecessária. Também é o caso de comandos `ARRAY TO COLLECTION` e `OB REMOVE`.
 
 :::
 

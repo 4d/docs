@@ -21,7 +21,7 @@ O comando `VP Export to object` <!-- REF #_method_.VP Export to object.Summary -
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In the *options* parameter, you can pass the following export options, if required:
+No parâmetro *options*, você pode passar as seguintes opções de exportação, se necessário:
 
 | Propriedade          | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                      |
 | -------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

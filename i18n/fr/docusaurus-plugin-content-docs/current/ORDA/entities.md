@@ -118,7 +118,12 @@ $entity.lastname:="Jones" //définir le nom de l'employé
 $entity.save() //sauvegarder les modifications
 ```
 
-> Les champs Blob des bases de données ([blobs scalaires](Concepts/dt_blob.md)) sont automatiquement convertis en attributs d'objets blob ([`4D.Blob`](Concepts/dt_blob.md)) lorsqu'ils sont traités par ORDA. Lorsque vous sauvegardez un attribut d'objet blob, gardez à l'esprit que, contrairement à la taille de l'objet blob qui n'est limitée que par la mémoire disponible, la taille du champ Blob est limitée à 2 Go.
+:::note Notes
+
+- Database Object fields can be [associated with classes](../Develop/field-properties.md), in which case only objects of the defined class can be assigned to the entity attribute.
+- Les champs Blob des bases de données ([blobs scalaires](Concepts/dt_blob.md)) sont automatiquement convertis en attributs d'objets blob ([`4D.Blob`](Concepts/dt_blob.md)) lorsqu'ils sont traités par ORDA. Lorsque vous sauvegardez un attribut d'objet blob, gardez à l'esprit que, contrairement à la taille de l'objet blob qui n'est limitée que par la mémoire disponible, la taille du champ Blob est limitée à 2 Go.
+
+:::
 
 L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec la structure suivante :
 
@@ -312,9 +317,9 @@ Une nouvelle entity selection **hérite** de la nature de l'entity selection ori
 
 - la nouvelle entity selection résulte de l'une des diverses fonctions des classes ORDA appliquées à une entity selection existante ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - la nouvelle entity selection est basée sur une relation :
- - [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple "company.employees") lorsque *attributeName* est un attribut lié de type "1-vers-N" et que l'entité appartient à une entity selection (de même nature que l'entity selection [.getSelection()](API/EntityClass.md#getselection)),
- - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (par exemple "employees.employer") lorsque *attributeName* est un attribut lié (de même nature que l'entity selection),
- - [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
+  - [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple "company.employees") lorsque *attributeName* est un attribut lié de type "1-vers-N" et que l'entité appartient à une entity selection (de même nature que l'entity selection [.getSelection()](API/EntityClass.md#getselection)),
+  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (par exemple "employees.employer") lorsque *attributeName* est un attribut lié (de même nature que l'entity selection),
+  - [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
 
 Exemples :
 
@@ -553,9 +558,9 @@ Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" q
 - Toutes les entités peuvent toujours être chargées en lecture-écriture; il n'y a pas de «verrouillage» *a priori* des entités.
 - Chaque entité possède un marqueur de verrouillage interne qui est incrémenté à chaque fois qu'il est enregistré.
 - Lorsqu'un utilisateur ou un process tente de sauvegarder une entité à l'aide de la méthode `entity.save()`, 4D compare la valeur du marqueur de l'entité à sauvegarder avec celle de l'entité trouvée dans les données (en cas de modification) :
- - Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
+  - Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
 
- - Lorsque les valeurs ne correspondent pas, cela signifie qu'un autre utilisateur a modifié cette entité entre-temps. La sauvegarde n'est pas effectuée et une erreur est retournée.
+  - Lorsque les valeurs ne correspondent pas, cela signifie qu'un autre utilisateur a modifié cette entité entre-temps. La sauvegarde n'est pas effectuée et une erreur est retournée.
 
 Le diagramme suivant illustre le verrouillage optimiste :
 

@@ -17,7 +17,7 @@ Os formulários também podem conter outros formulários através das seguintes 
 É possível adicionar ou modificar formulários 4D usando os seguintes elementos:
 
 - **Interface de Desenvolvedor 4D:** Crie novos formulários a partir do menu **Arquivo** ou da janela **Explorador**.
-- **Form Editor**: Modifique seus formulários usando o **[Form Editor] (FormEditor/formEditor.md)**.
+- **Form Editor**: Modifique seus formulários usando o **[Editor de formulários](FormEditor/formEditor.md)**.
 - **Código JSON:** crie e projete seus formulários usando JSON e salve os arquivos de formulário no [local apropriado](Project/architecture#sources). Exemplo:
 
 ```
@@ -119,9 +119,9 @@ As propriedades e o método de um formulário não são considerados quando esse
 
 Para definir um formulário herdado, as propriedades [Inherited Form Name](properties_FormProperties.md#inherited-form-name) e [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (para formulário de tabela) devem ser definidas no formulário que herdará algo de outro formulário.
 
-Um formulário pode herdar de um formulário de projeto, definindo a propriedade [Inherited Form Table] (properties_FormProperties.md#inherited-form-table) como `\<None>` na Property List (ou " " em JSON).
+Um formulário pode herdar de um formulário de projeto, definindo a propriedade [Tabela de formulário herdado](properties_FormProperties.md#inherited-form-table) como `\<None>` na Property List (ou " " em JSON).
 
-Para interromper a herança de um formulário, selecione `\<None>` na Property List (ou " " em JSON) para a propriedade [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
+Para interromper a herança de um formulário, selecione `\<None>` na Property List (ou " " em JSON) para a propriedade [Nome do formulário herdado](properties_FormProperties.md#inherited-form-name).
 
 > É possível definir um formulário herdado em um formulário que eventualmente será usado como um formulário herdado para um terceiro formulário. A combinação de objetos é feita de forma recursiva. 4D detecta loops recursivos (por exemplo, se o formulário [table1]form1 é definido como o formulário herdado de [table1]form1, ou seja, ele mesmo) e interrompe a cadeia de formulários.
 

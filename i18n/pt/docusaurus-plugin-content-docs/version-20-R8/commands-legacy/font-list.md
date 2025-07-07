@@ -52,7 +52,7 @@ Em um formulário, você quer obter uma lista para baixo que mostre as fontes di
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        ARRAY TEXT(asFonte;0)
        FONT LIST(asFonte)
   // ...

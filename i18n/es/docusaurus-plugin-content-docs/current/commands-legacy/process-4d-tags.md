@@ -58,15 +58,15 @@ Este ejemplo carga un documento de tipo "plantilla", procesa las etiquetas que c
 Este ejemplo genera un texto utilizando los datos de los arrays:
 
 ```4d
- ARRAY TEXT($array;2)
- $array{1}:="hello"
- $array{2}:="world"
- $input:=""
- $input:=$input+""
- $input:=$input+" "
- $input:=$input+""
- PROCESS 4D TAGS($input;$output;"elements = ";->$array)
-  // $output = "elements = hello world"
+ARRAY TEXT($array; 2)
+$array{1}:="hello"
+$array{2}:="world"
+$input:="<!--#4DEVAL $1-->"
+$input:=$input+"<!--#4DLOOP $2-->"
+$input:=$input+"<!--#4DEVAL $2->{$2->}--> "
+$input:=$input+"<!--#4DENDLOOP-->"
+PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
+// $output = "elements = hello world"
 ```
 
 ## Ver también 

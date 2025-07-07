@@ -29,7 +29,7 @@ When a [class constructor](../Concepts/classes.md#class-constructor) function is
 ```4d
 //Class: ob
 
-Class Constructor  
+Class constructor  
 
  // Create properties on This as
  // desired by assigning to them

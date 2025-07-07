@@ -9,8 +9,8 @@ https://platform.openai.com/docs/api-reference/moderations/object#moderations/ob
 
 ## Propriétés
 
-| Property Name    | Type    | Description                                                              |
-| ---------------- | ------- | ------------------------------------------------------------------------ |
-| `categories`     | Object  | Contains categories associated with the moderation item. |
-| `category_score` | Object  | Contains scores for each category.                       |
-| `flagged`        | Boolean | Indicates whether the moderation item is flagged.        |
+| Nom de propriété | Type    | Description                                                                  |
+| ---------------- | ------- | ---------------------------------------------------------------------------- |
+| `categories`     | Object  | Contient les catégories associées à l'élément de modération. |
+| `category_score` | Object  | Contient des notations pour chaque catégorie.                |
+| `flagged`        | Boolean | Indique si l'élément de modération est marqué.               |

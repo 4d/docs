@@ -7,7 +7,7 @@ Null et Undefined sont des types de données qui gèrent les cas où la valeur d
 
 ## Null
 
-Null est un type de données particulier avec une seule valeur possible : **null**. Cette valeur est retournée par une expression qui ne contient aucune valeur. Essayer de lire une propriété d'une valeur **null** retourne une erreur.
+Null est un type de données particulier avec une seule valeur possible : **null**. Cette valeur est retournée par une expression qui ne contient aucune valeur. Cette valeur est retournée par une expression qui ne contient aucune valeur.
 
 Dans le langage 4D et pour les attributs des champs objets, les valeurs null sont gérées via la fonction `Null`. Cette commande peut être utilisée avec les expressions suivantes pour fixer ou comparer la valeur null :
 
@@ -36,14 +36,14 @@ En règle générale, lorsque le code tente de lire ou d'assigner des expression
 ```
 
 - L'affectation d'une valeur indéfinie à une propriété d'objet existante réinitialise ou efface sa valeur, selon son type :
- - Objet, collection, pointeur : Null
- - Image : image vide
- - Booléen : False
- - Chaîne : ""
- - Numérique : 0
- - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""
- - Heure : 0 (nombre de ms)
- - Indéfini, Null : pas de changement
+  - Objet, collection, pointeur : Null
+  - Image : image vide
+  - Booléen : False
+  - Chaîne : ""
+  - Numérique : 0
+  - Date : !00-00-00! si la base utilise le type date pour les objets, sinon ""
+  - Heure : 0 (nombre de ms)
+  - Indéfini, Null : pas de changement
 
 ```4d
      var $o : Object

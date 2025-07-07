@@ -120,7 +120,7 @@ Vous pouvez définir cette préférence en cochant l'option **Créer le fichier 
 
 Lorsqu'un projet est créé dans 4D et que cette case est cochée, 4D crée un fichier `.gitignore` au même niveau que le dossier `Project` (voir [Architecture d'un projet](Project/architecture.md#gitignore-file-optional)).
 
-Vous pouvez définir le contenu par défaut du fichier `.gitignore` en cliquant sur l'icône du crayon. Cela ouvrira le fichier de configuration .gitignore dans votre éditeur de texte. Quitter le mode Développement lors du passage en mode Application
+Vous pouvez définir le contenu par défaut du fichier `.gitignore` en cliquant sur l'icône du crayon. Cela ouvrira le fichier de configuration .gitignore dans votre éditeur de texte. Cela ouvrira le fichier de configuration .gitignore dans votre éditeur de texte.
 
 La [documentation officielle de git](https://git-scm.com/docs/gitignore) est une excellente ressource pour comprendre le fonctionnement des fichiers `.gitignore`.
 

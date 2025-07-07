@@ -49,7 +49,7 @@ The following example is part of an object method for an *\[Employees\]Salary* f
 
 ```4d
  Case of
-    :(FORM Event=On Data Change)
+    :(FORM Event.code=On Data Change)
        If([Employees]Salary<10000)
           ALERT("Salary must be greater than $10,000")
           REJECT([Employees]Salary)

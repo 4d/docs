@@ -62,7 +62,7 @@ La seconde méthode est la méthode du formulaire "ImprimEtiq". Le formulaire co
 ```4d
   // Méthode formulaire [Adresses];"Etiquette sortie"
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vEtiq:=[Adresses]Nom1+" "+[Adresses]Nom2+Char(13)+[Adresses]Adr1
        +Char(13)
        If([Adresses]Adr2 #"")

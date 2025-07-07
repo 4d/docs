@@ -164,10 +164,10 @@ user / password を指定せずにリモートデータストアに接続しま�
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
- $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
- $remoteDS:=Open datastore($connectTo;"students")
- ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
+var $remoteDS : 4D.DataStoreImplementation
+$connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
+$remoteDS:=Open datastore($connectTo;"students")
+ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 #### 例題 2
@@ -176,11 +176,11 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
- $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
+var $remoteDS : 4D.DataStoreImplementation
+$connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
- $remoteDS:=Open datastore($connectTo;"students")
- ALERT("このリモートデータストアには "+String($remoteDS.Students.all().length)+" 名の生徒が登録されています")
+$remoteDS:=Open datastore($connectTo;"students")
+ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
 #### 例題 3
@@ -395,12 +395,12 @@ user / password / timeout / tls を指定してリモートデータストアに
 リモートデータストアの場合:
 
 ```4d
-  var $remoteDS : cs.DataStore
-  var $info; $connectTo : Object
+  var $remoteDS : 4D.DataStoreImplementation
+var $info; $connectTo : Object
 
- $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
- $remoteDS:=Open datastore($connectTo;"students")
- $info:=$remoteDS.getInfo()
+$connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
+$remoteDS:=Open datastore($connectTo;"students")
+$info:=$remoteDS.getInfo()
 
   //{"type":"4D Server",
   //"localID":"students",
@@ -742,27 +742,27 @@ ORDA クライアントリクエストをメモリに記録します:
 
 ```4d
  var $connect; $status : Object
- var $person : cs.PersonsEntity
- var $ds : cs.DataStore
- var $choice : Text
- var $error : Boolean
+var $person : cs.PersonsEntity
+var $ds : 4D.DataStoreImplementation
+var $choice : Text
+var $error : Boolean
 
- Case of
+Case of
     :($choice="local")
        $ds:=ds
     :($choice="remote")
        $connect:=New object("hostname";"111.222.3.4:8044")
        $ds:=Open datastore($connect;"myRemoteDS")
- End case
+End case
 
- $ds.startTransaction()
- $person:=$ds.Persons.query("lastname=:1";"Peters").first()
+$ds.startTransaction()
+$person:=$ds.Persons.query("lastname=:1";"Peters").first()
 
- If($person#Null)
+If($person#Null)
     $person.lastname:="Smith"
     $status:=$person.save()
- End if
- ...
+End if
+...
  ...
  If($error)
     $ds.cancelTransaction()

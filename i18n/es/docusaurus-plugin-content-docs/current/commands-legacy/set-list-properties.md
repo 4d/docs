@@ -54,7 +54,7 @@ Desea rechazar la sublista de expandir/contraer al hacer doble clic. Puede escri
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        hlCities:=Load list("Cities") //cargar la lista de opciones Cities en el objeto de formulario hlCities
        SET LIST PROPERTIES(hlCities;0;0;0;1) //no permitir doble clic para expandir/contraer
  End case

@@ -7,14 +7,14 @@ Puede llamar a [funciones clase modelo de datos](ORDA/ordaClasses.md) definidas 
 
 Las funciones pueden llamarse de dos maneras:
 
-- using **POST requests**, with data parameters passed in the body of the request.
-- using **GET requests**, with parameters directly passed in the URL.
+- utilizando peticiones **POST**, con parámetros de datos pasados en el cuerpo de la solicitud.
+- usando **GET requests**, con parámetros directamente pasados en la URL.
 
-POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. Sin embargo, las peticiones GET pueden ser más compatibles con la experiencia del usuario, permitiendo llamar a las funciones introduciendo una URL en un navegador (nota: el desarrollador debe asegurarse de que no se hace ninguna acción sensible en dichas funciones).
+Las peticiones POST ofrecen un mejor nivel de seguridad porque evitan la ejecución de código sensible a través de una acción tan simple como hacer clic en un enlace. Sin embargo, las peticiones GET pueden ser más compatibles con la experiencia del usuario, permitiendo llamar a las funciones introduciendo una URL en un navegador (nota: el desarrollador debe asegurarse de que no se hace ninguna acción sensible en dichas funciones).
 
 ## Llamadas de las funciones
 
-The following ORDA and singleton functions can be called in REST:
+Las siguientes funciones ORDA y singleton pueden llamarse en REST:
 
 | Función de clase                                                   | Sintaxis                                                                                                                |
 | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
@@ -43,7 +43,7 @@ Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podr�
 
 con los datos en el cuerpo de la petición POST: `["Aguada"]`
 
-#### GET request
+#### Petición GET
 
 `/rest/City/getCity?$params='["Aguada"]'`
 
@@ -73,7 +73,7 @@ Ver la sección [Funciones expuestas vs. no expuestas](../ORDA/ordaClasses.md#ex
 
 ### `onHTTPGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
+Las funciones permitidas para ser llamadas desde solicitudes HTTP `GET` también deben ser declaradas específicamente con la [palabra clave `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword). Por ejemplo:
 
 ```4d
 //allowing GET requests
@@ -116,7 +116,7 @@ For example, with a  dataclass function `getCities()` receiving text parameters:
 
 **Parámetros en el cuerpo:** ["Aguada","Paris"]
 
-#### GET request
+#### Petición GET
 
 `/rest/City/getCities?$params='["Aguada","Paris"]'`
 
@@ -161,7 +161,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 Ver ejemplo para [recibir una selección de entidad](#receiving-an-entity-selection-as-parameter) con una petición POST.
 Ver ejemplo para [obtener una lista construida sobre una selección de entidades](#using-an-entity-selection-to-get-a-list) con una petición GET.
 
-## POST request examples
+## Ejemplos de peticiones POST
 
 Esta base de datos se expone como un almacén de datos remoto en localhost (puerto 8111):
 
@@ -641,13 +641,13 @@ return $response
 
 ```
 
-You can call the function using a request like:
+Puede llamar a la función utilizando una petición como:
 
 **GET** `http://127.0.0.1:8044/rest/Products/getUserManual?$params='[1,"pdf"]'`
 
-### Using an entity to download a PDF document
+### Utilizar una entidad para descargar un documento PDF
 
-Same example as above but you want to pass an entity as parameter to the datastore function.
+Mismo ejemplo que el anterior pero se desea pasar una entidad como parámetro a la función datastore.
 
 ```4d
 // Product dataclass
@@ -667,9 +667,9 @@ Puede llamar a la función usando esta petición:
 
 **GET** `http://127.0.0.1:8044/rest/Product/getUserManual?$params='[{"__DATACLASS":"Product","__ENTITY":true,"__KEY":41}]'`
 
-### Using an entity selection to get a list
+### Utilizar una selección de entidades para obtener una lista
 
-You want to send an entity selection as parameter to a singleton function using a REST GET request and return a list using an object of the [`OutgoingMessage` class](../API/OutgoingMessageClass.md).
+Desea enviar una selección de entidades como parámetro a una función singleton utilizando una solicitud REST GET y devolver una lista utilizando un objeto de la clase [`OutgoingMessage`](../API/OutgoingMessageClass.md).
 
 ```4d
 shared singleton Class constructor()

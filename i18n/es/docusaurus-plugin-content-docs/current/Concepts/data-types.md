@@ -23,7 +23,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 | [Pointer](Concepts/dt_pointer.md)                       | -                                           | Sí                         | `Pointer`                         | `ARRAY POINTER`                  |
 | [Picture](Concepts/dt_picture.md)                       | Sí                                          | Sí                         | `Picture`                         | `ARRAY PICTURE`                  |
 | [BLOB](Concepts/dt_blob.md)                             | Sí                                          | Sí                         | `Blob`, `4D.Blob`                 | `ARRAY BLOB`                     |
-| [Object](Concepts/dt_object.md)                         | Sí                                          | Sí                         | `Object`                          | `ARRAY OBJECT`                   |
+| [Object](Concepts/dt_object.md)                         | Yes(3)                   | Sí                         | `Object`                          | `ARRAY OBJECT`                   |
 | [Collection](Concepts/dt_collection.md)                 | -                                           | Sí                         | `Collection`                      |                                  |
 | [Variant](Concepts/dt_variant.md)(2) | -                                           | Sí                         | `Variant`                         |                                  |
 
@@ -31,9 +31,11 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 (2) Variant no es en realidad un tipo *data* sino un tipo *variable* que puede contener un valor de cualquier otro tipo de datos.
 
+(3) You can [assign a class](../Develop/field-properties.md) to an object field in the structure editor.
+
 ## Comandos
 
-You can always know the type of a field or variable using the following commands:
+Siempre puede conocer el tipo de un campo o variable usando los siguientes comandos:
 
 - [`Type`](../commands-legacy/type.md) para campos y variables escalares
 - [`Tipo de valor`](../commands-legacy/value-type.md) para expresiones

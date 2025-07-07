@@ -23,8 +23,9 @@ Les licences de déploiement peuvent être intégrées à l'étape de constructi
 | *4D OEM Desktop*         | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
 | *4D Unlimited Desktop*   | **Non maintenu** - Licence personnalisée intégrée                                              | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
 | *4D Desktop*             | Licence par utilisateur, lui permettant d'utiliser des applications 4D autonomes               | Boîte de dialogue [Première activation](#first-activation) sur la machine de l'utilisateur               |
+| *4D Desktop Business*    | Embedded custom license for stand-alone 4D applications                                        | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
 | *4D Server OEM*          | Licence personnalisée intégrée, contactez le service commercial de 4D pour plus d'informations | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
-| *4D XML Keys Activation* | Utilisé pour activer les licences OEM de 4D Server                                             | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
+| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses in non-automatic embedding mode                        | [Page des licences](../Desktop/building.md#licenses) de la boîte de dialogue du Générateur d'application |
 | *4D Server*              | Licence par utilisateur, lui permettant d'utiliser 4D Server et des postes clients             | Boîte de dialogue [Première activation](#first-activation) sur la machine de l'utilisateur               |
 
 ### Expiration
@@ -35,7 +36,7 @@ Dans certains cas, la mise à jour de la licence peut nécessiter que vous cliqu
 
 ## Activation des licences
 
-Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Généralement, **l'activation est automatique** si vous vous [connectez à l'aide de votre compte 4D](GettingStarted/Installation.md) dans l'Assistant de bienvenue.
+Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser. Une fois installés sur votre disque, les produits 4D doivent être activés pour que vous puissiez les utiliser.
 
 Cependant, dans des cas spécifiques, vous pourriez avoir besoin d'activer vos licences manuellement, si par exemple :
 

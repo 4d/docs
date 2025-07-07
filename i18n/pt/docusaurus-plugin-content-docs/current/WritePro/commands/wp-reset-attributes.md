@@ -29,13 +29,13 @@ No parâmetro *targetObj*, você pode passar qualquer um deles:
 - an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
-When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the *4D Write Pro Attributes* section.
+When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Os valores padrão estão listados na seção *4D Write Pro Attributes*.
 
 :::note Notas
 
 - When **WP RESET ATTRIBUTES** is applied to a section/sub-section object, attributes are then inherited from the parent section or document.
 - When **WP RESET ATTRIBUTES** is applied to a style sheet object, the attributes are removed from the style sheet unless it is the default ("Normal") style sheet. In this case, the default value is applied to the attribute (the "Normal" style sheet defines all style sheet attributes).
-- When *sectionOrSubsection* is not a section nor a subsection and if no attribute is provided, then an error is raised.
+- Quando *sectionOrSubsection* não é uma seção nem uma subseção e se nenhum atributo é fornecido, então um erro é gerado.
 
 :::
 
@@ -47,7 +47,7 @@ You want to remove several attributes from the following selection:
 
 ![](../../assets/en/WritePro/commands/pict2643861.en.png)
 
-You can execute:
+Você pode executar:
 
 ```4d
  $range:=WP Get selection(*;"WParea")
@@ -58,7 +58,7 @@ You can execute:
  WP RESET ATTRIBUTES($range;wk border style)
 ```
 
-The resulting document is:
+O documento resultante é:
 
 ![](../../assets/en/WritePro/commands/pict2643863.en.png)
 

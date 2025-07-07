@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+O comando `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary --> cria um objeto de arquivo ZIP comprimido e retorna o status da operação<!-- END REF -->.
 
 You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parameter:
 
-- *fileToZip*: You simply pass a `4D.File` to compress.
+- *fileToZip*: você simplesmente passa um `4D.File` para compactar.
 
 - *folderToZip*: você passa um `4D.Folder` para compactar. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
 
@@ -49,7 +49,7 @@ You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parame
 | files       | Collection                   | <li>a collection of `4D.File` or `4D.Folder` objects or</li><li>a collection of objects with the following properties:</li><table><tr><td>Property</td><td>Type</td><td>Description</td></tr><tr><td>source</td><td>4D.File or 4D.Folder</td><td>File or Folder</td></tr><tr><td>destination</td><td>Text</td><td>(optional) - Specify a relative filepath to change the organization of the contents of the archive</td></tr><tr><td>option</td><td>number</td><td>(optional) - `ZIP Ignore invisible files` or 0 to compress all of the file</td></tr></table> |
 | callback    | 4D. Function | Uma fórmula de callback (retrochamada) que recebe o progresso da compactação (0-100) em $1.                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). É recomendado usar a extensão ".zip" se quiser que o arquivo ZIP seja processado automaticamente por um software.
+No parâmetro *destinationFile*, passe um objeto `4D.File` que descreva o arquivo ZIP a ser criado (nome, local, etc.). É recomendado usar a extensão ".zip" se quiser que o arquivo ZIP seja processado automaticamente por um software.
 
 Depois que um arquivo é criado, você pode usar o comando [ZIP Read archive](zip-read-archive.md) para acessá-lo.
 
@@ -124,7 +124,7 @@ Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:
 
 ## Exemplo
 
-You want to pass a collection of folders and files to compress to the *zipStructure* object:
+Pode passar uma coleção de pastas e arquivos para compactar ao objeto *zipStructure*:
 
 ```4d
  var $destination : 4D.File

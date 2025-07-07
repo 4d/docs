@@ -5,17 +5,17 @@ title: OpenAIAPIResource
 
 # OpenAIAPIResource
 
-Base class to all api resource.
+Classe de base pour toutes les ressources api.
 
 ## Propriétés
 
-| Propriété | Type                | Description                            |
-| --------- | ------------------- | -------------------------------------- |
-| `_client` | [OpenAI](OpenAI.md) | Private back link to the OpenAI client |
+| Propriété | Type                | Description                                |
+| --------- | ------------------- | ------------------------------------------ |
+| `_client` | [OpenAI](OpenAI.md) | Lien de retour privé vers le client OpenAI |
 
-The client allow to make HTTP Request.
+Le client est autorisé à effectuer des requêtes HTTP.
 
-## Inherited Classes
+## Classes héritées
 
 - [OpenAIModelsAPI](OpenAIModelsAPI.md)
 - [OpenAIChatAPI](OpenAIChatAPI.md)

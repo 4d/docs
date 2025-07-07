@@ -3,7 +3,7 @@ id: ordaClasses
 title: Clases del modelo de datos
 ---
 
-ORDA permite crear funciones de clase de alto nivel arriba del modelo de datos. Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
+ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
 
 Por ejemplo, podría crear una función `getNextWithHigherSalary()` en la clase `EmployeeEntity` para devolver los empleados con un salario superior al seleccionado. Sería tan sencillo como llamar:
 
@@ -182,7 +182,7 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection
+//Extraer los empleados con un salario superior a la media de esta selección de entidades
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
 	return This.query("salary > :1";This.average("salary")).orderBy("salary")
@@ -208,6 +208,12 @@ Cada tabla expuesta con ORDA ofrece una clase Entity en el class store `cs`.
 - **Extends**: 4D.Entity
 - **Nombre de clase**: _DataClassName_Entity (donde *DataClassName* es el nombre de la tabla)
 - **Ejemplo**: cs.CityEntity
+
+#### Class constructor
+
+You can define a **class constructor** for an Entity class. The class constructor is called whenever an entity is created in memory and can be used to initialize some values.
+
+For information, please refer to the [Class constructor](#class-constructor-1) section.
 
 #### Atributos calculados
 
@@ -262,12 +268,12 @@ End if
 Al crear o editar clases de modelos de datos, debe prestar atención a las siguientes reglas:
 
 - Dado que se utilizan para definir nombres de clase DataClass automáticos en el [class store](Concepts/classes.md#class-stores) **cs**, las tablas 4D deben nombrarse para evitar todo conflicto en el espacio de nombres **cs**. En particular:
- - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
- - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
+  - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](../Concepts/classes.md#class-definition). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
+  - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
 
 - Al definir una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) coincida exactamente con el nombre de la clase padre (recuerde que son sensibles a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
 
-- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). Debe utilizar un método regular como se muestra en la [columna `Instantiated by` de la tabla de clases ORDA](#architecture).
+- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). You must use a regular function as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
 
 - No puede sobrescribir una función de clase ORDA nativa del [class store](Concepts/classes.md#class-stores) **`4D`** con una función de clase usuario de modelo de datos.
 
@@ -279,6 +285,87 @@ Cuando se compilan, las funciones de clase del modelo de datos se ejecutan:
 - en **procesos apropiativos** en las aplicaciones cliente/servidor (excepto si se utiliza la palabra clave [`local`](#local-functions), en cuyo caso depende del proceso llamante como en monopuesto).
 
 Si su proyecto está diseñado para ejecutarse en cliente/servidor, asegúrese de que el código de la función de clase del modelo de datos es hilo seguro. Si se llama un código thread-unsafe, se lanzará un error en tiempo de ejecución (no se lanzará ningún error al momento de la compilación ya que la ejecución cooperativa está soportada en las aplicaciones monopuesto).
+
+## `Class constructor`
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R10      | Añadidos       |
+
+</details>
+
+#### Sintaxis
+
+```4d
+// Entity class 
+Class constructor()
+// code
+```
+
+:::note
+
+No hay palabra clave final para el código de función class constructor. El lenguaje 4D detecta automáticamente el final del código de una función por la siguiente palabra clave `Function` o el final del archivo de clase.
+
+:::
+
+An ORDA class constructor function is triggered just after a new entity is created in memory, [whatever the way it is created](#commands-that-trigger-the-class-constructor-functions). It is useful to set initial values for entity instantiation, for example a custom ID.
+
+This function can only be set at the [entity level](#entity-class). There can only be one constructor function in an entity class (otherwise an error is returned).
+
+This ORDA class constructor function does not receive or return parameters. However, you can use it to initialize attribute values using [`This`](../commands/this.md). Note that values initialized by the constructor are overriden if corresponding attributes are filled by the code.
+
+:::note
+
+An ORDA class constructor function is similar to a [user class constructor function](../Concepts/classes.md#class-constructor), with the following differences:
+
+- you cannot pass parameters to the constructor,
+- no puede utilizar las palabras clave `shared`, `session` o `singleton`,
+- no puede llamar a la palabra clave [`Super`](../Concepts/classes.md#super) dentro de la función,
+- the class constructor cannot be called using the `new()` function on an entity (entities can only be created by specific functions, see below).
+
+:::
+
+#### Commands that trigger the Class constructor functions
+
+The `Class constructor` function is triggered by the following commands and features:
+
+- [`dataClass.new()`](../API/DataClassClass.md#new)
+- [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
+- [`entity.clone()`](../API/EntityClass.md#clone)
+- [REST API $method=update](../REST/$method.md#methodupdate) in a POST without the `__KEY` and `__STAMP` parameters
+- el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
+
+:::note Nota de compatibilidad
+
+Records created at the 4D database level using 4D classic language commands or standard actions do not trigger the entity Class constructor.
+
+:::
+
+#### Remote configurations
+
+When using a remote configurations, you need to pay attention to the following principles:
+
+- In **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
+
+:::warning
+
+Since functions such as [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) can create a large number of entities and thus trigger the entity Class constructor consequently, you need to make sure the constructor code does not execute excessive time-consuming processings, for performance reasons. In remote configurations (see below), the code should not trigger multiple requests to the server.
+
+:::
+
+#### Ejemplo
+
+```4d
+
+ //cs.BookingEntity class
+Class constructor() 
+
+    This.departureDate:=Current date
+    This.arrivalDate:=Add to date(Current date; 0; 0; 2)
+
+```
 
 ## Atributos calculados
 
@@ -424,13 +511,13 @@ Esta función soporta tres sintaxis:
 - Con la primera sintaxis, se maneja toda la consulta a través de la propiedad del objeto `$event.result`.
 - Con la segunda y tercera sintaxis, la función devuelve un valor en *$result*:
 
- - Si *$result* es un texto, debe ser una cadena de consulta válida
- - Si *$result* es un Objeto, debe contener dos propiedades:
+  - Si *$result* es un texto, debe ser una cadena de consulta válida
+  - Si *$result* es un Objeto, debe contener dos propiedades:
 
- | Propiedad                          | Tipo       | Descripción                                                                                                                            |
- | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
- | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
- | $result.parameters | Collection | valores para marcadores                                                                                                                |
+  | Propiedad                          | Tipo       | Descripción                                                                                                                            |
+  | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+  | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
+  | $result.parameters | Collection | valores para marcadores                                                                                                                |
 
 La función `query` se ejecuta cada vez que se lanza una consulta que utiliza el atributo calculado. Resulta útil personalizar y optimizar las consultas basándose en los atributos indexados. Cuando la función `query` no está implementada para un atributo calculado, la búsqueda es siempre secuencial (basada en la evaluación de todos los valores utilizando la función `get <AttributeName>`).
 
@@ -724,8 +811,8 @@ En la dataclass Course:
 Class extends Entity
 
 Exposed Alias courseName name //scalar
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+Exposed Alias teacherName teacher.name //valor escalar
+Exposed Alias studentName student.name //valor escalar
 
 ```
 
@@ -822,7 +909,7 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
-## onHTTPGet keyword
+## Palabra clave onHTTPGet
 
 Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
 
@@ -852,7 +939,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 ### params
 
-A function with `onHTTPGet` keyword accepts [parameters](../Concepts/parameters.md).
+Una función con la palabra clave `onHTTPGet` acepta [parámetros](../Concepts/parameters.md).
 
 In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
 
@@ -868,13 +955,13 @@ A function with `onHTTPGet` keyword can return any value of a supported type (sa
 
 :::info
 
-You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+Puede devolver un valor del tipo de clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) para beneficiarse de las propiedades y funciones para definir el encabezado, el cuerpo y el estado de la respuesta.
 
 :::
 
 ### Ejemplo
 
-You have defined the following function:
+Ha definido la siguiente función:
 
 ```4d
 Class extends DataClass

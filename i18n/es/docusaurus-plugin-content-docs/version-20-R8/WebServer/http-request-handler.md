@@ -73,7 +73,7 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
 - To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
-   Ex: `"pattern" : "docs"` or `"pattern" : "docs/invoices"`
+   Ej: `"pattern": "docs"` o `"pattern": "docs/invoices"`
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
    Ex: `"regexPattern" : "/docs/.+/index\.html"`
@@ -209,9 +209,9 @@ Here is a detailed example of a HTTPHandlers.json file:
 In this example, you must implement the following functions:
 
 - *handle function* in the *GeneralHandling* class
-- *manageAccount* in the *UsersHandling* class
-- *handleInvoices* in the *FinancialHandling* class
-- *handleDocs* in the *DocsHandling* class
+- *manageAccount* en la clase *UsersHandling*
+- *handleInvoices* en la clase *FinancialHandling*
+- *handleDocs* en la clase *DocsHandling*
 - *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
 
 Examples of URLs triggering the handlers:
@@ -249,7 +249,7 @@ It is **not recommended** to expose request handler functions to external REST c
 
 ### Input: an instance of the 4D.IncomingMessage class
 
-When a request has been intercepted by the handler, it is received on the server as an instance of the [4D.IncomingMessage class](../API/IncomingMessageClass.md).
+Cuando una solicitud ha sido interceptada por el manejador, se recibe en el servidor como una instancia de la [clase 4D.IncomingMessage](../API/IncomingMessageClass.md).
 
 All necessary information about the request are available in this object, including the request url, verb, headers, and, if any, parameters (put in the URL) and body.
 
@@ -263,7 +263,7 @@ The request handler can return an object instance of the [4D.OutGoingMessage cla
 
 La [clase 4D.IncomingMessage](../API/IncomingMessageClass.md) ofrece funciones para obtener los [encabezados](../API/IncomingMessageClass.md#headers) y el [cuerpo](../API/IncomingMessageClass.md#gettext) de la solicitud.
 
-Here is a simple example to upload a file on the server.
+He aquí un ejemplo sencillo para cargar un archivo en el servidor.
 
 El archivo **HTTPHandlers.json**:
 

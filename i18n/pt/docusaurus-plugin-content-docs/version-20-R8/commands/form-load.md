@@ -31,7 +31,7 @@ Quando o comando for executado a partir de um componente, ele carrega os formul�
 
 ### formData
 
-Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário] (../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md).
+Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md).
 Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
 
 Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](dialog.md).
@@ -46,13 +46,13 @@ Apenas o [evento `No carregamento`](../Events/onLoad.md) é executado durante a 
 
 Para preservar a consistência gráfica das formas, é recomendado aplicar a propriedade de aparência "Imprimindo" independentemente da plataforma.
 
-O formulário de impressão atual é fechado automaticamente quando o comando [CLOSE PRINTING JOB] (../commands-legacy/close-printing-job.md) é chamado.
+O formulário de impressão atual é fechado automaticamente quando o comando [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md) é chamado.
 
 ### Analisar o conteúdo do formulário
 
 Isso consiste em carregar um formulário fora da tela para fins de análise. Para fazer isso, basta chamar **FORM LOAD** fora do contexto de um trabalho de impressão. Nesse caso, os eventos de formulário não são executados.
 
-O **FORM LOAD** pode ser usado com os comandos [FORM GET OBJECTS] (../commands-legacy/form-get-objects.md) e [OBJECT Get type] (../commands-legacy/object-get-type.md) para executar qualquer tipo de processamento no conteúdo do formulário. Em seguida, você deve chamar o comando [FORM UNLOAD](../commands-legacy/form-unload.md) para liberar o formulário da memória.
+**FORM LOAD** pode ser usado com os comandos [FORM GET OBJECTS](../commands-legacy/form-get-objects.md) e [OBJECT Get type](../commands-legacy/object-get-type.md) para executar qualquer tipo de processamento no conteúdo do formulário. Em seguida, você deve chamar o comando [FORM UNLOAD](../commands-legacy/form-unload.md) para liberar o formulário da memória.
 
 Observe que, em todos os casos, o formulário na tela permanece carregado (não é afetado pelo comando **FORM LOAD**), portanto, não é necessário recarregá-lo depois de chamar [FORM UNLOAD](../commands-legacy/form-unload.md).
 

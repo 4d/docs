@@ -244,7 +244,7 @@ Cada opção especifica a relação entre o botão e o menu pop-up anexado:
 
 :::info
 
-Refer to the [`On Alternative Click` event description](../Events/onAlternativeClick.md) for more information on the handling of events in this case.
+Consulte a [descrição do evento `On Alternative Click`](../Events/onAlternativeClick.md) para obter mais informações sobre o tratamento de eventos neste caso.
 
 :::
 

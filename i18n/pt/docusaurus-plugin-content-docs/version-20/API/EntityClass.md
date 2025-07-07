@@ -330,7 +330,7 @@ vCompareResultado1 (todas as diferenças são devolvidas):
 <!-- REF #EntityClass.drop().Params -->
 | Parâmetro  | Tipo    |    | Descrição                                                                       |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------- |
-| mode       | Integer | -> | `dk force drop if stamp changed`: Força a queda mesmo se a estampa tiver mudado |
+| mode       | Integer | -> | `dk force drop if stamp changed`: força a queda mesmo se a estampa tiver mudado |
 | Resultados | Object  | <- | Resultado da operação drop<!-- END REF -->
 
 |
@@ -343,7 +343,7 @@ Numa aplicação multiusuário ou multiprocesso, a função `.drop()` é executa
 
 Por padrão, se o parâmetro *modo* for omitido, a função retornará um erro (veja abaixo) se a mesma entidade tiver sido modificada (ou seja, O selo mudou) por outro processo ou usuário nesse meio tempo.
 
-Caso contrário, pode passar a opção `dk force drop if stamp changed` no parâmetro *mode* : nesse caso, a entidade é abandonada mesmo que a estampa tenha sido alterada (e a chave primária continua a ser a mesma).
+Caso contrário, pode passar a opção `dk force drop if stamp changed` no parâmetro *mode*: nesse caso, a entidade é abandonada mesmo que a estampa tenha sido alterada (e a chave primária continua a ser a mesma).
 
 **Resultados**
 
@@ -382,7 +382,7 @@ O objecto devolvido por `.drop( )` contém as seguintes propriedades:
 
 #### Exemplo 1
 
-Exemplo sem a opção `dk force drop if stamp changed` :
+Exemplo sem a opção `dk force drop if stamp changed`:
 
 ```4d
  var $employees : cs. EmployeeSelection
@@ -607,7 +607,7 @@ O seguinte código genérico duplica qualquer entidade:
 | Parâmetro  | Tipo    |    | Descrição                                                                                              |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------------ |
 | mode       | Integer | -> | `dk key as string`: a chave primária se devolve como uma string, sem importar o tipo de chave primária |
-| Resultados | any     | <- | Value of the primary key of the entity (Integer or Text)                                               |
+| Resultados | any     | <- | Valor da chave primária da entidade (Inteiro ou Texto)                                                 |
 
 <!-- END REF -->
 
@@ -917,7 +917,7 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 <!-- REF #EntityClass.lock().Params -->
 | Parâmetro  | Tipo    |    | Descrição                                                                            |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
-| mode       | Integer | -> | `dk reload if stamp changed`: Recarregar antes de bloquear se o carimbo for alterado |
+| mode       | Integer | -> | `dk reload if stamp changed`: recarregar antes de bloquear se o carimbo for alterado |
 | Resultados | Object  | <- | Resultado da operação de bloqueio|<!-- END REF -->
 
 |
@@ -933,11 +933,16 @@ Um registro bloqueado está desbloqueado:
 * quando a função [`desbloqueia()`](#unlock) é chamada a uma entidade correspondente no mesmo processo
 * automaticamente, quando já não é referenciado por nenhuma entidade em memória. Por exemplo, se a fechadura for colocada apenas numa referência local de uma entidade, a entidade é desbloqueada quando a função termina. Enquanto houver referências à entidade em memória, o registo permanece bloqueado.
 
-> Uma entidade pode ser [locked by a REST session](../REST/$lock.md), em cujo caso só pode ser destravado pela sessão.
+:::note Notas
+
+- [`unlock()`](#unlock) deve ser chamado tantas vezes quanto `lock()`> foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
+- Uma entidade pode ser [locked by a REST session](../REST/$lock.md), em cujo caso só pode ser destravado pela sessão.
+
+:::
 
 Por padrão, se o parâmetro *modo* for omitido, a função retornará um erro (veja abaixo) se a mesma entidade tiver sido modificada (ou seja, O selo mudou) por outro processo ou usuário nesse meio tempo.
 
-Caso contrário, você pode passar o parâmetro`dk reload if stamp changed` no parâmetro *mode* : neste caso, nenhum erro é retornado e a entidade é recarregada quando o selo mudou (se a entidade ainda existir e a chave primária ainda for a mesma).
+Caso contrário, você pode passar o parâmetro`dk reload if stamp changed` no parâmetro *mode*: neste caso, nenhum erro é retornado e a entidade é recarregada quando o selo mudou (se a entidade ainda existir e a chave primária ainda for a mesma).
 
 **Resultados**
 
@@ -976,7 +981,7 @@ O objeto retornado por `.lock( )` contém as seguintes propriedades:
 
 | Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                 |
 | ----------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.drop( )`, este erro pode ser retornado quando a opção "dk force drop if stamp changed" for usada. Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.drop( )`, este erro pode ser retornado quando a opção dk force drop if stamp changed for usada. Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
 | `dk status locked`                        | 3     | Informações sobre a origem do bloqueio                                                                                                                                                                                                                     |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                 |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><br/>**StatusText associado**: "O carimbo foi alterado" |
@@ -1000,7 +1005,7 @@ Exemplo com erro:
 
 #### Exemplo 2
 
-Exemplo com `dk reload se o selo mudou a opção`:
+Exemplo com a opção `dk reload if stamp changed`:
 
 ```4d
  var $employee : cs. EmployeeEntity
@@ -1140,7 +1145,7 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 | Parâmetros                                | Valor | Comentário                                                                                                                                                                                                        |
 | ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>***statusText associado***: "a entidade já não existe" |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.drop( )`, esse erro pode ser retornado quando a opção `dk force drop if stamp changed` for usada. Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>***statusText associado***: "a entidade já não existe" |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br/>***Texto status associado***: "Outro erro"                                           |
 
 #### Exemplo
@@ -1181,7 +1186,7 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 <!-- REF #EntityClass.save().Params -->
 | Parâmetro  | Tipo    |    | Descrição                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------- |
-| mode       | Integer | -> | `dk auto merge`: Permite o modo de fusão automática            |
+| mode       | Integer | -> | `dk auto merge`: permite o modo de fusão automática            |
 | Resultados | Object  | <- | Resultado da operação de salvamento|<!-- END REF -->
 
 |
@@ -1232,8 +1237,8 @@ Os valores abaixo podem ser retornado nas propriedades `status` e `statusText` d
 
 | Parâmetros                                | Valor | Comentário                                                                                                                                                                                                                                                            |
 | ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status automerge failed`              | 6     | |                                                                                                                                                                                                                                                                     |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
+| `dk status automerge failed`              | 6     | (Somente se a opção `dk auto merge` for usada) A opção de mesclagem automática falhou ao salvar a entidade.**statusText associado**: "Falhou a mesclagem"                                                                                                             |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.drop( )`, esse erro pode ser retornado quando a opção `dk force drop if stamp changed` for usada. Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                        |
 | `dk status locked`                        | 3     | Informações sobre a origem do bloqueio                                                                                                                                                                                                                                |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                            |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><br/>**StatusText associado**: "O carimbo foi alterado" |
@@ -1613,7 +1618,7 @@ Retorna:
 
 A função `.isNew()` <!-- REF #EntityClass.touched().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->.
 
-Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. You can use this function to determine if you need to save the entity.
+Se um atributo for modificado ou calculado, a função retorna True, senão retorna False. Pode usar essa função para determinar se precisar salvar a entidade.
 
 Esta função retorna False para uma nova entidade que foi criada (com [`.new( )`](DataClassClass.md#new)). Note entretanto que se usar uma função que calcule um atributo da entidade, a função `.touched()` vai retornar True. Por exemplo se chamar [`.getKey()`](#getkey) para calcular a chave primária, `.touched()` retorna True.
 
@@ -1735,7 +1740,8 @@ A função `.unlock()` <!-- REF #EntityClass.unlock().Summary -->remove a tranca
 > Para saber mais veja [Entity locking](ORDA/entities.md#entity-locking).
 
 Um registro é destrancado automaticamente quando não for mais referenciado por nenhuma entidade no processo de trancamento (por exemplo, se uma tranca for posta apenas na referência local da entidade, a entidade e o registro é destrancado quando o processo terminar).
-> Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
+
+Quando um registro for trancado, deve ser destrancado do processo de trancamento e na referência de entidade que colocou a tranca. Por exemplo:
 
 ```4d
  $e1:=ds. Emp.all()[0]
@@ -1744,6 +1750,13 @@ Um registro é destrancado automaticamente quando não for mais referenciado por
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
+
+:::note
+
+`unlock()` deve ser chamado tantas vezes quanto [`lock()`](#lock) foi chamado no mesmo processo para que a entidade seja realmente desbloqueada.
+
+:::
+
 
 **Resultados**
 

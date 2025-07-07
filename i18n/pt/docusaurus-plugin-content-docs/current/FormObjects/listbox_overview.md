@@ -59,7 +59,7 @@ Há vários tipos de list boxes com seus próprios comportamentos e propriedades
 
 Pode configurar completamente um objeto list box através de suas propriedades e também pode gerenciar dinamicamente por programação.
 
-A linguagem 4D inclui um tema "List Box" dedicado para comandos de list box, mas também podem ser usados comandos de vários outros temas, como comandos "Propriedades dos objetos" ou comandos `EDIT ITEM`, `Displayed line number`. Consulte a página [List Box Commands Summary] (https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) da *Referência da linguagem 4D* para obter mais informações.
+A linguagem 4D inclui um tema "List Box" dedicado para comandos de list box, mas também podem ser usados comandos de vários outros temas, como comandos "Propriedades dos objetos" ou comandos `EDIT ITEM`, `Displayed line number`. Consulte a página [Resumo dos comandos List Box](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) da *Referência da linguagem 4D* para obter mais informações.
 
 ## Objetos tipo list box
 
@@ -104,11 +104,11 @@ Quando a fonte de dados for uma seleção de entidades, qualquer modificação f
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an *undefined* value, thus displaying blank rows in the list box. Neste caso, você pode chamar a função [`.clean()`](API/EntitySelectionClass.md#clean) para obter uma nova seleção de entidade, mas sem as referências de entidade deletadas.
+Quando as entidades são excluídas, suas referências permanecem na seleção da entidade com um valor *undefined*, assim exibindo linhas em branco no list box. Neste caso, você pode chamar a função [`.clean()`](API/EntitySelectionClass.md#clean) para obter uma nova seleção de entidade, mas sem as referências de entidade deletadas.
 
 :::
 
-Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Por exemplo:
+Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. Por outro lado, se forem feitas modificações na coleção usando, por exemplo, as várias funções da [classe Collection](.../API/CollectionClass.md), você precisará notificar explicitamente o 4D reatribuindo a variável da coleção a ela mesma, para que o conteúdo do list box seja atualizado. Por exemplo:
 
 ```4d
 myCol:=myCol.push("new value") //exibir novo valor na list box
@@ -118,80 +118,80 @@ myCol:=myCol.push("new value") //exibir novo valor na list box
 
 Propriedades compatíveis dependem do tipo de list box.
 
-| Propriedade                                                                                                                                                                                               | List box array | List box seleção | List box coleção ou entity selection |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------------- | ------------------------------------ |
-| [Cor de fundo alternativa](properties_BackgroundAndBorder.md#alternate-background-color)                                                                                                                  | X              | X                | X                                    |
-| [Cor de Fundo](properties_BackgroundAndBorder.md#background-color--fill-color)                                                                                                                            | X              | X                | X                                    |
-| [Negrito](properties_Text.md#bold)                                                                                                                                                                        | X              | X                | X                                    |
-| [Expressão de cor de fundo](properties_BackgroundAndBorder.md#background-color-expression)                                                                                                                |                | X                | X                                    |
-| [Estilo da linha de borda](properties_BackgroundAndBorder.md#border-line-style)                                                                                                                           | X              | X                | X                                    |
-| [Inferior](properties_CoordinatesAndSizing.md#bottom)                                                                                                                                                     | X              | X                | X                                    |
-| [Classe](properties_Object.md#css-class)                                                                                                                                                                  | X              | X                | X                                    |
-| [Seleção de coleção ou entidade] (properties_Object.md#collection-or-entity-selection)        |                | X                | X                                    |
-| [Redimensionamento automático de coluna] (properties_ResizingOptions.md#column-auto-resizing) | X              | X                | X                                    |
-| [Item atual](properties_DataSource.md#current-item)                                                                                                                                                       |                |                  | X                                    |
-| [Posição atual do item](properties_DataSource.md#current-item-position)                                                                                                                                   |                |                  | X                                    |
-| [Fonte de dados](properties_Object.md#data-source)                                                                                                                                                        | X              | X                | X                                    |
-| [Nome do formulário de detalhes] (properties_ListBox.md#detail-form-name)                     |                | X                |                                      |
-| [Exibir cabeçalhos](properties_Headers.md#display-headers)                                                                                                                                                | X              | X                | X                                    |
-| [Exibir rodapés] (properties_Footers.md#display-footers)                                      | X              | X                | X                                    |
-| [Clique duas vezes na linha](properties_ListBox.md#double-click-on-row)                                                                                                                                   |                | X                |                                      |
-| [Draggable](properties_Action.md#droppable)                                                                                                                                                               | X              | X                | X                                    |
-| [Droppable](properties_Action.md#droppable)                                                                                                                                                               | X              | X                | X                                    |
-| [Focusable](properties_Entry.md#focusable)                                                                                                                                                                | X              | X                | X                                    |
-| [Fonte](properties_Text.md#font)                                                                                                                                                                          | X              | X                | X                                    |
-| [Cor da fonte](properties_Text.md#font-color)                                                                                                                                                             | X              | X                | X                                    |
-| [Expressão de Cor da Fonte](properties_Text.md#font-color-expression)                                                                                                                                     |                | X                | X                                    |
-| [Tamanho fonte](properties_Text.md#font-size)                                                                                                                                                             | X              | X                | X                                    |
-| [Altura (list box)](properties_CoordinatesAndSizing.md#height)                                                                                                                         | X              | X                | X                                    |
-| [Altura (cabeçalhos)](properties_Headers.md#height)                                                                                                                                    | X              | X                | X                                    |
-| [Altura (rodapés)](properties_Footers.md#height)                                                                                                                                       | X              | X                | X                                    |
-| [Ocultar linhas em branco extras](properties_BackgroundAndBorder.md#hide-extra-blank-rows)                                                                                                                | X              | X                | X                                    |
-| [Ocultar retângulo de foco](properties_Appearance.md#hide-focus-rectangle)                                                                                                                                | X              | X                | X                                    |
-| [Ocultar destaque de seleção](properties_Appearance.md#hide-selection-highlight)                                                                                                                          | X              | X                | X                                    |
-| [List Box hierárquico](properties_Object.md#array-list-box)                                                                                                                                               | X              |                  |                                      |
-| [Highlight Set](properties_ListBox.md#highlight-set)                                                                                                                                                      |                | X                |                                      |
-| [Alinhamento Horizontal](properties_Text.md#horizontal-alignment)                                                                                                                                         | X              | X                | X                                    |
-| [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)                                                                                                                                    | X              | X                | X                                    |
-| [Horizontal Padding] (properties_CoordinatesAndSizing.md#horizontal-padding)                  | X              | X                | X                                    |
-| [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)                                                                                                                                   | X              | X                | X                                    |
-| [Dimensionamento horizontal] (properties_ResizingOptions.md#horizontal-sizing)                | X              | X                | X                                    |
-| [Italic](properties_Text.md#italic)                                                                                                                                                                       | X              | X                | X                                    |
-| [Left](properties_CoordinatesAndSizing.md#left)                                                                                                                                                           | X              | X                | X                                    |
-| [Tabela mestre](properties_DataSource.md#master-table)                                                                                                                                                    |                | X                |                                      |
-| [Meta info expression](properties_Text.md#meta-info-expression)                                                                                                                                           |                |                  | X                                    |
-| [Método](properties_Action.md#method)                                                                                                                                                                     | X              | X                | X                                    |
-| [Movable Rows](properties_Action.md#movable-rows)                                                                                                                                                         | X              |                  |                                      |
-| [Seleção temporária](properties_DataSource.md#selection-name)                                                                                                                                             |                | X                |                                      |
-| [Number of Columns](properties_ListBox.md#number-of-columns)                                                                                                                                              | X              | X                | X                                    |
-| [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                                                                                                                                | X              | X                | X                                    |
-| [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                                                                                                                                | X              | X                | X                                    |
-| [Object Name](properties_Object.md#object-name)                                                                                                                                                           | X              | X                | X                                    |
-| [Right](properties_CoordinatesAndSizing.md#right)                                                                                                                                                         | X              | X                | X                                    |
-| [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)                                                                                                                | X              |                  |                                      |
-| [Row Control Array](properties_ListBox.md#row-control-array)                                                                                                                                              | X              |                  |                                      |
-| [Row Font Color Array](properties_Text.md#row-font-color-array)                                                                                                                                           | X              |                  |                                      |
-| [Row Height](properties_CoordinatesAndSizing.md#row-height)                                                                                                                                               | X              |                  |                                      |
-| [Row Height Array](properties_CoordinatesAndSizing.md#row-height-array)                                                                                                                                   | X              |                  |                                      |
-| [Row Style Array](properties_Text.md#row-style-array)                                                                                                                                                     | X              |                  |                                      |
-| [Selected Items](properties_DataSource.md#selected-items)                                                                                                                                                 |                |                  | X                                    |
-| [Selection Mode](properties_ListBox.md#selection-mode)                                                                                                                                                    | X              | X                | X                                    |
-| [Edição com um único clique](properties_Entry.md#single-click-edit)                                                                                                                                       | X              | X                | X                                    |
-| [Ordenável](properties_Action.md#sortable)                                                                                                                                                                | X              | X                | X                                    |
-| [Ação padrão](properties_Action.md#standard-action)                                                                                                                                                       | X              |                  |                                      |
-| [Expressão de estilo](properties_Text.md#style-expression)                                                                                                                                                |                | X                | X                                    |
-| [Top](properties_CoordinatesAndSizing.md#top)                                                                                                                                                             | X              | X                | X                                    |
-| [Transparente](properties_BackgroundAndBorder.md#transparent)                                                                                                                                             | X              | X                | X                                    |
-| [Tipo](properties_Object.md#type)                                                                                                                                                                         | X              | X                | X                                    |
-| [Sublinhado](properties_Text.md#underline)                                                                                                                                                                | X              | X                | X                                    |
-| [Variável ou Expressão](properties_Object.md#variable-or-expression)                                                                                                                                      | X              | X                |                                      |
-| [Alinhamento vertical](properties_Text.md#vertical-alignment)                                                                                                                                             | X              | X                | X                                    |
-| [Cor da linha vertical](properties_Gridlines.md#vertical-line-color)                                                                                                                                      | X              | X                | X                                    |
-| [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding)                                                                                                                                   | X              | X                | X                                    |
-| [Barra de rolagem vertical](properties_Appearance.md#vertical-scroll-bar)                                                                                                                                 | X              | X                | X                                    |
-| [Tamanho Vertical](properties_ResizingOptions.md#vertical-sizing)                                                                                                                                         | X              | X                | X                                    |
-| [Visibilidade](properties_Display.md#visibility)                                                                                                                                                          | X              | X                | X                                    |
-| [Largura](properties_CoordinatesAndSizing.md#width)                                                                                                                                                       | X              | X                | X                                    |
+| Propriedade                                                                                  | List box array | List box seleção | List box coleção ou entity selection |
+| -------------------------------------------------------------------------------------------- | -------------- | ---------------- | ------------------------------------ |
+| [Cor de fundo alternativa](properties_BackgroundAndBorder.md#alternate-background-color)     | X              | X                | X                                    |
+| [Cor de Fundo](properties_BackgroundAndBorder.md#background-color--fill-color)               | X              | X                | X                                    |
+| [Negrito](properties_Text.md#bold)                                                           | X              | X                | X                                    |
+| [Expressão de cor de fundo](properties_BackgroundAndBorder.md#background-color-expression)   |                | X                | X                                    |
+| [Estilo da linha de borda](properties_BackgroundAndBorder.md#border-line-style)              | X              | X                | X                                    |
+| [Inferior](properties_CoordinatesAndSizing.md#bottom)                                        | X              | X                | X                                    |
+| [Classe](properties_Object.md#css-class)                                                     | X              | X                | X                                    |
+| [Seleção de coleção ou entidade](properties_Object.md#collection-or-entity-selection)        |                | X                | X                                    |
+| [Redimensionamento automático de coluna](properties_ResizingOptions.md#column-auto-resizing) | X              | X                | X                                    |
+| [Item atual](properties_DataSource.md#current-item)                                          |                |                  | X                                    |
+| [Posição atual do item](properties_DataSource.md#current-item-position)                      |                |                  | X                                    |
+| [Fonte de dados](properties_Object.md#data-source)                                           | X              | X                | X                                    |
+| [Nome do formulário de detalhes](properties_ListBox.md#detail-form-name)                     |                | X                |                                      |
+| [Exibir cabeçalhos](properties_Headers.md#display-headers)                                   | X              | X                | X                                    |
+| [Exibir rodapés](properties_Footers.md#display-footers)                                      | X              | X                | X                                    |
+| [Clique duas vezes na linha](properties_ListBox.md#double-click-on-row)                      |                | X                |                                      |
+| [Draggable](properties_Action.md#droppable)                                                  | X              | X                | X                                    |
+| [Droppable](properties_Action.md#droppable)                                                  | X              | X                | X                                    |
+| [Focusable](properties_Entry.md#focusable)                                                   | X              | X                | X                                    |
+| [Fonte](properties_Text.md#font)                                                             | X              | X                | X                                    |
+| [Cor da fonte](properties_Text.md#font-color)                                                | X              | X                | X                                    |
+| [Expressão de Cor da Fonte](properties_Text.md#font-color-expression)                        |                | X                | X                                    |
+| [Tamanho fonte](properties_Text.md#font-size)                                                | X              | X                | X                                    |
+| [Altura (list box)](properties_CoordinatesAndSizing.md#height)            | X              | X                | X                                    |
+| [Altura (cabeçalhos)](properties_Headers.md#height)                       | X              | X                | X                                    |
+| [Altura (rodapés)](properties_Footers.md#height)                          | X              | X                | X                                    |
+| [Ocultar linhas em branco extras](properties_BackgroundAndBorder.md#hide-extra-blank-rows)   | X              | X                | X                                    |
+| [Ocultar retângulo de foco](properties_Appearance.md#hide-focus-rectangle)                   | X              | X                | X                                    |
+| [Ocultar destaque de seleção](properties_Appearance.md#hide-selection-highlight)             | X              | X                | X                                    |
+| [List Box hierárquico](properties_Object.md#array-list-box)                                  | X              |                  |                                      |
+| [Highlight Set](properties_ListBox.md#highlight-set)                                         |                | X                |                                      |
+| [Alinhamento Horizontal](properties_Text.md#horizontal-alignment)                            | X              | X                | X                                    |
+| [Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)                       | X              | X                | X                                    |
+| [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding)                  | X              | X                | X                                    |
+| [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)                      | X              | X                | X                                    |
+| [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing)                | X              | X                | X                                    |
+| [Italic](properties_Text.md#italic)                                                          | X              | X                | X                                    |
+| [Left](properties_CoordinatesAndSizing.md#left)                                              | X              | X                | X                                    |
+| [Tabela mestre](properties_DataSource.md#master-table)                                       |                | X                |                                      |
+| [Meta info expression](properties_Text.md#meta-info-expression)                              |                |                  | X                                    |
+| [Método](properties_Action.md#method)                                                        | X              | X                | X                                    |
+| [Movable Rows](properties_Action.md#movable-rows)                                            | X              |                  |                                      |
+| [Seleção temporária](properties_DataSource.md#selection-name)                                |                | X                |                                      |
+| [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X              | X                | X                                    |
+| [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X              | X                | X                                    |
+| [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X              | X                | X                                    |
+| [Object Name](properties_Object.md#object-name)                                              | X              | X                | X                                    |
+| [Right](properties_CoordinatesAndSizing.md#right)                                            | X              | X                | X                                    |
+| [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)   | X              |                  |                                      |
+| [Row Control Array](properties_ListBox.md#row-control-array)                                 | X              |                  |                                      |
+| [Row Font Color Array](properties_Text.md#row-font-color-array)                              | X              |                  |                                      |
+| [Row Height](properties_CoordinatesAndSizing.md#row-height)                                  | X              |                  |                                      |
+| [Row Height Array](properties_CoordinatesAndSizing.md#row-height-array)                      | X              |                  |                                      |
+| [Row Style Array](properties_Text.md#row-style-array)                                        | X              |                  |                                      |
+| [Selected Items](properties_DataSource.md#selected-items)                                    |                |                  | X                                    |
+| [Selection Mode](properties_ListBox.md#selection-mode)                                       | X              | X                | X                                    |
+| [Edição com um único clique](properties_Entry.md#single-click-edit)                          | X              | X                | X                                    |
+| [Ordenável](properties_Action.md#sortable)                                                   | X              | X                | X                                    |
+| [Ação padrão](properties_Action.md#standard-action)                                          | X              |                  |                                      |
+| [Expressão de estilo](properties_Text.md#style-expression)                                   |                | X                | X                                    |
+| [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                | X                                    |
+| [Transparente](properties_BackgroundAndBorder.md#transparent)                                | X              | X                | X                                    |
+| [Tipo](properties_Object.md#type)                                                            | X              | X                | X                                    |
+| [Sublinhado](properties_Text.md#underline)                                                   | X              | X                | X                                    |
+| [Variável ou Expressão](properties_Object.md#variable-or-expression)                         | X              | X                |                                      |
+| [Alinhamento vertical](properties_Text.md#vertical-alignment)                                | X              | X                | X                                    |
+| [Cor da linha vertical](properties_Gridlines.md#vertical-line-color)                         | X              | X                | X                                    |
+| [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding)                      | X              | X                | X                                    |
+| [Barra de rolagem vertical](properties_Appearance.md#vertical-scroll-bar)                    | X              | X                | X                                    |
+| [Tamanho Vertical](properties_ResizingOptions.md#vertical-sizing)                            | X              | X                | X                                    |
+| [Visibilidade](properties_Display.md#visibility)                                             | X              | X                | X                                    |
+| [Largura](properties_CoordinatesAndSizing.md#width)                                          | X              | X                | X                                    |
 
 > Colunas list box, cabeçalhos e rodapés suportam propriedades específicas.
 
@@ -263,7 +263,7 @@ Uma list box é feita de um ou mais objetos coluna que têm propriedades especí
 
 Você pode definir propriedades padrão (texto, cor de fundo, etc.) para cada coluna da caixa de listagem; essas propriedades têm prioridade sobre as propriedades do objeto da caixa de listagem.
 
-> Você pode definir o [Expression type] (properties_Object.md#expression-type) para colunas da caixa de listagem de matriz (String, Text, Number, Date, Time, Picture, Boolean ou Object).
+> Você pode definir o [Expression type](properties_Object.md#expression-type) para colunas de list box de tipo array (String, Text, Number, Date, Time, Picture, Boolean ou Object).
 
 ### Propriedades específicas de coluna
 
@@ -298,7 +298,7 @@ Você pode definir propriedades padrão (texto, cor de fundo, etc.) para cada co
 
 ## Cabeçalhos de list box
 
-> Para poder acessar as propriedades de cabeçalho de uma caixa de listagem, é necessário ativar a opção [Exibir cabeçalhos] (properties_Headers.md#display-headers) da caixa de listagem.
+> Para poder acessar as propriedades de cabeçalho de um list box, é necessário ativar a opção [Exibir cabeçalhos](properties_Headers.md#display-headers) do list box.
 
 Quando mostrar os cabeçalhos, pode selecionar um cabeçalho no editor de formulários clicando nele quando o objeto List Box estiver selecioando:
 
@@ -306,7 +306,7 @@ Quando mostrar os cabeçalhos, pode selecionar um cabeçalho no editor de formul
 
 Pode estabelecer propriedades de texto padrão para cada cabeçalho de coluna da list box, nesse caso, essas propriedades tem prioriedade sobre aquelas da coluna ou da própria list box.
 
-Além disso, tem acesso às propriedades específicas para cabeçalhos. Especificamente, um ícone pode ser exibido no cabeçalho ao lado ou no lugar do título da coluna, por exemplo, ao executar [classificações personalizadas] (#managing-sorts).
+Além disso, tem acesso às propriedades específicas para cabeçalhos. Especificamente, um ícone pode ser exibido no cabeçalho ao lado ou no lugar do título da coluna, por exemplo, ao executar [classificações personalizadas](#managing-sorts).
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
@@ -320,7 +320,7 @@ Quando o comando `OBJECT SET VISIBLE` é usado com um cabeçalho, ele é aplicad
 
 ## Rodapés de list box
 
-> Para poder acessar as propriedades de cabeçalho de uma caixa de listagem, é necessário ativar a opção [Exibir cabeçalhos] (properties_Headers.md#display-headers) da caixa de listagem.
+> Para poder acessar as propriedades do rodapé para um list box, você deve ativar a opção [Exibir rodapés](properties_Footers.md#display-footers).
 
 List boxes podem conter "cabeçalhos" não editáveis, exibindo informação adicional. No caso de dados mostrados em formato de tabela, os rodapés são geralmente usados para exibir cálculos como totais ou médias.
 
@@ -336,7 +336,7 @@ Quando o comando OBJECT SET VISIBLE for usado com um rodapé, é aplicado a todo
 
 ### Propriedades específicas do rodapé
 
-[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Formato Alpha](properties_Display.md#alpha-format) - [Cor de fundo](properties_BackgroundAndBorder.md#background-color--fill-color) - [Negrito](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Formato de data](properties_Display.md#date-format) - [Tipo de expressão](properties_Object.md#expression-type) - [Fonte](properties_Text.md#font) - [Cor do fonte](properties_Text.md#font-color) - [Dica](properties_Help.md#help-tip) - [Alinhamento horizontal](properties_Text.md#horizontal-alignment) - [Padding horizontal](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Formato de número](properties_Display.md#number-format) - [Nome do objeto](properties_Object.md#object-name) - [Formato da imagem](properties_Display.md#picture-format) - [Formato do tempo](properties_Display.md#time-format) - [Truncate com ellipsis](properties_Display.md#truncate-with-ellipsis) - [Sublinhado](properties_Text.md#underline) - [Cálculo variável](properties_Object.md#variable-calculation) - [Variável ou Expressão](properties_Object.md#variable-or-expression) - [Alinhamento vertical](properties_Text.md#vertical-alignment) - [Padding](properties_Coordinates_CoordinatesAndSizing.md#vertical-padding) - [Largura](properties_CoordinatesAndSizing.md#width) - [Embalagem de palavras](properties_Display.md#wordwrap)
 
 ## Gerenciar entrada
 
@@ -388,7 +388,7 @@ A sequencia típica de eventos gerados durante a entrada de dados ou modificaç�
 
 (\*) Com list boxes de seleção de entidade, no evento On Data Change:
 
-- O objeto [Current item] (properties_DataSource.md#current-item) contém o valor antes da modificação.
+- o objeto [item atual](properties_DataSource.md#current-item) contém o valor antes da modificação.
 - o objeto `This` contém o valor modificado.
 
 > Entrada de dados em list boxes do tipo coleção/seleção de entidade tem uma limitação quando a expressão for analisada como null. Nesse caso, não é possível editar ou remover o valor null na célula.
@@ -400,17 +400,15 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
 - **Caixa de listagem de seleção**: As seleções são gerenciadas por um conjunto, que pode ser modificado se necessário, chamado `$ListboxSetX` por padrão (em que X começa em 0 e é incrementado com base no número de caixas de listagem no formulário). Esse conjunto é [definido nas propriedades](properties_ListBox.md#highlight-set) da caixa de listagem. É mantido automaticamente por 4D: se o usuário selecionar uma ou mais linhas na list box, o conjunto se atualiza imediatamente. Por outro lado, é também possível usar comandos do tema "Conjuntos" para modificar a seleção na list box via programação.
 
 - **Caixa de listagem de seleção de coleção/entidade**: As seleções são gerenciadas por meio de propriedades dedicadas da caixa de listagem:
- - [Current item](properties_DataSource.md#current-item) é um objeto que receberá o elemento/entidade selecionado
- - [Itens selecionados](properties_DataSource.md#selected-items) é um objeto de seleção de coleção/entidade dos itens selecionados
- - [Current item position](properties_DataSource.md#current-item-position) retorna a posição do elemento ou da entidade selecionada.
+  - [Current item](properties_DataSource.md#current-item) é um objeto que receberá o elemento/entidade selecionado
+  - [Itens selecionados](properties_DataSource.md#selected-items) é um objeto de seleção de coleção/entidade dos itens selecionados
+  - [Current item position](properties_DataSource.md#current-item-position) retorna a posição do elemento ou da entidade selecionada.
 
-- **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
- **Caixa de listagem de matriz**: O comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas da caixa de listagem por meio de programação.
- A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto.
- A [variável vinculada ao objeto da caixa de listagem] (properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto. Esta variável corresponde a um array de booleanos que é criado e mantido automaticamente por 4D. O tamanho deste array vem determinado pelo tamanho do list box: contém o mesmo número de elementos que o menor array associado às colunas.
- Cada elemento dessa matriz contém `True` se a linha correspondente for selecionada e `False` caso contrário. 4D atualiza o conteúdo deste array em função das ações de usuário. Do lado contrário, pode mduar o valor dos elementos array para mudar a seleção na list box.
- Mas não se pode inserir nem apagar linhas nesse array; nem se pode reescrever as linhas. O comando `Count in array` pode ser usado para descobrir o número de linhas selecionadas.
- Por exemplo, este método permite inverter a seleção da primeira línha de list box (tipo array):
+- **List box de tipo array**: o comando `LISTBOX SELECT ROW` pode ser usado para selecionar uma ou mais linhas do list box por programação.
+  A [variável vinculada ao objeto List box](properties_Object.md#variable-or-expression) é usada para obter, definir ou armazenar seleções de linhas do objeto. Esta variável corresponde a um array de booleanos que é criado e mantido automaticamente por 4D. O tamanho deste array vem determinado pelo tamanho do list box: contém o mesmo número de elementos que o menor array associado às colunas.
+  Cada elemento dessa matriz contém `True` se a linha correspondente for selecionada e `False` caso contrário. 4D atualiza o conteúdo deste array em função das ações de usuário. Do lado contrário, pode mduar o valor dos elementos array para mudar a seleção na list box.
+  Mas não se pode inserir nem apagar linhas nesse array; nem se pode reescrever as linhas. O comando `Count in array` pode ser usado para descobrir o número de linhas selecionadas.
+  Por exemplo, este método permite inverter a seleção da primeira línha de list box (tipo array):
 
 ```4d
  BOOLEANY ARRAY (tBListBox; 0)
@@ -426,10 +424,10 @@ Seleções são gerenciadas diretamente, dependendo de se a list box é a basead
 
 ### Personalizar a aparência de linhas selecionadas
 
-Quando a opção [Hide selection highlight] (properties_Appearance.md#hide-selection-highlight) estiver selecionada, você precisará tornar visíveis as seleções da caixa de listagem usando as opções de interface disponíveis. Como seleções não são gerenciadas totalmente por 4D, isso significa:
+Quando a opção [Esconder destaque da seleção](properties_Appearance.md#hide-selection-highlight) estiver selecionada, você precisará tornar visíveis as seleções da caixa de listagem usando as opções de interface disponíveis. Como seleções não são gerenciadas totalmente por 4D, isso significa:
 
 - Para array de tipo list boxes, deve analisar a variável array booleana associada com a list box para determinar quais linhas foram ou não selecionadas.
-- Para caixas de listagem do tipo seleção, é necessário verificar se o registro atual (linha) pertence ao conjunto especificado na propriedade [Highlight Set] (properties_ListBox.md#highlight-set) da caixa de listagem.
+- Para caixas de listagem do tipo seleção, é necessário verificar se o registro atual (linha) pertence ao conjunto especificado na propriedade [Conjunto destacado](properties_ListBox.md#highlight-set) do list box.
 
 Pode então definir cores de fundo especificas, cores de fonte ou estilos de fonte por programação para personalizar a aparência de linhas selecionadas. Isso pode ser feito usando arrays ou expressões, dependendo do tipo de list box sendo exibido (ver as seções abaixo).
 
@@ -437,7 +435,7 @@ Pode então definir cores de fundo especificas, cores de fonte ou estilos de fon
 
 #### List box de tipo seleção
 
-Para determinar quais linhas estão selecionadas, você deve verificar se elas estão incluídas no conjunto indicado na propriedade [Highlight Set] (properties_ListBox.md#highlight-set) da caixa de listagem. Pode então definir a aparência das linhas selecionadas usando um ou mais das cores ou estilos propriedades de estilo relevantes .
+Para determinar quais linhas estão selecionadas, você deve verificar se elas estão incluídas no conjunto indicado na propriedade [Conjunto destacado](properties_ListBox.md#highlight-set) do list box. Pode então definir a aparência das linhas selecionadas usando um ou mais das cores ou estilos propriedades de estilo relevantes .
 
 Lembre que essas expressões são automaticamente reavaliadas a cada vez que:
 
@@ -447,9 +445,9 @@ Lembre que essas expressões são automaticamente reavaliadas a cada vez que:
 
 #### List box de tipo array
 
-Você precisa analisar a matriz booleana [Variable or Expression] (properties_Object.md#variable-or-expression) associada à caixa de listagem para determinar se as linhas estão selecionadas ou não.
+Você precisa analisar a matriz booleana [Variable or Expression](properties_Object.md#variable-or-expression) associada à caixa de listagem para determinar se as linhas estão selecionadas ou não.
 
-Em seguida, você pode definir a aparência das linhas selecionadas usando uma ou mais das propriedades relevantes de [matriz de cores ou estilos] (#using-arrays-and-expressions).
+Em seguida, você pode definir a aparência das linhas selecionadas usando uma ou mais das propriedades relevantes de [matriz de cores ou estilos](#using-arrays-and-expressions).
 
 Observe que os conjuntos de caixas de listagem usados para definir a aparência das linhas selecionadas devem ser recalculados durante o evento de formulário `On Selection Change`; no entanto, você também pode modificar esses conjuntos com base nos seguintes eventos de formulário adicionais:
 
@@ -464,7 +462,7 @@ Se escolher esconder os destaques do sistema e quiser exibir seleções de list 
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-Para uma caixa de lista de tipos de matriz, você precisa atualizar a [matriz de cor de fundo da linha de fundo](properties_BackgroundAndBorder.md#row-background-color-array) pela programação. In the JSON form, you have defined the following Row Background Color Array for the list box:
+Para uma caixa de lista de tipos de matriz, você precisa atualizar a [matriz de cor de fundo da linha de fundo](properties_BackgroundAndBorder.md#row-background-color-array) pela programação. No formulário JSON, se definiu o array de cores de fundo seguinte para o list box:
 
 ```
 	"rowFillSource": "_ListboxBackground",
@@ -487,7 +485,7 @@ No método de objeto da list box, pode escrever:
  End case
 ```
 
-Em uma caixa de listagem do tipo seleção, para produzir o mesmo efeito, você pode usar um método para atualizar a [Background Color Expression] (properties_BackgroundAndBorder.md#background-color-expression) com base no conjunto especificado na propriedade [Highlight Set] (properties_ListBox.md#highlight-set).
+Em uma caixa de listagem do tipo seleção, para produzir o mesmo efeito, você pode usar um método para atualizar a [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) com base no conjunto especificado na propriedade [Conjunto destacado](properties_ListBox.md#highlight-set).
 
 Por exemplo, no formulário JSON, se definiu  HIghlight Set e Background Color Expression para o list box:
 
@@ -508,7 +506,7 @@ Você pode escrever no método *UI_SetColor*:
  $0:=$color
 ```
 
-> Em caixas de listagem hierárquicas, as linhas de quebra não podem ser destacadas quando a opção [Ocultar destaque de seleção] (properties_Appearance.md#hide-selection-highlight) está marcada. Já que não é possível diferenciar cores de cabeçalho ao mesmo nível, não há uma maneira de ressaltar uma quebra de linha especifica por programação.
+> Em caixas de listagem hierárquicas, as linhas de quebra não podem ser destacadas quando a opção [Ocultar destaque de seleção](properties_Appearance.md#hide-selection-highlight) está marcada. Já que não é possível diferenciar cores de cabeçalho ao mesmo nível, não há uma maneira de ressaltar uma quebra de linha especifica por programação.
 
 ## Gestão de ordenações
 
@@ -524,7 +522,7 @@ O suporte de ordenação padrão depende do tipo de list box:
 
 | Tipo de list box              | Suporte de ordenação padrão | Comentários                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Uma coleção de objetos        | Sim                         | <ul><li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Uma coleção de objetos        | Sim                         | <ul><li>As colunas "This.a" ou "This.a.b" são classificáveis.</li><li>A [propriedade de origem da list box](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Colecção de valores escalares | Não                         | Use a classificação personalizada com a função [`orderBy()`](../API/CollectionClass.md#orderby)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Seleção de entidades          | Sim                         | <li>A [propriedade de origem da caixa de listagem](properties_Object.md#variable-or-expression) deve ser uma [expressão atribuível](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Suportado: classifica propriedades de atributos de objetos (por exemplo,</li> "This.data<li>.</li>city" quando "data" é um<li>atributo de objeto</0>)<li>Suportado: classifica propriedades de atributos</0> relacionados<li>(por exemplo</0>, "This.company<li>.</li>name"<li>)</li>Suportado: classifica propriedades de atributos de objetos (por exemplo,<li>"This.data.city" quando "data" é um atributo de objeto)Suportado</li>: classifica<li>atributos relacionados (por exemplo, "This.company.name")</li><li>Não suportado: classifica propriedades de atributos de objetos por meio de atributos relacionados (por exemplo, "This.company.data.city"). Para isso, você precisa usar a classificação personalizada com a função [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (veja o exemplo abaixo)</li> |
 | Selecção actual               | Sim                         | Somente expressões simples podem ser classificadas (por exemplo, `[Table_1]Field_2`)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -537,7 +535,7 @@ O desenvolvedor pode configurar tipos personalizados, por exemplo, usando o coma
 
 As ordenações personalizadas permitem-lhe:
 
-- realizar classificações em vários níveis em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`] (../commands-legacy/listbox-sort-columns.md),
+- realizar classificações em vários níveis em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md),
 - utilize funções como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para classificar colunas com base em critérios complexos.
 
 #### Exemplo
@@ -564,30 +562,30 @@ End if
 
 ### Variável de cabeçalho de coluna
 
-O valor da [variável de cabeçalho de coluna] (properties_Object.md#variable-or-expression) permite que você gerencie informações adicionais: a classificação atual da coluna (leitura) e a exibição da seta de classificação.
+O valor da [variável de cabeçalho de coluna](properties_Object.md#variable-or-expression) permite que você gerencie informações adicionais: a classificação atual da coluna (leitura) e a exibição da seta de classificação.
 
 - Se a variável for estabelecida como 0, a coluna não é ordenada e a flecha de ordenação não é exibida;\
- ![](../assets/en/FormObjects/sorticon0.png)
+  ![](../assets/en/FormObjects/sorticon0.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
- ![](../assets/en/FormObjects/sorticon2.png)
+- Se a variável for definida como 1, a coluna será classificada em ordem crescente e a seta de classificação será exibida.
+  ![](../assets/en/FormObjects/sorticon2.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
- ![](../assets/en/FormObjects/sorticon1.png)
+- Se a variável for estabelecida como 2, a coluna é ordenada de forma descendente e a flecha de ordenação é exibida.
+  ![](../assets/en/FormObjects/sorticon1.png)
 
 > Somente [variáveis] declaradas ou dinâmicas (Concepts/variables.md) podem ser usadas como variáveis de coluna de cabeçalho. Outros tipos de [expressions](Aceitações/quick-tour.md#expressions) como `Form.sortValue` não são suportados.
 
 Pode estabelecer o valor da variável (por exemplo, Header2:=2) para  “forçar” a exibição da flecha de ordenação. A ordenação de coluna não é modificada nesse caso; depende do desenvolvedor como vai manejá-la.
 
-> O comando [`OBJECT SET FORMAT`] (../commands-legacy/object-set-format.md) oferece suporte específico para ícones em cabeçalhos de caixas de listagem, o que pode ser útil quando você deseja trabalhar com um ícone de classificação personalizado.
+> O comando [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) oferece suporte específico para ícones em cabeçalhos de list box, o que pode ser útil quando você deseja trabalhar com um ícone de classificação personalizado.
 
 ## Gerenciar cores linha, estilos e exibição
 
 Aqui estão algumas maneiras de estabelecer cores de fundo, cores de fonte e estilos de fonte para list boxes:
 
-- no nível das [propriedades do objeto da caixa de listagem] (#list-box-objects),
-- no nível das [propriedades da coluna] (#list-box-columns),
-- usando [propriedades de matrizes ou expressões] (#using-arrays-and-expressions) para a caixa de listagem e/ou para cada coluna,
+- no nível das [propriedades do objeto list box](#list-box-objects),
+- no nível das [propriedades da coluna](#list-box-columns),
+- usando [propriedades de matrizes ou expressões](#using-arrays-and-expressions) para o list box e/ou para cada coluna,
 - no nível do texto de cada célula (se [texto multi-estilo](properties_Text.md#multi-style)).
 
 ### Prioridade e herança
@@ -611,7 +609,7 @@ Para cada atributo (estilo, cor e cor de fundo), uma **herança** é implementad
 - para atributos linhas: valores de atributos de colunas
 - para atributos coluna: valores atributos no list box
 
-Dessa maneira se quiser que um objeto herde o valor de atributo de um nível superior, pode usar a constante `lk inherited` (valor padrão) à definição de comando ou diretamente no elemento do array correspondente de estilo/cor. For example, given an array list box containing a standard font style with alternating colors:
+Dessa maneira se quiser que um objeto herde o valor de atributo de um nível superior, pode usar a constante `lk inherited` (valor padrão) à definição de comando ou diretamente no elemento do array correspondente de estilo/cor. Por exemplo, dado um list box array contendo um estilo de fonte padrão com cores alternadas:
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Pode realizar as modificações abaixo:
@@ -619,7 +617,7 @@ Pode realizar as modificações abaixo:
 - Mude o fundo da linha 2 para vermelho usando a propriedade [Linha de Cor de Fundo Array](properties_BackgroundAndBorder.md#row-background-color-array) do objeto caixa de lista,
 - altere o estilo de linha 4 para itálico usando a propriedade [Linha de Estilo Array](properties_Text.md#row-style-array) do objeto caixa de lista,
 - dois elementos na coluna 5 são alterados para negrito usando a propriedade [Matriz de Estilo da Linha](properties_Text.md#row-style-array) do objeto da coluna 5,
-- Os 2 elementos da coluna 1 e 2 são alterados para azul escuro usando a propriedade [Row Background Color Array] (properties_BackgroundAndBorder.md#row-background-color-array) para os objetos da coluna 1 e 2:
+- os 2 elementos da coluna 1 e 2 são alterados para azul escuro usando a propriedade [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) para os objetos da coluna 1 e 2:
 
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
@@ -657,7 +655,7 @@ Nesse modo:
 
 - A altura do objeto list box é reduzida automaticamente quando o número de linhas a ser impresso for menor que a altura original do objeto (não há linhas "em branco" impressas). Por outro lado a altura não aumenta automaticamente de acordo com os conteúdos do objeto. O tamanho do objeto realmente impresso pode ser obtido por meio do comando `LISTBOX GET PRINT INFORMATION`.
 - The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.
- Esses parâmetros também incluem a primeira linha a ser impressa: se você chamar o comando `OBJECT SET SCROLL POSITION` antes de iniciar a impressão, a primeira linha impressa na caixa de listagem será a designada pelo comando.
+  Esses parâmetros também incluem a primeira linha a ser impressa: se você chamar o comando `OBJECT SET SCROLL POSITION` antes de iniciar a impressão, a primeira linha impressa na caixa de listagem será a designada pelo comando.
 - Um mecanismo automático facilita a impressão de caixas de listagem que contêm mais linhas do que é possível exibir: chamadas sucessivas para `Print object` podem ser usadas para imprimir um novo conjunto de linhas a cada vez. O comando `LISTBOX GET PRINT INFORMATION` pode ser usado para verificar o status da impressão enquanto ela estiver em andamento.
 
 ## List box hierárquicos.
@@ -729,7 +727,7 @@ Se esta caixa de listagem for apresentada de forma hierárquica (sendo as três 
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-The arrays are not sorted before the hierarchy is constructed. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
+Os arrays não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contiver os dados AAABBAACC, a hierarquia obtida será:
 \> A
 \> B
 \> A
@@ -849,10 +847,10 @@ Usando os formulários `On Expand` e `On Collapse`, os eventos podem ultrapassar
 Neste caso, é necessário preencher e esvaziar os arrays através do código. Os princípios a serem implementados são os seguintes:
 
 - Quando a list box é exibido, somente o primeiro array deve ser preenchido. No entanto, você deve criar um segundo array com valores vazios para que o list box exiba os botões expandir/colapsar:
- ![](../assets/en/FormObjects/hierarch15.png)
+  ![](../assets/en/FormObjects/hierarch15.png)
 
 - Quando um usuário clicar num botão de expansão, pode processar o evento `On Expand`. O comando `LISTBOX GET CELL POSITION` devolve a célula em questão e permite-lhe construir a hierarquia apropriada: preenche o primeiro array com os valores repetidos e a segunda com os valores enviados do comando `SELECTION TO ARRAY` e insere tantas linhas quantas forem necessárias na caixa de listagem usando o comando `LISTBOX INSERT ROWS`.
- ![](../assets/en/FormObjects/hierarch16.png)
+  ![](../assets/en/FormObjects/hierarch16.png)
 
 - Quando um usuário clicar num botão de colapso, pode processar o evento `On Collapse`. O comando `LISTBOX GET CELL POSITION` devolve a célula em questão: retira-se tantas filas quantas forem necessárias da caixa de listagem usando o comando `LISTBOX DELETE ROWS`.
 
@@ -874,11 +872,11 @@ Estão disponíveis propriedades padrão relacionadas com coordenadas, tamanho e
 
 No entanto, o tema Fonte de Dados não está disponível para as colunas da caixa de listagem tipo objecto. De fato, o conteúdo de cada célula de coluna é baseado em atributos encontrados no elemento correspondente da array de objectos. Cada elemento da array pode definir:
 
-the value type (mandatory): text, color, event, etc.
-the value itself (optional): used for input/output.
-the cell content display (optional): button, list, etc.
-additional settings (optional): depend on the value type
-To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
+o tipo de valor (obrigatório): texto, cor, evento, etc.
+o valor em si (opcional): usado para entrada/saída.
+a exibição do conteúdo da célula (opcional): botão, lista, etc.
+configurações adicionais (opcional): dependem do tipo de valor
+Para definir essas propriedades, você precisa definir os atributos apropriados no objeto (os atributos disponíveis estão listados abaixo). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
 
 ```4d
 ARRAY OBJECT(obColumn;0) //array de colunas
@@ -963,17 +961,17 @@ O único atributo obrigatório é "valueType" e os seus valores suportados são 
 Os valores das células são armazenados no atributo "value". Este atributo é utilizado tanto para a entrada como para a saída. Também pode ser utilizada para definir valores por defeito quando se utilizam listas (ver abaixo).
 
 ```4d
- ARRAY OBJECT(obColumn;0) //column array
+ ARRAY OBJECT(obColumn;0) //array de colunas
  C_OBJECT($ob1)
  $entry:="Hello world!"
- OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1; "valueType"; "text")
+ OB SET($ob1; "value";$entry) // se o usuário inserir um novo valor, $entry conterá o valor editado
  C_OBJECT($ob2)
- OB SET($ob2;"valueType";"real")
+ OB SET($ob2; "valueType"; "real")
  OB SET($ob2;"value";2/3)
  C_OBJECT($ob3)
- OB SET($ob3;"valueType";"boolean")
- OB SET($ob3;"value";True)
+ OB SET($ob3; "valueType"; "boolean")
+ OB SET($ob3; "value";True)
 
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
@@ -1142,7 +1140,7 @@ Você deseja exibir uma caixa de combinação com base em uma lista de "cores" d
 Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 - "unitsList": um array que contém os elementos x usados para definir as unidades disponíveis (por exemplo: "cm", "polegadas", "km", "milhas" etc.). Utilize este atributo para definir unidades no interior do objeto.
-- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use this attribute to define units with a 4D list created with the [`New list`](../commands-legacy/new-list.md) command.
+- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [`New list`](../commands-legacy/new-list.md).
 - "unitsListName": um nome de uma lista 4D baseada em design que contém unidades disponíveis. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Independentemente da forma como a lista de unidades é definida, ela pode ser associada ao seguinte atributo:
@@ -1190,11 +1188,11 @@ O valueType "color" permite-lhe apresentar uma cor ou um texto.
 
 - Se o valor for um número, é desenhado um retângulo colorido no interior da célula. Exemplo:
 
- ```4d
- C_OBJECT($ob4)
- OB SET($ob4;"valueType";"color")
- OB SET($ob4;"value";0x00FF0000)
- ```
+  ```4d
+  C_OBJECT($ob4)
+  OB SET($ob4;"valueType";"color")
+  OB SET($ob4;"value";0x00FF0000)
+  ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
@@ -1202,7 +1200,7 @@ O valueType "color" permite-lhe apresentar uma cor ou um texto.
 
 #### event valueType
 
-El "event" valueType muestra un botón que genera un evento `On Clicked` al ser presionado. Nenhum dado ou valor pode ser transmitido ou devolvido.
+O "event" valueType exibe um botão simples que gera um evento `On Clicked` quando clicado. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
 Opcionalmente, pode passar um atributo "label".
 
@@ -1221,10 +1219,10 @@ OB SET($ob;"label";"Edit...")
 Vários eventos podem ser tratados durante o uso de um list box array de objetos:
 
 - **On Data Change**: um evento `On Data Change` é acionado quando qualquer valor é modificado:
- - numa zona de introdução de texto
- - numa lista pendente
- - numa área combo box
- - num botão de unidade (mudar do valor x para o valor x+1)
- - numa caixa de verificação (alternar entre verificado/não verificado)
+  - numa zona de introdução de texto
+  - numa lista pendente
+  - numa área combo box
+  - num botão de unidade (mudar do valor x para o valor x+1)
+  - numa caixa de verificação (alternar entre verificado/não verificado)
 - **On Clicked**: quando o usuário clicar em um botão instalado usando o atributo "event" *valueType*, será gerado um evento `On Clicked`. Este evento é gerido pelo programador.
 - **On Alternative Click**: quando o usuário clicar em um botão de reticências (atributo "alternateButton"), será gerado um evento `On Alternative Click`. Este evento é gerido pelo programador.

@@ -221,7 +221,7 @@ Essa propriedade é **somente leitura**.
 
 A propriedade `.isWritable` retorna <!-- REF #document.isWritable.Summary -->true se o arquivo existe no disco e é gravável<!-- END REF -->.
 
-> The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
+> A propriedade verifica a habilidade da aplicação 4D de escrever no disco (direitos de acesso), não depende apenas do atributo *writable* do arquivo.
 
 Essa propriedade é **somente leitura**.
 
@@ -450,7 +450,7 @@ A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
 Como padrão, o arquivo é copiado com o nome do arquivo original. Se quiser renomear a cópia, passe o novo nome no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+Se já existir um arquivo com o mesmo nome em *destinationFolder*, por padrão 4D gera um erro. Pode passar a constante `fk overwrite` no parâmetro *overwrite* para ignorar e sobrescriber o arquivo existente
 
 | Parâmetros     | Valor | Comentário                                      |
 | -------------- | ----- | ----------------------------------------------- |
@@ -462,7 +462,7 @@ O objeto `File` copiado.
 
 #### Exemplo
 
-You want to copy a picture *file* from the user's document folder to the application folder:
+Se quiser copiar um *file* imagem da pasta de documentos do usuário a pasta da aplicação:
 
 ```4d
 var $source; $copy : Object
@@ -544,7 +544,7 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 A função `.getIcon()` retorna <!-- REF #document.getIcon().Summary -->o ícone do arquivo<!-- END REF -->.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
+O parâmetro opcional *size* especifica as dimensões em píxels do icone devolvido. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
 Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
@@ -585,25 +585,25 @@ A função `.getText()` <!-- REF #document.getText().Summary -->retorna o conte�
 
 Opcionalmente, você pode designar o conjunto de caracteres a ser usado na leitura do conteúdo. Você pode passar também:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
+- em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
 - ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 
-If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSetName* or *charSetNum* (this parameter is then ignored).
-If the document does not contain a BOM and if *charSetName* or *charSetNum* is omitted, by default 4D uses the "UTF-8" character set.
+Se o documento contiver uma nota de ordem de byte (BOM), 4D usa o conjunto de caracteres que definiu em vez do especificado no *charSetName* ou *charSetNum* (este parâmetro é então ignorado).
+Se o documento não contiver uma LDM e se o *charSetName* ou *charSetNum* for omitido, por padrão 4D usa o conjunto de caracteres "UTF-8".
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters in the document. As seguintes constantes do tema "Documentos do Sistema" estão disponíveis:
+Em *breakMode*, você pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha no documento. As seguintes constantes do tema "Documentos do Sistema" estão disponíveis:
 
-| Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                    |
-| ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Não processado                                                                                                                                                                                                                                |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) under macOS, CRLF (carriage return + line feed) under Windows |
-| `Documento com CRLF`          | 2     | Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)                                                                                                             |
-| `Documento com CR`            | 3     | Line breaks are converted to macOS format: CR (carriage return)                                                                                                                                            |
-| `Documento com LF`            | 4     | Quebras de linha são convertidas em formato Unix: LF (feed de linha)                                                                                                                                       |
+| Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                               |
+| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                                                                                                                           |
+| `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operacional: CR (retorno de carro) sob macOS, CRLF (retorno do carro + salto de linha) em Windows |
+| `Documento com CRLF`          | 2     | Quebras de linha são convertidas em formato Windows: CRLF (retorno de carro + quebra de linha)                                                                                                                        |
+| `Documento com CR`            | 3     | Quebras de linha são convertidas para o formato macOS: CR (retorno de carro)                                                                                                                                          |
+| `Documento com LF`            | 4     | Quebras de linha são convertidas em formato Unix: LF (feed de linha)                                                                                                                                                  |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Por padrão, ao omitir o parâmetro *breakMode*, as quebras de linha são processadas no modo nativo (1).
 
 **Valor retornado**
 
@@ -630,7 +630,7 @@ Quando você executar este código:
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
-with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
+com `\t` (tabulação) como separador e `\r\n` (CRLF) como delimitador de linha.
 
 Aqui está outro exemplo com o mesmo arquivo, mas um delimitador de linha diferente:
 

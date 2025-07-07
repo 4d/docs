@@ -28,7 +28,7 @@ O parâmetro *formulasCol* é uma coleção bidimensional:
 > If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
 > Se um método 4D for usado, ele deverá ser permitido com o comando [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
-You remove the formulas in *rangeObj* by replacing them with an empty string ("").
+Você remove as fórmulas do intervalo *rangeObj* substituindo-as por uma string vazia ("").
 
 ## Exemplo 1
 

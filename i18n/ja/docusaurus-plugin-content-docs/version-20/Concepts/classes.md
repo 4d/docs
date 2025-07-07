@@ -295,13 +295,13 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
  End if
 ```
 
-### `Class Constructor`
+### `Class constructor`
 
 #### シンタックス
 
 ```4d
 // クラス: MyClass
-Class Constructor({$parameterName : type; ...})
+Class constructor({$parameterName : type; ...})
 // コード
 ```
 
@@ -324,8 +324,8 @@ Class Constructor({$parameterName : type; ...})
 #### 例題
 
 ```4d
-// クラス: MyClass
-// MyClass のクラスコンストラクター
+// Class: MyClass
+// MyClass の Class constructor
 Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
  This.age:=$age
@@ -377,7 +377,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-`property` キーワードは、クラス関数内の `Function` および `Class Constructor` ブロック外でのみ使用できます。
+`property` は、クラスのコードだけで使うことができるキーワードです。`Function` または `Class constructor` ブロックの外で使用する必要があります。
 
 :::
 
@@ -663,12 +663,12 @@ $val:=$o.f() //42
 [クラスコンストラクター](#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-// クラス: ob
+//クラス: ob
 
-Class Constructor  
+Class constructor  
 
- // This のプロパティを
- // 代入によって作成します
+ // 値を代入にすることによって
+ // This のプロパティを作成
  This.a:=42
 ```
 

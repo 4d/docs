@@ -17,7 +17,7 @@ title: VP Get sheet options
 
 ## Descrição
 
-The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the *vpAreaName* area<!-- END REF -->.
+O comando `VP Get sheet options` <!-- REF #_method_.VP Get sheet options.Summary --> retorna um objeto que contém as opções atuais da área *vpAreaName*<!-- END REF -->.
 
 Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
@@ -25,7 +25,7 @@ No parâmetro opcional *sheet*, pode designar uma planilha específica (a contag
 
 ## Objeto devolvido
 
-O método devolve um objeto que contém os valores atuais de todas as opções de folha disponíveis An option value may have been modified by the user or by the [VP SET SHEET OPTIONS](vp-set-sheet-options.md) method.
+O método devolve um objeto que contém os valores atuais de todas as opções de folha disponíveis Um valor opção pode ter sido modificado pelo usuário ou pelo método [VP SET SHEET OPTIONS](vp-set-sheet-options.md).
 
 Para ver a lista completa das opções, consulte [Opções folha](../configuring.md#sheet-options).
 

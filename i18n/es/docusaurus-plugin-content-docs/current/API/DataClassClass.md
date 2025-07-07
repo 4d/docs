@@ -67,6 +67,7 @@ Los objetos de atributo devueltos contienen las siguientes propiedades:
 | relatedDataClass | Text    | Nombre del dataclass relacionado con el atributo. Sólo se devuelve cuando `.kind` = "relatedEntity" o "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | type             | Text    | Tipo de valor conceptual del atributo, útil para la programación genérica. Depende del atributo `kind`. Valores posibles: <li>si `.kind` = "storage": "blob", "bool", "date", "image", "number", "object" o "string". "number" se devuelve para todo tipo numérico, incluyendo duración; "string" se devuelve para los tipos de atributos uuid, alfa y texto; los atributos "blob" son [objetos blob](../Concepts/dt_blob.md#blob-types).</li><li>si `.kind` = "relatedEntity": nombre de la clase de datos relacionada</li><li>si `.kind` = "relatedEntities": nombre de la clase de datos relacionada + sufijo "Selection"</li><li>si `.kind` = "calculated" o "alias": igual que en los casos anteriores, dependiendo del resultado</li> |
 | unique           | Boolean | True si el valor del atributo debe ser único. No se devuelve si `.kind` = "relatedEntity" o "relatedEntities".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| classID          | Text    | Available only if `.type = "object"` and a class has been specified in the structure editor. </br>Returns the name of the class used to instantiate the object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 :::tip
 
@@ -181,7 +182,7 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
-<!-- REF #DataStoreClass.clearRemoteCache().Params -->
+<!-- REF #DataClassClass.clearRemoteCache().Params -->
 
 | Parámetros | Tipo |     | Descripción                  |
 | ---------- | ---- | :-: | ---------------------------- |
@@ -261,13 +262,13 @@ El mapeo entre los objetos de la colección y las entidades se realiza sobre los
 Para cada objeto de *objectCol*:
 
 - Si el objeto contiene una propiedad booleana "\__NEW" establecida en false (o no contiene una propiedad booleana "\__NEW"), la entidad se actualiza o se crea con los valores correspondientes de las propiedades del objeto. No se realiza ninguna comprobación con respecto a la llave primaria:
- - Si la llave primaria se da y existe, la entidad se actualiza. En este caso, la llave primaria puede darse tal cual o con una propiedad "\_\_KEY" (llenada con el valor de la llave primaria).
- - If the primary key is given (as is) and does not exist, the entity is created
- - Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
+  - Si la llave primaria se da y existe, la entidad se actualiza. En este caso, la llave primaria puede darse tal cual o con una propiedad "\_\_KEY" (llenada con el valor de la llave primaria).
+  - If the primary key is given (as is) and does not exist, the entity is created
+  - Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 - Si el objeto contiene una propiedad booleana "\_\_NEW" definida como **true**, la entidad se crea con los valores correspondientes de los atributos del objeto. Se realiza una verificación con respecto a la llave primaria:
- - Si se da la llave primaria (tal cual) y existe, se envía un error
- - If the primary key is given (as is) and does not exist, the entity is created
- - Si no se da la primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
+  - Si se da la llave primaria (tal cual) y existe, se envía un error
+  - If the primary key is given (as is) and does not exist, the entity is created
+  - Si no se da la primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas estándar de la base de datos.
 
 > La propiedad "\__KEY" que contiene un valor sólo se tiene en cuenta cuando la propiedad "\__NEW" tiene el valor **false** (o se omite) y existe una entidad correspondiente. The use of a \_\_KEY property allows independence from the primary key attribute name.
 
@@ -908,8 +909,8 @@ donde:
 
 - **formula**: una fórmula válida pasada como `Text` u `Object`. La fórmula se evaluará para cada entidad procesada y debe devolver un valor booleano. Dentro de la fórmula, la entidad está disponible a través del objeto `This`.
 
- - **Text**: la cadena de fórmulas debe ir precedida de la declaración `eval()`, para que el analizador de consultas evalúe la expresión correctamente. Por ejemplo: *"eval(length(This.lastname) >=30) "*
- - **Objeto**: el [objeto fórmula](FunctionClass.md) se pasa como **placeholder** (ver más abajo). La fórmula debe haber sido creada utilizando el comando [`Formula`](../commands/formula.md) o [`Formula from string`](../commands/formula-from-string.md).
+  - **Text**: la cadena de fórmulas debe ir precedida de la declaración `eval()`, para que el analizador de consultas evalúe la expresión correctamente. Por ejemplo: *"eval(length(This.lastname) >=30) "*
+  - **Objeto**: el [objeto fórmula](FunctionClass.md) se pasa como **placeholder** (ver más abajo). La fórmula debe haber sido creada utilizando el comando [`Formula`](../commands/formula.md) o [`Formula from string`](../commands/formula-from-string.md).
 
 > * Tenga en cuenta que las fórmulas 4D sólo admiten los símbolos `&` y `|` como operadores lógicos.
 > * Si la fórmula no es el único criterio de búsqueda, el optimizador del motor de búsquedas podría procesar previamente otros criterios (por ejemplo, los atributos indexados) y, por tanto, la fórmula podría evaluarse sólo para un subconjunto de entidades.
@@ -936,13 +937,13 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 | Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |
 
 - Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20. For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
- For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
- - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
- - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
- - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
- - Constantes de tipo **date**: formato "YYYY-MM-DD"
- - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
- - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
+  For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
+  - La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
+  - Valores constantes de tipo **booleano**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
+  - Valores constantes de **tipo numérico**: los decimales se separan con un '.' (punto).
+  - Constantes de tipo **date**: formato "YYYY-MM-DD"
+  - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
+  - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
 - **logicalOperator**: utilizado para unir condiciones múltiples en la búsqueda (opcional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
 
 | Conjunción | Símbolo(s)                                                       |

@@ -273,5 +273,5 @@ http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get current session ID` method. [ユーザーセッション](sessions.md) のページを参照ください。
+ユーザーがログインすると、`WEB Get current session ID` メソッドを使って、関連するセッションを処理することができます。 [ユーザーセッション](sessions.md) のページを参照ください。
 

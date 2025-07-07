@@ -16,11 +16,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Record number.Summary-->**Record number** returns the physical record number for the current record of *aTable*.<!-- END REF--> If there is no current record, such as when the record pointer is before or after the current selection, **Record number** returns –1\. If the record is a new record that has not been saved, **Record number** returns –3.
+<!--REF #_command_.Record number.Summary-->**Record number** returns the physical record number for the current record of *aTable*.<!-- END REF--> If there is no current record, such as when the record pointer is before or after the current selection, **Record number** returns -1 (`No current record` constant). If the record is a new record that has not been saved, **Record number** returns -3 (`New record` constant).
 
 Record numbers can change. The record numbers of deleted records are reused.
 
-**4D Server:** This command returns a different result for the On Validate form event depending on whether it is executed on 4D in local mode or 4D in remote mode. In local mode, the command returns a record number (the record is considered as already created). In remote mode, the command returns -3 because, in this case, the record is already created on the server but the information has not yet been sent to the client.
+**4D Server:** This command returns a different result for the On Validate form event depending on whether it is executed on 4D in local mode or 4D in remote mode. In local mode, the command returns a record number (the record is considered as already created). In remote mode, the command returns -3 (`New record` constant) because, in this case, the record is already created on the server but the information has not yet been sent to the client.
 
 **Note:** It is recommended to use the [Is new record](is-new-record.md) command to check whether a record is in the process of being created. 
 

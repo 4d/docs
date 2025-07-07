@@ -55,7 +55,12 @@ O tipo de objeto define o tipo de objeto ao que vai aplicar o estilo, e correspo
 
 Para aplicar o mesmo estilo para múltiplos tipos de objetos, especifique o tipo de objeto separado por um "," então em chaves, declare os estilos a aplicar:
 
-> El tipo objeto corresponde a la propiedad JSON [tipo](FormObjects/properties_Object.md#type) de los objetos formulario.
+:::note
+
+- El tipo objeto corresponde a la propiedad JSON [tipo](FormObjects/properties_Object.md#type) de los objetos formulario.
+- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+
+:::
 
 En el siguiente ejemplo, todos los objetos del tipo *botón* mostrarán el texto en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
@@ -195,7 +200,7 @@ text[text|=Hello]
 
 As consultas de mídia são usadas para aplicar esquemas de cores as aplicações.
 
-Una consulta de medios está formada por características y valores de medios (por ejemplo, `\<media feature>:\<value>` ).
+A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
 
 Funcionalidades multimédia disponíveis:
 
@@ -270,13 +275,13 @@ icon: url("edit.png"); /* rota relativa ao arquivo de formulário */
 
 - Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` y `verticalLineStroke`, se soportan tres sintaxis:
 
- - Nombre del color CSS: `fill: red;`
- - Valor hexadécimal: `fill: #FF0000;`
- - función `rgb()`: `fill:rgb(255,0,0)`
+  - Nombre del color CSS: `fill: red;`
+  - Valor hexadécimal: `fill: #FF0000;`
+  - función `rgb()`: `fill:rgb(255,0,0)`
 
 - Se uma string utilizar caracteres proibidos em CSS, pode rodear a string com aspas simples ou duplas. Por exemplo:
- - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
- - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
+  - una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
+  - un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
 
 ## Ordem de prioridade
 

@@ -87,7 +87,7 @@ As entidades passadas nos parâmetros são referenciadas no servidor através da
 - Se __KEY não for fornecido, uma nova entidade é criada no servidor com os atributos fornecidos.
 - Se __KEY for fornecido, a entidade correspondente a __KEY é carregada no servidor com os atributos fornecidos
 
-See examples for creating or updating entities.
+Veja exemplos para criar ou atualizar entidades.
 
 #### Parâmetro de entidade relacionada
 
@@ -439,14 +439,14 @@ Corpo do pedido:
 Neste exemplo, associamos uma escola existente a uma entidade Students. A classe `StudentEntity` tem um API:
 
 ```
-// StudentsEntity class
+// Classe StudentsEntity
 
 Class extends Entity
 
 exposed Function putToSchool($school : Object) -> $status : Object
 
-        //$school is a Schools entity
-        //Associate the related entity school to the current Students entity
+        //$school é uma entidade Schools
+        //Associar a entidade relacionada school à entidade Students atual
     This.school:=$school
 
     $status:=This.save()

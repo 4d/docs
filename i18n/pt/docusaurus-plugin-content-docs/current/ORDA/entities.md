@@ -35,12 +35,12 @@ Uma entidade contém uma referência a um registo 4D. Entidades diferentes podem
 Se executar o seguinte código:
 
 ```4d
- var $e1; $e2 : cs.EmployeeEntity
- $e1:=ds.Employee.get(1) //access the employee with ID 1
+ var $e1; $e2 : cs. EmployeeEntity
+ $e1:=ds. Employee.get(1) //acessa o funcionário com ID 1
  $e2:=$e1
  $e1.name:="Hammer"
-  //both variables $e1 and $e2 share the reference to the same entity
-  //$e2.name contains "Hammer"
+  //ambas as variáveis $e1 e $e2 compartilham a referência à mesma entidade
+  //$e2.name contém "Hammer"
  If($e1=$e2) //True
 ```
 
@@ -55,9 +55,9 @@ Agora, se executar:
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
  $e1.name:="Hammer"
-  //variable $e1 contains a reference to an entity
-  //variable $e2 contains another reference to another entity
-  //$e2.name contains "smith"
+  //variável $e1 contém uma referência a uma entidade
+  //variável $e2 contém outra referência a outra entidade
+  //$e2.name contém "smith"
  If($e1=$e2) //False
 ```
 
@@ -100,7 +100,7 @@ Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na 
 
 - attributes of the **storage** kind can be set or get as simple properties of the entity object,
 - atributos do tipo **relatedEntity** retornarão uma entidade,
-- attributes of the **relatedEntities** kind will return an entity selection,
+- atributos do tipo **relatedEntities** retornarão uma seleção de entidade,
 - attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
 
 :::info
@@ -118,7 +118,12 @@ Por exemplo, para obter e definir um valor de atributo de armazenamento do tipo 
  $entity.save() //salvar as modificações
 ```
 
-> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
+:::note Notas
+
+- Database Object fields can be [associated with classes](../Develop/field-properties.md), in which case only objects of the defined class can be assigned to the entity attribute.
+- Os campos Blob dos banco de dados ([blobs scalaires](Concepts/dt_blob.md) são automaticamente convertidos de e para atributos de objetos blob ([`4D.Blob`](Concepts/dt_blob.md)) quando manipulados por ORDA. Ao salvar um atributo blob objeto, tenha em mente isso, Ao contrário do tamanho do objeto blob limitado apenas pela memória disponível, o tamanho do campo Blob é limitado a 2GB.
+
+:::
 
 O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
@@ -164,9 +169,9 @@ Function createCompany($name : Text; $logo : 4D.File)
 	$company:=ds.Company.new()
 
 	$company.name:=$name
-		//assignment using a file object
+		//atribuição usando um objeto file
 	$company.logo:=$logo
-		//assignment using a path
+		//atribuição usando um caminho
 	$company.datablob:="/RESOURCES/"+$name+"/data.bin"
 	$company.save()
 ```
@@ -227,10 +232,10 @@ Isso é particularmente útil quando você está importando grandes quantidades 
 Você pode atribuir ou modificar o valor de um "1" atributo da entidade relacionada a partir do dataclass "N" diretamente através do atributo relacionado. Por exemplo, se você deseja modificar o atributo de nome de uma entidade relacionada da Empresa de uma entidade funcional, você pode escrever:
 
 ```code4d
- $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
- $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
- $emp.employer.save() //save the related attribute
-  //the related entity is updated
+ $emp:=ds.Employee.get(2) // carrega a entidade Employee com a chave primária 2
+ $emp.employer.name:="4D, Inc." //modificar o atributo name da empresa relacionada
+ $emp.employer.save() //salvar o atributo relacionado
+  //a entidade relacionada é atualizada
 ```
 
 ## Criar uma selecção de entidade
@@ -292,8 +297,8 @@ Exemplo:
 ```4d
 var $myComp : cs.CompanyEntity
 var $employees : cs.EmployeeSelection
-$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
-$employees:=$myComp.employees //$employees is shareable
+$myComp:=ds.Company.get(2) //$myComp não pertence a uma seleção de entidade
+$employees:=$myComp.employees //$employees é compartilhável
 ```
 
 Una nueva entity selection es **compartible** en los siguientes casos:
@@ -312,9 +317,9 @@ Una nueva entity selection **hereda** de la naturaleza de la entity selection or
 
 - la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 - a nova entity selection é baseada numa relação:
- - [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
- - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
- - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
+  - [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
+  - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
+  - [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Exemplos:
 
@@ -324,30 +329,30 @@ var $comp; $comp2 : cs.Company
 
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
 
-	//$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+	//$highSal é compartilhável por causa da consulta em dataClass
+$comp:=$highSal.employer //$comp é compartilhável porque $highSal é compartilhável
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
-	//$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+	//$lowSal é alterável por causa da copy()
+$comp2:=$lowSal.employer //$comp2 é alterável porque $lowSal é alterável
 ```
 
 :::note Entity selections devolvidas pelo servidor
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`](API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo: Exemplo: Exemplo: Exemplo: Exemplo:
+Na arquitetura cliente/servidor, as seleções de entidades retornadas do servidor são sempre compartilháveis no cliente, mesmo que [`copy()`](API/EntitySelectionClass.md#copy) tenha sido chamada no servidor. Para tornar essa seleção de entidade alterável no cliente, você precisa executar [`copy()`](API/EntitySelectionClass.md#copy) no lado do cliente. Exemplo: Exemplo: Exemplo: Exemplo: Exemplo:
 
 ```4d
-	//a function is always executed on the server
+	//uma função é sempre executada no servidor
 exposed Function getSome() : cs.MembersSelection
     return This.query("ID >= :1"; 15).orderBy("ID ASC")
 
-	//in a method, executes on the remote side
+	//em um método, é executado no lado remoto
 var $result : cs.MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result is shareable
+$result:=ds.Members.getSome() //$result é compartilhável
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result is now alterable
+$result:=ds.Members.getSome().copy() // $result agora é alterável
 $alterable:=$result.isAlterable() // True
 ```
 
@@ -360,11 +365,11 @@ Você trabalha com duas seleções de entidades que deseja passar para um proces
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+//Obtemos seleções de entidades para faturas pagas e não pagas
 $paid:=ds.Invoices.query("status=:1"; "Paid")
 $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
+//Passamos referências de seleção de entidades como parâmetros para o trabalhador
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
@@ -409,8 +414,8 @@ Todos os atributos de armazenamento (texto, número, booleano, data) estão disp
 ```4d
 var $locals : cs.PersonSelection
 var $localEmails : Collection
-$locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
-$localEmails:=$locals.emailAddress //collection of email addresses (strings)
+$locals:=ds.Person.query("city = :1"; "San Jose") //seleção de identidade de pessoas
+$localEmails:=$locals.emailAddress //coleção de endereços de e-mail (cadeias de caracteres)
 ```
 
 Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
@@ -424,9 +429,9 @@ Além da variedade de maneiras que você pode consultar, você também pode usar
 ```4d
 var $myParts : cs.PartSelection
 var $myInvoices : cs.InvoiceSelection
-$myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+$myParts:=ds.Part.query("ID < 100") //Retornar peças com ID menor que 100
 $myInvoices:=$myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in $myParts
+  /Todas as faturas com pelo menos um item de linha relacionado a uma peça em $myParts
 ```
 
 La última línea devolverá en *$myInvoices* una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade.
@@ -554,9 +559,9 @@ Esse mecanismo automático baseia-se no conceito de "bloqueio otimista", sendo p
 - Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
 - Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
 - Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
- - Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
+  - Quando os valores correspondem, a entidade é salva e o valor do marcador interno é aumentado.
 
- - Quando os valores não correspondem, significa que outro usuário modificou esta entidade nesse meio tempo. A gravação não é efetuada e é devolvido um erro.
+  - Quando os valores não correspondem, significa que outro usuário modificou esta entidade nesse meio tempo. A gravação não é efetuada e é devolvido um erro.
 
 O diagrama seguinte ilustra o bloqueio otimista:
 

@@ -28,7 +28,7 @@ The *formula* parameter specifies a formula or 4D method name to be assigned to 
 
 O *formatPattern* opcional define um [padrão](../configuring.md#cell-format) para a *fórmula*.
 
-You remove the formula in *rangeObj* by replacing it with an empty string ("").
+Você remove a fórmula do intervalo *rangeObj* substituindo-a por uma string vazia ("").
 
 ## Exemplo 1
 

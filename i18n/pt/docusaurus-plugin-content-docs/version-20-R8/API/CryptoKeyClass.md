@@ -3,7 +3,7 @@ id: CryptoKeyClass
 title: CryptoKey
 ---
 
-The `CryptoKey` class in the 4D language encapsulates an asymmetric encryption key pair.
+A classe `CryptoKey` da linguagem 4D contém um par de chaves de cifrado assimétrico.
 
 Essa classe está disponível no "class store" de `4D`.
 
@@ -43,14 +43,14 @@ Para obter uma visão geral abrangente dessa classe, consulte a postagem do blog
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
-| Parâmetro  | Tipo                         |                             | Descrição                                         |
-| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------- |
-| settings   | Object                       | ->                          | Settings to generate or load a key pair           |
-| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação |
+| Parâmetro  | Tipo                         |                             | Descrição                                          |
+| ---------- | ---------------------------- | --------------------------- | -------------------------------------------------- |
+| settings   | Object                       | ->                          | Parâmetros para gerar ou carregar um par de chaves |
+| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
 
 <!-- END REF -->
 
-A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um novo objeto `4D.CryptoKey` que encapsula um par de chaves de criptografia<!-- END REF -->, com base no parâmetro objeto *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um novo objeto `4D.CryptoKey` que encapsula um par de chaves de criptografia<!-- END REF -->, com base no parâmetro objeto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
 
 #### *parâmetros*
 
@@ -63,11 +63,11 @@ A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um 
 
 #### *CryptoKey*
 
-O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um objeto compartido e, portanto, pode ser utilizado por vários processos 4D simultaneamente.
 
 #### Exemplo 1
 
-A message is signed by a private key and the signature is verified by the corresponding public key. The following code signs and verifies a simple message signature.
+Uma mensagem é assinada por uma chave privada e a assinatura é verificada pela chave pública correspondente. O código a seguir assina e verifica uma assinatura de mensagem simples.
 
 - Lado bob:
 
@@ -92,18 +92,18 @@ Folder(fk desktop folder).file("signature").setText($key.sign($message;$type))
 - O lado Alice:
 
 ```4d
-// Get message, public key & signature
+// Obter mensagem, chave pública e assinatura
 $message:=Folder(fk desktop folder).file("message.txt").getText()
 $publicKey:=Folder(fk desktop folder).file("public.pem").getText()
 $signature:=Folder(fk desktop folder).file("signature").getText()
 
-// Create a key
-$type:=New object("type";"PEM";"pem";$publicKey)
+// Criar uma chave
+$type:=New object("type"; "PEM"; "pem";$publicKey)
 $key:=4D.CryptoKey.new($type)
 
-// Verify signature
+// Verificar assinatura
 If ($key.verify($message;$signature;$type).success)
-// The signature is valid
+// A assinatura é válida
 
 End if
 ```
@@ -169,14 +169,14 @@ Definido somente para chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nome 
 
 A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->criptografa o parâmetro *message* usando a chave **pública**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
-The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 #### *opções*
 
 | Propriedade       | Tipo | Descrição                                                                                                                                                                                                   |
 | ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                  |
-| encodingEncrypted | text | Encoding used to convert the `message` parameter into the binary representation to decrypt. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".       |
+| encodingEncrypted | text | Codificação utilizada para converter o parâmetro `message` na representação binaria a decifrar. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".   |
 | encodingDecrypted | text | Codificação utilizada para converter a mensagem binário decifrado na string de resultados. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 #### *Resultado*
@@ -219,15 +219,15 @@ Caso a *mensagem* não possa ser descriptografada porque não foi criptografada 
 
 A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descriptografa o parâmetro *message* usando a chave **privada**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
-The key must be a RSA key, the algorithm is RSA-OAEP (see [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 ##### *opções*
 
-| Propriedade       | Tipo | Descrição                                                                                                                                                                                                    |
-| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                   |
-| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".        |
-| encodingDecrypted | text | Encoding used to convert the `message` parameter into the binary representation to encrypt. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
+| Propriedade       | Tipo | Descrição                                                                                                                                                                                                             |
+| ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                            |
+| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                 |
+| encodingDecrypted | text | Codificação usada para converter o parâmetro `message` na representação binária a ser criptografada. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 #### *Resultado*
 
@@ -321,10 +321,10 @@ O valor devolvido é a chave pública.
 
 <details><summary>História</summary>
 
-| Release | Mudanças                   |
-| ------- | -------------------------- |
-| 20 R8   | Support of message as Blob |
-| 18 R4   | Adicionado                 |
+| Release | Mudanças                      |
+| ------- | ----------------------------- |
+| 20 R8   | Suporte de mensagem como Blob |
+| 18 R4   | Adicionado                    |
 
 </details>
 
@@ -334,13 +334,13 @@ O valor devolvido é a chave pública.
 
 | Parâmetro  | Tipo          |                             | Descrição                                                                       |
 | ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------- |
-| message    | Texto OU Blob | ->                          | Message to sign                                                                 |
+| message    | Texto OU Blob | ->                          | Mensagem a assinar                                                              |
 | options    | Object        | ->                          | Opções de assinatura                                                            |
-| Resultados | Text          | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option |
+| Resultados | Text          | <- | Assinatura na representação Base64 ou Base64URL, dependendo da opção "encoding" |
 
 <!-- END REF -->
 
-A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma string *message* ou Blob<!-- END REF --> usando as chaves do objeto `CryptoKey` e as *opções* fornecidas. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma string *message* ou Blob<!-- END REF --> usando as chaves do objeto `CryptoKey` e as *opções* fornecidas. Ele retorna sua assinatura no formato base64 ou base64URL dependendo do valor do atributo `options.encoding` que você passou.
 
 A `CryptoKey` deve conter uma chave **privada** válida.
 
@@ -351,7 +351,7 @@ A `CryptoKey` deve conter uma chave **privada** válida.
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                                                                                 |
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passe `true` ao produzir um JWT para o algoritmo PS@                                                                                         |
-| encoding          | text    | Representation to be used for result signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                                   |
+| encoding          | text    | Representação a ser usada para a assinatura do resultado. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                                                         |
 
 #### *Resultado*
 
@@ -405,10 +405,10 @@ Contém o nome <!-- REF #CryptoKey.type.Summary -->do tipo de chave - "RSA", "EC
 
 <details><summary>História</summary>
 
-| Release | Mudanças                   |
-| ------- | -------------------------- |
-| 20 R8   | Support of message as Blob |
-| 18 R4   | Adicionado                 |
+| Release | Mudanças                      |
+| ------- | ----------------------------- |
+| 20 R8   | Suporte de mensagem como Blob |
+| 18 R4   | Adicionado                    |
 
 </details>
 
@@ -416,12 +416,12 @@ Contém o nome <!-- REF #CryptoKey.type.Summary -->do tipo de chave - "RSA", "EC
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Parâmetro  | Tipo          |                             | Descrição                                                                                         |
-| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
-| message    | Texto OU Blob | ->                          | Message that was used to produce the signature                                                    |
-| signature  | Text          | ->                          | Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value |
-| options    | Object        | ->                          | Opções de assinatura                                                                              |
-| Resultados | Object        | <- | Estado da verificação                                                                             |
+| Parâmetro  | Tipo          |                             | Descrição                                                                                                          |
+| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| message    | Texto OU Blob | ->                          | Mensagem usada para produzir a assinatura                                                                          |
+| signature  | Text          | ->                          | Assinatura que vai ser verificada, em representação Base64 ou Base64URL, dependendo do valor de `options.encoding` |
+| options    | Object        | ->                          | Opções de assinatura                                                                                               |
+| Resultados | Object        | <- | Estado da verificação                                                                                              |
 
 <!-- END REF -->
 
@@ -439,9 +439,9 @@ A `CryptoKey` deve conter uma chave **pública** válida.
 
 #### *Resultado*
 
-The function returns a status object with `success` property set to `true` if `message` could be successfully verified (i.e. the signature matches).
+A função devolve um objeto status com a propriedade `success` estabelecida para true se `message` puder ser verificada com êxito (ou seja, se a assinatura coincidir).
 
-In case the signature couldn't be verified because it was not signed with the same *message*, key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
+Se a assinatura não puder ser verificada por não ter sido assinada com a mesma *message*, chave ou algoritmo, o objecto `status` devolvido contém uma colecção de erros em `status.errors`.
 
 | Propriedade | Tipo       | Descrição                                                  |
 | ----------- | ---------- | ---------------------------------------------------------- |

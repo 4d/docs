@@ -112,7 +112,7 @@ To do so, you can redirect your queries into named selections that you reuse as 
 ```4d
   // asRolodex object method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
   // Before the form appears on the screen,
   // initialize the rolodex and an array of Booleans that
   // will tell us if a query for the corresponding letter
@@ -124,7 +124,7 @@ To do so, you can redirect your queries into named selections that you reuse as 
           abQueryDone{$vlElem}:=False
        End for
  
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // When a click on the Tab control occurs, check whether the corresponding query
   // has been performed or not
        If(Not(abQueryDone{asRolodex}))
@@ -144,7 +144,7 @@ To do so, you can redirect your queries into named selections that you reuse as 
           USE NAMED SELECTION("Rolodex"+asRolodex{asRolodex}
        End if
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // After the form disappeared from the screen
   // Clear the named selections we created
        For($vlElem;1;26)

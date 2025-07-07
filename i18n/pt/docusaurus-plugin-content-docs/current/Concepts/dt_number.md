@@ -1,6 +1,6 @@
 ---
 id: number
-title: Number (Real, Integer)
+title: Número (Real, Inteiro)
 ---
 
 Número é um termo genérico que significa:
@@ -10,12 +10,12 @@ Número é um termo genérico que significa:
 
 :::info Compatibidade
 
-Usually when working with Integers, you handle *Long* values (4-byte Integer). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
+Normalmente, ao trabalhar com números inteiros, você lida com valores *Long* (números inteiros de 4 bytes). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
 
-- Database fields with `Integer` type,
-- Elements of arrays declared with [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
+- Campos do banco de dados tipo 'Integer',
+- Elementos de arrays declarados com [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
 
-These legacy data types are automatically converted in *Longs* when used in the 4D Language.
+Esses tipos de dados legados são automaticamente convertidos em *Longs* quando usados na linguagem 4D.
 
 :::
 
@@ -85,7 +85,7 @@ O operador da divisão de longint retorna valores significativos apenas com núm
 
 ### Comparação real
 
-To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. Consulte o comando [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
+Para comparar dois reais por igualdade, a linguagem 4D realmente compara o valor absoluto da diferença com *epsilon*. Consulte o comando [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
 
 :::note
 
@@ -121,7 +121,7 @@ Os operadores bitwise operam com expressões ou valores inteiros (Long).
 
 While using the bitwise operators, you must think about a Long value as an array of 32 bits. Os bits são numerados de 0 a 31, da direita para a esquerda.
 
-Já que cada bit pode ser igual a 0 ou 1, também se pode pensar num valor Long Integer como um valor onde se pode armazenar 32 valores booleanos. A bit equal to 1 means **True** and a bit equal to 0 means **False**.
+Já que cada bit pode ser igual a 0 ou 1, também se pode pensar num valor Long Integer como um valor onde se pode armazenar 32 valores booleanos. Um bit igual a 1 significa **True** e um bit igual a 0 significa **False**.
 
 An expression that uses a bitwise operator returns a Long value, except for the Bit Test operator, where the expression returns a Boolean value. A tabela a seguir lista os operadores bitwise e sua sintaxe:
 
@@ -148,7 +148,7 @@ O quadro seguinte lista os operadores bitwise e os seus efeitos:
 | Bitwise AND                               | Cada bit resultante é o E lógico dos bits nos dois operandos. Cada bit resultante é o E lógico dos bits nos dois operandos.                                                                                                                                                                                                                                                                                                                                                                                                            |
 | OU (inclusive)         | Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.                                                                                                           |
 | Bitwise OR (exclusivo) | Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 &#094; &#124; 1 --> 0</li><li>0 &#094; &#124; 1 --> 1</li><li>1 &#094; &#124; 0 --> 1</li><li>0 &#094; &#124; 0 --> 0</li>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0. |
-| Left Bit Shift                            | O valor resultante é definido como o valor do primeiro operando e, em seguida, os bits resultantes são deslocados para a esquerda pelo número de posições indicado pelo segundo operando. Os bits à esquerda são perdidos e os novos bits à direita são estabelecidos como 0. **Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.                                                                                                    |
+| Left Bit Shift                            | O valor resultante é definido como o valor do primeiro operando e, em seguida, os bits resultantes são deslocados para a esquerda pelo número de posições indicado pelo segundo operando. Os bits à esquerda são perdidos e os novos bits à direita são estabelecidos como 0. **Nota:** considerando apenas valores positivos, deslocar-se para a esquerda por N bits é o mesmo que multiplicar por 2^N.                                                                                               |
 | Right Bit Shift                           | O valor resultante é definido como o valor do primeiro operando e, em seguida, os bits resultantes são deslocados para a direita pelo número de posições indicado pelo segundo operando. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                                                                                                                  |
 | Bit Set                                   | O valor resultante é definido como o valor do primeiro operando e, em seguida, o bit resultante, cujo número é indicado pelo segundo operando, é definido como 1. Os outros bits permanecem inalterados.                                                                                                                                                                                                                                                                                                                               |
 | Bit Clear                                 | O valor resultante é definido como o valor do primeiro operando e, em seguida, o bit resultante, cujo número é indicado pelo segundo operando, é definido como 0. Os outros bits permanecem inalterados.                                                                                                                                                                                                                                                                                                                               |

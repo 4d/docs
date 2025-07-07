@@ -101,7 +101,7 @@ This property is **read-only**.
 
 </details>
 
-<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Object<!-- END REF -->
 
 #### Description
 
@@ -148,7 +148,7 @@ This property is **read-only**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Object<!-- END REF -->
 
 
 
@@ -156,7 +156,7 @@ This property is **read-only**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Class|<-|New object of the class|
+|Result|4D.Object|<-|New object of the class|
 <!-- END REF -->
 
 
@@ -224,7 +224,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 The `.superclass` property <!-- REF #ClassClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
 
-A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
+To define a superclass for a user class, use the  [`extends`](Concepts/classes.md#class-extends-classname) keyword like: `Class extends <superclass>`.
 
 This property is **read-only**.
 

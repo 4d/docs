@@ -3,7 +3,7 @@ id: ordaClasses
 title: Classes du modèle de données
 ---
 
-ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du modèle de données. Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
+ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
 
 Par exemple, vous pouvez créer une fonction `getNextWithHigherSalary()` dans la classe `EmployeeEntity` pour retourner les employés ayant un salaire supérieur à celui qui est sélectionné. Il serait aussi simple à appeler que :
 
@@ -32,7 +32,7 @@ De plus, 4D [crée préalablement et automatiquement](#creating-classes) les cla
 
 ## Architecture
 
-ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\`
+ORDA fournit des **classes génériques** exposées via le [class store](Concepts/classes.md#class-stores) **`4D`**, ainsi que des **classes utilisateurs** (étendant les classes génériques) exposées dans le [class store](Concepts/classes.md#class-stores) \*\*\\\\`
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
@@ -262,8 +262,8 @@ End if
 Lors de la création ou de la modification de classes de modèles de données, vous devez veiller aux règles décrites ci-dessous :
 
 - Puisqu'ils sont utilisés pour définir des noms de classe DataClass automatiques dans le [class store](Concepts/classes.md#class-stores) **cs**, les tables 4D doivent être nommées afin d'éviter tout conflit dans l'espace de nommage **cs**. En particulier :
- - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
- - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
+  - Ne donnez pas le même nom à une table 4D et à une [classe d'utilisateurs](../Concepts/classes.md#class-definition) (user class). Si un tel cas se produit, le constructeur de la classe utilisateur devient inutilisable (un avertissement est retourné par le compilateur).
+  - N'utilisez pas de nom réservé pour une table 4D (par exemple "DataClass").
 
 - Lors de la définition d'une classe, assurez-vous que l'instruction [`Class extends`](../Concepts/classes.md#class-extends-classname) correspond exactement au nom de la classe parente (rappelez-vous qu'ils sont sensibles à la casse). Par exemple, `Class extends EntitySelection` pour une classe de sélection d'entité.
 
@@ -424,13 +424,13 @@ Cette fonction prend en charge trois syntaxes :
 - Avec la première syntaxe, vous traitez l'ensemble de la requête via la propriété de l'objet objet `$event.result`.
 - Avec les deuxième et troisième syntaxes, la fonction retourne une valeur dans *$result* :
 
- - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
- - Si *$result* est Object, il doit contenir deux propriétés :
+  - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
+  - Si *$result* est Object, il doit contenir deux propriétés :
 
- | Propriété                          | Type       | Description                                                                                                                  |
- | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
- | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
- | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
+  | Propriété                          | Type       | Description                                                                                                                  |
+  | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
+  | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
+  | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
 
 La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés.
 

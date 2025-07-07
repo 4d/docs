@@ -14,13 +14,10 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## 互換性に関する注意 
-
-<!--REF #_command_.WP Paragraph range.Summary-->**WP Paragraph range** は以前のバージョンの4D Write Pro では**WP Create Paragraph range** という名前でした。<!-- END REF-->分かりやすさのために名前が変更されています。
 
 ## 説明 
 
-新しい**WP Paragraph range**コマンドは、*targetObj* 引数内のオブジェクトと交差する段落のみだけを内包したレンジオブジェクトを返します。返されたレンジオブジェクトの段落は[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) や[WP SET ATTRIBUTES](../commands/wp-set-attributes.md) コマンドなどで使用でき、それによって段落属性のみを管理することができます。
+<!--REF #_command_.WP Paragraph range.Summary-->新しい**WP Paragraph range**コマンドは、*targetObj* 引数内のオブジェクトと交差する段落のみだけを内包したレンジオブジェクトを返します。<!-- END REF-->返されたレンジオブジェクトの段落は[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) や[WP SET ATTRIBUTES](../commands/wp-set-attributes.md) コマンドなどで使用でき、それによって段落属性のみを管理することができます。
 
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 

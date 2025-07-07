@@ -366,7 +366,7 @@ ALERT($info.Copyright)
 
 A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o objeto `File` para a *destinationFolder* especificada<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
 Por padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
@@ -494,9 +494,9 @@ $fhandle:=$f.open("read")
 
 A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o arquivo com o nome que você passou em *newName* e retorna o objeto `File` renomeado<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
+O parâmetro *newName* deve estar em conformidade com as regras de nome (por exemplo, ele não deve conter caracteres como ":", "/", etc.), caso contrário um erro é retornado. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
+Note que a função modifica o nome completo do arquivo, ou seja, se você não passar uma extensão em *newName*, o arquivo terá um nome sem uma extensão.
 
 **Objeto devolvido**
 
@@ -540,11 +540,11 @@ A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve a
 
 \***Parâmetro *info* com um arquivo .exe ou .dll**
 
-The function must be used with an existing and valid .exe or .dll file, otherwise it does nothing (no error is generated).
+A função deve ser usada com um arquivo .exe ou .dll existente e valido, caso contrário não faz nada (nenhum erro é gerado).
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
+Cada propriedade válida definida no parâmetro do objeto *info* é escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
 | Propriedade      | Tipo | Comentário                                                                                                                                                |
 | ---------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -558,17 +558,17 @@ Each valid property set in the *info* object parameter is written in the version
 | OriginalFilename | Text |                                                                                                                                                           |
 | WinIcon          | Text | Caminho Posix do ficheiro .ico. Esta propriedade aplica-se apenas a ficheiros executáveis gerados por 4D. |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Se passar um tipo de valor diferente de texto, este é transformado em string.
+Para todas as propriedades, exceto `WinIcon`, se você passar um texto nulo ou vazio como valor, uma sequência vazia é escrita na propriedade. Se passar um tipo de valor diferente de texto, este é transformado em string.
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+Para a propriedade `WinIcon`, se o arquivo de ícone não existir ou tiver um formato incorreto, um erro é gerado.
 
 \***Parâmetro *info* com um arquivo .plist**
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
+Cada propriedade válida definida no parâmetro do objecto info está escrita no arquivo .plist como uma chave. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Outras chaves existentes no arquivo .plist são deixadas intocadas.
+Se uma chave definida no parâmetro *info* já estiver definida no arquivo .plist, seu valor será atualizado enquanto mantém seu tipo original. Outras chaves existentes no arquivo .plist são deixadas intocadas.
 
 > Para definir um valor de tipo de data, o formato a utilizar é uma string de carimbo temporal json formada em ISO UTC sem milissegundos ("2003-02-01T01:02:03Z") como no editor plist de Xcode.
 
@@ -620,15 +620,15 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
-| Parâmetro | Tipo |    | Descrição                 |
-| --------- | ---- | -- | ------------------------- |
-| content   | BLOB | -> | New contents for the file |
+| Parâmetro | Tipo |    | Descrição                      |
+| --------- | ---- | -- | ------------------------------ |
+| content   | BLOB | -> | Novos conteúdos para o arquivo |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
+A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo usando os dados armazenados no *content* BLOB<!-- END REF -->. Para obter informações sobre BLOBs, consulte a seção [BLOB](Concepts/dt_blob.md).
 
 #### Exemplo
 
@@ -667,22 +667,22 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Descrição
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- END REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
+Se o arquivo referenciado no objeto `File` não existir no disco, ele será criado pela função. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-In *text*, pass the text to write to the file. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
+Em *text,* passe o texto a escrever no arquivo. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
 Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
+- em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
 - ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 
 Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a insere no ficheiro a menos que o conjunto de caracteres usado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por defeito 4D usa o conjunto de caracteres "UTF-8" sem BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+Em breakMode, você pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha no documento. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                                                                                                                            |
 | ----------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -692,9 +692,9 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 | `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                                                                            |
 | `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                                                                             |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Por padrão, ao omitir o parâmetro *breakMode*, as quebras de linha são processadas no modo nativo (1).
 
-**Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) on doc.4d.com.
+**Nota de compatibilidade**: as opções de compatibilidade estão disponíveis para a gerenciamento da EOL e da BOM. Veja a [Página Compatibilidade](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) em doc.4d.com.
 
 #### Exemplo
 

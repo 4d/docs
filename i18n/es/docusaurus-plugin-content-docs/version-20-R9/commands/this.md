@@ -31,7 +31,7 @@ Cuando se utiliza una [función constructora de clase](../Concepts/classes.md#cl
 ```4d
 //Class: ob
 
-Class Constructor  
+Class constructor  
 
  // Create properties on This as
  // desired by assigning to them
@@ -102,7 +102,7 @@ If you use a collection of scalar values in a list box, 4D creates an object for
 
 ## Ejemplo 1
 
-A collection of objects, each with this structure:
+Una colección de objetos, cada uno con esta estructura:
 
 ```json
 {  

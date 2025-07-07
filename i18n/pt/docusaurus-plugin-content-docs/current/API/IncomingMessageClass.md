@@ -5,7 +5,7 @@ title: IncomingMessage
 
 The `4D.IncomingMessage` class allows you to handle the object received by a custom [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Parameters given directly in the request with GET verb are handled by the [`.urlQuery`](#urlquery) property, while parameters passed in the body of the request are available through functions such as [`.getBlob()`](#getblob) or [`getText()`](#gettext).
 
-The HTTP request handler can return any value (or nothing). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
+The HTTP request handler can return any value (or nothing). Geralmente ele retorna uma instância da classe [`4D.OutgoingMessage`](OutgoingMessageClass.md).
 
 All properties of this class are read-only. They are automatically filled by the request handler.
 
@@ -32,7 +32,7 @@ O seguinte arquivo [**HTTPHandlers.json**](../WebServer/http-request-handler.md)
 ]
 ```
 
-The `http://127.0.0.1/start/example?param=demo&name=4D` request is run with a `GET` verb in a browser. It is handled by the *gettingStarted* function of the following *GeneralHandling* singleton class:
+The `http://127.0.0.1/start/example?param=demo&name=4D` request is run with a `GET` verb in a browser. Ele é tratado pela função *gettingStarted* da seguinte classe singleton *GeneralHandling*:
 
 ```4d
 shared singleton Class constructor()
@@ -59,9 +59,9 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
+A solicitação é recebida no servidor como *$request*, uma instância de objeto da classe `4D.IncomingMessage`.
 
-Here is the response:
+Aqui está a resposta:
 
 ```json
 Called URL: /start/example? param=demo&name=4D 
@@ -129,7 +129,7 @@ If the body has not been given as a binary content, the function tries to conver
 
 | Parâmetro  | Tipo |                             | Descrição                         |
 | ---------- | ---- | --------------------------- | --------------------------------- |
-| \|         | Text | ->                          | Header property to get            |
+| \|         | Text | ->                          | Propriedade de cabeçalho a obter  |
 | Resultados | Text | <- | Valor da propriedade do cabeçalho |
 
 <!-- END REF -->
@@ -140,7 +140,7 @@ A função `.getHeader()` <!-- REF #IncomingMessageClass.getHeader().Summary -->
 
 :::note
 
-The *key* parameter is not case sensitive.
+O parâmetro *key* não diferencia maiúsculas de minúsculas.
 
 :::
 
@@ -214,9 +214,9 @@ If the body is not received as a valid picture, the function returns null.
 
 <!-- REF #IncomingMessageClass.getText().Params -->
 
-| Parâmetro  | Tipo |                             | Descrição                   |
-| ---------- | ---- | --------------------------- | --------------------------- |
-| Resultados | Text | <- | Body of the request as text |
+| Parâmetro  | Tipo |                             | Descrição                       |
+| ---------- | ---- | --------------------------- | ------------------------------- |
+| Resultados | Text | <- | Corpo da solicitação como texto |
 
 <!-- END REF -->
 
@@ -240,7 +240,7 @@ A propriedade `.headers` contém <!-- REF #IncomingMessageClass.headers.Summary 
 
 A propriedade `.headers` é somente leitura.
 
-Nomes de cabeçalho (chaves) são menores. Note header names are case sensitive.
+Nomes de cabeçalho (chaves) são menores. Observe que os nomes dos cabeçalhos diferenciam maiúsculas de minúsculas.
 
 <!-- END REF -->
 
@@ -256,7 +256,7 @@ A propriedade `.url` contém <!-- REF #IncomingMessageClass.url.Summary -->a URL
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
 
-The `.url` property is read-only.
+A propriedade `.url` é somente leitura.
 
 :::note
 
@@ -278,7 +278,7 @@ The `.urlPath` property contains <!-- REF #IncomingMessageClass.urlPath.Summary 
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.urlPath` property is ["docs", "invoices" ,"today"].
 
-The `.urlPath` property is read-only.
+A propriedade `.urlPath` é somente leitura.
 
 <!-- END REF -->
 
@@ -292,17 +292,17 @@ The `.urlPath` property is read-only.
 
 A propriedade `.urlQuery` contém <!-- REF #IncomingMessageClass.urlQuery.Summary -->os parâmetros da solicitação quando eles são fornecidos no URL como pares de chave/valor<!-- END REF -->.
 
-The `.urlQuery` property is read-only.
+A propriedade `.urlQuery` é somente leitura.
 
-Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
+Os parâmetros podem ser passados no URL das solicitações **diretamente** ou **como conteúdo JSON**.
 
 #### Direct parameters
 
-Example: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
+Exemplo: `http://127.0.0.1:8044/minhaCall?firstname=Marie&id=2&isWoman=true`
 
 In this case, parameters are received as stringified values in the `urlQuery` property: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
 
-#### JSON contents parameters
+#### Parâmetros conteúdo JSON
 
 Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoman": true,"id": 3}]'`.
 
@@ -317,7 +317,7 @@ $test:=Value type(JSON Parse($r.urlQuery.myparams))=Is collection) //true
 
 Special characters such as simple quotes or carriage returns must be escaped.
 
-Example: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
+Exemple: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
 ````4d
 //urlQuery.mdcode = ```4d
@@ -344,7 +344,7 @@ A propriedade `.verb` contém <!-- REF #IncomingMessageClass.verb.Summary -->o v
 
 HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 
-The `.verb` property is read-only.
+A propriedade `.verb` é somente leitura.
 
 <!-- END REF -->
 

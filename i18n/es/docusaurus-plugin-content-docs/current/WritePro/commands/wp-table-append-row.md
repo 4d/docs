@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ---------- | ----------------------------------------- | --------------------------- | ------------------------------------------------- |
 | tableRef   | Object                                    | &#8594; | Referencia de tabla                               |
 | value      | Text, Number, Time, Date, Picture, Object | &#8594; | Valor(es) a definir en la fila |
-| valueColl  | Collection                                | &#8594; | Collection of values to set in the row            |
+| valueColl  | Collection                                | &#8594; | Colección de valores a definir en la línea        |
 | Resultado  | Object                                    | &#8592; | Row range object                                  |
 
 <!-- END REF-->
@@ -21,17 +21,17 @@ displayed_sidebar: docs
 
 el comando **WP Table append row**<!--REF #_command_.WP Table append row.Summary--> añade una fila a la tabla *tableRef*, la llena con *value*(s) o una colección *valueColl*, y devuelve el objeto de rango de filas correspondiente.<!-- END REF-->
 
-The command supports two syntaxes:
+El comando soporta dos sintaxis:
 
 - **Using values as parameters:**
- Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
+  Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
 
 - **Using a collection of values (*valueColl)*:**
- Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row.
+  Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row.
 
- The following value types are supported in both syntaxes: Text, Number, Time, Date, Picture and Object (formulas or named formulas returning a row element).
+  The following value types are supported in both syntaxes: Text, Number, Time, Date, Picture and Object (formulas or named formulas returning a row element).
 
-The default cell alignment will depend on the value type:
+La alineación predeterminada de las celdas dependerá del tipo de valor:
 
 - texto: alineación izquierda
 - imágenes: centrado

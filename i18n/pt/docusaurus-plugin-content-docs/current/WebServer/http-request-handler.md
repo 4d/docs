@@ -24,7 +24,7 @@ Custom HTTP Request handlers are supported:
 
 :::warning
 
-[Por padrão](../ORDA/privileges.md#default-file) por razões de segurança, o acesso externo ao datastore não é permitido em 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+[Por padrão](../ORDA/privileges.md#default-file) por razões de segurança, o acesso externo ao datastore não é permitido em 4D. Você precisa configurar os [privilégios ORDA](../ORDA/privileges.md) para permitir solicitações HTTP.
 
 :::
 
@@ -36,7 +36,7 @@ This file contains all listened URL patterns, the handled verbs, and the code to
 
 At runtime, the first pattern matching the URL is executed, the others are ignored.
 
-Here is an example of a *HTTPHandlers.json* file contents:
+Aqui está um exemplo do conteúdo de um arquivo *HTTPHandlers.json*:
 
 ```json
 
@@ -70,7 +70,7 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 ### URL patterns
 
-URL patterns can be given as **prefixes** or using **regular expressions**.
+Os padrões de URL podem ser fornecidos como **prefixos** ou usando **expressões regulares**.
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
    Ex: `"regexPattern" : "/docs/**/index.html"`
@@ -113,7 +113,7 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 ```
 
-#### Forbidden patterns
+#### Padrões proibidos
 
 URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
 
@@ -122,7 +122,7 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 - `/$lib/renderer`
 - `/$shared`
 
-### Class and method
+### Classe e método
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
@@ -141,7 +141,7 @@ Ex: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. All names can be used.
+No control is done on verb names. Todos os nomes podem ser usados.
 
 :::
 
@@ -211,13 +211,13 @@ In this example, you must implement the following functions:
 - *handle function* in the *GeneralHandling* class
 - *manageAccount* na classe *UsersHandling*
 - *handleInvoices* na classe \*FinancialHandling
-- *handleDocs* in the *DocsHandling* class
-- *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
+- *handleDocs* na classe *DocsHandling*
+- *handleTheInvoice* / *handleDetails* / *handleInvoices* na clase *InvoicesHandling*
 
 Examples of URLs triggering the handlers:
 
-`IP:port/info/` with a GET verb
-`IP:port/info/general` with a GET verb
+`IP:port/info/` com um verbo GET
+`IP:port/info/general` com um verbo GET
 
 `IP:port/userAccount/update/` with a POST verb
 `IP:port/userAccount/update/profile` with a POST verb

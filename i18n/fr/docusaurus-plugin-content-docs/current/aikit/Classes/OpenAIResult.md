@@ -9,11 +9,11 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 
 ## Propriétés
 
-| Propriété | Type                                                                                 | Description      |
-| --------- | ------------------------------------------------------------------------------------ | ---------------- |
-| `request` | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | The HTTP request |
+| Propriété | Type                                                                                 | Description     |
+| --------- | ------------------------------------------------------------------------------------ | --------------- |
+| `request` | [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) | La requête HTTP |
 
-## Computed properties
+## Propriétés calculées
 
 | Propriété     | Type       | Description                                                                                                                 |
 | ------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -48,7 +48,7 @@ The structure of the `rateLimit` object is as follows:
 
 Throws the first error in the `errors` collection. This function is useful for propagating errors up the call stack.
 
-## Inherited Classes
+## Classes héritées
 
 Several classes inherit from `OpenAIResult` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIResult`:
 

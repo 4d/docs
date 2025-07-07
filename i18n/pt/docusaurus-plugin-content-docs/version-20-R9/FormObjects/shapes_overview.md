@@ -72,9 +72,9 @@ Resultado:
 		"top": 40,
 		"width": 100,
 		"height": 80,
-		"startPoint": "bottomLeft", //2nd direction
-		"strokeDashArray": "6 2" //dashed
-		}
+		"startPoint": "bottomLeft", //2ª direção
+		"strokeDashArray": "6 2" // tracejado
+}
 ```
 
 Resultado:
@@ -94,13 +94,13 @@ Uma oval estática é um objeto decorativo para formas. Los objetos ovalados pue
 
 ```4d
 	"myOval": {
-		"type": "oval",		//define the type of object
-		"left": 60,			//left position on the form  
-		"top": 160,			//top position on the form 
-		"width": 100,		//width of the object
-		"height": 20,		//height of the object
-		"fill": "blue"		//define the background color
-                }
+		"type": "oval", //defina o tipo de objeto
+		"left": 60, //posição esquerda no formulário  
+		"top": 160, //posição superior no formulário 
+		"width": 100, //largura do objeto
+		"height": 20, //altura do objeto
+		"fill": "blue" //defina a cor de fundo
+}
 ```
 
 #### Propriedades compatíveis

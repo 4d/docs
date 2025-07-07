@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
 | targetObj   | Object                                          | &#8594; | Range or element or 4D Write Pro document                               |
 | attribName  | Text                                            | &#8594; | Nome do atributo a ser definido                                         |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | New attribute value                                                     |
+| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Novo valor de atributo                                                  |
 | attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
 
 <!-- END REF-->
@@ -27,9 +27,9 @@ Em *targetObj*, você pode passar:
 - an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
 - um documento 4D Write Pro
 
-You can specify attributes to set for *targetObj* in one of two ways:
+Você pode especificar atributos para *targetObj* de uma de duas maneiras:
 
-- Use os parâmetros *attribName* e *attribValue*. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many *attribName*/*attribValue* pairs as you want in a single call.
+- Use os parâmetros *attribName* e *attribValue*. Em *attribName*, passe o nome do atributo para definir para o alvo e em *attribValue*, passe o novo valor para o conjunto. Você pode passar tantos pares *attribName*/*attribValue* quanto quiser em uma única chamada.
 
 - Use the *attribObj* parameter to pass a single object containing attribute names and their corresponding values as object properties.
 
@@ -62,7 +62,7 @@ You get the following result:
 
 ## Exemplo 2
 
-This example illustrates the use of wk inside and wk outside constants:
+Este exemplo ilustra o uso das constantes wk inside e wk outside:
 
 ```4d
  $wpRange:=WP Get selection(writeProdoc)

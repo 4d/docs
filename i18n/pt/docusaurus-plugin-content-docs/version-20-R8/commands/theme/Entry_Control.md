@@ -1,6 +1,6 @@
 ---
 id: Entry_Control_theme
-title: Entry Control
+title: Controle de entrada
 slug: /commands/theme/Entry-Control
 ---
 

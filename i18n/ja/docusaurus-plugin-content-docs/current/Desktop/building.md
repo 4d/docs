@@ -110,9 +110,9 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 - *MyComponent.4DZ* ファイル - [コンパイルされたストラクチャー](#コンパイル済みストラクチャーをビルド)
 - *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。  コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
 - *Info.plist* ファイル - このファイルはmacOS 用に[公証可能でステープル可能な](#ノータリゼーション (公証) について) コンポーネントをビルドするためには必須です(Windows においては無視されます)。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています: *Info.plist* ファイルが、既に[コンポーネントのroot に存在する場合](../Extensions/develop-components.md#infoplist) 、そのファイルはマージされ、そうでない場合はデフォルトのファイルが作成されます。 以下の[Apple バンドルキー](https://developer.apple.com/documentation/bundleresources/information-property-list) があらかじめ入力されています:
- - アプリケーション名用に`CFBundleDisplayName` および `CFBundleName`
- - `NSHumanReadableCopyright` は[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html) 可能です。
- - アプリケーションバージョン用に `CFBundleShortVersionString` および `CFBundleVersion` (x.x.x フォーマット、例: 1.0.5)は、[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html) 可能です。
+  - アプリケーション名用に`CFBundleDisplayName` および `CFBundleName`
+  - `NSHumanReadableCopyright` は[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html) 可能です。
+  - アプリケーションバージョン用に `CFBundleShortVersionString` および `CFBundleVersion` (x.x.x フォーマット、例: 1.0.5)は、[XML キーを使用して設定](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html) 可能です。
 
 ## アプリケーションページ
 
@@ -127,7 +127,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 この処理はコンパイル済みストラクチャーファイルと**4D Volume Desktop** (4D データベースエンジン)を統合します。 4D Volume Desktop が提供する機能はライセンスページで指定するライセンス情報に基づきます。 この点についての詳細な情報は、4D の [オンラインストア](https://store.4d.com/jp/) と、セールスドキュメンテーションを参照してください。
 
 - デフォルトのデータファイルを定義することも、ユーザーに [独自のデータファイルを作成して使用](#データファイルの管理) してもらうこともできます。
-- 運用ライセンスを埋め込むか、初回起動時にエンドユーザー自身にライセンスを入力させるかを選択することができます([**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の段落を参照して下さい)。
+- [運用ライセンス](../Admin/licenses.md#運用ライセンス) を埋め込むか、あるいはアプリケーションの初回起動時にエンドユーザーに自分の手でライセンスを入力させるようにすることができます(以下の[**ライセンス**](#ライセンス) 参照)。
 
 :::note
 
@@ -165,18 +165,18 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 アプリケーション名に "MyProject"と指定した場合、MyProject サブフォルダー内には以下のファイルが置かれます:
 
 - *Windows*
- - MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
- - 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
- - Databaseフォルダー - Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。
-  **注**: このフォルダーには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
- - (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
- - (オプション) Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが(あれば)含まれます。 この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
- - 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
+  - MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
+  - 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
+  - Databaseフォルダー - Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはプロジェクトのコンパイル済みストラクチャーおよびプロジェクトの Resources フォルダーです。
+    **注**: このフォルダーには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
+  - (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
+  - (オプション) Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが(あれば)含まれます。 この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
+  - 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
 
 実行ファイルの動作には、これらすべての項目が同じフォルダー内に必要です。
 
 - *macOS*
- - MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。 プラグインやコンポーネントの統合に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。 ライセンスの統合に関しては [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。 **注意**: macOSでは、4D ランゲージの [Application file](../commands-legacy/application-file.md) コマンドは(ソフトウェアパッケージの Contents:macOS フォルダにある)アプリケーション名 ファイルのパス名を返し、(ソフトウェアパッケージのContents:Resources フォルダにある) .comp ファイルのパス名は返しません。
+  - MyProject.app という名称のソフトウェアパッケージに、プラグインやコンポーネント、ライセンスなど必要な項目がすべて格納されます。 プラグインやコンポーネントの統合に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。 ライセンスの統合に関しては [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。 **注意**: macOSでは、4D ランゲージの [Application file](../commands-legacy/application-file.md) コマンドは(ソフトウェアパッケージの Contents:macOS フォルダにある)アプリケーション名 ファイルのパス名を返し、(ソフトウェアパッケージのContents:Resources フォルダにある) .comp ファイルのパス名は返しません。
 
 #### 4D Volume Desktop フォルダーのカスタマイズ
 
@@ -222,7 +222,7 @@ macOS 上でアプリケーションを[公証](#ノータリゼーション_\\(
 
 - サーバーを起動するには、サーバーアプリケーションをダブルクリックします。 プロジェクトファイルを選択する必要はありません。
 - クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。 クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。IPアドレスの指定は buildapp.4DSettings ファイル内の `IPAddress` XMLキーを使用して設定されます。 接続失敗時の特定の機構を実装することもできます。 詳細は [クライアント接続の管理](#クライアント接続の管理) で説明されています。 また、**Option** (macOS) や **Alt** (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。
- サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
+  サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
 - クライアント側を [ネットワーク越しに自動更新](#サーバーアプリケーション内部のクライアントアプリケーションのコピー) するようにクライアント/サーバーアプリケーションを設定することも可能です。 クライアントアプリケーションは最初のバージョンのみビルドして配布する必要があります。以降のアップデートは、自動アップデート機構を利用することで管理します。
 - また、ランゲージコマンド ([SET UPDATE FOLDER](../commands-legacy/set-update-folder.md) および [RESTART 4D](../commands-legacy/restart-4d.md)) を使用して、サーバーアプリケーションの更新を自動化することも可能です。
 
@@ -394,12 +394,12 @@ Windows用サーバーアプリケーションのビルドに使用される App
 インストール場所:
 
 - **Windows**
- - **サーバーアプリケーション** - `Client Server executable/<ApplicationName>Server/Server Database` サブフォルダー内にこれらの項目を配置します。
- - **クライアントアプリケーション** - `Client Server executable/<ApplicationName>Client` サブフォルダー内にこれらの項目を配置します。
+  - **サーバーアプリケーション** - `Client Server executable/<ApplicationName>Server/Server Database` サブフォルダー内にこれらの項目を配置します。
+  - **クライアントアプリケーション** - `Client Server executable/<ApplicationName>Client` サブフォルダー内にこれらの項目を配置します。
 
 - **macOS**
- - **サーバーアプリケーション** - `<ApplicationName>Server` ソフトウェアパッケージと同階層にこれらの項目を配置します。
- - **クライアントアプリケーション** - `<ApplicationName>Client` ソフトウェアパッケージと同階層にこれらの項目を配置します。
+  - **サーバーアプリケーション** - `<ApplicationName>Server` ソフトウェアパッケージと同階層にこれらの項目を配置します。
+  - **クライアントアプリケーション** - `<ApplicationName>Client` ソフトウェアパッケージと同階層にこれらの項目を配置します。
 
 ### シングルユーザークライアントアプリケーションの埋め込み
 
@@ -502,24 +502,26 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ライセンス&証明書のページでは、次のようなことができます:
 
-- [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したい[運用ライセンス](../Admin/licenses.md#運用ライセンス) を指定します。
+- [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したい[運用ライセンス](../Admin/licenses.md#運用ライセンス) を設定します。
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### ライセンスリスト
 
-このタブには[評価版アプリケーションをビルドする](#評価版アプリケーションをビルドする) オプションが表示される他、アプリケーション(スタンドアロン版またはクライアントサーバー版)に[埋め込み可能な運用ライセンス](../Admin/licenses.md#運用ライセンス) として利用可能なライセンス一覧が表示されます。 デフォルトでリストは空です。
+このタブには**アプリケーションタイプ** メニューが表示され、これを使用することでビルドされたアプリケーション内でどのようにライセンスを管理したいかを定義することができます。 次のオプションから選択することができます:
 
-このタブを使用して以下のようなものをビルドできます:
+![](../assets/en/Admin/buildappLic.png)
 
-- 評価版アプリケーション
-- 埋め込みライセンス抜きのアプリケーション(エンドユーザーはユーザーごとのライセンスが必要になります)
-- 埋め込みライセンス付きのアプリケーション
+#### 埋め込みライセンスのないアプリケーション
 
-#### 評価版アプリケーションをビルド
+埋め込みライセンスのないアプリケーションをビルドする場合にはこのオプションを選択してください。
 
-アプリケーションの評価版を作成するには、このオプションをチェックして下さい。
+この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細な情報については、[**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の章を参照して下さい。
+
+#### 評価版アプリケーション
+
+あなたのアプリケーションの評価版を作成したい場合にはこのオプションを選択してください。
 
 評価アプリケーションを使用すると、エンドユーザーは自身のマシン上で自身のスタンドアロンまたはサーバーアプリケーションを機能制約なく一定期間実行することができます。 期間のカウントは最初の起動から始まります。 評価期間が終わると、同一マシン上では一定期間アプリケーションを使用できなくなります。
 
@@ -529,8 +531,6 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 :::
 
-"評価版アプリケーションをビルド"オプションが有効化されると、配布ライセンスは無視されます。
-
 :::note 注記
 
 - [`License info`](../commands/license-info.md) コマンドを使用するとアプリケーションライセンスのタイプ (*.attributes* コレクション) およびそれらの有効期限 (*.expirationDate* オブジェクト) を知ることができます。
@@ -539,17 +539,27 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 :::
 
-#### 埋め込みライセンス抜きのアプリケーションをビルドする
+#### 利用可能なライセンスを自動的に埋め込むアプリケーション
 
-埋め込み配布ライセンス抜きのアプリケーションをビルドするには、ライセンスの一覧リストを空にし、"評価版アプリケーションをビルドする"が**チェックされていない**ことを確認して下さい。
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses).
 
-この場合、エンドユーザーはアプリケーションの初回起動時に *4D Desktop* または *4D Server* のライセンスを、ユーザーごとに購入・入力する必要があります(ライセンスを埋め込んだ場合には、ユーザーは自分のライセンスを入力したり使用したりする必要はありません)。 詳細な情報については、[**運用ライセンス**](../Admin/licenses.md#運用ライセンス) の章を参照して下さい。
+When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands-legacy/get-4d-folder.md#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
 
-#### 埋め込みライセンス付きのアプリケーションをビルドする
+1. OEM licenses, or
+2. 4D Desktop Business licenses, or
+3. other licenses.
 
-このオプションを使用すると、必要なライセンスがすでに埋め込まれている、すぐに使用可能なアプリケーションをビルドすることができます。
+The license tab displays the list of licenses automatically used for the build. The list cannot be modified.
 
-[運用ライセンス](../Admin/licenses.md#運用ライセンス) を含んだファイルを指定する必要があります。 これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
+Once you start the build, if no valid license is found, an error is generated. Otherwise, a dialog is displayed to list the generated application(s). Detailed information are also provided in the [Log file](#log-file).
+
+ライセンスつきのアプリケーションがビルドされると、実行可能アプリケーションの隣(Windows)、あるいはパッケージの中(macOS) にあるLicenses フォルダ内に配布ライセンスファイルが自動的に配置されます。
+
+#### Application embedding licenses from the following list
+
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding necessary [deployment licenses](../Admin/licenses.md#deployment-licenses) that you designate specifically.
+
+When you select this option, a license list is displayed in the tab. You must designate the files that contain your licenses. これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については [Get 4D folder](../commands-legacy/get-4d-folder.md) コマンドの説明を参照してください。
 
@@ -587,8 +597,8 @@ Apple からデベロッパー認証を取得するためには、キーチェ�
 > この証明書の取得には Apple の codesign ユーティリティが必要になります。このユーティリティはデフォルトで提供されており、通常 “/usr/bin/” フォルダーにあります。 エラーが起きた際には、このユーティリティがディスク上にあるかどうかを確認してください。
 
 - **自己署名証明書の生成** - 自己署名証明書を生成するための "証明書アシスタント" を実行します。 Apple 社のデベロッパー認証を持たない場合には、自己署名証明書を提供する必要があります。 この証明書を使うと、アプリケーションを内部的に運用する場合に警告が表示されません。 アプリケーションを外部で運用する場合 (http やメールを介した場合) には、アプリケーションの開発者が不明であるという警告が macOS での起動時に表示されます。 その場合でもユーザーはアプリケーションを "強制的" に起動することができます。 "証明書アシスタント" では、オプションを適切に選択します:
- ![](../assets/en/Admin/Cert1.png)
- ![](../assets/en/Admin/Cert2.png)
+  ![](../assets/en/Admin/Cert1.png)
+  ![](../assets/en/Admin/Cert2.png)
 
 > Apple Developer Program に加入し、アプリケーションの公証 (後述参照) に必要なデベロッパー認証を取得することが推奨されます。
 
@@ -716,7 +726,7 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 組み込みクライアントアプリの接続プロシージャーは、専用サーバーが使用不可能な場合にも柔軟に対応します。 4Dクライアントアプリのスタートアップシナリオは、次のとおりです:
 
 1. クライアントアプリ内の "EnginedServer.4DLink" ファイルに有効な接続情報が保存されていた場合、クライアントアプリはその指定されたサーバーアドレスへ接続を試みます。\
- またはクライアントアプリは検索サービスを使用してサーバーへの接続を試みます (同じサブネット内に公開されたサーバー名に基づいて検索します)。
+  またはクライアントアプリは検索サービスを使用してサーバーへの接続を試みます (同じサブネット内に公開されたサーバー名に基づいて検索します)。
 
 2. これが失敗した場合、クライアントアプリケーションは、アプリケーションのユーザー設定フォルダーに保存されている情報 ("lastServer.xml" ファイル、詳細は後述参照) を使用してサーバーへの接続を試みます。
 
@@ -749,13 +759,13 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 組み込みクライアントアプリがサーバーに接続できない場合、標準のサーバー選択ダイアログボックスを表示するかどうかは設定しておくことができます。 この設定は、アプリケーションをビルドするマシン上の [ServerSelectionAllowedXML](https://doc.4d.com/4Dv20/4D/20/ServerSelectionAllowed.300-6335767.ja.html) キーの値によって制御されます:
 
 - **エラーメッセージを表示し、サーバー選択ダイアログボックスを表示させない**。 デフォルトの挙動です。 アプリケーションは終了する以外の選択肢がありません。\
- `ServerSelectionAllowed`: **False** 値、またはキーを省略
- ![](../assets/en/Project/connect1.png)
+  `ServerSelectionAllowed`: **False** 値、またはキーを省略
+  ![](../assets/en/Project/connect1.png)
 
 - **エラーメッセージを表示し、サーバー選択ダイアログボックスへのアクセスを可能にする**。 ユーザーは **選択...** ボタンをクリックすることによって、サーバー選択ウィンドウにアクセスできます。
- `ServerSelectionAllowed`: **True**
- ![](../assets/en/Project/connect2.png)
- ![](../assets/en/Project/connect3.png)
+  `ServerSelectionAllowed`: **True**
+  ![](../assets/en/Project/connect2.png)
+  ![](../assets/en/Project/connect3.png)
 
 ## サーバーまたはシングルユーザーアプリケーションの自動更新
 

@@ -110,9 +110,9 @@ The *Contents* folder contains:
 - *MyComponent.4DZ* file - the [compiled structure](#build-compiled-structure).
 - Una carpeta *Resources*: todos los resources asociados se copian automáticamente en esta carpeta. Los otros componentes y/o carpetas de plugins no se copian (un componente no puede utilizar plugins u otros componentes).
 - An *Info.plist* file - this file is required to build [notarizeable and stapleable](#about-notarization) components for macOS (it is ignored on Windows). Si un archivo *Info.plist* ya existe [en la raíz del componente](../Extensions/develop-components.md#infoplist) está fusionado, de lo contrario se crea un archivo por defecto. Las siguientes [llaves de Apple bundle](https://developer.apple.com/documentation/bundleresources/information-property-list) están prellenadas:
- - `CFBundleDisplayName` y `CFBundleName` para el nombre de la aplicación,
- - `NSHumanReadableCopyright`, puede ser [definido usando una llave XML](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html).
- - `CFBundleShortVersionString` y `CFBundleVersion` para la versión de la aplicación (x.x.x, p. ej., 1.0.5), puede ser [definido usando una llave XML](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html).
+  - `CFBundleDisplayName` y `CFBundleName` para el nombre de la aplicación,
+  - `NSHumanReadableCopyright`, puede ser [definido usando una llave XML](https://doc.4d.com/4Dv20/4D/20/CommonCopyright.300-6335859.en.html).
+  - `CFBundleShortVersionString` y `CFBundleVersion` para la versión de la aplicación (x.x.x, p. ej., 1.0.5), puede ser [definido usando una llave XML](https://doc.4d.com/4Dv20/4D/20/CommonVersion.300-6335858.en.html).
 
 ## Página Application
 
@@ -127,7 +127,7 @@ Al marcar la opción **Crear una aplicación autónoma** y hacer clic en **Gener
 Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
 - Puede definir un archivo de datos predeterminado o permitir a los usuarios [crear y utilizar su propio archivo de datos](#management-of-data-files).
-- Puede integrar una licencia de despliegue o dejar que el usuario final introduzca su licencia en el primer inicio de la aplicación (consulte la sección [\*\*Licencias de despliegue \*\*](../Admin/licenses.md#deployment-licenses)).
+- You can either embed a [deployment license](../Admin/licenses.md#deployment-licenses) or let the final user enter their license at the first application launch (see [**Licenses**](#licenses) below).
 
 :::note
 
@@ -165,18 +165,18 @@ Al hacer clic en el botón **Generar**, 4D crea automáticamente una carpeta **F
 Si ha especificado "MyProject" como nombre de la aplicación, encontrará los siguientes archivos en esta subcarpeta (MyProject):
 
 - *Windows*
- - MyProject.exe - Su ejecutable y un MyProject.rsr (los recursos de la aplicación)
- - Las carpetas 4D Extensions y Resources, varias librerías (DLL), la carpeta Native Components y SASL Plugins - Archivos necesarios para el funcionamiento de la aplicación
- - Una carpeta Database - Incluye una carpeta Resources y un archivo MyProject.4DZ. Constituyen la estructura compilada del proyecto, así como también la carpeta Resources.
-  **Nota**: esta carpeta también contiene la carpeta *Default Data*, si se ha definido (ver [Gestión de archivos de datos en las aplicaciones finales](#management-of-data-files).
- - (Opcional) Carpeta de componentes y/o carpeta Plugins - Contiene todos los componentes y/o archivos de plugins incluidos en el proyecto. Para más información sobre este punto, consulte la sección [Plugins y componentes](#plugins--components-page).
- - (Opcional) Carpeta Licencias - Un archivo XML con los números de licencia integrados en la aplicación, si los hubiera. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses--certificate-page).
- - Elementos adicionales añadidos a la carpeta 4D Volume Desktop, si los hay (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
+  - MyProject.exe - Su ejecutable y un MyProject.rsr (los recursos de la aplicación)
+  - Las carpetas 4D Extensions y Resources, varias librerías (DLL), la carpeta Native Components y SASL Plugins - Archivos necesarios para el funcionamiento de la aplicación
+  - Una carpeta Database - Incluye una carpeta Resources y un archivo MyProject.4DZ. Constituyen la estructura compilada del proyecto, así como también la carpeta Resources.
+    **Nota**: esta carpeta también contiene la carpeta *Default Data*, si se ha definido (ver [Gestión de archivos de datos en las aplicaciones finales](#management-of-data-files).
+  - (Opcional) Carpeta de componentes y/o carpeta Plugins - Contiene todos los componentes y/o archivos de plugins incluidos en el proyecto. Para más información sobre este punto, consulte la sección [Plugins y componentes](#plugins--components-page).
+  - (Opcional) Carpeta Licencias - Un archivo XML con los números de licencia integrados en la aplicación, si los hubiera. Para obtener más información sobre este punto, consulte la sección [Licencias y certificados](#licenses--certificate-page).
+  - Elementos adicionales añadidos a la carpeta 4D Volume Desktop, si los hay (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)).
 
 Todos estos elementos deben estar en la misma carpeta para que el ejecutable funcione.
 
 - *macOS*
- - Un paquete de software llamado MyProject.app que contiene su aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins--components-page). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses--certificate-page). **Nota**: en macOS, el comando [Application file](../commands-legacy/application-file.md) del lenguaje 4D devuelve la ruta del archivo ApplicationName (ubicado en la carpeta Contents:macOS del paquete de software) y no la del archivo .comp (carpeta Contents:Resources del paquete de software).
+  - Un paquete de software llamado MyProject.app que contiene su aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins--components-page). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses--certificate-page). **Nota**: en macOS, el comando [Application file](../commands-legacy/application-file.md) del lenguaje 4D devuelve la ruta del archivo ApplicationName (ubicado en la carpeta Contents:macOS del paquete de software) y no la del archivo .comp (carpeta Contents:Resources del paquete de software).
 
 #### Personalizar la carpeta 4D Volume Desktop
 
@@ -222,7 +222,7 @@ Además, se personaliza la aplicación cliente/servidor y se simplifica su manej
 
 - Para lanzar la parte del servidor, el usuario simplemente hace doble clic en la aplicación servidor. No es necesario seleccionar el archivo proyecto.
 - Para lanzar la parte cliente, el usuario simplemente hace doble clic en la aplicación cliente, que se conecta directamente a la aplicación servidor. No es necesario elegir un servidor en una caja de diálogo de conexión. Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. Si la conexión falla, [se pueden implementar mecanismos alternativos específicos](#management-of-client-connections). Puede "forzar" la visualización de la caja de diálogo de conexión estándar presionando la tecla **Opción** (macOS) o **Alt** (Windows) mientras inicia la aplicación cliente.
- Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación estándar 4D, se devuelve un mensaje de error y la conexión es imposible.
+  Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación estándar 4D, se devuelve un mensaje de error y la conexión es imposible.
 - Una aplicación cliente/servidor puede configurarse para que la parte cliente [se actualice automáticamente a través de la red](#copy-of-client-applications-inside-the-server-application). Sólo es necesario crear y distribuir una versión inicial de la aplicación cliente, las actualizaciones posteriores se gestionan mediante el mecanismo de actualización automática.
 - También es posible automatizar la actualización de la parte del servidor a través del uso de una secuencia de comandos de lenguaje ([SET UPDATE FOLDER](../commands-legacy/set-update-folder.md) y [RESTART 4D](../commands-legacy/restart-4d.md).
 
@@ -394,12 +394,12 @@ Si la parte servidor y/o la del cliente de su aplicación ejecutable se utiliza 
 Los elementos deben ser instalados:
 
 - **en Windows**
- - **Aplicación del servidor** - en la subcarpeta `Client Server executable/<ApplicationName>Server/Server Database`.
- - **Aplicación cliente** - en la subcarpeta `Client Server executable/<ApplicationName>Client`.
+  - **Aplicación del servidor** - en la subcarpeta `Client Server executable/<ApplicationName>Server/Server Database`.
+  - **Aplicación cliente** - en la subcarpeta `Client Server executable/<ApplicationName>Client`.
 
 - **en macOS**
- - **Aplicación del servidor** - junto al paquete de software `<ApplicationName>Server`.
- - **Aplicación cliente** - junto al paquete de software `<ApplicationName>Cliente`.
+  - **Aplicación del servidor** - junto al paquete de software `<ApplicationName>Server`.
+  - **Aplicación cliente** - junto al paquete de software `<ApplicationName>Cliente`.
 
 ### Integrar una aplicación cliente monopuesto
 
@@ -502,24 +502,26 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 La página de Licencias y certificados puede utilizarse para:
 
-- designa las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) que quiere integrar en su aplicación [monopuesto](#application-page) o [cliente-servidor](#clientserver-page)
+- configure the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
 - firmar la aplicación mediante un certificado en macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licencias
 
-Esta pestaña muestra la opción [Construir una aplicación de evaluación](#build-an-evaluation-application) y la lista de [licencias de despliegue que puede insertar](../Admin/licenses.md#deployment-licenses) en su aplicación (independiente o cliente-servidor). Por defecto, la lista está vacía.
+This tab displays the **Application type** menu, allowing you to define how you want to manage licenses in the built application. Las siguientes opciones están disponibles:
 
-Puede utilizar esta pestaña para crear:
+![](../assets/en/Admin/buildappLic.png)
 
-- una aplicación de evaluación,
-- una aplicación licenciada sin licencia integrada (el usuario tiene que tener una licencia por usuario),
-- una aplicación licenciada con licencias anidadas.
+#### Application without embedded license
 
-#### Crear una aplicación de evaluación
+Select this option to build an application without embedded deployment license.
 
-Marque esta opción para crear una versión de evaluación de su aplicación.
+En este caso, el usuario final tendrá que comprar e introducir una licencia *4D Desktop* o *4D Server* por usuario la primera vez que inicie la aplicación (cuando integra una licencia de despliegue, el usuario no tiene que introducir ni utilizar su propio número de licencia). Para más información, consulte la sección [**Licencias de despliegue**](../Admin/licenses.md#deployment-licenses).
+
+#### Evaluation application
+
+Select this option to create an evaluation version of your application.
 
 Una aplicación de evaluación permite al usuario final ejecutar una versión completa de su aplicación autónoma o de servidor en su máquina durante un periodo de tiempo limitado, a partir del primer lanzamiento. Al final del periodo de evaluación, la aplicación ya no podrá utilizarse durante un determinado periodo de tiempo en la misma máquina.
 
@@ -529,8 +531,6 @@ Se requiere una conexión a Internet en la máquina del usuario en el primer lan
 
 :::
 
-En cuanto se activa la opción "Crear una aplicación de evaluación", se ignoran las licencias de despliegue.
-
 :::note Notas
 
 - El comando [`License info`](../commands/license-info.md) permite conocer el tipo de licencia de la aplicación (colección *.attributes*) y su fecha de caducidad (objeto *.expirationDate*).
@@ -539,17 +539,27 @@ En cuanto se activa la opción "Crear una aplicación de evaluación", se ignora
 
 :::
 
-#### Crear una aplicación con licencia sin licencia(s) integrada(s)
+#### Application automatically embedding available licenses
 
-Para crear una aplicación sin licencia de despliegue incorporada, simplemente mantenga la lista de licencias vacía y asegúrese de que la opción "Crear una aplicación de evaluación" está **desmarcada**.
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses).
 
-En este caso, el usuario final tendrá que comprar e introducir una licencia *4D Desktop* o *4D Server* por usuario la primera vez que inicie la aplicación (cuando integra una licencia de despliegue, el usuario no tiene que introducir ni utilizar su propio número de licencia). Para más información, consulte la sección [**Licencias de despliegue**](../Admin/licenses.md#deployment-licenses).
+When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands-legacy/get-4d-folder.md#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
 
-#### Construir una aplicación con licencia(s) integrada(s)
+1. licencias OEM, o
+2. 4D Desktop Business licenses, or
+3. otras licencias.
 
-Esta opción le permite crear una aplicación lista para usar, en la que ya están integradas las licencias necesarias.
+The license tab displays the list of licenses automatically used for the build. The list cannot be modified.
 
-Debe designar los archivos que contienen sus [licencias de despliegue](../Admin/licenses.md#deployment-licenses). Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias de despliegue. Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
+Once you start the build, if no valid license is found, an error is generated. De lo contrario, se muestra un cuadro de diálogo para enumerar la(s) aplicación(es) generada(s). Detailed information are also provided in the [Log file](#log-file).
+
+Una vez creada una aplicación licenciada, se incluye automáticamente un nuevo archivo de licencia de despliegue en la carpeta Licencias junto a la aplicación ejecutable (Windows) o en el paquete (macOS).
+
+#### Application embedding licenses from the following list
+
+Select this option to build a ready-to-use application (stand-alone or client-server), embedding necessary [deployment licenses](../Admin/licenses.md#deployment-licenses) that you designate specifically.
+
+When you select this option, a license list is displayed in the tab. You must designate the files that contain your licenses. Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias de despliegue. Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
 
 Para eliminar o añadir una licencia, utilice los botones **[+]** y **[-]** de la parte inferior de la ventana. Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licencias* de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](../commands-legacy/get-4d-folder.md).
 
@@ -587,8 +597,8 @@ Para obtener un certificado de desarrollador de Apple, Inc., puede utilizar los 
 > Este certificado requiere la presencia del utilitario codesign de Apple, que se ofrece por defecto y suele estar ubicado en la carpeta "/usr/bin/". Si se produce un error, asegúrese de que este utilitario esté presente en su disco.
 
 - **Generar un certificado autofirmado** - ejecuta el "Asistente de Certificados" que permite generar un certificado autofirmado. Si no tiene un certificado de desarrollador Apple, debe suministrar un certificado autofirmado. Con este certificado, no se muestra ningún mensaje de alerta si la aplicación se despliega internamente. Si la aplicación se despliega externamente (es decir, a través de http o correo electrónico), al iniciarse macOS muestra un mensaje de alerta que indica que el desarrollador de la aplicación no está identificado. El usuario puede "forzar" la apertura de la aplicación. En el "Asistente de Certificados", asegúrese de seleccionar las opciones apropiadas:
- ![](../assets/en/Admin/Cert1.png)
- ![](../assets/en/Admin/Cert2.png)
+  ![](../assets/en/Admin/Cert1.png)
+  ![](../assets/en/Admin/Cert2.png)
 
 > 4D recomienda suscribirse al Programa Apple Developer Program para tener acceso a los Certificados de Desarrollador que son necesarios para notarizar las aplicaciones (ver más abajo).
 
@@ -716,12 +726,12 @@ La gestión de las conexiones de las aplicaciones clientes abarca los mecanismos
 El procedimiento de conexión para las aplicaciones cliente fusionadas admite los casos en los que el servidor dedicado no está disponible. El escenario de inicio de una aplicación cliente 4D es el siguiente:
 
 1. Si la información de conexión válida se encuentra almacenada en el archivo "EnginedServer.4DLink" dentro de la aplicación cliente, la aplicación cliente se conecta a la dirección del servidor especificada.\
- O\
- La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).\
- O\
- La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).\
- O\
- La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).
+  O\
+  La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).\
+  O\
+  La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).\
+  O\
+  La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).
 
 2. Si esto falla, la aplicación cliente intenta conectarse al servidor utilizando la información almacenada en la carpeta de preferencias del usuario de la aplicación (archivo "lastServer.xml", ver último paso).
 
@@ -754,13 +764,13 @@ Este mecanismo aborda el caso en el que el servidor objetivo primario esté disp
 Puede elegir si mostrar o no la caja de diálogo estándar de selección de servidor en las aplicaciones cliente fusionadas cuando no se puede acceder al servidor. La configuración depende del valor de la [ServerSelectionAllowed](https://doc.4d.com/4Dv20/4D/20/ServerSelectionAllowed.300-6335767.en.html) La llave XML en la máquina donde se generó la aplicación:
 
 - **Visualización de un mensaje de error sin poder acceder a la caja de diálogo de selección del servidor**. Funcionamiento por defecto. La aplicación solo puede cerrarse.\
- `ServerSelectionAllowed`: **False** o llave omitida
- ![](../assets/en/Project/connect1.png)
+  `ServerSelectionAllowed`: **False** o llave omitida
+  ![](../assets/en/Project/connect1.png)
 
 - **Visualización de un mensaje de error con acceso posible a la caja de diálogo de selección del servidor**. El usuario puede acceder a la ventana de selección del servidor haciendo clic en el botón **Seleccionar...**.
- `ServerSelectionAllowed`: **True**
- ![](../assets/en/Project/connect2.png)
- ![](../assets/en/Project/connect3.png)
+  `ServerSelectionAllowed`: **True**
+  ![](../assets/en/Project/connect2.png)
+  ![](../assets/en/Project/connect3.png)
 
 ## Actualización automática de aplicaciones servidor o monopuesto
 

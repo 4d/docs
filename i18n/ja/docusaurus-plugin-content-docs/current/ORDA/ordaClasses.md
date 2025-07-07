@@ -3,7 +3,7 @@ id: ordaClasses
 title: データモデルクラス
 ---
 
-ORDA を使用して、データモデル上に高レベルクラス関数を作成することができます。 これによってビジネス指向のコードを書き、APIのように "公開" することができます。 データストア、データクラス、エンティティ、およびエンティティセレクションはそれぞれ、関数を持つことのできるクラスオブジェクトとして提供されています。
+ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). これによってビジネス指向のコードを書き、APIのように "公開" することができます。 データストア、データクラス、エンティティ、およびエンティティセレクションはそれぞれ、関数を持つことのできるクラスオブジェクトとして提供されています。
 
 たとえば、選択中の社員より給与の高い社員一覧を返す `getNextWithHigherSalary()` 関数を `EmployeeEntity` クラスに作成したとします。 この関数は簡単に呼び出すことができます:
 
@@ -212,6 +212,12 @@ ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラス�
 - **クラス名**: *DataClassName*Entity (*DataClassName* はテーブル名です)
 - **例**: cs.CityEntity
 
+#### Class constructor
+
+You can define a **class constructor** for an Entity class. The class constructor is called whenever an entity is created in memory and can be used to initialize some values.
+
+For information, please refer to the [Class constructor](#class-constructor-1) section.
+
 #### 計算属性
 
 Entity クラスでは、専用のキーワードを使用して **計算属性** を定義することができます:
@@ -267,12 +273,12 @@ End if
 データモデルクラスを作成・編集する際には次のルールに留意しなくてはなりません:
 
 - 4D のテーブル名は、**cs** [クラスストア](Concepts/classes.md#クラスストア) 内において自動的に DataClass クラス名として使用されるため、**cs** 名前空間において衝突があってはなりません。 特に:
- - 4D テーブル名と[ユーザークラス名](../Concepts/classes.md#クラス定義)に同じ名前をつけてはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
- - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
+  - 4D テーブル名と[ユーザークラス名](../Concepts/classes.md#クラス定義)に同じ名前をつけてはいけません。 衝突が起きた場合には、ユーザークラスのコンストラクターは使用不可となります (コンパイラーにより警告が返されます)。
+  - 4D テーブルに予約語を使用してはいけません (例: "DataClass")。
 
 - クラス定義の際、[`Class extends`](../Concepts/classes.md#class-extends-classname) ステートメントに使用する親クラスの名前は完全に合致するものでなくてはいけません (文字の大小が区別されます)。 たとえば、EntitySelection クラスを継承するには `Class extends EntitySelection` と書きます。
 
-- データモデルクラスオブジェクトのインスタンス化に `new()` キーワードは使えません (エラーが返されます)。 上述の ORDA クラステーブルに一覧化されている、通常の [インスタンス化の方法](#アーキテクチャー) を使う必要があります。
+- データモデルクラスオブジェクトのインスタンス化に `new()` キーワードは使えません (エラーが返されます)。 You must use a regular function as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
 
 - **`4D`** [クラスストア](Concepts/classes.md#クラスストア) のネイティブな ORDA クラス関数を、データモデルユーザークラス関数でオーバーライドすることはできません。
 
@@ -284,6 +290,87 @@ End if
 - クライアント/サーバーアプリケーションでは、**プリエンプティブプロセス** で実行されます (ただし、[`local`](#ローカル関数) キーワードが使用されている場合は、シングルユーザーの場合と同様に、呼び出し元プロセスに依存します)。
 
 クライアント/サーバーで動作するように設計されているプロジェクトでは、データモデルクラス関数のコードがスレッドセーフであることを確認してください。 スレッドセーフでないコードが呼び出された場合、実行時にエラーが発生します (シングルユーザーアプリケーションではコオペラティブ実行がサポートされているため、コンパイル時にはエラーが発生しません)。
+
+## `Class constructor`
+
+<details><summary>履歴</summary>
+
+| リリース   | 内容 |
+| ------ | -- |
+| 20 R10 | 追加 |
+
+</details>
+
+#### シンタックス
+
+```4d
+// Entity class 
+Class constructor()
+// code
+```
+
+:::note
+
+クラスコンストラクター関数コードにおいては、終了キーワードはありません。  4D ランゲージは、次の`Function` キーワードまたはクラスファイルの終了を持って、自動的に関数のコードの終わりを検知します。
+
+:::
+
+An ORDA class constructor function is triggered just after a new entity is created in memory, [whatever the way it is created](#commands-that-trigger-the-class-constructor-functions). It is useful to set initial values for entity instantiation, for example a custom ID.
+
+This function can only be set at the [entity level](#entity-class). There can only be one constructor function in an entity class (otherwise an error is returned).
+
+This ORDA class constructor function does not receive or return parameters. However, you can use it to initialize attribute values using [`This`](../commands/this.md). Note that values initialized by the constructor are overriden if corresponding attributes are filled by the code.
+
+:::note
+
+An ORDA class constructor function is similar to a [user class constructor function](../Concepts/classes.md#class-constructor), with the following differences:
+
+- you cannot pass parameters to the constructor,
+- you cannot use `shared`, `session`, or `singleton` keywords,
+- you cannot call the [`Super`](../Concepts/classes.md#super) keyword within the function,
+- the class constructor cannot be called using the `new()` function on an entity (entities can only be created by specific functions, see below).
+
+:::
+
+#### Commands that trigger the Class constructor functions
+
+The `Class constructor` function is triggered by the following commands and features:
+
+- [`dataClass.new()`](../API/DataClassClass.md#new)
+- [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
+- [`entity.clone()`](../API/EntityClass.md#clone)
+- [REST API $method=update](../REST/$method.md#methodupdate) in a POST without the `__KEY` and `__STAMP` parameters
+- the [Data Explorer](../Admin/dataExplorer.md#editing-data).
+
+:::note 互換性に関する注意
+
+Records created at the 4D database level using 4D classic language commands or standard actions do not trigger the entity Class constructor.
+
+:::
+
+#### Remote configurations
+
+When using a remote configurations, you need to pay attention to the following principles:
+
+- In **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
+
+:::warning
+
+Since functions such as [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) can create a large number of entities and thus trigger the entity Class constructor consequently, you need to make sure the constructor code does not execute excessive time-consuming processings, for performance reasons. In remote configurations (see below), the code should not trigger multiple requests to the server.
+
+:::
+
+#### 例題
+
+```4d
+
+ //cs.BookingEntity class
+Class constructor() 
+
+    This.departureDate:=Current date
+    This.arrivalDate:=Add to date(Current date; 0; 0; 2)
+
+```
 
 ## 計算属性
 
@@ -431,13 +518,13 @@ Function query <attributeName>($event : Object) -> $result : Object
 - 最初のシンタックスでは、`$event.result` オブジェクトプロパティを通じてクエリ全体を処理します。
 - 2番目と 3番目のシンタックスでは、関数は *$result* に値を返します:
 
- - *$result* がテキストの場合、それは有効なクエリ文字列でなければなりません。
- - *$result* がオブジェクトの場合、次の 2つのプロパティを含まなければなりません:
+  - *$result* がテキストの場合、それは有効なクエリ文字列でなければなりません。
+  - *$result* がオブジェクトの場合、次の 2つのプロパティを含まなければなりません:
 
- | プロパティ                              | 型          | 説明                                                                                     |
- | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
- | $result.query      | Text       | プレースホルダー (:1, :2, など) を使った有効なクエリ文字列 |
- | $result.parameters | Collection | プレースホルダーに渡す値                                                                           |
+  | プロパティ                              | 型          | 説明                                                                                     |
+  | ---------------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+  | $result.query      | Text       | プレースホルダー (:1, :2, など) を使った有効なクエリ文字列 |
+  | $result.parameters | Collection | プレースホルダーに渡す値                                                                           |
 
 `query` 関数は、計算属性を使用するクエリが開始されるたびに実行されます。 インデックス付きの属性を利用することで、クエリをカスタマイズしたり最適化したりすることができます。 計算属性に対して `query` 関数が実装されていない場合、検索は常にシーケンシャルにおこなわれます (`get <AttributeName>` 関数によるすべての値の評価に基づきます)。
 

@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
-| Parámetros  | Tipo   |                             | Descripción                                                |
-| ----------- | ------ | --------------------------- | ---------------------------------------------------------- |
-| targetObj   | Object | &#8594; | Rango o elemento o documento 4D Write Pro                  |
-| formula     | Object | &#8594; | Formula object OR Object with formula and name properties  |
-| mode        | Number | &#8594; | Modo de inserción                                          |
-| rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range |
-| Resultado   | Object | &#8592; | Text range object reprsenting the result of the formula    |
+| Parámetros  | Tipo   |                             | Descripción                                                       |
+| ----------- | ------ | --------------------------- | ----------------------------------------------------------------- |
+| targetObj   | Object | &#8594; | Rango o elemento o documento 4D Write Pro                         |
+| formula     | Object | &#8594; | Objeto de fórmula U Objeto con propiedades de fórmula y de nombre |
+| mode        | Number | &#8594; | Modo de inserción                                                 |
+| rangeUpdate | Number | &#8594; | Includes or excludes the inserted content within the range        |
+| Resultado   | Object | &#8592; | Text range object reprsenting the result of the formula           |
 
 <!-- END REF-->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 El comando **WP Insert formula** <!--REF #_command_.WP Insert formula.Summary--> inserta una *formula* en *targetObj* de acuerdo con el *mode* de inserción especificado y devuelve el rango de texto resultante.<!-- END REF-->
 
-In the *targetObj* parameter, you can pass:
+En el parámetro *targetObj*, puede pasar:
 
 - un rango, o
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
@@ -30,34 +30,34 @@ In the *targetObj* parameter, you can pass:
 
 In the *formula* parameter, pass the 4D formula to evaluate. Puede pasar:
 
-- either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
-- or an object containing two properties:
+- o un [objeto de la fórmula](../../commands/formula.md-objects) creado por el comando [**Formula**](../../commands/formula.md) o [**Formula from string**](../../commands/formula.md-from-string),
+- o un objeto que contiene dos propiedades:
 
 | **Propiedad** | **Tipo** | **Description**                                                                                                                                                                             |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name          | Text     | Name to display for the formula in the document                                                                                                                                             |
+| name          | Text     | Nombre que se mostrará para la fórmula en el documento                                                                                                                                      |
 | formula       | Object   | The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command |
 
-When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
+When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. Para más información, vea la página [Gestión de formulas](../managing-formulas.md).
 
 In the *mode* parameter, pass one of the following constants to indicate the insertion mode to be used:
 
-| Constante  | Tipo    | Valor | Comentario                             |
-| ---------- | ------- | ----- | -------------------------------------- |
-| wk append  | Integer | 2     | Insert contents at end of target       |
-| wk prepend | Integer | 1     | Insert contents at beginning of target |
-| wk replace | Integer | 0     | Replace target contents                |
+| Constante  | Tipo    | Valor | Comentario                                      |
+| ---------- | ------- | ----- | ----------------------------------------------- |
+| wk append  | Integer | 2     | Insertar el contenido al final del objetivo     |
+| wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
+| wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
 - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted *formula* is included in the resulting range:
 
 | Constante             | Tipo    | Valor | Comentario                                                                            |
 | --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
-| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                                       |
+| wk exclude from range | Integer | 1     | Contenido insertado no incluido en el rango actualizado                               |
 | wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted *formula* is included in the resulting range.
 
-- If *targetObj* is not a range, *rangeUpdate* is ignored.
+- Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 :::note
 
@@ -117,7 +117,7 @@ Resultado:
 
 ## Ejemplo 3
 
-You want to highlight a formula in yellow:
+Desea resaltar una fórmula en amarillo:
 
 ```4d
 WParea:=WP New

@@ -9,15 +9,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Params-->
 
-| Parámetros | Tipo       |                             | Descripción                 |
-| ---------- | ---------- | --------------------------- | --------------------------- |
-| Resultado  | Collection | &#8592; | Collection of error objects |
+| Parámetros | Tipo       |                             | Descripción                   |
+| ---------- | ---------- | --------------------------- | ----------------------------- |
+| Resultado  | Collection | &#8592; | Colección de objetos de error |
 
 <!-- END REF-->
 
 ## Descripción
 
-<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> The stack of errors includes objects sent by the [throw](../commands-legacy/throw.md) command, if any. 
+<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> La pila de errores incluye los objetos enviados por el comando [throw](../commands-legacy/throw.md), si los hay. 
 
 This command must be called from an on error call method installed by the [ON ERR CALL](../commands-legacy/on-err-call.md) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
 
@@ -29,9 +29,9 @@ Each error object contains the following properties:
 | message            | text     | Descripción del error                                                                       |
 | componentSignature | text     | Signature of the internal component which returned the error (see below) |
 
-#### Internal component signatures (4D)
+#### Firmas de los componentes internos (4D)
 
-| Component Signature       | Componente                                                          |
+| Firma del componente      | Componente                                                          |
 | ------------------------- | ------------------------------------------------------------------- |
 | 4DCM                      | 4D Compiler runtime                                                 |
 | 4DRT                      | 4D runtime                                                          |
@@ -64,16 +64,16 @@ Each error object contains the following properties:
 | xmlc                      | XML 4D apis                                                         |
 | wri1                      | 4D Write Pro                                                        |
 
-#### Internal component signatures (System)
+#### Firmas de componentes internos (Sistema)
 
-| Component Signature | Componente                                               |
-| ------------------- | -------------------------------------------------------- |
-| CARB                | Carbon subsystem                                         |
-| COCO                | Cocoa subsystem                                          |
-| MACH                | macOS Mach subsystem                                     |
-| POSX                | posix/bsd subsystem (mac, linux, win) |
-| PW32                | Pre-Win32 subsystem                                      |
-| WI32                | Win32 subsystem                                          |
+| Firma del componente | Componente                                               |
+| -------------------- | -------------------------------------------------------- |
+| CARB                 | Carbon subsystem                                         |
+| COCO                 | Cocoa subsystem                                          |
+| MACH                 | macOS Mach subsystem                                     |
+| POSX                 | posix/bsd subsystem (mac, linux, win) |
+| PW32                 | Pre-Win32 subsystem                                      |
+| WI32                 | Win32 subsystem                                          |
 
 ## Ver también
 

@@ -23,18 +23,18 @@ Las sesiones web se utilizan para:
 
 La funcionalidad de gestión de sesiones puede ser activada y desactivada en su servidor web 4D. Hay diferentes maneras de habilitar la gestión de la sesión:
 
-- Using the **Scalable sessions** OTPion on the "Web/OTPions (I)" page of the Settings (permanent setting):
- ![alt-text](../assets/en/WebServer/settingsSession.png)
+- Utilizando la opción de **sesiones escalables** en la página "Web/Opciones (I)" de la Configuración (configuración permanente):
+  ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-This OTPion is selected by default in new projects. It can however be disabled by selecting the **No sessions** OTPion, in which case the web session features are disabled (no `Session` object is available).
+Esta opción está seleccionada por defecto en los nuevos proyectos. Sin embargo, se puede desactivar seleccionando la opción **Sin sesiones**, en cuyo caso las funcionalidades de la sesión web se desactivan (no hay ningún objeto `Session` disponible).
 
-- Usando la propiedad [`.scalableSession`](API/WebServerClass.md#scalablesession) del objeto Servidor Web (para pasar el parámetro *settings* de la función [`.start()`](API/WebServerClass.md#start)). In this case, this setting overrides the OTPion defined in the Settings dialog box for the Web Server object (it is not stored on disk).
+- Usando la propiedad [`.scalableSession`](API/WebServerClass.md#scalablesession) del objeto Servidor Web (para pasar el parámetro *settings* de la función [`.start()`](API/WebServerClass.md#start)). En este caso, esta configuración anula la opción definida en la caja de diálogo Configuración del objeto Servidor Web (no se almacena en el disco).
 
 > El comando [`WEB SET OPTION`](../commands-legacy/web-set-option.md) también puede definir el modo de sesión para el servidor Web principal.
 
 En cualquier caso, la configuración es local para la máquina; por lo que puede ser diferente en el servidor web de 4D Server y en los servidores web de las máquinas 4D remotas.
 
-> **Compatibility**: A **Legacy sessions** OTPion is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
+> **Compatibilidad**: una opción **Sesiones legacy** está disponible en proyectos creados con una versión de 4D anterior a 4D v18 R6 (para más información, consulte el sitio web [doc.4d.com](https://doc.4d.com)).
 
 ## Implementación de la sesión
 
@@ -203,7 +203,7 @@ For more examples, please refer to the [Scalable sessions for advanced web appli
 
 ## Token de sesión (OTP)
 
-The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
+El servidor web 4D le permite generar, compartir y utilizar tokens de sesión OTP (One-Time Passcode). OTP session tokens are used to secure communications with third-party applications or websites. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
 
 In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Gracias a esta arquitectura, la [cookie de sesión](#session-implementation) no está expuesta en la red, lo que elimina el riesgo de un ataque de hombre en el medio.
 
@@ -217,9 +217,9 @@ The basic sequence of an OTP session token use in a 4D web application is the fo
 4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
 5. The request callback is processed in your application.
 
-By definition, an OTP token can only be used once. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
+Por definición, un token OTP sólo puede utilizarse una vez. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
 
-### Processing the OTP in the callback
+### Procesando el OTP en la retrollamada
 
 Callbacks from third-party applications that include the OTP token can be processed in different ways in your 4D application, depending on your development and the third-party API. Basically, you have two possibilities to handle the token: through the **`$4DSID`** parameter for an automatic processing, or through a custom parameter that you need to process.
 
@@ -239,21 +239,21 @@ Una url [`4DACCIÓN`](./httpRequests.md#4daction) también puede ser usada en el
 
 #### Utilizar un parámetro personalizado
 
-The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. You must use this solution if:
+The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. Debe utilizar esta solución si:
 
-- the third-party application does not allow to insert parameters such as a `$4DSID` directly in the redirect Uri, and provides a dedicated API (the implementation depends on the third-party application),
+- la aplicación de terceros no permite insertar parámetros como un `$4DSID` directamente en la Uri de redirección, y proporciona una API dedicada (la implementación depende de la aplicación de terceros),
 - o, quiere llamar a una función ORDA a través de REST para procesar la retrollamada, en cuyo caso es necesario pasar el OTP con la [sintaxis de parámetro REST](../REST/ClassFunctions.md#parameters) (por ejemplo, `?$params='["XXX123"]'`).
 
 En ambos casos, necesita extraer el token del parámetro personalizado y llamar a la función [`Session.restore()`](../API/SessionClass.md#restore) con el token como parámetro.
 
 #### Procesando un OTP inválido
 
-The OTP token is considered invalid if:
+El token OTP se considera inválido si:
 
-- the session token has already been used,
-- the session token has expired,
-- the session token does not exist,
-- the original session itself has expired.
+- el token de sesión ya ha sido utilizado,
+- el token de sesión ha caducado,
+- el token de sesión no existe,
+- la propia sesión original ha caducado.
 
 In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session.
 
@@ -295,7 +295,7 @@ Note right of 4DServer: e.g. https://acme.com/my4DApp/completeOperation?$4DSID=2
 
 ```
 
-The 4D HTTP request handler definition:
+La definición del gestor de peticiones HTTP de 4D:
 
 ```json
 [
@@ -317,7 +317,7 @@ shared singleton Class constructor()
     $session:=Session
 ```
 
-### Scenario with `restore` function
+### Escenario con función `restore`
 
 The scenario using a custom parameter is illustrated in the following diagram:
 
@@ -354,7 +354,7 @@ sequenceDiagram
 
 ```
 
-The 4D HTTP request handler definition:
+La definición del gestor de peticiones HTTP de 4D:
 
 ```json
 [
@@ -376,9 +376,9 @@ shared singleton Class constructor()
     Session.restore($req.urlQuery.state)
 ```
 
-### Example of email validation with $4DSID
+### Ejemplo de validación de correo electrónico con $4DSID
 
-1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
+1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. Se genera un OTP correspondiente a la sesión actual. An URL is then returned with this OTP given in the $4DSID parameter.
 
 ```4d
 //cs.Users class
@@ -408,7 +408,7 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 
 ```
 
-2. The user is sent this URL as a link in an email. The URL prefix `/validateEmail` is handled by a [custom HTTP request handler](./http-request-handler.md):
+2. Se envía al usuario esta URL como enlace en un correo electrónico. El prefijo URL `/validateEmail` es manejado por un [gestor de solicitudes HTTP personalizadas](./http-request-handler.md):
 
 ```json
 [
@@ -460,7 +460,7 @@ A new user is created, and some information is stored in the session, especially
 
 ### Contextos soportados
 
-- Both HTTP and HTTPS schemas are supported.
+- Se admiten esquemas HTTP y HTTPS.
 - Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.
 - Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
 - Tokens are not supported with client/server sessions or single-user sessions.

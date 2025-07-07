@@ -276,7 +276,7 @@ $area:=$rect.getArea() //5000
 
 ```4d
 // クラス: MyClass
-Class Constructor({$parameterName : type; ...})
+Class constructor({$parameterName : type; ...})
 // コード
 ```
 
@@ -297,8 +297,8 @@ Class Constructor({$parameterName : type; ...})
 
 ```4d
 // クラス: MyClass
-// MyClass のクラスコンストラクター
-Class Constructor ($name : Text)
+// MyClass のコンストラクタ
+Class constructor ($name : Text)
  This.name:=$name
 ```
 
@@ -494,12 +494,12 @@ $val:=$o.f() //42
 [クラスコンストラクター](#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
-// クラス: ob
+//クラス: ob
 
-Class Constructor  
+Class constructor  
 
- // This のプロパティを
- // 代入によって作成します
+ // 値を代入にすることによって
+ // This のプロパティを作成
  This.a:=42 
 ```
 

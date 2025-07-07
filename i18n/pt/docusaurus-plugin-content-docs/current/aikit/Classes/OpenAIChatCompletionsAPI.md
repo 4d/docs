@@ -25,7 +25,7 @@ Creates a model response for the given chat conversation.
 
 https://platform.openai.com/docs/api-reference/chat/create
 
-#### Example Usage
+#### Exemplo de uso
 
 Provide the full messages list
 

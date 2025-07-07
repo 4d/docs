@@ -47,7 +47,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX Get property](listbox-get-property.md)  
+[LISTBOX Get property](../commands/listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
 ## プロパティ

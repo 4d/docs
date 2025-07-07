@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The `MAIL New attachment` command <!-- REF #_command_.MAIL New attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
+O comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->permite que você crie um objeto anexo que você pode adicionar a um [objeto de e-mail](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Para definir o anexo, pode utilizar:
 
@@ -78,10 +78,10 @@ The optional *disposition* parameter lets you pass the `content-disposition` hea
 | mail disposition attachment | "attachment" | Estabelece o valor de cabeçalho Content-disposition para "attachment" que significa que o arquivo anexo deve ser fornecido como um link na mensagem.                                                                        |
 | mail disposition inline     | "inline"     | Estabelece o valor de cabeçalho Content-disposition para "inline", o que significa que o anexo deve ser renderizado dentro do conteúdo da mensagem, no local "cid". A renderização depende do cliente mail. |
 
-By default, if the *disposition* parameter is omitted:
+Como padrão, se o parâmetro *disposition* for omisso:
 
-- if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
-- if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
+- se o parâmetro *cid* for usado, o cabeçalho `Content-disposition` será definido como "inline",
+- se o parâmetro *cid* não for passado ou estiver vazio, o cabeçalho `Content-disposition` é estabelecido para "attachment".
 
 ## Exemplo 1
 

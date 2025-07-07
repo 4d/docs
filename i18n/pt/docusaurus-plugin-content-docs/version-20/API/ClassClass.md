@@ -53,14 +53,14 @@ Essa propriedade é **apenas leitura**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Class<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Object<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Object<!-- END REF -->
 
 
 <!-- REF #ClassClass.new().Params -->
 | Parâmetro  | Tipo      |    | Descrição                                        |
 | ---------- | --------- |:--:| ------------------------------------------------ |
 | param      | any       | -> | Parâmetros a passar à função constructor         |
-| Resultados | 4D. Class | <- | Novo objeto da classe|<!-- END REF -->
+| Resultados | 4D.Object | <- | Novo objeto da classe|<!-- END REF -->
 
 
 |
@@ -124,7 +124,7 @@ $person:=cs. Person.new("John";"Doe";40)
 
 A propriedade `.superclass` <!-- REF #ClassClass.superclass.Summary -->devolve a classe pai da classe<!-- END REF -->. A superclass can be a `4D. Class` object, or a `cs.className` object. Se a classe não tiver uma classe pai, a propriedade retorna **null**.
 
-Uma superclasse de uma classe de usuário é declarada em uma classe usando a palavra chave [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
+To define a superclass for a user class, use the  [`extends`](Concepts/classes.md#class-extends-classname) keyword like: `Class extends <superclass>`.
 
 Essa propriedade é **apenas leitura**.
 

@@ -51,7 +51,7 @@ A instanciação da colecção pode ser feita de uma das seguintes formas:
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Monitored activity`](../commands-legacy/monitored-activity.md) or [`collection.copy`](../API/CollectionClass.md#copy). Neste caso, não é necessário instanciar explicitamente a coleção, a linguagem 4D fá-lo por si.
+Vários comandos 4D e coleções de retorno de funções, por exemplo [`Monitored activity`](../commands-legacy/monitored-activity.md) ou [`collection.copy`](../API/CollectionClass.md#copy). Neste caso, não é necessário instanciar explicitamente a coleção, a linguagem 4D fá-lo por si.
 
 :::
 
@@ -105,10 +105,10 @@ Se você criar um literal de coleção contendo um único elemento, certifique-s
 
 Pode criar dois tipos de coleções:
 
-- coleções regulares (não compartilhadas), usando o comando [`New collection`] (commands/new-collection.md) ou a sintaxe literal da coleção (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
-- coleções compartilhadas, usando o comando [`New shared collection`](commands/new-shared-collection.md). Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`] (Concepts/shared.md#useend-use).
+- coleções regulares (não compartilhadas), usando o comando [`New collection`](commands/new-collection.md) ou a sintaxe literal da coleção (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções compartilhadas, usando o comando [`New shared collection`](commands/new-shared-collection.md). Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`](Concepts/shared.md#useend-use).
 
-Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
+Para obter mais informações, consulte a seção [Objetos e coleções compartilhados](shared.md).
 
 ## Funções de Collection
 
@@ -144,12 +144,12 @@ Várias funções aceitam um *propriedadePath* como parâmetro. Este parâmetro 
 
 ## Operadores em coleções
 
-You can use comparison operators with **collection references**, which means that you can evaluate if two or more references point to the same instance of a collection.
+É possível usar operadores de comparação com **referências de coleção**, o que significa que você pode avaliar se duas ou mais referências apontam para a mesma instância de uma coleção.
 
 ```4d
-var $c1:=["a";42] //reference to an instance
-var $c2:=["a";42] //reference to a different instance
-var $c3:=$c1 //reference to the same instance
+var $c1:=["a";42] //referência a uma instância
+var $c2:=["a";42] //referência a uma instância diferente
+var $c3:=$c1 //referência à mesma instância
 ```
 
 Based upon the code above, the comparison table is:

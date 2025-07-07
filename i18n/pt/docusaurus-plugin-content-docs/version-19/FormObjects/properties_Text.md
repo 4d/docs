@@ -250,7 +250,7 @@ Localização horizontal do texto na área que o contém.
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) (todos os estilos, exceto Regular e Flat) - [Caixa de Grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Cabeçalho List Box](listbox_overview.md#list-box-headers) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Botão rádio](radio_overview.md) (todos os estilos exceto Regular e Flat) - [Área de Texto](text.md)
 
 ---
 
@@ -355,7 +355,7 @@ O método *Color* iria conter :
 
 ## Multistyle
 
-Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. Quando esta opção está marcada, 4D interpreta qualquer etiqueta `<SPAN> HTML` encontrada na área.
+Essa propriedade permite a possibilidade de usar [estilos específicos](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.en.html) na área selecionada. Quando esta opção está marcada, 4D interpreta qualquer etiqueta `<SPAN> HTML` encontrada na área.
 
 Por defeito, esta opção não está activada.
 

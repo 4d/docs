@@ -5,9 +5,10 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                             |
-| ------- | ----------------------------------------- |
-| 20 R2   | Support of .sjs documents |
+| Release | Modifications                                                 |
+| ------- | ------------------------------------------------------------- |
+| 20 R9   | Trigger of callback function after custom functions completed |
+| 20 R2   | Prise en charge des documents .sjs            |
 
 </details>
 

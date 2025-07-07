@@ -164,7 +164,7 @@ Connexion à un datastore distant sans utilisateur/mot de passe :
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
@@ -176,7 +176,7 @@ Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : 4D.DataStoreImplementation
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
   "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
@@ -401,7 +401,7 @@ La fonction `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->retourne 
 Sur un datastore distant :
 
 ```4d
-  var $remoteDS : cs.DataStore
+  var $remoteDS : 4D.DataStoreImplementation
   var $info; $connectTo : Object
 
  $connectTo:=New object("hostname";"111.222.33.44:8044";"user";"marie";"password";"aaaa")
@@ -750,7 +750,7 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 ```4d
  var $connect; $status : Object
  var $person : cs.PersonsEntity
- var $ds : cs.DataStore
+ var $ds : 4D.DataStoreImplementation
  var $choice : Text
  var $error : Boolean
 

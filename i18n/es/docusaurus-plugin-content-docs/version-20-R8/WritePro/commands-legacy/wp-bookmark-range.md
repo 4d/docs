@@ -15,13 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibilidad 
-
-<!--REF #_command_.WP Bookmark range.Summary-->**WP Bookmark range** fue nombrado **WP Get bookmark range** en versiones anteriores de 4D Write Pro.<!-- END REF--> Se ha renombrado por claridad. 
-
 ## Descripción 
 
-El comando **WP Bookmark range** devuelve un objeto de tipo rango objRango que contiene el rango asociado al marcador con el nombre *nombk* en el documento *docWP*.
+<!--REF #_command_.WP Bookmark range.Summary-->El comando **WP Bookmark range** devuelve un objeto de tipo rango objRango que contiene el rango asociado al marcador con el nombre *nombk* en el documento *docWP*.<!-- END REF-->
 
 Si el marcador *nombk* no existe en *wpDoc*, se devuelve un objeto objRango.
 

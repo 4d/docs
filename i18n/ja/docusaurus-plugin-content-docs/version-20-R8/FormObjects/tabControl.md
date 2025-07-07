@@ -81,7 +81,7 @@ Form.tabControl.index:=2 // ページ3 から開始します
  arrPages{3}:="Notes"  
 ```
 
-> You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](../commands-legacy/list-to-array.md) command to load the values into the array.
+> ページの名前を階層リストに保存し、[LIST TO ARRAY](../commands-legacy/list-to-array.md) コマンドを使用して値をロードすることも可能です。
 
 ## Goto page 機能
 

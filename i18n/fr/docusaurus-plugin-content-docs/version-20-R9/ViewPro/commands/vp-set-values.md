@@ -16,14 +16,14 @@ title: VP SET VALUES
 
 ## Description
 
-The `VP SET VALUES` command <!-- REF #_method_.VP SET VALUES.Summary -->assigns a collection of values starting at the specified cell range<!-- END REF -->.
+La commande `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary --> attribue une collection de valeurs commençant à la plage de cellules spécifiée<!-- END REF -->.
 
-In *rangeObj*, pass a range for the cell (created with [`VP Cell`](vp-cell.md)) whose value you want to specify. The cell defined in the *rangeObj* is used to determine the starting point.
+Dans *rangeObj*, passez une plage pour la cellule (créée avec [`VP Cell`](vp-cell.md)) dont vous voulez spécifier la valeur. La cellule définie dans *rangeObj* est utilisée pour déterminer le point de départ.
 
-> - If *rangeObj* is not a cell range, only the first cell of the range is used.
-> - If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
+> - Si *rangeObj* n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.
+> - Si *rangeObj* comprend plusieurs plages, seule la première cellule de la première plage est utilisée.
 
-The *valuesCol* parameter is two-dimensional:
+Le paramètre *valuesCol* est bidimensionnel :
 
 - La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Passez une collection vide pour sauter une ligne.
 - Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs peuvent être de type entier long, réel, booléen, texte, date, null ou objet. Si la valeur est un objet, elle peut avoir les propriétés suivantes :
@@ -37,11 +37,11 @@ The *valuesCol* parameter is two-dimensional:
 
 ```4d
 $param:=New collection
-$param.push(New collection(1;2;3;False)) //first row, 4 values
-$param.push(New collection) //second row, untouched
-$param.push(New collection(4;5;Null;"hello";"world")) // third row, 5 values
-$param.push(New collection(6;7;8;9)) // fourth row, 4 values
-$param.push(New collection(Null;New object("value";Current date;"time";42))) //fifth row, 1 value
+$param.push(New collection(1;2;3;False)) //première ligne, 4 valeurs
+$param.push(New collection) //deuxième rangée, intouchée
+$param.push(New collection(4;5;Null;"hello";"world")) // troisième ligne, 5 valeurs
+$param.push(New collection(6;7;8;9)) // quatrième ligne, 4 valeurs
+$param.push(New collection(Null;New object("value";Current date;"time";42))) //cinquième ligne, 1 valeur
    
 VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 ```

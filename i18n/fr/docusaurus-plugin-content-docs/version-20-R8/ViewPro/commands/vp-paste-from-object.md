@@ -42,7 +42,7 @@ In the optional *options* parameter, you can specify what to paste in the cell r
 |`vk clipboard options values`|Pastes only values.|
 |`vk clipboard options value and formatting`|Pastes values and formatting.|
 
-The paste options defined in the [workbook options](vp-set-workbook-options.md) are taken into account.
+Les options de collage définies dans [workbook options](vp-set-workbook-options.md) sont prises en compte.
 
 If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
 

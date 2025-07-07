@@ -30,7 +30,7 @@ O comando `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->rec
 
 > O comando não descompacta o arquivo ZIP, apenas oferece uma visão de seus conteúdos. Para extrair os conteúdos do arquivo, precisa usar métodos como [file.copyTo()](../API/Document.md#copyto) ou [folder.copyTo()](../API/Directory.md#copyto).
 
-Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
+Passe um objeto `4D.File` referenciando o arquivo ZIP comprimido no parâmetro *zipFile*. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
 
 If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. Se uma senha for exigida mas não for passada, quando tentar ler os conteúdos do arquivo um erro será gerado.
 

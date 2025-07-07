@@ -21,6 +21,6 @@ L'événement `On Begin Drag Over` est utile pour préparer l'action de glisser.
 - Accepter ou refuser le glissement via $0 dans la méthode de l'objet glissé.
     - Pour indiquer que les actions de glissement sont acceptées, la méthode de l'objet source doit retourner 0 (zéro); vous devez donc exécuter `$0:=0`.
     - Pour indiquer que les actions de glissement sont refusées, la méthode de l'objet source doit retourner -1 (moins un); vous devez donc exécuter `$0:=-1`.
-    - Si aucun résultat n'est retourné, 4D considère que les actions de glissement sont acceptées.
+    - Si aucun résultat n'est retourné, 4D considère que les actions de glisser sont acceptées.
 
 Les données 4D sont placées dans le presse-papiers avant d'appeler l'événement. Par exemple, dans le cas d'un glissement sans l'action de **glissement automatique**, le texte glissé se trouve déjà dans le conteneur lorsque l'événement est appelé.

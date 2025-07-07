@@ -50,7 +50,7 @@ Dans un formulaire, vous voulez obtenir une liste déroulante qui affiche les po
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        ARRAY TEXT(taPolices;0)
        FONT LIST(taPolices)
   // ...

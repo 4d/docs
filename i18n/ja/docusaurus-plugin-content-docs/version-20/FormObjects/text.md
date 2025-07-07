@@ -1,6 +1,6 @@
 ---
 id: text
-title: Text
+title: テキスト
 ---
 
 
@@ -51,4 +51,4 @@ title: Text
 </details>
 
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Corner radius](properties_CoordinatesAndSizing.md#corner-radius) - [Fill Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Orientation](properties_Text.md#orientation) - [Right](properties_CoordinatesAndSizing.md#right) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[太字](properties_Text.md#太字) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [下](properties_CoordinatesAndSizing.md#下) - [cssクラス](properties_Object.md#cssクラス) - [角の半径](properties_CoordinatesAndSizing.md#角の半径) - [背景色/塗りカラー](properties_BackgroundAndBorder.md#背景色塗りカラー) - [フォント](properties_Text.md#フォント) - [フォントカラー](properties_Text.md#フォントカラー) - [フォントサイズ](properties_Text.md#フォントサイズ) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横揃え](properties_Text.md#横揃え) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [イタリック](properties_Text.md#イタリック) - [左](properties_CoordinatesAndSizing.md#左) - [オブジェクト名](properties_Object.md#オブジェクト名) - [方向](properties_Text.md#方向) - [右](properties_CoordinatesAndSizing.md#右) - [タイトル](properties_Object.md#タイトル) - [上](properties_CoordinatesAndSizing.md#上) - [型](properties_Object.md#型) - [下線](properties_Text.md#下線) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [表示状態](properties_Display.md#表示状態) - [幅](properties_CoordinatesAndSizing.md#width) 
