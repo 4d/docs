@@ -64,7 +64,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
             '20-R9': {
-              label: '20 R9 BETA',
+              label: '20 R9',
               banner: 'none',
             },
             '20-R8': {
