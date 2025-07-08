@@ -67,8 +67,8 @@ module.exports = {
               label: '20 R9',
               banner: 'none',
             },
-            '20-R8': {
-              label: '20 R8',
+              '20-R9': {
+              label: '20 R9',
               banner: 'none',
             },
             '20': {
