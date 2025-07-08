@@ -3,7 +3,7 @@ id: TCPListenerClass
 title: TCPListener
 ---
 
-La clase `TCPListener` permite crear y configurar un servidor TCP en 4D. Once the TCP listener is instantiated, you can receive client TCP connections and communicate using any protocol supporting TCP.
+La clase `TCPListener` permite crear y configurar un servidor TCP en 4D. Una vez instanciado el listener TCP, puede recibir conexiones TCP clientes y comunicarse utilizando cualquier protocolo que soporte TCP.
 
 La clase `TCPListener` está disponible en el class store `4D`. Puede crear un servidor TCP utilizando la función [4D.TCPListener.new()](#4dtcplistenernew), que devuelve un [objeto TCPListener](#tcplistener-object).
 
@@ -32,11 +32,11 @@ Function terminate()
 	This.listener.terminate()
 	
 Function onConnection($listener : 4D.TCPListener; $event : 4D.TCPEvent)->$result
-    	//when connected, start a server to handle the communication
+    	//cuando se conecta, inicia un servidor para manejar la comunicación
 	If($event.address # "192.168.@") 
-		$result:=Null //in some cases you can reject the connection
+		$result:=Null //en algunos casos puede rechazar la conexión
 	Else
-		$result:=cs.MyAsyncTCPConnection.new(This) //see TCPConnection class
+		$result:=cs.MyAsyncTCPConnection.new(This) //ver clase TCPConnection
 	End if
 	
 Function onError($listener : 4D.TCPListener; $event : 4D.TCPEvent)
@@ -53,9 +53,9 @@ Ver [ejemplo en la clase TCPConnection](./TCPConnectionClass.md#asynchronous-exa
 
 ### Objeto TCPListener
 
-A TCPListener object is a shared object.
+Un objeto TCPListener es un objeto compartido.
 
-TCPListener objects provide the following properties and functions:
+Los objetos TCPListener ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------- |
@@ -71,11 +71,11 @@ TCPListener objects provide the following properties and functions:
 
 <!-- REF #4D.TCPListener.new().params -->
 
-| Parámetros | Tipo                           |                             | Descripción                                                  |
-| ---------- | ------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| port       | Number                         | ->                          | Puerto TCP de escucha                                        |
-| options    | Object                         | ->                          | Configuration [options](#options-parameter) for the listener |
-| Resultado  | 4D.TCPListener | <- | Nuevo objeto TCPListener                                     |
+| Parámetros | Tipo                           |                             | Descripción                                                      |
+| ---------- | ------------------------------ | --------------------------- | ---------------------------------------------------------------- |
+| port       | Number                         | ->                          | Puerto TCP de escucha                                            |
+| options    | Object                         | ->                          | Configuración de [opciones](#options-parameter) para el listener |
+| Resultado  | 4D.TCPListener | <- | Nuevo objeto TCPListener                                         |
 
 <!-- END REF -->
 
@@ -85,13 +85,13 @@ La función `4D.TCPListener.new()` <!-- REF #4D.TCPListener.new().Summary -->cre
 
 #### Parámetro *options*
 
-In the *options* parameter, pass an object to configure the listener and all the `TCPConnections` it creates:
+En el parámetro *opciones*, pase un objeto para configurar el listener y todos los `TCPConnections` que crea:
 
-| Propiedad    | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                            | Por defecto |
-| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| onConnection | Formula | Llamada de retorno cuando se define una nueva conexión. The Formula receives two parameters (*$listener* and *$event*, see below) and must return either null/undefined to prevent the connection or an *option* object that will be used to create the [`TCPConnection`](./TCPConnectionClass.md). | Indefinido  |
-| onError      | Formula | Retrollamada activada en caso de error. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                                                       | Indefinido  |
-| onTerminate  | Formula | Retrollamada activada justo antes de que se cierre el TCPListener. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                            | Indefinido  |
+| Propiedad    | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                       | Por defecto |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| onConnection | Formula | Retrollamada cuando se define una nueva conexión. La fórmula recibe dos parámetros (*$listener* y *$event*, ver más abajo) y debe devolver o bien null/undefined para impedir la conexión o bien un objeto *option* que se utilizará para crear la [`TCPConnection`](./TCPConnectionClass.md). | Indefinido  |
+| onError      | Formula | Retrollamada activada en caso de error. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                                                  | Indefinido  |
+| onTerminate  | Formula | Retrollamada activada justo antes de que se cierre el TCPListener. La fórmula recibe el objeto `TCPListener` en *$listener*                                                                                                                                                                                                       | Indefinido  |
 
 #### Función callback (retrollamada)
 
@@ -104,9 +104,9 @@ Las funciones de retrollamada reciben hasta dos parámetros:
 
 **Secuencia de retrollamadas:**
 
-1. `onConnection` is triggered each time a connection is established.
+1. `onConnection` se activa cada vez que se establece una conexión.
 2. `onError` se activa si se produce un error.
-3. `onTerminate` is always triggered just before a connection is terminated.
+3. `onTerminate` siempre se activa justo antes de terminar una conexión.
 
 #### Objeto TCPEvent
 
