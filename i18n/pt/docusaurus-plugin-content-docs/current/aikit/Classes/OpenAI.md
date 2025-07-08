@@ -29,9 +29,9 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 Create an instance of the OpenAI client class.
 
-| Argument Name | Tipo            | Descrição                                                                                       |
-| ------------- | --------------- | ----------------------------------------------------------------------------------------------- |
-| *apiKey*      | Texto ou objeto | apiKey if Text as first argument and the second can be an Object of parameters. |
+| Argument Name             | Tipo            | Descrição                                               |
+| ------------------------- | --------------- | ------------------------------------------------------- |
+| `apiKey or configuration` | Texto ou objeto | apiKey if Text or configuration Object. |
 
 #### Chave API
 
@@ -66,6 +66,7 @@ The API provides access to multiple resources that allow seamless interaction wi
 | `chat`              | [OpenAIChatAPI](OpenAIChatAPI.md)               | Access to the Chat API.        |
 | `images`            | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Acesso à API Images.           |
 | `moderations`       | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Access to the Moderations API. |
+| `embeddings`        | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | Access to the Embeddings API.  |
 
 ### Exemplo de uso
 
