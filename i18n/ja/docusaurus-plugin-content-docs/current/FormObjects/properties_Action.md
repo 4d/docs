@@ -30,6 +30,10 @@ title: 動作
 
 [4D Write Pro areas](writeProArea_overview.md) - [Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
 
+#### コマンド
+
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
+
 #### 参照
 
 [ドロップ有効](#ドロップ有効)
@@ -57,6 +61,10 @@ title: 動作
 #### 対象オブジェクト
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
+
+#### コマンド
+
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
 
 #### 参照
 
@@ -149,6 +157,10 @@ title: 動作
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## 複数選択可
@@ -164,6 +176,10 @@ title: 動作
 #### 対象オブジェクト
 
 [階層リスト](list_overview.md)
+
+#### コマンド
+
+[GET LIST PROPERTIES](../commands-legacy/get-list-properties.md) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties.md)
 
 ---
 
@@ -188,6 +204,10 @@ title: 動作
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## 標準アクション
@@ -195,8 +215,6 @@ title: 動作
 アクティブオブジェクトにより実行される典型的な処理 (例: レコードの入力・取り消し・削除、レコード間の移動、マルチページフォームでのページ間の移動、など)  は、4D より標準アクションとして提供されています。 詳細な情報に関しては、*デザインリファレンス* の [標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.ja.html) の章を参照ください。
 
 フォームオブジェクトには、標準アクションとメソッドの両方を割り当てることができます。 この場合、標準アクションは通常、メソッドの後に実行されます。また、4D はこのアクションを使用して、カレントコンテキストに応じてオブジェクトを有効化/無効化します。 フォームオブジェクトが無効化されていた場合、関連づけられたメソッドは実行されません。
-
-このプロパティは `OBJECT SET ACTION` コマンドによって設定することができます。
 
 #### JSON 文法
 
@@ -207,3 +225,8 @@ title: 動作
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [リストボックス](listbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [タブコントロール](tabControl.md)
+
+#### コマンド
+
+[`OBJECT Get action`](../commands-legacy/object-get-action.md) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action.md)
+
