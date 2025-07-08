@@ -58,3 +58,4 @@ Several classes inherit from `OpenAIResult` to extend its functionality for spec
 - [OpenAIModelResult](OpenAIModelResult.md)
 - [OpenAIModelListResult](OpenAIModelListResult.md)
 - [OpenAIModerationResult](OpenAIModerationResult.md)
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)

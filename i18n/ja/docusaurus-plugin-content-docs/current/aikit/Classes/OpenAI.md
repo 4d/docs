@@ -29,9 +29,9 @@ title: OpenAI
 
 OpenAI クライアントクラスのインスタンスを作成します。
 
-| 引数名      | 型             | 説明                                    |
-| -------- | ------------- | ------------------------------------- |
-| *apiKey* | テキストまたはオブジェクト | apiKey。型としてテキストまたはオブジェクトを指定することができます。 |
+| 引数名                       | 型             | 説明                                                      |
+| ------------------------- | ------------- | ------------------------------------------------------- |
+| `apiKey or configuration` | テキストまたはオブジェクト | apiKey if Text or configuration Object. |
 
 #### API キー
 
@@ -60,12 +60,13 @@ $client.baseURL:="https://server.ai"
 
 API はOpenAI のサービスとシームレスにやりとりすることを可能にする複数のリソースへのアクセスを提供します。 それぞれのリソースは専用のAPI クラスにカプセル化されており、様々な機能と対話するための構造化された、直感的な方法を提供しています。
 
-| プロパティ名        | 型                                               | 説明                 |
-| ------------- | ----------------------------------------------- | ------------------ |
-| `models`      | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Models API へのアクセス。 |
-| `chat`        | [OpenAIChatAPI](OpenAIChatAPI.md)               | Chat API へのアクセス。   |
-| `images`      | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | 画像 API へのアクセス。     |
-| `moderations` | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | モデレーションAPI へのアクセス。 |
+| プロパティ名        | 型                                               | 説明                                            |
+| ------------- | ----------------------------------------------- | --------------------------------------------- |
+| `models`      | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Models API へのアクセス。                            |
+| `chat`        | [OpenAIChatAPI](OpenAIChatAPI.md)               | Chat API へのアクセス。                              |
+| `images`      | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | 画像 API へのアクセス。                                |
+| `moderations` | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | モデレーションAPI へのアクセス。                            |
+| `embeddings`  | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | Access to the Embeddings API. |
 
 ### 使用例
 
