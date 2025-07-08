@@ -28,7 +28,7 @@ https://platform.openai.com/docs/api-reference/images/create
 ## Ejemplo
 
 ```4d
-var $result:=$client.image.generate("A futuristic city skyline at sunset"; {size: "1024x1024"})
+var $result:=$client.images.generate("A futuristic city skyline at sunset"; {size: "1024x1024"})
 
 var $image:=$result.image
 If($image#Null)
@@ -40,7 +40,7 @@ Si se genera más de una imagen
 
 ```4d
 var $image: cs.AIKit.OpenAIImage
-For each($image; $resule.images || [])
+For each($image; $result.images || [])
   // asBlob, asPicture, saveToDisk
 End for each
 ```
