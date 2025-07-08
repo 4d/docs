@@ -45,6 +45,10 @@ Durante a execução, um campo ou qualquer área introduzível é delineado por 
 
 [Áreas 4D Write Pro](writeProArea_overview.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md) - [Sub formulario](subform_overview.md)
 
+#### Comandos
+
+[OBJECT Get focus rectangle invisible](../commands-legacy/OBJECT Get focus rectangle invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
+
 ---
 
 ## Esconder ressalte seleção
@@ -66,6 +70,10 @@ Por defeito, esta opção não está activada.
 #### Objectos suportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -93,6 +101,10 @@ Valores disponíveis:
 
 [Lista jerárquica](list_overview.md) - [Sub formulario](subform_overview.md) - [List Box](listbox_overview.md) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+
 #### Veja também
 
 [Barra de rolagem vertical](#vertical-scroll-bar)
@@ -113,6 +125,10 @@ Define a resolução do ecrã para o conteúdo da área 4D Write Pro. Por padrã
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Mostrar fundo
@@ -129,6 +145,10 @@ Apresenta/oculta as imagens de fundo e a cor de fundo.
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Mostrar rodapés
@@ -144,6 +164,10 @@ Exibe / oculta os rodapés quando [modo de exibição de página](#view-mode) es
 #### Objectos suportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -179,6 +203,10 @@ Exibe / oculta os cabeçalhos quando [modo de exibição da página](#view-mode)
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Mostrar caracteres ocultos
@@ -194,6 +222,10 @@ Apresenta/oculta caracteres invisíveis
 #### Objectos suportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -211,6 +243,10 @@ Exibe/oculta a régua horizontal quando a visualização do documento estiver no
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Mostrar HTML WYSIWYG
@@ -227,6 +263,10 @@ Ativa/desativa a visualização HTML WYSIWYG, na qual todos os atributos avança
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Mostrar moldura da página
@@ -242,6 +282,10 @@ Exibe/oculta o quadro da página quando o [modo de exibição da página](#view-
 #### Objectos suportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -269,6 +313,10 @@ Com a propriedade Mostrar as referências ativada, a referência é apresentada:
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Mostrar régua vertical
@@ -284,6 +332,10 @@ Muestra/oculta la regla vertical cuando la vista del documento está en modo [P�
 #### Objectos suportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -351,6 +403,10 @@ Valores disponíveis:
 
 [Lista jerárquica](list_overview.md) - [Sub formulario](subform_overview.md) - [List Box](listbox_overview.md) - [Área de entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+
 #### Veja também
 
 [Barra de rolagem horizontal](#horizontal-scroll-bar)
@@ -377,7 +433,9 @@ Define o modo de exibição do documento 4D Write Pro na área do formulário. H
 
 [Área 4D Write Pro](writeProArea_overview.md)
 
----
+#### Comandos
+
+## [WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## Zoom
 
@@ -392,3 +450,7 @@ Define a porcentagem de zoom para a exibição do conteúdo da área do 4D Write
 #### Objectos suportados
 
 [Área 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
