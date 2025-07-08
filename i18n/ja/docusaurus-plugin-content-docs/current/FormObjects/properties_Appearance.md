@@ -48,6 +48,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 * [リストボックス](listbox_overview.md)
 * [サブフォーム](subform_overview.md)
 
+#### コマンド
+
+[OBJECT Get focus rectangle invisible](../commands-legacy/OBJECT Get focus rectangle invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
+
 ---
 
 ## セレクションハイライトを非表示
@@ -69,6 +73,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -96,6 +104,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 [Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
+#### コマンド
+
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+
 #### 参照
 
 [縦スクロールバー](#縦スクロールバー)
@@ -116,6 +128,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 [4D Write Pro エリア](writeProArea_overview.md)
 
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## 背景を表示
@@ -132,6 +148,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 [4D Write Pro エリア](writeProArea_overview.md)
 
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## フッター表示
@@ -147,6 +167,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md)
+
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -182,6 +206,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 [4D Write Pro エリア](writeProArea_overview.md)
 
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## 非表示文字を表示
@@ -197,6 +225,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md)
+
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -214,6 +246,10 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 [4D Write Pro エリア](writeProArea_overview.md)
 
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## HTML WYSIWYG 表示
@@ -230,6 +266,10 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 [4D Write Pro エリア](writeProArea_overview.md)
 
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## ページフレームを表示
@@ -245,6 +285,10 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md)
+
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -272,6 +316,10 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 [4D Write Pro エリア](writeProArea_overview.md)
 
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## 垂直ルーラーを表示
@@ -287,6 +335,10 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md)
+
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -354,6 +406,10 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 [Hierarchical List](list_overview.md) - [Subform](subform_overview.md) - [List Box](listbox_overview.md) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
+#### コマンド
+
+[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+
 #### 参照
 
 [横スクロールバー](#横スクロールバー)
@@ -380,7 +436,9 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 [4D Write Pro エリア](writeProArea_overview.md)
 
----
+#### コマンド
+
+## [WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ## 拡大
 
@@ -395,3 +453,7 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md)
+
+#### コマンド
+
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
