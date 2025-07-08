@@ -13,6 +13,7 @@ title: リリースノート
 - [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) 関数の[`options`](../API/TCPConnectionClass.md#options-parameter) 引数に新しい`connectionTimeout` オプションが追加されました。
 - New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - 4D 内でのUUID は**バージョン7**で生成されるようになりました。 以前の4D のリリースでは、バージョン4で生成されていました。
+- New [`UDPSocket`](../API/UDPSocketClass.md) and [`UDPEvent`](../API/UDPEventClass.md) classes to send data using UDP sockets. Support of detailed logging for UDP events in the [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) log file (renamed from `4DTCPLog.txt`).
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
 - You can now [associate a class](../Develop/field-properties.md) to an object field in the structure editor.
@@ -256,7 +257,7 @@ title: リリースノート
 | Libuv     | 11.51.0 | **20 R10**     | QUIC に使用                                                                                                                            |
 | libZip    | 1.9.2   | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                               |
 | LZMA      | 5.4.1   | 20             |                                                                                                                                     |
-| ngtcp2    | 1.13                    | **20 R10**\*\* | QUIC に使用                                                                                                                            |
+| ngtcp2    | 1.13                    | **20 R10**     | QUIC に使用                                                                                                                            |
 | OpenSSL   | 3.3.2   | 20 R7          | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の[動作の変更](#動作の変更)参照。 リリース v20R4 の[動作の変更](#動作の変更)参照。 リリース v20R4 の[動作の変更](#動作の変更)参照。 |
 | PDFWriter | 4.5.11  | 20 R3          |                                                                                                                                     |
 | PHP       | 8.2.4   | 20             |                                                                                                                                     |
