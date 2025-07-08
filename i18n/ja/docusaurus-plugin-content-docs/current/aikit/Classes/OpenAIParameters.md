@@ -42,3 +42,4 @@ title: OpenAIParameters
 - [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)
 - [OpenAIChatCompletionsMessagesParameters](OpenAIChatCompletionsMessagesParameters.md)
 - [OpenAIImageParameters](OpenAIImageParameters.md)
+- [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md)
