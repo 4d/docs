@@ -7,7 +7,7 @@ title: 背景色と境界線
 
 奇数番の行/列に使用するための異なる背景色を設定することができます。 デフォルトでは、*自動* が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
+You can also set this property using the  command.
 
 #### JSON 文法
 
@@ -18,6 +18,10 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+
+#### コマンド
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 ---
 
@@ -38,6 +42,10 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 #### 対象オブジェクト
 
 [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
+
+#### コマンド
+
+[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color.md) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 #### 参照
 
@@ -65,6 +73,10 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/li
 
 [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
+#### コマンド
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+
 ---
 
 ## 境界線スタイル{#border-line-style}
@@ -80,6 +92,10 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/li
 #### 対象オブジェクト
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+
+#### コマンド
+
+[`OBJECT Get border style`](../commands-legacy/object-get-border-style.md) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style.md)
 
 ---
 
@@ -119,6 +135,10 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/li
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+
 ---
 
 ## 線カラー
@@ -143,6 +163,10 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 #### 対象オブジェクト
 
 [線](shapes_overview.md#線) - [楕円](shapes_overview.md#楕円) - [四角](shapes_overview.md#四角)
+
+#### コマンド
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 ---
 
@@ -202,6 +226,10 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands
 
 [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
+#### コマンド
+
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAYS`](../commands-legacy/listbox-set-arrays.md)
+
 ---
 
 ## 透過
@@ -217,6 +245,10 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
 
 #### 参照
 
