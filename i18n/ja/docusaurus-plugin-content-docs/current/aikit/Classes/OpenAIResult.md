@@ -58,3 +58,4 @@ title: OpenAIResult
 - [OpenAIModelResult](OpenAIModelResult.md)
 - [OpenAIModelListResult](OpenAIModelListResult.md)
 - [OpenAIModerationResult](OpenAIModerationResult.md)
+- [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)
