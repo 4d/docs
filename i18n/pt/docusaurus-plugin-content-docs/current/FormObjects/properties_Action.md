@@ -30,6 +30,10 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 [4D Write Pro areas](writeProArea_overview.md) - [Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
 
+#### Comandos
+
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
+
 #### Veja também
 
 [Soltável](#droppable)
@@ -57,6 +61,10 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 #### Objectos suportados
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Combo Box](comboBox_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md)
+
+#### Comandos
+
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
 
 #### Veja também
 
@@ -128,6 +136,10 @@ Autoriza a deslocação de linhas durante a execução. Esta opção é selecion
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Multi-seleccionável
@@ -143,6 +155,10 @@ Permite la selección de múltiples registros/opciones en una [lista jerárquica
 #### Objectos suportados
 
 [Lista hierárquica](list_overview.md)
+
+#### Comandos
+
+[GET LIST PROPERTIES](../commands-legacy/get-list-properties.md) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties.md)
 
 ---
 
@@ -167,6 +183,10 @@ Em outros casos (list box baseados em seleções nomeadas, colunas associadas co
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Ação padrão
@@ -174,8 +194,6 @@ Em outros casos (list box baseados em seleções nomeadas, colunas associadas co
 Atividades típicas a serem executadas por objetos ativos (\*e.g., permitindo que o usuário aceite, cancele ou exclua registros, mova entre registros ou de página para página em um formulário multi-páginas, etc.) foi predefinido por 4D como ações padrão. Eles são descritos em detalhes na seção [Ações padrão](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) do *manual de Desenho*.
 
 Você pode atribuir uma ação padrão e um método projeto de um objeto. Neste caso, a ação padrão é geralmente executada depois que o método e o 4D usa esta ação para ativar/desativar o objeto conforme o contexto atual. Quando um objeto é desativado, o método projeto associado não pode ser executado.
-
-Você também pode definir essa propriedade usando o comando `OBJECT SET ACTION`.
 
 #### Gramática JSON
 
@@ -186,3 +204,8 @@ Você também pode definir essa propriedade usando o comando `OBJECT SET ACTION`
 #### Objectos suportados
 
 [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [List Box](listbox_overview.md) - [Botão imagem](pictureButton_overview.md) - [Menú emergente imagem](picturePopupMenu_overview.md) - [Controle de tabulação](tabControl.md)
+
+#### Comandos
+
+[`OBJECT Get action`](../commands-legacy/object-get-action.md) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action.md)
+
