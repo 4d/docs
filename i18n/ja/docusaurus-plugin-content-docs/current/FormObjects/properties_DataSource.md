@@ -36,8 +36,6 @@ title: データソース
 
 選択リストをフォームオブジェクトに関連づけます。 指定できるのは選択リスト名 (リストの参照) またはデフォルト値のコレクションです。
 
-You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) or [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) commands.
-
 #### JSON 文法
 
 | 名称         | データタイプ           | とりうる値                                   |
@@ -50,6 +48,10 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 [ドロップダウンリスト](dropdownList_Overview.md)* [コンボボックス](comboBox_overview.md)
 * [階層リスト](list_overview.md)
 * [リストボックス列](listbox_overview.md#リストボックス列)
+
+#### コマンド
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
 
 ---
 
@@ -87,6 +89,10 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## カレントの項目の位置
@@ -110,6 +116,10 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -254,6 +264,10 @@ When using collections or entity selections, you will usually declare the elemen
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source.md) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source.md)
+
 ---
 
 ## 関連付け
@@ -308,6 +322,10 @@ When using collections or entity selections, you will usually declare the elemen
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## 命名セレクション
@@ -327,3 +345,9 @@ When using collections or entity selections, you will usually declare the elemen
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source.md) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source.md)
+
+
