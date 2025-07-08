@@ -545,13 +545,13 @@
     "message": "Release Notes"
   },
   "homepage.sections.textensions.4D-Progress-url": {
-    "message": "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Progress.100-7545461.en.html"
+    "message": "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Progress.100-7614210.en.html"
   },
   "homepage.sections.textensions.4D-SVG-Component-url": {
-    "message": "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-SVG-Component.100-7546332.en.html"
+    "message": "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-SVG-Component.100-7614300.en.html"
   },
   "homepage.sections.textensions.4D-Widgets-url": {
-    "message": "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Widgets.100-7546981.en.html"
+    "message": "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Widgets.100-7614949.en.html"
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/en/overview.html"
@@ -654,5 +654,11 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
     "description": "The draft content banner message"
+  },
+  "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
+    "message": "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Write-Pro-Reference.100-7615112.en.html"
+  },
+  "4D AIKit": {
+    "message": "4D AIKit"
   }
 }
