@@ -17,7 +17,7 @@ title: ログファイル
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [ORDA requests log file](#orda-requests)
-- [4DTCPLog.txt](#4dtcplogtxt)
+- [4DTCPUDPLog.txt](#4dtcpudplogtxt)
 
 > サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。 たとえば、"4DRequestsLogServer.txt" のようにです。
 
@@ -456,23 +456,23 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 ```
 
-## 4DTCPLog.txt
+## 4DTCPUDPLog.txt
 
-このログファイルは TCP 接続に関連したイベントを記録します。 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。 このログは、開発者は自身のアプリケーション内でのネットワークアクティビティをモニターしてデバッグするのを助けます。
+This log file records events related to TCP or UDP connections. 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。 このログは、開発者は自身のアプリケーション内でのネットワークアクティビティをモニターしてデバッグするのを助けます。
 
 このログの開始方法:
 
 - `SET DATABASE PARAMETER` コマンドを使用する:
 
   ```4d
-  SET DATABASE PARAMETER(TCP log; 1)
+  SET DATABASE PARAMETER(TCPUDP log; 1)
   ```
 
 - [JSON 設定ファイル](#using-a-log-configuration-file) を使用してログを設定する:
 
   ```json
   {
-      "TCPLogs":{
+      "TCPUDPLogs":{
         "state" : 1
            }
   }
@@ -480,18 +480,18 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 それぞれのイベントに対して、以下のフィールドが記録されます:
 
-| フィールド名      | 型      | 説明                                                                                  |
-| ----------- | ------ | ----------------------------------------------------------------------------------- |
-| time        | 日付/時間  | ISO 8601 フォーマットでのイベントの日付と時間                                                         |
-| localPort   | Number | 接続に使用されるローカルポート                                                                     |
-| peerAddress | Text   | リモートピアのIPアドレス                                                                       |
-| peerPort    | Number | リモートピアのポート                                                                          |
-| protocol    | Text   | イベントが `TCP` に関連しているかどうかを示します                                                        |
-| event       | Text   | イベントのタイプ: `open`、 `close`、 `error`、 `send`、 `receive`、あるいは `listen` |
-| size        | Number | 送信または受信したデータの量(バイト単位)、該当しない場合には 0                                |
-| 抜粋          | Number | 最初の10 バイトのデータは16進数形式です。                                                             |
-| textExcerpt | Text   | 最初の10 バイトのデータはテキスト形式です。                                                             |
-| comment     | Text   | エラーの詳細や暗号化ステータスなどのイベントの追加の情報                                                        |
+| フィールド名      | 型      | 説明                                                                                       |
+| ----------- | ------ | ---------------------------------------------------------------------------------------- |
+| time        | 日付/時間  | ISO 8601 フォーマットでのイベントの日付と時間                                                              |
+| localPort   | Number | 接続に使用されるローカルポート                                                                          |
+| peerAddress | Text   | リモートピアのIPアドレス                                                                            |
+| peerPort    | Number | リモートピアのポート                                                                               |
+| protocol    | Text   | "TCP" or "UDP"                                                                           |
+| event       | Text   | The type of event: `open`, `close`, `error`, `send`, `receive`, `listen` |
+| size        | Number | 送信または受信したデータの量(バイト単位)、該当しない場合には 0                                     |
+| 抜粋          | Number | 最初の10 バイトのデータは16進数形式です。                                                                  |
+| textExcerpt | Text   | 最初の10 バイトのデータはテキスト形式です。                                                                  |
+| comment     | Text   | エラーの詳細や暗号化ステータスなどのイベントの追加の情報                                                             |
 
 ## ログ設定ファイルを使用する
 
