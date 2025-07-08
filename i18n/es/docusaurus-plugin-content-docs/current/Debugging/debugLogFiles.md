@@ -17,7 +17,7 @@ La información histórica debe ser analizada para detectar y solucionar los pro
 - [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - [ORDA requests log file](#orda-requests)
-- [4DTCPLog.txt](#4dtcplogtxt)
+- [4DTCPUDPLog.txt](#4dtcpudplogtxt)
 
 > Cuando un archivo de historial puede generarse tanto en 4D Server como en el cliente remoto, se añade la palabra "Server" al nombre del archivo de historial del lado del servidor, por ejemplo "4DRequestsLogServer.txt"
 
@@ -456,23 +456,23 @@ Este es un ejemplo de un registro ORDA del lado del servidor:
 
 ```
 
-## 4DTCPLog.txt
+## 4DTCPUDPLog.txt
 
-Este archivo de registro registra eventos relacionados con conexiones TCP. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión. Este registro ayuda a los desarrolladores a monitorear y depurar la actividad de red dentro de sus aplicaciones.
+This log file records events related to TCP or UDP connections. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión. Este registro ayuda a los desarrolladores a monitorear y depurar la actividad de red dentro de sus aplicaciones.
 
 Como iniciar este historial:
 
 - Utilice el comando `SET DATABASE PARAMETER`:
 
   ```4d
-  SET DATABASE PARAMETER(TCP log; 1)
+  SET DATABASE PARAMETER(TCPUDP log; 1)
   ```
 
 - Cómo activar el archivo
 
   ```json
   {
-      "TCPLogs":{
+      "TCPUDPLogs":{
         "state" : 1
            }
   }
@@ -486,8 +486,8 @@ Los siguientes campos se registran para cada evento:
 | localPort        | Number     | Puerto local usado para la conexión                                                           |
 | peerAddress      | Text       | Dirección IP del peer remoto                                                                  |
 | peerPort         | Number     | Puerto del peer remoto                                                                        |
-| protocol         | Text       | Indica si el evento está relacionado con `TCP`                                                |
-| evento           | Text       | El tipo de evento:`open`, `close`, `error`, `send`, `receive`, o `listen`     |
+| protocol         | Text       | "TCP" or "UDP"                                                                                |
+| evento           | Text       | The type of event: `open`, `close`, `error`, `send`, `receive`, `listen`      |
 | size             | Number     | La cantidad de datos enviados o recibidos (en bytes), 0 si no es aplicable |
 | excerpt          | Number     | Primeros 10 bytes de datos en formato hexadecimal                                             |
 | textExcerpt      | Text       | Primeros 10 bytes de datos en formato texto                                                   |

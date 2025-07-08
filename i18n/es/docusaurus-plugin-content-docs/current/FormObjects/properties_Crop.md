@@ -17,6 +17,10 @@ Define el número de columnas de una tabla de miniaturas.
 
 [Botón imagen](pictureButton_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Menú desplegable imagen](picturePopupMenu_overview.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Rows
@@ -32,3 +36,7 @@ Define el número de líneas de una tabla de miniaturas.
 #### Objetos soportados
 
 [Botón imagen](pictureButton_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Menú desplegable imagen](picturePopupMenu_overview.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)

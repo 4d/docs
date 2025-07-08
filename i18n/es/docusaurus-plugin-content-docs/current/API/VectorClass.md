@@ -81,10 +81,10 @@ var $collection := $vector.toCollection()
 
 <!--REF #VectorClass.cosineSimilarity().Params -->
 
-| Parámetros | Tipo                      |                             | Descripción              |
-| ---------- | ------------------------- | --------------------------- | ------------------------ |
-| vector     | 4D.Vector | ->                          | Vector to compare with   |
-| Resultado  | Real                      | <- | Distance between vectors |
+| Parámetros | Tipo                      |                             | Descripción                |
+| ---------- | ------------------------- | --------------------------- | -------------------------- |
+| vector     | 4D.Vector | ->                          | Vector con el que comparar |
+| Resultado  | Real                      | <- | Distancia entre vectores   |
 
 <!-- END REF -->
 
@@ -156,10 +156,10 @@ End if
 
 <!--REF #VectorClass.dotSimilarity().Params -->
 
-| Parámetros | Tipo                      |                             | Descripción              |
-| ---------- | ------------------------- | --------------------------- | ------------------------ |
-| vector     | 4D.Vector | ->                          | Vector to compare with   |
-| Resultado  | Real                      | <- | Distance between vectors |
+| Parámetros | Tipo                      |                             | Descripción                |
+| ---------- | ------------------------- | --------------------------- | -------------------------- |
+| vector     | 4D.Vector | ->                          | Vector con el que comparar |
+| Resultado  | Real                      | <- | Distancia entre vectores   |
 
 <!-- END REF -->
 
@@ -229,10 +229,10 @@ ALERT("Best answer: "+$documents[0].text)
 
 <!--REF #VectorClass.euclideanDistance().Params -->
 
-| Parámetros | Tipo                      |                             | Descripción              |
-| ---------- | ------------------------- | --------------------------- | ------------------------ |
-| vector     | 4D.Vector | ->                          | Vector to compare with   |
-| Resultado  | Real                      | <- | Distance between vectors |
+| Parámetros | Tipo                      |                             | Descripción                |
+| ---------- | ------------------------- | --------------------------- | -------------------------- |
+| vector     | 4D.Vector | ->                          | Vector con el que comparar |
+| Resultado  | Real                      | <- | Distancia entre vectores   |
 
 <!-- END REF -->
 
@@ -244,7 +244,7 @@ This measures the straight-line distance in the vector space. It is recommended 
 
 **Valor devuelto**
 
-- returned value >= 0
+- valor devuelto >= 0
 - The lower the returned value is, more similar vectors are.
 
 #### Ejemplo 1

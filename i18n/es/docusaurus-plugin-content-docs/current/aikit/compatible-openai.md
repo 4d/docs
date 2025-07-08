@@ -7,7 +7,13 @@ title: Proveedores
 
 Many AI providers propose an OpenAI-like API, so you can use this project to connect to them.
 
-To do so you just have to change the original `baseURL` by the service one and use their api key if needed.
+To do so you just have to change the original `baseURL` by the provider one and use their api key if needed.
+
+```4d
+$client.baseURL:="https://api.mistral.ai/v1"
+```
+
+Some of them
 
 ## Remoto
 

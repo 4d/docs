@@ -37,9 +37,9 @@ title: OpenAIMessage
 ## 使用例
 
 ```4d
-// OpenAIMessage のインスタンスを作成します。
-var $message:=OpenAIMessage({role: "user"; content: "Hello!"})
+// Create an instance of OpenAIMessage
+var $message:=cs.AIKit.OpenAIMessage({role: "user"; content: "Hello!"})
 
-// 詳細な情報の画像URL を追加します。
+// Add an image URL with details
 $message.addImageURL("http://example.com/image.jpg"; "high")
 ```
