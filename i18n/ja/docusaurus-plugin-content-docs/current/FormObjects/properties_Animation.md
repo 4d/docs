@@ -17,6 +17,10 @@ title: アニメーション
 
 [ピクチャーボタン](pictureButton_overview.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## マウスアップで戻る
@@ -32,6 +36,10 @@ title: アニメーション
 #### 対象オブジェクト
 
 [ピクチャーボタン](pictureButton_overview.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -49,6 +57,10 @@ title: アニメーション
 
 [ピクチャーボタン](pictureButton_overview.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## アニメーション間隔 (tick)
@@ -64,6 +76,10 @@ title: アニメーション
 #### 対象オブジェクト
 
 [ピクチャーボタン](pictureButton_overview.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -81,6 +97,10 @@ title: アニメーション
 
 [ピクチャーボタン](pictureButton_overview.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 無効時に最終フレームを使用
@@ -96,3 +116,8 @@ title: アニメーション
 #### 対象オブジェクト
 
 [ピクチャーボタン](pictureButton_overview.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
