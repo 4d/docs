@@ -24,6 +24,7 @@ Read [**What’s new in 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 	- For consistency, [`Create entity selection`](../commands/create-entity-selection.md) and [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) commands have been moved from the ["4D Environment"](../commands/theme/4D_Environment.md) to the ["Selection"](../commands/theme/Selection.md) themes.
 	- New [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) and [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) commands to assign and read `Formula` objects as data sources for form objects. 
 	- [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) and [`LISTBOX Get property`](../commands/listbox-get-property.md) support three new constants: `lk current item`, `lk current item position`, and `lk selected items expression`.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R10): list of all bugs that have been fixed in 4D 20 R10.
 
 
 #### Behavior changes
