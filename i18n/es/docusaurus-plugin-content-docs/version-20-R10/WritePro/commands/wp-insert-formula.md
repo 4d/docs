@@ -4,7 +4,7 @@ title: WP Insert formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert formula.Syntax-->**WP Insert formula** ( *targetObj* ; *formula* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert formula.Syntax-->**WP Insert formula** ( *targetObj* ; *formula* ; *mode* {; *rangeUpdate*} ): Object<!-- END REF-->
 
 <!--REF #_command_.WP Insert formula.Params-->
 
