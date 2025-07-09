@@ -125,16 +125,16 @@ title: 数値(実数、整数)
 
 ビットワイズ演算子を使用する式は倍長整数値を返します。 Bit Test 演算子の場合、式は例外的にブール値を返します。 次の表にビットワイズ演算子とそのシンタックスを示します: 次の表にビットワイズ演算子とそのシンタックスを示します: 次の表にビットワイズ演算子とそのシンタックスを示します:
 
-| 演算                                        | 演算子                                                  | シンタックス                                                          | 戻り値                                 |
-| ----------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------- |
-| Bitwise AND                               | &                                | Long & Long                                 | Long                                |
-| Bitwise OR (inclusive) | &#124                            | Long &#124; Long                            | Long                                |
-| Bitwise OR (exclusive) | ^ &#124                          | Long &#094; &#124; Long | Long                                |
-| Left Bit Shift                            | << | Long << Long  | Long (注記1 参照)    |
-| Right Bit Shift                           | > >                                                  | Long >> Long                                                    | Long (注記1 参照)    |
-| Bit Set                                   | ?+                                                   | Long ?+ Long                                                    | Long (注記2 参照)    |
-| Bit Clear                                 | ?-                                                   | Long ?- Long                                                    | Long (注記2 参照)    |
-| Bit Test                                  | ??                                                   | Long ?? Long                                                    | Boolean (注記2 参照) |
+| 演算                                        | 演算子                                                   | シンタックス                                                          | 戻り値                                 |
+| ----------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------- |
+| Bitwise AND                               | &                                 | Long & Long                                 | Long                                |
+| Bitwise OR (inclusive) | &#124;                            | Long &#124; Long                            | Long                                |
+| Bitwise OR (exclusive) | &#094; &#124; | Long &#094; &#124; Long | Long                                |
+| Left Bit Shift                            | <<  | Long << Long  | Long (注記1 参照)    |
+| Right Bit Shift                           | > >                                                   | Long >> Long                                                    | Long (注記1 参照)    |
+| Bit Set                                   | ?+                                                    | Long ?+ Long                                                    | Long (注記2 参照)    |
+| Bit Clear                                 | ?-                                                    | Long ?- Long                                                    | Long (注記2 参照)    |
+| Bit Test                                  | ??                                                    | Long ?? Long                                                    | Boolean (注記2 参照) |
 
 #### 注記
 
