@@ -130,23 +130,23 @@ String($people.Phone)+". Family IDs - Father: "+String($people.FatherID)+\
 
 var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())
 
-// Vector calculation with 4D AIKit
+// 4D AIKit でベクトル計算をする
 var $result:=$clientAI.embeddings.create($prompt; $model)
 
-// 4D.vector object creation
+// 4D.vector オブジェクト作成
 var $vector:=$result.vector
 
 var $question:="I'm looking for John who lives in USA"
 
-// Vector calculation with 4D AIKit component
+// 4D AIKit コンポーネントを使用してベクトル計算をする
 var $questionVector:=$clientAI.embeddings.create($question; $model).vector
 
-// similarity calculation
+// コサイン類似度の計算
 If ($vector.cosineSimilarity($questionVector)>0.9)
   ALERT("Interesting result")
 End if
 
-//actual result: 0,7360136465949
+//実際の結果: 0,7360136465949
 
 
 ```
