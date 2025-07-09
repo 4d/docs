@@ -257,7 +257,7 @@
   },
   "sidebar.docs.link.4D NetKit": {
     "message": "4D NetKit",
-    "description": "The label for link 4D NetKit in sidebar docs, linking to https://github.com/4d/4D-NetKit"
+    "description": "The label for link 4D NetKit in sidebar docs, linking to https://github.com/4d/4D-NetKit/tree/20.x"
   },
   "sidebar.docs.link.4D Progress": {
     "message": "4D Progress",
