@@ -195,7 +195,7 @@ Valor padrão: 63072000 (2 anos).
 
 ## .HTTPCompressionLevel
 
-<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Integer<!-- END REF -->
+<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel**: Integer<!-- END REF -->
 
 O <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->nível de compressão para todas as trocas HTTP comprimidas para o servidor HTTP 4D (solicitações do cliente ou respostas do servidor)<!-- END REF -->. Este seletor permite otimizar trocas priorizando a velocidade de execução (menos compactação) ou a quantidade de compressão (menos velocidade)
 
@@ -284,7 +284,7 @@ O padrão = 443
 
 A <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->duração da vida (em minutos) dos processos de sessão legados inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
 
-Padrão = 480 minutos
+Default = 480 minutos
 
 <!-- END REF -->
 
@@ -578,8 +578,8 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 | Propriedade |                                                                                             | Tipo       | Descrição                                                                                   |
 | ----------- | ------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------- |
-| success     |                                                                                             | Parâmetros | True se o servidor web foi correctamente iniciado, False caso contrário                     |
-| errors      |                                                                                             | Collection | Pilha de erros 4D (não devolvidos se o servidor web começou com sucesso) |
+| success     |                                                                                             | Parâmetros | Verdadeiro se o servidor web foi correctamente iniciado, Falso caso contrário               |
+| errors      |                                                                                             | Collection | pilha de erros 4D (não devolvidos se o servidor web começou com sucesso) |
 |             | \[].errCode            | Number     | Código de erro 4D                                                                           |
 |             | \[].message            | Text       | Descrição do erro 4D                                                                        |
 |             | \[].componentSignature | Text       | Assinatura da componente interna que devolveu o erro                                        |
@@ -633,7 +633,7 @@ Se o servidor web foi iniciado, todas as ligações e processos web são fechado
 
 #### Exemplo
 
-Para interromper o servidor Web do banco de dados:
+Para parar o servidor Web da base de dados:
 
 ```4d
  var $webServer : 4D.WebServer
