@@ -27,8 +27,8 @@ When this property is enabled, the [OPEN FONT PICKER](../commands-legacy/open-fo
 
 You can set this property using the [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) command.
 
-> これは通常のテキストです。<br/>
-> **これは太字のテキストです。**
+> This is normal text.<br/>
+> **This is bold text.**
 
 #### JSON 文法
 
@@ -48,8 +48,8 @@ You can set this property using the [**OBJECT SET FONT STYLE**](../commands-lega
 
 You can also set this property via the [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) command.
 
-> これは通常のテキストです。<br/>
-> *これはイタリックのテキストです。*
+> This is normal text.<br/>
+> *This is text in italics.*
 
 #### JSON 文法
 
