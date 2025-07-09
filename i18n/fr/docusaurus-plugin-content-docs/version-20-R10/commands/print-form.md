@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.La commande **Print form** imprime simplement *form* avec les valeurs courantes des champs et des variables de la table *aTable*. Elle est généralement utilisée pour imprimer des états très complexes qui nécessitent un contrôle complet du processus d'impression. **Print form** ne gère pas les traitements d'enregistrements, ni les ruptures, sauts de pages, en-têtes ou pieds de pages. Vous devez vous-même prendre en charge ces opérations. **Print form** imprime uniquement des champs et des variables avec une taille fixe, la commande ne gère pas les objets de taille variable.
+<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.La commande **Print form** imprime simplement *form* avec les valeurs courantes des champs et des variables de la table *aTable*.<!-- END REF--> Elle est généralement utilisée pour imprimer des états très complexes qui nécessitent un contrôle complet du processus d'impression. **Print form** ne gère pas les traitements d'enregistrements, ni les ruptures, sauts de pages, en-têtes ou pieds de pages. Vous devez vous-même prendre en charge ces opérations. **Print form** imprime uniquement des champs et des variables avec une taille fixe, la commande ne gère pas les objets de taille variable.
 
 Dans le paramètre *form*, vous pouvez passer soit :
 
