@@ -49,7 +49,7 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 ## .ip
 
-<!-- REF #TCPEvent.ip.Syntax -->**ip** : Text<!-- END REF -->
+<!-- REF #TCPEvent.ip.Syntax -->**ip**: Text<!-- END REF -->
 
 #### Descripción
 
