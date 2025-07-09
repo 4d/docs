@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**Command name** コマンドは、<!--REF #_command_.Command name.Summary-->*command* 引数にコマンド番号を渡したコマンドの名前と、オプションとしてそのコマンドのプロパティを返します。<!-- END REF-->各コマンドの番号はエクスプローラー内に記載してある他、このドキュメンテーションのプロパティエリアにも記載があります。
+The **Command name** command <!--REF #_command_.Command name.Summary-->returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
 
 **互換性に関する注意:** コマンド名はある4D のバージョンと他のバージョンでは異なる(コマンドが改名された)可能性があり、このコマンドは以前のバージョンでは特にトークナイズドされていない部分のコードにおいて、コマンドをその番号で指定するのに使用されていました。 この用途の必要性は、時とともに4D が進化するにつれて減ってきています。それはトークナイズドされていない宣言(フォーミュラ)に対しては、4D は現在はトークンシンタックスを提供しているからです。 このシンタックスを使用すると、コマンド名の変遷や、あるいはテーブル名などの他の要素が変わったことによって引き起こされる潜在的な問題を避けつつ、読みやすい方法でこれらの名前を入力することができるようになります(詳細な情報については、 *フォーミュラ内でトークンを使用* の章を参照して下さい)。 また、[環境設定内の*リージョンシステム設定を使用* オプション](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) を使用すると、フランス語版の4D において引き続きフランス語のコマンド名を使用することが可能となります。
 
