@@ -30,7 +30,7 @@ Esta opção é selecionada por defeito nos novos projetos. Sin embargo, se pued
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). Neste caso, este parâmetro substitui a opção definida na caixa de diálogo Propriedades para o objeto Web Server (não é armazenado em disco).
 
-> O comando [`WEB SET OTPION`](../commands-legacy/web-set-option.md) também pode definir o modo de sessão para o servidor Web principal.
+> O comando [`WEB SET OPTION`](../commands-legacy/web-set-option.md) também pode definir o modo de sessão para o servidor Web principal.
 
 Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no servidor Web 4D Server e os servidores Web de máquinas 4D remotas.
 
