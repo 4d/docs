@@ -94,7 +94,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 
 :::info
 
-4D は、いくつかの [**システム変数**](variables.md#システム変数) と呼ばれる専用の変数を自動的に管理しています。
+4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
 :::
 
 - [`Last errors`](../commands/last-errors.md) コマンドは、4Dアプリケーションで発生したカレントエラースタックに関する情報をコレクションとして返します。
