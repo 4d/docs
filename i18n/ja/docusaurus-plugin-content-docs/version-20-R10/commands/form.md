@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->**Form** コマンドはカレントフォームに割り当てられている( *formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された) オブジェクトを返します。 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
+<!--REF #_command_.Form.Summary-->**Form** コマンドはカレントフォームに割り当てられている( *formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された) オブジェクトを返します。<!-- END REF--> 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
 
 - カレントフォームが、[`DIALOG`](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドのいずれか一つによってロードされた場合。
 - カレントフォームがサブフォームである場合。
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 
 **Form** は画面に表示されているテーブルフォームに割り当てられているオブジェクトを返します。  出力フォームから表示された入力フォームのコンテキスト (つまりレコードをダブルクリックした後)の場合、返されるオブジェクトには以下のプロパティが格納されています:
 
-| **プロパティ**  | **型**  | **説明**                  |
+| **プロパティ**  | **型**  | **Description**         |
 | ---------- | ------ | ----------------------- |
 | parentForm | object | 親出力フォームの**Form** オブジェクト |
 
