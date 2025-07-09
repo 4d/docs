@@ -278,7 +278,7 @@ Cet en-tête est généralement "desChiffresOuDesLettres@nomdededomaine", par ex
 
 ## .receivedAt
 
-<!-- REF #EmailObjectClass.receivedAt.Syntax -->**.receivedAt** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.receivedAt.Syntax -->**.receivedAt** : Texte<!-- END REF -->
 
 #### Description
 
@@ -298,7 +298,7 @@ Pour les exigences propres au formatage, veuillez consulter la [RFC#5322](https:
 
 ## .replyTo
 
-<!-- REF #EmailObjectClass.replyTo.Syntax -->**.replyTo** : Text<br/>**.replyTo** : Object<br/>**.replyTo** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.replyTo.Syntax -->**.replyTo** : Texte<br/>**.replyTo** : Objet<br/>**.replyTo** : Collection<!-- END REF -->
 
 #### Description
 
@@ -306,7 +306,7 @@ La propriété `.replyTo` contient les <!-- REF #EmailObjectClass.replyTo.Summar
 
 ## .sendAt
 
-<!-- REF #EmailObjectClass.sendAt.Syntax -->**.sendAt** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.sendAt.Syntax -->**.sendAt** : Texte<!-- END REF -->
 
 #### Description
 
@@ -314,7 +314,7 @@ La propriété `.sendAt` contient l'<!-- REF #EmailObjectClass.sendAt.Summary --
 
 ## .sender
 
-<!-- REF #EmailObjectClass.sender.Syntax -->**.sender** : Text<br/>**.sender** : Object<br/>**.sender** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.sender.Syntax -->**.sender** : Texte<br/>**.sender** : Objet<br/>**.sender** : Collection<!-- END REF -->
 
 #### Description
 
@@ -339,7 +339,7 @@ La propriété `.size` contient la <!-- REF #EmailObjectClass.size.Summary -->ta
 
 ## .subject
 
-<!-- REF #EmailObjectClass.subject.Syntax -->**.subject** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.subject.Syntax -->**.subject** : Texte<!-- END REF -->
 
 #### Description
 
@@ -347,7 +347,7 @@ La propriété `.subject` contient la <!-- REF #EmailObjectClass.subject.Summary
 
 ## .textBody
 
-<!-- REF #EmailObjectClass.textBody.Syntax -->**.textBody** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.textBody.Syntax -->**.textBody** : Texte<!-- END REF -->
 
 #### Description
 
@@ -355,7 +355,7 @@ La propriété `.textBody` contient la <!-- REF #EmailObjectClass.textBody.Summa
 
 ## .to
 
-<!-- REF #EmailObjectClass.to.Syntax -->**.to** : Text<br/>**.to** : Object<br/>**.to** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.to.Syntax -->**.to** : Texte<br/>**.to** : Objet<br/>**.to** : Collection<!-- END REF -->
 
 #### Description
 
