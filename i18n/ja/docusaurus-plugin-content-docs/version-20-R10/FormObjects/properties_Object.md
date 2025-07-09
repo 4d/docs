@@ -135,9 +135,9 @@ title: オブジェクト
 
 #### JSON 文法
 
-| 名称         | データタイプ                   | とりうる値                                                                                                                                             |
-| ---------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | string、または sting のコレクション | <li>4D変数、フィールド名、あるいは任意の式</li><li>[ダイナミック変数](#ダイナミック変数) の場合は、空の文字列</li><li>[階層リストボックス](listbox_overview.md#階層リストボックス) 列の場合に、文字列 (配列名) のコレクション</li> |
+| 名称         | データタイプ                   | とりうる値                                                                                                                                                                                                                                                     |
+| ---------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | string、または sting のコレクション | <li>4D variable, field name, or any expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
 
 ### 式
 
@@ -231,8 +231,8 @@ title: オブジェクト
 
 コレクションおよびエンティティセレクションは、フォームロード時にフォームから利用可能でなければなりません。 コレクションの各要素、あるいはエンティティセレクションの各エンティティは、リストボックスの行へと割り当てられ、 [`This`](../Concepts/classes.md#this) キーワードを通してオブジェクトとして利用可能です:
 
-- オブジェクトのコレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各プロパティ値にアクセスすることが可能です。例: `This.<propertyPath>`。
-- エンティティセレクションを使用した場合、データソース式内で **This** コマンドを呼び出すことで、各属性値へとアクセスすることが可能です。例: `This.<attributePath>`。
+- if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example `This.<propertyPath>`.
+- if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example `This.<attributePath>`.
 
 > (オブジェクトでない) スカラー値のコレクションを使用した場合、データソース式内で **This.value** を呼び出すことで、各値にアクセスすることが可能です。 ただしこの場合、値の変更や現在のオブジェクトへのアクセスはできません。 ただしこの場合、値の変更や現在のオブジェクトへのアクセスはできません。
 
