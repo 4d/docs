@@ -572,11 +572,11 @@ ORDA では、以下の二つのロックモードを提供しています:
 
 オプティミスティック・ロックの動作は以下ように図解することができます:
 
-1. 二つのプロセスが同じエンティティを読み込んだとします。<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. 最初のプロセスがエンティティを編集し、それを保存しようとします。 すると `entity.save()` メソッドが呼び出されます。 4Dエンジンは、編集されたエンティティの内部スタンプ値とデータに保存されているエンティティの内部スタンプ値を自動的に比較します。 これは合致しますので、エンティティは保存され、その内部スタンプ値はインクリメントされます。<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. 最初のプロセスがエンティティを編集し、それを保存しようとします。 すると `entity.save()` メソッドが呼び出されます。 4Dエンジンは、編集されたエンティティの内部スタンプ値とデータに保存されているエンティティの内部スタンプ値を自動的に比較します。 Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. 二つ目のプロセスも読み込んだエンティティを編集し、それを保存しようとします。 すると `entity.save()` メソッドが呼び出されます。 編集されたエンティティの内部スタンプ値はデータに保存されているエンティティの内部スタンプ値と合致しないので、保存は実行されず、エラーが返されます。<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. 二つ目のプロセスも読み込んだエンティティを編集し、それを保存しようとします。 すると `entity.save()` メソッドが呼び出されます。 Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 この流れは以下のコードのように分解することもできます:
 
