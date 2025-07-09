@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**WP Table append row** コマンドは<!--REF #_command_.WP Table append row.Summary-->*tableRef* 引数で指定した表組に行を一つ追加し、その中に*value* or a *valueColl* で指定した値を入れ、それに対応する行レンジオブジェクトを返します<!-- END REF-->
+The **WP Table append row** command<!--REF #_command_.WP Table append row.Summary--> appends one row to the *tableRef* table, fills it with *value*(s) or a *valueColl* collection, and returns the corresponding row range object.<!-- END REF-->
 
 このコマンドは2種類のシンタックスをサポートします:
 
