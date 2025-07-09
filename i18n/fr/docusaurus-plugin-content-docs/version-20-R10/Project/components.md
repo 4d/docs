@@ -348,7 +348,7 @@ Pour afficher la fenêtre Dépendances :
     ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - avec 4D Server, sélectionnez la ligne de menu **Fenêtre/Dépendances du projet**.<br/>
-    ![menu-dépendances-serveur](../assets/en/Project/dependency-menu-server.png)
+    ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 La fenêtre Dépendances s'affiche alors. Les dépendances sont classées par nom par ordre alphabétique :
 
