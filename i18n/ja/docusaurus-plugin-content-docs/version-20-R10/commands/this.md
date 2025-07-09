@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 `This` の値は、呼ばれ方によって決まります。 <code>This</code> の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 
-このコマンドは以下で説明するように、異なるコンテキストで使用することができます。 これらのコンテキストの中においては、**This.<*propertyPath*\>** を通してオブジェクト/コレクションの要素プロパティやエンティティの属性にアクセスすることができます。 例えば、*This.name* や*This.employer.lastName* はオブジェクト、要素やエンティティプロパティへの有効なパスとなります。
+このコマンドは以下で説明するように、異なるコンテキストで使用することができます。 Within these contexts, you will access object/collection element properties or entity attributes through **This.<*propertyPath*\>**. 例えば、*This.name* や*This.employer.lastName* はオブジェクト、要素やエンティティプロパティへの有効なパスとなります。
 
 これら以外のコンテキストにおいては、コマンドは**Null** を返します。
 
