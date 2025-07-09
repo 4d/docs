@@ -17,7 +17,7 @@ title: VP SET SHOW PRINT LINES
 
 ## 説明
 
-`VP SET SHOW PRINT LINES` コマンドは、<!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> スプレッドシート内で印刷プレビュー線を表示するかどうかを設定します<!-- END REF -->。
+The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> sets whether to display print preview lines in a spreadsheet.<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
