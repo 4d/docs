@@ -27,8 +27,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**Compile project** は、<!--REF #_command_.Compile project.Summary-->
-カレントのホストプロジェクト、または*projectFile* 引数で指定したプロジェクトをコンパイルします。<!-- END REF-->コンパイルについてのより詳細な情報については、[コンパイルページ](../Project/compiler.md) を参照してください。
+**Compile project**<!--REF #_command_.Compile project.Summary--> allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, check the [Compilation page](../Project/compiler.md).
 
 デフォルトでは、このコマンドはストラクチャー設定で定義されているコンパイラオプションを使用します。 任意の*options* 引数を渡すことで、それらを上書きすることができます。 以下のシンタックスがサポートされています: 任意の*options* 引数を渡すことで、それらを上書きすることができます。 以下のシンタックスがサポートされています:
 
