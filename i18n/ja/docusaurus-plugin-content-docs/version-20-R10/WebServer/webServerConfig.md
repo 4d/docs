@@ -629,8 +629,9 @@ User-Agent: <name>
 
 Keep-Alive接続を設定する 2つのオプションがあります:
 
-- **接続毎のリクエスト数**: ひとつの Keep-Alive接続におけるリクエストとレスポンスの最大数を設定します。 接続あたりのリクエスト数を制限することで、サーバーのリクエスト過多を避けることができます (攻撃者が使用するテクニック)。<p>4D Webサーバーをホストするマシンのリソースに応じて、デフォルト値 (100) を増減できます。</p>
+- **接続毎のリクエスト数**: ひとつの Keep-Alive接続におけるリクエストとレスポンスの最大数を設定します。 Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
+   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
-- **タイムアウト**: この値を使用して、Webブラウザーからリクエストがおこなわれない状態で、Webサーバーが開かれた接続を保守する最大の待ち秒数を設定します。 この秒数が経過すると、サーバーは接続を閉じます。<p>
+- **タイムアウト**: この値を使用して、Webブラウザーからリクエストがおこなわれない状態で、Webサーバーが開かれた接続を保守する最大の待ち秒数を設定します。 Once this period is over, the server closes the connection.<p>
    接続が閉じられた後に Webブラウザーがリクエストを送信すると、新しい TCP接続が作成されます。 この動作はユーザーからは見えません。</p>
 
