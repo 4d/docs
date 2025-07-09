@@ -108,7 +108,7 @@ Um namespace garante que não surja nenhum conflito quando um projeto host usar 
 
 :::
 
-Ao inserir um valor, você declara que as classes de componentes estarão disponíveis no [user class store (**cs**)](../Concepts/classes.md#cs) do projeto host, bem como em seus componentes carregados, por meio do namespace `cs.<value>`. Por exemplo, se você digitar "eGeometry" como namespace do componente, Supondo que você criou uma classe `Rectangle` contendo uma função `getArea()`, assim que seu projeto for instalado como componente, o desenvolvedor do projeto host pode escrever:
+When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. Por exemplo, se você digitar "eGeometry" como namespace do componente, Supondo que você criou uma classe `Rectangle` contendo uma função `getArea()`, assim que seu projeto for instalado como componente, o desenvolvedor do projeto host pode escrever:
 
 ```4d
 //in host project or one of its components
