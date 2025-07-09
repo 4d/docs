@@ -27,8 +27,8 @@ Le texte sélectionné est plus foncé et plus épais.
 
 Vous pouvez définir cette propriété en utilisant la commande [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
-> This is normal text.<br/>
-> **This is bold text.**
+> Ceci est un texte normal.<br/>
+> **Ceci est un texte en gras.**
 
 #### Grammaire JSON
 
@@ -48,8 +48,8 @@ Fait pencher le texte sélectionné légèrement vers la droite.
 
 Vous pouvez également définir cette propriété via la commande [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md).
 
-> This is normal text.<br/>
-> *This is text in italics.*
+> Ceci est un texte normal.<br/>
+> *Ceci est un texte en italique.*
 
 #### Grammaire JSON
 
