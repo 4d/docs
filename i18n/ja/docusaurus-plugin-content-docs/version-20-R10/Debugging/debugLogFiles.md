@@ -71,9 +71,9 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 | bytes_in                                                                          | 受信したバイト数                                                                                                                                                                                                                                                                                                                                                                                      |
 | bytes_out                                                                         | 送信したバイト数                                                                                                                                                                                                                                                                                                                                                                                      |
 | server\_duration &#124; exec\_duration | ログが生成された場所によって変わります:<li>_server\*duration* (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。  以下の画像の B から F までに相当します。あるいは</li><li>*exec\_duration* (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から E までに相当します。</li> |
-| write\_duration                                                                  | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。  以下の画像の A から B までに相当します。</li><li>レスポンス (サーバー上で実行された場合)。 以下の画像の E から F までに相当します。</li>                                                                                                                                                                             |
+| write\_duration                                                                  | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。  A to B in image below.</li><li>Response (when run on the server). 以下の画像の E から F までに相当します。</li>                                                                                                                                  |
 | task_kind                                                                         | プリエンプティブかコオペラティブか (それぞれ 'p' と 'c' で表される)                                                                                                                                                                                                                                                                                                                                   |
-| rtt                                                                                                    | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。 以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。旧式ネットワークレイヤを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 以前のバージョンの Windows においては、これを呼び出すと 0 が返されます。 </li>                                                                                                                 |
+| rtt                                                                                                    | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。 A to D and E to H in image below.<li>Only measured when using the ServerNet network layer, returns 0 when used with the legacy network layer.</li><li>For Windows versions prior to Windows 10 or Windows Server 2016, the call will return 0.</li>                    |
 | extra                                                                                                  | コンテキストに関連する追加情報 (ORDAリクエストの場合、データクラス名や属性名など)                                                                                                                                                                                                                                                                                                                               |
 
 リクエストフロー:
@@ -315,33 +315,33 @@ SET DATABASE PARAMETER(SMTP Log;1) // SMTPログを開始
 
 このログを開始するには:
 
-```4d
-$server:=New object
-...
-//SMTP
-$server.logFile:="MySMTPAuthLog.txt"
-$transporter:=SMTP New transporter($server)
-
-// POP3
-$server.logFile:="MyPOP3AuthLog.txt"
-$transporter:=POP3 New transporter($server)
-
-//IMAP
-$server.logFile:="MyIMAPAuthLog.txt"
-$transporter:=IMAP New transporter($server)
-```
+ ```4d
+ $server:=New object
+ ...
+ //SMTP
+ $server.logFile:="MySMTPAuthLog.txt"
+ $transporter:=SMTP New transporter($server)
+ 
+ // POP3
+ $server.logFile:="MyPOP3AuthLog.txt"
+ $transporter:=POP3 New transporter($server)
+ 
+ //IMAP
+ $server.logFile:="MyIMAPAuthLog.txt"
+ $transporter:=IMAP New transporter($server)
+ ```
 
 #### 内容
 
 各リクエストに対して、以下のフィールドが記録されます:
 
-| カラム番号 | 説明                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1     | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                                                                                                                                                                                                                                                                                                                                                           |
-| 2     | RFC3339 フォーマットの日付と時間 (yyyy-mm-ddThh:mm:ss.ms)                                                                                                                                                                                                                                                                                                         |
-| 3     | 4DプロセスID                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| 4     | 固有プロセスID                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| 5     | <ul><li>SMTP、POP3、または IMAPセッションスタートアップ情報。サーバーホスト名、SMTP、POP3、または IMAPサーバーに接続するのに使用された TCPポート番号と TLSステータス。あるいは</li><li>サーバーとクライアント間でやりとりされたデータ。 "S <" (SMTP、POP3、 または IMAPサーバーから受信したデータ) または "C >" (SMTP、POP3、または IMAPクライアントから送信されたデータ) から始まります: サーバーから送信された認証モードの一覧と選択された認証モード、SMTP、POP3、または IMAPサーバーから報告されたエラー、送信されたメールのヘッダー情報 (通常バージョンのみ) およびメールがサーバー上に保存されているかどうか。あるいは</li><li>SMTP、POP3、または IMAPセッションの切断情報。</li></ul> |
+| カラム番号 | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 2     | RFC3339 フォーマットの日付と時間 (yyyy-mm-ddThh:mm:ss.ms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 3     | 4DプロセスID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 4     | 固有プロセスID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 5     | <ul><li>SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or</li><li>data exchanged between server and client, starting with "S <" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or</li><li>SMTP,POP3, or IMAP session closing information.</li></ul> |
 
 ## ORDAリクエスト
 
