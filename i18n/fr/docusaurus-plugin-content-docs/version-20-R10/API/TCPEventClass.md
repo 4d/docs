@@ -73,7 +73,7 @@ La propriété `.port` contient <!-- REF #TCPEvent.port.Summary -->le numéro de
 
 ## .type
 
-<!-- REF #TCPEvent.type.Syntax -->**type** : Text<!-- END REF -->
+<!-- REF #TCPEvent.type.Syntax -->**type** : Texte<!-- END REF -->
 
 #### Description
 
