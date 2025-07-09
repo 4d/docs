@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**WP Get attributes** コマンドは、<!--REF #_command_.WP Get attributes.Summary-->4D Write Proレンジ、ヘッダー/フッター/本文/表、あるいはドキュメント内のあらゆる属性の値を返します。<!-- END REF--> このコマンドを使用すると4D Write Proのどのような内部属性(文字、段落、ドキュメント、表組み、画像など)にもアクセスすることができます。
+The **WP Get attributes** command<!--REF #_command_.WP Get attributes.Summary--> returns the value of any attribute in a 4D Write Pro range, header, body, footer, table, or document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attributes: character, paragraph, document, table, or image.
 
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 
