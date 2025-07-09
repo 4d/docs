@@ -23,7 +23,7 @@ Para obter uma visão geral e alguns exemplos da implementação do servidor Web
 
 Um objeto `WebSocketConnection` é criado automaticamente quando a função de retorno de chamada [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) do objeto [WebSocketServer](WebSocketServerClass.md#4dwebsocketservernew) retorna um objeto [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object).
 
-Os objetos Httprequest fornecem as seguintes propriedades e funções:
+Os objectos Httprequest fornecem as seguintes propriedades e funções:
 
 |                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- |
