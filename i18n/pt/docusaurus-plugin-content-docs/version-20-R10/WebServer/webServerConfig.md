@@ -625,9 +625,9 @@ Em alguns casos, outras funções internas otimizadas podem ser invocadas. As li
 
 Duas opções permitem que você defina como funcionam as conexões persistentes:
 
-- **Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
+- **Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limitar o número de solicitações por conexão permite que você evite a inundação do servidor devido a um grande número de solicitações recebidas (uma técnica usada por hackers).<p>
    The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
-- **Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Once this period is over, the server closes the connection.<p>
-   If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o usuário.</p>
+- **Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Quando este período acabar, o servidor fecha a conexão.<p>
+   Se o navegador da web enviar um pedido depois que a conexão for fechada, uma nova conexão TCP será criada automaticamente. Esta operação não é visível para o usuário.</p>
 
