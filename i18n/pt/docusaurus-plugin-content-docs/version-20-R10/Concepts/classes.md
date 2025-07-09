@@ -92,7 +92,7 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
   - uma função de classe é um bloco de código
   - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
   - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
-- No explorador e Depurador de Runtime, as funções de classe são exibidas com o formato `<ClassName>` construtor ou `<ClassName>.<FunctionName>`.
+- In the Runtime explorer and Debugger, class functions are displayed with the `<ClassName>` constructor or `<ClassName>.<FunctionName>` format.
 
 ## Lojas de classe
 
@@ -232,7 +232,7 @@ Function getFullname()->$fullname : Text
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-Para uma função de classe, o comando `Nome do método atual` retorna: `<NomeDaClasse>.<NomeDaFunção>`, por exemplo "MinhaClasse.minhaFunção".
+For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myFunction".
 
 No código da aplicação, as funções de classe são chamadas como métodos membros das instâncias do objeto e podem receber [parâmetros](#parameters) se existirem. As seguintes sintaxes são suportadas:
 
@@ -529,7 +529,7 @@ O tipo da propriedade calculada é definido pela declaração de tipo `$return` 
 
 :::note
 
-As classes de entidade ORDA também podem se beneficiar de uma função `Class constructor`. A implementação é semelhante à das classes regulares, mas [com algumas diferenças](../ORDA/ordaClasses.md#class-constructor-1).
+As classes de entidade ORDA também podem se beneficiar de uma função `Class constructor`. A implementação é semelhante à das classes regulares, mas [com algumas diferenças] (../ORDA/ordaClasses.md#class-constructor-1).
 
 :::
 
@@ -772,7 +772,7 @@ Você declara classes singleton adicionando a(s) palavra(s)-chave apropriada(s) 
 
 :::
 
-A classe singleton é instanciada na primeira chamada da propriedade [`cs.<class>.me`](../API/ClassClass.md#me). A classe singleton instanciada é então sempre retornada quando a propriedade [`me`](../API/ClassClass.md#me) é usada.
+The class singleton is instantiated at the first call of the [`cs.<class>.me`](../API/ClassClass.md#me) property. A classe singleton instanciada é então sempre retornada quando a propriedade [`me`](../API/ClassClass.md#me) é usada.
 
 Se você precisar instanciar um singleton com parâmetros, você também pode chamar a função [`new()`](../API/ClassClass.md#new). Nesse caso, é recomendado instanciar o singleton em algum código executado no início da aplicação.
 
