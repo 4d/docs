@@ -437,7 +437,7 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 | プロパティ      | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type       | string  | <li>"4D": ds で利用可能なメインデータストア</li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| networked  | boolean | <li>true: ネットワーク接続を介してアクセスされたデータストア</li><li>false: ネットワーク接続を介さずにアクセスしているデータストア (ローカルデータベース)</li>                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| networked  | boolean | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                                                                                                                                                                                                                                                                      |
 | localID    | text    | マシン上のデータストアID。 マシン上のデータストアID。 これは、`Open datastore` コマンドで返される localId 文字列です。 メインデータストアの場合は空の文字列 ("") です。 メインデータストアの場合は空の文字列 ("") です。                                                                                                                                                                                                                                                                                                                                            |
 | connection | object  | リモートデータストア接続の情報を格納したオブジェクト (メインデータストアの場合は返されません)。 次のプロパティを含みます:<table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>hostname</td><td>text</td><td>リモートデータストアの IP アドレスまたは名称 + ":" + ポート番号</td></tr><tr><td>tls</td><td>boolean</td><td>リモートデータストアとセキュア接続を利用している場合は true</td></tr><tr><td>idleTimeout</td><td>number</td><td>セッション非アクティブタイムアウト (分単位)。</td></tr><tr><td>user</td><td>text</td><td>リモートデータストアにて認証されたユーザー</td></tr></table> |
 
@@ -501,7 +501,7 @@ $info:=$remoteDS.getInfo()
 
 #### 説明
 
-`.getRemoteContextInfo()` 関数は、<!-- REF #DataStoreClass.getRemoteContextInfo().Summary -->*contextName* で指定したデータストアの最適化コンテキストに関する情報を格納するオブジェクトを返します<!-- END REF -->。
+The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->。
 
 最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/client-server-optimization.md#最適化コンテキスト) を参照ください。
 
@@ -1014,12 +1014,12 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAリクエス
 
 クライアント側の ORDAリクエストログを作成するには、リモートマシン上でこの関数を呼び出します。 ログは、渡した引数によってファイルまたはメモリに送ることができます:
 
-- `File` コマンドで作成された *file* オブジェクトを渡した場合、ログデータはオブジェクト (JSON フォーマット) のコレクションとしてこのファイルに書き込まれます。 各オブジェクトは一つのリクエストを表します。<br/>ファイルがまだ存在しない場合には、作成されます。 もしファイルが既に存在する場合、新しいログデータはそこに追加されていきます。
+- `File` コマンドで作成された *file* オブジェクトを渡した場合、ログデータはオブジェクト (JSON フォーマット) のコレクションとしてこのファイルに書き込まれます。 Each object represents a request.<br/>ファイルが存在しない場合は、作成されます。 もしファイルが既に存在する場合、新しいログデータはそこに追加されていきます。
   メモリへのログ記録が既に始まっている状態で、 `.startRequestLog()`が file 引数付きで呼び出された場合、メモリに記録されていたログは停止され消去されます。
 
 > JSON 評価を実行するには、ファイルの終わりに手動で \] 文字を追加する必要があります。
 
-- *reqNum* (倍長整数) 引数を渡した場合、メモリ内のログは (あれば) 消去され、新しいログが初期化されます。 *reqNum* 引数が指定する数にリクエスト数が到達するまでは、ログはメモリに保管され、到達した場合には古いエントリーから消去されていきます (FIFO スタック)。<br/>ファイルへのログ記録が既に始まっている状態で、`.startRequestLog()` が *reqNum* 引数付きで呼び出された場合、ファイルへのログは停止されます。
+- *reqNum* (倍長整数) 引数を渡した場合、メモリ内のログは (あれば) 消去され、新しいログが初期化されます。 It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
 
 - 引数を何も渡さなかった場合、ログはメモリに記録されていきます。 前もって `.startRequestLog()` が*reqNum* 引数付きで 呼び出されていた場合 (ただし `.stopRequestLog()` の前)、ログが次回消去されるかまたは`.stopRequestLog()` が呼び出されるまで、ログデータはメモリ内にスタックされます。
 
