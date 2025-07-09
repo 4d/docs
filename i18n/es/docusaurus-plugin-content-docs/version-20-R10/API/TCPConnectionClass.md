@@ -345,7 +345,7 @@ La función `wait()` <!-- REF #TCPConnection.wait().Summary -->espera hasta que 
 
 :::note
 
-Durante la ejecución de `.wait()`, se ejecutan funciones de callback, tanto si proceden de otras instancias de `SystemWorker`. Puede salir de un `.wait()` llamando a [`shutdown()`](#shutdown) desde una retrollamada.
+Durante la ejecución de `.wait()`, se ejecutan funciones de retrollamda, tanto si proceden de otras instancias de `SystemWorker`. Puede salir de un `.wait()` llamando a [`shutdown()`](#shutdown) desde una retrollamada.
 
 :::
 
