@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande **Command name** <!--REF #_command_.Command name.Summary-->retourne le nom ainsi que (optionnellement) les propriétés de la commande dont vous passez le numéro dans *commande*<!-- END REF-->. Le numéro de chaque commande est indiqué dans l'explorateur ainsi que dans la zone Propriétés de cette documentation.
+The **Command name** command <!--REF #_command_.Command name.Summary-->returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->The number of each command is indicated in the Explorer as well as in the Properties area of this documentation.
 
 **Note de compatibilité :** Le nom d'une commande pouvant varier d'une version à l'autre de 4D (commandes renommées), cette commande était utilisée dans les versions précédentes pour désigner une commande directement par son numéro, notamment dans les portions de code non tokenisées. Ce besoin a diminué au fil du temps alors que 4D continue d'évoluer parce que, pour les requêtes non tokenisées (formules), 4D fournit maintenant une syntaxe avec tokens. Cette syntaxe de s'affranchir des variations des noms de commandes mais aussi des autres éléments comme les tables, tout en permettant de les saisir de façon lisible (pour plus d'informations, se référer à la section *Utilisation des tokens dans les formules*). Notez également que l'option [*Utiliser les paramètres régionaux du système* des Préférences](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) vous permet de continuer à utiliser le langage en Français dans une version française de 4D.
 
