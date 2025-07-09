@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
+<!--REF #_command_.DIALOG.Summary-->O comando **DIALOG** apresenta o *formulário* ao usuário, juntamente com o(s) parâmetro(s) *formData* (opcional).<!-- END REF--> 
 
 This command is designed to work with customized and advanced user interfaces based on forms. Você pode usá-lo para exibir informações provenientes do banco de dados ou de outros locais, ou para fornecer recursos de entrada de dados. Ao contrário de [ADD RECORD](../commands-legacy/add-record.md) ou [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** dá a você controle total sobre o formulário, seus conteúdos e botões de navegação e validação.
 
