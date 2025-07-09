@@ -1,6 +1,6 @@
 ---
 id: String_theme
-title: Chaînes de caractères
+title: String
 slug: /commands/theme/String
 ---
 
