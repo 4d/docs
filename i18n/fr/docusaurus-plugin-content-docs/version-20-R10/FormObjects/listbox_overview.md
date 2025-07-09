@@ -98,7 +98,7 @@ Dans le cas d’une list box basée sur la sélection courante, toute modificati
 
 Dans ce type de list box, chaque colonne doit être associée à une expression. Le contenu de chaque ligne est ensuite évalué par élément de la collection ou par entité de l'entity selection.
 
-Chaque élément de la collection ou chaque entité est disponible en tant qu'objet auquel on peut accéder via le mot-clé [This](../Concepts/classes.md#this). Une expression de colonne peut être un chemin de propriété, une méthode de projet, une variable ou n'importe quelle formule, accédant à chaque entité ou objet élément de collection via `This`, par exemple `This.<propertyPath>` (ou `This.value` dans le cas Vous pouvez utiliser les commandes `LISTBOX SET COLUMN FORMULA` et `LISTBOX INSERT COLUMN FORMULA` pour modifier les colonnes par programmation. L’expression peut également être une méthode projet, une variable ou un élément de tableau.
+Chaque élément de la collection ou chaque entité est disponible en tant qu'objet auquel on peut accéder via le mot-clé [This](../Concepts/classes.md#this). A column expression can be a property path, a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). L’expression peut également être une méthode projet, une variable ou un élément de tableau.
 
 Lorsque la source de données est une entity selection, les modifications apportées du côté de la list box sont automatiquement enregistrées dans la base de données. En revanche, les modifications apportées du côté de la base de données sont visibles dans la list box après le rechargement des entités modifiées.
 
@@ -1004,9 +1004,9 @@ Ces attributs peuvent être utilisés pour contrôler la plage de valeurs d'entr
 
 L'attribut behavior propose des variations de la représentation standard des valeurs. Une seule variation est possible :
 
-| Attribut | Valeur(s) disponible(s) | valueType(s) | Description                                                                                                                                                                                                                        |
-| -------- | ------------------------------------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates                                                   | integer                         | Représente une valeur numérique sous forme de case à cocher à trois états. <br/>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
+| Attribut | Valeur(s) disponible(s) | valueType(s) | Description                                                                                                                                                                                                             |
+| -------- | ------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates                                                   | integer                         | Représente une valeur numérique sous la forme d'une case à cocher à trois états.<br/> 2=semi-coché, 1=coché, 0=décoché, -1=invisible, -2=décoché désactivé, -3=coché désactivé, -4=semi-coché désactivé |
 
 ```4d
  C_OBJECT($ob3)
@@ -1105,9 +1105,9 @@ Exemples :
 	OB SET($ob;"requiredListReference";<>List)
 ```
 
-```
-![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
-```
+ ```
+ ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
+ ```
 
 #### choiceListName et choiceListReference
 
