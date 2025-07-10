@@ -27,7 +27,7 @@ La creación e instalación de los componentes 4D se realiza directamente desde 
 
 A excepción de los [comandos no utilizables](#unusable-commands), un componente puede utilizar cualquier comando del lenguaje 4D.
 
-When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
+Cuando los comandos son llamados desde un componente, se ejecutan en el contexto del componente, excepto por el comando [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) o el comando [`EXECUTE METHOD`](../commands-legacy/execute-method.md) que utilizan el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
 
 Los comandos [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) y [`Get database parameter`](../commands-legacy/get-database-parameter.md) son una excepción: su alcance es global para la aplicación. Cuando estos comandos se llaman desde un componente, se aplican al proyecto de la aplicación local.
 
@@ -76,7 +76,7 @@ Por el contrario, por razones de seguridad, por defecto un componente no puede e
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command. Por ejemplo:
+Una vez que los métodos proyecto host estén disponibles para los componentes, puede ejecutar un método del proyecto host desde un componente utilizando el comando [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) o [`EXECUTE METHOD`](../commands-legacy/execute-method.md). Por ejemplo:
 
 ```4d
 // Método local
@@ -143,19 +143,19 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 ## Edición de componentes desde el host
 
-To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
+Para facilitar el ajuste de los componentes en el contexto real de los proyectos host, puede modificar y guardar directamente el código de un componente cargado desde un proyecto host interpretado. El código del componente es editable cuando se cumplen las siguientes condiciones:
 
 - el componente ha sido [cargado en modo interpretado](../Project/components.md#interpreted-and-compiled-components),
 - el componente no es cargado de la [caché local del administrador de dependencias](../Project/components.md#local-cache-for-dependencies), es decir, no está [descargado de GitHub](../Project/components.md#adding-a-github-dependency).
 
-In this case, you can open, edit, and save your component code in the Code editor on the host project, so that modifications are immediately taken into account.
+En este caso, puede abrir, editar y guardar el código del componente en el Editor de código del proyecto host, de modo que las modificaciones se tengan en cuenta inmediatamente.
 
-In the Explorer, a specific icon indicates that the component code is editable:<br/>
+En el Explorador, un icono específico indica que el código del componente es editable:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
 :::warning
 
-Sólo se pueden editar las [clases expuestas](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente.
+Solo se pueden editar las [clases expuestas](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente.
 
 :::
 
@@ -163,7 +163,7 @@ Sólo se pueden editar las [clases expuestas](#sharing-of-classes) y los [métod
 
 Para facilitar el uso de su componente a los desarrolladores, puede activar la opción [**Generar archivo de sintaxis para la finalización de código al compilar** en la página General](../settings/general.md#component-namespace-in-the-class-store) de la configuración del proyecto matriz.
 
-Durante la fase de compilación se crea automáticamente un archivo de sintaxis (en formato JSON) con la sintaxis de las clases, funciones y [métodos expuestos] del componente (#sharing-of-project-methods), y se coloca en la carpeta `\Resources\en.lproj` del proyecto del componente. 4D utiliza el contenido de ese archivo de sintaxis para generar ayuda contextual en el editor de código, como la finalización del código y la sintaxis de las funciones:
+Un archivo de sintaxis (formato JSON) se crea automáticamente durante la fase de compilación, llenado con la sintaxis de las clases, funciones y [métodos expuestos](#sharing-of-project-methods) de su componente, y se coloca en la carpeta `\Resources\en. proj` del proyecto de componente. 4D utiliza el contenido de ese archivo de sintaxis para generar ayuda contextual en el editor de código, como la finalización del código y la sintaxis de las funciones:
 
 ![](../assets/en/settings/syntax-code-completion-2.png)
 ![](../assets/en/settings/syntax-code-completion-1.png)
@@ -375,11 +375,11 @@ Los componentes pueden tener un archivo `Info.plist` en su [carpeta raíz](../Pr
 
 :::note
 
-Este archivo no es obligatorio pero es necesario para construir componentes [notarizables y grapables](../Desktop/building.md#about-notarization) para macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+Este archivo no es obligatorio pero es necesario para construir componentes [notarizables y grapables](../Desktop/building.md#about-notarization) para macOS. Por lo tanto, se crea automáticamente en el [paso build](../Desktop/building.md#build-component) si aún no existe. Tenga en cuenta que algunas claves pueden definirse utilizando una llave XML buildApp (ver [Build component](../Desktop/building.md#build-component)).
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#loading-components) en todas las plataformas.
+Las llaves soportadas en los archivos `Info.plist` de los componentes son en su mayoría [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) que se ignoran en Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#loading-components) en todas las plataformas.
 
 Se pueden definir las siguientes teclas:
 
