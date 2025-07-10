@@ -286,7 +286,7 @@ Parâmetros
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
+Class constructor({$parameterName : type; ...})
 // código
 ```
 
@@ -310,16 +310,18 @@ Só pode haver uma função de construtor em uma classe (caso contrário um erro
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass Class Constructor ($name : Text)
+// Class constructor of MyClass
+Class constructor ($name : Text ; $age : Integer)
  This.name:=$name
+ This.age:=$age
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Em um método projeto
+// Você pode instanciar um objeto
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"John";"age":42}
+// $o = {"name": "John"; "age":42}
 ```
 
 
@@ -360,7 +362,7 @@ O tipo de propriedade pode ser um dos seguintes tipos suportados:
 
 :::info
 
-A palavra-chave `property` só pode ser utilizada em métodos classe e fora de qualquer bloco `Function` ou `Class Constructor`.
+A palavra-chave `property` só pode ser utilizada em métodos classe e fora de qualquer bloco `Function` ou `Class constructor`.
 
 :::
 
@@ -634,10 +636,12 @@ $val:=$o.f() //42
 Quando se utiliza uma função [construtora de classe](#class-constructor) (com a função [`new()`](API/ClassClass.md#new) ), a sua `Esta` está ligada ao novo objecto que está a ser construído.
 
 ```4d
-//Class: ob Class Constructor  
+//Class: ob
 
- // Create properties on This as
- // desired by assigning to them
+Class constructor  
+
+ // Crie propriedades nisto como
+ // desejado ao atribuir-lhes
  This.a:=42
 ```
 

@@ -33,7 +33,7 @@ La commande `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retourne un nouvel
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Le paramètre *column* définit la première colonne de la plage de cellules. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Si l'intervalle se situe dans plusieurs colonnes, vous devez également utiliser le paramètre *columnCount*.
+Le paramètre *column* définit la première colonne de la plage de cellules. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre.
 
 Dans le paramètre *row*, vous pouvez définir la ou les lignes de la position de la plage de cellules. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. Si la plage se situe sur plusieurs lignes, vous devez également utiliser le paramètre *rowCount*.
 

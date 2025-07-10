@@ -5,6 +5,8 @@ slug: /commands/php-get-full-response
 displayed_sidebar: docs
 ---
 
+<!-- IREF #_command_.PHP GET FULL RESPONSE.deprecated -->
+
 <!--REF #_command_.PHP GET FULL RESPONSE.Syntax-->**PHP GET FULL RESPONSE** ( *stdOut* {; *etiquetasErr* ; *valoresErr*} {; *camposEncHttp* {; *valoresEncHttp*}} )<!-- END REF-->
 <!--REF #_command_.PHP GET FULL RESPONSE.Params-->
 | Parámetro | Tipo |  | Descripción |

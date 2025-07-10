@@ -8,7 +8,6 @@ Un botón imagen es similar a un [botón estándar](button_overview.md). Sin emb
 Los botones imagen pueden utilizarse de dos maneras:
 
 - Como botones de comando en un formulario. En este caso, el botón de imagen suele incluir cuatro estados diferentes: activado, desactivado, presionado y al pasar por encima.\
-  En este caso, el botón de imagen suele incluir cuatro estados diferentes: activado, desactivado, presionado y al pasar por encima.\
   Por ejemplo, una tabla de miniaturas que tiene una línea de cuatro columnas, cada miniatura corresponde a los estados Por defecto, Presionado, Pasar el ratón y Desactivado.
 
   | Propiedad                  | Nombre JSON            | Valor |
@@ -20,9 +19,6 @@ Los botones imagen pueden utilizarse de dos maneras:
   | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
 
 - Como botón de imagen que permite al usuario elegir entre varias opciones. En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Con los [menús emergentes de imágenes](picturePopupMenu_overview.md), todas las opciones se muestran simultáneamente (como los elementos del menú emergente), mientras que el botón de imagen muestra las opciones consecutivamente (a medida que el usuario hace clic en el botón).\
-  Aquí un ejemplo de un botón imagen.\
-  Aquí un ejemplo de un botón imagen.\
-  Aquí un ejemplo de un botón imagen.\
   Aquí un ejemplo de un botón imagen. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación. La opción se implementa como un botón imagen en una caja de diálogo personalizada de propiedades:
 
 ![](../assets/en/FormObjects/button_pictureButton.png)

@@ -26,7 +26,7 @@ In *menu*, you can pass a menu reference ([MenuRef](# "Unique ID (16-character a
 In *iconRef*, you can pass the picture to be used as the icon. You can use a a picture file reference or (binary databases only) a library picture.
 
 * Picture file reference. Two patterns are supported:  
-   * **path:<filesystem>** (*recommended*), for example "path:/RESOURCES/icon.png". For more information, refer to the *Filesystem pathnames* paragraph.  
+   * **path:<filesystem>** (*recommended*), for example "path:/RESOURCES/icon.png". For more information, refer to the [Filesystem pathnames](../Concepts/paths.md#filesystem-pathnames) paragraph.  
    * **file:<relativePathname>** (*deprecated*), for example "file:icon.png". The picture must be located in the **Resources** folder of the database.
 * Library picture (binary databases only): You can pass either the name or number of the picture. It is generally preferable to use its number rather than its name since picture numbers are unique IDs, which is not the case with names.
 

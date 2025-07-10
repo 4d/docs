@@ -11,7 +11,7 @@ title: OpenAIVision
 
 ### create()
 
-\**create*(*imageURL* : Text) : OpenAIVisionHelper
+**create**(*imageURL* : Text) : OpenAIVisionHelper
 
 | 引数         | 型                                           | 説明                    |
 | ---------- | ------------------------------------------- | --------------------- |
@@ -27,7 +27,7 @@ var $result:=$helper.prompt("Could you describe it?")
 
 ### fromFile()
 
-\**fromFile*(*imageFile* : 4D.File) : OpenAIVisionHelper
+**fromFile**(*imageFile* : 4D.File) : OpenAIVisionHelper
 
 | 引数          | 型                                           | 説明                    |
 | ----------- | ------------------------------------------- | --------------------- |
@@ -37,13 +37,13 @@ var $result:=$helper.prompt("Could you describe it?")
 #### 使用例
 
 ```4d
-var $helper:=$client.chat.vision.fromFile(Folder(fk resource foldres).file("image.png"))
+var $helper:=$client.chat.vision.fromFile(Folder(fk resources folder).file("image.png"))
 var $result:=$helper.prompt("Could you describe it?")
 ```
 
 ### fromPicture()
 
-\**fromPicture*(*image* : Picture) : OpenAIVisionHelper
+**fromPicture**(*image* : Picture) : OpenAIVisionHelper
 
 | 引数      | 型                                           | 説明                    |
 | ------- | ------------------------------------------- | --------------------- |

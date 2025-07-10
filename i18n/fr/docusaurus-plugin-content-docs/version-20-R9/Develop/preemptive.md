@@ -155,8 +155,8 @@ Pour être thread-safe, une méthode doit respecter les règles suivantes :
 - Elle ne doit pas utiliser de variables interprocess(1)
 - Elle ne doit pas appeler d'objets d'interface (2) (il y a cependant des exceptions, voir ci-dessous).
 
-(1) Pour échanger des données entre process préemptifs (et entre tous les process), vous pouvez passer des [collections partagées ou objets partagés](../Concepts/shared.md) comme paramètres aux process, et/ou utiliser le catalogue [`Storage`](../commands-legacy/storage.md).
 Les [process Worker](processes.md#worker-processes) vous permettent également d'échanger des messages entre tous les process, y compris les process préemptifs.
+(1) Pour échanger des données entre process préemptifs (et entre tous les process), vous pouvez passer des [collections partagées ou objets partagés](../Concepts/shared.md) comme paramètres aux process, et/ou utiliser le catalogue [`Storage`](../commands-legacy/storage.md).
 
 (2) La commande [`CALL FORM`](../commands-legacy/call-form.md) fournit une solution élégante pour appeler des objets d'interface à partir d'un process préemptif.
 
@@ -216,7 +216,7 @@ Dans ce cas, tous les triggers sont évalués. Si une commande thread-unsafe est
 
 :::note
 
-Dans les [applications client/serveur](../Desktop/clientServer.md), les triggers peuvent être exécutés en mode coopératif, même si leur code est thread-safe. Cela se produit lorsqu'un trigger est déclenché à partir d'un process distant : dans ce cas, le trigger est exécuté dans le [process "jumeau" du process client](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) sur la machine serveur. Comme ce process est utilisé pour tous les appels du client, il est toujours exécuté en mode coopératif.
+Dans les [applications client/serveur](../Desktop/clientServer.md), les triggers peuvent être exécutés en mode coopératif, même si leur code est thread-safe. Comme ce process est utilisé pour tous les appels du client, il est toujours exécuté en mode coopératif. Cela se produit lorsqu'un trigger est déclenché à partir d'un process distant : dans ce cas, le trigger est exécuté dans le [process "jumeau" du process client](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html#68972) sur la machine serveur.
 
 :::
 

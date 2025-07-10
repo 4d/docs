@@ -128,7 +128,7 @@ Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramèt
 
 Dans le cas d'une application 4D ou 4D Server sans interface, vous pouvez configurer et utiliser le fichier `WebAdmin.4DSettings` par défaut, ou désigner un fichier `.4DSettings` personnalisé.
 
-Boîte de dialogue des Propriétés Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
+Boîte de dialogue des Propriétés Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server. Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
 
 Vous pouvez aussi définir un fichier `.4DSettings`. (format XML) et l'utiliser à la place du fichier par défaut. Plusieurs arguments dédiés sont disponibles dans [l'interface de ligne de commande](cli.md) pour prendre en charge cette fonctionnalité.
 

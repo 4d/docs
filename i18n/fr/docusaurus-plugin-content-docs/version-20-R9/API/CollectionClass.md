@@ -2893,7 +2893,7 @@ La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou 
 
 Dans *index*, passez la position à partir de laquelle vous souhaitez supprimer des éléments de la collection.
 
-> **Attention** : Gardez à l'esprit que les éléments de collection sont numérotés à partir de 0. Si *index* est supérieur à la taille de la collection, l'index de départ réel sera fixé à la longueur (length) de la collection.
+> **Attention** : Gardez à l'esprit que les éléments de collection sont numérotés à partir de 0. Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*).
 
 - Si *index* < 0, il est recalculé comme *index:=index+length* (il est considéré comme décalage depuis la fin de la collection).
 - Si la valeur calculée < 0, *index* est défini à 0.

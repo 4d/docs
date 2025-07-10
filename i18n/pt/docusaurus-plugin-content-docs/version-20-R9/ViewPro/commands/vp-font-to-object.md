@@ -20,7 +20,7 @@ title: VP Font to object
 
 O comando utilitário `VP Font to object` <!-- REF #_method_.VP Font to object.Summary -->retorna um objeto de um texto curto de fonte<!-- END REF -->. Esse objeto pode ser usado para definir ou obter configurações de propriedade de fonte por meio de notação de objeto.
 
-In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
+No parâmetro *font*, passe uma cadeia de caracteres abreviada de fonte para especificar as diferentes propriedades de uma fonte (por exemplo, "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
 
 O objeto retornado contém atributos de fonte definidos como propriedades. Para obter mais informações sobre as propriedades disponíveis, consulte o comando [VP Object to font](vp-object-to-font.md).
 

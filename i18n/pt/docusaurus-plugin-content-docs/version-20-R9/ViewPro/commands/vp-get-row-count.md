@@ -21,7 +21,7 @@ O comando `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->reto
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the row count in the optional *sheet* parameter using the sheet index (counting begins at 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
+Pode definir onde obter o número de linhas no parâmetro opcional *sheet* utilizando o índice da folha (a numeração começa em 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
 ## Exemplo
 

@@ -14,7 +14,7 @@ A l'instar d'autres types de champs pouvant contenir une grande quantité de don
 Dans le langage 4D, il existe deux façons de manipuler un blob :
 
 - **comme une valeur scalaire** : un blob peut être stocké dans une variable ou un champ Blob et peut être modifié.
-- **comme un objet (`4D.Blob`)** : un `4D.Blob` est un objet blob. Vous pouvez encapsuler un blob ou une partie de celui-ci dans un `4D.Blob` sans modifier le blob d'origine. Cette méthode est appelée [boxing](https://en.wikipedia.org/wiki/Object_type_\\(object-oriented_programming\\)#Boxing). Pour plus d'informations sur l'instanciation d'un `4D.Blob`, consultez la rubrique [Blob Class](../API/BlobClass.md).
+- **comme un objet (`4D.Blob`)** : un `4D.Blob` est un objet blob. Vous pouvez encapsuler un blob ou une partie de celui-ci dans un `4D.Blob` sans modifier le blob d'origine. Cette méthode est appelée [boxing](https://en.wikipedia.org/wiki/Object_type_\\\(object-oriented_programming\\\)#Boxing). Pour plus d'informations sur l'instanciation d'un `4D.Blob`, consultez la rubrique [Blob Class](../API/BlobClass.md).
 
 Chaque type de blob a ses avantages. Utilisez le tableau suivant pour déterminer celui qui convient à vos besoins :
 

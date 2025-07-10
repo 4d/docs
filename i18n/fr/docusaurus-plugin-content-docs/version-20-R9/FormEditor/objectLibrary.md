@@ -66,7 +66,7 @@ Les bibliothèques d’objets personnalisées sont des projets 4D classiques. Se
 
 ### Construire une bibliothèque d’objets
 
-Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Ils peuvent provenir soit d’un formulaire soit d’une autre bibliothèque d’objets (y compris la [bibliothèque préconfigurée](#using-the-standard-object-library)). Aucun lien n’est conservé avec l’objet d’origine : si celui-ci est modifié, la modification ne sera pas reportée dans l’objet copié.
+Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Aucun lien n’est conservé avec l’objet d’origine : si celui-ci est modifié, la modification ne sera pas reportée dans l’objet copié.
 
 > Pour que vous puissiez effectuer des glisser-déposer d’objets depuis les formulaires vers des bibliothèques, vous devez sélectionner l’option de déplacement **Commencer un glisser-déposer** dans les Préférences de 4D.
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.SELECT LOG FILE.Summary-->The **SELECT LOG FILE** command creates, or closes the log file according to the value you pass in parameter<!-- END REF-->.
+<!--REF #_command_.SELECT LOG FILE.Summary-->O comando **SELECT LOG FILE** cria ou fecha o arquivo de registro de acordo com o valor passado no parâmetro<!-- END REF-->.
 
 Em *logFile*, passe o nome ou o caminho completo do arquivo de registro a ser criado. If you only pass a name, the file will be created in the "Logs" folder of the database located next to the database structure file.
 

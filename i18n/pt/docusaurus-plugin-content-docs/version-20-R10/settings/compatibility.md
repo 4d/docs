@@ -1,0 +1,30 @@
+---
+id: compatibility
+title: Página de compatibilidade
+---
+
+Os grupos de páginas de compatibilidade juntam parâmetros relacionados com a manutenção da compatibilidade com versões anteriores do 4D.
+
+> The number of options displayed depends on the version of 4D with which the original database/project was created, as well as the settings modified in this database/project.\
+> This page lists the compatibility options available for database/projects converted from 4D v18 onwards. Para opções de compatibilidade mais antigas, consulte a [Página de compatibilidade](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) em **doc.4d.com**.
+
+- **Use legacy network layer**: Starting with 4D v15, 4D applications propose a new network layer, named *ServerNet*, to handle communications between 4D Server and remote 4D machines (clients). A antiga camada de rede tornou-se obsoleta, mas é mantida para garantir a compatibilidade com as bases de dados existentes. Usando esta opção, você pode ativar a antiga camada de rede a qualquer momento nos seus aplicativos do servidor 4D dependendo das suas necessidades. *ServerNet* é usado automaticamente para novos bancos de dados e bancos de dados convertidos a partir de uma versão v15 ou posterior. Observe que, em caso de modificação, você precisa reiniciar o aplicativo para que a mudança seja levada em conta. Todos os aplicativos clientes que foram conectados também devem ser reiniciados para poderem se conectar à nova camada de rede.
+    **Nota:** esta opção também pode ser gerenciada programando usando o comando `SET DATABASE PARAMETER`.
+
+- **Usar XPath padrão:** oor padrão, essa opção está desmarcada para bancos de dados convertidos de uma versão 4D anterior à v18 R3 e marcada para bancos de dados criados com 4D v18 R3 e superior. A partir da v18 R3, a implementação do XPath no 4D foi modificada para ser mais compatível e suportar mais previsões. Consequentemente, as características não convencionais da anterior implementação já não funcionam. Estes incluem:
+
+    - inicial "/" não é apenas o nó raiz - usar um / como primeiro caractere em uma expressão XPath não declara um caminho absoluto do nó raiz
+    - não há nó atual implícito - o nó atual tem que ser incluído na expressão XPath
+    - não há pesquisa recursiva em estruturas repetidas - apenas o primeiro elemento é analisado.\
+
+    Although not standard, you might want to keep using these features so that your code continues to work as before -- in this case, just set the option *unchecked*. Por outro lado, se seu código não depender da implementação não padrão e se você quiser se beneficiar dos recursos estendidos do XPath em seus bancos de dados (como descrito no [`elemento DOM Find XML`](../commands-legacy/dom-find-xml-element.md) comando), certifique-se que a opção **Use XPath** padrão está *marcada*.
+
+- **Use LF for end of line on macOS:** Starting with 4D v19 R2 (and 4D v19 R3 for XML files), 4D writes text files with line feed (LF) as default end of line (EOL) character instead of CR (CRLF for xml SAX) on macOS in new projects. Se você deseja se beneficiar deste novo comportamento em projetos convertidos de versões anteriores da 4D, marque esta opção. Consulte [`TEXT TO DOCUMENT`](../commands-legacy/text-to-document.md), [`Document to text`](../commands-legacy/document-to-text.md) e [XML SET OPTIONS](../commands-legacy/xml-set-options.md).
+
+- **Don't add a BOM when writing a unicode text file by default:** Starting with 4D v19 R2 (and 4D v19 R3 for XML files), 4D writes text files without a byte order mark (BOM) by default. Nas versões anteriores, os arquivos texto eram gravados com um BOM por padrão. Selecione esta opção se quiser ativar o novo comportamento nos projetos convertidos. Consulte [`TEXT TO DOCUMENT`](../commands-legacy/text-to-document.md), [`Document to text`](../commands-legacy/document-to-text.md) e [XML SET OPTIONS](../commands-legacy/xml-set-options.md).
+
+- **Map NULL values to blank values unchecked by default a field creation**: For better compliance with ORDA specifications, in databases created with 4D v19 R4 and higher the **Map NULL values to blank values** field property is unchecked by default when you create fields. Você pode aplicar esse comportamento padrão aos seus bancos de dados convertidos marcando esta opção (trabalhar com valores Null é recomendado, uma vez que são totalmente suportados por [ORDA](../ORDA/overview.md).
+
+- **Non-blocking printing**: Starting with 4D v20 R4, each process has its own printing settings (print options, current printer, etc.), thus allowing you to run multiple printing jobs simultaneously. Check this option if you want to benefit from this new implementation in your converted 4D projects or databases converted from binary mode to project mode. **When left unchecked**, the previous implementation is applied: the current 4D printing settings are applied globally, the printer is placed in "busy" mode when one printing job is running, you must call `CLOSE PRINTING JOB` for the printer to be available for the next print job (check previous 4D documentations for more information).
+
+- **Salvar cores da estrutura e coordenadas em um arquivo catalog_editor.json file**: começando com 4D v20 R5, alterações feitas no editor de estrutura sobre a aparência gráfica das tabelas e campos (cor, posição, ordem...) são salvos em um arquivo separado chamado `catalog_editor.json`, armazenado na [pasta de códigos](../Project/architecture.md#sources). Esta nueva arquitectura de archivos facilita la gestión de conflictos en aplicaciones VCS, ya que el archivo `catalog.4DCatalog` ahora contiene sólo cambios cruciales en la estructura de la base de datos. For compatibility reasons, this feature is not enabled by default in projects converted from previous 4D versions, you need to check this option. Cuando la función está habilitada, el archivo `catalog_editor.json` se crea en la primera modificación en el editor de estructuras.

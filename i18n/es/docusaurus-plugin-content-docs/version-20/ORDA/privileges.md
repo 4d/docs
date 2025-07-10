@@ -156,7 +156,7 @@ Al configurar los permisos, las funciones de clase ORDA se declaran en el elemen
 ```json
 <DataclassName>.<functionName>
 ```
-For example, if you want to apply a permission to the following function:
+Por ejemplo, si desea aplicar un permiso a la siguiente función:
 
 ```4d
 // cs.CityEntity class
@@ -170,7 +170,7 @@ Class extends Entity
 "applyTo":"City.getPopulation"
 ```
 
-It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. Por ejemplo, si ha creado una función "drop" en las clases `cs.CityEntity` y `cs.CitySelection`, debe darles nombres diferentes como `dropEntity()` y `dropSelection()`. A continuación, puede escribir en el archivo "roles.json":
+Significa que no puede utilizar los mismos nombres de función en las distintas clases ORDA (entidad, selección de entidad, dataclass) si desea que se les asignen privilegios. En este caso, debe utilizar nombres de función distintos. Por ejemplo, si ha creado una función "drop" en las clases `cs.CityEntity` y `cs.CitySelection`, debe darles nombres diferentes como `dropEntity()` y `dropSelection()`. A continuación, puede escribir en el archivo "roles.json":
 
 ```json
     "permissions": {

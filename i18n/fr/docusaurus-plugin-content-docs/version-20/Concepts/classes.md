@@ -295,15 +295,13 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
  End if
 ```
 
-### `Class Constructor`
+### `Class constructor`
 
 #### Syntaxe
 
 ```4d
 // Class: MyClass
-Class Constructor({$parameterName : type; ...})
-// code
-// code
+Class constructor({$parameterName : type; ...})
 // code
 ```
 
@@ -379,7 +377,7 @@ Le type de propriété peut être l'un des suivants :
 
 :::info
 
-Le mot-clé `property` ne peut être utilisé que dans les méthodes de classe et en dehors de tout bloc `Function` ou `Class Constructor` .
+The `property` keyword can only be used in class methods and outside any `Function` or `Class constructor` block.
 
 :::
 
@@ -674,10 +672,10 @@ Lorsqu'une fonction [class constructor](#class-constructor) est utilisée (avec 
 ```4d
 //Class: ob
 
-Class Constructor  
+Class constructor  
 
- // Créer des propriétés en
- // les assignant au This
+ // Create properties on This as
+ // desired by assigning to them
  This.a:=42
 ```
 

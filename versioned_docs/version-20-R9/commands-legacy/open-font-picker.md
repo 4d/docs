@@ -33,7 +33,7 @@ Here is the button code:
 
 ```4d
  Case of
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
        GOTO OBJECT(textVar) //gives the variable the focus
        OPEN FONT PICKER
  End case

@@ -25,7 +25,7 @@ Basicamente, há duas maneiras de lidar com erros em 4D. Pode:
 
 Muitas funções de classe 4D, tais como `entity.save()` ou `transporter.send()`, retornam um objeto de *status*. Este objecto é utilizado para armazenar erros "previsíveis" no contexto do tempo de execução, por exemplo, palavra-passe inválida, entidade bloqueada, etc., que não interrompem a execução do programa. Esta categoria de erros pode ser tratada por código normal.
 
-Outros erros "imprevisíveis" incluem erro de gravação em disco, falha de rede, ou em geral qualquer interrupção inesperada. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes) and needs to be handled through an error-handling method or a `Try()` keyword.
+Outros erros "imprevisíveis" incluem erro de gravação em disco, falha de rede, ou em geral qualquer interrupção inesperada. Essa categoria de erros gera exceções definidas por [um *código*, uma *mensagem* e uma *assinatura*](#error-codes) e precisa ser tratada por um método de tratamento de erros ou de uma palavra-chave `Try()`.
 
 ## Instalação de um método de gestão de erros
 
@@ -33,7 +33,7 @@ Em 4D, todos os erros podem ser capturados e tratados por métodos específicos 
 
 Uma vez instalados, os manipuladores de erros são automaticamente chamados em modo interpretado ou compilado em caso de erro na aplicação 4D ou num dos seus componentes. Um manipulador de erros diferente pode ser chamado em função do contexto de execução (ver abaixo).
 
-To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command with the project method name and (optionnally) scope as parameters. Por exemplo:
+Para *instalar* um método de projeto de tratamento de erros, você só precisa chamar o comando [`ON ERR CALL`](../commands-legacy/on-err-call.md) com o nome do método do projeto e (opcionalmente) o escopo como parâmetros. Por exemplo:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Instala o método de gestão de erros
@@ -292,4 +292,4 @@ Exceções que interrompem a execução de código são retornadas pela 4D, mas 
 
 A [caixa de diálogo de erro 4D](../Debugging/basics.md) mostra o código e a mensagem para o usuário.
 
-Para ter uma descrição completa de um erro e especialmente de sua origem, você precisa chamar o comando [`Last errors`](../commands/last-errors.md). When you intercept and handle errors using an [error-handling method](#installing-an-error-handling-method) in your final applications, use [`Last errors`](../commands/last-errors.md) and make sure you log all properties of the *error* object since error codes depend on the components.
+Para ter uma descrição completa de um erro e especialmente de sua origem, você precisa chamar o comando [`Last errors`](../commands/last-errors.md). Ao interceptar e tratar erros usando um [método de tratamento de erros](#installing-an-error-handling-method) em seus aplicativos finais, use [`Last errors`](../commands/last-errors.md) e certifique-se de registrar todas as propriedades do objeto *error*, pois os códigos de erro dependem dos componentes.

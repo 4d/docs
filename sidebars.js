@@ -64,9 +64,16 @@ module.exports =
             },
             "Project/components",
             "Project/date-time-formats",
-            "Project/documentation"
-          ]
-        },
+            "Project/documentation",
+            {
+               type: "category",
+               label: "Dababase structure",
+               items: [
+                 "Develop/field-properties",
+                      ]
+            }
+                 ]
+            },
         {
           type: "category",
           label: "Development Environment",
@@ -116,6 +123,7 @@ module.exports =
           items: [
             "ORDA/dsmapping",
             "ORDA/ordaClasses",
+            "ORDA/orda-events",
             "ORDA/entities",
             "ORDA/global-stamp",
             "ORDA/datastores",
@@ -865,7 +873,7 @@ module.exports =
               },
               items: [
                 "commands-legacy/change-licenses",
-                "commands-legacy/create-deployment-license",
+                "commands/create-deployment-license",
                 "commands-legacy/is-license-available",
                 "commands/license-info",
                 "commands-legacy/license-usage",
@@ -2293,6 +2301,7 @@ module.exports =
             "API/TCPConnectionClass",
             "API/TCPEventClass",
             "API/TCPListenerClass",
+            "API/VectorClass",
             "API/WebFormClass",
             "API/WebFormItemClass",
             "API/WebServerClass",
@@ -2862,6 +2871,10 @@ module.exports =
                 "aikit/Classes/openaichatcompletionsstreamresult",
                 "aikit/Classes/openaichathelper",
                 "aikit/Classes/openaichoice",
+                "aikit/Classes/openaiembedding",
+                "aikit/Classes/openaiembeddingsapi",
+                "aikit/Classes/openaiembeddingsparameters",
+                "aikit/Classes/openaiembeddingsresult",
                 "aikit/Classes/openaierror",
                 "aikit/Classes/openaiimage",
                 "aikit/Classes/openaiimageparameters",
@@ -2897,17 +2910,17 @@ module.exports =
         {
           type: "link",
           label: "4D Progress",
-          href: "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Progress.100-7545461.en.html"
+          href: "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Progress.100-7614210.en.html"
         },
         {
           type: "link",
           label: "4D SVG",
-          href: "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-SVG-Component.100-7546332.en.html"
+          href: "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-SVG-Component.100-7614300.en.html"
         },
         {
           type: "link",
           label: "4D Widgets",
-          href: "https://doc.4d.com/4Dv20R9/4D/20-R9/4D-Widgets.100-7546981.en.html"
+          href: "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Widgets.100-7614949.en.html"
         },
         "Extensions/develop-components",
         "Extensions/develop-plug-ins"

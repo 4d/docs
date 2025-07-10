@@ -282,7 +282,7 @@ Des solutions alternatives sont disponibles pour déclarer des champs ou des mé
 
 ### Référencement de champs à l'aide de la structure virtuelle
 
-4D View Pro vous permet de référencer les champs 4D en utilisant la structure virtuelle de la base de données, c'est-à-dire déclarée par les commandes [`SET TABLE TITLES`](../commandes-legacy/set-table-titles.md) et/ou [`SET FIELD TITLES`](../commandes-legacy/set-field-titles.md) avec le paramètre \*. Cette solution alternative peut être utile si votre application s'appuie déjà sur une structure virtuelle (sinon, [il est recommandé d'utiliser `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area. **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément.
 
 > **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 

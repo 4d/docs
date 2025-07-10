@@ -5,9 +5,10 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                              |
-| ----- | ------------------------------- |
-| 20 R2 | .sjsドキュメントをサポート |
+| リリース  | 内容                                                            |
+| ----- | ------------------------------------------------------------- |
+| 20 R9 | Trigger of callback function after custom functions completed |
+| 20 R2 | .sjsドキュメントをサポート                               |
 
 </details>
 

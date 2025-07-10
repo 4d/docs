@@ -21,8 +21,8 @@ O comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->re
 Em *rangeObj*, passe um intervalo que contenha o estilo a ser recuperado.
 
 - Se *rangeObj* contiver um intervalo de células, o estilo da célula será retornado.
-- If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
-- If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
+- Se *rangeObj* contiver um intervalo que não seja um intervalo de células, o estilo da primeira célula do intervalo será retornado.
+- Se *rangeObj* contiver vários intervalos, somente o estilo da primeira célula do primeiro intervalo será retornado.
 
 ## Exemplo
 

@@ -35,10 +35,10 @@ Imaginons que vous créez une base pour le marché international. Vous voulez po
 ```4d
   // Méthode objet de la liste hiérarchique listeHL
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        var listeHL : Integer
        listeHL:=Load list("Options"+<>gaLangueCourante)
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
        CLEAR LIST(listeHL;*)
  End case
 ```

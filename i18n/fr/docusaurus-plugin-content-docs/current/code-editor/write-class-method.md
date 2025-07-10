@@ -274,7 +274,7 @@ La plupart de ces raccourcis peuvent être personnalisés dans la boîte de dial
 
 4D utilise des techniques d'édition de texte standard pour la saisie et la modification dans l'Éditeur de code.
 
-L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. Vous pouvez [personnaliser ces conventions](#editing-area). Au fur et à mesure que vous tapez, lorsque vous validez votre saisie, 4D évalue le texte de la ligne et applique le format d'affichage approprié. 4D indente également chaque ligne à son niveau approprié par rapport à la ligne précédente lorsque vous utilisez des structures de programmation (If, End if...).
+L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. L'Éditeur de code utilise des conventions d'affichage (style, couleur) pour les éléments de syntaxe. Au fur et à mesure que vous tapez, lorsque vous validez votre saisie, 4D évalue le texte de la ligne et applique le format d'affichage approprié. 4D indente également chaque ligne à son niveau approprié par rapport à la ligne précédente lorsque vous utilisez des structures de programmation (If, End if...).
 
 Vous pouvez utiliser les touches fléchées pour vous déplacer rapidement d'une ligne à l'autre. Utiliser les touches fléchées pour se déplacer sur plusieurs lignes est plus rapide que de cliquer car l'éditeur retarde l'évaluation de la ligne pour les erreurs.
 
@@ -834,7 +834,7 @@ La prise en charge des macros peut changer d'une version de 4D à l'autre. Afin 
 
 #### Variables de sélection de texte pour les méthodes
 
-Il est recommandé de gérer les sélections de texte à l'aide des commandes [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) et [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) . Ces commandes peuvent être utilisées pour surmonter le cloisonnement des espaces d'exécution du projet hôte/composant et ainsi permettre la création de composants dédiés à la gestion des macros. Afin d'activer ce mode pour une macro, vous devez déclarer l'attribut Version avec la valeur 2 dans l'élément Macro. Dans ce cas, 4D ne gère plus les variables prédéfinies _textSel, _textReplace, etc. et les commandes [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) et [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) sont utilisées. Cet attribut doit être déclaré comme suit :
+Il est recommandé de gérer les sélections de texte à l'aide des commandes [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) et [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) . Ces commandes peuvent être utilisées pour surmonter le cloisonnement des espaces d'exécution du projet hôte/composant et ainsi permettre la création de composants dédiés à la gestion des macros. Afin d'activer ce mode pour une macro, vous devez déclarer l'attribut Version avec la valeur 2 dans l'élément Macro. Ces commandes peuvent être utilisées pour surmonter le cloisonnement des espaces d'exécution du projet hôte/composant et ainsi permettre la création de composants dédiés à la gestion des macros. Cet attribut doit être déclaré comme suit :
 
 `<macro name="MyMacro" version="2">`<br/> `--- Text of the macro ---`<br/> `</macro>`
 

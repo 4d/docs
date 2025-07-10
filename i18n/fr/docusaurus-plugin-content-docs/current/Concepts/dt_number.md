@@ -125,16 +125,16 @@ Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une 
 
 Une expression qui utilise un opérateur bit à bit renvoie une valeur de type Long, à l'exception de l'opérateur Bit Test, pour lequel l'expression renvoie une valeur booléenne. Le tableau suivant fournit la liste des opérateurs sur les bits et leur syntaxe :
 
-| Opération                        | Opérateur                                            | Syntaxe                                                                                              | Retourne                                   |
-| -------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| ET                               | &                                | Long & Long                                                                      | E. long                    |
-| OU (inclusif) | &#124                            | long &#124; E. long                                              | E. long                    |
-| OU (exclusif) | &#094; &#124 | Long &#094; &#124; Long                                      | E. long                    |
-| Décaler bits à gauche            | << | E. long << E. long | long (voir note n°1)    |
-| Décaler bits à droite            | > >                                                  | E. long >> E. long                                                   | long (voir note n°1)    |
-| Mettre bit à 1                   | ?+                                                   | long ?+ E. E. long                                                   | long (voir note n°2)    |
-| Mettre bit à 0                   | ?-                                                   | long ??                                                                                              | long (voir note n°2)    |
-| Tester bit                       | ??                                                   | long \^&#124; E. E. long                        | Booléen (voir note n°2) |
+| Opération                        | Opérateur                                            | Syntaxe                                                                           | Retourne                                   |
+| -------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------ |
+| ET                               | &                                | Long & Long                                                   | E. long                    |
+| OU (inclusif) | &#124                            | long &#124; E. long                           | E. long                    |
+| OU (exclusif) | &#094; &#124 | Long &#094; &#124; Long                   | E. long                    |
+| Décaler bits à gauche            | << | long << E. long | long (voir note n°1)    |
+| Décaler bits à droite            | > >                                                  | long >> E. long                                                   | long (voir note n°1)    |
+| Mettre bit à 1                   | ?+                                                   | long ?+ E. E. long                                | long (voir note n°2)    |
+| Mettre bit à 0                   | ?-                                                   | long ??                                                                           | long (voir note n°2)    |
+| Tester bit                       | ??                                                   | long \^&#124; E. E. long     | Booléen (voir note n°2) |
 
 #### Notes
 

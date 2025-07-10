@@ -24,7 +24,7 @@ Vous pouvez configurer cette option en fonction de vos habitudes de travail et d
 
 ### Activer le magnétisme par défaut
 
-Cette option permet d’activer par défaut le magnétisme dans chaque nouvelle fenêtre de l’éditeur de formulaires. Il est possible de modifier cette option individuellement dans chaque fenêtre (cf. paragraphe [Utiliser l’alignement magnétique](FormEditor/formEditor.md#using-the-magnetic-grid)).
+Cette option permet d’activer par défaut le magnétisme dans chaque nouvelle fenêtre de l’éditeur de formulaires. Cette option permet d’activer par défaut le magnétisme dans chaque nouvelle fenêtre de l’éditeur de formulaires.
 
 ## Affichage par défaut à la création
 

@@ -28,7 +28,7 @@ This example is a template for a form method. It shows each of the possible even
  $vpFormTable:=Current form table
  Case of
   // ...
-    :(FORM Event=On Header)
+    :(FORM Event.code=On Header)
   // A header area is about to be printed
        Case of
           :(Before selection($vpFormTable->))
@@ -39,10 +39,10 @@ This example is a template for a form method. It shows each of the possible even
   // Code for a break header level 2 goes here
   // ...
        End case
-    :(FORM Event=On Printing Detail)
+    :(FORM Event.code=On Printing Detail)
   // A record is about to be printed
   // Code for each record goes here
-    :(FORM Event=On Printing Break)
+    :(FORM Event.code=On Printing Break)
   // A break area is about to be printed
        Case of
           :(Level=0)
@@ -51,7 +51,7 @@ This example is a template for a form method. It shows each of the possible even
   // Code for a break level 1 goes here
   // ...
        End case
-    :(FORM Event=On Printing Footer)
+    :(FORM Event.code=On Printing Footer)
        If(End selection($vpFormTable->))
   // Code for the last footer goes here
        Else

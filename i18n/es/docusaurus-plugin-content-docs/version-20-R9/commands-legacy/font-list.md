@@ -52,7 +52,7 @@ En un formulario, usted quiere obtener una lista desplegable que muestre las fue
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        ARRAY TEXT(asFuente;0)
        FONT LIST(asFuente)
   // ...

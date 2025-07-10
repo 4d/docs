@@ -5,6 +5,8 @@ slug: /commands/php-execute
 displayed_sidebar: docs
 ---
 
+<!-- IREF #_command_.PHP Execute.deprecated -->
+
 <!--REF #_command_.PHP Execute.Syntax-->**PHP Execute** ( *rotaScript* {; *nomeFuncao* {; *resultadoPHP* {; *param*} {; *param2* ; ... ; *paramN*}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.PHP Execute.Params-->
 | Parâmetro | Tipo |  | Descrição |

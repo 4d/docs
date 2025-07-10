@@ -33,7 +33,7 @@ Este es el código del botón:
 
 ```4d
  Case of
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
        GOTO OBJECT(textVar) //da el foco a la variable
        OPEN FONT PICKER
  End case

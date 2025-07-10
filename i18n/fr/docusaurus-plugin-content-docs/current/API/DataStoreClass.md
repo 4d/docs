@@ -1024,7 +1024,7 @@ Pour créer un journal des requêtes ORDA côté client, appelez cette fonction 
 
 #### Côté serveur
 
-Pour créer un journal des requêtes ORDA côté serveur, appelez cette fonction sur la machine serveur. Les données du journal sont écrites dans un fichier au format `.jsonl`. Chaque objet représente une requête. Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées.
+Pour créer un journal des requêtes ORDA côté serveur, appelez cette fonction sur la machine serveur. Pour créer un journal des requêtes ORDA côté serveur, appelez cette fonction sur la machine serveur. Chaque objet représente une requête. Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées.
 
 - Si vous avez passé le paramètre *file* , les données du journal sont écrites dans ce fichier, à l'emplacement demandé. - Si vous omettez le paramètre *file* ou s'il est null, les données du journal sont écrites dans un fichier nommé *ordaRequests.jsonl* et stockées dans le dossier "/LOGS".
 - Le paramètre *options* peut être utilisé pour spécifier si la réponse du serveur doit être enregistrée et si elle doit inclure le corps du message. Par défaut, lorsque le paramètre est omis, la réponse complète est enregistrée. Les constantes suivantes peuvent être utilisées dans ce paramètre :

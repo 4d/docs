@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly webform components. This class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass).
+A classe `WebForm` contém funções e propriedades que permitem manipular seus componentes de webforms Qodly. Essa classe está detalhada na [documentação de Qodly](https://developer.qodly.com/docs/language/WebFormClass).
 
 <details><summary>História</summary>
 
@@ -60,7 +60,7 @@ Essa função não faz nada se:
 
 Se você [enable](#enablestate) ou desativar vários estados na mesma função de usuário, todas as modificações são enviadas em simultâneo, para o cliente quando a função termina.
 
-For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
+Para obter mais informações sobre estados de formulários da Web, consulte [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
 ### .enableState()
 
@@ -85,11 +85,11 @@ Essa função não faz nada se:
 
 Se você ativar ou [desativar](#disablestate) vários estados dentro da mesma função de usuário, todas as modificações serão enviadas ao mesmo tempo, para o cliente quando a função terminar.
 
-For more information on web form states, please refer to [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
+Para obter mais informações sobre estados de formulários da Web, consulte [developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states).
 
 #### Exemplo
 
-You enable a specific state named "wrongCredentials" in case of error in your login page:
+Você ativa um estado específico chamado "wrongCredentials" em caso de erro em sua página de conexão:
 
 ```4d
 Function authenticationError()
@@ -114,7 +114,7 @@ Function authenticationError()
 
 A função `.setError()` <!-- REF #WebFormClass.setError().Summary -->envia *msg* como uma mensagem de erro para o formulário web<!-- END REF -->.
 
-For more information, please refer to the [`.setError()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#seterror).
+Para mais informações, consulte a descrição [`.setError()` na documentação Qodly](https://developer.qodly.com/docs/language/WebFormClass#seterror).
 
 ### .setMessage()
 
@@ -132,7 +132,7 @@ For more information, please refer to the [`.setError()` description in the Qodl
 
 A função `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envia *msg* como uma mensagem de informação para o formulário da Web<!-- END REF -->.
 
-For more information, please refer to the [`.setMessage()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
+Para mais informações, consulte a descrição [`.setMessage()` na documentação Qodly](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
 
 ### .setWarning()
 
@@ -150,7 +150,7 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 
 A função `.setWarning()` <!-- REF #WebFormClass.setWarning().Summary -->envia *msg* como uma mensagem de aviso para o formulário web<!-- END REF -->.
 
-For more information, please refer to the [`.setWarning()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
+Para mais informações, consulte a descrição [`.setWarning()` na documentação Qodly](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
 
 ## Web Form
 
@@ -184,6 +184,6 @@ Para obter mais informações, consulte a [descrição do comando `webForm` na d
 
 #### Descrição
 
-The `Web Event` command <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a webform component<!-- END REF -->.
+O comando `Web Event` <!-- REF #_command_.Web Event.Summary -->retorna um objeto com informações sobre um evento acionado vinculado a um componente de formulário da Web<!-- END REF -->.
 
-For more information, please refer to the [`webEvent` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webevent).
+Para obter mais informações, consulte a [descrição do comando `webEvent` na documentação de Qodly](https://developer.qodly.com/docs/language/WebFormClass#webevent).

@@ -55,7 +55,12 @@ Le type d'objet définit le type d'objet à styler et correspond au sélecteur d
 
 Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-> Le type d'objet correspond à la propriété JSON [ type](FormObjects/properties_Object.md#type) des objets de formulaire.
+:::note
+
+- Le type d'objet correspond à la propriété JSON [ type](FormObjects/properties_Object.md#type) des objets de formulaire.
+- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+
+:::
 
 Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
@@ -197,7 +202,7 @@ text[text|=Hello]
 
 Les Media queries sont utilisées pour appliquer des schémas de couleurs à une application.
 
-Une requête média est composée d'une fonctionnalité média et d'une valeur (`\<fonctionnalité média>:\<valeur>`).
+A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
 
 Fonctionnalités média disponibles :
 

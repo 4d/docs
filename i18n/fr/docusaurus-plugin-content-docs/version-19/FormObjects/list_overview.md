@@ -83,7 +83,6 @@ Il est possible de modifier l’apparence d’une liste hiérarchique dans un fo
 - `OBJECT SET FONT`
 - `OBJECT SET FONT STYLE`
 - `OBJECT SET FONT SIZE`
-- `OBJECT SET COLOR`
 - `OBJECT SET FILTER`
 - `OBJECT SET ENTERABLE`
 - `OBJECT SET SCROLLBAR`

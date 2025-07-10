@@ -50,7 +50,7 @@ In a form, you want a drop-down list that displays a list of the fonts available
 
 ```4d
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        ARRAY TEXT(asFont;0)
        FONT LIST(asFont)
   // ...

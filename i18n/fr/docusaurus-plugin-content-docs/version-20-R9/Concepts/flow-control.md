@@ -177,7 +177,7 @@ A titre de comparaison, voici la version avec `If...Else...End if` de la même m
  End if
 ```
 
-Rappelez-vous qu’avec une structure de type `Case of...Else...End case`, seul le premier cas TRUE rencontré est exécuté. Même si d’autres cas sont TRUE, seules les instructions suivant le premier cas TRUE seront prises en compte.
+Vous pouvez placer une instruction Else après le dernier cas. Même si d’autres cas sont TRUE, seules les instructions suivant le premier cas TRUE seront prises en compte.
 
 Par conséquent, lorsque vous testez dans la même méthode des cas simples et des cas complexes, vous devez placer les cas complexes avant les cas simples, sinon ils ne seront jamais exécutés. Par exemple, si vous souhaitez traiter le cas simple (vResult=1) et le cas complexe (vResult=1) & (vCondition#2) et que vous structurez la méthode de la manière suivante :
 

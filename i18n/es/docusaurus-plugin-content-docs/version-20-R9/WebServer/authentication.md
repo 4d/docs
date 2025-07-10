@@ -133,7 +133,7 @@ Tomemos el ejemplo de una conexión a la Intranet. Supongamos que la dirección 
 | http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.45.67.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-#### $content - Header and Body of the HTTP request
+#### $content - Encabezado y Cuerpo de la petición HTTP
 
 El segundo parámetro (`$content`) es el encabezado y el cuerpo de la petición HTTP enviada por el navegador web. Tenga en cuenta que esta información se pasa a su método base `On Web Authentication` tal cual. Su contenido variará en función de la naturaleza del navegador web que intenta la conexión.
 
@@ -143,13 +143,13 @@ Si su aplicación utiliza esta información, deberá analizar el encabezado y el
 
 #### $IPClient - Dirección IP del cliente web
 
-The `$IPClient` parameter receives the IP address of the browser’s machine. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
+El parámetro `$IPClient` recibe la dirección IP de la máquina del navegador. Esta información puede permitirle distinguir entre las conexiones a la intranet y a Internet.
 
 > 4D devuelve las direcciones IPv4 en un formato híbrido IPv6/IPv4 escrito con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34. Para más información, consulte la sección [Soporte IPv6](webServerConfig.md#about-ipv6-support).
 
 #### $IPServer - Dirección IP del servidor
 
-The `$IPServer` parameter receives the IP address used to call the web server. 4D permite el multi-homing, que permite explotar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
+El parámetro `$IPServer` recibe la dirección IP utilizada para llamar al servidor web. 4D permite el multi-homing, que permite explotar máquinas con más de una dirección IP. Para más información, consulte la [página Configuración](webServerConfig.md#ip-address-to-listen).
 
 #### $user y $password - Nombre de usuario y contraseña
 
@@ -159,7 +159,7 @@ Generalidades Generalidades Generalidades Generalidades Generalidades Generalida
 
 #### $accept - Retorno de función
 
-The `On Web Authentication` database method returns a boolean:
+El método base `On Web Authentication` devuelve un booleano:
 
 - Si es True, la conexión es aceptada.
 
@@ -169,7 +169,7 @@ El método base `On Web Connection` sólo se ejecuta si la conexión ha sido ace
 
 :::warning
 
-- If no value is returned, the connection is considered as **accepted** and the `On Web Connection` database method is executed.
+- Si no se devuelve ningún valor, la conexión se considera **aceptada** y se ejecuta el método base de datos `On Web Connection`.
 - No llame a ningún elemento de la interfaz en el método base `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque de lo contrario su ejecución será interrumpida y la conexión será rechazada. Lo mismo ocurrirá si se produce un error durante su procesamiento.
 
 :::

@@ -24,7 +24,7 @@ Ces principes sont détaillés dans la page du [Générateur d'application](buil
 
 ## Ouvrir un projet distant
 
-La première fois que vous vous connectez à un projet 4D Server via un 4D distant, vous utiliserez généralement la boîte de dialogue de connexion standard. Par la suite, vous pourrez vous connecter directement en utilisant le menu **Ouvrir projets récents** ou un fichier de raccourci 4DLink.
+La première fois que vous vous connectez à un projet 4D Server via un 4D distant, vous utiliserez généralement la boîte de dialogue de connexion standard. A chaque fois que 4D effectue une action **Enregistrer tout** depuis l'environnement de développement (explicitement depuis le menu **Fichier** ou implicitement en passant en mode application par exemple), 4D Server recharge de manière synchrone les fichiers du projet.
 
 Pour vous connecter à distance à un projet 4D Server :
 

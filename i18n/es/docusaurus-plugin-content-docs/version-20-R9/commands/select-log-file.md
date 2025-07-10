@@ -25,7 +25,7 @@ If you pass an empty string in *logFile*, **SELECT LOG FILE** presents an Save F
 
 **Note:** The new log file is not generated immediately after execution of the command, but after the next backup (the parameter is kept in the data file and will be taken into account even if the database is closed in the meantime) or a call to the [New log file](new-log-file.md) command. Puede llamar al comando [BACKUP](../commands-legacy/backup.md) para activar la creación del archivo de registro.
 
-If you pass *\** in *logFile*, **SELECT LOG FILE** closes the current log file for the database. The OK variable is set to 1 when the log file is closed.
+If you pass *\** in *logFile*, **SELECT LOG FILE** closes the current log file for the database. La variable OK toma el valor 1 cuando se cierra el archivo de registro.
 
 ## Variables y conjuntos sistema
 

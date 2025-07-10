@@ -26,7 +26,7 @@ Pour démarrer directement le compactage du fichier de données ou de structure,
 
 > Le compactage entraînant la duplication du fichier d’origine, le bouton est désactivé si la place sur le disque contenant le fichier est insuffisante.
 
-Cette opération défragmente le fichier principal ainsi que les éventuels fichiers d’index. 4D effectue une copie des fichiers d’origine et les place dans un dossier nommé **Replaced Files (Compacting)**, créé à côté du fichier d’origine. Si vous effectuez plusieurs compactages, un nouveau dossier est créé à chaque fois. Il est nommé “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, etc. Vous pouvez modifier le dossier dans lequel les fichiers d’origine sont sauvegardés via le mode avancé.
+Cette opération défragmente le fichier principal ainsi que les éventuels fichiers d’index. Cette opération défragmente le fichier principal ainsi que les éventuels fichiers d’index. Si vous effectuez plusieurs compactages, un nouveau dossier est créé à chaque fois. Il est nommé “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, etc. Vous pouvez modifier le dossier dans lequel les fichiers d’origine sont sauvegardés via le mode avancé.
 
 A l’issue de l’opération, les fichiers défragmentés remplacent automatiquement les fichiers d’origine. L'application est immédiatement opérationnelle sans aucune autre manipulation.
 

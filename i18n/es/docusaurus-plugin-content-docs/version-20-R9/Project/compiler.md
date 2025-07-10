@@ -136,7 +136,7 @@ Estas opciones solo se mantienen por compatibilidad con código antiguo. Para m�
 En proyectos convertidos, se recomienda [habilitar el modo de escritura directa](#enabling-direct-typing) y escribir código de declaración conforme, por ejemplo:
 
 - declarar explícitamente todas las variables [usando palabras clave `var`](../Concepts/variables.md#declaring-variables)
-- declarar explícitamente todos los parámetros en prototipos de funciones (es decir, usando las palabras clave `Function` o `Class Constructor`) o con `#DECLARE` en métodos (ver [Declarando parámetros](../Concepts/parameters.md#declaring-parameters)).
+- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
 
 #### Enabling direct typing
 

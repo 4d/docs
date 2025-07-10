@@ -23,7 +23,7 @@ El siguiente ejemplo cambia la posición de los números de página en un inform
 
 ```4d
  Case of
-    :(FORM Event=On Printing Footer)
+    :(FORM Event.code=On Printing Footer)
        If((Printing page% 2)=0) // Modulo es 0 para un número de página par
           vNumPagIzq:=String(Printing page) // Fijar el número de página a la izquierda
           vNumPagDer:="" // Borrar el número de página a la derecha

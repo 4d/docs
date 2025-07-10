@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-O comando **WP Insert picture** <!--REF #_command_.WP Insira a imagem. ummary--> insere uma *imagem* ou um *pictureFileObj* no *targetObj* especificado de acordo com os parâmetros *modo* de inserção passada e *rangeUpdate*, e retorna uma referência ao elemento imagem. !-- FIM REF--> A imagem será inserida como um caractere no *targetObj*.
+O comando **WP Insert picture** <!--REF #_command_.WP Insert picture.Summary--> insere uma *imagem* ou um *pictureFileObj* no *targetObj* especificado de acordo com os parâmetros *modo* de inserção passada e *rangeUpdate*, e retorna uma referência ao elemento imagem. <!-- END REF--> A imagem será inserida como um caractere no *targetObj*.
 
 Em *targetObj*, pode-se passar:
 
@@ -69,13 +69,13 @@ No exemplo a seguir, um usuário seleciona a imagem que deseja inserir no objeto
  var $fail : Boolean
  $fail:=False
  
-  //ask user to choose a picture on the disk that they want to insert
+  //pede ao usuário para escolher uma imagem no disco que queiram inserir
  $imgRef:=Open document("")
-  //if user does not cancel
+  //sse usuário não cancelar
  If(OK=1)
-  //if the file is a supported picture file
+  //se o arquivo não for um arquivo de imagem compatível
     If(Is picture file(document))
-  // insert picture selected by user
+  // insere imagem selecionado pelo usuário
        WP Insert picture($wpRange;document;wk replace)
     Else
        $fail:=True
@@ -83,7 +83,7 @@ No exemplo a seguir, um usuário seleciona a imagem que deseja inserir no objeto
  Else
     $fail:=True
  End if
-  //if the insertion failed, alert the user
+  //se a inserção falhar, alerteo usuário
  If($fail)
     ALERT("Picture insertion failed")
  End if
@@ -91,7 +91,7 @@ No exemplo a seguir, um usuário seleciona a imagem que deseja inserir no objeto
 
 ## Exemplo 2
 
-You want to insert a picture in the body of the documment:
+Se quiser inserir uma imagem no corpo da documentação:
 
 ```4d
 var $file : 4D.File

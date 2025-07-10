@@ -20,7 +20,7 @@ Cet événement est généré lorsque l'ouverture d'une fenêtre pop-up est bloq
 
 Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
-Cet événement est également déclenché après une opération de déposer dans la zone Web (avec des [moteurs](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) système Windows et intégrés) si l'option [Glisser Déposer](../FormObjects/webArea_overview.md#user-interface) est également activée pour la zone. Vous pouvez accepter l'action de déposer en appelant :
+This event is also triggered when a drop operation has been done in the Web area (with embedded and Windows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Vous pouvez accepter l'action de déposer en appelant :
 
 ```4d
 //méthode objet zone web

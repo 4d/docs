@@ -47,7 +47,7 @@ Os valores de entrada e saída são [avaliados](#valores-ou-referências) no mom
 
 :::info Compatibidade
 
-The legacy declaration syntax, where parameters are automatically copied in sequentially numbered local variables $0, $1, etc. and declared using compiler directives such as `C_TEXT($1;$2)`, is **deprecated** as of 4D 20 R7.
+A sintaxe de declaração herdada, em que os parâmetros são automaticamente copiados em variáveis locais numeradas sequencialmente $0, $1, etc. e declarados usando diretivas do compilador, como `C_TEXT($1;$2)`, é **depreciada** a partir de 4D 20 R7.
 
 :::
 
@@ -55,7 +55,7 @@ The legacy declaration syntax, where parameters are automatically copied in sequ
 
 Dentro de métodos ou funções de classe chamados, valores parâmetros são atribuidos à variáveis locais. Normalmente, você declara os parâmetros usando um **nome do parâmetro** junto com um **tipo de parâmetro**, separados por dois pontos.
 
-- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
+- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class constructor` keywords.
 - Para métodos (métodos de projeto, métodos de objeto de formulário, métodos de banco de dados e acionadores), os parâmetros são declarados usando a palavra-chave `#DECLARE` no início do código do método.
 
 Exemplos:
@@ -180,12 +180,12 @@ A instrução `return` pode ser usada junto com a sintaxe padrão para [valores 
 Function getValue -> $v : Integer
 	$v:=10
 	return 20
-	// returns 20
+	// retorna 20
 
 Function getValue -> $v : Integer
 	return 10
 	$v:=20 // never executed
-	// returns 10
+	// retorna 10
 ```
 
 ## Indireção dos parâmetros
@@ -283,9 +283,9 @@ Esse método pode ser chamado com um número variável de parâmetros Real. No c
 
 ```4d
 
-$total1:=SumNumbers // returns 0
-$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
-$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+$total1:=SumNumbers // retorna 0 
+$total2:=SumNumbers(1; 2; 3; 4; 5) // retorna 15
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // erro
 
 ```
 

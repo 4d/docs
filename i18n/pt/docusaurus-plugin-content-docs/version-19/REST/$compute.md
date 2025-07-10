@@ -50,9 +50,9 @@ Se quiser obter todos os cálculos para um atributo do tipo Número, pode escrev
 }
 ````
 
-If you want to get all the computations for an attribute of type String, you can write:
+Se quiser obter todos os cálculos de um atributo do tipo String, você pode escrever:
 
- `GET  /rest/Employee/firstName/?$compute=$all`
+ `GET /rest/Employee/firstName/?$compute=$all`
 
 **Response**:
 
@@ -60,7 +60,7 @@ If you want to get all the computations for an attribute of type String, you can
 {
     "firstName": {
         "count": 4,
-        "min": Anne,
+        "min": Ana,
         "max": Victor
     }
 }

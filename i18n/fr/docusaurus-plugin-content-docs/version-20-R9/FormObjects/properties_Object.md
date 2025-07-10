@@ -92,7 +92,7 @@ Les variables ou expressions peuvent être saisissables ou non saisissables et p
 
 ### Expressions
 
-Vous pouvez utiliser une [expression](Concepts/quick-tour.md#expressions) comme source de données pour un objet. Toute expression 4D valide est autorisée : expression simple, propriété d'objet, formule, fonction 4D, nom de méthode projet ou champ utilisant la syntaxe standard `[Table]Field`. L'expression est évaluée lors de l'exécution du formulaire et réévaluée à chaque événement du formulaire. Notez que les expressions peuvent être [assignables ou non assignables](Concepts/quick-tour.md#expressions).
+Vous pouvez utiliser une [expression](Concepts/quick-tour.md#expressions) comme source de données pour un objet. Toute expression 4D valide est autorisée : expression simple, propriété d'objet, formule, fonction 4D, nom de méthode projet ou champ utilisant la syntaxe standard `[Table]Field`. L'expression est évaluée lors de l'exécution du formulaire et réévaluée à chaque événement du formulaire. L'expression est évaluée lors de l'exécution du formulaire et réévaluée à chaque événement du formulaire.
 
 > Si la valeur saisie correspond à la fois à un nom de variable et à un nom de méthode, 4D considère que vous indiquez la méthode.
 
@@ -148,7 +148,7 @@ Toutefois, cette propriété a une fonction de typage dans les cas spécifiques 
 
 - **[Variables dynamiques](#dynamic-variables)** : vous pouvez utiliser cette propriété pour déclarer le type des variables dynamiques.
 - **[Colonnes de list box](listbox_overview.md#list-box-columns)** : cette propriété est utilisée pour associer un format d'affichage aux données de la colonne. Les formats fournis dépendent du type de variable (list box de type tableau) ou du type de données/de champ (list box de type sélection et collection). Les formats 4D standard qui peuvent être utilisés sont les suivants : Alpha, Numérique, Date, Heure, Image et Booléen. Le type Texte n'a pas de format d'affichage spécifique. Tous les formats personnalisés existants sont également disponibles.
-- **[Variables image](input_overview.md)** : vous pouvez utiliser ce menu pour déclarer les variables avant de charger le formulaire en mode interprété. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Ces mécanismes exigent une plus grande précision dans la configuration des variables : elles doivent avoir été déclarées avant le chargement du formulaire - c'est-à-dire avant même l'événement formulaire `On Load` - à la différence des autres types de variables. Pour cela, il faut soit que l'instruction `var varName : Picture` ait été exécutée avant le chargement du formulaire (typiquement, dans la méthode appelant la commande `DIALOG`), soit que la variable ait été typée au niveau du formulaire en utilisant la propriété type d'expression.
+- **[Variables image](input_overview.md)** : vous pouvez utiliser ce menu pour déclarer les variables avant de charger le formulaire en mode interprété. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Des mécanismes natifs spécifiques régissent l'affichage des variables image dans les formulaires. Ces mécanismes exigent une plus grande précision dans la configuration des variables : elles doivent avoir été déclarées avant le chargement du formulaire - c'est-à-dire avant même l'événement formulaire `On Load` - à la différence des autres types de variables.
   Sinon, la variable image ne sera pas affichée correctement (uniquement en mode interprété).
 
 #### Grammaire JSON

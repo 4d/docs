@@ -28,7 +28,7 @@ L'événement `On Before Keystroke` n'est pas généré :
 
 ### Objets non saisissables
 
-L'événement `On Before Keystroke` peut être généré dans des objets non saisissables, par exemple dans une list box même si les cellules de la list box ne sont pas saisissables ou si les lignes ne peuvent pas être sélectionnées. Cela vous permet de créer des interfaces dans lesquelles l'utilisateur peut faire défiler dynamiquement jusqu'à une ligne spécifique dans une list box en saisissant les premières lettres d'une valeur. Dans le cas où les cellules de la list box sont saisissables, vous pouvez utiliser la commande `Is editing text` pour savoir si l'utilisateur saisit réellement du texte dans une cellule ou s'il utilise la fonction de saisie prédictive, puis exécutez le co
+L'événement `On Before Keystroke` peut être généré dans des objets non saisissables, par exemple dans une list box même si les cellules de la list box ne sont pas saisissables ou si les lignes ne peuvent pas être sélectionnées. Cela vous permet de créer des interfaces dans lesquelles l'utilisateur peut faire défiler dynamiquement jusqu'à une ligne spécifique dans une list box en saisissant les premières lettres d'une valeur. Cela vous permet de créer des interfaces dans lesquelles l'utilisateur peut faire défiler dynamiquement jusqu'à une ligne spécifique dans une list box en saisissant les premières lettres d'une valeur.
 
 ### Séquence d'entrée
 

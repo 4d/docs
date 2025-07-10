@@ -22,7 +22,7 @@ In *rangeObj*, pass a range of cells where the style will be applied. If the *ra
 
 > Borders applied with `VP SET CELL STYLE` will be applied to each cell of the *rangeObj*, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the *rangeObj* as a whole.
 
-The *styleObj* parameter lets you pass an object containing style settings. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. If the *styleObj* contains both an existing style sheet and additional style settings, the existing style sheet is applied first, followed by the additional settings.
+The *styleObj* parameter lets you pass an object containing style settings. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style.
 
 Attribuez la valeur NULL pour supprimer un style et rétablir les paramètres de style par défaut (le cas échéant) :
 

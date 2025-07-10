@@ -16,13 +16,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibilidad 
-
-<!--REF #_command_.WP Text range.Summary-->**WP Text range** recibió el nombre **WP Get range** en versiones anteriores de 4D Write Pro.<!-- END REF--> Ha sido renombrado para mayor claridad.
-
 ## Descripción 
 
-El comando **WP Text range** devuelve un nuevo de rango de selección (objRange) que contiene los caracteres ubicados entre *rangoInicio* y *rangoFin* en el área 4D Write Pro *wpArea*.
+<!--REF #_command_.WP Text range.Summary-->El comando **WP Text range** devuelve un nuevo de rango de selección (objRange) que contiene los caracteres ubicados entre *rangoInicio* y *rangoFin* en el área 4D Write Pro *wpArea*.<!-- END REF-->
 
 Un **objeto rango de texto 4D Write Pro** se puede utilizar para manejar los atributos de una parte del documento (especialmente con los comandos [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md)). Para más información, consulte el párrafo *Comandos de gestión de rangos*.
 

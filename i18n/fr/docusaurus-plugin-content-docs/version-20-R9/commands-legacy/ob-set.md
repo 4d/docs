@@ -153,7 +153,7 @@ Vous souhaitez exporter des données en JSON contenant une date 4D que vous souh
 Dans la méthode d'un formulaire contenant une zone 4D Write Pro, vous pouvez écrire :
 
 ```4d
- If(FORM Event=On Validate)
+ If(FORM Event.code=On Validate)
     OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
     OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
  End if

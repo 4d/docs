@@ -13,9 +13,9 @@ As funções e propriedades da classe 4D estão disponíveis através de objecto
 
 As seguintes convenções são utilizadas na sintaxe da função:
 
-- os caracteres `{ }` (chaves) indicam parâmetros opcionais. For example, `.delete( { option : Integer } )` means that the *option* parameter may be omitted when calling the function.
-- a notação `{ ; ...param }` indica um número ilimitado de parâmetros. For example, `.concat( value : any { ;...valueN } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
-- the `any` keyword is used for parameters that can be of any type that can be stored within attributes (number, text, boolean, date, time, object, collection...).
+- os caracteres `{ }` (chaves) indicam parâmetros opcionais. Por exemplo, `.delete( { option : Integer } )` significa que o parâmetro *option* pode ser omisso ao chamar a função.
+- a notação `{ ; ...param }` indica um número ilimitado de parâmetros. Por exemplo, `.concat( value : any { ;...valueN } ): Collection` significa que um número ilimitado de valores de qualquer tipo pode ser passado para a função.
+- a palavra-chave `any` é usada para parâmetros que podem ser de qualquer tipo que possa ser armazenado em atributos (número, texto, booleano, data, hora, objeto, coleção...).
 
 ## Veja também
 

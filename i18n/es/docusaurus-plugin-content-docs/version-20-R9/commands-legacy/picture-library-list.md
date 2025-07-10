@@ -14,7 +14,13 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Descripción 
+## Descripción
+
+:::warning
+
+Este comando no puede utilizarse en proyectos porque la librería de imágenes sólo está disponible en bases de datos binarias. 
+
+:::
 
 <!--REF #_command_.PICTURE LIBRARY LIST.Summary-->El comando PICTURE LIBRARY LIST devuelve los números de referencia y los nombres de las imágenes almacenadas en la librería de imágenes de la base de datos.<!-- END REF--> 
 

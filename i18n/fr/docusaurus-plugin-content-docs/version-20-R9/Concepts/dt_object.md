@@ -111,7 +111,7 @@ $col:=$o.col[5] //6
 Vous pouvez créer deux types d'objets :
 
 - regular (non-shared) objects, using the [`New object`](../commands-legacy/new-object.md) command or object literal syntax (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
-- shared objects, using the [`New shared object`](../commands-legacy/new-shared-object.md) command. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs.
+- Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. shared objects, using the [`New shared object`](../commands-legacy/new-shared-object.md) command.
   Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
 ## Propriétés

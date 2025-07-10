@@ -31,7 +31,7 @@ O comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In the *onlyData* parameter, you can pass one of the following constants to indicate if you want to get the data only:
+No parâmetro *onlyData* pode passar uma das constantes abaixo se deseja obter apenas os dados:
 
 | Parâmetros            | Valor | Descrição                                                                                                        |
 | --------------------- | ----- | ---------------------------------------------------------------------------------------------------------------- |

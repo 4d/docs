@@ -41,7 +41,7 @@ The Label page contains several areas with settings for designing and formatting
 
 ### Lista de campos
 
-Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. The fields in the related table are indented. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
+Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. Los campos de la tabla relacionada están indentados. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
 
 :::note Notas
 
@@ -136,7 +136,7 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Labels per record**: Sets the number of copies to print for each label (copies are printed consecutively).
 - **Print Setup...**: Sets the format of the page on which the sheet of labels will be printed. When you click this button, the setup dialog box for the printer selected in your system appears. By default, the sheet of labels is generated based on an A4 page in portrait mode.
   **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
-- **Unit**: Changes the units in which you specify your label and label page measurements. You can use points, millimeters, centimeters, or inches.
+- **Unit**: Changes the units in which you specify your label and label page measurements. Puede utilizar puntos, milímetros, centímetros o pulgadas.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. The Width and Height parameters can no longer be set manually.
 - **Width** and **Height**: Sets the height and width of each label manually. They cannot be edited when the **Automatic resizing** option is checked.
 - **Márgenes** (Superior, Derecho, Izquierdo, Inferior): define los márgenes de su hoja. These margins are symbolized by blue lines in the preview area. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).

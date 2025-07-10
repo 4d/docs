@@ -15,7 +15,7 @@ La classe `WebSocketServer` vous permet de créer et configurer un serveur WebSo
 
 :::note À propos des serveurs WebSocket
 
-Le protocole WebSocket fournit un canal de communication full-duplex entre un serveur WebSocket et un client (par exemple un navigateur Web). Pour plus d'informations sur les serveurs WebSocket, lisez [cette page sur Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
+Le protocole WebSocket fournit un canal de communication full-duplex entre un serveur WebSocket et un client (par exemple un navigateur Web). Représente le chemin d'accès au serveur WebSocket.
 
 :::
 

@@ -14,13 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibilidad 
-
-<!--REF #_command_.WP Picture range.Summary-->**WP Picture range** recibió el nombre de **WP Get pictures** en versiones anteriores de 4D Write Pro.<!-- END REF--> Ha sido renombrado por claridad.
-
 ## Descripción 
 
-El nuevo comando **WP Picture range** devuelve un objeto rango específico que referencia únicamente las imágenes contenidas en *rangoObj* que haya pasado en parámetro. El objeto rango de imágenes devuelto debe ser utilizado con [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar los atributos de imágenes.
+<!--REF #_command_.WP Picture range.Summary-->El comando **WP Picture range** devuelve un objeto rango específico que referencia únicamente las imágenes contenidas en *rangoObj* que haya pasado en parámetro.<!-- END REF--> El objeto rango de imágenes devuelto debe ser utilizado con [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar los atributos de imágenes.
 
 En *rangoObj*, puede pasar:
 

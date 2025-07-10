@@ -107,10 +107,10 @@ Una vez este método de proyecto se añada a su aplicación, puede utilizarlo de
 ```4d
   // Método de objeto del área de entrada MiObjeto
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        MiObjeto:=""
        MiObjetoCaché:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Manejo tecleo(->MiObjeto;->MiObjetoCaché))
   // Efectuar las acciones apropiadas utilizando el valor almacenado en MiObjetoCaché
        End if
@@ -128,12 +128,12 @@ Este es el método de objeto *vsBusqueda*:
 ```4d
   // Método de objeto del área de entrada vsBusqueda
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsBusqueda:=""
        vsResult:=""
        vsMensaje:="Introduzca los primeros caracteres de la ciudad que busca."
        CLEAR VARIABLE(asBusqueda)
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Manejo tecleo(->vsBusqueda;->vsResult))
           If(vsResult#"")
              QUERY([Codigos postales];[Codigos postales]Ciudad=vsResult+"@")

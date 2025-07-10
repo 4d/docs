@@ -102,13 +102,13 @@ Se precisar salvar as escolhas do usuário em um campo, precisa usar uma declara
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) //new record
-          aCities:=3 //display a default value
-       Else //existing record, display stored value
+       If(Record number([People])<0) //novo registro
+          aCities:=3 //exibe um valor padrão
+       Else //registro existente, exibe o valor armazenado
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) //user modified selection
-       City:=aCities{aCities} //field gets new value
+    :(Form event=On Clicked) //seleção modificada pelo usuário
+       City:=aCities{aCities} //campo recebe novo valor
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
@@ -136,7 +136,7 @@ Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou
 
 #### Valor do item selecionado ou Referência do item selecionado
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type-list) property to **Selected item value** or **Selected item reference**. Essa opção permite otimizar o tamanho dos dados salvos.
+Quando você tiver associado uma lista suspensa com uma lista de escolha e com um campo ou uma variável, você pode definir a propriedade [**Tipo de dados**](properties_DataSource.md#data-type-list) para **O valor do item selecionado** ou **Referência do item selecionado**. Essa opção permite otimizar o tamanho dos dados salvos.
 
 ### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 

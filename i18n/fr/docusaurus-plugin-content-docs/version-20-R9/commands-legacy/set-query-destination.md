@@ -109,7 +109,7 @@ Vous créez un formulaire qui affiche les enregistrements de la table *\[Annuair
   // Méthode objet de l'onglet asRolodex
  Case of
  
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
   // Avant que le formulaire s'affiche à l'écran,
   // initialiser l'onglet et le tableau de booléens qui nous indiquent
   // si une recherche pour la lettre sur laquelle vous avez cliqué
@@ -121,7 +121,7 @@ Vous créez un formulaire qui affiche les enregistrements de la table *\[Annuair
           abRechFini{$vlElém}:=False
        End for
  
-    :(FORM Event=On Clicked)
+    :(FORM Event.code=On Clicked)
   // Lorsque l'utilisateur clique sur un onglet, vérifier si une recherche pour cette lettre
   // a été exécutée ou pas
        If(Not(abRechFini{asRolodex}))
@@ -141,7 +141,7 @@ Vous créez un formulaire qui affiche les enregistrements de la table *\[Annuair
           USE NAMED SELECTION("Rolodex"+asRolodex{asRolodex})
        End if
  
-    :(FORM Event=On Unload)
+    :(FORM Event.code=On Unload)
   // Après que le formulaire disparaît de l 'écran
   // Effacer les sélections temporaires de la mémoire
        For($vlElem;1;26)

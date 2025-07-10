@@ -34,7 +34,7 @@ Se o objetivo retornado incluir uma data ou hora, é tratado como uma datetime e
 - valor hora - a porção da data se completa como dezembro, 30, 1899 em formato dd/MM/yyyy
 - valor data - a parte da hora se completa como meia noite no formato HH:mm:ss (00:00:00)
 
-If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. O comando retorna um objeto null se a célula estiver vazia.
+Se *rangeObj* contiver várias células ou vários intervalos, o valor da primeira célula é retornado. O comando retorna um objeto null se a célula estiver vazia.
 
 ## Exemplo
 

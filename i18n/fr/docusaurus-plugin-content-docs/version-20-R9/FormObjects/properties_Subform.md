@@ -27,6 +27,8 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 - un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
     You can select a component form name when it is published in the component.\
+    In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
+    You can select a component form name when it is published in the component.\
     You can select a component form name when it is published in the component.
 
 > Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic).
@@ -156,6 +158,9 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 
 - **None**: Rows cannot be selected if this mode is chosen. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](#enterable-in-list) soit activée. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
 - **Single**: One row at a time can be selected in this mode. Un clic sur une ligne la sélectionne. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
+    The Up and Down arrow keys select the previous/next row in the list.\
+    A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
+    The Up and Down arrow keys select the previous/next row in the list.\
     The Up and Down arrow keys select the previous/next row in the list.\
     A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
     The Up and Down arrow keys select the previous/next row in the list.\

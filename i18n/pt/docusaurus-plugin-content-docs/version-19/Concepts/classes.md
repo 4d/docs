@@ -271,7 +271,7 @@ $area:=$rect.getArea() //5000
 
 ```4d
 // Class: MyClass
-// Class constructor of MyClass
+Class constructor({$parameterName : type; ...})
 // código
 ```
 
@@ -293,7 +293,7 @@ Para uma função class constructor, o comando `Current method name` retorna: `<
 ```4d
 // Class: MyClass
 // Class constructor of MyClass
-Class Constructor ($name : Text)
+Class constructor ($name : Text)
  This.name:=$name
 ```
 
@@ -485,10 +485,12 @@ $val:=$o.f() //42
 Quando se utiliza uma função [construtora de classe](#class-constructor) (com a função [`new()`](API/ClassClass.md#new) ), a sua `Esta` está ligada ao novo objecto que está a ser construído.
 
 ```4d
-//Class: ob Class Constructor  
+//Class: ob
 
- // Create properties on This as
- // desired by assigning to them
+Class constructor  
+
+ // Crie propriedades nisto como
+ // desejado ao atribuir-lhes
  This.a:=42 
 ```
 

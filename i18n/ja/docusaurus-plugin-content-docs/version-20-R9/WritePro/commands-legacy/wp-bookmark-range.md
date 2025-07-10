@@ -15,13 +15,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## 互換性に関する注意 
-
-<!--REF #_command_.WP Bookmark range.Summary-->**WP Bookmark range** was named **WP Get bookmark range** in previous versions of 4D Write Pro.<!-- END REF--> It has been renamed for clarity. 
-
 ## 説明 
 
-**WP Bookmark range** コマンドは、*wpDoc*引数で指定した4D Write Proドキュメント内の、*bkName*引数で指定されたブックマークのレンジを格納したテキストレンジオブジェクト(rangeObj)を返します。
+<!--REF #_command_.WP Bookmark range.Summary-->**WP Bookmark range** コマンドは、*wpDoc*引数で指定した4D Write Proドキュメント内の、*bkName*引数で指定されたブックマークのレンジを格納したテキストレンジオブジェクト(rangeObj)を返します。<!-- END REF-->
 
 *bkName* のブックマークが*wpDoc* のドキュメント内に存在しない場合、空のrangeObjオブジェクトが返されます。
 

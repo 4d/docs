@@ -13,6 +13,12 @@ Gracias al *refcounting* estándar de los objetos 4D, una TCPConnection se liber
 
 Los objetos TCPConnection se liberan cuando ya no existen referencias a ellos en memoria. Esto ocurre típicamente, por ejemplo, al final de una ejecución de un método para variables locales. Si desea "forzar" el cierre de una conexión en cualquier momento, [**nulifique** sus referencias poniéndolas en **Null**](../Concepts/dt_object.md#resources).
 
+:::info 4DTCPUDPLog.txt file
+
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to TCP connections. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
+
+:::
+
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                                  |

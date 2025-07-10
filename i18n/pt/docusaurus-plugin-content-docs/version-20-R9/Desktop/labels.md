@@ -105,7 +105,7 @@ The left-hand side of the tool bar includes commands for selecting and inserting
 | ![](../assets/en/Desktop/label-tool3.png) | Criação de retângulo | For Rectangle or Rounded rectangle.                                                                                                                                                                                        |
 | ![](../assets/en/Desktop/label-tool4.png) | Criação de círculo   |                                                                                                                                                                                                                                            |
 | ![](../assets/en/Desktop/label-tool5.png) | Inserção de texto    | Draw a rectangle and enter text inside it. You can edit any text area, including those containing field references, by double-clicking it.                                                                 |
-| ![](../assets/en/Desktop/label-tool6.png) | Inserção de fórmula  | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                                                  |
+| ![](../assets/en/Desktop/label-tool6.png) | Inserção de fórmula  | Desenhe um retângulo para exibir o **Editor de fórmulas**, onde você pode definir o conteúdo dinâmico das etiquetas (campos e fórmulas).                                                                |
 
 There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
 
@@ -133,7 +133,7 @@ The Layout page contains controls for printing labels based on the requirements 
 
 - **Ordem de etiquetas**: especifica se os rótulos devem ser impressos na direção das linhas ou das colunas.
 - **Linhas** e **Colunas**: coloque o número de etiquetas a serem impressas por "linha" e por "coluna" em cada folha. These settings determine the label size when the "Automatic resizing" option is enabled.
-- **Labels per record**: Sets the number of copies to print for each label (copies are printed consecutively).
+- **Etiquetas por registro**: define o número de cópias a serem impressas para cada etiqueta (as cópias são impressas consecutivamente).
 - **Print Setup...**: Sets the format of the page on which the sheet of labels will be printed. When you click this button, the setup dialog box for the printer selected in your system appears. By default, the sheet of labels is generated based on an A4 page in portrait mode.
   **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
 - **Unidade**: altera as unidades nas quais você especifica as medidas da etiqueta e da página da etiqueta. You can use points, millimeters, centimeters, or inches.
@@ -221,7 +221,7 @@ You can drag and drop label files from your desktop onto the label design area.
 Os desenhos das etiquetas são gerenciados usando os botões **Carregar** e **Salvar** da barra de ferramentas.
 
 - To load a label design, click on the **Load** button and designate the design you want to load by means of the File Open dialog box (if a label design is already present in the wizard, 4D replaces it by the one you have loaded).
-- To save a label design, click on the **Save** button and indicate the name and location of the design to be created.
+- Para salvar um design de etiqueta, clique no botão **Salvar** e indique o nome e o local do design a ser criado.
 
 ### File format
 

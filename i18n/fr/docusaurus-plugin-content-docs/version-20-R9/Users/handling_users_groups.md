@@ -175,10 +175,10 @@ Les groupes sont hiérarchisés afin que les privilèges soient correctement aff
 - Le groupe Direction générale ne contient que les utilisateurs de “haut niveau”.
   ![](../assets/en/Users/schema1.png)
 
-- Le groupe Dir. finance contient les utilisateurs du groupe Direction générale.
+- finance contient les utilisateurs du groupe Direction générale.
   ![](../assets/en/Users/schema2.png)
 
-- Le groupe Comptabilité contient des opérateurs de saisie mais aussi les utilisateurs des groupes Dir. finance et donc Direction générale.
+- Le groupe Comptabilité contient des opérateurs de saisie mais aussi les utilisateurs des groupes Dir. finance et donc Direction générale. Super_Utilisateur et Administrateur
   Super_Utilisateur et Administrateur
 
 Vous pouvez ensuite décider des privilèges affectés à chaque groupe suivant le niveau de responsabilité des utilisateurs qu’il contient.
@@ -207,7 +207,7 @@ Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans
 Ce fichier peut être stocké aux emplacements suivants, en fonction de vos besoins :
 
 - Si vous souhaitez utiliser le même répertoire pour tous les fichiers de données (ou si vous utilisez un seul fichier de données), stockez le fichier **directory.json** dans le dossier des paramètres de l'utilisateur, c'est-à-dire dans le dossier "Settings" au [même niveau que le dossier "Project"](Project/architecture.md#project-folder) (emplacement par défaut).
-- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
+- Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
 
 > Pour permettre des changements sûrs de mots de passe et d'appartenance à des groupes dans un environnement déployé, vous pouvez inclure votre fichier **directory.json** dans l'application serveur pendant le build, en utilisant l'[option correspondante du build application](../Desktop/building.md#incorporer-les-utilisateurs-et-les-groupes-du-projet-dans-l'application-serveur-construite).
 

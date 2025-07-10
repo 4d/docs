@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 By default, if you do not use the **SET ALLOWED METHODS** command, no method is enterable (using an unauthorized method in an expression causes an error).
 
-In the *methodsArray* parameter, pass the name of an array containing the list of methods to allow. The array must have been set previously.
+No parâmetro *methodsArray*, passe o nome de um array que contenha a lista de métodos a serem permitidos. The array must have been set previously.
 
 You can use the wildcard character (@) in method names to define one or more authorized method groups.
 

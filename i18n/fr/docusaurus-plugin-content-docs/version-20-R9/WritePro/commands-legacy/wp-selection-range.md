@@ -17,14 +17,9 @@ displayed_sidebar: docs
 
 *Cette commande n'est pas thread-safe, elle ne peut pas être utilisée dans du code préemptif.*
 
-
-## Compatibilité 
-
-<!--REF #_command_.WP Selection range.Summary-->La commande **WP Selection range** était nommée **WP Get selection** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté. 
-
 ## Description 
 
-La commande **WP Selection range** retourne une nouvelle plage de sélection ou une nouvelle image basée sur la sélection courante dans la zone 4D Write Pro *zoneWP*.
+<!--REF #_command_.WP Selection range.Summary-->La commande **WP Selection range** retourne une nouvelle plage de sélection ou une nouvelle image basée sur la sélection courante dans la zone 4D Write Pro *zoneWP*.<!-- END REF-->
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *zoneWP* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *zoneWP* est un champ ou une variable objet. Si le paramètre *zoneWP* ne désigne pas une zone 4D Write Pro, un objet vide est retourné.
 

@@ -722,7 +722,7 @@ $status:=$transporter.expunge()
 
 La fonction `.getBoxInfo()`<!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->retourne un objet `boxInfo` correspondant à la boîte de réception courante ou à la boîte de réception nommée *name*<!-- END REF -->. Cette fonction retourne les mêmes informations que [`.selectBox()`](#selectbox) mais sans modifier la boite de réception courante.
 
-Dans le paramètre *name* passez le nom de la mailbox à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
+Dans le paramètre optionnel *name* passez le nom de la boite de réception à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
 
 Si la boîte de réception nommée *name* n'est pas sélectionnable ou n'existe pas, la fonction génère une erreur et retourne **null**.
 
@@ -924,7 +924,7 @@ Le paramètre facultatif *options* vous permet de passer un objet définissant d
 
 > - La fonction génère une erreur et retourne **Null** si *msgID* désigne un message non existant,
 > - Si aucune boite de réception n'est sélectionnée avec la [fonction `.selectBox()`](#selectbox), une erreur est générée,
-> - S'il n'y a pas de connexion ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox)\`.
+> - S'il n'y a pas de connexion ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox)\\`.
 
 #### Résultat
 
@@ -1554,7 +1554,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
 
-- Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Elle indique le codage de caractères utilisé dans la chaine *searchCriteria*. Par conséquent, vous devez convertir la chaîne *searchCriteria* dans le jeu de caractères spécifié si vous utilisez l'instruction \[CHARSET] (voir les commandes `CONVERT FROM TEXT` ou `Convert to text`).
+- Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Elle indique le codage de caractères utilisé dans la chaine *searchCriteria*.
   Par défaut, 4D encode la chaîne de critères searchCriteria en "Quotable Printable" si elle contient des caractères étendus.
 
 ```
@@ -1572,7 +1572,8 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 - \*\*Valeurs de type chaîne
   \*\* : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée.
-  Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. La recherche ne tient pas compte de la casse des caractères.
+  Exemple : `searchCriteria = FROM "SMITH"`
+  Pour toutes les clés de recherche qui utilisent des chaînes, un message correspond à la clé si la chaîne est une sous-chaîne du champ. La recherche ne tient pas compte de la casse des caractères.
 
 - **Noms de champs** : Les valeurs de type nom de champ contiennent le nom d’un champ d’en-tête.
   Exemple : `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
@@ -1581,7 +1582,8 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
   Exemple : `searchCriteria = KEYWORD \Flagged \Draft`
 
 - **Ensemble de messages** : Les valeurs de ce type désignent un ensemble de messages. Elles contiennent une liste de numéros de messages dans un ordre croissant, de 1 au nombre total de messages dans la boîte aux lettres. Les numéros sont séparés par des virgules ; un deux-points (:) indique un intervalle (inclusif) de numéros.
-  Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages.
+  Exemples :
+  `2,4:7,9,12:*` est `2,4,5,6,7,9,12,13,14,15` pour une boîte aux lettres contenant 15 messages.
   `searchCriteria = 1:5 ANSWERED` recherche, parmi les messages 1 à 5, ceux qui comportent le marqueur \Answered.
   `searchCriteria= 2,4 ANSWERED` recherche, parmi les messages 2 et 4, ceux qui comportent le marqueur \Answered.
 
@@ -1656,7 +1658,7 @@ La fonction `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary --
 
 > Pour obtenir les informations d'une boîte aux lettres sans modifier la boîte aux lettres courante, utilisez [`.getBoxInfo()`](#getboxinfo).
 
-Dans le paramètre optionnel *name* passez le nom de la boite de réception à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
+Dans le paramètre *name* passez le nom de la mailbox à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
 
 Le paramètre optionnel *state* définit le type d'accès à la mailbox. Les valeurs possibles sont les suivantes :
 

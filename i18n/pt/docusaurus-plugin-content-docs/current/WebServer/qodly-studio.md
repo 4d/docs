@@ -235,7 +235,7 @@ O projeto deve estar sendo executado no modo interpretado para que o item de men
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+2. Na barra de ferramentas do Qodly Studio, clique no botão **Debug**.<br/>
     ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.

@@ -179,7 +179,7 @@ Les [attributs calculés](ordaClasses.md#computed-attributes) et les[attributs a
 
 ### Entity
 
-Une entité est l'équivalent d'un enregistrement. Il s'agit d'un objet qui fait référence à un enregistrement de la base de données. Elle peut être perçue comme une instance de la [dataclass](#dataclass), comme un enregistrement de la table correspondante à la dataclass. Toutefois, une entité contient également des données corrélées à la base de données liée au datastore.
+Une entité est l'équivalent d'un enregistrement. Il s'agit d'un objet qui fait référence à un enregistrement de la base de données. Une entité est l'équivalent d'un enregistrement. Toutefois, une entité contient également des données corrélées à la base de données liée au datastore.
 
 Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer). Lorsqu'une référence d'entité est obtenue au moyen d'une sélection d'entité, elle conserve également des informations sur la sélection d'entité qui permet une itération à travers la sélection.
 

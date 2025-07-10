@@ -42,7 +42,12 @@ Corresponding to the CSS element selector, the object type defines the type of o
 
 Specify the object type, then in curly braces, declare the style(s) to apply.
 
-> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
+:::note
+
+- The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
+- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+
+:::
 
 In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
 
@@ -184,7 +189,7 @@ text[text|=Hello]
 
 Media queries are used to apply color schemes to an application.  
 
-A media query is composed of a media feature and a value (e.g., `\<media feature>:\<value>` ).
+A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
 
 Available media features:
 

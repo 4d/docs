@@ -56,7 +56,12 @@ O tipo de objeto define o tipo de objeto ao que vai aplicar o estilo, e correspo
 
 Para aplicar o mesmo estilo para múltiplos tipos de objetos, especifique o tipo de objeto separado por um "," então em chaves, declare os estilos a aplicar:
 
-> O tipo de objeto corresponde ao JSON [tipo](FormObjects/properties_Object.md#type) propriedade de objetos formulários.
+:::note
+
+- O tipo de objeto corresponde ao JSON [tipo](FormObjects/properties_Object.md#type) propriedade de objetos formulários.
+- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+
+:::
 
 No exemplo abaixo, todos os objetos do tipo *button* vai exibir texto na fonte Helvetica Neue, com um tamanho de 20 píxels:
 
@@ -196,7 +201,7 @@ text[text|=Hello]
 
 As consultas de mídia são usadas para aplicar esquemas de cores as aplicações.
 
-Uma media query é composta por uma funcionalidade media e um valor (por exemplo, `\&#060;media feature&#062;:\&#060;value&#062;`).
+A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
 
 Funcionalidades multimédia disponíveis:
 

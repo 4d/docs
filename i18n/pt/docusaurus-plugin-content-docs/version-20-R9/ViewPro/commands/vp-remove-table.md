@@ -40,7 +40,7 @@ Em *options*, você pode especificar o comportamento adicional. Valores possíve
 | vk table remove style | 1     | Remover o estilo, mas manter os dados       |
 | vk table remove data  | 2     | Remover dados, mas manter o estilo          |
 
-Os nomes das tabelas são definidos ao nível da folha. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
+Os nomes das tabelas são definidos ao nível da folha. Você pode especificar onde a tabela está localizada usando um parâmetro opcional *sheet* (indexação começa em 0).
 
 ## Exemplo
 

@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-**Form event code** returns a numeric value identifying the type of form event that has just occurred. Normalmente, você usará **Form event code** em um método formulário ou objeto.
+**Form event code** retorna um valor numérico que identifica o tipo de evento formulário que acabou de ocorrer. Normalmente, você usará **Form event code** em um método formulário ou objeto.
 
 4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
 

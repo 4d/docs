@@ -30,7 +30,7 @@ Esta opção é selecionada por defeito nos novos projetos. Sin embargo, se pued
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). Neste caso, este parâmetro substitui a opção definida na caixa de diálogo Propriedades para o objeto Web Server (não é armazenado em disco).
 
-> O comando [`WEB SET OTPION`](../commands-legacy/web-set-option.md) também pode definir o modo de sessão para o servidor Web principal.
+> The [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
 
 Em qualquer caso, o parâmetro é local para a máquina; para poder diferir no servidor Web 4D Server e os servidores Web de máquinas 4D remotas.
 
@@ -250,10 +250,10 @@ Em ambos os casos, você precisa extrair o token do parâmetro personalizado e c
 
 The OTP token is considered invalid if:
 
-- the session token has already been used,
-- the session token has expired,
-- the session token does not exist,
-- the original session itself has expired.
+- o token de sessão já foi usado,
+- o token de sessão expirou,
+- o token de sessão não existe,
+- a própria sessão original expirou.
 
 In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session.
 

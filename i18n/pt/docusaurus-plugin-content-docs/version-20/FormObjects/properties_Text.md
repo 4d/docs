@@ -355,7 +355,7 @@ O método *Color* iria conter :
 
 ## Multistyle
 
-This property enables the possibility of using [specific styles](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.en.html) in the selected area. Quando esta opção está marcada, 4D interpreta qualquer etiqueta `<SPAN> HTML` encontrada na área.
+Essa propriedade permite a possibilidade de usar [estilos específicos](https://doc.4d.com/4Dv20/4D/20.6/Supported-tags.300-7488021.en.html) na área selecionada. Quando esta opção está marcada, 4D interpreta qualquer etiqueta `<SPAN> HTML` encontrada na área.
 
 Por defeito, esta opção não está activada.
 

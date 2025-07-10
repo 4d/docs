@@ -118,7 +118,12 @@ $myEntity.save() // エンティティを保存します
  $entity.save() // 変更を保存します
 ```
 
-> データベースの BLOBフィールド ([スカラーBLOB](Concepts/dt_blob.md)) は、ORDAで扱われるにあたって、BLOBオブジェクト属性 ([`4D.Blob`](Concepts/dt_blob.md)) に自動変換されます。 BLOBオブジェクト属性を保存する際には、(利用可能なメモリによってのみサイズ制限される BLOBオブジェクトとは異なり) BLOBフィールドのサイズが 2GB に制限されることに注意してください。
+:::note 注記
+
+- Database Object fields can be [associated with classes](../Develop/field-properties.md), in which case only objects of the defined class can be assigned to the entity attribute.
+- データベースの BLOBフィールド ([スカラーBLOB](Concepts/dt_blob.md)) は、ORDAで扱われるにあたって、BLOBオブジェクト属性 ([`4D.Blob`](Concepts/dt_blob.md)) に自動変換されます。 BLOBオブジェクト属性を保存する際には、(利用可能なメモリによってのみサイズ制限される BLOBオブジェクトとは異なり) BLOBフィールドのサイズが 2GB に制限されることに注意してください。
+
+:::
 
 リレート属性にアクセスできるかどうかは、属性の型によります。 たとえば、以下のようなストラクチャーがあるとき:
 

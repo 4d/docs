@@ -187,7 +187,7 @@ Exemplos de manipulação de campos objeto 4D:
 Em um método formulário, pode escrever:
 
 ```4d
- If(FORM Event=On Validate)
+ If(FORM Event.code=On Validate)
     OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
     OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
  End if

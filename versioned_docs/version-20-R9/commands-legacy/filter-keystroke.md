@@ -38,9 +38,9 @@ Using the following code:
 ```4d
   //myObject enterable area object method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        myObject:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        If(Position(Keystroke;"0123456789")>0)
           FILTER KEYSTROKE("*")
        End if
@@ -56,10 +56,10 @@ This code implements the behavior of a Password enterable area in which all the 
 ```4d
   //vsPassword enterable area object method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsPassword:=""
        vsActualPassword:=""
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        Handle keystroke(->vsPassword;->vsActualPassword)
        If(Position(Keystroke;Char(Backspace)+Char(Left arrow key)+Char(Right arrow key)+Char(Up arrow key)+Char(Down arrow key))=0)
           FILTER KEYSTROKE(Char(65+(Random%26)))
@@ -150,13 +150,13 @@ After you have added these project methods to your project, you can use them in 
 ```4d
   // vsDescription enterable area object method
  Case of
-    :(FORM Event=On Load)
+    :(FORM Event.code=On Load)
        vsDescription:=""
        vsShadowDescription:=""
   // Establish the list of the “forbidden” characters to be treated as special keys
   // ( here, in this example, only the Help Key is filtered)
        vsSpecialKeys:=Char(HelpKey)
-    :(FORM Event=On Before Keystroke)
+    :(FORM Event.code=On Before Keystroke)
        $vsKey:=Shadow keystroke(->vsDescription;->vsShadowDescription;vsSpecialKeys)
        Case of
           :(Character code($vsKey)=Help key)

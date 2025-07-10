@@ -48,7 +48,7 @@ You specify the font style of the item in the *styles* parameter. You pass a com
 
 In the *icon* parameter, you can pass a picture to be used as the icon for the item. You can use a picture file reference or (binary databases only) a library picture.
 
-* Picture file reference (text): you must use the **path:<filesystem path>** pattern. For more information, refer to the *Filesystem pathnames* paragraph.
+* Picture file reference (text): you must use the **path:<filesystem path>** pattern. For more information, refer to the [Filesystem pathnames](../Concepts/paths.md#filesystem-pathnames) paragraph.
 * Library picture (longint or text, binary databases only): you can pass either the name or number of the picture. It is generally preferable to use its number rather than its name since picture numbers are unique IDs, which is not the case with names. If you want to use a number, pass Use PicRef+*N* in the parameter, where *N* is the reference number of the picture in the picture library. Use PicRef is a predefined constant located in the *Hierarchical Lists* theme.
 * Pass an empty string ("") or zero (0) in *icon* if you do not want any graphic for the item.
 
@@ -74,7 +74,7 @@ The following example changes the text of the current item of *list* to bold and
 ## See also 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-*Hierarchical Lists*  
+[Hierarchical Lists](../FormObjects/list_overview.md)
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 

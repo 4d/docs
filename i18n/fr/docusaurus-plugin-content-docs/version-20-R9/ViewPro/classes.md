@@ -65,7 +65,7 @@ La propriété `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. Défaut = Faux
+La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'il faut afficher un style de ligne alternée<!-- END REF -->. Défaut = Faux
 
 ### .bandRows
 
@@ -73,7 +73,7 @@ La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indi
 
 **.bandRows** : Boolean<!-- END REF -->
 
-La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'il faut afficher un style de ligne alternée<!-- END REF -->. Par défaut = True
+La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indique s'il faut afficher un en-tête<!-- END REF -->. Par défaut = True
 
 ### .highlightLastColumn
 
@@ -105,7 +105,7 @@ La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indiqu
 
 **.showHeader** : Boolean<!-- END REF -->
 
-La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indique s'il faut afficher un en-tête<!-- END REF -->. Par défaut = True
+La propriété `.secondColumnStripSize` est la <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. Par défaut = True
 
 ### .showResizeHandle
 
@@ -370,7 +370,7 @@ La propriété `.name` est le <!-- REF #TableThemeOptions.name.Summary -->nom d'
 
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-La propriété `.secondColumnStripSize` est la <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. Par défaut=1
+La propriété `.secondRowStripSize` est la <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. Par défaut=1
 
 ### .secondColumnStripStyle
 
@@ -386,7 +386,7 @@ La propriété `.secondColumnStripStyle` est le <!-- REF #TableThemeOptions.seco
 
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-La propriété `.secondRowStripSize` est la <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. Par défaut=1.
+La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. Par défaut=1.
 
 ### .secondRowStripStyle
 

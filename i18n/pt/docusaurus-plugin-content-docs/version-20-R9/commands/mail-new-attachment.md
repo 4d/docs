@@ -81,7 +81,7 @@ The optional *disposition* parameter lets you pass the `content-disposition` hea
 Como padrão, se o parâmetro *disposition* for omisso:
 
 - se o parâmetro *cid* for usado, o cabeçalho `Content-disposition` será definido como "inline",
-- if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
+- se o parâmetro *cid* não for passado ou estiver vazio, o cabeçalho `Content-disposition` é estabelecido para "attachment".
 
 ## Exemplo 1
 

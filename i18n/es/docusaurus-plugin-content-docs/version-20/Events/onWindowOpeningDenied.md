@@ -20,7 +20,7 @@ Este evento se genera cuando la apertura de una ventana emergente es bloqueada p
 
 Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 
-Este evento también se dispara cuando se ha realizado una operación de soltar en el área Web (con los [motores](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) sistema Windows e integrados) si la opción [Arrastrar y soltar](../FormObjects/webArea_overview.md#user-interface) también activada para el área. Puede aceptar la acción de soltar llamando:
+This event is also triggered when a drop operation has been done in the Web area (with embedded and Windows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Puede aceptar la acción de soltar llamando:
 
 ```4d
 //método objeto área web

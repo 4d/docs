@@ -41,7 +41,7 @@ If there are different values for the same attribute in the element passed as a 
 - for string values, an empty string
 - for picture values, an empty picture.
 
-**Note**: If *targetObj* contains a paragraph and a character style sheets, the paragraph style sheet name is returned.
+**Nota**: se *targetObj* contiver um parágrafo e uma folha de estilo de personagem, a folha de estilo de parágrafos será retornada.
 
 ## Exemplo 1
 

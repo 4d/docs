@@ -124,10 +124,10 @@ Esta pestaña le permite crear una versión autónoma y monopuesto de su aplicac
 
 Al marcar la opción **Crear una aplicación autónoma** y hacer clic en **Generar** se creará una aplicación autónoma (con doble clic) directamente desde su proyecto de aplicación. En Windows, esta función crea un archivo ejecutable (.exe). En macOS, se encarga de la creación de paquetes de software.
 
-Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
+Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Las funcionalidades ofrecidas por el archivo 4D Volume Desktop están relacionadas con la oferta de productos a la que se ha suscrito. Para más información sobre este punto, consulte la documentación de ventas y el [4D Store](http://www.4d.com/).
 
 - Puede definir un archivo de datos predeterminado o permitir a los usuarios [crear y utilizar su propio archivo de datos](#management-of-data-files).
-- Puede integrar una licencia de despliegue o dejar que el usuario final introduzca su licencia en el primer inicio de la aplicación (consulte la sección [\*\*Licencias de despliegue \*\*](../Admin/licenses.md#deployment-licenses)).
+- Puede incrustar una [licencia de despliegue](../Admin/licenses.md#deployment-licenses) o dejar que el usuario final introduzca su licencia en el primer lanzamiento de la aplicación (ver [**Licencias**](#licenses) más abajo).
 
 :::note
 
@@ -183,10 +183,10 @@ Todos estos elementos deben estar en la misma carpeta para que el ejecutable fun
 Cuando se construye una aplicación independiente, 4D copia el contenido de la carpeta 4D Volume Desktop en la carpeta Destination > *Final Application*. A continuación, podrá personalizar el contenido de la carpeta 4D Volume Desktop original según sus necesidades. Puede, por ejemplo:
 
 - Instalar una versión de 4D Volume Desktop correspondiente a un lenguaje específico;
-- Add a custom *Plugins* folder;
+- Añadir una carpeta *Plugins* personalizada;
 - Personalizar el contenido de la carpeta *Resources*.
 
-> En macOS, 4D Volume Desktop se ofrece en forma de paquete de software. In order to modify it, you must first display its contents (**Control+click** on the icon).
+> En macOS, 4D Volume Desktop se ofrece en forma de paquete de software. Para modificarlo, primero debe visualizar su contenido (**Control+clic** en el icono).
 
 #### Ubicación de los archivos web
 
@@ -202,7 +202,7 @@ Los elementos deben ser instalados:
 
 ## Página Cliente/Servidor
 
-En esta pestaña, usted puede construir aplicaciones cliente y servidor personalizadas que son homogénicas, multiplataforma y con una opción de actualización automática.
+En esta pestaña, puede generar aplicaciones cliente y servidor personalizadas que son homogéneas, multiplataforma y con una opción de actualización automática.
 
 ![](../assets/en/Desktop/client-server-buildapp.png)
 
@@ -277,7 +277,7 @@ A continuación, puede copiar esa estructura en su máquina Windows y utilizarla
 
 #### Ubicación de la estructura compilada
 
-Ruta de acceso a la estructura compilada de la aplicación cliente Apple Silicon/Intel utilizada para crear un servidor Windows (ver [Permitir la conexión de clientes Silicon Mac](#allow-connection-of-silicon-mac-clients).
+Ruta de acceso a la estructura compilada de la aplicación cliente Apple Silicon/Intel utilizada para crear un servidor Windows (ver [Permitir la conexión de clientes Silicon Mac](#allow-connection-of-silicon-mac-clients)).
 
 #### Modo de enlace de datos
 
@@ -496,30 +496,32 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 > Si deselecciona MeCab para una aplicación en lenguaje japonés utilizada en plataformas heterogéneas, asegúrese de deseleccionarlo tanto en la compilación cliente/servidor como en la [compilación de la aplicación cliente](#build-client-application) (para la plataforma concurrente), de lo contrario se producirán fallos importantes en la aplicación.
 
 - **SpellChecker**: se utiliza para las funciones integradas de [corrección ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) y los comandos disponibles para las áreas de entrada y las áreas 4D Write Pro.
-- **4D Updater**: controla la [actualización automática](#what-is-a-clientserver-application) de las partes del cliente y es utilizado por el comando `SET UPDATE FOLDER` para [actualizaciones automáticas del servidor](#automatic-updating-of-server-or-single
+- **4D Updater**: controla la [actualización automática](#what-is-a-clientserver-application) de las partes del cliente y es utilizado por el comando `SET UPDATE FOLDER` para [actualizaciones automáticas del servidor](#automatic-updating-of-server-or-single-user-applications).
 
 ## Página licencias y certificados
 
 La página de Licencias y certificados puede utilizarse para:
 
-- designa las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) que quiere integrar en su aplicación [monopuesto](#application-page) o [cliente-servidor](#clientserver-page)
+- configure las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) que quiere integrar en su aplicación [monopuesto](#application-page) o [cliente-servidor](#clientserver-page),
 - firmar la aplicación mediante un certificado en macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licencias
 
-Esta pestaña muestra la opción [Construir una aplicación de evaluación](#build-an-evaluation-application) y la lista de [licencias de despliegue que puede insertar](../Admin/licenses.md#deployment-licenses) en su aplicación (independiente o cliente-servidor). Por defecto, la lista está vacía.
+Esta pestaña muestra el menú **Tipo de aplicación**, que le permite definir cómo desea gestionar las licencias en la aplicación creada. Las siguientes opciones están disponibles:
 
-Puede utilizar esta pestaña para crear:
+![](../assets/en/Admin/buildappLic.png)
 
-- una aplicación de evaluación,
-- una aplicación licenciada sin licencia integrada (el usuario tiene que tener una licencia por usuario),
-- una aplicación licenciada con licencias anidadas.
+#### Aplicación sin licencia integrada
 
-#### Crear una aplicación de evaluación
+Seleccione esta opción para crear una aplicación sin licencia de despliegue incrustada.
 
-Marque esta opción para crear una versión de evaluación de su aplicación.
+En este caso, el usuario final tendrá que comprar e introducir una licencia *4D Desktop* o *4D Server* por usuario la primera vez que inicie la aplicación (cuando integra una licencia de despliegue, el usuario no tiene que introducir ni utilizar su propio número de licencia). Para más información, consulte la sección [**Licencias de despliegue**](../Admin/licenses.md#deployment-licenses).
+
+#### Aplicación de evaluación
+
+Seleccione esta opción para crear una versión de evaluación de su aplicación.
 
 Una aplicación de evaluación permite al usuario final ejecutar una versión completa de su aplicación autónoma o de servidor en su máquina durante un periodo de tiempo limitado, a partir del primer lanzamiento. Al final del periodo de evaluación, la aplicación ya no podrá utilizarse durante un determinado periodo de tiempo en la misma máquina.
 
@@ -529,8 +531,6 @@ Se requiere una conexión a Internet en la máquina del usuario en el primer lan
 
 :::
 
-En cuanto se activa la opción "Crear una aplicación de evaluación", se ignoran las licencias de despliegue.
-
 :::note Notas
 
 - El comando [`License info`](../commands/license-info.md) permite conocer el tipo de licencia de la aplicación (colección *.attributes*) y su fecha de caducidad (objeto *.expirationDate*).
@@ -539,17 +539,27 @@ En cuanto se activa la opción "Crear una aplicación de evaluación", se ignora
 
 :::
 
-#### Crear una aplicación con licencia sin licencia(s) integrada(s)
+#### Aplicación que incorpora automáticamente las licencias disponibles
 
-Para crear una aplicación sin licencia de despliegue incorporada, simplemente mantenga la lista de licencias vacía y asegúrese de que la opción "Crear una aplicación de evaluación" está **desmarcada**.
+Seleccione esta opción para crear una aplicación lista para usar (autónoma o cliente-servidor), incrustando automáticamente las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) disponibles.
 
-En este caso, el usuario final tendrá que comprar e introducir una licencia *4D Desktop* o *4D Server* por usuario la primera vez que inicie la aplicación (cuando integra una licencia de despliegue, el usuario no tiene que introducir ni utilizar su propio número de licencia). Para más información, consulte la sección [**Licencias de despliegue**](../Admin/licenses.md#deployment-licenses).
+Al crear la aplicación, 4D integrará automáticamente la(s) licencia(s) necesaria(s) que se encuentra(n) en la [Carpeta de licencias](../commands-legacy/get-4d-folder.md#licenses-folder) de la máquina. Si hay varias licencias válidas disponibles, 4D utilizará la más apropiada, en el siguiente orden:
 
-#### Construir una aplicación con licencia(s) integrada(s)
+1. licencias OEM, o
+2. licencias 4D Desktop Business, o
+3. otras licencias.
 
-Esta opción le permite crear una aplicación lista para usar, en la que ya están integradas las licencias necesarias.
+La pestaña de licencias muestra la lista de licencias utilizadas automáticamente para la compilación. La lista no puede modificarse.
 
-Debe designar los archivos que contienen sus [licencias de despliegue](../Admin/licenses.md#deployment-licenses). Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias de despliegue. Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
+Una vez iniciada la compilación, si no se encuentra una licencia válida, se genera un error. De lo contrario, se muestra un cuadro de diálogo para enumerar la(s) aplicación(es) generada(s). La información detallada también se proporciona en el [Archivo de registro](#log-file).
+
+Una vez creada una aplicación licenciada, se incluye automáticamente un nuevo archivo de licencia de despliegue en la carpeta Licencias junto a la aplicación ejecutable (Windows) o en el paquete (macOS).
+
+#### Application embedding licenses from the following list
+
+Seleccione esta opción para crear una aplicación lista para usar (independiente o cliente-servidor), incrustando las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) necesarias que usted designe específicamente.
+
+Al seleccionar esta opción, se muestra una lista de licencias en la pestaña. Debe designar los archivos que contienen sus licencias. Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias de despliegue. Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
 
 Para eliminar o añadir una licencia, utilice los botones **[+]** y **[-]** de la parte inferior de la ventana. Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licencias* de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](../commands-legacy/get-4d-folder.md).
 
@@ -766,7 +776,7 @@ Puede elegir si mostrar o no la caja de diálogo estándar de selección de serv
 
 En principio, la actualización de las aplicaciones servidor o de las aplicaciones monopuesto fusionadas requiere la intervención del usuario (o la programación de rutinas de sistema personalizadas): cada vez que esté disponible una nueva versión de la aplicación fusionada, hay que salir de la aplicación en producción y sustituir manualmente los archivos antiguos por los nuevos; a continuación, reiniciar la aplicación y seleccionar el archivo de datos actual.
 
-You can automate this procedure to a large extent using the following language commands: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), and also [`Last update log path`](../commands-legacy/last-update-log-path.md) for monitoring operations. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. Puede ser un comando de menú o un proceso que se ejecuta en segundo plano y comprueba a intervalos regulares la presencia de un archivo en un servidor.
+Puede automatizar este procedimiento en gran medida utilizando los siguientes comandos del lenguaje: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md), [`RESTART 4D`](../commands-legacy/restart-4d.md), y también [`Last update log path`](../commands-legacy/last-update-log-path.md) para operaciones de monitoreo. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. Puede ser un comando de menú o un proceso que se ejecuta en segundo plano y comprueba a intervalos regulares la presencia de un archivo en un servidor.
 
 > También dispone de llaves XML para elevar los privilegios de instalación y poder utilizar archivos protegidos en Windows (consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html)).
 
@@ -784,4 +794,4 @@ El procedimiento de instalación genera un archivo de registro en el que se deta
 
 El historial de actualización se denomina `YYYY-MM-DD_HH-MM-SS_log_X.txt`, por ejemplo, `2021-08-25_14-23-00_log_1.txt` para un archivo creado el 25 de agosto de 2021 a las 14:23.
 
-Este archivo se crea en la carpeta de la aplicación "Updater", dentro de la carpeta de usuario del sistema. You can find out the location of this file at any time using the [`Last update log path`](../commands-legacy/last-update-log-path.md) command.
+Este archivo se crea en la carpeta de la aplicación "Updater", dentro de la carpeta de usuario del sistema. Puede encontrar la ubicación de este archivo en cualquier momento utilizando el comando [`Last update log path`](../commands-legacy/last-update-log-path.md).

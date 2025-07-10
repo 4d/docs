@@ -42,7 +42,12 @@ El tipo de objeto define el tipo de objeto al que hay que aplicar el estilo, y c
 
 Especifique el tipo de objeto, luego entre llaves, declare el estilo o los estilos a aplicar.
 
-> El tipo objeto corresponde a la propiedad JSON [tipo](FormObjects/properties_Object.md#type) de los objetos formulario.
+:::note
+
+- El tipo objeto corresponde a la propiedad JSON [tipo](FormObjects/properties_Object.md#type) de los objetos formulario.
+- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+
+:::
 
 En el siguiente ejemplo, todos los objetos del tipo *botón* mostrarán el texto en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
@@ -184,7 +189,7 @@ text[text|=Hello]
 
 Las consultas de medios se utilizan para aplicar esquemas de color a las aplicaciones.
 
-Una media query está formada por una funcionalidade media y un valor (por ejemplo, `\&#060;media feature&#062;:\&#060;value&#062;`).
+A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
 
 Funciones de medios disponibles:
 

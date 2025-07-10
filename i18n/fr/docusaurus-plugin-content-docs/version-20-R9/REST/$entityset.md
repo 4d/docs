@@ -41,7 +41,7 @@ Crée un autre entity set basé sur des entity sets préalablement créés
 
 ### Description
 
-&$otherCollection`, la propriété `$logicOperator`(dont les valeurs sont indiquées ci-dessous), et un autre entity set (entity set #2) défini par la propriété`$otherCollection`. Après avoir créé un entity set (entity set #1) en utilisant `$method=entityset`, vous pouvez ensuite créer un autre entity set en utilisant la syntaxe `$entityset/\{entitySetID\}?$logicOperator... Les deux entity sets doivent être dans la même dataclass.
+&$otherCollection`, la propriété `$logicOperator`(dont les valeurs sont indiquées ci-dessous), et un autre entity set (entity set #2) défini par la propriété`$otherCollection`. &$otherCollection`, la propriété `$logicOperator`(dont les valeurs sont indiquées ci-dessous), et un autre entity set (entity set #2) défini par la propriété`$otherCollection`. Les deux entity sets doivent être dans la même dataclass.
 
 Vous pouvez ensuite créer un autre entity set contenant les résultats de cet appel en utilisant le `$method=entityset` à la fin de la requête REST.
 

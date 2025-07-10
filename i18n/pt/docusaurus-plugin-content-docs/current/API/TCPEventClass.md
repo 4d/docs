@@ -3,7 +3,7 @@ id: TCPEventClass
 title: TCPEvent
 ---
 
-The `TCPEvent` class provides information about events occurring during the lifecycle of a TCP connection. Ele é gerado quando um [TCPConnection](TCPConnectionClass.md) é aberto e normalmente utilizado em callbacks como `onConnection`, `onData`, `onError`, entre outros.
+A classe `TCPEvent` fornece informações sobre os eventos que ocorrem durante o ciclo de vida de uma conexão TCP. Ele é gerado quando um [TCPConnection](TCPConnectionClass.md) é aberto e normalmente utilizado em callbacks como `onConnection`, `onData`, `onError`, entre outros.
 
 <details><summary>História</summary>
 
@@ -16,7 +16,7 @@ The `TCPEvent` class provides information about events occurring during the life
 
 ### Objeto TCPEvent
 
-A `TCPEvent` object is immutable and non-streamable.
+Um objeto `TCPEvent` é imutável e não pode ser transmitido.
 
 As seguintes propriedades estão disponíveis:
 
@@ -39,7 +39,7 @@ A propriedade `.data` contém <!-- REF #TCPEvent.data.Summary -->os dados associ
 
 :::note
 
-When working with low-level TCP/IP connections, keep in mind there is no guarantee that all data will arrive in a single packet. Data arrives in order but may be fragmented across multiple packets.
+Ao trabalhar com conexões TCP/IP de baixo nível, lembre-se de que não há garantia de que todos os dados chegarão em um único pacote. Os dados chegam em ordem, mas podem estar fragmentados em vários pacotes.
 
 :::
 
@@ -80,7 +80,7 @@ A propriedade `.port` contém <!-- REF #TCPEvent.port.Summary --> o número da p
 A propriedade `.type` contém <!-- REF #TCPEvent.type.Summary -->o tipo do evento<!-- END REF -->. Valores possíveis:
 
 - `"conexão"`: indica que uma TCPConnection foi estabelecida com sucesso.
-- `"data"`: Indicates that data has been received.
+- `"data"`: Indica que os dados foram recebidos.
 - `"error"`: indica que um erro ocorreu durante a TCPConnection.
 - `"close"`: indica que a TCPConnection foi fechada corretamente.
 - `"terminate"`: indica que a TCPConnection está prestes a ser liberada.

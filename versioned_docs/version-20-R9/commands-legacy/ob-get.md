@@ -187,7 +187,7 @@ Examples of working with 4D object fields:
 In the method of a form containing a 4D Write Pro area, you can write:
 
 ```4d
- If(FORM Event=On Validate)
+ If(FORM Event.code=On Validate)
     OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
     OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
  End if

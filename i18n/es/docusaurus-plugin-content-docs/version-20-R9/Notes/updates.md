@@ -98,7 +98,7 @@ Lea [**Novedades en 4D 20 R6**](https://blog.4d.com/en-whats-new-in-4d-20-R6/), 
 - Nuevo archivo [4DCEFParameters.json](../FormObjects/webArea_overview.md#4dcefparametersjson) para personalizar las áreas web anidadas de 4D.
 - Nueva clase [HTTPAgent](../API/HTTPAgentClass.md) y nueva propiedad [`agent`](../API/HTTPRequestClass.md#options-parameter) para la clase HTTPRequest.
 - Nuevas funciones [`enableState()`](../API/WebFormClass.md) y [`disableState()`](../API/WebFormClass.md) para controlar los estados de las páginas Qodly desde el servidor.
-- Nueva [\\\\\\\\\\\\\\\\\\\\\` API$singleton](../REST/$singleton.md) para llamar las funciones singleton expuestas desde REST y nuevos [privilegios asociados](../ORDA/privileges.md).
+- Nueva [\`API$singleton](../REST/$singleton.md) para llamar las funciones singleton expuestas desde REST y nuevos [privilegios asociados](../ORDA/privileges.md).
 - Un [nuevo botón de parámetros](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) le ayuda a actualizar su proyecto para utilizar el modo REST "conexión forzada" (el método base `On REST Authentication` es ahora obsoleto).
 - Una [nueva pestaña de parámetros](../Project/compiler.md#warnings) permite definir la generación de advertencias de forma global.
 - Varios comandos, principalmente del tema "entorno 4D", son ahora hilo seguro, así como algunos selectores de los comandos [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md)/[`Get database parameter`](../commands-legacy/get-database-parameter.md).
@@ -220,7 +220,7 @@ Consulte [**Notas de la versión 4D 20.x LTS**](../../version-20/Notes/updates.m
 | Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                                     |
 | --------- | -------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BoringSSL | 0aa300b                                | 20 R6             | Utilizado para QUIC                                                                                                                                            |
-| CEF       | 131                                    | **20 R8**         | Chromium 6778                                                                                                                                                  |
+| CEF       | 131                                    | 20 R8             | Chromium 6778                                                                                                                                                  |
 | Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                      |
 | ICU       | 73.2                   | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                  |
 | libldap   | 2.6.7  | 20 R6             |                                                                                                                                                                |
@@ -229,7 +229,7 @@ Consulte [**Notas de la versión 4D 20.x LTS**](../../version-20/Notes/updates.m
 | libZip    | 1.9.2  | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                         |
 | LZMA      | 5.4.1  | 20                |                                                                                                                                                                |
 | OpenSSL   | 3.3.2  | 20 R7             | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. Ver [Cambios de comportamiento](#cambios-de-comportamiento) para la versión 20 R4 |
-| PDFWriter | 4.3                    | 20                | Dependencia FreeType en 12.2.1                                                                                                 |
+| PDFWriter | 4.5.11 | 20 R3             |                                                                                                                                                                |
 | PHP       | 8.2.4  | 20                |                                                                                                                                                                |
 | SpreadJS  | 17.1.0 | 20 R7             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para obtener una visión general de las nuevas funciones                |
 | webKit    | WKWebView                              | 19                |                                                                                                                                                                |

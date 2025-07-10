@@ -258,8 +258,8 @@ Le menu contextuel de la fenêtre d’expression vous propose des options suppl�
 
 ![context-menu](../assets/en/Debugging/contextual-menu.png)
 
-- **Contracter** : Contracte tous les niveaux de la liste hiérarchique des expressions.
 - **Déployer** : Déploie tous les niveaux de la liste hiérarchique des expressions.
+- **Contracter** : Contracte tous les niveaux de la liste hiérarchique des expressions.
 - **Montrer les types** : Lorsque vous sélectionnez cette option, le type de l’objet s’affiche (lorsque cela est pertinent).
 - **Montrer le numéro de champ et de table** : Affiche le numéro des tables ou de champs. Utile si vous travaillez avec les numéros de table ou de champ, ou avec des pointeurs en utilisant des commandes telles que `Table` ou `Field`.
 - **Montrer les icônes** : Chaque objet est précédé d'une icône qui indique son type. Vous pouvez désactiver cette option pour accélérer l’affichage, ou tout simplement parce que l’option **Montrer les types** vous convient.

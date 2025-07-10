@@ -11,7 +11,7 @@ A plug-in is a piece of code that 4D launches at start up. Acrescenta funcionali
 
 ## Como criar um plug-in?
 
-Vários plug-ins já foram escritos pela comunidade 4D. Los plug-ins publicados están disponibles en GitHub. Adicionalmente, puede desarrollar sus propios plug-ins.
+Vários plug-ins já foram escritos pela comunidade 4D. Los plug-ins publicados [están disponibles en GitHub](https://github.com/search?q=4d-plugin&type=Repositories). Adicionalmente, puede [desarrollar sus propios plug-ins](Extensions/develop-plug-ins.md).
 
 ## Instalação de plug-ins
 

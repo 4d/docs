@@ -231,7 +231,7 @@ Quando `Delete with contents` é passado:
 
 - A pasta, juntamente com todo o seu conteúdo, é apagada.
   **Aviso**: mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o usuário atual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
-- Se esta pasta, ou qualquer dos arquivos que conter, não puder ser apagada, a eliminação é abortada assim que o primeiro elemento inacessível for detectado, e um erro(\*) é devolvido. Neste caso, a pasta pode ser apenas parcialmente apagada. When deletion is aborted, you can use the `Last errors` command to retrieve the name and path of the offending file.
+- Se esta pasta, ou qualquer dos arquivos que conter, não puder ser apagada, a eliminação é abortada assim que o primeiro elemento inacessível for detectado, e um erro(\*) é devolvido. Neste caso, a pasta pode ser apenas parcialmente apagada. Quando a eliminação é abortada, pode utilizar o comando Last errors\` para recuperar o nome e o caminho do ficheiro ofensivo.
 - Se a pasta não existir, o comando não faz nada e nenhum erro é devolvido.
   (\*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
@@ -353,7 +353,7 @@ Quer mover-se e renomear uma pasta:
 
 A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a pasta com o nome que você passou em *newName* e retorna o objeto `Folder` renomeado<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
+O parâmetro *newName* deve estar em conformidade com as regras de nome (por exemplo, ele não deve conter caracteres como ":", "/", etc.), caso contrário um erro é retornado. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
 **Objeto devolvido**
 

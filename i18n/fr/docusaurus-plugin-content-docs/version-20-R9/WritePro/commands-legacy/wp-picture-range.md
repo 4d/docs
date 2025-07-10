@@ -14,13 +14,9 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibilité 
-
-<!--REF #_command_.WP Picture range.Summary-->La commande **WP Picture range** était nommée **WP Create picture range** dans les versions précédentes de 4D Write Pro.<!-- END REF--> Elle a été renommée pour plus de clarté. 
-
 ## Description 
 
-La commande **WP Picture range** retourne un objet plage qui référence uniquement les images contenues dans *objCible* que vous avez passé en paramètre. L'objet plage d'images retourné peut être utilisé avec [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) afin de manipuler les attributs d'images uniquement.
+<!--REF #_command_.WP Picture range.Summary-->La commande **WP Picture range** retourne un objet plage qui référence uniquement les images contenues dans *objCible* que vous avez passé en paramètre.<!-- END REF--> L'objet plage d'images retourné peut être utilisé avec [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) afin de manipuler les attributs d'images uniquement.
 
 Dans *objCible*, vous pouvez passer :
 

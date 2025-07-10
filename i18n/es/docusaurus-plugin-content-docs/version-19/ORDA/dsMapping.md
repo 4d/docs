@@ -63,7 +63,7 @@ El datastore es el objeto de interfaz de una base de datos. Crea una representac
 * El modelo contiene y describe todas las dataclasses que componen el datastore. Es independiente de la propia base de datos subyacente.
 * Los datos se refieren a la información que se va a utilizar y almacenar en este modelo. Por ejemplo, los nombres, direcciones y fechas de nacimiento de los empleados son datos con los que se puede trabajar en un datastore.
 
-A datastore object is handled through functions and properties of the [**DataStore**](../API/DataStoreClass.md) class.
+Un objeto de datastore es manejado a través de funciones y propiedades de la clase [**DataStore**](../API/DataStoreClass.md).
 
 Cuando se maneja a través del código, el datastore es un objeto cuyas propiedades son todas las [dataclasses](#dataclass) que se han expuesto específicamente.
 
@@ -94,7 +94,7 @@ El datastore principal (por defecto) siempre está disponible a través del coma
 
 Una dataclass es el equivalente de una tabla. Se utiliza como modelo de objetos y hace referencia a todos los campos como atributos, incluidos los atributos relacionales (atributos construidos a partir de relaciones entre las dataclasses). Los atributos relacionales pueden utilizarse en las peticiones como cualquier otro atributo.
 
-A dataclass object is handled through functions and properties of the [**DataClass**](../API/DataClassClass.md) class.
+Un objeto dataclass se maneja a través de funciones y propiedades del módulo [**DataClass**](../API/DataClassClass.md) de la clase DataClass.
 
 Todas las dataclasses de un proyecto 4D están disponibles como propiedad del datastore `ds`. Para los datastores remotos a los que se accede a través de `Open datastore` o [peticiones REST](REST/gettingStarted.md), se debe seleccionar la opción **Exponer como recurso REST** al nivel de la estructura 4D para cada tabla expuesta que se desee exponer como dataclass en el datastore.
 
@@ -139,7 +139,7 @@ Las propiedades de dataclass son objetos atributo que describen los campos o rel
  $revenuesAttribute:=ds.Company["revenues"] //forma alternativa
 ```
 
-Este código asigna a `$nameAttribute` y `$revenuesAttribute` las referencias a los atributos name y revenues de la clase `Company`. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves [with their **attribute properties**](../API/DataClassClass.md#attributename). Para manejar los valores, es necesario pasar por [Entidades](#entity).
+Este código asigna a `$nameAttribute` y `$revenuesAttribute` las referencias a los atributos name y revenues de la clase `Company`. Esta sintaxis NO devuelve valores contenidos dentro del atributo, sino que devuelve referencias a los propios atributos [con sus **propiedades de atributo**](../API/DataClassClass.md#attributename). Para manejar los valores, es necesario pasar por [Entidades](#entity).
 
 Todos los campos elegibles de una tabla están disponibles como atributos de su [dataclass](#dataclass) padre. Para los datastores remotos a los que se accede a través de `Open datastore` o [peticiones REST](REST/gettingStarted.md), se debe seleccionar la opción **Exponer como recurso REST** al nivel de la estructura 4D para cada campo que se desee exponer como atributo de dataclass.
 
@@ -177,7 +177,7 @@ Una entidad es el equivalente a un registro. En realidad es un objeto que hace r
 
 La finalidad de la entidad es gestionar los datos (crear, actualizar, eliminar). Cuando se obtiene una referencia de entidad mediante una selección de entidad, también conserva información sobre la selección de entidad que permite la iteración a través de la selección.
 
-An entity object is handled through functions and properties of the [**Entity**](../API/EntityClass.md) class.
+Un objeto entidad se maneja a través de funciones y propiedades del módulo [**Entidad**](../API/EntityClass.md).
 
 El objeto entidad en sí no puede ser copiado como un objeto:
 

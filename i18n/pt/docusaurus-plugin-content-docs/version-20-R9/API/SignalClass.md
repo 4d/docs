@@ -5,7 +5,7 @@ title: Signal
 
 Sinais são ferramentas fornecidas pela linguagem 4D para gerenciar interações e evitar conflitos entre processos em uma aplicação multiprocesso. Sinais permitem assegurar que um ou mais processos vão esperar por uma tarefa específica a ser completada antes de continuar a execução. Qualquer processo pode esperar ou liberar um sinal.
 
-> Os semáforos podem ser usados para gerenciar interações. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) ao mesmo tempo. Só o processo que estabelece o semáforo pode removê-lo.
+> Os semáforos podem ser usados para gerenciar interações. Os semáforos permitem garantir que dois ou mais processos não modifiquem o mesmo recurso (arquivo, registro...) ao mesmo tempo. Só o processo que estabelece o semáforo pode removê-lo.
 
 ### Objeto sinal
 
@@ -18,24 +18,24 @@ Um objeto `4D.Signal` contém os seguintes métodos e propriedades integrados:
 - [`.signaled`](#signaled)
 - [`.description`](#description).
 
-Any worker/process calling the `.wait()` method will suspend its execution until the `.signaled` property is true. Enquanto espera um sinal, o processo que chamar não usa nenhuma CPU. Isso pode ser muito interessante para o rendimento nas aplicações multiprocesso. The `.signaled` property becomes true when any worker/process calls the `.trigger()` method.
+Qualquer worker/processo que chamar o método `.wait()` suspenderá sua execução até que a propriedade `.signaled` seja true. Enquanto espera um sinal, o processo que chamar não usa nenhuma CPU. Isso pode ser muito interessante para o rendimento nas aplicações multiprocesso. A propriedade `.signaled` torna-se true quando qualquer worker/processo chama o método `.trigger()`.
 
-Note that to avoid blocking situations, the `.wait()` can also return after a defined timeout has been reached.
+Observe que, para evitar situações de bloqueio, o `.wait()` também pode retornar depois que um tempo limite definido for atingido.
 
 Os objetos Signal são criados com o comando [`New signal`](../commands/new-signal.md).
 
 ### Trabalhar com sinais
 
-Em 4D, você cria um objeto signal chamando o comando [`New signal`](../commands/new-signal.md). Once created, this signal must be passed as a parameter to the `New process` or `CALL WORKER` commands so that they can modify it when they have finished the task you want to wait for.
+Em 4D, você cria um objeto signal chamando o comando [`New signal`](../commands/new-signal.md). Após criado, esse sinal deve ser passado como parâmetro para os comandos `New process` ou `CALL WORKER` para eles poderem modificá-lo quando tiverem concluído a tarefa pela qual você deseja esperar.
 
-- `signal.wait()` must be called from the worker/process that needs another worker/process to finish a task in order to continue.
-- O `signal.trigger()` deve ser chamado pelo trabalhador/processo que terminou sua execução para liberar todos os outros.
+- O `signal.wait()` deve ser chamado pelo worker/processo que precisa que outro worker/processo termine uma tarefa para poder continuar.
+- O `signal.trigger()` deve ser chamado pelo worker/processo que terminou sua execução para liberar todos os outros.
 
 ![](../assets/en/API/signal.png)
 
-Once a signal has been released using a `signal.trigger()` call, it cannot be reused again. If you want to set another signal, you need to call the `New signal` command again.
+Uma vez que um sinal tenha sido liberado por uma chamada `signal.trigger()`, ele não poderá ser reutilizado novamente. Se você quiser definir outro sinal, precisará chamar o comando `New signal` novamente.
 
-Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
+Como um objeto de sinal é um [objeto compartilhado](Concepts/shared.md), você pode usá-lo para retornar resultados de worker/processos chamados, desde que não se esqueça de escrever valores em uma estrutura `Use...End use` (veja o exemplo).
 
 ### Exemplo
 
@@ -104,7 +104,7 @@ Método ***OpenForm*** :
 
 A propriedade <!-- REF #SignalClass.description.Summary -->contém uma descrição personalizada para o objeto `Signal`<!-- END REF -->.
 
-`.description` pode ser definida ao criar o objeto signal ou a qualquer momento. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
+`.description` pode ser definida ao criar o objeto signal ou a qualquer momento. Note que uma vez que o objeto `Signal` é um objeto compartilhado, qualquer acesso ao modo de escrita à propriedade `.description` deve estar cercado por uma estrutura `Use...End use`.
 
 Essa propriedade é **leitura-escrita**.
 
@@ -189,7 +189,7 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 A função `.wait( )` <!-- REF #SignalClass.wait().Summary -->faz com que o processo atual aguarde até que a propriedade `.signaled` do objeto signal se torne **true** ou o *timeout* opcional expire<!-- END REF -->.
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter. Aceitam-se números decimais.
+Para evitar o bloqueio de código, você pode passar um tempo máximo de espera em segundos no parâmetro *timeout*. Aceitam-se números decimais.
 
 Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `.signaled` já é **true**), a função devolve imediatamente, sem esperar.
 
@@ -200,7 +200,7 @@ A função devolve o valor da propriedade .signaled:
 
 :::note Aviso
 
-Calling `.wait()` without a *timeout* in the main process is not recommended, as it could freeze the entire 4D application.
+Não é recomendável chamar `.wait()` sem um *timeout* no processo principal, pois isso pode congelar toda a aplicação 4D.
 
 :::
 

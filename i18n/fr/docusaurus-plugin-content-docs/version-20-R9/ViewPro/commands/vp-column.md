@@ -23,7 +23,7 @@ La commande `VP Column` <!-- REF #_method_.VP Column.Summary -->retourne un nouv
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Le paramètre *column* définit la première colonne de la plage de colonnes. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Si la plage contient plusieurs colonnes, vous devez également utiliser le paramètre optionnel *columnCount*.
+Le paramètre *column* définit la première colonne de la plage de colonnes. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre.
 
 Le paramètre optionnel *columnCount* permet de définir le nombre total de colonnes de la plage. *columnCount* doit être supérieur à 0. Si le paramètre est omis, la valeur 1 sera définie par défaut et une plage de type colonne sera créée.
 

@@ -29,7 +29,7 @@
   },
   "link.item.label.X": {
     "message": "X",
-    "description": "The label of footer link with label=X linking to https://X.com/4Dsoftware"
+    "description": "The label of footer link with label=X linking to https://x.com/4Dsoftware"
   },
   "link.item.label.Youtube": {
     "message": "Youtube",
@@ -78,5 +78,9 @@
   "copyright": {
     "message": "© 2025 4D SAS - All rights reserved",
     "description": "The footer copyright"
+  },
+  "link.item.label.Documentation download": {
+    "message": "Documentation download",
+    "description": "The label of footer link with label=Documentation download linking to https://github.com/4d/docs/releases/tag/latest"
   }
 }

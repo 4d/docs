@@ -63,7 +63,7 @@ O datastore é o objeto de interface para um banco de dados. Constrói uma repre
 - O modelo contém e descreve todas as dataclasses que compõem o datastore. É independente do próprio banco de dados subjacente.
 - Os dados referem-se à informação que vai ser utilizada e armazenada neste modelo. Por exemplo, nomes, endereços e datas de nascimento dos funcionários são peças de dados com os quais você pode trabalhar em um datastore.
 
-A datastore object is handled through functions and properties of the [**DataStore**](../API/DataStoreClass.md) class.
+Um objeto datastore é manipulado por meio de funções e propriedades da classe [**DataStore**](../API/DataStoreClass.md).
 
 Cuando se maneja a través del código, el datastore es un objeto cuyas propiedades son todas las [dataclasses](#dataclass) que se han expuesto específicamente.
 
@@ -183,7 +183,7 @@ Uma entidade é o equivalente a um registo. Na verdade, é um objeto que referir
 
 O objetivo da entidade é gerir dados (criar, atualizar, apagar). Quando uma referência de entidade é obtida por uma seleção de entidade, ela também retém informações sobre a seleção de entidade, o que permite a iteração por meio da seleção.
 
-An entity object is handled through functions and properties of the [**Entity**](../API/EntityClass.md) class.
+Um objeto de entidade é tratado por funções e propriedades da classe [**Entity**](../API/EntityClass.md).
 
 O objeto entidade em si não pode ser copiado como um objeto:
 

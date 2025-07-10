@@ -29,7 +29,7 @@ En *targetObj*, puede pasar:
 - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection)
 - Un documento 4D Write Pro
 
-For the second parameter, you can pass either:
+Para el segundo parámetro, puede pasar cualquiera de los dos:
 
 - En *picture*:
   - Campo o variable de imagen

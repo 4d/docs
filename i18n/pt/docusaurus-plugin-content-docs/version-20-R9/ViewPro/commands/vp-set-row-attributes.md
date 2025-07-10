@@ -20,7 +20,7 @@ O comando `VP SET ROW ATTRIBUTES` <!-- REF #_method_.VP SET ATTRIBUTES. Resumo -
 
 Em *rangeObj*, passe um objeto que contenha um intervalo. Se o intervalo contiver colunas e linhas, os atributos são aplicados apenas às linhas.
 
-The *propertyObj* parameter lets you specify the attributes to apply to the rows in the *rangeObj*. Estes atributos são:
+O parâmetro *propertyObj* permite-lhe especificar os atributos a aplicar às linhas no\* rangeObj\*. Estes atributos são:
 
 | Propriedade | Tipo    | Descrição                                                                                |
 | ----------- | ------- | ---------------------------------------------------------------------------------------- |

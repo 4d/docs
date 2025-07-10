@@ -152,4 +152,4 @@ Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 
 Propiedades específicas adicionales están disponibles en función del [estilo de botón](#button-styles):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#background-pathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontal-margin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#vertical-margin)
+- Personalizado: [Caminho segundo plano](properties_TextAndPicture.md#background-pathname) - [Margem horizontal](properties_TextAndPicture.md#horizontal-margin) - [Offset](properties_TextAndPicture.md#icon-offset) - [Margem Vertical](properties_TextAndPicture.md#vertical-margin)

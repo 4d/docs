@@ -36,6 +36,7 @@ Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vo
 3. Cliquez sur le bouton image Chiffrer.\
   Cliquez sur le bouton image Chiffrer.\
   Cliquez sur le bouton image Chiffrer.\
+  Cliquez sur le bouton image Chiffrer.\
   ![](../assets/en/MSC/MSC_encrypt3.png)\
   Vous serez invité à saisir une phrase secrète pour votre fichier de données:
   ![](../assets/en/MSC/MSC_encrypt4.png)
@@ -113,7 +114,7 @@ Le fichier de données est entièrement déchiffré et un message de confirmatio
 
 ## Sauvegarder la clé de chiffrement
 
-4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. Le nom du fichier doit avoir l'extension `.4DKeyChain`, par exemple "myKeys.4DKeyChain". La sauvegarde de ce fichier sur un appareil externe tel qu'une clé USB facilitera l'utilisation d'une application chiffrée, étant donné que l'utilisateur n'aurait plus qu'à connecter cet appareil pour fournir la clé avant d'ouvrir l'application et accéder aux données chiffrées.
+4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. 4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. La sauvegarde de ce fichier sur un appareil externe tel qu'une clé USB facilitera l'utilisation d'une application chiffrée, étant donné que l'utilisateur n'aurait plus qu'à connecter cet appareil pour fournir la clé avant d'ouvrir l'application et accéder aux données chiffrées.
 
 Vous pouvez sauvegarder la clé de chiffrement chaque fois qu'une nouvelle phrase secrète est fournie :
 
