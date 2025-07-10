@@ -19,7 +19,7 @@ El evento `On Begin Drag Over` es útil para preparar la acción de arrastrar. P
 - Utilizar un icono personalizado durante la acción de arrastre (vía el comando `SET DRAG ICON`).
 - Aceptar o rechazar el arrastre mediante el resultado del método del objeto arrastrado.
     - Para indicar que las acciones de arrastre son aceptadas, el método del objeto fuente debe devolver 0 (cero).
-    - To indicate that drag actions are refused, the method of the source object must return -1 (minus one).
+    - Para indicar que se rechazan las acciones de arrastrar, el método del objeto fuente debe devolver -1 (menos uno).
     - Si no se devuelve ningún resultado, 4D considera que las acciones de arrastre son aceptadas.
 
 Los datos 4D se colocan en el portapapeles antes de llamar al evento. Por ejemplo, en el caso de arrastrar sin la acción **Arrastre automático**, el texto arrastrado ya está en portapapeles cuando se llama al evento.
