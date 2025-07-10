@@ -17,6 +17,11 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 [List Box](listbox_overview.md)
 
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
+
 ---
 
 ## Height
@@ -59,6 +64,13 @@ Note that converting back and forth may lead to an end result that is different 
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+#### Commands
+
+[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height.md) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height.md)
+
+
+
 
 #### See also
 

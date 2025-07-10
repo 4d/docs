@@ -51,7 +51,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### Commands
 
- [OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
 
 
 

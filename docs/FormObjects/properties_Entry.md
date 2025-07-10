@@ -19,6 +19,11 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 [4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
 
+
+#### Commands
+
+[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck.md) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck.md) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Context Menu
@@ -46,6 +51,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 [Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
 
+#### Commands
+
+[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu..md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
 ---
 
 ## Enterable
@@ -65,6 +73,16 @@ When this property is disabled, any pop-up menus associated with a list box colu
 #### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+
+
+#### Commands
+
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+
+
+#### See alos
+
+[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
 
 ---
 
@@ -123,6 +141,11 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 ---
 
+#### Commands
+
+[`OBJECT Get filter`](../commands-legacy/object-get-filter.md) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter.md)
+
+
 ## Focusable
 
 When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
@@ -145,6 +168,12 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
 
+
+#### Commands
+
+[`OBJECT Get enterable`](../commands-legacy/object-get-focusable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+
+
 ---
 
 ## Keyboard Layout
@@ -164,6 +193,12 @@ By default, the object uses the current keyboard layout.
 #### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+
+#### Commands
+
+[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout.md) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout.md)
+
+
 
 ---
 
@@ -196,6 +231,11 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 #### Objects Supported
 
 [Input](input_overview.md)
+
+
+#### Commands
+
+[`OBJECT Get multiline`](../commands-legacy/object-get-multiline.md) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline.md)
 
 ---
 
@@ -236,6 +276,10 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 [Help tip](properties_Help.md)
 
+#### Commands
+
+[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md)
+
 ---
 
 ## Selection always visible
@@ -251,6 +295,7 @@ This property keeps the selection visible within the object after it has lost th
 #### Objects Supported
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+
 
 ---
 
@@ -279,8 +324,11 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) -
-[Radio Button](radio_overview.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+
+#### Commands
+
+[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)
 
 ---
 
@@ -301,3 +349,9 @@ When this option is not enabled, users must first select the cell row and then c
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

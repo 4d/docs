@@ -22,3 +22,10 @@ See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+
+#### Commands
+
+[LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md) - [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-headers-height.md)
+
+
