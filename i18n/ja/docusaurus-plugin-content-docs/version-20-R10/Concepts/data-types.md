@@ -23,7 +23,7 @@ title: データタイプの概要
 | [ポインター](Concepts/dt_pointer.md)                       | -                          | ◯        | `Pointer`                | `ARRAY POINTER`         |
 | [ピクチャー](Concepts/dt_picture.md)                       | ◯                          | ◯        | `Picture`                | `ARRAY PICTURE`         |
 | [BLOB](Concepts/dt_blob.md)                           | ◯                          | ◯        | `Blob`, `4D.Blob`        | `ARRAY BLOB`            |
-| [オブジェクト](Concepts/dt_object.md)                       | Yes(3)  | ◯        | `Object`                 | `ARRAY OBJECT`          |
+| [オブジェクト](Concepts/dt_object.md)                       | ◯(3)    | ◯        | `Object`                 | `ARRAY OBJECT`          |
 | [コレクション](Concepts/dt_collection.md)                   | -                          | ◯        | `Collection`             |                         |
 | [バリアント](Concepts/dt_variant.md)(2) | -                          | ◯        | `Variant`                |                         |
 
@@ -31,7 +31,7 @@ title: データタイプの概要
 
 (2) バリアントは実際のところ *データ* タイプではなく、あらゆるデータタイプの値を格納することのできる *変数* タイプです。
 
-(3) You can [assign a class](../Develop/field-properties.md) to an object field in the structure editor.
+(3) ストラクチャーエディタにおいて、オブジェクトフィールドに[クラスを割り当てる](../Develop/field-properties.md) ことができます。
 
 ## コマンド
 
