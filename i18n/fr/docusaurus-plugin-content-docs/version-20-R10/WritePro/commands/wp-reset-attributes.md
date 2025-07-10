@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande **WP RESET ATTRIBUTES** <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> permet de réinitialiser la valeur d'un ou plusieurs attributs dans la plage, l'élément ou le document passé en paramètre.<!-- END REF--> Cette commande permet de supprimer tout type d'attribut interne à 4D Write Pro : caractère, paragraphe, document, tableau ou image. Vous pouvez passer le nom de l'attribut à réinitialiser dans *attribName* ou vous pouvez passer une collection d'attributs dans *attribColl* pour réinitialiser plusieurs attributs à la fois.
+La commande **WP RESET ATTRIBUTES** <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> permet de réinitialiser la valeur d'un ou plusieurs attributs dans la plage, l'élément ou le document passé en paramètre.<!-- END REF--> Cette commande permet de supprimer tout type d'attribut interne de 4D Write Pro : caractère, paragraphe, document, tableau ou image. Vous pouvez passer le nom de l'attribut à réinitialiser dans *attribName* ou vous pouvez passer une collection d'attributs dans *attribColl* pour réinitialiser plusieurs attributs à la fois.
 
 > Dans le cas d'une section ou d'une sous-section, l'objet *sectionOrSubsection* peut être transmis seul et tous les attributs sont réinitialisés en une seule fois.
 

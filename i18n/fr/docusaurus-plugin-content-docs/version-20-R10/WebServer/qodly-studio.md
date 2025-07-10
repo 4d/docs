@@ -138,7 +138,8 @@ Il n'y a pas de compatibilité directe entre les applications implémentées ave
 | Débogueur                                                                                          | 4D IDE debugger<br/>*4D Server only*: Qodly Studio debugger (see [this paragraph](#using-qodly-debugger-on-4d-server))                                                             | Débogueur Qodly Studio                                                         |
 | Rôles et privilèges REST/Web                                                                       | Edition directe roles.json / Éditeur de rôles et privilèges de Qodly Studio                                                                                                                           | Éditeur de rôles et privilèges de Qodly Studio                                 |
 
-Notez que dans 4D monoposte, si vous ouvrez du code 4D avec l'éditeur de code de Qodly Studio, la coloration syntaxique n'est pas disponible et un avertissement "Lsp not loaded" est affiché. Notez que dans 4D monoposte, si vous ouvrez du code 4D avec l'éditeur de code de Qodly Studio, la coloration syntaxique n'est pas disponible et un avertissement "Lsp not loaded" est affiché.
+(1) L'élément **Modèle** est désactivé dans Qodly Studio.<br/>
+(2) Dans 4D Server, l'ouverture du code 4D avec l'éditeur de code Qodly Studio est prise en charge **à des fins de test et de débogage** (voir [ce paragraphe](#development-and-deployment)). Notez que dans 4D monoposte, si vous ouvrez du code 4D avec l'éditeur de code de Qodly Studio, la coloration syntaxique n'est pas disponible et un avertissement "Lsp not loaded" est affiché.
 
 ### Langage
 
@@ -234,7 +235,7 @@ The project must be running in interpreted mode so that **Qodly Studio** menu it
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+2. Dans la barre d'outils de Qodly Studio, cliquez sur le bouton **Debug**.<br/>
     ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.

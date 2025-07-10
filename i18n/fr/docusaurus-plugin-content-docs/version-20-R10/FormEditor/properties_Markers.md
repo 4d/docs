@@ -21,9 +21,9 @@ Vous agrandissez ou réduisez la zone de rupture en faisant glisser le taquet ve
 
 #### Grammaire JSON
 
-| Nom         | Type de données                                       | Valeurs possibles                                                                                                                                  |
-| ----------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Position du taquet de rupture ou collection des positions de taquets de rupture en pixels.<br/>Valeur minimale : 0 |
+| Nom         | Type de données                                       | Valeurs possibles                                                                                                                |
+| ----------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Valeur minimale : 0 |
 
 ---
 
@@ -77,9 +77,9 @@ Zone de rupture Un en-tête de niveau 1 est imprimé juste avant que les enregis
 
 #### Grammaire JSON
 
-| Nom          | Type de données                                       | Valeurs possibles                                                                                                                                |
-| ------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| markerHeader | integer &#x7c; integer collection | Position du taquet d'en-tête ou collection des positions de taquets d'en-tête en pixels.<br/>Valeur minimale : 0 |
+| Nom          | Type de données                                       | Valeurs possibles                                                                                                                  |
+| ------------ | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Valeur minimale : 0 |
 
 ## Zones supplémentaires
 

@@ -102,7 +102,7 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 #### 説明
 
-`.description` プロパティは、<!-- REF #SignalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細<!-- END REF -->を格納します。
+The `.description` property <!-- REF #SignalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->。
 
 `.description` は、Signal オブジェクトの作成時、あるいはその他のタイミングでも設定することができます。 ただし、`Signal` オブジェクトは共有オブジェクトであるため、`.description` プロパティに書き込む際には必ず `Use...End use` 構文を使わなくてはならない点に留意が必要です。
 

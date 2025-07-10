@@ -20,7 +20,7 @@ Sólo un depurador puede depurar una aplicación 4D Server en un momento dado. S
 - el depurador local de 4D Server (por defecto) - si el servidor no está ejecutando sin interfaz.
 - el depurador de un cliente 4D remoto - si la sesión remota tiene acceso al modo Diseño.
 - el [depurador Qodly](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) en el servidor 4D - si el servidor permite el acceso a Qodly Studio.
-- the **VS Code** debugger, provided you installed the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+- el depurador **VS Code**, siempre que haya instalado la extensión [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode).
 
 El depurador asociado es llamado cada vez que se encuentra un 4D Server:
 

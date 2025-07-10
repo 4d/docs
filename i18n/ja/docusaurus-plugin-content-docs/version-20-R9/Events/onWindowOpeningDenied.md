@@ -21,7 +21,7 @@ title: On Window Opening Denied
 
 `WA Get last filtered URL` コマンドコマンドを使用してブロックされた URL を知ることができます。
 
-このイベントは、Webエリア (埋め込みおよび Windowsシステム [エンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用)) で [ドラッグ＆ドロップ](../FormObjects/webArea_overview.md#ユーザーインターフェース) オプションが有効になっている場合に、ドロップ操作がおこなわれたときにも発生します。 次を呼び出すことで、ドロップを受け入れることができます:
+This event is also triggered when a drop operation has been done in the Web area (with embedded and Windows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. 次を呼び出すことで、ドロップを受け入れることができます:
 
 ```4d
 // Webエリアオブジェクトメソッド

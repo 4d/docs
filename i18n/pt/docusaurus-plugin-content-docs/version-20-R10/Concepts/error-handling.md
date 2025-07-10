@@ -92,7 +92,7 @@ Within the custom error method, you have access to several pieces of information
 
 :::info
 
-4D mantém automaticamente um número de variáveis chamadas [**variáveis sistema**](variables.md#system-variables), indo ao encontro de necessidades diferentes.
+4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
 :::
 
 - o comando [`Last errors`](../commands/last-errors.md) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D.

@@ -31,7 +31,7 @@ As seguintes propriedades estão disponíveis:
 
 ## .data
 
-<!-- REF #TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
+<!-- REF #TCPEvent.data.Syntax -->**data**: Blob<!-- END REF -->
 
 #### Descrição
 

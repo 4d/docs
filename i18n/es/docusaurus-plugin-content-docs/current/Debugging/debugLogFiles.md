@@ -486,7 +486,7 @@ Los siguientes campos se registran para cada evento:
 | localPort        | Number     | Puerto local usado para la conexión                                                           |
 | peerAddress      | Text       | Dirección IP del peer remoto                                                                  |
 | peerPort         | Number     | Puerto del peer remoto                                                                        |
-| protocol         | Text       | "TCP" or "UDP"                                                                                |
+| protocol         | Text       | "TCP" o "UDP                                                                                  |
 | evento           | Text       | The type of event: `open`, `close`, `error`, `send`, `receive`, `listen`      |
 | size             | Number     | La cantidad de datos enviados o recibidos (en bytes), 0 si no es aplicable |
 | excerpt          | Number     | Primeros 10 bytes de datos en formato hexadecimal                                             |

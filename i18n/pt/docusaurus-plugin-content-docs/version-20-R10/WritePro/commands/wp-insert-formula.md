@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parâmetro   | Tipo   |                             | Descrição                                                          |
 | ----------- | ------ | --------------------------- | ------------------------------------------------------------------ |
-| targetObj   | Object | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                    |
+| targetObj   | Object | &#8594; | Range or element or 4D Write Pro document                          |
 | formula     | Object | &#8594; | Objeto de fórmula OU Objeto com propriedades de fórmula e nome     |
 | mode        | Number | &#8594; | Modo de inserção                                                   |
 | rangeUpdate | Number | &#8594; | Inclui ou exclui o conteúdo inserido dentro do intervalo           |
@@ -42,18 +42,18 @@ Quando você usa um objeto com uma fórmula *name*, esse nome é exibido no docu
 
 No parâmetro *mode*, passe uma das seguintes constantes para indicar o modo de inserção a ser usado:
 
-| Parâmetros | Tipo    | Valor | Comentário                         |
-| ---------- | ------- | ----- | ---------------------------------- |
-| wk append  | Integer | 2     | Inserir conteúdo no final do alvo  |
-| wk prepend | Integer | 1     | Inserir conteúdo no início do alvo |
-| wk replace | Integer | 0     | Substituir o conteúdo de destino   |
+| Parâmetros | Tipo    | Valor | Comentário                             |
+| ---------- | ------- | ----- | -------------------------------------- |
+| wk append  | Integer | 2     | Insert contents at end of target       |
+| wk prepend | Integer | 1     | Insert contents at beginning of target |
+| wk replace | Integer | 0     | Replace target contents                |
 
 - Se *targetObj* for um intervalo, você poderá usar o parâmetro opcional *rangeUpdate* para passar uma das seguintes constantes e especificar se a *fórmula* inserida está ou não incluída no intervalo resultante:
 
-| Parâmetros            | Tipo    | Valor | Comentário                                                                     |
-| --------------------- | ------- | ----- | ------------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Conteúdos inseridos não incluídos no intervalo atualizado                      |
-| wk include in range   | Integer | 0     | Conteúdo inserido incluído no intervalo atualizado (padrão) |
+| Parâmetros            | Tipo    | Valor | Comentário                                                               |
+| --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
+| wk exclude from range | Integer | 1     | Inserted contents not included in updated range                          |
+| wk include in range   | Integer | 0     | Inserted contents included in updated range (default) |
 
 Se você não passar um parâmetro *rangeUpdate*, por padrão a *fórmula* inserida será incluída no intervalo resultante.
 

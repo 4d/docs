@@ -345,7 +345,7 @@ The `wait()` function <!-- REF #TCPConnection.wait().Summary -->TCP 接続が閉
 
 :::note
 
-`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。  コールバックから[`shutdown()`](#shutdown) を呼び出すことで、`.wait()` を終了することができます。
+`.wait()` の実行中、コールバック関数は、`SystemWorker` インスタンスから発生したものであるかどうかに関わらず、実行されます。 コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。 コールバックから[`shutdown()`](#shutdown) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 
