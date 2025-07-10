@@ -202,7 +202,7 @@ text[text|=Hello]
 
 Las consultas de medios se utilizan para aplicar esquemas de color a las aplicaciones.
 
-A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
+Una consulta de medios está formada por características y valores de medios (por ejemplo, `<media feature>:<value>`).
 
 Funciones de medios disponibles:
 
