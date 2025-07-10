@@ -42,6 +42,10 @@ You can select a component form name when it is published in the component.
 
 [Subform](subform_overview.md)
 
+#### Commands
+
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
+
 ---
 ## Double-click on empty row
 
@@ -129,6 +133,9 @@ List subforms can be used for data entry in two ways: the user can enter data di
 
 [Subform](subform_overview.md)
 
+#### Commands
+
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
 
 
 ---

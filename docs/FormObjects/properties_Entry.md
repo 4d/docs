@@ -54,6 +54,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 #### Commands
 
 [`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu..md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+
 ---
 
 ## Enterable

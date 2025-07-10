@@ -23,6 +23,10 @@ The following locations can be used for static pictures:
 
 [Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
 
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Display
@@ -66,3 +70,7 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 #### Objects Supported
 
 [Static Picture](staticPicture.md)
+
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
