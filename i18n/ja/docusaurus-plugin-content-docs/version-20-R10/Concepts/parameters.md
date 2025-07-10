@@ -53,10 +53,10 @@ MyLength:=Length("How did I get here?")
 
 ## パラメーターの宣言
 
-呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 You declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言します。
 
 - クラス関数の場合、引数は関数のプロトタイプとともに宣言されます。つまり、`Function` あるいは `Class constructor` キーワードを使用して宣言されます。
-- For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the **`#DECLARE`** keyword at the beginning of the method code.
+- メソッドの場合 (プロジェクトメソッド、フォームオブジェクトメソッド、データベースメソッド、トリガー)、引数はメソッドコード先頭の **`#DECLARE`** キーワードを使って宣言されます。
 
 例:
 
@@ -303,7 +303,7 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // エラー
 
 ## 引数の型間違い
 
-Calling a parameter with an wrong type or a wrong class (for object parameters) is an [error](error-handling.md) that prevents correct execution. たとえば、次のようなメソッドを書いたとします:
+間違った型の引数、または(オブジェクト型引数に対して)間違ったクラスの引数を呼び出すことは、正しい実行を妨げる [エラー](error-handling.md) となります。 たとえば、次のようなメソッドを書いたとします:
 
 ```4d
 // method1
