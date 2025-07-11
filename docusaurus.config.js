@@ -8,6 +8,9 @@ const isProduction = process.env.GITHUB_REPOSITORY_OWNER === '4d';
 const router = process.env.DOCUSAURUS_ROUTER
 const isStatic = process.env.DOCUSAURUS_ROUTER === "hash"
 const language = process.env.DOCUSAURUS_LANGUAGE ?? "en"
+const LANGUAGE_TO_BUILD = process.env.LANGUAGE_TO_BUILD ?? "en"
+const BASE_URL_LANGUAGE = LANGUAGE_TO_BUILD !== "en" ? `${LANGUAGE_TO_BUILD}/` : "";
+console.log("Language ", BASE_URL_LANGUAGE)
 
 const locales = isStatic ? [language] : ["en", "fr", "es", "ja", "pt"]
 const localeConfigs = isStatic ? {} : {
@@ -31,7 +34,7 @@ const localeConfigs = isStatic ? {} : {
 module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
-  baseUrl: isStatic ? "/" : "/docs/",
+  baseUrl: isStatic ? "/" : "/docs/" + BASE_URL_LANGUAGE,
   //url: "https://4d.github.io/",
   url: "https://developer.4d.com/",
   organizationName: "4D",
@@ -86,6 +89,7 @@ module.exports = {
           },
           includeCurrentVersion: isProduction ? false : true, // false for prod only
         },
+        blog: false,
         theme: {
           customCss: [require.resolve('./src/css/customTheme.css')],
         },

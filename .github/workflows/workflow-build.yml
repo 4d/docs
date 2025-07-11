@@ -5,8 +5,15 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        language: ["en", "fr", "es", "ja", "pt"]
     runs-on: ubuntu-latest
     steps:
+      - name: Set directory
+        env:
+          LANGUAGE: ${{ matrix.language }}
+        run: echo "DEST_FOLDER=./build/$LANGUAGE" >> $GITHUB_ENV
       - name: Get disk space
         run: |
           df -h /
@@ -30,18 +37,25 @@ jobs:
         with:
           node-version: '22.x'
       - name: Build
+        env:
+          LANGUAGE_TO_BUILD: ${{ matrix.language }}
         run: |
           if [ -e package-lock.json ]; then
           npm ci
           else
           npm i
           fi
-          npm run build
+          if [ "$LANGUAGE_TO_BUILD" = 'en' ]; then
+            npm run build -- --locale $LANGUAGE_TO_BUILD
+          else
+            npm run build -- --locale $LANGUAGE_TO_BUILD --out-dir ./build/$LANGUAGE_TO_BUILD
+          fi
       - name: Google verification
+        if: matrix.language == 'en'
         run: |
           cd build
           echo "google-site-verification: google1a6263055b2bea44.html" >> google1a6263055b2bea44.html
       - uses: actions/upload-artifact@v4
         with:
           path: ./build
-          name: build
+          name: build-locale-${{ matrix.language }}
