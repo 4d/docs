@@ -28,7 +28,7 @@ The following properties are available:
 |[<!-- INCLUDE #TCPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPEvent.port.Summary -->|
 |[<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary -->|
 
-<!-- REF #TCPEvent.data.Desc -->
+<!-- REF TCPEvent.data.Desc -->
 ## .data
 
 
@@ -46,7 +46,7 @@ When working with low-level TCP/IP connections, keep in mind there is no guarant
 
 <!-- END REF -->
 
-<!-- REF #TCPEvent.ip.Desc -->
+<!-- REF TCPEvent.ip.Desc -->
 ## .ip
 
 <!-- REF #TCPEvent.ip.Syntax -->**ip** : Text<!-- END REF -->
@@ -59,7 +59,7 @@ The `.ip` property contains <!-- REF #TCPEvent.ip.Summary -->the IP address of t
 <!-- END REF -->
 
 
-<!-- REF #TCPEvent.port.Desc -->
+<!-- REF TCPEvent.port.Desc -->
 ## .port
 
 <!-- REF #TCPEvent.port.Syntax -->**port** : Number<!-- END REF -->
@@ -73,7 +73,7 @@ The `.port` property contains <!-- REF #TCPEvent.port.Summary -->the port number
 
 
 
-<!-- REF #TCPEvent.type.Desc -->
+<!-- REF TCPEvent.type.Desc -->
 ## .type
 
 <!-- REF #TCPEvent.type.Syntax -->**type** : Text<!-- END REF -->

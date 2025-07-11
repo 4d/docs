@@ -200,7 +200,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](../commands
 
 #### Commands
 
-[OBJECT GET RBG COLOR](../commands-legacy/object-get-rgb-color.md) - [OBJECT SGET RBG COLOR](../commands-legacy/object-set-rgb-color.md) 
+[OBJECT GET RGB COLORS](../commands-legacy/object-get-rgb-colors.md) - [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) 
 
 
 ---
@@ -468,7 +468,7 @@ In addition to [static text areas](text.md), [input](input_overview.md) text obj
 
 #### Commands
 
-[OBJECT Get text orientation](../commands-legacy/object-get-text-orientation.md) - [OBJECT SET TEXT ORIENTATION](../commands/object-set-text-orientation.md)
+[OBJECT Get text orientation](../commands-legacy/object-get-text-orientation.md) - [OBJECT SET TEXT ORIENTATION](../commands-legacy/object-set-text-orientation.md)
 
 ---
 

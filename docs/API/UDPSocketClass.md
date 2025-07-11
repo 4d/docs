@@ -39,7 +39,7 @@ UDPSocket objects provide the following properties and functions:
 |[<!-- INCLUDE #UDPSocket.send().Syntax -->](#send)<br/><!-- INCLUDE #UDPSocket.send().Summary -->|
 
 
-<!-- REF #4D.UDPSocket.new().Desc -->
+<!-- REF 4D.UDPSocket.new().Desc -->
 ## 4D.UDPSocket.new()
 
 
@@ -80,7 +80,7 @@ All callback functions receive two parameters:
 |Parameter|Type|Description|
 |---|---|---|
 |$socket|[`UDPSocket` object](#udpsocket-object)|The current UDPSocket instance.|
-|$event|[`UDPEvent` object](#udppevent-object)|Contains information about the event.|
+|$event|[`UDPEvent` object](#udpevent-object)|Contains information about the event.|
 
 **Sequence of Callback Calls:**
 
@@ -96,7 +96,7 @@ A [`UDPEvent`](UDPEventClass.md) object is returned when a [callback function](#
 <!-- END REF -->
 
 
-<!-- REF #UDPSocket.errors.Desc -->
+<!-- REF UDPSocket.errors.Desc -->
 ## .errors
 
 <!-- REF #UDPSocket.errors.Syntax -->**errors** : Collection<!-- END REF -->
@@ -117,7 +117,7 @@ The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collecti
 
 
 
-<!-- REF #UDPSocket.port.Desc -->
+<!-- REF UDPSocket.port.Desc -->
 ## .port
 
 <!-- REF #UDPSocket.port.Syntax -->**port** : Number<!-- END REF -->
@@ -132,7 +132,7 @@ The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port numbe
 
 
 
-<!-- REF #UDPSocket.send().Desc -->
+<!-- REF UDPSocket.send().Desc -->
 ## .send()
 
 <!-- REF #UDPSocket.send().Syntax -->**.send**( *data* : Blob ; *hostName* : Text ; *remotePort* : Integer )<!-- END REF -->

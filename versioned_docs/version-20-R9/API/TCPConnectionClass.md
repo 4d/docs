@@ -141,7 +141,7 @@ TCPConnection objects provide the following properties and functions:
 |[<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->|
 
 
-<!-- REF #4D.TCPConnection.new().Desc -->
+<!-- REF 4D.TCPConnection.new().Desc -->
 ## 4D.TCPConnection.new()
 
 
@@ -203,7 +203,7 @@ A [`TCPEvent`](TCPEventClass.md) object is returned when a [callback function](#
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.address.Desc -->
+<!-- REF TCPConnection.address.Desc -->
 ## .address
 
 <!-- REF #TCPConnection.address.Syntax -->**address** : Text<!-- END REF -->
@@ -215,7 +215,7 @@ The `.address` property contains <!-- REF #TCPConnection.address.Summary -->the 
 <!-- END REF -->
 
 
-<!-- REF #TCPConnection.closed.Desc -->
+<!-- REF TCPConnection.closed.Desc -->
 ## .closed
 
 <!-- REF #TCPConnection.closed.Syntax -->**closed** : Boolean<!-- END REF -->
@@ -226,7 +226,7 @@ The `.closed` property contains <!-- REF #TCPConnection.closed.Summary -->whethe
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.errors.Desc -->
+<!-- REF TCPConnection.errors.Desc -->
 ## .errors
 
 <!-- REF #TCPConnection.errors.Syntax -->**errors** : Collection<!-- END REF -->
@@ -246,7 +246,7 @@ The `.errors` property contains <!-- REF #TCPConnection.errors.Summary -->a coll
 <!-- END REF -->
 
 
-<!-- REF #TCPConnection.listener.Desc -->
+<!-- REF TCPConnection.listener.Desc -->
 ## .listener
 
 <!-- REF #TCPConnection.listener.Syntax -->**listener** : Object<!-- END REF -->
@@ -260,7 +260,7 @@ The `.listener` property contains <!-- REF #TCPConnection.listener.Summary -->th
 <!-- END REF -->
 
 
-<!-- REF #TCPConnection.noDelay.Desc -->
+<!-- REF TCPConnection.noDelay.Desc -->
 ## .noDelay
 
 <!-- REF #TCPConnection.noDelay.Syntax -->**noDelay** : Boolean<!-- END REF -->
@@ -274,7 +274,7 @@ The `.noDelay` property contains <!-- REF #TCPConnection.noDelay.Summary -->whet
 <!-- END REF -->
 
 
-<!-- REF #TCPConnection.port.Desc -->
+<!-- REF TCPConnection.port.Desc -->
 ## .port
 
 <!-- REF #TCPConnection.port.Syntax -->**port** : Number<!-- END REF -->
@@ -289,7 +289,7 @@ The `.port` property contains <!-- REF #TCPConnection.port.Summary -->the port n
 
 
 
-<!-- REF #TCPConnection.send().Desc -->
+<!-- REF TCPConnection.send().Desc -->
 ## .send()
 
 <!-- REF #TCPConnection.send().Syntax -->**.send**( *data* : Blob )<!-- END REF -->
@@ -306,7 +306,7 @@ The `send()` function <!-- REF #TCPConnection.send().Summary -->sends data to th
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.shutdown().Desc -->
+<!-- REF TCPConnection.shutdown().Desc -->
 ## .shutdown()
 
 <!-- REF #TCPConnection.shutdown().Syntax -->**.shutdown**()<!-- END REF -->
@@ -324,7 +324,7 @@ The `shutdown()` function <!-- REF #TCPConnection.shutdown().Summary -->closes t
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.wait().Desc -->
+<!-- REF TCPConnection.wait().Desc -->
 ## .wait()
 
 <!-- REF #TCPConnection.wait().Syntax -->**.wait**( { *timeout* : Real } )<!-- END REF -->

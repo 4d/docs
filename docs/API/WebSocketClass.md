@@ -146,7 +146,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
 
-<!-- REF #WebSocketClass.dataType.Desc -->
+<!-- REF WebSocketClass.dataType.Desc -->
 ## .dataType
 
 <!-- REF #WebSocketClass.dataType.Syntax -->**.dataType** : Text<!-- END REF -->
@@ -158,7 +158,7 @@ The `.dataType` property contains <!-- REF #WebSocketClass.dataType.Summary -->t
 This property is read-only.
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.handler.Desc -->
+<!-- REF WebSocketClass.handler.Desc -->
 ## .handler
 
 <!-- REF #WebSocketClass.handler.Syntax -->**.handler** : Object<!-- END REF -->
@@ -171,7 +171,7 @@ This property is read-only.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.id.Desc -->
+<!-- REF WebSocketClass.id.Desc -->
 ## .id
 
 <!-- REF #WebSocketClass.id.Syntax -->**.id** : Integer<!-- END REF -->
@@ -186,7 +186,7 @@ This property is read-only.
 
 
 
-<!-- REF #WebSocketClass.send().Desc -->
+<!-- REF WebSocketClass.send().Desc -->
 ## .send()
 
 <!-- REF #WebSocketClass.send().Syntax -->**.send**( *message* : Text )<br/>**.send**( *message* : Blob )<br/>**.send**( *message* : Object )<!-- END REF -->
@@ -216,7 +216,7 @@ The following contents are sent depending on the *message* type:
 
 
 
-<!-- REF #WebSocketClass.status.Desc -->
+<!-- REF WebSocketClass.status.Desc -->
 ## .status
 
 <!-- REF #WebSocketClass.status.Syntax -->**.status** : Text<!-- END REF -->
@@ -230,7 +230,7 @@ This property is read-only.
 <!-- END REF -->
 
 
-<!-- REF #WebSocketClass.terminate().Desc -->
+<!-- REF WebSocketClass.terminate().Desc -->
 ## .terminate()
 
 <!-- REF #WebSocketClass.terminate().Syntax -->**.terminate**( { *code* : Integer { ; *reason* : Text } } )<!-- END REF -->
@@ -260,7 +260,7 @@ In *reason*, you can pass a string describing why the connection is being closed
 <!-- END REF -->
 
 
-<!-- REF #WebSocketClass.url.Desc -->
+<!-- REF WebSocketClass.url.Desc -->
 ## .url
 
 <!-- REF #WebSocketClass.url.Syntax -->**.url** : Text<!-- END REF -->

@@ -298,7 +298,7 @@ $status:=$imap.append($msg; "Drafts")
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-<!-- REF #IMAPTransporterClass.checkConnectionDelay.Desc -->
+<!-- REF IMAPTransporterClass.checkConnectionDelay.Desc -->
 
 ## .checkConnectionDelay
 

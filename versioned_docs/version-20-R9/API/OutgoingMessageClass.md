@@ -62,7 +62,7 @@ A 4D.OutgoingMessage object is a [non-sharable](../Concepts/shared.md) object.
 
 
 
-<!-- REF #OutgoingMessageClass.body.Desc -->
+<!-- REF OutgoingMessageClass.body.Desc -->
 ## .body
 
 <!-- REF #OutgoingMessageClass.body.Syntax -->**body** : any<!-- END REF -->
@@ -83,7 +83,7 @@ You can also set the `.body` property using the [`setBody()`](#setbody) function
 <!-- END REF -->
 
 
-<!-- REF #OutgoingMessageClass.headers.Desc -->
+<!-- REF OutgoingMessageClass.headers.Desc -->
 ## .headers
 
 <!-- REF #OutgoingMessageClass.headers.Syntax -->**headers** : Object<!-- END REF -->
@@ -97,7 +97,7 @@ The `.headers` property is read-only. To set a header, use the [`setHeader()`](#
 <!-- END REF -->
 
 
-<!-- REF #OutgoingMessageClass.setBody().Desc -->
+<!-- REF OutgoingMessageClass.setBody().Desc -->
 ## .setBody()
 
 <!-- REF #OutgoingMessageClass.setBody().Syntax -->**.setBody**( *body* : any )<!-- END REF -->
@@ -132,7 +132,7 @@ If *body* is not of a supported value type, an error is returned.
 <!-- END REF -->
 
 
-<!-- REF #OutgoingMessageClass.setHeader().Desc -->
+<!-- REF OutgoingMessageClass.setHeader().Desc -->
 ## .setHeader()
 
 <!-- REF #OutgoingMessageClass.setHeader().Syntax -->**.setHeader**( *key* : Text ; *value* : Text )<!-- END REF -->
@@ -160,7 +160,7 @@ If you set a *value* for the "Content-Type" header *key*, make sure you call thi
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setStatus().Desc -->
+<!-- REF OutgoingMessageClass.setStatus().Desc -->
 ## .setStatus()
 
 <!-- REF #OutgoingMessageClass.setStatus().Syntax -->**.setStatus**( *status* : Integer )<!-- END REF -->
@@ -185,7 +185,7 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 
 
-<!-- REF #OutgoingMessageClass.status.Desc -->
+<!-- REF OutgoingMessageClass.status.Desc -->
 ## .status
 
 <!-- REF #OutgoingMessageClass.status.Syntax -->**status** : Integer<!-- END REF -->

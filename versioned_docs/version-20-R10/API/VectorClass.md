@@ -304,7 +304,6 @@ ALERT("Nearest monument: "+$places[0].name)
 
 The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
 
-<!-- END REF -->
 
 ## .toCollection()
 
