@@ -44,8 +44,8 @@ displayed_sidebar: docs
 ## 参照 
 
 [Date](date.md)  
-[Num](num.md)  
-[String](string.md)  
+[Num](../commands/num.md)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
 ## プロパティ

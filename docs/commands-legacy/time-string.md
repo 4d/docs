@@ -22,7 +22,7 @@ The string is in the HH:MM:SS format.
 
 If you go beyond the number of seconds in a day (86,400), **Time string** continues to add hours, minutes, and seconds. For example, **Time string** (86401) returns 24:00:01.
 
-**Note:** If you need the string form of a time expression in a variety of formats, use [String](string.md).
+**Note:** If you need the string form of a time expression in a variety of formats, use [String](../commands/string.md).
 
 ## Example 
 
@@ -34,7 +34,7 @@ The following example displays an alert box with the message, “46800 seconds i
 
 ## See also 
 
-[String](string.md)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
 ## Properties

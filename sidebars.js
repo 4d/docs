@@ -1724,12 +1724,15 @@ module.exports =
                 "commands-legacy/localized-string",
                 "commands-legacy/lowercase",
                 "commands-legacy/match-regex",
-                "commands-legacy/num",
+                "commands/num",
                 "commands-legacy/position",
                 "commands-legacy/replace-string",
                 "commands-legacy/split-string",
-                "commands-legacy/string",
+                "commands/string",
                 "commands-legacy/substring",
+                "commands/trim",
+                "commands/trim-end",
+                "commands/trim-start",
                 "commands-legacy/uppercase"
               ]
             },

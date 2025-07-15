@@ -116,7 +116,7 @@ No exemplo abaixo, se quiser encontrar todas as instâncias de uma string e subs
 ## Ver também 
 
 [Compare strings](compare-strings.md)  
-[Substring](substring.md)  
+[Substring](../commands/substring.md)  
 
 ## Propriedades
 

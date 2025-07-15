@@ -41,9 +41,9 @@ Delete stringの使用例を次に示します。結果を変数*vtResult*に代
 
 ## 参照 
 
-[Change string](change-string.md)  
-[Insert string](insert-string.md)  
-[Replace string](replace-string.md)  
+[Change string](../commands/change-string.md)  
+[Insert string](../commands/insert-string.md)  
+[Replace string](../commands/replace-string.md)  
 
 ## プロパティ
 

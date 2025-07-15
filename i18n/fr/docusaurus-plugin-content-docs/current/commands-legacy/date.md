@@ -93,7 +93,7 @@ Vous souhaitez lire une date depuis un attribut d'objet, quelle que soit l'optio
 ## Voir aussi 
 
 [Bool](bool.md)  
-[String](string.md)  
+[String](../commands/string.md)  
 
 ## Propriétés
 

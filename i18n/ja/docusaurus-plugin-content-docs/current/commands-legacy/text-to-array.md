@@ -105,7 +105,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Split string](split-string.md)  
+[Split string](../commands/split-string.md)  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 

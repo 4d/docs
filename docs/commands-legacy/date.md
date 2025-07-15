@@ -91,7 +91,7 @@ You want to get a date from an object attribute, whatever the current attribute 
 ## See also 
 
 [Bool](bool.md)  
-[String](string.md)  
+[String](../commands/string.md)  
 
 ## Properties
 

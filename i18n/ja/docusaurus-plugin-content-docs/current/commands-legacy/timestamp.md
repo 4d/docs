@@ -40,7 +40,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Milliseconds](milliseconds.md)  
-[String](string.md)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
 ## プロパティ

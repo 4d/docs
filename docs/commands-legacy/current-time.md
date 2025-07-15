@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current time.Summary-->The **Current time** command returns the current time from the system clock.<!-- END REF--> 
 
-The current time is always between *00:00:00* and *23:59:59*. Use [String](string.md) or [Time string](time-string.md) to obtain the string form of the time expression returned by **Current time**.
+The current time is always between *00:00:00* and *23:59:59*. Use [String](../commands/string.md) or [Time string](../commands/time-string.md) to obtain the string form of the time expression returned by **Current time**.
 
 **4D Server:** If you use the asterisk (\*) parameter when executing this function on a 4D Client machine, it returns the current time from the server.
 
@@ -47,7 +47,7 @@ The following example extracts the hours, minutes, and seconds from the current 
 ## See also 
 
 [Milliseconds](milliseconds.md)  
-[String](string.md)  
+[String](../commands/string.md)  
 [Tickcount](tickcount.md)  
 
 ## Properties

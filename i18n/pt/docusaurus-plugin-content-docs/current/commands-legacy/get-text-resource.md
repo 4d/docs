@@ -39,7 +39,7 @@ Se o recurso for encontrado, OK assume o valor 1\. Do contrário, assume o valor
 
 ## Ver também 
 
-[Get indexed string](get-indexed-string.md)  
+[Get indexed string](../commands/get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 

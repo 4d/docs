@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 If *newChars* is an empty string (""), Change string returns *source* unchanged. Change string always returns a string of the same length as *source*. If *where* is less than one or greater than the length of *source*, Change string returns *source*.
 
-Change string is different from [Insert string](insert-string.md) in that it overwrites characters instead of inserting them.
+Change string is different from [Insert string](../commands/insert-string.md) in that it overwrites characters instead of inserting them.
 
 ## Example 
 
@@ -35,9 +35,9 @@ The following example illustrates the use of **Change string**. The results are 
 
 ## See also 
 
-[Delete string](delete-string.md)  
-[Insert string](insert-string.md)  
-[Replace string](replace-string.md)  
+[Delete string](../commands/delete-string.md)  
+[Insert string](../commands/insert-string.md)  
+[Replace string](../commands/replace-string.md)  
 
 ## Properties
 

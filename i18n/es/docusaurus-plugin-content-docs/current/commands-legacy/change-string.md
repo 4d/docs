@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Si *nuevo* es una cadena vacía (""), Change string devuelve *fuente* sin cambios. Change string siempre devuelve una cadena de la misma longitud que *fuente*. Si *posicion* es inferior o superior a la longitud de *fuente*, Change string devuelve *fuente*.
 
-Change string se diferencia de [Insert string](insert-string.md "Insert string") en que reemplaza los caracteres en lugar de insertarlos. 
+Change string se diferencia de [Insert string](../commands/insert-string.md "Insert string") en que reemplaza los caracteres en lugar de insertarlos. 
 
 ## Ejemplo 
 
@@ -35,9 +35,9 @@ El siguiente ejemplo ilustra el uso de Change string. Los resultados se asignan 
 
 ## Ver también 
 
-[Delete string](delete-string.md)  
-[Insert string](insert-string.md)  
-[Replace string](replace-string.md)  
+[Delete string](../commands/delete-string.md)  
+[Insert string](../commands/insert-string.md)  
+[Replace string](../commands/replace-string.md)  
 
 ## Propiedades
 
