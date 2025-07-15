@@ -541,25 +541,25 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 #### 利用可能なライセンスを自動的に埋め込むアプリケーション
 
-Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses).
+このオプションを使用すると、利用可能な[運用ライセンス](../Admin/licenses.md#運用ライセンス) を自動的に埋め込んだ、すぐに使用できるアプリケーション(スタンドアロンまたはクライアントサーバー)をビルドすることができます。
 
-When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands-legacy/get-4d-folder.md#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
+アプリケーションをビルドする際、4D は、マシンの[Licenses フォルダ](../commands-legacy/get-4d-folder.md#licenses-folder) 内にある必要なライセンスを自動的に統合します。 もし有効なライセンスが複数見つかった場合、4D は以下の順番に基づいて、最も適切なものを使用します:
 
-1. OEM licenses, or
-2. 4D Desktop Business licenses, or
-3. other licenses.
+1. OEM ライセンス
+2. 4D Desktop Business ライセンス
+3. その他のライセンス
 
-The license tab displays the list of licenses automatically used for the build. The list cannot be modified.
+ライセンスタブには、ビルドに自動的に使用されたライセンスの一覧を表示します。 このリストは変更不可です。
 
-Once you start the build, if no valid license is found, an error is generated. Otherwise, a dialog is displayed to list the generated application(s). Detailed information are also provided in the [Log file](#log-file).
+ビルドを開始した後、有効なライセンスが見つからなかった場合、エラーが生成されます。 それ以外の場合、生成されたアプリケーションの一覧を表示するダイアログが表示されます。 詳細な情報については[Log ファイル](#logファイル) 内にも記録されています。
 
 ライセンスつきのアプリケーションがビルドされると、実行可能アプリケーションの隣(Windows)、あるいはパッケージの中(macOS) にあるLicenses フォルダ内に配布ライセンスファイルが自動的に配置されます。
 
-#### Application embedding licenses from the following list
+#### 以下のリストからライセンスを埋め込んだアプリケーション
 
-Select this option to build a ready-to-use application (stand-alone or client-server), embedding necessary [deployment licenses](../Admin/licenses.md#deployment-licenses) that you designate specifically.
+このオプションを使用すると、指定した特定の必要な[運用ライセンス](../Admin/licenses.md#運用ライセンス) を埋め込んだ、すぐに使用できるアプリケーション(スタンドアロンまたはクライアントサーバー)をビルドすることができます。
 
-When you select this option, a license list is displayed in the tab. You must designate the files that contain your licenses. これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
+このオプションを選択した場合、タブにはライセンスの一覧が表示されます。 あなたのライセンスを格納しているファイルを指定する必要があります。 これらのファイルは*4D Developer Professional* ライセンスと配布ライセンスが購入された時に生成、またはアップデートされます。 カレントの *4D Developer Professional* ライセンスは、アプリケーションビルドで使用する各配布ライセンスと自動的に関連づけられています。 他の4D Developer Professional 番号やそれに関連づけられたライセンスを追加することができます。
 
 ライセンスを追加または取り除くにはウィンドウ下部の **[+]** または **[-]** ボタンをクリックします。 \[+] ボタンをクリックすると、ファイルを開くダイアログが表示され、マシンの *Licenses* フォルダーの内容が表示されます。 このフォルダーの場所については [Get 4D folder](../commands-legacy/get-4d-folder.md) コマンドの説明を参照してください。
 
