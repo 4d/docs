@@ -191,7 +191,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 コード実行のブロッキングを防ぐため、*timeout* 引数に最大の待機時間を秒単位で渡すことができます。 小数点以下も指定可能です。
 
-If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
+Signal がすでにシグナルされている (つまり `.signaled` プロパティが **true** になっている) 状態であった場合、この関数は即座に戻り値を返します。
 
 この関数は .signaled プロパティの値を返します:
 
