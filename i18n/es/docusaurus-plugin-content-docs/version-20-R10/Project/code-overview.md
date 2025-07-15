@@ -5,7 +5,7 @@ title: Métodos y clases
 
 El código 4D utilizado en todo el proyecto está escrito en [métodos](../Concepts/methods.md) y [clases](../Concepts/classes.md).
 
-El IDE de 4D le ofrece varias funcionalidades para crear, editar, exportar o eliminar su código. Por lo general, utilizará el [editor integrado de código](../code-editor/write-class-method.md) de 4D para trabajar con su código. You can also use other editors such as **VS Code**, for which the [4D-Analyzer extension](https://github.com/4d/4D-Analyzer-VSCode) is available.
+El IDE de 4D le ofrece varias funcionalidades para crear, editar, exportar o eliminar su código. Por lo general, utilizará el [editor integrado de código](../code-editor/write-class-method.md) de 4D para trabajar con su código. También puede utilizar otros editores como **VS Code**, para el que está disponible la [extensión 4D-Analyzer](https://github.com/4d/4D-Analyzer-VSCode).
 
 ## Creación de métodos
 
@@ -14,7 +14,7 @@ Un método en 4D se almacena en un archivo **.4dm** ubicado en la carpeta apropi
 Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
 - Todos los tipos de métodos pueden crearse o abrirse desde la ventana del **Explorador** (excepto los métodos Objeto que se gestionan desde el [editor de formularios](../FormEditor/formEditor.md)).
-- Los métodos proyecto también pueden crearse o abrirse desde el menú **Archivo** o la barra de herramientas (**Nuevo/Método...** o **Abrir/Método...**) o utilizando los accesos directos de la ventana del [editor de código](../code-editor/write-class-method
+- Los métodos proyecto también pueden crearse o abrirse desde el menú **Archivo** o desde la barra de herramientas (**Nuevo/Método...** o **Abrir/Método...**) o utilizando los accesos directos de la ventana del [editor de código](../code-editor/write-class-method.md#shortcuts).
 - Los triggers también pueden crearse o abrirse desde el editor de Estructura.
 - Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
 
@@ -116,7 +116,7 @@ Los atributos de disponibilidad especifican los servicios externos que pueden ll
 
 Este atributo le permite publicar el método actual como servicio web accesible a través de peticiones SOAP. Para más información, consulte el capítulo [Publicación y uso de los servicios web](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html). Cuando esta opción está marcada, se activa la opción **Publicado en WSDL**.
 
-In the Explorer, project methods that are offered as a Web Service are given a specific icon.
+En el explorador, los métodos proyecto que se ofrecen como Servicio web reciben un icono específico.
 
 **Nota:** no es posible publicar un método como servicio web si su nombre incluye caracteres que no cumplen con la nomenclatura XML (por ejemplo espacios). Si el nombre del método no cumple con esto, 4D no asigna la propiedad.
 
@@ -124,13 +124,13 @@ In the Explorer, project methods that are offered as a Web Service are given a s
 
 Este atributo sólo está disponible si el atributo "Servicio Web" está marcado. Permite incluir el método actual en el WSDL de la aplicación 4D. Para obtener más información al respecto, consulte [Generación del WSDL](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html#502689).
 
-In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon.
+En el Explorador, los métodos proyecto que se ofrecen como servicio web y se publican en WSDL reciben un icono específico.
 
 #### Etiquetas 4D y URLs (4DACTION...)
 
 Esta opción se utiliza para reforzar la seguridad del servidor web 4D: cuando no está marcada, el método proyecto no puede ejecutarse a través de una petición HTTP que contenga la URL especial [4DACTION](../WebServer/httpRequests.md#4daction) utilizada para llamar a los métodos 4D, ni las etiquetas especiales [4DSCRIPT, 4DTEXT y 4DHTML](../Tags/transformation-tags.md).
 
-In the Explorer, project methods with this attribute are given a specific icon.
+En el Explorador, los métodos proyecto con este atributo reciben un icono específico.
 
 Por razones de seguridad, esta opción está desmarcada por defecto. Cada método que pueda ejecutarse utilizando las URLs y las etiquetas especiales debe indicarse individualmente.
 
@@ -149,7 +149,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 #### Servidor REST
 
-*Esta opción está obsoleta. La llamada a código a través de llamadas REST sólo es compatible con [Funciones clase modelo de datos ORDA](../REST/ClassFunctions.md).*
+*Esta opción es obsoleta. La llamada a código a través de llamadas REST sólo es compatible con las [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md).*
 
 #### Modificar de atributos globalmente
 

@@ -19,6 +19,10 @@ La propriété Correction orthographique active la vérification orthographique 
 
 [Zone 4D Write Pro](writeProArea_overview.md) - [Zone de saisie](input_overview.md)
 
+#### Commandes
+
+[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck.md) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck.md) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Menu contextuel
@@ -46,6 +50,10 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 [Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
 
+#### Commandes
+
+[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu..md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+
 ---
 
 ## Saisissable
@@ -65,6 +73,14 @@ Lorsque cette propriété est désactivée, tous les pop-up menus associés à u
 #### Objets pris en charge
 
 [4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+
+#### Commandes
+
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+
+#### See alos
+
+[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
 
 ---
 
@@ -95,7 +111,7 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 | &9                                                                              | Permet tout chiffre.                                                                                                                                                                                                          |
 | &A                                                                              | Ne permet que la saisie de lettres majuscules.                                                                                                                                                                                |
 | &A                                                                              | Ne permet que la saisie de lettres (minuscules et majuscules).                                                                                                                                             |
-| &3                                                                              | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                                                            |
+| &@                                                                 | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                                                            |
 | ~a##                                                                                | Abréviation du nom de l'état (par exemple, CA). Permet la saisie de deux lettres, mais les transforme en caractères majuscules.                                                            |
 | !0&9##/##/##                                                                    | Filtre standard de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                                          |
 | !0&9 Day: ## Month: ## Year: ## | Filtre personnalisé de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Deux entrées après chaque mot.                       |
@@ -122,6 +138,10 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 
 ---
 
+#### Commandes
+
+[`OBJECT Get filter`](../commands-legacy/object-get-filter.md) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter.md)
+
 ## Focusable
 
 When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
@@ -144,6 +164,10 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
 
+#### Commandes
+
+[`OBJECT Get enterable`](../commands-legacy/object-get-focusable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+
 ---
 
 ## Configuration du clavier
@@ -163,6 +187,10 @@ Par défaut, la saisie utilise la configuration courante du clavier.
 #### Objets pris en charge
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+
+#### Commandes
+
+[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout.md) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout.md)
 
 ---
 
@@ -194,7 +222,11 @@ Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option
 
 #### Objets pris en charge
 
-[Input](input_overview.md)
+[Zone de saisie](input_overview.md)
+
+#### Commandes
+
+[`OBJECT Get multiline`](../commands-legacy/object-get-multiline.md) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline.md)
 
 ---
 
@@ -234,6 +266,10 @@ Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pa
 #### Voir également
 
 [Help tip](properties_Help.md)
+
+#### Commandes
+
+[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md)
 
 ---
 
@@ -280,6 +316,10 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
 
+#### Commandes
+
+[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)
+
 ---
 
 ## Saisie sur clic unique
@@ -299,3 +339,8 @@ Lorsque cette option n'est pas activée, les utilisateurs doivent d'abord sélec
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
+
+#### Commandes
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

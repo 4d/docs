@@ -42,6 +42,10 @@ title: ヘルプ
 2. フォームエディターレベル
 3. **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** command (highest priority)
 
+#### コマンド
+
+[`OBJECT Get help tip`](../commands-legacy/object-get-help-tip.md) - [`OBJECT SET HELP TIP`](../commands-legacy/object-set-help-tip.md)
+
 #### 参照
 
 [プレースホルダー](properties_Entry.md#プレースホルダー)

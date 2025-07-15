@@ -50,6 +50,10 @@ RB-1762-1
 * [リストボックス列](listbox_overview.md#リストボックス列)
 * [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 日付フォーマット
@@ -110,6 +114,10 @@ RB-1762-1
 #### 対象オブジェクト
 
 [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -277,6 +285,10 @@ RB-1762-1
 [リストボックスフッター](listbox_overview.md#リストボックスフッター) -
 [進捗インジケーター](progressIndicator.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
+
 ---
 
 ## ピクチャーフォーマット
@@ -337,6 +349,10 @@ RB-1762-1
 
 [入力](input_overview.md)* [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 時間フォーマット
@@ -391,6 +407,10 @@ Customized time formats can be built using several patterns described in the [**
 
 [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## テキスト (True時)/テキスト (False時)
@@ -415,6 +435,10 @@ Customized time formats can be built using several patterns described in the [**
 
 [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 表示タイプ
@@ -435,13 +459,17 @@ Customized time formats can be built using several patterns described in the [**
 
 [リストボックス列](listbox_overview.md#リストボックス列)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## レンダリングしない
 
 このプロパティが選択されていると、アプリケーションモードでオブジェクトが描画されません (あとから描画することができます)。
 
-このプロパティは、”透明” ボタンの実装を可能にします。  レンダリングされていないボタンは、描画オブジェクトの上に配置することができます。 レンダリングされていないボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。
+このプロパティは、”透明” ボタンの実装を可能にします。 レンダリングされていないボタンは、描画オブジェクトの上に配置することができます。 レンダリングされていないボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。
 
 #### JSON 文法
 
@@ -482,6 +510,10 @@ Customized time formats can be built using several patterns described in the [**
 #### 対象オブジェクト
 
 [チェックボックス](checkbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+
+#### コマンド
+
+[OBJECT Get three states checkbox](../commands-legacy/object-get-three-states-checkbox.md) - [OBJECT SET THREE STATES CHECKBOX](../commands-legacy/object-set-three-states-checkbox.md)
 
 ---
 
@@ -541,6 +573,10 @@ Customized time formats can be built using several patterns described in the [**
 
 [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
+#### コマンド
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+
 ---
 
 ## 表示状態
@@ -597,6 +633,10 @@ Customized time formats can be built using several patterns described in the [**
 [テキストエリア](text.md) -
 [Web エリア](webArea_overview.md)
 
+#### コマンド
+
+[OBJECT Get visible](../commands-legacy/object-get-visible.md) - [OBJECT SET VISIBLE](../commands-legacy/object-set-visible.md)
+
 ---
 
 ## ワードラップ
@@ -651,3 +691,7 @@ Customized time formats can be built using several patterns described in the [**
 #### 対象オブジェクト
 
 [入力](input_overview.md)* [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+
+#### コマンド
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)

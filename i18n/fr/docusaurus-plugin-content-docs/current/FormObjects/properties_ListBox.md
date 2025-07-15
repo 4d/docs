@@ -72,6 +72,10 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 [List Box](listbox_overview.md)
 
+#### Commandes
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Ensemble surlignage
@@ -94,6 +98,10 @@ This property is used to specify the set to be used to manage highlighted record
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
+
+#### Commandes
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -148,6 +156,10 @@ Nombre de colonnes qui ne peuvent pas être déplacées pendant l'exécution.
 
 [List Box](listbox_overview.md)
 
+#### Commandes
+
+[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns.md) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns.md) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns.md) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns.md)
+
 ---
 
 ## Nombre de colonnes
@@ -165,6 +177,10 @@ Définit le nombre de colonnes de la list box.
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
+
+#### Commandes
+
+[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns.md) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md)
 
 ---
 
@@ -219,6 +235,10 @@ Notez que le paramétrage des propriétés d'un élément remplace toutes les au
 
 [List Box](listbox_overview.md)
 
+#### Commandes
+
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array.md)
+
 ---
 
 ## Mode de sélection
@@ -245,3 +265,8 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
+
+#### Commandes
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

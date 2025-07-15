@@ -23,7 +23,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 | [Pointer](Concepts/dt_pointer.md)                       | -                                           | Sí                         | `Pointer`                         | `ARRAY POINTER`                  |
 | [Picture](Concepts/dt_picture.md)                       | Sí                                          | Sí                         | `Picture`                         | `ARRAY PICTURE`                  |
 | [BLOB](Concepts/dt_blob.md)                             | Sí                                          | Sí                         | `Blob`, `4D.Blob`                 | `ARRAY BLOB`                     |
-| [Object](Concepts/dt_object.md)                         | Yes(3)                   | Sí                         | `Object`                          | `ARRAY OBJECT`                   |
+| [Object](Concepts/dt_object.md)                         | Sí(3)                    | Sí                         | `Object`                          | `ARRAY OBJECT`                   |
 | [Collection](Concepts/dt_collection.md)                 | -                                           | Sí                         | `Collection`                      |                                  |
 | [Variant](Concepts/dt_variant.md)(2) | -                                           | Sí                         | `Variant`                         |                                  |
 

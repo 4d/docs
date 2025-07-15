@@ -3,7 +3,7 @@ id: ordaClasses
 title: Clases del modelo de datos
 ---
 
-ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
+ORDA permite crear funciones de clase de alto nivel sobre el [modelo de datos](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
 
 Por ejemplo, podría crear una función `getNextWithHigherSalary()` en la clase `EmployeeEntity` para devolver los empleados con un salario superior al seleccionado. Sería tan sencillo como llamar:
 
@@ -828,25 +828,25 @@ Use the `onHTTPGet` keyword to declare functions that can be called through HTTP
 
 The `onHTTPGet` keyword is available with:
 
-- ORDA Data model class functions
+- Funciones de las clases del modelo de datos ORDA
 - [Funciones de la clase Singletons](../Concepts/classes.md#singleton-classes)
 
 La sintaxis formal es:
 
 ```4d
-// declare an onHTTPGet function
+// declarar una función onHTTPGet
 exposed onHTTPGet Function <functionName>(params) : result
 ```
 
 :::info
 
-The `exposed` keyword must also be added in this case, otherwise an error will be generated.
+En este caso también debe añadirse la palabra clave `exposed`, de lo contrario se generará un error.
 
 :::
 
 :::caution
 
-As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+Como este tipo de llamada es una acción que se ofrece fácilmente, el desarrollador debe asegurarse de que no se realiza ninguna acción sensible en dichas funciones.
 
 :::
 
@@ -854,7 +854,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 Una función con la palabra clave `onHTTPGet` acepta [parámetros](../Concepts/parameters.md).
 
-In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
+En la petición HTTP GET, los parámetros deben pasarse directamente en la URL y declararse utilizando la palabra clave `$params` (deben estar encerrados en una colección).
 
 ```
 IP:port/rest/<dataclass>/functionName?$params='[<params>]'
@@ -864,7 +864,7 @@ Consulte la sección [Parámetros](../REST/classFunctions#parameters) en la docu
 
 ### resultado
 
-A function with `onHTTPGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+Una función con la palabra clave `onHTTPGet` puede devolver cualquier valor de un tipo soportado (igual que para [parámetros](../REST/classFunctions#parameters) REST).
 
 :::info
 
@@ -892,7 +892,7 @@ exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height 
 	return $response
 ```
 
-It can be called by the following HTTP GET request:
+Se puede llamar mediante la siguiente petición HTTP GET:
 
 ```
 IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'

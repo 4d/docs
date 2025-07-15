@@ -9,8 +9,8 @@ La tecnología ORDA se basa en un mapeo automático de una [estructura de base d
 
 Cuando llama a un datastore usando los comandos [`ds`](commands/ds.md) u [`Open datastore`](commands/open-datastore.md), 4D hace referencia automáticamente a tablas y campos de la estructura 4D correspondiente como propiedades del objeto devuelto [datastore](#datastore):
 
-- Tables are mapped to [dataclasses](#dataclass).
-- Fields are mapped to [storage attributes](#storage-and-relation-attributes).
+- Las tablas se asignan a [dataclasses](#dataclass).
+- Los campos se asignan a [atributos de almacenamiento](#storage-and-relation-attributes).
 - Relations are mapped to [relation attributes](#storage-and-relation-attributes) - relation names, defined in the [Structure editor](https://doc.4d.com/4Dv20/4D/20.2/Creating-and-modifying-relations.300-6750296.en.html), are used as relation attribute names.
 
 ![](../assets/en/ORDA/datastoreMapping.png)

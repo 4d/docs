@@ -23,6 +23,10 @@ Les emplacements suivants peuvent être utilisés pour le chemin d'images statiq
 
 [Bouton image](pictureButton_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md) - [Image statique](staticPicture.md)
 
+#### Commandes
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Affichage
@@ -66,3 +70,7 @@ Avec le format **Image tronquée (non centrée)**, 4D place le coin supérieur g
 #### Objets pris en charge
 
 [Static Picture](staticPicture.md)
+
+#### Commandes
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)

@@ -17,6 +17,10 @@ title: フッター
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## 高さ
@@ -59,6 +63,10 @@ title: フッター
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height.md) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md)
 
 #### 参照
 

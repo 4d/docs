@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-O comando **WP Get attributes** <!--REF #_command_.WP Get attributes. ummary--> retorna o valor de qualquer atributo em um intervalo 4D de escrita Pro, cabeçalho, corpo, rodapé, tabela ou documento.<!-- FIM REF--> Este comando lhe dá acesso a qualquer tipo de atributo interno da 4D Write Pro: caractere, parágrafo, tabela ou imagem.
+O comando **WP Get attributes** <!--REF #_command_.WP Get attributes.Summary--> retorna o valor de qualquer atributo em um intervalo 4D de escrita Pro, cabeçalho, corpo, rodapé, tabela ou documento.<!-- END REF--> Este comando lhe dá acesso a qualquer tipo de atributo interno da 4D Write Pro: caractere, parágrafo, tabela ou imagem.
 
 Em *targetObj*, você pode passar:
 

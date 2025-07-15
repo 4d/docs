@@ -42,6 +42,10 @@ Cuando se asocian consejos diferentes a un mismo objeto en varias ubicaciones, s
 2. editor de formulario
 3. Comando **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** (alta prioridad)
 
+#### Comandos
+
+[`OBJECT Get help tip`](../commands-legacy/object-get-help-tip.md) - [`OBJECT SET HELP TIP`](../commands-legacy/object-set-help-tip.md)
+
 #### Ver también
 
 [Marcador de posición](properties_Entry.md#placeholder)

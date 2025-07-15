@@ -17,7 +17,7 @@ When this property is enabled, the [OPEN FONT PICKER](../commands-legacy/open-fo
 
 #### Objets pris en charge
 
-[Input](input_overview.md)
+[Zone de saisie](input_overview.md)
 
 ---
 
@@ -482,4 +482,4 @@ Lorsque la propriété est activée, la zone stocke toutes les informations de m
 
 #### Objets pris en charge
 
-[Input](input_overview.md)
+[Zone de saisie](input_overview.md)

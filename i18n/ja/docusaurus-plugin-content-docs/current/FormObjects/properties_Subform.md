@@ -42,6 +42,10 @@ title: サブフォーム
 
 [サブフォーム](subform_overview.md)
 
+#### コマンド
+
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
+
 ---
 
 ## 空行をダブルクリック
@@ -130,6 +134,10 @@ title: サブフォーム
 #### 対象オブジェクト
 
 [サブフォーム](subform_overview.md)
+
+#### コマンド
+
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
 
 ---
 

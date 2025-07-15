@@ -53,7 +53,7 @@ title: オブジェクト
 
 > オブジェクト名のサイズ上限は 255バイトです。
 
-4D ランゲージを使用する場合、オブジェクト名を使用してアクティブなフォームオブジェクトを参照することができます([オブジェクト(フォーム)コマンド](../category/object-forms) を参照して下さい)。
+When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../commands/theme/Objects_Forms.md))).
 
 フォームオブジェクトの命名規則については [識別子](Concepts/identifiers.md) の章を参照してください。
 
@@ -91,6 +91,10 @@ title: オブジェクト
 [タブコントロール](tabControl.md) -
 [テキストエリア](text.md) -
 [Web エリア](webArea_overview.md)
+
+#### コマンド
+
+[FORM GET OBJECTS](../commands-legacy/form-get-objects.md) - [OBJECT Get name](../commands-legacy/object-get-name.md)
 
 ---
 
@@ -166,6 +170,10 @@ title: オブジェクト
 #### 対象オブジェクト
 
 [4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
+
+#### コマンド
+
+[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula.md) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands-legacy/object-set-data-source-formula.md)
 
 ---
 
@@ -245,6 +253,10 @@ title: オブジェクト
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands-legacy/object-set-data-source-formula.md)
 
 ---
 
@@ -327,6 +339,10 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 [ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
+#### コマンド
+
+[`OBJECT Get title`](../commands-legacy/object-get-title.md) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title.md)
+
 ---
 
 ## 変数の計算
@@ -379,3 +395,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 #### 対象オブジェクト
 
 [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+
+#### コマンド
+
+[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation.md) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md)

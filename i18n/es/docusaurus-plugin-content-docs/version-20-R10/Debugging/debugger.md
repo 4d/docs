@@ -120,7 +120,7 @@ El estado actual de la ventana de depuración se guarda automáticamente en el p
 - el [modo de visualización](#display-mode),
 - las expresiones que se muestran actualmente en el panel de visualización personalizado. Por defecto, las expresiones se guardan con el método o función actual. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.
 
-The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
+El botón **Configuración predeterminada de la ventana** restaura la posición y el tamaño predeterminados de la ventana actual (incluidas las líneas de división y la propia ventana).
 
 ![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 

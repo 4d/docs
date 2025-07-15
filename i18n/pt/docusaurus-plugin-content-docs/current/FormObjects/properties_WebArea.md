@@ -54,12 +54,12 @@ Esquematicamente, essa variável funciona como a área de endereço de um navega
 
 ### Variável URL e comando WA OPEN URL
 
-A variável URL produz os mesmos efeitos que o comando [WA OPEN URL](../commands-legacy/wa-open-url.md). No entanto, há que assinalar as seguintes diferenças:
+The URL variable produces the same effects as the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command. No entanto, há que assinalar as seguintes diferenças:
 
-- Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). O comando [WA OPEN URL](../commands-legacy/wa-open-url.md) aceita ambas as notações.
-- Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. O comando [WA OPEN URL](../commands-legacy/wa-open-url.md) gera um erro nesse caso.
-- Se a variável URL não contiver um protocolo (http, mailto, arquivo, etc.), a área Web adicionará "http://", o que não é o caso do comando [WA OPEN URL](../commands-legacy/wa-open-url.md).
-- Quando a área Web não for exibida no formulário (quando estiver localizada em outra página do formulário), executando o comando [WA OPEN URL](../commands-legacy/wa-open-url.md) não tem efeito, Enquanto atribuir um valor à variável URL pode ser usado para atualizar a URL atual.
+- Para acesso a documentos, essa variável aceita apenas URLs em conformidade com a RFC ("file://c:/My%20Doc") e não nomes de caminho do sistema ("c:\MyDoc"). The [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command accepts both notations.
+- Se a variável URL contiver uma cadeia de caracteres vazia, a área Web não tentará carregar o URL. The [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command generates an error in this case.
+- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command.
+- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
 #### Gramática JSON
 
@@ -70,6 +70,10 @@ A variável URL produz os mesmos efeitos que o comando [WA OPEN URL](../commands
 #### Objectos suportados
 
 [Área web](webArea_overview.md)
+
+#### Comandos
+
+[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
 
 ---
 
@@ -103,3 +107,7 @@ Você pode personalizar os parâmetros da área CEF criando um arquivo de config
 #### Objectos suportados
 
 [Área web](webArea_overview.md)
+
+#### Comandos
+
+[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)

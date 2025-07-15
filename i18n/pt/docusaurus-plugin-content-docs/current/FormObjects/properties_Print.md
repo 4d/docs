@@ -9,7 +9,7 @@ Essa propriedade trata do modo de impressão de objetos cujo tamanho pode variar
 
 Não é possível colocar mais de um objeto de quadro variável lado a lado em um formulário. Você pode colocar objetos de quadro não variável em ambos os lados de um objeto que será impresso com um tamanho variável, desde que o objeto de quadro variável tenha pelo menos uma linha a mais do que o objeto ao lado e que todos os objetos estejam alinhados na parte superior. Se essa condição não for respeitada, o conteúdo dos outros campos será repetido para cada fatia horizontal do objeto de quadro variável.
 
-> Los comandos `objeto Print` y `Print form` no soportan esta propiedad.
+> The [`Print object`](../commands-legacy/print-object.md) and [`Print form`](../commands/print-form.md) commands do not support this property.
 
 As opções de impressão são:
 
@@ -19,7 +19,7 @@ As opções de impressão são:
 
 - **Fijo (Múltiples Registros)** (sólo subformularios): se mantiene el tamaño inicial del área del subformulario pero 4D imprime el formulario varias veces para imprimir todos los registros.
 
-> Esta propiedad puede definirse por programación utilizando el comando `OBJECT SET PRINT VARIABLE FRAME`.
+> This property can be set by programming using the [`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame.md) command.
 
 #### Gramática JSON
 
@@ -30,3 +30,7 @@ As opções de impressão são:
 #### Objectos suportados
 
 [Entrada](input_overview.md) - [Subformularios](subform_overview.md) (sólo subformularios lista) - [Áreas 4D Write Pro](writeProArea_overview.md)
+
+#### Comandos
+
+[`OBJECT GET PRINT VARIABLE FRAME`](../commands-legacy/object-get-print-variable-frame.md) - [`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame.md)

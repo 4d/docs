@@ -56,6 +56,10 @@ title: 値の範囲
 
 [コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
+#### コマンド
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
+
 ---
 
 ## 指定リスト
@@ -76,3 +80,7 @@ title: 値の範囲
 #### 対象オブジェクト
 
 [コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
+
+#### コマンド
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)

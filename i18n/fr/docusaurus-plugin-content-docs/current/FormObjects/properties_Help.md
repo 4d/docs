@@ -42,6 +42,10 @@ Lorsque différentes astuces sont associées au même objet à plusieurs emplace
 2. éditeur de formulaire
 3. Commande **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** (haute priorité)
 
+#### Commandes
+
+[`OBJECT Get help tip`](../commands-legacy/object-get-help-tip.md) - [`OBJECT SET HELP TIP`](../commands-legacy/object-set-help-tip.md)
+
 #### Voir également
 
 [Placeholder](properties_Entry.md#placeholder)

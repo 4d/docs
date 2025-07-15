@@ -19,6 +19,10 @@ title: 入力
 
 [4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
 
+#### コマンド
+
+[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck.md) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck.md) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## コンテキストメニュー
@@ -47,6 +51,10 @@ title: 入力
 
 [入力](input_overview.md)\* [Webエリア](webArea_overview.md)
 
+#### コマンド
+
+[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu..md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+
 ---
 
 ## 入力可
@@ -73,6 +81,14 @@ title: 入力
 [進捗インジケーター](progressIndicator.md) -
 [ルーラー](ruler.md) -
 [ステッパー](stepper.md)
+
+#### コマンド
+
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+
+#### See alos
+
+[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
 
 ---
 
@@ -103,7 +119,7 @@ title: 入力
 | &9                                                           | 数字のみ入力可能。                                                                               |
 | &A                                                           | 大文字の文字だけが入力可能。                                                                          |
 | &a                                                           | 文字だけが入力可能 (大文字と小文字)。                                                 |
-| &#060;-                                                      | 数字と文字が入力可能。 特殊記号を除きます。                                                                  |
+| &@                                              | 数字と文字が入力可能。 特殊記号を除きます。                                                                  |
 | ~a##                                                             | 2桁の任意の文字が入力可能、大文字に変換されます。 2桁の任意の文字が入力可能、大文字に変換されます。                                     |
 | !0&9##/##/##                                                 | 標準の日付入力フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。                                              |
 | !0&9##年##月##日                                                | 時間入力フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。 時と分だけが入力可能。                                     |
@@ -129,6 +145,10 @@ title: 入力
 [チェックボックス](checkbox_overview.md)\* [コンボボックス](comboBox_overview.md)
 
 ---
+
+#### コマンド
+
+[`OBJECT Get filter`](../commands-legacy/object-get-filter.md) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter.md)
 
 ## フォーカス可
 
@@ -161,6 +181,10 @@ title: 入力
 [ラジオボタン](radio_overview.md) -
 [サブフォーム](subform_overview.md)
 
+#### コマンド
+
+[`OBJECT Get enterable`](../commands-legacy/object-get-focusable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+
 ---
 
 ## キーボードレイアウト
@@ -180,6 +204,10 @@ title: 入力
 #### 対象オブジェクト
 
 [4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
+
+#### コマンド
+
+[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout.md) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout.md)
 
 ---
 
@@ -212,6 +240,10 @@ title: 入力
 #### 対象オブジェクト
 
 [入力](input_overview.md)
+
+#### コマンド
+
+[`OBJECT Get multiline`](../commands-legacy/object-get-multiline.md) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline.md)
 
 ---
 
@@ -251,6 +283,10 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 #### 参照
 
 [ヘルプTips](properties_Help.md)
+
+#### コマンド
+
+[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md)
 
 ---
 
@@ -295,8 +331,11 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) -
-[ラジオボタン](radio_overview.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+
+#### コマンド
+
+[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)
 
 ---
 
@@ -317,3 +356,8 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

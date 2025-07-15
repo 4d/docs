@@ -17,6 +17,10 @@ title: ヘッダー
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## 高さ
@@ -59,6 +63,10 @@ title: ヘッダー
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height.md) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height.md)
 
 #### 参照
 

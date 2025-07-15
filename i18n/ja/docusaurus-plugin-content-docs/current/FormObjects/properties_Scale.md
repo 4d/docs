@@ -17,6 +17,10 @@ title: スケール
 
 [バーバーショップ](progressIndicator.md#バーバーショップ)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get indicator type](../commands-legacy/object-get-indicator-type.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET INDICATOR TYPE](../commands-legacy/object-set-indicator-type.md)
+
 ---
 
 ## 目盛りを表示
@@ -33,6 +37,10 @@ title: スケール
 
 [Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 目盛りのステップ
@@ -48,6 +56,10 @@ title: スケール
 #### 対象オブジェクト
 
 [Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -69,6 +81,10 @@ title: スケール
 
 [Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 最大
@@ -88,6 +104,10 @@ title: スケール
 
 [Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get maximum-value](../commands-legacy/object-get-maximum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET MAXIMUM VALUE](../commands-legacy/object-set-maximum-value.md)
+
 ---
 
 ## 最小
@@ -104,6 +124,10 @@ title: スケール
 
 [Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET MINIMUM VALUE](../commands-legacy/object-set-minimum-value.md)
+
 ---
 
 ## ステップ
@@ -119,3 +143,7 @@ title: スケール
 #### 対象オブジェクト
 
 [Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)

@@ -19,6 +19,10 @@ A propriedade Auto Spellcheck ativa a verificação ortográfica para cada objet
 
 [Área 4D Write Pro](writeProArea_overview.md) - [Área de entrada](input_overview.md)
 
+#### Comandos
+
+[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck.md) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck.md) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Menu de contexto
@@ -46,6 +50,10 @@ Para un [Área Web](webArea_overview.md), el contenido del menú depende del mot
 
 [Entrada](input_overview.md) - [Área Web](webArea_overview.md) - [Áreas 4D Write Pro](writeProArea_overview.md)
 
+#### Comandos
+
+[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu..md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+
 ---
 
 ## Enterable
@@ -65,6 +73,14 @@ Quando essa propriedade está desativada, todos os menus pop-up associados a uma
 #### Objectos suportados
 
 [4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+
+#### Comandos
+
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+
+#### See alos
+
+[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
 
 ---
 
@@ -122,6 +138,10 @@ Aqui está uma tabela que explica cada uma das opções de filtro de entrada na 
 
 ---
 
+#### Comandos
+
+[`OBJECT Get filter`](../commands-legacy/object-get-filter.md) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter.md)
+
 ## Focável
 
 Cuando la propiedad **Enfocable** está activada para un objeto, el objeto puede tener el foco (y por lo tanto puede ser activado por el teclado por ejemplo). Cuando está seleccionado, aparece delimitado por una línea de puntos gris, excepto si también se ha seleccionado la opción [Ocultar rectángulo de enfoque](properties_Appearance.md#hide-focus-rectangle).
@@ -144,6 +164,10 @@ Cuando se selecciona la propiedad **Enfocable** para un objeto no editable, el u
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
 
+#### Comandos
+
+[`OBJECT Get enterable`](../commands-legacy/object-get-focusable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+
 ---
 
 ## Layout do teclado
@@ -163,6 +187,10 @@ Por padrão, o objeto utiliza a disposição atual do teclado.
 #### Objectos suportados
 
 [Áreas 4D Write Pro](writeProArea_overview.md) - [Área de entrada](input_overview.md)
+
+#### Comandos
+
+[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout.md) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout.md)
 
 ---
 
@@ -195,6 +223,10 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 #### Objectos suportados
 
 [Entrada](input_overview.md)
+
+#### Comandos
+
+[`OBJECT Get multiline`](../commands-legacy/object-get-multiline.md) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline.md)
 
 ---
 
@@ -234,6 +266,10 @@ Você só passa a referência no campo "Placeholder"; não é possível combinar
 #### Veja também
 
 [Dica de ajuda](properties_Help.md)
+
+#### Comandos
+
+[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md)
 
 ---
 
@@ -280,6 +316,10 @@ Para visualizar uma lista de todos os atalhos usados no ambiente Desenho 4D, con
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
 
+#### Comandos
+
+[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)
+
 ---
 
 ## Editar com um clique
@@ -299,3 +339,8 @@ Quando esta opção não está habilitada, os usuários devem primeiro seleciona
 #### Objectos suportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

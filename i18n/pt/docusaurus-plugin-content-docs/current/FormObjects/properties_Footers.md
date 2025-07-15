@@ -17,6 +17,10 @@ Essa propriedade é usada para exibir ou ocultar [os rodapés de coluna list box
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Alto
@@ -58,6 +62,10 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 #### Objectos suportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height.md) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md)
 
 #### Veja também
 

@@ -9,7 +9,7 @@ Cette propriété permet de gérer le mode d'impression des objets dont la taill
 
 Vous ne pouvez pas placer deux objets (ou plus) avec une taille variable côte à côte dans un formulaire. Vous pouvez placer des objets de taille fixe à côté d’un objet qui sera imprimé avec une taille variable si l’objet de taille variable est plus long d’au moins une ligne que l’objet placé à son côté et que leurs limites supérieures sont alignées. Si cette condition n’est pas respectée, le contenu des autres champs sera répété pour toute tranche horizontale de l’objet de taille variable.
 
-> Les commandes `Print object` et `Print form` ne sont pas compatibles avec cette option.
+> The [`Print object`](../commands-legacy/print-object.md) and [`Print form`](../commands/print-form.md) commands do not support this property.
 
 Les options d'impression sont les suivantes :
 
@@ -19,7 +19,7 @@ Les options d'impression sont les suivantes :
 
 - **Fixe (Enregistrements multiples)** (sous-formulaires uniquement) : la taille initiale de la zone de sous-formulaire est conservée mais 4D imprime le formulaire plusieurs fois afin d'imprimer tous les enregistrements.
 
-> Cette propriété peut être définie par programmation à l'aide de la commande `OBJECT SET PRINT VARIABLE FRAME`.
+> This property can be set by programming using the [`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame.md) command.
 
 #### Grammaire JSON
 
@@ -30,3 +30,7 @@ Les options d'impression sont les suivantes :
 #### Objets pris en charge
 
 [Zone de saisie](input_overview.md) - [Sous-formulaires](subform_overview.md) (sous-formulaires liste uniquement) - [Zones 4D Write Pro](writeProArea_overview.md)
+
+#### Commandes
+
+[`OBJECT GET PRINT VARIABLE FRAME`](../commands-legacy/object-get-print-variable-frame.md) - [`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame.md)

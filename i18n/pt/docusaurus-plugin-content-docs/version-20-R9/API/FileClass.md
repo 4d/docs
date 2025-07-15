@@ -758,7 +758,7 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 #### Descrição
 
-A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- FIM REF -->.
+A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do arquivo<!-- END REF -->.
 
 Se o arquivo referenciado no objeto `Arquivo` não existir no disco, ele será criado pela função. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 

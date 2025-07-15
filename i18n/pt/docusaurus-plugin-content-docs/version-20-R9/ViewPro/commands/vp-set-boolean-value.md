@@ -16,7 +16,7 @@ title: VP SET BOOLEAN VALUE
 
 ## Descrição
 
-O comando <!-- REF #_method_.VP SET VALUE.Summary -->atribui um valor booleano especificado a um intervalo de células designadas <!-- END REF -->.
+O comando `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->atribui um valor booleano especificado a um intervalo de células designadas <!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo de células (criado, por exemplo, com [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 

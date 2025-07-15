@@ -22,3 +22,9 @@ Ver [List box jerárquicos](listbox_overview.md#hierarchical-list-boxes)
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md) - [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-headers-height.md)
+
+

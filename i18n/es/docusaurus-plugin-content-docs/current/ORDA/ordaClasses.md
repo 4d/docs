@@ -3,7 +3,7 @@ id: ordaClasses
 title: Clases del modelo de datos
 ---
 
-ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
+ORDA permite crear funciones de clase de alto nivel sobre el [modelo de datos](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
 
 Por ejemplo, podría crear una función `getNextWithHigherSalary()` en la clase `EmployeeEntity` para devolver los empleados con un salario superior al seleccionado. Sería tan sencillo como llamar:
 
@@ -211,9 +211,9 @@ Cada tabla expuesta con ORDA ofrece una clase Entity en el class store `cs`.
 
 #### Class constructor
 
-You can define a **class constructor** for an Entity class. The class constructor is called whenever an entity is created in memory and can be used to initialize some values.
+Se puede definir un **constructor de clase** para una clase Entidad. El constructor de la clase se llama cada vez que se crea una entidad en memoria y puede utilizarse para inicializar algunos valores.
 
-For information, please refer to the [Class constructor](#class-constructor-1) section.
+Para más información, consulte la sección [Constructor de clase](#class-constructor-1).
 
 #### Atributos calculados
 
@@ -273,7 +273,7 @@ Al crear o editar clases de modelos de datos, debe prestar atención a las sigui
 
 - Al definir una clase, asegúrese de que la instrucción [`Class extends`](../Concepts/classes.md#class-extends-classname) coincida exactamente con el nombre de la clase padre (recuerde que son sensibles a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
 
-- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). You must use a regular function as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
+- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). Debe utilizar una función regular como se muestra en la [columna `Instantiated by` de la tabla de clases ORDA](#architecture).
 
 - No puede sobrescribir una función de clase ORDA nativa del [class store](Concepts/classes.md#class-stores) **`4D`** con una función de clase usuario de modelo de datos.
 
@@ -301,7 +301,7 @@ Si su proyecto está diseñado para ejecutarse en cliente/servidor, asegúrese d
 ```4d
 // Entity class 
 Class constructor()
-// code
+// código
 ```
 
 :::note
@@ -310,48 +310,48 @@ No hay palabra clave final para el código de función class constructor. El len
 
 :::
 
-An ORDA class constructor function is triggered just after a new entity is created in memory, [whatever the way it is created](#commands-that-trigger-the-class-constructor-functions). It is useful to set initial values for entity instantiation, for example a custom ID.
+Una función class constructor ORDA se activa justo después de que se cree una nueva entidad en memoria, [sea cual sea la forma en que se cree](#commands-that-trigger-the-class-constructor-functions). Es útil para establecer los valores iniciales para la instanciación de entidades, por ejemplo un ID personalizado.
 
-This function can only be set at the [entity level](#entity-class). There can only be one constructor function in an entity class (otherwise an error is returned).
+Esta función sólo puede definirse al [nivel de la entidad](#entity-class). Sólo puede haber una función constructor en una class entity (de lo contrario se devuelve un error).
 
-This ORDA class constructor function does not receive or return parameters. However, you can use it to initialize attribute values using [`This`](../commands/this.md). Note that values initialized by the constructor are overriden if corresponding attributes are filled by the code.
+Esta función class constructor ORDA no recibe ni devuelve parámetros. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this.md). Tenga en cuenta que los valores inicializados por el constructor se anulan si el código llena los atributos correspondientes.
 
 :::note
 
-An ORDA class constructor function is similar to a [user class constructor function](../Concepts/classes.md#class-constructor), with the following differences:
+Una función class constructor ORDA es similar a una [función class constructor usuario](../Concepts/classes.md#class-constructor), con las siguientes diferencias:
 
-- you cannot pass parameters to the constructor,
+- no se pueden pasar parámetros al constructor,
 - no puede utilizar las palabras clave `shared`, `session` o `singleton`,
 - no puede llamar a la palabra clave [`Super`](../Concepts/classes.md#super) dentro de la función,
-- the class constructor cannot be called using the `new()` function on an entity (entities can only be created by specific functions, see below).
+- el constructor de la clase no puede ser llamado utilizando la función `new()` sobre una entidad (las entidades solo pueden ser creadas por funciones específicas, ver más abajo).
 
 :::
 
-#### Commands that trigger the Class constructor functions
+#### Comandos que activan las funciones Class constructor
 
-The `Class constructor` function is triggered by the following commands and features:
+La función `Class constructor` es activada por los siguientes comandos y funciones:
 
 - [`dataClass.new()`](../API/DataClassClass.md#new)
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
 - [`entity.clone()`](../API/EntityClass.md#clone)
-- [REST API $method=update](../REST/$method.md#methodupdate) in a POST without the `__KEY` and `__STAMP` parameters
+- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \`__STAMP
 - el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
 
 :::note Nota de compatibilidad
 
-Records created at the 4D database level using 4D classic language commands or standard actions do not trigger the entity Class constructor.
+Los registros creados a nivel de la base de datos 4D utilizando comandos del lenguaje clásico 4D o acciones estándar no activan el Class constructor de la entidad.
 
 :::
 
-#### Remote configurations
+#### Configuraciones remotas
 
-When using a remote configurations, you need to pay attention to the following principles:
+Cuando utilice configuraciones remotas, necesita prestar atención a los siguientes principios:
 
-- In **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
+- En **cliente/servidor** la función puede ser llamada en el cliente o en el servidor, dependiendo de la ubicación del código de llamada. Cuando se llama en el cliente, no se dispara de nuevo cuando el cliente intenta guardar la nueva entidad y envía una petición de actualización al servidor para crear en memoria en el servidor.
 
 :::warning
 
-Since functions such as [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) can create a large number of entities and thus trigger the entity Class constructor consequently, you need to make sure the constructor code does not execute excessive time-consuming processings, for performance reasons. In remote configurations (see below), the code should not trigger multiple requests to the server.
+Dado que funciones como [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) pueden crear un gran número de entidades y, por tanto, disparar consecuentemente el Class constructor de la entidad, es necesario asegurarse de que el código del constructor no ejecuta procesamientos que consuman demasiado tiempo, por razones de rendimiento. En configuraciones remotas (ver más abajo), el código no debe lanzar múltiples peticiones al servidor.
 
 :::
 
@@ -915,25 +915,25 @@ Use the `onHTTPGet` keyword to declare functions that can be called through HTTP
 
 The `onHTTPGet` keyword is available with:
 
-- ORDA Data model class functions
+- Funciones de las clases del modelo de datos ORDA
 - [Funciones de la clase Singletons](../Concepts/classes.md#singleton-classes)
 
 La sintaxis formal es:
 
 ```4d
-// declare an onHTTPGet function
+// declarar una función onHTTPGet
 exposed onHTTPGet Function <functionName>(params) : result
 ```
 
 :::info
 
-The `exposed` keyword must also be added in this case, otherwise an error will be generated.
+En este caso también debe añadirse la palabra clave `exposed`, de lo contrario se generará un error.
 
 :::
 
 :::caution
 
-As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+Como este tipo de llamada es una acción que se ofrece fácilmente, el desarrollador debe asegurarse de que no se realiza ninguna acción sensible en dichas funciones.
 
 :::
 
@@ -941,7 +941,7 @@ As this type of call is an easy offered action, the developer must ensure no sen
 
 Una función con la palabra clave `onHTTPGet` acepta [parámetros](../Concepts/parameters.md).
 
-In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
+En la petición HTTP GET, los parámetros deben pasarse directamente en la URL y declararse utilizando la palabra clave `$params` (deben estar encerrados en una colección).
 
 ```
 IP:port/rest/<dataclass>/functionName?$params='[<params>]'
@@ -951,7 +951,7 @@ Consulte la sección [Parámetros](../REST/classFunctions#parameters) en la docu
 
 ### resultado
 
-A function with `onHTTPGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+Una función con la palabra clave `onHTTPGet` puede devolver cualquier valor de un tipo soportado (igual que para [parámetros](../REST/classFunctions#parameters) REST).
 
 :::info
 
@@ -979,7 +979,7 @@ exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height 
 	return $response
 ```
 
-It can be called by the following HTTP GET request:
+Se puede llamar mediante la siguiente petición HTTP GET:
 
 ```
 IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'

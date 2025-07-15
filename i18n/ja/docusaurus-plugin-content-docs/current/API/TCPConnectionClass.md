@@ -13,9 +13,9 @@ title: TCPConnection
 
 TCPConnection オブジェクトはメモリ内にそれへの参照が存在しなくなった時にリリースされます。  これ一般的に、例えばメソッド実行の最後にローカル変数が消去されるときに発生します。 接続を"強制的に" 終了させたい場合には、[**Null** を代入することで**参照を無効化**してください](../Concepts/dt_object.md#リソース)。
 
-:::info 4DTCPUDPLog.txt file
+:::info 4DTCPUDPLog.txt ファイル
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to TCP connections. 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
+TCP 接続に関連したイベントを記録する[4DTCPUDPLog.txt ログファイル]を使用すると、 デバッグやモニタリングを行うことができます。 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
 
 :::
 

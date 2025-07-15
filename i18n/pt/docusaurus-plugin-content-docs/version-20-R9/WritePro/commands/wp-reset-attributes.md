@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-O comando **WP REDEFINIR ATTRIBUTES** <!--REF #_command_.WP REDEFINIR ATTRIBUTES. ummary--> permite que você reinicie o valor de um ou mais atributos no intervalo, elemento ou documento passado como parâmetro.<!-- FIM REF--> Este comando pode remover qualquer tipo de atributo interno 4D Write Pro: caractere, parágrafo, tabela ou imagem. Você pode passar o nome do atributo para ser redefinido em *attribName* ou você pode passar uma coleção de atributos em *attribColl* para redefinir vários atributos de uma vez.
+O comando **WP RESET ATTRIBUTES**<!--REF #_command_.WP RESET ATTRIBUTES.Summary--> permite que você reinicie o valor de um ou mais atributos no intervalo, elemento ou documento passado como parâmetro.<!-- END REF--> Este comando pode remover qualquer tipo de atributo interno 4D Write Pro: caractere, parágrafo, tabela ou imagem. Você pode passar o nome do atributo para ser redefinido em *attribName* ou você pode passar uma coleção de atributos em *attribColl* para redefinir vários atributos de uma vez.
 
 > No caso de uma seção ou uma subseção, o objeto *sectionOrSubsection* pode ser passado sozinho e todos os atributos são redefinidos de uma vez.
 

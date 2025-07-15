@@ -54,12 +54,12 @@ Webエリアで実行される JavaScript コードから 4Dメソッドおよ�
 
 ### URL変数と WA OPEN URL コマンド
 
-URL 変数は[WA OPEN URL](../commands-legacy/wa-open-url.md) と同じ効果を生み出します。 しかしながら、以下の違いに注意してください。
+The URL variable produces the same effects as the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command. しかしながら、以下の違いに注意してください。
 
-- ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドは両方の記法を受け入れます。
-- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドは、この場合にはエラーを生成します。
-- URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加しますが、[WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドはこれを付加しません。
-- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](../commands-legacy/wa-open-url.md) コマンドを実行しても効果はありません。 一方、URL変数に値を代入すると、カレントURL が更新されます。
+- ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 The [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command accepts both notations.
+- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 The [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command generates an error in this case.
+- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command.
+- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
 #### JSON 文法
 
@@ -70,6 +70,10 @@ URL 変数は[WA OPEN URL](../commands-legacy/wa-open-url.md) と同じ効果を
 #### 対象オブジェクト
 
 [Web エリア](webArea_overview.md)
+
+#### コマンド
+
+[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
 
 ---
 
@@ -103,3 +107,7 @@ CEFエンジンには以下のような制約があります:
 #### 対象オブジェクト
 
 [Web エリア](webArea_overview.md)
+
+#### コマンド
+
+[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)

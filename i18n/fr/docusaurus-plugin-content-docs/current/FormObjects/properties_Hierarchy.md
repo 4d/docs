@@ -22,3 +22,9 @@ Voir [List box hiérarchiques](listbox_overview.md#hierarchical-list-boxes)
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
+
+#### Commandes
+
+[LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md) - [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-headers-height.md)
+
+

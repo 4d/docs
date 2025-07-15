@@ -17,6 +17,10 @@ Cette propriété est utilisée pour afficher ou masquer [les pieds de de colonn
 
 [List Box](listbox_overview.md)
 
+#### Commandes
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Hauteur
@@ -58,6 +62,10 @@ A noter que la conversion en va-et-vient peut conduire à un résultat final dif
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
+
+#### Commandes
+
+[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height.md) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md)
 
 #### Voir également
 
