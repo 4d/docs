@@ -43,7 +43,7 @@ UDPSocket objects provide the following properties and functions:
 ## 4D.UDPSocket.new()
 
 
-<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**( *options* : Object  ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object  ) : 4D.UDPSocket<!-- END REF -->
+<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**() : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *options* : Object ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object ) : 4D.UDPSocket<!-- END REF -->
 
 
 <!-- REF #4D.UDPSocket.new().params -->
@@ -58,12 +58,12 @@ UDPSocket objects provide the following properties and functions:
 #### Description
 
 
-The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
+The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* (if any) on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
 
 
 #### `options` parameter
 
-In the *options* parameter, pass an object that can contain the following properties:
+In the *options* parameter, you can pass an object that contains the following properties:
 
 |Property|Type|Description|Default|
 |---|---|---|---|

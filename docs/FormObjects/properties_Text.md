@@ -327,6 +327,7 @@ This property can also be handled by the [`OBJECT Get vertical alignment`](../co
 #### Commands
 
 [`OBJECT Get vertical alignment`](../commands-legacy/object-get-vertical-alignment.md) - [`OBJECT SET VERTICAL ALIGNMENT`](../commands-legacy/object-set-vertical-alignment.md)
+
 ---
 
 ## Meta Info Expression
