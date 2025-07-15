@@ -58,7 +58,7 @@ CSS の <strong x-id="1">要素セレクター</strong>と同様に、スタイ�
 :::note
 
 - オブジェクトタイプとは、フォームオブジェクトの "[タイプ](FormObjects/properties_Object.md#タイプ)" JSON プロパティを指します。
-- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+- リストボックスの場合、次のタイプがサポートされています:  *列*, *ヘッダー*, *フッター*。
 
 :::
 
@@ -202,7 +202,7 @@ text[text|=Hello]
 
 メディアクエリは、アプリケーションにカラースキームを適用するのに利用します。
 
-A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
+メディアクエリは、メディア特性と値によって構成されます (例: `<media feature>:<value>` )。
 
 使用可能なメディア特性:
 
