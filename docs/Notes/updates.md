@@ -3,6 +3,14 @@ id: updates
 title: Release Notes
 ---
 
+## 4D 21
+
+Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), the blog post that lists all new features and enhancements in 4D 21.
+
+#### Highlights
+
+- The code of a loaded, interpreted component can now be [edited from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer. 
+
 
 ## 4D 20 R10
 
