@@ -16,9 +16,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-      - name: Install 4D syntax-checker
-        run: |
-          npm install -g https://github.com/doc4d/syntax-checker.git
       - name: Diff images
         env:
           CLICOLOR_FORCE: 1
@@ -33,4 +30,4 @@ jobs:
           syntax_checker --paths "docs/**/*.md"
       - name: 4D Documentation Syntax Check
         run: |
-          syntax-checker docs
+          npx -y https://github.com/doc4d/syntax-checker.git docs
