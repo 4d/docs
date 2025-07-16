@@ -38,7 +38,7 @@ The following parameters can be used in the callback method:
 |Parameter| |Type|Description|
 |:----|:----|:----|:----|
 |param1| |text|The name of the 4D View Pro object|
-|param2| |4D.blob|The exported blob|
+|param2| |4D.Blob|The exported blob|
 |param3| |object|A reference to the command's *paramObj* parameter|
 |param4| |object|An object returned by the method with a status message|
 | |.success|boolean|True if export with success, False otherwise.|

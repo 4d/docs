@@ -37,7 +37,7 @@ Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 | Paramètres |                               | Type                    | Description                                              |
 | :--------- | :---------------------------- | :---------------------- | :------------------------------------------------------- |
 | param1     |                               | text                    | Nom de l'objet 4D View Pro                               |
-| param2     |                               | 4D.blob | Le blob exporté                                          |
+| param2     |                               | 4D.Blob | Le blob exporté                                          |
 | param3     |                               | object                  | Une référence au paramètre *paramObj* de la commande     |
 | param4     |                               | object                  | Objet retourné par la méthode avec un message de statut  |
 |            | .success      | boolean                 | Vrai si l'export est réussi, Faux sinon. |

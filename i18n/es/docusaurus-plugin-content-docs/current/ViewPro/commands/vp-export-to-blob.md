@@ -37,7 +37,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 | Parámetros |                               | Tipo                    | Descripción                                                       |
 | :--------- | :---------------------------- | :---------------------- | :---------------------------------------------------------------- |
 | param1     |                               | text                    | El nombre del objeto 4D View Pro                                  |
-| param2     |                               | 4D.blob | El blob exportado                                                 |
+| param2     |                               | 4D.Blob | El blob exportado                                                 |
 | param3     |                               | object                  | Referencia al parámetro *paramObj* del comando                    |
 | param4     |                               | object                  | Un objeto devuelto por el método con un mensaje de estado         |
 |            | .success      | boolean                 | True si exporta con éxito, de lo contrario False. |
