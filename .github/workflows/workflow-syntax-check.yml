@@ -28,6 +28,15 @@ jobs:
           COLORTERM: truecolor
         run: |
           syntax_checker --paths "docs/**/*.md"
-      - name: 4D Documentation Syntax Check
+      - name: Clone syntax-checker
+        run: git clone https://github.com/doc4d/syntax-checker.git
+              
+      - name: Install dependencies
         run: |
-          npx -y https://github.com/doc4d/syntax-checker.git docs
+          cd syntax-checker
+          npm install
+          npm run build
+              
+      - name: Run syntax-checker
+        run: |
+          node syntax-checker/out/check.js ./docs
