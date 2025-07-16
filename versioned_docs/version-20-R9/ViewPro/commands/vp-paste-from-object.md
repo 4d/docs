@@ -11,7 +11,7 @@ title: VP PASTE FROM OBJECT
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
-**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )<!-- END REF -->
+**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 

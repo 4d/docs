@@ -1545,7 +1545,7 @@
 			"Summary": "*fontObj* 引数で指定したフォントオブジェクトからフォントのショートハンド文字列を返します"
 		},
 		"PASTE FROM OBJECT": {
-			"Syntax": "**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )",
+			"Syntax": "**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )",
 			"Params": [
 				[
 					"rangeObj",
@@ -1677,7 +1677,7 @@
 			"Summary": "*vpAreaName* 引数で指定したエリアから、*styleName* で指定したスタイルシートを削除します"
 		},
 		"VP REMOVE TABLE": {
-			"Syntax": "**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )",
+			"Syntax": "**VP REMOVE TABLE** ( *vpAreaName* : Text; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )",
 			"Params": [
 				[
 					"vpAreaName",
@@ -2013,7 +2013,7 @@
 			"Summary": "*rangeObj* 引数で指定したカラムに対して *propertyObj* 引数で定義されている属性を適用します"
 		},
 		"VP SET COLUMN COUNT": {
-			"Syntax": "**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } )",
+			"Syntax": "**VP SET COLUMN COUNT** ( *vpAreaName* : Text ; *columnCount* : Integer { ; *sheet* : Integer } )",
 			"Params": [
 				[
 					"vpAreaName",

@@ -1545,7 +1545,7 @@
 			"Summary": "devuelve una cadena de caracteres de *fontObj*"
 		},
 		"PASTE FROM OBJECT": {
-			"Syntax": "**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )",
+			"Syntax": "**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )",
 			"Params": [
 				[
 					"rangeObj",
@@ -1677,7 +1677,7 @@
 			"Summary": "elimina la hoja de estilo pasada en *styleName* del *vpAreaName*"
 		},
 		"VP REMOVE TABLE": {
-			"Syntax": "**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )",
+			"Syntax": "**VP REMOVE TABLE** ( *vpAreaName* : Text; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )",
 			"Params": [
 				[
 					"vpAreaName",
@@ -2013,7 +2013,7 @@
 			"Summary": "applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*"
 		},
 		"VP SET COLUMN COUNT": {
-			"Syntax": "**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } )",
+			"Syntax": "**VP SET COLUMN COUNT** ( *vpAreaName* : Text ; *columnCount* : Integer { ; *sheet* : Integer } )",
 			"Params": [
 				[
 					"vpAreaName",

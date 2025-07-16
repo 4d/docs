@@ -1690,7 +1690,7 @@
 			"Summary": "returns a font shorthand string from *fontObj*"
 		},
 		"PASTE FROM OBJECT": {
-			"Syntax": "**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )",
+			"Syntax": "**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )",
 			"Params": [
 				[
 					"rangeObj",
@@ -1822,7 +1822,7 @@
 			"Summary": "removes the style sheet passed in the *styleName* from the *vpAreaName*"
 		},
 		"VP REMOVE TABLE": {
-			"Syntax": "**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )",
+			"Syntax": "**VP REMOVE TABLE** ( *vpAreaName* : Text; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )",
 			"Params": [
 				[
 					"vpAreaName",
@@ -2158,7 +2158,7 @@
 			"Summary": "applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*"
 		},
 		"VP SET COLUMN COUNT": {
-			"Syntax": "**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } )",
+			"Syntax": "**VP SET COLUMN COUNT** ( *vpAreaName* : Text ; *columnCount* : Integer { ; *sheet* : Integer } )",
 			"Params": [
 				[
 					"vpAreaName",
