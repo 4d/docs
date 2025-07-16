@@ -2681,7 +2681,7 @@
 			"Summary": "assigns a specified text value to a designated cell range"
 		},
 		"VP SET TIME VALUE": {
-			"Syntax": "**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  )",
+			"Syntax": "**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Time { ; *formatPattern* : Text }  )",
 			"Params": [
 				[
 					"rangeObj",
