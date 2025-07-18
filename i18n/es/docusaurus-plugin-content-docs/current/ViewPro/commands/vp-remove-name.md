@@ -5,7 +5,7 @@ title: VP REMOVE NAME
 
 <!-- REF #_method_.VP REMOVE NAME.Syntax -->
 
-**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )<!-- END REF -->
+**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *scope* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 

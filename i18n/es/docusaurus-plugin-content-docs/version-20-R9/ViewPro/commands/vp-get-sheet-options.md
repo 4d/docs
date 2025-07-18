@@ -5,7 +5,7 @@ title: VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Syntax -->
 
-**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 

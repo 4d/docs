@@ -67,7 +67,7 @@
 			"Summary": "adds the specified cells to the currently selected cells"
 		},
 		"VP ADD SHEET": {
-			"Syntax": "**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )",
+			"Syntax": "**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer ; *name* : Text )",
 			"Params": [
 				[
 					"vpAreaName",
@@ -912,7 +912,7 @@
 			"Summary": "returns the total number of rows from the designated *sheet*"
 		},
 		"VP Get selection": {
-			"Syntax": "**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object",
+			"Syntax": "**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object",
 			"Params": [
 				[
 					"vpAreaName",
@@ -1002,7 +1002,7 @@
 			"Summary": "returns the name of a sheet based on its index in *vpAreaName*."
 		},
 		"VP Get sheet options": {
-			"Syntax": "**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object",
+			"Syntax": "**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object",
 			"Params": [
 				[
 					"vpAreaName",
@@ -1599,7 +1599,7 @@
 			"Summary": "immediately evaluates all formulas in *vpAreaName*"
 		},
 		"VP REMOVE NAME": {
-			"Syntax": "**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )",
+			"Syntax": "**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *scope* : Integer } )",
 			"Params": [
 				[
 					"vpAreaName",
