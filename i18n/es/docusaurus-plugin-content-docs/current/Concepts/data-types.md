@@ -31,7 +31,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 (2) Variant no es en realidad un tipo *data* sino un tipo *variable* que puede contener un valor de cualquier otro tipo de datos.
 
-(3) You can [assign a class](../Develop/field-properties.md) to an object field in the structure editor.
+(3) Puede [asignar una clase](../Develop/field-properties.md) a un campo objeto en el editor de estructura.
 
 ## Comandos
 

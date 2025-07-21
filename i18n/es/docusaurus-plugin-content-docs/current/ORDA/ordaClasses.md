@@ -635,11 +635,11 @@ Function query age($event : Object)->$result : Object
 Código de llamada, por ejemplo:
 
 ```4d
-// people aged between 20 and 21 years (-1 day)
-$twenty:=people.query("age = 20")  // calls the "==" case
+// personas de entre 20 y 21 años (-1 día)
+$twenty:=people.query("age = 20")  // llama al case "=="
 
-// people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20")
+// personas de 20 años hoy
+$twentyToday:=people.query("age === 20") // equivalente a people.query("age is 20")
 
 ```
 
@@ -819,25 +819,25 @@ Exposed Alias studentName student.name //valor escalar
 Luego puede ejecutar las siguientes consultas:
 
 ```4d
-// Find course named "Archaeology"
-ds.Course.query("courseName = :1";"Archaeology")
+// Encontrar curso llamado "Arqueología"
+ds.Course.query("courseName = :1"; "Arqueología")
 
-// Find courses given by the professor Smith
-ds.Course.query("teacherName = :1";"Smith")
+// Encontrar cursos impartidos por el profesor Smith
+ds.Course.query("teacherName = :1"; "Smith")
 
-// Find courses where Student "Martin" assists
-ds.Course.query("studentName = :1";"Martin")
+// Encontrar cursos donde asista el Alumno "Martin"
+ds.Course.query("studentName = :1"; "Martin")
 
-// Find students who have M. Smith as teacher
-ds.Student.query("teachers.name = :1";"Smith")
+// Encontrar alumnos que tengan a M. Smith como profesor
+ds.Student.query("teachers.name = :1"; "Smith")
 
-// Find teachers who have M. Martin as Student
-ds.Teacher.query("students.name = :1";"Martin")
-// Note that this very simple query string processes a complex
-// query including a double join, as you can see in the queryPlan:   
-// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
-//  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
-//  subquery:[ Student.name === Martin]]"
+// Encontrar profesores que tienen a M. Martin como alumno
+ds.Teacher.query("students.name = :1"; "Martin")
+// Observe que esta cadena de consulta tan simple procesa una consulta compleja
+// que incluye un doble join, como puede ver en el queryPlan:   
+// "Join on Table : Course : Teacher.ID = Course.teacherID,    
+// subquery:[ Join on Table : Student : Course.studentID = Student.ID,
+// subquery:[ Student.name === Martin]]"
 ```
 
 También puede editar el valor del alias *courseName*:
@@ -911,9 +911,9 @@ $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
 
 ## Palabra clave onHTTPGet
 
-Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
+Utilice la palabra clave `onHTTPGet` para declarar funciones que pueden ser llamadas a través de peticiones HTTP utilizando el verbo `GET`. Estas funciones pueden devolver cualquier contenido web, por ejemplo utilizando la clase [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md).
 
-The `onHTTPGet` keyword is available with:
+La palabra clave `onHTTPGet` está disponible con:
 
 - Funciones de las clases del modelo de datos ORDA
 - [Funciones de la clase Singletons](../Concepts/classes.md#singleton-classes)

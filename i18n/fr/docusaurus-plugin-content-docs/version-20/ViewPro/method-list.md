@@ -162,7 +162,9 @@ La commande `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insère un
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
+
 Dans *index*, vous pouvez passer le numéro de la nouvelle feuille. Si l'*index* passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début. Si l'*index* est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes.
+
 > La numérotation démarre à 0.
 
 Dans *name*, vous pouvez passer un nom pour la nouvelle feuille. Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
@@ -5718,11 +5720,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| Paramètres   | Type   |    | Description                                                                |
-| ------------ | ------ | -- | -------------------------------------------------------------------------- |
-| vpAreaName   | Text   | -> | Nom de la zone 4D View Pro                                                 |
-| sheetOptions | Object | -> | Option(s) de la feuille à définir                                          |
-| sheet        | Object | -> | Indice de la feuille (feuille courante si omis)|<!-- END REF -->
+| Paramètres   | Type    |    | Description                                                                |
+| ------------ | ------- | -- | -------------------------------------------------------------------------- |
+| vpAreaName   | Text    | -> | Nom de la zone 4D View Pro                                                 |
+| sheetOptions | Object  | -> | Option(s) de la feuille à définir                                          |
+| sheet        | Integer | -> | Indice de la feuille (feuille courante si omis)|<!-- END REF -->
 
 |
 
@@ -6121,7 +6123,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 | Paramètres    | Type   |    | Description                                    |
 | ------------- | ------ | -- | ---------------------------------------------- |
 | rangeObj      | Object | -> | Objet plage                                    |
-| timeValue     | Text   | -> | Valeur heure à fixer                           |
+| timeValue     | Time   | -> | Valeur heure à fixer                           |
 | formatPattern | Text   | -> | Format de la valeur|<!-- END REF -->
 
 |

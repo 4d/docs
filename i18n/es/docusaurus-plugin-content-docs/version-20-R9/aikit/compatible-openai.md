@@ -11,7 +11,7 @@ To do so you just have to change the original `baseURL` by the service one and u
 
 ## Remoto
 
-| Provider                                                                                                                                                                                                 | Url base                                                                                                                                              |
+| Proveedor                                                                                                                                                                                                | Url base                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | https://mistral.ai/                                                                                                                                                      | https://api.mistral.ai/v1                                                                             |
 | https://www.deepseek.com/                                                                                                                                | https://api.deepseek.com                                                                              |
@@ -25,7 +25,7 @@ To do so you just have to change the original `baseURL` by the service one and u
 
 ## Local
 
-| Provider                                             | Url base por defecto                                                                                      | Doc                                                                           |
+| Proveedor                                            | Url base por defecto                                                                                      | Doc                                                                           |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |

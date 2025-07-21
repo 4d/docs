@@ -9,11 +9,11 @@ Clase de base para todos los recursos api.
 
 ## Propiedades
 
-| Propiedad | Tipo                | Descripción                            |
-| --------- | ------------------- | -------------------------------------- |
-| `_client` | [OpenAI](OpenAI.md) | Private back link to the OpenAI client |
+| Propiedad | Tipo                | Descripción                                |
+| --------- | ------------------- | ------------------------------------------ |
+| `_client` | [OpenAI](OpenAI.md) | Enlace de vuelta privado al cliente OpenAI |
 
-The client allow to make HTTP Request.
+El cliente permite realizar peticiones HTTP.
 
 ## Clases heredadas
 

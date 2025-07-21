@@ -57,7 +57,7 @@ Para verificar el contexto definido actualmente, utilice [`WA Get context`](../c
 
 Para más información, consulte [`WA SET CONTEXT`](../commands/wa-set-context.md).
 
-### Calling 4D Methods from JavaScript
+### Llamada a métodos 4D desde JavaScript
 
 La sintaxis de las llamadas a los métodos 4D es la siguiente:
 

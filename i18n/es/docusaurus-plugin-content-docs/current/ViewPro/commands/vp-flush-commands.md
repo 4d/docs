@@ -51,26 +51,26 @@ The following parameters can be used in the callback function:
 You want to execute commands and empty the command buffer:
 
 ```4d
-// Set text values in specific cells
-VP SET TEXT VALUE(VP Cell("ViewProArea1";10;1);"INVOICE")
+// Definir valores de texto en celdas específicas
+VP SET TEXT VALUE(VP Cell("ViewProArea1";10;1); "INVOICE")
 VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
 VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
 
-// Execute stored commands, clear the buffer, and trigger the callback
+// Ejecutar los comandos almacenados, borrar la memoria intermedia y activar la llamada de retorno
 VP FLUSH COMMANDS("ViewProArea1")
 ```
 
 ## Ejemplo 2
 
-You want to execute commands, empty the command buffer and trigger a callback function:
+Desea ejecutar comandos, vaciar el búfer de comandos y activar una función de retrollamada:
 
 ```4d
-// Set text values in specific cells
-VP SET FORMULA(VP Cell("ViewProArea1";10;1);"MyCustomFunction()")
-VP SET FORMULA(VP Cell("ViewProArea1";10;2);"MyCustomFunction2()")
-VP SET FORMULA(VP Cell("ViewProArea1";10;3);"MyCustomFunction3()")
+// Definir valores de texto en celdas específicas
+VP SET FORMULA(VP Cell("ViewProArea1";10;1); "MyCustomFunction()")
+VP SET FORMULA(VP Cell("ViewProArea1";10;2); "MyCustomFunction2()")
+VP SET FORMULA(VP Cell("ViewProArea1";10;3); "MyCustomFunction3()")
 
-// Execute stored commands, clear the buffer, and trigger the callback
+// Ejecutar los comandos almacenados, borrar la memoria intermedia y activar la retrollamada
 VP FLUSH COMMANDS("ViewProArea1"; Formula(onFlushComplete))
 ```
 

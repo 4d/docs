@@ -37,11 +37,11 @@ UDPSocket objects provide the following properties and functions:
 | [<!-- INCLUDE #UDPSocket.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPSocket.port.Summary -->       |
 | [<!-- INCLUDE #UDPSocket.send().Syntax -->](#send)<br/><!-- INCLUDE #UDPSocket.send().Summary -->   |
 
-<!-- REF #4D.UDPSocket.new().Desc -->
+<!-- REF 4D.UDPSocket.new().Desc -->
 
 ## 4D.UDPSocket.new()
 
-<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**( *options* : Object  ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object  ) : 4D.UDPSocket<!-- END REF -->
+<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**() : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *options* : Object ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object ) : 4D.UDPSocket<!-- END REF -->
 
 <!-- REF #4D.UDPSocket.new().params -->
 
@@ -55,11 +55,11 @@ UDPSocket objects provide the following properties and functions:
 
 #### Description
 
-The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
+The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* (if any) on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
 
 #### Paramètre `options`
 
-Dans le paramètre *options*, passez un objet qui peut contenir les propriétés suivantes :
+In the *options* parameter, you can pass an object that contains the following properties:
 
 | Propriété   | Type    | Description                                         | Par défaut |
 | ----------- | ------- | --------------------------------------------------- | ---------- |
@@ -74,7 +74,7 @@ Toutes les fonctions de callback reçoivent deux paramètres :
 | Paramètres | Type                                    | Description                                                |
 | ---------- | --------------------------------------- | ---------------------------------------------------------- |
 | $socket    | [`UDPSocket` object](#udpsocket-object) | The current UDPSocket instance.            |
-| $event     | [`UDPEvent` object](#udppevent-object)  | Contient des informations sur l'événement. |
+| $event     | [`UDPEvent` object](#udpevent-object)   | Contient des informations sur l'événement. |
 
 **Séquence des appels de callbacks :**
 
@@ -88,7 +88,7 @@ A [`UDPEvent`](UDPEventClass.md) object is returned when a [callback function](#
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.errors.Desc -->
+<!-- REF UDPSocket.errors.Desc -->
 
 ## .errors
 
@@ -107,7 +107,7 @@ The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collecti
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.port.Desc -->
+<!-- REF UDPSocket.port.Desc -->
 
 ## .port
 
@@ -119,7 +119,7 @@ The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port numbe
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.send().Desc -->
+<!-- REF UDPSocket.send().Desc -->
 
 ## .send()
 

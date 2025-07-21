@@ -301,7 +301,7 @@ También puede utilizar el comando [Call chain](../commands/call-chain.md) para 
 El panel de control personalizado es útil para evaluar expresiones. Es similar al [panel de control](#watch-pane), excepto que aquí usted decide qué expresiones se muestran. Todo tipo de expresión puede ser evaluada:
 
 - variable
-- object and object property
+- objeto y propiedad del objeto
 - campo
 - pointer
 - cálculo
@@ -323,7 +323,7 @@ Las siguientes opciones están disponibles:
 
 - **Variables locales**: muestra y evalúa automáticamente las variables locales tan pronto como se inicialicen en el código fuente en ejecución.
 - **Expresiones de línea**: muestra y evalúa automáticamente el mismo contenido que el elemento [Expresiones de línea](#line-expressions) de la Lista de expresiones.
-- **Expresiones**: solo muestra expresiones personalizadas que ha introducido manualmente. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **Expresiones**: solo muestra expresiones personalizadas que ha introducido manualmente. Las expresiones personalizadas tienen un icono azul específico ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
 

@@ -317,15 +317,15 @@ In the current implementation, the feature has the following limitations:
 
 - use of a predefined AI provider and necessity to pass your OpenAI key
 - funcionalidades básicas de chat
-- no image handling
+- sin gestión de imágenes
 - non-configurable predefined action commands
 - predefined translations English/French and French/English only
 
 ### Activando la función de IA
 
-The AI dialog box is available by clicking on a button in the 4D Write Pro interface. This button is **hidden by default**, you need to enable it explicitely.
+The AI dialog box is available by clicking on a button in the 4D Write Pro interface. Este botón está **oculto por defecto**, debe activarlo explícitamente.
 
-To display the AI dialog box button, you need to:
+Para mostrar el botón del diálogo AI, es necesario:
 
 1. Obtener una clave API del [sitio web OpenAI](https://openai.com/api/).
 2. Ejecutar el siguiente código 4D:
@@ -379,7 +379,7 @@ Default translation actions are based upon the current 4D default configuration 
 
 :::
 
-#### Copy buttons
+#### Botones de copia
 
 Estos botones proponen interacciones básicas entre el área de chat, el documento subyacente de 4D Write Pro y el portapapeles:
 

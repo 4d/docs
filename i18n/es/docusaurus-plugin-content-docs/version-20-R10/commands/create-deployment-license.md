@@ -7,10 +7,10 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                    |
-| ----------- | --------------------------------- |
-| 20 R10      | New *autoLicenseTarget* parameter |
-| 20          | Añadidos                          |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 20 R10      | Nuevo parámetro *autoLicenseTarget* |
+| 20          | Añadidos                            |
 
 </details>
 
@@ -18,13 +18,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create deployment license.Params-->
 
-| Parámetros        | Tipo                      |                             | Descripción                                       |
-| ----------------- | ------------------------- | --------------------------- | ------------------------------------------------- |
-| mergedApp         | 4D.Folder | &#8594; | Folder containing the merged application          |
-| autoLicenseTarget | Integer                   | &#8594; | Target license for automatic license embedding    |
-| buildLicense      | 4D.File   | &#8594; | License required to generate the embedded license |
-| oemLicense        | 4D.File   | &#8594; | 4D OEM XML Key license if server license          |
-| Resultado         | Object                    | &#8592; | Estado                                            |
+| Parámetros        | Tipo                      |                             | Descripción                                                  |
+| ----------------- | ------------------------- | --------------------------- | ------------------------------------------------------------ |
+| mergedApp         | 4D.Folder | &#8594; | Carpeta que contiene la aplicación fusionada                 |
+| autoLicenseTarget | Integer                   | &#8594; | Target license for automatic license embedding               |
+| buildLicense      | 4D.File   | &#8594; | License required to generate the embedded license            |
+| oemLicense        | 4D.File   | &#8594; | Licencia 4D OEM XML Key si se trata de una licencia servidor |
+| Resultado         | Object                    | &#8592; | Estado                                                       |
 
 <!-- END REF-->
 
@@ -49,7 +49,7 @@ The following constants are supported in the *autoLicenseTarget* parameter:
 
 If no valid license is found, an error is generated.
 
-### Designating the license(s) to use
+### Designación de la(s) licencia(s) a utilizar
 
 In *license*, pass a [4D.File](../API/FileClass.md) object containing a reference to the license file used to generate the embedded license.
 
@@ -63,7 +63,7 @@ The command returns a *status* object containing the following properties:
 | ---------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | success                                                                            | Boolean                                        | True if the license file has been generated                                                                                       |
 | file                                                                               | [4D.File](../API/FileClass.md) | The generated license file                                                                                                        |
-| statusText                                                                         | Text                                           | Description of the error if any                                                                                                   |
+| statusText                                                                         | Text                                           | Descripción del error si lo hay                                                                                                   |
 | errors                                                                             | Collection                                     | Colección de objetos de error                                                                                                     |
 | \[\].message | Text                                           | Mensaje de error                                                                                                                  |
 | \[\].errCode | Number                                         | Número de error                                                                                                                   |
@@ -71,12 +71,12 @@ The command returns a *status* object containing the following properties:
 | oemServer                                                                          | Object                                         | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Server` OEM license     |
 | oemXMLKey                                                                          | Object                                         | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Server` XML Key license |
 
-*Description attributes* are:
+*Los atributos Description* son:
 
 | **Propiedad**        | **Tipo** | **Description**                            |
 | -------------------- | -------- | ------------------------------------------ |
 | absolutePlatformPath | Text     | Path to the original license file retained |
-| offerName            | Text     | Commercial name of the license retained    |
+| offerName            | Text     | Nombre comercial de la licencia retenida   |
 | productNumber        | Number   | Serial number of the license retained      |
 
 :::note Notas

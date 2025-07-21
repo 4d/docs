@@ -57,10 +57,10 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 | Parámetros     | Tipo                                    | Descripción                                                |
 | -------------- | --------------------------------------- | ---------------------------------------------------------- |
 | *completionID* | Text                                    | The ID of the chat completion to retrieve. |
-| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.     |
+| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.   |
 | Resultado      | Object                                  | The retrieved chat completion object.      |
 
-Get a stored chat completion.
+Obtener una finalización de chat almacenada.
 
 https://platform.openai.com/docs/api-reference/chat/get
 
@@ -68,14 +68,14 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 **update**(*completionID* : Text; *metadata* : Object, *parameters* : OpenAIParameters) : Object
 
-| Parámetros     | Tipo                                    | Descripción                                                     |
-| -------------- | --------------------------------------- | --------------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to update.        |
-| *metadata*     | Object                                  | Metadata to update the completion with.         |
-| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.          |
-| Resultado      | Object                                  | El objeto de finalización del chat actualizado. |
+| Parámetros     | Tipo                                    | Descripción                                                             |
+| -------------- | --------------------------------------- | ----------------------------------------------------------------------- |
+| *completionID* | Text                                    | ID de la finalización del chat que se desea actualizar. |
+| *metadata*     | Object                                  | Metadatos con los que actualizar la finalización.       |
+| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.                |
+| Resultado      | Object                                  | El objeto de finalización del chat actualizado.         |
 
-Modify a stored chat completion.
+Modificar una finalización de chat almacenada.
 
 https://platform.openai.com/docs/api-reference/chat/update
 
@@ -83,11 +83,11 @@ https://platform.openai.com/docs/api-reference/chat/update
 
 **delete**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
 
-| Parámetros     | Tipo                                    | Descripción                                              |
-| -------------- | --------------------------------------- | -------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to delete. |
-| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.   |
-| Resultado      | Boolean                                 | Whether the deletion was successful.     |
+| Parámetros     | Tipo                                    | Descripción                                                  |
+| -------------- | --------------------------------------- | ------------------------------------------------------------ |
+| *completionID* | Text                                    | El ID de la finalización de chat a eliminar. |
+| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.     |
+| Resultado      | Boolean                                 | Whether the deletion was successful.         |
 
 Delete a stored chat compltions.
 
@@ -97,11 +97,11 @@ https://platform.openai.com/docs/api-reference/chat/delete
 
 **list**(*parameters* : OpenAIChatCompletionsListParameters) : Collection
 
-| Parámetros   | Tipo                                                                          | Descripción                                              |
-| ------------ | ----------------------------------------------------------------------------- | -------------------------------------------------------- |
-| *parámetros* | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | Parameters for listing chat completions. |
-| Resultado    | Collection                                                                    | A collection of stored chat completions. |
+| Parámetros   | Tipo                                                                          | Descripción                                                          |
+| ------------ | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| *parámetros* | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | Parámetros para listar los chats completados.        |
+| Resultado    | Collection                                                                    | Una colección de finalizaciones de chat almacenadas. |
 
-List stored chat completions.
+Lista almacenada de finalizaciones de chat.
 
 https://platform.openai.com/docs/api-reference/chat/list

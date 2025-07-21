@@ -19,9 +19,15 @@ title: コンポーネントの開発
 
 - コンポーネントを使用するには、[アプリケーションにインストール](../Project/components.md) するだけです。
 - 言い換えれば、マトリクスプロジェクト自体も1 つ以上のコンポーネントを使用できます。 しかしコンポーネントが "サブコンポーネント" を使用することはできません。
-- コンポーネントは次の 4D の要素を呼び出すことができます: クラス、関数、プロジェクトメソッド、プロジェクトフォーム、メニューバー、選択リストなど。 反面、コンポーネントが呼び出せないものは、データベースメソッドとトリガーです。
-- コンポーネント内でデータストアや標準のテーブル、データファイルを使用することはできません。 しかし、外部データベースのメカニズムを使用すればテーブルやフィールドを作成し、そこにデータを格納したり読み出したりすることができます。 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
+- A component can call on most of the 4D elements: datastore ([`ds`](../commands/ds.md)), classes, functions, project methods, project forms, menu bars, choice lists, and so on. The following database methods can be used: [On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md).
+- A component can create and/or use tables, fields and data files using mechanisms of external databases. 外部データベースは、メインの 4D データベースとは独立して存在し、SQLコマンドでアクセスします。
 - インタープリターモードで動作するホストプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。 コンパイルモードで実行されるホストデータベースでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
+
+:::note
+
+Interpreted component code can be [edited directly from the host project](#editing-components-from-the-host) if the context is supported.
+
+:::
 
 ## ランゲージコマンドのスコープ
 
@@ -143,21 +149,52 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 ## ホストからコンポーネントを編集する
 
-ホストプロジェクトの実際のコンテキストからコンポーネントをチューニングするのを容易にするために、ロードしたコンポーネントをインタープリターモードのホストプロジェクトから直接編集してそのコードを保存することが可能です。 コンポーネントのコードは、以下の条件を満たしている場合に編集可能です:
+To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component using the 4D IDE from an interpreted host project. Modifications can be immediately tested in the project, without having to restart.
 
-- コンポーネントが [インタープリタモードでロードされている](../Project/components.md#インタープリターとコンパイル済みコンポーネント)こと
-- コンポーネントが[依存関係マネージャーのローカルキャッシュ](../Project/components.md#local-cache-for-dependencies) からロードされていないこと、つまり[GitHub からダウンロードされた](../Project/components.md#githubの依存関係の追加) ものではないこと。
+コンポーネントのコードは、以下の条件を満たしている場合に編集可能です:
 
-この場合、ホストプロジェクトのコードエディター内でコンポーネントのコードを開き、編集して、保存することができ、その変更は直ちに反映されます。
+- the host project is running interpreted,
+- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components) and the source code is available,
+- the component files are stored locally (i.e. they are not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
 
-エクスプローラーでは、コンポーネントのコードが編集可能であることを表す特定のアイコンが表示されます:<br/>
+In this context, you can open, edit, and save your component code in the Code editor on the host project from two places:
+
+- from the Component Methods section of the Explorer (shared code only)
+- in a dedicated component tab (all code)
+
+### Editing shared component code
+
+[Exposed component classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited from the **Component Methods** tab of the Explorer.
+
+A specific icon indicates that the component contains shared code):<br/>
 ![](../assets/en/Develop/editable-component.png)
 
-:::warning
+Select **Edit...** to open your component code in the Code editor. You can edit and save it.
 
-編集できるのは、コンポーネントの[公開された関数](#クラスの共有) と [共有されたメソッド](#プロジェクトメソッドの共有)だけです。
+### Editing all component code
 
-:::
+You can edit directly all the code of a loaded component from the host project in a dedicated component tab, including methods or classes that are not shared.
+
+Select **Edit...** item is available when you right-click on the component name in the **Component Methods** tab of the Explorer.
+
+![edit-component](../assets/en/Project/Edit-component.png)
+
+When you select it, a dedicated tab is added (or highlighted if already added) in the Explorer. In this tab, the component code is editable in the following pages:
+
+![tab-component](../assets/en/Project/tab-component.png)
+
+- ⒋ プロジェクトメソッド
+- Database Methods ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
+- クラス
+- Project Form Methods
+
+![tab-component](../assets/en/Project/tab-component.gif)
+
+Standard 4D IDE features are available for the component. You can execute the following actions:
+
+- add, duplicate, delete, edit/save [methods and classes](../Project/code-overview.md)
+- preview code, show/edit [documentation](../Project/documentation.md), display/edit [method properties](../Project/code-overview.md#project-method-properties),
+- run methods.
 
 ## コンパイル済みコンポーネントのコード補完
 

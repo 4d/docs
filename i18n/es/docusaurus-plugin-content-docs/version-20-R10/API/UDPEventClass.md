@@ -13,7 +13,7 @@ The `UDPEvent` class provides information about events occurring during the life
 
 </details>
 
-### UDPEvent Object
+### Objeto UDPEvent
 
 A `UDPEvent` object is immutable and non-streamable.
 

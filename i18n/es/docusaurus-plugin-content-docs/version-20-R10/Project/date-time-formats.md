@@ -52,18 +52,18 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 | E       | día de la semana                                                                | E, EE o EEE  | Tue                                                                        |
 |         |                                                                                 | EEEE         | Tuesday                                                                    |
 |         |                                                                                 | EEEEE        | T                                                                          |
-|         |                                                                                 | EEEEEE       | Tu                                                                         |
+|         |                                                                                 | EEEEEE       | Mar                                                                        |
 | e       | día de la semana local                                                          | e            | 2                                                                          |
 |         |                                                                                 | ee           | 02                                                                         |
 |         |                                                                                 | eee          | Tue                                                                        |
 |         |                                                                                 | eeee         | Tuesday                                                                    |
 |         |                                                                                 | eeeee        | T                                                                          |
-|         |                                                                                 | eeeeee       | Tu                                                                         |
+|         |                                                                                 | eeeeee       | Mar                                                                        |
 | c       | día de la semana local independiente                                            | c o cc       | 2                                                                          |
 |         |                                                                                 | ccc          | Tue                                                                        |
 |         |                                                                                 | cccc         | Tuesday                                                                    |
 |         |                                                                                 | ccccc        | T                                                                          |
-|         |                                                                                 | cccccc       | Tu                                                                         |
+|         |                                                                                 | cccccc       | Mar                                                                        |
 | a       | AM o PM                                                                         | a, aa, o aaa | PM [abbrev]            |
 |         |                                                                                 | aaaa         | PM [completo]          |
 |         |                                                                                 | aaaaa        | p                                                                          |
@@ -85,7 +85,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         |                                                                                 | mm           | 04                                                                         |
 | s       | segundo en minuto                                                               | s            | 5                                                                          |
 |         |                                                                                 | ss           | 05                                                                         |
-| X       | Time Zone: ISO8601 basic hm?, with Z for 0                      | X            | -08, +0530, Z                                                              |
+| X       | Time Zone: ISO8601 basic hm?, con Z para 0                      | X            | -08, +0530, Z                                                              |
 |         | Zona horaria: ISO8601 hm básico, con Z                          | XX           | -0800, Z                                                                   |
 |         | Zona horaria: ISO8601 extendido hm, con Z                       | XXX          | -08:00, Z                                                  |
 |         | Zona horaria: ISO8601 hms básico, con Z                         | XXXX         | -0800, -075258, Z                                                          |

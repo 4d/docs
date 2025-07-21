@@ -7,7 +7,7 @@ A lo largo de sus proyectos 4D, es posible que necesite dar formato a los valore
 
 4D incluye una lista completa de patrones que puede utilizar para crear y aplicar formatos personalizados de fecha y hora en sus aplicaciones, además de los formatos por defecto. Los patrones de formato personalizados son compatibles con las siguientes funciones:
 
-- el comando [`String`](../commands-legacy/string.md),
+- el comando [`String`](../commands/string.md),
 - los comandos [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) y [`OBJECT Get format`](../commands-legacy/object-get-format.md),
 - el formato de fecha y hora de las propiedades del objeto de formulario, disponibles en la lista de propiedades o en las propiedades JSON [`dateFormat`](../FormObjects/properties_Display.md/#date-format) y [`timeFormat`](../FormObjects/properties_Display.md/#time-format).
 
@@ -52,18 +52,18 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 | E       | día de la semana                                                                | E, EE o EEE  | Tue                                                                        |
 |         |                                                                                 | EEEE         | Tuesday                                                                    |
 |         |                                                                                 | EEEEE        | T                                                                          |
-|         |                                                                                 | EEEEEE       | Tu                                                                         |
+|         |                                                                                 | EEEEEE       | Mar                                                                        |
 | e       | día de la semana local                                                          | e            | 2                                                                          |
 |         |                                                                                 | ee           | 02                                                                         |
 |         |                                                                                 | eee          | Tue                                                                        |
 |         |                                                                                 | eeee         | Tuesday                                                                    |
 |         |                                                                                 | eeeee        | T                                                                          |
-|         |                                                                                 | eeeeee       | Tu                                                                         |
+|         |                                                                                 | eeeeee       | Mar                                                                        |
 | c       | día de la semana local independiente                                            | c o cc       | 2                                                                          |
 |         |                                                                                 | ccc          | Tue                                                                        |
 |         |                                                                                 | cccc         | Tuesday                                                                    |
 |         |                                                                                 | ccccc        | T                                                                          |
-|         |                                                                                 | cccccc       | Tu                                                                         |
+|         |                                                                                 | cccccc       | Mar                                                                        |
 | a       | AM o PM                                                                         | a, aa, o aaa | PM [abbrev]            |
 |         |                                                                                 | aaaa         | PM [completo]          |
 |         |                                                                                 | aaaaa        | p                                                                          |
@@ -85,7 +85,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         |                                                                                 | mm           | 04                                                                         |
 | s       | segundo en minuto                                                               | s            | 5                                                                          |
 |         |                                                                                 | ss           | 05                                                                         |
-| X       | Time Zone: ISO8601 basic hm?, with Z for 0                      | X            | -08, +0530, Z                                                              |
+| X       | Time Zone: ISO8601 basic hm?, con Z para 0                      | X            | -08, +0530, Z                                                              |
 |         | Zona horaria: ISO8601 hm básico, con Z                          | XX           | -0800, Z                                                                   |
 |         | Zona horaria: ISO8601 extendido hm, con Z                       | XXX          | -08:00, Z                                                  |
 |         | Zona horaria: ISO8601 hms básico, con Z                         | XXXX         | -0800, -075258, Z                                                          |

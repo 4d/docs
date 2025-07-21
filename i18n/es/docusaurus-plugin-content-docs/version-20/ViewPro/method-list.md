@@ -5723,11 +5723,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| Parámetros   | Tipo   |    | Descripción                                                            |
-| ------------ | ------ | -- | ---------------------------------------------------------------------- |
-| vpAreaName   | Text   | -> | Nombre del área 4D View Pro                                            |
-| sheetOptions | Object | -> | Opciones de la hoja a definir                                          |
-| sheet        | Object | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF -->
+| Parámetros   | Tipo    |    | Descripción                                                            |
+| ------------ | ------- | -- | ---------------------------------------------------------------------- |
+| vpAreaName   | Text    | -> | Nombre del área 4D View Pro                                            |
+| sheetOptions | Object  | -> | Opciones de la hoja a definir                                          |
+| sheet        | Integer | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF -->
 
 |
 
@@ -6126,7 +6126,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 | Parámetros    | Tipo   |    | Descripción                                  |
 | ------------- | ------ | -- | -------------------------------------------- |
 | rangeObj      | Object | -> | Objeto rango                                 |
-| timeValue     | Text   | -> | Valor hora a definir                         |
+| timeValue     | Hora   | -> | Valor hora a definir                         |
 | formatPattern | Text   | -> | Formato del valor|<!-- END REF -->
 
 |

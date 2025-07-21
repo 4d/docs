@@ -13,7 +13,7 @@ This property is available for fields of type **Object** (in 4D projects only). 
 
 You can enter any valid class name in this property, including:
 
-- User classes (e.g. `cs.MyClass`)
+- Clases usuario (por ejemplo, `cs.MyClass`)
 - Built-in 4D classes (e.g. `4D.File`, `4D.Folder`)
 - [Exposed](../Extensions/develop-components.md#sharing-of-classes) component-defined classes (e.g. `cs.MyComponent.MyClass`)
 
@@ -21,7 +21,7 @@ If you enter an invalid class name, a warning is triggered and the input is reje
 
 :::note
 
-**Non-streamable classes** such as [ORDA Data Model classes](../ORDA/ordaClasses.md), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be associated to object fields.
+**Non-streamable classes** such as [ORDA Data Model classes](../ORDA/ordaClasses.md), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... no pueden asociarse a campos objeto.
 
 :::
 

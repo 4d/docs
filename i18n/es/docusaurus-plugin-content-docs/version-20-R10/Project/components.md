@@ -319,8 +319,8 @@ Los componentes GitHub a los que se hace referencia se descargan en una carpeta 
 
 When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. Esto incluye:
 
-- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
-- **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
+- **Dependencias primarias**: componentes que declara explícitamente en su archivo `dependencies.json`
+- **Dependencias secundarias**: componentes requeridos por dependencias primarias u otras dependencias secundarias, que se resuelven e instalan automáticamente
 
 The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
 
@@ -368,7 +368,7 @@ Por defecto, se listan todas las dependencias identificadas por el gestor de dep
 - **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. Hay muchas razones posibles para este estado: archivos que faltan, incompatibilidad de versiones...
 - **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). También se muestran las dependencias sobrecargadas para que pueda comprobar el origen del conflicto y tomar las medidas oportunas.
 
-### Secondary dependencies
+### Dependencias secundarias
 
 The Dependencies panel displays [**secondary dependencies**](#automatic-dependency-resolution) with the `Component dependency` [origin](#dependency-origin):
 
@@ -407,13 +407,13 @@ El panel Dependencias enumera todas las dependencias del proyecto, sea cual sea 
 
 Las siguientes opciones de origen son posibles:
 
-| Etiqueta de origen      | Descripción                                                                                                                                  |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Built in 4D             | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D                                                           |
-| Declared in project     | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)                                                                  |
-| Declared in environment | Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file |
-| Carpeta Components      | Componente ubicado en la carpeta [`Components`](architecture.md#components)                                                                  |
-| Component dependency    | Secondary component ([required by a another component](#automatic-dependency-resolution))                                 |
+| Etiqueta de origen             | Descripción                                                                                                                                  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Built in 4D                    | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D                                                           |
+| Declared in project            | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)                                                                  |
+| Declared in environment        | Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file |
+| Carpeta Components             | Componente ubicado en la carpeta [`Components`](architecture.md#components)                                                                  |
+| Dependencia de los componentes | Componente secundario ([requerido por otro componente](#automatic-dependency-resolution))                                 |
 
 **Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 

@@ -99,7 +99,7 @@ title: Index
 [`CHANGE CURRENT USER`](../commands-legacy/change-current-user.md)<br/>
 [`CHANGE LICENSES`](../commands-legacy/change-licenses.md)<br/>
 [`CHANGE PASSWORD`](../commands-legacy/change-password.md)<br/>
-[`Change string`](../commands-legacy/change-string.md)<br/>
+[`Change string`](change-string.md)<br/>
 [`Char`](../commands-legacy/char.md)<br/>
 [`Character code`](../commands-legacy/character-code.md)<br/>
 [`CHECK LOG FILE`](../commands-legacy/check-log-file.md)<br/>
@@ -203,7 +203,7 @@ title: Index
 [`DELETE MENU ITEM`](../commands-legacy/delete-menu-item.md)<br/>
 [`DELETE RECORD`](../commands-legacy/delete-record.md)<br/>
 [`DELETE SELECTION`](../commands-legacy/delete-selection.md)<br/>
-[`Delete string`](../commands-legacy/delete-string.md)<br/>
+[`Delete string`](delete-string.md)<br/>
 [`DELETE USER`](../commands-legacy/delete-user.md)<br/>
 [`DESCRIBE QUERY EXECUTION`](../commands-legacy/describe-query-execution.md)<br/>
 [`DIALOG`](dialog.md)<br/>
@@ -381,7 +381,7 @@ title: Index
 [`GET GROUP PROPERTIES`](../commands-legacy/get-group-properties.md)<br/>
 [`GET HIGHLIGHT`](../commands-legacy/get-highlight.md)<br/>
 [`GET HIGHLIGHTED RECORDS`](../commands-legacy/get-highlighted-records.md)<br/>
-[`Get indexed string`](../commands-legacy/get-indexed-string.md)<br/>
+[`Get indexed string`](get-indexed-string.md)<br/>
 [`Last update log path`](../commands-legacy/last-update-log-path.md)<br/>
 [`GET LIST ITEM`](../commands-legacy/get-list-item.md)<br/>
 [`Get list item font`](../commands-legacy/get-list-item-font.md)<br/>
@@ -485,7 +485,7 @@ title: Index
 [`INSERT IN BLOB`](../commands-legacy/insert-in-blob.md)<br/>
 [`INSERT IN LIST`](../commands-legacy/insert-in-list.md)<br/>
 [`INSERT MENU ITEM`](../commands-legacy/insert-menu-item.md)<br/>
-[`Insert string`](../commands-legacy/insert-string.md)<br/>
+[`Insert string`](insert-string.md)<br/>
 [`Int`](../commands-legacy/int.md)<br/>
 [`INTEGER TO BLOB`](../commands-legacy/integer-to-blob.md)<br/>
 [`INTEGRATE MIRROR LOG FILE`](../commands-legacy/integrate-mirror-log-file.md)<br/>
@@ -574,7 +574,7 @@ title: Index
 [`LISTBOX Get number of rows`](../commands-legacy/listbox-get-number-of-rows.md)<br/>
 [`LISTBOX GET OBJECTS`](../commands-legacy/listbox-get-objects.md)<br/>
 [`LISTBOX GET PRINT INFORMATION`](../commands-legacy/listbox-get-print-information.md)<br/>
-[`LISTBOX Get property`](listbox-get-property.md) **modifié 4D 20 R10**<br/>
+[`LISTBOX Get property`](listbox-get-property.md) **modified 4D 20 R10**<br/>
 [`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color.md)<br/>
 [`LISTBOX Get row color as number`](../commands-legacy/listbox-get-row-color-as-number.md)<br/>
 [`LISTBOX Get row font style`](../commands-legacy/listbox-get-row-font-style.md)<br/>
@@ -602,7 +602,7 @@ title: Index
 [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height.md)<br/>
 [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md)<br/>
 [`LISTBOX SET LOCKED COLUMNS`](../commands-legacy/listbox-set-locked-columns.md)<br/>
-[`LISTBOX SET PROPERTY`](listbox-set-property.md) **modifié 4D 20 R10**<br/>
+[`LISTBOX SET PROPERTY`](listbox-set-property.md) **modified 4D 20 R10**<br/>
 [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md)<br/>
 [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md)<br/>
 [`LISTBOX SET ROW HEIGHT`](../commands-legacy/listbox-set-row-height.md)<br/>
@@ -616,7 +616,7 @@ title: Index
 [`LOAD SET`](../commands-legacy/load-set.md)<br/>
 [`LOAD VARIABLES`](../commands-legacy/load-variables.md)<br/>
 [`Localized document path`](../commands-legacy/localized-document-path.md)<br/>
-[`Localized string`](../commands-legacy/localized-string.md)<br/>
+[`Localized string`](localized-string.md)<br/>
 [`Locked`](../commands-legacy/locked.md)<br/>
 [`LOCKED BY`](../commands-legacy/locked-by.md)<br/>
 [`Locked records info`](../commands-legacy/locked-records-info.md)<br/>
@@ -697,7 +697,7 @@ title: Index
 [`Not`](../commands-legacy/not.md)<br/>
 [`NOTIFY RESOURCES FOLDER MODIFICATION`](../commands-legacy/notify-resources-folder-modification.md)<br/>
 [`Null`](../commands-legacy/null.md)<br/>
-[`Num`](../commands-legacy/num.md)<br/>
+[`Num`](num.md)<br/>
 
 <a id="O"><b>O</b></a>
 
@@ -998,7 +998,7 @@ title: Index
 [`RELOAD PROJECT`](../commands-legacy/reload-project.md)<br/>
 [`REMOVE FROM SET`](../commands-legacy/remove-from-set.md)<br/>
 [`REMOVE PICTURE FROM LIBRARY`](../commands-legacy/remove-picture-from-library.md)<br/>
-[`Replace string`](../commands-legacy/replace-string.md)<br/>
+[`Replace string`](replace-string.md)<br/>
 [`Request`](../commands-legacy/request.md)<br/>
 [`RESIZE FORM WINDOW`](../commands-legacy/resize-form-window.md)<br/>
 [`RESOLVE ALIAS`](../commands-legacy/resolve-alias.md)<br/>
@@ -1062,7 +1062,7 @@ title: Index
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
-[`Session info`](session-info.md) - **nouveau 4D 20 R7**<br/>
+[`Session info`](session-info.md) - **new 4D 20 R7**<br/>
 [`Session storage`](session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)<br/>
@@ -1132,7 +1132,7 @@ title: Index
 [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)<br/>
 [`SET USER ALIAS`](../commands-legacy/set-user-alias.md)<br/>
 [`Set user properties`](../commands-legacy/set-user-properties.md)<br/>
-[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **nouveau 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **new 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands-legacy/set-window-rect.md)<br/>
 [`SET WINDOW TITLE`](../commands-legacy/set-window-title.md)<br/>
 [`Shift down`](../commands-legacy/shift-down.md)<br/>
@@ -1157,7 +1157,7 @@ title: Index
 [`SPELL Get current dictionary`](../commands-legacy/spell-get-current-dictionary.md)<br/>
 [`SPELL GET DICTIONARY LIST`](../commands-legacy/spell-get-dictionary-list.md)<br/>
 [`SPELL SET CURRENT DICTIONARY`](../commands-legacy/spell-set-current-dictionary.md)<br/>
-[`Split string`](../commands-legacy/split-string.md)<br/>
+[`Split string`](split-string.md)<br/>
 [`SQL CANCEL LOAD`](../commands-legacy/sql-cancel-load.md)<br/>
 [`SQL End selection`](../commands-legacy/sql-end-selection.md)<br/>
 [`SQL EXECUTE`](../commands-legacy/sql-execute.md)<br/>
@@ -1196,10 +1196,10 @@ title: Index
 [`STOP MONITORING ACTIVITY`](../commands-legacy/stop-monitoring-activity.md)<br/>
 [`STOP SQL SERVER`](../commands-legacy/stop-sql-server.md)<br/>
 [`Storage`](../commands-legacy/storage.md)<br/>
-[`String`](../commands-legacy/string.md)<br/>
+[`String`](string.md)<br/>
 [`STRING LIST TO ARRAY`](../commands-legacy/string-list-to-array.md)<br/>
 [`Structure file`](../commands-legacy/structure-file.md)<br/>
-[`Substring`](../commands-legacy/substring.md)<br/>
+[`Substring`](substring.md)<br/>
 [`Subtotal`](../commands-legacy/subtotal.md)<br/>
 [`Sum`](../commands-legacy/sum.md)<br/>
 [`Sum squares`](../commands-legacy/sum-squares.md)<br/>
@@ -1230,7 +1230,7 @@ title: Index
 [`throw`](../commands-legacy/throw.md)<br/>
 [`Tickcount`](../commands-legacy/tickcount.md)<br/>
 [`Time`](../commands-legacy/time.md)<br/>
-[`Time string`](../commands-legacy/time-string.md)<br/>
+[`Time string`](time-string.md)<br/>
 [`Timestamp`](../commands-legacy/timestamp.md)<br/>
 [`Tool bar height`](../commands-legacy/tool-bar-height.md)<br/>
 [`TRACE`](../commands-legacy/trace.md)<br/>
@@ -1239,6 +1239,9 @@ title: Index
 [`Trigger event`](../commands-legacy/trigger-event.md)<br/>
 [`Trigger level`](../commands-legacy/trigger-level.md)<br/>
 [`TRIGGER PROPERTIES`](../commands-legacy/trigger-properties.md)<br/>
+[`Trim`](trim.md) **new 4D 21**<br/>
+[`Trim end`](trim-end.md) **new 4D 21**<br/>
+[`Trim start`](trim-start.md) **new 4D 21**<br/>
 [`True`](../commands-legacy/true.md)<br/>
 [`Trunc`](../commands-legacy/trunc.md)<br/>
 [`TRUNCATE TABLE`](../commands-legacy/truncate-table.md)<br/>

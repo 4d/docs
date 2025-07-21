@@ -162,7 +162,9 @@ O comando `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insere uma f
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
+
 Em *index*, pode passar um índice para a nova folha. Se o *index* passado for inferior ou igual a 0, o comando insere a nova folha no início. Se o *index* exceder o número de folhas, o comando insere a nova folha após as existentes.
+
 > A indexação começa em 0.
 
 Em *name*, pode indicar um nome para a nova folha. O novo nome não pode conter os seguintes caracteres: `*, :, [, ], ?,\,/`
@@ -5670,11 +5672,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| Parâmetro    | Tipo   |    | Descrição                                                           |
-| ------------ | ------ | -- | ------------------------------------------------------------------- |
-| vpAreaName   | Text   | -> | Nome da área 4D View Pro                                            |
-| sheetOptions | Object | -> | Opção(ões) de folha a definir                                       |
-| sheet        | Object | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
+| Parâmetro    | Tipo    |    | Descrição                                                           |
+| ------------ | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName   | Text    | -> | Nome da área 4D View Pro                                            |
+| sheetOptions | Object  | -> | Opção(ões) de folha a definir                                       |
+| sheet        | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -6072,7 +6074,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 | Parâmetro     | Tipo   |    | Descrição                                   |
 | ------------- | ------ | -- | ------------------------------------------- |
 | rangeObj      | Object | -> | Objeto intervalo                            |
-| timeValue     | Text   | -> | Valor hora a definir                        |
+| timeValue     | Hora   | -> | Valor hora a definir                        |
 | formatPattern | Text   | -> | Formato do valor|<!-- END REF -->
 
 |

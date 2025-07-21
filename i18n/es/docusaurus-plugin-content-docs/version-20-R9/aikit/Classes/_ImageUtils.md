@@ -27,9 +27,9 @@ var $blob:=cs._ImageUtils.me.httpURLToBlob("http://example.com/image.png")
 
 Converts a base64 encoded string to a Blob object.
 
-| Argumento | Tipo | Descripción                                      |
-| --------- | ---- | ------------------------------------------------ |
-| $base64   | Text | The base64 encoded image string. |
+| Argumento | Tipo | Descripción                                            |
+| --------- | ---- | ------------------------------------------------------ |
+| $base64   | Text | La cadena de imagen codificada base64. |
 
 **Devuelve**: Blob que representa la imagen decodificada.
 

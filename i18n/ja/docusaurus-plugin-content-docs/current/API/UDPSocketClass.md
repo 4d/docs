@@ -37,11 +37,11 @@ UDPSocket オブジェクトは以下のプロパティと関数を提供しま�
 | [<!-- INCLUDE #UDPSocket.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPSocket.port.Summary -->       |
 | [<!-- INCLUDE #UDPSocket.send().Syntax -->](#send)<br/><!-- INCLUDE #UDPSocket.send().Summary -->   |
 
-<!-- REF #4D.UDPSocket.new().Desc -->
+<!-- REF 4D.UDPSocket.new().Desc -->
 
 ## 4D.UDPSocket.new()
 
-<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**( *options* : Object  ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object  ) : 4D.UDPSocket<!-- END REF -->
+<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**() : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *options* : Object ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object ) : 4D.UDPSocket<!-- END REF -->
 
 <!-- REF #4D.UDPSocket.new().params -->
 
@@ -55,11 +55,11 @@ UDPSocket オブジェクトは以下のプロパティと関数を提供しま�
 
 #### 説明
 
-`4D.UDPSocket.new()` 関数は、<!-- REF #4D.UDPSocket.new().Summary -->*port* 引数(あれば)で指定されたポートまたは未使用のランダムなポート上で、 *options* 引数で定義されたオプションを使用して新しいUDP ソケットを作成し、`4D.UDPSocket` オブジェクトを返します<!-- END REF -->。
+The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* (if any) on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
 
 #### `options` 引数
 
-*options* に渡すオブジェクトは、次のプロパティを持つことができます:
+In the *options* parameter, you can pass an object that contains the following properties:
 
 | プロパティ       | 型       | 説明                         | デフォルト |
 | ----------- | ------- | -------------------------- | ----- |
@@ -74,7 +74,7 @@ UDPSocket オブジェクトは以下のプロパティと関数を提供しま�
 | 引数      | 型                                       | 説明                      |
 | ------- | --------------------------------------- | ----------------------- |
 | $socket | [`UDPSocket` オブジェクト](#udpsocket-オブジェクト) | カレントのUDPSocket インスタンス。  |
-| $event  | [`UDPEvent` オブジェクト](#udppevent-オブジェクト)  | イベントに関する情報が含まれているオブジェクト |
+| $event  | [`UDPEvent` object](#udpevent-object)   | イベントに関する情報が含まれているオブジェクト |
 
 **コールバックの呼び出しの順番:**
 
@@ -88,7 +88,7 @@ UDPSocket オブジェクトは以下のプロパティと関数を提供しま�
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.errors.Desc -->
+<!-- REF UDPSocket.errors.Desc -->
 
 ## .errors
 
@@ -107,7 +107,7 @@ UDPSocket オブジェクトは以下のプロパティと関数を提供しま�
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.port.Desc -->
+<!-- REF UDPSocket.port.Desc -->
 
 ## .port
 
@@ -119,7 +119,7 @@ UDPSocket オブジェクトは以下のプロパティと関数を提供しま�
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.send().Desc -->
+<!-- REF UDPSocket.send().Desc -->
 
 ## .send()
 

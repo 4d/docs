@@ -11,7 +11,7 @@ The `OpenAIChoice` class represents a choice made by the OpenAI API response, co
 
 | Propiedad       | Tipo                              | Descripción                                                                                                                                        |
 | --------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `message `      | [OpenAIMessage](OpenAIMessage.md) | The message associated with this choice.                                                                                           |
+| `message `      | [OpenAIMessage](OpenAIMessage.md) | El mensaje asociado a esta elección.                                                                                               |
 | `delta`         | [OpenAIMessage](OpenAIMessage)    | Un mensaje parcial utilizado para las respuestas de streaming.(stream: True.md) |
 | `finish_reason` | Text                              | La razón por la que terminó la elección (por ejemplo, "stop").                                                  |
-| `index`         | Integer                           | The index of the choice in the response.                                                                                           |
+| `index`         | Integer                           | El índice de la elección en la respuesta.                                                                                          |

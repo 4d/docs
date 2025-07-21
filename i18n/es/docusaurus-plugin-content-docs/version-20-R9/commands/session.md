@@ -37,7 +37,7 @@ Dependiendo del proceso desde el que se llame al comando, la sesión de usuario 
 
 Para obtener más información, consulte el párrafo [Tipos de sesion](../API/SessionClass.md#session-types).
 
-If the command is called from a non supported context (e.g. scalable sessions disabled), it returns *Null*.
+Si el comando se llama desde un contexto no soportado (por ejemplo, sesiones escalables desactivadas), devuelve *Null*.
 
 ## Sesiones web
 
@@ -72,7 +72,7 @@ Para obtener información sobre la sesión de usuario virtual de los procedimien
 
 ## Sesión independiente
 
-The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
+El objeto `Session` está disponible desde cualquier proceso en aplicaciones independientes (monousuario) para que pueda escribir y probar su código cliente/servidor utilizando el objeto `Session` en su entorno de desarrollo 4D.
 
 ## Ejemplo
 

@@ -34,6 +34,7 @@ Em *paramObj*, você pode passar várias propriedades:
 
 Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
+
 | Parâmetro |                               | Tipo                    | Descrição                                                                    |
 | :-------- | :---------------------------- | :---------------------- | :--------------------------------------------------------------------------- |
 | param1    |                               | text                    | O nome do objeto 4D View Pro                                                 |
@@ -43,6 +44,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 |           | .success      | boolean                 | True se a exportação for bem sucedida, False caso contrário. |
 |           | .errorCode    | integer                 | Código de erro.                                              |
 |           | .errorMessage | text                    | Mensagem de erro.                                            |
+
 
 ## Exemplo
 

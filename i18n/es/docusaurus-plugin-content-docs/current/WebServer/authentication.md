@@ -123,7 +123,7 @@ Todos los parámetros del método base `On Web Authentication` no están necesar
 
 El primer parámetro (`$url`) es la URL recibida por el servidor, de la que se ha eliminado la dirección del host.
 
-Tomemos el ejemplo de una conexión a la Intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.45.67.89. The following table shows the values of $urll depending on the URL entered in the Web browser:
+Tomemos el ejemplo de una conexión a la Intranet. Supongamos que la dirección IP de su máquina 4D Web Server es 123.45.67.89. La siguiente tabla muestra los valores de $urll en función de la URL introducida en el navegador web:
 
 | URL introducida en el navegador web                                                                                                               | Valor del parámetro $urll                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |

@@ -33,14 +33,14 @@ For more details on rate limits and the specific headers used, refer to [the Ope
 
 The structure of the `rateLimit` object is as follows:
 
-| Campo               | Tipo    | Descripción                                       |
-| ------------------- | ------- | ------------------------------------------------- |
-| `limit.request`     | Integer | Número de solicitudes permitidas. |
-| `limit.tokens`      | Integer | Número de tokens permitidos.      |
-| `remaining.request` | Integer | Número de peticiones restantes.   |
-| `remaining.tokens`  | Integer | Número de tokens restantes.       |
-| `reset.request`     | String  | Time until request limit resets.  |
-| `reset.tokens`      | String  | Time until token limit resets.    |
+| Campo               | Tipo    | Descripción                                                              |
+| ------------------- | ------- | ------------------------------------------------------------------------ |
+| `limit.request`     | Integer | Número de solicitudes permitidas.                        |
+| `limit.tokens`      | Integer | Número de tokens permitidos.                             |
+| `remaining.request` | Integer | Número de peticiones restantes.                          |
+| `remaining.tokens`  | Integer | Número de tokens restantes.                              |
+| `reset.request`     | String  | Tiempo hasta que se restablece el límite de solicitudes. |
+| `reset.tokens`      | String  | Time until token limit resets.                           |
 
 ## Funciones
 

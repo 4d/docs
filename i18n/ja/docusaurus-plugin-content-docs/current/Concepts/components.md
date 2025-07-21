@@ -28,3 +28,9 @@ title: コンポーネント
 コンポーネントの [プロジェクトメソッド](methods.md) または [クラス](classes.md) を選択し、エクスプローラーの **ドキュメント** ボタンをクリックすると、そのメソッドに関する情報が得られます ([あれば](Project/documentation.md))。
 
 ![alt-text](../assets/en/Project/compDoc.png)
+
+:::note
+
+Interpreted component code can be [edited directly from the host project](../Extensions/develop-components.md#editing-components-from-the-host) if the context is supported.
+
+:::
