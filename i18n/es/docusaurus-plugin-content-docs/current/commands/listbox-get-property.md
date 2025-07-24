@@ -11,7 +11,7 @@ title: LISTBOX Get property
 | ---------- | ------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | \*         | Operador      | &#8594; | If specified, object is an object name (string). Si se omite, object es una variable |
 | object     | any           | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted)                   |
-| property   | Integer       | &#8594; | Property whose value you want to get                                                                                    |
+| property   | Integer       | &#8594; | Propiedad cuyo valor desea obtener                                                                                      |
 | Resultado  | Integer, Text | &#8592; | Valor actual                                                                                                            |
 
 <!-- END REF-->
@@ -66,7 +66,7 @@ In the *property* parameter, pass a constant indicating the property whose value
 
 In general, to signal an invalid result **LISTBOX Get property** returns -1 when retrieving properties that have numeric values, or an empty string; however, no errors are generated. More specifically, this occurs in the following cases:
 
-- If you pass a *property* that does not exist
+- Si pasa una *property* que no existe
 - If you pass a *property* that is not available for the specified list box or column, e.g. you pass the lk font color expression property with an array type list box
 - If you pass a column as parameter with a *property* that is applied to a list box, and vice versa if you pass a list box as parameter with a *property* that is applied to a column (see \* above)
 

@@ -36,7 +36,7 @@ In *mergedApp*, pass a [4D.Folder](../API/FolderClass.md) object containing a re
 
 Depending on the second parameter, you [let 4D select automatically the license to use](#automatic-license-selection) for the target or [designate the license(s) to use](#designating-the-licenses-to-use).
 
-### Automatic license selection
+### Selección automática de licencia
 
 If you pass the *autoLicenseTarget* parameter, you let 4D find and use the most appropriate license for the specified target. For more information on the automatic license selection, please refer to the [Build application](../Desktop/building.md#application-automatically-embedding-available-licenses) section.
 
@@ -61,8 +61,8 @@ The command returns a *status* object containing the following properties:
 
 | **Propiedad**                                                                      | **Tipo**                                       | **Description**                                                                                                                   |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| success                                                                            | Boolean                                        | True if the license file has been generated                                                                                       |
-| file                                                                               | [4D.File](../API/FileClass.md) | The generated license file                                                                                                        |
+| success                                                                            | Boolean                                        | True si se ha generado el archivo de licencia                                                                                     |
+| file                                                                               | [4D.File](../API/FileClass.md) | El archivo de licencia generado                                                                                                   |
 | statusText                                                                         | Text                                           | Descripción del error si lo hay                                                                                                   |
 | errors                                                                             | Collection                                     | Colección de objetos de error                                                                                                     |
 | \[\].message | Text                                           | Mensaje de error                                                                                                                  |
@@ -99,7 +99,7 @@ Use the automatic syntax to create a single-user 4D application:
 
 ## Ejemplo 2
 
-Designate a license to use:
+Designar una licencia de uso:
 
 ```4d
  var $status : Object

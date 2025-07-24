@@ -17,9 +17,9 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 ## Propiedades calculadas
 
-| Propiedad | Tipo | Descripción                                               |
-| --------- | ---- | --------------------------------------------------------- |
-| `text`    | Text | A property representing the text message. |
+| Propiedad | Tipo | Descripción                                                       |
+| --------- | ---- | ----------------------------------------------------------------- |
+| `text`    | Text | Una propiedad que representa el mensaje de texto. |
 
 ## Funciones
 

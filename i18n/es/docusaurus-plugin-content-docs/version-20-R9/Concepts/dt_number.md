@@ -12,14 +12,14 @@ Número es un término genérico que significa:
 
 Usually when working with Integers, you handle *Long* values (4-byte Integer). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
 
-- Database fields with `Integer` type,
+- Campos de la base de datos de tipo `Integer`,
 - Elementos de arrays declarados con [`ARRAY INTEGER`](../commands-legacy/array-integer.md).
 
 These legacy data types are automatically converted in *Longs* when used in the 4D Language.
 
 :::
 
-Puede asignar cualquier tipo de dato numérico a otro; 4D realiza la conversión, truncando o redondeando si es necesario. Sin embargo, cuando los valores están fuera del rango, la conversión no devolverá un valor válido. You can mix number data types in expressions.
+Puede asignar cualquier tipo de dato numérico a otro; 4D realiza la conversión, truncando o redondeando si es necesario. Sin embargo, cuando los valores están fuera del rango, la conversión no devolverá un valor válido. Puede mezclar tipos de datos numéricos en las expresiones.
 
 ## Constantes literales numéricas
 

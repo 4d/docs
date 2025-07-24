@@ -22,7 +22,7 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 | ---------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | `timeout`              | Real                                                                             | Tiempo en segundos antes de que se agote el tiempo de espera. |
 | `maxRetries`           | Real                                                                             | Maximum number of retry attempts in case of failure.          |
-| `httpAgent`            | [4D.HTTPAgent](https://developer.4d.com/docs/API/HTTPAgentClass) | HTTP agent used for making requests.                          |
+| `httpAgent`            | [4D.HTTPAgent](https://developer.4d.com/docs/API/HTTPAgentClass) | Agente HTTP utilizado para realizar peticiones.               |
 | `customHeaders`        | Real                                                                             | Custom headers to be included in the HTTP requests.           |
 
 ### Class constructor

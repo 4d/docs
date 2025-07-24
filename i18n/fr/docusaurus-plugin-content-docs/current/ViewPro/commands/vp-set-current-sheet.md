@@ -12,7 +12,7 @@ title: VP SET CURRENT SHEET
 | Paramètres | Type    |                             | Description                             |                  |
 | ---------- | ------- | --------------------------- | --------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
-| sheet      | Integer | <- | Index of the new current sheet          | <!-- END REF --> |
+| sheet      | Integer | <- | Index de la nouvelle feuille courante   | <!-- END REF --> |
 
 ## Description
 

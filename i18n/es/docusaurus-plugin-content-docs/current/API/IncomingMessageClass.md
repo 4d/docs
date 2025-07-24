@@ -240,7 +240,7 @@ La propiedad `.headers` contiene <!-- REF #IncomingMessageClass.headers.Summary 
 
 La propiedad `.headers` es de sólo lectura.
 
-Los nombres de los encabezados (llaves) se escriben en minúsculas. Note header names are case sensitive.
+Los nombres de los encabezados (llaves) se escriben en minúsculas. Tenga en cuenta que los nombres de los encabezados diferencian entre mayúsculas y minúsculas.
 
 <!-- END REF -->
 
@@ -278,7 +278,7 @@ La propiedad `.urlPath` contiene <!-- REF #IncomingMessageClass.urlPath.Summary 
 
 For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.urlPath` property is ["docs", "invoices" ,"today"].
 
-The `.urlPath` property is read-only.
+La propiedad `.urlPath` es de sólo lectura.
 
 <!-- END REF -->
 

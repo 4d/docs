@@ -15,7 +15,7 @@ ORDA events are functions that are automatically invoked by ORDA each time entit
 
 You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
-:::info Compatibility note
+:::info Nota de compatibilidad
 
 ORDA events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
 

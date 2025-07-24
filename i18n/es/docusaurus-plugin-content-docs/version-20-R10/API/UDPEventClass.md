@@ -34,7 +34,7 @@ Las siguientes propiedades están disponibles:
 
 #### Descripción
 
-The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type "data".
+The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associated with the event<!-- END REF -->. Sólo es válido para eventos de tipo "data".
 
 <!-- END REF -->
 

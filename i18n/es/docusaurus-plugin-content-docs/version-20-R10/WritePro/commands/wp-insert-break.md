@@ -32,12 +32,12 @@ In *breakType*, pass one of the following constants from the *4D Write Pro Const
 
 | Constante                   | Tipo    | Valor | Comentario                                                                                                                                      |
 | --------------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk column break             | Integer | 3     | Column break: inserts a column break                                                                                            |
+| wk column break             | Integer | 3     | Salto de columna: inserta un salto de columna                                                                                   |
 | wk continuous section break | Integer | 5     | Defines a continuous section break (often used to change the number of columns without starting a new page). |
 | wk line break               | Integer | 0     | Salto de línea (en el mismo párrafo)                                                                                         |
 | wk page break               | Integer | 2     | Salto de página: define una nueva página                                                                                        |
 | wk paragraph break          | Integer | 4     | Salto de párrafo: define un nuevo párrafo                                                                                       |
-| wk section break            | Integer | 1     | Section break: defines a new section                                                                                            |
+| wk section break            | Integer | 1     | Ruptura de sección: define una nueva sección                                                                                    |
 
 In the *mode* parameter, pass a constant to indicate the insertion mode to be used for the break in the destination *targetObj*:
 

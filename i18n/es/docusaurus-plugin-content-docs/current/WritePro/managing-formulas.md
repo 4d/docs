@@ -117,7 +117,7 @@ When the [**Current time**](../commands-legacy/current-time.md) command, a time 
 
 Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) and [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) commands.
 
-When a virtual structure is defined:
+Cuando se define una estructura virtual:
 
 - references to expressions containing fields display virtual names when the 4D Write Pro document shows references and not values.
 - [**WP Get text**](commands-legacy/wp-get-text.md) devuelve nombres de estructura virtual si la opción `wk expressions as source` está establecida en el parámetro de expresiones.

@@ -17,7 +17,7 @@ The `OpenAIImageParameters` class is designed to configure and manage the parame
 | ---------------------- | ------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `model`                | Text    | "dall-e-2"        | Specifies the model to use for image generation.                                                                        |
 | `n`                    | Integer | 1                 | The number of images to generate (must be between 1 and 10; only `n=1` is supported for `dall-e-3`). |
-| `size`                 | Text    | "1024x1024"       | El tamaño de las imágenes generadas. Must conform to model specifications.                              |
+| `size`                 | Text    | "1024x1024"       | El tamaño de las imágenes generadas. Debe ajustarse a las especificaciones del modelo.                  |
 | `style`                | Text    | ""                | The style of the generated images (must be either `vivid` or `natural`).                             |
 | `response_format`      | Text    | "url"             | The format for returned images, can be either `url` or `b64_json`.                                                      |
 

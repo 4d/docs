@@ -11,7 +11,7 @@ La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/
 
 Encontrará a continuación:
 
-- the Table Wizard configuration documentation,
+- la documentación de configuración del Asistente para tablas,
 - la I.A. integrada. documentation.
 
 ## Asistente de tablas

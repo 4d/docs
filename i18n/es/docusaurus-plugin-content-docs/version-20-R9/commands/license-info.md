@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo   |                             | Descripción                          |
 | ---------- | ------ | --------------------------- | ------------------------------------ |
-| Resultado  | Object | &#8592; | Information about the active licence |
+| Resultado  | Object | &#8592; | Información sobre la licencia activa |
 
 <!-- END REF-->
 

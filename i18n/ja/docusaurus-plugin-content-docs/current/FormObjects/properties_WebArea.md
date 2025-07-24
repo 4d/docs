@@ -54,12 +54,12 @@ Webエリアで実行される JavaScript コードから 4Dメソッドおよ�
 
 ### URL変数と WA OPEN URL コマンド
 
-The URL variable produces the same effects as the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command. しかしながら、以下の違いに注意してください。
+URL 変数は[`WA OPEN URL`](../commands-legacy/wa-open-url.md) と同じ効果を生み出します。 しかしながら、以下の違いに注意してください。
 
-- ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 The [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command accepts both notations.
-- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 The [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドは両方の記法を受け入れます。
+- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドは、この場合にはエラーを生成します。
+- URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加しますが、[`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドはこれを付加しません。
+- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを実行しても効果はありません。 一方、URL変数に値を代入すると、カレントURL が更新されます。
 
 #### JSON 文法
 
@@ -85,7 +85,7 @@ The URL variable produces the same effects as the [`WA OPEN URL`](../commands-le
 
 > Windows で Microsoft Edge WebView2がインストールされていない場合、4D はシステムのレンダリングエンジンとして埋め込みエンジンを使用します。 システムにインストールされているかどうかを確認するには、アプリケーションパネルで "Microsoft Edge WebView2 Runtime" を検索してください。
 
-- **チェックあり** - `JSON値: embedded`: この場合、4D は Chromium Embedded Framework (CEF) を使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。使用エンジンの新バージョンは 4D のリリースを通して定期的に提供されます。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。 使用エンジンの新バージョンは 4D のリリースを通して定期的に提供されます。
+- **チェックあり** - `JSON値: embedded`: この場合、4D は Chromium Embedded Framework (CEF) を使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。 使用エンジンの新バージョンは 4D のリリースを通して定期的に提供されます。
 
 CEFエンジンには以下のような制約があります:
 

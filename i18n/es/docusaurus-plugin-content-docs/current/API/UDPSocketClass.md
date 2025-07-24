@@ -61,11 +61,11 @@ The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->create
 
 In the *options* parameter, you can pass an object that contains the following properties:
 
-| Propiedad   | Tipo    | Descripción                                   | Por defecto |
-| ----------- | ------- | --------------------------------------------- | ----------- |
-| onData      | Formula | Retrollamada activada cuando se reciben datos | Indefinido  |
-| onError     | Formula | Retrollamada en caso de error                 | Indefinido  |
-| onTerminate | Formula | Callback triggered when the port is released  | Indefinido  |
+| Propiedad   | Tipo    | Descripción                                      | Por defecto |
+| ----------- | ------- | ------------------------------------------------ | ----------- |
+| onData      | Formula | Retrollamada activada cuando se reciben datos    | Indefinido  |
+| onError     | Formula | Retrollamada en caso de error                    | Indefinido  |
+| onTerminate | Formula | Retrollamada activada cuando se libera el puerto | Indefinido  |
 
 #### Función callback (retrollamada)
 

@@ -105,7 +105,7 @@ Here is the code for the "Check children" button:
  End if
 ```
 
-The form displays information for each child:
+El formulario muestra información sobre cada niño:
 
 ![](../assets/en/commands/pict3515152.en.png)
 

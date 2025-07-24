@@ -3,7 +3,7 @@ id: UDPEventClass
 title: UDPEvent
 ---
 
-The `UDPEvent` class provides information about events occurring during the lifecycle of a UDP socket. It is generated when a [UDPSocket](UDPSocketClass.md) is opened and is utilized in callbacks `onData`, `onError`, and `onTerminate`.
+La classe `UDPEvent` fournit des informations sur les événements survenant au cours du cycle de vie d'une socket UDP. It is generated when a [UDPSocket](UDPSocketClass.md) is opened and is utilized in callbacks `onData`, `onError`, and `onTerminate`.
 
 <details><summary>Historique</summary>
 
@@ -13,7 +13,7 @@ The `UDPEvent` class provides information about events occurring during the life
 
 </details>
 
-### UDPEvent Object
+### Objet UDPEvent
 
 A `UDPEvent` object is immutable and non-streamable.
 
@@ -70,11 +70,11 @@ The `.port` property contains <!-- REF #UDPEvent.port.Summary -->the port number
 
 #### Description
 
-The `.type` property contains <!-- REF #UDPEvent.type.Summary -->the type of the event<!-- END REF -->. Valeurs possibles :
+La propriété `.type` contient <!-- REF #UDPEvent.type.Summary -->le type d'événement<!-- END REF -->. Valeurs possibles :
 
 - `"data"` : indique que des données ont été reçues.
-- `"error"`: Indicates that an error occurred during the UDPSocket.
-- `"terminate"`: Indicates that the UDPSocket is about to be released.
+- `"error"`: indique qu'une erreur est survenue pendant l'UDPSocket.
+- `"terminate"` : Indique que l'UDPSocket est sur le point d'être libéré.
 
 <!-- END REF -->
 

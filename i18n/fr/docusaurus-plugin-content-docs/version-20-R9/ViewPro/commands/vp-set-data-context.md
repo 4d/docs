@@ -93,7 +93,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 ## Exemple 3
 
-The *data* passed as a parameter is a collection that contains subcollections. Chaque sous-collection définit les valeurs des cellules de la ligne :
+Les *données* passées en paramètre sont une collection qui contient des sous-collections. Chaque sous-collection définit les valeurs des cellules de la ligne :
 
 ```4d
 var $data : Collection

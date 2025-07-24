@@ -70,7 +70,7 @@ This form then reacts “normally” to user actions and is closed using a stand
 **Notas:**
 
 - Puede combinar el uso de la sintaxis **DIALOG**(form;\*) con el comando [CALL FORM](../commands-legacy/call-form.md) para establecer la comunicación entre los formularios.
-- You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. Otherwise, error -9909 is generated.
+- You must create a window before calling the **DIALOG**(form;\*) statement. It is not possible to use the current dialog window in the process nor the window created by default for each process. En caso contrario, se genera el error -9909.
 - When the *\** parameter is used, the window is closed automatically following a standard action or a call to the [CANCEL](../commands-legacy/cancel.md) or [ACCEPT](../commands-legacy/accept.md) command. You do not have to manage the closing of the window itself.
 
 ## Ejemplo 1
@@ -126,7 +126,7 @@ Here is the code for the "Check children" button:
  End if
 ```
 
-The form displays information for each child:
+El formulario muestra información sobre cada niño:
 
 ![](../assets/en/commands/pict3515152.en.png)
 

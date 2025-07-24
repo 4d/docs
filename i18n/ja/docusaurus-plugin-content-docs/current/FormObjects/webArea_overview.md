@@ -39,25 +39,25 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 
 ## $4d オブジェクト
 
-The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
+[`4D 埋め込みWebレンダリングエンジン`](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) はWeb エリア内にて **`$4d` という名前のJavaScript オブジェクト** を提供します。 デフォルトで、 `$4d` はドット記法を通して全ての4D プロジェクトメソッドへのアクセスを許可します。
 
-For example, calling the `HelloWorld` method in 4D:
+例えば、4D 内の `HelloWorld` メソッドを呼び出したい場合:
 
 ```js
 $4d.HelloWorld();
 ```
 
-> **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
+> **注意:** JavaScript は **大文字と小文字を区別します**ので、オブジェクト名は **`$4d`** となります(小文字の"d" となります)。
 
-### Controlling $4d Access
+### $4d へのアクセスの管理
 
-With [`WA SET CONTEXT`](../commands/wa-set-context.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+[`WA SET CONTEXT`](../commands/wa-set-context.md) を使用すると、デベロッパーはWeb エリアから `$4d` を通して何が利用可能かをコントロールすることができます。 このコマンドを使用することで、フォーミュラとクラスインスタンスを通して例えば4D メソッドを宣言する**コンテキストオブジェクト**を定義することができます。
 
-To check the currently defined context, use [`WA Get context`](../commands/wa-get-context.md).
+現在定義されているコンテキストをチェックするためには、[`WA Get context`](../commands/wa-get-context.md) を使用します。
 
-For more information, please refer to [`WA SET CONTEXT`](../commands/wa-set-context.md).
+詳細な情報については、[`WA SET CONTEXT`](../commands/wa-set-context.md) を参照してください。
 
-### Calling 4D Methods from JavaScript
+### JavaScript から4D メソッドを呼び出す
 
 4Dメソッドへの呼び出しのシンタックスは以下のようになります:
 
@@ -115,16 +115,16 @@ $4d.today(function(result)
 
 #### 例題 2
 
-Instead of using a standalone method, we can also define a **class** to handle the calculation.
+スタンドアロンのメソッドを使用する代わりに、この計算を管理する**クラス**を定義することもできます。
 
-Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
+引数を受け入れてその合計を返す、`calcSum` 4D プロジェクトメソッドとそのクラスを定義します:
 
 ```4d
-// SumCalculator user class
+// SumCalculator ユーザークラス
 
 Function calcSum(... : Real) -> $sum : Real
-   // receives n Real type parameters
-   // and returns a Real
+   // n 個の実数型引数を受け取り
+   // 実数を返します
   var $i; $n : Integer
   $n := Count parameters
 
@@ -133,7 +133,7 @@ Function calcSum(... : Real) -> $sum : Real
   End for
 ```
 
-In another method, we create an instance and assign it to $4d
+他のメソッドにおいて、インスタンスを作成し、$4d へと割り当てます
 
 ```4d
 var $myCalculator := cs.SumCalculator.new()

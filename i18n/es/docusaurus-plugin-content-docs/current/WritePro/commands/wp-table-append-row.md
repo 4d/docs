@@ -39,7 +39,7 @@ La alineación predeterminada de las celdas dependerá del tipo de valor:
 
 :::note Notas
 
-- Array type values are not supported.
+- No se admiten valores de tipo array.
 - Ensure the number of values or the size of the collection matches the number of cells in the table to avoid unexpected results.
 
 :::

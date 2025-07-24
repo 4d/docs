@@ -12,7 +12,7 @@ title: Etiquetas
 - Especifique cuántas etiquetas imprimir por registro,
 - Especifique los márgenes de la página de etiquetas,
 - Designate a method to execute when printing each label or record,
-- Create a preview and print the labels.
+- Crea una vista previa e imprime las etiquetas.
 
 :::note
 

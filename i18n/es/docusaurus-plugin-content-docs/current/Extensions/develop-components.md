@@ -171,7 +171,7 @@ A specific icon indicates that the component contains shared code):<br/>
 
 Select **Edit...** to open your component code in the Code editor. Puede editarlo y guardarlo.
 
-### Editing all component code
+### Edición de todo el código de los componentes
 
 You can edit directly all the code of a loaded component from the host project in a dedicated component tab, including methods or classes that are not shared.
 

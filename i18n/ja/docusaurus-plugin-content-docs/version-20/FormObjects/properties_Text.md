@@ -151,7 +151,7 @@ title: テキスト
 
 文字の色を指定します。
 
-> This property also sets the color of object's border (if any) when "plain" or "dotted" style is used.
+> オブジェクトの境界線スタイル に "標準" または "ドット" が使用されている場合、このプロパティはその境界線の色も指定します。
 
 カラーは次の方法で指定できます:
 

@@ -125,7 +125,7 @@ The first parameter (`$url`) is the URL received by the server, from which the h
 
 Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre machine serveur Web 4D est 123.45.67.89. The following table shows the values of $urll depending on the URL entered in the Web browser:
 
-| URL entrée dans le navigateur web                                                                                                                 | Value of parameter $urll                                                              |
+| URL entrée dans le navigateur web                                                                                                                 | Valeur du paramètre $urll                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.45.67.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |

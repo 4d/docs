@@ -143,7 +143,7 @@ The *GetPicture* project method is automatically executed during the **On displa
  End if
 ```
 
-Once the form is executed, you can see the result:
+Una vez ejecutado el formulario, podrá ver el resultado:
 
 ![](../assets/en/commands/pict3783169.en.png)
 

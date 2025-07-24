@@ -191,7 +191,7 @@ La fonction `.wait()` <!-- REF #SignalClass.wait().Summary -->place le process c
 
 Pour prévenir tout code bloquant, vous pouvez passez un temps d'attente maximum en secondes dans le paramètre *timeout* (les décimales sont acceptées). Les décimales sont acceptées.
 
-If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
+Si le signal est déjà dans l'état signalé (c'est-à-dire que la propriété `.signaled` est déjà **true**), la fonction retourne immédiatement, sans attendre.
 
 La fonction retourne la valeur de la propriété `.signaled`.
 

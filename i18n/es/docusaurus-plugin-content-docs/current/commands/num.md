@@ -14,15 +14,15 @@ displayed_sidebar: docs
 | expresión  | Text, Boolean, Integer | &#8594; | String for which to return the numeric form, or Boolean to return 0 or 1, or Numeric expression |
 | separador  | Text                   | &#8594; | Separador decimal                                                                               |
 | base       | Integer                | &#8594; | Value between 2 and 36 that represents the radix                                                |
-| Resultado  | Real                   | &#8592; | Numeric form of the expression parameter                                                        |
+| Resultado  | Real                   | &#8592; | Forma numérica del parámetro de expresión                                                       |
 
 <!-- END REF-->
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones              |
-| ----------- | --------------------------- |
-| 21          | Support of *base* parameter |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 21          | Soporte del parámetro *base* |
 
 </details>
 
@@ -47,12 +47,12 @@ There are three reserved characters that **Num** treats specially: the decimal s
 
 - The decimal separator is interpreted as a decimal place and must appear embedded in a numeric string. By default, the command uses the decimal separator set by the operating system. You can modify this character using the *separator* parameter (see below).
 - The hyphen causes the number or exponent to be negative. The hyphen must appear before any negative numeric characters or after the “e” for an exponent. Except for the “e” character, if a hyphen is embedded in a numeric string, the portion of the string after the hyphen is ignored. For example, `Num("123-456")` returns 123, but `Num("-9")` returns -9.
-- The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Thus, `Num("123e–2")` returns 1.23.\
+- The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Entonces, `Num("123e-2")` devuelve 1.23.\
   Note that when the string includes more than one "e", conversion might give different results under macOS and under Windows.
 
 #### *separator* parameter
 
-The *separator* parameter designates a custom decimal separator for evaluating the *expression*. When the string to be evaluated is expressed with a decimal separator different from the system operator, the command returns an incorrect result. The *separator* parameter can be used in this case to obtain a correct evaluation. When this parameter is passed, the command does not take the system decimal separator into account. You can pass one or more characters.
+The *separator* parameter designates a custom decimal separator for evaluating the *expression*. When the string to be evaluated is expressed with a decimal separator different from the system operator, the command returns an incorrect result. The *separator* parameter can be used in this case to obtain a correct evaluation. When this parameter is passed, the command does not take the system decimal separator into account. Puede pasar uno o más caracteres.
 
 :::note
 

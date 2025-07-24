@@ -25,7 +25,7 @@ For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that re
 
 ### Exemple
 
-### UDPSocket Object
+### Objet UDPSocket
 
 A UDPSocket object is immutable, non streamable.
 

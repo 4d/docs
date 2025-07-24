@@ -54,11 +54,11 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 **retrieve**(*completionID* : Text; *parameters* : OpenAIParameters): Object
 
-| Parámetros     | Tipo                                    | Descripción                                                |
-| -------------- | --------------------------------------- | ---------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to retrieve. |
-| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.   |
-| Resultado      | Object                                  | The retrieved chat completion object.      |
+| Parámetros     | Tipo                                    | Descripción                                                   |
+| -------------- | --------------------------------------- | ------------------------------------------------------------- |
+| *completionID* | Text                                    | The ID of the chat completion to retrieve.    |
+| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.      |
+| Resultado      | Object                                  | El objeto de finalización de chat recuperado. |
 
 Obtener una finalización de chat almacenada.
 
@@ -83,11 +83,11 @@ https://platform.openai.com/docs/api-reference/chat/update
 
 **delete**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
 
-| Parámetros     | Tipo                                    | Descripción                                                  |
-| -------------- | --------------------------------------- | ------------------------------------------------------------ |
-| *completionID* | Text                                    | El ID de la finalización de chat a eliminar. |
-| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.     |
-| Resultado      | Boolean                                 | Whether the deletion was successful.         |
+| Parámetros     | Tipo                                    | Descripción                                                      |
+| -------------- | --------------------------------------- | ---------------------------------------------------------------- |
+| *completionID* | Text                                    | El ID de la finalización de chat a eliminar.     |
+| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.         |
+| Resultado      | Boolean                                 | Si la eliminación se ha realizado correctamente. |
 
 Delete a stored chat compltions.
 
