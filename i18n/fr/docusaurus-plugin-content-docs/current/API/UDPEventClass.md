@@ -3,7 +3,7 @@ id: UDPEventClass
 title: UDPEvent
 ---
 
-La classe `UDPEvent` fournit des informations sur les événements survenant au cours du cycle de vie d'une socket UDP. It is generated when a [UDPSocket](UDPSocketClass.md) is opened and is utilized in callbacks `onData`, `onError`, and `onTerminate`.
+La classe `UDPEvent` fournit des informations sur les événements survenant au cours du cycle de vie d'une socket UDP. Il est généré lorsqu'un [UDPSocket](UDPSocketClass.md) est ouvert et est utilisé dans les callbacks `onData`, `onError`, et `onTerminate`.
 
 <details><summary>Historique</summary>
 
@@ -15,7 +15,7 @@ La classe `UDPEvent` fournit des informations sur les événements survenant au 
 
 ### Objet UDPEvent
 
-A `UDPEvent` object is immutable and non-streamable.
+Un objet `UDPEvent` est immuable et non-streamable.
 
 Les propriétés suivantes sont disponibles :
 
@@ -34,7 +34,7 @@ Les propriétés suivantes sont disponibles :
 
 #### Description
 
-The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type "data".
+La propriété `.data` contient <!-- REF #UDPEvent.data.Summary -->les données associées à l'événement<!-- END REF -->. Elle n'est valide que pour les événements de type "data".
 
 <!-- END REF -->
 
@@ -46,7 +46,7 @@ The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associ
 
 #### Description
 
-The `.ip` property contains <!-- REF #UDPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
+La propriété `.ip` contient <!-- REF #UDPEvent.ip.Summary -->l'adresse IP de la machine distante<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -58,7 +58,7 @@ The `.ip` property contains <!-- REF #UDPEvent.ip.Summary -->the IP address of t
 
 #### Description
 
-The `.port` property contains <!-- REF #UDPEvent.port.Summary -->the port number of the remote machine<!-- END REF -->.
+La propriété `.port` contient <!-- REF #UDPEvent.port.Summary -->le numéro de port de la machine distante<!-- END REF -->.
 
 <!-- END REF -->
 

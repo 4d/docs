@@ -16,11 +16,11 @@ title: VP SET CURRENT SHEET
 
 ## Description
 
-The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
+La commande `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->définit la feuille courante dans *vpAreaName*<!-- END REF -->. La feuille courante est la feuille sélectionnée dans le document.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-In *sheet*, pass the index of the sheet to be set as current sheet. Si le nombre passé est inférieur à 0 ou dépasse le nombre de feuilles, la commande ne fait rien.
+Dans *sheet*, passez l'index de la feuille à définir comme feuille courante. Si le nombre passé est inférieur à 0 ou dépasse le nombre de feuilles, la commande ne fait rien.
 
 > La numérotation démarre à 0.
 

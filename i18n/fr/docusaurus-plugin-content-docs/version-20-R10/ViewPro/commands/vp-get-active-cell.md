@@ -17,7 +17,7 @@ title: VP Get active cell
 
 ## Description
 
-The `VP Get active cell` command <!-- REF #_method_.VP Get active cell.Summary -->returns a new range object referencing the cell which has the focus and where new data will be entered (the active cell)<!-- END REF -->.
+La commande `VP Get active cell` <!-- REF #_method_.VP Get active cell. ummary -->retourne un nouvel objet de plage référencant la cellule qui a le focus et où de nouvelles données seront entrées (la cellule active)<! - FIN REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -32,7 +32,7 @@ Le code suivant récupèrera les coordonnées de la cellule active :
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
  
-  //returns a range object containing: 
+  //retourne un objet plage contenant :
   //$activeCell.ranges[0].column=3
   //$activeCell.ranges[0].row=4
   //$activeCell.ranges[0].sheet=0

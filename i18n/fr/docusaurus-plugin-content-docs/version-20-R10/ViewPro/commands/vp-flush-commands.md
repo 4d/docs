@@ -5,9 +5,9 @@ title: VP FLUSH COMMANDS
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                   |
-| ------- | ------------------------------- |
-| 20 R9   | Support of *callback* parameter |
+| Release | Modifications                           |
+| ------- | --------------------------------------- |
+| 20 R9   | Prise en charge du paramètre *callback* |
 
 </details>
 
@@ -17,10 +17,10 @@ title: VP FLUSH COMMANDS
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
-| Paramètres | Type                        |    | Description                                                                                                                 |
-| ---------- | --------------------------- | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text                        | -> | Nom d'objet formulaire zone 4D View Pro                                                                                     |
-| callback   | 4D.Function | -> | (Optional) A callback function executed after all VP commands and 4D custom functions have been executed |
+| Paramètres | Type                        |    | Description                                                                                                                                            |
+| ---------- | --------------------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| vpAreaName | Text                        | -> | Nom d'objet formulaire zone 4D View Pro                                                                                                                |
+| callback   | 4D.Function | -> | (Facultatif) Une fonction de rappel exécutée après que toutes les commandes VP et les fonctions personnalisées 4D ont été exécutées |
 
 <!-- END REF -->
 
