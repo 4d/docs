@@ -331,7 +331,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 | dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | text      |
 
 
-<!-- REF #WebSocketServerClass.connections.Desc -->
+<!-- REF WebSocketServerClass.connections.Desc -->
 ## .connections
 
 <!-- REF #WebSocketServerClass.connections.Syntax -->**.connections** : Collection<!-- END REF -->
@@ -346,7 +346,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 
 
-<!-- REF #WebSocketServerClass.dataType.Desc -->
+<!-- REF WebSocketServerClass.dataType.Desc -->
 ## .dataType
 
 <!-- REF #WebSocketServerClass.dataType.Syntax -->**.dataType** : Text<!-- END REF -->
@@ -359,7 +359,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 <!-- END REF -->
 
 
-<!-- REF #WebSocketServerClass.handler.Desc -->
+<!-- REF WebSocketServerClass.handler.Desc -->
 ## .handler
 
 <!-- REF #WebSocketServerClass.handler.Syntax -->**.handler** : Object<!-- END REF -->
@@ -371,7 +371,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 <!-- END REF -->
 
 
-<!-- REF #WebSocketServerClass.path.Desc -->
+<!-- REF WebSocketServerClass.path.Desc -->
 ## .path
 
 <!-- REF #WebSocketServerClass.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -384,7 +384,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 <!-- END REF -->
 
 
-<!-- REF #WebSocketServerClass.terminate().Desc -->
+<!-- REF WebSocketServerClass.terminate().Desc -->
 ## .terminate()
 
 <!-- REF #WebSocketServerClass.terminate().Syntax -->**.terminate**()<br/>**.terminate**( *timeout* : Integer )<!-- END REF -->
@@ -412,7 +412,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.terminated.Desc -->
+<!-- REF WebSocketServerClass.terminated.Desc -->
 ## .terminated
 
 <!-- REF #WebSocketServerClass.terminated.Syntax -->**.terminated** : Boolean<!-- END REF -->

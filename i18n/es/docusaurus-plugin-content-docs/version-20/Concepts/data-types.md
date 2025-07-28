@@ -12,7 +12,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 | [Alfanumérico](dt_string.md)                  | Sí                       | Convertido en texto        | -                                                       | -                                                               |
 | [Text](Concepts/dt_string.md)                 | Sí                       | Sí                         | `Text`                                                  | `C_TEXT`, `ARRAY TEXT`                                          |
 | [Fecha](Concepts/dt_date.md)                  | Sí                       | Sí                         | `Fecha`                                                 | `C_DATE`, `ARRAY DATE`                                          |
-| [Hora](Concepts/dt_time.md)                   | Sí                       | Sí                         | `Hora`                                                  | `C_TIME`, `ARRAY TIME`                                          |
+| [Time](Concepts/dt_time.md)                   | Sí                       | Sí                         | `Time`                                                  | `C_TIME`, `ARRAY TIME`                                          |
 | [Boolean](Concepts/dt_boolean.md)             | Sí                       | Sí                         | `Boolean`                                               | `C_BOOLEAN`, `ARRAY BOOLEAN`                                    |
 | [Integer](Concepts/dt_number.md)              | Sí                       | Convertido en entero largo | `Integer`                                               | `ARRAY INTEGER`                                                 |
 | [Longint](Concepts/dt_number.md)              | Sí                       | Sí                         | `Integer`                                               | `C_LONGINT`, `ARRAY LONGINT`                                    |
@@ -42,7 +42,7 @@ El valor por defecto depende del tipo de variable:
 | Booleano   | False             |
 | Fecha      | 00-00-00          |
 | Integer    | 0                 |
-| Hora       | 00:00:00          |
+| Time       | 00:00:00          |
 | Picture    | picture size=0    |
 | Real       | 0                 |
 | Puntero    | Nil=true          |
@@ -67,10 +67,10 @@ La siguiente tabla lista los tipos de datos básicos, los tipos de datos a los q
 
 | Tipos a convertir | en Cadena | en Número | en Fecha | en Hora | en Booleano |
 | ----------------- | --------- | --------- | -------- | ------- | ----------- |
-| String (1)        |           | `Num`     | `Fecha`  | `Hora`  | `Bool`      |
+| String (1)        |           | `Num`     | `Fecha`  | `Time`  | `Bool`      |
 | Número (2)        | `String`  |           |          |         | `Bool`      |
 | Fecha             | `String`  |           |          |         | `Bool`      |
-| Hora              | `String`  |           |          |         | `Bool`      |
+| Time              | `String`  |           |          |         | `Bool`      |
 | Boolean           |           | `Num`     |          |         |             |
 
 (1) Las cadenas formateadas en JSON pueden convertirse en datos escalares, objetos o colecciones, utilizando el comando `JSON Parse`.

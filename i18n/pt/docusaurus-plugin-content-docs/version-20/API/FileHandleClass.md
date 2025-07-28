@@ -317,7 +317,7 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.readBlob().Params -->
 | Parâmetro  | Tipo                  |    | Descrição                                         |
 | ---------- | --------------------- | -- | ------------------------------------------------- |
-| *bytes*    | Real                  | -> | Número de bytes a ler                             |
+| bytes      | Real                  | -> | Número de bytes a ler                             |
 | Resultados | [4D. Blob](BlobClass) | <- | Bytes lidos do arquivo|<!-- END REF -->
 
 
@@ -403,7 +403,7 @@ Essa função assume que a propriedade [`.offset`](#offset) é um número de car
 <!--REF #FileHandleClass.readText().Params -->
 | Parâmetro  | Tipo |    | Descrição                                   |
 | ---------- | ---- | -- | ------------------------------------------- |
-| *stopChar* | Text | -> | Caracter no qual parar a leitura            |
+| stopChar   | Text | -> | Caracter no qual parar a leitura            |
 | Resultados | Text | <- | Texto do arquivo|<!-- END REF -->
 
 
@@ -486,7 +486,7 @@ Se o tamanho ** for inferior ao tamanho atual do documento, o conteúdo do docum
 <!--REF #FileHandleClass.writeBlob().Params -->
 | Parâmetro | Tipo                  |    | Descrição                                                |
 | --------- | --------------------- | -- | -------------------------------------------------------- |
-| *blob*    | [4D. Blob](BlobClass) | -> | Blob para escrever no arquivo|<!-- END REF -->
+| blob      | [4D. Blob](BlobClass) | -> | Blob para escrever no arquivo|<!-- END REF -->
 
 
 |
@@ -521,9 +521,9 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
-| Parâmetro    | Tipo |    | Descrição                                    |
-| ------------ | ---- | -- | -------------------------------------------- |
-| *lineOfText* | Text | -> | Texto para string|<!-- END REF -->
+| Parâmetro  | Tipo |    | Descrição                                    |
+| ---------- | ---- | -- | -------------------------------------------- |
+| lineOfText | Text | -> | Texto para string|<!-- END REF -->
 
 
 |
@@ -556,9 +556,9 @@ Quando esta função for executada, a posição atual ([.offset](#offset)) é at
 
 
 <!--REF #FileHandleClass.writeText().Params -->
-| Parâmetro     | Tipo |    | Descrição                                    |
-| ------------- | ---- | -- | -------------------------------------------- |
-| *textToWrite* | Text | -> | Texto para string|<!-- END REF -->
+| Parâmetro   | Tipo |    | Descrição                                    |
+| ----------- | ---- | -- | -------------------------------------------- |
+| textToWrite | Text | -> | Texto para string|<!-- END REF -->
 
 
 |

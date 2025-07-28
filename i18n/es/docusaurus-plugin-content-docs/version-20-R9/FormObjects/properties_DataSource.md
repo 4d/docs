@@ -202,7 +202,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - String
   - Numeric
   - Fecha
-  - Hora
+  - Time
   - Picture
   - Boolean\
     Puede utilizar campos de la tabla maestra o de otras tablas.
