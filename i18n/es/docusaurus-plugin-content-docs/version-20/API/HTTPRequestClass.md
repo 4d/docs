@@ -71,7 +71,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 | [<!-- INCLUDE #HTTPRequestClass.url.Syntax -->](#url)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.url.Summary -->|
 | [<!-- INCLUDE #HTTPRequestClass.wait().Syntax -->](#wait)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #HTTPRequestClass.wait().Summary -->|
 
-<!-- REF #4D.HTTPRequest.new().Desc -->
+<!-- REF 4D.HTTPRequest.new().Desc -->
 ## 4D.HTTPRequest.new()
 
 
@@ -191,7 +191,7 @@ Un objeto authentication maneja la propiedad `options.serverAuthentication` o `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.dataType.Desc -->
+<!-- REF HTTPRequestClass.dataType.Desc -->
 ## .dataType
 
 <!-- REF #HTTPRequestClass.dataType.Syntax -->**dataType**: Text<!-- END REF -->
@@ -202,7 +202,7 @@ La propiedad `.dataType` contiene <!-- REF #HTTPRequestClass.dataType.Summary --
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.encoding.Desc -->
+<!-- REF HTTPRequestClass.encoding.Desc -->
 ## .encoding
 
 <!-- REF #HTTPRequestClass.encoding.Syntax -->**encoding**: Text<!-- END REF -->
@@ -213,7 +213,7 @@ La propiedad `.encoding` contiene <!-- REF #HTTPRequestClass.encoding.Summary --
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.errors.Desc -->
+<!-- REF HTTPRequestClass.errors.Desc -->
 ## .errors
 
 <!-- REF #HTTPRequestClass.errors.Syntax -->**errors**: Collection<!-- END REF -->
@@ -233,7 +233,7 @@ Este es el contenido de la propiedad `.errors`:
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.headers.Desc -->
+<!-- REF HTTPRequestClass.headers.Desc -->
 ## .headers
 
 <!-- REF #HTTPRequestClass.headers.Syntax -->**headers**: Object<!-- END REF -->
@@ -244,7 +244,7 @@ La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->l
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.method.Desc -->
+<!-- REF HTTPRequestClass.method.Desc -->
 ## .method
 
 <!-- REF #HTTPRequestClass.method.Syntax -->**method**: Text<!-- END REF -->
@@ -255,7 +255,7 @@ La propiedad `.errors` contiene <!-- REF #HTTPRequestClass.method.Summary -->el 
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.protocol.Desc -->
+<!-- REF HTTPRequestClass.protocol.Desc -->
 ## .protocol
 
 <!-- REF #HTTPRequestClass.protocol.Syntax -->**protocol**: Text<!-- END REF -->
@@ -268,7 +268,7 @@ La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.response.Desc -->
+<!-- REF HTTPRequestClass.response.Desc -->
 ## .response
 
 <details><summary>Histórico</summary>
@@ -297,7 +297,7 @@ Un objeto `response` es un objeto no compartible. Ofrece las siguientes propieda
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.returnResponseBody.Desc -->
+<!-- REF HTTPRequestClass.returnResponseBody.Desc -->
 ## .returnResponseBody
 
 <!-- REF #HTTPRequestClass.returnResponseBody.Syntax -->**returnResponseBody**: Boolean<!-- END REF -->
@@ -308,7 +308,7 @@ La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnRes
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.terminate().Desc -->
+<!-- REF HTTPRequestClass.terminate().Desc -->
 ## .terminate()
 
 <!-- REF #HTTPRequestClass.terminate().Syntax -->**.terminate()**<!-- END REF -->
@@ -329,7 +329,7 @@ La función `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->abo
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.terminated.Desc -->
+<!-- REF HTTPRequestClass.terminated.Desc -->
 ## .terminated
 
 <!-- REF #HTTPRequestClass.terminated.Syntax -->**terminated**: Boolean<!-- END REF -->
@@ -340,7 +340,7 @@ La propiedad `.terminated` contiene <!-- REF #HTTPRequestClass.terminated.Summar
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.timeout.Desc -->
+<!-- REF HTTPRequestClass.timeout.Desc -->
 ## .timeout
 
 <!-- REF #HTTPRequestClass.timeout.Syntax -->**timeout**: Real<!-- END REF -->
@@ -351,7 +351,7 @@ La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->e
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.url.Desc -->
+<!-- REF HTTPRequestClass.url.Desc -->
 ## .url
 
 <!-- REF #HTTPRequestClass.url.Syntax -->**url**: Text<!-- END REF -->
@@ -362,7 +362,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.wait().Desc -->
+<!-- REF HTTPRequestClass.wait().Desc -->
 ## .wait()
 
 <!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->

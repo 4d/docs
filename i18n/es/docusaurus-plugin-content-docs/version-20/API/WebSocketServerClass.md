@@ -331,7 +331,7 @@ En el parámetro opcional *options*, pase un objeto que contenga las siguientes 
 | dataType  | Text | Tipo de los datos recibidos a través de la función `connectionHandler.onMessage` y de los datos enviados por [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send). Valores: "text", "blob","object"). Si "object": (send) transforma object en formato json y lo envía; (reception): recibe formato json y lo transforma en object | text        |
 
 
-<!-- REF #WebSocketServerClass.connections.Desc -->
+<!-- REF WebSocketServerClass.connections.Desc -->
 ## .connections
 
 <!-- REF #WebSocketServerClass.connections.Syntax -->**.connections** : Collection<!-- END REF -->
@@ -346,7 +346,7 @@ Cuando se finaliza una conexión, su estado [``](WebSocketConnectionClass.md#sta
 
 
 
-<!-- REF #WebSocketServerClass.dataType.Desc -->
+<!-- REF WebSocketServerClass.dataType.Desc -->
 ## .dataType
 
 <!-- REF #WebSocketServerClass.dataType.Syntax -->**.dataType** : Text<!-- END REF -->
@@ -359,7 +359,7 @@ Esta propiedad es de sólo lectura.
 <!-- END REF -->
 
 
-<!-- REF #WebSocketServerClass.handler.Desc -->
+<!-- REF WebSocketServerClass.handler.Desc -->
 ## .handler
 
 <!-- REF #WebSocketServerClass.handler.Syntax -->**.handler** : Object<!-- END REF -->
@@ -371,7 +371,7 @@ La propiedad `.handler` contiene <!-- REF #WebSocketServerClass.handler.Summary 
 <!-- END REF -->
 
 
-<!-- REF #WebSocketServerClass.path.Desc -->
+<!-- REF WebSocketServerClass.path.Desc -->
 ## .path
 
 <!-- REF #WebSocketServerClass.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -384,7 +384,7 @@ Esta propiedad es de sólo lectura.
 <!-- END REF -->
 
 
-<!-- REF #WebSocketServerClass.terminate().Desc -->
+<!-- REF WebSocketServerClass.terminate().Desc -->
 ## .terminate()
 
 <!-- REF #WebSocketServerClass.terminate().Syntax -->**.terminate**()<br/>**.terminate**( *timeout* : Integer )<!-- END REF -->
@@ -412,7 +412,7 @@ Si se establece un valor de *timeout*:
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.terminated.Desc -->
+<!-- REF WebSocketServerClass.terminated.Desc -->
 ## .terminated
 
 <!-- REF #WebSocketServerClass.terminated.Syntax -->**.terminated** : Boolean<!-- END REF -->

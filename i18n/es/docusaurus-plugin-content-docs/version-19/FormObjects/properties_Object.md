@@ -286,7 +286,7 @@ Esta propiedad define el tipo de cálculo que se realizará en un área [pie de 
 
 Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálculos que se pueden utilizar según el tipo de datos que se encuentran en cada columna e indica el tipo afectado automáticamente por 4D a la variable de pie de página (si no está escrita por el código):
 
-| Cálculo                 | Num | Text | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
+| Cálculo                 | Num | Text | Fecha | Time | Bool | Imágenes | tipos de variables de pie de página |
 | ----------------------- | --- | ---- | ----- | ---- | ---- | -------- | ----------------------------------- |
 | Mínimo                  | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Máximo                  | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |

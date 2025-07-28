@@ -99,7 +99,7 @@ title: Entity
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
 
-#### 例題
+#### 例題 1
 
 ```4d
  var $emp; $empCloned : cs.EmployeeEntity
@@ -108,6 +108,17 @@ title: Entity
 
  $emp.lastName:="Smith" // $emp に対する変更は $empCloned には適用されません
 
+```
+
+#### 例題 2
+
+If you don't want the new entity to share object-type attribute references, you must copy them.
+
+```4d
+ var $emp; $empCloned : cs.EmployeeEntity
+ $emp:=ds.Employee.all().first()
+ $empCloned:=$emp.clone()
+ $empCloned.objectAtt:=OB Copy($emp.objectAtt)
 ```
 
 <!-- END REF -->

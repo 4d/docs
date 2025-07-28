@@ -42,7 +42,7 @@ O número de erros encontrados durante as suas primeiras compilações podem ser
 
 ## Executar a compilação
 
-Depois que um projeto é compilado, é possível mudar do [modo interpretado para o modo compilado](Concepts/interpreted.md), e vice-versa, a qualquer momento e sem precisar sair do aplicativo 4D (exceto quando o código interpretado tiver sido removido). Para fazer isso, use o tge **Reiniciar Interpretado** e **Reiniciar os comandos** do menu **Executar**. A [caixa de diálogo Abrir projeto](GettingStarted/creating.md#options) também oferece uma opção entre o modo interpretado ou compilado para a inicialização do banco de dados.
+Depois que um projeto é compilado, é possível mudar do [modo interpretado para o modo compilado](Concepts/interpreted.md), e vice-versa, a qualquer momento e sem precisar sair do aplicativo 4D (exceto quando o código interpretado tiver sido removido). To do this, use the **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. A [caixa de diálogo Abrir projeto](GettingStarted/creating.md#options) também oferece uma opção entre o modo interpretado ou compilado para a inicialização do banco de dados.
 
 Quando você alternar de um modo para o outro, a 4D fecha o modo atual e abre o novo. Isto é equivalente a sair e reabrir a aplicação. Cada vez que você mudar de um modo para outro, O 4D executa os dois seguintes métodos de banco de dados (se especificado) nessa ordem: `On Exit` -> `On Startup`.
 

@@ -361,7 +361,7 @@ El tipo de propiedad puede ser uno de los siguientes tipos soportados:
 | ---------------------------------------- | ---------------------------------------------------------------- |
 | `Text`                                   | Valor texto                                                      |
 | `Fecha`                                  | Valor fecha                                                      |
-| `Hora`                                   | Valor Hora                                                       |
+| `Time`                                   | Valor Hora                                                       |
 | `Boolean`                                | Valor booleano                                                   |
 | `Integer`                                | Valor entero largo                                               |
 | `Real`                                   | Valor real                                                       |

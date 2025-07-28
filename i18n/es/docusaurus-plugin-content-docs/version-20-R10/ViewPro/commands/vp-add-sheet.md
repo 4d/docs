@@ -21,9 +21,7 @@ El comando `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->inserta una
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-
-En *index*, puede pasar un índice para la nueva hoja. Si el *index* pasado es inferior o igual a 0, el comando inserta la nueva hoja al principio. Si el *index* supera el número de hojas, el comando inserta la nueva hoja después de las existentes.
-
+In *index*, you can pass an index for the new sheet. Si el *index* pasado es inferior o igual a 0, el comando inserta la nueva hoja al principio. Si el *index* supera el número de hojas, el comando inserta la nueva hoja después de las existentes.
 
 > La indexación comienza en 0.
 

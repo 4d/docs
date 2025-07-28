@@ -74,7 +74,7 @@ La siguiente tabla enumera todos los valores `varType` soportados:
 | ---------------------- | ------------------------------------------ |
 | `Text`                 | Valor texto                                |
 | `Fecha`                | Valor fecha                                |
-| `Hora`                 | Valor Hora                                 |
+| `Time`                 | Valor Hora                                 |
 | `Boolean`              | Valor booleano                             |
 | `Integer`              | Valor entero largo                         |
 | `Real`                 | Valor real                                 |

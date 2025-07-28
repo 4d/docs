@@ -49,7 +49,7 @@ El valor por defecto depende del tipo de variable:
 | Booleano   | False                                    |
 | Fecha      | 00-00-00                                 |
 | Integer    | 0                                        |
-| Hora       | 00:00:00 |
+| Time       | 00:00:00 |
 | Picture    | picture size=0                           |
 | Real       | 0                                        |
 | Puntero    | Nil=true                                 |
@@ -74,7 +74,7 @@ La siguiente tabla lista los tipos de datos básicos, los tipos de datos a los q
 | String (1) |           | `Num`     | `Date`   | `Time`  | `Bool`      |
 | Número (2) | `String`  |           |          |         | `Bool`      |
 | Fecha                         | `String`  |           |          |         | `Bool`      |
-| Hora                          | `String`  |           |          |         | `Bool`      |
+| Time                          | `String`  |           |          |         | `Bool`      |
 | Boolean                       |           | `Num`     |          |         |             |
 
 (1) Las cadenas formateadas en JSON pueden convertirse en datos escalares, objetos o colecciones, utilizando el comando `JSON Parse`.
