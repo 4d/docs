@@ -74,7 +74,7 @@ When an updated .4dz version of the project has been produced on 4D Server, conn
 
 When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. This feature allows you to develop a client/server application in the same context as the deployment context.
 
-> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [opening option](#opening-a-remote-project) status.
+> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [Activate development mode](#opening-a-remote-project) option status.
 
 Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
 
