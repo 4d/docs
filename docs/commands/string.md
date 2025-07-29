@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Summary-->The **String** command returns the string form of the numeric, Date, Time, string or Boolean expression you pass in *expression*.<!-- END REF-->
 
-If you do not pass any parameter, the string is returned with the appropriate default format. If you pass *format*, you can force the result string to be of a specific format.
+If you do not pass any other parameter, the string is returned with the appropriate default format. If you pass *format*, you can force the result string to be of a specific format.
 
 The optional *addTime* parameter adds a time to a date in a combined format. It can only be used when the *expression* parameter is a date (see below).
 
@@ -94,7 +94,7 @@ If you pass 0 in *base*, the command determines the radix depending on the *expr
 :::info
 
 - This syntax strictly follows the [`toString` EcmaScript specification regarding radix handling](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tostring).
-- Using this syntax with *base*=10 will not give exactly the same results as using the syntax without *base* parameter. For example, if the specified number value is not a number, the "Nan" string is returned. 
+- Using this syntax with *base*=10 will not give exactly the same results as using the syntax without *base* parameter. For example, if the specified number value is not a number, the "NaN" string is returned. 
 
 :::
 
