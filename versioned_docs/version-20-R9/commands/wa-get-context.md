@@ -8,7 +8,7 @@ title: WA Get context
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
-| object | Form object | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
 | contextObj | Object | &#8592;  | Context object if previously defined, otherwise `null`. |
 
 <!-- END REF-->

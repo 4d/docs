@@ -9,7 +9,7 @@ title: WA SET CONTEXT
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
-| object | Form object | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
+| object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
 | contextObj | Object | &#8594;  | Object containing the functions that can be called with `$4d`. |
 
 <!-- END REF-->
