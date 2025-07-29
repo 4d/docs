@@ -103,7 +103,7 @@ Cette fonction vous permet de mettre à jour des entités séparément. Notez ce
 
 Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées dans la base de données. Elle ne peut pas être appelée sur une entité nouvellement créée (pour laquelle [`isNew()`](#isnew) retourne **True**).
 
-#### Exemple
+#### Exemple 1
 
 ```4d
  var $emp; $empCloned : cs.EmployeeEntity
@@ -112,6 +112,17 @@ Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées
 
  $emp.lastName:="Smith" //Les mises à jour de $emp ne sont pas effectuées sur $empCloned
 
+```
+
+#### Exemple 2
+
+If you don't want the new entity to share object-type attribute references, you must copy them.
+
+```4d
+ var $emp; $empCloned : cs.EmployeeEntity
+ $emp:=ds.Employee.all().first()
+ $empCloned:=$emp.clone()
+ $empCloned.objectAtt:=OB Copy($emp.objectAtt)
 ```
 
 <!-- END REF -->
