@@ -57,7 +57,7 @@ Windows can therefore be used in MDI or SDI modes without having to recalculate 
 
 ### Debugger
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode. 
+When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to design environment requires to abort execution and restart the application in MDI mode. 
 
 ### Automatic quit
 
