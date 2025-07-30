@@ -40,7 +40,7 @@ The structure of the `rateLimit` object is as follows:
 | `remaining.request` | Integer | Número de peticiones restantes.                          |
 | `remaining.tokens`  | Integer | Número de tokens restantes.                              |
 | `reset.request`     | String  | Tiempo hasta que se restablece el límite de solicitudes. |
-| `reset.tokens`      | String  | Time until token limit resets.                           |
+| `reset.tokens`      | String  | Tiempo hasta que se restablece el límite de fichas.      |
 
 ## Funciones
 

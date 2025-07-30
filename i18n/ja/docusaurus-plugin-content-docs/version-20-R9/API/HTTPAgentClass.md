@@ -25,7 +25,7 @@ HTTPAgent オブジェクトは次のプロパティや関数を提供します:
 
 |                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->                              |
+| [<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#params)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->                               |
 | [<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestscount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->          |
 | [<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freesocketscount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary --> |
 
@@ -111,7 +111,7 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 
 :::
 
-<!-- REF #HTTPAgentClass.params.Desc -->
+<!-- REF HTTPAgentClass.params.Desc -->
 
 ## .params
 
@@ -123,7 +123,7 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 
 <!-- END REF -->
 
-<!-- REF #HTTPAgentClass.requestsCount.Desc -->
+<!-- REF HTTPAgentClass.requestsCount.Desc -->
 
 ## .requestsCount
 
@@ -135,7 +135,7 @@ HTTPRequest に関連付けられたエージェントがない場合、デフ�
 
 <!-- END REF -->
 
-<!-- REF #HTTPAgentClass.freeSocketsCount.Desc -->
+<!-- REF HTTPAgentClass.freeSocketsCount.Desc -->
 
 ## .freeSocketsCount
 

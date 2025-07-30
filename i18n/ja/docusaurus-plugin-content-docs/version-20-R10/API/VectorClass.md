@@ -287,8 +287,6 @@ ALERT("Nearest monument: "+$places[0].name)
 
 `.length` プロパティには<!-- REF #VectorClass.length.Summary -->ベクトル成分の数<!-- END REF -->が格納されています。
 
-<!-- END REF -->
-
 ## .toCollection()
 
 <!--REF #VectorClass.toCollection().Syntax -->**.toCollection**() : Collection<!-- END REF -->

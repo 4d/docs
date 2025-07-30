@@ -34,7 +34,7 @@ Os objetos Httprequest fornecem as seguintes propriedades e funções:
 | [<!-- INCLUDE #WebSocketConnectionClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketConnectionClass.terminate().Summary --> |
 | [<!-- INCLUDE #WebSocketConnectionClass.wss.Syntax -->](#wss)<br/><!-- INCLUDE #WebSocketConnectionClass.wss.Summary -->                       |
 
-<!-- REF #WebSocketConnectionClass.handler.Desc -->
+<!-- REF WebSocketConnectionClass.handler.Desc -->
 
 ## .handler
 
@@ -46,7 +46,7 @@ A propriedade `.handler` contém <!-- REF #WebSocketConnectionClass.handler.Summ
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.id.Desc -->
+<!-- REF WebSocketConnectionClass.id.Desc -->
 
 ## .id
 
@@ -60,7 +60,7 @@ Esta propriedade é só de leitura.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.send().Desc -->
+<!-- REF WebSocketConnectionClass.send().Desc -->
 
 ## .send()
 
@@ -88,7 +88,7 @@ Os conteúdos seguintes são enviados em função do tipo de *message*:
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.status.Desc -->
+<!-- REF WebSocketConnectionClass.status.Desc -->
 
 ## .status
 
@@ -102,7 +102,7 @@ Esta propriedade é só de leitura.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.terminate().Desc -->
+<!-- REF WebSocketConnectionClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -125,7 +125,7 @@ Um *code* e uma *message* podem ser enviados ao cliente durante o encerramento p
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.wss.Desc -->
+<!-- REF WebSocketConnectionClass.wss.Desc -->
 
 ## .wss
 

@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
 
-| Paramètres | Type |                             | Description                       |
-| ---------- | ---- | --------------------------- | --------------------------------- |
-| logFile    | Text | &#8594; | Nom du fichier journal            |
-| \*         |      | &#8594; | Fermer le fichier journal courant |
+| Paramètres | Type      |                             | Description                       |
+| ---------- | --------- | --------------------------- | --------------------------------- |
+| logFile    | Text      | &#8594; | Nom du fichier journal            |
+| \*         | Opérateur | &#8594; | Fermer le fichier journal courant |
 
 <!-- END REF-->
 

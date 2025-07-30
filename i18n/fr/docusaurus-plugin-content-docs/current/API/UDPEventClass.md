@@ -26,7 +26,7 @@ Les propriétés suivantes sont disponibles :
 | [<!-- INCLUDE #UDPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPEvent.port.Summary --> |
 | [<!-- INCLUDE #UDPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #UDPEvent.type.Summary --> |
 
-<!-- REF #UDPEvent.data.Desc -->
+<!-- REF UDPEvent.data.Desc -->
 
 ## .data
 
@@ -38,7 +38,7 @@ La propriété `.data` contient <!-- REF #UDPEvent.data.Summary -->les données 
 
 <!-- END REF -->
 
-<!-- REF #UDPEvent.ip.Desc -->
+<!-- REF UDPEvent.ip.Desc -->
 
 ## .ip
 
@@ -50,7 +50,7 @@ La propriété `.ip` contient <!-- REF #UDPEvent.ip.Summary -->l'adresse IP de l
 
 <!-- END REF -->
 
-<!-- REF #UDPEvent.port.Desc -->
+<!-- REF UDPEvent.port.Desc -->
 
 ## .port
 
@@ -62,7 +62,7 @@ La propriété `.port` contient <!-- REF #UDPEvent.port.Summary -->le numéro de
 
 <!-- END REF -->
 
-<!-- REF #UDPEvent.type.Desc -->
+<!-- REF UDPEvent.type.Desc -->
 
 ## .type
 

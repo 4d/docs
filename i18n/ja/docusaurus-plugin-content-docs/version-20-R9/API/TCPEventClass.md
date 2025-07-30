@@ -27,7 +27,7 @@ title: TCPEvent
 | [<!-- INCLUDE #TCPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPEvent.port.Summary --> |
 | [<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary --> |
 
-<!-- REF #TCPEvent.data.Desc -->
+<!-- REF TCPEvent.data.Desc -->
 
 ## .data
 
@@ -45,7 +45,7 @@ title: TCPEvent
 
 <!-- END REF -->
 
-<!-- REF #TCPEvent.ip.Desc -->
+<!-- REF TCPEvent.ip.Desc -->
 
 ## .ip
 
@@ -57,7 +57,7 @@ title: TCPEvent
 
 <!-- END REF -->
 
-<!-- REF #TCPEvent.port.Desc -->
+<!-- REF TCPEvent.port.Desc -->
 
 ## .port
 
@@ -69,7 +69,7 @@ title: TCPEvent
 
 <!-- END REF -->
 
-<!-- REF #TCPEvent.type.Desc -->
+<!-- REF TCPEvent.type.Desc -->
 
 ## .type
 

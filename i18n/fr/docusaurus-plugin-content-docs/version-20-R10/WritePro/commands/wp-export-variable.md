@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Paramètres  | Type            |                             | Description                                  |
 | ----------- | --------------- | --------------------------- | -------------------------------------------- |
 | wpDoc       | Object          | &#8594; | Variable 4D Write Pro                        |
-| destination | Text, BLOB      | &#8594; | Variable pour recevoir les contenus exportés |
+| destination | Text, Blob      | &#8594; | Variable pour recevoir les contenus exportés |
 | format      | Integer         | &#8594; | Format de sortie variable                    |
 | option      | Object, Integer | &#8594; | Options d'export                             |
 

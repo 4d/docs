@@ -243,7 +243,7 @@ title: リリースノート
 
 ## 4D 20.x LTS
 
-[**4D 20.x LTS のリリースノート**](../../versioned_docs/version-20/Notes/updates.md) を参照して下さい。
+[**4D 20.x LTS のリリースノート**](../../version-20/Notes/updates.md) 参照。
 
 ## ライブラリの一覧
 

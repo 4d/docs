@@ -175,7 +175,7 @@ Sin embargo, en algunas circunstancias, puede ser necesario trabajar con arrays 
 | Puntero         | (1+número de elementos) \* 8 + Suma del tamaño de cada puntero                              |
 | Real            | (1+número de elementos) \* 8                                                                |
 | Text            | (1+número de elementos) \* 20 + (suma de la longitud de cada texto) \* 2 |
-| Hora            | (1+número de elementos) \* 4                                                                |
+| Time            | (1+número de elementos) \* 4                                                                |
 | Dos dimensiones | (1+número de elementos) \* 16 + Suma del tamaño de cada array                               |
 
 **Notas:**

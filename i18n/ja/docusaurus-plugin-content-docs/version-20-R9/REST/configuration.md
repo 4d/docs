@@ -80,6 +80,6 @@ REST 経由でアクセス可能なデータストアオブジェクトを制限
 
 4D Server上では、**インタプリタモードであっても**、RESTリクエストは自動的にプリエンプティブプロセスで処理されます。 そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
+> インタープリター版のWeb コードをサーバーマシン側でデバッグするためには、デバッガが[サーバー側で有効化されている](../Debugging/debugging-remote.md) かあるいは [リモートマシン側で有効化されている](../Debugging/debugging-remote.md) ことを確認してください。 これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
 
 シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。

@@ -311,7 +311,7 @@ Dans le paramètre facultatif *options*, passez un objet contenant les propriét
 | path      | Text | Représente le chemin d'accès au serveur WebSocket. Si aucun chemin n'est défini, le serveur WebSocket gère toutes les connexions                                                                                                                                                                                                                                                                                                     | undefined  |
 | dataType  | Text | Type de données reçues par `connectionHandler.onMessage` et envoyées par la fonction [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send). Valeurs : "text", "blob", "object"). Si "objet" : (envoi) transforme l'objet au format json et l'envoie ; (réception) : reçoit le format json et le transforme en objet | text       |
 
-<!-- REF #WebSocketServerClass.connections.Desc -->
+<!-- REF WebSocketServerClass.connections.Desc -->
 
 ## .connections
 
@@ -325,7 +325,7 @@ Lorsqu'une connexion est terminée, son [`status`](WebSocketConnectionClass.md#s
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.dataType.Desc -->
+<!-- REF WebSocketServerClass.dataType.Desc -->
 
 ## .dataType
 
@@ -339,7 +339,7 @@ Cette propriété est en lecture seule.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.handler.Desc -->
+<!-- REF WebSocketServerClass.handler.Desc -->
 
 ## .handler
 
@@ -351,7 +351,7 @@ La propriété `.handler` contient <!-- REF #WebSocketServerClass.handler.Summar
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.path.Desc -->
+<!-- REF WebSocketServerClass.path.Desc -->
 
 ## .path
 
@@ -365,7 +365,7 @@ Cette propriété est en lecture seule.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.terminate().Desc -->
+<!-- REF WebSocketServerClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -392,7 +392,7 @@ Si une valeur *timeout* est définie :
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.terminated.Desc -->
+<!-- REF WebSocketServerClass.terminated.Desc -->
 
 ## .terminated
 

@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
 
-| Parâmetro | Tipo |                             | Descrição                   |
-| --------- | ---- | --------------------------- | --------------------------- |
-| logFile   | Text | &#8594; | Nome do arquivo de registro |
-| \*        |      | &#8594; | Close the current log file  |
+| Parâmetro | Tipo     |                             | Descrição                   |
+| --------- | -------- | --------------------------- | --------------------------- |
+| logFile   | Text     | &#8594; | Nome do arquivo de registro |
+| \*        | Operador | &#8594; | Close the current log file  |
 
 <!-- END REF-->
 

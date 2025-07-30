@@ -53,7 +53,7 @@ Um objeto 4D.OutgoingMessage é um objeto [não compartilhável](../Concepts/sha
 
 :::
 
-<!-- REF #OutgoingMessageClass.body.Desc -->
+<!-- REF OutgoingMessageClass.body.Desc -->
 
 ## .body
 
@@ -74,7 +74,7 @@ Você também pode definir a propriedade `.body` usando a função [`setBody()`]
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.headers.Desc -->
+<!-- REF OutgoingMessageClass.headers.Desc -->
 
 ## .headers
 
@@ -88,7 +88,7 @@ A propriedade `.headers` é somente leitura. Para definir um cabeçalho, use a f
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setBody().Desc -->
+<!-- REF OutgoingMessageClass.setBody().Desc -->
 
 ## .setBody()
 
@@ -124,7 +124,7 @@ Se *body* não for de um tipo de valor suportado, um erro é retornado.
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setHeader().Desc -->
+<!-- REF OutgoingMessageClass.setHeader().Desc -->
 
 ## .setHeader()
 
@@ -153,7 +153,7 @@ Se você definir um *valor* para o cabeçalho "Content-Type" *chave*, certifique
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setStatus().Desc -->
+<!-- REF OutgoingMessageClass.setStatus().Desc -->
 
 ## .setStatus()
 
@@ -177,7 +177,7 @@ Para obter uma lista de códigos de status HTTP, por favor, consulte a [lista de
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.status.Desc -->
+<!-- REF OutgoingMessageClass.status.Desc -->
 
 ## .status
 

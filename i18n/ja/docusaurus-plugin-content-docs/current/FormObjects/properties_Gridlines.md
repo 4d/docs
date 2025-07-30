@@ -19,7 +19,7 @@ title: グリッド線
 
 #### コマンド
 
-[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors.md) - [LISTBOX SET GRID COLORS](../commands-legacy/listbox-set-grid-colors.md)
+[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors.md) - [LISTBOX SET GRID COLOR](../commands-legacy/listbox-set-grid-color.md)
 
 ---
 
@@ -39,4 +39,4 @@ title: グリッド線
 
 #### コマンド
 
-[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors.md) - [LISTBOX SET GRID COLORS](../commands-legacy/listbox-set-grid-colors.md)
+[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors.md) - [LISTBOX SET GRID COLOR](../commands-legacy/listbox-set-grid-color.md)

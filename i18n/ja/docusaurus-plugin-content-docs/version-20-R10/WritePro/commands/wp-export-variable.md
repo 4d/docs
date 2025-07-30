@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | 引数          | 型               |                             | 説明                                    |
 | ----------- | --------------- | --------------------------- | ------------------------------------- |
 | wpDoc       | Object          | &#8594; | 4D Write Pro 変数                       |
-| destination | Text, BLOB      | &#8594; | Variable to receive exported contents |
+| destination | Text, Blob      | &#8594; | Variable to receive exported contents |
 | format      | Integer         | &#8594; | Variable output format                |
 | option      | Object, Integer | &#8594; | 書き出しのオプション                            |
 

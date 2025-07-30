@@ -53,7 +53,7 @@ Un objeto 4D.OutgoingMessage es un objeto [no compartible](../Concepts/shared.md
 
 :::
 
-<!-- REF #OutgoingMessageClass.body.Desc -->
+<!-- REF OutgoingMessageClass.body.Desc -->
 
 ## .body
 
@@ -74,7 +74,7 @@ También puede definir la propiedad `.body` utilizando la función [`setBody()`]
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.headers.Desc -->
+<!-- REF OutgoingMessageClass.headers.Desc -->
 
 ## .headers
 
@@ -88,7 +88,7 @@ La propiedad `.headers` es de sólo lectura. Para definir un encabezado, use la 
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setBody().Desc -->
+<!-- REF OutgoingMessageClass.setBody().Desc -->
 
 ## .setBody()
 
@@ -124,7 +124,7 @@ If *body* is not of a supported value type, an error is returned.
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setHeader().Desc -->
+<!-- REF OutgoingMessageClass.setHeader().Desc -->
 
 ## .setHeader()
 
@@ -153,7 +153,7 @@ Si define un *value* para la *key* el encabezado "Content-Type", asegúrese de l
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setStatus().Desc -->
+<!-- REF OutgoingMessageClass.setStatus().Desc -->
 
 ## .setStatus()
 
@@ -177,7 +177,7 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.status.Desc -->
+<!-- REF OutgoingMessageClass.status.Desc -->
 
 ## .status
 

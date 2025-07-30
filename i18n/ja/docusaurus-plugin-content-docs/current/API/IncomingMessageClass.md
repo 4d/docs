@@ -97,7 +97,7 @@ There are 2 url parts - Url parts are: start - example
 
 :::
 
-<!-- REF #IncomingMessageClass.getBlob().Desc -->
+<!-- REF IncomingMessageClass.getBlob().Desc -->
 
 ## .getBlob()
 
@@ -119,7 +119,7 @@ There are 2 url parts - Url parts are: start - example
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getHeader().Desc -->
+<!-- REF IncomingMessageClass.getHeader().Desc -->
 
 ## .getHeader()
 
@@ -154,7 +154,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getJSON().Desc -->
+<!-- REF IncomingMessageClass.getJSON().Desc -->
 
 ## .getJSON()
 
@@ -176,7 +176,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getPicture().Desc -->
+<!-- REF IncomingMessageClass.getPicture().Desc -->
 
 ## .getPicture()
 
@@ -206,7 +206,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getText().Desc -->
+<!-- REF IncomingMessageClass.getText().Desc -->
 
 ## .getText()
 
@@ -228,7 +228,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.headers.Desc -->
+<!-- REF IncomingMessageClass.headers.Desc -->
 
 ## .headers
 
@@ -244,7 +244,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.url.Desc -->
+<!-- REF IncomingMessageClass.url.Desc -->
 
 ## .url
 
@@ -266,7 +266,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.urlPath.Desc -->
+<!-- REF IncomingMessageClass.urlPath.Desc -->
 
 ## .urlPath
 
@@ -282,7 +282,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.urlQuery.Desc -->
+<!-- REF IncomingMessageClass.urlQuery.Desc -->
 
 ## .urlQuery
 
@@ -332,7 +332,7 @@ POST または PUT 動詞を使用してリクエストの本文部分に渡さ�
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.verb.Desc -->
+<!-- REF IncomingMessageClass.verb.Desc -->
 
 ## .verb
 

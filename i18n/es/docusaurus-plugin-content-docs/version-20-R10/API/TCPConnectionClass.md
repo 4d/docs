@@ -147,7 +147,7 @@ Los objetos TCPConnection ofrecen las siguientes propiedades y funciones:
 | [<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary --> |
 | [<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->             |
 
-<!-- REF #4D.TCPConnection.new().Desc -->
+<!-- REF 4D.TCPConnection.new().Desc -->
 
 ## 4D.TCPConnection.new()
 
@@ -206,7 +206,7 @@ Un objeto [`TCPEvent`](TCPEventClass.md) es devuelto cuando se llama una [funci�
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.address.Desc -->
+<!-- REF TCPConnection.address.Desc -->
 
 ## .address
 
@@ -218,7 +218,7 @@ La propiedad `.address` contiene <!-- REF #TCPConnection.address.Summary -->la d
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.closed.Desc -->
+<!-- REF TCPConnection.closed.Desc -->
 
 ## .closed
 
@@ -230,7 +230,7 @@ La propiedad `.closed` contiene <!-- REF #TCPConnection.closed.Summary -->si la 
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.errors.Desc -->
+<!-- REF TCPConnection.errors.Desc -->
 
 ## .errors
 
@@ -249,7 +249,7 @@ La propiedad `.errors` contiene <!-- REF #TCPConnection.errors.Summary -->una co
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.listener.Desc -->
+<!-- REF TCPConnection.listener.Desc -->
 
 ## .listener
 
@@ -261,7 +261,7 @@ La propiedad `.listener` contiene <!-- REF #TCPConnection.listener.Summary -->el
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.noDelay.Desc -->
+<!-- REF TCPConnection.noDelay.Desc -->
 
 ## .noDelay
 
@@ -273,7 +273,7 @@ La propiedad `.noDelay` contiene <!-- REF #TCPConnection.noDelay.Summary -->si e
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.port.Desc -->
+<!-- REF TCPConnection.port.Desc -->
 
 ## .port
 
@@ -285,7 +285,7 @@ La propiedad `.port` contiene <!-- REF #TCPConnection.port.Summary -->el número
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.send().Desc -->
+<!-- REF TCPConnection.send().Desc -->
 
 ## .send()
 
@@ -305,7 +305,7 @@ La función `send()` <!-- REF #TCPConnection.send().Summary -->envía datos al s
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.shutdown().Desc -->
+<!-- REF TCPConnection.shutdown().Desc -->
 
 ## .shutdown()
 
@@ -325,7 +325,7 @@ La función `shutdown()`<!-- REF #TCPConnection.shutdown().Summary -->cierra el 
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.wait().Desc -->
+<!-- REF TCPConnection.wait().Desc -->
 
 ## .wait()
 

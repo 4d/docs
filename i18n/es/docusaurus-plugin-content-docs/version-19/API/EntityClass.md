@@ -112,7 +112,7 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 
 #### Ejemplo 2
 
-If you don't want the new entity to share object-type attribute references, you must copy them.
+Si no desea que la nueva entidad comparta referencias de atributos de tipo objeto, debe copiarlas.
 
 ```4d
  var $emp; $empCloned : cs.EmployeeEntity

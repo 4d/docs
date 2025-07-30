@@ -13,7 +13,7 @@ title: VP SET DATE TIME VALUE
 | ------------- | ------ | -- | -------------------- | ---------------- |
 | rangeObj      | Object | -> | Objeto rango         |                  |
 | dateValue     | Fecha  | -> | Valor date a definir |                  |
-| timeValue     | Hora   | -> | Valor hora a definir |                  |
+| timeValue     | Time   | -> | Valor hora a definir |                  |
 | formatPattern | Text   | -> | Formato del valor    | <!-- END REF --> |
 
 ## Descripción

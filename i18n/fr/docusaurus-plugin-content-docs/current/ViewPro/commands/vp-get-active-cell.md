@@ -17,7 +17,7 @@ title: VP Get active cell
 
 ## Description
 
-La commande `VP Get active cell` <!-- REF #_method_.VP Get active cell. ummary -->retourne un nouvel objet de plage référencant la cellule qui a le focus et où de nouvelles données seront entrées (la cellule active)<! - FIN REF -->.
+La commande `VP Get active cell` <!-- REF #_method_.VP Get active cell.Summary -->retourne un nouvel objet de plage référençant la cellule qui a le focus et où de nouvelles données seront entrées (la cellule active)<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 

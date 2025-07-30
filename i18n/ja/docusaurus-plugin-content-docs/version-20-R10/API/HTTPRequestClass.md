@@ -71,7 +71,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | [<!-- INCLUDE #HTTPRequestClass.url.Syntax -->](#url)<br/><!-- INCLUDE #HTTPRequestClass.url.Summary -->                                    |
 | [<!-- INCLUDE #HTTPRequestClass.wait().Syntax -->](#wait)<br/><!-- INCLUDE #HTTPRequestClass.wait().Summary -->                             |
 
-<!-- REF #4D.HTTPRequest.new().Desc -->
+<!-- REF 4D.HTTPRequest.new().Desc -->
 
 ## 4D.HTTPRequest.new()
 
@@ -200,7 +200,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.agent.Desc -->
+<!-- REF HTTPRequestClass.agent.Desc -->
 
 ## .agent
 
@@ -212,7 +212,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.dataType.Desc -->
+<!-- REF HTTPRequestClass.dataType.Desc -->
 
 ## .dataType
 
@@ -224,7 +224,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.encoding.Desc -->
+<!-- REF HTTPRequestClass.encoding.Desc -->
 
 ## .encoding
 
@@ -236,7 +236,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.errors.Desc -->
+<!-- REF HTTPRequestClass.errors.Desc -->
 
 ## .errors
 
@@ -257,7 +257,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.headers.Desc -->
+<!-- REF HTTPRequestClass.headers.Desc -->
 
 ## .headers
 
@@ -269,7 +269,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.method.Desc -->
+<!-- REF HTTPRequestClass.method.Desc -->
 
 ## .method
 
@@ -281,7 +281,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.protocol.Desc -->
+<!-- REF HTTPRequestClass.protocol.Desc -->
 
 ## .protocol
 
@@ -293,7 +293,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.response.Desc -->
+<!-- REF HTTPRequestClass.response.Desc -->
 
 ## .response
 
@@ -323,7 +323,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.returnResponseBody.Desc -->
+<!-- REF HTTPRequestClass.returnResponseBody.Desc -->
 
 ## .returnResponseBody
 
@@ -335,7 +335,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.terminate().Desc -->
+<!-- REF HTTPRequestClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -357,7 +357,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.terminated.Desc -->
+<!-- REF HTTPRequestClass.terminated.Desc -->
 
 ## .terminated
 
@@ -369,7 +369,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.timeout.Desc -->
+<!-- REF HTTPRequestClass.timeout.Desc -->
 
 ## .timeout
 
@@ -381,7 +381,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.url.Desc -->
+<!-- REF HTTPRequestClass.url.Desc -->
 
 ## .url
 
@@ -393,7 +393,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.wait().Desc -->
+<!-- REF HTTPRequestClass.wait().Desc -->
 
 ## .wait()
 

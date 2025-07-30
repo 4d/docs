@@ -9,89 +9,89 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Num.Params-->
 
-| 引数        | 型                      |                             | 説明                                                                                              |
-| --------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
-| 式         | Text, Boolean, Integer | &#8594; | String for which to return the numeric form, or Boolean to return 0 or 1, or Numeric expression |
-| separator | Text                   | &#8594; | Decimal separator                                                                               |
-| base      | Integer                | &#8594; | Value between 2 and 36 that represents the radix                                                |
-| 戻り値       | Real                   | &#8592; | Numeric form of the expression parameter                                                        |
+| 引数        | 型                      |                             | 説明                                    |
+| --------- | ---------------------- | --------------------------- | ------------------------------------- |
+| 式         | Text, Boolean, Integer | &#8594; | 数値形式を返したい文字列、あるいは0か1を返したいブール値、あるいは数値式 |
+| separator | Text                   | &#8594; | 小数点記号                                 |
+| base      | Integer                | &#8594; | 基数を表す2から36までの値                        |
+| 戻り値       | Real                   | &#8592; | expression 引数の数値形式                    |
 
 <!-- END REF-->
 
 <details><summary>履歴</summary>
 
-| リリース | 内容                          |
-| ---- | --------------------------- |
-| 21   | Support of *base* parameter |
+| リリース | 内容             |
+| ---- | -------------- |
+| 21   | *base* 引数のサポート |
 
 </details>
 
 ## 説明
 
-<!--REF #_command_.Num.Summary-->The **Num** command returns the numeric form of the String, Boolean or numeric expression you pass in *expression*.<!-- END REF-->
+<!--REF #_command_.Num.Summary-->**Num** コマンドは、*expression* に渡した文字列、ブール、または数値式の数値型を返します。<!-- END REF-->
 
-When *expression* is of the string type, you can use a *separator* parameter or a *base* parameter (see below).
+*expression* 引数が文字列型だった場合、*separator* 引数または*base* 引数を使用することができます(以下参照)。
 
-### String Expressions
+### 文字列式
 
-When you use the **Num** command with a string *expression*, two syntaxes are available:
+**Num** コマンドに対して文字列型の *expression* 引数を渡した場合、2つのシンタックスが利用可能です:
 
 - **Num(string{;separator})**
 - **Num(string;base)**
 
 #### Num(string{;separator})
 
-If *expression* consists only of one or more alphabetic characters, **Num** returns a zero. If *expression* includes alphabetic and numeric characters, the command ignores the alphabetic characters. Thus, it transforms the string "a1b2c3" into the number 123.
+*expression* が１つ以上のアルファベット文字からのみ構成される場合、**Num** は0を返します。 *expression* がアルファベット文字と数字を含む場合、このコマンドはアルファベット文字を無視します。 従って、このコマンドは文字列"a1b2c3" を数値123 に変換します。
 
-There are three reserved characters that **Num** treats specially: the decimal separator as defined in the system (if the *separator* parameter is not passed), the hyphen “*\-*”, and “*e*” *or* “E”. These characters are interpreted as numeric format characters.
+**Num** が特別に扱う3つの指定された文字があります。(*separator* 引数が渡されていない場合)システムで定義された小数区切り文字、ハイフン“*\-*” および “*e*” *あるいは* “E” です。 これらの文字は、数値表現のフォーマット文字として解釈されます。
 
-- The decimal separator is interpreted as a decimal place and must appear embedded in a numeric string. By default, the command uses the decimal separator set by the operating system. You can modify this character using the *separator* parameter (see below).
-- The hyphen causes the number or exponent to be negative. The hyphen must appear before any negative numeric characters or after the “e” for an exponent. Except for the “e” character, if a hyphen is embedded in a numeric string, the portion of the string after the hyphen is ignored. For example, `Num("123-456")` returns 123, but `Num("-9")` returns -9.
-- The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Thus, `Num("123e–2")` returns 1.23.\
-  Note that when the string includes more than one "e", conversion might give different results under macOS and under Windows.
+- 小数区切りは小数点の位置として解釈され、数値文字列に埋め込まれていなければなりません。 デフォルトでコマンドは、オペレーティングシステムに設定された小数区切りを使用します。 *separator* 引数を使用して、この文字を変更できます(以下参照)。
+- ハイフンは、数値や指数が負であることを意味します。 ハイフンは負の数字文字列の前、または指数の場合“e”の後ろになければなりません。 “e”をのぞきハイフンが数字の間にあると、それ以降の文字列は無視されます。 例えば、 `Num("123-456")` は123に、しかし `Num("-9")` は-9になります。
+- eまたはEがあると、その右側の数字をすべて指数として解釈します。 eは数字の文字列の間に置かなければなりません。 `Num("123e–2")` は 1.23 になります。\
+  文字列に複数の“e”を含んでいる場合、 macOS とWindows で異なる結果になる可能性があるので注意してください。
 
-#### *separator* parameter
+#### *separator* 引数
 
-The *separator* parameter designates a custom decimal separator for evaluating the *expression*. When the string to be evaluated is expressed with a decimal separator different from the system operator, the command returns an incorrect result. The *separator* parameter can be used in this case to obtain a correct evaluation. When this parameter is passed, the command does not take the system decimal separator into account. You can pass one or more characters.
+*separator* 引数は、*expression* を評価するために使用するカスタム小数区切りを指定します。 評価される文字列が、システム演算子とは異なる小数区切りで表現されていると、コマンドは誤った結果を返します。 この場合、*separator* 引数を使用して正しい評価を取得できます。 この引数が渡された場合、コマンドはこのシステム小数区切りを無視します。 １つ以上の文字を渡すことができます。
 
 :::note
 
-The [`GET SYSTEM FORMAT`](../commands-legacy/get-system-format.md) command can be used to find out the current decimal separator as well as several other regional system parameters.
+[`GET SYSTEM FORMAT`](../commands-legacy/get-system-format.md) コマンドを使用して、カレント小数区切りおよびその他の特定のシステム引数を調べることができます。
 
 :::
 
 #### Num(string;base)
 
-Using a *base* parameter (integer) triggers a specific mode in which you specify the radix (base) of the number expressed as string in *expression*. In particular, this syntax allows you to convert hexadecimal strings to numbers.
+*base* 引数(整数値) を使用すると、特定のモードがトリガーされます。このモードでは*expression* 内で文字列として表される数値の基数(底)を指定します。 具体的には、このシンタックスを使用することで16進数の文字列を数値に変換することができます。
 
-In the *base* parameter, pass the radix of the number in *expression*. You can pass any integer value between 2 and 36.
+*base* 引数には、*expression* 引数の基数の数字を渡します。 ここには2 から36 までの任意の整数値を渡すことができます。
 
-If you pass 0 in *base*, the command determines the radix depending on the *expression* value. If *expression* starts with "0x", base 16 is used. Otherwise, base 10 is used.
+*base* 引数に0 を渡した場合、コマンドは*expression* 引数の値に応じて基数を決定します。 *expression* の値が"0x" で始まる場合、16 進数が使用されます。 それ以外の場合、10 進数が使用されます。
 
-If *expression* evaluates to a decimal number, only the integer part is converted.
+*expression* 引数が小数に評価された場合、整数部分のみが変換されます。
 
 :::info
 
-- This syntax strictly follows the [`parseInt` EcmaScript specification](https://tc39.es/ecma262/multipage/global-object.html#sec-parseint-string-radix).
-- Using this syntax with *base*=10 will not give exactly the same results as using the syntax without *base* parameter. For example, in compliance with the EcmaScript specification, any character that does not belong to the base is considered a separator (see examples).
+- このシンタックスは[`parseInt` EcmaScript 仕様](https://tc39.es/ecma262/multipage/global-object.html#sec-parseint-string-radix) に厳密に従います。
+- *base*=10 のシンタックスを使用した場合、 *base* 引数を使用しなかったシンタックスと全く同じ結果は返しません。 例えば、ECMAScript 仕様に従えば、底として所属しない文字はセパレータとしてみなされます(例題を参照してください)。
 
 :::
 
-### Boolean Expressions
+### ブール式
 
-If you pass a Boolean expression, **Num** returns 1 if the expression is True; otherwise, it returns *0* (zero).
+ブール式を渡した場合、**Num** は、式がTrueの場合1を返し、そうでなければ*0* (ゼロ)を返します。
 
-### Numeric Expressions
+### 数値式
 
-If you pass a numeric expression in the *expression* parameter, **Num** returns the value passed in the *expression* parameter as is. This can be useful more particularly in the case of generic programming using pointers.
+数値式を*expression* 引数に渡した場合、**Num** は*expression* 引数に渡された値をそのまま返します。 これは具体的にはポインタを使用するような汎用プログラミングで有効です。
 
-### Undefined Expressions
+### 未定義式
 
-If *expression* evaluates to undefined, the command returns 0 (zero). This is useful when you expect the result of an expression (e.g. an object attribute) to be a number, even if it can be undefined.
+*expression* 引数が未定義と評価された場合、コマンドは0(ゼロ) を返します。 これは、式(例: オブジェクトの属性)の結果が、未定義であっても数値として返されることを期待するような場合に便利です。
 
 ## 例題 1
 
-The following example illustrates how **Num** works when passed a single string argument:
+以下は単一の文字引数を渡した場合の**Num** の振る舞いについて示したものです:
 
 ```4d
 $result:=Num("ABCD") // 0
@@ -104,40 +104,39 @@ $result:=Num("–123e2") // –12300
 
 ## 例題 2
 
-Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to these comparisons returns 1 or 0\. Multiplying 1 or 0 with a string repeats the string once or returns the empty string. As a result, *\[Client\]Risk* gets either “Good” or “Bad”:
+以下の例は、 *\[Client\]Debt* と *$1000* とを比較します。 この比較に適用されるNum コマンドからは1 または0 が返されます。 文字列に1 や0 を乗算するとその文字または空の文字が返されます。 結果として、 *\[Client\]Risk* には"Good"または"Bad"が返されます:
 
 ```4d
-  // If client owes less than 1000, a good risk.
-  // If client owes more than 1000, a bad risk.
+  // 顧客の負債額が、1000より小さいは「Good」
+  // 顧客の負債額が、1000以上は「Bad」
  [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
 ## 例題 3
 
-This example compares the results obtained depending on the “current” separator:
+この例は"現在の"小数区切りにより取得される結果を比較します:
 
 ```4d
  $thestring:="33,333.33"
  $thenum:=Num($thestring)
-  // by default, $thenum equals 33,33333 on a French system
+  //  フランスのシステムでは、$thenum は、デフォルトで33,33333と等しい。
  $thenum:=Num($thestring;".")
-  // $thenum will be correctly evaluated regardless of the system;
-  // for example, 33 333,33 on a French system
+  // システムに関係なく、$thenum は正確に評価されます。
+  // 例えば、フランスのシステムでも 33 333.33となります。
 ```
 
 ## 例題 4
 
-This example illustrates the use of the *base* syntax:
+この例題では*base* シンタックスの使用法について紹介します:
 
 ```4d
-$result:=Num("ff";16) // 255 (lower-case hexadecimal)
+$result:=Num("ff";16) // 255 (小文字の16進数)
 $result:=Num("0xFF") // 0
 $result:=Num("0xFF";16) // 255
 $result:=Num("2";2) // 0
 $result:=Num("10.3";16) // 16
-$result:=Num("123.20") // 12320 (standard base 10 syntax)
-$result:=Num("123.20"; 10) // 123 (explicitly specify base 10)
-
+$result:=Num("123.20") // 12320 (標準の10進数シンタックス)
+$result:=Num("123.20"; 10) // 123 (明示的に10進数を指定)
 ```
 
 ## 参照

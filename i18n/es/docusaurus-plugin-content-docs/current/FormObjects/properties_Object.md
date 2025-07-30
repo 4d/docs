@@ -124,7 +124,7 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 #### Comandos
 
-[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula.md) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands-legacy/object-set-data-source-formula.md)
+[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula.md) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
 
 ---
 
@@ -194,7 +194,7 @@ La colección o la selección de entidades debe estar disponible para el formula
 
 #### Comandos
 
-[`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands-legacy/object-set-data-source-formula.md)
+[`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
 
 ---
 
@@ -291,7 +291,7 @@ Esta propiedad define el tipo de cálculo que se realizará en un área [pie de 
 
 Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálculos que se pueden utilizar según el tipo de datos que se encuentran en cada columna e indica el tipo afectado automáticamente por 4D a la variable de pie de página (si no está escrita por el código):
 
-| Cálculo                                    | Num | Text | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
+| Cálculo                                    | Num | Text | Fecha | Time | Bool | Imágenes | tipos de variables de pie de página |
 | ------------------------------------------ | --- | ---- | ----- | ---- | ---- | -------- | ----------------------------------- |
 | Mínimo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Máximo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |

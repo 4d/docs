@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <details><summary>Historique</summary>
 
-| Release | Modifications               |
-| ------- | --------------------------- |
-| 21      | Support of *base* parameter |
+| Release | Modifications                       |
+| ------- | ----------------------------------- |
+| 21      | Prise en charge du paramètre *base* |
 
 </details>
 
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 When *expression* is of the string type, you can use a *separator* parameter or a *base* parameter (see below).
 
-### String Expressions
+### Expressions de type Chaîne
 
 When you use the **Num** command with a string *expression*, two syntaxes are available:
 
@@ -64,24 +64,24 @@ The [`GET SYSTEM FORMAT`](../commands-legacy/get-system-format.md) command can b
 
 Using a *base* parameter (integer) triggers a specific mode in which you specify the radix (base) of the number expressed as string in *expression*. In particular, this syntax allows you to convert hexadecimal strings to numbers.
 
-In the *base* parameter, pass the radix of the number in *expression*. You can pass any integer value between 2 and 36.
+Dans le paramètre *base*, passez la base dans laquelle est exprimée le nombre dans *expression*. Vous pouvez passer n'importe quelle valeur entière comprise entre 2 et 36.
 
-If you pass 0 in *base*, the command determines the radix depending on the *expression* value. If *expression* starts with "0x", base 16 is used. Otherwise, base 10 is used.
+Si vous passez 0 dans *base*, la commande détermine la base en fonction de la valeur de *expression*. Si *expression* commence par "0x", la base 16 est utilisée. Sinon, la base 10 est utilisée.
 
 If *expression* evaluates to a decimal number, only the integer part is converted.
 
 :::info
 
 - This syntax strictly follows the [`parseInt` EcmaScript specification](https://tc39.es/ecma262/multipage/global-object.html#sec-parseint-string-radix).
-- Using this syntax with *base*=10 will not give exactly the same results as using the syntax without *base* parameter. For example, in compliance with the EcmaScript specification, any character that does not belong to the base is considered a separator (see examples).
+- L'utilisation de cette syntaxe avec *base*=10 ne donnera pas exactement les mêmes résultats que l'utilisation de la syntaxe sans le paramètre *base*. For example, in compliance with the EcmaScript specification, any character that does not belong to the base is considered a separator (see examples).
 
 :::
 
-### Boolean Expressions
+### Expressions de type Booléen
 
 If you pass a Boolean expression, **Num** returns 1 if the expression is True; otherwise, it returns *0* (zero).
 
-### Numeric Expressions
+### Expressions numériques
 
 If you pass a numeric expression in the *expression* parameter, **Num** returns the value passed in the *expression* parameter as is. This can be useful more particularly in the case of generic programming using pointers.
 

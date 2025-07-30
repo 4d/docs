@@ -53,7 +53,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::
 
-<!-- REF #OutgoingMessageClass.body.Desc -->
+<!-- REF OutgoingMessageClass.body.Desc -->
 
 ## .body
 
@@ -74,7 +74,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.headers.Desc -->
+<!-- REF OutgoingMessageClass.headers.Desc -->
 
 ## .headers
 
@@ -88,7 +88,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setBody().Desc -->
+<!-- REF OutgoingMessageClass.setBody().Desc -->
 
 ## .setBody()
 
@@ -124,7 +124,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setHeader().Desc -->
+<!-- REF OutgoingMessageClass.setHeader().Desc -->
 
 ## .setHeader()
 
@@ -153,7 +153,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setStatus().Desc -->
+<!-- REF OutgoingMessageClass.setStatus().Desc -->
 
 ## .setStatus()
 
@@ -177,7 +177,7 @@ HTTP ステータスコードの一覧については、[Wikipedia のHTTP ス�
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.status.Desc -->
+<!-- REF OutgoingMessageClass.status.Desc -->
 
 ## .status
 

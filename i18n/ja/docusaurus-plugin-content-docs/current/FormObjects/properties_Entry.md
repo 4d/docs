@@ -53,7 +53,7 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu..md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu.md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
 
 ---
 
@@ -183,7 +183,7 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get enterable`](../commands-legacy/object-get-focusable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
 
 ---
 

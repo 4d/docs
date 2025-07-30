@@ -363,7 +363,7 @@ La expresión se mostrará en todas las ventanas del depurador.
 
 ### Menú contextual de la ventana de expresión
 
-The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
+El menú del panel de vigilancia personalizado está disponible mediante un clic contextual o utilizando el icono ![menu](../assets/en/Debugging/custom-watch-pane-menu.png):
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 

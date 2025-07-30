@@ -141,7 +141,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 | [<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary --> |
 | [<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->             |
 
-<!-- REF #4D.TCPConnection.new().Desc -->
+<!-- REF 4D.TCPConnection.new().Desc -->
 
 ## 4D.TCPConnection.new()
 
@@ -199,7 +199,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.address.Desc -->
+<!-- REF TCPConnection.address.Desc -->
 
 ## .address
 
@@ -211,7 +211,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.closed.Desc -->
+<!-- REF TCPConnection.closed.Desc -->
 
 ## .closed
 
@@ -223,7 +223,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.errors.Desc -->
+<!-- REF TCPConnection.errors.Desc -->
 
 ## .errors
 
@@ -242,7 +242,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.listener.Desc -->
+<!-- REF TCPConnection.listener.Desc -->
 
 ## .listener
 
@@ -254,7 +254,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.noDelay.Desc -->
+<!-- REF TCPConnection.noDelay.Desc -->
 
 ## .noDelay
 
@@ -266,7 +266,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.port.Desc -->
+<!-- REF TCPConnection.port.Desc -->
 
 ## .port
 
@@ -278,7 +278,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.send().Desc -->
+<!-- REF TCPConnection.send().Desc -->
 
 ## .send()
 
@@ -298,7 +298,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.shutdown().Desc -->
+<!-- REF TCPConnection.shutdown().Desc -->
 
 ## .shutdown()
 
@@ -318,7 +318,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.wait().Desc -->
+<!-- REF TCPConnection.wait().Desc -->
 
 ## .wait()
 

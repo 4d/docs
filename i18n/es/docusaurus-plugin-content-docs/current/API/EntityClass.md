@@ -106,7 +106,7 @@ Esta función permite actualizar las entidades por separado. Sin embargo, tenga 
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`isNew()`](#isnew) devuelve **True**).
 
-#### Ejemplo
+#### Ejemplo 1
 
 ```4d
  var $emp; $empCloned : cs.EmployeeEntity
@@ -115,6 +115,17 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 
  $emp.lastName:="Smith" //Las actualizaciones realizadas en $emp no se realizan en $empCloned
 
+```
+
+#### Ejemplo 2
+
+Si no desea que la nueva entidad comparta referencias de atributos de tipo objeto, debe copiarlas.
+
+```4d
+ var $emp; $empCloned : cs.EmployeeEntity
+ $emp:=ds.Employee.all().first()
+ $empCloned:=$emp.clone()
+ $empCloned.objectAtt:=OB Copy($emp.objectAtt)
 ```
 
 <!-- END REF -->

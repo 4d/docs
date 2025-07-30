@@ -63,7 +63,7 @@ Os objetos TCPListener fornecem as seguintes propriedades e funções:
 | [<!-- INCLUDE #TCPListener.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPListener.port.Summary -->                    |
 | [<!-- INCLUDE #TCPListener.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #TCPListener.terminate().Summary --> |
 
-<!-- REF #4D.TCPListener.new().Desc -->
+<!-- REF 4D.TCPListener.new().Desc -->
 
 ## 4D.TCPListener.new()
 
@@ -114,7 +114,7 @@ Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de ca
 
 <!-- END REF -->
 
-<!-- REF #TCPListener.errors.Desc -->
+<!-- REF TCPListener.errors.Desc -->
 
 ## .errors
 
@@ -133,7 +133,7 @@ A propriedade `.errors` contém <!-- REF #TCPListener.errors.Summary -->uma cole
 
 <!-- END REF -->
 
-<!-- REF #TCPListener.port.Desc -->
+<!-- REF TCPListener.port.Desc -->
 
 ## .port
 
@@ -145,7 +145,7 @@ A propriedade `.port` contém <!-- REF #TCPListener.port.Summary -->o número da
 
 <!-- END REF -->
 
-<!-- REF #TCPListener.terminate().Desc -->
+<!-- REF TCPListener.terminate().Desc -->
 
 ## .terminate()
 

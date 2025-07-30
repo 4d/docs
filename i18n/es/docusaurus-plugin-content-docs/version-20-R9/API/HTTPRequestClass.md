@@ -71,7 +71,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 | [<!-- INCLUDE #HTTPRequestClass.url.Syntax -->](#url)<br/><!-- INCLUDE #HTTPRequestClass.url.Summary -->                                    |
 | [<!-- INCLUDE #HTTPRequestClass.wait().Syntax -->](#wait)<br/><!-- INCLUDE #HTTPRequestClass.wait().Summary -->                             |
 
-<!-- REF #4D.HTTPRequest.new().Desc -->
+<!-- REF 4D.HTTPRequest.new().Desc -->
 
 ## 4D.HTTPRequest.new()
 
@@ -200,7 +200,7 @@ Un objeto de autenticación maneja la propiedad `options.serverAuthentication` o
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.agent.Desc -->
+<!-- REF HTTPRequestClass.agent.Desc -->
 
 ## .agent
 
@@ -212,7 +212,7 @@ La propiedad `.agent` contiene <!-- REF #HTTPRequestClass.agent.Summary -->el ob
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.dataType.Desc -->
+<!-- REF HTTPRequestClass.dataType.Desc -->
 
 ## .dataType
 
@@ -224,7 +224,7 @@ La propiedad `.dataType` contiene <!-- REF #HTTPRequestClass.dataType.Summary --
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.encoding.Desc -->
+<!-- REF HTTPRequestClass.encoding.Desc -->
 
 ## .encoding
 
@@ -236,7 +236,7 @@ La propiedad `.encoding` contiene <!-- REF #HTTPRequestClass.encoding.Summary --
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.errors.Desc -->
+<!-- REF HTTPRequestClass.errors.Desc -->
 
 ## .errors
 
@@ -257,7 +257,7 @@ Este es el contenido de la propiedad `.errors`:
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.headers.Desc -->
+<!-- REF HTTPRequestClass.headers.Desc -->
 
 ## .headers
 
@@ -269,7 +269,7 @@ La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->l
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.method.Desc -->
+<!-- REF HTTPRequestClass.method.Desc -->
 
 ## .method
 
@@ -281,7 +281,7 @@ La propiedad `.method` contiene <!-- REF #HTTPRequestClass.method.Summary -->el 
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.protocol.Desc -->
+<!-- REF HTTPRequestClass.protocol.Desc -->
 
 ## .protocol
 
@@ -293,7 +293,7 @@ La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.response.Desc -->
+<!-- REF HTTPRequestClass.response.Desc -->
 
 ## .response
 
@@ -323,7 +323,7 @@ Un objeto `response` es un objeto no compartible. Ofrece las siguientes propieda
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.returnResponseBody.Desc -->
+<!-- REF HTTPRequestClass.returnResponseBody.Desc -->
 
 ## .returnResponseBody
 
@@ -335,7 +335,7 @@ La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnRes
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.terminate().Desc -->
+<!-- REF HTTPRequestClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -357,7 +357,7 @@ La función `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->int
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.terminated.Desc -->
+<!-- REF HTTPRequestClass.terminated.Desc -->
 
 ## .terminated
 
@@ -369,7 +369,7 @@ La propiedad `.terminated` contiene <!-- REF #HTTPRequestClass.terminated.Summar
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.timeout.Desc -->
+<!-- REF HTTPRequestClass.timeout.Desc -->
 
 ## .timeout
 
@@ -381,7 +381,7 @@ La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->e
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.url.Desc -->
+<!-- REF HTTPRequestClass.url.Desc -->
 
 ## .url
 
@@ -393,7 +393,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 <!-- END REF -->
 
-<!-- REF #HTTPRequestClass.wait().Desc -->
+<!-- REF HTTPRequestClass.wait().Desc -->
 
 ## .wait()
 

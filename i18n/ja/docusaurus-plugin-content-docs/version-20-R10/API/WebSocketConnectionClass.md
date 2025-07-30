@@ -34,7 +34,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 | [<!-- INCLUDE #WebSocketConnectionClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketConnectionClass.terminate().Summary --> |
 | [<!-- INCLUDE #WebSocketConnectionClass.wss.Syntax -->](#wss)<br/><!-- INCLUDE #WebSocketConnectionClass.wss.Summary -->                       |
 
-<!-- REF #WebSocketConnectionClass.handler.Desc -->
+<!-- REF WebSocketConnectionClass.handler.Desc -->
 
 ## .handler
 
@@ -46,7 +46,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.id.Desc -->
+<!-- REF WebSocketConnectionClass.id.Desc -->
 
 ## .id
 
@@ -60,7 +60,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.send().Desc -->
+<!-- REF WebSocketConnectionClass.send().Desc -->
 
 ## .send()
 
@@ -88,7 +88,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.status.Desc -->
+<!-- REF WebSocketConnectionClass.status.Desc -->
 
 ## .status
 
@@ -102,7 +102,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.terminate().Desc -->
+<!-- REF WebSocketConnectionClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -125,7 +125,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.wss.Desc -->
+<!-- REF WebSocketConnectionClass.wss.Desc -->
 
 ## .wss
 

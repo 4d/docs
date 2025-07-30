@@ -147,7 +147,7 @@ Os objetos TCPConnection fornecem as seguintes propriedades e funções:
 | [<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary --> |
 | [<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->             |
 
-<!-- REF #4D.TCPConnection.new().Desc -->
+<!-- REF 4D.TCPConnection.new().Desc -->
 
 ## 4D.TCPConnection.new()
 
@@ -181,6 +181,7 @@ No parâmetro *options*, passe um objeto que possa conter as seguintes proprieda
 | onTerminate       | Formula    | Callback acionada imediatamente antes de a TCPConnection ser liberada                                                                       | Indefinido                             |
 | noDelay           | Parâmetros | **Somente leitura** Desabilita o algoritmo do Nagle se `true`                                                                               | False                                  |
 | connectionTimeout | Real       | Tempo máximo (em segundos) para estabelecer a conexão. Se excedido, a tentativa de conexão será abortada | Definido pelo sistema, geralmente ≥ 30 |
+| TLS               | Parâmetros | Enables TLS encryption for connections                                                                                                      | False                                  |
 
 #### Funções Callback
 
@@ -206,7 +207,7 @@ Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de ca
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.address.Desc -->
+<!-- REF TCPConnection.address.Desc -->
 
 ## .address
 
@@ -218,7 +219,7 @@ A propriedade `.address` contém <!-- REF #TCPConnection.address.Summary -->o en
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.closed.Desc -->
+<!-- REF TCPConnection.closed.Desc -->
 
 ## .closed
 
@@ -230,7 +231,7 @@ A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a c
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.errors.Desc -->
+<!-- REF TCPConnection.errors.Desc -->
 
 ## .errors
 
@@ -249,7 +250,7 @@ A propriedade `.errors` contém <!-- REF #TCPConnection.errors.Summary -->uma co
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.listener.Desc -->
+<!-- REF TCPConnection.listener.Desc -->
 
 ## .listener
 
@@ -261,7 +262,7 @@ A propriedade `.listener` contém <!-- REF #TCPConnection.listener.Summary -->o 
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.noDelay.Desc -->
+<!-- REF TCPConnection.noDelay.Desc -->
 
 ## .noDelay
 
@@ -273,7 +274,7 @@ A propriedade `.noDelay` contém <!-- REF #TCPConnection.noDelay.Summary -->se o
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.port.Desc -->
+<!-- REF TCPConnection.port.Desc -->
 
 ## .port
 
@@ -285,7 +286,7 @@ A propriedade `.port` contém <!-- REF #TCPConnection.port.Summary --> o número
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.send().Desc -->
+<!-- REF TCPConnection.send().Desc -->
 
 ## .send()
 
@@ -305,7 +306,7 @@ A função `send()` <!-- REF #TCPConnection.send().Summary -->envia dados para o
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.shutdown().Desc -->
+<!-- REF TCPConnection.shutdown().Desc -->
 
 ## .shutdown()
 
@@ -325,7 +326,7 @@ A função `shutdown()` <!-- REF #TCPConnection.shutdown().Summary -->fecha o ca
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.wait().Desc -->
+<!-- REF TCPConnection.wait().Desc -->
 
 ## .wait()
 
