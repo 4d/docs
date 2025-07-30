@@ -24,7 +24,7 @@ If *what* is an empty string (""), **Insert string** returns *source* unchanged.
 
 If *where* is greater than the length of *source*, then *what* is appended to *source*. If *where* is less than one (1), then *what* is inserted before *source*.
 
-**Insert string** is different from [Change string](../commands/change-string.md) in that it inserts characters instead of overwriting them.
+**Insert string** is different from [Change string](change-string.md) in that it inserts characters instead of overwriting them.
 
 ## Example 
 
@@ -38,9 +38,9 @@ The following example illustrates the use of **Insert string**. The results are 
 
 ## See also 
 
-[Change string](../commands/change-string.md)  
-[Delete string](../commands/delete-string.md)  
-[Replace string](../commands/replace-string.md)  
+[Change string](change-string.md)  
+[Delete string](delete-string.md)  
+[Replace string](replace-string.md)  
 
 ## Properties
 

@@ -43,7 +43,7 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
 ## See also 
 
-[Get indexed string](../commands/get-indexed-string.md)  
+[Get indexed string](get-indexed-string.md)  
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 

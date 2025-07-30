@@ -49,7 +49,7 @@ You can express any numerical value as a time:
 [ARRAY TIME](array-time.md)  
 [Bool](bool.md)  
 [String](../commands/string.md)  
-[Time string](../commands/time-string.md)  
+[Time string](time-string.md)  
 [Timestamp](timestamp.md)  
 
 ## Properties

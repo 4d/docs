@@ -42,9 +42,9 @@ The following example illustrates the use of Delete string. The results are assi
 
 ## See also 
 
-[Change string](../commands/change-string.md)  
-[Insert string](../commands/insert-string.md)  
-[Replace string](../commands/replace-string.md)  
+[Change string](change-string.md)  
+[Insert string](insert-string.md)  
+[Replace string](replace-string.md)  
 
 ## Properties
 
