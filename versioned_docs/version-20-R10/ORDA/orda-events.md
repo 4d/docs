@@ -121,7 +121,7 @@ If this event [throws](../commands-legacy/throw.md) an error, it will not stop t
 :::note
 
 This event is also triggered:
-- when attributes are assigned by the [`constructor()`](#class-constructor) event,
+- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
 - when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md). 
 
 :::
