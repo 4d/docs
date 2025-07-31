@@ -11,7 +11,7 @@ Thanks to the standard 4D object *refcounting*, a UDPSocket is automatically rel
 
 :::info 4DTCPUDPLog.txt file
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to UDP sockets. Events include data transmission, errors, and connection lifecycle information.
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to UDP sockets. Events include data transmission, errors, and connection lifecycle information.
 
 :::
 

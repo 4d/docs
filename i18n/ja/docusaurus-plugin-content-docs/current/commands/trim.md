@@ -10,8 +10,8 @@ displayed_sidebar: docs
 
 | 引数      | 型    |                             | 説明           |
 | ------- | ---- | --------------------------- | ------------ |
-| aString | Text | &#8594; | Text to trim |
-| 戻り値     | Text | &#8592; | Trimmed text |
+| aString | Text | &#8594; | トリミングするテキスト  |
+| 戻り値     | Text | &#8592; | トリミングされたテキスト |
 
 <!-- END REF-->
 
@@ -25,17 +25,17 @@ displayed_sidebar: docs
 
 ## 説明
 
-The **Trim** command <!--REF #_command_.Trim.Summary--> removes **whitespace** from both ends of the *aString* parameter and returns a new string, without modifying the original one.<!-- END REF--> **Whitespace** includes spaces, tabs, LF, CR, etc.
+**Trim** コマンドは<!--REF #_command_.Trim.Summary-->*aString* 引数の文字列の前後の **空白** を削除し、元の文字列を変更することなく新しい文字列を返します<!-- END REF-->。 **空白** にはスペース、タブ、LF、CR などが含まれます。
 
-To return a new string with whitespace trimmed from just one end, use [`Trim start`](./trim-start.md) or [`Trim end`](./trim-end.md).
+前後どちらかの空白のみをトリミングした新しい文字列を返すためには、[`Trim start`](./trim-start.md) あるいは [`Trim end`](./trim-end.md)を使用してください。
 
-In the *aString* parameter, you can pass any text expression. It will be left untouched by the command.
+*aString* 引数には、任意のテキスト式を渡します。 これには、コマンドは何も手を加えません。
 
-The command returns the trimmed version of the *aString* string. If there is no whitespace at any end of *aString*, the returned string is identical as the one passed in parameter.
+*aString* コマンドは、引数の文字列をトリミングしたものを返します。 *aString* 引数の文字列の前後に空白がない場合、返される文字列は引数に渡されたものと完全に同じものになります。
 
 :::note
 
-This command is based upon the [`TrimString` Ecmascript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-trimstring).
+このコマンドは[`TrimString` Ecmascript 仕様](https://tc39.es/ecma262/multipage/text-processing.html#sec-trimstring) に基づいています。
 
 :::
 

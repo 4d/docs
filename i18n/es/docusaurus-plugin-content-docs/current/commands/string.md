@@ -213,7 +213,7 @@ De lo contrario, en el parámetro *format*, puede pasar:
 | HH MM                        | 2     | 01:02                                                                                                                                                                                                                                                                                                                  |
 | HH MM AM PM                  | 5     | 1:02 AM                                                                                                                                                                                                                                                                                                                |
 | HH MM SS                     | 1     | 01:02:03                                                                                                                                                                                                                                                                                               |
-| Hour min                     | 4     | 1 hour 2 minutes                                                                                                                                                                                                                                                                                                                       |
+| Hour min                     | 4     | 1 hora 2 minutos                                                                                                                                                                                                                                                                                                                       |
 | Hora min seg                 | 3     | 1 hora 2 minutos 3 segundos                                                                                                                                                                                                                                                                                                            |
 | ISO time                     | 8     | 0000-00-00T01:02:03\. Corresponds to the ISO8601 standard and contains, in theory, a date and a time. Since this format does not support combined dates/times, the date part is filled with 0s. This format expresses the local time. |
 | Min sec                      | 7     | 62 minutes 3 seconds                                                                                                                                                                                                                                                                                                                   |
@@ -251,7 +251,7 @@ In this case, the *format* parameter, if passed, is ignored.
 
 If *expression* is evaluated to undefined, the command returns an empty string. This is useful when you expect the result of an expression (e.g. an object attribute) to be a string, even if it can be undefined.
 
-### Null Expressions
+### Expresiones nulas
 
 If *expression* is evaluated to Null, the command returns the "null" string. This is useful when you expect the result of an expression (e.g. an object attribute) to be a string, even if it can be null.
 

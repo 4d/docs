@@ -15,7 +15,7 @@ Los objetos TCPConnection se liberan cuando ya no existen referencias a ellos en
 
 :::info 4DTCPUDPLog.txt file
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to TCP connections. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to TCP connections. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
 
 :::
 
@@ -155,18 +155,18 @@ Los objetos TCPConnection ofrecen las siguientes propiedades y funciones:
 
 <!-- REF #4D.TCPConnection.new().params -->
 
-| Parámetros    | Tipo          |                             | Descripción                                                   |
-| ------------- | ------------- | --------------------------- | ------------------------------------------------------------- |
-| serverAddress | Text          | ->                          | Nombre de dominio o dirección IP del servidor                 |
-| serverPort    | Integer       | ->                          | Número de puerto del servidor                                 |
-| options       | Object        | ->                          | Configuración [opciones](#options-parameter) para la conexión |
-| Resultado     | TCPConnection | <- | Nuevo objeto TCPConnection                                    |
+| Parámetros    | Tipo                             |                             | Descripción                                                   |
+| ------------- | -------------------------------- | --------------------------- | ------------------------------------------------------------- |
+| serverAddress | Text                             | ->                          | Nombre de dominio o dirección IP del servidor                 |
+| serverPort    | Integer                          | ->                          | Número de puerto del servidor                                 |
+| options       | Object                           | ->                          | Configuración [opciones](#options-parameter) para la conexión |
+| Resultado     | 4D.TCPConnection | <- | Nuevo objeto TCPConnection                                    |
 
 <!-- END REF -->
 
 #### Descripción
 
-La función `4D.TCPConnection.new()` <!-- REF #4D.TCPConnection.new().Summary -->crea una nueva conexión TCP a la *serverAddress* y *serverPort* especificados, usando las *opciones* definidas, y devuelve un objeto `4D.HTTPRequest`<!-- END REF -->.
+The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.TCPConnection` object<!-- END REF -->.
 
 #### Parámetro *options*
 

@@ -112,7 +112,7 @@ Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées
 
 #### Exemple 2
 
-If you don't want the new entity to share object-type attribute references, you must copy them.
+Si vous ne voulez pas que la nouvelle entité partage les références d'attributs de type objet, vous devez les copier.
 
 ```4d
  var $emp; $empCloned : cs.EmployeeEntity

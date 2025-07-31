@@ -40,7 +40,7 @@ title: リリースノート
 - [*MeCab* ライブラリー](../settings/database.md#mecab日本語版のサポート) は今後廃止予定となり、次のリリースでは削除される予定です。
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - ラベルウィザードは、[ラベルデザインエリア](../Desktop/labels.md#ラベルプレビューエリア) においてフォーミュラを追加または編集する際にフォーミュラエディターを使用するようになりました。
-- TCP サーバー接続を作成するための新しい[`TCPListener`](../API/TCPListenerClass.md) クラス。関連クラスに新しいプロパティが追加されました。[`TCPConnection`](../API/TCPConnectionClass.md) クラスに`address`、`listener` および `port`。[`TCPEvent`](../API/TCPEventClass.md) クラスに `ip` および `port`。
+- New [`TCPListener`](../API/TCPListenerClass.md) class to create TCP server connections; new properties in related classes: `address`, `listener` and `port` in [`TCPConnection`](../API/TCPConnectionClass.md) class, `address` and `port` in [`TCPEvent`](../API/TCPEventClass.md) class.
 - [ライブチェッカーとコンパイラー](../code-editor/write-class-method.md#warnings-and-errors).において、廃止予定のコマンドと定数は、特定の警告を生成するようになりました。 [`Command name`](../commands/command-name.md) コマンドを使用することで、コマンドが廃止予定かどうかを知ることができます。
 - 新しいコマンド[WA SET CONTEXT](../commands/wa-set-context.md) および [WA Get context](../commands/wa-get-context.md) を使用して、Web エリア内の[$4d](../FormObjects/webArea_overview.md#4d-object) コンテンツを管理することができるようになります。
 - 新しい[`RDP optimization` データベースパラメーター](../commands-legacy/set-database-parameter.md#rdp-optimization-133) を使用して、例えば4D をリモートデスクトッププロトコルを使用している場合の共有クリップボードを最適化することができます。
@@ -64,9 +64,9 @@ title: リリースノート
 - [スタンドアロンセッション](../API/SessionClass.md) のサポート。これによりクライアント/サーバーアプリケーションのローカルなコーディングが単純化されます。
 - [4D デバッガ](../Debugging/debugger.md): 新デザイン、自動保存、表示モードなどの新機能
 - Apple 公証ガイドラインにより合致する[新しくビルトされたコンポーネントアーキテクチャ](../Desktop/building.md#build-component)
-- ビルドアプリケーションダイアログボックスから、簡単に[評価版アプリケーションをビルド](../Desktop/building.md#評価版アプリケーションをビルド) することができるようになりました。
+- ビルドアプリケーションダイアログボックスから、簡単に[評価版アプリケーションをビルド](../Desktop/building.md#評価版アプリケーション) することができるようになりました。
 - 依存関係: 依存関係マネージャーを使用して、GitHub 上のコンポーネントの[新バージョンをチェック](../Project/components.md#新バージョンをチェック) したり[更新する](../Project/components.md#依存関係の更新) ことができます。
-- 新しい [`TCPConnection`](../API/TCPConnectionClass.md) および [`TCPEvent`](../API/TCPEventClass.md) クラスを使用してTCP クライアント接続を管理したり、イベントを管理したり、データ転送のコントロールを改善することができます。 追加された[`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) を使用することでTCP イベントの詳細なログを取ることができます。
+- 新しい [`TCPConnection`](../API/TCPConnectionClass.md) および [`TCPEvent`](../API/TCPEventClass.md) クラスを使用してTCP クライアント接続を管理したり、イベントを管理したり、データ転送のコントロールを改善することができます。 追加された[`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) を使用することでTCP イベントの詳細なログを取ることができます。
 - [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) および [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) の新しいオプションを使用して、スタイル、フォーミュラ、データ整合性、そしてパスワードによる保護などを管理することができます。
 - 4D Write Pro:
     - 以下のコマンドが、引数としてオブジェクトまたはコレクションを受け取れるようになりました: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md)、[WP Get attributes](../WritePro/commands/wp-get-attributes.md)、[WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)、[WP Table append row](../WritePro/commands/wp-table-append-row.md)、 [WP Import document](../WritePro/commands/wp-import-document.md)、 [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md)、 [WP Add picture](../WritePro/commands/wp-add-picture.md)、および [WP Insert picture](../WritePro/commands/wp-insert-picture.md)

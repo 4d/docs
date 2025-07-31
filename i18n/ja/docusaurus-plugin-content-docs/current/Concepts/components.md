@@ -31,6 +31,6 @@ title: コンポーネント
 
 :::note
 
-Interpreted component code can be [edited directly from the host project](../Extensions/develop-components.md#editing-components-from-the-host) if the context is supported.
+インタープリタ版のコンポーネントのコードは、コンテキストがサポートされていれば、[ホストプロジェクトから直接編集する](../Extensions/develop-components.md#コンポーネントをホストから編集する) ことが可能です。
 
 :::

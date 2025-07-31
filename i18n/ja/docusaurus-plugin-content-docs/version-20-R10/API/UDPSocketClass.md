@@ -11,7 +11,7 @@ title: UDPSocket
 
 :::info 4DTCPUDPLog.txt ファイル
 
-UDP ソケットに関連したイベントを記録する[4DTCPUDPLog.txt ログファイル]を使用すると、 デバッグやモニタリングを行うことができます。 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to UDP sockets. 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
 
 :::
 
