@@ -7,7 +7,7 @@ title: Users Page
 The **Users** page lists the 4D users connected to the server.
 
 
-![](../assets/en/Admin/server-users.png)
+![](../assets/en/Admin/server-users2.png)
 
 The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
 
@@ -26,13 +26,15 @@ For each user connected to the server, the list provides the following informati
 - **IP Address**: IP address of the remote machine.
 - **Login date**: Date and time of the remote machine connection.
 - **CPU Time**: CPU time consumed by this user since connecting.
-- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). 
+- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
+
 
 ### Managing sleeping users
 
-4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
+4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** status:
 
-![](../assets/en/Admin/server-sleeping.png)
+![](../assets/en/Admin/server-sleep.png)
 
 This status frees up resources on the server. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.
 
