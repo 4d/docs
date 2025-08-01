@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 When *expression* is of the string type, you can use a *separator* parameter or a *base* parameter (see below).
 
-### String Expressions
+### Expresiones de tipo cadena
 
 When you use the **Num** command with a string *expression*, two syntaxes are available:
 
@@ -50,7 +50,7 @@ There are three reserved characters that **Num** treats specially: the decimal s
 - The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Entonces, `Num("123e-2")` devuelve 1.23.\
   Note that when the string includes more than one "e", conversion might give different results under macOS and under Windows.
 
-#### *separator* parameter
+#### Parámetro *separador*
 
 The *separator* parameter designates a custom decimal separator for evaluating the *expression*. When the string to be evaluated is expressed with a decimal separator different from the system operator, the command returns an incorrect result. The *separator* parameter can be used in this case to obtain a correct evaluation. When this parameter is passed, the command does not take the system decimal separator into account. Puede pasar uno o más caracteres.
 

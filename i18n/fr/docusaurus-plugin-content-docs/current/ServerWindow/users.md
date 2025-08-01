@@ -5,7 +5,7 @@ title: Page Utilisateurs
 
 La page **Utilisateurs** liste les utilisateurs 4D connectés au serveur.
 
-![](../assets/en/Admin/server-users.png)
+![](../assets/en/Admin/server-users2.png)
 
 Le bouton "Utilisateurs" indique entre parenthèses le nombre total d’utilisateurs connectés au serveur (ce nombre ne tient pas compte des éventuels filtres d’affichage appliqués à la fenêtre). La page contient également une zone de recherche dynamique et des boutons de commande. Vous pouvez modifier l’ordre des colonnes par simple glisser-déposer de la zone d’en-tête des colonnes.
 
@@ -24,13 +24,14 @@ Pour chaque utilisateur connecté à la base, la liste fournit les informations 
 - **Adresse IP** : Adresse IP de la machine distante.
 - **Connexion** : Date et heure de la connexion de la machine distante.
 - **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
-- Déconnecter "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
+- Déconnecter
+- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
 
 ### Gestion des utilisateurs endormis
 
-4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. Sur le serveur, l'utilisateur connecté prend le statut d'activité **Endormi** :
+4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. On the server, the connected user changes to a **Sleeping** status:
 
-![](../assets/en/Admin/server-sleeping.png)
+![](../assets/en/Admin/server-sleep.png)
 
 Ce statut libère les ressources sur le serveur. En outre, l'application 4D distante se reconnecte automatiquement à 4D Server après la sortie du mode veille.
 

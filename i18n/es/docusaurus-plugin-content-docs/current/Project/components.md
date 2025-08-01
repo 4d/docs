@@ -609,7 +609,7 @@ Aparece una caja de diálogo de confirmación. Si la dependencia se declaró en 
 
 Si confirma la caja de diálogo, la dependencia eliminada [estado](#estado-dependencia) se marca automáticamente como "Descargar tras reinicio". Se descargará cuando se reinicie la aplicación.
 
-#### Dependency usage warnings
+#### Advertencias sobre el uso de dependencias
 
 When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
 

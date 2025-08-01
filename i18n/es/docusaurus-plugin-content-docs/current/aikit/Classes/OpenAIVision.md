@@ -5,7 +5,7 @@ title: OpenAIVision
 
 # OpenAIVision
 
-Helper for vision stuff.
+Asistente para Vision.
 
 ## Funciones
 

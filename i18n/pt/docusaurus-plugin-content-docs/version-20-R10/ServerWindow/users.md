@@ -5,7 +5,7 @@ title: Página Usuários
 
 La página **Usuarios** lista los usuarios 4D conectados al servidor.
 
-![](../assets/en/Admin/server-users.png)
+![](../assets/en/Admin/server-users2.png)
 
 O botão "Usuários" indica, entre parênteses, o número total de usuários conectados ao servidor (este número não considera los filtros de exibição aplicados à janela). A página também contém uma área de pesquisa dinâmica e botões de controlo. Você pode modificar a ordem das colunas arrastando e soltando as áreas de cabeçalho deles.
 
@@ -24,13 +24,14 @@ Para cada usuário conectado ao servidor, a lista fornece as seguintes informaç
 - **Dirección IP**: dirección IP de la máquina remota.
 - **Fecha de conexión**: fecha y hora de la conexión de la máquina remota.
 - **Tiempos CPU**: tiempos procesador consumidos por este usuario desde la conexión.
-- **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica). "Dormindo" se a máquina remota entrou em modo de suspensão (veja abaixo).
+- **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica).
+- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
 
 ### Gerir usuários adormecidos
 
-4D Server lida especificamente com casos em que uma máquina executando uma aplicação remota 4D muda para modo de suspensão enquanto sua conexão com a máquina do servidor ainda está ativa. Neste caso, o aplicativo remoto 4D conectado notifica automaticamente o Servidor 4D da sua desconexão iminente. En el servidor, el usuario conectado pasa a un estado de actividad **Dormido**:
+4D Server lida especificamente com casos em que uma máquina executando uma aplicação remota 4D muda para modo de suspensão enquanto sua conexão com a máquina do servidor ainda está ativa. Neste caso, o aplicativo remoto 4D conectado notifica automaticamente o Servidor 4D da sua desconexão iminente. On the server, the connected user changes to a **Sleeping** status:
 
-![](../assets/en/Admin/server-sleeping.png)
+![](../assets/en/Admin/server-sleep.png)
 
 Este estado liberta recursos no servidor. Além disso, a aplicação remota 4D reconecta ao servidor 4D automaticamente após acordar do modo de suspensão.
 

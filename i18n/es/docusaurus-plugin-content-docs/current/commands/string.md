@@ -75,7 +75,7 @@ El formato se especifica del mismo modo que se haría para una [entrada numéric
 | String(Num(1=2);"True;;False")                | "False"                           |                                                    |
 | String(Log(-1))                               | ""                                | No es un número                                    |
 | String(1/0)                                                      | "INF"                             | Número infinito positivo                           |
-| String(-1/0)                                                     | "-INF"                            | Negative infinite number                           |
+| String(-1/0)                                                     | "-INF"                            | Número infinito negativo                           |
 
 (\*) El algoritmo para convertir valores reales en texto se basa en 13 dígitos significativos, ver [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
 
@@ -199,7 +199,7 @@ The time expressed takes the time zone into account (GMT zone). If you only pass
  $mydate:=String(!2010-09-09!;Date RFC 1123) // returns Wed, 08 Sep 2010 22:00:00 GMT  
 ```
 
-### Time Expressions
+### Expresiones de tipo hora
 
 If *expression* is a Time expression and if you omit the *format* parameter, the string is returned using the default HH:MM:SS format.
 
@@ -216,10 +216,10 @@ De lo contrario, en el parámetro *format*, puede pasar:
 | Hour min                     | 4     | 1 hora 2 minutos                                                                                                                                                                                                                                                                                                                       |
 | Hora min seg                 | 3     | 1 hora 2 minutos 3 segundos                                                                                                                                                                                                                                                                                                            |
 | ISO time                     | 8     | 0000-00-00T01:02:03\. Corresponds to the ISO8601 standard and contains, in theory, a date and a time. Since this format does not support combined dates/times, the date part is filled with 0s. This format expresses the local time. |
-| Min sec                      | 7     | 62 minutes 3 seconds                                                                                                                                                                                                                                                                                                                   |
+| Min sec                      | 7     | 62 minutos 3 segundos                                                                                                                                                                                                                                                                                                                  |
 | MM SS                        | 6     | 62:03                                                                                                                                                                                                                                                                                                                  |
 | System time long             | 11    | 1:02:03 AM HNEC (sólo Mac)                                                                                                                                                                                                                                                          |
-| System time long abbreviated | 10    | 1•02•03 AM (Mac only)                                                                                                                                                                                                                                                                                               |
+| System time long abbreviated | 10    | 1-02-03 AM (sólo Mac)                                                                                                                                                                                                                                                                                               |
 | System time short            | 9     | 01:02:03                                                                                                                                                                                                                                                                                               |
 
 Ejemplos:
@@ -237,7 +237,7 @@ Ejemplos:
  $vsResult:=String(?17:30:45?;"'It is' K a") //"It is 5 PM"  
 ```
 
-### String Expressions
+### Expresiones de tipo cadena
 
 If *expression* is of the String or Text type, the command returns the same value as the one passed in the parameter. This can be useful more particularly in generic programming using pointers.\
 In this case, the *format* parameter, if passed, is ignored.
