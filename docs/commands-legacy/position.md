@@ -118,7 +118,7 @@ In the following example, you want to find all instances of a string and replace
 ## See also 
 
 [Compare strings](compare-strings.md)  
-[Substring](../commands/substring.md)  
+[Substring](./substring.md)  
 
 ## Properties
 

@@ -117,7 +117,7 @@ En el siguiente ejemplo, usted quiere encontrar todas las instancias de una cade
 ## Ver también 
 
 [Compare strings](compare-strings.md)  
-[Substring](../commands/substring.md)  
+[Substring](./substring.md)  
 
 ## Propiedades
 
