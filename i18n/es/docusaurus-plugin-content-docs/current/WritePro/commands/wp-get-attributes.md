@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get attributes.Params-->
 
-| Parámetros  | Tipo                                           |                             | Descripción                               |
-| ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object                                         | &#8594; | Rango o elemento o documento 4D Write Pro |
-| attribName  | Text                                           | &#8594; | Nombre del atributo a obtener             |
-| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
-| attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Resultado   | Object                                         | &#8592; | Nombres y valores de los atributos        |
+| Parámetros  | Tipo                                           |                             | Descripción                                 |
+| ----------- | ---------------------------------------------- | --------------------------- | ------------------------------------------- |
+| targetObj   | Object                                         | &#8594; | Rango o elemento o documento 4D Write Pro   |
+| attribName  | Text                                           | &#8594; | Nombre del atributo a obtener               |
+| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Valor actual del atributo para el objetivo  |
+| attribColl  | Collection                                     | &#8594; | Colección de nombres de atributos a obtener |
+| Resultado   | Object                                         | &#8592; | Nombres y valores de los atributos          |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ If there are different values for the same attribute in the element passed as a 
 - para valores numéricos, wk mixed
 - for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
 - para valores cadena, una cadena vacía
-- for picture values, an empty picture.
+- para valores imagen, una imagen vacía.
 
 **Note**: If *targetObj* contains a paragraph and a character style sheets, the paragraph style sheet name is returned.
 

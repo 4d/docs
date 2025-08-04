@@ -191,7 +191,7 @@ La función `.wait( )` <!-- REF #SignalClass.wait().Summary -->hace que el proce
 
 Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera en segundos en el parámetro *timeout* (se aceptan decimales). Se aceptan decimales.
 
-If the signal is already in the signaled state (i.e. the `.signaled` property is already **true**), the function returns immediately, without waiting.
+Si la señal ya está en estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función vuelve inmediatamente, sin esperar.
 
 La función devuelve el valor de la propiedad `.signaled`.
 

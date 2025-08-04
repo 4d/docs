@@ -17,6 +17,10 @@ title: スケール
 
 [バーバーショップ](progressIndicator.md#バーバーショップ)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get indicator type](../commands-legacy/object-get-indicator-type.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET INDICATOR TYPE](../commands-legacy/object-set-indicator-type.md)
+
 ---
 
 ## 目盛りを表示
@@ -31,7 +35,11 @@ title: スケール
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
+[サーモメーター](progressIndicator.md#サーモメーター) - [ルーラー](ruler.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -47,7 +55,11 @@ title: スケール
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
+[サーモメーター](progressIndicator.md#サーモメーター) - [ルーラー](ruler.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -67,7 +79,11 @@ title: スケール
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md)
+[サーモメーター](progressIndicator.md#サーモメーター) - [ルーラー](ruler.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -86,7 +102,11 @@ title: スケール
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[サーモメーター](progressIndicator.md#default-thermometer) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get maximum-value](../commands-legacy/object-get-maximum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET MAXIMUM VALUE](../commands-legacy/object-set-maximum-value.md)
 
 ---
 
@@ -102,7 +122,11 @@ title: スケール
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[サーモメーター](progressIndicator.md#default-thermometer) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET MINIMUM VALUE](../commands-legacy/object-set-minimum-value.md)
 
 ---
 
@@ -118,4 +142,8 @@ title: スケール
 
 #### 対象オブジェクト
 
-[Thermometer](progressIndicator.md#default-thermometer) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[サーモメーター](progressIndicator.md#default-thermometer) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)

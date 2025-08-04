@@ -4,7 +4,7 @@ title: VP SET COLUMN COUNT
 ---
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Syntax -->
-**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } ) <!-- END REF -->
+**VP SET COLUMN COUNT** ( *vpAreaName* : Text ; *columnCount* : Integer { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 

@@ -42,10 +42,10 @@ Si no se encuentra *tableName* o *columnName*, el comando devuelve -1.
 ## Ejemplo
 
 ```4d
-	// Search the column id according the column name
+	// Buscar el id de la columna según el nombre de la columna
 var $id : Integer
 $id:=VP Get table column index($area; $tableName; "Weight price")
-	// Remove the column by id
+	// Eliminar la columna por id
 VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 ```
 

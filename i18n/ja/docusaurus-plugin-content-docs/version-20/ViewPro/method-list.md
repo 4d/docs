@@ -144,14 +144,14 @@ VP ADD SELECTION($currentSelection)
 ### VP ADD SHEET
 
 <!-- REF #_method_.VP ADD SHEET.Syntax -->
-**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )<!-- END REF -->
+**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer ; *name* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
 | 引数         | 型       |    | 説明                              |
 | ---------- | ------- | -- | ------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名         |
-| sheet      | Integer | -> | 新しいシートのインデックス                   |
+| index      | Integer | -> | 新しいシートのインデックス                   |
 | name       | Text    | -> | シート名|<!-- END REF -->
 
 |
@@ -162,7 +162,7 @@ VP ADD SELECTION($currentSelection)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*sheet* 引数として、新しいシートのインデックスを渡します。 渡した *index* 引数が 0以下だった場合、コマンドは新しいシートを先頭に挿入します。 *index* 引数がシートの総数より多い場合、コマンドは既存のシートの後に新しいシートを挿入します。
+*index* 引数として、新しいシートのインデックスを渡します。 渡した *index* 引数が 0以下だった場合、コマンドは新しいシートを先頭に挿入します。 *index* 引数がシートの総数より多い場合、コマンドは既存のシートの後に新しいシートを挿入します。
 > インデックスは 0 起点です。
 
 *name* 引数として、新しいシートの名前を渡します。 新しい名前には、次の文字を含めることはできません: `*, :, [, ], ?,\,/`
@@ -2112,7 +2112,7 @@ $rowCount:=VP Get row count("ViewProarea")
 ### VP Get selection
 
 <!-- REF #_method_.VP Get selection.Syntax -->
-**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get selection.Params -->
 
@@ -2278,7 +2278,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 ### VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Syntax -->
-**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
@@ -3552,7 +3552,7 @@ $cellStyle.font:=VP Object to font($font)
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
-**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )<!-- END REF -->
+**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
@@ -3680,7 +3680,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 ### VP REMOVE NAME
 
 <!-- REF #_method_.VP REMOVE NAME.Syntax -->
-**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )<!-- END REF -->
+**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *scope* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
@@ -3852,7 +3852,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
-**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )<!-- END REF -->
+**VP REMOVE TABLE** ( *vpAreaName* : Text; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
@@ -4735,7 +4735,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 ### VP SET COLUMN COUNT
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Syntax -->
-**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } ) <!-- END REF -->
+**VP SET COLUMN COUNT** ( *vpAreaName* : Text ; *columnCount* : Integer { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 
@@ -5722,11 +5722,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| 引数           | 型      |    | 説明                                                     |
-| ------------ | ------ | -- | ------------------------------------------------------ |
-| vpAreaName   | Text   | -> | 4D View Pro エリア名                                       |
-| sheetOptions | Object | -> | 設定するシートオプション                                           |
-| sheet        | Object | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
+| 引数           | 型       |    | 説明                                                     |
+| ------------ | ------- | -- | ------------------------------------------------------ |
+| vpAreaName   | Text    | -> | 4D View Pro エリア名                                       |
+| sheetOptions | Object  | -> | 設定するシートオプション                                           |
+| sheet        | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
 
 |
 
@@ -6118,14 +6118,14 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 ### VP SET TIME VALUE
 
 <!-- REF #_method_.VP SET TIME VALUE.Syntax -->
-**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
+**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Time { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
 | 引数            | 型      |    | 説明                                  |
 | ------------- | ------ | -- | ----------------------------------- |
 | rangeObj      | Object | -> | レンジオブジェクト                           |
-| timeValue     | Text   | -> | 設定する時間値                             |
+| timeValue     | Time   | -> | 設定する時間値                             |
 | formatPattern | Text   | -> | 値のフォーマット|<!-- END REF -->
 
 |

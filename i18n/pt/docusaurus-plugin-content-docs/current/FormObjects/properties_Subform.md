@@ -43,6 +43,10 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 
 [Subformulario](subform_overview.md)
 
+#### Comandos
+
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
+
 ---
 
 ## Duplo clique numa linha vazia
@@ -131,6 +135,10 @@ Los subformularios de lista pueden utilizarse para la entrada de datos de dos ma
 #### Objectos suportados
 
 [Subformulario](subform_overview.md)
+
+#### Comandos
+
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
 
 ---
 

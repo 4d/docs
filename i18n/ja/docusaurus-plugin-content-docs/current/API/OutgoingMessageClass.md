@@ -5,7 +5,7 @@ title: OutgoingMessage
 
 `4D.OutgoingMessage` クラスを使うと、アプリケーションの関数が[REST リクエスト](../REST/REST_requests.md) に応答して返すメッセージを作成することができます。 レスポンスが`4D.OutgoingMessage` 型であった場合、REST サーバーはオブジェクトを返すのではなく、`OutgoingMessage` クラスのオブジェクトインスタンスを返します。
 
-Typically, this class can be used in custom [HTTP request handler functions](../WebServer/http-request-handler.md#function-configuration) or in functions declared with the [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
+通常、このクラスは、カスタムの[HTTP リクエストハンドラー関数](../WebServer/http-request-handler.md#関数の設定) またはHTTP GET リクエストを管理するようにデザインされた、[`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードで宣言された関数内で使用することができます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
 
 このクラスのインスタンスは4D Server 上にビルドされ、[4D REST サーバー](../REST/gettingStarted.md) によってのみブラウザに送信することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。
 
@@ -53,7 +53,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 :::
 
-<!-- REF #OutgoingMessageClass.body.Desc -->
+<!-- REF OutgoingMessageClass.body.Desc -->
 
 ## .body
 
@@ -74,7 +74,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.headers.Desc -->
+<!-- REF OutgoingMessageClass.headers.Desc -->
 
 ## .headers
 
@@ -88,7 +88,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setBody().Desc -->
+<!-- REF OutgoingMessageClass.setBody().Desc -->
 
 ## .setBody()
 
@@ -124,7 +124,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setHeader().Desc -->
+<!-- REF OutgoingMessageClass.setHeader().Desc -->
 
 ## .setHeader()
 
@@ -153,7 +153,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setStatus().Desc -->
+<!-- REF OutgoingMessageClass.setStatus().Desc -->
 
 ## .setStatus()
 
@@ -177,7 +177,7 @@ HTTP ステータスコードの一覧については、[Wikipedia のHTTP ス�
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.status.Desc -->
+<!-- REF OutgoingMessageClass.status.Desc -->
 
 ## .status
 

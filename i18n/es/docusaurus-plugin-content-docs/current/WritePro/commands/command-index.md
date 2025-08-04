@@ -99,7 +99,7 @@ title: Comandos 4D Write Pro
 
 [`WP SELECT`](../commands-legacy/wp-select.md)<br/>
 [`WP Selection range`](../commands-legacy/wp-selection-range.md)<br/>
-[`WP SET ATTRIBUTES`](wp-set-attributes.md) ***Modified 4D 20 R8***<br/>
+[`WP SET ATTRIBUTES`](wp-set-attributes.md) ***Modificado 4D 20 R8***<br/>
 [`WP SET DATA CONTEXT`](../commands-legacy/wp-set-data-context.md)<br/>
 [`WP SET FRAME`](../commands-legacy/wp-set-frame.md)<br/>
 [`WP SET LINK`](../commands-legacy/wp-set-link.md)<br/>

@@ -72,6 +72,10 @@ Para as duas últimas ações, o evento do formulário `On Open Detail` também 
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Ressaltar conjunto
@@ -94,6 +98,10 @@ O 4D cria um conjunto padrão chamado *ListBoxSetN*, em que *N* começa em 0 e �
 #### Objectos suportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -148,6 +156,10 @@ Número de colunas que não podem ser movidas durante a execução.
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns.md) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns.md) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns.md) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns.md)
+
 ---
 
 ## Número de colunas trancadas
@@ -165,6 +177,10 @@ Define o número de colunas do list box.
 #### Objectos suportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns.md) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md)
 
 ---
 
@@ -219,6 +235,10 @@ Observe que a definição das propriedades de um elemento substitui quaisquer ou
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array.md)
+
 ---
 
 ## Modo seleção
@@ -239,3 +259,8 @@ Designa a opção que permite aos utilizadores selecionar linhas:
 #### Objectos suportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

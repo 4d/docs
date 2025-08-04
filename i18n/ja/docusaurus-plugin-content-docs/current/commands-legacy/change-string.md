@@ -22,7 +22,7 @@ displayed_sidebar: docs
   
 *newChars*が空の文字列（""）の場合、Change stringは*source*を変更しないで返します。Change stringは常に*source*と同じ長さの文字列を返します。*where*が*source*の長さ以下の場合や*source*の長さ以上の場合、Change stringは*source*を返します。  
   
-Change stringは、文字を挿入しないで上書きするという点が[Insert string](insert-string.md "Insert string")と異なります。
+Change stringは、文字を挿入しないで上書きするという点が[Insert string](../commands/insert-string.md "Insert string")と異なります。
 
 ## 例題 
 
@@ -35,9 +35,9 @@ Change stringの使用例を次に示します。結果を変数*vtResult*に代
 
 ## 参照 
 
-[Delete string](delete-string.md)  
-[Insert string](insert-string.md)  
-[Replace string](replace-string.md)  
+[Delete string](../commands/delete-string.md)  
+[Insert string](../commands/insert-string.md)  
+[Replace string](../commands/replace-string.md)  
 
 ## プロパティ
 

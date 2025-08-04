@@ -7,13 +7,13 @@ title: プロバイダ
 
 多くのAI プロバイダがOpenAI に似たAPI を提供しているので、このプロジェクトを使用してそれらに接続することができます。
 
-To do so you just have to change the original `baseURL` by the provider one and use their api key if needed.
+そのためには元の `baseURL` をプロバイダーのものに変更し、必要であればそのサービスのAPI キーを使用するだけです。
 
 ```4d
 $client.baseURL:="https://api.mistral.ai/v1"
 ```
 
-Some of them
+一部の例
 
 ## リモート
 

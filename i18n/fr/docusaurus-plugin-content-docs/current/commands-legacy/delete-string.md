@@ -40,9 +40,9 @@ L'exemple suivant illustre l'utilisation de **Delete string**. Les résultats so
 
 ## Voir aussi 
 
-[Change string](change-string.md)  
-[Insert string](insert-string.md)  
-[Replace string](replace-string.md)  
+[Change string](../commands/change-string.md)  
+[Insert string](../commands/insert-string.md)  
+[Replace string](../commands/replace-string.md)  
 
 ## Propriétés
 

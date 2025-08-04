@@ -15,7 +15,7 @@ Puede gestionar los datos con los [métodos](Concepts/methods.md) objeto o formu
 
 :::note
 
-For security reasons, in [multi-style](./properties_Text.md#multi-style) input areas, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+Por razones de seguridad, en las áreas de entrada [multiestilo](./properties_Text.md#multi-style), cuando se pegan fórmulas desde una aplicación 4D diferente o un entorno externo, solo se pegan los *valores calculados* (texto o imágenes) disponibles en el momento de la copia. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
 
 :::
 

@@ -114,7 +114,7 @@ Position関数の使用例を次に示します。結果を変数*vlResult*に�
 ## 参照 
 
 [Compare strings](compare-strings.md)  
-[Substring](substring.md)  
+[Substring](./substring.md)  
 
 ## プロパティ
 

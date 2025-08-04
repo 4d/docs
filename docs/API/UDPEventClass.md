@@ -22,12 +22,24 @@ The following properties are available:
 
 ||
 |---|
+|[<!-- INCLUDE #UDPEvent.address.Syntax -->](#address)<br/><!-- INCLUDE #UDPEvent.address.Summary -->|
 |[<!-- INCLUDE #UDPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #UDPEvent.data.Summary -->|
-|[<!-- INCLUDE #UDPEvent.ip.Syntax -->](#ip)<br/><!-- INCLUDE #UDPEvent.ip.Summary -->|
 |[<!-- INCLUDE #UDPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPEvent.port.Summary -->|
 |[<!-- INCLUDE #UDPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #UDPEvent.type.Summary -->|
 
-<!-- REF #UDPEvent.data.Desc -->
+<!-- REF UDPEvent.address.Desc -->
+## .address
+
+<!-- REF #UDPEvent.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### Description
+
+The `.address` property contains <!-- REF #UDPEvent.address.Summary -->the IP address of the remote machine<!-- END REF -->.
+
+
+<!-- END REF -->
+
+<!-- REF UDPEvent.data.Desc -->
 ## .data
 
 
@@ -39,20 +51,8 @@ The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associ
 
 <!-- END REF -->
 
-<!-- REF #UDPEvent.ip.Desc -->
-## .ip
 
-<!-- REF #UDPEvent.ip.Syntax -->**ip** : Text<!-- END REF -->
-
-#### Description
-
-The `.ip` property contains <!-- REF #UDPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
-
-
-<!-- END REF -->
-
-
-<!-- REF #UDPEvent.port.Desc -->
+<!-- REF UDPEvent.port.Desc -->
 ## .port
 
 <!-- REF #UDPEvent.port.Syntax -->**port** : Number<!-- END REF -->
@@ -65,7 +65,7 @@ The `.port` property contains <!-- REF #UDPEvent.port.Summary -->the port number
 <!-- END REF -->
 
 
-<!-- REF #UDPEvent.type.Desc -->
+<!-- REF UDPEvent.type.Desc -->
 ## .type
 
 <!-- REF #UDPEvent.type.Syntax -->**type** : Text<!-- END REF -->

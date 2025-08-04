@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 1日の秒数は86,400秒ですが、この値を越えても、Time stringは、時間、分、秒の加算を継続します。例えば、Time string (86401) は、文字列“24:00:01”を返します。
 
-**Note:** 時間を様々なフォーマットの文字列に変換したい場合は、[String](string.md "String")を使用します。
+**Note:** 時間を様々なフォーマットの文字列に変換したい場合は、[String](../commands/string.md "String")を使用します。
 
 ## 例題 
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[String](string.md)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
 ## プロパティ

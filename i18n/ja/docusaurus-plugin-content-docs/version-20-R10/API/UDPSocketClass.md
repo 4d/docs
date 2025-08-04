@@ -3,15 +3,15 @@ id: UDPSocketClass
 title: UDPSocket
 ---
 
-The `UDPSocket` class allows you to send and receive UDP packets. UDP (User Datagram Protocol) is an easy-to-implement protocol for sending data. It is faster and simpler than TCP (only 8 bytes of header as opposed to at least 20 bytes in TCP), but it does not offer the same level of reliability. It is useful for applications where data must arrive at their destination quickly. However, it does not allow verification of delivery, nor does it allow error-checking or recovery of data that was not delivered correctly.
+`UDPSocket` クラスを使用すると、UDP パケットの送信と受信が可能になります。 UDP (User Datagram Protocol) は、データを送信するための、実装が簡単なプロトコルです。 これはTCP よりも早くてシンプル(TCP のヘッダーが最低20 バイトであるのに対してUDP はヘッダーがわずか8 バイト)ですが、信頼性のレベルは同じではありません。 これはデータが目的地に迅速に到着する必要のあるアプリケーションに有用です。 ただし、これは配信の検証も、正常に配信されなかったデータの復旧もエラーチェックも行うことはできません。
 
-The `UDPSocket` class is available from the `4D` class store. You can create a UDP connection using the [4D.UDPSocket.new()](#4dudpsocketnew) function, which returns a [UDPSocket object](#udpsocket-object).
+`UDPSocket` クラスは`4D` クラスストアから利用可能です。 UDP 接続は、 [UDPSocket オブジェクト](#udpsocket-object) を返す [4D.UDPSocket.new()](#4dudpsocketnew) 関数を使用することで作成することができます。
 
-Thanks to the standard 4D object *refcounting*, a UDPSocket is automatically released when it is no longer referenced, i.e. when no more references to them exist in memory. これ一般的に、例えばメソッド実行の最後にローカル変数が消去されるときに発生します。 Consequently, the associated resources are properly cleaned up without requiring explicit closure. However, if you want to "force" the closure of a socket at any moment, [**nullify** its references by setting them to **Null**](../Concepts/dt_object.md#resources).
+標準の4D オブジェクトの *refcounting* のおかげで、UDPSocket はそれがもう参照されなくなったときに自動的にリリースされます。これはつまりメモリ内にUDPSocket への参照が残っていない状態になったときを意味します。 これ一般的に、例えばメソッド実行の最後にローカル変数が消去されるときに発生します。 結果として、それに関連したリソースは、明示的な終了を必要とせずに適切にクリーンアップされます。 しかしながら、ソケットを"強制的に"終了させたい場合には、[**Null** を代入することで**参照を無効化** してください](../Concepts/dt_object.md#リソース)。
 
-:::info 4DTCPUDPLog.txt file
+:::info 4DTCPUDPLog.txt ファイル
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to UDP sockets. 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to UDP sockets. 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
 
 :::
 
@@ -25,11 +25,11 @@ For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that re
 
 ### 例題
 
-### UDPSocket Object
+### UDPSocket オブジェクト
 
-A UDPSocket object is immutable, non streamable.
+UDPSocket オブジェクトは変更不可であり、ストリーム不可です。
 
-UDPSocket objects provide the following properties and functions:
+UDPSocket オブジェクトは以下のプロパティと関数を提供します:
 
 |                                                                                                     |
 | --------------------------------------------------------------------------------------------------- |
@@ -37,58 +37,58 @@ UDPSocket objects provide the following properties and functions:
 | [<!-- INCLUDE #UDPSocket.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPSocket.port.Summary -->       |
 | [<!-- INCLUDE #UDPSocket.send().Syntax -->](#send)<br/><!-- INCLUDE #UDPSocket.send().Summary -->   |
 
-<!-- REF #4D.UDPSocket.new().Desc -->
+<!-- REF 4D.UDPSocket.new().Desc -->
 
 ## 4D.UDPSocket.new()
 
-<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**( *options* : Object  ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object  ) : 4D.UDPSocket<!-- END REF -->
+<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**() : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *options* : Object ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object ) : 4D.UDPSocket<!-- END REF -->
 
 <!-- REF #4D.UDPSocket.new().params -->
 
-| 引数      | 型         |                             | 説明                                                                                             |
-| ------- | --------- | --------------------------- | ---------------------------------------------------------------------------------------------- |
-| port    | Integer   | ->                          | Local port used for UDP socket (0 or omitted = find any unused port to use) |
-| options | Object    | ->                          | Configuration [options](#options-parameter) for the socket                                     |
-| 戻り値     | UDPSocket | <- | New UDPSocket object                                                                           |
+| 引数      | 型         |                             | 説明                                                                       |
+| ------- | --------- | --------------------------- | ------------------------------------------------------------------------ |
+| port    | Integer   | ->                          | UDP ソケットに使用されるローカルのポート番号(0 または省略時には使用されていないポートを探して使用) |
+| options | Object    | ->                          | ソケットの接続[オプション](#options引数)                                               |
+| 戻り値     | UDPSocket | <- | 新規UDPSocket オブジェクト                                                       |
 
 <!-- END REF -->
 
 #### 説明
 
-The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
+The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* (if any) on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
 
 #### `options` 引数
 
-*options* に渡すオブジェクトは、次のプロパティを持つことができます:
+In the *options* parameter, you can pass an object that contains the following properties:
 
-| プロパティ       | 型       | 説明                                           | デフォルト |
-| ----------- | ------- | -------------------------------------------- | ----- |
-| onData      | Formula | データが受信されたときにトリガーされるコールバック                    | 未定義   |
-| onError     | Formula | エラーの場合にトリガーされるコールバック                         | 未定義   |
-| onTerminate | Formula | Callback triggered when the port is released | 未定義   |
+| プロパティ       | 型       | 説明                         | デフォルト |
+| ----------- | ------- | -------------------------- | ----- |
+| onData      | Formula | データが受信されたときにトリガーされるコールバック  | 未定義   |
+| onError     | Formula | エラーの場合にトリガーされるコールバック       | 未定義   |
+| onTerminate | Formula | ポートがリリースされた時にトリガーされるコールバック | 未定義   |
 
 #### コールバック関数
 
 すべてのコールバック関数は、2つの引数を受け取ります:
 
-| 引数      | 型                                       | 説明                                              |
-| ------- | --------------------------------------- | ----------------------------------------------- |
-| $socket | [`UDPSocket` object](#udpsocket-object) | The current UDPSocket instance. |
-| $event  | [`UDPEvent` object](#udppevent-object)  | イベントに関する情報が含まれているオブジェクト                         |
+| 引数      | 型                                       | 説明                      |
+| ------- | --------------------------------------- | ----------------------- |
+| $socket | [`UDPSocket` オブジェクト](#udpsocket-オブジェクト) | カレントのUDPSocket インスタンス。  |
+| $event  | [`UDPEvent` object](#udpevent-object)   | イベントに関する情報が含まれているオブジェクト |
 
 **コールバックの呼び出しの順番:**
 
 1. `onData` はデータが受信されるたびにトリガーされます。
 2. `onError` はエラーが発生した場合にトリガーされます。
-3. `onTerminate` is always triggered just before the port is released (socket is closed or an error occured).
+3. `onTerminate` は常にポートが閉じられる直前にトリガーされます(ソケットが閉じられたか、エラーが発生した場合です)。
 
-#### UDPEvent object
+#### UDPEvent オブジェクト
 
-A [`UDPEvent`](UDPEventClass.md) object is returned when a [callback function](#callback-functions) is called.
+[コールバック関数](#コールバック関数) が呼ばれた際には[`UDPEvent`](UDPEventClass.md) オブジェクトが返されます。
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.errors.Desc -->
+<!-- REF UDPSocket.errors.Desc -->
 
 ## .errors
 
@@ -96,7 +96,7 @@ A [`UDPEvent`](UDPEventClass.md) object is returned when a [callback function](#
 
 #### 説明
 
-The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collection of error objects associated with the socket<!-- END REF -->. 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
+`.errors` プロパティには<!-- REF #UDPSocket.errors.Summary -->ソケットに関連したエラーオブジェクトのコレクション<!-- END REF -->が格納されています。 各エラーオブジェクトにはエラーコード、エラーの詳細、そしてそのエラーを起こしたコンポーネントの署名が格納されています。
 
 | プロパティ  |                                                                                           | 型          | 説明                  |
 | ------ | ----------------------------------------------------------------------------------------- | ---------- | ------------------- |
@@ -107,7 +107,7 @@ The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collecti
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.port.Desc -->
+<!-- REF UDPSocket.port.Desc -->
 
 ## .port
 
@@ -115,11 +115,11 @@ The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collecti
 
 #### 説明
 
-The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port number to listen to<!-- END REF -->. このプロパティは **読み取り専用** です。
+`.port` プロパティには<!-- REF #UDPSocket.port.Summary -->リッスンするポート番号<!-- END REF --> が格納されています。 このプロパティは **読み取り専用** です。
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.send().Desc -->
+<!-- REF UDPSocket.send().Desc -->
 
 ## .send()
 
@@ -127,21 +127,21 @@ The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port numbe
 
 <!-- REF #UDPSocket.send().params -->
 
-| 引数         | 型       |    | 説明                                                   |
-| ---------- | ------- | -- | ---------------------------------------------------- |
-| data       | BLOB    | -> | 送信するデータ                                              |
-| hostName   | Text    | -> | Name or IP address of server                         |
-| remotePort | Integer | -> | Remote port to connect to (0=any) |
+| 引数         | 型       |    | 説明                                   |
+| ---------- | ------- | -- | ------------------------------------ |
+| data       | BLOB    | -> | 送信するデータ                              |
+| hostName   | Text    | -> | サーバーの名前またはIP アドレス                    |
+| remotePort | Integer | -> | 接続するリモートポート(0=任意) |
 
 <!-- END REF -->
 
 #### 説明
 
-The `send()` function <!-- REF #UDPSocket.send().Summary -->sends *data* to the remote *hostName* server on the specified *remotePort*<!-- END REF -->.
+`send()` 関数は、<!-- REF #UDPSocket.send().Summary -->*data* 引数のデータを*hostName* で指定したリモートサーバーに、*remotePort* 引数で指定したポート番号で送信します<!-- END REF -->。
 
-*hostName* is the name or IP address of the server where the data will be sent.
+*hostName* 引数はデータの送信先のサーバーの名前またはIP アドレスです。
 
-*remotePort* is the number of the port to be connected to. If you pass 0, any available port will be used.
+*remotePort* 引数は接続するポート番号です。 0 を渡した場合、利用可能な任意のポートが使用されます。
 
 <!-- END REF -->
 

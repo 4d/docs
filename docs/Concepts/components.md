@@ -29,3 +29,9 @@ If the component is compiled, its [namespace](../Extensions/develop-components.m
 You can select a component [project method](methods.md) or [class](classes.md) and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
 
 ![alt-text](../assets/en/Project/compDoc.png)
+
+:::note
+
+Interpreted component code can be [edited directly from the host project](../Extensions/develop-components.md#editing-components-from-the-host) if the context is supported. 
+
+:::

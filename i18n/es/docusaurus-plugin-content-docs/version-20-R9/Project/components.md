@@ -159,7 +159,7 @@ Ejemplos:
 
 :::note
 
-If a component path declared in the **environment4d.json** file is not found when the project is started, the component is not loaded and gets the *Not found* [status](#dependency-status), even if a version of the component exists next to the project's package folder.
+Si la ruta de un componente declarado en el archivo **environment4d.json** no se encuentra cuando se inicia el proyecto, el componente no se carga y obtiene el [estado](#dependency-status) *Not found*, incluso si existe una versión del componente junto a la carpeta de paquetes del proyecto.
 
 :::
 
@@ -278,13 +278,13 @@ Si no especifica una etiqueta o una versión, 4D recupera automáticamente la "�
 
 El gestor de dependencias comprueba periódicamente si hay actualizaciones de componentes disponibles en Github. Si hay una nueva versión disponible para un componente, se muestra un indicador de actualización para el componente en la lista de dependencias, [dependiendo de su configuración](#defining-a-github-dependency-version-range).
 
-#### Naming conventions for 4D version tags
+#### Convenciones de nomenclatura para las etiquetas de versión 4D
 
 Si quiere usar la regla de dependencia [**Seguir la versión 4D**](#defining-a-github-dependency-version-range), las etiquetas para las versiones de componentes en el repositorio de Github deben cumplir con convenciones específicas.
 
-- **LTS versions**: `x.y.p` pattern, where `x.y` corresponds to the main 4D version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *x.y* LTS version, the Dependency Manager will resolve it as "the latest version x.\*" if available or "version below x". If no such version exists, the user will be notified. For example, "20.4" will be resolved by the Dependency manager as "the latest component version 20.\* or version below 20".
+- **Versiones LTS**: modelo `x.y.p`, donde `x.y` corresponde a la versión principal de 4D a seguir y `p` (opcional) puede utilizarse para versiones correctivas o actualizaciones adicionales. Cuando un proyecto especifica que sigue la versión 4D para la versión LTS *x.y*, el Gestor de dependencias lo resolverá como "la última versión x.\*" si está disponible o "versión inferior a x". Si no existe tal versión, se notificará al usuario. Por ejemplo, "20.4" será resuelto por el gestor de dependencias como "la última versión del componente 20.\* o la versión inferior a 20".
 
-- **R-Release versions**: `xRy.p` pattern, where `x` and `y` correspond to the main 4D R-release version to follow and `p` (optional) can be used for patch versions or additional updates. When a project specifies that it follows the 4D version for *xRy* version, the Dependency Manager will resolve it to the "latest version below xR(y+1)" if available. If no such version exists, the user will be notified. For example, "20R9" will be resolved by the Dependency manager as "the latest component version below 20R10".
+- **Versiones R-Release**: modelo `xRy.p`, donde `x` y `y` corresponden a la versión principal de 4D R-release a seguir y `p` (opcional) puede usarse para versiones correctivas o las actualizaciones adicionales. Cuando un proyecto especifica que sigue la versión 4D para la versión *xRy*, el Gestor de dependencias lo resolverá a la "última versión por debajo de xR(y+1)" si está disponible. Si no existe tal versión, se notificará al usuario. Por ejemplo, "20R9" será resuelto por el gestor de dependencias como "la última versión del componente por debajo de 20R10".
 
 :::note
 
@@ -453,7 +453,7 @@ Definir el [rango de versiones de dependencia](#tags-and-versions) a utilizar pa
 
 Haga clic en el botón **Añadir** para añadir la dependencia al proyecto.
 
-The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. Se cargará cuando se reinicie la aplicación.
+La dependencia de GitHub es declarada en el archivo [**dependencies.json**](#dependenciesjson) y añadida a la [lista de dependencias inactivas](#dependency-status) con el estado **Disponible al reiniciar**. Se cargará cuando se reinicie la aplicación.
 
 #### Definición de un intervalo de versiones de dependencia de GitHub
 
@@ -465,7 +465,7 @@ Puede definir la opción [etiqueta o versión](#tags-and-versions) para una depe
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
-- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada.
+- **Siga la versión 4D**: descargue la última versión del componente compatible con la versión 4D en ejecución. Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada.
 
 La versión actual de la dependencia de GitHub se muestra a la derecha del elemento de la dependencia:
 

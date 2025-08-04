@@ -25,7 +25,7 @@ Los objetos HTTPAgent ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->                              |
+| [<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#params)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->                               |
 | [<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestscount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->          |
 | [<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freesocketscount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary --> |
 
@@ -111,7 +111,7 @@ Cuando no hay ningún agente asociado a una HTTPRequest, se utiliza un agente gl
 
 :::
 
-<!-- REF #HTTPAgentClass.params.Desc -->
+<!-- REF HTTPAgentClass.params.Desc -->
 
 ## .params
 
@@ -123,7 +123,7 @@ El objeto de propiedad `.params` contiene <!-- REF #HTTPAgentClass.params.Summar
 
 <!-- END REF -->
 
-<!-- REF #HTTPAgentClass.requestsCount.Desc -->
+<!-- REF HTTPAgentClass.requestsCount.Desc -->
 
 ## .requestsCount
 
@@ -135,7 +135,7 @@ La propiedad `.requestsCount` contiene <!-- REF #HTTPAgentClass.requestsCount.Su
 
 <!-- END REF -->
 
-<!-- REF #HTTPAgentClass.freeSocketsCount.Desc -->
+<!-- REF HTTPAgentClass.freeSocketsCount.Desc -->
 
 ## .freeSocketsCount
 

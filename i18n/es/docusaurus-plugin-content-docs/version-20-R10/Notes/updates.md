@@ -13,7 +13,7 @@ Lea las [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 - Nueva opción `connectionTimeout` en el parámetro [`options`](../API/TCPConnectionClass.md#options-parameter) de la función [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
 - Nueva clase [`4D.Vector`](../API/VectorClass.md) para procesar y comparar vectores, normalmente calculados por IAs.
 - Los UUIDs en 4D ahora se generan en la **versión 7**. En versiones anteriores 4D, se generaron en la versión 4.
-- New [`UDPSocket`](../API/UDPSocketClass.md) and [`UDPEvent`](../API/UDPEventClass.md) classes to send data using UDP sockets. Support of detailed logging for UDP events in the [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) log file (renamed from `4DTCPLog.txt`).
+- Nuevas clases [`UDPSocket`](../API/UDPSocketClass.md) y [`UDPEvent`](../API/UDPEventClass.md) para enviar datos utilizando sockets UDP. Soporte de registro detallado para eventos UDP en el archivo de registro [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) (renombrado de `4DTCPLog.txt`).
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Seguridad mejorada para copiar/pegar fórmulas en [4D Write Pro](../WritePro/managing-formulas.md) y [áreas de texto con estilo](../FormObjects/input_overview.md): las fórmulas copiadas desde fuera de la aplicación 4D actual se pegan ahora siempre sólo como valores.
 - 4D AIKit component: new [OpenAIEmbeddingsAPI class](../aikit/Classes/OpenAIEmbeddingsAPI.md) to create embeddings using OpenAI's API.
@@ -23,13 +23,13 @@ Lea las [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
     - Por coherencia, los comandos [`Create entity selection`](../commands/create-entity-selection.md) y [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) han sido movidos del tema ["4D Environment"](../commands/theme/4D_Environment.md) al ["Selection"](../commands/theme/Selection.md).
     - Nuevos comandos [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) y [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) para asignar y leer los objetos `Formula` como fuentes de datos para los objetos de formulario.
     - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) y [`LISTBOX Get property`](../commands/listbox-get-property.md) soportan tres nuevas constantes: `lk current item`, `lk current item position` y `lk selected items expression`.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R10): list of all bugs that have been fixed in 4D 20 R10.
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R10): lista de todos los bugs que se han corregido en 4D 20 R10.
 
 #### Cambios de comportamiento
 
 - En Windows, las fuentes de impresora actuales destinadas únicamente a la impresión (es decir, no se pueden utilizar en pantalla) ya no son cargadas al inicio por 4D.
 - Se ha eliminado la biblioteca *MeCab*. Este cambio sólo afecta al tratamiento del texto en japonés.
-- When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
+- Cuando una variable o parámetro objeto se declara con un tipo ["cs" class](../Concepts/classes.md#cs), asignarlo con una instancia de objeto de una clase diferente genera ahora un error de sintaxis.
 
 ## 4D 20 R9
 
@@ -40,7 +40,7 @@ Lea [**Novedades en 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-20-R9/), 
 - La biblioteca [*MeCab*](../settings/database.md#support-of-mecab-japanese-version) está obsoleta y se eliminará en la próxima versión.
 - Soporte de [token de sesión](../WebServer/sessions.md#session-token-otp) manejado con las nuevas funciones [`Session.createOTP()`](../API/SessionClass.md#createotp) y [`Session.restore()`](../API/SessionClass.md#restore).
 - El asistente de etiqueta ahora utiliza el editor de Fórmula para añadir o editar fórmulas en el [área de diseño de etiquetas](../Desktop/labels.md#label-preview).
-- Nueva clase [`TCPListener`](../API/TCPListenerClass.md) para crear conexiones del servidor TCP; nuevas propiedades en las clases relacionadas: `address`, `listener` y `port` en la clase [`TCPConnection`](../API/TCPConnectionClass.md), `ip` y `port` en la clase [`TCPEvent`](../API/TCPEventClass.md).
+- New [`TCPListener`](../API/TCPListenerClass.md) class to create TCP server connections; new properties in related classes: `address`, `listener` and `port` in [`TCPConnection`](../API/TCPConnectionClass.md) class, `address` and `port` in [`TCPEvent`](../API/TCPEventClass.md) class.
 - Comandos y constantes obsoletos ahora generan advertencias específicas en el [Live checker y el compilador](../code-editor/write-class-method.md#warnings-and-errors). Puede saber si un comando está obsoleto utilizando el comando [`Command name`](../commands/command-name.md).
 - Nuevos comandos [WA SET CONTEXT](../commands/wa-set-context.md) y [WA Get context](../commands/wa-get-context.md) para controlar los contenidos [$4d](../FormObjects/webArea_overview.md#4d-object) en áreas web.
 - Nuevo [parámetro de base de datos `RDP optimization`](../commands-legacy/set-database-parameter.md#rdp-optimization-133) para optimizar por ejemplo el portapapeles compartidos cuando se usa el protocolo de escritorio remoto con 4D.
@@ -64,9 +64,9 @@ Lea [**Novedades en 4D 20 R8**](https://blog.4d.com/en-whats-new-in-4d-20-R8/), 
 - Soporte de [sesiones autónomas](../API/SessionClass.md) para simplificar la codificación local de aplicaciones cliente/servidor.
 - [Depurador 4D](../Debugging/debugger.md): nuevo diseño y autoguardado, funciones de modo de visualización.
 - [Nueva arquitectura de componentes construidos](../Desktop/building.md#build-component) para un mejor cumplimiento de las pautas de notarización de Apple.
-- Ahora puede [crear fácilmente aplicaciones de evaluación](../Desktop/building.md#build-an-evaluation-application) en el cuadro de diálogo de Build App.
+- Ahora puede [crear fácilmente aplicaciones de evaluación](../Desktop/building.md#evaluation-application) en el cuadro de diálogo de Build App.
 - Dependencias: use el administrador de Dependencias para [buscar nuevas versiones](../Project/components.md#checking-for-new-versions) y [actualizar](../Project/components.md#updating-dependencies) componentes GitHub.
-- Nuevas clases [`TCPConnection`](../API/TCPConnectionClass.md) y [`TCPEvent`](../API/TCPEventClass.md) para gestionar conexiones cliente TCP, manejar eventos y mejorar el control sobre la transmisión de datos. Añadido [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) para un registro detallado de eventos TCP.
+- Nuevas clases [`TCPConnection`](../API/TCPConnectionClass.md) y [`TCPEvent`](../API/TCPEventClass.md) para gestionar conexiones cliente TCP, manejar eventos y mejorar el control sobre la transmisión de datos. Añadido [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) para un registro detallado de eventos TCP.
 - Nuevas opciones en [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) y [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) para controlar estilos, fórmulas, integridad de datos y protección por contraseña.
 - 4D Write Pro:
     - Los siguientes comandos permiten ahora parámetros como objetos o colecciones: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), y [WP Insert picture](../WritePro/commands/wp-insert-picture.md).
@@ -242,7 +242,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 ## 4D 20.x LTS
 
-Ver [**Notas de lanzamiento para LTS 4D 20.x**](../../versioned_docs/version-20/Notes/updates.md).
+Consulte [**Notas de la versión 4D 20.x LTS**](../../version-20/Notes/updates.md).
 
 ## Tabla de la librería
 

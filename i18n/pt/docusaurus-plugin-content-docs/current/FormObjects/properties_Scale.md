@@ -17,6 +17,10 @@ Ativa a variante "barber shop" para o termómetro.
 
 [Barber shop](progressIndicator.md#barber-shop)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get indicator type](../commands-legacy/object-get-indicator-type.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET INDICATOR TYPE](../commands-legacy/object-set-indicator-type.md)
+
 ---
 
 ## Exibir graduação
@@ -33,6 +37,10 @@ Apresenta/oculta as graduações junto às etiquetas.
 
 [Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Passo de graduação
@@ -48,6 +56,10 @@ Medição do visor da escala.
 #### Objectos suportados
 
 [Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -69,6 +81,10 @@ Especifica a localização do texto de um objeto.
 
 [Termómetro](progressIndicator.md#default-thermometer) - [Regla](ruler.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Máximo
@@ -88,6 +104,10 @@ Valor máximo de um indicador.
 
 [Termômetro](progressIndicator.md#default-thermometer) - [Régua](ruler.md) - [Stepper](stepper.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get maximum-value](../commands-legacy/object-get-maximum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET MAXIMUM VALUE](../commands-legacy/object-set-maximum-value.md)
+
 ---
 
 ## Mínimo
@@ -104,6 +124,10 @@ Valor mínimo de um indicador. Para steppers numéricos, essa propriedade repres
 
 [Termômetro](progressIndicator.md#default-thermometer) - [Régua](ruler.md) - [Stepper](stepper.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET MINIMUM VALUE](../commands-legacy/object-set-minimum-value.md)
+
 ---
 
 ## Step
@@ -119,3 +143,7 @@ Intervalo mínimo aceite entre valores durante a utilização. Para steppers num
 #### Objectos suportados
 
 [Termômetro](progressIndicator.md#default-thermometer) - [Régua](ruler.md) - [Stepper](stepper.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)

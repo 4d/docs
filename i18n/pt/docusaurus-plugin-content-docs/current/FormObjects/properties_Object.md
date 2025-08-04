@@ -29,7 +29,7 @@ Cada objeto de formulário ativo está associado a um nome de objeto. Cada nome 
 
 > Os nomes dos objectos estão limitados a um tamanho de 255 bytes.
 
-When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../category/object-forms)).
+When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../commands/theme/Objects_Forms.md))).
 
 Para obter mais informações sobre regras de nomenclatura para objetos de formulário, consulte a seção [Identificadores](Concepts/identifiers.md).
 
@@ -42,6 +42,10 @@ Para obter mais informações sobre regras de nomenclatura para objetos de formu
 #### Objectos suportados
 
 [Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista hierárquica](list_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapie List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de imagem](pictureButton_overview.md) - [Menu pop-up com imagem](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progresso](progressIndicator.md) - [Spinner](spinner.md) - [Separador](splitters.md) - [Imagem estática](staticPicture.md) - [Etapas](stepper.md) - [Botão de opção](radio_overview.md) - [Subformulário](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
+
+#### Comandos
+
+[FORM GET OBJECTS](../commands-legacy/form-get-objects.md) - [OBJECT Get name](../commands-legacy/object-get-name.md)
 
 ---
 
@@ -118,6 +122,10 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 [4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
 
+#### Comandos
+
+[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula.md) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
+
 ---
 
 ## Tipo de expressão
@@ -183,6 +191,10 @@ A coleção ou a seleção da entidade deve estar disponível para o formulário
 #### Objectos suportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
 
 ---
 
@@ -265,6 +277,10 @@ Para fins de tradução da aplicação, você pode inserir uma referência XLIFF
 
 [Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md) - [ÁreaTexto](text.md)
 
+#### Comandos
+
+[`OBJECT Get title`](../commands-legacy/object-get-title.md) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title.md)
+
 ---
 
 ## Cálculo de variáveis
@@ -317,3 +333,7 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 #### Objectos suportados
 
 [Rodapé de Listbox](listbox_overview.md#list-box-footers)
+
+#### Comandos
+
+[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation.md) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md)

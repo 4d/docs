@@ -120,7 +120,7 @@ El estado actual de la ventana de depuración se guarda automáticamente en el p
 - el [modo de visualización](#display-mode),
 - las expresiones que se muestran actualmente en el panel de visualización personalizado. Por defecto, las expresiones se guardan con el método o función actual. Puede [**anclar una expresión**](#pinning-an-expression) para mantenerla mostrada en todos los contextos.
 
-The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
+El botón **Configuración predeterminada de la ventana** restaura la posición y el tamaño predeterminados de la ventana actual (incluidas las líneas de división y la propia ventana).
 
 ![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
@@ -301,7 +301,7 @@ También puede utilizar el comando [Call chain](../commands/call-chain.md) para 
 El panel de control personalizado es útil para evaluar expresiones. Es similar al [panel de control](#watch-pane), excepto que aquí usted decide qué expresiones se muestran. Todo tipo de expresión puede ser evaluada:
 
 - variable
-- object and object property
+- objeto y propiedad del objeto
 - campo
 - pointer
 - cálculo
@@ -323,7 +323,7 @@ Las siguientes opciones están disponibles:
 
 - **Variables locales**: muestra y evalúa automáticamente las variables locales tan pronto como se inicialicen en el código fuente en ejecución.
 - **Expresiones de línea**: muestra y evalúa automáticamente el mismo contenido que el elemento [Expresiones de línea](#line-expressions) de la Lista de expresiones.
-- **Expresiones**: solo muestra expresiones personalizadas que ha introducido manualmente. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **Expresiones**: solo muestra expresiones personalizadas que ha introducido manualmente. Las expresiones personalizadas tienen un icono azul específico ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
 
@@ -363,7 +363,7 @@ La expresión se mostrará en todas las ventanas del depurador.
 
 ### Menú contextual de la ventana de expresión
 
-The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
+El menú del panel de vigilancia personalizado está disponible mediante un clic contextual o utilizando el icono ![menu](../assets/en/Debugging/custom-watch-pane-menu.png):
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 

@@ -103,7 +103,7 @@ A 4D.IncomingMessage object is a [non-sharable](../Concepts/shared.md) object.
 :::
 
 
-<!-- REF #IncomingMessageClass.getBlob().Desc -->
+<!-- REF IncomingMessageClass.getBlob().Desc -->
 ## .getBlob()
 
 <!-- REF #IncomingMessageClass.getBlob().Syntax -->**.getBlob**() : Blob<!-- END REF -->
@@ -124,7 +124,7 @@ If the body has not been given as a binary content, the function tries to conver
 <!-- END REF -->
 
 
-<!-- REF #IncomingMessageClass.getHeader().Desc -->
+<!-- REF IncomingMessageClass.getHeader().Desc -->
 ## .getHeader()
 
 <!-- REF #IncomingMessageClass.getHeader().Syntax -->**.getHeader**( *key* : Text ) : Text<!-- END REF -->
@@ -157,7 +157,7 @@ $value := $request.getHeader("content-type")
 <!-- END REF -->
 
 
-<!-- REF #IncomingMessageClass.getJSON().Desc -->
+<!-- REF IncomingMessageClass.getJSON().Desc -->
 ## .getJSON()
 
 <!-- REF #IncomingMessageClass.getJSON().Syntax -->**.getJSON**() : Variant<!-- END REF -->
@@ -177,7 +177,7 @@ If the body has not been given as JSON valid content, an error is raised.
 <!-- END REF -->
 
 
-<!-- REF #IncomingMessageClass.getPicture().Desc -->
+<!-- REF IncomingMessageClass.getPicture().Desc -->
 ## .getPicture()
 
 <!-- REF #IncomingMessageClass.getPicture().Syntax -->**.getPicture**() : Picture<!-- END REF -->
@@ -207,7 +207,7 @@ If the body is not received as a valid picture, the function returns null.
 
 
 
-<!-- REF #IncomingMessageClass.getText().Desc -->
+<!-- REF IncomingMessageClass.getText().Desc -->
 ## .getText()
 
 <!-- REF #IncomingMessageClass.getText().Syntax -->**.getText**() : Text<!-- END REF -->
@@ -231,7 +231,7 @@ If the body has not been given as a string value, the function tries to convert 
 
 
 
-<!-- REF #IncomingMessageClass.headers.Desc -->
+<!-- REF IncomingMessageClass.headers.Desc -->
 ## .headers
 
 <!-- REF #IncomingMessageClass.headers.Syntax -->**headers** : Object<!-- END REF -->
@@ -249,7 +249,7 @@ Header names (keys) are lowercased. Note header names are case sensitive.
 
 
 
-<!-- REF #IncomingMessageClass.url.Desc -->
+<!-- REF IncomingMessageClass.url.Desc -->
 ## .url
 
 <!-- REF #IncomingMessageClass.url.Syntax -->**url** : Text<!-- END REF -->
@@ -270,7 +270,7 @@ The "host" part of the request (*IP:port*) is provided by the [`host` header](#h
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.urlPath.Desc -->
+<!-- REF IncomingMessageClass.urlPath.Desc -->
 ## .urlPath
 
 <!-- REF #IncomingMessageClass.urlPath.Syntax -->**urlPath** : Collection<!-- END REF -->
@@ -287,7 +287,7 @@ The `.urlPath` property is read-only.
 
 
 
-<!-- REF #IncomingMessageClass.urlQuery.Desc -->
+<!-- REF IncomingMessageClass.urlQuery.Desc -->
 ## .urlQuery
 
 <!-- REF #IncomingMessageClass.urlQuery.Syntax -->**urlQuery** : Object<!-- END REF -->
@@ -340,7 +340,7 @@ Parameters given in the body of the request using POST or PUT verbs are handled 
 <!-- END REF -->
 
 
-<!-- REF #IncomingMessageClass.verb.Desc -->
+<!-- REF IncomingMessageClass.verb.Desc -->
 ## .verb
 
 <!-- REF #IncomingMessageClass.verb.Syntax -->**verb** : Text<!-- END REF -->

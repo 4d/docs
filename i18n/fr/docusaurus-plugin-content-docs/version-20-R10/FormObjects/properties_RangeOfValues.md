@@ -35,7 +35,7 @@ Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour 
 
 #### Objets pris en charge
 
-[Input](input_overview.md)
+[Zone de saisie](input_overview.md)
 
 ---
 

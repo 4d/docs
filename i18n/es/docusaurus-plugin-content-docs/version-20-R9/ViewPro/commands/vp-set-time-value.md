@@ -5,14 +5,14 @@ title: VP SET TIME VALUE
 
 <!-- REF #_method_.VP SET TIME VALUE.Syntax -->
 
-**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
+**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Time { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
 | Parámetros    | Tipo   |    | Descripción          |                  |
 | ------------- | ------ | -- | -------------------- | ---------------- |
 | rangeObj      | Object | -> | Objeto rango         |                  |
-| timeValue     | Hora   | -> | Valor hora a definir |                  |
+| timeValue     | Time   | -> | Valor hora a definir |                  |
 | formatPattern | Text   | -> | Formato del valor    | <!-- END REF --> |
 
 ## Descripción

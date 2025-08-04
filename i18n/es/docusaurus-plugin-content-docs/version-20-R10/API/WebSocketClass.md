@@ -105,7 +105,7 @@ En *connectionHandler*, puede pasar un objeto que contenga funciones de retrolla
 | onTerminate | [Function](FunctionClass.md) | Función de retrollamada cuando el WebSocket se termina. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. Esto es específico al servidor y al subprotocolo particular.</li></ul>                                                                                                                                         |
 | onOpen      | [Function](FunctionClass.md) | Función de retrollamada cuando el webSocket está abierto. La retrollamada recibe los siguientes parámetros<li>:`$1`: objeto WebSocket</li><li>:`$2` objeto</li><ul><li>`$2.type` (texto): siempre "open"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | dataType    | Text                         | Tipo de datos recibidos o enviados. Valores disponibles: "text" (por defecto), "blob", "object". "text" = utf-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                      |
+| headers     | Object                       | Encabezados del WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                                                                                                                                                                                                                                     |
 
 Esta es la secuencia de llamadas de retorno:
 
@@ -131,7 +131,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=fresa"
 
 ```
 
-<!-- REF #WebSocketClass.dataType.Desc -->
+<!-- REF WebSocketClass.dataType.Desc -->
 
 ## .dataType
 
@@ -145,7 +145,7 @@ Esta propiedad es de sólo lectura.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.handler.Desc -->
+<!-- REF WebSocketClass.handler.Desc -->
 
 ## .handler
 
@@ -159,7 +159,7 @@ Esta propiedad es de sólo lectura.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.id.Desc -->
+<!-- REF WebSocketClass.id.Desc -->
 
 ## .id
 
@@ -173,7 +173,7 @@ Esta propiedad es de sólo lectura.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.send().Desc -->
+<!-- REF WebSocketClass.send().Desc -->
 
 ## .send()
 
@@ -201,7 +201,7 @@ Los siguientes contenidos se envían en función del tipo de *message*:
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.status.Desc -->
+<!-- REF WebSocketClass.status.Desc -->
 
 ## .status
 
@@ -215,7 +215,7 @@ Esta propiedad es de sólo lectura.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.terminate().Desc -->
+<!-- REF WebSocketClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -243,7 +243,7 @@ En *reason*, puede pasar una cadena que describa por qué se está cerrando la c
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.url.Desc -->
+<!-- REF WebSocketClass.url.Desc -->
 
 ## .url
 

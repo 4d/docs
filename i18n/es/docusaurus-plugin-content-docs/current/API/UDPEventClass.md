@@ -13,7 +13,7 @@ The `UDPEvent` class provides information about events occurring during the life
 
 </details>
 
-### UDPEvent Object
+### Objeto UDPEvent
 
 A `UDPEvent` object is immutable and non-streamable.
 
@@ -26,7 +26,7 @@ Las siguientes propiedades están disponibles:
 | [<!-- INCLUDE #UDPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPEvent.port.Summary --> |
 | [<!-- INCLUDE #UDPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #UDPEvent.type.Summary --> |
 
-<!-- REF #UDPEvent.data.Desc -->
+<!-- REF UDPEvent.data.Desc -->
 
 ## .data
 
@@ -34,11 +34,11 @@ Las siguientes propiedades están disponibles:
 
 #### Descripción
 
-The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type "data".
+The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associated with the event<!-- END REF -->. Sólo es válido para eventos de tipo "data".
 
 <!-- END REF -->
 
-<!-- REF #UDPEvent.ip.Desc -->
+<!-- REF UDPEvent.ip.Desc -->
 
 ## .ip
 
@@ -50,7 +50,7 @@ The `.ip` property contains <!-- REF #UDPEvent.ip.Summary -->the IP address of t
 
 <!-- END REF -->
 
-<!-- REF #UDPEvent.port.Desc -->
+<!-- REF UDPEvent.port.Desc -->
 
 ## .port
 
@@ -62,7 +62,7 @@ The `.port` property contains <!-- REF #UDPEvent.port.Summary -->the port number
 
 <!-- END REF -->
 
-<!-- REF #UDPEvent.type.Desc -->
+<!-- REF UDPEvent.type.Desc -->
 
 ## .type
 

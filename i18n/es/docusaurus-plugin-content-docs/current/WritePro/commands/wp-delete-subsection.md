@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 ## Descripción
 
-El comando **WP DELETE SUBSECTION** <!--REF #_command_.WP DELETE SUBSECTION.Summary-->elimina los elementos *subSectionType* de la sección *wpSection* 4D Write Pro, o directamente elimina la *subSection*<!-- END REF-->. Subsection elements include headers, footers, columns, anchored pictures, etc. Tenga en cuenta que el cuerpo del documento no se modifica.
+El comando **WP DELETE SUBSECTION** <!--REF #_command_.WP DELETE SUBSECTION.Summary-->elimina los elementos *subSectionType* de la sección *wpSection* 4D Write Pro, o directamente elimina la *subSection*<!-- END REF-->. Los elementos de subsección incluyen encabezados, pies de página, columnas, imágenes ancladas, etc. Tenga en cuenta que el cuerpo del documento no se modifica.
 
-In *wpSection*, pass the section from which you want to remove the subsection elements. La sección puede obtenerse utilizando los comandos [WP Get sections](../commands-legacy/wp-get-sections.md) o [WP Get section](../commands-legacy/wp-get-section.md).
+En *wpSection*, pase la sección de la que desea eliminar los elementos de subsección. La sección puede obtenerse utilizando los comandos [WP Get sections](../commands-legacy/wp-get-sections.md) o [WP Get section](../commands-legacy/wp-get-section.md).
 
 El parámetro *subSectionType* especifica la subsección a borrar. Puede pasar una de las siguientes constantes:
 
@@ -33,21 +33,21 @@ El parámetro *subSectionType* especifica la subsección a borrar. Puede pasar u
 
 :::note
 
-Deleting a left page or right page subsection will automatically delete the opposite subsection. For example, if you delete a right page subsection, the left page subsection is automatically deleted.
+Al eliminar una subsección de la página izquierda o derecha, se eliminará automáticamente la subsección opuesta. Por ejemplo, si elimina una subsección de la página derecha, la subsección de la página izquierda se elimina automáticamente.
 
 :::
 
-If the *subSectionType* does not exist, the command does nothing (no error is generated).
+Si *subSectionType* no existe, el comando no hace nada (no se genera ningún error).
 
 :::note
 
-When a subsection is deleted, the header and footer are removed, as well as anchored pictures and textboxes but the body remains untouched.
+Cuando se suprime una subsección, se eliminan el encabezado y el pie de página, así como las imágenes ancladas y los cuadros de texto, pero el cuerpo permanece intacto.
 
 :::
 
 ## Ejemplo 1
 
-You want to delete the first page subsection of the first section:
+Desea eliminar la subsección de la primera página de la primera sección:
 
 ```4d
  var $section;$subsection : Object
@@ -59,7 +59,7 @@ You want to delete the first page subsection of the first section:
 
 ## Ejemplo 2
 
-You want to delete the right page subsection of section 3:
+Desea eliminar la subsección de la página derecha de la sección 3:
 
 ```4d
 

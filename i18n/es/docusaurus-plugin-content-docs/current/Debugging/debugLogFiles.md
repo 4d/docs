@@ -458,7 +458,7 @@ Este es un ejemplo de un registro ORDA del lado del servidor:
 
 ## 4DTCPUDPLog.txt
 
-This log file records events related to TCP or UDP connections. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión. Este registro ayuda a los desarrolladores a monitorear y depurar la actividad de red dentro de sus aplicaciones.
+Este archivo de registro registra eventos relacionados con conexiones TCP o UDP. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión. Este registro ayuda a los desarrolladores a monitorear y depurar la actividad de red dentro de sus aplicaciones.
 
 Como iniciar este historial:
 
@@ -487,7 +487,7 @@ Los siguientes campos se registran para cada evento:
 | peerAddress      | Text       | Dirección IP del peer remoto                                                                  |
 | peerPort         | Number     | Puerto del peer remoto                                                                        |
 | protocol         | Text       | "TCP" o "UDP                                                                                  |
-| evento           | Text       | The type of event: `open`, `close`, `error`, `send`, `receive`, `listen`      |
+| evento           | Text       | El tipo de evento: `open`, `close`, `error`, `send`, `receive`, `listen`      |
 | size             | Number     | La cantidad de datos enviados o recibidos (en bytes), 0 si no es aplicable |
 | excerpt          | Number     | Primeros 10 bytes de datos en formato hexadecimal                                             |
 | textExcerpt      | Text       | Primeros 10 bytes de datos en formato texto                                                   |
@@ -672,7 +672,7 @@ El archivo de configuración del registro es un archivo `.json` que debe cumplir
 
 - The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log\\\\\\\`,...).
 - Para httpDebugLogs, la propiedad "level" corresponde a las opciones constantes `wdl` descritas en el comando [`WEB SET OPTION`](../commands-legacy/web-set-option.md).
-- For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
+- Para diagnosticLogs, la propiedad "level" corresponde a los valores constantes de `Diagnostic log level` descritos en el comando [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md).
 
 :::
 

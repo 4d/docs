@@ -15,7 +15,7 @@ The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/do
 
 ## Ejemplos de uso
 
-### model list
+### Lista de modelos
 
 ```4d
 $client.models.list({formula: Formula(MyReceiveMethod($1))})
@@ -37,7 +37,7 @@ Else
 End if
 ```
 
-### chat completions
+### finalización del chat
 
 ```4d
 var $messages:=[{role: "system"; content: "You are a helpful assistant."}]

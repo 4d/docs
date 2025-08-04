@@ -13,9 +13,9 @@ The `_ImageUtils` internal class provides utility functions for handling images,
 
 Converts a URL to a Blob object by making an HTTP request.
 
-| Argumento | Tipo | Descripción                                           |
-| --------- | ---- | ----------------------------------------------------- |
-| $url      | Text | The URL of the image to be converted. |
+| Argumento | Tipo | Descripción                                      |
+| --------- | ---- | ------------------------------------------------ |
+| $url      | Text | La URL de la imagen a convertir. |
 
 **Devuelve**: Blob o Null si la solicitud falla.
 
@@ -25,11 +25,11 @@ var $blob:=cs._ImageUtils.me.httpURLToBlob("http://example.com/image.png")
 
 ### base64ToBlob
 
-Converts a base64 encoded string to a Blob object.
+Convierte una cadena codificada en base64 en un objeto Blob.
 
-| Argumento | Tipo | Descripción                                      |
-| --------- | ---- | ------------------------------------------------ |
-| $base64   | Text | The base64 encoded image string. |
+| Argumento | Tipo | Descripción                                            |
+| --------- | ---- | ------------------------------------------------------ |
+| $base64   | Text | La cadena de imagen codificada base64. |
 
 **Devuelve**: Blob que representa la imagen decodificada.
 
@@ -55,9 +55,9 @@ var $blob:=cs._ImageUtils.me.toBlob($image)
 
 Convierte una imagen en una cadena codificada en base64.
 
-| Argumento  | Tipo    | Descripción                                                 |
-| ---------- | ------- | ----------------------------------------------------------- |
-| $imageInfo | Variant | The image information to convert to base64. |
+| Argumento  | Tipo    | Descripción                                                       |
+| ---------- | ------- | ----------------------------------------------------------------- |
+| $imageInfo | Variant | La información de la imagen a convertir a base64. |
 
 **Returns**: Base64 encoded Text or an empty string if conversion fails.
 

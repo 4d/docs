@@ -19,6 +19,10 @@ El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso 
 
 [Botón personalizado](button_overview.md#custom) - [Casilla de selección personalizada](checkbox_overview.md#custom) - [Botón radio personalizado](radio_overview.md#custom)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Estilos de botón
@@ -34,6 +38,10 @@ Aspecto general del botón. El estilo del botón también influye en la disponib
 #### Objetos soportados
 
 [Botón](button_overview.md) - [Botón radio](radio_overview.md) - [Casilla de selección](checkbox_overview.md) - [Botón Radio](radio_overview.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -60,6 +68,10 @@ Este parámetro es útil, por ejemplo, cuando la imagen de fondo contiene bordes
 
 [Botón personalizado](button_overview.md#custom) - [Casilla de selección personalizada](checkbox_overview.md#custom) - [Botón radio personalizado](radio_overview.md#custom)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Ubicación del icono
@@ -75,6 +87,10 @@ Designa la ubicación de un icono en relación con el objeto formulario.
 #### Objetos soportados
 
 [Encabezado de List Box](listbox_overview.md#list-box-headers)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -93,6 +109,10 @@ El título del botón se desplazará hacia la derecha y hacia la parte inferior 
 #### Objetos soportados
 
 [Botón personalizado](button_overview.md#custom) - [Casilla de selección personalizada](checkbox_overview.md#custom) - [Botón radio personalizado](radio_overview.md#custom)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -129,6 +149,10 @@ Cada estado está representado por una imagen diferente. En la imagen fuente, lo
 
 [Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Botón radio](radio_overview.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Ruta de acceso de la imagen
@@ -148,6 +172,10 @@ El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso 
 #### Objetos soportados
 
 [Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -175,6 +203,10 @@ Aquí están los resultados utilizando las distintas opciones para esta propieda
 
 [Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Botón radio](radio_overview.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Posición título imagen
@@ -197,6 +229,10 @@ Por defecto, cuando un botón contiene un título y una imagen, los elementos se
 
 [Botón](button_overview.md) (todos los estilos excepto Ayuda) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Normal, Plano, Revelar y Contraer/Expandir) - [Botón de radio](radio_overview.md) (todos los estilos excepto Normal, Plano, Revelar y Contraer/Expandir).
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Margen vertical
@@ -216,6 +252,10 @@ Este parámetro es útil, por ejemplo, cuando la imagen de fondo contiene bordes
 #### Objetos soportados
 
 [Botón personalizado](button_overview.md#custom) - [Casilla de selección personalizada](checkbox_overview.md#custom) - [Botón radio personalizado](radio_overview.md#custom)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -250,7 +290,7 @@ Consulte la descripción del evento [`On Alternative Click`](../Events/onAlterna
 
 ### Gestión del menú emergente
 
-Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el aspecto gráfico del botón. La visualización del menú emergente y sus valores deben ser manejados enteramente por el desarrollador, más particularmente utilizando los comandos`form events` y [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) y [`Pop up menu`](../commands-legacy/pop-up-menu.md).
+Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el aspecto gráfico del botón. La visualización del menú emergente y sus valores deben ser manejados enteramente por el desarrollador, más particularmente utilizando los comandos [`form events`](../Events/overview.md) y [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) y [`Pop up menu`](../commands-legacy/pop-up-menu.md).
 
 #### Gramática JSON
 
@@ -261,3 +301,8 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 #### Objetos soportados
 
 [Botón de barra de herramientas](button_overview.md#toolbar) - [Botón biselado](button_overview.md#bevel) - [Botón biselado redondeado](button_overview.md#rounded-bevel) - [Botón de degradado OS X](button_overview.md#os-x-gradient) - [Botón con textura OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Botón circular](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+

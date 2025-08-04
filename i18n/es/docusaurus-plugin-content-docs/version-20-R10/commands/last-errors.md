@@ -66,14 +66,14 @@ Each error object contains the following properties:
 
 #### Firmas de componentes internos (Sistema)
 
-| Firma del componente | Componente                                               |
-| -------------------- | -------------------------------------------------------- |
-| CARB                 | Carbon subsystem                                         |
-| COCO                 | Cocoa subsystem                                          |
-| MACH                 | macOS Mach subsystem                                     |
-| POSX                 | posix/bsd subsystem (mac, linux, win) |
-| PW32                 | Pre-Win32 subsystem                                      |
-| WI32                 | Win32 subsystem                                          |
+| Firma del componente | Componente                                                |
+| -------------------- | --------------------------------------------------------- |
+| CARB                 | Carbon subsystem                                          |
+| COCO                 | Cocoa subsystem                                           |
+| MACH                 | macOS Mach subsystem                                      |
+| POSX                 | subsistema posix/bsd (mac, linux, win) |
+| PW32                 | Pre-Win32 subsystem                                       |
+| WI32                 | Win32 subsystem                                           |
 
 ## Ver también
 

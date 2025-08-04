@@ -16,13 +16,13 @@ title: VP Get cell style
 
 ## Description
 
-The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->returns a [style object](../configuring.md#style-objects) for the first cell in the *rangeObj*<!-- END REF -->.
+La commande `VP Get cell style`<!-- REF #_method_.VP Get cell style.Summary -->retourne un [objet stylet](../configuring.md#style-objects) pour la première cellule de *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range containing the style to retrieve.
+Dans *rangeObj*, passez une plage contenant le style à récupérer.
 
-- If *rangeObj* contains a cell range, the cell style is returned.
-- If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
-- If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
+- Si *rangeObj* contient une plage de cellules, le style de cellule est retourné.
+- Si *rangeObj* contient une plage qui n'est pas une plage cellule, le style de la première cellule de la plage est retourné.
+- Si *rangeObj* contient plusieurs lignes, seul le style de la première cellule de la première plage est retourné.
 
 ## Exemple
 
@@ -36,7 +36,7 @@ Le code suivant :
 $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 ```
 
-... will return this object:
+... retournera cet objet :
 
 ```4d
 {

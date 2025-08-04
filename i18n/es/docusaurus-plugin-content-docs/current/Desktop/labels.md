@@ -12,7 +12,7 @@ title: Etiquetas
 - Especifique cuántas etiquetas imprimir por registro,
 - Especifique los márgenes de la página de etiquetas,
 - Designate a method to execute when printing each label or record,
-- Create a preview and print the labels.
+- Crea una vista previa e imprime las etiquetas.
 
 :::note
 
@@ -64,7 +64,7 @@ You use this area to design your label zone by placing and positioning all the i
   If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
 - You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
   ![](../assets/en/Desktop/label-formula1.png)<br/>
-  For example, you can apply a format to a field using the [`String`](../commands-legacy/string.md) command:<br/>
+  For example, you can apply a format to a field using the [`String`](../commands/string.md) command:<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
@@ -92,7 +92,7 @@ When you use a form, 4D executes any form or object methods associated with it. 
 
 :::
 
-### Graphic area commands
+### Comandos del área gráfica
 
 The graphic area of the editor includes both a tool bar and a context menu that you can use to design your label template.
 
@@ -121,7 +121,7 @@ The right-hand side of the tool bar contains commands used to modify items of th
 | ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno          | todos los iconos de color muestran el color seleccionado                                                                                                                                                                                                                                                                                                         |
 | ![](../assets/en/Desktop/label-tool8.png)  | Color de línea            |                                                                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Desktop/label-tool9.png)  | Peso lineal               |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool10.png) | Font menu                 | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
+| ![](../assets/en/Desktop/label-tool10.png) | Menú Fuente               | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
 | ![](../assets/en/Desktop/label-tool11.png) | Alineación y distribución | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
 | ![](../assets/en/Desktop/label-tool12.png) | Nivel de los objetos      | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
 

@@ -624,7 +624,7 @@
     "description": "The label for category Mail in sidebar docs"
   },
   "sidebar.docs.category.Math": {
-    "message": "Math",
+    "message": "Funciones matemáticas",
     "description": "The label for category Math in sidebar docs"
   },
   "sidebar.docs.category.Messages": {
@@ -940,7 +940,7 @@
     "description": "The generated-index page title for category Mail in sidebar docs"
   },
   "sidebar.docs.category.Math.link.generated-index.title": {
-    "message": "Math",
+    "message": "Funciones matemáticas",
     "description": "The generated-index page title for category Math in sidebar docs"
   },
   "sidebar.docs.category.Menus.link.generated-index.title": {
@@ -1128,7 +1128,7 @@
     "description": "The generated-index page title for category XML in sidebar docs"
   },
   "sidebar.docs.category.Dababase structure": {
-    "message": "Dababase structure",
+    "message": "Estructura de la base de datos",
     "description": "The label for category Dababase structure in sidebar docs"
   },
   "sidebar.docs.category.4D AIKit": {

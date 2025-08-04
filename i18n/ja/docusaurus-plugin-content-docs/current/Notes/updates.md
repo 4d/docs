@@ -3,13 +3,25 @@ id: updates
 title: リリースノート
 ---
 
+## 4D 21
+
+Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), the blog post that lists all new features and enhancements in 4D 21.
+
+#### ハイライト
+
+- The code of a loaded, interpreted component can now be [edited from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer.
+- Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- 4Dランゲージ:
+    - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
+    - [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
+
 ## 4D 20 R10
 
 [**4D 20 R10の新機能**](https://blog.4d.com/en-whats-new-in-4d-20-R10/) 4D 20 R10 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
-- Handling of [ORDA events on data](../ORDA/orda-events.md).
+- [データ上のORDA イベント](../ORDA/orda-events.md) の管理。
 - [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) 関数の[`options`](../API/TCPConnectionClass.md#options-parameter) 引数に新しい`connectionTimeout` オプションが追加されました。
 - New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - 4D 内でのUUID は**バージョン7**で生成されるようになりました。 以前の4D のリリースでは、バージョン4で生成されていました。
@@ -37,7 +49,7 @@ title: リリースノート
 
 #### ハイライト
 
-- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
+- [*MeCab* ライブラリー](../settings/database.md#mecab日本語版のサポート) は今後廃止予定となり、次のリリースでは削除される予定です。
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - ラベルウィザードは、[ラベルデザインエリア](../Desktop/labels.md#ラベルプレビューエリア) においてフォーミュラを追加または編集する際にフォーミュラエディターを使用するようになりました。
 - TCP サーバー接続を作成するための新しい[`TCPListener`](../API/TCPListenerClass.md) クラス。関連クラスに新しいプロパティが追加されました。[`TCPConnection`](../API/TCPConnectionClass.md) クラスに`address`、`listener` および `port`。[`TCPEvent`](../API/TCPEventClass.md) クラスに `ip` および `port`。
@@ -64,9 +76,9 @@ title: リリースノート
 - [スタンドアロンセッション](../API/SessionClass.md) のサポート。これによりクライアント/サーバーアプリケーションのローカルなコーディングが単純化されます。
 - [4D デバッガ](../Debugging/debugger.md): 新デザイン、自動保存、表示モードなどの新機能
 - Apple 公証ガイドラインにより合致する[新しくビルトされたコンポーネントアーキテクチャ](../Desktop/building.md#build-component)
-- ビルドアプリケーションダイアログボックスから、簡単に[評価版アプリケーションをビルド](../Desktop/building.md#評価版アプリケーションをビルド) することができるようになりました。
+- ビルドアプリケーションダイアログボックスから、簡単に[評価版アプリケーションをビルド](../Desktop/building.md#評価版アプリケーション) することができるようになりました。
 - 依存関係: 依存関係マネージャーを使用して、GitHub 上のコンポーネントの[新バージョンをチェック](../Project/components.md#新バージョンをチェック) したり[更新する](../Project/components.md#依存関係の更新) ことができます。
-- 新しい [`TCPConnection`](../API/TCPConnectionClass.md) および [`TCPEvent`](../API/TCPEventClass.md) クラスを使用してTCP クライアント接続を管理したり、イベントを管理したり、データ転送のコントロールを改善することができます。 追加された[`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) を使用することでTCP イベントの詳細なログを取ることができます。
+- 新しい [`TCPConnection`](../API/TCPConnectionClass.md) および [`TCPEvent`](../API/TCPEventClass.md) クラスを使用してTCP クライアント接続を管理したり、イベントを管理したり、データ転送のコントロールを改善することができます。 追加された[`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) を使用することでTCP イベントの詳細なログを取ることができます。
 - [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) および [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) の新しいオプションを使用して、スタイル、フォーミュラ、データ整合性、そしてパスワードによる保護などを管理することができます。
 - 4D Write Pro:
     - 以下のコマンドが、引数としてオブジェクトまたはコレクションを受け取れるようになりました: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md)、[WP Get attributes](../WritePro/commands/wp-get-attributes.md)、[WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)、[WP Table append row](../WritePro/commands/wp-table-append-row.md)、 [WP Import document](../WritePro/commands/wp-import-document.md)、 [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md)、 [WP Add picture](../WritePro/commands/wp-add-picture.md)、および [WP Insert picture](../WritePro/commands/wp-insert-picture.md)
@@ -112,7 +124,7 @@ title: リリースノート
 
 - [4Dランゲージ](../commands/command-index.md) よび [4D Write Pro ランゲージ](../WritePro/commands/command-index.md) のドキュメントが、developer.4d.com で利用できるようになりました。  これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。
 - [`File`](../commands/file.md) コマンド (および [`4D.File.new()`](../API/FileClass.md#4dfilenew) コマンド) は、引数として与えられた *path* のシンタックスをより厳しくチェックする様になりました。
-- [permission](../ORDA/privileges.md#permission-actions) の利用可能なアクションから、**describe** アクションが削除されました。 [permission](../ORDA/privileges.md#permission-actions) の利用可能なアクションから、**describe** アクションが削除されました。 [`/rest/$catalog`](../REST/$catalog.md) URL へのアクセスは制御されなくなりました。 Session の *describe* 権限は今後は無視されます。 Session の *describe* 権限は今後は無視されます。
+- [permission](../ORDA/privileges.md#permission-actions) の利用可能なアクションから、**describe** アクションが削除されました。 [`/rest/$catalog`](../REST/$catalog.md) URL へのアクセスは制御されなくなりました。 Session の *describe* 権限は今後は無視されます。
 
 ## 4D 20 R6
 
@@ -215,7 +227,7 @@ title: リリースノート
 #### 動作の変更
 
 - いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみでキャッチ可能でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。 ただし、Intelプロセッサーでは、このようなエラーによって以前と同様に処理が中断されますが、Apple Siliconプロセッサーでは、[`ABORT`](../commands-legacy/abort.md) コマンドを呼び出さない限り、処理は中断されません。
-- 4D は内部的な PHPインタプリターを実装しなくなりました。  4D は内部的な PHPインタプリターを実装しなくなりました。  PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter) 必要があります。
+- 4D は内部的な PHPインタプリターを実装しなくなりました。  PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter) 必要があります。
 
 ## 4D 20 R2
 

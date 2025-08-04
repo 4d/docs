@@ -225,7 +225,7 @@ La propriété `.isWritable` renvoie <!-- REF #document.isWritable.Summary -->tr
 
 Cette propriété est en **lecture seule**.
 
-**Example**
+**Exemple**
 
 ```4d
  $myFile:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)

@@ -23,6 +23,10 @@ title: Picture
 
 [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [スタティックピクチャー](staticPicture.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 表示
@@ -66,3 +70,7 @@ title: Picture
 #### 対象オブジェクト
 
 [スタティックピクチャー](staticPicture.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)

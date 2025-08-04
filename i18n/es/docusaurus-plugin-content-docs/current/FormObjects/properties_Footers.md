@@ -17,6 +17,10 @@ Esta propiedad se utiliza para mostrar u ocultar [los pies de columna listbox](l
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Altura
@@ -59,6 +63,10 @@ Tenga en cuenta que la conversión de ida y vuelta puede conducir a un resultado
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height.md) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md)
 
 #### Ver también
 

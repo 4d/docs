@@ -71,7 +71,7 @@ $result:=$helper.prompt("and could you decompose this number")
 // conversation in $helper.messages
 ```
 
-##### Vision helper
+##### Asistente de visión
 
 This helper enables image analysis through the chat.
 

@@ -107,5 +107,7 @@ displayed_sidebar: docs
 
 ## 参照
 
+[`Process info`](process-info.md)
+[`Session info`](session-info.md)
 [Session storage](session-storage.md)\
 [WEB Get server info](../commands-legacy/web-get-server-info.md)

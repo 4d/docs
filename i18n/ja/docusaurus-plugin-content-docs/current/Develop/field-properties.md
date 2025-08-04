@@ -3,31 +3,31 @@ id: field-properties
 title: フィールドプロパティ
 ---
 
-For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv20R10/4D/20-R10/Field-properties.300-7543749.en.html#5523008).
+他のフィールドプロパティについては、[doc.4d.com](https://doc.4d.com/4Dv20R10/4D/20-R10/Field-properties.300-7543749.ja.html#5523008) を参照してください。
 
 ## Class
 
 ![](../assets/en/Develop/inspector-class.png)
 
-This property is available for fields of type **Object** (in 4D projects only). It allows you to define a **class-typed object field**, enhancing code completion, syntax checking, and runtime validation when typing code that involves object fields.
+このプロパティは**オブジェクト**型のフィールドにおいてのみ利用可能です(プロジェクトモードのみ)。 これを使用すると**クラス型のオブジェクトフィールド**を定義することができ、これによってコード保管、シンタックスチェック、そしてオブジェクトフィールドに絡んだコードを打ち込んでいる際のランタイム評価などを改善することができます。
 
-You can enter any valid class name in this property, including:
+ここには有効なクラス名であればなんでも入力することができます。これには以下のものも含まれます:
 
-- User classes (e.g. `cs.MyClass`)
-- Built-in 4D classes (e.g. `4D.File`, `4D.Folder`)
-- [Exposed](../Extensions/develop-components.md#sharing-of-classes) component-defined classes (e.g. `cs.MyComponent.MyClass`)
+- ユーザークラス(例: `cs.MyClass`)
+- ビルトイン4D クラス(例: `4D.File`、`4D.Folder`)
+- [公開された](../Extensions/develop-components.md#クラスの共有) コンポーネントで定義されたクラス(例: `cs.MyComponent.MyClass`)
 
-If you enter an invalid class name, a warning is triggered and the input is rejected.
+無効なクラス名を入力した場合、警告がトリガーされ、入力が拒否されます。
 
 :::note
 
-**Non-streamable classes** such as [ORDA Data Model classes](../ORDA/ordaClasses.md), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be associated to object fields.
+[ORDA データモデルクラス](../ORDA/ordaClasses.md)、[ファイルハンドラー](../API/FileHandleClass.md)、[Web サーバー](../API/WebServerClass.md)... などの**ストリーム不可のクラス** はオブジェクトフィールドに代入することはできません。
 
 :::
 
-In your code, when assigning a value to a class-typed object field, 4D verifies that it belongs to the declared class. If not or if the object has no class, an error is triggered. Accessing unknown attributes will also raise syntax errors.
+コード内において、値をクラス型のオブジェクトフィールドに代入する場合、4D はその値が宣言されたクラスに所属しているかどうかを検証します。 クラスに所属していない場合、あるいはオブジェクトがどのクラスにも属していない場合、エラーがトリガーされます。 不明な属性へのアクセスもまたシンタックスエラーを発生させます。
 
-To retrieve the associated class name at runtime, use the [`classID`](../API/DataClassClass.md#attributename) property, for example `ds.MyTable.MyField.classID`.
+ランタイムにおいて関連づけられたクラス名を取得するためには、[`classID`](../API/DataClassClass.md#attributename) プロパティを使用してください。例: `ds.MyTable.MyField.classID` 。
 
 ### 参照
 

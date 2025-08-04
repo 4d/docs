@@ -18,15 +18,15 @@ Las licencias de desarrollo son necesarias para acceder al entorno Diseño 4D y 
 
 Las licencias de despliegue pueden ser anidadas en el paso de creación por el desarrollador o introducido en el primer lanzamiento por el usuario final, como se describe en la siguiente tabla:
 
-| Licencia de despliegue   | Descripción                                                                                | Dónde introducirla                                                               |
-| ------------------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| *4D OEM Desktop*         | Licencia personalizada integrada, contacte al equipo de ventas 4D para obtener información | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
-| *4D Unlimited Desktop*   | **Descontinuada** - Licencia personalizada integrada                                       | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
-| *4D Desktop*             | Licencia por usuario, que permite utilizar aplicaciones 4D independientes                  | Diálogo [Primera activación](#first-activation) en la máquina usuario            |
-| *4D Desktop Business*    | Embedded custom license for stand-alone 4D applications                                    | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
-| *4D Server OEM*          | Licencia personalizada integrada, contacte al equipo de ventas 4D para obtener información | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
-| *4D XML Keys Activation* | Used to activate 4D Server OEM licenses in non-automatic embedding mode                    | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
-| *4D Server*              | Licencia por usuario, que les permite utilizar 4D Server y clientes                        | Diálogo [Primera activación](#first-activation) en la máquina usuario            |
+| Licencia de despliegue   | Descripción                                                                                  | Dónde introducirla                                                               |
+| ------------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| *4D OEM Desktop*         | Licencia personalizada incorporada, contacte al equipo de ventas 4D para obtener información | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
+| *4D Unlimited Desktop*   | **Descontinuada** - Licencia personalizada integrada                                         | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
+| *4D Desktop*             | Licencia por usuario, que permite utilizar aplicaciones 4D independientes                    | Diálogo [Primera activación](#first-activation) en la máquina usuario            |
+| *4D Desktop Business*    | Licencia personalizada integrada para aplicaciones 4D independientes                         | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
+| *4D Server OEM*          | Licencia personalizada incorporada, contacte al equipo de ventas 4D para obtener información | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
+| *4D XML Keys Activation* | Utilizado para activar las licencias OEM del servidor 4D en modo de embebido no automático   | Página [Licencias](../Desktop/building.md#licenses) del diálogo Crear aplicación |
+| *4D Server*              | Licencia por usuario, que les permite utilizar 4D Server y clientes                          | Diálogo [Primera activación](#first-activation) en la máquina usuario            |
 
 ### Vencimiento
 

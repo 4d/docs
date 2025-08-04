@@ -92,7 +92,7 @@ El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
-You want to set a background image that covers the whole printable area. All attributes are passed using a single object:
+You want to set a background image that covers the whole printable area. Todos los atributos se pasan utilizando un único objeto:
 
 ```4d
  var WParea : Object

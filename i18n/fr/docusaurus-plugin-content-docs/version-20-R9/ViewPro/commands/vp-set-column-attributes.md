@@ -16,11 +16,11 @@ title: VP SET COLUMN ATTRIBUTES
 
 ## Description
 
-The `VP SET COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*<!-- END REF -->.
+La commande `VP SET COLUMN ATTRIBUTES`<!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applique les attributs définis dans le paramètre *propertyObj* pour les colonnes de *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range. Si la plage contient des colonnes et des lignes, les attributs s'appliquent uniquement aux colonnes.
+Dans *rangeObj*, passez un objet contenant une plage. Si la plage contient des colonnes et des lignes, les attributs s'appliquent uniquement aux colonnes.
 
-The *propertyObj* parameter lets you specify the attributes to apply to the columns in the *rangeObj*. Ces attributs sont :
+Le paramètre *propertyObj* vous permet de renseigner les attributs à appliquer aux colonnes de *rangeObj*. Ces attributs sont :
 
 | Propriété | Type    | Description                                                                         |
 | --------- | ------- | ----------------------------------------------------------------------------------- |
@@ -37,7 +37,7 @@ Pour modifier la taille de la deuxième colonne et définir un en-tête, le code
 ```4d
 C_OBJECT($column;$properties)
  
-$column:=VP Column("ViewProArea";1) //column B
+$column:=VP Column("ViewProArea";1) //colonne B
 $properties:=New object("width";100;"header";"Hello World")
  
 VP SET COLUMN ATTRIBUTES($column;$properties)

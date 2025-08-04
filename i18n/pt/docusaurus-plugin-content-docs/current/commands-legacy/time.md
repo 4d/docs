@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 O parâmetro *horaString* deve conter:
 
-* Uma cadeia que contenha uma hora expressa em um dos seguintes formatos de hora padrão de 4D correspondentes à linguagem de seu sistema (para maior informação, consulte a descrição do comando [String](string.md)).
+* Uma cadeia que contenha uma hora expressa em um dos seguintes formatos de hora padrão de 4D correspondentes à linguagem de seu sistema (para maior informação, consulte a descrição do comando [String](../commands/string.md)).
 * Um inteiro longo que representa o número de segundos passados desde 00:00:00.
 
 **Nota:** se a expressão *valHora* se avaliar como indefinida, **Time** devolve uma hora vazia (00:00:00). Isso é útil quando se espera que o resultado de uma expressão (por exemplo, um atributo objeto) seja uma hora, mesmo se puder ser indefinida.
@@ -48,8 +48,8 @@ Pode expressar todo valor numérico como uma hora:
 
 [ARRAY TIME](array-time.md)  
 [Bool](bool.md)  
-[String](string.md)  
-[Time string](time-string.md)  
+[String](../commands/string.md)  
+[Time string](../commands/time-string.md)  
 [Timestamp](timestamp.md)  
 
 ## Propriedades

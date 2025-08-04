@@ -22,6 +22,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 ---
 ## Detail Form Name
+
 `Selection type list box`
 
 Specifies the form to use for modifying or displaying individual records of the list box.
@@ -73,6 +74,9 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 [List Box](listbox_overview.md)
 
 
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 
 ---
@@ -97,6 +101,9 @@ This property is used to specify the set to be used to manage highlighted record
 
 [List Box](listbox_overview.md)
 
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 
 ---
@@ -153,6 +160,9 @@ Number of columns that cannot be moved during execution.
 [List Box](listbox_overview.md)
 
 
+#### Commands
+
+[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns.md) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns.md) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns.md) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns.md)
 
 
 
@@ -174,7 +184,9 @@ Sets the number of columns of the list box.
 
 [List Box](listbox_overview.md)
 
+#### Commands
 
+[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns.md) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md)
 
 
 ---
@@ -230,6 +242,9 @@ Note that setting properties for an element overrides any other values for this 
 
 [List Box](listbox_overview.md)
 
+#### Commands
+
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array.md)
 
 
 ---
@@ -251,3 +266,8 @@ The Up and Down arrow keys select the previous/next row in the list. The other n
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

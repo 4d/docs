@@ -19,7 +19,7 @@ title: VP SET FORMULA
 
 The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. If *rangeObj* includes multiple cells, the formula specified will be linked in each cell.
+Dans *rangeObj*, passez une plage de cellule(s) (créée par exemple avec [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) dont vous voulez spécifier la valeur. If *rangeObj* includes multiple cells, the formula specified will be linked in each cell.
 
 The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 

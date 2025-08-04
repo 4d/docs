@@ -1282,10 +1282,10 @@ Puede definir los siguientes parámetros:
 var $col ; $result : Collection
 $col:=New collection(1; 2; 3; 4)
 
-$result:=$col.map(Formula(New collection($1.value*2))
+$result:=$col.map(Formula(New collection($1.value*2)))
  // [[2],[4],[6],[8]]
 
-$result:=$col.flatMap(Formula(New collection($1.value*2))
+$result:=$col.flatMap(Formula(New collection($1.value*2)))
 // [2,4,6,8]
 ```
 

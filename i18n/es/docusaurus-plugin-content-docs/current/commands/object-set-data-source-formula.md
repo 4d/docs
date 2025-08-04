@@ -11,7 +11,7 @@ title: OBJECT SET DATA SOURCE FORMULA
 | ---------- | -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | \*         | Operador                   | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable   |
 | object     | any                        | &#8594; | Object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
-| formula    | 4D.Formula | &#8594; | Formula to assign as the data source                                                                               |
+| formula    | 4D.Formula | &#8594; | Fórmula a asignar como fuente de datos                                                                             |
 
 <!-- END REF-->
 

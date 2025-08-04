@@ -42,6 +42,12 @@ When different tips are associated with the same object in several locations, th
 2. form editor level
 3. **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip.md)** command (highest priority)
 
+
+#### Commands
+
+[`OBJECT Get help tip`](../commands-legacy/object-get-help-tip.md) - [`OBJECT SET HELP TIP`](../commands-legacy/object-set-help-tip.md)
+
+
 #### See also
 
 [Placeholder](properties_Entry.md#placeholder)

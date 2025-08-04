@@ -48,7 +48,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### Commands
 
-[OBJECT Get focus rectangle invisible](../commands-legacy/OBJECT Get focus rectangle invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
+[OBJECT Get focus rectangle invisible](../commands-legacy/object-get-focus-rectangle-invisible.md) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
 
 ---
 
@@ -454,6 +454,7 @@ layoutMode|text|"page", "draft", "embedded"|
 #### Commands
 
 [WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
 ---
 
 ## Zoom

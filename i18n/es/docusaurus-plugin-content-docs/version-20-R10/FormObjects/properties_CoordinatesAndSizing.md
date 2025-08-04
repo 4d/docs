@@ -68,7 +68,9 @@ Coordenadas inferiores del objeto en el formulario.
 
 #### Comandos
 
-## [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
+---
 
 ## Izquierda
 
@@ -86,7 +88,9 @@ Coordenadas de izquierda del objeto en el formulario.
 
 #### Comandos
 
-## [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
+---
 
 ## Derecha
 
@@ -104,7 +108,9 @@ Coordenadas de derecha del objeto en el formulario.
 
 #### Comandos
 
-## [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
+---
 
 ## Arriba
 
@@ -122,7 +128,9 @@ Coordenadas superiores del objeto en el formulario.
 
 #### Comandos
 
-## [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
+---
 
 ## Radio de redondeo
 
@@ -152,7 +160,7 @@ Con [áreas de texto](text.md) y [entradas](input_overview.md):
 
 :::
 
-También se puede definir esta propiedad utilizando los comandos [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) y [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md).
+You can also set this property using the [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) and [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md) commands.
 
 #### Gramática JSON
 
@@ -314,7 +322,7 @@ Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea d
 
 #### Comandos
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAYS`](../commands-legacy/listbox-set-arrays.md)
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md)
 
 #### Ver también
 

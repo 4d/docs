@@ -19,7 +19,7 @@ La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite llamar a l
 
 `Super` tiene dos propósitos diferentes:
 
-1. Dentro de un código [constructor](../Concepts/classes.md#class-constructor), `Super` es un comando que permite llamar al constructor de la superclase. When used in a constructor, the `Super` command appears alone and must be used before the [`This`](this.md) keyword is used.
+1. Dentro de un código [constructor](../Concepts/classes.md#class-constructor), `Super` es un comando que permite llamar al constructor de la superclase. Cuando se utiliza en un constructor, el comando `Super` aparece solo y debe ser usado antes de usar la palabra clave [`This`](this.md).
 
 - Si todos los class constructors en el árbol de herencia no son llamados correctamente, se genera el error -10748. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.
 - Si el comando `This` es llamado en un objeto cuyas superclases no han sido construidas, se genera el error -10743.

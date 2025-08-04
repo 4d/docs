@@ -318,7 +318,7 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.readBlob().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|*bytes*|Real|->|Number of bytes to be read|
+|bytes|Real|->|Number of bytes to be read|
 |Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|
 <!-- END REF -->
 
@@ -400,7 +400,7 @@ This function assumes that the [`.offset`](#offset) property is a number of char
 <!--REF #FileHandleClass.readText().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|*stopChar*|Text|->|Character(s) at which to stop reading|
+|stopChar|Text|->|Character(s) at which to stop reading|
 |Result|Text|<-|Text from the file|
 <!-- END REF -->
 
@@ -479,7 +479,7 @@ If the *size* value is less than the current document size, the document content
 <!--REF #FileHandleClass.writeBlob().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|*blob*|[4D.Blob](BlobClass)|->|Blob to write in the file|
+|blob|[4D.Blob](BlobClass)|->|Blob to write in the file|
 <!-- END REF -->
 
 
@@ -514,7 +514,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.writeLine().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|*lineOfText*|Text|->|Text to write|
+|lineOfText|Text|->|Text to write|
 <!-- END REF -->
 
 
@@ -547,7 +547,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.writeText().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|*textToWrite*|Text|->|Text to write|
+|textToWrite|Text|->|Text to write|
 <!-- END REF -->
 
 

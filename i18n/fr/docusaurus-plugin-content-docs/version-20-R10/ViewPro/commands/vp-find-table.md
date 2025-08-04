@@ -24,11 +24,11 @@ title: VP Find table
 
 ## Description
 
-The `VP Find table` command <!-- REF #_method_.VP Find table.Summary -->returns the name of the table to which to the *rangeObj* cell belongs<!-- END REF -->.
+La commande `VP Find table` <!-- REF #_method_.VP Find table. ummary -->retourne le nom de la table à laquelle appartient la cellule *rangeObj* <!-- END REF -->.
 
-In *rangeObj*, pass a cell range object. Si les cellules désignées n'appartiennent pas à une table, la commande retourne une chaîne vide.
+Dans *rangeObj*, passez un objet de plage de cellules. Si les cellules désignées n'appartiennent pas à une table, la commande retourne une chaîne vide.
 
-If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+Si *rangeObj* n'est pas une plage de cellules ou contient plusieurs plages, la première cellule de la première plage est utilisée.
 
 ## Exemple
 

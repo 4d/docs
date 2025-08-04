@@ -5,14 +5,14 @@ title: VP ADD SHEET
 
 <!-- REF #_method_.VP ADD SHEET.Syntax -->
 
-**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )<!-- END REF -->
+**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer ; *name* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
 | Parâmetro  | Tipo    |    | Descrição                                  |                  |
 | ---------- | ------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| sheet      | Integer | -> | Índice da nova folha                       |                  |
+| index      | Integer | -> | Índice da nova folha                       |                  |
 | name       | Text    | -> | Nome da folha                              | <!-- END REF --> |
 
 ## Descrição
@@ -21,7 +21,7 @@ O comando `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insere uma f
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-Em *sheet*, você pode passar um índice para a nova planilha. Se o *índice* passado é inferior a ou igual a 0, o comando insere a nova folha no início. Se *índice* exceder o número de folhas, o comando insere a nova folha após as já existentes.
+In *index*, you can pass an index for the new sheet. Se o *índice* passado é inferior a ou igual a 0, o comando insere a nova folha no início. Se *índice* exceder o número de folhas, o comando insere a nova folha após as já existentes.
 
 > A indexação começa em 0.
 

@@ -50,6 +50,10 @@ RB-1762-1
 * [リストボックス列](listbox_overview.md#リストボックス列)
 * [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 日付フォーマット
@@ -79,11 +83,11 @@ RB-1762-1
 
 *(1)* "June" は "Jun"、”July” は "Jul" に省略されます。
 
-*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 This is by default but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
+*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルトでの設定ですが、[SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) コマンドを使用することでこの振る舞いを変更することができます。
 
 *(3)* `ISO Date Time` フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
 
-> 表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 This is the default setting but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
+> 表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 これはデフォルトの設定ですが、[SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) コマンドを使用することでこの振る舞いを変更することができます。
 
 ### カスタムフォーマット
 
@@ -110,6 +114,10 @@ RB-1762-1
 #### 対象オブジェクト
 
 [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -277,6 +285,10 @@ RB-1762-1
 [リストボックスフッター](listbox_overview.md#リストボックスフッター) -
 [進捗インジケーター](progressIndicator.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
+
 ---
 
 ## ピクチャーフォーマット
@@ -337,6 +349,10 @@ RB-1762-1
 
 [入力](input_overview.md)* [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 時間フォーマット
@@ -391,6 +407,10 @@ Customized time formats can be built using several patterns described in the [**
 
 [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## テキスト (True時)/テキスト (False時)
@@ -415,6 +435,10 @@ Customized time formats can be built using several patterns described in the [**
 
 [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## 表示タイプ
@@ -435,13 +459,17 @@ Customized time formats can be built using several patterns described in the [**
 
 [リストボックス列](listbox_overview.md#リストボックス列)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## レンダリングしない
 
 このプロパティが選択されていると、アプリケーションモードでオブジェクトが描画されません (あとから描画することができます)。
 
-このプロパティは、”透明” ボタンの実装を可能にします。  レンダリングされていないボタンは、描画オブジェクトの上に配置することができます。 レンダリングされていないボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。
+このプロパティは、”透明” ボタンの実装を可能にします。 レンダリングされていないボタンは、描画オブジェクトの上に配置することができます。 レンダリングされていないボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。
 
 #### JSON 文法
 
@@ -482,6 +510,10 @@ Customized time formats can be built using several patterns described in the [**
 #### 対象オブジェクト
 
 [チェックボックス](checkbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+
+#### コマンド
+
+[OBJECT Get three states checkbox](../commands-legacy/object-get-three-states-checkbox.md) - [OBJECT SET THREE STATES CHECKBOX](../commands-legacy/object-set-three-states-checkbox.md)
 
 ---
 
@@ -541,13 +573,17 @@ Customized time formats can be built using several patterns described in the [**
 
 [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
+#### コマンド
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+
 ---
 
 ## 表示状態
 
 このプロパティが選択されていると、アプリケーションモードでオブジェクトが非表示になります。
 
-大部分のオブジェクトに対して、表示状態プロパティを指定することができます。 このプロパティは主に、ダイナミックなインターフェースの開発を容易にするために使用されます。 インターフェースを開発するとき、多くの場合はフォームの `On Load` イベント中にプログラムからオブジェクトを非表示にした後で、一部のオブジェクトを再度表示する必要性が頻繁に生じます。 表示状態プロパティを使用すると、特定オブジェクトをあらかじめ非表示にしておくことにより、このロジックを逆に働かせることができます。 The developer can then program their display using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command when needed.
+大部分のオブジェクトに対して、表示状態プロパティを指定することができます。 このプロパティは主に、ダイナミックなインターフェースの開発を容易にするために使用されます。 インターフェースを開発するとき、多くの場合はフォームの `On Load` イベント中にプログラムからオブジェクトを非表示にした後で、一部のオブジェクトを再度表示する必要性が頻繁に生じます。 表示状態プロパティを使用すると、特定オブジェクトをあらかじめ非表示にしておくことにより、このロジックを逆に働かせることができます。 この後、必要に応じて [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) コマンドを使用し、これらのオブジェクトを表示するようプログラミングすることができます。
 
 #### リストフォームにおける自動表示
 
@@ -560,7 +596,7 @@ Customized time formats can be built using several patterns described in the [**
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+オブジェクトが [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) コマンドで非表示にされた場合、4D はこのプロパティを無視します。 つまり、レコードの選択状態にかかわらず、当該オブジェクトは非表示のままになります。
 
 #### JSON 文法
 
@@ -596,6 +632,10 @@ Customized time formats can be built using several patterns described in the [**
 [タブコントロール](tabControl.md) -
 [テキストエリア](text.md) -
 [Web エリア](webArea_overview.md)
+
+#### コマンド
+
+[OBJECT Get visible](../commands-legacy/object-get-visible.md) - [OBJECT SET VISIBLE](../commands-legacy/object-set-visible.md)
 
 ---
 
@@ -651,3 +691,7 @@ Customized time formats can be built using several patterns described in the [**
 #### 対象オブジェクト
 
 [入力](input_overview.md)* [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+
+#### コマンド
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)

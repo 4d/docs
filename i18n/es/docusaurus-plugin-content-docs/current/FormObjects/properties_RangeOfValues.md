@@ -55,6 +55,10 @@ Permite definir una lista cuyos valores no pueden introducirse en el objeto. Si 
 
 [Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
 
+#### Comandos
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
+
 ---
 
 ## Lista requerida
@@ -75,3 +79,7 @@ Sin embargo, a diferencia de la propiedad [Lista de selección](properties_DataS
 #### Objetos soportados
 
 [Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
+
+#### Comandos
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)

@@ -21,15 +21,15 @@ title: VP Get data context
 | ---------- | ------- | --------------------------- | -------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                  |                  |
 | sheet      | Integer | ->                          | Indice de la feuille de laquelle obtenir le data context |                  |
-| Résultat   | Variant | <- | Data context. Object or Collection       | <!-- END REF --> |
+| Résultat   | Variant | <- | Data context. Objet ou collection        | <!-- END REF --> |
 
 ## Description
 
-The `VP Get data context` command <!-- REF #_method_.VP Get data context.Summary -->returns the current data context of a worksheet<!-- END REF -->. Le contexte retourné inclut toutes les modifications apportées au contenu du contexte de données.
+La commande `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->retourne le contexte de données courant d'une feuille de travail<!-- END REF -->. Le contexte retourné inclut toutes les modifications apportées au contenu du contexte de données.
 
-In *sheet*, pass the index of the sheet to get the data context from. Si aucun index n'est passé, la commande retourne le contexte de données de la feuille de travail courante. Si aucun index n'est passé, la commande retourne le contexte de données de la feuille de travail courante.
+Dans la *sheet*, passez l'index de la feuille pour récupérer le contexte des données. Si aucun index n'est passé, la commande retourne le contexte de données de la feuille de travail courante. Si aucun index n'est passé, la commande retourne le contexte de données de la feuille de travail courante.
 
-The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](vp-set-data-context.md).
+La fonction retourne un objet ou une collection en fonction du type de contexte de données défini avec [VP SET DATA CONTEXT](vp-set-data-context.md).
 
 ## Exemple
 

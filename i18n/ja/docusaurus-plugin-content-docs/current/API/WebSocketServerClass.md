@@ -311,7 +311,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 | path     | Text | WebSocketサーバーにアクセスするためのパス。 パスが定義されていない場合、WebSocketサーバーはすべての接続を管理します                                                                                                                                                                                                                                       | undefined |
 | dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | text      |
 
-<!-- REF #WebSocketServerClass.connections.Desc -->
+<!-- REF WebSocketServerClass.connections.Desc -->
 
 ## .connections
 
@@ -325,7 +325,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.dataType.Desc -->
+<!-- REF WebSocketServerClass.dataType.Desc -->
 
 ## .dataType
 
@@ -339,7 +339,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.handler.Desc -->
+<!-- REF WebSocketServerClass.handler.Desc -->
 
 ## .handler
 
@@ -351,7 +351,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.path.Desc -->
+<!-- REF WebSocketServerClass.path.Desc -->
 
 ## .path
 
@@ -365,7 +365,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.terminate().Desc -->
+<!-- REF WebSocketServerClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -392,7 +392,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- END REF -->
 
-<!-- REF #WebSocketServerClass.terminated.Desc -->
+<!-- REF WebSocketServerClass.terminated.Desc -->
 
 ## .terminated
 

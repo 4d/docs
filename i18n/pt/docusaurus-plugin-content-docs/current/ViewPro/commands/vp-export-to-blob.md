@@ -34,15 +34,15 @@ Em *paramObj*, você pode passar várias propriedades:
 
 Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
-| Parâmetro |                               | Tipo                    | Descrição                                                                    |
-| :-------- | :---------------------------- | :---------------------- | :--------------------------------------------------------------------------- |
-| param1    |                               | text                    | O nome do objeto 4D View Pro                                                 |
-| param2    |                               | 4D.blob | O blob exportado                                                             |
-| param3    |                               | object                  | Uma referência ao parâmetro *paramObj* do comando                            |
-| param4    |                               | object                  | Um objeto devolvido pelo método com uma mensagem de estado                   |
-|           | .success      | boolean                 | True se a exportação for bem sucedida, False caso contrário. |
-|           | .errorCode    | integer                 | Código de erro.                                              |
-|           | .errorMessage | text                    | Mensagem de erro.                                            |
+| Parâmetro |                               | Tipo                     | Descrição                                                                    |
+| :-------- | :---------------------------- | :----------------------- | :--------------------------------------------------------------------------- |
+| param1    |                               | text                     | O nome do objeto 4D View Pro                                                 |
+| param2    |                               | 4D. Blob | O blob exportado                                                             |
+| param3    |                               | object                   | Uma referência ao parâmetro *paramObj* do comando                            |
+| param4    |                               | object                   | Um objeto devolvido pelo método com uma mensagem de estado                   |
+|           | .success      | boolean                  | True se a exportação for bem sucedida, False caso contrário. |
+|           | .errorCode    | integer                  | Código de erro.                                              |
+|           | .errorMessage | text                     | Mensagem de erro.                                            |
 
 ## Exemplo
 

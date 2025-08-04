@@ -131,7 +131,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 ```
 
-<!-- REF #WebSocketClass.dataType.Desc -->
+<!-- REF WebSocketClass.dataType.Desc -->
 
 ## .dataType
 
@@ -145,7 +145,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.handler.Desc -->
+<!-- REF WebSocketClass.handler.Desc -->
 
 ## .handler
 
@@ -159,7 +159,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.id.Desc -->
+<!-- REF WebSocketClass.id.Desc -->
 
 ## .id
 
@@ -173,7 +173,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.send().Desc -->
+<!-- REF WebSocketClass.send().Desc -->
 
 ## .send()
 
@@ -201,7 +201,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.status.Desc -->
+<!-- REF WebSocketClass.status.Desc -->
 
 ## .status
 
@@ -215,7 +215,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.terminate().Desc -->
+<!-- REF WebSocketClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -243,7 +243,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 <!-- END REF -->
 
-<!-- REF #WebSocketClass.url.Desc -->
+<!-- REF WebSocketClass.url.Desc -->
 
 ## .url
 

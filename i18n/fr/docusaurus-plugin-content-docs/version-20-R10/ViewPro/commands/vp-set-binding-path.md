@@ -17,16 +17,16 @@ title: VP SET BINDING PATH
 
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
 
-| Paramètres           | Type   |    | Description                                 |                  |
-| -------------------- | ------ | -- | ------------------------------------------- | ---------------- |
-| rangeObj             | Object | -> | Objet plage                                 |                  |
-| dataContextAttribute | Text   | -> | Name of the attribute to bind to *rangeObj* | <!-- END REF --> |
+| Paramètres           | Type   |    | Description                           |                  |
+| -------------------- | ------ | -- | ------------------------------------- | ---------------- |
+| rangeObj             | Object | -> | Objet plage                           |                  |
+| dataContextAttribute | Text   | -> | Nom de l'attribut à lier à *rangeObj* | <!-- END REF --> |
 
 ## Description
 
 The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
-In *rangeObj*, pass an object that is either a cell range or a combined range of cells.
+Dans *rangeObj*, passez un objet qui est soit une plage de cellules, soit une plage combinée de cellules.
 
 - If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
 - If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
@@ -37,7 +37,7 @@ In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*.
 
 ## Exemple
 
-Set a data context and bind the `firstName` and `lastName` attribute to cells:
+Définir un contexte de données et lier les attributs `firstName` et `lastName` aux cellules :
 
 ```4d
 var $p : Object

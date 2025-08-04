@@ -37,11 +37,11 @@ You can also define the same event at both attribute and entity levels. The attr
 
 Usually, ORDA events are executed on the server.
 
-In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](../ORDA/ordaClasses.md#local-functions) keyword. A specific implementation on the client side allows the triggering of the event on the client.
+In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](./ordaClasses.md#local-functions) keyword. A specific implementation on the client side allows the triggering of the event on the client.
 
 :::note
 
-ORDA [`constructor()`](../ORDA/ordaClasses.md#class-constructor) functions are always executed on the client.
+ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed on the client.
 
 :::
 
@@ -111,7 +111,7 @@ If this event [throws](../commands-legacy/throw.md) an error, it will not stop t
 
 This event is also triggered:
 
-- when attributes are assigned by the [`constructor()`](#class-constructor) event,
+- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
 - when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
 
 :::

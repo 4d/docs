@@ -41,9 +41,7 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 
 </details>
 
-<!-- REF #4D.Vector.new().Syntax -->
-
-**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
+<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
 
 <!--REF #4D.Vector.new().Params -->
 
@@ -204,13 +202,13 @@ $documents:=[{text: "How to bake a chocolate cake"; similarity: 0}; \
 
 $question:="4D coding tutorials"
 
-// Vector calculation with 4D AIKit component
+// 4D AIKit コンポーネントを使用してのベクトル計算
 $questionVector:=$clientAI.embeddings.create($question; $model).vector
 
 For each ($document; $documents)
-        // Vector calculation with 4D AIKit component
+        // 4D AIKit component を使用してのベクトル計算
     $vector:=$clientAI.embeddings.create($document.text; $model).vector
-        // similarity
+        // 類似度
     $document.similarity:=$vector.dotSimilarity($questionVector)
 End for each
 
@@ -285,9 +283,7 @@ ALERT("Nearest monument: "+$places[0].name)
 
 #### 説明
 
-The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
-
-<!-- END REF -->
+`.length` プロパティには<!-- REF #VectorClass.length.Summary -->ベクトル成分の数<!-- END REF -->が格納されています。
 
 ## .toCollection()
 

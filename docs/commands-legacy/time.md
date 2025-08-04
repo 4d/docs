@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 The *timeValue* parameter can contain either:
 
-* a string containing a time expressed in one of the 4D standard time formats corresponding to the language of your system (for more information, refer to the description of the [String](string.md) command).
+* a string containing a time expressed in one of the 4D standard time formats corresponding to the language of your system (for more information, refer to the description of the [String](../commands/string.md) command).
 * a longint that represents the number of seconds elapsed since 00:00:00.
 
 **Note:** If the *timeValue* expression evaluates to undefined, **Time** returns an empty time (00:00:00). This is useful when you expect the result of an expression (e.g. an object attribute) to be a time, even if it can be undefined.
@@ -48,7 +48,7 @@ You can express any numerical value as a time:
 
 [ARRAY TIME](array-time.md)  
 [Bool](bool.md)  
-[String](string.md)  
+[String](../commands/string.md)  
 [Time string](time-string.md)  
 [Timestamp](timestamp.md)  
 

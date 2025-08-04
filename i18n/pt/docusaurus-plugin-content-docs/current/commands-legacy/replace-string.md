@@ -69,9 +69,9 @@ O exemplo abaixo ilustra o uso do parâmetro \* no caso de uma avaliação diacr
 
 ## Ver também 
 
-[Change string](change-string.md)  
-[Delete string](delete-string.md)  
-[Insert string](insert-string.md)  
+[Change string](../commands/change-string.md)  
+[Delete string](../commands/delete-string.md)  
+[Insert string](../commands/insert-string.md)  
 
 ## Propriedades
 

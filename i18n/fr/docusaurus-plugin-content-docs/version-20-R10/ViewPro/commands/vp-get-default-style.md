@@ -21,7 +21,7 @@ The `VP Get default style` command <!-- REF #_method_.VP Get default style.Summa
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can define where to get the column count in the optional *sheet* parameter using the sheet index (counting begins at 0). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
+Vous pouvez définir où obtenir le nombre de colonnes dans le paramètre optionnel *sheet* en utilisant l'index de la feuille (compter commence à 0). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 ## Exemple
 

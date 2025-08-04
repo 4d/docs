@@ -97,7 +97,7 @@ Um objeto 4D.IncomingMessage é um objeto [não compartilhável](../Concepts/sha
 
 :::
 
-<!-- REF #IncomingMessageClass.getBlob().Desc -->
+<!-- REF IncomingMessageClass.getBlob().Desc -->
 
 ## .getBlob()
 
@@ -119,7 +119,7 @@ If the body has not been given as a binary content, the function tries to conver
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getHeader().Desc -->
+<!-- REF IncomingMessageClass.getHeader().Desc -->
 
 ## .getHeader()
 
@@ -154,7 +154,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getJSON().Desc -->
+<!-- REF IncomingMessageClass.getJSON().Desc -->
 
 ## .getJSON()
 
@@ -176,7 +176,7 @@ If the body has not been given as JSON valid content, an error is raised.
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getPicture().Desc -->
+<!-- REF IncomingMessageClass.getPicture().Desc -->
 
 ## .getPicture()
 
@@ -206,7 +206,7 @@ If the body is not received as a valid picture, the function returns null.
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getText().Desc -->
+<!-- REF IncomingMessageClass.getText().Desc -->
 
 ## .getText()
 
@@ -228,7 +228,7 @@ If the body has not been given as a string value, the function tries to convert 
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.headers.Desc -->
+<!-- REF IncomingMessageClass.headers.Desc -->
 
 ## .headers
 
@@ -244,7 +244,7 @@ Nomes de cabeçalho (chaves) são menores. Observe que os nomes dos cabeçalhos 
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.url.Desc -->
+<!-- REF IncomingMessageClass.url.Desc -->
 
 ## .url
 
@@ -266,7 +266,7 @@ A parte "host" do pedido (*IP:port*) é fornecida pelo [cabeçalho `host`](#head
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.urlPath.Desc -->
+<!-- REF IncomingMessageClass.urlPath.Desc -->
 
 ## .urlPath
 
@@ -282,7 +282,7 @@ A propriedade `.urlPath` é somente leitura.
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.urlQuery.Desc -->
+<!-- REF IncomingMessageClass.urlQuery.Desc -->
 
 ## .urlQuery
 
@@ -332,7 +332,7 @@ Parameters given in the body of the request using POST or PUT verbs are handled 
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.verb.Desc -->
+<!-- REF IncomingMessageClass.verb.Desc -->
 
 ## .verb
 

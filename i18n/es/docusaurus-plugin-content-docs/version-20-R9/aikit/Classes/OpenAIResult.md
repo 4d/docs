@@ -20,7 +20,7 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 | `success`     | Boolean    | A Boolean indicating whether the HTTP request was successful.                                                  |
 | `errors`      | Collection | Devuelve una colección de errores. These could be network errors or errors returned by OpenAI. |
 | `terminated`  | Boolean    | A Boolean indicating whether the HTTP request was terminated.                                                  |
-| `headers`     | Object     | Returns the response headers as an object.                                                                     |
+| `headers`     | Object     | Devuelve los encabezados de respuesta como un objeto.                                                          |
 | `rateLimit`   | Object     | Returns rate limit information from the response headers.                                                      |
 | `utilización` | Object     | Devuelve la información de uso del cuerpo de la respuesta, si existe.                                          |
 
@@ -33,14 +33,14 @@ For more details on rate limits and the specific headers used, refer to [the Ope
 
 The structure of the `rateLimit` object is as follows:
 
-| Campo               | Tipo    | Descripción                                       |
-| ------------------- | ------- | ------------------------------------------------- |
-| `limit.request`     | Integer | Número de solicitudes permitidas. |
-| `limit.tokens`      | Integer | Número de tokens permitidos.      |
-| `remaining.request` | Integer | Número de peticiones restantes.   |
-| `remaining.tokens`  | Integer | Número de tokens restantes.       |
-| `reset.request`     | String  | Time until request limit resets.  |
-| `reset.tokens`      | String  | Time until token limit resets.    |
+| Campo               | Tipo    | Descripción                                                              |
+| ------------------- | ------- | ------------------------------------------------------------------------ |
+| `limit.request`     | Integer | Número de solicitudes permitidas.                        |
+| `limit.tokens`      | Integer | Número de tokens permitidos.                             |
+| `remaining.request` | Integer | Número de peticiones restantes.                          |
+| `remaining.tokens`  | Integer | Número de tokens restantes.                              |
+| `reset.request`     | String  | Tiempo hasta que se restablece el límite de solicitudes. |
+| `reset.tokens`      | String  | Tiempo hasta que se restablece el límite de fichas.      |
 
 ## Funciones
 

@@ -23,6 +23,10 @@ As seguintes localizações podem ser utilizadas para imagens estáticas:
 
 [Botão imagem](pictureButton_overview.md) - [Menu pop-up imagem](picturePopupMenu_overview.md) - [Imagem estática](staticPicture.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Visualização
@@ -66,3 +70,7 @@ O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior e
 #### Objectos suportados
 
 [Imagem estática](staticPicture.md)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)

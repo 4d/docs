@@ -66,9 +66,9 @@ L'exemple suivant illustre le rôle du paramètre \* dans le cadre d'une évalua
 
 ## Voir aussi 
 
-[Change string](change-string.md)  
-[Delete string](delete-string.md)  
-[Insert string](insert-string.md)  
+[Change string](../commands/change-string.md)  
+[Delete string](../commands/delete-string.md)  
+[Insert string](../commands/insert-string.md)  
 
 ## Propriétés
 

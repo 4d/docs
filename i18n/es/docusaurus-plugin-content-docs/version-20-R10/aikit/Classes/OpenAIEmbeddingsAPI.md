@@ -19,14 +19,14 @@ Creates an embeddings for the provided input, model and parameters.
 
 | Argumento    | Tipo                                                        | Descripción                                                                             |
 | ------------ | ----------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| *entrada*    | Text or Collection of Text                                  | The input to vectorize.                                                 |
+| *entrada*    | Texto o colección de texto                                  | La entrada a vectorizar.                                                |
 | *model*      | Text                                                        | The [model to use](https://platform.openai.com/docs/guides/embeddings#embedding-models) |
 | *parámetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | The parameters to customize the embeddings request.                     |
-| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | The embeddings.                                                         |
+| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | Las integraciones.                                                      |
 
-#### Example Usages
+#### Ejemplos de uso
 
-##### Get vector for a single text entry
+##### Obtener el vector de una sola entrada de texto
 
 ```4d
 var $result:=$client.embeddings.create("it rains cats and dogs"; "text-embedding-ada-002")
@@ -34,7 +34,7 @@ var $vector: 4D.Vector:=$result.vector
 // or var $embedding: cs.AIKit.OpenAIEmbedding:=$result.embedding
 ```
 
-##### Get vectors for a collection of text entries
+##### Obtener vectores para una colección de entradas de texto
 
 ```4d
 var $inputs:=["it rains cats and dogs"; "il pleut à boire debout"]
@@ -42,7 +42,7 @@ var $result:=$client.embeddings.create($inputs; "text-embedding-ada-002")
 var $vectors : Collection:=$result.vectors // collection of 4D.Vector
 ```
 
-##### Using another service
+##### Utilizar otro servicio
 
 > Before using embeddings with a specific service, please check its documentation to see if embeddings are supported, and select the appropriate embedding model.
 

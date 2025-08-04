@@ -144,14 +144,14 @@ Resultado:
 ### VP ADD SHEET
 
 <!-- REF #_method_.VP ADD SHEET.Syntax -->
-**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )<!-- END REF -->
+**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer ; *name* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
 | Parámetros | Tipo    |    | Descripción                                  |
 | ---------- | ------- | -- | -------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
-| sheet      | Integer | -> | Indice de la nueva hoja                      |
+| index      | Integer | -> | Indice de la nueva hoja                      |
 | name       | Text    | -> | Nombre de la hoja|<!-- END REF -->
 
 |
@@ -162,7 +162,7 @@ El comando `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->inserta una
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-En *sheet*, puede pasar un índice para la nueva hoja. Si el *index* pasado es inferior o igual a 0, el comando inserta la nueva hoja al principio. Si el *index* supera el número de hojas, el comando inserta la nueva hoja después de las existentes.
+En *index*, puede pasar un índice para la nueva hoja. Si el *index* pasado es inferior o igual a 0, el comando inserta la nueva hoja al principio. Si el *index* supera el número de hojas, el comando inserta la nueva hoja después de las existentes.
 > La indexación comienza en 0.
 
 En *name*, puede pasar un nombre para la nueva hoja. El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
@@ -2111,7 +2111,7 @@ $rowCount:=VP Get row count("ViewProarea")
 ### VP Get selection
 
 <!-- REF #_method_.VP Get selection.Syntax -->
-**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get selection.Params -->
 
@@ -2277,7 +2277,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 ### VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Syntax -->
-**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
@@ -3551,7 +3551,7 @@ $cellStyle.font:=VP Object to font($font)
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
-**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )<!-- END REF -->
+**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
@@ -3679,7 +3679,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 ### VP REMOVE NAME
 
 <!-- REF #_method_.VP REMOVE NAME.Syntax -->
-**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )<!-- END REF -->
+**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *scope* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
@@ -3851,7 +3851,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
-**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )<!-- END REF -->
+**VP REMOVE TABLE** ( *vpAreaName* : Text; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
@@ -4734,7 +4734,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 ### VP SET COLUMN COUNT
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Syntax -->
-**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } ) <!-- END REF -->
+**VP SET COLUMN COUNT** ( *vpAreaName* : Text ; *columnCount* : Integer { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 
@@ -5054,7 +5054,7 @@ Este es el resultado una vez que se generan las columnas:
 | ------------- | ------ | -- | -------------------------------------------- |
 | rangeObj      | Object | -> | Objeto rango                                 |
 | dateValue     | Fecha  | -> | Valor date a definir                         |
-| timeValue     | Hora   | -> | Valor hora a definir                         |
+| timeValue     | Time   | -> | Valor hora a definir                         |
 | formatPattern | Text   | -> | Formato del valor|<!-- END REF -->
 
 |
@@ -5723,11 +5723,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| Parámetros   | Tipo   |    | Descripción                                                            |
-| ------------ | ------ | -- | ---------------------------------------------------------------------- |
-| vpAreaName   | Text   | -> | Nombre del área 4D View Pro                                            |
-| sheetOptions | Object | -> | Opciones de la hoja a definir                                          |
-| sheet        | Object | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF -->
+| Parámetros   | Tipo    |    | Descripción                                                            |
+| ------------ | ------- | -- | ---------------------------------------------------------------------- |
+| vpAreaName   | Text    | -> | Nombre del área 4D View Pro                                            |
+| sheetOptions | Object  | -> | Opciones de la hoja a definir                                          |
+| sheet        | Integer | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF -->
 
 |
 
@@ -6119,14 +6119,14 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 ### VP SET TIME VALUE
 
 <!-- REF #_method_.VP SET TIME VALUE.Syntax -->
-**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
+**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Time { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
 | Parámetros    | Tipo   |    | Descripción                                  |
 | ------------- | ------ | -- | -------------------------------------------- |
 | rangeObj      | Object | -> | Objeto rango                                 |
-| timeValue     | Text   | -> | Valor hora a definir                         |
+| timeValue     | Time   | -> | Valor hora a definir                         |
 | formatPattern | Text   | -> | Formato del valor|<!-- END REF -->
 
 |

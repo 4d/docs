@@ -467,12 +467,12 @@ A new user is created, and some information is stored in the session, especially
 
 ### Lifespan
 
-A session token has a lifespan, and the session itself has a lifespan. El tiempo de vida útil del token de sesión puede definirse [en la creación de tokens](../API/SessionClass.md#createotp). Por defecto, el tiempo de vida del token es el mismo valor que el valor de [`.idleTimeout`](../API/SessionClass.md#idletimeout).
+Un testigo de sesión tiene una vida útil, y la propia sesión tiene una vida útil. El tiempo de vida útil del token de sesión puede definirse [en la creación de tokens](../API/SessionClass.md#createotp). Por defecto, el tiempo de vida del token es el mismo valor que el valor de [`.idleTimeout`](../API/SessionClass.md#idletimeout).
 
-A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
+Una sesión solo se restaura mediante un token si tanto la vida útil del token de sesión como la vida útil de la sesión no han expirado. En otros casos (el testigo de sesión ha caducado y/o la propia sesión ha caducado), se crea una sesión de invitado cuando se recibe una petición web con un testigo de sesión.
 
 :::note
 
-For more information, please refer to the [Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/) blog post.
+Para obtener más información, consulte la entrada de blog [Conecte sus aplicaciones web a sistemas de terceros](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/).
 
 :::

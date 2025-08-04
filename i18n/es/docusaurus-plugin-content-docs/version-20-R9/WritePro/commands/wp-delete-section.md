@@ -20,15 +20,15 @@ displayed_sidebar: docs
 
 ## Descripción
 
-El comando **WP DELETE SECTION** <!--REF #_command_.WP DELETE SECTION.Summary-->elimina el objeto *section* pasado, o elimina una o más secciones comenzando por *indexNumber* y dependiendo del *count* pasado<!-- END REF-->. When a section is removed, everything associated with it, including the header, footer, part of the body, anchored pictures, text boxes, and the ending section break (whether a section break or continuous section break), is also removed.
+El comando **WP DELETE SECTION** <!--REF #_command_.WP DELETE SECTION.Summary-->elimina el objeto *section* pasado, o elimina una o más secciones comenzando por *indexNumber* y dependiendo del *count* pasado<!-- END REF-->. Cuando se elimina una sección, también se elimina todo lo asociado a ella, incluido el encabezado, el pie de página, parte del cuerpo, las imágenes ancladas, los cuadros de texto y el salto de sección final (ya sea un salto de sección o un salto de sección continuo).
 
-An error is raised if the **WP DELETE SECTION** command requests to delete all sections or if the document contains only one section.
+Se produce un error si el comando **WP DELETE SECTION** solicita eliminar todas las secciones o si el documento sólo contiene una sección.
 
-**WP DELETE SECTION** re-indexes the anchorSection attribute of text boxes and pictures to adjust their anchors to their sections after changes. For example, if a document has four sections and the second section is deleted, sections 3 and 4 will become sections 2 and 3 and text boxes and pictures that were previously anchored to sections 3 and 4 will now be anchored to sections 2 and 3.
+**WP DELETE SECTION** vuelve a indexar el atributo anchorSection de cuadros de texto e imágenes para ajustar sus anclajes a sus secciones tras las modificaciones. Por ejemplo, si un documento tiene cuatro secciones y se suprime la segunda, las secciones 3 y 4 pasarán a ser las secciones 2 y 3, y los cuadros de texto y las imágenes que antes estaban anclados a las secciones 3 y 4 ahora lo estarán a las secciones 2 y 3.
 
 :::note
 
-If an image or textbox is anchored to a page (e.g., page 20) and this page no longer exists after a section has been deleted, the image (or textbox) will remain in the document and will reappear on page 20 if this page ever exists again later.
+Si una imagen o un cuadro de texto está anclado a una página (por ejemplo, la página 20) y esta página ya no existe después de eliminar una sección, la imagen (o el cuadro de texto) permanecerá en el documento y volverá a aparecer en la página 20 si esta página vuelve a existir más adelante.
 
 :::
 
@@ -39,7 +39,7 @@ Para eliminar la primera sección del documento:
 ```4d
 
 wpDoc:=WP Import document("test.wp")
-// remove section 1 only (without error unless there is only one section in the document)
+// eliminar sólo la sección 1 (sin error a menos que sólo haya una sección en el documento)
 WP DELETE SECTION(wpDoc ; 1) 
 
 ```
@@ -49,12 +49,12 @@ Eliminar la sección 5 del documento:
 ```4d
 
 wpDoc:=WP Import document("test.wp")
-// remove section 5 only
+// eliminar sólo la sección 5
 WP DELETE SECTION(wpDoc ; 5)
 
 ```
 
-To remove section 5, 6 and 7 of the document:
+Eliminar las secciones 5, 6 y 7 del documento:
 
 ```4d
  
@@ -68,7 +68,7 @@ Para eliminar todas las secciones a partir de la 5:
 ```4d
  
 wpDoc:=WP Import document("test.wp")
-// remove all sections starting at section 5 (without error unless section 5 does not exist)
+// eliminar todas las secciones a partir de la sección 5 (sin error a menos que la sección 5 no exista)
 WP DELETE SECTION(wpDoc ; 5 ; MAXLONG )
 
 ```
@@ -78,9 +78,9 @@ Para recuperar y eliminar la sección 5:
 ```4d
  
 wpDoc:=WP Import document("test.wp")
-// get section 5
+// obtener sección 5
 $section:=WP Get section(wpDoc, 5)
-// remove $section
+// eliminar $section
 WP DELETE SECTION($section)
 
 ```

@@ -23,11 +23,11 @@ REST機能を使い始めるまえに、まずは 4D REST サーバーの設定�
 
 デフォルトでは、REST接続はすべてのユーザーに対してオープンですが、この状態はライセンス管理上もセキュリティ上も推奨されません。
 
-As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#function-authentify) datastore class function to authenticate users and assign privileges to their web session.
+4D 20 R6 以降、[**強制ログイン** モード](authUsers.md#強制ログインモード) を有効化し、ユーザーを認証し、そのWeb セッションに権限を割り当てるための[`authentify()`](authUsers.md#function-authentify) 関数を作成することでREST アクセスを設定します。
 
 :::note 互換性
 
-The **Access** area in the Settings dialog box is only available in converted projects for compatibility. See [Access](../settings/web.md#access) for more information.
+設定ダイアログボックス内の**アクセス** エリアは、互換性のために、変換されたプロジェクト内でのみ利用可能です。 詳細な情報については[アクセス](../settings/web.md#アクセス) を参照してください。
 
 :::
 
@@ -80,6 +80,6 @@ REST 経由でアクセス可能なデータストアオブジェクトを制限
 
 4D Server上では、**インタプリタモードであっても**、RESTリクエストは自動的にプリエンプティブプロセスで処理されます。 そのため、コードは [プリエンプティブ実行に準拠](../WebServer/preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
+> インタープリター版のWeb コードをサーバーマシン側でデバッグするためには、デバッガが[サーバー側で有効化されている](../Debugging/debugging-remote.md) かあるいは [リモートマシン側で有効化されている](../Debugging/debugging-remote.md) ことを確認してください。 これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
 
 シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。

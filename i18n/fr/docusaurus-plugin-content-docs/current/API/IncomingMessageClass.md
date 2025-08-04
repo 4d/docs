@@ -97,7 +97,7 @@ Un objet 4D.IncomingMessage est [non partageable](../Concepts/shared.md).
 
 :::
 
-<!-- REF #IncomingMessageClass.getBlob().Desc -->
+<!-- REF IncomingMessageClass.getBlob().Desc -->
 
 ## .getBlob()
 
@@ -119,7 +119,7 @@ Si le body n'a pas été fourni sous forme de contenu binaire, la fonction tente
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getHeader().Desc -->
+<!-- REF IncomingMessageClass.getHeader().Desc -->
 
 ## .getHeader()
 
@@ -154,7 +154,7 @@ $value := $request.getHeader("content-type")
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getJSON().Desc -->
+<!-- REF IncomingMessageClass.getJSON().Desc -->
 
 ## .getJSON()
 
@@ -176,7 +176,7 @@ Si le body n'a pas été fourni sous la forme d'un contenu JSON valide, une erre
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getPicture().Desc -->
+<!-- REF IncomingMessageClass.getPicture().Desc -->
 
 ## .getPicture()
 
@@ -206,7 +206,7 @@ Si le body n'est pas reçu comme une image valide, la fonction renvoie null.
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.getText().Desc -->
+<!-- REF IncomingMessageClass.getText().Desc -->
 
 ## .getText()
 
@@ -228,7 +228,7 @@ Si le body n'a pas été fourni sous forme de chaine, la fonction tente de conve
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.headers.Desc -->
+<!-- REF IncomingMessageClass.headers.Desc -->
 
 ## .headers
 
@@ -244,7 +244,7 @@ Les noms des en-têtes (clés) sont en minuscules. Les noms des headers sont sen
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.url.Desc -->
+<!-- REF IncomingMessageClass.url.Desc -->
 
 ## .url
 
@@ -266,7 +266,7 @@ La partie "host" de la requête (*IP:port*) est fournie par le header [`host`](#
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.urlPath.Desc -->
+<!-- REF IncomingMessageClass.urlPath.Desc -->
 
 ## .urlPath
 
@@ -282,7 +282,7 @@ La propriété `.urlPath` est en lecture seule.
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.urlQuery.Desc -->
+<!-- REF IncomingMessageClass.urlQuery.Desc -->
 
 ## .urlQuery
 
@@ -332,7 +332,7 @@ Les paramètres fournis dans le body de la requête à l'aide des verbes POST ou
 
 <!-- END REF -->
 
-<!-- REF #IncomingMessageClass.verb.Desc -->
+<!-- REF IncomingMessageClass.verb.Desc -->
 
 ## .verb
 

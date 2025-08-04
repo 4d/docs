@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | tableRef   | Object                                    | &#8594; | Referencia de tabla                               |
 | value      | Text, Number, Time, Date, Picture, Object | &#8594; | Valor(es) a definir en la fila |
 | valueColl  | Collection                                | &#8594; | Colección de valores a definir en la línea        |
-| Resultado  | Object                                    | &#8592; | Row range object                                  |
+| Resultado  | Object                                    | &#8592; | Objeto de rango de filas                          |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ La alineación predeterminada de las celdas dependerá del tipo de valor:
 
 :::note Notas
 
-- Array type values are not supported.
+- No se admiten valores de tipo array.
 - Ensure the number of values or the size of the collection matches the number of cells in the table to avoid unexpected results.
 
 :::

@@ -47,7 +47,7 @@ Durante la ejecución, un campo o toda área introducible es delimitada por un r
 
 #### Comandos
 
-[OBJECT Get focus rectangle invisible](../commands-legacy/OBJECT Get focus rectangle invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
+[OBJECT Get focus rectangle invisible](../commands-legacy/object-get-focus-rectangle-invisible.md) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
 
 ---
 
@@ -435,7 +435,9 @@ Establece el modo de visualización del documento de 4D Write Pro en el área de
 
 #### Comandos
 
-## [WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+[WP Get view properties](../WritePro/commands-legacy/wp-get-view-properties.md) - [WP SET VIEW PROPERTIES](../WritePro/commands-legacy/wp-set-view-properties.md)
+
+---
 
 ## Zoom
 

@@ -64,7 +64,7 @@ Cette zone vous permet d’insérer tous les éléments que vous souhaitez voir 
   Si vous appuyez sur la touche **Maj**, ils seront séparés par un retour chariot. Ce fonctionnement permet par exemple de créer des étiquettes d’adresses utilisant plusieurs champs superposés (Adresse1, Adresse2, etc.) ne générant pas de ligne vide lorsqu’une adresse ne requiert qu’un champ.
 - Vous pouvez ajouter une formule à l'étiquette en sélectionnant l'outil **Formule** ![](../assets/en/Desktop/label-tool6.png) (ou en choisissant **Outil>Formule** dans le menu contextuel) et en dessinant une zone. L'**Éditeur de formules** s'affiche alors :
   ![](../assets/en/Desktop/label-formula1.png)<br/>
-  Par exemple, vous pouvez appliquer un format à un champ à l'aide de la commande [`String`](../commands-legacy/string.md) :<br/>
+  Par exemple, vous pouvez appliquer un format à un champ à l'aide de la commande [`String`](../commands/string.md) :<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 

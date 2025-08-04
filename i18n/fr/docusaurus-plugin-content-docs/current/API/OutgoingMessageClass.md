@@ -5,7 +5,7 @@ title: OutgoingMessage
 
 La classe `4D.OutgoingMessage` vous permet de construire des messages qui seront renvoyés par les fonctions de votre application en réponse aux [requêtes REST](../REST/REST_requests.md). Lorsque la réponse est de type `4D.OutgoingMessage`, le serveur REST ne renvoie pas un objet mais une instance d'objet de la classe `OutgoingMessage`.
 
-Typically, this class can be used in custom [HTTP request handler functions](../WebServer/http-request-handler.md#function-configuration) or in functions declared with the [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) keyword and designed to handle HTTP GET requests. Ces requêtes sont utilisées, par exemple, pour implémenter des fonctionnalités telles que le téléchargement de fichier, la génération et le téléchargement d'images ainsi que la réception de tout content-type via un navigateur.
+Typiquement, cette classe peut être utilisée dans des [fonctions de gestion des requêtes HTTP] personnalisées (../WebServer/http-request-handler.md#function-configuration) ou dans des fonctions déclarées avec le mot-clé [`onHTTPGet`] (../ORDA/ordaClasses.md#onhttpget-keyword) et conçues pour gérer des requêtes HTTP GET. Ces requêtes sont utilisées, par exemple, pour implémenter des fonctionnalités telles que le téléchargement de fichier, la génération et le téléchargement d'images ainsi que la réception de tout content-type via un navigateur.
 
 Une instance de cette classe est construite sur 4D Server et peut être envoyée au navigateur via le [serveur REST 4D](../REST/gettingStarted.md) uniquement. Cette classe permet d'utiliser d'autres technologies que HTTP (par exemple, mobile).
 
@@ -53,7 +53,7 @@ Un objet 4D.OutgoingMessage est [non partageable](../Concepts/shared.md).
 
 :::
 
-<!-- REF #OutgoingMessageClass.body.Desc -->
+<!-- REF OutgoingMessageClass.body.Desc -->
 
 ## .body
 
@@ -74,7 +74,7 @@ Vous pouvez également définir la propriété `.body` en utilisant la fonction 
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.headers.Desc -->
+<!-- REF OutgoingMessageClass.headers.Desc -->
 
 ## .headers
 
@@ -88,7 +88,7 @@ La propriété `.headers` est en lecture seule. Pour définir un header, utilise
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setBody().Desc -->
+<!-- REF OutgoingMessageClass.setBody().Desc -->
 
 ## .setBody()
 
@@ -124,7 +124,7 @@ Si *body* n'est pas un type de valeur pris en charge, une erreur est renvoyée.
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setHeader().Desc -->
+<!-- REF OutgoingMessageClass.setHeader().Desc -->
 
 ## .setHeader()
 
@@ -153,7 +153,7 @@ Si vous définissez une *value* pour la *key* du header "Content-Type", assurez-
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.setStatus().Desc -->
+<!-- REF OutgoingMessageClass.setStatus().Desc -->
 
 ## .setStatus()
 
@@ -177,7 +177,7 @@ Pour une liste des codes de statut HTTP, veuillez consulter la [liste des codes 
 
 <!-- END REF -->
 
-<!-- REF #OutgoingMessageClass.status.Desc -->
+<!-- REF OutgoingMessageClass.status.Desc -->
 
 ## .status
 

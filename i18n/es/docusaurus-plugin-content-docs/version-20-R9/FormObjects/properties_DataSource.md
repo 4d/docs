@@ -202,7 +202,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - String
   - Numeric
   - Fecha
-  - Hora
+  - Time
   - Picture
   - Boolean\
     Puede utilizar campos de la tabla maestra o de otras tablas.
@@ -301,9 +301,9 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 #### Gramática JSON
 
-| Nombre              | Tipos de datos | Valores posibles                           |
-| ------------------- | -------------- | ------------------------------------------ |
-| selectedItemsSource | string         | Assignable collection or object expression |
+| Nombre              | Tipos de datos | Valores posibles                          |
+| ------------------- | -------------- | ----------------------------------------- |
+| selectedItemsSource | string         | Colección asignable o expresión de objeto |
 
 #### Objetos soportados
 

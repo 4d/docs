@@ -37,7 +37,7 @@ WebSocketConnection objects provide the following properties and functions:
 
 
 
-<!-- REF #WebSocketConnectionClass.handler.Desc -->
+<!-- REF WebSocketConnectionClass.handler.Desc -->
 ## .handler
 
 <!-- REF #WebSocketConnectionClass.handler.Syntax -->**.handler** : Object<!-- END REF -->
@@ -51,7 +51,7 @@ The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summ
 
 
 
-<!-- REF #WebSocketConnectionClass.id.Desc -->
+<!-- REF WebSocketConnectionClass.id.Desc -->
 ## .id
 
 <!-- REF #WebSocketConnectionClass.id.Syntax -->**.id** : Integer<!-- END REF -->
@@ -64,7 +64,7 @@ This property is read-only.
 <!-- END REF -->
 
 
-<!-- REF #WebSocketConnectionClass.send().Desc -->
+<!-- REF WebSocketConnectionClass.send().Desc -->
 ## .send()
 
 <!-- REF #WebSocketConnectionClass.send().Syntax -->**.send**( *message* : Text )<br/>**.send**( *message* : Blob )<br/>**.send**( *message* : Object )<!-- END REF -->
@@ -92,7 +92,7 @@ The following contents are sent depending on the *message* type:
 
 
 
-<!-- REF #WebSocketConnectionClass.status.Desc -->
+<!-- REF WebSocketConnectionClass.status.Desc -->
 ## .status
 
 <!-- REF #WebSocketConnectionClass.status.Syntax -->**.status** : Text<!-- END REF -->
@@ -106,7 +106,7 @@ This property is read-only.
 
 
 
-<!-- REF #WebSocketConnectionClass.terminate().Desc -->
+<!-- REF WebSocketConnectionClass.terminate().Desc -->
 ## .terminate()
 
 <!-- REF #WebSocketConnectionClass.terminate().Syntax -->**.terminate**( { *code* : Integer ; *message* : Text } )<!-- END REF -->
@@ -127,7 +127,7 @@ A *code* and *message* can be sent to the client during the closure to indicate 
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.wss.Desc -->
+<!-- REF WebSocketConnectionClass.wss.Desc -->
 ## .wss
 
 <!-- REF #WebSocketConnectionClass.wss.Syntax -->**.wss** : 4D.WebSocketServer<!-- END REF -->

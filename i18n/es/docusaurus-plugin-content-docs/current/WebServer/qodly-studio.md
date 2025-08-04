@@ -12,7 +12,7 @@ Qodly Studio también puede utilizarse en la [**plataforma Qodly Cloud**](https:
 Qodly Studio propone una interfaz web completa, que le permite:
 
 - create Qodly pages by placing components on a canvas
-- map components to Qodly Sources
+- mapear componentes a Qodly Sources
 - activar código 4D configurando eventos
 - y mucho más.
 
@@ -238,15 +238,15 @@ El proyecto debe ejecutarse en modo interpretado para que el elemento de menú *
 2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
     ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
-If the debug session starts successfully, a green bullet appears on the button label ![qodly-debug](../assets/en/WebServer/debug2.png) and you can use the Qodly Studio debugger.
+Si la sesión de depuración se inicia correctamente, aparecerá una viñeta verde en la etiqueta del botón ![qodly-debug](../assets/en/WebServer/debug2.png) y podrá utilizar el depurador de Qodly Studio.
 
-If the debugger is already attached to a another machine or another Qodly Studio page, an error is displayed. Hay que separarlo de antemano de la otra ubicación.
+Si el depurador ya está conectado a otra máquina o a otra página de Qodly Studio, aparecerá un error. Hay que separarlo de antemano de la otra ubicación.
 
-To detach the Qodly Studio debugger from your running 4D Server application:
+Para separar el depurador Qodly Studio de su aplicación 4D Server en ejecución:
 
-1. Click the **Debug** button in the Qodly Studio toolbar while a debug session is active.
+1. Haga clic en el botón **Debug** de la barra de herramientas de Qodly Studio mientras esté activa una sesión de depuración.
     Una caja de diálogo de advertencia le pedirá que confirme si desea desconectar el depurador.
-2. Select **Keep in progress** to continue evaluating the code until the end of the current method or function before detaching the debugger, or **Stop** to detach the debugger immediately.
+2. Seleccione **Keep in progress** para continuar evaluando el código hasta el final del método o función actual antes de desconectar el depurador, o **Stop** para desconectar el depurador inmediatamente.
 
 ## Forzar inicio de sesión
 

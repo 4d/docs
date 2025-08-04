@@ -17,6 +17,10 @@ title: グリッド線
 
 [リストボックス](listbox_overview.md)
 
+#### コマンド
+
+[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors.md) - [LISTBOX SET GRID COLOR](../commands-legacy/listbox-set-grid-color.md)
+
 ---
 
 ## 縦線カラー
@@ -32,3 +36,7 @@ title: グリッド線
 #### 対象オブジェクト
 
 [リストボックス](listbox_overview.md)
+
+#### コマンド
+
+[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors.md) - [LISTBOX SET GRID COLOR](../commands-legacy/listbox-set-grid-color.md)

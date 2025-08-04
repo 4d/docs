@@ -17,6 +17,11 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 [List Box](listbox_overview.md)
 
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
+
 ---
 
 ## Height
@@ -59,6 +64,11 @@ Note that converting back and forth may lead to an end result that is different 
 #### Objects Supported
 
 [List Box](listbox_overview.md)
+
+#### Commands
+
+[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height.md) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md)
+
 
 #### See also
 

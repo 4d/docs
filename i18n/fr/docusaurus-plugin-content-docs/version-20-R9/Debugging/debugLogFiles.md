@@ -459,7 +459,7 @@ Voici un exemple d'enregistrement ORDA côté serveur :
 
 ## 4DTCPLog.txt
 
-This log file records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information. This log helps developers monitor and debug network activity within their applications.
+This log file records events related to TCP connections. Ces événements comprennent la transmission de données, les erreurs et les informations sur le cycle de vie de la connexion. This log helps developers monitor and debug network activity within their applications.
 
 Pour lancer ce journal :
 

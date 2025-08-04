@@ -1193,7 +1193,7 @@ Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de
 | [`TEXT TO DOCUMENT`](https://doc.4d.com/4dv19/help/command/en/page1237.html)                       | 1237   |
 | [`This`](https://doc.4d.com/4dv19/help/command/en/page1470.html)                                   | 1470   |
 | [`Tickcount`](https://doc.4d.com/4dv19/help/command/en/page458.html)                               | 458    |
-| [`Hora`](https://doc.4d.com/4dv19/help/command/en/page179.html)                                    | 179    |
+| [`Time`](https://doc.4d.com/4dv19/help/command/en/page179.html)                                    | 179    |
 | [`Time string`](https://doc.4d.com/4dv19/help/command/en/page180.html)                             | 180    |
 | [`Timestamp`](https://doc.4d.com/4dv19/help/command/en/page1445.html)                              | 1445   |
 | [`Tool bar height`](https://doc.4d.com/4dv19/help/command/en/page1016.html)                        | 1016   |

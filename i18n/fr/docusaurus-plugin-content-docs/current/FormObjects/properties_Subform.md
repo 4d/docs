@@ -45,6 +45,10 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 [Subform](subform_overview.md)
 
+#### Commandes
+
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
+
 ---
 
 ## Double-clic sur ligne vide
@@ -133,6 +137,10 @@ Les sous-formulaires de liste peuvent être utilisés pour la saisie de données
 #### Objets pris en charge
 
 [Subform](subform_overview.md)
+
+#### Commandes
+
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
 
 ---
 

@@ -80,7 +80,7 @@
     "description": "The footer copyright"
   },
   "link.item.label.Documentation download": {
-    "message": "Documentation download",
+    "message": "Descarga de documentación",
     "description": "The label of footer link with label=Documentation download linking to https://github.com/4d/docs/releases/tag/latest"
   }
 }

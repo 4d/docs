@@ -48,6 +48,10 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Date Format
@@ -111,6 +115,12 @@ Customized date formats can be built using several patterns described in the [**
 #### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+
+
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 
 ---
 
@@ -273,6 +283,10 @@ The following table shows how different formats affect the display of numbers. T
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
+
 ---
 
 ## Picture Format
@@ -334,6 +348,10 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Time Format
@@ -391,6 +409,12 @@ By default, a null time is displayed with zeros, e.g. "00:00:00". With the "blan
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
+
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
+
 ---
 
 ## Text when False/Text when True
@@ -415,6 +439,11 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
+
 ---
 
 ## Display Type
@@ -435,13 +464,18 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
+#### Commands
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
+
 ---
 
 ## Not rendered
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
-In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.  
+In particular, this property allows implementing "invisible" buttons. Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.  
 
 #### JSON Grammar
 
@@ -482,6 +516,12 @@ In this case as well, the [Title](#title) property is also available so that the
 #### Objects Supported
 
 [Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+
+#### Commands
+
+[OBJECT Get three states checkbox](../commands-legacy/object-get-three-states-checkbox.md) - [OBJECT SET THREE STATES CHECKBOX](../commands-legacy/object-set-three-states-checkbox.md)
+
+
 
 ---
 
@@ -541,6 +581,12 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
+
+#### Commands
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+
+
 ---
 
 ## Visibility
@@ -571,6 +617,10 @@ This property is only used when drawing objects located in the body of a list fo
 #### Objects Supported
 
 [4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+
+#### Commands
+
+[OBJECT Get visible](../commands-legacy/object-get-visible.md) - [OBJECT SET VISIBLE](../commands-legacy/object-set-visible.md)
 
 ---
 
@@ -626,3 +676,8 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 #### Objects Supported
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+
+
+#### Commands
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)

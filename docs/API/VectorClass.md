@@ -47,8 +47,7 @@ Vector objects are shared, immutable, and streamable.
 |20 R10|Added
 </details>
 
-<!-- REF #4D.Vector.new().Syntax -->
-**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
+<!-- REF #4D.Vector.new().Syntax -->**4D.Vector.new** ( *parameter* : Collection ) : 4D.Vector<!-- END REF -->
 
 <!--REF #4D.Vector.new().Params -->
 |Parameter|Type||Description|
@@ -304,7 +303,6 @@ ALERT("Nearest monument: "+$places[0].name)
 
 The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
 
-<!-- END REF -->
 
 ## .toCollection()
 

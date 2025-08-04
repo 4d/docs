@@ -26,7 +26,7 @@ HTTPAgent objects provide the following properties and functions:
 
 ||
 |---|
-|[<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#options)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->|
+|[<!-- INCLUDE #HTTPAgentClass.params.Syntax -->](#params)<br/><!-- INCLUDE #HTTPAgentClass.params.Summary -->|
 |[<!-- INCLUDE #HTTPAgentClass.requestsCount.Syntax -->](#requestscount)<br/><!-- INCLUDE #HTTPAgentClass.requestsCount.Summary -->|
 |[<!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Syntax -->](#freesocketscount)<br/><!-- INCLUDE #HTTPAgentClass.freeSocketsCount.Summary -->|
 
@@ -113,7 +113,7 @@ When no agent is associated to an HTTPRequest, a global agent with default value
 
 :::
 
-<!-- REF #HTTPAgentClass.params.Desc -->
+<!-- REF HTTPAgentClass.params.Desc -->
 ## .params
 
 <!-- REF #HTTPAgentClass.params.Syntax -->**options** : Object<!-- END REF -->
@@ -124,7 +124,7 @@ The `.params` property object contains <!-- REF #HTTPAgentClass.params.Summary -
 
 <!-- END REF -->
 
-<!-- REF #HTTPAgentClass.requestsCount.Desc -->
+<!-- REF HTTPAgentClass.requestsCount.Desc -->
 ## .requestsCount
 
 <!-- REF #HTTPAgentClass.requestsCount.Syntax -->**requestsCount** : Integer<!-- END REF -->
@@ -135,7 +135,7 @@ The `.requestsCount` property contains <!-- REF #HTTPAgentClass.requestsCount.Su
 
 <!-- END REF -->
 
-<!-- REF #HTTPAgentClass.freeSocketsCount.Desc -->
+<!-- REF HTTPAgentClass.freeSocketsCount.Desc -->
 
 ## .freeSocketsCount
 

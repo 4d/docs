@@ -53,7 +53,7 @@ Des attributs supplémentaires peuvent être définis. Pour plus d'informations,
 Le paramètre *option* vous permet de sélectionner le mode d'exportation du code concernant les éléments "tokenisés" de la ou des méthode(s) :
 
 * Si vous passez 0 ou omettez le paramètre *option*, le code de la méthode est exporté sans tokens, c'est-à-dire exactement comme affiché dans l'éditeur de méthodes.
-* Si vous passez 1 ou la constante Code with tokens, le code de la méthode est exporté avec des tokens, c'est-à-dire que les éléments "tokenisés" sont suivis de leur référence interne dans le contenu du *code* exporté. Par exemple, l'expression "[String](string.md)(a)" est exportée "[String](string.md):C10(a)", où "C10" est la référence interne de la commande [String](string.md).
+* Si vous passez 1 ou la constante Code with tokens, le code de la méthode est exporté avec des tokens, c'est-à-dire que les éléments "tokenisés" sont suivis de leur référence interne dans le contenu du *code* exporté. Par exemple, l'expression "[String](../commands/string.md)(a)" est exportée "[String](../commands/string.md):C10(a)", où "C10" est la référence interne de la commande [String](../commands/string.md).
 
 Les éléments tokenisés du langage sont :
 

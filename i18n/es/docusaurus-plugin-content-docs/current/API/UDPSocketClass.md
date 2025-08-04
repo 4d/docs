@@ -11,7 +11,7 @@ Thanks to the standard 4D object *refcounting*, a UDPSocket is automatically rel
 
 :::info 4DTCPUDPLog.txt file
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to UDP sockets. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to UDP sockets. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
 
 :::
 
@@ -25,9 +25,9 @@ For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that re
 
 ### Ejemplo
 
-### UDPSocket Object
+### Objeto UDPSocket
 
-A UDPSocket object is immutable, non streamable.
+Un objeto UDPSocket no es modificable y no es streamable.
 
 UDPSocket objects provide the following properties and functions:
 
@@ -37,11 +37,11 @@ UDPSocket objects provide the following properties and functions:
 | [<!-- INCLUDE #UDPSocket.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPSocket.port.Summary -->       |
 | [<!-- INCLUDE #UDPSocket.send().Syntax -->](#send)<br/><!-- INCLUDE #UDPSocket.send().Summary -->   |
 
-<!-- REF #4D.UDPSocket.new().Desc -->
+<!-- REF 4D.UDPSocket.new().Desc -->
 
 ## 4D.UDPSocket.new()
 
-<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**( *options* : Object  ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object  ) : 4D.UDPSocket<!-- END REF -->
+<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**() : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *options* : Object ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object ) : 4D.UDPSocket<!-- END REF -->
 
 <!-- REF #4D.UDPSocket.new().params -->
 
@@ -49,23 +49,23 @@ UDPSocket objects provide the following properties and functions:
 | ---------- | --------- | --------------------------- | ---------------------------------------------------------------------------------------------- |
 | port       | Integer   | ->                          | Local port used for UDP socket (0 or omitted = find any unused port to use) |
 | options    | Object    | ->                          | Configuration [options](#options-parameter) for the socket                                     |
-| Resultado  | UDPSocket | <- | New UDPSocket object                                                                           |
+| Resultado  | UDPSocket | <- | Nuevo objeto UDPSocket                                                                         |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
+The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* (if any) on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
 
 #### Parámetro *options*
 
-En el parámetro *options*, pase un objeto que puede contener las siguientes propiedades:
+In the *options* parameter, you can pass an object that contains the following properties:
 
-| Propiedad   | Tipo    | Descripción                                   | Por defecto |
-| ----------- | ------- | --------------------------------------------- | ----------- |
-| onData      | Formula | Retrollamada activada cuando se reciben datos | Indefinido  |
-| onError     | Formula | Retrollamada en caso de error                 | Indefinido  |
-| onTerminate | Formula | Callback triggered when the port is released  | Indefinido  |
+| Propiedad   | Tipo    | Descripción                                      | Por defecto |
+| ----------- | ------- | ------------------------------------------------ | ----------- |
+| onData      | Formula | Retrollamada activada cuando se reciben datos    | Indefinido  |
+| onError     | Formula | Retrollamada en caso de error                    | Indefinido  |
+| onTerminate | Formula | Retrollamada activada cuando se libera el puerto | Indefinido  |
 
 #### Función callback (retrollamada)
 
@@ -73,8 +73,8 @@ Todas las funciones de retrollamada reciben dos parámetros:
 
 | Parámetros | Tipo                                    | Descripción                                           |
 | ---------- | --------------------------------------- | ----------------------------------------------------- |
-| $socket    | [`UDPSocket` object](#udpsocket-object) | The current UDPSocket instance.       |
-| $event     | [`UDPEvent` object](#udppevent-object)  | Contiene información sobre el evento. |
+| $socket    | [`UDPSocket` object](#udpsocket-object) | La instancia UDPSocket actual.        |
+| $event     | [`UDPEvent` object](#udpevent-object)   | Contiene información sobre el evento. |
 
 **Secuencia de retrollamadas:**
 
@@ -82,13 +82,13 @@ Todas las funciones de retrollamada reciben dos parámetros:
 2. `onError` se activa si se produce un error.
 3. `onTerminate` is always triggered just before the port is released (socket is closed or an error occured).
 
-#### UDPEvent object
+#### Objeto UDPEvent
 
 A [`UDPEvent`](UDPEventClass.md) object is returned when a [callback function](#callback-functions) is called.
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.errors.Desc -->
+<!-- REF UDPSocket.errors.Desc -->
 
 ## .errors
 
@@ -107,7 +107,7 @@ The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collecti
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.port.Desc -->
+<!-- REF UDPSocket.port.Desc -->
 
 ## .port
 
@@ -119,7 +119,7 @@ The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port numbe
 
 <!-- END REF -->
 
-<!-- REF #UDPSocket.send().Desc -->
+<!-- REF UDPSocket.send().Desc -->
 
 ## .send()
 
@@ -127,11 +127,11 @@ The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port numbe
 
 <!-- REF #UDPSocket.send().params -->
 
-| Parámetros | Tipo    |    | Descripción                                          |
-| ---------- | ------- | -- | ---------------------------------------------------- |
-| data       | Blob    | -> | Datos a enviar                                       |
-| hostName   | Text    | -> | Name or IP address of server                         |
-| remotePort | Integer | -> | Remote port to connect to (0=any) |
+| Parámetros | Tipo    |    | Descripción                                                       |
+| ---------- | ------- | -- | ----------------------------------------------------------------- |
+| data       | Blob    | -> | Datos a enviar                                                    |
+| hostName   | Text    | -> | Nombre o dirección IP del servidor                                |
+| remotePort | Integer | -> | Puerto remoto al que conectarse (0=cualquiera) |
 
 <!-- END REF -->
 
@@ -141,7 +141,7 @@ The `send()` function <!-- REF #UDPSocket.send().Summary -->sends *data* to the 
 
 *hostName* is the name or IP address of the server where the data will be sent.
 
-*remotePort* is the number of the port to be connected to. If you pass 0, any available port will be used.
+*remotePort* is the number of the port to be connected to. Si pasa 0, se utilizará cualquier puerto disponible.
 
 <!-- END REF -->
 

@@ -19,8 +19,8 @@ https://platform.openai.com/docs/api-reference/models
 
 | Parámetros   | Tipo                                      | Descripción                                              |
 | ------------ | ----------------------------------------- | -------------------------------------------------------- |
-| *model*      | Text                                      | The identifier of the model to retrieve. |
-| *parámetros* | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request.   |
+| *model*      | Text                                      | El identificador del modelo a recuperar. |
+| *parámetros* | [OpenAIParameters](OpenAIParameters.md)   | Parámetros adicionales para la petición. |
 | Resultado    | [OpenAIModelResult](OpenAIModelResult.md) | El resultado del modelo                                  |
 
 Recupera una instancia del modelo para ofrecer información básica.
@@ -38,12 +38,12 @@ var $model:=$result.model
 
 **list**(*parameters* : OpenAIParameters) : OpenAIModelListResult
 
-| Parámetros   | Tipo                                              | Descripción                                            |
-| ------------ | ------------------------------------------------- | ------------------------------------------------------ |
-| *parámetros* | [OpenAIParameters](OpenAIParameters.md)           | Additional parameters for the request. |
-| Resultado    | [OpenAIModelListResult](OpenAIModelListResult.md) | The model list result                                  |
+| Parámetros   | Tipo                                              | Descripción                                              |
+| ------------ | ------------------------------------------------- | -------------------------------------------------------- |
+| *parámetros* | [OpenAIParameters](OpenAIParameters.md)           | Parámetros adicionales para la petición. |
+| Resultado    | [OpenAIModelListResult](OpenAIModelListResult.md) | Resultado de la lista de modelos                         |
 
-Lists the currently available models.
+Lista los modelos disponibles actualmente.
 
 https://platform.openai.com/docs/api-reference/models/list
 

@@ -48,6 +48,10 @@ O campo contém efetivamente "proportion". 4D aceita e armazena a entrada inteir
 
 [Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Formato de Data
@@ -108,6 +112,10 @@ Customized date formats can be built using several patterns described in the [**
 #### Objectos suportados
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -270,6 +278,10 @@ A tabela a seguir mostra como os diferentes formatos afetam a exibição dos nú
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
+
 ---
 
 ## Formato imagem
@@ -330,6 +342,10 @@ Se o campo for reduzido para um tamanho inferior ao da imagem original, a imagem
 
 [Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Formato Hora
@@ -384,6 +400,10 @@ Por padrão, uma hora nula é exibida com zeros, por exemplo, "00:00:00". Com a 
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Texto quando False/Texto quando True
@@ -408,6 +428,10 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Tipo de exibição
@@ -428,13 +452,17 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. Nesse cas
 
 [Coluna de list box](listbox_overview.md#list-box-columns)
 
+#### Comandos
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## Não renderizado
 
 Quando essa propriedade está ativada, o objeto não é desenhado no formulário, mas ainda pode ser ativado.
 
-Em particular, esta propriedade permite implementar botões "invisíveis".  Os botões não renderizados podem ser colocados em cima de objetos gráficos. Eles permanecem invisíveis e não são realçados quando clicados, mas sua ação é acionada quando são clicados.
+Em particular, esta propriedade permite implementar botões "invisíveis". Os botões não renderizados podem ser colocados em cima de objetos gráficos. Eles permanecem invisíveis e não são realçados quando clicados, mas sua ação é acionada quando são clicados.
 
 #### Gramática JSON
 
@@ -475,6 +503,10 @@ También en este caso, la propiedad [Título](#title) está disponible para que 
 #### Objectos suportados
 
 [Casilla de selección](checkbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+
+#### Comandos
+
+[OBJECT Get three states checkbox](../commands-legacy/object-get-three-states-checkbox.md) - [OBJECT SET THREE STATES CHECKBOX](../commands-legacy/object-set-three-states-checkbox.md)
 
 ---
 
@@ -534,6 +566,10 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 [Columna List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers)
 
+#### Comandos
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+
 ---
 
 ## Visibilidade
@@ -564,6 +600,10 @@ Essa propriedade é usada somente ao desenhar objetos localizados no corpo de um
 #### Objectos suportados
 
 [Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista hierárquica](list_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapie List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de imagem](pictureButton_overview.md) - [Menu pop-up com imagem](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progresso](progressIndicator.md) - [Botão de opção](radio_overview.md) - [Spinner](spinner.md) - [Separador](splitters.md) - [Imagem estática](staticPicture.md) - [Etapas](stepper.md) - [Subformulário](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
+
+#### Comandos
+
+[OBJECT Get visible](../commands-legacy/object-get-visible.md) - [OBJECT SET VISIBLE](../commands-legacy/object-set-visible.md)
 
 ---
 
@@ -619,3 +659,7 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 #### Objectos suportados
 
 [Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
+
+#### Comandos
+
+[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)

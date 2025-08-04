@@ -99,7 +99,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-Sommaire Sommaire Si la classe singleton n'a jamais été instanciée au préalable, cette propriété appelle le constructeur de la classe sans paramètres et crée l'instance. Sinon, elle renvoie l'instance singleton existante.
+La propriété `.me` <!-- REF #ClassClass.me.Summary -->renvoie l'instance unique de la classe singleton `cs.className`<!-- END REF -->. Si la classe singleton n'a jamais été instanciée au préalable, cette propriété appelle le constructeur de la classe sans paramètres et crée l'instance. Sinon, elle renvoie l'instance singleton existante.
 
 Si `cs.className` n'est pas une [classe singleton](../Concepts/classes.md#singleton-classes), `.me` est **undefined** par défaut.
 
@@ -214,7 +214,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 La propriété `.superclass` <!-- REF #ClassClass.superclass.Summary -->retourne la classe parente de la classe<!-- END REF -->. Une superclasse peut être un objet `4D.Class`, ou un objet `cs.className`. Si la classe n'a pas de classe parente, la propriété retourne **null**.
 
-To define a superclass for a user class, use the  [`extends`](Concepts/classes.md#class-extends-classname) keyword like: `Class extends <superclass>`.
+Pour définir une superclasse pour une classe utilisateur, utilisez le mot-clé [`extends`](Concepts/classes.md#class-extends-classname) comme suit : `Class extends <superclass>`.
 
 Cette propriété est en **lecture seule**.
 

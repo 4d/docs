@@ -8,7 +8,7 @@ Windows において、組みこみ 4Dアプリケーションを SDI (シング
 
 :::info
 
-The concept of sdi.mdI does not exist on macOS. この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
+SDI/MDI という概念は macOS には存在しません。 この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
 
 :::
 
@@ -31,7 +31,7 @@ SDIモードは以下の実行環境に限り利用可能です:
 
 :::info
 
-開発環境は MDI で実行されるため、**アプリケーションをテスト(SDIモード)** のメニューを選択して開発モードからランタイムモードに切り替えることは、アプリケーションを再起動することを意味します。
+Because the development environment is executed in MDI, switching from design mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
 
 :::
 
@@ -57,7 +57,7 @@ SDIモードでは、同プロセス中に開かれたすべてのドキュメ�
 
 ### デバッガー
 
-SDIモードで表示されている場合、[デバッガーウィンドウ](../Debugging/debugger.md) には [編集ボタン](../Debugging/debugger.md#ツールバーボタン) がありません。これは、開発環境に切り替えるにあたって実行を中断し、MDIモードでアプリケーションを再起動する必要があるためです。
+When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to design environment requires to abort execution and restart the application in MDI mode.
 
 ### 自動終了
 

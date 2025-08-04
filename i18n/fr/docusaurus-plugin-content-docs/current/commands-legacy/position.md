@@ -117,7 +117,7 @@ Dans l'exemple suivant, vous souhaitez recherchez toutes les instances d'une cha
 ## Voir aussi 
 
 [Compare strings](compare-strings.md)  
-[Substring](substring.md)  
+[Substring](./substring.md)  
 
 ## Propriétés
 

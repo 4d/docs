@@ -16,7 +16,7 @@ title: VP Get current sheet
 
 ## Description
 
-The `VP Get current sheet` command <!-- REF #_method_.VP Get current sheet.Summary -->returns the index of the current sheet in *vpAreaName*. The current sheet is the selected sheet in the document.<!-- END REF -->
+La commande `VP Get current sheet` <!-- REF #_method_.VP Get current sheet.Summary -->retourne l'index de la feuille courante dans *vpAreaName*. La feuille courante est la feuille sélectionnée dans le document.<!-- END REF -->
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 

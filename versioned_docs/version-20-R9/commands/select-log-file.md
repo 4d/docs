@@ -9,7 +9,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | logFile | Text | &#8594;  | Name of the log file  |
-| \* |  | &#8594;  | Close the current log file |
+| \* | Operator | &#8594;  | Close the current log file |
 
 <!-- END REF-->
 

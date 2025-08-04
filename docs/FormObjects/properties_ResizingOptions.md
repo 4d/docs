@@ -39,11 +39,15 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](../comm
 
 [List Box](listbox_overview.md)
 
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Horizontal Sizing
 
-This property specifies if an object should be horizontally moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+This property specifies if an object should be horizontally moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) language command.
 
 Three options are available:
 
@@ -64,6 +68,10 @@ Three options are available:
 #### Objects Supported
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
+
+#### Commands
+
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
 
 ---
 
@@ -90,6 +98,11 @@ Three options are available:
 #### Objects Supported
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md)
+
+#### Commands
+
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+
 
 ---
 
@@ -131,3 +144,8 @@ Designates if the size of the column can be modified by the user.
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns)
+
+#### Commands
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

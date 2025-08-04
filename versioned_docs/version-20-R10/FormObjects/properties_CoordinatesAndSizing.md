@@ -72,6 +72,7 @@ Bottom coordinate of the object in the form.
 #### Commands
 
 [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
 ---
 
 ## Left
@@ -91,6 +92,7 @@ Left coordinate of the object on the form.
 #### Commands
 
 [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
 ---
 
 ## Right
@@ -110,6 +112,7 @@ Right coordinate of the object in the form.
 #### Commands
 
 [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
 ---
 
 ## Top
@@ -129,6 +132,7 @@ Top coordinate of the object in the form.
 #### Commands
 
 [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
 ---
 
 ## Corner Radius
@@ -325,7 +329,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### Commands
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAYS`](../commands-legacy/listbox-set-arrays.md)
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) 
 
 
 #### See also

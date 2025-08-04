@@ -77,7 +77,7 @@ In the verification form, you have assigned some Form object properties to input
 
 ![](../assets/en/commands/pict3541682.en.png)
 
-Here is the code for the "Check children" button:
+Este es el código del botón "Check children":
 
 ```4d
  var $win;$n;$i : Integer
@@ -105,7 +105,7 @@ Here is the code for the "Check children" button:
  End if
 ```
 
-The form displays information for each child:
+El formulario muestra información sobre cada niño:
 
 ![](../assets/en/commands/pict3515152.en.png)
 

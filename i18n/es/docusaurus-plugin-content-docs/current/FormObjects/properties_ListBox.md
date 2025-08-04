@@ -72,6 +72,10 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Conjunto resaltado
@@ -94,6 +98,10 @@ Esta propiedad se utiliza para especificar el conjunto a utilizar para gestionar
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
 
 ---
 
@@ -148,6 +156,10 @@ Número de columnas que no se pueden mover durante la ejecución.
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns.md) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns.md) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns.md) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns.md)
+
 ---
 
 ## Número de columnas
@@ -165,6 +177,10 @@ Define el número de columnas del list box.
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns.md) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md)
 
 ---
 
@@ -219,6 +235,10 @@ Tenga en cuenta que la configuración de las propiedades de un elemento anula cu
 
 [List Box](listbox_overview.md)
 
+#### Comandos
+
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array.md)
+
 ---
 
 ## Modo de selección
@@ -239,3 +259,8 @@ Designa la opción para permitir a los usuarios seleccionar líneas:
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+

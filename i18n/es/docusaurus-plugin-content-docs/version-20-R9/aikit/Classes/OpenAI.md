@@ -12,26 +12,26 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 | Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional       |
 | ---------------------- | ---- | ---------------------------------------------------------------------------- | -------------- |
 | `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | No para OpenAI |
-| `baseURL`              | Text | Base URL for OpenAI API requests.                            | Sí             |
+| `baseURL`              | Text | URL base para las peticiones de la API OpenAI.               | Sí             |
 | `organization`         | Text | Su ID de organización OpenAI.                                | Sí             |
 | `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí             |
 
 ### Propiedades HTTP adicionales
 
-| Nombre de la propiedad | Tipo                                                                             | Descripción                                                          |
-| ---------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `timeout`              | Real                                                                             | Time in seconds before timeout occurs.               |
-| `maxRetries`           | Real                                                                             | Maximum number of retry attempts in case of failure. |
-| `httpAgent`            | [4D.HTTPAgent](https://developer.4d.com/docs/API/HTTPAgentClass) | HTTP agent used for making requests.                 |
-| `customHeaders`        | Real                                                                             | Custom headers to be included in the HTTP requests.  |
+| Nombre de la propiedad | Tipo                                                                             | Descripción                                                                   |
+| ---------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `timeout`              | Real                                                                             | Tiempo en segundos antes de que se agote el tiempo de espera. |
+| `maxRetries`           | Real                                                                             | Maximum number of retry attempts in case of failure.          |
+| `httpAgent`            | [4D.HTTPAgent](https://developer.4d.com/docs/API/HTTPAgentClass) | Agente HTTP utilizado para realizar peticiones.               |
+| `customHeaders`        | Real                                                                             | Custom headers to be included in the HTTP requests.           |
 
 ### Class constructor
 
 Crear una instancia de la clase cliente OpenAI.
 
-| Argument Name | Tipo           | Descripción                                                                                     |
-| ------------- | -------------- | ----------------------------------------------------------------------------------------------- |
-| *apiKey*      | Texto u objeto | apiKey if Text as first argument and the second can be an Object of parameters. |
+| Nombre del argumento | Tipo           | Descripción                                                                                     |
+| -------------------- | -------------- | ----------------------------------------------------------------------------------------------- |
+| *apiKey*             | Texto u objeto | apiKey if Text as first argument and the second can be an Object of parameters. |
 
 #### Llave API
 
@@ -56,7 +56,7 @@ o después de crear una instancia
 $client.baseURL:="https://server.ai"
 ```
 
-## API resources
+## Recursos API
 
 The API provides access to multiple resources that allow seamless interaction with OpenAI's services. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
 

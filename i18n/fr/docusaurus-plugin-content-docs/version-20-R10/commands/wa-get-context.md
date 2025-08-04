@@ -7,11 +7,11 @@ title: WA Get context
 
 <!--REF #_command_.WA Get context.Params-->
 
-| Paramètres | Type                |                             | Description                                                                                                                                          |
-| ---------- | ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur           | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
-| object     | Objet de formulaire | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis).                              |
-| contextObj | Object              | &#8592; | Objet contexte si défini précédemment, sinon `null`.                                                                                 |
+| Paramètres | Type      |                             | Description                                                                                                                                          |
+| ---------- | --------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
+| object     | any       | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis).                              |
+| contextObj | Object    | &#8592; | Objet contexte si défini précédemment, sinon `null`.                                                                                 |
 
 <!-- END REF-->
 

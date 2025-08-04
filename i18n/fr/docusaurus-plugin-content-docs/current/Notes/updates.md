@@ -3,6 +3,18 @@ id: updates
 title: Release Notes
 ---
 
+## 4D 21
+
+Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), the blog post that lists all new features and enhancements in 4D 21.
+
+#### Points forts
+
+- The code of a loaded, interpreted component can now be [edited from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer.
+- Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- Langage 4D:
+    - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
+    - [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
+
 ## 4D 20 R10
 
 Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-20-R10/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R10.
@@ -64,9 +76,9 @@ Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fr-whats-new-in-4d-2
 - Prise en charge de [sessions autonomes](../API/SessionClass.md) pour simplifier le développement en local d'applications client/serveur.
 - [débogueur 4D](../Debugging/debugger.md) : nouveau design, nouvelles fonctions de sauvegarde automatique et de mode d'affichage.
 - [Nouvelle architecture des composants générés](../Desktop/building.md#build-component) pour une meilleure conformité avec les directives de notarisation d'Apple.
-- Vous pouvez maintenant facilement [générer des applications d'évaluation](../Desktop/building.md#build-an-evaluation-application) dans la boîte de dialogue du Générateur d'applications.
+- Vous pouvez maintenant facilement [générer des applications d'évaluation](../Desktop/building.md#evaluation-application) dans la boîte de dialogue du Générateur d'applications.
 - Dépendances : Utilisez le Gestionnaire de dépendances pour [vérifier les nouvelles versions](../Project/components.md#checking-for-new-versions) et [mettre à jour](../Project/components.md#updating-dependencies) les composants GitHub.
-- Nouvelles classes [`TCPConnection`](../API/TCPConnectionClass.md) et [`TCPEvent`](../API/TCPEventClass.md) pour gérer les connexions client TCP, traiter les événements et améliorer le contrôle de la transmission des données. Ajout de [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcplogtxt) pour la journalisation détaillée des événements TCP.
+- Nouvelles classes [`TCPConnection`](../API/TCPConnectionClass.md) et [`TCPEvent`](../API/TCPEventClass.md) pour gérer les connexions client TCP, traiter les événements et améliorer le contrôle de la transmission des données. Ajout de [`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) pour la journalisation détaillée des événements TCP.
 - Nouvelles options dans [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) et [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) pour contrôler les styles, les formules, l'intégrité des données et la protection par mot de passe.
 - 4D Write Pro :
     - Les commandes suivantes acceptent maintenant des paramètres tels que des objets ou des collections : [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get Attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), et [WP Insert picture] (../WritePro/commands/wp-insert-picture.md).

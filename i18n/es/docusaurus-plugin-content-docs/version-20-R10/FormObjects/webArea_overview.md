@@ -41,7 +41,7 @@ Cuando la propiedad [Acceso a los métodos 4D](properties_WebArea.md#access-4d-m
 
 The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 
-For example, calling the `HelloWorld` method in 4D:
+Por ejemplo, llamando al método `HelloWorld` en 4D:
 
 ```js
 $4d.HelloWorld();
@@ -57,7 +57,7 @@ Para verificar el contexto definido actualmente, utilice [`WA Get context`](../c
 
 Para más información, consulte [`WA SET CONTEXT`](../commands/wa-set-context.md).
 
-### Calling 4D Methods from JavaScript
+### Llamada a métodos 4D desde JavaScript
 
 La sintaxis de las llamadas a los métodos 4D es la siguiente:
 

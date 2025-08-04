@@ -35,7 +35,7 @@ Vous pouvez utiliser un numéro de séquence pour créer un numéro unique pour 
 
 #### Objets pris en charge
 
-[Input](input_overview.md)
+[Zone de saisie](input_overview.md)
 
 ---
 
@@ -54,6 +54,10 @@ Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans 
 #### Objets pris en charge
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+
+#### Commandes
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
 
 ---
 
@@ -75,3 +79,7 @@ Cependant, contrairement à la propriété [Choice List](properties_DataSource.m
 #### Objets pris en charge
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+
+#### Commandes
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)

@@ -19,6 +19,10 @@ title: テキスト、ピクチャー
 
 [カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## ボタンスタイル
@@ -34,6 +38,10 @@ title: テキスト、ピクチャー
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) - [ラジオボタン](radio_overview.md) - [チェックボックス](checkbox_overview.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -60,6 +68,10 @@ title: テキスト、ピクチャー
 
 [カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## アイコンの場所
@@ -75,6 +87,10 @@ title: テキスト、ピクチャー
 #### 対象オブジェクト
 
 [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -93,6 +109,10 @@ title: テキスト、ピクチャー
 #### 対象オブジェクト
 
 [カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -129,6 +149,10 @@ title: テキスト、ピクチャー
 
 [ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [ラジオボタン](radio_overview.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## ピクチャーパス名
@@ -148,6 +172,10 @@ title: テキスト、ピクチャー
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -175,11 +203,15 @@ title: テキスト、ピクチャー
 
 [ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [ラジオボタン](radio_overview.md)
 
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+
 ---
 
 ## タイトルと画像を隣接させる
 
-This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](properties_Text.md#horizontal-alignment) properties.
+このプロパティは、[タイトル/ピクチャー位置](#タイトルピクチャー位置) と [横揃え](properties_Text.md#横揃え) プロパティを考慮しながら、ボタンのタイトルと画像を隣接して表示するか、あるいは分離するかを定義します。
 
 ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。
 
@@ -196,6 +228,10 @@ This property allows you to define whether the title and the picture of the butt
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) (ヘルプ以外のスタイル) - [チェックボックス](checkbox_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開以外のスタイル) - [ラジオボタン](radio_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開以外のスタイル)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -216,6 +252,10 @@ This property allows you to define whether the title and the picture of the butt
 #### 対象オブジェクト
 
 [カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
 
 ---
 
@@ -250,7 +290,7 @@ This property allows you to define whether the title and the picture of the butt
 
 ### ポップアップメニューの管理
 
-"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 "ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 "ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) and [`Pop up menu`](../commands-legacy/pop-up-menu.md) commands.
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューの表示とその値は管理者が管理すべきものです。具体的には、[`form events`](../Events/overview.md) および [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) コマンドおよび [`Pop up menu`](../commands-legacy/pop-up-menu.md) コマンドなどを使用して管理しなければなりません。
 
 #### JSON 文法
 
@@ -260,4 +300,9 @@ This property allows you to define whether the title and the picture of the butt
 
 #### 対象オブジェクト
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[ツールバーボタン](button_overview.md#ツールバー) - [ベベルボタン](button_overview.md#ベベル) - [角の丸いべべルボタン](button_overview.md#角の丸いベベル) - [OS X グラデーションボタン](button_overview.md#os-x-グラデーション) - [OS X テクスチャーボタン](button_overview.md#os-x-テクスチャー) - [Office XP ボタン](button_overview.md#office-xp) - [サークルボタン](button_overview.md#サークル) - [カスタムボタン](button_overview.md#カスタム)
+
+#### コマンド
+
+[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+

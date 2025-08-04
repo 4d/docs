@@ -22,7 +22,7 @@ Le format appliqué à la chaîne est HH:MM:SS.
 
 Si vous passez un nombre de secondes supérieur à celui qu'il y a dans un jour (86 400), **Time string** continue d'ajouter les heures, les minutes et les secondes. Par exemple, **Time string**(86401) retourne 24:00:01.
 
-**Note :** Si vous voulez obtenir sous forme de chaîne une expression de type Heure dans des formats plus variés, utilisez la fonction [String](string.md). 
+**Note :** Si vous voulez obtenir sous forme de chaîne une expression de type Heure dans des formats plus variés, utilisez la fonction [String](../commands/string.md). 
 
 ## Exemple 
 
@@ -34,7 +34,7 @@ L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “468
 
 ## Voir aussi 
 
-[String](string.md)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
 ## Propriétés

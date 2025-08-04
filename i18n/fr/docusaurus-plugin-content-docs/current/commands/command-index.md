@@ -340,7 +340,7 @@ title: Index
 [`FORM SET VERTICAL RESIZING`](../commands-legacy/form-set-vertical-resizing.md)<br/>
 [`FORM UNLOAD`](../commands-legacy/form-unload.md)<br/>
 [`Formula`](formula.md)<br/>
-[`Formula from string`](formula-from-string.md)<br/>
+[`Formula from string`](./formula-from-string.md)<br/>
 [`Frontmost process`](../commands-legacy/frontmost-process.md)<br/>
 [`Frontmost window`](../commands-legacy/frontmost-window.md)<br/>
 
@@ -697,7 +697,7 @@ title: Index
 [`Not`](../commands-legacy/not.md)<br/>
 [`NOTIFY RESOURCES FOLDER MODIFICATION`](../commands-legacy/notify-resources-folder-modification.md)<br/>
 [`Null`](../commands-legacy/null.md)<br/>
-[`Num`](../commands-legacy/num.md)<br/>
+[`Num`](num.md)<br/>
 
 <a id="O"><b>O</b></a>
 
@@ -1062,7 +1062,7 @@ title: Index
 [`SEND VARIABLE`](../commands-legacy/send-variable.md)<br/>
 [`Sequence number`](../commands-legacy/sequence-number.md)<br/>
 [`Session`](session.md)<br/>
-[`Session info`](session-info.md) - **nouveau 4D 20 R7**<br/>
+[`Session info`](session-info.md) - **new 4D 20 R7**<br/>
 [`Session storage`](session-storage.md)<br/>
 [`SET ABOUT`](../commands-legacy/set-about.md)<br/>
 [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)<br/>
@@ -1132,7 +1132,7 @@ title: Index
 [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder.md)<br/>
 [`SET USER ALIAS`](../commands-legacy/set-user-alias.md)<br/>
 [`Set user properties`](../commands-legacy/set-user-properties.md)<br/>
-[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **nouveau 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **new 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands-legacy/set-window-rect.md)<br/>
 [`SET WINDOW TITLE`](../commands-legacy/set-window-title.md)<br/>
 [`Shift down`](../commands-legacy/shift-down.md)<br/>
@@ -1196,7 +1196,7 @@ title: Index
 [`STOP MONITORING ACTIVITY`](../commands-legacy/stop-monitoring-activity.md)<br/>
 [`STOP SQL SERVER`](../commands-legacy/stop-sql-server.md)<br/>
 [`Storage`](../commands-legacy/storage.md)<br/>
-[`String`](../commands-legacy/string.md)<br/>
+[`String`](string.md)<br/>
 [`STRING LIST TO ARRAY`](../commands-legacy/string-list-to-array.md)<br/>
 [`Structure file`](../commands-legacy/structure-file.md)<br/>
 [`Substring`](../commands-legacy/substring.md)<br/>
@@ -1239,6 +1239,9 @@ title: Index
 [`Trigger event`](../commands-legacy/trigger-event.md)<br/>
 [`Trigger level`](../commands-legacy/trigger-level.md)<br/>
 [`TRIGGER PROPERTIES`](../commands-legacy/trigger-properties.md)<br/>
+[`Trim`](trim.md) **new 4D 21**<br/>
+[`Trim end`](trim-end.md) **new 4D 21**<br/>
+[`Trim start`](trim-start.md) **new 4D 21**<br/>
 [`True`](../commands-legacy/true.md)<br/>
 [`Trunc`](../commands-legacy/trunc.md)<br/>
 [`TRUNCATE TABLE`](../commands-legacy/truncate-table.md)<br/>

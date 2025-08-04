@@ -68,7 +68,9 @@ Coordenadas inferiores do objeto no formulário.
 
 #### Comandos
 
-## [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
+---
 
 ## Direita
 
@@ -86,7 +88,9 @@ Coordenadas esquerda do objecto no formulário.
 
 #### Comandos
 
-## [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
+---
 
 ## Esquerda
 
@@ -104,7 +108,9 @@ Coordenada direita do objecto no formulário.
 
 #### Comandos
 
-## [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
+---
 
 ## Topo
 
@@ -122,7 +128,9 @@ Coordenada superior do objecto no formulário.
 
 #### Comandos
 
-## [OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+
+---
 
 ## Retângulo
 
@@ -314,7 +322,7 @@ Supondo que a unidade das linhas seja "linhas", então a quinta linha do list bo
 
 #### Comandos
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAYS`](../commands-legacy/listbox-set-arrays.md)
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md)
 
 #### Veja também
 
@@ -336,7 +344,7 @@ Define um preenchimento horizontal para as células. O valor é definido em pixe
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
 
 #### Comandos
 
@@ -360,7 +368,7 @@ Define um preenchimento vertical para as células. O valor é definido em pixeis
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
 
 #### Comandos
 

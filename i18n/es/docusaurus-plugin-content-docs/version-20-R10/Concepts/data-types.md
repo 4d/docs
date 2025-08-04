@@ -23,7 +23,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 | [Pointer](Concepts/dt_pointer.md)                       | -                                           | Sí                         | `Pointer`                         | `ARRAY POINTER`                  |
 | [Picture](Concepts/dt_picture.md)                       | Sí                                          | Sí                         | `Picture`                         | `ARRAY PICTURE`                  |
 | [BLOB](Concepts/dt_blob.md)                             | Sí                                          | Sí                         | `Blob`, `4D.Blob`                 | `ARRAY BLOB`                     |
-| [Object](Concepts/dt_object.md)                         | Yes(3)                   | Sí                         | `Object`                          | `ARRAY OBJECT`                   |
+| [Object](Concepts/dt_object.md)                         | Sí(3)                    | Sí                         | `Object`                          | `ARRAY OBJECT`                   |
 | [Collection](Concepts/dt_collection.md)                 | -                                           | Sí                         | `Collection`                      |                                  |
 | [Variant](Concepts/dt_variant.md)(2) | -                                           | Sí                         | `Variant`                         |                                  |
 
@@ -31,7 +31,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 (2) Variant no es en realidad un tipo *data* sino un tipo *variable* que puede contener un valor de cualquier otro tipo de datos.
 
-(3) You can [assign a class](../Develop/field-properties.md) to an object field in the structure editor.
+(3) Puede [asignar una clase](../Develop/field-properties.md) a un campo objeto en el editor de estructura.
 
 ## Comandos
 
@@ -51,7 +51,7 @@ El valor por defecto depende del tipo de variable:
 | Booleano   | False                                    |
 | Fecha      | 00-00-00                                 |
 | Integer    | 0                                        |
-| Hora       | 00:00:00 |
+| Time       | 00:00:00 |
 | Picture    | picture size=0                           |
 | Real       | 0                                        |
 | Puntero    | Nil=true                                 |
@@ -76,7 +76,7 @@ La siguiente tabla lista los tipos de datos básicos, los tipos de datos a los q
 | String (1) |           | `Num`     | `Date`   | `Time`  | `Bool`      |
 | Número (2) | `String`  |           |          |         | `Bool`      |
 | Fecha                         | `String`  |           |          |         | `Bool`      |
-| Hora                          | `String`  |           |          |         | `Bool`      |
+| Time                          | `String`  |           |          |         | `Bool`      |
 | Boolean                       |           | `Num`     |          |         |             |
 
 (1) Las cadenas formateadas en JSON pueden convertirse en datos escalares, objetos o colecciones, utilizando el comando `JSON Parse`.

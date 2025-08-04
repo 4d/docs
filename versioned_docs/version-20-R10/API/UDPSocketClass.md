@@ -11,7 +11,7 @@ Thanks to the standard 4D object *refcounting*, a UDPSocket is automatically rel
 
 :::info 4DTCPUDPLog.txt file
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to UDP sockets. Events include data transmission, errors, and connection lifecycle information. 
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to UDP sockets. Events include data transmission, errors, and connection lifecycle information. 
 
 :::
 
@@ -39,11 +39,11 @@ UDPSocket objects provide the following properties and functions:
 |[<!-- INCLUDE #UDPSocket.send().Syntax -->](#send)<br/><!-- INCLUDE #UDPSocket.send().Summary -->|
 
 
-<!-- REF #4D.UDPSocket.new().Desc -->
+<!-- REF 4D.UDPSocket.new().Desc -->
 ## 4D.UDPSocket.new()
 
 
-<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**( *options* : Object  ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object  ) : 4D.UDPSocket<!-- END REF -->
+<!-- REF #4D.UDPSocket.new().Syntax -->**4D.UDPSocket.new**() : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *options* : Object ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ) : 4D.UDPSocket<br/>**4D.UDPSocket.new**( *port* : Integer ; *options* : Object ) : 4D.UDPSocket<!-- END REF -->
 
 
 <!-- REF #4D.UDPSocket.new().params -->
@@ -58,12 +58,12 @@ UDPSocket objects provide the following properties and functions:
 #### Description
 
 
-The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
+The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* (if any) on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
 
 
 #### `options` parameter
 
-In the *options* parameter, pass an object that can contain the following properties:
+In the *options* parameter, you can pass an object that contains the following properties:
 
 |Property|Type|Description|Default|
 |---|---|---|---|
@@ -80,7 +80,7 @@ All callback functions receive two parameters:
 |Parameter|Type|Description|
 |---|---|---|
 |$socket|[`UDPSocket` object](#udpsocket-object)|The current UDPSocket instance.|
-|$event|[`UDPEvent` object](#udppevent-object)|Contains information about the event.|
+|$event|[`UDPEvent` object](#udpevent-object)|Contains information about the event.|
 
 **Sequence of Callback Calls:**
 
@@ -96,7 +96,7 @@ A [`UDPEvent`](UDPEventClass.md) object is returned when a [callback function](#
 <!-- END REF -->
 
 
-<!-- REF #UDPSocket.errors.Desc -->
+<!-- REF UDPSocket.errors.Desc -->
 ## .errors
 
 <!-- REF #UDPSocket.errors.Syntax -->**errors** : Collection<!-- END REF -->
@@ -117,7 +117,7 @@ The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collecti
 
 
 
-<!-- REF #UDPSocket.port.Desc -->
+<!-- REF UDPSocket.port.Desc -->
 ## .port
 
 <!-- REF #UDPSocket.port.Syntax -->**port** : Number<!-- END REF -->
@@ -132,7 +132,7 @@ The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port numbe
 
 
 
-<!-- REF #UDPSocket.send().Desc -->
+<!-- REF UDPSocket.send().Desc -->
 ## .send()
 
 <!-- REF #UDPSocket.send().Syntax -->**.send**( *data* : Blob ; *hostName* : Text ; *remotePort* : Integer )<!-- END REF -->

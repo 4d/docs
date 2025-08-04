@@ -51,7 +51,7 @@ If *targetObj* is a range, you can optionally use the *rangeUpdate* parameter to
 
 | Constante             | Tipo    | Valor | Comentario                                                               |
 | --------------------- | ------- | ----- | ------------------------------------------------------------------------ |
-| wk exclude from range | Integer | 1     | Picture not included in the updated range                                |
+| wk exclude from range | Integer | 1     | Imagen no incluida en la gama actualizada                                |
 | wk include in range   | Integer | 0     | Imagen incluida en el rango actualizado (por defecto) |
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted picture is included in the resulting range.

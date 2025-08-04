@@ -13,7 +13,7 @@ title: OpenAIVisionHelper
 
 | Parámetros   | Tipo                                                                  | Descripción                                                          |
 | ------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| *prompt*     | Text                                                                  | The text prompt to send to the OpenAI chat API.      |
+| *prompt*     | Text                                                                  | El texto que se enviará a la API de chat de OpenAI.  |
 | *parámetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Optional parameters for the chat completion request. |
 | Resultado    | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | El resultado de la visión.                           |
 

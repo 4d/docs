@@ -17,7 +17,7 @@ Custom HTTP request handlers meet various needs, including:
 
 ## Requisitos
 
-Custom HTTP Request handlers are supported:
+Se soportan gestores de solicitudes HTTP personalizados:
 
 - cuando las [sesiones escalables](./sessions.md#enabling-web-sessions) están habilitadas,
 - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
@@ -58,7 +58,7 @@ You must restart the Web server so that modifications made in this file are take
 
 :::
 
-## Handler definition
+## Definición del gestor
 
 A handler is defined by:
 
@@ -75,16 +75,16 @@ URL patterns can be given as **prefixes** or using **regular expressions**.
 - To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
    Ej: `"pattern": "docs"` o `"pattern": "docs/invoices"`
 
-- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
+- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Los modelos de expresiones regulares se manejan directamente.
    Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
 
-#### Pattern matching
+#### Concordancia de modelos
 
 URL patterns are triggered in the given order:
 
-- the first matching pattern is executed
+- se ejecuta el primer modelo coincidente
 - the following patterns are not executed even if they match the URL
 
 As a consequence, you need to apply a accurate strategy when writing your handlers: the most detailed patterns must be written before the more general patterns.
@@ -208,7 +208,7 @@ Here is a detailed example of a HTTPHandlers.json file:
 
 In this example, you must implement the following functions:
 
-- *handle function* in the *GeneralHandling* class
+- *funciónhandle* en la clase \*GeneralHandling
 - *manageAccount* en la clase *UsersHandling*
 - *handleInvoices* en la clase *FinancialHandling*
 - *handleDocs* en la clase *DocsHandling*
@@ -225,7 +225,7 @@ Examples of URLs triggering the handlers:
 `IP:port/docs/invoices/past` with a GET verb
 `IP:port/docs/invoices/today/latest` with a GET verb
 
-`IP:port//docs/myPage.html` with a GET verb
+`IP:port//docs/myPage.html` con un verbo GET
 
 `IP:port//docs/invoices/` with a GET verb, calls *handleInvoices* function (*InvoicesHandling* class)
 `IP:port//docs/invoices/details/` with a GET verb, calls *handleDetails* function (*InvoicesHandling* class)
@@ -247,7 +247,7 @@ It is **not recommended** to expose request handler functions to external REST c
 
 :::
 
-### Input: an instance of the 4D.IncomingMessage class
+### Entrada: una instancia de la clase 4D.IncomingMessage
 
 Cuando una solicitud ha sido interceptada por el manejador, se recibe en el servidor como una instancia de la [clase 4D.IncomingMessage](../API/IncomingMessageClass.md).
 

@@ -53,7 +53,7 @@ Además del [botón **Compilar**](#compile), la ventana Compilador ofrece otras 
 
 ### Verificar la sintaxis
 
-El botón **Verificar la sintaxis** lanza la ejecución de la fase de verificación de la sintaxis. Al final del proceso de verificación, los errores detectados se listan en el área de información. You can double–click on an error line in order to display the corresponding method or form object.
+El botón **Verificar la sintaxis** lanza la ejecución de la fase de verificación de la sintaxis. Al final del proceso de verificación, los errores detectados se listan en el área de información. Puede hacer doble clic en una línea de error para visualizar el método o el objeto de formulario correspondiente.
 
 El control sintáctico también puede lanzarse directamente con el comando **Verificar sintaxis** asociado al botón de la barra de herramientas **Compilador**. Esta opción es la única disponible si no dispone de una licencia adecuada para permitir la compilación de aplicaciones.
 
@@ -125,7 +125,7 @@ Se proponen dos opciones de objetivo. El resultado depende del procesador de la 
 
 ### Opciones adicionales (Compatibilidad)
 
-In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
+En los proyectos convertidos a partir de versiones 4D anteriores a 20 R7, existen opciones de compilación adicionales:
 
 - **Ruta de compilación**
 - **Declaración de tipos por defecto**
@@ -136,9 +136,9 @@ Estas opciones solo se mantienen por compatibilidad con código antiguo. Para m�
 En proyectos convertidos, se recomienda [habilitar el modo de escritura directa](#enabling-direct-typing) y escribir código de declaración conforme, por ejemplo:
 
 - declarar explícitamente todas las variables [usando palabras clave `var`](../Concepts/variables.md#declaring-variables)
-- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
+- declarar explícitamente todos los parámetros en prototipos de funciones (es decir, usando las palabras clave `Function` o `Class constructor`) o con `#DECLARE` en métodos (ver [Declarando parámetros](../Concepts/parameters.md#declaring-parameters).
 
-#### Enabling direct typing
+#### Activar la escritura directa
 
 :::info
 
@@ -146,9 +146,9 @@ El modo de escritura directa es opcional sólo en proyectos convertidos. Se util
 
 :::
 
-Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. Cuando se selecciona esta opción, las demás opciones de compatibilidad pierden su utilidad y dejan de mostrarse.
 
-Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. Solo tiene que asegurarse de que todas sus variables son declaradas utilizando la [sintaxis 'var'](../Concepts/variables.md#declaring-variables) y que sus parámetros de método y función son declarados [en sus prototipos](../Concepts/parameters.md) (la función [Verificar sintaxis](#check-syntax) puede ayudarle a detectar declaraciones faltantes o no válidas).
+Se recomienda utilizar esta opción, ya que proporciona flexibilidad y eficiencia. The direct typing concept assumes that all elements are directly declared where they are defined in your code. Solo tiene que asegurarse de que todas sus variables son declaradas utilizando la [sintaxis 'var'](../Concepts/variables.md#declaring-variables) y que sus parámetros de método y función son declarados [en sus prototipos](../Concepts/parameters.md) (la función [Verificar sintaxis](#check-syntax) puede ayudarle a detectar declaraciones faltantes o no válidas).
 
 ## Advertencias
 

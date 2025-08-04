@@ -29,7 +29,7 @@ Cada objeto de formulario activo está asociado a un nombre de objeto. Cada nomb
 
 > Los nombres de objetos están limitados a un tamaño de 255 bytes.
 
-When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../category/object-forms)).
+Al utilizar el lenguaje de 4D, puede referirse a un objeto formulario activo por su nombre de objeto (ver los comandos [Object (Forms)](../category/object-forms)).
 
 Para más información sobre las reglas de denominación de los objetos de formulario, consulte la sección [Identificadores](Concepts/identifiers.md).
 
@@ -293,7 +293,7 @@ Esta propiedad define el tipo de cálculo que se realizará en un área [pie de 
 
 Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálculos que se pueden utilizar según el tipo de datos que se encuentran en cada columna e indica el tipo afectado automáticamente por 4D a la variable de pie de página (si no está escrita por el código):
 
-| Cálculo                                    | Num | Text | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
+| Cálculo                                    | Num | Text | Fecha | Time | Bool | Imágenes | tipos de variables de pie de página |
 | ------------------------------------------ | --- | ---- | ----- | ---- | ---- | -------- | ----------------------------------- |
 | Mínimo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Máximo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |

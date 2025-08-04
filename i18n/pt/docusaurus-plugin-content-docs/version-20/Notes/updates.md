@@ -25,7 +25,7 @@ Leia [**O que há de novo no 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20
 
 :::info Aplicativos de avaliação
 
-A partir da compilação noturna **101734**, a caixa de diálogo Criar aplicativo tem uma nova opção que permite criar aplicativos de avaliação. Consulte [a descrição na documentação do 4D Rx](../../../docs/Desktop/building#build-an-evaluation-application).
+A partir da compilação noturna **101734**, a caixa de diálogo Criar aplicativo tem uma nova opção que permite criar aplicativos de avaliação. Consulte [a descrição na documentação do 4D Rx](../../../docs/Desktop/building.md#evaluation-application).
 
 :::
 

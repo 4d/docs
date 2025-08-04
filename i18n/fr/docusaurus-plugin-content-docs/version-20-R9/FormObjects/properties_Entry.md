@@ -95,7 +95,7 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 | &9                                                                              | Permet tout chiffre.                                                                                                                                                                                                          |
 | &A                                                                              | Ne permet que la saisie de lettres majuscules.                                                                                                                                                                                |
 | &A                                                                              | Ne permet que la saisie de lettres (minuscules et majuscules).                                                                                                                                             |
-| &3                                                                              | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                                                            |
+| &@                                                                 | Ne permet que la saisie de caractères alphanumériques. Pas de caractères spéciaux.                                                                                                                            |
 | ~a##                                                                                | Abréviation du nom de l'état (par exemple, CA). Permet la saisie de deux lettres, mais les transforme en caractères majuscules.                                                            |
 | !0&9##/##/##                                                                    | Filtre standard de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre.                                                                          |
 | !0&9 Day: ## Month: ## Year: ## | Filtre personnalisé de saisie des dates. Affiche des zéros aux emplacements de saisie. Permet la saisie de tout chiffre. Deux entrées après chaque mot.                       |
@@ -194,7 +194,7 @@ Lorsque cette valeur est sélectionnée, la propriété est gérée par l'option
 
 #### Objets pris en charge
 
-[Input](input_overview.md)
+[Zone de saisie](input_overview.md)
 
 ---
 

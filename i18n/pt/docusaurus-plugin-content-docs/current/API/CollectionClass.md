@@ -1289,13 +1289,14 @@ Pode definir o(s) seguinte(s) parâmetro(s):
 #### Exemplo 1
 
 ```4d
-C_OBJECT($1)
- C_LONGINT($2)
- If(OB Get type($1;"value")=$2)
+var $col ; $result : Collection
+$col:=New collection(1; 2; 3; 4)
 
+$result:=$col.map(Formula(New collection($1.value*2)))
+ // [[2],[4],[6],[8]]
 
-    $1.result:=True
- End if
+$result:=$col.flatMap(Formula(New collection($1.value*2)))
+// [2,4,6,8]
 ```
 
 #### Exemplo 2

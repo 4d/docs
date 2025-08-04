@@ -86,24 +86,24 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 |                      | password                  | text                        | Password to set to open the workbook.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `\<customProperty>` |                           | any                         | Propriété personnalisée qui sera disponible via le paramètre $3 dans la méthode de callback.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-**Notes about Excel format**:
+**Notes sur le format Excel** :
 
 - Lors de l'export d'un document 4D View Pro en un fichier au format Microsoft Excel, certains paramètres peuvent être perdus. Par exemple, les méthodes et formules 4D ne sont pas prises en charge par Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 - Using *excelOptions* object is recommended when exporting in ".xlsx" format. Make sure to not mix this object with legacy first level properties (*password*, *includeBindingSource*...) to avoid potiental issues.
 
-**Notes about PDF format**:
+**Notes sur le format PDF** :
 
 - Lors de l'export d'un document 4D View Pro en un fichier au format PDF, les polices utilisées dans le document sont automatiquement intégrées dans le fichier PDF. Seules les polices OpenType (fichiers .OTF ou .TTF) ayant une table Unicode peuvent être intégrées. Si aucun fichier de polices valide n'est trouvé pour une police, une police par défaut est utilisée à sa place.
 - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
-**Notes about CSV format**:
+**Notes sur le format CSV** :
 
 - Lors de l'export d'un document 4D View Pro en un fichier au format PDF, certains paramètres peuvent être perdus, car seuls le texte et les valeurs sont sauvegardés.
 - Toutes les valeurs sont enregistrées sous la forme de chaînes entre guillemets. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
 - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
-**Notes about SpreadJS file format**:
+**Notes sur le format de fichier SpreadJS** :
 
 - [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
 - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
@@ -174,7 +174,7 @@ Vous souhaitez exporter un document 4D View Pro au format ".xlsx" et appeler une
 
 ## Exemple 4
 
-You want to export the current sheet to a `.txt` file with pipe-separated values:
+Vous souhaitez exporter la feuille courante dans un fichier `.txt` avec des valeurs séparées par des "|" :
 
 ![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv.png)
 

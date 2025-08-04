@@ -21,7 +21,7 @@ Las fórmulas son evaluadas:
 
 Formulas are not evaluated when a document is loaded (using [**WP New**](commands-legacy/wp-new.md), [**WP Insert document body**](commands/wp-insert-document-body.md), or `wpArea:=[table]field`):
 
-- if the document is only offscreen,
+- si el documento sólo está fuera de la pantalla,
 - if the document is displayed onscreen but the form object only shows references.
 
 Formulas become static values if you call the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command (except for page number and page count, see below).
@@ -43,7 +43,7 @@ You want to replace the selection in a 4D Write Pro area with the contents of a 
  End case
 ```
 
-## Formula context object
+## Objeto de contexto de fórmula
 
 You can insert special expressions related to document attributes in any document area (body, header, footer) using the [WP Insert formula](commands/wp-insert-formula.md) command. Within a formula, a formula context object is automatically exposed. Puede utilizar las propiedades de este objeto a través de [**This**](../commands/this.md):
 
@@ -84,7 +84,7 @@ For example, to insert the page number in the footer area:
   //no funcionaría correctamente
 ```
 
-## Inserting date and time formulas
+## Inserción de fórmulas de fecha y hora
 
 **Date**
 
@@ -111,7 +111,7 @@ When the [**Current time**](../commands-legacy/current-time.md) command, a time 
 
 Table and field expressions inserted in 4D Write Pro documents support the virtual structure definition of the database. The virtual structure exposed to formulas is defined through [**SET FIELD TITLES**](../commands-legacy/set-field-titles.md)(...;\*) and [**SET TABLE TITLES**](../commands-legacy/set-table-titles.md)(...;\*) commands.
 
-When a virtual structure is defined:
+Cuando se define una estructura virtual:
 
 - references to expressions containing fields display virtual names when the 4D Write Pro document shows references and not values.
 - [**WP Get text**](commands-legacy/wp-get-text.md) devuelve nombres de estructura virtual si la opción `wk expressions as source` está establecida en el parámetro de expresiones.
@@ -204,7 +204,7 @@ Only inline formulas can have a name (formulas for anchored images, break rows, 
 
 :::
 
-### Formula tips
+### Consejos sobre fórmulas
 
 Whatever the formula display mode, you can get additional information on formulas through **tips** that are displayed when you hover on formulas.
 

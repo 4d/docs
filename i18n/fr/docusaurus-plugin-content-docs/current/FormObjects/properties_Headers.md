@@ -17,6 +17,10 @@ En-têtes Il existe un en-tête par colonne; chaque en-tête est configuré sép
 
 [List Box](listbox_overview.md)
 
+#### Commandes
+
+[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+
 ---
 
 ## Hauteur
@@ -59,6 +63,10 @@ A noter que la conversion en va-et-vient peut conduire à un résultat final dif
 #### Objets pris en charge
 
 [List Box](listbox_overview.md)
+
+#### Commandes
+
+[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height.md) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height.md)
 
 #### Voir également
 

@@ -23,7 +23,7 @@ title: 値の範囲
 | #H   | 現在の時刻   |
 | #N   | シーケンス番号 |
 
-カレントデータファイルの特定のテーブルにおいて、レコード毎のユニーク番号を生成するためにシーケンス番号を使用することができます。 シーケンス番号は倍長整数型で新規レコード毎に生成されます。 番号は 1 から始まり、1ずつ増加します。 シーケンス番号が割り当てられたレコードがテーブルから削除されても、その番号は再利用されません。 シーケンス番号は各テーブルが保有する内部カウンターが管理します。 For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#976029) paragraph.
+カレントデータファイルの特定のテーブルにおいて、レコード毎のユニーク番号を生成するためにシーケンス番号を使用することができます。 シーケンス番号は倍長整数型で新規レコード毎に生成されます。 番号は 1 から始まり、1ずつ増加します。 シーケンス番号が割り当てられたレコードがテーブルから削除されても、その番号は再利用されません。 シーケンス番号は各テーブルが保有する内部カウンターが管理します。 詳細は [自動インクリメント](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.ja.html#976029) の段落を参照してください。
 
 > このプロパティと、リストボックス列に固定値を表示させるための
 > "[デフォルト値](properties_DataSource.md#デフォルト値)" を混同しないようにしてください。
@@ -56,6 +56,10 @@ title: 値の範囲
 
 [コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
+#### コマンド
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
+
 ---
 
 ## 指定リスト
@@ -76,3 +80,7 @@ title: 値の範囲
 #### 対象オブジェクト
 
 [コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
+
+#### コマンド
+
+[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)

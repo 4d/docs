@@ -15,7 +15,7 @@ Os objetos TCPConnection são liberados quando não houver mais referências a e
 
 :::info 4DTCPUDPLog.txt file
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file] that records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information.
+For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to TCP connections. Events include data transmission, errors, and connection lifecycle information.
 
 :::
 
@@ -147,7 +147,7 @@ Os objetos TCPConnection fornecem as seguintes propriedades e funções:
 | [<!-- INCLUDE #TCPConnection.shutdown().Syntax -->](#shutdown)<br/><!-- INCLUDE #TCPConnection.shutdown().Summary --> |
 | [<!-- INCLUDE #TCPConnection.wait().Syntax -->](#wait)<br/><!-- INCLUDE #TCPConnection.wait().Summary -->             |
 
-<!-- REF #4D.TCPConnection.new().Desc -->
+<!-- REF 4D.TCPConnection.new().Desc -->
 
 ## 4D.TCPConnection.new()
 
@@ -155,18 +155,18 @@ Os objetos TCPConnection fornecem as seguintes propriedades e funções:
 
 <!-- REF #4D.TCPConnection.new().params -->
 
-| Parâmetro     | Tipo          |                             | Descrição                                                |
-| ------------- | ------------- | --------------------------- | -------------------------------------------------------- |
-| serverAddress | Text          | ->                          | Nome de domínio ou endereço IP do servidor               |
-| serverPort    | Integer       | ->                          | Número da porta do servidor                              |
-| options       | Object        | ->                          | Configuração [opções](#options-parameter) para a conexão |
-| Resultados    | TCPConnection | <- | Novo objeto TCPConnection                                |
+| Parâmetro     | Tipo                             |                             | Descrição                                                |
+| ------------- | -------------------------------- | --------------------------- | -------------------------------------------------------- |
+| serverAddress | Text                             | ->                          | Nome de domínio ou endereço IP do servidor               |
+| serverPort    | Integer                          | ->                          | Número da porta do servidor                              |
+| options       | Object                           | ->                          | Configuração [opções](#options-parameter) para a conexão |
+| Resultados    | 4D.TCPConnection | <- | Novo objeto TCPConnection                                |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `4D.TCPConnection.new()` <!-- REF #4D.TCPConnection.new().Summary -->cria uma nova conexão TCP com o *serverAddress* e a *serverPort* especificados, usando as *opções* definidas, e retorna um objeto `4D.HTTPRequest`<!-- END REF -->.
+The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.TCPConnection` object<!-- END REF -->.
 
 #### `options` parameter
 
@@ -181,6 +181,7 @@ No parâmetro *options*, passe um objeto que possa conter as seguintes proprieda
 | onTerminate       | Formula    | Callback acionada imediatamente antes de a TCPConnection ser liberada                                                                       | Indefinido                             |
 | noDelay           | Parâmetros | **Somente leitura** Desabilita o algoritmo do Nagle se `true`                                                                               | False                                  |
 | connectionTimeout | Real       | Tempo máximo (em segundos) para estabelecer a conexão. Se excedido, a tentativa de conexão será abortada | Definido pelo sistema, geralmente ≥ 30 |
+| TLS               | Parâmetros | Enables TLS encryption for connections                                                                                                      | False                                  |
 
 #### Funções Callback
 
@@ -206,7 +207,7 @@ Um objeto [`TCPEvent`](TCPEventClass.md) é retornado quando uma [função de ca
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.address.Desc -->
+<!-- REF TCPConnection.address.Desc -->
 
 ## .address
 
@@ -218,7 +219,7 @@ A propriedade `.address` contém <!-- REF #TCPConnection.address.Summary -->o en
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.closed.Desc -->
+<!-- REF TCPConnection.closed.Desc -->
 
 ## .closed
 
@@ -230,7 +231,7 @@ A propriedade `.closed` contém <!-- REF #TCPConnection.closed.Summary -->se a c
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.errors.Desc -->
+<!-- REF TCPConnection.errors.Desc -->
 
 ## .errors
 
@@ -249,7 +250,7 @@ A propriedade `.errors` contém <!-- REF #TCPConnection.errors.Summary -->uma co
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.listener.Desc -->
+<!-- REF TCPConnection.listener.Desc -->
 
 ## .listener
 
@@ -261,7 +262,7 @@ A propriedade `.listener` contém <!-- REF #TCPConnection.listener.Summary -->o 
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.noDelay.Desc -->
+<!-- REF TCPConnection.noDelay.Desc -->
 
 ## .noDelay
 
@@ -273,7 +274,7 @@ A propriedade `.noDelay` contém <!-- REF #TCPConnection.noDelay.Summary -->se o
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.port.Desc -->
+<!-- REF TCPConnection.port.Desc -->
 
 ## .port
 
@@ -285,7 +286,7 @@ A propriedade `.port` contém <!-- REF #TCPConnection.port.Summary --> o número
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.send().Desc -->
+<!-- REF TCPConnection.send().Desc -->
 
 ## .send()
 
@@ -305,7 +306,7 @@ A função `send()` <!-- REF #TCPConnection.send().Summary -->envia dados para o
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.shutdown().Desc -->
+<!-- REF TCPConnection.shutdown().Desc -->
 
 ## .shutdown()
 
@@ -325,7 +326,7 @@ A função `shutdown()` <!-- REF #TCPConnection.shutdown().Summary -->fecha o ca
 
 <!-- END REF -->
 
-<!-- REF #TCPConnection.wait().Desc -->
+<!-- REF TCPConnection.wait().Desc -->
 
 ## .wait()
 

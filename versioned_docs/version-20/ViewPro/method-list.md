@@ -154,14 +154,14 @@ Result:
 ### VP ADD SHEET
 
 <!-- REF #_method_.VP ADD SHEET.Syntax -->
-**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )<!-- END REF -->
+**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer ; *name* : Text )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|sheet|Integer|-> |Index of the new sheet|
+|index|Integer|-> |Index of the new sheet|
 |name|Text|->|Sheet name|<!-- END REF -->
 
 #### Description
@@ -170,7 +170,7 @@ The `VP ADD SHEET` command <!-- REF #_method_.VP ADD SHEET.Summary -->inserts a 
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In *sheet*, you can pass an index for the new sheet. If the passed *index* is inferior to or equal to 0, the command inserts the new sheet at the beginning. If *index* exceeds the number of sheets, the command inserts the new sheet after the existing ones.
+In *index*, you can pass an index for the new sheet. If the passed *index* is inferior to or equal to 0, the command inserts the new sheet at the beginning. If *index* exceeds the number of sheets, the command inserts the new sheet after the existing ones.
 
 >Indexing starts at 0.
 
@@ -2058,7 +2058,7 @@ $rowCount:=VP Get row count("ViewProarea")
 ### VP Get selection
 
 <!-- REF #_method_.VP Get selection.Syntax -->
-**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get selection.Params -->
 
@@ -2218,7 +2218,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 ### VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Syntax -->
-**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
@@ -3449,7 +3449,7 @@ $cellStyle.font:=VP Object to font($font)
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
-**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )<!-- END REF -->
+**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Integer} )<!-- END REF -->
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
@@ -3573,7 +3573,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 ### VP REMOVE NAME
 
 <!-- REF #_method_.VP REMOVE NAME.Syntax -->
-**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )<!-- END REF -->
+**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *scope* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
@@ -3739,7 +3739,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
-**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )<!-- END REF -->
+**VP REMOVE TABLE** ( *vpAreaName* : Text; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
@@ -4592,7 +4592,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 ### VP SET COLUMN COUNT
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Syntax -->
-**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } ) <!-- END REF -->
+**VP SET COLUMN COUNT** ( *vpAreaName* : Text ; *columnCount* : Integer { ; *sheet* : Integer } ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 
@@ -5555,7 +5555,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area name|
 |sheetOptions |Object|->|Sheet option(s) to set|
-|sheet |Object|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|sheet |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -5938,14 +5938,14 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 ### VP SET TIME VALUE
 
 <!-- REF #_method_.VP SET TIME VALUE.Syntax -->
-**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
+**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Time { ; *formatPattern* : Text }  ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-|timeValue |Text|->|Time value to set|
+|timeValue |Time|->|Time value to set|
 |formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Description

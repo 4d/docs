@@ -29,7 +29,7 @@ Cada objeto de formulario activo está asociado a un nombre de objeto. Cada nomb
 
 > Los nombres de objetos están limitados a un tamaño de 255 bytes.
 
-When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../category/object-forms)).
+Al utilizar el lenguaje de 4D, puede referirse a un objeto formulario activo por su nombre de objeto (ver los comandos [Object (Forms)](../commands/theme/Objects_Forms.md))).
 
 Para más información sobre las reglas de denominación de los objetos de formulario, consulte la sección [Identificadores](Concepts/identifiers.md).
 
@@ -42,6 +42,10 @@ Para más información sobre las reglas de denominación de los objetos de formu
 #### Objetos soportados
 
 [Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón con imagen](pictureButton_overview.md) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md#overview) - [Indicador de progreso](progressIndicator.md) - [Selector](spinner.md) - [Separador](splitters.md) - [Imagen estática](staticPicture.md) - [Pasos](stepper.md) - [Botón de opción](radio_overview.md) - [Subformulario](subform_overview.md#overview) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
+
+#### Comandos
+
+[FORM GET OBJECTS](../commands-legacy/form-get-objects.md) - [OBJECT Get name](../commands-legacy/object-get-name.md)
 
 ---
 
@@ -118,6 +122,10 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 [Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Menú emergente con imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de opción](radio_overview.md) - [Selector](spinner.md) - [Separador](splitters.md) - [Pasos](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área web](webArea_overview.md)
 
+#### Comandos
+
+[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula.md) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
+
 ---
 
 ## Tipo de expresión
@@ -183,6 +191,10 @@ La colección o la selección de entidades debe estar disponible para el formula
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
+
+#### Comandos
+
+[`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
 
 ---
 
@@ -265,6 +277,10 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 [Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md) - [ÁreaTexto](text.md)
 
+#### Comandos
+
+[`OBJECT Get title`](../commands-legacy/object-get-title.md) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title.md)
+
 ---
 
 ## Cálculo de variables
@@ -275,7 +291,7 @@ Esta propiedad define el tipo de cálculo que se realizará en un área [pie de 
 
 Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálculos que se pueden utilizar según el tipo de datos que se encuentran en cada columna e indica el tipo afectado automáticamente por 4D a la variable de pie de página (si no está escrita por el código):
 
-| Cálculo                                    | Num | Text | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
+| Cálculo                                    | Num | Text | Fecha | Time | Bool | Imágenes | tipos de variables de pie de página |
 | ------------------------------------------ | --- | ---- | ----- | ---- | ---- | -------- | ----------------------------------- |
 | Mínimo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
 | Máximo                                     | X   | X    | X     | X    | X    |          | Igual que el tipo de columna        |
@@ -317,3 +333,7 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 #### Objetos soportados
 
 [Pie de List Box](listbox_overview.md#list-box-footers)
+
+#### Comandos
+
+[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation.md) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md)

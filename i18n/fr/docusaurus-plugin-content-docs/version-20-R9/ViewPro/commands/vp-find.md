@@ -19,13 +19,13 @@ title: VP Find
 
 ## Description
 
-The `VP Find` command <!-- REF #_method_.VP Find.Summary -->searches the *rangeObj* for the *searchValue*<!-- END REF -->. Des paramètres facultatifs peuvent être utilisés pour affiner la recherche et/ou remplacer les résultats trouvés.
+La commande `VP Find` <!-- REF #_method_.VP Find.Summary -->recherche le paramètre *rangeObj* pour la *searchValue*<!-- END REF -->. Des paramètres facultatifs peuvent être utilisés pour affiner la recherche et/ou remplacer les résultats trouvés.
 
-In the *rangeObj* parameter, pass an object containing a range to search.
+Dans le paramètre *rangeObj*, passez un objet contenant une plage à rechercher.
 
-The *searchValue* parameter lets you pass the text to search for within the *rangeObj*.
+Le paramètre *searchValue* vous permet de passer le texte à rechercher dans *rangeObj*.
 
-You can pass the optional *searchCondition* parameter to specify how the search is performed. Les propriétés suivantes sont prises en charge :
+Vous pouvez passer le paramètre optionnel *searchCondition* pour préciser la manière dont la recherche est effectuée. Les propriétés suivantes sont prises en charge :
 
 | Propriété   | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -68,12 +68,12 @@ $condition.target:=vk find target text
 $condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
  
-  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
+  // Remplacer les cellules contenant uniquement 'Total' dans la feuille actuelle par "Grand Total".
 
 
 $result:=VP Find($range;"Total";$condition;"Grand Total")
  
-  // Check for empty range object 
+  // Vérifier si l'objet de plage est vide
 If($result.ranges.length=0)
     ALERT("No result found")
 Else

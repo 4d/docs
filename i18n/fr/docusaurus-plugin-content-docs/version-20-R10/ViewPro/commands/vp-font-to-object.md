@@ -18,11 +18,11 @@ title: VP Font to object
 
 ## Description
 
-The `VP Font to object` utility command <!-- REF #_method_.VP Font to object.Summary -->returns an object from a font shorthand string<!-- END REF -->. .
+La commande utilitaire `VP Font to object` <!-- REF #_method_.VP Font to object.Summary -->retourne un objet à partir d'une chaîne de raccourci de police<!-- END REF -->. .
 
-In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
+Dans le paramètre *font*, passez une chaîne de caractères abrégée pour spécifier les différentes propriétés d'une police (par exemple, "12 pt Arial"). Vous pouvez en savoir plus sur les chaînes de caractères [dans cette page](https://www.w3schools.com/cssref/pr_font_font.asp) par exemple.
 
-L'objet retourné contient les attributs de police définis comme propriétés. For more information about the available properties, see the [VP Object to font](vp-object-to-font.md) command.
+L'objet retourné contient les attributs de police définis comme propriétés. Pour plus d'informations sur les propriétés disponibles, voir la commande [VP Object to font](vp-object-to-font.md).
 
 ## Exemple 1
 
@@ -44,7 +44,7 @@ size:16pt
 
 ## Exemple 2
 
-See example for [`VP Object to font`](vp-object-to-font.md).
+Voir l'exemple pour [`VP Object to font`](vp-object-to-font.md).
 
 ## Voir également
 

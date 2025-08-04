@@ -34,7 +34,7 @@ Les objets WebSocketConnection offrent les propriétés et fonctions suivantes :
 | [<!-- INCLUDE #WebSocketConnectionClass.terminate().Syntax -->](#terminate)<br/><!-- INCLUDE #WebSocketConnectionClass.terminate().Summary --> |
 | [<!-- INCLUDE #WebSocketConnectionClass.wss.Syntax -->](#wss)<br/><!-- INCLUDE #WebSocketConnectionClass.wss.Summary -->                       |
 
-<!-- REF #WebSocketConnectionClass.handler.Desc -->
+<!-- REF WebSocketConnectionClass.handler.Desc -->
 
 ## .handler
 
@@ -46,7 +46,7 @@ La propriété `.handler` contient <!-- REF #WebSocketConnectionClass.handler.Su
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.id.Desc -->
+<!-- REF WebSocketConnectionClass.id.Desc -->
 
 ## .id
 
@@ -60,7 +60,7 @@ Cette propriété est en lecture seule.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.send().Desc -->
+<!-- REF WebSocketConnectionClass.send().Desc -->
 
 ## .send()
 
@@ -88,7 +88,7 @@ Les contenus suivants sont envoyés en fonction du type de *message* :
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.status.Desc -->
+<!-- REF WebSocketConnectionClass.status.Desc -->
 
 ## .status
 
@@ -102,7 +102,7 @@ Cette propriété est en lecture seule.
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.terminate().Desc -->
+<!-- REF WebSocketConnectionClass.terminate().Desc -->
 
 ## .terminate()
 
@@ -125,7 +125,7 @@ Un *code* et un *message* peuvent être envoyés au client pendant la fermeture 
 
 <!-- END REF -->
 
-<!-- REF #WebSocketConnectionClass.wss.Desc -->
+<!-- REF WebSocketConnectionClass.wss.Desc -->
 
 ## .wss
 
