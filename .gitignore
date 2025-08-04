@@ -22,3 +22,5 @@ yarn-error.log*
 docsPostProcessed/
 commandList.json
 
+syntax/
+
