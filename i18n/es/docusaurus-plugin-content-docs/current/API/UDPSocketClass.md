@@ -27,7 +27,7 @@ For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debu
 
 ### Objeto UDPSocket
 
-A UDPSocket object is immutable, non streamable.
+Un objeto UDPSocket no es modificable y no es streamable.
 
 UDPSocket objects provide the following properties and functions:
 
@@ -141,7 +141,7 @@ The `send()` function <!-- REF #UDPSocket.send().Summary -->sends *data* to the 
 
 *hostName* is the name or IP address of the server where the data will be sent.
 
-*remotePort* is the number of the port to be connected to. If you pass 0, any available port will be used.
+*remotePort* is the number of the port to be connected to. Si pasa 0, se utilizará cualquier puerto disponible.
 
 <!-- END REF -->
 

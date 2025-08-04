@@ -89,7 +89,7 @@ https://platform.openai.com/docs/api-reference/chat/update
 | *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.         |
 | Resultado      | Boolean                                 | Si la eliminación se ha realizado correctamente. |
 
-Delete a stored chat compltions.
+Borrar una conversación almacenada.
 
 https://platform.openai.com/docs/api-reference/chat/delete
 

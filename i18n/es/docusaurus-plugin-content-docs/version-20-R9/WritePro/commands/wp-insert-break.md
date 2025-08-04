@@ -84,7 +84,7 @@ You want to insert a continuous section break to have a single column section an
 ```
 
 ![](../../assets/en/WritePro/commands/pict5562056.en.png)
-2. Set the column count to 2 for the first section:
+2. Define el conteo de columnas a 2 para la primera sección:
 
 ```4d
  $section:=WP Get section(WParea;1)  

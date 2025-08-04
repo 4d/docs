@@ -35,7 +35,7 @@ You can also define the same event at both attribute and entity levels. The attr
 
 ### Ejecución en configuraciones remotas
 
-Usually, ORDA events are executed on the server.
+Normalmente, los eventos ORDA se ejecutan en el servidor.
 
 In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](./ordaClasses.md#local-functions) keyword. A specific implementation on the client side allows the triggering of the event on the client.
 

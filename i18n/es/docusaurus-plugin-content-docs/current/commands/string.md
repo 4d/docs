@@ -165,7 +165,7 @@ This parameter can be used with both predefined or pattern-based date formats. E
  $dateTime2:=String(!2023-11-27!;"E dd/MM/yyyy 'at' hh:mm aa O";?11:15:00?) //"Mon 27/11/2023 at 11:15 AM GMT+1"
 ```
 
-#### Notes about combined date/time predefined formats
+#### Notas sobre los formatos combinados fecha/hora
 
 - The ISO Date GMT format corresponds to the ISO8601 standard, containing a date and a time expressed with respect to the time zone (GMT).
 

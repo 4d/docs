@@ -14,7 +14,7 @@ This property is available for fields of type **Object** (in 4D projects only). 
 You can enter any valid class name in this property, including:
 
 - Clases usuario (por ejemplo, `cs.MyClass`)
-- Built-in 4D classes (e.g. `4D.File`, `4D.Folder`)
+- Clases 4D integradas (por ejemplo, `4D.File`, `4D.Folder`)
 - [Exposed](../Extensions/develop-components.md#sharing-of-classes) component-defined classes (e.g. `cs.MyComponent.MyClass`)
 
 If you enter an invalid class name, a warning is triggered and the input is rejected.

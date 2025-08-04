@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | ---------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
 | expresión  | Text, Boolean, Integer | &#8594; | String for which to return the numeric form, or Boolean to return 0 or 1, or Numeric expression |
 | separador  | Text                   | &#8594; | Separador decimal                                                                               |
-| base       | Integer                | &#8594; | Value between 2 and 36 that represents the radix                                                |
+| base       | Integer                | &#8594; | Valor entre 2 y 36 que representa la base                                                       |
 | Resultado  | Real                   | &#8592; | Forma numérica del parámetro de expresión                                                       |
 
 <!-- END REF-->
@@ -64,9 +64,9 @@ The [`GET SYSTEM FORMAT`](../commands-legacy/get-system-format.md) command can b
 
 Using a *base* parameter (integer) triggers a specific mode in which you specify the radix (base) of the number expressed as string in *expression*. In particular, this syntax allows you to convert hexadecimal strings to numbers.
 
-In the *base* parameter, pass the radix of the number in *expression*. You can pass any integer value between 2 and 36.
+In the *base* parameter, pass the radix of the number in *expression*. Puede pasar cualquier valor entero entre 2 y 36.
 
-If you pass 0 in *base*, the command determines the radix depending on the *expression* value. If *expression* starts with "0x", base 16 is used. En caso contrario, se utiliza la base 10.
+If you pass 0 in *base*, the command determines the radix depending on the *expression* value. Si *expression* empieza por "0x", se utiliza base 16. En caso contrario, se utiliza la base 10.
 
 If *expression* evaluates to a decimal number, only the integer part is converted.
 
@@ -104,7 +104,7 @@ $result:=Num("–123e2") // –12300
 
 ## Ejemplo 2
 
-Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to these comparisons returns 1 or 0\. Multiplying 1 or 0 with a string repeats the string once or returns the empty string. As a result, *\[Client\]Risk* gets either “Good” or “Bad”:
+Aquí, *\[Client\]Debt* se compara con *1000$*. The Num command applied to these comparisons returns 1 or 0\. Multiplying 1 or 0 with a string repeats the string once or returns the empty string. As a result, *\[Client\]Risk* gets either “Good” or “Bad”:
 
 ```4d
   // If client owes less than 1000, a good risk.

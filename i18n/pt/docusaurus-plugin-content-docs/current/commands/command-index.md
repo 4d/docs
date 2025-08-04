@@ -340,7 +340,7 @@ title: Índice
 [`FORM SET VERTICAL RESIZING`](../commands-legacy/form-set-vertical-resizing.md)<br/>
 [`FORM UNLOAD`](../commands-legacy/form-unload.md)<br/>
 [`Formula`](formula.md)<br/>
-[`Formula from string`](../commands-legacy/formula-from-string.md)<br/>
+[`Formula from string`](./formula-from-string.md)<br/>
 [`Frontmost process`](../commands-legacy/frontmost-process.md)<br/>
 [`Frontmost window`](../commands-legacy/frontmost-window.md)<br/>
 
@@ -1199,7 +1199,7 @@ title: Índice
 [`String`](string.md)<br/>
 [`STRING LIST TO ARRAY`](../commands-legacy/string-list-to-array.md)<br/>
 [`Structure file`](../commands-legacy/structure-file.md)<br/>
-[`Substring`](substring.md)<br/>
+[`Substring`](../commands-legacy/substring.md)<br/>
 [`Subtotal`](../commands-legacy/subtotal.md)<br/>
 [`Sum`](../commands-legacy/sum.md)<br/>
 [`Sum squares`](../commands-legacy/sum-squares.md)<br/>

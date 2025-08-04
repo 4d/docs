@@ -19,7 +19,7 @@ This class is used to define parameters for retrieving a list of chat completion
 | `limit`    | Integer | 0                 | Número de mensajes a recuperar.                                                                                                   |
 | `order`    | Text    | "asc"             | Ordenar los mensajes por fecha y hora. Use `asc` for ascending order or `desc` for descending order.              |
 | `metadata` | Text    | -                 | A list of metadata keys to filter the chat completions by. Example: `metadata[key1]=value1&metadata[key2]=value2` |
-| `model`    | Text    | ""                | The model used to generate the chat completions.                                                                                  |
+| `model`    | Text    | ""                | El modelo utilizado para generar las finalizaciones del chat.                                                                     |
 
 ## Ver también
 

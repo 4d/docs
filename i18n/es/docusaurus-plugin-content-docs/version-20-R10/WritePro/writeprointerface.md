@@ -349,7 +349,7 @@ A continuación, aparece el botón **I.A**:
 - in the 4D Write Pro Toolbar, in the **Import Export** tab,
 - en el widget 4D Write Pro, en la pestaña **Estilo de fuente**.
 
-Click on the button to display the AI dialog box.
+Haga clic en el botón para mostrar el cuadro de diálogo IA.
 
 ### Diálogo IA
 
@@ -406,5 +406,5 @@ To empty this area, you can click on the Erase button of the History area (reset
 
 The History area lists all your prompts sent to the AI. You can hide/show this area using the button on the top right corner of the Chat area.
 
-The Erase button allows you to reset the whole window and erase all interactions. It is equivalent to close/reopen the AI dialog box.
+The Erase button allows you to reset the whole window and erase all interactions. Es equivalente a cerrar/reabrir el cuadro de diálogo de IA.
 

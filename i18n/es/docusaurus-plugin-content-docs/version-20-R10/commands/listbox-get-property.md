@@ -7,12 +7,12 @@ title: LISTBOX Get property
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
-| Parámetros | Tipo          |                             | Descripción                                                                                                             |
-| ---------- | ------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador      | &#8594; | If specified, object is an object name (string). Si se omite, object es una variable |
-| object     | any           | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted)                   |
-| property   | Integer       | &#8594; | Propiedad cuyo valor desea obtener                                                                                      |
-| Resultado  | Integer, Text | &#8592; | Valor actual                                                                                                            |
+| Parámetros | Tipo          |                             | Descripción                                                                                                                      |
+| ---------- | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador      | &#8594; | Si se especifica, object es un nombre de objeto (cadena). Si se omite, object es una variable |
+| object     | any           | &#8594; | Object name (if \* is specified) or Variable (if \* is omitted)                            |
+| property   | Integer       | &#8594; | Propiedad cuyo valor desea obtener                                                                                               |
+| Resultado  | Integer, Text | &#8592; | Valor actual                                                                                                                     |
 
 <!-- END REF-->
 

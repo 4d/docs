@@ -41,7 +41,7 @@ Cuando la propiedad [Acceso a los métodos 4D](properties_WebArea.md#access-4d-m
 
 The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
 
-For example, calling the `HelloWorld` method in 4D:
+Por ejemplo, llamando al método `HelloWorld` en 4D:
 
 ```js
 $4d.HelloWorld();

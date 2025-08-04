@@ -158,7 +158,7 @@ On a Silicon Mac, compile the current project to ARM only:
  $status:=Compile project($options)
 ```
 
-Compile a project other than the current project:
+Compilar un proyecto distinto al proyecto actual:
 
 ```4d
  var $status : Object
