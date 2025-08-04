@@ -26,19 +26,19 @@ const env = {
 const commands = [
     {
         name: 'Syntax Generation',
-        settingsType: type === 'viewpro' ? 'build_syntax_viewPro' : 'build_syntax'
+        npmScript: type === 'viewpro' ? 'syntaxViewPro:build' : 'syntax:build'
     },
     {
         name: 'Translation Generation',
-        settingsType: type === 'viewpro' ? 'build_syntax_viewPro_translated' : 'build_syntax_translated'
+        npmScript: type === 'viewpro' ? 'syntaxViewPro:build-translated' : 'syntax:build-translated'
     }
 ];
 
 // Run all commands concurrently
 const processes = commands.map((cmd, index) => {
-    console.log(`Running: doc_preprocess --settings_type='${cmd.settingsType}'`);
+    console.log(`Running: npm run ${cmd.npmScript}`);
     
-    const child = spawn('doc_preprocess', [`--settings_type=${cmd.settingsType}`], {
+    const child = spawn('npm', ['run', cmd.npmScript], {
         env,
         stdio: 'inherit',
         cwd: path.resolve(__dirname, '..'),
