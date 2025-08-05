@@ -72,7 +72,7 @@ ex: `<!-- REF #_command_.IMAP New transporter.Syntax -->` and `<!-- REF #_comman
 * optional but only if previous param is passed: `{ paramName1 : type {; paramName2 : type }}`
 
 
-## tools
+## Tools
 
 Exemple:
 
@@ -80,7 +80,7 @@ Exemple:
 -> regénérer page des thèmes en anglais
 
 
-## Classic Commands Update
+### Classic Commands Update
 
 - new command:
   1. create a page in commands folder
@@ -92,6 +92,12 @@ Exemple:
   1. move to commands (use move_command.exe)
   2. same as above
 
+### Generate syntax files
+
+- go where the docusaurus.config.js is located
+- run `node tools/syntax-version.js <version>`
+if no `<version>` is provided the syntax will be generated with the last version.
+`<version>` can be version-18, version-19, version-20, version-20-R9... like located in the versioned_docs folder.
 
 ## Versioning
 
