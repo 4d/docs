@@ -21,7 +21,7 @@ In any cases, it's a good idea to test the different vectors to determine which 
 
 ### Vector object
 
-Vector objects are shared, immutable, and streamable.
+Les objets vectoriels sont partagés, immuables et transmissibles.
 
 |                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,10 +47,10 @@ Vector objects are shared, immutable, and streamable.
 
 <!--REF #4D.Vector.new().Params -->
 
-| Paramètres | Type                      |                             | Description                                      |
-| ---------- | ------------------------- | --------------------------- | ------------------------------------------------ |
-| paramètres | Collection of reals       | ->                          | Collection of real numbers representing a vector |
-| Résultat   | 4D.Vector | <- | New Vector object                                |
+| Paramètres | Type                      |                             | Description                                         |
+| ---------- | ------------------------- | --------------------------- | --------------------------------------------------- |
+| paramètres | Collection de réels       | ->                          | Collection de nombres réels représentant un vecteur |
+| Résultat   | 4D.Vector | <- | Nouvel objet vectoriel                              |
 
 <!-- END REF -->
 
@@ -62,7 +62,7 @@ In *parameter*, pass a collection of real numbers representing the vector to cre
 
 #### Exemple
 
-To create a vector:
+Pour créer un vecteur :
 
 ```4d
 var $vector := 4D.Vector.new([0.123; -0.456; 0.789]) 
@@ -81,10 +81,10 @@ var $collection := $vector.toCollection()
 
 <!--REF #VectorClass.cosineSimilarity().Params -->
 
-| Paramètres | Type                      |                             | Description              |
-| ---------- | ------------------------- | --------------------------- | ------------------------ |
-| vector     | 4D.Vector | ->                          | Vector to compare with   |
-| Résultat   | Real                      | <- | Distance between vectors |
+| Paramètres | Type                      |                             | Description                 |
+| ---------- | ------------------------- | --------------------------- | --------------------------- |
+| vector     | 4D.Vector | ->                          | Vecteur à comparer avec     |
+| Résultat   | Real                      | <- | Distance entre les vecteurs |
 
 <!-- END REF -->
 
@@ -97,7 +97,7 @@ This metric measures the **angle between vectors** and is commonly used to deter
 **Valeur retournée**
 
 - Range: -1 (opposite) to 1 (identical).
-- The higher the returned value is, more similar vectors are.
+- Plus la valeur retournée est élevée, plus les vecteurs sont similaires.
 
 #### Exemple 1
 
@@ -111,7 +111,7 @@ var $similarity := $vector.cosineSimilarity($anotherVector)
 
 :::info
 
-This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings.
+Cet exemple utilise l'extension [4D AIKit extension] (../aikit/overview.md) pour générer des embeddings.
 
 :::
 
@@ -129,23 +129,23 @@ String($people.Phone)+". Family IDs - Father: "+String($people.FatherID)+\
 
 var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())
 
-// Vector calculation with 4D AIKit
+// Calcul vectoriel avec 4D AIKit
 var $result:=$clientAI.embeddings.create($prompt; $model)
 
-// 4D.vector object creation
+// Création d'un objet 4D.vector
 var $vector:=$result.vector
 
 var $question:="I'm looking for John who lives in USA"
 
-// Vector calculation with 4D AIKit component
+// Calcul vectoriel avec le composant 4D AIKit
 var $questionVector:=$clientAI.embeddings.create($question; $model).vector
 
-// similarity calculation
+// calcul de similarité
 If ($vector.cosineSimilarity($questionVector)>0.9)
   ALERT("Interesting result")
 End if
 
-//actual result: 0,7360136465949
+// résultat réel : 0,7360136465949
 
 
 ```
@@ -156,10 +156,10 @@ End if
 
 <!--REF #VectorClass.dotSimilarity().Params -->
 
-| Paramètres | Type                      |                             | Description              |
-| ---------- | ------------------------- | --------------------------- | ------------------------ |
-| vector     | 4D.Vector | ->                          | Vector to compare with   |
-| Résultat   | Real                      | <- | Distance between vectors |
+| Paramètres | Type                      |                             | Description                 |
+| ---------- | ------------------------- | --------------------------- | --------------------------- |
+| vector     | 4D.Vector | ->                          | Vecteur à comparer avec     |
+| Résultat   | Real                      | <- | Distance entre les vecteurs |
 
 <!-- END REF -->
 
@@ -171,8 +171,8 @@ This metric reflects both **similarity** and **magnitude**, and is generally use
 
 **Valeur retournée**
 
-- Depends on vector magnitudes and directions
-- The higher the returned value is, more similar vectors are.
+- Dépend de la magnitude et de la direction des vecteurs
+- Plus la valeur retournée est élevée, plus les vecteurs sont similaires.
 
 #### Exemple
 
@@ -187,7 +187,7 @@ var $score := $vector.dotSimilarity($anotherVector)
 
 :::info
 
-This example uses the [4D AIKit extension](../aikit/overview.md) to generate embeddings.
+Cet exemple utilise l'extension [4D AIKit extension] (../aikit/overview.md) pour générer des embeddings.
 
 :::
 
@@ -229,10 +229,10 @@ ALERT("Best answer: "+$documents[0].text)
 
 <!--REF #VectorClass.euclideanDistance().Params -->
 
-| Paramètres | Type                      |                             | Description              |
-| ---------- | ------------------------- | --------------------------- | ------------------------ |
-| vector     | 4D.Vector | ->                          | Vector to compare with   |
-| Résultat   | Real                      | <- | Distance between vectors |
+| Paramètres | Type                      |                             | Description                 |
+| ---------- | ------------------------- | --------------------------- | --------------------------- |
+| vector     | 4D.Vector | ->                          | Vecteur à comparer avec     |
+| Résultat   | Real                      | <- | Distance entre les vecteurs |
 
 <!-- END REF -->
 
@@ -244,7 +244,7 @@ This measures the straight-line distance in the vector space. It is recommended 
 
 **Valeur retournée**
 
-- returned value >= 0
+- valeur retournée >= 0
 - The lower the returned value is, more similar vectors are.
 
 #### Exemple 1

@@ -5,7 +5,7 @@ title: Release Notes
 
 ## 4D 21
 
-Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), the blog post that lists all new features and enhancements in 4D 21.
+Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21.
 
 #### Points forts
 
@@ -17,7 +17,7 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 
 ## 4D 20 R10
 
-Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-20-R10/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R10.
+Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fe-whats-new-in-4d-20-R10/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R10.
 
 #### Points forts
 
@@ -45,11 +45,11 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fr-whats-new-in-4d-
 
 ## 4D 20 R9
 
-Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fr-whats-new-in-4d-20-R9/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R9.
+Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fe-whats-new-in-4d-20-R9/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R9.
 
 #### Points forts
 
-- The [*MeCab* library](../settings/database.md#support-of-mecab-japanese-version) is now deprecated and will be removed in the next release.
+- La bibliothèque [*MeCab*](../settings/database.md#support-of-mecab-japanese-version) est désormais obsolète et sera supprimée dans la prochaine version.
 - Prise en charge des [tokens de session](../WebServer/sessions.md#session-token-otp) gérés avec les nouvelles fonctions [`Session.createOTP()`](../API/SessionClass.md#createotp) et [`Session.restore()`](../API/SessionClass.md#restore).
 - L'assistant d'étiquettes utilise maintenant l'éditeur de formules pour ajouter ou éditer des formules dans la [zone de construction du modèle](../Desktop/labels.md#label-preview).
 - Nouvelle classe [`TCPListener`](../API/TCPListenerClass.md) pour créer des connexions au serveur TCP ; nouvelles propriétés dans les classes connexes : `address`, `listener` et `port` dans la classe [`TCPConnection`](../API/TCPConnectionClass.md), `ip` et `port` dans la classe [`TCPEvent`](../API/TCPEventClass.md).
@@ -66,7 +66,7 @@ Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 ## 4D 20 R8
 
-Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fr-whats-new-in-4d-20-R8/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R8.
+Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fe-whats-new-in-4d-20-R8/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R8.
 
 #### Points forts
 
@@ -96,7 +96,7 @@ Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 ## 4D 20 R7
 
-Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-20-R7/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R7.
+Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fe-whats-new-in-4d-20-R7/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R7.
 
 #### Points forts
 
@@ -127,7 +127,7 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 ## 4D 20 R6
 
-Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fr-whats-new-in-4d-20-R6/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R6.
+Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fe-whats-new-in-4d-20-R6/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R6.
 
 #### Points forts
 
@@ -155,7 +155,7 @@ Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 ## 4D 20 R5
 
-Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fr-whats-new-in-4d-20-R5/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R5.
+Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fe-whats-new-in-4d-20-R5/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R5.
 
 #### Points forts
 
@@ -179,7 +179,7 @@ Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fr-whats-new-in-4d-2
 
 ## 4D 20 R4
 
-Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fr-whats-new-in-4d-v20-R4/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R4.
+Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fe-whats-new-in-4d-v20-R4/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R4.
 
 #### Points forts
 
@@ -206,7 +206,7 @@ Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fr-whats-new-in-4d-v
 
 ## 4D 20 R3
 
-Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v20-R3/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R3.
+Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fe-whats-new-in-4d-v20-R3/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R3.
 
 #### Points forts
 
@@ -230,7 +230,7 @@ Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v
 
 ## 4D 20 R2
 
-Lisez [**Les nouveautés de 4D 20 R2**](https://blog.4d.com/fr-whats-new-in-4d-v20-R2/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R2.
+Lisez [**Les nouveautés de 4D 20 R2**](https://blog.4d.com/fe-whats-new-in-4d-v20-R2/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R2.
 
 :::warning Note de sécurité
 
