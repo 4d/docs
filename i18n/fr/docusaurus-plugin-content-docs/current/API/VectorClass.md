@@ -243,7 +243,7 @@ This measures the straight-line distance in the vector space. It is recommended 
 **Valeur retournée**
 
 - valeur retournée >= 0
-- The lower the returned value is, more similar vectors are.
+- Plus la valeur retournée est faible, plus les vecteurs sont similaires.
 
 #### Exemple 1
 
