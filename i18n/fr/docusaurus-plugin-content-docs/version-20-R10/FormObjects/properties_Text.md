@@ -415,7 +415,7 @@ En plus des [zones de texte statiques](text.md), les objets de texte des [zones 
 
 ## Tableau couleurs de police
 
-`Array type list boxes`
+`List box de type tableau`
 
 Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
 
@@ -435,7 +435,7 @@ Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tabl
 
 ## Tableau de styles
 
-`Array type list boxes`
+`List box de type tableau`
 
 <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
 

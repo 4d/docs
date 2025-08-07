@@ -333,13 +333,13 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 - [`dataClass.new()`](../API/DataClassClass.md#new)
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
-- [`entity.clone()`](../API/EntityClass.md#clone)
 - [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \`__STAMP
 - el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
 
-:::note Nota de compatibilidad
+:::note Notas
 
-Los registros creados a nivel de la base de datos 4D utilizando comandos del lenguaje clásico 4D o acciones estándar no activan el Class constructor de la entidad.
+- The [`entity.clone()`](../API/EntityClass.md#clone) function does not trigger the entity Class constructor.
+- Los registros creados a nivel de la base de datos 4D utilizando comandos del lenguaje clásico 4D o acciones estándar no activan el Class constructor de la entidad.
 
 :::
 

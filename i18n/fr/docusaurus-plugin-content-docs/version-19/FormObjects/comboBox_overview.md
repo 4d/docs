@@ -38,7 +38,7 @@ Lorsque l'utilisateur saisit du texte dans la combo box, l'élément 0 du tablea
 
 ### Utiliser une énumération
 
-Si vous souhaitez utiliser une combo box pour gérer les valeurs d'une zone de saisie (champ ou variable énuméré(e)), 4D vous permet de référencer directement le champ ou la variable en tant que source de données de l'objet formulaire. Cette possibilité facilite la gestion des champs/variables énuméré(e) s.
+Si vous souhaitez utiliser une combo box pour gérer les valeurs d'une zone de saisie (champ ou variable énuméré(e)), 4D vous permet de référencer directement le champ ou la variable en tant que source de données de l'objet formulaire. Cette possibilité facilite la gestion des champs/variables énuméré(e)s.
 > Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable.
 
 Pour associer une combo box à un champ ou à une variable, il suffit de saisir le nom du champ ou de la variable directement dans le champ [Variable ou Expression](properties_Object.md#variable-or-expression) de l'objet formulaire dans la liste des propriétés.

@@ -17,17 +17,17 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> La pila de errores incluye los objetos enviados por el comando [throw](../commands-legacy/throw.md), si los hay. 
+<!--REF #_command_.Last errors.Summary-->El comando **Last errors** devuelve la pila actual de errores de la aplicación 4D como una colección de objetos de error, o **null** si no se ha producido ningún error.<!-- END REF--> La pila de errores incluye los objetos enviados por el comando [throw](../commands-legacy/throw.md), si los hay. 
 
-This command must be called from an on error call method installed by the [ON ERR CALL](../commands-legacy/on-err-call.md) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
+Este comando debe ser llamado desde un método de llamada de error instalado por el comando [ON ERR CALL](../commands-legacy/on-err-call.md) o dentro de un contexto [Try o Try/Catch](../Concepts/error-handling.md#tryexpression).
 
-Each error object contains the following properties:
+Cada objeto error contiene las siguientes propiedades:
 
-| **Propiedad**      | **Tipo** | **Description**                                                                             |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------- |
-| errCode            | number   | Código de error                                                                             |
-| message            | text     | Descripción del error                                                                       |
-| componentSignature | text     | Signature of the internal component which returned the error (see below) |
+| **Propiedad**      | **Tipo** | **Description**                                                                   |
+| ------------------ | -------- | --------------------------------------------------------------------------------- |
+| errCode            | number   | Código de error                                                                   |
+| message            | text     | Descripción del error                                                             |
+| componentSignature | text     | Firma del componente interno que devolvió el error (ver abajo) |
 
 #### Firmas de los componentes internos (4D)
 

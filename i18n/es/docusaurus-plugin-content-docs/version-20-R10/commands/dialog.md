@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                  |
 | ---------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Tabla        | &#8594; | Table owning the form or If omitted: default table or use of project form                                                                                                    |
+| aTable     | Tabla        | &#8594; | Tabla propia del formulario o Si se omite: tabla por defecto o uso del formulario del proyecto                                                                               |
 | form       | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, or an object describing the form |
 | formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                                |
 | \*         | Operador     | &#8594; | Usar el mismo proceso                                                                                                                                                                        |
