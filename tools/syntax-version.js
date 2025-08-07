@@ -2,19 +2,67 @@
 
 /**
  * Helper script to run syntax generation for any version
- * Usage: node tools/syntax-version.js version-20-R11
- * Usage: node tools/syntax-version.js version-20-R11 viewpro
+ * Usage: 
+ *   node tools/syntax-version.js --version=version-20-R11
+ *   node tools/syntax-version.js --version=version-20-R11 --type=viewpro
+ *   node tools/syntax-version.js version-20-R11 viewpro (legacy format)
  */
 
 const { spawn } = require('child_process');
 const path = require('path');
 
+// Parse command line arguments
+function parseArgs(args) {
+    const parsed = {
+        version: undefined,
+        type: 'syntax'
+    };
+    
+    for (let i = 0; i < args.length; i++) {
+        const arg = args[i];
+        
+        if (arg.startsWith('--version=')) {
+            parsed.version = arg.split('=')[1];
+        } else if (arg === '--version' && i + 1 < args.length) {
+            parsed.version = args[++i];
+        } else if (arg.startsWith('--type=')) {
+            parsed.type = arg.split('=')[1];
+        } else if (arg === '--type' && i + 1 < args.length) {
+            parsed.type = args[++i];
+        } else if (arg === '--help' || arg === '-h') {
+            console.log(`
+Usage:
+  node tools/syntax-version.js [options]
+  
+Options:
+  --version=<version>    Specify the version (e.g., version-20-R11)
+  --type=<type>         Specify the type: 'syntax' or 'viewpro' (default: syntax)
+  --help, -h            Show this help message
+
+Examples:
+  node tools/syntax-version.js --version=version-20-R11
+  node tools/syntax-version.js --version=version-20-R11 --type=viewpro
+  node tools/syntax-version.js version-20-R11 viewpro  (legacy format)
+            `);
+            process.exit(0);
+        } else if (!arg.startsWith('--')) {
+            // Legacy positional arguments
+            if (i === 0 && !parsed.version) {
+                parsed.version = arg;
+            } else if (i === 1 && parsed.type === 'syntax') {
+                parsed.type = arg;
+            }
+        }
+    }
+    
+    return parsed;
+}
+
 // Get command line arguments
 const args = process.argv.slice(2);
-const version = args[0] || undefined;
-const type = args[1] || 'syntax';
+const { version, type } = parseArgs(args);
 
-console.log(`Running ${type} generation for version: ${version}`);
+console.log(`Running ${type} generation for version: ${version || 'current'}`);
 
 // Set up environment
 const env = {

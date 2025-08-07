@@ -6,7 +6,6 @@ if(PREPROCESSING_TARGET_SYNTAX) {
     target_syntax = "versioned_docs/" + PREPROCESSING_TARGET_SYNTAX
     target_syntax_translate = PREPROCESSING_TARGET_SYNTAX
 }
-console.log(target_syntax_translate)
 
 module.exports = {
     default: 
