@@ -87,7 +87,15 @@ Corresponding to the CSS **ID selector**, the object name defines a specific obj
 
 Designate the object with a "#" character before the object's name, then in curly braces, declare the style(s) to apply.
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
+:::note
+
+The object name corresponds to the JSON [object name](../FormObjects/properties_Object.md#object-name) property of form objects.
+
+:::
+
+
+In the following example, the text of the object with the name "okButton" will be displayed 
+in Helvetica Neue font, with a size of 20 pixels:
 
 ```
 #okButton {
@@ -121,7 +129,7 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the `class` attribute. This attribute contains one or several class names, separated by a space character:
+In the 4D form description, you associate a class name to an object using the [CSS Class](../FormObjects/properties_Object.md#css-class) attribute. This attribute contains one or several class names, separated by a space character:
 
 ```
 class: "okButtons important"       
@@ -313,7 +321,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
 1. The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
 2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
-3. If it exists, it will then load a specific CSS file defined in the JSON form:
+3. If a [Form property "css" attribute](../FormEditor/properties_FormProperties.md#css) is defined in the 4D form, it will then load specific CSS file(s). You can pass:
 
  * a file for both platforms:
  

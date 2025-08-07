@@ -158,7 +158,7 @@ Permet la sélection de plusieurs enregistrements/options dans une [liste hiéra
 ---
 ## Triable
 
-Permet de trier les données de colonne en cliquant sur un en-tête de [Listbox](listbox_overview.md). Cette option est sélectionnée par défaut. Les tableaux de types d'image (colonnes) ne peuvent pas être triés à l'aide de cette fonction.
+Permet de trier les données de colonne en cliquant sur un en-tête de [Listbox](listbox_overview.md). Cette option est sélectionnée par défaut. Les tableaux image (colonnes) ne peuvent pas être triés à l'aide de cette fonction.
 
 Dans les list box basées sur une sélection d'enregistrements, la fonction de tri standard est disponible uniquement :
 *   Lorsque la source de données est *Sélection courante*,
@@ -184,7 +184,7 @@ Dans d'autres cas (list box basées sur des sélections nommées, colonnes assoc
 ## Action standard
 Activités typiques à réaliser par les objets actifs (par exemple, permettre à l'utilisateur d'accepter, d'annuler ou de supprimer des enregistrements, de se déplacer entre les enregistrements ou de page en page dans un formulaire multi-pages, etc.) ont été prédéfinies par 4D comme actions standard. Elles sont décrites en détail dans la section [Actions standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) du *manuel de développement*.
 
-Vous pouvez associer à la fois une action standard et la méthode projet d'un objet. Dans ce cas, l'action standard est généralement exécutée après la méthode et 4D utilise cette action pour activer/désactiver l'objet en fonction du contexte courant. Lorsqu’un objet est désactivé, la méthode projet associée ne peut être exécutée.
+Vous pouvez associer à la fois une action standard et une méthode projet à un objet. Dans ce cas, l'action standard est généralement exécutée après la méthode et 4D utilise cette action pour activer/désactiver l'objet en fonction du contexte courant. Lorsqu’un objet est désactivé, la méthode projet associée ne peut être exécutée.
 
 Vous pouvez également définir cette propriété à l'aide de la commande `OBJECT SET ACTION`.
 

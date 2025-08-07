@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Le schéma de couleurs d'un formulaire est défini :
 
-* par la propriété de formulaire "Color Scheme" (voir *colorScheme*);
+* par la propriété de formulaire "Color Scheme" (voir [*colorScheme*](../FormEditor/properties_FormProperties.md#color-scheme));
 * si "Color Scheme" est défini sur "inherited", la commande [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) est appelée;
 * si [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) n'est pas appelée ou appelée avec une valeur de paramètre "inherited", les Paramètres (paramètres de la base hôte dans le cas d'un composant);
 * si les Paramètres sont définis sur "inherited", les préférences utilisateur du système d'exploitation.

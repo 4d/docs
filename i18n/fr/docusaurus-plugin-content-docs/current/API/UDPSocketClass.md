@@ -11,7 +11,7 @@ Grâce au *refcounting* des objets 4D standard, un socket UDPSocket est automati
 
 :::info Fichier 4DTCPUDPLog.txt
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to UDP sockets. Ces événements comprennent la transmission de données, les erreurs et les informations sur le cycle de vie de la connexion.
+Pour le débogage et la surveillance, vous pouvez utiliser le fichier journal [4DTCPUDPLog.txt](../Debugging/debugLogFiles.md#4dtcpudplogtxt) qui enregistre les événements liés aux sockets UDP. Ces événements comprennent la transmission de données, les erreurs et les informations sur le cycle de vie de la connexion.
 
 :::
 

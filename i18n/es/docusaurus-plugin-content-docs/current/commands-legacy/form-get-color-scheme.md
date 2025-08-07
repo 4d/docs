@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 El esquema de color real de un formulario se define por:
 
-* la propiedad del formulario "Color Scheme" (ver *colorScheme*);
+* la propiedad del formulario "Color Scheme" (ver [*colorScheme*](../FormEditor/properties_FormProperties.md#color-scheme));
 * si "Color Scheme" es "heredado", una llamada al comando [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md);
 * si [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) no se llama o se llama con el valor del parámetro "heredado", la Configuración (configuración de la base local en caso de un componente);
 * si si la configuración se define como "heredada", las preferencias del usuario del sistema operativo.

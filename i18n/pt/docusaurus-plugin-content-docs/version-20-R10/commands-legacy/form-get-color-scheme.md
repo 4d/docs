@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 O esquema de cores atual de um formulário é definido:
 
-* pela propriedade de formulário "Color Scheme" (ver *colorScheme*);
+* pela propriedade de formulário "Color Scheme" (ver [*colorScheme*](../FormEditor/properties_FormProperties.md#color-scheme));
 * se "Color Scheme" for estabelecido como "inherited", pela chamada ao comando [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md);
 * se [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) não for chamado, ou for chamado com o parâmetro "inherited", use Configurações (Configurações do banco de dados host no caso de um componente);
 * se Configurações for estabelecido como "inherited", use as preferências de usuário do sistema operacional

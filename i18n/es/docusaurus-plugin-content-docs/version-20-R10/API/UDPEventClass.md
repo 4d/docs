@@ -3,7 +3,7 @@ id: UDPEventClass
 title: UDPEvent
 ---
 
-The `UDPEvent` class provides information about events occurring during the lifecycle of a UDP socket. It is generated when a [UDPSocket](UDPSocketClass.md) is opened and is utilized in callbacks `onData`, `onError`, and `onTerminate`.
+La clase `UDPEvent` ofrece información sobre los eventos que ocurren durante el ciclo de vida de un socket UDP. Se genera cuando se abre un [UDPSocket](UDPSocketClass.md) y se utiliza en las retrollamadas `onData`, `onError`, y `onTerminate`.
 
 <details><summary>Historia</summary>
 
@@ -15,7 +15,7 @@ The `UDPEvent` class provides information about events occurring during the life
 
 ### Objeto UDPEvent
 
-A `UDPEvent` object is immutable and non-streamable.
+Un objeto `UDPEvent` es inmutable y no se puede transmitir.
 
 Las siguientes propiedades están disponibles:
 
@@ -34,7 +34,7 @@ Las siguientes propiedades están disponibles:
 
 #### Descripción
 
-The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associated with the event<!-- END REF -->. Sólo es válido para eventos de tipo "data".
+La propiedad `.data` contiene <!-- REF #UDPEvent.data.Summary -->los datos asociados con el evento<!-- END REF -->. Sólo es válido para eventos de tipo "data".
 
 <!-- END REF -->
 
@@ -46,7 +46,7 @@ The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associ
 
 #### Descripción
 
-The `.ip` property contains <!-- REF #UDPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
+La propiedad `.ip` contiene <!-- REF #UDPEvent.ip.Summary -->la dirección IP de la máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -58,7 +58,7 @@ The `.ip` property contains <!-- REF #UDPEvent.ip.Summary -->the IP address of t
 
 #### Descripción
 
-The `.port` property contains <!-- REF #UDPEvent.port.Summary -->the port number of the remote machine<!-- END REF -->.
+La propiedad `.port` contiene <!-- REF #UDPEvent.port.Summary -->el número de puerto de la máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -70,11 +70,11 @@ The `.port` property contains <!-- REF #UDPEvent.port.Summary -->the port number
 
 #### Descripción
 
-The `.type` property contains <!-- REF #UDPEvent.type.Summary -->the type of the event<!-- END REF -->. Los valores posibles son:
+La propiedad `.type` contiene <!-- REF #UDPEvent.type.Summary -->el tipo del evento<!-- END REF -->. Los valores posibles son:
 
 - `"data"`: indica que los datos han sido recibidos.
-- `"error"`: Indicates that an error occurred during the UDPSocket.
-- `"terminate"`: Indicates that the UDPSocket is about to be released.
+- `"error"`: indica que se ha producido un error durante el UDPSocket.
+- `"terminate"`: indica que el UDPSocket está a punto de ser liberado.
 
 <!-- END REF -->
 

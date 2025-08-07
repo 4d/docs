@@ -11,12 +11,12 @@ Les boutons peuvent répondre à divers besoins qui dépendent du style et de l'
 
 ## Gestion des boutons
 
-Les actions assignées aux boutons peuvent provenir d'[actons standard](properties_Action.md#standard-action) ou de méthodes objet personnalisées. Les actions typiques peuvent consister à laisser l'utilisateur accepter, annuler ou supprimer des enregistrements, à copier ou coller des données, à passer d'une page à l'autre dans un formulaire de plusieurs pages, à ouvrir, supprimer ou ajouter des enregistrements dans un sous-formulaire, à gérer les attributs de police dans les zones de texte , etc.
+Les actions assignées aux boutons peuvent provenir d'[actions standard](properties_Action.md#standard-action) ou de méthodes objet personnalisées. Les actions typiques peuvent consister à laisser l'utilisateur accepter, annuler ou supprimer des enregistrements, à copier ou coller des données, à passer d'une page à l'autre dans un formulaire de plusieurs pages, à ouvrir, supprimer ou ajouter des enregistrements dans un sous-formulaire, à gérer les attributs de police dans les zones de texte , etc.
 
 Les boutons avec des actions standard sont grisés le cas échéant lors de l'exécution du formulaire. Par exemple, si le premier enregistrement d'une table est affiché, un bouton avec l'action standard `firstRecord` apparaît grisé.
 
-En règle générale, vous activez l'événement `Sur clic` et la méthode s'exécute uniquement lorsque vous cliquez sur le bouton.
-If you want a button to perform an action that's not available as a standard action, leave the standard action field empty and write an [object method to specify the button’s action](../FormObjects/properties_Action.md#method). Vous pouvez associer une méthode à n'importe quel bouton.
+Si vous souhaitez qu'un bouton effectue une action qui n'est pas disponible en tant qu'action standard, laissez le champ action standard vide et écrivez une [méthode objet pour spécifier l'action du bouton](../FormObjects/properties_Action.md#method).
+En règle générale, vous activez l'événement `Sur clic` et la méthode s'exécute uniquement lorsque vous cliquez sur le bouton. Vous pouvez associer une méthode à n'importe quel bouton.
 
 La [variable](properties_Object.md#variable-or-expression) associée à un bouton est automatiquement définie sur **0** lorsque le formulaire est exécuté pour la première fois en mode Développement ou Application. Lorsque l'utilisateur clique sur un bouton, sa variable est définie sur **1**.
 
@@ -55,7 +55,7 @@ Par défaut, le style Classique a un fond gris clair avec un libellé au centre.
 		}
 ```
 
-Seuls les styles Classique et A plat proposent la propriété [Bouton par défaut](properties_Appearance.md#default-button).
+Seuls les styles Classique et Flat proposent la propriété [Bouton par défaut](properties_Appearance.md#default-button).
 
 ### A plat
 
@@ -82,7 +82,7 @@ Par défaut, le style A plat a un arrière-plan avec un libellé au centre, des 
                 }
 ```
 
-Seuls les styles Classique et A plat proposent la propriété [Bouton par défaut](properties_Appearance.md#default-button).
+Seuls les styles Classique et Flat proposent la propriété [Bouton par défaut](properties_Appearance.md#default-button).
 
 ### Toolbar (Barre d’outils)
 
@@ -273,7 +273,7 @@ Le style du bouton Aide peut être utilisé pour afficher un bouton d'aide syst�
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#titlepicture-position) basic properties.
+> Le style Aide ne prend pas en charge les propriétés de base [Nombre d'états](properties_TextAndPicture.md#number-of-states), [Chemin d'accès à l'image](properties_TextAndPicture.md#picture-pathname) et [Position du titre/de l'image](properties_TextAndPicture.md#titlepicture-position).
 
 ### Rond
 

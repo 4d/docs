@@ -13,7 +13,7 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 | Propiedad                 | Tipo     | Descripción                                                                                                                                                   |
 | ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `formula` u `onTerminate` | Function | A function to be called asynchronously when finished. Asegúrese de que el proceso actual no termina.                          |
+| `formula` u `onTerminate` | Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina.                  |
 | `onResponse`              | Function | A function to be called asynchronously when the request finishes successfully. Asegúrese de que el proceso actual no termina. |
 | `onError`                 | Function | A function to be called asynchronously when the request finishes with errors. Asegúrese de que el proceso actual no termina.  |
 | `throw`                   | Boolean  | Si es true, lanza un error si se produce uno. Only if no formula callback defined.                                            |

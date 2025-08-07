@@ -18,14 +18,14 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 
 ### Propiedades de respuesta HTTP
 
-| Propiedad    | Tipo    | Descripción                                                     |
-| ------------ | ------- | --------------------------------------------------------------- |
-| `response`   | Object  | El objeto de respuesta completo.                |
-| `status`     | Integer | El código de estado HTTP de la respuesta.       |
-| `statusText` | Text    | El texto de estado de la respuesta HTTP.        |
-| `body`       | Object  | El cuerpo de la respuesta de error.             |
-| `headers`    | Object  | Los encabezados de la respuesta de error.       |
-| `requestID`  | Text    | The request ID from the error response headers. |
+| Propiedad    | Tipo    | Descripción                                                                 |
+| ------------ | ------- | --------------------------------------------------------------------------- |
+| `response`   | Object  | El objeto de respuesta completo.                            |
+| `status`     | Integer | El código de estado HTTP de la respuesta.                   |
+| `statusText` | Text    | El texto de estado de la respuesta HTTP.                    |
+| `body`       | Object  | El cuerpo de la respuesta de error.                         |
+| `headers`    | Object  | Los encabezados de la respuesta de error.                   |
+| `requestID`  | Text    | El ID de petición de los encabezados de respuesta de error. |
 
 ### OpenAI específico
 
@@ -40,7 +40,7 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 | Propiedad                    | Tipo    | Descripción                                                                      |
 | ---------------------------- | ------- | -------------------------------------------------------------------------------- |
 | `isBadRequestError`          | Boolean | Indicates if the error is a 400 Bad Request error.               |
-| `isAuthenticationError`      | Boolean | Indicates if the error is a 401 Authentication error.            |
+| `isAuthenticationError`      | Boolean | Indica si se trata de un error de autenticación 401.             |
 | `isPermissionDeniedError`    | Boolean | Indicates ∏if the error is a 403 Permission Denied error.        |
 | `isNotFoundError`            | Boolean | Indica si el error es un error 404 Not Found.                    |
 | `isUnprocessableEntityError` | Boolean | Indicates if the error is a 422 Unprocessable Entity error.      |

@@ -125,7 +125,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 La propriété `.superclass` <!-- REF #ClassClass.superclass.Summary -->retourne la classe parente de la classe<!-- END REF -->. Une superclasse peut être un objet `4D.Class`, ou un objet `cs.className`. Si la classe n'a pas de classe parente, la propriété renvoie **null**.
 
-To define a superclass for a user class, use the  [`extends`](Concepts/classes.md#class-extends-classname) keyword like: `Class extends <superclass>`.
+Pour définir une superclasse pour une classe utilisateur, utilisez le mot-clé [`extends`](Concepts/classes.md#class-extends-classname) comme suit : `Class extends <superclass>`.
 
 Cette propriété est en **lecture seule**.
 

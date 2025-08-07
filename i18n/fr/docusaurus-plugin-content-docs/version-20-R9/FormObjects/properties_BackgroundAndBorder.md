@@ -164,7 +164,7 @@ Désigne l'épaisseur d'une ligne.
 
 ## Tableau couleurs de fond
 
-`Array type list boxes`
+`List box de type tableau`
 
 Le nom d'un tableau pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne ou colonne de la list box.
 

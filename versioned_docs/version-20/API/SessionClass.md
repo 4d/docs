@@ -76,7 +76,7 @@ IP:port/4DACTION/action_Session
           WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
        End if
     Else
-       WEB SEND TEXT("4DACTION --> Sesion is null")
+       WEB SEND TEXT("4DACTION --> session is null")
  End case
 ```
 

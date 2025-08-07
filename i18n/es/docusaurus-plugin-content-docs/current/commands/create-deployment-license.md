@@ -47,7 +47,7 @@ The following constants are supported in the *autoLicenseTarget* parameter:
 | 4D Volume Desktop | 1     | Create automatically a license for a 4D single-user application |
 | 4D Server         | 5     | Create automatically a license for a 4D Server application      |
 
-If no valid license is found, an error is generated.
+Si no se encuentra una licencia válida, se genera un error.
 
 ### Designación de la(s) licencia(s) a utilizar
 

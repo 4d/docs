@@ -70,7 +70,7 @@ IP:port/4DACTION/action_Session
           WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
        End if
     Else
-       WEB SEND TEXT("4DACTION --> Sesion is null")
+       WEB SEND TEXT("4DACTION --> Session is null")
  End case
 ```
 
@@ -91,8 +91,7 @@ IP:port/4DACTION/action_Session
 <!-- REF #SessionClass.clearPrivileges().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 

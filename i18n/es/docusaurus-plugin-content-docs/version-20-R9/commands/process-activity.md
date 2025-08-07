@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF--> Este comando devuelve todos los procesos, incluidos los procesos internos a los que no se puede acceder mediante el comando [Process info](process-info.md). 
+<!--REF #_command_.Process activity.Summary-->El comando **Process activity** devuelve una instantánea de los procesos en ejecución y/o (sólo en 4D Server) de las sesiones de usuario conectadas en un momento dado.<!-- END REF--> Este comando devuelve todos los procesos, incluidos los procesos internos a los que no se puede acceder mediante el comando [Process info](process-info.md). 
 
 By default when used without any parameters, **Process activity** returns an object containing the following properties:
 

@@ -8,11 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Params-->
 
-| Parámetros | Tipo  |                             | Descripción                                                                               |
-| ---------- | ----- | --------------------------- | ----------------------------------------------------------------------------------------- |
-| aTable     | Tabla | &#8594; | Table owning the form or If omitted: default table or use of project form |
-| form       | Text  | &#8594; | Nombre del formulario                                                                     |
-| object     | Text  | &#8594; | Nombre del objeto del formulario o nombre del grupo                                       |
+| Parámetros | Tipo  |                             | Descripción                                                                                                    |
+| ---------- | ----- | --------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| aTable     | Tabla | &#8594; | Tabla propia del formulario o Si se omite: tabla por defecto o uso del formulario del proyecto |
+| form       | Text  | &#8594; | Nombre del formulario                                                                                          |
+| object     | Text  | &#8594; | Nombre del objeto del formulario o nombre del grupo                                                            |
 
 <!-- END REF-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.El comando **FORM EDIT** abre el *form* asociado a *aTable* en el editor de formularios 4D, con opcionalmente *object* seleccionado.<!-- END REF--> Tenga en cuenta que debe tener acceso al entorno Diseño, de lo contrario se generará el error -9804 ("Cannot open form").
+<!--REF #_command_.FORM EDIT.Summary-->El comando **FORM EDIT** abre el *form* asociado a *aTable* en el editor de formularios 4D, con opcionalmente *object* seleccionado.<!-- END REF--> Tenga en cuenta que debe tener acceso al entorno Diseño, de lo contrario se generará el error -9804 ("Cannot open form").
 
 El comando es asíncrono: vuelve inmediatamente al método que lo llama y no espera a que el formulario esté abierto.
 
