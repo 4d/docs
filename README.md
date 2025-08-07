@@ -95,7 +95,7 @@ Exemple:
 ### Generate syntax files
 
 - go where the docusaurus.config.js is located
-- run `node tools/syntax-version.js <version>`
+- run `node tools/syntax-version.js --version=<version>`
 if no `<version>` is provided the syntax will be generated with the last version.
 `<version>` can be version-18, version-19, version-20, version-20-R9... like located in the versioned_docs folder.
 
