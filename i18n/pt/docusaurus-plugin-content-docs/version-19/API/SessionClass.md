@@ -89,10 +89,11 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parâmetro | Tipo |  | Descrição                  |
-| --------- | ---- |::| -------------------------- |
-|           |      |  | Não exige nenhum parâmetro |
-<!-- END REF -->
+| Parâmetro | Tipo |  | Descrição                                             |
+| --------- | ---- |::| ----------------------------------------------------- |
+|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
+
+|
 
 #### Descrição
 
