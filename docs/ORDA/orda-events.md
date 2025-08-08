@@ -7,7 +7,7 @@ title: ORDA Events
 
 |Release|Changes|
 |---|---|
-|20 R10|Added
+|20 R10|touched event added
 </details>
 
 
@@ -109,10 +109,6 @@ This event is triggered as soon as the 4D Server / 4D engine can detect a modifi
 - in **client/server without the `local` keyword**, in **[Qodly application](https://developer.qodly.com/docs)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
 - with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
 
-:::note
-
-
-:::
 
 The function receives an [*event* object](#event-parameter) as parameter. 
 
@@ -125,6 +121,7 @@ This event is also triggered:
 - when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md). 
 
 :::
+
 
 #### Example 1
 
@@ -165,6 +162,75 @@ Function event touched arrivalDate($event : Object)
     This.sameDay:=(This.departureDate = This.arrivalDate)
 
 ```
+
+
+
+#### Example 3 (diagram): Client/server with the `local` keyword:
+
+```mermaid
+
+sequenceDiagram
+
+    Client->>+Server: $people:=ds.People.all().first()
+
+    Client->>+Client: $people.lastname:="Brown"
+   Note over Client: local Function event touched lastname($event : Object) <br>  This.lastname:=Uppercase(This.lastname)
+
+Note over Client:$people.lastname is uppercased
+
+    Client->>+Server: $people.apply()
+   
+   Note over Server: The $people entity is received with the lastname attribute uppercased
+
+```
+
+
+#### Example 4 (diagram): Client/server without the `local` keyword
+
+```mermaid
+
+sequenceDiagram
+
+    Client->>+Server: $people:=ds.People.all().first()
+
+    Client->>+Client: $people.lastname:="Brown"
+
+   Note over Client:$people.lastname is not uppercased
+
+    Client->>+Server: $people.apply()
+
+   Note over Server: Function event touched lastname($event : Object) <br>  This.lastname:=Uppercase(This.lastname)
+
+    Server-->>-Client: The $people entity is updated
+
+   Note over Client:$people.lastname is uppercased
+
+
+```
+
+#### Example 5 (diagram): Qodly application
+
+```mermaid
+
+sequenceDiagram
+
+Qodly page->>+ Server: Get an entity into the People Qodly source
+
+Qodly page->>+Qodly page: The user updates People.lastname
+
+Note over Qodly page: The People Qodly source lastname attribute is not uppercased
+
+Qodly page->>+ Server: Function call People.apply()
+
+Note over Server: Function event touched lastname($event : Object) <br> This.lastname:=Uppercase(This.lastname)
+
+Server-->>-Qodly page: The People Qodly source is updated
+Note over Qodly page: The People Qodly source lastname attribute is uppercased
+
+
+```
+
+
 
 
 
