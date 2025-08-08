@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP BODY.Summary-->The **WEB GET HTTP BODY** command returns the body of the HTTP request being processed.<!-- END REF--> The HTTP body is returned as is, without processing or parsing. 
 
-This command can be called using a Web database method (*On Web Authentication Database Method*, [QR SET DESTINATION](qr-set-destination.md)) or any Web method. 
+This command can be called using a Web database method ([On Web Authentication](./on-web-authentication-database-method.md), [On Web Connection](./on-web-connection-database-method.md)) or any Web method. 
 
 In *body*, you can pass a variable or a field of the BLOB or Text type. The Text type is generally sufficient (the *body* parameter can receive up to 2 GB of text).
 

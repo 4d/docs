@@ -24,7 +24,7 @@ Este comando obtém o valor de todas as variáveis que podem ser incluídas em p
 
 Este comando é valido sem importar o tipo de URL ou de formulário (método POST ou GET) enviado ao servidor web.  
   
-Este comando pode ser chamado, se for necessário, no [QR SET DESTINATION](qr-set-destination.md) ou em qualquer outro método 4D que resulte do envio de um formulário.
+Este comando pode ser chamado, se for necessário, no [On Web Connection](./on-web-connection-database-method.md) ou em qualquer outro método 4D que resulte do envio de um formulário.
 
 ### Sobre formulários Web e suas ações associadas 
 

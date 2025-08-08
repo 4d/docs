@@ -36,10 +36,6 @@ Indicates whether or not the Web server will accept secure connections. See [Ena
 
 Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). See [HTTPS Port](../WebServer/webServerConfig.md#https-port).
 
-#### Allow database access through 4DSYNC URLs
-
-*Compatibility Note*: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
-
 
 ### Paths
 
@@ -125,7 +121,7 @@ Not available with [scalable sessions](../WebServer/sessions.md).
 
 Enables preemptive web processes in your compiled applications. When **Use preemptive processes** is selected, the eligibility of your web-related code (including 4D tags and web database methods) to the preemptive execution will be evaluated during the compilation. For more information, see [Using preemptive Web processes](../WebServer/preemptiveWeb.md).
 
-> This option does not apply to scalable sessions, REST processes (compiled mode), and web service processes (server or client).  See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
+> This option does not apply to scalable sessions, REST processes (compiled mode), and web service processes (server or client). See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 
 #### Inactive Process Timeout  

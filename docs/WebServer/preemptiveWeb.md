@@ -27,10 +27,11 @@ The following table indicates whether the preemptive mode is used or is availabl
 - REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
 - Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
 - Web Service Server: handles SOAP requests
-- ***web setting*** means that the preemptive mode depends on a setting value:
-	- when [**Scalable sessions**](sessions.md#enabling-web-sessions) option is selected, the preemptive mode is automatically used for web processes.
-	- otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-	- regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler. 
+- ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
+	- if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
+	- if scalable sessions are not enabled:
+		- for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+		- for web service processes (server or client), preemptive mode is supported at method level. 
 
 
 
@@ -55,7 +56,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 *	[ORDA data model class functions](../REST/ClassFunctions.md) called via REST
 
-For each of these methods and code parts, the compiler will check if the thread-safety rules are respected, and will return errors in case of issues. For more information about thread-safety rules, please refer to the *Writing a thread-safe method* paragraph in the *Processes* chapter of the [4D Language Reference](https://doc.4d.com) manual.
+For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues. 
 
 ## Thread-safety of 4D web code  
 
@@ -78,7 +79,6 @@ Of course, the code executed by these methods must also be thread-safe.
 The following 4D Web Server URLs are thread-safe and can be used in preemptive mode:
 
 *	*4daction/* (the called project method must also be thread-safe)
-*	*4dcgi/* (the called database methods must also be thread-safe)
 *	*4dwebtest/*
 *	*4dblank/*
 *	*4dstats/*

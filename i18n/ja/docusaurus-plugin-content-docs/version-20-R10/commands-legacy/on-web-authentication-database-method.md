@@ -68,7 +68,7 @@ displayed_sidebar: docs
     
 **注:**  
    * パフォーマンスの理由から、このデータのサイズは32KBで切り取られます。  
-   * この引数に関する詳細は[QR SET DESTINATION](qr-set-destination.md)の説明を参照してください。
+   * この引数に関する詳細は[On Web Connection](./on-web-connection-database-method.md)の説明を参照してください。
 * **WebクライアントのIPアドレス**  
     
 $ipBrowser 引数はブラウザマシンのIPアドレスを受け取ります。この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。  
@@ -86,9 +86,9 @@ $user と $pw 引数は、ブラウザーが表示する標準の認証ダイア
    * $result=**True**: 接続を受け入れる  
    * $result=**False**: 接続を受け入れない
 
-[QR SET DESTINATION](qr-set-destination.md)は、接続が**On Web Authenticationデータベースメソッド**により受け入れられた時にのみ実行されます。
+[On Web Connection](./on-web-connection-database-method.md)は、接続が**On Web Authenticationデータベースメソッド**により受け入れられた時にのみ実行されます。
 
-**警告:** *$result*に値が設定されないか、*$result*が**On Web Authenticationデータベースメソッド**内で定義されていない場合、接続は受け入れるものとされ、[QR SET DESTINATION](qr-set-destination.md)が実行されます。
+**警告:** *$result*に値が設定されないか、*$result*が**On Web Authenticationデータベースメソッド**内で定義されていない場合、接続は受け入れるものとされ、[On Web Connection](./on-web-connection-database-method.md)が実行されます。
 
 **注:**
 

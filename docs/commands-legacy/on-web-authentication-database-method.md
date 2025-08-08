@@ -59,6 +59,7 @@ Let’s take the example of an Intranet connection. Suppose that the IP address 
 | http://123.45.67.89/Customers                | /Customers                |  
 | http://123.45.67.89/Customers/Add            | /Customers/Add            |  
 | 123.45.67.89/Do\_This/If\_OK/Do\_That        | /Do\_This/If\_OK/Do\_That |
+
 * **Header and Body of the HTTP request**  
 The second parameter (*$http*) is the header and the body of the HTTP request sent by the Web browser. Note that this information is passed to your **On Web Authentication database method** as it is. Its contents will vary depending on the nature of the Web browser which is attempting the connection.  
 If your application deals with this information, it is up to you to parse the header and the body.
@@ -71,7 +72,7 @@ If your application deals with this information, it is up to you to parse the he
 The $ipBrowser parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between Intranet and Internet connections.  
 **Note:** 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34\. For more information, refer to the *Support of IPv6* section.
 * **Server IP address**  
-The $ipServer parameter receives the IP address used to call the Web server. 4D since version 6.5 allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the section *Web Server Settings*
+The $ipServer parameter receives the IP address used to call the Web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the section *Web Server Settings*
 * **User Name and Password**  
 The $user and $pw parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if a password management option has been selected in the Database Settings dialog box (see section *Connection Security*).
 
@@ -99,14 +100,11 @@ The On Web Authentication database method is automatically called, regardless of
 The On Web Authentication database method is therefore called in the following cases:
 
 * when 4D receives a URL beginning with *4DACTION/*
-* when 4D receives a URL beginning with *4DCGI/*
-* when 4D receives a URL beginning with *4DSYNC/*
 * when 4D receives a URL requesting a static page that does not exist
 * when 4D receives a root access URL and no home page has been set in the Database Settings or by means of the [WEB SET HOME PAGE](web-set-home-page.md) command
 * when 4D processes a *4DSCRIPT* tag in a semi-dynamic page
 * when 4D processes a *4DLOOP* tag based on a method in a semi-dynamic page.
 
-**Compatibility note:** The database method is also called when 4D receives a URL beginning with *4DMETHOD/*. This URL is obsolete and is only kept for compatibility's sake.
 
 Note that the On Web Authentication database method is NOT called when the server receives a URL requesting a valid static page. 
 

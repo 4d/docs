@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP BODY.Summary-->**WEB GET HTTP BODY**コマンドは、 処理中のHTTPリクエストのボディを返します。<!-- END REF--> HTTPボディは、処理や解析されることなく、そのままの状態で返されます。 
 
-このコマンドはWebデータベースメソッド (*On Web Authenticationデータベースメソッド*、[QR SET DESTINATION](qr-set-destination.md)) 、またはWebリクエスト処理メソッドで呼び出します。 
+このコマンドはWebデータベースメソッド (*On Web Authenticationデータベースメソッド*、[On Web Connection](./on-web-connection-database-method.md)) 、またはWebリクエスト処理メソッドで呼び出します。 
 
 引数 *body* にはBLOBまたはテキストタイプの変数やフィールドを渡すことができます。一般的に、テキスト型引数の利用が推奨されます (*body*引数は2GBを上限としたテキストを受け取ることができます)。
 

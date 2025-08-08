@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->**WEB GET HTTP HEADER**コマンドは、 現在処理されているリクエストのHTTPヘッダーを含む2つの配列、または文字列のいずれかを返します。<!-- END REF--> 
 
- このコマンドはWebプロセスで実行されるすべてのメソッド ( '/4DACTION'...によって呼び出されるメソッド、*On Web Authenticationデータベースメソッド*または[QR SET DESTINATION](qr-set-destination.md)) 内から呼び出されます。
+ このコマンドはWebプロセスで実行されるすべてのメソッド ( '/4DACTION'...によって呼び出されるメソッド、*On Web Authenticationデータベースメソッド*または[On Web Connection](./on-web-connection-database-method.md)) 内から呼び出されます。
 * **1番目のシンタックス:** **WEB GET HTTP HEADER** **(header)**  
 このシンタックスを使用すると、次の結果 (例) が変数 *header* に返されます。  
 "GET /page.html HTTP/1.0\[CRLF\]User-Agent: browser\[CRLF\]Cookie: C=HELLO"
@@ -97,7 +97,7 @@ HTTP標準に準拠するには、フィールド名を常に英語で記述し�
 
 **注:** Webブラウザ上で複数のランゲージをデフォルトで定義することができます。ランゲージは"Accept-Language" フィールドでリストにされ、 ";" で区切られて示されています。文字列内でのランゲージの位置に応じて、その優先順位が定義されます。そのため、文字列内でのランゲージの位置をテストすることをお勧めします。
 
- 以下は仮想ホストの例です (例えば[QR SET DESTINATION](qr-set-destination.md)において) 。次の名前"home\_site.com"、"home\_site1.com" と "home\_site2.com" は同じIPアドレス、例えば192.1.2.3を指している。  
+ 以下は仮想ホストの例です (例えば[On Web Connection](./on-web-connection-database-method.md)において) 。次の名前"home\_site.com"、"home\_site1.com" と "home\_site2.com" は同じIPアドレス、例えば192.1.2.3を指している。  
 
 ```4d
  $host:=GetHTTPField("Host")

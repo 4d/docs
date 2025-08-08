@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->La commande **WEB GET HTTP HEADER** retourne, soit sous forme de chaîne, soit sous forme de deux tableaux, l’en-tête HTTP de la requête en cours de traitement.<!-- END REF-->
 
-Cette commande peut être appelée depuis toute méthode (*Méthode base Sur authentification Web*, [QR SET DESTINATION](qr-set-destination.md), méthode appelée par "*/4DACTION*"...) exécutée dans un process Web.
+Cette commande peut être appelée depuis toute méthode (*Méthode base Sur authentification Web*, [On Web Connection](./on-web-connection-database-method.md), méthode appelée par "*/4DACTION*"...) exécutée dans un process Web.
 
 * **Première syntaxe :** **WEB GET HTTP HEADER** **(entête)**
 
@@ -82,7 +82,7 @@ A titre indicatif, voici une liste non exhaustive des champs HTTP pouvant être 
  $cookie:=GetHTTPField("Cookie")
 ```
 
-* Vous pouvez également envoyer des pages différentes en fonction de la langue du navigateur (par exemple dans la [QR SET DESTINATION](qr-set-destination.md)) :
+* Vous pouvez également envoyer des pages différentes en fonction de la langue du navigateur (par exemple dans la [On Web Connection](./on-web-connection-database-method.md)) :
 
 ```4d
  $langue:=GetHTTPField("Accept-Language")
@@ -98,7 +98,7 @@ A titre indicatif, voici une liste non exhaustive des champs HTTP pouvant être 
 
 **Note :** Les navigateurs Web permettent de définir plusieurs langues par défaut. Elles sont listées dans le champ “Accept-Language”, séparées par des ";". Leur priorité est définie par leur position au sein de la chaîne ; il peut donc être utile de tester la position des langues dans la chaîne. 
 
-* Exemple de gestion des hôtes virtuels (par exemple dans la [QR SET DESTINATION](qr-set-destination.md)). Les trois noms “home\_site.com”, “home\_site1.com” et “home\_site2.com” pointent vers la même adresse IP, par exemple 192.1.2.3.
+* Exemple de gestion des hôtes virtuels (par exemple dans la [On Web Connection](./on-web-connection-database-method.md)). Les trois noms “home\_site.com”, “home\_site1.com” et “home\_site2.com” pointent vers la même adresse IP, par exemple 192.1.2.3.
 
 ```4d
  $host:=GetHTTPField("Host")

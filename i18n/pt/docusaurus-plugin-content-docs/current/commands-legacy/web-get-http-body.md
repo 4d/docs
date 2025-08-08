@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP BODY.Summary-->O comando **WEB GET HTTP BODY** retorna o corpo da solicitação HTTP que esta sendo processada.<!-- END REF--> O corpo HTTP se retorna tal qual, sem processo nem análise.  
 
-Este comando pode ser chamado utilizando um método de banco web (*On Web Authentication Database Method*, [QR SET DESTINATION](qr-set-destination.md)) ou todo método web.  
+Este comando pode ser chamado utilizando um método de banco web (*On Web Authentication Database Method*, [On Web Connection](./on-web-connection-database-method.md)) ou todo método web.  
   
 Pode passar no parâmetro *corpo*, uma variável ou um campo de tipo BLOB ou Texto. O tipo Texto é geralmente suficiente (o parâmetro *corpo* pode receber até 2 GB de texto).  
   

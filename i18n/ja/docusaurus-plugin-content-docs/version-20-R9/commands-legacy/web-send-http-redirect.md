@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **注:** POSTアクション "/4DCGI/rech" は、テキストエリアと**OK**と**Cancel**ボタンに連携されています。
 
-[QR SET DESTINATION](qr-set-destination.md)に以下のコードを挿入します。
+[On Web Connection](./on-web-connection-database-method.md)に以下のコードを挿入します。
 
 ```4d
  Case of

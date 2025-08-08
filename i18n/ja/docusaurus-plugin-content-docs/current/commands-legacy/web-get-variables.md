@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 URLのタイプやWebサーバーに送られたフォーム (POSTまたはGETメソッド) に関係なく有効です。
 
-[QR SET DESTINATION](qr-set-destination.md)や、フォームをサブミットすることによって呼び出される他の4Dメソッドにおいて、必要に応じこのコマンドを呼び出します。
+[On Web Connection](./on-web-connection-database-method.md)や、フォームをサブミットすることによって呼び出される他の4Dメソッドにおいて、必要に応じこのコマンドを呼び出します。
 
 ### Webフォームと関連するアクションについて 
 

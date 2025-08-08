@@ -36,7 +36,7 @@ Puede utilizar este comando para efectuar, con la ayuda de páginas estáticas, 
 
 **Nota:** la acción POST “/4dcgi/rech” se ha asociado al área de texto y a los botones **Aceptar** y **Cancelar**.
 
-En el [QR SET DESTINATION](qr-set-destination.md), inserte el siguiente código:
+En el [On Web Connection](./on-web-connection-database-method.md), inserte el siguiente código:
 
 ```4d
  Case of

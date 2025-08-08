@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP BODY.Summary-->La commande **WEB GET HTTP BODY** retourne le corps (body) de la requête HTTP en cours de traitement.<!-- END REF--> Le corps HTTP est retourné tel quel, sans traitement ni analyse. 
 
-Cette commande peut être appelée depuis la *Méthode base Sur authentification Web*, la [QR SET DESTINATION](qr-set-destination.md) ou toute méthode Web. 
+Cette commande peut être appelée depuis la *Méthode base Sur authentification Web*, la [On Web Connection](./on-web-connection-database-method.md) ou toute méthode Web. 
 
 Vous pouvez passer dans le paramètre *corps* une variable ou un champ de type BLOB ou Texte. Le type Texte sera généralement suffisant (le paramètre *corps* peut recevoir jusqu'à 2 Go de texte). 
 

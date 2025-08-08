@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->El comando **WEB GET HTTP HEADER** devuelve, en una cadena o dos arrays, el encabezado HTTP de la petición en proceso.<!-- END REF-->
 
-Este comando puede llamarse desde cualquier método (*Método de base On Web Authentication*, [QR SET DESTINATION](qr-set-destination.md), método llamado por "*/4DACTION"*...) ejecutado en un proceso web.
+Este comando puede llamarse desde cualquier método (*Método de base On Web Authentication*, [On Web Connection](./on-web-connection-database-method.md), método llamado por "*/4DACTION"*...) ejecutado en un proceso web.
 
 * **Primera sintaxis:** **WEB GET HTTP HEADER** **(encabezado)**
 Cuando se utiliza esta sintaxis, el resultado devuelto en la variable *encabezado* es el siguiente: 
@@ -100,7 +100,7 @@ On Web Connection):
 
 **Nota:** los navegadores web permiten definir varios idiomas por defecto. Están listados en el campo "Accept-Language", separados por un ";". Su propiedad está definida de acuerdo a su posición dentro de la cadena; por lo tanto es una buena idea probar la posición de los idiomas en la cadena.
 
-* Este es un ejemplo de hosts virtuales (por ejemplo en el [QR SET DESTINATION](qr-set-destination.md)). Los siguiente nombres "home\_site.com", "home\_site1.com" y "home\_site2.com" apuntan a la misma dirección IP, por ejemplo 192.1.2.3.
+* Este es un ejemplo de hosts virtuales (por ejemplo en el [On Web Connection](./on-web-connection-database-method.md)). Los siguiente nombres "home\_site.com", "home\_site1.com" y "home\_site2.com" apuntan a la misma dirección IP, por ejemplo 192.1.2.3.
 
 ```4d
  $host:=GetHTTPField("Host")
