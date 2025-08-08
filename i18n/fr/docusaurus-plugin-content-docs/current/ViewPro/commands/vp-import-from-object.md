@@ -49,7 +49,7 @@ Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 | param2     |                               | Text    | Reserved for compatibility, this parameter is always empty |
 | param3     |                               | Object  | Une référence au paramètre *paramObj* de la commande       |
 | param4     |                               | Object  | Objet retourné par la méthode avec un message de statut    |
-|            | .success      | Boolean | `True` if import was successful, `False` otherwise         |
+|            | .success      | Boolean | `True` si l'importation a réussi, `False` sinon            |
 |            | .errorCode    | Integer | Code d'erreur                                              |
 |            | .errorMessage | Text    | Message d'erreur                                           |
 

@@ -40,7 +40,7 @@ The following parameters can be used in the callback function:
 | ---------- | ----------------------------- | ------- | ------------------------------------------------------- |
 | param1     |                               | Text    | Nom de l'objet 4D View Pro                              |
 | param2     |                               | Object  | Objet retourné par la méthode avec un message de statut |
-|            | .success      | Boolean | `True` if import was successful, `False` otherwise      |
+|            | .success      | Boolean | `True` si l'importation a réussi, `False` sinon         |
 |            | .errorCode    | Integer | Code d'erreur                                           |
 |            | .errorMessage | Text    | Message d'erreur                                        |
 
@@ -48,7 +48,7 @@ The following parameters can be used in the callback function:
 
 ## Exemple 1
 
-You want to execute commands and empty the command buffer:
+Vous souhaitez exécuter des commandes et vider le buffer de commande :
 
 ```4d
 // Set text values in specific cells

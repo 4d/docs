@@ -5,10 +5,10 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                 |
-| ------- | ------------------------------------------------------------- |
-| 20 R9   | Trigger of callback function after custom functions completed |
-| 20 R2   | Prise en charge des documents .sjs            |
+| Release | Modifications                                                                                  |
+| ------- | ---------------------------------------------------------------------------------------------- |
+| 20 R9   | Déclenchement de la fonction de rappel après que les fonctions personnalisées soient terminées |
+| 20 R2   | Prise en charge des documents .sjs                                             |
 
 </details>
 
