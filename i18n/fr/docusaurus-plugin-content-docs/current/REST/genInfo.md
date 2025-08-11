@@ -10,7 +10,7 @@ Vous pouvez obtenir plusieurs informations du serveur REST :
 
 ## Catalogue
 
-Utilisez les paramètres [`$catalog`]($catalog.md), [`$catalog/\{dataClass\}`]($catalog.md#catalogdataclass) ou [`$catalog/$all`]($catalog.md#catalogall) pour obtenir la liste des [dataclass exposées et de leurs attributs](configuration.md#exposing-tables-and-fields).
+Utilisez les paramètres [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass) ou [`$catalog/$all`]($catalog.md#catalogall) pour obtenir la liste des [dataclass exposées et de leurs attributs](configuration.md#exposing-tables-and-fields).
 
 Pour obtenir la collection de toutes les dataclass exposées avec leurs attributs :
 
@@ -18,7 +18,7 @@ Pour obtenir la collection de toutes les dataclass exposées avec leurs attribut
 
 ## Informations sur le cache
 
-Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
+Utilisez le paramètre [`$info`]($info.md) pour obtenir des informations sur les entity selections actuellement stockées dans le cache de 4D Server ainsi que sur les sessions utilisateur en cours.
 
 ## queryPath et queryPlan
 
