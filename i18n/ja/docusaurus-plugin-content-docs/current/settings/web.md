@@ -33,10 +33,6 @@ HTTP接続を受け付ける IP (TCP) ポート番号。 [HTTP ポート](../Web
 
 TLS (HTTPSプロトコル) を使用したセキュアな HTTP接続に対して Webサーバーが使用する TCP/IPポート番号を指定できます。 [HTTPS ポート](../WebServer/webServerConfig.md#https-ポート) 参照
 
-#### "4DSYNC" URLを使用したデータベースアクセスを許可
-
-*互換性に関する注記*: このオプションは [廃止予定](../WebServer/webServerConfig.md#廃止予定の設定) です。 今後、HTTP を介したデータベースアクセスには ORDA のリモートデータストア機能と RESTリクエストの使用が推奨されます。
-
 ### パス
 
 #### デフォルトHTMLルート
@@ -112,7 +108,7 @@ Webプロセスの最大同時接続数の厳格な上限です。 [最大同時
 
 コンパイル済みアプリケーションにおいてプリエンプティブWebプロセスを有効化します。 **プリエンプティブプロセスを使用** が選択されているとき、Web関連のコード (4D グと Webデータベースメソッドを含む) は、コンパイル時にプリエンティブな実行が可能かどうかが評価されます。 詳細な情報については、[プリエンプティブWebプロセスの使用](../WebServer/preemptiveWeb.md) を参照ください。
 
-> このオプションは スケーラブルセッション、RESTプロセス (コンパイル済みモード)、および Webサービスプロセス (サーバーあるいはクライアント) には適用されません。  See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
+> このオプションは スケーラブルセッション、RESTプロセス (コンパイル済みモード)、および Webサービスプロセス (サーバーあるいはクライアント) には適用されません。 See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### 非動作プロセスのタイムアウト
 

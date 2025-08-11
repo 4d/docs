@@ -254,7 +254,7 @@ Les champs suivants sont enregistrés pour chaque évènement :
 | timestamp          | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)     |
 | loggerID           | Optionnel                                                      |
 | componentSignature | Optionnel - signature de composant interne                     |
-| messageLevel       | Info, Attention, Erreur                                        |
+| messageLevel       | Trace, Debug, Info, Warning, Error                             |
 | message            | Description de la saisie de journal                            |
 
 En fonction de l'événement, d'autres champs peuvent également être enregistrés, tels que task, socket, etc.

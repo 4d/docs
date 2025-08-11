@@ -26,10 +26,11 @@ A tabela a seguir indica se o modo preventivo está utilizado ou está disponív
 - Servidor REST: gestiona las [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md)
 - Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)
 - Servidor de serviços Web: trata dos pedidos SOAP
-- ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
-    - when [**Scalable sessions**](sessions.md#enabling-web-sessions) option is selected, the preemptive mode is automatically used for web processes.
-    - caso contrário, a opção [**Usar processos preventivos**](webServerConfig.md#use-preemptive-processes) é tida em conta.
-    - sobre processos de serviço Web (servidor ou cliente), modo preventivo é suportado no nível do método. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler.
+- ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
+    - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
+    - if scalable sessions are not enabled:
+        - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+        - for web service processes (server or client), preemptive mode is supported at method level.
 
 ## Escrever código servidor Web hilo seguro
 
@@ -51,7 +52,7 @@ Todo o código 4D executado pelo servidor deve ser hilo seguro se você quiser q
 
 - [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md) llamadas vía REST
 
-Para cada um desses métodos e partes de código, o compilador irá verificar se as regras de segurança de threads são respeitadas, e retornará erros em caso de problemas. Para más información sobre las reglas hilo seguro, consulte el párrafo *Escribir un método hilo seguro* en el capítulo *Procesos* del manual de [Lenguaje 4D](https://doc.4d.com).
+For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
 
 ## Código web 4D hilo seguro
 
@@ -73,7 +74,6 @@ Obviamente, o código executado por esses métodos também deve ser hilo seguro.
 As seguintes URLs Web Server 4D são hilo seguro e podem ser usadas em modo preventivo:
 
 - *4daction/* (el método proyecto llamado también debe ser hilo seguro)
-- *4dcgi/* (los métodos base llamados también deben ser hilo seguro)
 - *4dwebtest/*
 - *4dblank/*
 - *4dstats/*

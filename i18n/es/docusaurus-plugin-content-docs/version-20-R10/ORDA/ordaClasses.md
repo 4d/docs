@@ -355,7 +355,7 @@ Dado que funciones como [`dataClass.fromCollection()`](../API/DataClassClass.md#
 
 :::
 
-#### Ejemplo
+#### Ejemplo 1
 
 ```4d
 
@@ -364,6 +364,83 @@ Class constructor()
 
     This.departureDate:=Current date
     This.arrivalDate:=Add to date(Current date; 0; 0; 2)
+
+```
+
+#### Ejemplo 2 (diagrama): cliente/servidor
+
+```mermaid
+
+sequenceDiagram
+
+Client->>+Client: Form.product:=ds.Products.new()
+
+Note over Client: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
+
+Note over Client: Form.product.creationDate is "06/17/25" <br> Form.product.comment is "Automatic comment"
+
+Client->>+Server: Form.product.save()
+
+Server-->>-Client: Success
+
+
+```
+
+#### Ejemplo 3 (diagrama): Qodly - Acción estándar
+
+```mermaid
+
+sequenceDiagram
+
+    Qodly page->>+   Qodly page: Standard action Create a new entity (product Qodly source)
+
+    Qodly page->>+Server: Function call product.apply() OR Save standard action for the product Qodly source
+
+     Note over Server: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
+
+ Server-->>-Qodly page: The product Qodly source creationDate and comment attributes are filled
+
+ Note over Qodly page: product.creationDate is "06/17/25" <br> and product.comment is "Automatic comment"
+
+```
+
+#### Example 4 (diagram): Qodly - Standard action and update value on the newly created entity
+
+```mermaid
+
+sequenceDiagram
+
+Qodly page->>+ Qodly page: Standard action Create a new entity (product Qodly source)
+
+Qodly page->>+ Qodly page: Update product comment with "Front end comment"
+
+Qodly page->>+Server: Function call product.apply() OR Save standard action for the product Qodly source
+
+Note over Server: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
+
+Note over Server: The comment attribute is set with "Front end comment"
+
+Server-->>-Qodly page: The product Qodly source creationDate and comment attributes are filled
+
+Note over Qodly page: product.creationDate is "06/17/25" <br> and product.comment is "Front end comment"
+
+```
+
+#### Example 5 (diagram): Qodly - Entity instanciated in a function
+
+```mermaid
+
+sequenceDiagram
+
+Qodly page->>+Server: product Qodly source := Function call Products.createNew()
+
+Note over Server: CreateNew() function on the Products class <br>return This.new()
+
+Note over Server: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
+
+Server-->>-Qodly page: The product entity creationDate and comment attributes are filled
+
+Note over Qodly page: product.creationDate is "06/17/25" <br>and product.comment is "Automatic comment"
 
 ```
 
