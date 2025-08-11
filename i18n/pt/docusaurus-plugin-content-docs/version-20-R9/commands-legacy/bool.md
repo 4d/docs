@@ -43,7 +43,7 @@ Seleciona um valor dependendo do conteúdo de um atributo de campo de objeto, an
 
 ## Ver também 
 
-[Date](date.md)  
+[Date](../commands/date)  
 [Num](num.md)  
 [String](string.md)  
 [Time](time.md)  

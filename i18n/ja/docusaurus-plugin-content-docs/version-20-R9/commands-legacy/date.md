@@ -91,7 +91,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Bool](bool.md)  
+[Bool](../commands/bool)  
 [String](string.md)  
 
 ## プロパティ

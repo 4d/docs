@@ -47,10 +47,10 @@ Puede expresar todo valor numérico como una hora:
 #### Ver también 
 
 [ARRAY TIME](array-time.md)  
-[Bool](bool.md)  
+[Bool](../commands/bool)  
 [String](../commands/string.md)  
-[Time string](../commands/time-string.md)  
-[Timestamp](timestamp.md)  
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)  
 
 #### Propiedades
 

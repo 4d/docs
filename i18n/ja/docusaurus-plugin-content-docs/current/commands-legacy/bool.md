@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Date](date.md)  
+[Date](../commands/date)  
 [Num](../commands/num.md)  
 [String](../commands/string.md)  
 [Time](time.md)  

@@ -81,7 +81,7 @@ Num が特別に扱う3つの指定された文字があります。(*separator*
 
 ## 参照 
 
-[Bool](bool.md)  
+[Bool](../commands/bool)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
 

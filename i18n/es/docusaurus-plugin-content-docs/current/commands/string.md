@@ -257,11 +257,11 @@ If *expression* is evaluated to Null, the command returns the "null" string. Thi
 
 ## Ver también
 
-[Bool](bool.md)\
-[Date](date.md)\
+[Bool](../commands/bool)\
+[Date](../commands/date)\
 [Num](num.md)\
-[Time string](time-string.md)\
-[Timestamp](timestamp.md)
+[Time string](../commands/time-string)\
+[Timestamp](../commands/timestamp)
 
 ## Propiedades
 

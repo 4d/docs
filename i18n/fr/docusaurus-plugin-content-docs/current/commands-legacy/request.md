@@ -27,7 +27,7 @@ Par défaut, le libellé du bouton OK est “OK” et celui du bouton Annuler es
 
 Le bouton OK est le bouton par défaut. L'utilisateur peut cliquer sur le bouton OK ou appuyer sur la touche Entrée pour valider la boîte de dialogue, mettant ainsi la variable système OK à 1\. Il peut également cliquer sur le bouton Annuler pour annuler la boîte de dialogue, mettant ainsi la variable système OK à 0\. 
 
-L'utilisateur peut taper des caractères dans la zone de saisie de texte. Pour définir une valeur par défaut, passez le texte par défaut dans le paramètre *réponseDéfaut*. Si l'utilisateur clique sur le bouton OK, **Request** retourne le texte. Si l'utilisateur clique sur le bouton Annuler, **Request** retourne une chaîne vide (""). Si la réponse doit être une valeur numérique ou une date, convertissez la chaîne retournée par **Request** dans le type souhaité à l'aide des fonctions [Num](../commands/num.md) et [Date](date.md).
+L'utilisateur peut taper des caractères dans la zone de saisie de texte. Pour définir une valeur par défaut, passez le texte par défaut dans le paramètre *réponseDéfaut*. Si l'utilisateur clique sur le bouton OK, **Request** retourne le texte. Si l'utilisateur clique sur le bouton Annuler, **Request** retourne une chaîne vide (""). Si la réponse doit être une valeur numérique ou une date, convertissez la chaîne retournée par **Request** dans le type souhaité à l'aide des fonctions [Num](../commands/num.md) et [Date](../commands/date).
 
 **Note :** N'appelez pas la fonction **Request** dans une méthode formulaire ou objet qui gère l'événement On Activate ou On Deactivate car cela provoquerait une boucle sans fin.
 

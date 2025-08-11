@@ -169,11 +169,11 @@ Se a expressão for avaliada como Null, o comando devolve a string "null". Isto 
 
 ## Ver também 
 
-[Bool](bool.md)  
-[Date](date.md)  
+[Bool](../commands/bool)  
+[Date](../commands/date)  
 [Num](num.md)  
-[Time string](time-string.md)  
-[Timestamp](timestamp.md)  
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)  
 
 ## Propriedades
 

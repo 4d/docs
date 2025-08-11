@@ -79,7 +79,7 @@ Cet exemple compare les résultats obtenus en fonction du séparateur “courant
 
 ## Voir aussi 
 
-[Bool](bool.md)  
+[Bool](../commands/bool)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
 

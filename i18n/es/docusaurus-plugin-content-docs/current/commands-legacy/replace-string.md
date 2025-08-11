@@ -69,9 +69,9 @@ El siguiente ejemplo ilustra el uso del parámetro \* en el caso de una evaluaci
 
 ## Ver también 
 
-[Change string](../commands/change-string.md)  
+[Change string](../commands/change-string)  
 [Delete string](../commands/delete-string.md)  
-[Insert string](../commands/insert-string.md)  
+[Insert string](../commands/insert-string)  
 
 ## Propiedades
 

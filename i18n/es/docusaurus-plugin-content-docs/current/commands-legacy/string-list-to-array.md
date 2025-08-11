@@ -40,8 +40,7 @@ Si se encuentra el recurso, la variable sistema OK toma el valor 1, de lo contra
 
 ## Ver también 
 
-[Get indexed string](../commands/get-indexed-string.md)  
-[Get string resource](get-string-resource.md)  
+[Get indexed string](../commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 
 ## Propiedades

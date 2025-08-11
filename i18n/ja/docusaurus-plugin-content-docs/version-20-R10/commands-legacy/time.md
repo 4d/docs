@@ -45,10 +45,10 @@ displayed_sidebar: docs
 ## 参照 
 
 [ARRAY TIME](array-time.md)  
-[Bool](bool.md)  
+[Bool](../commands/bool)  
 [String](string.md)  
-[Time string](time-string.md)  
-[Timestamp](timestamp.md)  
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)  
 
 ## プロパティ
 
