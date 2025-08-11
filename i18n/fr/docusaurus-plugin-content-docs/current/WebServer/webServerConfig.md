@@ -600,10 +600,6 @@ Cette option active le mode préemptif pour le code du serveur web de votre appl
 
 Les paramètres suivants sont toujours pris en charge mais reposent sur des fonctionnalités ou des technologies obsolètes. Il est généralement recommandé de conserver les valeurs par défaut.
 
-#### Autoriser l'accès aux bases de données par le biais des URL 4DSYNC
-
-Cette option contrôle le support des requêtes de synchronisation HTTP contenant des URLs dépréciées */4DSYNC*.
-
 #### Validation de l'adresse IP de la session
 
 > Cette option n'est pas disponible en [mode sessions évolutives](WebServer/sessions.md) (il n'y a pas de validation).

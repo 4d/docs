@@ -26,10 +26,11 @@ title: プリエンプティブWebプロセスの使用
 - REST サーバー: REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md) を処理します
 - Web サーバー: [Web テンプレート](templates.md)、[4DACTION とデータベースメソッド](httpRequests.md) を処理します
 - Web サービスサーバー: SOAPリクエストを処理します
-- ***Web設定*** とは、プリエンプティブモード実行が設定によることを表します:
-    - when [**Scalable sessions**](sessions.md#enabling-web-sessions) option is selected, the preemptive mode is automatically used for web processes.
-    - それ以外の場合は、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
-    - Webサービスプロセス (サーバーまたはクライアント) のプリエンプティブモードは、メソッドレベルでサポートされています。 公開済みの SOAPサーバーメソッド ([4Dで Web サービスを公開する](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.ja.html) 参照) あるいはプロキシクライアントメソッド ([4Dから Web サービスへサブスクライブする](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.ja.html) 参照) の "プリエンプティブプロセスで実行可能" プロパティをチェックし、メソッドがコンパイラーによってスレッドセーフと確認されるようにします。
+- ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
+    - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
+    - if scalable sessions are not enabled:
+        - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+        - for web service processes (server or client), preemptive mode is supported at method level.
 
 ## スレッドセーフなWebサーバーコードの書き方
 
@@ -51,7 +52,7 @@ Webプロセスをプリエンプティモードで実行するには、Webサ�
 
 - REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md)
 
-これらそれぞれのメソッドとコードの部分について、スレッドセーフのルールが遵守されているかをコンパイラーがチェックし、問題があった場合にはエラーを返します。 スレッドセーフルールについての詳細は、[4Dランゲージリファレンス](https://doc.4d.com) マニュアルの *プロセス* の章の *スレッドセーフなメソッドの書き方* の段落を参照ください。
+For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
 
 ## 4D Webコードのスレッドセーフティ
 
@@ -73,7 +74,6 @@ Web関連のデータベースメソッドもスレッドセーフであり、�
 以下の 4D WebサーバーURLはスレッドセーフであり、プリエンプティモードで使用可能です:
 
 - *4daction/* (呼び出されるプロジェクトメソッドもまたスレッドセーフでなければいけません)
-- *4dcgi/* (呼び出されるデータベースメソッドもまたスレッドセーフでなければいけません)
 - *4dwebtest/*
 - *4dblank/*
 - *4dstats/*

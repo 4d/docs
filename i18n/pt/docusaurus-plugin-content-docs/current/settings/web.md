@@ -33,10 +33,6 @@ Indica se o servidor web vai ou não aceitar conexões seguras. Ver [Ativar HTTP
 
 Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Puerto HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Permitir acesso ao banco de dados através de URLs 4DSYNC
-
-*Nota de compatibilidade*: Essa opção está [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados através de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
-
 ### Caminhos
 
 #### Raiz HTML predefinida
@@ -112,7 +108,7 @@ Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
 Permite processos web preemptivos nas suas aplicações compiladas. Quando **usar processos preventivos** for selecionado, A elegibilidade de seu código relacionado à Web (incluindo tags 4D e métodos de banco de dados web) para a execução preventiva será avaliada durante a compilação. Para mais informações, consulte [Utilizando processos Web preemptivos](../WebServer/preemptiveWeb.md).
 
-> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente).  Consulte [Ativação do modo preemptivo para o servidor Web](../WebServer/webServerConfig.md#use-preemptive-processes).
+> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente). Consulte [Ativação do modo preemptivo para o servidor Web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Tempo limite do processo inativo
 

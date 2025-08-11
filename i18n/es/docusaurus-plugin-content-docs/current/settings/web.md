@@ -33,10 +33,6 @@ Indica si el servidor web acepta conexiones seguras. Ver [Activar HTTPS](../WebS
 
 Permite modificar el número de puerto TCP/IP utilizado por el servidor web para las conexiones HTTP seguras sobre TLS (protocolo HTTPS). Ver [Puerto HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Autorizar el acceso a la base de datos a través de las URL 4DSYNC
-
-*Nota de compatibilidad:* esta opción es [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para el acceso a la base de datos a través de HTTP, ahora se recomienda utilizar las funcionalidades del almacén de datos remoto ORDA y las peticiones REST.
-
 ### Rutas
 
 #### Raíz HTML por defecto
@@ -112,7 +108,7 @@ No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
 Activa los procesos web apropiativos en sus aplicaciones compiladas. Cuando se selecciona **Utilizar los procesos apropiativos**, la elegibilidad de su código relacionado con la web (incluyendo las etiquetas 4D y los métodos base Web) para la ejecución apropiativa será evaluada durante la compilación. Para más información, consulte [Utilizar los procesos web apropiativos](../WebServer/preemptiveWeb.md).
 
-> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente).  Ver [Activar el modo apropiativo para el servidor web](../WebServer/webServerConfig.md#use-preemptive-processes).
+> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente). Ver [Activar el modo apropiativo para el servidor web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Tiempo de espera del proceso inactivo
 

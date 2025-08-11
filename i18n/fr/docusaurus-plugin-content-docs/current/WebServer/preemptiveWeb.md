@@ -26,10 +26,11 @@ Le tableau suivant indique si l'utilisation du mode préemptif pour les process 
 - Serveur REST : gère les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md)
 - Serveur Web : gère les [modèles Web](templates.md), [4DACTION et les méthodes base](httpRequests.md)
 - Serveur de services Web : gère les requêtes SOAP
-- ***web setting*** signifie que le mode préemptif dépend d'une valeur de réglage :
-    - when [**Scalable sessions**](sessions.md#enabling-web-sessions) option is selected, the preemptive mode is automatically used for web processes.
-    - sinon, l'option [**Utiliser des process préemptifs**](webServerConfig.md#use-preemptive-processes) est prise en compte.
-    - en ce qui concerne les process de service Web (serveur ou client), le mode préemptif est pris en charge au niveau de la méthode. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler.
+- ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
+    - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
+    - if scalable sessions are not enabled:
+        - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+        - for web service processes (server or client), preemptive mode is supported at method level.
 
 ## Ecrire du code serveur Web thread-safe
 
@@ -51,7 +52,7 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
 
 - [Fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md) appelées via REST
 
-Pour chacune de ces méthodes ou parties de code, le compilateur vérifiera si les règles thread-safe sont respectées, et retournera une erreur en cas de problème. Pour plus d'informations à propos des règles thread-safe, veuillez vous référer au paragraphe *Ecrire une méthode thread-safe* dans le chapitre *Process* du manuel de [Langage 4D](https://doc.4d.com).
+For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
 
 ## Code web 4D thread-safe
 
@@ -73,7 +74,6 @@ Bien sûr, le code exécuté par ces méthodes doit aussi être thread-safe.
 Les URLs Web Server ci-dessous sont thread-safe et peuvent être utilisées en mode préemptif :
 
 - *4daction/* (la méthode projet appelée doit également être à thread-safe)
-- *4dcgi/* (les méthodes base appelées doivent également être thread-safe)
 - *4dwebtest/*
 - *4dblank/*
 - *4dstats/*

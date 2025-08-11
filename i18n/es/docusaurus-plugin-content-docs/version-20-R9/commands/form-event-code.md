@@ -300,7 +300,7 @@ En este ejemplo, el evento formulario [`On Scroll`](../Events/onScroll.md) nos p
  End case
 ```
 
-Result: https://www.youtube.com/watch?v=YIRfsW1BmHE
+Resultado: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
 ## Ejemplo 13
 

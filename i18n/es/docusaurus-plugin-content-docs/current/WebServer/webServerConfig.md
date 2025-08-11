@@ -597,10 +597,6 @@ Esta opción activa el modo apropiativo para el código del servidor web de su a
 
 Los parámetros siguientes siguen siendo compatibles, pero se basan en funcionalidades o tecnologías obsoletas. Generalmente se recomienda mantener los valores por defecto.
 
-#### Autorizar el acceso a la base de datos a través de las URL 4DSYNC
-
-Esta opción controla el soporte de las peticiones de sincronización HTTP que contienen las URLs obsoletas */4DSYNC*.
-
 #### Validación de la dirección IP de la sesión
 
 > Esta opción no está disponible en [modo sesiones evolutivas](WebServer/sessions.md) (no hay validación).

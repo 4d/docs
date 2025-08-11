@@ -599,10 +599,6 @@ This option enables the preemptive mode for your application's web server code w
 
 As configurações a seguir ainda são compatíveis, mas dependem de recursos ou tecnologias obsoletos. Em geral, é recomendável manter os valores padrão.
 
-#### Permitir acesso ao banco de dados através de URLs 4DSYNC
-
-Essa opção controla o suporte de solicitações de sincronização HTTP que contêm URLs obsoletos */4DSYNC*.
-
 #### Validação do endereço IP da sessão
 
 > This option is not not available in [scalable sessions mode](WebServer/sessions.md) (there is no validation).
