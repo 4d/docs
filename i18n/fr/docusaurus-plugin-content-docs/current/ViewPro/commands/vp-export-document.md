@@ -40,9 +40,9 @@ Vous pouvez préciser le format du document en incluant une extension après son
 - CSV (".txt", or ".csv")
 - [SpreadJS document](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
 
-If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
+Si l'extension n'est pas incluse, mais que le format est spécifié dans *paramObj*, le fichier exporté aura l'extension correspondant au format, sauf pour le format CSV (aucune extension n'est ajoutée dans ce cas).
 
-The optional *paramObj* parameter allows you to define multiple properties for the exported 4D View Pro object, as well as launch a callback method when the export has completed.
+Le paramètre optionnel *paramObj* vous permet de définir plusieurs propriétés pour l'objet 4D View Pro exporté, ainsi que lancer une méthode de callback lorsque l'exportation est terminée.
 
 | Propriété            |                           | Type                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | -------------------- | ------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -108,11 +108,11 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 - [Fichiers SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) sont des fichiers zippés.
 - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
-Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
+Une fois l'opération d'exportation terminée, `VP EXPORT DOCUMENT` déclenche automatiquement l'exécution de la méthode définie dans la propriété *formula* de *paramObj*, si elle est utilisée.
 
 ## Passer une méthode callback (formula)
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../commands/formula.md) command to call a 4D method which will be executed once the export has completed. La méthode callback recevra les valeurs suivantes dans des variables locales :
+En incluant le paramètre optionnel *paramObj*, la commande vous permet d'utiliser la commande [`Formula`](../../commands/formula.md) pour appeler une méthode 4D qui sera exécutée une fois l'exportation terminée. La méthode callback recevra les valeurs suivantes dans des variables locales :
 
 | Paramètres |                               | Type    | Description                                              |
 | ---------- | ----------------------------- | ------- | -------------------------------------------------------- |

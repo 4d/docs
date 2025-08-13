@@ -87,7 +87,7 @@ Vous souhaitez importer un document 4D View Pro stocké sur le disque, à l'ouve
 
 ```4d
 var $docPath : text
-If(Form event code=On VP Ready) //4D View Pro area loaded and ready
+If(Form event code=On VP Ready) //Zone 4D View Pro chargée et prête
     $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
     VP IMPORT DOCUMENT("VPArea";$docPath)
 End if
@@ -98,7 +98,7 @@ End if
 Vous souhaitez importer un document Microsoft Excel protégé par un mot de passe dans 4D View Pro :
 
 ```4d
-	//Import code
+	//Code import
 var $o:={}
 $o.formula:=Formula(myImport)
 $excelOptions:={includeStyles:false;includeFormulas:true;password:"excel123"}
@@ -108,7 +108,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfile.xlsx";$o)
 ```
 
 ```4d
-	//myImport callback method
+	//Méthode de callback myImport
 #DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
 
 If ($status.success)

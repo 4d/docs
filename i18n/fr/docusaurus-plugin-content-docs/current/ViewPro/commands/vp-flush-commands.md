@@ -26,15 +26,15 @@ title: VP FLUSH COMMANDS
 
 ## Description
 
-The `VP FLUSH COMMANDS` command <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->immediately executes stored commands and clears the command buffer<!-- END REF -->.
+La commande `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->exécute immédiatement les commandes stockées et vide le buffer de commandes<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Afin d'améliorer la performance et de réduire le nombre de requêtes envoyées, les commandes 4D View Pro appelées par le développeur sont stockées temporairement dans un buffer de commandes. When called, `VP FLUSH COMMANDS` executes the commands as a batch when leaving the method and empties the contents of the command buffer.
+Afin d'améliorer la performance et de réduire le nombre de requêtes envoyées, les commandes 4D View Pro appelées par le développeur sont stockées temporairement dans un buffer de commandes. Lorsqu'il est appelé, `VP FLUSH COMMANDS` exécute les commandes comme un lot en quittant la méthode et vide le contenu du buffer de commandes.
 
-If a *callback* function is provided, it is only executed after all stored commands and 4D custom functions have finished processing. This ensures that any follow-up actions, such as saving or printing the document, are only performed after all calculations have completed.
+Si une fonction *callback* est fournie, elle est exécutée seulement après que toutes les commandes stockées et que les fonctions personnalisées 4D aient terminé le traitement. Cela garantit que toutes les actions de suivi, telles que l'enregistrement ou l'impression du document, ne sont effectuées qu'après tous les calculs.
 
-The following parameters can be used in the callback function:
+Les paramètres suivants peuvent être utilisés dans la fonction de rappel (callback) :
 
 | Paramètres |                               | Type    | Description                                             |
 | ---------- | ----------------------------- | ------- | ------------------------------------------------------- |
@@ -51,31 +51,31 @@ The following parameters can be used in the callback function:
 Vous souhaitez exécuter des commandes et vider le buffer de commande :
 
 ```4d
-// Set text values in specific cells
+// Définir des valeurs de texte dans des cellules spécifiques
 VP SET TEXT VALUE(VP Cell("ViewProArea1";10;1);"INVOICE")
 VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
 VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
 
-// Execute stored commands, clear the buffer, and trigger the callback
+// Exécutez les commandes enregistrées, effacez le buffer et déclenchez le rappel.
 VP FLUSH COMMANDS("ViewProArea1")
 ```
 
 ## Exemple 2
 
-You want to execute commands, empty the command buffer and trigger a callback function:
+Vous souhaitez exécuter des commandes, vider le buffer de commandes et déclencher une fonction de rappel :
 
 ```4d
-// Set text values in specific cells
+// Définir des valeurs de texte dans des cellules spécifiques
 VP SET FORMULA(VP Cell("ViewProArea1";10;1);"MyCustomFunction()")
 VP SET FORMULA(VP Cell("ViewProArea1";10;2);"MyCustomFunction2()")
 VP SET FORMULA(VP Cell("ViewProArea1";10;3);"MyCustomFunction3()")
 
-// Execute stored commands, clear the buffer, and trigger the callback
+// Exécutez les commandes enregistrées, effacez le buffer et déclenchez le rappel
 VP FLUSH COMMANDS("ViewProArea1"; Formula(onFlushComplete))
 ```
 
 ```4d
-// Method 'onFlushComplete'
+// Méthode 'onFlushComplete'
 #DECLARE($name : Text; $status : Object)
-   ALERT("All commands and custom functions have finished executing. You can now print or save the document.")
+   ALERT("Toutes les commandes et fonctions personnalisées ont été exécutées. Vous pouvez maintenant imprimer ou enregistrer le document.")
 ```

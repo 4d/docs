@@ -83,7 +83,7 @@ var $collection := $vector.toCollection()
 
 | Paramètres | Type                      |                             | Description                 |
 | ---------- | ------------------------- | --------------------------- | --------------------------- |
-| vector     | 4D.Vector | ->                          | Vecteur à comparer avec     |
+| vector     | 4D.Vector | ->                          | Vecteur à comparer          |
 | Résultat   | Real                      | <- | Distance entre les vecteurs |
 
 <!-- END REF -->
@@ -92,11 +92,11 @@ var $collection := $vector.toCollection()
 
 La fonction `.cosineSimilarity()` <!-- REF #VectorClass.cosineSimilarity().Summary -->calcule la similarité en cosinus entre le vecteur 4D courant et celui que vous avez passé dans le paramètre *vector*<!-- END REF -->. Les deux vecteurs doivent avoir la même taille.
 
-Cette métrique mesure l'**angle entre les vecteurs** et est couramment utilisée pour déterminer la similarité sémantique entre les textes. It is recommended for text embeddings, documents, sentences, and any data where **direction** matters more than **magnitude** (e.g. for semantic search or text classification).
+Cette métrique mesure l'**angle entre les vecteurs** et est couramment utilisée pour déterminer la similarité sémantique entre les textes. Elle est recommandée pour les représentations vectorielles (*embeddings*) de texte, les documents, les phrases et toutes les données pour lesquelles la **direction** est plus importante que la **magnitude** (par exemple, pour la recherche sémantique ou la classification de texte).
 
 **Valeur retournée**
 
-- Range: -1 (opposite) to 1 (identical).
+- Plage : -1 (opposé) à 1 (identique).
 - Plus la valeur retournée est élevée, plus les vecteurs sont similaires.
 
 #### Exemple 1
@@ -111,7 +111,7 @@ var $similarity := $vector.cosineSimilarity($anotherVector)
 
 :::info
 
-Cet exemple utilise l'extension [4D AIKit extension] (../aikit/overview.md) pour générer des embeddings.
+Cet exemple utilise l'extension [4D AIKit](../aikit/overview.md) pour générer des représentations vectorielles.
 
 :::
 
@@ -158,16 +158,16 @@ End if
 
 | Paramètres | Type                      |                             | Description                 |
 | ---------- | ------------------------- | --------------------------- | --------------------------- |
-| vector     | 4D.Vector | ->                          | Vecteur à comparer avec     |
+| vector     | 4D.Vector | ->                          | Vecteur à comparer          |
 | Résultat   | Real                      | <- | Distance entre les vecteurs |
 
 <!-- END REF -->
 
 #### Description
 
-The `.dotSimilarity()` function <!-- REF #VectorClass.dotSimilarity().Summary -->calculates the dot product of the current 4D vector and the one you passed in the *vector* parameter<!-- END REF -->. Les deux vecteurs doivent avoir la même taille.
+La fonction `.dotSimilarity()` <!-- REF #VectorClass.dotSimilarity().Summary -->calcule le produit point du vecteur 4D courant et de celui que vous avez passé dans le paramètre *vector*<!-- END REF -->. Les deux vecteurs doivent avoir la même taille.
 
-This metric reflects both **similarity** and **magnitude**, and is generally used in models where vector norms (magnitudes) vary. It is recommended for scenarios where embeddings have been fine-tuned with magnitude in mind (e.g., recommendation engines, scoring relevance).
+Cette métrique reflète à la fois la **similarité** et la **magnitude**, et est généralement utilisée dans les modèles où les normes vectorielles (magnitudes) varient. Elle est recommandée pour les scénarios dans lesquels les représentations vectorielles ont été affinées en tenant compte de la magnitude (par exemple, moteurs de recommandation, évaluation de la pertinence).
 
 **Valeur retournée**
 
@@ -187,7 +187,7 @@ var $score := $vector.dotSimilarity($anotherVector)
 
 :::info
 
-Cet exemple utilise l'extension [4D AIKit extension] (../aikit/overview.md) pour générer des embeddings.
+Cet exemple utilise l'extension [4D AIKit](../aikit/overview.md) pour générer des représentations vectorielles.
 
 :::
 
@@ -195,25 +195,25 @@ Cet exemple utilise l'extension [4D AIKit extension] (../aikit/overview.md) pour
 var $model:="text-embedding-ada-002"
 var $clientAI:=cs.AIKit.OpenAI.new(getAIKey())
 
-$documents:=[{text: "How to bake a chocolate cake"; similarity: 0}; \
-{text: "Best hiking trails in the Alps"; similarity: 0}; \
-{text: "Tips for learning 4D programming"; similarity: 0}; \
-{text: "Top 10 sci-fi movies of all time"; similarity: 0}]
+$documents:=[{text : "How to bake a chocolate cake" ; similarité : 0} ; \
+{text : "Best hiking trails in the Alps" ; similarité : 0} ; \N-
+{texte : "Tips for learning 4D programming" ; similarité : 0} ; \N-
+{texte : "Top 10 sci-fi movies of all time" ; similarité : 0}]
 
-$question:="4D coding tutorials"
+$question:= "4D coding tutorials"
 
-// Vector calculation with 4D AIKit component
+// Calcul vectoriel avec le composant 4D AIKit
 $questionVector:=$clientAI.embeddings.create($question; $model).vector
 
 For each ($document; $documents)
-        // Vector calculation with 4D AIKit component
-    $vector:=$clientAI.embeddings.create($document.text; $model).vector
-        // similarity
+        // Calcul vectoriel avec le composant 4D AIKit
+    $vector:=$clientAI.embeddings.create($document.text ; $model).vector
+        // similarité
     $document.similarity:=$vector.dotSimilarity($questionVector)
 End for each
 
 $documents:=$documents.orderBy("similarity desc")
-ALERT("Best answer: "+$documents[0].text)
+ALERT("Meilleure réponse : "+$documents[0].text)
 
 //$documents:
 //{text:Tips for learning 4D programming,similarity:0.90409492325102}
@@ -231,16 +231,16 @@ ALERT("Best answer: "+$documents[0].text)
 
 | Paramètres | Type                      |                             | Description                 |
 | ---------- | ------------------------- | --------------------------- | --------------------------- |
-| vector     | 4D.Vector | ->                          | Vecteur à comparer avec     |
+| vector     | 4D.Vector | ->                          | Vecteur à comparer          |
 | Résultat   | Real                      | <- | Distance entre les vecteurs |
 
 <!-- END REF -->
 
 #### Description
 
-The `.euclideanDistance()` function <!-- REF #VectorClass.euclideanDistance().Summary -->calculates the Euclidean distance between the current 4D vector and the one you passed in the *vector* parameter<!-- END REF -->. Les deux vecteurs doivent avoir la même taille.
+La fonction `.euclideanDistance()` <!-- REF #VectorClass.euclideanDistance().Summary -->calcule la distance euclidienne entre le vecteur 4D courant et celui que vous avez passé dans le paramètre *vector*<!-- END REF -->. Les deux vecteurs doivent avoir la même taille.
 
-This measures the straight-line distance in the vector space. It is recommended for numeric or structured data embeddings, or when using models where proximity in raw space directly correlates with similarity.
+Elle mesure la distance en ligne droite dans l'espace vectoriel. Elle est recommandée pour les représentations vectorielles de données numériques ou structurées, ou lors de l'utilisation de modèles où la proximité dans l'espace brut est directement corrélée à la similarité.
 
 **Valeur retournée**
 
@@ -283,7 +283,7 @@ ALERT("Nearest monument: "+$places[0].name)
 
 #### Description
 
-The `.length` property contains <!-- REF #VectorClass.length.Summary -->the number of vector components<!-- END REF -->.
+La propriété `.length` contient <!-- REF #VectorClass.length.Summary -->le nombre de composantes du vecteur<!-- END REF -->.
 
 ## .toCollection()
 
@@ -291,12 +291,12 @@ The `.length` property contains <!-- REF #VectorClass.length.Summary -->the numb
 
 <!--REF #VectorClass.toCollection().Params -->
 
-| Paramètres | Type       |                             | Description                                                   |
-| ---------- | ---------- | --------------------------- | ------------------------------------------------------------- |
-| Résultat   | Collection | <- | Collection of real numbers representing the vector components |
+| Paramètres | Type       |                             | Description                                         |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------- |
+| Résultat   | Collection | <- | Collection de nombres réels représentant un vecteur |
 
 <!-- END REF -->
 
-The `.toCollection()` function <!-- REF #VectorClass.toCollection().Summary -->returns the vector components as a collection of reals<!-- END REF -->.
+La fonction `.toCollection()` <!-- REF #VectorClass.toCollection().Summary -->renvoie les composantes du vecteur sous la forme d'une collection de nombres réels<!-- END REF -->.
 
 

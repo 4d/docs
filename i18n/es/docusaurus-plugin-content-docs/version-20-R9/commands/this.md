@@ -161,7 +161,7 @@ Note que:
 
 - *This.ID*, *This.Title* and *This.Date* directly refers to the corresponding attributes in the ds.Event dataclass.
 - *This.meetings* es un atributo relacionado (basado en el nombre de una relación de Uno a Muchos) que devuelve una selección de entidad de la base de datos ds.Meeting.
-- **Form.eventList** is the entity selection that is attached to the list box. The initialization code can be put in the on load form event:
+- **Form.eventList** is the entity selection that is attached to the list box. El código de inicialización se puede poner en el evento on load del formulario:
 
 ```4d
  Case of  

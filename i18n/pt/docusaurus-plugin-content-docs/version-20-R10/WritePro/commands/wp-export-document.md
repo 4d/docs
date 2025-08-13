@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-The **WP EXPORT DOCUMENT** command<!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exports the *wpDoc* 4D Write Pro object to a document on disk according to the *filePath* or *fileObj* parameter as well as any optional parameters.<!-- END REF-->
+O comando **WP EXPORT DOCUMENT** <!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exporta o objeto *wpDoc* 4D Write Pro para um documento em disco, de acordo com o parâmetro *filePath* ou *fileObj* bem como todos os parâmetros opcionais. <!-- END REF-->
 
 Em *wpDoc*, passe o objeto 4D Write Pro que você deseja exportar.
 

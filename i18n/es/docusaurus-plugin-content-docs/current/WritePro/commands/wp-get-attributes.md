@@ -45,7 +45,7 @@ If there are different values for the same attribute in the element passed as a 
 
 ## Ejemplo 1
 
-You want to get the background color of the selected area:
+Desea obtener el color de fondo del área seleccionada:
 
 ```4d
  $range:=WP Selection range(*;"WParea")

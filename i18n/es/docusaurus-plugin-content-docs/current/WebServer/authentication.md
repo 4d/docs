@@ -76,7 +76,7 @@ El método base `On Web Authentication` se llama automáticamente cuando una sol
 Por tanto, se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita un recurso que no existe
-- when the web server receives a URL beginning with `4DACTION/`
+- cuando el servidor web recibe una URL que empieza por `4DACTION/`
 - cuando el servidor web recibe una URL de acceso raíz y no se ha definido ninguna página de inicio en los Parámetros o mediante el comando [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md)
 - cuando el servidor web procesa una etiqueta que ejecuta código (por ejemplo, `4DSCRIPT`) en una página semidinámica.
 

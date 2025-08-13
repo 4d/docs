@@ -127,7 +127,7 @@ Cochez l'option **Créer une application autonome** et cliquez sur **Générer**
 Le principe consiste à fusionner un fichier de structure compilé avec **4D Volume Desktop** (le moteur de base de données de 4D). Les fonctionnalités offertes par le fichier 4D Volume Desktop sont liées à l’offre commerciale à laquelle vous avez souscrite. Pour plus d’informations sur ce point, reportez-vous à la documentation commerciale et au site Internet de [4D Sas (http://www.4d.com/)](http://www.4d.com/).
 
 - Vous pouvez définir un fichier de données par défaut ou permettre aux utilisateurs de [créer et utiliser leur propre fichier de données](#gestion-des-fichiers-de-données).
-- You can either embed a [deployment license](../Admin/licenses.md#deployment-licenses) or let the final user enter their license at the first application launch (see [**Licenses**](#licenses) below).
+- Vous pouvez soit intégrer une [licence de déploiement](../Admin/licenses.md#deployment-licenses), soit laisser l'utilisateur final saisir sa licence au premier lancement de l'application (voir [**Licences**](#licenses) ci-dessous).
 
 :::note
 
@@ -176,7 +176,7 @@ Si vous avez nommé votre application "MyProject", vous trouverez les fichiers s
 Tous ces éléments doivent être conservés dans le même dossier afin que l’exécutable fonctionne.
 
 - *macOS*
-  - Un progiciel (package) nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, composants et licences. Pour plus d’informations sur l’intégration des composants et des plug-ins, reportez-vous à la section [Page Plugins et composants](#plugins--components-page). Pour plus d’informations sur l’intégration des licences, reportez-vous à la section [Page Licences & Certificat](#licenses--certificate-page). Un progiciel (package) nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, composants et licences.
+  - Un progiciel (package) nommé MyProject.app contenant votre application et tous les éléments nécessaires à son fonctionnement, y compris les plug-ins, composants et licences. Pour plus d’informations sur l’intégration des composants et des plug-ins, reportez-vous à la section [Page Plugins et composants](#plugins--components-page). Pour plus d’informations sur l’intégration des licences, reportez-vous à la section [Page Licences & Certificat](#licenses--certificate-page). **Note** : Dans macOS, la commande [Application file](../commands-legacy/application-file.md) du langage 4D renvoie le chemin du fichier ApplicationName (situé dans le dossier Contents:macOS du progiciel) et non celui du fichier .comp (dossier Contents:Resources du progiciel).
 
 #### Personnaliser le dossier 4D Volume Desktop
 
@@ -502,26 +502,26 @@ Les modules optionnels suivants peuvent être désélectionnés :
 
 La page Licences & Certificat vous permet de :
 
-- configure the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
+- configurer les [licences de déploiement](../Admin/licenses.md#deployment-licenses) que vous souhaitez intégrer dans votre application [autonome](#application-page) ou [client-serveur](#clientserver-page),
 - signer l'application à l'aide d'un certificat sous macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
 ### Licences
 
-This tab displays the **Application type** menu, allowing you to define how you want to manage licenses in the built application. Les options suivantes sont disponibles :
+Cet onglet affiche le menu **Type d'application**, qui vous permet de définir la manière dont vous souhaitez gérer les licences dans l'application créée. Les options suivantes sont disponibles :
 
 ![](../assets/en/Admin/buildappLic.png)
 
-#### Application without embedded license
+#### Application sans licence intégrée
 
-Select this option to build an application without embedded deployment license.
+Sélectionnez cette option pour créer une application sans licence de déploiement intégrée.
 
 Dans ce cas, l'utilisateur final devra acheter et saisir une licence *4D Desktop* ou *4D Server* personnelle au premier démarrage de l'application (lorsque vous intégrez une licence de déploiement, l'utilisateur ne doit pas saisir ou utiliser son propre numéro de licence). Pour plus d'informations, voir la section [**Licences de déploiement**](../Admin/licenses.md#deployment-licenses).
 
-#### Evaluation application
+#### Application d'évaluation
 
-Select this option to create an evaluation version of your application.
+Sélectionnez cette option pour créer une version d'évaluation de votre application.
 
 Une application d'évaluation permet à l'utilisateur final d'exécuter une version complète de votre application autonome ou serveur sur son ordinateur pendant une période limitée, à partir du premier lancement. À la fin de la période d'évaluation, l'application ne peut plus être utilisée pendant un certain temps sur la même machine.
 
@@ -539,27 +539,27 @@ Une connexion internet est requise sur la machine de l'utilisateur lors du premi
 
 :::
 
-#### Application automatically embedding available licenses
+#### Application intégrant automatiquement les licences disponibles
 
-Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses).
+Sélectionnez cette option pour créer une application prête à l'emploi (autonome ou client-serveur), intégrant automatiquement les [licences de déploiement](../Admin/licenses.md#deployment-licenses) disponibles.
 
-When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands-legacy/get-4d-folder.md#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
+Lors de la création de l'application, 4D intégrera automatiquement les licences nécessaires qui se trouvent dans le [dossier Licences](../commands-legacy/get-4d-folder.md#licenses-folder) de la machine. Si plusieurs licences valides sont disponibles, 4D utilisera la plus appropriée, dans l'ordre suivant :
 
-1. OEM licenses, or
-2. 4D Desktop Business licenses, or
-3. other licenses.
+1. Licences OEM, ou
+2. Licences 4D Desktop Business, ou
+3. Autres licences.
 
-The license tab displays the list of licenses automatically used for the build. The list cannot be modified.
+L'onglet Licences affiche la liste des licences automatiquement utilisées pour la construction. La liste ne peut pas être modifiée.
 
-Once you start the build, if no valid license is found, an error is generated. Otherwise, a dialog is displayed to list the generated application(s). Detailed information are also provided in the [Log file](#log-file).
+Lorsque vous lancez la construction, si aucune licence valide n'est trouvée, une erreur est générée. Dans le cas contraire, une boîte de dialogue s'affiche pour dresser la liste des applications générées. Des informations détaillées sont également fournies dans le [fichier journal](#log-file).
 
 Après la création d'une application sous licence, un nouveau fichier de licence de déploiement est automatiquement inclus dans le dossier Licenses à côté de l'application exécutable (Windows) ou dans le paquet (macOS).
 
-#### Application embedding licenses from the following list
+#### Application intégrant les licences de la liste suivante
 
-Select this option to build a ready-to-use application (stand-alone or client-server), embedding necessary [deployment licenses](../Admin/licenses.md#deployment-licenses) that you designate specifically.
+Sélectionnez cette option pour créer une application prête à l'emploi (autonome ou client-serveur), en y intégrant les [licences de déploiement](../Admin/licenses.md#deployment-licenses) nécessaires que vous aurez spécifiquement désignées.
 
-When you select this option, a license list is displayed in the tab. You must designate the files that contain your licenses. Ces fichiers ont été générés ou mis à jour lors de l'achat de la licence *4D Developer Professional* et des licences de déploiement. Votre licence *4D Developer Professional* courante est automatiquement associée à chaque licence de déploiement à utiliser dans l'application créée. Vous pouvez ajouter un autre numéro de 4D Developer Professional et ses licences associées.
+Lorsque vous sélectionnez cette option, une liste de licences s'affiche dans l'onglet. Vous devez désigner les fichiers qui contiennent vos licences. Ces fichiers ont été générés ou mis à jour lors de l'achat de la licence *4D Developer Professional* et des licences de déploiement. Votre licence *4D Developer Professional* courante est automatiquement associée à chaque licence de déploiement à utiliser dans l'application créée. Vous pouvez ajouter un autre numéro de 4D Developer Professional et ses licences associées.
 
 Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre. Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *[Licenses]* de votre poste. Pour plus d'informations sur l'emplacement de ce dossier, reportez-vous à la commande [Get 4D folder](../commands-legacy/get-4d-folder.md).
 
@@ -726,15 +726,7 @@ La gestion des connexions des applications clientes recouvre les mécanismes par
 Le processus de connexion des applications clientes fusionnées prend en charge les cas où le serveur dédié n'est pas disponible. Le scénario du démarrage d'une application cliente 4D est le suivant :
 
 1. Si des informations de connexion valides sont stockées dans le fichier "EnginedServer.4DLink" à l'intérieur de l'application cliente, l'application cliente se connecte à l'adresse du serveur spécifiée.\
-  OU
-  L'application cliente tente de se connecter au serveur en utilisant le service de découverte (basé sur le nom du serveur, diffusé sur le même sous-réseau).\
-  OU
-  L'application cliente tente de se connecter au serveur en utilisant le service de découverte (basé sur le nom du serveur, diffusé sur le même sous-réseau).\
-  OU
-  L'application cliente tente de se connecter au serveur en utilisant le service de découverte (basé sur le nom du serveur, diffusé sur le même sous-réseau).\
-  OU
-  L'application cliente tente de se connecter au serveur en utilisant le service de découverte (basé sur le nom du serveur, diffusé sur le même sous-réseau).\
-  OU
+  OR\
   L'application cliente tente de se connecter au serveur en utilisant le service de découverte (basé sur le nom du serveur, diffusé sur le même sous-réseau).
 
 2. En cas d'échec, l'application cliente tente de se connecter au serveur à l'aide des informations présentes dans le dossier de préférences utilisateur de l'application (fichier "lastServer.xml", cf. dernière étape).

@@ -206,7 +206,7 @@ Here is a detailed example of a HTTPHandlers.json file:
 
 ```
 
-In this example, you must implement the following functions:
+En este ejemplo, debe implementar las siguientes funciones:
 
 - *funciónhandle* en la clase \*GeneralHandling
 - *manageAccount* en la clase *UsersHandling*

@@ -15,9 +15,9 @@ title: VP REMOVE SPAN
 
 ## Description
 
-The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
+La commande `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->supprime la portée (span) des cellules dans *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range object of the cell span. Les cellules fusionnées de la plage sont divisées en cellules individuelles.
+Dans *rangeObj*, passez un objet plage de la portée de la cellule. Les cellules fusionnées de la plage sont divisées en cellules individuelles.
 
 ## Exemple
 

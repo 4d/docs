@@ -11,7 +11,7 @@ title: WA Get context
 | ---------- | -------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Operador | &#8594; | Si se especifica, *object* es un nombre de objeto (cadena). Si se omite, *object* es una variable. |
 | object     | any      | &#8594; | Nombre del objeto (si se especifica \*) o Variable (si se omite \*).                            |
-| contextObj | Object   | &#8592; | Context object if previously defined, otherwise `null`.                                                                               |
+| contextObj | Object   | &#8592; | Objeto contexto si se ha definido previamente, en caso contrario `null`.                                                              |
 
 <!-- END REF-->
 

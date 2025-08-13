@@ -67,11 +67,11 @@ The [`constructor()`](./ordaClasses.md#class-constructor-1) function is not actu
 
 Event functions accept a single *event* object as parameter. When the function is called, the parameter is filled with several properties:
 
-| Nom de propriété | Disponibilité                          | Type   | Description                                                                            |
-| :--------------- | :------------------------------------- | :----- | :------------------------------------------------------------------------------------- |
-| `kind`           | Toujours                               | String | Event name ("touched")                                              |
-| *attributeName*  | Only for events involving an attribute | String | Attribute name (*e.g.* "firstname") |
-| *dataClassName*  | Toujours                               | String | Dataclass name (*e.g.* "Company")   |
+| Nom de propriété | Disponibilité                          | Type   | Description                                                                  |
+| :--------------- | :------------------------------------- | :----- | :--------------------------------------------------------------------------- |
+| `kind`           | Toujours                               | String | Nom de l'événement ("touched")                            |
+| *attributeName*  | Only for events involving an attribute | String | Nom de l'attribut (*ex.* "firstname")     |
+| *dataClassName*  | Toujours                               | String | Nom du verre de données (*ex.* "Company") |
 
 ## Event function description
 

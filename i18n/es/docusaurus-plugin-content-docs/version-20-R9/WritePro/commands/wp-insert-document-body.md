@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert document body.Params-->
 
-| Parámetros  | Tipo    |                             | Descripción                                              |
-| ----------- | ------- | --------------------------- | -------------------------------------------------------- |
-| targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro                |
-| wpDoc       | Object  | &#8594; | Documento 4D Write Pro                                   |
-| mode        | Integer | &#8594; | Modo de inserción                                        |
-| rangeUpdate | Integer | &#8594; | Modo de actualización del rango                          |
-| Resultado   | Object  | &#8592; | Text range object referencing the inserted document body |
+| Parámetros  | Tipo    |                             | Descripción                                                                    |
+| ----------- | ------- | --------------------------- | ------------------------------------------------------------------------------ |
+| targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro                                      |
+| wpDoc       | Object  | &#8594; | Documento 4D Write Pro                                                         |
+| mode        | Integer | &#8594; | Modo de inserción                                                              |
+| rangeUpdate | Integer | &#8594; | Modo de actualización del rango                                                |
+| Resultado   | Object  | &#8592; | Objeto de rango de texto que hace referencia al cuerpo del documento insertado |
 
 <!-- END REF-->
 

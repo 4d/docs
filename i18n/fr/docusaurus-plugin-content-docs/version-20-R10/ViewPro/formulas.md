@@ -288,7 +288,7 @@ As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TA
 
 #### Conditions requises
 
-- Le champ doit appartenir à la structure virtuelle de la base de données, c'est-à-dire qu'il doit être déclaré par les commandes [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) et/ou [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) avec le paramètre \* (voir l'exemple),
+- Le champ doit appartenir à la structure virtuelle de la base de données, c'est-à-dire qu'il doit être déclaré par les commandes [`SET TABLE TITLES`](../commandes-legacy/set-table-titles.md) et/ou [`SET FIELD TITLES`](../commandes-legacy/set-field-titles.md) avec le paramètre \* (voir l'exemple),
 - Les noms de table et de champ doivent être conformes à ECMA (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 - Le type de champ doit être pris en charge par 4D View Pro (voir ci-dessus).
 

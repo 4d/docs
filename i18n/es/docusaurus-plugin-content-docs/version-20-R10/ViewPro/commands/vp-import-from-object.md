@@ -46,7 +46,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 | Parámetros |                               | Tipo    | Descripción                                                                       |
 | ---------- | ----------------------------- | ------- | --------------------------------------------------------------------------------- |
 | param1     |                               | Text    | El nombre del objeto de área 4D View Pro                                          |
-| param2     |                               | Text    | Reserved for compatibility, this parameter is always empty                        |
+| param2     |                               | Text    | Reservado por compatibilidad, este parámetro está siempre vacío                   |
 | param3     |                               | Object  | Referencia al parámetro *paramObj* del comando                                    |
 | param4     |                               | Object  | Un objeto devuelto por el método con un mensaje de estado                         |
 |            | .success      | Boolean | `True` si la importación se ha realizado correctamente, `False` en caso contrario |

@@ -23,7 +23,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Pointer](Concepts/dt_pointer.md)                       | -                                                | Oui                           | `Pointer`                         | `ARRAY POINTER`                  |
 | [Picture](Concepts/dt_picture.md)                       | Oui                                              | Oui                           | `Picture`                         | `ARRAY PICTURE`                  |
 | [BLOB](Concepts/dt_blob.md)                             | Oui                                              | Oui                           | `Blob`, `4D.Blob`                 | `ARRAY BLOB`                     |
-| [Object](Concepts/dt_object.md)                         | Yes(3)                        | Oui                           | `Object`                          | `ARRAY OBJECT`                   |
+| [Object](Concepts/dt_object.md)                         | Oui(3)                        | Oui                           | `Object`                          | `ARRAY OBJECT`                   |
 | [Collection](Concepts/dt_collection.md)                 | -                                                | Oui                           | `Collection`                      |                                  |
 | [Variant](Concepts/dt_variant.md)(2) | -                                                | Oui                           | `Variant`                         |                                  |
 
@@ -31,7 +31,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 (2) Variant n'est pas un type de *données* à proprement parler mais un type de *variable* qui peut contenir une valeur de n'importe quel autre type de données.
 
-(3) You can [assign a class](../Develop/field-properties.md) to an object field in the structure editor.
+(3) Vous pouvez [associer une classe](../Develop/field-properties.md) à un champ objet dans l'éditeur de structure.
 
 ## Commandes
 

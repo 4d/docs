@@ -5,10 +5,10 @@ title: VP EXPORT DOCUMENT
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                                |
-| ----------- | ------------------------------------------------------------- |
-| 20 R9       | Trigger of callback function after custom functions completed |
-| 20 R2       | Soporte de documentos .sjs                    |
+| Lanzamiento | Modificaciones                                                                            |
+| ----------- | ----------------------------------------------------------------------------------------- |
+| 20 R9       | Activación de la función de retrollamada una vez finalizadas las funciones personalizadas |
+| 20 R2       | Soporte de documentos .sjs                                                |
 
 </details>
 

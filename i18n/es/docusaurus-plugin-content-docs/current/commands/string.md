@@ -54,7 +54,7 @@ La función **String** no es compatible con campos de tipo "Integer 64 bits" en 
 
 Si no se pasa el parámetro opcional *format*, la cadena se devuelve con el formato numérico por defecto.
 
-El formato se especifica del mismo modo que se haría para una [entrada numérica en un formulario](../FormObjects/properties_Display.md#number-format). También puede pasar el nombre de un estilo personalizado en *format*. The custom style name must be preceded by the `|` character. He aquí algunos ejemplos:
+El formato se especifica del mismo modo que se haría para una [entrada numérica en un formulario](../FormObjects/properties_Display.md#number-format). También puede pasar el nombre de un estilo personalizado en *format*. El nombre del estilo personalizado debe ir precedido del caracter `|`. He aquí algunos ejemplos:
 
 | **Ejemplo**                                                                         | **Resultado**                     | **Comentarios**                                    |
 | ----------------------------------------------------------------------------------- | --------------------------------- | -------------------------------------------------- |
@@ -240,12 +240,12 @@ Ejemplos:
 ### Expresiones de tipo cadena
 
 If *expression* is of the String or Text type, the command returns the same value as the one passed in the parameter. This can be useful more particularly in generic programming using pointers.\
-In this case, the *format* parameter, if passed, is ignored.
+En este caso, el parámetro *format*, si se pasa, se ignora.
 
 ### Expresiones booleanas
 
 If *expression* is of the Boolean type, the command returns the string “True” or “False” in the language of the application (for example, “Vrai” or “Faux” in a French version of 4D).\
-In this case, the *format* parameter, if passed, is ignored.
+En este caso, el parámetro *format*, si se pasa, se ignora.
 
 ### Expresiones indefinidas
 
@@ -257,11 +257,11 @@ If *expression* is evaluated to Null, the command returns the "null" string. Thi
 
 ## Ver también
 
-[Bool](../commands/bool)\
-[Date](../commands/date)\
+[Bool](bool.md)\
+[Date](date.md)\
 [Num](num.md)\
-[Time string](../commands/time-string)\
-[Timestamp](../commands/timestamp)
+[Time string](time-string.md)\
+[Timestamp](timestamp.md)
 
 ## Propiedades
 

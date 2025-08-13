@@ -351,7 +351,7 @@ Pour plus d'informations, référez-vous au paragraphe [Classes singleton](#sing
 
 :::note
 
-[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1).
+Les [classes d'entités ORDA](../ORDA/ordaClasses.md#entity-class) peuvent également bénéficier d'une fonction `Class constructor`. L'implémentation est similaire à celle des classes régulières mais [avec quelques différences](../ORDA/ordaClasses.md#class-constructor-1).
 
 :::
 
@@ -511,7 +511,7 @@ Si la propriété n'est pas accédée, le code n'est jamais exécuté.
 
 :::note
 
-[ORDA entity classes](../ORDA/ordaClasses.md#entity-class) benefit from an extended implementation of computed properties with [two additional functions](../ORDA/ordaClasses.md#computed-attributes-1): `query` and `orderBy`.
+Les [classes d'entités ORDA](../ORDA/ordaClasses.md#entity-class) bénéficient d'une implémentation étendue des propriétés calculées avec [deux fonctions supplémentaires](../ORDA/ordaClasses.md#computed-attributes-1) : `query` et `orderBy`.
 
 :::
 
@@ -523,7 +523,7 @@ Dans le fichier de définition de la classe, les déclarations de propriétés c
 
 Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété.
 
-Si une fonction définie à l'intérieur d'une classe partagée modifie les objets de la classe, elle devrait appeler la structure [`Use. .End use`](shared.md#useend-use) pour protéger l'accès aux objets partagés. Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
+Si une fonction définie à l'intérieur d'une classe partagée modifie les objets de la classe, elle devrait appeler la structure [`Use...End use`](shared.md#useend-use) pour protéger l'accès aux objets partagés. Pour plus d'informations, consultez le paragraphe sur les [fonctions partagées](#shared-functions) ci-dessous.
 
 Le type de la propriété calculée est défini par la déclaration de type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
 
@@ -531,7 +531,7 @@ Le type de la propriété calculée est défini par la déclaration de type `$re
 
 :::note
 
-ORDA entity classes can also benefit from a `Class constructor` function. The implementation is similar as for regular classes but [with some differences](../ORDA/ordaClasses.md#class-constructor-1).
+Les classes d'entités ORDA peuvent également bénéficier d'une fonction `Class constructor`. L'implémentation est similaire à celle des classes régulières mais [avec quelques différences](../ORDA/ordaClasses.md#class-constructor-1).
 
 :::
 

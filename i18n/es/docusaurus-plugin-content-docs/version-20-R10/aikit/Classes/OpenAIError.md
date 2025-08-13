@@ -13,7 +13,7 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 
 | Propiedad | Tipo    | Descripción                                                                    |
 | --------- | ------- | ------------------------------------------------------------------------------ |
-| `errCode` | Integer | The error code returned by the API or the HTTP status.         |
+| `errCode` | Integer | El código de error devuelto por la API o el estado HTTP.       |
 | `message` | Text    | The error message returned by the API or the HTTP status text. |
 
 ### Propiedades de respuesta HTTP

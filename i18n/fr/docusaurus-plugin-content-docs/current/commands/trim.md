@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trim.Params-->
 
-| Paramètres | Type |                             | Description  |
-| ---------- | ---- | --------------------------- | ------------ |
-| aString    | Text | &#8594; | Text to trim |
-| Résultat   | Text | &#8592; | Trimmed text |
+| Paramètres | Type |                             | Description      |
+| ---------- | ---- | --------------------------- | ---------------- |
+| aString    | Text | &#8594; | Texte à tronquer |
+| Résultat   | Text | &#8592; | Texte tronqué    |
 
 <!-- END REF-->
 
@@ -25,17 +25,17 @@ displayed_sidebar: docs
 
 ## Description
 
-The **Trim** command <!--REF #_command_.Trim.Summary--> removes **whitespace** from both ends of the *aString* parameter and returns a new string, without modifying the original one.<!-- END REF--> **Whitespace** includes spaces, tabs, LF, CR, etc.
+La commande **Trim** <!--REF #_command_.Trim.Summary--> supprime les **whitespace** aux deux extrémités du paramètre *aString* et renvoie une nouvelle chaîne, sans modifier la chaîne d'origine.<!-- END REF--> Les **whitespace** incluent les espaces, tabulations, LF, CR, etc.
 
-To return a new string with whitespace trimmed from just one end, use [`Trim start`](./trim-start.md) or [`Trim end`](./trim-end.md).
+Pour retourner une nouvelle chaîne dont les whitespace ont été supprimés à une seule extrémité, utilisez [`Trim start`](./trim-start.md) ou [`Trim end`](./trim-end.md).
 
-In the *aString* parameter, you can pass any text expression. It will be left untouched by the command.
+Dans le paramètre *aString*, vous pouvez passer n'importe quelle expression de type texte. Elle ne sera pas touchée par la commande.
 
-The command returns the trimmed version of the *aString* string. If there is no whitespace at any end of *aString*, the returned string is identical as the one passed in parameter.
+La commande renvoie la version tronquée de la chaîne *aString*. S'il n'y a de whitespace à aucune extréminté de *aString*, la chaîne retournée est identique à celle passée en paramètre.
 
 :::note
 
-This command is based upon the [`TrimString` Ecmascript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-trimstring).
+Cette commande est basée sur la [spécification Ecmascript `TrimString`](https://tc39.es/ecma262/multipage/text-processing.html#sec-trimstring).
 
 :::
 

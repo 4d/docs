@@ -18,10 +18,10 @@ displayed_sidebar: docs
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                            |
-| ------- | ---------------------------------------- |
-| 20 R7   | Prise en charge du paramètre *sessionID* |
-| 21      | Support of web user sessions             |
+| Release | Modifications                                |
+| ------- | -------------------------------------------- |
+| 20 R7   | Prise en charge du paramètre *sessionID*     |
+| 21      | Prise en charge des sessions utilisateur web |
 
 </details>
 
@@ -107,7 +107,7 @@ Vous souhaitez obtenir tous les process liés à la session courante :
 
 ## Voir également
 
-[`Process info`](process-info.md)
-[`Session info`](session-info.md)
-[Session storage](session-storage.md)\
-[WEB Get server info](../commands-legacy/web-get-server-info.md)
+[`Process info`](process-info.md)\
+[`Session info`](session-info.md)\
+[`Session storage`](session-storage.md)\
+[`WEB Get server info`](../commands-legacy/web-get-server-info.md)

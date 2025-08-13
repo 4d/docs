@@ -16,20 +16,20 @@ title: VP SET CELL STYLE
 
 ## Description
 
-The `VP SET CELL STYLE` command <!-- REF #_method_.VP SET CELL STYLE.Summary -->applies the style(s) defined in the *styleObj* to the cells defined in the *rangeObj*<!-- END REF -->.
+La commande `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->applique le(s) style(s) défini(s) dans *styleObj* aux cellules définies dans *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range of cells where the style will be applied. If the *rangeObj* contains multiple cells, the style is applied to each cell.
+Dans *rangeObj*, passez une plage de cellules où le style sera appliqué. Si le *rangeObj* contient plusieurs cellules, le style est appliqué à chaque cellule.
 
-> Borders applied with `VP SET CELL STYLE` will be applied to each cell of the *rangeObj*, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the *rangeObj* as a whole.
+> Les bordures appliquées avec `VP SET CELL STYLE` seront appliquées à chaque cellule de la *rangeObj*, contrairement à la commande [VP SET BORDER](vp-set-border.md) qui applique les bordures à l'ensemble du *rangeObj*.
 
-The *styleObj* parameter lets you pass an object containing style settings. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style.
+Le paramètre *styleObj* permet de transmettre un objet contenant des paramètres de style. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style.
 
 Attribuez la valeur NULL pour supprimer un style et rétablir les paramètres de style par défaut (le cas échéant) :
 
-- giving the *styleObj* parameter a NULL value will remove any style settings from the *rangeObj*,
-- giving an attribute a NULL value will remove this specific attribute from the *rangeObj*.
+- si vous attribuez la valeur NULL au paramètre *styleObj*, tous les paramètres de style seront supprimés de *rangeObj*,
+- si vous attribuez la valeur NULL à un attribut, cet attribut spécifique sera supprimé de *rangeObj*.
 
-For more information about style objects and style sheets, see the [Style Objects](../configuring.md#style-objects) paragraph.
+Pour plus d'informations sur les objets de style et les feuilles de style, voir le paragraphe [Objets de style](../configuring.md#style-objects).
 
 ## Exemple
 

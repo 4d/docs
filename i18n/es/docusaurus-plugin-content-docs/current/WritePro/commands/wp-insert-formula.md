@@ -28,7 +28,7 @@ En el parámetro *targetObj*, puede pasar:
 - an element (table / row / cell(s) / paragraph / body / header / footer / section / subsection / inline picture), or
 - un documento 4D Write Pro.
 
-In the *formula* parameter, pass the 4D formula to evaluate. Puede pasar:
+En el parámetro *formula*, pase la fórmula 4D a evaluar. Puede pasar:
 
 - o un [objeto de la fórmula](../../commands/formula.md-objects) creado por el comando [**Formula**](../../commands/formula.md) o [**Formula from string**](../../commands/formula.md-from-string),
 - o un objeto que contiene dos propiedades:
@@ -67,7 +67,7 @@ Keep in mind that, when called, the formula object is evaluated within the conte
 
 ## Ejemplo 1
 
-To replace all current date formulas with formatted strings:
+Para reemplazar todas las fórmulas de fecha actuales con cadenas formateadas:
 
 ```4d
  var $_formulas : Collection

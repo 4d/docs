@@ -17,9 +17,9 @@ title: VP IMPORT FROM BLOB
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                                |
-| ----------- | ------------------------------------------------------------- |
-| 20 R9       | Trigger of callback function after custom functions completed |
+| Lanzamiento | Modificaciones                                                                            |
+| ----------- | ----------------------------------------------------------------------------------------- |
+| 20 R9       | Activación de la función de retrollamada una vez finalizadas las funciones personalizadas |
 
 </details>
 

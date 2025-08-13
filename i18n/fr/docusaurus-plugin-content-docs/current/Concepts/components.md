@@ -31,6 +31,6 @@ Vous pouvez sélectionner une [méthode projet](methods.md) ou [classe](classes.
 
 :::note
 
-Interpreted component code can be [edited directly from the host project](../Extensions/develop-components.md#editing-components-from-the-host) if the context is supported.
+Le code d'un composant interprété peut être [édité directement à partir du projet hôte](../Extensions/develop-components.md#editing-components-from-the-host) si le contexte est pris en charge.
 
 :::

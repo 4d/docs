@@ -363,7 +363,7 @@ To send your question to the AI, click on the Send button:
 
 ![ai send](../assets/en/WritePro/ai-send.png)
 
-The button icon changes when the same request is sent again:
+El icono del botón cambia cuando se vuelve a enviar la misma petición:
 
 ![ai resend](../assets/en/WritePro/ai-resend.png)
 
@@ -392,7 +392,7 @@ In both cases, if the response was provided with styles, you can decide to copy 
 
 :::note
 
-The chat box uses the Markdown language to format text. Basic styles such as bold, italic, underline, titles are supported. When pasting styled text from the AI in the 4D Write Pro area, you may lose some formatting information.
+El cuadro de chat utiliza el lenguaje Markdown para dar formato al texto. Basic styles such as bold, italic, underline, titles are supported. When pasting styled text from the AI in the 4D Write Pro area, you may lose some formatting information.
 
 :::
 

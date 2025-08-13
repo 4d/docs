@@ -17,13 +17,13 @@ title: VP REMOVE NAME
 
 ## Description
 
-The `VP REMOVE NAME` command <!-- REF #_method_.VP REMOVE NAME.Summary -->removes the named range or named formula passed in the *name* parameter in the defined *scope*<!-- END REF -->.
+La commande `VP REMOVE NAME` <!-- REF #_method_.VP REMOVE NAME.Summary -->supprime la plage nommée ou la formule nommée passée dans le paramètre *name* dans le *scope* défini<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Pass the named range or named formula that you want to remove in *name*.
+Passez la plage nommée ou la formule nommée que vous voulez supprimer avec *name*.
 
-You can define where to remove the name in *scope* using either the sheet index (counting begins at 0) or the following constants:
+Vous pouvez définir où supprimer le nom dans *scope* en utilisant soit l'index de la feuille (le comptage commence à 0), soit les constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`

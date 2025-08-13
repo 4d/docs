@@ -94,7 +94,7 @@ This event is triggered as soon as the 4D Server / 4D engine can detect a modifi
 
 - in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
    - el usuario define un valor en un formulario 4D,
-   - the 4D code makes an assignment with the `:=` operator. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
+   - el código 4D realiza una asignación con el operador `:=`. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
 - in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
 - in **client/server without the `local` keyword**, in **[Qodly application](https://developer.qodly.com/docs)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
 - with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
@@ -150,7 +150,7 @@ Function event touched arrivalDate($event : Object)
 
 ```
 
-#### Example 3 (diagram): Client/server with the `local` keyword:
+#### Ejemplo 3 (diagrama): cliente/servidor con la palabra clave `local`:
 
 ```mermaid
 

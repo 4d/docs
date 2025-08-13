@@ -64,7 +64,7 @@ In the *property* parameter, pass a constant indicating the property whose value
 
 \* These properties only apply to list box columns; if you pass a list box as parameter with one of these properties, **LISTBOX Get property** returns -1, or an empty string, depending on the *property* passed.
 
-In general, to signal an invalid result **LISTBOX Get property** returns -1 when retrieving properties that have numeric values, or an empty string; however, no errors are generated. More specifically, this occurs in the following cases:
+In general, to signal an invalid result **LISTBOX Get property** returns -1 when retrieving properties that have numeric values, or an empty string; however, no errors are generated. Más específicamente, esto ocurre en los siguientes casos:
 
 - Si pasa una *property* que no existe
 - If you pass a *property* that is not available for the specified list box or column, e.g. you pass the lk font color expression property with an array type list box
