@@ -37,9 +37,9 @@ var $blob:=$image.asBlob()
 
 **asPicture**() : Picture
 
-| Parámetros | Tipo    | Descripción                                                             |
-| ---------- | ------- | ----------------------------------------------------------------------- |
-| Resultado  | Picture | Creates a picture object from the blob converted image. |
+| Parámetros | Tipo    | Descripción                                                                     |
+| ---------- | ------- | ------------------------------------------------------------------------------- |
+| Resultado  | Picture | Crea un objeto imagen a partir de la imagen convertida en blob. |
 
 #### Ejemplo de Uso
 

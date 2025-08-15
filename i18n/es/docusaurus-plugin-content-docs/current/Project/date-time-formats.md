@@ -94,7 +94,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         | Zona horaria: ISO8601 hm básico, sin Z                          | xx           | -0800, +0000                                                               |
 |         | Zona horaria: ISO8601 hm extendido, sin Z                       | xxx          | -08:00                                                     |
 |         | Zona horaria: ISO8601 hms básico, sin Z                         | xxxx         | -0800, -075258                                                             |
-|         | Time Zone: ISO8601 extended hms?, without Z                     | xxxxx        | -08:00, -07:52:58          |
+|         | Time Zone: ISO8601 extended hms?, sin Z                         | xxxxx        | -08:00, -07:52:58          |
 | O       | Zona horaria: GMT localizada abreviada                          | O            | GMT-8                                                                      |
 |         | Zona horaria: localización larga GMT (=ZZZZ) | OOOO         | GMT-08:00                                                  |
 | z       | Zona horaria: no específica                                     | z, zz, o zzz | -0800                                                                      |

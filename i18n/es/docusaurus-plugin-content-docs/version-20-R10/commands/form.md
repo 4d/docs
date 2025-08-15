@@ -67,11 +67,11 @@ In the context of an input form displayed from an output form (i.e. after a doub
 
 ## Ejemplo
 
-In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
+En un formulario que muestra el registro de una persona, un botón "Check children" abre un cuadro de diálogo para verificar/modificar los nombres y edades de sus hijos:
 
 ![](../assets/en/commands/pict3542015.en.png)
 
-**Note:** The "Children" object field is represented only to show its structure for this example.
+**Nota:** el campo objeto "Children" se representa sólo para mostrar su estructura en este ejemplo.
 
 In the verification form, you have assigned some Form object properties to inputs:
 
@@ -83,21 +83,21 @@ Este es el código del botón "Check children":
  var $win;$n;$i : Integer
  var $save : Boolean
  ARRAY OBJECT($children;0)
- OB GET ARRAY([Person]Children;"children";$children) //get the children collection
- $save:=False //initialize the save variable
+ OB GET ARRAY([Person]Children; "children";$children) //obtener la colección children
+ $save:=False //inicializar la variable save
  
- $n:=Size of array($children)
+ $n:=Tamaño del array($children)
  If($n>0)
     $win:=Open form window("Edit_Children";Movable form dialog box)
     SET WINDOW TITLE("Check children for "+[Person]Name)
-    For($i;1;$n) //for each child
-       DIALOG("Edit_Children";$children{$i}) //displays dialog filled with values
-       If(OK=1) //the user clicked OK
+    For($i;1;$n) //para cada hijo
+       DIALOG("Edit_Children";$children{$i}) //muestra el diálogo lleno de valores
+       If(OK=1) //el usuario ha pulsado OK
           $save:=True
        End if
     End for
     If($save=True)
-       [Person]Children:=[Person]Children //forces object field update
+       [Person]Children:=[Person]Children //forza la actualización del campo objeto
     End if
     CLOSE WINDOW($win)
  Else
@@ -109,7 +109,7 @@ El formulario muestra información sobre cada niño:
 
 ![](../assets/en/commands/pict3515152.en.png)
 
-If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards).
+Si se editan los valores y se presiona el botón OK, se actualiza el campo (después hay que guardar el registro principal).
 
 ## Ver también
 

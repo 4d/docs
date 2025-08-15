@@ -25,13 +25,13 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **Trim** command <!--REF #_command_.Trim.Summary--> removes **whitespace** from both ends of the *aString* parameter and returns a new string, without modifying the original one.<!-- END REF--> **Whitespace** includes spaces, tabs, LF, CR, etc.
+The **Trim** command <!--REF #_command_.Trim.Summary--> removes **whitespace** from both ends of the *aString* parameter and returns a new string, without modifying the original one.<!-- END REF--> **Whitespace** incluyen espacios, tabulaciones, LF, CR, etc.
 
 To return a new string with whitespace trimmed from just one end, use [`Trim start`](./trim-start.md) or [`Trim end`](./trim-end.md).
 
-In the *aString* parameter, you can pass any text expression. Será dejado sin tocar por el comando.
+En el parámetro *aString*, puede pasar cualquier expresión de tipo texto. Será dejado sin tocar por el comando.
 
-The command returns the trimmed version of the *aString* string. If there is no whitespace at any end of *aString*, the returned string is identical as the one passed in parameter.
+El comando devuelve la versión recortada de la cadena *aString*. If there is no whitespace at any end of *aString*, the returned string is identical as the one passed in parameter.
 
 :::note
 

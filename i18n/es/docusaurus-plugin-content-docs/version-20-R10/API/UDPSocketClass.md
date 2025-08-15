@@ -3,15 +3,15 @@ id: UDPSocketClass
 title: UDPSocket
 ---
 
-The `UDPSocket` class allows you to send and receive UDP packets. UDP (User Datagram Protocol) is an easy-to-implement protocol for sending data. It is faster and simpler than TCP (only 8 bytes of header as opposed to at least 20 bytes in TCP), but it does not offer the same level of reliability. It is useful for applications where data must arrive at their destination quickly. However, it does not allow verification of delivery, nor does it allow error-checking or recovery of data that was not delivered correctly.
+La clase `UDPSocket` permite enviar y recibir paquetes UDP. UDP (User Datagram Protocol) es un protocolo de fácil implementación para el envío de datos. Es más rápido y sencillo que TCP (sólo 8 bytes de encabezado frente a los al menos 20 bytes en TCP), pero no ofrece el mismo nivel de fiabilidad. Es útil para aplicaciones en las que los datos deben llegar rápidamente a su destino. Sin embargo, no permite verificar la entrega, ni comprobar errores o recuperar datos que no se hayan entregado correctamente.
 
-The `UDPSocket` class is available from the `4D` class store. You can create a UDP connection using the [4D.UDPSocket.new()](#4dudpsocketnew) function, which returns a [UDPSocket object](#udpsocket-object).
+La clase `UDPSocket` está disponible en el class store `4D`. Puede crear una conexión UDP utilizando la función [4D.UDPSocket.new()](#4dudpsocketnew), que devuelve un [objeto UDPSocket](#udpsocket-object).
 
-Thanks to the standard 4D object *refcounting*, a UDPSocket is automatically released when it is no longer referenced, i.e. when no more references to them exist in memory. Esto ocurre típicamente, por ejemplo, al final de una ejecución de un método para variables locales. Consequently, the associated resources are properly cleaned up without requiring explicit closure. However, if you want to "force" the closure of a socket at any moment, [**nullify** its references by setting them to **Null**](../Concepts/dt_object.md#resources).
+Gracias al *refcounting* de los objetos 4D estándar, un socket UDPSocket se libera automáticamente cuando deja de estar referenciado, es decir, cuando no existen más referencias a ellos en memoria. Esto ocurre típicamente, por ejemplo, al final de una ejecución de un método para variables locales. En consecuencia, los recursos asociados se limpian adecuadamente sin necesidad de un cierre explícito. Sin embargo, si quieres "forzar" el cierre de un socket en cualquier momento, [**nulifica** sus referencias poniéndolas **Null**](../Concepts/dt_object.md#resources).
 
 :::info 4DTCPUDPLog.txt file
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to UDP sockets. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
+Para depuración y monitorización, puede utilizar el fichero de registro [4DTCPUDPLog.txt](../Debugging/debugLogFiles.md#4dtcpudplogtxt) que registra los eventos relacionados con los sockets UDP. Los eventos incluyen transmisión de datos, errores e información del ciclo de vida de la conexión.
 
 :::
 
@@ -29,7 +29,7 @@ For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debu
 
 Un objeto UDPSocket no es modificable y no es streamable.
 
-UDPSocket objects provide the following properties and functions:
+Los objetos UDPSocket ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                     |
 | --------------------------------------------------------------------------------------------------- |
@@ -45,21 +45,21 @@ UDPSocket objects provide the following properties and functions:
 
 <!-- REF #4D.UDPSocket.new().params -->
 
-| Parámetros | Tipo      |                             | Descripción                                                                                    |
-| ---------- | --------- | --------------------------- | ---------------------------------------------------------------------------------------------- |
-| port       | Integer   | ->                          | Local port used for UDP socket (0 or omitted = find any unused port to use) |
-| options    | Object    | ->                          | Configuration [options](#options-parameter) for the socket                                     |
-| Resultado  | UDPSocket | <- | Nuevo objeto UDPSocket                                                                         |
+| Parámetros | Tipo      |                             | Descripción                                                                                                                     |
+| ---------- | --------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| port       | Integer   | ->                          | Puerto local utilizado para el socket UDP (0 u omitido = buscar cualquier puerto no utilizado para utilizar) |
+| options    | Object    | ->                          | Configuración [opciones](#options-parameter) para el socket                                                                     |
+| Resultado  | UDPSocket | <- | Nuevo objeto UDPSocket                                                                                                          |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* (if any) on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
+La función `4D.UDPSocket.new()` <!-- REF #4D.UDPSocket.new().Summary -->crea un nuevo socket UDP utilizando las *options* definidas (si las hay) en el *port* especificado (si lo hay) o en un puerto aleatorio no utilizado, y devuelve un objeto `4D.UDPSocket`<!-- END REF -->.
 
 #### Parámetro *options*
 
-In the *options* parameter, you can pass an object that contains the following properties:
+En el parámetro *options*, puede pasar un objeto que contenga las siguientes propiedades:
 
 | Propiedad   | Tipo    | Descripción                                      | Por defecto |
 | ----------- | ------- | ------------------------------------------------ | ----------- |
@@ -80,11 +80,11 @@ Todas las funciones de retrollamada reciben dos parámetros:
 
 1. `onData` se activa cada vez que se reciben datos.
 2. `onError` se activa si se produce un error.
-3. `onTerminate` is always triggered just before the port is released (socket is closed or an error occured).
+3. `onTerminate` siempre se activa justo antes de que el puerto se libere (el socket se cierra o se produce un error).
 
 #### Objeto UDPEvent
 
-A [`UDPEvent`](UDPEventClass.md) object is returned when a [callback function](#callback-functions) is called.
+Un objeto [`UDPEvent`](UDPEventClass.md) es devuelto cuando se llama una [función de retrollamada](#callback-functions).
 
 <!-- END REF -->
 
@@ -96,7 +96,7 @@ A [`UDPEvent`](UDPEventClass.md) object is returned when a [callback function](#
 
 #### Descripción
 
-The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collection of error objects associated with the socket<!-- END REF -->. Cada objeto de error incluye el código de error, una descripción y la firma del componente que causó el error.
+La propiedad `.errors` contiene <!-- REF #UDPSocket.errors.Summary -->una colección de objetos de error asociados al socket<!-- END REF -->. Cada objeto de error incluye el código de error, una descripción y la firma del componente que causó el error.
 
 | Propiedad |                                                                                           | Tipo       | Descripción                                           |
 | --------- | ----------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------- |
@@ -115,7 +115,7 @@ The `.errors` property contains <!-- REF #UDPSocket.errors.Summary -->a collecti
 
 #### Descripción
 
-The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port number to listen to<!-- END REF -->. Esta propiedad es de **solo lectura**.
+La propiedad `.port` contiene <!-- REF #UDPSocket.port.Summary -->el número de puerto a escuchar<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
 <!-- END REF -->
 
@@ -137,11 +137,11 @@ The `.port` property contains <!-- REF #UDPSocket.port.Summary -->the port numbe
 
 #### Descripción
 
-The `send()` function <!-- REF #UDPSocket.send().Summary -->sends *data* to the remote *hostName* server on the specified *remotePort*<!-- END REF -->.
+La función `send()` <!-- REF #UDPSocket.send().Summary -->envía *data* al servidor remoto *hostName* en el *remotePort* especificado<!-- END REF -->.
 
-*hostName* is the name or IP address of the server where the data will be sent.
+*hostName* es el nombre o la dirección IP del servidor al que se enviarán los datos.
 
-*remotePort* is the number of the port to be connected to. Si pasa 0, se utilizará cualquier puerto disponible.
+*remotePort* es el número del puerto al que hay que conectarse. Si pasa 0, se utilizará cualquier puerto disponible.
 
 <!-- END REF -->
 

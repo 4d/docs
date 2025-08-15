@@ -127,7 +127,7 @@ Function event touched($event : Object)
 
 #### Ejemplo 2
 
-The "touched" event is useful with [computed attributes](../ORDA/ordaClasses.md#computed-attributes), when you want to store a state depending on a comparison on the current value of underlying attributes. Por ejemplo:
+The "touched" event is useful in situations where certain [computed attributes](../ORDA/ordaClasses.md#computed-attributes) result in costly processing due to their sequential execution. Adding an attribute linked to this event to store a state based on a comparison on the current value of underlying attributes can improve performance and enable optimized searches via indexes. Por ejemplo:
 
 ```4d
 exposed Function get sameDay(): Boolean
