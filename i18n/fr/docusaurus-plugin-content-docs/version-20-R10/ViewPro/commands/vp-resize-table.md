@@ -34,7 +34,7 @@ Les règles suivantes s'appliquent :
     - si des lignes sont ajoutées, les données sont supprimées,
     - si des colonnes sont ajoutées, les données sont conservées et affichées dans de nouvelles colonnes.
 
-If *tableName* does not exist, nothing happens.
+Si *tableName* n'existe pas, rien ne se passe.
 
 ## Exemple
 

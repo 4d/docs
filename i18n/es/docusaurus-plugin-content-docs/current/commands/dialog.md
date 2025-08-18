@@ -129,7 +129,7 @@ Si se editan los valores y se presiona el botón OK, se actualiza el campo (desp
 
 ## Ejemplo 3
 
-The following example uses the path to a .json form to display the records in an employee list:
+El siguiente ejemplo utiliza la ruta a un formulario .json para mostrar los registros de una lista de empleados:
 
 ```4d
  Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
@@ -143,7 +143,7 @@ que muestra:
 
 ## Ejemplo 4
 
-The following example uses a .json file as an object and modifies a few properties:
+El siguiente ejemplo utiliza un archivo .json como objeto y modifica algunas propiedades:
 
 ```4d
  var $form : Object
@@ -155,13 +155,13 @@ The following example uses a .json file as an object and modifies a few properti
  DIALOG($form;*)
 ```
 
-The altered form is displayed with the title, logo and border modified:
+El formulario modificado se muestra con el título, el logotipo y el borde modificado:
 
 ![](../assets/en/commands/pict3688356.en.png)
 
 ## Variables y conjuntos sistema
 
-After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is canceled, OK is set to 0.
+Tras una llamada a **DIALOG**, si se acepta el diálogo, OK se pone en 1; si se cancela, OK se pone en 0.
 
 ## Ver también
 

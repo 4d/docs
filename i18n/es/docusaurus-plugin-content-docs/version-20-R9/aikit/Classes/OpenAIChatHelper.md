@@ -5,17 +5,17 @@ title: OpenAIChatHelper
 
 # OpenAIChatHelper
 
-The chat helper allow to keep a list of messages in memory and make consecutive prompt.
+El asistente de chat permite conservar una lista de mensajes en memoria y efectuar avisos consecutivos.
 
 ## Propiedades
 
 | Nombre de la propiedad | Tipo                                                                  | Valor por defecto                                      | Descripción                                                                           |
 | ---------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | The chat API instance used for communication with OpenAI.             |
-| `systemPrompt`         | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | The system prompt message that guides the chat assistant's responses. |
-| `numberOfMessages`     | Integer                                                               | 5                                                      | The maximum number of messages to retain in the chat history.         |
+| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | La instancia API de chat utilizada para la comunicación con OpenAI.   |
+| `systemPrompt`         | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | El mensaje del sistema que guía las respuestas del asistente de chat. |
+| `numberOfMessages`     | Integer                                                               | 5                                                      | El número máximo de mensajes a conservar en el historial de chat.     |
 | `parámetros`           | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | Los parámetros para la solicitud de terminación del chat OpenAI.      |
-| `messages`             | Colección de [OpenAIMessage](OpenAIMessage.md)                        | [] | The collection of messages exchanged in the chat session.             |
+| `messages`             | Colección de [OpenAIMessage](OpenAIMessage.md)                        | [] | La colección de mensajes intercambiados en la sesión de chat.         |
 
 ## Funciones
 
@@ -28,7 +28,7 @@ The chat helper allow to keep a list of messages in memory and make consecutive 
 | *prompt*   | Text                                                          | Texto a enviar al chat de OpenAI.                  |
 | Resultado  | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | El resultado de finalización devuelto por el chat. |
 
-Sends a user prompt to the chat and returns the corresponding completion result.
+Envía una consulta de usuario al chat y devuelve el resultado de finalización correspondiente.
 
 #### Ejemplo de Uso
 
