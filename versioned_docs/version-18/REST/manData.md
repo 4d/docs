@@ -19,7 +19,7 @@ To add and modify entities, you can call [`$method=update`]($method.md#methodupd
 
 Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your DataClass class and call it to return an entity selection (or a collection) by using [\{dataClass\}/\{method\}](%7BdataClass%7D.html#dataclassmethod).
 
-Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Before returning the collection, you can also sort it by using [`$orderby`]($orderby.md) on one or more attributes (even relation attributes).
 
 ## Navigating data  
 
