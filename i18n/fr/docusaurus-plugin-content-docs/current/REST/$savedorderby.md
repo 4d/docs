@@ -11,7 +11,7 @@ Lorsque vous créez un ensemble d'entités, vous pouvez, par sécurité, enregis
 
 Utilisez `$savedorderby` pour enregistrer l'ordre que vous avez défini lors de la création de votre ensemble d'entités, puis passez `$savedorderby` avec votre appel, pour récupérer à chaque fois l'ensemble d'entités.
 
-Si l'ensemble d'entités n'est plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. If you have used both [`$savedfilter`]($savedfilter.md) and `$savedorderby` in your call when creating an entity set and then you omit one of them, the new entity set, having the same reference number, will reflect that.
+Si l'ensemble d'entités n'est plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. Si vous avez utilisé à la fois [`$savedfilter`]($savedfilter.md) et `$savedorderby` dans votre appel lors de la création d'un ensemble d'entités et que vous omettez l'un d'entre eux, le nouvel ensemble d'entités, ayant le même numéro de référence, en tiendra compte.
 
 ## Exemple
 

@@ -127,14 +127,71 @@ Function event touched($event : Object)
 
 #### Exemplo 2
 
-The "touched" event is useful in situations where certain [computed attributes](../ORDA/ordaClasses.md#computed-attributes) result in costly processing due to their sequential execution. Adding an attribute linked to this event to store a state based on a comparison on the current value of underlying attributes can improve performance and enable optimized searches via indexes. Por exemplo:
+The "touched" event is useful when it is not possible to write indexed query code in [`Function query()`](./ordaClasses.md#function-query-attributename) for a [computed attribute](./ordaClasses.md#computed-attributes).
+
+This is the case for example, when your [`query`](./ordaClasses.md#function-query-attributename) function has to compare the value of different attributes from the same entity, you must use formulas in the returned ORDA query -- which triggers sequential queries.
+
+To fully understand this case, let's examine the following two calculated attributes:
 
 ```4d
-exposed Function get sameDay(): Boolean
-    return (This.departureDate = This.arrivalDate)
+Function get onGoing() : Boolean
+        return ((This.departureDate<=Current date) & (This.arrivalDate>=Current date))
+
+Function get sameDay() : Boolean
+        return (This.departureDate=This.arrivalDate)
 ```
 
-This code can lead to time-consuming queries because the search is sequential due to the nature of the computed attribute. Using a non-computed *sameDay* attribute updated when other attributes are touched will save time:
+Even though they are very similar, these functions cannot be associated with identical queries because they do not compare the same types of values. The first compares attributes to a given value, while the second compares attributes to each other.
+
+- For the *onGoing* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function is simple to write and uses indexed attributes:
+
+```4d
+Function query onGoing($event : Object) : Object
+    var $operator : Text
+    var $myQuery : Text
+    var $onGoingValue : Boolean
+    var $parameters : Collection
+    $parameters:=New collection()
+
+    $operator:=$event.operator
+    Case of 
+            : (($operator="=") | ($operator="==") | ($operator="==="))
+                $onGoingValue:=Bool($event.value)
+            : (($operator="!=") | ($operator="!=="))
+                $onGoingValue:=Not(Bool($event.value))
+            Else 
+                return {query: ""; parameters: $parameters}
+    End case 
+
+    $myQuery:=($onGoingValue) ? "departureDate <= :1 AND arrivalDate >= :1" : "departureDate > :1 OR arrivalDate < :1"
+        // the ORDA query string uses indexed attributes, it will be indexed
+    $parameters.push(Current date)
+    return {query: $myQuery; parameters: $parameters}
+```
+
+- For the *sameDay* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function requires an ORDA query based on formulas and will be sequential:
+
+```4d
+Function query sameDay($event : Object) : Text
+    var $operator : Text
+    var $sameDayValue : Boolean
+
+    $operator:=$event.operator
+    Case of 
+        : (($operator="=") | ($operator="==") | ($operator="==="))
+            $sameDayValue:=Bool($event.value)
+        : (($operator="!=") | ($operator="!=="))
+            $sameDayValue:=Not(Bool($event.value))
+        Else 
+            return ""
+        End case 
+
+    return ($sameDayValue) ? "eval(This.departureDate != This.arrivalDate)” : "eval(This.departureDate = This.arrivalDate)"
+        // the ORDA query string uses a formula attributes, it will be indexed
+
+```
+
+- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
 
 ```4d
     //BookingEntity class

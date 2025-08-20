@@ -22,7 +22,7 @@ Comme pour tous les URI, le premier paramètre est délimité par un «?» et to
 
 Les paramètres vous permettent de manipuler des données dans des dataclass de votre projet 4D. Outre la récupération de données à l'aide des méthodes HTTP `GET`, vous pouvez également ajouter, mettre à jour et supprimer des entités d'une dataclass à l'aide des méthodes HTTP `POST`.
 
-If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
+Si vous souhaitez que les données soient renvoyées dans un tableau au lieu de JSON, utilisez le paramètre [`$asArray`]($asArray.md).
 
 ## Statut et réponse REST
 

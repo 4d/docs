@@ -3,13 +3,13 @@ id: skip
 title: $skip
 ---
 
-Démarre l'entité définie par ce numéro dans la collection (par exemple, `$skip=10`)
+Démarre l'entité définie par ce numéro dans la selection (par exemple, `$skip=10`)
 
 ## Description
 
 `$skip` définit l'entité de la collection par laquelle commencer. Par défaut, la collection envoyée commence par la première entité. Pour commencer avec la 10e entité de la collection, passez 10.
 
-`$skip`  is generally used in conjunction with [`$top/$limit`]($top_$limit.md) to navigate through an entity collection.
+`$skip` est généralement utilisé avec [`$top/$limit`]($top_$limit.md) pour naviguer dans une entity selection.
 
 ## Exemple
 

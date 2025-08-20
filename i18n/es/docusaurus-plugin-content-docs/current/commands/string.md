@@ -156,9 +156,9 @@ Los formatos pueden variar en función de la configuración del sistema.
 
 #### Parámetro *addTime*
 
-Al procesar expresiones de fecha, también puede pasar una hora en el parámetro *addTime*. Este parámetro permite combinar una fecha con una hora para generar marcas de tiempo conformes a las normas vigentes (constantes ISO Date GMT y Date RFC 1123). These formats are particularly useful in the context of xml and Web processing. The *addTime* parameter can only be used when the *expression* parameter is a date.
+Al procesar expresiones de fecha, también puede pasar una hora en el parámetro *addTime*. Este parámetro permite combinar una fecha con una hora para generar marcas de tiempo conformes a las normas vigentes (constantes ISO Date GMT y Date RFC 1123). Estos formatos son especialmente útiles en el contexto del procesamiento xml y Web. El parámetro *addTime* solo puede utilizarse cuando el parámetro *expression* es una fecha.
 
-This parameter can be used with both predefined or pattern-based date formats. Ejemplos:
+Este parámetro puede utilizarse con formatos de fecha predefinidos o basados en patrones. Ejemplos:
 
 ```4d
  $dateTime:=String(!2010-09-09!;ISO date GMT;Current time) //"2010-09-09T08:30:41Z"

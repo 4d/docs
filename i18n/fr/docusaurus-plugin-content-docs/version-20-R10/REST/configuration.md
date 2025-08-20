@@ -19,21 +19,21 @@ Le message d'avertissement "Attention, vérifiez les privilèges d'accès" s'aff
 
 > Vous devez redémarrer l'application 4D pour que vos modifications soient prises en compte.
 
-## Controlling REST access
+## Contrôle de l'accès REST
 
 Par défaut, les accès REST sont ouverts à tous les utilisateurs, ce qui n'est évidemment pas recommandé pour des raisons de sécurité et de contrôle de l'utilisation des licences clientes.
 
-As of 4D 20 R6, you configure REST accesses by enabling the [**force login** mode](authUsers.md#force-login-mode) and create an [`authentify()`](authUsers.md#function-authentify) datastore class function to authenticate users and assign privileges to their web session.
+Depuis 4D 20 R6, vous configurez les accès REST en activant le mode [**force login**](authUsers.md#force-login-mode) et en créant une fonction [`authentify()`](authUsers.md#function-authentify) dans la classe datastore pour authentifier les utilisateurs et attribuer des privilèges à leur session web.
 
 :::note Compatibilité
 
-The **Access** area in the Settings dialog box is only available in converted projects for compatibility. See [Access](../settings/web.md#access) for more information.
+La zone **Accès** de la boîte de dialogue Propriétés n'est disponible que dans les projets convertis pour des raisons de compatibilité. Voir [Accès](../settings/web.md#access) pour plus d'informations.
 
 :::
 
 ## Exposer les tables et les champs
 
-Une fois les services REST sont activés dans l'application 4D, une session REST peut par défaut accéder à toutes les tables et à tous les champs de la base de données 4D via l'[interface du datastore](ORDA/dsMapping.md#datastore). Ainsi, elle peut utiliser leurs données. Par exemple, si votre base de données contient une table [Employee], il est possible d'écrire :
+Une fois les services REST activés dans l'application 4D, une session REST peut par défaut accéder à toutes les tables et à tous les champs de la base de données 4D via l'[interface du datastore](ORDA/dsMapping.md#datastore). Ainsi, elle peut utiliser leurs données. Par exemple, si votre base de données contient une table [Employee], il est possible d'écrire :
 
 ```
 http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
@@ -72,14 +72,14 @@ Pour supprimer l'exposition REST d'un champ :
 
 2. Décochez la case **Exposer en tant que ressource REST** pour le champ.
     ![alt-text](../assets/en/REST/field.png)
-    Repeat this for each field whose exposure needs to be modified.
+    Répétez cette opération pour chaque champ dont l'exposition doit être modifiée.
 
 > Pour qu'un champ soit accessible via REST, la table parente doit l'être également. Si la table parente n'est pas exposée, aucun de ses champs ne le sera, quel que soit leur statut.
 
 ## Mode préemptif
 
-On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+Sur 4D Server, les requêtes REST sont automatiquement traitées par des process préemptifs, **même en mode interprété**. Vous devez vous assurer que votre code est [compatible avec une exécution préemptive](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). Les process Web passent alors en mode coopératif et le code du serveur Web peut être débogué.
+> Pour déboguer le code web interprété sur la machine serveur, assurez-vous que le débogueur est [attaché au serveur](../Debugging/debugging-remote.md) ou [à une machine distante](../Debugging/debugging-remote.md). Les process Web passent alors en mode coopératif et le code du serveur Web peut être débogué.
 
 Avec 4D monoposte, le code interprété s'exécute toujours en mode coopératif.

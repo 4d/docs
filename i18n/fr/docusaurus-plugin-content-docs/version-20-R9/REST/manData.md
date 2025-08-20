@@ -3,11 +3,11 @@ id: manData
 title: Manipulation des données
 ---
 
-Tous [les attributs, dataclasses exposés](configuration.md#exposing-tables-and-fields) et toutes les [fonctions](ClassFunctions.md) sont accessibles via REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse; contrairement aux données des requêtes.
+Tous les [attributs et dataclass exposés](configuration.md#exposing-tables-and-fields) ainsi que les [fonctions exposées](ClassFunctions.md) sont accessibles via REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse, mais pas les données dans les requêtes.
 
 ## Rechercher des données
 
-To query data directly, you can do so using the [`$filter`]($filter.md) function. Par exemple, pour trouver une personne nommée "Smith", vous pouvez écrire :
+Pour interroger directement les données, vous pouvez utiliser la fonction [`$filter`]($filter.md). Par exemple, pour trouver une personne nommée "Smith", vous pouvez écrire :
 
 `http://127.0.0.1:8081/rest/Person/?$filter="lastName=Smith"`
 
@@ -15,43 +15,43 @@ To query data directly, you can do so using the [`$filter`]($filter.md) function
 
 Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souhaitées dans 4D.
 
-To add and modify entities, you can call [`$method=update`]($method.md#methodupdate). If you want to delete one or more entities, you can use [`$method=delete`]($method.md#methoddelete).
+Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [\{dataClass\}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Outre la récupération d'une entité unique dans une dataclass à l'aide de [\dataClass\}({key})](dataClass.md#dataclasskey), vous pouvez également écrire une [class function](ClassFunctions.md#function-calls) qui renvoie une entity selection (ou une collection).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Avant de renvoyer une sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) sur un ou plusieurs attributs (même les attributs de relation).
 
 ## Parcourir les données
 
-Add the [`$skip`]($skip.md) (to define with which entity to start) and [`$top/$limit`]($top_$limit.md) (to define how many entities to return) REST requests to your queries or entity selections to navigate the collection of entities.
+Ajoutez les mots-clés [`$skip`]($skip.md) (pour définir par quelle entité commencer) et [`$top/$limit`]($top_$limit.md) (pour définir le nombre d'entités à renvoyer) à vos requêtes REST ou entity selections pour naviguer dans la sélection d'entités.
 
 ## Créer et gérer un entity set
 
-Un entity set (également appelé *entity selection*) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
+Un entity set (ou *ensemble d'entités*) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
 
-To create an entity set, call [`$method=entityset`]($method.md#methodentityset) in your REST request. As a measure of security, you can also use [`$savedfilter`]($savedfilter.md) and/or [`$savedorderby`]($savedorderby.md) when you call [`$filter`]($filter.md) and/or [`$orderby`]($orderby.md) so that if ever the entity set timed out or was removed from the server, it can be quickly retrieved with the same ID as before.
+Pour créer un ensemble d'entités, appelez [`$method=entityset`]($method.md#methodentityset) dans votre requête REST. Par mesure de sécurité, vous pouvez également utiliser [`$savedfilter`]($savedfilter.md) et/ou [`$savedorderby`]($savedorderby.md) lorsque vous appelez [`$filter`]($filter.md) et/ou [`$orderby`]($orderby.md) de sorte que si l'ensemble d'entités se périme ou est supprimé du serveur, il peut être rapidement récupéré avec le même identifiant qu'auparavant.
 
-To access the entity set, you must use `$entityset/\{entitySetID\}`, for example:
+Pour accéder à l'ensemble d'entités, vous devez utiliser `$entityset/\N{entitySetID\N}`, par exemple :
 
 `/rest/People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`
 
-By default, an entity set is stored for two hours; however, you can change the timeout by passing a new value to [`$timeout`]($timeout.md). Le timeout est continuellement réinitialisé à la valeur définie (soit par défaut soit à celle que vous définissez) chaque fois que vous l'utilisez.
+Par défaut, un ensemble d'entités est stocké pendant deux heures ; cependant, vous pouvez modifier le délai de timeout en passant une nouvelle valeur à [`$timeout`]($timeout.md). Le timeout est continuellement réinitialisé à la valeur définie (soit par défaut soit à celle que vous définissez) chaque fois que vous l'utilisez.
 
-If you want to remove an entity set from 4D Server's cache, you can use [`$method=release`]($method.md#methodrelease).
+Si vous souhaitez supprimer un ensemble d'entités du cache de 4D Server, vous pouvez utiliser [`$method=release`]($method.md#methodrelease).
 
 Si vous modifiez l'un des attributs de l'entité dans l'entity set, les valeurs seront mises à jour. Toutefois, si vous modifiez une valeur qui faisait partie de la requête exécutée pour créer l'entity set, elle ne sera pas supprimée de l'entity set même si elle ne correspond plus aux critères de recherche.
 
-Bien entendu, les entités que vous supprimez ne feront plus partie de l'entity set. However, by default their reference will remain in the entity set with an *undefined* value, and they will still be included in the entity set count. Call [`$clean`]($clean.md) on the entity set to create a new, up-to-date entity set without *undefined* entity references.
+Bien entendu, les entités que vous supprimez ne feront plus partie de l'entity set. Cependant, par défaut, leur référence restera dans l'ensemble d'entités avec une valeur *undefined*, et ils seront toujours inclus dans le décompte de l'ensemble d'entités. Appelez [`$clean`]($clean.md) sur l'ensemble d'entités pour créer un nouvel ensemble d'entités à jour sans références d'entités *undefined*.
 
 Si l'entity set ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
-Using [`$entityset/\{entitySetID\}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidlogicoperatorothercollection), you can combine two entity sets that you previously created. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
+En utilisant [`$entityset/\N{entitySetID\N} ?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidlogicoperatorothercollection), vous pouvez combiner deux ensembles d'entités que vous avez précédemment créés. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
 
-A new selection of entities is returned; however, you can also create a new entity set by calling [`$method=entityset`]($method.md#methodentityset) at the end of the REST request.
+Une nouvelle sélection d'entités est renvoyée ; cependant, vous pouvez également créer un nouvel ensemble d'entités en appelant [`$method=entityset`]($method.md#methodentityset) à la fin de la requête REST.
 
 ## Calcul des données
 
-By using [`$compute`]($compute.md), you can compute the **average**, **count**, **min**, **max**, or **sum** for a specific attribute in a dataclass. Vous pouvez également calculer toutes les valeurs avec le mot clé $all.
+En utilisant [`$compute`]($compute.md), vous pouvez effectuer les calculs **average**, **count**, **min**, **max** ou **sum** pour un attribut spécifique dans une dataclass. Vous pouvez également calculer toutes les valeurs avec le mot clé $all.
 
 Par exemple, pour obtenir le salaire le plus élevé :
 
@@ -206,7 +206,7 @@ La requête suivante retourne uniquement les attributs de prénom et nom à part
 
 #### Exemple d'ensemble d'entités
 
-Once you have [created an entity set](#creating-and-managing-entity-set), you can filter the information in it by defining which attributes to return:
+Une fois que vous avez [créé un ensemble d'entités] (#creating-and-managing-entity-set), vous pouvez filtrer les informations qu'il contient en définissant les attributs à renvoyer :
 
 `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
 
@@ -226,6 +226,6 @@ Si vous souhaitez enregistrer un BLOB stocké dans votre dataclass, vous pouvez 
 
 ## Récupérer une seule entité
 
-You can use the [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) syntax when you want to retrieve only one entity. C'est particulièrement utile lorsque vous souhaitez lancer une recherche associée qui n'est pas créée sur la clé primaire de la dataclass. Par exemple, vous pouvez écrire :
+Vous pouvez utiliser la syntaxe [`\{dataClass\}:\{attribute\}(value)`](%7BdataClass%7D.html#dataclassattributevalue) lorsque vous voulez récupérer une seule entité. C'est particulièrement utile lorsque vous souhaitez lancer une recherche sur la clé primaire de la dataclass. Par exemple, vous pouvez écrire :
 
 `GET  /rest/Company:companyCode("Acme001")`

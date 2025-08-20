@@ -5,7 +5,7 @@ title: $singleton
 
 Vous pouvez appeler directement les [fonctions exposées de vos shared singletons](../Concepts/classes.md#singleton-classes) via REST.
 
-Singleton functions are called in POST or GET requests with the `$singleton` command and without `()`. Par exemple, si vous avez défini une fonction `buildVehicle()` dans la classe singleton partagée `VehicleFactory`, vous pouvez l'appeler à l'aide de la requête suivante :
+Les fonctions singleton sont appelées dans des requêtes POST ou GET avec la commande `$singleton` et sans `()`. Par exemple, si vous avez défini une fonction `buildVehicle()` dans la classe singleton partagée `VehicleFactory`, vous pouvez l'appeler à l'aide de la requête suivante :
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle
@@ -27,27 +27,27 @@ N'oubliez pas que seules les fonctions avec le mot-clé [`exposed`](../ORDA/orda
 
 ## Appeler des fonctions
 
-Singleton functions can be called using REST **POST** or **GET** requests.
+Les fonctions Singleton peuvent être appelées à l'aide de requêtes REST **POST** ou **GET**.
 
 La syntaxe formelle est la suivante :
 
-#### POST request
+#### Requête POST
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction`
 
-with data in the body of the POST request: `["myparam"]`
+avec les données contenues dans le body de la requête POST : `["myparam"]`
 
-#### GET request
+#### Requête GET
 
 `/rest/$singleton/SingletonClass/SingletonClassFunction?$params='["myparam"]'`
 
 :::note
 
-The `SingletonClassFunction()` function must have been declared with the `onHTTPGet` keyword to be callable with `GET` (see [Function configuration](ClassFunctions#function-configuration)).
+La fonction `SingletonClassFunction()` doit avoir été déclarée avec le mot-clé `onHTTPGet` pour pouvoir être appelée avec `GET` (voir [Configuration de fonction](ClassFunctions#function-configuration)).
 
 :::
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/webServerConfig.md#use-preemptive-processes) is ignored by the REST Server).
+> L'ensemble du code 4D appelé à partir de requêtes REST **doit être thread-safe** si le projet fonctionne en mode compilé, car le serveur REST utilise toujours des process préemptifs dans ce cas (la valeur du paramètre [*Use preemptive process*](../WebServer/webServerConfig.md#use-preemptive-processes) est ignorée par le serveur REST).
 
 :::info
 
@@ -77,7 +77,7 @@ exposed Function sayHello ($value : Text)
 
 :::note
 
-The `mySingleton` class and `sayHello` function are listed when you call the [`$catalog`]($catalog.md#singletons) command.
+La classe `mySingleton` et la fonction `sayHello` sont listées lorsque vous appelez la commande [`$catalog`]($catalog.md#singletons).
 
 :::
 
