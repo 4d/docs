@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable. |
 | wpArea | Text | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
-| textBoxID | Text | &#x1F858; | ID of the text box (only filled if a text box has the focus) |
+| textBoxID | Text | &#8592; | ID of the text box (only filled if a text box has the focus) |
 | Function result | Integer | &#8592; | Frame where the cursor is currently set |
 
 <!-- END REF-->

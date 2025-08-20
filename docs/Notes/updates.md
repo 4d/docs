@@ -299,7 +299,7 @@ See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/up
 |Libuv |1.51.0|**21**|Used for QUIC|
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
-|ngtcp2|1.14.0|**21****|Used for QUIC|
+|ngtcp2|1.14.0|**21**|Used for QUIC|
 |OpenSSL|3.5.2|**21**||
 |PDFWriter|4.5.11|20 R3||
 |PHP|8.2.4|20||

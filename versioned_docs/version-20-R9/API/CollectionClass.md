@@ -3578,7 +3578,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value |Text, Number, Object, Collection, Date |->|Value(s) to insert at the beginning of the collection|
-|Result|Real|<-|Collection containing added element(s)
+|Result|Collection|<-|Collection containing added element(s)
 |
 <!-- END REF -->
 
