@@ -267,7 +267,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
 1. The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
 2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
-3. If a [Form property "css" attribute](../FormEditor/properties_FormProperties.md#css) is defined in the 4D form, it will then load specific CSS file(s). You can pass:
+3. If a Form property "css" attribute is defined in the 4D form, it will then load specific CSS file(s). You can pass:
 
  * a file for both platforms:
 

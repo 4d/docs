@@ -9,12 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Num.Params-->
 
-| Paramètres | Type                   |                             | Description                                                                                     |
-| ---------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
-| expression | Text, Boolean, Integer | &#8594; | String for which to return the numeric form, or Boolean to return 0 or 1, or Numeric expression |
-| separator  | Text                   | &#8594; | Decimal separator                                                                               |
-| base       | Integer                | &#8594; | Value between 2 and 36 that represents the radix                                                |
-| Résultat   | Real                   | &#8592; | Numeric form of the expression parameter                                                        |
+| Paramètres | Type                   |                             | Description                                                                              |
+| ---------- | ---------------------- | --------------------------- | ---------------------------------------------------------------------------------------- |
+| expression | Text, Boolean, Integer | &#8594; | Chaîne à convertir en numérique ou Booléen à convertir en 0 ou 1 ou Expression numérique |
+| separator  | Text                   | &#8594; | Séparateur décimal                                                                       |
+| base       | Integer                | &#8594; | Valeur comprise entre 2 et 36 qui représente le radix                                    |
+| Résultat   | Real                   | &#8592; | Forme numérique du paramètre expression                                                  |
 
 <!-- END REF-->
 
@@ -28,70 +28,70 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.Num.Summary-->The **Num** command returns the numeric form of the String, Boolean or numeric expression you pass in *expression*.<!-- END REF-->
+<!--REF #_command_.Num.Summary-->La commande **Num** renvoie la forme numérique de la chaîne, de l'expression booléenne ou de l'expression numérique que vous avez passée dans le paramètre *expression*.<!-- END REF-->
 
-When *expression* is of the string type, you can use a *separator* parameter or a *base* parameter (see below).
+Lorsque *expression* est de type chaîne de caractères, vous pouvez utiliser un paramètre *separator* ou un paramètre *base* (voir ci-dessous).
 
 ### Expressions de type Chaîne
 
-When you use the **Num** command with a string *expression*, two syntaxes are available:
+Lorsque vous utilisez la commande **Num** avec une *expression* chaîne, deux syntaxes sont disponibles :
 
 - **Num(string{;separator})**
 - **Num(string;base)**
 
 #### Num(string{;separator})
 
-If *expression* consists only of one or more alphabetic characters, **Num** returns a zero. If *expression* includes alphabetic and numeric characters, the command ignores the alphabetic characters. Thus, it transforms the string "a1b2c3" into the number 123.
+Si *expression* ne contient que des caractères alphabétiques, **Num** retourne zéro. Si *expression* contient des caractères alphabétiques et des caractères numériques, la commande ignore les caractères alphabétiques. Ainsi, **Num** transformera la chaîne "a1b2c3" en nombre 123.
 
-There are three reserved characters that **Num** treats specially: the decimal separator as defined in the system (if the *separator* parameter is not passed), the hyphen “*\-*”, and “*e*” *or* “E”. These characters are interpreted as numeric format characters.
+Il existe trois caractères réservés que **Num** traite de manière particulière : le séparateur décimal tel que défini dans le système (si le paramètre *separator* n'est pas passé), le tiret *\-*", et le "*e*" *ou* "E". Ces caractères seront interprétés en tant que caractères de formatage des nombres.
 
-- The decimal separator is interpreted as a decimal place and must appear embedded in a numeric string. By default, the command uses the decimal separator set by the operating system. You can modify this character using the *separator* parameter (see below).
-- The hyphen causes the number or exponent to be negative. The hyphen must appear before any negative numeric characters or after the “e” for an exponent. Except for the “e” character, if a hyphen is embedded in a numeric string, the portion of the string after the hyphen is ignored. For example, `Num("123-456")` returns 123, but `Num("-9")` returns -9.
-- The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Thus, `Num("123e–2")` returns 1.23.\
-  Note that when the string includes more than one "e", conversion might give different results under macOS and under Windows.
+- Le séparateur décimal est interprété en tant que tel et doit être inclus dans la chaîne de caractères numériques. Par défaut, la commande utilise le séparateur décimal défini dans le système d’exploitation. Vous pouvez modifier ce caractère à l'aide du paramètre *separator* (voir ci-dessous).
+- Le tiret définit un nombre ou un exposant négatif (signe moins). Le tiret doit être placé devant tout caractère numérique négatif ou derrière le "e" pour un exposant. Hormis le cas du caractère "e", si le tiret est inclus dans une chaîne numérique, la partie de la chaîne se trouvant après le tiret est ignorée. Par exemple, `Num("123-456")` renvoie 123, mais `Num("-9")` renvoie -9.
+- Le e ou E désigne tout caractère numérique se trouvant à sa droite comme étant la puissance d'un exposant. Le "e" doit être inclus dans une chaîne numérique. Ainsi, `Num("123e-2")` renvoie 1.23.\
+  A noter que dans le cas où la chaîne comporte plus d'un caractère "e", la conversion pourra donner des résultats différents sous macOS et sous Windows.
 
-#### *separator* parameter
+#### Paramètre *séparator*
 
-The *separator* parameter designates a custom decimal separator for evaluating the *expression*. When the string to be evaluated is expressed with a decimal separator different from the system operator, the command returns an incorrect result. The *separator* parameter can be used in this case to obtain a correct evaluation. When this parameter is passed, the command does not take the system decimal separator into account. You can pass one or more characters.
+Le paramètre *separator* désigne un séparateur décimal personnalisé pour l'évaluation de l'*expression*. Lorsque la chaîne à évaluer est exprimée avec un séparateur décimal différent du séparateur système, la commande retourne un résultat incorrect. Le paramètre *séparator* permet dans ce cas d’obtenir une évaluation correcte. Lorsque ce paramètre est passé, la commande ne tient pas compte du séparateur décimal système. Vous pouvez passer un ou plusieurs caractères.
 
 :::note
 
-The [`GET SYSTEM FORMAT`](../commands-legacy/get-system-format.md) command can be used to find out the current decimal separator as well as several other regional system parameters.
+La commande [`GET SYSTEM FORMAT`](../commands-legacy/get-system-format.md) peut être utilisée pour connaître le séparateur décimal courant ainsi que plusieurs autres paramètres du système régional.
 
 :::
 
 #### Num(string;base)
 
-Using a *base* parameter (integer) triggers a specific mode in which you specify the radix (base) of the number expressed as string in *expression*. In particular, this syntax allows you to convert hexadecimal strings to numbers.
+L'utilisation d'un paramètre *base* (integer) active un mode spécifique dans lequel vous spécifiez le radix (base) du nombre exprimé sous forme de chaîne dans *expression*. Cette syntaxe permet notamment de convertir des chaînes hexadécimales en nombres.
 
 Dans le paramètre *base*, passez la base dans laquelle est exprimée le nombre dans *expression*. Vous pouvez passer n'importe quelle valeur entière comprise entre 2 et 36.
 
 Si vous passez 0 dans *base*, la commande détermine la base en fonction de la valeur de *expression*. Si *expression* commence par "0x", la base 16 est utilisée. Sinon, la base 10 est utilisée.
 
-If *expression* evaluates to a decimal number, only the integer part is converted.
+Si l'évaluation de *expression* donne un nombre décimal, seule la partie entière est convertie.
 
 :::info
 
-- This syntax strictly follows the [`parseInt` EcmaScript specification](https://tc39.es/ecma262/multipage/global-object.html#sec-parseint-string-radix).
-- L'utilisation de cette syntaxe avec *base*=10 ne donnera pas exactement les mêmes résultats que l'utilisation de la syntaxe sans le paramètre *base*. For example, in compliance with the EcmaScript specification, any character that does not belong to the base is considered a separator (see examples).
+- Cette syntaxe suit strictement la [spécification EcmaScript de `parseInt`](https://tc39.es/ecma262/multipage/global-object.html#sec-parseint-string-radix).
+- L'utilisation de cette syntaxe avec *base*=10 ne donnera pas exactement les mêmes résultats que l'utilisation de la syntaxe sans le paramètre *base*. Par exemple, conformément à la spécification EcmaScript, tout caractère n'appartenant pas à la base est considéré comme un séparateur (voir exemples).
 
 :::
 
 ### Expressions de type Booléen
 
-If you pass a Boolean expression, **Num** returns 1 if the expression is True; otherwise, it returns *0* (zero).
+Si vous passez une expression booléenne, **Num** renvoie 1 si l'expression est vraie ; sinon, la commande renvoie *0* (zéro).
 
 ### Expressions numériques
 
-If you pass a numeric expression in the *expression* parameter, **Num** returns the value passed in the *expression* parameter as is. This can be useful more particularly in the case of generic programming using pointers.
+Si vous passez une expression numérique dans le paramètre *expression*, **Num** renvoie telle quelle la valeur passée dans le paramètre *expression*. Ce fonctionnement est utile notamment dans le cadre d’une programmation générique utilisant des pointeurs.
 
-### Undefined Expressions
+### Expressions indéfinies
 
-If *expression* evaluates to undefined, the command returns 0 (zero). This is useful when you expect the result of an expression (e.g. an object attribute) to be a number, even if it can be undefined.
+Si l'évaluation de *expression* donne une valeur indéfinie, la commande retourne 0. Ce fonctionnement est utile lorsque le résultat d'une expression (par exemple, un attribut d'objet) doit être un nombre alors qu'il peut être nul.
 
 ## Exemple 1
 
-The following example illustrates how **Num** works when passed a single string argument:
+L'exemple suivant illustre le fonctionnement de **Num** lorsqu'une seule chaîne de caractères lui est passée en argument :
 
 ```4d
 $result:=Num("ABCD") // 0
@@ -104,39 +104,39 @@ $result:=Num("–123e2") // –12300
 
 ## Exemple 2
 
-Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to these comparisons returns 1 or 0\. Multiplying 1 or 0 with a string repeats the string once or returns the empty string. As a result, *\[Client\]Risk* gets either “Good” or “Bad”:
+Ici, *\[Client\]Debt* est comparé à *1000$*. La commande Num appliquée à ces comparaisons renvoie 1 ou 0. La multiplication d'une chaîne par 0 ou 1 retourne soit la chaîne, soit une chaîne vide.  En définitive, le champ *\[Client\]Risk* reçoit la valeur “Good” ou “Bad” :
 
 ```4d
-  // If client owes less than 1000, a good risk.
-  // If client owes more than 1000, a bad risk.
+  // Si le client a des dettes inférieures à 1000, le risque est acceptable.
+  // Si le client a des dettes supérieures à 1000, le risque est inacceptable.
  [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
 ## Exemple 3
 
-This example compares the results obtained depending on the “current” separator:
+Cet exemple compare les résultats obtenus en fonction du séparateur “courant” :
 
 ```4d
  $thestring:="33,333.33"
  $thenum:=Num($thestring)
-  // by default, $thenum equals 33,33333 on a French system
+  // par défaut, $thestring vaut 33,33333 sur un système français
  $thenum:=Num($thestring;".")
-  // $thenum will be correctly evaluated regardless of the system;
-  // for example, 33 333,33 on a French system
+  // $thenum sera correctement évalué quel que soit le système
+  // par exemple, 33 333,33 sur un système français
 ```
 
 ## Exemple 4
 
-This example illustrates the use of the *base* syntax:
+Cet exemple illustre l'utilisation de la syntaxe *base* :
 
 ```4d
-$result:=Num("ff";16) // 255 (lower-case hexadecimal)
+$result:=Num("ff";16) // 255 (hexadecimal minuscule)
 $result:=Num("0xFF") // 0
 $result:=Num("0xFF";16) // 255
 $result:=Num("2";2) // 0
 $result:=Num("10.3";16) // 16
-$result:=Num("123.20") // 12320 (standard base 10 syntax)
-$result:=Num("123.20"; 10) // 123 (explicitly specify base 10)
+$result:=Num("123.20") // 12320 (syntaxe standard base 10)
+$result:=Num("123.20"; 10) // 123 (spécifier base 10 explicitement)
 
 ```
 

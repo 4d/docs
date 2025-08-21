@@ -53,8 +53,8 @@ This syntax only supports [local and process variables](#local-process-and-inter
 
 `varType` peut être :
 
-- un [type basique](Concepts/data-types.md), auquel cas la variable contient une valeur du type déclaré,
-- une [référence de classe](Concepts/classes.md) (classe 4D ou classe utilisateur), auquel cas la variable contient une référence à un objet de la classe définie.
+ - un [type basique](Concepts/data-types.md), auquel cas la variable contient une valeur du type déclaré,
+ - une [référence de classe](Concepts/classes.md) (classe 4D ou classe utilisateur), auquel cas la variable contient une référence à un objet de la classe définie.
 
 Si `varType` est omis, une variable de type **variant** est créée.
 
@@ -86,7 +86,7 @@ The legacy syntax using `C_XXX` commands is deprecated as of 4D 20 R7.
 
 ### Exemples
 
-- Pour déclarer les variables locales et les variables process basiques :
+ - Pour déclarer les variables locales et les variables process basiques :
 
 ```4d
 var $myText; myText; $vt : Text
@@ -98,14 +98,14 @@ var $o : 4D.Object
 //également équivalent à C_OBJECT($o)
 ```
 
-- Pour déclarer les variables objet de classe 4D :
+ - Pour déclarer les variables objet de classe 4D :
 
 ```4d
 var $myFolder : 4D.Folder
 var $myFile : 4D.File
 ```
 
-- Pour déclarer les variables objet de classe utilisateur :
+ - Pour déclarer les variables objet de classe utilisateur :
 
 ```4d
 var $myClass : cs.MyClass
@@ -193,9 +193,9 @@ Une variable locale, comme son nom l’indique, est locale à une méthode — c
 
 Vous pouvez choisir d'utiliser une variable locale pour :
 
-- Eviter des conflits de noms avec les autres variables
-- Utiliser temporairement des valeurs,
-- Réduire le nombre de variables process
+ - Eviter des conflits de noms avec les autres variables
+ - Utiliser temporairement des valeurs,
+ - Réduire le nombre de variables process
 
 Le nom d’une variable locale commence toujours par le signe dollar ($) et peut contenir jusqu’à 31 autres caractères. Si vous saisissez un nom plus long, 4D le tronque pour le ramener à 31 caractères.
 
@@ -224,9 +224,9 @@ En mode interprété, les variables sont gérées dynamiquement; elles sont cré
 
 Un process peut lire et écrire des variables process dans un autre process à l'aide des commandes `GET PROCESS VARIABLE` et `SET PROCESS VARIABLE`. Nous vous recommandons de n'utiliser ces commandes que dans le cadre des besoins décrits ci-dessous (qui sont les raisons pour lesquelles ces commandes ont été créées dans 4D) :
 
-- Communication interprocess à des endroits particuliers de votre code
-- Gestion du glisser-déposer interprocess
-- En client/serveur, communication entre les process sur les postes clients et les procédures stockées exécutées sur le serveur
+ - Communication interprocess à des endroits particuliers de votre code
+ - Gestion du glisser-déposer interprocess
+ - En client/serveur, communication entre les process sur les postes clients et les procédures stockées exécutées sur le serveur
 
 Pour plus d'informations, consultez le chapitre **Process** et la description de ces commandes.
 

@@ -76,7 +76,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 つまり、`On Web Authentication` データベースメソッドは次の場合に呼び出されます:
 
 - Webサーバーが、存在しないリソースを要求する URL を受信した場合
-- Webサーバーが `4DACTION/`, `4DCGI/` ... で始まる URL を受信した場合
+- when the web server receives a URL beginning with `4DACTION/`
 - Webサーバーがルートアクセス URL を受信したが、ストラクチャー設定または [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md) コマンドでホームページが設定されていないとき
 - Webサーバーが、セミダイナミックページ内でコードを実行するタグ (`4DSCRIPT`など) を処理した場合。
 

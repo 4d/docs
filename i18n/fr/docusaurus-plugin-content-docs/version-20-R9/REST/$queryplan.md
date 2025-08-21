@@ -14,7 +14,7 @@ $queryplan retourne le plan de la requête telle qu'il a été exécuté par 4D 
 | item      | Text    | Requête exécutée                                                                                                                            |
 | subquery  | Tableau | S'il existe une sous-requête, un objet supplémentaire contenant une propriété d'élément (comme celle indiquée ci-dessus) |
 
-Pour plus d'informations sur les plans de requête, reportez-vous à [queryPlan ete queryPath](genInfo.md#querypath-and-queryplan).
+Pour plus d'informations sur les plans de requête, reportez-vous à [queryPlan et queryPath](genInfo.md#querypath-and-queryplan).
 
 ## Exemple
 

@@ -3,7 +3,7 @@ id: ordaClasses
 title: Classes du modèle de données
 ---
 
-ORDA allows you to create high-level class functions above the [data model](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
+ORDA vous permet de créer des fonctions de classe de haut niveau au-dessus du [modèle de données](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-database-structure.200-6750097.en.html). Cela vous permet d'écrire du code orienté métier et de le «publier» comme une API. Le datastore, les dataclasses, les entity selections et les entités sont tous disponibles en tant qu'objets de classe pouvant contenir des fonctions.
 
 Par exemple, vous pouvez créer une fonction `getNextWithHigherSalary()` dans la classe `EmployeeEntity` pour retourner les employés ayant un salaire supérieur à celui qui est sélectionné. Il serait aussi simple à appeler que :
 
@@ -125,7 +125,7 @@ Vous pouvez ensuite obtenir une sélection d'entité des "meilleures" entreprise
 
 :::info
 
-[Les champs calculés](#computed-attributes) sont définis dans [la classe Entity](#entity-class).
+[Les attributs calculés](#computed-attributes) sont définis dans la [classe Entity](#entity-class).
 
 :::
 
@@ -182,7 +182,7 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection
+//Extraire les employés dont le salaire est supérieur à la moyenne de l'entity selection 
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
 	return This.query("salary > :1";This.average("salary")).orderBy("salary")
@@ -211,9 +211,9 @@ Chaque table exposée avec ORDA affiche une classe Entity dans le class store `c
 
 #### Class constructor
 
-You can define a **class constructor** for an Entity class. The class constructor is called whenever an entity is created in memory and can be used to initialize some values.
+Vous pouvez définir un **class constructor** (*constructeur de classe*) pour une classe d'entité. Le class constructor est appelé chaque fois qu'une entité est créée en mémoire et peut être utilisé pour initialiser certaines valeurs.
 
-For information, please refer to the [Class constructor](#class-constructor-1) section.
+Pour plus d'informations, veuillez consulter la section [Class constructor](#class-constructor-1).
 
 #### Attributs calculés
 
@@ -355,7 +355,7 @@ Since functions such as [`dataClass.fromCollection()`](../API/DataClassClass.md#
 
 :::
 
-#### Exemple
+#### Exemple 1
 
 ```4d
 
@@ -367,19 +367,96 @@ Class constructor()
 
 ```
 
+#### Example 2 (diagram): Client/server
+
+```mermaid
+
+sequenceDiagram
+
+Client->>+Client: Form.product:=ds.Products.new()
+
+Note over Client: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
+
+Note over Client: Form.product.creationDate is "06/17/25" <br> Form.product.comment is "Automatic comment"
+
+Client->>+Server: Form.product.save()
+
+Server-->>-Client: Success
+
+
+```
+
+#### Example 3 (diagram): Qodly - Standard action
+
+```mermaid
+
+sequenceDiagram
+
+    Qodly page->>+   Qodly page: Standard action Create a new entity (product Qodly source)
+
+    Qodly page->>+Server: Function call product.apply() OR Save standard action for the product Qodly source
+
+     Note over Server: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
+
+ Server-->>-Qodly page: The product Qodly source creationDate and comment attributes are filled
+
+ Note over Qodly page: product.creationDate is "06/17/25" <br> and product.comment is "Automatic comment"
+
+```
+
+#### Example 4 (diagram): Qodly - Standard action and update value on the newly created entity
+
+```mermaid
+
+sequenceDiagram
+
+Qodly page->>+ Qodly page: Standard action Create a new entity (product Qodly source)
+
+Qodly page->>+ Qodly page: Update product comment with "Front end comment"
+
+Qodly page->>+Server: Function call product.apply() OR Save standard action for the product Qodly source
+
+Note over Server: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
+
+Note over Server: The comment attribute is set with "Front end comment"
+
+Server-->>-Qodly page: The product Qodly source creationDate and comment attributes are filled
+
+Note over Qodly page: product.creationDate is "06/17/25" <br> and product.comment is "Front end comment"
+
+```
+
+#### Example 5 (diagram): Qodly - Entity instanciated in a function
+
+```mermaid
+
+sequenceDiagram
+
+Qodly page->>+Server: product Qodly source := Function call Products.createNew()
+
+Note over Server: CreateNew() function on the Products class <br>return This.new()
+
+Note over Server: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
+
+Server-->>-Qodly page: The product entity creationDate and comment attributes are filled
+
+Note over Qodly page: product.creationDate is "06/17/25" <br>and product.comment is "Automatic comment"
+
+```
+
 ## Attributs calculés
 
 ### Vue d’ensemble
 
 Un attribut calculé est un attribut de dataclass avec un type de données qui masque un calcul. [Les classes 4D standard](Concepts/classes.md) implémentent le concept de propriétés calculées avec des [fonctions d'accès](Concepts/classes.md#function-get-and-function-set) telles que `get` (*getter*) et `set` (*setter*). Les attributs de dataclass ORDA bénéficient de cette fonctionnalité et l'étendent avec deux fonctions supplémentaires : `query` et `orderBy`.
 
-Un champ calculé nécessite au minimum une fonction `get` qui décrit comment sa valeur sera calculée. Lorsqu'une fonction *getter* est fournie à un attribut, 4D ne crée pas l'espace de stockage sous-jacent dans le datastore mais substitue le code de la fonction chaque fois que l'attribut est accédé. Si l'attribut n'est pas consulté, le code ne s'exécute jamais.
+Un attribut calculé nécessite au minimum une fonction `get` qui décrit comment sa valeur sera calculée. Lorsqu'une fonction *getter* est fournie à un attribut, 4D ne crée pas l'espace de stockage sous-jacent dans le datastore mais substitue le code de la fonction chaque fois que l'attribut est accédé. Si l'attribut n'est pas consulté, le code ne s'exécute jamais.
 
-Un champ calculé peut également mettre en œuvre une fonction `set`, qui s'exécute chaque fois qu'une valeur est attribuée à l'attribut. La fonction *setter* décrit ce qui est à faire avec la valeur attribuée, généralement en la redirigeant vers un ou plusieurs attributs de stockage ou, dans certains cas, vers d'autres entités.
+Un attribut calculé peut également mettre en œuvre une fonction `set`, qui s'exécute chaque fois qu'une valeur est attribuée à l'attribut. La fonction *setter* décrit ce qui est à faire avec la valeur attribuée, généralement en la redirigeant vers un ou plusieurs attributs de stockage ou, dans certains cas, vers d'autres entités.
 
-Tout comme les champs de stockage, les champs calculés peuvent être inclus dans les **requêtes**. Par défaut, lorsqu'un attribut calculé est utilisé dans une requête ORDA, il est calculé une fois par entité examinée. Dans certains cas, cela est suffisant. Cependant, pour de meilleures performances, notamment en client/serveur, les champs calculés peuvent implémenter une fonction de requête `query` qui s'appuie sur les attributs des dataclass et qui bénéficie de leurs index.
+Tout comme les attributs de stockage, les attributs calculés peuvent être inclus dans les **requêtes**. Par défaut, lorsqu'un attribut calculé est utilisé dans une requête ORDA, il est calculé une fois par entité examinée. Dans certains cas, cela est suffisant. Cependant, pour de meilleures performances, notamment en client/serveur, les attributs calculés peuvent implémenter une fonction de requête `query` personnalisée qui s'appuie sur les attributs des dataclass et qui bénéficie de leurs index.
 
-De même, les champs calculés peuvent être inclus dans des **tris**. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Tout comme dans les requêtes, les champs calculés peuvent mettre en œuvre une fonction `orderBy` qui substitue d'autres attributs pendant le tri, améliorant ainsi les performances.
+De même, les attributs calculés peuvent être inclus dans des **tris**. Lorsqu'un attribut calculé est utilisé dans un tri ORDA, l'attribut est calculé une fois par entité examinée. Tout comme dans les requêtes, les attributs calculés peuvent mettre en œuvre une fonction `orderBy` qui substitue d'autres attributs pendant le tri, améliorant ainsi les performances.
 
 ### Comment définir les attributs calculés
 
@@ -508,7 +585,7 @@ Function query <attributeName>($event : Object) -> $result : Object
 
 Cette fonction prend en charge trois syntaxes :
 
-- Avec la première syntaxe, vous traitez l'ensemble de la requête via la propriété de l'objet objet `$event.result`.
+- Avec la première syntaxe, vous traitez l'ensemble de la requête via la propriété de l'objet `$event.result`.
 - Avec les deuxième et troisième syntaxes, la fonction retourne une valeur dans *$result* :
 
   - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
@@ -519,7 +596,7 @@ Cette fonction prend en charge trois syntaxes :
   | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
   | $result.parameters | Collection | valeurs pour placeholders                                                                                                    |
 
-La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés.
+La fonction `query` s'exécute à chaque fois qu'une requête utilisant l'attribut calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un attribut calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
 
 > Les fonctionnalités suivantes ne sont pas prises en charge :
 >
@@ -558,10 +635,10 @@ Function query fullName($event : Object)->$result : Object
 	If ($p>0)
 		$firstname:=Substring($fullname; 1; $p-1)+"@"
 		$lastname:=Substring($fullname; $p+1)+"@"
-		$parameters:=New collection($firstname; $lastname) // two items collection
+		$parameters:=New collection($firstname; $lastname) // collection deux éléments
 	Else
 		$fullname:=$fullname+"@"
-		$parameters:=New collection($fullname) // single item collection
+		$parameters:=New collection($fullname) // collection un seul élément
 	End if
 
 	Case of
@@ -609,11 +686,11 @@ Function query age($event : Object)->$result : Object
 	Case of
 
 		: ($operator="==")
-			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
+			$query:="birthday > :1 and birthday <= :2"  // après d1 et avant ou égal à d2
 
 		: ($operator="===")
 
-			$query:="birthday = :2"  // d2 = second calculated date (= birthday date)
+			$query:="birthday = :2"  // d2 = seconde date calculée (= birthday date)
 
 		: ($operator=">=")
 			$query:="birthday <= :2"
@@ -635,11 +712,11 @@ Function query age($event : Object)->$result : Object
 Code d'appel, par exemple :
 
 ```4d
-// people aged between 20 and 21 years (-1 day)
-$twenty:=people.query("age = 20")  // calls the "==" case
+// personnes entre 20 et 21 ans (-1 jour)
+$twenty:=people.query("age = 20")  // appelle le cas "==" 
 
-// people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20")
+// personnes âgées de 20 ans aujourd'hui
+$twentyToday:=people.query("age === 20") // équivaut à people.query("age is 20")
 
 ```
 

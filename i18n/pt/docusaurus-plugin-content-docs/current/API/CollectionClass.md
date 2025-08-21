@@ -3321,7 +3321,7 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 | Parâmetro  | Tipo                                   |                             | Descrição                                                                         |
 | ---------- | -------------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
 | value      | Text, Number, Object, Collection, Date |              ->             | Valor(es) a inserir no início da colecção                      |
-| Resultados | Real                                   | <- | Colecção contendo elemento(s) adicionado(s) |
+| Resultados | Collection                             | <- | Colecção contendo elemento(s) adicionado(s) |
 |            |                                        |                             |                                                                                   |
 
 <!-- END REF -->

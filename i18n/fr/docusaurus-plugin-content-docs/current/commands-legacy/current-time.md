@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current time.Summary-->La fonction **Current time** retourne l'heure courante définie dans l'horloge de votre système.<!-- END REF--> 
 
-L'heure courante est toujours comprise entre *00:00:00* et *23:59:59*. Vous pouvez utiliser les fonctions [String](../commands/string.md) ou [Time string](../commands/time-string.md) pour convertir en chaîne alphanumérique l'expression de type heure retournée par **Current time**.
+L'heure courante est toujours comprise entre *00:00:00* et *23:59:59*. Vous pouvez utiliser les fonctions [String](../commands/string.md) ou [Time string](../commands/time-string) pour convertir en chaîne alphanumérique l'expression de type heure retournée par **Current time**.
 
 **4D Server :** Si vous passez le paramètre astérisque (\*) — lors d'une exécution sur un poste 4D Client —, la fonction retourne l'heure courante telle que définie dans l'horloge du poste serveur. 
 

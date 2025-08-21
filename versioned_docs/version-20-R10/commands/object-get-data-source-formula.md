@@ -3,7 +3,7 @@ id: object-get-data-source-formula
 title: OBJECT Get data source formula
 ---
 
-<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( {* ;} *object* ) : *formula*<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( {* ;} *object* ) : 4D.Formula<!-- END REF-->
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

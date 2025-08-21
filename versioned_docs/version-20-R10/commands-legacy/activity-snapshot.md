@@ -9,7 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| arrActivities &#124; arrUUID | Object array, Text array | &#8592; | Complete description of operations (object array) or<br/>Operation UUIDs (text array) |
+| arrActivities | Object array | &#8592; | Complete description of operations |
+| arrUUID | Text array | &#8592; | Operation UUIDs |
 | arrStart | Text array | &#8592; | Operation start times |
 | arrDuration | Array integer | &#8592; | Operation durations in milliseconds |
 | arrInfo | Text array | &#8592; | Description |

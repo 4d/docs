@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->O comando **WEB GET HTTP HEADER** retorna uma string ou dois arrays, que contém o cabeçalho HTTP utilizado na petição em processo.<!-- END REF-->
 
-Este comando pode ser chamado desde qualquer método (*On Web Authentication Database Method* ou [QR SET DESTINATION](qr-set-destination.md), método chamado por '*/4DACTION*'...) executado em um processo web.
+Este comando pode ser chamado desde qualquer método (*On Web Authentication Database Method* ou [On Web Connection](./on-web-connection-database-method.md), método chamado por '*/4DACTION*'...) executado em um processo web.
 
 * **Primeira sintaxe**: **WEB GET HTTP HEADER**(cabeçalho)
 
@@ -83,7 +83,7 @@ O seguinte método permite recuperar o conteúdo de todo campo de cabeçalho de 
  $cookie:=GetHTTPField("Cookie")
 ```
 
-* Pode enviar diferentes páginas em função do idioma do navegador (por exemplo em [QR SET DESTINATION](qr-set-destination.md)):
+* Pode enviar diferentes páginas em função do idioma do navegador (por exemplo em [On Web Connection](./on-web-connection-database-method.md)):
 
 ```4d
  $idioma:=GetHTTPField("Accept-Language")
@@ -99,7 +99,7 @@ O seguinte método permite recuperar o conteúdo de todo campo de cabeçalho de 
   
   
 **Nota**: os navegadores web permitem definir vários idiomas por padrão. Estão listados no campo "Accept-Language", separados por um ";". Sua propriedade está definida de acordo com sua posição dentro da string; portanto é uma boa ideia testar a posição dos idiomas na string.  
-* Este é um exemplo de hosts virtuais (por exemplo no [QR SET DESTINATION](qr-set-destination.md)). Os seguintes nomes "home\_site.com", "home\_site1.com" e "home\_site2.com" apontam ao mesmo endereço IP, por exemplo 192.1.2.3.
+* Este é um exemplo de hosts virtuais (por exemplo no [On Web Connection](./on-web-connection-database-method.md)). Os seguintes nomes "home\_site.com", "home\_site1.com" e "home\_site2.com" apontam ao mesmo endereço IP, por exemplo 192.1.2.3.
 
 ```4d
  $host:=GetHTTPField("Host")

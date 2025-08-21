@@ -15,6 +15,12 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 	- New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).  
 	- [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
 
+#### Behavior changes
+
+- Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe. 
+- Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore. 
+- Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
+
 
 ## 4D 20 R10
 
@@ -283,18 +289,18 @@ See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/up
 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
-|BoringSSL|9295969|**20 R10**|Used for QUIC|
+|BoringSSL|0697c88|**21**|Used for QUIC|
 |CEF|131|20 R8|Chromium 6778|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |ICU|73.2|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
 |libldap|2.6.7|20 R6||
 |libsasl|2.1.28|20||
-|Liblsquic|4.2.0|**20 R10**|Used for QUIC|
-|Libuv |11.51.0|**20 R10**|Used for QUIC|
+|Liblsquic|4.2.0|20 R10|Used for QUIC|
+|Libuv |1.51.0|**21**|Used for QUIC|
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
-|ngtcp2|1.13|**20 R10**|Used for QUIC|
-|OpenSSL|3.3.2|20 R7|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
+|ngtcp2|1.14.0|**21**|Used for QUIC|
+|OpenSSL|3.5.2|**21**||
 |PDFWriter|4.5.11|20 R3||
 |PHP|8.2.4|20||
 |SpreadJS|17.1.0|20 R7|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features|

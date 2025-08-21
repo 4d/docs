@@ -3,33 +3,32 @@ id: object-get-data-source-formula
 title: OBJECT Get data source formula
 ---
 
-<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( {* ;} *object* ) : *formula*<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( {* ;} *object* ) : 4D.Formula<!-- END REF-->
 
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 
-| Paramètres | Type                       |                             | Description                                                                                                        |
-| ---------- | -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| \*         | Opérateur                  | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable   |
-| object     | any                        | &#8594; | Object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
-| formula    | 4D.Formula | &#8592; | Formula associated with the form object (`Null` if no formula is associated)                    |
+| Paramètres | Type                       |                             | Description                                                                                                             |
+| ---------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur                  | &#8594; | Si spécifié, *object* est un nom d'objet (chaîne)<br/>Si omis, *object* est un champ ou une variable |
+| object     | any                        | &#8594; | Nom d'objet (si \* est spécifié) ou<br/>Champ ou variable (si \* est omis)        |
+| formula    | 4D.Formula | &#8592; | Formule associée à l'objet de formulaire (`Null` si aucune formule n'est associée)                   |
 
 <!-- END REF-->
 
 ## Description
 
-The **OBJECT Get data source formula** command<!--REF #_command_.OBJECT Get data source formula.Summary--> returns the formula (if any) associated object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+La commande **OBJECT Get data source formula**<!--REF #_command_.OBJECT Get data source formula.Summary--> renvoie la formule (le cas échéant) associée à l'objet ou aux objets désigné(s) par les paramètres *object* et *\**.<!-- END REF-->
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre facultatif *\**, vous indiquez que le paramètre *object* est un nom d'objet (chaîne de caractères). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *object* est une variable ou un champ. Dans ce cas, vous passez un champ ou une référence de variable en non une chaîne de caractères (champ ou variable objet de formulaire).
 
-When a formula is associated with a form object, it acts as the object's data source at runtime.
+Lorsqu'une formule est associée à un objet de formulaire, elle agit comme source de données de l'objet au moment de l'exécution.
 
-If this command is applied to an object with no custom formula assigned, it returns the automatically assigned [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).\
-If the object does not exist or does not support formulas, it returns `Null`.\
-If the object does not exist or does not support formulas, it returns `Null`.
+Si cette commande est appliquée à un objet auquel aucune formule personnalisée n'a été attribuée, elle renvoie la [variable dynamique de formulaire](../FormObjects/properties_Object.md#dynamic-variables) attribuée automatiquement.\
+Si l'objet n'existe pas ou ne prend pas en charge les formules, il renvoie `Null`.
 
 ## Exemple
 
-You want check what formula (if any) is bound to an object:
+Vous voulez vérifier quelle formule (s'il y en a) est liée à un objet :
 
 ```4d
 $formula:=OBJECT Get data source formula(*; "myInput")

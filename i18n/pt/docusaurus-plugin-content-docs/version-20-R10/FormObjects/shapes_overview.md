@@ -7,9 +7,9 @@ As formas são [objetos estáticos](formObjects_overview.md#active-and-static-ob
 
 As formas 4D suportam as seguintes formas básicas:
 
-- retângulos
-- linhas
-- ovals
+ - retângulos
+ - linhas
+ - ovals
 
 ## Retângulo
 

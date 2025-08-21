@@ -163,8 +163,8 @@ Les options **A chaque : Enregistrement ou Étiquette** permettent de spécifier
 Vous pouvez utiliser des formulaires table dédiés et des méthodes projet pour imprimer des étiquettes contenant des variables calculées. Cet exemple simple explique comment configurer l'ensemble.
 
 1. Dans le formulaire table à utiliser, ajoutez le(s) champ(s) et variable(s) souhaité(s).
-  Ici, dans le formulaire table nommé "labels", nous ajoutons la variable *myVar* :
-  ![](../assets/en/Desktop/label-example1.png)
+   Ici, dans le formulaire table nommé "labels", nous ajoutons la variable *myVar* :
+   ![](../assets/en/Desktop/label-example1.png)
 
 2. Créez une méthode projet nommée *setMyVar* contenant le code suivant :
 
@@ -183,10 +183,10 @@ Vous pouvez utiliser des formulaires table dédiés et des méthodes projet pour
 ```
 
 5. Ouvrez l'éditeur d'étiquettes et sélectionnez votre formulaire :
-  ![](../assets/en/Desktop/label-example2.png)
+   ![](../assets/en/Desktop/label-example2.png)
 
 6. Dans la page Planche, sélectionnez la méthode :
-  ![](../assets/en/Desktop/label-example3.png)
+   ![](../assets/en/Desktop/label-example3.png)
 
 Vous pouvez alors imprimer vos étiquettes :
 ![](../assets/en/Desktop/label-example4.png)

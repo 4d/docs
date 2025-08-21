@@ -84,7 +84,7 @@ Este ejemplo compara los resultados obtenidos dependiendo del separador “actua
 
 ## Ver también 
 
-[Bool](bool.md)  
+[Bool](../commands/bool)  
 [GET SYSTEM FORMAT](get-system-format.md)  
 [String](string.md)  
 

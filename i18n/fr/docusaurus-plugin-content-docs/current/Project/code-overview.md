@@ -160,7 +160,7 @@ Pour modifier globalement les attributs des méthodes :
 1. Dans la [Page Méthodes](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.en.html) de l'explorateur 4D, développez le menu des options, puis choisissez la commande **Modifier attributs globalement...**. La boîte de dialogue **Attributs des méthodes** apparaît.
 
 2. Dans la zone “Méthodes à modifier”, saisissez une chaîne de caractères permettant de désigner les méthodes que vous souhaitez modifier globalement.
-  La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
+   La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
 
 Utilisez le caractère générique @ pour vous aider à définir des groupes de méthodes :
 

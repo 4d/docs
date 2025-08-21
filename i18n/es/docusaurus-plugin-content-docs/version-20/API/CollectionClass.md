@@ -3410,7 +3410,7 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 | Parámetros                 | Tipo                                   |    | Descripción                                       |
 | -------------------------- | -------------------------------------- |:--:| ------------------------------------------------- |
 | value                      | Text, Number, Object, Collection, Date | -> | Valor(es) a insertar al principio de la colección |
-| Resultado                  | Real                                   | <- | Colección que contiene los elementos añadidos     |
+| Resultado                  | Collection                             | <- | Colección que contiene los elementos añadidos     |
 |<!-- END REF -->
 
 

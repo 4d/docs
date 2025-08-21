@@ -642,9 +642,6 @@ This option enables the preemptive mode for your application's web server code w
 
 The following settings are still supported but rely on deprecated features or technologies. It is usually recommended to keep default values. 
 
-#### Allow database access through 4DSYNC URLs
-
-This option controls the support of HTTP synchronization requests containing deprecated */4DSYNC* URLs. 
 
 #### Session IP Address Validation
 

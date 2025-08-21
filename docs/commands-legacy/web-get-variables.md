@@ -24,7 +24,7 @@ This command gets the value for all the variables which can be included in HTML 
 
 This command is valid regardless of the type of URL or form (POST or GET method) sent to the Web server.
 
-This command can be called, if necessary, in the [QR SET DESTINATION](qr-set-destination.md) or any other 4D method resulting from a form submission.
+This command can be called, if necessary, in the [On Web Connection](./on-web-connection-database-method.md) database method) or any other 4D method resulting from a form submission.
 
 ### About Web forms and their associated actions 
 

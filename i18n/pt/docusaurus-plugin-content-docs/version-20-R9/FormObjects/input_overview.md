@@ -44,6 +44,6 @@ Você pode gerenciar os dados com os [métodos](Concepts/methods.md) objeto ou f
 
 Também pode representar expressões de campo e variáveis nos seus formulários utilizando objectos alternativos, mais particularmente:
 
-- Você pode exibir e inserir dados dos campos do banco de dados diretamente nas colunas das [List boxes do tipo de seleção](listbox_overview.md).
-- Você pode representar um campo de lista ou variável diretamente em um formulário usando objetos [Popup Menus/Listas suspensas](dropdownList_Overview.md) e [Combo Boxes](comboBox_overview.md).
-- Você pode representar uma expressão booleana como um [objeto de seleção](checkbox_overview.md) ou como um [botão de opção](radio_overview.md).
+ - Você pode exibir e inserir dados dos campos do banco de dados diretamente nas colunas das [List boxes do tipo de seleção](listbox_overview.md).
+ - Você pode representar um campo de lista ou variável diretamente em um formulário usando objetos [Popup Menus/Listas suspensas](dropdownList_Overview.md) e [Combo Boxes](comboBox_overview.md).
+ - Você pode representar uma expressão booleana como um [objeto de seleção](checkbox_overview.md) ou como um [botão de opção](radio_overview.md).

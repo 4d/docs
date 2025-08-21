@@ -33,13 +33,13 @@ Il peut arriver que la mémoire soit insuffisante pour créer une BLOB. Ou, lors
 
 Ce sont généralement les types d'erreurs les plus difficiles à trouver. À l'exception des erreurs de frappe, tous les types d'erreurs énumérés ci-dessus sont, dans une certaine mesure, couverts par l'expression "erreur de conception ou de logique". Utilisez le [débogueur](debugger.md) pour les détecter. Par exemple :
 
-- Une *erreur de syntaxe* peut se produire lorsque vous essayez d'utiliser une variable qui n'est pas encore initialisée.
-- Une *erreur au niveau de l'Environnement* peut se produire lorsque vous essayez d'ouvrir un document, parce que le nom de ce document est reçu par une sous-routine qui n'a pas obtenu la bonne valeur comme paramètre.
+ - Une *erreur de syntaxe* peut se produire lorsque vous essayez d'utiliser une variable qui n'est pas encore initialisée.
+ - Une *erreur au niveau de l'Environnement* peut se produire lorsque vous essayez d'ouvrir un document, parce que le nom de ce document est reçu par une sous-routine qui n'a pas obtenu la bonne valeur comme paramètre.
 
 Les erreurs de conception ou de logique comprennent également des situations telles que :
 
-- Un enregistrement n'est pas correctement mis à jour parce que, en appelant `SAVE RECORD`, vous avez oublié de tester d'abord si l'enregistrement était verrouillé ou non.
-- Une méthode ne fait pas exactement ce que vous attendez, car la présence d'un paramètre facultatif n'est pas testée.
+ - Un enregistrement n'est pas correctement mis à jour parce que, en appelant `SAVE RECORD`, vous avez oublié de tester d'abord si l'enregistrement était verrouillé ou non.
+ - Une méthode ne fait pas exactement ce que vous attendez, car la présence d'un paramètre facultatif n'est pas testée.
 
 Parfois, le morceau de code qui affiche l'erreur peut être différent du code qui est en fait à l'origine du problème.
 
@@ -55,8 +55,8 @@ Pour trouver rapidement l'origine du problème, rouvrez la version interprétée
 
 La fenêtre d'erreur de syntaxe apparaît automatiquement lorsque l'exécution d'une méthode est interrompue. Cela peut se produire lorsque :
 
-- une erreur empêche la poursuite de l'exécution du code
-- la méthode produit une fausse assertion (voir la commande `ASSERT`)
+ - une erreur empêche la poursuite de l'exécution du code
+ - la méthode produit une fausse assertion (voir la commande `ASSERT`)
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -64,11 +64,11 @@ La zone de texte supérieure affiche un message décrivant l'erreur. La zone de 
 
 La fenêtre d'erreur de syntaxe propose plusieurs options :
 
-- **Modifier** : arrête l'exécution de toutes les méthodes. 4D bascule en mode Développement et la méthode comportant l'erreur s'ouvre dans l'éditeur de code, ce qui vous permet de la corriger. Utilisez cette option lorsque vous reconnaissez immédiatement l'erreur et que vous pouvez la corriger sans autre forme de procès.
+ - **Modifier** : arrête l'exécution de toutes les méthodes. 4D bascule en mode Développement et la méthode comportant l'erreur s'ouvre dans l'éditeur de code, ce qui vous permet de la corriger. Utilisez cette option lorsque vous reconnaissez immédiatement l'erreur et que vous pouvez la corriger sans autre forme de procès.
 
-- **Trace** : Accède au mode Trace/Debugger. La fenêtre du [débogueur](debugger.md) s'affiche. Si la ligne en cours n'a été exécutée que partiellement, vous devrez peut-être cliquer plusieurs fois sur le bouton **Trace**.
+ - **Trace** : Accède au mode Trace/Debugger. La fenêtre du [débogueur](debugger.md) s'affiche. Si la ligne en cours n'a été exécutée que partiellement, vous devrez peut-être cliquer plusieurs fois sur le bouton **Trace**.
 
-- **Continuer** : L'exécution se poursuit. La ligne contenant l'erreur peut être partiellement exécutée, selon l'endroit où se trouve l'erreur. Continuez avec prudence : l'erreur peut empêcher le reste de votre méthode de s'exécuter correctement. Nous vous recommandons de cliquer sur **Continuer** uniquement si l'erreur se trouve dans un appel trivial (tel que `SET WINDOW TITLE`) qui n'empêche pas d'exécuter et de tester le reste de votre code.
+ - **Continuer** : L'exécution se poursuit. La ligne contenant l'erreur peut être partiellement exécutée, selon l'endroit où se trouve l'erreur. Continuez avec prudence : l'erreur peut empêcher le reste de votre méthode de s'exécuter correctement. Nous vous recommandons de cliquer sur **Continuer** uniquement si l'erreur se trouve dans un appel trivial (tel que `SET WINDOW TITLE`) qui n'empêche pas d'exécuter et de tester le reste de votre code.
 
 :::tip
 
@@ -76,14 +76,14 @@ To ignore an error that occurs repeatedly (for example, in loops), you can turn 
 
 :::
 
-- **Abort**: Stops method execution and returns to the state before the method started executing:
+ - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-    - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
-    - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
+     - Si une méthode formulaire ou méthode objet s'exécute en réponse à un événement, elle est arrêtée et vous revenez au formulaire.
+     - Si la méthode est exécutée à partir de l'environnement de l'application, vous revenez à cet environnement.
 
-- **Copy**: Copies the debugging information into the clipboard. L'info décrit l'environnement interne de l'erreur (numéro, composant interne, etc.). Elles sont formatées sous forme de texte tabulé.
+ - **Copy**: Copies the debugging information into the clipboard. L'info décrit l'environnement interne de l'erreur (numéro, composant interne, etc.). Elles sont formatées sous forme de texte tabulé.
 
-- **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
+ - **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
 
 ## Débogueur
 

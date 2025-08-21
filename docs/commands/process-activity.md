@@ -19,6 +19,7 @@ displayed_sidebar: docs
 |Release|Changes|
 |---|---|
 |20 R7|Support of *sessionID* parameter|
+|21|Support of web user sessions|
 
 </details>
 
@@ -55,10 +56,9 @@ When executed on 4D in remote or local mode, `Process activity` always returns t
 
 The "sessions" property contains a collection of objects describing all running sessions on the server. For a description of session object properties, please refer to the [`Session info`](session-info.md) command.
 
-:::note Notes 
+:::note 
 
-- You can get the object of a session using the [Session](session.md) command.
-- `Process activity` returns remote client sessions, stored procedure session and rest sessions but not Web sessions (limitation).  
+You can get the object of a session using the [Session](session.md) command.
 
 :::
 

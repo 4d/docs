@@ -24,14 +24,14 @@ title: VP SET BINDING PATH
 
 ## Description
 
-The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
+La commande `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->lie un attribut du contexte de données d'une feuille à *rangeObj*<!-- END REF -->. Après avoir défini un contexte de données en utilisant la méthode [SET DATA CONTEXT](vp-set-data-context.md). Lors du chargement, si le contexte de données contient l'attribut, la valeur de *dataContextAttribute* est automatiquement affichée dans les cellules de *rangeObj*.
 
 Dans *rangeObj*, passez un objet qui est soit une plage de cellules, soit une plage combinée de cellules.
 
-- If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
-- If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
+- Si *rangeObj* est une plage avec plusieurs cellules, la commande lie l'attribut à la première cellule de la plage.
+- Si *rangeObj* contient plusieurs plages de cellules, la commande lie l'attribut à la première cellule de chaque plage.
 
-In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
+Dans *dataContextAttribute*, passez le nom de l'attribut à lier à *rangeObj*. Si *dataContextAttribute* est une chaîne vide, la fonction supprime la liaison courante.
 
 > Les attributs de type collection ne sont pas pris en charge. Lorsque vous passez le nom d'un attribut de collection, la commande ne fait rien.
 

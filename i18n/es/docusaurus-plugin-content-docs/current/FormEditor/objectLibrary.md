@@ -7,8 +7,8 @@ Puede utilizar librerías de objetos en sus formularios. Una librería de objeto
 
 4D propone dos tipos de librerías de objetos:
 
-- una librería de objetos estándar y preconfigurada, disponible en todos sus proyectos.
-- librerías de objetos personalizadas, que puede utilizar para almacenar sus objetos formularios favoritos o formularios proyecto completos.
+ - una librería de objetos estándar y preconfigurada, disponible en todos sus proyectos.
+ - librerías de objetos personalizadas, que puede utilizar para almacenar sus objetos formularios favoritos o formularios proyecto completos.
 
 ## Utilización de la librería de objetos estándar
 
@@ -21,12 +21,12 @@ La librería se muestra en una ventana aparte:
 
 La ventana tiene las siguientes características principales:
 
-- Área de vista previa con mensajes de ayuda: el área central muestra una vista previa de cada objeto. Puede pasar el ratón por encima de un objeto para obtener información sobre el mismo en un mensaje de ayuda.
-- Puede filtrar el contenido de la ventana utilizando el menú **Categorías**:
+ - Área de vista previa con mensajes de ayuda: el área central muestra una vista previa de cada objeto. Puede pasar el ratón por encima de un objeto para obtener información sobre el mismo en un mensaje de ayuda.
+ - Puede filtrar el contenido de la ventana utilizando el menú **Categorías**:
     ![](../assets/en/FormEditor/library3.png)
-- Para utilizar un objeto de la librería en su formulario, puede:
-    - hacer clic derecho en un objeto y seleccionar **Copiar** en el menú contextual
-    - or drag and drop the object from the library The object is then added to the form.
+ - Para utilizar un objeto de la librería en su formulario, puede:
+     - hacer clic derecho en un objeto y seleccionar **Copiar** en el menú contextual
+     - or drag and drop the object from the library The object is then added to the form.
 
 Esta librería es de sólo lectura. Si desea editar objetos por defecto o crear su propia librería de objetos preconfigurados o formularios proyecto, deberá crear una librería de objetos personalizada (ver abajo).
 
@@ -56,13 +56,13 @@ Una determinada librería de objetos sólo puede ser abierta por un proyecto a l
 
 Para abrir una librería de objetos personalizada, seleccione el comando **Abrir>Librería de objetos...** en el menú **Archivo** o en la barra de herramientas de 4D. Aparece una caja de diálogo estándar para abrir archivos, que le permite seleccionar la librería de objetos que desea abrir. Puede seleccionar los siguientes tipos de archivos:
 
-- **.4dproject**
-- **.4dz**
+ - **.4dproject**
+ - **.4dz**
 
 De hecho, las librerías de objetos personalizadas son proyectos 4D clásicos. Sólo se exponen las siguientes partes de un proyecto cuando se abre como librería:
 
-- formularios proyecto
-- páginas formulario 1
+ - formularios proyecto
+ - páginas formulario 1
 
 ### Crear una librería de objetos
 
@@ -74,10 +74,10 @@ Las principales operaciones están disponibles en el menú contextual o en el me
 
 ![](../assets/en/FormEditor/library5.png)
 
-- **Cortar** o **Copiar** al portapapeles
-- **Pegar** un objeto del tablero portapapeles
-- **Borrar** - elimina el objeto de la librería
-- **Renombrar** - aparece una caja de diálogo que permite cambiar el nombre del elemento. Tenga en cuenta que los nombres de los objetos deben ser únicos en una librería.
+ - **Cortar** o **Copiar** al portapapeles
+ - **Pegar** un objeto del tablero portapapeles
+ - **Borrar** - elimina el objeto de la librería
+ - **Renombrar** - aparece una caja de diálogo que permite cambiar el nombre del elemento. Tenga en cuenta que los nombres de los objetos deben ser únicos en una librería.
 
 Puede colocar objetos individuales (incluidos los subformularios) o conjuntos de objetos en una librería de objetos. Cada objeto o conjunto se agrupa en un solo elemento:
 
@@ -93,9 +93,9 @@ El uso de copiar y pegar o arrastrar y soltar con ciertos objetos de librería t
 
 A continuación se muestra una lista de objetos dependientes que se pegarán en la librería al mismo tiempo que el objeto principal que los utiliza (cuando corresponda):
 
-- Listas
-- Formatos/Filtros
-- Imágenes
-- Mensajes de ayuda (asociados a un campo)
-- Métodos objeto
+ - Listas
+ - Formatos/Filtros
+ - Imágenes
+ - Mensajes de ayuda (asociados a un campo)
+ - Métodos objeto
 

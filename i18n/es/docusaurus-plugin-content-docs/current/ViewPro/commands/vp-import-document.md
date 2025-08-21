@@ -5,10 +5,10 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                                |
-| ----------- | ------------------------------------------------------------- |
-| 20 R9       | Trigger of callback function after custom functions completed |
-| 20 R2       | Soporte de documentos .sjs                    |
+| Lanzamiento | Modificaciones                                                                            |
+| ----------- | ----------------------------------------------------------------------------------------- |
+| 20 R9       | Activación de la función de retrollamada una vez finalizadas las funciones personalizadas |
+| 20 R2       | Soporte de documentos .sjs                                                |
 
 </details>
 
@@ -32,10 +32,10 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 En *filePath*, pase la ruta y el nombre del documento a importar. Se soportan los siguientes formatos:
 
-- Los documentos 4D View Pro (extensión ".4vp")
-- Microsoft Excel (extensión ".xlsx")
-- documentos texto (extension ".txt", ".csv", el documento debe estar en utf-8)
-- [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
+ - Los documentos 4D View Pro (extensión ".4vp")
+ - Microsoft Excel (extensión ".xlsx")
+ - documentos texto (extension ".txt", ".csv", el documento debe estar en utf-8)
+ - [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
 
 Si la extensión del documento no es una extensión reconocida, como `.4vp` o `.xlsx`, el documento se considera un documento texto. Debe pasar una ruta completa, a menos que el documento se encuentre en el mismo nivel que la carpeta Project, en cuyo caso puede pasar sólo su nombre.
 
@@ -61,7 +61,7 @@ El parámetro opcional *paramObj* permite definir las propiedades del documento 
 |              | openMode                  | integer                     | <li>0 (normal): modo abierto normal, sin perezoso (lazy) e incremental. Al abrir un archivo, la interfaz de usuario y el evento de interfaz de usuario podrían actualizarse y responder en momentos específicos.</li><li>1 (lazy): modo de apertura lazy. Al abrir el archivo, sólo se cargará directamente la hoja activa. Las demás hojas sólo se cargarán cuando se vayan a utilizar.</li><li>2 (incremental): modo de apertura incremental. Al abrir un archivo, la interfaz de usuario y el evento de interfaz de usuario podrían actualizarse y responder directamente.</li> |
 | excelOptions |                           | object                      | Sólo Excel (opcional) - Opciones para exportar Excel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |              | includeStyles             | boolean                     | Si se incluye el estilo al importar, por defecto true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|              | includeFormulas           | boolean                     | Whether to include the formula when importing, default true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|              | includeFormulas           | boolean                     | Si se incluye la fórmula al importar, por defecto true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |              | frozenColumnsAsRowHeaders | boolean                     | Whether to treat the frozen columns as row headers when importing, default false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |              | frozenRowsAsColumnHeaders | boolean                     | Whether to treat the frozen rows as column headers when importing, default false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |              | fullRecalc                | boolean                     | Si calcular después de cargar los datos json, false por defecto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -73,11 +73,11 @@ El parámetro opcional *paramObj* permite definir las propiedades del documento 
 
 :::note Notas
 
-- La importación de archivos en formatos .xslx, .csv y .sjs es **asíncrona**. Con estos formatos, debe utilizar el atributo `formula` si desea iniciar una acción al final del procesamiento del documento.
-- Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar su configuración con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
-- Para más información sobre el formato CSV y los valores separados por delimitadores en general, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
-- Se recomienda utilizar el objeto *excelOptions* al importar en formato ".xlsx". Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
-- La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+ - La importación de archivos en formatos .xslx, .csv y .sjs es **asíncrona**. Con estos formatos, debe utilizar el atributo `formula` si desea iniciar una acción al final del procesamiento del documento.
+ - Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar su configuración con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
+ - Para más información sobre el formato CSV y los valores separados por delimitadores en general, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+ - Se recomienda utilizar el objeto *excelOptions* al importar en formato ".xlsx". Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
+ - La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 :::
 

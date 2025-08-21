@@ -11,8 +11,8 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions
 
 セッションは、ユーザーが正常にログインした後に開かれます (後述参照)。
 
-> - 4D Server 上では、開かれる RESTセッションにつき、4Dクライアントライセンスが 1 消費されます。<br/>
-> - シングルユーザーの 4D では、テスト目的で RESTセッションを 3つまで開くことができます。
+>  - 4D Server 上では、開かれる RESTセッションにつき、4Dクライアントライセンスが 1 消費されます。<br/>
+>  - シングルユーザーの 4D では、テスト目的で RESTセッションを 3つまで開くことができます。
 
 ## 強制ログインモード
 
@@ -25,7 +25,7 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions
 ユーザーログインシーケンスは次のとおりです:
 
 1. 最初の RESTコール (たとえば Qodlyページコール) では、"ゲスト" Webユーザーセッションが作成されます。 [記述的RESTリクエスト](#記述的restリクエスト) 以外のリクエストを実行する権限も、ライセンスの消費もありません。\
-    記述的RESTリクエスト は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。 この場合、それらは "ゲスト" セッションを介して処理されます。
+   記述的RESTリクエスト は、ライセンスを消費する Webユーザーセッションが開かれていなくても、常にサーバーで処理されます。 この場合、それらは "ゲスト" セッションを介して処理されます。
 
 2. 事前に用意した [`authentify()` 関数](#function-authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。 `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。
 
@@ -43,9 +43,9 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions
 
 記述的RESTリクエストは、ライセンスを必要としない Webユーザーセッション ("ゲスト" セッション) で処理することができます。 記述的RESTリクエストとは以下のものを指します:
 
-- [`/rest/$catalog`]($catalog.md) リクエスト (例: `/rest/$catalog/$all`) - 利用可能なデータクラスへのアクセス
-- `/rest/$catalog/authentify` - ユーザーログインに使用されるデータストア関数
-- `/rest/$getWebForm` - Qodlyページのレンダリング
+ - [`/rest/$catalog`]($catalog.md) リクエスト (例: `/rest/$catalog/$all`) - 利用可能なデータクラスへのアクセス
+ - `/rest/$catalog/authentify` - ユーザーログインに使用されるデータストア関数
+ - `/rest/$getWebForm` - Qodlyページのレンダリング
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
@@ -73,8 +73,8 @@ exposed Function authentify({params : type}) {-> result : type}
 
 この関数は 2部構成で書かれる必要があります:
 
-- RESTリクエストの送信元を識別し、認証するためのコード
-- 認証が成功した場合、セッションに適切な権限を割り当てる [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) の呼び出し
+ - RESTリクエストの送信元を識別し、認証するためのコード
+ - 認証が成功した場合、セッションに適切な権限を割り当てる [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) の呼び出し
 
 関数が [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出さない場合、権限が割り当てられないため、ライセンスも消費されず、後続の記述的でない RESTリクエストは拒否されます。
 

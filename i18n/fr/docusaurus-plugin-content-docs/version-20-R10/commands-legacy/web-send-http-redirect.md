@@ -35,7 +35,7 @@ Vous pouvez utiliser cet URL pour effectuer, à l’aide de pages statiques, des
 ![](../assets/en/commands/pict38648.fr.png)
 
 L’action POST “/4dcgi/rech” a été associée à la zone de texte et aux boutons **OK** et **Annuler**.  
-Dans la [QR SET DESTINATION](qr-set-destination.md), placez les instructions suivantes :
+Dans la [On Web Connection](./on-web-connection-database-method.md), placez les instructions suivantes :
 
 ```4d
  Case of

@@ -11,7 +11,7 @@ title: VP SET CURRENT SHEET
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
+|sheet|Integer|->|Index of the new current sheet|<!-- END REF -->
 
 ## Description
 

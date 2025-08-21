@@ -92,7 +92,7 @@ Se quiser obter uma data de um atributo de objeto, qualquer que seja a opção a
 
 ## Ver também 
 
-[Bool](bool.md)  
+[Bool](../commands/bool)  
 [String](string.md)  
 
 ## Propriedades

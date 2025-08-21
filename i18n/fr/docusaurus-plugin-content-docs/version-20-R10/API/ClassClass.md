@@ -160,8 +160,8 @@ Vous pouvez passer un ou plusieurs paramètres optionnels *param*, qui seront pa
 
 :::note Notes
 
-- Si `.new()` est appelé sur une [classe singleton](../Concepts/classes.md#singleton-classes) qui a déjà été instanciée, l'instance singleton est retournée, et non une nouvelle instance.
-- Si `.new()` est appelé sur une classe inexistante, une erreur est retournée.
+ - Si `.new()` est appelé sur une [classe singleton](../Concepts/classes.md#singleton-classes) qui a déjà été instanciée, l'instance singleton est retournée, et non une nouvelle instance.
+ - Si `.new()` est appelé sur une classe inexistante, une erreur est retournée.
 
 :::
 

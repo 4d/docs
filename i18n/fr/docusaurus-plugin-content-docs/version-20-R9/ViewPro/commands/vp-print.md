@@ -22,14 +22,14 @@ Passez la zone 4D View Pro à imprimer dans *vpAreaName*. La commande ouvrira la
 
 > Les propriétés définies dans la fenêtre de dialogue d'impression concernent le papier de l'imprimante, ce ne sont pas les propriétés d'impression de la zone 4D View Pro. Les propriétés définies dans la fenêtre de dialogue d'impression concernent le papier de l'imprimante, ce ne sont pas les propriétés d'impression de la zone 4D View Pro. Il est fortement recommandé que les propriétés de l'imprimante et de la zone 4D View Pro correspondent, sinon le document imprimé pourrait ne pas correspondre à vos attentes.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet to print (counting begins at 0). S'il est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou le workbook entier à l'aide des constantes suivantes :
+Dans le paramètre optionnel *sheet*, vous pouvez définir une feuille (sheet) spécifique à imprimer (la numérotation démarre à zéro). S'il est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou le workbook entier à l'aide des constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`
 
-> * 4D View Pro areas can only be printed with the `VP PRINT` command.
-> * Commands from the 4D **Printing** language theme are not supported by `VP PRINT`.
-> * Cette commande est destinée à l'impression individuelle par l'utilisateur final. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](vp-export-document.md) method.
+> * Les zones 4D View Pro ne peuvent être imprimées qu'avec la commande `VP PRINT`.
+> * Les commandes du thème de langage 4D **Printing** ne sont pas supportées par `VP PRINT`.
+> * Cette commande est destinée à l'impression individuelle par l'utilisateur final. Pour les tâches d'impression automatisés, il est conseillé d'exporter la zone 4D View Pro en format PDF avec la méthode [VP EXPORT DOCUMENT] (vp-export-document.md).
 
 ## Exemple
 

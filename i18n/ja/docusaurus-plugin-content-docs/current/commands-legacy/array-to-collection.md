@@ -5,7 +5,7 @@ slug: /commands/array-to-collection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION** ( *collection* ; *array* {; *propertyName*}{; *array2* ; *propertyName2* ; ... ; *arrayN* ; *propertyNameN*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION** ( *...collection* ; *...array* {; *...propertyName*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -160,7 +160,7 @@ Para la configuración global de los atributos del método:
 1. En la página [Métodos](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.en.html) del Explorador 4D, despliegue el menú de opciones y elija el comando **Modificar atributos globalmente...**. Aparece la caja de diálogo **Atributos de los métodos**.
 
 2. En el área "Nombre del método coincidente:", introduzca una cadena que le permita designar los métodos que desea modificar globalmente.
-  La cadena de caracteres se utiliza como criterio de búsqueda para los nombres de los métodos.
+   La cadena de caracteres se utiliza como criterio de búsqueda para los nombres de los métodos.
 
 Utilice el caracter comodín @ para ayudar a definir los grupos de métodos:
 

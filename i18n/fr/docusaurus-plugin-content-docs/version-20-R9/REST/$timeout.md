@@ -7,11 +7,11 @@ Définit le nombre de secondes pour enregistrer un ensemble d'entités dans le c
 
 ## Description
 
-Si un ensemble d'entités est supprimé puis recréé à l'aide de <code>$method=entityset</code> avec <a href="$savedfilter.md"><code>$savedfilter</code></a>, le nouveau timeout par défaut est de 10 minutes, quel que soit le timeout que vous avez défini lors de l'appel de <code>$timeout</code>. Par exemple, si vous souhaitez définir le timeout sur 20 minutes, passez 1200. Par défaut, le timeout est de deux (2) heures.
+Pour définir un délai d'attente pour un ensemble d'entités que vous créez en utilisant [`$method=entityset`]($method.md#methodentityset), indiquez le nombre de secondes dans `$timeout`. Par exemple, si vous souhaitez définir le timeout sur 20 minutes, passez 1200. Par défaut, le timeout est de deux (2) heures.
 
 Une fois le timeout défini, chaque fois qu'un ensemble d'entités est appelé (via `$method=entityset`), le timeout est recalculé en fonction de l'heure courante et du timeout.
 
-If an entity set is removed and then recreated using `$method=entityset` along with [`$savedfilter`]($savedfilter.md), the new default timeout is 10 minutes regardless of the timeout you defined when calling `$timeout`.
+Si un ensemble d'entités est supprimé puis recréé en utilisant `$method=entityset` avec [`$savedfilter`]($savedfilter.md), le nouveau délai d'attente par défaut est de 10 minutes, quel que soit le délai d'attente défini lors de l'appel à `$timeout`.
 
 ## Exemple
 

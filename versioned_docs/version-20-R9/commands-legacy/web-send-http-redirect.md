@@ -36,7 +36,7 @@ You can use this command to execute custom requests in 4D by using static pages.
 
 **Note:** The POST action “/4dcgi/rech” has been associated to the text area and to the **OK** and **Cancel** buttons.
 
-In the [QR SET DESTINATION](qr-set-destination.md), you insert the following code:
+In the [On Web Connection](./on-web-connection-database-method.md), you insert the following code:
 
 ```4d
  Case of

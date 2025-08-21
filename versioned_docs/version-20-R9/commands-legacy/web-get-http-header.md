@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->The **WEB GET HTTP HEADER** command returns either a string or two arrays, containing the HTTP header used for the currently processed request.<!-- END REF-->
 
-This command can be called from within any method (*On Web Authentication Database Method* or [QR SET DESTINATION](qr-set-destination.md), method called by "*/4DACTION*"...) executed in a Web process. 
+This command can be called from within any method (*On Web Authentication Database Method* or [On Web Connection](./on-web-connection-database-method.md), method called by "*/4DACTION*"...) executed in a Web process. 
 
 * **First syntax:** **WEB GET HTTP HEADER** **(header)**
 When this syntax is used, the result returned in the *header* variable is as follows: 
@@ -83,7 +83,7 @@ The following method allows getting any HTTP request header field content:
  $cookie:=GetHTTPField("Cookie")
 ```
 
-* You can send different pages according to the language set in the browser (for example in the [QR SET DESTINATION](qr-set-destination.md)):
+* You can send different pages according to the language set in the browser (for example in the [On Web Connection](./on-web-connection-database-method.md)):
 
 ```4d
  $language:=GetHTTPField("Accept-Language")
@@ -99,7 +99,7 @@ The following method allows getting any HTTP request header field content:
 
 **Note:** Web browsers allow defining several languages by default. They are listed in the "Accept-Language" field, separated by a ";". Their priority is defined according to their position within the string; therefore it is a good idea to test language positions in the string.
 
-* Here is an example of virtual hosts (for example, in the [QR SET DESTINATION](qr-set-destination.md)). The following names "home\_site.com", "home\_site1.com" and "home\_site2.com" are directed towards the same IP address, for example 192.1.2.3.
+* Here is an example of virtual hosts (for example, in the [On Web Connection](./on-web-connection-database-method.md)). The following names "home\_site.com", "home\_site1.com" and "home\_site2.com" are directed towards the same IP address, for example 192.1.2.3.
 
 ```4d
  $host:=GetHTTPField("Host")

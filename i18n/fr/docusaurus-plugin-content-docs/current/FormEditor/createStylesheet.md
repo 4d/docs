@@ -86,7 +86,14 @@ Le nom de l'objet correspond au **sélecteur d'ID** CSS et définit un objet sp�
 
 Désignez l'objet avec le caractère "#" avant le nom de l'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels :
+:::note
+
+The object name corresponds to the JSON [object name](../FormObjects/properties_Object.md#object-name) property of form objects.
+
+:::
+
+In the following example, the text of the object with the name "okButton" will be displayed
+in Helvetica Neue font, with a size of 20 pixels:
 
 ```
 #okButton {
@@ -120,7 +127,7 @@ text.center {
 }
 ```
 
-Dans la description du formulaire 4D, vous associez un nom de classe à un objet à l'aide de l'attribut `class`. Cet attribut contient un ou plusieurs noms de "class", séparés par un espace :
+In the 4D form description, you associate a class name to an object using the [CSS Class](../FormObjects/properties_Object.md#css-class) attribute. Cet attribut contient un ou plusieurs noms de "class", séparés par un espace :
 
 ```
 class: "okButtons important"       
@@ -313,7 +320,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 1. Le formulaire 4D chargera d’abord le fichier CSS par défaut `/SOURCES/styleSheets.css`.
 2. Il chargera ensuite le fichier CSS pour la plate-forme courante `/SOURCES/styleSheets__mac.css` ou `/SOURCES/styleSheets_windows.css`.
-3. S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :
+3. If a [Form property "css" attribute](../FormEditor/properties_FormProperties.md#css) is defined in the 4D form, it will then load specific CSS file(s). Vous pouvez passer :
 
 - un fichier pour les deux plates-formes :
 

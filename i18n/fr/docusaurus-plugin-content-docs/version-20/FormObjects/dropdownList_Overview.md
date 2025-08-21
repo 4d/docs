@@ -121,7 +121,7 @@ Vous devez sélectionner chaque événement que vous testez dans votre Au cas o�
 
 ### Utiliser une énumération
 
-Si vous voulez utiliser une liste déroulante pour gérer les valeurs d'une zone de saisie (champ ou variable), 4D vous permet de référencer le champ ou la variable directement comme [source de données](properties_Object.md#variable-or-expression) de la liste déroulante. Cette possibilité facilite la gestion des champs/variables énuméré(e) s.
+Si vous voulez utiliser une liste déroulante pour gérer les valeurs d'une zone de saisie (champ ou variable), 4D vous permet de référencer le champ ou la variable directement comme [source de données](properties_Object.md#variable-or-expression) de la liste déroulante. Cette possibilité facilite la gestion des champs/variables énuméré(e)s.
 
 Par exemple, dans le cas d'un champ "Couleur" qui ne peut contenir que les valeurs "Blanc", "Bleu", "Vert" ou "Rouge", il est possible de créer une liste contenant ces valeurs et de l'associer à une liste déroulante qui fait référence au champ "Couleur" 4D. 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
 > Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable.

@@ -22,7 +22,7 @@ Change string devolve uma string resultante de modificar os caracteres, na cadei
 
 Se *novo* é uma cadeia vazia (""), Change string devolve *fonte* sem mudanças. Change string sempre devolve uma cadeia do mesmo tamanho que *fonte*. Se *posiçao* é inferior ou superior à longitude de *fonte*, Change string devolve *fonte*.  
   
-Change string é diferente de [Insert string](../commands/insert-string.md) em que substitui os caracteres em lugar de inseri-los.
+Change string é diferente de [Insert string](../commands/insert-string) em que substitui os caracteres em lugar de inseri-los.
 
 ## Exemplo 
 
@@ -36,8 +36,8 @@ O seguinte exemplo ilustra o uso de Change string. Os resultados são atribuído
 ## Ver também 
 
 [Delete string](../commands/delete-string.md)  
-[Insert string](../commands/insert-string.md)  
-[Replace string](../commands/replace-string.md)  
+[Insert string](../commands/insert-string)  
+[Replace string](../commands/replace-string)  
 
 ## Propriedades
 

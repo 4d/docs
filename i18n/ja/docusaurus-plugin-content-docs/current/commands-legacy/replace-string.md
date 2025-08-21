@@ -69,9 +69,9 @@ Replace stringの使用例を次に示します。結果を変数*vtResult*に�
 
 ## 参照 
 
-[Change string](../commands/change-string.md)  
+[Change string](../commands/change-string)  
 [Delete string](../commands/delete-string.md)  
-[Insert string](../commands/insert-string.md)  
+[Insert string](../commands/insert-string)  
 
 ## プロパティ
 

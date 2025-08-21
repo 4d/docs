@@ -98,7 +98,7 @@ En el caso de un list box basado en la selección actual de una tabla, cualquier
 
 En este tipo de list box, cada columna debe estar asociada a una expresión. El contenido de cada línea se evalúa entonces por elemento de la colección o por entidad de la selección de entidades.
 
-Cada elemento de la colección o cada entidad está disponible como un objeto al que se puede acceder a través de la palabra clave [This](../Concepts/classes.md#this). A column expression can be a property path, a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). La expresión también puede ser un método proyecto, una variable o un elemento de array.
+Cada elemento de la colección o cada entidad está disponible como un objeto al que se puede acceder a través de la palabra clave [This](../Concepts/classes.md#this). A column expression can be a property path, a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (o `This.value` en caso de una colección de valores escalares). La expresión también puede ser un método proyecto, una variable o un elemento de array.
 
 Cuando la fuente de datos es una entity selection, cualquier modificación realizada del lado del list box se guarda automáticamente en la base de datos. Por otro lado, las modificaciones realizadas en la base de datos son visibles en el list box después de que se hayan recargado las entidades modificadas.
 
@@ -1002,9 +1002,9 @@ Estos atributos pueden utilizarse para controlar el rango de valores de entrada.
 
 El atributo behavior ofrece variaciones a la representación estándar de los valores. En 4D v15, se ofrece una única variación:
 
-| Atributo | Valor(es) disponible(s) | valueType(s) | Descripción                                                                                                                                                                                             |
-| -------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates                                                   | integer                         | Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
+| Atributo | Valor(es) disponible(s) | valueType(s) | Descripción                                                                                                                                                                                                                    |
+| -------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| behavior | threeStates                                                   | integer                         | Representa un valor numérico como una casilla de verificación de tres estados.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
 ```4d
  C_OBJECT($ob3)

@@ -4,7 +4,7 @@ title: WP Get attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* ; *attribName* ; *attribValue* {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<br/>**WP Get attributes** ( *targetObj* ; *attribColl* ) : Object<!-- END REF-->
+<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* ; *...attribName* ; *...attribValue* ) : Object<br/>**WP Get attributes** ( *targetObj* ; *attribColl* ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Get attributes.Params-->
 
@@ -45,7 +45,7 @@ If there are different values for the same attribute in the element passed as a 
 
 ## Ejemplo 1
 
-You want to get the background color of the selected area:
+Desea obtener el color de fondo del área seleccionada:
 
 ```4d
  $range:=WP Selection range(*;"WParea")

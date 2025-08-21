@@ -12,15 +12,15 @@ title: VP REMOVE SHEET
 | Paramètres | Type    |    | Description                             |                  |
 | ---------- | ------- | -- | --------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| index      | Integer | -> | Index of the sheet to remove            | <!-- END REF --> |
+| index      | Integer | -> | Index de la feuille à supprimer         | <!-- END REF --> |
 
 ## Description
 
-The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->removes the sheet with the specified *index* from the document loaded in *vpAreaName*<!-- END REF -->.
+La commande `VP REMOVE SHEET` <!-- REF #_method_.VP REMOVE SHEET.Summary -->supprime la feuille avec l'*index* spécifié du document chargé dans *vpAreaName*<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-In *index*, pass the index of the sheet to remove. If the passed *index* does not exist, the command does nothing.
+Dans *index*, passez l'index de la feuille à supprimer. Si le *index* passé n'existe pas, la commande ne fait rien.
 
 > La numérotation démarre à 0.
 

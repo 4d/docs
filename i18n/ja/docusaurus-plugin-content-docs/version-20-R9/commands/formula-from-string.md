@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Longint ) : 4D.Function<!-- END REF -->
+<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Integer ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
 
 | 引数            | 型                           |                             | 説明                                                                                            |
 | ------------- | --------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
 | formulaString | Text                        | &#8594; | オブジェクトとして返されるフォーミュラ文字列                                                                        |
-| context       | Number                      | &#8594; | `sk execute in current database` (デフォルト) または `sk execute in host database` |
+| context       | Integer                     | &#8594; | `sk execute in current database` (デフォルト) または `sk execute in host database` |
 | 戻り値           | 4D.Function | &#8592; | フォーミュラを格納しているネイティブなオブジェクト                                                                     |
 
 <!-- END REF -->

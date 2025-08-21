@@ -104,7 +104,7 @@ Vous devez imprimer dans une zone de 400 pixels de large un texte d’un maximum
 
 ## Voir aussi 
 
-[Split string](../commands/split-string.md)  
+[Split string](../commands/split-string  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 

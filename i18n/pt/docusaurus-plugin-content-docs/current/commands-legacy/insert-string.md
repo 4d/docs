@@ -24,7 +24,7 @@ displayed_sidebar: docs
   
  Se *posiçao* for maior que o comprimento de *fonte*, então a cadeia *inserir* é adicionada ao final de *fonte* . Se *posiçao* for inferior a um (1), então a cadeia *inserir* é adicionada antes de *fonte* .  
   
-Insert string é diferente de [Change string](../commands/change-string.md) pois esta função insere caracteres ao invés de substituí-los.
+Insert string é diferente de [Change string](../commands/change-string) pois esta função insere caracteres ao invés de substituí-los.
 
 ## Exemplo 
 
@@ -38,9 +38,9 @@ O seguinte exemplo ilustra o uso de Insert string. Os resultados são atribuído
 
 ## Ver também 
 
-[Change string](../commands/change-string.md)  
+[Change string](../commands/change-string)  
 [Delete string](../commands/delete-string.md)  
-[Replace string](../commands/replace-string.md)  
+[Replace string](../commands/replace-string)  
 
 ## Propriedades
 

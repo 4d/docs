@@ -160,7 +160,7 @@ For more information, refer to [4D SQL engine implementation](https://doc.4d.com
 1. On the [Methods Page](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.en.html) of the 4D Explorer, expand the options menu, then choose the **Batch setting of attributes...** command. "メソッド属性" ダイアログボックスが表示されます:
 
 2. "一致するメソッド名" エリアに属性を一括設定するメソッドを指定するための名前条件を入力します。
-  入力した文字列を使用してメソッド名が検索されます。
+   入力した文字列を使用してメソッド名が検索されます。
 
 "@" をワイルドカード文字として使用し、メソッドグループを選択できます:
 

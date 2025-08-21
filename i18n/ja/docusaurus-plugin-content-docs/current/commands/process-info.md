@@ -44,7 +44,7 @@ displayed_sidebar: docs
 | type             | Integer                                 | 実行中のプロセスタイプ。 取り得る値: 以下を参照のこと 取り得る値: 以下を参照のこと |
 | visible          | Boolean                                 | 表示であればTrue、それ以外はFalse                                                        |
 
-- "state" の取り得る値:
+ - "state" の取り得る値:
 
 | 定数                        | 値    |
 | ------------------------- | ---- |
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 | Waiting for internal flag | 4    |
 | Paused                    | 5    |
 
-- "type" の取り得る値:
+ - "type" の取り得る値:
 
 | 定数                            | 値   |
 | ----------------------------- | --- |

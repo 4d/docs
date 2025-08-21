@@ -27,7 +27,7 @@ var $result:=$helper.prompt("Could you describe it?")
 
 ### fromFile()
 
-**fromFile**(*imageFile* : 4D.File) : OpenAIVisionHelper
+**fromFile**(*imageFile* : 4D.File): OpenAIVisionHelper
 
 | Parámetros  | Tipo                                        | Descripción                                                |
 | ----------- | ------------------------------------------- | ---------------------------------------------------------- |

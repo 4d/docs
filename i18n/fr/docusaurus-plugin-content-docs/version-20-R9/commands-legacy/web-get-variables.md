@@ -22,7 +22,7 @@ Cette commande récupère la valeur de toutes les variables pouvant être inclus
 **Note :** Dans le cas des cases à cocher, le nom de la variable et sa valeur ne sont retournés que si la case est effectivement cochée. 
 
 La commande fonctionne quel que soit le type d’URL ou de formulaire (méthode POST ou GET) envoyé au serveur Web.   
-Cette commande peut être appelée, selon les besoins, dans la [QR SET DESTINATION](qr-set-destination.md) ou toute autre méthode 4D qui résulte de la soumission d’un formulaire.
+Cette commande peut être appelée, selon les besoins, dans la [On Web Connection](./on-web-connection-database-method.md) ou toute autre méthode 4D qui résulte de la soumission d’un formulaire.
 
 ### Précisions sur les formulaires Web et les actions associées 
 

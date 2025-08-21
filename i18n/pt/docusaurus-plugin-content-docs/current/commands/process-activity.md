@@ -21,6 +21,7 @@ displayed_sidebar: docs
 | Release | Mudanças                         |
 | ------- | -------------------------------- |
 | 20 R7   | Suporte do parâmetro *sessionID* |
+| 21      | Support of web user sessions     |
 
 </details>
 
@@ -54,10 +55,9 @@ Quando executado em 4D em modo remoto ou local, `Processar atividade` sempre ret
 
 A propriedade "sessões" contém uma coleção de objetos descrevendo todas as sessões em execução no servidor. Para obter uma descrição das propriedades do objeto de sessão, consulte o comando [`Session info`](session-info.md).
 
-:::note Notes
+:::note
 
-- Você pode obter o objeto de uma sessão usando o comando [Session](session.md).
-- 'Process ativity' retorna sessões de cliente remoto, sessão de procedimento armazenado e sessões repouso, mas não sessões Web (limitação).
+Você pode obter o objeto de uma sessão usando o comando [Session](session.md).
 
 :::
 

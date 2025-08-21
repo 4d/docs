@@ -16,14 +16,14 @@ title: VP Get formula
 
 ## Description
 
-The `VP Get formula` command <!-- REF #_method_.VP Get formula.Summary -->retrieves the formula from a designated cell range<!-- END REF -->.
+La commande `VP Get formula` <!-- REF #_method_.VP Get formula.Summary -->récupère la formule à partir d'une plage de cellules désignées<!-- END REF -->.
 
-In *rangeObj*, pass a range whose formula you want to retrieve. If *rangeObj* designates multiple cells or multiple ranges, the formula of the first cell is returned. If *rangeObj* is a cell that does not contain a formula, the method returns an empty string.
+Dans *rangeObj*, passez une plage dont vous voulez récupérer la formule. Si *rangeObj* désigne plusieurs cellules ou plusieurs plages, la formule de la première cellule est retournée. Si *rangeObj* est une cellule qui ne contient pas de formule, la méthode retourne une chaîne vide.
 
 ## Exemple
 
 ```4d
-  //set a formula
+  //définir une formule
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
  
 $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"

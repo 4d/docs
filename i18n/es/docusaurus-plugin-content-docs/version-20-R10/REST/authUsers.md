@@ -11,8 +11,8 @@ Cuando se abre una sesión de usuario web, puede manejarla a través del objeto 
 
 Una sesión se abre después de que el usuario haya iniciado sesión correctamente (ver más abajo).
 
-> - En 4D Server, para abrir una sesión REST es necesario disponer de una licencia gratuita cliente 4D.<br/>
-> - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
+>  - En 4D Server, para abrir una sesión REST es necesario disponer de una licencia gratuita cliente 4D.<br/>
+>  - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
 
 ## Forzar el modo de inicio de sesión
 
@@ -25,9 +25,9 @@ El modo de inicio de sesión heredado basado en el método base `On REST Authent
 La secuencia de inicio de sesión del usuario es la siguiente:
 
 1. En la primera llamada REST (para una llamada a página Qodly, por ejemplo), se crea una sesión usuario web "invitado". No tiene privilegios, no tiene derechos para ejecutar solicitudes que no sean [peticiones REST descriptivas](#descriptive-rest-requests), no tiene consumo de licencia.\
-    Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia.\
-    Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia.\
-    Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
+   Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia.\
+   Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia.\
+   Las solicitudes REST descriptivas siempre son procesadas por el servidor, aunque no se abra ninguna sesión de usuario web que utilice una licencia. En este caso, son procesados a través de sesiones "invitado".
 
 2. Usted llama a su [función `authentify()`](#function-authentify) (creada previamente), en la que revisa las credenciales de usuario y llama a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) con los privilegios apropiados. `authentify()` debe ser una [función datastore class](../ORDA/ordaClasses.md#datastore-class).
 
@@ -45,9 +45,9 @@ Todas las demás peticiones REST (manejando datos o ejecutando una función) só
 
 Las peticiones REST descriptivas pueden procesarse en sesiones de usuario web que no requieren licencias (sesiones "invitado"). Estas peticiones son:
 
-- peticiones [`/rest/$catalog`]($catalog.md) (por ejemplo, `/rest/$catalog/$all`) - acceso a las dataclasse disponibles
-- `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
-- `/rest/$getWebForm` - la renderización de una página Qodly
+ - peticiones [`/rest/$catalog`]($catalog.md) (por ejemplo, `/rest/$catalog/$all`) - acceso a las dataclasse disponibles
+ - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
+ - `/rest/$getWebForm` - la renderización de una página Qodly
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
@@ -74,8 +74,8 @@ La función puede recibir cualquier información de autenticación o contextual 
 
 Esta función debe contener dos partes:
 
-- algún código para identificar y autenticar al remitente de la petición REST,
-- si la autenticación tiene éxito, una llamada a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) que asigna los privilegios apropiados a la sesión.
+ - algún código para identificar y autenticar al remitente de la petición REST,
+ - si la autenticación tiene éxito, una llamada a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) que asigna los privilegios apropiados a la sesión.
 
 Si la función no llama a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no se asignan privilegios, no se consume ninguna licencia y las solicitudes REST no descriptivas posteriores son rechazadas.
 

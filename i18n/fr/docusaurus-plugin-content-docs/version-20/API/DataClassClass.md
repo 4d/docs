@@ -1164,7 +1164,7 @@ Pour rendre possible ce type de recherche, ORDA prend en charge une syntaxe spé
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
 ```
 
-**{x}** indique à ORDA de créer une autre référence pour l'attribut relationnel. Le moteur de recherches effectuera alors toutes les opérations internes nécessaires. Notez que **x** peut être n'importe quel nombre **à l'exception de 0**: {1}, ou {2}, ou {1540}... ORDA a simplement besoin d'une référence unique dans la recherche pour chaque class index.
+**{x}** indique à ORDA de créer une autre référence pour l'attribut relationnel. Le moteur de recherches effectuera alors toutes les opérations internes nécessaires. Notez que **x** peut être n'importe quel nombre **à l'exception de 0**: {1}, ou {2}, ou {1540}... ORDA a simplement besoin d'une référence unique dans la recherche pour chaque index de classe.
 
 Dans notre exemple, cela pourrait donner :
 

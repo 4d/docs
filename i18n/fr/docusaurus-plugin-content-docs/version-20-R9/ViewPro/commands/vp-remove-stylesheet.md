@@ -17,20 +17,20 @@ title: VP REMOVE STYLESHEET
 
 ## Description
 
-The `VP REMOVE STYLESHEET` command <!-- REF #_method_.VP REMOVE STYLESHEET.Summary -->removes the style sheet passed in the *styleName* from the *vpAreaName*<!-- END REF -->.
+La commande `VP REMOVE STYLESHEET` <!-- REF #_method_.VP REMOVE STYLESHEET.Summary -->supprime la feuille de style passée dans le *styleName* du *vpAreaName*<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Pass the style sheet to remove in the *styleName* parameter.
+Passez la feuille de style à supprimer dans le paramètre *styleName*.
 
-You can define where to remove the style in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
+Vous pouvez définir, dans le paramètre optionnel *sheet*, l'emplacement dans lequel vous souhaitez supprimer le style, à l'aide de l'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`
 
 ## Exemple
 
-To remove the *GreenDashDotStyle* style object from the current sheet:
+Pour supprimer l'objet de style *GreenDashDotStyle* de la feuille courante :
 
 ```4d
 VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")

@@ -22,16 +22,16 @@ title: VP REMOVE TABLE COLUMNS
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | tableName  | Text    | -> | Nom de table                                                                |                  |
 | column     | Integer | -> | Indice dans la table de la colonne de départ à supprimer                    |                  |
-| count      | Integer | -> | Number of columns to remove (must be >0)                 |                  |
+| count      | Integer | -> | Nombre de colonnes à supprimer (doit être >0)            |                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
 ## Description
 
-The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. La commande supprime les valeurs et les styles.
+La commande `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->supprime une ou *count* colonne(s) dans la *tableName* spécifiée à l'index *column* spécifié<!-- END REF -->. La commande supprime les valeurs et les styles.
 
-The command removes columns from the *tableName* table, NOT from the sheet. Le nombre total de colonnes de la feuille n'est pas impacté par la commande. Les données présentes à droite de la table (le cas échéant) sont automatiquement déplacées à gauche en fonction du nombre de colonnes supprimées.
+La commande supprime les colonnes de la table *tableName*, PAS de la feuille. Le nombre total de colonnes de la feuille n'est pas impacté par la commande. Les données présentes à droite de la table (le cas échéant) sont automatiquement déplacées à gauche en fonction du nombre de colonnes supprimées.
 
-If *tableName* does not exist, nothing happens.
+Si *tableName* n'existe pas, rien ne se passe.
 
 ## Exemple
 

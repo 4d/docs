@@ -17,6 +17,13 @@ Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/
 
 - [**Liste des bugs corrigés**](https://bugs.4d.com/fixes?version=20.7): liste de tous les bugs qui ont été corrigés dans 4D 20.7 LTS.
 
+:::caution Version minimale du client pour 4D Server 20.7 et suivant
+
+Pour des raisons internes, la version des clients distants se connectant à 4D Server 20.7 et suivantes doit être au moins 4D 20.7.
+
+:::
+
+
 
 
 ## 4D 20.6 LTS
@@ -25,7 +32,7 @@ Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/
 
 :::info Applications d'évaluation
 
-À partir de la "nightly build" **101734**, la boîte de dialogue Build application comporte une nouvelle option permettant de construire des applications d'évaluation. Voir la [description dans la documentation 4D Rx](../../../docs/Desktop/building.md#evaluation-application).
+À partir de la "nightly build" **101734**, la boîte de dialogue Build application comporte une nouvelle option permettant de construire des applications d'évaluation. Voir la [description dans la documentation 4D Rx](../../../docs/Desktop/building#evaluation-application).
 
 :::
 

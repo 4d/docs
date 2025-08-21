@@ -42,8 +42,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get indexed string](../commands/get-indexed-string.md)  
-[Get string resource](get-string-resource.md)  
+[Get indexed string](../commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 
 ## プロパティ

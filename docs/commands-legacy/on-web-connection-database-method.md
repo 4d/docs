@@ -20,10 +20,7 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.On Web Connection database method.Summary-->The **On Web Connection database method** can be called in the following cases:
-
-* the web server receives a request beginning with the *4DCGI* URL.<!-- END REF-->
-* the web server receives an invalid request.
+<!--REF #_command_.On Web Connection database method.Summary-->The **On Web Connection database method** can be called when the web server receives an invalid request.<!-- END REF-->
 
 
  The request should have previously been accepted by the [On Web Authentication database method](on-web-authentication-database-method.md) (if it exists) and the web server must be launched.
@@ -69,19 +66,8 @@ Note that you are free to use this parameter at your convenience. 4D simply igno
 * **Header and body of the HTTP request**  
 The second parameter (*$http*) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your On Web Connection database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.  
     
-With Safari running on Mac OS, you may receive a header similar to this:  
-    
-```  
-GET /favicon.ico HTTP/1.1Referer: http://123.45.67.89/4dcgi/testUser-Agent:  Mozilla/5.0 (Macintosh; U; Intel macOS; fr-fr) AppleWebKit/523.10.3  (KHTML, like Gecko) Version/3.0.4 Safari/523.10Cache-Control: max-age=0Accept: */*Accept-Language: fr-frAccept-Encoding: gzip, deflateConnection: keep-aliveHost: 123.45.67.89  
-```  
-    
-With Microsoft Internet Explorer 8 running on Windows, you may receive a header similar to this:  
-
-```  
-GET / HTTP/1.1Accept: image/jpeg, application/x-ms-application,  image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap,  application/vnd.ms-powerpoint, application/vnd.ms-excel,  application/msword, */*Accept-Language: fr-FRUser-Agent:  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2;  .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center  PC 6.0; .NET4.0C)Accept-Encoding: gzip, deflateHost: 123.45.67.89Connection: Keep-Alive  
-```  
-    
- If your application uses this information, it is up to you to parse the header and the body.  
+  
+If your application uses this information, it is up to you to parse the header and the body.  
     
 **Note:** For performance reasons, the size of this data cannot be more than 32 KB. Beyond this, they are truncated by the 4D HTTP server.
 * **IP address of the web client**  
@@ -97,12 +83,11 @@ The *$user* and *$pw* parameters receive the user name and password entered by t
 
 ## On Web Connection Database Method Calls 
 
-The **On Web Connection database method** can be used as the entry point for the 4D Web server, either using the special *4DCGI* URL, or using customized command URLs.
+The **On Web Connection database method** can be used as the entry point for the 4D Web server using customized command URLs.
 
 **Warning:** Calling a 4D command that displays an interface element ([DIALOG](../commands/dialog.md), [ALERT](alert.md), etc.) ends the method processing.
 
 The **On Web Connection database method** is therefore called in the following cases:
 
-* When 4D receives the */4DCGI* URL. The database method is called with the */4DCGI/<action>* URL in *$url*.
-* When a Web page is called with a URL of type *<path>/<file>* is not found. The database method is called with the URL.
-* When a Web page is called with a URL of type *<file>/* and no home page has been defined by default. The database method is called with the URL.
+* When a Web page called with a URL of type `<path>/<file>` is not found. The database method is called with the URL.
+* When a Web page is called with a URL of type `<file>/` and no home page has been defined by default. The database method is called with the URL.

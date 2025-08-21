@@ -28,13 +28,13 @@ La commande `VP RESIZE TABLE` <!-- REF #_method_.VP RESIZE TABLE.Summary -->modi
 
 Les règles suivantes s'appliquent :
 
-- Les en-têtes doivent rester dans la même ligne et la plage de table résultante doit chevaucher la plage de table originale.
-- If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](vp-set-data-context.md), otherwise they are deleted.
-- Si la table se développe sur des cellules contenant des données :
-    - si des lignes sont ajoutées, les données sont supprimées,
-    - si des colonnes sont ajoutées, les données sont conservées et affichées dans de nouvelles colonnes.
+ - Les en-têtes doivent rester dans la même ligne et la plage de table résultante doit chevaucher la plage de table originale.
+ - If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](vp-set-data-context.md), otherwise they are deleted.
+ - Si la table se développe sur des cellules contenant des données :
+     - si des lignes sont ajoutées, les données sont supprimées,
+     - si des colonnes sont ajoutées, les données sont conservées et affichées dans de nouvelles colonnes.
 
-If *tableName* does not exist, nothing happens.
+Si *tableName* n'existe pas, rien ne se passe.
 
 ## Exemple
 

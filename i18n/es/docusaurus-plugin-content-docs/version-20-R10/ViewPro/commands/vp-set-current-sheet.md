@@ -9,10 +9,10 @@ title: VP SET CURRENT SHEET
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                  |                  |
-| ---------- | ------- | --------------------------- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro |                  |
-| sheet      | Integer | <- | Índice de la nueva hoja actual               | <!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción                                  |                  |
+| ---------- | ------- | -- | -------------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |                  |
+| sheet      | Integer | -> | Índice de la nueva hoja actual               | <!-- END REF --> |
 
 ## Descripción
 

@@ -107,7 +107,7 @@ Vous souhaitez obtenir tous les process liés à la session courante :
 
 ## Voir également
 
-[`Process info`](process-info.md)
-[`Session info`](session-info.md)
-[Session storage](session-storage.md)\
-[WEB Get server info](../commands-legacy/web-get-server-info.md)
+[`Process info`](process-info.md)\
+[`Session info`](session-info.md)\
+[`Session storage`](session-storage.md)\
+[`WEB Get server info`](../commands-legacy/web-get-server-info.md)

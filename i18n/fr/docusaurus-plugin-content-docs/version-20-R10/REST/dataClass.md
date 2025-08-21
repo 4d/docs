@@ -24,7 +24,7 @@ Renvoie toutes les données (par défaut, les 100 premières entités) pour une 
 
 ### Description
 
-When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
+Lorsque vous appelez ce paramètre dans votre requête REST, les 100 premières entités sont renvoyées, sauf si vous avez spécifié une valeur en utilisant [`$top/$limit`]($top_$limit.md).
 
 Voici une description des données retournées :
 
@@ -44,7 +44,7 @@ Chaque entité contient les propriétés suivantes :
 | __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                                           |
 | __STAMP     | Number | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
+Si vous souhaitez spécifier les attributs à renvoyer, définissez-les en utilisant la syntaxe suivante [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
 `GET  /rest/Company/name,address`
 
@@ -141,9 +141,9 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. La clé est la valeur de l'attribut défini comme clé primaire pour votre dataclass. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
 
-For more information about the data returned, refer to [\{dataClass\}](#dataclass).
+Pour plus d'informations sur les données renvoyées, voir [\{dataClass}](#dataclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
+Si vous souhaitez spécifier les attributs à renvoyer, définissez-les en utilisant la syntaxe suivante [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
 `GET  /rest/Company(1)/name,address`
 
@@ -190,7 +190,7 @@ En passant la *dataClass* et un *attribut* avec une valeur, vous pouvez récupé
 
 `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
+Si vous souhaitez spécifier les attributs à renvoyer, définissez-les en utilisant la syntaxe suivante [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
 `GET  /rest/Company:companyCode(Acme001)/name,address`
 

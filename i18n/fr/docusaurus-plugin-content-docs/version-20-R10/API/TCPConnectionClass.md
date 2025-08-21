@@ -196,8 +196,8 @@ Toutes les fonctions de callback reçoivent deux paramètres :
 1. `onConnection` est déclenchée lorsque la connexion est établie.
 2. `onData` est déclenchée à chaque fois que des données sont reçues.
 3. `onShutdown` ou `onError` est déclenchée :
-   - `onShutdown` est déclenchée lorsque la connexion est correctement fermée.
-   - `onError` est déclenchée en cas d'erreur.
+    - `onShutdown` est déclenchée lorsque la connexion est correctement fermée.
+    - `onError` est déclenchée en cas d'erreur.
 4. `onTerminate` est toujours déclenchée juste avant que la TCPConnection soit libérée (la connexion est fermée ou une erreur s'est produite).
 
 #### Objet TCPEvent

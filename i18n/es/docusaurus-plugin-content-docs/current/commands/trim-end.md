@@ -25,17 +25,17 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **Trim end** command <!--REF #_command_.Trim end.Summary--> removes **whitespace** from the end of the *aString* parameter and returns a new string, without modifying the original one.<!-- END REF--> **Whitespace** includes spaces, tabs, LF, CR, etc.
+El comando **Trim end** <!--REF #_command_.Trim end.Summary--> elimina el **whitespace** del final del parámetro *aString* y devuelve una nueva cadena, sin modificar la original.<!-- END REF--> **Whitespace** incluyen espacios, tabulaciones, LF, CR, etc.
 
-To return a new string with whitespace trimmed from both ends, use [`Trim`](./trim.md). To return a new string with whitespace trimmed from the beginning of *aString*, use [`Trim start`](./trim-start.md).
+Para devolver una nueva cadena con los whitespace recortados de ambos extremos, utilice [`Trim`](./trim.md). Para devolver una nueva cadena con los espacios en blanco recortados del principio de *aString*, utilice [`Trim start`](./trim-start.md).
 
-In the *aString* parameter, you can pass any text expression. Será dejado sin tocar por el comando.
+En el parámetro *aString*, puede pasar cualquier expresión de tipo texto. Será dejado sin tocar por el comando.
 
-The command returns the trimmed version of the *aString* string. If there is no whitespace at the end of *aString*, the returned string is identical as the one passed in parameter.
+El comando devuelve la versión recortada de la cadena *aString*. Si no hay espacios en blanco al final de *aString*, la cadena devuelta es idéntica a la pasada como parámetro.
 
 :::note
 
-This command is based upon the [`trimEnd` Ecmascript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trimend).
+Este comando se basa en la especificación [`trimEnd` Ecmascript](https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trimend).
 
 :::
 

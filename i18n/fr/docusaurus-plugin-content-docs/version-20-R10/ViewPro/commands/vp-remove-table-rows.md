@@ -13,7 +13,7 @@ title: VP REMOVE TABLE ROWS
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
 
-**VP REMOVE TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *sheet* : Integer }}} )<!-- END REF -->
+**VP REMOVE TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *sheet* : Integer }} )<!-- END REF -->
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Params -->
 
@@ -33,7 +33,7 @@ This command removes rows from the *tableName* table, NOT from the sheet. Le nom
 
 If the *tableName* table is bound to a [data context](vp-set-data-context.md), the command removes element(s) from the collection.
 
-If *tableName* does not exist, nothing happens.
+Si *tableName* n'existe pas, rien ne se passe.
 
 ## Exemple
 

@@ -48,7 +48,7 @@ The following parameters can be used in the callback function:
 
 ## Ejemplo 1
 
-You want to execute commands and empty the command buffer:
+Desea ejecutar comandos y vaciar el búfer de comandos:
 
 ```4d
 // Definir valores de texto en celdas específicas

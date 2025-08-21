@@ -7,36 +7,36 @@ title: OBJECT SET DATA SOURCE FORMULA
 
 <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Params-->
 
-| Paramètres | Type                       |                             | Description                                                                                                        |
-| ---------- | -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| \*         | Opérateur                  | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable   |
-| object     | any                        | &#8594; | Object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
-| formula    | 4D.Formula | &#8594; | Formula to assign as the data source                                                                               |
+| Paramètres | Type                       |                             | Description                                                                                                             |
+| ---------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur                  | &#8594; | Si spécifié, *object* est un nom d'objet (chaîne)<br/>Si omis, *object* est un champ ou une variable |
+| object     | any                        | &#8594; | Nom d'objet (si \* est spécifié) ou<br/>Champ ou variable (si \* est omis)        |
+| formula    | 4D.Formula | &#8594; | Formule à assigner comme source de données                                                                              |
 
 <!-- END REF-->
 
 ## Description
 
-The **OBJECT SET DATA SOURCE FORMULA** command <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary-->  assigns a formula (expression) as the data source of the object(s) designated by the *object* and *\** parameters <!-- END REF-->. The formula must be provided as a [`4D.Formula`](../API/FunctionClass.md#formula-objects) object.
+La commande **OBJECT SET DATA SOURCE FORMULA** <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary--> assigne une formule (expression) comme source de données de l'objet ou des objets désigné(s) par les paramètres *object* et *\** <!-- END REF-->. La formule doit être fournie sous la forme d'un objet [`4D.Formula`](../API/FunctionClass.md#formula-objects).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre facultatif *\**, vous indiquez que le paramètre *object* est un nom d'objet (chaîne de caractères). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *object* est une variable ou un champ. Dans ce cas, vous passez un champ ou une référence de variable en non une chaîne de caractères (champ ou variable objet de formulaire).
 
-The *formula* acts as the source from which the object retrieves its value at runtime. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
+La *formule* agit comme la source à partir de laquelle l'objet récupère sa valeur à l'exécution. Cela permet un comportement dynamique, tel que des valeurs calculées, un affichage conditionnel ou des données dérivées.
 
-If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to a [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).
+Si *Null* est passé dans le paramètre *formula*, 4D réinitialisera la source de données de l'objet à une [variable dynamique de formulaire](../FormObjects/properties_Object.md#dynamic-variables).
 
-If the command is applied to an object that does not exist or cannot support formulas, it does nothing.
+Si la commande est appliquée à un objet qui n'existe pas ou qui ne prend pas en charge les formules, elle ne fait rien.
 
 :::note Notes
 
-- The formula is executed in the context of the form that owns the object. When working with nested forms (e.g., subforms), ensure that the formula is defined and assigned in the appropriate form context to avoid unexpected behavior.
-- If you assign a formula to an input object or any object with a modifiable value, make sure that the formula is [**assignable**](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+- La formule est exécutée dans le contexte du formulaire qui possède l'objet. Lorsque vous travaillez avec des formulaires imbriqués (par exemple, des sous-formulaires), assurez-vous que la formule est définie et affectée dans le contexte de formulaire approprié afin d'éviter tout comportement inattendu.
+- Si vous assignez une formule à un objet de saisie ou à tout objet dont la valeur est modifiable, assurez-vous que l'expression est [**assignable**](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
 
 :::
 
 ## Exemple
 
-You want to dynamically bind an input to an expression. For example, show the discounted price based on a base price and a discount value:
+Vous souhaitez lier dynamiquement un objet de saisie à une expression. Par exemple, afficher le prix réduit en fonction d'un prix de base et d'une valeur de réduction :
 
 ```4d
 

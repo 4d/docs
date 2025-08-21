@@ -141,15 +141,15 @@ La fonction `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 </details>
 
-<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : any ; *keywords* :  Object ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
-| Paramètres | Type       |    | Description                                                                                                                                                                   |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | Collection | -> | Collection de chaînes : IDs uniques des messages (texte)<br/>Texte : ID unique d'un message<br/>Numérique (IMAP all) : Tous les messages de la boîte sélectionnée |
-| keywords   | Object     | -> | Mots-clés de flags à ajouter                                                                                                                                                  |
-| Résultat   | Object     | <- | Statut de l'opération addFlags|<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                                                                                                                   |
+| ---------- | ------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs     | any    | -> | Collection de chaînes : IDs uniques des messages (texte)<br/>Texte : ID unique d'un message<br/>Numérique (IMAP all) : Tous les messages de la boîte sélectionnée |
+| keywords   | Object | -> | Mots-clés de flags à ajouter                                                                                                                                                  |
+| Résultat   | Object | <- | Statut de l'opération addFlags|<!-- END REF -->
 
 |
 
@@ -1361,15 +1361,15 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 </details>
 
-<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : any ; *keywords* :  Object ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
-| Paramètres | Type       |    | Description                                                                                                                                                                   |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | Collection | -> | Collection de chaînes : IDs uniques des messages (texte)<br/>Texte : ID unique d'un message<br/>Numérique (IMAP all) : Tous les messages de la boîte sélectionnée |
-| keywords   | Object     | -> | Mots-clés de flags à supprimer                                                                                                                                                |
-| Résultat   | Object     | <- | Statut de l'opération removeFlags|<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                                                                                                                   |
+| ---------- | ------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs     | any    | -> | Collection de chaînes : IDs uniques des messages (texte)<br/>Texte : ID unique d'un message<br/>Numérique (IMAP all) : Tous les messages de la boîte sélectionnée |
+| keywords   | Object | -> | Mots-clés de flags à supprimer                                                                                                                                                |
+| Résultat   | Object | <- | Statut de l'opération removeFlags|<!-- END REF -->
 
 |
 

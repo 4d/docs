@@ -16,7 +16,7 @@ Les sessions Web permettent de :
 
 Les sessions Web sont utilisées par :
 
-- les [applications web](gettingStarted.md) qui envoient des requêtes http,
+- [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
 - les appels à l'[API REST](../REST/authUsers.md), qui sont effectués par les [datastores distants](../ORDA/remoteDatastores.md) et les [pages Qodly](qodly-studio.md).
 
 ## Activation des sessions web

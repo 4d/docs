@@ -3,15 +3,15 @@ id: labels
 title: Etiquetas
 ---
 
-4D’s Label editor provides a convenient way to print a wide variety of labels. Con ella, puede hacer lo siguiente:
+El editor de etiquetas de 4D ofrece una forma práctica de imprimir una amplia variedad de etiquetas. Con ella, puede hacer lo siguiente:
 
-- Design labels for mailings, file folders and file cards, and for many other needs,
-- Create and insert decorative items in label templates,
-- Specify the font, font size, and style to be used for the labels,
-- Specify the number of labels across and down on each page,
+- Diseñe etiquetas para envíos postales, carpetas y fichas de archivo, y para muchas otras necesidades,
+- crear e insertar elementos decorativos en un modelo de etiquetas,
+- definir la fuente, el tamaño y el estilo de la fuente a utilizar para las etiquetas,
+- determinar el número de etiquetas a lo largo y a lo ancho de cada página,
 - Especifique cuántas etiquetas imprimir por registro,
 - Especifique los márgenes de la página de etiquetas,
-- Designate a method to execute when printing each label or record,
+- designar un método a ejecutar al imprimir cada etiqueta o registro,
 - Crea una vista previa e imprime las etiquetas.
 
 :::note
@@ -20,110 +20,110 @@ Las etiquetas también se pueden crear usando el [Editor de formularios](../Form
 
 :::
 
-You use the Label editor to create, format, and print labels. The Label editor contains settings for designing labels and positioning the labels on label paper. For example, when producing mailing labels, you might want a label design that includes the person’s first and last name on the first line, the street address on the second line, and so on. As part of the design, the Label editor enables you to specify the number of labels on the page and the margins of the label paper so that the label text is centered within the labels.
-When you create a satisfactory label design, you can save it to disk so that you can reuse it.
+El editor de etiquetas permite crear, formatear e imprimir las etiquetas. El editor de etiquetas contiene los parámetros para diseñar etiquetas y colocarlas en el papel de etiquetas. Por ejemplo, al producir etiquetas de correo, es posible que desee un diseño de etiqueta que incluya el nombre y apellidos de la persona en la primera línea, la dirección postal en la segunda línea, etc. Como parte del diseño, el editor de etiquetas le permite especificar el número de etiquetas de la página y los márgenes del papel de etiquetas para que el texto de las etiquetas quede centrado dentro de las mismas.
+Cuando crea un diseño de etiqueta satisfactorio, puede guardarlo en disco para poder reutilizarlo.
 
 Para abrir el editor de etiquetas:
 
-- In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
+- En el entorno Diseño, elija **Etiquetas...** en el menú **Herramientas** o en el menú asociado al botón "Herramientas" en la barra de herramientas de 4D.
   O
 - En una aplicación, llame al comando [`PRINT LABEL`](../commands-legacy/print-label.md).
 
 ![](../assets/en/Desktop/label-wizard.png)
 
-You use the Label page to specify the contents of the label and the Layout page to define the size and position of the labels on the page.
+Utilice la página Etiqueta para especificar el contenido de la etiqueta y la página Diseño para definir el tamaño y la posición de las etiquetas en la página.
 
 ![](../assets/en/Desktop/label-buttons.png)
 
 ## Página Etiqueta
 
-The Label page contains several areas with settings for designing and formatting labels.
+La página Etiqueta contiene varias áreas con opciones para diseñar y dar formato a las etiquetas.
 
 ### Lista de campos
 
-Displays the names of the fields in the current table in a hierarchical list. If this table is related to other tables, the foreign key fields have a plus sign (on Windows) or an arrow (on macOS). You can display fields from the related table by expanding the related fields. Los campos de la tabla relacionada están indentados. To use a field from this list in the label template, you just drag it onto the label preview area to the right of the list.
+Muestra los nombres de los campos de la tabla actual en una lista jerárquica. Si esta tabla está relacionada con otras tablas, los campos de clave externa tienen un signo más (en Windows) o una flecha (en macOS). Puede visualizar los campos de la tabla relacionada expandiendo los campos relacionados. Los campos de la tabla relacionada están indentados. Para utilizar un campo de esta lista en la plantilla de etiquetas, basta con arrastrarlo a la zona de vista previa de etiquetas situada a la derecha de la lista.
 
 :::note Notas
 
-- Only tables and fields which are visible appear in the Label editor.
-- [Object type](../Concepts/dt_object.md) fields are not supported by the Label editor.
+- Sólo las tablas y los campos visibles aparecen en el editor de etiquetas.
+- Los campos de [tipo Objeto](../Concepts/dt_object.md) no son compatibles con el editor de etiquetas.
 
 :::
 
-The search area allows you to narrow the list of fields displayed to those containing the entered string:
+El área de búsqueda le permite limitar la lista de campos mostrados a aquellos que contengan la cadena de caracteres introducida:
 
 ![](../assets/en/Desktop/label-filter.png)
 
 ### Vista previa de etiqueta
 
-You use this area to design your label zone by placing and positioning all the items that you want to include in your label. El rectángulo blanco representa una sola etiqueta (su tamaño se configura en la página [Diseño](#layout-page)).
+Utilice esta área para diseñar su zona de etiquetas colocando y posicionando todos los elementos que desee incluir en su etiqueta. El rectángulo blanco representa una sola etiqueta (su tamaño se configura en la página [Diseño](#layout-page)).
 
 - Puede arrastrar los campos a la etiqueta.
-- You can also concatenate two fields by dropping the second field onto the first one. Se separan automáticamente con un espacio.<br/>
+- También puede concatenar dos campos soltando el segundo campo sobre el primero. Se separan automáticamente con un espacio.<br/>
   ![](../assets/en/Desktop/label-concat.png)<br/>
-  If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
-- You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. The **Formula editor** is then displayed:
+  Si mantiene presionada la tecla **Mayús**, se separan con un retorno de carro. Esto le permite crear, por ejemplo, etiquetas de direcciones utilizando varios campos superpuestos (Dirección1, Dirección2, etc.), sin producir una línea vacía cuando una dirección sólo requiere un campo.
+- Puede añadir una fórmula a la etiqueta seleccionando la herramienta **Fórmula** ![](../assets/en/Desktop/label-tool6.png) (o eligiendo **Herramienta>Fórmula** en el menú contextual) y dibujando un área. Aparecerá el **Editor de fórmulas**:
   ![](../assets/en/Desktop/label-formula1.png)<br/>
-  For example, you can apply a format to a field using the [`String`](../commands/string.md) command:<br/>
+  Por ejemplo, puede aplicar un formato a un campo utilizando el comando [`String`](../commands/string.md):<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
 :::note
 
-Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y del comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md).
+Tenga en cuenta que sólo puede introducir métodos "permitidos" para la base de datos en el Editor de fórmulas. Los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y del comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md).
 
 :::
 
-- You can drag and drop picture files as well as label files (".4lbp" files) from the desktop of the OS.
+- Puedes arrastrar y soltar archivos imagen, así como archivos de etiquetas (archivos ".4lbp") desde el escritorio del sistema operativo.
 
-- To modify the area, double-click on the contents in order to switch to editing mode. When you double-click on fields or formulas, the **Formula editor** is displayed, allowing you to remove or modify items:
+- Para modificar el área, haga doble clic en el contenido para pasar al modo edición. Al hacer doble clic en campos o fórmulas, aparece el **Editor de fórmulas**, que permite eliminar o modificar elementos:
   ![](../assets/en/Desktop/label-formula.png)
 
 ### Formulario a utilizar
 
-This drop-down list allows you to define a table form as a label template. The form chosen must be specially adapted to the creation of labels.
-En este caso, el editor de etiquetas está parcialmente deshabilitado: sólo las funciones de la [página de diseño](#layout-page) pueden ser usadas — para permitirte configurar la página basada en el formulario. The image of the form selected is displayed in the label preview area.
-When you use a form, 4D executes any form or object methods associated with it. Al usar esta opción, también puede designar un método proyecto para ejecutar para cada registro o etiqueta y luego asignar variables (ver [este ejemplo](#printing-labels-using-forms-and-methods-example) más abajo). If you want to create your labels using the editor itself, you need to choose the **No Form** option.
+Esta lista desplegable permite definir un formulario tabla como modelo de etiqueta. El formulario elegido debe estar especialmente adaptado a la creación de etiquetas.
+En este caso, el editor de etiquetas está parcialmente deshabilitado: sólo las funciones de la [página de diseño](#layout-page) pueden ser usadas — para permitirte configurar la página basada en el formulario. La imagen del formulario seleccionado se muestra en el área de previsualización de etiquetas.
+Cuando se utiliza un formulario, 4D ejecuta cualquier método de formulario u objeto asociado a él. Al usar esta opción, también puede designar un método proyecto para ejecutar para cada registro o etiqueta y luego asignar variables (ver [este ejemplo](#printing-labels-using-forms-and-methods-example) más abajo). Si desea crear sus etiquetas utilizando el propio editor, deberá elegir la opción **Sin formulario**.
 
 :::note Notas
 
 - Puede restringir los formularios listados que aparecen en este menú mediante un [archivo JSON específico](#controlling-available-forms-and-methods).
-- If the database does not contain any table forms, this menu is not displayed.
+- Si la base no contiene ningún formulario tabla, este menú no se muestra.
 
 :::
 
 ### Comandos del área gráfica
 
-The graphic area of the editor includes both a tool bar and a context menu that you can use to design your label template.
+El área gráfica del editor incluye tanto una barra de herramientas como un menú contextual que puede utilizar para diseñar su plantilla de etiquetas.
 
-The left-hand side of the tool bar includes commands for selecting and inserting objects. You can also access these tools by means of the **Tool>** command in the area's context menu.
+La parte izquierda de la barra de herramientas incluye comandos para seleccionar e insertar objetos. También puede acceder a estas herramientas mediante el comando **Herramienta>** del menú contextual del área.
 
-| Icono                                     | Nombre de la herramienta | Descripción                                                                                                                                                                                                        |
-| ----------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/Desktop/label-tool1.png) | Selección                | Click on a single object or draw a selection box around several objects. For a selection of non-adjacent objects, hold down **Shift** and click on each object you want to select. |
-| ![](../assets/en/Desktop/label-tool2.png) | Creación de línea        |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool3.png) | Creación rectangular     | Para creación de rectángulo o rectángulo redondeado.                                                                                                                                               |
-| ![](../assets/en/Desktop/label-tool4.png) | Creación de círculo      |                                                                                                                                                                                                                    |
-| ![](../assets/en/Desktop/label-tool5.png) | Inserción de texto       | Dibuja un rectángulo e introduce texto en su interior. You can edit any text area, including those containing field references, by double-clicking it.                             |
-| ![](../assets/en/Desktop/label-tool6.png) | Inserción de fórmula     | Draw a rectangle to display the **Formula editor**, where you can define dynamic label contents (fields and formulas).                                                          |
+| Icono                                     | Nombre de la herramienta | Descripción                                                                                                                                                                                                                                           |
+| ----------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Desktop/label-tool1.png) | Selección                | Haga clic en un solo objeto o dibuje un cuadro de selección alrededor de varios objetos. Para una selección de objetos no adyacentes, mantenga presionada **Mayús** y haga clic en cada objeto que desee seleccionar. |
+| ![](../assets/en/Desktop/label-tool2.png) | Creación de línea        |                                                                                                                                                                                                                                                       |
+| ![](../assets/en/Desktop/label-tool3.png) | Creación rectangular     | Para creación de rectángulo o rectángulo redondeado.                                                                                                                                                                                  |
+| ![](../assets/en/Desktop/label-tool4.png) | Creación de círculo      |                                                                                                                                                                                                                                                       |
+| ![](../assets/en/Desktop/label-tool5.png) | Inserción de texto       | Dibuja un rectángulo e introduce texto en su interior. Puede editar toda área de texto, incluidas las que contienen referencias a campos, haciendo doble clic en ellas.                                               |
+| ![](../assets/en/Desktop/label-tool6.png) | Inserción de fórmula     | Dibuje un rectángulo para mostrar el **Editor de fórmulas**, donde puede definir el contenido dinámico de las etiquetas (campos y fórmulas).                                                                       |
 
-There are shortcuts available to move or resize objects more precisely using the keyboard arrow keys:
+Hay atajos disponibles para mover o redimensionar objetos con mayor precisión utilizando las teclas de flecha del teclado:
 
-- Keyboard arrow keys move the selection of objects 1 pixel at a time.
-- **Shift** + arrow keys move the selection of objects 10 pixels at a time.
-- **Ctrl** + arrow keys enlarge or reduce the selection of objects by 1 pixel.
-- **Ctrl** + **Maj** + arrow keys enlarge or reduce the selection of objects by 10 pixels.
+- Las teclas de flecha del teclado mueven la selección de objetos de 1 píxel a la vez.
+- **Mayús** + teclas de flecha mueven la selección de objetos 10 píxeles a la vez.
+- **Ctrl** + teclas de flecha agrandan o reducen la selección de objetos en 1 píxel.
+- **Ctrl** + **Maj** + teclas de flecha amplían o reducen la selección de objetos en 10 píxeles.
 
-The right-hand side of the tool bar contains commands used to modify items of the label template:
+El lado derecho de la barra de herramientas contiene comandos utilizados para modificar elementos de la plantilla de etiqueta:
 
-| Icono                                      | Nombre de la herramienta  | Descripción                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------ | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno          | todos los iconos de color muestran el color seleccionado                                                                                                                                                                                                                                                                                                         |
-| ![](../assets/en/Desktop/label-tool8.png)  | Color de línea            |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool9.png)  | Peso lineal               |                                                                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/Desktop/label-tool10.png) | Menú Fuente               | Sets the font and its size, as well as the text style, color and alignment for the block(s) of selected text.                                                                                                                                                                                                                 |
-| ![](../assets/en/Desktop/label-tool11.png) | Alineación y distribución | Two or more objects must be selected for the alignment options to be available. "Distributing" objects means automatically setting the horizontal or vertical intervals between at least three objects, so that they are identical. The resulting interval is an average of all those existing in the selection. |
-| ![](../assets/en/Desktop/label-tool12.png) | Nivel de los objetos      | Moves objects to the front or back, or moves one or more objects up or down one level.                                                                                                                                                                                                                                                           |
+| Icono                                      | Nombre de la herramienta  | Descripción                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------------ | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Desktop/label-tool7.png)  | Color de relleno          | todos los iconos de color muestran el color seleccionado                                                                                                                                                                                                                                                                                                                          |
+| ![](../assets/en/Desktop/label-tool8.png)  | Color de línea            |                                                                                                                                                                                                                                                                                                                                                                                   |
+| ![](../assets/en/Desktop/label-tool9.png)  | Peso lineal               |                                                                                                                                                                                                                                                                                                                                                                                   |
+| ![](../assets/en/Desktop/label-tool10.png) | Menú Fuente               | Define la fuente y su tamaño, así como el estilo, el color y la alineación del texto para los bloques de texto seleccionados.                                                                                                                                                                                                                                     |
+| ![](../assets/en/Desktop/label-tool11.png) | Alineación y distribución | Deben seleccionarse dos o más objetos para que las opciones de alineación estén disponibles. "Repartir" objetos significa definir automáticamente los intervalos horizontales o verticales entre al menos tres objetos, de modo que sean idénticos. El intervalo resultante es una media de todos los existentes en la selección. |
+| ![](../assets/en/Desktop/label-tool12.png) | Nivel de los objetos      | Mueve los objetos a la parte frontal o atrás, o mueve uno o más objetos hacia arriba o hacia abajo de un nivel.                                                                                                                                                                                                                                                   |
 
 ## Página Diseño
 
@@ -163,8 +163,8 @@ The **For each: Record or Label** options are used to specify whether to run the
 You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
 
 1. En un formulario tabla dedicado, añada su(s) campo(s) de etiqueta y su(s) variable(s).
-  Here, in a table form named "label", we added the *myVar* variable:
-  ![](../assets/en/Desktop/label-example1.png)
+   Here, in a table form named "label", we added the *myVar* variable:
+   ![](../assets/en/Desktop/label-example1.png)
 
 2. Create a `setMyVar` project method with the following code:
 
@@ -183,10 +183,10 @@ You can use dedicated table forms and project methods to print labels with calcu
 ```
 
 5. Open the Label editor and use your form:
-  ![](../assets/en/Desktop/label-example2.png)
+   ![](../assets/en/Desktop/label-example2.png)
 
 6. In the Layout page, select the method:
-  ![](../assets/en/Desktop/label-example3.png)
+   ![](../assets/en/Desktop/label-example3.png)
 
 Then you can print your labels:
 ![](../assets/en/Desktop/label-example4.png)
@@ -199,7 +199,7 @@ The Label editor includes an advanced feature allowing you to restrict which pro
 - en el menú **Aplicar (método)** de la página "Diseño".
 
 1. Crea un archivo JSON llamado **labels.json** y ponlo en la [carpeta de recursos](../Project/architecture.md#resources) del proyecto.
-2. In this file, add the names of forms and/or project methods that you want to be able to select in the Label editor menus.
+2. En este archivo, añada los nombres de los formularios y/o métodos proyecto que desea poder seleccionar en los menús del editor de etiquetas.
 
 El contenido del archivo **labels.json** debe ser similar a:
 
@@ -214,34 +214,34 @@ Si no se ha definido ningún archivo **labels.json** entonces no se aplica ning�
 
 ## Gestión de archivos de etiquetas
 
-4D allows you to save each label design in a file that you can open subsequently from within the wizard. By saving your label designs, you can build a label library adapted to your specific needs. Each label design stores the settings defined on the Label and Layout pages.
+4D le permite guardar cada modelo de etiquetas en un archivo que podrá abrir posteriormente desde el asistente. Si guarda sus diseños de etiquetas, podrá crear una biblioteca de etiquetas adaptada a sus necesidades específicas. Cada diseño de etiqueta almacena los ajustes definidos en las páginas Etiqueta y Diseño.
 
-You can drag and drop label files from your desktop onto the label design area.
+Puede arrastrar y soltar archivos de etiquetas desde el escritorio al área de diseño de etiquetas.
 
-Label designs are managed using the **Load** and **Save** buttons of the tool bar.
+Los diseños de etiquetas se gestionan mediante los botones **Cargar** y **Guardar** de la barra de herramientas.
 
-- To load a label design, click on the **Load** button and designate the design you want to load by means of the File Open dialog box (if a label design is already present in the wizard, 4D replaces it by the one you have loaded).
-- To save a label design, click on the **Save** button and indicate the name and location of the design to be created.
+- Para cargar un diseño de etiqueta, haga clic en el botón **Cargar** y designe el diseño que desea cargar mediante el cuadro de diálogo Abrir archivo (si ya existe un diseño de etiqueta en el asistente, 4D lo sustituye por el que ha cargado).
+- Para guardar un diseño de etiqueta, haga clic en el botón **Guardar** e indique el nombre y la ubicación del diseño que desea crear.
 
 ### Formato del archivo
 
-The file extension of 4D labels saved by the wizard is ".4lbp". Note that this format is open since it is written internally in XML.
+La extensión de archivo de las etiquetas 4D guardadas por el asistente es ".4lbp". Tenga en cuenta que este formato es abierto, ya que está escrito internamente en XML.
 
 ### Precargando archivos de etiqueta
 
-The Label Wizard allows you to store label files within your application, so that label designs can be selected and opened by the user directly using the **Load** button.
+El editor de etiquetas le permite almacenar archivos de etiquetas dentro de su aplicación, de forma que los diseños de etiquetas puedan ser seleccionados y abiertos por el usuario directamente mediante el botón **Cargar**.
 
-To do this, you just need to create a folder named `Labels` within the [Resources folder](../Project/architecture.md#resources) of the project and then copy your label files into it:
+Para ello, basta con crear una carpeta llamada `Labels` en la [carpeta Resources](../Project/architecture.md#resources) del proyecto y copiar en ella los archivos de etiquetas:
 
 ![](../assets/en/Desktop/label-resources.png)
 
 :::note
 
-Both standard ".4lbp" files and files generated by the former wizard (".4lb") files are supported.
+Se admiten tanto los archivos ".4lbp" estándar como los generados por el asistente anterior (".4lb").
 
 :::
 
-When the Label Wizard starts, if this folder is detected and contains valid label files, a pop-up icon is added to the **Load** button. Label designs can then be selected through a menu line:
+Cuando se inicia el Asistente de etiquetas, si se detecta esta carpeta y contiene archivos de etiquetas válidos, se añade un icono emergente al botón **Cargar**. Los modelos de etiquetas pueden seleccionarse a través de una línea de menú:
 
 ![](../assets/en/Desktop/label-resources2.png)
 

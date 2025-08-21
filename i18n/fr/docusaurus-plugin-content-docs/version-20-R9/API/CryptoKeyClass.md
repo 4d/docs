@@ -137,7 +137,7 @@ ASSERT($status.success)
 
 </details>
 
-<!-- REF #CryptoKey.curve.Syntax -->**.curve** : Texte<!-- END REF -->
+<!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
 Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -->nom de la courbe normalisée de la clé<!-- END REF -->. Généralement "prime256v1" pour ES256 (défaut), "secp384r1" pour ES384, "secp521r1" pour ES512.
 

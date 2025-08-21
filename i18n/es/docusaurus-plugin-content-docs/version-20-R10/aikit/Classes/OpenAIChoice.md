@@ -5,7 +5,7 @@ title: OpenAIChoice
 
 # OpenAIChoice
 
-The `OpenAIChoice` class represents a choice made by the OpenAI API response, containing information about the choice, including its finished reason, index, message, and an optional partial message for streaming responses.
+La clase `OpenAIChoice` representa una elección hecha por la respuesta de la API OpenAI, conteniendo información sobre la elección, incluyendo su razón terminada, índice, mensaje, y un mensaje parcial opcional para respuestas en streaming.
 
 ## Propiedades
 

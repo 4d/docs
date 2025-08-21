@@ -141,15 +141,15 @@ End if
 
 </details>
 
-<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : any ; *keywords* :  Object ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
-| 引数       | 型          |    | 説明                                                                                                          |
-| -------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------- |
-| msgIDs   | Collection | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
-| keywords | Object     | -> | 追加するキーワードフラグ                                                                                                |
-| 戻り値      | Object     | <- | addFlags処理のステータス|<!-- END REF -->
+| 引数       | 型      |    | 説明                                                                                                          |
+| -------- | ------ |:--:| ----------------------------------------------------------------------------------------------------------- |
+| msgIDs   | any    | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
+| keywords | Object | -> | 追加するキーワードフラグ                                                                                                |
+| 戻り値      | Object | <- | addFlags処理のステータス|<!-- END REF -->
 
 |
 
@@ -1355,15 +1355,15 @@ ID = 1のメッセージを取得します:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : any ; *keywords* :  Object ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
-| 引数       | 型          |    | 説明                                                                                                          |
-| -------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------- |
-| msgIDs   | Collection | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
-| keywords | Object     | -> | 削除するキーワードフラグ                                                                                                |
-| 戻り値      | Object     | <- | removeFlags処理のステータス|<!-- END REF -->
+| 引数       | 型      |    | 説明                                                                                                          |
+| -------- | ------ |:--:| ----------------------------------------------------------------------------------------------------------- |
+| msgIDs   | any    | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
+| keywords | Object | -> | 削除するキーワードフラグ                                                                                                |
+| 戻り値      | Object | <- | removeFlags処理のステータス|<!-- END REF -->
 
 |
 

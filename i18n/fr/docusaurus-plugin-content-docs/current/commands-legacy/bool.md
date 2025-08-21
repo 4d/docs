@@ -43,7 +43,7 @@ Vous sélectionnez une valeur en fonction d'un attribut de champ objet, en antic
 
 ## Voir aussi 
 
-[Date](date.md)  
+[Date](../commands/date)  
 [Num](../commands/num.md)  
 [String](../commands/string.md)  
 [Time](time.md)  

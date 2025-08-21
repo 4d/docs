@@ -31,7 +31,7 @@ This information includes the limits, remaining requests, and reset times for bo
 
 For more details on rate limits and the specific headers used, refer to [the OpenAI Rate Limits Documentation](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
 
-The structure of the `rateLimit` object is as follows:
+La estructura del objeto `rateLimit` es la siguiente:
 
 | Campo               | Tipo    | Descripción                                                              |
 | ------------------- | ------- | ------------------------------------------------------------------------ |

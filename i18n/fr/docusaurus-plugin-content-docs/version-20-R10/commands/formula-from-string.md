@@ -14,14 +14,14 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Longint ) : 4D.Function<!-- END REF -->
+<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Integer ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
 
 | Paramètres    | Type                        |                             | Description                                                                                       |
 | ------------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
 | formulaString | Text                        | &#8594; | Formule texte à retourner comme objet                                                             |
-| context       | Number                      | &#8594; | `sk execute in current database` (par défaut) ou `sk execute in host database` |
+| context       | Integer                     | &#8594; | `sk execute in current database` (par défaut) ou `sk execute in host database` |
 | Résultat      | 4D.Function | &#8592; | Objet natif encapsulant la formule                                                                |
 
 <!-- END REF -->

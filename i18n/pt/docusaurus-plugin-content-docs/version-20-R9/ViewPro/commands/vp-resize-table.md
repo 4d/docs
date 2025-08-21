@@ -28,11 +28,11 @@ O comando `VP RESIZE TABLE` <!-- REF #_method_.VP RESIZE TABLE.Summary --> alter
 
 As regras abaixo são válidas:
 
-- Cabeçalhos devem permanecer na mesma linha e o intervalo de tabelas resultante deve sobrepor o intervalo de tabela original.
-- Se a contagem de linha da tabela redimensionada é inferior à contagem de linhas inicial, valores em linhas ou colunas cortadas são mantidos se eles não fossem vinculados a um [contexto de dados](vp-set-data-context.md), caso contrário, eles serão excluídos.
-- Se a tabela se expandir nas células que contêm dados:
-    - se as linhas forem adicionadas, os dados serão excluídos,
-    - se colunas forem adicionadas, dados serão mantidos e exibidos em novas colunas.
+ - Cabeçalhos devem permanecer na mesma linha e o intervalo de tabelas resultante deve sobrepor o intervalo de tabela original.
+ - Se a contagem de linha da tabela redimensionada é inferior à contagem de linhas inicial, valores em linhas ou colunas cortadas são mantidos se eles não fossem vinculados a um [contexto de dados](vp-set-data-context.md), caso contrário, eles serão excluídos.
+ - Se a tabela se expandir nas células que contêm dados:
+     - se as linhas forem adicionadas, os dados serão excluídos,
+     - se colunas forem adicionadas, dados serão mantidos e exibidos em novas colunas.
 
 Se *tableName* não existir, não acontece nada.
 

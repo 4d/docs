@@ -33,10 +33,6 @@ Indica se o servidor web vai ou não aceitar conexões seguras. Ver [Ativar HTTP
 
 Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Puerto HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Permitir acesso ao banco de dados através de URLs 4DSYNC
-
-*Nota de compatibilidade*: Essa opção está [obsoleta](../WebServer/webServerConfig.md#deprecated-settings). Para acesso ao banco de dados através de HTTP, agora é recomendado usar as funcionalidades de armazenamento remoto do ORDA e solicitações REST.
-
 ### Caminhos
 
 #### Raiz HTML predefinida
@@ -82,9 +78,9 @@ Quando esta opção é selecionada, o servidor web não fornece nenhum suporte e
 
 Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
-- [Máximo de Processos Web Concorrentes](#maximum-concurrent-web-processes)
-- [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
-- [Usar processos preemptivos](#use-preemptive-processes)
+ - [Máximo de Processos Web Concorrentes](#maximum-concurrent-web-processes)
+ - [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
+ - [Usar processos preemptivos](#use-preemptive-processes)
 
 #### Sessões herdadas (sessões de processo único)
 
@@ -112,7 +108,7 @@ Não disponível com [sessões escaláveis](../WebServer/sessions.md).
 
 Permite processos web preemptivos nas suas aplicações compiladas. Quando **usar processos preventivos** for selecionado, A elegibilidade de seu código relacionado à Web (incluindo tags 4D e métodos de banco de dados web) para a execução preventiva será avaliada durante a compilação. Para mais informações, consulte [Utilizando processos Web preemptivos](../WebServer/preemptiveWeb.md).
 
-> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente).  Consulte [Ativação do modo preemptivo para o servidor Web](../WebServer/webServerConfig.md#use-preemptive-processes).
+> Essa opção não se aplica a sessões dimensionáveis, processos REST (modo compilado) e processos de serviço Web (servidor ou cliente). Consulte [Ativação do modo preemptivo para o servidor Web](../WebServer/webServerConfig.md#use-preemptive-processes).
 
 #### Tempo limite do processo inativo
 
@@ -164,22 +160,22 @@ Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D 
 
 O menu de formato do histórico oferece as seguintes opções:
 
-- **Sem arquivo de registro**: Quando esta opção for selecionada, o 4D não irá gerar um arquivo de registro de requisições.
+ - **Sem arquivo de registro**: Quando esta opção for selecionada, o 4D não irá gerar um arquivo de registro de requisições.
 
-- **CLF (Formato de Log Comum)**: Quando esta opção for selecionada, o log de pedidos é gerado no formato CLF Com o formato CLF, cada linha do arquivo representa uma solicitação, como:\
+ - **CLF (Formato de Log Comum)**: Quando esta opção for selecionada, o log de pedidos é gerado no formato CLF Com o formato CLF, cada linha do arquivo representa uma solicitação, como:\
     host rfc931 usuário [DD/MMM/AAAA:HH:MM:SS] "solicitação" estado tamanho\
     Cada campo é separado por um espaço e cada linha termina com a sequência CR/LF (caractere 13, caractere 10).
 
-    - host: endereço IP do cliente (ex. 192.100.100.10)
-    - rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
-    - usuário: nome de usuário como ele está autenticado, ou então é - (um sinal menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
-    - DD: dia, MMM: uma abreviação de 3 letras para o nome do mês (Jan, Feb,...), YYYY: ano, HH: hora, MM: minutos, SS: segundos
+     - host: endereço IP do cliente (ex. 192.100.100.10)
+     - rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
+     - usuário: nome de usuário como ele está autenticado, ou então é - (um sinal menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
+     - DD: dia, MMM: uma abreviação de 3 letras para o nome do mês (Jan, Feb,...), YYYY: ano, HH: hora, MM: minutos, SS: segundos
 
 > A data e a hora são locais para o servidor.
 
-- petição: petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0)
-- estado: resposta dada pelo servidor.
-- length: tamanho dos dados devolvidos (exceto o cabeçalho HTTP) ou 0.
+ - petição: petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0)
+ - estado: resposta dada pelo servidor.
+ - length: tamanho dos dados devolvidos (exceto o cabeçalho HTTP) ou 0.
 
 > **Nota:** Por razões de desempenho, as operações são salvas em um buffer de memória em pacotes de 1Kb antes de serem escritas em disco. As operações também são gravadas no disco se nenhuma solicitação tiver sido enviada a cada 5 segundos.
 > Os valores possíveis de estado são os seguintes:
@@ -193,16 +189,16 @@ O menu de formato do histórico oferece as seguintes opções:
 > 500: Internal error
 > O formato CLF não pode ser personalizado.
 
-- **DLF (Combined Log Format)**: Quando esta opção é selecionada, o registro de solicitações é gerado no formato DLF. O formato DLF é semelhante ao formato CLF e usa a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.
+ - **DLF (Combined Log Format)**: Quando esta opção é selecionada, o registro de solicitações é gerado no formato DLF. O formato DLF é semelhante ao formato CLF e usa a mesma estrutura. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.
 
-    - Referer: contém o URL da página que aponta para o documento solicitado.
-    - User-agent: contém o nome e a versão do navegador ou software cliente que origina a solicitação.
+     - Referer: contém o URL da página que aponta para o documento solicitado.
+     - User-agent: contém o nome e a versão do navegador ou software cliente que origina a solicitação.
 
 > O formato DLF não pode ser personalizado.
 
-- **ELF (Extended Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato ELF. O formato ELF está muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. Por esse motivo, o formato ELF pode ser personalizado: é possível escolher os campos a serem registrados, bem como sua ordem de inserção no arquivo.
+ - **ELF (Extended Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato ELF. O formato ELF está muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. Por esse motivo, o formato ELF pode ser personalizado: é possível escolher os campos a serem registrados, bem como sua ordem de inserção no arquivo.
 
-- **WLF (WebStar Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato WLF. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. Ele é semelhante ao formato ELF, com apenas alguns campos adicionais. Tal como o formato ELF, pode ser personalizado.
+ - **WLF (WebStar Log Format)**: Quando essa opção é selecionada, o registro da solicitação é gerado no formato WLF. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. Ele é semelhante ao formato ELF, com apenas alguns campos adicionais. Tal como o formato ELF, pode ser personalizado.
 
 **Configuração dos campos**
 Quando você escolhe o formato ELF (Extended Log Format) ou WLF (WebStar Log Format), a área "Weg Log Token Selection" exibe os campos disponíveis para o formato escolhido. Você precisará selecionar cada campo a ser incluído no registro. You will need to select each field to be included in the log. To do so, check the desired fields.
@@ -242,14 +238,14 @@ A tabela a seguir lista os campos disponíveis para cada formato (em ordem alfab
 
 Configure the automatic backup parameters for the request log. Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Você deve então especificar o momento exato do backup, se necessário.
 
-- **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
-- **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Pode digitar um valor entre 1 e 24.
+ - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
+ - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Pode digitar um valor entre 1 e 24.
 
-    - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
-- **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
-- **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar.
-- **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
-- **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é automaticamente acionado quando o arquivo atinge o tamanho definido. Você pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+     - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
+ - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduza 1 se pretender efetuar uma cópia de segurança diária. Quando essa opção estiver marcada, você deve indicar a hora em que o backup deve ser iniciado.
+ - **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Você pode selecionar vários dias da semana, se desejar.
+ - **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Digite 1 se quiser realizar uma cópia de segurança mensal. Quando essa opção estiver marcada, você deve indicar o dia do mês e a hora em que o backup deve ser iniciado.
+ - **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Um backup é automaticamente acionado quando o arquivo atinge o tamanho definido. Você pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
 
 > No caso de backups programados, se o servidor Web não foi iniciado quando o backup estava programado para ocorrer, na próxima inicialização o 4D considera o backup como falho e aplica as configurações apropriadas, definidas nas Propriedades.
 
@@ -263,9 +259,9 @@ Para obter mais informações sobre o suporte de serviços da Web em 4D, consult
 
 Essa área contém várias opções relacionadas ao uso de 4D como um "servidor" de serviços da Web, ou seja, a publicação de métodos projeto na forma de serviços Web.
 
-- **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo *Published in WSDL*. Quando essa opção está marcada, 4D cria o arquivo WSDL.
-- **Nome do Serviço Web**: Esta área permite que você altere o "nome genérico" do Serviço Web. Esse nome é usado para diferenciar os serviços no nível do servidor SOAP (quando o servidor publica vários serviços Web diferentes), bem como nos diretórios de serviços Web. Por padrão, 4D usa o nome A_WebService.
-- **Namespace de Serviços Web**: Essa área é usada para alterar o namespace dos serviços da Web publicados por 4D. Cada serviço Web publicado na Internet deve ser único. A singularidade dos nomes dos Serviços Web é assegurada pelo uso de namespaces XML. Um namespace é uma cadeia de caracteres arbitrária usada para identificar um conjunto de tags XML de forma exclusiva. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). Nesse caso, não é indispensável ter algo em particular no URL indicado; o que importa é que a cadeia de caracteres usada seja exclusiva. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
+ - **Autorizar peticiones de servicios web**: Esta opção permite que você inicialize a publicação de Serviços Web. Se essa opção não tiver sido marcada, o 4D recusará solicitações SOAP e não gerará um WSDL, mesmo que os métodos tenham o atributo *Published in WSDL*. Quando essa opção está marcada, 4D cria o arquivo WSDL.
+ - **Nome do Serviço Web**: Esta área permite que você altere o "nome genérico" do Serviço Web. Esse nome é usado para diferenciar os serviços no nível do servidor SOAP (quando o servidor publica vários serviços Web diferentes), bem como nos diretórios de serviços Web. Por padrão, 4D usa o nome A_WebService.
+ - **Namespace de Serviços Web**: Essa área é usada para alterar o namespace dos serviços da Web publicados por 4D. Cada serviço Web publicado na Internet deve ser único. A singularidade dos nomes dos Serviços Web é assegurada pelo uso de namespaces XML. Um namespace é uma cadeia de caracteres arbitrária usada para identificar um conjunto de tags XML de forma exclusiva. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). Nesse caso, não é indispensável ter algo em particular no URL indicado; o que importa é que a cadeia de caracteres usada seja exclusiva. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
 
 > Em conformidade com o padrão XML para nomes de etiquetas, as cadeias de caracteres usadas não devem conter espaços nem começar com um número. Além disso, para evitar qualquer risco de incompatibilidade, recomendamos que você não use nenhum caractere estendido (como caracteres acentuados).
 
@@ -273,7 +269,7 @@ Essa área contém várias opções relacionadas ao uso de 4D como um "servidor"
 
 Essa área contém várias opções relacionadas ao uso de 4D como um "cliente" de serviços Web, ou seja, a assinatura de serviços publicados na rede.
 
-- **Prefixo do Método do Wizard**: Esta área permite que você altere o prefixo que é adicionado automaticamente por 4D ao nome dos métodos proxy gerados pelo Assistente de Serviços Web. Os métodos do projeto de proxy formam um link entre a aplicação 4D e o servidor de Serviços Web. Por padrão, 4D usa o prefixo "proxy_".
+ - **Prefixo do Método do Wizard**: Esta área permite que você altere o prefixo que é adicionado automaticamente por 4D ao nome dos métodos proxy gerados pelo Assistente de Serviços Web. Os métodos do projeto de proxy formam um link entre a aplicação 4D e o servidor de Serviços Web. Por padrão, 4D usa o prefixo "proxy_".
 
 ## Funcionalidades Web
 
@@ -307,9 +303,9 @@ Esse botão só está disponível em projetos abertos com a aplicação 4D (usu�
 
 O botão aciona a seguinte sequência de atualização:
 
-- O grupo de usuários da API REST definido no menu **Leitura/Escrita** é removido.
-- O método de banco de dados `On REST Authentication` é excluído (movido para a lixeira do sistema).
-- Um arquivo padrão ["roles.json"](../ORDA/privileges.md#rolesjson-file) é criado na pasta [Sources](../Project/architecture.md#sources) do projeto, caso ainda não exista, com seu atributo `forceLogin` como `True`.
+ - O grupo de usuários da API REST definido no menu **Leitura/Escrita** é removido.
+ - O método de banco de dados `On REST Authentication` é excluído (movido para a lixeira do sistema).
+ - Um arquivo padrão ["roles.json"](../ORDA/privileges.md#rolesjson-file) é criado na pasta [Sources](../Project/architecture.md#sources) do projeto, caso ainda não exista, com seu atributo `forceLogin` como `True`.
 
 Lembre-se de reiniciar seu projeto após realizar essa atualização.
 

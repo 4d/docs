@@ -25,7 +25,7 @@ If you enter an invalid class name, a warning is triggered and the input is reje
 
 :::
 
-In your code, when assigning a value to a class-typed object field, 4D verifies that it belongs to the declared class. If not or if the object has no class, an error is triggered. Accessing unknown attributes will also raise syntax errors.
+In your code, when assigning a value to a class-typed object field, 4D verifies that it belongs to the declared class. Si no es así o si el objeto no tiene clase, se produce un error. Accessing unknown attributes will also raise syntax errors.
 
 To retrieve the associated class name at runtime, use the [`classID`](../API/DataClassClass.md#attributename) property, for example `ds.MyTable.MyField.classID`.
 

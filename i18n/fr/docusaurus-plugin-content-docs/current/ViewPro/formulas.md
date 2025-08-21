@@ -191,11 +191,11 @@ Nous souhaitons imprimer "Hello World" dans une cellule de la zone 4D View Pro e
 
 3. Modifiez le contenu d'une cellule dans une zone 4D View Pro et saisissez :
 
-  ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+   ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-  "myMethod" est alors appelé par 4D et la cellule s'affiche :
+   "myMethod" est alors appelé par 4D et la cellule s'affiche :
 
-  ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+   ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Paramètres
 
@@ -321,19 +321,19 @@ Nous souhaitons imprimer le nom d'une personne dans une cellule de la zone 4D Vi
 
 2. Exécuter le code suivant pour initialiser une structure virtuelle :
 
-  ```4d
-  ARRAY TEXT($tableTitles;1)
-  ARRAY LONGINT($tableNum;1)
-  $tableTitles{1}:="Emp"
-  $tableNum{1}:=2
-  SET TABLE TITLES($tableTitles;$tableNum;*)
-   
-  ARRAY TEXT($fieldTitles;1)
-  ARRAY LONGINT($fieldNum;1)
-  $fieldTitles{1}:="Name"
-  $fieldNum{1}:=2 //nom de famille
-  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
-  ```
+   ```4d
+   ARRAY TEXT($tableTitles;1)
+   ARRAY LONGINT($tableNum;1)
+   $tableTitles{1}:="Emp"
+   $tableNum{1}:=2
+   SET TABLE TITLES($tableTitles;$tableNum;*)
+    
+   ARRAY TEXT($fieldTitles;1)
+   ARRAY LONGINT($fieldNum;1)
+   $fieldTitles{1}:="Name"
+   $fieldNum{1}:=2 //nom de famille
+   SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+   ```
 
 3. Modifiez le contenu d'une cellule de la zone 4D View Pro et saisir "=e" :
 

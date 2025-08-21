@@ -1002,9 +1002,9 @@ Estos atributos pueden utilizarse para controlar el rango de valores de entrada.
 
 El atributo behavior ofrece variaciones a la representación estándar de los valores. En 4D v15, se ofrece una única variación:
 
-| Atributo | Valor(es) disponible(s) | valueType(s) | Descripción                                                                                                                                                                                             |
-| -------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates                                                   | integer                         | Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
+| Atributo | Valor(es) disponible(s) | valueType(s) | Descripción                                                                                                                                                                                                                    |
+| -------- | ------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| behavior | threeStates                                                   | integer                         | Representa un valor numérico como una casilla de verificación de tres estados.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
 ```4d
  C_OBJECT($ob3)
