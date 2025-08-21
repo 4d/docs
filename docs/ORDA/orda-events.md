@@ -142,7 +142,7 @@ Function event touched($event : Object)
 
 The "touched" event is useful when it is not possible to write indexed query code in [`Function query()`](./ordaClasses.md#function-query-attributename) for a [computed attribute](./ordaClasses.md#computed-attributes). 
 
-This is the case for example, when your [`query`](./ordaClasses.md#function-query-attributename) function has to compare the value of different attributes from the same entity, you must use formulas in the returned ORDA query -- which triggers sequential queries.   
+This is the case for example, when your [`query`](./ordaClasses.md#function-query-attributename) function has to compare the value of different attributes from the same entity with each other. You must use formulas in the returned ORDA query -- which triggers sequential queries.   
 
 To fully understand this case, let's examine the following two calculated attributes:
 
@@ -199,8 +199,8 @@ Function query sameDay($event : Object) : Text
             return ""
         End case 
 
-    return ($sameDayValue) ? "eval(This.departureDate != This.arrivalDate)” : "eval(This.departureDate = This.arrivalDate)"
-        // the ORDA query string uses a formula attributes, it will be indexed
+    return ($sameDayValue) ? "eval(This.departureDate = This.arrivalDate)" : "eval(This.departureDate != This.arrivalDate)"
+        // the ORDA query string uses a formula, it will not be indexed
 
 ```
 
