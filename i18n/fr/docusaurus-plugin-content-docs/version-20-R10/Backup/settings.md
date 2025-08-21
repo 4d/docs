@@ -5,9 +5,9 @@ title: Paramètres de sauvegarde
 
 Les paramètres de sauvegarde sont définis sur trois pages dans la [boîte de dialogue des Paramètres](../settings/overview.md). Vous pouvez définir :
 
-- la périodicité des sauvegardes automatiques
-- les fichiers à inclure dans chaque sauvegarde
-- les fonctionnalités avancées permettant d'exécuter des tâches automatiques
+ - la périodicité des sauvegardes automatiques
+ - les fichiers à inclure dans chaque sauvegarde
+ - les fonctionnalités avancées permettant d'exécuter des tâches automatiques
 
 > Les propriétés définies dans cette boîte de dialogue sont écrits dans le fichier *Backup.4DSettings*, stocké dans le [dossier Settings](../Project/architecture.md#settings-user).
 
@@ -88,11 +88,11 @@ La modification des options de sauvegarde et de restauration est facultative. Le
 
 > Ce paramètre concerne à la fois les sauvegardes de l'application et les sauvegardes de l’historique.
 
-- **Sauvegarder uniquement si le fichier de données a été modifié** : lorsque cette option est cochée, 4D déclenche les sauvegardes périodiques uniquement si des données ont été ajoutées, modifiées ou supprimées depuis la dernière sauvegarde. Dans le cas contraire, la sauvegarde prévue est annulée et reportée à l’échéance suivante. Aucune erreur n’est générée ; le report est toutefois indiqué dans le Journal des sauvegardes. Cette option permet notamment d’économiser du temps machine sur la sauvegarde d'applications principalement utilisées en consultation. A noter qu'elle ne prend pas en compte les éventuelles modifications apportées au fichier de structure ou aux fichiers joints.
+ - **Sauvegarder uniquement si le fichier de données a été modifié** : lorsque cette option est cochée, 4D déclenche les sauvegardes périodiques uniquement si des données ont été ajoutées, modifiées ou supprimées depuis la dernière sauvegarde. Dans le cas contraire, la sauvegarde prévue est annulée et reportée à l’échéance suivante. Aucune erreur n’est générée ; le report est toutefois indiqué dans le Journal des sauvegardes. Cette option permet notamment d’économiser du temps machine sur la sauvegarde d'applications principalement utilisées en consultation. A noter qu'elle ne prend pas en compte les éventuelles modifications apportées au fichier de structure ou aux fichiers joints.
 
 > Ce paramètre concerne à la fois les sauvegardes de l'application et les sauvegardes de l’historique.
 
-- **Effacer la sauvegarde la plus ancienne avant sauvegarde / après sauvegarde** : cette option n’est utilisée que si l’option “Conserver uniquement les N derniers fichiers de sauvegarde” est cochée. Elle vous permet de spécifier si 4D doit commencer par effacer l’archive la plus ancienne avant d’effectuer une sauvegarde (option **avant**) ou si l’effacement doit être effectué après la sauvegarde (option **après**). Pour que ce mécanisme fonctionne, l’archive la plus ancienne ne doit pas avoir été renommée ou déplacée.
+ - **Effacer la sauvegarde la plus ancienne avant sauvegarde / après sauvegarde** : cette option n’est utilisée que si l’option “Conserver uniquement les N derniers fichiers de sauvegarde” est cochée. Elle vous permet de spécifier si 4D doit commencer par effacer l’archive la plus ancienne avant d’effectuer une sauvegarde (option **avant**) ou si l’effacement doit être effectué après la sauvegarde (option **après**). Pour que ce mécanisme fonctionne, l’archive la plus ancienne ne doit pas avoir été renommée ou déplacée.
 
 - **Si la sauvegarde échoue** : cette option permet de définir le mécanisme de prise en charge des échecs des sauvegardes (sauvegarde impossible). Lorsqu’une sauvegarde est impossible, 4D permet d’effectuer une nouvelle tentative.
   - Périodicité Elle revient à annuler la sauvegarde ayant échoué. Une erreur est générée.
@@ -138,11 +138,11 @@ Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération
 
 > En cas de restitution automatique, seuls les éléments suivants sont restitués :
 >
-> - Fichier .4DD
-> - Fichier .4DIndx
-> - Fichier .4DSyncData
-> - Fichier .4DSyncHeader
-> - Dossier External Data
+>  - Fichier .4DD
+>  - Fichier .4DIndx
+>  - Fichier .4DSyncData
+>  - Fichier .4DSyncHeader
+>  - Dossier External Data
 >
 > Si vous souhaitez obtenir les fichiers joints ou les fichiers de projet, vous devez effectuer une [restauration manuelle](restore.md#manually-restoring-a-backup-standard-dialog).
 

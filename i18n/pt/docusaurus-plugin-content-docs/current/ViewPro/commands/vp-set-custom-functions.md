@@ -39,8 +39,8 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 
 > **AVISO**
 
-> - Assim que `VP SET CUSTOM FUNCTIONS` for chamado, os métodos permitidos pelo [VP SET ALLOWED METHODS](vp-set-allowed-methods.md) (se houver) são ignorados na área 4D View Pro.
-> - As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
+>  - Assim que `VP SET CUSTOM FUNCTIONS` for chamado, os métodos permitidos pelo [VP SET ALLOWED METHODS](vp-set-allowed-methods.md) (se houver) são ignorados na área 4D View Pro.
+>  - As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 ## Exemplo
 

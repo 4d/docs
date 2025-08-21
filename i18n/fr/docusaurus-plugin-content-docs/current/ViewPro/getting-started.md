@@ -48,20 +48,20 @@ Les feuilles de calcul sont composées de lignes et de colonnes. Un numéro est 
 
 ### Sélection des cellules, des colonnes et des lignes
 
-- Pour sélectionner une cellule, il suffit de cliquer dessus ou d'utiliser les flèches de direction du clavier. Son contenu (ou sa formule) s'affiche dans la cellule.
+ - Pour sélectionner une cellule, il suffit de cliquer dessus ou d'utiliser les flèches de direction du clavier. Son contenu (ou sa formule) s'affiche dans la cellule.
 
-- Pour sélectionner plusieurs cellules continues, faites glisser la souris d'une extrémité à l'autre de la sélection. Vous pouvez également cliquer sur les deux extrémités de la sélection tout en maintenant la touche Maj enfoncée.
+ - Pour sélectionner plusieurs cellules continues, faites glisser la souris d'une extrémité à l'autre de la sélection. Vous pouvez également cliquer sur les deux extrémités de la sélection tout en maintenant la touche Maj enfoncée.
 
 - Pour sélectionner toutes les cellules dans la feuille de calcul, cliquez sur la cellule en haut à gauche de la zone :
   ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
-- Pour sélectionner une colonne, cliquez sur la lettre (ou le groupe de lettres) correspondant(e).
+ - Pour sélectionner une colonne, cliquez sur la lettre (ou le groupe de lettres) correspondant(e).
 
-- Pour sélectionner une ligne, cliquez sur le chiffre correspondant.
+ - Pour sélectionner une ligne, cliquez sur le chiffre correspondant.
 
-- Pour sélectionner un groupe de cellules non continues, maintenez la touche **Ctrl** (Windows) ou **Command** (macOS) enfoncée et cliquez sur chaque cellule à sélectionner.
+ - Pour sélectionner un groupe de cellules non continues, maintenez la touche **Ctrl** (Windows) ou **Command** (macOS) enfoncée et cliquez sur chaque cellule à sélectionner.
 
-- Pour désélectionner des cellules, il suffit de cliquer n'importe où dans la feuille de calcul.
+ - Pour désélectionner des cellules, il suffit de cliquer n'importe où dans la feuille de calcul.
 
 ### Saisie de données
 
@@ -139,8 +139,8 @@ Ensuite, vous pouvez passer `$myRange` à une autre méthode 4D View Pro pour mo
 
 Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
-- area - Le nom de la zone 4D View Pro
-- ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés *.column* et *.sheet*.
+ - area - Le nom de la zone 4D View Pro
+ - ranges - Une collection d'objet(s) plage. Les propriétés disponibles dans chaque objet de gamme dépendent du type d'objet plage. Par exemple, un objet plage de type colonne comprendra uniquement les propriétés *.column* et *.sheet*.
 
 | Propriété |                                                                                       | Type       | Description                                                                                                                      | Disponible pour                                                |
 | --------- | ------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -157,10 +157,10 @@ Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
 4D View Pro prend en charge l'import et l'export de plusieurs formats de documents :
 
-- .4vp
-- .xlsx
-- .txt et .csv
-- .sjs
-- .pdf (à des fins d'export uniquement)
+ - .4vp
+ - .xlsx
+ - .txt et .csv
+ - .sjs
+ - .pdf (à des fins d'export uniquement)
 
 Pour plus de détails, consultez la description de [VP IMPORT DOCUMENT](commands/vp-import-document.md) et [VP EXPORT DOCUMENT](commands/vp-export-document.md).

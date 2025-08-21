@@ -44,7 +44,7 @@ L'objet retourné contient les propriétés suivantes :
 | type             | Integer                                 | Type de process en cours d'exécution. Valeurs possibles : voir ci-dessous |
 | visible          | Boolean                                 | Vrai si visible, faux sinon                                                                               |
 
-- Valeurs possibles pour "state" :
+ - Valeurs possibles pour "state" :
 
 | Constante                 | Valeur |
 | ------------------------- | ------ |
@@ -57,7 +57,7 @@ L'objet retourné contient les propriétés suivantes :
 | Waiting for internal flag | 4      |
 | Paused                    | 5      |
 
-- Valeurs possibles pour "type" :
+ - Valeurs possibles pour "type" :
 
 | Constante                     | Valeur |
 | ----------------------------- | ------ |

@@ -19,16 +19,16 @@ title: テンプレートページ
 
 以下の 4Dタグを使用することができます:
 
-- 4DTEXT: 4D変数および式をテキストとして挿入します。
-- 4DHTML: HTMLコードを挿入します。
-- 4DEVAL: 4D式を評価します。
-- 4DSCRIPT: 4Dメソッドを実行します。
-- 4DINCLUDE: ページを他のページに含めます。
-- 4DBASE: 4DINCLUDE タグが使用するデフォルトフォルダーを変更します。
-- 4DCODE: 4Dコードを挿入します。
-- 4DIF, 4DELSE, 4DELSEIF, 4DENDIF: HTMLコードに条件式を挿入します。
-- 4DLOOP, 4DENDLOOP: HTMLコードにループを挿入します。
-- 4DEACH, 4DENDEACH: コレクション内、エンティティセレクション内、またはオブジェクトのプロパティをループします。
+ - 4DTEXT: 4D変数および式をテキストとして挿入します。
+ - 4DHTML: HTMLコードを挿入します。
+ - 4DEVAL: 4D式を評価します。
+ - 4DSCRIPT: 4Dメソッドを実行します。
+ - 4DINCLUDE: ページを他のページに含めます。
+ - 4DBASE: 4DINCLUDE タグが使用するデフォルトフォルダーを変更します。
+ - 4DCODE: 4Dコードを挿入します。
+ - 4DIF, 4DELSE, 4DELSEIF, 4DENDIF: HTMLコードに条件式を挿入します。
+ - 4DLOOP, 4DENDLOOP: HTMLコードにループを挿入します。
+ - 4DEACH, 4DENDEACH: コレクション内、エンティティセレクション内、またはオブジェクトのプロパティをループします。
 
 これらのタグについては、[変換タグ](../Tags/transformation-tags.md) のページで説明しています。
 

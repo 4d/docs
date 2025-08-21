@@ -15,10 +15,10 @@ Cet événement peut être utilisé pour filtrer la saisie de données dans les 
 
 Lorsqu'il est utilisé, cet événement est généré après chaque modification apportée au contenu d'un objet saisissable, quelle que soit l'action qui a provoqué la modification, c'est-à-dire :
 
-- Actions d'édition standard qui modifient le contenu comme les actions coller, couper, supprimer ou annuler;
-- Déposer une valeur (action similaire à coller);
-- Toute saisie au clavier effectuée par l'utilisateur ; dans ce cas, l'événement `On After Edit` est généré après les événements [`On Before Keystroke`](onBeforeKeystroke.md) et [`On After Keystroke`](onAfterKeystroke.md), s'ils sont utilisés.
-- Toute modification apportée à l'aide d'une commande de langage qui simule une action de l'utilisateur (c'est-à-dire `POST KEY`).
+ - Actions d'édition standard qui modifient le contenu comme les actions coller, couper, supprimer ou annuler;
+ - Déposer une valeur (action similaire à coller);
+ - Toute saisie au clavier effectuée par l'utilisateur ; dans ce cas, l'événement `On After Edit` est généré après les événements [`On Before Keystroke`](onBeforeKeystroke.md) et [`On After Keystroke`](onAfterKeystroke.md), s'ils sont utilisés.
+ - Toute modification apportée à l'aide d'une commande de langage qui simule une action de l'utilisateur (c'est-à-dire `POST KEY`).
 
 Dans l'événement `On After Edit`, les données texte saisies sont retournées par la commande [`Get edited text`](../commands-legacy/get-edited-text.md).
 

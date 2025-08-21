@@ -15,8 +15,8 @@ Cette page permet de sélectionner, de créer ou de configurer les thèmes de l'
 
 Sélectionnez, dans cette liste, le thème à appliquer à l'éditeur de code. Tous les thèmes disponibles sont affichés, y compris les thèmes personnalisés (le cas échéant). 4D propose deux thèmes par défaut :
 
-- **Default Light Theme**
-- **Default Dark Theme**
+ - **Default Light Theme**
+ - **Default Dark Theme**
 
 > Les thèmes par défaut ne peuvent être ni modifiés ni supprimés.
 
@@ -38,8 +38,8 @@ Si des valeurs clés ne sont pas définies dans un thème personnalisé, elles p
 
 Définir un thème signifie :
 
-- définir une police et une taille de police pour l'ensemble de l'éditeur de code,
-- attribuer des styles et des couleurs spécifiques à chaque élément de langage 4D (champs, tables, variables, paramètres, SQL, etc.), à chaque élément de langage SQL (mots-clés, fonctions, etc.) et aux fonds de couleur.
+ - définir une police et une taille de police pour l'ensemble de l'éditeur de code,
+ - attribuer des styles et des couleurs spécifiques à chaque élément de langage 4D (champs, tables, variables, paramètres, SQL, etc.), à chaque élément de langage SQL (mots-clés, fonctions, etc.) et aux fonds de couleur.
 
 La combinaison de couleurs et de styles différents est particulièrement utile à des fins de maintenance du code.
 
@@ -83,8 +83,8 @@ Cette page configure les options d'affichage de l'éditeur de code.
 
 Permet de désactiver/activer les paramètres du code "international" pour l'application 4D locale.
 
-- **non coché (par défaut)** : Les paramètres Anglais-US et la langue de programmation anglaise sont utilisés dans les méthodes 4D.
-- **coché** : Les paramètres régionaux sont utilisés dans les méthodes 4D.
+ - **non coché (par défaut)** : Les paramètres Anglais-US et la langue de programmation anglaise sont utilisés dans les méthodes 4D.
+ - **coché** : Les paramètres régionaux sont utilisés dans les méthodes 4D.
 
 > Si vous modifiez cette option, vous devez redémarrer l'application 4D pour que le changement soit pris en compte.
 
@@ -138,9 +138,9 @@ Permet de masquer, par défaut, toutes les icônes plier/déplier lorsque vous a
 
 Active l'insertion automatique de () et de caractères fermants lors de la saisie du code. Cette option contrôle deux fonctionnalités automatiques :
 
-- **paire de parenthèses ()** : Ajoutée après une commande 4D, un mot-clé ou une méthode projet insérée à partir d'une liste de suggestions ou de complétion, si l'élément inséré nécessite un ou plusieurs arguments obligatoires. Par exemple, si vous tapez "C_OB" et vous appuyez sur la touche Tab, 4D écrit "C_OBJECT()" et place le point d'insertion à l'intérieur du ().
+ - **paire de parenthèses ()** : Ajoutée après une commande 4D, un mot-clé ou une méthode projet insérée à partir d'une liste de suggestions ou de complétion, si l'élément inséré nécessite un ou plusieurs arguments obligatoires. Par exemple, si vous tapez "C_OB" et vous appuyez sur la touche Tab, 4D écrit "C_OBJECT()" et place le point d'insertion à l'intérieur du ().
 
-- **fermeture }, ), ] ou "** : caractère ajouté lorsque vous tapez respectivement une ouverture {, (, ] ou ". Cette fonction permet d'insérer des paires de symboles correspondants au point d'insertion ou autour d'un texte sélectionné. Par exemple, si vous mettez en surbrillance une chaîne de caractères et que vous tapez un simple caractère ", toute la chaîne sélectionnée sera entourée de "" :
+ - **fermeture }, ), ] ou "** : caractère ajouté lorsque vous tapez respectivement une ouverture {, (, ] ou ". Cette fonction permet d'insérer des paires de symboles correspondants au point d'insertion ou autour d'un texte sélectionné. Par exemple, si vous mettez en surbrillance une chaîne de caractères et que vous tapez un simple caractère ", toute la chaîne sélectionnée sera entourée de "" :
 
 ![](../assets/en/Preferences/optionsClosing.png)\
 ![](../assets/en/Preferences/optionsClosing2.png)
@@ -162,9 +162,9 @@ Permet de mettre en surbrillance toutes les occurrences d'un(e) même variable o
 
 ![](../assets/en/Preferences/optionsVariables.png)
 
-- **Non** (par défaut) : Pas de surbrillance
-- **Sur curseur** : Toutes les occurrences sont mises en évidence lorsque le texte est cliqué
-- **Sur sélection** : Toutes les occurrences sont mises en évidence lorsque le texte est sélectionné
+ - **Non** (par défaut) : Pas de surbrillance
+ - **Sur curseur** : Toutes les occurrences sont mises en évidence lorsque le texte est cliqué
+ - **Sur sélection** : Toutes les occurrences sont mises en évidence lorsque le texte est sélectionné
 
 La couleur de surlignage peut être modifiée dans la page [Définition d'un thème](#définition-dun-thème).
 

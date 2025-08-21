@@ -55,8 +55,8 @@ La función `.disableState()` <!-- REF #WebFormClass.disableState().Summary -->d
 
 Esta función no hace nada si:
 
-- el *estado* no está habilitado actualmente en el formulario web,
-- el *estado* no existe para el formulario web.
+ - el *estado* no está habilitado actualmente en el formulario web,
+ - el *estado* no existe para el formulario web.
 
 Si [activa](#enablestate) o desactiva varios estados en la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez finalizada la función.
 
@@ -80,8 +80,8 @@ La función `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->act
 
 Esta función no hace nada si:
 
-- el *estado* ya ha sido activado en el formulario web,
-- el *estado* no existe para el formulario web.
+ - el *estado* ya ha sido activado en el formulario web,
+ - el *estado* no existe para el formulario web.
 
 Si activa o [desactiva](#disablestate) varios estados dentro de la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez que la función termina.
 

@@ -13,8 +13,8 @@ Les pages Client-serveur regroupent les propriétés liées à l'utilisation de 
 
 Cette option vous permet d'indiquer si la base de données 4D Server apparaîtra ou non dans la liste des bases de données publiées.
 
-- Lorsque cette option est cochée (par défaut), la base de données est rendue publique et apparaît dans la liste des bases de données publiées (onglet **Disponible**).
-- Lorsque l'option n'est pas cochée, la base de données n'est pas rendue publique et n'apparaît pas dans la liste des bases de données publiées. Pour se connecter, les utilisateurs doivent saisir manuellement l'adresse de la base de données dans l'onglet **Personnalisé** de la boîte de dialogue de connexion.
+ - Lorsque cette option est cochée (par défaut), la base de données est rendue publique et apparaît dans la liste des bases de données publiées (onglet **Disponible**).
+ - Lorsque l'option n'est pas cochée, la base de données n'est pas rendue publique et n'apparaît pas dans la liste des bases de données publiées. Pour se connecter, les utilisateurs doivent saisir manuellement l'adresse de la base de données dans l'onglet **Personnalisé** de la boîte de dialogue de connexion.
 
 :::note
 
@@ -67,9 +67,9 @@ Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous deve
 
 Cette liste déroulante contient 3 options de couche réseau : **Historique**, **ServerNet** et **QUIC** (uniquement en mode projet), qui sont utilisées pour gérer les communications entre le serveur 4D et les machines 4D distantes (clients).
 
-- **Historique** : Cette ancienne couche réseau "historique" est toujours prise en charge afin d'assurer la compatibilité avec les bases de données créées avant la version 15. Cette couche réseau peut également être activée par programmation à l'aide de la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
-- **ServerNet** (par défaut) : Active la couche réseau ServerNet sur le serveur (disponible depuis 4D v15).
-- **QUIC** (disponible uniquement en mode projet) : Active la couche réseau QUIC sur le serveur.
+ - **Historique** : Cette ancienne couche réseau "historique" est toujours prise en charge afin d'assurer la compatibilité avec les bases de données créées avant la version 15. Cette couche réseau peut également être activée par programmation à l'aide de la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
+ - **ServerNet** (par défaut) : Active la couche réseau ServerNet sur le serveur (disponible depuis 4D v15).
+ - **QUIC** (disponible uniquement en mode projet) : Active la couche réseau QUIC sur le serveur.
 
   **Notes** :
 
