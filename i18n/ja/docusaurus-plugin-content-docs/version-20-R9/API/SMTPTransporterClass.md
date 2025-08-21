@@ -100,8 +100,8 @@ SMTPステータスコードについての詳細は [こちらのページ](htt
 
 SMTP接続は、以下の場合に自動的に閉じられます:
 
-- `.keepAlive` プロパティが true (デフォルト) の場合には、`transporter` オブジェクトが消去された時。
-- `.keepAlive` プロパティが false の場合には、各 `.send( )` 関数が実行された後。
+ - `.keepAlive` プロパティが true (デフォルト) の場合には、`transporter` オブジェクトが消去された時。
+ - `.keepAlive` プロパティが false の場合には、各 `.send( )` 関数が実行された後。
 
 <!-- INCLUDE transporter.logFile.Desc -->
 

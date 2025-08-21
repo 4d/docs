@@ -17,9 +17,9 @@ La session web créée sur le datastore distant est identifiée à l'aide d'un I
 
 Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie que :
 
-- Si d'autres process de la même application doivent accéder au même datastore distant, ils peuvent utiliser le même `localID` et partager alors la même session.
-- Si un autre process de la même application ouvre le même datastore distant, mais avec un autre `localID`, il créera une nouvelle session sur le datastore distant.
-- Si un autre poste se connecte au même datastore distant avec le même `localID`, il créera une autre session avec un autre cookie.
+ - Si d'autres process de la même application doivent accéder au même datastore distant, ils peuvent utiliser le même `localID` et partager alors la même session.
+ - Si un autre process de la même application ouvre le même datastore distant, mais avec un autre `localID`, il créera une nouvelle session sur le datastore distant.
+ - Si un autre poste se connecte au même datastore distant avec le même `localID`, il créera une autre session avec un autre cookie.
 
 Ces principes sont illustrés dans les graphiques suivants :
 
@@ -29,9 +29,9 @@ Ces principes sont illustrés dans les graphiques suivants :
 
 Les process qui gèrent les sessions d'accès aux datastore apparaissent dans la fenêtre d'administration de 4D Server :
 
-- nom : "REST Handler : \<nom du process\>"
-- type : type Worker Server HTTP
-- session : le nom de session est le nom d'utilisateur passé à la commande `Open datastore`.
+ - nom : "REST Handler : \<nom du process\>"
+ - type : type Worker Server HTTP
+ - session : le nom de session est le nom d'utilisateur passé à la commande `Open datastore`.
 
 Dans l'exemple suivant, deux process sont en cours d'exécution pour la même session :
 

@@ -27,13 +27,13 @@ Les verrouillages déclenchés par l'API REST sont placés au niveau de la [sess
 
 Une entité verrouillée est considérée comme *verrouillée* (c'est-à-dire que les actions de verrouillage / déverrouillage / mise à jour / suppression ne sont pas possibles) par :
 
-- d'autres sessions REST
-- les process 4D (client/serveur, datastore distant, monoposte) exécutés sur le serveur REST.
+ - d'autres sessions REST
+ - les process 4D (client/serveur, datastore distant, monoposte) exécutés sur le serveur REST.
 
 Une entité verrouillée par l'API REST peut être déverrouillée uniquement :
 
-- via son verrou, c'est-à-dire un `/?$lock=false` dans la session REST qui définit `/?$lock=true`
-- ou si le [timeout d'inactivité]($directory.md) de la session est atteint (la session est fermée).
+ - via son verrou, c'est-à-dire un `/?$lock=false` dans la session REST qui définit `/?$lock=true`
+ - ou si le [timeout d'inactivité]($directory.md) de la session est atteint (la session est fermée).
 
 ### Réponse
 
