@@ -33,8 +33,8 @@ displayed_sidebar: docs
 >
 > SMTP接続は、以下の場合に自動的に閉じられます:
 >
-> - [`.keepAlive`](#keepalive) プロパティが true (デフォルト) の場合に、transporter オブジェクトが消去された時。
-> - [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) プロパティがfalse に設定されている場合に、[`.send()`](../API/SMTPTransporterClass.md#send) 関数が実行された後。
+>  - [`.keepAlive`](#keepalive) プロパティが true (デフォルト) の場合に、transporter オブジェクトが消去された時。
+>  - [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) プロパティがfalse に設定されている場合に、[`.send()`](../API/SMTPTransporterClass.md#send) 関数が実行された後。
 
 *server* 引数として、以下のプロパティを持つオブジェクトを渡します:
 

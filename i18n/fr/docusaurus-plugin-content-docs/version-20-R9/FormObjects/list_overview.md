@@ -13,8 +13,8 @@ Le cas échéant, l'icône déployer/contractée est automatiquement affichée �
 
 Le contenu d'un objet formulaire liste hiérarchique peut être initialisé de l'une des manières suivantes :
 
-- Associer une [énumération](properties_DataSource.md#choice-list) à l'objet. L'énumération doit avoir été définie dans l'éditeur de listes en mode Développement.
-- Assignez directement une référence de liste hiérarchique à la [variable ou à l'expression](properties_Object.md#variable-or-expression) associée à l'objet formulaire.
+ - Associer une [énumération](properties_DataSource.md#choice-list) à l'objet. L'énumération doit avoir été définie dans l'éditeur de listes en mode Développement.
+ - Assignez directement une référence de liste hiérarchique à la [variable ou à l'expression](properties_Object.md#variable-or-expression) associée à l'objet formulaire.
 
 Dans les deux cas, vous gérez une liste hiérarchique lors de l'exécution via sa référence *ListRef*, à l'aide des commandes de [liste hiérarchique](../commands/theme/Hierarchical_Lists.md) du langage 4D.
 
@@ -34,9 +34,9 @@ mylist:=New list
 
 Chaque représentation de liste dispose de caractéristiques propres et partage des caractéristiques communes avec l’ensemble des représentations. Les caractéristiques propres à chaque représentation de liste sont les suivantes :
 
-- La sélection,
-- L’état déployé/contracté des éléments,
-- La position du curseur de défilement.
+ - La sélection,
+ - L’état déployé/contracté des éléments,
+ - La position du curseur de défilement.
 
 The other characteristics (font, font size, style, entry control, color, list contents, icons, etc.) are common to all the representations and cannot be modified separately.
 Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example `Count list items` (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
@@ -82,14 +82,14 @@ Comme pour les autres commandes de gestion des propriété d’objets, il est po
 
 Il est possible de modifier l’apparence d’une liste hiérarchique dans un formulaire à l’aide de plusieurs commandes 4D génériques. Vous devez passer à ces commandes soit le nom d’objet de la liste hiérarchique (en utilisant le paramètre \*), soit son nom de variable (contenant la valeur RefListe) :
 
-- `OBJECT SET FONT`
-- `OBJECT SET FONT STYLE`
-- `OBJECT SET FONT SIZE`
-- `OBJECT SET FILTER`
-- `OBJECT SET ENTERABLE`
-- `OBJECT SET SCROLLBAR`
-- `OBJECT SET SCROLL POSITION`
-- `OBJECT SET RGB COLORS`
+ - `OBJECT SET FONT`
+ - `OBJECT SET FONT STYLE`
+ - `OBJECT SET FONT SIZE`
+ - `OBJECT SET FILTER`
+ - `OBJECT SET ENTERABLE`
+ - `OBJECT SET SCROLLBAR`
+ - `OBJECT SET SCROLL POSITION`
+ - `OBJECT SET RGB COLORS`
 
 > Rappel : A l'exception de la commande `OBJECT SET SCROLL POSITION`, ces commandes modifient toutes les représentations d'une même liste, même si vous désignez une liste via son nom d'objet.
 
@@ -107,8 +107,8 @@ Ce principe est appliqué quel que soit l’ordre d’appel des commandes. Si un
 
 Vous pouvez généralement travailler de deux manières avec le contenu des listes hiérarchiques : par position ou par référence.
 
-- Lorsque vous travaillez par position, 4D se base sur la position relative des éléments dans la liste affichée à l'écran pour les identifier. Le résultat sera différent selon que certains éléments hiérarchiques sont déployés ou non. A noter qu'en cas de multi-représentation, chaque objet de formulaire comporte sa propre configuration d'éléments contractés/déployés.
-- Lorsque vous travaillez par référence, 4D se base sur le numéro unique *réfElément* des éléments de la liste. Chaque élément peut être ainsi désigné, quelle que soit sa position ou son affichage dans la liste hiérarchique.
+ - Lorsque vous travaillez par position, 4D se base sur la position relative des éléments dans la liste affichée à l'écran pour les identifier. Le résultat sera différent selon que certains éléments hiérarchiques sont déployés ou non. A noter qu'en cas de multi-représentation, chaque objet de formulaire comporte sa propre configuration d'éléments contractés/déployés.
+ - Lorsque vous travaillez par référence, 4D se base sur le numéro unique *réfElément* des éléments de la liste. Chaque élément peut être ainsi désigné, quelle que soit sa position ou son affichage dans la liste hiérarchique.
 
 ### Exploiter les numéros de référence des éléments (réfElément)
 
@@ -149,9 +149,9 @@ En pratique, vous devez vous préoccuper des numéros de référence d'élément
 
 Vous pouvez choisir si les éléments de la liste hiérarchique peuvent être modifiés par l'utilisateur à l'aide du raccourci **Alt + clic** (Windows)/ **Option + clic** (macOS), ou en effectuant un clic long sur le texte de l'élément.
 
-- Quelle que soit la source de données de la liste hiérarchique, vous pouvez contrôler l'ensemble de l'objet avec la propriété [Saisissable](properties_Entry.md#enterable).
+ - Quelle que soit la source de données de la liste hiérarchique, vous pouvez contrôler l'ensemble de l'objet avec la propriété [Saisissable](properties_Entry.md#enterable).
 
-- En outre, si vous remplissez la liste hiérarchique à l'aide d'une liste créée dans l'éditeur de listes, vous contrôlez si un élément d'une liste hiérarchique est modifiable à l'aide de l'option **Élément modifiable** dans l'éditeur de listes. For more information, see [Setting list properties](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
+ - En outre, si vous remplissez la liste hiérarchique à l'aide d'une liste créée dans l'éditeur de listes, vous contrôlez si un élément d'une liste hiérarchique est modifiable à l'aide de l'option **Élément modifiable** dans l'éditeur de listes. For more information, see [Setting list properties](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
 
 ## Propriétés prises en charge
 

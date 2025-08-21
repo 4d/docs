@@ -160,8 +160,8 @@ Você pode passar um ou mais parâmetros *param* opcionais, que serão passados 
 
 :::note Notas
 
-- Se `.new()` for chamado em uma [singleton class](../Concepts/classes.md#singleton-classes) que já tenha sido instanciada, a instância singleton será retornada, e não uma nova instância.
-- Se `.new()` for chamado em uma classe inexistente, será retornado um erro.
+ - Se `.new()` for chamado em uma [singleton class](../Concepts/classes.md#singleton-classes) que já tenha sido instanciada, a instância singleton será retornada, e não uma nova instância.
+ - Se `.new()` for chamado em uma classe inexistente, será retornado um erro.
 
 :::
 
