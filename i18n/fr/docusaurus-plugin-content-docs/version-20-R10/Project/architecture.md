@@ -42,8 +42,8 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 
 Le fichier de développement de projet, utilisé pour désigner et lancer le projet. Ce fichier peut être ouvert par :
 
-- 4D
-- 4D Server (lecture seule, voir [Ouvrir un projet distant](Desktop/clientServer.md#opening-a-remote-project))
+ - 4D
+ - 4D Server (lecture seule, voir [Ouvrir un projet distant](Desktop/clientServer.md#opening-a-remote-project))
 
 > Dans les projets 4D, le développement est réalisé avec 4D et le développement multi-utilisateurs est géré par des outils de contrôle de version. 4D Server peut ouvrir des fichiers .4DProject à des fins de test.
 
@@ -120,9 +120,9 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 Le dossier Trash contient des méthodes et des formulaires qui ont été supprimés du projet (le cas échéant). Il peut contenir les dossiers suivants :
 
-- `Methods`
-- `Formulaires`
-- `TableForms`
+ - `Methods`
+ - `Formulaires`
+ - `TableForms`
 
 Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". L'organisation des dossiers est identique à celle du dossier [Sources](#sources).
 
@@ -175,11 +175,11 @@ This folder contains [**user settings for data**](../settings/overview.md#user-s
 
 Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les fichiers journaux comprennent notamment :
 
-- conversion de base de données,
-- requêtes de serveur Web,
-- journal des activités de sauvegarde/restitution (*Journal de sauvegarde\[xxx].txt*, voir [Journal de sauvegarde](Backup/backup.md#backup-journal))
-- débogage de commandes,
-- Requêtes 4D Server (générées sur les postes clients et sur le serveur).
+ - conversion de base de données,
+ - requêtes de serveur Web,
+ - journal des activités de sauvegarde/restitution (*Journal de sauvegarde\[xxx].txt*, voir [Journal de sauvegarde](Backup/backup.md#backup-journal))
+ - débogage de commandes,
+ - Requêtes 4D Server (générées sur les postes clients et sur le serveur).
 
 > Un dossier Logs supplémentaire est disponible dans le dossier des préférences système de l'utilisateur (dossier 4D actif, voir commande [Get 4D folder](../commands-legacy/get-4d-folder.md)) pour les fichiers journaux de maintenance et d
 

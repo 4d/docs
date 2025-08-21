@@ -11,10 +11,10 @@ Qodly Studio también puede utilizarse en la [**plataforma Qodly Cloud**](https:
 
 Qodly Studio propone una interfaz web completa, que le permite:
 
-- create Qodly pages by placing components on a canvas
-- mapear componentes a Qodly Sources
-- activar código 4D configurando eventos
-- y mucho más.
+ - create Qodly pages by placing components on a canvas
+ - mapear componentes a Qodly Sources
+ - activar código 4D configurando eventos
+ - y mucho más.
 
 ## Configuración
 
@@ -24,19 +24,19 @@ Qodly Studio propone una interfaz web completa, que le permite:
 
 Qodly Studio soporta los siguientes navegadores web:
 
-- Chrome
-- Edge
-- FireFox
+ - Chrome
+ - Edge
+ - FireFox
 
 La resolución recomendada es 1920x1080.
 
 #### Aplicación 4D
 
-- Desarrollo: 4D v20 R2 o superior
-- Despliegue: 4D Server v20 R2 o superior
-- Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
-- Las sesiones web (*igualmente llamadas sesiones escalables*) deben [estar activadas](sessions.md#enabling-web-sessions).
-- El código 4D llamado por los formularios Qodly debe ser [hilo seguro](preemptiveWeb.md).
+ - Desarrollo: 4D v20 R2 o superior
+ - Despliegue: 4D Server v20 R2 o superior
+ - Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
+ - Las sesiones web (*igualmente llamadas sesiones escalables*) deben [estar activadas](sessions.md#enabling-web-sessions).
+ - El código 4D llamado por los formularios Qodly debe ser [hilo seguro](preemptiveWeb.md).
 
 ### Acceso a Qodly Studio
 
@@ -46,8 +46,8 @@ Qodly Studio es servido por el [servidor web WebAdmin](../Admin/webAdmin.md) y m
 
 Para permitir el acceso a Qodly Studio, debe permitirlo explícitamente en dos niveles:
 
-- a nivel de la aplicación 4D
-- a nivel del proyecto
+ - a nivel de la aplicación 4D
+ - a nivel del proyecto
 
 Si uno de los dos niveles (o ambos) no están habilitados, se niega el acceso a Qodly Studio (se devuelve una página 403).
 
@@ -79,8 +79,8 @@ La autenticación en el servidor web WebAdmin se realiza utilizando una llave de
 
 De acuerdo con la gestión de proyectos 4D, sólo se admiten los siguientes usos:
 
-- el desarrollo con Qodly Studio debe realizarse a través de **4D** (monousuario).
-- deployment of 4D applications powered with Qodly pages must be done using **4D Server**.
+ - el desarrollo con Qodly Studio debe realizarse a través de **4D** (monousuario).
+ - deployment of 4D applications powered with Qodly pages must be done using **4D Server**.
 
 :::warning
 
@@ -146,24 +146,24 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 
 Los siguientes comandos y clases están dedicados a la gestión del lado del servidor de las páginas Qodly:
 
-- Comando [`Web Form`](../API/WebFormClass.md#web-form): devuelve la página Qodly como un objeto.
-- Comando [`Web Event`](../API/WebFormClass.md#web-event): devuelve los eventos desencadenados dentro de los componentes de página ´gQodly.
-- Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar la página Qodly renderizada.
-- clase [`WebFormItem`](../API/WebFormItemClass.md): funciones y propiedades para administrar componentes de página Qodly.
+ - Comando [`Web Form`](../API/WebFormClass.md#web-form): devuelve la página Qodly como un objeto.
+ - Comando [`Web Event`](../API/WebFormClass.md#web-event): devuelve los eventos desencadenados dentro de los componentes de página ´gQodly.
+ - Clase [`WebForm`](../API/WebFormClass.md): funciones y propiedades para gestionar la página Qodly renderizada.
+ - clase [`WebFormItem`](../API/WebFormItemClass.md): funciones y propiedades para administrar componentes de página Qodly.
 
 ### Uso métodos proyecto
 
 Recomendamos utilizar funciones clase en lugar de métodos proyecto. Sólo las funciones de clase pueden ser llamadas desde los componentes. Sin embargo, puede seguir utilizando sus métodos de proyecto en Qodly Studio de dos maneras:
 
-- Puede llamar a sus métodos desde funciones clase.
-- Puede [ejecutar sus métodos](https://developer.qodly.com/docs/studio/coding#methods-and-classes) directamente desde el Explorador Qodly.
+ - Puede llamar a sus métodos desde funciones clase.
+ - Puede [ejecutar sus métodos](https://developer.qodly.com/docs/studio/coding#methods-and-classes) directamente desde el Explorador Qodly.
 
 ### Uso sin conexión
 
 Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a Internet. En este caso, sin embargo, las siguientes funciones no están disponibles:
 
-- [Plantillas](https://developer.qodly.com/docs/studio/pageLoaders/templates): la librería de plantillas está vacía
-- Consejos de interfaz de usuario: no se muestran al hacer clic en los iconos ![alt-text](../assets/en/WebServer/tips.png).
+ - [Plantillas](https://developer.qodly.com/docs/studio/pageLoaders/templates): la librería de plantillas está vacía
+ - Consejos de interfaz de usuario: no se muestran al hacer clic en los iconos ![alt-text](../assets/en/WebServer/tips.png).
 
 ## Despliegue
 
@@ -179,8 +179,8 @@ Mira [esta página](https://developer.qodly.com/docs/studio/rendering) para obte
 
 Para habilitar el renderizado de las páginas Qodly, se deben configurar las siguientes opciones.
 
-- La opción **Configuración** > **Web** > **Funcionalidades web** > [**Exponer como servidor REST**](../configuración/web.md#expose-as-rest-server) del proyecto 4D debe estar activada.
-- El [servidor web 4D](webServer.md) debe estar ejecutándose.
+ - La opción **Configuración** > **Web** > **Funcionalidades web** > [**Exponer como servidor REST**](../configuración/web.md#expose-as-rest-server) del proyecto 4D debe estar activada.
+ - El [servidor web 4D](webServer.md) debe estar ejecutándose.
 
 :::note
 
@@ -310,9 +310,9 @@ Para cerrar la sesión del usuario, solo necesita ejecutar la acción estándar 
 
 Al desencadenar la acción de cierre de sesión de una sesión de usuario web, se producen los siguientes efectos:
 
-- la sesión de usuario web actual pierde sus privilegios, sólo se permiten [peticiones REST descriptivas](../REST/authUsers.md#descriptive-rest-requests),
-- se libera la licencia asociada de 4D,
-- el tiempo de espera de 'Session.storage' se mantiene hasta que se alcanza el tiempo de inactividad de la sesión web (al menos una hora). Durante este periodo tras un cierre de sesión, si el usuario vuelve a iniciar sesión, se utiliza la misma sesión y el objeto compartido `Session.storage` está disponible con su contenido actual.
+ - la sesión de usuario web actual pierde sus privilegios, sólo se permiten [peticiones REST descriptivas](../REST/authUsers.md#descriptive-rest-requests),
+ - se libera la licencia asociada de 4D,
+ - el tiempo de espera de 'Session.storage' se mantiene hasta que se alcanza el tiempo de inactividad de la sesión web (al menos una hora). Durante este periodo tras un cierre de sesión, si el usuario vuelve a iniciar sesión, se utiliza la misma sesión y el objeto compartido `Session.storage` está disponible con su contenido actual.
 
 ## Acerca del uso de licencias para renderización
 
@@ -364,7 +364,7 @@ Para más información sobre el atributo `SameSite`, consulte [esta entrada de b
 
 Para evitar utilizar más licencias de las necesarias, recomendamos hacer una de las siguientes cosas:
 
-- Ejecute el renderizador en otra pestaña del navegador (introduciendo la URL renderizada de su página Qodly: `IP:port/$lib/renderer/?w=QodlyPageName`).
-- Asegúrese de que Qodly Studio y su base de datos se alcanzan en el mismo esquema URL.
-- Utilice el valor `Lax` para la [cookie de sesión](webServerConfig.md#session-cookie-samesite) del servidor web de la base de datos de su proyecto.
+ - Ejecute el renderizador en otra pestaña del navegador (introduciendo la URL renderizada de su página Qodly: `IP:port/$lib/renderer/?w=QodlyPageName`).
+ - Asegúrese de que Qodly Studio y su base de datos se alcanzan en el mismo esquema URL.
+ - Utilice el valor `Lax` para la [cookie de sesión](webServerConfig.md#session-cookie-samesite) del servidor web de la base de datos de su proyecto.
 

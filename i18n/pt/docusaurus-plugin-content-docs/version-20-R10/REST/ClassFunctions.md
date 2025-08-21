@@ -7,8 +7,8 @@ You can call [data model class functions](ORDA/ordaClasses.md) defined for the O
 
 Functions can be called in two ways:
 
-- usando **POST requests**, com parâmetros de dados passados no corpo da solicitação.
-- usando solicitações **GET**, com parâmetros passados diretamente no URL.
+ - usando **POST requests**, com parâmetros de dados passados no corpo da solicitação.
+ - usando solicitações **GET**, com parâmetros passados diretamente no URL.
 
 POST requests provide a better security level because they avoid running sensitive code through an action as simple as clicking on a link. However, GET requests can be more compliant with user experience, allowing to call functions by entering an URL in a browser (note: the developer must ensure no sensitive action is done in such functions).
 
@@ -96,11 +96,11 @@ You can send parameters to functions defined in ORDA user classes or singletons.
 
 As regras abaixo são válidas:
 
-- Nas funções chamadas por meio de solicitações POST, os parâmetros devem ser passados **no corpo da solicitação POST**.
-- In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
-- Os parâmetros devem ser incluídos numa coleção (formato JSON).
-- Todos os tipos de dados escalares suportados nas coleções JSON podem ser passados como parâmetros.
-- A entidade e a seleção de entidades podem ser passadas como parâmetros. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
+ - Nas funções chamadas por meio de solicitações POST, os parâmetros devem ser passados **no corpo da solicitação POST**.
+ - In functions called through GET requests, parameters must be passed **in the URL with "?$params=" syntax**.
+ - Os parâmetros devem ser incluídos numa coleção (formato JSON).
+ - Todos os tipos de dados escalares suportados nas coleções JSON podem ser passados como parâmetros.
+ - A entidade e a seleção de entidades podem ser passadas como parâmetros. The parameter list must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
 Veja [este exemplo](#using-an-entity-to-be-created-on-the-server) e [este exemplo](#receiving-an-entity-selection-as-parameter).
 
@@ -134,8 +134,8 @@ Também é possível transmitir valores para quaisquer atributos da entidade. Es
 | __ENTITY    | Parâmetros                                                    | Obrigatório - Verdadeiro para indicar ao servidor que o parâmetro é uma entidade |
 | __KEY       | misto (do mesmo tipo que a chave primária) | Facultativo - Chave primária da entidade                                         |
 
-- Se `__KEY` não for fornecido, uma nova entidade é criada no servidor com os atributos fornecidos.
-- Se `__KEY` for fornecido, a entidade correspondente a `__KEY` é carregada no servidor com os atributos fornecidos
+ - Se `__KEY` não for fornecido, uma nova entidade é criada no servidor com os atributos fornecidos.
+ - Se `__KEY` for fornecido, a entidade correspondente a `__KEY` é carregada no servidor com os atributos fornecidos
 
 See examples below for creating or updating entities with POST requests.
 See an example of contents downloading using an entity with a GET request.

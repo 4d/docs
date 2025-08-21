@@ -42,15 +42,15 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
   - `On REST Authentication`
   - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
-- La méthode projet `compiler_web` (indépendamment de sa propriété "Mode d'exécution") ;
+ - La méthode projet `compiler_web` (indépendamment de sa propriété "Mode d'exécution") ;
 
-- Basically any code processed by the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command in the web context, for example through .shtml pages
+ - Basically any code processed by the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command in the web context, for example through .shtml pages
 
-- Toute méthode projet comportant l'attribut "Available through 4D tags and URLS (`4DACTION`, etc.)"
+ - Toute méthode projet comportant l'attribut "Available through 4D tags and URLS (`4DACTION`, etc.)"
 
-- Triggers pour les tables comportant l'attribut "Expose as REST resource"
+ - Triggers pour les tables comportant l'attribut "Expose as REST resource"
 
-- [Fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md) appelées via REST
+ - [Fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md) appelées via REST
 
 For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
 
@@ -62,8 +62,8 @@ La plupart des commandes, fonctions, méthodes base et URLs 4D sont thread-safe 
 
 Toutes les commandes 4D relatives au Web sont thread-safe, à savoir :
 
-- toutes les commandes du thème *Web Server*
-- toutes les commandes du thème *Client HTTP*.
+ - toutes les commandes du thème *Web Server*
+ - toutes les commandes du thème *Client HTTP*.
 
 Les méthodes base ci-dessous sont thread-safe et peuvent être utilisées en mode préemptif (voir ci-dessus) : `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
@@ -73,15 +73,15 @@ Bien sûr, le code exécuté par ces méthodes doit aussi être thread-safe.
 
 Les URLs Web Server ci-dessous sont thread-safe et peuvent être utilisées en mode préemptif :
 
-- *4daction/* (la méthode projet appelée doit également être à thread-safe)
-- *4dwebtest/*
-- *4dblank/*
-- *4dstats/*
-- *4dhtmlstats/*
-- *4dcacheclear/*
-- *rest/*
-- *4dimgfield/* (généré par `PROCESS 4D TAGS` pour les requêtes web relatives aux champs images)
-- *4dimg/* (généré par `PROCESS 4D TAGS` pour les requêtes web sur les variables image)
+ - *4daction/* (la méthode projet appelée doit également être à thread-safe)
+ - *4dwebtest/*
+ - *4dblank/*
+ - *4dstats/*
+ - *4dhtmlstats/*
+ - *4dcacheclear/*
+ - *rest/*
+ - *4dimgfield/* (généré par `PROCESS 4D TAGS` pour les requêtes web relatives aux champs images)
+ - *4dimg/* (généré par `PROCESS 4D TAGS` pour les requêtes web sur les variables image)
 
 ### Icône de process web préemptif
 

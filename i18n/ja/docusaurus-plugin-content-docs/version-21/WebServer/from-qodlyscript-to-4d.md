@@ -35,12 +35,12 @@ QodlyScript はローカル変数のみをサポートするため、QodlyScript
 
 QodlyScript のコマンドおよび定数名は、スペースを入れずにキャメルケースで記述されます。 また、QodlyScript の定数名は `k` 文字で始まります。 これらの QodlyScript の要素を 4Dランゲージに変換する必要があるかもしれません。
 
-- 通常は、単に名前を変換するだけで十分です。 たとえば、QodlyScript の `newCollection` は 4Dランゲージの `New collection` です。
-- しかし、いくつかのコマンドは改名されています。たとえば、4Dランゲージの `Arctan` と `Square root` コマンドは、QodlyScript では `atan` および `sqrt` です。
+ - 通常は、単に名前を変換するだけで十分です。 たとえば、QodlyScript の `newCollection` は 4Dランゲージの `New collection` です。
+ - しかし、いくつかのコマンドは改名されています。たとえば、4Dランゲージの `Arctan` と `Square root` コマンドは、QodlyScript では `atan` および `sqrt` です。
 
 ### 例題
 
-- QodlyScript コード:
+ - QodlyScript コード:
 
 ```qs
  declare(entitySelection : 4D.EntitySelection)  
@@ -56,7 +56,7 @@ QodlyScript のコマンドおよび定数名は、スペースを入れずに�
  end
 ```
 
-- 上に相当する 4Dランゲージのコード:
+ - 上に相当する 4Dランゲージのコード:
 
 ```4d
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
