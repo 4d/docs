@@ -63,10 +63,10 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 `.body` プロパティには<!-- REF #OutgoingMessageClass.body.Summary -->送信されるメッセージ本文<!-- END REF -->が格納されています。 `.body` プロパティでは以下のデータ型がサポートされます:
 
-- text
-- blob
-- object
-- image
+ - text
+ - blob
+ - object
+ - image
 
 `.body` プロパティは読み書き可能です。
 
@@ -108,17 +108,17 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 *body* 引数では以下のデータ型がサポートされています:
 
-- Text
-- BLOB
-- Object
-- ピクチャー
+ - Text
+ - BLOB
+ - Object
+ - ピクチャー
 
 この関数が使用された場合、content-type ヘッダーは*body* 引数の型に応じて自動的に設定されます:
 
-- Content-Type: 本文がテキストの場合にはtext/plain
-- Content-Type: 本文がBlob の場合にはapplication/octet-stream
-- Content-Type: 本文がオブジェクトの場合にはapplication/json
-- Content-Type: image/jpeg、image/gif... (本文が画像の場合)
+ - Content-Type: 本文がテキストの場合にはtext/plain
+ - Content-Type: 本文がBlob の場合にはapplication/octet-stream
+ - Content-Type: 本文がオブジェクトの場合にはapplication/json
+ - Content-Type: image/jpeg、image/gif... (本文が画像の場合)
 
 *body* がサポートされていない値の型だった場合、エラーが返されます。
 

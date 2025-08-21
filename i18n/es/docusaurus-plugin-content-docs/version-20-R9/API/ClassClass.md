@@ -160,8 +160,8 @@ Puede pasar uno o más parámetros opcionales *param*, que se pasarán a la [fun
 
 :::note Notas
 
-- Si se llama a `.new()` en una [clase singleton](../Concepts/classes.md#singleton-classes) que ya ha sido instanciada, se devuelve la instancia singleton, no una nueva instancia.
-- Si se llama a `.new()` en una clase inexistente, se devuelve un error.
+ - Si se llama a `.new()` en una [clase singleton](../Concepts/classes.md#singleton-classes) que ya ha sido instanciada, se devuelve la instancia singleton, no una nueva instancia.
+ - Si se llama a `.new()` en una clase inexistente, se devuelve un error.
 
 :::
 

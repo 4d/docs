@@ -7,8 +7,8 @@ Se mais de uma pessoa usar uma aplicação, que geralmente é o caso em arquitet
 
 A estratégia de controle de acesso 4D depende da configuração de sua implementação:
 
-- em aplicações multi-usuário, pode confiar nos usuários e grupos 4D,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
+ - em aplicações multi-usuário, pode confiar nos usuários e grupos 4D,
+ - in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
 
 > Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/) para una visión de conjunto de las funciones de seguridad de 4D.
 

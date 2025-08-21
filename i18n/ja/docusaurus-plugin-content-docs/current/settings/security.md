@@ -11,7 +11,7 @@ title: セキュリティページ
 
 > これらの設定は、シングルユーザーモードで開かれたプロジェクトデータベースには適用されません。
 
-- **デザインおよびランタイムエクスプローラーアクセス権**: データベースのデザインモードにアクセスし、ランタイムエクスプローラーを表示する権利を特定のグループに付与します。
+ - **デザインおよびランタイムエクスプローラーアクセス権**: データベースのデザインモードにアクセスし、ランタイムエクスプローラーを表示する権利を特定のグループに付与します。
 
   注:
 
@@ -25,11 +25,11 @@ title: セキュリティページ
   - デフォルトユーザーにパスワードを割り当てた場合、データベースが開かれるときにダイアログが表示され、パスワードの入力を求められます。
   - デフォルトユーザーにパスワードを割り当てない場合、上記のダイアログは表示されません。<br/> **注:** "デフォルトユーザー" モードが有効になっているときでも、強制的にユーザー認証ダイアログを表示させることができます。これはたとえば Administrator や Designer としてログインするために必要となります。 これには、データベースを開いたり接続したりする際に **Shift**キーを押したままにします。
 
-- **パスワードダイアログにユーザーリストを表示する**: このオプションが選択されていると、ユーザー認証ダイアログにユーザーリストが表示され、ユーザーはその中から名前を選択し、パスワードを入力することになります。 オプションが選択されていない場合、ユーザーは名前とパスワードの両方を入力します。 For more information about the two versions of the password dialog box, see the section "Access system overview" in [Access system overview](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html).
+ - **パスワードダイアログにユーザーリストを表示する**: このオプションが選択されていると、ユーザー認証ダイアログにユーザーリストが表示され、ユーザーはその中から名前を選択し、パスワードを入力することになります。 オプションが選択されていない場合、ユーザーは名前とパスワードの両方を入力します。 For more information about the two versions of the password dialog box, see the section "Access system overview" in [Access system overview](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html).
 
   - **ユーザーリストをABC順で表示する** (上記オプションが選択されているときのみ有効です): このオプションが選択されていると、ユーザー認証ダイアログボックスのユーザーリストは名前の ABC順に表示されます。
 
-- **ユーザーは自分のパスワードを変更可能**: このオプションが選択されていると、ユーザー認証ダイアログに **変更** ボタンが表示されます。 This button lets the user access a dialog box that can be used to change their password (for more information about this dialog box, refer to the "Modification of password by user" in [Ensuring system maintenance](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). 必要であれば **変更** ボタンを非表示にし、パスワードの変更を禁止することができます。 それには、このオプションの選択を外します。
+ - **ユーザーは自分のパスワードを変更可能**: このオプションが選択されていると、ユーザー認証ダイアログに **変更** ボタンが表示されます。 This button lets the user access a dialog box that can be used to change their password (for more information about this dialog box, refer to the "Modification of password by user" in [Ensuring system maintenance](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). 必要であれば **変更** ボタンを非表示にし、パスワードの変更を禁止することができます。 それには、このオプションの選択を外します。
 
 ## オプション
 
@@ -41,9 +41,9 @@ title: セキュリティページ
   - **誰も制限しない**: このオプションはフォーミュラの制御を無効にします。 このオプションが選択されると、ユーザーはすべての 4Dコマンドおよびプラグインコマンド、さらにはプロジェクトメソッドを使用できます (非表示のものを除く)。
     **Note:** This option takes priority over the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command. このオプションが選択されると、コマンドの効果はなくなります。
 
-- **外部ファイルのユーザー設定を有効にする**: 外部ファイル化したユーザー設定を使用するにはこのオプションを選択します。 このオプションが選択されると、設定をおこなうダイアログが最大 3つになります: **ストラクチャー設定**、**ユーザー設定**、そして **データファイル用のユーザー設定** です。 For more information, refer to [User settings](../Desktop/user-settings.md).
+ - **外部ファイルのユーザー設定を有効にする**: 外部ファイル化したユーザー設定を使用するにはこのオプションを選択します。 このオプションが選択されると、設定をおこなうダイアログが最大 3つになります: **ストラクチャー設定**、**ユーザー設定**、そして **データファイル用のユーザー設定** です。 For more information, refer to [User settings](../Desktop/user-settings.md).
 
-- **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) facilitates the initialization and backup phases for 4D components. セキュリティ上の理由から、このメソッドの実行はそれぞれのホストデータベースにおいて明示的に許可されなければなりません。 そのためにはこのオプションをチェックします。 デフォルトでは、チェックされていません。
+ - **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) facilitates the initialization and backup phases for 4D components. セキュリティ上の理由から、このメソッドの実行はそれぞれのホストデータベースにおいて明示的に許可されなければなりません。 そのためにはこのオプションをチェックします。 デフォルトでは、チェックされていません。
 
   このオプションがチェックされていると:
 
