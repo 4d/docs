@@ -15,8 +15,8 @@ Esta página permite selecionar, criar ou configurar temas do Editor de código.
 
 Nesta lista, seleciona o tema a aplicar ao editor de código. São apresentados todos os temas disponíveis, incluindo os temas personalizados (se existirem). 4D fornece dois temas por padrão:
 
-- **Tema Light predefinido**
-- **Tema escuro predefinido**
+ - **Tema Light predefinido**
+ - **Tema escuro predefinido**
 
 > Os temas padrão não podem ser modificados ou eliminados.
 
@@ -38,8 +38,8 @@ Cada tema personalizado se almacena en un único archivo JSON llamado *themeName
 
 Definir um tema significa:
 
-- definir um tipo de letra e um tamanho de letra globais para todo o editor de código,
-- atribuir estilos e cores específicos a cada elemento da linguagem 4D (campos, tabelas, variáveis, parâmetros, SQL, etc.), elemento da linguagem SQL (palavras-chave, funções, etc.) e fundos de cor.
+ - definir um tipo de letra e um tamanho de letra globais para todo o editor de código,
+ - atribuir estilos e cores específicos a cada elemento da linguagem 4D (campos, tabelas, variáveis, parâmetros, SQL, etc.), elemento da linguagem SQL (palavras-chave, funções, etc.) e fundos de cor.
 
 A combinação de cores e estilos diferentes é particularmente útil para manutenção do código.
 
@@ -83,8 +83,8 @@ Esta página configura as opções de exibição do Editor de código.
 
 Permite-lhe desativar/ativar os parâmetros do código "internacional" para a aplicação 4D local.
 
-- **no seleccionado** (por defecto): los parámetros English-US y el lenguaje de programación inglés se utilizan en los métodos 4D.
-- **seleccionado**: los parámetros regionales se utilizan en los métodos 4D.
+ - **no seleccionado** (por defecto): los parámetros English-US y el lenguaje de programación inglés se utilizan en los métodos 4D.
+ - **seleccionado**: los parámetros regionales se utilizan en los métodos 4D.
 
 > Se modificar esta opção, tem de reiniciar a aplicação 4D para que a alteração seja tida em conta.
 
@@ -138,9 +138,9 @@ Permite-lhe ocultar todos os ícones de expansão/recolhimento por padrão ao ap
 
 Permite a inserção automática de () e de chaves de fecho durante a escrita de código. Esta opção controla duas funcionalidades automáticas:
 
-- **par de paréntesis ()<**: se añade después de un comando 4D, una palabra clave o un método proyecto insertado desde una lista de sugerencias o de finalización, si el elemento insertado requiere uno o más argumentos obligatorios. Por exemplo, se escrever "C_OB" e pressionar Tab, 4D escreve "C_OBJECT()" e coloca o ponto de inserção dentro do ().
+ - **par de paréntesis ()<**: se añade después de un comando 4D, una palabra clave o un método proyecto insertado desde una lista de sugerencias o de finalización, si el elemento insertado requiere uno o más argumentos obligatorios. Por exemplo, se escrever "C_OB" e pressionar Tab, 4D escreve "C_OBJECT()" e coloca o ponto de inserção dentro do ().
 
-- **cierre }, ), ], o "**: caracter que se añade al escribir respectivamente una apertura {, (, ], o ". Esta função permite inserir pares de símbolos correspondentes no ponto de inserção ou à volta de um texto selecionado. Por exemplo, se realçar uma cadeia de caracteres e escrever um único ", toda a cadeia de caracteres selecionada será colocada entre "":
+ - **cierre }, ), ], o "**: caracter que se añade al escribir respectivamente una apertura {, (, ], o ". Esta função permite inserir pares de símbolos correspondentes no ponto de inserção ou à volta de um texto selecionado. Por exemplo, se realçar uma cadeia de caracteres e escrever um único ", toda a cadeia de caracteres selecionada será colocada entre "":
 
 ![](../assets/en/Preferences/optionsClosing.png)\
 ![](../assets/en/Preferences/optionsClosing2.png)
@@ -150,11 +150,11 @@ Permite a inserção automática de () e de chaves de fecho durante a escrita de
 Define a sinalização gráfica das chaves correspondentes no código. Esta sinalização aparece sempre que é selecionado um parêntese quadrado, parêntese ou parêntese curvo.
 As opções abaixo estão disponíveis:
 
-- **Ninguno**: sin señales
-- **Retângulo** (padrão): braces cercadas por uma linha preta\
+ - **Ninguno**: sin señales
+ - **Retângulo** (padrão): braces cercadas por uma linha preta\
     ![](../assets/en/Preferences/optionsRectangle.png)
-- **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
-- **Negrita**: las llaves aparecen en negrita.
+ - **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
+ - **Negrita**: las llaves aparecen en negrita.
 
 #### Destaque de variáveis e campos
 
@@ -162,9 +162,9 @@ Permite destacar todas as ocorrências da mesma variável ou campo numa janela d
 
 ![](../assets/en/Preferences/optionsVariables.png)
 
-- **No**(por defecto): no resaltado
-- **Con cursor**: todas las ocurrencias se destacan cuando se hace clic en el texto
-- **Al seleccionar**: se resaltan todas las ocurrencias cuando se selecciona el texto
+ - **No**(por defecto): no resaltado
+ - **Con cursor**: todas las ocurrencias se destacan cuando se hace clic en el texto
+ - **Al seleccionar**: se resaltan todas las ocurrencias cuando se selecciona el texto
 
 El color de resaltado se puede definir en la página [Tema](#theme-definition).
 

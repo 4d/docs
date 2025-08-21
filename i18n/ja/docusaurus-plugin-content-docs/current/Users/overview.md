@@ -7,8 +7,8 @@ title: アクセスコントロールの概要
 
 運用環境によって、4D アクセスコントロールの方法は異なります:
 
-- マルチユーザーアプリケーションでは、4D のユーザー＆グループ機能を利用することができます。
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
+ - マルチユーザーアプリケーションでは、4D のユーザー＆グループ機能を利用することができます。
+ - in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
 
 > 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 

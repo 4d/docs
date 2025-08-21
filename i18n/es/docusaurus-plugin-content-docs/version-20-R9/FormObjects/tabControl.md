@@ -42,9 +42,9 @@ En macOS, además de la posición estándar (arriba), los controles de las pesta
 
 Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
-- un objeto
-- una lista de selección
-- un array
+ - un objeto
+ - una lista de selección
+ - un array
 
 ### Utilizar un objeto
 

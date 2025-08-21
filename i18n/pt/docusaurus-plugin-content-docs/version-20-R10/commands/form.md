@@ -26,23 +26,23 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Summary-->O comando **Form** retorna o objeto associado ao formulário atual (instanciado a partir do parâmetro *formData* ou da classe usuário atribuída no editor de formulários).<!-- END REF--> O 4D associa automaticamente um objeto ao formulário atual nos seguintes casos:
 
-- o formulário atual foi carregado por um dos comandos [`DIALOG`](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md),
-- o formulário atual é um subformulário,
-- um formulário de tabela é exibido na tela no momento.
+ - o formulário atual foi carregado por um dos comandos [`DIALOG`](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md),
+ - o formulário atual é um subformulário,
+ - um formulário de tabela é exibido na tela no momento.
 
 ### Comandos (DIALOG...)
 
 Se o formulário atual estiver sendo exibido ou carregado por uma chamada aos comandos [DIALOG](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md), **Form** retornará um dos dois:
 
-- o objeto *formData* passado como parâmetro para esse comando, se houver,
-- ou, um objeto instanciado da [classe de usuário associada ao formulário](../FormEditor/properties_FormProperties.md#form-class), se houver,
-- ou um objeto vazio.
+ - o objeto *formData* passado como parâmetro para esse comando, se houver,
+ - ou, um objeto instanciado da [classe de usuário associada ao formulário](../FormEditor/properties_FormProperties.md#form-class), se houver,
+ - ou um objeto vazio.
 
 ### Subformulário
 
 Se o formulário atual for um subformulário, o objeto retornado dependerá da variável do contêiner pai:
 
-- **Form** returns the object associated with the table form displayed on screen.\
+ - **Form** returns the object associated with the table form displayed on screen.\
     **Form** returns the object associated with the table form displayed on screen.\
     In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
 
@@ -50,7 +50,7 @@ Se o formulário atual for um subformulário, o objeto retornado dependerá da v
  (OBJECT Get pointer(Object subform container))->  
 ```
 
-- Se a variável associada ao contêiner pai não foi tipada como um objeto, **Forma** retorna um objeto vazio, mantido por 4D no contexto do subformulário.
+ - Se a variável associada ao contêiner pai não foi tipada como um objeto, **Forma** retorna um objeto vazio, mantido por 4D no contexto do subformulário.
 
 Para mais informações, consulte a seção *Subformulários de Páginas*.
 

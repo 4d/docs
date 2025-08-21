@@ -11,7 +11,7 @@ Lorsque vous avez des attributs relationnels dans une dataclass, utilisez `$attr
 
 Vous pouvez appliquer des `$attributes` à une entité (par exemple, People (1)) ou à une entity selection (par exemple, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
-- Si `$attributes` n'est pas spécifié dans une requête, ou si la valeur "\*" est passée, tous les attributs disponibles sont extraits. Les attributs de type **related entity** sont extraits avec la forme simple : un objet avec la propriété `__KEY` (clé primaire) et `URI`. Les attributs de type **related entities** ne sont pas extraits.
+ - Si `$attributes` n'est pas spécifié dans une requête, ou si la valeur "\*" est passée, tous les attributs disponibles sont extraits. Les attributs de type **related entity** sont extraits avec la forme simple : un objet avec la propriété `__KEY` (clé primaire) et `URI`. Les attributs de type **related entities** ne sont pas extraits.
 
 - Si `$attributes` est spécifié pour les attributs **related entity** :
      - `$attributes=relatedEntity` : l'entité liée est retournée sous une forme simple (propriété __KEY différée (clé primaire)) et `URI`.

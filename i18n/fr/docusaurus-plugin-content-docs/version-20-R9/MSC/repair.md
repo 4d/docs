@@ -57,7 +57,7 @@ La zone "Enregistrements trouvés dans le fichier de données" comporte deux tab
      - Si tous les enregistrements et toutes les tables ont été attribués, seule la zone principale est affichée. Les noms des tables attribuées automatiquement sont affichés en caractères verts. Les groupes qui n'ont pas encore été attribués, c'est-à-dire, les tables qui n'ont pas pu être associées à des enregistrements sont affichées en caractères rouges.
      - Voir le compte rendu Par défaut, l’option est cochée pour tous les groupes avec les enregistrements qui peuvent être associés à une table.
 
-- Le deuxième tableau liste les tables du fichier de structure.
+ - Le deuxième tableau liste les tables du fichier de structure.
 
 ### Attribution manuelle
 
@@ -74,7 +74,7 @@ Le bouton **Ignorer enregistrements** permet de supprimer l’association effect
 
 Une fois la réparation terminée, 4D génère un fichier de compte-rendu dans le dossier Logs du projet. Ce fichier liste l’ensemble des opérations qui ont été menées. Il est créé au format xml et est nommé : *ApplicationName\*\*_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" où :
 
-- *ApplicationName* est le nom du fichier de structure sans extension, par exemple "Factures",
-- *aaaa-mm-jj hh-mm-ss* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
+ - *ApplicationName* est le nom du fichier de structure sans extension, par exemple "Factures",
+ - *aaaa-mm-jj hh-mm-ss* est l'horodatage du fichier, basé sur la date et l'heure système locales au moment du lancement de l'opération de vérification, par exemple "2019-02-11 15-20-45".
 
 Lorsque vous cliquez sur le bouton **Voir le compte rendu**, 4D affiche le fichier de compte-rendu le plus récent dans le navigateur par défaut de l’ordinateur.

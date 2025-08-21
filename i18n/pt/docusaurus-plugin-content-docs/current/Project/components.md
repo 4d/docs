@@ -13,8 +13,8 @@ Ao desenvolver em 4D, os arquivos de componentes podem ser armazenados de forma 
 
 Componentes podem ser interpretados ou [compilados](../Desktop/building.md).
 
-- Um projeto 4D em modo interpretado pode usar componentes interpretados ou compilados.
-- Um projeto 4D em execução no modo compilado não pode usar componentes interpretados. Por isso não pode ser usado em um componente.
+ - Um projeto 4D em modo interpretado pode usar componentes interpretados ou compilados.
+ - Um projeto 4D em execução no modo compilado não pode usar componentes interpretados. Por isso não pode ser usado em um componente.
 
 ### Pasta do pacote
 
@@ -37,8 +37,8 @@ A arquitetura da pasta "Contents" é recomendada para componentes, se você dese
 
 Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D Server**. Em outros ambientes, os componentes são geridos de forma diferente:
 
-- em [4D no modo remoto](../Desktop/clientServer.md), componentes são carregados pelo servidor e enviados para o aplicativo remoto.
-- em aplicações mescladas, componentes são [incluídos na etapa de compilação](../Desktop/building.md#plugins--components-page).
+ - em [4D no modo remoto](../Desktop/clientServer.md), componentes são carregados pelo servidor e enviados para o aplicativo remoto.
+ - em aplicações mescladas, componentes são [incluídos na etapa de compilação](../Desktop/building.md#plugins--components-page).
 
 :::
 
@@ -46,14 +46,14 @@ Esta página descreve como trabalhar com componentes nos ambientes **4D** e **4D
 
 Para carregar um componente no seu projeto 4D, você pode:
 
-- copie os arquivos de componentes na pasta [**Components** do seu projeto](architecture.md#components) (as pastas de pacotes de componentes interpretados devem ser sufixadas com ".4dbase", veja acima),
-- ou, declarar o componente nas **dependências**. fil\*\* arquivo de seu projeto; isto é feito automaticamente para arquivos locais quando você [**adicionar uma dependência usando a interface do Gerenciador de Dependência**](#adding-a-github-dependency).
+ - copie os arquivos de componentes na pasta [**Components** do seu projeto](architecture.md#components) (as pastas de pacotes de componentes interpretados devem ser sufixadas com ".4dbase", veja acima),
+ - ou, declarar o componente nas **dependências**. fil\*\* arquivo de seu projeto; isto é feito automaticamente para arquivos locais quando você [**adicionar uma dependência usando a interface do Gerenciador de Dependência**](#adding-a-github-dependency).
 
 Os componentes declarados no arquivo **dependencies.json** podem ser armazenados em locais diferentes:
 
-- no mesmo nível da pasta do pacote do seu projeto 4D: esse é o local padrão,
-- em qualquer lugar de sua máquina: o caminho do componente deve ser declarado no arquivo **environment4d.json**
-- em um repositório GitHub: o caminho do componente pode ser declarado no arquivo **dependencies.json** ou no arquivo **environment4d.json**, ou em ambos os arquivos.
+ - no mesmo nível da pasta do pacote do seu projeto 4D: esse é o local padrão,
+ - em qualquer lugar de sua máquina: o caminho do componente deve ser declarado no arquivo **environment4d.json**
+ - em um repositório GitHub: o caminho do componente pode ser declarado no arquivo **dependencies.json** ou no arquivo **environment4d.json**, ou em ambos os arquivos.
 
 Se o mesmo componente for instalado em locais diferentes, uma [ordem de prioridade](#prioridade) é aplicada.
 
@@ -69,8 +69,8 @@ O arquivo **dependencies.json** faz referência a todos os componentes necessár
 
 Pode conter:
 
-- nomes de componentes [armazenado localmente](#local-components) (caminho ou caminho padrão definido em um arquivo **environment4d.json**),
-- nomes de componentes [armazenados nos repositórios do GitHub](#components-stored-on-github) (seus caminhos podem ser definidos neste arquivo ou em um arquivo **environment4d.json**).
+ - nomes de componentes [armazenado localmente](#local-components) (caminho ou caminho padrão definido em um arquivo **environment4d.json**),
+ - nomes de componentes [armazenados nos repositórios do GitHub](#components-stored-on-github) (seus caminhos podem ser definidos neste arquivo ou em um arquivo **environment4d.json**).
 
 #### environment4d.json
 
@@ -78,8 +78,8 @@ O arquivo **environment4d.json** é opcional. Ele permite que você defina **cam
 
 Os principais benefícios desta arquitetura são os seguintes:
 
-- você pode armazenar o **ambiente4d. arquivo son** em uma pasta pai de seus projetos e decida não fazer commit dele, permitindo que você tenha sua organização local de componentes.
-- se quiser usar o mesmo repositório GitHub para vários projetos, você poderá fazer referência a ele no arquivo **environment4d.json** e declará-lo no arquivo **dependencies.json**.
+ - você pode armazenar o **ambiente4d. arquivo son** em uma pasta pai de seus projetos e decida não fazer commit dele, permitindo que você tenha sua organização local de componentes.
+ - se quiser usar o mesmo repositório GitHub para vários projetos, você poderá fazer referência a ele no arquivo **environment4d.json** e declará-lo no arquivo **dependencies.json**.
 
 ### Prioridade
 
@@ -187,9 +187,9 @@ Em relação aos componentes armazenados no GitHub, ambos os arquivos [**depende
 
 Para ser capaz de fazer referência direta e usar um componente 4D armazenado no GitHub, você precisa configurar o repositório do componente GitHub:
 
-- Compacte os arquivos de componentes no formato ZIP.
-- Nomeie este arquivo com o mesmo nome do repositório do GitHub.
-- Integre o arquivo em uma [versão do GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) do repositório.
+ - Compacte os arquivos de componentes no formato ZIP.
+ - Nomeie este arquivo com o mesmo nome do repositório do GitHub.
+ - Integre o arquivo em uma [versão do GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) do repositório.
 
 Essas etapas podem ser facilmente automatizadas, com o código 4D ou usando o GitHub Actions, por exemplo.
 
@@ -232,7 +232,7 @@ Se você selecionar a [**Seguir 4D Version**](#defining-a-github-dependency-vers
 
 :::
 
-- **Etiquetas** são textos que fazem referência exclusiva a uma versão. Nos arquivos [**dependencies.json**](#dependenciesjson) e [**environment4d.json**](#environment4djson), você pode indicar a tag de versão que deseja usar em seu projeto. Por exemplo :
+ - **Etiquetas** são textos que fazem referência exclusiva a uma versão. Nos arquivos [**dependencies.json**](#dependenciesjson) e [**environment4d.json**](#environment4djson), você pode indicar a tag de versão que deseja usar em seu projeto. Por exemplo :
 
 ```json
 {
@@ -245,7 +245,7 @@ Se você selecionar a [**Seguir 4D Version**](#defining-a-github-dependency-vers
 }
 ```
 
-- Uma versão também é identificada por uma **versão**. O sistema de versionamento usado é baseado no conceito de [*Versão semântica*](https://regex101.com/r/Ly7O1x/3/), que é o mais comummente usado. Cada número de versão é identificado da seguinte forma: `majorNumber.minorNumber.pathNumber`. Da mesma forma que para marcadores, você pode indicar a versão do componente que você deseja usar em seu projeto, como neste exemplo:
+ - Uma versão também é identificada por uma **versão**. O sistema de versionamento usado é baseado no conceito de [*Versão semântica*](https://regex101.com/r/Ly7O1x/3/), que é o mais comummente usado. Cada número de versão é identificado da seguinte forma: `majorNumber.minorNumber.pathNumber`. Da mesma forma que para marcadores, você pode indicar a versão do componente que você deseja usar em seu projeto, como neste exemplo:
 
 ```json
 {
@@ -262,17 +262,17 @@ Um intervalo é definido por duas versões semânticas, um mínimo e um máximo,
 
 Eis alguns exemplos:
 
-- "latest": a versão com o selo "latest" nas versões GitHub.
-- "\*": a versão mais recente lançada.
-- "1.\*": todas as versões da versão principal 1.
-- "1.2.\*": todos os patches da versão menor 1.2.
-- ">=1.2.3": a última versão, começando com a versão 1.2.3.
-- ">1.2.3": a versão mais recente, começando com a versão imediatamente após a versão 1.2.3.
-- "^1.2.3": a última versão 1, começando com a versão 1.2.3 e estritamente inferior à versão 2.
-- "~1.2.3": a última versão 1.2, começando com a versão 1.2.3 e estritamente inferior à versão 1.3.
-- "<=1.2.3": a versão mais recente até a 1.2.3.
-- "1.0.0 - 1.2.3" ou ">=1.0.0 <=1.2.3": versão entre 1.0.0 e 1.2.3.
-- "`<1.2.3 || >=2`": versão que não está entre 1.2.3 e 2.0.0.
+ - "latest": a versão com o selo "latest" nas versões GitHub.
+ - "\*": a versão mais recente lançada.
+ - "1.\*": todas as versões da versão principal 1.
+ - "1.2.\*": todos os patches da versão menor 1.2.
+ - ">=1.2.3": a última versão, começando com a versão 1.2.3.
+ - ">1.2.3": a versão mais recente, começando com a versão imediatamente após a versão 1.2.3.
+ - "^1.2.3": a última versão 1, começando com a versão 1.2.3 e estritamente inferior à versão 2.
+ - "~1.2.3": a última versão 1.2, começando com a versão 1.2.3 e estritamente inferior à versão 1.3.
+ - "<=1.2.3": a versão mais recente até a 1.2.3.
+ - "1.0.0 - 1.2.3" ou ">=1.0.0 <=1.2.3": versão entre 1.0.0 e 1.2.3.
+ - "`<1.2.3 || >=2`": versão que não está entre 1.2.3 e 2.0.0.
 
 Se você não especificar uma tag ou uma versão, 4D recupera automaticamente a "versão mais recente".
 
@@ -282,9 +282,9 @@ O gerenciador de dependências verifica periodicamente se as atualizações do c
 
 Se quiser usar a [**Seguir 4D Version**](#defining-a-github-dependency-version-range) regra de dependência, os marcadores de versões de componentes no repositório do Github devem obedecer a convenções específicas.
 
-- **Versões do LT**: padrão `x.y.p`, onde `x. ` corresponde à versão 4D principal a seguir e o `p` (opcional) pode ser usado para versões patch ou atualizações adicionais. Quando um projeto especifica que segue a versão 4D para *x. \* Versão LTS, o Gerenciador de Dependências irá resolvê-lo como "a versão mais recente x.*" se disponível ou "versão abaixo de x". Se não existir essa versão, o usuário será notificado. Por exemplo, "20.4" será resolvido pelo Gerenciador de Dependências como "a última versão do componente 20.\* ou versão abaixo de 20".
+ - **Versões do LT**: padrão `x.y.p`, onde `x. ` corresponde à versão 4D principal a seguir e o `p` (opcional) pode ser usado para versões patch ou atualizações adicionais. Quando um projeto especifica que segue a versão 4D para *x. \* Versão LTS, o Gerenciador de Dependências irá resolvê-lo como "a versão mais recente x.*" se disponível ou "versão abaixo de x". Se não existir essa versão, o usuário será notificado. Por exemplo, "20.4" será resolvido pelo Gerenciador de Dependências como "a última versão do componente 20.\* ou versão abaixo de 20".
 
-- **Versões R-Release**: padrão `xRy. `, onde `x` e `y` correspondem à versão principal 4D R-release para seguir e `p` (opcional) podem ser usados para versões patch ou atualizações adicionais. Quando um projeto especifica que segue a versão 4D para a versão *xRy*, o Gerenciador de Dependências a resolverá para a "versão mais recente abaixo de xR(y+1)", se disponível. Se não existir essa versão, o usuário será notificado. Por exemplo, "20R9" será resolvido pelo Gerenciador de Dependências como "a última versão do componente abaixo de 20R10".
+ - **Versões R-Release**: padrão `xRy. `, onde `x` e `y` correspondem à versão principal 4D R-release para seguir e `p` (opcional) podem ser usados para versões patch ou atualizações adicionais. Quando um projeto especifica que segue a versão 4D para a versão *xRy*, o Gerenciador de Dependências a resolverá para a "versão mais recente abaixo de xR(y+1)", se disponível. Se não existir essa versão, o usuário será notificado. Por exemplo, "20R9" será resolvido pelo Gerenciador de Dependências como "a última versão do componente abaixo de 20R10".
 
 :::note
 
@@ -310,8 +310,8 @@ Em seguida, você precisa [fornecer seu token de conexão](#providing-your-githu
 
 Os componentes GitHub referenciados são baixados em uma pasta de cache local e carregados em seu ambiente. A pasta de cache local é armazenada na seguinte localização:
 
-- en macOs: `$HOME/Library/Caches/<app name>/Dependencies`
-- no Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
+ - en macOs: `$HOME/Library/Caches/<app name>/Dependencies`
+ - no Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
 ...onde `<app name>` pode ser "4D", "4D Server" ou "tool4D".
 
@@ -319,12 +319,12 @@ Os componentes GitHub referenciados são baixados em uma pasta de cache local e 
 
 When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. Isto inclui:
 
-- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
-- **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
+ - **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
+ - **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
 
 The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
 
-- **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+ - **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
 
 :::note
 
@@ -344,10 +344,10 @@ Em um projeto aberto, você pode adicionar, remover, atualizar e obter informaç
 
 Para exibir o painel Dependências:
 
-- Com 4D, selecione o item de menu **Design/Project Dependencies** (ambiente de desenvolvimento),<br/>
+ - Com 4D, selecione o item de menu **Design/Project Dependencies** (ambiente de desenvolvimento),<br/>
     ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- com o servidor 4D, selecione o item de menu **dependência do Window/Projeto**.<br/>
+ - com o servidor 4D, selecione o item de menu **dependência do Window/Projeto**.<br/>
     ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 O painel de Dependências é exibido em seguida. Dependências são classificadas por nome em ordem alfabética:
@@ -362,11 +362,11 @@ Por padrão, todas as dependências identificadas pelo gerenciador de dependênc
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
-- **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
-- **Ativo**: dependências carregadas e podem ser usadas no projeto. Isso inclui dependências *overloading*, que são de fato carregadas. As dependências *sobrecarregadas* são listadas no painel **Conflitos**, juntamente com todas as dependências conflitantes.
-- **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. Há muitos motivos possíveis para esse status: arquivos ausentes, incompatibilidade de versão...
-- **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). As dependências sobrecarregadas também são exibidas para que você possa verificar a origem do conflito e tomar as medidas adequadas.
+ - **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
+ - **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
+ - **Ativo**: dependências carregadas e podem ser usadas no projeto. Isso inclui dependências *overloading*, que são de fato carregadas. As dependências *sobrecarregadas* são listadas no painel **Conflitos**, juntamente com todas as dependências conflitantes.
+ - **Inativo**: dependências que não estão carregadas no projeto e não estão disponíveis. Há muitos motivos possíveis para esse status: arquivos ausentes, incompatibilidade de versão...
+ - **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). As dependências sobrecarregadas também são exibidas para que você possa verificar a origem do conflito e tomar as medidas adequadas.
 
 ### Secondary dependencies
 
@@ -384,16 +384,16 @@ As dependências que exigem a atenção do desenvolvedor são indicadas por um *
 
 Estão disponíveis as seguintes etiquetas de status:
 
-- **Overloaded**: a dependência não é carregada porque está sobrecarregada por outra dependência com o mesmo nome em um [nível de prioridade] mais alto (#prioridade).
-- **Overloading**: a dependência está carregada e está sobrecarregando uma ou mais dependências com o mesmo nome em um [nível de prioridade] inferior (#prioridade).
-- **Not found**: a dependência está declarada no arquivo dependencies.json, mas não foi encontrada.
-- **Inactive**: a dependência não é carregada porque não é compatível com o projeto (por exemplo, o componente não é compilado para a plataforma atual).
-- **Duplicated**: a dependência não é carregada porque existe uma outra dependência com o mesmo nome no mesmo local (e é carregado).
-- **Disponível após a reinicialização**: A referência de dependência acabou de ser adicionada ou atualizada [usando a interface] (#monitoring-project-dependencies) e será carregada quando o aplicativo for reiniciado.
-- **Disponível após a reinicialização**: A referência de dependência acabou de ser adicionada ou atualizada [usando a interface] (#removing-a-dependency) e será carregada quando o aplicativo for reiniciado.
-- **Atualização disponível \<version\>**: Foi detectada uma nova versão da dependência do GitHub que corresponde à sua [configuração da versão do componente](#defining-a-github-dependency-version-range).
-- **Refreshed after restart**: A [configuração da versão do componente](#defining-a-github-dependency-version-range) da dependência do GitHub foi modificada, ela será ajustada na próxima inicialização.
-- **Atualização recente**: uma nova versão da dependência do GitHub foi carregada na inicialização.
+ - **Overloaded**: a dependência não é carregada porque está sobrecarregada por outra dependência com o mesmo nome em um [nível de prioridade] mais alto (#prioridade).
+ - **Overloading**: a dependência está carregada e está sobrecarregando uma ou mais dependências com o mesmo nome em um [nível de prioridade] inferior (#prioridade).
+ - **Not found**: a dependência está declarada no arquivo dependencies.json, mas não foi encontrada.
+ - **Inactive**: a dependência não é carregada porque não é compatível com o projeto (por exemplo, o componente não é compilado para a plataforma atual).
+ - **Duplicated**: a dependência não é carregada porque existe uma outra dependência com o mesmo nome no mesmo local (e é carregado).
+ - **Disponível após a reinicialização**: A referência de dependência acabou de ser adicionada ou atualizada [usando a interface] (#monitoring-project-dependencies) e será carregada quando o aplicativo for reiniciado.
+ - **Disponível após a reinicialização**: A referência de dependência acabou de ser adicionada ou atualizada [usando a interface] (#removing-a-dependency) e será carregada quando o aplicativo for reiniciado.
+ - **Atualização disponível \<version\>**: Foi detectada uma nova versão da dependência do GitHub que corresponde à sua [configuração da versão do componente](#defining-a-github-dependency-version-range).
+ - **Refreshed after restart**: A [configuração da versão do componente](#defining-a-github-dependency-version-range) da dependência do GitHub foi modificada, ela será ajustada na próxima inicialização.
+ - **Atualização recente**: uma nova versão da dependência do GitHub foi carregada na inicialização.
 
 Uma dica é exibida quando você passa o mouse sobre a linha de dependência, provando informações adicionais sobre o status:
 
@@ -427,8 +427,8 @@ Este item não é exibido se a dependência estiver inativa porque seus arquivos
 
 O ícone do componente e o logotipo da localização fornecem informações adicionais:
 
-- O logotipo do componente indica se é fornecido por 4D ou por um desenvolvedor terceiro.
-- Os componentes locais podem ser diferenciados de componentes do GitHub usando um ícone pequeno.
+ - O logotipo do componente indica se é fornecido por 4D ou por um desenvolvedor terceiro.
+ - Os componentes locais podem ser diferenciados de componentes do GitHub usando um ícone pequeno.
 
 ![dependency-origin](../assets/en/Project/dependency-github.png)
 
@@ -448,8 +448,8 @@ Se o item selecionado não for válido, será exibida uma mensagem de erro.
 
 Clique em **Adicionar** para adicionar a dependência ao projeto.
 
-- Se você selecionar um componente localizado próximo à pasta do pacote do projeto (local padrão), ele será declarado no arquivo [**dependencies.json**](#dependenciesjson).
-- Se você selecionar um componente que não esteja localizado próximo à pasta do pacote do projeto, ele será declarado no arquivo [**dependencies.json**](#dependenciesjson) e seu caminho será declarado no arquivo [**environment4d.json**](#environment4djson) (consulte a nota). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
+ - Se você selecionar um componente localizado próximo à pasta do pacote do projeto (local padrão), ele será declarado no arquivo [**dependencies.json**](#dependenciesjson).
+ - Se você selecionar um componente que não esteja localizado próximo à pasta do pacote do projeto, ele será declarado no arquivo [**dependencies.json**](#dependenciesjson) e seu caminho será declarado no arquivo [**environment4d.json**](#environment4djson) (consulte a nota). O painel Dependências pergunta se você deseja salvar um [caminho relativo ou absoluto](#relative-paths-vs-absolute-paths).
 
 :::note
 
@@ -489,11 +489,11 @@ Você pode definir a opção [tag ou versão](#tags-and-versions) para uma depen
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **Latest**: Selecionado por padrão e permite baixar a versão marcada como a mais recente (estável).
-- **Até a próxima versão major**: defina um [intervalo de versão semântica](#tags-and-versions) para restringir as atualizações para a próxima versão principal.
-- **Até a próxima versão minor**: da mesma forma, restringe as atualizações para a próxima versão minor.
-- **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
-- **Siga a versão 4D**: Faça o download da versão mais recente do componente que é compatível com a versão 4D em execução. Você pode usar essa regra de dependência somente se as tags de liberação do componente seguirem a [convenção de nomenclatura] apropriada (#naming-conventions-for-4d-version-tags).
+ - **Latest**: Selecionado por padrão e permite baixar a versão marcada como a mais recente (estável).
+ - **Até a próxima versão major**: defina um [intervalo de versão semântica](#tags-and-versions) para restringir as atualizações para a próxima versão principal.
+ - **Até a próxima versão minor**: da mesma forma, restringe as atualizações para a próxima versão minor.
+ - **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
+ - **Siga a versão 4D**: Faça o download da versão mais recente do componente que é compatível com a versão 4D em execução. Você pode usar essa regra de dependência somente se as tags de liberação do componente seguirem a [convenção de nomenclatura] apropriada (#naming-conventions-for-4d-version-tags).
 
 A versão atual da dependência do GitHub é exibida no lado direito do item de dependência:
 
@@ -509,8 +509,8 @@ Modificar o intervalo de versão é útil, por exemplo, se você usar o recurso 
 
 O gerenciador de dependências fornece um tratamento integrado de atualizações no GitHub. Os seguintes recursos são suportados:
 
-- Verificação automática e manual das versões disponíveis
-- Atualização automática e manual de componentes
+ - Verificação automática e manual das versões disponíveis
+ - Atualização automática e manual de componentes
 
 As operações manuais podem ser feitas **por dependência** ou **para todas as dependências**.
 
@@ -526,11 +526,11 @@ Se você fornecer um [token de acesso](#providing-your-github-access-token), as 
 
 Além disso, você pode verificar se há atualizações a qualquer momento, para uma única dependência ou para todas as dependências:
 
-- Para verificar se há atualizações de uma única dependência, clique com o botão direito do mouse na dependência e selecione **Verificar atualizações** no menu contextual.
+ - Para verificar se há atualizações de uma única dependência, clique com o botão direito do mouse na dependência e selecione **Verificar atualizações** no menu contextual.
 
 ![componente de verificação](../assets/en/Project/check-component-one.png)
 
-- Para verificar se há atualizações de todas as dependências, clique no menu **opções** na parte inferior da janela do Gerenciador de dependências e selecione **Verificar atualizações**.
+ - Para verificar se há atualizações de todas as dependências, clique no menu **opções** na parte inferior da janela do Gerenciador de dependências e selecione **Verificar atualizações**.
 
 ![componentes de verificação](../assets/en/Project/check-component-all.png)
 
@@ -548,11 +548,11 @@ Se não quiser usar uma atualização de componente (por exemplo, se quiser perm
 
 Você pode atualizar as dependências a qualquer momento, para uma única dependência ou para todas as dependências:
 
-- Para atualizar uma única dependência, clique com o botão direito na dependência e selecione **Atualizar \<component name\> na próxima inicialização** no menu contextual ou no menu **opções** na parte inferior da janela Gerenciador de Dependências:
+ - Para atualizar uma única dependência, clique com o botão direito na dependência e selecione **Atualizar \<component name\> na próxima inicialização** no menu contextual ou no menu **opções** na parte inferior da janela Gerenciador de Dependências:
 
 ![componente de verificação](../assets/en/Project/update-component-one.png)
 
-- Para atualizar todas as dependências de uma só vez, clique no menu **opções** na parte inferior da janela do gerenciador de dependências e selecione **Atualizar todas as dependências remotas na próxima inicialização**:
+ - Para atualizar todas as dependências de uma só vez, clique no menu **opções** na parte inferior da janela do gerenciador de dependências e selecione **Atualizar todas as dependências remotas na próxima inicialização**:
 
 ![check components](../assets/en/Project/update-component-all.png)
 
@@ -560,8 +560,8 @@ Em qualquer caso, independentemente do status atual da dependência, é feita um
 
 Quando você seleciona um comando de atualização:
 
-- uma caixa de diálogo é exibida e propõe **reiniciar o projeto**, para que as dependências atualizadas estejam imediatamente disponíveis. Em geral, recomenda-se reiniciar o projeto para avaliar as dependências atualizadas.
-- Se você clicar em Later (Mais tarde), o comando de atualização não estará mais disponível no menu, o que significa que a ação foi planejada para a próxima inicialização.
+ - uma caixa de diálogo é exibida e propõe **reiniciar o projeto**, para que as dependências atualizadas estejam imediatamente disponíveis. Em geral, recomenda-se reiniciar o projeto para avaliar as dependências atualizadas.
+ - Se você clicar em Later (Mais tarde), o comando de atualização não estará mais disponível no menu, o que significa que a ação foi planejada para a próxima inicialização.
 
 #### Atualização automática
 
@@ -575,13 +575,13 @@ Quando essa opção estiver desmarcada, uma nova versão de componente que corre
 
 O registro do seu token de acesso pessoal no Gerenciador de dependências é:
 
-- obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
-- recomendado para uma [verificação de atualizações de dependências](#updating-github-dependencies).
+ - obrigatório se o componente estiver armazenado em um [repositório GitHub privado](#private-repositories),
+ - recomendado para uma [verificação de atualizações de dependências](#updating-github-dependencies).
 
 Para fornecer seu token de acesso ao GitHub, você pode:
 
-- clique no botão **Adicionar um token de acesso pessoal...** que é exibido na caixa de diálogo "Adicionar uma dependência" depois que você inserir um caminho de repositório privado do GitHub.
-- ou selecione **Adicionar um token de acesso pessoal GitHub...** no menu do Gerenciador de dependências a qualquer momento.
+ - clique no botão **Adicionar um token de acesso pessoal...** que é exibido na caixa de diálogo "Adicionar uma dependência" depois que você inserir um caminho de repositório privado do GitHub.
+ - ou selecione **Adicionar um token de acesso pessoal GitHub...** no menu do Gerenciador de dependências a qualquer momento.
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 

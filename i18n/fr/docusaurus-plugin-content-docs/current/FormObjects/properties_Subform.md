@@ -25,7 +25,7 @@ Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-
 
 Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. Il peut être :
 
-- un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
+ - un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
     You can select a component form name when it is published in the component.\
     In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
     You can select a component form name when it is published in the component.\
@@ -33,7 +33,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 > Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic).
 
-- le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). Le formulaire détaillé peut être utilisé pour saisir ou afficher des sous-enregistrements. Il contient généralement plus d'informations que le sous-formulaire liste. Naturellement, le formulaire détaillé doit appartenir à la même table que le sous-formulaire. Vous utilisez normalement un formulaire de sortie comme formulaire liste et un formulaire d'entrée comme formulaire détaillé. Si vous n'indiquez pas le formulaire à utiliser pour la saisie pleine page, 4D utilise automatiquement le format d'entrée par défaut de la table.
+ - le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). Le formulaire détaillé peut être utilisé pour saisir ou afficher des sous-enregistrements. Il contient généralement plus d'informations que le sous-formulaire liste. Naturellement, le formulaire détaillé doit appartenir à la même table que le sous-formulaire. Vous utilisez normalement un formulaire de sortie comme formulaire liste et un formulaire d'entrée comme formulaire détaillé. Si vous n'indiquez pas le formulaire à utiliser pour la saisie pleine page, 4D utilise automatiquement le format d'entrée par défaut de la table.
 
 #### Grammaire JSON
 
@@ -55,8 +55,8 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 Action à effectuer en cas de double-clic sur une ligne vide d'un sous-formulaire de liste. Les options suivantes sont disponibles :
 
-- Ne rien faire : ignore le double-clic.
-- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic). Sinon, il sera créé en mode page, dans le [formulaire détaillé](#detail-form) associé au sous-formulaire.
+ - Ne rien faire : ignore le double-clic.
+ - Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic). Sinon, il sera créé en mode page, dans le [formulaire détaillé](#detail-form) associé au sous-formulaire.
 
 #### Grammaire JSON
 
@@ -80,9 +80,9 @@ Action à effectuer en cas de double-clic sur une ligne vide d'un sous-formulair
 
 Définit l'action à réaliser lorsqu'un utilisateur double-clique sur une ligne dans un sous-formulaire liste. Les options disponibles sont :
 
-- **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-- **Modifier enregistrement** : Un double-clic sur une ligne permet d'afficher l'enregistrement correspondant dans le [ formulaire détaillé défini pour le sous-formulaire liste](#detail-form). L'enregistrement est ouvert en lecture-écriture afin qu'il puisse être modifié.
-- **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
+ - **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
+ - **Modifier enregistrement** : Un double-clic sur une ligne permet d'afficher l'enregistrement correspondant dans le [ formulaire détaillé défini pour le sous-formulaire liste](#detail-form). L'enregistrement est ouvert en lecture-écriture afin qu'il puisse être modifié.
+ - **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
 
@@ -164,8 +164,8 @@ Spécifie la table à laquelle appartient le sous-formulaire Liste (le cas éch�
 
 Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 
-- **None**: Rows cannot be selected if this mode is chosen. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](#enterable-in-list) soit activée. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Un clic sur une ligne la sélectionne. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
+ - **None**: Rows cannot be selected if this mode is chosen. Cliquer sur la liste n'aura aucun effet à moins que l'option [Saisissable en liste](#enterable-in-list) soit activée. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
+ - **Single**: One row at a time can be selected in this mode. Un clic sur une ligne la sélectionne. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
     The Up and Down arrow keys select the previous/next row in the list.\
     A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
     The Up and Down arrow keys select the previous/next row in the list.\

@@ -11,13 +11,13 @@ As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
 
 ## Tamanho baseado em
 
-- **Tamanho automático**: o tamanho do formulário será o necessário para exibir todos os objetos, aos quais serão adicionados os valores de margem (em píxeis) inseridos nos campos [**Hor Margin**](#hor-margin) e [**Vert Margin**](#vert-margin).
+ - **Tamanho automático**: o tamanho do formulário será o necessário para exibir todos os objetos, aos quais serão adicionados os valores de margem (em píxeis) inseridos nos campos [**Hor Margin**](#hor-margin) e [**Vert Margin**](#vert-margin).
 
     Você pode escolher essa opção quando quiser usar objetos ativos colocados em uma área fora da tela (ou seja, fora do retângulo delimitador da janela) com uma janela de tamanho automático. Graças a essa opção, a presença desses objetos não modificará o tamanho da janela.
 
-- **Definir tamanho**: o tamanho do formulário será baseado no que você inserir (em píxeis) nos campos [**Largura**](#width) e [**Altura**](#height).
+ - **Definir tamanho**: o tamanho do formulário será baseado no que você inserir (em píxeis) nos campos [**Largura**](#width) e [**Altura**](#height).
 
-- `<object name>`: o tamanho do formulário será baseado na posição do objeto de formulário selecionado. Por exemplo, se você escolher um objeto que esteja posicionado na parte inferior direita da área a ser exibida, o tamanho do formulário consistirá em um retângulo cujo canto superior esquerdo será a origem do formulário e o canto inferior direito corresponderá ao do objeto selecionado, acrescido de quaisquer valores de margem.
+ - `<object name>`: o tamanho do formulário será baseado na posição do objeto de formulário selecionado. Por exemplo, se você escolher um objeto que esteja posicionado na parte inferior direita da área a ser exibida, o tamanho do formulário consistirá em um retângulo cujo canto superior esquerdo será a origem do formulário e o canto inferior direito corresponderá ao do objeto selecionado, acrescido de quaisquer valores de margem.
 
 > Para formulários de saída, somente os campos [**Margem Hor**](#hor-margin) ou [**Largura**](#width) estão disponíveis.
 

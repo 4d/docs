@@ -7,10 +7,10 @@ Nos projetos de aplicação, você pode documentar seus métodos e suas classes,
 
 Os seguintes elementos do projeto aceitam documentação:
 
-- Métodos (métodos banco de dados, métodos componentes, métodos projeto, métodos formulário, métodos 4D Mobile e triggers)
-- Classes
-- Formulários
-- Tabela
+ - Métodos (métodos banco de dados, métodos componentes, métodos projeto, métodos formulário, métodos 4D Mobile e triggers)
+ - Classes
+ - Formulários
+ - Tabela
 
 Seus arquivos de documentação são escritos na sintaxe Markdown (arquivos .md) usando qualquer editor compatível com Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
 
@@ -55,9 +55,9 @@ La arquitectura de la carpeta `Documentation` es la siguiente:
          - table1.md
          - ...
 
-- Um formulário projeto e seu método de formulário projeto compartilham o mesmo arquivo de documentação para formulário e método.
+ - Um formulário projeto e seu método de formulário projeto compartilham o mesmo arquivo de documentação para formulário e método.
 
-- Um formulário tabela e seu método de formulário tabela compartilham o mesmo arquivo de documentação para o formulário e o método.
+ - Um formulário tabela e seu método de formulário tabela compartilham o mesmo arquivo de documentação para o formulário e o método.
 
 > Renomear ou excluir um elemento documentado em seu projeto também renomeará ou excluirá o arquivo Markdown associado ao elemento.
 
@@ -73,9 +73,9 @@ Para visualizar a documentação na janela do Explorer:
 
 ![](../assets/en/Project/comments-explo2.png)
 
-- Si no se ha encontrado ningún archivo de documentación para el elemento seleccionado, se muestra un botón **Crear** (ver más abajo).
+ - Si no se ha encontrado ningún archivo de documentación para el elemento seleccionado, se muestra un botón **Crear** (ver más abajo).
 
-- Caso contrário, se houver um arquivo de documentação para o elemento selecionado, o conteúdo será exibido na área. Os conteúdos não são diretamente editáveis no painel.
+ - Caso contrário, se houver um arquivo de documentação para o elemento selecionado, o conteúdo será exibido na área. Os conteúdos não são diretamente editáveis no painel.
 
 ### Editar o ficheiro de documentação
 
@@ -83,8 +83,8 @@ Você pode criar e/ou editar um arquivo de documentação Markdown na janela Exp
 
 Se não houver um arquivo de documentação para o elemento selecionado, você poderá:
 
-- haga clic en el botón **Crear** en el panel `Documentation` o,
-- elija la opción **Modificar la documentación...** en el menú contextual o el menú de opciones del Explorador.
+ - haga clic en el botón **Crear** en el panel `Documentation` o,
+ - elija la opción **Modificar la documentación...** en el menú contextual o el menú de opciones del Explorador.
 
 ![](../assets/en/Project/comments-explo3.png)
 
@@ -100,9 +100,9 @@ O editor de código 4D exibe uma parte da documentação de um método em sua di
 
 Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/documentation`, el editor de código muestra (por prioridad):
 
-- Todo texto introducido en una etiqueta de comentario HTML (`<!-- command documentation -->`) en la parte superior del archivo markdown.
+ - Todo texto introducido en una etiqueta de comentario HTML (`<!-- command documentation -->`) en la parte superior del archivo markdown.
 
-- Or, if no html comment tag is used, the first sentence after a `# Description` tag of the markdown file.\
+ - Or, if no html comment tag is used, the first sentence after a `# Description` tag of the markdown file.\
     Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
     Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
     Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
@@ -134,7 +134,7 @@ Novos arquivos de documentação são criados com o seguinte conteúdo padrão:
 
 ### Markdown suportado
 
-- A etiqueta de título é suportada:
+ - A etiqueta de título é suportada:
 
 ```md
 # Title 1
@@ -142,7 +142,7 @@ Novos arquivos de documentação são criados com o seguinte conteúdo padrão:
 ### Title 3
 ```
 
-- As etiquetas de estilo (itálico, negrito, riscado) são suportadas:
+ - As etiquetas de estilo (itálico, negrito, riscado) são suportadas:
 
 ```md
 _italic_
@@ -151,7 +151,7 @@ _italic_
 ~~strikethrough~~
 ```
 
-- A tag do bloco de código (\`4d ... `) é suportado com destaque de código 4D:
+ - A tag do bloco de código (\`4d ... `) é suportado com destaque de código 4D:
 
 ````md
 ```4d
@@ -160,7 +160,7 @@ _italic_
 ```
 ````
 
-- A etiqueta de tabela é suportada:
+ - A etiqueta de tabela é suportada:
 
 ```md
 | Parâmetro | Tipo | Descrição |
@@ -169,7 +169,7 @@ _italic_
 | toolbar | Text |Nome da barra de ferramentas |
 ```
 
-- A etiqueta de ligação é suportada:
+ - A etiqueta de ligação é suportada:
 
 ```md
 // Case 1
@@ -181,7 +181,7 @@ The [documentation](https://doc.4d.com) of the command ....
 [1]: https://blog.4d.com
 ```
 
-- As etiquetas de imagem são suportadas:
+ - As etiquetas de imagem são suportadas:
 
 ```md
 ![image info](pictures/image.png)
@@ -228,10 +228,10 @@ $logo:=GetLogo(5)
 ```
 ````
 
-- Explorer view:
+ - Explorer view:
 
 ![](../assets/en/Project/explorer_Doc.png)
 
-- Code editor view:
+ - Code editor view:
 
 ![](../assets/en/Project/comments-explo5.png)

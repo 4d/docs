@@ -37,20 +37,20 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 ### Seleção de células, colunas e linhas
 
-- Para selecionar uma célula, basta clicar nela ou usar as setas de direção do teclado. O seu conteúdo (ou fórmula) é apresentado na célula.
+ - Para selecionar uma célula, basta clicar nela ou usar as setas de direção do teclado. O seu conteúdo (ou fórmula) é apresentado na célula.
 
-- Para selecionar várias células contínuas, arraste o mouse de uma extremidade da seleção para a outra. Você também pode clicar nas duas extremidades da seleção enquanto mantém pressionada a tecla Shift.
+ - Para selecionar várias células contínuas, arraste o mouse de uma extremidade da seleção para a outra. Você também pode clicar nas duas extremidades da seleção enquanto mantém pressionada a tecla Shift.
 
-- To select all cells in the spreadsheet, click on the cell at the top left of the area:
+ - To select all cells in the spreadsheet, click on the cell at the top left of the area:
     ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
-- Para selecionar uma coluna, clique na letra correspondente (ou conjunto de letras).
+ - Para selecionar uma coluna, clique na letra correspondente (ou conjunto de letras).
 
-- Para selecionar uma linha, clique no número correspondente.
+ - Para selecionar uma linha, clique no número correspondente.
 
-- Para seleccionar un grupo de celdas que no sean continuas, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Comando** (Mac) y haga clic en cada celda que desee seleccionar.
+ - Para seleccionar un grupo de celdas que no sean continuas, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Comando** (Mac) y haga clic en cada celda que desee seleccionar.
 
-- Para anular a seleção de células, basta clicar em qualquer parte da folha de cálculo.
+ - Para anular a seleção de células, basta clicar em qualquer parte da folha de cálculo.
 
 ### Introdução de dados
 
@@ -128,8 +128,8 @@ Você pode então passar `$myRange` para outro método 4D View Pro para modifica
 
 Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
-- área - O nome da área 4D View Pro
-- intervalos - Uma coleção de objeto(s) intervalo. As propriedades disponíveis em cada objeto de intervalo dependem do tipo de objeto de intervalo. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
+ - área - O nome da área 4D View Pro
+ - intervalos - Uma coleção de objeto(s) intervalo. As propriedades disponíveis em cada objeto de intervalo dependem do tipo de objeto de intervalo. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
 
 | Propriedade |                                                                                       | Tipo       | Descrição                                                                                                       | Disponível para                                              |
 | ----------- | ------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -146,10 +146,10 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
 4D View Pro suporta a importação e exportação de vários formatos de documentos:
 
-- .4vp
-- .xlsx
-- .txt e .csv
-- .sjs
-- .pdf (apenas para exportação)
+ - .4vp
+ - .xlsx
+ - .txt e .csv
+ - .sjs
+ - .pdf (apenas para exportação)
 
 Para obter mais detalhes, confira a descrição de [VP IMPORT DOCUMENT](commands/vp-import-document.md) e [VP EXPORT DOCUMENT](commands/vp-export-document.md).
