@@ -160,7 +160,7 @@ Para a definição em lote dos atributos do método:
 1. En la página [Métodos](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.en.html) del Explorador 4D, despliegue el menú de opciones y elija el comando **Modificar atributos globalmente...**. Aparece la caja de diálogo **Atributos de los métodos**.
 
 2. Na área "Nome do método correspondente:", introduza uma string que lhe permita designar os métodos que pretende modificar como um lote.
-  A cadeia de caracteres é utilizada como critério de pesquisa para os nomes dos métodos.
+   A cadeia de caracteres é utilizada como critério de pesquisa para os nomes dos métodos.
 
 Utilize o carácter curinga @ para ajudar a definir grupos de métodos:
 

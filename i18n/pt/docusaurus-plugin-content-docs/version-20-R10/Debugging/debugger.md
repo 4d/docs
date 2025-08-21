@@ -158,27 +158,27 @@ $c:=a+b
 
 1. Uma janela do depurador é aberta com o contador do programa definido para a linha com `a:=1`. Nesse momento, o tema **Line Objects** é exibido:
 
-  | $a | Indefinido |
-  | -- | ---------- |
+   | $a | Indefinido |
+   | -- | ---------- |
 
-  A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+   A variável `$a` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 2. Você clica no botão **Step Over**. O contador do programa está agora definido para a linha `b:=a+1`. Neste ponto, o tema **Objetos linha** é exibido:
 
-  | $a | 1          |
-  | -- | ---------- |
-  | $b | Indefinido |
+   | $a | 1          |
+   | -- | ---------- |
+   | $b | Indefinido |
 
-  O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+   O valor da variável `$a` é agora 1. A variável `$b` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 3. Você clica no botão **Step Over** novamente. O contador do programa está agora definido na linha com $c:=a+b. O tema **Objetos atuais** exibe:
 
-  | $c | Indefinido |
-  | -- | ---------- |
-  | $a | 1          |
-  | $b | 2          |
+   | $c | Indefinido |
+   | -- | ---------- |
+   | $a | 1          |
+   | $b | 2          |
 
-  O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
+   O valor da variável `$b` é agora 2. A variável `$c` ainda não foi inicializada, mas é exibida porque é usada na linha a ser executada.
 
 #### Variáveis.
 
@@ -416,9 +416,9 @@ Você pode copiar qualquer expressão selecionada do painel Código-fonte para o
 
 1. No painel de código fonte, selecione a expressão a avaliar
 2. Faça uma das seguintes opções:
-  - Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
-  - Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
-  - Clique com o botão direito do mouse no texto selecionado **>** **Copiar para o painel de expressões**
+   - Arraste e solte o texto selecionado na área Expression (Expressão) do Custom Watch Pane (Painel de observação personalizada)
+   - Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
+   - Clique com o botão direito do mouse no texto selecionado **>** **Copiar para o painel de expressões**
 
 ### Contador do programa
 

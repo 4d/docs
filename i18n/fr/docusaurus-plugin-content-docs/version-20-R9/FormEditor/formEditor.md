@@ -155,7 +155,7 @@ Pour sélectionner un objet à l’aide de la barre d’outils :
 Pour sélectionner un objet à l’aide de la Liste des propriétés :
 
 1. Sélectionnez le nom de l’objet dans la liste de sélection située en haut de la palette. De cette manière, vous pouvez sélectionner un objet masqué par d’autres objets ou situé en-dehors des limites de la fenêtre.
-  Pour désélectionner un objet, cliquez hors de ses limites ou cliquez dessus en maintenant la touche **Majuscule** enfoncée.
+   Pour désélectionner un objet, cliquez hors de ses limites ou cliquez dessus en maintenant la touche **Majuscule** enfoncée.
 
 > Il est également possible de sélectionner des objets en double-cliquant dans la fenêtre de résultat d’une recherche globale.
 
@@ -186,7 +186,7 @@ Pour dupliquer directement un ou plusieurs objet(s) :
 1. Sélectionnez le ou les objet(s) que vous souhaitez dupliquer.
 2. Choisissez la commande **Dupliquer** dans le menu **Edition**. 4D crée une copie de chaque objet sélectionné et place la copie juste à côté de l’original.
 3. Déplacez la copie à l’emplacement souhaité.
-  Si vous choisissez de nouveau la commande Dupliquer, 4D crée une autre copie pour chaque objet et la place exactement au même placement relatif par rapport à la première copie. Si vous devez répartir plusieurs copies d’un objet sur un axe, appliquez la procédure suivante. Dupliquez l’objet original, déplacez la copie à un autre emplacement sur le formulaire, puis dupliquez la copie. La deuxième copie adopte le même positionnement relatif par rapport à la première copie que celui qui existe entre la position de l’original et celle de la première copie. Les copies suivantes seront alors placées avec le même écart par rapport à leur original. Le schéma ci-dessous explique le fonctionnement du placement relatif des copies :
+   Si vous choisissez de nouveau la commande Dupliquer, 4D crée une autre copie pour chaque objet et la place exactement au même placement relatif par rapport à la première copie. Si vous devez répartir plusieurs copies d’un objet sur un axe, appliquez la procédure suivante. Dupliquez l’objet original, déplacez la copie à un autre emplacement sur le formulaire, puis dupliquez la copie. La deuxième copie adopte le même positionnement relatif par rapport à la première copie que celui qui existe entre la position de l’original et celle de la première copie. Les copies suivantes seront alors placées avec le même écart par rapport à leur original. Le schéma ci-dessous explique le fonctionnement du placement relatif des copies :
 
 ![](../assets/en/FormEditor/duplicateObjects.png)
 
@@ -241,8 +241,8 @@ Pour grouper les objets :
 
 1. Sélectionnez les objets que vous souhaitez grouper.
 2. Sélectionnez **Grouper** dans le menu Objets. OU
-  Cliquez sur le bouton Grouper dans la barre d'outils de l'éditeur de formulaire:<p>![](../assets/en/FormEditor/group.png)</p>
-  4D indique la limite des objets regroupés nouvellement avec des poignées. Les objets du groupe ne sont plus marqués séparément par des poignées. Désormais, lorsque vous modifiez le groupe d’objets, vous modifiez tous les objets qui le composent.
+   Cliquez sur le bouton Grouper dans la barre d'outils de l'éditeur de formulaire:<p>![](../assets/en/FormEditor/group.png)</p>
+   4D indique la limite des objets regroupés nouvellement avec des poignées. Les objets du groupe ne sont plus marqués séparément par des poignées. Désormais, lorsque vous modifiez le groupe d’objets, vous modifiez tous les objets qui le composent.
 
 Pour dégrouper un groupe d’objets :
 
@@ -381,7 +381,7 @@ Pour visualiser ou modifier l’ordre de saisie :
 
 1. Sélectionnez **Ordre de saisie** dans le menu **Formulaire** ou cliquez sur le bouton dans la barre d’outils de la fenêtre :<p>![](../assets/en/FormEditor/zOrder.png)</p>
 
-  Le pointeur prend la forme d’un pointeur d’ordre, et 4D dessine une ligne qui permet de visualiser la séquence de l’ordre de saisie courant. Visualiser et modifier l’ordre de saisie sont les seules opérations que vous pouvez réaliser dans ce mode.
+   Le pointeur prend la forme d’un pointeur d’ordre, et 4D dessine une ligne qui permet de visualiser la séquence de l’ordre de saisie courant. Visualiser et modifier l’ordre de saisie sont les seules opérations que vous pouvez réaliser dans ce mode.
 
 2. Pour changer l’ordre de saisie, positionnez le pointeur sur un objet dans le formulaire et, tout en maintenant le bouton de la souris enfoncé, faites glisser le pointeur vers l'objet que vous souhaitez ensuite dans l'ordre de saisie des données.<p>![](../assets/en/FormEditor/entryOrder3.png)</p>4D ajustera automatiquement l'ordre de saisie.
 

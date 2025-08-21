@@ -11,8 +11,8 @@ title: On Drag Over
 
 El evento `On Drag Over` se envía repetidamente al objeto de destino cuando el puntero del ratón se mueve sobre el objeto. Normalmente, en respuesta a este evento:
 
-- Obtenga los datos y las firmas que se encuentran en portapapeles (mediante el comando `GET PASTEBOARD DATA`).
-- Según la naturaleza y el tipo de datos en el portapapeles, se **acepta** o **rechaza** el arrastrar y soltar.
+ - Obtenga los datos y las firmas que se encuentran en portapapeles (mediante el comando `GET PASTEBOARD DATA`).
+ - Según la naturaleza y el tipo de datos en el portapapeles, se **acepta** o **rechaza** el arrastrar y soltar.
 
 Para **aceptar** el arrastrar, el método del objeto de destino debe devolver 0 (cero).
 Para **rechazar** el arrastrar, el método de objeto debe retornar -1 (menos uno).

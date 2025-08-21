@@ -163,8 +163,8 @@ title: ラベル
 専用のテーブルフォームとプロジェクトメソッドを使用することで、計算された変数を含むラベルを印刷することができます。 この単純な例題では、異なる要素の設定の仕方を紹介していきます。
 
 1. 専用のテーブルフォームの中に、自分のラベルフィールドや変数を追加していきます。
-  ここでは、"label" という名前のテーブルフォームに、 *myVar* という名前の変数を追加します:
-  ![](../assets/en/Desktop/label-example1.png)
+   ここでは、"label" という名前のテーブルフォームに、 *myVar* という名前の変数を追加します:
+   ![](../assets/en/Desktop/label-example1.png)
 
 2. 以下のコードを持つ `setMyVar` という名前のプロジェクトメソッドを作成します:
 
@@ -183,10 +183,10 @@ title: ラベル
 ```
 
 5. ラベルエディターを開き、使用したいフォームを使用します:
-  ![](../assets/en/Desktop/label-example2.png)
+   ![](../assets/en/Desktop/label-example2.png)
 
 6. レイアウトページにて、実行するメソッドを選択します:
-  ![](../assets/en/Desktop/label-example3.png)
+   ![](../assets/en/Desktop/label-example3.png)
 
 そしてラベルを印刷します:
 ![](../assets/en/Desktop/label-example4.png)

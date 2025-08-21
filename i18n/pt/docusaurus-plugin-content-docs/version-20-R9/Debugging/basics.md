@@ -33,13 +33,13 @@ Ocasionalmente, pode não haver memória suficiente para criar um BLOB. Ou, quan
 
 Estes são geralmente o tipo de erro mais difícil de encontrar. Com exceção dos erros de digitação, todos os tipos de erros acima enumerados são, em certa medida, abrangidos pela expressão "erro de conceção ou de lógica". Utilice el [depurador ](debugger.md) para detectarlos. Por exemplo:
 
-- Puede ocurrir un *error de sintaxis* cuando intenta utilizar una variable que aún no está inicializada.
-- Puede ocurrir un *error de entorno* cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
+ - Puede ocurrir un *error de sintaxis* cuando intenta utilizar una variable que aún no está inicializada.
+ - Puede ocurrir un *error de entorno* cuando intenta abrir un documento, porque el nombre de ese documento es recibido por una subrutina que no obtuvo el valor correcto como parámetro.
 
 Os erros de concepção ou lógicos incluem também situações como:
 
-- Un registro no está correctamente actualizado porque, mientras se llama a `SAVE RECORD`, se olvidó de la primera prueba de si el registro estaba bloqueado o no.
-- Um método não faz exatamente o que se espera, porque a presença de um parâmetro opcional não é testada.
+ - Un registro no está correctamente actualizado porque, mientras se llama a `SAVE RECORD`, se olvidó de la primera prueba de si el registro estaba bloqueado o no.
+ - Um método não faz exatamente o que se espera, porque a presença de um parâmetro opcional não é testada.
 
 Por vezes, a parte do código que apresenta o erro pode ser diferente do código que está efetivamente na origem do problema.
 
@@ -55,8 +55,8 @@ Para encontrar rapidamente a origem do problema, reabrir a versão interpretada 
 
 A janela erro de sintaxe aparece automaticamente quando a execução de um método é interrompida. Isto pode acontecer quando:
 
-- um erro impede a continuação da execução do código
-- el método produce una afirmación falsa (ver el comando `ASSERT`)
+ - um erro impede a continuação da execução do código
+ - el método produce una afirmación falsa (ver el comando `ASSERT`)
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -64,11 +64,11 @@ A área de texto superior apresenta uma mensagem que descreve o erro. A área de
 
 A janela de erro de sintaxe propõe várias opções:
 
-- **Modificar**: detiene la ejecución de todos los métodos. 4D muda para o ambiente de Design e o método com o erro é aberto no Editor de Código, permitindo sua correção. Utilize esta opção quando reconhecer imediatamente o erro e puder corrigi-lo sem mais investigações.
+ - **Modificar**: detiene la ejecución de todos los métodos. 4D muda para o ambiente de Design e o método com o erro é aberto no Editor de Código, permitindo sua correção. Utilize esta opção quando reconhecer imediatamente o erro e puder corrigi-lo sem mais investigações.
 
-- **Rastrear**: entra en modo Rastrear/Depurador. Se muestra la ventana del [Depurador](debugger.md). Si la línea actual solo se ha ejecutado parcialmente, es posible que tenga que hacer clic en el botón **rastrear** varias veces.
+ - **Rastrear**: entra en modo Rastrear/Depurador. Se muestra la ventana del [Depurador](debugger.md). Si la línea actual solo se ha ejecutado parcialmente, es posible que tenga que hacer clic en el botón **rastrear** varias veces.
 
-- **Continuar**: la ejecución continua. A linha com o erro pode ser parcialmente executada, dependendo da localização do erro. Continue com cuidado: o erro pode impedir que o resto do seu método seja executado corretamente. Recomendamos hacer clic en **Continuar** sólo si el error está en una llamada trivial (como `SET WINDOW TITLE`) que no impide ejecutar y probar el resto de su código.
+ - **Continuar**: la ejecución continua. A linha com o erro pode ser parcialmente executada, dependendo da localização do erro. Continue com cuidado: o erro pode impedir que o resto do seu método seja executado corretamente. Recomendamos hacer clic en **Continuar** sólo si el error está en una llamada trivial (como `SET WINDOW TITLE`) que no impide ejecutar y probar el resto de su código.
 
 :::tip
 
@@ -76,14 +76,14 @@ Para ignorar um erro que ocorre repetidamente (por exemplo, em loops), você pod
 
 :::
 
-- **Abortar**: Interrompe a execução do método e retorna ao estado antes do método começar a executar:
+ - **Abortar**: Interrompe a execução do método e retorna ao estado antes do método começar a executar:
 
-    - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
-    - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
+     - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
+     - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
 
-- **Copiar**: copia as informações de depuração na área de transferência. A informação descreve o ambiente interno do erro (número, componente interno, etc.). Eles são formatados como texto tabulado.
+ - **Copiar**: copia as informações de depuração na área de transferência. A informação descreve o ambiente interno do erro (número, componente interno, etc.). Eles são formatados como texto tabulado.
 
-- **Salvar...**: Salva o conteúdo da janela de erro de sintaxe e a cadeia de chamadas em um arquivo `.txt`.
+ - **Salvar...**: Salva o conteúdo da janela de erro de sintaxe e a cadeia de chamadas em um arquivo `.txt`.
 
 ## Depurador
 

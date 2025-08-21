@@ -17,6 +17,13 @@ title: リリースノート
 
 - [**修正リスト**](https://bugs.4d.com/fixes?version=20.7): 4D 20.7 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
 
+:::caution 4D Server 20.7 以降の最小クライアントバージョンについて
+
+内部的な理由により、4D 20.7 以降の 4D Server に接続するリモートクライアントのバージョンは、4D 20.7 以上でなければなりません。
+
+:::
+
+
 
 
 ## 4D 20.6 LTS

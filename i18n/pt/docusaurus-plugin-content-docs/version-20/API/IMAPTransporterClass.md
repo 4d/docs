@@ -141,15 +141,15 @@ A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary
 
 </details>
 
-<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : any ; *keywords* :  Object ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                                                                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | Collection | -> | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
-| keywords   | Object     | -> | Flags de palavras chaves a adicionar                                                                                                                                              |
-| Resultados | Object     | <- | Estado da operação addFlags<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                                                                                                                                                         |
+| ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs     | any    | -> | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
+| keywords   | Object | -> | Flags de palavras chaves a adicionar                                                                                                                                              |
+| Resultados | Object | <- | Estado da operação addFlags<!-- END REF -->
 
 |
 
@@ -1354,15 +1354,15 @@ A função devolve uma colecção de cordas (identificações únicas).
 
 </details>
 
-<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : any ; *keywords* :  Object ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                                                                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | Collection | -> | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
-| keywords   | Object     | -> | Flags de palavras-chave a remover                                                                                                                                                 |
-| Resultados | Object     | <- | Estado da operação removeFlags|<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                                                                                                                                                         |
+| ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs     | any    | -> | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
+| keywords   | Object | -> | Flags de palavras-chave a remover                                                                                                                                                 |
+| Resultados | Object | <- | Estado da operação removeFlags|<!-- END REF -->
 
 |
 

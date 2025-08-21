@@ -14,13 +14,13 @@ Para crear un nuevo proyecto:
 1. Lance 4D o 4D Server.
 
 2. Haga una de las siguientes cosas:
-  - Selecciona **Nuevo > Proyecto...** en el menú **Archivo**: ![](../assets/en/getStart/projectCreate1.png)
-  - (solo 4D) Seleccione **Proyecto...** desde el **Nuevo** botón de la barra de herramientas:<p>![](../assets/en/getStart/projectCreate2.png)</p>Aparece un diálogo **Guardar** estándar para que pueda elegir el nombre y la ubicación de la carpeta principal del proyecto 4D.
+   - Selecciona **Nuevo > Proyecto...** en el menú **Archivo**: ![](../assets/en/getStart/projectCreate1.png)
+   - (solo 4D) Seleccione **Proyecto...** desde el **Nuevo** botón de la barra de herramientas:<p>![](../assets/en/getStart/projectCreate2.png)</p>Aparece un diálogo **Guardar** estándar para que pueda elegir el nombre y la ubicación de la carpeta principal del proyecto 4D.
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**. Este nombre se utilizará:
 
-  - como nombre de la carpeta del proyecto,
-  - como nombre del archivo .4DProject en el primer nivel de la [carpeta "Project"](../Project/architecture.md#project-folder).
+   - como nombre de la carpeta del proyecto,
+   - como nombre del archivo .4DProject en el primer nivel de la [carpeta "Project"](../Project/architecture.md#project-folder).
 
 Puedes elegir cualquier nombre permitido por su sistema operativo. Sin embargo, si su proyecto está destinado a funcionar en otros sistemas o a ser guardado a través de una herramienta de control de fuente, debe tener en cuenta sus recomendaciones de denominación específicas.
 
@@ -34,18 +34,18 @@ Para abrir un proyecto existente desde 4D:
 
 1. Haga una de las siguientes cosas:
 
-  - Seleccione **Abrir/Proyecto local...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
-  - Seleccione **Abrir un proyecto de aplicación local** en el diálogo del Asistente de Bienvenida
+   - Seleccione **Abrir/Proyecto local...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
+   - Seleccione **Abrir un proyecto de aplicación local** en el diálogo del Asistente de Bienvenida
 
 Aparece la caja de diálogo estándar de apertura de archivos.
 
 2. Seleccione el archivo `.4dproject` del proyecto (situado dentro de la carpeta ["Project" del proyecto](../Project/architecture.md#project-folder)) y haga clic en **Abrir**.
 
-  Por defecto, el proyecto se abre con su archivo de datos actual. Se sugieren otros tipos de archivos:
+   Por defecto, el proyecto se abre con su archivo de datos actual. Se sugieren otros tipos de archivos:
 
-  - *Archivos de proyectos empaquetados*: extensión `.4dz` - proyectos de despliegue
-  - *Archivos de acceso directo*: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
-  - *Archivos binarios*: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
+   - *Archivos de proyectos empaquetados*: extensión `.4dz` - proyectos de despliegue
+   - *Archivos de acceso directo*: extensión `.4DLink` - almacenan los parámetros adicionales necesarios para abrir proyectos o aplicaciones (direcciones, identificadores, etc.)
+   - *Archivos binarios*: extensión `.4db` o `.4dc` - formatos de base de datos 4D heredados
 
 ### Opciones
 

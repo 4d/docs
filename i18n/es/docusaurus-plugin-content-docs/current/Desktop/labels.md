@@ -163,8 +163,8 @@ The **For each: Record or Label** options are used to specify whether to run the
 You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
 
 1. En un formulario tabla dedicado, añada su(s) campo(s) de etiqueta y su(s) variable(s).
-  Here, in a table form named "label", we added the *myVar* variable:
-  ![](../assets/en/Desktop/label-example1.png)
+   Here, in a table form named "label", we added the *myVar* variable:
+   ![](../assets/en/Desktop/label-example1.png)
 
 2. Create a `setMyVar` project method with the following code:
 
@@ -183,10 +183,10 @@ You can use dedicated table forms and project methods to print labels with calcu
 ```
 
 5. Open the Label editor and use your form:
-  ![](../assets/en/Desktop/label-example2.png)
+   ![](../assets/en/Desktop/label-example2.png)
 
 6. In the Layout page, select the method:
-  ![](../assets/en/Desktop/label-example3.png)
+   ![](../assets/en/Desktop/label-example3.png)
 
 Then you can print your labels:
 ![](../assets/en/Desktop/label-example4.png)

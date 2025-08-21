@@ -716,8 +716,8 @@ La gestion des connexions des applications clientes recouvre les mécanismes par
 Le processus de connexion des applications clientes fusionnées prend en charge les cas où le serveur dédié n'est pas disponible. Le scénario du démarrage d'une application cliente 4D est le suivant :
 
 1. Si des informations de connexion valides sont stockées dans le fichier "EnginedServer.4DLink" à l'intérieur de l'application cliente, l'application cliente se connecte à l'adresse du serveur spécifiée.\
-  OR\
-  L'application cliente tente de se connecter au serveur en utilisant le service de découverte (basé sur le nom du serveur, diffusé sur le même sous-réseau).
+   OR\
+   L'application cliente tente de se connecter au serveur en utilisant le service de découverte (basé sur le nom du serveur, diffusé sur le même sous-réseau).
 
 2. En cas d'échec, l'application cliente tente de se connecter au serveur à l'aide des informations présentes dans le dossier de préférences utilisateur de l'application (fichier "lastServer.xml", cf. dernière étape).
 

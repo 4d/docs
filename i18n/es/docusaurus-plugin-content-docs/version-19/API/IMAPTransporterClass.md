@@ -139,15 +139,15 @@ La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 </details>
 
-<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : any ; *keywords* :  Object ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                                                                                                                      |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | Collection | -> | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
-| keywords   | Object     | -> | Banderas de palabras claves a añadir                                                                                                                                             |
-| Resultado  | Object     | <- | Estado de la operación addFlags|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                                                                                                                      |
+| ---------- | ------ |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs     | any    | -> | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
+| keywords   | Object | -> | Banderas de palabras claves a añadir                                                                                                                                             |
+| Resultado  | Object | <- | Estado de la operación addFlags|<!-- END REF -->
 
 |
 
@@ -1357,15 +1357,15 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 </details>
 
-<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : any ; *keywords* :  Object ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                                                                                                                      |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | Collection | -> | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
-| keywords   | Object     | -> | Banderas de palabras claves a eliminar                                                                                                                                           |
-| Resultado  | Object     | <- | Estado de la operación removeFlags|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                                                                                                                      |
+| ---------- | ------ |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs     | any    | -> | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
+| keywords   | Object | -> | Banderas de palabras claves a eliminar                                                                                                                                           |
+| Resultado  | Object | <- | Estado de la operación removeFlags|<!-- END REF -->
 
 |
 

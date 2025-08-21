@@ -13,9 +13,9 @@ title: コンパイル
 
 1. コンパイラーウィンドウを表示するには、**デザイン** メニューの **コンパイラー...** を選択するか、またはツールバーにある **コンパイラー** ボタンをクリックします。
 
-  ![](../assets/en/Project/compilerWin1.png)
+   ![](../assets/en/Project/compilerWin1.png)
 
-  ![](../assets/en/Project/comp1.png)
+   ![](../assets/en/Project/comp1.png)
 
 > また、**デザイン** メニューの **コンパイル開始...** を選択すると、コンパイル処理を直接開始できます。
 

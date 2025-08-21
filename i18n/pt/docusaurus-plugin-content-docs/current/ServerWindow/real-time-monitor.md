@@ -13,22 +13,22 @@ A página do Monitor em Tempo Real monitora o progresso de operações "longas" 
 
 As informações seguintes são fornecidas para cada linha:
 
-- **Hora de inicio**: hora de inicio de la operación en el formato "dd/mm/yyyy - hh:mm:ss"
-- **Duración** (ms): duración en milisegundos de la operación en curso
-- **Información**: título de la operación.
-- **Detalles**: esta área muestra información detallada que variará en función del tipo de operación seleccionada. Mais especificamente:
-    - **Creada en**: indica si la operación es el resultado de una acción del cliente (Creada en cliente) o si se inició explícitamente en el servidor mediante un procedimiento almacenado o la opción "Ejecutar en el servidor" (Creada en servidor).
-    - **Detalles de la operación**: tipo de operación y (para las operaciones de consulta) plan de búsqueda.
-    - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
-    - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
+ - **Hora de inicio**: hora de inicio de la operación en el formato "dd/mm/yyyy - hh:mm:ss"
+ - **Duración** (ms): duración en milisegundos de la operación en curso
+ - **Información**: título de la operación.
+ - **Detalles**: esta área muestra información detallada que variará en función del tipo de operación seleccionada. Mais especificamente:
+     - **Creada en**: indica si la operación es el resultado de una acción del cliente (Creada en cliente) o si se inició explícitamente en el servidor mediante un procedimiento almacenado o la opción "Ejecutar en el servidor" (Creada en servidor).
+     - **Detalles de la operación**: tipo de operación y (para las operaciones de consulta) plan de búsqueda.
+     - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
+     - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
 
 > Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](../commands-legacy/activity-snapshot.md) command internally. Para mais informações, consultar a descrição deste comando.
 
 A página está ativa e é atualizada permanentemente assim que é exibida. Note-se que o seu funcionamento pode atrasar significativamente a execução da aplicação. É possível suspender a atualização desta página de uma das seguintes maneiras:
 
-- haciendo clic en el botón **Pausa**,
-- clicando na lista,
-- premindo a barra de espaços.
+ - haciendo clic en el botón **Pausa**,
+ - clicando na lista,
+ - premindo a barra de espaços.
 
 Al pausar la página, aparece el mensaje "PAUSED" y la etiqueta del botón cambia a **Reanudar**.
 Você pode retomar o monitoramento das operações realizando a mesma ação que realizar a pausa.

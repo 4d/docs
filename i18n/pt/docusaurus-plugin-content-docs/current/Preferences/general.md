@@ -11,12 +11,12 @@ Esta página contém várias opções para configurar o funcionamento geral da s
 
 Esta opção permite configurar o ecrã 4D por padrão no arranque, quando o usuário inicia apenas a aplicação.
 
-- **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
-- **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
-- **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura.
+ - **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
+ - **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
+ - **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura.
     > Para forçar a apresentação da caixa de diálogo de abertura quando esta opção é selecionada, mantenha premida a tecla **Alt** (Windows) ou **Opção** (macOS) enquanto inicia o projeto.
-- **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
-- **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
+ - **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
+ - **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
 
 > **4D Server**: la aplicación 4D Server ignora esta opción. En este entorno, se utiliza siempre el modo **No hacer nada**.
 
@@ -30,8 +30,8 @@ A partir do macOS Sierra, os aplicativos Mac podem se beneficiar do recurso Auto
 
 Você pode se beneficiar desse recurso nos seguintes ambientes (somente com versões 4D de 64 bits):
 
-- Method Editor windows
-- Janelas do editor de formulários
+ - Method Editor windows
+ - Janelas do editor de formulários
 
 Todas as janelas destes editores podem ser colocadas no formulário de tabulação:
 
@@ -47,9 +47,9 @@ En la caja de diálogo de Preferencias de 4D, la opción **Ventana con pestañas
 
 Estão disponíveis três opções:
 
-- **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
-- **Nunca**: al abrir un nuevo documento en el editor de formularios 4D o en el Editor de Código siempre se crea una nueva ventana (nunca se crean pestañas).
-- **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
+ - **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
+ - **Nunca**: al abrir un nuevo documento en el editor de formularios 4D o en el Editor de Código siempre se crea una nueva ventana (nunca se crean pestañas).
+ - **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
 
 ### Aparência (somente macOS)
 
@@ -59,9 +59,9 @@ Este menú permite seleccionar la combinación de colores que se utilizará para
 
 Estão disponíveis três opções:
 
-- **Según las preferencias de la paleta de colores del sistema** (por defecto): utiliza la paleta de colores definida en las Preferencias sistema de macOS.
-- **Claro**: utilizar el tema claro
-- **Sombra**: utilizar el tema Sombra
+ - **Según las preferencias de la paleta de colores del sistema** (por defecto): utiliza la paleta de colores definida en las Preferencias sistema de macOS.
+ - **Claro**: utilizar el tema claro
+ - **Sombra**: utilizar el tema Sombra
 
 > Esta preferência só é suportada no macOS. No Windows, é sempre utilizado o esquema "Light".
 
@@ -73,8 +73,8 @@ Si esta opción está marcada, cuando el usuario cambia al entorno Aplicación u
 
 Si marca esta opción, se añaden dos elementos en el menú **Archivo > Nuevo** y el botón **Nuevo** de la barra de herramientas:
 
-- **Base de dados...**
-- **Base de dados a partir da definição da estrutura...**
+ - **Base de dados...**
+ - **Base de dados a partir da definição da estrutura...**
 
 ![](../assets/en/Preferences/general5.png)
 
@@ -138,8 +138,8 @@ Ao criar um novo arquivo de dados, o 4D usa o idioma previamente definido nesse 
 
 Esta área configura o acesso à documentação HTML 4D exibida no seu navegador atual:
 
-- Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
-- Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
+ - Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
+ - Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
 
 ### Língua da documentação
 
@@ -151,8 +151,8 @@ Linguaje da documentação HTML a apresentar. É possível selecionar uma docume
 
 Define onde 4D irá procurar por páginas de documentação.
 
-- Quando marcado (padrão), 4D primeiro procura a página na pasta local (veja abaixo). Se for encontrado, 4D mostra a página no navegador atual. Se for encontrado, 4D mostra a página no navegador atual. Desta forma, é possível aceder à documentação mesmo quando se está offline.
-- Quando não marcada, 4D procura a página desejada diretamente no site de documentação on-line e a exibe no navegador atual. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.
+ - Quando marcado (padrão), 4D primeiro procura a página na pasta local (veja abaixo). Se for encontrado, 4D mostra a página no navegador atual. Se for encontrado, 4D mostra a página no navegador atual. Desta forma, é possível aceder à documentação mesmo quando se está offline.
+ - Quando não marcada, 4D procura a página desejada diretamente no site de documentação on-line e a exibe no navegador atual. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.
 
 ### Pasta local
 

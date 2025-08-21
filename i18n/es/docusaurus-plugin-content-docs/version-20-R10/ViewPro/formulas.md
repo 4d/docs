@@ -191,11 +191,11 @@ Queremos imprimir "Hola Mundo" en una celda del área 4D View Pro utilizando un 
 
 3. Edite el contenido de una celda en un área 4D View Pro y escriba:
 
-  ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+   ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-  "myMethod" es entonces llamado por 4D y la la celda se muestra:
+   "myMethod" es entonces llamado por 4D y la la celda se muestra:
 
-  ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+   ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### Parámetros
 
@@ -321,19 +321,19 @@ Queremos imprimir el nombre de una persona en una celda del área 4D View Pro ut
 
 2. Ejecuta el siguiente código para inicializar una estructura virtual:
 
-  ```4d
-  ARRAY TEXT($tableTitles;1)
-  ARRAY LONGINT($tableNum;1)
-  $tableTitles{1}:="Emp"
-  $tableNum{1}:=2
-  SET TABLE TITLES($tableTitles;$tableNum;*)
-   
-  ARRAY TEXT($fieldTitles;1)
-  ARRAY LONGINT($fieldNum;1)
-  $fieldTitles{1}:="Name"
-  $fieldNum{1}:=2 //apellido
-  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
-  ```
+   ```4d
+   ARRAY TEXT($tableTitles;1)
+   ARRAY LONGINT($tableNum;1)
+   $tableTitles{1}:="Emp"
+   $tableNum{1}:=2
+   SET TABLE TITLES($tableTitles;$tableNum;*)
+    
+   ARRAY TEXT($fieldTitles;1)
+   ARRAY LONGINT($fieldNum;1)
+   $fieldTitles{1}:="Name"
+   $fieldNum{1}:=2 //apellido
+   SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+   ```
 
 3. Edite el contenido de una celda en el área 4D View Pro e introduzca "=e":
 

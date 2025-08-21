@@ -13,9 +13,9 @@ La compilación se realiza desde su aplicación 4D y es totalmente automática.
 
 1. Abra la ventana de compilación seleccionando el comando **Compilador...** en el menú **Diseño** o el botón **Compilador** de la barra de herramientas.
 
-  ![](../assets/en/Project/compilerWin1.png)
+   ![](../assets/en/Project/compilerWin1.png)
 
-  ![](../assets/en/Project/comp1.png)
+   ![](../assets/en/Project/comp1.png)
 
 > También puede lanzar directamente la compilación seleccionando el elemento de menú **Iniciar compilación** en el menú **Diseño**.
 

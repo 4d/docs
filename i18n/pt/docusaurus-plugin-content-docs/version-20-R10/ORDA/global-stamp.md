@@ -12,7 +12,7 @@ The global modification stamp is a number, always maintained by 4D, even in case
 Una vez [configurado y habilitado el seguimiento de cambios de datos](#configuring-data-change-tracking), las siguientes acciones son ejecutadas automáticamente por 4D en cada modificación de registro (añadir, modificar, borrar):
 
 1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity.
-    En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
+   En caso de eliminación, una nueva entidad también se añade a la tabla `__DeletedRecords` con información sobre la entidad eliminada y el valor actual del sello de modificación global se guarda en el atributo "__Stamp".
 
 2. The global modification stamp value is incremented.
 
@@ -34,8 +34,8 @@ Para habilitar el seguimiento de cambios de datos, la estructura de la aplicaci�
 
 In addition, to ensure proper operation of the feature, the following conditions are required:
 
-- El campo `__GlobalStamp` debe ser del tipo *Entero 64 bits*, con las propiedades *índice automático*, *Exponer como recurso REST* e *Invisible* seleccionadas.
-- Debe añadirse una tabla `__DeletedRecords`, con los siguientes campos:
+ - El campo `__GlobalStamp` debe ser del tipo *Entero 64 bits*, con las propiedades *índice automático*, *Exponer como recurso REST* e *Invisible* seleccionadas.
+ - Debe añadirse una tabla `__DeletedRecords`, con los siguientes campos:
 
 | Campo                                                   | Tipo            | Descrição                             |
 | ------------------------------------------------------- | --------------- | ------------------------------------- |
@@ -64,8 +64,8 @@ Para ativar o rastreamento de alterações de dados:
 
 Em seguida, 4D faz as seguintes alterações:
 
-- Se añade un campo preconfigurado `__GlobalStamp` a la(s) tabla(s).
-- Si no existe ya, se añade a la estructura una tabla `__DeletedRecords`.
+ - Se añade un campo preconfigurado `__GlobalStamp` a la(s) tabla(s).
+ - Si no existe ya, se añade a la estructura una tabla `__DeletedRecords`.
 
 Para desativar o rastreamento de alterações de dados:
 

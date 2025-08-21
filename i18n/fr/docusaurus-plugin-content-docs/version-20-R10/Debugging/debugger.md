@@ -158,27 +158,27 @@ $c:=a+b
 
 1. Une fenêtre de débogage s'ouvre avec le compteur de programme défini à la ligne avec `a:=1`. À ce stade, le thème **Objets courants** affiche :
 
-  | $a | Undefined |
-  | -- | --------- |
+   | $a | Undefined |
+   | -- | --------- |
 
-  La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+   La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 2. Vous cliquez sur le bouton **Exécuter pas à pas**. Le compteur du programme est maintenant défini sur la ligne `b:=a+1`. À ce stade, le thème **Objets courants** affiche :
 
-  | $a | 1         |
-  | -- | --------- |
-  | $b | Undefined |
+   | $a | 1         |
+   | -- | --------- |
+   | $b | Undefined |
 
-  La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+   La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 3. Vous cliquez à nouveau sur le bouton **Exécuter pas à pas**. Le compteur de programme est maintenant placé sur la ligne avec $c:=a+b. Le thème **Objets courants** affiche :
 
-  | $c | Undefined |
-  | -- | --------- |
-  | $a | 1         |
-  | $b | 2         |
+   | $c | Undefined |
+   | -- | --------- |
+   | $a | 1         |
+   | $b | 2         |
 
-  La valeur de la variable `$b` est maintenant 2. La variable `$c` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+   La valeur de la variable `$b` est maintenant 2. La variable `$c` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 #### Variables
 
@@ -416,9 +416,9 @@ Vous pouvez copier n'importe quelle expression sélectionnée depuis la fenêtre
 
 1. Dans le volet Code Source, sélectionnez l'expression à évaluer
 2. Effectuez l'une des opérations suivantes :
-  - Glissez et déposez le texte sélectionné dans la zone d'expression
-  - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
-  - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
+   - Glissez et déposez le texte sélectionné dans la zone d'expression
+   - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
+   - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
 
 ### Compteur de programme
 

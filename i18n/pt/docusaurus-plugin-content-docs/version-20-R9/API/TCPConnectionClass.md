@@ -189,8 +189,8 @@ Todas as funções de chamada de retorno recebem dois parâmetros de objectos:
 1. O `onConnection` é acionado quando a conexão é estabelecida.
 2. `onData` é acionado cada vez que os dados são recebidos.
 3. O `onShutdown` ou o `onError` estão ativados:
-   - O `onShutdown` é acionado quando a conexão for fechada corretamente.
-   - `onError` é acionado se ocorrer um erro.
+    - O `onShutdown` é acionado quando a conexão for fechada corretamente.
+    - `onError` é acionado se ocorrer um erro.
 4. O `onTerminate` é sempre acionado logo antes de a TCPConnection ser liberada (a conexão é fechada ou ocorre um erro).
 
 #### Objeto TCPEvent

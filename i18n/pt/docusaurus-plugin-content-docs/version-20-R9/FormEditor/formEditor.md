@@ -155,7 +155,7 @@ Para selecionar um objeto usando a barra de ferramentas:
 Para selecionar um objecto utilizando a Lista de Propriedades:
 
 1. Escolher o nome do objecto na lista pendente da Lista de Objectos localizada no topo da Lista de Propriedades. Usando estes dois métodos, pode seleccionar um objecto que esteja escondido por outros objectos ou localizado fora da área visível da janela actual.
-  Para cancelar a seleção de um objeto, clique fora do limite do objeto ou **Shift+clique** no objeto.
+   Para cancelar a seleção de um objeto, clique fora do limite do objeto ou **Shift+clique** no objeto.
 
 > Também é possível selecionar objetos clicando duas vezes neles na janela de resultados da operação "Localizar no design".
 
@@ -186,7 +186,7 @@ Para duplicar um ou mais objectos:
 1. Seleccione os objectos que pretende agrupar.
 2. Escolha **Duplicar** no menu **Editar**. 4D cria uma cópia de cada objecto selecionado e coloca a cópia em frente e ligeiramente para o lado do original.
 3. Deslocar a cópia para a localização pretendida.
-  Se você selecionar o item de menu Duplicar novamente, o 4D criará outra cópia de cada objeto e a moverá exatamente na mesma distância e direção da primeira cópia. Se precisar distribuir cópias do objeto ao longo de uma linha, use o procedimento a seguir. Duplique o objeto original, mova a cópia para outro local no formulário e, em seguida, duplique a cópia. A segunda cópia é automaticamente colocada na mesma relação com a primeira cópia que a primeira cópia estava em relação ao objeto original. As cópias subsequentes também são colocadas na mesma relação com seus originais. A figura abaixo mostra como funciona esse posicionamento relativo das cópias:
+   Se você selecionar o item de menu Duplicar novamente, o 4D criará outra cópia de cada objeto e a moverá exatamente na mesma distância e direção da primeira cópia. Se precisar distribuir cópias do objeto ao longo de uma linha, use o procedimento a seguir. Duplique o objeto original, mova a cópia para outro local no formulário e, em seguida, duplique a cópia. A segunda cópia é automaticamente colocada na mesma relação com a primeira cópia que a primeira cópia estava em relação ao objeto original. As cópias subsequentes também são colocadas na mesma relação com seus originais. A figura abaixo mostra como funciona esse posicionamento relativo das cópias:
 
 ![](../assets/en/FormEditor/duplicateObjects.png)
 
@@ -241,8 +241,8 @@ Para agrupar objectos:
 
 1. Selecione o objecto agrupado que pretende desagrupar.
 2. Elija **Agrupar** en el menú Objetos. OU
-  Clique no botão Group (Agrupar<p>)</p> na barra de ferramentas do editor de formulários:<p>![](../assets/en/FormEditor/group.png)</p>
-  4D marca o limite dos objetos recém-agrupados com alças. Nenhum manipulador marca o limite de nenhum dos objetos individuais no grupo. Agora, quando você modifica o objeto agrupado, altere todos os objetos que compõem o grupo.
+   Clique no botão Group (Agrupar<p>)</p> na barra de ferramentas do editor de formulários:<p>![](../assets/en/FormEditor/group.png)</p>
+   4D marca o limite dos objetos recém-agrupados com alças. Nenhum manipulador marca o limite de nenhum dos objetos individuais no grupo. Agora, quando você modifica o objeto agrupado, altere todos os objetos que compõem o grupo.
 
 Para desagrupar objetos:
 
@@ -381,7 +381,7 @@ Para ver ou alterar a ordem de entrada:
 
 1. Selecione **Pedido de entrada** no menu **Formulário** ou clique no botão na barra de ferramentas da janela:<p>![](../assets/en/FormEditor/zOrder.png)</p>
 
-  O ponteiro se transforma em um ponteiro de ordem de entrada e 4D desenha uma linha na forma mostrando a ordem em que ele seleciona objetos durante a entrada de dados. A visualização e alteração da ordem de introdução de dados são as únicas acções que pode realizar até clicar em qualquer ferramenta na paleta Ferramentas.
+   O ponteiro se transforma em um ponteiro de ordem de entrada e 4D desenha uma linha na forma mostrando a ordem em que ele seleciona objetos durante a entrada de dados. A visualização e alteração da ordem de introdução de dados são as únicas acções que pode realizar até clicar em qualquer ferramenta na paleta Ferramentas.
 
 2. Para mudar a ordem de entrada de dados, posicione o ponteiro em um objeto no formulário e, enquanto mantém pressionado o botão do mouse, arraste o ponteiro para o objeto que deseja na ordem de entrada de dados.<img src="../assets/en/FormEditor/entryOrder3.png" alt="" />4D ajustará a ordem de entrada de acordo.
 

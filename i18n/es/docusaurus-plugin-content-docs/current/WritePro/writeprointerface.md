@@ -11,8 +11,8 @@ La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/
 
 Encontrará a continuación:
 
-- la documentación de configuración del Asistente para tablas,
-- la I.A. integrada. documentation.
+ - la documentación de configuración del Asistente para tablas,
+ - la I.A. integrada. documentation.
 
 ## Asistente de tablas
 
@@ -60,9 +60,9 @@ Una vez integrada la tabla en el documento, el usuario puede personalizar su est
 
 La configuración de las plantillas incluye:
 
-- Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
-- Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
-- Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
+ - Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
+ - Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
+ - Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
 
 Estos tres tipos de archivos contribuyen a la configuración del Asistente para tablas y, aunque cada uno de ellos tiene una finalidad distinta, ninguno de ellos se considera un componente esencial.
 
@@ -70,10 +70,10 @@ Estos tres tipos de archivos contribuyen a la configuración del Asistente para 
 
 El archivo de plantilla permite definir lo siguiente:
 
-- la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
-- las fórmulas de ruptura (si se puede insertar una línea de ruptura)
-- los atributos de la clase de datos que pueden utilizarse como columnas de la tabla,
-- las fórmulas disponibles como menús contextuales dentro de las filas de interrupción, fila de arrastre, fila de marcador de posición o filas adicionales.
+ - la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
+ - las fórmulas de ruptura (si se puede insertar una línea de ruptura)
+ - los atributos de la clase de datos que pueden utilizarse como columnas de la tabla,
+ - las fórmulas disponibles como menús contextuales dentro de las filas de interrupción, fila de arrastre, fila de marcador de posición o filas adicionales.
 
 El archivo de plantillas debe ser almacenado en una carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dentro de su proyecto.
 
@@ -315,11 +315,11 @@ The 4D Write Pro interface uses OpenAI, for which you need to provide your own k
 
 In the current implementation, the feature has the following limitations:
 
-- use of a predefined AI provider and necessity to pass your OpenAI key
-- funcionalidades básicas de chat
-- sin gestión de imágenes
-- non-configurable predefined action commands
-- predefined translations English/French and French/English only
+ - use of a predefined AI provider and necessity to pass your OpenAI key
+ - funcionalidades básicas de chat
+ - sin gestión de imágenes
+ - non-configurable predefined action commands
+ - predefined translations English/French and French/English only
 
 ### Activando la función de IA
 
@@ -346,8 +346,8 @@ A continuación, aparece el botón **I.A**:
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
-- in the 4D Write Pro Toolbar, in the **Import Export** tab,
-- en el widget 4D Write Pro, en la pestaña **Estilo de fuente**.
+ - in the 4D Write Pro Toolbar, in the **Import Export** tab,
+ - en el widget 4D Write Pro, en la pestaña **Estilo de fuente**.
 
 Haga clic en el botón para mostrar el cuadro de diálogo IA.
 
@@ -385,8 +385,8 @@ Estos botones proponen interacciones básicas entre el área de chat, el documen
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
-- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
-- **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
+ - **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
+ - **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
 
 In both cases, if the response was provided with styles, you can decide to copy the text with or without styles.
 

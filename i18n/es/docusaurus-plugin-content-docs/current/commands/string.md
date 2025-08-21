@@ -167,66 +167,66 @@ Este parámetro puede utilizarse con formatos de fecha predefinidos o basados en
 
 #### Notas sobre los formatos combinados fecha/hora
 
-- The ISO Date GMT format corresponds to the ISO8601 standard, containing a date and a time expressed with respect to the time zone (GMT).
+- El formato ISO Date GMT corresponde a la norma ISO8601 y contiene una fecha y una hora expresadas con respecto a la zona horaria (GMT).
 
 ```4d
  $mydate:=String(Current date;ISO Date GMT;Current time) // devuelve, por ejemplo, 2010-09-13T16:11:53Z  
 ```
 
-Tenga en cuenta que el carácter "Z" al final indica el formato GMT.\
+Tenga en cuenta que el caracter "Z" al final indica el formato GMT.\
 Si no se pasa el parámetro *addTime*, el comando devuelve la fecha a medianoche (hora local) expresada en hora GMT, lo que puede hacer que la fecha se adelante o se retrase dependiendo de la zona horaria local:
 
 ```4d
- $mydate:=String(!13/09/2010!;ISO Date GMT) // returns 2010-09-12T22:00:00Z in France  
+ $mydate:=String(!13/09/2010!;ISO Date GMT) // devuelve 2010-09-12T22:00:00Z en Francia  
 ```
 
-- The ISO Date format is similar to the ISO Date GMT, except that it expresses the date and time without respect to the time zone. Note that since this format does not comply with the ISO8601 standard, its use should be reserved for very specific purposes.
+- El formato ISO Date es similar al formato ISO Date GMT, salvo que expresa la fecha y la hora sin tener en cuenta la zona horaria. Tenga en cuenta que, dado que este formato no cumple la norma ISO8601, su uso debe reservarse para fines muy específicos.
 
 ```4d
- $mydate:=String(!13/09/2010!;ISO Date) // returns 2010-09-13T00:00:00 regardless of the time zone  
- $mydate:=String(Current date;ISO Date;Current time) // returns 2010-09-13T18:11:53  
+ $mydate:=String(!13/09/2010!;ISO Date) // devuelve 2010-09-13T00:00:00 independientemente de la zona horaria  
+ $mydate:=String(Current date;ISO Date;Current time) // devuelve 2010-09-13T18:11:53  
 ```
 
-- The Date RFC 1123 format formats a date/time combination according to the standard defined by RFC 822 and 1123\. You need this format for example to set the expiration date for cookies in an HTTP header.
+- El formato Date RFC 1123 formatea una combinación fecha/hora según el estándar definido por RFC 822 y 1123\. Este formato es necesario, por ejemplo, para establecer la fecha de caducidad de las cookies en un encabezado HTTP.
 
 ```4d
- $mydate:=String(Current date;Date RFC 1123;Current time) // returns, for example Fri, 10 Sep 2010 13:07:20 GMT  
+ $mydate:=String(Current date;Date RFC 1123;Current time) // devuelve, por ejemplo Fri, 10 Sep 2010 13:07:20 GMT  
 ```
 
-The time expressed takes the time zone into account (GMT zone). If you only pass a date, the command returns the date at midnight (local time) expressed in GMT time which may cause the date to be moved forward or back depending on the local time zone:
+La hora expresada tiene en cuenta la zona horaria (zona GMT). Si solo pasa una fecha, el comando devuelve la fecha a medianoche (hora local) expresada en hora GMT, lo que puede hacer que la fecha se adelante o se atrase en función de la zona horaria local:
 
 ```4d
- $mydate:=String(!2010-09-09!;Date RFC 1123) // returns Wed, 08 Sep 2010 22:00:00 GMT  
+ $mydate:=String(!2010-09-09!;Date RFC 1123) // devuelve Wed, 08 Sep 2010 22:00:00 GMT  
 ```
 
 ### Expresiones de tipo hora
 
-If *expression* is a Time expression and if you omit the *format* parameter, the string is returned using the default HH:MM:SS format.
+Si *expression* es una expresión de tiempo y omite el parámetro *format*, la cadena se devuelve utilizando el formato predeterminado HH:MM:SS.
 
 De lo contrario, en el parámetro *format*, puede pasar:
 
-- either a predefined format available though the following constants of the *Time Display Formats* theme (longint value):
+- o bien un formato predefinido disponible a través de las siguientes constantes del tema *Formatos de visualización de las horas* (valor longint):
 
-| Constante                    | Valor | Comentario                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Blank if null time           | 100   | Se añade a la constante format. Indica que en caso de un valor null, 4D debe devolver una cadena vacía en lugar de ceros                                                                                                                                                                                               |
-| HH MM                        | 2     | 01:02                                                                                                                                                                                                                                                                                                                  |
-| HH MM AM PM                  | 5     | 1:02 AM                                                                                                                                                                                                                                                                                                                |
-| HH MM SS                     | 1     | 01:02:03                                                                                                                                                                                                                                                                                               |
-| Hour min                     | 4     | 1 hora 2 minutos                                                                                                                                                                                                                                                                                                                       |
-| Hora min seg                 | 3     | 1 hora 2 minutos 3 segundos                                                                                                                                                                                                                                                                                                            |
-| ISO time                     | 8     | 0000-00-00T01:02:03\. Corresponds to the ISO8601 standard and contains, in theory, a date and a time. Since this format does not support combined dates/times, the date part is filled with 0s. This format expresses the local time. |
-| Min sec                      | 7     | 62 minutos 3 segundos                                                                                                                                                                                                                                                                                                                  |
-| MM SS                        | 6     | 62:03                                                                                                                                                                                                                                                                                                                  |
-| System time long             | 11    | 1:02:03 AM HNEC (sólo Mac)                                                                                                                                                                                                                                                          |
-| System time long abbreviated | 10    | 1-02-03 AM (sólo Mac)                                                                                                                                                                                                                                                                                               |
-| System time short            | 9     | 01:02:03                                                                                                                                                                                                                                                                                               |
+| Constante                    | Valor | Comentario                                                                                                                                                                                                                                                                                                                            |
+| ---------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blank if null time           | 100   | Se añade a la constante format. Indica que en caso de un valor null, 4D debe devolver una cadena vacía en lugar de ceros                                                                                                                                                                                              |
+| HH MM                        | 2     | 01:02                                                                                                                                                                                                                                                                                                                 |
+| HH MM AM PM                  | 5     | 1:02 AM                                                                                                                                                                                                                                                                                                               |
+| HH MM SS                     | 1     | 01:02:03                                                                                                                                                                                                                                                                                              |
+| Hour min                     | 4     | 1 hora 2 minutos                                                                                                                                                                                                                                                                                                                      |
+| Hora min seg                 | 3     | 1 hora 2 minutos 3 segundos                                                                                                                                                                                                                                                                                                           |
+| ISO time                     | 8     | 0000-00-00T01:02:03\. Corresponde a la norma ISO8601 y contiene, en teoría, una fecha y una hora. Dado que este formato no admite fechas/horas combinadas, la parte de la fecha se llena con 0s. Este formato expresa la hora local. |
+| Min sec                      | 7     | 62 minutos 3 segundos                                                                                                                                                                                                                                                                                                                 |
+| MM SS                        | 6     | 62:03                                                                                                                                                                                                                                                                                                                 |
+| System time long             | 11    | 1:02:03 AM HNEC (sólo Mac)                                                                                                                                                                                                                                                         |
+| System time long abbreviated | 10    | 1-02-03 AM (sólo Mac)                                                                                                                                                                                                                                                                                              |
+| System time short            | 9     | 01:02:03                                                                                                                                                                                                                                                                                              |
 
 Ejemplos:
 
 ```4d
  $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"  
- $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
+ $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 horas 30 minutos 45 segundos"  
 ```
 
 - o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor cadena)\
@@ -239,21 +239,21 @@ Ejemplos:
 
 ### Expresiones de tipo cadena
 
-If *expression* is of the String or Text type, the command returns the same value as the one passed in the parameter. This can be useful more particularly in generic programming using pointers.\
+Si *expression* es de tipo Alfa o Texto, el comando devuelve el mismo valor que el pasado en el parámetro. Esto puede ser útil sobre todo en la programación genérica que utiliza punteros.\
 En este caso, el parámetro *format*, si se pasa, se ignora.
 
 ### Expresiones booleanas
 
-If *expression* is of the Boolean type, the command returns the string “True” or “False” in the language of the application (for example, “Vrai” or “Faux” in a French version of 4D).\
+Si *expression* es de tipo booleano, el comando devuelve la cadena "True" o "False" en el idioma de la aplicación (por ejemplo, "Vrai" o "Faux" en una versión francesa de 4D).\
 En este caso, el parámetro *format*, si se pasa, se ignora.
 
 ### Expresiones indefinidas
 
-If *expression* is evaluated to undefined, the command returns an empty string. This is useful when you expect the result of an expression (e.g. an object attribute) to be a string, even if it can be undefined.
+Si *expression* se evalúa como indefinida, el comando devuelve una cadena vacía. Esto es útil cuando se espera que el resultado de una expresión (por ejemplo, un atributo de objeto) sea una cadena de caracteres, aunque pueda ser indefinida.
 
 ### Expresiones nulas
 
-If *expression* is evaluated to Null, the command returns the "null" string. This is useful when you expect the result of an expression (e.g. an object attribute) to be a string, even if it can be null.
+Si *expression* se evalúa como Null, el comando devuelve la cadena "null". Esto es útil cuando se espera que el resultado de una expresión (por ejemplo, un atributo de objeto) sea una cadena de caracteres, aunque pueda ser null.
 
 ## Ver también
 

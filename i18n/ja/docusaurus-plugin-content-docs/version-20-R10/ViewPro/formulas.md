@@ -191,11 +191,11 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 3. 4D View Pro エリアのセルに次を入力します:
 
-  ![](../assets/en/ViewPro/vpProjMeth1.PNG)
+   ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-  すると、4D によって "myMethod "が呼び出され、セルの表示は次のようになります:
+   すると、4D によって "myMethod "が呼び出され、セルの表示は次のようになります:
 
-  ![](../assets/en/ViewPro/vpProjMeth2.PNG)
+   ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 ### 引数
 
@@ -321,19 +321,19 @@ TABLENAME_FIELDNAME()
 
 2. 次のコードを実行して、仮想ストラクチャーを初期化します:
 
-  ```4d
-  ARRAY TEXT($tableTitles;1)
-  ARRAY LONGINT($tableNum;1)
-  $tableTitles{1}:="Emp"
-  $tableNum{1}:=2
-  SET TABLE TITLES($tableTitles;$tableNum;*)
-   
-  ARRAY TEXT($fieldTitles;1)
-  ARRAY LONGINT($fieldNum;1)
-  $fieldTitles{1}:="Name"
-  $fieldNum{1}:=2 // ラストネーム
-  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
-  ```
+   ```4d
+   ARRAY TEXT($tableTitles;1)
+   ARRAY LONGINT($tableNum;1)
+   $tableTitles{1}:="Emp"
+   $tableNum{1}:=2
+   SET TABLE TITLES($tableTitles;$tableNum;*)
+    
+   ARRAY TEXT($fieldTitles;1)
+   ARRAY LONGINT($fieldNum;1)
+   $fieldTitles{1}:="Name"
+   $fieldNum{1}:=2 // ラストネーム
+   SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+   ```
 
 3. 4D View Pro エリアのセルに "=e" と入力します":
 

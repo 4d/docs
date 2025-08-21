@@ -12,7 +12,7 @@ Le marqueur de modification global est un nombre, toujours maintenu par 4D, mêm
 Une fois que le [suivi des changements de données est configuré et activé](#configuring-data-change-tracking), les actions suivantes sont automatiquement exécutées par 4D à chaque modification de l'enregistrement (ajout, modification, suppression) :
 
 1. La valeur courante du marqueur de modification globale est stockée dans l'attribut spécial "__GlobalStamp" de l'entité concernée.
-    En cas de suppression, une nouvelle entité est également ajoutée dans la table `__DeletedRecords` avec des informations à propos de l'entité supprimée et la valeur courante du marqueur de modification global est enregistrée dans l'attribut "__Stamp".
+   En cas de suppression, une nouvelle entité est également ajoutée dans la table `__DeletedRecords` avec des informations à propos de l'entité supprimée et la valeur courante du marqueur de modification global est enregistrée dans l'attribut "__Stamp".
 
 2. La valeur du marqueur de modification global est incrémentée.
 
@@ -34,8 +34,8 @@ Pour activer le suivi des changements de données, la structure de l'application
 
 De plus, pour assurer la bonne marche de la fonctionnalité, les conditions suivantes sont requises :
 
-- Le champ `__GlobalStamp` doit être de type *Integer 64 bits*, avec *index automatique*, *Exposer comme ressource REST*, et *Invisible* sélectionné.
-- Une table `__DeletedRecords` doit être ajoutée, avec les champs suivants :
+ - Le champ `__GlobalStamp` doit être de type *Integer 64 bits*, avec *index automatique*, *Exposer comme ressource REST*, et *Invisible* sélectionné.
+ - Une table `__DeletedRecords` doit être ajoutée, avec les champs suivants :
 
 | Champ                                                   | Type            | Description                                |
 | ------------------------------------------------------- | --------------- | ------------------------------------------ |
@@ -64,8 +64,8 @@ Pour activer le suivi des changements de données :
 
 4D effectue alors les modifications suivantes :
 
-- Un champ `__GlobalStamp` préconfiguré est ajouté à la ou aux table(s).
-- Si elle n'existe pas déjà, une table `__DeletedRecords` est ajoutée à la structure.
+ - Un champ `__GlobalStamp` préconfiguré est ajouté à la ou aux table(s).
+ - Si elle n'existe pas déjà, une table `__DeletedRecords` est ajoutée à la structure.
 
 Pour désactiver le suivi des changements de données :
 

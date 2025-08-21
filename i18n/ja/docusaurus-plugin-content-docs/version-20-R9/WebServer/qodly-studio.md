@@ -11,10 +11,10 @@ Qodly Studioは、Webビジネスアプリケーションの開発に特化し�
 
 Qodly Studio はフル機能の Web UI を提供し、以下のことを可能にします:
 
-- キャンバス上にコンポーネントを配置して Qodlyページを作成する
-- コンポーネントを Qodly Sources にマッピングする
-- イベントを設定して 4Dコードをトリガーする
-- さらに沢山のことが可能です
+ - キャンバス上にコンポーネントを配置して Qodlyページを作成する
+ - コンポーネントを Qodly Sources にマッピングする
+ - イベントを設定して 4Dコードをトリガーする
+ - さらに沢山のことが可能です
 
 ## 設定
 
@@ -24,19 +24,19 @@ Qodly Studio はフル機能の Web UI を提供し、以下のことを可能�
 
 Qodly Studio は、以下の Webブラウザーをサポートしています:
 
-- Chrome
-- Edge
-- FireFox
+ - Chrome
+ - Edge
+ - FireFox
 
 推奨解像度は 1920x1080 です。
 
 #### 4Dアプリケーション
 
-- 開発: 4D v20 R2 以上
-- 運用: 4D Server v20 R2 以上
-- Qodly Studio は 4Dプロジェクトでのみ動作します (バイナリデータベースはサポートされていません)。
-- Web セッション (スケーラブルセッション) が [有効](sessions.md#webセッションの有効化) である必要があります。
-- Qodlyフォームによって呼び出される 4Dコードは [スレッドセーフ](preemptiveWeb.md) でなければなりません。
+ - 開発: 4D v20 R2 以上
+ - 運用: 4D Server v20 R2 以上
+ - Qodly Studio は 4Dプロジェクトでのみ動作します (バイナリデータベースはサポートされていません)。
+ - Web セッション (スケーラブルセッション) が [有効](sessions.md#webセッションの有効化) である必要があります。
+ - Qodlyフォームによって呼び出される 4Dコードは [スレッドセーフ](preemptiveWeb.md) でなければなりません。
 
 ### Qodly Studio へのアクセスを有効化する
 
@@ -46,8 +46,8 @@ Qodly Studioは、[WebAdmin Webサーバー](../Admin/webAdmin.md) によって�
 
 Qodly Studio へのアクセスを有効化するには、2つのレベルで明示的に許可する必要があります:
 
-- 4Dアプリケーションレベルで
-- プロジェクトレベルで
+ - 4Dアプリケーションレベルで
+ - プロジェクトレベルで
 
 2つのレベルのいずれか (または両方) が有効でない場合、Qodly Studio　へのアクセスは拒否されます (403ページが返されます)。
 
@@ -79,8 +79,8 @@ WebAdmin Webサーバーでの認証には、アクセスキーを使用しま�
 
 4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
 
-- Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
-- Qodlyページを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
+ - Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
+ - Qodlyページを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 :::warning
 
@@ -94,10 +94,10 @@ Qodly Studio ページは、[WebAdmin Webサーバーが起動されており](.
 
 Qodly Studio にアクセスするには 2つの方法があります:
 
-- **デザイン** メニュー (4Dシングルユーザー) または **ウィンドウ** メニュー (4D Server) から **Qodly Studio...** メニューコマンドを選択します。
+ - **デザイン** メニュー (4Dシングルユーザー) または **ウィンドウ** メニュー (4D Server) から **Qodly Studio...** メニューコマンドを選択します。
     WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
 
-- 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:<br/>
+ - 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:<br/>
     `IPaddress:HTTPPort/studio`
 
     または:
@@ -145,24 +145,24 @@ Qodlyページを利用した Webアプリケーションを開発するには�
 
 以下のコマンドとクラスは、Qodlyページのサーバーサイド管理に特化しています:
 
-- [`Web Form`](../API/WebFormClass.md#web-form) コマンド: Qodlyページをオブジェクトとして返します。
-- [`Web Event`](../API/WebFormClass.md#web-event) コマンド: Qodlyページのコンポーネント内でトリガーされたイベントを返します。
-- [`WebForm`](../API/WebFormClass.md) クラス: レンダリングされた Qodlyページを管理する関数とプロパティを持ちます。
-- [`WebFormItem`](../API/WebFormItemClass.md) クラス: Qodlyページのコンポーネントを管理する関数とプロパティを持ちます。
+ - [`Web Form`](../API/WebFormClass.md#web-form) コマンド: Qodlyページをオブジェクトとして返します。
+ - [`Web Event`](../API/WebFormClass.md#web-event) コマンド: Qodlyページのコンポーネント内でトリガーされたイベントを返します。
+ - [`WebForm`](../API/WebFormClass.md) クラス: レンダリングされた Qodlyページを管理する関数とプロパティを持ちます。
+ - [`WebFormItem`](../API/WebFormItemClass.md) クラス: Qodlyページのコンポーネントを管理する関数とプロパティを持ちます。
 
 ### プロジェクトメソッドを使用する
 
 推奨される方法は、プロジェクトメソッドではなく、クラス関数を使用することです。 コンポーネントから呼び出すことが可能なのは、クラス関数のみです。 それでも、次の 2つの方法で、Qodly Studio でもプロジェクトメソッドを使用できます:
 
-- クラス関数からメソッドを呼び出すことができます。
-- Qodly Explorer から直接 [メソッドを実行](https://developer.qodly.com/docs/studio/coding#methods-and-classes) できます。
+ - クラス関数からメソッドを呼び出すことができます。
+ - Qodly Explorer から直接 [メソッドを実行](https://developer.qodly.com/docs/studio/coding#methods-and-classes) できます。
 
 ### オフラインでの使用
 
 コンピュータがインターネットに接続されていない状態でも、Qodly Studio を使って開発することができます。 ただしこの場合、以下の機能は使用できません:
 
-- [テンプレート](https://developer.qodly.com/docs/studio/pageLoaders/templates): テンプレートライブラリは空です。
-- UI Tips: ![alt-text](../assets/en/WebServer/tips.png)アイコンをクリックしても表示されません。
+ - [テンプレート](https://developer.qodly.com/docs/studio/pageLoaders/templates): テンプレートライブラリは空です。
+ - UI Tips: ![alt-text](../assets/en/WebServer/tips.png)アイコンをクリックしても表示されません。
 
 ## 運用
 
@@ -178,8 +178,8 @@ Qodly で Qodlyページをレンダリングする方法の詳細について�
 
 Qodlyページのレンダリングを有効にするには、以下のオプションを設定する必要があります。
 
-- 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
-- [4D Webサーバー](webServer.md) を起動しておく必要があります。
+ - 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
+ - [4D Webサーバー](webServer.md) を起動しておく必要があります。
 
 :::note
 
@@ -236,7 +236,7 @@ Qodly Studio デバッガーを実行中の 4D Server アプリケーション�
 :::
 
 2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
-    ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
+   ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 デバッグセッションが正常に開始されると、ボタンラベルに緑色の丸が表示され ![qodly-debug](../assets/en/WebServer/debug2.png) 、Qodly Studio デバッガーを使用できるようになります。
 
@@ -245,7 +245,7 @@ Qodly Studio デバッガーを実行中の 4D Server アプリケーション�
 実行中の 4D Server アプリケーションで Qodly Studio デバッガーを無効化するには:
 
 1. デバッグセッションがアクティブな状態で Qodly Studio ツールバーの **Debug** ボタンをクリックします。
-    警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
+   警告ダイアログボックスが表示され、デバッガーを無効化するどうかを確認します。
 2. デバッガーを無効化する前に現在のメソッドまたは関数の終わりまでコードの評価を続けるには **Keep in progress** を選択します。デバッガーをすぐに無効化するには **Stop** を選択します。
 
 ## 強制ログイン
@@ -309,9 +309,9 @@ End if
 
 Webユーザーセッションからログアウトアクションをトリガーすると、次のような効果があります:
 
-- カレントWebユーザーセッションは権限を失い、[記述的RESTリクエスト](../REST/authUsers.md#記述的restリクエスト) のみが許可されます。
-- 関連する 4Dライセンスが解放されます。
-- `Session.storage` は、Webセッションの非アクティブタイムアウトまで (少なくとも 1時間) 保持されます。 ログアウト後のこの期間にユーザーが再ログインすると、同じセッションが使用され、`Session.storage` 共有オブジェクトが現在の内容とともに利用可能になります。
+ - カレントWebユーザーセッションは権限を失い、[記述的RESTリクエスト](../REST/authUsers.md#記述的restリクエスト) のみが許可されます。
+ - 関連する 4Dライセンスが解放されます。
+ - `Session.storage` は、Webセッションの非アクティブタイムアウトまで (少なくとも 1時間) 保持されます。 ログアウト後のこの期間にユーザーが再ログインすると、同じセッションが使用され、`Session.storage` 共有オブジェクトが現在の内容とともに利用可能になります。
 
 ## レンダリングのためのライセンス消費について
 
@@ -363,7 +363,7 @@ Qodly Studio のユーザー設定で、レンダラーのポップオーバー�
 
 必要以上のライセンスを使用しないため、次のいずれかをお勧めします:
 
-- 別のブラウザータブでレンダラーを実行します (Qodlyページがレンダリングされた URL `IP:port/$lib/renderer/?w=QodlyPageName` を入力します)。
-- Qodly Studio とデータベースが同じ URLスキームでアクセスされていることを確認します。
-- プロジェクトデータベースの Webサーバーの [セッションcookie](webServerConfig.md#セッションcookie-samesite) には、`Lax` の値を使用してください。
+ - 別のブラウザータブでレンダラーを実行します (Qodlyページがレンダリングされた URL `IP:port/$lib/renderer/?w=QodlyPageName` を入力します)。
+ - Qodly Studio とデータベースが同じ URLスキームでアクセスされていることを確認します。
+ - プロジェクトデータベースの Webサーバーの [セッションcookie](webServerConfig.md#セッションcookie-samesite) には、`Lax` の値を使用してください。
 

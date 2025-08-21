@@ -2644,7 +2644,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 | Paramètres                 | Type                                   |    | Description                                   |
 | -------------------------- | -------------------------------------- |:--:| --------------------------------------------- |
 | value                      | Text, Number, Object, Collection, Date | -> | Valeur(s) à insérer au début de la collection |
-| Résultat                   | Real                                   | <- | Collection contenant des éléments ajoutés     |
+| Résultat                   | Collection                             | <- | Collection contenant des éléments ajoutés     |
 |<!-- END REF -->
 
 |                                        |    |                                               |

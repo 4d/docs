@@ -11,8 +11,8 @@ Lorsqu'une session utilisateur web est ouverte, vous pouvez la gérer via l'obje
 
 Une session est ouverte après que l'utilisateur a été connecté avec succès (voir ci-dessous).
 
-> - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D disponible.<br/>
-> - Sur 4D mono-utilisateur, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test.
+>  - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D disponible.<br/>
+>  - Sur 4D mono-utilisateur, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test.
 
 ## Mode Force login
 
@@ -25,8 +25,8 @@ L'ancien mode de connexion basé sur la méthode base `On REST Authentication` e
 La séquence de connexion d'un utilisateur est la suivante :
 
 1. Lors de la première requête REST (pour un appel de page Qodly par exemple), une session utilisateur web "guest" est créée. Elle n'a aucun privilège, aucun droit d'exécuter des requêtes autres que des [requêtes REST descriptives](#descriptive-rest-requests), aucune licence n'est consommée.\
-    Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte.\
-    Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte. Dans ce cas, elles sont traitées à travers des sessions "guest".
+   Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte.\
+   Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte. Dans ce cas, elles sont traitées à travers des sessions "guest".
 
 2. `authentify()` doit être une [fonction de datastore class](../ORDA/ordaClasses.md#datastore-class) exposée. Vous appelez votre fonction [`authentify()`](#function-authentify) (créée au préalable), dans laquelle vous vérifiez les informations d'identification de l'utilisateur et appelez [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) avec les privilèges appropriés.
 
@@ -44,9 +44,9 @@ Toutes les autres requêtes REST (manipulant des données ou exécutant une fonc
 
 Les requêtes REST descriptives peuvent être traitées dans des sessions d'utilisateurs web qui ne nécessitent pas de licences (sessions "guest"). Ces requêtes sont :
 
-- requêtes [`/rest/$catalog`]($catalog.md) (par exemple `/rest/$catalog/$all`) - accès aux dataclass disponibles
-- `/rest/$catalog/authentify` - la fonction datastore utilisée pour connecter l'utilisateur
-- `/rest/$getWebForm` - le rendu d'une page Qodly
+ - requêtes [`/rest/$catalog`]($catalog.md) (par exemple `/rest/$catalog/$all`) - accès aux dataclass disponibles
+ - `/rest/$catalog/authentify` - la fonction datastore utilisée pour connecter l'utilisateur
+ - `/rest/$getWebForm` - le rendu d'une page Qodly
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
@@ -73,8 +73,8 @@ La fonction peut recevoir toute information d'authentification ou contextuelle e
 
 Cette fonction doit contenir deux parties :
 
-- un code pour identifier et authentifier l'expéditeur de la demande REST,
-- si l'authentification réussit, un appel à [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) qui attribue les privilèges appropriés à la session.
+ - un code pour identifier et authentifier l'expéditeur de la demande REST,
+ - si l'authentification réussit, un appel à [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) qui attribue les privilèges appropriés à la session.
 
 Si la fonction ne fait pas appel à [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), aucun privilège n'est attribué, aucune licence n'est consommée et les requêtes REST non descriptives ultérieures sont rejetées.
 
