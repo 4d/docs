@@ -43,9 +43,9 @@ All other REST requests (handling data or executing a function) will only be pro
 
 As solicitações REST descritivas podem ser processadas em sessões de usuário Web que não exigem licenças (sessões "guest"). Essas solicitações são:
 
-- Solicitações [`/rest/$catalog`]($catalog.md) (por exemplo, `/rest/$catalog/$all`) - acesso às dataclasses disponíveis
-- `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
-- `/rest/$getWebForm` - Renderização de uma página Qodly
+ - Solicitações [`/rest/$catalog`]($catalog.md) (por exemplo, `/rest/$catalog/$all`) - acesso às dataclasses disponíveis
+ - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
+ - `/rest/$getWebForm` - Renderização de uma página Qodly
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
@@ -72,8 +72,8 @@ A função pode receber qualquer autenticação ou informação contextual como 
 
 Esta função deve conter duas partes:
 
-- some code to identify and authenticate the REST request sender,
-- se a autenticação for bem-sucedida, uma chamada para [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) que atribui os privilégios apropriados à sessão.
+ - some code to identify and authenticate the REST request sender,
+ - se a autenticação for bem-sucedida, uma chamada para [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) que atribui os privilégios apropriados à sessão.
 
 Se a função não chamar [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), nenhum privilégio será atribuído, nenhuma licença será consumida e solicitações REST subsequentes não descritivas serão rejeitadas.
 

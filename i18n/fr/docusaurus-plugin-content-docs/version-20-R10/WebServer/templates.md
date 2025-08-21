@@ -19,16 +19,16 @@ La valeur de la variable 4D *vtSiteName* sera insérée dans la page HTML.
 
 Les balises 4D suivantes sont disponibles :
 
-- 4DTEXT, pour insérer des variables et des expressions 4D en tant que texte,
-- 4DHTML, pour insérer du code HTML,
-- 4DEVAL, pour évaluer toute expression 4D,
-- 4DSCRIPT, pour exécuter une méthode 4D,
-- 4DINCLUDE, pour inclure une page dans une autre,
-- 4DBASE, pour modifier le dossier par défaut utilisé par la balise 4DINCLUDE,
-- 4DCODE, pour insérer du code 4D,
-- 4DIF, 4DELSE, 4DELSEIF et 4DENDIF, pour insérer des conditions dans le code HTML,
-- 4DLOOP et 4DENDLOOP, pour faire des boucles dans le code HTML,
-- 4DEACH et 4DENDEACH, pour boucler des collections, des entity selections ou des propriétés d'objets.
+ - 4DTEXT, pour insérer des variables et des expressions 4D en tant que texte,
+ - 4DHTML, pour insérer du code HTML,
+ - 4DEVAL, pour évaluer toute expression 4D,
+ - 4DSCRIPT, pour exécuter une méthode 4D,
+ - 4DINCLUDE, pour inclure une page dans une autre,
+ - 4DBASE, pour modifier le dossier par défaut utilisé par la balise 4DINCLUDE,
+ - 4DCODE, pour insérer du code 4D,
+ - 4DIF, 4DELSE, 4DELSEIF et 4DENDIF, pour insérer des conditions dans le code HTML,
+ - 4DLOOP et 4DENDLOOP, pour faire des boucles dans le code HTML,
+ - 4DEACH et 4DENDEACH, pour boucler des collections, des entity selections ou des propriétés d'objets.
 
 Ces balises sont décrites dans la page [Balises de transformation](../Tags/transformation-tags.md).
 

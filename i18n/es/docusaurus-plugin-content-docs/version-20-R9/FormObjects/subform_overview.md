@@ -9,12 +9,12 @@ Un subformulario es un formulario incluido en otro formulario.
 
 Con el fin de definir claramente los conceptos implementados con los subformularios, aquí hay algunas definiciones para ciertos términos utilizados:
 
-- **Subformulario**: un formulario destinado a ser incluido en otro formulario, llamado a su vez formulario padre.
-- **Formulario padre**: un formulario que contiene uno o más subformularios.
-- **Contenedor de subformulario**: un objeto incluido en el formulario padre, que muestra una instancia del subformulario.
-- **Instancia de subformulario**: la representación de un subformulario en un formulario padre. Este concepto es importante porque es posible mostrar varias instancias del mismo subformulario en un formulario padre.
-- **Formulario listado**: instancia de subformulario mostrada como una lista.
-- **Formulario detallado**: formulario de entrada tipo página asociado a un subformulario tipo lista al que se accede haciendo doble clic en la lista.
+ - **Subformulario**: un formulario destinado a ser incluido en otro formulario, llamado a su vez formulario padre.
+ - **Formulario padre**: un formulario que contiene uno o más subformularios.
+ - **Contenedor de subformulario**: un objeto incluido en el formulario padre, que muestra una instancia del subformulario.
+ - **Instancia de subformulario**: la representación de un subformulario en un formulario padre. Este concepto es importante porque es posible mostrar varias instancias del mismo subformulario en un formulario padre.
+ - **Formulario listado**: instancia de subformulario mostrada como una lista.
+ - **Formulario detallado**: formulario de entrada tipo página asociado a un subformulario tipo lista al que se accede haciendo doble clic en la lista.
 
 ## Sub-formularios en lista
 
@@ -43,8 +43,8 @@ Puede vincular [una variable o una expresión](properties_Object.md#variable-or-
 
 Por defecto, 4D crea una variable o expresión de [tipo objeto](properties_Object.md#expression-type) para un contenedor de subformulario, lo cual le permite compartir valores en el contexto del subformulario utilizando el comando `Form`. Sin embargo, puede utilizar una variable o expresión de cualquier tipo escalar (tiempo, entero, etc.) especialmente si sólo necesita compartir un único valor:
 
-- Defina una variable ligada o una expresión de tipo escalar y llame a los comandos `OBJECT Get subform container value` y `OBJECT SET SUBFORM CONTAINER VALUE` para intercambiar valores cuando se produzcan los eventos de formulario [On Bound Variable Change](../Events/onBoundVariableChange.md) o [On Data Change](../Events/onDataChange.md). Esta solución se recomienda para sincronizar un solo valor.
-- Defina una variable o expresión vinculada del tipo **objecto** y utilice el comando `Form` para acceder a sus propiedades desde el subformulario. Esta solución se recomienda para sincronizar varios valores.
+ - Defina una variable ligada o una expresión de tipo escalar y llame a los comandos `OBJECT Get subform container value` y `OBJECT SET SUBFORM CONTAINER VALUE` para intercambiar valores cuando se produzcan los eventos de formulario [On Bound Variable Change](../Events/onBoundVariableChange.md) o [On Data Change](../Events/onDataChange.md). Esta solución se recomienda para sincronizar un solo valor.
+ - Defina una variable o expresión vinculada del tipo **objecto** y utilice el comando `Form` para acceder a sus propiedades desde el subformulario. Esta solución se recomienda para sincronizar varios valores.
 
 ### Sincronizando formulario padre y subformulario (valor único)
 
@@ -58,8 +58,8 @@ En el formulario padre, ambos objetos (área de entrada y contenedor subformular
 
 Para mostrar una hora estática, debe utilizar el [tipo de datos](properties_DataSource.md#data-type-expression-type) apropiado para la [variable o la expresión](properties_Object.md#variable-or-expression):
 
-- Si utiliza una variable (por ejemplo, `parisTime`), debe ser del tipo `texto` o `tiempo`.
-- Si utiliza una expresión (por ejemplo, `Form.myValue`), debe contener un valor `texto`.
+ - Si utiliza una variable (por ejemplo, `parisTime`), debe ser del tipo `texto` o `tiempo`.
+ - Si utiliza una expresión (por ejemplo, `Form.myValue`), debe contener un valor `texto`.
 
 El valor del texto debe tener el formato "hh:mm:ss".
 
@@ -88,15 +88,15 @@ Actualiza el valor de `Form.clockValue` en el subformulario:
 
 Se genera el evento formulario [On Bound Variable Change](../Events/onBoundVariableChange.md):
 
-- en cuanto se asigna un valor a la variable/expresión del formulario padre, incluso si se reasigna el mismo valor
-- si el subformulario pertenece a la página formulario actual o a la página 0.
+ - en cuanto se asigna un valor a la variable/expresión del formulario padre, incluso si se reasigna el mismo valor
+ - si el subformulario pertenece a la página formulario actual o a la página 0.
 
 Tenga en cuenta que, como en el ejemplo anterior, es preferible utilizar el comando `OBJECT Get subform container value` que devuelve el valor de la expresión en el contenedor del subformulario en lugar de la propia expresión, ya que es posible insertar varios subformularios en el mismo formulario padre (por ejemplo, una ventana que muestra diferentes zonas horarias contiene varios relojes).
 
 La modificación de la variable o expresión asociada desencadena eventos de formulario que permiten sincronizar los valores del formulario padre y del subformulario:
 
-- Utilice el evento de formulario [On Bound Variable Change](../Events/onBoundVariableChange.md) para indicar al subformulario (método de formulario del subformulario) que la variable o expresión fue modificada en el formulario padre.
-- Utilice el evento de formulario [On Data Change](../Events/onDataChange.md) para indicar al contenedor del subformulario que el valor de la variable o expresión fue modificado en el subformulario.
+ - Utilice el evento de formulario [On Bound Variable Change](../Events/onBoundVariableChange.md) para indicar al subformulario (método de formulario del subformulario) que la variable o expresión fue modificada en el formulario padre.
+ - Utilice el evento de formulario [On Data Change](../Events/onDataChange.md) para indicar al contenedor del subformulario que el valor de la variable o expresión fue modificado en el subformulario.
 
 #### Actualizar el contenido de un formulario padre
 
@@ -170,8 +170,8 @@ La comunicación entre el formulario padre y las instancias del subformulario pu
 
 4D ha implementado los siguientes mecanismos para satisfacer estas necesidades:
 
-- Llamada de un objeto contenedor desde el subformulario utilizando el comando `CALL SUBFORM CONTAINER`
-- Ejecución de un método en el contexto del subformulario mediante el comando `EXECUTE METHOD IN SUBFORM`
+ - Llamada de un objeto contenedor desde el subformulario utilizando el comando `CALL SUBFORM CONTAINER`
+ - Ejecución de un método en el contexto del subformulario mediante el comando `EXECUTE METHOD IN SUBFORM`
 
 > El comando `GOTO OBJECT` busca el objeto de destino en el formulario padre aunque se ejecute desde un subformulario.
 
