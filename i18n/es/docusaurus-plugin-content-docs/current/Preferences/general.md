@@ -30,8 +30,8 @@ A partir de macOS Sierra, las aplicaciones Mac pueden beneficiarse de la funció
 
 Puede beneficiarse de esta funcionalidad en los siguientes entornos (sólo con las versiones 4D de 64 bits):
 
-- Ventanas del editor de código
-- Ventanas del editor de formularios
+ - Ventanas del editor de código
+ - Ventanas del editor de formularios
 
 Todas las ventanas de estos editores se pueden poner en forma de pestaña:
 
@@ -47,9 +47,9 @@ En la caja de diálogo de Preferencias de 4D, la opción **Ventana con pestañas
 
 Hay tres opciones disponibles:
 
-- **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
-- **Nunca**: al abrir un nuevo documento en el editor de formularios 4D o en el Editor de Código siempre se crea una nueva ventana (nunca se crean pestañas).
-- **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
+ - **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
+ - **Nunca**: al abrir un nuevo documento en el editor de formularios 4D o en el Editor de Código siempre se crea una nueva ventana (nunca se crean pestañas).
+ - **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
 
 ### Apariencia (sólo para macOS)
 
@@ -59,9 +59,9 @@ Este menú permite seleccionar la combinación de colores que se utilizará para
 
 Hay tres opciones disponibles:
 
-- **Según las preferencias de la paleta de colores del sistema** (por defecto): utiliza la paleta de colores definida en las Preferencias sistema de macOS.
-- **Claro**: utilizar el tema claro
-- **Sombra**: utilizar el tema Sombra
+ - **Según las preferencias de la paleta de colores del sistema** (por defecto): utiliza la paleta de colores definida en las Preferencias sistema de macOS.
+ - **Claro**: utilizar el tema claro
+ - **Sombra**: utilizar el tema Sombra
 
 > Esta preferencia sólo es compatible en macOS. En Windows, se utiliza siempre el esquema "Light".
 
@@ -73,8 +73,8 @@ Si esta opción está marcada, cuando el usuario cambia al entorno Aplicación u
 
 Si marca esta opción, se añaden dos elementos en el menú **Archivo > Nuevo** y el botón **Nuevo** de la barra de herramientas:
 
-- **Base de datos...**
-- **Base de datos a partir de una definición de estructura...**
+ - **Base de datos...**
+ - **Base de datos a partir de una definición de estructura...**
 
 ![](../assets/en/Preferences/general5.png)
 
@@ -138,8 +138,8 @@ Al crear un nuevo archivo de datos, 4D utiliza el idioma previamente configurado
 
 Esta área configura el acceso a la documentación HTML de 4D mostrada en su navegador actual:
 
-- Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
-- Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
+ - Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
+ - Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
 
 ### Lenguaje de la documentación
 
@@ -151,8 +151,8 @@ Lenguaje de la documentación HTML a mostrar. Puede seleccionar una documentaci�
 
 Define dónde buscará 4D las páginas de documentación.
 
-- Cuando está marcada (por defecto), 4D busca primero la página en la carpeta local (ver abajo). Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
-- Cuando no está marcada, 4D busca la página deseada directamente en el sitio web de documentación en línea y la muestra en el navegador actual. Si no se encuentra, 4D muestra un mensaje de error en el navegador.
+ - Cuando está marcada (por defecto), 4D busca primero la página en la carpeta local (ver abajo). Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
+ - Cuando no está marcada, 4D busca la página deseada directamente en el sitio web de documentación en línea y la muestra en el navegador actual. Si no se encuentra, 4D muestra un mensaje de error en el navegador.
 
 ### Carpeta local
 

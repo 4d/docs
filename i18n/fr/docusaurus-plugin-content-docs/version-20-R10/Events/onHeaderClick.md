@@ -15,8 +15,8 @@ Cet événement est généré lorsqu'un clic se produit sur l'en-tête d'une col
 
 Si la propriété [Sortable](FormObjects/properties_Action.md#sortable) a été sélectionnée pour la list box, vous pouvez décider d'autoriser ou non un tri standard de la colonne en passant la valeur 0 ou -1 dans la variable `$0` :
 
-- Si `$0` est égal à 0, un tri standard est effectué.
-- Si `$0` est égal à -1, un tri standard n'est pas effectué et l'en-tête n'affiche pas la flèche de tri. Le développeur peut toujours générer un tri de colonne basé sur des critères de tri personnalisés à l'aide du langage 4D.
+ - Si `$0` est égal à 0, un tri standard est effectué.
+ - Si `$0` est égal à -1, un tri standard n'est pas effectué et l'en-tête n'affiche pas la flèche de tri. Le développeur peut toujours générer un tri de colonne basé sur des critères de tri personnalisés à l'aide du langage 4D.
 
 Si la propriété [Sortable](FormObjects/properties_Action.md#sortable) n'est pas sélectionnée pour la list box, la variable `$0` n'est pas utilisée.
 

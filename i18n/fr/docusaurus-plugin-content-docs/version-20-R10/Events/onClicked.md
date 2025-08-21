@@ -15,11 +15,11 @@ L'événement `On Clicked` est généré lorsque l'utilisateur clique sur un obj
 
 L'événement `On Clicked` se produit généralement une fois que le bouton de la souris est relâché. Cependant, il existe plusieurs exceptions :
 
-- [Boutons invisibles](FormObjects/properties_Display.md#not-rendered): l'événement `On Clicked` se produit dès que le clic est effectué et n'attend pas que le bouton de la souris soit relâché.
-- [Règles](FormObjects/ruler.md) : si l'option de [méthode d'exécution d'objet](FormObjects/properties_Action.md#execute-object-method) est définie sur **true**, l'événement `On Clicked` se produit dès que le clic est effectué.
-- [Combo box](FormObjects/comboBox_overview.md) : l'événement `On Clicked` se produit uniquement si l'utilisateur sélectionne une autre valeur dans le menu associé. Une [combo box](FormObjects/comboBox_overview.md) doit être traitée comme une zone de texte saisissable dont la liste déroulante associée fournit des valeurs par défaut. Par conséquent, vous gérez la saisie de données dans une combo box via les événements `On Before Keystroke`, `On After Keystroke` et `On Data Change`.
-- [Listes déroulantes](FormObjects/dropdownList_Overview.md) : l'événement `On Clicked` se produit uniquement si l'utilisateur sélectionne une autre valeur dans le menu. L'événement `On Data Change` vous permet de détecter l'activation de l'objet lorsqu'une valeur différente de la valeur courante est sélectionnée
-- Lorsqu'une cellule d'entrée de list box est [en cours d'édition](FormObjects/listbox_overview.md#managing-entry), l'événement `On Clicked` est généré lorsque le bouton de la souris est enfoncé, permettant d'utiliser la commande `Contextual click` par exem
+ - [Boutons invisibles](FormObjects/properties_Display.md#not-rendered): l'événement `On Clicked` se produit dès que le clic est effectué et n'attend pas que le bouton de la souris soit relâché.
+ - [Règles](FormObjects/ruler.md) : si l'option de [méthode d'exécution d'objet](FormObjects/properties_Action.md#execute-object-method) est définie sur **true**, l'événement `On Clicked` se produit dès que le clic est effectué.
+ - [Combo box](FormObjects/comboBox_overview.md) : l'événement `On Clicked` se produit uniquement si l'utilisateur sélectionne une autre valeur dans le menu associé. Une [combo box](FormObjects/comboBox_overview.md) doit être traitée comme une zone de texte saisissable dont la liste déroulante associée fournit des valeurs par défaut. Par conséquent, vous gérez la saisie de données dans une combo box via les événements `On Before Keystroke`, `On After Keystroke` et `On Data Change`.
+ - [Listes déroulantes](FormObjects/dropdownList_Overview.md) : l'événement `On Clicked` se produit uniquement si l'utilisateur sélectionne une autre valeur dans le menu. L'événement `On Data Change` vous permet de détecter l'activation de l'objet lorsqu'une valeur différente de la valeur courante est sélectionnée
+ - Lorsqu'une cellule d'entrée de list box est [en cours d'édition](FormObjects/listbox_overview.md#managing-entry), l'événement `On Clicked` est généré lorsque le bouton de la souris est enfoncé, permettant d'utiliser la commande `Contextual click` par exem
 
 Dans le cas d'un événement `On Clicked`, vous pouvez tester le nombre de clics effectués par l'utilisateur à l'aide de la commande `Clickcount`.
 

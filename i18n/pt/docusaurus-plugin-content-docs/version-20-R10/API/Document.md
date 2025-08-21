@@ -320,8 +320,8 @@ Essa propriedade é **somente leitura**.
 
 A propriedade `.original` retorna <!-- REF #document.original.Summary -->o elemento de destino para um alias, um atalho ou um arquivo de link simbólico<!-- END REF -->. O elemento alvo pode ser:
 
-- um objeto File
-- um objeto folder
+ - um objeto File
+ - um objeto folder
 
 Para arquivos não-alias, a propriedade retorna o mesmo objeto de arquivo que o arquivo.
 
@@ -585,8 +585,8 @@ A função `.getText()` <!-- REF #document.getText().Summary -->retorna o conte�
 
 Opcionalmente, você pode designar o conjunto de caracteres a ser usado na leitura do conteúdo. Você pode passar também:
 
-- em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
-- ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
+ - em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
+ - ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
 > Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 

@@ -23,8 +23,8 @@ En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa u
 
 Puede definir dónde obtener las hojas de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0) o con las siguientes constantes:
 
-- `vk current sheet`
-- `vk workbook`
+ - `vk current sheet`
+ - `vk workbook`
 
 ## Ejemplo
 

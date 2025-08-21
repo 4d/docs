@@ -11,8 +11,8 @@ Cuando se abre una sesión de usuario web, puede manejarla a través del objeto 
 
 Una sesión se abre después de que el usuario haya iniciado sesión correctamente (ver más abajo).
 
-> - En 4D Server, para abrir una sesión REST es necesario disponer de una licencia gratuita cliente 4D.<br/>
-> - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
+>  - En 4D Server, para abrir una sesión REST es necesario disponer de una licencia gratuita cliente 4D.<br/>
+>  - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
 
 ## Forzar el modo de inicio de sesión
 
@@ -45,9 +45,9 @@ Todas las demás peticiones REST (manejando datos o ejecutando una función) só
 
 Las peticiones REST descriptivas pueden procesarse en sesiones de usuario web que no requieren licencias (sesiones "invitado"). Estas peticiones son:
 
-- peticiones [`/rest/$catalog`]($catalog.md) (por ejemplo, `/rest/$catalog/$all`) - acceso a las dataclasse disponibles
-- `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
-- `/rest/$getWebForm` - la renderización de una página Qodly
+ - peticiones [`/rest/$catalog`]($catalog.md) (por ejemplo, `/rest/$catalog/$all`) - acceso a las dataclasse disponibles
+ - `/rest/$catalog/authentify` - la función del almacén de datos utilizada para iniciar sesión del usuario
+ - `/rest/$getWebForm` - la renderización de una página Qodly
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
@@ -74,8 +74,8 @@ La función puede recibir cualquier información de autenticación o contextual 
 
 Esta función debe contener dos partes:
 
-- algún código para identificar y autenticar al remitente de la petición REST,
-- si la autenticación tiene éxito, una llamada a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) que asigna los privilegios apropiados a la sesión.
+ - algún código para identificar y autenticar al remitente de la petición REST,
+ - si la autenticación tiene éxito, una llamada a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) que asigna los privilegios apropiados a la sesión.
 
 Si la función no llama a [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no se asignan privilegios, no se consume ninguna licencia y las solicitudes REST no descriptivas posteriores son rechazadas.
 

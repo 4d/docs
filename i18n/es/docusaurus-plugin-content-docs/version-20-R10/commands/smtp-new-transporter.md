@@ -33,8 +33,8 @@ El comando `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summa
 >
 > La conexión SMTP se cierra automáticamente:
 >
-> - cuando el objeto transportador es destruido si la propiedad [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) es true (por defecto),
-> - después de cada ejecución de la función [`.send()`](../API/SMTPTransporterClass.md#send) si la propiedad [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) está definida en false.
+>  - cuando el objeto transportador es destruido si la propiedad [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) es true (por defecto),
+>  - después de cada ejecución de la función [`.send()`](../API/SMTPTransporterClass.md#send) si la propiedad [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) está definida en false.
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
