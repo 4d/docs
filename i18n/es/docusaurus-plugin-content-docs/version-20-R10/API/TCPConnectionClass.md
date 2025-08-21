@@ -196,8 +196,8 @@ Todas las funciones de retrollamada reciben dos parámetros:
 1. `onConnection` se activa cuando se establece la conexión.
 2. `onData` se activa cada vez que se reciben datos.
 3. Se activa `onShutdown` o `onError`:
-   - `onShutdown` se activa cuando la conexión se cierra correctamente.
-   - `onError` se activa si se produce un error.
+    - `onShutdown` se activa cuando la conexión se cierra correctamente.
+    - `onError` se activa si se produce un error.
 4. `onTerminate` siempre se activa justo antes de que la TCPConnection se libere (la conexión se cierra o se produce un error).
 
 #### Objeto TCPEvent

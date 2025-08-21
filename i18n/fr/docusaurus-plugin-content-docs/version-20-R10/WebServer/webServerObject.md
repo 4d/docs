@@ -7,9 +7,9 @@ Un projet 4D peut démarrer et piloter un serveur Web pour l'application princip
 
 Par exemple, si vous avez installé deux composants dans votre application principale, vous pouvez démarrer et contrôler jusqu'à trois serveurs Web indépendants à partir de votre application :
 
-- un serveur web pour l'application hôte,
-- un serveur web pour le composant n°1,
-- un serveur web pour le composant n°2.
+ - un serveur web pour l'application hôte,
+ - un serveur web pour le composant n°1,
+ - un serveur web pour le composant n°2.
 
 En dehors de la mémoire, il n'y a pas de limite au nombre de composants et donc, de serveurs Web, pouvant être rattachés à un seul projet d'application 4D.
 
@@ -19,9 +19,9 @@ Chaque serveur web 4D, y compris le serveur web de l'application principale, est
 
 Chaque serveur web (application hôte ou composant) peut être utilisé dans son propre contexte, notamment :
 
-- les appels vers la méthode base `On Web Authentication` et `On Web Connection`
-- le traitement des balises 4D et les appels de méthodes,
-- sessions web et gestion du protocole TLS.
+ - les appels vers la méthode base `On Web Authentication` et `On Web Connection`
+ - le traitement des balises 4D et les appels de méthodes,
+ - sessions web et gestion du protocole TLS.
 
 Cela vous permet de développer des composants indépendants et des fonctionnalités qui accompagnent leurs propres interfaces Web.
 
@@ -48,8 +48,8 @@ webServer:=WEB Server(Web server database)
 
 Si l'application utilise des composants et que vous souhaitez appeler :
 
-- le serveur Web de l'application hôte à partir d'un composant ou
-- le serveur qui a reçu la requête (quel que soit le serveur)
+ - le serveur Web de l'application hôte à partir d'un composant ou
+ - le serveur qui a reçu la requête (quel que soit le serveur)
 
 vous pouvez également utiliser :
 
@@ -94,8 +94,8 @@ Ces propriétés sont définies :
 2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
 3. si elles ne sont pas utilisées, dans les propriétés de l'application hôte ou du composant.
 
-- Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
-- Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la fonction [`.start()`](API/WebServerClass.md#start).
+ - Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
+ - Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la fonction [`.start()`](API/WebServerClass.md#start).
 
 > *isRunning*, *name*, *openSSLVersion* et *perfectForwardSecrecy* sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/WebServerClass.md#start).
 

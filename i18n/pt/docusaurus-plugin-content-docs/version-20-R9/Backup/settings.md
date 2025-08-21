@@ -5,9 +5,9 @@ title: Backups periódicos
 
 As configurações de backup são definidas através de três páginas na [caixa de diálogo Configurações](../settings/overview.md). Pode estabelecer:
 
-- a periodicidade das cópias de segurança automáticas
-- os arquivos a incluir em cada backup
-- as funcionalidades avançadas que permitem executar tarefas automáticas
+ - a periodicidade das cópias de segurança automáticas
+ - os arquivos a incluir em cada backup
+ - as funcionalidades avançadas que permitem executar tarefas automáticas
 
 > As propriedades definidas nesta caixa de diálogo são escritas no arquivo *Backup.4DSettings*, guardado na pasta [Settings](../Project/architecture.md#settings-user).
 
@@ -88,11 +88,11 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
+ - **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Excluir arquivo de backup mais antigo antes de/após backup**: Esta opção só é usada se a opção "Manter apenas os últimos X arquivos de backup" estiver marcada. Especifica se o 4D deve começar apagando o arquivo mais antigo antes de iniciar o backup (opção **before**) ou se a exclusão deve ocorrer após a conclusão do backup (opção **after**). Para que os mecanismos funcionem, o arquivo mais velho não deve ser renomeado nem movido.
+ - **Excluir arquivo de backup mais antigo antes de/após backup**: Esta opção só é usada se a opção "Manter apenas os últimos X arquivos de backup" estiver marcada. Especifica se o 4D deve começar apagando o arquivo mais antigo antes de iniciar o backup (opção **before**) ou se a exclusão deve ocorrer após a conclusão do backup (opção **after**). Para que os mecanismos funcionem, o arquivo mais velho não deve ser renomeado nem movido.
 
 - **Se a cópia de segurança falhar**: Esta opção permite definir o mecanismo usado para lidar com cópias de segurança falhadas (cópia de segurança impossível). Quando uma cópia de segurança não puder ser realizada, 4D deixa que realize uma nova tentativa.
   - **Tente novamente na próxima data e hora agendadas**: essa opção só faz sentido quando trabalhar com backups automáticos programados. Equivale a anular a cópia de segurança que falhou. Um erro é gerado.
@@ -141,11 +141,11 @@ O usuário não vê uma caixa de diálogo, a operação é automática. O objeti
 
 > No caso de uma restauração automática, somente os seguintes elementos são restaurados:
 >
-> - ficheiro .4DD
-> - ficheiro .4DIndx
-> - .4DSyncData file
-> - ficheiro .4DSyncHeader
-> - Pasta External Data
+>  - ficheiro .4DD
+>  - ficheiro .4DIndx
+>  - .4DSyncData file
+>  - ficheiro .4DSyncHeader
+>  - Pasta External Data
 >
 > Se quiser obter os arquivos anexados ou os arquivos do projeto, você deve realizar uma [restauração manual](restore.md#manually-restoring-a-backup-standard-dialog).
 

@@ -44,7 +44,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | type             | Integer                                 | Tipo de proceso en ejecución. Valores posibles: ver abajo |
 | visible          | Boolean                                 | True si es visible, false en caso contrario                                               |
 
-- Valores posibles para "state":
+ - Valores posibles para "state":
 
 | Constante                 | Valor |
 | ------------------------- | ----- |
@@ -57,7 +57,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | Waiting for internal flag | 4     |
 | Paused                    | 5     |
 
-- Valores posibles para "type":
+ - Valores posibles para "type":
 
 | Constante                     | Valor |
 | ----------------------------- | ----- |

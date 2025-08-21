@@ -32,10 +32,10 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 En *filePath*, pase la ruta y el nombre del documento a importar. Se soportan los siguientes formatos:
 
-- Los documentos 4D View Pro (extensión ".4vp")
-- Microsoft Excel (extensión ".xlsx")
-- documentos texto (extension ".txt", ".csv", el documento debe estar en utf-8)
-- [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
+ - Los documentos 4D View Pro (extensión ".4vp")
+ - Microsoft Excel (extensión ".xlsx")
+ - documentos texto (extension ".txt", ".csv", el documento debe estar en utf-8)
+ - [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
 
 Si la extensión del documento no es una extensión reconocida, como `.4vp` o `.xlsx`, el documento se considera un documento texto. Debe pasar una ruta completa, a menos que el documento se encuentre en el mismo nivel que la carpeta Project, en cuyo caso puede pasar sólo su nombre.
 
@@ -73,11 +73,11 @@ El parámetro opcional *paramObj* permite definir las propiedades del documento 
 
 :::note Notas
 
-- La importación de archivos en formatos .xslx, .csv y .sjs es **asíncrona**. Con estos formatos, debe utilizar el atributo `formula` si desea iniciar una acción al final del procesamiento del documento.
-- Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar su configuración con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
-- Para más información sobre el formato CSV y los valores separados por delimitadores en general, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
-- Se recomienda utilizar el objeto *excelOptions* al importar en formato ".xlsx". Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
-- La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+ - La importación de archivos en formatos .xslx, .csv y .sjs es **asíncrona**. Con estos formatos, debe utilizar el atributo `formula` si desea iniciar una acción al final del procesamiento del documento.
+ - Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar su configuración con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
+ - Para más información sobre el formato CSV y los valores separados por delimitadores en general, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+ - Se recomienda utilizar el objeto *excelOptions* al importar en formato ".xlsx". Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
+ - La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 :::
 
