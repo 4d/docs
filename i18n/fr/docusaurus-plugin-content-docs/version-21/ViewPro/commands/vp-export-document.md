@@ -34,11 +34,11 @@ Dans *filePath*, passez le chemin de destination et le nom du document à export
 
 Vous pouvez préciser le format du document en incluant une extension après son nom :
 
-- 4D View Pro (".4vp")
-- Microsoft Excel (".xlsx")
-- PDF (".pdf")
-- CSV (".txt", or ".csv")
-- [SpreadJS document](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
+ - 4D View Pro (".4vp")
+ - Microsoft Excel (".xlsx")
+ - PDF (".pdf")
+ - CSV (".txt", or ".csv")
+ - [SpreadJS document](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
 
 Si l'extension n'est pas incluse, mais que le format est spécifié dans *paramObj*, le fichier exporté aura l'extension correspondant au format, sauf pour le format CSV (aucune extension n'est ajoutée dans ce cas).
 
@@ -88,25 +88,25 @@ Le paramètre optionnel *paramObj* vous permet de définir plusieurs propriété
 
 **Notes sur le format Excel** :
 
-- Lors de l'export d'un document 4D View Pro en un fichier au format Microsoft Excel, certains paramètres peuvent être perdus. Par exemple, les méthodes et formules 4D ne sont pas prises en charge par Excel. Vous pouvez vérifier d'autres paramètres avec [cette liste de SpreadJS] (https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
-- Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
-- Using *excelOptions* object is recommended when exporting in ".xlsx" format. Make sure to not mix this object with legacy first level properties (*password*, *includeBindingSource*...) to avoid potiental issues.
+ - Lors de l'export d'un document 4D View Pro en un fichier au format Microsoft Excel, certains paramètres peuvent être perdus. Par exemple, les méthodes et formules 4D ne sont pas prises en charge par Excel. Vous pouvez vérifier d'autres paramètres avec [cette liste de SpreadJS] (https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
+ - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+ - Using *excelOptions* object is recommended when exporting in ".xlsx" format. Make sure to not mix this object with legacy first level properties (*password*, *includeBindingSource*...) to avoid potiental issues.
 
 **Notes sur le format PDF** :
 
-- Lors de l'export d'un document 4D View Pro en un fichier au format PDF, les polices utilisées dans le document sont automatiquement intégrées dans le fichier PDF. Seules les polices OpenType (fichiers .OTF ou .TTF) ayant une table Unicode peuvent être intégrées. Si aucun fichier de polices valide n'est trouvé pour une police, une police par défaut est utilisée à sa place.
-- Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+ - Lors de l'export d'un document 4D View Pro en un fichier au format PDF, les polices utilisées dans le document sont automatiquement intégrées dans le fichier PDF. Seules les polices OpenType (fichiers .OTF ou .TTF) ayant une table Unicode peuvent être intégrées. Si aucun fichier de polices valide n'est trouvé pour une police, une police par défaut est utilisée à sa place.
+ - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes sur le format CSV** :
 
-- Lors de l'export d'un document 4D View Pro en un fichier au format PDF, certains paramètres peuvent être perdus, car seuls le texte et les valeurs sont sauvegardés.
-- Toutes les valeurs sont enregistrées sous la forme de chaînes entre guillemets. Pour plus d'informations sur les valeurs séparées par des délimiteurs, voir [cet article sur Wikipédia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
-- Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+ - Lors de l'export d'un document 4D View Pro en un fichier au format PDF, certains paramètres peuvent être perdus, car seuls le texte et les valeurs sont sauvegardés.
+ - Toutes les valeurs sont enregistrées sous la forme de chaînes entre guillemets. Pour plus d'informations sur les valeurs séparées par des délimiteurs, voir [cet article sur Wikipédia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
+ - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes sur le format de fichier SpreadJS** :
 
-- [Fichiers SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) sont des fichiers zippés.
-- Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+ - [Fichiers SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) sont des fichiers zippés.
+ - Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 Une fois l'opération d'exportation terminée, `VP EXPORT DOCUMENT` déclenche automatiquement l'exécution de la méthode définie dans la propriété *formula* de *paramObj*, si elle est utilisée.
 

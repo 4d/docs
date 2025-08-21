@@ -17,15 +17,15 @@ Vous disposez également de trois boutons-raccourcis permettant de filtrer par f
 
 ![](../assets/en/Admin/server-process-buttons.png)
 
-- **Process utilisateurs** : Process générés par et pour les sessions utilisateurs. Ces process sont précédés d’une icône en forme de personnage.
-- **Process 4D** : Process générés par le moteur de 4D Server. Ces process sont précédés d’une icône en forme de roue crantée.
-- **Process en attente** : Process inactifs mais conservés temporairement et pouvant être réutilisés à tout moment. Ce mécanisme permet d’optimiser la réactivité de 4D Server. Ces process sont précédés d’une icône grisée en forme de personnage.
+ - **Process utilisateurs** : Process générés par et pour les sessions utilisateurs. Ces process sont précédés d’une icône en forme de personnage.
+ - **Process 4D** : Process générés par le moteur de 4D Server. Ces process sont précédés d’une icône en forme de roue crantée.
+ - **Process en attente** : Process inactifs mais conservés temporairement et pouvant être réutilisés à tout moment. Ce mécanisme permet d’optimiser la réactivité de 4D Server. Ces process sont précédés d’une icône grisée en forme de personnage.
 
 L’option **Afficher les process par groupes** vous permet de regrouper les process internes de 4D Server ainsi que les process clients, pour plus de lisibilité. Lorsque vous cochez cette option :
 
-- les process clients 4D "jumeaux" (Process client 4D principal et Process base 4D client, cf. paragraphe [Type du process](#process-type)) sont groupés en un seul,
-- le groupe "Gestionnaires de tâches" est créé ; il inclut les process internes dédiés à la répartition des tâches (Shared balancer, Net session manager, Exclusive pool worker),
-- le groupe "Gestionnaires clients" est créé ; il inclut les différents process internes clients.
+ - les process clients 4D "jumeaux" (Process client 4D principal et Process base 4D client, cf. paragraphe [Type du process](#process-type)) sont groupés en un seul,
+ - le groupe "Gestionnaires de tâches" est créé ; il inclut les process internes dédiés à la répartition des tâches (Shared balancer, Net session manager, Exclusive pool worker),
+ - le groupe "Gestionnaires clients" est créé ; il inclut les différents process internes clients.
 
 La zone inférieure de la fenêtre permet d’afficher la représentation graphique de l’activité du ou des process sélectionné(s).
 
@@ -83,15 +83,15 @@ La page comporte cinq boutons de commande permettant d’agir sur le ou les proc
 
 ![](../assets/en/Admin/server-process-actions.png)
 
-- **Tuer process** : permet de tuer le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération.
+ - **Tuer process** : permet de tuer le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération.
 
 > You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id.md) command.
 
-- **Endormir process** : permet d’endormir le ou les process sélectionné(s).
-- **Réactiver process** : permet de réactiver le ou les process sélectionné(s). Les process doivent avoir été auparavant endormis (via le bouton précédent ou par programmation) sinon le bouton est sans effet.
-- **Tracer process** : permet d’ouvrir sur le poste serveur une ou plusieurs fenêtre(s) du débogueur pour le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération. A noter que la fenêtre du débogueur ne s’affiche que lorsque du code 4D est effectivement exécuté sur le poste serveur (par exemple dans le cadre d’un trigger ou de l’exécution d’une méthode ayant l’attribut "Exécuter sur serveur").
+ - **Endormir process** : permet d’endormir le ou les process sélectionné(s).
+ - **Réactiver process** : permet de réactiver le ou les process sélectionné(s). Les process doivent avoir été auparavant endormis (via le bouton précédent ou par programmation) sinon le bouton est sans effet.
+ - **Tracer process** : permet d’ouvrir sur le poste serveur une ou plusieurs fenêtre(s) du débogueur pour le ou les process sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération. A noter que la fenêtre du débogueur ne s’affiche que lorsque du code 4D est effectivement exécuté sur le poste serveur (par exemple dans le cadre d’un trigger ou de l’exécution d’une méthode ayant l’attribut "Exécuter sur serveur").
 
 > Vous pouvez déboguer un process directement, sans afficher la boîte de dialogue de confirmation : pour cela, appuyez sur la touche **Alt** avant de cliquer sur le bouton.
 
-- **Voir utilisateurs** : permet d’afficher dans la [page Utilisateurs](users.md) tous les process du ou des utilisateur(s) sélectionné(s). Le bouton est actif lorsqu’un process utilisateur au moins est sélectionné.
+ - **Voir utilisateurs** : permet d’afficher dans la [page Utilisateurs](users.md) tous les process du ou des utilisateur(s) sélectionné(s). Le bouton est actif lorsqu’un process utilisateur au moins est sélectionné.
 

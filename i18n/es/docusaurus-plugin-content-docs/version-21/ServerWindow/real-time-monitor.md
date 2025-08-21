@@ -26,9 +26,9 @@ La siguiente información se ofrece para cada línea:
 
 La página está activa y se actualiza permanentemente en cuanto se muestra. Cabe señalar que su funcionamiento puede ralentizar considerablemente la ejecución de la aplicación. Es posible suspender la actualización de esta página de una de las siguientes maneras:
 
-- haciendo clic en el botón **Pausa**,
-- haciendo clic en la lista,
-- presionando la barra espaciadora.
+ - haciendo clic en el botón **Pausa**,
+ - haciendo clic en la lista,
+ - presionando la barra espaciadora.
 
 Al pausar la página, aparece el mensaje "PAUSED" y la etiqueta del botón cambia a **Reanudar**.
 Puede reanudar el seguimiento de las operaciones realizando la misma acción que para la pausa.

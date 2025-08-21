@@ -11,8 +11,8 @@ title: On Drag Over
 
 O evento `Ao Arrastar Para` é repetidamente enviado para o objeto de destino quando o ponteiro do mouse é movido sobre o objeto. Em resposta a este evento, normalmente:
 
-- Obtenha os dados e assinaturas encontrados no pasteboard (via o comando `GET PASTEBOARD DATA`).
-- Dependendo da natureza e do tipo de dados na área de transferência, você **aceita** ou **rejeita** o arrastar e soltar.
+ - Obtenha os dados e assinaturas encontrados no pasteboard (via o comando `GET PASTEBOARD DATA`).
+ - Dependendo da natureza e do tipo de dados na área de transferência, você **aceita** ou **rejeita** o arrastar e soltar.
 
 Para **aceitar** a arraste, o método objeto de destino deve retornar 0 (zero).
 Para **rejeitar** o arraste, o método objeto deve retornar -1 (menos um).

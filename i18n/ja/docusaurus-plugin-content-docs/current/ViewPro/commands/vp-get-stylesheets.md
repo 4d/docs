@@ -23,8 +23,8 @@ title: VP Get stylesheets
 
 任意の *sheet* 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
-- `vk current sheet`
-- `vk workbook`
+ - `vk current sheet`
+ - `vk workbook`
 
 ## 例題
 

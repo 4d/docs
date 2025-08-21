@@ -11,16 +11,16 @@ Cuando un manejador de peticiones HTTP personalizado intercepta una solicitud, s
 
 Custom HTTP request handlers meet various needs, including:
 
-- using a given URL as a resource provider or a file-uploading box (to download or upload various files),
-- redirecting on specific pages according to a context (user authenticated, privileges granted...),
-- gestionar una autenticación a través de oAuth 2.0.
+ - using a given URL as a resource provider or a file-uploading box (to download or upload various files),
+ - redirecting on specific pages according to a context (user authenticated, privileges granted...),
+ - gestionar una autenticación a través de oAuth 2.0.
 
 ## Requisitos
 
 Se soportan gestores de solicitudes HTTP personalizados:
 
-- cuando las [sesiones escalables](./sessions.md#enabling-web-sessions) están habilitadas,
-- with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
+ - cuando las [sesiones escalables](./sessions.md#enabling-web-sessions) están habilitadas,
+ - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
 :::warning
 
@@ -62,9 +62,9 @@ You must restart the Web server so that modifications made in this file are take
 
 Un manejador está definido por:
 
-- a listened URL pattern
-- a function and its class where the code is implemented to handle the listened URL pattern
-- the verbs with which the URL can be called to trigger the handler
+ - a listened URL pattern
+ - a function and its class where the code is implemented to handle the listened URL pattern
+ - the verbs with which the URL can be called to trigger the handler
 
 The handler identifier is the couple [pattern + a verb among the verbs list].
 
@@ -117,10 +117,10 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. Por ejemplo, los siguientes modelos no pueden ser manejados:
 
-- `/4DACTION`
-- `/rest`
-- `/$lib/renderer`
-- `/$shared`
+ - `/4DACTION`
+ - `/rest`
+ - `/$lib/renderer`
+ - `/$shared`
 
 ### Clase y método
 
@@ -208,11 +208,11 @@ He aquí un ejemplo detallado de un archivo HTTPHandlers.json:
 
 En este ejemplo, debe implementar las siguientes funciones:
 
-- *funciónhandle* en la clase \*GeneralHandling
-- *manageAccount* en la clase *UsersHandling*
-- *handleInvoices* en la clase *FinancialHandling*
-- *handleDocs* en la clase *DocsHandling*
-- *handleTheInvoice* / *handleDetails* / *handleInvoices* en la clase *InvoicesHandling*
+ - *funciónhandle* en la clase \*GeneralHandling
+ - *manageAccount* en la clase *UsersHandling*
+ - *handleInvoices* en la clase *FinancialHandling*
+ - *handleDocs* en la clase *DocsHandling*
+ - *handleTheInvoice* / *handleDetails* / *handleInvoices* en la clase *InvoicesHandling*
 
 Examples of URLs triggering the handlers:
 

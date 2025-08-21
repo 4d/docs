@@ -11,8 +11,8 @@ El lenguaje 4D es compatible con los operadores que ya conoce de otros lenguajes
 
 El lenguaje 4D soporta los operadores **binarios** y **ternarios**:
 
-- los operadores binarios operan en dos objetivos (como `2 + 3`) y aparecen entre sus dos objetivos.
-- los operadores ternarios operan en tres objetivos. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
+ - los operadores binarios operan en dos objetivos (como `2 + 3`) y aparecen entre sus dos objetivos.
+ - los operadores ternarios operan en tres objetivos. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
 
 Los valores que los operadores afectan son los operandos. En la expresión `1 + 2`, el símbolo + es un operador binario y sus dos operandos son los valores 1 y 2.
 
@@ -33,18 +33,18 @@ $col:=New collection //$col se inicializa con una colección vacía
 
 Los resultados del operador dependen de los **tipos de datos** a los que se aplican. 4D soporta diferentes operadores en tipos de datos escalares. Se describen con los tipos de datos, en las siguientes secciones:
 
-- [**Operadores lógicos**](dt_boolean.md#logical-operators) (en expresiones **booleanas**)
-- [**Operadores de fechas**](dt_date.md#operadores-de-fechas)
-- [**Operadores de tiempo**](dt_time.md#time-operators)
-- [**Operadores de números**](dt_number.md#number-operators)
-- [**Operadores de bits**](dt_number.md#bitwise-operators) (en expresiones de tipo **entero largo**)
-- [**Operadores de imágenes**](dt_picture.md#picture-operators)
-- [**Operadores de punteros**](dt_pointer.md#pointer-operators)
-- [**Operadores de cadenas**](dt_string.md#operadores-de-cadenas)
-- [**Operadores en las referencias de objetos**](dt_object.md#object-operators)
-- [**Operadores de referencia de colección**](dt_collection.md#collection-operators)
-- [**Operadores null**](dt_null_undefined.md#operadores-null)
-- [**Operadores Undefined**](dt_null_undefined.md#operadores-undefined)
+ - [**Operadores lógicos**](dt_boolean.md#logical-operators) (en expresiones **booleanas**)
+ - [**Operadores de fechas**](dt_date.md#operadores-de-fechas)
+ - [**Operadores de tiempo**](dt_time.md#time-operators)
+ - [**Operadores de números**](dt_number.md#number-operators)
+ - [**Operadores de bits**](dt_number.md#bitwise-operators) (en expresiones de tipo **entero largo**)
+ - [**Operadores de imágenes**](dt_picture.md#picture-operators)
+ - [**Operadores de punteros**](dt_pointer.md#pointer-operators)
+ - [**Operadores de cadenas**](dt_string.md#operadores-de-cadenas)
+ - [**Operadores en las referencias de objetos**](dt_object.md#object-operators)
+ - [**Operadores de referencia de colección**](dt_collection.md#collection-operators)
+ - [**Operadores null**](dt_null_undefined.md#operadores-null)
+ - [**Operadores Undefined**](dt_null_undefined.md#operadores-undefined)
 
 ## Operadores de asignación compuestos
 
@@ -275,9 +275,9 @@ El operador condicional ternario permite escribir expresiones condicionales de u
 
 Se necesitan tres operandos en el siguiente orden:
 
-- una condición seguida de un signo de interrogación (?)
-- una expresión a ejecutar si la condición es [truthy](#truthy-and-falsy), seguida de dos puntos (:)
-- una expresión a ejecutar si la condición es [falsy](#truthy-and-falsy)
+ - una condición seguida de un signo de interrogación (?)
+ - una expresión a ejecutar si la condición es [truthy](#truthy-and-falsy), seguida de dos puntos (:)
+ - una expresión a ejecutar si la condición es [falsy](#truthy-and-falsy)
 
 ### Sintaxis
 
@@ -328,21 +328,21 @@ Además de un tipo, cada valor también tiene un valor booleano inherente, conoc
 
 Los siguientes valores son **falsy**:
 
-- false
-- Null
-- indefinido
-- Null object
-- Null collection
-- Null pointer
-- Null picture
-- Null date !00-00-00!
-- "" - Cadenas vacías
-- [] - Colecciones vacías
-- {} - Objetos vacios
+ - false
+ - Null
+ - indefinido
+ - Null object
+ - Null collection
+ - Null pointer
+ - Null picture
+ - Null date !00-00-00!
+ - "" - Cadenas vacías
+ - [] - Colecciones vacías
+ - {} - Objetos vacios
 
 Todos los demás valores se consideran **truthy**, incluyendo:
 
-- 0 - cero numérico (Entero u otro)
+ - 0 - cero numérico (Entero u otro)
 
 En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. La razón de ser de esto es ofrecer una forma conveniente de manejar valores *undefined* y *null* en objetos y colecciones, de modo que un número reducido de instrucciones [If…Else](flow-control.md#ifelseend-if) sean necesarias para evitar errores de ejecu
 

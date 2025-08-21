@@ -29,13 +29,13 @@ Ver también [esta entrada de blog](https://blog.4d.com/new-built-in-websocket-s
 
 Para crear y manejar su Servidor WebSocket en 4D, tendrá que utilizar dos clases 4D integradas:
 
-- esta clase (`4D.WebSocketServer`) para gestionar el propio servidor,
-- la clase [`4D.WebSocketConnection`](WebSocketConnectionClass.md) para administrar conexiones y mensajes.
+ - esta clase (`4D.WebSocketServer`) para gestionar el propio servidor,
+ - la clase [`4D.WebSocketConnection`](WebSocketConnectionClass.md) para administrar conexiones y mensajes.
 
 Además, tendrá que crear dos clases de usuario que contendrán funciones de retrollamada:
 
-- una clase usuario para gestionar las conexiones al servidor,
-- una clase usuario para gestionar mensajes.
+ - una clase usuario para gestionar las conexiones al servidor,
+ - una clase usuario para gestionar mensajes.
 
 Debe [crear el servidor WebSocket](#4dwebsocketservernew) dentro de un [worker](../Develop/processes.md#worker-processes) para mantener viva la conexión.
 
@@ -387,8 +387,8 @@ De forma predeterminada, si no se establece un valor *timeout*, la función inic
 
 Si se establece un valor de *timeout*:
 
-- cuando se alcanza el tiempo de espera, destruye forzosamente el socket.
-- si *timeout* = 0, destruye el socket de forma forzada sin cerrar los frames ni intercambiar paquetes fin, y lo hace al instante sin esperar.
+ - cuando se alcanza el tiempo de espera, destruye forzosamente el socket.
+ - si *timeout* = 0, destruye el socket de forma forzada sin cerrar los frames ni intercambiar paquetes fin, y lo hace al instante sin esperar.
 
 <!-- END REF -->
 
