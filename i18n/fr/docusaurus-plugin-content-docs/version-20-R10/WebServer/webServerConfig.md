@@ -82,29 +82,29 @@ Liste des hôtes et méthodes autorisé(e)s pour le service CORS.
 
 Nom de domaine ou adresse IP à partir desquels les pages externes sont autorisées à envoyer des demandes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Plusieurs syntaxes sont supportées :
 
-- 192.168.5.17:8081
-- 192.168.5.17
-- 192.168.\*
-- 192.168.\*:8081
-- http://192.168.5.17:8081
-- http://\*.myDomain.com
-- http://myProject.myDomain.com
-- \*.myDomain.com
-- myProject.myDomain.com
-- \*
+ - 192.168.5.17:8081
+ - 192.168.5.17
+ - 192.168.\*
+ - 192.168.\*:8081
+ - http://192.168.5.17:8081
+ - http://\*.myDomain.com
+ - http://myProject.myDomain.com
+ - \*.myDomain.com
+ - myProject.myDomain.com
+ - \*
 
 #### Méthodes HTTP autorisées (propriété méthodes)
 
 Méthodes HTTP acceptées pour l'hôte CORS correspondant. Les méthodes HTTP suivantes sont prises en charge :
 
-- GET
-- HEAD
-- POST
-- PUT
-- DELETE
-- OPTIONS
-- TRACE
-- PATCH
+ - GET
+ - HEAD
+ - POST
+ - PUT
+ - DELETE
+ - OPTIONS
+ - TRACE
+ - PATCH
 
 Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, null ou non défini, toutes les méthodes sont activées.
 
@@ -145,9 +145,9 @@ Par défaut, quand le serveur web est lancé pour la première fois, 4D crée un
 
 Vous pouvez désigner une autre page comme page d'accueil par défaut en entrant son chemin d'accès :
 
-- Le chemin est relatif au [dossier HTML racine ](#root-folder),
-- Le chemin ext exprimé avec la syntaxe POSIX (les dossiers sont séparés par un slash (/)),
-- Le chemin ne doit pas commencer ou finir par un slash.
+ - Le chemin est relatif au [dossier HTML racine ](#root-folder),
+ - Le chemin ext exprimé avec la syntaxe POSIX (les dossiers sont séparés par un slash (/)),
+ - Le chemin ne doit pas commencer ou finir par un slash.
 
 Par exemple, pour que la page d'accueil par défaut soit "MyHome.htm", si elle se trouve dans le dossier "Web" (lui-même situé dans le dossier racine HTML par défaut), utilisez "Web/MyHome.htm".
 
@@ -420,10 +420,10 @@ Version TLS minimale acceptée pour les connexions. Les tentatives de connexion 
 
 Valeurs possibles :
 
-- 1 = TLSv1_0
-- 2 = TLSv1_1
-- 3 = TLSv1_2 (par défaut)
-- 4 = TLSv1_3
+ - 1 = TLSv1_0
+ - 2 = TLSv1_1
+ - 3 = TLSv1_2 (par défaut)
+ - 4 = TLSv1_3
 
 En cas de modification, le serveur doit être redémarré pour utiliser la nouvelle valeur.
 
@@ -489,10 +489,10 @@ Par exemple :
    Disallow: /GIFS/
 ```
 
-- “User-Agent: \*” - tous les robots sont concernés.
-- “Disallow: /4D” - Les robots ne sont pas autorisés à accéder aux URLs commençant par /4D.
-- "Disallow : /%23%23" - les robots ne sont pas autorisés à accéder aux URL commençant par /%23%23.
-- "Disallow : /GIFS/' - les robots ne sont pas autorisés à accéder au dossier /GIFS/ ou à ses sous-dossiers.
+ - “User-Agent: \*” - tous les robots sont concernés.
+ - “Disallow: /4D” - Les robots ne sont pas autorisés à accéder aux URLs commençant par /4D.
+ - "Disallow : /%23%23" - les robots ne sont pas autorisés à accéder aux URL commençant par /%23%23.
+ - "Disallow : /GIFS/' - les robots ne sont pas autorisés à accéder au dossier /GIFS/ ou à ses sous-dossiers.
 
 Autre exemple :
 
@@ -517,15 +517,15 @@ De plus, le dossier racine HTML définit, sur le disque dur du serveur web, le n
 
 Par défaut, 4D définit un dossier racine HTML nommé **WebFolder**. S'il n'existe pas encore, le dossier racine HTML est physiquement créé sur le disque au moment où le serveur Web est lancé pour la première fois. Le dossier racine est créé :
 
-- avec 4D en mode local ou 4D Server, à côté du [dossier du projet](Project/architecture.md#project-folder).
-- avec 4D en mode remote, dans le fichier des ressources locales.
+ - avec 4D en mode local ou 4D Server, à côté du [dossier du projet](Project/architecture.md#project-folder).
+ - avec 4D en mode remote, dans le fichier des ressources locales.
 
 Vous pouvez désigner un autre dossier HTML racine comme page d'accueil par défaut en entrant son chemin d'accès.
 
-- Le chemin est relatif au [dossier du projet](Project/architecture.md#project-folder) (4D local et 4D Server) ou au dossier contenant l'application 4D ou le package logiciel (4D en mode distant).
-- Le chemin ext exprimé avec la syntaxe POSIX (les dossiers sont séparés par un slash (/)),
-- Pour "remonter" d'un niveau dans la hiérarchie des dossiers, saisissez ".." (deux points) avant le nom de dossier
-- Le chemin ne doit pas commencer par une barre oblique (sauf si vous souhaitez que le dossier racine HTML soit le dossier distant du projet ou de 4D, pour interdire l'accès aux dossiers au-dessus, auquel cas vous pouvez passer "/" comme dossier racine).
+ - Le chemin est relatif au [dossier du projet](Project/architecture.md#project-folder) (4D local et 4D Server) ou au dossier contenant l'application 4D ou le package logiciel (4D en mode distant).
+ - Le chemin ext exprimé avec la syntaxe POSIX (les dossiers sont séparés par un slash (/)),
+ - Pour "remonter" d'un niveau dans la hiérarchie des dossiers, saisissez ".." (deux points) avant le nom de dossier
+ - Le chemin ne doit pas commencer par une barre oblique (sauf si vous souhaitez que le dossier racine HTML soit le dossier distant du projet ou de 4D, pour interdire l'accès aux dossiers au-dessus, auquel cas vous pouvez passer "/" comme dossier racine).
 
 Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web" du dossier "MyWebApp", entrez "MyWebApp/Web".
 
@@ -580,9 +580,9 @@ Valeur de l'attribut `SameSite` du cookie de session. Cet attribut vous permet d
 
 Trois valeurs sont disponibles :
 
-- "Strict" (valeur par défaut de l'attribut`SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
-- "Lax" : Les cookies ne sont pas envoyés lors de sous-requêtes intersites (par exemple pour charger des images ou des cadres dans un site tiers), mais sont envoyés lorsqu'un utilisateur navigue vers le site d'origine (c'est-à-dire lorsqu'il suit un lien).
-- "None" : Les cookies sont envoyés dans tous les contextes, c'est-à-dire dans les réponses aux demandes primaires et cross-origin. Lorsque la valeur "None" est utilisée, l'attribut du cookie `Secure` doit également être défini (sinon le cookie sera bloqué).
+ - "Strict" (valeur par défaut de l'attribut`SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
+ - "Lax" : Les cookies ne sont pas envoyés lors de sous-requêtes intersites (par exemple pour charger des images ou des cadres dans un site tiers), mais sont envoyés lorsqu'un utilisateur navigue vers le site d'origine (c'est-à-dire lorsqu'il suit un lien).
+ - "None" : Les cookies sont envoyés dans tous les contextes, c'est-à-dire dans les réponses aux demandes primaires et cross-origin. Lorsque la valeur "None" est utilisée, l'attribut du cookie `Secure` doit également être défini (sinon le cookie sera bloqué).
 
 La valeur de l'attribut `Secure` du cookie de session est automatiquement définie sur "True" si la connexion est HTTPS (quelle que soit la valeur de l'attribut `SameSite`).
 

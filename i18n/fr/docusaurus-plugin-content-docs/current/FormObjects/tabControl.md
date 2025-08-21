@@ -42,9 +42,9 @@ Sous macOS, les onglets peuvent être orientés, en plus de la position standard
 
 Pour fournir les étiquettes d'un onglet, vous pouvez utiliser :
 
-- un objet
-- une liste déroulante
-- un tableau
+ - un objet
+ - une liste déroulante
+ - un tableau
 
 ### Utiliser un objet
 

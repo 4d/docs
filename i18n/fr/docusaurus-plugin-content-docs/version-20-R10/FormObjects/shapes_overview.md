@@ -7,9 +7,9 @@ Les formes sont des [objets statiques](formObjects_overview.md#active-and-static
 
 Les formes 4D prennent en charge les formes basiques suivantes :
 
-- rectangles
-- lignes
-- ovales
+ - rectangles
+ - lignes
+ - ovales
 
 ## Rectangle
 

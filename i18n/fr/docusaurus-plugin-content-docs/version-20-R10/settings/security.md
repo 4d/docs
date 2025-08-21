@@ -11,7 +11,7 @@ Cette page regroupe les options relatives à la protection des accès et des don
 
 > Ces paramètres ne s'appliquent pas aux bases projets ouvertes en monoposte.
 
-- **Accès Développement et Explorateur d'exécution** : permet au groupe d’utilisateurs spécifié d’accéder au mode Développement de la base et d'afficher l'Explorateur d'exécution.
+ - **Accès Développement et Explorateur d'exécution** : permet au groupe d’utilisateurs spécifié d’accéder au mode Développement de la base et d'afficher l'Explorateur d'exécution.
 
   A noter que :
 
@@ -25,11 +25,11 @@ Cette page regroupe les options relatives à la protection des accès et des don
   - Si vous avez associé un mot de passe à l’utilisateur par défaut, une boîte de dialogue apparaît à l’ouverture de la base, les utilisateurs doivent uniquement saisir un mot de passe.
   - Si vous n'avez pas associé de mot de passe à l'Utilisateur par défaut, la boîte de dialogue d'identification de l'utilisateur ne s'affichera pas.**Note:** Vous pouvez “forcer” l'affichage de la boîte de dialogue d'identification de l'utilisateur lorsque le mode “Utilisateur par défaut” est actif, par exemple pour vous connecter en tant qu'Administrateur ou Super_Utilisateur. Pour cela, ouvrez (ou connectez-vous à) la base de données tout en maintenant la touche **Majuscule** enfoncée.
 
-- **Afficher les utilisateurs dans la fenêtre Mots de passe** : si cette option est cochée, les utilisateurs doivent choisir leur nom dans une liste d’utilisateurs et saisir leur mot de passe dans la boîte de dialogue de saisie des mots de passe. Si cette option n’est pas cochée, les utilisateurs doivent saisir leur nom et leur mot de passe. Pour plus d’informations sur les deux versions de la boîte de dialogue de mots de passe, consultez la section "Accès au système" dans [Présentation du contrôle des accès](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html).
+ - **Afficher les utilisateurs dans la fenêtre Mots de passe** : si cette option est cochée, les utilisateurs doivent choisir leur nom dans une liste d’utilisateurs et saisir leur mot de passe dans la boîte de dialogue de saisie des mots de passe. Si cette option n’est pas cochée, les utilisateurs doivent saisir leur nom et leur mot de passe. Pour plus d’informations sur les deux versions de la boîte de dialogue de mots de passe, consultez la section "Accès au système" dans [Présentation du contrôle des accès](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html).
 
   - **Trier la liste des utilisateurs par ordre alphabétique** (option utilisable uniquement si la précédente est cochée) : Lorsque cette option est cochée, la liste des utilisateurs dans la boîte de dialogue de saisie des mots de passe est triée par ordre alphabétique.
 
-- **Les utilisateurs peuvent changer leur mot de passe** : lorsque cette option est cochée, un bouton **Changer** est affiché dans la boîte de dialogue d’ouverture ou de connexion à la base. Si vous le souhaitez, vous pouvez masquer le bouton **Changer** afin de ne pas permettre aux utilisateurs de modifier leur mot du passe. Ce bouton permet à l’utilisateur d’accéder à la boîte de dialogue qui peut être utilisée pour changer son mot de passe (pour plus d'informations sur cette boîte de dialogue, consultez la rubrique "Modification du mot de passe par l'utilisateur" dans [Assurer la maintenance du système](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). Il suffit pour cela de désélectionner cette option.
+ - **Les utilisateurs peuvent changer leur mot de passe** : lorsque cette option est cochée, un bouton **Changer** est affiché dans la boîte de dialogue d’ouverture ou de connexion à la base. Si vous le souhaitez, vous pouvez masquer le bouton **Changer** afin de ne pas permettre aux utilisateurs de modifier leur mot du passe. Ce bouton permet à l’utilisateur d’accéder à la boîte de dialogue qui peut être utilisée pour changer son mot de passe (pour plus d'informations sur cette boîte de dialogue, consultez la rubrique "Modification du mot de passe par l'utilisateur" dans [Assurer la maintenance du système](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). Il suffit pour cela de désélectionner cette option.
 
 ## Options
 
@@ -43,7 +43,7 @@ Cette page regroupe les options relatives à la protection des accès et des don
 
 - **Autoriser les propriétés utilisateur** : Vous devez cocher cette option si vous souhaitez utiliser la fonctionnalité d’externalisation des propriétés utilisateur. Lorsque cette option est cochée, jusqu'à trois boîtes de dialogue sont disponibles pour définir les propriétés : **Propriétés structure**, **Propriétés utilisateur**, et **Propriétés utilisateur pour fichier de données**. Pour plus d'informations, reportez-vous à la section [User settings](../settings/overview.md#user-settings).
 
-- **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) facilitates the initialization and backup phases for 4D components. Pour des raisons de sécurité, vous devez autoriser explicitement l’exécution de cette méthode dans chaque base hôte. Pour cela, vous devez cocher l'option. Cette option n'est pas cochée par défaut.
+ - **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) facilitates the initialization and backup phases for 4D components. Pour des raisons de sécurité, vous devez autoriser explicitement l’exécution de cette méthode dans chaque base hôte. Pour cela, vous devez cocher l'option. Cette option n'est pas cochée par défaut.
 
   Lorsque cette option est cochée :
 

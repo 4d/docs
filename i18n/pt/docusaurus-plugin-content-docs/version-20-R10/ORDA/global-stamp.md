@@ -34,8 +34,8 @@ Para habilitar el seguimiento de cambios de datos, la estructura de la aplicaci�
 
 In addition, to ensure proper operation of the feature, the following conditions are required:
 
-- El campo `__GlobalStamp` debe ser del tipo *Entero 64 bits*, con las propiedades *índice automático*, *Exponer como recurso REST* e *Invisible* seleccionadas.
-- Debe añadirse una tabla `__DeletedRecords`, con los siguientes campos:
+ - El campo `__GlobalStamp` debe ser del tipo *Entero 64 bits*, con las propiedades *índice automático*, *Exponer como recurso REST* e *Invisible* seleccionadas.
+ - Debe añadirse una tabla `__DeletedRecords`, con los siguientes campos:
 
 | Campo                                                   | Tipo            | Descrição                             |
 | ------------------------------------------------------- | --------------- | ------------------------------------- |
@@ -64,8 +64,8 @@ Para ativar o rastreamento de alterações de dados:
 
 Em seguida, 4D faz as seguintes alterações:
 
-- Se añade un campo preconfigurado `__GlobalStamp` a la(s) tabla(s).
-- Si no existe ya, se añade a la estructura una tabla `__DeletedRecords`.
+ - Se añade un campo preconfigurado `__GlobalStamp` a la(s) tabla(s).
+ - Si no existe ya, se añade a la estructura una tabla `__DeletedRecords`.
 
 Para desativar o rastreamento de alterações de dados:
 
