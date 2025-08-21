@@ -63,10 +63,10 @@ Um objeto 4D.OutgoingMessage é um objeto [não compartilhável](../Concepts/sha
 
 A propriedade `.body` contém <!-- REF #OutgoingMessageClass.body.Summary --> o corpo da mensagem enviada<!-- END REF -->. Os seguintes tipos de dados são suportados na propriedade `.body`:
 
-- text
-- blob
-- object
-- image
+ - text
+ - blob
+ - object
+ - image
 
 A propriedade `.body` é de leitura e gravação.
 
@@ -108,17 +108,17 @@ A função `.setBody()` <!-- REF #OutgoingMessageClass.setBody().Summary -->defi
 
 Os seguintes tipos de dados são suportados no *corpo*:
 
-- Text
-- Blob
-- Object
-- Imagem
+ - Text
+ - Blob
+ - Object
+ - Imagem
 
 Quando essa função é usada, o cabeçalho do tipo de conteúdo é definido automaticamente dependendo do tipo *corpo*:
 
-- Content-Type:text/plain se o corpo é um Texto
-- Content-Type:application/octet-stream se o corpo é um Blob
-- Content-Type:application/json se o corpo é um objeto
-- Conteúdo-Tipo:image/jpeg, imagem/gif... se o corpo for uma imagem
+ - Content-Type:text/plain se o corpo é um Texto
+ - Content-Type:application/octet-stream se o corpo é um Blob
+ - Content-Type:application/json se o corpo é um objeto
+ - Conteúdo-Tipo:image/jpeg, imagem/gif... se o corpo for uma imagem
 
 Se *body* não for de um tipo de valor suportado, um erro é retornado.
 

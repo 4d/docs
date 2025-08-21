@@ -24,9 +24,9 @@ El comando **WP Insert break** <!--REF #_command_.WP Insert break.Summary-->inse
 
 En *targetObj*, pase:
 
-- un rango, o
-- an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
-- un documento 4D Write Pro
+ - un rango, o
+ - an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
+ - un documento 4D Write Pro
 
 In *breakType*, pass one of the following constants from the *4D Write Pro Constants* theme to define the type of break to insert:
 
@@ -47,7 +47,7 @@ In the *mode* parameter, pass a constant to indicate the insertion mode to be us
 | wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
 | wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
-- If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
+ - If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
 
 | Constante             | Tipo    | Valor | Comentario                                                                            |
 | --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
@@ -56,7 +56,7 @@ In the *mode* parameter, pass a constant to indicate the insertion mode to be us
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 
-- Si *targetObj* no es un rango, *rangeUpdate* se ignora.
+ - Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 ## Ejemplo 1
 

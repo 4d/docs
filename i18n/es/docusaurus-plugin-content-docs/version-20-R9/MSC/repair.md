@@ -57,7 +57,7 @@ El área "Registros encontrados en el archivo de datos" incluye dos tablas que r
   - La columna **Tabla de destino** indica los nombres de las tablas que se asignaron automáticamente a los grupos de registros identificados. Los nombres de las tablas asignadas automáticamente aparecen en verde. Los grupos no asignados, es decir, las tablas a las que no se ha podido asociar ningún registro, aparecen en rojo.
   - La columna **Recuperar** le permite indicar, para cada grupo, si quiere recuperar los registros. Por defecto, esta opción está marcada para todos los grupos con registros que pueden asociarse a una tabla.
 
-- La segunda tabla lista las tablas del archivo del proyecto.
+ - La segunda tabla lista las tablas del archivo del proyecto.
 
 ### Asignación manual
 
@@ -74,7 +74,7 @@ Utilice el botón **Ignorar registros** para eliminar la asociación realizada m
 
 Una vez finalizada la reparación, 4D genera un archivo de registro en la carpeta Logs del proyecto. Este archivo permite ver todas las operaciones realizadas. Se crea en formato XML y se llama: *ApplicationName\*\*_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" donde:
 
-- *ApplicationName* es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
-- *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
+ - *ApplicationName* es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
+ - *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
 
 Al presionar el botón **Abrir archivo de historial**, 4D muestra el archivo de historial más reciente en el navegador por defecto de la máquina.
