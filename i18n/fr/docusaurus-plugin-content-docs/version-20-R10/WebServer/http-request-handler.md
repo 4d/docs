@@ -117,10 +117,10 @@ Par conséquent, vous devez appliquer une stratégie précise lorsque vous écri
 
 Les motifs d'URL correspondant aux fonctions de traitement HTTP intégrées de 4D ne sont pas autorisés dans les gestionnaires HTTP personnalisés. Par exemple, les motifs suivants ne peuvent pas être traités :
 
-- `/4DACTION`
-- `/rest`
-- `/$lib/renderer`
-- `/$shared`
+ - `/4DACTION`
+ - `/rest`
+ - `/$lib/renderer`
+ - `/$shared`
 
 ### Class et method
 

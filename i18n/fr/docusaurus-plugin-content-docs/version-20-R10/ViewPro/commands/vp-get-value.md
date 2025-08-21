@@ -31,8 +31,8 @@ L'objet retourné contiendra la propriété `value` et, dans le cas d'une valeur
 
 Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit :
 
-- valeur heure - la date est complétée comme suit : December 30, 1899 au format dd/MM/yyyy (30/12/1899)
-- valeur date - l'heure est complétée comme suit : minuit au format HH:mm:ss (00:00:00)
+ - valeur heure - la date est complétée comme suit : December 30, 1899 au format dd/MM/yyyy (30/12/1899)
+ - valeur date - l'heure est complétée comme suit : minuit au format HH:mm:ss (00:00:00)
 
 Si *rangeObj* contient plusieurs cellules ou plusieurs plages, la valeur de la première cellule est retournée. La commande retourne un objet null si la cellule est vide.
 

@@ -82,29 +82,29 @@ Lista de hosts e métodos permitidos para o serviço CORS.
 
 Nome de domínio ou endereço IP de onde as páginas externas têm permissão para enviar solicitações de dados ao servidor via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
 
-- 192.168.5.17:8081
-- 192.168.5.17
-- 192.168.\*
-- 192.168.\*:8081
-- http://192.168.5.17:8081
-- http://\*.myDomain.com
-- http://myProject.myDomain.com
-- \*.myDomain.com
-- myProject.myDomain.com
-- \*
+ - 192.168.5.17:8081
+ - 192.168.5.17
+ - 192.168.\*
+ - 192.168.\*:8081
+ - http://192.168.5.17:8081
+ - http://\*.myDomain.com
+ - http://myProject.myDomain.com
+ - \*.myDomain.com
+ - myProject.myDomain.com
+ - \*
 
 #### Métodos HTTP autorizados (propriedade methods)
 
 Método(s) HTTP aceite(s) para o host CORS correspondente. São suportados os seguintes métodos HTTP:
 
-- GET
-- HEAD
-- POST
-- PUT
-- DELETE
-- OPTIONS
-- TRACE
-- PATCH
+ - GET
+ - HEAD
+ - POST
+ - PUT
+ - DELETE
+ - OPTIONS
+ - TRACE
+ - PATCH
 
 Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver vazio, null ou indefinido, todos os métodos serão ativados.
 
@@ -419,10 +419,10 @@ Versão mínima de TLS aceita para ligações. As tentativas de ligação de cli
 
 Valores possíveis:
 
-- 1 = TLSv1_0
-- 2 = TLSv1_1
-- 3 = TLSv1_2 (padrão)
-- 4 = TLSv1_3
+ - 1 = TLSv1_0
+ - 2 = TLSv1_1
+ - 3 = TLSv1_2 (padrão)
+ - 4 = TLSv1_3
 
 Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
@@ -488,10 +488,10 @@ Por exemplo:
    Disallow: /GIFS/
 ```
 
-- "User-Agent: \*" - todos os robôs são afetados.
-- "Disallow: /4D" - os robôs não têm permissão para acessar URLs que começam com /4D.
-- "Disallow: /%23%23" - os robôs não têm permissão para acessar URLs que começam com /%23%23.
-- "Disallow: /GIFS/' - os robôs não têm permissão para acessar a pasta /GIFS/ ou suas subpastas.
+ - "User-Agent: \*" - todos os robôs são afetados.
+ - "Disallow: /4D" - os robôs não têm permissão para acessar URLs que começam com /4D.
+ - "Disallow: /%23%23" - os robôs não têm permissão para acessar URLs que começam com /%23%23.
+ - "Disallow: /GIFS/' - os robôs não têm permissão para acessar a pasta /GIFS/ ou suas subpastas.
 
 Outro exemplo
 
