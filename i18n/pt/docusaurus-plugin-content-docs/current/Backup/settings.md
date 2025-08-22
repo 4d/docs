@@ -5,9 +5,9 @@ title: Backups periódicos
 
 As configurações de backup são definidas através de três páginas na [caixa de diálogo Configurações](../settings/overview.md). Pode estabelecer:
 
-- a periodicidade das cópias de segurança automáticas
-- os arquivos a incluir em cada backup
-- as funcionalidades avançadas que permitem executar tarefas automáticas
+ - a periodicidade das cópias de segurança automáticas
+ - os arquivos a incluir em cada backup
+ - as funcionalidades avançadas que permitem executar tarefas automáticas
 
 > As propriedades definidas nesta caixa de diálogo são escritas no arquivo *Backup.4DSettings*, guardado na pasta [Settings](../Project/architecture.md#settings-user).
 
@@ -82,17 +82,17 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 
 ### Parâmetros gerais
 
-- **Mantenha apenas os últimos arquivos de backup X**: Este parâmetro ativa e configura o mecanismo usado para excluir os arquivos de backup mais antigos. que evita o risco de saturar a unidade de disco. Esta funcionalidade opera da seguinte maneira: uma vez finalizado o backup atual, 4D elimina o arquivo mais antigo se for encontrado no mesmo local que o arquivo do qual se está fazendo o backup e tiver o mesmo nome (pode solicitar que o arquivo mais antigo se elimine antes do backup para poupar espaço).
+ - **Mantenha apenas os últimos arquivos de backup X**: Este parâmetro ativa e configura o mecanismo usado para excluir os arquivos de backup mais antigos. que evita o risco de saturar a unidade de disco. Esta funcionalidade opera da seguinte maneira: uma vez finalizado o backup atual, 4D elimina o arquivo mais antigo se for encontrado no mesmo local que o arquivo do qual se está fazendo o backup e tiver o mesmo nome (pode solicitar que o arquivo mais antigo se elimine antes do backup para poupar espaço).
     Se, por exemplo, o número de conjuntos se definir como 3, as três primeiras cópias de segurança criam os arquivos MyBase-0001, MyBase-0002 e MyBase-0003 respectivamente. Durante o quarto backup, o arquivo MyBase-0004 é criado e MyBase-0001 é apagado. Como padrão, o mecanismo de eliminação de conjuntos está ativado e 4D salva 3 conjuntos de cópias de segurança.
     Para desativar o mecanismo, simplesmente desmarque a opção.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
+ - **Fazer Cópia de segurança só se o arquivo de dados tiver sido modificado**: Quando marcar esta opção, 4D inicia as cópias de segurança programadas apenas se os dados tiverem sido adicionados, modificados ou excluídos desde a última cópia de segurança. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. Esta opção também permite poupar tempo de máquina para a cópia de segurança de aplicações utilizados principalmente para visualização. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 
 > Esse parâmetro se refere tanto a aplicações quanto aos arquivos de registro.
 
-- **Excluir arquivo de backup mais antigo antes de/após backup**: Esta opção só é usada se a opção "Manter apenas os últimos X arquivos de backup" estiver marcada. Especifica se o 4D deve começar apagando o arquivo mais antigo antes de iniciar o backup (opção **before**) ou se a exclusão deve ocorrer após a conclusão do backup (opção **after**). Para que os mecanismos funcionem, o arquivo mais velho não deve ser renomeado nem movido.
+ - **Excluir arquivo de backup mais antigo antes de/após backup**: Esta opção só é usada se a opção "Manter apenas os últimos X arquivos de backup" estiver marcada. Especifica se o 4D deve começar apagando o arquivo mais antigo antes de iniciar o backup (opção **before**) ou se a exclusão deve ocorrer após a conclusão do backup (opção **after**). Para que os mecanismos funcionem, o arquivo mais velho não deve ser renomeado nem movido.
 
 - **Se a cópia de segurança falhar**: Esta opção permite definir o mecanismo usado para lidar com cópias de segurança falhadas (cópia de segurança impossível). Quando uma cópia de segurança não puder ser realizada, 4D deixa que realize uma nova tentativa.
      - **Tente novamente na próxima data e hora agendadas**: essa opção só faz sentido quando trabalhar com backups automáticos programados. Equivale a anular a cópia de segurança que falhou. Um erro é gerado.
@@ -106,17 +106,17 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 
 Essas opções se aplicam aos arquivos de cópia de segurança principais e aos arquivos de cópia de segurança do histórico.
 
-- **Tamanho do Segmento (Mb)**
+ - **Tamanho do Segmento (Mb)**
     4D permite que você segmente arquivos, ou seja, para cortá-lo em tamanhos menores. Esse funcionamento permite, por exemplo, armazenar uma cópia de segurança em vários discos diferentes (DVD, dispositivos usb pendrive, etc). Durante a restauração, 4D vai fusionar automaticamente os segmentos. <strong x-id="1">Segment Size (Mb)</strong> 4D allows you to segment archives, i.e., to cut it up into smaller sizes. This behavior allows, for example, the storing of a backup on several different disks (DVDs, usb devices, etc.).
     O menu **Tamanho do Segmento** é uma caixa de combinação que permite que você defina o tamanho em MB para cada segmento do backup. Pode escolher um dos tamanhos pré-estabelecidos ou digitar um tamanho específico entre 0 e 2048. Se você passar 0, nenhum segmento ocorre (isso é o equivalente a passar **Nenhum**).
 
-- **Taxa de Compressão**
+ - **Taxa de Compressão**
     Por padrão, o 4D comprime os backups para ajudar a economizar espaço em disco. Entretanto, a fase de compressão de arquivo pode retardar o processo de backup quando lidar com grandes volumes de dados. A opção **Taxa de Compressão** permite ajustar a compressão de arquivo:
      - **Nenhum:** Não se aplica compressão de arquivos. O backup é mais rápido, mas os arquivos são bem maiores.
      - **Rápido** (padrão): Essa opção é um compromisso entre a velocidade de backup e tamanho de arquivo.
      - **Compact**: A taxa máxima de compressão é aplicada aos arquivos. Os arquivos ocupam o mínimo espaço possível no disco, mas o backup é mais lento.
 
-- **Taxa de Interlúção e Taxa de Redundância**
+ - **Taxa de Interlúção e Taxa de Redundância**
     4D gera arquivos usando algoritmos específicos que são baseados nos mecanismos de otimização (intercrição) e segurança (redundância). Pode estabelecer esses mecanismos de acordo com suas necessidades. Os menus para essas opções contêm as taxas **Baixo**, **Médio**, **Alto** e **Nenhum** (padrão).
      - **Taxa de Entrelaçamento**: O Interlacing consiste de armazenar dados em setores não adjacentes para limitar riscos no caso de danos de setor. Quanto maior a taxa, maior a segurança; entretanto, o processamento de dados usa mais memória.
      - **Taxa de redundância**: Redundância permite a segurança de dados presentes em um arquivo ao repetir a mesma informação várias vezes. Quanto maior a taxa de redundância, melhor a segurança, mas o armazenamento é mais lento e o tamanho dos arquivos aumenta.
