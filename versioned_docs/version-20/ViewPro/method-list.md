@@ -2265,7 +2265,7 @@ End if
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|sheet|Integer|<-|Sheet index|
+|sheet|Integer|->|Sheet index|
 |Function result|Boolean|<-|True if print lines are visible, False otherwise|<!-- END REF -->
 
 #### Description

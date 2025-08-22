@@ -10,8 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| arrBKNames | Array | &#x1F858; | Array of bookmark names |
-
+| arrBKNames | Array | &#8592; | Array of bookmark names |
 <!-- END REF-->
 
 ## Description 

@@ -39,7 +39,7 @@ El siguiente ejemplo ilustra el uso de Insert string. Los resultados se asignan 
 ## Ver también 
 
 [Change string](../commands/change-string)  
-[Delete string](../commands/delete-string.md)  
+[Delete string](../commands/delete-string)  
 [Replace string](../commands/replace-string)  
 
 ## Propiedades

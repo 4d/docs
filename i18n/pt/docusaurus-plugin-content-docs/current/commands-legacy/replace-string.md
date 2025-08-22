@@ -70,7 +70,7 @@ O exemplo abaixo ilustra o uso do parâmetro \* no caso de uma avaliação diacr
 ## Ver também 
 
 [Change string](../commands/change-string)  
-[Delete string](../commands/delete-string.md)  
+[Delete string](../commands/delete-string)  
 [Insert string](../commands/insert-string)  
 
 ## Propriedades
