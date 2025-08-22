@@ -39,7 +39,7 @@ Insert string関数の使用例を次に示します。結果を変数*vtResult*
 ## 参照 
 
 [Change string](../commands/change-string)  
-[Delete string](../commands/delete-string.md)  
+[Delete string](../commands/delete-string)  
 [Replace string](../commands/replace-string)  
 
 ## プロパティ

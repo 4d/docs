@@ -39,7 +39,7 @@ L'exemple suivant illustre l'utilisation de **Insert string**. Les résultats so
 ## Voir aussi 
 
 [Change string](../commands/change-string)  
-[Delete string](../commands/delete-string.md)  
+[Delete string](../commands/delete-string)  
 [Replace string](../commands/replace-string)  
 
 ## Propriétés
