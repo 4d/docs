@@ -12,7 +12,7 @@ title: VP Get show print lines
 | Parámetros | Tipo    |                             | Descripción                                                         |                  |
 | ---------- | ------- | --------------------------- | ------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                        |                  |
-| sheet      | Integer | <- | Índice de la hoja                                                   |                  |
+| sheet      | Integer | ->                          | Índice de la hoja                                                   |                  |
 | Resultado  | Boolean | <- | True si las líneas de impresión son visibles, de lo contrario False | <!-- END REF --> |
 
 ## Descripción

@@ -2325,7 +2325,7 @@ $options:=VP Get sheet options("ViewProArea")
 | Paramètres | Type    |    | Description                                                                          |
 | ---------- | ------- | -- | ------------------------------------------------------------------------------------ |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                              |
-| sheet      | Integer | <- | Numéro d'indice de la feuille                                                        |
+| sheet      | Integer | -> | Numéro d'indice de la feuille                                                        |
 | Résultat   | Boolean | <- | Vrai si les lignes d'impression sont visibles, sinon Faux|<!-- END REF -->
 
 |
