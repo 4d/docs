@@ -59,7 +59,7 @@ En el lenguaje 4D, esta llamada equivale a:
 $city:=ds.City.getCity("Aguada")
 ```
 
-## Function configuration
+## Configuración de funciones
 
 ### `exposed`
 

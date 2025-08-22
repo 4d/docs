@@ -59,7 +59,7 @@ Especifique el tipo de objeto, luego entre llaves, declare el estilo o los estil
 :::note
 
 - El tipo objeto corresponde a la propiedad JSON [tipo](FormObjects/properties_Object.md#type) de los objetos formulario.
-- For listboxes, the following specific types are available: *column*, *header*, *footer*.
+- Para listboxes, existen los siguientes tipos específicos: *columna*, *encabezado*, *pie de página*.
 
 :::
 
