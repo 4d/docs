@@ -3,13 +3,13 @@ id: debugger
 title: Débogueur
 ---
 
-The 4D debugger is useful when you need to spot errors or monitor the execution of methods. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".
+Le débogueur 4D est utile pour repérer les erreurs ou surveiller l'exécution des méthodes. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
 :::info
 
-If you are used to coding with **VS Code**, you can also use this editor to debug 4D code on 4D Server after installing the [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode) extension.
+Si vous avez l'habitude de coder avec **VS Code**, vous pouvez également utiliser cet éditeur pour déboguer le code 4D sur 4D Server après avoir installé l'extension [4D-Debugger](https://github.com/4d/4D-Debugger-VSCode).
 
 :::
 
@@ -18,7 +18,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 Il existe plusieurs façons d'afficher le débogueur :
 
 - En cliquant sur le bouton **Trace** dans [la fenêtre des erreurs de syntaxe](basics.md#syntax-error-window)
-- Using the [`TRACE`](../commands-legacy/trace.md) command
+- En utilisant la commande [`TRACE`](../commands-legacy/trace.md),
 - En cliquant sur le bouton **Debug** dans la fenêtre d'exécution de méthode ou en sélectionnant le bouton **Run and debug...** dans l'éditeur de code
 - En utilisant **Alt+Shift+Clic** droit (Windows) ou **Ctrl+Option+Cmd+Clic (macOS)** pendant l'exécution d'une méthode, puis en sélectionnant le processus à suivre dans le menu contextuel :
 
@@ -29,8 +29,8 @@ Il existe plusieurs façons d'afficher le débogueur :
 
 Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode ou de la fonction de classe que vous êtes en train de tracer, ainsi que l'action qui a provoqué l'apparition initiale de la fenêtre du débogueur. Par exemple, dans la fenêtre du débogueur ci-dessus :
 
-- *drop* is the method being traced
-- The debugger window appeared because of a break point.
+- *drop* est la méthode tracée
+- La fenêtre du débogueur est apparue en raison d'un point d'arrêt.
 
 L'affichage d'une nouvelle fenêtre de débogage utilise la même configuration que la dernière fenêtre affichée dans la même session. Si vous exécutez plusieurs process utilisateur, vous pouvez les tracer indépendamment et avoir une fenêtre de débogage ouverte pour chaque process.
 
@@ -42,7 +42,7 @@ La fenêtre du débogueur est généralement affichée sur la machine où le cod
 :::note Notes
 
 - Si le serveur fonctionne en mode headless, aucune fenêtre de débogage ne peut être affichée sur le serveur, vous devez utiliser le débogueur distant. Voir [Débogage depuis des machines distantes](./debugging-remote.md).
-- You can also [attach the Qodly Studio debugger to a 4D Server application](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
+- Vous pouvez également [attacher le débogueur Qodly Studio à une application 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) si vous devez déboguer des pages Qodly dans un environnement déployé.
 
 :::
 
@@ -54,7 +54,7 @@ La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccou
 
 :::note
 
-Default shortcuts can be customized in the [Shortcuts Page](../Preferences/shortcuts.md) of the Preferences dialog box.
+Les raccourcis par défaut peuvent être personnalisés dans la [Page des raccourcis](../Preferences/shortcuts.md) de la boîte de dialogue Préférences.
 
 :::
 
@@ -62,33 +62,33 @@ Default shortcuts can be customized in the [Shortcuts Page](../Preferences/short
 
 Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. avec désactivation de tous les appels à TRACE suivants dans le process courant.
+> **Maj** + **F5** ou **Maj** + en cliquant sur le bouton **No Trace** reprend l'exécution. avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
 #### Exécuter pas à pas
 
 Exécute la ligne de méthode en cours, indiquée par le compteur de programme (la flèche jaune). Le débogueur passe à la ligne suivante.
 
-Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. If you want to also trace subroutines and functions calls, use the **Step Into** button.
+Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. Si vous souhaitez également tracer les appels aux sous-routines et aux fonctions, utilisez le bouton **Pas à pas détaillé**.
 
-Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+Dans le débogage distant, lors de l'exécution de la méthode sur le serveur, la méthode parente est appelée après l'exécution de la dernière ligne de méthode enfant. Si la méthode parente est exécutée du côté distant, le bouton **Exécuter pas à pas** a le même effet que le bouton **No Trace**.
 
 #### Exécuter pas à pas détaillé
 
 Lors de l’exécution d’une ligne qui appelle une autre méthode (sous-routine ou fonction), ce bouton provoque l’affichage de la méthode appelée dans la fenêtre du débogueur, et permet au développeur de passer pas à pas dans cette méthode.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+La nouvelle méthode devient la méthode courante (en haut) dans le [fenêtre de chaine d'appel](#call-chain-pane) du Débogueur.
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+Lors de l'exécution d'une ligne qui n'appelle pas une autre méthode, ce bouton a le même effet que le bouton **Exécuter pas à pas**.
 
-#### Step Out
+#### Exécuter et sortir
 
-If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+Si vous tracez des sous-programmes et des fonctions, un clic sur ce bouton vous permet d'exécuter l'intégralité de la méthode en cours de traçage et de revenir à la méthode de l'appelant. La fenêtre du débogueur est ramenée à la méthode précédente dans la chaîne d'appels. Si la méthode courante est la dernière méthode de la chaîne d’appel, la fenêtre du débogueur se referme.
 
-In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the No Trace button.
+En débogage distant, lors de l'exécution de la dernière ligne de la méthode, si la méthode est exécutée sur le serveur, la méthode parente est appelée. Si la méthode parente est exécutée côté distant, le bouton agit de la même manière que le bouton Reprendre exécution.
 
-#### Step Into Process
+#### Pas à pas nouveau process
 
-On execution of a line that creates a new process (i.e., calling the New process command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the Step Over button.
+Lors de l’exécution d’une ligne qui crée un nouveau process (par exemple qui appelle la commande New process), ce bouton ouvre une nouvelle fenêtre du débogueur qui vous permet de tracer la méthode de gestion du process que vous venez de créer. Lors de l’exécution d’une ligne qui ne crée pas de nouveau process, ce bouton se comporte comme le bouton Exécuter pas à pas.
 
 #### Stopper exécution
 
@@ -99,9 +99,9 @@ La méthode s’arrête et vous retournez là où vous étiez avant son exécuti
 
 #### Stopper et éditer
 
-The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+La méthode qui s'exécute lorsque vous cliquez sur ce bouton s'ouvre dans l'éditeur de code.
 
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Une fois vos modifications effectuées, ré-exécutez la méthode.
+> **Conseil** : Utilisez ce bouton lorsque vous connaissez les modifications à apporter à votre code, et le moment où elles doivent être effectuées pour pouvoir poursuivre le test de vos méthodes. Une fois vos modifications effectuées, ré-exécutez la méthode.
 
 #### Editer méthode
 
@@ -109,18 +109,18 @@ La méthode qui s'exécute au moment où vous cliquez sur le bouton Éditer s'ou
 
 Si vous utilisez ce bouton pour modifier une méthode, les modifications ne seront effectives que la prochaine fois qu'elle sera exécutée.
 
-> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
+> **Conseil:** Utilisez ce bouton lorsque vous savez quelles modifications sont nécessaires dans votre code et qu'elles n'interfèrent pas avec le reste du code à exécuter ou à tracer.
 
-## Auto-saving
+## Sauvegarde automatique
 
-The current state of the debugger window is automatically saved in the project. Cela inclut :
+L'état courant de la fenêtre du débogueur est automatiquement enregistré dans le projet. Cela inclut :
 
-- the size and position of the window,
-- the position of the division lines,
-- the [display mode](#display-mode),
-- the expressions currently displayed in the custom watch pane expressions. By default, expressions are saved with the current method or function. You can [**pin an expression**](#pinning-an-expression) to keep it displayed in all contexts.
+- la taille et la position de la fenêtre,
+- la position des lignes de division,
+- le [mode affichage](#display-mode),
+- les expressions actuellement affichées dans le volet des expressions personnalisées. Par défaut, les expressions sont enregistrées avec la méthode ou la fonction en courante. Vous pouvez [**épingler une expression**](#pinning-an-expression) pour qu'elle reste affichée dans tous les contextes.
 
-The **Default window configuration** button restores the default position and size of the current window (including the division lines and the window itself).
+Le bouton **Configuration par défaut de la fenêtre** rétablit la position et la taille par défaut de la fenêtre courante (y compris les lignes de division et la fenêtre elle-même).
 
 ![factory-settings-button](../assets/en/Debugging/debugger-factory.png)
 
@@ -140,9 +140,9 @@ La colonne **Expression** affiche les noms des objets et des expressions. La col
 
 ### Liste Expression
 
-#### Line Expressions
+#### Expressions courantes
 
-This theme lets you keep track of the values of expressions:
+Ce thème vous permet de suivre les valeurs des expressions :
 
 - utilisé(e) s dans la ligne de code à exécuter (celle qui est indiquée par le compteur de programme — la flèche jaune dans la [Fenêtre d'évaluation du code](#fenetre-devaluation-du-code)),
 - utilisé(e) s dans la ligne de code précédente
@@ -158,27 +158,27 @@ $c:=a+b
 
 1. Une fenêtre de débogage s'ouvre avec le compteur de programme défini à la ligne avec `a:=1`. À ce stade, le thème **Objets courants** affiche :
 
-  | $a | Undefined |
-  | -- | --------- |
+   | $a | Undefined |
+   | -- | --------- |
 
-  La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+   La variable `$a` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 2. Vous cliquez sur le bouton **Exécuter pas à pas**. Le compteur du programme est maintenant défini sur la ligne `b:=a+1`. À ce stade, le thème **Objets courants** affiche :
 
-  | $a | 1         |
-  | -- | --------- |
-  | $b | Undefined |
+   | $a | 1         |
+   | -- | --------- |
+   | $b | Undefined |
 
-  La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+   La valeur de la variable `$a` est maintenant 1. La variable `$b` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 3. Vous cliquez à nouveau sur le bouton **Exécuter pas à pas**. Le compteur de programme est maintenant placé sur la ligne avec $c:=a+b. Le thème **Objets courants** affiche :
 
-  | $c | Undefined |
-  | -- | --------- |
-  | $a | 1         |
-  | $b | 2         |
+   | $c | Undefined |
+   | -- | --------- |
+   | $a | 1         |
+   | $b | 2         |
 
-  La valeur de la variable `$b` est maintenant 2. La variable `$c` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
+   La valeur de la variable `$b` est maintenant 2. La variable `$c` n'est pas encore initialisée, mais elle est affichée parce qu'elle est utilisée dans la ligne à exécuter.
 
 #### Variables
 
@@ -294,14 +294,14 @@ Pour afficher le type de paramètre, cochez l'option **Afficher les types** dans
 
 Après avoir déployé la liste des paramètres, vous pouvez faire glisser et déposer les paramètres et les résultats de la fonction dans la [fenêtre d'évaluation](#fenetre-devaluation).
 
-You can also use the [Call chain](../commands/call-chain.md) command to retrieve the call chain programmatically.
+Vous pouvez également utiliser la commande [Call chain](../commands/call-chain.md) pour récupérer la chaîne d'appels par programmation.
 
 ## Fenêtre d'évaluation
 
-Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire au [fenêtre Expression](#fenetre-dexpression), sauf que vous décidez quelles expressions sont affichées. Tout type d'expression peut être évalué :
+Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire à la [fenêtre d'expression](#fenetre-dexpression), sauf que vous décidez quelles expressions sont affichées. Tout type d'expression peut être évalué :
 
 - variable
-- object and object property
+- objet et propriété d'objet
 - champ
 - pointer
 - calcul
@@ -311,70 +311,70 @@ Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire a
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. Pour afficher le contenu d'un BLOB, vous pouvez utiliser les commandes BLOB, telles que [BLOB to text](../commands-legacy/blob-to-text.md).
 
-### Display mode
+### Mode d'affichage
 
-You select the display mode to be used for all debugger windows using the **Display** option of the Custom Watch pane's [contextual menu](#contextual-menu).
+Vous sélectionnez le mode d'affichage à utiliser pour toutes les fenêtres du débogueur en utilisant l'option **Affichage** du [menu contextuel](#contextual-menu) de la fenêtre d'évaluation.
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane-display-menu.png)
 
 Les options suivantes sont disponibles :
 
-- **Local variables**: Displays and evaluates automatically local variables as soon as they are initialized in the running source code.
-- **Line Expressions**: Displays and evaluates automatically the same contents as the [Line Expressions](#line-expressions) item of the Expression List.
-- **Expressions**: Only displays custom expressions that you have entered manually. Custom expressions have a specific blue icon ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
+- **Variables locales** : Affiche et évalue automatiquement les variables locales dès qu'elles sont initialisées dans le code source en cours d'exécution.
+- **Expressions courantes** : Affiche et évalue automatiquement le même contenu que l'élément [Expressions courantes](#line-expressions) de la liste Expression.
+- **Expressions** : Affiche uniquement les expressions personnalisées que vous avez saisies manuellement. Les expressions personnalisées ont une icône bleue spécifique ![custom-expression-icon](../assets/en/Debugging/custom-expression-icon.png).
 
 :::note
 
-Whatever the display mode, you can add custom expressions at any moment.
+Quel que soit le mode d'affichage, vous pouvez ajouter des expressions personnalisées à tout moment.
 
 :::
 
 ### Gestion des expressions
 
-You can enter any expression to evaluate. A custom expression is only displayed in the current debugger window, except if you [pin it](#pinning-an-expression).
+Vous pouvez saisir n'importe quelle expression à évaluer. Une expression personnalisée n'est affichée que dans la fenêtre courante du débogueur, sauf si vous l'[épinglez](#pinning-an-expression).
 
 Il y a plusieurs façons d'ajouter des expressions à la liste :
 
 - Glisser et déposer un objet ou une expression depuis la fenêtre d'expression ou la fenêtre de chaîne d'appel
 - Sélectionner une expression dans le volet [source](#source-code-pane) et appuyer sur **ctrl+D** (Windows) ou **cmd+D** (macOS)
 - Double-cliquer quelque part dans l'espace vide du volet (ajoute une expression avec un nom de paramètre fictif que vous pouvez modifier)
-- Select a [display option](#display-mode) that automatically inserts expressions.
-- Select **New Expression...** in the Custom Watch pane's [contextual menu](#contextual-menu) to add an expression using the **Formula Editor**. Vous pouvez entrer n'importe quelle formule qui renvoie un résultat.
+- Sélectionner une [option d'affichage](#display-mode) qui insère automatiquement des expressions.
+- Sélectionnez **Nouvelle expression...** dans le [menu contextuel](#contextual-menu) de la fenêtre d'évaluation pour ajouter une expression à l'aide de l'**Éditeur de formules**. Vous pouvez entrer n'importe quelle formule qui renvoie un résultat.
 
 Pour modifier une expression, cliquez dessus pour la sélectionner, puis cliquez à nouveau ou appuyez sur **Enter** sur votre clavier.
 
-To delete a custom expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard, or click on the **x** icon.
+Pour supprimer une expression personnalisée, cliquez dessus pour la sélectionner, puis appuyez sur **Retour arrière** ou **Suppr** sur votre clavier, ou cliquez sur l'icône **x**.
 
 :::warning
 
-Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+Soyez prudent lorsque vous évaluez une expression 4D modifiant la valeur d'une des variables système (par exemple, la variable OK) car l'exécution du reste de la méthode peut être altérée.
 
 :::
 
-### Pinning an expression
+### Épingler une expression
 
-You can click on the pushpin icon to pin an expression:
+Vous pouvez cliquer sur l'icône de la punaise pour épingler une expression :
 
 ![pinning-expression](../assets/en/Debugging/pin-expression.png)
 
-The expression will then be displayed in all debugger windows.
+L'expression sera alors affichée dans toutes les fenêtres du débogueur.
 
 ### Menu contextuel
 
-The Custom Watch Pane’s menu is available on a contextual click or using the ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) icon:
+Le menu de la fenêtre d'évaluation est accessible via un clic contextuel ou en utilisant l'icône ![menu](../assets/en/Debugging/custom-watch-pane-menu.png) :
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-- **Display**: Selects the [display mode](#display-mode) to be used for all debugger windows.
-- **New Expression...**: Inserts a new expression and displays the 4D Formula Editor.
+- **Affichage** : Sélectionne le [mode d'affichage](#display-mode) à utiliser pour toutes les fenêtres du débogueur.
+- **Nouvelle expression** : insère une nouvelle expression et affiche l'Éditeur de formules 4D.
   ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
-  For more information on the Formula Editor, see the [4D Design Reference manual](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
+  Pour plus d'informations sur l'éditeur de formules, voir le [manuel Mode développement](https://doc.4d.com/4Dv20/4D/20.2/Description-of-formula-editor.300-6750169.en.html).
 
-* **Insert Command...**: Displays a menu allowing to insert a 4D command as a new expression.
+* **Insérer une commande...** : Affiche un menu permettant d'insérer une commande 4D en tant que nouvelle expression.
 * **Supprimer tout** : Supprime toutes les expressions de la fenêtre d"évaluation.
-* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
+* **Expressions standard** : Copie la liste des expressions de la fenêtre d'évaluation en tant qu'expressions personnalisées.
 
 > Cette option n'est pas disponible en [mode débogueur distant](debugging-remote.md).
 
@@ -393,7 +393,7 @@ Cette zone vous permet également d'ajouter ou de supprimer des [**points d'arr�
 
 ### Prototype
 
-The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+Le prototype de la méthode ou de la fonction en cours d'exécution dans la chaîne d'appels est affiché en haut du volet :
 
 ![prototype](../assets/en/Debugging/prototype.png)
 
@@ -416,9 +416,9 @@ Vous pouvez copier n'importe quelle expression sélectionnée depuis la fenêtre
 
 1. Dans le volet Code Source, sélectionnez l'expression à évaluer
 2. Effectuez l'une des opérations suivantes :
-  - Glissez et déposez le texte sélectionné dans la zone d'expression
-  - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
-  - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
+   - Glissez et déposez le texte sélectionné dans la zone d'expression
+   - Appuyez sur **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
+   - Cliquez avec le bouton droit sur le texte sélectionné **>** **Copier dans la fenêtre d'expression**
 
 ### Compteur de programme
 
@@ -454,9 +454,9 @@ Le menu contextuel de la Fenêtre d'évaluation du code donne accès à plusieur
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-- **Show documentation**: Opens the documentation for the target element. Cette commande est disponible avec les objets suivants :
-  - *Project methods*, *user classes*: Selects the method in the Explorer and switches to the documentation tab
-  - *4D commands, functions, class names:* Displays the online documentation.
+- **Montrer la documentation** : Ouvre la documentation de l'élément cible. Cette commande est disponible avec les objets suivants :
+  - *méthodes projet*, *classes utilisateurs* : Sélectionne la méthode dans l'explorateur et passe à l'onglet documentation
+  - *Commandes 4D, fonctions, noms de classe:* Affiche la documentation en ligne.
 - **Chercher les références** (cette fonction est également accessible depuis l’Editeur de code) : rechercher tous le projet (méthodes et formulaires) dans lesquels l’élément courant de la méthode est référencé. L’élément courant est l’élément sélectionné ou l’élément dans lequel se trouve le curseur. Il peut s’agir d’un nom de champ, de variable, de commande, d’une chaîne, etc. Le résultat de la recherche est affiché dans une nouvelle fenêtre de résultat standard.
 - **Copier** : copie standard de l'expression sélectionnée dans le conteneur de données.
 - **Copier dans la fenêtre d'expression** : copie l'expression sélectionnée dans la Fenêtre d'évaluation.

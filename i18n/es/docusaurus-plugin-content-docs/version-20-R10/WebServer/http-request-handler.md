@@ -233,7 +233,7 @@ Examples of URLs triggering the handlers:
 
 ## Código del gestor de peticiones
 
-### Function configuration
+### Configuración de funciones
 
 The HTTP Request handler code must be implemented in a function of a [**Shared**](../Concepts/classes.md#shared-singleton) [**singleton class**](../Concepts/classes.md#singleton-classes).
 
