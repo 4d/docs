@@ -320,8 +320,8 @@ Cette propriété est en **lecture seule**.
 
 La propriété `.original` renvoie <!-- REF #document.original.Summary -->l'élément cible d'un fichier alias, d'un raccourci ou d'un lien symbolique<!-- END REF -->. L'élément cible peut être :
 
-- un objet File
-- un objet Folder
+ - un objet File
+ - un objet Folder
 
 Pour les fichiers sans alias, la propriété retourne le même objet File que le fichier.
 
@@ -585,8 +585,8 @@ La fonction `.getText()` <!-- REF #document.getText().Summary -->retourne le con
 
 Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour la lecture du contenu. Vous pouvez passer soit :
 
-- dans *charSetName*, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou "UTF-8"),
-- ou dans *charSetNum*, l'ID MIBEnum (numéro) du nom du jeu standard.
+ - dans *charSetName*, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou "UTF-8"),
+ - ou dans *charSetNum*, l'ID MIBEnum (numéro) du nom du jeu standard.
 
 > Pour consulter la liste des jeux de caractères pris en charge par 4D, veuillez vous reporter à la description de la commande `CONVERT FROM TEXT`.
 
