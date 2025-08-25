@@ -27,7 +27,7 @@ A partir de 4D 20 R6, los accesos REST se configuran activando el modo [**force 
 
 :::note Compatibilidad
 
-The **Access** area in the Settings dialog box is only available in converted projects for compatibility. Consulte [Acceso](../settings/web.md#access) para obtener más información.
+El área **Acceso** del diálogo Propiedades solo está disponible en proyectos convertidos por motivos de compatibilidad. Consulte [Acceso](../settings/web.md#access) para obtener más información.
 
 :::
 

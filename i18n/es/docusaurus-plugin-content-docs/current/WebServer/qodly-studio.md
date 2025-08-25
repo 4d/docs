@@ -84,7 +84,7 @@ De acuerdo con la gestión de proyectos 4D, sólo se admiten los siguientes usos
 
 :::warning
 
-Puede abrir Qodly Studio, [debug](#using-qodly-debugger-on-4d-server) y editar páginas Qodly directamente en una máquina 4D Server cuando un proyecto se está ejecutando en modo interpretado. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. It must NOT be considered as a regular way to develop applications since it does not provide any control over concurrent accesses.
+Puede abrir Qodly Studio, [debug](#using-qodly-debugger-on-4d-server) y editar páginas Qodly directamente en una máquina 4D Server cuando un proyecto se está ejecutando en modo interpretado. This feature is only provided for testing and debugging purposes, for example to evaluate the application flow with actual data, or in multi-user environment. NO debe considerarse como una forma habitual de desarrollar aplicaciones, ya que no ofrece ningún control sobre los accesos concurrentes.
 
 :::
 

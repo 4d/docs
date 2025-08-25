@@ -67,11 +67,11 @@ Class extends Rectangle
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Rectangle's width and height
+ // Llama al class constructor de la clase padre con longitudes
+ // proporcionadas para el ancho y alto del rectángulo
  Super($side;$side)
- // In derived classes, Super must be called 
- // before you can use 'This'
+ // En las clases derivadas, Super debe ser llamado antes de que 
+ // pueda utilizar 'This'
  This.name:="Square"
 
 Function getArea() : Integer
@@ -80,7 +80,7 @@ Function getArea() : Integer
 
 ## Ejemplo 2
 
-This example illustrates the use of `Super` in a class function. Ha creado la clase `Rectangle` con una función:
+Este ejemplo ilustra el uso de `Super` en una función de clase. Ha creado la clase `Rectangle` con una función:
 
 ```4d
 //Class: Rectangle
