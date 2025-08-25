@@ -70,7 +70,7 @@ IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //action_Session method
+  //action_Session メソッド
  Case of
     :(Session#Null)
        If(Session.hasPrivilege("WebAdmin")) //"WebAdmin" アクセス権がセッションに紐づいているかを確認
