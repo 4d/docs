@@ -374,7 +374,7 @@ El menú del panel de vigilancia personalizado está disponible mediante un clic
 
 * **Insertar comando...**: muestra un menú que permite insertar un comando 4D como una nueva expresión.
 * **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
-* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
+* **Expresiones estándar**: copia la lista de expresiones de la ventana de evaluación como expresiones personalizadas.
 
 > Esta opción no está disponible en [modo de depuración remota](debugging-remote.md).
 

@@ -164,7 +164,7 @@ En este contexto, puede abrir, editar y guardar el código de su componente en e
 
 ### Edición del código de componentes compartidos
 
-[Exposed component classes](#sharing-of-classes) and [shared methods](#sharing-of-project-methods) of your component can be edited from the **Component Methods** tab of the Explorer.
+Las [clases expuestas del componente](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente pueden editarse desde la pestaña **Métodos del componente** del Explorador.
 
 A specific icon indicates that the component contains shared code):<br/>
 ![](../assets/en/Develop/editable-component.png)

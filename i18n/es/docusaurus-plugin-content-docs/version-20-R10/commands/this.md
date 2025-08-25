@@ -33,10 +33,9 @@ Cuando se utiliza una [función constructora de clase](../Concepts/classes.md#cl
 
 Class constructor  
 
- // Create properties on This as
- // desired by assigning to them
-
- This.a:=42
+    // Crear las propiedades en This 
+    // asignándolas
+    This.a:=42
 ```
 
 ```4d
@@ -72,7 +71,7 @@ En este ejemplo, el objeto asignado a la variable $o no tiene su propia propieda
 
 En el contexto de la ejecución de un objeto fórmula creado por los comandos [Formula](formula.md) o [Formula from string](formula-from-string.md), `This` devuelve una referencia al objeto actualmente procesado por la fórmula.
 
-For example, you want to use a project method as a formula encapsulated in an object:
+Por ejemplo, desea utilizar un método proyecto como una fórmula encapsulada en un objeto:
 
 ```4d
  var $person : Object := New object
@@ -96,7 +95,7 @@ En el contexto de un list box asociado a una colección o una selección de enti
 
 :::note
 
-If you use a collection of scalar values in a list box, 4D creates an object for each element with a single **value** property. Thus, the element value is returned by the **This.value** non-assignable expression.
+Si utiliza una colección de valores escalares en un list box, 4D crea un objeto para cada elemento con una única propiedad **value**. Así, el valor del elemento es devuelto por la expresión no asignable **This.value**.
 
 :::
 
@@ -131,7 +130,7 @@ En el list box, cada columna se refiere a una de las propiedades del objeto, ya 
 
 ![](../assets/en/commands/pict3776706.en.png)
 
-The *GetPicture* project method is automatically executed during the **On display detail** event:
+El método proyecto *GetPicture* se ejecuta automáticamente durante el evento **On display detail**:
 
 ```4d
   //GetPicture Method
@@ -149,19 +148,19 @@ Una vez ejecutado el formulario, podrá ver el resultado:
 
 ## Ejemplo 2
 
-You want to display entities from the following structure in a list box:
+Desea visualizar las entidades de la siguiente estructura en un list box:
 
 ![](../assets/en/commands/pict3872836.en.png)
 
-You build a list box of the "Collection or entity selection" type with the following definition:
+Se crea un list box de tipo "Collection o entity selection" con la siguiente definición:
 
 ![](../assets/en/commands/pict3872844.en.png)
 
 Note que:
 
-- *This.ID*, *This.Title* and *This.Date* directly refers to the corresponding attributes in the ds.Event dataclass.
+- *This.ID*, *This.Title* y *This.Date* se refiere directamente a los atributos correspondientes en la base de datos ds.Event.
 - *This.meetings* es un atributo relacionado (basado en el nombre de una relación de Uno a Muchos) que devuelve una selección de entidad de la base de datos ds.Meeting.
-- **Form.eventList** is the entity selection that is attached to the list box. El código de inicialización se puede poner en el evento on load del formulario:
+- **Form.eventList** es la selección de entidades que se adjunta al list box. El código de inicialización se puede poner en el evento on load del formulario:
 
 ```4d
  Case of  
@@ -170,7 +169,7 @@ Note que:
  End case  
 ```
 
-Once the form is executed, the list box is automatically filled with the entity selection:
+Una vez ejecutado el formulario, el list box se llena automáticamente con la selección de entidades:
 
 ![](../assets/en/commands/pict3872875.en.png)
 

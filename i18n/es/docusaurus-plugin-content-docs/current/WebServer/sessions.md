@@ -209,25 +209,25 @@ In 4D, OTP session tokens are useful when calling external URLs and being called
 
 ### Generalidades
 
-The basic sequence of an OTP session token use in a 4D web application is the following:
+La secuencia básica de uso de un testigo de sesión OTP en una aplicación web 4D es la siguiente:
 
-1. The web user initiates an action that requires a secured third-party connection, for example a validation, from within a specific session.
+1. El usuario web inicia una acción que requiere una conexión segura de terceros, por ejemplo una validación, desde una sesión específica.
 2. En su código 4D, crea un nuevo OTP para la sesión utilizando la función [`Session.createOTP()`](../API/SessionClass.md#createotp).
-3. You send a request to the third-party application with the session token included in the callback Uri. Note that the way to provide the callback Uri to a third-party application depends on its API (see below).
-4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
-5. The request callback is processed in your application.
+3. Usted envía una solicitud a la aplicación de terceros con el token de sesión incluido en la retrollamda Uri. Tenga en cuenta que la forma de proporcionar la retrollamada Uri a una aplicación de terceros depende de su API (ver más adelante).
+4. La aplicación de terceros devuelve una petición a 4D con el patrón que usted proporcionó en la retrollamada Uri.
+5. La retrollamada de la petición se procesa en su aplicación.
 
-Por definición, un token OTP sólo puede utilizarse una vez. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
+Por definición, un token OTP sólo puede utilizarse una vez. En este escenario, si se recibe una petición web con un testigo de sesión como parámetro que ya ha sido utilizado, no se restaura la sesión inicial.
 
 ### Procesando el OTP en la retrollamada
 
-Callbacks from third-party applications that include the OTP token can be processed in different ways in your 4D application, depending on your development and the third-party API. Basically, you have two possibilities to handle the token: through the **`$4DSID`** parameter for an automatic processing, or through a custom parameter that you need to process.
+Las retrollamadas de aplicaciones de terceros que incluyen el token OTP pueden ser procesadas de diferentes maneras en su aplicación 4D. dependiendo de su desarrollo y de la API de terceros. Básicamente, tienes dos posibilidades para manejar el token: a través del parámetro **`$4DSID`** para un procesamiento automático, o a través de un parámetro personalizado que necesite procesar.
 
 #### Uso de `$4DSID` en la URL
 
-Using the `$4DSID` parameter is the most simple way to process a callback from the third-party application:
+Utilizar el parámetro `$4DSID` es la forma más sencilla de procesar una retrollamada desde la aplicación de terceros:
 
-- The OTP token is provided as a parameter directly in the callback url using the standard `?$4DSID=XXXX123` syntax.
+- El token OTP se ofrece como parámetro directamente en la url de retrollamada utilizando la sintaxis estándar `?$4DSID=XXXX123`.
 - In 4D, you implement a dedicated [HTTP Request handler](http-request-handler.md) in your 4D application using [`IncomingMessage`](../API/IncomingMessageClass.md) and [`OutgoingMessage`](../API/OutgoingMessageClass.md) classes.
 - If the `$4DSID` token is valid, the related web user session is **automatically restored** in any web process with its storage and privileges.
 
@@ -319,7 +319,7 @@ shared singleton Class constructor()
 
 ### Escenario con función `restore`
 
-The scenario using a custom parameter is illustrated in the following diagram:
+El escenario usando un parámetro personalizado se ilustra en el siguiente diagrama:
 
 ```mermaid
 sequenceDiagram
@@ -378,7 +378,7 @@ shared singleton Class constructor()
 
 ### Ejemplo de validación de correo electrónico con $4DSID
 
-1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. Se genera un OTP correspondiente a la sesión actual. An URL is then returned with this OTP given in the $4DSID parameter.
+1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. Se genera un OTP correspondiente a la sesión actual. A continuación, se devuelve una URL con esta OTP dada en el parámetro $4DSID.
 
 ```4d
 //cs.Users class
@@ -454,16 +454,16 @@ Function validateEmail() : 4D.OutgoingMessage
 
 ```
 
-Since the `$4DSID` parameter contains a valid OTP corresponding to the original session, the `Session` object refers to the session that created the OTP.
+Dado que el parámetro `$4DSID` contiene una OTP válida correspondiente a la sesión original, el objeto `Session` hace referencia a la sesión que creó la OTP.
 
-A new user is created, and some information is stored in the session, especially the current step of the user account creation process (Waiting for validation email) and the user ID.
+Se crea un nuevo usuario y se almacena cierta información en la sesión, especialmente el paso actual del proceso de creación de la cuenta de usuario (Esperando correo electrónico de validación) y el ID de usuario.
 
 ### Contextos soportados
 
 - Se admiten esquemas HTTP y HTTPS.
 - Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.
-- Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
-- Tokens are not supported with client/server sessions or single-user sessions.
+- Sólo se pueden reutilizar las sesiones de la base de datos local (las sesiones creadas en servidores web de componentes no se pueden restaurar).
+- Los tokens no son compatibles con las sesiones cliente/servidor ni con las sesiones monousuario.
 
 ### Lifespan
 

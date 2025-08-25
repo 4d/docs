@@ -422,7 +422,7 @@ Este ejemplo inserta diferentes páginas dependiendo del usuario que esté conec
 
 Esta etiqueta está diseñada principalmente para incluir una página HTML (indicada por el parámetro *path*) en otra página HTML. Por defecto, sólo se incluye el cuerpo de la página HTML especificada, es decir, el contenido que se encuentra dentro de las etiquetas `<body> </body>` (las etiquetas en sí no se incluyen). Esto le permite evitar conflictos relacionados con las metaetiquetas presentes en los encabezados.
 
-However, if the HTML page specified does not contain `<body>` and `</body>` tags, the entire page is included. Depende de usted verificar la consistencia de las meta-etiquetas.
+Sin embargo, si la página HTML especificada no contiene etiquetas `<body>` and `</body>`, se incluye la página completa. Depende de usted verificar la consistencia de las meta-etiquetas.
 
 El comentario `<!--#4DINCLUDE -->` es muy útil para pruebas (`<!--#4DIF-->`) o bucles (`<!--#4DLOOP-->`). Es muy conveniente incluir banners de acuerdo a un criterio o de forma aleatoria.
 Al incluir, independientemente de la extensión del nombre del archivo, 4D analiza la página llamada y luego inserta el contenido (modificado o no) en la página que origina la llamada `4DINCLUDE`.

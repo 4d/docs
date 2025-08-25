@@ -37,7 +37,7 @@ Puede reanudar el seguimiento de las operaciones realizando la misma acción que
 
 La página MTR puede mostrar información adicional, si es necesario, para cada operación listada.
 
-Para acceder al modo avanzado de una operación, presione **Mayús** y seleccione la operación deseada. All available information is then displayed in the "Process Details" area without any filtering (as returned by the `ACTIVITY SNAPSHOT` command). La información disponible depende de la operación seleccionada.
+Para acceder al modo avanzado de una operación, presione **Mayús** y seleccione la operación deseada. A continuación, se muestra toda la información disponible en el área "Detalles del proceso" sin ningún filtro (tal y como devuelve el comando `ACTIVITY SNAPSHOT`). La información disponible depende de la operación seleccionada.
 
 Este es un ejemplo de la información que se muestra en el modo estándar:
 
