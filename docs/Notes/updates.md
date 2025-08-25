@@ -301,7 +301,7 @@ See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/up
 |LZMA|5.4.1|20||
 |ngtcp2|1.14.0|**21**|Used for QUIC|
 |OpenSSL|3.5.2|**21**||
-|PDFWriter|4.5.11|20 R3||
+|PDFWriter|4.7.0|**21**|Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 |PHP|8.2.4|20||
 |SpreadJS|17.1.0|20 R7|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features|
 |webKit|WKWebView|19||
